@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jdcloud.sdk</groupId>
+    <version>0.2.0</version>
+    <artifactId>demo</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>vm-example</module>
+        <module>vpc-example</module>
+        <module>nc-example</module>
+    </modules>
+    <distributionManagement>
+        <repository>
+            <id>jd-central</id>
+            <name>libs-releases</name>
+            <url>http://artifactory.jd.com/libs-releases-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>jd-snapshots</id>
+            <name>libs-snapshots</name>
+            <url>http://artifactory.jd.com/libs-snapshots-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
