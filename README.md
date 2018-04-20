@@ -20,7 +20,7 @@
 	<dependency>
 	    <groupId>com.jdcloud.sdk</groupId>
 	    <artifactId>vm</artifactId>
-	    <version>0.6.0</version>
+	    <version>0.6.1</version>
 	</dependency>
  
 您还可以下载sdk源代码自行使用。
