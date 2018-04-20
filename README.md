@@ -11,17 +11,19 @@
 # SDK使用方法 #
 如果您使用Apache Maven来管理Java项目，只需在项目的pom.xml文件加入相应的依赖项即可，如下所示：
  
-	<dependency>
-	    <groupId>com.jdcloud.sdk</groupId>
-	    <artifactId>core</artifactId>
-	    <version>1.0.0</version>
-	</dependency>
-	<!-- 对应产品线的SDK -->
-	<dependency>
-	    <groupId>com.jdcloud.sdk</groupId>
-	    <artifactId>vm</artifactId>
-	    <version>0.6.1</version>
-	</dependency>
+```xml
+<dependency>
+	<groupId>com.jdcloud.sdk</groupId>
+	<artifactId>core</artifactId>
+	<version>1.0.0</version>
+</dependency>
+<!-- 对应产品线的SDK -->
+<dependency>
+	<groupId>com.jdcloud.sdk</groupId>
+	<artifactId>vm</artifactId>
+	<version>0.6.1</version>
+</dependency>
+```
  
 您还可以下载sdk源代码自行使用。
  
@@ -41,37 +43,40 @@ Java SDK的调用主要分为4步：
 4.     执行请求得到响应
 
 以下是查询单个云主机实例详情的调用示例
-	import com.jdcloud.sdk.auth.CredentialsProvider;
-	import com.jdcloud.sdk.auth.StaticCredentialsProvider;
-	import com.jdcloud.sdk.http.HttpRequestConfig;
-	import com.jdcloud.sdk.http.Protocol;
-	import com.jdcloud.sdk.service.vm.client.VmClient;
-	import com.jdcloud.sdk.service.vm.model.*;
-	
-	public class VmClientExample {
-	
-	    public static void main(String[] args) {
-	        //1. 设置accessKey和secretKey
-	        String accessKeyId = "{accessKey}";
-	        String secretAccessKey = "{secretKey}";
-	        CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
-	
-	        //2. 创建XXXClient
-	        VmClient vmClient = VmClient.builder()
-	                .credentialsProvider(credentialsProvider)
-	                .httpRequestConfig(new HttpRequestConfig.Builder().protocol(Protocol.HTTPS).build()) //默认为HTTPS
-	                .build();
-	
-	                //3. 设置请求参数
-	        DescribeInstanceRequest request = new DescribeInstanceRequest();
-	        request.regionId("cn-north-1");
-	        request.instanceId("i-c0se9uju");
-	
-	        //4. 执行请求
-	        DescribeInstanceResponse response = vmClient.describeInstance(request);
-	
-	        //5. 处理响应
-	        System.out.println(new Gson().toJson(response));
-	
-	    }
-	}
+
+```java
+import com.jdcloud.sdk.auth.CredentialsProvider;
+import com.jdcloud.sdk.auth.StaticCredentialsProvider;
+import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.http.Protocol;
+import com.jdcloud.sdk.service.vm.client.VmClient;
+import com.jdcloud.sdk.service.vm.model.*;
+
+public class VmClientExample {
+
+    public static void main(String[] args) {
+        //1. 设置accessKey和secretKey
+        String accessKeyId = "{accessKey}";
+        String secretAccessKey = "{secretKey}";
+        CredentialsProvider credentialsProvider = new StaticCredentialsProvider(accessKeyId, secretAccessKey);
+
+        //2. 创建XXXClient
+        VmClient vmClient = VmClient.builder()
+                .credentialsProvider(credentialsProvider)
+                .httpRequestConfig(new HttpRequestConfig.Builder().protocol(Protocol.HTTPS).build()) //默认为HTTPS
+                .build();
+
+                //3. 设置请求参数
+        DescribeInstanceRequest request = new DescribeInstanceRequest();
+        request.regionId("cn-north-1");
+        request.instanceId("i-c0se9uju");
+
+        //4. 执行请求
+        DescribeInstanceResponse response = vmClient.describeInstance(request);
+
+        //5. 处理响应
+        System.out.println(new Gson().toJson(response));
+
+    }
+}
+```
