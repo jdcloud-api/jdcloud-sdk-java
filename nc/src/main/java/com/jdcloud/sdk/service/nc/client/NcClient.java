@@ -215,7 +215,7 @@ public class NcClient extends JdcloudClient {
     }
 
     /**
-     * 云容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+     * 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
      *
      * @param request
      * @return
@@ -281,7 +281,7 @@ public class NcClient extends JdcloudClient {
     }
 
     /**
-     * 云容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+     * 容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
      *
      * @param request
      * @return

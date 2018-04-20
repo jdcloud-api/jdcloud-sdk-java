@@ -42,9 +42,7 @@ public class Bucket  implements java.io.Serializable {
 
     /**
      * creationDate
-     * Required:true
      */
-    @Required
     private String creationDate;
 
 

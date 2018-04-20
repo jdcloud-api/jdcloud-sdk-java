@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.nc.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 云容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+ * 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
  */
 public class DisassociateElasticIpResponse extends JdcloudResponse<DisassociateElasticIpResult> implements java.io.Serializable {
 

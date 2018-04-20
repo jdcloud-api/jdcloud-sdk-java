@@ -33,7 +33,7 @@ public class LogConfiguration  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate  ^ jcslogs：可以指定将日志保存到云监控日志系统  ^ splunk
+     * 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
      */
     private String logDriver;
 
@@ -44,7 +44,7 @@ public class LogConfiguration  implements java.io.Serializable {
 
 
     /**
-     * get 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate  ^ jcslogs：可以指定将日志保存到云监控日志系统  ^ splunk
+     * get 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class LogConfiguration  implements java.io.Serializable {
     }
 
     /**
-     * set 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate  ^ jcslogs：可以指定将日志保存到云监控日志系统  ^ splunk
+     * set 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
      *
      * @param logDriver
      */
@@ -81,7 +81,7 @@ public class LogConfiguration  implements java.io.Serializable {
 
 
     /**
-     * set 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate  ^ jcslogs：可以指定将日志保存到云监控日志系统  ^ splunk
+     * set 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
      *
      * @param logDriver
      */
