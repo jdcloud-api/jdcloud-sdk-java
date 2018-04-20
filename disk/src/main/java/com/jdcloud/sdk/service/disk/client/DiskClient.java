@@ -49,9 +49,6 @@ import com.jdcloud.sdk.service.disk.client.DescribeDiskExecutor;
 import com.jdcloud.sdk.service.disk.model.DescribeSnapshotRequest;
 import com.jdcloud.sdk.service.disk.model.DescribeSnapshotResponse;
 import com.jdcloud.sdk.service.disk.client.DescribeSnapshotExecutor;
-import com.jdcloud.sdk.service.disk.model.DeleteSnapshotRequest;
-import com.jdcloud.sdk.service.disk.model.DeleteSnapshotResponse;
-import com.jdcloud.sdk.service.disk.client.DeleteSnapshotExecutor;
 
 /**
  * diskClient
@@ -166,17 +163,6 @@ public class DiskClient extends JdcloudClient {
      */
     public DescribeSnapshotResponse describeSnapshot(DescribeSnapshotRequest request) throws JdcloudSdkException {
         return new DescribeSnapshotExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除单个云硬盘快照:快照状态必须为 available 或 error 状态
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteSnapshotResponse deleteSnapshot(DeleteSnapshotRequest request) throws JdcloudSdkException {
-        return new DeleteSnapshotExecutor().client(this).execute(request);
     }
 
 
