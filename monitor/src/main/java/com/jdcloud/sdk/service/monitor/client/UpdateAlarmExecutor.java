@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.monitor.model.UpdateAlarmResponse;
 
 /**
- * 修改已创建的报警规则，修改之后返回新的规则id
+ * 修改已创建的报警规则
  */
 class UpdateAlarmExecutor extends JdcloudExecutor {
 

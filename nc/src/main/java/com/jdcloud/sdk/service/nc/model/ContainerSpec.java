@@ -37,7 +37,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例类型
+     * 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      * Required:true
      */
     @Required
@@ -143,7 +143,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
 
     /**
-     * get 实例类型
+     * get 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      *
      * @return
      */
@@ -152,7 +152,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      *
      * @param instanceType
      */
@@ -486,7 +486,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
 
     /**
-     * set 实例类型
+     * set 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      *
      * @param instanceType
      */

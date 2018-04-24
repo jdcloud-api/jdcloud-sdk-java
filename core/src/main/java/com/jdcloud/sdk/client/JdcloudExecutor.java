@@ -268,7 +268,7 @@ public abstract class JdcloudExecutor {
             if (value == null) {
                 throw new JdcloudSdkException("field " + fieldName + " not set.");
             }
-            return (String) value;
+            return String.valueOf(value) ;
         }catch (Exception e) {
             throw new JdcloudSdkException("can not get value of request field '" + fieldName + "'.", e);
         }

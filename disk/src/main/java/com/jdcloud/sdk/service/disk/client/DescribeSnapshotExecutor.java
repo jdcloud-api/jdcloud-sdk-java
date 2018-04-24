@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.disk.model.DescribeSnapshotResponse;
 
 /**
- * 云硬盘快照信息详情
+ * 查询云硬盘快照信息详情
  */
 class DescribeSnapshotExecutor extends JdcloudExecutor {
 
