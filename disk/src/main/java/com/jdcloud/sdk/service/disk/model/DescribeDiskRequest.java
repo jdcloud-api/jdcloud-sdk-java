@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 云硬盘信息详情
+ * 查询云硬盘信息详情
  */
 public class DescribeDiskRequest extends JdcloudRequest implements java.io.Serializable {
 

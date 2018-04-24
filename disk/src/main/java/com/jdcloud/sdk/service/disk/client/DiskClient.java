@@ -49,6 +49,15 @@ import com.jdcloud.sdk.service.disk.client.DescribeDiskExecutor;
 import com.jdcloud.sdk.service.disk.model.DescribeSnapshotRequest;
 import com.jdcloud.sdk.service.disk.model.DescribeSnapshotResponse;
 import com.jdcloud.sdk.service.disk.client.DescribeSnapshotExecutor;
+import com.jdcloud.sdk.service.disk.model.DeleteSnapshotRequest;
+import com.jdcloud.sdk.service.disk.model.DeleteSnapshotResponse;
+import com.jdcloud.sdk.service.disk.client.DeleteSnapshotExecutor;
+import com.jdcloud.sdk.service.disk.model.ModifySnpAttributeRequest;
+import com.jdcloud.sdk.service.disk.model.ModifySnpAttributeResponse;
+import com.jdcloud.sdk.service.disk.client.ModifySnpAttributeExecutor;
+import com.jdcloud.sdk.service.disk.model.ModifyDiskAttributeRequest;
+import com.jdcloud.sdk.service.disk.model.ModifyDiskAttributeResponse;
+import com.jdcloud.sdk.service.disk.client.ModifyDiskAttributeExecutor;
 
 /**
  * diskClient
@@ -57,7 +66,7 @@ public class DiskClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.0";
+    public final static String ClientVersion = "1.0.1";
     public final static String DefaultEndpoint = "disk.jdcloud-api.com";
     public final static String ServiceName = "disk";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -100,7 +109,7 @@ public class DiskClient extends JdcloudClient {
 
 
     /**
-     * 为指定云硬盘创建快照调用成功返回后，新生成的快照的状态为 creating
+     * 为指定云硬盘创建快照,新生成的快照的状态为creating
      *
      * @param request
      * @return
@@ -144,7 +153,7 @@ public class DiskClient extends JdcloudClient {
     }
 
     /**
-     * 云硬盘信息详情
+     * 查询云硬盘信息详情
      *
      * @param request
      * @return
@@ -155,7 +164,7 @@ public class DiskClient extends JdcloudClient {
     }
 
     /**
-     * 云硬盘快照信息详情
+     * 查询云硬盘快照信息详情
      *
      * @param request
      * @return
@@ -163,6 +172,39 @@ public class DiskClient extends JdcloudClient {
      */
     public DescribeSnapshotResponse describeSnapshot(DescribeSnapshotRequest request) throws JdcloudSdkException {
         return new DescribeSnapshotExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除单个云硬盘快照:快照状态必须为 available 或 error 状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSnapshotResponse deleteSnapshot(DeleteSnapshotRequest request) throws JdcloudSdkException {
+        return new DeleteSnapshotExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改快照的名字或描述信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifySnpAttributeResponse modifySnpAttribute(ModifySnpAttributeRequest request) throws JdcloudSdkException {
+        return new ModifySnpAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改云硬盘的名字或描述信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyDiskAttributeResponse modifyDiskAttribute(ModifyDiskAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyDiskAttributeExecutor().client(this).execute(request);
     }
 
 

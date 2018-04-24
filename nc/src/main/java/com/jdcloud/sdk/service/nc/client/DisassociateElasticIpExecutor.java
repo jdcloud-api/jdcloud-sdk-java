@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.nc.model.DisassociateElasticIpResponse;
 
 /**
- * 云容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+ * 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
  */
 class DisassociateElasticIpExecutor extends JdcloudExecutor {
 

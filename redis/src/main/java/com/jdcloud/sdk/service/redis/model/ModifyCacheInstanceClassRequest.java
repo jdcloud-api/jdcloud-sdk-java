@@ -35,7 +35,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * 变更后的缓存Redis实例规格代码，参考https://www.jdcloud.com/help/detail/2414/isCatalog/1
+     * 变更后的缓存Redis&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 变更后的缓存Redis实例规格代码，参考https://www.jdcloud.com/help/detail/2414/isCatalog/1
+     * get 变更后的缓存Redis&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 变更后的缓存Redis实例规格代码，参考https://www.jdcloud.com/help/detail/2414/isCatalog/1
+     * set 变更后的缓存Redis&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @param cacheInstanceClass
      */
@@ -112,7 +112,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 变更后的缓存Redis实例规格代码，参考https://www.jdcloud.com/help/detail/2414/isCatalog/1
+     * set 变更后的缓存Redis&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @param cacheInstanceClass
      */

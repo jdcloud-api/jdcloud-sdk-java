@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 云容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+ * 容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
  */
 public class AssociateElasticIpRequest extends JdcloudRequest implements java.io.Serializable {
 

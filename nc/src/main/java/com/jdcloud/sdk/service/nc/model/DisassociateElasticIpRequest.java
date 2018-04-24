@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 云容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+ * 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
  */
 public class DisassociateElasticIpRequest extends JdcloudRequest implements java.io.Serializable {
 

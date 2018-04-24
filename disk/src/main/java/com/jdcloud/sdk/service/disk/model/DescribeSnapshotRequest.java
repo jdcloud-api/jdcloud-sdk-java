@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 云硬盘快照信息详情
+ * 查询云硬盘快照信息详情
  */
 public class DescribeSnapshotRequest extends JdcloudRequest implements java.io.Serializable {
 

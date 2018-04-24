@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.nc.model.AssociateElasticIpResponse;
 
 /**
- * 云容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+ * 容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
  */
 class AssociateElasticIpExecutor extends JdcloudExecutor {
 

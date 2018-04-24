@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.nc.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 云容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
+ * 容器绑定公网IP 绑定的是主网卡、主内网IP对应的弹性IP
  */
 public class AssociateElasticIpResult extends JdcloudResult implements java.io.Serializable {
 

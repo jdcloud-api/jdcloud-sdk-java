@@ -38,7 +38,7 @@ public class VolumeMount  implements java.io.Serializable {
     private String category;
 
     /**
-     * 自动删除，删除主机时自动删除此volume
+     * 自动删除，删除容器时自动删除此volume
      */
     private Boolean autoDelete;
 
@@ -82,7 +82,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * get 自动删除，删除主机时自动删除此volume
+     * get 自动删除，删除容器时自动删除此volume
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * set 自动删除，删除主机时自动删除此volume
+     * set 自动删除，删除容器时自动删除此volume
      *
      * @param autoDelete
      */
@@ -183,7 +183,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * set 自动删除，删除主机时自动删除此volume
+     * set 自动删除，删除容器时自动删除此volume
      *
      * @param autoDelete
      */
