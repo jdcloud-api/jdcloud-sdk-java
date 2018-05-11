@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.monitor.model.Tags;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -62,6 +65,11 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      * 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
      */
     private String timeInterval;
+
+    /**
+     * 自定义标签
+     */
+    private List<Tags> tags;
 
     /**
      * 地域 Id
@@ -169,6 +177,24 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 自定义标签
+     *
+     * @return
+     */
+    public List<Tags> getTags() {
+        return tags;
+    }
+
+    /**
+     * set 自定义标签
+     *
+     * @param tags
+     */
+    public void setTags(List<Tags> tags) {
+        this.tags = tags;
+    }
+
+    /**
      * get 地域 Id
      *
      * @return
@@ -256,6 +282,16 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * set 自定义标签
+     *
+     * @param tags
+     */
+    public DescribeMetricDataRequest tags(List<Tags> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set 地域 Id
      *
      * @param regionId
@@ -275,5 +311,17 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
+    /**
+     * add item to 自定义标签
+     *
+     * @param tag
+     */
+    public void addTag(Tags tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
 }

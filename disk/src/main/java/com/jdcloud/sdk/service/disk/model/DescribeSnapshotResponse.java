@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.disk.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 云硬盘快照信息详情
+ * 查询云硬盘快照信息详情
  */
 public class DescribeSnapshotResponse extends JdcloudResponse<DescribeSnapshotResult> implements java.io.Serializable {
 

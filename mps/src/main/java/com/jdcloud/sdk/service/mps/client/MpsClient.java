@@ -54,7 +54,7 @@ public class MpsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.0";
+    public final static String ClientVersion = "1.0.1";
     public final static String DefaultEndpoint = "mps.jdcloud-api.com";
     public final static String ServiceName = "mps";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -97,7 +97,7 @@ public class MpsClient extends JdcloudClient {
 
 
     /**
-     * 设置媒体处理通知, 在设置Notification时会对endpoint进行校验，设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知，要求把Message内容进行base64编码返回给系统(body)进行校验
+     * 设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
      *
      * @param request
      * @return

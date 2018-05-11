@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改已创建的报警规则，修改之后返回新的规则id
+ * 修改已创建的报警规则
  */
 public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serializable {
 

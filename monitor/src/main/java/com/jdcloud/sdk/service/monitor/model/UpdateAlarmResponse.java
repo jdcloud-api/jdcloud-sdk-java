@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.monitor.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改已创建的报警规则，修改之后返回新的规则id
+ * 修改已创建的报警规则
  */
 public class UpdateAlarmResponse extends JdcloudResponse<UpdateAlarmResult> implements java.io.Serializable {
 

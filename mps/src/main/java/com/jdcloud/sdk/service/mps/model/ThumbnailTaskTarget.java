@@ -26,47 +26,50 @@ package com.jdcloud.sdk.service.mps.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * thumbnailTaskTarget
+ * 视频截图目标文件参数
  */
 public class ThumbnailTaskTarget  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * destBucket
+     * 输入存放目标文件的 bucket
+     * Required:true
      */
+    @Required
     private String destBucket;
 
     /**
-     * destKeyPrefix
+     * 目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
      */
     private String destKeyPrefix;
 
     /**
-     * format
+     * 目标截图的格式 default: jpg
      */
     private String format;
 
     /**
-     * widthInPixel
+     * 目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      */
     private Integer widthInPixel;
 
     /**
-     * heightInPixel
+     * 目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      */
     private Integer heightInPixel;
 
     /**
-     * keys
+     * 目标截图的Key的集合 (readonly)
      */
     private List<String> keys;
 
 
     /**
-     * get destBucket
+     * get 输入存放目标文件的 bucket
      *
      * @return
      */
@@ -75,7 +78,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set destBucket
+     * set 输入存放目标文件的 bucket
      *
      * @param destBucket
      */
@@ -84,7 +87,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * get destKeyPrefix
+     * get 目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
      *
      * @return
      */
@@ -93,7 +96,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set destKeyPrefix
+     * set 目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
      *
      * @param destKeyPrefix
      */
@@ -102,7 +105,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * get format
+     * get 目标截图的格式 default: jpg
      *
      * @return
      */
@@ -111,7 +114,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set format
+     * set 目标截图的格式 default: jpg
      *
      * @param format
      */
@@ -120,7 +123,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * get widthInPixel
+     * get 目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
      * @return
      */
@@ -129,7 +132,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set widthInPixel
+     * set 目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
      * @param widthInPixel
      */
@@ -138,7 +141,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * get heightInPixel
+     * get 目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
      * @return
      */
@@ -147,7 +150,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set heightInPixel
+     * set 目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
      * @param heightInPixel
      */
@@ -156,7 +159,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * get keys
+     * get 目标截图的Key的集合 (readonly)
      *
      * @return
      */
@@ -165,7 +168,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set keys
+     * set 目标截图的Key的集合 (readonly)
      *
      * @param keys
      */
@@ -175,7 +178,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
 
 
     /**
-     * set destBucket
+     * set 输入存放目标文件的 bucket
      *
      * @param destBucket
      */
@@ -185,7 +188,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set destKeyPrefix
+     * set 目标截图的Key的前缀, &#39;前缀-taskID-%04d(num).(format)&#39;, 默认: sourceKey
      *
      * @param destKeyPrefix
      */
@@ -195,7 +198,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set format
+     * set 目标截图的格式 default: jpg
      *
      * @param format
      */
@@ -205,7 +208,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set widthInPixel
+     * set 目标截图的宽, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
      * @param widthInPixel
      */
@@ -215,7 +218,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set heightInPixel
+     * set 目标截图的高, 如果视频实际分辨率低于目标分辨率则按照实际分辨率输出 default: 0 代表源视频高 其他[8, 4096]
      *
      * @param heightInPixel
      */
@@ -225,7 +228,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
     }
 
     /**
-     * set keys
+     * set 目标截图的Key的集合 (readonly)
      *
      * @param keys
      */
@@ -236,7 +239,7 @@ public class ThumbnailTaskTarget  implements java.io.Serializable {
 
 
     /**
-     * add item to keys
+     * add item to 目标截图的Key的集合 (readonly)
      *
      * @param key
      */

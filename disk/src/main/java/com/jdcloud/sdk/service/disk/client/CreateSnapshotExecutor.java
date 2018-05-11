@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.disk.model.CreateSnapshotResponse;
 
 /**
- * 为指定云硬盘创建快照调用成功返回后，新生成的快照的状态为 creating
+ * 为指定云硬盘创建快照,新生成的快照的状态为creating
  */
 class CreateSnapshotExecutor extends JdcloudExecutor {
 
