@@ -43,22 +43,22 @@ public class Notification  implements java.io.Serializable {
     private Boolean enabled;
 
     /**
-     * 通知endpoint，当前支持http://和https://, 未来会支持sms:, email:, queues: 等
+     * 通知endpoint, 当前支持http://和https://
      */
     private String endpoint;
 
     /**
-     * 触发通知的事件集合
+     * 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
      */
     private List<String> events;
 
     /**
-     * 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次，每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次，每次重试的间隔时间指数递增至 512秒，总计重试时间为1天；每次重试的具体间隔为：1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒 (共167个512)。
+     * 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)
      */
     private String notifyStrategy;
 
     /**
-     * 描述了向 Endpoint 推送的消息格式, JSON包含消息正文和消息属性, SIMPLIFIED消息体即用户发布的消息，不包含任何属性信息
+     * 描述了向 Endpoint 推送的消息格式, JSON: 包含消息正文和消息属性, SIMPLIFIED: 消息体即用户发布的消息, 不包含任何属性信息
      */
     private String notifyContentFormat;
 
@@ -82,7 +82,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * get 通知endpoint，当前支持http://和https://, 未来会支持sms:, email:, queues: 等
+     * get 通知endpoint, 当前支持http://和https://
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * set 通知endpoint，当前支持http://和https://, 未来会支持sms:, email:, queues: 等
+     * set 通知endpoint, 当前支持http://和https://
      *
      * @param endpoint
      */
@@ -100,7 +100,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * get 触发通知的事件集合
+     * get 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * set 触发通知的事件集合
+     * set 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
      *
      * @param events
      */
@@ -118,7 +118,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * get 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次，每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次，每次重试的间隔时间指数递增至 512秒，总计重试时间为1天；每次重试的具体间隔为：1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒 (共167个512)。
+     * get 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * set 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次，每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次，每次重试的间隔时间指数递增至 512秒，总计重试时间为1天；每次重试的具体间隔为：1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒 (共167个512)。
+     * set 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)
      *
      * @param notifyStrategy
      */
@@ -136,7 +136,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * get 描述了向 Endpoint 推送的消息格式, JSON包含消息正文和消息属性, SIMPLIFIED消息体即用户发布的消息，不包含任何属性信息
+     * get 描述了向 Endpoint 推送的消息格式, JSON: 包含消息正文和消息属性, SIMPLIFIED: 消息体即用户发布的消息, 不包含任何属性信息
      *
      * @return
      */
@@ -145,7 +145,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * set 描述了向 Endpoint 推送的消息格式, JSON包含消息正文和消息属性, SIMPLIFIED消息体即用户发布的消息，不包含任何属性信息
+     * set 描述了向 Endpoint 推送的消息格式, JSON: 包含消息正文和消息属性, SIMPLIFIED: 消息体即用户发布的消息, 不包含任何属性信息
      *
      * @param notifyContentFormat
      */
@@ -165,7 +165,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * set 通知endpoint，当前支持http://和https://, 未来会支持sms:, email:, queues: 等
+     * set 通知endpoint, 当前支持http://和https://
      *
      * @param endpoint
      */
@@ -175,7 +175,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * set 触发通知的事件集合
+     * set 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
      *
      * @param events
      */
@@ -185,7 +185,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * set 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次，每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次，每次重试的间隔时间指数递增至 512秒，总计重试时间为1天；每次重试的具体间隔为：1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒 (共167个512)。
+     * set 重试策略, BACKOFF_RETRY: 退避重试策略, 重试 3 次, 每次重试的间隔时间是 10秒 到 20秒 之间的随机值; EXPONENTIAL_DECAY_RETRY: 指数衰减重试, 重试 176 次, 每次重试的间隔时间指数递增至 512秒, 总计重试时间为1天; 每次重试的具体间隔为: 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512 ... 512 秒(共167个512)
      *
      * @param notifyStrategy
      */
@@ -195,7 +195,7 @@ public class Notification  implements java.io.Serializable {
     }
 
     /**
-     * set 描述了向 Endpoint 推送的消息格式, JSON包含消息正文和消息属性, SIMPLIFIED消息体即用户发布的消息，不包含任何属性信息
+     * set 描述了向 Endpoint 推送的消息格式, JSON: 包含消息正文和消息属性, SIMPLIFIED: 消息体即用户发布的消息, 不包含任何属性信息
      *
      * @param notifyContentFormat
      */
@@ -206,7 +206,7 @@ public class Notification  implements java.io.Serializable {
 
 
     /**
-     * add item to 触发通知的事件集合
+     * add item to 触发通知的事件集合 (mpsTranscodeComplete, mpsThumbnailComplete)
      *
      * @param event
      */

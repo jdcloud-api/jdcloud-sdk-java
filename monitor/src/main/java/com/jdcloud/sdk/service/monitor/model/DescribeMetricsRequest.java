@@ -35,7 +35,19 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源的类型，取值vm, lb, ip, database 等
+     * 资源的类型 ： 
+vm--&gt;云主机
+disk--&gt;云硬盘
+ip--&gt;公网ip
+balance--&gt;负载均衡
+database--&gt;云数据库mysql版本
+cdn--&gt;京东CDN
+redis--&gt;redis云缓存
+mongodb--&gt;mongoDB云缓存
+storage--&gt;云存储
+sqlserver--&gt;云数据库sqlserver版 
+nativecontainer--&gt;容器
+
      * Required:true
      */
     @Required
@@ -43,7 +55,19 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 资源的类型，取值vm, lb, ip, database 等
+     * get 资源的类型 ： 
+vm--&gt;云主机
+disk--&gt;云硬盘
+ip--&gt;公网ip
+balance--&gt;负载均衡
+database--&gt;云数据库mysql版本
+cdn--&gt;京东CDN
+redis--&gt;redis云缓存
+mongodb--&gt;mongoDB云缓存
+storage--&gt;云存储
+sqlserver--&gt;云数据库sqlserver版 
+nativecontainer--&gt;容器
+
      *
      * @return
      */
@@ -52,7 +76,19 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等
+     * set 资源的类型 ： 
+vm--&gt;云主机
+disk--&gt;云硬盘
+ip--&gt;公网ip
+balance--&gt;负载均衡
+database--&gt;云数据库mysql版本
+cdn--&gt;京东CDN
+redis--&gt;redis云缓存
+mongodb--&gt;mongoDB云缓存
+storage--&gt;云存储
+sqlserver--&gt;云数据库sqlserver版 
+nativecontainer--&gt;容器
+
      *
      * @param serviceCode
      */
@@ -62,7 +98,19 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等
+     * set 资源的类型 ： 
+vm--&gt;云主机
+disk--&gt;云硬盘
+ip--&gt;公网ip
+balance--&gt;负载均衡
+database--&gt;云数据库mysql版本
+cdn--&gt;京东CDN
+redis--&gt;redis云缓存
+mongodb--&gt;mongoDB云缓存
+storage--&gt;云存储
+sqlserver--&gt;云数据库sqlserver版 
+nativecontainer--&gt;容器
+
      *
      * @param serviceCode
      */

@@ -27,20 +27,20 @@ package com.jdcloud.sdk.service.monitor.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改已创建的报警规则，修改之后返回新的规则id
+ * 修改已创建的报警规则
  */
 public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 更新之后的规则id
+     * 规则id
      */
     private String alarmId;
 
 
     /**
-     * get 更新之后的规则id
+     * get 规则id
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 更新之后的规则id
+     * set 规则id
      *
      * @param alarmId
      */
@@ -59,7 +59,7 @@ public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * set 更新之后的规则id
+     * set 规则id
      *
      * @param alarmId
      */

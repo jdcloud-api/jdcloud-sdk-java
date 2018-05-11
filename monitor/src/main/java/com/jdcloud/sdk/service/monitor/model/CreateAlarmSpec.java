@@ -58,7 +58,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     private String downSample;
 
     /**
-     * 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * 取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的metric字段
      * Required:true
      */
     @Required
@@ -91,7 +91,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     private List<String> resourceIds;
 
     /**
-     * 产品名称
+     * 产品名称，取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的serviceCode字段
      * Required:true
      */
     @Required
@@ -185,7 +185,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * get 取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的metric字段
      *
      * @return
      */
@@ -194,7 +194,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * set 取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的metric字段
      *
      * @param metric
      */
@@ -275,7 +275,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 产品名称
+     * get 产品名称，取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的serviceCode字段
      *
      * @return
      */
@@ -284,7 +284,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 产品名称
+     * set 产品名称，取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的serviceCode字段
      *
      * @param serviceCode
      */
@@ -370,7 +370,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * set 取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的metric字段
      *
      * @param metric
      */
@@ -420,7 +420,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 产品名称
+     * set 产品名称，取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的serviceCode字段
      *
      * @param serviceCode
      */

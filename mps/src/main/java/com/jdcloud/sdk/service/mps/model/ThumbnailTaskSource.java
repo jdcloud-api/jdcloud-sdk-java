@@ -24,27 +24,32 @@
 
 package com.jdcloud.sdk.service.mps.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * thumbnailTaskSource
+ * 视频截图源文件参数
  */
 public class ThumbnailTaskSource  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * bucket
+     * 输入视频信息的 bucket
+     * Required:true
      */
+    @Required
     private String bucket;
 
     /**
-     * key
+     * 输入视频信息的 Key
+     * Required:true
      */
+    @Required
     private String key;
 
 
     /**
-     * get bucket
+     * get 输入视频信息的 bucket
      *
      * @return
      */
@@ -53,7 +58,7 @@ public class ThumbnailTaskSource  implements java.io.Serializable {
     }
 
     /**
-     * set bucket
+     * set 输入视频信息的 bucket
      *
      * @param bucket
      */
@@ -62,7 +67,7 @@ public class ThumbnailTaskSource  implements java.io.Serializable {
     }
 
     /**
-     * get key
+     * get 输入视频信息的 Key
      *
      * @return
      */
@@ -71,7 +76,7 @@ public class ThumbnailTaskSource  implements java.io.Serializable {
     }
 
     /**
-     * set key
+     * set 输入视频信息的 Key
      *
      * @param key
      */
@@ -81,7 +86,7 @@ public class ThumbnailTaskSource  implements java.io.Serializable {
 
 
     /**
-     * set bucket
+     * set 输入视频信息的 bucket
      *
      * @param bucket
      */
@@ -91,7 +96,7 @@ public class ThumbnailTaskSource  implements java.io.Serializable {
     }
 
     /**
-     * set key
+     * set 输入视频信息的 Key
      *
      * @param key
      */
