@@ -34,7 +34,7 @@ public class ThumbnailStatus  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 状态
+     * 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      * Required:true
      */
     @Required
@@ -52,7 +52,7 @@ public class ThumbnailStatus  implements java.io.Serializable {
 
 
     /**
-     * get 状态
+     * get 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
      * @return
      */
@@ -61,7 +61,7 @@ public class ThumbnailStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 状态
+     * set 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
      * @param status
      */
@@ -107,7 +107,7 @@ public class ThumbnailStatus  implements java.io.Serializable {
 
 
     /**
-     * set 状态
+     * set 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
      * @param status
      */

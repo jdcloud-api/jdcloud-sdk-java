@@ -37,27 +37,27 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 任务ID
+     * 任务ID (readonly)
      */
     private String taskID;
 
     /**
-     * 状态
+     * 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
      */
     private String status;
 
     /**
-     * 错误码
+     * 错误码 (readonly)
      */
     private Integer errorCode;
 
     /**
-     * 任务创建时间
+     * 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      */
     private String createdTime;
 
     /**
-     * 任务创建时间
+     * 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      */
     private String lastUpdatedTime;
 
@@ -78,7 +78,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * get 任务ID
+     * get 任务ID (readonly)
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 任务ID
+     * set 任务ID (readonly)
      *
      * @param taskID
      */
@@ -96,7 +96,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get 状态
+     * get 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
      *
      * @return
      */
@@ -105,7 +105,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 状态
+     * set 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
      *
      * @param status
      */
@@ -114,7 +114,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get 错误码
+     * get 错误码 (readonly)
      *
      * @return
      */
@@ -123,7 +123,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 错误码
+     * set 错误码 (readonly)
      *
      * @param errorCode
      */
@@ -132,7 +132,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get 任务创建时间
+     * get 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
      * @return
      */
@@ -141,7 +141,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 任务创建时间
+     * set 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
      * @param createdTime
      */
@@ -150,7 +150,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get 任务创建时间
+     * get 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
      * @return
      */
@@ -159,7 +159,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 任务创建时间
+     * set 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
      * @param lastUpdatedTime
      */
@@ -223,7 +223,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set 任务ID
+     * set 任务ID (readonly)
      *
      * @param taskID
      */
@@ -233,7 +233,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 状态
+     * set 状态 (SUCCESS, ERROR, PENDDING, RUNNING) (readonly)
      *
      * @param status
      */
@@ -243,7 +243,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 错误码
+     * set 错误码 (readonly)
      *
      * @param errorCode
      */
@@ -253,7 +253,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 任务创建时间
+     * set 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
      * @param createdTime
      */
@@ -263,7 +263,7 @@ public class GetThumbnailTaskResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 任务创建时间
+     * set 任务创建时间 时间格式(GMT): yyyy-MM-dd’T’HH:mm:ss.SSS’Z’  (readonly)
      *
      * @param lastUpdatedTime
      */

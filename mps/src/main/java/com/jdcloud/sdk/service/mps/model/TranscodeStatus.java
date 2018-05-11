@@ -34,7 +34,7 @@ public class TranscodeStatus  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 状态
+     * 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      * Required:true
      */
     @Required
@@ -46,13 +46,13 @@ public class TranscodeStatus  implements java.io.Serializable {
     private Integer errorCode;
 
     /**
-     * 通知消息，由work调用，暂时方案
+     * 通知消息, 由work调用, 暂时方案
      */
     private String notifyMessage;
 
 
     /**
-     * get 状态
+     * get 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
      * @return
      */
@@ -61,7 +61,7 @@ public class TranscodeStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 状态
+     * set 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
      * @param status
      */
@@ -88,7 +88,7 @@ public class TranscodeStatus  implements java.io.Serializable {
     }
 
     /**
-     * get 通知消息，由work调用，暂时方案
+     * get 通知消息, 由work调用, 暂时方案
      *
      * @return
      */
@@ -97,7 +97,7 @@ public class TranscodeStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 通知消息，由work调用，暂时方案
+     * set 通知消息, 由work调用, 暂时方案
      *
      * @param notifyMessage
      */
@@ -107,7 +107,7 @@ public class TranscodeStatus  implements java.io.Serializable {
 
 
     /**
-     * set 状态
+     * set 状态 (SUCESS, ERROR, PENDDING, RUNNING)
      *
      * @param status
      */
@@ -127,7 +127,7 @@ public class TranscodeStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 通知消息，由work调用，暂时方案
+     * set 通知消息, 由work调用, 暂时方案
      *
      * @param notifyMessage
      */

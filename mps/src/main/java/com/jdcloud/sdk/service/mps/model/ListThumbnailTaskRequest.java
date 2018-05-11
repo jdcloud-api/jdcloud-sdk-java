@@ -35,7 +35,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * task 状态 [PENDING, RUNNING, SUCCESS, FAILED]
+     * task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
      */
     private String status;
 
@@ -55,7 +55,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     private String marker;
 
     /**
-     * 查询记录数
+     * 查询记录数 [1, 1000]
      */
     private Integer limit;
 
@@ -68,7 +68,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get task 状态 [PENDING, RUNNING, SUCCESS, FAILED]
+     * get task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set task 状态 [PENDING, RUNNING, SUCCESS, FAILED]
+     * set task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
      *
      * @param status
      */
@@ -140,7 +140,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 查询记录数
+     * get 查询记录数 [1, 1000]
      *
      * @return
      */
@@ -149,7 +149,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 查询记录数
+     * set 查询记录数 [1, 1000]
      *
      * @param limit
      */
@@ -177,7 +177,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set task 状态 [PENDING, RUNNING, SUCCESS, FAILED]
+     * set task 状态 (PENDING, RUNNING, SUCCESS, FAILED)
      *
      * @param status
      */
@@ -217,7 +217,7 @@ public class ListThumbnailTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 查询记录数
+     * set 查询记录数 [1, 1000]
      *
      * @param limit
      */

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.mps.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 设置媒体处理通知, 在设置Notification时会对endpoint进行校验，设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知，要求把Message内容进行base64编码返回给系统(body)进行校验
+ * 设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
  */
 public class SetNotificationResponse extends JdcloudResponse<SetNotificationResult> implements java.io.Serializable {
 

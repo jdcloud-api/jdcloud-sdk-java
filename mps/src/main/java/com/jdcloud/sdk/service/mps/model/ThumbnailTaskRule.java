@@ -26,40 +26,40 @@ package com.jdcloud.sdk.service.mps.model;
 
 
 /**
- * thumbnailTaskRule
+ * 视频截图规则参数
  */
 public class ThumbnailTaskRule  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * mode
+     * 截图模式 单张: single 多张: multi 平均: average default: single
      */
     private String mode;
 
     /**
-     * keyFrame
+     * 是否开启关键帧截图 default: true
      */
     private Boolean keyFrame;
 
     /**
-     * startTimeInSecond
+     * 生成截图的开始时间, mode&#x3D;average 时不可选. default:0
      */
     private Integer startTimeInSecond;
 
     /**
-     * endTimeInSecond
+     * 生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
      */
     private Integer endTimeInSecond;
 
     /**
-     * count
+     * 截图数量, mode&#x3D;single时不可选. default:1
      */
     private Integer count;
 
 
     /**
-     * get mode
+     * get 截图模式 单张: single 多张: multi 平均: average default: single
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set mode
+     * set 截图模式 单张: single 多张: multi 平均: average default: single
      *
      * @param mode
      */
@@ -77,7 +77,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * get keyFrame
+     * get 是否开启关键帧截图 default: true
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set keyFrame
+     * set 是否开启关键帧截图 default: true
      *
      * @param keyFrame
      */
@@ -95,7 +95,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * get startTimeInSecond
+     * get 生成截图的开始时间, mode&#x3D;average 时不可选. default:0
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set startTimeInSecond
+     * set 生成截图的开始时间, mode&#x3D;average 时不可选. default:0
      *
      * @param startTimeInSecond
      */
@@ -113,7 +113,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * get endTimeInSecond
+     * get 生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set endTimeInSecond
+     * set 生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
      *
      * @param endTimeInSecond
      */
@@ -131,7 +131,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * get count
+     * get 截图数量, mode&#x3D;single时不可选. default:1
      *
      * @return
      */
@@ -140,7 +140,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set count
+     * set 截图数量, mode&#x3D;single时不可选. default:1
      *
      * @param count
      */
@@ -150,7 +150,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
 
 
     /**
-     * set mode
+     * set 截图模式 单张: single 多张: multi 平均: average default: single
      *
      * @param mode
      */
@@ -160,7 +160,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set keyFrame
+     * set 是否开启关键帧截图 default: true
      *
      * @param keyFrame
      */
@@ -170,7 +170,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set startTimeInSecond
+     * set 生成截图的开始时间, mode&#x3D;average 时不可选. default:0
      *
      * @param startTimeInSecond
      */
@@ -180,7 +180,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set endTimeInSecond
+     * set 生成截图的结束时间, mode&#x3D;single/average时不可选, 且不得小于startTimeInSecond. default:-1(代表视频时长)
      *
      * @param endTimeInSecond
      */
@@ -190,7 +190,7 @@ public class ThumbnailTaskRule  implements java.io.Serializable {
     }
 
     /**
-     * set count
+     * set 截图数量, mode&#x3D;single时不可选. default:1
      *
      * @param count
      */

@@ -34,13 +34,37 @@ public class DescribeMetricsForCreateAlarmRequest extends JdcloudRequest impleme
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源的类型，取值vm, lb, ip, database 等，默认为空，展示所有项目
+     * 资源的类型，默认为空，展示所有项目
+vm--&gt;云主机
+disk--&gt;云硬盘
+ip--&gt;公网ip
+balance--&gt;负载均衡
+database--&gt;云数据库mysql版本
+cdn--&gt;京东CDN
+redis--&gt;redis云缓存
+mongodb--&gt;mongoDB云缓存
+storage--&gt;云存储
+sqlserver--&gt;云数据库sqlserver版 
+nativecontainer--&gt;容器
+
      */
     private String serviceCode;
 
 
     /**
-     * get 资源的类型，取值vm, lb, ip, database 等，默认为空，展示所有项目
+     * get 资源的类型，默认为空，展示所有项目
+vm--&gt;云主机
+disk--&gt;云硬盘
+ip--&gt;公网ip
+balance--&gt;负载均衡
+database--&gt;云数据库mysql版本
+cdn--&gt;京东CDN
+redis--&gt;redis云缓存
+mongodb--&gt;mongoDB云缓存
+storage--&gt;云存储
+sqlserver--&gt;云数据库sqlserver版 
+nativecontainer--&gt;容器
+
      *
      * @return
      */
@@ -49,7 +73,19 @@ public class DescribeMetricsForCreateAlarmRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等，默认为空，展示所有项目
+     * set 资源的类型，默认为空，展示所有项目
+vm--&gt;云主机
+disk--&gt;云硬盘
+ip--&gt;公网ip
+balance--&gt;负载均衡
+database--&gt;云数据库mysql版本
+cdn--&gt;京东CDN
+redis--&gt;redis云缓存
+mongodb--&gt;mongoDB云缓存
+storage--&gt;云存储
+sqlserver--&gt;云数据库sqlserver版 
+nativecontainer--&gt;容器
+
      *
      * @param serviceCode
      */
@@ -59,7 +95,19 @@ public class DescribeMetricsForCreateAlarmRequest extends JdcloudRequest impleme
 
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等，默认为空，展示所有项目
+     * set 资源的类型，默认为空，展示所有项目
+vm--&gt;云主机
+disk--&gt;云硬盘
+ip--&gt;公网ip
+balance--&gt;负载均衡
+database--&gt;云数据库mysql版本
+cdn--&gt;京东CDN
+redis--&gt;redis云缓存
+mongodb--&gt;mongoDB云缓存
+storage--&gt;云存储
+sqlserver--&gt;云数据库sqlserver版 
+nativecontainer--&gt;容器
+
      *
      * @param serviceCode
      */

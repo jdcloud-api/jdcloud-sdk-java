@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.disk.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 为指定云硬盘创建快照调用成功返回后，新生成的快照的状态为 creating
+ * 为指定云硬盘创建快照,新生成的快照的状态为creating
  */
 public class CreateSnapshotResponse extends JdcloudResponse<CreateSnapshotResult> implements java.io.Serializable {
 
