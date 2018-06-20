@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     private Integer deviceIndex;
 
     /**
-     * 指明删除实例时是否删除网卡，默认True；当前只能是True
+     * 指明删除实例时是否删除网卡，默认true；当前只能是true
      */
     private Boolean autoDelete;
 
@@ -67,7 +67,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     }
 
     /**
-     * get 指明删除实例时是否删除网卡，默认True；当前只能是True
+     * get 指明删除实例时是否删除网卡，默认true；当前只能是true
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     }
 
     /**
-     * set 指明删除实例时是否删除网卡，默认True；当前只能是True
+     * set 指明删除实例时是否删除网卡，默认true；当前只能是true
      *
      * @param autoDelete
      */
@@ -114,7 +114,7 @@ public class InstanceNetworkInterfaceAttachment  implements java.io.Serializable
     }
 
     /**
-     * set 指明删除实例时是否删除网卡，默认True；当前只能是True
+     * set 指明删除实例时是否删除网卡，默认true；当前只能是true
      *
      * @param autoDelete
      */
