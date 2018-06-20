@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,6 +39,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
 
     /**
      * instanceTypes - 实例类型，精确匹配，支持多个
+az - 可用区，精确匹配，支持多个
 
      */
     private List<Filter> filters;
@@ -53,6 +54,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
 
     /**
      * get instanceTypes - 实例类型，精确匹配，支持多个
+az - 可用区，精确匹配，支持多个
 
      *
      * @return
@@ -63,6 +65,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
 
     /**
      * set instanceTypes - 实例类型，精确匹配，支持多个
+az - 可用区，精确匹配，支持多个
 
      *
      * @param filters
@@ -92,6 +95,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
 
     /**
      * set instanceTypes - 实例类型，精确匹配，支持多个
+az - 可用区，精确匹配，支持多个
 
      *
      * @param filters
@@ -114,6 +118,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
 
     /**
      * add item to instanceTypes - 实例类型，精确匹配，支持多个
+az - 可用区，精确匹配，支持多个
 
      *
      * @param filter

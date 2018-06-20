@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * instanceType
@@ -56,6 +58,11 @@ public class InstanceType  implements java.io.Serializable {
      * 描述
      */
     private String desc;
+
+    /**
+     * 状态
+     */
+    private List<InstanceTypeState> state;
 
 
     /**
@@ -148,6 +155,24 @@ public class InstanceType  implements java.io.Serializable {
         this.desc = desc;
     }
 
+    /**
+     * get 状态
+     *
+     * @return
+     */
+    public List<InstanceTypeState> getState() {
+        return state;
+    }
+
+    /**
+     * set 状态
+     *
+     * @param state
+     */
+    public void setState(List<InstanceTypeState> state) {
+        this.state = state;
+    }
+
 
     /**
      * set 实例族
@@ -199,5 +224,27 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 状态
+     *
+     * @param state
+     */
+    public InstanceType state(List<InstanceTypeState> state) {
+        this.state = state;
+        return this;
+    }
+
+
+    /**
+     * add item to 状态
+     *
+     * @param state
+     */
+    public void addState(InstanceTypeState state) {
+        if (this.state == null) {
+            this.state = new ArrayList<>();
+        }
+        this.state.add(state);
+    }
 
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -124,6 +124,11 @@ public class Instance  implements java.io.Serializable {
      * 计费信息
      */
     private Charge charge;
+
+    /**
+     * Tag信息
+     */
+    private List<Tag> tags;
 
 
     /**
@@ -450,6 +455,24 @@ public class Instance  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get Tag信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
 
     /**
      * set 实例ID
@@ -631,6 +654,16 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public Instance tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
 
     /**
      * add item to 数据盘信息
@@ -654,6 +687,18 @@ public class Instance  implements java.io.Serializable {
             this.keyNames = new ArrayList<>();
         }
         this.keyNames.add(keyName);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }
