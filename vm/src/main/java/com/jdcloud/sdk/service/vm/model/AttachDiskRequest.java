@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,7 +49,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     private String deviceName;
 
     /**
-     * 当删除主机时，是否自动关联删除此硬盘，默认False，此对按配置计费生效
+     * 当删除主机时，是否自动关联删除此硬盘，默认False，只支持按配置计费
      */
     private Boolean autoDelete;
 
@@ -105,7 +105,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 当删除主机时，是否自动关联删除此硬盘，默认False，此对按配置计费生效
+     * get 当删除主机时，是否自动关联删除此硬盘，默认False，只支持按配置计费
      *
      * @return
      */
@@ -114,7 +114,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 当删除主机时，是否自动关联删除此硬盘，默认False，此对按配置计费生效
+     * set 当删除主机时，是否自动关联删除此硬盘，默认False，只支持按配置计费
      *
      * @param autoDelete
      */
@@ -180,7 +180,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 当删除主机时，是否自动关联删除此硬盘，默认False，此对按配置计费生效
+     * set 当删除主机时，是否自动关联删除此硬盘，默认False，只支持按配置计费
      *
      * @param autoDelete
      */

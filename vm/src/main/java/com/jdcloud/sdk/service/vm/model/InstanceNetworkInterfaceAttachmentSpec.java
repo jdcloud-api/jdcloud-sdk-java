@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备Index
+     * 设备Index，主网卡只能是1
      */
     private Integer deviceIndex;
 
@@ -45,7 +45,7 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
 
 
     /**
-     * get 设备Index
+     * get 设备Index，主网卡只能是1
      *
      * @return
      */
@@ -54,7 +54,7 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     }
 
     /**
-     * set 设备Index
+     * set 设备Index，主网卡只能是1
      *
      * @param deviceIndex
      */
@@ -82,7 +82,7 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
 
 
     /**
-     * set 设备Index
+     * set 设备Index，主网卡只能是1
      *
      * @param deviceIndex
      */

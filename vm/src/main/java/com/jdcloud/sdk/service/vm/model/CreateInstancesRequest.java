@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,8 +24,8 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
-import com.jdcloud.sdk.service.vm.model.InstanceSpec;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vm.model.InstanceSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -37,11 +37,13 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * 创建主机规格
+     * Required:true
      */
+    @Required
     private InstanceSpec instanceSpec;
 
     /**
-     * 购买实例数量；取值范围：[1,100]
+     * 购买实例数量；取值范围：[1,100]，默认为1
      */
     private Integer maxCount;
 
@@ -72,7 +74,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 购买实例数量；取值范围：[1,100]
+     * get 购买实例数量；取值范围：[1,100]，默认为1
      *
      * @return
      */
@@ -81,7 +83,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 购买实例数量；取值范围：[1,100]
+     * set 购买实例数量；取值范围：[1,100]，默认为1
      *
      * @param maxCount
      */
@@ -119,7 +121,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 购买实例数量；取值范围：[1,100]
+     * set 购买实例数量；取值范围：[1,100]，默认为1
      *
      * @param maxCount
      */

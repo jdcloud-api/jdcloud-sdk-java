@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     private String diskCategory;
 
     /**
-     * 自动删除，删除主机时自动删除此磁盘，默认为True，本地盘不能更改此值
+     * 自动删除，删除主机时自动删除此磁盘，默认为true，本地盘不能更改此值
      */
     private Boolean autoDelete;
 
@@ -77,7 +77,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * get 自动删除，删除主机时自动删除此磁盘，默认为True，本地盘不能更改此值
+     * get 自动删除，删除主机时自动删除此磁盘，默认为true，本地盘不能更改此值
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * set 自动删除，删除主机时自动删除此磁盘，默认为True，本地盘不能更改此值
+     * set 自动删除，删除主机时自动删除此磁盘，默认为true，本地盘不能更改此值
      *
      * @param autoDelete
      */
@@ -160,7 +160,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * set 自动删除，删除主机时自动删除此磁盘，默认为True，本地盘不能更改此值
+     * set 自动删除，删除主机时自动删除此磁盘，默认为true，本地盘不能更改此值
      *
      * @param autoDelete
      */

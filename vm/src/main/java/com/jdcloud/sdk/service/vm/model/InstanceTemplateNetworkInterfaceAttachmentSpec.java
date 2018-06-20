@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,12 +34,12 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备Index；主网卡的index必须为0；当前仅支持主网卡
+     * 设备Index；主网卡的index必须为1；当前仅支持主网卡
      */
     private Integer deviceIndex;
 
     /**
-     * 指明删除实例时是否删除网卡，默认True；当前只能是True
+     * 指明删除实例时是否删除网卡，默认true；当前只能是true
      */
     private Boolean autoDelete;
 
@@ -52,7 +52,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
 
 
     /**
-     * get 设备Index；主网卡的index必须为0；当前仅支持主网卡
+     * get 设备Index；主网卡的index必须为1；当前仅支持主网卡
      *
      * @return
      */
@@ -61,7 +61,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     }
 
     /**
-     * set 设备Index；主网卡的index必须为0；当前仅支持主网卡
+     * set 设备Index；主网卡的index必须为1；当前仅支持主网卡
      *
      * @param deviceIndex
      */
@@ -70,7 +70,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     }
 
     /**
-     * get 指明删除实例时是否删除网卡，默认True；当前只能是True
+     * get 指明删除实例时是否删除网卡，默认true；当前只能是true
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     }
 
     /**
-     * set 指明删除实例时是否删除网卡，默认True；当前只能是True
+     * set 指明删除实例时是否删除网卡，默认true；当前只能是true
      *
      * @param autoDelete
      */
@@ -107,7 +107,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
 
 
     /**
-     * set 设备Index；主网卡的index必须为0；当前仅支持主网卡
+     * set 设备Index；主网卡的index必须为1；当前仅支持主网卡
      *
      * @param deviceIndex
      */
@@ -117,7 +117,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     }
 
     /**
-     * set 指明删除实例时是否删除网卡，默认True；当前只能是True
+     * set 指明删除实例时是否删除网卡，默认true；当前只能是true
      *
      * @param autoDelete
      */

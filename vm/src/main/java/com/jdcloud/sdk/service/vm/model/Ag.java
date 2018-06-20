@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,18 +33,18 @@ public class Ag  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 可用组name
+     * 高可用组名称
      */
     private String name;
 
     /**
-     * 可用组id
+     * 高可用组id
      */
     private String id;
 
 
     /**
-     * get 可用组name
+     * get 高可用组名称
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class Ag  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组name
+     * set 高可用组名称
      *
      * @param name
      */
@@ -62,7 +62,7 @@ public class Ag  implements java.io.Serializable {
     }
 
     /**
-     * get 可用组id
+     * get 高可用组id
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class Ag  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组id
+     * set 高可用组id
      *
      * @param id
      */
@@ -81,7 +81,7 @@ public class Ag  implements java.io.Serializable {
 
 
     /**
-     * set 可用组name
+     * set 高可用组名称
      *
      * @param name
      */
@@ -91,7 +91,7 @@ public class Ag  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组id
+     * set 高可用组id
      *
      * @param id
      */

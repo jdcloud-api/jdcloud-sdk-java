@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -79,9 +79,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * 密钥对名称
-     * Required:true
      */
-    @Required
     private List<String> keyNames;
 
     /**
@@ -105,9 +103,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * 数据盘配置信息
-     * Required:true
      */
-    @Required
     private List<InstanceDiskAttachmentSpec> dataDisks;
 
     /**
@@ -117,9 +113,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * 主机描述，长度不超过256字符
-     * Required:true
      */
-    @Required
     private String description;
 
 
