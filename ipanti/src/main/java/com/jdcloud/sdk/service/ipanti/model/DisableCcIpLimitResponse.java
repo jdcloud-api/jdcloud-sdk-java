@@ -24,12 +24,12 @@
 
 package com.jdcloud.sdk.service.ipanti.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 开启实例CC防护的观察者模式
+ * 关闭CC防护每ip的限速
  */
-public class EnableCcObserverModeResult extends JdcloudResult implements java.io.Serializable {
+public class DisableCcIpLimitResponse extends JdcloudResponse<DisableCcIpLimitResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

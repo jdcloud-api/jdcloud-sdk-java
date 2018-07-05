@@ -85,6 +85,9 @@ import com.jdcloud.sdk.service.ipanti.client.DisableInstanceIpBlackListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableCcIpLimitRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableCcIpLimitResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableCcIpLimitExecutor;
 import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleCCRequest;
 import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleCCResponse;
 import com.jdcloud.sdk.service.ipanti.client.EnableWebRuleCCExecutor;
@@ -154,6 +157,9 @@ import com.jdcloud.sdk.service.ipanti.client.DescribeInstancesExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCcAttackLogDetailsRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCcAttackLogDetailsResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeCcAttackLogDetailsExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableCcIpLimitRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableCcIpLimitResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableCcIpLimitExecutor;
 
 /**
  * ipantiClient
@@ -282,7 +288,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 关闭CC防护每ip的限速
+     * 关闭实例CC防护的观察者模式
      *
      * @param request
      * @return
@@ -293,7 +299,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 开启CC防护每ip的限速
+     * 开启实例CC防护的观察者模式
      *
      * @param request
      * @return
@@ -400,6 +406,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public ModifyForwardRuleResponse modifyForwardRule(ModifyForwardRuleRequest request) throws JdcloudSdkException {
         return new ModifyForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭CC防护每ip的限速
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableCcIpLimitResponse disableCcIpLimit(DisableCcIpLimitRequest request) throws JdcloudSdkException {
+        return new DisableCcIpLimitExecutor().client(this).execute(request);
     }
 
     /**
@@ -653,6 +670,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DescribeCcAttackLogDetailsResponse describeCcAttackLogDetails(DescribeCcAttackLogDetailsRequest request) throws JdcloudSdkException {
         return new DescribeCcAttackLogDetailsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启CC防护每ip的限速
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableCcIpLimitResponse enableCcIpLimit(EnableCcIpLimitRequest request) throws JdcloudSdkException {
+        return new EnableCcIpLimitExecutor().client(this).execute(request);
     }
 
 

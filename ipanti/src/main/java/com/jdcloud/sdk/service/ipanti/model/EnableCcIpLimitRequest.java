@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 关闭实例CC防护的观察者模式
+ * 开启CC防护每ip的限速
  */
-public class DisableCcObserverModeRequest extends JdcloudRequest implements java.io.Serializable {
+public class EnableCcIpLimitRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -91,7 +91,7 @@ public class DisableCcObserverModeRequest extends JdcloudRequest implements java
      *
      * @param regionId
      */
-    public DisableCcObserverModeRequest regionId(String regionId) {
+    public EnableCcIpLimitRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -101,7 +101,7 @@ public class DisableCcObserverModeRequest extends JdcloudRequest implements java
      *
      * @param instanceId
      */
-    public DisableCcObserverModeRequest instanceId(String instanceId) {
+    public EnableCcIpLimitRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

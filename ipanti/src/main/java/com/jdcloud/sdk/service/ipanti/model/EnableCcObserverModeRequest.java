@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 开启CC防护每ip的限速
+ * 开启实例CC防护的观察者模式
  */
 public class EnableCcObserverModeRequest extends JdcloudRequest implements java.io.Serializable {
 
