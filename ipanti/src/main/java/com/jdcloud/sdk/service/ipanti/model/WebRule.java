@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,12 @@ public class WebRule  implements java.io.Serializable {
     /**
      * 规则id
      */
-    private Long webRuleId;
+    private Long id;
+
+    /**
+     * 实例id
+     */
+    private Long instanceId;
 
     /**
      * 子域名
@@ -55,19 +60,34 @@ public class WebRule  implements java.io.Serializable {
     private String protocol;
 
     /**
-     * 端口号，80,443
+     * HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
      */
     private String port;
 
     /**
-     * 回源类型：ip或者domain
+     * HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     */
+    private String httpsPort;
+
+    /**
+     * 回源类型：A或者CNAME
      */
     private String originType;
 
     /**
-     * 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * originAddr
      */
-    private List<String> originAddr;
+    private List<OriginAddrItem> originAddr;
+
+    /**
+     * onlineAddr
+     */
+    private List<String> onlineAddr;
+
+    /**
+     * 回源域名,originType为CNAME时返回该字段
+     */
+    private String originDomain;
 
     /**
      * 证书内容
@@ -90,9 +110,29 @@ public class WebRule  implements java.io.Serializable {
     private Integer status;
 
     /**
-     * 0CC关闭 1CC开启
+     * 0 CC关闭 1 CC开启
      */
     private Integer ccStatus;
+
+    /**
+     * 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     */
+    private String algorithm;
+
+    /**
+     * 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
+     */
+    private Integer forceJump;
+
+    /**
+     * 是否为自定义端口号，0为默认 1为自定义
+     */
+    private Integer customPortStatus;
+
+    /**
+     * 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+     */
+    private Integer httpOrigin;
 
 
     /**
@@ -100,17 +140,35 @@ public class WebRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getWebRuleId() {
-        return webRuleId;
+    public Long getId() {
+        return id;
     }
 
     /**
      * set 规则id
      *
-     * @param webRuleId
+     * @param id
      */
-    public void setWebRuleId(Long webRuleId) {
-        this.webRuleId = webRuleId;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    /**
+     * get 实例id
+     *
+     * @return
+     */
+    public Long getInstanceId() {
+        return instanceId;
+    }
+
+    /**
+     * set 实例id
+     *
+     * @param instanceId
+     */
+    public void setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
     }
 
     /**
@@ -168,7 +226,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 端口号，80,443
+     * get HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
      *
      * @return
      */
@@ -177,7 +235,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 端口号，80,443
+     * set HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
      *
      * @param port
      */
@@ -186,7 +244,25 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 回源类型：ip或者domain
+     * get HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     *
+     * @return
+     */
+    public String getHttpsPort() {
+        return httpsPort;
+    }
+
+    /**
+     * set HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     *
+     * @param httpsPort
+     */
+    public void setHttpsPort(String httpsPort) {
+        this.httpsPort = httpsPort;
+    }
+
+    /**
+     * get 回源类型：A或者CNAME
      *
      * @return
      */
@@ -195,7 +271,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型：ip或者domain
+     * set 回源类型：A或者CNAME
      *
      * @param originType
      */
@@ -204,21 +280,57 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * get originAddr
      *
      * @return
      */
-    public List<String> getOriginAddr() {
+    public List<OriginAddrItem> getOriginAddr() {
         return originAddr;
     }
 
     /**
-     * set 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * set originAddr
      *
      * @param originAddr
      */
-    public void setOriginAddr(List<String> originAddr) {
+    public void setOriginAddr(List<OriginAddrItem> originAddr) {
         this.originAddr = originAddr;
+    }
+
+    /**
+     * get onlineAddr
+     *
+     * @return
+     */
+    public List<String> getOnlineAddr() {
+        return onlineAddr;
+    }
+
+    /**
+     * set onlineAddr
+     *
+     * @param onlineAddr
+     */
+    public void setOnlineAddr(List<String> onlineAddr) {
+        this.onlineAddr = onlineAddr;
+    }
+
+    /**
+     * get 回源域名,originType为CNAME时返回该字段
+     *
+     * @return
+     */
+    public String getOriginDomain() {
+        return originDomain;
+    }
+
+    /**
+     * set 回源域名,originType为CNAME时返回该字段
+     *
+     * @param originDomain
+     */
+    public void setOriginDomain(String originDomain) {
+        this.originDomain = originDomain;
     }
 
     /**
@@ -294,7 +406,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 0CC关闭 1CC开启
+     * get 0 CC关闭 1 CC开启
      *
      * @return
      */
@@ -303,7 +415,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 0CC关闭 1CC开启
+     * set 0 CC关闭 1 CC开启
      *
      * @param ccStatus
      */
@@ -311,14 +423,96 @@ public class WebRule  implements java.io.Serializable {
         this.ccStatus = ccStatus;
     }
 
+    /**
+     * get 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     *
+     * @return
+     */
+    public String getAlgorithm() {
+        return algorithm;
+    }
+
+    /**
+     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     *
+     * @param algorithm
+     */
+    public void setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+    }
+
+    /**
+     * get 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
+     *
+     * @return
+     */
+    public Integer getForceJump() {
+        return forceJump;
+    }
+
+    /**
+     * set 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
+     *
+     * @param forceJump
+     */
+    public void setForceJump(Integer forceJump) {
+        this.forceJump = forceJump;
+    }
+
+    /**
+     * get 是否为自定义端口号，0为默认 1为自定义
+     *
+     * @return
+     */
+    public Integer getCustomPortStatus() {
+        return customPortStatus;
+    }
+
+    /**
+     * set 是否为自定义端口号，0为默认 1为自定义
+     *
+     * @param customPortStatus
+     */
+    public void setCustomPortStatus(Integer customPortStatus) {
+        this.customPortStatus = customPortStatus;
+    }
+
+    /**
+     * get 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+     *
+     * @return
+     */
+    public Integer getHttpOrigin() {
+        return httpOrigin;
+    }
+
+    /**
+     * set 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+     *
+     * @param httpOrigin
+     */
+    public void setHttpOrigin(Integer httpOrigin) {
+        this.httpOrigin = httpOrigin;
+    }
+
 
     /**
      * set 规则id
      *
-     * @param webRuleId
+     * @param id
      */
-    public WebRule webRuleId(Long webRuleId) {
-        this.webRuleId = webRuleId;
+    public WebRule id(Long id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
+     * set 实例id
+     *
+     * @param instanceId
+     */
+    public WebRule instanceId(Long instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
 
@@ -353,7 +547,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 端口号，80,443
+     * set HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
      *
      * @param port
      */
@@ -363,7 +557,17 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型：ip或者domain
+     * set HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     *
+     * @param httpsPort
+     */
+    public WebRule httpsPort(String httpsPort) {
+        this.httpsPort = httpsPort;
+        return this;
+    }
+
+    /**
+     * set 回源类型：A或者CNAME
      *
      * @param originType
      */
@@ -373,12 +577,32 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * set originAddr
      *
      * @param originAddr
      */
-    public WebRule originAddr(List<String> originAddr) {
+    public WebRule originAddr(List<OriginAddrItem> originAddr) {
         this.originAddr = originAddr;
+        return this;
+    }
+
+    /**
+     * set onlineAddr
+     *
+     * @param onlineAddr
+     */
+    public WebRule onlineAddr(List<String> onlineAddr) {
+        this.onlineAddr = onlineAddr;
+        return this;
+    }
+
+    /**
+     * set 回源域名,originType为CNAME时返回该字段
+     *
+     * @param originDomain
+     */
+    public WebRule originDomain(String originDomain) {
+        this.originDomain = originDomain;
         return this;
     }
 
@@ -423,7 +647,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 0CC关闭 1CC开启
+     * set 0 CC关闭 1 CC开启
      *
      * @param ccStatus
      */
@@ -432,17 +656,69 @@ public class WebRule  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     *
+     * @param algorithm
+     */
+    public WebRule algorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
 
     /**
-     * add item to 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * set 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
+     *
+     * @param forceJump
+     */
+    public WebRule forceJump(Integer forceJump) {
+        this.forceJump = forceJump;
+        return this;
+    }
+
+    /**
+     * set 是否为自定义端口号，0为默认 1为自定义
+     *
+     * @param customPortStatus
+     */
+    public WebRule customPortStatus(Integer customPortStatus) {
+        this.customPortStatus = customPortStatus;
+        return this;
+    }
+
+    /**
+     * set 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+     *
+     * @param httpOrigin
+     */
+    public WebRule httpOrigin(Integer httpOrigin) {
+        this.httpOrigin = httpOrigin;
+        return this;
+    }
+
+
+    /**
+     * add item to originAddr
      *
      * @param originAddr
      */
-    public void addOriginAddr(String originAddr) {
+    public void addOriginAddr(OriginAddrItem originAddr) {
         if (this.originAddr == null) {
             this.originAddr = new ArrayList<>();
         }
         this.originAddr.add(originAddr);
+    }
+
+    /**
+     * add item to onlineAddr
+     *
+     * @param onlineAddr
+     */
+    public void addOnlineAddr(String onlineAddr) {
+        if (this.onlineAddr == null) {
+            this.onlineAddr = new ArrayList<>();
+        }
+        this.onlineAddr.add(onlineAddr);
     }
 
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,17 +62,17 @@ public class Instance  implements java.io.Serializable {
     /**
      * 保底带宽
      */
-    private Integer bp;
+    private Integer inBitslimit;
 
     /**
      * 弹性带宽
      */
-    private Integer ep;
+    private Integer resilientBitslimit;
 
     /**
      * 业务带宽大小
      */
-    private Integer bw;
+    private Integer businessBitslimit;
 
     /**
      * cc阈值大小
@@ -168,6 +168,26 @@ public class Instance  implements java.io.Serializable {
      * url白名单状态，0关闭，1开启
      */
     private Integer urlWhitelistStatus;
+
+    /**
+     * ccProtectMode为自定义模式时，每个Host的防护阈值
+     */
+    private Integer hostQps;
+
+    /**
+     * ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+     */
+    private Integer hostUrlQps;
+
+    /**
+     * ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+     */
+    private Integer ipHostQps;
+
+    /**
+     * ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+     */
+    private Integer ipHostUrlQps;
 
 
     /**
@@ -265,17 +285,17 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getBp() {
-        return bp;
+    public Integer getInBitslimit() {
+        return inBitslimit;
     }
 
     /**
      * set 保底带宽
      *
-     * @param bp
+     * @param inBitslimit
      */
-    public void setBp(Integer bp) {
-        this.bp = bp;
+    public void setInBitslimit(Integer inBitslimit) {
+        this.inBitslimit = inBitslimit;
     }
 
     /**
@@ -283,17 +303,17 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getEp() {
-        return ep;
+    public Integer getResilientBitslimit() {
+        return resilientBitslimit;
     }
 
     /**
      * set 弹性带宽
      *
-     * @param ep
+     * @param resilientBitslimit
      */
-    public void setEp(Integer ep) {
-        this.ep = ep;
+    public void setResilientBitslimit(Integer resilientBitslimit) {
+        this.resilientBitslimit = resilientBitslimit;
     }
 
     /**
@@ -301,17 +321,17 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getBw() {
-        return bw;
+    public Integer getBusinessBitslimit() {
+        return businessBitslimit;
     }
 
     /**
      * set 业务带宽大小
      *
-     * @param bw
+     * @param businessBitslimit
      */
-    public void setBw(Integer bw) {
-        this.bw = bw;
+    public void setBusinessBitslimit(Integer businessBitslimit) {
+        this.businessBitslimit = businessBitslimit;
     }
 
     /**
@@ -656,6 +676,78 @@ public class Instance  implements java.io.Serializable {
         this.urlWhitelistStatus = urlWhitelistStatus;
     }
 
+    /**
+     * get ccProtectMode为自定义模式时，每个Host的防护阈值
+     *
+     * @return
+     */
+    public Integer getHostQps() {
+        return hostQps;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，每个Host的防护阈值
+     *
+     * @param hostQps
+     */
+    public void setHostQps(Integer hostQps) {
+        this.hostQps = hostQps;
+    }
+
+    /**
+     * get ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+     *
+     * @return
+     */
+    public Integer getHostUrlQps() {
+        return hostUrlQps;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+     *
+     * @param hostUrlQps
+     */
+    public void setHostUrlQps(Integer hostUrlQps) {
+        this.hostUrlQps = hostUrlQps;
+    }
+
+    /**
+     * get ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+     *
+     * @return
+     */
+    public Integer getIpHostQps() {
+        return ipHostQps;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+     *
+     * @param ipHostQps
+     */
+    public void setIpHostQps(Integer ipHostQps) {
+        this.ipHostQps = ipHostQps;
+    }
+
+    /**
+     * get ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+     *
+     * @return
+     */
+    public Integer getIpHostUrlQps() {
+        return ipHostUrlQps;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+     *
+     * @param ipHostUrlQps
+     */
+    public void setIpHostUrlQps(Integer ipHostUrlQps) {
+        this.ipHostUrlQps = ipHostUrlQps;
+    }
+
 
     /**
      * set 实例id
@@ -710,30 +802,30 @@ public class Instance  implements java.io.Serializable {
     /**
      * set 保底带宽
      *
-     * @param bp
+     * @param inBitslimit
      */
-    public Instance bp(Integer bp) {
-        this.bp = bp;
+    public Instance inBitslimit(Integer inBitslimit) {
+        this.inBitslimit = inBitslimit;
         return this;
     }
 
     /**
      * set 弹性带宽
      *
-     * @param ep
+     * @param resilientBitslimit
      */
-    public Instance ep(Integer ep) {
-        this.ep = ep;
+    public Instance resilientBitslimit(Integer resilientBitslimit) {
+        this.resilientBitslimit = resilientBitslimit;
         return this;
     }
 
     /**
      * set 业务带宽大小
      *
-     * @param bw
+     * @param businessBitslimit
      */
-    public Instance bw(Integer bw) {
-        this.bw = bw;
+    public Instance businessBitslimit(Integer businessBitslimit) {
+        this.businessBitslimit = businessBitslimit;
         return this;
     }
 
@@ -924,6 +1016,46 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance urlWhitelistStatus(Integer urlWhitelistStatus) {
         this.urlWhitelistStatus = urlWhitelistStatus;
+        return this;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，每个Host的防护阈值
+     *
+     * @param hostQps
+     */
+    public Instance hostQps(Integer hostQps) {
+        this.hostQps = hostQps;
+        return this;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+     *
+     * @param hostUrlQps
+     */
+    public Instance hostUrlQps(Integer hostUrlQps) {
+        this.hostUrlQps = hostUrlQps;
+        return this;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+     *
+     * @param ipHostQps
+     */
+    public Instance ipHostQps(Integer ipHostQps) {
+        this.ipHostQps = ipHostQps;
+        return this;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+     *
+     * @param ipHostUrlQps
+     */
+    public Instance ipHostUrlQps(Integer ipHostUrlQps) {
+        this.ipHostUrlQps = ipHostUrlQps;
         return this;
     }
 

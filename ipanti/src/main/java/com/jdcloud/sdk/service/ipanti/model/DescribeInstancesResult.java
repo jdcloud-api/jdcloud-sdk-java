@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,9 +37,9 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * instances
+     * dataList
      */
-    private List<Instance> instances;
+    private List<Instance> dataList;
 
     /**
      * totalCount
@@ -48,21 +48,21 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
 
 
     /**
-     * get instances
+     * get dataList
      *
      * @return
      */
-    public List<Instance> getInstances() {
-        return instances;
+    public List<Instance> getDataList() {
+        return dataList;
     }
 
     /**
-     * set instances
+     * set dataList
      *
-     * @param instances
+     * @param dataList
      */
-    public void setInstances(List<Instance> instances) {
-        this.instances = instances;
+    public void setDataList(List<Instance> dataList) {
+        this.dataList = dataList;
     }
 
     /**
@@ -85,12 +85,12 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
 
 
     /**
-     * set instances
+     * set dataList
      *
-     * @param instances
+     * @param dataList
      */
-    public DescribeInstancesResult instances(List<Instance> instances) {
-        this.instances = instances;
+    public DescribeInstancesResult dataList(List<Instance> dataList) {
+        this.dataList = dataList;
         return this;
     }
 
@@ -106,15 +106,15 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
 
 
     /**
-     * add item to instances
+     * add item to dataList
      *
-     * @param instance
+     * @param dataList
      */
-    public void addInstance(Instance instance) {
-        if (this.instances == null) {
-            this.instances = new ArrayList<>();
+    public void addDataList(Instance dataList) {
+        if (this.dataList == null) {
+            this.dataList = new ArrayList<>();
         }
-        this.instances.add(instance);
+        this.dataList.add(dataList);
     }
 
 }
