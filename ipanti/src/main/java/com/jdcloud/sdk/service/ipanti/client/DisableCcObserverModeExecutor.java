@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ipanti.model.DisableCcObserverModeResponse;
 
 /**
- * 关闭CC防护每ip的限速
+ * 关闭实例CC防护的观察者模式
  */
 class DisableCcObserverModeExecutor extends JdcloudExecutor {
 
@@ -40,7 +40,7 @@ class DisableCcObserverModeExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/instances/{instanceId}:disableCcIpLimit";
+        return "/regions/{regionId}/instances/{instanceId}:disableCcObserverMode";
     }
 
     @Override

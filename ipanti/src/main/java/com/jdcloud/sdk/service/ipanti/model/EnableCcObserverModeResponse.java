@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ipanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 开启CC防护每ip的限速
+ * 开启实例CC防护的观察者模式
  */
 public class EnableCcObserverModeResponse extends JdcloudResponse<EnableCcObserverModeResult> implements java.io.Serializable {
 
