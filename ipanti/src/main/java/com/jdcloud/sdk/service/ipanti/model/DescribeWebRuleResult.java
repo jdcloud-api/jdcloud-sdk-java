@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,37 +35,37 @@ public class DescribeWebRuleResult extends JdcloudResult implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * webRule
+     * data
      */
-    private WebRule webRule;
+    private WebRule data;
 
 
     /**
-     * get webRule
+     * get data
      *
      * @return
      */
-    public WebRule getWebRule() {
-        return webRule;
+    public WebRule getData() {
+        return data;
     }
 
     /**
-     * set webRule
+     * set data
      *
-     * @param webRule
+     * @param data
      */
-    public void setWebRule(WebRule webRule) {
-        this.webRule = webRule;
+    public void setData(WebRule data) {
+        this.data = data;
     }
 
 
     /**
-     * set webRule
+     * set data
      *
-     * @param webRule
+     * @param data
      */
-    public DescribeWebRuleResult webRule(WebRule webRule) {
-        this.webRule = webRule;
+    public DescribeWebRuleResult data(WebRule data) {
+        this.data = data;
         return this;
     }
 

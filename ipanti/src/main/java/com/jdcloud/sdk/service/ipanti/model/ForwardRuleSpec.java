@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,9 +55,14 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     private String originType;
 
     /**
-     * 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * originAddr
      */
-    private List<String> originAddr;
+    private List<OriginAddrItem> originAddr;
+
+    /**
+     * onlineAddr
+     */
+    private List<String> onlineAddr;
 
     /**
      * 回源域名
@@ -143,21 +148,39 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * get originAddr
      *
      * @return
      */
-    public List<String> getOriginAddr() {
+    public List<OriginAddrItem> getOriginAddr() {
         return originAddr;
     }
 
     /**
-     * set 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * set originAddr
      *
      * @param originAddr
      */
-    public void setOriginAddr(List<String> originAddr) {
+    public void setOriginAddr(List<OriginAddrItem> originAddr) {
         this.originAddr = originAddr;
+    }
+
+    /**
+     * get onlineAddr
+     *
+     * @return
+     */
+    public List<String> getOnlineAddr() {
+        return onlineAddr;
+    }
+
+    /**
+     * set onlineAddr
+     *
+     * @param onlineAddr
+     */
+    public void setOnlineAddr(List<String> onlineAddr) {
+        this.onlineAddr = onlineAddr;
     }
 
     /**
@@ -238,12 +261,22 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * set originAddr
      *
      * @param originAddr
      */
-    public ForwardRuleSpec originAddr(List<String> originAddr) {
+    public ForwardRuleSpec originAddr(List<OriginAddrItem> originAddr) {
         this.originAddr = originAddr;
+        return this;
+    }
+
+    /**
+     * set onlineAddr
+     *
+     * @param onlineAddr
+     */
+    public ForwardRuleSpec onlineAddr(List<String> onlineAddr) {
+        this.onlineAddr = onlineAddr;
         return this;
     }
 
@@ -269,15 +302,27 @@ public class ForwardRuleSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 回源地址：originType为ip时为多个填多个ip，originType为domain时填一个域名
+     * add item to originAddr
      *
      * @param originAddr
      */
-    public void addOriginAddr(String originAddr) {
+    public void addOriginAddr(OriginAddrItem originAddr) {
         if (this.originAddr == null) {
             this.originAddr = new ArrayList<>();
         }
         this.originAddr.add(originAddr);
+    }
+
+    /**
+     * add item to onlineAddr
+     *
+     * @param onlineAddr
+     */
+    public void addOnlineAddr(String onlineAddr) {
+        if (this.onlineAddr == null) {
+            this.onlineAddr = new ArrayList<>();
+        }
+        this.onlineAddr.add(onlineAddr);
     }
 
 }

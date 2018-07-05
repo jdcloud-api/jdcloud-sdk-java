@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,7 +53,7 @@ public class InstanceSpec  implements java.io.Serializable {
     private Integer timeSpan;
 
     /**
-     * 线路：UNICOM、TELECOM
+     * 线路：TELECOM为电信线路，UNICOM为联通线路，CMCC为移动线路
      */
     private String carrier;
 
@@ -71,6 +71,11 @@ public class InstanceSpec  implements java.io.Serializable {
      * 业务带宽：单位Mbps
      */
     private Integer bw;
+
+    /**
+     * 支付成功后跳转的页面，控制台交互模式传该字段
+     */
+    private String returnUrl;
 
 
     /**
@@ -146,7 +151,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 线路：UNICOM、TELECOM
+     * get 线路：TELECOM为电信线路，UNICOM为联通线路，CMCC为移动线路
      *
      * @return
      */
@@ -155,7 +160,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 线路：UNICOM、TELECOM
+     * set 线路：TELECOM为电信线路，UNICOM为联通线路，CMCC为移动线路
      *
      * @param carrier
      */
@@ -217,6 +222,24 @@ public class InstanceSpec  implements java.io.Serializable {
         this.bw = bw;
     }
 
+    /**
+     * get 支付成功后跳转的页面，控制台交互模式传该字段
+     *
+     * @return
+     */
+    public String getReturnUrl() {
+        return returnUrl;
+    }
+
+    /**
+     * set 支付成功后跳转的页面，控制台交互模式传该字段
+     *
+     * @param returnUrl
+     */
+    public void setReturnUrl(String returnUrl) {
+        this.returnUrl = returnUrl;
+    }
+
 
     /**
      * set 实例名称
@@ -259,7 +282,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 线路：UNICOM、TELECOM
+     * set 线路：TELECOM为电信线路，UNICOM为联通线路，CMCC为移动线路
      *
      * @param carrier
      */
@@ -295,6 +318,16 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public InstanceSpec bw(Integer bw) {
         this.bw = bw;
+        return this;
+    }
+
+    /**
+     * set 支付成功后跳转的页面，控制台交互模式传该字段
+     *
+     * @param returnUrl
+     */
+    public InstanceSpec returnUrl(String returnUrl) {
+        this.returnUrl = returnUrl;
         return this;
     }
 

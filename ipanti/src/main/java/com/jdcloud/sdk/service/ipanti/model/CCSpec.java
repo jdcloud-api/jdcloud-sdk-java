@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,9 +43,24 @@ public class CCSpec  implements java.io.Serializable {
     private Integer ccThreshold;
 
     /**
-     * cc限速大小，ccProtectMode为自定义时才需要指定，统计周期为1分钟
+     * ccProtectMode为自定义模式时，指定每个Host的防护阈值
      */
-    private Integer ccSpeedLimit;
+    private Integer hostQps;
+
+    /**
+     * ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
+     */
+    private Integer hostUrlQps;
+
+    /**
+     * ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
+     */
+    private Integer ipHostQps;
+
+    /**
+     * ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值
+     */
+    private Integer ipHostUrlQps;
 
 
     /**
@@ -85,21 +100,75 @@ public class CCSpec  implements java.io.Serializable {
     }
 
     /**
-     * get cc限速大小，ccProtectMode为自定义时才需要指定，统计周期为1分钟
+     * get ccProtectMode为自定义模式时，指定每个Host的防护阈值
      *
      * @return
      */
-    public Integer getCcSpeedLimit() {
-        return ccSpeedLimit;
+    public Integer getHostQps() {
+        return hostQps;
     }
 
     /**
-     * set cc限速大小，ccProtectMode为自定义时才需要指定，统计周期为1分钟
+     * set ccProtectMode为自定义模式时，指定每个Host的防护阈值
      *
-     * @param ccSpeedLimit
+     * @param hostQps
      */
-    public void setCcSpeedLimit(Integer ccSpeedLimit) {
-        this.ccSpeedLimit = ccSpeedLimit;
+    public void setHostQps(Integer hostQps) {
+        this.hostQps = hostQps;
+    }
+
+    /**
+     * get ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
+     *
+     * @return
+     */
+    public Integer getHostUrlQps() {
+        return hostUrlQps;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
+     *
+     * @param hostUrlQps
+     */
+    public void setHostUrlQps(Integer hostUrlQps) {
+        this.hostUrlQps = hostUrlQps;
+    }
+
+    /**
+     * get ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
+     *
+     * @return
+     */
+    public Integer getIpHostQps() {
+        return ipHostQps;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
+     *
+     * @param ipHostQps
+     */
+    public void setIpHostQps(Integer ipHostQps) {
+        this.ipHostQps = ipHostQps;
+    }
+
+    /**
+     * get ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值
+     *
+     * @return
+     */
+    public Integer getIpHostUrlQps() {
+        return ipHostUrlQps;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值
+     *
+     * @param ipHostUrlQps
+     */
+    public void setIpHostUrlQps(Integer ipHostUrlQps) {
+        this.ipHostUrlQps = ipHostUrlQps;
     }
 
 
@@ -124,12 +193,42 @@ public class CCSpec  implements java.io.Serializable {
     }
 
     /**
-     * set cc限速大小，ccProtectMode为自定义时才需要指定，统计周期为1分钟
+     * set ccProtectMode为自定义模式时，指定每个Host的防护阈值
      *
-     * @param ccSpeedLimit
+     * @param hostQps
      */
-    public CCSpec ccSpeedLimit(Integer ccSpeedLimit) {
-        this.ccSpeedLimit = ccSpeedLimit;
+    public CCSpec hostQps(Integer hostQps) {
+        this.hostQps = hostQps;
+        return this;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
+     *
+     * @param hostUrlQps
+     */
+    public CCSpec hostUrlQps(Integer hostUrlQps) {
+        this.hostUrlQps = hostUrlQps;
+        return this;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
+     *
+     * @param ipHostQps
+     */
+    public CCSpec ipHostQps(Integer ipHostQps) {
+        this.ipHostQps = ipHostQps;
+        return this;
+    }
+
+    /**
+     * set ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值
+     *
+     * @param ipHostUrlQps
+     */
+    public CCSpec ipHostUrlQps(Integer ipHostUrlQps) {
+        this.ipHostUrlQps = ipHostUrlQps;
         return this;
     }
 

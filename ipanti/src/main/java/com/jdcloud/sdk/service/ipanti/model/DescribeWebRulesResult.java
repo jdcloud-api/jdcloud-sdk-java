@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,9 +37,9 @@ public class DescribeWebRulesResult extends JdcloudResult implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * webRules
+     * dataList
      */
-    private List<WebRule> webRules;
+    private List<WebRule> dataList;
 
     /**
      * totalCount
@@ -48,21 +48,21 @@ public class DescribeWebRulesResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * get webRules
+     * get dataList
      *
      * @return
      */
-    public List<WebRule> getWebRules() {
-        return webRules;
+    public List<WebRule> getDataList() {
+        return dataList;
     }
 
     /**
-     * set webRules
+     * set dataList
      *
-     * @param webRules
+     * @param dataList
      */
-    public void setWebRules(List<WebRule> webRules) {
-        this.webRules = webRules;
+    public void setDataList(List<WebRule> dataList) {
+        this.dataList = dataList;
     }
 
     /**
@@ -85,12 +85,12 @@ public class DescribeWebRulesResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set webRules
+     * set dataList
      *
-     * @param webRules
+     * @param dataList
      */
-    public DescribeWebRulesResult webRules(List<WebRule> webRules) {
-        this.webRules = webRules;
+    public DescribeWebRulesResult dataList(List<WebRule> dataList) {
+        this.dataList = dataList;
         return this;
     }
 
@@ -106,15 +106,15 @@ public class DescribeWebRulesResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * add item to webRules
+     * add item to dataList
      *
-     * @param webRule
+     * @param dataList
      */
-    public void addWebRule(WebRule webRule) {
-        if (this.webRules == null) {
-            this.webRules = new ArrayList<>();
+    public void addDataList(WebRule dataList) {
+        if (this.dataList == null) {
+            this.dataList = new ArrayList<>();
         }
-        this.webRules.add(webRule);
+        this.dataList.add(dataList);
     }
 
 }

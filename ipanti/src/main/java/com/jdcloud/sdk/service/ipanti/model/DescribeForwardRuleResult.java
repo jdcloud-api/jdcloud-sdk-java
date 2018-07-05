@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,37 +35,37 @@ public class DescribeForwardRuleResult extends JdcloudResult implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * forwardRule
+     * data
      */
-    private ForwardRule forwardRule;
+    private ForwardRule data;
 
 
     /**
-     * get forwardRule
+     * get data
      *
      * @return
      */
-    public ForwardRule getForwardRule() {
-        return forwardRule;
+    public ForwardRule getData() {
+        return data;
     }
 
     /**
-     * set forwardRule
+     * set data
      *
-     * @param forwardRule
+     * @param data
      */
-    public void setForwardRule(ForwardRule forwardRule) {
-        this.forwardRule = forwardRule;
+    public void setData(ForwardRule data) {
+        this.data = data;
     }
 
 
     /**
-     * set forwardRule
+     * set data
      *
-     * @param forwardRule
+     * @param data
      */
-    public DescribeForwardRuleResult forwardRule(ForwardRule forwardRule) {
-        this.forwardRule = forwardRule;
+    public DescribeForwardRuleResult data(ForwardRule data) {
+        this.data = data;
         return this;
     }
 

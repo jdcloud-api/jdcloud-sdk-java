@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,9 +37,9 @@ public class DescribeForwardRulesResult extends JdcloudResult implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * forwardRules
+     * dataList
      */
-    private List<ForwardRule> forwardRules;
+    private List<ForwardRule> dataList;
 
     /**
      * totalCount
@@ -48,21 +48,21 @@ public class DescribeForwardRulesResult extends JdcloudResult implements java.io
 
 
     /**
-     * get forwardRules
+     * get dataList
      *
      * @return
      */
-    public List<ForwardRule> getForwardRules() {
-        return forwardRules;
+    public List<ForwardRule> getDataList() {
+        return dataList;
     }
 
     /**
-     * set forwardRules
+     * set dataList
      *
-     * @param forwardRules
+     * @param dataList
      */
-    public void setForwardRules(List<ForwardRule> forwardRules) {
-        this.forwardRules = forwardRules;
+    public void setDataList(List<ForwardRule> dataList) {
+        this.dataList = dataList;
     }
 
     /**
@@ -85,12 +85,12 @@ public class DescribeForwardRulesResult extends JdcloudResult implements java.io
 
 
     /**
-     * set forwardRules
+     * set dataList
      *
-     * @param forwardRules
+     * @param dataList
      */
-    public DescribeForwardRulesResult forwardRules(List<ForwardRule> forwardRules) {
-        this.forwardRules = forwardRules;
+    public DescribeForwardRulesResult dataList(List<ForwardRule> dataList) {
+        this.dataList = dataList;
         return this;
     }
 
@@ -106,15 +106,15 @@ public class DescribeForwardRulesResult extends JdcloudResult implements java.io
 
 
     /**
-     * add item to forwardRules
+     * add item to dataList
      *
-     * @param forwardRule
+     * @param dataList
      */
-    public void addForwardRule(ForwardRule forwardRule) {
-        if (this.forwardRules == null) {
-            this.forwardRules = new ArrayList<>();
+    public void addDataList(ForwardRule dataList) {
+        if (this.dataList == null) {
+            this.dataList = new ArrayList<>();
         }
-        this.forwardRules.add(forwardRule);
+        this.dataList.add(dataList);
     }
 
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,37 +35,37 @@ public class DescribeInstanceResult extends JdcloudResult implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * instance
+     * data
      */
-    private Instance instance;
+    private Instance data;
 
 
     /**
-     * get instance
+     * get data
      *
      * @return
      */
-    public Instance getInstance() {
-        return instance;
+    public Instance getData() {
+        return data;
     }
 
     /**
-     * set instance
+     * set data
      *
-     * @param instance
+     * @param data
      */
-    public void setInstance(Instance instance) {
-        this.instance = instance;
+    public void setData(Instance data) {
+        this.data = data;
     }
 
 
     /**
-     * set instance
+     * set data
      *
-     * @param instance
+     * @param data
      */
-    public DescribeInstanceResult instance(Instance instance) {
-        this.instance = instance;
+    public DescribeInstanceResult data(Instance data) {
+        this.data = data;
         return this;
     }
 
