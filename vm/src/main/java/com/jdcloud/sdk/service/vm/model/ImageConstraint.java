@@ -33,10 +33,33 @@ public class ImageConstraint  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 镜像ID
+     */
+    private String imageId;
+
+    /**
      * 镜像实例类型限制
      */
     private ImageInstanceTypeConstraint imageInstanceTypeConstraint;
 
+
+    /**
+     * get 镜像ID
+     *
+     * @return
+     */
+    public String getImageId() {
+        return imageId;
+    }
+
+    /**
+     * set 镜像ID
+     *
+     * @param imageId
+     */
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
+    }
 
     /**
      * get 镜像实例类型限制
@@ -56,6 +79,16 @@ public class ImageConstraint  implements java.io.Serializable {
         this.imageInstanceTypeConstraint = imageInstanceTypeConstraint;
     }
 
+
+    /**
+     * set 镜像ID
+     *
+     * @param imageId
+     */
+    public ImageConstraint imageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
 
     /**
      * set 镜像实例类型限制

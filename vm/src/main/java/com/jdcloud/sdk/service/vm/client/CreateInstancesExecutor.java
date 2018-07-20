@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.CreateInstancesResponse;
 
 /**
- * 创建一台或多台指定配置的实例
+ * 创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
  */
 class CreateInstancesExecutor extends JdcloudExecutor {
 

@@ -55,6 +55,15 @@ import com.jdcloud.sdk.service.vm.client.DescribeImagesExecutor;
 import com.jdcloud.sdk.service.vm.model.StopInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.StopInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.StopInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.ModifyImageAttributeRequest;
+import com.jdcloud.sdk.service.vm.model.ModifyImageAttributeResponse;
+import com.jdcloud.sdk.service.vm.client.ModifyImageAttributeExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeImageConstraintsBatchRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeImageConstraintsBatchResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeImageConstraintsBatchExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeInstanceStatusExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceVncUrlRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceVncUrlResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceVncUrlExecutor;
@@ -252,6 +261,39 @@ public class VmClient extends JdcloudClient {
     }
 
     /**
+     * 修改镜像信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyImageAttributeResponse modifyImageAttribute(ModifyImageAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyImageAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询镜像限制
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeImageConstraintsBatchResponse describeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) throws JdcloudSdkException {
+        return new DescribeImageConstraintsBatchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询云主机状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceStatusResponse describeInstanceStatus(DescribeInstanceStatusRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceStatusExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询主机vnc
      *
      * @param request
@@ -338,7 +380,7 @@ public class VmClient extends JdcloudClient {
     }
 
     /**
-     * 创建一台或多台指定配置的实例
+     * 创建一台或多台指定配置的实例&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;
      *
      * @param request
      * @return
@@ -416,10 +458,11 @@ public class VmClient extends JdcloudClient {
 
     /**
      * &quot;删除单个实例&quot;
-&quot;主机状态必须为停止状态、同时主机没有未完成的任务才可删除&quot;
+&quot;主机状态必须为运行(running)、停止(stopped)、错误(error)，同时云主机没有未完成的任务才可删除&quot;
 &quot;包年包月未到期的主机不能删除&quot;
-&quot;如果主机中挂载了数据盘，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
-
+&quot;白名单用户不能删除包年包月已到期的云主机&quot;
+&quot;如果主机中挂载的数据盘为按配置计费，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+ [MFA enabled]
      *
      * @param request
      * @return

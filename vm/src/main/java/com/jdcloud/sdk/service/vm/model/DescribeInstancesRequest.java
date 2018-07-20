@@ -61,6 +61,7 @@ vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
+networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
      */
     private List<Filter> filters;
@@ -135,6 +136,7 @@ vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
+networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
      *
      * @return
@@ -151,6 +153,7 @@ vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
+networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
      *
      * @param filters
@@ -216,6 +219,7 @@ vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
+networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
      *
      * @param filters
@@ -256,6 +260,7 @@ vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
+networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
      *
      * @param filter

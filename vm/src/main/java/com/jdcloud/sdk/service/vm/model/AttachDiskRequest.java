@@ -43,9 +43,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
 
     /**
      * 逻辑挂载点[vdb,vdc,vdd,vde,vdf,vdg,vdh]
-     * Required:true
      */
-    @Required
     private String deviceName;
 
     /**
