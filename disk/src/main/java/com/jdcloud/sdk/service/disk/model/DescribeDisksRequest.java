@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.disk.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.disk.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
@@ -46,6 +47,11 @@ public class DescribeDisksRequest extends JdcloudRequest implements java.io.Seri
      * 分页大小，默认为20，取值范围：[10,100]
      */
     private Integer pageSize;
+
+    /**
+     * Tag筛选条件
+     */
+    private List<TagFilter> tags;
 
     /**
      * diskId - 云硬盘ID，精确匹配，支持多个
@@ -101,6 +107,24 @@ name - 云硬盘名称，模糊匹配，支持单个
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get Tag筛选条件
+     *
+     * @return
+     */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
     }
 
     /**
@@ -175,6 +199,16 @@ name - 云硬盘名称，模糊匹配，支持单个
     }
 
     /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public DescribeDisksRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set diskId - 云硬盘ID，精确匹配，支持多个
 diskType - 云硬盘类型，精确匹配，支持多个，取值为 ssd 或 premium-hdd
 instanceId - 云硬盘所挂载主机的ID，精确匹配，支持多个
@@ -201,6 +235,18 @@ name - 云硬盘名称，模糊匹配，支持单个
         return this;
     }
 
+
+    /**
+     * add item to Tag筛选条件
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
     /**
      * add item to diskId - 云硬盘ID，精确匹配，支持多个
