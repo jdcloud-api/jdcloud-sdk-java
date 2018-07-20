@@ -1,0 +1,7 @@
+﻿2018-05-23 version: 0.1.0
+1. 初始版本
+2018-05-23 version: 0.1.1
+添加getTargets接口
+添加monitorAddTarget接口
+2018-07-18 version: 1.0.0
+上线改版本号

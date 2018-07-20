@@ -40,7 +40,7 @@ class DescribeQuotasExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/regions/{regionId}/quotas";
+        return "/regions/{regionId}/quotas";
     }
 
     @Override

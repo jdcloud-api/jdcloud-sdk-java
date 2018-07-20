@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.vm.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.charge.model.Charge;
+import com.jdcloud.sdk.service.disk.model.Tag;
 
 /**
  * instance
@@ -76,7 +77,7 @@ public class Instance  implements java.io.Serializable {
     private String elasticIpAddress;
 
     /**
-     * 实例状态
+     * 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
      */
     private String status;
 
@@ -276,7 +277,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例状态
+     * get 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
      *
      * @return
      */
@@ -285,7 +286,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态
+     * set 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
      *
      * @param status
      */
@@ -555,7 +556,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态
+     * set 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
      *
      * @param status
      */
