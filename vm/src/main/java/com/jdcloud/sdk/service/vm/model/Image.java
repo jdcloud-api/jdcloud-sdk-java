@@ -75,7 +75,7 @@ public class Image  implements java.io.Serializable {
     private String osType;
 
     /**
-     * 镜像状态, [pending, ready, deleting, error]
+     * &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
      */
     private String status;
 
@@ -95,9 +95,29 @@ public class Image  implements java.io.Serializable {
     private String desc;
 
     /**
+     * 系统盘配置
+     */
+    private InstanceDiskAttachment systemDisk;
+
+    /**
      * 打包镜像数据盘映射信息
      */
     private List<InstanceDiskAttachment> dataDisks;
+
+    /**
+     * 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+     */
+    private String snapshotId;
+
+    /**
+     * 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+     */
+    private String rootDeviceType;
+
+    /**
+     * 镜像复制时的进度，单位为百分比，例如：80
+     */
+    private String progress;
 
 
     /**
@@ -245,7 +265,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像状态, [pending, ready, deleting, error]
+     * get &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @return
      */
@@ -254,7 +274,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像状态, [pending, ready, deleting, error]
+     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @param status
      */
@@ -317,6 +337,24 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
+     * get 系统盘配置
+     *
+     * @return
+     */
+    public InstanceDiskAttachment getSystemDisk() {
+        return systemDisk;
+    }
+
+    /**
+     * set 系统盘配置
+     *
+     * @param systemDisk
+     */
+    public void setSystemDisk(InstanceDiskAttachment systemDisk) {
+        this.systemDisk = systemDisk;
+    }
+
+    /**
      * get 打包镜像数据盘映射信息
      *
      * @return
@@ -332,6 +370,60 @@ public class Image  implements java.io.Serializable {
      */
     public void setDataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
+    }
+
+    /**
+     * get 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+     *
+     * @return
+     */
+    public String getSnapshotId() {
+        return snapshotId;
+    }
+
+    /**
+     * set 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+     *
+     * @param snapshotId
+     */
+    public void setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+    }
+
+    /**
+     * get 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+     *
+     * @return
+     */
+    public String getRootDeviceType() {
+        return rootDeviceType;
+    }
+
+    /**
+     * set 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+     *
+     * @param rootDeviceType
+     */
+    public void setRootDeviceType(String rootDeviceType) {
+        this.rootDeviceType = rootDeviceType;
+    }
+
+    /**
+     * get 镜像复制时的进度，单位为百分比，例如：80
+     *
+     * @return
+     */
+    public String getProgress() {
+        return progress;
+    }
+
+    /**
+     * set 镜像复制时的进度，单位为百分比，例如：80
+     *
+     * @param progress
+     */
+    public void setProgress(String progress) {
+        this.progress = progress;
     }
 
 
@@ -416,7 +508,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像状态, [pending, ready, deleting, error]
+     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @param status
      */
@@ -456,12 +548,52 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
+     * set 系统盘配置
+     *
+     * @param systemDisk
+     */
+    public Image systemDisk(InstanceDiskAttachment systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+
+    /**
      * set 打包镜像数据盘映射信息
      *
      * @param dataDisks
      */
     public Image dataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
+        return this;
+    }
+
+    /**
+     * set 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+     *
+     * @param snapshotId
+     */
+    public Image snapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
+        return this;
+    }
+
+    /**
+     * set 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+     *
+     * @param rootDeviceType
+     */
+    public Image rootDeviceType(String rootDeviceType) {
+        this.rootDeviceType = rootDeviceType;
+        return this;
+    }
+
+    /**
+     * set 镜像复制时的进度，单位为百分比，例如：80
+     *
+     * @param progress
+     */
+    public Image progress(String progress) {
+        this.progress = progress;
         return this;
     }
 

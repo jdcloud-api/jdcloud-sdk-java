@@ -28,7 +28,8 @@ import com.jdcloud.sdk.service.vm.model.Instance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询云主机详情
+ * 查询一台云主机的详细信息
+
  */
 public class DescribeInstanceResult extends JdcloudResult implements java.io.Serializable {
 

@@ -36,26 +36,26 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例类型
+     * 规格类型，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
      * Required:true
      */
     @Required
     private String instanceType;
 
     /**
-     * 镜像ID
+     * 镜像ID，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
      * Required:true
      */
     @Required
     private String imageId;
 
     /**
-     * 密码
+     * 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String password;
 
     /**
-     * 密钥对名称
+     * 密钥对名称；当前只支持一个
      */
     private List<String> keyNames;
 
@@ -85,7 +85,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 
 
     /**
-     * get 实例类型
+     * get 规格类型，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 规格类型，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
      *
      * @param instanceType
      */
@@ -103,7 +103,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
      *
      * @return
      */
@@ -112,7 +112,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
      *
      * @param imageId
      */
@@ -121,7 +121,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 密码
+     * get 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -130,7 +130,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密码
+     * set 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param password
      */
@@ -139,7 +139,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 密钥对名称
+     * get 密钥对名称；当前只支持一个
      *
      * @return
      */
@@ -148,7 +148,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称；当前只支持一个
      *
      * @param keyNames
      */
@@ -230,7 +230,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 
 
     /**
-     * set 实例类型
+     * set 规格类型，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
      *
      * @param instanceType
      */
@@ -240,7 +240,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID，可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
      *
      * @param imageId
      */
@@ -250,7 +250,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密码
+     * set 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param password
      */
@@ -260,7 +260,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称；当前只支持一个
      *
      * @param keyNames
      */
@@ -311,7 +311,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 密钥对名称
+     * add item to 密钥对名称；当前只支持一个
      *
      * @param keyName
      */

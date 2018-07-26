@@ -26,13 +26,14 @@ package com.jdcloud.sdk.service.vm.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.vm.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询云主机列表
+ * 批量查询云主机的详细信息&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
  */
 public class DescribeInstancesRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,25 +50,22 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private Integer pageSize;
 
     /**
-     * Tag筛选条件
-     */
-    private List<TagFilter> tags;
-
-    /**
-     * instanceId - 实例ID，精确匹配，支持多个
+     * instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
+agId - 使用可用组id，支持单个
+faultDomain - 错误域，支持多个
 
      */
     private List<Filter> filters;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
@@ -111,32 +109,16 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
-    public List<TagFilter> getTags() {
-        return tags;
-    }
-
-    /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
-    public void setTags(List<TagFilter> tags) {
-        this.tags = tags;
-    }
-
-    /**
-     * get instanceId - 实例ID，精确匹配，支持多个
+     * get instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
+agId - 使用可用组id，支持单个
+faultDomain - 错误域，支持多个
 
      *
      * @return
@@ -146,14 +128,16 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * set instanceId - 实例ID，精确匹配，支持多个
+     * set instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
+agId - 使用可用组id，支持单个
+faultDomain - 错误域，支持多个
 
      *
      * @param filters
@@ -163,7 +147,7 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -172,7 +156,7 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -202,24 +186,16 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
-    public DescribeInstancesRequest tags(List<TagFilter> tags) {
-        this.tags = tags;
-        return this;
-    }
-
-    /**
-     * set instanceId - 实例ID，精确匹配，支持多个
+     * set instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
+agId - 使用可用组id，支持单个
+faultDomain - 错误域，支持多个
 
      *
      * @param filters
@@ -230,7 +206,7 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -241,26 +217,16 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
 
     /**
-     * add item to Tag筛选条件
-     *
-     * @param tag
-     */
-    public void addTag(TagFilter tag) {
-        if (this.tags == null) {
-            this.tags = new ArrayList<>();
-        }
-        this.tags.add(tag);
-    }
-
-    /**
-     * add item to instanceId - 实例ID，精确匹配，支持多个
+     * add item to instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
+agId - 使用可用组id，支持单个
+faultDomain - 错误域，支持多个
 
      *
      * @param filter

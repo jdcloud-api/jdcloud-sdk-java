@@ -31,21 +31,22 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询实例类型资源信息列表
+ * 查询规格类型信息列表
+
  */
 public class DescribeInstanceTypesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * instanceTypes - 实例类型，精确匹配，支持多个
+     * instanceTypes - 规格类型，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      */
     private List<Filter> filters;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
@@ -53,7 +54,7 @@ az - 可用区，精确匹配，支持多个
 
 
     /**
-     * get instanceTypes - 实例类型，精确匹配，支持多个
+     * get instanceTypes - 规格类型，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      *
@@ -64,7 +65,7 @@ az - 可用区，精确匹配，支持多个
     }
 
     /**
-     * set instanceTypes - 实例类型，精确匹配，支持多个
+     * set instanceTypes - 规格类型，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      *
@@ -75,7 +76,7 @@ az - 可用区，精确匹配，支持多个
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -84,7 +85,7 @@ az - 可用区，精确匹配，支持多个
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -94,7 +95,7 @@ az - 可用区，精确匹配，支持多个
 
 
     /**
-     * set instanceTypes - 实例类型，精确匹配，支持多个
+     * set instanceTypes - 规格类型，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      *
@@ -106,7 +107,7 @@ az - 可用区，精确匹配，支持多个
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -117,7 +118,7 @@ az - 可用区，精确匹配，支持多个
 
 
     /**
-     * add item to instanceTypes - 实例类型，精确匹配，支持多个
+     * add item to instanceTypes - 规格类型，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      *

@@ -28,21 +28,22 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询镜像信息
+ * 查询镜像详情。
+
  */
 public class DescribeImageRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Image ID
+     * 镜像ID
      * Required:true
      */
     @Required
@@ -50,7 +51,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -59,7 +60,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -68,7 +69,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get Image ID
+     * get 镜像ID
      *
      * @return
      */
@@ -77,7 +78,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Image ID
+     * set 镜像ID
      *
      * @param imageId
      */
@@ -87,7 +88,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -97,7 +98,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Image ID
+     * set 镜像ID
      *
      * @param imageId
      */

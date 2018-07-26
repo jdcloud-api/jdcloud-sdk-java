@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTypesResponse;
 
 /**
- * 查询实例类型资源信息列表
+ * 查询规格类型信息列表
+
  */
 class DescribeInstanceTypesExecutor extends JdcloudExecutor {
 

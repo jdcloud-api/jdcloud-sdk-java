@@ -34,7 +34,7 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备Index，主网卡只能是1
+     * 网卡设备Index，主网卡只能是1
      */
     private Integer deviceIndex;
 
@@ -45,7 +45,7 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
 
 
     /**
-     * get 设备Index，主网卡只能是1
+     * get 网卡设备Index，主网卡只能是1
      *
      * @return
      */
@@ -54,7 +54,7 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     }
 
     /**
-     * set 设备Index，主网卡只能是1
+     * set 网卡设备Index，主网卡只能是1
      *
      * @param deviceIndex
      */
@@ -82,7 +82,7 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
 
 
     /**
-     * set 设备Index，主网卡只能是1
+     * set 网卡设备Index，主网卡只能是1
      *
      * @param deviceIndex
      */

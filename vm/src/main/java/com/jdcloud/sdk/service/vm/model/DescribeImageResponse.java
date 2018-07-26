@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询镜像信息
+ * 查询镜像详情。
+
  */
 public class DescribeImageResponse extends JdcloudResponse<DescribeImageResult> implements java.io.Serializable {
 

@@ -35,7 +35,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例类型
+     * 规格类型
      */
     private String instanceType;
 
@@ -50,7 +50,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     private String imageId;
 
     /**
-     * 密码不会返回，true：为包含密码，false：为不包含密码
+     * 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
      */
     private Boolean includePassword;
 
@@ -60,14 +60,14 @@ public class InstanceTemplateData  implements java.io.Serializable {
     private InstanceTemplateDiskAttachment systemDisk;
 
     /**
-     * 数据盘信息
+     * 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      */
     private List<InstanceTemplateDiskAttachment> dataDisks;
 
     /**
      * 主网卡信息
      */
-    private InstanceNetworkInterfaceAttachment primaryNetworkInterface;
+    private InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface;
 
     /**
      * 主网卡主IP关联的弹性IP规格
@@ -81,7 +81,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
 
 
     /**
-     * get 实例类型
+     * get 规格类型
      *
      * @return
      */
@@ -90,7 +90,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 规格类型
      *
      * @param instanceType
      */
@@ -135,7 +135,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 密码不会返回，true：为包含密码，false：为不包含密码
+     * get 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
      *
      * @return
      */
@@ -144,7 +144,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 密码不会返回，true：为包含密码，false：为不包含密码
+     * set 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
      *
      * @param includePassword
      */
@@ -171,7 +171,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘信息
+     * get 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      *
      * @return
      */
@@ -180,7 +180,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘信息
+     * set 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      *
      * @param dataDisks
      */
@@ -193,7 +193,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
      *
      * @return
      */
-    public InstanceNetworkInterfaceAttachment getPrimaryNetworkInterface() {
+    public InstanceTemplateNetworkInterfaceAttachmentSpec getPrimaryNetworkInterface() {
         return primaryNetworkInterface;
     }
 
@@ -202,7 +202,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
      *
      * @param primaryNetworkInterface
      */
-    public void setPrimaryNetworkInterface(InstanceNetworkInterfaceAttachment primaryNetworkInterface) {
+    public void setPrimaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
@@ -244,7 +244,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
 
 
     /**
-     * set 实例类型
+     * set 规格类型
      *
      * @param instanceType
      */
@@ -274,7 +274,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 密码不会返回，true：为包含密码，false：为不包含密码
+     * set 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
      *
      * @param includePassword
      */
@@ -294,7 +294,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘信息
+     * set 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      *
      * @param dataDisks
      */
@@ -308,7 +308,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
      *
      * @param primaryNetworkInterface
      */
-    public InstanceTemplateData primaryNetworkInterface(InstanceNetworkInterfaceAttachment primaryNetworkInterface) {
+    public InstanceTemplateData primaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
         return this;
     }
@@ -335,7 +335,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
 
 
     /**
-     * add item to 数据盘信息
+     * add item to 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      *
      * @param dataDisk
      */

@@ -40,7 +40,7 @@ public class InstanceType  implements java.io.Serializable {
     private String family;
 
     /**
-     * 实例类型，比如g.b1.2xlarge
+     * 规格类型，比如g.b1.2xlarge
      */
     private String instanceType;
 
@@ -50,9 +50,14 @@ public class InstanceType  implements java.io.Serializable {
     private Integer cpu;
 
     /**
-     * 内存
+     * 内存大小
      */
     private Integer memoryMB;
+
+    /**
+     * 支持弹性网卡的数量
+     */
+    private Integer nicLimit;
 
     /**
      * 描述
@@ -60,7 +65,7 @@ public class InstanceType  implements java.io.Serializable {
     private String desc;
 
     /**
-     * 状态
+     * 规格状态
      */
     private List<InstanceTypeState> state;
 
@@ -84,7 +89,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * get 实例类型，比如g.b1.2xlarge
+     * get 规格类型，比如g.b1.2xlarge
      *
      * @return
      */
@@ -93,7 +98,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型，比如g.b1.2xlarge
+     * set 规格类型，比如g.b1.2xlarge
      *
      * @param instanceType
      */
@@ -120,7 +125,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * get 内存
+     * get 内存大小
      *
      * @return
      */
@@ -129,12 +134,30 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 内存
+     * set 内存大小
      *
      * @param memoryMB
      */
     public void setMemoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
+    }
+
+    /**
+     * get 支持弹性网卡的数量
+     *
+     * @return
+     */
+    public Integer getNicLimit() {
+        return nicLimit;
+    }
+
+    /**
+     * set 支持弹性网卡的数量
+     *
+     * @param nicLimit
+     */
+    public void setNicLimit(Integer nicLimit) {
+        this.nicLimit = nicLimit;
     }
 
     /**
@@ -156,7 +179,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * get 状态
+     * get 规格状态
      *
      * @return
      */
@@ -165,7 +188,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 状态
+     * set 规格状态
      *
      * @param state
      */
@@ -185,7 +208,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型，比如g.b1.2xlarge
+     * set 规格类型，比如g.b1.2xlarge
      *
      * @param instanceType
      */
@@ -205,12 +228,22 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 内存
+     * set 内存大小
      *
      * @param memoryMB
      */
     public InstanceType memoryMB(Integer memoryMB) {
         this.memoryMB = memoryMB;
+        return this;
+    }
+
+    /**
+     * set 支持弹性网卡的数量
+     *
+     * @param nicLimit
+     */
+    public InstanceType nicLimit(Integer nicLimit) {
+        this.nicLimit = nicLimit;
         return this;
     }
 
@@ -225,7 +258,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 状态
+     * set 规格状态
      *
      * @param state
      */
@@ -236,7 +269,7 @@ public class InstanceType  implements java.io.Serializable {
 
 
     /**
-     * add item to 状态
+     * add item to 规格状态
      *
      * @param state
      */

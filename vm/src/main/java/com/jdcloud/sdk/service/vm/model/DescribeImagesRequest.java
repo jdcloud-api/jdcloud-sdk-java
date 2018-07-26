@@ -30,19 +30,22 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询镜像资源信息列表
+ * 查询镜像信息列表。&lt;br&gt;
+通过此接口可以查询到京东云官方镜像、第三方镜像、私有镜像、或其他用户共享给您的镜像。&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
  */
 public class DescribeImagesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像来源：public、shared、thirdparty、private，如果没有指定ids参数，此参数必传
+     * 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
      */
     private String imageSource;
 
     /**
-     * 操作系统平台: Windows Server、CentOS、Ubuntu
+     * 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
      */
     private String platform;
 
@@ -52,7 +55,27 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private List<String> ids;
 
     /**
-     * Region ID
+     * 镜像支持的系统盘类型，[localDisk,cloudDisk]
+     */
+    private String rootDeviceType;
+
+    /**
+     * &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     */
+    private String status;
+
+    /**
+     * 页码；默认为1
+     */
+    private Integer pageNumber;
+
+    /**
+     * 分页大小；默认为20；取值范围[10, 100]
+     */
+    private Integer pageSize;
+
+    /**
+     * 地域ID
      * Required:true
      */
     @Required
@@ -60,7 +83,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 镜像来源：public、shared、thirdparty、private，如果没有指定ids参数，此参数必传
+     * get 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
      *
      * @return
      */
@@ -69,7 +92,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像来源：public、shared、thirdparty、private，如果没有指定ids参数，此参数必传
+     * set 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
      *
      * @param imageSource
      */
@@ -78,7 +101,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 操作系统平台: Windows Server、CentOS、Ubuntu
+     * get 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
      *
      * @return
      */
@@ -87,7 +110,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 操作系统平台: Windows Server、CentOS、Ubuntu
+     * set 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
      *
      * @param platform
      */
@@ -114,7 +137,79 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get Region ID
+     * get 镜像支持的系统盘类型，[localDisk,cloudDisk]
+     *
+     * @return
+     */
+    public String getRootDeviceType() {
+        return rootDeviceType;
+    }
+
+    /**
+     * set 镜像支持的系统盘类型，[localDisk,cloudDisk]
+     *
+     * @param rootDeviceType
+     */
+    public void setRootDeviceType(String rootDeviceType) {
+        this.rootDeviceType = rootDeviceType;
+    }
+
+    /**
+     * get &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 页码；默认为1
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 页码；默认为1
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 分页大小；默认为20；取值范围[10, 100]
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 分页大小；默认为20；取值范围[10, 100]
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    /**
+     * get 地域ID
      *
      * @return
      */
@@ -123,7 +218,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -133,7 +228,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 镜像来源：public、shared、thirdparty、private，如果没有指定ids参数，此参数必传
+     * set 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
      *
      * @param imageSource
      */
@@ -143,7 +238,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 操作系统平台: Windows Server、CentOS、Ubuntu
+     * set 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
      *
      * @param platform
      */
@@ -163,7 +258,47 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 镜像支持的系统盘类型，[localDisk,cloudDisk]
+     *
+     * @param rootDeviceType
+     */
+    public DescribeImagesRequest rootDeviceType(String rootDeviceType) {
+        this.rootDeviceType = rootDeviceType;
+        return this;
+    }
+
+    /**
+     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     *
+     * @param status
+     */
+    public DescribeImagesRequest status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 页码；默认为1
+     *
+     * @param pageNumber
+     */
+    public DescribeImagesRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 分页大小；默认为20；取值范围[10, 100]
+     *
+     * @param pageSize
+     */
+    public DescribeImagesRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 地域ID
      *
      * @param regionId
      */

@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceResponse;
 
 /**
- * 查询云主机详情
+ * 查询一台云主机的详细信息
+
  */
 class DescribeInstanceExecutor extends JdcloudExecutor {
 

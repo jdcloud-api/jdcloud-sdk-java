@@ -28,7 +28,8 @@ import com.jdcloud.sdk.service.vm.model.Image;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询镜像信息
+ * 查询镜像详情。
+
  */
 public class DescribeImageResult extends JdcloudResult implements java.io.Serializable {
 

@@ -30,7 +30,8 @@ import com.jdcloud.sdk.service.vm.model.Quota;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询（虚机、镜像、密钥、模板）配额
+ * 查询配额，支持：云主机、镜像、密钥、模板
+
  */
 public class DescribeQuotasResult extends JdcloudResult implements java.io.Serializable {
 

@@ -27,11 +27,15 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * &quot;云主机变更实例规格，需要关机操作&quot;
-&quot;16年创建的云盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
-&quot;本地盘做系统盘的主机，一代与二代实例类型不允许相互调整&quot;
-&quot;ag中的主机，一代与二代实例类型不允许相互调整&quot;
-&quot;变更后实例规格的网卡数量限制，要支持当前主机的网卡数量，如不支持，需要缷载网卡后再变更实例规格&quot;
+ * 云主机变更规格类型&lt;br&gt;
+云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
+16年创建的云硬盘做系统盘的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
+本地盘(local类型)做系统盘的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
+使用高可用组(Ag)创建的主机，一代与二代规格类型不允许相互调整。&lt;br&gt;
+云硬盘(cloud类型)做系统盘的主机，一代与二代规格类型允许相互调整。&lt;br&gt;
+如果当前主机中的弹性网卡数量，大于规格类型允许的弹性网卡数量，会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。&lt;br&gt;
+当前主机所使用的镜像，需要支持要变更的目标规格类型，否则返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的规格类型限制信息。&lt;br&gt;
+云主机欠费时，无法更改规格类型。
 
  */
 public class ResizeInstanceResponse extends JdcloudResponse<ResizeInstanceResult> implements java.io.Serializable {

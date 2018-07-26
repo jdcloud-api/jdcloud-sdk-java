@@ -28,35 +28,30 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改主机密码，主机没有未完成的任务时才可操作
+ * 修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
+修改密码后，需要重启云主机后生效。
+
  */
 public class ModifyInstancePasswordRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * &quot;密码，长度8-30个字符&quot;
-&quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-&quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-&quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-&quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-&quot;e)密码中不能出现自己的用户名&quot;
-&quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-
+     * 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      * Required:true
      */
     @Required
     private String password;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * 云主机ID
      * Required:true
      */
     @Required
@@ -64,14 +59,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get &quot;密码，长度8-30个字符&quot;
-&quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-&quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-&quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-&quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-&quot;e)密码中不能出现自己的用户名&quot;
-&quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-
+     * get 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -80,14 +68,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set &quot;密码，长度8-30个字符&quot;
-&quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-&quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-&quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-&quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-&quot;e)密码中不能出现自己的用户名&quot;
-&quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-
+     * set 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param password
      */
@@ -96,7 +77,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -105,7 +86,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -114,7 +95,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get Instance ID
+     * get 云主机ID
      *
      * @return
      */
@@ -123,7 +104,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -133,14 +114,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set &quot;密码，长度8-30个字符&quot;
-&quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-&quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-&quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-&quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-&quot;e)密码中不能出现自己的用户名&quot;
-&quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-
+     * set 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param password
      */
@@ -150,7 +124,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -160,7 +134,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */

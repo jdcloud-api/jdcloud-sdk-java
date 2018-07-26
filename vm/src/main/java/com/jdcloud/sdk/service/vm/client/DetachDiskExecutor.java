@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.DetachDiskResponse;
 
 /**
- * 云主机缷载硬盘，主机和云盘没有未完成的任务时才可缷载
+ * 云主机缷载数据盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+
  */
 class DetachDiskExecutor extends JdcloudExecutor {
 

@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改主机密码，主机没有未完成的任务时才可操作
+ * 修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
+修改密码后，需要重启云主机后生效。
+
  */
 public class ModifyInstancePasswordResult extends JdcloudResult implements java.io.Serializable {
 

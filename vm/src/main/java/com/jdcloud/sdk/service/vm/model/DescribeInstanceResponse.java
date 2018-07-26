@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询云主机详情
+ * 查询一台云主机的详细信息
+
  */
 public class DescribeInstanceResponse extends JdcloudResponse<DescribeInstanceResult> implements java.io.Serializable {
 

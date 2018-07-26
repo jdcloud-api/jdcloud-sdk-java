@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.DeleteImageResponse;
 
 /**
- * 删除私有镜像
+ * 删除一个私有镜像，只允许操作您的个人私有镜像。
+
  */
 class DeleteImageExecutor extends JdcloudExecutor {
 

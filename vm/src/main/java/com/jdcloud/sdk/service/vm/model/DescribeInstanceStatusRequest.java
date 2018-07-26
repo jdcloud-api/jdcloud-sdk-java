@@ -48,11 +48,11 @@ public class DescribeInstanceStatusRequest extends JdcloudRequest implements jav
     private Integer pageSize;
 
     /**
-     * instanceId - 实例ID，精确匹配，支持多个
+     * instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
@@ -60,7 +60,7 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     private List<Filter> filters;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
@@ -104,11 +104,11 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * get instanceId - 实例ID，精确匹配，支持多个
+     * get instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
@@ -120,11 +120,11 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * set instanceId - 实例ID，精确匹配，支持多个
+     * set instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
@@ -136,7 +136,7 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -145,7 +145,7 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -175,11 +175,11 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * set instanceId - 实例ID，精确匹配，支持多个
+     * set instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
@@ -192,7 +192,7 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -203,11 +203,11 @@ networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 
 
     /**
-     * add item to instanceId - 实例ID，精确匹配，支持多个
+     * add item to instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个
-name - 实例名称，模糊匹配，支持单个
+name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，模糊匹配，支持单个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 

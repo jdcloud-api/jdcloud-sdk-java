@@ -28,11 +28,10 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * &quot;删除单个实例&quot;
-&quot;主机状态必须为运行(running)、停止(stopped)、错误(error)，同时云主机没有未完成的任务才可删除&quot;
-&quot;包年包月未到期的主机不能删除&quot;
-&quot;白名单用户不能删除包年包月已到期的云主机&quot;
-&quot;如果主机中挂载的数据盘为按配置计费，并且设置了AutoDelete属性为true，那么数据盘会随主机一起删除&quot;
+ * 删除按配置计费、或包年包月已到期的单个云主机。不能删除没有计费信息的云主机。&lt;br&gt;
+云主机状态必须为运行&lt;b&gt;running&lt;/b&gt;、停止&lt;b&gt;stopped&lt;/b&gt;、错误&lt;b&gt;error&lt;/b&gt;，同时云主机没有正在进行中的任务才可删除。&lt;br&gt;
+包年包月未到期的云主机不能删除。白名单用户不能删除包年包月已到期的云主机。&lt;br&gt;
+如果主机中挂载的数据盘为按配置计费的云硬盘，并且不是共享型云硬盘，并且AutoDelete属性为true，那么数据盘会随主机一起删除。
  [MFA enabled]
  */
 public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Serializable {
@@ -40,14 +39,14 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * 云主机ID
      * Required:true
      */
     @Required
@@ -55,7 +54,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -64,7 +63,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -73,7 +72,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get Instance ID
+     * get 云主机ID
      *
      * @return
      */
@@ -82,7 +81,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -92,7 +91,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -102,7 +101,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */

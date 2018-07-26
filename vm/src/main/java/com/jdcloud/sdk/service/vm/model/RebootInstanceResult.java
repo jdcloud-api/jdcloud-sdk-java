@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 重启单个实例，只能重启running状态的实例，主机没有未完成的任务才可重启
+ * 重启单个云主机，只能重启&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可重启。
+
  */
 public class RebootInstanceResult extends JdcloudResult implements java.io.Serializable {
 

@@ -46,7 +46,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
     private String provider;
 
     /**
-     * 计费类型，bandwith，flow
+     * 计费类型，支持按带宽计费(bandwith)，按流量计费(flow)
      * Required:true
      */
     @Required
@@ -90,7 +90,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get 计费类型，bandwith，flow
+     * get 计费类型，支持按带宽计费(bandwith)，按流量计费(flow)
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 计费类型，bandwith，flow
+     * set 计费类型，支持按带宽计费(bandwith)，按流量计费(flow)
      *
      * @param chargeMode
      */
@@ -129,7 +129,7 @@ public class InstanceTemplateElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 计费类型，bandwith，flow
+     * set 计费类型，支持按带宽计费(bandwith)，按流量计费(flow)
      *
      * @param chargeMode
      */

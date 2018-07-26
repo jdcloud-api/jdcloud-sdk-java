@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 取消共享镜像，不能操作非私有镜像
+ * 取消共享镜像，只允许操作您的个人私有镜像。
+
  */
 public class UnShareImageResponse extends JdcloudResponse<UnShareImageResult> implements java.io.Serializable {
 
