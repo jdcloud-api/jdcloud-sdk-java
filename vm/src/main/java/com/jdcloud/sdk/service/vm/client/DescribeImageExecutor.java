@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.DescribeImageResponse;
 
 /**
- * 查询镜像信息
+ * 查询镜像详情。
+
  */
 class DescribeImageExecutor extends JdcloudExecutor {
 

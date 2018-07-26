@@ -38,7 +38,7 @@ public class InstanceStatus  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 云主机状态
+     * &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
      */
     private String status;
 
@@ -62,7 +62,7 @@ public class InstanceStatus  implements java.io.Serializable {
     }
 
     /**
-     * get 云主机状态
+     * get &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class InstanceStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机状态
+     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
      *
      * @param status
      */
@@ -91,7 +91,7 @@ public class InstanceStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机状态
+     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
      *
      * @param status
      */

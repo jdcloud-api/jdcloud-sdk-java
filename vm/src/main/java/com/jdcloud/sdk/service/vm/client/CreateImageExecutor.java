@@ -29,10 +29,10 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.CreateImageResponse;
 
 /**
- * &quot;虚机创建私有镜像&quot;
-&quot;虚机状态必须为stopped&quot;
-&quot;如果虚机上有挂载数据盘，默认会将数据盘创建快照，生成打包镜像&quot;
-&quot;主机没有未完成的任务才可制作镜像&quot;
+ * 为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
+云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
+如果云主机中挂载了数据盘，默认会将数据盘创建快照，生成打包镜像。&lt;br&gt;
+调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
 
  */
 class CreateImageExecutor extends JdcloudExecutor {

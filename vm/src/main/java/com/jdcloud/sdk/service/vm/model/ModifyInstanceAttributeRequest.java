@@ -28,31 +28,32 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改主机信息
+ * 修改云主机部分信息，包括名称、描述。
+
  */
 public class ModifyInstanceAttributeRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 名称；名称和描述必传其中一个；不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，长度不超过32字符
+     * 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String name;
 
     /**
-     * 描述；名称和描述必传其中一个；长度不超过256个字符
+     * 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String description;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * 云主机ID
      * Required:true
      */
     @Required
@@ -60,7 +61,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 名称；名称和描述必传其中一个；不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，长度不超过32字符
+     * get 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -69,7 +70,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 名称；名称和描述必传其中一个；不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，长度不超过32字符
+     * set 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param name
      */
@@ -78,7 +79,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 描述；名称和描述必传其中一个；长度不超过256个字符
+     * get 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -87,7 +88,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 描述；名称和描述必传其中一个；长度不超过256个字符
+     * set 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param description
      */
@@ -96,7 +97,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -105,7 +106,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -114,7 +115,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get Instance ID
+     * get 云主机ID
      *
      * @return
      */
@@ -123,7 +124,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -133,7 +134,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 名称；名称和描述必传其中一个；不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，长度不超过32字符
+     * set 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param name
      */
@@ -143,7 +144,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 描述；名称和描述必传其中一个；长度不超过256个字符
+     * set 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param description
      */
@@ -153,7 +154,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -163,7 +164,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */

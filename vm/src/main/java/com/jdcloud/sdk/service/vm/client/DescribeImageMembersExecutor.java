@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.DescribeImageMembersResponse;
 
 /**
- * 查询镜像共享帐户列表，不能操作非私有镜像
+ * 查询镜像共享帐户列表，只允许操作您的个人私有镜像。
+
  */
 class DescribeImageMembersExecutor extends JdcloudExecutor {
 

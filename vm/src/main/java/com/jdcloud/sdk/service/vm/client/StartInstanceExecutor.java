@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.StartInstanceResponse;
 
 /**
- * 启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
+ * 启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
+只能启动正常计费状态的云主机。
+
  */
 class StartInstanceExecutor extends JdcloudExecutor {
 

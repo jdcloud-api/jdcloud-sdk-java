@@ -38,7 +38,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     private String az;
 
     /**
-     * true:可用、false:已售罄不可用
+     * 可售卖情况，true:可售卖、false:已售罄不可用
      */
     private Boolean inStock;
 
@@ -62,7 +62,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * get true:可用、false:已售罄不可用
+     * get 可售卖情况，true:可售卖、false:已售罄不可用
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * set true:可用、false:已售罄不可用
+     * set 可售卖情况，true:可售卖、false:已售罄不可用
      *
      * @param inStock
      */
@@ -91,7 +91,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * set true:可用、false:已售罄不可用
+     * set 可售卖情况，true:可售卖、false:已售罄不可用
      *
      * @param inStock
      */

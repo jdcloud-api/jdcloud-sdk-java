@@ -27,10 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * &quot;共享镜像，最多可共享给20个帐户&quot;
-&quot;打包镜像暂不支持共享&quot;
-&quot;不能操作非私有镜像&quot;
-&quot;不能共享给自己&quot;
+ * 共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
+打包镜像目前不支持共享。
 
  */
 public class ShareImageResponse extends JdcloudResponse<ShareImageResult> implements java.io.Serializable {

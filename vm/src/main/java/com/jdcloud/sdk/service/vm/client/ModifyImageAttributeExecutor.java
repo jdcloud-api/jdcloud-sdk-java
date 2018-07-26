@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.ModifyImageAttributeResponse;
 
 /**
- * 修改镜像信息
+ * 修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+
  */
 class ModifyImageAttributeExecutor extends JdcloudExecutor {
 

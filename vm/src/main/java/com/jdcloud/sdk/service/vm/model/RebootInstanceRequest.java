@@ -28,21 +28,22 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 重启单个实例，只能重启running状态的实例，主机没有未完成的任务才可重启
+ * 重启单个云主机，只能重启&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可重启。
+
  */
 public class RebootInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * 云主机ID
      * Required:true
      */
     @Required
@@ -50,7 +51,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -59,7 +60,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -68,7 +69,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get Instance ID
+     * get 云主机ID
      *
      * @return
      */
@@ -77,7 +78,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -87,7 +88,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -97,7 +98,7 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */

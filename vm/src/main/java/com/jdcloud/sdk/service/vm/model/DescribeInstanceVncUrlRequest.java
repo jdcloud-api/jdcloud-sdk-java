@@ -28,21 +28,23 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询主机vnc
+ * 获取云主机vnc，用于连接管理云主机。&lt;br&gt;
+vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小时内没有使用，vnc地址自动失效，再次使用需要重新获取。
+
  */
 public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * 云主机ID
      * Required:true
      */
     @Required
@@ -50,7 +52,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -59,7 +61,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -68,7 +70,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get Instance ID
+     * get 云主机ID
      *
      * @return
      */
@@ -77,7 +79,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -87,7 +89,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -97,7 +99,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */

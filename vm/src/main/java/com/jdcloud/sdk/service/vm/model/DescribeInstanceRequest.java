@@ -28,21 +28,22 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询云主机详情
+ * 查询一台云主机的详细信息
+
  */
 public class DescribeInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * 云主机ID
      * Required:true
      */
     @Required
@@ -50,7 +51,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -59,7 +60,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -68,7 +69,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get Instance ID
+     * get 云主机ID
      *
      * @return
      */
@@ -77,7 +78,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -87,7 +88,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -97,7 +98,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */

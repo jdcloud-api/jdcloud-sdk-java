@@ -35,18 +35,18 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 限制的类型  excludes：排除指定的实例类型  includes：只包含指定的实例类型，暂不支持
+     * 受限制的规格类型。excludes：排除指定的实例类型；includes：只包含指定的实例类型，暂不支持includes
      */
     private String constraintsType;
 
     /**
-     * 实例类型列表
+     * 规格类型列表
      */
     private List<String> instanceTypes;
 
 
     /**
-     * get 限制的类型  excludes：排除指定的实例类型  includes：只包含指定的实例类型，暂不支持
+     * get 受限制的规格类型。excludes：排除指定的实例类型；includes：只包含指定的实例类型，暂不支持includes
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 限制的类型  excludes：排除指定的实例类型  includes：只包含指定的实例类型，暂不支持
+     * set 受限制的规格类型。excludes：排除指定的实例类型；includes：只包含指定的实例类型，暂不支持includes
      *
      * @param constraintsType
      */
@@ -64,7 +64,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     }
 
     /**
-     * get 实例类型列表
+     * get 规格类型列表
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型列表
+     * set 规格类型列表
      *
      * @param instanceTypes
      */
@@ -83,7 +83,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
 
 
     /**
-     * set 限制的类型  excludes：排除指定的实例类型  includes：只包含指定的实例类型，暂不支持
+     * set 受限制的规格类型。excludes：排除指定的实例类型；includes：只包含指定的实例类型，暂不支持includes
      *
      * @param constraintsType
      */
@@ -93,7 +93,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型列表
+     * set 规格类型列表
      *
      * @param instanceTypes
      */
@@ -104,7 +104,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
 
 
     /**
-     * add item to 实例类型列表
+     * add item to 规格类型列表
      *
      * @param instanceType
      */

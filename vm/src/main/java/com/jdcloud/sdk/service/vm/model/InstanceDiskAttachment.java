@@ -34,33 +34,42 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 磁盘分类，取值范围{local, cloud}
+     * 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
+系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
+数据盘仅支持云硬盘(cloud)。
+
      */
     private String diskCategory;
 
     /**
-     * 自动删除，删除主机时自动删除此磁盘，默认为true
+     * 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
+如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
+如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+
      */
     private Boolean autoDelete;
 
     /**
-     * 本地磁盘
+     * 本地磁盘配置
      */
     private LocalDisk localDisk;
 
     /**
-     * 云硬盘
+     * 云硬盘配置
      */
     private Disk cloudDisk;
 
     /**
-     * 数据盘逻辑挂载点vdb,vdc,vdd,vde,vdf,vdg,vdh
+     * 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
      */
     private String deviceName;
 
 
     /**
-     * get 磁盘分类，取值范围{local, cloud}
+     * get 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
+系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
+数据盘仅支持云硬盘(cloud)。
+
      *
      * @return
      */
@@ -69,7 +78,10 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘分类，取值范围{local, cloud}
+     * set 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
+系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
+数据盘仅支持云硬盘(cloud)。
+
      *
      * @param diskCategory
      */
@@ -78,7 +90,10 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 自动删除，删除主机时自动删除此磁盘，默认为true
+     * get 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
+如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
+如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+
      *
      * @return
      */
@@ -87,7 +102,10 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 自动删除，删除主机时自动删除此磁盘，默认为true
+     * set 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
+如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
+如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+
      *
      * @param autoDelete
      */
@@ -96,7 +114,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 本地磁盘
+     * get 本地磁盘配置
      *
      * @return
      */
@@ -105,7 +123,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 本地磁盘
+     * set 本地磁盘配置
      *
      * @param localDisk
      */
@@ -114,7 +132,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘
+     * get 云硬盘配置
      *
      * @return
      */
@@ -123,7 +141,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘
+     * set 云硬盘配置
      *
      * @param cloudDisk
      */
@@ -132,7 +150,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘逻辑挂载点vdb,vdc,vdd,vde,vdf,vdg,vdh
+     * get 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
      *
      * @return
      */
@@ -141,7 +159,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘逻辑挂载点vdb,vdc,vdd,vde,vdf,vdg,vdh
+     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
      *
      * @param deviceName
      */
@@ -151,7 +169,10 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
 
 
     /**
-     * set 磁盘分类，取值范围{local, cloud}
+     * set 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
+系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
+数据盘仅支持云硬盘(cloud)。
+
      *
      * @param diskCategory
      */
@@ -161,7 +182,10 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 自动删除，删除主机时自动删除此磁盘，默认为true
+     * set 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
+如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
+如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+
      *
      * @param autoDelete
      */
@@ -171,7 +195,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 本地磁盘
+     * set 本地磁盘配置
      *
      * @param localDisk
      */
@@ -181,7 +205,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘
+     * set 云硬盘配置
      *
      * @param cloudDisk
      */
@@ -191,7 +215,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘逻辑挂载点vdb,vdc,vdd,vde,vdf,vdg,vdh
+     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
      *
      * @param deviceName
      */

@@ -30,7 +30,8 @@ import com.jdcloud.sdk.service.vm.model.InstanceType;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询实例类型资源信息列表
+ * 查询规格类型信息列表
+
  */
 public class DescribeInstanceTypesResult extends JdcloudResult implements java.io.Serializable {
 

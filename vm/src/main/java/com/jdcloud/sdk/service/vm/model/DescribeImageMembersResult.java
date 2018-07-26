@@ -29,7 +29,8 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询镜像共享帐户列表，不能操作非私有镜像
+ * 查询镜像共享帐户列表，只允许操作您的个人私有镜像。
+
  */
 public class DescribeImageMembersResult extends JdcloudResult implements java.io.Serializable {
 

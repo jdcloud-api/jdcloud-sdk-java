@@ -28,21 +28,23 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 启动单个实例，只能启动stopped状态的实例，主机没有未完成的任务才可启动
+ * 启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
+只能启动正常计费状态的云主机。
+
  */
 public class StartInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * 云主机ID
      * Required:true
      */
     @Required
@@ -50,7 +52,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -59,7 +61,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -68,7 +70,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get Instance ID
+     * get 云主机ID
      *
      * @return
      */
@@ -77,7 +79,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -87,7 +89,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -97,7 +99,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Instance ID
+     * set 云主机ID
      *
      * @param instanceId
      */

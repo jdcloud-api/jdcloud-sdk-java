@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改镜像信息
+ * 修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+
  */
 public class ModifyImageAttributeResult extends JdcloudResult implements java.io.Serializable {
 

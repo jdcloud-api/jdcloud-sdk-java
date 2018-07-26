@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询云主机列表
+ * 批量查询云主机的详细信息&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
  */
 public class DescribeInstancesResponse extends JdcloudResponse<DescribeInstancesResult> implements java.io.Serializable {
 

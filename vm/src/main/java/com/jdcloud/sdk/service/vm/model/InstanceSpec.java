@@ -38,47 +38,44 @@ public class InstanceSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例所属的可用区
-     * Required:true
+     * 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
      */
-    @Required
+    private String agId;
+
+    /**
+     * 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+     */
+    private String instanceTemplateId;
+
+    /**
+     * 云主机所属的可用区。
+     */
     private String az;
 
     /**
-     * 实例类型
-     * Required:true
+     * 规格类型。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
      */
-    @Required
     private String instanceType;
 
     /**
-     * 镜像ID
-     * Required:true
+     * 镜像ID。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
      */
-    @Required
     private String imageId;
 
     /**
-     * 主机名称，不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，不超过32字符
+     * 云主机名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      * Required:true
      */
     @Required
     private String name;
 
     /**
-     * &quot;密码，长度8-30个字符&quot;
-&quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-&quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-&quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-&quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-&quot;e)密码中不能出现自己的用户名&quot;
-&quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-
+     * 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String password;
 
     /**
-     * 密钥对名称
+     * 密钥对名称，当前只支持传入一个。
      */
     private List<String> keyNames;
 
@@ -89,36 +86,72 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * 主网卡配置信息
-     * Required:true
      */
-    @Required
     private InstanceNetworkInterfaceAttachmentSpec primaryNetworkInterface;
 
     /**
      * 系统盘配置信息
-     * Required:true
      */
-    @Required
     private InstanceDiskAttachmentSpec systemDisk;
 
     /**
-     * 数据盘配置信息
+     * 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      */
     private List<InstanceDiskAttachmentSpec> dataDisks;
 
     /**
      * 计费配置
+云主机不支持按用量方式计费，默认为按配置计费。
+打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
+打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
+
      */
     private ChargeSpec charge;
 
     /**
-     * 主机描述，长度不超过256字符
+     * 主机描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String description;
 
 
     /**
-     * get 实例所属的可用区
+     * get 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
+     *
+     * @return
+     */
+    public String getAgId() {
+        return agId;
+    }
+
+    /**
+     * set 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
+     *
+     * @param agId
+     */
+    public void setAgId(String agId) {
+        this.agId = agId;
+    }
+
+    /**
+     * get 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+     *
+     * @return
+     */
+    public String getInstanceTemplateId() {
+        return instanceTemplateId;
+    }
+
+    /**
+     * set 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+     *
+     * @param instanceTemplateId
+     */
+    public void setInstanceTemplateId(String instanceTemplateId) {
+        this.instanceTemplateId = instanceTemplateId;
+    }
+
+    /**
+     * get 云主机所属的可用区。
      *
      * @return
      */
@@ -127,7 +160,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例所属的可用区
+     * set 云主机所属的可用区。
      *
      * @param az
      */
@@ -136,7 +169,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 实例类型
+     * get 规格类型。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
      *
      * @return
      */
@@ -145,7 +178,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 规格类型。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
      *
      * @param instanceType
      */
@@ -154,7 +187,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
      *
      * @return
      */
@@ -163,7 +196,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
      *
      * @param imageId
      */
@@ -172,7 +205,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 主机名称，不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，不超过32字符
+     * get 云主机名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -181,7 +214,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 主机名称，不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，不超过32字符
+     * set 云主机名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param name
      */
@@ -190,14 +223,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get &quot;密码，长度8-30个字符&quot;
-&quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-&quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-&quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-&quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-&quot;e)密码中不能出现自己的用户名&quot;
-&quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-
+     * get 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -206,14 +232,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set &quot;密码，长度8-30个字符&quot;
-&quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-&quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-&quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-&quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-&quot;e)密码中不能出现自己的用户名&quot;
-&quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-
+     * set 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param password
      */
@@ -222,7 +241,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 密钥对名称
+     * get 密钥对名称，当前只支持传入一个。
      *
      * @return
      */
@@ -231,7 +250,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称，当前只支持传入一个。
      *
      * @param keyNames
      */
@@ -294,7 +313,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘配置信息
+     * get 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      *
      * @return
      */
@@ -303,7 +322,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘配置信息
+     * set 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      *
      * @param dataDisks
      */
@@ -313,6 +332,10 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * get 计费配置
+云主机不支持按用量方式计费，默认为按配置计费。
+打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
+打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
+
      *
      * @return
      */
@@ -322,6 +345,10 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * set 计费配置
+云主机不支持按用量方式计费，默认为按配置计费。
+打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
+打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
+
      *
      * @param charge
      */
@@ -330,7 +357,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 主机描述，长度不超过256字符
+     * get 主机描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -339,7 +366,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 主机描述，长度不超过256字符
+     * set 主机描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param description
      */
@@ -349,7 +376,27 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * set 实例所属的可用区
+     * set 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
+     *
+     * @param agId
+     */
+    public InstanceSpec agId(String agId) {
+        this.agId = agId;
+        return this;
+    }
+
+    /**
+     * set 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+     *
+     * @param instanceTemplateId
+     */
+    public InstanceSpec instanceTemplateId(String instanceTemplateId) {
+        this.instanceTemplateId = instanceTemplateId;
+        return this;
+    }
+
+    /**
+     * set 云主机所属的可用区。
      *
      * @param az
      */
@@ -359,7 +406,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 规格类型。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
      *
      * @param instanceType
      */
@@ -369,7 +416,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
      *
      * @param imageId
      */
@@ -379,7 +426,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 主机名称，不为空且只允许中文、数字、大小写字母、英文下划线“_”及中划线“-”，不超过32字符
+     * set 云主机名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param name
      */
@@ -389,14 +436,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set &quot;密码，长度8-30个字符&quot;
-&quot;a)不能出现的字符或完整单词，如下：jd、JD、360、bug、BUG、com、COM、cloud、CLOUD、password、PASSWORD&quot;
-&quot;b)不能出现连续三位及三位以上数字，例：123、987&quot;
-&quot;c)不能出现连续三位及三位以上的字母，例：abc、CBA、bcde、cdef&quot;
-&quot;d)不能出现三位及三位以上键位顺序（仅包括字母），例：qaz、tfc、wsx、xsw、qwert、trewq&quot;
-&quot;e)密码中不能出现自己的用户名&quot;
-&quot;g)至少同时包含三类（大写字母，小写字母，数字和特殊字符，特殊字符为 ** ()&#x60;~!@#$%&amp;_-+&#x3D;{}[]:\&quot;;&#39;&lt;&gt;,.?/）*|&quot;
-
+     * set 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param password
      */
@@ -406,7 +446,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称，当前只支持传入一个。
      *
      * @param keyNames
      */
@@ -446,7 +486,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘配置信息
+     * set 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      *
      * @param dataDisks
      */
@@ -457,6 +497,10 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * set 计费配置
+云主机不支持按用量方式计费，默认为按配置计费。
+打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
+打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
+
      *
      * @param charge
      */
@@ -466,7 +510,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 主机描述，长度不超过256字符
+     * set 主机描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param description
      */
@@ -477,7 +521,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 密钥对名称
+     * add item to 密钥对名称，当前只支持传入一个。
      *
      * @param keyName
      */
@@ -489,7 +533,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 数据盘配置信息
+     * add item to 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
      *
      * @param dataDisk
      */

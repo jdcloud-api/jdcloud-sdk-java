@@ -37,17 +37,17 @@ public class Instance  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例ID
+     * 云主机ID
      */
     private String instanceId;
 
     /**
-     * 实例名称
+     * 云主机名称
      */
     private String instanceName;
 
     /**
-     * 实例类型
+     * 云主机类型
      */
     private String instanceType;
 
@@ -77,12 +77,12 @@ public class Instance  implements java.io.Serializable {
     private String elasticIpAddress;
 
     /**
-     * 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
+     * 云主机状态，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
      */
     private String status;
 
     /**
-     * 实例描述
+     * 云主机描述
      */
     private String description;
 
@@ -92,19 +92,24 @@ public class Instance  implements java.io.Serializable {
     private String imageId;
 
     /**
-     * 系统盘信息
+     * 系统盘配置
      */
     private InstanceDiskAttachment systemDisk;
 
     /**
-     * 数据盘信息
+     * 数据盘配置
      */
     private List<InstanceDiskAttachment> dataDisks;
 
     /**
-     * 主网卡信息
+     * 主网卡配置
      */
     private InstanceNetworkInterfaceAttachment primaryNetworkInterface;
+
+    /**
+     * 辅助网卡配置
+     */
+    private List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
 
     /**
      * 创建时间
@@ -112,7 +117,7 @@ public class Instance  implements java.io.Serializable {
     private String launchTime;
 
     /**
-     * 可用区
+     * 云主机所在可用区
      */
     private String az;
 
@@ -127,13 +132,23 @@ public class Instance  implements java.io.Serializable {
     private Charge charge;
 
     /**
+     * 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
+     */
+    private Ag ag;
+
+    /**
+     * 高可用组中的错误域
+     */
+    private String faultDomain;
+
+    /**
      * Tag信息
      */
     private List<Tag> tags;
 
 
     /**
-     * get 实例ID
+     * get 云主机ID
      *
      * @return
      */
@@ -142,7 +157,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -151,7 +166,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例名称
+     * get 云主机名称
      *
      * @return
      */
@@ -160,7 +175,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例名称
+     * set 云主机名称
      *
      * @param instanceName
      */
@@ -169,7 +184,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例类型
+     * get 云主机类型
      *
      * @return
      */
@@ -178,7 +193,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 云主机类型
      *
      * @param instanceType
      */
@@ -277,7 +292,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
+     * get 云主机状态，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
      *
      * @return
      */
@@ -286,7 +301,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
+     * set 云主机状态，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
      *
      * @param status
      */
@@ -295,7 +310,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例描述
+     * get 云主机描述
      *
      * @return
      */
@@ -304,7 +319,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例描述
+     * set 云主机描述
      *
      * @param description
      */
@@ -331,7 +346,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘信息
+     * get 系统盘配置
      *
      * @return
      */
@@ -340,7 +355,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘信息
+     * set 系统盘配置
      *
      * @param systemDisk
      */
@@ -349,7 +364,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘信息
+     * get 数据盘配置
      *
      * @return
      */
@@ -358,7 +373,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘信息
+     * set 数据盘配置
      *
      * @param dataDisks
      */
@@ -367,7 +382,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡信息
+     * get 主网卡配置
      *
      * @return
      */
@@ -376,12 +391,30 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡信息
+     * set 主网卡配置
      *
      * @param primaryNetworkInterface
      */
     public void setPrimaryNetworkInterface(InstanceNetworkInterfaceAttachment primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
+    }
+
+    /**
+     * get 辅助网卡配置
+     *
+     * @return
+     */
+    public List<InstanceNetworkInterfaceAttachment> getSecondaryNetworkInterfaces() {
+        return secondaryNetworkInterfaces;
+    }
+
+    /**
+     * set 辅助网卡配置
+     *
+     * @param secondaryNetworkInterfaces
+     */
+    public void setSecondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
+        this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
     }
 
     /**
@@ -403,7 +436,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 可用区
+     * get 云主机所在可用区
      *
      * @return
      */
@@ -412,7 +445,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区
+     * set 云主机所在可用区
      *
      * @param az
      */
@@ -457,6 +490,42 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
+     *
+     * @return
+     */
+    public Ag getAg() {
+        return ag;
+    }
+
+    /**
+     * set 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
+     *
+     * @param ag
+     */
+    public void setAg(Ag ag) {
+        this.ag = ag;
+    }
+
+    /**
+     * get 高可用组中的错误域
+     *
+     * @return
+     */
+    public String getFaultDomain() {
+        return faultDomain;
+    }
+
+    /**
+     * set 高可用组中的错误域
+     *
+     * @param faultDomain
+     */
+    public void setFaultDomain(String faultDomain) {
+        this.faultDomain = faultDomain;
+    }
+
+    /**
      * get Tag信息
      *
      * @return
@@ -476,7 +545,7 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * set 实例ID
+     * set 云主机ID
      *
      * @param instanceId
      */
@@ -486,7 +555,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例名称
+     * set 云主机名称
      *
      * @param instanceName
      */
@@ -496,7 +565,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 云主机类型
      *
      * @param instanceType
      */
@@ -556,7 +625,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态，[pending,starting,running,stopping,stopped,rebooting,rebuilding,resizing,deleting,error]
+     * set 云主机状态，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3869/isCatalog/1&quot;&gt;参考云主机状态&lt;/a&gt;
      *
      * @param status
      */
@@ -566,7 +635,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例描述
+     * set 云主机描述
      *
      * @param description
      */
@@ -586,7 +655,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘信息
+     * set 系统盘配置
      *
      * @param systemDisk
      */
@@ -596,7 +665,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘信息
+     * set 数据盘配置
      *
      * @param dataDisks
      */
@@ -606,12 +675,22 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡信息
+     * set 主网卡配置
      *
      * @param primaryNetworkInterface
      */
     public Instance primaryNetworkInterface(InstanceNetworkInterfaceAttachment primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
+        return this;
+    }
+
+    /**
+     * set 辅助网卡配置
+     *
+     * @param secondaryNetworkInterfaces
+     */
+    public Instance secondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
+        this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
         return this;
     }
 
@@ -626,7 +705,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区
+     * set 云主机所在可用区
      *
      * @param az
      */
@@ -656,6 +735,26 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * set 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
+     *
+     * @param ag
+     */
+    public Instance ag(Ag ag) {
+        this.ag = ag;
+        return this;
+    }
+
+    /**
+     * set 高可用组中的错误域
+     *
+     * @param faultDomain
+     */
+    public Instance faultDomain(String faultDomain) {
+        this.faultDomain = faultDomain;
+        return this;
+    }
+
+    /**
      * set Tag信息
      *
      * @param tags
@@ -667,7 +766,7 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * add item to 数据盘信息
+     * add item to 数据盘配置
      *
      * @param dataDisk
      */
@@ -676,6 +775,18 @@ public class Instance  implements java.io.Serializable {
             this.dataDisks = new ArrayList<>();
         }
         this.dataDisks.add(dataDisk);
+    }
+
+    /**
+     * add item to 辅助网卡配置
+     *
+     * @param secondaryNetworkInterface
+     */
+    public void addSecondaryNetworkInterface(InstanceNetworkInterfaceAttachment secondaryNetworkInterface) {
+        if (this.secondaryNetworkInterfaces == null) {
+            this.secondaryNetworkInterfaces = new ArrayList<>();
+        }
+        this.secondaryNetworkInterfaces.add(secondaryNetworkInterface);
     }
 
     /**

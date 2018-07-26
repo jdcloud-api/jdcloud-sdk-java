@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询主机vnc
+ * 获取云主机vnc，用于连接管理云主机。&lt;br&gt;
+vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小时内没有使用，vnc地址自动失效，再次使用需要重新获取。
+
  */
 public class DescribeInstanceVncUrlResponse extends JdcloudResponse<DescribeInstanceVncUrlResult> implements java.io.Serializable {
 

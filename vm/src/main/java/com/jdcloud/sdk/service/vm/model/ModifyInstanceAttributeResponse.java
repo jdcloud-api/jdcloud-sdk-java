@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改主机信息
+ * 修改云主机部分信息，包括名称、描述。
+
  */
 public class ModifyInstanceAttributeResponse extends JdcloudResponse<ModifyInstanceAttributeResult> implements java.io.Serializable {
 

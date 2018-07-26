@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.UnShareImageResponse;
 
 /**
- * 取消共享镜像，不能操作非私有镜像
+ * 取消共享镜像，只允许操作您的个人私有镜像。
+
  */
 class UnShareImageExecutor extends JdcloudExecutor {
 

@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.ModifyInstanceAttributeResponse;
 
 /**
- * 修改主机信息
+ * 修改云主机部分信息，包括名称、描述。
+
  */
 class ModifyInstanceAttributeExecutor extends JdcloudExecutor {
 

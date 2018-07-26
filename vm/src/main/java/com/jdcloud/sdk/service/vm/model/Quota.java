@@ -33,7 +33,7 @@ public class Quota  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型[instance，keypair，image]
+     * 资源类型[instance，keypair，image，instanceTemplate]
      */
     private String resourceType;
 
@@ -49,7 +49,7 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * get 资源类型[instance，keypair，image]
+     * get 资源类型[instance，keypair，image，instanceTemplate]
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型[instance，keypair，image]
+     * set 资源类型[instance，keypair，image，instanceTemplate]
      *
      * @param resourceType
      */
@@ -104,7 +104,7 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * set 资源类型[instance，keypair，image]
+     * set 资源类型[instance，keypair，image，instanceTemplate]
      *
      * @param resourceType
      */

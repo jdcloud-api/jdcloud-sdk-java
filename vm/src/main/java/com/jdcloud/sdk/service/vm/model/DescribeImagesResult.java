@@ -30,7 +30,10 @@ import com.jdcloud.sdk.service.vm.model.Image;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询镜像资源信息列表
+ * 查询镜像信息列表。&lt;br&gt;
+通过此接口可以查询到京东云官方镜像、第三方镜像、私有镜像、或其他用户共享给您的镜像。&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
  */
 public class DescribeImagesResult extends JdcloudResult implements java.io.Serializable {
 

@@ -50,12 +50,12 @@ public class InstanceTemplate  implements java.io.Serializable {
     private String description;
 
     /**
-     * 模板的数据
+     * 启动模板的数据
      */
     private InstanceTemplateData instanceTemplateData;
 
     /**
-     * ag信息
+     * 关联的高可用组(ag)信息
      */
     private List<Ag> ags;
 
@@ -120,7 +120,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 模板的数据
+     * get 启动模板的数据
      *
      * @return
      */
@@ -129,7 +129,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 模板的数据
+     * set 启动模板的数据
      *
      * @param instanceTemplateData
      */
@@ -138,7 +138,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get ag信息
+     * get 关联的高可用组(ag)信息
      *
      * @return
      */
@@ -147,7 +147,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set ag信息
+     * set 关联的高可用组(ag)信息
      *
      * @param ags
      */
@@ -205,7 +205,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 模板的数据
+     * set 启动模板的数据
      *
      * @param instanceTemplateData
      */
@@ -215,7 +215,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set ag信息
+     * set 关联的高可用组(ag)信息
      *
      * @param ags
      */
@@ -236,7 +236,7 @@ public class InstanceTemplate  implements java.io.Serializable {
 
 
     /**
-     * add item to ag信息
+     * add item to 关联的高可用组(ag)信息
      *
      * @param ag
      */

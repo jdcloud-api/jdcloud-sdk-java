@@ -30,7 +30,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 取消共享镜像，不能操作非私有镜像
+ * 取消共享镜像，只允许操作您的个人私有镜像。
+
  */
 public class UnShareImageRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,14 +43,14 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     private List<String> pins;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Image ID
+     * 镜像ID
      * Required:true
      */
     @Required
@@ -75,7 +76,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -84,7 +85,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -93,7 +94,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get Image ID
+     * get 镜像ID
      *
      * @return
      */
@@ -102,7 +103,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set Image ID
+     * set 镜像ID
      *
      * @param imageId
      */
@@ -122,7 +123,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -132,7 +133,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set Image ID
+     * set 镜像ID
      *
      * @param imageId
      */

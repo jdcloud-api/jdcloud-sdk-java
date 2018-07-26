@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询实例类型资源信息列表
+ * 查询规格类型信息列表
+
  */
 public class DescribeInstanceTypesResponse extends JdcloudResponse<DescribeInstanceTypesResult> implements java.io.Serializable {
 

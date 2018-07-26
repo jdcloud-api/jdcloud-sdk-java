@@ -31,7 +31,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询（虚机、镜像、密钥、模板）配额
+ * 查询配额，支持：云主机、镜像、密钥、模板
+
  */
 public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -44,7 +45,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     private List<Filter> filters;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
@@ -72,7 +73,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -81,7 +82,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -102,7 +103,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
