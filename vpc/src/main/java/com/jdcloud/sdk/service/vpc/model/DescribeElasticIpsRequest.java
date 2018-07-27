@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,14 +43,14 @@ public class DescribeElasticIpsRequest extends JdcloudRequest implements java.io
     private Integer pageNumber;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,500]
+     * 分页大小，默认为20，取值范围：[10,100]
      */
     private Integer pageSize;
 
     /**
-     * elasticIpIds - elasticip id数组条件
-elasticIpAddress - eip的IP地址 
-chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)
+     * elasticIpIds - elasticip id数组条件，支持多个
+elasticIpAddress - eip的IP地址，支持单个
+chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 
      */
     private List<Filter> filters;
@@ -82,7 +82,7 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,500]
+     * get 分页大小，默认为20，取值范围：[10,100]
      *
      * @return
      */
@@ -91,7 +91,7 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -100,9 +100,9 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
     }
 
     /**
-     * get elasticIpIds - elasticip id数组条件
-elasticIpAddress - eip的IP地址 
-chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)
+     * get elasticIpIds - elasticip id数组条件，支持多个
+elasticIpAddress - eip的IP地址，支持单个
+chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 
      *
      * @return
@@ -112,9 +112,9 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
     }
 
     /**
-     * set elasticIpIds - elasticip id数组条件
-elasticIpAddress - eip的IP地址 
-chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)
+     * set elasticIpIds - elasticip id数组条件，支持多个
+elasticIpAddress - eip的IP地址，支持单个
+chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 
      *
      * @param filters
@@ -153,7 +153,7 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -163,9 +163,9 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
     }
 
     /**
-     * set elasticIpIds - elasticip id数组条件
-elasticIpAddress - eip的IP地址 
-chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)
+     * set elasticIpIds - elasticip id数组条件，支持多个
+elasticIpAddress - eip的IP地址，支持单个
+chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 
      *
      * @param filters
@@ -187,9 +187,9 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
 
 
     /**
-     * add item to elasticIpIds - elasticip id数组条件
-elasticIpAddress - eip的IP地址 
-chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)
+     * add item to elasticIpIds - elasticip id数组条件，支持多个
+elasticIpAddress - eip的IP地址，支持单个
+chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 
      *
      * @param filter

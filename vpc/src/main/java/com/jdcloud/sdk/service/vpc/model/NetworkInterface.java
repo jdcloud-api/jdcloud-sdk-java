@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,6 +35,11 @@ public class NetworkInterface  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 弹性网卡名称
+     */
+    private String networkInterfaceName;
+
+    /**
      * 弹性网卡ID
      */
     private String networkInterfaceId;
@@ -43,6 +48,11 @@ public class NetworkInterface  implements java.io.Serializable {
      * 可用区名称
      */
     private String az;
+
+    /**
+     * 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）
+     */
+    private String role;
 
     /**
      * 以太网地址
@@ -65,7 +75,7 @@ public class NetworkInterface  implements java.io.Serializable {
     private List<String> networkSecurityGroupIds;
 
     /**
-     * 源IP地址校验，取值为0或者1
+     * 源和目标IP地址校验，取值为0或者1
      */
     private Integer sanityCheck;
 
@@ -90,10 +100,43 @@ public class NetworkInterface  implements java.io.Serializable {
     private String instanceId;
 
     /**
+     * 实例所属的账号
+     */
+    private String instanceOwnerId;
+
+    /**
+     * 网卡在实例上的设备索引号，取值范围：[0,8]，0：辅助网卡未绑定设备，1：主网卡，2-8：辅助网卡已绑定设备
+     */
+    private Integer deviceIndex;
+
+    /**
+     * 网卡描述信息
+     */
+    private String description;
+
+    /**
      * 弹性网卡创建时间
      */
     private String createdTime;
 
+
+    /**
+     * get 弹性网卡名称
+     *
+     * @return
+     */
+    public String getNetworkInterfaceName() {
+        return networkInterfaceName;
+    }
+
+    /**
+     * set 弹性网卡名称
+     *
+     * @param networkInterfaceName
+     */
+    public void setNetworkInterfaceName(String networkInterfaceName) {
+        this.networkInterfaceName = networkInterfaceName;
+    }
 
     /**
      * get 弹性网卡ID
@@ -129,6 +172,24 @@ public class NetworkInterface  implements java.io.Serializable {
      */
     public void setAz(String az) {
         this.az = az;
+    }
+
+    /**
+     * get 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）
+     *
+     * @return
+     */
+    public String getRole() {
+        return role;
+    }
+
+    /**
+     * set 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）
+     *
+     * @param role
+     */
+    public void setRole(String role) {
+        this.role = role;
     }
 
     /**
@@ -204,7 +265,7 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 源IP地址校验，取值为0或者1
+     * get 源和目标IP地址校验，取值为0或者1
      *
      * @return
      */
@@ -213,7 +274,7 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 源IP地址校验，取值为0或者1
+     * set 源和目标IP地址校验，取值为0或者1
      *
      * @param sanityCheck
      */
@@ -294,6 +355,60 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
+     * get 实例所属的账号
+     *
+     * @return
+     */
+    public String getInstanceOwnerId() {
+        return instanceOwnerId;
+    }
+
+    /**
+     * set 实例所属的账号
+     *
+     * @param instanceOwnerId
+     */
+    public void setInstanceOwnerId(String instanceOwnerId) {
+        this.instanceOwnerId = instanceOwnerId;
+    }
+
+    /**
+     * get 网卡在实例上的设备索引号，取值范围：[0,8]，0：辅助网卡未绑定设备，1：主网卡，2-8：辅助网卡已绑定设备
+     *
+     * @return
+     */
+    public Integer getDeviceIndex() {
+        return deviceIndex;
+    }
+
+    /**
+     * set 网卡在实例上的设备索引号，取值范围：[0,8]，0：辅助网卡未绑定设备，1：主网卡，2-8：辅助网卡已绑定设备
+     *
+     * @param deviceIndex
+     */
+    public void setDeviceIndex(Integer deviceIndex) {
+        this.deviceIndex = deviceIndex;
+    }
+
+    /**
+     * get 网卡描述信息
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 网卡描述信息
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
      * get 弹性网卡创建时间
      *
      * @return
@@ -313,6 +428,16 @@ public class NetworkInterface  implements java.io.Serializable {
 
 
     /**
+     * set 弹性网卡名称
+     *
+     * @param networkInterfaceName
+     */
+    public NetworkInterface networkInterfaceName(String networkInterfaceName) {
+        this.networkInterfaceName = networkInterfaceName;
+        return this;
+    }
+
+    /**
      * set 弹性网卡ID
      *
      * @param networkInterfaceId
@@ -329,6 +454,16 @@ public class NetworkInterface  implements java.io.Serializable {
      */
     public NetworkInterface az(String az) {
         this.az = az;
+        return this;
+    }
+
+    /**
+     * set 网卡角色，取值范围：Primary（主网卡）、Secondary（辅助网卡）
+     *
+     * @param role
+     */
+    public NetworkInterface role(String role) {
+        this.role = role;
         return this;
     }
 
@@ -373,7 +508,7 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 源IP地址校验，取值为0或者1
+     * set 源和目标IP地址校验，取值为0或者1
      *
      * @param sanityCheck
      */
@@ -419,6 +554,36 @@ public class NetworkInterface  implements java.io.Serializable {
      */
     public NetworkInterface instanceId(String instanceId) {
         this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 实例所属的账号
+     *
+     * @param instanceOwnerId
+     */
+    public NetworkInterface instanceOwnerId(String instanceOwnerId) {
+        this.instanceOwnerId = instanceOwnerId;
+        return this;
+    }
+
+    /**
+     * set 网卡在实例上的设备索引号，取值范围：[0,8]，0：辅助网卡未绑定设备，1：主网卡，2-8：辅助网卡已绑定设备
+     *
+     * @param deviceIndex
+     */
+    public NetworkInterface deviceIndex(Integer deviceIndex) {
+        this.deviceIndex = deviceIndex;
+        return this;
+    }
+
+    /**
+     * set 网卡描述信息
+     *
+     * @param description
+     */
+    public NetworkInterface description(String description) {
+        this.description = description;
         return this;
     }
 

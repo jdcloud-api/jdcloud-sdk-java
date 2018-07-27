@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,9 +31,24 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.streambus.model.GetConsumerGroupListRequest;
+import com.jdcloud.sdk.service.streambus.model.GetConsumerGroupListResponse;
+import com.jdcloud.sdk.service.streambus.client.GetConsumerGroupListExecutor;
+import com.jdcloud.sdk.service.streambus.model.CreateConsumerGroupRequest;
+import com.jdcloud.sdk.service.streambus.model.CreateConsumerGroupResponse;
+import com.jdcloud.sdk.service.streambus.client.CreateConsumerGroupExecutor;
+import com.jdcloud.sdk.service.streambus.model.DeleteConsumerGroupRequest;
+import com.jdcloud.sdk.service.streambus.model.DeleteConsumerGroupResponse;
+import com.jdcloud.sdk.service.streambus.client.DeleteConsumerGroupExecutor;
 import com.jdcloud.sdk.service.streambus.model.AddTopicRequest;
 import com.jdcloud.sdk.service.streambus.model.AddTopicResponse;
 import com.jdcloud.sdk.service.streambus.client.AddTopicExecutor;
+import com.jdcloud.sdk.service.streambus.model.DescribeTopicRequest;
+import com.jdcloud.sdk.service.streambus.model.DescribeTopicResponse;
+import com.jdcloud.sdk.service.streambus.client.DescribeTopicExecutor;
+import com.jdcloud.sdk.service.streambus.model.DeleteTopicRequest;
+import com.jdcloud.sdk.service.streambus.model.DeleteTopicResponse;
+import com.jdcloud.sdk.service.streambus.client.DeleteTopicExecutor;
 import com.jdcloud.sdk.service.streambus.model.UpdateTopicRequest;
 import com.jdcloud.sdk.service.streambus.model.UpdateTopicResponse;
 import com.jdcloud.sdk.service.streambus.client.UpdateTopicExecutor;
@@ -91,6 +106,39 @@ public class StreambusClient extends JdcloudClient {
 
 
     /**
+     * 查看指定主题的所有消费组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetConsumerGroupListResponse getConsumerGroupList(GetConsumerGroupListRequest request) throws JdcloudSdkException {
+        return new GetConsumerGroupListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建consumerGroupName
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateConsumerGroupResponse createConsumerGroup(CreateConsumerGroupRequest request) throws JdcloudSdkException {
+        return new CreateConsumerGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除consumerGroupName
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteConsumerGroupResponse deleteConsumerGroup(DeleteConsumerGroupRequest request) throws JdcloudSdkException {
+        return new DeleteConsumerGroupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建topic
      *
      * @param request
@@ -99,6 +147,28 @@ public class StreambusClient extends JdcloudClient {
      */
     public AddTopicResponse addTopic(AddTopicRequest request) throws JdcloudSdkException {
         return new AddTopicExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看指定主题
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTopicResponse describeTopic(DescribeTopicRequest request) throws JdcloudSdkException {
+        return new DescribeTopicExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除topic
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteTopicResponse deleteTopic(DeleteTopicRequest request) throws JdcloudSdkException {
+        return new DeleteTopicExecutor().client(this).execute(request);
     }
 
     /**
