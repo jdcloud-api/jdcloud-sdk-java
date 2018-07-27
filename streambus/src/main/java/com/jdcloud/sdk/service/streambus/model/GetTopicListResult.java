@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.streambus.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.streambus.model.TopicListInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -34,39 +37,51 @@ public class GetTopicListResult extends JdcloudResult implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * topic信息
+     * topic
      */
-    private Object error;
+    private List<TopicListInfo> topic;
 
 
     /**
-     * get topic信息
+     * get topic
      *
      * @return
      */
-    public Object getError() {
-        return error;
+    public List<TopicListInfo> getTopic() {
+        return topic;
     }
 
     /**
-     * set topic信息
+     * set topic
      *
-     * @param error
+     * @param topic
      */
-    public void setError(Object error) {
-        this.error = error;
+    public void setTopic(List<TopicListInfo> topic) {
+        this.topic = topic;
     }
 
 
     /**
-     * set topic信息
+     * set topic
      *
-     * @param error
+     * @param topic
      */
-    public GetTopicListResult error(Object error) {
-        this.error = error;
+    public GetTopicListResult topic(List<TopicListInfo> topic) {
+        this.topic = topic;
         return this;
     }
 
+
+    /**
+     * add item to topic
+     *
+     * @param topic
+     */
+    public void addTopic(TopicListInfo topic) {
+        if (this.topic == null) {
+            this.topic = new ArrayList<>();
+        }
+        this.topic.add(topic);
+    }
 
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,24 +31,57 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.vpc.model.DescribeElasticIpsRequest;
-import com.jdcloud.sdk.service.vpc.model.DescribeElasticIpsResponse;
-import com.jdcloud.sdk.service.vpc.client.DescribeElasticIpsExecutor;
-import com.jdcloud.sdk.service.vpc.model.AssignSecondaryIpsRequest;
-import com.jdcloud.sdk.service.vpc.model.AssignSecondaryIpsResponse;
-import com.jdcloud.sdk.service.vpc.client.AssignSecondaryIpsExecutor;
+import com.jdcloud.sdk.service.vpc.model.ModifyNetworkSecurityGroupRulesRequest;
+import com.jdcloud.sdk.service.vpc.model.ModifyNetworkSecurityGroupRulesResponse;
+import com.jdcloud.sdk.service.vpc.client.ModifyNetworkSecurityGroupRulesExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeVpcPeeringExecutor;
 import com.jdcloud.sdk.service.vpc.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.vpc.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.vpc.client.DisassociateElasticIpExecutor;
+import com.jdcloud.sdk.service.vpc.model.AddNetworkSecurityGroupRulesRequest;
+import com.jdcloud.sdk.service.vpc.model.AddNetworkSecurityGroupRulesResponse;
+import com.jdcloud.sdk.service.vpc.client.AddNetworkSecurityGroupRulesExecutor;
+import com.jdcloud.sdk.service.vpc.model.AssociateElasticIpRequest;
+import com.jdcloud.sdk.service.vpc.model.AssociateElasticIpResponse;
+import com.jdcloud.sdk.service.vpc.client.AssociateElasticIpExecutor;
+import com.jdcloud.sdk.service.vpc.model.RemoveNetworkSecurityGroupRulesRequest;
+import com.jdcloud.sdk.service.vpc.model.RemoveNetworkSecurityGroupRulesResponse;
+import com.jdcloud.sdk.service.vpc.client.RemoveNetworkSecurityGroupRulesExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeElasticIpRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeElasticIpResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeElasticIpExecutor;
+import com.jdcloud.sdk.service.vpc.model.ModifyNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.vpc.model.ModifyNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.vpc.client.ModifyNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.vpc.model.DeleteNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.vpc.model.DeleteNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.vpc.client.DeleteNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeElasticIpsRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeElasticIpsResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeElasticIpsExecutor;
+import com.jdcloud.sdk.service.vpc.model.AssignSecondaryIpsRequest;
+import com.jdcloud.sdk.service.vpc.model.AssignSecondaryIpsResponse;
+import com.jdcloud.sdk.service.vpc.client.AssignSecondaryIpsExecutor;
+import com.jdcloud.sdk.service.vpc.model.CreateNetworkSecurityGroupRequest;
+import com.jdcloud.sdk.service.vpc.model.CreateNetworkSecurityGroupResponse;
+import com.jdcloud.sdk.service.vpc.client.CreateNetworkSecurityGroupExecutor;
+import com.jdcloud.sdk.service.vpc.model.DeleteNetworkSecurityGroupRequest;
+import com.jdcloud.sdk.service.vpc.model.DeleteNetworkSecurityGroupResponse;
+import com.jdcloud.sdk.service.vpc.client.DeleteNetworkSecurityGroupExecutor;
+import com.jdcloud.sdk.service.vpc.model.CreateNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.vpc.model.CreateNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.vpc.client.CreateNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.vpc.model.DeleteElasticIpRequest;
 import com.jdcloud.sdk.service.vpc.model.DeleteElasticIpResponse;
 import com.jdcloud.sdk.service.vpc.client.DeleteElasticIpExecutor;
 import com.jdcloud.sdk.service.vpc.model.CreateElasticIpsRequest;
 import com.jdcloud.sdk.service.vpc.model.CreateElasticIpsResponse;
 import com.jdcloud.sdk.service.vpc.client.CreateElasticIpsExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.vpc.model.UnassignSecondaryIpsRequest;
 import com.jdcloud.sdk.service.vpc.model.UnassignSecondaryIpsResponse;
 import com.jdcloud.sdk.service.vpc.client.UnassignSecondaryIpsExecutor;
@@ -58,6 +91,9 @@ import com.jdcloud.sdk.service.vpc.client.DescribeVpcExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringsRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringsResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeVpcPeeringsExecutor;
+import com.jdcloud.sdk.service.vpc.model.ModifyNetworkSecurityGroupRequest;
+import com.jdcloud.sdk.service.vpc.model.ModifyNetworkSecurityGroupResponse;
+import com.jdcloud.sdk.service.vpc.client.ModifyNetworkSecurityGroupExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkSecurityGroupsRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkSecurityGroupsResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeNetworkSecurityGroupsExecutor;
@@ -76,15 +112,12 @@ import com.jdcloud.sdk.service.vpc.client.DescribeNetworkSecurityGroupExecutor;
 import com.jdcloud.sdk.service.vpc.model.ModifyVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.ModifyVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.ModifyVpcPeeringExecutor;
-import com.jdcloud.sdk.service.vpc.model.AssociateElasticIpRequest;
-import com.jdcloud.sdk.service.vpc.model.AssociateElasticIpResponse;
-import com.jdcloud.sdk.service.vpc.client.AssociateElasticIpExecutor;
 import com.jdcloud.sdk.service.vpc.model.DeleteVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.DeleteVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.DeleteVpcPeeringExecutor;
-import com.jdcloud.sdk.service.vpc.model.DescribeElasticIpRequest;
-import com.jdcloud.sdk.service.vpc.model.DescribeElasticIpResponse;
-import com.jdcloud.sdk.service.vpc.client.DescribeElasticIpExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfacesRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfacesResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeNetworkInterfacesExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcsRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcsResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeVpcsExecutor;
@@ -96,7 +129,7 @@ public class VpcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.0";
+    public final static String ClientVersion = "1.0.1";
     public final static String DefaultEndpoint = "vpc.jdcloud-api.com";
     public final static String ServiceName = "vpc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -139,25 +172,14 @@ public class VpcClient extends JdcloudClient {
 
 
     /**
-     * 查询弹性ip列表
+     * 修改安全组规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeElasticIpsResponse describeElasticIps(DescribeElasticIpsRequest request) throws JdcloudSdkException {
-        return new DescribeElasticIpsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 给网卡分配secondaryIp接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AssignSecondaryIpsResponse assignSecondaryIps(AssignSecondaryIpsRequest request) throws JdcloudSdkException {
-        return new AssignSecondaryIpsExecutor().client(this).execute(request);
+    public ModifyNetworkSecurityGroupRulesResponse modifyNetworkSecurityGroupRules(ModifyNetworkSecurityGroupRulesRequest request) throws JdcloudSdkException {
+        return new ModifyNetworkSecurityGroupRulesExecutor().client(this).execute(request);
     }
 
     /**
@@ -183,6 +205,127 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 添加安全组规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddNetworkSecurityGroupRulesResponse addNetworkSecurityGroupRules(AddNetworkSecurityGroupRulesRequest request) throws JdcloudSdkException {
+        return new AddNetworkSecurityGroupRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给网卡绑定弹性Ip接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
+        return new AssociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 移除安全组规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RemoveNetworkSecurityGroupRulesResponse removeNetworkSecurityGroupRules(RemoveNetworkSecurityGroupRulesRequest request) throws JdcloudSdkException {
+        return new RemoveNetworkSecurityGroupRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * ElasticIp资源信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeElasticIpResponse describeElasticIp(DescribeElasticIpRequest request) throws JdcloudSdkException {
+        return new DescribeElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改弹性网卡接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyNetworkInterfaceResponse modifyNetworkInterface(ModifyNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new ModifyNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除弹性网卡接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteNetworkInterfaceResponse deleteNetworkInterface(DeleteNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new DeleteNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询弹性ip列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeElasticIpsResponse describeElasticIps(DescribeElasticIpsRequest request) throws JdcloudSdkException {
+        return new DescribeElasticIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给网卡分配secondaryIp接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssignSecondaryIpsResponse assignSecondaryIps(AssignSecondaryIpsRequest request) throws JdcloudSdkException {
+        return new AssignSecondaryIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建安全组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateNetworkSecurityGroupResponse createNetworkSecurityGroup(CreateNetworkSecurityGroupRequest request) throws JdcloudSdkException {
+        return new CreateNetworkSecurityGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除安全组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteNetworkSecurityGroupResponse deleteNetworkSecurityGroup(DeleteNetworkSecurityGroupRequest request) throws JdcloudSdkException {
+        return new DeleteNetworkSecurityGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建网卡接口，只能创建辅助网卡
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateNetworkInterfaceResponse createNetworkInterface(CreateNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new CreateNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除弹性Ip
      *
      * @param request
@@ -202,6 +345,17 @@ public class VpcClient extends JdcloudClient {
      */
     public CreateElasticIpsResponse createElasticIps(CreateElasticIpsRequest request) throws JdcloudSdkException {
         return new CreateElasticIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询弹性网卡信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNetworkInterfaceResponse describeNetworkInterface(DescribeNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new DescribeNetworkInterfaceExecutor().client(this).execute(request);
     }
 
     /**
@@ -235,6 +389,17 @@ public class VpcClient extends JdcloudClient {
      */
     public DescribeVpcPeeringsResponse describeVpcPeerings(DescribeVpcPeeringsRequest request) throws JdcloudSdkException {
         return new DescribeVpcPeeringsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改安全组属性
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyNetworkSecurityGroupResponse modifyNetworkSecurityGroup(ModifyNetworkSecurityGroupRequest request) throws JdcloudSdkException {
+        return new ModifyNetworkSecurityGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -304,17 +469,6 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 给网卡绑定弹性Ip接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
-        return new AssociateElasticIpExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除VpcPeering接口
      *
      * @param request
@@ -326,14 +480,14 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * ElasticIp资源信息详情
+     * 查询弹性网卡列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeElasticIpResponse describeElasticIp(DescribeElasticIpRequest request) throws JdcloudSdkException {
-        return new DescribeElasticIpExecutor().client(this).execute(request);
+    public DescribeNetworkInterfacesResponse describeNetworkInterfaces(DescribeNetworkInterfacesRequest request) throws JdcloudSdkException {
+        return new DescribeNetworkInterfacesExecutor().client(this).execute(request);
     }
 
     /**

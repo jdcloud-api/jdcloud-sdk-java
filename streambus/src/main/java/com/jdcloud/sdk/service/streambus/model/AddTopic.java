@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,17 +37,17 @@ public class AddTopic  implements java.io.Serializable {
     /**
      * topic
      */
-    private Object topic;
+    private Topic topic;
 
     /**
      * target
      */
-    private Object target;
+    private Target target;
 
     /**
      * 归档相关的具体参数
      */
-    private List<Object> parameterList;
+    private List<ParameterList> parameterList;
 
 
     /**
@@ -55,7 +55,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @return
      */
-    public Object getTopic() {
+    public Topic getTopic() {
         return topic;
     }
 
@@ -64,7 +64,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @param topic
      */
-    public void setTopic(Object topic) {
+    public void setTopic(Topic topic) {
         this.topic = topic;
     }
 
@@ -73,7 +73,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @return
      */
-    public Object getTarget() {
+    public Target getTarget() {
         return target;
     }
 
@@ -82,7 +82,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @param target
      */
-    public void setTarget(Object target) {
+    public void setTarget(Target target) {
         this.target = target;
     }
 
@@ -91,7 +91,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @return
      */
-    public List<Object> getParameterList() {
+    public List<ParameterList> getParameterList() {
         return parameterList;
     }
 
@@ -100,7 +100,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @param parameterList
      */
-    public void setParameterList(List<Object> parameterList) {
+    public void setParameterList(List<ParameterList> parameterList) {
         this.parameterList = parameterList;
     }
 
@@ -110,7 +110,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @param topic
      */
-    public AddTopic topic(Object topic) {
+    public AddTopic topic(Topic topic) {
         this.topic = topic;
         return this;
     }
@@ -120,7 +120,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @param target
      */
-    public AddTopic target(Object target) {
+    public AddTopic target(Target target) {
         this.target = target;
         return this;
     }
@@ -130,7 +130,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @param parameterList
      */
-    public AddTopic parameterList(List<Object> parameterList) {
+    public AddTopic parameterList(List<ParameterList> parameterList) {
         this.parameterList = parameterList;
         return this;
     }
@@ -141,7 +141,7 @@ public class AddTopic  implements java.io.Serializable {
      *
      * @param parameterList
      */
-    public void addParameterList(Object parameterList) {
+    public void addParameterList(ParameterList parameterList) {
         if (this.parameterList == null) {
             this.parameterList = new ArrayList<>();
         }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ public class DescribeVpcsRequest extends JdcloudRequest implements java.io.Seria
     private Integer pageNumber;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,500]
+     * 分页大小，默认为20，取值范围：[10,100]
      */
     private Integer pageSize;
 
@@ -81,7 +81,7 @@ vpcNames - vpc名称列表,支持多个
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,500]
+     * get 分页大小，默认为20，取值范围：[10,100]
      *
      * @return
      */
@@ -90,7 +90,7 @@ vpcNames - vpc名称列表,支持多个
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -150,7 +150,7 @@ vpcNames - vpc名称列表,支持多个
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */

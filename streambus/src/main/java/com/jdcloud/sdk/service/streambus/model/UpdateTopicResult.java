@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,37 +34,70 @@ public class UpdateTopicResult extends JdcloudResult implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * topic信息
+     * status
      */
-    private Object error;
+    private Boolean status;
+
+    /**
+     * 状态信息
+     */
+    private String message;
 
 
     /**
-     * get topic信息
+     * get status
      *
      * @return
      */
-    public Object getError() {
-        return error;
+    public Boolean getStatus() {
+        return status;
     }
 
     /**
-     * set topic信息
+     * set status
      *
-     * @param error
+     * @param status
      */
-    public void setError(Object error) {
-        this.error = error;
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
+    /**
+     * get 状态信息
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 状态信息
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 
     /**
-     * set topic信息
+     * set status
      *
-     * @param error
+     * @param status
      */
-    public UpdateTopicResult error(Object error) {
-        this.error = error;
+    public UpdateTopicResult status(Boolean status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 状态信息
+     *
+     * @param message
+     */
+    public UpdateTopicResult message(String message) {
+        this.message = message;
         return this;
     }
 

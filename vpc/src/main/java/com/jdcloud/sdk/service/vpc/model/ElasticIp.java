@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ public class ElasticIp  implements java.io.Serializable {
     private String elasticIpAddress;
 
     /**
-     * 弹性ip的限速（单位：Mb)
+     * 弹性ip的限速（单位：Mbps)
      */
     private Integer bandwidthMbps;
 
@@ -121,7 +121,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get 弹性ip的限速（单位：Mb)
+     * get 弹性ip的限速（单位：Mbps)
      *
      * @return
      */
@@ -130,7 +130,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性ip的限速（单位：Mb)
+     * set 弹性ip的限速（单位：Mbps)
      *
      * @param bandwidthMbps
      */
@@ -286,7 +286,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性ip的限速（单位：Mb)
+     * set 弹性ip的限速（单位：Mbps)
      *
      * @param bandwidthMbps
      */

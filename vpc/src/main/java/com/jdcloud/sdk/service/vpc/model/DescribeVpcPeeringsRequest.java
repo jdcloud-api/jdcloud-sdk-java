@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,15 +43,15 @@ public class DescribeVpcPeeringsRequest extends JdcloudRequest implements java.i
     private Integer pageNumber;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,500]
+     * 分页大小，默认为20，取值范围：[10,100]
      */
     private Integer pageSize;
 
     /**
      * vpcPeeringIds - vpcPeering ID，支持多个
 vpcPeeringNames - vpcPeering名称列表，支持多个
-vpcId	- vpcPeering本端Vpc Id
-remoteVpcId - vpcPeering对端Vpc Id
+vpcId	- vpcPeering本端Vpc Id，支持单个
+remoteVpcId - vpcPeering对端Vpc Id，支持单个
 
      */
     private List<Filter> filters;
@@ -83,7 +83,7 @@ remoteVpcId - vpcPeering对端Vpc Id
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,500]
+     * get 分页大小，默认为20，取值范围：[10,100]
      *
      * @return
      */
@@ -92,7 +92,7 @@ remoteVpcId - vpcPeering对端Vpc Id
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -103,8 +103,8 @@ remoteVpcId - vpcPeering对端Vpc Id
     /**
      * get vpcPeeringIds - vpcPeering ID，支持多个
 vpcPeeringNames - vpcPeering名称列表，支持多个
-vpcId	- vpcPeering本端Vpc Id
-remoteVpcId - vpcPeering对端Vpc Id
+vpcId	- vpcPeering本端Vpc Id，支持单个
+remoteVpcId - vpcPeering对端Vpc Id，支持单个
 
      *
      * @return
@@ -116,8 +116,8 @@ remoteVpcId - vpcPeering对端Vpc Id
     /**
      * set vpcPeeringIds - vpcPeering ID，支持多个
 vpcPeeringNames - vpcPeering名称列表，支持多个
-vpcId	- vpcPeering本端Vpc Id
-remoteVpcId - vpcPeering对端Vpc Id
+vpcId	- vpcPeering本端Vpc Id，支持单个
+remoteVpcId - vpcPeering对端Vpc Id，支持单个
 
      *
      * @param filters
@@ -156,7 +156,7 @@ remoteVpcId - vpcPeering对端Vpc Id
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -168,8 +168,8 @@ remoteVpcId - vpcPeering对端Vpc Id
     /**
      * set vpcPeeringIds - vpcPeering ID，支持多个
 vpcPeeringNames - vpcPeering名称列表，支持多个
-vpcId	- vpcPeering本端Vpc Id
-remoteVpcId - vpcPeering对端Vpc Id
+vpcId	- vpcPeering本端Vpc Id，支持单个
+remoteVpcId - vpcPeering对端Vpc Id，支持单个
 
      *
      * @param filters
@@ -193,8 +193,8 @@ remoteVpcId - vpcPeering对端Vpc Id
     /**
      * add item to vpcPeeringIds - vpcPeering ID，支持多个
 vpcPeeringNames - vpcPeering名称列表，支持多个
-vpcId	- vpcPeering本端Vpc Id
-remoteVpcId - vpcPeering对端Vpc Id
+vpcId	- vpcPeering本端Vpc Id，支持单个
+remoteVpcId - vpcPeering对端Vpc Id，支持单个
 
      *
      * @param filter

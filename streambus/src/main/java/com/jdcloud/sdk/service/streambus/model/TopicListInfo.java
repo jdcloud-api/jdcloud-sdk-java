@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ public class TopicListInfo  implements java.io.Serializable {
     /**
      * 创建topic的时间戳
      */
-    private Integer createdTime;
+    private String createdTime;
 
     /**
      * topic是否已删除（0：未删除，1：删除）
@@ -95,12 +95,17 @@ public class TopicListInfo  implements java.io.Serializable {
     /**
      * 更新topic的时间戳
      */
-    private Integer updatedTime;
+    private String updatedTime;
 
     /**
      * 用户的userPin
      */
     private String userPin;
+
+    /**
+     * dataSize
+     */
+    private String dataSize;
 
 
     /**
@@ -126,7 +131,7 @@ public class TopicListInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getCreatedTime() {
+    public String getCreatedTime() {
         return createdTime;
     }
 
@@ -135,7 +140,7 @@ public class TopicListInfo  implements java.io.Serializable {
      *
      * @param createdTime
      */
-    public void setCreatedTime(Integer createdTime) {
+    public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
 
@@ -324,7 +329,7 @@ public class TopicListInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getUpdatedTime() {
+    public String getUpdatedTime() {
         return updatedTime;
     }
 
@@ -333,7 +338,7 @@ public class TopicListInfo  implements java.io.Serializable {
      *
      * @param updatedTime
      */
-    public void setUpdatedTime(Integer updatedTime) {
+    public void setUpdatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
     }
 
@@ -355,6 +360,24 @@ public class TopicListInfo  implements java.io.Serializable {
         this.userPin = userPin;
     }
 
+    /**
+     * get dataSize
+     *
+     * @return
+     */
+    public String getDataSize() {
+        return dataSize;
+    }
+
+    /**
+     * set dataSize
+     *
+     * @param dataSize
+     */
+    public void setDataSize(String dataSize) {
+        this.dataSize = dataSize;
+    }
+
 
     /**
      * set 是否归档（0：未归档，1：已归档）
@@ -371,7 +394,7 @@ public class TopicListInfo  implements java.io.Serializable {
      *
      * @param createdTime
      */
-    public TopicListInfo createdTime(Integer createdTime) {
+    public TopicListInfo createdTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
     }
@@ -481,7 +504,7 @@ public class TopicListInfo  implements java.io.Serializable {
      *
      * @param updatedTime
      */
-    public TopicListInfo updatedTime(Integer updatedTime) {
+    public TopicListInfo updatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
         return this;
     }
@@ -493,6 +516,16 @@ public class TopicListInfo  implements java.io.Serializable {
      */
     public TopicListInfo userPin(String userPin) {
         this.userPin = userPin;
+        return this;
+    }
+
+    /**
+     * set dataSize
+     *
+     * @param dataSize
+     */
+    public TopicListInfo dataSize(String dataSize) {
+        this.dataSize = dataSize;
         return this;
     }
 

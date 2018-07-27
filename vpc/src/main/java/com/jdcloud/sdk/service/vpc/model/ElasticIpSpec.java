@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性公网IP的限速（单位：MB），取值范围为[1-200M]
+     * 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      * Required:true
      */
     @Required
@@ -55,7 +55,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
 
 
     /**
-     * get 弹性公网IP的限速（单位：MB），取值范围为[1-200M]
+     * get 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性公网IP的限速（单位：MB），取值范围为[1-200M]
+     * set 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      *
      * @param bandwidthMbps
      */
@@ -110,7 +110,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
 
 
     /**
-     * set 弹性公网IP的限速（单位：MB），取值范围为[1-200M]
+     * set 弹性公网IP的限速（单位：Mbps），取值范围为[1-200]
      *
      * @param bandwidthMbps
      */

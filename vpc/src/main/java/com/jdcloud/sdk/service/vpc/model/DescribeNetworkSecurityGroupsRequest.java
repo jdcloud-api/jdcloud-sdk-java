@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,14 +43,14 @@ public class DescribeNetworkSecurityGroupsRequest extends JdcloudRequest impleme
     private Integer pageNumber;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,500]
+     * 分页大小，默认为20，取值范围：[10,100]
      */
     private Integer pageSize;
 
     /**
      * networkSecurityGroupIds - 安全组ID列表，支持多个
 networkSecurityGroupNames - 安全组名称列表，支持多个
-vpcId	- 安全组所属vpc Id
+vpcId	- 安全组所属vpc Id，支持单个
 
      */
     private List<Filter> filters;
@@ -82,7 +82,7 @@ vpcId	- 安全组所属vpc Id
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,500]
+     * get 分页大小，默认为20，取值范围：[10,100]
      *
      * @return
      */
@@ -91,7 +91,7 @@ vpcId	- 安全组所属vpc Id
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -102,7 +102,7 @@ vpcId	- 安全组所属vpc Id
     /**
      * get networkSecurityGroupIds - 安全组ID列表，支持多个
 networkSecurityGroupNames - 安全组名称列表，支持多个
-vpcId	- 安全组所属vpc Id
+vpcId	- 安全组所属vpc Id，支持单个
 
      *
      * @return
@@ -114,7 +114,7 @@ vpcId	- 安全组所属vpc Id
     /**
      * set networkSecurityGroupIds - 安全组ID列表，支持多个
 networkSecurityGroupNames - 安全组名称列表，支持多个
-vpcId	- 安全组所属vpc Id
+vpcId	- 安全组所属vpc Id，支持单个
 
      *
      * @param filters
@@ -153,7 +153,7 @@ vpcId	- 安全组所属vpc Id
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -165,7 +165,7 @@ vpcId	- 安全组所属vpc Id
     /**
      * set networkSecurityGroupIds - 安全组ID列表，支持多个
 networkSecurityGroupNames - 安全组名称列表，支持多个
-vpcId	- 安全组所属vpc Id
+vpcId	- 安全组所属vpc Id，支持单个
 
      *
      * @param filters
@@ -189,7 +189,7 @@ vpcId	- 安全组所属vpc Id
     /**
      * add item to networkSecurityGroupIds - 安全组ID列表，支持多个
 networkSecurityGroupNames - 安全组名称列表，支持多个
-vpcId	- 安全组所属vpc Id
+vpcId	- 安全组所属vpc Id，支持单个
 
      *
      * @param filter

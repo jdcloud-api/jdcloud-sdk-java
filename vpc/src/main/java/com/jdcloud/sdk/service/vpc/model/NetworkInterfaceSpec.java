@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,7 +48,12 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     private String az;
 
     /**
-     * 网卡主私IP
+     * 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     */
+    private String networkInterfaceName;
+
+    /**
+     * 网卡主IP，如果不指定，会自动从子网中分配
      */
     private String primaryIpAddress;
 
@@ -63,17 +68,17 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     private Integer secondaryIpCount;
 
     /**
-     * 安全组ID列表
+     * 要绑定的安全组ID列表，最多指定5个安全组
      */
     private List<String> securityGroups;
 
     /**
-     * 源和目标IP地址校验，取值为0或者1，默认为1
+     * 源和目标IP地址校验，取值为0或者1,默认为1
      */
     private Integer sanityCheck;
 
     /**
-     * 描述
+     * 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
      */
     private String description;
 
@@ -115,7 +120,25 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 网卡主私IP
+     * get 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     *
+     * @return
+     */
+    public String getNetworkInterfaceName() {
+        return networkInterfaceName;
+    }
+
+    /**
+     * set 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     *
+     * @param networkInterfaceName
+     */
+    public void setNetworkInterfaceName(String networkInterfaceName) {
+        this.networkInterfaceName = networkInterfaceName;
+    }
+
+    /**
+     * get 网卡主IP，如果不指定，会自动从子网中分配
      *
      * @return
      */
@@ -124,7 +147,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 网卡主私IP
+     * set 网卡主IP，如果不指定，会自动从子网中分配
      *
      * @param primaryIpAddress
      */
@@ -169,7 +192,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 安全组ID列表
+     * get 要绑定的安全组ID列表，最多指定5个安全组
      *
      * @return
      */
@@ -178,7 +201,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组ID列表
+     * set 要绑定的安全组ID列表，最多指定5个安全组
      *
      * @param securityGroups
      */
@@ -187,7 +210,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 源和目标IP地址校验，取值为0或者1，默认为1
+     * get 源和目标IP地址校验，取值为0或者1,默认为1
      *
      * @return
      */
@@ -196,7 +219,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 源和目标IP地址校验，取值为0或者1，默认为1
+     * set 源和目标IP地址校验，取值为0或者1,默认为1
      *
      * @param sanityCheck
      */
@@ -205,7 +228,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 描述
+     * get 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @return
      */
@@ -214,7 +237,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 描述
+     * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @param description
      */
@@ -244,7 +267,17 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 网卡主私IP
+     * set 网卡名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
+     *
+     * @param networkInterfaceName
+     */
+    public NetworkInterfaceSpec networkInterfaceName(String networkInterfaceName) {
+        this.networkInterfaceName = networkInterfaceName;
+        return this;
+    }
+
+    /**
+     * set 网卡主IP，如果不指定，会自动从子网中分配
      *
      * @param primaryIpAddress
      */
@@ -274,7 +307,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组ID列表
+     * set 要绑定的安全组ID列表，最多指定5个安全组
      *
      * @param securityGroups
      */
@@ -284,7 +317,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 源和目标IP地址校验，取值为0或者1，默认为1
+     * set 源和目标IP地址校验，取值为0或者1,默认为1
      *
      * @param sanityCheck
      */
@@ -294,7 +327,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 描述
+     * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
      *
      * @param description
      */
@@ -317,7 +350,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 安全组ID列表
+     * add item to 要绑定的安全组ID列表，最多指定5个安全组
      *
      * @param securityGroup
      */

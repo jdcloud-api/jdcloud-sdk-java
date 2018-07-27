@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -53,7 +53,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     private String addressPrefix;
 
     /**
-     * 匹配地址协议版本。4：IPv4；6：IPv6
+     * 匹配地址协议版本。4：IPv4
      */
     private Number ipVersion;
 
@@ -71,6 +71,11 @@ public class SecurityGroupRule  implements java.io.Serializable {
      * 安全组规则创建时间
      */
     private String createdTime;
+
+    /**
+     * 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     */
+    private String description;
 
 
     /**
@@ -146,7 +151,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     }
 
     /**
-     * get 匹配地址协议版本。4：IPv4；6：IPv6
+     * get 匹配地址协议版本。4：IPv4
      *
      * @return
      */
@@ -155,7 +160,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配地址协议版本。4：IPv4；6：IPv6
+     * set 匹配地址协议版本。4：IPv4
      *
      * @param ipVersion
      */
@@ -217,6 +222,24 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+    /**
+     * get 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 
     /**
      * set 安全组规则ID
@@ -259,7 +282,7 @@ public class SecurityGroupRule  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配地址协议版本。4：IPv4；6：IPv6
+     * set 匹配地址协议版本。4：IPv4
      *
      * @param ipVersion
      */
@@ -295,6 +318,16 @@ public class SecurityGroupRule  implements java.io.Serializable {
      */
     public SecurityGroupRule createdTime(String createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+    /**
+     * set 描述,​ 允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @param description
+     */
+    public SecurityGroupRule description(String description) {
+        this.description = description;
         return this;
     }
 

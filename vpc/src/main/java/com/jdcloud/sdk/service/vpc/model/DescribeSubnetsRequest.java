@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,16 +43,16 @@ public class DescribeSubnetsRequest extends JdcloudRequest implements java.io.Se
     private Integer pageNumber;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,500]
+     * 分页大小，默认为20，取值范围：[10,100]
      */
     private Integer pageSize;
 
     /**
      * subnetIds - subnet ID列表，支持多个
 subnetNames - subnet名称列表，支持多个
-routeTableId	- 子网关联路由表Id
-aclId - 子网关联acl Id
-vpcId - 子网所属VPC Id
+routeTableId	- 子网关联路由表Id，支持单个
+aclId - 子网关联acl Id，支持单个
+vpcId - 子网所属VPC Id，支持单个
 
      */
     private List<Filter> filters;
@@ -84,7 +84,7 @@ vpcId - 子网所属VPC Id
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,500]
+     * get 分页大小，默认为20，取值范围：[10,100]
      *
      * @return
      */
@@ -93,7 +93,7 @@ vpcId - 子网所属VPC Id
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -104,9 +104,9 @@ vpcId - 子网所属VPC Id
     /**
      * get subnetIds - subnet ID列表，支持多个
 subnetNames - subnet名称列表，支持多个
-routeTableId	- 子网关联路由表Id
-aclId - 子网关联acl Id
-vpcId - 子网所属VPC Id
+routeTableId	- 子网关联路由表Id，支持单个
+aclId - 子网关联acl Id，支持单个
+vpcId - 子网所属VPC Id，支持单个
 
      *
      * @return
@@ -118,9 +118,9 @@ vpcId - 子网所属VPC Id
     /**
      * set subnetIds - subnet ID列表，支持多个
 subnetNames - subnet名称列表，支持多个
-routeTableId	- 子网关联路由表Id
-aclId - 子网关联acl Id
-vpcId - 子网所属VPC Id
+routeTableId	- 子网关联路由表Id，支持单个
+aclId - 子网关联acl Id，支持单个
+vpcId - 子网所属VPC Id，支持单个
 
      *
      * @param filters
@@ -159,7 +159,7 @@ vpcId - 子网所属VPC Id
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,500]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -171,9 +171,9 @@ vpcId - 子网所属VPC Id
     /**
      * set subnetIds - subnet ID列表，支持多个
 subnetNames - subnet名称列表，支持多个
-routeTableId	- 子网关联路由表Id
-aclId - 子网关联acl Id
-vpcId - 子网所属VPC Id
+routeTableId	- 子网关联路由表Id，支持单个
+aclId - 子网关联acl Id，支持单个
+vpcId - 子网所属VPC Id，支持单个
 
      *
      * @param filters
@@ -197,9 +197,9 @@ vpcId - 子网所属VPC Id
     /**
      * add item to subnetIds - subnet ID列表，支持多个
 subnetNames - subnet名称列表，支持多个
-routeTableId	- 子网关联路由表Id
-aclId - 子网关联acl Id
-vpcId - 子网所属VPC Id
+routeTableId	- 子网关联路由表Id，支持单个
+aclId - 子网关联acl Id，支持单个
+vpcId - 子网所属VPC Id，支持单个
 
      *
      * @param filter
