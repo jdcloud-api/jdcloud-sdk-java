@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ public class ImportFile  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 文件名称
+     * 上传的备份文件名称
      */
     private String name;
 
@@ -43,12 +43,12 @@ public class ImportFile  implements java.io.Serializable {
     private String sharedFileGid;
 
     /**
-     * 文件大小
+     * 文件大小，单位Byte
      */
     private Integer sizeByte;
 
     /**
-     * 文件上传完成时间
+     * 文件上传完成时间，格式为：YYYY-MM-DD HH:mm:ss
      */
     private String uploadTime;
 
@@ -59,7 +59,7 @@ public class ImportFile  implements java.io.Serializable {
 
 
     /**
-     * get 文件名称
+     * get 上传的备份文件名称
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 文件名称
+     * set 上传的备份文件名称
      *
      * @param name
      */
@@ -95,7 +95,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * get 文件大小
+     * get 文件大小，单位Byte
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 文件大小
+     * set 文件大小，单位Byte
      *
      * @param sizeByte
      */
@@ -113,7 +113,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * get 文件上传完成时间
+     * get 文件上传完成时间，格式为：YYYY-MM-DD HH:mm:ss
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 文件上传完成时间
+     * set 文件上传完成时间，格式为：YYYY-MM-DD HH:mm:ss
      *
      * @param uploadTime
      */
@@ -150,7 +150,7 @@ public class ImportFile  implements java.io.Serializable {
 
 
     /**
-     * set 文件名称
+     * set 上传的备份文件名称
      *
      * @param name
      */
@@ -170,7 +170,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 文件大小
+     * set 文件大小，单位Byte
      *
      * @param sizeByte
      */
@@ -180,7 +180,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 文件上传完成时间
+     * set 文件上传完成时间，格式为：YYYY-MM-DD HH:mm:ss
      *
      * @param uploadTime
      */

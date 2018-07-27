@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.ImportFile;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取单库上云文件列表
+ * 获取单库上云文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class DescribeImportFilesResult extends JdcloudResult implements java.io.Serializable {
 

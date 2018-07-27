@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,25 +27,25 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取备份下载链接
+ * 获取备份下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class DescribeBackupDownloadURLResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * publicURL
+     * 公网下载链接，若当前不可下载，则为空串
      */
     private String publicURL;
 
     /**
-     * internalURL
+     * 内网下载链接，若当前不可下载，则为空串
      */
     private String internalURL;
 
 
     /**
-     * get publicURL
+     * get 公网下载链接，若当前不可下载，则为空串
      *
      * @return
      */
@@ -54,7 +54,7 @@ public class DescribeBackupDownloadURLResult extends JdcloudResult implements ja
     }
 
     /**
-     * set publicURL
+     * set 公网下载链接，若当前不可下载，则为空串
      *
      * @param publicURL
      */
@@ -63,7 +63,7 @@ public class DescribeBackupDownloadURLResult extends JdcloudResult implements ja
     }
 
     /**
-     * get internalURL
+     * get 内网下载链接，若当前不可下载，则为空串
      *
      * @return
      */
@@ -72,7 +72,7 @@ public class DescribeBackupDownloadURLResult extends JdcloudResult implements ja
     }
 
     /**
-     * set internalURL
+     * set 内网下载链接，若当前不可下载，则为空串
      *
      * @param internalURL
      */
@@ -82,7 +82,7 @@ public class DescribeBackupDownloadURLResult extends JdcloudResult implements ja
 
 
     /**
-     * set publicURL
+     * set 公网下载链接，若当前不可下载，则为空串
      *
      * @param publicURL
      */
@@ -92,7 +92,7 @@ public class DescribeBackupDownloadURLResult extends JdcloudResult implements ja
     }
 
     /**
-     * set internalURL
+     * set 内网下载链接，若当前不可下载，则为空串
      *
      * @param internalURL
      */

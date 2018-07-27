@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取备份下载链接
+ * 获取备份下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * MySQL：无需此参数；SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数
+     * SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数&lt;/br&gt;MySQL：无需此参数；
      */
     private String fileName;
 
@@ -60,7 +60,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
 
 
     /**
-     * get MySQL：无需此参数；SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数
+     * get SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数&lt;/br&gt;MySQL：无需此参数；
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set MySQL：无需此参数；SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数
+     * set SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数&lt;/br&gt;MySQL：无需此参数；
      *
      * @param fileName
      */
@@ -133,7 +133,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
 
 
     /**
-     * set MySQL：无需此参数；SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数
+     * set SQL Server：指定该备份中需要获取下载链接的文件名称，SQL Server必须输入该参数&lt;/br&gt;MySQL：无需此参数；
      *
      * @param fileName
      */

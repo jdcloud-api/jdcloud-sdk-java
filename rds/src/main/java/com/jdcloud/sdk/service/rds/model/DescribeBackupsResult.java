@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.Backup;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取备份信息
+ * 获取备份信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class DescribeBackupsResult extends JdcloudResult implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     private List<Backup> backup;
 
     /**
-     * totalCount
+     * 总记录数
      */
     private Integer totalCount;
 
@@ -66,7 +66,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get totalCount
+     * get 总记录数
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set totalCount
+     * set 总记录数
      *
      * @param totalCount
      */
@@ -95,7 +95,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set totalCount
+     * set 总记录数
      *
      * @param totalCount
      */
