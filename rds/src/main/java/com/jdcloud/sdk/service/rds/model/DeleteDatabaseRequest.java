@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 库管理
- * 库管理相关接口
+ * 数据库管理
+ * 数据库管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除数据库
+ * 删除数据库 [MFA enabled]
  */
 public class DeleteDatabaseRequest extends JdcloudRequest implements java.io.Serializable {
 

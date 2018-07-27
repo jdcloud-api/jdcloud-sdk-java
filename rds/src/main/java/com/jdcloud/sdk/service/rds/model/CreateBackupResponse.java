@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建备份
+ * 创建备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class CreateBackupResponse extends JdcloudResponse<CreateBackupResult> implements java.io.Serializable {
 

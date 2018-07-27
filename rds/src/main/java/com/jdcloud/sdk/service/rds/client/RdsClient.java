@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,12 +31,36 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.rds.model.CreateAccountRequest;
-import com.jdcloud.sdk.service.rds.model.CreateAccountResponse;
-import com.jdcloud.sdk.service.rds.client.CreateAccountExecutor;
-import com.jdcloud.sdk.service.rds.model.GrantPrivilegeRequest;
-import com.jdcloud.sdk.service.rds.model.GrantPrivilegeResponse;
-import com.jdcloud.sdk.service.rds.client.GrantPrivilegeExecutor;
+import com.jdcloud.sdk.service.rds.model.GetAuditDownloadURLRequest;
+import com.jdcloud.sdk.service.rds.model.GetAuditDownloadURLResponse;
+import com.jdcloud.sdk.service.rds.client.GetAuditDownloadURLExecutor;
+import com.jdcloud.sdk.service.rds.model.FailoverInstanceRequest;
+import com.jdcloud.sdk.service.rds.model.FailoverInstanceResponse;
+import com.jdcloud.sdk.service.rds.client.FailoverInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.DeleteInstanceRequest;
+import com.jdcloud.sdk.service.rds.model.DeleteInstanceResponse;
+import com.jdcloud.sdk.service.rds.client.DeleteInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.GetUploadKeyRequest;
+import com.jdcloud.sdk.service.rds.model.GetUploadKeyResponse;
+import com.jdcloud.sdk.service.rds.client.GetUploadKeyExecutor;
+import com.jdcloud.sdk.service.rds.model.DeleteAuditRequest;
+import com.jdcloud.sdk.service.rds.model.DeleteAuditResponse;
+import com.jdcloud.sdk.service.rds.client.DeleteAuditExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateAuditRequest;
+import com.jdcloud.sdk.service.rds.model.CreateAuditResponse;
+import com.jdcloud.sdk.service.rds.client.CreateAuditExecutor;
+import com.jdcloud.sdk.service.rds.model.DeleteBackupRequest;
+import com.jdcloud.sdk.service.rds.model.DeleteBackupResponse;
+import com.jdcloud.sdk.service.rds.client.DeleteBackupExecutor;
+import com.jdcloud.sdk.service.rds.model.SetInstanceNameRequest;
+import com.jdcloud.sdk.service.rds.model.SetInstanceNameResponse;
+import com.jdcloud.sdk.service.rds.client.SetInstanceNameExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeBackupDownloadURLRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeBackupDownloadURLResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeBackupDownloadURLExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeInstancesRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeInstancesResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeInstancesExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseRequest;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseResponse;
 import com.jdcloud.sdk.service.rds.client.CreateDatabaseExecutor;
@@ -46,27 +70,72 @@ import com.jdcloud.sdk.service.rds.client.DescribeImportFilesExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateBackupRequest;
 import com.jdcloud.sdk.service.rds.model.CreateBackupResponse;
 import com.jdcloud.sdk.service.rds.client.CreateBackupExecutor;
-import com.jdcloud.sdk.service.rds.model.DescribeBackupsRequest;
-import com.jdcloud.sdk.service.rds.model.DescribeBackupsResponse;
-import com.jdcloud.sdk.service.rds.client.DescribeBackupsExecutor;
-import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromFileRequest;
-import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromFileResponse;
-import com.jdcloud.sdk.service.rds.client.RestoreDatabaseFromFileExecutor;
-import com.jdcloud.sdk.service.rds.model.DeleteDatabaseRequest;
-import com.jdcloud.sdk.service.rds.model.DeleteDatabaseResponse;
-import com.jdcloud.sdk.service.rds.client.DeleteDatabaseExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeQueryPerformanceRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeQueryPerformanceResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeQueryPerformanceExecutor;
+import com.jdcloud.sdk.service.rds.model.GetAuditFilesRequest;
+import com.jdcloud.sdk.service.rds.model.GetAuditFilesResponse;
+import com.jdcloud.sdk.service.rds.client.GetAuditFilesExecutor;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordRequest;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordResponse;
 import com.jdcloud.sdk.service.rds.client.ResetPasswordExecutor;
+import com.jdcloud.sdk.service.rds.model.DeleteDatabaseRequest;
+import com.jdcloud.sdk.service.rds.model.DeleteDatabaseResponse;
+import com.jdcloud.sdk.service.rds.client.DeleteDatabaseExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeErrorLogsExecutor;
+import com.jdcloud.sdk.service.rds.model.GrantPrivilegeRequest;
+import com.jdcloud.sdk.service.rds.model.GrantPrivilegeResponse;
+import com.jdcloud.sdk.service.rds.client.GrantPrivilegeExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeDatabasesRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeDatabasesResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeDatabasesExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeAuditRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeAuditResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeAuditExecutor;
+import com.jdcloud.sdk.service.rds.model.GetAuditOptionsRequest;
+import com.jdcloud.sdk.service.rds.model.GetAuditOptionsResponse;
+import com.jdcloud.sdk.service.rds.client.GetAuditOptionsExecutor;
+import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromFileRequest;
+import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromFileResponse;
+import com.jdcloud.sdk.service.rds.client.RestoreDatabaseFromFileExecutor;
+import com.jdcloud.sdk.service.rds.model.SetImportFileSharedRequest;
+import com.jdcloud.sdk.service.rds.model.SetImportFileSharedResponse;
+import com.jdcloud.sdk.service.rds.client.SetImportFileSharedExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeIndexPerformanceRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeIndexPerformanceResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeIndexPerformanceExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteAccountRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteAccountResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteAccountExecutor;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromBackupRequest;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromBackupResponse;
 import com.jdcloud.sdk.service.rds.client.RestoreDatabaseFromBackupExecutor;
-import com.jdcloud.sdk.service.rds.model.DescribeBackupDownloadURLRequest;
-import com.jdcloud.sdk.service.rds.model.DescribeBackupDownloadURLResponse;
-import com.jdcloud.sdk.service.rds.client.DescribeBackupDownloadURLExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeAccountsRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeAccountsResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeAccountsExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateAccountRequest;
+import com.jdcloud.sdk.service.rds.model.CreateAccountResponse;
+import com.jdcloud.sdk.service.rds.client.CreateAccountExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateInstanceRequest;
+import com.jdcloud.sdk.service.rds.model.CreateInstanceResponse;
+import com.jdcloud.sdk.service.rds.client.CreateInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeBackupsRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeBackupsResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeBackupsExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyAuditRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyAuditResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyAuditExecutor;
+import com.jdcloud.sdk.service.rds.model.RebootInstanceRequest;
+import com.jdcloud.sdk.service.rds.model.RebootInstanceResponse;
+import com.jdcloud.sdk.service.rds.client.RebootInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeInstanceAttributesRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeInstanceAttributesResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeInstanceAttributesExecutor;
+import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromOSSRequest;
+import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromOSSResponse;
+import com.jdcloud.sdk.service.rds.client.RestoreDatabaseFromOSSExecutor;
 
 /**
  * rdsClient
@@ -75,7 +144,7 @@ public class RdsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.0";
+    public final static String ClientVersion = "1.0.1";
     public final static String DefaultEndpoint = "rds.jdcloud-api.com";
     public final static String ServiceName = "rds";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -118,29 +187,117 @@ public class RdsClient extends JdcloudClient {
 
 
     /**
-     * 创建数据库账户
+     * 获取某个审计文件的下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateAccountResponse createAccount(CreateAccountRequest request) throws JdcloudSdkException {
-        return new CreateAccountExecutor().client(this).execute(request);
+    public GetAuditDownloadURLResponse getAuditDownloadURL(GetAuditDownloadURLRequest request) throws JdcloudSdkException {
+        return new GetAuditDownloadURLExecutor().client(this).execute(request);
     }
 
     /**
-     * 数据库账号授权
+     * RDS实例主备切换&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GrantPrivilegeResponse grantPrivilege(GrantPrivilegeRequest request) throws JdcloudSdkException {
-        return new GrantPrivilegeExecutor().client(this).execute(request);
+    public FailoverInstanceResponse failoverInstance(FailoverInstanceRequest request) throws JdcloudSdkException {
+        return new FailoverInstanceExecutor().client(this).execute(request);
     }
 
     /**
-     * 创建数据库
+     * 删除数据库集群实例及Mysql只读实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws JdcloudSdkException {
+        return new DeleteInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取上传导入文件的需要的Key&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetUploadKeyResponse getUploadKey(GetUploadKeyRequest request) throws JdcloudSdkException {
+        return new GetUploadKeyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 清除/关闭 数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAuditResponse deleteAudit(DeleteAuditRequest request) throws JdcloudSdkException {
+        return new DeleteAuditExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAuditResponse createAudit(CreateAuditRequest request) throws JdcloudSdkException {
+        return new CreateAuditExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteBackupResponse deleteBackup(DeleteBackupRequest request) throws JdcloudSdkException {
+        return new DeleteBackupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改RDS实例名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetInstanceNameResponse setInstanceName(SetInstanceNameRequest request) throws JdcloudSdkException {
+        return new SetInstanceNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取备份下载链接&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackupDownloadURLResponse describeBackupDownloadURL(DescribeBackupDownloadURLRequest request) throws JdcloudSdkException {
+        return new DescribeBackupDownloadURLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询RDS实例列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstancesResponse describeInstances(DescribeInstancesRequest request) throws JdcloudSdkException {
+        return new DescribeInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
@@ -151,7 +308,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 获取单库上云文件列表
+     * 获取单库上云文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
@@ -162,7 +319,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 创建备份
+     * 创建备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
@@ -173,40 +330,29 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 获取备份信息
+     * 查询性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeBackupsResponse describeBackups(DescribeBackupsRequest request) throws JdcloudSdkException {
-        return new DescribeBackupsExecutor().client(this).execute(request);
+    public DescribeQueryPerformanceResponse describeQueryPerformance(DescribeQueryPerformanceRequest request) throws JdcloudSdkException {
+        return new DescribeQueryPerformanceExecutor().client(this).execute(request);
     }
 
     /**
-     * 从用户上传的备份文件中恢复SQL Server数据库
+     * 查看审计文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public RestoreDatabaseFromFileResponse restoreDatabaseFromFile(RestoreDatabaseFromFileRequest request) throws JdcloudSdkException {
-        return new RestoreDatabaseFromFileExecutor().client(this).execute(request);
+    public GetAuditFilesResponse getAuditFiles(GetAuditFilesRequest request) throws JdcloudSdkException {
+        return new GetAuditFilesExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除数据库
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws JdcloudSdkException {
-        return new DeleteDatabaseExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 数据库账号重置密码
+     * 数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
@@ -217,7 +363,106 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 删除数据库账户
+     * 删除数据库 [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws JdcloudSdkException {
+        return new DeleteDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取SQL Server 错误日志及下载信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeErrorLogsResponse describeErrorLogs(DescribeErrorLogsRequest request) throws JdcloudSdkException {
+        return new DescribeErrorLogsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 数据库账号授权&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GrantPrivilegeResponse grantPrivilege(GrantPrivilegeRequest request) throws JdcloudSdkException {
+        return new GrantPrivilegeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDatabasesResponse describeDatabases(DescribeDatabasesRequest request) throws JdcloudSdkException {
+        return new DescribeDatabasesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看开启的审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAuditResponse describeAudit(DescribeAuditRequest request) throws JdcloudSdkException {
+        return new DescribeAuditExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取审计所有选项及推荐的选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetAuditOptionsResponse getAuditOptions(GetAuditOptionsRequest request) throws JdcloudSdkException {
+        return new GetAuditOptionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 从用户上传的备份文件中恢复SQL Server数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestoreDatabaseFromFileResponse restoreDatabaseFromFile(RestoreDatabaseFromFileRequest request) throws JdcloudSdkException {
+        return new RestoreDatabaseFromFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置上传文件是否共享给该用户的其他实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetImportFileSharedResponse setImportFileShared(SetImportFileSharedRequest request) throws JdcloudSdkException {
+        return new SetImportFileSharedExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 索引性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIndexPerformanceResponse describeIndexPerformance(DescribeIndexPerformanceRequest request) throws JdcloudSdkException {
+        return new DescribeIndexPerformanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
@@ -228,7 +473,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 从云数据库SQL Server备份中恢复单个数据库
+     * 从云数据库SQL Server备份中恢复单个数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
@@ -239,14 +484,91 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 获取备份下载链接
+     * 查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeBackupDownloadURLResponse describeBackupDownloadURL(DescribeBackupDownloadURLRequest request) throws JdcloudSdkException {
-        return new DescribeBackupDownloadURLExecutor().client(this).execute(request);
+    public DescribeAccountsResponse describeAccounts(DescribeAccountsRequest request) throws JdcloudSdkException {
+        return new DescribeAccountsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAccountResponse createAccount(CreateAccountRequest request) throws JdcloudSdkException {
+        return new CreateAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws JdcloudSdkException {
+        return new CreateInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取备份信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackupsResponse describeBackups(DescribeBackupsRequest request) throws JdcloudSdkException {
+        return new DescribeBackupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改当前审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyAuditResponse modifyAudit(ModifyAuditRequest request) throws JdcloudSdkException {
+        return new ModifyAuditExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RebootInstanceResponse rebootInstance(RebootInstanceRequest request) throws JdcloudSdkException {
+        return new RebootInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询RDS实例详细信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceAttributesResponse describeInstanceAttributes(DescribeInstanceAttributesRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceAttributesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 从OSS恢复SQL Server数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestoreDatabaseFromOSSResponse restoreDatabaseFromOSS(RestoreDatabaseFromOSSRequest request) throws JdcloudSdkException {
+        return new RestoreDatabaseFromOSSExecutor().client(this).execute(request);
     }
 
 

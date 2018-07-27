@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,13 +27,46 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建备份
+ * 创建备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class CreateBackupResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 备份Id
+     */
+    private String backupId;
 
+
+    /**
+     * get 备份Id
+     *
+     * @return
+     */
+    public String getBackupId() {
+        return backupId;
+    }
+
+    /**
+     * set 备份Id
+     *
+     * @param backupId
+     */
+    public void setBackupId(String backupId) {
+        this.backupId = backupId;
+    }
+
+
+    /**
+     * set 备份Id
+     *
+     * @param backupId
+     */
+    public CreateBackupResult backupId(String backupId) {
+        this.backupId = backupId;
+        return this;
+    }
 
 
 }

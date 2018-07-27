@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     private String dbName;
 
     /**
-     * 对数据库具有的权限,ro:只读  rw:读写
+     * 对数据库具有的权限&lt;/br&gt;ro:只读&lt;/br&gt;rw:读写
      */
     private String privilege;
 
@@ -62,7 +62,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     }
 
     /**
-     * get 对数据库具有的权限,ro:只读  rw:读写
+     * get 对数据库具有的权限&lt;/br&gt;ro:只读&lt;/br&gt;rw:读写
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     }
 
     /**
-     * set 对数据库具有的权限,ro:只读  rw:读写
+     * set 对数据库具有的权限&lt;/br&gt;ro:只读&lt;/br&gt;rw:读写
      *
      * @param privilege
      */
@@ -91,7 +91,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     }
 
     /**
-     * set 对数据库具有的权限,ro:只读  rw:读写
+     * set 对数据库具有的权限&lt;/br&gt;ro:只读&lt;/br&gt;rw:读写
      *
      * @param privilege
      */

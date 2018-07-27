@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取备份信息
+ * 获取备份信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,27 +42,27 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     private String instanceId;
 
     /**
-     * 查询备份类型，0为手动备份，1为自动备份，不传表示全部. - 测试参数，后续可能被其他参数取代
+     * 查询备份类型，0为手动备份，1为自动备份，不传表示全部. &lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      */
     private Integer auto;
 
     /**
-     * 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份- 测试参数，后续可能被其他参数取代
+     * 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      */
     private String backupTypeFilter;
 
     /**
-     * 返回dbName等于指定值的备份列表，不传或为空返回全部- 测试参数，后续可能被其他参数取代
+     * 返回dbName等于指定值的备份列表，不传或为空返回全部&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      */
     private String dbNameFilter;
 
     /**
-     * 返回备份开始时间大于该时间的备份列表- 测试参数，后续可能被其他参数取代
+     * 返回备份开始时间大于该时间的备份列表，格式为：YYYY-MM-DD HH:mm:ss&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      */
     private String backupTimeRangeStartFilter;
 
     /**
-     * 返回备份开始时间小于等于该时间的备份列表- 测试参数，后续可能被其他参数取代
+     * 返回备份开始时间小于等于该时间的备份列表，格式为：YYYY-MM-DD HH:mm:ss&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      */
     private String backupTimeRangeEndFilter;
 
@@ -74,7 +74,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，取值范围：10/20/30/50/100
+     * 每页显示的数据条数，默认为10，取值范围：[1,100]，只能为10的倍数
      * Required:true
      */
     @Required
@@ -107,7 +107,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 查询备份类型，0为手动备份，1为自动备份，不传表示全部. - 测试参数，后续可能被其他参数取代
+     * get 查询备份类型，0为手动备份，1为自动备份，不传表示全部. &lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 查询备份类型，0为手动备份，1为自动备份，不传表示全部. - 测试参数，后续可能被其他参数取代
+     * set 查询备份类型，0为手动备份，1为自动备份，不传表示全部. &lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param auto
      */
@@ -125,7 +125,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份- 测试参数，后续可能被其他参数取代
+     * get 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份- 测试参数，后续可能被其他参数取代
+     * set 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param backupTypeFilter
      */
@@ -143,7 +143,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 返回dbName等于指定值的备份列表，不传或为空返回全部- 测试参数，后续可能被其他参数取代
+     * get 返回dbName等于指定值的备份列表，不传或为空返回全部&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @return
      */
@@ -152,7 +152,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 返回dbName等于指定值的备份列表，不传或为空返回全部- 测试参数，后续可能被其他参数取代
+     * set 返回dbName等于指定值的备份列表，不传或为空返回全部&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param dbNameFilter
      */
@@ -161,7 +161,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 返回备份开始时间大于该时间的备份列表- 测试参数，后续可能被其他参数取代
+     * get 返回备份开始时间大于该时间的备份列表，格式为：YYYY-MM-DD HH:mm:ss&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @return
      */
@@ -170,7 +170,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 返回备份开始时间大于该时间的备份列表- 测试参数，后续可能被其他参数取代
+     * set 返回备份开始时间大于该时间的备份列表，格式为：YYYY-MM-DD HH:mm:ss&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param backupTimeRangeStartFilter
      */
@@ -179,7 +179,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 返回备份开始时间小于等于该时间的备份列表- 测试参数，后续可能被其他参数取代
+     * get 返回备份开始时间小于等于该时间的备份列表，格式为：YYYY-MM-DD HH:mm:ss&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @return
      */
@@ -188,7 +188,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 返回备份开始时间小于等于该时间的备份列表- 测试参数，后续可能被其他参数取代
+     * set 返回备份开始时间小于等于该时间的备份列表，格式为：YYYY-MM-DD HH:mm:ss&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param backupTimeRangeEndFilter
      */
@@ -215,7 +215,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 每页显示的数据条数，取值范围：10/20/30/50/100
+     * get 每页显示的数据条数，默认为10，取值范围：[1,100]，只能为10的倍数
      *
      * @return
      */
@@ -224,7 +224,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 每页显示的数据条数，取值范围：10/20/30/50/100
+     * set 每页显示的数据条数，默认为10，取值范围：[1,100]，只能为10的倍数
      *
      * @param pageSize
      */
@@ -262,7 +262,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 查询备份类型，0为手动备份，1为自动备份，不传表示全部. - 测试参数，后续可能被其他参数取代
+     * set 查询备份类型，0为手动备份，1为自动备份，不传表示全部. &lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param auto
      */
@@ -272,7 +272,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份- 测试参数，后续可能被其他参数取代
+     * set 返回backupType等于指定值的备份列表。full为全量备份，diff为增量备份&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param backupTypeFilter
      */
@@ -282,7 +282,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 返回dbName等于指定值的备份列表，不传或为空返回全部- 测试参数，后续可能被其他参数取代
+     * set 返回dbName等于指定值的备份列表，不传或为空返回全部&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param dbNameFilter
      */
@@ -292,7 +292,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 返回备份开始时间大于该时间的备份列表- 测试参数，后续可能被其他参数取代
+     * set 返回备份开始时间大于该时间的备份列表，格式为：YYYY-MM-DD HH:mm:ss&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param backupTimeRangeStartFilter
      */
@@ -302,7 +302,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 返回备份开始时间小于等于该时间的备份列表- 测试参数，后续可能被其他参数取代
+     * set 返回备份开始时间小于等于该时间的备份列表，格式为：YYYY-MM-DD HH:mm:ss&lt;/br&gt;&lt;strong&gt;- 测试参数，后续可能被其他参数取代&lt;/strong&gt;
      *
      * @param backupTimeRangeEndFilter
      */
@@ -322,7 +322,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 每页显示的数据条数，取值范围：10/20/30/50/100
+     * set 每页显示的数据条数，默认为10，取值范围：[1,100]，只能为10的倍数
      *
      * @param pageSize
      */

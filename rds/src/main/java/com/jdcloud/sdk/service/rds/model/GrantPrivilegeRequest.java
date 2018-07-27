@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.rds.model.AccountPrivilege;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 数据库账号授权
+ * 数据库账号授权&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,18 +35,18 @@ public class BackupSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 备份名称，缺省为系统分配一个随机名称
+     * 备份名称，缺省系统将分配一个随机名称
      */
     private String backupName;
 
     /**
-     * dbNames
+     * 需要备份的数据库名称列表。如不填，则备份整个实例。&lt;/br&gt;SQL Server支持该参数&lt;/br&gt;&lt;strong&gt;MySQL不支持该参数&lt;/strong&gt;
      */
     private List<String> dbNames;
 
 
     /**
-     * get 备份名称，缺省为系统分配一个随机名称
+     * get 备份名称，缺省系统将分配一个随机名称
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class BackupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 备份名称，缺省为系统分配一个随机名称
+     * set 备份名称，缺省系统将分配一个随机名称
      *
      * @param backupName
      */
@@ -64,7 +64,7 @@ public class BackupSpec  implements java.io.Serializable {
     }
 
     /**
-     * get dbNames
+     * get 需要备份的数据库名称列表。如不填，则备份整个实例。&lt;/br&gt;SQL Server支持该参数&lt;/br&gt;&lt;strong&gt;MySQL不支持该参数&lt;/strong&gt;
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class BackupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set dbNames
+     * set 需要备份的数据库名称列表。如不填，则备份整个实例。&lt;/br&gt;SQL Server支持该参数&lt;/br&gt;&lt;strong&gt;MySQL不支持该参数&lt;/strong&gt;
      *
      * @param dbNames
      */
@@ -83,7 +83,7 @@ public class BackupSpec  implements java.io.Serializable {
 
 
     /**
-     * set 备份名称，缺省为系统分配一个随机名称
+     * set 备份名称，缺省系统将分配一个随机名称
      *
      * @param backupName
      */
@@ -93,7 +93,7 @@ public class BackupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set dbNames
+     * set 需要备份的数据库名称列表。如不填，则备份整个实例。&lt;/br&gt;SQL Server支持该参数&lt;/br&gt;&lt;strong&gt;MySQL不支持该参数&lt;/strong&gt;
      *
      * @param dbNames
      */
@@ -104,7 +104,7 @@ public class BackupSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to dbNames
+     * add item to 需要备份的数据库名称列表。如不填，则备份整个实例。&lt;/br&gt;SQL Server支持该参数&lt;/br&gt;&lt;strong&gt;MySQL不支持该参数&lt;/strong&gt;
      *
      * @param dbName
      */

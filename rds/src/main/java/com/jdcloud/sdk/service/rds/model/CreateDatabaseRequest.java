@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 库管理
- * 库管理相关接口
+ * 数据库管理
+ * 数据库管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据库
+ * 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
  */
 public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Ser
     private String dbName;
 
     /**
-     * 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+     * 字符集名称&lt;/br&gt;&lt;strong&gt;mysql字符集支持：&lt;/strong&gt;&lt;/br&gt;- utf8；&lt;/br&gt;&lt;strong&gt;SQL Server字符集支持：&lt;/strong&gt;&lt;/br&gt;- Chinese_PRC_CI_AS&lt;/br&gt;- Chinese_PRC_CS_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CI_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CS_AS&lt;/br&gt;- Chinese_PRC_BIN
      * Required:true
      */
     @Required
@@ -82,7 +82,7 @@ public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+     * get 字符集名称&lt;/br&gt;&lt;strong&gt;mysql字符集支持：&lt;/strong&gt;&lt;/br&gt;- utf8；&lt;/br&gt;&lt;strong&gt;SQL Server字符集支持：&lt;/strong&gt;&lt;/br&gt;- Chinese_PRC_CI_AS&lt;/br&gt;- Chinese_PRC_CS_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CI_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CS_AS&lt;/br&gt;- Chinese_PRC_BIN
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+     * set 字符集名称&lt;/br&gt;&lt;strong&gt;mysql字符集支持：&lt;/strong&gt;&lt;/br&gt;- utf8；&lt;/br&gt;&lt;strong&gt;SQL Server字符集支持：&lt;/strong&gt;&lt;/br&gt;- Chinese_PRC_CI_AS&lt;/br&gt;- Chinese_PRC_CS_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CI_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CS_AS&lt;/br&gt;- Chinese_PRC_BIN
      *
      * @param characterSetName
      */
@@ -147,7 +147,7 @@ public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+     * set 字符集名称&lt;/br&gt;&lt;strong&gt;mysql字符集支持：&lt;/strong&gt;&lt;/br&gt;- utf8；&lt;/br&gt;&lt;strong&gt;SQL Server字符集支持：&lt;/strong&gt;&lt;/br&gt;- Chinese_PRC_CI_AS&lt;/br&gt;- Chinese_PRC_CS_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CI_AS&lt;/br&gt;- SQL_Latin1_General_CP1_CS_AS&lt;/br&gt;- Chinese_PRC_BIN
      *
      * @param characterSetName
      */
