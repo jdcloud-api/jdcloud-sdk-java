@@ -52,15 +52,21 @@ import com.jdcloud.sdk.service.clouddnsservice.client.AddMonitorTargetExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddDomainRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddDomainResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.AddDomainExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryTrafficRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryTrafficResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.GetDomainQueryTrafficExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetTargetsRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetTargetsResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.GetTargetsExecutor;
-import com.jdcloud.sdk.service.clouddnsservice.model.GetViewTreeRequest;
-import com.jdcloud.sdk.service.clouddnsservice.model.GetViewTreeResponse;
-import com.jdcloud.sdk.service.clouddnsservice.client.GetViewTreeExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryCountRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryCountResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.GetDomainQueryCountExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddMonitorRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddMonitorResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.AddMonitorExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetViewTreeRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetViewTreeResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.GetViewTreeExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.UpdateRRRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.UpdateRRResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.UpdateRRExecutor;
@@ -73,9 +79,6 @@ import com.jdcloud.sdk.service.clouddnsservice.client.OperateMonitorExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.UpdateDomainRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.UpdateDomainResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.UpdateDomainExecutor;
-import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainStatisticsRequest;
-import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainStatisticsResponse;
-import com.jdcloud.sdk.service.clouddnsservice.client.GetDomainStatisticsExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.SearchRRRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.SearchRRResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.SearchRRExecutor;
@@ -210,6 +213,17 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
+     * 查看域名的查询流量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDomainQueryTrafficResponse getDomainQueryTraffic(GetDomainQueryTrafficRequest request) throws JdcloudSdkException {
+        return new GetDomainQueryTrafficExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询子域名的可用监控对象
      *
      * @param request
@@ -221,14 +235,14 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 查询DNS所有解析线路
+     * 查看域名的解析次数
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetViewTreeResponse getViewTree(GetViewTreeRequest request) throws JdcloudSdkException {
-        return new GetViewTreeExecutor().client(this).execute(request);
+    public GetDomainQueryCountResponse getDomainQueryCount(GetDomainQueryCountRequest request) throws JdcloudSdkException {
+        return new GetDomainQueryCountExecutor().client(this).execute(request);
     }
 
     /**
@@ -240,6 +254,17 @@ public class ClouddnsserviceClient extends JdcloudClient {
      */
     public AddMonitorResponse addMonitor(AddMonitorRequest request) throws JdcloudSdkException {
         return new AddMonitorExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询DNS所有解析线路
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetViewTreeResponse getViewTree(GetViewTreeRequest request) throws JdcloudSdkException {
+        return new GetViewTreeExecutor().client(this).execute(request);
     }
 
     /**
@@ -284,17 +309,6 @@ public class ClouddnsserviceClient extends JdcloudClient {
      */
     public UpdateDomainResponse updateDomain(UpdateDomainRequest request) throws JdcloudSdkException {
         return new UpdateDomainExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查看域名的查询流量
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetDomainStatisticsResponse getDomainStatistics(GetDomainStatisticsRequest request) throws JdcloudSdkException {
-        return new GetDomainStatisticsExecutor().client(this).execute(request);
     }
 
     /**

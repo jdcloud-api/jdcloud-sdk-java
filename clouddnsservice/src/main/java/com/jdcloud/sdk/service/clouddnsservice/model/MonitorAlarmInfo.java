@@ -33,7 +33,7 @@ public class MonitorAlarmInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名ID?
+     * 域名ID
      */
     private Integer domainId;
 
@@ -59,7 +59,7 @@ public class MonitorAlarmInfo  implements java.io.Serializable {
 
 
     /**
-     * get 域名ID?
+     * get 域名ID
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class MonitorAlarmInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 域名ID?
+     * set 域名ID
      *
      * @param domainId
      */
@@ -150,7 +150,7 @@ public class MonitorAlarmInfo  implements java.io.Serializable {
 
 
     /**
-     * set 域名ID?
+     * set 域名ID
      *
      * @param domainId
      */
