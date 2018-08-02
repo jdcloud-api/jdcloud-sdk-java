@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
- * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
+ * 监控项自定义监控相关接口
+ * 自定义监控项相关接口，提供自定义监控数据上报功能
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,12 +24,12 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 批量删除已创建的报警规则
+ * 自定义监控数据上报接口
  */
-public class DeleteAlarmsResult extends JdcloudResult implements java.io.Serializable {
+public class PutMetricDataResponse extends JdcloudResponse<PutMetricDataResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

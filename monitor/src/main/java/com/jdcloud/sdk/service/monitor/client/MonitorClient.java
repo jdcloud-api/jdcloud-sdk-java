@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 云监控
- * 云监控相关接口
+ * 云监控相关接口，主要包含监控规则的增删改查，以及监控项数据的查询
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.monitor.client.DeleteAlarmsExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeMetricDataRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeMetricDataResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeMetricDataExecutor;
+import com.jdcloud.sdk.service.monitor.model.PutMetricDataRequest;
+import com.jdcloud.sdk.service.monitor.model.PutMetricDataResponse;
+import com.jdcloud.sdk.service.monitor.client.PutMetricDataExecutor;
 import com.jdcloud.sdk.service.monitor.model.UpdateAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.UpdateAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.UpdateAlarmExecutor;
@@ -115,7 +118,7 @@ public class MonitorClient extends JdcloudClient {
 
 
     /**
-     * 批量删除规则
+     * 批量删除已创建的报警规则
      *
      * @param request
      * @return
@@ -134,6 +137,17 @@ public class MonitorClient extends JdcloudClient {
      */
     public DescribeMetricDataResponse describeMetricData(DescribeMetricDataRequest request) throws JdcloudSdkException {
         return new DescribeMetricDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 自定义监控数据上报接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PutMetricDataResponse putMetricData(PutMetricDataRequest request) throws JdcloudSdkException {
+        return new PutMetricDataExecutor().client(this).execute(request);
     }
 
     /**

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,12 +64,12 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     private String endTime;
 
     /**
-     * 当前所在页，默认为1
+     * 页码, 默认为1, 取值范围：[1,∞)
      */
     private Integer pageNumber;
 
     /**
-     * ，默认为20；取值范围[1, 100]
+     * 分页大小，默认为20，取值范围：[10,100]
      */
     private Integer pageSize;
 
@@ -172,7 +172,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 当前所在页，默认为1
+     * get 页码, 默认为1, 取值范围：[1,∞)
      *
      * @return
      */
@@ -181,7 +181,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 当前所在页，默认为1
+     * set 页码, 默认为1, 取值范围：[1,∞)
      *
      * @param pageNumber
      */
@@ -190,7 +190,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get ，默认为20；取值范围[1, 100]
+     * get 分页大小，默认为20，取值范围：[10,100]
      *
      * @return
      */
@@ -199,7 +199,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set ，默认为20；取值范围[1, 100]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */
@@ -277,7 +277,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 当前所在页，默认为1
+     * set 页码, 默认为1, 取值范围：[1,∞)
      *
      * @param pageNumber
      */
@@ -287,7 +287,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set ，默认为20；取值范围[1, 100]
+     * set 分页大小，默认为20，取值范围：[10,100]
      *
      * @param pageSize
      */

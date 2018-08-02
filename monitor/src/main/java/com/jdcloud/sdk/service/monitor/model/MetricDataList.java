@@ -24,95 +24,81 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
- * metricData
+ * metricDataList
  */
-public class MetricData  implements java.io.Serializable {
+public class MetricDataList  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * data
+     * 错误数据
      */
-    private List<DataPoint> data;
+    private String errMetricData;
 
     /**
-     * metric
+     * 错误数据描述
      */
-    private Metric metric;
+    private String errDetail;
 
 
     /**
-     * get data
+     * get 错误数据
      *
      * @return
      */
-    public List<DataPoint> getData() {
-        return data;
+    public String getErrMetricData() {
+        return errMetricData;
     }
 
     /**
-     * set data
+     * set 错误数据
      *
-     * @param data
+     * @param errMetricData
      */
-    public void setData(List<DataPoint> data) {
-        this.data = data;
+    public void setErrMetricData(String errMetricData) {
+        this.errMetricData = errMetricData;
     }
 
     /**
-     * get metric
+     * get 错误数据描述
      *
      * @return
      */
-    public Metric getMetric() {
-        return metric;
+    public String getErrDetail() {
+        return errDetail;
     }
 
     /**
-     * set metric
+     * set 错误数据描述
      *
-     * @param metric
+     * @param errDetail
      */
-    public void setMetric(Metric metric) {
-        this.metric = metric;
+    public void setErrDetail(String errDetail) {
+        this.errDetail = errDetail;
     }
 
 
     /**
-     * set data
+     * set 错误数据
      *
-     * @param data
+     * @param errMetricData
      */
-    public MetricData data(List<DataPoint> data) {
-        this.data = data;
+    public MetricDataList errMetricData(String errMetricData) {
+        this.errMetricData = errMetricData;
         return this;
     }
 
     /**
-     * set metric
+     * set 错误数据描述
      *
-     * @param metric
+     * @param errDetail
      */
-    public MetricData metric(Metric metric) {
-        this.metric = metric;
+    public MetricDataList errDetail(String errDetail) {
+        this.errDetail = errDetail;
         return this;
     }
 
-
-    /**
-     * add item to data
-     *
-     * @param data
-     */
-    public void addData(DataPoint data) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
-        }
-        this.data.add(data);
-    }
 
 }

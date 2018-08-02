@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.monitor.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.monitor.model.Tags;
+import com.jdcloud.sdk.service.monitor.model.TagFilter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -69,7 +69,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     /**
      * 自定义标签
      */
-    private List<Tags> tags;
+    private List<TagFilter> tags;
 
     /**
      * 地域 Id
@@ -181,7 +181,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      *
      * @return
      */
-    public List<Tags> getTags() {
+    public List<TagFilter> getTags() {
         return tags;
     }
 
@@ -190,7 +190,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      *
      * @param tags
      */
-    public void setTags(List<Tags> tags) {
+    public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
 
@@ -286,7 +286,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      *
      * @param tags
      */
-    public DescribeMetricDataRequest tags(List<Tags> tags) {
+    public DescribeMetricDataRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
@@ -317,7 +317,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      *
      * @param tag
      */
-    public void addTag(Tags tag) {
+    public void addTag(TagFilter tag) {
         if (this.tags == null) {
             this.tags = new ArrayList<>();
         }

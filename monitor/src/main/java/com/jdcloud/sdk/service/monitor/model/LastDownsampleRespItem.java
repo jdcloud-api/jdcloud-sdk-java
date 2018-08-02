@@ -24,51 +24,36 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
- * metricData
+ * lastDownsampleRespItem
  */
-public class MetricData  implements java.io.Serializable {
+public class LastDownsampleRespItem  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * data
-     */
-    private List<DataPoint> data;
-
-    /**
      * metric
      */
-    private Metric metric;
-
-
-    /**
-     * get data
-     *
-     * @return
-     */
-    public List<DataPoint> getData() {
-        return data;
-    }
+    private String metric;
 
     /**
-     * set data
-     *
-     * @param data
+     * name
      */
-    public void setData(List<DataPoint> data) {
-        this.data = data;
-    }
+    private String name;
+
+    /**
+     * value
+     */
+    private Object value;
+
 
     /**
      * get metric
      *
      * @return
      */
-    public Metric getMetric() {
+    public String getMetric() {
         return metric;
     }
 
@@ -77,42 +62,76 @@ public class MetricData  implements java.io.Serializable {
      *
      * @param metric
      */
-    public void setMetric(Metric metric) {
+    public void setMetric(String metric) {
         this.metric = metric;
     }
 
+    /**
+     * get name
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
 
     /**
-     * set data
+     * set name
      *
-     * @param data
+     * @param name
      */
-    public MetricData data(List<DataPoint> data) {
-        this.data = data;
-        return this;
+    public void setName(String name) {
+        this.name = name;
     }
+
+    /**
+     * get value
+     *
+     * @return
+     */
+    public Object getValue() {
+        return value;
+    }
+
+    /**
+     * set value
+     *
+     * @param value
+     */
+    public void setValue(Object value) {
+        this.value = value;
+    }
+
 
     /**
      * set metric
      *
      * @param metric
      */
-    public MetricData metric(Metric metric) {
+    public LastDownsampleRespItem metric(String metric) {
         this.metric = metric;
         return this;
     }
 
+    /**
+     * set name
+     *
+     * @param name
+     */
+    public LastDownsampleRespItem name(String name) {
+        this.name = name;
+        return this;
+    }
 
     /**
-     * add item to data
+     * set value
      *
-     * @param data
+     * @param value
      */
-    public void addData(DataPoint data) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
-        }
-        this.data.add(data);
+    public LastDownsampleRespItem value(Object value) {
+        this.value = value;
+        return this;
     }
+
 
 }
