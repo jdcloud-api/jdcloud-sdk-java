@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     private List<AlarmHistory> alarmHistoryList;
 
     /**
-     * 当前页码
+     * 页码
      */
     private Number pageNumber;
 
@@ -81,7 +81,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get 当前页码
+     * get 页码
      *
      * @return
      */
@@ -90,7 +90,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 当前页码
+     * set 页码
      *
      * @param pageNumber
      */
@@ -164,7 +164,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 当前页码
+     * set 页码
      *
      * @param pageNumber
      */

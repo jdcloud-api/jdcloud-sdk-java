@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -102,7 +102,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private Number threshold;
+    private Double threshold;
 
     /**
      * 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
@@ -297,7 +297,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getThreshold() {
+    public Double getThreshold() {
         return threshold;
     }
 
@@ -306,7 +306,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
      *
      * @param threshold
      */
-    public void setThreshold(Number threshold) {
+    public void setThreshold(Double threshold) {
         this.threshold = threshold;
     }
 
@@ -434,7 +434,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
      *
      * @param threshold
      */
-    public CreateAlarmSpec threshold(Number threshold) {
+    public CreateAlarmSpec threshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }
