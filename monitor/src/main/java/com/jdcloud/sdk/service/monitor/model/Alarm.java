@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -122,7 +122,7 @@ public class Alarm  implements java.io.Serializable {
     /**
      * 阈值
      */
-    private Number threshold;
+    private Double threshold;
 
     /**
      * 连续多少次后报警
@@ -132,7 +132,7 @@ public class Alarm  implements java.io.Serializable {
     /**
      * 报警值 , 查询正在报警规则时该字段有效
      */
-    private Number value;
+    private Double value;
 
 
     /**
@@ -446,7 +446,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getThreshold() {
+    public Double getThreshold() {
         return threshold;
     }
 
@@ -455,7 +455,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param threshold
      */
-    public void setThreshold(Number threshold) {
+    public void setThreshold(Double threshold) {
         this.threshold = threshold;
     }
 
@@ -482,7 +482,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getValue() {
+    public Double getValue() {
         return value;
     }
 
@@ -491,7 +491,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param value
      */
-    public void setValue(Number value) {
+    public void setValue(Double value) {
         this.value = value;
     }
 
@@ -671,7 +671,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param threshold
      */
-    public Alarm threshold(Number threshold) {
+    public Alarm threshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }
@@ -691,7 +691,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param value
      */
-    public Alarm value(Number value) {
+    public Alarm value(Double value) {
         this.value = value;
         return this;
     }

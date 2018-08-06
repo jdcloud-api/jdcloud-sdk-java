@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -33,7 +35,52 @@ public class GetTargetsResult extends JdcloudResult implements java.io.Serializa
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * data
+     */
+    private List<String> data;
 
 
+    /**
+     * get data
+     *
+     * @return
+     */
+    public List<String> getData() {
+        return data;
+    }
+
+    /**
+     * set data
+     *
+     * @param data
+     */
+    public void setData(List<String> data) {
+        this.data = data;
+    }
+
+
+    /**
+     * set data
+     *
+     * @param data
+     */
+    public GetTargetsResult data(List<String> data) {
+        this.data = data;
+        return this;
+    }
+
+
+    /**
+     * add item to data
+     *
+     * @param data
+     */
+    public void addData(String data) {
+        if (this.data == null) {
+            this.data = new ArrayList<>();
+        }
+        this.data.add(data);
+    }
 
 }

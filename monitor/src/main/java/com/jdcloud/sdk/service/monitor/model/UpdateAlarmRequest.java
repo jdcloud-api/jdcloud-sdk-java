@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -96,7 +96,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
      * Required:true
      */
     @Required
-    private Number threshold;
+    private Double threshold;
 
     /**
      * 连续多少次后报警，可选值:1,2,3,5
@@ -287,7 +287,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
      *
      * @return
      */
-    public Number getThreshold() {
+    public Double getThreshold() {
         return threshold;
     }
 
@@ -296,7 +296,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param threshold
      */
-    public void setThreshold(Number threshold) {
+    public void setThreshold(Double threshold) {
         this.threshold = threshold;
     }
 
@@ -450,7 +450,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param threshold
      */
-    public UpdateAlarmRequest threshold(Number threshold) {
+    public UpdateAlarmRequest threshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }

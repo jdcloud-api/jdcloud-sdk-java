@@ -5,3 +5,6 @@
 添加monitorAddTarget接口
 2018-07-18 version: 1.0.0
 上线改版本号
+2018-07-23 version: 1.0.1
+添加getDomainResolveNum接口
+添加getDomainResolveFlow接口

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -95,7 +95,7 @@ public class UpdateAlarmBody  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private Number threshold;
+    private Double threshold;
 
     /**
      * 连续多少次后报警，可选值:1,2,3,5
@@ -272,7 +272,7 @@ public class UpdateAlarmBody  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getThreshold() {
+    public Double getThreshold() {
         return threshold;
     }
 
@@ -281,7 +281,7 @@ public class UpdateAlarmBody  implements java.io.Serializable {
      *
      * @param threshold
      */
-    public void setThreshold(Number threshold) {
+    public void setThreshold(Double threshold) {
         this.threshold = threshold;
     }
 
@@ -399,7 +399,7 @@ public class UpdateAlarmBody  implements java.io.Serializable {
      *
      * @param threshold
      */
-    public UpdateAlarmBody threshold(Number threshold) {
+    public UpdateAlarmBody threshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }
