@@ -35,6 +35,16 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     private static final long serialVersionUID = 1L;
 
     /**
+     * 当前页数，起始值为1，默认为1
+     */
+    private Integer pageNumber;
+
+    /**
+     * 分页查询时设置的每页行数, 默认为10
+     */
+    private Integer pageSize;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -48,6 +58,42 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     @Required
     private String domainId;
 
+
+    /**
+     * get 当前页数，起始值为1，默认为1
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 当前页数，起始值为1，默认为1
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 分页查询时设置的每页行数, 默认为10
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 分页查询时设置的每页行数, 默认为10
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
 
     /**
      * get Region ID
@@ -85,6 +131,26 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
         this.domainId = domainId;
     }
 
+
+    /**
+     * set 当前页数，起始值为1，默认为1
+     *
+     * @param pageNumber
+     */
+    public SearchRRRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 分页查询时设置的每页行数, 默认为10
+     *
+     * @param pageSize
+     */
+    public SearchRRRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
 
     /**
      * set Region ID
