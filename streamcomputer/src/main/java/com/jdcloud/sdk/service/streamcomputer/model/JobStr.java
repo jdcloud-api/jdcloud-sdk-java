@@ -97,6 +97,16 @@ public class JobStr  implements java.io.Serializable {
      */
     private String userName;
 
+    /**
+     * sqlStatement
+     */
+    private String sqlStatement;
+
+    /**
+     * jobType
+     */
+    private String jobType;
+
 
     /**
      * get namespaceId
@@ -332,6 +342,42 @@ public class JobStr  implements java.io.Serializable {
         this.userName = userName;
     }
 
+    /**
+     * get sqlStatement
+     *
+     * @return
+     */
+    public String getSqlStatement() {
+        return sqlStatement;
+    }
+
+    /**
+     * set sqlStatement
+     *
+     * @param sqlStatement
+     */
+    public void setSqlStatement(String sqlStatement) {
+        this.sqlStatement = sqlStatement;
+    }
+
+    /**
+     * get jobType
+     *
+     * @return
+     */
+    public String getJobType() {
+        return jobType;
+    }
+
+    /**
+     * set jobType
+     *
+     * @param jobType
+     */
+    public void setJobType(String jobType) {
+        this.jobType = jobType;
+    }
+
 
     /**
      * set namespaceId
@@ -460,6 +506,26 @@ public class JobStr  implements java.io.Serializable {
      */
     public JobStr userName(String userName) {
         this.userName = userName;
+        return this;
+    }
+
+    /**
+     * set sqlStatement
+     *
+     * @param sqlStatement
+     */
+    public JobStr sqlStatement(String sqlStatement) {
+        this.sqlStatement = sqlStatement;
+        return this;
+    }
+
+    /**
+     * set jobType
+     *
+     * @param jobType
+     */
+    public JobStr jobType(String jobType) {
+        this.jobType = jobType;
         return this;
     }
 

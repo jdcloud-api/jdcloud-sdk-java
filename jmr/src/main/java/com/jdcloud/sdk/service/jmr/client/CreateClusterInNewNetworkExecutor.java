@@ -40,7 +40,7 @@ class CreateClusterInNewNetworkExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/v1/regions/{regionId}/create";
+        return "/regions/{regionId}/cluster:create";
     }
 
     @Override

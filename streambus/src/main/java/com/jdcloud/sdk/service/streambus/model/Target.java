@@ -33,7 +33,7 @@ public class Target  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要归档的目的
+     * 需要归档的目的地
      */
     private String name;
 
@@ -49,7 +49,7 @@ public class Target  implements java.io.Serializable {
 
 
     /**
-     * get 需要归档的目的
+     * get 需要归档的目的地
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set 需要归档的目的
+     * set 需要归档的目的地
      *
      * @param name
      */
@@ -104,7 +104,7 @@ public class Target  implements java.io.Serializable {
 
 
     /**
-     * set 需要归档的目的
+     * set 需要归档的目的地
      *
      * @param name
      */

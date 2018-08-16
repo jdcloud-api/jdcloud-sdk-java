@@ -25,25 +25,25 @@
 package com.jdcloud.sdk.service.streambus.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.streambus.model.AddTopic;
+import com.jdcloud.sdk.service.streambus.model.TopicModel;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建topic
+ * 创建topic时，topicModel中只需要传topic参数，另外两个参数可为空
  */
 public class AddTopicRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * topicModel
+     * 示例：{&quot;topicModel&quot;:{&quot;topic&quot;:{&quot;archived&quot;:0,&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;create&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;shardNum&quot;:1,&quot;partitionNum&quot;:2,&quot;lifecycle&quot;:3}}}
      * Required:true
      */
     @Required
-    private AddTopic topicModel;
+    private TopicModel topicModel;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
@@ -51,25 +51,25 @@ public class AddTopicRequest extends JdcloudRequest implements java.io.Serializa
 
 
     /**
-     * get topicModel
+     * get 示例：{&quot;topicModel&quot;:{&quot;topic&quot;:{&quot;archived&quot;:0,&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;create&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;shardNum&quot;:1,&quot;partitionNum&quot;:2,&quot;lifecycle&quot;:3}}}
      *
      * @return
      */
-    public AddTopic getTopicModel() {
+    public TopicModel getTopicModel() {
         return topicModel;
     }
 
     /**
-     * set topicModel
+     * set 示例：{&quot;topicModel&quot;:{&quot;topic&quot;:{&quot;archived&quot;:0,&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;create&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;shardNum&quot;:1,&quot;partitionNum&quot;:2,&quot;lifecycle&quot;:3}}}
      *
      * @param topicModel
      */
-    public void setTopicModel(AddTopic topicModel) {
+    public void setTopicModel(TopicModel topicModel) {
         this.topicModel = topicModel;
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class AddTopicRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -88,17 +88,17 @@ public class AddTopicRequest extends JdcloudRequest implements java.io.Serializa
 
 
     /**
-     * set topicModel
+     * set 示例：{&quot;topicModel&quot;:{&quot;topic&quot;:{&quot;archived&quot;:0,&quot;id&quot;:&quot;&quot;,&quot;name&quot;:&quot;create&quot;,&quot;remark&quot;:&quot;备注&quot;,&quot;shardNum&quot;:1,&quot;partitionNum&quot;:2,&quot;lifecycle&quot;:3}}}
      *
      * @param topicModel
      */
-    public AddTopicRequest topicModel(AddTopic topicModel) {
+    public AddTopicRequest topicModel(TopicModel topicModel) {
         this.topicModel = topicModel;
         return this;
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */

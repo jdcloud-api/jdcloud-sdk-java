@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DeleteDatabaseResponse;
 
 /**
- * 删除数据库 [MFA enabled]
+ * 删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
  */
 class DeleteDatabaseExecutor extends JdcloudExecutor {
 

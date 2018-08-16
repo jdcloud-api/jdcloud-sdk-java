@@ -33,6 +33,11 @@ public class Topic  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 主题id
+     */
+    private Integer id;
+
+    /**
      * 是否归档（0：未归档，1：已归档）
      */
     private Integer archived;
@@ -41,6 +46,11 @@ public class Topic  implements java.io.Serializable {
      * 数据写入后的保留时间
      */
     private Integer lifecycle;
+
+    /**
+     * 分区
+     */
+    private Integer partitionNum;
 
     /**
      * 流数据总线中topic的名字
@@ -57,6 +67,24 @@ public class Topic  implements java.io.Serializable {
      */
     private String remark;
 
+
+    /**
+     * get 主题id
+     *
+     * @return
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * set 主题id
+     *
+     * @param id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     /**
      * get 是否归档（0：未归档，1：已归档）
@@ -92,6 +120,24 @@ public class Topic  implements java.io.Serializable {
      */
     public void setLifecycle(Integer lifecycle) {
         this.lifecycle = lifecycle;
+    }
+
+    /**
+     * get 分区
+     *
+     * @return
+     */
+    public Integer getPartitionNum() {
+        return partitionNum;
+    }
+
+    /**
+     * set 分区
+     *
+     * @param partitionNum
+     */
+    public void setPartitionNum(Integer partitionNum) {
+        this.partitionNum = partitionNum;
     }
 
     /**
@@ -150,6 +196,16 @@ public class Topic  implements java.io.Serializable {
 
 
     /**
+     * set 主题id
+     *
+     * @param id
+     */
+    public Topic id(Integer id) {
+        this.id = id;
+        return this;
+    }
+
+    /**
      * set 是否归档（0：未归档，1：已归档）
      *
      * @param archived
@@ -166,6 +222,16 @@ public class Topic  implements java.io.Serializable {
      */
     public Topic lifecycle(Integer lifecycle) {
         this.lifecycle = lifecycle;
+        return this;
+    }
+
+    /**
+     * set 分区
+     *
+     * @param partitionNum
+     */
+    public Topic partitionNum(Integer partitionNum) {
+        this.partitionNum = partitionNum;
         return this;
     }
 

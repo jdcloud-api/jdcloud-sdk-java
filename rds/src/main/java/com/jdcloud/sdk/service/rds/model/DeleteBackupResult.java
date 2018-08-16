@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
  */
 public class DeleteBackupResult extends JdcloudResult implements java.io.Serializable {
 

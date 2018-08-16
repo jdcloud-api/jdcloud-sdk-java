@@ -37,7 +37,7 @@ public class ShowClusterDetailsResult extends JdcloudResult implements java.io.S
     /**
      * status
      */
-    private Boolean status;
+    private String status;
 
     /**
      * message
@@ -55,7 +55,7 @@ public class ShowClusterDetailsResult extends JdcloudResult implements java.io.S
      *
      * @return
      */
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -64,7 +64,7 @@ public class ShowClusterDetailsResult extends JdcloudResult implements java.io.S
      *
      * @param status
      */
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -110,7 +110,7 @@ public class ShowClusterDetailsResult extends JdcloudResult implements java.io.S
      *
      * @param status
      */
-    public ShowClusterDetailsResult status(Boolean status) {
+    public ShowClusterDetailsResult status(String status) {
         this.status = status;
         return this;
     }

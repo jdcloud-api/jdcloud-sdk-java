@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * TOPIC相关API
- * 流数据总线topic相关信息接口
+ * JOB相关API
+ * 流计算作业相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,13 +34,13 @@ public class StartJobResult extends JdcloudResult implements java.io.Serializabl
     private static final long serialVersionUID = 1L;
 
     /**
-     * 成功启动作业返回信息
+     * 是否成功提交作业
      */
     private String message;
 
 
     /**
-     * get 成功启动作业返回信息
+     * get 是否成功提交作业
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class StartJobResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 成功启动作业返回信息
+     * set 是否成功提交作业
      *
      * @param message
      */
@@ -59,7 +59,7 @@ public class StartJobResult extends JdcloudResult implements java.io.Serializabl
 
 
     /**
-     * set 成功启动作业返回信息
+     * set 是否成功提交作业
      *
      * @param message
      */

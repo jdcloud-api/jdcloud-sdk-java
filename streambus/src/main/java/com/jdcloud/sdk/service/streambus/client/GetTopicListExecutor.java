@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.streambus.model.GetTopicListResponse;
 
 /**
- * 查询topic
+ * 查询topic列表，返回topic的集合
  */
 class GetTopicListExecutor extends JdcloudExecutor {
 

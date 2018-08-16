@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.streambus.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看指定主题
+ * 查询指定主题,如果已归档会返回归档信息
  */
 public class DescribeTopicResponse extends JdcloudResponse<DescribeTopicResult> implements java.io.Serializable {
 

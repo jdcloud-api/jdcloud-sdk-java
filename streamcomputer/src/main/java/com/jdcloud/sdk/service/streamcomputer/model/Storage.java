@@ -55,7 +55,7 @@ public class Storage  implements java.io.Serializable {
     private String type;
 
     /**
-     * storageType
+     * 这个参数有input和ouput两个可选值，取决于创建输入还是输出
      */
     private String storageType;
 
@@ -85,7 +85,7 @@ public class Storage  implements java.io.Serializable {
     private String deleted;
 
     /**
-     * storageParameterList
+     * Storage的具体参数。&lt;br&gt;1、创建源类型为流式数据输入时，则需要传输source，topicName，duration，format，delimiter，schema 。&lt;br&gt; 2、创建输出如果输出位置为流数据总线，需要传topicName，format，delimiter，ossFlag，bucketName，directory，objectName。&lt;br&gt;3、创建输出如果输出位置为数据计算服务，则需要传输database，table，ossFlag，bucketName，directory，objectName。
      */
     private List<StorageParameter> storageParameterList;
 
@@ -163,7 +163,7 @@ public class Storage  implements java.io.Serializable {
     }
 
     /**
-     * get storageType
+     * get 这个参数有input和ouput两个可选值，取决于创建输入还是输出
      *
      * @return
      */
@@ -172,7 +172,7 @@ public class Storage  implements java.io.Serializable {
     }
 
     /**
-     * set storageType
+     * set 这个参数有input和ouput两个可选值，取决于创建输入还是输出
      *
      * @param storageType
      */
@@ -271,7 +271,7 @@ public class Storage  implements java.io.Serializable {
     }
 
     /**
-     * get storageParameterList
+     * get Storage的具体参数。&lt;br&gt;1、创建源类型为流式数据输入时，则需要传输source，topicName，duration，format，delimiter，schema 。&lt;br&gt; 2、创建输出如果输出位置为流数据总线，需要传topicName，format，delimiter，ossFlag，bucketName，directory，objectName。&lt;br&gt;3、创建输出如果输出位置为数据计算服务，则需要传输database，table，ossFlag，bucketName，directory，objectName。
      *
      * @return
      */
@@ -280,7 +280,7 @@ public class Storage  implements java.io.Serializable {
     }
 
     /**
-     * set storageParameterList
+     * set Storage的具体参数。&lt;br&gt;1、创建源类型为流式数据输入时，则需要传输source，topicName，duration，format，delimiter，schema 。&lt;br&gt; 2、创建输出如果输出位置为流数据总线，需要传topicName，format，delimiter，ossFlag，bucketName，directory，objectName。&lt;br&gt;3、创建输出如果输出位置为数据计算服务，则需要传输database，table，ossFlag，bucketName，directory，objectName。
      *
      * @param storageParameterList
      */
@@ -330,7 +330,7 @@ public class Storage  implements java.io.Serializable {
     }
 
     /**
-     * set storageType
+     * set 这个参数有input和ouput两个可选值，取决于创建输入还是输出
      *
      * @param storageType
      */
@@ -390,7 +390,7 @@ public class Storage  implements java.io.Serializable {
     }
 
     /**
-     * set storageParameterList
+     * set Storage的具体参数。&lt;br&gt;1、创建源类型为流式数据输入时，则需要传输source，topicName，duration，format，delimiter，schema 。&lt;br&gt; 2、创建输出如果输出位置为流数据总线，需要传topicName，format，delimiter，ossFlag，bucketName，directory，objectName。&lt;br&gt;3、创建输出如果输出位置为数据计算服务，则需要传输database，table，ossFlag，bucketName，directory，objectName。
      *
      * @param storageParameterList
      */
@@ -401,7 +401,7 @@ public class Storage  implements java.io.Serializable {
 
 
     /**
-     * add item to storageParameterList
+     * add item to Storage的具体参数。&lt;br&gt;1、创建源类型为流式数据输入时，则需要传输source，topicName，duration，format，delimiter，schema 。&lt;br&gt; 2、创建输出如果输出位置为流数据总线，需要传topicName，format，delimiter，ossFlag，bucketName，directory，objectName。&lt;br&gt;3、创建输出如果输出位置为数据计算服务，则需要传输database，table，ossFlag，bucketName，directory，objectName。
      *
      * @param storageParameterList
      */

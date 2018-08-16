@@ -46,6 +46,9 @@ import com.jdcloud.sdk.service.rds.client.GetUploadKeyExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteAuditRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteAuditResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteAuditExecutor;
+import com.jdcloud.sdk.service.rds.model.RestoreInstanceRequest;
+import com.jdcloud.sdk.service.rds.model.RestoreInstanceResponse;
+import com.jdcloud.sdk.service.rds.client.RestoreInstanceExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateAuditRequest;
 import com.jdcloud.sdk.service.rds.model.CreateAuditResponse;
 import com.jdcloud.sdk.service.rds.client.CreateAuditExecutor;
@@ -58,12 +61,18 @@ import com.jdcloud.sdk.service.rds.client.SetInstanceNameExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupDownloadURLRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupDownloadURLResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeBackupDownloadURLExecutor;
+import com.jdcloud.sdk.service.rds.model.EnableInternetAccessRequest;
+import com.jdcloud.sdk.service.rds.model.EnableInternetAccessResponse;
+import com.jdcloud.sdk.service.rds.client.EnableInternetAccessExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeInstancesExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseRequest;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseResponse;
 import com.jdcloud.sdk.service.rds.client.CreateDatabaseExecutor;
+import com.jdcloud.sdk.service.rds.model.GetBackupPolicyRequest;
+import com.jdcloud.sdk.service.rds.model.GetBackupPolicyResponse;
+import com.jdcloud.sdk.service.rds.client.GetBackupPolicyExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeImportFilesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeImportFilesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeImportFilesExecutor;
@@ -85,6 +94,12 @@ import com.jdcloud.sdk.service.rds.client.DeleteDatabaseExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeErrorLogsExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeWhiteListRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeWhiteListResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeWhiteListExecutor;
+import com.jdcloud.sdk.service.rds.model.DisableInternetAccessRequest;
+import com.jdcloud.sdk.service.rds.model.DisableInternetAccessResponse;
+import com.jdcloud.sdk.service.rds.client.DisableInternetAccessExecutor;
 import com.jdcloud.sdk.service.rds.model.GrantPrivilegeRequest;
 import com.jdcloud.sdk.service.rds.model.GrantPrivilegeResponse;
 import com.jdcloud.sdk.service.rds.client.GrantPrivilegeExecutor;
@@ -242,6 +257,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 使用实例的全量备份覆盖恢复当前实例&lt;/br&gt;- SQL Server：不支持&lt;/br&gt;- MySQL：支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestoreInstanceResponse restoreInstance(RestoreInstanceRequest request) throws JdcloudSdkException {
+        return new RestoreInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 开启数据库审计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
@@ -253,7 +279,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
      * @return
@@ -286,6 +312,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableInternetAccessResponse enableInternetAccess(EnableInternetAccessRequest request) throws JdcloudSdkException {
+        return new EnableInternetAccessExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询RDS实例列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
@@ -297,7 +334,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
      * @return
@@ -305,6 +342,17 @@ public class RdsClient extends JdcloudClient {
      */
     public CreateDatabaseResponse createDatabase(CreateDatabaseRequest request) throws JdcloudSdkException {
         return new CreateDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看RDS实例备份策略&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetBackupPolicyResponse getBackupPolicy(GetBackupPolicyRequest request) throws JdcloudSdkException {
+        return new GetBackupPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -352,7 +400,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
      * @return
@@ -363,7 +411,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 删除数据库 [MFA enabled]
+     * 删除数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
      *
      * @param request
      * @return
@@ -385,6 +433,28 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 查看RDS实例当前白名单&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWhiteListResponse describeWhiteList(DescribeWhiteListRequest request) throws JdcloudSdkException {
+        return new DescribeWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭RDS实例的外网访问，用户无法通过Internet访问RDS，但可以通过内网域名访问&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableInternetAccessResponse disableInternetAccess(DisableInternetAccessRequest request) throws JdcloudSdkException {
+        return new DisableInternetAccessExecutor().client(this).execute(request);
+    }
+
+    /**
      * 数据库账号授权&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param request
@@ -396,7 +466,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
      * @return
@@ -462,7 +532,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
      * @return
@@ -484,7 +554,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
      * @return
@@ -495,7 +565,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
      * @return
@@ -539,7 +609,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
      *
      * @param request
      * @return

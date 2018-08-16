@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * NameSpace相关 API
- * 流数据总线NameSpace相关信息接口
+ * storage相关 API
+ * 流计算storage相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 

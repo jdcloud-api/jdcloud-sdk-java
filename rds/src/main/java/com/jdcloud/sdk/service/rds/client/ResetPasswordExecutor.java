@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordResponse;
 
 /**
- * 数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
  */
 class ResetPasswordExecutor extends JdcloudExecutor {
 

@@ -40,7 +40,7 @@ class ShowClusterDetailsExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/v1/regions/{regionId}/detail";
+        return "/regions/{regionId}/detail";
     }
 
     @Override

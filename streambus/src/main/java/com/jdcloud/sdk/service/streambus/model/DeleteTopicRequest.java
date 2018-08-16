@@ -42,7 +42,7 @@ public class DeleteTopicRequest extends JdcloudRequest implements java.io.Serial
     private String name;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
@@ -68,7 +68,7 @@ public class DeleteTopicRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DeleteTopicRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class DeleteTopicRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.RebootInstanceResponse;
 
 /**
- * 重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 重启RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
  */
 class RebootInstanceExecutor extends JdcloudExecutor {
 

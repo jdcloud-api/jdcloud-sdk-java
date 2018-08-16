@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
  */
 public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据库名称
+     * 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      */
     private String dbName;
 
@@ -55,7 +55,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 数据库名称
+     * get 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 数据库名称
+     * set 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param dbName
      */
@@ -110,7 +110,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 数据库名称
+     * set 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
      *
      * @param dbName
      */

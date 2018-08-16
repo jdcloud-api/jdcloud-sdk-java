@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.streambus.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询topic
+ * 查询topic列表，返回topic的集合
  */
 public class GetTopicListResponse extends JdcloudResponse<GetTopicListResult> implements java.io.Serializable {
 

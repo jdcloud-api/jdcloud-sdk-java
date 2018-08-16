@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NameSpace相关 API
- * 流数据总线NameSpace相关信息接口
+ * 流计算NameSpace相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 

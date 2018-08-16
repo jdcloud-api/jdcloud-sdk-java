@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
  */
 public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Serializable {
 

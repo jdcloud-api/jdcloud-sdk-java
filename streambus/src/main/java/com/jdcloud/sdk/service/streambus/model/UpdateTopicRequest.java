@@ -25,25 +25,25 @@
 package com.jdcloud.sdk.service.streambus.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.streambus.model.AddTopic;
+import com.jdcloud.sdk.service.streambus.model.TopicModel;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 更新topic
+ * 此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
  */
 public class UpdateTopicRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * topicModel
+     * 当更新主题时只需要修改topicModel中的topic中的属性即可；创建归档需要指定target以及归档的目的地(mysql,京东云 Elasticsearch,对象存储,数据计算服务)参数
      * Required:true
      */
     @Required
-    private AddTopic topicModel;
+    private TopicModel topicModel;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
@@ -51,25 +51,25 @@ public class UpdateTopicRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get topicModel
+     * get 当更新主题时只需要修改topicModel中的topic中的属性即可；创建归档需要指定target以及归档的目的地(mysql,京东云 Elasticsearch,对象存储,数据计算服务)参数
      *
      * @return
      */
-    public AddTopic getTopicModel() {
+    public TopicModel getTopicModel() {
         return topicModel;
     }
 
     /**
-     * set topicModel
+     * set 当更新主题时只需要修改topicModel中的topic中的属性即可；创建归档需要指定target以及归档的目的地(mysql,京东云 Elasticsearch,对象存储,数据计算服务)参数
      *
      * @param topicModel
      */
-    public void setTopicModel(AddTopic topicModel) {
+    public void setTopicModel(TopicModel topicModel) {
         this.topicModel = topicModel;
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class UpdateTopicRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -88,17 +88,17 @@ public class UpdateTopicRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set topicModel
+     * set 当更新主题时只需要修改topicModel中的topic中的属性即可；创建归档需要指定target以及归档的目的地(mysql,京东云 Elasticsearch,对象存储,数据计算服务)参数
      *
      * @param topicModel
      */
-    public UpdateTopicRequest topicModel(AddTopic topicModel) {
+    public UpdateTopicRequest topicModel(TopicModel topicModel) {
         this.topicModel = topicModel;
         return this;
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */

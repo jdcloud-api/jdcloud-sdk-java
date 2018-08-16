@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.streambus.model.DescribeTopicResponse;
 
 /**
- * 查看指定主题
+ * 查询指定主题,如果已归档会返回归档信息
  */
 class DescribeTopicExecutor extends JdcloudExecutor {
 
