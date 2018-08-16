@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看指定主题
+ * 查询指定主题,如果已归档会返回归档信息
  */
 public class DescribeTopicRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class DescribeTopicRequest extends JdcloudRequest implements java.io.Seri
     private String name;
 
     /**
-     * Region ID
+     * 地域ID
      * Required:true
      */
     @Required
@@ -68,7 +68,7 @@ public class DescribeTopicRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get Region ID
+     * get 地域ID
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DescribeTopicRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class DescribeTopicRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 地域ID
      *
      * @param regionId
      */

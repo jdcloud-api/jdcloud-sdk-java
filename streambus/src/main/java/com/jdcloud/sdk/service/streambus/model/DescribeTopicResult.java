@@ -24,11 +24,11 @@
 
 package com.jdcloud.sdk.service.streambus.model;
 
-import com.jdcloud.sdk.service.streambus.model.AddTopic;
+import com.jdcloud.sdk.service.streambus.model.TopicModel;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看指定主题
+ * 查询指定主题,如果已归档会返回归档信息
  */
 public class DescribeTopicResult extends JdcloudResult implements java.io.Serializable {
 
@@ -37,7 +37,7 @@ public class DescribeTopicResult extends JdcloudResult implements java.io.Serial
     /**
      * topic
      */
-    private AddTopic topic;
+    private TopicModel topic;
 
 
     /**
@@ -45,7 +45,7 @@ public class DescribeTopicResult extends JdcloudResult implements java.io.Serial
      *
      * @return
      */
-    public AddTopic getTopic() {
+    public TopicModel getTopic() {
         return topic;
     }
 
@@ -54,7 +54,7 @@ public class DescribeTopicResult extends JdcloudResult implements java.io.Serial
      *
      * @param topic
      */
-    public void setTopic(AddTopic topic) {
+    public void setTopic(TopicModel topic) {
         this.topic = topic;
     }
 
@@ -64,7 +64,7 @@ public class DescribeTopicResult extends JdcloudResult implements java.io.Serial
      *
      * @param topic
      */
-    public DescribeTopicResult topic(AddTopic topic) {
+    public DescribeTopicResult topic(TopicModel topic) {
         this.topic = topic;
         return this;
     }

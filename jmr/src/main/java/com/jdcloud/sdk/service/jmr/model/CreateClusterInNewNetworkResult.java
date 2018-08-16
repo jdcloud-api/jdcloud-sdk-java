@@ -36,7 +36,7 @@ public class CreateClusterInNewNetworkResult extends JdcloudResult implements ja
     /**
      * status
      */
-    private Boolean status;
+    private String status;
 
     /**
      * message
@@ -49,7 +49,7 @@ public class CreateClusterInNewNetworkResult extends JdcloudResult implements ja
      *
      * @return
      */
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -58,7 +58,7 @@ public class CreateClusterInNewNetworkResult extends JdcloudResult implements ja
      *
      * @param status
      */
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -86,7 +86,7 @@ public class CreateClusterInNewNetworkResult extends JdcloudResult implements ja
      *
      * @param status
      */
-    public CreateClusterInNewNetworkResult status(Boolean status) {
+    public CreateClusterInNewNetworkResult status(String status) {
         this.status = status;
         return this;
     }

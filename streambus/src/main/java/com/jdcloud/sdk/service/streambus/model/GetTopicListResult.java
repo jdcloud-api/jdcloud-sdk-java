@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.streambus.model.TopicListInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询topic
+ * 查询topic列表，返回topic的集合
  */
 public class GetTopicListResult extends JdcloudResult implements java.io.Serializable {
 

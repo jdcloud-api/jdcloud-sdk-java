@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.streambus.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 更新topic
+ * 此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
  */
 public class UpdateTopicResponse extends JdcloudResponse<UpdateTopicResult> implements java.io.Serializable {
 

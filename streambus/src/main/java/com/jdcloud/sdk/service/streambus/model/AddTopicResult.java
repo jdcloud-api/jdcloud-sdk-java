@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.streambus.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建topic
+ * 创建topic时，topicModel中只需要传topic参数，另外两个参数可为空
  */
 public class AddTopicResult extends JdcloudResult implements java.io.Serializable {
 

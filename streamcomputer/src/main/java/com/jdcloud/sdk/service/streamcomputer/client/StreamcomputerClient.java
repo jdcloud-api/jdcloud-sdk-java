@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JDCLOUD流计算API
- * 提供流计算job操作的相关接口。
+ * 提供流计算操作的相关接口。
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -85,7 +85,7 @@ public class StreamcomputerClient extends JdcloudClient {
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
     public final static String ClientVersion = "1.0.1";
-    public final static String DefaultEndpoint = "streamcomputeapi.jdcloud.com";
+    public final static String DefaultEndpoint = "streamcompute.jdcloud-api.com";
     public final static String ServiceName = "streamcomputer";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
 
@@ -127,7 +127,7 @@ public class StreamcomputerClient extends JdcloudClient {
 
 
     /**
-     * 删除namespace
+     * 删除namespace,如果旗下关联有其他资源，不允许删除
      *
      * @param request
      * @return
@@ -270,7 +270,7 @@ public class StreamcomputerClient extends JdcloudClient {
     }
 
     /**
-     * 删除job
+     * 删除作业
      *
      * @param request
      * @return

@@ -36,7 +36,7 @@ public class ReleaseClusterResult extends JdcloudResult implements java.io.Seria
     /**
      * status
      */
-    private Boolean status;
+    private String status;
 
     /**
      * message
@@ -49,7 +49,7 @@ public class ReleaseClusterResult extends JdcloudResult implements java.io.Seria
      *
      * @return
      */
-    public Boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -58,7 +58,7 @@ public class ReleaseClusterResult extends JdcloudResult implements java.io.Seria
      *
      * @param status
      */
-    public void setStatus(Boolean status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -86,7 +86,7 @@ public class ReleaseClusterResult extends JdcloudResult implements java.io.Seria
      *
      * @param status
      */
-    public ReleaseClusterResult status(Boolean status) {
+    public ReleaseClusterResult status(String status) {
         this.status = status;
         return this;
     }

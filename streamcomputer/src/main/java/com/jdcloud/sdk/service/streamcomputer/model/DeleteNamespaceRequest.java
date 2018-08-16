@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NameSpace相关 API
- * 流数据总线NameSpace相关信息接口
+ * 流计算NameSpace相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除namespace
+ * 删除namespace,如果旗下关联有其他资源，不允许删除
  */
 public class DeleteNamespaceRequest extends JdcloudRequest implements java.io.Serializable {
 

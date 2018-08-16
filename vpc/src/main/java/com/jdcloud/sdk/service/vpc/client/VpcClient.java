@@ -37,9 +37,15 @@ import com.jdcloud.sdk.service.vpc.client.ModifyNetworkSecurityGroupRulesExecuto
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeVpcPeeringExecutor;
+import com.jdcloud.sdk.service.vpc.model.DisassociateRouteTableRequest;
+import com.jdcloud.sdk.service.vpc.model.DisassociateRouteTableResponse;
+import com.jdcloud.sdk.service.vpc.client.DisassociateRouteTableExecutor;
 import com.jdcloud.sdk.service.vpc.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.vpc.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.vpc.client.DisassociateElasticIpExecutor;
+import com.jdcloud.sdk.service.vpc.model.CreateVpcRequest;
+import com.jdcloud.sdk.service.vpc.model.CreateVpcResponse;
+import com.jdcloud.sdk.service.vpc.client.CreateVpcExecutor;
 import com.jdcloud.sdk.service.vpc.model.AddNetworkSecurityGroupRulesRequest;
 import com.jdcloud.sdk.service.vpc.model.AddNetworkSecurityGroupRulesResponse;
 import com.jdcloud.sdk.service.vpc.client.AddNetworkSecurityGroupRulesExecutor;
@@ -85,6 +91,9 @@ import com.jdcloud.sdk.service.vpc.client.DescribeNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.vpc.model.UnassignSecondaryIpsRequest;
 import com.jdcloud.sdk.service.vpc.model.UnassignSecondaryIpsResponse;
 import com.jdcloud.sdk.service.vpc.client.UnassignSecondaryIpsExecutor;
+import com.jdcloud.sdk.service.vpc.model.DeleteVpcRequest;
+import com.jdcloud.sdk.service.vpc.model.DeleteVpcResponse;
+import com.jdcloud.sdk.service.vpc.client.DeleteVpcExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeVpcExecutor;
@@ -194,6 +203,17 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 给路由表解绑子网接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisassociateRouteTableResponse disassociateRouteTable(DisassociateRouteTableRequest request) throws JdcloudSdkException {
+        return new DisassociateRouteTableExecutor().client(this).execute(request);
+    }
+
+    /**
      * 给网卡解绑弹性Ip接口
      *
      * @param request
@@ -202,6 +222,17 @@ public class VpcClient extends JdcloudClient {
      */
     public DisassociateElasticIpResponse disassociateElasticIp(DisassociateElasticIpRequest request) throws JdcloudSdkException {
         return new DisassociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建私有网络
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVpcResponse createVpc(CreateVpcRequest request) throws JdcloudSdkException {
+        return new CreateVpcExecutor().client(this).execute(request);
     }
 
     /**
@@ -367,6 +398,17 @@ public class VpcClient extends JdcloudClient {
      */
     public UnassignSecondaryIpsResponse unassignSecondaryIps(UnassignSecondaryIpsRequest request) throws JdcloudSdkException {
         return new UnassignSecondaryIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除私有网络
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcResponse deleteVpc(DeleteVpcRequest request) throws JdcloudSdkException {
+        return new DeleteVpcExecutor().client(this).execute(request);
     }
 
     /**

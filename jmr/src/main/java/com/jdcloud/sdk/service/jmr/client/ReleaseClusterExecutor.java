@@ -40,7 +40,7 @@ class ReleaseClusterExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/v1/regions/{regionId}/release";
+        return "/regions/{regionId}/cluster/{id}:release";
     }
 
     @Override

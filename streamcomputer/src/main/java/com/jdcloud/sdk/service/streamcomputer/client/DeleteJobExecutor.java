@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * TOPIC相关API
- * 流数据总线topic相关信息接口
+ * JOB相关API
+ * 流计算作业相关信息接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.streamcomputer.model.DeleteJobResponse;
 
 /**
- * 删除job
+ * 删除作业
  */
 class DeleteJobExecutor extends JdcloudExecutor {
 
