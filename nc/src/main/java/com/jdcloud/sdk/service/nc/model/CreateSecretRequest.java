@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     private String name;
 
     /**
-     * 私密数据的类型，目前仅支持如下类型：  docker-registry：用来和docker registry认证的类型  ^ generic：基于字面值和文件的通用类型
+     * 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
      * Required:true
      */
     @Required
@@ -81,7 +81,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 私密数据的类型，目前仅支持如下类型：  docker-registry：用来和docker registry认证的类型  ^ generic：基于字面值和文件的通用类型
+     * get 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
      *
      * @return
      */
@@ -90,7 +90,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 私密数据的类型，目前仅支持如下类型：  docker-registry：用来和docker registry认证的类型  ^ generic：基于字面值和文件的通用类型
+     * set 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
      *
      * @param secretType
      */
@@ -146,7 +146,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 私密数据的类型，目前仅支持如下类型：  docker-registry：用来和docker registry认证的类型  ^ generic：基于字面值和文件的通用类型
+     * set 私密数据的类型，目前仅支持如下类型：docker-registry：用来和docker registry认证的类型
      *
      * @param secretType
      */

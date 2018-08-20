@@ -50,7 +50,7 @@ public enum Base16Lower {
      */
     public static byte[] decode(String b16) {
         if (b16 == null) {
-            return null;
+            return new byte[0];
         }
         if (b16.length() == 0) {
             return new byte[0];

@@ -33,7 +33,7 @@ public abstract class JdcloudExecutor {
     private static Logger logger = LoggerFactory.getLogger(JdcloudExecutor.class);
     private static String dateFormat = "yyyy-MM-dd'T'HH:mm:ss";
     private static String charset = "UTF-8";
-    private static Pattern pattern = Pattern.compile("\\{([a-zA-Z0-9-_]+)}");
+    private static Pattern pattern = Pattern.compile("\\{([a-zA-Z0-9-_]+)\\}");
     /**
      * jdcloud客户端
      */
@@ -191,11 +191,7 @@ public abstract class JdcloudExecutor {
                         }
                     }
                 }
-            } catch (IllegalArgumentException e) {
-                logger.error("IllegalArgumentException");
-                throw new JdcloudSdkException(e);
-            } catch (IllegalAccessException e) {
-                logger.error("IllegalAccessException");
+            } catch (IllegalArgumentException | IllegalAccessException e) {
                 throw new JdcloudSdkException(e);
             }
     }
@@ -268,7 +264,7 @@ public abstract class JdcloudExecutor {
             if (value == null) {
                 throw new JdcloudSdkException("field " + fieldName + " not set.");
             }
-            return (String) value;
+            return String.valueOf(value);
         }catch (Exception e) {
             throw new JdcloudSdkException("can not get value of request field '" + fieldName + "'.", e);
         }
