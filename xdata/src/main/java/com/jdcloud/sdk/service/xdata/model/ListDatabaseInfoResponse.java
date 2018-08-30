@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * database相关接口
+ * database
  * API related to XDATA-DW database
  *
  * OpenAPI spec version: v1
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.xdata.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询数据库列表
+ * 查询用户实例的所有数据库信息
  */
 public class ListDatabaseInfoResponse extends JdcloudResponse<ListDatabaseInfoResult> implements java.io.Serializable {
 

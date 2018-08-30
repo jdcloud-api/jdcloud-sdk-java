@@ -28,20 +28,20 @@ import com.jdcloud.sdk.service.clouddnsservice.model.RR;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 添加域名解析
+ * 添加域名的解析记录
  */
 public class AddRRResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * dataList
+     * 添加成功后的解析记录结果
      */
     private RR dataList;
 
 
     /**
-     * get dataList
+     * get 添加成功后的解析记录结果
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class AddRRResult extends JdcloudResult implements java.io.Serializable {
     }
 
     /**
-     * set dataList
+     * set 添加成功后的解析记录结果
      *
      * @param dataList
      */
@@ -60,7 +60,7 @@ public class AddRRResult extends JdcloudResult implements java.io.Serializable {
 
 
     /**
-     * set dataList
+     * set 添加成功后的解析记录结果
      *
      * @param dataList
      */

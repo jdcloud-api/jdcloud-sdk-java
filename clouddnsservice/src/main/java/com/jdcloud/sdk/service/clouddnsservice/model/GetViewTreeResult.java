@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.clouddnsservice.model.ViewTree;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询DNS所有解析线路
+ * 查询云解析所有的基础解析线路
  */
 public class GetViewTreeResult extends JdcloudResult implements java.io.Serializable {
 

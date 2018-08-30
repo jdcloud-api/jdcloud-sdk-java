@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询DNS所有解析线路
+ * 查询云解析所有的基础解析线路
  */
 public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -54,7 +54,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     private Integer viewId;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -123,7 +123,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -132,7 +132,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -190,7 +190,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

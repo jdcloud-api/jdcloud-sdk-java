@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.clouddnsservice.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询某个主域名的解析记录
+ * 查询主域名的解析记录
  */
 public class SearchRRResponse extends JdcloudResponse<SearchRRResult> implements java.io.Serializable {
 

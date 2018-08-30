@@ -43,7 +43,7 @@ public class UpdateRRRequest extends JdcloudRequest implements java.io.Serializa
     private UpdateRR req;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -76,7 +76,7 @@ public class UpdateRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class UpdateRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -123,7 +123,7 @@ public class UpdateRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

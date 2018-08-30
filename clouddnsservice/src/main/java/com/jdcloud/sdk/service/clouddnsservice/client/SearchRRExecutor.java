@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.clouddnsservice.model.SearchRRResponse;
 
 /**
- * 查询某个主域名的解析记录
+ * 查询主域名的解析记录
  */
 class SearchRRExecutor extends JdcloudExecutor {
 

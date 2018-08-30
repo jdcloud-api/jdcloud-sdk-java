@@ -35,18 +35,18 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
     private static final long serialVersionUID = 1L;
 
     /**
-     * data
+     * 新添加的的域名结构
      */
     private Domain data;
 
     /**
-     * 收费版的订单号
+     * 添加收费版域名的订单号
      */
     private String order;
 
 
     /**
-     * get data
+     * get 新添加的的域名结构
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set data
+     * set 新添加的的域名结构
      *
      * @param data
      */
@@ -64,7 +64,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get 收费版的订单号
+     * get 添加收费版域名的订单号
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set 收费版的订单号
+     * set 添加收费版域名的订单号
      *
      * @param order
      */
@@ -83,7 +83,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
 
 
     /**
-     * set data
+     * set 新添加的的域名结构
      *
      * @param data
      */
@@ -93,7 +93,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set 收费版的订单号
+     * set 添加收费版域名的订单号
      *
      * @param order
      */

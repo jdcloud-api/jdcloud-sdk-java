@@ -37,17 +37,17 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
     private static final long serialVersionUID = 1L;
 
     /**
-     * currentCount
+     * 当前页面网站监控项的个数
      */
     private Integer currentCount;
 
     /**
-     * totalCount
+     * 所有网站监控项的个数
      */
     private Integer totalCount;
 
     /**
-     * totalPage
+     * 所有网站监控项的页数
      */
     private Integer totalPage;
 
@@ -58,7 +58,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
 
 
     /**
-     * get currentCount
+     * get 当前页面网站监控项的个数
      *
      * @return
      */
@@ -67,7 +67,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set currentCount
+     * set 当前页面网站监控项的个数
      *
      * @param currentCount
      */
@@ -76,7 +76,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * get totalCount
+     * get 所有网站监控项的个数
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set totalCount
+     * set 所有网站监控项的个数
      *
      * @param totalCount
      */
@@ -94,7 +94,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * get totalPage
+     * get 所有网站监控项的页数
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set totalPage
+     * set 所有网站监控项的页数
      *
      * @param totalPage
      */
@@ -131,7 +131,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
 
 
     /**
-     * set currentCount
+     * set 当前页面网站监控项的个数
      *
      * @param currentCount
      */
@@ -141,7 +141,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set totalCount
+     * set 所有网站监控项的个数
      *
      * @param totalCount
      */
@@ -151,7 +151,7 @@ public class GetMonitorResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set totalPage
+     * set 所有网站监控项的页数
      *
      * @param totalPage
      */

@@ -35,26 +35,26 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 当前页数，起始值为1，默认为1
+     * 分页查询时查询的每页的序号，起始值为1，默认为1
      * Required:true
      */
     @Required
     private Integer pageNumber;
 
     /**
-     * 分页查询时设置的每页行数
+     * 分页查询时设置的每页行数，默认为10
      * Required:true
      */
     @Required
     private Integer pageSize;
 
     /**
-     * 关键字，按照”%domainName%”模式搜索主域名
+     * 关键字，按照”%domainName%”模式匹配主域名
      */
     private String domainName;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -62,7 +62,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 当前页数，起始值为1，默认为1
+     * get 分页查询时查询的每页的序号，起始值为1，默认为1
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 当前页数，起始值为1，默认为1
+     * set 分页查询时查询的每页的序号，起始值为1，默认为1
      *
      * @param pageNumber
      */
@@ -80,7 +80,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 分页查询时设置的每页行数
+     * get 分页查询时设置的每页行数，默认为10
      *
      * @return
      */
@@ -89,7 +89,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 分页查询时设置的每页行数
+     * set 分页查询时设置的每页行数，默认为10
      *
      * @param pageSize
      */
@@ -98,7 +98,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 关键字，按照”%domainName%”模式搜索主域名
+     * get 关键字，按照”%domainName%”模式匹配主域名
      *
      * @return
      */
@@ -107,7 +107,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 关键字，按照”%domainName%”模式搜索主域名
+     * set 关键字，按照”%domainName%”模式匹配主域名
      *
      * @param domainName
      */
@@ -116,7 +116,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -125,7 +125,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -135,7 +135,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 当前页数，起始值为1，默认为1
+     * set 分页查询时查询的每页的序号，起始值为1，默认为1
      *
      * @param pageNumber
      */
@@ -145,7 +145,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 分页查询时设置的每页行数
+     * set 分页查询时设置的每页行数，默认为10
      *
      * @param pageSize
      */
@@ -155,7 +155,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 关键字，按照”%domainName%”模式搜索主域名
+     * set 关键字，按照”%domainName%”模式匹配主域名
      *
      * @param domainName
      */
@@ -165,7 +165,7 @@ public class GetDomainsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

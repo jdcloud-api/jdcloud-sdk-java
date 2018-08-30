@@ -35,13 +35,13 @@ public class UpdateDomainResult extends JdcloudResult implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * updateDomain
+     * 修改后的域名结构
      */
     private Domain updateDomain;
 
 
     /**
-     * get updateDomain
+     * get 修改后的域名结构
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class UpdateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set updateDomain
+     * set 修改后的域名结构
      *
      * @param updateDomain
      */
@@ -60,7 +60,7 @@ public class UpdateDomainResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * set updateDomain
+     * set 修改后的域名结构
      *
      * @param updateDomain
      */

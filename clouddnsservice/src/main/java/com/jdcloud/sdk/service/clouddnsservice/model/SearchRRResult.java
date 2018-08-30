@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.clouddnsservice.model.RR;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询某个主域名的解析记录
+ * 查询主域名的解析记录
  */
 public class SearchRRResult extends JdcloudResult implements java.io.Serializable {
 
@@ -42,17 +42,17 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     private List<RR> dataList;
 
     /**
-     * totalCount
+     * 所有解析记录的个数
      */
     private Integer totalCount;
 
     /**
-     * totalPage
+     * 所有解析记录的页数
      */
     private Integer totalPage;
 
     /**
-     * currentCount
+     * 当前页解析记录的个数
      */
     private Integer currentCount;
 
@@ -76,7 +76,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get totalCount
+     * get 所有解析记录的个数
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set totalCount
+     * set 所有解析记录的个数
      *
      * @param totalCount
      */
@@ -94,7 +94,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get totalPage
+     * get 所有解析记录的页数
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set totalPage
+     * set 所有解析记录的页数
      *
      * @param totalPage
      */
@@ -112,7 +112,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get currentCount
+     * get 当前页解析记录的个数
      *
      * @return
      */
@@ -121,7 +121,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set currentCount
+     * set 当前页解析记录的个数
      *
      * @param currentCount
      */
@@ -141,7 +141,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set totalCount
+     * set 所有解析记录的个数
      *
      * @param totalCount
      */
@@ -151,7 +151,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set totalPage
+     * set 所有解析记录的页数
      *
      * @param totalPage
      */
@@ -161,7 +161,7 @@ public class SearchRRResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set currentCount
+     * set 当前页解析记录的个数
      *
      * @param currentCount
      */

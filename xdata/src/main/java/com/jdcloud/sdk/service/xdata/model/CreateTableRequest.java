@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * table
  * API related to XDATA-DW table
  *
  * OpenAPI spec version: v1
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.xdata.model.DwTableDesc;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据表
+ * 创建用户实例的数据表
  */
 public class CreateTableRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -43,7 +43,7 @@ public class CreateTableRequest extends JdcloudRequest implements java.io.Serial
     private String instanceName;
 
     /**
-     * 数据表描述
+     * 数据表描述信息
      * Required:true
      */
     @Required
@@ -76,7 +76,7 @@ public class CreateTableRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 数据表描述
+     * get 数据表描述信息
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class CreateTableRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 数据表描述
+     * set 数据表描述信息
      *
      * @param dbModelDBTable
      */
@@ -123,7 +123,7 @@ public class CreateTableRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 数据表描述
+     * set 数据表描述信息
      *
      * @param dbModelDBTable
      */

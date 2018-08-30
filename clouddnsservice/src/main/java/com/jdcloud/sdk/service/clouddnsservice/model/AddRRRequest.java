@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.clouddnsservice.model.AddRR;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加域名解析
+ * 添加域名的解析记录
  */
 public class AddRRRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -43,7 +43,7 @@ public class AddRRRequest extends JdcloudRequest implements java.io.Serializable
     private AddRR req;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -76,7 +76,7 @@ public class AddRRRequest extends JdcloudRequest implements java.io.Serializable
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class AddRRRequest extends JdcloudRequest implements java.io.Serializable
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -123,7 +123,7 @@ public class AddRRRequest extends JdcloudRequest implements java.io.Serializable
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
