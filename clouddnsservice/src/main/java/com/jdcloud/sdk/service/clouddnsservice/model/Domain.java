@@ -53,7 +53,7 @@ public class Domain  implements java.io.Serializable {
     private Integer expirationDate;
 
     /**
-     * 套餐类型，0-免费 1-企业版 2-高级版
+     * 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;高级版
      */
     private Integer packId;
 
@@ -131,7 +131,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * get 套餐类型，0-免费 1-企业版 2-高级版
+     * get 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;高级版
      *
      * @return
      */
@@ -140,7 +140,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型，0-免费 1-企业版 2-高级版
+     * set 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;高级版
      *
      * @param packId
      */
@@ -190,7 +190,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型，0-免费 1-企业版 2-高级版
+     * set 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;高级版
      *
      * @param packId
      */

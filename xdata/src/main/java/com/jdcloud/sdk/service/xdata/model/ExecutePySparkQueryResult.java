@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * query
  * API related to XDATA-DW query
  *
  * OpenAPI spec version: v1
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.xdata.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 执行PySpark脚本
+ * 执行用户编写的PySpark脚本
  */
 public class ExecutePySparkQueryResult extends JdcloudResult implements java.io.Serializable {
 

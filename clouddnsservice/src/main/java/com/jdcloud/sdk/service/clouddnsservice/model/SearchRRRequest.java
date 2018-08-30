@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询某个主域名的解析记录
+ * 查询主域名的解析记录
  */
 public class SearchRRRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -45,7 +45,7 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     private Integer pageSize;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -96,7 +96,7 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -105,7 +105,7 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -153,7 +153,7 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

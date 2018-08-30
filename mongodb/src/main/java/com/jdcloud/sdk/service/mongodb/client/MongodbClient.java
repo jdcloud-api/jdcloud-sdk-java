@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,18 +31,42 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.mongodb.model.DescribeBackupsRequest;
-import com.jdcloud.sdk.service.mongodb.model.DescribeBackupsResponse;
-import com.jdcloud.sdk.service.mongodb.client.DescribeBackupsExecutor;
-import com.jdcloud.sdk.service.mongodb.model.DescribeInstancesRequest;
-import com.jdcloud.sdk.service.mongodb.model.DescribeInstancesResponse;
-import com.jdcloud.sdk.service.mongodb.client.DescribeInstancesExecutor;
-import com.jdcloud.sdk.service.mongodb.model.ModifyInstanceSpecRequest;
-import com.jdcloud.sdk.service.mongodb.model.ModifyInstanceSpecResponse;
-import com.jdcloud.sdk.service.mongodb.client.ModifyInstanceSpecExecutor;
+import com.jdcloud.sdk.service.mongodb.model.DescribeSecurityIpsRequest;
+import com.jdcloud.sdk.service.mongodb.model.DescribeSecurityIpsResponse;
+import com.jdcloud.sdk.service.mongodb.client.DescribeSecurityIpsExecutor;
 import com.jdcloud.sdk.service.mongodb.model.ModifyInstanceNameRequest;
 import com.jdcloud.sdk.service.mongodb.model.ModifyInstanceNameResponse;
 import com.jdcloud.sdk.service.mongodb.client.ModifyInstanceNameExecutor;
+import com.jdcloud.sdk.service.mongodb.model.ModifySecurityIpsRequest;
+import com.jdcloud.sdk.service.mongodb.model.ModifySecurityIpsResponse;
+import com.jdcloud.sdk.service.mongodb.client.ModifySecurityIpsExecutor;
+import com.jdcloud.sdk.service.mongodb.model.ResetPasswordRequest;
+import com.jdcloud.sdk.service.mongodb.model.ResetPasswordResponse;
+import com.jdcloud.sdk.service.mongodb.client.ResetPasswordExecutor;
+import com.jdcloud.sdk.service.mongodb.model.RestoreInstanceRequest;
+import com.jdcloud.sdk.service.mongodb.model.RestoreInstanceResponse;
+import com.jdcloud.sdk.service.mongodb.client.RestoreInstanceExecutor;
+import com.jdcloud.sdk.service.mongodb.model.DeleteInstanceRequest;
+import com.jdcloud.sdk.service.mongodb.model.DeleteInstanceResponse;
+import com.jdcloud.sdk.service.mongodb.client.DeleteInstanceExecutor;
+import com.jdcloud.sdk.service.mongodb.model.DescribeBackupPolicyRequest;
+import com.jdcloud.sdk.service.mongodb.model.DescribeBackupPolicyResponse;
+import com.jdcloud.sdk.service.mongodb.client.DescribeBackupPolicyExecutor;
+import com.jdcloud.sdk.service.mongodb.model.DescribeFlavorsRequest;
+import com.jdcloud.sdk.service.mongodb.model.DescribeFlavorsResponse;
+import com.jdcloud.sdk.service.mongodb.client.DescribeFlavorsExecutor;
+import com.jdcloud.sdk.service.mongodb.model.BackupDownloadURLRequest;
+import com.jdcloud.sdk.service.mongodb.model.BackupDownloadURLResponse;
+import com.jdcloud.sdk.service.mongodb.client.BackupDownloadURLExecutor;
+import com.jdcloud.sdk.service.mongodb.model.DescribeInstancesRequest;
+import com.jdcloud.sdk.service.mongodb.model.DescribeInstancesResponse;
+import com.jdcloud.sdk.service.mongodb.client.DescribeInstancesExecutor;
+import com.jdcloud.sdk.service.mongodb.model.DescribeBackupsRequest;
+import com.jdcloud.sdk.service.mongodb.model.DescribeBackupsResponse;
+import com.jdcloud.sdk.service.mongodb.client.DescribeBackupsExecutor;
+import com.jdcloud.sdk.service.mongodb.model.ModifyInstanceSpecRequest;
+import com.jdcloud.sdk.service.mongodb.model.ModifyInstanceSpecResponse;
+import com.jdcloud.sdk.service.mongodb.client.ModifyInstanceSpecExecutor;
 import com.jdcloud.sdk.service.mongodb.model.CreateBackupRequest;
 import com.jdcloud.sdk.service.mongodb.model.CreateBackupResponse;
 import com.jdcloud.sdk.service.mongodb.client.CreateBackupExecutor;
@@ -55,21 +79,9 @@ import com.jdcloud.sdk.service.mongodb.client.CreateInstanceExecutor;
 import com.jdcloud.sdk.service.mongodb.model.DeleteBackupRequest;
 import com.jdcloud.sdk.service.mongodb.model.DeleteBackupResponse;
 import com.jdcloud.sdk.service.mongodb.client.DeleteBackupExecutor;
-import com.jdcloud.sdk.service.mongodb.model.RestoreInstanceRequest;
-import com.jdcloud.sdk.service.mongodb.model.RestoreInstanceResponse;
-import com.jdcloud.sdk.service.mongodb.client.RestoreInstanceExecutor;
-import com.jdcloud.sdk.service.mongodb.model.ResetPasswordRequest;
-import com.jdcloud.sdk.service.mongodb.model.ResetPasswordResponse;
-import com.jdcloud.sdk.service.mongodb.client.ResetPasswordExecutor;
-import com.jdcloud.sdk.service.mongodb.model.DescribeBackupPolicyRequest;
-import com.jdcloud.sdk.service.mongodb.model.DescribeBackupPolicyResponse;
-import com.jdcloud.sdk.service.mongodb.client.DescribeBackupPolicyExecutor;
-import com.jdcloud.sdk.service.mongodb.model.DeleteInstanceRequest;
-import com.jdcloud.sdk.service.mongodb.model.DeleteInstanceResponse;
-import com.jdcloud.sdk.service.mongodb.client.DeleteInstanceExecutor;
-import com.jdcloud.sdk.service.mongodb.model.BackupDownloadURLRequest;
-import com.jdcloud.sdk.service.mongodb.model.BackupDownloadURLResponse;
-import com.jdcloud.sdk.service.mongodb.client.BackupDownloadURLExecutor;
+import com.jdcloud.sdk.service.mongodb.model.DescribeAvailableZonesRequest;
+import com.jdcloud.sdk.service.mongodb.model.DescribeAvailableZonesResponse;
+import com.jdcloud.sdk.service.mongodb.client.DescribeAvailableZonesExecutor;
 
 /**
  * mongodbClient
@@ -78,7 +90,7 @@ public class MongodbClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.0";
+    public final static String ClientVersion = "1.0.6";
     public final static String DefaultEndpoint = "mongodb.jdcloud-api.com";
     public final static String ServiceName = "mongodb";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -121,14 +133,102 @@ public class MongodbClient extends JdcloudClient {
 
 
     /**
-     * 查看备份
+     * 查询实例访问白名单
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeBackupsResponse describeBackups(DescribeBackupsRequest request) throws JdcloudSdkException {
-        return new DescribeBackupsExecutor().client(this).execute(request);
+    public DescribeSecurityIpsResponse describeSecurityIps(DescribeSecurityIpsRequest request) throws JdcloudSdkException {
+        return new DescribeSecurityIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改实例名称
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceNameResponse modifyInstanceName(ModifyInstanceNameRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改实例访问白名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifySecurityIpsResponse modifySecurityIps(ModifySecurityIpsRequest request) throws JdcloudSdkException {
+        return new ModifySecurityIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重置密码
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws JdcloudSdkException {
+        return new ResetPasswordExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 数据恢复
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestoreInstanceResponse restoreInstance(RestoreInstanceRequest request) throws JdcloudSdkException {
+        return new RestoreInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws JdcloudSdkException {
+        return new DeleteInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取备份策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackupPolicyResponse describeBackupPolicy(DescribeBackupPolicyRequest request) throws JdcloudSdkException {
+        return new DescribeBackupPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取规格
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeFlavorsResponse describeFlavors(DescribeFlavorsRequest request) throws JdcloudSdkException {
+        return new DescribeFlavorsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取备份下载链接
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BackupDownloadURLResponse backupDownloadURL(BackupDownloadURLRequest request) throws JdcloudSdkException {
+        return new BackupDownloadURLExecutor().client(this).execute(request);
     }
 
     /**
@@ -143,6 +243,17 @@ public class MongodbClient extends JdcloudClient {
     }
 
     /**
+     * 查看备份
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackupsResponse describeBackups(DescribeBackupsRequest request) throws JdcloudSdkException {
+        return new DescribeBackupsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 变更实例规格
      *
      * @param request
@@ -151,17 +262,6 @@ public class MongodbClient extends JdcloudClient {
      */
     public ModifyInstanceSpecResponse modifyInstanceSpec(ModifyInstanceSpecRequest request) throws JdcloudSdkException {
         return new ModifyInstanceSpecExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改实例名称
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyInstanceNameResponse modifyInstanceName(ModifyInstanceNameRequest request) throws JdcloudSdkException {
-        return new ModifyInstanceNameExecutor().client(this).execute(request);
     }
 
     /**
@@ -209,58 +309,14 @@ public class MongodbClient extends JdcloudClient {
     }
 
     /**
-     * 数据恢复
+     * 获取可用区
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public RestoreInstanceResponse restoreInstance(RestoreInstanceRequest request) throws JdcloudSdkException {
-        return new RestoreInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 重置密码
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws JdcloudSdkException {
-        return new ResetPasswordExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取备份策略
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeBackupPolicyResponse describeBackupPolicy(DescribeBackupPolicyRequest request) throws JdcloudSdkException {
-        return new DescribeBackupPolicyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除实例
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws JdcloudSdkException {
-        return new DeleteInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取备份下载链接
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public BackupDownloadURLResponse backupDownloadURL(BackupDownloadURLRequest request) throws JdcloudSdkException {
-        return new BackupDownloadURLExecutor().client(this).execute(request);
+    public DescribeAvailableZonesResponse describeAvailableZones(DescribeAvailableZonesRequest request) throws JdcloudSdkException {
+        return new DescribeAvailableZonesExecutor().client(this).execute(request);
     }
 
 

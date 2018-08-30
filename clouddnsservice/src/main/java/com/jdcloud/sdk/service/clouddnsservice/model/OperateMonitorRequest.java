@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换
+ * 监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换
  */
 public class OperateMonitorRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -56,7 +56,7 @@ public class OperateMonitorRequest extends JdcloudRequest implements java.io.Ser
     private String switchTarget;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -125,7 +125,7 @@ public class OperateMonitorRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class OperateMonitorRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -192,7 +192,7 @@ public class OperateMonitorRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

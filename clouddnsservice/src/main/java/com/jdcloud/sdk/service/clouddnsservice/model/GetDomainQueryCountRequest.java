@@ -35,7 +35,7 @@ public class GetDomainQueryCountRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名
+     * 查询的域名
      * Required:true
      */
     @Required
@@ -56,7 +56,7 @@ public class GetDomainQueryCountRequest extends JdcloudRequest implements java.i
     private String end;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -71,7 +71,7 @@ public class GetDomainQueryCountRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 域名
+     * get 查询的域名
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class GetDomainQueryCountRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 域名
+     * set 查询的域名
      *
      * @param domainName
      */
@@ -125,7 +125,7 @@ public class GetDomainQueryCountRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class GetDomainQueryCountRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -162,7 +162,7 @@ public class GetDomainQueryCountRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 域名
+     * set 查询的域名
      *
      * @param domainName
      */
@@ -192,7 +192,7 @@ public class GetDomainQueryCountRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

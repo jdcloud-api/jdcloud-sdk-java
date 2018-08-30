@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * database相关接口
+ * database
  * API related to XDATA-DW database
  *
  * OpenAPI spec version: v1
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.xdata.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除数据库
+ * 删除用户实例的指定数据库
  */
 public class DeleteDatabaseResponse extends JdcloudResponse<DeleteDatabaseResult> implements java.io.Serializable {
 

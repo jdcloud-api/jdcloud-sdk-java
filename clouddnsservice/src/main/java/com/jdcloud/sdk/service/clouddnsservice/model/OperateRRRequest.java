@@ -44,14 +44,14 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     private List<Integer> ids;
 
     /**
-     * 操作类型，on/off/del，分别是启用、停用、删除解析记录
+     * 操作类型，on-&gt;启用 off-&gt;停用 del-&gt;删除
      * Required:true
      */
     @Required
     private String action;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -84,7 +84,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 操作类型，on/off/del，分别是启用、停用、删除解析记录
+     * get 操作类型，on-&gt;启用 off-&gt;停用 del-&gt;删除
      *
      * @return
      */
@@ -93,7 +93,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 操作类型，on/off/del，分别是启用、停用、删除解析记录
+     * set 操作类型，on-&gt;启用 off-&gt;停用 del-&gt;删除
      *
      * @param action
      */
@@ -102,7 +102,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -111,7 +111,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -149,7 +149,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 操作类型，on/off/del，分别是启用、停用、删除解析记录
+     * set 操作类型，on-&gt;启用 off-&gt;停用 del-&gt;删除
      *
      * @param action
      */
@@ -159,7 +159,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

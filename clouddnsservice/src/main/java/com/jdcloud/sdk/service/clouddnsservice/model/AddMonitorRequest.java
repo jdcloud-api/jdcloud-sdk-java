@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加子域名的监控项，采用默认配置
+ * 添加子域名的监控项，默认把子域名的所有监控项都添加上监控
  */
 public class AddMonitorRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class AddMonitorRequest extends JdcloudRequest implements java.io.Seriali
     private String subDomainName;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -75,7 +75,7 @@ public class AddMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -84,7 +84,7 @@ public class AddMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -122,7 +122,7 @@ public class AddMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

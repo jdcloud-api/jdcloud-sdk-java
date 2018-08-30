@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.clouddnsservice.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询DNS所有解析线路
+ * 查询云解析所有的基础解析线路
  */
 public class GetViewTreeResponse extends JdcloudResponse<GetViewTreeResult> implements java.io.Serializable {
 

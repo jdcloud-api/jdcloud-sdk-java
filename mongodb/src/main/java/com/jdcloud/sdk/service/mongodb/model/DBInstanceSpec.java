@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -101,6 +101,16 @@ public class DBInstanceSpec  implements java.io.Serializable {
      * 按备份创建使用的具体备份ID
      */
     private String backupId;
+
+    /**
+     * 基于一个实例的备份创建新实例，如填写则restoreTime也需要填写。
+     */
+    private String originDBInstanceId;
+
+    /**
+     * 用户指定备份保留周期内的任意时间点，如2011-06-11T16:00:00Z，非必填，与backupId互斥。
+     */
+    private String restoreTime;
 
 
     /**
@@ -301,6 +311,42 @@ public class DBInstanceSpec  implements java.io.Serializable {
         this.backupId = backupId;
     }
 
+    /**
+     * get 基于一个实例的备份创建新实例，如填写则restoreTime也需要填写。
+     *
+     * @return
+     */
+    public String getOriginDBInstanceId() {
+        return originDBInstanceId;
+    }
+
+    /**
+     * set 基于一个实例的备份创建新实例，如填写则restoreTime也需要填写。
+     *
+     * @param originDBInstanceId
+     */
+    public void setOriginDBInstanceId(String originDBInstanceId) {
+        this.originDBInstanceId = originDBInstanceId;
+    }
+
+    /**
+     * get 用户指定备份保留周期内的任意时间点，如2011-06-11T16:00:00Z，非必填，与backupId互斥。
+     *
+     * @return
+     */
+    public String getRestoreTime() {
+        return restoreTime;
+    }
+
+    /**
+     * set 用户指定备份保留周期内的任意时间点，如2011-06-11T16:00:00Z，非必填，与backupId互斥。
+     *
+     * @param restoreTime
+     */
+    public void setRestoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
+    }
+
 
     /**
      * set 实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符。
@@ -409,6 +455,26 @@ public class DBInstanceSpec  implements java.io.Serializable {
      */
     public DBInstanceSpec backupId(String backupId) {
         this.backupId = backupId;
+        return this;
+    }
+
+    /**
+     * set 基于一个实例的备份创建新实例，如填写则restoreTime也需要填写。
+     *
+     * @param originDBInstanceId
+     */
+    public DBInstanceSpec originDBInstanceId(String originDBInstanceId) {
+        this.originDBInstanceId = originDBInstanceId;
+        return this;
+    }
+
+    /**
+     * set 用户指定备份保留周期内的任意时间点，如2011-06-11T16:00:00Z，非必填，与backupId互斥。
+     *
+     * @param restoreTime
+     */
+    public DBInstanceSpec restoreTime(String restoreTime) {
+        this.restoreTime = restoreTime;
         return this;
     }
 

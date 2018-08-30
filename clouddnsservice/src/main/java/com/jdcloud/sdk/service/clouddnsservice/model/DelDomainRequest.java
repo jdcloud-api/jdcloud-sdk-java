@@ -35,14 +35,14 @@ public class DelDomainRequest extends JdcloudRequest implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名ID
+     * 需要删除的域名ID
      * Required:true
      */
     @Required
     private Integer domainId;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DelDomainRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 域名ID
+     * get 需要删除的域名ID
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DelDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 域名ID
+     * set 需要删除的域名ID
      *
      * @param domainId
      */
@@ -68,7 +68,7 @@ public class DelDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DelDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -87,7 +87,7 @@ public class DelDomainRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 域名ID
+     * set 需要删除的域名ID
      *
      * @param domainId
      */
@@ -97,7 +97,7 @@ public class DelDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

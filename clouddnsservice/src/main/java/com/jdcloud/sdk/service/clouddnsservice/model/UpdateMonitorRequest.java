@@ -43,7 +43,7 @@ public class UpdateMonitorRequest extends JdcloudRequest implements java.io.Seri
     private UpdateMonitor updateMonitor;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -76,7 +76,7 @@ public class UpdateMonitorRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class UpdateMonitorRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -123,7 +123,7 @@ public class UpdateMonitorRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

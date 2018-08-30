@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * database相关接口
+ * database
  * API related to XDATA-DW database
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据库
+ * 创建属于用户实例的数据库
  */
 public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Ser
     private String instanceName;
 
     /**
-     * 描述信息
+     * 数据库描述信息
      */
     private String description;
 
@@ -80,7 +80,7 @@ public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 描述信息
+     * get 数据库描述信息
      *
      * @return
      */
@@ -89,7 +89,7 @@ public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 描述信息
+     * set 数据库描述信息
      *
      * @param description
      */
@@ -145,7 +145,7 @@ public class CreateDatabaseRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 描述信息
+     * set 数据库描述信息
      *
      * @param description
      */
