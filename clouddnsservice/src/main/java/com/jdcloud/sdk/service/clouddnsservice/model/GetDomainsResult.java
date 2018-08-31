@@ -42,14 +42,19 @@ public class GetDomainsResult extends JdcloudResult implements java.io.Serializa
     private List<Domain> dataList;
 
     /**
-     * currentCount
+     * 当前页的域名列表里域名的个数
      */
     private Integer currentCount;
 
     /**
-     * totalCount
+     * 所有匹配的域名列表的个数
      */
     private Integer totalCount;
+
+    /**
+     * 所有匹配的域名列表按照分页参数一共的页数
+     */
+    private Integer totalPage;
 
 
     /**
@@ -71,7 +76,7 @@ public class GetDomainsResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * get currentCount
+     * get 当前页的域名列表里域名的个数
      *
      * @return
      */
@@ -80,7 +85,7 @@ public class GetDomainsResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set currentCount
+     * set 当前页的域名列表里域名的个数
      *
      * @param currentCount
      */
@@ -89,7 +94,7 @@ public class GetDomainsResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * get totalCount
+     * get 所有匹配的域名列表的个数
      *
      * @return
      */
@@ -98,12 +103,30 @@ public class GetDomainsResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set totalCount
+     * set 所有匹配的域名列表的个数
      *
      * @param totalCount
      */
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
+    }
+
+    /**
+     * get 所有匹配的域名列表按照分页参数一共的页数
+     *
+     * @return
+     */
+    public Integer getTotalPage() {
+        return totalPage;
+    }
+
+    /**
+     * set 所有匹配的域名列表按照分页参数一共的页数
+     *
+     * @param totalPage
+     */
+    public void setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
     }
 
 
@@ -118,7 +141,7 @@ public class GetDomainsResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set currentCount
+     * set 当前页的域名列表里域名的个数
      *
      * @param currentCount
      */
@@ -128,12 +151,22 @@ public class GetDomainsResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set totalCount
+     * set 所有匹配的域名列表的个数
      *
      * @param totalCount
      */
     public GetDomainsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
+        return this;
+    }
+
+    /**
+     * set 所有匹配的域名列表按照分页参数一共的页数
+     *
+     * @param totalPage
+     */
+    public GetDomainsResult totalPage(Integer totalPage) {
+        this.totalPage = totalPage;
         return this;
     }
 

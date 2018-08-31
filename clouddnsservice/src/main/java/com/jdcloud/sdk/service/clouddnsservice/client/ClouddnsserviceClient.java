@@ -93,7 +93,7 @@ public class ClouddnsserviceClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.1";
+    public final static String ClientVersion = "1.0.6";
     public final static String DefaultEndpoint = "clouddnsservice.jdcloud-api.com";
     public final static String ServiceName = "clouddnsservice";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -158,7 +158,7 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 添加域名解析
+     * 添加域名的解析记录
      *
      * @param request
      * @return
@@ -246,7 +246,7 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 添加子域名的监控项，采用默认配置
+     * 添加子域名的监控项，默认把子域名的所有监控项都添加上监控
      *
      * @param request
      * @return
@@ -257,7 +257,7 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 查询DNS所有解析线路
+     * 查询云解析所有的基础解析线路
      *
      * @param request
      * @return
@@ -290,7 +290,7 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换
+     * 监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换
      *
      * @param request
      * @return
@@ -312,7 +312,7 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 查询某个主域名的解析记录
+     * 查询主域名的解析记录
      *
      * @param request
      * @return

@@ -4,11 +4,11 @@ import com.jdcloud.sdk.model.ServiceError;
 
 public class JdcloudResponse<R extends JdcloudResult> {
 
-    protected String requestId;
+    private String requestId;
 
-    protected ServiceError error;
+    private ServiceError error;
 
-    protected R result;
+    private R result;
 
     public void setRequestId(String requestId) {
         this.requestId = requestId;
@@ -17,9 +17,17 @@ public class JdcloudResponse<R extends JdcloudResult> {
     public String getRequestId() {
         return requestId;
     }
+    
+    public void setError(ServiceError error) {
+        this.error = error;
+    }
 
     public ServiceError getError() {
         return error;
+    }
+
+    public void setResult(R result) {
+        this.result = result;
     }
 
     public R getResult() {

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * query
  * API related to XDATA-DW query
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取查询日志
+ * 获取用户Spark SQL脚本的查询日志
  */
 public class GetRasQueryLogRequest extends JdcloudRequest implements java.io.Serializable {
 

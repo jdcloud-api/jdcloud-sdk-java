@@ -1,14 +1,12 @@
 package com.jdcloud.sdk.client;
 
+import com.alibaba.fastjson.parser.Feature;
 import com.google.api.client.http.*;
 import com.google.api.client.http.apache.ApacheHttpTransport;
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
 import com.jdcloud.sdk.auth.CredentialsProvider;
 import com.jdcloud.sdk.http.HttpRequestConfig;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,8 +20,12 @@ public abstract class JdcloudClient {
     // http请求相关配置
     HttpTransport httpTransport = new ApacheHttpTransport();
     HttpRequestFactory httpRequestFactory;
-    Gson gson = new Gson();
+
     private Map<String, String> customHeader = new HashMap<>();
+
+    public final static Feature[] FEATURES = { Feature.AutoCloseSource, Feature.UseBigDecimal,
+            Feature.AllowUnQuotedFieldNames, Feature.AllowSingleQuotes, Feature.AllowArbitraryCommas,
+            Feature.AllowArbitraryCommas, Feature.SortFeidFastMatch, Feature.IgnoreNotMatch };
 
     /**
      * 构造
@@ -71,10 +73,10 @@ public abstract class JdcloudClient {
      * @throws JsonMappingException
      */
     <T> T readValue(InputStream src, Class<T> valueType) throws IOException {
-        if(src == null)
+        if (src == null)
             return null;
-        JsonReader reader = new JsonReader(new InputStreamReader(src, "UTF-8"));
-        return this.gson.fromJson(reader, valueType);
+        return com.alibaba.fastjson.JSON.parseObject(src, valueType, FEATURES);
+
     }
 
     /**
@@ -89,7 +91,7 @@ public abstract class JdcloudClient {
      * @throws JsonMappingException
      */
     <T> T readValue(String text, Class<T> valueType) {
-        return this.gson.fromJson(text, valueType);
+        return com.alibaba.fastjson.JSON.parseObject(text, valueType);
     }
 
     String getEndpoint() {

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -144,6 +144,11 @@ public class DBInstance  implements java.io.Serializable {
      * 计费信息
      */
     private Charge charge;
+
+    /**
+     * 是否设置白名单，true：已设置，false：未设置
+     */
+    private Boolean isSetSecurityIps;
 
 
     /**
@@ -542,6 +547,24 @@ public class DBInstance  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 是否设置白名单，true：已设置，false：未设置
+     *
+     * @return
+     */
+    public Boolean getIsSetSecurityIps() {
+        return isSetSecurityIps;
+    }
+
+    /**
+     * set 是否设置白名单，true：已设置，false：未设置
+     *
+     * @param isSetSecurityIps
+     */
+    public void setIsSetSecurityIps(Boolean isSetSecurityIps) {
+        this.isSetSecurityIps = isSetSecurityIps;
+    }
+
 
     /**
      * set 实例ID
@@ -760,6 +783,16 @@ public class DBInstance  implements java.io.Serializable {
      */
     public DBInstance charge(Charge charge) {
         this.charge = charge;
+        return this;
+    }
+
+    /**
+     * set 是否设置白名单，true：已设置，false：未设置
+     *
+     * @param isSetSecurityIps
+     */
+    public DBInstance isSetSecurityIps(Boolean isSetSecurityIps) {
+        this.isSetSecurityIps = isSetSecurityIps;
         return this;
     }
 

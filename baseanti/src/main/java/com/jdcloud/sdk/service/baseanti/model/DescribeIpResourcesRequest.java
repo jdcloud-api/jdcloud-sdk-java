@@ -35,12 +35,35 @@ public class DescribeIpResourcesRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
+     * IP模糊匹配
+     */
+    private String ip;
+
+    /**
      * Region ID
      * Required:true
      */
     @Required
     private String regionId;
 
+
+    /**
+     * get IP模糊匹配
+     *
+     * @return
+     */
+    public String getIp() {
+        return ip;
+    }
+
+    /**
+     * set IP模糊匹配
+     *
+     * @param ip
+     */
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
 
     /**
      * get Region ID
@@ -60,6 +83,16 @@ public class DescribeIpResourcesRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
     }
 
+
+    /**
+     * set IP模糊匹配
+     *
+     * @param ip
+     */
+    public DescribeIpResourcesRequest ip(String ip) {
+        this.ip = ip;
+        return this;
+    }
 
     /**
      * set Region ID

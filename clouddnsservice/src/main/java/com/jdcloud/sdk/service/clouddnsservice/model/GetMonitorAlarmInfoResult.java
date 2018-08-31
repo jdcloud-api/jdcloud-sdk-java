@@ -37,17 +37,17 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * currentCount
+     * 当前页面报警信息的个数
      */
     private Integer currentCount;
 
     /**
-     * totalCount
+     * 所有报警信息的个数
      */
     private Integer totalCount;
 
     /**
-     * totalPage
+     * 所有报警信息的页数
      */
     private Integer totalPage;
 
@@ -58,7 +58,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
 
 
     /**
-     * get currentCount
+     * get 当前页面报警信息的个数
      *
      * @return
      */
@@ -67,7 +67,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set currentCount
+     * set 当前页面报警信息的个数
      *
      * @param currentCount
      */
@@ -76,7 +76,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * get totalCount
+     * get 所有报警信息的个数
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set totalCount
+     * set 所有报警信息的个数
      *
      * @param totalCount
      */
@@ -94,7 +94,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * get totalPage
+     * get 所有报警信息的页数
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set totalPage
+     * set 所有报警信息的页数
      *
      * @param totalPage
      */
@@ -131,7 +131,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
 
 
     /**
-     * set currentCount
+     * set 当前页面报警信息的个数
      *
      * @param currentCount
      */
@@ -141,7 +141,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set totalCount
+     * set 所有报警信息的个数
      *
      * @param totalCount
      */
@@ -151,7 +151,7 @@ public class GetMonitorAlarmInfoResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set totalPage
+     * set 所有报警信息的页数
      *
      * @param totalPage
      */
