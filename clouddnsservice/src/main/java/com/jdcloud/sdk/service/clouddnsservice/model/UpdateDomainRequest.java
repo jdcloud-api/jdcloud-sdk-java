@@ -35,21 +35,21 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名
+     * 需要修改的域名
      * Required:true
      */
     @Required
     private String domainName;
 
     /**
-     * 域名ID
+     * 需要修改的域名ID
      * Required:true
      */
     @Required
     private Integer id;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 域名
+     * get 需要修改的域名
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 域名
+     * set 需要修改的域名
      *
      * @param domainName
      */
@@ -75,7 +75,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 域名ID
+     * get 需要修改的域名ID
      *
      * @return
      */
@@ -84,7 +84,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 域名ID
+     * set 需要修改的域名ID
      *
      * @param id
      */
@@ -93,7 +93,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -102,7 +102,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -112,7 +112,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 域名
+     * set 需要修改的域名
      *
      * @param domainName
      */
@@ -122,7 +122,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 域名ID
+     * set 需要修改的域名ID
      *
      * @param id
      */
@@ -132,7 +132,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

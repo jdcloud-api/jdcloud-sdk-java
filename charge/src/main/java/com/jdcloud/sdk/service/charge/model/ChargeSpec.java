@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,23 +33,23 @@ public class ChargeSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+     * 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
      */
     private String chargeMode;
 
     /**
-     * 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
      */
     private String chargeUnit;
 
     /**
-     * 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      */
     private Integer chargeDuration;
 
 
     /**
-     * get 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+     * get 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @param chargeMode
      */
@@ -67,7 +67,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * get 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * set 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
      *
      * @param chargeUnit
      */
@@ -85,7 +85,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * get 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * set 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @param chargeDuration
      */
@@ -104,7 +104,7 @@ public class ChargeSpec  implements java.io.Serializable {
 
 
     /**
-     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @param chargeMode
      */
@@ -114,7 +114,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * set 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
      *
      * @param chargeUnit
      */
@@ -124,7 +124,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * set 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @param chargeDuration
      */

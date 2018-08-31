@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 容器服务
- * 关于容器服务相前接口
+ * 原生容器
+ * 关于原生容器相前接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.nc.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 云容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
+ * 容器解绑公网IP 解绑的是主网卡、主内网IP对应的弹性IP
  */
 public class DisassociateElasticIpResult extends JdcloudResult implements java.io.Serializable {
 

@@ -50,7 +50,7 @@ public class GetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     private String searchValue;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -119,7 +119,7 @@ public class GetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -128,7 +128,7 @@ public class GetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -186,7 +186,7 @@ public class GetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

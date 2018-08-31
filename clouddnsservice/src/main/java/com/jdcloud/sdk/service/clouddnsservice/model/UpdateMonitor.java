@@ -58,7 +58,7 @@ public class UpdateMonitor  implements java.io.Serializable {
     private Integer monitorEnable;
 
     /**
-     * 监控频率，单位s
+     * 监控频率，单位秒
      */
     private Integer monitorFreq;
 
@@ -199,7 +199,7 @@ public class UpdateMonitor  implements java.io.Serializable {
     }
 
     /**
-     * get 监控频率，单位s
+     * get 监控频率，单位秒
      *
      * @return
      */
@@ -208,7 +208,7 @@ public class UpdateMonitor  implements java.io.Serializable {
     }
 
     /**
-     * set 监控频率，单位s
+     * set 监控频率，单位秒
      *
      * @param monitorFreq
      */
@@ -430,7 +430,7 @@ public class UpdateMonitor  implements java.io.Serializable {
     }
 
     /**
-     * set 监控频率，单位s
+     * set 监控频率，单位秒
      *
      * @param monitorFreq
      */

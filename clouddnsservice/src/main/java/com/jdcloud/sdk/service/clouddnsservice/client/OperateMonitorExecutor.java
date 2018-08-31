@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.clouddnsservice.model.OperateMonitorResponse;
 
 /**
- * 监控项的操作，包括：删除，暂停，启动, 手动恢复, 手动切换
+ * 监控项的操作集合，包括：删除，暂停，启动, 手动恢复, 手动切换
  */
 class OperateMonitorExecutor extends JdcloudExecutor {
 

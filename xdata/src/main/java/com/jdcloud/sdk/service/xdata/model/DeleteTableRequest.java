@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * table
  * API related to XDATA-DW table
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除数据表
+ * 删除用户实例的指定数据表
  */
 public class DeleteTableRequest extends JdcloudRequest implements java.io.Serializable {
 

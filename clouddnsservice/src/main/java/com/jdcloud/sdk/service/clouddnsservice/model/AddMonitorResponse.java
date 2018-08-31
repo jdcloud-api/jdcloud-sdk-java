@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.clouddnsservice.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 添加子域名的监控项，采用默认配置
+ * 添加子域名的监控项，默认把子域名的所有监控项都添加上监控
  */
 public class AddMonitorResponse extends JdcloudResponse<AddMonitorResult> implements java.io.Serializable {
 

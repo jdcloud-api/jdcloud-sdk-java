@@ -51,7 +51,7 @@ public class AddMonitorTargetRequest extends JdcloudRequest implements java.io.S
     private List<String> targets;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -102,7 +102,7 @@ public class AddMonitorTargetRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -111,7 +111,7 @@ public class AddMonitorTargetRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -159,7 +159,7 @@ public class AddMonitorTargetRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

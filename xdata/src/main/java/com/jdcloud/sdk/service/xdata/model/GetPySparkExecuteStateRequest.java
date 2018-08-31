@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * query
  * API related to XDATA-DW query
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取PySpark脚本的执行状态
+ * 获取用户PySpark脚本的执行状态
  */
 public class GetPySparkExecuteStateRequest extends JdcloudRequest implements java.io.Serializable {
 

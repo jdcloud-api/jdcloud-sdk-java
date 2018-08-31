@@ -35,14 +35,14 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 套餐类型, 0免费 ,1企业版, 2高级版
+     * 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
      * Required:true
      */
     @Required
     private Integer packId;
 
     /**
-     * 域名
+     * 要添加的域名
      * Required:true
      */
     @Required
@@ -54,27 +54,27 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     private Integer domainId;
 
     /**
-     * 1新购买、2升级，高级版必填
+     * 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
      */
     private Integer buyType;
 
     /**
-     * 1-3 ，时长，高级版必填
+     * 1，2，3 ，时长，收费套餐的域名必填
      */
     private Integer timeSpan;
 
     /**
-     * 时间单位，高级版必填
+     * 时间单位，收费套餐的域名必填
      */
     private Integer timeUnit;
 
     /**
-     * 计费类型，高级版必填
+     * 计费类型，收费套餐的域名必填
      */
     private Integer billingType;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -82,7 +82,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 套餐类型, 0免费 ,1企业版, 2高级版
+     * get 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 套餐类型, 0免费 ,1企业版, 2高级版
+     * set 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
      *
      * @param packId
      */
@@ -100,7 +100,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 域名
+     * get 要添加的域名
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 域名
+     * set 要添加的域名
      *
      * @param domainName
      */
@@ -136,7 +136,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 1新购买、2升级，高级版必填
+     * get 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
      *
      * @return
      */
@@ -145,7 +145,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 1新购买、2升级，高级版必填
+     * set 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
      *
      * @param buyType
      */
@@ -154,7 +154,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 1-3 ，时长，高级版必填
+     * get 1，2，3 ，时长，收费套餐的域名必填
      *
      * @return
      */
@@ -163,7 +163,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 1-3 ，时长，高级版必填
+     * set 1，2，3 ，时长，收费套餐的域名必填
      *
      * @param timeSpan
      */
@@ -172,7 +172,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 时间单位，高级版必填
+     * get 时间单位，收费套餐的域名必填
      *
      * @return
      */
@@ -181,7 +181,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 时间单位，高级版必填
+     * set 时间单位，收费套餐的域名必填
      *
      * @param timeUnit
      */
@@ -190,7 +190,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 计费类型，高级版必填
+     * get 计费类型，收费套餐的域名必填
      *
      * @return
      */
@@ -199,7 +199,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 计费类型，高级版必填
+     * set 计费类型，收费套餐的域名必填
      *
      * @param billingType
      */
@@ -208,7 +208,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -217,7 +217,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -227,7 +227,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 套餐类型, 0免费 ,1企业版, 2高级版
+     * set 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
      *
      * @param packId
      */
@@ -237,7 +237,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 域名
+     * set 要添加的域名
      *
      * @param domainName
      */
@@ -257,7 +257,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 1新购买、2升级，高级版必填
+     * set 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
      *
      * @param buyType
      */
@@ -267,7 +267,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 1-3 ，时长，高级版必填
+     * set 1，2，3 ，时长，收费套餐的域名必填
      *
      * @param timeSpan
      */
@@ -277,7 +277,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 时间单位，高级版必填
+     * set 时间单位，收费套餐的域名必填
      *
      * @param timeUnit
      */
@@ -287,7 +287,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 计费类型，高级版必填
+     * set 计费类型，收费套餐的域名必填
      *
      * @param billingType
      */
@@ -297,7 +297,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

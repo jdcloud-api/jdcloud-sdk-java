@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * instance相关接口
+ * 实例管理
  * API related to MONGODB instances
  *
  * OpenAPI spec version: v1
@@ -52,6 +52,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
      * instanceId - 实例ID, 精确匹配
 instanceName - 实例名称, 模糊匹配
 instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+chargeMode - 计费类型，精确匹配
 
      */
     private List<Filter> filters;
@@ -110,6 +111,7 @@ instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, E
      * get instanceId - 实例ID, 精确匹配
 instanceName - 实例名称, 模糊匹配
 instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+chargeMode - 计费类型，精确匹配
 
      *
      * @return
@@ -122,6 +124,7 @@ instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, E
      * set instanceId - 实例ID, 精确匹配
 instanceName - 实例名称, 模糊匹配
 instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+chargeMode - 计费类型，精确匹配
 
      *
      * @param filters
@@ -193,6 +196,7 @@ instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, E
      * set instanceId - 实例ID, 精确匹配
 instanceName - 实例名称, 模糊匹配
 instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+chargeMode - 计费类型，精确匹配
 
      *
      * @param filters
@@ -228,6 +232,7 @@ instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, E
      * add item to instanceId - 实例ID, 精确匹配
 instanceName - 实例名称, 模糊匹配
 instanceStatus - mongodb状态，精确匹配，支持多个.RUNNING：运行, ERROR：错误 ,BUILDING：创建中, DELETING：删除中, RESTORING：恢复中, RESIZING：变配中
+chargeMode - 计费类型，精确匹配
 
      *
      * @param filter

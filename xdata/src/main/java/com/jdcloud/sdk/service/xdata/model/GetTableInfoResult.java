@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * table
  * API related to XDATA-DW table
  *
  * OpenAPI spec version: v1
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.xdata.model.DwTable;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询数据表信息
+ * 查询用户实例的指定数据表信息
  */
 public class GetTableInfoResult extends JdcloudResult implements java.io.Serializable {
 

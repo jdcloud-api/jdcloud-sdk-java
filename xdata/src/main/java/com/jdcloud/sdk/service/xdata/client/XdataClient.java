@@ -93,7 +93,7 @@ public class XdataClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.1";
+    public final static String ClientVersion = "1.0.6";
     public final static String DefaultEndpoint = "xdata.jdcloud-api.com";
     public final static String ServiceName = "xdata";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -136,7 +136,7 @@ public class XdataClient extends JdcloudClient {
 
 
     /**
-     * 执行PySpark脚本
+     * 执行用户编写的PySpark脚本
      *
      * @param request
      * @return
@@ -147,7 +147,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 查询指定数据库下所有数据表
+     * 查询用户实例指定数据库下的所有数据表信息
      *
      * @param request
      * @return
@@ -158,7 +158,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 查询数据库列表
+     * 查询用户实例的所有数据库信息
      *
      * @param request
      * @return
@@ -169,7 +169,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 删除数据库
+     * 删除用户实例的指定数据库
      *
      * @param request
      * @return
@@ -180,7 +180,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 创建数据库
+     * 创建属于用户实例的数据库
      *
      * @param request
      * @return
@@ -191,7 +191,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 获取PySpark执行的结果
+     * 获取用户PySpark脚本的执行结果
      *
      * @param request
      * @return
@@ -202,7 +202,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 查询实例列表
+     * 查询用户所属的实例信息
      *
      * @param request
      * @return
@@ -213,7 +213,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 获取查询日志
+     * 获取用户Spark SQL脚本的查询日志
      *
      * @param request
      * @return
@@ -224,7 +224,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 执行Spark SQL
+     * 执行用户编写的Spark SQL脚本
      *
      * @param request
      * @return
@@ -235,7 +235,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 查询数据表信息
+     * 查询用户实例的指定数据表信息
      *
      * @param request
      * @return
@@ -246,7 +246,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 删除数据表
+     * 删除用户实例的指定数据表
      *
      * @param request
      * @return
@@ -257,7 +257,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 获取查询的结果
+     * 获取用户Spark SQL脚本的查询结果
      *
      * @param request
      * @return
@@ -268,7 +268,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 终止PySpark任务
+     * 终止用户PySpark脚本任务
      *
      * @param request
      * @return
@@ -279,7 +279,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 终止查询
+     * 终止用户Spark SQL脚本查询
      *
      * @param request
      * @return
@@ -290,7 +290,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 获取PySpark脚本的执行状态
+     * 获取用户PySpark脚本的执行状态
      *
      * @param request
      * @return
@@ -301,7 +301,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 查询数据库详情
+     * 查询用户实例的指定数据库信息
      *
      * @param request
      * @return
@@ -312,7 +312,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 创建数据表
+     * 创建用户实例的数据表
      *
      * @param request
      * @return
@@ -323,7 +323,7 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 获取查询状态
+     * 获取用户Spark SQL脚本的查询状态
      *
      * @param request
      * @return

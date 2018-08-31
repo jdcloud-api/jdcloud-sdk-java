@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * table相关接口
+ * query
  * API related to XDATA-DW query
  *
  * OpenAPI spec version: v1
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.xdata.model.ExecuteRasQueryResponse;
 
 /**
- * 执行Spark SQL
+ * 执行用户编写的Spark SQL脚本
  */
 class ExecuteRasQueryExecutor extends JdcloudExecutor {
 

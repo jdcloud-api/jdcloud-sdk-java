@@ -56,7 +56,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     private String end;
 
     /**
-     * Region ID
+     * 实例所属的地域ID
      * Required:true
      */
     @Required
@@ -125,7 +125,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get Region ID
+     * get 实例所属的地域ID
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */
@@ -192,7 +192,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set Region ID
+     * set 实例所属的地域ID
      *
      * @param regionId
      */

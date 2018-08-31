@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     private String category;
 
     /**
-     * 自动删除，删除主机时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
+     * 自动删除，删除容器时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
      */
     private Boolean autoDelete;
 
@@ -96,7 +96,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 自动删除，删除主机时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
+     * get 自动删除，删除容器时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
      *
      * @return
      */
@@ -105,7 +105,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 自动删除，删除主机时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
+     * set 自动删除，删除容器时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
      *
      * @param autoDelete
      */
@@ -233,7 +233,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 自动删除，删除主机时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
+     * set 自动删除，删除容器时自动删除此volume，默认为True；只支持磁盘是云硬盘的场景
      *
      * @param autoDelete
      */
