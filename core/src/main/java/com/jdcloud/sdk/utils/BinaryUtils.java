@@ -37,7 +37,7 @@ public class BinaryUtils {
 
     public static byte[] copyAllBytesFrom(ByteBuffer bb) {
         if (bb == null) {
-            return null;
+            return new byte[0];
         }
 
         if (bb.hasArray()) {
@@ -57,7 +57,7 @@ public class BinaryUtils {
 
     public static byte[] copyBytesFrom(ByteBuffer bb) {
         if (bb == null) {
-            return null;
+            return new byte[0];
         }
 
         if (bb.hasArray()) {
