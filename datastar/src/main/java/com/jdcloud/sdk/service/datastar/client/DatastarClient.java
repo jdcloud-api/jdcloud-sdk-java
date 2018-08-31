@@ -31,9 +31,6 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.datastar.model.TestWelcomeRequest;
-import com.jdcloud.sdk.service.datastar.model.TestWelcomeResponse;
-import com.jdcloud.sdk.service.datastar.client.TestWelcomeExecutor;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdRequest;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdResponse;
 import com.jdcloud.sdk.service.datastar.client.GetPackageIdExecutor;
@@ -88,18 +85,7 @@ public class DatastarClient extends JdcloudClient {
 
 
     /**
-     * null
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public TestWelcomeResponse testWelcome(TestWelcomeRequest request) throws JdcloudSdkException {
-        return new TestWelcomeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * null
+     * 根据设备ID查询人群包ID
      *
      * @param request
      * @return

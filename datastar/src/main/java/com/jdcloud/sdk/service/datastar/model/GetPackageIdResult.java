@@ -27,30 +27,30 @@ package com.jdcloud.sdk.service.datastar.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * null
+ * 根据设备ID查询人群包ID
  */
 public class GetPackageIdResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * status
+     * true为成功，false为失败
      */
     private Boolean status;
 
     /**
-     * message
+     * 描述信息
      */
     private String message;
 
     /**
-     * data
+     * Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
      */
     private String data;
 
 
     /**
-     * get status
+     * get true为成功，false为失败
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set status
+     * set true为成功，false为失败
      *
      * @param status
      */
@@ -68,7 +68,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get message
+     * get 描述信息
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set message
+     * set 描述信息
      *
      * @param message
      */
@@ -86,7 +86,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get data
+     * get Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
      *
      * @return
      */
@@ -95,7 +95,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set data
+     * set Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
      *
      * @param data
      */
@@ -105,7 +105,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * set status
+     * set true为成功，false为失败
      *
      * @param status
      */
@@ -115,7 +115,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set message
+     * set 描述信息
      *
      * @param message
      */
@@ -125,7 +125,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set data
+     * set Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
      *
      * @param data
      */

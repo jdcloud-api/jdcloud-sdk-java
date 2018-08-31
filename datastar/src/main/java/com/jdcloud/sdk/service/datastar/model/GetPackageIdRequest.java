@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * null
+ * 根据设备ID查询人群包ID
  */
 public class GetPackageIdRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * dmp根据deviceIds批量查询最大packageId入参
+     * MD5（deviceId），多个MD5（deviceId）用英文逗号进行分割，注：MD5结果小写
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class GetPackageIdRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get dmp根据deviceIds批量查询最大packageId入参
+     * get MD5（deviceId），多个MD5（deviceId）用英文逗号进行分割，注：MD5结果小写
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class GetPackageIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set dmp根据deviceIds批量查询最大packageId入参
+     * set MD5（deviceId），多个MD5（deviceId）用英文逗号进行分割，注：MD5结果小写
      *
      * @param deviceIds
      */
@@ -87,7 +87,7 @@ public class GetPackageIdRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set dmp根据deviceIds批量查询最大packageId入参
+     * set MD5（deviceId），多个MD5（deviceId）用英文逗号进行分割，注：MD5结果小写
      *
      * @param deviceIds
      */

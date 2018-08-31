@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.datastar.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * null
+ * 根据设备ID查询人群包ID
  */
 public class GetPackageIdResponse extends JdcloudResponse<GetPackageIdResult> implements java.io.Serializable {
 
