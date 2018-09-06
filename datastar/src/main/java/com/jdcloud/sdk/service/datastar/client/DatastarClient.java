@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.datastar.model.GetProfileRequest;
+import com.jdcloud.sdk.service.datastar.model.GetProfileResponse;
+import com.jdcloud.sdk.service.datastar.client.GetProfileExecutor;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdRequest;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdResponse;
 import com.jdcloud.sdk.service.datastar.client.GetPackageIdExecutor;
@@ -83,6 +86,17 @@ public class DatastarClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 根据deviceId查询对应用户的画像信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetProfileResponse getProfile(GetProfileRequest request) throws JdcloudSdkException {
+        return new GetProfileExecutor().client(this).execute(request);
+    }
 
     /**
      * 根据设备ID查询人群包ID

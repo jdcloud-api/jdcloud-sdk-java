@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.GetAuditFilesResponse;
 
 /**
- * 查看审计文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取当前实例下的所有审计结果文件的列表&lt;br&gt;- 仅支持SQL Server
  */
 class GetAuditFilesExecutor extends JdcloudExecutor {
 

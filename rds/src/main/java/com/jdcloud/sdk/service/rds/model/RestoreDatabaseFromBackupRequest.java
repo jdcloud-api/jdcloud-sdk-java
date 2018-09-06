@@ -28,35 +28,35 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 从云数据库SQL Server备份中恢复单个数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 从备份中恢复单个数据库，支持从其他实例（但必须是同一个账号下的实例）备份中恢复。例如可以从生产环境的数据库实例的备份恢复到测试环境的数据库中。&lt;br&gt;- 仅支持SQL Server
  */
 public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 备份ID
+     * 备份ID，可从备份查询接口describeBackups获取
      * Required:true
      */
     @Required
     private String backupId;
 
     /**
-     * 指定该备份中用于恢复数据库的文件名称
+     * 指定该备份中用于恢复数据库的文件名称。通常情况下文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
      * Required:true
      */
     @Required
     private String backupFileName;
 
     /**
-     * 区域代码
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -71,7 +71,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
 
 
     /**
-     * get 备份ID
+     * get 备份ID，可从备份查询接口describeBackups获取
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 备份ID
+     * set 备份ID，可从备份查询接口describeBackups获取
      *
      * @param backupId
      */
@@ -89,7 +89,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * get 指定该备份中用于恢复数据库的文件名称
+     * get 指定该备份中用于恢复数据库的文件名称。通常情况下文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
      *
      * @return
      */
@@ -98,7 +98,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 指定该备份中用于恢复数据库的文件名称
+     * set 指定该备份中用于恢复数据库的文件名称。通常情况下文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
      *
      * @param backupFileName
      */
@@ -107,7 +107,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * get 区域代码
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 区域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -125,7 +125,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * get 实例ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -162,7 +162,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
 
 
     /**
-     * set 备份ID
+     * set 备份ID，可从备份查询接口describeBackups获取
      *
      * @param backupId
      */
@@ -172,7 +172,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 指定该备份中用于恢复数据库的文件名称
+     * set 指定该备份中用于恢复数据库的文件名称。通常情况下文件名（不包括后缀）即为备份的数据库名。例如文件名为my_test_db.bak，表示该文件是my_test_db数据库的备份
      *
      * @param backupFileName
      */
@@ -182,7 +182,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 区域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -192,7 +192,7 @@ public class RestoreDatabaseFromBackupRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

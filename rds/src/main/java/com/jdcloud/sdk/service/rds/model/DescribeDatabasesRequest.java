@@ -28,26 +28,26 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看数据库列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 获取当前实例的所有数据库详细信息的列表
  */
 public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 数据库名。如果不指定数据库名，则返回所有数据库列表&lt;br&gt;- **MySQL：不支持该字段**&lt;br&gt;- **SQL Server：支持该字段**
      */
     private String dbName;
 
     /**
-     * 区域代码
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -55,7 +55,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * get 数据库名。如果不指定数据库名，则返回所有数据库列表&lt;br&gt;- **MySQL：不支持该字段**&lt;br&gt;- **SQL Server：支持该字段**
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * set 数据库名。如果不指定数据库名，则返回所有数据库列表&lt;br&gt;- **MySQL：不支持该字段**&lt;br&gt;- **SQL Server：支持该字段**
      *
      * @param dbName
      */
@@ -73,7 +73,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 区域代码
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 区域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -91,7 +91,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 实例ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -100,7 +100,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -110,7 +110,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 数据库名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * set 数据库名。如果不指定数据库名，则返回所有数据库列表&lt;br&gt;- **MySQL：不支持该字段**&lt;br&gt;- **SQL Server：支持该字段**
      *
      * @param dbName
      */
@@ -120,7 +120,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 区域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -130,7 +130,7 @@ public class DescribeDatabasesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

@@ -28,33 +28,33 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 从用户上传的备份文件中恢复SQL Server数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 从用户通过单库上云工具上传到云上的备份文件中恢复单个数据库&lt;br&gt;- 仅支持SQL Server
  */
 public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 共享文件的全局ID，可从上传文件查询接口describeImportFiles获取；如果该文件不是共享文件，则全局ID为空
+     * 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      */
     private String sharedFileGid;
 
     /**
-     * 用户在单库上云中上传的文件名称
+     * 用户上传的备份文件名称（包括文件后缀名），例如mydb1.bak
      * Required:true
      */
     @Required
     private String fileName;
 
     /**
-     * 区域代码
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -69,7 +69,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 共享文件的全局ID，可从上传文件查询接口describeImportFiles获取；如果该文件不是共享文件，则全局ID为空
+     * get 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 共享文件的全局ID，可从上传文件查询接口describeImportFiles获取；如果该文件不是共享文件，则全局ID为空
+     * set 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      *
      * @param sharedFileGid
      */
@@ -87,7 +87,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 用户在单库上云中上传的文件名称
+     * get 用户上传的备份文件名称（包括文件后缀名），例如mydb1.bak
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 用户在单库上云中上传的文件名称
+     * set 用户上传的备份文件名称（包括文件后缀名），例如mydb1.bak
      *
      * @param fileName
      */
@@ -105,7 +105,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 区域代码
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -114,7 +114,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 区域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -123,7 +123,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 实例ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -132,7 +132,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -160,7 +160,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 共享文件的全局ID，可从上传文件查询接口describeImportFiles获取；如果该文件不是共享文件，则全局ID为空
+     * set 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      *
      * @param sharedFileGid
      */
@@ -170,7 +170,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 用户在单库上云中上传的文件名称
+     * set 用户上传的备份文件名称（包括文件后缀名），例如mydb1.bak
      *
      * @param fileName
      */
@@ -180,7 +180,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 区域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -190,7 +190,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

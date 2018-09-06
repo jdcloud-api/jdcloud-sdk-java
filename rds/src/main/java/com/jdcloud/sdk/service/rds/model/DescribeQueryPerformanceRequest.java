@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
  */
 public class DescribeQueryPerformanceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 查询类型，不同的查询类型按照相应的字段从高到低返回结果。支持如下类型：ExecutionCount：执行次数LastRows：上次返回行数ElapsedTime：平均执行时间CPUTime：平均CPU时间LogicalReads：平均逻辑读LogicalWrites：平均逻辑写PhysicalReads：平均物理读
+     * 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;ExecutionCount：执行次数&lt;br&gt;LastRows：上次返回行数&lt;br&gt;ElapsedTime：平均执行时间&lt;br&gt;CPUTime：平均CPU时间&lt;br&gt;LogicalReads：平均逻辑读&lt;br&gt;LogicalWrites：平均逻辑写&lt;br&gt;PhysicalReads：平均物理读&lt;br&gt;
      * Required:true
      */
     @Required
@@ -47,24 +47,24 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     private Integer threshold;
 
     /**
-     * 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      */
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
+     * 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
      */
     private Integer pageSize;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -72,7 +72,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 查询类型，不同的查询类型按照相应的字段从高到低返回结果。支持如下类型：ExecutionCount：执行次数LastRows：上次返回行数ElapsedTime：平均执行时间CPUTime：平均CPU时间LogicalReads：平均逻辑读LogicalWrites：平均逻辑写PhysicalReads：平均物理读
+     * get 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;ExecutionCount：执行次数&lt;br&gt;LastRows：上次返回行数&lt;br&gt;ElapsedTime：平均执行时间&lt;br&gt;CPUTime：平均CPU时间&lt;br&gt;LogicalReads：平均逻辑读&lt;br&gt;LogicalWrites：平均逻辑写&lt;br&gt;PhysicalReads：平均物理读&lt;br&gt;
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。支持如下类型：ExecutionCount：执行次数LastRows：上次返回行数ElapsedTime：平均执行时间CPUTime：平均CPU时间LogicalReads：平均逻辑读LogicalWrites：平均逻辑写PhysicalReads：平均物理读
+     * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;ExecutionCount：执行次数&lt;br&gt;LastRows：上次返回行数&lt;br&gt;ElapsedTime：平均执行时间&lt;br&gt;CPUTime：平均CPU时间&lt;br&gt;LogicalReads：平均逻辑读&lt;br&gt;LogicalWrites：平均逻辑写&lt;br&gt;PhysicalReads：平均物理读&lt;br&gt;
      *
      * @param queryType
      */
@@ -108,7 +108,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * get 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * set 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      *
      * @param pageNumber
      */
@@ -126,7 +126,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
+     * get 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
      *
      * @return
      */
@@ -135,7 +135,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
+     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
      *
      * @param pageSize
      */
@@ -144,7 +144,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -153,7 +153,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -162,7 +162,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get Instance ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -171,7 +171,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -181,7 +181,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。支持如下类型：ExecutionCount：执行次数LastRows：上次返回行数ElapsedTime：平均执行时间CPUTime：平均CPU时间LogicalReads：平均逻辑读LogicalWrites：平均逻辑写PhysicalReads：平均物理读
+     * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;ExecutionCount：执行次数&lt;br&gt;LastRows：上次返回行数&lt;br&gt;ElapsedTime：平均执行时间&lt;br&gt;CPUTime：平均CPU时间&lt;br&gt;LogicalReads：平均逻辑读&lt;br&gt;LogicalWrites：平均逻辑写&lt;br&gt;PhysicalReads：平均物理读&lt;br&gt;
      *
      * @param queryType
      */
@@ -201,7 +201,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * set 显示数据的页码，默认为1，取值范围：[-1,1000]。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      *
      * @param pageNumber
      */
@@ -211,7 +211,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
+     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
      *
      * @param pageSize
      */
@@ -221,7 +221,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -231,7 +231,7 @@ public class DescribeQueryPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

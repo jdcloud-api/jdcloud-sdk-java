@@ -27,30 +27,35 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看RDS实例备份策略&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 查看RDS实例备份策略。根据数据库类型的不同，支持的备份策略也略有差异，具体请看返回参数中的详细说明
  */
 public class GetBackupPolicyResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
+     * 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。&lt;br&gt;例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
      */
     private String startWindow;
 
     /**
-     * 自动备份保留周期，单位天,范围7-730
+     * 自动备份保留周期，单位天,缺省为7天，范围7-730
      */
     private Integer retentionPeriod;
 
     /**
-     * 自动备份循环模式&lt;br/&gt;1:表示每天都是全量备份&lt;br/&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推
+     * 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      */
     private Integer cycleMode;
 
+    /**
+     * 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **SQL Server不支持**&lt;br&gt;- **MySQL支持**
+     */
+    private String backupBinlog;
+
 
     /**
-     * get 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
+     * get 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。&lt;br&gt;例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
      *
      * @return
      */
@@ -59,7 +64,7 @@ public class GetBackupPolicyResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
+     * set 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。&lt;br&gt;例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
      *
      * @param startWindow
      */
@@ -68,7 +73,7 @@ public class GetBackupPolicyResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get 自动备份保留周期，单位天,范围7-730
+     * get 自动备份保留周期，单位天,缺省为7天，范围7-730
      *
      * @return
      */
@@ -77,7 +82,7 @@ public class GetBackupPolicyResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 自动备份保留周期，单位天,范围7-730
+     * set 自动备份保留周期，单位天,缺省为7天，范围7-730
      *
      * @param retentionPeriod
      */
@@ -86,7 +91,7 @@ public class GetBackupPolicyResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get 自动备份循环模式&lt;br/&gt;1:表示每天都是全量备份&lt;br/&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推
+     * get 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @return
      */
@@ -95,7 +100,7 @@ public class GetBackupPolicyResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 自动备份循环模式&lt;br/&gt;1:表示每天都是全量备份&lt;br/&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推
+     * set 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @param cycleMode
      */
@@ -103,9 +108,27 @@ public class GetBackupPolicyResult extends JdcloudResult implements java.io.Seri
         this.cycleMode = cycleMode;
     }
 
+    /**
+     * get 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **SQL Server不支持**&lt;br&gt;- **MySQL支持**
+     *
+     * @return
+     */
+    public String getBackupBinlog() {
+        return backupBinlog;
+    }
 
     /**
-     * set 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
+     * set 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **SQL Server不支持**&lt;br&gt;- **MySQL支持**
+     *
+     * @param backupBinlog
+     */
+    public void setBackupBinlog(String backupBinlog) {
+        this.backupBinlog = backupBinlog;
+    }
+
+
+    /**
+     * set 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。&lt;br&gt;例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
      *
      * @param startWindow
      */
@@ -115,7 +138,7 @@ public class GetBackupPolicyResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 自动备份保留周期，单位天,范围7-730
+     * set 自动备份保留周期，单位天,缺省为7天，范围7-730
      *
      * @param retentionPeriod
      */
@@ -125,12 +148,22 @@ public class GetBackupPolicyResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 自动备份循环模式&lt;br/&gt;1:表示每天都是全量备份&lt;br/&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推
+     * set 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @param cycleMode
      */
     public GetBackupPolicyResult cycleMode(Integer cycleMode) {
         this.cycleMode = cycleMode;
+        return this;
+    }
+
+    /**
+     * set 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **SQL Server不支持**&lt;br&gt;- **MySQL支持**
+     *
+     * @param backupBinlog
+     */
+    public GetBackupPolicyResult backupBinlog(String backupBinlog) {
+        this.backupBinlog = backupBinlog;
         return this;
     }
 

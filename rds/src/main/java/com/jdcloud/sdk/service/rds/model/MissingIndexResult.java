@@ -44,7 +44,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     private String table;
 
     /**
-     * 构成相等谓词的列的逗号分隔列表，谓词的形式如下：table.column &#x3D;constant_value
+     * 构成相等谓词的列的逗号分隔列表，谓词的形式如下：&lt;br&gt;table.column &#x3D;constant_value
      */
     private String equalityColumns;
 
@@ -54,7 +54,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     private String inequalityColumns;
 
     /**
-     * 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：table.column &gt; constant_value“&#x3D;”之外的任何比较运算符都表示不相等。
+     * 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：&lt;br&gt;table.column &gt; constant_value&lt;br&gt;“&#x3D;”之外的任何比较运算符都表示不相等。
      */
     private String includedColumns;
 
@@ -111,7 +111,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 构成相等谓词的列的逗号分隔列表，谓词的形式如下：table.column &#x3D;constant_value
+     * get 构成相等谓词的列的逗号分隔列表，谓词的形式如下：&lt;br&gt;table.column &#x3D;constant_value
      *
      * @return
      */
@@ -120,7 +120,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 构成相等谓词的列的逗号分隔列表，谓词的形式如下：table.column &#x3D;constant_value
+     * set 构成相等谓词的列的逗号分隔列表，谓词的形式如下：&lt;br&gt;table.column &#x3D;constant_value
      *
      * @param equalityColumns
      */
@@ -147,7 +147,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：table.column &gt; constant_value“&#x3D;”之外的任何比较运算符都表示不相等。
+     * get 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：&lt;br&gt;table.column &gt; constant_value&lt;br&gt;“&#x3D;”之外的任何比较运算符都表示不相等。
      *
      * @return
      */
@@ -156,7 +156,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：table.column &gt; constant_value“&#x3D;”之外的任何比较运算符都表示不相等。
+     * set 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：&lt;br&gt;table.column &gt; constant_value&lt;br&gt;“&#x3D;”之外的任何比较运算符都表示不相等。
      *
      * @param includedColumns
      */
@@ -240,7 +240,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 构成相等谓词的列的逗号分隔列表，谓词的形式如下：table.column &#x3D;constant_value
+     * set 构成相等谓词的列的逗号分隔列表，谓词的形式如下：&lt;br&gt;table.column &#x3D;constant_value
      *
      * @param equalityColumns
      */
@@ -260,7 +260,7 @@ public class MissingIndexResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：table.column &gt; constant_value“&#x3D;”之外的任何比较运算符都表示不相等。
+     * set 构成不等谓词的列的逗号分隔列表，例如以下形式的谓词：&lt;br&gt;table.column &gt; constant_value&lt;br&gt;“&#x3D;”之外的任何比较运算符都表示不相等。
      *
      * @param includedColumns
      */

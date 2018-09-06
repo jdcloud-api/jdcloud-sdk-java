@@ -28,35 +28,35 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
  */
 public class CreateAccountRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户名
+     * 账号名，在同一个RDS实例中，账号名不能重复。账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      * Required:true
      */
     @Required
     private String accountName;
 
     /**
-     * 用户密码
+     * 密码,密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      * Required:true
      */
     @Required
     private String accountPassword;
 
     /**
-     * 地域代码
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -64,7 +64,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 用户名
+     * get 账号名，在同一个RDS实例中，账号名不能重复。账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 用户名
+     * set 账号名，在同一个RDS实例中，账号名不能重复。账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param accountName
      */
@@ -82,7 +82,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 用户密码
+     * get 密码,密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 用户密码
+     * set 密码,密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param accountPassword
      */
@@ -100,7 +100,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 地域代码
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -118,7 +118,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 实例ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -137,7 +137,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 用户名
+     * set 账号名，在同一个RDS实例中，账号名不能重复。账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param accountName
      */
@@ -147,7 +147,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 用户密码
+     * set 密码,密码的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param accountPassword
      */
@@ -157,7 +157,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -167,7 +167,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

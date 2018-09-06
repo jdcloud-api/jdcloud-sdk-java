@@ -27,20 +27,20 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取上传导入文件的需要的Key&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取单库上云工具上传文件的需要的Key。单库上云工具需要正确的key值方能连接到京东云&lt;br&gt;- 仅支持SQL Server
  */
 public class GetUploadKeyResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * key
+     * 上传文件需要用到的Key
      */
     private String key;
 
 
     /**
-     * get key
+     * get 上传文件需要用到的Key
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class GetUploadKeyResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set key
+     * set 上传文件需要用到的Key
      *
      * @param key
      */
@@ -59,7 +59,7 @@ public class GetUploadKeyResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * set key
+     * set 上传文件需要用到的Key
      *
      * @param key
      */

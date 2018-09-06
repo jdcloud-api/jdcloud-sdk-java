@@ -38,7 +38,7 @@ public class ImageConstraint  implements java.io.Serializable {
     private String imageId;
 
     /**
-     * 镜像规格类型限制
+     * 使用镜像创建实例的规格限制
      */
     private ImageInstanceTypeConstraint imageInstanceTypeConstraint;
 
@@ -62,7 +62,7 @@ public class ImageConstraint  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像规格类型限制
+     * get 使用镜像创建实例的规格限制
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class ImageConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像规格类型限制
+     * set 使用镜像创建实例的规格限制
      *
      * @param imageInstanceTypeConstraint
      */
@@ -91,7 +91,7 @@ public class ImageConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像规格类型限制
+     * set 使用镜像创建实例的规格限制
      *
      * @param imageInstanceTypeConstraint
      */

@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.QueryPerformanceResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 根据用户定义的查询条件，获取SQL执行的性能统计信息，例如慢SQL等。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
  */
 public class DescribeQueryPerformanceResult extends JdcloudResult implements java.io.Serializable {
 
@@ -42,12 +42,12 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     private List<QueryPerformanceResult> queryPerformanceResult;
 
     /**
-     * 总记录数
+     * 总记录条数
      */
     private Integer totalCount;
 
     /**
-     * 当前页码
+     * 当前数据的页码
      */
     private Integer pageNumber;
 
@@ -76,7 +76,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * get 总记录数
+     * get 总记录条数
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 总记录数
+     * set 总记录条数
      *
      * @param totalCount
      */
@@ -94,7 +94,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * get 当前页码
+     * get 当前数据的页码
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 当前页码
+     * set 当前数据的页码
      *
      * @param pageNumber
      */
@@ -141,7 +141,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 总记录数
+     * set 总记录条数
      *
      * @param totalCount
      */
@@ -151,7 +151,7 @@ public class DescribeQueryPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 当前页码
+     * set 当前数据的页码
      *
      * @param pageNumber
      */

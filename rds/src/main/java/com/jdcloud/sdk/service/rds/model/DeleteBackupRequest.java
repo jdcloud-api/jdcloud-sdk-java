@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。
  */
 public class DeleteBackupRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域代码
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 地域代码
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -87,7 +87,7 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
