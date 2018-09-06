@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-只支持cloudDisk云盘系统盘类型的镜像。
+只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
 
  */
 public class CopyImagesRequest extends JdcloudRequest implements java.io.Serializable {

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 规格类型
- * 与规格类型操作相关的接口
+ * 实例规格
+ * 与实例规格操作相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,7 +31,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询规格类型信息列表
+ * 查询实例规格信息列表
 
  */
 public class DescribeInstanceTypesRequest extends JdcloudRequest implements java.io.Serializable {
@@ -39,7 +39,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
     private static final long serialVersionUID = 1L;
 
     /**
-     * instanceTypes - 规格类型，精确匹配，支持多个
+     * instanceTypes - 实例规格，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      */
@@ -54,7 +54,7 @@ az - 可用区，精确匹配，支持多个
 
 
     /**
-     * get instanceTypes - 规格类型，精确匹配，支持多个
+     * get instanceTypes - 实例规格，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      *
@@ -65,7 +65,7 @@ az - 可用区，精确匹配，支持多个
     }
 
     /**
-     * set instanceTypes - 规格类型，精确匹配，支持多个
+     * set instanceTypes - 实例规格，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      *
@@ -95,7 +95,7 @@ az - 可用区，精确匹配，支持多个
 
 
     /**
-     * set instanceTypes - 规格类型，精确匹配，支持多个
+     * set instanceTypes - 实例规格，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      *
@@ -118,7 +118,7 @@ az - 可用区，精确匹配，支持多个
 
 
     /**
-     * add item to instanceTypes - 规格类型，精确匹配，支持多个
+     * add item to instanceTypes - 实例规格，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
      *

@@ -45,17 +45,17 @@ public class Image  implements java.io.Serializable {
     private String name;
 
     /**
-     * 操作系统发行版，[suse, debian, ubuntu, centos, windows-server]
+     * 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
      */
     private String platform;
 
     /**
-     * 操作系统版本号
+     * 镜像的操作系统版本。
      */
     private String osVersion;
 
     /**
-     * 镜像架构 i386, x86_64
+     * 镜像架构。取值：i386,x86_64
      */
     private String architecture;
 
@@ -65,12 +65,12 @@ public class Image  implements java.io.Serializable {
     private Integer systemDiskSizeGB;
 
     /**
-     * 镜像来源 jcloud：官方镜像 marketplace：镜像市场镜像 self：用户自己的镜像 shared：其他用户分享的镜像
+     * 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
      */
     private String imageSource;
 
     /**
-     * 镜像的操作系统类型，[windows, linux]
+     * 镜像的操作系统类型。取值：windows,linux
      */
     private String osType;
 
@@ -85,7 +85,7 @@ public class Image  implements java.io.Serializable {
     private String createTime;
 
     /**
-     * 镜像本身大小
+     * 镜像文件实际大小
      */
     private Integer sizeMB;
 
@@ -95,27 +95,27 @@ public class Image  implements java.io.Serializable {
     private String desc;
 
     /**
-     * 系统盘配置
+     * 镜像系统盘配置
      */
     private InstanceDiskAttachment systemDisk;
 
     /**
-     * 打包镜像数据盘映射信息
+     * 镜像数据盘映射信息
      */
     private List<InstanceDiskAttachment> dataDisks;
 
     /**
-     * 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+     * 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
      */
     private String snapshotId;
 
     /**
-     * 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+     * 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
      */
     private String rootDeviceType;
 
     /**
-     * 镜像复制时的进度，单位为百分比，例如：80
+     * 镜像复制和转换时的进度，仅显示数值，单位为百分比
      */
     private String progress;
 
@@ -157,7 +157,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 操作系统发行版，[suse, debian, ubuntu, centos, windows-server]
+     * get 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
      *
      * @return
      */
@@ -166,7 +166,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 操作系统发行版，[suse, debian, ubuntu, centos, windows-server]
+     * set 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
      *
      * @param platform
      */
@@ -175,7 +175,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 操作系统版本号
+     * get 镜像的操作系统版本。
      *
      * @return
      */
@@ -184,7 +184,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 操作系统版本号
+     * set 镜像的操作系统版本。
      *
      * @param osVersion
      */
@@ -193,7 +193,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像架构 i386, x86_64
+     * get 镜像架构。取值：i386,x86_64
      *
      * @return
      */
@@ -202,7 +202,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像架构 i386, x86_64
+     * set 镜像架构。取值：i386,x86_64
      *
      * @param architecture
      */
@@ -229,7 +229,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像来源 jcloud：官方镜像 marketplace：镜像市场镜像 self：用户自己的镜像 shared：其他用户分享的镜像
+     * get 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
      *
      * @return
      */
@@ -238,7 +238,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像来源 jcloud：官方镜像 marketplace：镜像市场镜像 self：用户自己的镜像 shared：其他用户分享的镜像
+     * set 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
      *
      * @param imageSource
      */
@@ -247,7 +247,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像的操作系统类型，[windows, linux]
+     * get 镜像的操作系统类型。取值：windows,linux
      *
      * @return
      */
@@ -256,7 +256,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像的操作系统类型，[windows, linux]
+     * set 镜像的操作系统类型。取值：windows,linux
      *
      * @param osType
      */
@@ -301,7 +301,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像本身大小
+     * get 镜像文件实际大小
      *
      * @return
      */
@@ -310,7 +310,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像本身大小
+     * set 镜像文件实际大小
      *
      * @param sizeMB
      */
@@ -337,7 +337,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘配置
+     * get 镜像系统盘配置
      *
      * @return
      */
@@ -346,7 +346,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘配置
+     * set 镜像系统盘配置
      *
      * @param systemDisk
      */
@@ -355,7 +355,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 打包镜像数据盘映射信息
+     * get 镜像数据盘映射信息
      *
      * @return
      */
@@ -364,7 +364,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 打包镜像数据盘映射信息
+     * set 镜像数据盘映射信息
      *
      * @param dataDisks
      */
@@ -373,7 +373,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+     * get 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
      *
      * @return
      */
@@ -382,7 +382,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+     * set 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
      *
      * @param snapshotId
      */
@@ -391,7 +391,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+     * get 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
      *
      * @return
      */
@@ -400,7 +400,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+     * set 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
      *
      * @param rootDeviceType
      */
@@ -409,7 +409,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像复制时的进度，单位为百分比，例如：80
+     * get 镜像复制和转换时的进度，仅显示数值，单位为百分比
      *
      * @return
      */
@@ -418,7 +418,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像复制时的进度，单位为百分比，例如：80
+     * set 镜像复制和转换时的进度，仅显示数值，单位为百分比
      *
      * @param progress
      */
@@ -448,7 +448,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 操作系统发行版，[suse, debian, ubuntu, centos, windows-server]
+     * set 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
      *
      * @param platform
      */
@@ -458,7 +458,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 操作系统版本号
+     * set 镜像的操作系统版本。
      *
      * @param osVersion
      */
@@ -468,7 +468,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像架构 i386, x86_64
+     * set 镜像架构。取值：i386,x86_64
      *
      * @param architecture
      */
@@ -488,7 +488,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像来源 jcloud：官方镜像 marketplace：镜像市场镜像 self：用户自己的镜像 shared：其他用户分享的镜像
+     * set 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
      *
      * @param imageSource
      */
@@ -498,7 +498,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像的操作系统类型，[windows, linux]
+     * set 镜像的操作系统类型。取值：windows,linux
      *
      * @param osType
      */
@@ -528,7 +528,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像本身大小
+     * set 镜像文件实际大小
      *
      * @param sizeMB
      */
@@ -548,7 +548,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘配置
+     * set 镜像系统盘配置
      *
      * @param systemDisk
      */
@@ -558,7 +558,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 打包镜像数据盘映射信息
+     * set 镜像数据盘映射信息
      *
      * @param dataDisks
      */
@@ -568,7 +568,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘做系统盘的快照id，创建云主机时，默认使用此快照创建系统盘
+     * set 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
      *
      * @param snapshotId
      */
@@ -578,7 +578,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像支持的系统盘类型。localDisk：支持本地盘系统盘。cloudDisk：支持云盘系统盘
+     * set 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
      *
      * @param rootDeviceType
      */
@@ -588,7 +588,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像复制时的进度，单位为百分比，例如：80
+     * set 镜像复制和转换时的进度，仅显示数值，单位为百分比
      *
      * @param progress
      */
@@ -599,7 +599,7 @@ public class Image  implements java.io.Serializable {
 
 
     /**
-     * add item to 打包镜像数据盘映射信息
+     * add item to 镜像数据盘映射信息
      *
      * @param dataDisk
      */

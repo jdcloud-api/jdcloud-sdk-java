@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 镜像
- * 关于主机镜像操作的相关接口
+ * 云主机
+ * 与主机操作相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,11 +27,9 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
-
+ * 批量查询云主机内网IP地址，查询的是主网卡内网主IP地址。
  */
-public class CopyImagesResponse extends JdcloudResponse<CopyImagesResult> implements java.io.Serializable {
+public class DescribeInstancePrivateIpAddressResponse extends JdcloudResponse<DescribeInstancePrivateIpAddressResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

@@ -27,8 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 批量查询镜像的规格类型限制。&lt;br&gt;
-通过此接口可以查看镜像不支持的规格类型。只有官方镜像、第三方镜像有规格类型的限制，个人的私有镜像没有此限制。
+ * 批量查询镜像的实例规格限制。&lt;br&gt;
+通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
 
  */
 public class DescribeImageConstraintsBatchResponse extends JdcloudResponse<DescribeImageConstraintsBatchResult> implements java.io.Serializable {
