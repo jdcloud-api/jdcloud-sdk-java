@@ -35,17 +35,17 @@ public class Database  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据库名称
+     * 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      */
     private String dbName;
 
     /**
-     * 数据库状态 building：创建中， running：运行中&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * 数据库状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      */
     private String dbStatus;
 
     /**
-     * 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+     * 字符集，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
     private String characterSetName;
 
@@ -56,7 +56,7 @@ public class Database  implements java.io.Serializable {
 
 
     /**
-     * get 数据库名称
+     * get 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -65,7 +65,7 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库名称
+     * set 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param dbName
      */
@@ -74,7 +74,7 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
-     * get 数据库状态 building：创建中， running：运行中&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * get 数据库状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库状态 building：创建中， running：运行中&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * set 数据库状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
      * @param dbStatus
      */
@@ -92,7 +92,7 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
-     * get 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+     * get 字符集，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @return
      */
@@ -101,7 +101,7 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
-     * set 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+     * set 字符集，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param characterSetName
      */
@@ -129,7 +129,7 @@ public class Database  implements java.io.Serializable {
 
 
     /**
-     * set 数据库名称
+     * set 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param dbName
      */
@@ -139,7 +139,7 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库状态 building：创建中， running：运行中&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+     * set 数据库状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
      * @param dbStatus
      */
@@ -149,7 +149,7 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
-     * set 字符集名称,mysql字符集包括：utf8；SQL Server字符集包括：Chinese_PRC_CI_AS、Chinese_PRC_CS_AS、SQL_Latin1_General_CP1_CI_AS、SQL_Latin1_General_CP1_CS_AS、Chinese_PRC_BIN
+     * set 字符集，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param characterSetName
      */

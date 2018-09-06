@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.rds.model.AccountPrivilege;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 数据库账号授权&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
  */
 public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -45,21 +45,21 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     private List<AccountPrivilege> accountPrivileges;
 
     /**
-     * 地域代码
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
     private String instanceId;
 
     /**
-     * 账户名
+     * 账号名，在同一个实例中账号名不能重复
      * Required:true
      */
     @Required
@@ -85,7 +85,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 地域代码
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -103,7 +103,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 实例ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -112,7 +112,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -121,7 +121,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 账户名
+     * get 账号名，在同一个实例中账号名不能重复
      *
      * @return
      */
@@ -130,7 +130,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 账户名
+     * set 账号名，在同一个实例中账号名不能重复
      *
      * @param accountName
      */
@@ -150,7 +150,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -160,7 +160,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -170,7 +170,7 @@ public class GrantPrivilegeRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 账户名
+     * set 账号名，在同一个实例中账号名不能重复
      *
      * @param accountName
      */

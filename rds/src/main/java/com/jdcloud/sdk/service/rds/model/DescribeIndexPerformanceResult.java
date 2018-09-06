@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.rds.model.IndexPerformanceResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 索引性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 根据用户定义的查询条件，获取索引性能的统计信息，并提供缺失索引及索引创建建议。用户可以根据这些信息查找与索引相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
  */
 public class DescribeIndexPerformanceResult extends JdcloudResult implements java.io.Serializable {
 
@@ -48,12 +48,12 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     private List<IndexPerformanceResult> indexPerformanceResult;
 
     /**
-     * 总记录数
+     * 总记录条数
      */
     private Integer totalCount;
 
     /**
-     * 当前页码
+     * 当前数据的页码
      */
     private Integer pageNumber;
 
@@ -100,7 +100,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * get 总记录数
+     * get 总记录条数
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 总记录数
+     * set 总记录条数
      *
      * @param totalCount
      */
@@ -118,7 +118,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * get 当前页码
+     * get 当前数据的页码
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 当前页码
+     * set 当前数据的页码
      *
      * @param pageNumber
      */
@@ -175,7 +175,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 总记录数
+     * set 总记录条数
      *
      * @param totalCount
      */
@@ -185,7 +185,7 @@ public class DescribeIndexPerformanceResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 当前页码
+     * set 当前数据的页码
      *
      * @param pageNumber
      */

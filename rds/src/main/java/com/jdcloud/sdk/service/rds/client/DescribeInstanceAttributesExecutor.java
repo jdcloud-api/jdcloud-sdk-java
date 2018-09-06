@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeInstanceAttributesResponse;
 
 /**
- * 查询RDS实例详细信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
  */
 class DescribeInstanceAttributesExecutor extends JdcloudExecutor {
 

@@ -37,26 +37,26 @@ public class DBInstanceSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据库实例名，如不填则缺省为instanceId
+     * 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      */
     private String instanceName;
 
     /**
-     * 数据库类型 MySQL|SQL Server
+     * 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      * Required:true
      */
     @Required
     private String engine;
 
     /**
-     * 数据库版本 MySQL支持5.6、5.7  SQL Server支持2008 R2、2012 EE、2014 EE、2016 EE
+     * 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      * Required:true
      */
     @Required
     private String engineVersion;
 
     /**
-     * 实例规格代码
+     * 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
      * Required:true
      */
     @Required
@@ -91,7 +91,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * 计费配置
+     * 计费规格，包括计费类型，计费周期等
      * Required:true
      */
     @Required
@@ -99,7 +99,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * get 数据库实例名，如不填则缺省为instanceId
+     * get 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -108,7 +108,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库实例名，如不填则缺省为instanceId
+     * set 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -117,7 +117,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 数据库类型 MySQL|SQL Server
+     * get 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @return
      */
@@ -126,7 +126,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库类型 MySQL|SQL Server
+     * set 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param engine
      */
@@ -135,7 +135,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 数据库版本 MySQL支持5.6、5.7  SQL Server支持2008 R2、2012 EE、2014 EE、2016 EE
+     * get 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @return
      */
@@ -144,7 +144,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库版本 MySQL支持5.6、5.7  SQL Server支持2008 R2、2012 EE、2014 EE、2016 EE
+     * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param engineVersion
      */
@@ -153,7 +153,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格代码
+     * get 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
      *
      * @return
      */
@@ -162,7 +162,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码
+     * set 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
      *
      * @param instanceClass
      */
@@ -243,7 +243,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 计费配置
+     * get 计费规格，包括计费类型，计费周期等
      *
      * @return
      */
@@ -252,7 +252,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费配置
+     * set 计费规格，包括计费类型，计费周期等
      *
      * @param chargeSpec
      */
@@ -262,7 +262,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * set 数据库实例名，如不填则缺省为instanceId
+     * set 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -272,7 +272,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库类型 MySQL|SQL Server
+     * set 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param engine
      */
@@ -282,7 +282,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库版本 MySQL支持5.6、5.7  SQL Server支持2008 R2、2012 EE、2014 EE、2016 EE
+     * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param engineVersion
      */
@@ -292,7 +292,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码
+     * set 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
      *
      * @param instanceClass
      */
@@ -342,7 +342,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费配置
+     * set 计费规格，包括计费类型，计费周期等
      *
      * @param chargeSpec
      */
