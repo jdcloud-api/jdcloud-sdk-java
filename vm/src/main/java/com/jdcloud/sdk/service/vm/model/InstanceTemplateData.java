@@ -35,7 +35,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规格类型
+     * 实例规格
      */
     private String instanceType;
 
@@ -81,7 +81,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
 
 
     /**
-     * get 规格类型
+     * get 实例规格
      *
      * @return
      */
@@ -90,7 +90,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 规格类型
+     * set 实例规格
      *
      * @param instanceType
      */
@@ -244,7 +244,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
 
 
     /**
-     * set 规格类型
+     * set 实例规格
      *
      * @param instanceType
      */

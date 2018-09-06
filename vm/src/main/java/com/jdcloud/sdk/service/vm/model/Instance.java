@@ -47,7 +47,7 @@ public class Instance  implements java.io.Serializable {
     private String instanceName;
 
     /**
-     * 云主机类型
+     * 实例规格
      */
     private String instanceType;
 
@@ -184,7 +184,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 云主机类型
+     * get 实例规格
      *
      * @return
      */
@@ -193,7 +193,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机类型
+     * set 实例规格
      *
      * @param instanceType
      */
@@ -565,7 +565,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机类型
+     * set 实例规格
      *
      * @param instanceType
      */

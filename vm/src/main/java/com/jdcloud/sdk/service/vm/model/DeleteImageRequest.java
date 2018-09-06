@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除一个私有镜像，只允许操作您的个人私有镜像。
+ * 删除一个私有镜像，只允许操作您的个人私有镜像。&lt;br&gt;
+若镜像已共享给其他用户，需先取消共享才可删除。
 
  */
 public class DeleteImageRequest extends JdcloudRequest implements java.io.Serializable {

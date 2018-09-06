@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 规格类型
- * 与规格类型操作相关的接口
+ * 实例规格
+ * 与实例规格操作相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询规格类型信息列表
+ * 查询实例规格信息列表
 
  */
 public class DescribeInstanceTypesResponse extends JdcloudResponse<DescribeInstanceTypesResult> implements java.io.Serializable {
