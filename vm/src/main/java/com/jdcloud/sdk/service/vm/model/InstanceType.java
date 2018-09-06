@@ -35,12 +35,12 @@ public class InstanceType  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例族
+     * 实例规格类型
      */
     private String family;
 
     /**
-     * 规格类型，比如g.b1.2xlarge
+     * 实例规格，比如g.b1.2xlarge
      */
     private String instanceType;
 
@@ -71,7 +71,7 @@ public class InstanceType  implements java.io.Serializable {
 
 
     /**
-     * get 实例族
+     * get 实例规格类型
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 实例族
+     * set 实例规格类型
      *
      * @param family
      */
@@ -89,7 +89,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * get 规格类型，比如g.b1.2xlarge
+     * get 实例规格，比如g.b1.2xlarge
      *
      * @return
      */
@@ -98,7 +98,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 规格类型，比如g.b1.2xlarge
+     * set 实例规格，比如g.b1.2xlarge
      *
      * @param instanceType
      */
@@ -198,7 +198,7 @@ public class InstanceType  implements java.io.Serializable {
 
 
     /**
-     * set 实例族
+     * set 实例规格类型
      *
      * @param family
      */
@@ -208,7 +208,7 @@ public class InstanceType  implements java.io.Serializable {
     }
 
     /**
-     * set 规格类型，比如g.b1.2xlarge
+     * set 实例规格，比如g.b1.2xlarge
      *
      * @param instanceType
      */

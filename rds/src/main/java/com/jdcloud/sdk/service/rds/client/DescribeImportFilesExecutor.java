@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeImportFilesResponse;
 
 /**
- * 获取单库上云文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取用户通过单库上云工具上传到该实例上的文件列表&lt;br&gt;- 仅支持SQL Server
  */
 class DescribeImportFilesExecutor extends JdcloudExecutor {
 

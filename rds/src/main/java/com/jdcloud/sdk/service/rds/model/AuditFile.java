@@ -33,28 +33,28 @@ public class AuditFile  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 审计日志名称
+     * 审计日志文件名称
      */
     private String name;
 
     /**
-     * 审计日志大小，单位Byte
+     * 审计日志文件大小，单位Byte
      */
     private Long sizeByte;
 
     /**
-     * 审计日志最后更新时间
+     * 审计日志文件最后更新时间
      */
     private String lastUpdateTime;
 
     /**
-     * 审计日志上传时间
+     * 审计日志文件上传时间
      */
     private String uploadTime;
 
 
     /**
-     * get 审计日志名称
+     * get 审计日志文件名称
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * set 审计日志名称
+     * set 审计日志文件名称
      *
      * @param name
      */
@@ -72,7 +72,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * get 审计日志大小，单位Byte
+     * get 审计日志文件大小，单位Byte
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * set 审计日志大小，单位Byte
+     * set 审计日志文件大小，单位Byte
      *
      * @param sizeByte
      */
@@ -90,7 +90,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * get 审计日志最后更新时间
+     * get 审计日志文件最后更新时间
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * set 审计日志最后更新时间
+     * set 审计日志文件最后更新时间
      *
      * @param lastUpdateTime
      */
@@ -108,7 +108,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * get 审计日志上传时间
+     * get 审计日志文件上传时间
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * set 审计日志上传时间
+     * set 审计日志文件上传时间
      *
      * @param uploadTime
      */
@@ -127,7 +127,7 @@ public class AuditFile  implements java.io.Serializable {
 
 
     /**
-     * set 审计日志名称
+     * set 审计日志文件名称
      *
      * @param name
      */
@@ -137,7 +137,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * set 审计日志大小，单位Byte
+     * set 审计日志文件大小，单位Byte
      *
      * @param sizeByte
      */
@@ -147,7 +147,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * set 审计日志最后更新时间
+     * set 审计日志文件最后更新时间
      *
      * @param lastUpdateTime
      */
@@ -157,7 +157,7 @@ public class AuditFile  implements java.io.Serializable {
     }
 
     /**
-     * set 审计日志上传时间
+     * set 审计日志文件上传时间
      *
      * @param uploadTime
      */

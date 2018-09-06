@@ -28,31 +28,31 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改当前审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 修改当前的审计选项。当前已有审计选项可以通过describeAudit获得，支持的全部选项可以通过getAuditOptions获得。&lt;br&gt;- 仅支持SQL Server
  */
 public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 增加审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
+     * 在原有审计项基础上，增加新的审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
      */
     private String add;
 
     /**
-     * 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP如删除了所有审计项，则审计自动关闭
+     * 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP&lt;br&gt;如删除了所有审计项，则审计自动关闭
      */
     private String drop;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -60,7 +60,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 增加审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
+     * get 在原有审计项基础上，增加新的审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 增加审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
+     * set 在原有审计项基础上，增加新的审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
      *
      * @param add
      */
@@ -78,7 +78,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP如删除了所有审计项，则审计自动关闭
+     * get 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP&lt;br&gt;如删除了所有审计项，则审计自动关闭
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP如删除了所有审计项，则审计自动关闭
+     * set 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP&lt;br&gt;如删除了所有审计项，则审计自动关闭
      *
      * @param drop
      */
@@ -96,7 +96,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -105,7 +105,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -114,7 +114,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get Instance ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -123,7 +123,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -133,7 +133,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 增加审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
+     * set 在原有审计项基础上，增加新的审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP
      *
      * @param add
      */
@@ -143,7 +143,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP如删除了所有审计项，则审计自动关闭
+     * set 删除审计项，多个审计项之间用英文逗号，分号或空格分隔，例如DATABASE_OBJECT_ACCESS_GROUP,ACKUP_RESTORE_GROUP&lt;br&gt;如删除了所有审计项，则审计自动关闭
      *
      * @param drop
      */
@@ -153,7 +153,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -163,7 +163,7 @@ public class ModifyAuditRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

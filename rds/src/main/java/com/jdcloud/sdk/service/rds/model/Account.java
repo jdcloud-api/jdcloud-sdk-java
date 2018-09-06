@@ -35,23 +35,23 @@ public class Account  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 账号名称
+     * 账号名，账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      */
     private String accountName;
 
     /**
-     * 账号状态，building：创建中，running：运行中
+     * 账号状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      */
     private String accountStatus;
 
     /**
-     * 账户权限列表
+     * 具有的权限
      */
     private List<AccountPrivilege> accountPrivileges;
 
 
     /**
-     * get 账号名称
+     * get 账号名，账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -60,7 +60,7 @@ public class Account  implements java.io.Serializable {
     }
 
     /**
-     * set 账号名称
+     * set 账号名，账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param accountName
      */
@@ -69,7 +69,7 @@ public class Account  implements java.io.Serializable {
     }
 
     /**
-     * get 账号状态，building：创建中，running：运行中
+     * get 账号状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class Account  implements java.io.Serializable {
     }
 
     /**
-     * set 账号状态，building：创建中，running：运行中
+     * set 账号状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
      * @param accountStatus
      */
@@ -87,7 +87,7 @@ public class Account  implements java.io.Serializable {
     }
 
     /**
-     * get 账户权限列表
+     * get 具有的权限
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class Account  implements java.io.Serializable {
     }
 
     /**
-     * set 账户权限列表
+     * set 具有的权限
      *
      * @param accountPrivileges
      */
@@ -106,7 +106,7 @@ public class Account  implements java.io.Serializable {
 
 
     /**
-     * set 账号名称
+     * set 账号名，账号名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param accountName
      */
@@ -116,7 +116,7 @@ public class Account  implements java.io.Serializable {
     }
 
     /**
-     * set 账号状态，building：创建中，running：运行中
+     * set 账号状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **MySQL：不支持，不返回该字段**&lt;br&gt;- **SQL Server：返回该字段**
      *
      * @param accountStatus
      */
@@ -126,7 +126,7 @@ public class Account  implements java.io.Serializable {
     }
 
     /**
-     * set 账户权限列表
+     * set 具有的权限
      *
      * @param accountPrivileges
      */
@@ -137,7 +137,7 @@ public class Account  implements java.io.Serializable {
 
 
     /**
-     * add item to 账户权限列表
+     * add item to 具有的权限
      *
      * @param accountPrivilege
      */

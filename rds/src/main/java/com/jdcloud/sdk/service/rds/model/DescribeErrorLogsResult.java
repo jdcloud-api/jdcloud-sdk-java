@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.ErrorLog;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取SQL Server 错误日志及下载信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取SQL Server 错误日志及下载信息&lt;br&gt;- 仅支持SQL Server
  */
 public class DescribeErrorLogsResult extends JdcloudResult implements java.io.Serializable {
 

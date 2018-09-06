@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsResponse;
 
 /**
- * 获取SQL Server 错误日志及下载信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取SQL Server 错误日志及下载信息&lt;br&gt;- 仅支持SQL Server
  */
 class DescribeErrorLogsExecutor extends JdcloudExecutor {
 

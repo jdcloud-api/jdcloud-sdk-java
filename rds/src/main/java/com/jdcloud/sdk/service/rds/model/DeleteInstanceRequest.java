@@ -28,21 +28,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除数据库集群实例及Mysql只读实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持 [MFA enabled]
+ * 删除一个RDS实例或者MySQL的只读实例。删除MySQL主实例时，会同时将对应的MySQL只读实例也删除 [MFA enabled]
  */
 public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -68,7 +68,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get Instance ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -87,7 +87,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

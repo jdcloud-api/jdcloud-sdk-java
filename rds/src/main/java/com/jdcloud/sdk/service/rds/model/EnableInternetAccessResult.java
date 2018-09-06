@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例
  */
 public class EnableInternetAccessResult extends JdcloudResult implements java.io.Serializable {
 

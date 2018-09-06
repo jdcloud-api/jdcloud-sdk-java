@@ -60,7 +60,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
 
     /**
      * 排除设备，使用此参数noDevice配合deviceName一起使用。
-创建打包镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。
+创建整机镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。
 创建模板：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb不参与创建主机。
 创建主机：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb，或者模板(使用模板创建主机)中的数据盘vdb不参与创建主机。
 
@@ -154,7 +154,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
 
     /**
      * get 排除设备，使用此参数noDevice配合deviceName一起使用。
-创建打包镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。
+创建整机镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。
 创建模板：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb不参与创建主机。
 创建主机：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb，或者模板(使用模板创建主机)中的数据盘vdb不参与创建主机。
 
@@ -167,7 +167,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
 
     /**
      * set 排除设备，使用此参数noDevice配合deviceName一起使用。
-创建打包镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。
+创建整机镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。
 创建模板：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb不参与创建主机。
 创建主机：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb，或者模板(使用模板创建主机)中的数据盘vdb不参与创建主机。
 
@@ -227,7 +227,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
 
     /**
      * set 排除设备，使用此参数noDevice配合deviceName一起使用。
-创建打包镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。
+创建整机镜像：如deviceName:vdb、noDevice:true，则表示云主机中的数据盘vdb不参与创建镜像。
 创建模板：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb不参与创建主机。
 创建主机：如deviceName:vdb、noDevice:true，则表示镜像中的数据盘vdb，或者模板(使用模板创建主机)中的数据盘vdb不参与创建主机。
 

@@ -28,21 +28,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等
  */
 public class DescribeAccountsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域代码
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 地域代码
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -68,7 +68,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 实例ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -87,7 +87,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 实例ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

@@ -38,7 +38,7 @@ public class DBAccessPrivilege  implements java.io.Serializable {
     private String accountName;
 
     /**
-     * 对数据库具有的权限,ro:只读  rw:读写
+     * 该账号对数据库具有的权限，权限的具体定义可以参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
     private String privilege;
 
@@ -62,7 +62,7 @@ public class DBAccessPrivilege  implements java.io.Serializable {
     }
 
     /**
-     * get 对数据库具有的权限,ro:只读  rw:读写
+     * get 该账号对数据库具有的权限，权限的具体定义可以参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class DBAccessPrivilege  implements java.io.Serializable {
     }
 
     /**
-     * set 对数据库具有的权限,ro:只读  rw:读写
+     * set 该账号对数据库具有的权限，权限的具体定义可以参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param privilege
      */
@@ -91,7 +91,7 @@ public class DBAccessPrivilege  implements java.io.Serializable {
     }
 
     /**
-     * set 对数据库具有的权限,ro:只读  rw:读写
+     * set 该账号对数据库具有的权限，权限的具体定义可以参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param privilege
      */

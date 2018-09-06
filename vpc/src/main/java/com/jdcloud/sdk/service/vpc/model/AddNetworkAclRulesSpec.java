@@ -40,7 +40,7 @@ public class AddNetworkAclRulesSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private List<AddNetworkAclRuleSpec> networkAclRuleSpec;
+    private List<AddNetworkAclRuleSpec> networkAclRuleSpecs;
 
 
     /**
@@ -48,27 +48,27 @@ public class AddNetworkAclRulesSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public List<AddNetworkAclRuleSpec> getNetworkAclRuleSpec() {
-        return networkAclRuleSpec;
+    public List<AddNetworkAclRuleSpec> getNetworkAclRuleSpecs() {
+        return networkAclRuleSpecs;
     }
 
     /**
      * set networkAcl规则列表
      *
-     * @param networkAclRuleSpec
+     * @param networkAclRuleSpecs
      */
-    public void setNetworkAclRuleSpec(List<AddNetworkAclRuleSpec> networkAclRuleSpec) {
-        this.networkAclRuleSpec = networkAclRuleSpec;
+    public void setNetworkAclRuleSpecs(List<AddNetworkAclRuleSpec> networkAclRuleSpecs) {
+        this.networkAclRuleSpecs = networkAclRuleSpecs;
     }
 
 
     /**
      * set networkAcl规则列表
      *
-     * @param networkAclRuleSpec
+     * @param networkAclRuleSpecs
      */
-    public AddNetworkAclRulesSpec networkAclRuleSpec(List<AddNetworkAclRuleSpec> networkAclRuleSpec) {
-        this.networkAclRuleSpec = networkAclRuleSpec;
+    public AddNetworkAclRulesSpec networkAclRuleSpecs(List<AddNetworkAclRuleSpec> networkAclRuleSpecs) {
+        this.networkAclRuleSpecs = networkAclRuleSpecs;
         return this;
     }
 
@@ -79,10 +79,10 @@ public class AddNetworkAclRulesSpec  implements java.io.Serializable {
      * @param networkAclRuleSpec
      */
     public void addNetworkAclRuleSpec(AddNetworkAclRuleSpec networkAclRuleSpec) {
-        if (this.networkAclRuleSpec == null) {
-            this.networkAclRuleSpec = new ArrayList<>();
+        if (this.networkAclRuleSpecs == null) {
+            this.networkAclRuleSpecs = new ArrayList<>();
         }
-        this.networkAclRuleSpec.add(networkAclRuleSpec);
+        this.networkAclRuleSpecs.add(networkAclRuleSpec);
     }
 
 }

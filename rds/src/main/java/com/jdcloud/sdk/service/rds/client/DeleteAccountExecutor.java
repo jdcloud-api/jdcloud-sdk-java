@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DeleteAccountResponse;
 
 /**
- * 删除数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例
  */
 class DeleteAccountExecutor extends JdcloudExecutor {
 

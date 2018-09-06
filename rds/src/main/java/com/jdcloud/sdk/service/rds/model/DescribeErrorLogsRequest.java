@@ -28,21 +28,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取SQL Server 错误日志及下载信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取SQL Server 错误日志及下载信息&lt;br&gt;- 仅支持SQL Server
  */
 public class DescribeErrorLogsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DescribeErrorLogsRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DescribeErrorLogsRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -68,7 +68,7 @@ public class DescribeErrorLogsRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get Instance ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DescribeErrorLogsRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -87,7 +87,7 @@ public class DescribeErrorLogsRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class DescribeErrorLogsRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

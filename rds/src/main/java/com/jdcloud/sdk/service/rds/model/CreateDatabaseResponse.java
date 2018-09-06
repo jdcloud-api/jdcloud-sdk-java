@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
  */
 public class CreateDatabaseResponse extends JdcloudResponse<CreateDatabaseResult> implements java.io.Serializable {
 

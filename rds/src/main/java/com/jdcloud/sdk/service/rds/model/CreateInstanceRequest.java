@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.rds.model.DBInstanceSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据库集群实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 创建一个RDS实例，用户可以使用相应的数据库客户端或者应用程序通过域名和端口链接到该RDS实例上，进行操作。
  */
 public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -43,7 +43,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     private DBInstanceSpec instanceSpec;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
@@ -69,7 +69,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -98,7 +98,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */

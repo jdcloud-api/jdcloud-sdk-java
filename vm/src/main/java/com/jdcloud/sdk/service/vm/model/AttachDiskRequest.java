@@ -50,7 +50,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     private String deviceName;
 
     /**
-     * 自动随主机删除此云硬盘，默认为False，只支持按配置计费的云硬盘。如果是共享型云硬盘，此参数无效。
+     * 自动随主机删除此云硬盘，默认为False。仅按配置计费云硬盘支持修改此参数，包年包月云硬盘默认为False且不可修改。如果是共享型云硬盘，此参数无效。
      */
     private Boolean autoDelete;
 
@@ -106,7 +106,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 自动随主机删除此云硬盘，默认为False，只支持按配置计费的云硬盘。如果是共享型云硬盘，此参数无效。
+     * get 自动随主机删除此云硬盘，默认为False。仅按配置计费云硬盘支持修改此参数，包年包月云硬盘默认为False且不可修改。如果是共享型云硬盘，此参数无效。
      *
      * @return
      */
@@ -115,7 +115,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 自动随主机删除此云硬盘，默认为False，只支持按配置计费的云硬盘。如果是共享型云硬盘，此参数无效。
+     * set 自动随主机删除此云硬盘，默认为False。仅按配置计费云硬盘支持修改此参数，包年包月云硬盘默认为False且不可修改。如果是共享型云硬盘，此参数无效。
      *
      * @param autoDelete
      */
@@ -181,7 +181,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 自动随主机删除此云硬盘，默认为False，只支持按配置计费的云硬盘。如果是共享型云硬盘，此参数无效。
+     * set 自动随主机删除此云硬盘，默认为False。仅按配置计费云硬盘支持修改此参数，包年包月云硬盘默认为False且不可修改。如果是共享型云硬盘，此参数无效。
      *
      * @param autoDelete
      */

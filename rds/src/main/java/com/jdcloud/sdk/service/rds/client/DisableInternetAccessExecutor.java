@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DisableInternetAccessResponse;
 
 /**
- * 关闭RDS实例的外网访问，用户无法通过Internet访问RDS，但可以通过内网域名访问&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 关闭RDS实例的外网访问功能。关闭后，用户无法通过Internet访问RDS，但可以在京东云内网通过内网域名访问
  */
 class DisableInternetAccessExecutor extends JdcloudExecutor {
 

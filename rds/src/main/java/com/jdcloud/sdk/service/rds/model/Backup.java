@@ -40,7 +40,7 @@ public class Backup  implements java.io.Serializable {
     private String backupId;
 
     /**
-     * 备份名称
+     * 备份名称，最长支持64个英文字符或等长的中文字符
      */
     private String backupName;
 
@@ -50,7 +50,7 @@ public class Backup  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 备份状态 &lt;/br&gt; COMPLETED：备份完成&lt;/br&gt;FAILED：备份失败&lt;/br&gt;BUILDING：备份中&lt;/br&gt;DELETING：删除中
+     * 备份状态，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
     private String backupStatus;
 
@@ -60,27 +60,27 @@ public class Backup  implements java.io.Serializable {
     private String backupStartTime;
 
     /**
-     * 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss
+     * 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      */
     private String backupEndTime;
 
     /**
-     * 备份类型，全量备份或增量备份&lt;/br&gt;full：全量&lt;/br&gt;diff：增量
+     * 备份类型，全量备份或增量备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      */
     private String backupType;
 
     /**
-     * 备份模式，系统自动备份或手动备份&lt;/br&gt;Automated：自动备份&lt;/br&gt;Manual：手工备份
+     * 备份模式，系统自动备份或手动备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
     private String backupMode;
 
     /**
-     * 备份粒度，实例备份或者多库备份&lt;/br&gt;instance：实例备份&lt;/br&gt;dbs：数据库备份
+     * 备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      */
     private String backupUnit;
 
     /**
-     * 备份文件列表，仅SQL Server支持该参数，文件名的命名规则为:&lt;/br&gt;全备:数据库名+.bak; &lt;/br&gt;增量:数据库名+.diff
+     * 备份文件列表&lt;br&gt;- **SQL Server支持**,备份可以有多个文件，文件名的命名规则为:&lt;br&gt;（1）全备：数据库名+.bak&lt;br&gt;（2）增量：数据库名+.diff&lt;br&gt;- **MySQL不支持**
      */
     private List<String> backupFiles;
 
@@ -109,7 +109,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份名称
+     * get 备份名称，最长支持64个英文字符或等长的中文字符
      *
      * @return
      */
@@ -118,7 +118,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份名称
+     * set 备份名称，最长支持64个英文字符或等长的中文字符
      *
      * @param backupName
      */
@@ -145,7 +145,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份状态 &lt;/br&gt; COMPLETED：备份完成&lt;/br&gt;FAILED：备份失败&lt;/br&gt;BUILDING：备份中&lt;/br&gt;DELETING：删除中
+     * get 备份状态，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @return
      */
@@ -154,7 +154,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份状态 &lt;/br&gt; COMPLETED：备份完成&lt;/br&gt;FAILED：备份失败&lt;/br&gt;BUILDING：备份中&lt;/br&gt;DELETING：删除中
+     * set 备份状态，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param backupStatus
      */
@@ -181,7 +181,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss
+     * get 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @return
      */
@@ -190,7 +190,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss
+     * set 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @param backupEndTime
      */
@@ -199,7 +199,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份类型，全量备份或增量备份&lt;/br&gt;full：全量&lt;/br&gt;diff：增量
+     * get 备份类型，全量备份或增量备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @return
      */
@@ -208,7 +208,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份类型，全量备份或增量备份&lt;/br&gt;full：全量&lt;/br&gt;diff：增量
+     * set 备份类型，全量备份或增量备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @param backupType
      */
@@ -217,7 +217,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份模式，系统自动备份或手动备份&lt;/br&gt;Automated：自动备份&lt;/br&gt;Manual：手工备份
+     * get 备份模式，系统自动备份或手动备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @return
      */
@@ -226,7 +226,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份模式，系统自动备份或手动备份&lt;/br&gt;Automated：自动备份&lt;/br&gt;Manual：手工备份
+     * set 备份模式，系统自动备份或手动备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param backupMode
      */
@@ -235,7 +235,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份粒度，实例备份或者多库备份&lt;/br&gt;instance：实例备份&lt;/br&gt;dbs：数据库备份
+     * get 备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @return
      */
@@ -244,7 +244,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份粒度，实例备份或者多库备份&lt;/br&gt;instance：实例备份&lt;/br&gt;dbs：数据库备份
+     * set 备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @param backupUnit
      */
@@ -253,7 +253,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份文件列表，仅SQL Server支持该参数，文件名的命名规则为:&lt;/br&gt;全备:数据库名+.bak; &lt;/br&gt;增量:数据库名+.diff
+     * get 备份文件列表&lt;br&gt;- **SQL Server支持**,备份可以有多个文件，文件名的命名规则为:&lt;br&gt;（1）全备：数据库名+.bak&lt;br&gt;（2）增量：数据库名+.diff&lt;br&gt;- **MySQL不支持**
      *
      * @return
      */
@@ -262,7 +262,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份文件列表，仅SQL Server支持该参数，文件名的命名规则为:&lt;/br&gt;全备:数据库名+.bak; &lt;/br&gt;增量:数据库名+.diff
+     * set 备份文件列表&lt;br&gt;- **SQL Server支持**,备份可以有多个文件，文件名的命名规则为:&lt;br&gt;（1）全备：数据库名+.bak&lt;br&gt;（2）增量：数据库名+.diff&lt;br&gt;- **MySQL不支持**
      *
      * @param backupFiles
      */
@@ -300,7 +300,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份名称
+     * set 备份名称，最长支持64个英文字符或等长的中文字符
      *
      * @param backupName
      */
@@ -320,7 +320,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份状态 &lt;/br&gt; COMPLETED：备份完成&lt;/br&gt;FAILED：备份失败&lt;/br&gt;BUILDING：备份中&lt;/br&gt;DELETING：删除中
+     * set 备份状态，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param backupStatus
      */
@@ -340,7 +340,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss
+     * set 备份结束时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @param backupEndTime
      */
@@ -350,7 +350,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份类型，全量备份或增量备份&lt;/br&gt;full：全量&lt;/br&gt;diff：增量
+     * set 备份类型，全量备份或增量备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @param backupType
      */
@@ -360,7 +360,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份模式，系统自动备份或手动备份&lt;/br&gt;Automated：自动备份&lt;/br&gt;Manual：手工备份
+     * set 备份模式，系统自动备份或手动备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param backupMode
      */
@@ -370,7 +370,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份粒度，实例备份或者多库备份&lt;/br&gt;instance：实例备份&lt;/br&gt;dbs：数据库备份
+     * set 备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @param backupUnit
      */
@@ -380,7 +380,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份文件列表，仅SQL Server支持该参数，文件名的命名规则为:&lt;/br&gt;全备:数据库名+.bak; &lt;/br&gt;增量:数据库名+.diff
+     * set 备份文件列表&lt;br&gt;- **SQL Server支持**,备份可以有多个文件，文件名的命名规则为:&lt;br&gt;（1）全备：数据库名+.bak&lt;br&gt;（2）增量：数据库名+.diff&lt;br&gt;- **MySQL不支持**
      *
      * @param backupFiles
      */
@@ -401,7 +401,7 @@ public class Backup  implements java.io.Serializable {
 
 
     /**
-     * add item to 备份文件列表，仅SQL Server支持该参数，文件名的命名规则为:&lt;/br&gt;全备:数据库名+.bak; &lt;/br&gt;增量:数据库名+.diff
+     * add item to 备份文件列表&lt;br&gt;- **SQL Server支持**,备份可以有多个文件，文件名的命名规则为:&lt;br&gt;（1）全备：数据库名+.bak&lt;br&gt;（2）增量：数据库名+.diff&lt;br&gt;- **MySQL不支持**
      *
      * @param backupFile
      */

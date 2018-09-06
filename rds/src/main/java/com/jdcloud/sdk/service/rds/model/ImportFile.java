@@ -33,12 +33,12 @@ public class ImportFile  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 上传的备份文件名称
+     * 文件名称
      */
     private String name;
 
     /**
-     * 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空
+     * 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空。该全局ID在文件删除时，需要用到
      */
     private String sharedFileGid;
 
@@ -53,13 +53,13 @@ public class ImportFile  implements java.io.Serializable {
     private String uploadTime;
 
     /**
-     * 是否所属当前实例. “true”或者“false”
+     * 是否所属当前实例.&lt;br&gt; 1：当前实例；&lt;br&gt;0：不是当前实例，为共享文件
      */
     private String isLocal;
 
 
     /**
-     * get 上传的备份文件名称
+     * get 文件名称
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 上传的备份文件名称
+     * set 文件名称
      *
      * @param name
      */
@@ -77,7 +77,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * get 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空
+     * get 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空。该全局ID在文件删除时，需要用到
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空
+     * set 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空。该全局ID在文件删除时，需要用到
      *
      * @param sharedFileGid
      */
@@ -131,7 +131,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * get 是否所属当前实例. “true”或者“false”
+     * get 是否所属当前实例.&lt;br&gt; 1：当前实例；&lt;br&gt;0：不是当前实例，为共享文件
      *
      * @return
      */
@@ -140,7 +140,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 是否所属当前实例. “true”或者“false”
+     * set 是否所属当前实例.&lt;br&gt; 1：当前实例；&lt;br&gt;0：不是当前实例，为共享文件
      *
      * @param isLocal
      */
@@ -150,7 +150,7 @@ public class ImportFile  implements java.io.Serializable {
 
 
     /**
-     * set 上传的备份文件名称
+     * set 文件名称
      *
      * @param name
      */
@@ -160,7 +160,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空
+     * set 如果该文件是共享文件，则有全局ID，如不是共享文件，则为空。该全局ID在文件删除时，需要用到
      *
      * @param sharedFileGid
      */
@@ -190,7 +190,7 @@ public class ImportFile  implements java.io.Serializable {
     }
 
     /**
-     * set 是否所属当前实例. “true”或者“false”
+     * set 是否所属当前实例.&lt;br&gt; 1：当前实例；&lt;br&gt;0：不是当前实例，为共享文件
      *
      * @param isLocal
      */
