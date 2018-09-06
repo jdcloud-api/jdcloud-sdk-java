@@ -28,21 +28,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 开启RDS实例的外网访问，用户可以通过internet访问RDS实例&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 开启RDS实例的外网访问功能。开启后，用户可以通过internet访问RDS实例
  */
 public class EnableInternetAccessRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -68,7 +68,7 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get Instance ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -87,7 +87,7 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class EnableInternetAccessRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DeleteBackupResponse;
 
 /**
- * 删除备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 删除RDS实例备份，仅允许删除用户生成的备份，系统自动备份不允许删除。
  */
 class DeleteBackupExecutor extends JdcloudExecutor {
 

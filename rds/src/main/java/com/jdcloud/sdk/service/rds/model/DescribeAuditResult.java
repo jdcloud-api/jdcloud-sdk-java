@@ -29,20 +29,20 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看开启的审计选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 查看当前实例已开启的审计选项。如当前实例未开启审计，则返回空&lt;br&gt;- 仅支持SQL Server
  */
 public class DescribeAuditResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 当前已开启的审计选项。如当前实例未开启审计，则返回空
+     * 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
      */
     private List<String> enabled;
 
 
     /**
-     * get 当前已开启的审计选项。如当前实例未开启审计，则返回空
+     * get 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
      *
      * @return
      */
@@ -51,7 +51,7 @@ public class DescribeAuditResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 当前已开启的审计选项。如当前实例未开启审计，则返回空
+     * set 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
      *
      * @param enabled
      */
@@ -61,7 +61,7 @@ public class DescribeAuditResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * set 当前已开启的审计选项。如当前实例未开启审计，则返回空
+     * set 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
      *
      * @param enabled
      */
@@ -72,7 +72,7 @@ public class DescribeAuditResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * add item to 当前已开启的审计选项。如当前实例未开启审计，则返回空
+     * add item to 当前已开启的审计选项。如当前实例未开启审计，则返回空数组
      *
      * @param enabled
      */

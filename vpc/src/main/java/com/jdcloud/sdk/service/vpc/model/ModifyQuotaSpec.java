@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vpc.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * modifyQuotaSpec
@@ -34,7 +35,9 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
 
     /**
      * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * Required:true
      */
+    @Required
     private String type;
 
     /**
@@ -44,7 +47,9 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
 
     /**
      * 配额大小
+     * Required:true
      */
+    @Required
     private Integer maxLimit;
 
 

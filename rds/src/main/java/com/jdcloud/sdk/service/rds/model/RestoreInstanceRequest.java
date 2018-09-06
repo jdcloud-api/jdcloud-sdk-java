@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 使用实例的全量备份覆盖恢复当前实例&lt;/br&gt;- SQL Server：不支持&lt;/br&gt;- MySQL：支持
+ * 使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
  */
 public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -40,14 +40,14 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     private String backupId;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -73,7 +73,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -91,7 +91,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get Instance ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -100,7 +100,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -120,7 +120,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -130,7 +130,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

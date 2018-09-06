@@ -33,12 +33,12 @@ public class ErrorLog  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 错误日志名称
+     * 错误日志文件名称
      */
     private String name;
 
     /**
-     * 错误日志大小，单位Byte
+     * 错误日志文件大小，单位Byte
      */
     private Long sizeByte;
 
@@ -64,7 +64,7 @@ public class ErrorLog  implements java.io.Serializable {
 
 
     /**
-     * get 错误日志名称
+     * get 错误日志文件名称
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class ErrorLog  implements java.io.Serializable {
     }
 
     /**
-     * set 错误日志名称
+     * set 错误日志文件名称
      *
      * @param name
      */
@@ -82,7 +82,7 @@ public class ErrorLog  implements java.io.Serializable {
     }
 
     /**
-     * get 错误日志大小，单位Byte
+     * get 错误日志文件大小，单位Byte
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class ErrorLog  implements java.io.Serializable {
     }
 
     /**
-     * set 错误日志大小，单位Byte
+     * set 错误日志文件大小，单位Byte
      *
      * @param sizeByte
      */
@@ -173,7 +173,7 @@ public class ErrorLog  implements java.io.Serializable {
 
 
     /**
-     * set 错误日志名称
+     * set 错误日志文件名称
      *
      * @param name
      */
@@ -183,7 +183,7 @@ public class ErrorLog  implements java.io.Serializable {
     }
 
     /**
-     * set 错误日志大小，单位Byte
+     * set 错误日志文件大小，单位Byte
      *
      * @param sizeByte
      */

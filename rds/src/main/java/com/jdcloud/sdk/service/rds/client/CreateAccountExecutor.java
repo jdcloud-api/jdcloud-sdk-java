@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.CreateAccountResponse;
 
 /**
- * 创建数据库账户&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
  */
 class CreateAccountExecutor extends JdcloudExecutor {
 

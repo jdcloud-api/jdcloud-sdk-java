@@ -28,28 +28,28 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改RDS实例名称&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)&lt;br&gt;- 仅支持SQL Server
  */
 public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例名称，名称支持中文、数字、小写字母及英文下划线“_”，且不少于2字符不超过32字符
+     * 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      * Required:true
      */
     @Required
     private String instanceName;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 实例名称，名称支持中文、数字、小写字母及英文下划线“_”，且不少于2字符不超过32字符
+     * get 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 实例名称，名称支持中文、数字、小写字母及英文下划线“_”，且不少于2字符不超过32字符
+     * set 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -75,7 +75,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -84,7 +84,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -93,7 +93,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get Instance ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -102,7 +102,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -112,7 +112,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 实例名称，名称支持中文、数字、小写字母及英文下划线“_”，且不少于2字符不超过32字符
+     * set 实例名称，名称支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -122,7 +122,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -132,7 +132,7 @@ public class SetInstanceNameRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

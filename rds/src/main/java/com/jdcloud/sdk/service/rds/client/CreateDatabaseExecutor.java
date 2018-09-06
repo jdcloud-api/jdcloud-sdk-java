@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseResponse;
 
 /**
- * 创建数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
  */
 class CreateDatabaseExecutor extends JdcloudExecutor {
 

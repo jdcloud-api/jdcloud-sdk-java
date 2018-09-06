@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 索引性能统计&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 根据用户定义的查询条件，获取索引性能的统计信息，并提供缺失索引及索引创建建议。用户可以根据这些信息查找与索引相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
  */
 public class DescribeIndexPerformanceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 查询类型，不同的查询类型按照相应的字段从高到低返回结果。支持如下类型：Missing：缺失索引Size：索引大小，单位KBUpdates：索引更新次数Scans：表扫描次数Used：最少使用
+     * 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;Missing：缺失索引&lt;br&gt;Size：索引大小，单位KB&lt;br&gt;Updates：索引更新次数&lt;br&gt;Scans：表扫描次数&lt;br&gt;Used：最少使用&lt;br&gt;
      * Required:true
      */
     @Required
@@ -47,24 +47,24 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     private String db;
 
     /**
-     * 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      */
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
+     * 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
      */
     private Integer pageSize;
 
     /**
-     * Region ID
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * Instance ID
+     * RDS 实例ID，唯一标识一个RDS实例
      * Required:true
      */
     @Required
@@ -72,7 +72,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 查询类型，不同的查询类型按照相应的字段从高到低返回结果。支持如下类型：Missing：缺失索引Size：索引大小，单位KBUpdates：索引更新次数Scans：表扫描次数Used：最少使用
+     * get 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;Missing：缺失索引&lt;br&gt;Size：索引大小，单位KB&lt;br&gt;Updates：索引更新次数&lt;br&gt;Scans：表扫描次数&lt;br&gt;Used：最少使用&lt;br&gt;
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。支持如下类型：Missing：缺失索引Size：索引大小，单位KBUpdates：索引更新次数Scans：表扫描次数Used：最少使用
+     * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;Missing：缺失索引&lt;br&gt;Size：索引大小，单位KB&lt;br&gt;Updates：索引更新次数&lt;br&gt;Scans：表扫描次数&lt;br&gt;Used：最少使用&lt;br&gt;
      *
      * @param queryType
      */
@@ -108,7 +108,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * get 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * set 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      *
      * @param pageNumber
      */
@@ -126,7 +126,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
+     * get 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
      *
      * @return
      */
@@ -135,7 +135,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
+     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
      *
      * @param pageSize
      */
@@ -144,7 +144,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get Region ID
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -153,7 +153,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -162,7 +162,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get Instance ID
+     * get RDS 实例ID，唯一标识一个RDS实例
      *
      * @return
      */
@@ -171,7 +171,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */
@@ -181,7 +181,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。支持如下类型：Missing：缺失索引Size：索引大小，单位KBUpdates：索引更新次数Scans：表扫描次数Used：最少使用
+     * set 查询类型，不同的查询类型按照相应的字段从高到低返回结果。&lt;br&gt;支持如下类型：&lt;br&gt;Missing：缺失索引&lt;br&gt;Size：索引大小，单位KB&lt;br&gt;Updates：索引更新次数&lt;br&gt;Scans：表扫描次数&lt;br&gt;Used：最少使用&lt;br&gt;
      *
      * @param queryType
      */
@@ -201,7 +201,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 显示数据的页码，取值范围：[1,1000)，页码超过总页数时，显示最后一页，用于查询列表的接口
+     * set 显示数据的页码，默认为1，取值范围：[-1,1000)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
      *
      * @param pageNumber
      */
@@ -211,7 +211,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数
+     * set 每页显示的数据条数，默认为50，取值范围：[1,100]，只能为10的倍数，用于查询列表的接口
      *
      * @param pageSize
      */
@@ -221,7 +221,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Region ID
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -231,7 +231,7 @@ public class DescribeIndexPerformanceRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Instance ID
+     * set RDS 实例ID，唯一标识一个RDS实例
      *
      * @param instanceId
      */

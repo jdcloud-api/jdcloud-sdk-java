@@ -29,14 +29,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建备份&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 创建一个RDS实例全量备份，可以对整个实例或者部分数据库（仅SQL Server支持）进行全量备份。同一时间点，只能有一个正在运行的备份任务
  */
 public class CreateBackupRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 集群ID
+     * RDS实例ID，唯一标识一个实例
      */
     private String instanceId;
 
@@ -46,7 +46,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     private BackupSpec backupSpec;
 
     /**
-     * 地域代码
+     * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
@@ -54,7 +54,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 集群ID
+     * get RDS实例ID，唯一标识一个实例
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 集群ID
+     * set RDS实例ID，唯一标识一个实例
      *
      * @param instanceId
      */
@@ -90,7 +90,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 地域代码
+     * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
@@ -109,7 +109,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 集群ID
+     * set RDS实例ID，唯一标识一个实例
      *
      * @param instanceId
      */
@@ -129,7 +129,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域代码
+     * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */

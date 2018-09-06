@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看实例下所有账号信息&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等
  */
 public class DescribeAccountsResponse extends JdcloudResponse<DescribeAccountsResult> implements java.io.Serializable {
 

@@ -46,7 +46,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     private Number priority;
 
     /**
-     * 下一跳类型, 取值范围:instance:虚机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
      */
     private String nextHopType;
 
@@ -98,7 +98,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * get 下一跳类型, 取值范围:instance:虚机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
      *
      * @return
      */
@@ -107,7 +107,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:instance:虚机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
      *
      * @param nextHopType
      */
@@ -173,7 +173,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:instance:虚机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
      *
      * @param nextHopType
      */

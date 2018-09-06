@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.AuditFile;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看审计文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取当前实例下的所有审计结果文件的列表&lt;br&gt;- 仅支持SQL Server
  */
 public class GetAuditFilesResult extends JdcloudResult implements java.io.Serializable {
 

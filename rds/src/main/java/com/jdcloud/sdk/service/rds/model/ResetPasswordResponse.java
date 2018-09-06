@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 数据库账号重置密码&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：支持
+ * 重置数据库账号密码。如果用户忘记账号的密码，可以使用该接口重置指定账号密码。密码重置后，以前的密码将无法使用，必须使用重置后的新密码登录或连接数据库实例。
  */
 public class ResetPasswordResponse extends JdcloudResponse<ResetPasswordResult> implements java.io.Serializable {
 

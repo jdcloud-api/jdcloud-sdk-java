@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.ImportFile;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取单库上云文件列表&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取用户通过单库上云工具上传到该实例上的文件列表&lt;br&gt;- 仅支持SQL Server
  */
 public class DescribeImportFilesResult extends JdcloudResult implements java.io.Serializable {
 

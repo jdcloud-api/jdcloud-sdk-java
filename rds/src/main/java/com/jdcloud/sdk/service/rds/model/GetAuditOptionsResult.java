@@ -29,25 +29,25 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取审计所有选项及推荐的选项&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 获取当前系统所支持的各种数据库版本的审计选项及相应的推荐选项&lt;br&gt;- 仅支持SQL Server
  */
 public class GetAuditOptionsResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 建议开启的审计选项
+     * AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
      */
     private List<String> enabled;
 
     /**
-     * 未开启的审计选项（AuditDefault类模板）或所有审计选项（AuditOptions类模板）
+     * AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
      */
     private List<String> disabled;
 
 
     /**
-     * get 建议开启的审计选项
+     * get AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
      *
      * @return
      */
@@ -56,7 +56,7 @@ public class GetAuditOptionsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 建议开启的审计选项
+     * set AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
      *
      * @param enabled
      */
@@ -65,7 +65,7 @@ public class GetAuditOptionsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get 未开启的审计选项（AuditDefault类模板）或所有审计选项（AuditOptions类模板）
+     * get AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
      *
      * @return
      */
@@ -74,7 +74,7 @@ public class GetAuditOptionsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 未开启的审计选项（AuditDefault类模板）或所有审计选项（AuditOptions类模板）
+     * set AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
      *
      * @param disabled
      */
@@ -84,7 +84,7 @@ public class GetAuditOptionsResult extends JdcloudResult implements java.io.Seri
 
 
     /**
-     * set 建议开启的审计选项
+     * set AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
      *
      * @param enabled
      */
@@ -94,7 +94,7 @@ public class GetAuditOptionsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 未开启的审计选项（AuditDefault类模板）或所有审计选项（AuditOptions类模板）
+     * set AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
      *
      * @param disabled
      */
@@ -105,7 +105,7 @@ public class GetAuditOptionsResult extends JdcloudResult implements java.io.Seri
 
 
     /**
-     * add item to 建议开启的审计选项
+     * add item to AuditDefault类模板：返回建议开启的审计选项。&lt;br&gt; AuditOptions类模板：不返回该参数
      *
      * @param enabled
      */
@@ -117,7 +117,7 @@ public class GetAuditOptionsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * add item to 未开启的审计选项（AuditDefault类模板）或所有审计选项（AuditOptions类模板）
+     * add item to AuditDefault类模板：返回未开启的审计选项&lt;br&gt;AuditOptions类模板：返回所有的审计选项
      *
      * @param disabled
      */

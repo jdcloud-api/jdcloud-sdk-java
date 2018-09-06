@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromOSSResponse;
 
 /**
- * 从OSS恢复SQL Server数据库&lt;/br&gt;- SQL Server：支持&lt;/br&gt;- MySQL：暂不支持
+ * 从上传到OSS的备份文件中恢复单个数据库&lt;br&gt;- 仅支持SQL Server
  */
 class RestoreDatabaseFromOSSExecutor extends JdcloudExecutor {
 
