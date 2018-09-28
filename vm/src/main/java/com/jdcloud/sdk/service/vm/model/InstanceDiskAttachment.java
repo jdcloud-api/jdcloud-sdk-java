@@ -64,6 +64,11 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
      */
     private String deviceName;
 
+    /**
+     * 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+     */
+    private String status;
+
 
     /**
      * get 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
@@ -167,6 +172,24 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
         this.deviceName = deviceName;
     }
 
+    /**
+     * get 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 
     /**
      * set 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
@@ -221,6 +244,16 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
      */
     public InstanceDiskAttachment deviceName(String deviceName) {
         this.deviceName = deviceName;
+        return this;
+    }
+
+    /**
+     * set 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+     *
+     * @param status
+     */
+    public InstanceDiskAttachment status(String status) {
+        this.status = status;
         return this;
     }
 

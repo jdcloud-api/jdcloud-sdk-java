@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,20 +28,20 @@ import com.jdcloud.sdk.service.redis.model.CacheInstance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询缓存Redis实例详情
+ * 查询单个缓存Redis实例详情
  */
 public class DescribeCacheInstanceResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * cacheInstance
+     * 要查询目标缓存实例的信息
      */
     private CacheInstance cacheInstance;
 
 
     /**
-     * get cacheInstance
+     * get 要查询目标缓存实例的信息
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
     }
 
     /**
-     * set cacheInstance
+     * set 要查询目标缓存实例的信息
      *
      * @param cacheInstance
      */
@@ -60,7 +60,7 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
 
 
     /**
-     * set cacheInstance
+     * set 要查询目标缓存实例的信息
      *
      * @param cacheInstance
      */

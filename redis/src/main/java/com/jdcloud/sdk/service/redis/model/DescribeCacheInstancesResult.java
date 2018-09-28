@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.redis.model.CacheInstance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询缓存Redis实例列表
+ * 查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件
  */
 public class DescribeCacheInstancesResult extends JdcloudResult implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     private List<CacheInstance> cacheInstances;
 
     /**
-     * totalCount
+     * 查询到的缓存实例总个数。
      */
     private Integer totalCount;
 
@@ -66,7 +66,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     }
 
     /**
-     * get totalCount
+     * get 查询到的缓存实例总个数。
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     }
 
     /**
-     * set totalCount
+     * set 查询到的缓存实例总个数。
      *
      * @param totalCount
      */
@@ -95,7 +95,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     }
 
     /**
-     * set totalCount
+     * set 查询到的缓存实例总个数。
      *
      * @param totalCount
      */

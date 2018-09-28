@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordResponse;
 
 /**
- * 重置缓存Redis实例密码
+ * 重置缓存Redis实例密码，支持免密操作
  */
 class ResetCacheInstancePasswordExecutor extends JdcloudExecutor {
 

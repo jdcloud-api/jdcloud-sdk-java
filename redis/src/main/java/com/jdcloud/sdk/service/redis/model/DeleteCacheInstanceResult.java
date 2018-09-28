@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,10 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除单个缓存Redis实例
+ * 删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
+只有处于运行&lt;b&gt;running&lt;/b&gt;或者错误&lt;b&gt;error&lt;/b&gt;状态的可以删除，其余状态不可以删除
+白名单用户不能删除包年包月已到期的云主机
+
  */
 public class DeleteCacheInstanceResult extends JdcloudResult implements java.io.Serializable {
 

@@ -39,7 +39,9 @@ public class CreateRegistryRequest extends JdcloudRequest implements java.io.Ser
      * 用户定义的registry名称。&lt;br&gt; DNS兼容registry名称规则如下：
  &lt;br&gt; 不可为空，且不能超过32字符 &lt;br&gt; 以小写字母开始和结尾，支持使用小写字母、数字、中划线(-)
 
+     * Required:true
      */
+    @Required
     private String registryName;
 
     /**

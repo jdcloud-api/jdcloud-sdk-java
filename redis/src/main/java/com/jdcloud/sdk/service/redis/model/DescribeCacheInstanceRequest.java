@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询缓存Redis实例详情
+ * 查询单个缓存Redis实例详情
  */
 public class DescribeCacheInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class DescribeCacheInstanceRequest extends JdcloudRequest implements java
     private String regionId;
 
     /**
-     * 缓存Redis实例ID
+     * 缓存Redis实例ID，是访问实例的唯一标识。
      * Required:true
      */
     @Required
@@ -68,7 +68,7 @@ public class DescribeCacheInstanceRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 缓存Redis实例ID
+     * get 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DescribeCacheInstanceRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */
@@ -97,7 +97,7 @@ public class DescribeCacheInstanceRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */

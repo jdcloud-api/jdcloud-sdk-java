@@ -31,7 +31,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询配额，支持：云主机、镜像、密钥、模板
+ * 查询配额，支持：云主机、镜像、密钥、模板、镜像共享
 
  */
 public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Serializable {
@@ -39,10 +39,15 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate]
+     * resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
 
      */
     private List<Filter> filters;
+
+    /**
+     * 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+     */
+    private String imageId;
 
     /**
      * 地域ID
@@ -53,7 +58,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate]
+     * get resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
 
      *
      * @return
@@ -63,13 +68,31 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate]
+     * set resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
 
      *
      * @param filters
      */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
+    }
+
+    /**
+     * get 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+     *
+     * @return
+     */
+    public String getImageId() {
+        return imageId;
+    }
+
+    /**
+     * set 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+     *
+     * @param imageId
+     */
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
     }
 
     /**
@@ -92,13 +115,23 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate]
+     * set resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
 
      *
      * @param filters
      */
     public DescribeQuotasRequest filters(List<Filter> filters) {
         this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+     *
+     * @param imageId
+     */
+    public DescribeQuotasRequest imageId(String imageId) {
+        this.imageId = imageId;
         return this;
     }
 
@@ -114,7 +147,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * add item to resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate]
+     * add item to resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
 
      *
      * @param filter

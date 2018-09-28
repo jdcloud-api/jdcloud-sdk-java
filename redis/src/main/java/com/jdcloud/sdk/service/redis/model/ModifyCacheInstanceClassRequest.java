@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,14 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 变更缓存Redis实例配置
+ * 变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
+预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
+
  */
 public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 变更后的缓存Redis实例规格代码，参考https://www.jdcloud.com/help/detail/2414/isCatalog/1
+     * 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      * Required:true
      */
     @Required
@@ -49,7 +51,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     private String regionId;
 
     /**
-     * 缓存Redis实例ID
+     * 缓存Redis实例ID，是访问实例的唯一标识。
      * Required:true
      */
     @Required
@@ -57,7 +59,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 变更后的缓存Redis实例规格代码，参考https://www.jdcloud.com/help/detail/2414/isCatalog/1
+     * get 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @return
      */
@@ -66,7 +68,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 变更后的缓存Redis实例规格代码，参考https://www.jdcloud.com/help/detail/2414/isCatalog/1
+     * set 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @param cacheInstanceClass
      */
@@ -93,7 +95,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 缓存Redis实例ID
+     * get 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @return
      */
@@ -102,7 +104,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */
@@ -112,7 +114,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 变更后的缓存Redis实例规格代码，参考https://www.jdcloud.com/help/detail/2414/isCatalog/1
+     * set 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @param cacheInstanceClass
      */
@@ -132,7 +134,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */

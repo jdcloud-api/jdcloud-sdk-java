@@ -36,12 +36,12 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String name;
 
     /**
-     * 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String description;
 
@@ -61,7 +61,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -70,7 +70,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param name
      */
@@ -79,7 +79,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -88,7 +88,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param description
      */
@@ -134,7 +134,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 名称，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param name
      */
@@ -144,7 +144,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 描述，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param description
      */

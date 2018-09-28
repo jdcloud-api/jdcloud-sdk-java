@@ -41,7 +41,9 @@ public class CreateRepositoryRequest extends JdcloudRequest implements java.io.S
      * 镜像仓库名称。
 可以专有模式如默认命名空间nginx-web-app；或者和命名空间一起将多个仓库聚集在一起如 project-a/nginx-web-app。
 
+     * Required:true
      */
+    @Required
     private String repositoryName;
 
     /**

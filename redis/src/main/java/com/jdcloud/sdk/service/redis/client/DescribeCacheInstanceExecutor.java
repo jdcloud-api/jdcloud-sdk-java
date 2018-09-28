@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstanceResponse;
 
 /**
- * 查询缓存Redis实例详情
+ * 查询单个缓存Redis实例详情
  */
 class DescribeCacheInstanceExecutor extends JdcloudExecutor {
 

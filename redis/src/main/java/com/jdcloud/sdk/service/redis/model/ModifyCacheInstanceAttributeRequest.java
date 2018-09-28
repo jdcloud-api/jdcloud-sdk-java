@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,12 +35,12 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     private static final long serialVersionUID = 1L;
 
     /**
-     * 缓存Redis实例资源名称
+     * 缓存Redis实例资源名称，名称只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      */
     private String cacheInstanceName;
 
     /**
-     * 缓存Redis实例资源描述
+     * 缓存Redis实例资源描述，不能超过256个字符
      */
     private String cacheInstanceDescription;
 
@@ -52,7 +52,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     private String regionId;
 
     /**
-     * 缓存Redis实例ID
+     * 缓存Redis实例ID，是访问实例的唯一标识。
      * Required:true
      */
     @Required
@@ -60,7 +60,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
 
 
     /**
-     * get 缓存Redis实例资源名称
+     * get 缓存Redis实例资源名称，名称只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 缓存Redis实例资源名称
+     * set 缓存Redis实例资源名称，名称只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
      * @param cacheInstanceName
      */
@@ -78,7 +78,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     }
 
     /**
-     * get 缓存Redis实例资源描述
+     * get 缓存Redis实例资源描述，不能超过256个字符
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 缓存Redis实例资源描述
+     * set 缓存Redis实例资源描述，不能超过256个字符
      *
      * @param cacheInstanceDescription
      */
@@ -114,7 +114,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     }
 
     /**
-     * get 缓存Redis实例ID
+     * get 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @return
      */
@@ -123,7 +123,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */
@@ -133,7 +133,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
 
 
     /**
-     * set 缓存Redis实例资源名称
+     * set 缓存Redis实例资源名称，名称只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
      * @param cacheInstanceName
      */
@@ -143,7 +143,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 缓存Redis实例资源描述
+     * set 缓存Redis实例资源描述，不能超过256个字符
      *
      * @param cacheInstanceDescription
      */
@@ -163,7 +163,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */
