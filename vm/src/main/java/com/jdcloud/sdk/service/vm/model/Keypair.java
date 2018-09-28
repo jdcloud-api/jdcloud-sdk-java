@@ -42,6 +42,11 @@ public class Keypair  implements java.io.Serializable {
      */
     private String keyFingerprint;
 
+    /**
+     * 创建时间
+     */
+    private String createTime;
+
 
     /**
      * get 密钥对名称
@@ -79,6 +84,24 @@ public class Keypair  implements java.io.Serializable {
         this.keyFingerprint = keyFingerprint;
     }
 
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
 
     /**
      * set 密钥对名称
@@ -97,6 +120,16 @@ public class Keypair  implements java.io.Serializable {
      */
     public Keypair keyFingerprint(String keyFingerprint) {
         this.keyFingerprint = keyFingerprint;
+        return this;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public Keypair createTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
 

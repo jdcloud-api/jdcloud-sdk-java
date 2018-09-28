@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,10 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除单个缓存Redis实例
+ * 删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
+只有处于运行&lt;b&gt;running&lt;/b&gt;或者错误&lt;b&gt;error&lt;/b&gt;状态的可以删除，其余状态不可以删除
+白名单用户不能删除包年包月已到期的云主机
+
  */
 public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +45,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     private String regionId;
 
     /**
-     * 缓存Redis实例ID
+     * 缓存Redis实例ID，是访问实例的唯一标识。
      * Required:true
      */
     @Required
@@ -68,7 +71,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get 缓存Redis实例ID
+     * get 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @return
      */
@@ -77,7 +80,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */
@@ -97,7 +100,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */

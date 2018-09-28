@@ -43,6 +43,9 @@ import com.jdcloud.sdk.service.vm.client.DescribeImageExecutor;
 import com.jdcloud.sdk.service.vm.model.RebuildInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.RebuildInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.RebuildInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.CreateKeypairRequest;
+import com.jdcloud.sdk.service.vm.model.CreateKeypairResponse;
+import com.jdcloud.sdk.service.vm.client.CreateKeypairExecutor;
 import com.jdcloud.sdk.service.vm.model.RebootInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.RebootInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.RebootInstanceExecutor;
@@ -58,6 +61,9 @@ import com.jdcloud.sdk.service.vm.client.DescribeImagesExecutor;
 import com.jdcloud.sdk.service.vm.model.AttachNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.vm.model.AttachNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.vm.client.AttachNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.vm.model.ImportKeypairRequest;
+import com.jdcloud.sdk.service.vm.model.ImportKeypairResponse;
+import com.jdcloud.sdk.service.vm.client.ImportKeypairExecutor;
 import com.jdcloud.sdk.service.vm.model.StopInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.StopInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.StopInstanceExecutor;
@@ -91,6 +97,9 @@ import com.jdcloud.sdk.service.vm.client.ModifyInstanceDiskAttributeExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeQuotasRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeQuotasResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeQuotasExecutor;
+import com.jdcloud.sdk.service.vm.model.DeleteKeypairRequest;
+import com.jdcloud.sdk.service.vm.model.DeleteKeypairResponse;
+import com.jdcloud.sdk.service.vm.client.DeleteKeypairExecutor;
 import com.jdcloud.sdk.service.vm.model.CreateImageRequest;
 import com.jdcloud.sdk.service.vm.model.CreateImageResponse;
 import com.jdcloud.sdk.service.vm.client.CreateImageExecutor;
@@ -130,6 +139,9 @@ import com.jdcloud.sdk.service.vm.client.DeleteInstanceExecutor;
 import com.jdcloud.sdk.service.vm.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.vm.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.vm.client.AssociateElasticIpExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeKeypairsRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeKeypairsResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeKeypairsExecutor;
 import com.jdcloud.sdk.service.vm.model.DetachDiskRequest;
 import com.jdcloud.sdk.service.vm.model.DetachDiskResponse;
 import com.jdcloud.sdk.service.vm.client.DetachDiskExecutor;
@@ -227,9 +239,9 @@ public class VmClient extends JdcloudClient {
     /**
      * 云主机使用指定镜像重置云主机系统&lt;br&gt;
 云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-若当前云主机的系统盘类型为local类型，那么更换的镜像必须为localDisk类型的镜像；同理若当前云主机的系统盘为cloud类型，那么更换的镜像必须为cloudDisk类型的镜像。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。&lt;br&gt;
+若当前云主机的系统盘类型为local类型，那么更换的镜像必须为localDisk类型的镜像；同理若当前云主机的系统盘为cloud类型，那么更换的镜像必须为cloudDisk类型的镜像。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。&lt;br&gt;
 若不指定镜像ID，默认使用当前主机的原镜像重置系统。&lt;br&gt;
-指定的镜像必须能够支持当前主机的实例规格(instanceType)，否则会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像支持的系统盘类型信息。
+指定的镜像必须能够支持当前主机的实例规格(instanceType)，否则会返回错误。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像支持的系统盘类型信息。
 
      *
      * @param request
@@ -238,6 +250,19 @@ public class VmClient extends JdcloudClient {
      */
     public RebuildInstanceResponse rebuildInstance(RebuildInstanceRequest request) throws JdcloudSdkException {
         return new RebuildInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建ssh密钥对。公钥部分存储在京东云，并返回未加密的 PEM 编码的 PKCS#8 格式私钥，您只有一次机会保存您的私钥。请妥善保管。&lt;br&gt;
+若传入已存在的密钥名称，会返回错误。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateKeypairResponse createKeypair(CreateKeypairRequest request) throws JdcloudSdkException {
+        return new CreateKeypairExecutor().client(this).execute(request);
     }
 
     /**
@@ -294,7 +319,7 @@ public class VmClient extends JdcloudClient {
      * 云主机挂载一块弹性网卡。&lt;br&gt;
 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
 弹性网卡上如果绑定了公网IP，那么公网IP所在az需要与云主机的az保持一致，或者公网IP属于全可用区，才可挂载。&lt;br&gt;
-云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
+云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
 弹性网卡与云主机必须在相同vpc下。
 
      *
@@ -304,6 +329,19 @@ public class VmClient extends JdcloudClient {
      */
     public AttachNetworkInterfaceResponse attachNetworkInterface(AttachNetworkInterfaceRequest request) throws JdcloudSdkException {
         return new AttachNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
+若传入已存在的密钥名称，会返回错误。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ImportKeypairResponse importKeypair(ImportKeypairRequest request) throws JdcloudSdkException {
+        return new ImportKeypairExecutor().client(this).execute(request);
     }
 
     /**
@@ -412,8 +450,8 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
 本地盘(local类型)做系统盘的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
 使用高可用组(Ag)创建的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
 云硬盘(cloud类型)做系统盘的主机，一代与二代实例规格允许相互调整。&lt;br&gt;
-如果当前主机中的弹性网卡数量，大于新实例规格允许的弹性网卡数量，会返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域及可用区下的实例规格信息。&lt;br&gt;
-当前主机所使用的镜像，需要支持要变更的目标实例规格，否则返回错误。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
+如果当前主机中的弹性网卡数量，大于新实例规格允许的弹性网卡数量，会返回错误。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域及可用区下的实例规格信息。&lt;br&gt;
+当前主机所使用的镜像，需要支持要变更的目标实例规格，否则返回错误。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
 云主机欠费或到期时，无法更改实例规格。
 
      *
@@ -438,7 +476,7 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 查询配额，支持：云主机、镜像、密钥、模板
+     * 查询配额，支持：云主机、镜像、密钥、模板、镜像共享
 
      *
      * @param request
@@ -447,6 +485,18 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
         return new DescribeQuotasExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除ssh密钥对。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteKeypairResponse deleteKeypair(DeleteKeypairRequest request) throws JdcloudSdkException {
+        return new DeleteKeypairExecutor().client(this).execute(request);
     }
 
     /**
@@ -478,16 +528,16 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 创建一台或多台指定配置的云主机，创建模式分为三种：1.普通方式、2.使用高可用组、3.使用启动模板。三种方式创建云主机时参数的必传与非必传是不同的，具体请参考&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3383/isCatalog/1&quot;&gt;参数详细说明&lt;/a&gt;&lt;br&gt;
+     * 创建一台或多台指定配置的云主机，创建模式分为三种：1.普通方式、2.使用高可用组、3.使用启动模板。三种方式创建云主机时参数的必传与非必传是不同的，具体请参考&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/create_vm_sample&quot;&gt;参数详细说明&lt;/a&gt;&lt;br&gt;
 - 创建云主机需要通过实名认证
 - 实例规格
-    - 可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2901/isCatalog/1&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
+    - 可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
     - 不能使用已下线、或已售馨的规格ID
 - 镜像
     - Windows Server 2012 R2标准版 64位 中文版 SQL Server 2014 标准版 SP2内存需大于1GB；
     - Windows Server所有镜像CPU不可选超过64核CPU。
-    - 可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2874/isCatalog/1&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
-    - 选择的镜像必须支持选择的实例规格。可查询&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2872/isCatalog/1&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
+    - 可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+    - 选择的镜像必须支持选择的实例规格。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
 - 网络配置
     - 指定主网卡配置信息
         - 必须指定subnetId
@@ -526,7 +576,7 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     - maxCount为最大努力，不保证一定能达到maxCount
     - 虚机的az会覆盖磁盘的az属性
 - 密码
-    - &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;
+    - &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;
 
      *
      * @param request
@@ -665,6 +715,19 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
         return new AssociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询密钥对。&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKeypairsResponse describeKeypairs(DescribeKeypairsRequest request) throws JdcloudSdkException {
+        return new DescribeKeypairsExecutor().client(this).execute(request);
     }
 
     /**

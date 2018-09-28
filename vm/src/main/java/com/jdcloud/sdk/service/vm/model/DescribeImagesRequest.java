@@ -60,7 +60,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private String rootDeviceType;
 
     /**
-     * &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     * &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
      */
     private String status;
 
@@ -155,7 +155,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     * get &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @return
      */
@@ -164,7 +164,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @param status
      */
@@ -268,7 +268,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @param status
      */

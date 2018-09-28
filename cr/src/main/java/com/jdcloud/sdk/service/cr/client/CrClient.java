@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.cr.model.CheckRegistryNameRequest;
+import com.jdcloud.sdk.service.cr.model.CheckRegistryNameResponse;
+import com.jdcloud.sdk.service.cr.client.CheckRegistryNameExecutor;
 import com.jdcloud.sdk.service.cr.model.GetAuthorizationTokenRequest;
 import com.jdcloud.sdk.service.cr.model.GetAuthorizationTokenResponse;
 import com.jdcloud.sdk.service.cr.client.GetAuthorizationTokenExecutor;
@@ -95,6 +98,18 @@ public class CrClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 查询指定注册表名称是否已经存在以及是否符合命名规范。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CheckRegistryNameResponse checkRegistryName(CheckRegistryNameRequest request) throws JdcloudSdkException {
+        return new CheckRegistryNameExecutor().client(this).execute(request);
+    }
 
     /**
      * &lt;p&gt;申请12小时有效期的令牌。 使用&lt;code&gt;docker&lt;/code&gt; CLI push和pull镜像。&lt;/p&gt;

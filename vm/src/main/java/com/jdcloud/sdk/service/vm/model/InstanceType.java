@@ -69,6 +69,16 @@ public class InstanceType  implements java.io.Serializable {
      */
     private List<InstanceTypeState> state;
 
+    /**
+     * Gpu配置
+     */
+    private Gpu gpu;
+
+    /**
+     * 本地缓存盘配置，目前只有Gpu规格上才有
+     */
+    private List<LocalDisk> localDisks;
+
 
     /**
      * get 实例规格类型
@@ -196,6 +206,42 @@ public class InstanceType  implements java.io.Serializable {
         this.state = state;
     }
 
+    /**
+     * get Gpu配置
+     *
+     * @return
+     */
+    public Gpu getGpu() {
+        return gpu;
+    }
+
+    /**
+     * set Gpu配置
+     *
+     * @param gpu
+     */
+    public void setGpu(Gpu gpu) {
+        this.gpu = gpu;
+    }
+
+    /**
+     * get 本地缓存盘配置，目前只有Gpu规格上才有
+     *
+     * @return
+     */
+    public List<LocalDisk> getLocalDisks() {
+        return localDisks;
+    }
+
+    /**
+     * set 本地缓存盘配置，目前只有Gpu规格上才有
+     *
+     * @param localDisks
+     */
+    public void setLocalDisks(List<LocalDisk> localDisks) {
+        this.localDisks = localDisks;
+    }
+
 
     /**
      * set 实例规格类型
@@ -267,6 +313,26 @@ public class InstanceType  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set Gpu配置
+     *
+     * @param gpu
+     */
+    public InstanceType gpu(Gpu gpu) {
+        this.gpu = gpu;
+        return this;
+    }
+
+    /**
+     * set 本地缓存盘配置，目前只有Gpu规格上才有
+     *
+     * @param localDisks
+     */
+    public InstanceType localDisks(List<LocalDisk> localDisks) {
+        this.localDisks = localDisks;
+        return this;
+    }
+
 
     /**
      * add item to 规格状态
@@ -278,6 +344,18 @@ public class InstanceType  implements java.io.Serializable {
             this.state = new ArrayList<>();
         }
         this.state.add(state);
+    }
+
+    /**
+     * add item to 本地缓存盘配置，目前只有Gpu规格上才有
+     *
+     * @param localDisk
+     */
+    public void addLocalDisk(LocalDisk localDisk) {
+        if (this.localDisks == null) {
+            this.localDisks = new ArrayList<>();
+        }
+        this.localDisks.add(localDisk);
     }
 
 }

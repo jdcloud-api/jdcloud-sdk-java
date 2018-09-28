@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 变更缓存Redis实例配置
+ * 变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
+预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
+
  */
 public class ModifyCacheInstanceClassResponse extends JdcloudResponse<ModifyCacheInstanceClassResult> implements java.io.Serializable {
 

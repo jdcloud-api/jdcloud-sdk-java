@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ public class CacheInstance  implements java.io.Serializable {
     private String cacheInstanceName;
 
     /**
-     * 实例规格代码，参见实例规格代码表
+     * 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      */
     private String cacheInstanceClass;
 
@@ -56,7 +56,7 @@ public class CacheInstance  implements java.io.Serializable {
     /**
      * 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
      */
-    private String cacheInstancStatus;
+    private String cacheInstanceStatus;
 
     /**
      * 实例描述
@@ -98,6 +98,16 @@ public class CacheInstance  implements java.io.Serializable {
      */
     private Charge charge;
 
+    /**
+     * 实例版本
+     */
+    private String instanceVersion;
+
+    /**
+     * 是否免密
+     */
+    private Boolean auth;
+
 
     /**
      * get 实例ID
@@ -136,7 +146,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格代码，参见实例规格代码表
+     * get 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @return
      */
@@ -145,7 +155,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码，参见实例规格代码表
+     * set 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @param cacheInstanceClass
      */
@@ -176,17 +186,17 @@ public class CacheInstance  implements java.io.Serializable {
      *
      * @return
      */
-    public String getCacheInstancStatus() {
-        return cacheInstancStatus;
+    public String getCacheInstanceStatus() {
+        return cacheInstanceStatus;
     }
 
     /**
      * set 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
      *
-     * @param cacheInstancStatus
+     * @param cacheInstanceStatus
      */
-    public void setCacheInstancStatus(String cacheInstancStatus) {
-        this.cacheInstancStatus = cacheInstancStatus;
+    public void setCacheInstanceStatus(String cacheInstanceStatus) {
+        this.cacheInstanceStatus = cacheInstanceStatus;
     }
 
     /**
@@ -333,6 +343,42 @@ public class CacheInstance  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 实例版本
+     *
+     * @return
+     */
+    public String getInstanceVersion() {
+        return instanceVersion;
+    }
+
+    /**
+     * set 实例版本
+     *
+     * @param instanceVersion
+     */
+    public void setInstanceVersion(String instanceVersion) {
+        this.instanceVersion = instanceVersion;
+    }
+
+    /**
+     * get 是否免密
+     *
+     * @return
+     */
+    public Boolean getAuth() {
+        return auth;
+    }
+
+    /**
+     * set 是否免密
+     *
+     * @param auth
+     */
+    public void setAuth(Boolean auth) {
+        this.auth = auth;
+    }
+
 
     /**
      * set 实例ID
@@ -355,7 +401,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码，参见实例规格代码表
+     * set 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
      *
      * @param cacheInstanceClass
      */
@@ -377,10 +423,10 @@ public class CacheInstance  implements java.io.Serializable {
     /**
      * set 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
      *
-     * @param cacheInstancStatus
+     * @param cacheInstanceStatus
      */
-    public CacheInstance cacheInstancStatus(String cacheInstancStatus) {
-        this.cacheInstancStatus = cacheInstancStatus;
+    public CacheInstance cacheInstanceStatus(String cacheInstanceStatus) {
+        this.cacheInstanceStatus = cacheInstanceStatus;
         return this;
     }
 
@@ -461,6 +507,26 @@ public class CacheInstance  implements java.io.Serializable {
      */
     public CacheInstance charge(Charge charge) {
         this.charge = charge;
+        return this;
+    }
+
+    /**
+     * set 实例版本
+     *
+     * @param instanceVersion
+     */
+    public CacheInstance instanceVersion(String instanceVersion) {
+        this.instanceVersion = instanceVersion;
+        return this;
+    }
+
+    /**
+     * set 是否免密
+     *
+     * @param auth
+     */
+    public CacheInstance auth(Boolean auth) {
+        this.auth = auth;
         return this;
     }
 

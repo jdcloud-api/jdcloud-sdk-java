@@ -75,7 +75,7 @@ public class Image  implements java.io.Serializable {
     private String osType;
 
     /**
-     * &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     * &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
      */
     private String status;
 
@@ -265,7 +265,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     * get &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @return
      */
@@ -274,7 +274,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @param status
      */
@@ -508,7 +508,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3871/isCatalog/1&quot;&gt;参考镜像状态&lt;/a&gt;
+     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
      *
      * @param status
      */

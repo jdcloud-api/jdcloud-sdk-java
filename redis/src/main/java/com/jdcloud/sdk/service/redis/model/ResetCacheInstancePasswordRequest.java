@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,17 +28,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 重置缓存Redis实例密码
+ * 重置缓存Redis实例密码，支持免密操作
  */
 public class ResetCacheInstancePasswordRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 密码，必须包含且只支持字母及数字，不少于8字符不超过16字符
-     * Required:true
+     * 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      */
-    @Required
     private String password;
 
     /**
@@ -49,7 +47,7 @@ public class ResetCacheInstancePasswordRequest extends JdcloudRequest implements
     private String regionId;
 
     /**
-     * 缓存Redis实例ID
+     * 缓存Redis实例ID，是访问实例的唯一标识。
      * Required:true
      */
     @Required
@@ -57,7 +55,7 @@ public class ResetCacheInstancePasswordRequest extends JdcloudRequest implements
 
 
     /**
-     * get 密码，必须包含且只支持字母及数字，不少于8字符不超过16字符
+     * get 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      *
      * @return
      */
@@ -66,7 +64,7 @@ public class ResetCacheInstancePasswordRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 密码，必须包含且只支持字母及数字，不少于8字符不超过16字符
+     * set 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      *
      * @param password
      */
@@ -93,7 +91,7 @@ public class ResetCacheInstancePasswordRequest extends JdcloudRequest implements
     }
 
     /**
-     * get 缓存Redis实例ID
+     * get 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @return
      */
@@ -102,7 +100,7 @@ public class ResetCacheInstancePasswordRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */
@@ -112,7 +110,7 @@ public class ResetCacheInstancePasswordRequest extends JdcloudRequest implements
 
 
     /**
-     * set 密码，必须包含且只支持字母及数字，不少于8字符不超过16字符
+     * set 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      *
      * @param password
      */
@@ -132,7 +130,7 @@ public class ResetCacheInstancePasswordRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 缓存Redis实例ID
+     * set 缓存Redis实例ID，是访问实例的唯一标识。
      *
      * @param cacheInstanceId
      */

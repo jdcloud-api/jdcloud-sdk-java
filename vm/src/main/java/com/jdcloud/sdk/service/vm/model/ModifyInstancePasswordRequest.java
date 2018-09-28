@@ -37,7 +37,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      * Required:true
      */
     @Required
@@ -59,7 +59,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param password
      */
@@ -114,7 +114,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set 密码，&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/3870/isCatalog/1&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param password
      */

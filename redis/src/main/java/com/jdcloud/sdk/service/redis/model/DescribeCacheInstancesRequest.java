@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,26 +32,26 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询缓存Redis实例列表
+ * 查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件
  */
 public class DescribeCacheInstancesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1
+     * 请求查询缓存实例的页码；默认为1
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]
      */
     private Integer pageSize;
 
     /**
-     * cacheInstanceId -实例Id，精确匹配，支持多个
-cacheInstanceName - 实例名称，模糊匹配，支持单个
-cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * cacheInstanceId -缓存实例Id，精确匹配，支持多个
+cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
+cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
 
      */
     private List<Filter> filters;
@@ -71,7 +71,7 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
 
 
     /**
-     * get 页码；默认为1
+     * get 请求查询缓存实例的页码；默认为1
      *
      * @return
      */
@@ -80,7 +80,7 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
     }
 
     /**
-     * set 页码；默认为1
+     * set 请求查询缓存实例的页码；默认为1
      *
      * @param pageNumber
      */
@@ -89,7 +89,7 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
     }
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]
      *
      * @return
      */
@@ -98,7 +98,7 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -107,9 +107,9 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
     }
 
     /**
-     * get cacheInstanceId -实例Id，精确匹配，支持多个
-cacheInstanceName - 实例名称，模糊匹配，支持单个
-cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * get cacheInstanceId -缓存实例Id，精确匹配，支持多个
+cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
+cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
 
      *
      * @return
@@ -119,9 +119,9 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
     }
 
     /**
-     * set cacheInstanceId -实例Id，精确匹配，支持多个
-cacheInstanceName - 实例名称，模糊匹配，支持单个
-cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * set cacheInstanceId -缓存实例Id，精确匹配，支持多个
+cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
+cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
 
      *
      * @param filters
@@ -170,7 +170,7 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
 
 
     /**
-     * set 页码；默认为1
+     * set 请求查询缓存实例的页码；默认为1
      *
      * @param pageNumber
      */
@@ -180,7 +180,7 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -190,9 +190,9 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
     }
 
     /**
-     * set cacheInstanceId -实例Id，精确匹配，支持多个
-cacheInstanceName - 实例名称，模糊匹配，支持单个
-cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * set cacheInstanceId -缓存实例Id，精确匹配，支持多个
+cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
+cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
 
      *
      * @param filters
@@ -225,9 +225,9 @@ cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行
 
 
     /**
-     * add item to cacheInstanceId -实例Id，精确匹配，支持多个
-cacheInstanceName - 实例名称，模糊匹配，支持单个
-cacheInstanceStatus - redis状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * add item to cacheInstanceId -缓存实例Id，精确匹配，支持多个
+cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
+cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
 
      *
      * @param filter
