@@ -24,23 +24,37 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.monitor.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 查询报警历史
+检索条件组合优先级从高到低为
+1. serviceCode
+1.1 serviceCode + resourceId
+1.2 serviceCode + resourceIds
+2. serviceCodes
+3. 用户所有规则
  */
 public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 报警规则的Id
+     * 当前所在页，默认为1
      */
-    private String id;
+    private Long pageNumber;
 
     /**
-     * 产品名称
+     * 页面大小，默认为20；取值范围[1, 100]
+     */
+    private Long pageSize;
+
+    /**
+     * 产品线
      */
     private String serviceCode;
 
@@ -50,28 +64,31 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     private String resourceId;
 
     /**
-     * 查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
-     * Required:true
+     * 规则Id
      */
-    @Required
+    private String alarmId;
+
+    /**
+     * 正在报警, 取值为1
+     */
+    private Long alarming;
+
+    /**
+     * 开始时间
+     */
     private String startTime;
 
     /**
-     * 查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
-     * Required:true
+     * 结束时间
      */
-    @Required
     private String endTime;
 
     /**
-     * 页码, 默认为1, 取值范围：[1,∞)
+     * 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
      */
-    private Integer pageNumber;
-
-    /**
-     * 分页大小，默认为20，取值范围：[10,100]
-     */
-    private Integer pageSize;
+    private List<Filter> filters;
 
     /**
      * 地域 Id
@@ -82,25 +99,43 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 报警规则的Id
+     * get 当前所在页，默认为1
      *
      * @return
      */
-    public String getId() {
-        return id;
+    public Long getPageNumber() {
+        return pageNumber;
     }
 
     /**
-     * set 报警规则的Id
+     * set 当前所在页，默认为1
      *
-     * @param id
+     * @param pageNumber
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
     }
 
     /**
-     * get 产品名称
+     * get 页面大小，默认为20；取值范围[1, 100]
+     *
+     * @return
+     */
+    public Long getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 页面大小，默认为20；取值范围[1, 100]
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    /**
+     * get 产品线
      *
      * @return
      */
@@ -109,7 +144,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 产品名称
+     * set 产品线
      *
      * @param serviceCode
      */
@@ -136,7 +171,43 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
+     * get 规则Id
+     *
+     * @return
+     */
+    public String getAlarmId() {
+        return alarmId;
+    }
+
+    /**
+     * set 规则Id
+     *
+     * @param alarmId
+     */
+    public void setAlarmId(String alarmId) {
+        this.alarmId = alarmId;
+    }
+
+    /**
+     * get 正在报警, 取值为1
+     *
+     * @return
+     */
+    public Long getAlarming() {
+        return alarming;
+    }
+
+    /**
+     * set 正在报警, 取值为1
+     *
+     * @param alarming
+     */
+    public void setAlarming(Long alarming) {
+        this.alarming = alarming;
+    }
+
+    /**
+     * get 开始时间
      *
      * @return
      */
@@ -145,7 +216,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
+     * set 开始时间
      *
      * @param startTime
      */
@@ -154,7 +225,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
+     * get 结束时间
      *
      * @return
      */
@@ -163,7 +234,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
+     * set 结束时间
      *
      * @param endTime
      */
@@ -172,39 +243,25 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 页码, 默认为1, 取值范围：[1,∞)
+     * get 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
      *
      * @return
      */
-    public Integer getPageNumber() {
-        return pageNumber;
+    public List<Filter> getFilters() {
+        return filters;
     }
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
      *
-     * @param pageNumber
+     * @param filters
      */
-    public void setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-    }
-
-    /**
-     * get 分页大小，默认为20，取值范围：[10,100]
-     *
-     * @return
-     */
-    public Integer getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * set 分页大小，默认为20，取值范围：[10,100]
-     *
-     * @param pageSize
-     */
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -227,17 +284,27 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 报警规则的Id
+     * set 当前所在页，默认为1
      *
-     * @param id
+     * @param pageNumber
      */
-    public DescribeAlarmHistoryRequest id(String id) {
-        this.id = id;
+    public DescribeAlarmHistoryRequest pageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
 
     /**
-     * set 产品名称
+     * set 页面大小，默认为20；取值范围[1, 100]
+     *
+     * @param pageSize
+     */
+    public DescribeAlarmHistoryRequest pageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 产品线
      *
      * @param serviceCode
      */
@@ -257,7 +324,27 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 查询数据开始时间，默认24小时前，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
+     * set 规则Id
+     *
+     * @param alarmId
+     */
+    public DescribeAlarmHistoryRequest alarmId(String alarmId) {
+        this.alarmId = alarmId;
+        return this;
+    }
+
+    /**
+     * set 正在报警, 取值为1
+     *
+     * @param alarming
+     */
+    public DescribeAlarmHistoryRequest alarming(Long alarming) {
+        this.alarming = alarming;
+        return this;
+    }
+
+    /**
+     * set 开始时间
      *
      * @param startTime
      */
@@ -267,7 +354,7 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 查询数据结束时间，默认当前时间，可以输入long型时间，也可以输入yyyy-MM-dd&#39;T&#39;HH:mm:ssZ类型时间
+     * set 结束时间
      *
      * @param endTime
      */
@@ -277,22 +364,14 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
      *
-     * @param pageNumber
+     * @param filters
      */
-    public DescribeAlarmHistoryRequest pageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-
-    /**
-     * set 分页大小，默认为20，取值范围：[10,100]
-     *
-     * @param pageSize
-     */
-    public DescribeAlarmHistoryRequest pageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAlarmHistoryRequest filters(List<Filter> filters) {
+        this.filters = filters;
         return this;
     }
 
@@ -306,5 +385,19 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
+    /**
+     * add item to 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

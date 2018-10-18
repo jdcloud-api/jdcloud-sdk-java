@@ -26,11 +26,16 @@ package com.jdcloud.sdk.service.monitor.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.monitor.model.Alarm;
+import com.jdcloud.sdk.service.monitor.model.DescribedAlarm;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询监控规则
+ * 查询规则, 查询参数组合及优先级从高到低为：
+1：serviceCode不为空
+1.1：serviceCode + resourceId
+1.2: serviceCode + resourceIds
+2：serviceCodes不为空
+3: 所有规则
  */
 public class DescribeAlarmsResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,27 +44,12 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
     /**
      * alarmList
      */
-    private List<Alarm> alarmList;
+    private List<DescribedAlarm> alarmList;
 
     /**
-     * 页码
+     * 规则总数
      */
-    private Number pageNumber;
-
-    /**
-     * 总页数
-     */
-    private Number numberPages;
-
-    /**
-     * 总记录数
-     */
-    private Number numberRecords;
-
-    /**
-     * 分页大小
-     */
-    private Number pageSize;
+    private Long total;
 
 
     /**
@@ -67,7 +57,7 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
      *
      * @return
      */
-    public List<Alarm> getAlarmList() {
+    public List<DescribedAlarm> getAlarmList() {
         return alarmList;
     }
 
@@ -76,80 +66,26 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
      *
      * @param alarmList
      */
-    public void setAlarmList(List<Alarm> alarmList) {
+    public void setAlarmList(List<DescribedAlarm> alarmList) {
         this.alarmList = alarmList;
     }
 
     /**
-     * get 页码
+     * get 规则总数
      *
      * @return
      */
-    public Number getPageNumber() {
-        return pageNumber;
+    public Long getTotal() {
+        return total;
     }
 
     /**
-     * set 页码
+     * set 规则总数
      *
-     * @param pageNumber
+     * @param total
      */
-    public void setPageNumber(Number pageNumber) {
-        this.pageNumber = pageNumber;
-    }
-
-    /**
-     * get 总页数
-     *
-     * @return
-     */
-    public Number getNumberPages() {
-        return numberPages;
-    }
-
-    /**
-     * set 总页数
-     *
-     * @param numberPages
-     */
-    public void setNumberPages(Number numberPages) {
-        this.numberPages = numberPages;
-    }
-
-    /**
-     * get 总记录数
-     *
-     * @return
-     */
-    public Number getNumberRecords() {
-        return numberRecords;
-    }
-
-    /**
-     * set 总记录数
-     *
-     * @param numberRecords
-     */
-    public void setNumberRecords(Number numberRecords) {
-        this.numberRecords = numberRecords;
-    }
-
-    /**
-     * get 分页大小
-     *
-     * @return
-     */
-    public Number getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * set 分页大小
-     *
-     * @param pageSize
-     */
-    public void setPageSize(Number pageSize) {
-        this.pageSize = pageSize;
+    public void setTotal(Long total) {
+        this.total = total;
     }
 
 
@@ -158,48 +94,18 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
      *
      * @param alarmList
      */
-    public DescribeAlarmsResult alarmList(List<Alarm> alarmList) {
+    public DescribeAlarmsResult alarmList(List<DescribedAlarm> alarmList) {
         this.alarmList = alarmList;
         return this;
     }
 
     /**
-     * set 页码
+     * set 规则总数
      *
-     * @param pageNumber
+     * @param total
      */
-    public DescribeAlarmsResult pageNumber(Number pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-
-    /**
-     * set 总页数
-     *
-     * @param numberPages
-     */
-    public DescribeAlarmsResult numberPages(Number numberPages) {
-        this.numberPages = numberPages;
-        return this;
-    }
-
-    /**
-     * set 总记录数
-     *
-     * @param numberRecords
-     */
-    public DescribeAlarmsResult numberRecords(Number numberRecords) {
-        this.numberRecords = numberRecords;
-        return this;
-    }
-
-    /**
-     * set 分页大小
-     *
-     * @param pageSize
-     */
-    public DescribeAlarmsResult pageSize(Number pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAlarmsResult total(Long total) {
+        this.total = total;
         return this;
     }
 
@@ -209,7 +115,7 @@ public class DescribeAlarmsResult extends JdcloudResult implements java.io.Seria
      *
      * @param alarmList
      */
-    public void addAlarmList(Alarm alarmList) {
+    public void addAlarmList(DescribedAlarm alarmList) {
         if (this.alarmList == null) {
             this.alarmList = new ArrayList<>();
         }

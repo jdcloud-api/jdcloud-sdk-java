@@ -45,7 +45,7 @@ public class Binlog  implements java.io.Serializable {
     /**
      * binlog日志大小，单位KB
      */
-    private Integer binlogSizeKB;
+    private Long binlogSizeKB;
 
     /**
      * binlog开始时间,格式为：YYYY-MM-DD HH:mm:ss
@@ -99,7 +99,7 @@ public class Binlog  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getBinlogSizeKB() {
+    public Long getBinlogSizeKB() {
         return binlogSizeKB;
     }
 
@@ -108,7 +108,7 @@ public class Binlog  implements java.io.Serializable {
      *
      * @param binlogSizeKB
      */
-    public void setBinlogSizeKB(Integer binlogSizeKB) {
+    public void setBinlogSizeKB(Long binlogSizeKB) {
         this.binlogSizeKB = binlogSizeKB;
     }
 
@@ -174,7 +174,7 @@ public class Binlog  implements java.io.Serializable {
      *
      * @param binlogSizeKB
      */
-    public Binlog binlogSizeKB(Integer binlogSizeKB) {
+    public Binlog binlogSizeKB(Long binlogSizeKB) {
         this.binlogSizeKB = binlogSizeKB;
         return this;
     }

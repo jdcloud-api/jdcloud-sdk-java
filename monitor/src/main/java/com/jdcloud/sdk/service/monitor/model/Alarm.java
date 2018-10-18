@@ -40,24 +40,24 @@ public class Alarm  implements java.io.Serializable {
     private String calculation;
 
     /**
-     * 通知的联系组，如 [“联系组1”,”联系组2”]
+     * contactGroups
      */
     private List<String> contactGroups;
 
     /**
-     * 通知的联系人，如 [“联系人1”,”联系人2”]
+     * contactPersons
      */
     private List<String> contactPersons;
 
     /**
-     * 创建时间
+     * createTime
      */
     private String createTime;
 
     /**
      * 启用禁用 1启用，0禁用
      */
-    private Integer enabled;
+    private Long enabled;
 
     /**
      * 规则id
@@ -77,22 +77,22 @@ public class Alarm  implements java.io.Serializable {
     /**
      * 通知周期 单位：小时
      */
-    private Integer noticePeriod;
+    private Long noticePeriod;
 
     /**
-     * 报警的时间  , 查询正在报警规则时该字段有效
+     * noticeTime
      */
     private String noticeTime;
 
     /**
-     * &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、！&#x3D;
+     * &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
      */
     private String operation;
 
     /**
      * 统计周期（单位：分钟）
      */
-    private Integer period;
+    private Long period;
 
     /**
      * 地域信息
@@ -112,7 +112,7 @@ public class Alarm  implements java.io.Serializable {
     /**
      * 监控项状态:1正常，2告警，4数据不足
      */
-    private Integer status;
+    private Long status;
 
     /**
      * 监控项附属信息
@@ -127,10 +127,10 @@ public class Alarm  implements java.io.Serializable {
     /**
      * 连续多少次后报警
      */
-    private Integer times;
+    private Long times;
 
     /**
-     * 报警值 , 查询正在报警规则时该字段有效
+     * 报警值
      */
     private Double value;
 
@@ -154,7 +154,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * get 通知的联系组，如 [“联系组1”,”联系组2”]
+     * get contactGroups
      *
      * @return
      */
@@ -163,7 +163,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set 通知的联系组，如 [“联系组1”,”联系组2”]
+     * set contactGroups
      *
      * @param contactGroups
      */
@@ -172,7 +172,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * get 通知的联系人，如 [“联系人1”,”联系人2”]
+     * get contactPersons
      *
      * @return
      */
@@ -181,7 +181,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set 通知的联系人，如 [“联系人1”,”联系人2”]
+     * set contactPersons
      *
      * @param contactPersons
      */
@@ -190,7 +190,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get createTime
      *
      * @return
      */
@@ -199,7 +199,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set createTime
      *
      * @param createTime
      */
@@ -212,7 +212,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getEnabled() {
+    public Long getEnabled() {
         return enabled;
     }
 
@@ -221,7 +221,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param enabled
      */
-    public void setEnabled(Integer enabled) {
+    public void setEnabled(Long enabled) {
         this.enabled = enabled;
     }
 
@@ -284,7 +284,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getNoticePeriod() {
+    public Long getNoticePeriod() {
         return noticePeriod;
     }
 
@@ -293,12 +293,12 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param noticePeriod
      */
-    public void setNoticePeriod(Integer noticePeriod) {
+    public void setNoticePeriod(Long noticePeriod) {
         this.noticePeriod = noticePeriod;
     }
 
     /**
-     * get 报警的时间  , 查询正在报警规则时该字段有效
+     * get noticeTime
      *
      * @return
      */
@@ -307,7 +307,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set 报警的时间  , 查询正在报警规则时该字段有效
+     * set noticeTime
      *
      * @param noticeTime
      */
@@ -316,7 +316,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * get &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、！&#x3D;
+     * get &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
      *
      * @return
      */
@@ -325,7 +325,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、！&#x3D;
+     * set &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
      *
      * @param operation
      */
@@ -338,7 +338,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getPeriod() {
+    public Long getPeriod() {
         return period;
     }
 
@@ -347,7 +347,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param period
      */
-    public void setPeriod(Integer period) {
+    public void setPeriod(Long period) {
         this.period = period;
     }
 
@@ -410,7 +410,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return status;
     }
 
@@ -419,7 +419,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param status
      */
-    public void setStatus(Integer status) {
+    public void setStatus(Long status) {
         this.status = status;
     }
 
@@ -464,7 +464,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getTimes() {
+    public Long getTimes() {
         return times;
     }
 
@@ -473,12 +473,12 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param times
      */
-    public void setTimes(Integer times) {
+    public void setTimes(Long times) {
         this.times = times;
     }
 
     /**
-     * get 报警值 , 查询正在报警规则时该字段有效
+     * get 报警值
      *
      * @return
      */
@@ -487,7 +487,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set 报警值 , 查询正在报警规则时该字段有效
+     * set 报警值
      *
      * @param value
      */
@@ -507,7 +507,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set 通知的联系组，如 [“联系组1”,”联系组2”]
+     * set contactGroups
      *
      * @param contactGroups
      */
@@ -517,7 +517,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set 通知的联系人，如 [“联系人1”,”联系人2”]
+     * set contactPersons
      *
      * @param contactPersons
      */
@@ -527,7 +527,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set createTime
      *
      * @param createTime
      */
@@ -541,7 +541,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param enabled
      */
-    public Alarm enabled(Integer enabled) {
+    public Alarm enabled(Long enabled) {
         this.enabled = enabled;
         return this;
     }
@@ -581,13 +581,13 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param noticePeriod
      */
-    public Alarm noticePeriod(Integer noticePeriod) {
+    public Alarm noticePeriod(Long noticePeriod) {
         this.noticePeriod = noticePeriod;
         return this;
     }
 
     /**
-     * set 报警的时间  , 查询正在报警规则时该字段有效
+     * set noticeTime
      *
      * @param noticeTime
      */
@@ -597,7 +597,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、！&#x3D;
+     * set &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
      *
      * @param operation
      */
@@ -611,7 +611,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param period
      */
-    public Alarm period(Integer period) {
+    public Alarm period(Long period) {
         this.period = period;
         return this;
     }
@@ -651,7 +651,7 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param status
      */
-    public Alarm status(Integer status) {
+    public Alarm status(Long status) {
         this.status = status;
         return this;
     }
@@ -681,13 +681,13 @@ public class Alarm  implements java.io.Serializable {
      *
      * @param times
      */
-    public Alarm times(Integer times) {
+    public Alarm times(Long times) {
         this.times = times;
         return this;
     }
 
     /**
-     * set 报警值 , 查询正在报警规则时该字段有效
+     * set 报警值
      *
      * @param value
      */
@@ -698,7 +698,7 @@ public class Alarm  implements java.io.Serializable {
 
 
     /**
-     * add item to 通知的联系组，如 [“联系组1”,”联系组2”]
+     * add item to contactGroups
      *
      * @param contactGroup
      */
@@ -710,7 +710,7 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * add item to 通知的联系人，如 [“联系人1”,”联系人2”]
+     * add item to contactPersons
      *
      * @param contactPerson
      */

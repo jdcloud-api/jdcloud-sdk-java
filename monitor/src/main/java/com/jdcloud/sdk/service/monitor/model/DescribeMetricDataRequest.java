@@ -72,6 +72,11 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private List<TagFilter> tags;
 
     /**
+     * 是否对查询的tags分组
+     */
+    private Boolean groupBy;
+
+    /**
      * 地域 Id
      * Required:true
      */
@@ -195,6 +200,24 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 是否对查询的tags分组
+     *
+     * @return
+     */
+    public Boolean getGroupBy() {
+        return groupBy;
+    }
+
+    /**
+     * set 是否对查询的tags分组
+     *
+     * @param groupBy
+     */
+    public void setGroupBy(Boolean groupBy) {
+        this.groupBy = groupBy;
+    }
+
+    /**
      * get 地域 Id
      *
      * @return
@@ -288,6 +311,16 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      */
     public DescribeMetricDataRequest tags(List<TagFilter> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 是否对查询的tags分组
+     *
+     * @param groupBy
+     */
+    public DescribeMetricDataRequest groupBy(Boolean groupBy) {
+        this.groupBy = groupBy;
         return this;
     }
 

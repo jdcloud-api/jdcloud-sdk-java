@@ -44,6 +44,11 @@ public class MetricData  implements java.io.Serializable {
      */
     private Metric metric;
 
+    /**
+     * tags
+     */
+    private List<Tag> tags;
+
 
     /**
      * get data
@@ -81,6 +86,24 @@ public class MetricData  implements java.io.Serializable {
         this.metric = metric;
     }
 
+    /**
+     * get tags
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
 
     /**
      * set data
@@ -102,6 +125,16 @@ public class MetricData  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public MetricData tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
 
     /**
      * add item to data
@@ -113,6 +146,18 @@ public class MetricData  implements java.io.Serializable {
             this.data = new ArrayList<>();
         }
         this.data.add(data);
+    }
+
+    /**
+     * add item to tags
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }

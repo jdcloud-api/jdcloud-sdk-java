@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>rds</artifactId>
-  <version>0.3.0</version>
+  <version>0.3.3</version>
   <packaging>jar</packaging>
   <name>rds</name>
   <url>http://www.jdcloud.com</url>

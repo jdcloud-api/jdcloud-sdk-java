@@ -31,12 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.datastar.model.GetProfileRequest;
-import com.jdcloud.sdk.service.datastar.model.GetProfileResponse;
-import com.jdcloud.sdk.service.datastar.client.GetProfileExecutor;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdRequest;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdResponse;
 import com.jdcloud.sdk.service.datastar.client.GetPackageIdExecutor;
+import com.jdcloud.sdk.service.datastar.model.GetLargeScreenDataRequest;
+import com.jdcloud.sdk.service.datastar.model.GetLargeScreenDataResponse;
+import com.jdcloud.sdk.service.datastar.client.GetLargeScreenDataExecutor;
 
 /**
  * datastarClient
@@ -88,17 +88,6 @@ public class DatastarClient extends JdcloudClient {
 
 
     /**
-     * 根据deviceId查询对应用户的画像信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetProfileResponse getProfile(GetProfileRequest request) throws JdcloudSdkException {
-        return new GetProfileExecutor().client(this).execute(request);
-    }
-
-    /**
      * 根据设备ID查询人群包ID
      *
      * @param request
@@ -107,6 +96,17 @@ public class DatastarClient extends JdcloudClient {
      */
     public GetPackageIdResponse getPackageId(GetPackageIdRequest request) throws JdcloudSdkException {
         return new GetPackageIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据区域、行业、一级指标、二级指标、起始时间等条件查询数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetLargeScreenDataResponse getLargeScreenData(GetLargeScreenDataRequest request) throws JdcloudSdkException {
+        return new GetLargeScreenDataExecutor().client(this).execute(request);
     }
 
 

@@ -33,23 +33,51 @@ public class Metric  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 指标的计算单位，比如bit/s、%、k等
+     * aggregator
+     */
+    private String aggregator;
+
+    /**
+     * calculateUnit
      */
     private String calculateUnit;
 
     /**
-     * 监控项英文标识
+     * metric
      */
     private String metric;
 
     /**
-     * 监控项名称
+     * metricName
      */
     private String metricName;
 
+    /**
+     * period
+     */
+    private String period;
+
 
     /**
-     * get 指标的计算单位，比如bit/s、%、k等
+     * get aggregator
+     *
+     * @return
+     */
+    public String getAggregator() {
+        return aggregator;
+    }
+
+    /**
+     * set aggregator
+     *
+     * @param aggregator
+     */
+    public void setAggregator(String aggregator) {
+        this.aggregator = aggregator;
+    }
+
+    /**
+     * get calculateUnit
      *
      * @return
      */
@@ -58,7 +86,7 @@ public class Metric  implements java.io.Serializable {
     }
 
     /**
-     * set 指标的计算单位，比如bit/s、%、k等
+     * set calculateUnit
      *
      * @param calculateUnit
      */
@@ -67,7 +95,7 @@ public class Metric  implements java.io.Serializable {
     }
 
     /**
-     * get 监控项英文标识
+     * get metric
      *
      * @return
      */
@@ -76,7 +104,7 @@ public class Metric  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项英文标识
+     * set metric
      *
      * @param metric
      */
@@ -85,7 +113,7 @@ public class Metric  implements java.io.Serializable {
     }
 
     /**
-     * get 监控项名称
+     * get metricName
      *
      * @return
      */
@@ -94,7 +122,7 @@ public class Metric  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项名称
+     * set metricName
      *
      * @param metricName
      */
@@ -102,9 +130,37 @@ public class Metric  implements java.io.Serializable {
         this.metricName = metricName;
     }
 
+    /**
+     * get period
+     *
+     * @return
+     */
+    public String getPeriod() {
+        return period;
+    }
 
     /**
-     * set 指标的计算单位，比如bit/s、%、k等
+     * set period
+     *
+     * @param period
+     */
+    public void setPeriod(String period) {
+        this.period = period;
+    }
+
+
+    /**
+     * set aggregator
+     *
+     * @param aggregator
+     */
+    public Metric aggregator(String aggregator) {
+        this.aggregator = aggregator;
+        return this;
+    }
+
+    /**
+     * set calculateUnit
      *
      * @param calculateUnit
      */
@@ -114,7 +170,7 @@ public class Metric  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项英文标识
+     * set metric
      *
      * @param metric
      */
@@ -124,12 +180,22 @@ public class Metric  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项名称
+     * set metricName
      *
      * @param metricName
      */
     public Metric metricName(String metricName) {
         this.metricName = metricName;
+        return this;
+    }
+
+    /**
+     * set period
+     *
+     * @param period
+     */
+    public Metric period(String period) {
+        this.period = period;
         return this;
     }
 

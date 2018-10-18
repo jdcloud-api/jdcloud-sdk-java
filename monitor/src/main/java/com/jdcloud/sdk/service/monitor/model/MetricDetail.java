@@ -33,22 +33,22 @@ public class MetricDetail  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 指标的计算单位，比如bit/s、%、k等
+     * 指标的计算单位，比如bit/s、%、byte等
      */
     private String calculateUnit;
 
     /**
-     * 监控项英文标识
+     * 监控指标英文标识
      */
     private String metric;
 
     /**
-     * 监控项名称
+     * 监控指标名称
      */
     private String metricName;
 
     /**
-     * 产品线标识
+     * 资源类型标识
      */
     private String serviceCode;
 
@@ -59,7 +59,7 @@ public class MetricDetail  implements java.io.Serializable {
 
 
     /**
-     * get 指标的计算单位，比如bit/s、%、k等
+     * get 指标的计算单位，比如bit/s、%、byte等
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 指标的计算单位，比如bit/s、%、k等
+     * set 指标的计算单位，比如bit/s、%、byte等
      *
      * @param calculateUnit
      */
@@ -77,7 +77,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * get 监控项英文标识
+     * get 监控指标英文标识
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项英文标识
+     * set 监控指标英文标识
      *
      * @param metric
      */
@@ -95,7 +95,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * get 监控项名称
+     * get 监控指标名称
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项名称
+     * set 监控指标名称
      *
      * @param metricName
      */
@@ -113,7 +113,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * get 产品线标识
+     * get 资源类型标识
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 产品线标识
+     * set 资源类型标识
      *
      * @param serviceCode
      */
@@ -150,7 +150,7 @@ public class MetricDetail  implements java.io.Serializable {
 
 
     /**
-     * set 指标的计算单位，比如bit/s、%、k等
+     * set 指标的计算单位，比如bit/s、%、byte等
      *
      * @param calculateUnit
      */
@@ -160,7 +160,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项英文标识
+     * set 监控指标英文标识
      *
      * @param metric
      */
@@ -170,7 +170,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项名称
+     * set 监控指标名称
      *
      * @param metricName
      */
@@ -180,7 +180,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 产品线标识
+     * set 资源类型标识
      *
      * @param serviceCode
      */

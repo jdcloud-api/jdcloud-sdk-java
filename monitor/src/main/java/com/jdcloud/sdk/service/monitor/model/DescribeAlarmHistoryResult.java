@@ -26,11 +26,17 @@ package com.jdcloud.sdk.service.monitor.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.monitor.model.AlarmHistory;
+import com.jdcloud.sdk.service.monitor.model.DescribedAlarmHistory;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 查询报警历史
+检索条件组合优先级从高到低为
+1. serviceCode
+1.1 serviceCode + resourceId
+1.2 serviceCode + resourceIds
+2. serviceCodes
+3. 用户所有规则
  */
 public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,27 +45,12 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
     /**
      * alarmHistoryList
      */
-    private List<AlarmHistory> alarmHistoryList;
+    private List<DescribedAlarmHistory> alarmHistoryList;
 
     /**
-     * 页码
+     * 总数
      */
-    private Number pageNumber;
-
-    /**
-     * 总页数
-     */
-    private Number numberPages;
-
-    /**
-     * 总记录数
-     */
-    private Number numberRecords;
-
-    /**
-     * 分页大小
-     */
-    private Number pageSize;
+    private Long total;
 
 
     /**
@@ -67,7 +58,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
      *
      * @return
      */
-    public List<AlarmHistory> getAlarmHistoryList() {
+    public List<DescribedAlarmHistory> getAlarmHistoryList() {
         return alarmHistoryList;
     }
 
@@ -76,80 +67,26 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
      *
      * @param alarmHistoryList
      */
-    public void setAlarmHistoryList(List<AlarmHistory> alarmHistoryList) {
+    public void setAlarmHistoryList(List<DescribedAlarmHistory> alarmHistoryList) {
         this.alarmHistoryList = alarmHistoryList;
     }
 
     /**
-     * get 页码
+     * get 总数
      *
      * @return
      */
-    public Number getPageNumber() {
-        return pageNumber;
+    public Long getTotal() {
+        return total;
     }
 
     /**
-     * set 页码
+     * set 总数
      *
-     * @param pageNumber
+     * @param total
      */
-    public void setPageNumber(Number pageNumber) {
-        this.pageNumber = pageNumber;
-    }
-
-    /**
-     * get 总页数
-     *
-     * @return
-     */
-    public Number getNumberPages() {
-        return numberPages;
-    }
-
-    /**
-     * set 总页数
-     *
-     * @param numberPages
-     */
-    public void setNumberPages(Number numberPages) {
-        this.numberPages = numberPages;
-    }
-
-    /**
-     * get 总记录数
-     *
-     * @return
-     */
-    public Number getNumberRecords() {
-        return numberRecords;
-    }
-
-    /**
-     * set 总记录数
-     *
-     * @param numberRecords
-     */
-    public void setNumberRecords(Number numberRecords) {
-        this.numberRecords = numberRecords;
-    }
-
-    /**
-     * get 分页大小
-     *
-     * @return
-     */
-    public Number getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * set 分页大小
-     *
-     * @param pageSize
-     */
-    public void setPageSize(Number pageSize) {
-        this.pageSize = pageSize;
+    public void setTotal(Long total) {
+        this.total = total;
     }
 
 
@@ -158,48 +95,18 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
      *
      * @param alarmHistoryList
      */
-    public DescribeAlarmHistoryResult alarmHistoryList(List<AlarmHistory> alarmHistoryList) {
+    public DescribeAlarmHistoryResult alarmHistoryList(List<DescribedAlarmHistory> alarmHistoryList) {
         this.alarmHistoryList = alarmHistoryList;
         return this;
     }
 
     /**
-     * set 页码
+     * set 总数
      *
-     * @param pageNumber
+     * @param total
      */
-    public DescribeAlarmHistoryResult pageNumber(Number pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-
-    /**
-     * set 总页数
-     *
-     * @param numberPages
-     */
-    public DescribeAlarmHistoryResult numberPages(Number numberPages) {
-        this.numberPages = numberPages;
-        return this;
-    }
-
-    /**
-     * set 总记录数
-     *
-     * @param numberRecords
-     */
-    public DescribeAlarmHistoryResult numberRecords(Number numberRecords) {
-        this.numberRecords = numberRecords;
-        return this;
-    }
-
-    /**
-     * set 分页大小
-     *
-     * @param pageSize
-     */
-    public DescribeAlarmHistoryResult pageSize(Number pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAlarmHistoryResult total(Long total) {
+        this.total = total;
         return this;
     }
 
@@ -209,7 +116,7 @@ public class DescribeAlarmHistoryResult extends JdcloudResult implements java.io
      *
      * @param alarmHistoryList
      */
-    public void addAlarmHistoryList(AlarmHistory alarmHistoryList) {
+    public void addAlarmHistoryList(DescribedAlarmHistory alarmHistoryList) {
         if (this.alarmHistoryList == null) {
             this.alarmHistoryList = new ArrayList<>();
         }
