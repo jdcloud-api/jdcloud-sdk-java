@@ -26,7 +26,9 @@ package com.jdcloud.sdk.service.monitor.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.monitor.model.BaseContact;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.monitor.model.BaseRule;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -37,73 +39,36 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+     * 通知联系人
+     */
+    private List<BaseContact> contacts;
+
+    /**
+     * rule
      * Required:true
      */
     @Required
-    private String calculation;
+    private BaseRule rule;
 
     /**
-     * 通知的联系组，如 [“联系组1”,”联系组2”]
+     * 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
      */
-    private List<String> contactGroups;
+    private String webHookContent;
 
     /**
-     * 通知的联系人，如 [“联系人1”,”联系人2”]
+     * webHook协议
      */
-    private List<String> contactPersons;
+    private String webHookProtocol;
 
     /**
-     * 取样频次
+     * 回调secret，用户请求签名，防伪造
      */
-    private String downSample;
+    private String webHookSecret;
 
     /**
-     * 根据产品线查询可用监控项列表 接口 返回的Metric字段
-     * Required:true
+     * 回调url
      */
-    @Required
-    private String metric;
-
-    /**
-     * 通知周期 单位：小时
-     */
-    private Integer noticePeriod;
-
-    /**
-     * &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;
-     * Required:true
-     */
-    @Required
-    private String operation;
-
-    /**
-     * 统计周期（单位：分钟），可选值：2,5,15,30,60
-     * Required:true
-     */
-    @Required
-    private Integer period;
-
-    /**
-     * 产品名称
-     * Required:true
-     */
-    @Required
-    private String serviceCode;
-
-    /**
-     * 阈值
-     * Required:true
-     */
-    @Required
-    private Double threshold;
-
-    /**
-     * 连续多少次后报警，可选值:1,2,3,5
-     * Required:true
-     */
-    @Required
-    private Integer times;
+    private String webHookUrl;
 
     /**
      * 地域 Id
@@ -121,201 +86,111 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+     * get 通知联系人
      *
      * @return
      */
-    public String getCalculation() {
-        return calculation;
+    public List<BaseContact> getContacts() {
+        return contacts;
     }
 
     /**
-     * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+     * set 通知联系人
      *
-     * @param calculation
+     * @param contacts
      */
-    public void setCalculation(String calculation) {
-        this.calculation = calculation;
+    public void setContacts(List<BaseContact> contacts) {
+        this.contacts = contacts;
     }
 
     /**
-     * get 通知的联系组，如 [“联系组1”,”联系组2”]
-     *
-     * @return
-     */
-    public List<String> getContactGroups() {
-        return contactGroups;
-    }
-
-    /**
-     * set 通知的联系组，如 [“联系组1”,”联系组2”]
-     *
-     * @param contactGroups
-     */
-    public void setContactGroups(List<String> contactGroups) {
-        this.contactGroups = contactGroups;
-    }
-
-    /**
-     * get 通知的联系人，如 [“联系人1”,”联系人2”]
+     * get rule
      *
      * @return
      */
-    public List<String> getContactPersons() {
-        return contactPersons;
+    public BaseRule getRule() {
+        return rule;
     }
 
     /**
-     * set 通知的联系人，如 [“联系人1”,”联系人2”]
+     * set rule
      *
-     * @param contactPersons
+     * @param rule
      */
-    public void setContactPersons(List<String> contactPersons) {
-        this.contactPersons = contactPersons;
+    public void setRule(BaseRule rule) {
+        this.rule = rule;
     }
 
     /**
-     * get 取样频次
-     *
-     * @return
-     */
-    public String getDownSample() {
-        return downSample;
-    }
-
-    /**
-     * set 取样频次
-     *
-     * @param downSample
-     */
-    public void setDownSample(String downSample) {
-        this.downSample = downSample;
-    }
-
-    /**
-     * get 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * get 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
      *
      * @return
      */
-    public String getMetric() {
-        return metric;
+    public String getWebHookContent() {
+        return webHookContent;
     }
 
     /**
-     * set 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * set 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
      *
-     * @param metric
+     * @param webHookContent
      */
-    public void setMetric(String metric) {
-        this.metric = metric;
+    public void setWebHookContent(String webHookContent) {
+        this.webHookContent = webHookContent;
     }
 
     /**
-     * get 通知周期 单位：小时
-     *
-     * @return
-     */
-    public Integer getNoticePeriod() {
-        return noticePeriod;
-    }
-
-    /**
-     * set 通知周期 单位：小时
-     *
-     * @param noticePeriod
-     */
-    public void setNoticePeriod(Integer noticePeriod) {
-        this.noticePeriod = noticePeriod;
-    }
-
-    /**
-     * get &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;
+     * get webHook协议
      *
      * @return
      */
-    public String getOperation() {
-        return operation;
+    public String getWebHookProtocol() {
+        return webHookProtocol;
     }
 
     /**
-     * set &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;
+     * set webHook协议
      *
-     * @param operation
+     * @param webHookProtocol
      */
-    public void setOperation(String operation) {
-        this.operation = operation;
+    public void setWebHookProtocol(String webHookProtocol) {
+        this.webHookProtocol = webHookProtocol;
     }
 
     /**
-     * get 统计周期（单位：分钟），可选值：2,5,15,30,60
-     *
-     * @return
-     */
-    public Integer getPeriod() {
-        return period;
-    }
-
-    /**
-     * set 统计周期（单位：分钟），可选值：2,5,15,30,60
-     *
-     * @param period
-     */
-    public void setPeriod(Integer period) {
-        this.period = period;
-    }
-
-    /**
-     * get 产品名称
+     * get 回调secret，用户请求签名，防伪造
      *
      * @return
      */
-    public String getServiceCode() {
-        return serviceCode;
+    public String getWebHookSecret() {
+        return webHookSecret;
     }
 
     /**
-     * set 产品名称
+     * set 回调secret，用户请求签名，防伪造
      *
-     * @param serviceCode
+     * @param webHookSecret
      */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public void setWebHookSecret(String webHookSecret) {
+        this.webHookSecret = webHookSecret;
     }
 
     /**
-     * get 阈值
-     *
-     * @return
-     */
-    public Double getThreshold() {
-        return threshold;
-    }
-
-    /**
-     * set 阈值
-     *
-     * @param threshold
-     */
-    public void setThreshold(Double threshold) {
-        this.threshold = threshold;
-    }
-
-    /**
-     * get 连续多少次后报警，可选值:1,2,3,5
+     * get 回调url
      *
      * @return
      */
-    public Integer getTimes() {
-        return times;
+    public String getWebHookUrl() {
+        return webHookUrl;
     }
 
     /**
-     * set 连续多少次后报警，可选值:1,2,3,5
+     * set 回调url
      *
-     * @param times
+     * @param webHookUrl
      */
-    public void setTimes(Integer times) {
-        this.times = times;
+    public void setWebHookUrl(String webHookUrl) {
+        this.webHookUrl = webHookUrl;
     }
 
     /**
@@ -356,112 +231,62 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+     * set 通知联系人
      *
-     * @param calculation
+     * @param contacts
      */
-    public UpdateAlarmRequest calculation(String calculation) {
-        this.calculation = calculation;
+    public UpdateAlarmRequest contacts(List<BaseContact> contacts) {
+        this.contacts = contacts;
         return this;
     }
 
     /**
-     * set 通知的联系组，如 [“联系组1”,”联系组2”]
+     * set rule
      *
-     * @param contactGroups
+     * @param rule
      */
-    public UpdateAlarmRequest contactGroups(List<String> contactGroups) {
-        this.contactGroups = contactGroups;
+    public UpdateAlarmRequest rule(BaseRule rule) {
+        this.rule = rule;
         return this;
     }
 
     /**
-     * set 通知的联系人，如 [“联系人1”,”联系人2”]
+     * set 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
      *
-     * @param contactPersons
+     * @param webHookContent
      */
-    public UpdateAlarmRequest contactPersons(List<String> contactPersons) {
-        this.contactPersons = contactPersons;
+    public UpdateAlarmRequest webHookContent(String webHookContent) {
+        this.webHookContent = webHookContent;
         return this;
     }
 
     /**
-     * set 取样频次
+     * set webHook协议
      *
-     * @param downSample
+     * @param webHookProtocol
      */
-    public UpdateAlarmRequest downSample(String downSample) {
-        this.downSample = downSample;
+    public UpdateAlarmRequest webHookProtocol(String webHookProtocol) {
+        this.webHookProtocol = webHookProtocol;
         return this;
     }
 
     /**
-     * set 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * set 回调secret，用户请求签名，防伪造
      *
-     * @param metric
+     * @param webHookSecret
      */
-    public UpdateAlarmRequest metric(String metric) {
-        this.metric = metric;
+    public UpdateAlarmRequest webHookSecret(String webHookSecret) {
+        this.webHookSecret = webHookSecret;
         return this;
     }
 
     /**
-     * set 通知周期 单位：小时
+     * set 回调url
      *
-     * @param noticePeriod
+     * @param webHookUrl
      */
-    public UpdateAlarmRequest noticePeriod(Integer noticePeriod) {
-        this.noticePeriod = noticePeriod;
-        return this;
-    }
-
-    /**
-     * set &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;&#x3D;、!&#x3D;
-     *
-     * @param operation
-     */
-    public UpdateAlarmRequest operation(String operation) {
-        this.operation = operation;
-        return this;
-    }
-
-    /**
-     * set 统计周期（单位：分钟），可选值：2,5,15,30,60
-     *
-     * @param period
-     */
-    public UpdateAlarmRequest period(Integer period) {
-        this.period = period;
-        return this;
-    }
-
-    /**
-     * set 产品名称
-     *
-     * @param serviceCode
-     */
-    public UpdateAlarmRequest serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-        return this;
-    }
-
-    /**
-     * set 阈值
-     *
-     * @param threshold
-     */
-    public UpdateAlarmRequest threshold(Double threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-
-    /**
-     * set 连续多少次后报警，可选值:1,2,3,5
-     *
-     * @param times
-     */
-    public UpdateAlarmRequest times(Integer times) {
-        this.times = times;
+    public UpdateAlarmRequest webHookUrl(String webHookUrl) {
+        this.webHookUrl = webHookUrl;
         return this;
     }
 
@@ -487,27 +312,15 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * add item to 通知的联系组，如 [“联系组1”,”联系组2”]
+     * add item to 通知联系人
      *
-     * @param contactGroup
+     * @param contact
      */
-    public void addContactGroup(String contactGroup) {
-        if (this.contactGroups == null) {
-            this.contactGroups = new ArrayList<>();
+    public void addContact(BaseContact contact) {
+        if (this.contacts == null) {
+            this.contacts = new ArrayList<>();
         }
-        this.contactGroups.add(contactGroup);
-    }
-
-    /**
-     * add item to 通知的联系人，如 [“联系人1”,”联系人2”]
-     *
-     * @param contactPerson
-     */
-    public void addContactPerson(String contactPerson) {
-        if (this.contactPersons == null) {
-            this.contactPersons = new ArrayList<>();
-        }
-        this.contactPersons.add(contactPerson);
+        this.contacts.add(contact);
     }
 
 }

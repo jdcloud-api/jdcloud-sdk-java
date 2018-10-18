@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * dmp接口
- * API related to datastar
+ * dmp数据查询接口
+ * dmp数据查询接口
  *
  * OpenAPI spec version: v1
  * Contact: 

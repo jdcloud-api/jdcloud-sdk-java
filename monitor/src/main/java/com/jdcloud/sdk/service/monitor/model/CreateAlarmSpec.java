@@ -24,466 +24,86 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 创建监控规则
+ * createAlarmSpec
  */
 public class CreateAlarmSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 统计方法，必须与定义的metric一致，可选值列表：avg,max,sum,min
+     * 幂等性校验参数,最长36位
      * Required:true
      */
     @Required
-    private String calculation;
+    private String clientToken;
 
     /**
-     * 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
-     */
-    private List<String> contactGroups;
-
-    /**
-     * 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
-     */
-    private List<String> contactPersons;
-
-    /**
-     * 取样频次
-     */
-    private String downSample;
-
-    /**
-     * 取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的metric字段
+     * createAlarmSpec
      * Required:true
      */
     @Required
-    private String metric;
-
-    /**
-     * 通知周期 单位：小时
-     */
-    private Integer noticePeriod;
-
-    /**
-     * 报警比较符，只能为以下几种&lt;&#x3D;,&lt;,&gt;,&gt;&#x3D;,&#x3D;&#x3D;,!&#x3D;
-     * Required:true
-     */
-    @Required
-    private String operation;
-
-    /**
-     * 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-     * Required:true
-     */
-    @Required
-    private Integer period;
-
-    /**
-     * 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     * Required:true
-     */
-    @Required
-    private List<String> resourceIds;
-
-    /**
-     * 产品名称，取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的serviceCode字段
-     * Required:true
-     */
-    @Required
-    private String serviceCode;
-
-    /**
-     * 报警阈值，目前只开放数值类型功能
-     * Required:true
-     */
-    @Required
-    private Double threshold;
-
-    /**
-     * 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-     * Required:true
-     */
-    @Required
-    private Integer times;
+    private CreateAlarmSpec createAlarmSpec;
 
 
     /**
-     * get 统计方法，必须与定义的metric一致，可选值列表：avg,max,sum,min
+     * get 幂等性校验参数,最长36位
      *
      * @return
      */
-    public String getCalculation() {
-        return calculation;
+    public String getClientToken() {
+        return clientToken;
     }
 
     /**
-     * set 统计方法，必须与定义的metric一致，可选值列表：avg,max,sum,min
+     * set 幂等性校验参数,最长36位
      *
-     * @param calculation
+     * @param clientToken
      */
-    public void setCalculation(String calculation) {
-        this.calculation = calculation;
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
     }
 
     /**
-     * get 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
-     *
-     * @return
-     */
-    public List<String> getContactGroups() {
-        return contactGroups;
-    }
-
-    /**
-     * set 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
-     *
-     * @param contactGroups
-     */
-    public void setContactGroups(List<String> contactGroups) {
-        this.contactGroups = contactGroups;
-    }
-
-    /**
-     * get 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
+     * get createAlarmSpec
      *
      * @return
      */
-    public List<String> getContactPersons() {
-        return contactPersons;
+    public CreateAlarmSpec getCreateAlarmSpec() {
+        return createAlarmSpec;
     }
 
     /**
-     * set 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
+     * set createAlarmSpec
      *
-     * @param contactPersons
+     * @param createAlarmSpec
      */
-    public void setContactPersons(List<String> contactPersons) {
-        this.contactPersons = contactPersons;
-    }
-
-    /**
-     * get 取样频次
-     *
-     * @return
-     */
-    public String getDownSample() {
-        return downSample;
-    }
-
-    /**
-     * set 取样频次
-     *
-     * @param downSample
-     */
-    public void setDownSample(String downSample) {
-        this.downSample = downSample;
-    }
-
-    /**
-     * get 取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的metric字段
-     *
-     * @return
-     */
-    public String getMetric() {
-        return metric;
-    }
-
-    /**
-     * set 取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的metric字段
-     *
-     * @param metric
-     */
-    public void setMetric(String metric) {
-        this.metric = metric;
-    }
-
-    /**
-     * get 通知周期 单位：小时
-     *
-     * @return
-     */
-    public Integer getNoticePeriod() {
-        return noticePeriod;
-    }
-
-    /**
-     * set 通知周期 单位：小时
-     *
-     * @param noticePeriod
-     */
-    public void setNoticePeriod(Integer noticePeriod) {
-        this.noticePeriod = noticePeriod;
-    }
-
-    /**
-     * get 报警比较符，只能为以下几种&lt;&#x3D;,&lt;,&gt;,&gt;&#x3D;,&#x3D;&#x3D;,!&#x3D;
-     *
-     * @return
-     */
-    public String getOperation() {
-        return operation;
-    }
-
-    /**
-     * set 报警比较符，只能为以下几种&lt;&#x3D;,&lt;,&gt;,&gt;&#x3D;,&#x3D;&#x3D;,!&#x3D;
-     *
-     * @param operation
-     */
-    public void setOperation(String operation) {
-        this.operation = operation;
-    }
-
-    /**
-     * get 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-     *
-     * @return
-     */
-    public Integer getPeriod() {
-        return period;
-    }
-
-    /**
-     * set 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-     *
-     * @param period
-     */
-    public void setPeriod(Integer period) {
-        this.period = period;
-    }
-
-    /**
-     * get 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     *
-     * @return
-     */
-    public List<String> getResourceIds() {
-        return resourceIds;
-    }
-
-    /**
-     * set 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     *
-     * @param resourceIds
-     */
-    public void setResourceIds(List<String> resourceIds) {
-        this.resourceIds = resourceIds;
-    }
-
-    /**
-     * get 产品名称，取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的serviceCode字段
-     *
-     * @return
-     */
-    public String getServiceCode() {
-        return serviceCode;
-    }
-
-    /**
-     * set 产品名称，取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的serviceCode字段
-     *
-     * @param serviceCode
-     */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-    }
-
-    /**
-     * get 报警阈值，目前只开放数值类型功能
-     *
-     * @return
-     */
-    public Double getThreshold() {
-        return threshold;
-    }
-
-    /**
-     * set 报警阈值，目前只开放数值类型功能
-     *
-     * @param threshold
-     */
-    public void setThreshold(Double threshold) {
-        this.threshold = threshold;
-    }
-
-    /**
-     * get 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-     *
-     * @return
-     */
-    public Integer getTimes() {
-        return times;
-    }
-
-    /**
-     * set 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-     *
-     * @param times
-     */
-    public void setTimes(Integer times) {
-        this.times = times;
+    public void setCreateAlarmSpec(CreateAlarmSpec createAlarmSpec) {
+        this.createAlarmSpec = createAlarmSpec;
     }
 
 
     /**
-     * set 统计方法，必须与定义的metric一致，可选值列表：avg,max,sum,min
+     * set 幂等性校验参数,最长36位
      *
-     * @param calculation
+     * @param clientToken
      */
-    public CreateAlarmSpec calculation(String calculation) {
-        this.calculation = calculation;
+    public CreateAlarmSpec clientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
 
     /**
-     * set 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
+     * set createAlarmSpec
      *
-     * @param contactGroups
+     * @param createAlarmSpec
      */
-    public CreateAlarmSpec contactGroups(List<String> contactGroups) {
-        this.contactGroups = contactGroups;
+    public CreateAlarmSpec createAlarmSpec(CreateAlarmSpec createAlarmSpec) {
+        this.createAlarmSpec = createAlarmSpec;
         return this;
     }
 
-    /**
-     * set 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
-     *
-     * @param contactPersons
-     */
-    public CreateAlarmSpec contactPersons(List<String> contactPersons) {
-        this.contactPersons = contactPersons;
-        return this;
-    }
-
-    /**
-     * set 取样频次
-     *
-     * @param downSample
-     */
-    public CreateAlarmSpec downSample(String downSample) {
-        this.downSample = downSample;
-        return this;
-    }
-
-    /**
-     * set 取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的metric字段
-     *
-     * @param metric
-     */
-    public CreateAlarmSpec metric(String metric) {
-        this.metric = metric;
-        return this;
-    }
-
-    /**
-     * set 通知周期 单位：小时
-     *
-     * @param noticePeriod
-     */
-    public CreateAlarmSpec noticePeriod(Integer noticePeriod) {
-        this.noticePeriod = noticePeriod;
-        return this;
-    }
-
-    /**
-     * set 报警比较符，只能为以下几种&lt;&#x3D;,&lt;,&gt;,&gt;&#x3D;,&#x3D;&#x3D;,!&#x3D;
-     *
-     * @param operation
-     */
-    public CreateAlarmSpec operation(String operation) {
-        this.operation = operation;
-        return this;
-    }
-
-    /**
-     * set 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-     *
-     * @param period
-     */
-    public CreateAlarmSpec period(Integer period) {
-        this.period = period;
-        return this;
-    }
-
-    /**
-     * set 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     *
-     * @param resourceIds
-     */
-    public CreateAlarmSpec resourceIds(List<String> resourceIds) {
-        this.resourceIds = resourceIds;
-        return this;
-    }
-
-    /**
-     * set 产品名称，取值请查看 &lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2791/isCatalog/1&quot;&gt;查询可用创建监控规则的指标列表]&lt;/a&gt; 接口 的serviceCode字段
-     *
-     * @param serviceCode
-     */
-    public CreateAlarmSpec serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-        return this;
-    }
-
-    /**
-     * set 报警阈值，目前只开放数值类型功能
-     *
-     * @param threshold
-     */
-    public CreateAlarmSpec threshold(Double threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-
-    /**
-     * set 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-     *
-     * @param times
-     */
-    public CreateAlarmSpec times(Integer times) {
-        this.times = times;
-        return this;
-    }
-
-
-    /**
-     * add item to 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
-     *
-     * @param contactGroup
-     */
-    public void addContactGroup(String contactGroup) {
-        if (this.contactGroups == null) {
-            this.contactGroups = new ArrayList<>();
-        }
-        this.contactGroups.add(contactGroup);
-    }
-
-    /**
-     * add item to 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
-     *
-     * @param contactPerson
-     */
-    public void addContactPerson(String contactPerson) {
-        if (this.contactPersons == null) {
-            this.contactPersons = new ArrayList<>();
-        }
-        this.contactPersons.add(contactPerson);
-    }
-
-    /**
-     * add item to 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     *
-     * @param resourceId
-     */
-    public void addResourceId(String resourceId) {
-        if (this.resourceIds == null) {
-            this.resourceIds = new ArrayList<>();
-        }
-        this.resourceIds.add(resourceId);
-    }
 
 }

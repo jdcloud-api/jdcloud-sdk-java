@@ -35,7 +35,7 @@ class DescribeQueryPerformanceExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "POST";
+        return "GET";
     }
 
     @Override

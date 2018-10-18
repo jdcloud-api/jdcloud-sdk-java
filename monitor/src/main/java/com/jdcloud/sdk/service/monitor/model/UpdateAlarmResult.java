@@ -33,40 +33,7 @@ public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializ
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 规则id
-     */
-    private String alarmId;
 
-
-    /**
-     * get 规则id
-     *
-     * @return
-     */
-    public String getAlarmId() {
-        return alarmId;
-    }
-
-    /**
-     * set 规则id
-     *
-     * @param alarmId
-     */
-    public void setAlarmId(String alarmId) {
-        this.alarmId = alarmId;
-    }
-
-
-    /**
-     * set 规则id
-     *
-     * @param alarmId
-     */
-    public UpdateAlarmResult alarmId(String alarmId) {
-        this.alarmId = alarmId;
-        return this;
-    }
 
 
 }

@@ -24,15 +24,33 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.monitor.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询监控规则
+ * 查询规则, 查询参数组合及优先级从高到低为：
+1：serviceCode不为空
+1.1：serviceCode + resourceId
+1.2: serviceCode + resourceIds
+2：serviceCodes不为空
+3: 所有规则
  */
 public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 当前所在页，默认为1
+     */
+    private Long pageNumber;
+
+    /**
+     * 页面大小，默认为20；取值范围[1, 100]
+     */
+    private Long pageSize;
 
     /**
      * 产品名称
@@ -40,34 +58,41 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     private String serviceCode;
 
     /**
-     * 资源Id
+     * 资源ID
      */
-    private String resourceId;
+    private String resourceID;
+
+    /**
+     * 规则类型, 1表示资源监控，6表示站点监控
+     */
+    private Long ruleType;
 
     /**
      * 规则报警状态, 1：正常, 2：报警，4：数据不足
      */
-    private Integer status;
-
-    /**
-     * 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
-     */
-    private Integer isAlarming;
+    private Long status;
 
     /**
      * 规则状态：1为启用，0为禁用
      */
-    private Integer enabled;
+    private Long enabled;
 
     /**
-     * 页码, 默认为1, 取值范围：[1,∞)
+     * 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
      */
-    private Integer pageNumber;
+    private Long isAlarming;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,100]
+     * 规则的id
      */
-    private Integer pageSize;
+    private String alarmId;
+
+    /**
+     * 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
+     */
+    private List<Filter> filters;
 
     /**
      * 地域 Id
@@ -76,6 +101,42 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     @Required
     private String regionId;
 
+
+    /**
+     * get 当前所在页，默认为1
+     *
+     * @return
+     */
+    public Long getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 当前所在页，默认为1
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 页面大小，默认为20；取值范围[1, 100]
+     *
+     * @return
+     */
+    public Long getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 页面大小，默认为20；取值范围[1, 100]
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+    }
 
     /**
      * get 产品名称
@@ -96,21 +157,39 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 资源Id
+     * get 资源ID
      *
      * @return
      */
-    public String getResourceId() {
-        return resourceId;
+    public String getResourceID() {
+        return resourceID;
     }
 
     /**
-     * set 资源Id
+     * set 资源ID
      *
-     * @param resourceId
+     * @param resourceID
      */
-    public void setResourceId(String resourceId) {
-        this.resourceId = resourceId;
+    public void setResourceID(String resourceID) {
+        this.resourceID = resourceID;
+    }
+
+    /**
+     * get 规则类型, 1表示资源监控，6表示站点监控
+     *
+     * @return
+     */
+    public Long getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 规则类型, 1表示资源监控，6表示站点监控
+     *
+     * @param ruleType
+     */
+    public void setRuleType(Long ruleType) {
+        this.ruleType = ruleType;
     }
 
     /**
@@ -118,7 +197,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public Integer getStatus() {
+    public Long getStatus() {
         return status;
     }
 
@@ -127,26 +206,8 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param status
      */
-    public void setStatus(Integer status) {
+    public void setStatus(Long status) {
         this.status = status;
-    }
-
-    /**
-     * get 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
-     *
-     * @return
-     */
-    public Integer getIsAlarming() {
-        return isAlarming;
-    }
-
-    /**
-     * set 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
-     *
-     * @param isAlarming
-     */
-    public void setIsAlarming(Integer isAlarming) {
-        this.isAlarming = isAlarming;
     }
 
     /**
@@ -154,7 +215,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public Integer getEnabled() {
+    public Long getEnabled() {
         return enabled;
     }
 
@@ -163,44 +224,66 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param enabled
      */
-    public void setEnabled(Integer enabled) {
+    public void setEnabled(Long enabled) {
         this.enabled = enabled;
     }
 
     /**
-     * get 页码, 默认为1, 取值范围：[1,∞)
+     * get 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
      *
      * @return
      */
-    public Integer getPageNumber() {
-        return pageNumber;
+    public Long getIsAlarming() {
+        return isAlarming;
     }
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
      *
-     * @param pageNumber
+     * @param isAlarming
      */
-    public void setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public void setIsAlarming(Long isAlarming) {
+        this.isAlarming = isAlarming;
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,100]
+     * get 规则的id
      *
      * @return
      */
-    public Integer getPageSize() {
-        return pageSize;
+    public String getAlarmId() {
+        return alarmId;
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 规则的id
      *
-     * @param pageSize
+     * @param alarmId
      */
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public void setAlarmId(String alarmId) {
+        this.alarmId = alarmId;
+    }
+
+    /**
+     * get 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -223,6 +306,26 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
+     * set 当前所在页，默认为1
+     *
+     * @param pageNumber
+     */
+    public DescribeAlarmsRequest pageNumber(Long pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 页面大小，默认为20；取值范围[1, 100]
+     *
+     * @param pageSize
+     */
+    public DescribeAlarmsRequest pageSize(Long pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
      * set 产品名称
      *
      * @param serviceCode
@@ -233,12 +336,22 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 资源Id
+     * set 资源ID
      *
-     * @param resourceId
+     * @param resourceID
      */
-    public DescribeAlarmsRequest resourceId(String resourceId) {
-        this.resourceId = resourceId;
+    public DescribeAlarmsRequest resourceID(String resourceID) {
+        this.resourceID = resourceID;
+        return this;
+    }
+
+    /**
+     * set 规则类型, 1表示资源监控，6表示站点监控
+     *
+     * @param ruleType
+     */
+    public DescribeAlarmsRequest ruleType(Long ruleType) {
+        this.ruleType = ruleType;
         return this;
     }
 
@@ -247,18 +360,8 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param status
      */
-    public DescribeAlarmsRequest status(Integer status) {
+    public DescribeAlarmsRequest status(Long status) {
         this.status = status;
-        return this;
-    }
-
-    /**
-     * set 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
-     *
-     * @param isAlarming
-     */
-    public DescribeAlarmsRequest isAlarming(Integer isAlarming) {
-        this.isAlarming = isAlarming;
         return this;
     }
 
@@ -267,28 +370,40 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param enabled
      */
-    public DescribeAlarmsRequest enabled(Integer enabled) {
+    public DescribeAlarmsRequest enabled(Long enabled) {
         this.enabled = enabled;
         return this;
     }
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 是否为正在报警的规则，0为忽略，1为是，与 status 同时只能生效一个,isAlarming 优先生效
      *
-     * @param pageNumber
+     * @param isAlarming
      */
-    public DescribeAlarmsRequest pageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeAlarmsRequest isAlarming(Long isAlarming) {
+        this.isAlarming = isAlarming;
         return this;
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 规则的id
      *
-     * @param pageSize
+     * @param alarmId
      */
-    public DescribeAlarmsRequest pageSize(Integer pageSize) {
-        this.pageSize = pageSize;
+    public DescribeAlarmsRequest alarmId(String alarmId) {
+        this.alarmId = alarmId;
+        return this;
+    }
+
+    /**
+     * set 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
+     *
+     * @param filters
+     */
+    public DescribeAlarmsRequest filters(List<Filter> filters) {
+        this.filters = filters;
         return this;
     }
 
@@ -302,5 +417,19 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
+    /**
+     * add item to 服务码或资源Id列表
+filter name 为serviceCodes表示查询多个产品线的规则
+filter name 为resourceIds表示查询多个资源的规则
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

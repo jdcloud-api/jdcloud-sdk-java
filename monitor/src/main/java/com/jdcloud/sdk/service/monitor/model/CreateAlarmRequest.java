@@ -36,7 +36,7 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 幂等性校验参数，最长32位，值不变则返回值不会变
+     * 幂等性校验参数,最长36位
      * Required:true
      */
     @Required
@@ -58,7 +58,7 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 幂等性校验参数，最长32位，值不变则返回值不会变
+     * get 幂等性校验参数,最长36位
      *
      * @return
      */
@@ -67,7 +67,7 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 幂等性校验参数，最长32位，值不变则返回值不会变
+     * set 幂等性校验参数,最长36位
      *
      * @param clientToken
      */
@@ -113,7 +113,7 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 幂等性校验参数，最长32位，值不变则返回值不会变
+     * set 幂等性校验参数,最长36位
      *
      * @param clientToken
      */
