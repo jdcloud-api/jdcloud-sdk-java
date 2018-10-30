@@ -50,7 +50,7 @@ public class UpdateRRRequest extends JdcloudRequest implements java.io.Serializa
     private String regionId;
 
     /**
-     * 域名ID
+     * 域名ID，请使用getDomains接口获取。
      * Required:true
      */
     @Required
@@ -94,7 +94,7 @@ public class UpdateRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * get 域名ID
+     * get 域名ID，请使用getDomains接口获取。
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class UpdateRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */
@@ -133,7 +133,7 @@ public class UpdateRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */

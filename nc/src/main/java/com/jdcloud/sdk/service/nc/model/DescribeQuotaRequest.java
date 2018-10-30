@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,14 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询资源的配额
+ * 查询资源的配额，支持：原生容器 pod 和 secret.
+
  */
 public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型  container：用户能创建的容器的配额  secret：用户能创建的secret的配额
+     * resourceType - 资源类型，支持 [container, pod, secret]
+
      * Required:true
      */
     @Required
@@ -50,7 +52,8 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 资源类型  container：用户能创建的容器的配额  secret：用户能创建的secret的配额
+     * get resourceType - 资源类型，支持 [container, pod, secret]
+
      *
      * @return
      */
@@ -59,7 +62,8 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 资源类型  container：用户能创建的容器的配额  secret：用户能创建的secret的配额
+     * set resourceType - 资源类型，支持 [container, pod, secret]
+
      *
      * @param resourceType
      */
@@ -87,7 +91,8 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 资源类型  container：用户能创建的容器的配额  secret：用户能创建的secret的配额
+     * set resourceType - 资源类型，支持 [container, pod, secret]
+
      *
      * @param resourceType
      */

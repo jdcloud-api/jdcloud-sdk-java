@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,6 +33,11 @@ public class Quota  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 类型
+     */
+    private String resourceType;
+
+    /**
      * 配额
      */
     private Integer limit;
@@ -42,6 +47,24 @@ public class Quota  implements java.io.Serializable {
      */
     private Integer used;
 
+
+    /**
+     * get 类型
+     *
+     * @return
+     */
+    public String getResourceType() {
+        return resourceType;
+    }
+
+    /**
+     * set 类型
+     *
+     * @param resourceType
+     */
+    public void setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+    }
 
     /**
      * get 配额
@@ -79,6 +102,16 @@ public class Quota  implements java.io.Serializable {
         this.used = used;
     }
 
+
+    /**
+     * set 类型
+     *
+     * @param resourceType
+     */
+    public Quota resourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
 
     /**
      * set 配额

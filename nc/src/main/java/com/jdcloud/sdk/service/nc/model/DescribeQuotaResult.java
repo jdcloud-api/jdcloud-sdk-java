@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,8 @@ import com.jdcloud.sdk.service.nc.model.Quota;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询资源的配额
+ * 查询资源的配额，支持：原生容器 pod 和 secret.
+
  */
 public class DescribeQuotaResult extends JdcloudResult implements java.io.Serializable {
 

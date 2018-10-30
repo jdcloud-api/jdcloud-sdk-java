@@ -41,7 +41,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
     private List<Integer> time;
 
     /**
-     * 数据的单位
+     * 数据序列的单位
      */
     private String unit;
 
@@ -70,7 +70,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
     }
 
     /**
-     * get 数据的单位
+     * get 数据序列的单位
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
     }
 
     /**
-     * set 数据的单位
+     * set 数据序列的单位
      *
      * @param unit
      */
@@ -117,7 +117,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
     }
 
     /**
-     * set 数据的单位
+     * set 数据序列的单位
      *
      * @param unit
      */

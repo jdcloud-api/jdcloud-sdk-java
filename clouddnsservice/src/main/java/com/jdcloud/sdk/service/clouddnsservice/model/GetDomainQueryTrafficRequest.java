@@ -63,7 +63,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     private String regionId;
 
     /**
-     * 域名ID
+     * 域名ID，请使用getDomains接口获取。
      * Required:true
      */
     @Required
@@ -143,7 +143,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 域名ID
+     * get 域名ID，请使用getDomains接口获取。
      *
      * @return
      */
@@ -152,7 +152,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */
@@ -202,7 +202,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */

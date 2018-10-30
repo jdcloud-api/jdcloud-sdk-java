@@ -54,7 +54,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     private Integer domainId;
 
     /**
-     * 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
+     * 1-&gt;新购买、3-&gt;升级，收费套餐的域名必填
      */
     private Integer buyType;
 
@@ -136,7 +136,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
+     * get 1-&gt;新购买、3-&gt;升级，收费套餐的域名必填
      *
      * @return
      */
@@ -145,7 +145,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
+     * set 1-&gt;新购买、3-&gt;升级，收费套餐的域名必填
      *
      * @param buyType
      */
@@ -257,7 +257,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 1-&gt;新购买、2-&gt;升级，收费套餐的域名必填
+     * set 1-&gt;新购买、3-&gt;升级，收费套餐的域名必填
      *
      * @param buyType
      */

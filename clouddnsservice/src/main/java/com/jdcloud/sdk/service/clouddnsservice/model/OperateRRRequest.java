@@ -58,7 +58,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     private String regionId;
 
     /**
-     * 域名ID
+     * 域名ID，请使用getDomains接口获取。
      * Required:true
      */
     @Required
@@ -120,7 +120,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 域名ID
+     * get 域名ID，请使用getDomains接口获取。
      *
      * @return
      */
@@ -129,7 +129,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */
@@ -169,7 +169,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */

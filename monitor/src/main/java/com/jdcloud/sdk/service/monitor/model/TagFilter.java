@@ -35,7 +35,7 @@ public class TagFilter  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Tag键
+     * key
      */
     private String key;
 
@@ -46,7 +46,7 @@ public class TagFilter  implements java.io.Serializable {
 
 
     /**
-     * get Tag键
+     * get key
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class TagFilter  implements java.io.Serializable {
     }
 
     /**
-     * set Tag键
+     * set key
      *
      * @param key
      */
@@ -83,7 +83,7 @@ public class TagFilter  implements java.io.Serializable {
 
 
     /**
-     * set Tag键
+     * set key
      *
      * @param key
      */

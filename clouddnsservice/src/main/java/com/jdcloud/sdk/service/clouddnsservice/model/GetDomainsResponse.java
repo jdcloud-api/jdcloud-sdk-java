@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.clouddnsservice.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询用户名下的主域名列表
+ * 查询用户名下的主域名列表。&lt;br&gt;    
+请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+
  */
 public class GetDomainsResponse extends JdcloudResponse<GetDomainsResult> implements java.io.Serializable {
 

@@ -37,6 +37,12 @@ import com.jdcloud.sdk.service.clouddnsservice.client.DelDomainExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.UpdateMonitorRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.UpdateMonitorResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.UpdateMonitorExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.DelUserViewIPRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.DelUserViewIPResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.DelUserViewIPExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetActionLogRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetActionLogResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.GetActionLogExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddRRRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddRRResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.AddRRExecutor;
@@ -52,15 +58,30 @@ import com.jdcloud.sdk.service.clouddnsservice.client.AddMonitorTargetExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddDomainRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddDomainResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.AddDomainExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetUserViewIPRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetUserViewIPResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.GetUserViewIPExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.AddUserViewRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.AddUserViewResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.AddUserViewExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryTrafficRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryTrafficResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.GetDomainQueryTrafficExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetTargetsRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetTargetsResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.GetTargetsExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetUserViewRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.GetUserViewResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.GetUserViewExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.AddUserViewIPRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.AddUserViewIPResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.AddUserViewIPExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryCountRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryCountResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.GetDomainQueryCountExecutor;
+import com.jdcloud.sdk.service.clouddnsservice.model.DelUserViewRequest;
+import com.jdcloud.sdk.service.clouddnsservice.model.DelUserViewResponse;
+import com.jdcloud.sdk.service.clouddnsservice.client.DelUserViewExecutor;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddMonitorRequest;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddMonitorResponse;
 import com.jdcloud.sdk.service.clouddnsservice.client.AddMonitorExecutor;
@@ -93,7 +114,7 @@ public class ClouddnsserviceClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.6";
+    public final static String ClientVersion = "1.0.7";
     public final static String DefaultEndpoint = "clouddnsservice.jdcloud-api.com";
     public final static String ServiceName = "clouddnsservice";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -158,6 +179,28 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
+     * 删除域名的自定义解析线路的IP段
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DelUserViewIPResponse delUserViewIP(DelUserViewIPRequest request) throws JdcloudSdkException {
+        return new DelUserViewIPExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看用户在云解析服务下的操作记录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetActionLogResponse getActionLog(GetActionLogRequest request) throws JdcloudSdkException {
+        return new GetActionLogExecutor().client(this).execute(request);
+    }
+
+    /**
      * 添加域名的解析记录
      *
      * @param request
@@ -169,7 +212,9 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 查询用户名下的主域名列表
+     * 查询用户名下的主域名列表。&lt;br&gt;    
+请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+
      *
      * @param request
      * @return
@@ -213,6 +258,28 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
+     * 查询域名的自定义解析线路的IP段
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetUserViewIPResponse getUserViewIP(GetUserViewIPRequest request) throws JdcloudSdkException {
+        return new GetUserViewIPExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加域名的自定义解析线路
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddUserViewResponse addUserView(AddUserViewRequest request) throws JdcloudSdkException {
+        return new AddUserViewExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看域名的查询流量
      *
      * @param request
@@ -235,6 +302,28 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
+     * 查询域名的自定义解析线路
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetUserViewResponse getUserView(GetUserViewRequest request) throws JdcloudSdkException {
+        return new GetUserViewExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加域名的自定义解析线路的IP段
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddUserViewIPResponse addUserViewIP(AddUserViewIPRequest request) throws JdcloudSdkException {
+        return new AddUserViewIPExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看域名的解析次数
      *
      * @param request
@@ -243,6 +332,17 @@ public class ClouddnsserviceClient extends JdcloudClient {
      */
     public GetDomainQueryCountResponse getDomainQueryCount(GetDomainQueryCountRequest request) throws JdcloudSdkException {
         return new GetDomainQueryCountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除域名的自定义解析线路
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DelUserViewResponse delUserView(DelUserViewRequest request) throws JdcloudSdkException {
+        return new DelUserViewExecutor().client(this).execute(request);
     }
 
     /**
@@ -257,7 +357,9 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 查询云解析所有的基础解析线路
+     * 查询云解析所有的基础解析线路。&lt;br&gt;
+在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
+
      *
      * @param request
      * @return
@@ -312,7 +414,9 @@ public class ClouddnsserviceClient extends JdcloudClient {
     }
 
     /**
-     * 查询主域名的解析记录
+     * 查询主域名的解析记录。&lt;br&gt;
+在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
+
      *
      * @param request
      * @return

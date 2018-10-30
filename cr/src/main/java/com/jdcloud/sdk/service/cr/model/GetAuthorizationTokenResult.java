@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 配额
+ * Authentication
  * 用户认证相关接口
  *
  * OpenAPI spec version: v1
@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.cr.model;
 
-import com.jdcloud.sdk.service.cr.model.AuthorizationData;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -38,37 +37,103 @@ public class GetAuthorizationTokenResult extends JdcloudResult implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * authorizationData
+     * authorizationToken
      */
-    private AuthorizationData authorizationData;
+    private String authorizationToken;
+
+    /**
+     * loginCmdLine
+     */
+    private String loginCmdLine;
+
+    /**
+     * expiresAt
+     */
+    private String expiresAt;
 
 
     /**
-     * get authorizationData
+     * get authorizationToken
      *
      * @return
      */
-    public AuthorizationData getAuthorizationData() {
-        return authorizationData;
+    public String getAuthorizationToken() {
+        return authorizationToken;
     }
 
     /**
-     * set authorizationData
+     * set authorizationToken
      *
-     * @param authorizationData
+     * @param authorizationToken
      */
-    public void setAuthorizationData(AuthorizationData authorizationData) {
-        this.authorizationData = authorizationData;
+    public void setAuthorizationToken(String authorizationToken) {
+        this.authorizationToken = authorizationToken;
+    }
+
+    /**
+     * get loginCmdLine
+     *
+     * @return
+     */
+    public String getLoginCmdLine() {
+        return loginCmdLine;
+    }
+
+    /**
+     * set loginCmdLine
+     *
+     * @param loginCmdLine
+     */
+    public void setLoginCmdLine(String loginCmdLine) {
+        this.loginCmdLine = loginCmdLine;
+    }
+
+    /**
+     * get expiresAt
+     *
+     * @return
+     */
+    public String getExpiresAt() {
+        return expiresAt;
+    }
+
+    /**
+     * set expiresAt
+     *
+     * @param expiresAt
+     */
+    public void setExpiresAt(String expiresAt) {
+        this.expiresAt = expiresAt;
     }
 
 
     /**
-     * set authorizationData
+     * set authorizationToken
      *
-     * @param authorizationData
+     * @param authorizationToken
      */
-    public GetAuthorizationTokenResult authorizationData(AuthorizationData authorizationData) {
-        this.authorizationData = authorizationData;
+    public GetAuthorizationTokenResult authorizationToken(String authorizationToken) {
+        this.authorizationToken = authorizationToken;
+        return this;
+    }
+
+    /**
+     * set loginCmdLine
+     *
+     * @param loginCmdLine
+     */
+    public GetAuthorizationTokenResult loginCmdLine(String loginCmdLine) {
+        this.loginCmdLine = loginCmdLine;
+        return this;
+    }
+
+    /**
+     * set expiresAt
+     *
+     * @param expiresAt
+     */
+    public GetAuthorizationTokenResult expiresAt(String expiresAt) {
+        this.expiresAt = expiresAt;
         return this;
     }
 

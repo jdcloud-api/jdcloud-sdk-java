@@ -57,7 +57,7 @@ public class GetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     private String regionId;
 
     /**
-     * 域名ID
+     * 域名ID，请使用getDomains接口获取。
      * Required:true
      */
     @Required
@@ -137,7 +137,7 @@ public class GetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 域名ID
+     * get 域名ID，请使用getDomains接口获取。
      *
      * @return
      */
@@ -146,7 +146,7 @@ public class GetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */
@@ -196,7 +196,7 @@ public class GetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */

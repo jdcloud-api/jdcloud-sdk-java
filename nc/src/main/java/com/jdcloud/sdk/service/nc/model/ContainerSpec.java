@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例类型；参考[文档](http://git.jd.com/jcloud-product/PRD/blob/master/云主机类型.md)
+     * 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      * Required:true
      */
     @Required
@@ -51,7 +51,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private String az;
 
     /**
-     * 容器名称；命名规范请参考[文档](http://git.jd.com/jcloud-product/open-api-doc/blob/master/公共部分/API规则.md)
+     * 容器名称
      * Required:true
      */
     @Required
@@ -83,8 +83,10 @@ public class ContainerSpec  implements java.io.Serializable {
     private List<EnvVar> envs;
 
     /**
-     * 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; ^ 2. 其它私有仓储的镜像名称需要包含server地址：container-registry/image:tag &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * Required:true
      */
+    @Required
     private String image;
 
     /**
@@ -132,7 +134,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private LogConfiguration logConfiguration;
 
     /**
-     * 容器描述；命名规范请参考[文档](http://git.jd.com/jcloud-product/open-api-doc/blob/master/公共部分/API规则.md)
+     * 容器描述
      */
     private String description;
 
@@ -143,7 +145,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
 
     /**
-     * get 实例类型；参考[文档](http://git.jd.com/jcloud-product/PRD/blob/master/云主机类型.md)
+     * get 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      *
      * @return
      */
@@ -152,7 +154,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型；参考[文档](http://git.jd.com/jcloud-product/PRD/blob/master/云主机类型.md)
+     * set 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      *
      * @param instanceType
      */
@@ -179,7 +181,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器名称；命名规范请参考[文档](http://git.jd.com/jcloud-product/open-api-doc/blob/master/公共部分/API规则.md)
+     * get 容器名称
      *
      * @return
      */
@@ -188,7 +190,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器名称；命名规范请参考[文档](http://git.jd.com/jcloud-product/open-api-doc/blob/master/公共部分/API规则.md)
+     * set 容器名称
      *
      * @param name
      */
@@ -287,7 +289,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; ^ 2. 其它私有仓储的镜像名称需要包含server地址：container-registry/image:tag &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * get 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
      *
      * @return
      */
@@ -296,7 +298,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; ^ 2. 其它私有仓储的镜像名称需要包含server地址：container-registry/image:tag &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
      *
      * @param image
      */
@@ -449,7 +451,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器描述；命名规范请参考[文档](http://git.jd.com/jcloud-product/open-api-doc/blob/master/公共部分/API规则.md)
+     * get 容器描述
      *
      * @return
      */
@@ -458,7 +460,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器描述；命名规范请参考[文档](http://git.jd.com/jcloud-product/open-api-doc/blob/master/公共部分/API规则.md)
+     * set 容器描述
      *
      * @param description
      */
@@ -486,7 +488,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
 
     /**
-     * set 实例类型；参考[文档](http://git.jd.com/jcloud-product/PRD/blob/master/云主机类型.md)
+     * set 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
      *
      * @param instanceType
      */
@@ -506,7 +508,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器名称；命名规范请参考[文档](http://git.jd.com/jcloud-product/open-api-doc/blob/master/公共部分/API规则.md)
+     * set 容器名称
      *
      * @param name
      */
@@ -566,7 +568,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; ^ 2. 其它私有仓储的镜像名称需要包含server地址：container-registry/image:tag &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
      *
      * @param image
      */
@@ -656,7 +658,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器描述；命名规范请参考[文档](http://git.jd.com/jcloud-product/open-api-doc/blob/master/公共部分/API规则.md)
+     * set 容器描述
      *
      * @param description
      */

@@ -28,7 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询主域名的解析记录
+ * 查询主域名的解析记录。&lt;br&gt;
+在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
+
  */
 public class SearchRRRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -52,7 +54,7 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     private String regionId;
 
     /**
-     * 域名ID
+     * 域名ID，请使用getDomains接口获取。
      * Required:true
      */
     @Required
@@ -114,7 +116,7 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * get 域名ID
+     * get 域名ID，请使用getDomains接口获取。
      *
      * @return
      */
@@ -123,7 +125,7 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */
@@ -163,7 +165,7 @@ public class SearchRRRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */

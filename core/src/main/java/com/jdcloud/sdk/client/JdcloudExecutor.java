@@ -19,8 +19,10 @@ import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,6 +36,14 @@ public abstract class JdcloudExecutor {
     private static String dateFormat = "yyyy-MM-dd'T'HH:mm:ss";
     private static String charset = "UTF-8";
     private static Pattern pattern = Pattern.compile("\\{([a-zA-Z0-9-_]+)\\}");
+    private static Set<String> base64Headers = new HashSet<String>() {
+        private static final long serialVersionUID = 1L;
+    {
+        add("x-jdcloud-security-token");
+        add("x-jdcloud-pin");
+        add("x-jdcloud-erp");
+    }};
+    
     /**
      * jdcloud客户端
      */
@@ -388,7 +398,7 @@ public abstract class JdcloudExecutor {
             String key = entry.getKey();
             if(null == key){continue;}
             String value = entry.getValue();
-            if (key.startsWith("x-jdcloud")) {
+            if (base64Headers.contains(key)) {
                 try {
                     value = Base64Utils.encodeAsString(value.getBytes("UTF-8"));
                 }catch (Exception e){
