@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainsResponse;
 
 /**
- * 查询用户名下的主域名列表
+ * 查询用户名下的主域名列表。&lt;br&gt;    
+请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+
  */
 class GetDomainsExecutor extends JdcloudExecutor {
 

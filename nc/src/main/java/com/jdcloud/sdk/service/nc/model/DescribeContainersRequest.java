@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 容器服务
- * 关于容器服务相前接口
+ * 原生容器
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,7 +31,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询容器列表
+ * 批量查询原生容器的详细信息&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
  */
 public class DescribeContainersRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -52,7 +54,7 @@ public class DescribeContainersRequest extends JdcloudRequest implements java.io
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云容器状态，精确匹配，支持多个
+status - 容器状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 subnetId - 镜像ID，模糊匹配，支持单个
 
@@ -108,7 +110,7 @@ subnetId - 镜像ID，模糊匹配，支持单个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云容器状态，精确匹配，支持多个
+status - 容器状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 subnetId - 镜像ID，模糊匹配，支持单个
 
@@ -124,7 +126,7 @@ subnetId - 镜像ID，模糊匹配，支持单个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云容器状态，精确匹配，支持多个
+status - 容器状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 subnetId - 镜像ID，模糊匹配，支持单个
 
@@ -179,7 +181,7 @@ subnetId - 镜像ID，模糊匹配，支持单个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云容器状态，精确匹配，支持多个
+status - 容器状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 subnetId - 镜像ID，模糊匹配，支持单个
 
@@ -207,7 +209,7 @@ subnetId - 镜像ID，模糊匹配，支持单个
 privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
-status - 云容器状态，精确匹配，支持多个
+status - 容器状态，精确匹配，支持多个
 name - 实例名称，模糊匹配，支持单个
 subnetId - 镜像ID，模糊匹配，支持单个
 

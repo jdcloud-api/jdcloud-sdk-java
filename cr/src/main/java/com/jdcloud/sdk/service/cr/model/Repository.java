@@ -60,7 +60,7 @@ public class Repository  implements java.io.Serializable {
     /**
      * 镜像仓库大小。
      */
-    private Integer totalSpaceUsedMB;
+    private Double totalSpaceUsedMB;
 
     /**
      * 镜像仓库描述。
@@ -163,7 +163,7 @@ public class Repository  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getTotalSpaceUsedMB() {
+    public Double getTotalSpaceUsedMB() {
         return totalSpaceUsedMB;
     }
 
@@ -172,7 +172,7 @@ public class Repository  implements java.io.Serializable {
      *
      * @param totalSpaceUsedMB
      */
-    public void setTotalSpaceUsedMB(Integer totalSpaceUsedMB) {
+    public void setTotalSpaceUsedMB(Double totalSpaceUsedMB) {
         this.totalSpaceUsedMB = totalSpaceUsedMB;
     }
 
@@ -250,7 +250,7 @@ public class Repository  implements java.io.Serializable {
      *
      * @param totalSpaceUsedMB
      */
-    public Repository totalSpaceUsedMB(Integer totalSpaceUsedMB) {
+    public Repository totalSpaceUsedMB(Double totalSpaceUsedMB) {
         this.totalSpaceUsedMB = totalSpaceUsedMB;
         return this;
     }

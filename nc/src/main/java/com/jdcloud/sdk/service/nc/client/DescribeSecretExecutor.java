@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.nc.model.DescribeSecretResponse;
 
 /**
- * 查询 secret 详情
+ * 查询单个 secret 详情
+
  */
 class DescribeSecretExecutor extends JdcloudExecutor {
 

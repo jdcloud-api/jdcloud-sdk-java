@@ -28,19 +28,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询云解析所有的基础解析线路
+ * 查询云解析所有的基础解析线路。&lt;br&gt;
+在使用解析线路的参数之前，请调用此接口获取解析线路的ID。
+
  */
 public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 展示方式
+     * 展示方式，暂时不使用
      */
     private Integer loadMode;
 
     /**
-     * 套餐ID
+     * 套餐ID，0-&gt;免费版 1-&gt;企业版 2-&gt;企业高级版
      * Required:true
      */
     @Required
@@ -61,7 +63,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     private String regionId;
 
     /**
-     * 域名ID
+     * 域名ID，请使用getDomains接口获取。
      * Required:true
      */
     @Required
@@ -69,7 +71,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 展示方式
+     * get 展示方式，暂时不使用
      *
      * @return
      */
@@ -78,7 +80,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 展示方式
+     * set 展示方式，暂时不使用
      *
      * @param loadMode
      */
@@ -87,7 +89,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 套餐ID
+     * get 套餐ID，0-&gt;免费版 1-&gt;企业版 2-&gt;企业高级版
      *
      * @return
      */
@@ -96,7 +98,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 套餐ID
+     * set 套餐ID，0-&gt;免费版 1-&gt;企业版 2-&gt;企业高级版
      *
      * @param packId
      */
@@ -141,7 +143,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 域名ID
+     * get 域名ID，请使用getDomains接口获取。
      *
      * @return
      */
@@ -150,7 +152,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */
@@ -160,7 +162,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 展示方式
+     * set 展示方式，暂时不使用
      *
      * @param loadMode
      */
@@ -170,7 +172,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 套餐ID
+     * set 套餐ID，0-&gt;免费版 1-&gt;企业版 2-&gt;企业高级版
      *
      * @param packId
      */
@@ -200,7 +202,7 @@ public class GetViewTreeRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 域名ID
+     * set 域名ID，请使用getDomains接口获取。
      *
      * @param domainId
      */

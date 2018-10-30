@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 容器服务
- * 关于容器服务相前接口
+ * 原生容器
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,24 +28,28 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询容器日志
+ * 查询单个容器日志
+
  */
 public class GetLogsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * tailLines
+     * 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
+
      */
     private Integer tailLines;
 
     /**
-     * sinceSeconds
+     * 返回相对于当前时间之前sinceSeconds之内的日志。
+
      */
     private Integer sinceSeconds;
 
     /**
-     * limitBytes
+     * 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
+
      */
     private Integer limitBytes;
 
@@ -65,7 +69,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
 
 
     /**
-     * get tailLines
+     * get 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
+
      *
      * @return
      */
@@ -74,7 +79,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
     /**
-     * set tailLines
+     * set 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
+
      *
      * @param tailLines
      */
@@ -83,7 +89,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
     /**
-     * get sinceSeconds
+     * get 返回相对于当前时间之前sinceSeconds之内的日志。
+
      *
      * @return
      */
@@ -92,7 +99,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
     /**
-     * set sinceSeconds
+     * set 返回相对于当前时间之前sinceSeconds之内的日志。
+
      *
      * @param sinceSeconds
      */
@@ -101,7 +109,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
     /**
-     * get limitBytes
+     * get 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
+
      *
      * @return
      */
@@ -110,7 +119,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
     /**
-     * set limitBytes
+     * set 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
+
      *
      * @param limitBytes
      */
@@ -156,7 +166,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
 
 
     /**
-     * set tailLines
+     * set 返回日志文件中倒数 tailLines 行，如不指定，默认从容器启动时或 sinceSeconds 指定的时间读取。
+
      *
      * @param tailLines
      */
@@ -166,7 +177,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
     /**
-     * set sinceSeconds
+     * set 返回相对于当前时间之前sinceSeconds之内的日志。
+
      *
      * @param sinceSeconds
      */
@@ -176,7 +188,8 @@ public class GetLogsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
     /**
-     * set limitBytes
+     * set 限制返回的日志文件内容字节数，取值范围 [1-4]KB，最大 4KB.
+
      *
      * @param limitBytes
      */

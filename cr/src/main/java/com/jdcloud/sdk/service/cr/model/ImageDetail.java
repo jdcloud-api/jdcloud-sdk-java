@@ -64,7 +64,7 @@ public class ImageDetail  implements java.io.Serializable {
 docker image命令显示的是解压后的镜像大小，因此会比DescribeImages接口返回的镜像大小会大很多。      
 
      */
-    private Integer imageSizeMB;
+    private Double imageSizeMB;
 
     /**
      * 镜像关联的所有Tag
@@ -179,7 +179,7 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
      *
      * @return
      */
-    public Integer getImageSizeMB() {
+    public Double getImageSizeMB() {
         return imageSizeMB;
     }
 
@@ -190,7 +190,7 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
      *
      * @param imageSizeMB
      */
-    public void setImageSizeMB(Integer imageSizeMB) {
+    public void setImageSizeMB(Double imageSizeMB) {
         this.imageSizeMB = imageSizeMB;
     }
 
@@ -306,7 +306,7 @@ docker image命令显示的是解压后的镜像大小，因此会比DescribeIma
      *
      * @param imageSizeMB
      */
-    public ImageDetail imageSizeMB(Integer imageSizeMB) {
+    public ImageDetail imageSizeMB(Double imageSizeMB) {
         this.imageSizeMB = imageSizeMB;
         return this;
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 容器服务
- * 关于容器服务相前接口
+ * 原生容器
+ * 原生容器相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.nc.model.DescribeContainersResponse;
 
 /**
- * 查询容器列表
+ * 批量查询原生容器的详细信息&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
  */
 class DescribeContainersExecutor extends JdcloudExecutor {
 

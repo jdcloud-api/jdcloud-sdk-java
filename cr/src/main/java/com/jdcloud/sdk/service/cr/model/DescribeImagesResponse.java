@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 配额
+ * Image
  * 容器镜像服务镜像相关接口
  *
  * OpenAPI spec version: v1

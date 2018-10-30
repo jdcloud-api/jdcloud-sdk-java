@@ -50,7 +50,7 @@ public class Registry  implements java.io.Serializable {
     /**
      * regsitry 使用的总存储空间 单位 (MB)
      */
-    private Integer totalSpaceUsedMB;
+    private Double totalSpaceUsedMB;
 
     /**
      * registry 的创建时间
@@ -117,7 +117,7 @@ public class Registry  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getTotalSpaceUsedMB() {
+    public Double getTotalSpaceUsedMB() {
         return totalSpaceUsedMB;
     }
 
@@ -126,7 +126,7 @@ public class Registry  implements java.io.Serializable {
      *
      * @param totalSpaceUsedMB
      */
-    public void setTotalSpaceUsedMB(Integer totalSpaceUsedMB) {
+    public void setTotalSpaceUsedMB(Double totalSpaceUsedMB) {
         this.totalSpaceUsedMB = totalSpaceUsedMB;
     }
 
@@ -184,7 +184,7 @@ public class Registry  implements java.io.Serializable {
      *
      * @param totalSpaceUsedMB
      */
-    public Registry totalSpaceUsedMB(Integer totalSpaceUsedMB) {
+    public Registry totalSpaceUsedMB(Double totalSpaceUsedMB) {
         this.totalSpaceUsedMB = totalSpaceUsedMB;
         return this;
     }
