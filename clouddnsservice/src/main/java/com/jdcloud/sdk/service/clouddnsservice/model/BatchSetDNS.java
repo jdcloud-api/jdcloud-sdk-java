@@ -24,30 +24,18 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
- * rRInfo
+ * batchSetDNS
  */
-public class RRInfo  implements java.io.Serializable {
+public class BatchSetDNS  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 创建者
+     * 解析记录对应的域名的ID。一次请求里面应该是相同的domainId。
      */
-    private String creator;
-
-    /**
-     * 线路名称
-     */
-    private String viewName;
-
-    /**
-     * 域名解析的唯一ID
-     */
-    private Integer id;
+    private Integer domainId;
 
     /**
      * 主机记录
@@ -60,17 +48,22 @@ public class RRInfo  implements java.io.Serializable {
     private String hostValue;
 
     /**
+     * 解析记录的ID, 如果是新增请填0，如果是更新，请使用searchRR接口查询解析记录ID。
+     */
+    private Integer id;
+
+    /**
      * 是否是京东云资源
      */
     private Boolean jcloudRes;
 
     /**
-     * 优先级，只存在于某些解析记录类型
+     * 优先级，只存在于MX, SRV解析记录类型
      */
     private Integer mxPriority;
 
     /**
-     * 端口，只存在于某些解析记录类型
+     * 端口，只存在于SRV解析记录类型
      */
     private Integer port;
 
@@ -80,7 +73,7 @@ public class RRInfo  implements java.io.Serializable {
     private Integer ttl;
 
     /**
-     * 解析记录的类型
+     * 解析的类型
      */
     private String type;
 
@@ -92,71 +85,25 @@ public class RRInfo  implements java.io.Serializable {
     /**
      * 解析线路的ID
      */
-    private List<Integer> viewValue;
-
-    /**
-     * 解析记录的状态
-     */
-    private String resolvingStatus;
-
-    /**
-     * 解析记录更新的时间
-     */
-    private Long updateTime;
+    private Integer viewValue;
 
 
     /**
-     * get 创建者
+     * get 解析记录对应的域名的ID。一次请求里面应该是相同的domainId。
      *
      * @return
      */
-    public String getCreator() {
-        return creator;
+    public Integer getDomainId() {
+        return domainId;
     }
 
     /**
-     * set 创建者
+     * set 解析记录对应的域名的ID。一次请求里面应该是相同的domainId。
      *
-     * @param creator
+     * @param domainId
      */
-    public void setCreator(String creator) {
-        this.creator = creator;
-    }
-
-    /**
-     * get 线路名称
-     *
-     * @return
-     */
-    public String getViewName() {
-        return viewName;
-    }
-
-    /**
-     * set 线路名称
-     *
-     * @param viewName
-     */
-    public void setViewName(String viewName) {
-        this.viewName = viewName;
-    }
-
-    /**
-     * get 域名解析的唯一ID
-     *
-     * @return
-     */
-    public Integer getId() {
-        return id;
-    }
-
-    /**
-     * set 域名解析的唯一ID
-     *
-     * @param id
-     */
-    public void setId(Integer id) {
-        this.id = id;
+    public void setDomainId(Integer domainId) {
+        this.domainId = domainId;
     }
 
     /**
@@ -196,6 +143,24 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
+     * get 解析记录的ID, 如果是新增请填0，如果是更新，请使用searchRR接口查询解析记录ID。
+     *
+     * @return
+     */
+    public Integer getId() {
+        return id;
+    }
+
+    /**
+     * set 解析记录的ID, 如果是新增请填0，如果是更新，请使用searchRR接口查询解析记录ID。
+     *
+     * @param id
+     */
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    /**
      * get 是否是京东云资源
      *
      * @return
@@ -214,7 +179,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 优先级，只存在于某些解析记录类型
+     * get 优先级，只存在于MX, SRV解析记录类型
      *
      * @return
      */
@@ -223,7 +188,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 优先级，只存在于某些解析记录类型
+     * set 优先级，只存在于MX, SRV解析记录类型
      *
      * @param mxPriority
      */
@@ -232,7 +197,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 端口，只存在于某些解析记录类型
+     * get 端口，只存在于SRV解析记录类型
      *
      * @return
      */
@@ -241,7 +206,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 端口，只存在于某些解析记录类型
+     * set 端口，只存在于SRV解析记录类型
      *
      * @param port
      */
@@ -268,7 +233,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 解析记录的类型
+     * get 解析的类型
      *
      * @return
      */
@@ -277,7 +242,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 解析记录的类型
+     * set 解析的类型
      *
      * @param type
      */
@@ -308,7 +273,7 @@ public class RRInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public List<Integer> getViewValue() {
+    public Integer getViewValue() {
         return viewValue;
     }
 
@@ -317,74 +282,18 @@ public class RRInfo  implements java.io.Serializable {
      *
      * @param viewValue
      */
-    public void setViewValue(List<Integer> viewValue) {
+    public void setViewValue(Integer viewValue) {
         this.viewValue = viewValue;
     }
 
-    /**
-     * get 解析记录的状态
-     *
-     * @return
-     */
-    public String getResolvingStatus() {
-        return resolvingStatus;
-    }
 
     /**
-     * set 解析记录的状态
+     * set 解析记录对应的域名的ID。一次请求里面应该是相同的domainId。
      *
-     * @param resolvingStatus
+     * @param domainId
      */
-    public void setResolvingStatus(String resolvingStatus) {
-        this.resolvingStatus = resolvingStatus;
-    }
-
-    /**
-     * get 解析记录更新的时间
-     *
-     * @return
-     */
-    public Long getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * set 解析记录更新的时间
-     *
-     * @param updateTime
-     */
-    public void setUpdateTime(Long updateTime) {
-        this.updateTime = updateTime;
-    }
-
-
-    /**
-     * set 创建者
-     *
-     * @param creator
-     */
-    public RRInfo creator(String creator) {
-        this.creator = creator;
-        return this;
-    }
-
-    /**
-     * set 线路名称
-     *
-     * @param viewName
-     */
-    public RRInfo viewName(String viewName) {
-        this.viewName = viewName;
-        return this;
-    }
-
-    /**
-     * set 域名解析的唯一ID
-     *
-     * @param id
-     */
-    public RRInfo id(Integer id) {
-        this.id = id;
+    public BatchSetDNS domainId(Integer domainId) {
+        this.domainId = domainId;
         return this;
     }
 
@@ -393,7 +302,7 @@ public class RRInfo  implements java.io.Serializable {
      *
      * @param hostRecord
      */
-    public RRInfo hostRecord(String hostRecord) {
+    public BatchSetDNS hostRecord(String hostRecord) {
         this.hostRecord = hostRecord;
         return this;
     }
@@ -403,8 +312,18 @@ public class RRInfo  implements java.io.Serializable {
      *
      * @param hostValue
      */
-    public RRInfo hostValue(String hostValue) {
+    public BatchSetDNS hostValue(String hostValue) {
         this.hostValue = hostValue;
+        return this;
+    }
+
+    /**
+     * set 解析记录的ID, 如果是新增请填0，如果是更新，请使用searchRR接口查询解析记录ID。
+     *
+     * @param id
+     */
+    public BatchSetDNS id(Integer id) {
+        this.id = id;
         return this;
     }
 
@@ -413,27 +332,27 @@ public class RRInfo  implements java.io.Serializable {
      *
      * @param jcloudRes
      */
-    public RRInfo jcloudRes(Boolean jcloudRes) {
+    public BatchSetDNS jcloudRes(Boolean jcloudRes) {
         this.jcloudRes = jcloudRes;
         return this;
     }
 
     /**
-     * set 优先级，只存在于某些解析记录类型
+     * set 优先级，只存在于MX, SRV解析记录类型
      *
      * @param mxPriority
      */
-    public RRInfo mxPriority(Integer mxPriority) {
+    public BatchSetDNS mxPriority(Integer mxPriority) {
         this.mxPriority = mxPriority;
         return this;
     }
 
     /**
-     * set 端口，只存在于某些解析记录类型
+     * set 端口，只存在于SRV解析记录类型
      *
      * @param port
      */
-    public RRInfo port(Integer port) {
+    public BatchSetDNS port(Integer port) {
         this.port = port;
         return this;
     }
@@ -443,17 +362,17 @@ public class RRInfo  implements java.io.Serializable {
      *
      * @param ttl
      */
-    public RRInfo ttl(Integer ttl) {
+    public BatchSetDNS ttl(Integer ttl) {
         this.ttl = ttl;
         return this;
     }
 
     /**
-     * set 解析记录的类型
+     * set 解析的类型
      *
      * @param type
      */
-    public RRInfo type(String type) {
+    public BatchSetDNS type(String type) {
         this.type = type;
         return this;
     }
@@ -463,7 +382,7 @@ public class RRInfo  implements java.io.Serializable {
      *
      * @param weight
      */
-    public RRInfo weight(Integer weight) {
+    public BatchSetDNS weight(Integer weight) {
         this.weight = weight;
         return this;
     }
@@ -473,42 +392,10 @@ public class RRInfo  implements java.io.Serializable {
      *
      * @param viewValue
      */
-    public RRInfo viewValue(List<Integer> viewValue) {
+    public BatchSetDNS viewValue(Integer viewValue) {
         this.viewValue = viewValue;
         return this;
     }
 
-    /**
-     * set 解析记录的状态
-     *
-     * @param resolvingStatus
-     */
-    public RRInfo resolvingStatus(String resolvingStatus) {
-        this.resolvingStatus = resolvingStatus;
-        return this;
-    }
-
-    /**
-     * set 解析记录更新的时间
-     *
-     * @param updateTime
-     */
-    public RRInfo updateTime(Long updateTime) {
-        this.updateTime = updateTime;
-        return this;
-    }
-
-
-    /**
-     * add item to 解析线路的ID
-     *
-     * @param viewValue
-     */
-    public void addViewValue(Integer viewValue) {
-        if (this.viewValue == null) {
-            this.viewValue = new ArrayList<>();
-        }
-        this.viewValue.add(viewValue);
-    }
 
 }

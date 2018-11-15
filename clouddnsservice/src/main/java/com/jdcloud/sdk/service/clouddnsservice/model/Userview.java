@@ -63,7 +63,7 @@ public class Userview  implements java.io.Serializable {
     private String creator;
 
     /**
-     * 创建时间
+     * 创建时间，格式Unix timestamp，时间单位：秒
      */
     private Integer createTime;
 
@@ -73,7 +73,7 @@ public class Userview  implements java.io.Serializable {
     private String updator;
 
     /**
-     * 更新时间
+     * 更新时间，格式Unix timestamp，时间单位：秒
      */
     private Integer updateTime;
 
@@ -187,7 +187,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 创建时间，格式Unix timestamp，时间单位：秒
      *
      * @return
      */
@@ -196,7 +196,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 创建时间，格式Unix timestamp，时间单位：秒
      *
      * @param createTime
      */
@@ -223,7 +223,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * get 更新时间
+     * get 更新时间，格式Unix timestamp，时间单位：秒
      *
      * @return
      */
@@ -232,7 +232,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * set 更新时间
+     * set 更新时间，格式Unix timestamp，时间单位：秒
      *
      * @param updateTime
      */
@@ -302,7 +302,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 创建时间，格式Unix timestamp，时间单位：秒
      *
      * @param createTime
      */
@@ -322,7 +322,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * set 更新时间
+     * set 更新时间，格式Unix timestamp，时间单位：秒
      *
      * @param updateTime
      */
