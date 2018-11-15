@@ -43,14 +43,14 @@ public class DomainInfo  implements java.io.Serializable {
     private String domainName;
 
     /**
-     * 创建时间，格式Unix timestamp
+     * 创建时间，格式Unix timestamp，时间单位：毫秒
      */
-    private Integer createTime;
+    private Long createTime;
 
     /**
-     * 过期时间，格式Unix timestamp
+     * 过期时间，格式Unix timestamp，时间单位：毫秒
      */
-    private Integer expirationDate;
+    private Long expirationDate;
 
     /**
      * 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版
@@ -115,38 +115,38 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间，格式Unix timestamp
+     * get 创建时间，格式Unix timestamp，时间单位：毫秒
      *
      * @return
      */
-    public Integer getCreateTime() {
+    public Long getCreateTime() {
         return createTime;
     }
 
     /**
-     * set 创建时间，格式Unix timestamp
+     * set 创建时间，格式Unix timestamp，时间单位：毫秒
      *
      * @param createTime
      */
-    public void setCreateTime(Integer createTime) {
+    public void setCreateTime(Long createTime) {
         this.createTime = createTime;
     }
 
     /**
-     * get 过期时间，格式Unix timestamp
+     * get 过期时间，格式Unix timestamp，时间单位：毫秒
      *
      * @return
      */
-    public Integer getExpirationDate() {
+    public Long getExpirationDate() {
         return expirationDate;
     }
 
     /**
-     * set 过期时间，格式Unix timestamp
+     * set 过期时间，格式Unix timestamp，时间单位：毫秒
      *
      * @param expirationDate
      */
-    public void setExpirationDate(Integer expirationDate) {
+    public void setExpirationDate(Long expirationDate) {
         this.expirationDate = expirationDate;
     }
 
@@ -262,21 +262,21 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间，格式Unix timestamp
+     * set 创建时间，格式Unix timestamp，时间单位：毫秒
      *
      * @param createTime
      */
-    public DomainInfo createTime(Integer createTime) {
+    public DomainInfo createTime(Long createTime) {
         this.createTime = createTime;
         return this;
     }
 
     /**
-     * set 过期时间，格式Unix timestamp
+     * set 过期时间，格式Unix timestamp，时间单位：毫秒
      *
      * @param expirationDate
      */
-    public DomainInfo expirationDate(Integer expirationDate) {
+    public DomainInfo expirationDate(Long expirationDate) {
         this.expirationDate = expirationDate;
         return this;
     }

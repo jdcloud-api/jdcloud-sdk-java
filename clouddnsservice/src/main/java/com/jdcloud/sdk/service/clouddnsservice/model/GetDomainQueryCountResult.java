@@ -38,12 +38,12 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
     /**
      * time
      */
-    private List<Integer> time;
+    private List<Long> time;
 
     /**
      * traffic
      */
-    private List<Integer> traffic;
+    private List<Long> traffic;
 
 
     /**
@@ -51,7 +51,7 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public List<Integer> getTime() {
+    public List<Long> getTime() {
         return time;
     }
 
@@ -60,7 +60,7 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
      *
      * @param time
      */
-    public void setTime(List<Integer> time) {
+    public void setTime(List<Long> time) {
         this.time = time;
     }
 
@@ -69,7 +69,7 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public List<Integer> getTraffic() {
+    public List<Long> getTraffic() {
         return traffic;
     }
 
@@ -78,7 +78,7 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
      *
      * @param traffic
      */
-    public void setTraffic(List<Integer> traffic) {
+    public void setTraffic(List<Long> traffic) {
         this.traffic = traffic;
     }
 
@@ -88,7 +88,7 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
      *
      * @param time
      */
-    public GetDomainQueryCountResult time(List<Integer> time) {
+    public GetDomainQueryCountResult time(List<Long> time) {
         this.time = time;
         return this;
     }
@@ -98,7 +98,7 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
      *
      * @param traffic
      */
-    public GetDomainQueryCountResult traffic(List<Integer> traffic) {
+    public GetDomainQueryCountResult traffic(List<Long> traffic) {
         this.traffic = traffic;
         return this;
     }
@@ -109,7 +109,7 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
      *
      * @param time
      */
-    public void addTime(Integer time) {
+    public void addTime(Long time) {
         if (this.time == null) {
             this.time = new ArrayList<>();
         }
@@ -121,7 +121,7 @@ public class GetDomainQueryCountResult extends JdcloudResult implements java.io.
      *
      * @param traffic
      */
-    public void addTraffic(Integer traffic) {
+    public void addTraffic(Long traffic) {
         if (this.traffic == null) {
             this.traffic = new ArrayList<>();
         }

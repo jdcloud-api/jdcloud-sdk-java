@@ -25,7 +25,7 @@ public abstract class JdcloudClient {
 
     public final static Feature[] FEATURES = { Feature.AutoCloseSource, Feature.UseBigDecimal,
             Feature.AllowUnQuotedFieldNames, Feature.AllowSingleQuotes, Feature.AllowArbitraryCommas,
-            Feature.AllowArbitraryCommas, Feature.SortFeidFastMatch, Feature.IgnoreNotMatch };
+            Feature.AllowArbitraryCommas, Feature.SortFeidFastMatch, Feature.IgnoreNotMatch, Feature.DisableSpecialKeyDetect};
 
     /**
      * 构造
@@ -73,8 +73,9 @@ public abstract class JdcloudClient {
      * @throws JsonMappingException
      */
     <T> T readValue(InputStream src, Class<T> valueType) throws IOException {
-        if (src == null)
+        if (src == null) {
             return null;
+        }
         return com.alibaba.fastjson.JSON.parseObject(src, valueType, FEATURES);
 
     }
@@ -91,7 +92,7 @@ public abstract class JdcloudClient {
      * @throws JsonMappingException
      */
     <T> T readValue(String text, Class<T> valueType) {
-        return com.alibaba.fastjson.JSON.parseObject(text, valueType);
+        return com.alibaba.fastjson.JSON.parseObject(text, valueType, FEATURES);
     }
 
     String getEndpoint() {

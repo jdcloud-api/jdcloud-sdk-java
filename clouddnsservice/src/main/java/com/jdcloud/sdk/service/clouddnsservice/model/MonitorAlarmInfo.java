@@ -53,9 +53,14 @@ public class MonitorAlarmInfo  implements java.io.Serializable {
     private Integer id;
 
     /**
-     * 故障开始时间
+     * 故障开始时间，格式Unix timestamp，时间单位：毫秒
      */
-    private Integer startTime;
+    private Long startTime;
+
+    /**
+     * 故障结束时间，格式Unix timestamp，时间单位：毫秒
+     */
+    private Long endTime;
 
 
     /**
@@ -131,21 +136,39 @@ public class MonitorAlarmInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 故障开始时间
+     * get 故障开始时间，格式Unix timestamp，时间单位：毫秒
      *
      * @return
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
     /**
-     * set 故障开始时间
+     * set 故障开始时间，格式Unix timestamp，时间单位：毫秒
      *
      * @param startTime
      */
-    public void setStartTime(Integer startTime) {
+    public void setStartTime(Long startTime) {
         this.startTime = startTime;
+    }
+
+    /**
+     * get 故障结束时间，格式Unix timestamp，时间单位：毫秒
+     *
+     * @return
+     */
+    public Long getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 故障结束时间，格式Unix timestamp，时间单位：毫秒
+     *
+     * @param endTime
+     */
+    public void setEndTime(Long endTime) {
+        this.endTime = endTime;
     }
 
 
@@ -190,12 +213,22 @@ public class MonitorAlarmInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 故障开始时间
+     * set 故障开始时间，格式Unix timestamp，时间单位：毫秒
      *
      * @param startTime
      */
-    public MonitorAlarmInfo startTime(Integer startTime) {
+    public MonitorAlarmInfo startTime(Long startTime) {
         this.startTime = startTime;
+        return this;
+    }
+
+    /**
+     * set 故障结束时间，格式Unix timestamp，时间单位：毫秒
+     *
+     * @param endTime
+     */
+    public MonitorAlarmInfo endTime(Long endTime) {
+        this.endTime = endTime;
         return this;
     }
 

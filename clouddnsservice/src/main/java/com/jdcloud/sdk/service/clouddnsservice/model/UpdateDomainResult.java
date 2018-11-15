@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
-import com.jdcloud.sdk.service.clouddnsservice.model.Domain;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -34,40 +33,7 @@ public class UpdateDomainResult extends JdcloudResult implements java.io.Seriali
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 修改后的域名结构
-     */
-    private Domain updateDomain;
 
-
-    /**
-     * get 修改后的域名结构
-     *
-     * @return
-     */
-    public Domain getUpdateDomain() {
-        return updateDomain;
-    }
-
-    /**
-     * set 修改后的域名结构
-     *
-     * @param updateDomain
-     */
-    public void setUpdateDomain(Domain updateDomain) {
-        this.updateDomain = updateDomain;
-    }
-
-
-    /**
-     * set 修改后的域名结构
-     *
-     * @param updateDomain
-     */
-    public UpdateDomainResult updateDomain(Domain updateDomain) {
-        this.updateDomain = updateDomain;
-        return this;
-    }
 
 
 }

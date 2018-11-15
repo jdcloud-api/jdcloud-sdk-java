@@ -38,7 +38,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
     /**
      * time
      */
-    private List<Integer> time;
+    private List<Long> time;
 
     /**
      * 数据序列的单位
@@ -56,7 +56,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
      *
      * @return
      */
-    public List<Integer> getTime() {
+    public List<Long> getTime() {
         return time;
     }
 
@@ -65,7 +65,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
      *
      * @param time
      */
-    public void setTime(List<Integer> time) {
+    public void setTime(List<Long> time) {
         this.time = time;
     }
 
@@ -111,7 +111,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
      *
      * @param time
      */
-    public GetDomainQueryTrafficResult time(List<Integer> time) {
+    public GetDomainQueryTrafficResult time(List<Long> time) {
         this.time = time;
         return this;
     }
@@ -142,7 +142,7 @@ public class GetDomainQueryTrafficResult extends JdcloudResult implements java.i
      *
      * @param time
      */
-    public void addTime(Integer time) {
+    public void addTime(Long time) {
         if (this.time == null) {
             this.time = new ArrayList<>();
         }
