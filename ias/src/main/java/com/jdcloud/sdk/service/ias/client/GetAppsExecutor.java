@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ias.model.GetAppsResponse;
 
 /**
- * 获取主账号下所有应用
+ * 获取账户下所有应用
  */
 class GetAppsExecutor extends JdcloudExecutor {
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ias.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取主账号下所有应用
+ * 获取账户下所有应用
  */
 public class GetAppsResponse extends JdcloudResponse<GetAppsResult> implements java.io.Serializable {
 

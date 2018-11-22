@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取主账号下所有应用
+ * 获取账户下所有应用
  */
 public class GetAppsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * regionId
+     * 地域编码，参考OpenAPI公共说明
      * Required:true
      */
     @Required
@@ -43,7 +43,7 @@ public class GetAppsRequest extends JdcloudRequest implements java.io.Serializab
 
 
     /**
-     * get regionId
+     * get 地域编码，参考OpenAPI公共说明
      *
      * @return
      */
@@ -52,7 +52,7 @@ public class GetAppsRequest extends JdcloudRequest implements java.io.Serializab
     }
 
     /**
-     * set regionId
+     * set 地域编码，参考OpenAPI公共说明
      *
      * @param regionId
      */
@@ -62,7 +62,7 @@ public class GetAppsRequest extends JdcloudRequest implements java.io.Serializab
 
 
     /**
-     * set regionId
+     * set 地域编码，参考OpenAPI公共说明
      *
      * @param regionId
      */

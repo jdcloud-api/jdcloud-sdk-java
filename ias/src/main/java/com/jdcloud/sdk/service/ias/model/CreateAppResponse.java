@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ias.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建app
+ * 创建应用
  */
 public class CreateAppResponse extends JdcloudResponse<CreateAppResult> implements java.io.Serializable {
 

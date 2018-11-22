@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ias.model.CreateAppResponse;
 
 /**
- * 创建app
+ * 创建应用
  */
 class CreateAppExecutor extends JdcloudExecutor {
 

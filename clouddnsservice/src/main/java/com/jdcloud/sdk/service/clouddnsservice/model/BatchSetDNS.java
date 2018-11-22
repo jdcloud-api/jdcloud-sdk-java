@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * batchSetDNS
@@ -34,22 +35,30 @@ public class BatchSetDNS  implements java.io.Serializable {
 
     /**
      * 解析记录对应的域名的ID。一次请求里面应该是相同的domainId。
+     * Required:true
      */
+    @Required
     private Integer domainId;
 
     /**
      * 主机记录
+     * Required:true
      */
+    @Required
     private String hostRecord;
 
     /**
      * 解析记录的值
+     * Required:true
      */
+    @Required
     private String hostValue;
 
     /**
      * 解析记录的ID, 如果是新增请填0，如果是更新，请使用searchRR接口查询解析记录ID。
+     * Required:true
      */
+    @Required
     private Integer id;
 
     /**
@@ -69,12 +78,16 @@ public class BatchSetDNS  implements java.io.Serializable {
 
     /**
      * 解析记录的生存时间
+     * Required:true
      */
+    @Required
     private Integer ttl;
 
     /**
      * 解析的类型
+     * Required:true
      */
+    @Required
     private String type;
 
     /**
@@ -84,7 +97,9 @@ public class BatchSetDNS  implements java.io.Serializable {
 
     /**
      * 解析线路的ID
+     * Required:true
      */
+    @Required
     private Integer viewValue;
 
 
