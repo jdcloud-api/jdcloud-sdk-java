@@ -1,8 +1,11 @@
 # 更新历史 #
-API版本：0.3.3
+API版本：0.3.6
 
 |发布时间|版本号|更新|说明|
 |---|---|---|---|
+|2018-11-15|0.3.6|新增MySQL相关接口|* 新增备份同步服务相关接口<br>* 新增审计相关接口|
+|2018-11-14|0.3.5|新增MySQL相关接口|* 续费欠费启停服务|
+|2018-11-13|0.3.4|部分接口支持PG|* 实例相关接口和账号相关接口支持PG<br>* 新增查询用户配额接口|
 |2018-10-17|0.3.3|数据类型改变|* 慢日志、Binlog返回的数据类型bug修复|
 |2018-10-11|0.3.2|API接口名优化|* getBackupPolicy改为describeBackupPolicy，由post请求改为get请求<br>* setBackupPolicy改为modifyBackupPolicy<br>* getAuditDownloadURL改为describeAuditDownloadURL，由post请求改为get请求<br>* getAuditFiles改为describeAuditFiles，由post请求改为get请求<br>* getOptions改为describeAuditOptions，由post请求改为get请求<br>* setInstanceName改为modifyInstanceName<br>* describeIndexPerformance方法由post请求改为get请求<br>* describeQueryPerformance方法由post请求改为get请求|
 |2018-09-05|0.3.1|新增MySQL相关接口|* 新增查询备份下载链接接口<br>* 新增binglog相关接口<br>* 新增慢日志统计及慢日志明细接口<br>* 新增修改连接模式接口|

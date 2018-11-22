@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ias.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 更新app
+ * 更新应用（只传需要变更的参数，不传的参数不会更新）
  */
 public class UpdateAppResponse extends JdcloudResponse<UpdateAppResult> implements java.io.Serializable {
 

@@ -35,14 +35,14 @@ public class GetAppRequest extends JdcloudRequest implements java.io.Serializabl
     private static final long serialVersionUID = 1L;
 
     /**
-     * regionId
+     * 地域编码，参考OpenAPI公共说明
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * clientId
+     * 应用ID，应用创建时由京东云分配的16位数字ID
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class GetAppRequest extends JdcloudRequest implements java.io.Serializabl
 
 
     /**
-     * get regionId
+     * get 地域编码，参考OpenAPI公共说明
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class GetAppRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set regionId
+     * set 地域编码，参考OpenAPI公共说明
      *
      * @param regionId
      */
@@ -68,7 +68,7 @@ public class GetAppRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * get clientId
+     * get 应用ID，应用创建时由京东云分配的16位数字ID
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class GetAppRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set clientId
+     * set 应用ID，应用创建时由京东云分配的16位数字ID
      *
      * @param clientId
      */
@@ -87,7 +87,7 @@ public class GetAppRequest extends JdcloudRequest implements java.io.Serializabl
 
 
     /**
-     * set regionId
+     * set 地域编码，参考OpenAPI公共说明
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class GetAppRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set clientId
+     * set 应用ID，应用创建时由京东云分配的16位数字ID
      *
      * @param clientId
      */

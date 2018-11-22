@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.datastar.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 根据设备ID查询人群包ID
+ * 根据设备ID获取是否有匹配的人群包
  */
 public class GetPackageIdResult extends JdcloudResult implements java.io.Serializable {
 
@@ -44,7 +44,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     private String message;
 
     /**
-     * Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
+     * Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为品牌编码，表示匹配上，没在返回结果中的设备id，表示没有匹配上
      */
     private String data;
 
@@ -86,7 +86,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
+     * get Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为品牌编码，表示匹配上，没在返回结果中的设备id，表示没有匹配上
      *
      * @return
      */
@@ -95,7 +95,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
+     * set Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为品牌编码，表示匹配上，没在返回结果中的设备id，表示没有匹配上
      *
      * @param data
      */
@@ -125,7 +125,7 @@ public class GetPackageIdResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为人群包Id
+     * set Map&lt;String,String&gt;序列化后的字符串，需要再次转换并使用。Key为deviceId，value为品牌编码，表示匹配上，没在返回结果中的设备id，表示没有匹配上
      *
      * @param data
      */

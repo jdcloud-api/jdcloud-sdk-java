@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.ias.model.ApplicationRes;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取主账号下所有应用
+ * 获取账户下所有应用
  */
 public class GetAppsResult extends JdcloudResult implements java.io.Serializable {
 
