@@ -77,6 +77,11 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     private String subnetId;
 
     /**
+     * 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
+     */
+    private String parameterGroup;
+
+    /**
      * 计费规格，包括计费类型，计费周期等
      * Required:true
      */
@@ -193,6 +198,24 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getParameterGroup() {
+        return parameterGroup;
+    }
+
+    /**
+     * set 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
+     *
+     * @param parameterGroup
+     */
+    public void setParameterGroup(String parameterGroup) {
+        this.parameterGroup = parameterGroup;
+    }
+
+    /**
      * get 计费规格，包括计费类型，计费周期等
      *
      * @return
@@ -268,6 +291,16 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      */
     public RestoredNewDBInstanceSpec subnetId(String subnetId) {
         this.subnetId = subnetId;
+        return this;
+    }
+
+    /**
+     * set 参数组ID, 缺省系统会创建一个默认参数组&lt;br&gt;- 仅支持MySQL
+     *
+     * @param parameterGroup
+     */
+    public RestoredNewDBInstanceSpec parameterGroup(String parameterGroup) {
+        this.parameterGroup = parameterGroup;
         return this;
     }
 

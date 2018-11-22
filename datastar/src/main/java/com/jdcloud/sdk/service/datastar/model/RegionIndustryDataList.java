@@ -35,13 +35,13 @@ public class RegionIndustryDataList  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 区域
+     * 查询结果的数组类型
      */
     private List<RegionIndustryData> dataList;
 
 
     /**
-     * get 区域
+     * get 查询结果的数组类型
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class RegionIndustryDataList  implements java.io.Serializable {
     }
 
     /**
-     * set 区域
+     * set 查询结果的数组类型
      *
      * @param dataList
      */
@@ -60,7 +60,7 @@ public class RegionIndustryDataList  implements java.io.Serializable {
 
 
     /**
-     * set 区域
+     * set 查询结果的数组类型
      *
      * @param dataList
      */
@@ -71,7 +71,7 @@ public class RegionIndustryDataList  implements java.io.Serializable {
 
 
     /**
-     * add item to 区域
+     * add item to 查询结果的数组类型
      *
      * @param dataList
      */

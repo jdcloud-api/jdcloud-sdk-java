@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据设备ID查询人群包ID
+ * 根据设备ID获取是否有匹配的人群包
  */
 public class GetPackageIdRequest extends JdcloudRequest implements java.io.Serializable {
 

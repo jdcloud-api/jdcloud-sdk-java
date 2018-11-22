@@ -57,6 +57,16 @@ public class ImportFile  implements java.io.Serializable {
      */
     private String isLocal;
 
+    /**
+     * 文件状态&lt;br&gt;- 仅支持SQL Server
+     */
+    private String status;
+
+    /**
+     * 导入完成时间,格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+     */
+    private String importTime;
+
 
     /**
      * get 文件名称
@@ -148,6 +158,42 @@ public class ImportFile  implements java.io.Serializable {
         this.isLocal = isLocal;
     }
 
+    /**
+     * get 文件状态&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 文件状态&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 导入完成时间,格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public String getImportTime() {
+        return importTime;
+    }
+
+    /**
+     * set 导入完成时间,格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param importTime
+     */
+    public void setImportTime(String importTime) {
+        this.importTime = importTime;
+    }
+
 
     /**
      * set 文件名称
@@ -196,6 +242,26 @@ public class ImportFile  implements java.io.Serializable {
      */
     public ImportFile isLocal(String isLocal) {
         this.isLocal = isLocal;
+        return this;
+    }
+
+    /**
+     * set 文件状态&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param status
+     */
+    public ImportFile status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 导入完成时间,格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param importTime
+     */
+    public ImportFile importTime(String importTime) {
+        this.importTime = importTime;
         return this;
     }
 

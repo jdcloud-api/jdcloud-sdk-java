@@ -27,130 +27,130 @@ package com.jdcloud.sdk.service.ias.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建app
+ * 创建应用
  */
 public class CreateAppResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用
+     * 应用ID，由京东云分配的16位数字ID
      */
     private String clientId;
 
     /**
-     * 应用名
+     * clientName参数值
      */
     private String clientName;
 
     /**
-     * tokenEndpointAuthMethod
+     * tokenEndpointAuthMethod参数值
      */
     private String tokenEndpointAuthMethod;
 
     /**
-     * grantTypes
+     * grantTypes参数值
      */
     private String grantTypes;
 
     /**
-     * responseTypes
+     * 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
      */
     private String responseTypes;
 
     /**
-     * redirectUris
+     * redirectUris参数值
      */
     private String redirectUris;
 
     /**
-     * clientUri
+     * clientUri参数值
      */
     private String clientUri;
 
     /**
-     * logoUri
+     * logoUri参数值
      */
     private String logoUri;
 
     /**
-     * tosUri
+     * tosUri参数值
      */
     private String tosUri;
 
     /**
-     * policyUri
+     * policyUri参数值
      */
     private String policyUri;
 
     /**
-     * scope
+     * scope参数值
      */
     private String scope;
 
     /**
-     * jwksUri
+     * jwksUri参数值
      */
     private String jwksUri;
 
     /**
-     * jwks
+     * jwks参数值
      */
     private String jwks;
 
     /**
-     * contacts
+     * contacts参数值
      */
     private String contacts;
 
     /**
-     * extension
+     * extension参数值
      */
     private String extension;
 
     /**
-     * accessTokenValiditySeconds
+     * accessTokenValiditySeconds参数值
      */
     private Integer accessTokenValiditySeconds;
 
     /**
-     * refreshTokenValiditySeconds
+     * refreshTokenValiditySeconds参数值
      */
     private Integer refreshTokenValiditySeconds;
 
     /**
-     * multiTenant
+     * multiTenant参数值
      */
     private Boolean multiTenant;
 
     /**
-     * secretUpdateTime
+     * secretUpdateTime参数值
      */
     private Long secretUpdateTime;
 
     /**
-     * updateTime
+     * updateTime参数值
      */
     private Long updateTime;
 
     /**
-     * createTime
+     * createTime参数值
      */
     private Long createTime;
 
     /**
-     * account
+     * 创建应用的账户用户名
      */
     private String account;
 
     /**
-     * userType
+     * userType参数值
      */
     private String userType;
 
 
     /**
-     * get 应用
+     * get 应用ID，由京东云分配的16位数字ID
      *
      * @return
      */
@@ -159,7 +159,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set 应用
+     * set 应用ID，由京东云分配的16位数字ID
      *
      * @param clientId
      */
@@ -168,7 +168,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get 应用名
+     * get clientName参数值
      *
      * @return
      */
@@ -177,7 +177,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set 应用名
+     * set clientName参数值
      *
      * @param clientName
      */
@@ -186,7 +186,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get tokenEndpointAuthMethod
+     * get tokenEndpointAuthMethod参数值
      *
      * @return
      */
@@ -195,7 +195,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set tokenEndpointAuthMethod
+     * set tokenEndpointAuthMethod参数值
      *
      * @param tokenEndpointAuthMethod
      */
@@ -204,7 +204,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get grantTypes
+     * get grantTypes参数值
      *
      * @return
      */
@@ -213,7 +213,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set grantTypes
+     * set grantTypes参数值
      *
      * @param grantTypes
      */
@@ -222,7 +222,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get responseTypes
+     * get 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
      *
      * @return
      */
@@ -231,7 +231,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set responseTypes
+     * set 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
      *
      * @param responseTypes
      */
@@ -240,7 +240,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get redirectUris
+     * get redirectUris参数值
      *
      * @return
      */
@@ -249,7 +249,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set redirectUris
+     * set redirectUris参数值
      *
      * @param redirectUris
      */
@@ -258,7 +258,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get clientUri
+     * get clientUri参数值
      *
      * @return
      */
@@ -267,7 +267,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set clientUri
+     * set clientUri参数值
      *
      * @param clientUri
      */
@@ -276,7 +276,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get logoUri
+     * get logoUri参数值
      *
      * @return
      */
@@ -285,7 +285,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set logoUri
+     * set logoUri参数值
      *
      * @param logoUri
      */
@@ -294,7 +294,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get tosUri
+     * get tosUri参数值
      *
      * @return
      */
@@ -303,7 +303,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set tosUri
+     * set tosUri参数值
      *
      * @param tosUri
      */
@@ -312,7 +312,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get policyUri
+     * get policyUri参数值
      *
      * @return
      */
@@ -321,7 +321,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set policyUri
+     * set policyUri参数值
      *
      * @param policyUri
      */
@@ -330,7 +330,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get scope
+     * get scope参数值
      *
      * @return
      */
@@ -339,7 +339,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set scope
+     * set scope参数值
      *
      * @param scope
      */
@@ -348,7 +348,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get jwksUri
+     * get jwksUri参数值
      *
      * @return
      */
@@ -357,7 +357,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set jwksUri
+     * set jwksUri参数值
      *
      * @param jwksUri
      */
@@ -366,7 +366,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get jwks
+     * get jwks参数值
      *
      * @return
      */
@@ -375,7 +375,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set jwks
+     * set jwks参数值
      *
      * @param jwks
      */
@@ -384,7 +384,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get contacts
+     * get contacts参数值
      *
      * @return
      */
@@ -393,7 +393,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set contacts
+     * set contacts参数值
      *
      * @param contacts
      */
@@ -402,7 +402,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get extension
+     * get extension参数值
      *
      * @return
      */
@@ -411,7 +411,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set extension
+     * set extension参数值
      *
      * @param extension
      */
@@ -420,7 +420,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get accessTokenValiditySeconds
+     * get accessTokenValiditySeconds参数值
      *
      * @return
      */
@@ -429,7 +429,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set accessTokenValiditySeconds
+     * set accessTokenValiditySeconds参数值
      *
      * @param accessTokenValiditySeconds
      */
@@ -438,7 +438,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get refreshTokenValiditySeconds
+     * get refreshTokenValiditySeconds参数值
      *
      * @return
      */
@@ -447,7 +447,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set refreshTokenValiditySeconds
+     * set refreshTokenValiditySeconds参数值
      *
      * @param refreshTokenValiditySeconds
      */
@@ -456,7 +456,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get multiTenant
+     * get multiTenant参数值
      *
      * @return
      */
@@ -465,7 +465,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set multiTenant
+     * set multiTenant参数值
      *
      * @param multiTenant
      */
@@ -474,7 +474,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get secretUpdateTime
+     * get secretUpdateTime参数值
      *
      * @return
      */
@@ -483,7 +483,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set secretUpdateTime
+     * set secretUpdateTime参数值
      *
      * @param secretUpdateTime
      */
@@ -492,7 +492,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get updateTime
+     * get updateTime参数值
      *
      * @return
      */
@@ -501,7 +501,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set updateTime
+     * set updateTime参数值
      *
      * @param updateTime
      */
@@ -510,7 +510,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get createTime
+     * get createTime参数值
      *
      * @return
      */
@@ -519,7 +519,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set createTime
+     * set createTime参数值
      *
      * @param createTime
      */
@@ -528,7 +528,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get account
+     * get 创建应用的账户用户名
      *
      * @return
      */
@@ -537,7 +537,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set account
+     * set 创建应用的账户用户名
      *
      * @param account
      */
@@ -546,7 +546,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get userType
+     * get userType参数值
      *
      * @return
      */
@@ -555,7 +555,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set userType
+     * set userType参数值
      *
      * @param userType
      */
@@ -565,7 +565,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
 
 
     /**
-     * set 应用
+     * set 应用ID，由京东云分配的16位数字ID
      *
      * @param clientId
      */
@@ -575,7 +575,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set 应用名
+     * set clientName参数值
      *
      * @param clientName
      */
@@ -585,7 +585,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set tokenEndpointAuthMethod
+     * set tokenEndpointAuthMethod参数值
      *
      * @param tokenEndpointAuthMethod
      */
@@ -595,7 +595,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set grantTypes
+     * set grantTypes参数值
      *
      * @param grantTypes
      */
@@ -605,7 +605,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set responseTypes
+     * set 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
      *
      * @param responseTypes
      */
@@ -615,7 +615,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set redirectUris
+     * set redirectUris参数值
      *
      * @param redirectUris
      */
@@ -625,7 +625,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set clientUri
+     * set clientUri参数值
      *
      * @param clientUri
      */
@@ -635,7 +635,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set logoUri
+     * set logoUri参数值
      *
      * @param logoUri
      */
@@ -645,7 +645,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set tosUri
+     * set tosUri参数值
      *
      * @param tosUri
      */
@@ -655,7 +655,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set policyUri
+     * set policyUri参数值
      *
      * @param policyUri
      */
@@ -665,7 +665,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set scope
+     * set scope参数值
      *
      * @param scope
      */
@@ -675,7 +675,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set jwksUri
+     * set jwksUri参数值
      *
      * @param jwksUri
      */
@@ -685,7 +685,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set jwks
+     * set jwks参数值
      *
      * @param jwks
      */
@@ -695,7 +695,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set contacts
+     * set contacts参数值
      *
      * @param contacts
      */
@@ -705,7 +705,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set extension
+     * set extension参数值
      *
      * @param extension
      */
@@ -715,7 +715,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set accessTokenValiditySeconds
+     * set accessTokenValiditySeconds参数值
      *
      * @param accessTokenValiditySeconds
      */
@@ -725,7 +725,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set refreshTokenValiditySeconds
+     * set refreshTokenValiditySeconds参数值
      *
      * @param refreshTokenValiditySeconds
      */
@@ -735,7 +735,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set multiTenant
+     * set multiTenant参数值
      *
      * @param multiTenant
      */
@@ -745,7 +745,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set secretUpdateTime
+     * set secretUpdateTime参数值
      *
      * @param secretUpdateTime
      */
@@ -755,7 +755,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set updateTime
+     * set updateTime参数值
      *
      * @param updateTime
      */
@@ -765,7 +765,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set createTime
+     * set createTime参数值
      *
      * @param createTime
      */
@@ -775,7 +775,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set account
+     * set 创建应用的账户用户名
      *
      * @param account
      */
@@ -785,7 +785,7 @@ public class CreateAppResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set userType
+     * set userType参数值
      *
      * @param userType
      */

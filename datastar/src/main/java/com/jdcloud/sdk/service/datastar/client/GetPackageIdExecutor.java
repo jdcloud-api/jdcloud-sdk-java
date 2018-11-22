@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdResponse;
 
 /**
- * 根据设备ID查询人群包ID
+ * 根据设备ID获取是否有匹配的人群包
  */
 class GetPackageIdExecutor extends JdcloudExecutor {
 

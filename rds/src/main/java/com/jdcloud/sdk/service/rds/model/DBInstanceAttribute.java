@@ -140,6 +140,16 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     private Charge charge;
 
+    /**
+     * 高可用集群中主节点的信息&lt;br&gt;- 仅支持SQL Server
+     */
+    private DBInstanceNode primaryNode;
+
+    /**
+     * 高可用集群中从节点的信息&lt;br&gt;- 仅支持SQL Server
+     */
+    private DBInstanceNode secondaryNode;
+
 
     /**
      * get 实例ID
@@ -519,6 +529,42 @@ public class DBInstanceAttribute  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 高可用集群中主节点的信息&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public DBInstanceNode getPrimaryNode() {
+        return primaryNode;
+    }
+
+    /**
+     * set 高可用集群中主节点的信息&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param primaryNode
+     */
+    public void setPrimaryNode(DBInstanceNode primaryNode) {
+        this.primaryNode = primaryNode;
+    }
+
+    /**
+     * get 高可用集群中从节点的信息&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public DBInstanceNode getSecondaryNode() {
+        return secondaryNode;
+    }
+
+    /**
+     * set 高可用集群中从节点的信息&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param secondaryNode
+     */
+    public void setSecondaryNode(DBInstanceNode secondaryNode) {
+        this.secondaryNode = secondaryNode;
+    }
+
 
     /**
      * set 实例ID
@@ -727,6 +773,26 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     public DBInstanceAttribute charge(Charge charge) {
         this.charge = charge;
+        return this;
+    }
+
+    /**
+     * set 高可用集群中主节点的信息&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param primaryNode
+     */
+    public DBInstanceAttribute primaryNode(DBInstanceNode primaryNode) {
+        this.primaryNode = primaryNode;
+        return this;
+    }
+
+    /**
+     * set 高可用集群中从节点的信息&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param secondaryNode
+     */
+    public DBInstanceAttribute secondaryNode(DBInstanceNode secondaryNode) {
+        this.secondaryNode = secondaryNode;
         return this;
     }
 
