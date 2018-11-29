@@ -31,6 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.datastar.model.CreateRequest;
+import com.jdcloud.sdk.service.datastar.model.CreateResponse;
+import com.jdcloud.sdk.service.datastar.client.CreateExecutor;
+import com.jdcloud.sdk.service.datastar.model.GetResultRequest;
+import com.jdcloud.sdk.service.datastar.model.GetResultResponse;
+import com.jdcloud.sdk.service.datastar.client.GetResultExecutor;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdRequest;
 import com.jdcloud.sdk.service.datastar.model.GetPackageIdResponse;
 import com.jdcloud.sdk.service.datastar.client.GetPackageIdExecutor;
@@ -45,7 +51,7 @@ public class DatastarClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.6";
+    public final static String ClientVersion = "1.0.8";
     public final static String DefaultEndpoint = "datastar.cn-south-1.jdcloud-api.com";
     public final static String ServiceName = "datastar";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -88,7 +94,29 @@ public class DatastarClient extends JdcloudClient {
 
 
     /**
-     * 根据设备ID查询人群包ID
+     * 创建多级筛选
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateResponse create(CreateRequest request) throws JdcloudSdkException {
+        return new CreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 多级筛选结果查询接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetResultResponse getResult(GetResultRequest request) throws JdcloudSdkException {
+        return new GetResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据设备ID获取是否有匹配的人群包
      *
      * @param request
      * @return

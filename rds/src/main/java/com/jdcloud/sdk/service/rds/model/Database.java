@@ -50,6 +50,11 @@ public class Database  implements java.io.Serializable {
     private String characterSetName;
 
     /**
+     * 数据库创建时间，格式YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+     */
+    private String createTime;
+
+    /**
      * 该数据库相关账户权限列表
      */
     private List<DBAccessPrivilege> accessPrivilege;
@@ -110,6 +115,24 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
+     * get 数据库创建时间，格式YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 数据库创建时间，格式YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
      * get 该数据库相关账户权限列表
      *
      * @return
@@ -155,6 +178,16 @@ public class Database  implements java.io.Serializable {
      */
     public Database characterSetName(String characterSetName) {
         this.characterSetName = characterSetName;
+        return this;
+    }
+
+    /**
+     * set 数据库创建时间，格式YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param createTime
+     */
+    public Database createTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
 

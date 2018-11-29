@@ -34,7 +34,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用
+     * 应用ID，由京东云分配的16位数字ID
      */
     private String clientId;
 
@@ -44,113 +44,113 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     private String clientName;
 
     /**
-     * tokenEndpointAuthMethod
+     * 客户端认证方式
      */
     private String tokenEndpointAuthMethod;
 
     /**
-     * grantTypes
+     * 支持的OAuth类型
      */
     private String grantTypes;
 
     /**
-     * responseTypes
+     * 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
      */
     private String responseTypes;
 
     /**
-     * redirectUris
+     * 回调地址
      */
     private String redirectUris;
 
     /**
-     * clientUri
+     * 应用介绍地址
      */
     private String clientUri;
 
     /**
-     * logoUri
+     * 应用logo地址
      */
     private String logoUri;
 
     /**
-     * tosUri
+     * 应用服务协议地址
      */
     private String tosUri;
 
     /**
-     * policyUri
+     * 应用隐私条款地址
      */
     private String policyUri;
 
     /**
-     * scope
+     * OAuth scope授权范围
      */
     private String scope;
 
     /**
-     * jwksUri
+     * JWKS地址
      */
     private String jwksUri;
 
     /**
-     * jwks
+     * JWKS
      */
     private String jwks;
 
     /**
-     * contacts
+     * 应用联系信息
      */
     private String contacts;
 
     /**
-     * extension
+     * 应用扩展信息
      */
     private String extension;
 
     /**
-     * accessTokenValiditySeconds
+     * 访问令牌有效期
      */
     private Integer accessTokenValiditySeconds;
 
     /**
-     * refreshTokenValiditySeconds
+     * 刷新令牌有效期
      */
     private Integer refreshTokenValiditySeconds;
 
     /**
-     * multiTenant
+     * 是否为多租户应用
      */
     private Boolean multiTenant;
 
     /**
-     * secretUpdateTime
+     * 应用密码更新时间
      */
     private Long secretUpdateTime;
 
     /**
-     * updateTime
+     * 应用更新时间
      */
     private Long updateTime;
 
     /**
-     * createTime
+     * 应用创建时间
      */
     private Long createTime;
 
     /**
-     * account
+     * 创建应用的账户用户名
      */
     private String account;
 
     /**
-     * userType
+     * 允许登录应用的账号类型
      */
     private String userType;
 
 
     /**
-     * get 应用
+     * get 应用ID，由京东云分配的16位数字ID
      *
      * @return
      */
@@ -159,7 +159,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set 应用
+     * set 应用ID，由京东云分配的16位数字ID
      *
      * @param clientId
      */
@@ -186,7 +186,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get tokenEndpointAuthMethod
+     * get 客户端认证方式
      *
      * @return
      */
@@ -195,7 +195,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set tokenEndpointAuthMethod
+     * set 客户端认证方式
      *
      * @param tokenEndpointAuthMethod
      */
@@ -204,7 +204,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get grantTypes
+     * get 支持的OAuth类型
      *
      * @return
      */
@@ -213,7 +213,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set grantTypes
+     * set 支持的OAuth类型
      *
      * @param grantTypes
      */
@@ -222,7 +222,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get responseTypes
+     * get 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
      *
      * @return
      */
@@ -231,7 +231,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set responseTypes
+     * set 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
      *
      * @param responseTypes
      */
@@ -240,7 +240,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get redirectUris
+     * get 回调地址
      *
      * @return
      */
@@ -249,7 +249,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set redirectUris
+     * set 回调地址
      *
      * @param redirectUris
      */
@@ -258,7 +258,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get clientUri
+     * get 应用介绍地址
      *
      * @return
      */
@@ -267,7 +267,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set clientUri
+     * set 应用介绍地址
      *
      * @param clientUri
      */
@@ -276,7 +276,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get logoUri
+     * get 应用logo地址
      *
      * @return
      */
@@ -285,7 +285,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set logoUri
+     * set 应用logo地址
      *
      * @param logoUri
      */
@@ -294,7 +294,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get tosUri
+     * get 应用服务协议地址
      *
      * @return
      */
@@ -303,7 +303,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set tosUri
+     * set 应用服务协议地址
      *
      * @param tosUri
      */
@@ -312,7 +312,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get policyUri
+     * get 应用隐私条款地址
      *
      * @return
      */
@@ -321,7 +321,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set policyUri
+     * set 应用隐私条款地址
      *
      * @param policyUri
      */
@@ -330,7 +330,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get scope
+     * get OAuth scope授权范围
      *
      * @return
      */
@@ -339,7 +339,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set scope
+     * set OAuth scope授权范围
      *
      * @param scope
      */
@@ -348,7 +348,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get jwksUri
+     * get JWKS地址
      *
      * @return
      */
@@ -357,7 +357,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set jwksUri
+     * set JWKS地址
      *
      * @param jwksUri
      */
@@ -366,7 +366,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get jwks
+     * get JWKS
      *
      * @return
      */
@@ -375,7 +375,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set jwks
+     * set JWKS
      *
      * @param jwks
      */
@@ -384,7 +384,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get contacts
+     * get 应用联系信息
      *
      * @return
      */
@@ -393,7 +393,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set contacts
+     * set 应用联系信息
      *
      * @param contacts
      */
@@ -402,7 +402,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get extension
+     * get 应用扩展信息
      *
      * @return
      */
@@ -411,7 +411,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set extension
+     * set 应用扩展信息
      *
      * @param extension
      */
@@ -420,7 +420,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get accessTokenValiditySeconds
+     * get 访问令牌有效期
      *
      * @return
      */
@@ -429,7 +429,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set accessTokenValiditySeconds
+     * set 访问令牌有效期
      *
      * @param accessTokenValiditySeconds
      */
@@ -438,7 +438,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get refreshTokenValiditySeconds
+     * get 刷新令牌有效期
      *
      * @return
      */
@@ -447,7 +447,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set refreshTokenValiditySeconds
+     * set 刷新令牌有效期
      *
      * @param refreshTokenValiditySeconds
      */
@@ -456,7 +456,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get multiTenant
+     * get 是否为多租户应用
      *
      * @return
      */
@@ -465,7 +465,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set multiTenant
+     * set 是否为多租户应用
      *
      * @param multiTenant
      */
@@ -474,7 +474,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get secretUpdateTime
+     * get 应用密码更新时间
      *
      * @return
      */
@@ -483,7 +483,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set secretUpdateTime
+     * set 应用密码更新时间
      *
      * @param secretUpdateTime
      */
@@ -492,7 +492,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get updateTime
+     * get 应用更新时间
      *
      * @return
      */
@@ -501,7 +501,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set updateTime
+     * set 应用更新时间
      *
      * @param updateTime
      */
@@ -510,7 +510,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get createTime
+     * get 应用创建时间
      *
      * @return
      */
@@ -519,7 +519,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set createTime
+     * set 应用创建时间
      *
      * @param createTime
      */
@@ -528,7 +528,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get account
+     * get 创建应用的账户用户名
      *
      * @return
      */
@@ -537,7 +537,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set account
+     * set 创建应用的账户用户名
      *
      * @param account
      */
@@ -546,7 +546,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get userType
+     * get 允许登录应用的账号类型
      *
      * @return
      */
@@ -555,7 +555,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set userType
+     * set 允许登录应用的账号类型
      *
      * @param userType
      */
@@ -565,7 +565,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
 
 
     /**
-     * set 应用
+     * set 应用ID，由京东云分配的16位数字ID
      *
      * @param clientId
      */
@@ -585,7 +585,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set tokenEndpointAuthMethod
+     * set 客户端认证方式
      *
      * @param tokenEndpointAuthMethod
      */
@@ -595,7 +595,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set grantTypes
+     * set 支持的OAuth类型
      *
      * @param grantTypes
      */
@@ -605,7 +605,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set responseTypes
+     * set 当grantTypes为authorization_code时，responseTypes为code；当grantTypes为implicit时，responseTypes为token
      *
      * @param responseTypes
      */
@@ -615,7 +615,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set redirectUris
+     * set 回调地址
      *
      * @param redirectUris
      */
@@ -625,7 +625,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set clientUri
+     * set 应用介绍地址
      *
      * @param clientUri
      */
@@ -635,7 +635,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set logoUri
+     * set 应用logo地址
      *
      * @param logoUri
      */
@@ -645,7 +645,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set tosUri
+     * set 应用服务协议地址
      *
      * @param tosUri
      */
@@ -655,7 +655,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set policyUri
+     * set 应用隐私条款地址
      *
      * @param policyUri
      */
@@ -665,7 +665,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set scope
+     * set OAuth scope授权范围
      *
      * @param scope
      */
@@ -675,7 +675,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set jwksUri
+     * set JWKS地址
      *
      * @param jwksUri
      */
@@ -685,7 +685,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set jwks
+     * set JWKS
      *
      * @param jwks
      */
@@ -695,7 +695,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set contacts
+     * set 应用联系信息
      *
      * @param contacts
      */
@@ -705,7 +705,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set extension
+     * set 应用扩展信息
      *
      * @param extension
      */
@@ -715,7 +715,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set accessTokenValiditySeconds
+     * set 访问令牌有效期
      *
      * @param accessTokenValiditySeconds
      */
@@ -725,7 +725,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set refreshTokenValiditySeconds
+     * set 刷新令牌有效期
      *
      * @param refreshTokenValiditySeconds
      */
@@ -735,7 +735,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set multiTenant
+     * set 是否为多租户应用
      *
      * @param multiTenant
      */
@@ -745,7 +745,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set secretUpdateTime
+     * set 应用密码更新时间
      *
      * @param secretUpdateTime
      */
@@ -755,7 +755,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set updateTime
+     * set 应用更新时间
      *
      * @param updateTime
      */
@@ -765,7 +765,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set createTime
+     * set 应用创建时间
      *
      * @param createTime
      */
@@ -775,7 +775,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set account
+     * set 创建应用的账户用户名
      *
      * @param account
      */
@@ -785,7 +785,7 @@ public class GetAppResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set userType
+     * set 允许登录应用的账号类型
      *
      * @param userType
      */
