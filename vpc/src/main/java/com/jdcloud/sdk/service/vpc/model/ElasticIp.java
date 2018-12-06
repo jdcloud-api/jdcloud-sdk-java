@@ -83,6 +83,11 @@ public class ElasticIp  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * 弹性ip可用区属性，如果为空，表示全可用区
+     */
+    private String az;
+
 
     /**
      * get 弹性IP的Id
@@ -264,6 +269,24 @@ public class ElasticIp  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+    /**
+     * get 弹性ip可用区属性，如果为空，表示全可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 弹性ip可用区属性，如果为空，表示全可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
 
     /**
      * set 弹性IP的Id
@@ -362,6 +385,16 @@ public class ElasticIp  implements java.io.Serializable {
      */
     public ElasticIp createdTime(String createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+    /**
+     * set 弹性ip可用区属性，如果为空，表示全可用区
+     *
+     * @param az
+     */
+    public ElasticIp az(String az) {
+        this.az = az;
         return this;
     }
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -63,7 +63,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     private String resourceID;
 
     /**
-     * 规则类型, 1表示资源监控，6表示站点监控
+     * 规则类型, 1表示资源监控，6表示站点监控,7表示可用性监控
      */
     private Long ruleType;
 
@@ -175,7 +175,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * get 规则类型, 1表示资源监控，6表示站点监控
+     * get 规则类型, 1表示资源监控，6表示站点监控,7表示可用性监控
      *
      * @return
      */
@@ -184,7 +184,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * set 规则类型, 1表示资源监控，6表示站点监控
+     * set 规则类型, 1表示资源监控，6表示站点监控,7表示可用性监控
      *
      * @param ruleType
      */
@@ -346,7 +346,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * set 规则类型, 1表示资源监控，6表示站点监控
+     * set 规则类型, 1表示资源监控，6表示站点监控,7表示可用性监控
      *
      * @param ruleType
      */

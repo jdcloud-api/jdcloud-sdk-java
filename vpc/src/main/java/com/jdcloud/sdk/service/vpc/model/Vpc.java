@@ -55,7 +55,7 @@ public class Vpc  implements java.io.Serializable {
     private String vpcName;
 
     /**
-     * aclIds
+     * 同一vpc下的acl id 列表
      */
     private List<String> aclIds;
 
@@ -148,7 +148,7 @@ public class Vpc  implements java.io.Serializable {
     }
 
     /**
-     * get aclIds
+     * get 同一vpc下的acl id 列表
      *
      * @return
      */
@@ -157,7 +157,7 @@ public class Vpc  implements java.io.Serializable {
     }
 
     /**
-     * set aclIds
+     * set 同一vpc下的acl id 列表
      *
      * @param aclIds
      */
@@ -261,7 +261,7 @@ public class Vpc  implements java.io.Serializable {
     }
 
     /**
-     * set aclIds
+     * set 同一vpc下的acl id 列表
      *
      * @param aclIds
      */
@@ -302,7 +302,7 @@ public class Vpc  implements java.io.Serializable {
 
 
     /**
-     * add item to aclIds
+     * add item to 同一vpc下的acl id 列表
      *
      * @param aclId
      */

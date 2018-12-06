@@ -37,7 +37,7 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 修改networkAcl属性
+     * networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
      * Required:true
      */
     @Required
@@ -59,7 +59,7 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 修改networkAcl属性
+     * get networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 修改networkAcl属性
+     * set networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
      *
      * @param subnetIds
      */
@@ -114,7 +114,7 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 修改networkAcl属性
+     * set networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
      *
      * @param subnetIds
      */
@@ -145,7 +145,7 @@ public class AssociateNetworkAclRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * add item to 修改networkAcl属性
+     * add item to networkAcl要绑定的子网ID列表, subnet已被其他networkAcl绑定时，自动解绑
      *
      * @param subnetId
      */

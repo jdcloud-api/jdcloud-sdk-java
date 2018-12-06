@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -35,14 +35,14 @@ public class DisableAlarmRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域 Id
+     * region
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 规则id
+     * 规则 id
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DisableAlarmRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 地域 Id
+     * get region
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DisableAlarmRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域 Id
+     * set region
      *
      * @param regionId
      */
@@ -68,7 +68,7 @@ public class DisableAlarmRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 规则id
+     * get 规则 id
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DisableAlarmRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 规则id
+     * set 规则 id
      *
      * @param alarmId
      */
@@ -87,7 +87,7 @@ public class DisableAlarmRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 地域 Id
+     * set region
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class DisableAlarmRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 规则id
+     * set 规则 id
      *
      * @param alarmId
      */

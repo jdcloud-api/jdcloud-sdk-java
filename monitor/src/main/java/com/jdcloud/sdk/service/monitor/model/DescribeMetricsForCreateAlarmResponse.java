@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.monitor.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询可用创建监控规则的指标列表
+ * 查询可用创建监控规则的指标列表,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
  */
 public class DescribeMetricsForCreateAlarmResponse extends JdcloudResponse<DescribeMetricsForCreateAlarmResult> implements java.io.Serializable {
 

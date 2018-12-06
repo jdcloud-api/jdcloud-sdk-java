@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.monitor.model.BatchDescribeMetricDataResponse;
 
 /**
- * 查看某资源多个监控项数据
+ * 查看某资源多个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
  */
 class BatchDescribeMetricDataExecutor extends JdcloudExecutor {
 

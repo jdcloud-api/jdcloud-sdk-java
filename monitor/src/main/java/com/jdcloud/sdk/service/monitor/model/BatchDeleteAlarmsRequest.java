@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -42,7 +42,7 @@ public class BatchDeleteAlarmsRequest extends JdcloudRequest implements java.io.
      * Required:true
      */
     @Required
-    private List<Filter> filter;
+    private List<Filter> filters;
 
     /**
      * 地域 Id
@@ -57,17 +57,17 @@ public class BatchDeleteAlarmsRequest extends JdcloudRequest implements java.io.
      *
      * @return
      */
-    public List<Filter> getFilter() {
-        return filter;
+    public List<Filter> getFilters() {
+        return filters;
     }
 
     /**
      * set filter name为&#39;ids&#39;为要删除的告警id
      *
-     * @param filter
+     * @param filters
      */
-    public void setFilter(List<Filter> filter) {
-        this.filter = filter;
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -92,10 +92,10 @@ public class BatchDeleteAlarmsRequest extends JdcloudRequest implements java.io.
     /**
      * set filter name为&#39;ids&#39;为要删除的告警id
      *
-     * @param filter
+     * @param filters
      */
-    public BatchDeleteAlarmsRequest filter(List<Filter> filter) {
-        this.filter = filter;
+    public BatchDeleteAlarmsRequest filters(List<Filter> filters) {
+        this.filters = filters;
         return this;
     }
 
@@ -116,10 +116,10 @@ public class BatchDeleteAlarmsRequest extends JdcloudRequest implements java.io.
      * @param filter
      */
     public void addFilter(Filter filter) {
-        if (this.filter == null) {
-            this.filter = new ArrayList<>();
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
         }
-        this.filter.add(filter);
+        this.filters.add(filter);
     }
 
 }
