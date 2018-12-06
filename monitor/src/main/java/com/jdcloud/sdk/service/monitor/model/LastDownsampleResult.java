@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.monitor.model.LastDownsampleRespItem;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看某资源的最后一个点
+ * 查看某资源的最后一个点,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
  */
 public class LastDownsampleResult extends JdcloudResult implements java.io.Serializable {
 

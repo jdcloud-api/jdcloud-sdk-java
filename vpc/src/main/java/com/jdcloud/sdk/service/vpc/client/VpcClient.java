@@ -166,6 +166,9 @@ import com.jdcloud.sdk.service.vpc.client.AssociateRouteTableExecutor;
 import com.jdcloud.sdk.service.vpc.model.CreateNetworkSecurityGroupRequest;
 import com.jdcloud.sdk.service.vpc.model.CreateNetworkSecurityGroupResponse;
 import com.jdcloud.sdk.service.vpc.client.CreateNetworkSecurityGroupExecutor;
+import com.jdcloud.sdk.service.vpc.model.ModifyElasticIpRequest;
+import com.jdcloud.sdk.service.vpc.model.ModifyElasticIpResponse;
+import com.jdcloud.sdk.service.vpc.client.ModifyElasticIpExecutor;
 import com.jdcloud.sdk.service.vpc.model.DeleteNetworkSecurityGroupRequest;
 import com.jdcloud.sdk.service.vpc.model.DeleteNetworkSecurityGroupResponse;
 import com.jdcloud.sdk.service.vpc.client.DeleteNetworkSecurityGroupExecutor;
@@ -210,7 +213,7 @@ public class VpcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.6";
+    public final static String ClientVersion = "1.0.8";
     public final static String DefaultEndpoint = "vpc.jdcloud-api.com";
     public final static String ServiceName = "vpc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -745,6 +748,17 @@ public class VpcClient extends JdcloudClient {
      */
     public CreateNetworkSecurityGroupResponse createNetworkSecurityGroup(CreateNetworkSecurityGroupRequest request) throws JdcloudSdkException {
         return new CreateNetworkSecurityGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改弹性IP
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyElasticIpResponse modifyElasticIp(ModifyElasticIpRequest request) throws JdcloudSdkException {
+        return new ModifyElasticIpExecutor().client(this).execute(request);
     }
 
     /**

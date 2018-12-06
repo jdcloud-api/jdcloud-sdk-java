@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -24,9 +24,8 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.monitor.model.CreateAlarmParam;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -37,59 +36,18 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
-     */
-    private List<String> contactGroups;
-
-    /**
-     * 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
-     */
-    private List<String> contactPersons;
-
-    /**
-     * 取样频次
-     */
-    private String downSample;
-
-    /**
-     * 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * 幂等性校验参数,最长36位
      * Required:true
      */
     @Required
-    private String metric;
+    private String clientToken;
 
     /**
-     * 通知周期 单位：小时
-     */
-    private Long noticePeriod;
-
-    /**
-     * 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
+     * createAlarmSpec
      * Required:true
      */
     @Required
-    private List<String> resourceIds;
-
-    /**
-     * 产品名称
-     * Required:true
-     */
-    @Required
-    private String serviceCode;
-
-    /**
-     * 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-     * Required:true
-     */
-    @Required
-    private Double threshold;
-
-    /**
-     * 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-     * Required:true
-     */
-    @Required
-    private Long times;
+    private CreateAlarmParam createAlarmSpec;
 
     /**
      * 地域 Id
@@ -100,165 +58,39 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
+     * get 幂等性校验参数,最长36位
      *
      * @return
      */
-    public List<String> getContactGroups() {
-        return contactGroups;
+    public String getClientToken() {
+        return clientToken;
     }
 
     /**
-     * set 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
+     * set 幂等性校验参数,最长36位
      *
-     * @param contactGroups
+     * @param clientToken
      */
-    public void setContactGroups(List<String> contactGroups) {
-        this.contactGroups = contactGroups;
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
     }
 
     /**
-     * get 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
-     *
-     * @return
-     */
-    public List<String> getContactPersons() {
-        return contactPersons;
-    }
-
-    /**
-     * set 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
-     *
-     * @param contactPersons
-     */
-    public void setContactPersons(List<String> contactPersons) {
-        this.contactPersons = contactPersons;
-    }
-
-    /**
-     * get 取样频次
+     * get createAlarmSpec
      *
      * @return
      */
-    public String getDownSample() {
-        return downSample;
+    public CreateAlarmParam getCreateAlarmSpec() {
+        return createAlarmSpec;
     }
 
     /**
-     * set 取样频次
+     * set createAlarmSpec
      *
-     * @param downSample
+     * @param createAlarmSpec
      */
-    public void setDownSample(String downSample) {
-        this.downSample = downSample;
-    }
-
-    /**
-     * get 根据产品线查询可用监控项列表 接口 返回的Metric字段
-     *
-     * @return
-     */
-    public String getMetric() {
-        return metric;
-    }
-
-    /**
-     * set 根据产品线查询可用监控项列表 接口 返回的Metric字段
-     *
-     * @param metric
-     */
-    public void setMetric(String metric) {
-        this.metric = metric;
-    }
-
-    /**
-     * get 通知周期 单位：小时
-     *
-     * @return
-     */
-    public Long getNoticePeriod() {
-        return noticePeriod;
-    }
-
-    /**
-     * set 通知周期 单位：小时
-     *
-     * @param noticePeriod
-     */
-    public void setNoticePeriod(Long noticePeriod) {
-        this.noticePeriod = noticePeriod;
-    }
-
-    /**
-     * get 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     *
-     * @return
-     */
-    public List<String> getResourceIds() {
-        return resourceIds;
-    }
-
-    /**
-     * set 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     *
-     * @param resourceIds
-     */
-    public void setResourceIds(List<String> resourceIds) {
-        this.resourceIds = resourceIds;
-    }
-
-    /**
-     * get 产品名称
-     *
-     * @return
-     */
-    public String getServiceCode() {
-        return serviceCode;
-    }
-
-    /**
-     * set 产品名称
-     *
-     * @param serviceCode
-     */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-    }
-
-    /**
-     * get 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-     *
-     * @return
-     */
-    public Double getThreshold() {
-        return threshold;
-    }
-
-    /**
-     * set 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-     *
-     * @param threshold
-     */
-    public void setThreshold(Double threshold) {
-        this.threshold = threshold;
-    }
-
-    /**
-     * get 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-     *
-     * @return
-     */
-    public Long getTimes() {
-        return times;
-    }
-
-    /**
-     * set 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-     *
-     * @param times
-     */
-    public void setTimes(Long times) {
-        this.times = times;
+    public void setCreateAlarmSpec(CreateAlarmParam createAlarmSpec) {
+        this.createAlarmSpec = createAlarmSpec;
     }
 
     /**
@@ -281,92 +113,22 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
+     * set 幂等性校验参数,最长36位
      *
-     * @param contactGroups
+     * @param clientToken
      */
-    public CreateAlarmRequest contactGroups(List<String> contactGroups) {
-        this.contactGroups = contactGroups;
+    public CreateAlarmRequest clientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
 
     /**
-     * set 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
+     * set createAlarmSpec
      *
-     * @param contactPersons
+     * @param createAlarmSpec
      */
-    public CreateAlarmRequest contactPersons(List<String> contactPersons) {
-        this.contactPersons = contactPersons;
-        return this;
-    }
-
-    /**
-     * set 取样频次
-     *
-     * @param downSample
-     */
-    public CreateAlarmRequest downSample(String downSample) {
-        this.downSample = downSample;
-        return this;
-    }
-
-    /**
-     * set 根据产品线查询可用监控项列表 接口 返回的Metric字段
-     *
-     * @param metric
-     */
-    public CreateAlarmRequest metric(String metric) {
-        this.metric = metric;
-        return this;
-    }
-
-    /**
-     * set 通知周期 单位：小时
-     *
-     * @param noticePeriod
-     */
-    public CreateAlarmRequest noticePeriod(Long noticePeriod) {
-        this.noticePeriod = noticePeriod;
-        return this;
-    }
-
-    /**
-     * set 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     *
-     * @param resourceIds
-     */
-    public CreateAlarmRequest resourceIds(List<String> resourceIds) {
-        this.resourceIds = resourceIds;
-        return this;
-    }
-
-    /**
-     * set 产品名称
-     *
-     * @param serviceCode
-     */
-    public CreateAlarmRequest serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-        return this;
-    }
-
-    /**
-     * set 查询指标的周期，单位为分钟,目前支持的取值：2，5，15，30，60
-     *
-     * @param threshold
-     */
-    public CreateAlarmRequest threshold(Double threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-
-    /**
-     * set 连续探测几次都满足阈值条件时报警，可选值:1,2,3,5
-     *
-     * @param times
-     */
-    public CreateAlarmRequest times(Long times) {
-        this.times = times;
+    public CreateAlarmRequest createAlarmSpec(CreateAlarmParam createAlarmSpec) {
+        this.createAlarmSpec = createAlarmSpec;
         return this;
     }
 
@@ -380,41 +142,5 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
-
-    /**
-     * add item to 报警规则通知的联系组，必须在控制台上已创建，例如&quot; [&#39;联系组1&#39;,&#39;联系组2&#39;]&quot;
-     *
-     * @param contactGroup
-     */
-    public void addContactGroup(String contactGroup) {
-        if (this.contactGroups == null) {
-            this.contactGroups = new ArrayList<>();
-        }
-        this.contactGroups.add(contactGroup);
-    }
-
-    /**
-     * add item to 报警规则通知的联系人，必须在控制台上已创建，例如 [“联系人1”,”联系人2”]
-     *
-     * @param contactPerson
-     */
-    public void addContactPerson(String contactPerson) {
-        if (this.contactPersons == null) {
-            this.contactPersons = new ArrayList<>();
-        }
-        this.contactPersons.add(contactPerson);
-    }
-
-    /**
-     * add item to 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
-     *
-     * @param resourceId
-     */
-    public void addResourceId(String resourceId) {
-        if (this.resourceIds == null) {
-            this.resourceIds = new ArrayList<>();
-        }
-        this.resourceIds.add(resourceId);
-    }
 
 }

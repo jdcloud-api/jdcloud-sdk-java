@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.monitor.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看某资源的最后一个点
+ * 查看某资源的最后一个点,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
  */
 public class LastDownsampleResponse extends JdcloudResponse<LastDownsampleResult> implements java.io.Serializable {
 

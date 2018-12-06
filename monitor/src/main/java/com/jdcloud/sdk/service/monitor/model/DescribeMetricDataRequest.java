@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.monitor.model.TagFilter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看某资源的监控数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+ * 查看某资源多个监控项数据，metric介绍1：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
  */
 public class DescribeMetricDataRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -50,6 +50,11 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      */
     @Required
     private String resourceId;
+
+    /**
+     * 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     */
+    private String aggrType;
 
     /**
      * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
@@ -125,6 +130,24 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      */
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+    }
+
+    /**
+     * get 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     *
+     * @return
+     */
+    public String getAggrType() {
+        return aggrType;
+    }
+
+    /**
+     * set 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     *
+     * @param aggrType
+     */
+    public void setAggrType(String aggrType) {
+        this.aggrType = aggrType;
     }
 
     /**
@@ -271,6 +294,16 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      */
     public DescribeMetricDataRequest resourceId(String resourceId) {
         this.resourceId = resourceId;
+        return this;
+    }
+
+    /**
+     * set 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     *
+     * @param aggrType
+     */
+    public DescribeMetricDataRequest aggrType(String aggrType) {
+        this.aggrType = aggrType;
         return this;
     }
 

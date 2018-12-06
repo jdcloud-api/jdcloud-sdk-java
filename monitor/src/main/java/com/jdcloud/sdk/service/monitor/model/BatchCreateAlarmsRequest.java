@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -54,6 +54,11 @@ public class BatchCreateAlarmsRequest extends JdcloudRequest implements java.io.
      * 地域
      */
     private String datacenter;
+
+    /**
+     * 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     */
+    private Long enabled;
 
     /**
      * 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
@@ -176,6 +181,24 @@ public class BatchCreateAlarmsRequest extends JdcloudRequest implements java.io.
      */
     public void setDatacenter(String datacenter) {
         this.datacenter = datacenter;
+    }
+
+    /**
+     * get 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     *
+     * @return
+     */
+    public Long getEnabled() {
+        return enabled;
+    }
+
+    /**
+     * set 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     *
+     * @param enabled
+     */
+    public void setEnabled(Long enabled) {
+        this.enabled = enabled;
     }
 
     /**
@@ -422,6 +445,16 @@ public class BatchCreateAlarmsRequest extends JdcloudRequest implements java.io.
      */
     public BatchCreateAlarmsRequest datacenter(String datacenter) {
         this.datacenter = datacenter;
+        return this;
+    }
+
+    /**
+     * set 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     *
+     * @param enabled
+     */
+    public BatchCreateAlarmsRequest enabled(Long enabled) {
+        this.enabled = enabled;
         return this;
     }
 

@@ -53,6 +53,11 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     private String datacenter;
 
     /**
+     * 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     */
+    private Long enabled;
+
+    /**
      * 报警规则对应实例列表，每次最多100个，例如&quot;[&#39;resourceId1&#39;,&#39;resourceId2&#39;]&quot;
      * Required:true
      */
@@ -166,6 +171,24 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
      */
     public void setDatacenter(String datacenter) {
         this.datacenter = datacenter;
+    }
+
+    /**
+     * get 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     *
+     * @return
+     */
+    public Long getEnabled() {
+        return enabled;
+    }
+
+    /**
+     * set 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     *
+     * @param enabled
+     */
+    public void setEnabled(Long enabled) {
+        this.enabled = enabled;
     }
 
     /**
@@ -394,6 +417,16 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
      */
     public BatchCreateAlarmsSpec datacenter(String datacenter) {
         this.datacenter = datacenter;
+        return this;
+    }
+
+    /**
+     * set 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     *
+     * @param enabled
+     */
+    public BatchCreateAlarmsSpec enabled(Long enabled) {
+        this.enabled = enabled;
         return this;
     }
 

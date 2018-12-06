@@ -75,6 +75,11 @@ public class MetricDataCm  implements java.io.Serializable {
     @Required
     private Object values;
 
+    /**
+     * 数据的单位，长度不超过64字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+     */
+    private String unit;
+
 
     /**
      * get 命名空间 ，长度不超过255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
@@ -184,6 +189,24 @@ public class MetricDataCm  implements java.io.Serializable {
         this.values = values;
     }
 
+    /**
+     * get 数据的单位，长度不超过64字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+     *
+     * @return
+     */
+    public String getUnit() {
+        return unit;
+    }
+
+    /**
+     * set 数据的单位，长度不超过64字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+     *
+     * @param unit
+     */
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
 
     /**
      * set 命名空间 ，长度不超过255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
@@ -242,6 +265,16 @@ public class MetricDataCm  implements java.io.Serializable {
      */
     public MetricDataCm values(Object values) {
         this.values = values;
+        return this;
+    }
+
+    /**
+     * set 数据的单位，长度不超过64字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+     *
+     * @param unit
+     */
+    public MetricDataCm unit(String unit) {
+        this.unit = unit;
         return this;
     }
 

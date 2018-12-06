@@ -37,7 +37,7 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
     private static final long serialVersionUID = 1L;
 
     /**
-     * 修改networkAcl属性
+     * networkAcl规则ID列表
      * Required:true
      */
     @Required
@@ -59,7 +59,7 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
 
 
     /**
-     * get 修改networkAcl属性
+     * get networkAcl规则ID列表
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 修改networkAcl属性
+     * set networkAcl规则ID列表
      *
      * @param ruleIds
      */
@@ -114,7 +114,7 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
 
 
     /**
-     * set 修改networkAcl属性
+     * set networkAcl规则ID列表
      *
      * @param ruleIds
      */
@@ -145,7 +145,7 @@ public class RemoveNetworkAclRulesRequest extends JdcloudRequest implements java
 
 
     /**
-     * add item to 修改networkAcl属性
+     * add item to networkAcl规则ID列表
      *
      * @param ruleId
      */

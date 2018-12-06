@@ -32,7 +32,7 @@ import com.jdcloud.sdk.service.monitor.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看某资源多个监控项数据
+ * 查看某资源多个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
  */
 public class BatchDescribeMetricDataRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -51,6 +51,11 @@ public class BatchDescribeMetricDataRequest extends JdcloudRequest implements ja
      */
     @Required
     private String resourceId;
+
+    /**
+     * 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     */
+    private String aggrType;
 
     /**
      * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
@@ -78,7 +83,12 @@ public class BatchDescribeMetricDataRequest extends JdcloudRequest implements ja
     private Boolean groupBy;
 
     /**
-     * 自定义标签
+     * 是否跨资源查询，默认为false。当该字段为false时，取resourceId字段进行查询；当该子弹为true时，忽略resourceId字段，从tags中取resourceId作为实际的多资源id处理。
+     */
+    private Boolean multiResources;
+
+    /**
+     * 自定义过滤标签，查询时必须在filters中指定要查询的metric，支持多个metric。如：  name&#x3D;&#39;metric&#39;,values&#x3D;[&quot;metric1&quot;,&quot;metric2&quot;]
      */
     private List<Filter> filters;
 
@@ -124,6 +134,24 @@ public class BatchDescribeMetricDataRequest extends JdcloudRequest implements ja
      */
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+    }
+
+    /**
+     * get 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     *
+     * @return
+     */
+    public String getAggrType() {
+        return aggrType;
+    }
+
+    /**
+     * set 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     *
+     * @param aggrType
+     */
+    public void setAggrType(String aggrType) {
+        this.aggrType = aggrType;
     }
 
     /**
@@ -217,7 +245,25 @@ public class BatchDescribeMetricDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 自定义标签
+     * get 是否跨资源查询，默认为false。当该字段为false时，取resourceId字段进行查询；当该子弹为true时，忽略resourceId字段，从tags中取resourceId作为实际的多资源id处理。
+     *
+     * @return
+     */
+    public Boolean getMultiResources() {
+        return multiResources;
+    }
+
+    /**
+     * set 是否跨资源查询，默认为false。当该字段为false时，取resourceId字段进行查询；当该子弹为true时，忽略resourceId字段，从tags中取resourceId作为实际的多资源id处理。
+     *
+     * @param multiResources
+     */
+    public void setMultiResources(Boolean multiResources) {
+        this.multiResources = multiResources;
+    }
+
+    /**
+     * get 自定义过滤标签，查询时必须在filters中指定要查询的metric，支持多个metric。如：  name&#x3D;&#39;metric&#39;,values&#x3D;[&quot;metric1&quot;,&quot;metric2&quot;]
      *
      * @return
      */
@@ -226,7 +272,7 @@ public class BatchDescribeMetricDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 自定义标签
+     * set 自定义过滤标签，查询时必须在filters中指定要查询的metric，支持多个metric。如：  name&#x3D;&#39;metric&#39;,values&#x3D;[&quot;metric1&quot;,&quot;metric2&quot;]
      *
      * @param filters
      */
@@ -270,6 +316,16 @@ public class BatchDescribeMetricDataRequest extends JdcloudRequest implements ja
      */
     public BatchDescribeMetricDataRequest resourceId(String resourceId) {
         this.resourceId = resourceId;
+        return this;
+    }
+
+    /**
+     * set 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     *
+     * @param aggrType
+     */
+    public BatchDescribeMetricDataRequest aggrType(String aggrType) {
+        this.aggrType = aggrType;
         return this;
     }
 
@@ -324,7 +380,17 @@ public class BatchDescribeMetricDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 自定义标签
+     * set 是否跨资源查询，默认为false。当该字段为false时，取resourceId字段进行查询；当该子弹为true时，忽略resourceId字段，从tags中取resourceId作为实际的多资源id处理。
+     *
+     * @param multiResources
+     */
+    public BatchDescribeMetricDataRequest multiResources(Boolean multiResources) {
+        this.multiResources = multiResources;
+        return this;
+    }
+
+    /**
+     * set 自定义过滤标签，查询时必须在filters中指定要查询的metric，支持多个metric。如：  name&#x3D;&#39;metric&#39;,values&#x3D;[&quot;metric1&quot;,&quot;metric2&quot;]
      *
      * @param filters
      */
@@ -357,7 +423,7 @@ public class BatchDescribeMetricDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * add item to 自定义标签
+     * add item to 自定义过滤标签，查询时必须在filters中指定要查询的metric，支持多个metric。如：  name&#x3D;&#39;metric&#39;,values&#x3D;[&quot;metric1&quot;,&quot;metric2&quot;]
      *
      * @param filter
      */
