@@ -57,6 +57,11 @@ public class Domain  implements java.io.Serializable {
      */
     private Integer packId;
 
+    /**
+     * 域名的锁定状态，0:未锁定， 1:已锁定
+     */
+    private Integer lockStatus;
+
 
     /**
      * get 域名的唯一ID
@@ -148,6 +153,24 @@ public class Domain  implements java.io.Serializable {
         this.packId = packId;
     }
 
+    /**
+     * get 域名的锁定状态，0:未锁定， 1:已锁定
+     *
+     * @return
+     */
+    public Integer getLockStatus() {
+        return lockStatus;
+    }
+
+    /**
+     * set 域名的锁定状态，0:未锁定， 1:已锁定
+     *
+     * @param lockStatus
+     */
+    public void setLockStatus(Integer lockStatus) {
+        this.lockStatus = lockStatus;
+    }
+
 
     /**
      * set 域名的唯一ID
@@ -196,6 +219,16 @@ public class Domain  implements java.io.Serializable {
      */
     public Domain packId(Integer packId) {
         this.packId = packId;
+        return this;
+    }
+
+    /**
+     * set 域名的锁定状态，0:未锁定， 1:已锁定
+     *
+     * @param lockStatus
+     */
+    public Domain lockStatus(Integer lockStatus) {
+        this.lockStatus = lockStatus;
         return this;
     }
 

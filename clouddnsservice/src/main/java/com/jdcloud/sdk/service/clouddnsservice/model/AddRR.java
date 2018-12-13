@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * addRR
@@ -34,12 +35,16 @@ public class AddRR  implements java.io.Serializable {
 
     /**
      * 主机记录
+     * Required:true
      */
+    @Required
     private String hostRecord;
 
     /**
      * 解析记录的值
+     * Required:true
      */
+    @Required
     private String hostValue;
 
     /**
@@ -59,12 +64,16 @@ public class AddRR  implements java.io.Serializable {
 
     /**
      * 解析记录的生存时间
+     * Required:true
      */
+    @Required
     private Integer ttl;
 
     /**
      * 解析的类型
+     * Required:true
      */
+    @Required
     private String type;
 
     /**
@@ -74,7 +83,9 @@ public class AddRR  implements java.io.Serializable {
 
     /**
      * 解析线路的ID
+     * Required:true
      */
+    @Required
     private Integer viewValue;
 
 

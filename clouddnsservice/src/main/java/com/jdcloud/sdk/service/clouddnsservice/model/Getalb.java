@@ -40,7 +40,7 @@ true: 按权重分配负载&lt;br&gt;
 false: 均等负载
 
      */
-    private Boolean balance;
+    private Boolean isBalance;
 
     /**
      * 主机记录
@@ -76,8 +76,8 @@ false: 均等负载
      *
      * @return
      */
-    public Boolean getBalance() {
-        return balance;
+    public Boolean getIsBalance() {
+        return isBalance;
     }
 
     /**
@@ -86,10 +86,10 @@ true: 按权重分配负载&lt;br&gt;
 false: 均等负载
 
      *
-     * @param balance
+     * @param isBalance
      */
-    public void setBalance(Boolean balance) {
-        this.balance = balance;
+    public void setIsBalance(Boolean isBalance) {
+        this.isBalance = isBalance;
     }
 
     /**
@@ -189,10 +189,10 @@ true: 按权重分配负载&lt;br&gt;
 false: 均等负载
 
      *
-     * @param balance
+     * @param isBalance
      */
-    public Getalb balance(Boolean balance) {
-        this.balance = balance;
+    public Getalb isBalance(Boolean isBalance) {
+        this.isBalance = isBalance;
         return this;
     }
 

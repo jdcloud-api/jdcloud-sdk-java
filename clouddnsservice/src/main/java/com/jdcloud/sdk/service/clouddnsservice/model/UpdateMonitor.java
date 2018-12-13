@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * updateMonitor
@@ -34,57 +35,79 @@ public class UpdateMonitor  implements java.io.Serializable {
 
     /**
      * 连续几次触发报警
+     * Required:true
      */
+    @Required
     private Integer alarmLimit;
 
     /**
      * 监控项ID
+     * Required:true
      */
+    @Required
     private Integer id;
 
     /**
      * 备用地址1
+     * Required:true
      */
+    @Required
     private String ipBackup01;
 
     /**
      * 备用地址2
+     * Required:true
      */
+    @Required
     private String ipBackup02;
 
     /**
      * 监控状况 开启监控 2，暂停监控 4
+     * Required:true
      */
+    @Required
     private Integer monitorEnable;
 
     /**
      * 监控频率，单位秒
+     * Required:true
      */
+    @Required
     private Integer monitorFreq;
 
     /**
      * 监控端口
+     * Required:true
      */
+    @Required
     private Integer monitorPort;
 
     /**
      * 不做任何修改0，强制暂停解析记录1，自动切换到备用地址2
+     * Required:true
      */
+    @Required
     private Integer monitorRule;
 
     /**
      * 监控路径
+     * Required:true
      */
+    @Required
     private String monitorUri;
 
     /**
      * 不发送邮件0， 发送邮件1
+     * Required:true
      */
+    @Required
     private Integer notifyEmailEnable;
 
     /**
      * 不发送通知栏 0， 发送通知栏 1
+     * Required:true
      */
+    @Required
     private Integer notifyMsgBarEnable;
 
     /**
@@ -94,17 +117,23 @@ public class UpdateMonitor  implements java.io.Serializable {
 
     /**
      * https 0，https 1
+     * Required:true
      */
+    @Required
     private Integer protocol;
 
     /**
      * 0自动恢复 1手动恢复
+     * Required:true
      */
+    @Required
     private Integer stopRecoverRule;
 
     /**
      * 0自动恢复至主host 1手动恢复至主host
+     * Required:true
      */
+    @Required
     private Integer switchRecoverRule;
 
 
