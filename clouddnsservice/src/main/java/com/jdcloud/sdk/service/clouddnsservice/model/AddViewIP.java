@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.clouddnsservice.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * addViewIP
@@ -36,24 +37,32 @@ public class AddViewIP  implements java.io.Serializable {
 
     /**
      * 域名ID
+     * Required:true
      */
+    @Required
     private Integer domainId;
 
     /**
      * 自定义线路ID
+     * Required:true
      */
+    @Required
     private Integer viewId;
 
     /**
      * 自定义线路名称, 最多64个字符
+     * Required:true
      */
+    @Required
     private String viewName;
 
     /**
      * 此线路需要添加的ip段。&lt;br&gt;
 ip段支持1.2.3.4-5.6.7.8和1.2.3.4/16两种格式。
 
+     * Required:true
      */
+    @Required
     private List<String> ipRanges;
 
 

@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * importDNS
@@ -34,17 +35,23 @@ public class ImportDNS  implements java.io.Serializable {
 
     /**
      * 解析记录对应的域名的ID
+     * Required:true
      */
+    @Required
     private Integer domainId;
 
     /**
      * 主机记录
+     * Required:true
      */
+    @Required
     private String hostRecord;
 
     /**
      * 解析记录的值
+     * Required:true
      */
+    @Required
     private String hostValue;
 
     /**
@@ -69,12 +76,16 @@ public class ImportDNS  implements java.io.Serializable {
 
     /**
      * 解析记录的生存时间
+     * Required:true
      */
+    @Required
     private Integer ttl;
 
     /**
      * 解析的类型
+     * Required:true
      */
+    @Required
     private String type;
 
     /**
@@ -84,7 +95,9 @@ public class ImportDNS  implements java.io.Serializable {
 
     /**
      * 解析线路的ID
+     * Required:true
      */
+    @Required
     private Integer viewValue;
 
 

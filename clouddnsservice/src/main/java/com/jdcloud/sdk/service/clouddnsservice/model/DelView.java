@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * delView
@@ -34,22 +35,30 @@ public class DelView  implements java.io.Serializable {
 
     /**
      * 域名ID
+     * Required:true
      */
+    @Required
     private Integer domainId;
 
     /**
      * 主域名
+     * Required:true
      */
+    @Required
     private String domainName;
 
     /**
      * 自定义线路名称, 最多64个字符
+     * Required:true
      */
+    @Required
     private String viewName;
 
     /**
      * 自定义线路ID
+     * Required:true
      */
+    @Required
     private String viewId;
 
 

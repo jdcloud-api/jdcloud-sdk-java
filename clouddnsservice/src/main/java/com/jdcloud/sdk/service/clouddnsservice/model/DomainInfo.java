@@ -77,6 +77,11 @@ public class DomainInfo  implements java.io.Serializable {
      */
     private Boolean jcloudNs;
 
+    /**
+     * 域名的锁定状态，0:未锁定， 1:已锁定
+     */
+    private Integer lockStatus;
+
 
     /**
      * get 域名的唯一ID
@@ -240,6 +245,24 @@ public class DomainInfo  implements java.io.Serializable {
         this.jcloudNs = jcloudNs;
     }
 
+    /**
+     * get 域名的锁定状态，0:未锁定， 1:已锁定
+     *
+     * @return
+     */
+    public Integer getLockStatus() {
+        return lockStatus;
+    }
+
+    /**
+     * set 域名的锁定状态，0:未锁定， 1:已锁定
+     *
+     * @param lockStatus
+     */
+    public void setLockStatus(Integer lockStatus) {
+        this.lockStatus = lockStatus;
+    }
+
 
     /**
      * set 域名的唯一ID
@@ -328,6 +351,16 @@ public class DomainInfo  implements java.io.Serializable {
      */
     public DomainInfo jcloudNs(Boolean jcloudNs) {
         this.jcloudNs = jcloudNs;
+        return this;
+    }
+
+    /**
+     * set 域名的锁定状态，0:未锁定， 1:已锁定
+     *
+     * @param lockStatus
+     */
+    public DomainInfo lockStatus(Integer lockStatus) {
+        this.lockStatus = lockStatus;
         return this;
     }
 

@@ -47,6 +47,11 @@ public class HostRRlb  implements java.io.Serializable {
      */
     private Integer weight;
 
+    /**
+     * 此条记录在总均衡中的比率的100倍
+     */
+    private Double rate;
+
 
     /**
      * get 解析记录的值
@@ -102,6 +107,24 @@ public class HostRRlb  implements java.io.Serializable {
         this.weight = weight;
     }
 
+    /**
+     * get 此条记录在总均衡中的比率的100倍
+     *
+     * @return
+     */
+    public Double getRate() {
+        return rate;
+    }
+
+    /**
+     * set 此条记录在总均衡中的比率的100倍
+     *
+     * @param rate
+     */
+    public void setRate(Double rate) {
+        this.rate = rate;
+    }
+
 
     /**
      * set 解析记录的值
@@ -130,6 +153,16 @@ public class HostRRlb  implements java.io.Serializable {
      */
     public HostRRlb weight(Integer weight) {
         this.weight = weight;
+        return this;
+    }
+
+    /**
+     * set 此条记录在总均衡中的比率的100倍
+     *
+     * @param rate
+     */
+    public HostRRlb rate(Double rate) {
+        this.rate = rate;
         return this;
     }
 

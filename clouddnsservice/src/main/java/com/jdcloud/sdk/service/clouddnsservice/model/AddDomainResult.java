@@ -24,7 +24,7 @@
 
 package com.jdcloud.sdk.service.clouddnsservice.model;
 
-import com.jdcloud.sdk.service.clouddnsservice.model.Domain;
+import com.jdcloud.sdk.service.clouddnsservice.model.DomainAdded;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -37,7 +37,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
     /**
      * 新添加的的域名结构
      */
-    private Domain data;
+    private DomainAdded data;
 
     /**
      * 添加收费版域名的订单号
@@ -50,7 +50,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
      *
      * @return
      */
-    public Domain getData() {
+    public DomainAdded getData() {
         return data;
     }
 
@@ -59,7 +59,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
      *
      * @param data
      */
-    public void setData(Domain data) {
+    public void setData(DomainAdded data) {
         this.data = data;
     }
 
@@ -87,7 +87,7 @@ public class AddDomainResult extends JdcloudResult implements java.io.Serializab
      *
      * @param data
      */
-    public AddDomainResult data(Domain data) {
+    public AddDomainResult data(DomainAdded data) {
         this.data = data;
         return this;
     }
