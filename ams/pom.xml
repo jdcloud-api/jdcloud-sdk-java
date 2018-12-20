@@ -4,10 +4,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
-  <artifactId>datastar</artifactId>
-  <version>1.0.6</version>
+  <artifactId>ams</artifactId>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
-  <name>datastar</name>
+  <name>ams</name>
   <url>http://www.jdcloud.com</url>
   <description>JDCLOUD Open API SDK for Java</description>
 
