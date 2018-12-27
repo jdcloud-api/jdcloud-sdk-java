@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持SQL Server
+ * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持MySQL
  */
 public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.Serializable {
 

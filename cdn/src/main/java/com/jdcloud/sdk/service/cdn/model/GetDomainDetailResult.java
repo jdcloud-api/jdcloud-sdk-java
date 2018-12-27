@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.cdn.model.BackSourceInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -32,6 +35,61 @@ import com.jdcloud.sdk.service.JdcloudResult;
 public class GetDomainDetailResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * allStatus
+     */
+    private String allStatus;
+
+    /**
+     * allowNoReferHeader
+     */
+    private String allowNoReferHeader;
+
+    /**
+     * allowNullReferHeader
+     */
+    private String allowNullReferHeader;
+
+    /**
+     * dailyBandWidth
+     */
+    private Integer dailyBandWidth;
+
+    /**
+     * forbiddenType
+     */
+    private String forbiddenType;
+
+    /**
+     * maxFileSize
+     */
+    private Long maxFileSize;
+
+    /**
+     * minFileSize
+     */
+    private Long minFileSize;
+
+    /**
+     * sumFileSize
+     */
+    private Long sumFileSize;
+
+    /**
+     * avgFileSize
+     */
+    private Long avgFileSize;
+
+    /**
+     * referList
+     */
+    private List<String> referList;
+
+    /**
+     * referType
+     */
+    private String referType;
 
     /**
      * domain
@@ -76,12 +134,17 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     /**
      * source
      */
-    private String source;
+    private BackSourceInfo source;
 
     /**
      * sourceType
      */
     private String sourceType;
+
+    /**
+     * 默认的回源host
+     */
+    private String defaultSourceHost;
 
     /**
      * backSourceType
@@ -108,6 +171,204 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      */
     private String jumpType;
 
+
+    /**
+     * get allStatus
+     *
+     * @return
+     */
+    public String getAllStatus() {
+        return allStatus;
+    }
+
+    /**
+     * set allStatus
+     *
+     * @param allStatus
+     */
+    public void setAllStatus(String allStatus) {
+        this.allStatus = allStatus;
+    }
+
+    /**
+     * get allowNoReferHeader
+     *
+     * @return
+     */
+    public String getAllowNoReferHeader() {
+        return allowNoReferHeader;
+    }
+
+    /**
+     * set allowNoReferHeader
+     *
+     * @param allowNoReferHeader
+     */
+    public void setAllowNoReferHeader(String allowNoReferHeader) {
+        this.allowNoReferHeader = allowNoReferHeader;
+    }
+
+    /**
+     * get allowNullReferHeader
+     *
+     * @return
+     */
+    public String getAllowNullReferHeader() {
+        return allowNullReferHeader;
+    }
+
+    /**
+     * set allowNullReferHeader
+     *
+     * @param allowNullReferHeader
+     */
+    public void setAllowNullReferHeader(String allowNullReferHeader) {
+        this.allowNullReferHeader = allowNullReferHeader;
+    }
+
+    /**
+     * get dailyBandWidth
+     *
+     * @return
+     */
+    public Integer getDailyBandWidth() {
+        return dailyBandWidth;
+    }
+
+    /**
+     * set dailyBandWidth
+     *
+     * @param dailyBandWidth
+     */
+    public void setDailyBandWidth(Integer dailyBandWidth) {
+        this.dailyBandWidth = dailyBandWidth;
+    }
+
+    /**
+     * get forbiddenType
+     *
+     * @return
+     */
+    public String getForbiddenType() {
+        return forbiddenType;
+    }
+
+    /**
+     * set forbiddenType
+     *
+     * @param forbiddenType
+     */
+    public void setForbiddenType(String forbiddenType) {
+        this.forbiddenType = forbiddenType;
+    }
+
+    /**
+     * get maxFileSize
+     *
+     * @return
+     */
+    public Long getMaxFileSize() {
+        return maxFileSize;
+    }
+
+    /**
+     * set maxFileSize
+     *
+     * @param maxFileSize
+     */
+    public void setMaxFileSize(Long maxFileSize) {
+        this.maxFileSize = maxFileSize;
+    }
+
+    /**
+     * get minFileSize
+     *
+     * @return
+     */
+    public Long getMinFileSize() {
+        return minFileSize;
+    }
+
+    /**
+     * set minFileSize
+     *
+     * @param minFileSize
+     */
+    public void setMinFileSize(Long minFileSize) {
+        this.minFileSize = minFileSize;
+    }
+
+    /**
+     * get sumFileSize
+     *
+     * @return
+     */
+    public Long getSumFileSize() {
+        return sumFileSize;
+    }
+
+    /**
+     * set sumFileSize
+     *
+     * @param sumFileSize
+     */
+    public void setSumFileSize(Long sumFileSize) {
+        this.sumFileSize = sumFileSize;
+    }
+
+    /**
+     * get avgFileSize
+     *
+     * @return
+     */
+    public Long getAvgFileSize() {
+        return avgFileSize;
+    }
+
+    /**
+     * set avgFileSize
+     *
+     * @param avgFileSize
+     */
+    public void setAvgFileSize(Long avgFileSize) {
+        this.avgFileSize = avgFileSize;
+    }
+
+    /**
+     * get referList
+     *
+     * @return
+     */
+    public List<String> getReferList() {
+        return referList;
+    }
+
+    /**
+     * set referList
+     *
+     * @param referList
+     */
+    public void setReferList(List<String> referList) {
+        this.referList = referList;
+    }
+
+    /**
+     * get referType
+     *
+     * @return
+     */
+    public String getReferType() {
+        return referType;
+    }
+
+    /**
+     * set referType
+     *
+     * @param referType
+     */
+    public void setReferType(String referType) {
+        this.referType = referType;
+    }
 
     /**
      * get domain
@@ -258,7 +519,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      *
      * @return
      */
-    public String getSource() {
+    public BackSourceInfo getSource() {
         return source;
     }
 
@@ -267,7 +528,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      *
      * @param source
      */
-    public void setSource(String source) {
+    public void setSource(BackSourceInfo source) {
         this.source = source;
     }
 
@@ -287,6 +548,24 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      */
     public void setSourceType(String sourceType) {
         this.sourceType = sourceType;
+    }
+
+    /**
+     * get 默认的回源host
+     *
+     * @return
+     */
+    public String getDefaultSourceHost() {
+        return defaultSourceHost;
+    }
+
+    /**
+     * set 默认的回源host
+     *
+     * @param defaultSourceHost
+     */
+    public void setDefaultSourceHost(String defaultSourceHost) {
+        this.defaultSourceHost = defaultSourceHost;
     }
 
     /**
@@ -381,6 +660,116 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
 
 
     /**
+     * set allStatus
+     *
+     * @param allStatus
+     */
+    public GetDomainDetailResult allStatus(String allStatus) {
+        this.allStatus = allStatus;
+        return this;
+    }
+
+    /**
+     * set allowNoReferHeader
+     *
+     * @param allowNoReferHeader
+     */
+    public GetDomainDetailResult allowNoReferHeader(String allowNoReferHeader) {
+        this.allowNoReferHeader = allowNoReferHeader;
+        return this;
+    }
+
+    /**
+     * set allowNullReferHeader
+     *
+     * @param allowNullReferHeader
+     */
+    public GetDomainDetailResult allowNullReferHeader(String allowNullReferHeader) {
+        this.allowNullReferHeader = allowNullReferHeader;
+        return this;
+    }
+
+    /**
+     * set dailyBandWidth
+     *
+     * @param dailyBandWidth
+     */
+    public GetDomainDetailResult dailyBandWidth(Integer dailyBandWidth) {
+        this.dailyBandWidth = dailyBandWidth;
+        return this;
+    }
+
+    /**
+     * set forbiddenType
+     *
+     * @param forbiddenType
+     */
+    public GetDomainDetailResult forbiddenType(String forbiddenType) {
+        this.forbiddenType = forbiddenType;
+        return this;
+    }
+
+    /**
+     * set maxFileSize
+     *
+     * @param maxFileSize
+     */
+    public GetDomainDetailResult maxFileSize(Long maxFileSize) {
+        this.maxFileSize = maxFileSize;
+        return this;
+    }
+
+    /**
+     * set minFileSize
+     *
+     * @param minFileSize
+     */
+    public GetDomainDetailResult minFileSize(Long minFileSize) {
+        this.minFileSize = minFileSize;
+        return this;
+    }
+
+    /**
+     * set sumFileSize
+     *
+     * @param sumFileSize
+     */
+    public GetDomainDetailResult sumFileSize(Long sumFileSize) {
+        this.sumFileSize = sumFileSize;
+        return this;
+    }
+
+    /**
+     * set avgFileSize
+     *
+     * @param avgFileSize
+     */
+    public GetDomainDetailResult avgFileSize(Long avgFileSize) {
+        this.avgFileSize = avgFileSize;
+        return this;
+    }
+
+    /**
+     * set referList
+     *
+     * @param referList
+     */
+    public GetDomainDetailResult referList(List<String> referList) {
+        this.referList = referList;
+        return this;
+    }
+
+    /**
+     * set referType
+     *
+     * @param referType
+     */
+    public GetDomainDetailResult referType(String referType) {
+        this.referType = referType;
+        return this;
+    }
+
+    /**
      * set domain
      *
      * @param domain
@@ -465,7 +854,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      *
      * @param source
      */
-    public GetDomainDetailResult source(String source) {
+    public GetDomainDetailResult source(BackSourceInfo source) {
         this.source = source;
         return this;
     }
@@ -477,6 +866,16 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      */
     public GetDomainDetailResult sourceType(String sourceType) {
         this.sourceType = sourceType;
+        return this;
+    }
+
+    /**
+     * set 默认的回源host
+     *
+     * @param defaultSourceHost
+     */
+    public GetDomainDetailResult defaultSourceHost(String defaultSourceHost) {
+        this.defaultSourceHost = defaultSourceHost;
         return this;
     }
 
@@ -530,5 +929,17 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
+    /**
+     * add item to referList
+     *
+     * @param referList
+     */
+    public void addReferList(String referList) {
+        if (this.referList == null) {
+            this.referList = new ArrayList<>();
+        }
+        this.referList.add(referList);
+    }
 
 }

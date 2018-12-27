@@ -61,12 +61,12 @@ import com.jdcloud.sdk.service.rds.client.EnableInternetAccessExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseRequest;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseResponse;
 import com.jdcloud.sdk.service.rds.client.CreateDatabaseExecutor;
-import com.jdcloud.sdk.service.rds.model.DescribeImportFilesRequest;
-import com.jdcloud.sdk.service.rds.model.DescribeImportFilesResponse;
-import com.jdcloud.sdk.service.rds.client.DescribeImportFilesExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateInstanceFromBackupRequest;
 import com.jdcloud.sdk.service.rds.model.CreateInstanceFromBackupResponse;
 import com.jdcloud.sdk.service.rds.client.CreateInstanceFromBackupExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeImportFilesRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeImportFilesResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeImportFilesExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateBackupRequest;
 import com.jdcloud.sdk.service.rds.model.CreateBackupResponse;
 import com.jdcloud.sdk.service.rds.client.CreateBackupExecutor;
@@ -88,6 +88,12 @@ import com.jdcloud.sdk.service.rds.client.DisableInternetAccessExecutor;
 import com.jdcloud.sdk.service.rds.model.GrantPrivilegeRequest;
 import com.jdcloud.sdk.service.rds.model.GrantPrivilegeResponse;
 import com.jdcloud.sdk.service.rds.client.GrantPrivilegeExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeAzsRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeAzsResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeAzsExecutor;
+import com.jdcloud.sdk.service.rds.model.DisableInterceptRequest;
+import com.jdcloud.sdk.service.rds.model.DisableInterceptResponse;
+import com.jdcloud.sdk.service.rds.client.DisableInterceptExecutor;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromFileRequest;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromFileResponse;
 import com.jdcloud.sdk.service.rds.client.RestoreDatabaseFromFileExecutor;
@@ -106,12 +112,21 @@ import com.jdcloud.sdk.service.rds.client.CreateBackupSynchronicityExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeBinlogDownloadURLRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeBinlogDownloadURLResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeBinlogDownloadURLExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeActiveQueryPerformanceRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeActiveQueryPerformanceResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeActiveQueryPerformanceExecutor;
+import com.jdcloud.sdk.service.rds.model.DeleteImportFileRequest;
+import com.jdcloud.sdk.service.rds.model.DeleteImportFileResponse;
+import com.jdcloud.sdk.service.rds.client.DeleteImportFileExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyInstanceSpecRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyInstanceSpecResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyInstanceSpecExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeBackupsExecutor;
+import com.jdcloud.sdk.service.rds.model.EnableInterceptRequest;
+import com.jdcloud.sdk.service.rds.model.EnableInterceptResponse;
+import com.jdcloud.sdk.service.rds.client.EnableInterceptExecutor;
 import com.jdcloud.sdk.service.rds.model.RebootInstanceRequest;
 import com.jdcloud.sdk.service.rds.model.RebootInstanceResponse;
 import com.jdcloud.sdk.service.rds.client.RebootInstanceExecutor;
@@ -142,6 +157,9 @@ import com.jdcloud.sdk.service.rds.client.ModifyBackupPolicyExecutor;
 import com.jdcloud.sdk.service.rds.model.RestoreInstanceRequest;
 import com.jdcloud.sdk.service.rds.model.RestoreInstanceResponse;
 import com.jdcloud.sdk.service.rds.client.RestoreInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyParametersRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyParametersResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyParametersExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeInstancesExecutor;
@@ -151,6 +169,9 @@ import com.jdcloud.sdk.service.rds.client.EnableAuditExecutor;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordRequest;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordResponse;
 import com.jdcloud.sdk.service.rds.client.ResetPasswordExecutor;
+import com.jdcloud.sdk.service.rds.model.ClearBinlogsRequest;
+import com.jdcloud.sdk.service.rds.model.ClearBinlogsResponse;
+import com.jdcloud.sdk.service.rds.client.ClearBinlogsExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeErrorLogsExecutor;
@@ -169,6 +190,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeDatabasesExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeAuditRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeAuditResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeAuditExecutor;
+import com.jdcloud.sdk.service.rds.model.DeleteParameterGroupRequest;
+import com.jdcloud.sdk.service.rds.model.DeleteParameterGroupResponse;
+import com.jdcloud.sdk.service.rds.client.DeleteParameterGroupExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeSlowLogsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeSlowLogsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeSlowLogsExecutor;
@@ -193,15 +217,24 @@ import com.jdcloud.sdk.service.rds.client.CreateInstanceExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyWhiteListExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyParameterGroupAttributeRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyParameterGroupAttributeResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyParameterGroupAttributeExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeSlowLogAttributesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeSlowLogAttributesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeSlowLogAttributesExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyAuditRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyAuditResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyAuditExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeLatestRestoreTimeRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeLatestRestoreTimeResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeLatestRestoreTimeExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeInstanceAttributesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeInstanceAttributesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeInstanceAttributesExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeParametersRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeParametersResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeParametersExecutor;
 
 /**
  * rdsClient
@@ -275,7 +308,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)&lt;br&gt;- 仅支持SQL Server
+     * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param request
      * @return
@@ -363,6 +396,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。&lt;br&gt;例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateInstanceFromBackupResponse createInstanceFromBackup(CreateInstanceFromBackupRequest request) throws JdcloudSdkException {
+        return new CreateInstanceFromBackupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取用户通过单库上云工具上传到该实例上的文件列表&lt;br&gt;- 仅支持SQL Server
      *
      * @param request
@@ -371,17 +415,6 @@ public class RdsClient extends JdcloudClient {
      */
     public DescribeImportFilesResponse describeImportFiles(DescribeImportFilesRequest request) throws JdcloudSdkException {
         return new DescribeImportFilesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据源实例全量备份创建一个新实例，新实例的数据跟源实例在创建备份时的数据状态一样。&lt;br&gt;例如根据源实例A的一个全量备份“mybak”新建一个实例B，该备份是在“‘2018-8-18 03:23:54”创建的。那么新建实例B的数据状态跟实例A‘2018-8-18 03:23:54’的状态一致&lt;br&gt;- 仅支持MySQL
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateInstanceFromBackupResponse createInstanceFromBackup(CreateInstanceFromBackupRequest request) throws JdcloudSdkException {
-        return new CreateInstanceFromBackupExecutor().client(this).execute(request);
     }
 
     /**
@@ -462,6 +495,28 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 查看指定地域下各种RDS数据库支持的可用区，不同类型的RDS支持的可用区不一样
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAzsResponse describeAzs(DescribeAzsRequest request) throws JdcloudSdkException {
+        return new DescribeAzsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭数据库的高安全模式&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableInterceptResponse disableIntercept(DisableInterceptRequest request) throws JdcloudSdkException {
+        return new DisableInterceptExecutor().client(this).execute(request);
+    }
+
+    /**
      * 从用户通过单库上云工具上传到云上的备份文件中恢复单个数据库&lt;br&gt;- 仅支持SQL Server
      *
      * @param request
@@ -528,6 +583,28 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 根据用户定义的查询条件，获取正在执行中的SQL执行的性能信息。用户可以根据这些信息查找与SQL执行相关的性能瓶颈，并进行优化。&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeActiveQueryPerformanceResponse describeActiveQueryPerformance(DescribeActiveQueryPerformanceRequest request) throws JdcloudSdkException {
+        return new DescribeActiveQueryPerformanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除用户通过单库上云工具上传的数据库备份文件&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteImportFileResponse deleteImportFile(DeleteImportFileRequest request) throws JdcloudSdkException {
+        return new DeleteImportFileExecutor().client(this).execute(request);
+    }
+
+    /**
      * 实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
      *
      * @param request
@@ -550,6 +627,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 开启数据库的高安全模式&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableInterceptResponse enableIntercept(EnableInterceptRequest request) throws JdcloudSdkException {
+        return new EnableInterceptExecutor().client(this).execute(request);
+    }
+
+    /**
      * 重启RDS实例，例如修改了一些配置参数后，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。** 可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
      *
      * @param request
@@ -561,7 +649,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限&lt;br&gt;- 仅支持MySQL
+     * 取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限
      *
      * @param request
      * @return
@@ -627,7 +715,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 根据源实例备份创建一个新实例，并通过追加日志的方式，将新实例的数据恢复到跟源实例指定时间点的数据状态一样。&lt;br&gt;例如根据实例A在“2018-06-18 23:00:00”时间点创建一个实例B，就是新建一个实例B，该实例B的数据跟实例A在“2018-06-18 23:00:00”这个时间点的数据完全一致。&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。&lt;br&gt;- 仅支持MySQL
+     * 根据源实例备份创建一个新实例，并通过追加日志的方式，将新实例的数据恢复到跟源实例指定时间点的数据状态一样。&lt;br&gt;例如根据实例A在“2018-06-18 23:00:00”时间点创建一个实例B，就是新建一个实例B，该实例B的数据跟实例A在“2018-06-18 23:00:00”这个时间点的数据完全一致。&lt;br&gt;对于SQL Server，主备切换后30分钟内，不支持按时间点恢复/创建，例如在10:05分用户进行了主备切换，那么10:05 ~ 10:35这个时间段不能进行按时间点恢复/创建。
      *
      * @param request
      * @return
@@ -657,6 +745,17 @@ public class RdsClient extends JdcloudClient {
      */
     public RestoreInstanceResponse restoreInstance(RestoreInstanceRequest request) throws JdcloudSdkException {
         return new RestoreInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改SQL Server数实例的配置参数。 部分参数修改后，需要重启才能生效，具体可以参考微软的相关文档&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyParametersResponse modifyParameters(ModifyParametersRequest request) throws JdcloudSdkException {
+        return new ModifyParametersExecutor().client(this).execute(request);
     }
 
     /**
@@ -690,6 +789,17 @@ public class RdsClient extends JdcloudClient {
      */
     public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws JdcloudSdkException {
         return new ResetPasswordExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 清理本地的binlog并释放空间。 系统只会清理已经备份到存储的binlog，不会影响MySQL实例的备份恢复&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ClearBinlogsResponse clearBinlogs(ClearBinlogsRequest request) throws JdcloudSdkException {
+        return new ClearBinlogsExecutor().client(this).execute(request);
     }
 
     /**
@@ -759,7 +869,18 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持SQL Server
+     * 删除参数组&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteParameterGroupResponse deleteParameterGroup(DeleteParameterGroupRequest request) throws JdcloudSdkException {
+        return new DeleteParameterGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持MySQL
      *
      * @param request
      * @return
@@ -847,7 +968,18 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持SQL Server
+     * 修改参数组名称，描述&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyParameterGroupAttributeResponse modifyParameterGroupAttribute(ModifyParameterGroupAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyParameterGroupAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持MySQL
      *
      * @param request
      * @return
@@ -869,6 +1001,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 获取SQL Server实例按时间点恢复/创建时，可恢复到的最后的一个时间点&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLatestRestoreTimeResponse describeLatestRestoreTime(DescribeLatestRestoreTimeRequest request) throws JdcloudSdkException {
+        return new DescribeLatestRestoreTimeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
      *
      * @param request
@@ -877,6 +1020,17 @@ public class RdsClient extends JdcloudClient {
      */
     public DescribeInstanceAttributesResponse describeInstanceAttributes(DescribeInstanceAttributesRequest request) throws JdcloudSdkException {
         return new DescribeInstanceAttributesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看SQL Server实例的配置参数&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeParametersResponse describeParameters(DescribeParametersRequest request) throws JdcloudSdkException {
+        return new DescribeParametersExecutor().client(this).execute(request);
     }
 
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持SQL Server
+ * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持MySQL
  */
 public class DescribeSlowLogsResponse extends JdcloudResponse<DescribeSlowLogsResult> implements java.io.Serializable {
 

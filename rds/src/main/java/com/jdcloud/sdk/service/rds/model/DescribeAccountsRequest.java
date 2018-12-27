@@ -35,6 +35,16 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
+     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     */
+    private Integer pageNumber;
+
+    /**
+     * 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     */
+    private Integer pageSize;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -48,6 +58,42 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     @Required
     private String instanceId;
 
+
+    /**
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -85,6 +131,26 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
         this.instanceId = instanceId;
     }
 
+
+    /**
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
+     *
+     * @param pageNumber
+     */
+    public DescribeAccountsRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     *
+     * @param pageSize
+     */
+    public DescribeAccountsRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

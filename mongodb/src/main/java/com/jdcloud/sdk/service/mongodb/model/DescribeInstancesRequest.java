@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.mongodb.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
@@ -56,6 +57,11 @@ chargeMode - 计费类型，精确匹配
 
      */
     private List<Filter> filters;
+
+    /**
+     * Tag筛选条件
+     */
+    private List<TagFilter> tagFilters;
 
     /**
      * createTime - 创建时间,asc（正序），desc（倒序）
@@ -134,6 +140,24 @@ chargeMode - 计费类型，精确匹配
     }
 
     /**
+     * get Tag筛选条件
+     *
+     * @return
+     */
+    public List<TagFilter> getTagFilters() {
+        return tagFilters;
+    }
+
+    /**
+     * set Tag筛选条件
+     *
+     * @param tagFilters
+     */
+    public void setTagFilters(List<TagFilter> tagFilters) {
+        this.tagFilters = tagFilters;
+    }
+
+    /**
      * get createTime - 创建时间,asc（正序），desc（倒序）
 
      *
@@ -207,6 +231,16 @@ chargeMode - 计费类型，精确匹配
     }
 
     /**
+     * set Tag筛选条件
+     *
+     * @param tagFilters
+     */
+    public DescribeInstancesRequest tagFilters(List<TagFilter> tagFilters) {
+        this.tagFilters = tagFilters;
+        return this;
+    }
+
+    /**
      * set createTime - 创建时间,asc（正序），desc（倒序）
 
      *
@@ -242,6 +276,18 @@ chargeMode - 计费类型，精确匹配
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to Tag筛选条件
+     *
+     * @param tagFilter
+     */
+    public void addTagFilter(TagFilter tagFilter) {
+        if (this.tagFilters == null) {
+            this.tagFilters = new ArrayList<>();
+        }
+        this.tagFilters.add(tagFilter);
     }
 
     /**

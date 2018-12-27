@@ -85,6 +85,11 @@ public class DBInstance  implements java.io.Serializable {
      */
     private Charge charge;
 
+    /**
+     * 标签信息
+     */
+    private List<Tag> tags;
+
 
     /**
      * get 实例ID
@@ -266,6 +271,24 @@ public class DBInstance  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 标签信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set 标签信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
 
     /**
      * set 实例ID
@@ -367,6 +390,16 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 标签信息
+     *
+     * @param tags
+     */
+    public DBInstance tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
 
     /**
      * add item to 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
@@ -378,6 +411,18 @@ public class DBInstance  implements java.io.Serializable {
             this.azId = new ArrayList<>();
         }
         this.azId.add(azId);
+    }
+
+    /**
+     * add item to 标签信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }
