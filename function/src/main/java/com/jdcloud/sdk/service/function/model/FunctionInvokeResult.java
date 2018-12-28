@@ -46,7 +46,7 @@ public class FunctionInvokeResult extends JdcloudResult implements java.io.Seria
     /**
      * 函数执行时间
      */
-    private Number invokeTime;
+    private Float invokeTime;
 
     /**
      * 函数收费时间
@@ -61,7 +61,7 @@ public class FunctionInvokeResult extends JdcloudResult implements java.io.Seria
     /**
      * 函数实际使用内存大小
      */
-    private Number realMem;
+    private Float realMem;
 
     /**
      * 函数执行日志
@@ -110,7 +110,7 @@ public class FunctionInvokeResult extends JdcloudResult implements java.io.Seria
      *
      * @return
      */
-    public Number getInvokeTime() {
+    public Float getInvokeTime() {
         return invokeTime;
     }
 
@@ -119,7 +119,7 @@ public class FunctionInvokeResult extends JdcloudResult implements java.io.Seria
      *
      * @param invokeTime
      */
-    public void setInvokeTime(Number invokeTime) {
+    public void setInvokeTime(Float invokeTime) {
         this.invokeTime = invokeTime;
     }
 
@@ -164,7 +164,7 @@ public class FunctionInvokeResult extends JdcloudResult implements java.io.Seria
      *
      * @return
      */
-    public Number getRealMem() {
+    public Float getRealMem() {
         return realMem;
     }
 
@@ -173,7 +173,7 @@ public class FunctionInvokeResult extends JdcloudResult implements java.io.Seria
      *
      * @param realMem
      */
-    public void setRealMem(Number realMem) {
+    public void setRealMem(Float realMem) {
         this.realMem = realMem;
     }
 
@@ -221,7 +221,7 @@ public class FunctionInvokeResult extends JdcloudResult implements java.io.Seria
      *
      * @param invokeTime
      */
-    public FunctionInvokeResult invokeTime(Number invokeTime) {
+    public FunctionInvokeResult invokeTime(Float invokeTime) {
         this.invokeTime = invokeTime;
         return this;
     }
@@ -251,7 +251,7 @@ public class FunctionInvokeResult extends JdcloudResult implements java.io.Seria
      *
      * @param realMem
      */
-    public FunctionInvokeResult realMem(Number realMem) {
+    public FunctionInvokeResult realMem(Float realMem) {
         this.realMem = realMem;
         return this;
     }

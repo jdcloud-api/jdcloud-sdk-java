@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeSlowLogsResponse;
 
 /**
- * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持SQL Server
+ * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持MySQL
  */
 class DescribeSlowLogsExecutor extends JdcloudExecutor {
 

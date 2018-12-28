@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.SlowLogAttributes;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持SQL Server
+ * 查询MySQL实例的慢日志的详细信息。&lt;br&gt;- 仅支持MySQL
  */
 public class DescribeSlowLogAttributesResult extends JdcloudResult implements java.io.Serializable {
 

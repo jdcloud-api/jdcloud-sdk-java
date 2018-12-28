@@ -150,6 +150,11 @@ public class DBInstance  implements java.io.Serializable {
      */
     private Boolean isSetSecurityIps;
 
+    /**
+     * 标签
+     */
+    private List<Tag> tags;
+
 
     /**
      * get 实例ID
@@ -565,6 +570,24 @@ public class DBInstance  implements java.io.Serializable {
         this.isSetSecurityIps = isSetSecurityIps;
     }
 
+    /**
+     * get 标签
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set 标签
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
 
     /**
      * set 实例ID
@@ -796,6 +819,16 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 标签
+     *
+     * @param tags
+     */
+    public DBInstance tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
 
     /**
      * add item to 可取区ID，依次为主、从、隐藏节点所在可用区
@@ -807,6 +840,18 @@ public class DBInstance  implements java.io.Serializable {
             this.azId = new ArrayList<>();
         }
         this.azId.add(azId);
+    }
+
+    /**
+     * add item to 标签
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }

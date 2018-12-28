@@ -24,6 +24,10 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -43,6 +47,24 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
      * 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
      */
     private Integer pageSize;
+
+    /**
+     * 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+instanceId, 支持operator选项：eq
+instanceName, 支持operator选项：eq
+engine, 支持operator选项：eq
+engineVersion, 支持operator选项：eq
+instanceStatus, 支持operator选项：eq
+chargeMode, 支持operator选项：eq
+
+     */
+    private List<Filter> filters;
+
+    /**
+     * 资源标签
+     */
+    private List<TagFilter> tagFilters;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -89,6 +111,58 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
+     * get 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+instanceId, 支持operator选项：eq
+instanceName, 支持operator选项：eq
+engine, 支持operator选项：eq
+engineVersion, 支持operator选项：eq
+instanceStatus, 支持operator选项：eq
+chargeMode, 支持operator选项：eq
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+instanceId, 支持operator选项：eq
+instanceName, 支持operator选项：eq
+engine, 支持operator选项：eq
+engineVersion, 支持operator选项：eq
+instanceStatus, 支持operator选项：eq
+chargeMode, 支持operator选项：eq
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+    /**
+     * get 资源标签
+     *
+     * @return
+     */
+    public List<TagFilter> getTagFilters() {
+        return tagFilters;
+    }
+
+    /**
+     * set 资源标签
+     *
+     * @param tagFilters
+     */
+    public void setTagFilters(List<TagFilter> tagFilters) {
+        this.tagFilters = tagFilters;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -128,6 +202,34 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
+     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+instanceId, 支持operator选项：eq
+instanceName, 支持operator选项：eq
+engine, 支持operator选项：eq
+engineVersion, 支持operator选项：eq
+instanceStatus, 支持operator选项：eq
+chargeMode, 支持operator选项：eq
+
+     *
+     * @param filters
+     */
+    public DescribeInstancesRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set 资源标签
+     *
+     * @param tagFilters
+     */
+    public DescribeInstancesRequest tagFilters(List<TagFilter> tagFilters) {
+        this.tagFilters = tagFilters;
+        return this;
+    }
+
+    /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
@@ -137,5 +239,37 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
+    /**
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+instanceId, 支持operator选项：eq
+instanceName, 支持operator选项：eq
+engine, 支持operator选项：eq
+engineVersion, 支持operator选项：eq
+instanceStatus, 支持operator选项：eq
+chargeMode, 支持operator选项：eq
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
+
+    /**
+     * add item to 资源标签
+     *
+     * @param tagFilter
+     */
+    public void addTagFilter(TagFilter tagFilter) {
+        if (this.tagFilters == null) {
+            this.tagFilters = new ArrayList<>();
+        }
+        this.tagFilters.add(tagFilter);
+    }
 
 }
