@@ -27,46 +27,13 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 添加app直播截图配置
+ * 添加APP直播截图配置
  */
 public class AddLiveStreamAppSnapshotResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 返回结果
-     */
-    private Boolean feedback;
 
-
-    /**
-     * get 返回结果
-     *
-     * @return
-     */
-    public Boolean getFeedback() {
-        return feedback;
-    }
-
-    /**
-     * set 返回结果
-     *
-     * @param feedback
-     */
-    public void setFeedback(Boolean feedback) {
-        this.feedback = feedback;
-    }
-
-
-    /**
-     * set 返回结果
-     *
-     * @param feedback
-     */
-    public AddLiveStreamAppSnapshotResult feedback(Boolean feedback) {
-        this.feedback = feedback;
-        return this;
-    }
 
 
 }

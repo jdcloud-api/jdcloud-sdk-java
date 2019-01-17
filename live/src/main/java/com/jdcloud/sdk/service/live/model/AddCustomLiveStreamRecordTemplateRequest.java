@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加录制模板
+ * 添加直播录制模板
  */
 public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest implements java.io.Serializable {
 

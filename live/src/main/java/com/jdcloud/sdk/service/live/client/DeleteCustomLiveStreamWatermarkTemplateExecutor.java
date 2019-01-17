@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamWatermarkTemplateResponse;
 
 /**
- * 删除直播水印模板
+ * 删除用户自定义水印模板
  */
 class DeleteCustomLiveStreamWatermarkTemplateExecutor extends JdcloudExecutor {
 

@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * describeTemplateByIDSpec
@@ -35,7 +36,9 @@ public class DescribeTemplateByIDSpec  implements java.io.Serializable {
     /**
      * 模板类型，区分默认模板和用户自定义模板：1表示默认模板，2表示用户自定义模板
 in: query
+     * Required:true
      */
+    @Required
     private Long templateType;
 
 

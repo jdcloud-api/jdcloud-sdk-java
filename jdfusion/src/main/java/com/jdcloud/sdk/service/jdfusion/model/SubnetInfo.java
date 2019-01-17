@@ -50,7 +50,7 @@ public class SubnetInfo  implements java.io.Serializable {
     /**
      * 子网网段
      */
-    private String addressPrefix;
+    private String cidrBlock;
 
     /**
      * 子网可用ip数量
@@ -142,17 +142,17 @@ public class SubnetInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public String getAddressPrefix() {
-        return addressPrefix;
+    public String getCidrBlock() {
+        return cidrBlock;
     }
 
     /**
      * set 子网网段
      *
-     * @param addressPrefix
+     * @param cidrBlock
      */
-    public void setAddressPrefix(String addressPrefix) {
-        this.addressPrefix = addressPrefix;
+    public void setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
     }
 
     /**
@@ -297,10 +297,10 @@ public class SubnetInfo  implements java.io.Serializable {
     /**
      * set 子网网段
      *
-     * @param addressPrefix
+     * @param cidrBlock
      */
-    public SubnetInfo addressPrefix(String addressPrefix) {
-        this.addressPrefix = addressPrefix;
+    public SubnetInfo cidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
         return this;
     }
 

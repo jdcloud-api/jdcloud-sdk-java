@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateKeypairReq;
+import com.jdcloud.sdk.service.jdfusion.model.CreateKeypair;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVmKeypairRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
-    private CreateKeypairReq body;
+    private CreateKeypair keypair;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVmKeypairRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public CreateKeypairReq getBody() {
-        return body;
+    public CreateKeypair getKeypair() {
+        return keypair;
     }
 
     /**
      * set 创建keypair
      *
-     * @param body
+     * @param keypair
      */
-    public void setBody(CreateKeypairReq body) {
-        this.body = body;
+    public void setKeypair(CreateKeypair keypair) {
+        this.keypair = keypair;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVmKeypairRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 创建keypair
      *
-     * @param body
+     * @param keypair
      */
-    public CreateVmKeypairRequest body(CreateKeypairReq body) {
-        this.body = body;
+    public CreateVmKeypairRequest keypair(CreateKeypair keypair) {
+        this.keypair = keypair;
         return this;
     }
 

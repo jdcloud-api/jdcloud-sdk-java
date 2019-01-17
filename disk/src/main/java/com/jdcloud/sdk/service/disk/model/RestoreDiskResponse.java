@@ -27,7 +27,10 @@ package com.jdcloud.sdk.service.disk.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 从已有快照恢复一块云硬盘
+ * -   仅可对制作快照的源硬盘进行数据恢复操作。
+-   仅源硬盘处于可用状态时才能使用快照进行数据恢复操作。
+-   云硬盘恢复后，当前数据将被清除，请您谨慎操作。
+
  */
 public class RestoreDiskResponse extends JdcloudResponse<RestoreDiskResult> implements java.io.Serializable {
 

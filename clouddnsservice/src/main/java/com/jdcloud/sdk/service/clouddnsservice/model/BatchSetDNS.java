@@ -96,7 +96,7 @@ public class BatchSetDNS  implements java.io.Serializable {
     private Integer weight;
 
     /**
-     * 解析线路的ID
+     * 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
      * Required:true
      */
     @Required
@@ -284,7 +284,7 @@ public class BatchSetDNS  implements java.io.Serializable {
     }
 
     /**
-     * get 解析线路的ID
+     * get 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
      *
      * @return
      */
@@ -293,7 +293,7 @@ public class BatchSetDNS  implements java.io.Serializable {
     }
 
     /**
-     * set 解析线路的ID
+     * set 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
      *
      * @param viewValue
      */
@@ -403,7 +403,7 @@ public class BatchSetDNS  implements java.io.Serializable {
     }
 
     /**
-     * set 解析线路的ID
+     * set 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
      *
      * @param viewValue
      */

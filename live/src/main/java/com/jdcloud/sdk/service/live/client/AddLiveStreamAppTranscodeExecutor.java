@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamAppTranscodeResponse;
 
 /**
- * 添加app转码配置
+ * 添加APP转码配置
  */
 class AddLiveStreamAppTranscodeExecutor extends JdcloudExecutor {
 

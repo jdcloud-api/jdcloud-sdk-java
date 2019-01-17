@@ -33,40 +33,7 @@ public class DeleteLiveDomainResult extends JdcloudResult implements java.io.Ser
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 要删除的域名
-     */
-    private String publishDomain;
 
-
-    /**
-     * get 要删除的域名
-     *
-     * @return
-     */
-    public String getPublishDomain() {
-        return publishDomain;
-    }
-
-    /**
-     * set 要删除的域名
-     *
-     * @param publishDomain
-     */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-    }
-
-
-    /**
-     * set 要删除的域名
-     *
-     * @param publishDomain
-     */
-    public DeleteLiveDomainResult publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-        return this;
-    }
 
 
 }

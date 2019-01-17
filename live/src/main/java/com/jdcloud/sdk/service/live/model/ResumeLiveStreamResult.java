@@ -33,40 +33,7 @@ public class ResumeLiveStreamResult extends JdcloudResult implements java.io.Ser
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 您的加速域名
-     */
-    private String publishDomain;
 
-
-    /**
-     * get 您的加速域名
-     *
-     * @return
-     */
-    public String getPublishDomain() {
-        return publishDomain;
-    }
-
-    /**
-     * set 您的加速域名
-     *
-     * @param publishDomain
-     */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-    }
-
-
-    /**
-     * set 您的加速域名
-     *
-     * @param publishDomain
-     */
-    public ResumeLiveStreamResult publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-        return this;
-    }
 
 
 }

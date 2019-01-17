@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 停止域名
+ * 停用域名
  */
 public class StopLiveDomainRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 要启动的域名
+     * 要停用的域名
      * Required:true
      */
     @Required
@@ -43,7 +43,7 @@ public class StopLiveDomainRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 要启动的域名
+     * get 要停用的域名
      *
      * @return
      */
@@ -52,7 +52,7 @@ public class StopLiveDomainRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 要启动的域名
+     * set 要停用的域名
      *
      * @param publishDomain
      */
@@ -62,7 +62,7 @@ public class StopLiveDomainRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 要启动的域名
+     * set 要停用的域名
      *
      * @param publishDomain
      */

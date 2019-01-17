@@ -27,46 +27,13 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除app水印配置
+ * 删除APP水印配置
  */
 public class DeleteLiveStreamAppWatermarkResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 返回结果
-     */
-    private Boolean feedback;
 
-
-    /**
-     * get 返回结果
-     *
-     * @return
-     */
-    public Boolean getFeedback() {
-        return feedback;
-    }
-
-    /**
-     * set 返回结果
-     *
-     * @param feedback
-     */
-    public void setFeedback(Boolean feedback) {
-        this.feedback = feedback;
-    }
-
-
-    /**
-     * set 返回结果
-     *
-     * @param feedback
-     */
-    public DeleteLiveStreamAppWatermarkResult feedback(Boolean feedback) {
-        this.feedback = feedback;
-        return this;
-    }
 
 
 }

@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateSubnetReq;
+import com.jdcloud.sdk.service.jdfusion.model.CreateSubnet;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVpcSubnetRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
-    private CreateSubnetReq body;
+    private CreateSubnet subnet;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVpcSubnetRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public CreateSubnetReq getBody() {
-        return body;
+    public CreateSubnet getSubnet() {
+        return subnet;
     }
 
     /**
      * set 创建subnet
      *
-     * @param body
+     * @param subnet
      */
-    public void setBody(CreateSubnetReq body) {
-        this.body = body;
+    public void setSubnet(CreateSubnet subnet) {
+        this.subnet = subnet;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVpcSubnetRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 创建subnet
      *
-     * @param body
+     * @param subnet
      */
-    public CreateVpcSubnetRequest body(CreateSubnetReq body) {
-        this.body = body;
+    public CreateVpcSubnetRequest subnet(CreateSubnet subnet) {
+        this.subnet = subnet;
         return this;
     }
 

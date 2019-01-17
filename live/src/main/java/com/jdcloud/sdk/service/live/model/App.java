@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.live.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * app
@@ -35,84 +33,138 @@ public class App  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 推流域名
+     * 应用名
      */
-    private String publishDomain;
+    private String appName;
 
     /**
-     * config
+     * 应用状态
      */
-    private List<Config> transcodeConfig;
+    private String appStatus;
+
+    /**
+     * 创建时间
+     */
+    private String createTime;
+
+    /**
+     * 更新时间
+     */
+    private String updateTime;
 
 
     /**
-     * get 推流域名
+     * get 应用名
      *
      * @return
      */
-    public String getPublishDomain() {
-        return publishDomain;
+    public String getAppName() {
+        return appName;
     }
 
     /**
-     * set 推流域名
+     * set 应用名
      *
-     * @param publishDomain
+     * @param appName
      */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
+    public void setAppName(String appName) {
+        this.appName = appName;
     }
 
     /**
-     * get config
+     * get 应用状态
      *
      * @return
      */
-    public List<Config> getTranscodeConfig() {
-        return transcodeConfig;
+    public String getAppStatus() {
+        return appStatus;
     }
 
     /**
-     * set config
+     * set 应用状态
      *
-     * @param transcodeConfig
+     * @param appStatus
      */
-    public void setTranscodeConfig(List<Config> transcodeConfig) {
-        this.transcodeConfig = transcodeConfig;
+    public void setAppStatus(String appStatus) {
+        this.appStatus = appStatus;
+    }
+
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * get 更新时间
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 
 
     /**
-     * set 推流域名
+     * set 应用名
      *
-     * @param publishDomain
+     * @param appName
      */
-    public App publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
+    public App appName(String appName) {
+        this.appName = appName;
         return this;
     }
 
     /**
-     * set config
+     * set 应用状态
      *
-     * @param transcodeConfig
+     * @param appStatus
      */
-    public App transcodeConfig(List<Config> transcodeConfig) {
-        this.transcodeConfig = transcodeConfig;
+    public App appStatus(String appStatus) {
+        this.appStatus = appStatus;
         return this;
     }
 
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public App createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
 
     /**
-     * add item to config
+     * set 更新时间
      *
-     * @param transcodeConfig
+     * @param updateTime
      */
-    public void addTranscodeConfig(Config transcodeConfig) {
-        if (this.transcodeConfig == null) {
-            this.transcodeConfig = new ArrayList<>();
-        }
-        this.transcodeConfig.add(transcodeConfig);
+    public App updateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
     }
+
 
 }

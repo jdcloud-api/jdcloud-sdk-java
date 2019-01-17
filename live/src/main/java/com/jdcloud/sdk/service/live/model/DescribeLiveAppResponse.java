@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询域名下的app列表
+ * 查询域名下的APP列表
  */
 public class DescribeLiveAppResponse extends JdcloudResponse<DescribeLiveAppResult> implements java.io.Serializable {
 

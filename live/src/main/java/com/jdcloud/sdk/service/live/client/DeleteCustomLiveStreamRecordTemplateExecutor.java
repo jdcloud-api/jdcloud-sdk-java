@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamRecordTemplateResponse;
 
 /**
- * 删除录制模板
+ * 删除用户自定义录制模板
  */
 class DeleteCustomLiveStreamRecordTemplateExecutor extends JdcloudExecutor {
 

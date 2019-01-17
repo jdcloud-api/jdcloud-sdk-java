@@ -48,7 +48,7 @@ public class MetricDataCm  implements java.io.Serializable {
     private String metric;
 
     /**
-     * 数据维度，数据类型为map类型，支持最少一个，最多五个标签，总长度不大于255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+     * 数据维度，数据类型为map类型，支持最少一个，最多6个标签，总长度不大于1024字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
      * Required:true
      */
     @Required
@@ -118,7 +118,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * get 数据维度，数据类型为map类型，支持最少一个，最多五个标签，总长度不大于255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+     * get 数据维度，数据类型为map类型，支持最少一个，最多6个标签，总长度不大于1024字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * set 数据维度，数据类型为map类型，支持最少一个，最多五个标签，总长度不大于255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+     * set 数据维度，数据类型为map类型，支持最少一个，最多6个标签，总长度不大于1024字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
      *
      * @param dimensions
      */
@@ -229,7 +229,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * set 数据维度，数据类型为map类型，支持最少一个，最多五个标签，总长度不大于255字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
+     * set 数据维度，数据类型为map类型，支持最少一个，最多6个标签，总长度不大于1024字节，只允许英文、数字、下划线_、点., [0-9][a-z] [A-Z] [. _ ]，  其它会返回err
      *
      * @param dimensions
      */

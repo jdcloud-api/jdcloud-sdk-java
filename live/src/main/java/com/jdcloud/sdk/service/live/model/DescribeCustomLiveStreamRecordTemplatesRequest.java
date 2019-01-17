@@ -37,7 +37,7 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1
+     * 页码；默认为1；取值范围[1, 100000]
      */
     private Integer pageNum;
 
@@ -53,7 +53,7 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
 
 
     /**
-     * get 页码；默认为1
+     * get 页码；默认为1；取值范围[1, 100000]
      *
      * @return
      */
@@ -62,7 +62,7 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1；取值范围[1, 100000]
      *
      * @param pageNum
      */
@@ -108,7 +108,7 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
 
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1；取值范围[1, 100000]
      *
      * @param pageNum
      */

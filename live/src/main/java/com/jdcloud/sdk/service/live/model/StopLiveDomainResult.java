@@ -27,46 +27,13 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 停止域名
+ * 停用域名
  */
 public class StopLiveDomainResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 要启动的域名
-     */
-    private String publishDomain;
 
-
-    /**
-     * get 要启动的域名
-     *
-     * @return
-     */
-    public String getPublishDomain() {
-        return publishDomain;
-    }
-
-    /**
-     * set 要启动的域名
-     *
-     * @param publishDomain
-     */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-    }
-
-
-    /**
-     * set 要启动的域名
-     *
-     * @param publishDomain
-     */
-    public StopLiveDomainResult publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-        return this;
-    }
 
 
 }

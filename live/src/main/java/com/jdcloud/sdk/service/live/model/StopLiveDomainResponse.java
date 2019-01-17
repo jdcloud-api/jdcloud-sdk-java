@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 停止域名
+ * 停用域名
  */
 public class StopLiveDomainResponse extends JdcloudResponse<StopLiveDomainResult> implements java.io.Serializable {
 

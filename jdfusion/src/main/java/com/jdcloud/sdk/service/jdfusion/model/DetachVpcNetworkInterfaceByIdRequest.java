@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.DetachNetInterfaceReq;
+import com.jdcloud.sdk.service.jdfusion.model.DetachNetInterface;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class DetachVpcNetworkInterfaceByIdRequest extends JdcloudRequest impleme
      * Required:true
      */
     @Required
-    private DetachNetInterfaceReq body;
+    private DetachNetInterface detach;
 
     /**
      * 地域ID
@@ -62,17 +62,17 @@ public class DetachVpcNetworkInterfaceByIdRequest extends JdcloudRequest impleme
      *
      * @return
      */
-    public DetachNetInterfaceReq getBody() {
-        return body;
+    public DetachNetInterface getDetach() {
+        return detach;
     }
 
     /**
      * set 卸载网卡
      *
-     * @param body
+     * @param detach
      */
-    public void setBody(DetachNetInterfaceReq body) {
-        this.body = body;
+    public void setDetach(DetachNetInterface detach) {
+        this.detach = detach;
     }
 
     /**
@@ -115,10 +115,10 @@ public class DetachVpcNetworkInterfaceByIdRequest extends JdcloudRequest impleme
     /**
      * set 卸载网卡
      *
-     * @param body
+     * @param detach
      */
-    public DetachVpcNetworkInterfaceByIdRequest body(DetachNetInterfaceReq body) {
-        this.body = body;
+    public DetachVpcNetworkInterfaceByIdRequest detach(DetachNetInterface detach) {
+        this.detach = detach;
         return this;
     }
 

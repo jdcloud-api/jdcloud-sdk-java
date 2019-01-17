@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainSnapshotResponse;
 
 /**
- * 删除域名直播截图配置
+ * 删除域名截图配置
  */
 class DeleteLiveStreamDomainSnapshotExecutor extends JdcloudExecutor {
 

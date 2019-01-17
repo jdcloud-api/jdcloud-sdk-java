@@ -38,96 +38,96 @@ public class DescribeLiveDomainDetailResult extends JdcloudResult implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * publishDomain
+     * publishDomains
      */
-    private List<PublishDomain> publishDomain;
+    private List<PublishDomain> publishDomains;
 
     /**
-     * playDomain
+     * playDomains
      */
-    private List<PlayDomain> playDomain;
+    private List<PlayDomain> playDomains;
 
 
     /**
-     * get publishDomain
+     * get publishDomains
      *
      * @return
      */
-    public List<PublishDomain> getPublishDomain() {
-        return publishDomain;
+    public List<PublishDomain> getPublishDomains() {
+        return publishDomains;
     }
 
     /**
-     * set publishDomain
+     * set publishDomains
      *
-     * @param publishDomain
+     * @param publishDomains
      */
-    public void setPublishDomain(List<PublishDomain> publishDomain) {
-        this.publishDomain = publishDomain;
+    public void setPublishDomains(List<PublishDomain> publishDomains) {
+        this.publishDomains = publishDomains;
     }
 
     /**
-     * get playDomain
+     * get playDomains
      *
      * @return
      */
-    public List<PlayDomain> getPlayDomain() {
-        return playDomain;
+    public List<PlayDomain> getPlayDomains() {
+        return playDomains;
     }
 
     /**
-     * set playDomain
+     * set playDomains
      *
-     * @param playDomain
+     * @param playDomains
      */
-    public void setPlayDomain(List<PlayDomain> playDomain) {
-        this.playDomain = playDomain;
+    public void setPlayDomains(List<PlayDomain> playDomains) {
+        this.playDomains = playDomains;
     }
 
 
     /**
-     * set publishDomain
+     * set publishDomains
      *
-     * @param publishDomain
+     * @param publishDomains
      */
-    public DescribeLiveDomainDetailResult publishDomain(List<PublishDomain> publishDomain) {
-        this.publishDomain = publishDomain;
+    public DescribeLiveDomainDetailResult publishDomains(List<PublishDomain> publishDomains) {
+        this.publishDomains = publishDomains;
         return this;
     }
 
     /**
-     * set playDomain
+     * set playDomains
      *
-     * @param playDomain
+     * @param playDomains
      */
-    public DescribeLiveDomainDetailResult playDomain(List<PlayDomain> playDomain) {
-        this.playDomain = playDomain;
+    public DescribeLiveDomainDetailResult playDomains(List<PlayDomain> playDomains) {
+        this.playDomains = playDomains;
         return this;
     }
 
 
     /**
-     * add item to publishDomain
+     * add item to publishDomains
      *
      * @param publishDomain
      */
     public void addPublishDomain(PublishDomain publishDomain) {
-        if (this.publishDomain == null) {
-            this.publishDomain = new ArrayList<>();
+        if (this.publishDomains == null) {
+            this.publishDomains = new ArrayList<>();
         }
-        this.publishDomain.add(publishDomain);
+        this.publishDomains.add(publishDomain);
     }
 
     /**
-     * add item to playDomain
+     * add item to playDomains
      *
      * @param playDomain
      */
     public void addPlayDomain(PlayDomain playDomain) {
-        if (this.playDomain == null) {
-            this.playDomain = new ArrayList<>();
+        if (this.playDomains == null) {
+            this.playDomains = new ArrayList<>();
         }
-        this.playDomain.add(playDomain);
+        this.playDomains.add(playDomain);
     }
 
 }

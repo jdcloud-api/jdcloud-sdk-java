@@ -27,7 +27,10 @@ package com.jdcloud.sdk.service.disk.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除单个云硬盘快照:快照状态必须为 available 或 error 状态
+ * -   删除单个云硬盘快照:快照状态必须为 available 或 error 状态。
+-   快照独立于云硬盘生命周期，删除快照不会对创建快照的云硬盘有任何影响。
+-   快照删除后不可恢复，请谨慎操作。
+
  */
 public class DeleteSnapshotResult extends JdcloudResult implements java.io.Serializable {
 

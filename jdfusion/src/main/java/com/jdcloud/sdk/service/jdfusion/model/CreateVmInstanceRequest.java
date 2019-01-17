@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVmReq;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVm;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVmInstanceRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
-    private CreateVmReq body;
+    private CreateVm vm;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVmInstanceRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public CreateVmReq getBody() {
-        return body;
+    public CreateVm getVm() {
+        return vm;
     }
 
     /**
      * set 创建VM
      *
-     * @param body
+     * @param vm
      */
-    public void setBody(CreateVmReq body) {
-        this.body = body;
+    public void setVm(CreateVm vm) {
+        this.vm = vm;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVmInstanceRequest extends JdcloudRequest implements java.io.S
     /**
      * set 创建VM
      *
-     * @param body
+     * @param vm
      */
-    public CreateVmInstanceRequest body(CreateVmReq body) {
-        this.body = body;
+    public CreateVmInstanceRequest vm(CreateVm vm) {
+        this.vm = vm;
         return this;
     }
 

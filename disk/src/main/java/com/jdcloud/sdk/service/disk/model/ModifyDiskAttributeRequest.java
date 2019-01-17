@@ -28,19 +28,19 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改云硬盘的名字或描述信息
+ * 修改云硬盘的名字或描述信息，名字或描述信息至少要指定一个。
  */
 public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云硬盘名称
+     * 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      */
     private String name;
 
     /**
-     * 云硬盘描述，name和description必须要指定一个
+     * 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      */
     private String description;
 
@@ -60,7 +60,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 云硬盘名称
+     * get 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 云硬盘名称
+     * set 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
      * @param name
      */
@@ -78,7 +78,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get 云硬盘描述，name和description必须要指定一个
+     * get 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 云硬盘描述，name和description必须要指定一个
+     * set 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
      * @param description
      */
@@ -133,7 +133,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 云硬盘名称
+     * set 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
      * @param name
      */
@@ -143,7 +143,7 @@ public class ModifyDiskAttributeRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 云硬盘描述，name和description必须要指定一个
+     * set 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
      * @param description
      */

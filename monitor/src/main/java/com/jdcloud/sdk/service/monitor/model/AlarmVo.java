@@ -60,9 +60,19 @@ public class AlarmVo  implements java.io.Serializable {
     private Long deleted;
 
     /**
+     * downSample
+     */
+    private String downSample;
+
+    /**
      * 规则ID
      */
     private Long id;
+
+    /**
+     * 监控项
+     */
+    private String metric;
 
     /**
      * 监控项ID
@@ -221,6 +231,24 @@ public class AlarmVo  implements java.io.Serializable {
     }
 
     /**
+     * get downSample
+     *
+     * @return
+     */
+    public String getDownSample() {
+        return downSample;
+    }
+
+    /**
+     * set downSample
+     *
+     * @param downSample
+     */
+    public void setDownSample(String downSample) {
+        this.downSample = downSample;
+    }
+
+    /**
      * get 规则ID
      *
      * @return
@@ -236,6 +264,24 @@ public class AlarmVo  implements java.io.Serializable {
      */
     public void setId(Long id) {
         this.id = id;
+    }
+
+    /**
+     * get 监控项
+     *
+     * @return
+     */
+    public String getMetric() {
+        return metric;
+    }
+
+    /**
+     * set 监控项
+     *
+     * @param metric
+     */
+    public void setMetric(String metric) {
+        this.metric = metric;
     }
 
     /**
@@ -524,12 +570,32 @@ public class AlarmVo  implements java.io.Serializable {
     }
 
     /**
+     * set downSample
+     *
+     * @param downSample
+     */
+    public AlarmVo downSample(String downSample) {
+        this.downSample = downSample;
+        return this;
+    }
+
+    /**
      * set 规则ID
      *
      * @param id
      */
     public AlarmVo id(Long id) {
         this.id = id;
+        return this;
+    }
+
+    /**
+     * set 监控项
+     *
+     * @param metric
+     */
+    public AlarmVo metric(String metric) {
+        this.metric = metric;
         return this;
     }
 

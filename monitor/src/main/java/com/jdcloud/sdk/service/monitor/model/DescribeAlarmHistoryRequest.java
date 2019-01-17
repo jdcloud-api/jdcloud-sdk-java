@@ -33,11 +33,12 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 /**
  * 查询报警历史
 检索条件组合优先级从高到低为
-1. serviceCode
-1.1 serviceCode + resourceId
-1.2 serviceCode + resourceIds
-2. serviceCodes
-3. 用户所有规则
+1. alarmId
+2. serviceCode
+2.1 serviceCode + resourceId
+2.2 serviceCode + resourceIds
+3. serviceCodes
+4. 用户所有规则
  */
 public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -64,6 +65,11 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     private String resourceId;
 
     /**
+     * resourceId列表
+     */
+    private List<String> resourceIdList;
+
+    /**
      * 规则Id
      */
     private String alarmId;
@@ -74,6 +80,11 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     private Long alarming;
 
     /**
+     * 产品线列表
+     */
+    private List<String> serviceCodeList;
+
+    /**
      * 开始时间
      */
     private String startTime;
@@ -82,6 +93,11 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
      * 结束时间
      */
     private String endTime;
+
+    /**
+     * 规则类型,默认查询1， 1表示资源监控，6表示站点监控,7表示可用性监控
+     */
+    private Long ruleType;
 
     /**
      * 服务码或资源Id列表
@@ -171,6 +187,24 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
+     * get resourceId列表
+     *
+     * @return
+     */
+    public List<String> getResourceIdList() {
+        return resourceIdList;
+    }
+
+    /**
+     * set resourceId列表
+     *
+     * @param resourceIdList
+     */
+    public void setResourceIdList(List<String> resourceIdList) {
+        this.resourceIdList = resourceIdList;
+    }
+
+    /**
      * get 规则Id
      *
      * @return
@@ -207,6 +241,24 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
+     * get 产品线列表
+     *
+     * @return
+     */
+    public List<String> getServiceCodeList() {
+        return serviceCodeList;
+    }
+
+    /**
+     * set 产品线列表
+     *
+     * @param serviceCodeList
+     */
+    public void setServiceCodeList(List<String> serviceCodeList) {
+        this.serviceCodeList = serviceCodeList;
+    }
+
+    /**
      * get 开始时间
      *
      * @return
@@ -240,6 +292,24 @@ filter name 为resourceIds表示查询多个资源的规则
      */
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    /**
+     * get 规则类型,默认查询1， 1表示资源监控，6表示站点监控,7表示可用性监控
+     *
+     * @return
+     */
+    public Long getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 规则类型,默认查询1， 1表示资源监控，6表示站点监控,7表示可用性监控
+     *
+     * @param ruleType
+     */
+    public void setRuleType(Long ruleType) {
+        this.ruleType = ruleType;
     }
 
     /**
@@ -324,6 +394,16 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
+     * set resourceId列表
+     *
+     * @param resourceIdList
+     */
+    public DescribeAlarmHistoryRequest resourceIdList(List<String> resourceIdList) {
+        this.resourceIdList = resourceIdList;
+        return this;
+    }
+
+    /**
      * set 规则Id
      *
      * @param alarmId
@@ -344,6 +424,16 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
+     * set 产品线列表
+     *
+     * @param serviceCodeList
+     */
+    public DescribeAlarmHistoryRequest serviceCodeList(List<String> serviceCodeList) {
+        this.serviceCodeList = serviceCodeList;
+        return this;
+    }
+
+    /**
      * set 开始时间
      *
      * @param startTime
@@ -360,6 +450,16 @@ filter name 为resourceIds表示查询多个资源的规则
      */
     public DescribeAlarmHistoryRequest endTime(String endTime) {
         this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 规则类型,默认查询1， 1表示资源监控，6表示站点监控,7表示可用性监控
+     *
+     * @param ruleType
+     */
+    public DescribeAlarmHistoryRequest ruleType(Long ruleType) {
+        this.ruleType = ruleType;
         return this;
     }
 
@@ -385,6 +485,30 @@ filter name 为resourceIds表示查询多个资源的规则
         return this;
     }
 
+
+    /**
+     * add item to resourceId列表
+     *
+     * @param resourceIdList
+     */
+    public void addResourceIdList(String resourceIdList) {
+        if (this.resourceIdList == null) {
+            this.resourceIdList = new ArrayList<>();
+        }
+        this.resourceIdList.add(resourceIdList);
+    }
+
+    /**
+     * add item to 产品线列表
+     *
+     * @param serviceCodeList
+     */
+    public void addServiceCodeList(String serviceCodeList) {
+        if (this.serviceCodeList == null) {
+            this.serviceCodeList = new ArrayList<>();
+        }
+        this.serviceCodeList.add(serviceCodeList);
+    }
 
     /**
      * add item to 服务码或资源Id列表

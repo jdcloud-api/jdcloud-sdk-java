@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamSnapshotNotifyConfigResponse;
 
 /**
- * 查询截图信息回调配置
+ * 查询截图回调配置
  */
 class DescribeLiveStreamSnapshotNotifyConfigExecutor extends JdcloudExecutor {
 

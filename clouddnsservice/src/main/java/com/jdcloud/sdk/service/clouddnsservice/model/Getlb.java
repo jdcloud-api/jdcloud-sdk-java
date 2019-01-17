@@ -36,11 +36,11 @@ public class Getlb  implements java.io.Serializable {
 
     /**
      * 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-true: 按权重分配负载&lt;br&gt;
-false: 均等负载
+true: 均等负载&lt;br&gt;
+false: 按权重分配负载
 
      */
-    private Boolean isBalance;
+    private Boolean balance;
 
     /**
      * 主机记录
@@ -70,26 +70,26 @@ false: 均等负载
 
     /**
      * get 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-true: 按权重分配负载&lt;br&gt;
-false: 均等负载
+true: 均等负载&lt;br&gt;
+false: 按权重分配负载
 
      *
      * @return
      */
-    public Boolean getIsBalance() {
-        return isBalance;
+    public Boolean getBalance() {
+        return balance;
     }
 
     /**
      * set 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-true: 按权重分配负载&lt;br&gt;
-false: 均等负载
+true: 均等负载&lt;br&gt;
+false: 按权重分配负载
 
      *
-     * @param isBalance
+     * @param balance
      */
-    public void setIsBalance(Boolean isBalance) {
-        this.isBalance = isBalance;
+    public void setBalance(Boolean balance) {
+        this.balance = balance;
     }
 
     /**
@@ -185,14 +185,14 @@ false: 均等负载
 
     /**
      * set 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-true: 按权重分配负载&lt;br&gt;
-false: 均等负载
+true: 均等负载&lt;br&gt;
+false: 按权重分配负载
 
      *
-     * @param isBalance
+     * @param balance
      */
-    public Getlb isBalance(Boolean isBalance) {
-        this.isBalance = isBalance;
+    public Getlb balance(Boolean balance) {
+        this.balance = balance;
         return this;
     }
 

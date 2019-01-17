@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除域名直播截图配置
+ * 删除域名截图配置
  */
 public class DeleteLiveStreamDomainSnapshotRequest extends JdcloudRequest implements java.io.Serializable {
 

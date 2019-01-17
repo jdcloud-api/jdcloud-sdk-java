@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.disk.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改云硬盘的名字或描述信息
+ * 修改云硬盘的名字或描述信息，名字或描述信息至少要指定一个。
  */
 public class ModifyDiskAttributeResult extends JdcloudResult implements java.io.Serializable {
 

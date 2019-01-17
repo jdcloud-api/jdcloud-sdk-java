@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVserverGroupReq;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVserverGroup;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVpcVServerGroupRequest extends JdcloudRequest implements java
      * Required:true
      */
     @Required
-    private CreateVserverGroupReq body;
+    private CreateVserverGroup vserverGroup;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVpcVServerGroupRequest extends JdcloudRequest implements java
      *
      * @return
      */
-    public CreateVserverGroupReq getBody() {
-        return body;
+    public CreateVserverGroup getVserverGroup() {
+        return vserverGroup;
     }
 
     /**
      * set 创建虚拟服务器组
      *
-     * @param body
+     * @param vserverGroup
      */
-    public void setBody(CreateVserverGroupReq body) {
-        this.body = body;
+    public void setVserverGroup(CreateVserverGroup vserverGroup) {
+        this.vserverGroup = vserverGroup;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVpcVServerGroupRequest extends JdcloudRequest implements java
     /**
      * set 创建虚拟服务器组
      *
-     * @param body
+     * @param vserverGroup
      */
-    public CreateVpcVServerGroupRequest body(CreateVserverGroupReq body) {
-        this.body = body;
+    public CreateVpcVServerGroupRequest vserverGroup(CreateVserverGroup vserverGroup) {
+        this.vserverGroup = vserverGroup;
         return this;
     }
 
