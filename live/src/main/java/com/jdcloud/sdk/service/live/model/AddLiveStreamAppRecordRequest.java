@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加app录制配置
+ * 添加APP录制配置
  */
 public class AddLiveStreamAppRecordRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -46,24 +46,34 @@ public class Disk  implements java.io.Serializable {
     private String az;
 
     /**
-     * 云硬盘名称
+     * 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      */
     private String name;
 
     /**
-     * 云硬盘描述
+     * 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      */
     private String description;
 
     /**
-     * 磁盘类型，取值为 ssd 或 premium-hdd
+     * 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
      */
     private String diskType;
 
     /**
-     * 磁盘大小，单位为 GiB
+     * 云硬盘大小，单位为 GiB
      */
     private Integer diskSizeGB;
+
+    /**
+     * 该云硬盘实际应用的iops值
+     */
+    private Integer iops;
+
+    /**
+     * 该云硬盘实际应用的吞吐量的数值
+     */
+    private Integer throughput;
 
     /**
      * 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
@@ -79,6 +89,21 @@ public class Disk  implements java.io.Serializable {
      * 创建该云硬盘的快照ID
      */
     private String snapshotId;
+
+    /**
+     * 云盘是否支持多挂载
+     */
+    private Boolean multiAttachable;
+
+    /**
+     * 云盘是否为加密盘
+     */
+    private Boolean encrypted;
+
+    /**
+     * 云盘是否被暂停（IOPS限制为极低）
+     */
+    private Boolean enable;
 
     /**
      * 创建云硬盘时间
@@ -133,7 +158,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘名称
+     * get 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
      * @return
      */
@@ -142,7 +167,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘名称
+     * set 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
      * @param name
      */
@@ -151,7 +176,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘描述
+     * get 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
      * @return
      */
@@ -160,7 +185,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘描述
+     * set 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
      * @param description
      */
@@ -169,7 +194,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * get 磁盘类型，取值为 ssd 或 premium-hdd
+     * get 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
      *
      * @return
      */
@@ -178,7 +203,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘类型，取值为 ssd 或 premium-hdd
+     * set 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
      *
      * @param diskType
      */
@@ -187,7 +212,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * get 磁盘大小，单位为 GiB
+     * get 云硬盘大小，单位为 GiB
      *
      * @return
      */
@@ -196,12 +221,48 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘大小，单位为 GiB
+     * set 云硬盘大小，单位为 GiB
      *
      * @param diskSizeGB
      */
     public void setDiskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
+    }
+
+    /**
+     * get 该云硬盘实际应用的iops值
+     *
+     * @return
+     */
+    public Integer getIops() {
+        return iops;
+    }
+
+    /**
+     * set 该云硬盘实际应用的iops值
+     *
+     * @param iops
+     */
+    public void setIops(Integer iops) {
+        this.iops = iops;
+    }
+
+    /**
+     * get 该云硬盘实际应用的吞吐量的数值
+     *
+     * @return
+     */
+    public Integer getThroughput() {
+        return throughput;
+    }
+
+    /**
+     * set 该云硬盘实际应用的吞吐量的数值
+     *
+     * @param throughput
+     */
+    public void setThroughput(Integer throughput) {
+        this.throughput = throughput;
     }
 
     /**
@@ -256,6 +317,60 @@ public class Disk  implements java.io.Serializable {
      */
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+    }
+
+    /**
+     * get 云盘是否支持多挂载
+     *
+     * @return
+     */
+    public Boolean getMultiAttachable() {
+        return multiAttachable;
+    }
+
+    /**
+     * set 云盘是否支持多挂载
+     *
+     * @param multiAttachable
+     */
+    public void setMultiAttachable(Boolean multiAttachable) {
+        this.multiAttachable = multiAttachable;
+    }
+
+    /**
+     * get 云盘是否为加密盘
+     *
+     * @return
+     */
+    public Boolean getEncrypted() {
+        return encrypted;
+    }
+
+    /**
+     * set 云盘是否为加密盘
+     *
+     * @param encrypted
+     */
+    public void setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+    }
+
+    /**
+     * get 云盘是否被暂停（IOPS限制为极低）
+     *
+     * @return
+     */
+    public Boolean getEnable() {
+        return enable;
+    }
+
+    /**
+     * set 云盘是否被暂停（IOPS限制为极低）
+     *
+     * @param enable
+     */
+    public void setEnable(Boolean enable) {
+        this.enable = enable;
     }
 
     /**
@@ -334,7 +449,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘名称
+     * set 云硬盘名称，只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
      * @param name
      */
@@ -344,7 +459,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘描述
+     * set 云硬盘描述，允许输入UTF-8编码下的全部字符，不超过256字符。
      *
      * @param description
      */
@@ -354,7 +469,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘类型，取值为 ssd 或 premium-hdd
+     * set 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
      *
      * @param diskType
      */
@@ -364,12 +479,32 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘大小，单位为 GiB
+     * set 云硬盘大小，单位为 GiB
      *
      * @param diskSizeGB
      */
     public Disk diskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
+        return this;
+    }
+
+    /**
+     * set 该云硬盘实际应用的iops值
+     *
+     * @param iops
+     */
+    public Disk iops(Integer iops) {
+        this.iops = iops;
+        return this;
+    }
+
+    /**
+     * set 该云硬盘实际应用的吞吐量的数值
+     *
+     * @param throughput
+     */
+    public Disk throughput(Integer throughput) {
+        this.throughput = throughput;
         return this;
     }
 
@@ -400,6 +535,36 @@ public class Disk  implements java.io.Serializable {
      */
     public Disk snapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+        return this;
+    }
+
+    /**
+     * set 云盘是否支持多挂载
+     *
+     * @param multiAttachable
+     */
+    public Disk multiAttachable(Boolean multiAttachable) {
+        this.multiAttachable = multiAttachable;
+        return this;
+    }
+
+    /**
+     * set 云盘是否为加密盘
+     *
+     * @param encrypted
+     */
+    public Disk encrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+
+    /**
+     * set 云盘是否被暂停（IOPS限制为极低）
+     *
+     * @param enable
+     */
+    public Disk enable(Boolean enable) {
+        this.enable = enable;
         return this;
     }
 

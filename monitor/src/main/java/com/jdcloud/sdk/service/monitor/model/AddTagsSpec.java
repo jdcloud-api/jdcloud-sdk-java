@@ -36,7 +36,7 @@ public class AddTagsSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 校验码。调用此API前需找云监控提供
+     * 应用码。调用此API前需找云监控提供
      * Required:true
      */
     @Required
@@ -50,11 +50,18 @@ public class AddTagsSpec  implements java.io.Serializable {
     private String groupCode;
 
     /**
-     * 资源列表。总资源数不能超过上限500
+     * 资源列表。总资源不能超过100个
      * Required:true
      */
     @Required
     private List<String> resourceIds;
+
+    /**
+     * 资源的产品线
+     * Required:true
+     */
+    @Required
+    private String serviceCode;
 
     /**
      * 标签名称。调用此API前需要与云监控确认可以使用的标签名称
@@ -72,7 +79,7 @@ public class AddTagsSpec  implements java.io.Serializable {
 
 
     /**
-     * get 校验码。调用此API前需找云监控提供
+     * get 应用码。调用此API前需找云监控提供
      *
      * @return
      */
@@ -81,7 +88,7 @@ public class AddTagsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 校验码。调用此API前需找云监控提供
+     * set 应用码。调用此API前需找云监控提供
      *
      * @param appCode
      */
@@ -108,7 +115,7 @@ public class AddTagsSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 资源列表。总资源数不能超过上限500
+     * get 资源列表。总资源不能超过100个
      *
      * @return
      */
@@ -117,12 +124,30 @@ public class AddTagsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 资源列表。总资源数不能超过上限500
+     * set 资源列表。总资源不能超过100个
      *
      * @param resourceIds
      */
     public void setResourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
+    }
+
+    /**
+     * get 资源的产品线
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 资源的产品线
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
     }
 
     /**
@@ -163,7 +188,7 @@ public class AddTagsSpec  implements java.io.Serializable {
 
 
     /**
-     * set 校验码。调用此API前需找云监控提供
+     * set 应用码。调用此API前需找云监控提供
      *
      * @param appCode
      */
@@ -183,12 +208,22 @@ public class AddTagsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 资源列表。总资源数不能超过上限500
+     * set 资源列表。总资源不能超过100个
      *
      * @param resourceIds
      */
     public AddTagsSpec resourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
+        return this;
+    }
+
+    /**
+     * set 资源的产品线
+     *
+     * @param serviceCode
+     */
+    public AddTagsSpec serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 
@@ -214,7 +249,7 @@ public class AddTagsSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 资源列表。总资源数不能超过上限500
+     * add item to 资源列表。总资源不能超过100个
      *
      * @param resourceId
      */

@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateCloudInfoReq;
+import com.jdcloud.sdk.service.jdfusion.model.CloudInfo;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class RegistCloudInfoRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
-    private CreateCloudInfoReq body;
+    private CloudInfo cloud;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class RegistCloudInfoRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public CreateCloudInfoReq getBody() {
-        return body;
+    public CloudInfo getCloud() {
+        return cloud;
     }
 
     /**
      * set 
      *
-     * @param body
+     * @param cloud
      */
-    public void setBody(CreateCloudInfoReq body) {
-        this.body = body;
+    public void setCloud(CloudInfo cloud) {
+        this.cloud = cloud;
     }
 
     /**
@@ -90,10 +90,10 @@ public class RegistCloudInfoRequest extends JdcloudRequest implements java.io.Se
     /**
      * set 
      *
-     * @param body
+     * @param cloud
      */
-    public RegistCloudInfoRequest body(CreateCloudInfoReq body) {
-        this.body = body;
+    public RegistCloudInfoRequest cloud(CloudInfo cloud) {
+        this.cloud = cloud;
         return this;
     }
 

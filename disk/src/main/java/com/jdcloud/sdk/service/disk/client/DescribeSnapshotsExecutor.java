@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.disk.model.DescribeSnapshotsResponse;
 
 /**
- * 查询云硬盘快照列表
+ * 查询云硬盘快照列表，filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
  */
 class DescribeSnapshotsExecutor extends JdcloudExecutor {
 

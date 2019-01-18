@@ -31,27 +31,27 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.iothub.model.ModuleEnrollRequest;
-import com.jdcloud.sdk.service.iothub.model.ModuleEnrollResponse;
-import com.jdcloud.sdk.service.iothub.client.ModuleEnrollExecutor;
-import com.jdcloud.sdk.service.iothub.model.ModuleStateRequest;
-import com.jdcloud.sdk.service.iothub.model.ModuleStateResponse;
-import com.jdcloud.sdk.service.iothub.client.ModuleStateExecutor;
 import com.jdcloud.sdk.service.iothub.model.DevicesEnrollRequest;
 import com.jdcloud.sdk.service.iothub.model.DevicesEnrollResponse;
 import com.jdcloud.sdk.service.iothub.client.DevicesEnrollExecutor;
-import com.jdcloud.sdk.service.iothub.model.DeviceStateRequest;
-import com.jdcloud.sdk.service.iothub.model.DeviceStateResponse;
-import com.jdcloud.sdk.service.iothub.client.DeviceStateExecutor;
 import com.jdcloud.sdk.service.iothub.model.DeviceCommandRequest;
 import com.jdcloud.sdk.service.iothub.model.DeviceCommandResponse;
 import com.jdcloud.sdk.service.iothub.client.DeviceCommandExecutor;
-import com.jdcloud.sdk.service.iothub.model.DeviceActivateRequest;
-import com.jdcloud.sdk.service.iothub.model.DeviceActivateResponse;
-import com.jdcloud.sdk.service.iothub.client.DeviceActivateExecutor;
 import com.jdcloud.sdk.service.iothub.model.OmEnrollRequest;
 import com.jdcloud.sdk.service.iothub.model.OmEnrollResponse;
 import com.jdcloud.sdk.service.iothub.client.OmEnrollExecutor;
+import com.jdcloud.sdk.service.iothub.model.DeviceActivateRequest;
+import com.jdcloud.sdk.service.iothub.model.DeviceActivateResponse;
+import com.jdcloud.sdk.service.iothub.client.DeviceActivateExecutor;
+import com.jdcloud.sdk.service.iothub.model.ModuleStateRequest;
+import com.jdcloud.sdk.service.iothub.model.ModuleStateResponse;
+import com.jdcloud.sdk.service.iothub.client.ModuleStateExecutor;
+import com.jdcloud.sdk.service.iothub.model.ModuleEnrollRequest;
+import com.jdcloud.sdk.service.iothub.model.ModuleEnrollResponse;
+import com.jdcloud.sdk.service.iothub.client.ModuleEnrollExecutor;
+import com.jdcloud.sdk.service.iothub.model.DeviceStateRequest;
+import com.jdcloud.sdk.service.iothub.model.DeviceStateResponse;
+import com.jdcloud.sdk.service.iothub.client.DeviceStateExecutor;
 
 /**
  * iothubClient
@@ -60,7 +60,7 @@ public class IothubClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.8";
+    public final static String ClientVersion = "1.0.9";
     public final static String DefaultEndpoint = "iothub.jdcloud-api.com";
     public final static String ServiceName = "iothub";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -103,30 +103,6 @@ public class IothubClient extends JdcloudClient {
 
 
     /**
-     * 客户用该接口可以登记模块
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModuleEnrollResponse moduleEnroll(ModuleEnrollRequest request) throws JdcloudSdkException {
-        return new ModuleEnrollExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 客户用该接口可以修改模块预期状态
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModuleStateResponse moduleState(ModuleStateRequest request) throws JdcloudSdkException {
-        return new ModuleStateExecutor().client(this).execute(request);
-    }
-
-    /**
      * 客户用该接口可以批量登记设备
 
      *
@@ -136,18 +112,6 @@ public class IothubClient extends JdcloudClient {
      */
     public DevicesEnrollResponse devicesEnroll(DevicesEnrollRequest request) throws JdcloudSdkException {
         return new DevicesEnrollExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 客户用该接口可以修改设备预期状态
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeviceStateResponse deviceState(DeviceStateRequest request) throws JdcloudSdkException {
-        return new DeviceStateExecutor().client(this).execute(request);
     }
 
     /**
@@ -163,6 +127,18 @@ public class IothubClient extends JdcloudClient {
     }
 
     /**
+     * 物模型注册接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OmEnrollResponse omEnroll(OmEnrollRequest request) throws JdcloudSdkException {
+        return new OmEnrollExecutor().client(this).execute(request);
+    }
+
+    /**
      * 激活一个设备，包括Edge、Dragon和普通设备
 
      *
@@ -175,15 +151,39 @@ public class IothubClient extends JdcloudClient {
     }
 
     /**
-     * 物模型注册接口
+     * 客户用该接口可以修改模块预期状态
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public OmEnrollResponse omEnroll(OmEnrollRequest request) throws JdcloudSdkException {
-        return new OmEnrollExecutor().client(this).execute(request);
+    public ModuleStateResponse moduleState(ModuleStateRequest request) throws JdcloudSdkException {
+        return new ModuleStateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 客户用该接口可以登记模块
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModuleEnrollResponse moduleEnroll(ModuleEnrollRequest request) throws JdcloudSdkException {
+        return new ModuleEnrollExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 客户用该接口可以修改设备预期状态
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeviceStateResponse deviceState(DeviceStateRequest request) throws JdcloudSdkException {
+        return new DeviceStateExecutor().client(this).execute(request);
     }
 
 

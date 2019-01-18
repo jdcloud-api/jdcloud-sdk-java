@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateSlbReq;
+import com.jdcloud.sdk.service.jdfusion.model.SlbInfo;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVpcSlbRequest extends JdcloudRequest implements java.io.Seria
      * Required:true
      */
     @Required
-    private CreateSlbReq body;
+    private SlbInfo slb;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVpcSlbRequest extends JdcloudRequest implements java.io.Seria
      *
      * @return
      */
-    public CreateSlbReq getBody() {
-        return body;
+    public SlbInfo getSlb() {
+        return slb;
     }
 
     /**
      * set 创建SLB
      *
-     * @param body
+     * @param slb
      */
-    public void setBody(CreateSlbReq body) {
-        this.body = body;
+    public void setSlb(SlbInfo slb) {
+        this.slb = slb;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVpcSlbRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 创建SLB
      *
-     * @param body
+     * @param slb
      */
-    public CreateVpcSlbRequest body(CreateSlbReq body) {
-        this.body = body;
+    public CreateVpcSlbRequest slb(SlbInfo slb) {
+        this.slb = slb;
         return this;
     }
 

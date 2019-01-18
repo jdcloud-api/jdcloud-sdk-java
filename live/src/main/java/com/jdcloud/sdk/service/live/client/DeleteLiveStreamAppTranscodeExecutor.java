@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppTranscodeResponse;
 
 /**
- * 删除app转码配置
+ * 删除APP转码配置
  */
 class DeleteLiveStreamAppTranscodeExecutor extends JdcloudExecutor {
 

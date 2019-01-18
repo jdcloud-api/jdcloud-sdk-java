@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.UnassociateEipAddressReq;
+import com.jdcloud.sdk.service.jdfusion.model.UnassociateEipAddress;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class DisassociateVpcEipByIdRequest extends JdcloudRequest implements jav
      * Required:true
      */
     @Required
-    private UnassociateEipAddressReq body;
+    private UnassociateEipAddress unassociate;
 
     /**
      * 地域ID
@@ -62,17 +62,17 @@ public class DisassociateVpcEipByIdRequest extends JdcloudRequest implements jav
      *
      * @return
      */
-    public UnassociateEipAddressReq getBody() {
-        return body;
+    public UnassociateEipAddress getUnassociate() {
+        return unassociate;
     }
 
     /**
      * set 解绑公网IP
      *
-     * @param body
+     * @param unassociate
      */
-    public void setBody(UnassociateEipAddressReq body) {
-        this.body = body;
+    public void setUnassociate(UnassociateEipAddress unassociate) {
+        this.unassociate = unassociate;
     }
 
     /**
@@ -115,10 +115,10 @@ public class DisassociateVpcEipByIdRequest extends JdcloudRequest implements jav
     /**
      * set 解绑公网IP
      *
-     * @param body
+     * @param unassociate
      */
-    public DisassociateVpcEipByIdRequest body(UnassociateEipAddressReq body) {
-        this.body = body;
+    public DisassociateVpcEipByIdRequest unassociate(UnassociateEipAddress unassociate) {
+        this.unassociate = unassociate;
         return this;
     }
 

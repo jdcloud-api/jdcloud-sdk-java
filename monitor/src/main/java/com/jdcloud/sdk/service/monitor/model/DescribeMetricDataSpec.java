@@ -36,9 +36,14 @@ public class DescribeMetricDataSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     * 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
      */
     private String aggrType;
+
+    /**
+     * 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     */
+    private String downSampleType;
 
     /**
      * 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
@@ -51,6 +56,12 @@ in: query
 in: query
      */
     private Boolean groupBy;
+
+    /**
+     * 是否求速率
+in: query
+     */
+    private Boolean rate;
 
     /**
      * 资源的uuid
@@ -67,26 +78,26 @@ in: query
     private String serviceCode;
 
     /**
-     * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
 in: query
      */
     private String startTime;
 
     /**
-     * 自定义标签
+     * 自定义标签/tag；至少要传一个tag，且tag.Values不为空
 in: query
      */
     private List<TagFilter> tags;
 
     /**
-     * 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
+     * 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
 in: query
      */
     private String timeInterval;
 
 
     /**
-     * get 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     * get 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
      *
      * @return
      */
@@ -95,12 +106,30 @@ in: query
     }
 
     /**
-     * set 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     * set 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
      *
      * @param aggrType
      */
     public void setAggrType(String aggrType) {
         this.aggrType = aggrType;
+    }
+
+    /**
+     * get 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     *
+     * @return
+     */
+    public String getDownSampleType() {
+        return downSampleType;
+    }
+
+    /**
+     * set 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     *
+     * @param downSampleType
+     */
+    public void setDownSampleType(String downSampleType) {
+        this.downSampleType = downSampleType;
     }
 
     /**
@@ -144,6 +173,26 @@ in: query
     }
 
     /**
+     * get 是否求速率
+in: query
+     *
+     * @return
+     */
+    public Boolean getRate() {
+        return rate;
+    }
+
+    /**
+     * set 是否求速率
+in: query
+     *
+     * @param rate
+     */
+    public void setRate(Boolean rate) {
+        this.rate = rate;
+    }
+
+    /**
      * get 资源的uuid
      *
      * @return
@@ -180,7 +229,7 @@ in: query
     }
 
     /**
-     * get 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * get 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
 in: query
      *
      * @return
@@ -190,7 +239,7 @@ in: query
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
 in: query
      *
      * @param startTime
@@ -200,7 +249,7 @@ in: query
     }
 
     /**
-     * get 自定义标签
+     * get 自定义标签/tag；至少要传一个tag，且tag.Values不为空
 in: query
      *
      * @return
@@ -210,7 +259,7 @@ in: query
     }
 
     /**
-     * set 自定义标签
+     * set 自定义标签/tag；至少要传一个tag，且tag.Values不为空
 in: query
      *
      * @param tags
@@ -220,7 +269,7 @@ in: query
     }
 
     /**
-     * get 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
+     * get 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
 in: query
      *
      * @return
@@ -230,7 +279,7 @@ in: query
     }
 
     /**
-     * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
+     * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
 in: query
      *
      * @param timeInterval
@@ -241,12 +290,22 @@ in: query
 
 
     /**
-     * set 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     * set 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
      *
      * @param aggrType
      */
     public DescribeMetricDataSpec aggrType(String aggrType) {
         this.aggrType = aggrType;
+        return this;
+    }
+
+    /**
+     * set 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     *
+     * @param downSampleType
+     */
+    public DescribeMetricDataSpec downSampleType(String downSampleType) {
+        this.downSampleType = downSampleType;
         return this;
     }
 
@@ -273,6 +332,17 @@ in: query
     }
 
     /**
+     * set 是否求速率
+in: query
+     *
+     * @param rate
+     */
+    public DescribeMetricDataSpec rate(Boolean rate) {
+        this.rate = rate;
+        return this;
+    }
+
+    /**
      * set 资源的uuid
      *
      * @param resourceId
@@ -293,7 +363,7 @@ in: query
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
 in: query
      *
      * @param startTime
@@ -304,7 +374,7 @@ in: query
     }
 
     /**
-     * set 自定义标签
+     * set 自定义标签/tag；至少要传一个tag，且tag.Values不为空
 in: query
      *
      * @param tags
@@ -315,7 +385,7 @@ in: query
     }
 
     /**
-     * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
+     * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
 in: query
      *
      * @param timeInterval
@@ -327,7 +397,7 @@ in: query
 
 
     /**
-     * add item to 自定义标签
+     * add item to 自定义标签/tag；至少要传一个tag，且tag.Values不为空
 in: query
      *
      * @param tag

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamAppWatermarkResponse;
 
 /**
- * 添加app水印配置
+ * 添加APP水印配置
  */
 class AddLiveStreamAppWatermarkExecutor extends JdcloudExecutor {
 

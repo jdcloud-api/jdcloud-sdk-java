@@ -27,46 +27,13 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除直播水印模板
+ * 删除用户自定义水印模板
  */
 public class DeleteCustomLiveStreamWatermarkTemplateResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 录制模板自定义名称
-     */
-    private String template;
 
-
-    /**
-     * get 录制模板自定义名称
-     *
-     * @return
-     */
-    public String getTemplate() {
-        return template;
-    }
-
-    /**
-     * set 录制模板自定义名称
-     *
-     * @param template
-     */
-    public void setTemplate(String template) {
-        this.template = template;
-    }
-
-
-    /**
-     * set 录制模板自定义名称
-     *
-     * @param template
-     */
-    public DeleteCustomLiveStreamWatermarkTemplateResult template(String template) {
-        this.template = template;
-        return this;
-    }
 
 
 }

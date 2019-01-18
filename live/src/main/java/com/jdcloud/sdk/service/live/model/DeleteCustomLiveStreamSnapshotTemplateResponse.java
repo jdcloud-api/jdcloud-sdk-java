@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除直播截图模板
+ * 删除用户自定义直播截图模板
  */
 public class DeleteCustomLiveStreamSnapshotTemplateResponse extends JdcloudResponse<DeleteCustomLiveStreamSnapshotTemplateResult> implements java.io.Serializable {
 

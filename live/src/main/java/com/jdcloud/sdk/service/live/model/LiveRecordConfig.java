@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.live.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * liveRecordConfig
@@ -40,14 +38,19 @@ public class LiveRecordConfig  implements java.io.Serializable {
     private String publishDomain;
 
     /**
-     * 录制模板配置
-     */
-    private String recordConfig;
-
-    /**
      * 推流域名
      */
-    private List<RecordApp> app;
+    private String appName;
+
+    /**
+     * 直播流名称
+     */
+    private String streamName;
+
+    /**
+     * recordConfig
+     */
+    private String recordConfig;
 
 
     /**
@@ -69,7 +72,43 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * get 录制模板配置
+     * get 推流域名
+     *
+     * @return
+     */
+    public String getAppName() {
+        return appName;
+    }
+
+    /**
+     * set 推流域名
+     *
+     * @param appName
+     */
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    /**
+     * get 直播流名称
+     *
+     * @return
+     */
+    public String getStreamName() {
+        return streamName;
+    }
+
+    /**
+     * set 直播流名称
+     *
+     * @param streamName
+     */
+    public void setStreamName(String streamName) {
+        this.streamName = streamName;
+    }
+
+    /**
+     * get recordConfig
      *
      * @return
      */
@@ -78,30 +117,12 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 录制模板配置
+     * set recordConfig
      *
      * @param recordConfig
      */
     public void setRecordConfig(String recordConfig) {
         this.recordConfig = recordConfig;
-    }
-
-    /**
-     * get 推流域名
-     *
-     * @return
-     */
-    public List<RecordApp> getApp() {
-        return app;
-    }
-
-    /**
-     * set 推流域名
-     *
-     * @param app
-     */
-    public void setApp(List<RecordApp> app) {
-        this.app = app;
     }
 
 
@@ -116,7 +137,27 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 录制模板配置
+     * set 推流域名
+     *
+     * @param appName
+     */
+    public LiveRecordConfig appName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+
+    /**
+     * set 直播流名称
+     *
+     * @param streamName
+     */
+    public LiveRecordConfig streamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+
+    /**
+     * set recordConfig
      *
      * @param recordConfig
      */
@@ -125,27 +166,5 @@ public class LiveRecordConfig  implements java.io.Serializable {
         return this;
     }
 
-    /**
-     * set 推流域名
-     *
-     * @param app
-     */
-    public LiveRecordConfig app(List<RecordApp> app) {
-        this.app = app;
-        return this;
-    }
-
-
-    /**
-     * add item to 推流域名
-     *
-     * @param app
-     */
-    public void addApp(RecordApp app) {
-        if (this.app == null) {
-            this.app = new ArrayList<>();
-        }
-        this.app.add(app);
-    }
 
 }

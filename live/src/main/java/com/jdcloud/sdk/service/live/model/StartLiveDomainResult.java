@@ -33,40 +33,7 @@ public class StartLiveDomainResult extends JdcloudResult implements java.io.Seri
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 要启动的域名
-     */
-    private String publishDomain;
 
-
-    /**
-     * get 要启动的域名
-     *
-     * @return
-     */
-    public String getPublishDomain() {
-        return publishDomain;
-    }
-
-    /**
-     * set 要启动的域名
-     *
-     * @param publishDomain
-     */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-    }
-
-
-    /**
-     * set 要启动的域名
-     *
-     * @param publishDomain
-     */
-    public StartLiveDomainResult publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-        return this;
-    }
 
 
 }

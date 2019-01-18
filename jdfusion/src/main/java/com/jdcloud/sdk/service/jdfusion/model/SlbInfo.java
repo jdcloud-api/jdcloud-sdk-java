@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.jdfusion.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 负载均衡实例描述
@@ -78,14 +80,9 @@ public class SlbInfo  implements java.io.Serializable {
     private String networkType;
 
     /**
-     * 实例的主可用区ID。
+     * 可用区域。
      */
-    private String masterAz;
-
-    /**
-     * 实例的备可用区ID。
-     */
-    private String slaveAz;
+    private List<String> azs;
 
     /**
      * 创建时间
@@ -256,39 +253,21 @@ public class SlbInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 实例的主可用区ID。
+     * get 可用区域。
      *
      * @return
      */
-    public String getMasterAz() {
-        return masterAz;
+    public List<String> getAzs() {
+        return azs;
     }
 
     /**
-     * set 实例的主可用区ID。
+     * set 可用区域。
      *
-     * @param masterAz
+     * @param azs
      */
-    public void setMasterAz(String masterAz) {
-        this.masterAz = masterAz;
-    }
-
-    /**
-     * get 实例的备可用区ID。
-     *
-     * @return
-     */
-    public String getSlaveAz() {
-        return slaveAz;
-    }
-
-    /**
-     * set 实例的备可用区ID。
-     *
-     * @param slaveAz
-     */
-    public void setSlaveAz(String slaveAz) {
-        this.slaveAz = slaveAz;
+    public void setAzs(List<String> azs) {
+        this.azs = azs;
     }
 
     /**
@@ -401,22 +380,12 @@ public class SlbInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 实例的主可用区ID。
+     * set 可用区域。
      *
-     * @param masterAz
+     * @param azs
      */
-    public SlbInfo masterAz(String masterAz) {
-        this.masterAz = masterAz;
-        return this;
-    }
-
-    /**
-     * set 实例的备可用区ID。
-     *
-     * @param slaveAz
-     */
-    public SlbInfo slaveAz(String slaveAz) {
-        this.slaveAz = slaveAz;
+    public SlbInfo azs(List<String> azs) {
+        this.azs = azs;
         return this;
     }
 
@@ -430,5 +399,17 @@ public class SlbInfo  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 可用区域。
+     *
+     * @param az
+     */
+    public void addAz(String az) {
+        if (this.azs == null) {
+            this.azs = new ArrayList<>();
+        }
+        this.azs.add(az);
+    }
 
 }

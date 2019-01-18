@@ -27,7 +27,10 @@ package com.jdcloud.sdk.service.disk.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除单个云硬盘
+ * -   删除一块按配置计费的云硬盘，云盘类型包括高效云盘、SSD云盘、通用型SSD、性能型SSD和容量型HDD。
+-   删除云盘时，云盘的状态必须为 待挂载（Available）。
+-   云盘被删除后，云硬盘快照可以被保留。
+
  */
 public class DeleteDiskResult extends JdcloudResult implements java.io.Serializable {
 

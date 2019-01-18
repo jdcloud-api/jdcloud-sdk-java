@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.disk.model.Disk;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询云硬盘信息详情
+ * 查询某一块云硬盘的信息详情
  */
 public class DescribeDiskResult extends JdcloudResult implements java.io.Serializable {
 

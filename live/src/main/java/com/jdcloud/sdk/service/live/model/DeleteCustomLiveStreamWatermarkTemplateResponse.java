@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除直播水印模板
+ * 删除用户自定义水印模板
  */
 public class DeleteCustomLiveStreamWatermarkTemplateResponse extends JdcloudResponse<DeleteCustomLiveStreamWatermarkTemplateResult> implements java.io.Serializable {
 

@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcReq;
+import com.jdcloud.sdk.service.jdfusion.model.VpcInfo;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
      * Required:true
      */
     @Required
-    private CreateVpcReq body;
+    private VpcInfo vpc;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @return
      */
-    public CreateVpcReq getBody() {
-        return body;
+    public VpcInfo getVpc() {
+        return vpc;
     }
 
     /**
      * set 创建VPC
      *
-     * @param body
+     * @param vpc
      */
-    public void setBody(CreateVpcReq body) {
-        this.body = body;
+    public void setVpc(VpcInfo vpc) {
+        this.vpc = vpc;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * set 创建VPC
      *
-     * @param body
+     * @param vpc
      */
-    public CreateVpcRequest body(CreateVpcReq body) {
-        this.body = body;
+    public CreateVpcRequest vpc(VpcInfo vpc) {
+        this.vpc = vpc;
         return this;
     }
 

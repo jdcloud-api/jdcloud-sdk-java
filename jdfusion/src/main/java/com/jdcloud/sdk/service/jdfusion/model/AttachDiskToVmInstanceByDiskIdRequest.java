@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.AttachDataDiskReq;
+import com.jdcloud.sdk.service.jdfusion.model.AttachDataDisk;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class AttachDiskToVmInstanceByDiskIdRequest extends JdcloudRequest implem
      * Required:true
      */
     @Required
-    private AttachDataDiskReq body;
+    private AttachDataDisk attach;
 
     /**
      * 地域ID
@@ -62,17 +62,17 @@ public class AttachDiskToVmInstanceByDiskIdRequest extends JdcloudRequest implem
      *
      * @return
      */
-    public AttachDataDiskReq getBody() {
-        return body;
+    public AttachDataDisk getAttach() {
+        return attach;
     }
 
     /**
      * set 云硬盘挂载至虚拟机
      *
-     * @param body
+     * @param attach
      */
-    public void setBody(AttachDataDiskReq body) {
-        this.body = body;
+    public void setAttach(AttachDataDisk attach) {
+        this.attach = attach;
     }
 
     /**
@@ -115,10 +115,10 @@ public class AttachDiskToVmInstanceByDiskIdRequest extends JdcloudRequest implem
     /**
      * set 云硬盘挂载至虚拟机
      *
-     * @param body
+     * @param attach
      */
-    public AttachDiskToVmInstanceByDiskIdRequest body(AttachDataDiskReq body) {
-        this.body = body;
+    public AttachDiskToVmInstanceByDiskIdRequest attach(AttachDataDisk attach) {
+        this.attach = attach;
         return this;
     }
 

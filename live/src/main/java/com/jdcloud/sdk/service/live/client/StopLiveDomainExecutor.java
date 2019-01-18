@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.StopLiveDomainResponse;
 
 /**
- * 停止域名
+ * 停用域名
  */
 class StopLiveDomainExecutor extends JdcloudExecutor {
 

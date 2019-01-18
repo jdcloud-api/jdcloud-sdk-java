@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.DetachDataDiskReq;
+import com.jdcloud.sdk.service.jdfusion.model.DetachDataDisk;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class DetachDiskToVmInstanceByDiskIdRequest extends JdcloudRequest implem
      * Required:true
      */
     @Required
-    private DetachDataDiskReq body;
+    private DetachDataDisk detach;
 
     /**
      * 地域ID
@@ -62,17 +62,17 @@ public class DetachDiskToVmInstanceByDiskIdRequest extends JdcloudRequest implem
      *
      * @return
      */
-    public DetachDataDiskReq getBody() {
-        return body;
+    public DetachDataDisk getDetach() {
+        return detach;
     }
 
     /**
      * set 从虚拟机卸载云硬盘
      *
-     * @param body
+     * @param detach
      */
-    public void setBody(DetachDataDiskReq body) {
-        this.body = body;
+    public void setDetach(DetachDataDisk detach) {
+        this.detach = detach;
     }
 
     /**
@@ -115,10 +115,10 @@ public class DetachDiskToVmInstanceByDiskIdRequest extends JdcloudRequest implem
     /**
      * set 从虚拟机卸载云硬盘
      *
-     * @param body
+     * @param detach
      */
-    public DetachDiskToVmInstanceByDiskIdRequest body(DetachDataDiskReq body) {
-        this.body = body;
+    public DetachDiskToVmInstanceByDiskIdRequest detach(DetachDataDisk detach) {
+        this.detach = detach;
         return this;
     }
 

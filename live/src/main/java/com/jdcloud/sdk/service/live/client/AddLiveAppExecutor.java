@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddLiveAppResponse;
 
 /**
- * 添加 app 模板
+ * 添加直播APP
  */
 class AddLiveAppExecutor extends JdcloudExecutor {
 

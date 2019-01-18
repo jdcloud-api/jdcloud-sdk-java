@@ -37,12 +37,12 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码, 默认为1, 取值范围：[1,∞)
+     * 页码；默认为1；取值范围[1, 100000]
      */
     private Integer pageNum;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,100]
+     * 分页大小；默认为10；取值范围[10, 100]
      */
     private Integer pageSize;
 
@@ -53,7 +53,7 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
 
 
     /**
-     * get 页码, 默认为1, 取值范围：[1,∞)
+     * get 页码；默认为1；取值范围[1, 100000]
      *
      * @return
      */
@@ -62,7 +62,7 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 页码；默认为1；取值范围[1, 100000]
      *
      * @param pageNum
      */
@@ -71,7 +71,7 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,100]
+     * get 分页大小；默认为10；取值范围[10, 100]
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -108,7 +108,7 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
 
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 页码；默认为1；取值范围[1, 100000]
      *
      * @param pageNum
      */
@@ -118,7 +118,7 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */

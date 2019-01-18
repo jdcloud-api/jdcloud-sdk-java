@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除录制模板
+ * 删除用户自定义录制模板
  */
 public class DeleteCustomLiveStreamRecordTemplateResponse extends JdcloudResponse<DeleteCustomLiveStreamRecordTemplateResult> implements java.io.Serializable {
 

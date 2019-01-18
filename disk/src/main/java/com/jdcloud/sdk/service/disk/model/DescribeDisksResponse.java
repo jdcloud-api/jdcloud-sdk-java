@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.disk.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询云硬盘列表
+ * -   查询您已经创建的云硬盘。
+-   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
+
  */
 public class DescribeDisksResponse extends JdcloudResponse<DescribeDisksResult> implements java.io.Serializable {
 

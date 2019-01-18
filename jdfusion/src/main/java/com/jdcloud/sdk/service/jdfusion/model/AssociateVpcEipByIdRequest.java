@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.AssociateEipAddressReq;
+import com.jdcloud.sdk.service.jdfusion.model.AssociateEipAddress;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class AssociateVpcEipByIdRequest extends JdcloudRequest implements java.i
      * Required:true
      */
     @Required
-    private AssociateEipAddressReq body;
+    private AssociateEipAddress associate;
 
     /**
      * 地域ID
@@ -62,17 +62,17 @@ public class AssociateVpcEipByIdRequest extends JdcloudRequest implements java.i
      *
      * @return
      */
-    public AssociateEipAddressReq getBody() {
-        return body;
+    public AssociateEipAddress getAssociate() {
+        return associate;
     }
 
     /**
      * set 弹性公网IP绑定到虚拟机
      *
-     * @param body
+     * @param associate
      */
-    public void setBody(AssociateEipAddressReq body) {
-        this.body = body;
+    public void setAssociate(AssociateEipAddress associate) {
+        this.associate = associate;
     }
 
     /**
@@ -115,10 +115,10 @@ public class AssociateVpcEipByIdRequest extends JdcloudRequest implements java.i
     /**
      * set 弹性公网IP绑定到虚拟机
      *
-     * @param body
+     * @param associate
      */
-    public AssociateVpcEipByIdRequest body(AssociateEipAddressReq body) {
-        this.body = body;
+    public AssociateVpcEipByIdRequest associate(AssociateEipAddress associate) {
+        this.associate = associate;
         return this;
     }
 

@@ -33,40 +33,7 @@ public class DeleteLiveStreamDomainTranscodeResult extends JdcloudResult impleme
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 直播的推流域名
-     */
-    private String publishDomain;
 
-
-    /**
-     * get 直播的推流域名
-     *
-     * @return
-     */
-    public String getPublishDomain() {
-        return publishDomain;
-    }
-
-    /**
-     * set 直播的推流域名
-     *
-     * @param publishDomain
-     */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-    }
-
-
-    /**
-     * set 直播的推流域名
-     *
-     * @param publishDomain
-     */
-    public DeleteLiveStreamDomainTranscodeResult publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-        return this;
-    }
 
 
 }

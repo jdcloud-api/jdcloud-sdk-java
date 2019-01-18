@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateNetInterfaceReq;
+import com.jdcloud.sdk.service.jdfusion.model.CreateNetInterface;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVpcNetworkInterfaceRequest extends JdcloudRequest implements 
      * Required:true
      */
     @Required
-    private CreateNetInterfaceReq body;
+    private CreateNetInterface netInterface;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVpcNetworkInterfaceRequest extends JdcloudRequest implements 
      *
      * @return
      */
-    public CreateNetInterfaceReq getBody() {
-        return body;
+    public CreateNetInterface getNetInterface() {
+        return netInterface;
     }
 
     /**
      * set 创建网卡
      *
-     * @param body
+     * @param netInterface
      */
-    public void setBody(CreateNetInterfaceReq body) {
-        this.body = body;
+    public void setNetInterface(CreateNetInterface netInterface) {
+        this.netInterface = netInterface;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVpcNetworkInterfaceRequest extends JdcloudRequest implements 
     /**
      * set 创建网卡
      *
-     * @param body
+     * @param netInterface
      */
-    public CreateVpcNetworkInterfaceRequest body(CreateNetInterfaceReq body) {
-        this.body = body;
+    public CreateVpcNetworkInterfaceRequest netInterface(CreateNetInterface netInterface) {
+        this.netInterface = netInterface;
         return this;
     }
 

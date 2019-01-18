@@ -45,7 +45,7 @@ public class VpcInfo  implements java.io.Serializable {
     /**
      * 地址范围
      */
-    private String addressPrefix;
+    private String cidrBlock;
 
     /**
      * VPC 描述
@@ -104,17 +104,17 @@ public class VpcInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public String getAddressPrefix() {
-        return addressPrefix;
+    public String getCidrBlock() {
+        return cidrBlock;
     }
 
     /**
      * set 地址范围
      *
-     * @param addressPrefix
+     * @param cidrBlock
      */
-    public void setAddressPrefix(String addressPrefix) {
-        this.addressPrefix = addressPrefix;
+    public void setCidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
     }
 
     /**
@@ -195,10 +195,10 @@ public class VpcInfo  implements java.io.Serializable {
     /**
      * set 地址范围
      *
-     * @param addressPrefix
+     * @param cidrBlock
      */
-    public VpcInfo addressPrefix(String addressPrefix) {
-        this.addressPrefix = addressPrefix;
+    public VpcInfo cidrBlock(String cidrBlock) {
+        this.cidrBlock = cidrBlock;
         return this;
     }
 

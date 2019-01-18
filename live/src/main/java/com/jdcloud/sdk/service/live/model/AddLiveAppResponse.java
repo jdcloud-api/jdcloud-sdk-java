@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 添加 app 模板
+ * 添加直播APP
  */
 public class AddLiveAppResponse extends JdcloudResponse<AddLiveAppResult> implements java.io.Serializable {
 

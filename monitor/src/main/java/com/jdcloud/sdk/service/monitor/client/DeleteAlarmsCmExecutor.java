@@ -40,7 +40,7 @@ class DeleteAlarmsCmExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/cm/alarms";
+        return "/regions/{regionId}/cmAlarms";
     }
 
     @Override

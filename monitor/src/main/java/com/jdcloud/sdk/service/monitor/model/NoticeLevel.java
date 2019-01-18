@@ -41,7 +41,7 @@ public class NoticeLevel  implements java.io.Serializable {
     private Boolean custom;
 
     /**
-     * 报警级别以及对应的指标，common：一般 critial： 严重 fatal：紧急
+     * 报警级别以及对应的阈值，是一个map[string]float64对象。key:common(一般)、critial(严重)、 fatal(紧急),value:各报警级别对应的阀值，要符合operation参数对应的递进关系。 eg: &quot;levels&quot;:{&quot;common&quot;:1000,&quot;critial&quot;:10000,&quot;fatal&quot;:15000}
      * Required:true
      */
     @Required
@@ -67,7 +67,7 @@ public class NoticeLevel  implements java.io.Serializable {
     }
 
     /**
-     * get 报警级别以及对应的指标，common：一般 critial： 严重 fatal：紧急
+     * get 报警级别以及对应的阈值，是一个map[string]float64对象。key:common(一般)、critial(严重)、 fatal(紧急),value:各报警级别对应的阀值，要符合operation参数对应的递进关系。 eg: &quot;levels&quot;:{&quot;common&quot;:1000,&quot;critial&quot;:10000,&quot;fatal&quot;:15000}
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class NoticeLevel  implements java.io.Serializable {
     }
 
     /**
-     * set 报警级别以及对应的指标，common：一般 critial： 严重 fatal：紧急
+     * set 报警级别以及对应的阈值，是一个map[string]float64对象。key:common(一般)、critial(严重)、 fatal(紧急),value:各报警级别对应的阀值，要符合operation参数对应的递进关系。 eg: &quot;levels&quot;:{&quot;common&quot;:1000,&quot;critial&quot;:10000,&quot;fatal&quot;:15000}
      *
      * @param levels
      */
@@ -96,7 +96,7 @@ public class NoticeLevel  implements java.io.Serializable {
     }
 
     /**
-     * set 报警级别以及对应的指标，common：一般 critial： 严重 fatal：紧急
+     * set 报警级别以及对应的阈值，是一个map[string]float64对象。key:common(一般)、critial(严重)、 fatal(紧急),value:各报警级别对应的阀值，要符合operation参数对应的递进关系。 eg: &quot;levels&quot;:{&quot;common&quot;:1000,&quot;critial&quot;:10000,&quot;fatal&quot;:15000}
      *
      * @param levels
      */

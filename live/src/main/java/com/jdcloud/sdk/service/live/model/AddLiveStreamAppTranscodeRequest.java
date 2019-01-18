@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加app转码配置
+ * 添加APP转码配置
  */
 public class AddLiveStreamAppTranscodeRequest extends JdcloudRequest implements java.io.Serializable {
 

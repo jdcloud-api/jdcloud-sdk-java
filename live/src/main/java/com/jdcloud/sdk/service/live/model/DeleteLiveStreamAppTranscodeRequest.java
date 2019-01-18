@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除app转码配置
+ * 删除APP转码配置
  */
 public class DeleteLiveStreamAppTranscodeRequest extends JdcloudRequest implements java.io.Serializable {
 

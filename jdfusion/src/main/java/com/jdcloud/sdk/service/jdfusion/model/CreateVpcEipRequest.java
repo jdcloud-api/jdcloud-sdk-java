@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.AllocateEipAddressReq;
+import com.jdcloud.sdk.service.jdfusion.model.AllocateEipAddress;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVpcEipRequest extends JdcloudRequest implements java.io.Seria
      * Required:true
      */
     @Required
-    private AllocateEipAddressReq body;
+    private AllocateEipAddress allocate;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVpcEipRequest extends JdcloudRequest implements java.io.Seria
      *
      * @return
      */
-    public AllocateEipAddressReq getBody() {
-        return body;
+    public AllocateEipAddress getAllocate() {
+        return allocate;
     }
 
     /**
      * set 分配弹性公网ip
      *
-     * @param body
+     * @param allocate
      */
-    public void setBody(AllocateEipAddressReq body) {
-        this.body = body;
+    public void setAllocate(AllocateEipAddress allocate) {
+        this.allocate = allocate;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVpcEipRequest extends JdcloudRequest implements java.io.Seria
     /**
      * set 分配弹性公网ip
      *
-     * @param body
+     * @param allocate
      */
-    public CreateVpcEipRequest body(AllocateEipAddressReq body) {
-        this.body = body;
+    public CreateVpcEipRequest allocate(AllocateEipAddress allocate) {
+        this.allocate = allocate;
         return this;
     }
 

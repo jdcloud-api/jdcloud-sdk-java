@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JD Fusion
+ * JDFusion
  * 云主机、网卡、云硬盘、网络与相关、关系型数据库、对象存储等相关的接口
  *
  * OpenAPI spec version: v1
@@ -31,174 +31,321 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.jdfusion.model.GetVmInstanceTypesRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVmInstanceTypesResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVmInstanceTypesExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoHistoryByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoHistoryByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetTaskInfoHistoryByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfacesRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfacesResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcNetworkInterfacesExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSlbsRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSlbsResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcSlbsExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.AttachVpcNetworkInterfaceByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.AttachVpcNetworkInterfaceByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.AttachVpcNetworkInterfaceByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateDiskRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateDiskResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateDiskExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcNetworkInterfaceRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcNetworkInterfaceResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateVpcNetworkInterfaceExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.RebootVmInstanceByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.RebootVmInstanceByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.RebootVmInstanceByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetDiskByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetDiskByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetDiskByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVmInstancesByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateVpcExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfaceByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfaceByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcNetworkInterfaceByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSlbByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSlbByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcSlbByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSubnetRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSubnetResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateVpcSubnetExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcNetworkInterfaceByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcNetworkInterfaceByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcNetworkInterfaceByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DetachVpcNetworkInterfaceByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DetachVpcNetworkInterfaceByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DetachVpcNetworkInterfaceByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.RegistCloudInfoRequest;
-import com.jdcloud.sdk.service.jdfusion.model.RegistCloudInfoResponse;
-import com.jdcloud.sdk.service.jdfusion.client.RegistCloudInfoExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcEipByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcEipByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcEipByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSecurityGroupByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSecurityGroupByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcSecurityGroupByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.RemoveDiskByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.RemoveDiskByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.RemoveDiskByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcEipRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcEipResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateVpcEipExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.AssociateVpcEipByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.AssociateVpcEipByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.AssociateVpcEipByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVmInstanceRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVmInstanceResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateVmInstanceExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.UnregistCloudInfoRequest;
-import com.jdcloud.sdk.service.jdfusion.model.UnregistCloudInfoResponse;
-import com.jdcloud.sdk.service.jdfusion.client.UnregistCloudInfoExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DisassociateVpcEipByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DisassociateVpcEipByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DisassociateVpcEipByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcSecurityGroupByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcByIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.StartVmInstanceByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.StartVmInstanceByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.StartVmInstanceByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfoByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfoByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetCloudInfoByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.StopVmInstanceByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.StopVmInstanceByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.StopVmInstanceByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVmInstanceByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVmInstanceByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DeleteVmInstanceByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVmKeypairByNameRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVmKeypairByNameResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DeleteVmKeypairByNameExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSubnetByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSubnetByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcSubnetByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteRdsAccountRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteRdsAccountResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteRdsAccountExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateDeploymentRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateDeploymentResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateDeploymentExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetBucketByNameRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetBucketByNameResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetBucketByNameExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoHistoryByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoHistoryByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetTaskInfoHistoryByIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetVmInstancesExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSubnetByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSubnetByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcSubnetByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.RollbackDeploymentsVersionRequest;
+import com.jdcloud.sdk.service.jdfusion.model.RollbackDeploymentsVersionResponse;
+import com.jdcloud.sdk.service.jdfusion.client.RollbackDeploymentsVersionExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsDatabaseByInstIdAndDbNameRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsDatabaseByInstIdAndDbNameResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRdsDatabaseByInstIdAndDbNameExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentVersionsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentVersionsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentVersionsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsAccountsByInstIdAndAccountNameRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsAccountsByInstIdAndAccountNameResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRdsAccountsByInstIdAndAccountNameExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfaceByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfaceByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcNetworkInterfaceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentResultRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentResultResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentResultExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetBucketsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetBucketsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetBucketsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.EditTransferTaskRequest;
+import com.jdcloud.sdk.service.jdfusion.model.EditTransferTaskResponse;
+import com.jdcloud.sdk.service.jdfusion.client.EditTransferTaskExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.RebootVmInstanceByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.RebootVmInstanceByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.RebootVmInstanceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StartTransferTaskRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StartTransferTaskResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StartTransferTaskExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GrantRdsAccountRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GrantRdsAccountResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GrantRdsAccountExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateVpcNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateRdsDatabaseRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateRdsDatabaseResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentsByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StartChannelRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StartChannelResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StartChannelExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateChannelRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateChannelResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateChannelExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.CreateVmKeypairRequest;
 import com.jdcloud.sdk.service.jdfusion.model.CreateVmKeypairResponse;
 import com.jdcloud.sdk.service.jdfusion.client.CreateVmKeypairExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcEipsRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcEipsResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcEipsExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSlbRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSlbResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateVpcSlbExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupsRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupsResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcSecurityGroupsExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetVmKeypairsByNameRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetVmKeypairsByNameResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetVmKeypairsByNameExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.AttachDiskToVmInstanceByDiskIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.AttachDiskToVmInstanceByDiskIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.AttachDiskToVmInstanceByDiskIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcEipByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcEipByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcEipByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSecurityGroupRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSecurityGroupResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateVpcSecurityGroupExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.ReverseDeploymentRequest;
+import com.jdcloud.sdk.service.jdfusion.model.ReverseDeploymentResponse;
+import com.jdcloud.sdk.service.jdfusion.client.ReverseDeploymentExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetTransferTaskByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetTransferTaskByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetTransferTaskByIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcSubnetsRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcSubnetsResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetVpcSubnetsExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcVServerGroupsRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcVServerGroupsResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcVServerGroupsExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcsRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVpcsResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVpcsExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetTaskInfoByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfosRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfosResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetCloudInfosExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVmKeypairsRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVmKeypairsResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVmKeypairsExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetVmImagesRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetVmImagesResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetVmImagesExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSlbByIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSlbByIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcSlbByIdExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcVServerGroupRequest;
-import com.jdcloud.sdk.service.jdfusion.model.CreateVpcVServerGroupResponse;
-import com.jdcloud.sdk.service.jdfusion.client.CreateVpcVServerGroupExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.GetDisksRequest;
-import com.jdcloud.sdk.service.jdfusion.model.GetDisksResponse;
-import com.jdcloud.sdk.service.jdfusion.client.GetDisksExecutor;
-import com.jdcloud.sdk.service.jdfusion.model.DetachDiskToVmInstanceByDiskIdRequest;
-import com.jdcloud.sdk.service.jdfusion.model.DetachDiskToVmInstanceByDiskIdResponse;
-import com.jdcloud.sdk.service.jdfusion.client.DetachDiskToVmInstanceByDiskIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.CreateVpcLBHttpListenerRequest;
 import com.jdcloud.sdk.service.jdfusion.model.CreateVpcLBHttpListenerResponse;
 import com.jdcloud.sdk.service.jdfusion.client.CreateVpcLBHttpListenerExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StopTransferTaskRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StopTransferTaskResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StopTransferTaskExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSubnetByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSubnetByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcSubnetByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcEipRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcEipResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateVpcEipExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSecurityGroupByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSecurityGroupByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcSecurityGroupByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteChannelRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteChannelResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteChannelExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteBucketRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteBucketResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteBucketExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfosRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfosResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetCloudInfosExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfacesRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfacesResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcNetworkInterfacesExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.AssociateVpcEipByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.AssociateVpcEipByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.AssociateVpcEipByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsDatabasesByInstIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsDatabasesByInstIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRdsDatabasesByInstIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcEipByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcEipByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcEipByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsVersionRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsVersionResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentsVersionExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDatasourcesRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDatasourcesResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDatasourcesExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteRdsDatabaseRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteRdsDatabaseResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetChannelsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetChannelsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetChannelsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcEipsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcEipsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcEipsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.RegistCloudInfoRequest;
+import com.jdcloud.sdk.service.jdfusion.model.RegistCloudInfoResponse;
+import com.jdcloud.sdk.service.jdfusion.client.RegistCloudInfoExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSlbRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSlbResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateVpcSlbExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsByInstIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsByInstIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRdsByInstIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.UnregistCloudInfoRequest;
+import com.jdcloud.sdk.service.jdfusion.model.UnregistCloudInfoResponse;
+import com.jdcloud.sdk.service.jdfusion.client.UnregistCloudInfoExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.AttachDiskToVmInstanceByDiskIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.AttachDiskToVmInstanceByDiskIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.AttachDiskToVmInstanceByDiskIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.AttachVpcNetworkInterfaceByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.AttachVpcNetworkInterfaceByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.AttachVpcNetworkInterfaceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DryrunDeploymentRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DryrunDeploymentResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DryrunDeploymentExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateDatasourceRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateDatasourceResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateDatasourceExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DetachDiskToVmInstanceByDiskIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DetachDiskToVmInstanceByDiskIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DetachDiskToVmInstanceByDiskIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetTransferTasksRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetTransferTasksResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetTransferTasksExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.RemoveDiskByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.RemoveDiskByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.RemoveDiskByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateRdsInstanceRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateRdsInstanceResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateRdsInstanceExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcSecurityGroupByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetBucketFilesRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetBucketFilesResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetBucketFilesExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsInstancesRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsInstancesResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRdsInstancesExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcNetworkInterfaceByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcNetworkInterfaceByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcNetworkInterfaceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsAccountsByInstIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsAccountsByInstIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRdsAccountsByInstIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcSecurityGroupsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.ApplyDeploymentRequest;
+import com.jdcloud.sdk.service.jdfusion.model.ApplyDeploymentResponse;
+import com.jdcloud.sdk.service.jdfusion.client.ApplyDeploymentExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVmKeypairsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVmKeypairsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVmKeypairsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSlbByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSlbByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcSlbByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteDeploymentRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteDeploymentResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteDeploymentExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSubnetRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSubnetResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateVpcSubnetExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateTransferTaskRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateTransferTaskResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateTransferTaskExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteRdsByInstIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteRdsByInstIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteRdsByInstIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSlbsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSlbsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcSlbsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CloneDeploymentRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CloneDeploymentResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CloneDeploymentExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateVpcExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DisassociateVpcEipByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DisassociateVpcEipByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DisassociateVpcEipByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSecurityGroupRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcSecurityGroupResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateVpcSecurityGroupExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSubnetByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcSubnetByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcSubnetByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StopChannelRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StopChannelResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StopChannelExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVmInstancesByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetTransferTaskProgressRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetTransferTaskProgressResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetTransferTaskProgressExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcVServerGroupsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVpcVServerGroupsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVpcVServerGroupsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteTransferTaskRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteTransferTaskResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteTransferTaskExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetTransferTaskFailedFilesRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetTransferTaskFailedFilesResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetTransferTaskFailedFilesExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateRdsAccountsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateRdsAccountsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateRdsAccountsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcVServerGroupRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVpcVServerGroupResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateVpcVServerGroupExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateDiskRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateDiskResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateDiskExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetTaskInfoByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDisksRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDisksResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDisksExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DetachVpcNetworkInterfaceByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DetachVpcNetworkInterfaceByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DetachVpcNetworkInterfaceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVmInstanceRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateVmInstanceResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateVmInstanceExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfoByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfoByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetCloudInfoByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVmKeypairByNameRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVmKeypairByNameResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteVmKeypairByNameExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.RevokeRdsAccountRequest;
+import com.jdcloud.sdk.service.jdfusion.model.RevokeRdsAccountResponse;
+import com.jdcloud.sdk.service.jdfusion.client.RevokeRdsAccountExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StopVmInstanceByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StopVmInstanceByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StopVmInstanceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDiskByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDiskByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDiskByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVmImagesRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVmImagesResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVmImagesExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.EditDeploymentRequest;
+import com.jdcloud.sdk.service.jdfusion.model.EditDeploymentResponse;
+import com.jdcloud.sdk.service.jdfusion.client.EditDeploymentExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteDatasourceRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteDatasourceResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteDatasourceExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSlbByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSlbByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcSlbByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVmInstanceByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVmInstanceByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteVmInstanceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVmInstanceTypesRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVmInstanceTypesResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVmInstanceTypesExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateBucketRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateBucketResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateBucketExecutor;
 
 /**
  * jdfusionClient
@@ -207,7 +354,7 @@ public class JdfusionClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.8";
+    public final static String ClientVersion = "1.0.9";
     public final static String DefaultEndpoint = "jdfusion.jdcloud-api.com";
     public final static String ServiceName = "jdfusion";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -250,14 +397,47 @@ public class JdfusionClient extends JdcloudClient {
 
 
     /**
-     * 虚拟机规格列表
+     * 启动一台实例。实例状态必须为 已停止（Stopped），才可以调用该接口。
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVmInstanceTypesResponse getVmInstanceTypes(GetVmInstanceTypesRequest request) throws JdcloudSdkException {
-        return new GetVmInstanceTypesExecutor().client(this).execute(request);
+    public StartVmInstanceByIdResponse startVmInstanceById(StartVmInstanceByIdRequest request) throws JdcloudSdkException {
+        return new StartVmInstanceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定RDS实例上，指定用户名的账号信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteRdsAccountResponse deleteRdsAccount(DeleteRdsAccountRequest request) throws JdcloudSdkException {
+        return new DeleteRdsAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建部署信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateDeploymentResponse createDeployment(CreateDeploymentRequest request) throws JdcloudSdkException {
+        return new CreateDeploymentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的OSS存储桶信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetBucketByNameResponse getBucketByName(GetBucketByNameRequest request) throws JdcloudSdkException {
+        return new GetBucketByNameExecutor().client(this).execute(request);
     }
 
     /**
@@ -272,344 +452,47 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 根据云提供商查询对应的网卡资源信息
+     * 根据云提供商查询对应的虚拟机资源信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVpcNetworkInterfacesResponse getVpcNetworkInterfaces(GetVpcNetworkInterfacesRequest request) throws JdcloudSdkException {
-        return new GetVpcNetworkInterfacesExecutor().client(this).execute(request);
+    public GetVmInstancesResponse getVmInstances(GetVmInstancesRequest request) throws JdcloudSdkException {
+        return new GetVmInstancesExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据云提供商查询对应的负载均衡资源信息
+     * 应用部署回滚
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVpcSlbsResponse getVpcSlbs(GetVpcSlbsRequest request) throws JdcloudSdkException {
-        return new GetVpcSlbsExecutor().client(this).execute(request);
+    public RollbackDeploymentsVersionResponse rollbackDeploymentsVersion(RollbackDeploymentsVersionRequest request) throws JdcloudSdkException {
+        return new RollbackDeploymentsVersionExecutor().client(this).execute(request);
     }
 
     /**
-     * 网卡挂载虚拟机
+     * 根据过滤条件，取得指定RDS实例上的数据库信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public AttachVpcNetworkInterfaceByIdResponse attachVpcNetworkInterfaceById(AttachVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
-        return new AttachVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
+    public GetRdsDatabaseByInstIdAndDbNameResponse getRdsDatabaseByInstIdAndDbName(GetRdsDatabaseByInstIdAndDbNameRequest request) throws JdcloudSdkException {
+        return new GetRdsDatabaseByInstIdAndDbNameExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据云提供商创建云硬盘
+     * 查询应用记录
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateDiskResponse createDisk(CreateDiskRequest request) throws JdcloudSdkException {
-        return new CreateDiskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商创建网卡
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateVpcNetworkInterfaceResponse createVpcNetworkInterface(CreateVpcNetworkInterfaceRequest request) throws JdcloudSdkException {
-        return new CreateVpcNetworkInterfaceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 只能重启状态为 运行中（Running）的实例。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RebootVmInstanceByIdResponse rebootVmInstanceById(RebootVmInstanceByIdRequest request) throws JdcloudSdkException {
-        return new RebootVmInstanceByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商查询对应的云硬盘资源信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetDiskByIdResponse getDiskById(GetDiskByIdRequest request) throws JdcloudSdkException {
-        return new GetDiskByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商查询对应的VM资源信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetVmInstancesByIdResponse getVmInstancesById(GetVmInstancesByIdRequest request) throws JdcloudSdkException {
-        return new GetVmInstancesByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商创建私有网络
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateVpcResponse createVpc(CreateVpcRequest request) throws JdcloudSdkException {
-        return new CreateVpcExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商查询对应的网卡资源信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetVpcNetworkInterfaceByIdResponse getVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
-        return new GetVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商查询对应的SLB资源信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetVpcSlbByIdResponse getVpcSlbById(GetVpcSlbByIdRequest request) throws JdcloudSdkException {
-        return new GetVpcSlbByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商创建子网
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateVpcSubnetResponse createVpcSubnet(CreateVpcSubnetRequest request) throws JdcloudSdkException {
-        return new CreateVpcSubnetExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除弹性网卡
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteVpcNetworkInterfaceByIdResponse deleteVpcNetworkInterfaceById(DeleteVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
-        return new DeleteVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 卸载网卡
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DetachVpcNetworkInterfaceByIdResponse detachVpcNetworkInterfaceById(DetachVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
-        return new DetachVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 为指定用户关联云
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RegistCloudInfoResponse registCloudInfo(RegistCloudInfoRequest request) throws JdcloudSdkException {
-        return new RegistCloudInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商查询对应的公网IP资源信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetVpcEipByIdResponse getVpcEipById(GetVpcEipByIdRequest request) throws JdcloudSdkException {
-        return new GetVpcEipByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除安全组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteVpcSecurityGroupByIdResponse deleteVpcSecurityGroupById(DeleteVpcSecurityGroupByIdRequest request) throws JdcloudSdkException {
-        return new DeleteVpcSecurityGroupByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除云硬盘
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RemoveDiskByIdResponse removeDiskById(RemoveDiskByIdRequest request) throws JdcloudSdkException {
-        return new RemoveDiskByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商分配公网IP
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateVpcEipResponse createVpcEip(CreateVpcEipRequest request) throws JdcloudSdkException {
-        return new CreateVpcEipExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 弹性公网IP绑定到虚拟机
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AssociateVpcEipByIdResponse associateVpcEipById(AssociateVpcEipByIdRequest request) throws JdcloudSdkException {
-        return new AssociateVpcEipByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商创建虚拟机
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateVmInstanceResponse createVmInstance(CreateVmInstanceRequest request) throws JdcloudSdkException {
-        return new CreateVmInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取指定云信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UnregistCloudInfoResponse unregistCloudInfo(UnregistCloudInfoRequest request) throws JdcloudSdkException {
-        return new UnregistCloudInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 解绑公网IP
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DisassociateVpcEipByIdResponse disassociateVpcEipById(DisassociateVpcEipByIdRequest request) throws JdcloudSdkException {
-        return new DisassociateVpcEipByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据云提供商查询对应的安全组资源信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetVpcSecurityGroupByIdResponse getVpcSecurityGroupById(GetVpcSecurityGroupByIdRequest request) throws JdcloudSdkException {
-        return new GetVpcSecurityGroupByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除VPC
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteVpcByIdResponse deleteVpcById(DeleteVpcByIdRequest request) throws JdcloudSdkException {
-        return new DeleteVpcByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 启动一台实例。实例状态必须为 已停止（Stopped），才可以调用该接口。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StartVmInstanceByIdResponse startVmInstanceById(StartVmInstanceByIdRequest request) throws JdcloudSdkException {
-        return new StartVmInstanceByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取指定云信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetCloudInfoByIdResponse getCloudInfoById(GetCloudInfoByIdRequest request) throws JdcloudSdkException {
-        return new GetCloudInfoByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 停止运行一台实例。只有状态为 运行中（Running）的实例才可以进行此操作。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StopVmInstanceByIdResponse stopVmInstanceById(StopVmInstanceByIdRequest request) throws JdcloudSdkException {
-        return new StopVmInstanceByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 通过虚拟机id删除虚拟机
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteVmInstanceByIdResponse deleteVmInstanceById(DeleteVmInstanceByIdRequest request) throws JdcloudSdkException {
-        return new DeleteVmInstanceByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除密钥对
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteVmKeypairByNameResponse deleteVmKeypairByName(DeleteVmKeypairByNameRequest request) throws JdcloudSdkException {
-        return new DeleteVmKeypairByNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除子网
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteVpcSubnetByIdResponse deleteVpcSubnetById(DeleteVpcSubnetByIdRequest request) throws JdcloudSdkException {
-        return new DeleteVpcSubnetByIdExecutor().client(this).execute(request);
+    public GetDeploymentVersionsResponse getDeploymentVersions(GetDeploymentVersionsRequest request) throws JdcloudSdkException {
+        return new GetDeploymentVersionsExecutor().client(this).execute(request);
     }
 
     /**
@@ -624,25 +507,157 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 根据云提供商查询对应的虚拟机资源信息
+     * 根据过滤条件，取得指定RDS实例上的账号信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVmInstancesResponse getVmInstances(GetVmInstancesRequest request) throws JdcloudSdkException {
-        return new GetVmInstancesExecutor().client(this).execute(request);
+    public GetRdsAccountsByInstIdAndAccountNameResponse getRdsAccountsByInstIdAndAccountName(GetRdsAccountsByInstIdAndAccountNameRequest request) throws JdcloudSdkException {
+        return new GetRdsAccountsByInstIdAndAccountNameExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据云提供商查询对应的subnet资源信息
+     * 根据云提供商查询对应的网卡资源信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVpcSubnetByIdResponse getVpcSubnetById(GetVpcSubnetByIdRequest request) throws JdcloudSdkException {
-        return new GetVpcSubnetByIdExecutor().client(this).execute(request);
+    public GetVpcNetworkInterfaceByIdResponse getVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
+        return new GetVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询执行结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDeploymentResultResponse getDeploymentResult(GetDeploymentResultRequest request) throws JdcloudSdkException {
+        return new GetDeploymentResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的OSS存储桶列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetBucketsResponse getBuckets(GetBucketsRequest request) throws JdcloudSdkException {
+        return new GetBucketsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据指定ID修改任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EditTransferTaskResponse editTransferTask(EditTransferTaskRequest request) throws JdcloudSdkException {
+        return new EditTransferTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 只能重启状态为 运行中（Running）的实例。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RebootVmInstanceByIdResponse rebootVmInstanceById(RebootVmInstanceByIdRequest request) throws JdcloudSdkException {
+        return new RebootVmInstanceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据指定ID启动任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartTransferTaskResponse startTransferTask(StartTransferTaskRequest request) throws JdcloudSdkException {
+        return new StartTransferTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给RDS账号分配数据库权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GrantRdsAccountResponse grantRdsAccount(GrantRdsAccountRequest request) throws JdcloudSdkException {
+        return new GrantRdsAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商创建网卡
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVpcNetworkInterfaceResponse createVpcNetworkInterface(CreateVpcNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new CreateVpcNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据给定的信息，创建指定RDS实例的数据库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRdsDatabaseResponse createRdsDatabase(CreateRdsDatabaseRequest request) throws JdcloudSdkException {
+        return new CreateRdsDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询部署信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDeploymentsByIdResponse getDeploymentsById(GetDeploymentsByIdRequest request) throws JdcloudSdkException {
+        return new GetDeploymentsByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询部署信息列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDeploymentsResponse getDeployments(GetDeploymentsRequest request) throws JdcloudSdkException {
+        return new GetDeploymentsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启动数据同步
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartChannelResponse startChannel(StartChannelRequest request) throws JdcloudSdkException {
+        return new StartChannelExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据同步通道
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateChannelResponse createChannel(CreateChannelRequest request) throws JdcloudSdkException {
+        return new CreateChannelExecutor().client(this).execute(request);
     }
 
     /**
@@ -657,6 +672,237 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 根据云提供商查询对应的密钥对资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVmKeypairsByNameResponse getVmKeypairsByName(GetVmKeypairsByNameRequest request) throws JdcloudSdkException {
+        return new GetVmKeypairsByNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 释放公网IP
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcEipByIdResponse deleteVpcEipById(DeleteVpcEipByIdRequest request) throws JdcloudSdkException {
+        return new DeleteVpcEipByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据已有资源反向生成deployment
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ReverseDeploymentResponse reverseDeployment(ReverseDeploymentRequest request) throws JdcloudSdkException {
+        return new ReverseDeploymentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据指定ID获取任务信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTransferTaskByIdResponse getTransferTaskById(GetTransferTaskByIdRequest request) throws JdcloudSdkException {
+        return new GetTransferTaskByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的subnet资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVpcSubnetsResponse getVpcSubnets(GetVpcSubnetsRequest request) throws JdcloudSdkException {
+        return new GetVpcSubnetsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建HTTP监听器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVpcLBHttpListenerResponse createVpcLBHttpListener(CreateVpcLBHttpListenerRequest request) throws JdcloudSdkException {
+        return new CreateVpcLBHttpListenerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据指定ID停止任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopTransferTaskResponse stopTransferTask(StopTransferTaskRequest request) throws JdcloudSdkException {
+        return new StopTransferTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除子网
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcSubnetByIdResponse deleteVpcSubnetById(DeleteVpcSubnetByIdRequest request) throws JdcloudSdkException {
+        return new DeleteVpcSubnetByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商分配公网IP
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVpcEipResponse createVpcEip(CreateVpcEipRequest request) throws JdcloudSdkException {
+        return new CreateVpcEipExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除安全组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcSecurityGroupByIdResponse deleteVpcSecurityGroupById(DeleteVpcSecurityGroupByIdRequest request) throws JdcloudSdkException {
+        return new DeleteVpcSecurityGroupByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除channel
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteChannelResponse deleteChannel(DeleteChannelRequest request) throws JdcloudSdkException {
+        return new DeleteChannelExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定ID的OSS存储桶信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteBucketResponse deleteBucket(DeleteBucketRequest request) throws JdcloudSdkException {
+        return new DeleteBucketExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取当前用户的云注册信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetCloudInfosResponse getCloudInfos(GetCloudInfosRequest request) throws JdcloudSdkException {
+        return new GetCloudInfosExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的网卡资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVpcNetworkInterfacesResponse getVpcNetworkInterfaces(GetVpcNetworkInterfacesRequest request) throws JdcloudSdkException {
+        return new GetVpcNetworkInterfacesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 弹性公网IP绑定到虚拟机
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssociateVpcEipByIdResponse associateVpcEipById(AssociateVpcEipByIdRequest request) throws JdcloudSdkException {
+        return new AssociateVpcEipByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据过滤条件，取得指定RDS实例上的数据库信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRdsDatabasesByInstIdResponse getRdsDatabasesByInstId(GetRdsDatabasesByInstIdRequest request) throws JdcloudSdkException {
+        return new GetRdsDatabasesByInstIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的公网IP资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVpcEipByIdResponse getVpcEipById(GetVpcEipByIdRequest request) throws JdcloudSdkException {
+        return new GetVpcEipByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询应用记录详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDeploymentsVersionResponse getDeploymentsVersion(GetDeploymentsVersionRequest request) throws JdcloudSdkException {
+        return new GetDeploymentsVersionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询数据源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDatasourcesResponse getDatasources(GetDatasourcesRequest request) throws JdcloudSdkException {
+        return new GetDatasourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定RDS实例上，指定数据库名的数据库信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteRdsDatabaseResponse deleteRdsDatabase(DeleteRdsDatabaseRequest request) throws JdcloudSdkException {
+        return new DeleteRdsDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询数据同步通道信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetChannelsResponse getChannels(GetChannelsRequest request) throws JdcloudSdkException {
+        return new GetChannelsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据云提供商查询对应的公网IP资源信息
      *
      * @param request
@@ -665,6 +911,17 @@ public class JdfusionClient extends JdcloudClient {
      */
     public GetVpcEipsResponse getVpcEips(GetVpcEipsRequest request) throws JdcloudSdkException {
         return new GetVpcEipsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为指定用户关联云
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RegistCloudInfoResponse registCloudInfo(RegistCloudInfoRequest request) throws JdcloudSdkException {
+        return new RegistCloudInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -679,25 +936,25 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 根据云提供商查询对应的安全组资源信息
+     * 根据云提供商查询对应的RDS实例信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVpcSecurityGroupsResponse getVpcSecurityGroups(GetVpcSecurityGroupsRequest request) throws JdcloudSdkException {
-        return new GetVpcSecurityGroupsExecutor().client(this).execute(request);
+    public GetRdsByInstIdResponse getRdsByInstId(GetRdsByInstIdRequest request) throws JdcloudSdkException {
+        return new GetRdsByInstIdExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据云提供商查询对应的密钥对资源信息
+     * 获取指定云信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVmKeypairsByNameResponse getVmKeypairsByName(GetVmKeypairsByNameRequest request) throws JdcloudSdkException {
-        return new GetVmKeypairsByNameExecutor().client(this).execute(request);
+    public UnregistCloudInfoResponse unregistCloudInfo(UnregistCloudInfoRequest request) throws JdcloudSdkException {
+        return new UnregistCloudInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -712,14 +969,278 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 释放公网IP
+     * 网卡挂载虚拟机
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteVpcEipByIdResponse deleteVpcEipById(DeleteVpcEipByIdRequest request) throws JdcloudSdkException {
-        return new DeleteVpcEipByIdExecutor().client(this).execute(request);
+    public AttachVpcNetworkInterfaceByIdResponse attachVpcNetworkInterfaceById(AttachVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
+        return new AttachVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 预部署
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DryrunDeploymentResponse dryrunDeployment(DryrunDeploymentRequest request) throws JdcloudSdkException {
+        return new DryrunDeploymentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateDatasourceResponse createDatasource(CreateDatasourceRequest request) throws JdcloudSdkException {
+        return new CreateDatasourceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 从虚拟机卸载云硬盘
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DetachDiskToVmInstanceByDiskIdResponse detachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) throws JdcloudSdkException {
+        return new DetachDiskToVmInstanceByDiskIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取任务列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTransferTasksResponse getTransferTasks(GetTransferTasksRequest request) throws JdcloudSdkException {
+        return new GetTransferTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除云硬盘
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RemoveDiskByIdResponse removeDiskById(RemoveDiskByIdRequest request) throws JdcloudSdkException {
+        return new RemoveDiskByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据给定的信息，创建RDS实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRdsInstanceResponse createRdsInstance(CreateRdsInstanceRequest request) throws JdcloudSdkException {
+        return new CreateRdsInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的安全组资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVpcSecurityGroupByIdResponse getVpcSecurityGroupById(GetVpcSecurityGroupByIdRequest request) throws JdcloudSdkException {
+        return new GetVpcSecurityGroupByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据过滤条件，取得指定OSS存储桶上的文件列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetBucketFilesResponse getBucketFiles(GetBucketFilesRequest request) throws JdcloudSdkException {
+        return new GetBucketFilesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的RDS实例信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRdsInstancesResponse getRdsInstances(GetRdsInstancesRequest request) throws JdcloudSdkException {
+        return new GetRdsInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除弹性网卡
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcNetworkInterfaceByIdResponse deleteVpcNetworkInterfaceById(DeleteVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
+        return new DeleteVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据过滤条件，取得指定RDS实例上的账号信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRdsAccountsByInstIdResponse getRdsAccountsByInstId(GetRdsAccountsByInstIdRequest request) throws JdcloudSdkException {
+        return new GetRdsAccountsByInstIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的安全组资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVpcSecurityGroupsResponse getVpcSecurityGroups(GetVpcSecurityGroupsRequest request) throws JdcloudSdkException {
+        return new GetVpcSecurityGroupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 应用部署
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ApplyDeploymentResponse applyDeployment(ApplyDeploymentRequest request) throws JdcloudSdkException {
+        return new ApplyDeploymentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的密钥对资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVmKeypairsResponse getVmKeypairs(GetVmKeypairsRequest request) throws JdcloudSdkException {
+        return new GetVmKeypairsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的SLB资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVpcSlbByIdResponse getVpcSlbById(GetVpcSlbByIdRequest request) throws JdcloudSdkException {
+        return new GetVpcSlbByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除部署信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteDeploymentResponse deleteDeployment(DeleteDeploymentRequest request) throws JdcloudSdkException {
+        return new DeleteDeploymentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商创建子网
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVpcSubnetResponse createVpcSubnet(CreateVpcSubnetRequest request) throws JdcloudSdkException {
+        return new CreateVpcSubnetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateTransferTaskResponse createTransferTask(CreateTransferTaskRequest request) throws JdcloudSdkException {
+        return new CreateTransferTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除指定ID的RDS实例信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteRdsByInstIdResponse deleteRdsByInstId(DeleteRdsByInstIdRequest request) throws JdcloudSdkException {
+        return new DeleteRdsByInstIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的负载均衡资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVpcSlbsResponse getVpcSlbs(GetVpcSlbsRequest request) throws JdcloudSdkException {
+        return new GetVpcSlbsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 克隆部署信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CloneDeploymentResponse cloneDeployment(CloneDeploymentRequest request) throws JdcloudSdkException {
+        return new CloneDeploymentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除VPC
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcByIdResponse deleteVpcById(DeleteVpcByIdRequest request) throws JdcloudSdkException {
+        return new DeleteVpcByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商创建私有网络
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVpcResponse createVpc(CreateVpcRequest request) throws JdcloudSdkException {
+        return new CreateVpcExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 解绑公网IP
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisassociateVpcEipByIdResponse disassociateVpcEipById(DisassociateVpcEipByIdRequest request) throws JdcloudSdkException {
+        return new DisassociateVpcEipByIdExecutor().client(this).execute(request);
     }
 
     /**
@@ -740,19 +1261,19 @@ public class JdfusionClient extends JdcloudClient {
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVpcSubnetsResponse getVpcSubnets(GetVpcSubnetsRequest request) throws JdcloudSdkException {
-        return new GetVpcSubnetsExecutor().client(this).execute(request);
+    public GetVpcSubnetByIdResponse getVpcSubnetById(GetVpcSubnetByIdRequest request) throws JdcloudSdkException {
+        return new GetVpcSubnetByIdExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据过滤条件，取得服务器组的信息
+     * 停止数据同步
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVpcVServerGroupsResponse getVpcVServerGroups(GetVpcVServerGroupsRequest request) throws JdcloudSdkException {
-        return new GetVpcVServerGroupsExecutor().client(this).execute(request);
+    public StopChannelResponse stopChannel(StopChannelRequest request) throws JdcloudSdkException {
+        return new StopChannelExecutor().client(this).execute(request);
     }
 
     /**
@@ -767,58 +1288,69 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 读取指定ID的运行结果和运行状态
+     * 根据云提供商查询对应的VM资源信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetTaskInfoByIdResponse getTaskInfoById(GetTaskInfoByIdRequest request) throws JdcloudSdkException {
-        return new GetTaskInfoByIdExecutor().client(this).execute(request);
+    public GetVmInstancesByIdResponse getVmInstancesById(GetVmInstancesByIdRequest request) throws JdcloudSdkException {
+        return new GetVmInstancesByIdExecutor().client(this).execute(request);
     }
 
     /**
-     * 获取当前用户的云注册信息
+     * 根据指定任务id查询迁移进度
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetCloudInfosResponse getCloudInfos(GetCloudInfosRequest request) throws JdcloudSdkException {
-        return new GetCloudInfosExecutor().client(this).execute(request);
+    public GetTransferTaskProgressResponse getTransferTaskProgress(GetTransferTaskProgressRequest request) throws JdcloudSdkException {
+        return new GetTransferTaskProgressExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据云提供商查询对应的密钥对资源信息
+     * 根据过滤条件，取得服务器组的信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVmKeypairsResponse getVmKeypairs(GetVmKeypairsRequest request) throws JdcloudSdkException {
-        return new GetVmKeypairsExecutor().client(this).execute(request);
+    public GetVpcVServerGroupsResponse getVpcVServerGroups(GetVpcVServerGroupsRequest request) throws JdcloudSdkException {
+        return new GetVpcVServerGroupsExecutor().client(this).execute(request);
     }
 
     /**
-     * 根据过滤条件，取得镜像资源的信息
+     * 根据指定ID删除任务
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetVmImagesResponse getVmImages(GetVmImagesRequest request) throws JdcloudSdkException {
-        return new GetVmImagesExecutor().client(this).execute(request);
+    public DeleteTransferTaskResponse deleteTransferTask(DeleteTransferTaskRequest request) throws JdcloudSdkException {
+        return new DeleteTransferTaskExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除SLB
+     * 根据指定任务id查询迁移失败文件列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteVpcSlbByIdResponse deleteVpcSlbById(DeleteVpcSlbByIdRequest request) throws JdcloudSdkException {
-        return new DeleteVpcSlbByIdExecutor().client(this).execute(request);
+    public GetTransferTaskFailedFilesResponse getTransferTaskFailedFiles(GetTransferTaskFailedFilesRequest request) throws JdcloudSdkException {
+        return new GetTransferTaskFailedFilesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据给定的信息，创建指定RDS实例的账户
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRdsAccountsResponse createRdsAccounts(CreateRdsAccountsRequest request) throws JdcloudSdkException {
+        return new CreateRdsAccountsExecutor().client(this).execute(request);
     }
 
     /**
@@ -833,6 +1365,28 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 根据云提供商创建云硬盘
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateDiskResponse createDisk(CreateDiskRequest request) throws JdcloudSdkException {
+        return new CreateDiskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 读取指定ID的运行结果和运行状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTaskInfoByIdResponse getTaskInfoById(GetTaskInfoByIdRequest request) throws JdcloudSdkException {
+        return new GetTaskInfoByIdExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据云提供商查询对应的云硬盘资源信息
      *
      * @param request
@@ -844,25 +1398,157 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 从虚拟机卸载云硬盘
+     * 卸载网卡
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DetachDiskToVmInstanceByDiskIdResponse detachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) throws JdcloudSdkException {
-        return new DetachDiskToVmInstanceByDiskIdExecutor().client(this).execute(request);
+    public DetachVpcNetworkInterfaceByIdResponse detachVpcNetworkInterfaceById(DetachVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
+        return new DetachVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
     }
 
     /**
-     * 创建HTTP监听器
+     * 根据云提供商创建虚拟机
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateVpcLBHttpListenerResponse createVpcLBHttpListener(CreateVpcLBHttpListenerRequest request) throws JdcloudSdkException {
-        return new CreateVpcLBHttpListenerExecutor().client(this).execute(request);
+    public CreateVmInstanceResponse createVmInstance(CreateVmInstanceRequest request) throws JdcloudSdkException {
+        return new CreateVmInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取指定云信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetCloudInfoByIdResponse getCloudInfoById(GetCloudInfoByIdRequest request) throws JdcloudSdkException {
+        return new GetCloudInfoByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除密钥对
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVmKeypairByNameResponse deleteVmKeypairByName(DeleteVmKeypairByNameRequest request) throws JdcloudSdkException {
+        return new DeleteVmKeypairByNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给RDS账号分配数据库权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RevokeRdsAccountResponse revokeRdsAccount(RevokeRdsAccountRequest request) throws JdcloudSdkException {
+        return new RevokeRdsAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止运行一台实例。只有状态为 运行中（Running）的实例才可以进行此操作。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopVmInstanceByIdResponse stopVmInstanceById(StopVmInstanceByIdRequest request) throws JdcloudSdkException {
+        return new StopVmInstanceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据云提供商查询对应的云硬盘资源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDiskByIdResponse getDiskById(GetDiskByIdRequest request) throws JdcloudSdkException {
+        return new GetDiskByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据过滤条件，取得镜像资源的信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVmImagesResponse getVmImages(GetVmImagesRequest request) throws JdcloudSdkException {
+        return new GetVmImagesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改部署信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EditDeploymentResponse editDeployment(EditDeploymentRequest request) throws JdcloudSdkException {
+        return new EditDeploymentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除数据源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteDatasourceResponse deleteDatasource(DeleteDatasourceRequest request) throws JdcloudSdkException {
+        return new DeleteDatasourceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除SLB
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcSlbByIdResponse deleteVpcSlbById(DeleteVpcSlbByIdRequest request) throws JdcloudSdkException {
+        return new DeleteVpcSlbByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 通过虚拟机id删除虚拟机
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVmInstanceByIdResponse deleteVmInstanceById(DeleteVmInstanceByIdRequest request) throws JdcloudSdkException {
+        return new DeleteVmInstanceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 虚拟机规格列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVmInstanceTypesResponse getVmInstanceTypes(GetVmInstanceTypesRequest request) throws JdcloudSdkException {
+        return new GetVmInstanceTypesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据给定的信息，创建OSS存储桶
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateBucketResponse createBucket(CreateBucketRequest request) throws JdcloudSdkException {
+        return new CreateBucketExecutor().client(this).execute(request);
     }
 
 

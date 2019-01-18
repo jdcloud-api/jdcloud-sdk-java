@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除app转码配置
+ * 删除APP转码配置
  */
 public class DeleteLiveStreamAppTranscodeResponse extends JdcloudResponse<DeleteLiveStreamAppTranscodeResult> implements java.io.Serializable {
 
