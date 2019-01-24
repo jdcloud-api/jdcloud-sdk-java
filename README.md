@@ -12,11 +12,6 @@
 如果您使用Apache Maven来管理Java项目，只需在项目的pom.xml文件加入相应的依赖项即可，如下所示：
  
 ```xml
-<dependency>
-	<groupId>com.jdcloud.sdk</groupId>
-	<artifactId>core</artifactId>
-	<version>1.0.0</version>
-</dependency>
 <!-- 对应产品线的SDK -->
 <dependency>
 	<groupId>com.jdcloud.sdk</groupId>
