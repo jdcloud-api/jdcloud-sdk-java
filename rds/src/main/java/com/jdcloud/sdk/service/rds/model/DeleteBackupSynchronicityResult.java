@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除一个跨地域备份同步服务。
+ * 删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
  */
 public class DeleteBackupSynchronicityResult extends JdcloudResult implements java.io.Serializable {
 

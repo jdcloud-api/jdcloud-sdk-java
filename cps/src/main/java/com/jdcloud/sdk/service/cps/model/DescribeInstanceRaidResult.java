@@ -27,35 +27,35 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询单个云物理服务器raid信息
+ * 查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
  */
 public class DescribeInstanceRaidResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 系统盘raid类型Id
+     * 系统盘RAID类型ID
      */
     private String sysRaidTypeId;
 
     /**
-     * 系统盘raid类型
+     * 系统盘RAID类型
      */
     private String sysRaidType;
 
     /**
-     * 数据盘raid类型Id
+     * 数据盘RAID类型ID
      */
     private String dataRaidTypeId;
 
     /**
-     * 数据盘raid类型
+     * 数据盘RAID类型
      */
     private String dataRaidType;
 
 
     /**
-     * get 系统盘raid类型Id
+     * get 系统盘RAID类型ID
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 系统盘raid类型Id
+     * set 系统盘RAID类型ID
      *
      * @param sysRaidTypeId
      */
@@ -73,7 +73,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get 系统盘raid类型
+     * get 系统盘RAID类型
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 系统盘raid类型
+     * set 系统盘RAID类型
      *
      * @param sysRaidType
      */
@@ -91,7 +91,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get 数据盘raid类型Id
+     * get 数据盘RAID类型ID
      *
      * @return
      */
@@ -100,7 +100,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 数据盘raid类型Id
+     * set 数据盘RAID类型ID
      *
      * @param dataRaidTypeId
      */
@@ -109,7 +109,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get 数据盘raid类型
+     * get 数据盘RAID类型
      *
      * @return
      */
@@ -118,7 +118,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 数据盘raid类型
+     * set 数据盘RAID类型
      *
      * @param dataRaidType
      */
@@ -128,7 +128,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
 
 
     /**
-     * set 系统盘raid类型Id
+     * set 系统盘RAID类型ID
      *
      * @param sysRaidTypeId
      */
@@ -138,7 +138,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 系统盘raid类型
+     * set 系统盘RAID类型
      *
      * @param sysRaidType
      */
@@ -148,7 +148,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 数据盘raid类型Id
+     * set 数据盘RAID类型ID
      *
      * @param dataRaidTypeId
      */
@@ -158,7 +158,7 @@ public class DescribeInstanceRaidResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 数据盘raid类型
+     * set 数据盘RAID类型
      *
      * @param dataRaidType
      */

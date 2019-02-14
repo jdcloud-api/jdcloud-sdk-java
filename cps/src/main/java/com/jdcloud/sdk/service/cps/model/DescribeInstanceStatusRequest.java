@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询单个云物理服务器监控信息
+ * 查询单个云物理服务器硬件监控信息
  */
 public class DescribeInstanceStatusRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -27,20 +27,20 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 启动单个云物理服务器，只能启动stopped状态的服务器
+ * 对单个云物理服务器执行开机操作，只能启动stopped状态的服务器
  */
 public class StartInstanceResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 启动操作是否成功
+     * 开机操作是否成功
      */
     private Boolean success;
 
 
     /**
-     * get 启动操作是否成功
+     * get 开机操作是否成功
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class StartInstanceResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 启动操作是否成功
+     * set 开机操作是否成功
      *
      * @param success
      */
@@ -59,7 +59,7 @@ public class StartInstanceResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * set 启动操作是否成功
+     * set 开机操作是否成功
      *
      * @param success
      */

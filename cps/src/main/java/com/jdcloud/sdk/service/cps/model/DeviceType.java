@@ -33,22 +33,27 @@ public class DeviceType  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 服务器类型英文名称, 如 cps.c.normal
+     * 实例类型英文名称, 如 cps.c.normal
      */
     private String nameEN;
 
     /**
-     * 服务器类型中文名称, 如 计算型
+     * 实例类型中文名称, 如 计算型
      */
     private String nameZH;
 
     /**
-     * 使用场景类型英文描述, 如 standard
+     * 实例所属规格系列，如 计算、存储、GPU
+     */
+    private String family;
+
+    /**
+     * 镜像类型英文描述, 如 standard
      */
     private String useTypeEN;
 
     /**
-     * 使用场景类型中文描述, 如 标准型
+     * 镜像类型中文描述, 如 标准型
      */
     private String useTypeZH;
 
@@ -98,12 +103,12 @@ public class DeviceType  implements java.io.Serializable {
     private String systemDiskDetail;
 
     /**
-     * 系统磁盘概要信息
+     * 数据磁盘概要信息
      */
     private String dataDiskConcise;
 
     /**
-     * 系统磁盘详细信息
+     * 数据磁盘详细信息
      */
     private String dataDiskDetail;
 
@@ -117,9 +122,14 @@ public class DeviceType  implements java.io.Serializable {
      */
     private String gpuDetail;
 
+    /**
+     * 售罄状态
+     */
+    private Boolean isSoldOut;
+
 
     /**
-     * get 服务器类型英文名称, 如 cps.c.normal
+     * get 实例类型英文名称, 如 cps.c.normal
      *
      * @return
      */
@@ -128,7 +138,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 服务器类型英文名称, 如 cps.c.normal
+     * set 实例类型英文名称, 如 cps.c.normal
      *
      * @param nameEN
      */
@@ -137,7 +147,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * get 服务器类型中文名称, 如 计算型
+     * get 实例类型中文名称, 如 计算型
      *
      * @return
      */
@@ -146,7 +156,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 服务器类型中文名称, 如 计算型
+     * set 实例类型中文名称, 如 计算型
      *
      * @param nameZH
      */
@@ -155,7 +165,25 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * get 使用场景类型英文描述, 如 standard
+     * get 实例所属规格系列，如 计算、存储、GPU
+     *
+     * @return
+     */
+    public String getFamily() {
+        return family;
+    }
+
+    /**
+     * set 实例所属规格系列，如 计算、存储、GPU
+     *
+     * @param family
+     */
+    public void setFamily(String family) {
+        this.family = family;
+    }
+
+    /**
+     * get 镜像类型英文描述, 如 standard
      *
      * @return
      */
@@ -164,7 +192,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 使用场景类型英文描述, 如 standard
+     * set 镜像类型英文描述, 如 standard
      *
      * @param useTypeEN
      */
@@ -173,7 +201,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * get 使用场景类型中文描述, 如 标准型
+     * get 镜像类型中文描述, 如 标准型
      *
      * @return
      */
@@ -182,7 +210,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 使用场景类型中文描述, 如 标准型
+     * set 镜像类型中文描述, 如 标准型
      *
      * @param useTypeZH
      */
@@ -353,7 +381,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * get 系统磁盘概要信息
+     * get 数据磁盘概要信息
      *
      * @return
      */
@@ -362,7 +390,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 系统磁盘概要信息
+     * set 数据磁盘概要信息
      *
      * @param dataDiskConcise
      */
@@ -371,7 +399,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * get 系统磁盘详细信息
+     * get 数据磁盘详细信息
      *
      * @return
      */
@@ -380,7 +408,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 系统磁盘详细信息
+     * set 数据磁盘详细信息
      *
      * @param dataDiskDetail
      */
@@ -424,9 +452,27 @@ public class DeviceType  implements java.io.Serializable {
         this.gpuDetail = gpuDetail;
     }
 
+    /**
+     * get 售罄状态
+     *
+     * @return
+     */
+    public Boolean getIsSoldOut() {
+        return isSoldOut;
+    }
 
     /**
-     * set 服务器类型英文名称, 如 cps.c.normal
+     * set 售罄状态
+     *
+     * @param isSoldOut
+     */
+    public void setIsSoldOut(Boolean isSoldOut) {
+        this.isSoldOut = isSoldOut;
+    }
+
+
+    /**
+     * set 实例类型英文名称, 如 cps.c.normal
      *
      * @param nameEN
      */
@@ -436,7 +482,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 服务器类型中文名称, 如 计算型
+     * set 实例类型中文名称, 如 计算型
      *
      * @param nameZH
      */
@@ -446,7 +492,17 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 使用场景类型英文描述, 如 standard
+     * set 实例所属规格系列，如 计算、存储、GPU
+     *
+     * @param family
+     */
+    public DeviceType family(String family) {
+        this.family = family;
+        return this;
+    }
+
+    /**
+     * set 镜像类型英文描述, 如 standard
      *
      * @param useTypeEN
      */
@@ -456,7 +512,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 使用场景类型中文描述, 如 标准型
+     * set 镜像类型中文描述, 如 标准型
      *
      * @param useTypeZH
      */
@@ -556,7 +612,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 系统磁盘概要信息
+     * set 数据磁盘概要信息
      *
      * @param dataDiskConcise
      */
@@ -566,7 +622,7 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 系统磁盘详细信息
+     * set 数据磁盘详细信息
      *
      * @param dataDiskDetail
      */
@@ -592,6 +648,16 @@ public class DeviceType  implements java.io.Serializable {
      */
     public DeviceType gpuDetail(String gpuDetail) {
         this.gpuDetail = gpuDetail;
+        return this;
+    }
+
+    /**
+     * set 售罄状态
+     *
+     * @param isSoldOut
+     */
+    public DeviceType isSoldOut(Boolean isSoldOut) {
+        this.isSoldOut = isSoldOut;
         return this;
     }
 

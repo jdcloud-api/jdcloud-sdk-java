@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询单个云物理服务器监控信息
+ * 查询单个云物理服务器硬件监控信息
  */
 public class DescribeInstanceStatusResponse extends JdcloudResponse<DescribeInstanceStatusResult> implements java.io.Serializable {
 

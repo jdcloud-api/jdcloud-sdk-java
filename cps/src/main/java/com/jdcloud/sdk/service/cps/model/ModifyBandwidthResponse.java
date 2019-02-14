@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br&gt;
+ * 升级云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br/&gt;
 - 不支持未启用外网的服务器升级带宽
 - 外网带宽不支持降级
 

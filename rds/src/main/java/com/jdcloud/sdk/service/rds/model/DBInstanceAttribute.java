@@ -101,12 +101,12 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * 实例公网域名
+     * 实例内网域名
      */
     private String internalDomainName;
 
     /**
-     * 实例内网域名
+     * 实例公网域名
      */
     private String publicDomainName;
 
@@ -391,7 +391,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * get 实例公网域名
+     * get 实例内网域名
      *
      * @return
      */
@@ -400,7 +400,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 实例公网域名
+     * set 实例内网域名
      *
      * @param internalDomainName
      */
@@ -409,7 +409,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * get 实例内网域名
+     * get 实例公网域名
      *
      * @return
      */
@@ -418,7 +418,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 实例内网域名
+     * set 实例公网域名
      *
      * @param publicDomainName
      */
@@ -720,7 +720,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 实例公网域名
+     * set 实例内网域名
      *
      * @param internalDomainName
      */
@@ -730,7 +730,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 实例内网域名
+     * set 实例公网域名
      *
      * @param publicDomainName
      */

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupSynchronicitiesResponse;
 
 /**
- * 查询跨地域备份同步服务列表。
+ * 查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
  */
 class DescribeBackupSynchronicitiesExecutor extends JdcloudExecutor {
 

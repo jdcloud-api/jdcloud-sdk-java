@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询单个云物理服务器raid信息
+ * 查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
  */
 public class DescribeInstanceRaidResponse extends JdcloudResponse<DescribeInstanceRaidResult> implements java.io.Serializable {
 

@@ -35,14 +35,14 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器支持的可用区
+     * 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
      * Required:true
      */
     @Required
     private String az;
 
     /**
-     * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的区域
+     * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器支持的可用区
+     * get 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器支持的可用区
+     * set 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
      *
      * @param az
      */
@@ -68,7 +68,7 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的区域
+     * get 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的区域
+     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -87,7 +87,7 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器支持的可用区
+     * set 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
      *
      * @param az
      */
@@ -97,7 +97,7 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的区域
+     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
      *
      * @param regionId
      */

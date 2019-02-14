@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询云物理服务器支持的raid类型
+ * 查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
  */
 public class DescribeDeviceRaidsResponse extends JdcloudResponse<DescribeDeviceRaidsResult> implements java.io.Serializable {
 
