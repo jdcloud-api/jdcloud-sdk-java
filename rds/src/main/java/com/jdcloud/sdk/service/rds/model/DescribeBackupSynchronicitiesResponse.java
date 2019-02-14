@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询跨地域备份同步服务列表。
+ * 查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
  */
 public class DescribeBackupSynchronicitiesResponse extends JdcloudResponse<DescribeBackupSynchronicitiesResult> implements java.io.Serializable {
 

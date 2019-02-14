@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 云物理服务器
- * 云物理服务器区域操作相关的接口
+ * 云物理服务器地域操作相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询云物理服务器区域列表
+ * 查询云物理服务器地域列表
  */
 public class DescribeRegionesResponse extends JdcloudResponse<DescribeRegionesResult> implements java.io.Serializable {
 

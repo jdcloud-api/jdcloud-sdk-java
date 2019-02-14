@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询云物理服务器类型
+ * 查询云物理服务器实例类型
  */
 public class DescribeDeviceTypesResponse extends JdcloudResponse<DescribeDeviceTypesResult> implements java.io.Serializable {
 

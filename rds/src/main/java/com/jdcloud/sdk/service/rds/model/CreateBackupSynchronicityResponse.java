@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建一个跨地域备份同步服务。
+ * 创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
  */
 public class CreateBackupSynchronicityResponse extends JdcloudResponse<CreateBackupSynchronicityResult> implements java.io.Serializable {
 

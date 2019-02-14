@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.cps.model.DeviceType;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询云物理服务器类型
+ * 查询云物理服务器实例类型
  */
 public class DescribeDeviceTypesResult extends JdcloudResult implements java.io.Serializable {
 

@@ -49,7 +49,7 @@ public class Instance  implements java.io.Serializable {
     private String az;
 
     /**
-     * 设备类型, 如 cps.c.normal
+     * 实例类型, 如 cps.c.normal
      */
     private String deviceType;
 
@@ -72,6 +72,11 @@ public class Instance  implements java.io.Serializable {
      * 是否启用外网, 如 yes/no
      */
     private String enableInternet;
+
+    /**
+     * 是否启用IPv6, 如 yes/no
+     */
+    private String enableIpv6;
 
     /**
      * 带宽, 单位Mbps
@@ -104,22 +109,22 @@ public class Instance  implements java.io.Serializable {
     private String osVersion;
 
     /**
-     * 系统盘raid类型Id
+     * 系统盘RAID类型ID
      */
     private String sysRaidTypeId;
 
     /**
-     * 系统盘raid类型, 如 NORAID, RAID0, RAID1
+     * 系统盘RAID类型, 如 NORAID, RAID0, RAID1
      */
     private String sysRaidType;
 
     /**
-     * 数据盘raid类型Id
+     * 数据盘RAID类型ID
      */
     private String dataRaidTypeId;
 
     /**
-     * 数据盘raid类型, 如 NORAID, RAID0, RAID1
+     * 数据盘RAID类型, 如 NORAID, RAID0, RAID1
      */
     private String dataRaidType;
 
@@ -147,6 +152,11 @@ public class Instance  implements java.io.Serializable {
      * 公网IP
      */
     private String publicIp;
+
+    /**
+     * 公网IPv6
+     */
+    private String publicIpv6;
 
     /**
      * 计费信息
@@ -209,7 +219,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 设备类型, 如 cps.c.normal
+     * get 实例类型, 如 cps.c.normal
      *
      * @return
      */
@@ -218,7 +228,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 设备类型, 如 cps.c.normal
+     * set 实例类型, 如 cps.c.normal
      *
      * @param deviceType
      */
@@ -296,6 +306,24 @@ public class Instance  implements java.io.Serializable {
      */
     public void setEnableInternet(String enableInternet) {
         this.enableInternet = enableInternet;
+    }
+
+    /**
+     * get 是否启用IPv6, 如 yes/no
+     *
+     * @return
+     */
+    public String getEnableIpv6() {
+        return enableIpv6;
+    }
+
+    /**
+     * set 是否启用IPv6, 如 yes/no
+     *
+     * @param enableIpv6
+     */
+    public void setEnableIpv6(String enableIpv6) {
+        this.enableIpv6 = enableIpv6;
     }
 
     /**
@@ -407,7 +435,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘raid类型Id
+     * get 系统盘RAID类型ID
      *
      * @return
      */
@@ -416,7 +444,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘raid类型Id
+     * set 系统盘RAID类型ID
      *
      * @param sysRaidTypeId
      */
@@ -425,7 +453,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘raid类型, 如 NORAID, RAID0, RAID1
+     * get 系统盘RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @return
      */
@@ -434,7 +462,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘raid类型, 如 NORAID, RAID0, RAID1
+     * set 系统盘RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @param sysRaidType
      */
@@ -443,7 +471,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘raid类型Id
+     * get 数据盘RAID类型ID
      *
      * @return
      */
@@ -452,7 +480,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘raid类型Id
+     * set 数据盘RAID类型ID
      *
      * @param dataRaidTypeId
      */
@@ -461,7 +489,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘raid类型, 如 NORAID, RAID0, RAID1
+     * get 数据盘RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @return
      */
@@ -470,7 +498,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘raid类型, 如 NORAID, RAID0, RAID1
+     * set 数据盘RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @param dataRaidType
      */
@@ -569,6 +597,24 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 公网IPv6
+     *
+     * @return
+     */
+    public String getPublicIpv6() {
+        return publicIpv6;
+    }
+
+    /**
+     * set 公网IPv6
+     *
+     * @param publicIpv6
+     */
+    public void setPublicIpv6(String publicIpv6) {
+        this.publicIpv6 = publicIpv6;
+    }
+
+    /**
      * get 计费信息
      *
      * @return
@@ -618,7 +664,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 设备类型, 如 cps.c.normal
+     * set 实例类型, 如 cps.c.normal
      *
      * @param deviceType
      */
@@ -664,6 +710,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance enableInternet(String enableInternet) {
         this.enableInternet = enableInternet;
+        return this;
+    }
+
+    /**
+     * set 是否启用IPv6, 如 yes/no
+     *
+     * @param enableIpv6
+     */
+    public Instance enableIpv6(String enableIpv6) {
+        this.enableIpv6 = enableIpv6;
         return this;
     }
 
@@ -728,7 +784,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘raid类型Id
+     * set 系统盘RAID类型ID
      *
      * @param sysRaidTypeId
      */
@@ -738,7 +794,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘raid类型, 如 NORAID, RAID0, RAID1
+     * set 系统盘RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @param sysRaidType
      */
@@ -748,7 +804,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘raid类型Id
+     * set 数据盘RAID类型ID
      *
      * @param dataRaidTypeId
      */
@@ -758,7 +814,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘raid类型, 如 NORAID, RAID0, RAID1
+     * set 数据盘RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @param dataRaidType
      */
@@ -814,6 +870,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance publicIp(String publicIp) {
         this.publicIp = publicIp;
+        return this;
+    }
+
+    /**
+     * set 公网IPv6
+     *
+     * @param publicIpv6
+     */
+    public Instance publicIpv6(String publicIpv6) {
+        this.publicIpv6 = publicIpv6;
         return this;
     }
 

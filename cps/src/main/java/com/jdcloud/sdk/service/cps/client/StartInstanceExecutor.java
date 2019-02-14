@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cps.model.StartInstanceResponse;
 
 /**
- * 启动单个云物理服务器，只能启动stopped状态的服务器
+ * 对单个云物理服务器执行开机操作，只能启动stopped状态的服务器
  */
 class StartInstanceExecutor extends JdcloudExecutor {
 

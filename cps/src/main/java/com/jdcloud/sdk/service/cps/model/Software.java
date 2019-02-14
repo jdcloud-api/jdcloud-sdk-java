@@ -43,7 +43,7 @@ public class Software  implements java.io.Serializable {
     private String version;
 
     /**
-     * OS类型ID
+     * 操作系统系统类型ID
      */
     private String osTypeId;
 
@@ -90,7 +90,7 @@ public class Software  implements java.io.Serializable {
     }
 
     /**
-     * get OS类型ID
+     * get 操作系统系统类型ID
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class Software  implements java.io.Serializable {
     }
 
     /**
-     * set OS类型ID
+     * set 操作系统系统类型ID
      *
      * @param osTypeId
      */
@@ -147,7 +147,7 @@ public class Software  implements java.io.Serializable {
     }
 
     /**
-     * set OS类型ID
+     * set 操作系统系统类型ID
      *
      * @param osTypeId
      */

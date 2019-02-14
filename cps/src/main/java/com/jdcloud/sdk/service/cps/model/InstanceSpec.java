@@ -44,11 +44,16 @@ public class InstanceSpec  implements java.io.Serializable {
     private String az;
 
     /**
-     * 设备类型, 如 cps.c.normal
+     * 实例类型, 如 cps.c.normal
      * Required:true
      */
     @Required
     private String deviceType;
+
+    /**
+     * 主机名
+     */
+    private String hostname;
 
     /**
      * 镜像类型, 取值范围：standard、standard_app
@@ -65,14 +70,14 @@ public class InstanceSpec  implements java.io.Serializable {
     private String osTypeId;
 
     /**
-     * 系统盘raid类型Id
+     * 系统盘RAID类型ID
      * Required:true
      */
     @Required
     private String sysRaidTypeId;
 
     /**
-     * 数据盘raid类型Id
+     * 数据盘RAID类型ID
      * Required:true
      */
     @Required
@@ -87,6 +92,11 @@ public class InstanceSpec  implements java.io.Serializable {
      * 是否启用外网，取值范围：yes、no
      */
     private String enableInternet;
+
+    /**
+     * 是否启用IPv6，取值范围：yes、no
+     */
+    private String enableIpv6;
 
     /**
      * 网络类型，目前只支持basic
@@ -168,7 +178,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 设备类型, 如 cps.c.normal
+     * get 实例类型, 如 cps.c.normal
      *
      * @return
      */
@@ -177,12 +187,30 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 设备类型, 如 cps.c.normal
+     * set 实例类型, 如 cps.c.normal
      *
      * @param deviceType
      */
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
+    }
+
+    /**
+     * get 主机名
+     *
+     * @return
+     */
+    public String getHostname() {
+        return hostname;
+    }
+
+    /**
+     * set 主机名
+     *
+     * @param hostname
+     */
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
     }
 
     /**
@@ -222,7 +250,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘raid类型Id
+     * get 系统盘RAID类型ID
      *
      * @return
      */
@@ -231,7 +259,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘raid类型Id
+     * set 系统盘RAID类型ID
      *
      * @param sysRaidTypeId
      */
@@ -240,7 +268,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘raid类型Id
+     * get 数据盘RAID类型ID
      *
      * @return
      */
@@ -249,7 +277,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘raid类型Id
+     * set 数据盘RAID类型ID
      *
      * @param dataRaidTypeId
      */
@@ -291,6 +319,24 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public void setEnableInternet(String enableInternet) {
         this.enableInternet = enableInternet;
+    }
+
+    /**
+     * get 是否启用IPv6，取值范围：yes、no
+     *
+     * @return
+     */
+    public String getEnableIpv6() {
+        return enableIpv6;
+    }
+
+    /**
+     * set 是否启用IPv6，取值范围：yes、no
+     *
+     * @param enableIpv6
+     */
+    public void setEnableIpv6(String enableIpv6) {
+        this.enableIpv6 = enableIpv6;
     }
 
     /**
@@ -485,12 +531,22 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 设备类型, 如 cps.c.normal
+     * set 实例类型, 如 cps.c.normal
      *
      * @param deviceType
      */
     public InstanceSpec deviceType(String deviceType) {
         this.deviceType = deviceType;
+        return this;
+    }
+
+    /**
+     * set 主机名
+     *
+     * @param hostname
+     */
+    public InstanceSpec hostname(String hostname) {
+        this.hostname = hostname;
         return this;
     }
 
@@ -515,7 +571,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘raid类型Id
+     * set 系统盘RAID类型ID
      *
      * @param sysRaidTypeId
      */
@@ -525,7 +581,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘raid类型Id
+     * set 数据盘RAID类型ID
      *
      * @param dataRaidTypeId
      */
@@ -551,6 +607,16 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public InstanceSpec enableInternet(String enableInternet) {
         this.enableInternet = enableInternet;
+        return this;
+    }
+
+    /**
+     * set 是否启用IPv6，取值范围：yes、no
+     *
+     * @param enableIpv6
+     */
+    public InstanceSpec enableIpv6(String enableIpv6) {
+        this.enableIpv6 = enableIpv6;
         return this;
     }
 

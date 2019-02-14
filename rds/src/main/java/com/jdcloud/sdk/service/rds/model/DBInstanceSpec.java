@@ -56,7 +56,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     private String engineVersion;
 
     /**
-     * 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
+     * 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      * Required:true
      */
     @Required
@@ -158,7 +158,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
+     * get 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      *
      * @return
      */
@@ -167,7 +167,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
+     * set 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      *
      * @param instanceClass
      */
@@ -315,7 +315,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码，可以通过[describeInstanceClasses](../instance/describeInstanceClasses.md)接口获取
+     * set 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      *
      * @param instanceClass
      */

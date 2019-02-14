@@ -43,12 +43,12 @@ public class Raid  implements java.io.Serializable {
     private String volumeDetail;
 
     /**
-     * Raid类型Id
+     * RAID类型ID
      */
     private String raidTypeId;
 
     /**
-     * Raid类型, 如 NORAID, RAID0, RAID1
+     * RAID类型, 如 NORAID, RAID0, RAID1
      */
     private String raidType;
 
@@ -58,7 +58,7 @@ public class Raid  implements java.io.Serializable {
     private String deviceType;
 
     /**
-     * raid类型描述
+     * RAID类型描述
      */
     private String description;
 
@@ -100,7 +100,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * get Raid类型Id
+     * get RAID类型ID
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * set Raid类型Id
+     * set RAID类型ID
      *
      * @param raidTypeId
      */
@@ -118,7 +118,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * get Raid类型, 如 NORAID, RAID0, RAID1
+     * get RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * set Raid类型, 如 NORAID, RAID0, RAID1
+     * set RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @param raidType
      */
@@ -154,7 +154,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * get raid类型描述
+     * get RAID类型描述
      *
      * @return
      */
@@ -163,7 +163,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * set raid类型描述
+     * set RAID类型描述
      *
      * @param description
      */
@@ -193,7 +193,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * set Raid类型Id
+     * set RAID类型ID
      *
      * @param raidTypeId
      */
@@ -203,7 +203,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * set Raid类型, 如 NORAID, RAID0, RAID1
+     * set RAID类型, 如 NORAID, RAID0, RAID1
      *
      * @param raidType
      */
@@ -223,7 +223,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * set raid类型描述
+     * set RAID类型描述
      *
      * @param description
      */

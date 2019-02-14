@@ -50,14 +50,14 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     private String imageType;
 
     /**
-     * OS类型Id
+     * 操作系统类型ID
      * Required:true
      */
     @Required
     private String osTypeId;
 
     /**
-     * 系统盘raid类型Id
+     * 系统盘RAID类型ID
      * Required:true
      */
     @Required
@@ -71,7 +71,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     private String keepData;
 
     /**
-     * 数据盘raid类型Id
+     * 数据盘RAID类型ID
      * Required:true
      */
     @Required
@@ -83,6 +83,11 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
      */
     @Required
     private String password;
+
+    /**
+     * 主机名
+     */
+    private String hostname;
 
     /**
      * softwares
@@ -127,7 +132,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get OS类型Id
+     * get 操作系统类型ID
      *
      * @return
      */
@@ -136,7 +141,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set OS类型Id
+     * set 操作系统类型ID
      *
      * @param osTypeId
      */
@@ -145,7 +150,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘raid类型Id
+     * get 系统盘RAID类型ID
      *
      * @return
      */
@@ -154,7 +159,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘raid类型Id
+     * set 系统盘RAID类型ID
      *
      * @param sysRaidTypeId
      */
@@ -181,7 +186,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘raid类型Id
+     * get 数据盘RAID类型ID
      *
      * @return
      */
@@ -190,7 +195,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘raid类型Id
+     * set 数据盘RAID类型ID
      *
      * @param dataRaidTypeId
      */
@@ -214,6 +219,24 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * get 主机名
+     *
+     * @return
+     */
+    public String getHostname() {
+        return hostname;
+    }
+
+    /**
+     * set 主机名
+     *
+     * @param hostname
+     */
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
     }
 
     /**
@@ -256,7 +279,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set OS类型Id
+     * set 操作系统类型ID
      *
      * @param osTypeId
      */
@@ -266,7 +289,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘raid类型Id
+     * set 系统盘RAID类型ID
      *
      * @param sysRaidTypeId
      */
@@ -286,7 +309,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘raid类型Id
+     * set 数据盘RAID类型ID
      *
      * @param dataRaidTypeId
      */
@@ -302,6 +325,16 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
      */
     public ReinstallInstanceSpec password(String password) {
         this.password = password;
+        return this;
+    }
+
+    /**
+     * set 主机名
+     *
+     * @param hostname
+     */
+    public ReinstallInstanceSpec hostname(String hostname) {
+        this.hostname = hostname;
         return this;
     }
 

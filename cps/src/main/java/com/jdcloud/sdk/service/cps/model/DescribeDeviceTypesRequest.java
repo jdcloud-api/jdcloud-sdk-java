@@ -28,11 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询云物理服务器类型
+ * 查询云物理服务器实例类型
  */
 public class DescribeDeviceTypesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 可用区，精确匹配
+     */
+    private String az;
 
     /**
      * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
@@ -41,6 +46,24 @@ public class DescribeDeviceTypesRequest extends JdcloudRequest implements java.i
     @Required
     private String regionId;
 
+
+    /**
+     * get 可用区，精确匹配
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 可用区，精确匹配
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
 
     /**
      * get 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
@@ -60,6 +83,16 @@ public class DescribeDeviceTypesRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
     }
 
+
+    /**
+     * set 可用区，精确匹配
+     *
+     * @param az
+     */
+    public DescribeDeviceTypesRequest az(String az) {
+        this.az = az;
+        return this;
+    }
 
     /**
      * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域

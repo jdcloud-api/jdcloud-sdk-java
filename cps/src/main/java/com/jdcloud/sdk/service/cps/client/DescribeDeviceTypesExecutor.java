@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesResponse;
 
 /**
- * 查询云物理服务器类型
+ * 查询云物理服务器实例类型
  */
 class DescribeDeviceTypesExecutor extends JdcloudExecutor {
 

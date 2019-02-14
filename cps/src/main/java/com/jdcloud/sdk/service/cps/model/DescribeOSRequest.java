@@ -35,7 +35,7 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云物理服务器类型，可调用接口（describeDeviceTypes）获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+     * 实例类型，可调用接口（describeDeviceTypes）获取指定地域的实例类型，例如：cps.c.normal
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 云物理服务器类型，可调用接口（describeDeviceTypes）获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+     * get 实例类型，可调用接口（describeDeviceTypes）获取指定地域的实例类型，例如：cps.c.normal
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 云物理服务器类型，可调用接口（describeDeviceTypes）获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+     * set 实例类型，可调用接口（describeDeviceTypes）获取指定地域的实例类型，例如：cps.c.normal
      *
      * @param deviceType
      */
@@ -87,7 +87,7 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 云物理服务器类型，可调用接口（describeDeviceTypes）获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+     * set 实例类型，可调用接口（describeDeviceTypes）获取指定地域的实例类型，例如：cps.c.normal
      *
      * @param deviceType
      */
