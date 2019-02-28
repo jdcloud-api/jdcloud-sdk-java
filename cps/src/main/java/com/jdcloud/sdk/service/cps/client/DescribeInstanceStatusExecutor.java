@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceStatusResponse;
 
 /**
- * 查询单个云物理服务器监控信息
+ * 查询单个云物理服务器硬件监控信息
  */
 class DescribeInstanceStatusExecutor extends JdcloudExecutor {
 

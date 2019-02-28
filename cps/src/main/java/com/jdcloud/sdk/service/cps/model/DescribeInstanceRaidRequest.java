@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询单个云物理服务器raid信息
+ * 查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
  */
 public class DescribeInstanceRaidRequest extends JdcloudRequest implements java.io.Serializable {
 

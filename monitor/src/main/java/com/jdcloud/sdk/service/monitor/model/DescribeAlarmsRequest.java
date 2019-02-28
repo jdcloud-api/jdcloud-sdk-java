@@ -32,11 +32,12 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 查询规则, 查询参数组合及优先级从高到低为：
-1：serviceCode不为空
-1.1：serviceCode + resourceId
-1.2: serviceCode + resourceIds
-2：serviceCodes不为空
-3: 所有规则
+1：alarmId不为空
+2：serviceCode不为空
+2.1：serviceCode + resourceId
+2.2: serviceCode + resourceIds
+3：serviceCodes不为空
+4: 所有规则
  */
 public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -60,7 +61,7 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     /**
      * 资源ID
      */
-    private String resourceID;
+    private String resourceId;
 
     /**
      * 规则类型, 1表示资源监控，6表示站点监控,7表示可用性监控
@@ -161,17 +162,17 @@ filter name 为resourceIds表示查询多个资源的规则
      *
      * @return
      */
-    public String getResourceID() {
-        return resourceID;
+    public String getResourceId() {
+        return resourceId;
     }
 
     /**
      * set 资源ID
      *
-     * @param resourceID
+     * @param resourceId
      */
-    public void setResourceID(String resourceID) {
-        this.resourceID = resourceID;
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 
     /**
@@ -338,10 +339,10 @@ filter name 为resourceIds表示查询多个资源的规则
     /**
      * set 资源ID
      *
-     * @param resourceID
+     * @param resourceId
      */
-    public DescribeAlarmsRequest resourceID(String resourceID) {
-        this.resourceID = resourceID;
+    public DescribeAlarmsRequest resourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
 

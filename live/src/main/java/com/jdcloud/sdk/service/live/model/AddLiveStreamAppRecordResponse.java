@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 添加app录制配置
+ * 添加APP录制配置
  */
 public class AddLiveStreamAppRecordResponse extends JdcloudResponse<AddLiveStreamAppRecordResult> implements java.io.Serializable {
 

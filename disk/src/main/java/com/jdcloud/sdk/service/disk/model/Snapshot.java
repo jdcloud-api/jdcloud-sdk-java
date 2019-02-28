@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.disk.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 快照信息详情
@@ -38,7 +40,12 @@ public class Snapshot  implements java.io.Serializable {
     private String snapshotId;
 
     /**
-     * 创建快照的云硬盘ID
+     * 快照来源 可以有self，others两种来源
+     */
+    private String snapshotSource;
+
+    /**
+     * 创建快照的云硬盘ID(snapshotSource为others时不展示)
      */
     private String diskId;
 
@@ -46,6 +53,11 @@ public class Snapshot  implements java.io.Serializable {
      * 快照大小，单位为GiB
      */
     private Integer snapshotSizeGB;
+
+    /**
+     * 快照关联的所有镜像ID(snapshotSource为others时不展示)
+     */
+    private List<String> images;
 
     /**
      * 快照名称
@@ -67,6 +79,16 @@ public class Snapshot  implements java.io.Serializable {
      */
     private String createTime;
 
+    /**
+     * 共享信息
+     */
+    private List<ShareInfo> sharInfo;
+
+    /**
+     * 快照是否为加密盘的快照
+     */
+    private Boolean encrypted;
+
 
     /**
      * get 云硬盘快照ID
@@ -87,7 +109,25 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * get 创建快照的云硬盘ID
+     * get 快照来源 可以有self，others两种来源
+     *
+     * @return
+     */
+    public String getSnapshotSource() {
+        return snapshotSource;
+    }
+
+    /**
+     * set 快照来源 可以有self，others两种来源
+     *
+     * @param snapshotSource
+     */
+    public void setSnapshotSource(String snapshotSource) {
+        this.snapshotSource = snapshotSource;
+    }
+
+    /**
+     * get 创建快照的云硬盘ID(snapshotSource为others时不展示)
      *
      * @return
      */
@@ -96,7 +136,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 创建快照的云硬盘ID
+     * set 创建快照的云硬盘ID(snapshotSource为others时不展示)
      *
      * @param diskId
      */
@@ -120,6 +160,24 @@ public class Snapshot  implements java.io.Serializable {
      */
     public void setSnapshotSizeGB(Integer snapshotSizeGB) {
         this.snapshotSizeGB = snapshotSizeGB;
+    }
+
+    /**
+     * get 快照关联的所有镜像ID(snapshotSource为others时不展示)
+     *
+     * @return
+     */
+    public List<String> getImages() {
+        return images;
+    }
+
+    /**
+     * set 快照关联的所有镜像ID(snapshotSource为others时不展示)
+     *
+     * @param images
+     */
+    public void setImages(List<String> images) {
+        this.images = images;
     }
 
     /**
@@ -194,6 +252,42 @@ public class Snapshot  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+    /**
+     * get 共享信息
+     *
+     * @return
+     */
+    public List<ShareInfo> getSharInfo() {
+        return sharInfo;
+    }
+
+    /**
+     * set 共享信息
+     *
+     * @param sharInfo
+     */
+    public void setSharInfo(List<ShareInfo> sharInfo) {
+        this.sharInfo = sharInfo;
+    }
+
+    /**
+     * get 快照是否为加密盘的快照
+     *
+     * @return
+     */
+    public Boolean getEncrypted() {
+        return encrypted;
+    }
+
+    /**
+     * set 快照是否为加密盘的快照
+     *
+     * @param encrypted
+     */
+    public void setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+    }
+
 
     /**
      * set 云硬盘快照ID
@@ -206,7 +300,17 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 创建快照的云硬盘ID
+     * set 快照来源 可以有self，others两种来源
+     *
+     * @param snapshotSource
+     */
+    public Snapshot snapshotSource(String snapshotSource) {
+        this.snapshotSource = snapshotSource;
+        return this;
+    }
+
+    /**
+     * set 创建快照的云硬盘ID(snapshotSource为others时不展示)
      *
      * @param diskId
      */
@@ -222,6 +326,16 @@ public class Snapshot  implements java.io.Serializable {
      */
     public Snapshot snapshotSizeGB(Integer snapshotSizeGB) {
         this.snapshotSizeGB = snapshotSizeGB;
+        return this;
+    }
+
+    /**
+     * set 快照关联的所有镜像ID(snapshotSource为others时不展示)
+     *
+     * @param images
+     */
+    public Snapshot images(List<String> images) {
+        this.images = images;
         return this;
     }
 
@@ -265,5 +379,49 @@ public class Snapshot  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 共享信息
+     *
+     * @param sharInfo
+     */
+    public Snapshot sharInfo(List<ShareInfo> sharInfo) {
+        this.sharInfo = sharInfo;
+        return this;
+    }
+
+    /**
+     * set 快照是否为加密盘的快照
+     *
+     * @param encrypted
+     */
+    public Snapshot encrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+
+
+    /**
+     * add item to 快照关联的所有镜像ID(snapshotSource为others时不展示)
+     *
+     * @param image
+     */
+    public void addImage(String image) {
+        if (this.images == null) {
+            this.images = new ArrayList<>();
+        }
+        this.images.add(image);
+    }
+
+    /**
+     * add item to 共享信息
+     *
+     * @param sharInfo
+     */
+    public void addSharInfo(ShareInfo sharInfo) {
+        if (this.sharInfo == null) {
+            this.sharInfo = new ArrayList<>();
+        }
+        this.sharInfo.add(sharInfo);
+    }
 
 }

@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -67,6 +70,14 @@ public class DescribeAuditResultRequest extends JdcloudRequest implements java.i
      * 每页显示的数据条数，默认为10，取值范围：10、20、50
      */
     private Integer pageSize;
+
+    /**
+     * 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+operation
+
+     */
+    private List<Filter> filters;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -192,6 +203,30 @@ public class DescribeAuditResultRequest extends JdcloudRequest implements java.i
     }
 
     /**
+     * get 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+operation
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+operation
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -289,6 +324,19 @@ public class DescribeAuditResultRequest extends JdcloudRequest implements java.i
     }
 
     /**
+     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+operation
+
+     *
+     * @param filters
+     */
+    public DescribeAuditResultRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
@@ -308,5 +356,20 @@ public class DescribeAuditResultRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
+    /**
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：
+operation
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateDataDiskReq;
+import com.jdcloud.sdk.service.jdfusion.model.CreateDataDisk;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateDiskRequest extends JdcloudRequest implements java.io.Seriali
      * Required:true
      */
     @Required
-    private CreateDataDiskReq body;
+    private CreateDataDisk disk;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateDiskRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @return
      */
-    public CreateDataDiskReq getBody() {
-        return body;
+    public CreateDataDisk getDisk() {
+        return disk;
     }
 
     /**
      * set 创建云硬盘
      *
-     * @param body
+     * @param disk
      */
-    public void setBody(CreateDataDiskReq body) {
-        this.body = body;
+    public void setDisk(CreateDataDisk disk) {
+        this.disk = disk;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateDiskRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * set 创建云硬盘
      *
-     * @param body
+     * @param disk
      */
-    public CreateDiskRequest body(CreateDataDiskReq body) {
-        this.body = body;
+    public CreateDiskRequest disk(CreateDataDisk disk) {
+        this.disk = disk;
         return this;
     }
 

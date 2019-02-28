@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DescribeLiveAppResponse;
 
 /**
- * 查询域名下的app列表
+ * 查询域名下的APP列表
  */
 class DescribeLiveAppExecutor extends JdcloudExecutor {
 

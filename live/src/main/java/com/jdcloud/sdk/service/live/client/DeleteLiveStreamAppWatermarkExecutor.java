@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppWatermarkResponse;
 
 /**
- * 删除app水印配置
+ * 删除APP水印配置
  */
 class DeleteLiveStreamAppWatermarkExecutor extends JdcloudExecutor {
 

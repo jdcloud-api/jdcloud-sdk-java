@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除app水印配置
+ * 删除APP水印配置
  */
 public class DeleteLiveStreamAppWatermarkResponse extends JdcloudResponse<DeleteLiveStreamAppWatermarkResult> implements java.io.Serializable {
 

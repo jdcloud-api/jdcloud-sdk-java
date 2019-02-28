@@ -27,20 +27,20 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 停止单个云物理服务器，只能停止running状态的服务器
+ * 对单个云物理服务器执行关机操作，只能停止running状态的服务器
  */
 public class StopInstanceResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 停止操作是否成功
+     * 关机操作是否成功
      */
     private Boolean success;
 
 
     /**
-     * get 停止操作是否成功
+     * get 关机操作是否成功
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class StopInstanceResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 停止操作是否成功
+     * set 关机操作是否成功
      *
      * @param success
      */
@@ -59,7 +59,7 @@ public class StopInstanceResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * set 停止操作是否成功
+     * set 关机操作是否成功
      *
      * @param success
      */

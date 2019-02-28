@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateSecurityGroupReq;
+import com.jdcloud.sdk.service.jdfusion.model.CreateSecurityGroup;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVpcSecurityGroupRequest extends JdcloudRequest implements jav
      * Required:true
      */
     @Required
-    private CreateSecurityGroupReq body;
+    private CreateSecurityGroup securityGroup;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVpcSecurityGroupRequest extends JdcloudRequest implements jav
      *
      * @return
      */
-    public CreateSecurityGroupReq getBody() {
-        return body;
+    public CreateSecurityGroup getSecurityGroup() {
+        return securityGroup;
     }
 
     /**
      * set 创建securityGroup
      *
-     * @param body
+     * @param securityGroup
      */
-    public void setBody(CreateSecurityGroupReq body) {
-        this.body = body;
+    public void setSecurityGroup(CreateSecurityGroup securityGroup) {
+        this.securityGroup = securityGroup;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVpcSecurityGroupRequest extends JdcloudRequest implements jav
     /**
      * set 创建securityGroup
      *
-     * @param body
+     * @param securityGroup
      */
-    public CreateVpcSecurityGroupRequest body(CreateSecurityGroupReq body) {
-        this.body = body;
+    public CreateVpcSecurityGroupRequest securityGroup(CreateSecurityGroup securityGroup) {
+        this.securityGroup = securityGroup;
         return this;
     }
 

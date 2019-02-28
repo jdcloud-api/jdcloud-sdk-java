@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 启动单个云物理服务器，只能启动stopped状态的服务器
+ * 对单个云物理服务器执行开机操作，只能启动stopped状态的服务器
  */
 public class StartInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 

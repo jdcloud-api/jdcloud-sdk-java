@@ -27,46 +27,13 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除app转码配置
+ * 删除APP转码配置
  */
 public class DeleteLiveStreamAppTranscodeResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 直播的推流域名
-     */
-    private String publishDomain;
 
-
-    /**
-     * get 直播的推流域名
-     *
-     * @return
-     */
-    public String getPublishDomain() {
-        return publishDomain;
-    }
-
-    /**
-     * set 直播的推流域名
-     *
-     * @param publishDomain
-     */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-    }
-
-
-    /**
-     * set 直播的推流域名
-     *
-     * @param publishDomain
-     */
-    public DeleteLiveStreamAppTranscodeResult publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
-        return this;
-    }
 
 
 }

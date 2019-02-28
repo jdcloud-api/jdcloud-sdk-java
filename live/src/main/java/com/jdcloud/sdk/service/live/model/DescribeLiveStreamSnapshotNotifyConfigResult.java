@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询截图信息回调配置
+ * 查询截图回调配置
  */
 public class DescribeLiveStreamSnapshotNotifyConfigResult extends JdcloudResult implements java.io.Serializable {
 

@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.CreateLoadBalancerHTTPListenerReq;
+import com.jdcloud.sdk.service.jdfusion.model.CreateLoadBalancerHTTPListener;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class CreateVpcLBHttpListenerRequest extends JdcloudRequest implements ja
      * Required:true
      */
     @Required
-    private CreateLoadBalancerHTTPListenerReq body;
+    private CreateLoadBalancerHTTPListener httpListener;
 
     /**
      * 地域ID
@@ -55,17 +55,17 @@ public class CreateVpcLBHttpListenerRequest extends JdcloudRequest implements ja
      *
      * @return
      */
-    public CreateLoadBalancerHTTPListenerReq getBody() {
-        return body;
+    public CreateLoadBalancerHTTPListener getHttpListener() {
+        return httpListener;
     }
 
     /**
      * set 创建HTTP监听器
      *
-     * @param body
+     * @param httpListener
      */
-    public void setBody(CreateLoadBalancerHTTPListenerReq body) {
-        this.body = body;
+    public void setHttpListener(CreateLoadBalancerHTTPListener httpListener) {
+        this.httpListener = httpListener;
     }
 
     /**
@@ -90,10 +90,10 @@ public class CreateVpcLBHttpListenerRequest extends JdcloudRequest implements ja
     /**
      * set 创建HTTP监听器
      *
-     * @param body
+     * @param httpListener
      */
-    public CreateVpcLBHttpListenerRequest body(CreateLoadBalancerHTTPListenerReq body) {
-        this.body = body;
+    public CreateVpcLBHttpListenerRequest httpListener(CreateLoadBalancerHTTPListener httpListener) {
+        this.httpListener = httpListener;
         return this;
     }
 

@@ -54,7 +54,7 @@ public class DiskSpec  implements java.io.Serializable {
     private String description;
 
     /**
-     * 云硬盘类型，取值为ssd、premium-hdd之一
+     * 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
      * Required:true
      */
     @Required
@@ -76,6 +76,16 @@ public class DiskSpec  implements java.io.Serializable {
      * 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
      */
     private ChargeSpec charge;
+
+    /**
+     * 云硬盘是否支持一盘多主机挂载，默认为false（不支持）
+     */
+    private Boolean multiAttachable;
+
+    /**
+     * 云硬盘是否加密，默认为false（不加密）
+     */
+    private Boolean encrypt;
 
 
     /**
@@ -133,7 +143,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘类型，取值为ssd、premium-hdd之一
+     * get 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
      *
      * @return
      */
@@ -142,7 +152,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘类型，取值为ssd、premium-hdd之一
+     * set 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
      *
      * @param diskType
      */
@@ -204,6 +214,42 @@ public class DiskSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 云硬盘是否支持一盘多主机挂载，默认为false（不支持）
+     *
+     * @return
+     */
+    public Boolean getMultiAttachable() {
+        return multiAttachable;
+    }
+
+    /**
+     * set 云硬盘是否支持一盘多主机挂载，默认为false（不支持）
+     *
+     * @param multiAttachable
+     */
+    public void setMultiAttachable(Boolean multiAttachable) {
+        this.multiAttachable = multiAttachable;
+    }
+
+    /**
+     * get 云硬盘是否加密，默认为false（不加密）
+     *
+     * @return
+     */
+    public Boolean getEncrypt() {
+        return encrypt;
+    }
+
+    /**
+     * set 云硬盘是否加密，默认为false（不加密）
+     *
+     * @param encrypt
+     */
+    public void setEncrypt(Boolean encrypt) {
+        this.encrypt = encrypt;
+    }
+
 
     /**
      * set 云硬盘所属的可用区
@@ -236,7 +282,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘类型，取值为ssd、premium-hdd之一
+     * set 云硬盘类型，取值为ssd、premium-hdd、ssd.gp1、ssd.io1、hdd.std1之一
      *
      * @param diskType
      */
@@ -272,6 +318,26 @@ public class DiskSpec  implements java.io.Serializable {
      */
     public DiskSpec charge(ChargeSpec charge) {
         this.charge = charge;
+        return this;
+    }
+
+    /**
+     * set 云硬盘是否支持一盘多主机挂载，默认为false（不支持）
+     *
+     * @param multiAttachable
+     */
+    public DiskSpec multiAttachable(Boolean multiAttachable) {
+        this.multiAttachable = multiAttachable;
+        return this;
+    }
+
+    /**
+     * set 云硬盘是否加密，默认为false（不加密）
+     *
+     * @param encrypt
+     */
+    public DiskSpec encrypt(Boolean encrypt) {
+        this.encrypt = encrypt;
         return this;
     }
 

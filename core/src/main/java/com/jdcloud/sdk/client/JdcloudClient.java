@@ -5,6 +5,9 @@ import com.google.api.client.http.*;
 import com.google.api.client.http.apache.ApacheHttpTransport;
 import com.jdcloud.sdk.auth.CredentialsProvider;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -46,6 +49,18 @@ public abstract class JdcloudClient {
                         }
                     }
                 });
+    }
+
+    public HttpParams getHttpConnectionParams() {
+        return ((ApacheHttpTransport)this.httpTransport).getHttpClient().getParams();
+    }
+
+    public void setStaleCheckingEnabled(boolean enabled){
+        ((ApacheHttpTransport)this.httpTransport).getHttpClient().getParams().setBooleanParameter(HttpConnectionParams.STALE_CONNECTION_CHECK, enabled);
+    }
+
+    public void setTcpNoDelay(boolean enabled) {
+        ((ApacheHttpTransport)this.httpTransport).getHttpClient().getParams().setBooleanParameter(HttpConnectionParams.TCP_NODELAY, enabled);
     }
 
     /**

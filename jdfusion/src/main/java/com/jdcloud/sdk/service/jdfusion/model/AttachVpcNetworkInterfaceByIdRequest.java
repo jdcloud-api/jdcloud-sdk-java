@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.jdfusion.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jdfusion.model.AttachNetInterfaceReq;
+import com.jdcloud.sdk.service.jdfusion.model.AttachNetInterface;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class AttachVpcNetworkInterfaceByIdRequest extends JdcloudRequest impleme
      * Required:true
      */
     @Required
-    private AttachNetInterfaceReq body;
+    private AttachNetInterface attach;
 
     /**
      * 地域ID
@@ -62,17 +62,17 @@ public class AttachVpcNetworkInterfaceByIdRequest extends JdcloudRequest impleme
      *
      * @return
      */
-    public AttachNetInterfaceReq getBody() {
-        return body;
+    public AttachNetInterface getAttach() {
+        return attach;
     }
 
     /**
      * set 网卡挂载虚拟机
      *
-     * @param body
+     * @param attach
      */
-    public void setBody(AttachNetInterfaceReq body) {
-        this.body = body;
+    public void setAttach(AttachNetInterface attach) {
+        this.attach = attach;
     }
 
     /**
@@ -115,10 +115,10 @@ public class AttachVpcNetworkInterfaceByIdRequest extends JdcloudRequest impleme
     /**
      * set 网卡挂载虚拟机
      *
-     * @param body
+     * @param attach
      */
-    public AttachVpcNetworkInterfaceByIdRequest body(AttachNetInterfaceReq body) {
-        this.body = body;
+    public AttachVpcNetworkInterfaceByIdRequest attach(AttachNetInterface attach) {
+        this.attach = attach;
         return this;
     }
 

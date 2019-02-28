@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除录制模板
+ * 删除用户自定义录制模板
  */
 public class DeleteCustomLiveStreamRecordTemplateRequest extends JdcloudRequest implements java.io.Serializable {
 

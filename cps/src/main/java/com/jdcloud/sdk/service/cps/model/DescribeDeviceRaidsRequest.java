@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询云物理服务器支持的raid类型
+ * 查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
  */
 public class DescribeDeviceRaidsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云物理服务器类型，可查询describeDeviceTypes接口获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+     * 实例类型，可调用（describeDeviceTypes）接口获取指定地域的实例类型，例如：cps.c.normal
      * Required:true
      */
     @Required
@@ -55,7 +55,7 @@ public class DescribeDeviceRaidsRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 云物理服务器类型，可查询describeDeviceTypes接口获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+     * get 实例类型，可调用（describeDeviceTypes）接口获取指定地域的实例类型，例如：cps.c.normal
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class DescribeDeviceRaidsRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 云物理服务器类型，可查询describeDeviceTypes接口获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+     * set 实例类型，可调用（describeDeviceTypes）接口获取指定地域的实例类型，例如：cps.c.normal
      *
      * @param deviceType
      */
@@ -110,7 +110,7 @@ public class DescribeDeviceRaidsRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 云物理服务器类型，可查询describeDeviceTypes接口获取指定地域的服务器类型，例如：cps.s.normal,cps.c.normal
+     * set 实例类型，可调用（describeDeviceTypes）接口获取指定地域的实例类型，例如：cps.c.normal
      *
      * @param deviceType
      */

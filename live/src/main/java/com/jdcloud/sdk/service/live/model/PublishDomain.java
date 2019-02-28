@@ -57,11 +57,6 @@ public class PublishDomain  implements java.io.Serializable {
      */
     private String updateTime;
 
-    /**
-     * 地域编码
-     */
-    private String regionId;
-
 
     /**
      * get 推流域名
@@ -153,24 +148,6 @@ public class PublishDomain  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
-    /**
-     * get 地域编码
-     *
-     * @return
-     */
-    public String getRegionId() {
-        return regionId;
-    }
-
-    /**
-     * set 地域编码
-     *
-     * @param regionId
-     */
-    public void setRegionId(String regionId) {
-        this.regionId = regionId;
-    }
-
 
     /**
      * set 推流域名
@@ -219,16 +196,6 @@ public class PublishDomain  implements java.io.Serializable {
      */
     public PublishDomain updateTime(String updateTime) {
         this.updateTime = updateTime;
-        return this;
-    }
-
-    /**
-     * set 地域编码
-     *
-     * @param regionId
-     */
-    public PublishDomain regionId(String regionId) {
-        this.regionId = regionId;
         return this;
     }
 

@@ -26,11 +26,11 @@ package com.jdcloud.sdk.service.live.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.live.model.AppList;
+import com.jdcloud.sdk.service.live.model.App;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询域名下的app列表
+ * 查询域名下的APP列表
  */
 public class DescribeLiveAppResult extends JdcloudResult implements java.io.Serializable {
 
@@ -52,9 +52,9 @@ public class DescribeLiveAppResult extends JdcloudResult implements java.io.Seri
     private Number totalCount;
 
     /**
-     * appList
+     * apps
      */
-    private List<AppList> appList;
+    private List<App> apps;
 
 
     /**
@@ -112,21 +112,21 @@ public class DescribeLiveAppResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get appList
+     * get apps
      *
      * @return
      */
-    public List<AppList> getAppList() {
-        return appList;
+    public List<App> getApps() {
+        return apps;
     }
 
     /**
-     * set appList
+     * set apps
      *
-     * @param appList
+     * @param apps
      */
-    public void setAppList(List<AppList> appList) {
-        this.appList = appList;
+    public void setApps(List<App> apps) {
+        this.apps = apps;
     }
 
 
@@ -161,26 +161,26 @@ public class DescribeLiveAppResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set appList
+     * set apps
      *
-     * @param appList
+     * @param apps
      */
-    public DescribeLiveAppResult appList(List<AppList> appList) {
-        this.appList = appList;
+    public DescribeLiveAppResult apps(List<App> apps) {
+        this.apps = apps;
         return this;
     }
 
 
     /**
-     * add item to appList
+     * add item to apps
      *
-     * @param appList
+     * @param app
      */
-    public void addAppList(AppList appList) {
-        if (this.appList == null) {
-            this.appList = new ArrayList<>();
+    public void addApp(App app) {
+        if (this.apps == null) {
+            this.apps = new ArrayList<>();
         }
-        this.appList.add(appList);
+        this.apps.add(app);
     }
 
 }

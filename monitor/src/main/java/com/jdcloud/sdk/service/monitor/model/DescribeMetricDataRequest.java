@@ -26,8 +26,8 @@ package com.jdcloud.sdk.service.monitor.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.monitor.model.TagFilter;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,6 +36,46 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 public class DescribeMetricDataRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+     */
+    private String aggrType;
+
+    /**
+     * 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     */
+    private String downSampleType;
+
+    /**
+     * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     */
+    private String startTime;
+
+    /**
+     * 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     */
+    private String endTime;
+
+    /**
+     * 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+     */
+    private String timeInterval;
+
+    /**
+     * 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     */
+    private List<TagFilter> tags;
+
+    /**
+     * 是否对查询的tags分组
+     */
+    private Boolean groupBy;
+
+    /**
+     * 是否求速率
+     */
+    private Boolean rate;
 
     /**
      * 资源的类型，取值vm, lb, ip, database 等
@@ -52,36 +92,6 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private String resourceId;
 
     /**
-     * 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
-     */
-    private String aggrType;
-
-    /**
-     * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
-     */
-    private String startTime;
-
-    /**
-     * 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
-     */
-    private String endTime;
-
-    /**
-     * 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
-     */
-    private String timeInterval;
-
-    /**
-     * 自定义标签
-     */
-    private List<TagFilter> tags;
-
-    /**
-     * 是否对查询的tags分组
-     */
-    private Boolean groupBy;
-
-    /**
      * 地域 Id
      * Required:true
      */
@@ -95,6 +105,150 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     @Required
     private String metric;
 
+
+    /**
+     * get 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+     *
+     * @return
+     */
+    public String getAggrType() {
+        return aggrType;
+    }
+
+    /**
+     * set 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+     *
+     * @param aggrType
+     */
+    public void setAggrType(String aggrType) {
+        this.aggrType = aggrType;
+    }
+
+    /**
+     * get 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     *
+     * @return
+     */
+    public String getDownSampleType() {
+        return downSampleType;
+    }
+
+    /**
+     * set 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     *
+     * @param downSampleType
+     */
+    public void setDownSampleType(String downSampleType) {
+        this.downSampleType = downSampleType;
+    }
+
+    /**
+     * get 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     *
+     * @return
+     */
+    public String getStartTime() {
+        return startTime;
+    }
+
+    /**
+     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     *
+     * @param startTime
+     */
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * get 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     *
+     * @return
+     */
+    public String getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     *
+     * @param endTime
+     */
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * get 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+     *
+     * @return
+     */
+    public String getTimeInterval() {
+        return timeInterval;
+    }
+
+    /**
+     * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+     *
+     * @param timeInterval
+     */
+    public void setTimeInterval(String timeInterval) {
+        this.timeInterval = timeInterval;
+    }
+
+    /**
+     * get 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     *
+     * @return
+     */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+     * set 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     *
+     * @param tags
+     */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * get 是否对查询的tags分组
+     *
+     * @return
+     */
+    public Boolean getGroupBy() {
+        return groupBy;
+    }
+
+    /**
+     * set 是否对查询的tags分组
+     *
+     * @param groupBy
+     */
+    public void setGroupBy(Boolean groupBy) {
+        this.groupBy = groupBy;
+    }
+
+    /**
+     * get 是否求速率
+     *
+     * @return
+     */
+    public Boolean getRate() {
+        return rate;
+    }
+
+    /**
+     * set 是否求速率
+     *
+     * @param rate
+     */
+    public void setRate(Boolean rate) {
+        this.rate = rate;
+    }
 
     /**
      * get 资源的类型，取值vm, lb, ip, database 等
@@ -130,114 +284,6 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      */
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
-    }
-
-    /**
-     * get 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
-     *
-     * @return
-     */
-    public String getAggrType() {
-        return aggrType;
-    }
-
-    /**
-     * set 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
-     *
-     * @param aggrType
-     */
-    public void setAggrType(String aggrType) {
-        this.aggrType = aggrType;
-    }
-
-    /**
-     * get 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
-     *
-     * @return
-     */
-    public String getStartTime() {
-        return startTime;
-    }
-
-    /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
-     *
-     * @param startTime
-     */
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
-
-    /**
-     * get 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
-     *
-     * @return
-     */
-    public String getEndTime() {
-        return endTime;
-    }
-
-    /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
-     *
-     * @param endTime
-     */
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
-    }
-
-    /**
-     * get 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
-     *
-     * @return
-     */
-    public String getTimeInterval() {
-        return timeInterval;
-    }
-
-    /**
-     * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
-     *
-     * @param timeInterval
-     */
-    public void setTimeInterval(String timeInterval) {
-        this.timeInterval = timeInterval;
-    }
-
-    /**
-     * get 自定义标签
-     *
-     * @return
-     */
-    public List<TagFilter> getTags() {
-        return tags;
-    }
-
-    /**
-     * set 自定义标签
-     *
-     * @param tags
-     */
-    public void setTags(List<TagFilter> tags) {
-        this.tags = tags;
-    }
-
-    /**
-     * get 是否对查询的tags分组
-     *
-     * @return
-     */
-    public Boolean getGroupBy() {
-        return groupBy;
-    }
-
-    /**
-     * set 是否对查询的tags分组
-     *
-     * @param groupBy
-     */
-    public void setGroupBy(Boolean groupBy) {
-        this.groupBy = groupBy;
     }
 
     /**
@@ -278,27 +324,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等
-     *
-     * @param serviceCode
-     */
-    public DescribeMetricDataRequest serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-        return this;
-    }
-
-    /**
-     * set 资源的uuid
-     *
-     * @param resourceId
-     */
-    public DescribeMetricDataRequest resourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-
-    /**
-     * set 指标聚合方式，每个指标都有默认的聚合方式， 可选值包括：sum,avg.max.min
+     * set 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
      *
      * @param aggrType
      */
@@ -308,7 +334,17 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * set 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     *
+     * @param downSampleType
+     */
+    public DescribeMetricDataRequest downSampleType(String downSampleType) {
+        this.downSampleType = downSampleType;
+        return this;
+    }
+
+    /**
+     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param startTime
      */
@@ -328,7 +364,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval 与 endTime 至少填一项
+     * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
      *
      * @param timeInterval
      */
@@ -338,7 +374,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 自定义标签
+     * set 自定义标签/tag；至少要传一个tag，且tag.Values不为空
      *
      * @param tags
      */
@@ -354,6 +390,36 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      */
     public DescribeMetricDataRequest groupBy(Boolean groupBy) {
         this.groupBy = groupBy;
+        return this;
+    }
+
+    /**
+     * set 是否求速率
+     *
+     * @param rate
+     */
+    public DescribeMetricDataRequest rate(Boolean rate) {
+        this.rate = rate;
+        return this;
+    }
+
+    /**
+     * set 资源的类型，取值vm, lb, ip, database 等
+     *
+     * @param serviceCode
+     */
+    public DescribeMetricDataRequest serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set 资源的uuid
+     *
+     * @param resourceId
+     */
+    public DescribeMetricDataRequest resourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
 
@@ -379,7 +445,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * add item to 自定义标签
+     * add item to 自定义标签/tag；至少要传一个tag，且tag.Values不为空
      *
      * @param tag
      */

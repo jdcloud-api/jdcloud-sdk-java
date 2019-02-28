@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveAppResponse;
 
 /**
- * 删除app
+ * 删除APP
  */
 class DeleteLiveAppExecutor extends JdcloudExecutor {
 

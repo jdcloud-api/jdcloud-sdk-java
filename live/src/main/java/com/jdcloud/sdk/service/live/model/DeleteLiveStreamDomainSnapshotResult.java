@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除域名直播截图配置
+ * 删除域名截图配置
  */
 public class DeleteLiveStreamDomainSnapshotResult extends JdcloudResult implements java.io.Serializable {
 

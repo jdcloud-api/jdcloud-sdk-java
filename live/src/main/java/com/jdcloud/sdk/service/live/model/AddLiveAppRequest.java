@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加 app 模板
+ * 添加直播APP
  */
 public class AddLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
 

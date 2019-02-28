@@ -35,7 +35,7 @@ public class NotifyInfo  implements java.io.Serializable {
     /**
      * 您的加速域名
      */
-    private String publishDoamin;
+    private String publishDomain;
 
     /**
      * 回调地址
@@ -48,17 +48,17 @@ public class NotifyInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public String getPublishDoamin() {
-        return publishDoamin;
+    public String getPublishDomain() {
+        return publishDomain;
     }
 
     /**
      * set 您的加速域名
      *
-     * @param publishDoamin
+     * @param publishDomain
      */
-    public void setPublishDoamin(String publishDoamin) {
-        this.publishDoamin = publishDoamin;
+    public void setPublishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
     }
 
     /**
@@ -83,10 +83,10 @@ public class NotifyInfo  implements java.io.Serializable {
     /**
      * set 您的加速域名
      *
-     * @param publishDoamin
+     * @param publishDomain
      */
-    public NotifyInfo publishDoamin(String publishDoamin) {
-        this.publishDoamin = publishDoamin;
+    public NotifyInfo publishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
         return this;
     }
 

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询截图信息回调配置
+ * 查询截图回调配置
  */
 public class DescribeLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest implements java.io.Serializable {
 

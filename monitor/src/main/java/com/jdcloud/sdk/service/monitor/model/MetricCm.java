@@ -35,12 +35,27 @@ public class MetricCm  implements java.io.Serializable {
     /**
      * aggrPeriod
      */
-    private Long aggrPeriod;
+    private String aggrPeriod;
 
     /**
      * aggrType
      */
     private String aggrType;
+
+    /**
+     * calculateUnit
+     */
+    private String calculateUnit;
+
+    /**
+     * downSampleType
+     */
+    private String downSampleType;
+
+    /**
+     * metric
+     */
+    private String metric;
 
     /**
      * metricName
@@ -52,13 +67,18 @@ public class MetricCm  implements java.io.Serializable {
      */
     private String metricUID;
 
+    /**
+     * tags
+     */
+    private Object tags;
+
 
     /**
      * get aggrPeriod
      *
      * @return
      */
-    public Long getAggrPeriod() {
+    public String getAggrPeriod() {
         return aggrPeriod;
     }
 
@@ -67,7 +87,7 @@ public class MetricCm  implements java.io.Serializable {
      *
      * @param aggrPeriod
      */
-    public void setAggrPeriod(Long aggrPeriod) {
+    public void setAggrPeriod(String aggrPeriod) {
         this.aggrPeriod = aggrPeriod;
     }
 
@@ -87,6 +107,60 @@ public class MetricCm  implements java.io.Serializable {
      */
     public void setAggrType(String aggrType) {
         this.aggrType = aggrType;
+    }
+
+    /**
+     * get calculateUnit
+     *
+     * @return
+     */
+    public String getCalculateUnit() {
+        return calculateUnit;
+    }
+
+    /**
+     * set calculateUnit
+     *
+     * @param calculateUnit
+     */
+    public void setCalculateUnit(String calculateUnit) {
+        this.calculateUnit = calculateUnit;
+    }
+
+    /**
+     * get downSampleType
+     *
+     * @return
+     */
+    public String getDownSampleType() {
+        return downSampleType;
+    }
+
+    /**
+     * set downSampleType
+     *
+     * @param downSampleType
+     */
+    public void setDownSampleType(String downSampleType) {
+        this.downSampleType = downSampleType;
+    }
+
+    /**
+     * get metric
+     *
+     * @return
+     */
+    public String getMetric() {
+        return metric;
+    }
+
+    /**
+     * set metric
+     *
+     * @param metric
+     */
+    public void setMetric(String metric) {
+        this.metric = metric;
     }
 
     /**
@@ -125,13 +199,31 @@ public class MetricCm  implements java.io.Serializable {
         this.metricUID = metricUID;
     }
 
+    /**
+     * get tags
+     *
+     * @return
+     */
+    public Object getTags() {
+        return tags;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public void setTags(Object tags) {
+        this.tags = tags;
+    }
+
 
     /**
      * set aggrPeriod
      *
      * @param aggrPeriod
      */
-    public MetricCm aggrPeriod(Long aggrPeriod) {
+    public MetricCm aggrPeriod(String aggrPeriod) {
         this.aggrPeriod = aggrPeriod;
         return this;
     }
@@ -143,6 +235,36 @@ public class MetricCm  implements java.io.Serializable {
      */
     public MetricCm aggrType(String aggrType) {
         this.aggrType = aggrType;
+        return this;
+    }
+
+    /**
+     * set calculateUnit
+     *
+     * @param calculateUnit
+     */
+    public MetricCm calculateUnit(String calculateUnit) {
+        this.calculateUnit = calculateUnit;
+        return this;
+    }
+
+    /**
+     * set downSampleType
+     *
+     * @param downSampleType
+     */
+    public MetricCm downSampleType(String downSampleType) {
+        this.downSampleType = downSampleType;
+        return this;
+    }
+
+    /**
+     * set metric
+     *
+     * @param metric
+     */
+    public MetricCm metric(String metric) {
+        this.metric = metric;
         return this;
     }
 
@@ -163,6 +285,16 @@ public class MetricCm  implements java.io.Serializable {
      */
     public MetricCm metricUID(String metricUID) {
         this.metricUID = metricUID;
+        return this;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public MetricCm tags(Object tags) {
+        this.tags = tags;
         return this;
     }
 

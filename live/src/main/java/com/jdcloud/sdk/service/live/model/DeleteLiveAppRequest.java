@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除app
+ * 删除APP
  */
 public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
 

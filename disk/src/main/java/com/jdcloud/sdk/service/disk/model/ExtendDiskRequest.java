@@ -28,7 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 扩容云硬盘到指定大小
+ * -   扩容云硬盘到指定大小，云硬盘状态必须为 available。
+-   当云硬盘正在创建快照时，不允许扩容。
+
  */
 public class ExtendDiskRequest extends JdcloudRequest implements java.io.Serializable {
 

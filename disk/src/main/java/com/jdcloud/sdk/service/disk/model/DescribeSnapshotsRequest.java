@@ -31,7 +31,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询云硬盘快照列表
+ * 查询云硬盘快照列表，filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
  */
 public class DescribeSnapshotsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -48,9 +48,14 @@ public class DescribeSnapshotsRequest extends JdcloudRequest implements java.io.
     private Integer pageSize;
 
     /**
+     * 查找快照的类型，可以为private，others，shared，默认为private
+     */
+    private String snapshotSource;
+
+    /**
      * snapshotId - 云硬盘快照ID，支持多个
 diskId - 生成快照的云硬盘ID，支持多个
-status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
+status - 快照状态，精确匹配，支持多个,取值为 creating、available、copying、deleting、error_create、error_delete
 name - 快照名称，模糊匹配，支持单个
 
      */
@@ -101,9 +106,27 @@ name - 快照名称，模糊匹配，支持单个
     }
 
     /**
+     * get 查找快照的类型，可以为private，others，shared，默认为private
+     *
+     * @return
+     */
+    public String getSnapshotSource() {
+        return snapshotSource;
+    }
+
+    /**
+     * set 查找快照的类型，可以为private，others，shared，默认为private
+     *
+     * @param snapshotSource
+     */
+    public void setSnapshotSource(String snapshotSource) {
+        this.snapshotSource = snapshotSource;
+    }
+
+    /**
      * get snapshotId - 云硬盘快照ID，支持多个
 diskId - 生成快照的云硬盘ID，支持多个
-status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
+status - 快照状态，精确匹配，支持多个,取值为 creating、available、copying、deleting、error_create、error_delete
 name - 快照名称，模糊匹配，支持单个
 
      *
@@ -116,7 +139,7 @@ name - 快照名称，模糊匹配，支持单个
     /**
      * set snapshotId - 云硬盘快照ID，支持多个
 diskId - 生成快照的云硬盘ID，支持多个
-status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
+status - 快照状态，精确匹配，支持多个,取值为 creating、available、copying、deleting、error_create、error_delete
 name - 快照名称，模糊匹配，支持单个
 
      *
@@ -166,9 +189,19 @@ name - 快照名称，模糊匹配，支持单个
     }
 
     /**
+     * set 查找快照的类型，可以为private，others，shared，默认为private
+     *
+     * @param snapshotSource
+     */
+    public DescribeSnapshotsRequest snapshotSource(String snapshotSource) {
+        this.snapshotSource = snapshotSource;
+        return this;
+    }
+
+    /**
      * set snapshotId - 云硬盘快照ID，支持多个
 diskId - 生成快照的云硬盘ID，支持多个
-status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
+status - 快照状态，精确匹配，支持多个,取值为 creating、available、copying、deleting、error_create、error_delete
 name - 快照名称，模糊匹配，支持单个
 
      *
@@ -193,7 +226,7 @@ name - 快照名称，模糊匹配，支持单个
     /**
      * add item to snapshotId - 云硬盘快照ID，支持多个
 diskId - 生成快照的云硬盘ID，支持多个
-status - 快照状态，精确匹配，支持多个,取值为 creating、available、in-use、deleting、error_create、error_delete
+status - 快照状态，精确匹配，支持多个,取值为 creating、available、copying、deleting、error_create、error_delete
 name - 快照名称，模糊匹配，支持单个
 
      *

@@ -48,13 +48,6 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
     @Required
     private String playDomain;
 
-    /**
-     * 区域ID
-     * Required:true
-     */
-    @Required
-    private String region;
-
 
     /**
      * get 直播的推流域名
@@ -92,24 +85,6 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
         this.playDomain = playDomain;
     }
 
-    /**
-     * get 区域ID
-     *
-     * @return
-     */
-    public String getRegion() {
-        return region;
-    }
-
-    /**
-     * set 区域ID
-     *
-     * @param region
-     */
-    public void setRegion(String region) {
-        this.region = region;
-    }
-
 
     /**
      * set 直播的推流域名
@@ -128,16 +103,6 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
      */
     public AddLiveDomainRequest playDomain(String playDomain) {
         this.playDomain = playDomain;
-        return this;
-    }
-
-    /**
-     * set 区域ID
-     *
-     * @param region
-     */
-    public AddLiveDomainRequest region(String region) {
-        this.region = region;
         return this;
     }
 

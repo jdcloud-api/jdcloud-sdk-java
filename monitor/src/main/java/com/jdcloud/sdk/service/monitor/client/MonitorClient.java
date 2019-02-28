@@ -31,54 +31,51 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.monitor.model.DescribeMetricDataRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeMetricDataResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeMetricDataExecutor;
-import com.jdcloud.sdk.service.monitor.model.LastDownsampleRequest;
-import com.jdcloud.sdk.service.monitor.model.LastDownsampleResponse;
-import com.jdcloud.sdk.service.monitor.client.LastDownsampleExecutor;
-import com.jdcloud.sdk.service.monitor.model.UpdateAlarmRequest;
-import com.jdcloud.sdk.service.monitor.model.UpdateAlarmResponse;
-import com.jdcloud.sdk.service.monitor.client.UpdateAlarmExecutor;
-import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeAlarmHistoryExecutor;
-import com.jdcloud.sdk.service.monitor.model.DescribeMetricsRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeMetricsResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeMetricsExecutor;
 import com.jdcloud.sdk.service.monitor.model.CreateAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.CreateAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.CreateAlarmExecutor;
-import com.jdcloud.sdk.service.monitor.model.DescribeMetricsForCreateAlarmRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeMetricsForCreateAlarmResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeMetricsForCreateAlarmExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeMetricDataRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeMetricDataResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeMetricDataExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeAlarmContactsRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeAlarmContactsResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeAlarmContactsExecutor;
-import com.jdcloud.sdk.service.monitor.model.DescribeCmMetricDataByTagSpecRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeCmMetricDataByTagSpecResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeCmMetricDataByTagSpecExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeAlarmHistoryExecutor;
 import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsCmRequest;
 import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsCmResponse;
 import com.jdcloud.sdk.service.monitor.client.DeleteAlarmsCmExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeMetricsForCreateAlarmRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeMetricsForCreateAlarmResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeMetricsForCreateAlarmExecutor;
+import com.jdcloud.sdk.service.monitor.model.LastDownsampleRequest;
+import com.jdcloud.sdk.service.monitor.model.LastDownsampleResponse;
+import com.jdcloud.sdk.service.monitor.client.LastDownsampleExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeAlarmsByIDRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeAlarmsByIDResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeAlarmsByIDExecutor;
+import com.jdcloud.sdk.service.monitor.model.UpdateAlarmRequest;
+import com.jdcloud.sdk.service.monitor.model.UpdateAlarmResponse;
+import com.jdcloud.sdk.service.monitor.client.UpdateAlarmExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryAllRegionRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryAllRegionResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeAlarmHistoryAllRegionExecutor;
 import com.jdcloud.sdk.service.monitor.model.PutMetricDataRequest;
 import com.jdcloud.sdk.service.monitor.model.PutMetricDataResponse;
 import com.jdcloud.sdk.service.monitor.client.PutMetricDataExecutor;
 import com.jdcloud.sdk.service.monitor.model.DisableAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.DisableAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.DisableAlarmExecutor;
-import com.jdcloud.sdk.service.monitor.model.DescribeAlarmsRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeAlarmsResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeAlarmsExecutor;
-import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryAllRegionRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryAllRegionResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeAlarmHistoryAllRegionExecutor;
-import com.jdcloud.sdk.service.monitor.model.DescribeAlarmsByIDRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeAlarmsByIDResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeAlarmsByIDExecutor;
 import com.jdcloud.sdk.service.monitor.model.EnableAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.EnableAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.EnableAlarmExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeAlarmsRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeAlarmsResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeAlarmsExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeMetricsRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeMetricsResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeMetricsExecutor;
 
 /**
  * monitorClient
@@ -87,7 +84,7 @@ public class MonitorClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.8";
+    public final static String ClientVersion = "1.0.9";
     public final static String DefaultEndpoint = "monitor.jdcloud-api.com";
     public final static String ServiceName = "monitor";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -130,6 +127,17 @@ public class MonitorClient extends JdcloudClient {
 
 
     /**
+     * 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAlarmResponse createAlarm(CreateAlarmRequest request) throws JdcloudSdkException {
+        return new CreateAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看某资源多个监控项数据，metric介绍1：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
      *
      * @param request
@@ -141,6 +149,57 @@ public class MonitorClient extends JdcloudClient {
     }
 
     /**
+     * 查询规则的报警联系人
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAlarmContactsResponse describeAlarmContacts(DescribeAlarmContactsRequest request) throws JdcloudSdkException {
+        return new DescribeAlarmContactsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询报警历史
+检索条件组合优先级从高到低为
+1. alarmId
+2. serviceCode
+2.1 serviceCode + resourceId
+2.2 serviceCode + resourceIds
+3. serviceCodes
+4. 用户所有规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAlarmHistoryResponse describeAlarmHistory(DescribeAlarmHistoryRequest request) throws JdcloudSdkException {
+        return new DescribeAlarmHistoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除自定义监控规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAlarmsCmResponse deleteAlarmsCm(DeleteAlarmsCmRequest request) throws JdcloudSdkException {
+        return new DeleteAlarmsCmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询可用创建监控规则的指标列表,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeMetricsForCreateAlarmResponse describeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) throws JdcloudSdkException {
+        return new DescribeMetricsForCreateAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看某资源的最后一个点,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
      *
      * @param request
@@ -149,6 +208,17 @@ public class MonitorClient extends JdcloudClient {
      */
     public LastDownsampleResponse lastDownsample(LastDownsampleRequest request) throws JdcloudSdkException {
         return new LastDownsampleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询规则详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAlarmsByIDResponse describeAlarmsByID(DescribeAlarmsByIDRequest request) throws JdcloudSdkException {
+        return new DescribeAlarmsByIDExecutor().client(this).execute(request);
     }
 
     /**
@@ -165,84 +235,19 @@ public class MonitorClient extends JdcloudClient {
     /**
      * 查询报警历史
 检索条件组合优先级从高到低为
-1. serviceCode
-1.1 serviceCode + resourceId
-1.2 serviceCode + resourceIds
-2. serviceCodes
-3. 用户所有规则
+1. alarmId
+2. serviceCode
+2.1 serviceCode + resourceId
+2.2 serviceCode + resourceIds
+3. serviceCodes
+4. 用户所有规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeAlarmHistoryResponse describeAlarmHistory(DescribeAlarmHistoryRequest request) throws JdcloudSdkException {
-        return new DescribeAlarmHistoryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据产品线查询可用监控项列表,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeMetricsResponse describeMetrics(DescribeMetricsRequest request) throws JdcloudSdkException {
-        return new DescribeMetricsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建报警规则，可以为某一个实例创建报警规则，也可以为多个实例同时创建报警规则。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateAlarmResponse createAlarm(CreateAlarmRequest request) throws JdcloudSdkException {
-        return new CreateAlarmExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询可用创建监控规则的指标列表,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeMetricsForCreateAlarmResponse describeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) throws JdcloudSdkException {
-        return new DescribeMetricsForCreateAlarmExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询规则的报警联系人
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeAlarmContactsResponse describeAlarmContacts(DescribeAlarmContactsRequest request) throws JdcloudSdkException {
-        return new DescribeAlarmContactsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询自定义监控项数据
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeCmMetricDataByTagSpecResponse describeCmMetricDataByTagSpec(DescribeCmMetricDataByTagSpecRequest request) throws JdcloudSdkException {
-        return new DescribeCmMetricDataByTagSpecExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除自定义监控规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteAlarmsCmResponse deleteAlarmsCm(DeleteAlarmsCmRequest request) throws JdcloudSdkException {
-        return new DeleteAlarmsCmExecutor().client(this).execute(request);
+    public DescribeAlarmHistoryAllRegionResponse describeAlarmHistoryAllRegion(DescribeAlarmHistoryAllRegionRequest request) throws JdcloudSdkException {
+        return new DescribeAlarmHistoryAllRegionExecutor().client(this).execute(request);
     }
 
     /**
@@ -268,12 +273,24 @@ public class MonitorClient extends JdcloudClient {
     }
 
     /**
+     * 启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableAlarmResponse enableAlarm(EnableAlarmRequest request) throws JdcloudSdkException {
+        return new EnableAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询规则, 查询参数组合及优先级从高到低为：
-1：serviceCode不为空
-1.1：serviceCode + resourceId
-1.2: serviceCode + resourceIds
-2：serviceCodes不为空
-3: 所有规则
+1：alarmId不为空
+2：serviceCode不为空
+2.1：serviceCode + resourceId
+2.2: serviceCode + resourceIds
+3：serviceCodes不为空
+4: 所有规则
      *
      * @param request
      * @return
@@ -284,42 +301,14 @@ public class MonitorClient extends JdcloudClient {
     }
 
     /**
-     * 查询报警历史
-检索条件组合优先级从高到低为
-1. serviceCode
-1.1 serviceCode + resourceId
-1.2 serviceCode + resourceIds
-2. serviceCodes
-3. 用户所有规则
+     * 根据产品线查询可用监控项列表,metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeAlarmHistoryAllRegionResponse describeAlarmHistoryAllRegion(DescribeAlarmHistoryAllRegionRequest request) throws JdcloudSdkException {
-        return new DescribeAlarmHistoryAllRegionExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询规则详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeAlarmsByIDResponse describeAlarmsByID(DescribeAlarmsByIDRequest request) throws JdcloudSdkException {
-        return new DescribeAlarmsByIDExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 启用报警规则，当客户的报警规则处于停止状态时，可以使用此接口启用报警规则。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EnableAlarmResponse enableAlarm(EnableAlarmRequest request) throws JdcloudSdkException {
-        return new EnableAlarmExecutor().client(this).execute(request);
+    public DescribeMetricsResponse describeMetrics(DescribeMetricsRequest request) throws JdcloudSdkException {
+        return new DescribeMetricsExecutor().client(this).execute(request);
     }
 
 

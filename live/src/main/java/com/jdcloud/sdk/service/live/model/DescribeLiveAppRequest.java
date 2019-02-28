@@ -30,14 +30,14 @@ import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询域名下的app列表
+ * 查询域名下的APP列表
  */
 public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1
+     * 页码；默认为1；取值范围[1, 100000]
      */
     private Integer pageNum;
 
@@ -53,7 +53,7 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 页码；默认为1
+     * get 页码；默认为1；取值范围[1, 100000]
      *
      * @return
      */
@@ -62,7 +62,7 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1；取值范围[1, 100000]
      *
      * @param pageNum
      */
@@ -108,7 +108,7 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1；取值范围[1, 100000]
      *
      * @param pageNum
      */

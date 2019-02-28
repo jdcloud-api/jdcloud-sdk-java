@@ -29,24 +29,23 @@ import com.jdcloud.sdk.service.cps.model.InstanceSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建一台或多台指定配置的云物理服务器
-- 地域与可用区
-  - 调用接口（describeRegiones）获取云物理服务器支持的地域与可用区
-- 服务器规格类型
-  - 调用接口（describeDeviceTypes）获取物理服务器类型列表
-  - 不能使用已下线、或已售馨的规格ID
-- 操作系统和预装软件
-  - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表
-  - 可调用接口（describeSoftware）获取云物理服务器支持的软件列表，也可以不预装软件
-- 存储
-  - 数据盘多种Raid可选，可调用接口（describeDeviceRaids）获取服务器支持的Raid列表
-- 网络
-  - 网络类型目前只支持basic
-  - 线路目前只支持bgp
-  - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps
-- 其他
-  - 购买时长，可按年或月购买，最少购买时长1个月，最长36个月（3年）
-  - 密码设置参考公共参数规范
+ * 创建一台或多台指定配置的云物理服务器&lt;br/&gt;
+- 地域与可用区&lt;br/&gt;
+  - 调用接口（describeRegiones）获取云物理服务器支持的地域与可用区&lt;br/&gt;
+- 实例类型&lt;br/&gt;
+  - 调用接口（describeDeviceTypes）获取物理实例类型列表&lt;br/&gt;
+  - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
+- 操作系统和预装软件&lt;br/&gt;
+  - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
+- 存储&lt;br/&gt;
+  - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
+- 网络&lt;br/&gt;
+  - 网络类型目前只支持basic&lt;br/&gt;
+  - 线路目前只支持bgp&lt;br/&gt;
+  - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
+- 其他&lt;br/&gt;
+  - 购买时长，可按年或月购买：月取值范围[1,9], 年取值范围[1,3]&lt;br/&gt;
+  - 密码设置参考公共参数规范&lt;br/&gt;
 
  */
 public class CreateInstancesRequest extends JdcloudRequest implements java.io.Serializable {

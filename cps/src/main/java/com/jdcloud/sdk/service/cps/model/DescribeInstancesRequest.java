@@ -65,7 +65,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String networkType;
 
     /**
-     * 服务器类型，精确匹配，调用接口（describeDeviceTypes）获取物理服务器类型列表
+     * 实例类型，精确匹配，调用接口（describeDeviceTypes）获取实例类型
      */
     private String deviceType;
 
@@ -179,7 +179,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 服务器类型，精确匹配，调用接口（describeDeviceTypes）获取物理服务器类型列表
+     * get 实例类型，精确匹配，调用接口（describeDeviceTypes）获取实例类型
      *
      * @return
      */
@@ -188,7 +188,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 服务器类型，精确匹配，调用接口（describeDeviceTypes）获取物理服务器类型列表
+     * set 实例类型，精确匹配，调用接口（describeDeviceTypes）获取实例类型
      *
      * @param deviceType
      */
@@ -304,7 +304,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 服务器类型，精确匹配，调用接口（describeDeviceTypes）获取物理服务器类型列表
+     * set 实例类型，精确匹配，调用接口（describeDeviceTypes）获取实例类型
      *
      * @param deviceType
      */

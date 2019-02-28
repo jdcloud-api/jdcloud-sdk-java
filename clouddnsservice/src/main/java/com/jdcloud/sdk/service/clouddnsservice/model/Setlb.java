@@ -41,7 +41,7 @@ public class Setlb  implements java.io.Serializable {
     private Integer id;
 
     /**
-     * 此条解析记录的权重。
+     * 此条解析记录的权重。A,AAAA类型的权重范围为：0-100，CNAME, JNAME类型的权重范围为：1-100。
      * Required:true
      */
     @Required
@@ -67,7 +67,7 @@ public class Setlb  implements java.io.Serializable {
     }
 
     /**
-     * get 此条解析记录的权重。
+     * get 此条解析记录的权重。A,AAAA类型的权重范围为：0-100，CNAME, JNAME类型的权重范围为：1-100。
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class Setlb  implements java.io.Serializable {
     }
 
     /**
-     * set 此条解析记录的权重。
+     * set 此条解析记录的权重。A,AAAA类型的权重范围为：0-100，CNAME, JNAME类型的权重范围为：1-100。
      *
      * @param weight
      */
@@ -96,7 +96,7 @@ public class Setlb  implements java.io.Serializable {
     }
 
     /**
-     * set 此条解析记录的权重。
+     * set 此条解析记录的权重。A,AAAA类型的权重范围为：0-100，CNAME, JNAME类型的权重范围为：1-100。
      *
      * @param weight
      */

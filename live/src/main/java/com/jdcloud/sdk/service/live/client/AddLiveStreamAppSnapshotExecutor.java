@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamAppSnapshotResponse;
 
 /**
- * 添加app直播截图配置
+ * 添加APP直播截图配置
  */
 class AddLiveStreamAppSnapshotExecutor extends JdcloudExecutor {
 

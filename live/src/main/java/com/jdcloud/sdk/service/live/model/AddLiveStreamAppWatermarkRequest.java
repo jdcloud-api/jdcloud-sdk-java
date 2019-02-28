@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加app水印配置
+ * 添加APP水印配置
  */
 public class AddLiveStreamAppWatermarkRequest extends JdcloudRequest implements java.io.Serializable {
 

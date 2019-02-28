@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除app水印配置
+ * 删除APP水印配置
  */
 public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implements java.io.Serializable {
 

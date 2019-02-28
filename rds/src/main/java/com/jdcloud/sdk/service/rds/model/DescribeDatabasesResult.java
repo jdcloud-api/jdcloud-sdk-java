@@ -41,6 +41,11 @@ public class DescribeDatabasesResult extends JdcloudResult implements java.io.Se
      */
     private List<Database> databases;
 
+    /**
+     * totalCount
+     */
+    private Integer totalCount;
+
 
     /**
      * get databases
@@ -60,6 +65,24 @@ public class DescribeDatabasesResult extends JdcloudResult implements java.io.Se
         this.databases = databases;
     }
 
+    /**
+     * get totalCount
+     *
+     * @return
+     */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set totalCount
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
 
     /**
      * set databases
@@ -68,6 +91,16 @@ public class DescribeDatabasesResult extends JdcloudResult implements java.io.Se
      */
     public DescribeDatabasesResult databases(List<Database> databases) {
         this.databases = databases;
+        return this;
+    }
+
+    /**
+     * set totalCount
+     *
+     * @param totalCount
+     */
+    public DescribeDatabasesResult totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
 
