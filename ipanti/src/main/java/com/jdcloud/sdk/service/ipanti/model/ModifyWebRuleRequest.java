@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 网站转发配置相关接口
- * 网站转发配置相关接口
+ * Anti DDos Pro Web Rule Configuration APIs
+ * Anti DDos Pro Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,43 +29,43 @@ import com.jdcloud.sdk.service.ipanti.model.WebRuleSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 更新某条网站类规则
+ * 修改网站类规则
  */
 public class ModifyWebRuleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 网站类规则参数
+     * 更新网站类规则请求参数
      * Required:true
      */
     @Required
     private WebRuleSpec webRuleSpec;
 
     /**
-     * Region ID
+     * 区域 Id
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例id
+     * 高防实例 Id
      * Required:true
      */
     @Required
-    private String instanceId;
+    private Long instanceId;
 
     /**
-     * 网站规则id
+     * 网站规则 Id
      * Required:true
      */
     @Required
-    private String webRuleId;
+    private Long webRuleId;
 
 
     /**
-     * get 网站类规则参数
+     * get 更新网站类规则请求参数
      *
      * @return
      */
@@ -74,7 +74,7 @@ public class ModifyWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 网站类规则参数
+     * set 更新网站类规则请求参数
      *
      * @param webRuleSpec
      */
@@ -83,7 +83,7 @@ public class ModifyWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get Region ID
+     * get 区域 Id
      *
      * @return
      */
@@ -92,7 +92,7 @@ public class ModifyWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 区域 Id
      *
      * @param regionId
      */
@@ -101,44 +101,44 @@ public class ModifyWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 实例id
+     * get 高防实例 Id
      *
      * @return
      */
-    public String getInstanceId() {
+    public Long getInstanceId() {
         return instanceId;
     }
 
     /**
-     * set 实例id
+     * set 高防实例 Id
      *
      * @param instanceId
      */
-    public void setInstanceId(String instanceId) {
+    public void setInstanceId(Long instanceId) {
         this.instanceId = instanceId;
     }
 
     /**
-     * get 网站规则id
+     * get 网站规则 Id
      *
      * @return
      */
-    public String getWebRuleId() {
+    public Long getWebRuleId() {
         return webRuleId;
     }
 
     /**
-     * set 网站规则id
+     * set 网站规则 Id
      *
      * @param webRuleId
      */
-    public void setWebRuleId(String webRuleId) {
+    public void setWebRuleId(Long webRuleId) {
         this.webRuleId = webRuleId;
     }
 
 
     /**
-     * set 网站类规则参数
+     * set 更新网站类规则请求参数
      *
      * @param webRuleSpec
      */
@@ -148,7 +148,7 @@ public class ModifyWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 区域 Id
      *
      * @param regionId
      */
@@ -158,21 +158,21 @@ public class ModifyWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 实例id
+     * set 高防实例 Id
      *
      * @param instanceId
      */
-    public ModifyWebRuleRequest instanceId(String instanceId) {
+    public ModifyWebRuleRequest instanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
     /**
-     * set 网站规则id
+     * set 网站规则 Id
      *
      * @param webRuleId
      */
-    public ModifyWebRuleRequest webRuleId(String webRuleId) {
+    public ModifyWebRuleRequest webRuleId(Long webRuleId) {
         this.webRuleId = webRuleId;
         return this;
     }

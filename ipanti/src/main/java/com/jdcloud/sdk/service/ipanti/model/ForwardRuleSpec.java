@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.ipanti.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * forwardRuleSpec
@@ -35,23 +36,36 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 协议：TCP或者UDP
+     * 协议: TCP或者UDP
+     * Required:true
      */
+    @Required
     private String protocol;
 
     /**
-     * 端口号
+     * 端口号, 取值范围[1, 65535]
+     * Required:true
      */
+    @Required
     private Integer port;
 
     /**
-     * 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+     * 转发规则
+- wrr 带权重的轮询
+- wlc 加权最小连接
+- rr  不带权重的轮询
+- sh  源地址hash
+
+     * Required:true
      */
+    @Required
     private String algorithm;
 
     /**
-     * 回源类型，ip或者domain
+     * 回源类型: A 或者 CNAME
+     * Required:true
      */
+    @Required
     private String originType;
 
     /**
@@ -60,7 +74,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     private List<OriginAddrItem> originAddr;
 
     /**
-     * onlineAddr
+     * 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      */
     private List<String> onlineAddr;
 
@@ -70,13 +84,15 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     private String originDomain;
 
     /**
-     * 回源端口号
+     * 回源端口号, 取值范围[1, 65535]
+     * Required:true
      */
+    @Required
     private Integer originPort;
 
 
     /**
-     * get 协议：TCP或者UDP
+     * get 协议: TCP或者UDP
      *
      * @return
      */
@@ -85,7 +101,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 协议：TCP或者UDP
+     * set 协议: TCP或者UDP
      *
      * @param protocol
      */
@@ -94,7 +110,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 端口号
+     * get 端口号, 取值范围[1, 65535]
      *
      * @return
      */
@@ -103,7 +119,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 端口号
+     * set 端口号, 取值范围[1, 65535]
      *
      * @param port
      */
@@ -112,7 +128,12 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+     * get 转发规则
+- wrr 带权重的轮询
+- wlc 加权最小连接
+- rr  不带权重的轮询
+- sh  源地址hash
+
      *
      * @return
      */
@@ -121,7 +142,12 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+     * set 转发规则
+- wrr 带权重的轮询
+- wlc 加权最小连接
+- rr  不带权重的轮询
+- sh  源地址hash
+
      *
      * @param algorithm
      */
@@ -130,7 +156,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 回源类型，ip或者domain
+     * get 回源类型: A 或者 CNAME
      *
      * @return
      */
@@ -139,7 +165,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型，ip或者domain
+     * set 回源类型: A 或者 CNAME
      *
      * @param originType
      */
@@ -166,7 +192,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get onlineAddr
+     * get 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      *
      * @return
      */
@@ -175,7 +201,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set onlineAddr
+     * set 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */
@@ -202,7 +228,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 回源端口号
+     * get 回源端口号, 取值范围[1, 65535]
      *
      * @return
      */
@@ -211,7 +237,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源端口号
+     * set 回源端口号, 取值范围[1, 65535]
      *
      * @param originPort
      */
@@ -221,7 +247,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
 
 
     /**
-     * set 协议：TCP或者UDP
+     * set 协议: TCP或者UDP
      *
      * @param protocol
      */
@@ -231,7 +257,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 端口号
+     * set 端口号, 取值范围[1, 65535]
      *
      * @param port
      */
@@ -241,7 +267,12 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+     * set 转发规则
+- wrr 带权重的轮询
+- wlc 加权最小连接
+- rr  不带权重的轮询
+- sh  源地址hash
+
      *
      * @param algorithm
      */
@@ -251,7 +282,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型，ip或者domain
+     * set 回源类型: A 或者 CNAME
      *
      * @param originType
      */
@@ -271,7 +302,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set onlineAddr
+     * set 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */
@@ -291,7 +322,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源端口号
+     * set 回源端口号, 取值范围[1, 65535]
      *
      * @param originPort
      */
@@ -314,7 +345,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to onlineAddr
+     * add item to 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */

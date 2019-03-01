@@ -38,12 +38,12 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+     * 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
      */
     private String aggrType;
 
     /**
-     * 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     * 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
      */
     private String downSampleType;
 
@@ -107,7 +107,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+     * get 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+     * set 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
      *
      * @param aggrType
      */
@@ -125,7 +125,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     * get 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     * set 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
      *
      * @param downSampleType
      */
@@ -324,7 +324,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 聚合方式，默认等于downSampleType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;zimsum#available-aggregators
+     * set 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
      *
      * @param aggrType
      */
@@ -334,7 +334,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 采样方式，默认等于aggrType或avg，可选值参考http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html?highlight&#x3D;avg#available-aggregators
+     * set 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
      *
      * @param downSampleType
      */

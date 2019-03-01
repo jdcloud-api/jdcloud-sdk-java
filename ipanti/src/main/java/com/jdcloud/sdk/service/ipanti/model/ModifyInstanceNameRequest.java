@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -25,6 +25,7 @@
 package com.jdcloud.sdk.service.ipanti.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.ipanti.model.RenameInstanceSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -35,11 +36,11 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 新的实例名称
+     * 修改实例名称请求参数
      * Required:true
      */
     @Required
-    private String name;
+    private RenameInstanceSpec renameInstanceSpec;
 
     /**
      * Region ID
@@ -49,29 +50,29 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     private String regionId;
 
     /**
-     * 实例id
+     * 实例 ID
      * Required:true
      */
     @Required
-    private String instanceId;
+    private Long instanceId;
 
 
     /**
-     * get 新的实例名称
+     * get 修改实例名称请求参数
      *
      * @return
      */
-    public String getName() {
-        return name;
+    public RenameInstanceSpec getRenameInstanceSpec() {
+        return renameInstanceSpec;
     }
 
     /**
-     * set 新的实例名称
+     * set 修改实例名称请求参数
      *
-     * @param name
+     * @param renameInstanceSpec
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setRenameInstanceSpec(RenameInstanceSpec renameInstanceSpec) {
+        this.renameInstanceSpec = renameInstanceSpec;
     }
 
     /**
@@ -93,31 +94,31 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 实例id
+     * get 实例 ID
      *
      * @return
      */
-    public String getInstanceId() {
+    public Long getInstanceId() {
         return instanceId;
     }
 
     /**
-     * set 实例id
+     * set 实例 ID
      *
      * @param instanceId
      */
-    public void setInstanceId(String instanceId) {
+    public void setInstanceId(Long instanceId) {
         this.instanceId = instanceId;
     }
 
 
     /**
-     * set 新的实例名称
+     * set 修改实例名称请求参数
      *
-     * @param name
+     * @param renameInstanceSpec
      */
-    public ModifyInstanceNameRequest name(String name) {
-        this.name = name;
+    public ModifyInstanceNameRequest renameInstanceSpec(RenameInstanceSpec renameInstanceSpec) {
+        this.renameInstanceSpec = renameInstanceSpec;
         return this;
     }
 
@@ -132,11 +133,11 @@ public class ModifyInstanceNameRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 实例id
+     * set 实例 ID
      *
      * @param instanceId
      */
-    public ModifyInstanceNameRequest instanceId(String instanceId) {
+    public ModifyInstanceNameRequest instanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
     }

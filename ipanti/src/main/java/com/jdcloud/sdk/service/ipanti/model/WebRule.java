@@ -35,12 +35,12 @@ public class WebRule  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则id
+     * 规则 Id
      */
     private Long id;
 
     /**
-     * 实例id
+     * 实例 Id
      */
     private Long instanceId;
 
@@ -50,27 +50,42 @@ public class WebRule  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 规则的cname
+     * 规则的 cname
      */
     private String cname;
 
     /**
-     * 协议：HTTP、HTTPS、HTTP_HTTPS
+     * protocol
      */
-    private String protocol;
+    private WebRuleProtocol protocol;
 
     /**
-     * HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+     * 是否为自定义端口号, 0: 为默认, 1: 为自定义
      */
-    private String port;
+    private Integer customPortStatus;
 
     /**
-     * HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     * HTTP 协议的端口号, 如 80,81
      */
-    private String httpsPort;
+    private List<Integer> port;
 
     /**
-     * 回源类型：A或者CNAME
+     * HTTPS 协议的端口号, 如 443,8443
+     */
+    private List<Integer> httpsPort;
+
+    /**
+     * 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+     */
+    private Integer httpOrigin;
+
+    /**
+     * 0: 防御状态, 1: 回源状态
+     */
+    private Integer status;
+
+    /**
+     * 回源类型: A 或者 CNAME
      */
     private String originType;
 
@@ -80,14 +95,29 @@ public class WebRule  implements java.io.Serializable {
     private List<OriginAddrItem> originAddr;
 
     /**
+     * 回源域名, originType 为 CNAME 时返回该字段
+     */
+    private String originDomain;
+
+    /**
      * onlineAddr
      */
     private List<String> onlineAddr;
 
     /**
-     * 回源域名,originType为CNAME时返回该字段
+     * 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
      */
-    private String originDomain;
+    private Integer httpCertStatus;
+
+    /**
+     * 证书 Id
+     */
+    private Long certId;
+
+    /**
+     * 证书名称
+     */
+    private String certName;
 
     /**
      * 证书内容
@@ -100,43 +130,31 @@ public class WebRule  implements java.io.Serializable {
     private String httpsRsaKey;
 
     /**
-     * 证书状态：0异常，1正常
-     */
-    private Integer httpCertStatus;
+     * 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
+  - 0 不强跳
+  - 1 开启强跳
 
-    /**
-     * 0防御状态，1回源状态
-     */
-    private Integer status;
-
-    /**
-     * 0 CC关闭 1 CC开启
-     */
-    private Integer ccStatus;
-
-    /**
-     * 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
-     */
-    private String algorithm;
-
-    /**
-     * 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
      */
     private Integer forceJump;
 
     /**
-     * 是否为自定义端口号，0为默认 1为自定义
+     * 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
      */
-    private Integer customPortStatus;
+    private String algorithm;
 
     /**
-     * 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+     * CC 状态, 0: CC 关闭, 1: CC 开启
      */
-    private Integer httpOrigin;
+    private Integer ccStatus;
+
+    /**
+     * webSocketStatus, 0: 关闭, 1: 开启
+     */
+    private Integer webSocketStatus;
 
 
     /**
-     * get 规则id
+     * get 规则 Id
      *
      * @return
      */
@@ -145,7 +163,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则id
+     * set 规则 Id
      *
      * @param id
      */
@@ -154,7 +172,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 实例id
+     * get 实例 Id
      *
      * @return
      */
@@ -163,7 +181,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 实例id
+     * set 实例 Id
      *
      * @param instanceId
      */
@@ -190,7 +208,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 规则的cname
+     * get 规则的 cname
      *
      * @return
      */
@@ -199,7 +217,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则的cname
+     * set 规则的 cname
      *
      * @param cname
      */
@@ -208,61 +226,115 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 协议：HTTP、HTTPS、HTTP_HTTPS
+     * get protocol
      *
      * @return
      */
-    public String getProtocol() {
+    public WebRuleProtocol getProtocol() {
         return protocol;
     }
 
     /**
-     * set 协议：HTTP、HTTPS、HTTP_HTTPS
+     * set protocol
      *
      * @param protocol
      */
-    public void setProtocol(String protocol) {
+    public void setProtocol(WebRuleProtocol protocol) {
         this.protocol = protocol;
     }
 
     /**
-     * get HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+     * get 是否为自定义端口号, 0: 为默认, 1: 为自定义
      *
      * @return
      */
-    public String getPort() {
+    public Integer getCustomPortStatus() {
+        return customPortStatus;
+    }
+
+    /**
+     * set 是否为自定义端口号, 0: 为默认, 1: 为自定义
+     *
+     * @param customPortStatus
+     */
+    public void setCustomPortStatus(Integer customPortStatus) {
+        this.customPortStatus = customPortStatus;
+    }
+
+    /**
+     * get HTTP 协议的端口号, 如 80,81
+     *
+     * @return
+     */
+    public List<Integer> getPort() {
         return port;
     }
 
     /**
-     * set HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+     * set HTTP 协议的端口号, 如 80,81
      *
      * @param port
      */
-    public void setPort(String port) {
+    public void setPort(List<Integer> port) {
         this.port = port;
     }
 
     /**
-     * get HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     * get HTTPS 协议的端口号, 如 443,8443
      *
      * @return
      */
-    public String getHttpsPort() {
+    public List<Integer> getHttpsPort() {
         return httpsPort;
     }
 
     /**
-     * set HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     * set HTTPS 协议的端口号, 如 443,8443
      *
      * @param httpsPort
      */
-    public void setHttpsPort(String httpsPort) {
+    public void setHttpsPort(List<Integer> httpsPort) {
         this.httpsPort = httpsPort;
     }
 
     /**
-     * get 回源类型：A或者CNAME
+     * get 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+     *
+     * @return
+     */
+    public Integer getHttpOrigin() {
+        return httpOrigin;
+    }
+
+    /**
+     * set 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+     *
+     * @param httpOrigin
+     */
+    public void setHttpOrigin(Integer httpOrigin) {
+        this.httpOrigin = httpOrigin;
+    }
+
+    /**
+     * get 0: 防御状态, 1: 回源状态
+     *
+     * @return
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * set 0: 防御状态, 1: 回源状态
+     *
+     * @param status
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    /**
+     * get 回源类型: A 或者 CNAME
      *
      * @return
      */
@@ -271,7 +343,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型：A或者CNAME
+     * set 回源类型: A 或者 CNAME
      *
      * @param originType
      */
@@ -298,6 +370,24 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
+     * get 回源域名, originType 为 CNAME 时返回该字段
+     *
+     * @return
+     */
+    public String getOriginDomain() {
+        return originDomain;
+    }
+
+    /**
+     * set 回源域名, originType 为 CNAME 时返回该字段
+     *
+     * @param originDomain
+     */
+    public void setOriginDomain(String originDomain) {
+        this.originDomain = originDomain;
+    }
+
+    /**
      * get onlineAddr
      *
      * @return
@@ -316,21 +406,57 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 回源域名,originType为CNAME时返回该字段
+     * get 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
      *
      * @return
      */
-    public String getOriginDomain() {
-        return originDomain;
+    public Integer getHttpCertStatus() {
+        return httpCertStatus;
     }
 
     /**
-     * set 回源域名,originType为CNAME时返回该字段
+     * set 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
      *
-     * @param originDomain
+     * @param httpCertStatus
      */
-    public void setOriginDomain(String originDomain) {
-        this.originDomain = originDomain;
+    public void setHttpCertStatus(Integer httpCertStatus) {
+        this.httpCertStatus = httpCertStatus;
+    }
+
+    /**
+     * get 证书 Id
+     *
+     * @return
+     */
+    public Long getCertId() {
+        return certId;
+    }
+
+    /**
+     * set 证书 Id
+     *
+     * @param certId
+     */
+    public void setCertId(Long certId) {
+        this.certId = certId;
+    }
+
+    /**
+     * get 证书名称
+     *
+     * @return
+     */
+    public String getCertName() {
+        return certName;
+    }
+
+    /**
+     * set 证书名称
+     *
+     * @param certName
+     */
+    public void setCertName(String certName) {
+        this.certName = certName;
     }
 
     /**
@@ -370,79 +496,10 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 证书状态：0异常，1正常
-     *
-     * @return
-     */
-    public Integer getHttpCertStatus() {
-        return httpCertStatus;
-    }
+     * get 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
+  - 0 不强跳
+  - 1 开启强跳
 
-    /**
-     * set 证书状态：0异常，1正常
-     *
-     * @param httpCertStatus
-     */
-    public void setHttpCertStatus(Integer httpCertStatus) {
-        this.httpCertStatus = httpCertStatus;
-    }
-
-    /**
-     * get 0防御状态，1回源状态
-     *
-     * @return
-     */
-    public Integer getStatus() {
-        return status;
-    }
-
-    /**
-     * set 0防御状态，1回源状态
-     *
-     * @param status
-     */
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    /**
-     * get 0 CC关闭 1 CC开启
-     *
-     * @return
-     */
-    public Integer getCcStatus() {
-        return ccStatus;
-    }
-
-    /**
-     * set 0 CC关闭 1 CC开启
-     *
-     * @param ccStatus
-     */
-    public void setCcStatus(Integer ccStatus) {
-        this.ccStatus = ccStatus;
-    }
-
-    /**
-     * get 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
-     *
-     * @return
-     */
-    public String getAlgorithm() {
-        return algorithm;
-    }
-
-    /**
-     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
-     *
-     * @param algorithm
-     */
-    public void setAlgorithm(String algorithm) {
-        this.algorithm = algorithm;
-    }
-
-    /**
-     * get 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
      *
      * @return
      */
@@ -451,7 +508,10 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
+     * set 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
+  - 0 不强跳
+  - 1 开启强跳
+
      *
      * @param forceJump
      */
@@ -460,44 +520,62 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 是否为自定义端口号，0为默认 1为自定义
+     * get 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
      *
      * @return
      */
-    public Integer getCustomPortStatus() {
-        return customPortStatus;
+    public String getAlgorithm() {
+        return algorithm;
     }
 
     /**
-     * set 是否为自定义端口号，0为默认 1为自定义
+     * set 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
      *
-     * @param customPortStatus
+     * @param algorithm
      */
-    public void setCustomPortStatus(Integer customPortStatus) {
-        this.customPortStatus = customPortStatus;
+    public void setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
     }
 
     /**
-     * get 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+     * get CC 状态, 0: CC 关闭, 1: CC 开启
      *
      * @return
      */
-    public Integer getHttpOrigin() {
-        return httpOrigin;
+    public Integer getCcStatus() {
+        return ccStatus;
     }
 
     /**
-     * set 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+     * set CC 状态, 0: CC 关闭, 1: CC 开启
      *
-     * @param httpOrigin
+     * @param ccStatus
      */
-    public void setHttpOrigin(Integer httpOrigin) {
-        this.httpOrigin = httpOrigin;
+    public void setCcStatus(Integer ccStatus) {
+        this.ccStatus = ccStatus;
+    }
+
+    /**
+     * get webSocketStatus, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getWebSocketStatus() {
+        return webSocketStatus;
+    }
+
+    /**
+     * set webSocketStatus, 0: 关闭, 1: 开启
+     *
+     * @param webSocketStatus
+     */
+    public void setWebSocketStatus(Integer webSocketStatus) {
+        this.webSocketStatus = webSocketStatus;
     }
 
 
     /**
-     * set 规则id
+     * set 规则 Id
      *
      * @param id
      */
@@ -507,7 +585,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 实例id
+     * set 实例 Id
      *
      * @param instanceId
      */
@@ -527,7 +605,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则的cname
+     * set 规则的 cname
      *
      * @param cname
      */
@@ -537,37 +615,67 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 协议：HTTP、HTTPS、HTTP_HTTPS
+     * set protocol
      *
      * @param protocol
      */
-    public WebRule protocol(String protocol) {
+    public WebRule protocol(WebRuleProtocol protocol) {
         this.protocol = protocol;
         return this;
     }
 
     /**
-     * set HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+     * set 是否为自定义端口号, 0: 为默认, 1: 为自定义
+     *
+     * @param customPortStatus
+     */
+    public WebRule customPortStatus(Integer customPortStatus) {
+        this.customPortStatus = customPortStatus;
+        return this;
+    }
+
+    /**
+     * set HTTP 协议的端口号, 如 80,81
      *
      * @param port
      */
-    public WebRule port(String port) {
+    public WebRule port(List<Integer> port) {
         this.port = port;
         return this;
     }
 
     /**
-     * set HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     * set HTTPS 协议的端口号, 如 443,8443
      *
      * @param httpsPort
      */
-    public WebRule httpsPort(String httpsPort) {
+    public WebRule httpsPort(List<Integer> httpsPort) {
         this.httpsPort = httpsPort;
         return this;
     }
 
     /**
-     * set 回源类型：A或者CNAME
+     * set 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+     *
+     * @param httpOrigin
+     */
+    public WebRule httpOrigin(Integer httpOrigin) {
+        this.httpOrigin = httpOrigin;
+        return this;
+    }
+
+    /**
+     * set 0: 防御状态, 1: 回源状态
+     *
+     * @param status
+     */
+    public WebRule status(Integer status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 回源类型: A 或者 CNAME
      *
      * @param originType
      */
@@ -587,6 +695,16 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
+     * set 回源域名, originType 为 CNAME 时返回该字段
+     *
+     * @param originDomain
+     */
+    public WebRule originDomain(String originDomain) {
+        this.originDomain = originDomain;
+        return this;
+    }
+
+    /**
      * set onlineAddr
      *
      * @param onlineAddr
@@ -597,12 +715,32 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源域名,originType为CNAME时返回该字段
+     * set 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
      *
-     * @param originDomain
+     * @param httpCertStatus
      */
-    public WebRule originDomain(String originDomain) {
-        this.originDomain = originDomain;
+    public WebRule httpCertStatus(Integer httpCertStatus) {
+        this.httpCertStatus = httpCertStatus;
+        return this;
+    }
+
+    /**
+     * set 证书 Id
+     *
+     * @param certId
+     */
+    public WebRule certId(Long certId) {
+        this.certId = certId;
+        return this;
+    }
+
+    /**
+     * set 证书名称
+     *
+     * @param certName
+     */
+    public WebRule certName(String certName) {
+        this.certName = certName;
         return this;
     }
 
@@ -627,47 +765,10 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书状态：0异常，1正常
-     *
-     * @param httpCertStatus
-     */
-    public WebRule httpCertStatus(Integer httpCertStatus) {
-        this.httpCertStatus = httpCertStatus;
-        return this;
-    }
+     * set 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
+  - 0 不强跳
+  - 1 开启强跳
 
-    /**
-     * set 0防御状态，1回源状态
-     *
-     * @param status
-     */
-    public WebRule status(Integer status) {
-        this.status = status;
-        return this;
-    }
-
-    /**
-     * set 0 CC关闭 1 CC开启
-     *
-     * @param ccStatus
-     */
-    public WebRule ccStatus(Integer ccStatus) {
-        this.ccStatus = ccStatus;
-        return this;
-    }
-
-    /**
-     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
-     *
-     * @param algorithm
-     */
-    public WebRule algorithm(String algorithm) {
-        this.algorithm = algorithm;
-        return this;
-    }
-
-    /**
-     * set 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
      *
      * @param forceJump
      */
@@ -677,25 +778,59 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 是否为自定义端口号，0为默认 1为自定义
+     * set 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
      *
-     * @param customPortStatus
+     * @param algorithm
      */
-    public WebRule customPortStatus(Integer customPortStatus) {
-        this.customPortStatus = customPortStatus;
+    public WebRule algorithm(String algorithm) {
+        this.algorithm = algorithm;
         return this;
     }
 
     /**
-     * set 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
+     * set CC 状态, 0: CC 关闭, 1: CC 开启
      *
-     * @param httpOrigin
+     * @param ccStatus
      */
-    public WebRule httpOrigin(Integer httpOrigin) {
-        this.httpOrigin = httpOrigin;
+    public WebRule ccStatus(Integer ccStatus) {
+        this.ccStatus = ccStatus;
         return this;
     }
 
+    /**
+     * set webSocketStatus, 0: 关闭, 1: 开启
+     *
+     * @param webSocketStatus
+     */
+    public WebRule webSocketStatus(Integer webSocketStatus) {
+        this.webSocketStatus = webSocketStatus;
+        return this;
+    }
+
+
+    /**
+     * add item to HTTP 协议的端口号, 如 80,81
+     *
+     * @param port
+     */
+    public void addPort(Integer port) {
+        if (this.port == null) {
+            this.port = new ArrayList<>();
+        }
+        this.port.add(port);
+    }
+
+    /**
+     * add item to HTTPS 协议的端口号, 如 443,8443
+     *
+     * @param httpsPort
+     */
+    public void addHttpsPort(Integer httpsPort) {
+        if (this.httpsPort == null) {
+            this.httpsPort = new ArrayList<>();
+        }
+        this.httpsPort.add(httpsPort);
+    }
 
     /**
      * add item to originAddr

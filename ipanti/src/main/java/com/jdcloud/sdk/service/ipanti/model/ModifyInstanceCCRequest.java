@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,14 +29,14 @@ import com.jdcloud.sdk.service.ipanti.model.CCSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置实例CC防护
+ * 设置实例 CC 防护
  */
 public class ModifyInstanceCCRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * cc参数
+     * CC 参数
      * Required:true
      */
     @Required
@@ -50,15 +50,15 @@ public class ModifyInstanceCCRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
     /**
-     * 实例id
+     * 实例 ID
      * Required:true
      */
     @Required
-    private String instanceId;
+    private Long instanceId;
 
 
     /**
-     * get cc参数
+     * get CC 参数
      *
      * @return
      */
@@ -67,7 +67,7 @@ public class ModifyInstanceCCRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set cc参数
+     * set CC 参数
      *
      * @param cCSpec
      */
@@ -94,26 +94,26 @@ public class ModifyInstanceCCRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 实例id
+     * get 实例 ID
      *
      * @return
      */
-    public String getInstanceId() {
+    public Long getInstanceId() {
         return instanceId;
     }
 
     /**
-     * set 实例id
+     * set 实例 ID
      *
      * @param instanceId
      */
-    public void setInstanceId(String instanceId) {
+    public void setInstanceId(Long instanceId) {
         this.instanceId = instanceId;
     }
 
 
     /**
-     * set cc参数
+     * set CC 参数
      *
      * @param cCSpec
      */
@@ -133,11 +133,11 @@ public class ModifyInstanceCCRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 实例id
+     * set 实例 ID
      *
      * @param instanceId
      */
-    public ModifyInstanceCCRequest instanceId(String instanceId) {
+    public ModifyInstanceCCRequest instanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
     }

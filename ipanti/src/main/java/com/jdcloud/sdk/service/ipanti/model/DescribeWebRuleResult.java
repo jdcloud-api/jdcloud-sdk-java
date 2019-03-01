@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 网站转发配置相关接口
- * 网站转发配置相关接口
+ * Anti DDos Pro Web Rule Configuration APIs
+ * Anti DDos Pro Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.ipanti.model.WebRule;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询某条网站类规则
+ * 查询网站类规则
  */
 public class DescribeWebRuleResult extends JdcloudResult implements java.io.Serializable {
 

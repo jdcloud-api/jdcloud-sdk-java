@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 网站转发配置相关接口
- * 网站转发配置相关接口
+ * Anti DDos Pro Web Rule Configuration APIs
+ * Anti DDos Pro Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -42,9 +42,19 @@ public class DescribeWebRulesResult extends JdcloudResult implements java.io.Ser
     private List<WebRule> dataList;
 
     /**
-     * totalCount
+     * 当前页数量
+     */
+    private Integer currentCount;
+
+    /**
+     * 总数
      */
     private Integer totalCount;
+
+    /**
+     * 总页数
+     */
+    private Integer totalPage;
 
 
     /**
@@ -66,7 +76,25 @@ public class DescribeWebRulesResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get totalCount
+     * get 当前页数量
+     *
+     * @return
+     */
+    public Integer getCurrentCount() {
+        return currentCount;
+    }
+
+    /**
+     * set 当前页数量
+     *
+     * @param currentCount
+     */
+    public void setCurrentCount(Integer currentCount) {
+        this.currentCount = currentCount;
+    }
+
+    /**
+     * get 总数
      *
      * @return
      */
@@ -75,12 +103,30 @@ public class DescribeWebRulesResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set totalCount
+     * set 总数
      *
      * @param totalCount
      */
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
+    }
+
+    /**
+     * get 总页数
+     *
+     * @return
+     */
+    public Integer getTotalPage() {
+        return totalPage;
+    }
+
+    /**
+     * set 总页数
+     *
+     * @param totalPage
+     */
+    public void setTotalPage(Integer totalPage) {
+        this.totalPage = totalPage;
     }
 
 
@@ -95,12 +141,32 @@ public class DescribeWebRulesResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set totalCount
+     * set 当前页数量
+     *
+     * @param currentCount
+     */
+    public DescribeWebRulesResult currentCount(Integer currentCount) {
+        this.currentCount = currentCount;
+        return this;
+    }
+
+    /**
+     * set 总数
      *
      * @param totalCount
      */
     public DescribeWebRulesResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
+        return this;
+    }
+
+    /**
+     * set 总页数
+     *
+     * @param totalPage
+     */
+    public DescribeWebRulesResult totalPage(Integer totalPage) {
+        this.totalPage = totalPage;
         return this;
     }
 

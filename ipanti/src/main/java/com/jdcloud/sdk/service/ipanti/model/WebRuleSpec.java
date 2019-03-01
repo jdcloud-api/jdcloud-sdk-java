@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.ipanti.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * webRuleSpec
@@ -36,36 +37,42 @@ public class WebRuleSpec  implements java.io.Serializable {
 
     /**
      * 子域名
+     * Required:true
      */
+    @Required
     private String domain;
 
     /**
-     * 协议：HTTP、HTTPS、HTTP_HTTPS
+     * 协议: http, https 至少一个为 true
+     * Required:true
      */
-    private String protocol;
+    @Required
+    private WebRuleProtocol protocol;
 
     /**
-     * HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+     * HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      */
-    private String port;
+    private List<Integer> port;
 
     /**
-     * HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     * HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      */
-    private String httpsPort;
+    private List<Integer> httpsPort;
 
     /**
      * 回源类型：A或者CNAME
+     * Required:true
      */
+    @Required
     private String originType;
 
     /**
-     * originAddr
+     * originType 为 A 时，需要设置该字段
      */
     private List<OriginAddrItem> originAddr;
 
     /**
-     * onlineAddr
+     * 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
      */
     private List<String> onlineAddr;
 
@@ -73,6 +80,41 @@ public class WebRuleSpec  implements java.io.Serializable {
      * 回源域名,originType为CNAME时需要指定该字段
      */
     private String originDomain;
+
+    /**
+     * 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * Required:true
+     */
+    @Required
+    private String algorithm;
+
+    /**
+     * 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
+  - 0 不开启强制跳转
+  - 1 开启强制跳转
+
+     */
+    private Integer forceJump;
+
+    /**
+     * 是否为自定义端口号，0为默认 1为自定义
+     */
+    private Integer customPortStatus;
+
+    /**
+     * 是否开启http回源, 当勾选HTTPS时可以配置该属性
+  - 0 不开启
+  - 1 开启
+
+     */
+    private Integer httpOrigin;
+
+    /**
+     * 是否开启 WebSocket, 0 为不开启, 1 为开启
+     * Required:true
+     */
+    @Required
+    private Integer webSocketStatus;
 
     /**
      * 证书内容
@@ -85,24 +127,11 @@ public class WebRuleSpec  implements java.io.Serializable {
     private String httpsRsaKey;
 
     /**
-     * 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * 证书 Id
+  - 如果传 certId, 请确认已经上传了相应的证书
+  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      */
-    private String algorithm;
-
-    /**
-     * 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
-     */
-    private Integer forceJump;
-
-    /**
-     * 是否为自定义端口号，0为默认 1为自定义
-     */
-    private Integer customPortStatus;
-
-    /**
-     * 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
-     */
-    private Integer httpOrigin;
+    private Long certId;
 
 
     /**
@@ -124,56 +153,56 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 协议：HTTP、HTTPS、HTTP_HTTPS
+     * get 协议: http, https 至少一个为 true
      *
      * @return
      */
-    public String getProtocol() {
+    public WebRuleProtocol getProtocol() {
         return protocol;
     }
 
     /**
-     * set 协议：HTTP、HTTPS、HTTP_HTTPS
+     * set 协议: http, https 至少一个为 true
      *
      * @param protocol
      */
-    public void setProtocol(String protocol) {
+    public void setProtocol(WebRuleProtocol protocol) {
         this.protocol = protocol;
     }
 
     /**
-     * get HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+     * get HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @return
      */
-    public String getPort() {
+    public List<Integer> getPort() {
         return port;
     }
 
     /**
-     * set HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+     * set HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param port
      */
-    public void setPort(String port) {
+    public void setPort(List<Integer> port) {
         this.port = port;
     }
 
     /**
-     * get HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     * get HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @return
      */
-    public String getHttpsPort() {
+    public List<Integer> getHttpsPort() {
         return httpsPort;
     }
 
     /**
-     * set HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     * set HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param httpsPort
      */
-    public void setHttpsPort(String httpsPort) {
+    public void setHttpsPort(List<Integer> httpsPort) {
         this.httpsPort = httpsPort;
     }
 
@@ -196,7 +225,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get originAddr
+     * get originType 为 A 时，需要设置该字段
      *
      * @return
      */
@@ -205,7 +234,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set originAddr
+     * set originType 为 A 时，需要设置该字段
      *
      * @param originAddr
      */
@@ -214,7 +243,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get onlineAddr
+     * get 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
      *
      * @return
      */
@@ -223,7 +252,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set onlineAddr
+     * set 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */
@@ -247,6 +276,108 @@ public class WebRuleSpec  implements java.io.Serializable {
      */
     public void setOriginDomain(String originDomain) {
         this.originDomain = originDomain;
+    }
+
+    /**
+     * get 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     *
+     * @return
+     */
+    public String getAlgorithm() {
+        return algorithm;
+    }
+
+    /**
+     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     *
+     * @param algorithm
+     */
+    public void setAlgorithm(String algorithm) {
+        this.algorithm = algorithm;
+    }
+
+    /**
+     * get 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
+  - 0 不开启强制跳转
+  - 1 开启强制跳转
+
+     *
+     * @return
+     */
+    public Integer getForceJump() {
+        return forceJump;
+    }
+
+    /**
+     * set 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
+  - 0 不开启强制跳转
+  - 1 开启强制跳转
+
+     *
+     * @param forceJump
+     */
+    public void setForceJump(Integer forceJump) {
+        this.forceJump = forceJump;
+    }
+
+    /**
+     * get 是否为自定义端口号，0为默认 1为自定义
+     *
+     * @return
+     */
+    public Integer getCustomPortStatus() {
+        return customPortStatus;
+    }
+
+    /**
+     * set 是否为自定义端口号，0为默认 1为自定义
+     *
+     * @param customPortStatus
+     */
+    public void setCustomPortStatus(Integer customPortStatus) {
+        this.customPortStatus = customPortStatus;
+    }
+
+    /**
+     * get 是否开启http回源, 当勾选HTTPS时可以配置该属性
+  - 0 不开启
+  - 1 开启
+
+     *
+     * @return
+     */
+    public Integer getHttpOrigin() {
+        return httpOrigin;
+    }
+
+    /**
+     * set 是否开启http回源, 当勾选HTTPS时可以配置该属性
+  - 0 不开启
+  - 1 开启
+
+     *
+     * @param httpOrigin
+     */
+    public void setHttpOrigin(Integer httpOrigin) {
+        this.httpOrigin = httpOrigin;
+    }
+
+    /**
+     * get 是否开启 WebSocket, 0 为不开启, 1 为开启
+     *
+     * @return
+     */
+    public Integer getWebSocketStatus() {
+        return webSocketStatus;
+    }
+
+    /**
+     * set 是否开启 WebSocket, 0 为不开启, 1 为开启
+     *
+     * @param webSocketStatus
+     */
+    public void setWebSocketStatus(Integer webSocketStatus) {
+        this.webSocketStatus = webSocketStatus;
     }
 
     /**
@@ -286,75 +417,25 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * get 证书 Id
+  - 如果传 certId, 请确认已经上传了相应的证书
+  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      *
      * @return
      */
-    public String getAlgorithm() {
-        return algorithm;
+    public Long getCertId() {
+        return certId;
     }
 
     /**
-     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * set 证书 Id
+  - 如果传 certId, 请确认已经上传了相应的证书
+  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      *
-     * @param algorithm
+     * @param certId
      */
-    public void setAlgorithm(String algorithm) {
-        this.algorithm = algorithm;
-    }
-
-    /**
-     * get 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
-     *
-     * @return
-     */
-    public Integer getForceJump() {
-        return forceJump;
-    }
-
-    /**
-     * set 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
-     *
-     * @param forceJump
-     */
-    public void setForceJump(Integer forceJump) {
-        this.forceJump = forceJump;
-    }
-
-    /**
-     * get 是否为自定义端口号，0为默认 1为自定义
-     *
-     * @return
-     */
-    public Integer getCustomPortStatus() {
-        return customPortStatus;
-    }
-
-    /**
-     * set 是否为自定义端口号，0为默认 1为自定义
-     *
-     * @param customPortStatus
-     */
-    public void setCustomPortStatus(Integer customPortStatus) {
-        this.customPortStatus = customPortStatus;
-    }
-
-    /**
-     * get 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
-     *
-     * @return
-     */
-    public Integer getHttpOrigin() {
-        return httpOrigin;
-    }
-
-    /**
-     * set 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
-     *
-     * @param httpOrigin
-     */
-    public void setHttpOrigin(Integer httpOrigin) {
-        this.httpOrigin = httpOrigin;
+    public void setCertId(Long certId) {
+        this.certId = certId;
     }
 
 
@@ -369,31 +450,31 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 协议：HTTP、HTTPS、HTTP_HTTPS
+     * set 协议: http, https 至少一个为 true
      *
      * @param protocol
      */
-    public WebRuleSpec protocol(String protocol) {
+    public WebRuleSpec protocol(WebRuleProtocol protocol) {
         this.protocol = protocol;
         return this;
     }
 
     /**
-     * set HTTP协议的端口号，如80,81，多个端口号使用逗号分隔
+     * set HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param port
      */
-    public WebRuleSpec port(String port) {
+    public WebRuleSpec port(List<Integer> port) {
         this.port = port;
         return this;
     }
 
     /**
-     * set HTTPS协议的端口号，如443,8443，多个端口号使用逗号分隔
+     * set HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param httpsPort
      */
-    public WebRuleSpec httpsPort(String httpsPort) {
+    public WebRuleSpec httpsPort(List<Integer> httpsPort) {
         this.httpsPort = httpsPort;
         return this;
     }
@@ -409,7 +490,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set originAddr
+     * set originType 为 A 时，需要设置该字段
      *
      * @param originAddr
      */
@@ -419,7 +500,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set onlineAddr
+     * set 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */
@@ -435,6 +516,62 @@ public class WebRuleSpec  implements java.io.Serializable {
      */
     public WebRuleSpec originDomain(String originDomain) {
         this.originDomain = originDomain;
+        return this;
+    }
+
+    /**
+     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     *
+     * @param algorithm
+     */
+    public WebRuleSpec algorithm(String algorithm) {
+        this.algorithm = algorithm;
+        return this;
+    }
+
+    /**
+     * set 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
+  - 0 不开启强制跳转
+  - 1 开启强制跳转
+
+     *
+     * @param forceJump
+     */
+    public WebRuleSpec forceJump(Integer forceJump) {
+        this.forceJump = forceJump;
+        return this;
+    }
+
+    /**
+     * set 是否为自定义端口号，0为默认 1为自定义
+     *
+     * @param customPortStatus
+     */
+    public WebRuleSpec customPortStatus(Integer customPortStatus) {
+        this.customPortStatus = customPortStatus;
+        return this;
+    }
+
+    /**
+     * set 是否开启http回源, 当勾选HTTPS时可以配置该属性
+  - 0 不开启
+  - 1 开启
+
+     *
+     * @param httpOrigin
+     */
+    public WebRuleSpec httpOrigin(Integer httpOrigin) {
+        this.httpOrigin = httpOrigin;
+        return this;
+    }
+
+    /**
+     * set 是否开启 WebSocket, 0 为不开启, 1 为开启
+     *
+     * @param webSocketStatus
+     */
+    public WebRuleSpec webSocketStatus(Integer webSocketStatus) {
+        this.webSocketStatus = webSocketStatus;
         return this;
     }
 
@@ -459,48 +596,44 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * set 证书 Id
+  - 如果传 certId, 请确认已经上传了相应的证书
+  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      *
-     * @param algorithm
+     * @param certId
      */
-    public WebRuleSpec algorithm(String algorithm) {
-        this.algorithm = algorithm;
-        return this;
-    }
-
-    /**
-     * set 是否开启https强制跳转，当protocol为HTTP_HTTPS时可以配置该属性 0为不强跳 1为开启强跳
-     *
-     * @param forceJump
-     */
-    public WebRuleSpec forceJump(Integer forceJump) {
-        this.forceJump = forceJump;
-        return this;
-    }
-
-    /**
-     * set 是否为自定义端口号，0为默认 1为自定义
-     *
-     * @param customPortStatus
-     */
-    public WebRuleSpec customPortStatus(Integer customPortStatus) {
-        this.customPortStatus = customPortStatus;
-        return this;
-    }
-
-    /**
-     * set 是否开启http回源，0为不开启 1为开启，当勾选HTTPS时可以配置该属性
-     *
-     * @param httpOrigin
-     */
-    public WebRuleSpec httpOrigin(Integer httpOrigin) {
-        this.httpOrigin = httpOrigin;
+    public WebRuleSpec certId(Long certId) {
+        this.certId = certId;
         return this;
     }
 
 
     /**
-     * add item to originAddr
+     * add item to HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     *
+     * @param port
+     */
+    public void addPort(Integer port) {
+        if (this.port == null) {
+            this.port = new ArrayList<>();
+        }
+        this.port.add(port);
+    }
+
+    /**
+     * add item to HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     *
+     * @param httpsPort
+     */
+    public void addHttpsPort(Integer httpsPort) {
+        if (this.httpsPort == null) {
+            this.httpsPort = new ArrayList<>();
+        }
+        this.httpsPort.add(httpsPort);
+    }
+
+    /**
+     * add item to originType 为 A 时，需要设置该字段
      *
      * @param originAddr
      */
@@ -512,7 +645,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to onlineAddr
+     * add item to 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */

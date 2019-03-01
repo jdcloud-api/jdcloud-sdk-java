@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -25,22 +25,22 @@
 package com.jdcloud.sdk.service.ipanti.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.ipanti.model.InstanceSpec;
+import com.jdcloud.sdk.service.ipanti.model.CreateInstanceSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建实例
+ * 新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
  */
 public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例规格参数
+     * 新购或升级实例请求参数
      * Required:true
      */
     @Required
-    private InstanceSpec instanceSpec;
+    private CreateInstanceSpec createInstanceSpec;
 
     /**
      * Region ID
@@ -51,21 +51,21 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 实例规格参数
+     * get 新购或升级实例请求参数
      *
      * @return
      */
-    public InstanceSpec getInstanceSpec() {
-        return instanceSpec;
+    public CreateInstanceSpec getCreateInstanceSpec() {
+        return createInstanceSpec;
     }
 
     /**
-     * set 实例规格参数
+     * set 新购或升级实例请求参数
      *
-     * @param instanceSpec
+     * @param createInstanceSpec
      */
-    public void setInstanceSpec(InstanceSpec instanceSpec) {
-        this.instanceSpec = instanceSpec;
+    public void setCreateInstanceSpec(CreateInstanceSpec createInstanceSpec) {
+        this.createInstanceSpec = createInstanceSpec;
     }
 
     /**
@@ -88,12 +88,12 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 实例规格参数
+     * set 新购或升级实例请求参数
      *
-     * @param instanceSpec
+     * @param createInstanceSpec
      */
-    public CreateInstanceRequest instanceSpec(InstanceSpec instanceSpec) {
-        this.instanceSpec = instanceSpec;
+    public CreateInstanceRequest createInstanceSpec(CreateInstanceSpec createInstanceSpec) {
+        this.createInstanceSpec = createInstanceSpec;
         return this;
     }
 

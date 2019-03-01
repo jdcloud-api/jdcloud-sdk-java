@@ -55,7 +55,7 @@ public class ForwardRule  implements java.io.Serializable {
     private String cname;
 
     /**
-     * 回源类型：ip或者domain
+     * 回源类型: ip或者domain
      */
     private String originType;
 
@@ -65,7 +65,12 @@ public class ForwardRule  implements java.io.Serializable {
     private Integer port;
 
     /**
-     * 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+     * 转发规则
+- wrr 带权重的轮询
+- wlc 加权最小连接
+- rr  不带权重的轮询
+- sh  源地址hash
+
      */
     private String algorithm;
 
@@ -75,7 +80,7 @@ public class ForwardRule  implements java.io.Serializable {
     private List<OriginAddrItem> originAddr;
 
     /**
-     * onlineAddr
+     * 备用的回源地址列表
      */
     private List<String> onlineAddr;
 
@@ -168,7 +173,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get 回源类型：ip或者domain
+     * get 回源类型: ip或者domain
      *
      * @return
      */
@@ -177,7 +182,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型：ip或者domain
+     * set 回源类型: ip或者domain
      *
      * @param originType
      */
@@ -204,7 +209,12 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+     * get 转发规则
+- wrr 带权重的轮询
+- wlc 加权最小连接
+- rr  不带权重的轮询
+- sh  源地址hash
+
      *
      * @return
      */
@@ -213,7 +223,12 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+     * set 转发规则
+- wrr 带权重的轮询
+- wlc 加权最小连接
+- rr  不带权重的轮询
+- sh  源地址hash
+
      *
      * @param algorithm
      */
@@ -240,7 +255,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get onlineAddr
+     * get 备用的回源地址列表
      *
      * @return
      */
@@ -249,7 +264,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set onlineAddr
+     * set 备用的回源地址列表
      *
      * @param onlineAddr
      */
@@ -353,7 +368,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型：ip或者domain
+     * set 回源类型: ip或者domain
      *
      * @param originType
      */
@@ -373,7 +388,12 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则：wrr-&gt;带权重的轮询，wlc-&gt;加权最小连接，rr-&gt;不带权重的轮询，sh-&gt;源地址hash
+     * set 转发规则
+- wrr 带权重的轮询
+- wlc 加权最小连接
+- rr  不带权重的轮询
+- sh  源地址hash
+
      *
      * @param algorithm
      */
@@ -393,7 +413,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set onlineAddr
+     * set 备用的回源地址列表
      *
      * @param onlineAddr
      */
@@ -446,7 +466,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * add item to onlineAddr
+     * add item to 备用的回源地址列表
      *
      * @param onlineAddr
      */

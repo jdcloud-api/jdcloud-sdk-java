@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量删除已创建的报警规则
+ * 批量删除规则
  */
 public class DeleteAlarmsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 待删除的规则id，用&quot;|&quot;间隔
+     * 待删除的规则id，用竖线分隔
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DeleteAlarmsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 待删除的规则id，用&quot;|&quot;间隔
+     * get 待删除的规则id，用竖线分隔
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DeleteAlarmsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 待删除的规则id，用&quot;|&quot;间隔
+     * set 待删除的规则id，用竖线分隔
      *
      * @param ids
      */
@@ -87,7 +87,7 @@ public class DeleteAlarmsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 待删除的规则id，用&quot;|&quot;间隔
+     * set 待删除的规则id，用竖线分隔
      *
      * @param ids
      */

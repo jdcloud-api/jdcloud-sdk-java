@@ -49,6 +49,9 @@ import com.jdcloud.sdk.service.monitor.client.DeleteAlarmsCmExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeMetricsForCreateAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeMetricsForCreateAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeMetricsForCreateAlarmExecutor;
+import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsRequest;
+import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsResponse;
+import com.jdcloud.sdk.service.monitor.client.DeleteAlarmsExecutor;
 import com.jdcloud.sdk.service.monitor.model.LastDownsampleRequest;
 import com.jdcloud.sdk.service.monitor.model.LastDownsampleResponse;
 import com.jdcloud.sdk.service.monitor.client.LastDownsampleExecutor;
@@ -84,7 +87,7 @@ public class MonitorClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.9";
+    public final static String ClientVersion = "1.0.8";
     public final static String DefaultEndpoint = "monitor.jdcloud-api.com";
     public final static String ServiceName = "monitor";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -197,6 +200,17 @@ public class MonitorClient extends JdcloudClient {
      */
     public DescribeMetricsForCreateAlarmResponse describeMetricsForCreateAlarm(DescribeMetricsForCreateAlarmRequest request) throws JdcloudSdkException {
         return new DescribeMetricsForCreateAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量删除规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAlarmsResponse deleteAlarms(DeleteAlarmsRequest request) throws JdcloudSdkException {
+        return new DeleteAlarmsExecutor().client(this).execute(request);
     }
 
     /**

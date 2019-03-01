@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,73 @@ public class ModifyInstanceNameResult extends JdcloudResult implements java.io.S
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 0: 修改实例名称失败, 1: 修改实例名称成功
+     */
+    private Integer code;
 
+    /**
+     * 修改失败时给出具体原因
+     */
+    private String message;
+
+
+    /**
+     * get 0: 修改实例名称失败, 1: 修改实例名称成功
+     *
+     * @return
+     */
+    public Integer getCode() {
+        return code;
+    }
+
+    /**
+     * set 0: 修改实例名称失败, 1: 修改实例名称成功
+     *
+     * @param code
+     */
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    /**
+     * get 修改失败时给出具体原因
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 修改失败时给出具体原因
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
+    /**
+     * set 0: 修改实例名称失败, 1: 修改实例名称成功
+     *
+     * @param code
+     */
+    public ModifyInstanceNameResult code(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    /**
+     * set 修改失败时给出具体原因
+     *
+     * @param message
+     */
+    public ModifyInstanceNameResult message(String message) {
+        this.message = message;
+        return this;
+    }
 
 
 }

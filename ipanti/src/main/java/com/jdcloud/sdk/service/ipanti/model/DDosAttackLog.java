@@ -35,7 +35,7 @@ public class DDosAttackLog  implements java.io.Serializable {
     /**
      * 攻击流量大小
      */
-    private Float attackTraffic;
+    private Double attackTraffic;
 
     /**
      * 是否触发黑洞，0否 1是
@@ -73,7 +73,7 @@ public class DDosAttackLog  implements java.io.Serializable {
      *
      * @return
      */
-    public Float getAttackTraffic() {
+    public Double getAttackTraffic() {
         return attackTraffic;
     }
 
@@ -82,7 +82,7 @@ public class DDosAttackLog  implements java.io.Serializable {
      *
      * @param attackTraffic
      */
-    public void setAttackTraffic(Float attackTraffic) {
+    public void setAttackTraffic(Double attackTraffic) {
         this.attackTraffic = attackTraffic;
     }
 
@@ -200,7 +200,7 @@ public class DDosAttackLog  implements java.io.Serializable {
      *
      * @param attackTraffic
      */
-    public DDosAttackLog attackTraffic(Float attackTraffic) {
+    public DDosAttackLog attackTraffic(Double attackTraffic) {
         this.attackTraffic = attackTraffic;
         return this;
     }

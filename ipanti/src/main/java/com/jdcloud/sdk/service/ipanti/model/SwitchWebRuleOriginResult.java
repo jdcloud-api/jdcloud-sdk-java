@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 网站转发配置相关接口
- * 网站转发配置相关接口
+ * Anti DDos Pro Web Rule Configuration APIs
+ * Anti DDos Pro Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,7 +33,73 @@ public class SwitchWebRuleOriginResult extends JdcloudResult implements java.io.
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 0: 规则切换成回源失败, 1: 规则切换成回源成功
+     */
+    private Integer code;
 
+    /**
+     * 规则切换成回源失败时给出具体原因
+     */
+    private String message;
+
+
+    /**
+     * get 0: 规则切换成回源失败, 1: 规则切换成回源成功
+     *
+     * @return
+     */
+    public Integer getCode() {
+        return code;
+    }
+
+    /**
+     * set 0: 规则切换成回源失败, 1: 规则切换成回源成功
+     *
+     * @param code
+     */
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    /**
+     * get 规则切换成回源失败时给出具体原因
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 规则切换成回源失败时给出具体原因
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
+    /**
+     * set 0: 规则切换成回源失败, 1: 规则切换成回源成功
+     *
+     * @param code
+     */
+    public SwitchWebRuleOriginResult code(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    /**
+     * set 规则切换成回源失败时给出具体原因
+     *
+     * @param message
+     */
+    public SwitchWebRuleOriginResult message(String message) {
+        this.message = message;
+        return this;
+    }
 
 
 }

@@ -45,7 +45,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     private String serviceCode;
 
     /**
-     * 资源的uuid，支持多个resourceId批量查询，每个id用竖线&#39;|&#39;分隔。 如：id1|id2|id3|id4
+     * 资源的uuid，支持多个resourceId批量查询，每个id用竖线分隔。 如：id1|id2|id3|id4
      * Required:true
      */
     @Required
@@ -115,7 +115,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 资源的uuid，支持多个resourceId批量查询，每个id用竖线&#39;|&#39;分隔。 如：id1|id2|id3|id4
+     * get 资源的uuid，支持多个resourceId批量查询，每个id用竖线分隔。 如：id1|id2|id3|id4
      *
      * @return
      */
@@ -124,7 +124,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 资源的uuid，支持多个resourceId批量查询，每个id用竖线&#39;|&#39;分隔。 如：id1|id2|id3|id4
+     * set 资源的uuid，支持多个resourceId批量查询，每个id用竖线分隔。 如：id1|id2|id3|id4
      *
      * @param resourceId
      */
@@ -288,7 +288,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 资源的uuid，支持多个resourceId批量查询，每个id用竖线&#39;|&#39;分隔。 如：id1|id2|id3|id4
+     * set 资源的uuid，支持多个resourceId批量查询，每个id用竖线分隔。 如：id1|id2|id3|id4
      *
      * @param resourceId
      */

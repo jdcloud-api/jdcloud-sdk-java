@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -35,12 +35,12 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1
+     * 页码, 默认为 1
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 分页大小, 默认为 10, 取值范围[10, 100], 0 表示全量
      */
     private Integer pageSize;
 
@@ -58,7 +58,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 页码；默认为1
+     * get 页码, 默认为 1
      *
      * @return
      */
@@ -67,7 +67,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码, 默认为 1
      *
      * @param pageNumber
      */
@@ -76,7 +76,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小, 默认为 10, 取值范围[10, 100], 0 表示全量
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小, 默认为 10, 取值范围[10, 100], 0 表示全量
      *
      * @param pageSize
      */
@@ -131,7 +131,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 页码；默认为1
+     * set 页码, 默认为 1
      *
      * @param pageNumber
      */
@@ -141,7 +141,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小, 默认为 10, 取值范围[10, 100], 0 表示全量
      *
      * @param pageSize
      */

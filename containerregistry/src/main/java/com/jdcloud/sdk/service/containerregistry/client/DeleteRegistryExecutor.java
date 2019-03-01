@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.containerregistry.model.DeleteRegistryResponse;
 
 /**
  * 删除指定用户下某个 registry.
-
+ [MFA enabled]
  */
 class DeleteRegistryExecutor extends JdcloudExecutor {
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 网站转发配置相关接口
- * 网站转发配置相关接口
+ * Anti DDos Pro Web Rule Configuration APIs
+ * Anti DDos Pro Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -36,29 +36,29 @@ public class CreateWebRuleRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 网站类规则参数
+     * 添加网站类规则请求参数
      * Required:true
      */
     @Required
     private WebRuleSpec webRuleSpec;
 
     /**
-     * Region ID
+     * 区域 Id
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例id
+     * 高防实例 Id
      * Required:true
      */
     @Required
-    private String instanceId;
+    private Long instanceId;
 
 
     /**
-     * get 网站类规则参数
+     * get 添加网站类规则请求参数
      *
      * @return
      */
@@ -67,7 +67,7 @@ public class CreateWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 网站类规则参数
+     * set 添加网站类规则请求参数
      *
      * @param webRuleSpec
      */
@@ -76,7 +76,7 @@ public class CreateWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get Region ID
+     * get 区域 Id
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class CreateWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 区域 Id
      *
      * @param regionId
      */
@@ -94,26 +94,26 @@ public class CreateWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 实例id
+     * get 高防实例 Id
      *
      * @return
      */
-    public String getInstanceId() {
+    public Long getInstanceId() {
         return instanceId;
     }
 
     /**
-     * set 实例id
+     * set 高防实例 Id
      *
      * @param instanceId
      */
-    public void setInstanceId(String instanceId) {
+    public void setInstanceId(Long instanceId) {
         this.instanceId = instanceId;
     }
 
 
     /**
-     * set 网站类规则参数
+     * set 添加网站类规则请求参数
      *
      * @param webRuleSpec
      */
@@ -123,7 +123,7 @@ public class CreateWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set Region ID
+     * set 区域 Id
      *
      * @param regionId
      */
@@ -133,11 +133,11 @@ public class CreateWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 实例id
+     * set 高防实例 Id
      *
      * @param instanceId
      */
-    public CreateWebRuleRequest instanceId(String instanceId) {
+    public CreateWebRuleRequest instanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
     }

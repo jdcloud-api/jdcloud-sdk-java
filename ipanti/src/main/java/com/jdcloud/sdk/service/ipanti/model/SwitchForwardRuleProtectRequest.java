@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 非网站转发配置相关接口
- * 非网站转发配置相关接口
+ * Anti DDos Pro non-Web Rule Configuration APIs
+ * Anti DDos Pro non-Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -35,29 +35,29 @@ public class SwitchForwardRuleProtectRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 区域 Id
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 实例id
+     * 高防实例 Id
      * Required:true
      */
     @Required
-    private String instanceId;
+    private Long instanceId;
 
     /**
-     * 转发规则id
+     * 转发规则 Id
      * Required:true
      */
     @Required
-    private String forwardRuleId;
+    private Long forwardRuleId;
 
 
     /**
-     * get Region ID
+     * get 区域 Id
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class SwitchForwardRuleProtectRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set Region ID
+     * set 区域 Id
      *
      * @param regionId
      */
@@ -75,44 +75,44 @@ public class SwitchForwardRuleProtectRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 实例id
+     * get 高防实例 Id
      *
      * @return
      */
-    public String getInstanceId() {
+    public Long getInstanceId() {
         return instanceId;
     }
 
     /**
-     * set 实例id
+     * set 高防实例 Id
      *
      * @param instanceId
      */
-    public void setInstanceId(String instanceId) {
+    public void setInstanceId(Long instanceId) {
         this.instanceId = instanceId;
     }
 
     /**
-     * get 转发规则id
+     * get 转发规则 Id
      *
      * @return
      */
-    public String getForwardRuleId() {
+    public Long getForwardRuleId() {
         return forwardRuleId;
     }
 
     /**
-     * set 转发规则id
+     * set 转发规则 Id
      *
      * @param forwardRuleId
      */
-    public void setForwardRuleId(String forwardRuleId) {
+    public void setForwardRuleId(Long forwardRuleId) {
         this.forwardRuleId = forwardRuleId;
     }
 
 
     /**
-     * set Region ID
+     * set 区域 Id
      *
      * @param regionId
      */
@@ -122,21 +122,21 @@ public class SwitchForwardRuleProtectRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 实例id
+     * set 高防实例 Id
      *
      * @param instanceId
      */
-    public SwitchForwardRuleProtectRequest instanceId(String instanceId) {
+    public SwitchForwardRuleProtectRequest instanceId(Long instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
     /**
-     * set 转发规则id
+     * set 转发规则 Id
      *
      * @param forwardRuleId
      */
-    public SwitchForwardRuleProtectRequest forwardRuleId(String forwardRuleId) {
+    public SwitchForwardRuleProtectRequest forwardRuleId(Long forwardRuleId) {
         this.forwardRuleId = forwardRuleId;
         return this;
     }

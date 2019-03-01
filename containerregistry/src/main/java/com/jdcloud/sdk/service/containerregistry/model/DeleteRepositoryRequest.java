@@ -29,11 +29,16 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 删除指定用户下某个镜像仓库.
-
+ [MFA enabled]
  */
 public class DeleteRepositoryRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 是否强制删除有镜像的镜像仓库
+     */
+    private Boolean force;
 
     /**
      * Region ID
@@ -56,6 +61,24 @@ public class DeleteRepositoryRequest extends JdcloudRequest implements java.io.S
     @Required
     private String repositoryName;
 
+
+    /**
+     * get 是否强制删除有镜像的镜像仓库
+     *
+     * @return
+     */
+    public Boolean getForce() {
+        return force;
+    }
+
+    /**
+     * set 是否强制删除有镜像的镜像仓库
+     *
+     * @param force
+     */
+    public void setForce(Boolean force) {
+        this.force = force;
+    }
 
     /**
      * get Region ID
@@ -111,6 +134,16 @@ public class DeleteRepositoryRequest extends JdcloudRequest implements java.io.S
         this.repositoryName = repositoryName;
     }
 
+
+    /**
+     * set 是否强制删除有镜像的镜像仓库
+     *
+     * @param force
+     */
+    public DeleteRepositoryRequest force(Boolean force) {
+        this.force = force;
+        return this;
+    }
 
     /**
      * set Region ID

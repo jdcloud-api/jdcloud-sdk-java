@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 删除指定用户下某个 registry.
-
+ [MFA enabled]
  */
 public class DeleteRegistryRequest extends JdcloudRequest implements java.io.Serializable {
 

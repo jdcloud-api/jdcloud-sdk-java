@@ -31,48 +31,48 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.containerregistry.model.CheckRegistryNameRequest;
-import com.jdcloud.sdk.service.containerregistry.model.CheckRegistryNameResponse;
-import com.jdcloud.sdk.service.containerregistry.client.CheckRegistryNameExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.DescribeRepositoriesRequest;
-import com.jdcloud.sdk.service.containerregistry.model.DescribeRepositoriesResponse;
-import com.jdcloud.sdk.service.containerregistry.client.DescribeRepositoriesExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.DeleteRegistryRequest;
-import com.jdcloud.sdk.service.containerregistry.model.DeleteRegistryResponse;
-import com.jdcloud.sdk.service.containerregistry.client.DeleteRegistryExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.ReleaseAuthorizationTokenRequest;
-import com.jdcloud.sdk.service.containerregistry.model.ReleaseAuthorizationTokenResponse;
-import com.jdcloud.sdk.service.containerregistry.client.ReleaseAuthorizationTokenExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.CheckRepositoryNameRequest;
-import com.jdcloud.sdk.service.containerregistry.model.CheckRepositoryNameResponse;
-import com.jdcloud.sdk.service.containerregistry.client.CheckRepositoryNameExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.DeleteRepositoryRequest;
-import com.jdcloud.sdk.service.containerregistry.model.DeleteRepositoryResponse;
-import com.jdcloud.sdk.service.containerregistry.client.DeleteRepositoryExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.DeleteImageRequest;
-import com.jdcloud.sdk.service.containerregistry.model.DeleteImageResponse;
-import com.jdcloud.sdk.service.containerregistry.client.DeleteImageExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.DescribeAuthorizationTokensRequest;
-import com.jdcloud.sdk.service.containerregistry.model.DescribeAuthorizationTokensResponse;
-import com.jdcloud.sdk.service.containerregistry.client.DescribeAuthorizationTokensExecutor;
 import com.jdcloud.sdk.service.containerregistry.model.CreateRepositoryRequest;
 import com.jdcloud.sdk.service.containerregistry.model.CreateRepositoryResponse;
 import com.jdcloud.sdk.service.containerregistry.client.CreateRepositoryExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.DescribeRegistryRequest;
-import com.jdcloud.sdk.service.containerregistry.model.DescribeRegistryResponse;
-import com.jdcloud.sdk.service.containerregistry.client.DescribeRegistryExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.CreateRegistryRequest;
-import com.jdcloud.sdk.service.containerregistry.model.CreateRegistryResponse;
-import com.jdcloud.sdk.service.containerregistry.client.CreateRegistryExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.GetAuthorizationTokenRequest;
-import com.jdcloud.sdk.service.containerregistry.model.GetAuthorizationTokenResponse;
-import com.jdcloud.sdk.service.containerregistry.client.GetAuthorizationTokenExecutor;
-import com.jdcloud.sdk.service.containerregistry.model.DescribeImagesRequest;
-import com.jdcloud.sdk.service.containerregistry.model.DescribeImagesResponse;
-import com.jdcloud.sdk.service.containerregistry.client.DescribeImagesExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.CheckRepositoryNameRequest;
+import com.jdcloud.sdk.service.containerregistry.model.CheckRepositoryNameResponse;
+import com.jdcloud.sdk.service.containerregistry.client.CheckRepositoryNameExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.DeleteRegistryRequest;
+import com.jdcloud.sdk.service.containerregistry.model.DeleteRegistryResponse;
+import com.jdcloud.sdk.service.containerregistry.client.DeleteRegistryExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.DeleteRepositoryRequest;
+import com.jdcloud.sdk.service.containerregistry.model.DeleteRepositoryResponse;
+import com.jdcloud.sdk.service.containerregistry.client.DeleteRepositoryExecutor;
 import com.jdcloud.sdk.service.containerregistry.model.DescribeQuotasRequest;
 import com.jdcloud.sdk.service.containerregistry.model.DescribeQuotasResponse;
 import com.jdcloud.sdk.service.containerregistry.client.DescribeQuotasExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.DescribeImagesRequest;
+import com.jdcloud.sdk.service.containerregistry.model.DescribeImagesResponse;
+import com.jdcloud.sdk.service.containerregistry.client.DescribeImagesExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.DescribeRepositoriesRequest;
+import com.jdcloud.sdk.service.containerregistry.model.DescribeRepositoriesResponse;
+import com.jdcloud.sdk.service.containerregistry.client.DescribeRepositoriesExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.DescribeRegistryRequest;
+import com.jdcloud.sdk.service.containerregistry.model.DescribeRegistryResponse;
+import com.jdcloud.sdk.service.containerregistry.client.DescribeRegistryExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.CheckRegistryNameRequest;
+import com.jdcloud.sdk.service.containerregistry.model.CheckRegistryNameResponse;
+import com.jdcloud.sdk.service.containerregistry.client.CheckRegistryNameExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.CreateRegistryRequest;
+import com.jdcloud.sdk.service.containerregistry.model.CreateRegistryResponse;
+import com.jdcloud.sdk.service.containerregistry.client.CreateRegistryExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.DeleteImageRequest;
+import com.jdcloud.sdk.service.containerregistry.model.DeleteImageResponse;
+import com.jdcloud.sdk.service.containerregistry.client.DeleteImageExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.GetAuthorizationTokenRequest;
+import com.jdcloud.sdk.service.containerregistry.model.GetAuthorizationTokenResponse;
+import com.jdcloud.sdk.service.containerregistry.client.GetAuthorizationTokenExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.DescribeAuthorizationTokensRequest;
+import com.jdcloud.sdk.service.containerregistry.model.DescribeAuthorizationTokensResponse;
+import com.jdcloud.sdk.service.containerregistry.client.DescribeAuthorizationTokensExecutor;
+import com.jdcloud.sdk.service.containerregistry.model.ReleaseAuthorizationTokenRequest;
+import com.jdcloud.sdk.service.containerregistry.model.ReleaseAuthorizationTokenResponse;
+import com.jdcloud.sdk.service.containerregistry.client.ReleaseAuthorizationTokenExecutor;
 import com.jdcloud.sdk.service.containerregistry.model.DescribeRegistriesRequest;
 import com.jdcloud.sdk.service.containerregistry.model.DescribeRegistriesResponse;
 import com.jdcloud.sdk.service.containerregistry.client.DescribeRegistriesExecutor;
@@ -127,51 +127,17 @@ public class ContainerregistryClient extends JdcloudClient {
 
 
     /**
-     * 查询指定注册表名称是否已经存在以及是否符合命名规范。
+     * 通过参数创建镜像仓库。
+仓库名称可以分解为多个路径名，每个名称必须至少包含一个小写字母数字，考虑URL规范。
+支持包含段划线或者下划线进行分割，但不允许点&#39;.&#39;，多个路径名之间通过(&quot;/&quot;)连接，总长度不超过256个字符，当前只支持二级目录。
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CheckRegistryNameResponse checkRegistryName(CheckRegistryNameRequest request) throws JdcloudSdkException {
-        return new CheckRegistryNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 描述用户指定 registry 下的 repository.
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeRepositoriesResponse describeRepositories(DescribeRepositoriesRequest request) throws JdcloudSdkException {
-        return new DescribeRepositoriesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除指定用户下某个 registry.
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteRegistryResponse deleteRegistry(DeleteRegistryRequest request) throws JdcloudSdkException {
-        return new DeleteRegistryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 释放用户 registry 的 token。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ReleaseAuthorizationTokenResponse releaseAuthorizationToken(ReleaseAuthorizationTokenRequest request) throws JdcloudSdkException {
-        return new ReleaseAuthorizationTokenExecutor().client(this).execute(request);
+    public CreateRepositoryResponse createRepository(CreateRepositoryRequest request) throws JdcloudSdkException {
+        return new CreateRepositoryExecutor().client(this).execute(request);
     }
 
     /**
@@ -187,8 +153,20 @@ public class ContainerregistryClient extends JdcloudClient {
     }
 
     /**
-     * 删除指定用户下某个镜像仓库.
+     * 删除指定用户下某个 registry.
+ [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteRegistryResponse deleteRegistry(DeleteRegistryRequest request) throws JdcloudSdkException {
+        return new DeleteRegistryExecutor().client(this).execute(request);
+    }
 
+    /**
+     * 删除指定用户下某个镜像仓库.
+ [MFA enabled]
      *
      * @param request
      * @return
@@ -199,46 +177,38 @@ public class ContainerregistryClient extends JdcloudClient {
     }
 
     /**
-     * 删除镜像
-imageDigest imageTag imageTagStatus 三者只能且必须传一个。
-可根据Tag状态删除Image，例如删除所有tagged的镜像。
-digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
-例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
-
+     * 查询配额
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteImageResponse deleteImage(DeleteImageRequest request) throws JdcloudSdkException {
-        return new DeleteImageExecutor().client(this).execute(request);
+    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
+        return new DescribeQuotasExecutor().client(this).execute(request);
     }
 
     /**
-     * &lt;p&gt;批量查询令牌。&lt;/p&gt; 
-&lt;p&gt;暂时不支持分页和过滤条件。&lt;/p&gt;
+     * 返回指定repository中images的元数据，包括image size, image tags和creation date。
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeAuthorizationTokensResponse describeAuthorizationTokens(DescribeAuthorizationTokensRequest request) throws JdcloudSdkException {
-        return new DescribeAuthorizationTokensExecutor().client(this).execute(request);
+    public DescribeImagesResponse describeImages(DescribeImagesRequest request) throws JdcloudSdkException {
+        return new DescribeImagesExecutor().client(this).execute(request);
     }
 
     /**
-     * 通过参数创建镜像仓库。
-仓库名称可以分解为多个路径名，每个名称必须至少包含一个小写字母数字，考虑URL规范。
-支持包含段划线或者下划线进行分割，但不允许点&#39;.&#39;，多个路径名之间通过(&quot;/&quot;)连接，总长度不超过256个字符，当前只支持二级目录。
+     * 描述用户指定 registry 下的 repository.
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateRepositoryResponse createRepository(CreateRepositoryRequest request) throws JdcloudSdkException {
-        return new CreateRepositoryExecutor().client(this).execute(request);
+    public DescribeRepositoriesResponse describeRepositories(DescribeRepositoriesRequest request) throws JdcloudSdkException {
+        return new DescribeRepositoriesExecutor().client(this).execute(request);
     }
 
     /**
@@ -254,6 +224,18 @@ digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image 
     }
 
     /**
+     * 查询指定注册表名称是否已经存在以及是否符合命名规范。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CheckRegistryNameResponse checkRegistryName(CheckRegistryNameRequest request) throws JdcloudSdkException {
+        return new CheckRegistryNameExecutor().client(this).execute(request);
+    }
+
+    /**
      * 通过参数创建注册表。
 
      *
@@ -263,6 +245,22 @@ digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image 
      */
     public CreateRegistryResponse createRegistry(CreateRegistryRequest request) throws JdcloudSdkException {
         return new CreateRegistryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除镜像
+imageDigest imageTag imageTagStatus 三者只能且必须传一个。
+可根据Tag状态删除Image，例如删除所有tagged的镜像。
+digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image manifest的digest。
+例如 sha256:examplee6d1e504117a17000003d3753086354a38375961f2e665416ef4b1b2f；image使用的tag, 如  &quot;precise&quot; 
+ [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteImageResponse deleteImage(DeleteImageRequest request) throws JdcloudSdkException {
+        return new DeleteImageExecutor().client(this).execute(request);
     }
 
     /**
@@ -280,26 +278,28 @@ digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image 
     }
 
     /**
-     * 返回指定repository中images的元数据，包括image size, image tags和creation date。
+     * &lt;p&gt;批量查询令牌。&lt;/p&gt; 
+&lt;p&gt;暂时不支持分页和过滤条件。&lt;/p&gt;
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeImagesResponse describeImages(DescribeImagesRequest request) throws JdcloudSdkException {
-        return new DescribeImagesExecutor().client(this).execute(request);
+    public DescribeAuthorizationTokensResponse describeAuthorizationTokens(DescribeAuthorizationTokensRequest request) throws JdcloudSdkException {
+        return new DescribeAuthorizationTokensExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询配额
+     * 释放用户 registry 的 token。
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
-        return new DescribeQuotasExecutor().client(this).execute(request);
+    public ReleaseAuthorizationTokenResponse releaseAuthorizationToken(ReleaseAuthorizationTokenRequest request) throws JdcloudSdkException {
+        return new ReleaseAuthorizationTokenExecutor().client(this).execute(request);
     }
 
     /**

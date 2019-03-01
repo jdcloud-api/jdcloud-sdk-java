@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.containerregistry.model.DeleteRepositoryResponse;
 
 /**
  * 删除指定用户下某个镜像仓库.
-
+ [MFA enabled]
  */
 class DeleteRepositoryExecutor extends JdcloudExecutor {
 
