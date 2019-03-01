@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 资源栈
- * 资源栈相关操作接口
+ * Stack
+ * Interface of Stack
  *
  * OpenAPI spec version: v1
  * Contact: 
