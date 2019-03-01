@@ -33,68 +33,73 @@ public class DataVO  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
+     * 系统流水号
      */
     private String id;
 
     /**
-     * name
+     * 实例名称
      */
     private String name;
 
     /**
-     * subNetId
+     * 子网编号
      */
     private String subNetId;
 
     /**
-     * subNetName
+     * 子网名称
      */
     private String subNetName;
 
     /**
-     * vpcId
+     * VPC编号
      */
     private String vpcId;
 
     /**
-     * vpcName
+     * VPC名称
      */
     private String vpcName;
 
     /**
-     * azName
+     * 可用区名称
      */
     private String azName;
 
     /**
-     * pubDomain
+     * 公网域名
      */
     private String pubDomain;
 
     /**
-     * priDomain
+     * 内网域名
      */
     private String priDomain;
 
     /**
-     * status
+     * 实例状态
      */
     private String status;
 
     /**
-     * feetype
+     * 资费形式
      */
     private String feetype;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
+    /**
+     * 实例编号
+     */
+    private String instanceId;
+
 
     /**
-     * get id
+     * get 系统流水号
      *
      * @return
      */
@@ -103,7 +108,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set id
+     * set 系统流水号
      *
      * @param id
      */
@@ -112,7 +117,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get name
+     * get 实例名称
      *
      * @return
      */
@@ -121,7 +126,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set name
+     * set 实例名称
      *
      * @param name
      */
@@ -130,7 +135,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get subNetId
+     * get 子网编号
      *
      * @return
      */
@@ -139,7 +144,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set subNetId
+     * set 子网编号
      *
      * @param subNetId
      */
@@ -148,7 +153,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get subNetName
+     * get 子网名称
      *
      * @return
      */
@@ -157,7 +162,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set subNetName
+     * set 子网名称
      *
      * @param subNetName
      */
@@ -166,7 +171,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get vpcId
+     * get VPC编号
      *
      * @return
      */
@@ -175,7 +180,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set vpcId
+     * set VPC编号
      *
      * @param vpcId
      */
@@ -184,7 +189,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get vpcName
+     * get VPC名称
      *
      * @return
      */
@@ -193,7 +198,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set vpcName
+     * set VPC名称
      *
      * @param vpcName
      */
@@ -202,7 +207,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get azName
+     * get 可用区名称
      *
      * @return
      */
@@ -211,7 +216,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set azName
+     * set 可用区名称
      *
      * @param azName
      */
@@ -220,7 +225,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get pubDomain
+     * get 公网域名
      *
      * @return
      */
@@ -229,7 +234,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set pubDomain
+     * set 公网域名
      *
      * @param pubDomain
      */
@@ -238,7 +243,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get priDomain
+     * get 内网域名
      *
      * @return
      */
@@ -247,7 +252,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set priDomain
+     * set 内网域名
      *
      * @param priDomain
      */
@@ -256,7 +261,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get status
+     * get 实例状态
      *
      * @return
      */
@@ -265,7 +270,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set status
+     * set 实例状态
      *
      * @param status
      */
@@ -274,7 +279,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get feetype
+     * get 资费形式
      *
      * @return
      */
@@ -283,7 +288,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set feetype
+     * set 资费形式
      *
      * @param feetype
      */
@@ -292,7 +297,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -301,7 +306,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -309,9 +314,27 @@ public class DataVO  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+    /**
+     * get 实例编号
+     *
+     * @return
+     */
+    public String getInstanceId() {
+        return instanceId;
+    }
 
     /**
-     * set id
+     * set 实例编号
+     *
+     * @param instanceId
+     */
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+    }
+
+
+    /**
+     * set 系统流水号
      *
      * @param id
      */
@@ -321,7 +344,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set name
+     * set 实例名称
      *
      * @param name
      */
@@ -331,7 +354,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set subNetId
+     * set 子网编号
      *
      * @param subNetId
      */
@@ -341,7 +364,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set subNetName
+     * set 子网名称
      *
      * @param subNetName
      */
@@ -351,7 +374,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set vpcId
+     * set VPC编号
      *
      * @param vpcId
      */
@@ -361,7 +384,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set vpcName
+     * set VPC名称
      *
      * @param vpcName
      */
@@ -371,7 +394,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set azName
+     * set 可用区名称
      *
      * @param azName
      */
@@ -381,7 +404,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set pubDomain
+     * set 公网域名
      *
      * @param pubDomain
      */
@@ -391,7 +414,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set priDomain
+     * set 内网域名
      *
      * @param priDomain
      */
@@ -401,7 +424,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set status
+     * set 实例状态
      *
      * @param status
      */
@@ -411,7 +434,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set feetype
+     * set 资费形式
      *
      * @param feetype
      */
@@ -421,12 +444,22 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
     public DataVO createTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 实例编号
+     *
+     * @param instanceId
+     */
+    public DataVO instanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
 

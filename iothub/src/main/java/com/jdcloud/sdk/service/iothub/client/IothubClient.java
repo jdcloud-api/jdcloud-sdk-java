@@ -31,24 +31,42 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.iothub.model.DevicesEnrollRequest;
-import com.jdcloud.sdk.service.iothub.model.DevicesEnrollResponse;
-import com.jdcloud.sdk.service.iothub.client.DevicesEnrollExecutor;
-import com.jdcloud.sdk.service.iothub.model.DeviceCommandRequest;
-import com.jdcloud.sdk.service.iothub.model.DeviceCommandResponse;
-import com.jdcloud.sdk.service.iothub.client.DeviceCommandExecutor;
 import com.jdcloud.sdk.service.iothub.model.OmEnrollRequest;
 import com.jdcloud.sdk.service.iothub.model.OmEnrollResponse;
 import com.jdcloud.sdk.service.iothub.client.OmEnrollExecutor;
 import com.jdcloud.sdk.service.iothub.model.DeviceActivateRequest;
 import com.jdcloud.sdk.service.iothub.model.DeviceActivateResponse;
 import com.jdcloud.sdk.service.iothub.client.DeviceActivateExecutor;
-import com.jdcloud.sdk.service.iothub.model.ModuleStateRequest;
-import com.jdcloud.sdk.service.iothub.model.ModuleStateResponse;
-import com.jdcloud.sdk.service.iothub.client.ModuleStateExecutor;
+import com.jdcloud.sdk.service.iothub.model.DeleteDeviceRequest;
+import com.jdcloud.sdk.service.iothub.model.DeleteDeviceResponse;
+import com.jdcloud.sdk.service.iothub.client.DeleteDeviceExecutor;
 import com.jdcloud.sdk.service.iothub.model.ModuleEnrollRequest;
 import com.jdcloud.sdk.service.iothub.model.ModuleEnrollResponse;
 import com.jdcloud.sdk.service.iothub.client.ModuleEnrollExecutor;
+import com.jdcloud.sdk.service.iothub.model.DevicesEnrollRequest;
+import com.jdcloud.sdk.service.iothub.model.DevicesEnrollResponse;
+import com.jdcloud.sdk.service.iothub.client.DevicesEnrollExecutor;
+import com.jdcloud.sdk.service.iothub.model.DeviceCommandRequest;
+import com.jdcloud.sdk.service.iothub.model.DeviceCommandResponse;
+import com.jdcloud.sdk.service.iothub.client.DeviceCommandExecutor;
+import com.jdcloud.sdk.service.iothub.model.ModuleStateRequest;
+import com.jdcloud.sdk.service.iothub.model.ModuleStateResponse;
+import com.jdcloud.sdk.service.iothub.client.ModuleStateExecutor;
+import com.jdcloud.sdk.service.iothub.model.OmEnrollbyFileRequest;
+import com.jdcloud.sdk.service.iothub.model.OmEnrollbyFileResponse;
+import com.jdcloud.sdk.service.iothub.client.OmEnrollbyFileExecutor;
+import com.jdcloud.sdk.service.iothub.model.QueryDeviceOnlineInfosRequest;
+import com.jdcloud.sdk.service.iothub.model.QueryDeviceOnlineInfosResponse;
+import com.jdcloud.sdk.service.iothub.client.QueryDeviceOnlineInfosExecutor;
+import com.jdcloud.sdk.service.iothub.model.QueryDeviceStatesRequest;
+import com.jdcloud.sdk.service.iothub.model.QueryDeviceStatesResponse;
+import com.jdcloud.sdk.service.iothub.client.QueryDeviceStatesExecutor;
+import com.jdcloud.sdk.service.iothub.model.QueryDeviceCommandsRequest;
+import com.jdcloud.sdk.service.iothub.model.QueryDeviceCommandsResponse;
+import com.jdcloud.sdk.service.iothub.client.QueryDeviceCommandsExecutor;
+import com.jdcloud.sdk.service.iothub.model.GetOMPrivateURLRequest;
+import com.jdcloud.sdk.service.iothub.model.GetOMPrivateURLResponse;
+import com.jdcloud.sdk.service.iothub.client.GetOMPrivateURLExecutor;
 import com.jdcloud.sdk.service.iothub.model.DeviceStateRequest;
 import com.jdcloud.sdk.service.iothub.model.DeviceStateResponse;
 import com.jdcloud.sdk.service.iothub.client.DeviceStateExecutor;
@@ -60,7 +78,7 @@ public class IothubClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.9";
+    public final static String ClientVersion = "1.0.8";
     public final static String DefaultEndpoint = "iothub.jdcloud-api.com";
     public final static String ServiceName = "iothub";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -103,30 +121,6 @@ public class IothubClient extends JdcloudClient {
 
 
     /**
-     * 客户用该接口可以批量登记设备
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DevicesEnrollResponse devicesEnroll(DevicesEnrollRequest request) throws JdcloudSdkException {
-        return new DevicesEnrollExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 客户用该接口可以对设备下发命令
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeviceCommandResponse deviceCommand(DeviceCommandRequest request) throws JdcloudSdkException {
-        return new DeviceCommandExecutor().client(this).execute(request);
-    }
-
-    /**
      * 物模型注册接口
 
      *
@@ -151,15 +145,14 @@ public class IothubClient extends JdcloudClient {
     }
 
     /**
-     * 客户用该接口可以修改模块预期状态
-
+     * 删除设备
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModuleStateResponse moduleState(ModuleStateRequest request) throws JdcloudSdkException {
-        return new ModuleStateExecutor().client(this).execute(request);
+    public DeleteDeviceResponse deleteDevice(DeleteDeviceRequest request) throws JdcloudSdkException {
+        return new DeleteDeviceExecutor().client(this).execute(request);
     }
 
     /**
@@ -172,6 +165,101 @@ public class IothubClient extends JdcloudClient {
      */
     public ModuleEnrollResponse moduleEnroll(ModuleEnrollRequest request) throws JdcloudSdkException {
         return new ModuleEnrollExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 客户用该接口可以批量登记设备
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DevicesEnrollResponse devicesEnroll(DevicesEnrollRequest request) throws JdcloudSdkException {
+        return new DevicesEnrollExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 客户用该接口可以对设备下发命令
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeviceCommandResponse deviceCommand(DeviceCommandRequest request) throws JdcloudSdkException {
+        return new DeviceCommandExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 客户用该接口可以修改模块预期状态
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModuleStateResponse moduleState(ModuleStateRequest request) throws JdcloudSdkException {
+        return new ModuleStateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物模型通过文件上传注册接口
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OmEnrollbyFileResponse omEnrollbyFile(OmEnrollbyFileRequest request) throws JdcloudSdkException {
+        return new OmEnrollbyFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询设备在线信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDeviceOnlineInfosResponse queryDeviceOnlineInfos(QueryDeviceOnlineInfosRequest request) throws JdcloudSdkException {
+        return new QueryDeviceOnlineInfosExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 客户用该接口可以查询设备预期状态
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDeviceStatesResponse queryDeviceStates(QueryDeviceStatesRequest request) throws JdcloudSdkException {
+        return new QueryDeviceStatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 客户用该接口可以查询设备命令列表
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDeviceCommandsResponse queryDeviceCommands(QueryDeviceCommandsRequest request) throws JdcloudSdkException {
+        return new QueryDeviceCommandsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取下载物模型的外链地址
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetOMPrivateURLResponse getOMPrivateURL(GetOMPrivateURLRequest request) throws JdcloudSdkException {
+        return new GetOMPrivateURLExecutor().client(this).execute(request);
     }
 
     /**

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceUrlWhiteListResponse;
 
 /**
- * 设置实例url白名单
+ * 设置实例 Url 白名单
  */
 class ModifyInstanceUrlWhiteListExecutor extends JdcloudExecutor {
 

@@ -35,9 +35,9 @@ public class Instance  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例id
+     * 实例 Id
      */
-    private Long instanceId;
+    private Long id;
 
     /**
      * 实例名称
@@ -45,9 +45,17 @@ public class Instance  implements java.io.Serializable {
     private String name;
 
     /**
-     * 线路，UNICOM、TELECOM
+     * 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
      */
-    private String carrier;
+    private Integer carrier;
+
+    /**
+     * 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+- 0: IPV4,
+- 1: IPV4/IPV6
+
+     */
+    private Integer ipType;
 
     /**
      * 触发弹性带宽的次数
@@ -102,12 +110,12 @@ public class Instance  implements java.io.Serializable {
     /**
      * 实例的创建的时间
      */
-    private Long createTime;
+    private String createTime;
 
     /**
      * 实例的过期时间
      */
-    private Long expireTime;
+    private String expireTime;
 
     /**
      * 资源id，升级和续费时使用
@@ -155,11 +163,6 @@ public class Instance  implements java.io.Serializable {
     private Integer ipWhiteStatus;
 
     /**
-     * 用户pin
-     */
-    private String pin;
-
-    /**
      * url白名单列表
      */
     private List<String> urlWhitelist;
@@ -191,21 +194,21 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * get 实例id
+     * get 实例 Id
      *
      * @return
      */
-    public Long getInstanceId() {
-        return instanceId;
+    public Long getId() {
+        return id;
     }
 
     /**
-     * set 实例id
+     * set 实例 Id
      *
-     * @param instanceId
+     * @param id
      */
-    public void setInstanceId(Long instanceId) {
-        this.instanceId = instanceId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     /**
@@ -227,21 +230,45 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 线路，UNICOM、TELECOM
+     * get 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
      *
      * @return
      */
-    public String getCarrier() {
+    public Integer getCarrier() {
         return carrier;
     }
 
     /**
-     * set 线路，UNICOM、TELECOM
+     * set 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
      *
      * @param carrier
      */
-    public void setCarrier(String carrier) {
+    public void setCarrier(Integer carrier) {
         this.carrier = carrier;
+    }
+
+    /**
+     * get 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+- 0: IPV4,
+- 1: IPV4/IPV6
+
+     *
+     * @return
+     */
+    public Integer getIpType() {
+        return ipType;
+    }
+
+    /**
+     * set 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+- 0: IPV4,
+- 1: IPV4/IPV6
+
+     *
+     * @param ipType
+     */
+    public void setIpType(Integer ipType) {
+        this.ipType = ipType;
     }
 
     /**
@@ -429,7 +456,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
@@ -438,7 +465,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param createTime
      */
-    public void setCreateTime(Long createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
@@ -447,7 +474,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getExpireTime() {
+    public String getExpireTime() {
         return expireTime;
     }
 
@@ -456,7 +483,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param expireTime
      */
-    public void setExpireTime(Long expireTime) {
+    public void setExpireTime(String expireTime) {
         this.expireTime = expireTime;
     }
 
@@ -623,24 +650,6 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 用户pin
-     *
-     * @return
-     */
-    public String getPin() {
-        return pin;
-    }
-
-    /**
-     * set 用户pin
-     *
-     * @param pin
-     */
-    public void setPin(String pin) {
-        this.pin = pin;
-    }
-
-    /**
      * get url白名单列表
      *
      * @return
@@ -750,12 +759,12 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * set 实例id
+     * set 实例 Id
      *
-     * @param instanceId
+     * @param id
      */
-    public Instance instanceId(Long instanceId) {
-        this.instanceId = instanceId;
+    public Instance id(Long id) {
+        this.id = id;
         return this;
     }
 
@@ -770,12 +779,25 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 线路，UNICOM、TELECOM
+     * set 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
      *
      * @param carrier
      */
-    public Instance carrier(String carrier) {
+    public Instance carrier(Integer carrier) {
         this.carrier = carrier;
+        return this;
+    }
+
+    /**
+     * set 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+- 0: IPV4,
+- 1: IPV4/IPV6
+
+     *
+     * @param ipType
+     */
+    public Instance ipType(Integer ipType) {
+        this.ipType = ipType;
         return this;
     }
 
@@ -884,7 +906,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param createTime
      */
-    public Instance createTime(Long createTime) {
+    public Instance createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
@@ -894,7 +916,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param expireTime
      */
-    public Instance expireTime(Long expireTime) {
+    public Instance expireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
@@ -986,16 +1008,6 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance ipWhiteStatus(Integer ipWhiteStatus) {
         this.ipWhiteStatus = ipWhiteStatus;
-        return this;
-    }
-
-    /**
-     * set 用户pin
-     *
-     * @param pin
-     */
-    public Instance pin(String pin) {
-        this.pin = pin;
         return this;
     }
 

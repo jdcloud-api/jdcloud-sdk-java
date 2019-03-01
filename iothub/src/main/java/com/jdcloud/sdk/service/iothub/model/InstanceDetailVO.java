@@ -118,6 +118,11 @@ public class InstanceDetailVO  implements java.io.Serializable {
     private String rdsUserName;
 
     /**
+     * jcqId
+     */
+    private String jcqId;
+
+    /**
      * jcqAccessPoint
      */
     private String jcqAccessPoint;
@@ -136,6 +141,16 @@ public class InstanceDetailVO  implements java.io.Serializable {
      * jcqRegion
      */
     private String jcqRegion;
+
+    /**
+     * ak
+     */
+    private String ak;
+
+    /**
+     * sk
+     */
+    private String sk;
 
 
     /**
@@ -445,6 +460,24 @@ public class InstanceDetailVO  implements java.io.Serializable {
     }
 
     /**
+     * get jcqId
+     *
+     * @return
+     */
+    public String getJcqId() {
+        return jcqId;
+    }
+
+    /**
+     * set jcqId
+     *
+     * @param jcqId
+     */
+    public void setJcqId(String jcqId) {
+        this.jcqId = jcqId;
+    }
+
+    /**
      * get jcqAccessPoint
      *
      * @return
@@ -514,6 +547,42 @@ public class InstanceDetailVO  implements java.io.Serializable {
      */
     public void setJcqRegion(String jcqRegion) {
         this.jcqRegion = jcqRegion;
+    }
+
+    /**
+     * get ak
+     *
+     * @return
+     */
+    public String getAk() {
+        return ak;
+    }
+
+    /**
+     * set ak
+     *
+     * @param ak
+     */
+    public void setAk(String ak) {
+        this.ak = ak;
+    }
+
+    /**
+     * get sk
+     *
+     * @return
+     */
+    public String getSk() {
+        return sk;
+    }
+
+    /**
+     * set sk
+     *
+     * @param sk
+     */
+    public void setSk(String sk) {
+        this.sk = sk;
     }
 
 
@@ -688,6 +757,16 @@ public class InstanceDetailVO  implements java.io.Serializable {
     }
 
     /**
+     * set jcqId
+     *
+     * @param jcqId
+     */
+    public InstanceDetailVO jcqId(String jcqId) {
+        this.jcqId = jcqId;
+        return this;
+    }
+
+    /**
      * set jcqAccessPoint
      *
      * @param jcqAccessPoint
@@ -724,6 +803,26 @@ public class InstanceDetailVO  implements java.io.Serializable {
      */
     public InstanceDetailVO jcqRegion(String jcqRegion) {
         this.jcqRegion = jcqRegion;
+        return this;
+    }
+
+    /**
+     * set ak
+     *
+     * @param ak
+     */
+    public InstanceDetailVO ak(String ak) {
+        this.ak = ak;
+        return this;
+    }
+
+    /**
+     * set sk
+     *
+     * @param sk
+     */
+    public InstanceDetailVO sk(String sk) {
+        this.sk = sk;
         return this;
     }
 

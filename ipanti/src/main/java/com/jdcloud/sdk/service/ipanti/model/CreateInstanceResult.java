@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Ip高防实例相关接口
- * Ip高防实例相关接口，以及转发配置中实例级别的接口等
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,44 +27,77 @@ package com.jdcloud.sdk.service.ipanti.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建实例
+ * 新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
  */
 public class CreateInstanceResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * orderId
+     * 0: 新购或升级实例失败, 1: 新购或升级实例成功
      */
-    private String orderId;
+    private Integer code;
+
+    /**
+     * 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+     */
+    private String message;
 
 
     /**
-     * get orderId
+     * get 0: 新购或升级实例失败, 1: 新购或升级实例成功
      *
      * @return
      */
-    public String getOrderId() {
-        return orderId;
+    public Integer getCode() {
+        return code;
     }
 
     /**
-     * set orderId
+     * set 0: 新购或升级实例失败, 1: 新购或升级实例成功
      *
-     * @param orderId
+     * @param code
      */
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    /**
+     * get 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 
     /**
-     * set orderId
+     * set 0: 新购或升级实例失败, 1: 新购或升级实例成功
      *
-     * @param orderId
+     * @param code
      */
-    public CreateInstanceResult orderId(String orderId) {
-        this.orderId = orderId;
+    public CreateInstanceResult code(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    /**
+     * set 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+     *
+     * @param message
+     */
+    public CreateInstanceResult message(String message) {
+        this.message = message;
         return this;
     }
 

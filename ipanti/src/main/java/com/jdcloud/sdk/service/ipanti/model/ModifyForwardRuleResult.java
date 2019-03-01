@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 非网站转发配置相关接口
- * 非网站转发配置相关接口
+ * Anti DDos Pro non-Web Rule Configuration APIs
+ * Anti DDos Pro non-Web Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,13 +27,79 @@ package com.jdcloud.sdk.service.ipanti.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 更新某条非网站类规则
+ * 更新非网站类规则
  */
 public class ModifyForwardRuleResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 0: 更新规则失败, 1: 更新规则成功
+     */
+    private Integer code;
 
+    /**
+     * 更新规则失败时给出具体原因
+     */
+    private String message;
+
+
+    /**
+     * get 0: 更新规则失败, 1: 更新规则成功
+     *
+     * @return
+     */
+    public Integer getCode() {
+        return code;
+    }
+
+    /**
+     * set 0: 更新规则失败, 1: 更新规则成功
+     *
+     * @param code
+     */
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    /**
+     * get 更新规则失败时给出具体原因
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 更新规则失败时给出具体原因
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+
+    /**
+     * set 0: 更新规则失败, 1: 更新规则成功
+     *
+     * @param code
+     */
+    public ModifyForwardRuleResult code(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    /**
+     * set 更新规则失败时给出具体原因
+     *
+     * @param message
+     */
+    public ModifyForwardRuleResult message(String message) {
+        this.message = message;
+        return this;
+    }
 
 
 }

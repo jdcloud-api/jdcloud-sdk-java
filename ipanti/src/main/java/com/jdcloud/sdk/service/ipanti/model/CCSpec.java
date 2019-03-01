@@ -40,27 +40,27 @@ public class CCSpec  implements java.io.Serializable {
     /**
      * cc阈值大小
      */
-    private Integer ccThreshold;
+    private Long ccThreshold;
 
     /**
      * ccProtectMode为自定义模式时，指定每个Host的防护阈值
      */
-    private Integer hostQps;
+    private Long hostQps;
 
     /**
      * ccProtectMode为自定义模式时，指定每个Host+URI的防护阈值
      */
-    private Integer hostUrlQps;
+    private Long hostUrlQps;
 
     /**
      * ccProtectMode为自定义模式时，指定每个源IP对Host的防护阈值
      */
-    private Integer ipHostQps;
+    private Long ipHostQps;
 
     /**
      * ccProtectMode为自定义模式时，指定每个源IP对Host+URI的防护阈值
      */
-    private Integer ipHostUrlQps;
+    private Long ipHostUrlQps;
 
 
     /**
@@ -86,7 +86,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getCcThreshold() {
+    public Long getCcThreshold() {
         return ccThreshold;
     }
 
@@ -95,7 +95,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param ccThreshold
      */
-    public void setCcThreshold(Integer ccThreshold) {
+    public void setCcThreshold(Long ccThreshold) {
         this.ccThreshold = ccThreshold;
     }
 
@@ -104,7 +104,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getHostQps() {
+    public Long getHostQps() {
         return hostQps;
     }
 
@@ -113,7 +113,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param hostQps
      */
-    public void setHostQps(Integer hostQps) {
+    public void setHostQps(Long hostQps) {
         this.hostQps = hostQps;
     }
 
@@ -122,7 +122,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getHostUrlQps() {
+    public Long getHostUrlQps() {
         return hostUrlQps;
     }
 
@@ -131,7 +131,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param hostUrlQps
      */
-    public void setHostUrlQps(Integer hostUrlQps) {
+    public void setHostUrlQps(Long hostUrlQps) {
         this.hostUrlQps = hostUrlQps;
     }
 
@@ -140,7 +140,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getIpHostQps() {
+    public Long getIpHostQps() {
         return ipHostQps;
     }
 
@@ -149,7 +149,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param ipHostQps
      */
-    public void setIpHostQps(Integer ipHostQps) {
+    public void setIpHostQps(Long ipHostQps) {
         this.ipHostQps = ipHostQps;
     }
 
@@ -158,7 +158,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getIpHostUrlQps() {
+    public Long getIpHostUrlQps() {
         return ipHostUrlQps;
     }
 
@@ -167,7 +167,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param ipHostUrlQps
      */
-    public void setIpHostUrlQps(Integer ipHostUrlQps) {
+    public void setIpHostUrlQps(Long ipHostUrlQps) {
         this.ipHostUrlQps = ipHostUrlQps;
     }
 
@@ -187,7 +187,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param ccThreshold
      */
-    public CCSpec ccThreshold(Integer ccThreshold) {
+    public CCSpec ccThreshold(Long ccThreshold) {
         this.ccThreshold = ccThreshold;
         return this;
     }
@@ -197,7 +197,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param hostQps
      */
-    public CCSpec hostQps(Integer hostQps) {
+    public CCSpec hostQps(Long hostQps) {
         this.hostQps = hostQps;
         return this;
     }
@@ -207,7 +207,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param hostUrlQps
      */
-    public CCSpec hostUrlQps(Integer hostUrlQps) {
+    public CCSpec hostUrlQps(Long hostUrlQps) {
         this.hostUrlQps = hostUrlQps;
         return this;
     }
@@ -217,7 +217,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param ipHostQps
      */
-    public CCSpec ipHostQps(Integer ipHostQps) {
+    public CCSpec ipHostQps(Long ipHostQps) {
         this.ipHostQps = ipHostQps;
         return this;
     }
@@ -227,7 +227,7 @@ public class CCSpec  implements java.io.Serializable {
      *
      * @param ipHostUrlQps
      */
-    public CCSpec ipHostUrlQps(Integer ipHostUrlQps) {
+    public CCSpec ipHostUrlQps(Long ipHostUrlQps) {
         this.ipHostUrlQps = ipHostUrlQps;
         return this;
     }

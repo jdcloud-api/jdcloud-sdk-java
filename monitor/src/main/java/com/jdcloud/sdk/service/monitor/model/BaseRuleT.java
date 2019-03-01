@@ -56,10 +56,13 @@ public class BaseRuleT  implements java.io.Serializable {
     private String downSample;
 
     /**
-     * 监控项ID
-     * Required:true
+     * 监控项
      */
-    @Required
+    private String metric;
+
+    /**
+     * 监控项ID
+     */
     private Long metricId;
 
     /**
@@ -185,6 +188,24 @@ public class BaseRuleT  implements java.io.Serializable {
      */
     public void setDownSample(String downSample) {
         this.downSample = downSample;
+    }
+
+    /**
+     * get 监控项
+     *
+     * @return
+     */
+    public String getMetric() {
+        return metric;
+    }
+
+    /**
+     * set 监控项
+     *
+     * @param metric
+     */
+    public void setMetric(String metric) {
+        this.metric = metric;
     }
 
     /**
@@ -387,6 +408,16 @@ public class BaseRuleT  implements java.io.Serializable {
      */
     public BaseRuleT downSample(String downSample) {
         this.downSample = downSample;
+        return this;
+    }
+
+    /**
+     * set 监控项
+     *
+     * @param metric
+     */
+    public BaseRuleT metric(String metric) {
+        this.metric = metric;
         return this;
     }
 

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 删除指定用户下某个 registry.
-
+ [MFA enabled]
  */
 public class DeleteRegistryResponse extends JdcloudResponse<DeleteRegistryResult> implements java.io.Serializable {
 

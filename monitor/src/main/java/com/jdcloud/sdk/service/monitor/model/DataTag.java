@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * dataTag
@@ -34,63 +33,23 @@ public class DataTag  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 标签名称
-     * Required:true
-     */
-    @Required
-    private String tagKey;
-
-    /**
-     * 标签值
-     * Required:true
-     */
-    @Required
-    private String tagValue;
-
-    /**
-     * 标签的处理方式，1 代表对于新增标签的时候，如果数据点存在该标签，跳过不处理，2、代表新增标签的时候，如果标签存在进行覆盖
+     * operation
      */
     private Long operation;
 
-
     /**
-     * get 标签名称
-     *
-     * @return
+     * tagKey
      */
-    public String getTagKey() {
-        return tagKey;
-    }
+    private String tagKey;
 
     /**
-     * set 标签名称
-     *
-     * @param tagKey
+     * tagValue
      */
-    public void setTagKey(String tagKey) {
-        this.tagKey = tagKey;
-    }
+    private String tagValue;
+
 
     /**
-     * get 标签值
-     *
-     * @return
-     */
-    public String getTagValue() {
-        return tagValue;
-    }
-
-    /**
-     * set 标签值
-     *
-     * @param tagValue
-     */
-    public void setTagValue(String tagValue) {
-        this.tagValue = tagValue;
-    }
-
-    /**
-     * get 标签的处理方式，1 代表对于新增标签的时候，如果数据点存在该标签，跳过不处理，2、代表新增标签的时候，如果标签存在进行覆盖
+     * get operation
      *
      * @return
      */
@@ -99,7 +58,7 @@ public class DataTag  implements java.io.Serializable {
     }
 
     /**
-     * set 标签的处理方式，1 代表对于新增标签的时候，如果数据点存在该标签，跳过不处理，2、代表新增标签的时候，如果标签存在进行覆盖
+     * set operation
      *
      * @param operation
      */
@@ -107,9 +66,55 @@ public class DataTag  implements java.io.Serializable {
         this.operation = operation;
     }
 
+    /**
+     * get tagKey
+     *
+     * @return
+     */
+    public String getTagKey() {
+        return tagKey;
+    }
 
     /**
-     * set 标签名称
+     * set tagKey
+     *
+     * @param tagKey
+     */
+    public void setTagKey(String tagKey) {
+        this.tagKey = tagKey;
+    }
+
+    /**
+     * get tagValue
+     *
+     * @return
+     */
+    public String getTagValue() {
+        return tagValue;
+    }
+
+    /**
+     * set tagValue
+     *
+     * @param tagValue
+     */
+    public void setTagValue(String tagValue) {
+        this.tagValue = tagValue;
+    }
+
+
+    /**
+     * set operation
+     *
+     * @param operation
+     */
+    public DataTag operation(Long operation) {
+        this.operation = operation;
+        return this;
+    }
+
+    /**
+     * set tagKey
      *
      * @param tagKey
      */
@@ -119,22 +124,12 @@ public class DataTag  implements java.io.Serializable {
     }
 
     /**
-     * set 标签值
+     * set tagValue
      *
      * @param tagValue
      */
     public DataTag tagValue(String tagValue) {
         this.tagValue = tagValue;
-        return this;
-    }
-
-    /**
-     * set 标签的处理方式，1 代表对于新增标签的时候，如果数据点存在该标签，跳过不处理，2、代表新增标签的时候，如果标签存在进行覆盖
-     *
-     * @param operation
-     */
-    public DataTag operation(Long operation) {
-        this.operation = operation;
         return this;
     }
 

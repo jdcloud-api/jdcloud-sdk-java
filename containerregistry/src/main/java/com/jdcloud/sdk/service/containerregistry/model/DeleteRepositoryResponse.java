@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 删除指定用户下某个镜像仓库.
-
+ [MFA enabled]
  */
 public class DeleteRepositoryResponse extends JdcloudResponse<DeleteRepositoryResult> implements java.io.Serializable {
 

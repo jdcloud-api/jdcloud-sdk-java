@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.ipanti.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * ccIpLimitSpec
@@ -34,13 +35,17 @@ public class CcIpLimitSpec  implements java.io.Serializable {
 
     /**
      * cc防护每ip的限速大小
+     * Required:true
      */
-    private Integer ccSpeedLimit;
+    @Required
+    private Long ccSpeedLimit;
 
     /**
      * cc防护每ip的限速大小的统计周期
+     * Required:true
      */
-    private Integer ccSpeedPeriod;
+    @Required
+    private Long ccSpeedPeriod;
 
 
     /**
@@ -48,7 +53,7 @@ public class CcIpLimitSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getCcSpeedLimit() {
+    public Long getCcSpeedLimit() {
         return ccSpeedLimit;
     }
 
@@ -57,7 +62,7 @@ public class CcIpLimitSpec  implements java.io.Serializable {
      *
      * @param ccSpeedLimit
      */
-    public void setCcSpeedLimit(Integer ccSpeedLimit) {
+    public void setCcSpeedLimit(Long ccSpeedLimit) {
         this.ccSpeedLimit = ccSpeedLimit;
     }
 
@@ -66,7 +71,7 @@ public class CcIpLimitSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getCcSpeedPeriod() {
+    public Long getCcSpeedPeriod() {
         return ccSpeedPeriod;
     }
 
@@ -75,7 +80,7 @@ public class CcIpLimitSpec  implements java.io.Serializable {
      *
      * @param ccSpeedPeriod
      */
-    public void setCcSpeedPeriod(Integer ccSpeedPeriod) {
+    public void setCcSpeedPeriod(Long ccSpeedPeriod) {
         this.ccSpeedPeriod = ccSpeedPeriod;
     }
 
@@ -85,7 +90,7 @@ public class CcIpLimitSpec  implements java.io.Serializable {
      *
      * @param ccSpeedLimit
      */
-    public CcIpLimitSpec ccSpeedLimit(Integer ccSpeedLimit) {
+    public CcIpLimitSpec ccSpeedLimit(Long ccSpeedLimit) {
         this.ccSpeedLimit = ccSpeedLimit;
         return this;
     }
@@ -95,7 +100,7 @@ public class CcIpLimitSpec  implements java.io.Serializable {
      *
      * @param ccSpeedPeriod
      */
-    public CcIpLimitSpec ccSpeedPeriod(Integer ccSpeedPeriod) {
+    public CcIpLimitSpec ccSpeedPeriod(Long ccSpeedPeriod) {
         this.ccSpeedPeriod = ccSpeedPeriod;
         return this;
     }

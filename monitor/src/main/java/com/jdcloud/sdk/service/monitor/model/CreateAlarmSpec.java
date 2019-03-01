@@ -34,7 +34,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 幂等性校验参数,最长36位
+     * 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，只创建一次规则
      * Required:true
      */
     @Required
@@ -49,7 +49,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
 
 
     /**
-     * get 幂等性校验参数,最长36位
+     * get 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，只创建一次规则
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 幂等性校验参数,最长36位
+     * set 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，只创建一次规则
      *
      * @param clientToken
      */
@@ -86,7 +86,7 @@ public class CreateAlarmSpec  implements java.io.Serializable {
 
 
     /**
-     * set 幂等性校验参数,最长36位
+     * set 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，只创建一次规则
      *
      * @param clientToken
      */

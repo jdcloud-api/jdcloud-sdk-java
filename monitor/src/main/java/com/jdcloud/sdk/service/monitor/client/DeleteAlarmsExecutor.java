@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云监控规则相关接口
+ * Monitoring Rules APIs
  * 云监控规则相关接口，提供创建、查询、修改、删除监控规则等功能
  *
  * OpenAPI spec version: v1
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsResponse;
 
 /**
- * 批量删除已创建的报警规则
+ * 批量删除规则
  */
 class DeleteAlarmsExecutor extends JdcloudExecutor {
 

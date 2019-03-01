@@ -45,6 +45,11 @@ public class DescribeRepositoriesRequest extends JdcloudRequest implements java.
     private List<Filter> filters;
 
     /**
+     * 注册表名
+     */
+    private String registryName;
+
+    /**
      * 页码；默认为1
      */
     private Integer pageNumber;
@@ -80,6 +85,24 @@ public class DescribeRepositoriesRequest extends JdcloudRequest implements java.
      */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
+    }
+
+    /**
+     * get 注册表名
+     *
+     * @return
+     */
+    public String getRegistryName() {
+        return registryName;
+    }
+
+    /**
+     * set 注册表名
+     *
+     * @param registryName
+     */
+    public void setRegistryName(String registryName) {
+        this.registryName = registryName;
     }
 
     /**
@@ -145,6 +168,16 @@ public class DescribeRepositoriesRequest extends JdcloudRequest implements java.
      */
     public DescribeRepositoriesRequest filters(List<Filter> filters) {
         this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set 注册表名
+     *
+     * @param registryName
+     */
+    public DescribeRepositoriesRequest registryName(String registryName) {
+        this.registryName = registryName;
         return this;
     }
 
