@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 设备生命周期管理
+ * ModuleManager
  * 用于完成设备全生命周期管理
  *
  * OpenAPI spec version: v1

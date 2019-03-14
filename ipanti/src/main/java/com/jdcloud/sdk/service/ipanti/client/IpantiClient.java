@@ -94,9 +94,6 @@ import com.jdcloud.sdk.service.ipanti.client.DescribeCCAttackLogsExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceCCRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceCCResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceCCExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DeleteCCProtectionRuleOfWebRuleRequest;
-import com.jdcloud.sdk.service.ipanti.model.DeleteCCProtectionRuleOfWebRuleResponse;
-import com.jdcloud.sdk.service.ipanti.client.DeleteCCProtectionRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeFwdGraphRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeFwdGraphResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeFwdGraphExecutor;
@@ -225,7 +222,7 @@ public class IpantiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.8";
+    public final static String ClientVersion = "1.0.9";
     public final static String DefaultEndpoint = "ipanti.jdcloud-api.com";
     public final static String ServiceName = "ipanti";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -400,7 +397,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
+     * 新购或升级高防实例
      *
      * @param request
      * @return
@@ -496,17 +493,6 @@ public class IpantiClient extends JdcloudClient {
      */
     public ModifyInstanceCCResponse modifyInstanceCC(ModifyInstanceCCRequest request) throws JdcloudSdkException {
         return new ModifyInstanceCCExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除网站规则的 CC 防护规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteCCProtectionRuleOfWebRuleResponse deleteCCProtectionRuleOfWebRule(DeleteCCProtectionRuleOfWebRuleRequest request) throws JdcloudSdkException {
-        return new DeleteCCProtectionRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**

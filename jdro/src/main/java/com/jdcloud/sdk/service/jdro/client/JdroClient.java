@@ -75,7 +75,7 @@ public class JdroClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.8";
+    public final static String ClientVersion = "1.0.9";
     public final static String DefaultEndpoint = "jdro.jdcloud-api.com";
     public final static String ServiceName = "jdro";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -30,6 +30,8 @@ import com.jdcloud.sdk.service.live.model.AddLiveRecordTaskResponse;
 
 /**
  * 添加录制打点任务
+  - 您可以调用此接口精确提取已录制的文件中所需要的部分
+
  */
 class AddLiveRecordTaskExecutor extends JdcloudExecutor {
 

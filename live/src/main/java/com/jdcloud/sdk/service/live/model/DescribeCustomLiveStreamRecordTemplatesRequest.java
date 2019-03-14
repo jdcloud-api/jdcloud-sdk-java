@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -47,7 +47,10 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     private Integer pageSize;
 
     /**
-     * 域名列表查询过滤条件, 不传递分页参数时默认返回10条
+     * 录制模板列表查询过滤条件:
+  - name:   template 录制模板自定义名称
+  - value:  如果参数为空，则查询全部
+
      */
     private List<Filter> filters;
 
@@ -89,7 +92,10 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     }
 
     /**
-     * get 域名列表查询过滤条件, 不传递分页参数时默认返回10条
+     * get 录制模板列表查询过滤条件:
+  - name:   template 录制模板自定义名称
+  - value:  如果参数为空，则查询全部
+
      *
      * @return
      */
@@ -98,7 +104,10 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     }
 
     /**
-     * set 域名列表查询过滤条件, 不传递分页参数时默认返回10条
+     * set 录制模板列表查询过滤条件:
+  - name:   template 录制模板自定义名称
+  - value:  如果参数为空，则查询全部
+
      *
      * @param filters
      */
@@ -128,7 +137,10 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     }
 
     /**
-     * set 域名列表查询过滤条件, 不传递分页参数时默认返回10条
+     * set 录制模板列表查询过滤条件:
+  - name:   template 录制模板自定义名称
+  - value:  如果参数为空，则查询全部
+
      *
      * @param filters
      */
@@ -139,7 +151,10 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
 
 
     /**
-     * add item to 域名列表查询过滤条件, 不传递分页参数时默认返回10条
+     * add item to 录制模板列表查询过滤条件:
+  - name:   template 录制模板自定义名称
+  - value:  如果参数为空，则查询全部
+
      *
      * @param filter
      */

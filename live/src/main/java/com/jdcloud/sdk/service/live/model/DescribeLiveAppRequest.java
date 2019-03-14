@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -47,7 +47,10 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     private Integer pageSize;
 
     /**
-     * 域名下的app列表过滤条件, 不传递分页参数时默认返回10条
+     * 域名下的app列表过滤条件:
+  - name:   publishDomain 直播的推流域名
+  - value:  如果参数为空，则查询全部
+
      */
     private List<Filter> filters;
 
@@ -89,7 +92,10 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 域名下的app列表过滤条件, 不传递分页参数时默认返回10条
+     * get 域名下的app列表过滤条件:
+  - name:   publishDomain 直播的推流域名
+  - value:  如果参数为空，则查询全部
+
      *
      * @return
      */
@@ -98,7 +104,10 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 域名下的app列表过滤条件, 不传递分页参数时默认返回10条
+     * set 域名下的app列表过滤条件:
+  - name:   publishDomain 直播的推流域名
+  - value:  如果参数为空，则查询全部
+
      *
      * @param filters
      */
@@ -128,7 +137,10 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 域名下的app列表过滤条件, 不传递分页参数时默认返回10条
+     * set 域名下的app列表过滤条件:
+  - name:   publishDomain 直播的推流域名
+  - value:  如果参数为空，则查询全部
+
      *
      * @param filters
      */
@@ -139,7 +151,10 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * add item to 域名下的app列表过滤条件, 不传递分页参数时默认返回10条
+     * add item to 域名下的app列表过滤条件:
+  - name:   publishDomain 直播的推流域名
+  - value:  如果参数为空，则查询全部
+
      *
      * @param filter
      */

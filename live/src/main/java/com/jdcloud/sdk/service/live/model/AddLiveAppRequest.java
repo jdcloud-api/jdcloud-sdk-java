@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -35,14 +35,14 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播的推流域名
+     * 直播的推流域名(不支持泛域名)
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * appName
+     * 应用名称
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 直播的推流域名
+     * get 直播的推流域名(不支持泛域名)
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 直播的推流域名
+     * set 直播的推流域名(不支持泛域名)
      *
      * @param publishDomain
      */
@@ -68,7 +68,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get appName
+     * get 应用名称
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set appName
+     * set 应用名称
      *
      * @param appName
      */
@@ -87,7 +87,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 直播的推流域名
+     * set 直播的推流域名(不支持泛域名)
      *
      * @param publishDomain
      */
@@ -97,7 +97,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set appName
+     * set 应用名称
      *
      * @param appName
      */

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除域名
+ * 删除直播域名
  */
 public class DeleteLiveDomainResult extends JdcloudResult implements java.io.Serializable {
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -47,7 +47,14 @@ public class DescribeCustomLiveStreamRecordConfigRequest extends JdcloudRequest 
     private Integer pageSize;
 
     /**
-     * 转码模板查询过滤条件, 不传递分页参数时默认返回10条
+     * 录制配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      */
     private List<Filter> filters;
 
@@ -89,7 +96,14 @@ public class DescribeCustomLiveStreamRecordConfigRequest extends JdcloudRequest 
     }
 
     /**
-     * get 转码模板查询过滤条件, 不传递分页参数时默认返回10条
+     * get 录制配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      *
      * @return
      */
@@ -98,7 +112,14 @@ public class DescribeCustomLiveStreamRecordConfigRequest extends JdcloudRequest 
     }
 
     /**
-     * set 转码模板查询过滤条件, 不传递分页参数时默认返回10条
+     * set 录制配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      *
      * @param filters
      */
@@ -128,7 +149,14 @@ public class DescribeCustomLiveStreamRecordConfigRequest extends JdcloudRequest 
     }
 
     /**
-     * set 转码模板查询过滤条件, 不传递分页参数时默认返回10条
+     * set 录制配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      *
      * @param filters
      */
@@ -139,7 +167,14 @@ public class DescribeCustomLiveStreamRecordConfigRequest extends JdcloudRequest 
 
 
     /**
-     * add item to 转码模板查询过滤条件, 不传递分页参数时默认返回10条
+     * add item to 录制配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      *
      * @param filter
      */

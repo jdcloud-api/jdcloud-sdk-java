@@ -38,7 +38,7 @@ public class LiveRecordConfig  implements java.io.Serializable {
     private String publishDomain;
 
     /**
-     * 推流域名
+     * 应用名称
      */
     private String appName;
 
@@ -72,7 +72,7 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * get 推流域名
+     * get 应用名称
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 推流域名
+     * set 应用名称
      *
      * @param appName
      */
@@ -137,7 +137,7 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 推流域名
+     * set 应用名称
      *
      * @param appName
      */

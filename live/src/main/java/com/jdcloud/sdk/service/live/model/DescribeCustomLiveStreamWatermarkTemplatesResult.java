@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.live.model.WatermarkTemplate;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询录制模板列表
+ * 查询水印模板列表
  */
 public class DescribeCustomLiveStreamWatermarkTemplatesResult extends JdcloudResult implements java.io.Serializable {
 
@@ -49,7 +49,7 @@ public class DescribeCustomLiveStreamWatermarkTemplatesResult extends JdcloudRes
     /**
      * 查询总数
      */
-    private Number totalCount;
+    private Integer totalCount;
 
     /**
      * watermarkTemplates
@@ -98,7 +98,7 @@ public class DescribeCustomLiveStreamWatermarkTemplatesResult extends JdcloudRes
      *
      * @return
      */
-    public Number getTotalCount() {
+    public Integer getTotalCount() {
         return totalCount;
     }
 
@@ -107,7 +107,7 @@ public class DescribeCustomLiveStreamWatermarkTemplatesResult extends JdcloudRes
      *
      * @param totalCount
      */
-    public void setTotalCount(Number totalCount) {
+    public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
     }
 
@@ -155,7 +155,7 @@ public class DescribeCustomLiveStreamWatermarkTemplatesResult extends JdcloudRes
      *
      * @param totalCount
      */
-    public DescribeCustomLiveStreamWatermarkTemplatesResult totalCount(Number totalCount) {
+    public DescribeCustomLiveStreamWatermarkTemplatesResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }

@@ -43,9 +43,24 @@ public class PlayDomain  implements java.io.Serializable {
     private String playDomainCname;
 
     /**
-     * 直播域名状态
+     * 直播域名状态:
+  - online表示启用
+  - offline表示停用
+  - configuring表示配置中
+  - configure_failed表示配置失败
+  - checking表示正在审核
+  - check_failed表示审核失败
+
      */
     private String domainStatus;
+
+    /**
+     * 播放域名类型:
+  - normal  普通播放域名
+  - restart 回看域名
+
+     */
+    private String playType;
 
     /**
      * 创建时间
@@ -95,7 +110,14 @@ public class PlayDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 直播域名状态
+     * get 直播域名状态:
+  - online表示启用
+  - offline表示停用
+  - configuring表示配置中
+  - configure_failed表示配置失败
+  - checking表示正在审核
+  - check_failed表示审核失败
+
      *
      * @return
      */
@@ -104,12 +126,43 @@ public class PlayDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 直播域名状态
+     * set 直播域名状态:
+  - online表示启用
+  - offline表示停用
+  - configuring表示配置中
+  - configure_failed表示配置失败
+  - checking表示正在审核
+  - check_failed表示审核失败
+
      *
      * @param domainStatus
      */
     public void setDomainStatus(String domainStatus) {
         this.domainStatus = domainStatus;
+    }
+
+    /**
+     * get 播放域名类型:
+  - normal  普通播放域名
+  - restart 回看域名
+
+     *
+     * @return
+     */
+    public String getPlayType() {
+        return playType;
+    }
+
+    /**
+     * set 播放域名类型:
+  - normal  普通播放域名
+  - restart 回看域名
+
+     *
+     * @param playType
+     */
+    public void setPlayType(String playType) {
+        this.playType = playType;
     }
 
     /**
@@ -170,12 +223,32 @@ public class PlayDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 直播域名状态
+     * set 直播域名状态:
+  - online表示启用
+  - offline表示停用
+  - configuring表示配置中
+  - configure_failed表示配置失败
+  - checking表示正在审核
+  - check_failed表示审核失败
+
      *
      * @param domainStatus
      */
     public PlayDomain domainStatus(String domainStatus) {
         this.domainStatus = domainStatus;
+        return this;
+    }
+
+    /**
+     * set 播放域名类型:
+  - normal  普通播放域名
+  - restart 回看域名
+
+     *
+     * @param playType
+     */
+    public PlayDomain playType(String playType) {
+        this.playType = playType;
         return this;
     }
 

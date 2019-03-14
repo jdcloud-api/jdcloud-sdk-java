@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -42,7 +42,10 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
     private String publishDomain;
 
     /**
-     * 设置直播流信息推送到的 URL 地址
+     * 设置直播流信息推送到的 URL 地址:
+  - 以 http:// 开头
+  - 正则校验
+
      * Required:true
      */
     @Required
@@ -68,7 +71,10 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * get 设置直播流信息推送到的 URL 地址
+     * get 设置直播流信息推送到的 URL 地址:
+  - 以 http:// 开头
+  - 正则校验
+
      *
      * @return
      */
@@ -77,7 +83,10 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 设置直播流信息推送到的 URL 地址
+     * set 设置直播流信息推送到的 URL 地址:
+  - 以 http:// 开头
+  - 正则校验
+
      *
      * @param notifyUrl
      */
@@ -97,7 +106,10 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 设置直播流信息推送到的 URL 地址
+     * set 设置直播流信息推送到的 URL 地址:
+  - 以 http:// 开头
+  - 正则校验
+
      *
      * @param notifyUrl
      */

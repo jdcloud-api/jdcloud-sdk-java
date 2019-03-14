@@ -45,7 +45,7 @@ public class OnlineInfo  implements java.io.Serializable {
     /**
      * lastConnectTime
      */
-    private Integer lastConnectTime;
+    private String lastConnectTime;
 
 
     /**
@@ -89,7 +89,7 @@ public class OnlineInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getLastConnectTime() {
+    public String getLastConnectTime() {
         return lastConnectTime;
     }
 
@@ -98,7 +98,7 @@ public class OnlineInfo  implements java.io.Serializable {
      *
      * @param lastConnectTime
      */
-    public void setLastConnectTime(Integer lastConnectTime) {
+    public void setLastConnectTime(String lastConnectTime) {
         this.lastConnectTime = lastConnectTime;
     }
 
@@ -128,7 +128,7 @@ public class OnlineInfo  implements java.io.Serializable {
      *
      * @param lastConnectTime
      */
-    public OnlineInfo lastConnectTime(Integer lastConnectTime) {
+    public OnlineInfo lastConnectTime(String lastConnectTime) {
         this.lastConnectTime = lastConnectTime;
         return this;
     }

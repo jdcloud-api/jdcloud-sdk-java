@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD BILLING API
+ * 计费
  * 计费系统API接口
  *
  * OpenAPI spec version: v1
@@ -31,48 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.billing.model.QueryConsumptionOverViewRequest;
-import com.jdcloud.sdk.service.billing.model.QueryConsumptionOverViewResponse;
-import com.jdcloud.sdk.service.billing.client.QueryConsumptionOverViewExecutor;
-import com.jdcloud.sdk.service.billing.model.QueryResourceBillsRequest;
-import com.jdcloud.sdk.service.billing.model.QueryResourceBillsResponse;
-import com.jdcloud.sdk.service.billing.client.QueryResourceBillsExecutor;
-import com.jdcloud.sdk.service.billing.model.GetExpiringOrdersRequest;
-import com.jdcloud.sdk.service.billing.model.GetExpiringOrdersResponse;
-import com.jdcloud.sdk.service.billing.client.GetExpiringOrdersExecutor;
-import com.jdcloud.sdk.service.billing.model.QueryConsumeRecordsRequest;
-import com.jdcloud.sdk.service.billing.model.QueryConsumeRecordsResponse;
-import com.jdcloud.sdk.service.billing.client.QueryConsumeRecordsExecutor;
-import com.jdcloud.sdk.service.billing.model.CalculateCompensateFeeAndSendCouponsRequest;
-import com.jdcloud.sdk.service.billing.model.CalculateCompensateFeeAndSendCouponsResponse;
-import com.jdcloud.sdk.service.billing.client.CalculateCompensateFeeAndSendCouponsExecutor;
-import com.jdcloud.sdk.service.billing.model.QueryConsumeBillsRequest;
-import com.jdcloud.sdk.service.billing.model.QueryConsumeBillsResponse;
-import com.jdcloud.sdk.service.billing.client.QueryConsumeBillsExecutor;
-import com.jdcloud.sdk.service.billing.model.QueryBillStatisticsInfoRequest;
-import com.jdcloud.sdk.service.billing.model.QueryBillStatisticsInfoResponse;
-import com.jdcloud.sdk.service.billing.client.QueryBillStatisticsInfoExecutor;
-import com.jdcloud.sdk.service.billing.model.AdminQueryBillStatisticsInfoRequest;
-import com.jdcloud.sdk.service.billing.model.AdminQueryBillStatisticsInfoResponse;
-import com.jdcloud.sdk.service.billing.client.AdminQueryBillStatisticsInfoExecutor;
-import com.jdcloud.sdk.service.billing.model.CalculateTotalPriceRequest;
-import com.jdcloud.sdk.service.billing.model.CalculateTotalPriceResponse;
-import com.jdcloud.sdk.service.billing.client.CalculateTotalPriceExecutor;
-import com.jdcloud.sdk.service.billing.model.GetBillDetailRequest;
-import com.jdcloud.sdk.service.billing.model.GetBillDetailResponse;
-import com.jdcloud.sdk.service.billing.client.GetBillDetailExecutor;
-import com.jdcloud.sdk.service.billing.model.QueryPageByConditionRequest;
-import com.jdcloud.sdk.service.billing.model.QueryPageByConditionResponse;
-import com.jdcloud.sdk.service.billing.client.QueryPageByConditionExecutor;
-import com.jdcloud.sdk.service.billing.model.IsArrearRequest;
-import com.jdcloud.sdk.service.billing.model.IsArrearResponse;
-import com.jdcloud.sdk.service.billing.client.IsArrearExecutor;
-import com.jdcloud.sdk.service.billing.model.GetResourceNameRequest;
-import com.jdcloud.sdk.service.billing.model.GetResourceNameResponse;
-import com.jdcloud.sdk.service.billing.client.GetResourceNameExecutor;
-import com.jdcloud.sdk.service.billing.model.SendResourceOrderStatusMessageRequest;
-import com.jdcloud.sdk.service.billing.model.SendResourceOrderStatusMessageResponse;
-import com.jdcloud.sdk.service.billing.client.SendResourceOrderStatusMessageExecutor;
+import com.jdcloud.sdk.service.billing.model.QueryBillSummaryRequest;
+import com.jdcloud.sdk.service.billing.model.QueryBillSummaryResponse;
+import com.jdcloud.sdk.service.billing.client.QueryBillSummaryExecutor;
+import com.jdcloud.sdk.service.billing.model.QueryBillDetailRequest;
+import com.jdcloud.sdk.service.billing.model.QueryBillDetailResponse;
+import com.jdcloud.sdk.service.billing.client.QueryBillDetailExecutor;
 
 /**
  * billingClient
@@ -81,7 +45,7 @@ public class BillingClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.6";
+    public final static String ClientVersion = "1.0.9";
     public final static String DefaultEndpoint = "billing.jdcloud-api.com";
     public final static String ServiceName = "billing";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -124,157 +88,25 @@ public class BillingClient extends JdcloudClient {
 
 
     /**
-     * 查询消费总览
+     * 查询账单资源汇总数据
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryConsumptionOverViewResponse queryConsumptionOverView(QueryConsumptionOverViewRequest request) throws JdcloudSdkException {
-        return new QueryConsumptionOverViewExecutor().client(this).execute(request);
+    public QueryBillSummaryResponse queryBillSummary(QueryBillSummaryRequest request) throws JdcloudSdkException {
+        return new QueryBillSummaryExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询资源账单列表
+     * 查询账单明细数据
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryResourceBillsResponse queryResourceBills(QueryResourceBillsRequest request) throws JdcloudSdkException {
-        return new QueryResourceBillsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询资源单列表接口，不含已删除资源
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetExpiringOrdersResponse getExpiringOrders(GetExpiringOrdersRequest request) throws JdcloudSdkException {
-        return new GetExpiringOrdersExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询资源账单详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryConsumeRecordsResponse queryConsumeRecords(QueryConsumeRecordsRequest request) throws JdcloudSdkException {
-        return new QueryConsumeRecordsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 计算赔偿金额并发放代金券
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CalculateCompensateFeeAndSendCouponsResponse calculateCompensateFeeAndSendCoupons(CalculateCompensateFeeAndSendCouponsRequest request) throws JdcloudSdkException {
-        return new CalculateCompensateFeeAndSendCouponsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询消费记录列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryConsumeBillsResponse queryConsumeBills(QueryConsumeBillsRequest request) throws JdcloudSdkException {
-        return new QueryConsumeBillsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询资源账单，消费记录中的费用信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryBillStatisticsInfoResponse queryBillStatisticsInfo(QueryBillStatisticsInfoRequest request) throws JdcloudSdkException {
-        return new QueryBillStatisticsInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询消费统计信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AdminQueryBillStatisticsInfoResponse adminQueryBillStatisticsInfo(AdminQueryBillStatisticsInfoRequest request) throws JdcloudSdkException {
-        return new AdminQueryBillStatisticsInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询计费价格信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CalculateTotalPriceResponse calculateTotalPrice(CalculateTotalPriceRequest request) throws JdcloudSdkException {
-        return new CalculateTotalPriceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询消费记录详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetBillDetailResponse getBillDetail(GetBillDetailRequest request) throws JdcloudSdkException {
-        return new GetBillDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询资源单列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryPageByConditionResponse queryPageByCondition(QueryPageByConditionRequest request) throws JdcloudSdkException {
-        return new QueryPageByConditionExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用户是否欠费
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public IsArrearResponse isArrear(IsArrearRequest request) throws JdcloudSdkException {
-        return new IsArrearExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用于在账单展示的资源名称信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetResourceNameResponse getResourceName(GetResourceNameRequest request) throws JdcloudSdkException {
-        return new GetResourceNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除资源
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SendResourceOrderStatusMessageResponse sendResourceOrderStatusMessage(SendResourceOrderStatusMessageRequest request) throws JdcloudSdkException {
-        return new SendResourceOrderStatusMessageExecutor().client(this).execute(request);
+    public QueryBillDetailResponse queryBillDetail(QueryBillDetailRequest request) throws JdcloudSdkException {
+        return new QueryBillDetailExecutor().client(this).execute(request);
     }
 
 

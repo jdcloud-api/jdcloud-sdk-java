@@ -33,28 +33,28 @@ public class PageinfoVO  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * pageSize
+     * 每页显示条数
      */
     private Integer pageSize;
 
     /**
-     * nowPage
+     * 当前页数
      */
     private Integer nowPage;
 
     /**
-     * totalSize
+     * 总记录数
      */
     private Integer totalSize;
 
     /**
-     * totalPage
+     * 总页数
      */
     private Integer totalPage;
 
 
     /**
-     * get pageSize
+     * get 每页显示条数
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set pageSize
+     * set 每页显示条数
      *
      * @param pageSize
      */
@@ -72,7 +72,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * get nowPage
+     * get 当前页数
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set nowPage
+     * set 当前页数
      *
      * @param nowPage
      */
@@ -90,7 +90,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * get totalSize
+     * get 总记录数
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set totalSize
+     * set 总记录数
      *
      * @param totalSize
      */
@@ -108,7 +108,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * get totalPage
+     * get 总页数
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set totalPage
+     * set 总页数
      *
      * @param totalPage
      */
@@ -127,7 +127,7 @@ public class PageinfoVO  implements java.io.Serializable {
 
 
     /**
-     * set pageSize
+     * set 每页显示条数
      *
      * @param pageSize
      */
@@ -137,7 +137,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set nowPage
+     * set 当前页数
      *
      * @param nowPage
      */
@@ -147,7 +147,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set totalSize
+     * set 总记录数
      *
      * @param totalSize
      */
@@ -157,7 +157,7 @@ public class PageinfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set totalPage
+     * set 总页数
      *
      * @param totalPage
      */

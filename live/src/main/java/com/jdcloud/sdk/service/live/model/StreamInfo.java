@@ -35,7 +35,7 @@ public class StreamInfo  implements java.io.Serializable {
     /**
      * 直播流的音频帧率
      */
-    private Number audioFrameRate;
+    private Long audioFrameRate;
 
     /**
      * 直播流的 URL
@@ -45,12 +45,12 @@ public class StreamInfo  implements java.io.Serializable {
     /**
      * 直播流的码率
      */
-    private Number bitRate;
+    private Long bitRate;
 
     /**
      * 直播流的视频帧率
      */
-    private Number videoFrameRate;
+    private Long videoFrameRate;
 
     /**
      * 统计时刻
@@ -63,7 +63,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getAudioFrameRate() {
+    public Long getAudioFrameRate() {
         return audioFrameRate;
     }
 
@@ -72,7 +72,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @param audioFrameRate
      */
-    public void setAudioFrameRate(Number audioFrameRate) {
+    public void setAudioFrameRate(Long audioFrameRate) {
         this.audioFrameRate = audioFrameRate;
     }
 
@@ -99,7 +99,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getBitRate() {
+    public Long getBitRate() {
         return bitRate;
     }
 
@@ -108,7 +108,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @param bitRate
      */
-    public void setBitRate(Number bitRate) {
+    public void setBitRate(Long bitRate) {
         this.bitRate = bitRate;
     }
 
@@ -117,7 +117,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getVideoFrameRate() {
+    public Long getVideoFrameRate() {
         return videoFrameRate;
     }
 
@@ -126,7 +126,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @param videoFrameRate
      */
-    public void setVideoFrameRate(Number videoFrameRate) {
+    public void setVideoFrameRate(Long videoFrameRate) {
         this.videoFrameRate = videoFrameRate;
     }
 
@@ -154,7 +154,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @param audioFrameRate
      */
-    public StreamInfo audioFrameRate(Number audioFrameRate) {
+    public StreamInfo audioFrameRate(Long audioFrameRate) {
         this.audioFrameRate = audioFrameRate;
         return this;
     }
@@ -174,7 +174,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @param bitRate
      */
-    public StreamInfo bitRate(Number bitRate) {
+    public StreamInfo bitRate(Long bitRate) {
         this.bitRate = bitRate;
         return this;
     }
@@ -184,7 +184,7 @@ public class StreamInfo  implements java.io.Serializable {
      *
      * @param videoFrameRate
      */
-    public StreamInfo videoFrameRate(Number videoFrameRate) {
+    public StreamInfo videoFrameRate(Long videoFrameRate) {
         this.videoFrameRate = videoFrameRate;
         return this;
     }

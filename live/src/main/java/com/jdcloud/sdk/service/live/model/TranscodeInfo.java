@@ -33,58 +33,94 @@ public class TranscodeInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 转码输出的码率值
+     * 转码输出的码率值:
+  - 取值: [200,3000]
+  - 单位: kpbs
+
      */
     private Integer videoCodeRate;
 
     /**
-     * 转码输出的帧率值
+     * 转码输出的帧率值:
+  - 取值: 15/1、25/1、30/1、60/1
+
      */
     private String videoFrameRate;
 
     /**
-     * 转码输出视频宽度
+     * 转码输出视频宽度:
+  - 取值: [100,1920]
+  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+
      */
     private Integer width;
 
     /**
-     * 转码输出视频宽度
+     * 转码输出视频宽度:
+  - 取值: [100,1920]
+  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+
      */
     private Integer height;
 
     /**
-     * 转码模板自定义名称
+     * 转码模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - 注意: 不能与标准的转码模板和已定义命名重复
+
      */
     private String template;
 
     /**
-     * 转码输出音频编码格式
+     * 转码输出音频编码格式:
+  - 取值: aac、mp3
+  - 不区分大小写
+
      */
     private String audioCodec;
 
     /**
-     * 转码输出音频格式
+     * 转码输出音频格式:
+  - 取值: aac_lc，aac_low，aac_he，aac_he_v2
+  - 不区分大小写
+
      */
     private String audioFormat;
 
     /**
-     * 转码输出音频采样率
+     * 转码输出音频采样率:
+  - 取值: [44100,48000]
+
      */
     private Integer audioSampleRate;
 
     /**
-     * 转码输出音频通道数
+     * 转码输出音频通道数:
+  - 1  单声道
+  - 2  双声道
+
      */
     private Integer audioChannel;
 
     /**
-     * 转码输出音频码率
+     * 转码输出音频码率:
+  - 取值: [16,128]
+  - 单位: kbps
+
      */
     private Integer audioCodeRate;
 
 
     /**
-     * get 转码输出的码率值
+     * get 转码输出的码率值:
+  - 取值: [200,3000]
+  - 单位: kpbs
+
      *
      * @return
      */
@@ -93,7 +129,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出的码率值
+     * set 转码输出的码率值:
+  - 取值: [200,3000]
+  - 单位: kpbs
+
      *
      * @param videoCodeRate
      */
@@ -102,7 +141,9 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出的帧率值
+     * get 转码输出的帧率值:
+  - 取值: 15/1、25/1、30/1、60/1
+
      *
      * @return
      */
@@ -111,7 +152,9 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出的帧率值
+     * set 转码输出的帧率值:
+  - 取值: 15/1、25/1、30/1、60/1
+
      *
      * @param videoFrameRate
      */
@@ -120,7 +163,11 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出视频宽度
+     * get 转码输出视频宽度:
+  - 取值: [100,1920]
+  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+
      *
      * @return
      */
@@ -129,7 +176,11 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出视频宽度
+     * set 转码输出视频宽度:
+  - 取值: [100,1920]
+  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+
      *
      * @param width
      */
@@ -138,7 +189,11 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出视频宽度
+     * get 转码输出视频宽度:
+  - 取值: [100,1920]
+  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+
      *
      * @return
      */
@@ -147,7 +202,11 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出视频宽度
+     * set 转码输出视频宽度:
+  - 取值: [100,1920]
+  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+
      *
      * @param height
      */
@@ -156,7 +215,13 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码模板自定义名称
+     * get 转码模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - 注意: 不能与标准的转码模板和已定义命名重复
+
      *
      * @return
      */
@@ -165,7 +230,13 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码模板自定义名称
+     * set 转码模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - 注意: 不能与标准的转码模板和已定义命名重复
+
      *
      * @param template
      */
@@ -174,7 +245,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出音频编码格式
+     * get 转码输出音频编码格式:
+  - 取值: aac、mp3
+  - 不区分大小写
+
      *
      * @return
      */
@@ -183,7 +257,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频编码格式
+     * set 转码输出音频编码格式:
+  - 取值: aac、mp3
+  - 不区分大小写
+
      *
      * @param audioCodec
      */
@@ -192,7 +269,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出音频格式
+     * get 转码输出音频格式:
+  - 取值: aac_lc，aac_low，aac_he，aac_he_v2
+  - 不区分大小写
+
      *
      * @return
      */
@@ -201,7 +281,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频格式
+     * set 转码输出音频格式:
+  - 取值: aac_lc，aac_low，aac_he，aac_he_v2
+  - 不区分大小写
+
      *
      * @param audioFormat
      */
@@ -210,7 +293,9 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出音频采样率
+     * get 转码输出音频采样率:
+  - 取值: [44100,48000]
+
      *
      * @return
      */
@@ -219,7 +304,9 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频采样率
+     * set 转码输出音频采样率:
+  - 取值: [44100,48000]
+
      *
      * @param audioSampleRate
      */
@@ -228,7 +315,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出音频通道数
+     * get 转码输出音频通道数:
+  - 1  单声道
+  - 2  双声道
+
      *
      * @return
      */
@@ -237,7 +327,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频通道数
+     * set 转码输出音频通道数:
+  - 1  单声道
+  - 2  双声道
+
      *
      * @param audioChannel
      */
@@ -246,7 +339,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出音频码率
+     * get 转码输出音频码率:
+  - 取值: [16,128]
+  - 单位: kbps
+
      *
      * @return
      */
@@ -255,7 +351,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频码率
+     * set 转码输出音频码率:
+  - 取值: [16,128]
+  - 单位: kbps
+
      *
      * @param audioCodeRate
      */
@@ -265,7 +364,10 @@ public class TranscodeInfo  implements java.io.Serializable {
 
 
     /**
-     * set 转码输出的码率值
+     * set 转码输出的码率值:
+  - 取值: [200,3000]
+  - 单位: kpbs
+
      *
      * @param videoCodeRate
      */
@@ -275,7 +377,9 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出的帧率值
+     * set 转码输出的帧率值:
+  - 取值: 15/1、25/1、30/1、60/1
+
      *
      * @param videoFrameRate
      */
@@ -285,7 +389,11 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出视频宽度
+     * set 转码输出视频宽度:
+  - 取值: [100,1920]
+  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+
      *
      * @param width
      */
@@ -295,7 +403,11 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出视频宽度
+     * set 转码输出视频宽度:
+  - 取值: [100,1920]
+  - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
+  - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
+
      *
      * @param height
      */
@@ -305,7 +417,13 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码模板自定义名称
+     * set 转码模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - 注意: 不能与标准的转码模板和已定义命名重复
+
      *
      * @param template
      */
@@ -315,7 +433,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频编码格式
+     * set 转码输出音频编码格式:
+  - 取值: aac、mp3
+  - 不区分大小写
+
      *
      * @param audioCodec
      */
@@ -325,7 +446,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频格式
+     * set 转码输出音频格式:
+  - 取值: aac_lc，aac_low，aac_he，aac_he_v2
+  - 不区分大小写
+
      *
      * @param audioFormat
      */
@@ -335,7 +459,9 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频采样率
+     * set 转码输出音频采样率:
+  - 取值: [44100,48000]
+
      *
      * @param audioSampleRate
      */
@@ -345,7 +471,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频通道数
+     * set 转码输出音频通道数:
+  - 1  单声道
+  - 2  双声道
+
      *
      * @param audioChannel
      */
@@ -355,7 +484,10 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出音频码率
+     * set 转码输出音频码率:
+  - 取值: [16,128]
+  - 单位: kbps
+
      *
      * @param audioCodeRate
      */

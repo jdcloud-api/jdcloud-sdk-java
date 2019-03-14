@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -35,7 +35,12 @@ public class DescribeCustomLiveStreamTranscodeTemplateRequest extends JdcloudReq
     private static final long serialVersionUID = 1L;
 
     /**
-     * 转码模版
+     * 转码模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+               首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
      * Required:true
      */
     @Required
@@ -43,7 +48,12 @@ public class DescribeCustomLiveStreamTranscodeTemplateRequest extends JdcloudReq
 
 
     /**
-     * get 转码模版
+     * get 转码模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+               首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
      *
      * @return
      */
@@ -52,7 +62,12 @@ public class DescribeCustomLiveStreamTranscodeTemplateRequest extends JdcloudReq
     }
 
     /**
-     * set 转码模版
+     * set 转码模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+               首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
      *
      * @param template
      */
@@ -62,7 +77,12 @@ public class DescribeCustomLiveStreamTranscodeTemplateRequest extends JdcloudReq
 
 
     /**
-     * set 转码模版
+     * set 转码模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+               首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
      *
      * @param template
      */
