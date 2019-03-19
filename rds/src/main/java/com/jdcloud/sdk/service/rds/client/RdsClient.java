@@ -172,6 +172,9 @@ import com.jdcloud.sdk.service.rds.client.ResetPasswordExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyWhiteListExecutor;
+import com.jdcloud.sdk.service.rds.model.ExchangeInstanceDnsRequest;
+import com.jdcloud.sdk.service.rds.model.ExchangeInstanceDnsResponse;
+import com.jdcloud.sdk.service.rds.client.ExchangeInstanceDnsExecutor;
 import com.jdcloud.sdk.service.rds.model.DisableInterceptRequest;
 import com.jdcloud.sdk.service.rds.model.DisableInterceptResponse;
 import com.jdcloud.sdk.service.rds.client.DisableInterceptExecutor;
@@ -800,7 +803,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 修改SQL Server数实例的配置参数。 部分参数修改后，需要重启才能生效，具体可以参考微软的相关文档&lt;br&gt;- 仅支持SQL Server
+     * 修改SQL Server实例的配置参数，目前支持以下参数:max_worker_threads,max_degree_of_parallelism,max_server_memory_(MB)。 部分参数修改后，需要重启才能生效，具体可以参考微软的相关文档。&lt;br&gt;- 仅支持SQL Server
      *
      * @param request
      * @return
@@ -830,6 +833,17 @@ public class RdsClient extends JdcloudClient {
      */
     public ModifyWhiteListResponse modifyWhiteList(ModifyWhiteListRequest request) throws JdcloudSdkException {
         return new ModifyWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 交换两个实例的域名，包括内网域名和外网域名。如果一个实例有外网域名，一个没有，则不允许交换。&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExchangeInstanceDnsResponse exchangeInstanceDns(ExchangeInstanceDnsRequest request) throws JdcloudSdkException {
+        return new ExchangeInstanceDnsExecutor().client(this).execute(request);
     }
 
     /**

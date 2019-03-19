@@ -53,12 +53,20 @@ public class Snapshot  implements java.io.Serializable {
     private String snapshotTime;
 
     /**
-     * 图片高
+     * 截图高度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      */
     private Integer height;
 
     /**
-     * 图片宽
+     * 截图宽度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      */
     private Integer width;
 
@@ -151,7 +159,11 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * get 图片高
+     * get 截图高度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @return
      */
@@ -160,7 +172,11 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 图片高
+     * set 截图高度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @param height
      */
@@ -169,7 +185,11 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * get 图片宽
+     * get 截图宽度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @return
      */
@@ -178,7 +198,11 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 图片宽
+     * set 截图宽度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @param width
      */
@@ -282,7 +306,11 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 图片高
+     * set 截图高度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @param height
      */
@@ -292,7 +320,11 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 图片宽
+     * set 截图宽度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @param width
      */

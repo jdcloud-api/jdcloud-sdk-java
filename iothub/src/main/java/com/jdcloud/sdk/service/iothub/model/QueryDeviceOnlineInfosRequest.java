@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 设备管理
+ * DeviceInfo
  * device管理模块
  *
  * OpenAPI spec version: v1
@@ -36,13 +36,13 @@ public class QueryDeviceOnlineInfosRequest extends JdcloudRequest implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * device标识符array
+     * 设备Id集合
      */
     private List<String> deviceIds;
 
 
     /**
-     * get device标识符array
+     * get 设备Id集合
      *
      * @return
      */
@@ -51,7 +51,7 @@ public class QueryDeviceOnlineInfosRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set device标识符array
+     * set 设备Id集合
      *
      * @param deviceIds
      */
@@ -61,7 +61,7 @@ public class QueryDeviceOnlineInfosRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set device标识符array
+     * set 设备Id集合
      *
      * @param deviceIds
      */
@@ -72,7 +72,7 @@ public class QueryDeviceOnlineInfosRequest extends JdcloudRequest implements jav
 
 
     /**
-     * add item to device标识符array
+     * add item to 设备Id集合
      *
      * @param deviceId
      */

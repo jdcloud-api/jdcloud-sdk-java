@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 渠道商管理
+ * distributor
  * 渠道商管理
  *
  * OpenAPI spec version: v1

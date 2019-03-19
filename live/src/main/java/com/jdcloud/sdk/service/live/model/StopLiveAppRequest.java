@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -42,7 +42,7 @@ public class StopLiveAppRequest extends JdcloudRequest implements java.io.Serial
     private String publishDomain;
 
     /**
-     * appName
+     * 应用名称
      * Required:true
      */
     @Required
@@ -68,7 +68,7 @@ public class StopLiveAppRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get appName
+     * get 应用名称
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class StopLiveAppRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set appName
+     * set 应用名称
      *
      * @param appName
      */
@@ -97,7 +97,7 @@ public class StopLiveAppRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set appName
+     * set 应用名称
      *
      * @param appName
      */

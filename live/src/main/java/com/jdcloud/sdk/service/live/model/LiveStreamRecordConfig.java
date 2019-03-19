@@ -40,7 +40,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
     private String publishDomain;
 
     /**
-     * appName
+     * 应用名称
      */
     private String appName;
 
@@ -50,7 +50,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
     private String streamName;
 
     /**
-     * 水印模板配置
+     * 水印模板集合
      */
     private List<String> watermarkConfig;
 
@@ -74,7 +74,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * get appName
+     * get 应用名称
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set appName
+     * set 应用名称
      *
      * @param appName
      */
@@ -110,7 +110,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * get 水印模板配置
+     * get 水印模板集合
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 水印模板配置
+     * set 水印模板集合
      *
      * @param watermarkConfig
      */
@@ -139,7 +139,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set appName
+     * set 应用名称
      *
      * @param appName
      */
@@ -159,7 +159,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 水印模板配置
+     * set 水印模板集合
      *
      * @param watermarkConfig
      */
@@ -170,7 +170,7 @@ public class LiveStreamRecordConfig  implements java.io.Serializable {
 
 
     /**
-     * add item to 水印模板配置
+     * add item to 水印模板集合
      *
      * @param watermarkConfig
      */

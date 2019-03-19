@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 模板
- * 模板相关操作接口
+ * Template
+ * Interface of Template
  *
  * OpenAPI spec version: v1
  * Contact: 

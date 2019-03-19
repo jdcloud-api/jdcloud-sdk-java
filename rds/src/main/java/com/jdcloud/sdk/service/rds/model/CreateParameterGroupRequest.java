@@ -35,14 +35,14 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例引擎类型
+     * 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      * Required:true
      */
     @Required
     private String engine;
 
     /**
-     * 实例引擎版本
+     * 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      * Required:true
      */
     @Required
@@ -69,7 +69,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 实例引擎类型
+     * get 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 实例引擎类型
+     * set 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param engine
      */
@@ -87,7 +87,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 实例引擎版本
+     * get 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 实例引擎版本
+     * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param engineVersion
      */
@@ -160,7 +160,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 实例引擎类型
+     * set 实例引擎类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param engine
      */
@@ -170,7 +170,7 @@ public class CreateParameterGroupRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 实例引擎版本
+     * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
      * @param engineVersion
      */

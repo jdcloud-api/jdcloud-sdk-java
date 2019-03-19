@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * parameter
@@ -33,18 +34,22 @@ public class Parameter  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 参数名称,目前支持以下参数:max_worker_threads,max_degree_of_parallelism,max_server_memory_(MB)
+     * 参数名称
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
      * 参数修改值
+     * Required:true
      */
+    @Required
     private String value;
 
 
     /**
-     * get 参数名称,目前支持以下参数:max_worker_threads,max_degree_of_parallelism,max_server_memory_(MB)
+     * get 参数名称
      *
      * @return
      */
@@ -53,7 +58,7 @@ public class Parameter  implements java.io.Serializable {
     }
 
     /**
-     * set 参数名称,目前支持以下参数:max_worker_threads,max_degree_of_parallelism,max_server_memory_(MB)
+     * set 参数名称
      *
      * @param name
      */
@@ -81,7 +86,7 @@ public class Parameter  implements java.io.Serializable {
 
 
     /**
-     * set 参数名称,目前支持以下参数:max_worker_threads,max_degree_of_parallelism,max_server_memory_(MB)
+     * set 参数名称
      *
      * @param name
      */

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 设备管理
+ * DeviceInfo
  * device管理模块
  *
  * OpenAPI spec version: v1
@@ -39,7 +39,7 @@ public class DeleteDeviceRequest extends JdcloudRequest implements java.io.Seria
     private String deviceId;
 
     /**
-     * 设备目标实例的instanceId
+     * hub实例instanceId
      */
     private String instanceId;
 
@@ -63,7 +63,7 @@ public class DeleteDeviceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 设备目标实例的instanceId
+     * get hub实例instanceId
      *
      * @return
      */
@@ -72,7 +72,7 @@ public class DeleteDeviceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 设备目标实例的instanceId
+     * set hub实例instanceId
      *
      * @param instanceId
      */
@@ -92,7 +92,7 @@ public class DeleteDeviceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 设备目标实例的instanceId
+     * set hub实例instanceId
      *
      * @param instanceId
      */

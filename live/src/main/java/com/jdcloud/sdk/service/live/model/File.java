@@ -60,7 +60,7 @@ public class File  implements java.io.Serializable {
     /**
      * 录制时长
      */
-    private Number duration;
+    private Long duration;
 
     /**
      * 视频高
@@ -183,7 +183,7 @@ public class File  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getDuration() {
+    public Long getDuration() {
         return duration;
     }
 
@@ -192,7 +192,7 @@ public class File  implements java.io.Serializable {
      *
      * @param duration
      */
-    public void setDuration(Number duration) {
+    public void setDuration(Long duration) {
         this.duration = duration;
     }
 
@@ -342,7 +342,7 @@ public class File  implements java.io.Serializable {
      *
      * @param duration
      */
-    public File duration(Number duration) {
+    public File duration(Long duration) {
         this.duration = duration;
         return this;
     }

@@ -40,7 +40,7 @@ public class TemplateConfig  implements java.io.Serializable {
     private String publishDomain;
 
     /**
-     * APP 名称
+     * 应用名称
      */
     private String appName;
 
@@ -74,7 +74,7 @@ public class TemplateConfig  implements java.io.Serializable {
     }
 
     /**
-     * get APP 名称
+     * get 应用名称
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class TemplateConfig  implements java.io.Serializable {
     }
 
     /**
-     * set APP 名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -139,7 +139,7 @@ public class TemplateConfig  implements java.io.Serializable {
     }
 
     /**
-     * set APP 名称
+     * set 应用名称
      *
      * @param appName
      */

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -35,14 +35,14 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 推流域名
+     * 直播推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 直播流所属应用名称
+     * 应用名称
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 推流域名
+     * get 直播推流域名
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 推流域名
+     * set 直播推流域名
      *
      * @param publishDomain
      */
@@ -68,7 +68,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 直播流所属应用名称
+     * get 应用名称
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -87,7 +87,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 推流域名
+     * set 直播推流域名
      *
      * @param publishDomain
      */
@@ -97,7 +97,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */

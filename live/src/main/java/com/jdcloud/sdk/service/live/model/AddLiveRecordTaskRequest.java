@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -32,13 +32,15 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 添加录制打点任务
+  - 您可以调用此接口精确提取已录制的文件中所需要的部分
+
  */
 public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的推流加速域名
+     * 录制时间集合
      * Required:true
      */
     @Required
@@ -59,14 +61,19 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     private String saveEndpoint;
 
     /**
-     * 录制文件类型
+     * 录制文件类型:
+  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+  - 不区分大小写
+
      * Required:true
      */
     @Required
     private String recordFileType;
 
     /**
-     * 录制文件存储路径
+     * 录制文件存储路径:
+  - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+
      */
     private String saveObject;
 
@@ -93,7 +100,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 您的推流加速域名
+     * get 录制时间集合
      *
      * @return
      */
@@ -102,7 +109,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 您的推流加速域名
+     * set 录制时间集合
      *
      * @param recordTimes
      */
@@ -147,7 +154,10 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 录制文件类型
+     * get 录制文件类型:
+  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+  - 不区分大小写
+
      *
      * @return
      */
@@ -156,7 +166,10 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 录制文件类型
+     * set 录制文件类型:
+  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+  - 不区分大小写
+
      *
      * @param recordFileType
      */
@@ -165,7 +178,9 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 录制文件存储路径
+     * get 录制文件存储路径:
+  - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+
      *
      * @return
      */
@@ -174,7 +189,9 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 录制文件存储路径
+     * set 录制文件存储路径:
+  - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+
      *
      * @param saveObject
      */
@@ -238,7 +255,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 您的推流加速域名
+     * set 录制时间集合
      *
      * @param recordTimes
      */
@@ -268,7 +285,10 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 录制文件类型
+     * set 录制文件类型:
+  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+  - 不区分大小写
+
      *
      * @param recordFileType
      */
@@ -278,7 +298,9 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 录制文件存储路径
+     * set 录制文件存储路径:
+  - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+
      *
      * @param saveObject
      */
@@ -319,7 +341,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * add item to 您的推流加速域名
+     * add item to 录制时间集合
      *
      * @param recordTime
      */

@@ -58,7 +58,13 @@ public class WatermarkTemplate  implements java.io.Serializable {
     private String url;
 
     /**
-     * 录制模板自定义名称
+     * 水印模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      */
     private String template;
 
@@ -154,7 +160,13 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 录制模板自定义名称
+     * get 水印模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @return
      */
@@ -163,7 +175,13 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 录制模板自定义名称
+     * set 水印模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @param template
      */
@@ -223,7 +241,13 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 录制模板自定义名称
+     * set 水印模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @param template
      */

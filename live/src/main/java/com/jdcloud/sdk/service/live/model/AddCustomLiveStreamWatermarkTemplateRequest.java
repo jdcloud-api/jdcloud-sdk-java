@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -35,42 +35,58 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     private static final long serialVersionUID = 1L;
 
     /**
-     * x轴偏移量 单位：像素
+     * x轴偏移量:
+  - 单位：像素
+
      * Required:true
      */
     @Required
     private Integer offsetX;
 
     /**
-     * y轴偏移量 单位：像素
+     * y轴偏移量:
+  - 单位：像素
+
      * Required:true
      */
     @Required
     private Integer offsetY;
 
     /**
-     * 宽
+     * 水印宽度:
+  - 取值: [0,1920]
+
      * Required:true
      */
     @Required
     private Integer width;
 
     /**
-     * 高
+     * 水印高度:
+  - 取值: [0,1920]
+
      * Required:true
      */
     @Required
     private Integer height;
 
     /**
-     * 录制模板自定义名称
+     * 水印模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      * Required:true
      */
     @Required
     private String template;
 
     /**
-     * 高
+     * 水印地址:
+  - 以 http开头，可访问地址
+
      * Required:true
      */
     @Required
@@ -78,7 +94,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
 
     /**
-     * get x轴偏移量 单位：像素
+     * get x轴偏移量:
+  - 单位：像素
+
      *
      * @return
      */
@@ -87,7 +105,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set x轴偏移量 单位：像素
+     * set x轴偏移量:
+  - 单位：像素
+
      *
      * @param offsetX
      */
@@ -96,7 +116,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * get y轴偏移量 单位：像素
+     * get y轴偏移量:
+  - 单位：像素
+
      *
      * @return
      */
@@ -105,7 +127,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set y轴偏移量 单位：像素
+     * set y轴偏移量:
+  - 单位：像素
+
      *
      * @param offsetY
      */
@@ -114,7 +138,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * get 宽
+     * get 水印宽度:
+  - 取值: [0,1920]
+
      *
      * @return
      */
@@ -123,7 +149,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 宽
+     * set 水印宽度:
+  - 取值: [0,1920]
+
      *
      * @param width
      */
@@ -132,7 +160,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * get 高
+     * get 水印高度:
+  - 取值: [0,1920]
+
      *
      * @return
      */
@@ -141,7 +171,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 高
+     * set 水印高度:
+  - 取值: [0,1920]
+
      *
      * @param height
      */
@@ -150,7 +182,13 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * get 录制模板自定义名称
+     * get 水印模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @return
      */
@@ -159,7 +197,13 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 录制模板自定义名称
+     * set 水印模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @param template
      */
@@ -168,7 +212,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * get 高
+     * get 水印地址:
+  - 以 http开头，可访问地址
+
      *
      * @return
      */
@@ -177,7 +223,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 高
+     * set 水印地址:
+  - 以 http开头，可访问地址
+
      *
      * @param url
      */
@@ -187,7 +235,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
 
     /**
-     * set x轴偏移量 单位：像素
+     * set x轴偏移量:
+  - 单位：像素
+
      *
      * @param offsetX
      */
@@ -197,7 +247,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set y轴偏移量 单位：像素
+     * set y轴偏移量:
+  - 单位：像素
+
      *
      * @param offsetY
      */
@@ -207,7 +259,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 宽
+     * set 水印宽度:
+  - 取值: [0,1920]
+
      *
      * @param width
      */
@@ -217,7 +271,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 高
+     * set 水印高度:
+  - 取值: [0,1920]
+
      *
      * @param height
      */
@@ -227,7 +283,13 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 录制模板自定义名称
+     * set 水印模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @param template
      */
@@ -237,7 +299,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 高
+     * set 水印地址:
+  - 以 http开头，可访问地址
+
      *
      * @param url
      */

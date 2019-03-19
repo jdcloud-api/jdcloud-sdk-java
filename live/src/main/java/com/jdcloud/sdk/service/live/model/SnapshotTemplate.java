@@ -33,32 +33,56 @@ public class SnapshotTemplate  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 截图格式
+     * 截图格式:
+  - 取值: jpg, png
+  - 不区分大小写
+
      */
     private String format;
 
     /**
-     * 宽
+     * 截图宽度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      */
     private Integer width;
 
     /**
-     * 高
+     * 截图高度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      */
     private Integer height;
 
     /**
-     * 文件类型
+     * 截图与设定的宽高不匹配时的处理规则:
+  - 1-拉伸
+  - 2-留黑
+  - 3-留白
+  - 4-高斯模糊
+  - 默认值1,2,3,4是等比例的缩放，1是按照设定宽高拉伸
+
      */
     private Integer fillType;
 
     /**
-     * 截图
+     * 截图周期:
+  - MIN_INTEGER &#x3D; 5
+  - MAX_INTEGER &#x3D; 3600;
+  - 单位: 秒
+
      */
     private Integer snapshotInterval;
 
     /**
-     * 保存模式
+     * 存储模式:
+  - 1-覆盖
+  - 2-顺序编号存储
+
      */
     private Integer saveMode;
 
@@ -68,18 +92,27 @@ public class SnapshotTemplate  implements java.io.Serializable {
     private String saveBucket;
 
     /**
-     * 存储endPoint
+     * 存储地址
      */
     private String saveEndpoint;
 
     /**
-     * 录制模板自定义名称
+     * 截图模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      */
     private String template;
 
 
     /**
-     * get 截图格式
+     * get 截图格式:
+  - 取值: jpg, png
+  - 不区分大小写
+
      *
      * @return
      */
@@ -88,7 +121,10 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 截图格式
+     * set 截图格式:
+  - 取值: jpg, png
+  - 不区分大小写
+
      *
      * @param format
      */
@@ -97,7 +133,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 宽
+     * get 截图宽度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @return
      */
@@ -106,7 +146,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 宽
+     * set 截图宽度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @param width
      */
@@ -115,7 +159,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 高
+     * get 截图高度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @return
      */
@@ -124,7 +172,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 高
+     * set 截图高度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @param height
      */
@@ -133,7 +185,13 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 文件类型
+     * get 截图与设定的宽高不匹配时的处理规则:
+  - 1-拉伸
+  - 2-留黑
+  - 3-留白
+  - 4-高斯模糊
+  - 默认值1,2,3,4是等比例的缩放，1是按照设定宽高拉伸
+
      *
      * @return
      */
@@ -142,7 +200,13 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 文件类型
+     * set 截图与设定的宽高不匹配时的处理规则:
+  - 1-拉伸
+  - 2-留黑
+  - 3-留白
+  - 4-高斯模糊
+  - 默认值1,2,3,4是等比例的缩放，1是按照设定宽高拉伸
+
      *
      * @param fillType
      */
@@ -151,7 +215,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 截图
+     * get 截图周期:
+  - MIN_INTEGER &#x3D; 5
+  - MAX_INTEGER &#x3D; 3600;
+  - 单位: 秒
+
      *
      * @return
      */
@@ -160,7 +228,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 截图
+     * set 截图周期:
+  - MIN_INTEGER &#x3D; 5
+  - MAX_INTEGER &#x3D; 3600;
+  - 单位: 秒
+
      *
      * @param snapshotInterval
      */
@@ -169,7 +241,10 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 保存模式
+     * get 存储模式:
+  - 1-覆盖
+  - 2-顺序编号存储
+
      *
      * @return
      */
@@ -178,7 +253,10 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 保存模式
+     * set 存储模式:
+  - 1-覆盖
+  - 2-顺序编号存储
+
      *
      * @param saveMode
      */
@@ -205,7 +283,7 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 存储endPoint
+     * get 存储地址
      *
      * @return
      */
@@ -214,7 +292,7 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 存储endPoint
+     * set 存储地址
      *
      * @param saveEndpoint
      */
@@ -223,7 +301,13 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 录制模板自定义名称
+     * get 截图模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @return
      */
@@ -232,7 +316,13 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 录制模板自定义名称
+     * set 截图模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @param template
      */
@@ -242,7 +332,10 @@ public class SnapshotTemplate  implements java.io.Serializable {
 
 
     /**
-     * set 截图格式
+     * set 截图格式:
+  - 取值: jpg, png
+  - 不区分大小写
+
      *
      * @param format
      */
@@ -252,7 +345,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 宽
+     * set 截图宽度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @param width
      */
@@ -262,7 +359,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 高
+     * set 截图高度:
+  - 取值: [8,8192]
+  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+  - 随源: 如果两个参数都不填写，则截取源流大小原图
+
      *
      * @param height
      */
@@ -272,7 +373,13 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 文件类型
+     * set 截图与设定的宽高不匹配时的处理规则:
+  - 1-拉伸
+  - 2-留黑
+  - 3-留白
+  - 4-高斯模糊
+  - 默认值1,2,3,4是等比例的缩放，1是按照设定宽高拉伸
+
      *
      * @param fillType
      */
@@ -282,7 +389,11 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 截图
+     * set 截图周期:
+  - MIN_INTEGER &#x3D; 5
+  - MAX_INTEGER &#x3D; 3600;
+  - 单位: 秒
+
      *
      * @param snapshotInterval
      */
@@ -292,7 +403,10 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 保存模式
+     * set 存储模式:
+  - 1-覆盖
+  - 2-顺序编号存储
+
      *
      * @param saveMode
      */
@@ -312,7 +426,7 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 存储endPoint
+     * set 存储地址
      *
      * @param saveEndpoint
      */
@@ -322,7 +436,13 @@ public class SnapshotTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 录制模板自定义名称
+     * set 截图模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @param template
      */

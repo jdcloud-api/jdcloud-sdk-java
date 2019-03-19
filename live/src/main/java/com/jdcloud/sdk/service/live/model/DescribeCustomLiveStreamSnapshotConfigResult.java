@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -49,7 +49,7 @@ public class DescribeCustomLiveStreamSnapshotConfigResult extends JdcloudResult 
     /**
      * 查询总数
      */
-    private Number totalCount;
+    private Integer totalCount;
 
     /**
      * snapshotConfigs
@@ -98,7 +98,7 @@ public class DescribeCustomLiveStreamSnapshotConfigResult extends JdcloudResult 
      *
      * @return
      */
-    public Number getTotalCount() {
+    public Integer getTotalCount() {
         return totalCount;
     }
 
@@ -107,7 +107,7 @@ public class DescribeCustomLiveStreamSnapshotConfigResult extends JdcloudResult 
      *
      * @param totalCount
      */
-    public void setTotalCount(Number totalCount) {
+    public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
     }
 
@@ -155,7 +155,7 @@ public class DescribeCustomLiveStreamSnapshotConfigResult extends JdcloudResult 
      *
      * @param totalCount
      */
-    public DescribeCustomLiveStreamSnapshotConfigResult totalCount(Number totalCount) {
+    public DescribeCustomLiveStreamSnapshotConfigResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }

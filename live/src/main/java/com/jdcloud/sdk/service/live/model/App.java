@@ -33,12 +33,15 @@ public class App  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 应用名
+     * 应用名称
      */
     private String appName;
 
     /**
-     * 应用状态
+     * 应用状态：
+ - online    开启
+ - offline   关闭
+
      */
     private String appStatus;
 
@@ -54,7 +57,7 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * get 应用名
+     * get 应用名称
      *
      * @return
      */
@@ -63,7 +66,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用名
+     * set 应用名称
      *
      * @param appName
      */
@@ -72,7 +75,10 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * get 应用状态
+     * get 应用状态：
+ - online    开启
+ - offline   关闭
+
      *
      * @return
      */
@@ -81,7 +87,10 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用状态
+     * set 应用状态：
+ - online    开启
+ - offline   关闭
+
      *
      * @param appStatus
      */
@@ -127,7 +136,7 @@ public class App  implements java.io.Serializable {
 
 
     /**
-     * set 应用名
+     * set 应用名称
      *
      * @param appName
      */
@@ -137,7 +146,10 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用状态
+     * set 应用状态：
+ - online    开启
+ - offline   关闭
+
      *
      * @param appStatus
      */

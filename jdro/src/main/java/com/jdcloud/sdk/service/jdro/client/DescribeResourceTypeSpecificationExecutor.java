@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 资源
- * 资源相关操作接口
+ * Resource
+ * Interface of Resource
  *
  * OpenAPI spec version: v1
  * Contact: 

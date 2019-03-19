@@ -1,3 +1,14 @@
+2019-03-04 version: 1.0.3
+1. 新增查询账单资源汇总数据API
+2. 新增查询账单明细数据API
+
+2018-10-10 version: 1.0.1
+1. 新增消费管理导出API
+
+2018-09-20 version: 1.0.0
+1. 修改service Title&description
+2. 修改价格计算sdk 对外
+
 2018-09-20 version: 0.4.0
 1. 计费项支持number
 

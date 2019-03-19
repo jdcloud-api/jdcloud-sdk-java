@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -47,7 +47,14 @@ public class DescribeCustomLiveStreamWatermarkConfigRequest extends JdcloudReque
     private Integer pageSize;
 
     /**
-     * 录制模板列表查询过滤条件, 不传递分页参数时默认返回10条
+     * 水印配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      */
     private List<Filter> filters;
 
@@ -89,7 +96,14 @@ public class DescribeCustomLiveStreamWatermarkConfigRequest extends JdcloudReque
     }
 
     /**
-     * get 录制模板列表查询过滤条件, 不传递分页参数时默认返回10条
+     * get 水印配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      *
      * @return
      */
@@ -98,7 +112,14 @@ public class DescribeCustomLiveStreamWatermarkConfigRequest extends JdcloudReque
     }
 
     /**
-     * set 录制模板列表查询过滤条件, 不传递分页参数时默认返回10条
+     * set 水印配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      *
      * @param filters
      */
@@ -128,7 +149,14 @@ public class DescribeCustomLiveStreamWatermarkConfigRequest extends JdcloudReque
     }
 
     /**
-     * set 录制模板列表查询过滤条件, 不传递分页参数时默认返回10条
+     * set 水印配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      *
      * @param filters
      */
@@ -139,7 +167,14 @@ public class DescribeCustomLiveStreamWatermarkConfigRequest extends JdcloudReque
 
 
     /**
-     * add item to 录制模板列表查询过滤条件, 不传递分页参数时默认返回10条
+     * add item to 水印配置查询过滤条件:
+  - name:   publishDomain，必填(直播推流域名)
+  - value:  参数
+  - name:   appName，必填(应用名称)
+  - value:  参数
+  - name:   streamName，非必填(推流名称)
+  - value:  参数
+
      *
      * @param filter
      */

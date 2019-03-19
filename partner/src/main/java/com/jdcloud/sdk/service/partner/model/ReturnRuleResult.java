@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 返还规则
+ * returnRule
  * 渠道管理平台返还规则
  *
  * OpenAPI spec version: v1

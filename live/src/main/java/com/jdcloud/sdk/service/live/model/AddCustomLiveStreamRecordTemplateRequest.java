@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -35,35 +35,49 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     private static final long serialVersionUID = 1L;
 
     /**
-     * 自动录制周期
+     * 自动录制周期:
+  - 取值:[15,360]
+  - 单位: 分钟
+
      * Required:true
      */
     @Required
     private Integer recordPeriod;
 
     /**
-     * null
+     * 存储桶
+
      * Required:true
      */
     @Required
     private String saveBucket;
 
     /**
-     * null
+     * 存储地址
+
      * Required:true
      */
     @Required
     private String saveEndpoint;
 
     /**
-     * 录制文件格式
+     * 录制文件格式:
+  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+  - 不区分大小写
+
      * Required:true
      */
     @Required
     private String recordFileType;
 
     /**
-     * 录制模板自定义名称
+     * 录制模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      * Required:true
      */
     @Required
@@ -71,7 +85,10 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
 
 
     /**
-     * get 自动录制周期
+     * get 自动录制周期:
+  - 取值:[15,360]
+  - 单位: 分钟
+
      *
      * @return
      */
@@ -80,7 +97,10 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 自动录制周期
+     * set 自动录制周期:
+  - 取值:[15,360]
+  - 单位: 分钟
+
      *
      * @param recordPeriod
      */
@@ -89,7 +109,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * get null
+     * get 存储桶
+
      *
      * @return
      */
@@ -98,7 +119,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set null
+     * set 存储桶
+
      *
      * @param saveBucket
      */
@@ -107,7 +129,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * get null
+     * get 存储地址
+
      *
      * @return
      */
@@ -116,7 +139,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set null
+     * set 存储地址
+
      *
      * @param saveEndpoint
      */
@@ -125,7 +149,10 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * get 录制文件格式
+     * get 录制文件格式:
+  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+  - 不区分大小写
+
      *
      * @return
      */
@@ -134,7 +161,10 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 录制文件格式
+     * set 录制文件格式:
+  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+  - 不区分大小写
+
      *
      * @param recordFileType
      */
@@ -143,7 +173,13 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * get 录制模板自定义名称
+     * get 录制模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @return
      */
@@ -152,7 +188,13 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 录制模板自定义名称
+     * set 录制模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @param template
      */
@@ -162,7 +204,10 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
 
 
     /**
-     * set 自动录制周期
+     * set 自动录制周期:
+  - 取值:[15,360]
+  - 单位: 分钟
+
      *
      * @param recordPeriod
      */
@@ -172,7 +217,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set null
+     * set 存储桶
+
      *
      * @param saveBucket
      */
@@ -182,7 +228,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set null
+     * set 存储地址
+
      *
      * @param saveEndpoint
      */
@@ -192,7 +239,10 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 录制文件格式
+     * set 录制文件格式:
+  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
+  - 不区分大小写
+
      *
      * @param recordFileType
      */
@@ -202,7 +252,13 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 录制模板自定义名称
+     * set 录制模板自定义名称:
+  - 标准质量模板：sd、hd、hsd
+  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
+              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
+              首尾不能有特殊字符(&quot;-&quot;)
+  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+
      *
      * @param template
      */

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ipanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 新购或升级高防实例, 新购或升级成功时, 需根据订单 id 完成支付流程, 新购或升级实例才会生效
+ * 新购或升级高防实例
  */
 public class CreateInstanceResponse extends JdcloudResponse<CreateInstanceResult> implements java.io.Serializable {
 

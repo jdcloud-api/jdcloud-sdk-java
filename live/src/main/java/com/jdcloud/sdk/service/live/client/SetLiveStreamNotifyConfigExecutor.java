@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Live API
+ * Live-Video
  * 直播管理API
  *
  * OpenAPI spec version: v1
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamNotifyConfigResponse;
 
 /**
- * 设置直播流状态通知
+ * 设置推流回调配置
  */
 class SetLiveStreamNotifyConfigExecutor extends JdcloudExecutor {
 
