@@ -1,9 +1,9 @@
 language: java
 jdk:
   - oraclejdk8
-  - oraclejdk11
   - openjdk10
-  - openjdk11
+#  - openjdk11
+#  - oraclejdk11
 script:
   - make
 cache:
