@@ -27,8 +27,8 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 添加录制打点任务
-  - 您可以调用此接口精确提取已录制的文件中所需要的部分
+ * 添加打点录制任务
+- 您可以调用此接口精确提取已录制的文件中所需要的部分
 
  */
 public class AddLiveRecordTaskResponse extends JdcloudResponse<AddLiveRecordTaskResult> implements java.io.Serializable {

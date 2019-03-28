@@ -29,7 +29,11 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordConfigResponse;
 
 /**
- * 查询录制配置
+ * 查询直播直播录制配置
+- 录制模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
+- 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+- 该查询旨在查询域名、应用、流最终生效的录制模板配置,并非各级的模板绑定情况
+
  */
 class DescribeCustomLiveStreamRecordConfigExecutor extends JdcloudExecutor {
 

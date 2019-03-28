@@ -33,37 +33,38 @@ public class PornData  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 查询的推流域名
+     * 推流域名
      */
     private String publishDomain;
 
     /**
-     * 查询的应用名称
+     * 应用名称
      */
     private String appName;
 
     /**
-     * 查询的流名
+     * 流名称
      */
     private String streamName;
 
     /**
-     * 日期:
-  - yyyyMMdd 示例:20190308
+     * 日期
+- yyyyMMdd
+- 示例: 20190308
 
      */
     private String date;
 
     /**
-     * 单日鉴黄总张数:
-  - 单位: 张
+     * 鉴黄张数
+- 单位: 张
 
      */
     private Integer total;
 
 
     /**
-     * get 查询的推流域名
+     * get 推流域名
      *
      * @return
      */
@@ -72,7 +73,7 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 查询的推流域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -81,7 +82,7 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * get 查询的应用名称
+     * get 应用名称
      *
      * @return
      */
@@ -90,7 +91,7 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 查询的应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -99,7 +100,7 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * get 查询的流名
+     * get 流名称
      *
      * @return
      */
@@ -108,7 +109,7 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 查询的流名
+     * set 流名称
      *
      * @param streamName
      */
@@ -117,8 +118,9 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * get 日期:
-  - yyyyMMdd 示例:20190308
+     * get 日期
+- yyyyMMdd
+- 示例: 20190308
 
      *
      * @return
@@ -128,8 +130,9 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 日期:
-  - yyyyMMdd 示例:20190308
+     * set 日期
+- yyyyMMdd
+- 示例: 20190308
 
      *
      * @param date
@@ -139,8 +142,8 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * get 单日鉴黄总张数:
-  - 单位: 张
+     * get 鉴黄张数
+- 单位: 张
 
      *
      * @return
@@ -150,8 +153,8 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 单日鉴黄总张数:
-  - 单位: 张
+     * set 鉴黄张数
+- 单位: 张
 
      *
      * @param total
@@ -162,7 +165,7 @@ public class PornData  implements java.io.Serializable {
 
 
     /**
-     * set 查询的推流域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -172,7 +175,7 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 查询的应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -182,7 +185,7 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 查询的流名
+     * set 流名称
      *
      * @param streamName
      */
@@ -192,8 +195,9 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 日期:
-  - yyyyMMdd 示例:20190308
+     * set 日期
+- yyyyMMdd
+- 示例: 20190308
 
      *
      * @param date
@@ -204,8 +208,8 @@ public class PornData  implements java.io.Serializable {
     }
 
     /**
-     * set 单日鉴黄总张数:
-  - 单位: 张
+     * set 鉴黄张数
+- 单位: 张
 
      *
      * @param total

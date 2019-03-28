@@ -30,6 +30,8 @@ import com.jdcloud.sdk.service.live.model.StartLiveDomainResponse;
 
 /**
  * 启动域名
+- 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
+
  */
 class StartLiveDomainExecutor extends JdcloudExecutor {
 

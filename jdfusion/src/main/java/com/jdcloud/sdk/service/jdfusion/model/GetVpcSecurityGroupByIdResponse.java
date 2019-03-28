@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.jdfusion.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 根据云提供商查询对应的安全组资源信息
+ * 查询指定的安全组资源信息
  */
 public class GetVpcSecurityGroupByIdResponse extends JdcloudResponse<GetVpcSecurityGroupByIdResult> implements java.io.Serializable {
 

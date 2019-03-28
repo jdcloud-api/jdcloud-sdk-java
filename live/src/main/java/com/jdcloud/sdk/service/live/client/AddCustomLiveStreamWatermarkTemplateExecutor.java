@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamWatermarkTemplateResponse;
 
 /**
- * 添加直播水印模板
+ * 添加用户自定义水印模板
+
  */
 class AddCustomLiveStreamWatermarkTemplateExecutor extends JdcloudExecutor {
 

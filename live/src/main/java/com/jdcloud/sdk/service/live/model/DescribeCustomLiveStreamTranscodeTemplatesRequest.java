@@ -31,18 +31,23 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 查询用户自定义转码模板列表
+
  */
 public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码
+- 取值范围 [1, 100000]
+
      */
     private Integer pageNum;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小
+- 取值范围 [10, 100]
+
      */
     private Integer pageSize;
 
@@ -50,13 +55,16 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
      * 转码模板查询过滤条件:
   - name:   template 录制模板自定义名称
   - value:  如果参数为空，则查询全部
+  - 如果为空,则表示查询该用下所有自定义的转码模板
 
      */
     private List<Filter> filters;
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码
+- 取值范围 [1, 100000]
+
      *
      * @return
      */
@@ -65,7 +73,9 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围 [1, 100000]
+
      *
      * @param pageNum
      */
@@ -74,7 +84,9 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小
+- 取值范围 [10, 100]
+
      *
      * @return
      */
@@ -83,7 +95,9 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围 [10, 100]
+
      *
      * @param pageSize
      */
@@ -95,6 +109,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
      * get 转码模板查询过滤条件:
   - name:   template 录制模板自定义名称
   - value:  如果参数为空，则查询全部
+  - 如果为空,则表示查询该用下所有自定义的转码模板
 
      *
      * @return
@@ -107,6 +122,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
      * set 转码模板查询过滤条件:
   - name:   template 录制模板自定义名称
   - value:  如果参数为空，则查询全部
+  - 如果为空,则表示查询该用下所有自定义的转码模板
 
      *
      * @param filters
@@ -117,7 +133,9 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围 [1, 100000]
+
      *
      * @param pageNum
      */
@@ -127,7 +145,9 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围 [10, 100]
+
      *
      * @param pageSize
      */
@@ -140,6 +160,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
      * set 转码模板查询过滤条件:
   - name:   template 录制模板自定义名称
   - value:  如果参数为空，则查询全部
+  - 如果为空,则表示查询该用下所有自定义的转码模板
 
      *
      * @param filters
@@ -154,6 +175,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
      * add item to 转码模板查询过滤条件:
   - name:   template 录制模板自定义名称
   - value:  如果参数为空，则查询全部
+  - 如果为空,则表示查询该用下所有自定义的转码模板
 
      *
      * @param filter

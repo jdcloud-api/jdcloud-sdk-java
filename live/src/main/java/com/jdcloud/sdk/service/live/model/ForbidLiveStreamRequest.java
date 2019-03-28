@@ -35,18 +35,18 @@ public class ForbidLiveStreamRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
+     * 推流域名
+     * Required:true
+     */
+    @Required
+    private String publishDomain;
+
+    /**
      * 应用名称
      * Required:true
      */
     @Required
     private String appName;
-
-    /**
-     * 您的加速域名
-     * Required:true
-     */
-    @Required
-    private String publishDomain;
 
     /**
      * 流名称
@@ -55,6 +55,24 @@ public class ForbidLiveStreamRequest extends JdcloudRequest implements java.io.S
     @Required
     private String streamName;
 
+
+    /**
+     * get 推流域名
+     *
+     * @return
+     */
+    public String getPublishDomain() {
+        return publishDomain;
+    }
+
+    /**
+     * set 推流域名
+     *
+     * @param publishDomain
+     */
+    public void setPublishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
+    }
 
     /**
      * get 应用名称
@@ -72,24 +90,6 @@ public class ForbidLiveStreamRequest extends JdcloudRequest implements java.io.S
      */
     public void setAppName(String appName) {
         this.appName = appName;
-    }
-
-    /**
-     * get 您的加速域名
-     *
-     * @return
-     */
-    public String getPublishDomain() {
-        return publishDomain;
-    }
-
-    /**
-     * set 您的加速域名
-     *
-     * @param publishDomain
-     */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
     }
 
     /**
@@ -112,22 +112,22 @@ public class ForbidLiveStreamRequest extends JdcloudRequest implements java.io.S
 
 
     /**
+     * set 推流域名
+     *
+     * @param publishDomain
+     */
+    public ForbidLiveStreamRequest publishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
+        return this;
+    }
+
+    /**
      * set 应用名称
      *
      * @param appName
      */
     public ForbidLiveStreamRequest appName(String appName) {
         this.appName = appName;
-        return this;
-    }
-
-    /**
-     * set 您的加速域名
-     *
-     * @param publishDomain
-     */
-    public ForbidLiveStreamRequest publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
         return this;
     }
 

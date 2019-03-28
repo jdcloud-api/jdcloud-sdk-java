@@ -40,7 +40,7 @@ class CreateTransferTaskExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/oss_transferTasks";
+        return "/regions/{regionId}/oss_transferTasks_simple";
     }
 
     @Override

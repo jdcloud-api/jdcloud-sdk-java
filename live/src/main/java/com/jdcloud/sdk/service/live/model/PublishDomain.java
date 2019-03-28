@@ -38,29 +38,35 @@ public class PublishDomain  implements java.io.Serializable {
     private String publishDomain;
 
     /**
-     * 推流域名(Cname)
+     * 推流域名Cname
      */
     private String publishDomainCname;
 
     /**
-     * 直播域名状态：
-  - online表示启用
-  - offline表示停用
-  - configuring表示配置中
-  - configure_failed表示配置失败
-  - checking表示正在审核
-  - check_failed表示审核失败
+     * 直播域名状态
+  online: 启用
+  offline: 停用
+  configuring: 配置中
+  configure_failed: 配置失败
+  checking: 正在审核
+  check_failed: 审核失败
 
      */
     private String domainStatus;
 
     /**
-     * 创建时间
+     * 域名创建时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      */
     private String createTime;
 
     /**
-     * 更新时间
+     * 域名更新时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      */
     private String updateTime;
 
@@ -84,7 +90,7 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 推流域名(Cname)
+     * get 推流域名Cname
      *
      * @return
      */
@@ -93,7 +99,7 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 推流域名(Cname)
+     * set 推流域名Cname
      *
      * @param publishDomainCname
      */
@@ -102,13 +108,13 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 直播域名状态：
-  - online表示启用
-  - offline表示停用
-  - configuring表示配置中
-  - configure_failed表示配置失败
-  - checking表示正在审核
-  - check_failed表示审核失败
+     * get 直播域名状态
+  online: 启用
+  offline: 停用
+  configuring: 配置中
+  configure_failed: 配置失败
+  checking: 正在审核
+  check_failed: 审核失败
 
      *
      * @return
@@ -118,13 +124,13 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 直播域名状态：
-  - online表示启用
-  - offline表示停用
-  - configuring表示配置中
-  - configure_failed表示配置失败
-  - checking表示正在审核
-  - check_failed表示审核失败
+     * set 直播域名状态
+  online: 启用
+  offline: 停用
+  configuring: 配置中
+  configure_failed: 配置失败
+  checking: 正在审核
+  check_failed: 审核失败
 
      *
      * @param domainStatus
@@ -134,7 +140,10 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 域名创建时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @return
      */
@@ -143,7 +152,10 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 域名创建时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @param createTime
      */
@@ -152,7 +164,10 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 更新时间
+     * get 域名更新时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @return
      */
@@ -161,7 +176,10 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 更新时间
+     * set 域名更新时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @param updateTime
      */
@@ -181,7 +199,7 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 推流域名(Cname)
+     * set 推流域名Cname
      *
      * @param publishDomainCname
      */
@@ -191,13 +209,13 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 直播域名状态：
-  - online表示启用
-  - offline表示停用
-  - configuring表示配置中
-  - configure_failed表示配置失败
-  - checking表示正在审核
-  - check_failed表示审核失败
+     * set 直播域名状态
+  online: 启用
+  offline: 停用
+  configuring: 配置中
+  configure_failed: 配置失败
+  checking: 正在审核
+  check_failed: 审核失败
 
      *
      * @param domainStatus
@@ -208,7 +226,10 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 域名创建时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @param createTime
      */
@@ -218,7 +239,10 @@ public class PublishDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 更新时间
+     * set 域名更新时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @param updateTime
      */

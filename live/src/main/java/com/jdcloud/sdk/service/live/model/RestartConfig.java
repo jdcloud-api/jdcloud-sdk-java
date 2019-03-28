@@ -37,10 +37,10 @@ public class RestartConfig  implements java.io.Serializable {
     /**
      * 推流域名集合
      */
-    private List<ShiftPublishDomain> publishDomains;
+    private List<RestartPublishDomain> publishDomains;
 
     /**
-     * 直播域名集合
+     * 播放域名集合
      */
     private List<RestartPlayDomain> playDomains;
 
@@ -50,7 +50,7 @@ public class RestartConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public List<ShiftPublishDomain> getPublishDomains() {
+    public List<RestartPublishDomain> getPublishDomains() {
         return publishDomains;
     }
 
@@ -59,12 +59,12 @@ public class RestartConfig  implements java.io.Serializable {
      *
      * @param publishDomains
      */
-    public void setPublishDomains(List<ShiftPublishDomain> publishDomains) {
+    public void setPublishDomains(List<RestartPublishDomain> publishDomains) {
         this.publishDomains = publishDomains;
     }
 
     /**
-     * get 直播域名集合
+     * get 播放域名集合
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class RestartConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 直播域名集合
+     * set 播放域名集合
      *
      * @param playDomains
      */
@@ -87,13 +87,13 @@ public class RestartConfig  implements java.io.Serializable {
      *
      * @param publishDomains
      */
-    public RestartConfig publishDomains(List<ShiftPublishDomain> publishDomains) {
+    public RestartConfig publishDomains(List<RestartPublishDomain> publishDomains) {
         this.publishDomains = publishDomains;
         return this;
     }
 
     /**
-     * set 直播域名集合
+     * set 播放域名集合
      *
      * @param playDomains
      */
@@ -108,7 +108,7 @@ public class RestartConfig  implements java.io.Serializable {
      *
      * @param publishDomain
      */
-    public void addPublishDomain(ShiftPublishDomain publishDomain) {
+    public void addPublishDomain(RestartPublishDomain publishDomain) {
         if (this.publishDomains == null) {
             this.publishDomains = new ArrayList<>();
         }
@@ -116,7 +116,7 @@ public class RestartConfig  implements java.io.Serializable {
     }
 
     /**
-     * add item to 直播域名集合
+     * add item to 播放域名集合
      *
      * @param playDomain
      */

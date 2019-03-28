@@ -27,25 +27,25 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询直播流状态通知
+ * 查询直播流状态回调地址
  */
 public class DescribeLiveStreamNotifyConfigResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的加速域名
+     * 推流域名
      */
     private String publishDomain;
 
     /**
-     * 回调地址
+     * 流状态回调地址
      */
     private String notifyUrl;
 
 
     /**
-     * get 您的加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -54,7 +54,7 @@ public class DescribeLiveStreamNotifyConfigResult extends JdcloudResult implemen
     }
 
     /**
-     * set 您的加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -63,7 +63,7 @@ public class DescribeLiveStreamNotifyConfigResult extends JdcloudResult implemen
     }
 
     /**
-     * get 回调地址
+     * get 流状态回调地址
      *
      * @return
      */
@@ -72,7 +72,7 @@ public class DescribeLiveStreamNotifyConfigResult extends JdcloudResult implemen
     }
 
     /**
-     * set 回调地址
+     * set 流状态回调地址
      *
      * @param notifyUrl
      */
@@ -82,7 +82,7 @@ public class DescribeLiveStreamNotifyConfigResult extends JdcloudResult implemen
 
 
     /**
-     * set 您的加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -92,7 +92,7 @@ public class DescribeLiveStreamNotifyConfigResult extends JdcloudResult implemen
     }
 
     /**
-     * set 回调地址
+     * set 流状态回调地址
      *
      * @param notifyUrl
      */

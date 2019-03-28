@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据过滤条件，取得指定RDS实例上的账号信息
+ * 取得指定RDS实例上的指定账号信息
  */
 public class GetRdsAccountsByInstIdAndAccountNameRequest extends JdcloudRequest implements java.io.Serializable {
 

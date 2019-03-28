@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 查询用户自定义转码模板列表
+
  */
 public class DescribeCustomLiveStreamTranscodeTemplatesResponse extends JdcloudResponse<DescribeCustomLiveStreamTranscodeTemplatesResult> implements java.io.Serializable {
 

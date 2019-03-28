@@ -63,6 +63,11 @@ public class DeploymentResourcesInfo  implements java.io.Serializable {
     private Object securityGroups;
 
     /**
+     * securityGroupRules
+     */
+    private Object securityGroupRules;
+
+    /**
      * keypairs
      */
     private Object keypairs;
@@ -101,6 +106,31 @@ public class DeploymentResourcesInfo  implements java.io.Serializable {
      * eipAssociate
      */
     private Object eipAssociate;
+
+    /**
+     * rds
+     */
+    private Object rds;
+
+    /**
+     * rdsDatabase
+     */
+    private Object rdsDatabase;
+
+    /**
+     * rdsAccount
+     */
+    private Object rdsAccount;
+
+    /**
+     * rdsAccountGrant
+     */
+    private Object rdsAccountGrant;
+
+    /**
+     * bucket
+     */
+    private Object bucket;
 
     /**
      * variables
@@ -214,6 +244,24 @@ public class DeploymentResourcesInfo  implements java.io.Serializable {
      */
     public void setSecurityGroups(Object securityGroups) {
         this.securityGroups = securityGroups;
+    }
+
+    /**
+     * get securityGroupRules
+     *
+     * @return
+     */
+    public Object getSecurityGroupRules() {
+        return securityGroupRules;
+    }
+
+    /**
+     * set securityGroupRules
+     *
+     * @param securityGroupRules
+     */
+    public void setSecurityGroupRules(Object securityGroupRules) {
+        this.securityGroupRules = securityGroupRules;
     }
 
     /**
@@ -361,6 +409,96 @@ public class DeploymentResourcesInfo  implements java.io.Serializable {
     }
 
     /**
+     * get rds
+     *
+     * @return
+     */
+    public Object getRds() {
+        return rds;
+    }
+
+    /**
+     * set rds
+     *
+     * @param rds
+     */
+    public void setRds(Object rds) {
+        this.rds = rds;
+    }
+
+    /**
+     * get rdsDatabase
+     *
+     * @return
+     */
+    public Object getRdsDatabase() {
+        return rdsDatabase;
+    }
+
+    /**
+     * set rdsDatabase
+     *
+     * @param rdsDatabase
+     */
+    public void setRdsDatabase(Object rdsDatabase) {
+        this.rdsDatabase = rdsDatabase;
+    }
+
+    /**
+     * get rdsAccount
+     *
+     * @return
+     */
+    public Object getRdsAccount() {
+        return rdsAccount;
+    }
+
+    /**
+     * set rdsAccount
+     *
+     * @param rdsAccount
+     */
+    public void setRdsAccount(Object rdsAccount) {
+        this.rdsAccount = rdsAccount;
+    }
+
+    /**
+     * get rdsAccountGrant
+     *
+     * @return
+     */
+    public Object getRdsAccountGrant() {
+        return rdsAccountGrant;
+    }
+
+    /**
+     * set rdsAccountGrant
+     *
+     * @param rdsAccountGrant
+     */
+    public void setRdsAccountGrant(Object rdsAccountGrant) {
+        this.rdsAccountGrant = rdsAccountGrant;
+    }
+
+    /**
+     * get bucket
+     *
+     * @return
+     */
+    public Object getBucket() {
+        return bucket;
+    }
+
+    /**
+     * set bucket
+     *
+     * @param bucket
+     */
+    public void setBucket(Object bucket) {
+        this.bucket = bucket;
+    }
+
+    /**
      * get variables
      *
      * @return
@@ -436,6 +574,16 @@ public class DeploymentResourcesInfo  implements java.io.Serializable {
      */
     public DeploymentResourcesInfo securityGroups(Object securityGroups) {
         this.securityGroups = securityGroups;
+        return this;
+    }
+
+    /**
+     * set securityGroupRules
+     *
+     * @param securityGroupRules
+     */
+    public DeploymentResourcesInfo securityGroupRules(Object securityGroupRules) {
+        this.securityGroupRules = securityGroupRules;
         return this;
     }
 
@@ -516,6 +664,56 @@ public class DeploymentResourcesInfo  implements java.io.Serializable {
      */
     public DeploymentResourcesInfo eipAssociate(Object eipAssociate) {
         this.eipAssociate = eipAssociate;
+        return this;
+    }
+
+    /**
+     * set rds
+     *
+     * @param rds
+     */
+    public DeploymentResourcesInfo rds(Object rds) {
+        this.rds = rds;
+        return this;
+    }
+
+    /**
+     * set rdsDatabase
+     *
+     * @param rdsDatabase
+     */
+    public DeploymentResourcesInfo rdsDatabase(Object rdsDatabase) {
+        this.rdsDatabase = rdsDatabase;
+        return this;
+    }
+
+    /**
+     * set rdsAccount
+     *
+     * @param rdsAccount
+     */
+    public DeploymentResourcesInfo rdsAccount(Object rdsAccount) {
+        this.rdsAccount = rdsAccount;
+        return this;
+    }
+
+    /**
+     * set rdsAccountGrant
+     *
+     * @param rdsAccountGrant
+     */
+    public DeploymentResourcesInfo rdsAccountGrant(Object rdsAccountGrant) {
+        this.rdsAccountGrant = rdsAccountGrant;
+        return this;
+    }
+
+    /**
+     * set bucket
+     *
+     * @param bucket
+     */
+    public DeploymentResourcesInfo bucket(Object bucket) {
+        this.bucket = bucket;
         return this;
     }
 

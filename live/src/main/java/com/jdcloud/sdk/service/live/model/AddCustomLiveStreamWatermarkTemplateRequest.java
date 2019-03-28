@@ -28,15 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加直播水印模板
+ * 添加用户自定义水印模板
+
  */
 public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * x轴偏移量:
-  - 单位：像素
+     * x轴偏移量
+- 单位: 像素
 
      * Required:true
      */
@@ -45,7 +46,7 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * y轴偏移量:
-  - 单位：像素
+- 单位: 像素
 
      * Required:true
      */
@@ -54,7 +55,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * 水印宽度:
-  - 取值: [0,1920]
+- 取值: [0,1920]
+- 单位: 像素
 
      * Required:true
      */
@@ -63,7 +65,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * 水印高度:
-  - 取值: [0,1920]
+- 取值: [0,1920]
+- 单位: 像素
 
      * Required:true
      */
@@ -71,12 +74,11 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     private Integer height;
 
     /**
-     * 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * 自定义水印模板名称
+-&amp;ensp;取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+&amp;ensp;&amp;ensp;首尾不能有特殊字符(&quot;-&quot;),
+&amp;ensp;&amp;ensp;不超过50字符,utf-8格式
+-&amp;ensp;&lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      * Required:true
      */
@@ -84,9 +86,7 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     private String template;
 
     /**
-     * 水印地址:
-  - 以 http开头，可访问地址
-
+     * 水印地址&lt;br&gt;-&amp;ensp;以&amp;ensp;http:// 开头,可公开访问地址&lt;br&gt;
      * Required:true
      */
     @Required
@@ -94,8 +94,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
 
     /**
-     * get x轴偏移量:
-  - 单位：像素
+     * get x轴偏移量
+- 单位: 像素
 
      *
      * @return
@@ -105,8 +105,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set x轴偏移量:
-  - 单位：像素
+     * set x轴偏移量
+- 单位: 像素
 
      *
      * @param offsetX
@@ -117,7 +117,7 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * get y轴偏移量:
-  - 单位：像素
+- 单位: 像素
 
      *
      * @return
@@ -128,7 +128,7 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set y轴偏移量:
-  - 单位：像素
+- 单位: 像素
 
      *
      * @param offsetY
@@ -139,7 +139,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * get 水印宽度:
-  - 取值: [0,1920]
+- 取值: [0,1920]
+- 单位: 像素
 
      *
      * @return
@@ -150,7 +151,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set 水印宽度:
-  - 取值: [0,1920]
+- 取值: [0,1920]
+- 单位: 像素
 
      *
      * @param width
@@ -161,7 +163,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * get 水印高度:
-  - 取值: [0,1920]
+- 取值: [0,1920]
+- 单位: 像素
 
      *
      * @return
@@ -172,7 +175,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set 水印高度:
-  - 取值: [0,1920]
+- 取值: [0,1920]
+- 单位: 像素
 
      *
      * @param height
@@ -182,12 +186,11 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * get 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * get 自定义水印模板名称
+-&amp;ensp;取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+&amp;ensp;&amp;ensp;首尾不能有特殊字符(&quot;-&quot;),
+&amp;ensp;&amp;ensp;不超过50字符,utf-8格式
+-&amp;ensp;&lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *
      * @return
@@ -197,12 +200,11 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 自定义水印模板名称
+-&amp;ensp;取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+&amp;ensp;&amp;ensp;首尾不能有特殊字符(&quot;-&quot;),
+&amp;ensp;&amp;ensp;不超过50字符,utf-8格式
+-&amp;ensp;&lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *
      * @param template
@@ -212,9 +214,7 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * get 水印地址:
-  - 以 http开头，可访问地址
-
+     * get 水印地址&lt;br&gt;-&amp;ensp;以&amp;ensp;http:// 开头,可公开访问地址&lt;br&gt;
      *
      * @return
      */
@@ -223,9 +223,7 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 水印地址:
-  - 以 http开头，可访问地址
-
+     * set 水印地址&lt;br&gt;-&amp;ensp;以&amp;ensp;http:// 开头,可公开访问地址&lt;br&gt;
      *
      * @param url
      */
@@ -235,8 +233,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
 
     /**
-     * set x轴偏移量:
-  - 单位：像素
+     * set x轴偏移量
+- 单位: 像素
 
      *
      * @param offsetX
@@ -248,7 +246,7 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set y轴偏移量:
-  - 单位：像素
+- 单位: 像素
 
      *
      * @param offsetY
@@ -260,7 +258,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set 水印宽度:
-  - 取值: [0,1920]
+- 取值: [0,1920]
+- 单位: 像素
 
      *
      * @param width
@@ -272,7 +271,8 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set 水印高度:
-  - 取值: [0,1920]
+- 取值: [0,1920]
+- 单位: 像素
 
      *
      * @param height
@@ -283,12 +283,11 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 自定义水印模板名称
+-&amp;ensp;取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+&amp;ensp;&amp;ensp;首尾不能有特殊字符(&quot;-&quot;),
+&amp;ensp;&amp;ensp;不超过50字符,utf-8格式
+-&amp;ensp;&lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *
      * @param template
@@ -299,9 +298,7 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 水印地址:
-  - 以 http开头，可访问地址
-
+     * set 水印地址&lt;br&gt;-&amp;ensp;以&amp;ensp;http:// 开头,可公开访问地址&lt;br&gt;
      *
      * @param url
      */

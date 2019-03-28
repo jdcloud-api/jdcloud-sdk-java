@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 删除截图回调配置
+
  */
 public class DeleteLiveStreamSnapshotNotifyConfigResult extends JdcloudResult implements java.io.Serializable {
 

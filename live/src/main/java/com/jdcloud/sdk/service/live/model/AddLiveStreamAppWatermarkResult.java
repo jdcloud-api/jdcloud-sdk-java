@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 添加APP水印配置
+ * 添加应用级别水印配置
+
  */
 public class AddLiveStreamAppWatermarkResult extends JdcloudResult implements java.io.Serializable {
 

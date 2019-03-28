@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询直播流状态通知
+ * 查询直播流状态回调地址
  */
 public class DescribeLiveStreamNotifyConfigRequest extends JdcloudRequest implements java.io.Serializable {
 

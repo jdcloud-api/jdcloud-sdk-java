@@ -40,7 +40,7 @@ class QueryStatisticsDataExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/statistics";
+        return "/vodStatistics";
     }
 
     @Override

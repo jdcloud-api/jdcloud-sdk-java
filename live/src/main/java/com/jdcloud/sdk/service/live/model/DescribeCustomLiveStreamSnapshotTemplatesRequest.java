@@ -37,26 +37,32 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码
+- 取值范围 [1, 100000]
+
      */
     private Integer pageNum;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小
+- 取值范围 [10, 100]
+
      */
     private Integer pageSize;
 
     /**
-     * 截图模板查询过滤条件:
-  - name:   template 录制模板自定义名称
-  - value:  如果参数为空，则查询全部
+     * 截图模板查询过滤条件
+- name:   template 录制模板自定义名称
+- value:  如果参数为空，则查询全部
 
      */
     private List<Filter> filters;
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码
+- 取值范围 [1, 100000]
+
      *
      * @return
      */
@@ -65,7 +71,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围 [1, 100000]
+
      *
      * @param pageNum
      */
@@ -74,7 +82,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小
+- 取值范围 [10, 100]
+
      *
      * @return
      */
@@ -83,7 +93,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围 [10, 100]
+
      *
      * @param pageSize
      */
@@ -92,9 +104,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
     }
 
     /**
-     * get 截图模板查询过滤条件:
-  - name:   template 录制模板自定义名称
-  - value:  如果参数为空，则查询全部
+     * get 截图模板查询过滤条件
+- name:   template 录制模板自定义名称
+- value:  如果参数为空，则查询全部
 
      *
      * @return
@@ -104,9 +116,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
     }
 
     /**
-     * set 截图模板查询过滤条件:
-  - name:   template 录制模板自定义名称
-  - value:  如果参数为空，则查询全部
+     * set 截图模板查询过滤条件
+- name:   template 录制模板自定义名称
+- value:  如果参数为空，则查询全部
 
      *
      * @param filters
@@ -117,7 +129,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围 [1, 100000]
+
      *
      * @param pageNum
      */
@@ -127,7 +141,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围 [10, 100]
+
      *
      * @param pageSize
      */
@@ -137,9 +153,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
     }
 
     /**
-     * set 截图模板查询过滤条件:
-  - name:   template 录制模板自定义名称
-  - value:  如果参数为空，则查询全部
+     * set 截图模板查询过滤条件
+- name:   template 录制模板自定义名称
+- value:  如果参数为空，则查询全部
 
      *
      * @param filters
@@ -151,9 +167,9 @@ public class DescribeCustomLiveStreamSnapshotTemplatesRequest extends JdcloudReq
 
 
     /**
-     * add item to 截图模板查询过滤条件:
-  - name:   template 录制模板自定义名称
-  - value:  如果参数为空，则查询全部
+     * add item to 截图模板查询过滤条件
+- name:   template 录制模板自定义名称
+- value:  如果参数为空，则查询全部
 
      *
      * @param filter

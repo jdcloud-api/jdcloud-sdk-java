@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 添加域名水印配置
+
  */
 public class AddLiveStreamDomainWatermarkResult extends JdcloudResult implements java.io.Serializable {
 

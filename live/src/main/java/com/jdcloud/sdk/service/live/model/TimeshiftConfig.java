@@ -37,12 +37,12 @@ public class TimeshiftConfig  implements java.io.Serializable {
     /**
      * 推流域名集合
      */
-    private List<ShiftPublishDomain> publishDomains;
+    private List<TimeshiftPublishDomain> publishDomains;
 
     /**
-     * 直播域名集合
+     * 播放域名集合
      */
-    private List<ShiftPlayDomain> playDomains;
+    private List<TimeshiftPlayDomain> playDomains;
 
 
     /**
@@ -50,7 +50,7 @@ public class TimeshiftConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public List<ShiftPublishDomain> getPublishDomains() {
+    public List<TimeshiftPublishDomain> getPublishDomains() {
         return publishDomains;
     }
 
@@ -59,25 +59,25 @@ public class TimeshiftConfig  implements java.io.Serializable {
      *
      * @param publishDomains
      */
-    public void setPublishDomains(List<ShiftPublishDomain> publishDomains) {
+    public void setPublishDomains(List<TimeshiftPublishDomain> publishDomains) {
         this.publishDomains = publishDomains;
     }
 
     /**
-     * get 直播域名集合
+     * get 播放域名集合
      *
      * @return
      */
-    public List<ShiftPlayDomain> getPlayDomains() {
+    public List<TimeshiftPlayDomain> getPlayDomains() {
         return playDomains;
     }
 
     /**
-     * set 直播域名集合
+     * set 播放域名集合
      *
      * @param playDomains
      */
-    public void setPlayDomains(List<ShiftPlayDomain> playDomains) {
+    public void setPlayDomains(List<TimeshiftPlayDomain> playDomains) {
         this.playDomains = playDomains;
     }
 
@@ -87,17 +87,17 @@ public class TimeshiftConfig  implements java.io.Serializable {
      *
      * @param publishDomains
      */
-    public TimeshiftConfig publishDomains(List<ShiftPublishDomain> publishDomains) {
+    public TimeshiftConfig publishDomains(List<TimeshiftPublishDomain> publishDomains) {
         this.publishDomains = publishDomains;
         return this;
     }
 
     /**
-     * set 直播域名集合
+     * set 播放域名集合
      *
      * @param playDomains
      */
-    public TimeshiftConfig playDomains(List<ShiftPlayDomain> playDomains) {
+    public TimeshiftConfig playDomains(List<TimeshiftPlayDomain> playDomains) {
         this.playDomains = playDomains;
         return this;
     }
@@ -108,7 +108,7 @@ public class TimeshiftConfig  implements java.io.Serializable {
      *
      * @param publishDomain
      */
-    public void addPublishDomain(ShiftPublishDomain publishDomain) {
+    public void addPublishDomain(TimeshiftPublishDomain publishDomain) {
         if (this.publishDomains == null) {
             this.publishDomains = new ArrayList<>();
         }
@@ -116,11 +116,11 @@ public class TimeshiftConfig  implements java.io.Serializable {
     }
 
     /**
-     * add item to 直播域名集合
+     * add item to 播放域名集合
      *
      * @param playDomain
      */
-    public void addPlayDomain(ShiftPlayDomain playDomain) {
+    public void addPlayDomain(TimeshiftPlayDomain playDomain) {
         if (this.playDomains == null) {
             this.playDomains = new ArrayList<>();
         }

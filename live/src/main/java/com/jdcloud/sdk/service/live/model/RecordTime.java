@@ -35,6 +35,10 @@ public class RecordTime  implements java.io.Serializable {
 
     /**
      * 开始时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+
      * Required:true
      */
     @Required
@@ -42,6 +46,10 @@ public class RecordTime  implements java.io.Serializable {
 
     /**
      * 结束时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+
      * Required:true
      */
     @Required
@@ -50,6 +58,10 @@ public class RecordTime  implements java.io.Serializable {
 
     /**
      * get 开始时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+
      *
      * @return
      */
@@ -59,6 +71,10 @@ public class RecordTime  implements java.io.Serializable {
 
     /**
      * set 开始时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+
      *
      * @param startTime
      */
@@ -68,6 +84,10 @@ public class RecordTime  implements java.io.Serializable {
 
     /**
      * get 结束时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+
      *
      * @return
      */
@@ -77,6 +97,10 @@ public class RecordTime  implements java.io.Serializable {
 
     /**
      * set 结束时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+
      *
      * @param endTime
      */
@@ -87,6 +111,10 @@ public class RecordTime  implements java.io.Serializable {
 
     /**
      * set 开始时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+
      *
      * @param startTime
      */
@@ -97,6 +125,10 @@ public class RecordTime  implements java.io.Serializable {
 
     /**
      * set 结束时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+
      *
      * @param endTime
      */

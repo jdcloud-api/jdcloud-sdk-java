@@ -43,7 +43,7 @@ public class LiveRecordConfig  implements java.io.Serializable {
     private String appName;
 
     /**
-     * 直播流名称
+     * 流名称
      */
     private String streamName;
 
@@ -90,7 +90,7 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * get 直播流名称
+     * get 流名称
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -147,7 +147,7 @@ public class LiveRecordConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */

@@ -30,6 +30,7 @@ import com.jdcloud.sdk.service.live.model.DescribeLiveStreamRecordNotifyConfigRe
 
 /**
  * 查询录制回调配置
+
  */
 class DescribeLiveStreamRecordNotifyConfigExecutor extends JdcloudExecutor {
 

@@ -114,6 +114,16 @@ public class VmInfo  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * 镜像ID
+     */
+    private String imageId;
+
+    /**
+     * 安全组ID
+     */
+    private List<String> securityGroupIds;
+
 
     /**
      * get 资源ID，如果为空，则执行创建操作，否则执行修改操作
@@ -403,6 +413,42 @@ public class VmInfo  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+    /**
+     * get 镜像ID
+     *
+     * @return
+     */
+    public String getImageId() {
+        return imageId;
+    }
+
+    /**
+     * set 镜像ID
+     *
+     * @param imageId
+     */
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
+    }
+
+    /**
+     * get 安全组ID
+     *
+     * @return
+     */
+    public List<String> getSecurityGroupIds() {
+        return securityGroupIds;
+    }
+
+    /**
+     * set 安全组ID
+     *
+     * @param securityGroupIds
+     */
+    public void setSecurityGroupIds(List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+    }
+
 
     /**
      * set 资源ID，如果为空，则执行创建操作，否则执行修改操作
@@ -564,6 +610,26 @@ public class VmInfo  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 镜像ID
+     *
+     * @param imageId
+     */
+    public VmInfo imageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+
+    /**
+     * set 安全组ID
+     *
+     * @param securityGroupIds
+     */
+    public VmInfo securityGroupIds(List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+
 
     /**
      * add item to tags
@@ -587,6 +653,18 @@ public class VmInfo  implements java.io.Serializable {
             this.keyNames = new ArrayList<>();
         }
         this.keyNames.add(keyName);
+    }
+
+    /**
+     * add item to 安全组ID
+     *
+     * @param securityGroupId
+     */
+    public void addSecurityGroupId(String securityGroupId) {
+        if (this.securityGroupIds == null) {
+            this.securityGroupIds = new ArrayList<>();
+        }
+        this.securityGroupIds.add(securityGroupId);
     }
 
 }

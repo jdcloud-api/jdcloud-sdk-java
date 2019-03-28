@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 删除录制回调配置
+
  */
 public class DeleteLiveStreamRecordNotifyConfigResponse extends JdcloudResponse<DeleteLiveStreamRecordNotifyConfigResult> implements java.io.Serializable {
 

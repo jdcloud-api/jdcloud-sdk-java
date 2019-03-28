@@ -34,36 +34,40 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * x轴偏移量
+- 单位: 像素
+
      */
     private Integer offSetX;
 
     /**
      * y轴偏移量
+- 单位: 像素
+
      */
     private Integer offSetY;
 
     /**
-     * 宽
+     * 水印宽度
+- 单位: 像素
+
      */
     private Integer width;
 
     /**
-     * 高
+     * 水印高度
+- 单位: 像素
+
      */
     private Integer height;
 
     /**
-     * url
+     * 水印地址
+
      */
     private String url;
 
     /**
-     * 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * 水印模板自定义名称
 
      */
     private String template;
@@ -71,6 +75,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * get x轴偏移量
+- 单位: 像素
+
      *
      * @return
      */
@@ -80,6 +86,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set x轴偏移量
+- 单位: 像素
+
      *
      * @param offSetX
      */
@@ -89,6 +97,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * get y轴偏移量
+- 单位: 像素
+
      *
      * @return
      */
@@ -98,6 +108,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set y轴偏移量
+- 单位: 像素
+
      *
      * @param offSetY
      */
@@ -106,7 +118,9 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 宽
+     * get 水印宽度
+- 单位: 像素
+
      *
      * @return
      */
@@ -115,7 +129,9 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 宽
+     * set 水印宽度
+- 单位: 像素
+
      *
      * @param width
      */
@@ -124,7 +140,9 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 高
+     * get 水印高度
+- 单位: 像素
+
      *
      * @return
      */
@@ -133,7 +151,9 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 高
+     * set 水印高度
+- 单位: 像素
+
      *
      * @param height
      */
@@ -142,7 +162,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get url
+     * get 水印地址
+
      *
      * @return
      */
@@ -151,7 +172,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set url
+     * set 水印地址
+
      *
      * @param url
      */
@@ -160,12 +182,7 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * get 水印模板自定义名称
 
      *
      * @return
@@ -175,12 +192,7 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 水印模板自定义名称
 
      *
      * @param template
@@ -192,6 +204,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set x轴偏移量
+- 单位: 像素
+
      *
      * @param offSetX
      */
@@ -202,6 +216,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set y轴偏移量
+- 单位: 像素
+
      *
      * @param offSetY
      */
@@ -211,7 +227,9 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 宽
+     * set 水印宽度
+- 单位: 像素
+
      *
      * @param width
      */
@@ -221,7 +239,9 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 高
+     * set 水印高度
+- 单位: 像素
+
      *
      * @param height
      */
@@ -231,7 +251,8 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set url
+     * set 水印地址
+
      *
      * @param url
      */
@@ -241,12 +262,7 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 水印模板自定义名称
 
      *
      * @param template

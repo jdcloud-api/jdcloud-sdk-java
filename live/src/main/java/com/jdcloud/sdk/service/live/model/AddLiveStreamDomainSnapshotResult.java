@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 添加域名直播截图配置
+ * 添加域名截图配置
+- 添加域名级别的截图模板配置
+
  */
 public class AddLiveStreamDomainSnapshotResult extends JdcloudResult implements java.io.Serializable {
 

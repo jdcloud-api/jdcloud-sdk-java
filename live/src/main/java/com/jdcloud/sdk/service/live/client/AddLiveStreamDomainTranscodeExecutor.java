@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainTranscodeResponse;
 
 /**
- * 添加域名转码配置
+ * 添加域名级别转码配置
+- 添加域名级别的转码模板配置
+
  */
 class AddLiveStreamDomainTranscodeExecutor extends JdcloudExecutor {
 

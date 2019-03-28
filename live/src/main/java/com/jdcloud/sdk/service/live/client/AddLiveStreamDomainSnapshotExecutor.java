@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainSnapshotResponse;
 
 /**
- * 添加域名直播截图配置
+ * 添加域名截图配置
+- 添加域名级别的截图模板配置
+
  */
 class AddLiveStreamDomainSnapshotExecutor extends JdcloudExecutor {
 

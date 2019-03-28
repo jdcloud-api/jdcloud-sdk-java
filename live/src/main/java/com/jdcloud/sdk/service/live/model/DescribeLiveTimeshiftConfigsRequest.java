@@ -35,17 +35,23 @@ public class DescribeLiveTimeshiftConfigsRequest extends JdcloudRequest implemen
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码
+- 取值范围[1, 100000]
+
      */
-    private Integer pageNum;
+    private Integer pageNumber;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小
+- 取值范围[10, 100]
+
      */
     private Integer pageSize;
 
     /**
-     * 直播的推流域名
+     * 直播的播放域名
+- 目前仅支持精确匹配
+
      * Required:true
      */
     @Required
@@ -53,25 +59,31 @@ public class DescribeLiveTimeshiftConfigsRequest extends JdcloudRequest implemen
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码
+- 取值范围[1, 100000]
+
      *
      * @return
      */
-    public Integer getPageNum() {
-        return pageNum;
+    public Integer getPageNumber() {
+        return pageNumber;
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围[1, 100000]
+
      *
-     * @param pageNum
+     * @param pageNumber
      */
-    public void setPageNum(Integer pageNum) {
-        this.pageNum = pageNum;
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小
+- 取值范围[10, 100]
+
      *
      * @return
      */
@@ -80,7 +92,9 @@ public class DescribeLiveTimeshiftConfigsRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -89,7 +103,9 @@ public class DescribeLiveTimeshiftConfigsRequest extends JdcloudRequest implemen
     }
 
     /**
-     * get 直播的推流域名
+     * get 直播的播放域名
+- 目前仅支持精确匹配
+
      *
      * @return
      */
@@ -98,7 +114,9 @@ public class DescribeLiveTimeshiftConfigsRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 直播的推流域名
+     * set 直播的播放域名
+- 目前仅支持精确匹配
+
      *
      * @param playDomain
      */
@@ -108,17 +126,21 @@ public class DescribeLiveTimeshiftConfigsRequest extends JdcloudRequest implemen
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围[1, 100000]
+
      *
-     * @param pageNum
+     * @param pageNumber
      */
-    public DescribeLiveTimeshiftConfigsRequest pageNum(Integer pageNum) {
-        this.pageNum = pageNum;
+    public DescribeLiveTimeshiftConfigsRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -128,7 +150,9 @@ public class DescribeLiveTimeshiftConfigsRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 直播的推流域名
+     * set 直播的播放域名
+- 目前仅支持精确匹配
+
      *
      * @param playDomain
      */

@@ -40,7 +40,7 @@ public class DomainDetails  implements java.io.Serializable {
     private List<PublishDomain> publishDomains;
 
     /**
-     * 直播域名集合
+     * 播放域名集合
      */
     private List<PlayDomain> playDomains;
 
@@ -64,7 +64,7 @@ public class DomainDetails  implements java.io.Serializable {
     }
 
     /**
-     * get 直播域名集合
+     * get 播放域名集合
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class DomainDetails  implements java.io.Serializable {
     }
 
     /**
-     * set 直播域名集合
+     * set 播放域名集合
      *
      * @param playDomains
      */
@@ -93,7 +93,7 @@ public class DomainDetails  implements java.io.Serializable {
     }
 
     /**
-     * set 直播域名集合
+     * set 播放域名集合
      *
      * @param playDomains
      */
@@ -116,7 +116,7 @@ public class DomainDetails  implements java.io.Serializable {
     }
 
     /**
-     * add item to 直播域名集合
+     * add item to 播放域名集合
      *
      * @param playDomain
      */

@@ -29,20 +29,27 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 添加直播域名
+- 创建直播域名之前,必须先开通直播服务
+- 直播域名必须已经备案完成
+
  */
 public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播的推流域名（不支持泛域名）
+     * 直播的推流域名
+- 不支持泛域名
+
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 直播的播放域名（不支持泛域名）
+     * 直播的播放域名
+- 不支持泛域名
+
      * Required:true
      */
     @Required
@@ -50,7 +57,9 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 直播的推流域名（不支持泛域名）
+     * get 直播的推流域名
+- 不支持泛域名
+
      *
      * @return
      */
@@ -59,7 +68,9 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 直播的推流域名（不支持泛域名）
+     * set 直播的推流域名
+- 不支持泛域名
+
      *
      * @param publishDomain
      */
@@ -68,7 +79,9 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 直播的播放域名（不支持泛域名）
+     * get 直播的播放域名
+- 不支持泛域名
+
      *
      * @return
      */
@@ -77,7 +90,9 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 直播的播放域名（不支持泛域名）
+     * set 直播的播放域名
+- 不支持泛域名
+
      *
      * @param playDomain
      */
@@ -87,7 +102,9 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 直播的推流域名（不支持泛域名）
+     * set 直播的推流域名
+- 不支持泛域名
+
      *
      * @param publishDomain
      */
@@ -97,7 +114,9 @@ public class AddLiveDomainRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 直播的播放域名（不支持泛域名）
+     * set 直播的播放域名
+- 不支持泛域名
+
      *
      * @param playDomain
      */

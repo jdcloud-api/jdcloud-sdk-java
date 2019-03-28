@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.StartLiveAppResponse;
 
 /**
- * 启用APP
+ * 启用应用
+- 启用 停用 状态的应用
+
  */
 class StartLiveAppExecutor extends JdcloudExecutor {
 

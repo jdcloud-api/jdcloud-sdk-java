@@ -28,7 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 停用APP
+ * 停用 运行中 状态的应用
+- 停用应用之后,不能再用此应用名推流
+
  */
 public class StopLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
 

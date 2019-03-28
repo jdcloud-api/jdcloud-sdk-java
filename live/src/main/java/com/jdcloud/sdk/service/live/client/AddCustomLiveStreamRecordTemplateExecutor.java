@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamRecordTemplateResponse;
 
 /**
- * 添加直播录制模板
+ * 添加用户自定义直播录制模板
+
  */
 class AddCustomLiveStreamRecordTemplateExecutor extends JdcloudExecutor {
 

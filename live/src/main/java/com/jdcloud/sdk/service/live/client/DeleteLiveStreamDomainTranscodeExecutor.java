@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainTranscodeResponse;
 
 /**
- * 删除域名转码配置
+ * 删除域名级别转码模板配置
+- 删除域名级别转码模板配置,重新推流后生效
+
  */
 class DeleteLiveStreamDomainTranscodeExecutor extends JdcloudExecutor {
 

@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 添加APP转码配置
+ * 添加应用转码配置
+- 添加应用级别的转码模板配置
+
  */
 public class AddLiveStreamAppTranscodeResult extends JdcloudResult implements java.io.Serializable {
 

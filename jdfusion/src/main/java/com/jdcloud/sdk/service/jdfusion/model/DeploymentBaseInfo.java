@@ -77,6 +77,11 @@ public class DeploymentBaseInfo  implements java.io.Serializable {
      */
     private String updatedTime;
 
+    /**
+     * 最近一次操作
+     */
+    private String lastOperation;
+
 
     /**
      * get 云ID
@@ -240,6 +245,24 @@ public class DeploymentBaseInfo  implements java.io.Serializable {
         this.updatedTime = updatedTime;
     }
 
+    /**
+     * get 最近一次操作
+     *
+     * @return
+     */
+    public String getLastOperation() {
+        return lastOperation;
+    }
+
+    /**
+     * set 最近一次操作
+     *
+     * @param lastOperation
+     */
+    public void setLastOperation(String lastOperation) {
+        this.lastOperation = lastOperation;
+    }
+
 
     /**
      * set 云ID
@@ -328,6 +351,16 @@ public class DeploymentBaseInfo  implements java.io.Serializable {
      */
     public DeploymentBaseInfo updatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
+        return this;
+    }
+
+    /**
+     * set 最近一次操作
+     *
+     * @param lastOperation
+     */
+    public DeploymentBaseInfo lastOperation(String lastOperation) {
+        this.lastOperation = lastOperation;
         return this;
     }
 

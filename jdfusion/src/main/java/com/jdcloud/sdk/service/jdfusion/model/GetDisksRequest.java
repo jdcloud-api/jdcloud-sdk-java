@@ -35,12 +35,35 @@ public class GetDisksRequest extends JdcloudRequest implements java.io.Serializa
     private static final long serialVersionUID = 1L;
 
     /**
+     * 云主机id
+     */
+    private String vmId;
+
+    /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
+
+    /**
+     * get 云主机id
+     *
+     * @return
+     */
+    public String getVmId() {
+        return vmId;
+    }
+
+    /**
+     * set 云主机id
+     *
+     * @param vmId
+     */
+    public void setVmId(String vmId) {
+        this.vmId = vmId;
+    }
 
     /**
      * get 地域ID
@@ -60,6 +83,16 @@ public class GetDisksRequest extends JdcloudRequest implements java.io.Serializa
         this.regionId = regionId;
     }
 
+
+    /**
+     * set 云主机id
+     *
+     * @param vmId
+     */
+    public GetDisksRequest vmId(String vmId) {
+        this.vmId = vmId;
+        return this;
+    }
 
     /**
      * set 地域ID

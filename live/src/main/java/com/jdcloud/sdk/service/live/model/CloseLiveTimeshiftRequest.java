@@ -35,7 +35,7 @@ public class CloseLiveTimeshiftRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播的推流域名
+     * 直播的播放域名
      * Required:true
      */
     @Required
@@ -43,7 +43,7 @@ public class CloseLiveTimeshiftRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 直播的推流域名
+     * get 直播的播放域名
      *
      * @return
      */
@@ -52,7 +52,7 @@ public class CloseLiveTimeshiftRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 直播的推流域名
+     * set 直播的播放域名
      *
      * @param playDomain
      */
@@ -62,7 +62,7 @@ public class CloseLiveTimeshiftRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 直播的推流域名
+     * set 直播的播放域名
      *
      * @param playDomain
      */

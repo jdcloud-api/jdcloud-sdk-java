@@ -29,18 +29,16 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 删除用户自定义转码模板
+- 删除用户自定义转码模板之前必须先删除此模板在各域名、应用、流级别的转码设置
+
  */
 public class DeleteCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * 转码模板
+
      * Required:true
      */
     @Required
@@ -48,12 +46,8 @@ public class DeleteCustomLiveStreamTranscodeTemplateRequest extends JdcloudReque
 
 
     /**
-     * get 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * get 转码模板
+
      *
      * @return
      */
@@ -62,12 +56,8 @@ public class DeleteCustomLiveStreamTranscodeTemplateRequest extends JdcloudReque
     }
 
     /**
-     * set 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 转码模板
+
      *
      * @param template
      */
@@ -77,12 +67,8 @@ public class DeleteCustomLiveStreamTranscodeTemplateRequest extends JdcloudReque
 
 
     /**
-     * set 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 转码模板
+
      *
      * @param template
      */

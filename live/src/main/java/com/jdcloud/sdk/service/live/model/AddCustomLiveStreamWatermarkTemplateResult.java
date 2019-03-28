@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 添加直播水印模板
+ * 添加用户自定义水印模板
+
  */
 public class AddCustomLiveStreamWatermarkTemplateResult extends JdcloudResult implements java.io.Serializable {
 

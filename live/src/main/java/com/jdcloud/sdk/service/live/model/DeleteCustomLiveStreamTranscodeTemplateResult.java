@@ -28,6 +28,8 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 删除用户自定义转码模板
+- 删除用户自定义转码模板之前必须先删除此模板在各域名、应用、流级别的转码设置
+
  */
 public class DeleteCustomLiveStreamTranscodeTemplateResult extends JdcloudResult implements java.io.Serializable {
 

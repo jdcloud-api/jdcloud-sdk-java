@@ -35,37 +35,37 @@ public class GetTransferTaskFailedFilesResult extends JdcloudResult implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * bucket
+     * task
      */
-    private TransferTaskFailedDetailInfo bucket;
+    private TransferTaskFailedDetailInfo task;
 
 
     /**
-     * get bucket
+     * get task
      *
      * @return
      */
-    public TransferTaskFailedDetailInfo getBucket() {
-        return bucket;
+    public TransferTaskFailedDetailInfo getTask() {
+        return task;
     }
 
     /**
-     * set bucket
+     * set task
      *
-     * @param bucket
+     * @param task
      */
-    public void setBucket(TransferTaskFailedDetailInfo bucket) {
-        this.bucket = bucket;
+    public void setTask(TransferTaskFailedDetailInfo task) {
+        this.task = task;
     }
 
 
     /**
-     * set bucket
+     * set task
      *
-     * @param bucket
+     * @param task
      */
-    public GetTransferTaskFailedFilesResult bucket(TransferTaskFailedDetailInfo bucket) {
-        this.bucket = bucket;
+    public GetTransferTaskFailedFilesResult task(TransferTaskFailedDetailInfo task) {
+        this.task = task;
         return this;
     }
 

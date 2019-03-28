@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 启用APP
+ * 启用应用
+- 启用 停用 状态的应用
+
  */
 public class StartLiveAppResponse extends JdcloudResponse<StartLiveAppResult> implements java.io.Serializable {
 

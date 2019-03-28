@@ -24,7 +24,7 @@
 
 package com.jdcloud.sdk.service.jdfusion.model;
 
-import com.jdcloud.sdk.service.jdfusion.model.OssBucketInfo;
+import com.jdcloud.sdk.service.jdfusion.model.OssBucketDetailInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -37,7 +37,7 @@ public class GetBucketByNameResult extends JdcloudResult implements java.io.Seri
     /**
      * bucket
      */
-    private OssBucketInfo bucket;
+    private OssBucketDetailInfo bucket;
 
 
     /**
@@ -45,7 +45,7 @@ public class GetBucketByNameResult extends JdcloudResult implements java.io.Seri
      *
      * @return
      */
-    public OssBucketInfo getBucket() {
+    public OssBucketDetailInfo getBucket() {
         return bucket;
     }
 
@@ -54,7 +54,7 @@ public class GetBucketByNameResult extends JdcloudResult implements java.io.Seri
      *
      * @param bucket
      */
-    public void setBucket(OssBucketInfo bucket) {
+    public void setBucket(OssBucketDetailInfo bucket) {
         this.bucket = bucket;
     }
 
@@ -64,7 +64,7 @@ public class GetBucketByNameResult extends JdcloudResult implements java.io.Seri
      *
      * @param bucket
      */
-    public GetBucketByNameResult bucket(OssBucketInfo bucket) {
+    public GetBucketByNameResult bucket(OssBucketDetailInfo bucket) {
         this.bucket = bucket;
         return this;
     }

@@ -62,6 +62,11 @@ public class TaskAddressInfo  implements java.io.Serializable {
      */
     private String prefix;
 
+    /**
+     * 云信息ID
+     */
+    private String cloudID;
+
 
     /**
      * get 任务类型:源地址中支持 s3file, aliyunfile，目标现在只支持s3file
@@ -171,6 +176,24 @@ public class TaskAddressInfo  implements java.io.Serializable {
         this.prefix = prefix;
     }
 
+    /**
+     * get 云信息ID
+     *
+     * @return
+     */
+    public String getCloudID() {
+        return cloudID;
+    }
+
+    /**
+     * set 云信息ID
+     *
+     * @param cloudID
+     */
+    public void setCloudID(String cloudID) {
+        this.cloudID = cloudID;
+    }
+
 
     /**
      * set 任务类型:源地址中支持 s3file, aliyunfile，目标现在只支持s3file
@@ -229,6 +252,16 @@ public class TaskAddressInfo  implements java.io.Serializable {
      */
     public TaskAddressInfo prefix(String prefix) {
         this.prefix = prefix;
+        return this;
+    }
+
+    /**
+     * set 云信息ID
+     *
+     * @param cloudID
+     */
+    public TaskAddressInfo cloudID(String cloudID) {
+        this.cloudID = cloudID;
         return this;
     }
 

@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamSnapshotNotifyConfigResponse;
 
 /**
- * 设置截图回调通知
+ * 设置直播截图回调通知地址
+
  */
 class SetLiveStreamSnapshotNotifyConfigExecutor extends JdcloudExecutor {
 

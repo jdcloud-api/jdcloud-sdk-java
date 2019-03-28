@@ -29,18 +29,20 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 查询用户自定义转码模板详情
+- 查询用户自定义转码模板详情
+- 系统标准转码模板
+    ld (h.264/640*360/15f)
+    sd (h.264/854*480/24f)
+    hd (h.264/1280*720/25f)
+    shd (h.264/1920*1080/30f)
+
  */
 public class DescribeCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * 转码模板
      * Required:true
      */
     @Required
@@ -48,12 +50,7 @@ public class DescribeCustomLiveStreamTranscodeTemplateRequest extends JdcloudReq
 
 
     /**
-     * get 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * get 转码模板
      *
      * @return
      */
@@ -62,12 +59,7 @@ public class DescribeCustomLiveStreamTranscodeTemplateRequest extends JdcloudReq
     }
 
     /**
-     * set 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 转码模板
      *
      * @param template
      */
@@ -77,12 +69,7 @@ public class DescribeCustomLiveStreamTranscodeTemplateRequest extends JdcloudReq
 
 
     /**
-     * set 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 转码模板
      *
      * @param template
      */

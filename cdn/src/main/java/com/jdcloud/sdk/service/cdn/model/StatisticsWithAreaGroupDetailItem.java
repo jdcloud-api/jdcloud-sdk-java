@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * statisticsWithAreaGroupDetailItem
@@ -38,9 +40,9 @@ public class StatisticsWithAreaGroupDetailItem  implements java.io.Serializable 
     private String area;
 
     /**
-     * 查询结果,类型为HashMap&lt;String, Object&gt;
+     * ispStat
      */
-    private Object ispStat;
+    private List<Object> ispStat;
 
 
     /**
@@ -62,20 +64,20 @@ public class StatisticsWithAreaGroupDetailItem  implements java.io.Serializable 
     }
 
     /**
-     * get 查询结果,类型为HashMap&lt;String, Object&gt;
+     * get ispStat
      *
      * @return
      */
-    public Object getIspStat() {
+    public List<Object> getIspStat() {
         return ispStat;
     }
 
     /**
-     * set 查询结果,类型为HashMap&lt;String, Object&gt;
+     * set ispStat
      *
      * @param ispStat
      */
-    public void setIspStat(Object ispStat) {
+    public void setIspStat(List<Object> ispStat) {
         this.ispStat = ispStat;
     }
 
@@ -91,14 +93,26 @@ public class StatisticsWithAreaGroupDetailItem  implements java.io.Serializable 
     }
 
     /**
-     * set 查询结果,类型为HashMap&lt;String, Object&gt;
+     * set ispStat
      *
      * @param ispStat
      */
-    public StatisticsWithAreaGroupDetailItem ispStat(Object ispStat) {
+    public StatisticsWithAreaGroupDetailItem ispStat(List<Object> ispStat) {
         this.ispStat = ispStat;
         return this;
     }
 
+
+    /**
+     * add item to ispStat
+     *
+     * @param ispStat
+     */
+    public void addIspStat(Object ispStat) {
+        if (this.ispStat == null) {
+            this.ispStat = new ArrayList<>();
+        }
+        this.ispStat.add(ispStat);
+    }
 
 }

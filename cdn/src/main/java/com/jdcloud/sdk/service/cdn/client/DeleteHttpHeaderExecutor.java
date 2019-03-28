@@ -35,7 +35,7 @@ class DeleteHttpHeaderExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "DELETE";
+        return "PUT";
     }
 
     @Override

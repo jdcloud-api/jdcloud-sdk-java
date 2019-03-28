@@ -31,6 +31,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 查询用户自定义转码模板列表
+
  */
 public class DescribeCustomLiveStreamTranscodeTemplatesResult extends JdcloudResult implements java.io.Serializable {
 

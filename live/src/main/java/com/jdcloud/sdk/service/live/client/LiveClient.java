@@ -234,7 +234,7 @@ public class LiveClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.9";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "live.jdcloud-api.com";
     public final static String ServiceName = "live";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -278,6 +278,10 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 查询直播截图配置
+- 截图模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
+- 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+- 该查询旨在查询域名、应用、流最终生效的截图模板配置,并非各级的模板绑定情况
+
      *
      * @param request
      * @return
@@ -289,6 +293,13 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 查询用户自定义转码模板详情
+- 查询用户自定义转码模板详情
+- 系统标准转码模板
+    ld (h.264/640*360/15f)
+    sd (h.264/854*480/24f)
+    hd (h.264/1280*720/25f)
+    shd (h.264/1920*1080/30f)
+
      *
      * @param request
      * @return
@@ -299,7 +310,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加APP直播截图配置
+     * 添加应用截图配置
+- 添加应用级别的截图模板配置
+
      *
      * @param request
      * @return
@@ -321,7 +334,7 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除直播流状态通知
+     * 删除直播流状态回调地址
      *
      * @param request
      * @return
@@ -332,8 +345,8 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加录制打点任务
-  - 您可以调用此接口精确提取已录制的文件中所需要的部分
+     * 添加打点录制任务
+- 您可以调用此接口精确提取已录制的文件中所需要的部分
 
      *
      * @param request
@@ -346,6 +359,7 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 添加域名水印配置
+
      *
      * @param request
      * @return
@@ -357,6 +371,8 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 删除域名截图配置
+- 删除域名级别的截图模板配置,重新推流后生效
+
      *
      * @param request
      * @return
@@ -367,7 +383,8 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 查询录制模板列表
+     * 查询用户自定义直播录制模板列表
+
      *
      * @param request
      * @return
@@ -378,7 +395,11 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 查询录制配置
+     * 查询直播直播录制配置
+- 录制模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
+- 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+- 该查询旨在查询域名、应用、流最终生效的录制模板配置,并非各级的模板绑定情况
+
      *
      * @param request
      * @return
@@ -422,7 +443,10 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加直播APP
+     * 添加直播应用名
+- 需要提前在应用(app)级别绑定功能模板时才需要提前新建应用名
+- 新的应用名可以推流时自动创建
+
      *
      * @param request
      * @return
@@ -434,6 +458,8 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 删除用户自定义直播截图模板
+- 删除截图模板前,请先删除此模板相关的截图配置,否则将会影响线上业务
+
      *
      * @param request
      * @return
@@ -444,7 +470,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除APP水印配置
+     * 删除应用级别水印模板配置
+- 删除应用级别的水印模板配置,重新推流后生效
+
      *
      * @param request
      * @return
@@ -455,7 +483,8 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加直播水印模板
+     * 添加用户自定义水印模板
+
      *
      * @param request
      * @return
@@ -467,6 +496,8 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 删除用户自定义水印模板
+- 删除用户自定义水印模板之前必须先删除此模板在各域名、应用、流级别的水印设置
+
      *
      * @param request
      * @return
@@ -477,7 +508,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除域名水印配置
+     * 删除域名级别水印模板配置
+- 删除域名级别水印模板配置,重新推流后生效
+
      *
      * @param request
      * @return
@@ -488,7 +521,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除APP录制配置
+     * 删除应用级别录制模板配置
+- 删除应用级别的录制模板配置,重新推流后生效
+
      *
      * @param request
      * @return
@@ -500,6 +535,8 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 删除用户自定义录制模板
+- 删除用户自定义录制模板之前必须先删除此模板在各域名、应用、流级别的录制设置
+
      *
      * @param request
      * @return
@@ -521,7 +558,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除域名转码配置
+     * 删除域名级别转码模板配置
+- 删除域名级别转码模板配置,重新推流后生效
+
      *
      * @param request
      * @return
@@ -532,7 +571,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 启用APP
+     * 启用应用
+- 启用 停用 状态的应用
+
      *
      * @param request
      * @return
@@ -543,7 +584,8 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 设置录制回调通知
+     * 设置直播录制回调通知
+
      *
      * @param request
      * @return
@@ -554,7 +596,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除域名录制配置
+     * 删除域名级别录制模板配置
+- 删除域名级别录制模板配置,重新推流后生效
+
      *
      * @param request
      * @return
@@ -577,6 +621,8 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 启动域名
+- 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
+
      *
      * @param request
      * @return
@@ -587,7 +633,8 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 查询水印模板列表
+     * 查询用户定义水印模板列表
+
      *
      * @param request
      * @return
@@ -598,7 +645,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加APP转码配置
+     * 添加应用转码配置
+- 添加应用级别的转码模板配置
+
      *
      * @param request
      * @return
@@ -610,6 +659,7 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 删除截图回调配置
+
      *
      * @param request
      * @return
@@ -620,7 +670,7 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 查看域名下推流记录
+     * 查看推流历史记录
      *
      * @param request
      * @return
@@ -642,7 +692,8 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加APP水印配置
+     * 添加应用级别水印配置
+
      *
      * @param request
      * @return
@@ -653,7 +704,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加APP录制配置
+     * 添加应用级别直播录制配置
+- 添加应用级别的直播录制模板配置
+
      *
      * @param request
      * @return
@@ -664,7 +717,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加域名录制配置
+     * 添加域名级别直播录制配置
+- 添加域名级别的直播录制模板配置
+
      *
      * @param request
      * @return
@@ -687,6 +742,7 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 查询截图回调配置
+
      *
      * @param request
      * @return
@@ -698,6 +754,7 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 删除录制回调配置
+
      *
      * @param request
      * @return
@@ -709,6 +766,10 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 查询转码模板配置
+- 转码模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效原则
+- 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+- 该查询旨在查询域名、应用、流最终生效的转码模板配置,并非各级的模板绑定情况
+
      *
      * @param request
      * @return
@@ -719,7 +780,10 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除APP
+     * 删除应用
+- 删除应用之前需要先停用应用
+- 删除应用同时会删除此应用下的所有数据
+
      *
      * @param request
      * @return
@@ -741,7 +805,11 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 查询水印配置
+     * 查询直播水印配置
+- 水印模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
+- 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+- 该查询旨在查询域名、应用、流最终生效的水印模板配置,并非各级的模板绑定情况
+
      *
      * @param request
      * @return
@@ -752,7 +820,8 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加直播录制模板
+     * 添加用户自定义直播录制模板
+
      *
      * @param request
      * @return
@@ -786,6 +855,8 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 删除用户自定义转码模板
+- 删除用户自定义转码模板之前必须先删除此模板在各域名、应用、流级别的转码设置
+
      *
      * @param request
      * @return
@@ -797,6 +868,9 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 添加直播域名
+- 创建直播域名之前,必须先开通直播服务
+- 直播域名必须已经备案完成
+
      *
      * @param request
      * @return
@@ -808,6 +882,7 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 查询用户自定义转码模板列表
+
      *
      * @param request
      * @return
@@ -830,6 +905,9 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 停用域名
+- 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
+- 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
+
      *
      * @param request
      * @return
@@ -840,7 +918,7 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 查看域名下所有的正在推的流的信息
+     * 查询直播中的流的信息
      *
      * @param request
      * @return
@@ -852,6 +930,7 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 查询录制回调配置
+
      *
      * @param request
      * @return
@@ -862,7 +941,7 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 查询直播流状态通知
+     * 查询直播流状态回调地址
      *
      * @param request
      * @return
@@ -873,7 +952,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加域名直播截图配置
+     * 添加域名截图配置
+- 添加域名级别的截图模板配置
+
      *
      * @param request
      * @return
@@ -884,7 +965,7 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 设置推流回调配置
+     * 设置直播流状态回调地址
      *
      * @param request
      * @return
@@ -895,7 +976,8 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 设置截图回调通知
+     * 设置直播截图回调通知地址
+
      *
      * @param request
      * @return
@@ -917,7 +999,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 停用APP
+     * 停用 运行中 状态的应用
+- 停用应用之后,不能再用此应用名推流
+
      *
      * @param request
      * @return
@@ -929,6 +1013,9 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 删除直播域名
+- 请慎重操作（建议在进行域名删除前到域名解析服务商处恢复域名A记录），以免导致删除操作后此域名不可访问。
+  deleteLiveDomain调用成功后将删除本条直播域名的全部相关记录，对于仅需要暂停使用该直播域名，推荐stopLiveDomain接口
+
      *
      * @param request
      * @return
@@ -940,6 +1027,13 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 添加自定义转码模板
+- 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
+- 系统标准转码模板
+    ld (h.264/640*360/15f)
+    sd (h.264/854*480/24f)
+    hd (h.264/1280*720/25f)
+    shd (h.264/1920*1080/30f)
+
      *
      * @param request
      * @return
@@ -961,7 +1055,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 添加域名转码配置
+     * 添加域名级别转码配置
+- 添加域名级别的转码模板配置
+
      *
      * @param request
      * @return
@@ -972,7 +1068,9 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除APP转码配置
+     * 删除应用级别转码模板配置
+- 删除应用级别的转码模板配置,重新推流后生效
+
      *
      * @param request
      * @return
@@ -984,6 +1082,11 @@ public class LiveClient extends JdcloudClient {
 
     /**
      * 开启时移
+直播支持最大4小时的HLS时移，使用方式为在播放域名后增加时移参数来实现，参数类型支持指定开始时间和时间偏移量2种方式进行时移。 开启直播时移后，重新推流生效，使用播放域名带相应参数访问即可播放
+- 域名格式：
+1、http://{playDomain}/{appName}/{streamName}/index.m3u8?timeshift&#x3D;400（秒，指从当前时间往前时移的偏移量）
+2、http://{playDomain}/{appName}/{streamName}/index.m3u8?starttime&#x3D;1529223702 (unix时间戳)
+
      *
      * @param request
      * @return

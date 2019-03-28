@@ -28,14 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加域名录制配置
+ * 添加域名级别直播录制配置
+- 添加域名级别的直播录制模板配置
+
  */
 public class AddLiveStreamDomainRecordRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
@@ -50,7 +52,7 @@ public class AddLiveStreamDomainRecordRequest extends JdcloudRequest implements 
 
 
     /**
-     * get 您的推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -59,7 +61,7 @@ public class AddLiveStreamDomainRecordRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -87,7 +89,7 @@ public class AddLiveStreamDomainRecordRequest extends JdcloudRequest implements 
 
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */

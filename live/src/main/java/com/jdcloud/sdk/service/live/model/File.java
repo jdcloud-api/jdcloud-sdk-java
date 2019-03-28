@@ -33,27 +33,35 @@ public class File  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 流所属加速域名
+     * 推流域名
      */
     private String publishDomain;
 
     /**
-     * 流所属应用名称
+     * 应用名称
      */
     private String appName;
 
     /**
-     * 直播流名称
+     * 流名称
      */
     private String streamName;
 
     /**
      * 开始时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      */
     private String startTime;
 
     /**
      * 结束时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      */
     private String endTime;
 
@@ -89,7 +97,7 @@ public class File  implements java.io.Serializable {
 
 
     /**
-     * get 流所属加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -98,7 +106,7 @@ public class File  implements java.io.Serializable {
     }
 
     /**
-     * set 流所属加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -107,7 +115,7 @@ public class File  implements java.io.Serializable {
     }
 
     /**
-     * get 流所属应用名称
+     * get 应用名称
      *
      * @return
      */
@@ -116,7 +124,7 @@ public class File  implements java.io.Serializable {
     }
 
     /**
-     * set 流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -125,7 +133,7 @@ public class File  implements java.io.Serializable {
     }
 
     /**
-     * get 直播流名称
+     * get 流名称
      *
      * @return
      */
@@ -134,7 +142,7 @@ public class File  implements java.io.Serializable {
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -144,6 +152,10 @@ public class File  implements java.io.Serializable {
 
     /**
      * get 开始时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @return
      */
@@ -153,6 +165,10 @@ public class File  implements java.io.Serializable {
 
     /**
      * set 开始时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @param startTime
      */
@@ -162,6 +178,10 @@ public class File  implements java.io.Serializable {
 
     /**
      * get 结束时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @return
      */
@@ -171,6 +191,10 @@ public class File  implements java.io.Serializable {
 
     /**
      * set 结束时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @param endTime
      */
@@ -288,7 +312,7 @@ public class File  implements java.io.Serializable {
 
 
     /**
-     * set 流所属加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -298,7 +322,7 @@ public class File  implements java.io.Serializable {
     }
 
     /**
-     * set 流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -308,7 +332,7 @@ public class File  implements java.io.Serializable {
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -319,6 +343,10 @@ public class File  implements java.io.Serializable {
 
     /**
      * set 开始时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @param startTime
      */
@@ -329,6 +357,10 @@ public class File  implements java.io.Serializable {
 
     /**
      * set 结束时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @param endTime
      */

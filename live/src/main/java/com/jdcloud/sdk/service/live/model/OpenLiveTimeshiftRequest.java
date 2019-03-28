@@ -29,13 +29,18 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 开启时移
+直播支持最大4小时的HLS时移，使用方式为在播放域名后增加时移参数来实现，参数类型支持指定开始时间和时间偏移量2种方式进行时移。 开启直播时移后，重新推流生效，使用播放域名带相应参数访问即可播放
+- 域名格式：
+1、http://{playDomain}/{appName}/{streamName}/index.m3u8?timeshift&#x3D;400（秒，指从当前时间往前时移的偏移量）
+2、http://{playDomain}/{appName}/{streamName}/index.m3u8?starttime&#x3D;1529223702 (unix时间戳)
+
  */
 public class OpenLiveTimeshiftRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播的推流域名
+     * 直播的播放域名
      * Required:true
      */
     @Required
@@ -43,7 +48,7 @@ public class OpenLiveTimeshiftRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 直播的推流域名
+     * get 直播的播放域名
      *
      * @return
      */
@@ -52,7 +57,7 @@ public class OpenLiveTimeshiftRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 直播的推流域名
+     * set 直播的播放域名
      *
      * @param playDomain
      */
@@ -62,7 +67,7 @@ public class OpenLiveTimeshiftRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 直播的推流域名
+     * set 直播的播放域名
      *
      * @param playDomain
      */

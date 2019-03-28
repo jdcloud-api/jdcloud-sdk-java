@@ -40,7 +40,7 @@ class QueryStatisticsDataGroupByAreaExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/statistics:groupByArea";
+        return "/vodStatistics:groupByArea";
     }
 
     @Override

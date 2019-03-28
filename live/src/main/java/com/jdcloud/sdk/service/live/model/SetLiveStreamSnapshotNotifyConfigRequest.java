@@ -28,23 +28,23 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置截图回调通知
+ * 设置直播截图回调通知地址
+
  */
 public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 设置直播流信息推送到的 URL 地址:
-  - 以 http:// 开头
-  - 正则校验
+     * 截图回调通知的URL地址:
+- 以 http:// 开头,外网可访问的地址
 
      * Required:true
      */
@@ -53,7 +53,7 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
 
 
     /**
-     * get 您的推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -62,7 +62,7 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -71,9 +71,8 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * get 设置直播流信息推送到的 URL 地址:
-  - 以 http:// 开头
-  - 正则校验
+     * get 截图回调通知的URL地址:
+- 以 http:// 开头,外网可访问的地址
 
      *
      * @return
@@ -83,9 +82,8 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 设置直播流信息推送到的 URL 地址:
-  - 以 http:// 开头
-  - 正则校验
+     * set 截图回调通知的URL地址:
+- 以 http:// 开头,外网可访问的地址
 
      *
      * @param notifyUrl
@@ -96,7 +94,7 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
 
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -106,9 +104,8 @@ public class SetLiveStreamSnapshotNotifyConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 设置直播流信息推送到的 URL 地址:
-  - 以 http:// 开头
-  - 正则校验
+     * set 截图回调通知的URL地址:
+- 以 http:// 开头,外网可访问的地址
 
      *
      * @param notifyUrl

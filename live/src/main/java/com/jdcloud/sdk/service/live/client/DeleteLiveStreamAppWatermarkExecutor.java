@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppWatermarkResponse;
 
 /**
- * 删除APP水印配置
+ * 删除应用级别水印模板配置
+- 删除应用级别的水印模板配置,重新推流后生效
+
  */
 class DeleteLiveStreamAppWatermarkExecutor extends JdcloudExecutor {
 

@@ -29,18 +29,15 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 删除用户自定义直播截图模板
+- 删除截图模板前,请先删除此模板相关的截图配置,否则将会影响线上业务
+
  */
 public class DeleteCustomLiveStreamSnapshotTemplateRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 截图模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * 截图模板
      * Required:true
      */
     @Required
@@ -48,12 +45,7 @@ public class DeleteCustomLiveStreamSnapshotTemplateRequest extends JdcloudReques
 
 
     /**
-     * get 截图模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * get 截图模板
      *
      * @return
      */
@@ -62,12 +54,7 @@ public class DeleteCustomLiveStreamSnapshotTemplateRequest extends JdcloudReques
     }
 
     /**
-     * set 截图模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 截图模板
      *
      * @param template
      */
@@ -77,12 +64,7 @@ public class DeleteCustomLiveStreamSnapshotTemplateRequest extends JdcloudReques
 
 
     /**
-     * set 截图模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 截图模板
      *
      * @param template
      */

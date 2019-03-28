@@ -38,15 +38,18 @@ public class App  implements java.io.Serializable {
     private String appName;
 
     /**
-     * 应用状态：
- - online    开启
- - offline   关闭
+     * 应用状态
+  online: 开启
+  offline: 关闭
 
      */
     private String appStatus;
 
     /**
-     * 创建时间
+     * 应用创建时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      */
     private String createTime;
 
@@ -75,9 +78,9 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * get 应用状态：
- - online    开启
- - offline   关闭
+     * get 应用状态
+  online: 开启
+  offline: 关闭
 
      *
      * @return
@@ -87,9 +90,9 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用状态：
- - online    开启
- - offline   关闭
+     * set 应用状态
+  online: 开启
+  offline: 关闭
 
      *
      * @param appStatus
@@ -99,7 +102,10 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 应用创建时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @return
      */
@@ -108,7 +114,10 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 应用创建时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @param createTime
      */
@@ -146,9 +155,9 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用状态：
- - online    开启
- - offline   关闭
+     * set 应用状态
+  online: 开启
+  offline: 关闭
 
      *
      * @param appStatus
@@ -159,7 +168,10 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 应用创建时间
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+
      *
      * @param createTime
      */

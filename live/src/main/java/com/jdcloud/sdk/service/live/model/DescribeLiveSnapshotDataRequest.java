@@ -35,25 +35,28 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 直播流所属应用名称
+     * 应用名称
      */
     private String appName;
 
     /**
-     * 直播流名称
+     * 流名称
      */
     private String streamName;
 
     /**
      * 起始时间:
-  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+- 支持最大查询90天以内的数据
 
      * Required:true
      */
@@ -62,14 +65,17 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
     /**
      * 结束时间:
-  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+- 为空,默认当前时间
 
      */
     private String endTime;
 
 
     /**
-     * get 您的推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -78,7 +84,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -87,7 +93,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 直播流所属应用名称
+     * get 应用名称
      *
      * @return
      */
@@ -96,7 +102,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -105,7 +111,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 直播流名称
+     * get 流名称
      *
      * @return
      */
@@ -114,7 +120,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -124,7 +130,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
     /**
      * get 起始时间:
-  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+- 支持最大查询90天以内的数据
 
      *
      * @return
@@ -135,7 +144,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
     /**
      * set 起始时间:
-  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+- 支持最大查询90天以内的数据
 
      *
      * @param startTime
@@ -146,7 +158,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
     /**
      * get 结束时间:
-  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+- 为空,默认当前时间
 
      *
      * @return
@@ -157,7 +172,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
     /**
      * set 结束时间:
-  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+- 为空,默认当前时间
 
      *
      * @param endTime
@@ -168,7 +186,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -178,7 +196,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -188,7 +206,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -199,7 +217,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
     /**
      * set 起始时间:
-  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+- 支持最大查询90天以内的数据
 
      *
      * @param startTime
@@ -211,7 +232,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
     /**
      * set 结束时间:
-  - UTC 时间格式 e.g: 2019-03-12T00:00:00Z
+- UTC时间
+  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例: 2018-10-21T10:00:00Z
+- 为空,默认当前时间
 
      *
      * @param endTime

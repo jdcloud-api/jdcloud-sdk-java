@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.jdfusion.model.RdsInstanceDetailInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 根据云提供商查询对应的RDS实例信息
+ * 查询指定ID的RDS实例信息
  */
 public class GetRdsByInstIdResult extends JdcloudResult implements java.io.Serializable {
 

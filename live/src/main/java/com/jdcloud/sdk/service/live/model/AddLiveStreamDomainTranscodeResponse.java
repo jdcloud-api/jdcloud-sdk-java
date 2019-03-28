@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 添加域名转码配置
+ * 添加域名级别转码配置
+- 添加域名级别的转码模板配置
+
  */
 public class AddLiveStreamDomainTranscodeResponse extends JdcloudResponse<AddLiveStreamDomainTranscodeResult> implements java.io.Serializable {
 

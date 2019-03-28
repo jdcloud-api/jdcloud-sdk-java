@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询录制模板列表
+ * 查询用户自定义直播录制模板列表
+
  */
 public class DescribeCustomLiveStreamRecordTemplatesResponse extends JdcloudResponse<DescribeCustomLiveStreamRecordTemplatesResult> implements java.io.Serializable {
 

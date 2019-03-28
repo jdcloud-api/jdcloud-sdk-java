@@ -28,13 +28,14 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 查询录制回调配置
+
  */
 public class DescribeLiveStreamRecordNotifyConfigResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的加速域名
+     * 推流域名
      */
     private String publishDomain;
 
@@ -45,7 +46,7 @@ public class DescribeLiveStreamRecordNotifyConfigResult extends JdcloudResult im
 
 
     /**
-     * get 您的加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -54,7 +55,7 @@ public class DescribeLiveStreamRecordNotifyConfigResult extends JdcloudResult im
     }
 
     /**
-     * set 您的加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -82,7 +83,7 @@ public class DescribeLiveStreamRecordNotifyConfigResult extends JdcloudResult im
 
 
     /**
-     * set 您的加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */

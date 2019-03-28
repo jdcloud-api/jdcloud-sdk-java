@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamOnlineListResponse;
 
 /**
- * 查看域名下所有的正在推的流的信息
+ * 查询直播中的流的信息
  */
 class DescribeLiveStreamOnlineListExecutor extends JdcloudExecutor {
 

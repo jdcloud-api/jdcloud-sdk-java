@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据云提供商查询对应的RDS实例信息
+ * 查询指定ID的RDS实例信息
  */
 public class GetRdsByInstIdRequest extends JdcloudRequest implements java.io.Serializable {
 

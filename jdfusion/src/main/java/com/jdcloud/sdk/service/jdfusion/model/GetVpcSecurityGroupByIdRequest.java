@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据云提供商查询对应的安全组资源信息
+ * 查询指定的安全组资源信息
  */
 public class GetVpcSecurityGroupByIdRequest extends JdcloudRequest implements java.io.Serializable {
 

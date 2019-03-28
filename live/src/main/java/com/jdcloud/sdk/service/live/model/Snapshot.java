@@ -38,12 +38,12 @@ public class Snapshot  implements java.io.Serializable {
     private String publishDomain;
 
     /**
-     * 流所属应用名称
+     * 应用名称
      */
     private String appName;
 
     /**
-     * 直播流名称
+     * 流名称
      */
     private String streamName;
 
@@ -54,18 +54,18 @@ public class Snapshot  implements java.io.Serializable {
 
     /**
      * 截图高度:
-  - 取值: [8,8192]
-  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-  - 随源: 如果两个参数都不填写，则截取源流大小原图
+- 取值: [8,8192]
+- 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+- 随源: 如果两个参数都不填写，则截取源流大小原图
 
      */
     private Integer height;
 
     /**
      * 截图宽度:
-  - 取值: [8,8192]
-  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-  - 随源: 如果两个参数都不填写，则截取源流大小原图
+- 取值: [8,8192]
+- 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+- 随源: 如果两个参数都不填写，则截取源流大小原图
 
      */
     private Integer width;
@@ -105,7 +105,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * get 流所属应用名称
+     * get 应用名称
      *
      * @return
      */
@@ -114,7 +114,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -123,7 +123,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * get 直播流名称
+     * get 流名称
      *
      * @return
      */
@@ -132,7 +132,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -160,9 +160,9 @@ public class Snapshot  implements java.io.Serializable {
 
     /**
      * get 截图高度:
-  - 取值: [8,8192]
-  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-  - 随源: 如果两个参数都不填写，则截取源流大小原图
+- 取值: [8,8192]
+- 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+- 随源: 如果两个参数都不填写，则截取源流大小原图
 
      *
      * @return
@@ -173,9 +173,9 @@ public class Snapshot  implements java.io.Serializable {
 
     /**
      * set 截图高度:
-  - 取值: [8,8192]
-  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-  - 随源: 如果两个参数都不填写，则截取源流大小原图
+- 取值: [8,8192]
+- 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+- 随源: 如果两个参数都不填写，则截取源流大小原图
 
      *
      * @param height
@@ -186,9 +186,9 @@ public class Snapshot  implements java.io.Serializable {
 
     /**
      * get 截图宽度:
-  - 取值: [8,8192]
-  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-  - 随源: 如果两个参数都不填写，则截取源流大小原图
+- 取值: [8,8192]
+- 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+- 随源: 如果两个参数都不填写，则截取源流大小原图
 
      *
      * @return
@@ -199,9 +199,9 @@ public class Snapshot  implements java.io.Serializable {
 
     /**
      * set 截图宽度:
-  - 取值: [8,8192]
-  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-  - 随源: 如果两个参数都不填写，则截取源流大小原图
+- 取值: [8,8192]
+- 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+- 随源: 如果两个参数都不填写，则截取源流大小原图
 
      *
      * @param width
@@ -276,7 +276,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -286,7 +286,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -307,9 +307,9 @@ public class Snapshot  implements java.io.Serializable {
 
     /**
      * set 截图高度:
-  - 取值: [8,8192]
-  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-  - 随源: 如果两个参数都不填写，则截取源流大小原图
+- 取值: [8,8192]
+- 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+- 随源: 如果两个参数都不填写，则截取源流大小原图
 
      *
      * @param height
@@ -321,9 +321,9 @@ public class Snapshot  implements java.io.Serializable {
 
     /**
      * set 截图宽度:
-  - 取值: [8,8192]
-  - 等比: 如果只填写一个参数,则按参数比例等比缩放截图
-  - 随源: 如果两个参数都不填写，则截取源流大小原图
+- 取值: [8,8192]
+- 等比: 如果只填写一个参数,则按参数比例等比缩放截图
+- 随源: 如果两个参数都不填写，则截取源流大小原图
 
      *
      * @param width

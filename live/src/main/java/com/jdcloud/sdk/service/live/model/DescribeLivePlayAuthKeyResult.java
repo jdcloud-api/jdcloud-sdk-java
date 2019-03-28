@@ -40,6 +40,9 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
 
     /**
      * 播放鉴权状态
+  on: 开启
+  off: 关闭
+
      */
     private String authStatus;
 
@@ -69,6 +72,9 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
 
     /**
      * get 播放鉴权状态
+  on: 开启
+  off: 关闭
+
      *
      * @return
      */
@@ -78,6 +84,9 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
 
     /**
      * set 播放鉴权状态
+  on: 开启
+  off: 关闭
+
      *
      * @param authStatus
      */
@@ -116,6 +125,9 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
 
     /**
      * set 播放鉴权状态
+  on: 开启
+  off: 关闭
+
      *
      * @param authStatus
      */

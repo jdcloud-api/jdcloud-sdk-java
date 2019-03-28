@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 添加域名录制配置
+ * 添加域名级别直播录制配置
+- 添加域名级别的直播录制模板配置
+
  */
 public class AddLiveStreamDomainRecordResponse extends JdcloudResponse<AddLiveStreamDomainRecordResult> implements java.io.Serializable {
 

@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.live.model.LiveStreamPublishInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看域名下推流记录
+ * 查看推流历史记录
  */
 public class DescribeLiveStreamPublishListResult extends JdcloudResult implements java.io.Serializable {
 

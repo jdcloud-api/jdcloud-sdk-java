@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看域名下推流记录
+ * 查看推流历史记录
  */
 public class DescribeLiveStreamPublishListResponse extends JdcloudResponse<DescribeLiveStreamPublishListResult> implements java.io.Serializable {
 

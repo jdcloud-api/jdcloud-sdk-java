@@ -30,6 +30,7 @@ import com.jdcloud.sdk.service.live.model.DeleteLiveStreamRecordNotifyConfigResp
 
 /**
  * 删除录制回调配置
+
  */
 class DeleteLiveStreamRecordNotifyConfigExecutor extends JdcloudExecutor {
 

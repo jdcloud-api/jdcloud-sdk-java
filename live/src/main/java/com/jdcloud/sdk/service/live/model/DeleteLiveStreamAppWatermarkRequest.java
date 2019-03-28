@@ -28,33 +28,31 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除APP水印配置
+ * 删除应用级别水印模板配置
+- 删除应用级别的水印模板配置,重新推流后生效
+
  */
 public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 直播流所属应用名称
+     * 应用名称
      * Required:true
      */
     @Required
     private String appName;
 
     /**
-     * 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * 水印模板
+
      * Required:true
      */
     @Required
@@ -62,7 +60,7 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
 
 
     /**
-     * get 推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -71,7 +69,7 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -80,7 +78,7 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
     }
 
     /**
-     * get 直播流所属应用名称
+     * get 应用名称
      *
      * @return
      */
@@ -89,7 +87,7 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -98,12 +96,8 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
     }
 
     /**
-     * get 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * get 水印模板
+
      *
      * @return
      */
@@ -112,12 +106,8 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 水印模板
+
      *
      * @param template
      */
@@ -127,7 +117,7 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
 
 
     /**
-     * set 推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -137,7 +127,7 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -147,12 +137,8 @@ public class DeleteLiveStreamAppWatermarkRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-              取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-              首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 水印模板
+
      *
      * @param template
      */

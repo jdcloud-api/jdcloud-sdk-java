@@ -30,6 +30,8 @@ import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamWatermarkTemplat
 
 /**
  * 删除用户自定义水印模板
+- 删除用户自定义水印模板之前必须先删除此模板在各域名、应用、流级别的水印设置
+
  */
 class DeleteCustomLiveStreamWatermarkTemplateExecutor extends JdcloudExecutor {
 

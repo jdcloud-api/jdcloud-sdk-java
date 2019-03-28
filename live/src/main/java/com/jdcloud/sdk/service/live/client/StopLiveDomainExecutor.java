@@ -30,6 +30,9 @@ import com.jdcloud.sdk.service.live.model.StopLiveDomainResponse;
 
 /**
  * 停用域名
+- 停用直播域名对(推流域名,播放域名),将DomainStatus变更为offline
+- 停用该直播域名对后,直播域名信息仍保留,但用户将不能再用该推流域名推流或播放域名播放
+
  */
 class StopLiveDomainExecutor extends JdcloudExecutor {
 

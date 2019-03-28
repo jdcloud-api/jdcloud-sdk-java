@@ -40,7 +40,7 @@ class QueryStatisticsDataGroupSumExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/statistics:groupSum";
+        return "/vodStatistics:groupSum";
     }
 
     @Override

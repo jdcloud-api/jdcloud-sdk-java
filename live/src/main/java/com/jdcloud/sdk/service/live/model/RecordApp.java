@@ -33,7 +33,7 @@ public class RecordApp  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * appName
+     * 应用名称
      */
     private String appName;
 
@@ -44,7 +44,7 @@ public class RecordApp  implements java.io.Serializable {
 
 
     /**
-     * get appName
+     * get 应用名称
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class RecordApp  implements java.io.Serializable {
     }
 
     /**
-     * set appName
+     * set 应用名称
      *
      * @param appName
      */
@@ -81,7 +81,7 @@ public class RecordApp  implements java.io.Serializable {
 
 
     /**
-     * set appName
+     * set 应用名称
      *
      * @param appName
      */

@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 查询录制回调配置
+
  */
 public class DescribeLiveStreamRecordNotifyConfigResponse extends JdcloudResponse<DescribeLiveStreamRecordNotifyConfigResult> implements java.io.Serializable {
 
