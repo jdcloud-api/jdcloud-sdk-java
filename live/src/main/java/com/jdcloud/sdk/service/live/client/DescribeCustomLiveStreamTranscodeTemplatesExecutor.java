@@ -30,6 +30,7 @@ import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTempl
 
 /**
  * 查询用户自定义转码模板列表
+
  */
 class DescribeCustomLiveStreamTranscodeTemplatesExecutor extends JdcloudExecutor {
 

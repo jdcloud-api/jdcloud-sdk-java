@@ -35,12 +35,35 @@ public class GetVmInstanceTypesRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
+     * 可用区
+     */
+    private String az;
+
+    /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
 
+
+    /**
+     * get 可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
 
     /**
      * get 地域ID
@@ -60,6 +83,16 @@ public class GetVmInstanceTypesRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
     }
 
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public GetVmInstanceTypesRequest az(String az) {
+        this.az = az;
+        return this;
+    }
 
     /**
      * set 地域ID

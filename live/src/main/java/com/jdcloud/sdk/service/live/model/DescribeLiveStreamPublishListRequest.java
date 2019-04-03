@@ -28,41 +28,56 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看域名下推流记录
+ * 查看推流历史记录
  */
 public class DescribeLiveStreamPublishListRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码&lt;br&gt;
+- 取值范围[1, 100000]
+
      */
     private Integer pageNum;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小&lt;br&gt;
+- 取值范围[10, 100]
+
      */
     private Integer pageSize;
 
     /**
-     * 直播流所属应用名称
+     * 应用名称
      */
     private String appName;
 
     /**
-     * 直播流名称
+     * 流名称
      */
     private String streamName;
 
     /**
-     * 起始时间
+     * 推流起始时间&lt;br&gt;
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 最大支持最近90天内的流历史查询
+
      * Required:true
      */
     @Required
     private String startTime;
 
     /**
-     * 结束时间
+     * 推流结束时间&lt;br&gt;
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 最大支持最近90天内的流历史查询
+- 结束时间为空默认为当前时间
+
      */
     private String endTime;
 
@@ -75,7 +90,9 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码&lt;br&gt;
+- 取值范围[1, 100000]
+
      *
      * @return
      */
@@ -84,7 +101,9 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码&lt;br&gt;
+- 取值范围[1, 100000]
+
      *
      * @param pageNum
      */
@@ -93,7 +112,9 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小&lt;br&gt;
+- 取值范围[10, 100]
+
      *
      * @return
      */
@@ -102,7 +123,9 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小&lt;br&gt;
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -111,7 +134,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * get 直播流所属应用名称
+     * get 应用名称
      *
      * @return
      */
@@ -120,7 +143,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -129,7 +152,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * get 直播流名称
+     * get 流名称
      *
      * @return
      */
@@ -138,7 +161,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -147,7 +170,12 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * get 起始时间
+     * get 推流起始时间&lt;br&gt;
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 最大支持最近90天内的流历史查询
+
      *
      * @return
      */
@@ -156,7 +184,12 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 起始时间
+     * set 推流起始时间&lt;br&gt;
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 最大支持最近90天内的流历史查询
+
      *
      * @param startTime
      */
@@ -165,7 +198,13 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * get 结束时间
+     * get 推流结束时间&lt;br&gt;
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 最大支持最近90天内的流历史查询
+- 结束时间为空默认为当前时间
+
      *
      * @return
      */
@@ -174,7 +213,13 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 结束时间
+     * set 推流结束时间&lt;br&gt;
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 最大支持最近90天内的流历史查询
+- 结束时间为空默认为当前时间
+
      *
      * @param endTime
      */
@@ -202,7 +247,9 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码&lt;br&gt;
+- 取值范围[1, 100000]
+
      *
      * @param pageNum
      */
@@ -212,7 +259,9 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小&lt;br&gt;
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -222,7 +271,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -232,7 +281,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -242,7 +291,12 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 起始时间
+     * set 推流起始时间&lt;br&gt;
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 最大支持最近90天内的流历史查询
+
      *
      * @param startTime
      */
@@ -252,7 +306,13 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 结束时间
+     * set 推流结束时间&lt;br&gt;
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 最大支持最近90天内的流历史查询
+- 结束时间为空默认为当前时间
+
      *
      * @param endTime
      */

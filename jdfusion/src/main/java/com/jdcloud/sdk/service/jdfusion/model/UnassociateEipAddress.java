@@ -42,11 +42,6 @@ public class UnassociateEipAddress  implements java.io.Serializable {
      */
     private String instanceType;
 
-    /**
-     * 是否强制解绑
-     */
-    private Boolean force;
-
 
     /**
      * get 云产品的实例ID
@@ -84,24 +79,6 @@ public class UnassociateEipAddress  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
-    /**
-     * get 是否强制解绑
-     *
-     * @return
-     */
-    public Boolean getForce() {
-        return force;
-    }
-
-    /**
-     * set 是否强制解绑
-     *
-     * @param force
-     */
-    public void setForce(Boolean force) {
-        this.force = force;
-    }
-
 
     /**
      * set 云产品的实例ID
@@ -120,16 +97,6 @@ public class UnassociateEipAddress  implements java.io.Serializable {
      */
     public UnassociateEipAddress instanceType(String instanceType) {
         this.instanceType = instanceType;
-        return this;
-    }
-
-    /**
-     * set 是否强制解绑
-     *
-     * @param force
-     */
-    public UnassociateEipAddress force(Boolean force) {
-        this.force = force;
         return this;
     }
 

@@ -28,33 +28,29 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加APP水印配置
+ * 添加应用级别水印配置
+
  */
 public class AddLiveStreamAppWatermarkRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播流所属应用名称
-     * Required:true
-     */
-    @Required
-    private String appName;
-
-    /**
-     * 您的推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * 应用名称
+     * Required:true
+     */
+    @Required
+    private String appName;
+
+    /**
+     * 水印模板名称
 
      * Required:true
      */
@@ -63,25 +59,7 @@ public class AddLiveStreamAppWatermarkRequest extends JdcloudRequest implements 
 
 
     /**
-     * get 直播流所属应用名称
-     *
-     * @return
-     */
-    public String getAppName() {
-        return appName;
-    }
-
-    /**
-     * set 直播流所属应用名称
-     *
-     * @param appName
-     */
-    public void setAppName(String appName) {
-        this.appName = appName;
-    }
-
-    /**
-     * get 您的推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -90,7 +68,7 @@ public class AddLiveStreamAppWatermarkRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -99,12 +77,25 @@ public class AddLiveStreamAppWatermarkRequest extends JdcloudRequest implements 
     }
 
     /**
-     * get 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * get 应用名称
+     *
+     * @return
+     */
+    public String getAppName() {
+        return appName;
+    }
+
+    /**
+     * set 应用名称
+     *
+     * @param appName
+     */
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    /**
+     * get 水印模板名称
 
      *
      * @return
@@ -114,12 +105,7 @@ public class AddLiveStreamAppWatermarkRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 水印模板名称
 
      *
      * @param template
@@ -130,17 +116,7 @@ public class AddLiveStreamAppWatermarkRequest extends JdcloudRequest implements 
 
 
     /**
-     * set 直播流所属应用名称
-     *
-     * @param appName
-     */
-    public AddLiveStreamAppWatermarkRequest appName(String appName) {
-        this.appName = appName;
-        return this;
-    }
-
-    /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -150,12 +126,17 @@ public class AddLiveStreamAppWatermarkRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 水印模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 应用名称
+     *
+     * @param appName
+     */
+    public AddLiveStreamAppWatermarkRequest appName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+
+    /**
+     * set 水印模板名称
 
      *
      * @param template

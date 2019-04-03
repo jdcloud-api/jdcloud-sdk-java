@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 查询截图回调配置
+
  */
 public class DescribeLiveStreamSnapshotNotifyConfigResponse extends JdcloudResponse<DescribeLiveStreamSnapshotNotifyConfigResult> implements java.io.Serializable {
 

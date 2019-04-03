@@ -60,6 +60,11 @@ public class VmInfoDetail  implements java.io.Serializable {
     private String hostName;
 
     /**
+     * 镜像ID
+     */
+    private String imageId;
+
+    /**
      * imageType
      */
     private ImageType imageType;
@@ -103,6 +108,11 @@ public class VmInfoDetail  implements java.io.Serializable {
      * 私有ip地址
      */
     private String privateIpAddress;
+
+    /**
+     * 安全组ID
+     */
+    private List<String> securityGroupIds;
 
     /**
      * 云主机状态
@@ -228,6 +238,24 @@ public class VmInfoDetail  implements java.io.Serializable {
      */
     public void setHostName(String hostName) {
         this.hostName = hostName;
+    }
+
+    /**
+     * get 镜像ID
+     *
+     * @return
+     */
+    public String getImageId() {
+        return imageId;
+    }
+
+    /**
+     * set 镜像ID
+     *
+     * @param imageId
+     */
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
     }
 
     /**
@@ -390,6 +418,24 @@ public class VmInfoDetail  implements java.io.Serializable {
      */
     public void setPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
+    }
+
+    /**
+     * get 安全组ID
+     *
+     * @return
+     */
+    public List<String> getSecurityGroupIds() {
+        return securityGroupIds;
+    }
+
+    /**
+     * set 安全组ID
+     *
+     * @param securityGroupIds
+     */
+    public void setSecurityGroupIds(List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
     }
 
     /**
@@ -570,6 +616,16 @@ public class VmInfoDetail  implements java.io.Serializable {
     }
 
     /**
+     * set 镜像ID
+     *
+     * @param imageId
+     */
+    public VmInfoDetail imageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+
+    /**
      * set imageType
      *
      * @param imageType
@@ -656,6 +712,16 @@ public class VmInfoDetail  implements java.io.Serializable {
      */
     public VmInfoDetail privateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+
+    /**
+     * set 安全组ID
+     *
+     * @param securityGroupIds
+     */
+    public VmInfoDetail securityGroupIds(List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
         return this;
     }
 
@@ -752,6 +818,18 @@ public class VmInfoDetail  implements java.io.Serializable {
             this.keyNames = new ArrayList<>();
         }
         this.keyNames.add(keyName);
+    }
+
+    /**
+     * add item to 安全组ID
+     *
+     * @param securityGroupId
+     */
+    public void addSecurityGroupId(String securityGroupId) {
+        if (this.securityGroupIds == null) {
+            this.securityGroupIds = new ArrayList<>();
+        }
+        this.securityGroupIds.add(securityGroupId);
     }
 
     /**

@@ -28,7 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 启用APP
+ * 启用应用
+- 启用 停用 状态的应用
+
  */
 public class StartLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
 

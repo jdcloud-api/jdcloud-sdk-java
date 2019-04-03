@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamRecordNotifyConfigResponse;
 
 /**
- * 设置录制回调通知
+ * 设置直播录制回调通知
+
  */
 class SetLiveStreamRecordNotifyConfigExecutor extends JdcloudExecutor {
 

@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 停用APP
+ * 停用 运行中 状态的应用
+- 停用应用之后,不能再用此应用名推流
+
  */
 public class StopLiveAppResponse extends JdcloudResponse<StopLiveAppResult> implements java.io.Serializable {
 

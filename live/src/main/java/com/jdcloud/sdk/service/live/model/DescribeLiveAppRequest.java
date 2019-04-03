@@ -37,26 +37,33 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码
+- 取值范围: [1, 100000]
+
      */
     private Integer pageNum;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小
+- 取值范围: [10, 100]
+
      */
     private Integer pageSize;
 
     /**
      * 域名下的app列表过滤条件:
-  - name:   publishDomain 直播的推流域名
-  - value:  如果参数为空，则查询全部
+  - name: publishDomain 直播的推流域名
+  - values: 如果参数为空,则查询全部
+  - 过滤条件为空,则表示查询用户下的所有应用名
 
      */
     private List<Filter> filters;
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码
+- 取值范围: [1, 100000]
+
      *
      * @return
      */
@@ -65,7 +72,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围: [1, 100000]
+
      *
      * @param pageNum
      */
@@ -74,7 +83,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小
+- 取值范围: [10, 100]
+
      *
      * @return
      */
@@ -83,7 +94,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围: [10, 100]
+
      *
      * @param pageSize
      */
@@ -93,8 +106,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * get 域名下的app列表过滤条件:
-  - name:   publishDomain 直播的推流域名
-  - value:  如果参数为空，则查询全部
+  - name: publishDomain 直播的推流域名
+  - values: 如果参数为空,则查询全部
+  - 过滤条件为空,则表示查询用户下的所有应用名
 
      *
      * @return
@@ -105,8 +119,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * set 域名下的app列表过滤条件:
-  - name:   publishDomain 直播的推流域名
-  - value:  如果参数为空，则查询全部
+  - name: publishDomain 直播的推流域名
+  - values: 如果参数为空,则查询全部
+  - 过滤条件为空,则表示查询用户下的所有应用名
 
      *
      * @param filters
@@ -117,7 +132,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围: [1, 100000]
+
      *
      * @param pageNum
      */
@@ -127,7 +144,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围: [10, 100]
+
      *
      * @param pageSize
      */
@@ -138,8 +157,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * set 域名下的app列表过滤条件:
-  - name:   publishDomain 直播的推流域名
-  - value:  如果参数为空，则查询全部
+  - name: publishDomain 直播的推流域名
+  - values: 如果参数为空,则查询全部
+  - 过滤条件为空,则表示查询用户下的所有应用名
 
      *
      * @param filters
@@ -152,8 +172,9 @@ public class DescribeLiveAppRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * add item to 域名下的app列表过滤条件:
-  - name:   publishDomain 直播的推流域名
-  - value:  如果参数为空，则查询全部
+  - name: publishDomain 直播的推流域名
+  - values: 如果参数为空,则查询全部
+  - 过滤条件为空,则表示查询用户下的所有应用名
 
      *
      * @param filter

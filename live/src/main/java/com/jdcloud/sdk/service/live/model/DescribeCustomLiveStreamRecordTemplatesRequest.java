@@ -30,19 +30,24 @@ import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询录制模板列表
+ * 查询用户自定义直播录制模板列表
+
  */
 public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码
+- 取值范围[1, 100000]
+
      */
     private Integer pageNum;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小
+- 取值范围[10, 100]
+
      */
     private Integer pageSize;
 
@@ -56,7 +61,9 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码
+- 取值范围[1, 100000]
+
      *
      * @return
      */
@@ -65,7 +72,9 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围[1, 100000]
+
      *
      * @param pageNum
      */
@@ -74,7 +83,9 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小
+- 取值范围[10, 100]
+
      *
      * @return
      */
@@ -83,7 +94,9 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -117,7 +130,9 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围[1, 100000]
+
      *
      * @param pageNum
      */
@@ -127,7 +142,9 @@ public class DescribeCustomLiveStreamRecordTemplatesRequest extends JdcloudReque
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */

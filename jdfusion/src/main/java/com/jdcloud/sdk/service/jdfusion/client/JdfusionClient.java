@@ -46,6 +46,9 @@ import com.jdcloud.sdk.service.jdfusion.client.GetBucketByNameExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoHistoryByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetTaskInfoHistoryByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetTaskInfoHistoryByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsResultsByIdRecordRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsResultsByIdRecordResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentsResultsByIdRecordExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetVmInstancesExecutor;
@@ -67,6 +70,9 @@ import com.jdcloud.sdk.service.jdfusion.client.GetRdsAccountsByInstIdAndAccountN
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfaceByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcNetworkInterfaceByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetVpcNetworkInterfaceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteSecurityGroupsRuleRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteSecurityGroupsRuleResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteSecurityGroupsRuleExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentResultRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentResultResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentResultExecutor;
@@ -91,15 +97,27 @@ import com.jdcloud.sdk.service.jdfusion.client.CreateVpcNetworkInterfaceExecutor
 import com.jdcloud.sdk.service.jdfusion.model.CreateRdsDatabaseRequest;
 import com.jdcloud.sdk.service.jdfusion.model.CreateRdsDatabaseResponse;
 import com.jdcloud.sdk.service.jdfusion.client.CreateRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StopSlbListenerRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StopSlbListenerResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StopSlbListenerExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentsByIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetDeploymentsResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetDeploymentsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsSpecificationRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRdsSpecificationResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRdsSpecificationExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.ValidCloudInfoRequest;
+import com.jdcloud.sdk.service.jdfusion.model.ValidCloudInfoResponse;
+import com.jdcloud.sdk.service.jdfusion.client.ValidCloudInfoExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.StartChannelRequest;
 import com.jdcloud.sdk.service.jdfusion.model.StartChannelResponse;
 import com.jdcloud.sdk.service.jdfusion.client.StartChannelExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVserverGroupRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteVserverGroupResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteVserverGroupExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.CreateChannelRequest;
 import com.jdcloud.sdk.service.jdfusion.model.CreateChannelResponse;
 import com.jdcloud.sdk.service.jdfusion.client.CreateChannelExecutor;
@@ -127,6 +145,9 @@ import com.jdcloud.sdk.service.jdfusion.client.CreateVpcLBHttpListenerExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.StopTransferTaskRequest;
 import com.jdcloud.sdk.service.jdfusion.model.StopTransferTaskResponse;
 import com.jdcloud.sdk.service.jdfusion.client.StopTransferTaskExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetVserverGroupsByIdRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetVserverGroupsByIdResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetVserverGroupsByIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSubnetByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.DeleteVpcSubnetByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.DeleteVpcSubnetByIdExecutor;
@@ -190,15 +211,24 @@ import com.jdcloud.sdk.service.jdfusion.client.AttachDiskToVmInstanceByDiskIdExe
 import com.jdcloud.sdk.service.jdfusion.model.AttachVpcNetworkInterfaceByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.AttachVpcNetworkInterfaceByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.AttachVpcNetworkInterfaceByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetLbHttpListenerRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetLbHttpListenerResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetLbHttpListenerExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.DryrunDeploymentRequest;
 import com.jdcloud.sdk.service.jdfusion.model.DryrunDeploymentResponse;
 import com.jdcloud.sdk.service.jdfusion.client.DryrunDeploymentExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.CreateDatasourceRequest;
 import com.jdcloud.sdk.service.jdfusion.model.CreateDatasourceResponse;
 import com.jdcloud.sdk.service.jdfusion.client.CreateDatasourceExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRegionsAvailableZonesRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRegionsAvailableZonesResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRegionsAvailableZonesExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.DetachDiskToVmInstanceByDiskIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.DetachDiskToVmInstanceByDiskIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.DetachDiskToVmInstanceByDiskIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StartSlbListenerRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StartSlbListenerResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StartSlbListenerExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetTransferTasksRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetTransferTasksResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetTransferTasksExecutor;
@@ -226,6 +256,9 @@ import com.jdcloud.sdk.service.jdfusion.client.GetRdsAccountsByInstIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupsRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupsResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetVpcSecurityGroupsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.CreateSecurityGroupsRuleRequest;
+import com.jdcloud.sdk.service.jdfusion.model.CreateSecurityGroupsRuleResponse;
+import com.jdcloud.sdk.service.jdfusion.client.CreateSecurityGroupsRuleExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.ApplyDeploymentRequest;
 import com.jdcloud.sdk.service.jdfusion.model.ApplyDeploymentResponse;
 import com.jdcloud.sdk.service.jdfusion.client.ApplyDeploymentExecutor;
@@ -274,9 +307,18 @@ import com.jdcloud.sdk.service.jdfusion.client.StopChannelExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcsRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcsResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetVpcsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StartSlbRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StartSlbResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StartSlbExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetVmInstancesByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetVmInstancesByIdExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GetRegionsRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GetRegionsResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GetRegionsExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.StopSlbRequest;
+import com.jdcloud.sdk.service.jdfusion.model.StopSlbResponse;
+import com.jdcloud.sdk.service.jdfusion.client.StopSlbExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetTransferTaskProgressRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetTransferTaskProgressResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetTransferTaskProgressExecutor;
@@ -304,12 +346,18 @@ import com.jdcloud.sdk.service.jdfusion.client.GetTaskInfoByIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetDisksRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetDisksResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetDisksExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.GrantRdsAccountsByTaskRequest;
+import com.jdcloud.sdk.service.jdfusion.model.GrantRdsAccountsByTaskResponse;
+import com.jdcloud.sdk.service.jdfusion.client.GrantRdsAccountsByTaskExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.DetachVpcNetworkInterfaceByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.DetachVpcNetworkInterfaceByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.DetachVpcNetworkInterfaceByIdExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.CreateVmInstanceRequest;
 import com.jdcloud.sdk.service.jdfusion.model.CreateVmInstanceResponse;
 import com.jdcloud.sdk.service.jdfusion.client.CreateVmInstanceExecutor;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteSlbsListenerRequest;
+import com.jdcloud.sdk.service.jdfusion.model.DeleteSlbsListenerResponse;
+import com.jdcloud.sdk.service.jdfusion.client.DeleteSlbsListenerExecutor;
 import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfoByIdRequest;
 import com.jdcloud.sdk.service.jdfusion.model.GetCloudInfoByIdResponse;
 import com.jdcloud.sdk.service.jdfusion.client.GetCloudInfoByIdExecutor;
@@ -354,7 +402,7 @@ public class JdfusionClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.9";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "jdfusion.jdcloud-api.com";
     public final static String ServiceName = "jdfusion";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -452,6 +500,17 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 查询某一次的历史执行结果（内部使用）
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDeploymentsResultsByIdRecordResponse getDeploymentsResultsByIdRecord(GetDeploymentsResultsByIdRecordRequest request) throws JdcloudSdkException {
+        return new GetDeploymentsResultsByIdRecordExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据云提供商查询对应的虚拟机资源信息
      *
      * @param request
@@ -507,7 +566,7 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 根据过滤条件，取得指定RDS实例上的账号信息
+     * 取得指定RDS实例上的指定账号信息
      *
      * @param request
      * @return
@@ -526,6 +585,17 @@ public class JdfusionClient extends JdcloudClient {
      */
     public GetVpcNetworkInterfaceByIdResponse getVpcNetworkInterfaceById(GetVpcNetworkInterfaceByIdRequest request) throws JdcloudSdkException {
         return new GetVpcNetworkInterfaceByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除安全组规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSecurityGroupsRuleResponse deleteSecurityGroupsRule(DeleteSecurityGroupsRuleRequest request) throws JdcloudSdkException {
+        return new DeleteSecurityGroupsRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -617,6 +687,17 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 停止监听器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopSlbListenerResponse stopSlbListener(StopSlbListenerRequest request) throws JdcloudSdkException {
+        return new StopSlbListenerExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询部署信息
      *
      * @param request
@@ -639,6 +720,28 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 根据数据库类型，取得RDS实例的规格
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRdsSpecificationResponse getRdsSpecification(GetRdsSpecificationRequest request) throws JdcloudSdkException {
+        return new GetRdsSpecificationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 验证指定云信息的AK、SK
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ValidCloudInfoResponse validCloudInfo(ValidCloudInfoRequest request) throws JdcloudSdkException {
+        return new ValidCloudInfoExecutor().client(this).execute(request);
+    }
+
+    /**
      * 启动数据同步
      *
      * @param request
@@ -647,6 +750,17 @@ public class JdfusionClient extends JdcloudClient {
      */
     public StartChannelResponse startChannel(StartChannelRequest request) throws JdcloudSdkException {
         return new StartChannelExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除服务器组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVserverGroupResponse deleteVserverGroup(DeleteVserverGroupRequest request) throws JdcloudSdkException {
+        return new DeleteVserverGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -746,6 +860,17 @@ public class JdfusionClient extends JdcloudClient {
      */
     public StopTransferTaskResponse stopTransferTask(StopTransferTaskRequest request) throws JdcloudSdkException {
         return new StopTransferTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据过滤条件，取得服务器组的信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVserverGroupsByIdResponse getVserverGroupsById(GetVserverGroupsByIdRequest request) throws JdcloudSdkException {
+        return new GetVserverGroupsByIdExecutor().client(this).execute(request);
     }
 
     /**
@@ -936,7 +1061,7 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 根据云提供商查询对应的RDS实例信息
+     * 查询指定ID的RDS实例信息
      *
      * @param request
      * @return
@@ -980,6 +1105,17 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 根据过滤条件，查监听器列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetLbHttpListenerResponse getLbHttpListener(GetLbHttpListenerRequest request) throws JdcloudSdkException {
+        return new GetLbHttpListenerExecutor().client(this).execute(request);
+    }
+
+    /**
      * 预部署
      *
      * @param request
@@ -1002,6 +1138,17 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 查询可用域列表信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRegionsAvailableZonesResponse getRegionsAvailableZones(GetRegionsAvailableZonesRequest request) throws JdcloudSdkException {
+        return new GetRegionsAvailableZonesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 从虚拟机卸载云硬盘
      *
      * @param request
@@ -1010,6 +1157,17 @@ public class JdfusionClient extends JdcloudClient {
      */
     public DetachDiskToVmInstanceByDiskIdResponse detachDiskToVmInstanceByDiskId(DetachDiskToVmInstanceByDiskIdRequest request) throws JdcloudSdkException {
         return new DetachDiskToVmInstanceByDiskIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启动监听器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartSlbListenerResponse startSlbListener(StartSlbListenerRequest request) throws JdcloudSdkException {
+        return new StartSlbListenerExecutor().client(this).execute(request);
     }
 
     /**
@@ -1046,7 +1204,7 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 根据云提供商查询对应的安全组资源信息
+     * 查询指定的安全组资源信息
      *
      * @param request
      * @return
@@ -1109,6 +1267,17 @@ public class JdfusionClient extends JdcloudClient {
      */
     public GetVpcSecurityGroupsResponse getVpcSecurityGroups(GetVpcSecurityGroupsRequest request) throws JdcloudSdkException {
         return new GetVpcSecurityGroupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新增安全组规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSecurityGroupsRuleResponse createSecurityGroupsRule(CreateSecurityGroupsRuleRequest request) throws JdcloudSdkException {
+        return new CreateSecurityGroupsRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -1288,6 +1457,17 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 启动负载均衡
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartSlbResponse startSlb(StartSlbRequest request) throws JdcloudSdkException {
+        return new StartSlbExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据云提供商查询对应的VM资源信息
      *
      * @param request
@@ -1296,6 +1476,28 @@ public class JdfusionClient extends JdcloudClient {
      */
     public GetVmInstancesByIdResponse getVmInstancesById(GetVmInstancesByIdRequest request) throws JdcloudSdkException {
         return new GetVmInstancesByIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询地域列表信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRegionsResponse getRegions(GetRegionsRequest request) throws JdcloudSdkException {
+        return new GetRegionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止负载均衡
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopSlbResponse stopSlb(StopSlbRequest request) throws JdcloudSdkException {
+        return new StopSlbExecutor().client(this).execute(request);
     }
 
     /**
@@ -1398,6 +1600,17 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
+     * 通过异步任务，给RDS账号分配数据库权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GrantRdsAccountsByTaskResponse grantRdsAccountsByTask(GrantRdsAccountsByTaskRequest request) throws JdcloudSdkException {
+        return new GrantRdsAccountsByTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 卸载网卡
      *
      * @param request
@@ -1417,6 +1630,17 @@ public class JdfusionClient extends JdcloudClient {
      */
     public CreateVmInstanceResponse createVmInstance(CreateVmInstanceRequest request) throws JdcloudSdkException {
         return new CreateVmInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除监听器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSlbsListenerResponse deleteSlbsListener(DeleteSlbsListenerRequest request) throws JdcloudSdkException {
+        return new DeleteSlbsListenerExecutor().client(this).execute(request);
     }
 
     /**
@@ -1442,7 +1666,7 @@ public class JdfusionClient extends JdcloudClient {
     }
 
     /**
-     * 给RDS账号分配数据库权限
+     * 撤销RDS账号在指定数据库的所有权限
      *
      * @param request
      * @return

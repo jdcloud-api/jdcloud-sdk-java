@@ -35,7 +35,7 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的播放加速域名
+     * 播放域名
      * Required:true
      */
     @Required
@@ -43,17 +43,23 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
 
     /**
      * 播放鉴权状态
+  on: 开启
+  off: 关闭
+- 当推流鉴权状态on(开启)时,authKey不能为空
+
      */
     private String authStatus;
 
     /**
      * 播放鉴权key
+- 取值: 支持大小写字母和数字 长度6-32位
+
      */
     private String authKey;
 
 
     /**
-     * get 您的播放加速域名
+     * get 播放域名
      *
      * @return
      */
@@ -62,7 +68,7 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 您的播放加速域名
+     * set 播放域名
      *
      * @param playDomain
      */
@@ -72,6 +78,10 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
 
     /**
      * get 播放鉴权状态
+  on: 开启
+  off: 关闭
+- 当推流鉴权状态on(开启)时,authKey不能为空
+
      *
      * @return
      */
@@ -81,6 +91,10 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
 
     /**
      * set 播放鉴权状态
+  on: 开启
+  off: 关闭
+- 当推流鉴权状态on(开启)时,authKey不能为空
+
      *
      * @param authStatus
      */
@@ -90,6 +104,8 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
 
     /**
      * get 播放鉴权key
+- 取值: 支持大小写字母和数字 长度6-32位
+
      *
      * @return
      */
@@ -99,6 +115,8 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
 
     /**
      * set 播放鉴权key
+- 取值: 支持大小写字母和数字 长度6-32位
+
      *
      * @param authKey
      */
@@ -108,7 +126,7 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 您的播放加速域名
+     * set 播放域名
      *
      * @param playDomain
      */
@@ -119,6 +137,10 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
 
     /**
      * set 播放鉴权状态
+  on: 开启
+  off: 关闭
+- 当推流鉴权状态on(开启)时,authKey不能为空
+
      *
      * @param authStatus
      */
@@ -129,6 +151,8 @@ public class SetLivePlayAuthKeyRequest extends JdcloudRequest implements java.io
 
     /**
      * set 播放鉴权key
+- 取值: 支持大小写字母和数字 长度6-32位
+
      *
      * @param authKey
      */

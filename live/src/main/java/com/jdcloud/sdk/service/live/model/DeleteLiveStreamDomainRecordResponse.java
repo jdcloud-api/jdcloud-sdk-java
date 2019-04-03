@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除域名录制配置
+ * 删除域名级别录制模板配置
+- 删除域名级别录制模板配置,重新推流后生效
+
  */
 public class DeleteLiveStreamDomainRecordResponse extends JdcloudResponse<DeleteLiveStreamDomainRecordResult> implements java.io.Serializable {
 

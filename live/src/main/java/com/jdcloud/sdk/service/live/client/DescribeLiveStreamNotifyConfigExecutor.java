@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamNotifyConfigResponse;
 
 /**
- * 查询直播流状态通知
+ * 查询直播流状态回调地址
  */
 class DescribeLiveStreamNotifyConfigExecutor extends JdcloudExecutor {
 

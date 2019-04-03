@@ -67,7 +67,6 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
               首尾不能有特殊字符(&quot;-&quot;)
@@ -216,7 +215,6 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * get 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
               首尾不能有特殊字符(&quot;-&quot;)
@@ -231,7 +229,6 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * set 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
               首尾不能有特殊字符(&quot;-&quot;)
@@ -418,7 +415,6 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * set 转码模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
   - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
               首尾不能有特殊字符(&quot;-&quot;)

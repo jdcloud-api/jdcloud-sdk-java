@@ -30,6 +30,7 @@ import com.jdcloud.sdk.service.live.model.DescribeLiveStreamSnapshotNotifyConfig
 
 /**
  * 查询截图回调配置
+
  */
 class DescribeLiveStreamSnapshotNotifyConfigExecutor extends JdcloudExecutor {
 

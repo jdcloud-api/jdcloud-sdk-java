@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainWatermarkResponse;
 
 /**
- * 删除域名水印配置
+ * 删除域名级别水印模板配置
+- 删除域名级别水印模板配置,重新推流后生效
+
  */
 class DeleteLiveStreamDomainWatermarkExecutor extends JdcloudExecutor {
 

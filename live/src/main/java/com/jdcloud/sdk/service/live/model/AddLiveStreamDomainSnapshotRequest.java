@@ -28,26 +28,23 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加域名直播截图配置
+ * 添加域名截图配置
+- 添加域名级别的截图模板配置
+
  */
 public class AddLiveStreamDomainSnapshotRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 截图模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * 截图模板
 
      * Required:true
      */
@@ -56,7 +53,7 @@ public class AddLiveStreamDomainSnapshotRequest extends JdcloudRequest implement
 
 
     /**
-     * get 您的推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -65,7 +62,7 @@ public class AddLiveStreamDomainSnapshotRequest extends JdcloudRequest implement
     }
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -74,12 +71,7 @@ public class AddLiveStreamDomainSnapshotRequest extends JdcloudRequest implement
     }
 
     /**
-     * get 截图模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * get 截图模板
 
      *
      * @return
@@ -89,12 +81,7 @@ public class AddLiveStreamDomainSnapshotRequest extends JdcloudRequest implement
     }
 
     /**
-     * set 截图模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 截图模板
 
      *
      * @param template
@@ -105,7 +92,7 @@ public class AddLiveStreamDomainSnapshotRequest extends JdcloudRequest implement
 
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -115,12 +102,7 @@ public class AddLiveStreamDomainSnapshotRequest extends JdcloudRequest implement
     }
 
     /**
-     * set 截图模板自定义名称:
-  - 标准质量模板：sd、hd、hsd
-  - 自定义模板: 枚举类型校验，忽略大小写，自动删除空格,
-               取值要求：数字、大小写字母或短横线(&quot;-&quot;),
-               首尾不能有特殊字符(&quot;-&quot;)
-  - &lt;b&gt;注意: 不能与标准的转码模板和已定义命名重复&lt;/b&gt;
+     * set 截图模板
 
      *
      * @param template

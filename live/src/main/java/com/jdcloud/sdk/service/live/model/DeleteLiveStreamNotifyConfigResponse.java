@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除直播流状态通知
+ * 删除直播流状态回调地址
  */
 public class DeleteLiveStreamNotifyConfigResponse extends JdcloudResponse<DeleteLiveStreamNotifyConfigResult> implements java.io.Serializable {
 

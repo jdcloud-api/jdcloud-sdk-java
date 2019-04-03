@@ -34,23 +34,32 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码
+- 取值范围[1, 100000]
+
      */
     private Integer pageNum;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小
+- 取值范围[10, 100]
+
      */
     private Integer pageSize;
 
     /**
-     * 域名
+     * 推流域名
+- 目前仅支持精确查询
+- 为空时,查询用户所有直播域名
+
      */
     private String publishDomain;
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码
+- 取值范围[1, 100000]
+
      *
      * @return
      */
@@ -59,7 +68,9 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围[1, 100000]
+
      *
      * @param pageNum
      */
@@ -68,7 +79,9 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小
+- 取值范围[10, 100]
+
      *
      * @return
      */
@@ -77,7 +90,9 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -86,7 +101,10 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get 域名
+     * get 推流域名
+- 目前仅支持精确查询
+- 为空时,查询用户所有直播域名
+
      *
      * @return
      */
@@ -95,7 +113,10 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 域名
+     * set 推流域名
+- 目前仅支持精确查询
+- 为空时,查询用户所有直播域名
+
      *
      * @param publishDomain
      */
@@ -105,7 +126,9 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围[1, 100000]
+
      *
      * @param pageNum
      */
@@ -115,7 +138,9 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -125,7 +150,10 @@ public class DescribeLiveDomainsRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 域名
+     * set 推流域名
+- 目前仅支持精确查询
+- 为空时,查询用户所有直播域名
+
      *
      * @param publishDomain
      */

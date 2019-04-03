@@ -28,25 +28,27 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加APP录制配置
+ * 添加应用级别直播录制配置
+- 添加应用级别的直播录制模板配置
+
  */
 public class AddLiveStreamAppRecordRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播流所属应用名称
-     * Required:true
-     */
-    @Required
-    private String appName;
-
-    /**
-     * 您的推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
+
+    /**
+     * 应用名称
+     * Required:true
+     */
+    @Required
+    private String appName;
 
     /**
      * 录制模版
@@ -57,25 +59,7 @@ public class AddLiveStreamAppRecordRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get 直播流所属应用名称
-     *
-     * @return
-     */
-    public String getAppName() {
-        return appName;
-    }
-
-    /**
-     * set 直播流所属应用名称
-     *
-     * @param appName
-     */
-    public void setAppName(String appName) {
-        this.appName = appName;
-    }
-
-    /**
-     * get 您的推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -84,12 +68,30 @@ public class AddLiveStreamAppRecordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
     public void setPublishDomain(String publishDomain) {
         this.publishDomain = publishDomain;
+    }
+
+    /**
+     * get 应用名称
+     *
+     * @return
+     */
+    public String getAppName() {
+        return appName;
+    }
+
+    /**
+     * set 应用名称
+     *
+     * @param appName
+     */
+    public void setAppName(String appName) {
+        this.appName = appName;
     }
 
     /**
@@ -112,22 +114,22 @@ public class AddLiveStreamAppRecordRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set 直播流所属应用名称
-     *
-     * @param appName
-     */
-    public AddLiveStreamAppRecordRequest appName(String appName) {
-        this.appName = appName;
-        return this;
-    }
-
-    /**
-     * set 您的推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
     public AddLiveStreamAppRecordRequest publishDomain(String publishDomain) {
         this.publishDomain = publishDomain;
+        return this;
+    }
+
+    /**
+     * set 应用名称
+     *
+     * @param appName
+     */
+    public AddLiveStreamAppRecordRequest appName(String appName) {
+        this.appName = appName;
         return this;
     }
 

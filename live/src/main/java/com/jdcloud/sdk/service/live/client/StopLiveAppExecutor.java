@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.StopLiveAppResponse;
 
 /**
- * 停用APP
+ * 停用 运行中 状态的应用
+- 停用应用之后,不能再用此应用名推流
+
  */
 class StopLiveAppExecutor extends JdcloudExecutor {
 

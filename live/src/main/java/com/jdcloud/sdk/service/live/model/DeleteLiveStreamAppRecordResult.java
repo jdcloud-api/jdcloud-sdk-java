@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除APP录制配置
+ * 删除应用级别录制模板配置
+- 删除应用级别的录制模板配置,重新推流后生效
+
  */
 public class DeleteLiveStreamAppRecordResult extends JdcloudResult implements java.io.Serializable {
 

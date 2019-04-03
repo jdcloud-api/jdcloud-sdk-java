@@ -82,6 +82,16 @@ public class SubnetInfo  implements java.io.Serializable {
      */
     private String cloudID;
 
+    /**
+     * 可用区
+     */
+    private String az;
+
+    /**
+     * 子网创建时间
+     */
+    private String createdTime;
+
 
     /**
      * get Subnet的Id
@@ -263,6 +273,42 @@ public class SubnetInfo  implements java.io.Serializable {
         this.cloudID = cloudID;
     }
 
+    /**
+     * get 可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
+    /**
+     * get 子网创建时间
+     *
+     * @return
+     */
+    public String getCreatedTime() {
+        return createdTime;
+    }
+
+    /**
+     * set 子网创建时间
+     *
+     * @param createdTime
+     */
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+    }
+
 
     /**
      * set Subnet的Id
@@ -361,6 +407,26 @@ public class SubnetInfo  implements java.io.Serializable {
      */
     public SubnetInfo cloudID(String cloudID) {
         this.cloudID = cloudID;
+        return this;
+    }
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public SubnetInfo az(String az) {
+        this.az = az;
+        return this;
+    }
+
+    /**
+     * set 子网创建时间
+     *
+     * @param createdTime
+     */
+    public SubnetInfo createdTime(String createdTime) {
+        this.createdTime = createdTime;
         return this;
     }
 

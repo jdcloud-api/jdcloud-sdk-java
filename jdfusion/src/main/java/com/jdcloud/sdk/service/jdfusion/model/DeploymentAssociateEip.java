@@ -42,6 +42,11 @@ public class DeploymentAssociateEip  implements java.io.Serializable {
      */
     private String instanceId;
 
+    /**
+     * 要解绑的资源类型  虚拟机：vm 负载均衡：slb
+     */
+    private String instanceType;
+
 
     /**
      * get 公网IP id
@@ -79,6 +84,24 @@ public class DeploymentAssociateEip  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+    /**
+     * get 要解绑的资源类型  虚拟机：vm 负载均衡：slb
+     *
+     * @return
+     */
+    public String getInstanceType() {
+        return instanceType;
+    }
+
+    /**
+     * set 要解绑的资源类型  虚拟机：vm 负载均衡：slb
+     *
+     * @param instanceType
+     */
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+    }
+
 
     /**
      * set 公网IP id
@@ -97,6 +120,16 @@ public class DeploymentAssociateEip  implements java.io.Serializable {
      */
     public DeploymentAssociateEip instanceId(String instanceId) {
         this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 要解绑的资源类型  虚拟机：vm 负载均衡：slb
+     *
+     * @param instanceType
+     */
+    public DeploymentAssociateEip instanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
 

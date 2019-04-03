@@ -31,28 +31,36 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 查询转码模板配置
+- 转码模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效原则
+- 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+- 该查询旨在查询域名、应用、流最终生效的转码模板配置,并非各级的模板绑定情况
+
  */
 public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码
+- 取值范围 [1, 100000]
+
      */
     private Integer pageNum;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小
+- 取值范围[10, 100]
+
      */
     private Integer pageSize;
 
     /**
      * 模板配置查询过滤条件:
-  - name:   publishDomain，必填(直播推流域名)
+  - name:   publishDomain 必填(推流域名)
   - value:  参数
-  - name:   appName，必填(应用名称)
+  - name:   appName 必填(应用名称)
   - value:  参数
-  - name:   streamName，非必填(推流名称)
+  - name:   streamName 非必填(流名称)
   - value:  参数
 
      */
@@ -60,7 +68,9 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码
+- 取值范围 [1, 100000]
+
      *
      * @return
      */
@@ -69,7 +79,9 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围 [1, 100000]
+
      *
      * @param pageNum
      */
@@ -78,7 +90,9 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小
+- 取值范围[10, 100]
+
      *
      * @return
      */
@@ -87,7 +101,9 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -97,11 +113,11 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
 
     /**
      * get 模板配置查询过滤条件:
-  - name:   publishDomain，必填(直播推流域名)
+  - name:   publishDomain 必填(推流域名)
   - value:  参数
-  - name:   appName，必填(应用名称)
+  - name:   appName 必填(应用名称)
   - value:  参数
-  - name:   streamName，非必填(推流名称)
+  - name:   streamName 非必填(流名称)
   - value:  参数
 
      *
@@ -113,11 +129,11 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
 
     /**
      * set 模板配置查询过滤条件:
-  - name:   publishDomain，必填(直播推流域名)
+  - name:   publishDomain 必填(推流域名)
   - value:  参数
-  - name:   appName，必填(应用名称)
+  - name:   appName 必填(应用名称)
   - value:  参数
-  - name:   streamName，非必填(推流名称)
+  - name:   streamName 非必填(流名称)
   - value:  参数
 
      *
@@ -129,7 +145,9 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围 [1, 100000]
+
      *
      * @param pageNum
      */
@@ -139,7 +157,9 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -150,11 +170,11 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
 
     /**
      * set 模板配置查询过滤条件:
-  - name:   publishDomain，必填(直播推流域名)
+  - name:   publishDomain 必填(推流域名)
   - value:  参数
-  - name:   appName，必填(应用名称)
+  - name:   appName 必填(应用名称)
   - value:  参数
-  - name:   streamName，非必填(推流名称)
+  - name:   streamName 非必填(流名称)
   - value:  参数
 
      *
@@ -168,11 +188,11 @@ public class DescribeLiveStreamTranscodeConfigRequest extends JdcloudRequest imp
 
     /**
      * add item to 模板配置查询过滤条件:
-  - name:   publishDomain，必填(直播推流域名)
+  - name:   publishDomain 必填(推流域名)
   - value:  参数
-  - name:   appName，必填(应用名称)
+  - name:   appName 必填(应用名称)
   - value:  参数
-  - name:   streamName，非必填(推流名称)
+  - name:   streamName 非必填(流名称)
   - value:  参数
 
      *

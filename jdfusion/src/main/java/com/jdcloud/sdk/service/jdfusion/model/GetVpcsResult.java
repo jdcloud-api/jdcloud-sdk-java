@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.jdfusion.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.jdfusion.model.VpcInfo;
+import com.jdcloud.sdk.service.jdfusion.model.VpcListInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,7 +39,7 @@ public class GetVpcsResult extends JdcloudResult implements java.io.Serializable
     /**
      * vpcs
      */
-    private List<VpcInfo> vpcs;
+    private List<VpcListInfo> vpcs;
 
 
     /**
@@ -47,7 +47,7 @@ public class GetVpcsResult extends JdcloudResult implements java.io.Serializable
      *
      * @return
      */
-    public List<VpcInfo> getVpcs() {
+    public List<VpcListInfo> getVpcs() {
         return vpcs;
     }
 
@@ -56,7 +56,7 @@ public class GetVpcsResult extends JdcloudResult implements java.io.Serializable
      *
      * @param vpcs
      */
-    public void setVpcs(List<VpcInfo> vpcs) {
+    public void setVpcs(List<VpcListInfo> vpcs) {
         this.vpcs = vpcs;
     }
 
@@ -66,7 +66,7 @@ public class GetVpcsResult extends JdcloudResult implements java.io.Serializable
      *
      * @param vpcs
      */
-    public GetVpcsResult vpcs(List<VpcInfo> vpcs) {
+    public GetVpcsResult vpcs(List<VpcListInfo> vpcs) {
         this.vpcs = vpcs;
         return this;
     }
@@ -77,7 +77,7 @@ public class GetVpcsResult extends JdcloudResult implements java.io.Serializable
      *
      * @param vpc
      */
-    public void addVpc(VpcInfo vpc) {
+    public void addVpc(VpcListInfo vpc) {
         if (this.vpcs == null) {
             this.vpcs = new ArrayList<>();
         }

@@ -28,6 +28,9 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 添加直播域名
+- 创建直播域名之前,必须先开通直播服务
+- 直播域名必须已经备案完成
+
  */
 public class AddLiveDomainResult extends JdcloudResult implements java.io.Serializable {
 

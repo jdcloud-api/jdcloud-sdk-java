@@ -28,23 +28,22 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置推流回调配置
+ * 设置直播流状态回调地址
  */
 public class SetLiveStreamNotifyConfigRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的加速域名
+     * 推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 设置直播流信息推送到的 URL 地址:
-  - 必须以 http:// 开头
-  - 正则校验格式
+     * 直播流状态回调地址
+- 必须以 http:// 开头
 
      * Required:true
      */
@@ -53,7 +52,7 @@ public class SetLiveStreamNotifyConfigRequest extends JdcloudRequest implements 
 
 
     /**
-     * get 您的加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -62,7 +61,7 @@ public class SetLiveStreamNotifyConfigRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 您的加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -71,9 +70,8 @@ public class SetLiveStreamNotifyConfigRequest extends JdcloudRequest implements 
     }
 
     /**
-     * get 设置直播流信息推送到的 URL 地址:
-  - 必须以 http:// 开头
-  - 正则校验格式
+     * get 直播流状态回调地址
+- 必须以 http:// 开头
 
      *
      * @return
@@ -83,9 +81,8 @@ public class SetLiveStreamNotifyConfigRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 设置直播流信息推送到的 URL 地址:
-  - 必须以 http:// 开头
-  - 正则校验格式
+     * set 直播流状态回调地址
+- 必须以 http:// 开头
 
      *
      * @param notifyUrl
@@ -96,7 +93,7 @@ public class SetLiveStreamNotifyConfigRequest extends JdcloudRequest implements 
 
 
     /**
-     * set 您的加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -106,9 +103,8 @@ public class SetLiveStreamNotifyConfigRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 设置直播流信息推送到的 URL 地址:
-  - 必须以 http:// 开头
-  - 正则校验格式
+     * set 直播流状态回调地址
+- 必须以 http:// 开头
 
      *
      * @param notifyUrl

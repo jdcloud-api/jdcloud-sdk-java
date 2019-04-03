@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.live.model.OnlineStreamInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看域名下所有的正在推的流的信息
+ * 查询直播中的流的信息
  */
 public class DescribeLiveStreamOnlineListResult extends JdcloudResult implements java.io.Serializable {
 

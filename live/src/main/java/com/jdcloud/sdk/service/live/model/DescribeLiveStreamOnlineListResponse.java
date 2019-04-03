@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看域名下所有的正在推的流的信息
+ * 查询直播中的流的信息
  */
 public class DescribeLiveStreamOnlineListResponse extends JdcloudResponse<DescribeLiveStreamOnlineListResult> implements java.io.Serializable {
 

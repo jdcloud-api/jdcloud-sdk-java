@@ -33,28 +33,28 @@ public class RecordDetail  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 格式:
-  - MP4
-  - FLV
-  - TS
+     * 格式
+  mp4
+  flv
+  ts
 
      */
     private String format;
 
     /**
      * 时长:
-  - 单位: 分
-  - 精确两位小数
+- 单位: 分钟
+- 精确两位小数
 
      */
     private Double duration;
 
 
     /**
-     * get 格式:
-  - MP4
-  - FLV
-  - TS
+     * get 格式
+  mp4
+  flv
+  ts
 
      *
      * @return
@@ -64,10 +64,10 @@ public class RecordDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 格式:
-  - MP4
-  - FLV
-  - TS
+     * set 格式
+  mp4
+  flv
+  ts
 
      *
      * @param format
@@ -78,8 +78,8 @@ public class RecordDetail  implements java.io.Serializable {
 
     /**
      * get 时长:
-  - 单位: 分
-  - 精确两位小数
+- 单位: 分钟
+- 精确两位小数
 
      *
      * @return
@@ -90,8 +90,8 @@ public class RecordDetail  implements java.io.Serializable {
 
     /**
      * set 时长:
-  - 单位: 分
-  - 精确两位小数
+- 单位: 分钟
+- 精确两位小数
 
      *
      * @param duration
@@ -102,10 +102,10 @@ public class RecordDetail  implements java.io.Serializable {
 
 
     /**
-     * set 格式:
-  - MP4
-  - FLV
-  - TS
+     * set 格式
+  mp4
+  flv
+  ts
 
      *
      * @param format
@@ -117,8 +117,8 @@ public class RecordDetail  implements java.io.Serializable {
 
     /**
      * set 时长:
-  - 单位: 分
-  - 精确两位小数
+- 单位: 分钟
+- 精确两位小数
 
      *
      * @param duration

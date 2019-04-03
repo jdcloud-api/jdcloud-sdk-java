@@ -30,7 +30,8 @@ import com.jdcloud.sdk.service.live.model.WatermarkTemplate;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询水印模板列表
+ * 查询用户定义水印模板列表
+
  */
 public class DescribeCustomLiveStreamWatermarkTemplatesResult extends JdcloudResult implements java.io.Serializable {
 

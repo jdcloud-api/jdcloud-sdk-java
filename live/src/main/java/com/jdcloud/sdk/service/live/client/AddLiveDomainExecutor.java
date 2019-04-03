@@ -30,6 +30,9 @@ import com.jdcloud.sdk.service.live.model.AddLiveDomainResponse;
 
 /**
  * 添加直播域名
+- 创建直播域名之前,必须先开通直播服务
+- 直播域名必须已经备案完成
+
  */
 class AddLiveDomainExecutor extends JdcloudExecutor {
 

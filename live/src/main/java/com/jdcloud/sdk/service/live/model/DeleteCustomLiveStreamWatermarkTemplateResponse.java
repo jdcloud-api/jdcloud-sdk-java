@@ -28,6 +28,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 删除用户自定义水印模板
+- 删除用户自定义水印模板之前必须先删除此模板在各域名、应用、流级别的水印设置
+
  */
 public class DeleteCustomLiveStreamWatermarkTemplateResponse extends JdcloudResponse<DeleteCustomLiveStreamWatermarkTemplateResult> implements java.io.Serializable {
 

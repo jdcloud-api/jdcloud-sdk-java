@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.jdfusion.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 子网属性信息
@@ -96,6 +98,16 @@ public class NetInterfaceInfo  implements java.io.Serializable {
      * 所属云提供商ID
      */
     private String cloudID;
+
+    /**
+     * 安全组id列表
+     */
+    private List<String> securityGroupIds;
+
+    /**
+     * 内网ip详情列表。
+     */
+    private List<PrivateIp> privateIps;
 
 
     /**
@@ -332,6 +344,42 @@ public class NetInterfaceInfo  implements java.io.Serializable {
         this.cloudID = cloudID;
     }
 
+    /**
+     * get 安全组id列表
+     *
+     * @return
+     */
+    public List<String> getSecurityGroupIds() {
+        return securityGroupIds;
+    }
+
+    /**
+     * set 安全组id列表
+     *
+     * @param securityGroupIds
+     */
+    public void setSecurityGroupIds(List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+    }
+
+    /**
+     * get 内网ip详情列表。
+     *
+     * @return
+     */
+    public List<PrivateIp> getPrivateIps() {
+        return privateIps;
+    }
+
+    /**
+     * set 内网ip详情列表。
+     *
+     * @param privateIps
+     */
+    public void setPrivateIps(List<PrivateIp> privateIps) {
+        this.privateIps = privateIps;
+    }
+
 
     /**
      * set 网卡的Id
@@ -463,5 +511,49 @@ public class NetInterfaceInfo  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 安全组id列表
+     *
+     * @param securityGroupIds
+     */
+    public NetInterfaceInfo securityGroupIds(List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+
+    /**
+     * set 内网ip详情列表。
+     *
+     * @param privateIps
+     */
+    public NetInterfaceInfo privateIps(List<PrivateIp> privateIps) {
+        this.privateIps = privateIps;
+        return this;
+    }
+
+
+    /**
+     * add item to 安全组id列表
+     *
+     * @param securityGroupId
+     */
+    public void addSecurityGroupId(String securityGroupId) {
+        if (this.securityGroupIds == null) {
+            this.securityGroupIds = new ArrayList<>();
+        }
+        this.securityGroupIds.add(securityGroupId);
+    }
+
+    /**
+     * add item to 内网ip详情列表。
+     *
+     * @param privateIp
+     */
+    public void addPrivateIp(PrivateIp privateIp) {
+        if (this.privateIps == null) {
+            this.privateIps = new ArrayList<>();
+        }
+        this.privateIps.add(privateIp);
+    }
 
 }

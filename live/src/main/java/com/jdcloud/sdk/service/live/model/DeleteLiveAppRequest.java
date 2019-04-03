@@ -28,14 +28,17 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除APP
+ * 删除应用
+- 删除应用之前需要先停用应用
+- 删除应用同时会删除此应用下的所有数据
+
  */
 public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播推流域名
+     * 推流域名
      * Required:true
      */
     @Required
@@ -50,7 +53,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 直播推流域名
+     * get 推流域名
      *
      * @return
      */
@@ -59,7 +62,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 直播推流域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -87,7 +90,7 @@ public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 直播推流域名
+     * set 推流域名
      *
      * @param publishDomain
      */

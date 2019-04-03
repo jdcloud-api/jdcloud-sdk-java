@@ -30,6 +30,7 @@ import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainWatermarkResponse;
 
 /**
  * 添加域名水印配置
+
  */
 class AddLiveStreamDomainWatermarkExecutor extends JdcloudExecutor {
 

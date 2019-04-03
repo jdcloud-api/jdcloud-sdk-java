@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 设置推流回调配置
+ * 设置直播流状态回调地址
  */
 public class SetLiveStreamNotifyConfigResponse extends JdcloudResponse<SetLiveStreamNotifyConfigResult> implements java.io.Serializable {
 

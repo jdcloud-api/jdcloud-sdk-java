@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除直播流状态通知
+ * 删除直播流状态回调地址
  */
 public class DeleteLiveStreamNotifyConfigRequest extends JdcloudRequest implements java.io.Serializable {
 

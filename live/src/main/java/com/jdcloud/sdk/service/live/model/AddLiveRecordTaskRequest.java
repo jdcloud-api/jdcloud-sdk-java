@@ -31,8 +31,8 @@ import com.jdcloud.sdk.service.live.model.RecordTime;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加录制打点任务
-  - 您可以调用此接口精确提取已录制的文件中所需要的部分
+ * 添加打点录制任务
+- 您可以调用此接口精确提取已录制的文件中所需要的部分
 
  */
 public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.Serializable {
@@ -40,7 +40,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 录制时间集合
+     * 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
      * Required:true
      */
     @Required
@@ -62,8 +62,8 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * 录制文件类型:
-  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
-  - 不区分大小写
+- 取值: ts,flv,mp4 (多种类型之前用;隔开)
+- 不区分大小写
 
      * Required:true
      */
@@ -72,27 +72,27 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * 录制文件存储路径:
-  - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
 
      */
     private String saveObject;
 
     /**
-     * 推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
     private String publishDomain;
 
     /**
-     * 直播流所属应用名称
+     * 应用名称
      * Required:true
      */
     @Required
     private String appName;
 
     /**
-     * 直播流名称
+     * 流名称
      * Required:true
      */
     @Required
@@ -100,7 +100,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 录制时间集合
+     * get 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 录制时间集合
+     * set 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
      *
      * @param recordTimes
      */
@@ -155,8 +155,8 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * get 录制文件类型:
-  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
-  - 不区分大小写
+- 取值: ts,flv,mp4 (多种类型之前用;隔开)
+- 不区分大小写
 
      *
      * @return
@@ -167,8 +167,8 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * set 录制文件类型:
-  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
-  - 不区分大小写
+- 取值: ts,flv,mp4 (多种类型之前用;隔开)
+- 不区分大小写
 
      *
      * @param recordFileType
@@ -179,7 +179,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * get 录制文件存储路径:
-  - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
 
      *
      * @return
@@ -190,7 +190,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * set 录制文件存储路径:
-  - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
 
      *
      * @param saveObject
@@ -200,7 +200,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -209,7 +209,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -218,7 +218,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 直播流所属应用名称
+     * get 应用名称
      *
      * @return
      */
@@ -227,7 +227,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -236,7 +236,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 直播流名称
+     * get 流名称
      *
      * @return
      */
@@ -245,7 +245,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -255,7 +255,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 录制时间集合
+     * set 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
      *
      * @param recordTimes
      */
@@ -286,8 +286,8 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * set 录制文件类型:
-  - 取值: ts,flv,mp4 (多种类型之前用;隔开)
-  - 不区分大小写
+- 取值: ts,flv,mp4 (多种类型之前用;隔开)
+- 不区分大小写
 
      *
      * @param recordFileType
@@ -299,7 +299,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * set 录制文件存储路径:
-  - 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
 
      *
      * @param saveObject
@@ -310,7 +310,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -320,7 +320,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 直播流所属应用名称
+     * set 应用名称
      *
      * @param appName
      */
@@ -330,7 +330,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 直播流名称
+     * set 流名称
      *
      * @param streamName
      */
@@ -341,7 +341,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * add item to 录制时间集合
+     * add item to 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
      *
      * @param recordTime
      */

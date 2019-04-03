@@ -40,7 +40,7 @@ class OperateLiveDomainIpBlackListExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/liveDomain/{domain}/ipBlackList:{blackIpsEnable}";
+        return "/liveDomain/{domain}/ipBlackList:operate";
     }
 
     @Override

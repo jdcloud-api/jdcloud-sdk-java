@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamNotifyConfigResponse;
 
 /**
- * 删除直播流状态通知
+ * 删除直播流状态回调地址
  */
 class DeleteLiveStreamNotifyConfigExecutor extends JdcloudExecutor {
 

@@ -28,6 +28,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 删除用户自定义录制模板
+- 删除用户自定义录制模板之前必须先删除此模板在各域名、应用、流级别的录制设置
+
  */
 public class DeleteCustomLiveStreamRecordTemplateResponse extends JdcloudResponse<DeleteCustomLiveStreamRecordTemplateResult> implements java.io.Serializable {
 

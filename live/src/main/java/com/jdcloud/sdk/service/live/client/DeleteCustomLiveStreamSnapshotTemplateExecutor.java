@@ -30,6 +30,8 @@ import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamSnapshotTemplate
 
 /**
  * 删除用户自定义直播截图模板
+- 删除截图模板前,请先删除此模板相关的截图配置,否则将会影响线上业务
+
  */
 class DeleteCustomLiveStreamSnapshotTemplateExecutor extends JdcloudExecutor {
 

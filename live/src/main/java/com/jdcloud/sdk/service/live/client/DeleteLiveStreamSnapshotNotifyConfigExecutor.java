@@ -30,6 +30,7 @@ import com.jdcloud.sdk.service.live.model.DeleteLiveStreamSnapshotNotifyConfigRe
 
 /**
  * 删除截图回调配置
+
  */
 class DeleteLiveStreamSnapshotNotifyConfigExecutor extends JdcloudExecutor {
 

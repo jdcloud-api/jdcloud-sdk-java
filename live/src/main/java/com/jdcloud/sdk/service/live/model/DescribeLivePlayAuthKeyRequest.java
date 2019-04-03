@@ -35,7 +35,9 @@ public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的播放加速域名
+     * 直播的播放域名
+- 仅支持精确匹配
+
      * Required:true
      */
     @Required
@@ -43,7 +45,9 @@ public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 您的播放加速域名
+     * get 直播的播放域名
+- 仅支持精确匹配
+
      *
      * @return
      */
@@ -52,7 +56,9 @@ public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 您的播放加速域名
+     * set 直播的播放域名
+- 仅支持精确匹配
+
      *
      * @param playDomain
      */
@@ -62,7 +68,9 @@ public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 您的播放加速域名
+     * set 直播的播放域名
+- 仅支持精确匹配
+
      *
      * @param playDomain
      */

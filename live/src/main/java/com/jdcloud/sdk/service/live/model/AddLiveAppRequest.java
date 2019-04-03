@@ -28,14 +28,17 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加直播APP
+ * 添加直播应用名
+- 需要提前在应用(app)级别绑定功能模板时才需要提前新建应用名
+- 新的应用名可以推流时自动创建
+
  */
 public class AddLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播的推流域名(不支持泛域名)
+     * 直播的推流域名
      * Required:true
      */
     @Required
@@ -43,6 +46,8 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
 
     /**
      * 应用名称
+- 取值: 数字字母中划线(&quot;-&quot;)下划线(&quot;_&quot;) 50个字符以内
+
      * Required:true
      */
     @Required
@@ -50,7 +55,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 直播的推流域名(不支持泛域名)
+     * get 直播的推流域名
      *
      * @return
      */
@@ -59,7 +64,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 直播的推流域名(不支持泛域名)
+     * set 直播的推流域名
      *
      * @param publishDomain
      */
@@ -69,6 +74,8 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
 
     /**
      * get 应用名称
+- 取值: 数字字母中划线(&quot;-&quot;)下划线(&quot;_&quot;) 50个字符以内
+
      *
      * @return
      */
@@ -78,6 +85,8 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
 
     /**
      * set 应用名称
+- 取值: 数字字母中划线(&quot;-&quot;)下划线(&quot;_&quot;) 50个字符以内
+
      *
      * @param appName
      */
@@ -87,7 +96,7 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 直播的推流域名(不支持泛域名)
+     * set 直播的推流域名
      *
      * @param publishDomain
      */
@@ -98,6 +107,8 @@ public class AddLiveAppRequest extends JdcloudRequest implements java.io.Seriali
 
     /**
      * set 应用名称
+- 取值: 数字字母中划线(&quot;-&quot;)下划线(&quot;_&quot;) 50个字符以内
+
      *
      * @param appName
      */

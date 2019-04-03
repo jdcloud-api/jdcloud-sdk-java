@@ -28,24 +28,28 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看域名下所有的正在推的流的信息
+ * 查询直播中的流的信息
  */
 public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1；取值范围[1, 100000]
+     * 页码
+- 取值范围[1, 100000]
+
      */
     private Integer pageNum;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小
+- 取值范围[10, 100]
+
      */
     private Integer pageSize;
 
     /**
-     * 应用名称（APP）
+     * 应用名称
      */
     private String appName;
 
@@ -58,7 +62,9 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
 
 
     /**
-     * get 页码；默认为1；取值范围[1, 100000]
+     * get 页码
+- 取值范围[1, 100000]
+
      *
      * @return
      */
@@ -67,7 +73,9 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围[1, 100000]
+
      *
      * @param pageNum
      */
@@ -76,7 +84,9 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小
+- 取值范围[10, 100]
+
      *
      * @return
      */
@@ -85,7 +95,9 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -94,7 +106,7 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
     }
 
     /**
-     * get 应用名称（APP）
+     * get 应用名称
      *
      * @return
      */
@@ -103,7 +115,7 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 应用名称（APP）
+     * set 应用名称
      *
      * @param appName
      */
@@ -131,7 +143,9 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
 
 
     /**
-     * set 页码；默认为1；取值范围[1, 100000]
+     * set 页码
+- 取值范围[1, 100000]
+
      *
      * @param pageNum
      */
@@ -141,7 +155,9 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小
+- 取值范围[10, 100]
+
      *
      * @param pageSize
      */
@@ -151,7 +167,7 @@ public class DescribeLiveStreamOnlineListRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set 应用名称（APP）
+     * set 应用名称
      *
      * @param appName
      */

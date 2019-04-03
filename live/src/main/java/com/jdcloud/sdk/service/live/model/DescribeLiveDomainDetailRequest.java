@@ -36,6 +36,8 @@ public class DescribeLiveDomainDetailRequest extends JdcloudRequest implements j
 
     /**
      * 推流域名
+- 需要停用的域名对(推流域名,播放域名)中的推流域名
+
      * Required:true
      */
     @Required
@@ -44,6 +46,8 @@ public class DescribeLiveDomainDetailRequest extends JdcloudRequest implements j
 
     /**
      * get 推流域名
+- 需要停用的域名对(推流域名,播放域名)中的推流域名
+
      *
      * @return
      */
@@ -53,6 +57,8 @@ public class DescribeLiveDomainDetailRequest extends JdcloudRequest implements j
 
     /**
      * set 推流域名
+- 需要停用的域名对(推流域名,播放域名)中的推流域名
+
      *
      * @param publishDomain
      */
@@ -63,6 +69,8 @@ public class DescribeLiveDomainDetailRequest extends JdcloudRequest implements j
 
     /**
      * set 推流域名
+- 需要停用的域名对(推流域名,播放域名)中的推流域名
+
      *
      * @param publishDomain
      */

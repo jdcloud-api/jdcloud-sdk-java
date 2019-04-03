@@ -33,169 +33,148 @@ public class StreamInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播流的音频帧率
+     * 推流域名
      */
-    private Long audioFrameRate;
+    private String publishDomain;
 
     /**
-     * 直播流的 URL
+     * 应用名称
      */
-    private String streamUrl;
+    private String appName;
 
     /**
-     * 直播流的码率
+     * 流名称
      */
-    private Long bitRate;
+    private String streamName;
 
     /**
-     * 直播流的视频帧率
-     */
-    private Long videoFrameRate;
+     * 流状态
+  on: 推流中
+  off: 推流中断
 
-    /**
-     * 统计时刻
      */
-    private String time;
+    private String status;
 
 
     /**
-     * get 直播流的音频帧率
+     * get 推流域名
      *
      * @return
      */
-    public Long getAudioFrameRate() {
-        return audioFrameRate;
+    public String getPublishDomain() {
+        return publishDomain;
     }
 
     /**
-     * set 直播流的音频帧率
+     * set 推流域名
      *
-     * @param audioFrameRate
+     * @param publishDomain
      */
-    public void setAudioFrameRate(Long audioFrameRate) {
-        this.audioFrameRate = audioFrameRate;
+    public void setPublishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
     }
 
     /**
-     * get 直播流的 URL
-     *
-     * @return
-     */
-    public String getStreamUrl() {
-        return streamUrl;
-    }
-
-    /**
-     * set 直播流的 URL
-     *
-     * @param streamUrl
-     */
-    public void setStreamUrl(String streamUrl) {
-        this.streamUrl = streamUrl;
-    }
-
-    /**
-     * get 直播流的码率
+     * get 应用名称
      *
      * @return
      */
-    public Long getBitRate() {
-        return bitRate;
+    public String getAppName() {
+        return appName;
     }
 
     /**
-     * set 直播流的码率
+     * set 应用名称
      *
-     * @param bitRate
+     * @param appName
      */
-    public void setBitRate(Long bitRate) {
-        this.bitRate = bitRate;
+    public void setAppName(String appName) {
+        this.appName = appName;
     }
 
     /**
-     * get 直播流的视频帧率
-     *
-     * @return
-     */
-    public Long getVideoFrameRate() {
-        return videoFrameRate;
-    }
-
-    /**
-     * set 直播流的视频帧率
-     *
-     * @param videoFrameRate
-     */
-    public void setVideoFrameRate(Long videoFrameRate) {
-        this.videoFrameRate = videoFrameRate;
-    }
-
-    /**
-     * get 统计时刻
+     * get 流名称
      *
      * @return
      */
-    public String getTime() {
-        return time;
+    public String getStreamName() {
+        return streamName;
     }
 
     /**
-     * set 统计时刻
+     * set 流名称
      *
-     * @param time
+     * @param streamName
      */
-    public void setTime(String time) {
-        this.time = time;
+    public void setStreamName(String streamName) {
+        this.streamName = streamName;
+    }
+
+    /**
+     * get 流状态
+  on: 推流中
+  off: 推流中断
+
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 流状态
+  on: 推流中
+  off: 推流中断
+
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 
     /**
-     * set 直播流的音频帧率
+     * set 推流域名
      *
-     * @param audioFrameRate
+     * @param publishDomain
      */
-    public StreamInfo audioFrameRate(Long audioFrameRate) {
-        this.audioFrameRate = audioFrameRate;
+    public StreamInfo publishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
         return this;
     }
 
     /**
-     * set 直播流的 URL
+     * set 应用名称
      *
-     * @param streamUrl
+     * @param appName
      */
-    public StreamInfo streamUrl(String streamUrl) {
-        this.streamUrl = streamUrl;
+    public StreamInfo appName(String appName) {
+        this.appName = appName;
         return this;
     }
 
     /**
-     * set 直播流的码率
+     * set 流名称
      *
-     * @param bitRate
+     * @param streamName
      */
-    public StreamInfo bitRate(Long bitRate) {
-        this.bitRate = bitRate;
+    public StreamInfo streamName(String streamName) {
+        this.streamName = streamName;
         return this;
     }
 
     /**
-     * set 直播流的视频帧率
-     *
-     * @param videoFrameRate
-     */
-    public StreamInfo videoFrameRate(Long videoFrameRate) {
-        this.videoFrameRate = videoFrameRate;
-        return this;
-    }
+     * set 流状态
+  on: 推流中
+  off: 推流中断
 
-    /**
-     * set 统计时刻
      *
-     * @param time
+     * @param status
      */
-    public StreamInfo time(String time) {
-        this.time = time;
+    public StreamInfo status(String status) {
+        this.status = status;
         return this;
     }
 

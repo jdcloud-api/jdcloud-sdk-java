@@ -29,13 +29,14 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 删除录制回调配置
+
  */
 public class DeleteLiveStreamRecordNotifyConfigRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 推流加速域名
+     * 推流域名
      * Required:true
      */
     @Required
@@ -43,7 +44,7 @@ public class DeleteLiveStreamRecordNotifyConfigRequest extends JdcloudRequest im
 
 
     /**
-     * get 推流加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -52,7 +53,7 @@ public class DeleteLiveStreamRecordNotifyConfigRequest extends JdcloudRequest im
     }
 
     /**
-     * set 推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -62,7 +63,7 @@ public class DeleteLiveStreamRecordNotifyConfigRequest extends JdcloudRequest im
 
 
     /**
-     * set 推流加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */

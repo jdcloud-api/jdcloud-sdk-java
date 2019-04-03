@@ -29,13 +29,17 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 启动域名
+- 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
+
  */
 public class StartLiveDomainRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 要启动的域名
+     * 推流域名
+- 需要启动的域名对(推流域名,播放域名)中的推流域名
+
      * Required:true
      */
     @Required
@@ -43,7 +47,9 @@ public class StartLiveDomainRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 要启动的域名
+     * get 推流域名
+- 需要启动的域名对(推流域名,播放域名)中的推流域名
+
      *
      * @return
      */
@@ -52,7 +58,9 @@ public class StartLiveDomainRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 要启动的域名
+     * set 推流域名
+- 需要启动的域名对(推流域名,播放域名)中的推流域名
+
      *
      * @param publishDomain
      */
@@ -62,7 +70,9 @@ public class StartLiveDomainRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 要启动的域名
+     * set 推流域名
+- 需要启动的域名对(推流域名,播放域名)中的推流域名
+
      *
      * @param publishDomain
      */

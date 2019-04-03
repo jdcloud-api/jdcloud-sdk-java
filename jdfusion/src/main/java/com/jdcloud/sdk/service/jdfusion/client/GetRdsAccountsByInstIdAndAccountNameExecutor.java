@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jdfusion.model.GetRdsAccountsByInstIdAndAccountNameResponse;
 
 /**
- * 根据过滤条件，取得指定RDS实例上的账号信息
+ * 取得指定RDS实例上的指定账号信息
  */
 class GetRdsAccountsByInstIdAndAccountNameExecutor extends JdcloudExecutor {
 

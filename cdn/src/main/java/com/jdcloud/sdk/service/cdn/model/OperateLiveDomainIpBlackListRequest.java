@@ -35,37 +35,17 @@ public class OperateLiveDomainIpBlackListRequest extends JdcloudRequest implemen
     private static final long serialVersionUID = 1L;
 
     /**
+     * blackIpsEnable
+     */
+    private String blackIpsEnable;
+
+    /**
      * 用户域名
      * Required:true
      */
     @Required
     private String domain;
 
-    /**
-     * blackIpsEnable
-     * Required:true
-     */
-    @Required
-    private String blackIpsEnable;
-
-
-    /**
-     * get 用户域名
-     *
-     * @return
-     */
-    public String getDomain() {
-        return domain;
-    }
-
-    /**
-     * set 用户域名
-     *
-     * @param domain
-     */
-    public void setDomain(String domain) {
-        this.domain = domain;
-    }
 
     /**
      * get blackIpsEnable
@@ -85,16 +65,24 @@ public class OperateLiveDomainIpBlackListRequest extends JdcloudRequest implemen
         this.blackIpsEnable = blackIpsEnable;
     }
 
+    /**
+     * get 用户域名
+     *
+     * @return
+     */
+    public String getDomain() {
+        return domain;
+    }
 
     /**
      * set 用户域名
      *
      * @param domain
      */
-    public OperateLiveDomainIpBlackListRequest domain(String domain) {
+    public void setDomain(String domain) {
         this.domain = domain;
-        return this;
     }
+
 
     /**
      * set blackIpsEnable
@@ -103,6 +91,16 @@ public class OperateLiveDomainIpBlackListRequest extends JdcloudRequest implemen
      */
     public OperateLiveDomainIpBlackListRequest blackIpsEnable(String blackIpsEnable) {
         this.blackIpsEnable = blackIpsEnable;
+        return this;
+    }
+
+    /**
+     * set 用户域名
+     *
+     * @param domain
+     */
+    public OperateLiveDomainIpBlackListRequest domain(String domain) {
+        this.domain = domain;
         return this;
     }
 

@@ -30,6 +30,13 @@ import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamTranscodeTemplateRe
 
 /**
  * 添加自定义转码模板
+- 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
+- 系统标准转码模板
+    ld (h.264/640*360/15f)
+    sd (h.264/854*480/24f)
+    hd (h.264/1280*720/25f)
+    shd (h.264/1920*1080/30f)
+
  */
 class AddCustomLiveStreamTranscodeTemplateExecutor extends JdcloudExecutor {
 

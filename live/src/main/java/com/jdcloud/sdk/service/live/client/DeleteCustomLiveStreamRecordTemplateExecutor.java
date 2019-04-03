@@ -30,6 +30,8 @@ import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamRecordTemplateRe
 
 /**
  * 删除用户自定义录制模板
+- 删除用户自定义录制模板之前必须先删除此模板在各域名、应用、流级别的录制设置
+
  */
 class DeleteCustomLiveStreamRecordTemplateExecutor extends JdcloudExecutor {
 

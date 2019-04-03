@@ -30,7 +30,8 @@ import com.jdcloud.sdk.service.live.model.RecordTemplate;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询录制模板列表
+ * 查询用户自定义直播录制模板列表
+
  */
 public class DescribeCustomLiveStreamRecordTemplatesResult extends JdcloudResult implements java.io.Serializable {
 

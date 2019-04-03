@@ -33,6 +33,11 @@ public class DataDiskInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 硬盘ID
+     */
+    private String diskId;
+
+    /**
      * 硬盘大小
      */
     private Integer diskSize;
@@ -57,6 +62,24 @@ public class DataDiskInfo  implements java.io.Serializable {
      */
     private String status;
 
+
+    /**
+     * get 硬盘ID
+     *
+     * @return
+     */
+    public String getDiskId() {
+        return diskId;
+    }
+
+    /**
+     * set 硬盘ID
+     *
+     * @param diskId
+     */
+    public void setDiskId(String diskId) {
+        this.diskId = diskId;
+    }
 
     /**
      * get 硬盘大小
@@ -148,6 +171,16 @@ public class DataDiskInfo  implements java.io.Serializable {
         this.status = status;
     }
 
+
+    /**
+     * set 硬盘ID
+     *
+     * @param diskId
+     */
+    public DataDiskInfo diskId(String diskId) {
+        this.diskId = diskId;
+        return this;
+    }
 
     /**
      * set 硬盘大小

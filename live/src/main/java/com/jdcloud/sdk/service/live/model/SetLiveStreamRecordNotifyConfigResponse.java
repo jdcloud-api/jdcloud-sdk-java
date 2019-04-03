@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 设置录制回调通知
+ * 设置直播录制回调通知
+
  */
 public class SetLiveStreamRecordNotifyConfigResponse extends JdcloudResponse<SetLiveStreamRecordNotifyConfigResult> implements java.io.Serializable {
 

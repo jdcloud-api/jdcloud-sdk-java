@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jdfusion.model.GetVpcSecurityGroupByIdResponse;
 
 /**
- * 根据云提供商查询对应的安全组资源信息
+ * 查询指定的安全组资源信息
  */
 class GetVpcSecurityGroupByIdExecutor extends JdcloudExecutor {
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询直播流状态通知
+ * 查询直播流状态回调地址
  */
 public class DescribeLiveStreamNotifyConfigResponse extends JdcloudResponse<DescribeLiveStreamNotifyConfigResult> implements java.io.Serializable {
 

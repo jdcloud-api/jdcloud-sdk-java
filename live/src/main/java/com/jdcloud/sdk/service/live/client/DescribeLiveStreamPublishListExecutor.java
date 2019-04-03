@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPublishListResponse;
 
 /**
- * 查看域名下推流记录
+ * 查看推流历史记录
  */
 class DescribeLiveStreamPublishListExecutor extends JdcloudExecutor {
 

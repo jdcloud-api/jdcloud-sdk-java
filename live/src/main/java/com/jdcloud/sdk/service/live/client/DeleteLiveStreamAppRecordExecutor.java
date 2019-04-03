@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppRecordResponse;
 
 /**
- * 删除APP录制配置
+ * 删除应用级别录制模板配置
+- 删除应用级别的录制模板配置,重新推流后生效
+
  */
 class DeleteLiveStreamAppRecordExecutor extends JdcloudExecutor {
 

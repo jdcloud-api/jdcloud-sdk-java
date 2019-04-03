@@ -27,7 +27,10 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除APP
+ * 删除应用
+- 删除应用之前需要先停用应用
+- 删除应用同时会删除此应用下的所有数据
+
  */
 public class DeleteLiveAppResponse extends JdcloudResponse<DeleteLiveAppResult> implements java.io.Serializable {
 

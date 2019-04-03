@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamAppRecordResponse;
 
 /**
- * 添加APP录制配置
+ * 添加应用级别直播录制配置
+- 添加应用级别的直播录制模板配置
+
  */
 class AddLiveStreamAppRecordExecutor extends JdcloudExecutor {
 

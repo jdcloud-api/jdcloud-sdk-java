@@ -28,6 +28,10 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 查询转码模板配置
+- 转码模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效原则
+- 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+- 该查询旨在查询域名、应用、流最终生效的转码模板配置,并非各级的模板绑定情况
+
  */
 public class DescribeLiveStreamTranscodeConfigResponse extends JdcloudResponse<DescribeLiveStreamTranscodeConfigResult> implements java.io.Serializable {
 

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.jdfusion.model.SecurityGroupDetail;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 根据云提供商查询对应的安全组资源信息
+ * 查询指定的安全组资源信息
  */
 public class GetVpcSecurityGroupByIdResult extends JdcloudResult implements java.io.Serializable {
 

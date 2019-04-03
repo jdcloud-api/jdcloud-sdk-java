@@ -33,33 +33,37 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 您的加速域名
+     * 推流域名
      */
     private String publishDomain;
 
     /**
-     * 您的APP
+     * 应用名称
      */
     private String appName;
 
     /**
-     * 您的流名
+     * 流名称
      */
     private String streamName;
 
     /**
-     * 您的推流时间
+     * 推流时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      */
     private String publishTime;
 
     /**
-     * 您的推流地址
+     * 推流地址
      */
     private String publishUrl;
 
 
     /**
-     * get 您的加速域名
+     * get 推流域名
      *
      * @return
      */
@@ -68,7 +72,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -77,7 +81,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 您的APP
+     * get 应用名称
      *
      * @return
      */
@@ -86,7 +90,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的APP
+     * set 应用名称
      *
      * @param appName
      */
@@ -95,7 +99,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 您的流名
+     * get 流名称
      *
      * @return
      */
@@ -104,7 +108,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的流名
+     * set 流名称
      *
      * @param streamName
      */
@@ -113,7 +117,11 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 您的推流时间
+     * get 推流时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @return
      */
@@ -122,7 +130,11 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的推流时间
+     * set 推流时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @param publishTime
      */
@@ -131,7 +143,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 您的推流地址
+     * get 推流地址
      *
      * @return
      */
@@ -140,7 +152,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的推流地址
+     * set 推流地址
      *
      * @param publishUrl
      */
@@ -150,7 +162,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
 
 
     /**
-     * set 您的加速域名
+     * set 推流域名
      *
      * @param publishDomain
      */
@@ -160,7 +172,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的APP
+     * set 应用名称
      *
      * @param appName
      */
@@ -170,7 +182,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的流名
+     * set 流名称
      *
      * @param streamName
      */
@@ -180,7 +192,11 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的推流时间
+     * set 推流时间
+- UTC时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+
      *
      * @param publishTime
      */
@@ -190,7 +206,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 您的推流地址
+     * set 推流地址
      *
      * @param publishUrl
      */

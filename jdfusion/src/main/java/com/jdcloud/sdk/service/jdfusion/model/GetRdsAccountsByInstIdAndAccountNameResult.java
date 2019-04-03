@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.jdfusion.model.RdsAccountInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 根据过滤条件，取得指定RDS实例上的账号信息
+ * 取得指定RDS实例上的指定账号信息
  */
 public class GetRdsAccountsByInstIdAndAccountNameResult extends JdcloudResult implements java.io.Serializable {
 

@@ -24,7 +24,7 @@
 
 package com.jdcloud.sdk.service.jdfusion.model;
 
-import com.jdcloud.sdk.service.jdfusion.model.TransferTaskInfo;
+import com.jdcloud.sdk.service.jdfusion.model.TransferSimpleTaskInfo;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -38,7 +38,7 @@ public class CreateTransferTaskRequest extends JdcloudRequest implements java.io
     /**
      * 
      */
-    private TransferTaskInfo task;
+    private TransferSimpleTaskInfo task;
 
     /**
      * 地域ID
@@ -53,7 +53,7 @@ public class CreateTransferTaskRequest extends JdcloudRequest implements java.io
      *
      * @return
      */
-    public TransferTaskInfo getTask() {
+    public TransferSimpleTaskInfo getTask() {
         return task;
     }
 
@@ -62,7 +62,7 @@ public class CreateTransferTaskRequest extends JdcloudRequest implements java.io
      *
      * @param task
      */
-    public void setTask(TransferTaskInfo task) {
+    public void setTask(TransferSimpleTaskInfo task) {
         this.task = task;
     }
 
@@ -90,7 +90,7 @@ public class CreateTransferTaskRequest extends JdcloudRequest implements java.io
      *
      * @param task
      */
-    public CreateTransferTaskRequest task(TransferTaskInfo task) {
+    public CreateTransferTaskRequest task(TransferSimpleTaskInfo task) {
         this.task = task;
         return this;
     }

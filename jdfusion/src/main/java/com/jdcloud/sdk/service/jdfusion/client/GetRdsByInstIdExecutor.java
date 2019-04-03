@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jdfusion.model.GetRdsByInstIdResponse;
 
 /**
- * 根据云提供商查询对应的RDS实例信息
+ * 查询指定ID的RDS实例信息
  */
 class GetRdsByInstIdExecutor extends JdcloudExecutor {
 

@@ -33,28 +33,28 @@ public class RestartPlayDomain  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播播放域名
+     * 播放域名
      */
     private String playDomain;
 
     /**
-     * 直播时移状态:
-  - on表示开启
-  - off表示关闭
+     * 直播回看状态:
+  on: 开启
+  off: 关闭
 
      */
     private String restartStatus;
 
     /**
      * 播放域名类型:
-  - normal  一般的播放域名
-  - restart 回看播放域名
+  normal: 普通播放域名(时移播放域名)
+  restart: 回看播放域名
      */
     private String playType;
 
 
     /**
-     * get 直播播放域名
+     * get 播放域名
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class RestartPlayDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 直播播放域名
+     * set 播放域名
      *
      * @param playDomain
      */
@@ -72,9 +72,9 @@ public class RestartPlayDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 直播时移状态:
-  - on表示开启
-  - off表示关闭
+     * get 直播回看状态:
+  on: 开启
+  off: 关闭
 
      *
      * @return
@@ -84,9 +84,9 @@ public class RestartPlayDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 直播时移状态:
-  - on表示开启
-  - off表示关闭
+     * set 直播回看状态:
+  on: 开启
+  off: 关闭
 
      *
      * @param restartStatus
@@ -97,8 +97,8 @@ public class RestartPlayDomain  implements java.io.Serializable {
 
     /**
      * get 播放域名类型:
-  - normal  一般的播放域名
-  - restart 回看播放域名
+  normal: 普通播放域名(时移播放域名)
+  restart: 回看播放域名
      *
      * @return
      */
@@ -108,8 +108,8 @@ public class RestartPlayDomain  implements java.io.Serializable {
 
     /**
      * set 播放域名类型:
-  - normal  一般的播放域名
-  - restart 回看播放域名
+  normal: 普通播放域名(时移播放域名)
+  restart: 回看播放域名
      *
      * @param playType
      */
@@ -119,7 +119,7 @@ public class RestartPlayDomain  implements java.io.Serializable {
 
 
     /**
-     * set 直播播放域名
+     * set 播放域名
      *
      * @param playDomain
      */
@@ -129,9 +129,9 @@ public class RestartPlayDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 直播时移状态:
-  - on表示开启
-  - off表示关闭
+     * set 直播回看状态:
+  on: 开启
+  off: 关闭
 
      *
      * @param restartStatus
@@ -143,8 +143,8 @@ public class RestartPlayDomain  implements java.io.Serializable {
 
     /**
      * set 播放域名类型:
-  - normal  一般的播放域名
-  - restart 回看播放域名
+  normal: 普通播放域名(时移播放域名)
+  restart: 回看播放域名
      *
      * @param playType
      */

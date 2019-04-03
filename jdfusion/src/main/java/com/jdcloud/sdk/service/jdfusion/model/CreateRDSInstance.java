@@ -114,6 +114,11 @@ public class CreateRDSInstance  implements java.io.Serializable {
     @Required
     private String subnetId;
 
+    /**
+     * 创建时间
+     */
+    private String createTime;
+
 
     /**
      * get RDS实例ID
@@ -349,6 +354,24 @@ public class CreateRDSInstance  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
 
     /**
      * set RDS实例ID
@@ -477,6 +500,16 @@ public class CreateRDSInstance  implements java.io.Serializable {
      */
     public CreateRDSInstance subnetId(String subnetId) {
         this.subnetId = subnetId;
+        return this;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public CreateRDSInstance createTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
 
