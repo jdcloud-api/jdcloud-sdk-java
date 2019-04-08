@@ -27,20 +27,20 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * bandwidthStatisticResult
+ * liveStreamUserNumResult
  */
-public class BandwidthStatisticResult extends JdcloudResult implements java.io.Serializable {
+public class LiveStreamUserNumResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 时间点
+     * 起始时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
      */
     private String startTime;
 
     /**
-     * 时间点
+     * 结束时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
      */
     private String endTime;
@@ -48,11 +48,11 @@ public class BandwidthStatisticResult extends JdcloudResult implements java.io.S
     /**
      * data
      */
-    private BandwidthStatisticResultData data;
+    private LiveStreamUserNumResultData data;
 
 
     /**
-     * get 时间点
+     * get 起始时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
      *
      * @return
@@ -62,7 +62,7 @@ public class BandwidthStatisticResult extends JdcloudResult implements java.io.S
     }
 
     /**
-     * set 时间点
+     * set 起始时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
      *
      * @param startTime
@@ -72,7 +72,7 @@ public class BandwidthStatisticResult extends JdcloudResult implements java.io.S
     }
 
     /**
-     * get 时间点
+     * get 结束时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
      *
      * @return
@@ -82,7 +82,7 @@ public class BandwidthStatisticResult extends JdcloudResult implements java.io.S
     }
 
     /**
-     * set 时间点
+     * set 结束时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
      *
      * @param endTime
@@ -96,7 +96,7 @@ public class BandwidthStatisticResult extends JdcloudResult implements java.io.S
      *
      * @return
      */
-    public BandwidthStatisticResultData getData() {
+    public LiveStreamUserNumResultData getData() {
         return data;
     }
 
@@ -105,29 +105,29 @@ public class BandwidthStatisticResult extends JdcloudResult implements java.io.S
      *
      * @param data
      */
-    public void setData(BandwidthStatisticResultData data) {
+    public void setData(LiveStreamUserNumResultData data) {
         this.data = data;
     }
 
 
     /**
-     * set 时间点
+     * set 起始时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
      *
      * @param startTime
      */
-    public BandwidthStatisticResult startTime(String startTime) {
+    public LiveStreamUserNumResult startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
 
     /**
-     * set 时间点
+     * set 结束时间点，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
      *
      * @param endTime
      */
-    public BandwidthStatisticResult endTime(String endTime) {
+    public LiveStreamUserNumResult endTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -137,7 +137,7 @@ public class BandwidthStatisticResult extends JdcloudResult implements java.io.S
      *
      * @param data
      */
-    public BandwidthStatisticResult data(BandwidthStatisticResultData data) {
+    public LiveStreamUserNumResult data(LiveStreamUserNumResultData data) {
         this.data = data;
         return this;
     }

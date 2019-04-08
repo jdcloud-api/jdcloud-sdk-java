@@ -26,48 +26,48 @@ package com.jdcloud.sdk.service.live.model;
 
 
 /**
- * trafficStatisticResultData
+ * liveStreamUserNumResultData
  */
-public class TrafficStatisticResultData  implements java.io.Serializable {
+public class LiveStreamUserNumResultData  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 流量，单位:Byte
+     * 人数
 
      */
-    private Long value;
+    private Long count;
 
 
     /**
-     * get 流量，单位:Byte
+     * get 人数
 
      *
      * @return
      */
-    public Long getValue() {
-        return value;
+    public Long getCount() {
+        return count;
     }
 
     /**
-     * set 流量，单位:Byte
+     * set 人数
 
      *
-     * @param value
+     * @param count
      */
-    public void setValue(Long value) {
-        this.value = value;
+    public void setCount(Long count) {
+        this.count = count;
     }
 
 
     /**
-     * set 流量，单位:Byte
+     * set 人数
 
      *
-     * @param value
+     * @param count
      */
-    public TrafficStatisticResultData value(Long value) {
-        this.value = value;
+    public LiveStreamUserNumResultData count(Long count) {
+        this.count = count;
         return this;
     }
 

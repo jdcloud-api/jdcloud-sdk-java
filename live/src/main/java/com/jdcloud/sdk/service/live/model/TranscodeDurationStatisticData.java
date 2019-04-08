@@ -26,48 +26,48 @@ package com.jdcloud.sdk.service.live.model;
 
 
 /**
- * trafficStatisticResultData
+ * transcodeDurationStatisticData
  */
-public class TrafficStatisticResultData  implements java.io.Serializable {
+public class TranscodeDurationStatisticData  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 流量，单位:Byte
+     * 时长，单位：秒
 
      */
-    private Long value;
+    private String duration;
 
 
     /**
-     * get 流量，单位:Byte
+     * get 时长，单位：秒
 
      *
      * @return
      */
-    public Long getValue() {
-        return value;
+    public String getDuration() {
+        return duration;
     }
 
     /**
-     * set 流量，单位:Byte
+     * set 时长，单位：秒
 
      *
-     * @param value
+     * @param duration
      */
-    public void setValue(Long value) {
-        this.value = value;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
 
     /**
-     * set 流量，单位:Byte
+     * set 时长，单位：秒
 
      *
-     * @param value
+     * @param duration
      */
-    public TrafficStatisticResultData value(Long value) {
-        this.value = value;
+    public TranscodeDurationStatisticData duration(String duration) {
+        this.duration = duration;
         return this;
     }
 

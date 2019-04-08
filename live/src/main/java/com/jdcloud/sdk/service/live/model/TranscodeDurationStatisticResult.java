@@ -37,13 +37,18 @@ public class TranscodeDurationStatisticResult extends JdcloudResult implements j
      * 时间点
 
      */
-    private String date;
+    private String startTime;
 
     /**
-     * 时长，单位：毫秒
+     * 时间点
 
      */
-    private Integer duration;
+    private String endTime;
+
+    /**
+     * data
+     */
+    private TranscodeDurationStatisticData data;
 
 
     /**
@@ -52,38 +57,56 @@ public class TranscodeDurationStatisticResult extends JdcloudResult implements j
      *
      * @return
      */
-    public String getDate() {
-        return date;
+    public String getStartTime() {
+        return startTime;
     }
 
     /**
      * set 时间点
 
      *
-     * @param date
+     * @param startTime
      */
-    public void setDate(String date) {
-        this.date = date;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
 
     /**
-     * get 时长，单位：毫秒
+     * get 时间点
 
      *
      * @return
      */
-    public Integer getDuration() {
-        return duration;
+    public String getEndTime() {
+        return endTime;
     }
 
     /**
-     * set 时长，单位：毫秒
+     * set 时间点
 
      *
-     * @param duration
+     * @param endTime
      */
-    public void setDuration(Integer duration) {
-        this.duration = duration;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * get data
+     *
+     * @return
+     */
+    public TranscodeDurationStatisticData getData() {
+        return data;
+    }
+
+    /**
+     * set data
+     *
+     * @param data
+     */
+    public void setData(TranscodeDurationStatisticData data) {
+        this.data = data;
     }
 
 
@@ -91,21 +114,31 @@ public class TranscodeDurationStatisticResult extends JdcloudResult implements j
      * set 时间点
 
      *
-     * @param date
+     * @param startTime
      */
-    public TranscodeDurationStatisticResult date(String date) {
-        this.date = date;
+    public TranscodeDurationStatisticResult startTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
 
     /**
-     * set 时长，单位：毫秒
+     * set 时间点
 
      *
-     * @param duration
+     * @param endTime
      */
-    public TranscodeDurationStatisticResult duration(Integer duration) {
-        this.duration = duration;
+    public TranscodeDurationStatisticResult endTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set data
+     *
+     * @param data
+     */
+    public TranscodeDurationStatisticResult data(TranscodeDurationStatisticData data) {
+        this.data = data;
         return this;
     }
 
