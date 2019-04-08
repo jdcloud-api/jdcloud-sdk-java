@@ -40,7 +40,11 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
+     * 录制时间集合
+- 最大支持10段,多段合并成一个文件
+- 多段时间跨度最小不能小于10s
+- 多段时间跨度最大不能超过8小时
+
      * Required:true
      */
     @Required
@@ -72,10 +76,16 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * 录制文件存储路径:
-- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
 
      */
     private String saveObject;
+
+    /**
+     * 打点录制任务外键
+
+     */
+    private String taskExternalId;
 
     /**
      * 推流域名
@@ -100,7 +110,11 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
+     * get 录制时间集合
+- 最大支持10段,多段合并成一个文件
+- 多段时间跨度最小不能小于10s
+- 多段时间跨度最大不能超过8小时
+
      *
      * @return
      */
@@ -109,7 +123,11 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
+     * set 录制时间集合
+- 最大支持10段,多段合并成一个文件
+- 多段时间跨度最小不能小于10s
+- 多段时间跨度最大不能超过8小时
+
      *
      * @param recordTimes
      */
@@ -179,7 +197,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * get 录制文件存储路径:
-- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
 
      *
      * @return
@@ -190,13 +208,33 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * set 录制文件存储路径:
-- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
 
      *
      * @param saveObject
      */
     public void setSaveObject(String saveObject) {
         this.saveObject = saveObject;
+    }
+
+    /**
+     * get 打点录制任务外键
+
+     *
+     * @return
+     */
+    public String getTaskExternalId() {
+        return taskExternalId;
+    }
+
+    /**
+     * set 打点录制任务外键
+
+     *
+     * @param taskExternalId
+     */
+    public void setTaskExternalId(String taskExternalId) {
+        this.taskExternalId = taskExternalId;
     }
 
     /**
@@ -255,7 +293,11 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
+     * set 录制时间集合
+- 最大支持10段,多段合并成一个文件
+- 多段时间跨度最小不能小于10s
+- 多段时间跨度最大不能超过8小时
+
      *
      * @param recordTimes
      */
@@ -299,13 +341,24 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * set 录制文件存储路径:
-- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}.{format}
+- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
 
      *
      * @param saveObject
      */
     public AddLiveRecordTaskRequest saveObject(String saveObject) {
         this.saveObject = saveObject;
+        return this;
+    }
+
+    /**
+     * set 打点录制任务外键
+
+     *
+     * @param taskExternalId
+     */
+    public AddLiveRecordTaskRequest taskExternalId(String taskExternalId) {
+        this.taskExternalId = taskExternalId;
         return this;
     }
 
@@ -341,7 +394,11 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * add item to 录制时间集合 - 最大支持10段,多段合并成一个文件 - 多段时间跨度最小不能小于10s - 多段时间跨度最大不能超过8小时
+     * add item to 录制时间集合
+- 最大支持10段,多段合并成一个文件
+- 多段时间跨度最小不能小于10s
+- 多段时间跨度最大不能超过8小时
+
      *
      * @param recordTime
      */

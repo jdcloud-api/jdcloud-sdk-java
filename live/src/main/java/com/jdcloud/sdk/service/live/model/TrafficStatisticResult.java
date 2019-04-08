@@ -48,7 +48,7 @@ public class TrafficStatisticResult extends JdcloudResult implements java.io.Ser
     /**
      * data
      */
-    private Object data;
+    private TrafficStatisticResultData data;
 
 
     /**
@@ -96,7 +96,7 @@ public class TrafficStatisticResult extends JdcloudResult implements java.io.Ser
      *
      * @return
      */
-    public Object getData() {
+    public TrafficStatisticResultData getData() {
         return data;
     }
 
@@ -105,7 +105,7 @@ public class TrafficStatisticResult extends JdcloudResult implements java.io.Ser
      *
      * @param data
      */
-    public void setData(Object data) {
+    public void setData(TrafficStatisticResultData data) {
         this.data = data;
     }
 
@@ -137,7 +137,7 @@ public class TrafficStatisticResult extends JdcloudResult implements java.io.Ser
      *
      * @param data
      */
-    public TrafficStatisticResult data(Object data) {
+    public TrafficStatisticResult data(TrafficStatisticResultData data) {
         this.data = data;
         return this;
     }
