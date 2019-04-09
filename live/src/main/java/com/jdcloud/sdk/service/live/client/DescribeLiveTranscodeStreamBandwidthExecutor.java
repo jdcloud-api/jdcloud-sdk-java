@@ -30,6 +30,8 @@ import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamBandwidthRe
 
 /**
  * 查询转码流播放带宽
+- 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+
  */
 class DescribeLiveTranscodeStreamBandwidthExecutor extends JdcloudExecutor {
 
