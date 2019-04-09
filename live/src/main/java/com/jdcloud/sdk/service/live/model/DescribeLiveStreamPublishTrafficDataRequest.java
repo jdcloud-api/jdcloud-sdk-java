@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 /**
  * 查询推流上行流量数据
 - 查询某个时间段内的流量数据。
-- 查询时间跨度：30天
+- 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
 
  */
 public class DescribeLiveStreamPublishTrafficDataRequest extends JdcloudRequest implements java.io.Serializable {
@@ -82,15 +82,15 @@ public class DescribeLiveStreamPublishTrafficDataRequest extends JdcloudRequest 
     /**
      * 查询起始时间，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
 
+     * Required:true
      */
+    @Required
     private String startTime;
 
     /**
      * 查询截至时间，UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，为空时默认为当前时间
 
-     * Required:true
      */
-    @Required
     private String endTime;
 
 

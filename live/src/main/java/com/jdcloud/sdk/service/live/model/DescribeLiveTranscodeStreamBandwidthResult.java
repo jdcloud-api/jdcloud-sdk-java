@@ -26,11 +26,13 @@ package com.jdcloud.sdk.service.live.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.live.model.LiveStreamUserNumResult;
+import com.jdcloud.sdk.service.live.model.BandwidthStatisticResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 查询转码流播放带宽
+- 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
+
  */
 public class DescribeLiveTranscodeStreamBandwidthResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,7 +41,7 @@ public class DescribeLiveTranscodeStreamBandwidthResult extends JdcloudResult im
     /**
      * dataList
      */
-    private List<LiveStreamUserNumResult> dataList;
+    private List<BandwidthStatisticResult> dataList;
 
 
     /**
@@ -47,7 +49,7 @@ public class DescribeLiveTranscodeStreamBandwidthResult extends JdcloudResult im
      *
      * @return
      */
-    public List<LiveStreamUserNumResult> getDataList() {
+    public List<BandwidthStatisticResult> getDataList() {
         return dataList;
     }
 
@@ -56,7 +58,7 @@ public class DescribeLiveTranscodeStreamBandwidthResult extends JdcloudResult im
      *
      * @param dataList
      */
-    public void setDataList(List<LiveStreamUserNumResult> dataList) {
+    public void setDataList(List<BandwidthStatisticResult> dataList) {
         this.dataList = dataList;
     }
 
@@ -66,7 +68,7 @@ public class DescribeLiveTranscodeStreamBandwidthResult extends JdcloudResult im
      *
      * @param dataList
      */
-    public DescribeLiveTranscodeStreamBandwidthResult dataList(List<LiveStreamUserNumResult> dataList) {
+    public DescribeLiveTranscodeStreamBandwidthResult dataList(List<BandwidthStatisticResult> dataList) {
         this.dataList = dataList;
         return this;
     }
@@ -77,7 +79,7 @@ public class DescribeLiveTranscodeStreamBandwidthResult extends JdcloudResult im
      *
      * @param dataList
      */
-    public void addDataList(LiveStreamUserNumResult dataList) {
+    public void addDataList(BandwidthStatisticResult dataList) {
         if (this.dataList == null) {
             this.dataList = new ArrayList<>();
         }

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 /**
  * 查询流量数据
 - 查询某个时间段内的流量数据。
-- 查询时间跨度：30天
+- 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
 
  */
 public class DescribeLiveStreamTrafficDataResponse extends JdcloudResponse<DescribeLiveStreamTrafficDataResult> implements java.io.Serializable {
