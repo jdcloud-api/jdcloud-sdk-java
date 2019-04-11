@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询域名的自定义解析线路的IP段
+ * 查询主域名的自定义解析线路的IP段
  */
 public class GetUserViewIPResult extends JdcloudResult implements java.io.Serializable {
 

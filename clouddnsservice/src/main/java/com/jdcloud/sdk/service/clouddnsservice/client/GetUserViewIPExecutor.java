@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetUserViewIPResponse;
 
 /**
- * 查询域名的自定义解析线路的IP段
+ * 查询主域名的自定义解析线路的IP段
  */
 class GetUserViewIPExecutor extends JdcloudExecutor {
 

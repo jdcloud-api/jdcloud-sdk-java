@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.clouddnsservice.model.AddViewIP;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加域名的自定义解析线路的IP段
+ * 添加主域名的自定义解析线路的IP段
  */
 public class AddUserViewIPRequest extends JdcloudRequest implements java.io.Serializable {
 

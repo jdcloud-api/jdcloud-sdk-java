@@ -28,8 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询用户名下的主域名列表。&lt;br&gt;    
-请在调用域名相关的API之前，调用此API获取相关的domainId和domainName。
+ * 获取用户所属的主域名列表。   
+请在调用域名相关的接口之前，调用此接口获取相关的domainId和domainName。  
+主域名的相关概念，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/product-overview&quot;&gt;云解析文档&lt;/a&gt;
 
  */
 public class GetDomainsRequest extends JdcloudRequest implements java.io.Serializable {

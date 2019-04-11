@@ -39,6 +39,7 @@ public class ListFunctionRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * functionId -函数ID，精确匹配，支持多个
+functionName  - 函数名称，模糊匹配，支持单个
 
      */
     private List<Filter> filters;
@@ -53,6 +54,7 @@ public class ListFunctionRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * get functionId -函数ID，精确匹配，支持多个
+functionName  - 函数名称，模糊匹配，支持单个
 
      *
      * @return
@@ -63,6 +65,7 @@ public class ListFunctionRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * set functionId -函数ID，精确匹配，支持多个
+functionName  - 函数名称，模糊匹配，支持单个
 
      *
      * @param filters
@@ -92,6 +95,7 @@ public class ListFunctionRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * set functionId -函数ID，精确匹配，支持多个
+functionName  - 函数名称，模糊匹配，支持单个
 
      *
      * @param filters
@@ -114,6 +118,7 @@ public class ListFunctionRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * add item to functionId -函数ID，精确匹配，支持多个
+functionName  - 函数名称，模糊匹配，支持单个
 
      *
      * @param filter

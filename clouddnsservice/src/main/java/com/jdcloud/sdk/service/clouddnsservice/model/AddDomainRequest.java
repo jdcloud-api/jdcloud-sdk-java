@@ -28,28 +28,32 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加主域名
+ * 添加主域名  
+如何添加免费域名，详细情况请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/domainadd&quot;&gt;文档&lt;/a&gt;
+添加收费域名，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/purchase-process&quot;&gt;文档&lt;/a&gt;，
+添加收费域名前，请确保用户的京东云账户有足够的资金支付，Openapi接口回返回订单号，可以用此订单号向计费系统查阅详情。
+
  */
 public class AddDomainRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
+     * 主域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
      * Required:true
      */
     @Required
     private Integer packId;
 
     /**
-     * 要添加的域名
+     * 要添加的主域名
      * Required:true
      */
     @Required
     private String domainName;
 
     /**
-     * 域名ID，升级高级版必填
+     * 主域名的ID，升级套餐必填，请使用getDomains获取
      */
     private Integer domainId;
 
@@ -59,17 +63,17 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     private Integer buyType;
 
     /**
-     * 1，2，3 ，时长，收费套餐的域名必填
+     * 取值1，2，3 ，含义：时长，收费套餐的域名必填
      */
     private Integer timeSpan;
 
     /**
-     * 时间单位，收费套餐的域名必填
+     * 时间单位，收费套餐的域名必填，1：小时，2：天，3：月，4：年
      */
     private Integer timeUnit;
 
     /**
-     * 计费类型，收费套餐的域名必填
+     * 计费类型，可以不传此参数。
      */
     private Integer billingType;
 
@@ -82,7 +86,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
+     * get 主域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
      *
      * @return
      */
@@ -91,7 +95,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
+     * set 主域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
      *
      * @param packId
      */
@@ -100,7 +104,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 要添加的域名
+     * get 要添加的主域名
      *
      * @return
      */
@@ -109,7 +113,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 要添加的域名
+     * set 要添加的主域名
      *
      * @param domainName
      */
@@ -118,7 +122,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 域名ID，升级高级版必填
+     * get 主域名的ID，升级套餐必填，请使用getDomains获取
      *
      * @return
      */
@@ -127,7 +131,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 域名ID，升级高级版必填
+     * set 主域名的ID，升级套餐必填，请使用getDomains获取
      *
      * @param domainId
      */
@@ -154,7 +158,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 1，2，3 ，时长，收费套餐的域名必填
+     * get 取值1，2，3 ，含义：时长，收费套餐的域名必填
      *
      * @return
      */
@@ -163,7 +167,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 1，2，3 ，时长，收费套餐的域名必填
+     * set 取值1，2，3 ，含义：时长，收费套餐的域名必填
      *
      * @param timeSpan
      */
@@ -172,7 +176,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 时间单位，收费套餐的域名必填
+     * get 时间单位，收费套餐的域名必填，1：小时，2：天，3：月，4：年
      *
      * @return
      */
@@ -181,7 +185,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 时间单位，收费套餐的域名必填
+     * set 时间单位，收费套餐的域名必填，1：小时，2：天，3：月，4：年
      *
      * @param timeUnit
      */
@@ -190,7 +194,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 计费类型，收费套餐的域名必填
+     * get 计费类型，可以不传此参数。
      *
      * @return
      */
@@ -199,7 +203,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 计费类型，收费套餐的域名必填
+     * set 计费类型，可以不传此参数。
      *
      * @param billingType
      */
@@ -227,7 +231,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
+     * set 主域名的套餐类型, 0-&gt;免费 ,1-&gt;企业版, 2-&gt;高级版
      *
      * @param packId
      */
@@ -237,7 +241,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 要添加的域名
+     * set 要添加的主域名
      *
      * @param domainName
      */
@@ -247,7 +251,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 域名ID，升级高级版必填
+     * set 主域名的ID，升级套餐必填，请使用getDomains获取
      *
      * @param domainId
      */
@@ -267,7 +271,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 1，2，3 ，时长，收费套餐的域名必填
+     * set 取值1，2，3 ，含义：时长，收费套餐的域名必填
      *
      * @param timeSpan
      */
@@ -277,7 +281,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 时间单位，收费套餐的域名必填
+     * set 时间单位，收费套餐的域名必填，1：小时，2：天，3：月，4：年
      *
      * @param timeUnit
      */
@@ -287,7 +291,7 @@ public class AddDomainRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 计费类型，收费套餐的域名必填
+     * set 计费类型，可以不传此参数。
      *
      * @param billingType
      */

@@ -28,7 +28,11 @@ import com.jdcloud.sdk.service.clouddnsservice.model.DomainAdded;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 添加主域名
+ * 添加主域名  
+如何添加免费域名，详细情况请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/domainadd&quot;&gt;文档&lt;/a&gt;
+添加收费域名，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/purchase-process&quot;&gt;文档&lt;/a&gt;，
+添加收费域名前，请确保用户的京东云账户有足够的资金支付，Openapi接口回返回订单号，可以用此订单号向计费系统查阅详情。
+
  */
 public class AddDomainResult extends JdcloudResult implements java.io.Serializable {
 

@@ -70,19 +70,19 @@ public class AddRR  implements java.io.Serializable {
     private Integer ttl;
 
     /**
-     * 解析的类型
+     * 解析的类型，请参考&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/detailed-interpretation-of-parsed-records&quot;&gt;解析记录类型详解&lt;/a&gt;
      * Required:true
      */
     @Required
     private String type;
 
     /**
-     * 解析记录的权重
+     * 解析记录的权重，目前支持权重的有：A/AAAA/CNAME/JNAME。
      */
     private Integer weight;
 
     /**
-     * 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
+     * 解析线路的ID，请调用getViewTree接口获取基础解析线路的ID，使用getUserView接口获取自定义线路的ID。
      * Required:true
      */
     @Required
@@ -198,7 +198,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * get 解析的类型
+     * get 解析的类型，请参考&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/detailed-interpretation-of-parsed-records&quot;&gt;解析记录类型详解&lt;/a&gt;
      *
      * @return
      */
@@ -207,7 +207,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * set 解析的类型
+     * set 解析的类型，请参考&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/detailed-interpretation-of-parsed-records&quot;&gt;解析记录类型详解&lt;/a&gt;
      *
      * @param type
      */
@@ -216,7 +216,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * get 解析记录的权重
+     * get 解析记录的权重，目前支持权重的有：A/AAAA/CNAME/JNAME。
      *
      * @return
      */
@@ -225,7 +225,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * set 解析记录的权重
+     * set 解析记录的权重，目前支持权重的有：A/AAAA/CNAME/JNAME。
      *
      * @param weight
      */
@@ -234,7 +234,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * get 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
+     * get 解析线路的ID，请调用getViewTree接口获取基础解析线路的ID，使用getUserView接口获取自定义线路的ID。
      *
      * @return
      */
@@ -243,7 +243,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * set 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
+     * set 解析线路的ID，请调用getViewTree接口获取基础解析线路的ID，使用getUserView接口获取自定义线路的ID。
      *
      * @param viewValue
      */
@@ -313,7 +313,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * set 解析的类型
+     * set 解析的类型，请参考&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/detailed-interpretation-of-parsed-records&quot;&gt;解析记录类型详解&lt;/a&gt;
      *
      * @param type
      */
@@ -323,7 +323,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * set 解析记录的权重
+     * set 解析记录的权重，目前支持权重的有：A/AAAA/CNAME/JNAME。
      *
      * @param weight
      */
@@ -333,7 +333,7 @@ public class AddRR  implements java.io.Serializable {
     }
 
     /**
-     * set 解析线路的ID，请调用getViewTree接口获取解析线路的ID。
+     * set 解析线路的ID，请调用getViewTree接口获取基础解析线路的ID，使用getUserView接口获取自定义线路的ID。
      *
      * @param viewValue
      */

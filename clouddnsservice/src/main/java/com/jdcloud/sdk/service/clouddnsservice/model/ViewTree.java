@@ -40,7 +40,7 @@ public class ViewTree  implements java.io.Serializable {
     private Boolean disabled;
 
     /**
-     * 解析线路的名称
+     * 解析线路的描述
      */
     private String label;
 
@@ -53,6 +53,11 @@ public class ViewTree  implements java.io.Serializable {
      * 解析线路ID
      */
     private Integer value;
+
+    /**
+     * 解析线路的名称，在使用viewName的参数处使用，如果为空表明此解析线路不能直接使用，请使用它的子线路。
+     */
+    private String viewName;
 
     /**
      * children
@@ -79,7 +84,7 @@ public class ViewTree  implements java.io.Serializable {
     }
 
     /**
-     * get 解析线路的名称
+     * get 解析线路的描述
      *
      * @return
      */
@@ -88,7 +93,7 @@ public class ViewTree  implements java.io.Serializable {
     }
 
     /**
-     * set 解析线路的名称
+     * set 解析线路的描述
      *
      * @param label
      */
@@ -133,6 +138,24 @@ public class ViewTree  implements java.io.Serializable {
     }
 
     /**
+     * get 解析线路的名称，在使用viewName的参数处使用，如果为空表明此解析线路不能直接使用，请使用它的子线路。
+     *
+     * @return
+     */
+    public String getViewName() {
+        return viewName;
+    }
+
+    /**
+     * set 解析线路的名称，在使用viewName的参数处使用，如果为空表明此解析线路不能直接使用，请使用它的子线路。
+     *
+     * @param viewName
+     */
+    public void setViewName(String viewName) {
+        this.viewName = viewName;
+    }
+
+    /**
      * get children
      *
      * @return
@@ -162,7 +185,7 @@ public class ViewTree  implements java.io.Serializable {
     }
 
     /**
-     * set 解析线路的名称
+     * set 解析线路的描述
      *
      * @param label
      */
@@ -188,6 +211,16 @@ public class ViewTree  implements java.io.Serializable {
      */
     public ViewTree value(Integer value) {
         this.value = value;
+        return this;
+    }
+
+    /**
+     * set 解析线路的名称，在使用viewName的参数处使用，如果为空表明此解析线路不能直接使用，请使用它的子线路。
+     *
+     * @param viewName
+     */
+    public ViewTree viewName(String viewName) {
+        this.viewName = viewName;
         return this;
     }
 

@@ -65,12 +65,12 @@ public class RRInfo  implements java.io.Serializable {
     private Boolean jcloudRes;
 
     /**
-     * 优先级，只存在于某些解析记录类型
+     * 优先级，只存在于MX, SRV解析记录类型
      */
     private Integer mxPriority;
 
     /**
-     * 端口，只存在于某些解析记录类型
+     * 端口，只存在于SRV解析记录类型
      */
     private Integer port;
 
@@ -214,7 +214,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 优先级，只存在于某些解析记录类型
+     * get 优先级，只存在于MX, SRV解析记录类型
      *
      * @return
      */
@@ -223,7 +223,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 优先级，只存在于某些解析记录类型
+     * set 优先级，只存在于MX, SRV解析记录类型
      *
      * @param mxPriority
      */
@@ -232,7 +232,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 端口，只存在于某些解析记录类型
+     * get 端口，只存在于SRV解析记录类型
      *
      * @return
      */
@@ -241,7 +241,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 端口，只存在于某些解析记录类型
+     * set 端口，只存在于SRV解析记录类型
      *
      * @param port
      */
@@ -419,7 +419,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 优先级，只存在于某些解析记录类型
+     * set 优先级，只存在于MX, SRV解析记录类型
      *
      * @param mxPriority
      */
@@ -429,7 +429,7 @@ public class RRInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 端口，只存在于某些解析记录类型
+     * set 端口，只存在于SRV解析记录类型
      *
      * @param port
      */

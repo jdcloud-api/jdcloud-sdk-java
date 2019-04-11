@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.clouddnsservice.model.AddRRResponse;
 
 /**
- * 添加域名的解析记录
+ * 添加主域名的解析记录
  */
 class AddRRExecutor extends JdcloudExecutor {
 

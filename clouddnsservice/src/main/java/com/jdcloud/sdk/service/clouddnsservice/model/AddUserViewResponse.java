@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.clouddnsservice.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 添加域名的自定义解析线路
+ * 添加主域名的自定义解析线路
  */
 public class AddUserViewResponse extends JdcloudResponse<AddUserViewResult> implements java.io.Serializable {
 

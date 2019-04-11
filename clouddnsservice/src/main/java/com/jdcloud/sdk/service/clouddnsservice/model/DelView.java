@@ -34,7 +34,7 @@ public class DelView  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名ID
+     * 主域名ID，请使用getDomains接口获取
      * Required:true
      */
     @Required
@@ -59,11 +59,11 @@ public class DelView  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private String viewId;
+    private Integer viewId;
 
 
     /**
-     * get 域名ID
+     * get 主域名ID，请使用getDomains接口获取
      *
      * @return
      */
@@ -72,7 +72,7 @@ public class DelView  implements java.io.Serializable {
     }
 
     /**
-     * set 域名ID
+     * set 主域名ID，请使用getDomains接口获取
      *
      * @param domainId
      */
@@ -121,7 +121,7 @@ public class DelView  implements java.io.Serializable {
      *
      * @return
      */
-    public String getViewId() {
+    public Integer getViewId() {
         return viewId;
     }
 
@@ -130,13 +130,13 @@ public class DelView  implements java.io.Serializable {
      *
      * @param viewId
      */
-    public void setViewId(String viewId) {
+    public void setViewId(Integer viewId) {
         this.viewId = viewId;
     }
 
 
     /**
-     * set 域名ID
+     * set 主域名ID，请使用getDomains接口获取
      *
      * @param domainId
      */
@@ -170,7 +170,7 @@ public class DelView  implements java.io.Serializable {
      *
      * @param viewId
      */
-    public DelView viewId(String viewId) {
+    public DelView viewId(Integer viewId) {
         this.viewId = viewId;
         return this;
     }

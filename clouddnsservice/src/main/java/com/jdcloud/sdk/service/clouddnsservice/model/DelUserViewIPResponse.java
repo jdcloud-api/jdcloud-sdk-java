@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.clouddnsservice.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除域名的自定义解析线路的IP段
+ * 删除主域名的自定义解析线路的IP段
  */
 public class DelUserViewIPResponse extends JdcloudResponse<DelUserViewIPResult> implements java.io.Serializable {
 

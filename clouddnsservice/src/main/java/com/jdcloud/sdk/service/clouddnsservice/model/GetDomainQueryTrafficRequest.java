@@ -35,21 +35,21 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名
+     * 主域名，请使用getDomains接口获取
      * Required:true
      */
     @Required
     private String domainName;
 
     /**
-     * 起始时间, UTC时间例如2017-11-10T23:00:00Z
+     * 时间段的起始时间, UTC时间，例如2017-11-10T23:00:00Z
      * Required:true
      */
     @Required
     private String start;
 
     /**
-     * 终止时间, UTC时间例如2017-11-10T23:00:00Z
+     * 时间段的终止时间, UTC时间，例如2017-11-10T23:00:00Z
      * Required:true
      */
     @Required
@@ -71,7 +71,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
 
 
     /**
-     * get 域名
+     * get 主域名，请使用getDomains接口获取
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 域名
+     * set 主域名，请使用getDomains接口获取
      *
      * @param domainName
      */
@@ -89,7 +89,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 起始时间, UTC时间例如2017-11-10T23:00:00Z
+     * get 时间段的起始时间, UTC时间，例如2017-11-10T23:00:00Z
      *
      * @return
      */
@@ -98,7 +98,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 起始时间, UTC时间例如2017-11-10T23:00:00Z
+     * set 时间段的起始时间, UTC时间，例如2017-11-10T23:00:00Z
      *
      * @param start
      */
@@ -107,7 +107,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 终止时间, UTC时间例如2017-11-10T23:00:00Z
+     * get 时间段的终止时间, UTC时间，例如2017-11-10T23:00:00Z
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 终止时间, UTC时间例如2017-11-10T23:00:00Z
+     * set 时间段的终止时间, UTC时间，例如2017-11-10T23:00:00Z
      *
      * @param end
      */
@@ -162,7 +162,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
 
 
     /**
-     * set 域名
+     * set 主域名，请使用getDomains接口获取
      *
      * @param domainName
      */
@@ -172,7 +172,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 起始时间, UTC时间例如2017-11-10T23:00:00Z
+     * set 时间段的起始时间, UTC时间，例如2017-11-10T23:00:00Z
      *
      * @param start
      */
@@ -182,7 +182,7 @@ public class GetDomainQueryTrafficRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 终止时间, UTC时间例如2017-11-10T23:00:00Z
+     * set 时间段的终止时间, UTC时间，例如2017-11-10T23:00:00Z
      *
      * @param end
      */

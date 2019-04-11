@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询主域名的解析记录。&lt;br&gt;
+ * 查询主域名的解析记录。  
 在使用解析记录相关的接口之前，请调用此接口获取解析记录的列表。
 
  */

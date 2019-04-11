@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.clouddnsservice.model.DelViewIP;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除域名的自定义解析线路的IP段
+ * 删除主域名的自定义解析线路的IP段
  */
 public class DelUserViewIPRequest extends JdcloudRequest implements java.io.Serializable {
 

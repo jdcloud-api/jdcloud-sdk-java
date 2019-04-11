@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.clouddnsservice.model.GetDomainQueryCountResponse;
 
 /**
- * 查看域名的解析次数
+ * 查看主域名的解析次数
  */
 class GetDomainQueryCountExecutor extends JdcloudExecutor {
 

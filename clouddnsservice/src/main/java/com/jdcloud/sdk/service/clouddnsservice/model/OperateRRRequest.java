@@ -37,7 +37,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要操作的解析记录ID
+     * 需要操作的解析记录ID，请使用searchRR接口获取。
      * Required:true
      */
     @Required
@@ -66,7 +66,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 需要操作的解析记录ID
+     * get 需要操作的解析记录ID，请使用searchRR接口获取。
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 需要操作的解析记录ID
+     * set 需要操作的解析记录ID，请使用searchRR接口获取。
      *
      * @param ids
      */
@@ -139,7 +139,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 需要操作的解析记录ID
+     * set 需要操作的解析记录ID，请使用searchRR接口获取。
      *
      * @param ids
      */
@@ -180,7 +180,7 @@ public class OperateRRRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * add item to 需要操作的解析记录ID
+     * add item to 需要操作的解析记录ID，请使用searchRR接口获取。
      *
      * @param id
      */

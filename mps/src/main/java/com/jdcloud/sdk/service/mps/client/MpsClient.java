@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,21 +31,30 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.mps.model.SetNotificationRequest;
-import com.jdcloud.sdk.service.mps.model.SetNotificationResponse;
-import com.jdcloud.sdk.service.mps.client.SetNotificationExecutor;
-import com.jdcloud.sdk.service.mps.model.GetNotificationRequest;
-import com.jdcloud.sdk.service.mps.model.GetNotificationResponse;
-import com.jdcloud.sdk.service.mps.client.GetNotificationExecutor;
 import com.jdcloud.sdk.service.mps.model.CreateThumbnailTaskRequest;
 import com.jdcloud.sdk.service.mps.model.CreateThumbnailTaskResponse;
 import com.jdcloud.sdk.service.mps.client.CreateThumbnailTaskExecutor;
-import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskRequest;
-import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskResponse;
-import com.jdcloud.sdk.service.mps.client.GetThumbnailTaskExecutor;
 import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskRequest;
 import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskResponse;
 import com.jdcloud.sdk.service.mps.client.ListThumbnailTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteStyleDelimiterRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteStyleDelimiterResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteStyleDelimiterExecutor;
+import com.jdcloud.sdk.service.mps.model.GetNotificationRequest;
+import com.jdcloud.sdk.service.mps.model.GetNotificationResponse;
+import com.jdcloud.sdk.service.mps.client.GetNotificationExecutor;
+import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskRequest;
+import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskResponse;
+import com.jdcloud.sdk.service.mps.client.GetThumbnailTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.SetNotificationRequest;
+import com.jdcloud.sdk.service.mps.model.SetNotificationResponse;
+import com.jdcloud.sdk.service.mps.client.SetNotificationExecutor;
+import com.jdcloud.sdk.service.mps.model.SetStyleDelimiterRequest;
+import com.jdcloud.sdk.service.mps.model.SetStyleDelimiterResponse;
+import com.jdcloud.sdk.service.mps.client.SetStyleDelimiterExecutor;
+import com.jdcloud.sdk.service.mps.model.GetStyleDelimiterRequest;
+import com.jdcloud.sdk.service.mps.model.GetStyleDelimiterResponse;
+import com.jdcloud.sdk.service.mps.client.GetStyleDelimiterExecutor;
 
 /**
  * mpsClient
@@ -54,7 +63,7 @@ public class MpsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.1";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "mps.jdcloud-api.com";
     public final static String ServiceName = "mps";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -97,6 +106,61 @@ public class MpsClient extends JdcloudClient {
 
 
     /**
+     * 创建截图任务，创建成功时返回任务ID。本接口用于截取指定时间点的画面。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateThumbnailTaskResponse createThumbnailTask(CreateThumbnailTaskRequest request) throws JdcloudSdkException {
+        return new CreateThumbnailTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询截图任务，返回满足查询条件的任务列表。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListThumbnailTaskResponse listThumbnailTask(ListThumbnailTaskRequest request) throws JdcloudSdkException {
+        return new ListThumbnailTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除bucket的图片样式分隔符配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteStyleDelimiterResponse deleteStyleDelimiter(DeleteStyleDelimiterRequest request) throws JdcloudSdkException {
+        return new DeleteStyleDelimiterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取媒体处理通知
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetNotificationResponse getNotification(GetNotificationRequest request) throws JdcloudSdkException {
+        return new GetNotificationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据任务ID获取截图任务。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetThumbnailTaskResponse getThumbnailTask(GetThumbnailTaskRequest request) throws JdcloudSdkException {
+        return new GetThumbnailTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置媒体处理通知, 在设置Notification时会对endpoint进行校验, 设置时会对endpoint发一条SubscriptionConfirmation(x-jdcloud-message-type头)的通知, 要求把Message内容进行base64编码返回给系统(body)进行校验
      *
      * @param request
@@ -108,47 +172,25 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 获取截图通知
+     * 设置图片样式分隔符
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetNotificationResponse getNotification(GetNotificationRequest request) throws JdcloudSdkException {
-        return new GetNotificationExecutor().client(this).execute(request);
+    public SetStyleDelimiterResponse setStyleDelimiter(SetStyleDelimiterRequest request) throws JdcloudSdkException {
+        return new SetStyleDelimiterExecutor().client(this).execute(request);
     }
 
     /**
-     * 创建截图任务
+     * 获取bucket的图片样式分隔符配置
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateThumbnailTaskResponse createThumbnailTask(CreateThumbnailTaskRequest request) throws JdcloudSdkException {
-        return new CreateThumbnailTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取截图任务
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetThumbnailTaskResponse getThumbnailTask(GetThumbnailTaskRequest request) throws JdcloudSdkException {
-        return new GetThumbnailTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询截图任务
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListThumbnailTaskResponse listThumbnailTask(ListThumbnailTaskRequest request) throws JdcloudSdkException {
-        return new ListThumbnailTaskExecutor().client(this).execute(request);
+    public GetStyleDelimiterResponse getStyleDelimiter(GetStyleDelimiterRequest request) throws JdcloudSdkException {
+        return new GetStyleDelimiterExecutor().client(this).execute(request);
     }
 
 
