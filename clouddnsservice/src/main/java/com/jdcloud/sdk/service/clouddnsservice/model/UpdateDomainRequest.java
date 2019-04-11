@@ -35,14 +35,14 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要修改的域名
+     * 需要修改的主域名，请使用getDomains接口获取
      * Required:true
      */
     @Required
     private String domainName;
 
     /**
-     * 需要修改的域名ID
+     * 需要修改的主域名ID，请使用getDomains接口获取
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 需要修改的域名
+     * get 需要修改的主域名，请使用getDomains接口获取
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 需要修改的域名
+     * set 需要修改的主域名，请使用getDomains接口获取
      *
      * @param domainName
      */
@@ -75,7 +75,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 需要修改的域名ID
+     * get 需要修改的主域名ID，请使用getDomains接口获取
      *
      * @return
      */
@@ -84,7 +84,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 需要修改的域名ID
+     * set 需要修改的主域名ID，请使用getDomains接口获取
      *
      * @param id
      */
@@ -112,7 +112,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 需要修改的域名
+     * set 需要修改的主域名，请使用getDomains接口获取
      *
      * @param domainName
      */
@@ -122,7 +122,7 @@ public class UpdateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 需要修改的域名ID
+     * set 需要修改的主域名ID，请使用getDomains接口获取
      *
      * @param id
      */

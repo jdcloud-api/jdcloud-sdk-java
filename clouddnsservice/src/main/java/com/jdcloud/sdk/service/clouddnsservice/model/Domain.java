@@ -33,7 +33,7 @@ public class Domain  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名的唯一ID
+     * 域名在云解析里唯一的ID
      */
     private Integer id;
 
@@ -43,28 +43,32 @@ public class Domain  implements java.io.Serializable {
     private String domainName;
 
     /**
-     * 创建时间，格式Unix timestamp，时间单位：毫秒
+     * 域名的创建时间，Unix timestamp格式，时间单位：毫秒
      */
     private Long createTime;
 
     /**
-     * 过期时间，格式Unix timestamp，时间单位：毫秒
+     * 域名的过期时间，Unix timestamp格式，时间单位：毫秒
      */
     private Long expirationDate;
 
     /**
-     * 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版
+     * 域名的套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版  
+不同套餐的描述，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/price-overview&quot;&gt;文档&lt;/a&gt;
+
      */
     private Integer packId;
 
     /**
      * 域名的锁定状态，0:未锁定， 1:已锁定
+锁定的含义，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/lock-domain&quot;&gt;文档&lt;/a&gt;
+
      */
     private Integer lockStatus;
 
 
     /**
-     * get 域名的唯一ID
+     * get 域名在云解析里唯一的ID
      *
      * @return
      */
@@ -73,7 +77,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 域名的唯一ID
+     * set 域名在云解析里唯一的ID
      *
      * @param id
      */
@@ -100,7 +104,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间，格式Unix timestamp，时间单位：毫秒
+     * get 域名的创建时间，Unix timestamp格式，时间单位：毫秒
      *
      * @return
      */
@@ -109,7 +113,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间，格式Unix timestamp，时间单位：毫秒
+     * set 域名的创建时间，Unix timestamp格式，时间单位：毫秒
      *
      * @param createTime
      */
@@ -118,7 +122,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * get 过期时间，格式Unix timestamp，时间单位：毫秒
+     * get 域名的过期时间，Unix timestamp格式，时间单位：毫秒
      *
      * @return
      */
@@ -127,7 +131,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 过期时间，格式Unix timestamp，时间单位：毫秒
+     * set 域名的过期时间，Unix timestamp格式，时间单位：毫秒
      *
      * @param expirationDate
      */
@@ -136,7 +140,9 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * get 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版
+     * get 域名的套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版  
+不同套餐的描述，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/price-overview&quot;&gt;文档&lt;/a&gt;
+
      *
      * @return
      */
@@ -145,7 +151,9 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版
+     * set 域名的套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版  
+不同套餐的描述，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/price-overview&quot;&gt;文档&lt;/a&gt;
+
      *
      * @param packId
      */
@@ -155,6 +163,8 @@ public class Domain  implements java.io.Serializable {
 
     /**
      * get 域名的锁定状态，0:未锁定， 1:已锁定
+锁定的含义，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/lock-domain&quot;&gt;文档&lt;/a&gt;
+
      *
      * @return
      */
@@ -164,6 +174,8 @@ public class Domain  implements java.io.Serializable {
 
     /**
      * set 域名的锁定状态，0:未锁定， 1:已锁定
+锁定的含义，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/lock-domain&quot;&gt;文档&lt;/a&gt;
+
      *
      * @param lockStatus
      */
@@ -173,7 +185,7 @@ public class Domain  implements java.io.Serializable {
 
 
     /**
-     * set 域名的唯一ID
+     * set 域名在云解析里唯一的ID
      *
      * @param id
      */
@@ -193,7 +205,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间，格式Unix timestamp，时间单位：毫秒
+     * set 域名的创建时间，Unix timestamp格式，时间单位：毫秒
      *
      * @param createTime
      */
@@ -203,7 +215,7 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 过期时间，格式Unix timestamp，时间单位：毫秒
+     * set 域名的过期时间，Unix timestamp格式，时间单位：毫秒
      *
      * @param expirationDate
      */
@@ -213,7 +225,9 @@ public class Domain  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版
+     * set 域名的套餐类型，0-&gt;免费 1-&gt;企业版 2-&gt;企业高级版  
+不同套餐的描述，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/price-overview&quot;&gt;文档&lt;/a&gt;
+
      *
      * @param packId
      */
@@ -224,6 +238,8 @@ public class Domain  implements java.io.Serializable {
 
     /**
      * set 域名的锁定状态，0:未锁定， 1:已锁定
+锁定的含义，请查阅&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/jd-cloud-dns/lock-domain&quot;&gt;文档&lt;/a&gt;
+
      *
      * @param lockStatus
      */

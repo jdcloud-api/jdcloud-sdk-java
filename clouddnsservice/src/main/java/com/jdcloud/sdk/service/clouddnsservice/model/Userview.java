@@ -43,7 +43,7 @@ public class Userview  implements java.io.Serializable {
     private String viewName;
 
     /**
-     * 域名ID
+     * 主域名ID
      */
     private Integer domainId;
 
@@ -115,7 +115,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * get 域名ID
+     * get 主域名ID
      *
      * @return
      */
@@ -124,7 +124,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * set 域名ID
+     * set 主域名ID
      *
      * @param domainId
      */
@@ -262,7 +262,7 @@ public class Userview  implements java.io.Serializable {
     }
 
     /**
-     * set 域名ID
+     * set 主域名ID
      *
      * @param domainId
      */

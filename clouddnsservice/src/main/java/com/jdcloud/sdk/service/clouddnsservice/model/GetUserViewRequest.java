@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询域名的自定义解析线路
+ * 查询主域名的自定义解析线路
  */
 public class GetUserViewRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -51,7 +51,7 @@ public class GetUserViewRequest extends JdcloudRequest implements java.io.Serial
     /**
      * 自定义线路名称, 最多64个字符
      */
-    private Integer viewName;
+    private String viewName;
 
     /**
      * 分页参数，页的序号
@@ -116,7 +116,7 @@ public class GetUserViewRequest extends JdcloudRequest implements java.io.Serial
      *
      * @return
      */
-    public Integer getViewName() {
+    public String getViewName() {
         return viewName;
     }
 
@@ -125,7 +125,7 @@ public class GetUserViewRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param viewName
      */
-    public void setViewName(Integer viewName) {
+    public void setViewName(String viewName) {
         this.viewName = viewName;
     }
 
@@ -209,7 +209,7 @@ public class GetUserViewRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param viewName
      */
-    public GetUserViewRequest viewName(Integer viewName) {
+    public GetUserViewRequest viewName(String viewName) {
         this.viewName = viewName;
         return this;
     }

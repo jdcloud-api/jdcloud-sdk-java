@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.clouddnsservice.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看域名的解析次数
+ * 查看主域名的解析次数
  */
 public class GetDomainQueryCountResponse extends JdcloudResponse<GetDomainQueryCountResult> implements java.io.Serializable {
 

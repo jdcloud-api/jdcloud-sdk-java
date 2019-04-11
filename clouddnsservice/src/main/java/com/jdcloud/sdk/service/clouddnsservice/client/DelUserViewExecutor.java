@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.clouddnsservice.model.DelUserViewResponse;
 
 /**
- * 删除域名的自定义解析线路
+ * 删除主域名的自定义解析线路
  */
 class DelUserViewExecutor extends JdcloudExecutor {
 

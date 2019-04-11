@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.clouddnsservice.model.AddRR;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加域名的解析记录
+ * 添加主域名的解析记录
  */
 public class AddRRRequest extends JdcloudRequest implements java.io.Serializable {
 

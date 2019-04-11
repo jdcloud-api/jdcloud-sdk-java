@@ -35,8 +35,8 @@ public class Getalb  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-true: 均等负载&lt;br&gt;
+     * 负载均衡的解析记录的列表中解析记录是否是相同的权重 
+true: 均等负载 
 false: 按权重分配负载
 
      */
@@ -69,8 +69,8 @@ false: 按权重分配负载
 
 
     /**
-     * get 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-true: 均等负载&lt;br&gt;
+     * get 负载均衡的解析记录的列表中解析记录是否是相同的权重 
+true: 均等负载 
 false: 按权重分配负载
 
      *
@@ -81,8 +81,8 @@ false: 按权重分配负载
     }
 
     /**
-     * set 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-true: 均等负载&lt;br&gt;
+     * set 负载均衡的解析记录的列表中解析记录是否是相同的权重 
+true: 均等负载 
 false: 按权重分配负载
 
      *
@@ -184,8 +184,8 @@ false: 按权重分配负载
 
 
     /**
-     * set 负载均衡的解析记录的列表中解析记录是否是相同的权重&lt;br&gt;
-true: 均等负载&lt;br&gt;
+     * set 负载均衡的解析记录的列表中解析记录是否是相同的权重 
+true: 均等负载 
 false: 按权重分配负载
 
      *

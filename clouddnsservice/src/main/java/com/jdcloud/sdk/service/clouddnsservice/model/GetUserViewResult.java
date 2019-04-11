@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.clouddnsservice.model.UserViewInput;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询域名的自定义解析线路
+ * 查询主域名的自定义解析线路
  */
 public class GetUserViewResult extends JdcloudResult implements java.io.Serializable {
 
