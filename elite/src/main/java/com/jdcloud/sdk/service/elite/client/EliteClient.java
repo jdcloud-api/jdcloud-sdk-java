@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.elite.model.ListSaleServiceRequest;
 import com.jdcloud.sdk.service.elite.model.ListSaleServiceResponse;
 import com.jdcloud.sdk.service.elite.client.ListSaleServiceExecutor;
+import com.jdcloud.sdk.service.elite.model.GetStoreServiceRequest;
+import com.jdcloud.sdk.service.elite.model.GetStoreServiceResponse;
+import com.jdcloud.sdk.service.elite.client.GetStoreServiceExecutor;
 import com.jdcloud.sdk.service.elite.model.ConfirmSaleServiceDeliveryRequest;
 import com.jdcloud.sdk.service.elite.model.ConfirmSaleServiceDeliveryResponse;
 import com.jdcloud.sdk.service.elite.client.ConfirmSaleServiceDeliveryExecutor;
@@ -48,7 +51,7 @@ public class EliteClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.9";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "elite.cn-south-1.jdcloud-api.com";
     public final static String ServiceName = "elite";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -99,6 +102,17 @@ public class EliteClient extends JdcloudClient {
      */
     public ListSaleServiceResponse listSaleService(ListSaleServiceRequest request) throws JdcloudSdkException {
         return new ListSaleServiceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取云存服务信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetStoreServiceResponse getStoreService(GetStoreServiceRequest request) throws JdcloudSdkException {
+        return new GetStoreServiceExecutor().client(this).execute(request);
     }
 
     /**

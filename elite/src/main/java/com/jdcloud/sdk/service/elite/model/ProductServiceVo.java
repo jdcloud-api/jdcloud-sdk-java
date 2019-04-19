@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.elite.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * productServiceVo
@@ -116,6 +118,31 @@ public class ProductServiceVo  implements java.io.Serializable {
      * 交付单备注
      */
     private String remark;
+
+    /**
+     * 订单金额
+     */
+    private String orderTotalFee;
+
+    /**
+     * 订单实付金额
+     */
+    private String orderActualFee;
+
+    /**
+     * 订单支付时间
+     */
+    private String paymentDt;
+
+    /**
+     * 额外计费项信息
+     */
+    private String extraChargeInfo;
+
+    /**
+     * 额外计费详情信息
+     */
+    private List<OrderItemExtraChargeInfo> orderItemExtraChargeInfos;
 
 
     /**
@@ -424,6 +451,96 @@ public class ProductServiceVo  implements java.io.Serializable {
         this.remark = remark;
     }
 
+    /**
+     * get 订单金额
+     *
+     * @return
+     */
+    public String getOrderTotalFee() {
+        return orderTotalFee;
+    }
+
+    /**
+     * set 订单金额
+     *
+     * @param orderTotalFee
+     */
+    public void setOrderTotalFee(String orderTotalFee) {
+        this.orderTotalFee = orderTotalFee;
+    }
+
+    /**
+     * get 订单实付金额
+     *
+     * @return
+     */
+    public String getOrderActualFee() {
+        return orderActualFee;
+    }
+
+    /**
+     * set 订单实付金额
+     *
+     * @param orderActualFee
+     */
+    public void setOrderActualFee(String orderActualFee) {
+        this.orderActualFee = orderActualFee;
+    }
+
+    /**
+     * get 订单支付时间
+     *
+     * @return
+     */
+    public String getPaymentDt() {
+        return paymentDt;
+    }
+
+    /**
+     * set 订单支付时间
+     *
+     * @param paymentDt
+     */
+    public void setPaymentDt(String paymentDt) {
+        this.paymentDt = paymentDt;
+    }
+
+    /**
+     * get 额外计费项信息
+     *
+     * @return
+     */
+    public String getExtraChargeInfo() {
+        return extraChargeInfo;
+    }
+
+    /**
+     * set 额外计费项信息
+     *
+     * @param extraChargeInfo
+     */
+    public void setExtraChargeInfo(String extraChargeInfo) {
+        this.extraChargeInfo = extraChargeInfo;
+    }
+
+    /**
+     * get 额外计费详情信息
+     *
+     * @return
+     */
+    public List<OrderItemExtraChargeInfo> getOrderItemExtraChargeInfos() {
+        return orderItemExtraChargeInfos;
+    }
+
+    /**
+     * set 额外计费详情信息
+     *
+     * @param orderItemExtraChargeInfos
+     */
+    public void setOrderItemExtraChargeInfos(List<OrderItemExtraChargeInfo> orderItemExtraChargeInfos) {
+        this.orderItemExtraChargeInfos = orderItemExtraChargeInfos;
+    }
+
 
     /**
      * set 交付单号
@@ -595,5 +712,67 @@ public class ProductServiceVo  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 订单金额
+     *
+     * @param orderTotalFee
+     */
+    public ProductServiceVo orderTotalFee(String orderTotalFee) {
+        this.orderTotalFee = orderTotalFee;
+        return this;
+    }
+
+    /**
+     * set 订单实付金额
+     *
+     * @param orderActualFee
+     */
+    public ProductServiceVo orderActualFee(String orderActualFee) {
+        this.orderActualFee = orderActualFee;
+        return this;
+    }
+
+    /**
+     * set 订单支付时间
+     *
+     * @param paymentDt
+     */
+    public ProductServiceVo paymentDt(String paymentDt) {
+        this.paymentDt = paymentDt;
+        return this;
+    }
+
+    /**
+     * set 额外计费项信息
+     *
+     * @param extraChargeInfo
+     */
+    public ProductServiceVo extraChargeInfo(String extraChargeInfo) {
+        this.extraChargeInfo = extraChargeInfo;
+        return this;
+    }
+
+    /**
+     * set 额外计费详情信息
+     *
+     * @param orderItemExtraChargeInfos
+     */
+    public ProductServiceVo orderItemExtraChargeInfos(List<OrderItemExtraChargeInfo> orderItemExtraChargeInfos) {
+        this.orderItemExtraChargeInfos = orderItemExtraChargeInfos;
+        return this;
+    }
+
+
+    /**
+     * add item to 额外计费详情信息
+     *
+     * @param orderItemExtraChargeInfo
+     */
+    public void addOrderItemExtraChargeInfo(OrderItemExtraChargeInfo orderItemExtraChargeInfo) {
+        if (this.orderItemExtraChargeInfos == null) {
+            this.orderItemExtraChargeInfos = new ArrayList<>();
+        }
+        this.orderItemExtraChargeInfos.add(orderItemExtraChargeInfo);
+    }
 
 }
