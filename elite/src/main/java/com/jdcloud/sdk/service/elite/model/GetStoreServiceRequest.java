@@ -46,7 +46,7 @@ public class GetStoreServiceRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
-    private Integer businessData;
+    private String businessData;
 
     /**
      * 是否查询全部，如果传入false，则只查询当前时间有效的，否则查询所有的
@@ -84,7 +84,7 @@ public class GetStoreServiceRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public Integer getBusinessData() {
+    public String getBusinessData() {
         return businessData;
     }
 
@@ -93,7 +93,7 @@ public class GetStoreServiceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param businessData
      */
-    public void setBusinessData(Integer businessData) {
+    public void setBusinessData(String businessData) {
         this.businessData = businessData;
     }
 
@@ -149,7 +149,7 @@ public class GetStoreServiceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param businessData
      */
-    public GetStoreServiceRequest businessData(Integer businessData) {
+    public GetStoreServiceRequest businessData(String businessData) {
         this.businessData = businessData;
         return this;
     }
