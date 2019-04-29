@@ -105,7 +105,7 @@ public class JcqClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.9";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "jcq.jdcloud-api.com";
     public final static String ServiceName = "jcq";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;

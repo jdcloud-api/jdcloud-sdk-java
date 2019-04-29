@@ -31,51 +31,51 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.nc.model.DescribeContainersRequest;
-import com.jdcloud.sdk.service.nc.model.DescribeContainersResponse;
-import com.jdcloud.sdk.service.nc.client.DescribeContainersExecutor;
-import com.jdcloud.sdk.service.nc.model.CreateContainersRequest;
-import com.jdcloud.sdk.service.nc.model.CreateContainersResponse;
-import com.jdcloud.sdk.service.nc.client.CreateContainersExecutor;
-import com.jdcloud.sdk.service.nc.model.GetLogsRequest;
-import com.jdcloud.sdk.service.nc.model.GetLogsResponse;
-import com.jdcloud.sdk.service.nc.client.GetLogsExecutor;
-import com.jdcloud.sdk.service.nc.model.DescribeSecretRequest;
-import com.jdcloud.sdk.service.nc.model.DescribeSecretResponse;
-import com.jdcloud.sdk.service.nc.client.DescribeSecretExecutor;
-import com.jdcloud.sdk.service.nc.model.ModifyContainerAttributeRequest;
-import com.jdcloud.sdk.service.nc.model.ModifyContainerAttributeResponse;
-import com.jdcloud.sdk.service.nc.client.ModifyContainerAttributeExecutor;
-import com.jdcloud.sdk.service.nc.model.DeleteContainerRequest;
-import com.jdcloud.sdk.service.nc.model.DeleteContainerResponse;
-import com.jdcloud.sdk.service.nc.client.DeleteContainerExecutor;
-import com.jdcloud.sdk.service.nc.model.StopContainerRequest;
-import com.jdcloud.sdk.service.nc.model.StopContainerResponse;
-import com.jdcloud.sdk.service.nc.client.StopContainerExecutor;
-import com.jdcloud.sdk.service.nc.model.StartContainerRequest;
-import com.jdcloud.sdk.service.nc.model.StartContainerResponse;
-import com.jdcloud.sdk.service.nc.client.StartContainerExecutor;
-import com.jdcloud.sdk.service.nc.model.DisassociateElasticIpRequest;
-import com.jdcloud.sdk.service.nc.model.DisassociateElasticIpResponse;
-import com.jdcloud.sdk.service.nc.client.DisassociateElasticIpExecutor;
-import com.jdcloud.sdk.service.nc.model.DescribeSecretsRequest;
-import com.jdcloud.sdk.service.nc.model.DescribeSecretsResponse;
-import com.jdcloud.sdk.service.nc.client.DescribeSecretsExecutor;
-import com.jdcloud.sdk.service.nc.model.DescribeQuotaRequest;
-import com.jdcloud.sdk.service.nc.model.DescribeQuotaResponse;
-import com.jdcloud.sdk.service.nc.client.DescribeQuotaExecutor;
-import com.jdcloud.sdk.service.nc.model.DescribeContainerRequest;
-import com.jdcloud.sdk.service.nc.model.DescribeContainerResponse;
-import com.jdcloud.sdk.service.nc.client.DescribeContainerExecutor;
-import com.jdcloud.sdk.service.nc.model.DeleteSecretRequest;
-import com.jdcloud.sdk.service.nc.model.DeleteSecretResponse;
-import com.jdcloud.sdk.service.nc.client.DeleteSecretExecutor;
-import com.jdcloud.sdk.service.nc.model.CreateSecretRequest;
-import com.jdcloud.sdk.service.nc.model.CreateSecretResponse;
-import com.jdcloud.sdk.service.nc.client.CreateSecretExecutor;
 import com.jdcloud.sdk.service.nc.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.nc.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.nc.client.AssociateElasticIpExecutor;
+import com.jdcloud.sdk.service.nc.model.DescribeSecretRequest;
+import com.jdcloud.sdk.service.nc.model.DescribeSecretResponse;
+import com.jdcloud.sdk.service.nc.client.DescribeSecretExecutor;
+import com.jdcloud.sdk.service.nc.model.CreateSecretRequest;
+import com.jdcloud.sdk.service.nc.model.CreateSecretResponse;
+import com.jdcloud.sdk.service.nc.client.CreateSecretExecutor;
+import com.jdcloud.sdk.service.nc.model.ModifyContainerAttributeRequest;
+import com.jdcloud.sdk.service.nc.model.ModifyContainerAttributeResponse;
+import com.jdcloud.sdk.service.nc.client.ModifyContainerAttributeExecutor;
+import com.jdcloud.sdk.service.nc.model.DeleteSecretRequest;
+import com.jdcloud.sdk.service.nc.model.DeleteSecretResponse;
+import com.jdcloud.sdk.service.nc.client.DeleteSecretExecutor;
+import com.jdcloud.sdk.service.nc.model.DisassociateElasticIpRequest;
+import com.jdcloud.sdk.service.nc.model.DisassociateElasticIpResponse;
+import com.jdcloud.sdk.service.nc.client.DisassociateElasticIpExecutor;
+import com.jdcloud.sdk.service.nc.model.DeleteContainerRequest;
+import com.jdcloud.sdk.service.nc.model.DeleteContainerResponse;
+import com.jdcloud.sdk.service.nc.client.DeleteContainerExecutor;
+import com.jdcloud.sdk.service.nc.model.DescribeContainerRequest;
+import com.jdcloud.sdk.service.nc.model.DescribeContainerResponse;
+import com.jdcloud.sdk.service.nc.client.DescribeContainerExecutor;
+import com.jdcloud.sdk.service.nc.model.StartContainerRequest;
+import com.jdcloud.sdk.service.nc.model.StartContainerResponse;
+import com.jdcloud.sdk.service.nc.client.StartContainerExecutor;
+import com.jdcloud.sdk.service.nc.model.DescribeContainersRequest;
+import com.jdcloud.sdk.service.nc.model.DescribeContainersResponse;
+import com.jdcloud.sdk.service.nc.client.DescribeContainersExecutor;
+import com.jdcloud.sdk.service.nc.model.GetLogsRequest;
+import com.jdcloud.sdk.service.nc.model.GetLogsResponse;
+import com.jdcloud.sdk.service.nc.client.GetLogsExecutor;
+import com.jdcloud.sdk.service.nc.model.DescribeQuotaRequest;
+import com.jdcloud.sdk.service.nc.model.DescribeQuotaResponse;
+import com.jdcloud.sdk.service.nc.client.DescribeQuotaExecutor;
+import com.jdcloud.sdk.service.nc.model.CreateContainersRequest;
+import com.jdcloud.sdk.service.nc.model.CreateContainersResponse;
+import com.jdcloud.sdk.service.nc.client.CreateContainersExecutor;
+import com.jdcloud.sdk.service.nc.model.StopContainerRequest;
+import com.jdcloud.sdk.service.nc.model.StopContainerResponse;
+import com.jdcloud.sdk.service.nc.client.StopContainerExecutor;
+import com.jdcloud.sdk.service.nc.model.DescribeSecretsRequest;
+import com.jdcloud.sdk.service.nc.model.DescribeSecretsResponse;
+import com.jdcloud.sdk.service.nc.client.DescribeSecretsExecutor;
 
 /**
  * ncClient
@@ -84,7 +84,7 @@ public class NcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.7";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "nc.jdcloud-api.com";
     public final static String ServiceName = "nc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -127,6 +127,119 @@ public class NcClient extends JdcloudClient {
 
 
     /**
+     * 容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
+一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+如果是黑名单中的用户，会返回错误。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
+        return new AssociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单个 secret 详情
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSecretResponse describeSecret(DescribeSecretRequest request) throws JdcloudSdkException {
+        return new DescribeSecretExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个 secret，用于存放镜像仓库机密相关信息。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSecretResponse createSecret(CreateSecretRequest request) throws JdcloudSdkException {
+        return new CreateSecretExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改容器的 名称 和 描述。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyContainerAttributeResponse modifyContainerAttribute(ModifyContainerAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyContainerAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除单个 secret
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSecretResponse deleteSecret(DeleteSecretRequest request) throws JdcloudSdkException {
+        return new DeleteSecretExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 容器解绑公网 IP，解绑的是主网卡、主内网 IP 对应的弹性 IP.
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisassociateElasticIpResponse disassociateElasticIp(DisassociateElasticIpRequest request) throws JdcloudSdkException {
+        return new DisassociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
+按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
+只能支持主动删除按量计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteContainerResponse deleteContainer(DeleteContainerRequest request) throws JdcloudSdkException {
+        return new DeleteContainerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询一台原生容器的详细信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeContainerResponse describeContainer(DescribeContainerRequest request) throws JdcloudSdkException {
+        return new DescribeContainerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
+容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartContainerResponse startContainer(StartContainerRequest request) throws JdcloudSdkException {
+        return new StartContainerExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量查询原生容器的详细信息&lt;br&gt;
 此接口支持分页查询，默认每页20条。
 
@@ -137,6 +250,30 @@ public class NcClient extends JdcloudClient {
      */
     public DescribeContainersResponse describeContainers(DescribeContainersRequest request) throws JdcloudSdkException {
         return new DescribeContainersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单个容器日志
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetLogsResponse getLogs(GetLogsRequest request) throws JdcloudSdkException {
+        return new GetLogsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询资源的配额，支持：原生容器 pod 和 secret.
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQuotaResponse describeQuota(DescribeQuotaRequest request) throws JdcloudSdkException {
+        return new DescribeQuotaExecutor().client(this).execute(request);
     }
 
     /**
@@ -204,56 +341,6 @@ public class NcClient extends JdcloudClient {
     }
 
     /**
-     * 查询单个容器日志
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetLogsResponse getLogs(GetLogsRequest request) throws JdcloudSdkException {
-        return new GetLogsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询单个 secret 详情
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeSecretResponse describeSecret(DescribeSecretRequest request) throws JdcloudSdkException {
-        return new DescribeSecretExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改容器的 名称 和 描述。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyContainerAttributeResponse modifyContainerAttribute(ModifyContainerAttributeRequest request) throws JdcloudSdkException {
-        return new ModifyContainerAttributeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 容器状态必须为 stopped、running 或 error状态。 &lt;br&gt;
-按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
-只能支持主动删除按量计费类型的实例。包年包月过期的容器也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteContainerResponse deleteContainer(DeleteContainerRequest request) throws JdcloudSdkException {
-        return new DeleteContainerExecutor().client(this).execute(request);
-    }
-
-    /**
      * 停止处于运行状态的单个实例，处于任务执行中的容器无法启动。
 
      *
@@ -263,31 +350,6 @@ public class NcClient extends JdcloudClient {
      */
     public StopContainerResponse stopContainer(StopContainerRequest request) throws JdcloudSdkException {
         return new StopContainerExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 启动处于关闭状态的单个容器，处在任务执行中的容器无法启动。&lt;br&gt;
-容器实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;br&gt;
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StartContainerResponse startContainer(StartContainerRequest request) throws JdcloudSdkException {
-        return new StartContainerExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 容器解绑公网 IP，解绑的是主网卡、主内网 IP 对应的弹性 IP.
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DisassociateElasticIpResponse disassociateElasticIp(DisassociateElasticIpRequest request) throws JdcloudSdkException {
-        return new DisassociateElasticIpExecutor().client(this).execute(request);
     }
 
     /**
@@ -301,68 +363,6 @@ public class NcClient extends JdcloudClient {
      */
     public DescribeSecretsResponse describeSecrets(DescribeSecretsRequest request) throws JdcloudSdkException {
         return new DescribeSecretsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询资源的配额，支持：原生容器 pod 和 secret.
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeQuotaResponse describeQuota(DescribeQuotaRequest request) throws JdcloudSdkException {
-        return new DescribeQuotaExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询一台原生容器的详细信息
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeContainerResponse describeContainer(DescribeContainerRequest request) throws JdcloudSdkException {
-        return new DescribeContainerExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除单个 secret
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteSecretResponse deleteSecret(DeleteSecretRequest request) throws JdcloudSdkException {
-        return new DeleteSecretExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建一个 secret，用于存放镜像仓库机密相关信息。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateSecretResponse createSecret(CreateSecretRequest request) throws JdcloudSdkException {
-        return new CreateSecretExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 容器绑定弹性公网 IP，绑定的是主网卡、主内网IP对应的弹性IP. &lt;br&gt;
-一台云主机只能绑定一个弹性公网 IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
-如果是黑名单中的用户，会返回错误。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
-        return new AssociateElasticIpExecutor().client(this).execute(request);
     }
 
 

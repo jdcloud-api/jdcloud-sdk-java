@@ -31,60 +31,60 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.xdata.model.ExecutePySparkQueryRequest;
-import com.jdcloud.sdk.service.xdata.model.ExecutePySparkQueryResponse;
-import com.jdcloud.sdk.service.xdata.client.ExecutePySparkQueryExecutor;
-import com.jdcloud.sdk.service.xdata.model.ListTableInfoRequest;
-import com.jdcloud.sdk.service.xdata.model.ListTableInfoResponse;
-import com.jdcloud.sdk.service.xdata.client.ListTableInfoExecutor;
-import com.jdcloud.sdk.service.xdata.model.ListDatabaseInfoRequest;
-import com.jdcloud.sdk.service.xdata.model.ListDatabaseInfoResponse;
-import com.jdcloud.sdk.service.xdata.client.ListDatabaseInfoExecutor;
-import com.jdcloud.sdk.service.xdata.model.DeleteDatabaseRequest;
-import com.jdcloud.sdk.service.xdata.model.DeleteDatabaseResponse;
-import com.jdcloud.sdk.service.xdata.client.DeleteDatabaseExecutor;
 import com.jdcloud.sdk.service.xdata.model.CreateDatabaseRequest;
 import com.jdcloud.sdk.service.xdata.model.CreateDatabaseResponse;
 import com.jdcloud.sdk.service.xdata.client.CreateDatabaseExecutor;
-import com.jdcloud.sdk.service.xdata.model.GetPySparkExecuteResultRequest;
-import com.jdcloud.sdk.service.xdata.model.GetPySparkExecuteResultResponse;
-import com.jdcloud.sdk.service.xdata.client.GetPySparkExecuteResultExecutor;
-import com.jdcloud.sdk.service.xdata.model.ListInstanceInfoRequest;
-import com.jdcloud.sdk.service.xdata.model.ListInstanceInfoResponse;
-import com.jdcloud.sdk.service.xdata.client.ListInstanceInfoExecutor;
-import com.jdcloud.sdk.service.xdata.model.GetRasQueryLogRequest;
-import com.jdcloud.sdk.service.xdata.model.GetRasQueryLogResponse;
-import com.jdcloud.sdk.service.xdata.client.GetRasQueryLogExecutor;
-import com.jdcloud.sdk.service.xdata.model.ExecuteRasQueryRequest;
-import com.jdcloud.sdk.service.xdata.model.ExecuteRasQueryResponse;
-import com.jdcloud.sdk.service.xdata.client.ExecuteRasQueryExecutor;
-import com.jdcloud.sdk.service.xdata.model.GetTableInfoRequest;
-import com.jdcloud.sdk.service.xdata.model.GetTableInfoResponse;
-import com.jdcloud.sdk.service.xdata.client.GetTableInfoExecutor;
-import com.jdcloud.sdk.service.xdata.model.DeleteTableRequest;
-import com.jdcloud.sdk.service.xdata.model.DeleteTableResponse;
-import com.jdcloud.sdk.service.xdata.client.DeleteTableExecutor;
-import com.jdcloud.sdk.service.xdata.model.GetRasQueryResultRequest;
-import com.jdcloud.sdk.service.xdata.model.GetRasQueryResultResponse;
-import com.jdcloud.sdk.service.xdata.client.GetRasQueryResultExecutor;
-import com.jdcloud.sdk.service.xdata.model.CancelPySparkJobRequest;
-import com.jdcloud.sdk.service.xdata.model.CancelPySparkJobResponse;
-import com.jdcloud.sdk.service.xdata.client.CancelPySparkJobExecutor;
 import com.jdcloud.sdk.service.xdata.model.CancelRasQueryRequest;
 import com.jdcloud.sdk.service.xdata.model.CancelRasQueryResponse;
 import com.jdcloud.sdk.service.xdata.client.CancelRasQueryExecutor;
+import com.jdcloud.sdk.service.xdata.model.ListDatabaseInfoRequest;
+import com.jdcloud.sdk.service.xdata.model.ListDatabaseInfoResponse;
+import com.jdcloud.sdk.service.xdata.client.ListDatabaseInfoExecutor;
 import com.jdcloud.sdk.service.xdata.model.GetPySparkExecuteStateRequest;
 import com.jdcloud.sdk.service.xdata.model.GetPySparkExecuteStateResponse;
 import com.jdcloud.sdk.service.xdata.client.GetPySparkExecuteStateExecutor;
 import com.jdcloud.sdk.service.xdata.model.GetDatabaseInfoRequest;
 import com.jdcloud.sdk.service.xdata.model.GetDatabaseInfoResponse;
 import com.jdcloud.sdk.service.xdata.client.GetDatabaseInfoExecutor;
-import com.jdcloud.sdk.service.xdata.model.CreateTableRequest;
-import com.jdcloud.sdk.service.xdata.model.CreateTableResponse;
-import com.jdcloud.sdk.service.xdata.client.CreateTableExecutor;
+import com.jdcloud.sdk.service.xdata.model.ListTableInfoRequest;
+import com.jdcloud.sdk.service.xdata.model.ListTableInfoResponse;
+import com.jdcloud.sdk.service.xdata.client.ListTableInfoExecutor;
 import com.jdcloud.sdk.service.xdata.model.GetRasQueryStateRequest;
 import com.jdcloud.sdk.service.xdata.model.GetRasQueryStateResponse;
 import com.jdcloud.sdk.service.xdata.client.GetRasQueryStateExecutor;
+import com.jdcloud.sdk.service.xdata.model.ExecuteRasQueryRequest;
+import com.jdcloud.sdk.service.xdata.model.ExecuteRasQueryResponse;
+import com.jdcloud.sdk.service.xdata.client.ExecuteRasQueryExecutor;
+import com.jdcloud.sdk.service.xdata.model.CancelPySparkJobRequest;
+import com.jdcloud.sdk.service.xdata.model.CancelPySparkJobResponse;
+import com.jdcloud.sdk.service.xdata.client.CancelPySparkJobExecutor;
+import com.jdcloud.sdk.service.xdata.model.GetPySparkExecuteResultRequest;
+import com.jdcloud.sdk.service.xdata.model.GetPySparkExecuteResultResponse;
+import com.jdcloud.sdk.service.xdata.client.GetPySparkExecuteResultExecutor;
+import com.jdcloud.sdk.service.xdata.model.ListInstanceInfoRequest;
+import com.jdcloud.sdk.service.xdata.model.ListInstanceInfoResponse;
+import com.jdcloud.sdk.service.xdata.client.ListInstanceInfoExecutor;
+import com.jdcloud.sdk.service.xdata.model.DeleteDatabaseRequest;
+import com.jdcloud.sdk.service.xdata.model.DeleteDatabaseResponse;
+import com.jdcloud.sdk.service.xdata.client.DeleteDatabaseExecutor;
+import com.jdcloud.sdk.service.xdata.model.GetTableInfoRequest;
+import com.jdcloud.sdk.service.xdata.model.GetTableInfoResponse;
+import com.jdcloud.sdk.service.xdata.client.GetTableInfoExecutor;
+import com.jdcloud.sdk.service.xdata.model.ExecutePySparkQueryRequest;
+import com.jdcloud.sdk.service.xdata.model.ExecutePySparkQueryResponse;
+import com.jdcloud.sdk.service.xdata.client.ExecutePySparkQueryExecutor;
+import com.jdcloud.sdk.service.xdata.model.GetRasQueryResultRequest;
+import com.jdcloud.sdk.service.xdata.model.GetRasQueryResultResponse;
+import com.jdcloud.sdk.service.xdata.client.GetRasQueryResultExecutor;
+import com.jdcloud.sdk.service.xdata.model.CreateTableRequest;
+import com.jdcloud.sdk.service.xdata.model.CreateTableResponse;
+import com.jdcloud.sdk.service.xdata.client.CreateTableExecutor;
+import com.jdcloud.sdk.service.xdata.model.GetRasQueryLogRequest;
+import com.jdcloud.sdk.service.xdata.model.GetRasQueryLogResponse;
+import com.jdcloud.sdk.service.xdata.client.GetRasQueryLogExecutor;
+import com.jdcloud.sdk.service.xdata.model.DeleteTableRequest;
+import com.jdcloud.sdk.service.xdata.model.DeleteTableResponse;
+import com.jdcloud.sdk.service.xdata.client.DeleteTableExecutor;
 
 /**
  * xdataClient
@@ -93,7 +93,7 @@ public class XdataClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.6";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "xdata.jdcloud-api.com";
     public final static String ServiceName = "xdata";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -136,50 +136,6 @@ public class XdataClient extends JdcloudClient {
 
 
     /**
-     * 执行用户编写的PySpark脚本
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ExecutePySparkQueryResponse executePySparkQuery(ExecutePySparkQueryRequest request) throws JdcloudSdkException {
-        return new ExecutePySparkQueryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用户实例指定数据库下的所有数据表信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListTableInfoResponse listTableInfo(ListTableInfoRequest request) throws JdcloudSdkException {
-        return new ListTableInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用户实例的所有数据库信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListDatabaseInfoResponse listDatabaseInfo(ListDatabaseInfoRequest request) throws JdcloudSdkException {
-        return new ListDatabaseInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除用户实例的指定数据库
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws JdcloudSdkException {
-        return new DeleteDatabaseExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建属于用户实例的数据库
      *
      * @param request
@@ -191,94 +147,6 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 获取用户PySpark脚本的执行结果
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetPySparkExecuteResultResponse getPySparkExecuteResult(GetPySparkExecuteResultRequest request) throws JdcloudSdkException {
-        return new GetPySparkExecuteResultExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用户所属的实例信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListInstanceInfoResponse listInstanceInfo(ListInstanceInfoRequest request) throws JdcloudSdkException {
-        return new ListInstanceInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取用户Spark SQL脚本的查询日志
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetRasQueryLogResponse getRasQueryLog(GetRasQueryLogRequest request) throws JdcloudSdkException {
-        return new GetRasQueryLogExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 执行用户编写的Spark SQL脚本
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ExecuteRasQueryResponse executeRasQuery(ExecuteRasQueryRequest request) throws JdcloudSdkException {
-        return new ExecuteRasQueryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用户实例的指定数据表信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetTableInfoResponse getTableInfo(GetTableInfoRequest request) throws JdcloudSdkException {
-        return new GetTableInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除用户实例的指定数据表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteTableResponse deleteTable(DeleteTableRequest request) throws JdcloudSdkException {
-        return new DeleteTableExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取用户Spark SQL脚本的查询结果
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetRasQueryResultResponse getRasQueryResult(GetRasQueryResultRequest request) throws JdcloudSdkException {
-        return new GetRasQueryResultExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 终止用户PySpark脚本任务
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CancelPySparkJobResponse cancelPySparkJob(CancelPySparkJobRequest request) throws JdcloudSdkException {
-        return new CancelPySparkJobExecutor().client(this).execute(request);
-    }
-
-    /**
      * 终止用户Spark SQL脚本查询
      *
      * @param request
@@ -287,6 +155,17 @@ public class XdataClient extends JdcloudClient {
      */
     public CancelRasQueryResponse cancelRasQuery(CancelRasQueryRequest request) throws JdcloudSdkException {
         return new CancelRasQueryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询用户实例的所有数据库信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListDatabaseInfoResponse listDatabaseInfo(ListDatabaseInfoRequest request) throws JdcloudSdkException {
+        return new ListDatabaseInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -312,14 +191,14 @@ public class XdataClient extends JdcloudClient {
     }
 
     /**
-     * 创建用户实例的数据表
+     * 查询用户实例指定数据库下的所有数据表信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateTableResponse createTable(CreateTableRequest request) throws JdcloudSdkException {
-        return new CreateTableExecutor().client(this).execute(request);
+    public ListTableInfoResponse listTableInfo(ListTableInfoRequest request) throws JdcloudSdkException {
+        return new ListTableInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -331,6 +210,127 @@ public class XdataClient extends JdcloudClient {
      */
     public GetRasQueryStateResponse getRasQueryState(GetRasQueryStateRequest request) throws JdcloudSdkException {
         return new GetRasQueryStateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 执行用户编写的Spark SQL脚本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExecuteRasQueryResponse executeRasQuery(ExecuteRasQueryRequest request) throws JdcloudSdkException {
+        return new ExecuteRasQueryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 终止用户PySpark脚本任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CancelPySparkJobResponse cancelPySparkJob(CancelPySparkJobRequest request) throws JdcloudSdkException {
+        return new CancelPySparkJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取用户PySpark脚本的执行结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetPySparkExecuteResultResponse getPySparkExecuteResult(GetPySparkExecuteResultRequest request) throws JdcloudSdkException {
+        return new GetPySparkExecuteResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询用户所属的实例信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListInstanceInfoResponse listInstanceInfo(ListInstanceInfoRequest request) throws JdcloudSdkException {
+        return new ListInstanceInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除用户实例的指定数据库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteDatabaseResponse deleteDatabase(DeleteDatabaseRequest request) throws JdcloudSdkException {
+        return new DeleteDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询用户实例的指定数据表信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTableInfoResponse getTableInfo(GetTableInfoRequest request) throws JdcloudSdkException {
+        return new GetTableInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 执行用户编写的PySpark脚本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExecutePySparkQueryResponse executePySparkQuery(ExecutePySparkQueryRequest request) throws JdcloudSdkException {
+        return new ExecutePySparkQueryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取用户Spark SQL脚本的查询结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRasQueryResultResponse getRasQueryResult(GetRasQueryResultRequest request) throws JdcloudSdkException {
+        return new GetRasQueryResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建用户实例的数据表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateTableResponse createTable(CreateTableRequest request) throws JdcloudSdkException {
+        return new CreateTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取用户Spark SQL脚本的查询日志
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRasQueryLogResponse getRasQueryLog(GetRasQueryLogRequest request) throws JdcloudSdkException {
+        return new GetRasQueryLogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除用户实例的指定数据表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteTableResponse deleteTable(DeleteTableRequest request) throws JdcloudSdkException {
+        return new DeleteTableExecutor().client(this).execute(request);
     }
 
 

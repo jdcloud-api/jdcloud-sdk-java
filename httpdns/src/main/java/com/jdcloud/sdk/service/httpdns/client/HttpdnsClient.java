@@ -34,24 +34,24 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.httpdns.model.GetAccountInfoRequest;
 import com.jdcloud.sdk.service.httpdns.model.GetAccountInfoResponse;
 import com.jdcloud.sdk.service.httpdns.client.GetAccountInfoExecutor;
-import com.jdcloud.sdk.service.httpdns.model.CreateAccountRequest;
-import com.jdcloud.sdk.service.httpdns.model.CreateAccountResponse;
-import com.jdcloud.sdk.service.httpdns.client.CreateAccountExecutor;
-import com.jdcloud.sdk.service.httpdns.model.GetDomainsRequest;
-import com.jdcloud.sdk.service.httpdns.model.GetDomainsResponse;
-import com.jdcloud.sdk.service.httpdns.client.GetDomainsExecutor;
 import com.jdcloud.sdk.service.httpdns.model.AddDomainsRequest;
 import com.jdcloud.sdk.service.httpdns.model.AddDomainsResponse;
 import com.jdcloud.sdk.service.httpdns.client.AddDomainsExecutor;
 import com.jdcloud.sdk.service.httpdns.model.DelDomainsRequest;
 import com.jdcloud.sdk.service.httpdns.model.DelDomainsResponse;
 import com.jdcloud.sdk.service.httpdns.client.DelDomainsExecutor;
-import com.jdcloud.sdk.service.httpdns.model.OperateKeyRequest;
-import com.jdcloud.sdk.service.httpdns.model.OperateKeyResponse;
-import com.jdcloud.sdk.service.httpdns.client.OperateKeyExecutor;
+import com.jdcloud.sdk.service.httpdns.model.CreateAccountRequest;
+import com.jdcloud.sdk.service.httpdns.model.CreateAccountResponse;
+import com.jdcloud.sdk.service.httpdns.client.CreateAccountExecutor;
 import com.jdcloud.sdk.service.httpdns.model.GetAccountIdRequest;
 import com.jdcloud.sdk.service.httpdns.model.GetAccountIdResponse;
 import com.jdcloud.sdk.service.httpdns.client.GetAccountIdExecutor;
+import com.jdcloud.sdk.service.httpdns.model.GetDomainsRequest;
+import com.jdcloud.sdk.service.httpdns.model.GetDomainsResponse;
+import com.jdcloud.sdk.service.httpdns.client.GetDomainsExecutor;
+import com.jdcloud.sdk.service.httpdns.model.OperateKeyRequest;
+import com.jdcloud.sdk.service.httpdns.model.OperateKeyResponse;
+import com.jdcloud.sdk.service.httpdns.client.OperateKeyExecutor;
 
 /**
  * httpdnsClient
@@ -60,7 +60,7 @@ public class HttpdnsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.8";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "httpdns.jdcloud-api.com";
     public final static String ServiceName = "httpdns";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -114,28 +114,6 @@ public class HttpdnsClient extends JdcloudClient {
     }
 
     /**
-     * 创建httpdns账户
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateAccountResponse createAccount(CreateAccountRequest request) throws JdcloudSdkException {
-        return new CreateAccountExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询使用httpdns服务的域名
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetDomainsResponse getDomains(GetDomainsRequest request) throws JdcloudSdkException {
-        return new GetDomainsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 添加域名。&lt;br&gt;
 可以添加顶级域名除外的多级域名。
 
@@ -160,14 +138,14 @@ public class HttpdnsClient extends JdcloudClient {
     }
 
     /**
-     * 创建，启用，禁用httpdns服务密钥
+     * 创建httpdns账户
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public OperateKeyResponse operateKey(OperateKeyRequest request) throws JdcloudSdkException {
-        return new OperateKeyExecutor().client(this).execute(request);
+    public CreateAccountResponse createAccount(CreateAccountRequest request) throws JdcloudSdkException {
+        return new CreateAccountExecutor().client(this).execute(request);
     }
 
     /**
@@ -179,6 +157,28 @@ public class HttpdnsClient extends JdcloudClient {
      */
     public GetAccountIdResponse getAccountId(GetAccountIdRequest request) throws JdcloudSdkException {
         return new GetAccountIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询使用httpdns服务的域名
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDomainsResponse getDomains(GetDomainsRequest request) throws JdcloudSdkException {
+        return new GetDomainsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建，启用，禁用httpdns服务密钥
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OperateKeyResponse operateKey(OperateKeyRequest request) throws JdcloudSdkException {
+        return new OperateKeyExecutor().client(this).execute(request);
     }
 
 

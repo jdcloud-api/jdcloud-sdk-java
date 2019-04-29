@@ -31,30 +31,30 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.streambus.model.UpdateTopicRequest;
+import com.jdcloud.sdk.service.streambus.model.UpdateTopicResponse;
+import com.jdcloud.sdk.service.streambus.client.UpdateTopicExecutor;
 import com.jdcloud.sdk.service.streambus.model.GetConsumerGroupListRequest;
 import com.jdcloud.sdk.service.streambus.model.GetConsumerGroupListResponse;
 import com.jdcloud.sdk.service.streambus.client.GetConsumerGroupListExecutor;
-import com.jdcloud.sdk.service.streambus.model.CreateConsumerGroupRequest;
-import com.jdcloud.sdk.service.streambus.model.CreateConsumerGroupResponse;
-import com.jdcloud.sdk.service.streambus.client.CreateConsumerGroupExecutor;
+import com.jdcloud.sdk.service.streambus.model.GetTopicListRequest;
+import com.jdcloud.sdk.service.streambus.model.GetTopicListResponse;
+import com.jdcloud.sdk.service.streambus.client.GetTopicListExecutor;
 import com.jdcloud.sdk.service.streambus.model.DeleteConsumerGroupRequest;
 import com.jdcloud.sdk.service.streambus.model.DeleteConsumerGroupResponse;
 import com.jdcloud.sdk.service.streambus.client.DeleteConsumerGroupExecutor;
 import com.jdcloud.sdk.service.streambus.model.AddTopicRequest;
 import com.jdcloud.sdk.service.streambus.model.AddTopicResponse;
 import com.jdcloud.sdk.service.streambus.client.AddTopicExecutor;
+import com.jdcloud.sdk.service.streambus.model.CreateConsumerGroupRequest;
+import com.jdcloud.sdk.service.streambus.model.CreateConsumerGroupResponse;
+import com.jdcloud.sdk.service.streambus.client.CreateConsumerGroupExecutor;
 import com.jdcloud.sdk.service.streambus.model.DescribeTopicRequest;
 import com.jdcloud.sdk.service.streambus.model.DescribeTopicResponse;
 import com.jdcloud.sdk.service.streambus.client.DescribeTopicExecutor;
 import com.jdcloud.sdk.service.streambus.model.DeleteTopicRequest;
 import com.jdcloud.sdk.service.streambus.model.DeleteTopicResponse;
 import com.jdcloud.sdk.service.streambus.client.DeleteTopicExecutor;
-import com.jdcloud.sdk.service.streambus.model.UpdateTopicRequest;
-import com.jdcloud.sdk.service.streambus.model.UpdateTopicResponse;
-import com.jdcloud.sdk.service.streambus.client.UpdateTopicExecutor;
-import com.jdcloud.sdk.service.streambus.model.GetTopicListRequest;
-import com.jdcloud.sdk.service.streambus.model.GetTopicListResponse;
-import com.jdcloud.sdk.service.streambus.client.GetTopicListExecutor;
 
 /**
  * streambusClient
@@ -63,7 +63,7 @@ public class StreambusClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.1";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "streambus.jdcloud-api.com";
     public final static String ServiceName = "streambus";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -106,6 +106,17 @@ public class StreambusClient extends JdcloudClient {
 
 
     /**
+     * 此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateTopicResponse updateTopic(UpdateTopicRequest request) throws JdcloudSdkException {
+        return new UpdateTopicExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看指定主题的所有消费组
      *
      * @param request
@@ -117,14 +128,14 @@ public class StreambusClient extends JdcloudClient {
     }
 
     /**
-     * 创建consumerGroupName
+     * 查询topic列表，返回topic的集合
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateConsumerGroupResponse createConsumerGroup(CreateConsumerGroupRequest request) throws JdcloudSdkException {
-        return new CreateConsumerGroupExecutor().client(this).execute(request);
+    public GetTopicListResponse getTopicList(GetTopicListRequest request) throws JdcloudSdkException {
+        return new GetTopicListExecutor().client(this).execute(request);
     }
 
     /**
@@ -150,6 +161,17 @@ public class StreambusClient extends JdcloudClient {
     }
 
     /**
+     * 创建consumerGroupName
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateConsumerGroupResponse createConsumerGroup(CreateConsumerGroupRequest request) throws JdcloudSdkException {
+        return new CreateConsumerGroupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询指定主题,如果已归档会返回归档信息
      *
      * @param request
@@ -169,28 +191,6 @@ public class StreambusClient extends JdcloudClient {
      */
     public DeleteTopicResponse deleteTopic(DeleteTopicRequest request) throws JdcloudSdkException {
         return new DeleteTopicExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 此接口可以用来更新主题，创建归档，修改归档，删除归档，传入不同的参数可以实现不同的功能。修改归档只需要修改相应归档的参数，删除归档只需要把归档参数置为空即可
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateTopicResponse updateTopic(UpdateTopicRequest request) throws JdcloudSdkException {
-        return new UpdateTopicExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询topic列表，返回topic的集合
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetTopicListResponse getTopicList(GetTopicListRequest request) throws JdcloudSdkException {
-        return new GetTopicListExecutor().client(this).execute(request);
     }
 
 

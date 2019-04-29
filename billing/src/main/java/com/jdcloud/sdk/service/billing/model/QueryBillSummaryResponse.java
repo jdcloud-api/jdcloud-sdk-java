@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 帐单管理
+ * Billing Management APIs
  * 帐单查询API接口
  *
  * OpenAPI spec version: v1

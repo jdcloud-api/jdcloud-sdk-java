@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,18 +31,18 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.oss.model.PutBucketRequest;
-import com.jdcloud.sdk.service.oss.model.PutBucketResponse;
-import com.jdcloud.sdk.service.oss.client.PutBucketExecutor;
+import com.jdcloud.sdk.service.oss.model.ListBucketsRequest;
+import com.jdcloud.sdk.service.oss.model.ListBucketsResponse;
+import com.jdcloud.sdk.service.oss.client.ListBucketsExecutor;
 import com.jdcloud.sdk.service.oss.model.DeleteBucketRequest;
 import com.jdcloud.sdk.service.oss.model.DeleteBucketResponse;
 import com.jdcloud.sdk.service.oss.client.DeleteBucketExecutor;
 import com.jdcloud.sdk.service.oss.model.HeadBucketRequest;
 import com.jdcloud.sdk.service.oss.model.HeadBucketResponse;
 import com.jdcloud.sdk.service.oss.client.HeadBucketExecutor;
-import com.jdcloud.sdk.service.oss.model.ListBucketsRequest;
-import com.jdcloud.sdk.service.oss.model.ListBucketsResponse;
-import com.jdcloud.sdk.service.oss.client.ListBucketsExecutor;
+import com.jdcloud.sdk.service.oss.model.PutBucketRequest;
+import com.jdcloud.sdk.service.oss.model.PutBucketResponse;
+import com.jdcloud.sdk.service.oss.client.PutBucketExecutor;
 
 /**
  * ossClient
@@ -51,7 +51,7 @@ public class OssClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.0";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "oss.jdcloud-api.com";
     public final static String ServiceName = "oss";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -94,15 +94,15 @@ public class OssClient extends JdcloudClient {
 
 
     /**
-     * 创建bucket
+     * 列出当前用户的所有bucket
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public PutBucketResponse putBucket(PutBucketRequest request) throws JdcloudSdkException {
-        return new PutBucketExecutor().client(this).execute(request);
+    public ListBucketsResponse listBuckets(ListBucketsRequest request) throws JdcloudSdkException {
+        return new ListBucketsExecutor().client(this).execute(request);
     }
 
     /**
@@ -130,15 +130,15 @@ public class OssClient extends JdcloudClient {
     }
 
     /**
-     * 列出当前用户的所有bucket
+     * 创建bucket
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ListBucketsResponse listBuckets(ListBucketsRequest request) throws JdcloudSdkException {
-        return new ListBucketsExecutor().client(this).execute(request);
+    public PutBucketResponse putBucket(PutBucketRequest request) throws JdcloudSdkException {
+        return new PutBucketExecutor().client(this).execute(request);
     }
 
 

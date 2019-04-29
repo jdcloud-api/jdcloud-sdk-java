@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 策略管理
- * 策略管理接口
+ * Permission Management
+ * Permission Management API
  *
  * OpenAPI spec version: v1
  * Contact: 
