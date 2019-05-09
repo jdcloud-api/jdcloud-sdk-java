@@ -27,60 +27,70 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * cacheInstanceSpec
+ * 创建缓存Redis实例时，用户输入的参数
  */
 public class CacheInstanceSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 缓存redis实例所属的私有网络ID
+     * 缓存Redis实例所属的私有网络ID
      * Required:true
      */
     @Required
     private String vpcId;
 
     /**
-     * 缓存redis实例在私有网络下所属的子网ID
+     * 缓存Redis实例在私有网络下所属的子网ID
      * Required:true
      */
     @Required
     private String subnetId;
 
     /**
-     * 缓存redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
+     * 缓存Redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      * Required:true
      */
     @Required
     private String cacheInstanceName;
 
     /**
-     * 缓存redis实例规格代码，参见实例规格代码表&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;。
+     * 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      * Required:true
      */
     @Required
     private String cacheInstanceClass;
 
     /**
-     * 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
+     * 缓存Redis实例的连接密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      */
     private String password;
 
     /**
-     * 缓存Redis实例所在区域可用区ID信息
+     * 缓存Redis实例所在区域的可用区ID
      * Required:true
      */
     @Required
     private AzIdSpec azId;
 
     /**
-     * 缓存Redis实例描述，不能超过256个字符
+     * 缓存Redis实例的描述，不能超过256个字符
      */
     private String cacheInstanceDescription;
 
+    /**
+     * 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+     */
+    private String redisVersion;
 
     /**
-     * get 缓存redis实例所属的私有网络ID
+     * 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+     */
+    private Integer ipv6On;
+
+
+    /**
+     * get 缓存Redis实例所属的私有网络ID
      *
      * @return
      */
@@ -89,7 +99,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存redis实例所属的私有网络ID
+     * set 缓存Redis实例所属的私有网络ID
      *
      * @param vpcId
      */
@@ -98,7 +108,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 缓存redis实例在私有网络下所属的子网ID
+     * get 缓存Redis实例在私有网络下所属的子网ID
      *
      * @return
      */
@@ -107,7 +117,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存redis实例在私有网络下所属的子网ID
+     * set 缓存Redis实例在私有网络下所属的子网ID
      *
      * @param subnetId
      */
@@ -116,7 +126,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 缓存redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
+     * get 缓存Redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
      * @return
      */
@@ -125,7 +135,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
+     * set 缓存Redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
      * @param cacheInstanceName
      */
@@ -134,7 +144,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 缓存redis实例规格代码，参见实例规格代码表&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;。
+     * get 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @return
      */
@@ -143,7 +153,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存redis实例规格代码，参见实例规格代码表&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;。
+     * set 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param cacheInstanceClass
      */
@@ -152,7 +162,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
+     * get 缓存Redis实例的连接密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      *
      * @return
      */
@@ -161,7 +171,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
+     * set 缓存Redis实例的连接密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      *
      * @param password
      */
@@ -170,7 +180,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 缓存Redis实例所在区域可用区ID信息
+     * get 缓存Redis实例所在区域的可用区ID
      *
      * @return
      */
@@ -179,7 +189,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis实例所在区域可用区ID信息
+     * set 缓存Redis实例所在区域的可用区ID
      *
      * @param azId
      */
@@ -188,7 +198,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 缓存Redis实例描述，不能超过256个字符
+     * get 缓存Redis实例的描述，不能超过256个字符
      *
      * @return
      */
@@ -197,7 +207,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis实例描述，不能超过256个字符
+     * set 缓存Redis实例的描述，不能超过256个字符
      *
      * @param cacheInstanceDescription
      */
@@ -205,9 +215,45 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.cacheInstanceDescription = cacheInstanceDescription;
     }
 
+    /**
+     * get 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+     *
+     * @return
+     */
+    public String getRedisVersion() {
+        return redisVersion;
+    }
 
     /**
-     * set 缓存redis实例所属的私有网络ID
+     * set 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+     *
+     * @param redisVersion
+     */
+    public void setRedisVersion(String redisVersion) {
+        this.redisVersion = redisVersion;
+    }
+
+    /**
+     * get 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+     *
+     * @return
+     */
+    public Integer getIpv6On() {
+        return ipv6On;
+    }
+
+    /**
+     * set 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+     *
+     * @param ipv6On
+     */
+    public void setIpv6On(Integer ipv6On) {
+        this.ipv6On = ipv6On;
+    }
+
+
+    /**
+     * set 缓存Redis实例所属的私有网络ID
      *
      * @param vpcId
      */
@@ -217,7 +263,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存redis实例在私有网络下所属的子网ID
+     * set 缓存Redis实例在私有网络下所属的子网ID
      *
      * @param subnetId
      */
@@ -227,7 +273,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
+     * set 缓存Redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
      * @param cacheInstanceName
      */
@@ -237,7 +283,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存redis实例规格代码，参见实例规格代码表&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;。
+     * set 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param cacheInstanceClass
      */
@@ -247,7 +293,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
+     * set 缓存Redis实例的连接密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      *
      * @param password
      */
@@ -257,7 +303,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis实例所在区域可用区ID信息
+     * set 缓存Redis实例所在区域的可用区ID
      *
      * @param azId
      */
@@ -267,12 +313,32 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis实例描述，不能超过256个字符
+     * set 缓存Redis实例的描述，不能超过256个字符
      *
      * @param cacheInstanceDescription
      */
     public CacheInstanceSpec cacheInstanceDescription(String cacheInstanceDescription) {
         this.cacheInstanceDescription = cacheInstanceDescription;
+        return this;
+    }
+
+    /**
+     * set 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+     *
+     * @param redisVersion
+     */
+    public CacheInstanceSpec redisVersion(String redisVersion) {
+        this.redisVersion = redisVersion;
+        return this;
+    }
+
+    /**
+     * set 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+     *
+     * @param ipv6On
+     */
+    public CacheInstanceSpec ipv6On(Integer ipv6On) {
+        this.ipv6On = ipv6On;
         return this;
     }
 

@@ -33,7 +33,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      */
     private String dbName;
 
@@ -44,7 +44,7 @@ public class AccountPrivilege  implements java.io.Serializable {
 
 
     /**
-     * get 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * get 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class AccountPrivilege  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param dbName
      */
@@ -81,7 +81,7 @@ public class AccountPrivilege  implements java.io.Serializable {
 
 
     /**
-     * set 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 数据库名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param dbName
      */

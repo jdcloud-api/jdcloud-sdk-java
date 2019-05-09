@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,9 +42,7 @@ public class Bucket  implements java.io.Serializable {
 
     /**
      * creationDate
-     * Required:true
      */
-    @Required
     private String creationDate;
 
 

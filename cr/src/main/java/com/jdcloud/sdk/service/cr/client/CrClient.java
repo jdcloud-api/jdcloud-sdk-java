@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * cr
+ * 容器镜像仓库
  * 容器镜像仓库服务
  *
  * OpenAPI spec version: v1
@@ -34,48 +34,48 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.cr.model.DeleteImageRequest;
 import com.jdcloud.sdk.service.cr.model.DeleteImageResponse;
 import com.jdcloud.sdk.service.cr.client.DeleteImageExecutor;
+import com.jdcloud.sdk.service.cr.model.DescribeRepositoriesRequest;
+import com.jdcloud.sdk.service.cr.model.DescribeRepositoriesResponse;
+import com.jdcloud.sdk.service.cr.client.DescribeRepositoriesExecutor;
+import com.jdcloud.sdk.service.cr.model.ReleaseAuthorizationTokenRequest;
+import com.jdcloud.sdk.service.cr.model.ReleaseAuthorizationTokenResponse;
+import com.jdcloud.sdk.service.cr.client.ReleaseAuthorizationTokenExecutor;
+import com.jdcloud.sdk.service.cr.model.DescribeAuthorizationTokensRequest;
+import com.jdcloud.sdk.service.cr.model.DescribeAuthorizationTokensResponse;
+import com.jdcloud.sdk.service.cr.client.DescribeAuthorizationTokensExecutor;
+import com.jdcloud.sdk.service.cr.model.CheckRepositoryNameRequest;
+import com.jdcloud.sdk.service.cr.model.CheckRepositoryNameResponse;
+import com.jdcloud.sdk.service.cr.client.CheckRepositoryNameExecutor;
+import com.jdcloud.sdk.service.cr.model.DescribeImagesRequest;
+import com.jdcloud.sdk.service.cr.model.DescribeImagesResponse;
+import com.jdcloud.sdk.service.cr.client.DescribeImagesExecutor;
 import com.jdcloud.sdk.service.cr.model.DescribeRegistriesRequest;
 import com.jdcloud.sdk.service.cr.model.DescribeRegistriesResponse;
 import com.jdcloud.sdk.service.cr.client.DescribeRegistriesExecutor;
+import com.jdcloud.sdk.service.cr.model.DescribeRegistryRequest;
+import com.jdcloud.sdk.service.cr.model.DescribeRegistryResponse;
+import com.jdcloud.sdk.service.cr.client.DescribeRegistryExecutor;
+import com.jdcloud.sdk.service.cr.model.GetAuthorizationTokenRequest;
+import com.jdcloud.sdk.service.cr.model.GetAuthorizationTokenResponse;
+import com.jdcloud.sdk.service.cr.client.GetAuthorizationTokenExecutor;
+import com.jdcloud.sdk.service.cr.model.CreateRepositoryRequest;
+import com.jdcloud.sdk.service.cr.model.CreateRepositoryResponse;
+import com.jdcloud.sdk.service.cr.client.CreateRepositoryExecutor;
+import com.jdcloud.sdk.service.cr.model.DescribeQuotasRequest;
+import com.jdcloud.sdk.service.cr.model.DescribeQuotasResponse;
+import com.jdcloud.sdk.service.cr.client.DescribeQuotasExecutor;
 import com.jdcloud.sdk.service.cr.model.CreateRegistryRequest;
 import com.jdcloud.sdk.service.cr.model.CreateRegistryResponse;
 import com.jdcloud.sdk.service.cr.client.CreateRegistryExecutor;
 import com.jdcloud.sdk.service.cr.model.DeleteRepositoryRequest;
 import com.jdcloud.sdk.service.cr.model.DeleteRepositoryResponse;
 import com.jdcloud.sdk.service.cr.client.DeleteRepositoryExecutor;
-import com.jdcloud.sdk.service.cr.model.DescribeRepositoriesRequest;
-import com.jdcloud.sdk.service.cr.model.DescribeRepositoriesResponse;
-import com.jdcloud.sdk.service.cr.client.DescribeRepositoriesExecutor;
-import com.jdcloud.sdk.service.cr.model.CheckRepositoryNameRequest;
-import com.jdcloud.sdk.service.cr.model.CheckRepositoryNameResponse;
-import com.jdcloud.sdk.service.cr.client.CheckRepositoryNameExecutor;
-import com.jdcloud.sdk.service.cr.model.ReleaseAuthorizationTokenRequest;
-import com.jdcloud.sdk.service.cr.model.ReleaseAuthorizationTokenResponse;
-import com.jdcloud.sdk.service.cr.client.ReleaseAuthorizationTokenExecutor;
-import com.jdcloud.sdk.service.cr.model.DescribeQuotasRequest;
-import com.jdcloud.sdk.service.cr.model.DescribeQuotasResponse;
-import com.jdcloud.sdk.service.cr.client.DescribeQuotasExecutor;
-import com.jdcloud.sdk.service.cr.model.CreateRepositoryRequest;
-import com.jdcloud.sdk.service.cr.model.CreateRepositoryResponse;
-import com.jdcloud.sdk.service.cr.client.CreateRepositoryExecutor;
-import com.jdcloud.sdk.service.cr.model.GetAuthorizationTokenRequest;
-import com.jdcloud.sdk.service.cr.model.GetAuthorizationTokenResponse;
-import com.jdcloud.sdk.service.cr.client.GetAuthorizationTokenExecutor;
-import com.jdcloud.sdk.service.cr.model.CheckRegistryNameRequest;
-import com.jdcloud.sdk.service.cr.model.CheckRegistryNameResponse;
-import com.jdcloud.sdk.service.cr.client.CheckRegistryNameExecutor;
-import com.jdcloud.sdk.service.cr.model.DescribeAuthorizationTokensRequest;
-import com.jdcloud.sdk.service.cr.model.DescribeAuthorizationTokensResponse;
-import com.jdcloud.sdk.service.cr.client.DescribeAuthorizationTokensExecutor;
-import com.jdcloud.sdk.service.cr.model.DescribeImagesRequest;
-import com.jdcloud.sdk.service.cr.model.DescribeImagesResponse;
-import com.jdcloud.sdk.service.cr.client.DescribeImagesExecutor;
-import com.jdcloud.sdk.service.cr.model.DescribeRegistryRequest;
-import com.jdcloud.sdk.service.cr.model.DescribeRegistryResponse;
-import com.jdcloud.sdk.service.cr.client.DescribeRegistryExecutor;
 import com.jdcloud.sdk.service.cr.model.DeleteRegistryRequest;
 import com.jdcloud.sdk.service.cr.model.DeleteRegistryResponse;
 import com.jdcloud.sdk.service.cr.client.DeleteRegistryExecutor;
+import com.jdcloud.sdk.service.cr.model.CheckRegistryNameRequest;
+import com.jdcloud.sdk.service.cr.model.CheckRegistryNameResponse;
+import com.jdcloud.sdk.service.cr.client.CheckRegistryNameExecutor;
 
 /**
  * crClient
@@ -84,8 +84,8 @@ public class CrClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.7";
-    public final static String DefaultEndpoint = "openapi.cr.jdcloud.com";
+    public final static String ClientVersion = "1.0.10";
+    public final static String DefaultEndpoint = "cr.jdcloud-api.com";
     public final static String ServiceName = "cr";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
 
@@ -143,6 +143,67 @@ digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image 
     }
 
     /**
+     * 描述用户指定 registry 下的 repository.
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRepositoriesResponse describeRepositories(DescribeRepositoriesRequest request) throws JdcloudSdkException {
+        return new DescribeRepositoriesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 释放用户 registry 的 token。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ReleaseAuthorizationTokenResponse releaseAuthorizationToken(ReleaseAuthorizationTokenRequest request) throws JdcloudSdkException {
+        return new ReleaseAuthorizationTokenExecutor().client(this).execute(request);
+    }
+
+    /**
+     * &lt;p&gt;批量查询令牌。&lt;/p&gt; 
+&lt;p&gt;暂时不支持分页和过滤条件。&lt;/p&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAuthorizationTokensResponse describeAuthorizationTokens(DescribeAuthorizationTokensRequest request) throws JdcloudSdkException {
+        return new DescribeAuthorizationTokensExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询指定镜像仓库名称是否已经存在以及是否符合命名规范。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CheckRepositoryNameResponse checkRepositoryName(CheckRepositoryNameRequest request) throws JdcloudSdkException {
+        return new CheckRepositoryNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 返回指定repository中images的元数据，包括image size, image tags和creation date。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeImagesResponse describeImages(DescribeImagesRequest request) throws JdcloudSdkException {
+        return new DescribeImagesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量查询指定用户下所有 registry 详情。
 暂不支持 filter.
 
@@ -153,6 +214,57 @@ digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image 
      */
     public DescribeRegistriesResponse describeRegistries(DescribeRegistriesRequest request) throws JdcloudSdkException {
         return new DescribeRegistriesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询指定用户下某个 registry 详情。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRegistryResponse describeRegistry(DescribeRegistryRequest request) throws JdcloudSdkException {
+        return new DescribeRegistryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * &lt;p&gt;申请12小时有效期的令牌。 使用&lt;code&gt;docker&lt;/code&gt; CLI push和pull镜像。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;authorizationToken&lt;/code&gt;为每个registry返回一个base64编码的字符串，解码后&lt;code&gt;docker login&lt;/code&gt;命令
+可完成指定registry的鉴权。JCR CLI提供&lt;code&gt;jcr get-login&lt;/code&gt;进行认证处理。&lt;/p&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetAuthorizationTokenResponse getAuthorizationToken(GetAuthorizationTokenRequest request) throws JdcloudSdkException {
+        return new GetAuthorizationTokenExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 通过参数创建镜像仓库。
+仓库名称可以分解为多个路径名，每个名称必须至少包含一个小写字母数字，考虑URL规范。
+支持包含段划线或者下划线进行分割，但不允许点&#39;.&#39;，多个路径名之间通过(&quot;/&quot;)连接，总长度不超过256个字符，当前只支持二级目录。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRepositoryResponse createRepository(CreateRepositoryRequest request) throws JdcloudSdkException {
+        return new CreateRepositoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询配额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
+        return new DescribeQuotasExecutor().client(this).execute(request);
     }
 
     /**
@@ -180,78 +292,15 @@ digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image 
     }
 
     /**
-     * 描述用户指定 registry 下的 repository.
+     * 删除指定用户下某个 registry.
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeRepositoriesResponse describeRepositories(DescribeRepositoriesRequest request) throws JdcloudSdkException {
-        return new DescribeRepositoriesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询指定镜像仓库名称是否已经存在以及是否符合命名规范。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CheckRepositoryNameResponse checkRepositoryName(CheckRepositoryNameRequest request) throws JdcloudSdkException {
-        return new CheckRepositoryNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 释放用户 registry 的 token。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ReleaseAuthorizationTokenResponse releaseAuthorizationToken(ReleaseAuthorizationTokenRequest request) throws JdcloudSdkException {
-        return new ReleaseAuthorizationTokenExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询配额
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
-        return new DescribeQuotasExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 通过参数创建镜像仓库。
-仓库名称可以分解为多个路径名，每个名称必须至少包含一个小写字母数字，考虑URL规范。
-支持包含段划线或者下划线进行分割，但不允许点&#39;.&#39;，多个路径名之间通过(&quot;/&quot;)连接，总长度不超过256个字符，当前只支持二级目录。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateRepositoryResponse createRepository(CreateRepositoryRequest request) throws JdcloudSdkException {
-        return new CreateRepositoryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * &lt;p&gt;申请12小时有效期的令牌。 使用&lt;code&gt;docker&lt;/code&gt; CLI push和pull镜像。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;authorizationToken&lt;/code&gt;为每个registry返回一个base64编码的字符串，解码后&lt;code&gt;docker login&lt;/code&gt;命令
-可完成指定registry的鉴权。JCR CLI提供&lt;code&gt;jcr get-login&lt;/code&gt;进行认证处理。&lt;/p&gt;
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetAuthorizationTokenResponse getAuthorizationToken(GetAuthorizationTokenRequest request) throws JdcloudSdkException {
-        return new GetAuthorizationTokenExecutor().client(this).execute(request);
+    public DeleteRegistryResponse deleteRegistry(DeleteRegistryRequest request) throws JdcloudSdkException {
+        return new DeleteRegistryExecutor().client(this).execute(request);
     }
 
     /**
@@ -264,55 +313,6 @@ digest和tag唯一表征单个镜像，其中imageDigest为sha256哈希，image 
      */
     public CheckRegistryNameResponse checkRegistryName(CheckRegistryNameRequest request) throws JdcloudSdkException {
         return new CheckRegistryNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * &lt;p&gt;批量查询令牌。&lt;/p&gt; 
-&lt;p&gt;暂时不支持分页和过滤条件。&lt;/p&gt;
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeAuthorizationTokensResponse describeAuthorizationTokens(DescribeAuthorizationTokensRequest request) throws JdcloudSdkException {
-        return new DescribeAuthorizationTokensExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 返回指定repository中images的元数据，包括image size, image tags和creation date。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeImagesResponse describeImages(DescribeImagesRequest request) throws JdcloudSdkException {
-        return new DescribeImagesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询指定用户下某个 registry 详情。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeRegistryResponse describeRegistry(DescribeRegistryRequest request) throws JdcloudSdkException {
-        return new DescribeRegistryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除指定用户下某个 registry.
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteRegistryResponse deleteRegistry(DeleteRegistryRequest request) throws JdcloudSdkException {
-        return new DeleteRegistryExecutor().client(this).execute(request);
     }
 
 

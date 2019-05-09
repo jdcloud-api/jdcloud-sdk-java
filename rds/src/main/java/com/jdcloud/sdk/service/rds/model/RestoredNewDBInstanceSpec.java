@@ -37,7 +37,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      */
     private String instanceName;
 
@@ -88,9 +88,24 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     @Required
     private ChargeSpec chargeSpec;
 
+    /**
+     * 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
+     */
+    private String instanceStorageType;
 
     /**
-     * get 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
+     */
+    private Boolean storageEncrypted;
+
+    /**
+     * 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     */
+    private String instanceType;
+
+
+    /**
+     * get 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -99,7 +114,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -233,9 +248,63 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
         this.chargeSpec = chargeSpec;
     }
 
+    /**
+     * get 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getInstanceStorageType() {
+        return instanceStorageType;
+    }
 
     /**
-     * set 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
+     *
+     * @param instanceStorageType
+     */
+    public void setInstanceStorageType(String instanceStorageType) {
+        this.instanceStorageType = instanceStorageType;
+    }
+
+    /**
+     * get 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public Boolean getStorageEncrypted() {
+        return storageEncrypted;
+    }
+
+    /**
+     * set 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
+     *
+     * @param storageEncrypted
+     */
+    public void setStorageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
+    }
+
+    /**
+     * get 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public String getInstanceType() {
+        return instanceType;
+    }
+
+    /**
+     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param instanceType
+     */
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+    }
+
+
+    /**
+     * set 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -311,6 +380,36 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      */
     public RestoredNewDBInstanceSpec chargeSpec(ChargeSpec chargeSpec) {
         this.chargeSpec = chargeSpec;
+        return this;
+    }
+
+    /**
+     * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
+     *
+     * @param instanceStorageType
+     */
+    public RestoredNewDBInstanceSpec instanceStorageType(String instanceStorageType) {
+        this.instanceStorageType = instanceStorageType;
+        return this;
+    }
+
+    /**
+     * set 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
+     *
+     * @param storageEncrypted
+     */
+    public RestoredNewDBInstanceSpec storageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
+        return this;
+    }
+
+    /**
+     * set 实例的高可用架构。standalone：单机，cluster：主备双机架构，缺省为cluster&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param instanceType
+     */
+    public RestoredNewDBInstanceSpec instanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
 

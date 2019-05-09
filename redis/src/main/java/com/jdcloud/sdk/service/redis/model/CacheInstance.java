@@ -24,10 +24,12 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.charge.model.Charge;
 
 /**
- * cacheInstance
+ * 查询缓存Redis实例时，返回的实例信息（列表和详情的信息一样）
  */
 public class CacheInstance  implements java.io.Serializable {
 
@@ -44,17 +46,17 @@ public class CacheInstance  implements java.io.Serializable {
     private String cacheInstanceName;
 
     /**
-     * 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+     * 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      */
     private String cacheInstanceClass;
 
     /**
-     * 容量，单位MB
+     * 实例的总内存（MB）
      */
     private Integer cacheInstanceMemoryMB;
 
     /**
-     * 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
+     * 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
      */
     private String cacheInstanceStatus;
 
@@ -64,7 +66,7 @@ public class CacheInstance  implements java.io.Serializable {
     private String cacheInstanceDescription;
 
     /**
-     * 创建时间
+     * 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      */
     private String createTime;
 
@@ -99,14 +101,34 @@ public class CacheInstance  implements java.io.Serializable {
     private Charge charge;
 
     /**
-     * 实例版本
+     * 实例的详细版本号，形如x.x-x.x
      */
     private String instanceVersion;
 
     /**
-     * 是否免密
+     * 连接redis实例时，是否需要密码认证，false表示无密码
      */
     private Boolean auth;
+
+    /**
+     * 创建实例时选择的redis引擎版本：目前支持2.8和4.0
+     */
+    private String redisVersion;
+
+    /**
+     * 实例类型：master-slave表示主从版，cluster表示集群版
+     */
+    private String cacheInstanceType;
+
+    /**
+     * 是否支持IPv6，0表示不支持（只能用IPv4），1表示支持
+     */
+    private Integer ipv6On;
+
+    /**
+     * 标签信息
+     */
+    private List<Tag> tags;
 
 
     /**
@@ -146,7 +168,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+     * get 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @return
      */
@@ -155,7 +177,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+     * set 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param cacheInstanceClass
      */
@@ -164,7 +186,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 容量，单位MB
+     * get 实例的总内存（MB）
      *
      * @return
      */
@@ -173,7 +195,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 容量，单位MB
+     * set 实例的总内存（MB）
      *
      * @param cacheInstanceMemoryMB
      */
@@ -182,7 +204,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
+     * get 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
      *
      * @return
      */
@@ -191,7 +213,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
+     * set 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
      *
      * @param cacheInstanceStatus
      */
@@ -218,7 +240,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @return
      */
@@ -227,7 +249,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @param createTime
      */
@@ -344,7 +366,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例版本
+     * get 实例的详细版本号，形如x.x-x.x
      *
      * @return
      */
@@ -353,7 +375,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例版本
+     * set 实例的详细版本号，形如x.x-x.x
      *
      * @param instanceVersion
      */
@@ -362,7 +384,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 是否免密
+     * get 连接redis实例时，是否需要密码认证，false表示无密码
      *
      * @return
      */
@@ -371,12 +393,84 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 是否免密
+     * set 连接redis实例时，是否需要密码认证，false表示无密码
      *
      * @param auth
      */
     public void setAuth(Boolean auth) {
         this.auth = auth;
+    }
+
+    /**
+     * get 创建实例时选择的redis引擎版本：目前支持2.8和4.0
+     *
+     * @return
+     */
+    public String getRedisVersion() {
+        return redisVersion;
+    }
+
+    /**
+     * set 创建实例时选择的redis引擎版本：目前支持2.8和4.0
+     *
+     * @param redisVersion
+     */
+    public void setRedisVersion(String redisVersion) {
+        this.redisVersion = redisVersion;
+    }
+
+    /**
+     * get 实例类型：master-slave表示主从版，cluster表示集群版
+     *
+     * @return
+     */
+    public String getCacheInstanceType() {
+        return cacheInstanceType;
+    }
+
+    /**
+     * set 实例类型：master-slave表示主从版，cluster表示集群版
+     *
+     * @param cacheInstanceType
+     */
+    public void setCacheInstanceType(String cacheInstanceType) {
+        this.cacheInstanceType = cacheInstanceType;
+    }
+
+    /**
+     * get 是否支持IPv6，0表示不支持（只能用IPv4），1表示支持
+     *
+     * @return
+     */
+    public Integer getIpv6On() {
+        return ipv6On;
+    }
+
+    /**
+     * set 是否支持IPv6，0表示不支持（只能用IPv4），1表示支持
+     *
+     * @param ipv6On
+     */
+    public void setIpv6On(Integer ipv6On) {
+        this.ipv6On = ipv6On;
+    }
+
+    /**
+     * get 标签信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set 标签信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
 
@@ -401,7 +495,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码，参见&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+     * set 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param cacheInstanceClass
      */
@@ -411,7 +505,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 容量，单位MB
+     * set 实例的总内存（MB）
      *
      * @param cacheInstanceMemoryMB
      */
@@ -421,7 +515,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态，running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中
+     * set 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
      *
      * @param cacheInstanceStatus
      */
@@ -441,7 +535,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @param createTime
      */
@@ -511,7 +605,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例版本
+     * set 实例的详细版本号，形如x.x-x.x
      *
      * @param instanceVersion
      */
@@ -521,7 +615,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 是否免密
+     * set 连接redis实例时，是否需要密码认证，false表示无密码
      *
      * @param auth
      */
@@ -530,5 +624,57 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 创建实例时选择的redis引擎版本：目前支持2.8和4.0
+     *
+     * @param redisVersion
+     */
+    public CacheInstance redisVersion(String redisVersion) {
+        this.redisVersion = redisVersion;
+        return this;
+    }
+
+    /**
+     * set 实例类型：master-slave表示主从版，cluster表示集群版
+     *
+     * @param cacheInstanceType
+     */
+    public CacheInstance cacheInstanceType(String cacheInstanceType) {
+        this.cacheInstanceType = cacheInstanceType;
+        return this;
+    }
+
+    /**
+     * set 是否支持IPv6，0表示不支持（只能用IPv4），1表示支持
+     *
+     * @param ipv6On
+     */
+    public CacheInstance ipv6On(Integer ipv6On) {
+        this.ipv6On = ipv6On;
+        return this;
+    }
+
+    /**
+     * set 标签信息
+     *
+     * @param tags
+     */
+    public CacheInstance tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * add item to 标签信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
 }

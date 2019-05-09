@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
-只有处于运行&lt;b&gt;running&lt;/b&gt;或者错误&lt;b&gt;error&lt;/b&gt;状态的可以删除，其余状态不可以删除
-白名单用户不能删除包年包月已到期的云主机
+ * 删除按配置计费、或包年包月已到期的缓存Redis实例，包年包月未到期不可删除。
+只有处于运行running或者错误error状态才可以删除，其余状态不可以删除。
+白名单用户不能删除包年包月已到期的缓存Redis实例。
 
  */
 public class DeleteCacheInstanceResponse extends JdcloudResponse<DeleteCacheInstanceResult> implements java.io.Serializable {

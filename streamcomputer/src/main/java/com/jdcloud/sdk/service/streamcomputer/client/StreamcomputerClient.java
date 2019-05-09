@@ -31,51 +31,51 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.streamcomputer.model.DeleteNamespaceRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.DeleteNamespaceResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.DeleteNamespaceExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.DescribeJobRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.DescribeJobResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.DescribeJobExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.StopJobRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.StopJobResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.StopJobExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.QueryNamespacesRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.QueryNamespacesResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.QueryNamespacesExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.GetJobListRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.GetJobListResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.GetJobListExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.DeleteStorageRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.DeleteStorageResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.DeleteStorageExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.StartJobRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.StartJobResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.StartJobExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.GetStorageListRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.GetStorageListResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.GetStorageListExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.CreateNamespaceRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.CreateNamespaceResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.CreateNamespaceExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.AddOrUpdateStorageRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.AddOrUpdateStorageResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.AddOrUpdateStorageExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.AddOrUpdateJobRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.AddOrUpdateJobResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.AddOrUpdateJobExecutor;
 import com.jdcloud.sdk.service.streamcomputer.model.QueryNamespaceDetailRequest;
 import com.jdcloud.sdk.service.streamcomputer.model.QueryNamespaceDetailResponse;
 import com.jdcloud.sdk.service.streamcomputer.client.QueryNamespaceDetailExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.UpdateNamespaceRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.UpdateNamespaceResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.UpdateNamespaceExecutor;
-import com.jdcloud.sdk.service.streamcomputer.model.DeleteJobRequest;
-import com.jdcloud.sdk.service.streamcomputer.model.DeleteJobResponse;
-import com.jdcloud.sdk.service.streamcomputer.client.DeleteJobExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.DescribeJobRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.DescribeJobResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.DescribeJobExecutor;
 import com.jdcloud.sdk.service.streamcomputer.model.DescribeStorageRequest;
 import com.jdcloud.sdk.service.streamcomputer.model.DescribeStorageResponse;
 import com.jdcloud.sdk.service.streamcomputer.client.DescribeStorageExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.DeleteJobRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.DeleteJobResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.DeleteJobExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.AddOrUpdateJobRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.AddOrUpdateJobResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.AddOrUpdateJobExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.QueryNamespacesRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.QueryNamespacesResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.QueryNamespacesExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.StartJobRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.StartJobResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.StartJobExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.AddOrUpdateStorageRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.AddOrUpdateStorageResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.AddOrUpdateStorageExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.GetJobListRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.GetJobListResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.GetJobListExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.DeleteNamespaceRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.DeleteNamespaceResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.DeleteNamespaceExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.StopJobRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.StopJobResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.StopJobExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.CreateNamespaceRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.CreateNamespaceResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.CreateNamespaceExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.GetStorageListRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.GetStorageListResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.GetStorageListExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.UpdateNamespaceRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.UpdateNamespaceResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.UpdateNamespaceExecutor;
+import com.jdcloud.sdk.service.streamcomputer.model.DeleteStorageRequest;
+import com.jdcloud.sdk.service.streamcomputer.model.DeleteStorageResponse;
+import com.jdcloud.sdk.service.streamcomputer.client.DeleteStorageExecutor;
 
 /**
  * streamcomputerClient
@@ -84,7 +84,7 @@ public class StreamcomputerClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.1";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "streamcompute.jdcloud-api.com";
     public final static String ServiceName = "streamcomputer";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -127,14 +127,14 @@ public class StreamcomputerClient extends JdcloudClient {
 
 
     /**
-     * 删除namespace,如果旗下关联有其他资源，不允许删除
+     * 查询某个应用详情
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteNamespaceResponse deleteNamespace(DeleteNamespaceRequest request) throws JdcloudSdkException {
-        return new DeleteNamespaceExecutor().client(this).execute(request);
+    public QueryNamespaceDetailResponse queryNamespaceDetail(QueryNamespaceDetailRequest request) throws JdcloudSdkException {
+        return new QueryNamespaceDetailExecutor().client(this).execute(request);
     }
 
     /**
@@ -149,14 +149,36 @@ public class StreamcomputerClient extends JdcloudClient {
     }
 
     /**
-     * 停止作业运行job
+     * 查询指定输入
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public StopJobResponse stopJob(StopJobRequest request) throws JdcloudSdkException {
-        return new StopJobExecutor().client(this).execute(request);
+    public DescribeStorageResponse describeStorage(DescribeStorageRequest request) throws JdcloudSdkException {
+        return new DescribeStorageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除作业
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteJobResponse deleteJob(DeleteJobRequest request) throws JdcloudSdkException {
+        return new DeleteJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加或者更新job
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddOrUpdateJobResponse addOrUpdateJob(AddOrUpdateJobRequest request) throws JdcloudSdkException {
+        return new AddOrUpdateJobExecutor().client(this).execute(request);
     }
 
     /**
@@ -168,28 +190,6 @@ public class StreamcomputerClient extends JdcloudClient {
      */
     public QueryNamespacesResponse queryNamespaces(QueryNamespacesRequest request) throws JdcloudSdkException {
         return new QueryNamespacesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询指定应用下的所有job
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetJobListResponse getJobList(GetJobListRequest request) throws JdcloudSdkException {
-        return new GetJobListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除指定输入
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteStorageResponse deleteStorage(DeleteStorageRequest request) throws JdcloudSdkException {
-        return new DeleteStorageExecutor().client(this).execute(request);
     }
 
     /**
@@ -210,8 +210,41 @@ public class StreamcomputerClient extends JdcloudClient {
      * @return
      * @throws JdcloudSdkException
      */
-    public GetStorageListResponse getStorageList(GetStorageListRequest request) throws JdcloudSdkException {
-        return new GetStorageListExecutor().client(this).execute(request);
+    public AddOrUpdateStorageResponse addOrUpdateStorage(AddOrUpdateStorageRequest request) throws JdcloudSdkException {
+        return new AddOrUpdateStorageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询指定应用下的所有job
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetJobListResponse getJobList(GetJobListRequest request) throws JdcloudSdkException {
+        return new GetJobListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除namespace,如果旗下关联有其他资源，不允许删除
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteNamespaceResponse deleteNamespace(DeleteNamespaceRequest request) throws JdcloudSdkException {
+        return new DeleteNamespaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止作业运行job
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopJobResponse stopJob(StopJobRequest request) throws JdcloudSdkException {
+        return new StopJobExecutor().client(this).execute(request);
     }
 
     /**
@@ -232,30 +265,8 @@ public class StreamcomputerClient extends JdcloudClient {
      * @return
      * @throws JdcloudSdkException
      */
-    public AddOrUpdateStorageResponse addOrUpdateStorage(AddOrUpdateStorageRequest request) throws JdcloudSdkException {
-        return new AddOrUpdateStorageExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 添加或者更新job
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AddOrUpdateJobResponse addOrUpdateJob(AddOrUpdateJobRequest request) throws JdcloudSdkException {
-        return new AddOrUpdateJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询某个应用详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryNamespaceDetailResponse queryNamespaceDetail(QueryNamespaceDetailRequest request) throws JdcloudSdkException {
-        return new QueryNamespaceDetailExecutor().client(this).execute(request);
+    public GetStorageListResponse getStorageList(GetStorageListRequest request) throws JdcloudSdkException {
+        return new GetStorageListExecutor().client(this).execute(request);
     }
 
     /**
@@ -270,25 +281,14 @@ public class StreamcomputerClient extends JdcloudClient {
     }
 
     /**
-     * 删除作业
+     * 删除指定输入
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteJobResponse deleteJob(DeleteJobRequest request) throws JdcloudSdkException {
-        return new DeleteJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询指定输入
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeStorageResponse describeStorage(DescribeStorageRequest request) throws JdcloudSdkException {
-        return new DescribeStorageExecutor().client(this).execute(request);
+    public DeleteStorageResponse deleteStorage(DeleteStorageRequest request) throws JdcloudSdkException {
+        return new DeleteStorageExecutor().client(this).execute(request);
     }
 
 

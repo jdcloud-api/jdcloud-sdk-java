@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.BackupSynchronicity;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
+ * 查询跨地域备份同步服务列表。
  */
 public class DescribeBackupSynchronicitiesResult extends JdcloudResult implements java.io.Serializable {
 

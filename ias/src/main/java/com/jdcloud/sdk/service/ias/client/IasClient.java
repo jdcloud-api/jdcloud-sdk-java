@@ -31,30 +31,30 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.ias.model.CreateAppRequest;
-import com.jdcloud.sdk.service.ias.model.CreateAppResponse;
-import com.jdcloud.sdk.service.ias.client.CreateAppExecutor;
-import com.jdcloud.sdk.service.ias.model.AppDetailRequest;
-import com.jdcloud.sdk.service.ias.model.AppDetailResponse;
-import com.jdcloud.sdk.service.ias.client.AppDetailExecutor;
-import com.jdcloud.sdk.service.ias.model.UpdateAppRequest;
-import com.jdcloud.sdk.service.ias.model.UpdateAppResponse;
-import com.jdcloud.sdk.service.ias.client.UpdateAppExecutor;
-import com.jdcloud.sdk.service.ias.model.GetAppsRequest;
-import com.jdcloud.sdk.service.ias.model.GetAppsResponse;
-import com.jdcloud.sdk.service.ias.client.GetAppsExecutor;
-import com.jdcloud.sdk.service.ias.model.AppsRequest;
-import com.jdcloud.sdk.service.ias.model.AppsResponse;
-import com.jdcloud.sdk.service.ias.client.AppsExecutor;
-import com.jdcloud.sdk.service.ias.model.StateRequest;
-import com.jdcloud.sdk.service.ias.model.StateResponse;
-import com.jdcloud.sdk.service.ias.client.StateExecutor;
-import com.jdcloud.sdk.service.ias.model.DeleteAppRequest;
-import com.jdcloud.sdk.service.ias.model.DeleteAppResponse;
-import com.jdcloud.sdk.service.ias.client.DeleteAppExecutor;
 import com.jdcloud.sdk.service.ias.model.GetAppRequest;
 import com.jdcloud.sdk.service.ias.model.GetAppResponse;
 import com.jdcloud.sdk.service.ias.client.GetAppExecutor;
+import com.jdcloud.sdk.service.ias.model.StateRequest;
+import com.jdcloud.sdk.service.ias.model.StateResponse;
+import com.jdcloud.sdk.service.ias.client.StateExecutor;
+import com.jdcloud.sdk.service.ias.model.CreateAppRequest;
+import com.jdcloud.sdk.service.ias.model.CreateAppResponse;
+import com.jdcloud.sdk.service.ias.client.CreateAppExecutor;
+import com.jdcloud.sdk.service.ias.model.GetAppsRequest;
+import com.jdcloud.sdk.service.ias.model.GetAppsResponse;
+import com.jdcloud.sdk.service.ias.client.GetAppsExecutor;
+import com.jdcloud.sdk.service.ias.model.UpdateAppRequest;
+import com.jdcloud.sdk.service.ias.model.UpdateAppResponse;
+import com.jdcloud.sdk.service.ias.client.UpdateAppExecutor;
+import com.jdcloud.sdk.service.ias.model.AppDetailRequest;
+import com.jdcloud.sdk.service.ias.model.AppDetailResponse;
+import com.jdcloud.sdk.service.ias.client.AppDetailExecutor;
+import com.jdcloud.sdk.service.ias.model.DeleteAppRequest;
+import com.jdcloud.sdk.service.ias.model.DeleteAppResponse;
+import com.jdcloud.sdk.service.ias.client.DeleteAppExecutor;
+import com.jdcloud.sdk.service.ias.model.AppsRequest;
+import com.jdcloud.sdk.service.ias.model.AppsResponse;
+import com.jdcloud.sdk.service.ias.client.AppsExecutor;
 
 /**
  * iasClient
@@ -63,7 +63,7 @@ public class IasClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.8";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "ias.jdcloud-api.com";
     public final static String ServiceName = "ias";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -106,58 +106,14 @@ public class IasClient extends JdcloudClient {
 
 
     /**
-     * 创建应用
+     * 获取应用
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateAppResponse createApp(CreateAppRequest request) throws JdcloudSdkException {
-        return new CreateAppExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 运营后台获取应用详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AppDetailResponse appDetail(AppDetailRequest request) throws JdcloudSdkException {
-        return new AppDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 更新应用（只传需要变更的参数，不传的参数不会更新）
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateAppResponse updateApp(UpdateAppRequest request) throws JdcloudSdkException {
-        return new UpdateAppExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取账户下所有应用
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetAppsResponse getApps(GetAppsRequest request) throws JdcloudSdkException {
-        return new GetAppsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 运营后台查询app
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AppsResponse apps(AppsRequest request) throws JdcloudSdkException {
-        return new AppsExecutor().client(this).execute(request);
+    public GetAppResponse getApp(GetAppRequest request) throws JdcloudSdkException {
+        return new GetAppExecutor().client(this).execute(request);
     }
 
     /**
@@ -172,6 +128,50 @@ public class IasClient extends JdcloudClient {
     }
 
     /**
+     * 创建应用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAppResponse createApp(CreateAppRequest request) throws JdcloudSdkException {
+        return new CreateAppExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取账户下所有应用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetAppsResponse getApps(GetAppsRequest request) throws JdcloudSdkException {
+        return new GetAppsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新应用（只传需要变更的参数，不传的参数不会更新）
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAppResponse updateApp(UpdateAppRequest request) throws JdcloudSdkException {
+        return new UpdateAppExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 运营后台获取应用详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AppDetailResponse appDetail(AppDetailRequest request) throws JdcloudSdkException {
+        return new AppDetailExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除应用
      *
      * @param request
@@ -183,14 +183,14 @@ public class IasClient extends JdcloudClient {
     }
 
     /**
-     * 获取应用
+     * 运营后台查询app
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetAppResponse getApp(GetAppRequest request) throws JdcloudSdkException {
-        return new GetAppExecutor().client(this).execute(request);
+    public AppsResponse apps(AppsRequest request) throws JdcloudSdkException {
+        return new AppsExecutor().client(this).execute(request);
     }
 
 

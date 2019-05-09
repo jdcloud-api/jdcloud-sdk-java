@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,42 +28,53 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.common.model.Sort;
+import com.jdcloud.sdk.service.common.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件
+ * 查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
  */
 public class DescribeCacheInstancesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 请求查询缓存实例的页码；默认为1
+     * 页码：取值范围[1,∞)，默认为1
      */
     private Integer pageNumber;
 
     /**
-     * 请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]
+     * 分页大小：取值范围[10, 100]，默认为10
      */
     private Integer pageSize;
 
     /**
-     * cacheInstanceId -缓存实例Id，精确匹配，支持多个
-cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
-cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * 过滤属性：
+cacheInstanceId - 实例Id，精确匹配，可选择多个
+cacheInstanceName - 实例名称，模糊匹配
+cacheInstanceStatus - 实例状态，精确匹配，可选择多个(running：运行中，error：错误，creating：创建中，changing：变配中，configuring：参数修改中，restoring：备份恢复中，deleting：删除中)
+redisVersion - redis引擎版本，精确匹配，可选择2.8和4.0
+instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluster表示集群版）
+chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
      */
     private List<Filter> filters;
 
     /**
-     * createTime - 创建时间(asc：正序，desc：倒序)
+     * 排序属性：
+createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
      */
     private List<Sort> sorts;
 
     /**
-     * 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * 标签的过滤条件
+     */
+    private List<TagFilter> tagFilters;
+
+    /**
+     * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
     @Required
@@ -71,7 +82,7 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
 
 
     /**
-     * get 请求查询缓存实例的页码；默认为1
+     * get 页码：取值范围[1,∞)，默认为1
      *
      * @return
      */
@@ -80,7 +91,7 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set 请求查询缓存实例的页码；默认为1
+     * set 页码：取值范围[1,∞)，默认为1
      *
      * @param pageNumber
      */
@@ -89,7 +100,7 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * get 请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小：取值范围[10, 100]，默认为10
      *
      * @return
      */
@@ -98,7 +109,7 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set 请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小：取值范围[10, 100]，默认为10
      *
      * @param pageSize
      */
@@ -107,9 +118,13 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * get cacheInstanceId -缓存实例Id，精确匹配，支持多个
-cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
-cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * get 过滤属性：
+cacheInstanceId - 实例Id，精确匹配，可选择多个
+cacheInstanceName - 实例名称，模糊匹配
+cacheInstanceStatus - 实例状态，精确匹配，可选择多个(running：运行中，error：错误，creating：创建中，changing：变配中，configuring：参数修改中，restoring：备份恢复中，deleting：删除中)
+redisVersion - redis引擎版本，精确匹配，可选择2.8和4.0
+instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluster表示集群版）
+chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
      *
      * @return
@@ -119,9 +134,13 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set cacheInstanceId -缓存实例Id，精确匹配，支持多个
-cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
-cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * set 过滤属性：
+cacheInstanceId - 实例Id，精确匹配，可选择多个
+cacheInstanceName - 实例名称，模糊匹配
+cacheInstanceStatus - 实例状态，精确匹配，可选择多个(running：运行中，error：错误，creating：创建中，changing：变配中，configuring：参数修改中，restoring：备份恢复中，deleting：删除中)
+redisVersion - redis引擎版本，精确匹配，可选择2.8和4.0
+instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluster表示集群版）
+chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
      *
      * @param filters
@@ -131,7 +150,8 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * get createTime - 创建时间(asc：正序，desc：倒序)
+     * get 排序属性：
+createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
      *
      * @return
@@ -141,7 +161,8 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set createTime - 创建时间(asc：正序，desc：倒序)
+     * set 排序属性：
+createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
      *
      * @param sorts
@@ -151,7 +172,25 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * get 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * get 标签的过滤条件
+     *
+     * @return
+     */
+    public List<TagFilter> getTagFilters() {
+        return tagFilters;
+    }
+
+    /**
+     * set 标签的过滤条件
+     *
+     * @param tagFilters
+     */
+    public void setTagFilters(List<TagFilter> tagFilters) {
+        this.tagFilters = tagFilters;
+    }
+
+    /**
+     * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @return
      */
@@ -160,7 +199,7 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
@@ -170,7 +209,7 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
 
 
     /**
-     * set 请求查询缓存实例的页码；默认为1
+     * set 页码：取值范围[1,∞)，默认为1
      *
      * @param pageNumber
      */
@@ -180,7 +219,7 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set 请求查询缓存实例的分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小：取值范围[10, 100]，默认为10
      *
      * @param pageSize
      */
@@ -190,9 +229,13 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set cacheInstanceId -缓存实例Id，精确匹配，支持多个
-cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
-cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * set 过滤属性：
+cacheInstanceId - 实例Id，精确匹配，可选择多个
+cacheInstanceName - 实例名称，模糊匹配
+cacheInstanceStatus - 实例状态，精确匹配，可选择多个(running：运行中，error：错误，creating：创建中，changing：变配中，configuring：参数修改中，restoring：备份恢复中，deleting：删除中)
+redisVersion - redis引擎版本，精确匹配，可选择2.8和4.0
+instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluster表示集群版）
+chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
      *
      * @param filters
@@ -203,7 +246,8 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set createTime - 创建时间(asc：正序，desc：倒序)
+     * set 排序属性：
+createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
      *
      * @param sorts
@@ -214,7 +258,17 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * set 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * set 标签的过滤条件
+     *
+     * @param tagFilters
+     */
+    public DescribeCacheInstancesRequest tagFilters(List<TagFilter> tagFilters) {
+        this.tagFilters = tagFilters;
+        return this;
+    }
+
+    /**
+     * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
@@ -225,9 +279,13 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
 
 
     /**
-     * add item to cacheInstanceId -缓存实例Id，精确匹配，支持多个
-cacheInstanceName - 缓存实例名称，模糊匹配，支持单个
-cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(running：运行，error：错误，creating：创建中，changing：变配中，deleting：删除中)
+     * add item to 过滤属性：
+cacheInstanceId - 实例Id，精确匹配，可选择多个
+cacheInstanceName - 实例名称，模糊匹配
+cacheInstanceStatus - 实例状态，精确匹配，可选择多个(running：运行中，error：错误，creating：创建中，changing：变配中，configuring：参数修改中，restoring：备份恢复中，deleting：删除中)
+redisVersion - redis引擎版本，精确匹配，可选择2.8和4.0
+instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluster表示集群版）
+chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
      *
      * @param filter
@@ -240,7 +298,8 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
     }
 
     /**
-     * add item to createTime - 创建时间(asc：正序，desc：倒序)
+     * add item to 排序属性：
+createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
      *
      * @param sort
@@ -250,6 +309,18 @@ cacheInstanceStatus - 缓存你实例状态，精确匹配，支持多个(runnin
             this.sorts = new ArrayList<>();
         }
         this.sorts.add(sort);
+    }
+
+    /**
+     * add item to 标签的过滤条件
+     *
+     * @param tagFilter
+     */
+    public void addTagFilter(TagFilter tagFilter) {
+        if (this.tagFilters == null) {
+            this.tagFilters = new ArrayList<>();
+        }
+        this.tagFilters.add(tagFilter);
     }
 
 }

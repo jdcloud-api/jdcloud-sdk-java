@@ -37,9 +37,6 @@ import com.jdcloud.sdk.service.portal.client.DescribeProductExecutor;
 import com.jdcloud.sdk.service.portal.model.DescribeProductsByIdRequest;
 import com.jdcloud.sdk.service.portal.model.DescribeProductsByIdResponse;
 import com.jdcloud.sdk.service.portal.client.DescribeProductsByIdExecutor;
-import com.jdcloud.sdk.service.portal.model.DescribeProductsRequest;
-import com.jdcloud.sdk.service.portal.model.DescribeProductsResponse;
-import com.jdcloud.sdk.service.portal.client.DescribeProductsExecutor;
 
 /**
  * portalClient
@@ -48,7 +45,7 @@ public class PortalClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.0";
     public final static String DefaultEndpoint = "portal.jdcloud-api.com";
     public final static String ServiceName = "portal";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -112,18 +109,6 @@ public class PortalClient extends JdcloudClient {
      */
     public DescribeProductsByIdResponse describeProductsById(DescribeProductsByIdRequest request) throws JdcloudSdkException {
         return new DescribeProductsByIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 产品页列表查询接口
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeProductsResponse describeProducts(DescribeProductsRequest request) throws JdcloudSdkException {
-        return new DescribeProductsExecutor().client(this).execute(request);
     }
 
 

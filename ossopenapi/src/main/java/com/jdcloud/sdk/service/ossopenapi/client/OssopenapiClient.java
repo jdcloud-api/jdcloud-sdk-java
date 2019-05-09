@@ -31,15 +31,15 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.GetBackSourceConfigurationExecutor;
 import com.jdcloud.sdk.service.ossopenapi.model.PutBackSourceConfigurationRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.PutBackSourceConfigurationResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.PutBackSourceConfigurationExecutor;
 import com.jdcloud.sdk.service.ossopenapi.model.DeleteBackSourceConfigurationRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.DeleteBackSourceConfigurationResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.DeleteBackSourceConfigurationExecutor;
-import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationRequest;
-import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationResponse;
-import com.jdcloud.sdk.service.ossopenapi.client.GetBackSourceConfigurationExecutor;
 
 /**
  * ossopenapiClient
@@ -48,7 +48,7 @@ public class OssopenapiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.8";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "ossopenapi.jdcloud-api.com";
     public final static String ServiceName = "ossopenapi";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -91,6 +91,17 @@ public class OssopenapiClient extends JdcloudClient {
 
 
     /**
+     * 获取回源配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetBackSourceConfigurationResponse getBackSourceConfiguration(GetBackSourceConfigurationRequest request) throws JdcloudSdkException {
+        return new GetBackSourceConfigurationExecutor().client(this).execute(request);
+    }
+
+    /**
      * 添加修改回源配置
      *
      * @param request
@@ -110,17 +121,6 @@ public class OssopenapiClient extends JdcloudClient {
      */
     public DeleteBackSourceConfigurationResponse deleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) throws JdcloudSdkException {
         return new DeleteBackSourceConfigurationExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取回源配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetBackSourceConfigurationResponse getBackSourceConfiguration(GetBackSourceConfigurationRequest request) throws JdcloudSdkException {
-        return new GetBackSourceConfigurationExecutor().client(this).execute(request);
     }
 
 

@@ -33,18 +33,18 @@ public class AzId  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 缓存Redis主实例所在区域可用区ID
+     * 缓存Redis主实例所在区域的可用区ID
      */
     private String master;
 
     /**
-     * 缓存Redis从实例所在区域可用区ID
+     * 缓存Redis从实例所在区域的可用区ID
      */
     private String slave;
 
 
     /**
-     * get 缓存Redis主实例所在区域可用区ID
+     * get 缓存Redis主实例所在区域的可用区ID
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class AzId  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis主实例所在区域可用区ID
+     * set 缓存Redis主实例所在区域的可用区ID
      *
      * @param master
      */
@@ -62,7 +62,7 @@ public class AzId  implements java.io.Serializable {
     }
 
     /**
-     * get 缓存Redis从实例所在区域可用区ID
+     * get 缓存Redis从实例所在区域的可用区ID
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class AzId  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis从实例所在区域可用区ID
+     * set 缓存Redis从实例所在区域的可用区ID
      *
      * @param slave
      */
@@ -81,7 +81,7 @@ public class AzId  implements java.io.Serializable {
 
 
     /**
-     * set 缓存Redis主实例所在区域可用区ID
+     * set 缓存Redis主实例所在区域的可用区ID
      *
      * @param master
      */
@@ -91,7 +91,7 @@ public class AzId  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis从实例所在区域可用区ID
+     * set 缓存Redis从实例所在区域的可用区ID
      *
      * @param slave
      */

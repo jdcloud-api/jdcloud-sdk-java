@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * backup
+ * 缓存Redis实例的一个备份文件对象
  */
 public class Backup  implements java.io.Serializable {
 
@@ -48,21 +48,21 @@ public class Backup  implements java.io.Serializable {
     private String backupFileName;
 
     /**
-     * 备份实例ID
+     * 备份文件对应的实例ID
      * Required:true
      */
     @Required
-    private String spaceId;
+    private String cacheInstanceId;
 
     /**
-     * 备份开始时间
+     * 备份开始时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      * Required:true
      */
     @Required
     private String backupStartTime;
 
     /**
-     * 备份结束时间
+     * 备份结束时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      * Required:true
      */
     @Required
@@ -76,21 +76,21 @@ public class Backup  implements java.io.Serializable {
     private Integer backupType;
 
     /**
-     * 备份文件大小，如果实例是集群版，则表示每个分片备份文件大小的总和
+     * 备份文件总字节大小，如果实例是集群版，则表示每个分片备份文件大小的总和
      * Required:true
      */
     @Required
-    private Integer backupSize;
+    private Long backupSize;
 
     /**
-     * 备份任务状态状态，1表示失败，2表示成功
+     * 备份任务状态状态，0表示备份中，1表示失败，2表示成功
      * Required:true
      */
     @Required
     private Integer backupStatus;
 
     /**
-     * 备份文件下载的URL地址，集群版有多个URL地址
+     * 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
      * Required:true
      */
     @Required
@@ -134,25 +134,25 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份实例ID
+     * get 备份文件对应的实例ID
      *
      * @return
      */
-    public String getSpaceId() {
-        return spaceId;
+    public String getCacheInstanceId() {
+        return cacheInstanceId;
     }
 
     /**
-     * set 备份实例ID
+     * set 备份文件对应的实例ID
      *
-     * @param spaceId
+     * @param cacheInstanceId
      */
-    public void setSpaceId(String spaceId) {
-        this.spaceId = spaceId;
+    public void setCacheInstanceId(String cacheInstanceId) {
+        this.cacheInstanceId = cacheInstanceId;
     }
 
     /**
-     * get 备份开始时间
+     * get 备份开始时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @return
      */
@@ -161,7 +161,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份开始时间
+     * set 备份开始时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @param backupStartTime
      */
@@ -170,7 +170,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份结束时间
+     * get 备份结束时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @return
      */
@@ -179,7 +179,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份结束时间
+     * set 备份结束时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @param backupEndTime
      */
@@ -206,25 +206,25 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份文件大小，如果实例是集群版，则表示每个分片备份文件大小的总和
+     * get 备份文件总字节大小，如果实例是集群版，则表示每个分片备份文件大小的总和
      *
      * @return
      */
-    public Integer getBackupSize() {
+    public Long getBackupSize() {
         return backupSize;
     }
 
     /**
-     * set 备份文件大小，如果实例是集群版，则表示每个分片备份文件大小的总和
+     * set 备份文件总字节大小，如果实例是集群版，则表示每个分片备份文件大小的总和
      *
      * @param backupSize
      */
-    public void setBackupSize(Integer backupSize) {
+    public void setBackupSize(Long backupSize) {
         this.backupSize = backupSize;
     }
 
     /**
-     * get 备份任务状态状态，1表示失败，2表示成功
+     * get 备份任务状态状态，0表示备份中，1表示失败，2表示成功
      *
      * @return
      */
@@ -233,7 +233,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份任务状态状态，1表示失败，2表示成功
+     * set 备份任务状态状态，0表示备份中，1表示失败，2表示成功
      *
      * @param backupStatus
      */
@@ -242,7 +242,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份文件下载的URL地址，集群版有多个URL地址
+     * get 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
      *
      * @return
      */
@@ -251,7 +251,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份文件下载的URL地址，集群版有多个URL地址
+     * set 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
      *
      * @param backupDownloadURL
      */
@@ -281,17 +281,17 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份实例ID
+     * set 备份文件对应的实例ID
      *
-     * @param spaceId
+     * @param cacheInstanceId
      */
-    public Backup spaceId(String spaceId) {
-        this.spaceId = spaceId;
+    public Backup cacheInstanceId(String cacheInstanceId) {
+        this.cacheInstanceId = cacheInstanceId;
         return this;
     }
 
     /**
-     * set 备份开始时间
+     * set 备份开始时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @param backupStartTime
      */
@@ -301,7 +301,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份结束时间
+     * set 备份结束时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
      * @param backupEndTime
      */
@@ -321,17 +321,17 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份文件大小，如果实例是集群版，则表示每个分片备份文件大小的总和
+     * set 备份文件总字节大小，如果实例是集群版，则表示每个分片备份文件大小的总和
      *
      * @param backupSize
      */
-    public Backup backupSize(Integer backupSize) {
+    public Backup backupSize(Long backupSize) {
         this.backupSize = backupSize;
         return this;
     }
 
     /**
-     * set 备份任务状态状态，1表示失败，2表示成功
+     * set 备份任务状态状态，0表示备份中，1表示失败，2表示成功
      *
      * @param backupStatus
      */
@@ -341,7 +341,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份文件下载的URL地址，集群版有多个URL地址
+     * set 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
      *
      * @param backupDownloadURL
      */

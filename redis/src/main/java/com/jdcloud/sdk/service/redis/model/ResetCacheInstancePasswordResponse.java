@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 重置缓存Redis实例密码，支持免密操作
+ * 重置缓存Redis实例的密码，可为空
  */
 public class ResetCacheInstancePasswordResponse extends JdcloudResponse<ResetCacheInstancePasswordResult> implements java.io.Serializable {
 

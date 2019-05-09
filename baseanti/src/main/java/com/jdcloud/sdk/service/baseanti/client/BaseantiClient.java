@@ -31,21 +31,21 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceProtectInfoRequest;
-import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceProtectInfoResponse;
-import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceProtectInfoExecutor;
 import com.jdcloud.sdk.service.baseanti.model.SetCleanThresholdRequest;
 import com.jdcloud.sdk.service.baseanti.model.SetCleanThresholdResponse;
 import com.jdcloud.sdk.service.baseanti.client.SetCleanThresholdExecutor;
-import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceInfoRequest;
-import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceInfoResponse;
-import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceInfoExecutor;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourcesRequest;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourcesResponse;
 import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourcesExecutor;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceFlowRequest;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceFlowResponse;
 import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceFlowExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceProtectInfoRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceProtectInfoResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceProtectInfoExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceInfoRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceInfoResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceInfoExecutor;
 
 /**
  * baseantiClient
@@ -54,7 +54,7 @@ public class BaseantiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.6";
+    public final static String ClientVersion = "1.0.10";
     public final static String DefaultEndpoint = "baseanti.jdcloud-api.com";
     public final static String ServiceName = "baseanti";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -97,17 +97,6 @@ public class BaseantiClient extends JdcloudClient {
 
 
     /**
-     * 查询公网Ip的防护明细
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeIpResourceProtectInfoResponse describeIpResourceProtectInfo(DescribeIpResourceProtectInfoRequest request) throws JdcloudSdkException {
-        return new DescribeIpResourceProtectInfoExecutor().client(this).execute(request);
-    }
-
-    /**
      * 设置公网Ip的清洗阈值
      *
      * @param request
@@ -116,17 +105,6 @@ public class BaseantiClient extends JdcloudClient {
      */
     public SetCleanThresholdResponse setCleanThreshold(SetCleanThresholdRequest request) throws JdcloudSdkException {
         return new SetCleanThresholdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询公网Ip基本信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeIpResourceInfoResponse describeIpResourceInfo(DescribeIpResourceInfoRequest request) throws JdcloudSdkException {
-        return new DescribeIpResourceInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -149,6 +127,28 @@ public class BaseantiClient extends JdcloudClient {
      */
     public DescribeIpResourceFlowResponse describeIpResourceFlow(DescribeIpResourceFlowRequest request) throws JdcloudSdkException {
         return new DescribeIpResourceFlowExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询公网Ip的防护明细
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpResourceProtectInfoResponse describeIpResourceProtectInfo(DescribeIpResourceProtectInfoRequest request) throws JdcloudSdkException {
+        return new DescribeIpResourceProtectInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询公网Ip基本信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpResourceInfoResponse describeIpResourceInfo(DescribeIpResourceInfoRequest request) throws JdcloudSdkException {
+        return new DescribeIpResourceInfoExecutor().client(this).execute(request);
     }
 
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
-只有处于运行&lt;b&gt;running&lt;/b&gt;或者错误&lt;b&gt;error&lt;/b&gt;状态的可以删除，其余状态不可以删除
-白名单用户不能删除包年包月已到期的云主机
+ * 删除按配置计费、或包年包月已到期的缓存Redis实例，包年包月未到期不可删除。
+只有处于运行running或者错误error状态才可以删除，其余状态不可以删除。
+白名单用户不能删除包年包月已到期的缓存Redis实例。
 
  */
 public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.io.Serializable {
@@ -38,14 +38,14 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 缓存Redis实例ID，是访问实例的唯一标识。
+     * 缓存Redis实例ID，是访问实例的唯一标识
      * Required:true
      */
     @Required
@@ -53,7 +53,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @return
      */
@@ -62,7 +62,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
@@ -71,7 +71,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get 缓存Redis实例ID，是访问实例的唯一标识。
+     * get 缓存Redis实例ID，是访问实例的唯一标识
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 缓存Redis实例ID，是访问实例的唯一标识。
+     * set 缓存Redis实例ID，是访问实例的唯一标识
      *
      * @param cacheInstanceId
      */
@@ -90,7 +90,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
@@ -100,7 +100,7 @@ public class DeleteCacheInstanceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 缓存Redis实例ID，是访问实例的唯一标识。
+     * set 缓存Redis实例ID，是访问实例的唯一标识
      *
      * @param cacheInstanceId
      */

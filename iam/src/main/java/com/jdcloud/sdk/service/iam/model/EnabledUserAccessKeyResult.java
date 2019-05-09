@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 用户管理
- * 用户管理接口
+ * User Management
+ * User Management API
  *
  * OpenAPI spec version: v1
  * Contact: 

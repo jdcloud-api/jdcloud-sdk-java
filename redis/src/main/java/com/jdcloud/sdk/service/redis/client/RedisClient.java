@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云缓存Redis接口
- * 缓存Redis相关接口
+ * JDCloud Redis API
+ * 京东云缓存Redis相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,33 +31,33 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.redis.model.DescribeCacheInstanceRequest;
-import com.jdcloud.sdk.service.redis.model.DescribeCacheInstanceResponse;
-import com.jdcloud.sdk.service.redis.client.DescribeCacheInstanceExecutor;
-import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesRequest;
-import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesResponse;
-import com.jdcloud.sdk.service.redis.client.DescribeCacheInstancesExecutor;
-import com.jdcloud.sdk.service.redis.model.DescribeInstanceClassRequest;
-import com.jdcloud.sdk.service.redis.model.DescribeInstanceClassResponse;
-import com.jdcloud.sdk.service.redis.client.DescribeInstanceClassExecutor;
-import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeRequest;
-import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeResponse;
-import com.jdcloud.sdk.service.redis.client.ModifyCacheInstanceAttributeExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeUserQuotaExecutor;
-import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordRequest;
-import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordResponse;
-import com.jdcloud.sdk.service.redis.client.ResetCacheInstancePasswordExecutor;
-import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceRequest;
-import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceResponse;
-import com.jdcloud.sdk.service.redis.client.DeleteCacheInstanceExecutor;
-import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceRequest;
-import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceResponse;
-import com.jdcloud.sdk.service.redis.client.CreateCacheInstanceExecutor;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceClassRequest;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceClassResponse;
 import com.jdcloud.sdk.service.redis.client.ModifyCacheInstanceClassExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeCacheInstancesExecutor;
+import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeRequest;
+import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeResponse;
+import com.jdcloud.sdk.service.redis.client.ModifyCacheInstanceAttributeExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeCacheInstanceRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeCacheInstanceResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeCacheInstanceExecutor;
+import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceRequest;
+import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceResponse;
+import com.jdcloud.sdk.service.redis.client.DeleteCacheInstanceExecutor;
+import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordRequest;
+import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordResponse;
+import com.jdcloud.sdk.service.redis.client.ResetCacheInstancePasswordExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeInstanceClassRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeInstanceClassResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeInstanceClassExecutor;
+import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceRequest;
+import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceResponse;
+import com.jdcloud.sdk.service.redis.client.CreateCacheInstanceExecutor;
 
 /**
  * redisClient
@@ -66,7 +66,7 @@ public class RedisClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.6";
+    public final static String ClientVersion = "1.1.0";
     public final static String DefaultEndpoint = "redis.jdcloud-api.com";
     public final static String ServiceName = "redis";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -109,51 +109,7 @@ public class RedisClient extends JdcloudClient {
 
 
     /**
-     * 查询单个缓存Redis实例详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeCacheInstanceResponse describeCacheInstance(DescribeCacheInstanceRequest request) throws JdcloudSdkException {
-        return new DescribeCacheInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeCacheInstancesResponse describeCacheInstances(DescribeCacheInstancesRequest request) throws JdcloudSdkException {
-        return new DescribeCacheInstancesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询某区域下的实例规格列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeInstanceClassResponse describeInstanceClass(DescribeInstanceClassRequest request) throws JdcloudSdkException {
-        return new DescribeInstanceClassExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改缓存Redis实例的资源名称、描述，二者至少选一
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyCacheInstanceAttributeResponse modifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) throws JdcloudSdkException {
-        return new ModifyCacheInstanceAttributeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询账户配额信息
+     * 查询账户的缓存Redis配额信息
      *
      * @param request
      * @return
@@ -164,20 +120,55 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 重置缓存Redis实例密码，支持免密操作
+     * 变更缓存Redis实例规格（变配），只能变更运行状态的实例规格，变更的规格不能与之前的相同。
+预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小。
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ResetCacheInstancePasswordResponse resetCacheInstancePassword(ResetCacheInstancePasswordRequest request) throws JdcloudSdkException {
-        return new ResetCacheInstancePasswordExecutor().client(this).execute(request);
+    public ModifyCacheInstanceClassResponse modifyCacheInstanceClass(ModifyCacheInstanceClassRequest request) throws JdcloudSdkException {
+        return new ModifyCacheInstanceClassExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除按配置计费、或包年包月已到期的单个缓存Redis实例，包年包月未到期不可删除
-只有处于运行&lt;b&gt;running&lt;/b&gt;或者错误&lt;b&gt;error&lt;/b&gt;状态的可以删除，其余状态不可以删除
-白名单用户不能删除包年包月已到期的云主机
+     * 查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCacheInstancesResponse describeCacheInstances(DescribeCacheInstancesRequest request) throws JdcloudSdkException {
+        return new DescribeCacheInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改缓存Redis实例的资源名称或描述，二者至少选一
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyCacheInstanceAttributeResponse modifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyCacheInstanceAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询缓存Redis实例的详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCacheInstanceResponse describeCacheInstance(DescribeCacheInstanceRequest request) throws JdcloudSdkException {
+        return new DescribeCacheInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除按配置计费、或包年包月已到期的缓存Redis实例，包年包月未到期不可删除。
+只有处于运行running或者错误error状态才可以删除，其余状态不可以删除。
+白名单用户不能删除包年包月已到期的缓存Redis实例。
 
      *
      * @param request
@@ -189,11 +180,29 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 创建一个指定配置的缓存Redis实例
-规格性能：创建缓存Redis实例的规格，分为主从版和集群版两种规格。每种规格都有最大连接数，内网带宽上限，CPU处理能力，规格代码等信息，具体可查看：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
-可用区：可用区是指在同一地域下，电力、网络等基础设施互相独立的物理区域。一个地域包含一个或多个可用区，同一地域下的多个可用区可以彼此连通。地域可用区详细信息可查询：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/2222/isCatalog/1&quot;&gt;地域可用区详情&lt;/a&gt;
-私有网络：简称VPC，自定义的逻辑隔离网络空间，支持自定义网段划分、路由策略等。具体信息可查询：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/1509/isCatalog/1&quot;&gt;私有网络VPC详情&lt;/a&gt;
-子网：子网是所属VPC IP地址范围内的IP地址块，简称subnet，在VPC下创建子网，同一VPC下子网的网段不可以重叠，不同VPC下子网的网段可以重叠。具体信息可查询：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/1510/isCatalog/1&quot;&gt;子网subnet详情&lt;/a&gt;
+     * 重置缓存Redis实例的密码，可为空
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ResetCacheInstancePasswordResponse resetCacheInstancePassword(ResetCacheInstancePasswordRequest request) throws JdcloudSdkException {
+        return new ResetCacheInstancePasswordExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询某区域下的缓存Redis实例规格列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceClassResponse describeInstanceClass(DescribeInstanceClassRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceClassExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
 
      *
      * @param request
@@ -202,19 +211,6 @@ public class RedisClient extends JdcloudClient {
      */
     public CreateCacheInstanceResponse createCacheInstance(CreateCacheInstanceRequest request) throws JdcloudSdkException {
         return new CreateCacheInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
-预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyCacheInstanceClassResponse modifyCacheInstanceClass(ModifyCacheInstanceClassRequest request) throws JdcloudSdkException {
-        return new ModifyCacheInstanceClassExecutor().client(this).execute(request);
     }
 
 

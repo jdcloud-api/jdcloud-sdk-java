@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jdcloud.sdk</groupId>
     <artifactId>core</artifactId>
-    <version>1.0.9</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
     <name>core</name>
     <url>http://www.jdcloud.com</url>

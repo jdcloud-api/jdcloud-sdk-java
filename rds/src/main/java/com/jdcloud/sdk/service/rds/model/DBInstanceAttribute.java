@@ -41,7 +41,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      */
     private String instanceName;
 
@@ -64,6 +64,16 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      * 实例规格代码
      */
     private String instanceClass;
+
+    /**
+     * 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     */
+    private String instanceStorageType;
+
+    /**
+     * 实例数据加密. false：不加密; true：加密
+     */
+    private Boolean storageEncrypted;
 
     /**
      * 磁盘，单位GB
@@ -101,6 +111,21 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     private String subnetId;
 
     /**
+     * 参数组的ID&lt;br&gt;- 仅支持MySQL
+     */
+    private String parameterGroupId;
+
+    /**
+     * 参数组的名称&lt;br&gt;- 仅支持MySQL
+     */
+    private String parameterGroupName;
+
+    /**
+     * 参数的状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
+     */
+    private String parameterStatus;
+
+    /**
      * 实例内网域名
      */
     private String internalDomainName;
@@ -116,12 +141,12 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     private String instancePort;
 
     /**
-     * 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
      */
     private String connectionMode;
 
     /**
-     * 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
      */
     private String auditStatus;
 
@@ -139,6 +164,16 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      * 计费配置
      */
     private Charge charge;
+
+    /**
+     * MySQL只读实例对应的主实例ID&lt;br&gt;- 仅支持MySQL
+     */
+    private String sourceInstanceId;
+
+    /**
+     * 只读实例ID列表&lt;br&gt;- 仅支持MySQL
+     */
+    private List<String> roInstanceIds;
 
     /**
      * 高可用集群中主节点的信息&lt;br&gt;- 仅支持SQL Server
@@ -175,7 +210,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * get 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * get 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -184,7 +219,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -262,6 +297,42 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     public void setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
+    }
+
+    /**
+     * get 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     *
+     * @return
+     */
+    public String getInstanceStorageType() {
+        return instanceStorageType;
+    }
+
+    /**
+     * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     *
+     * @param instanceStorageType
+     */
+    public void setInstanceStorageType(String instanceStorageType) {
+        this.instanceStorageType = instanceStorageType;
+    }
+
+    /**
+     * get 实例数据加密. false：不加密; true：加密
+     *
+     * @return
+     */
+    public Boolean getStorageEncrypted() {
+        return storageEncrypted;
+    }
+
+    /**
+     * set 实例数据加密. false：不加密; true：加密
+     *
+     * @param storageEncrypted
+     */
+    public void setStorageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
     }
 
     /**
@@ -391,6 +462,60 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
+     * get 参数组的ID&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getParameterGroupId() {
+        return parameterGroupId;
+    }
+
+    /**
+     * set 参数组的ID&lt;br&gt;- 仅支持MySQL
+     *
+     * @param parameterGroupId
+     */
+    public void setParameterGroupId(String parameterGroupId) {
+        this.parameterGroupId = parameterGroupId;
+    }
+
+    /**
+     * get 参数组的名称&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getParameterGroupName() {
+        return parameterGroupName;
+    }
+
+    /**
+     * set 参数组的名称&lt;br&gt;- 仅支持MySQL
+     *
+     * @param parameterGroupName
+     */
+    public void setParameterGroupName(String parameterGroupName) {
+        this.parameterGroupName = parameterGroupName;
+    }
+
+    /**
+     * get 参数的状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getParameterStatus() {
+        return parameterStatus;
+    }
+
+    /**
+     * set 参数的状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
+     *
+     * @param parameterStatus
+     */
+    public void setParameterStatus(String parameterStatus) {
+        this.parameterStatus = parameterStatus;
+    }
+
+    /**
      * get 实例内网域名
      *
      * @return
@@ -445,7 +570,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * get 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * get 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
      *
      * @return
      */
@@ -454,7 +579,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * set 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
      *
      * @param connectionMode
      */
@@ -463,7 +588,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * get 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * get 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
      *
      * @return
      */
@@ -472,7 +597,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * set 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
      *
      * @param auditStatus
      */
@@ -532,6 +657,42 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     public void setCharge(Charge charge) {
         this.charge = charge;
+    }
+
+    /**
+     * get MySQL只读实例对应的主实例ID&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getSourceInstanceId() {
+        return sourceInstanceId;
+    }
+
+    /**
+     * set MySQL只读实例对应的主实例ID&lt;br&gt;- 仅支持MySQL
+     *
+     * @param sourceInstanceId
+     */
+    public void setSourceInstanceId(String sourceInstanceId) {
+        this.sourceInstanceId = sourceInstanceId;
+    }
+
+    /**
+     * get 只读实例ID列表&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public List<String> getRoInstanceIds() {
+        return roInstanceIds;
+    }
+
+    /**
+     * set 只读实例ID列表&lt;br&gt;- 仅支持MySQL
+     *
+     * @param roInstanceIds
+     */
+    public void setRoInstanceIds(List<String> roInstanceIds) {
+        this.roInstanceIds = roInstanceIds;
     }
 
     /**
@@ -600,7 +761,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -646,6 +807,26 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     public DBInstanceAttribute instanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
+        return this;
+    }
+
+    /**
+     * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     *
+     * @param instanceStorageType
+     */
+    public DBInstanceAttribute instanceStorageType(String instanceStorageType) {
+        this.instanceStorageType = instanceStorageType;
+        return this;
+    }
+
+    /**
+     * set 实例数据加密. false：不加密; true：加密
+     *
+     * @param storageEncrypted
+     */
+    public DBInstanceAttribute storageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
         return this;
     }
 
@@ -720,6 +901,36 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
+     * set 参数组的ID&lt;br&gt;- 仅支持MySQL
+     *
+     * @param parameterGroupId
+     */
+    public DBInstanceAttribute parameterGroupId(String parameterGroupId) {
+        this.parameterGroupId = parameterGroupId;
+        return this;
+    }
+
+    /**
+     * set 参数组的名称&lt;br&gt;- 仅支持MySQL
+     *
+     * @param parameterGroupName
+     */
+    public DBInstanceAttribute parameterGroupName(String parameterGroupName) {
+        this.parameterGroupName = parameterGroupName;
+        return this;
+    }
+
+    /**
+     * set 参数的状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
+     *
+     * @param parameterStatus
+     */
+    public DBInstanceAttribute parameterStatus(String parameterStatus) {
+        this.parameterStatus = parameterStatus;
+        return this;
+    }
+
+    /**
      * set 实例内网域名
      *
      * @param internalDomainName
@@ -750,7 +961,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * set 访问模式，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
      *
      * @param connectionMode
      */
@@ -760,7 +971,7 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
+     * set 审计状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL
      *
      * @param auditStatus
      */
@@ -796,6 +1007,26 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     public DBInstanceAttribute charge(Charge charge) {
         this.charge = charge;
+        return this;
+    }
+
+    /**
+     * set MySQL只读实例对应的主实例ID&lt;br&gt;- 仅支持MySQL
+     *
+     * @param sourceInstanceId
+     */
+    public DBInstanceAttribute sourceInstanceId(String sourceInstanceId) {
+        this.sourceInstanceId = sourceInstanceId;
+        return this;
+    }
+
+    /**
+     * set 只读实例ID列表&lt;br&gt;- 仅支持MySQL
+     *
+     * @param roInstanceIds
+     */
+    public DBInstanceAttribute roInstanceIds(List<String> roInstanceIds) {
+        this.roInstanceIds = roInstanceIds;
         return this;
     }
 
@@ -840,6 +1071,18 @@ public class DBInstanceAttribute  implements java.io.Serializable {
             this.azId = new ArrayList<>();
         }
         this.azId.add(azId);
+    }
+
+    /**
+     * add item to 只读实例ID列表&lt;br&gt;- 仅支持MySQL
+     *
+     * @param roInstanceId
+     */
+    public void addRoInstanceId(String roInstanceId) {
+        if (this.roInstanceIds == null) {
+            this.roInstanceIds = new ArrayList<>();
+        }
+        this.roInstanceIds.add(roInstanceId);
     }
 
     /**

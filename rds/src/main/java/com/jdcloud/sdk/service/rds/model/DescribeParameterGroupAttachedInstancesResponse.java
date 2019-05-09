@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+ * 查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL
  */
 public class DescribeParameterGroupAttachedInstancesResponse extends JdcloudResponse<DescribeParameterGroupAttachedInstancesResult> implements java.io.Serializable {
 

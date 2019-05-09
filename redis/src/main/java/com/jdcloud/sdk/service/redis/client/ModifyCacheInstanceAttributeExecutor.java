@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeResponse;
 
 /**
- * 修改缓存Redis实例的资源名称、描述，二者至少选一
+ * 修改缓存Redis实例的资源名称或描述，二者至少选一
  */
 class ModifyCacheInstanceAttributeExecutor extends JdcloudExecutor {
 

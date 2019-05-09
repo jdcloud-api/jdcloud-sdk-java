@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.redis.model.CacheInstance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询缓存Redis实例列表及其实例信息，可分页查询，查询指定页码，指定分页大小和指定过滤条件
+ * 查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
  */
 public class DescribeCacheInstancesResult extends JdcloudResult implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     private List<CacheInstance> cacheInstances;
 
     /**
-     * 查询到的缓存实例总个数。
+     * 实例总数
      */
     private Integer totalCount;
 
@@ -66,7 +66,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     }
 
     /**
-     * get 查询到的缓存实例总个数。
+     * get 实例总数
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     }
 
     /**
-     * set 查询到的缓存实例总个数。
+     * set 实例总数
      *
      * @param totalCount
      */
@@ -95,7 +95,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     }
 
     /**
-     * set 查询到的缓存实例总个数。
+     * set 实例总数
      *
      * @param totalCount
      */
