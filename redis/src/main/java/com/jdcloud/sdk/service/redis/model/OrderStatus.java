@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * 订单状态
+ * Redis实例的订单结果
  */
 public class OrderStatus  implements java.io.Serializable {
 
@@ -40,17 +40,17 @@ public class OrderStatus  implements java.io.Serializable {
     private Integer total;
 
     /**
-     * 成功数
+     * 成功的订单数
      */
     private Integer success;
 
     /**
-     * 失败数
+     * 失败的订单数
      */
     private Integer fail;
 
     /**
-     * 正在处理数
+     * 正在处理的订单数
      */
     private Integer inProcess;
 
@@ -79,7 +79,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * get 成功数
+     * get 成功的订单数
      *
      * @return
      */
@@ -88,7 +88,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 成功数
+     * set 成功的订单数
      *
      * @param success
      */
@@ -97,7 +97,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * get 失败数
+     * get 失败的订单数
      *
      * @return
      */
@@ -106,7 +106,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 失败数
+     * set 失败的订单数
      *
      * @param fail
      */
@@ -115,7 +115,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * get 正在处理数
+     * get 正在处理的订单数
      *
      * @return
      */
@@ -124,7 +124,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 正在处理数
+     * set 正在处理的订单数
      *
      * @param inProcess
      */
@@ -162,7 +162,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 成功数
+     * set 成功的订单数
      *
      * @param success
      */
@@ -172,7 +172,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 失败数
+     * set 失败的订单数
      *
      * @param fail
      */
@@ -182,7 +182,7 @@ public class OrderStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 正在处理数
+     * set 正在处理的订单数
      *
      * @param inProcess
      */

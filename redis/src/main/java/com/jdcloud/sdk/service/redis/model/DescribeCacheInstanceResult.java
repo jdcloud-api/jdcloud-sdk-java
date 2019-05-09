@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,20 +28,20 @@ import com.jdcloud.sdk.service.redis.model.CacheInstance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询单个缓存Redis实例详情
+ * 查询缓存Redis实例的详细信息
  */
 public class DescribeCacheInstanceResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 要查询目标缓存实例的信息
+     * 该实例的详细信息
      */
     private CacheInstance cacheInstance;
 
 
     /**
-     * get 要查询目标缓存实例的信息
+     * get 该实例的详细信息
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
     }
 
     /**
-     * set 要查询目标缓存实例的信息
+     * set 该实例的详细信息
      *
      * @param cacheInstance
      */
@@ -60,7 +60,7 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
 
 
     /**
-     * set 要查询目标缓存实例的信息
+     * set 该实例的详细信息
      *
      * @param cacheInstance
      */

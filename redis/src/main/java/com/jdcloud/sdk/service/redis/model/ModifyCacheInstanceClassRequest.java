@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例接口
- * 缓存Redis实例相关接口
+ * Redis Instance API
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,8 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 变更缓存Redis实例配置，只能变更运行状态的实例配置，变更配置的规格不能与之前的相同
-预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小
+ * 变更缓存Redis实例规格（变配），只能变更运行状态的实例规格，变更的规格不能与之前的相同。
+预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小。
 
  */
 public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,21 +37,21 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+     * 变更后的实例规格
      * Required:true
      */
     @Required
     private String cacheInstanceClass;
 
     /**
-     * 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 缓存Redis实例ID，是访问实例的唯一标识。
+     * 缓存Redis实例ID，是访问实例的唯一标识
      * Required:true
      */
     @Required
@@ -59,7 +59,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+     * get 变更后的实例规格
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+     * set 变更后的实例规格
      *
      * @param cacheInstanceClass
      */
@@ -77,7 +77,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
@@ -95,7 +95,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 缓存Redis实例ID，是访问实例的唯一标识。
+     * get 缓存Redis实例ID，是访问实例的唯一标识
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 缓存Redis实例ID，是访问实例的唯一标识。
+     * set 缓存Redis实例ID，是访问实例的唯一标识
      *
      * @param cacheInstanceId
      */
@@ -114,7 +114,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 变更后的缓存Redis规格，详细参见：&lt;a href&#x3D;&quot;https://www.jdcloud.com/help/detail/411/isCatalog/1&quot;&gt;实例规格代码&lt;/a&gt;
+     * set 变更后的实例规格
      *
      * @param cacheInstanceClass
      */
@@ -124,7 +124,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 缓存Redis实例所在区域的Region ID。目前缓存Redis有华北、华南、华东区域，对应Region ID为cn-north-1、cn-south-1、cn-east-2
+     * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
@@ -134,7 +134,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 缓存Redis实例ID，是访问实例的唯一标识。
+     * set 缓存Redis实例ID，是访问实例的唯一标识
      *
      * @param cacheInstanceId
      */

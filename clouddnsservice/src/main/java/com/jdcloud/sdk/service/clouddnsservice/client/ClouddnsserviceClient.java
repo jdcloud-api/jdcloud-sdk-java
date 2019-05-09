@@ -117,7 +117,7 @@ public class ClouddnsserviceClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.0";
     public final static String DefaultEndpoint = "clouddnsservice.jdcloud-api.com";
     public final static String ServiceName = "clouddnsservice";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;

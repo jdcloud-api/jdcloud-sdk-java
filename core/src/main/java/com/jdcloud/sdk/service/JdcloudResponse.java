@@ -9,6 +9,8 @@ public class JdcloudResponse<R extends JdcloudResult> {
     private ServiceError error;
 
     private R result;
+    
+    private JdcloudHttpResponse jdcloudHttpResponse;
 
     public void setRequestId(String requestId) {
         this.requestId = requestId;
@@ -33,4 +35,13 @@ public class JdcloudResponse<R extends JdcloudResult> {
     public R getResult() {
         return result;
     }
+
+    public JdcloudHttpResponse getJdcloudHttpResponse() {
+        return jdcloudHttpResponse;
+    }
+
+    public void setJdcloudHttpResponse(JdcloudHttpResponse jdcloudHttpResponse) {
+        this.jdcloudHttpResponse = jdcloudHttpResponse;
+    }
+
 }

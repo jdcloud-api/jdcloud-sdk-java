@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis实例规格接口
- * 缓存Redis实例规格相关接口
+ * Redis Class API
+ * 缓存Redis实例规格查询、修改接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,14 +28,19 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询某区域下的实例规格列表
+ * 查询某区域下的缓存Redis实例规格列表
  */
 public class DescribeInstanceClassRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 缓存Redis的版本号：目前有2.8和4.0，默认为2.8
+     */
+    private String redisVersion;
+
+    /**
+     * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
     @Required
@@ -43,7 +48,25 @@ public class DescribeInstanceClassRequest extends JdcloudRequest implements java
 
 
     /**
-     * get Region ID
+     * get 缓存Redis的版本号：目前有2.8和4.0，默认为2.8
+     *
+     * @return
+     */
+    public String getRedisVersion() {
+        return redisVersion;
+    }
+
+    /**
+     * set 缓存Redis的版本号：目前有2.8和4.0，默认为2.8
+     *
+     * @param redisVersion
+     */
+    public void setRedisVersion(String redisVersion) {
+        this.redisVersion = redisVersion;
+    }
+
+    /**
+     * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @return
      */
@@ -52,7 +75,7 @@ public class DescribeInstanceClassRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set Region ID
+     * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
@@ -62,7 +85,17 @@ public class DescribeInstanceClassRequest extends JdcloudRequest implements java
 
 
     /**
-     * set Region ID
+     * set 缓存Redis的版本号：目前有2.8和4.0，默认为2.8
+     *
+     * @param redisVersion
+     */
+    public DescribeInstanceClassRequest redisVersion(String redisVersion) {
+        this.redisVersion = redisVersion;
+        return this;
+    }
+
+    /**
+     * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */

@@ -73,39 +73,23 @@ public abstract class JdcloudClient {
      * @throws IOException
      */
     HttpRequest buildRequest(String requestMethod, GenericUrl url, HttpContent content) throws IOException {
-        return this.httpRequestFactory.buildRequest(requestMethod, url, content);
+        return this.httpRequestFactory.buildRequest(requestMethod, url, content).setResponseInterceptor(new JdcloudHttpResponseInterceptor());
     }
 
-    /**
-     * HttpResponse结果读取
-     *
-     * @param src
-     * @param valueType
-     * @param <T>
-     * @return
-     * @throws IOException
-     * @throws JsonParseException
-     * @throws JsonMappingException
-     */
     <T> T readValue(InputStream src, Class<T> valueType) throws IOException {
         if (src == null) {
             return null;
         }
         return com.alibaba.fastjson.JSON.parseObject(src, valueType, FEATURES);
-
     }
 
-    /**
-     * 字符串读取
-     *
-     * @param text
-     * @param valueType
-     * @param <T>
-     * @return
-     * @throws IOException
-     * @throws JsonParseException
-     * @throws JsonMappingException
-     */
+    <T> T readValue(byte[] src, Class<T> valueType) throws IOException {
+        if (src == null) {
+            return null;
+        }
+        return com.alibaba.fastjson.JSON.parseObject(src, valueType, FEATURES);
+    }
+
     <T> T readValue(String text, Class<T> valueType) {
         return com.alibaba.fastjson.JSON.parseObject(text, valueType, FEATURES);
     }

@@ -7,7 +7,7 @@ public class JdcloudRequest {
 
     private transient String regionId;
 
-    private transient String version;
+    private transient String jdcloudVersion;
 
     public String getRegionId() {
         return regionId;
@@ -17,11 +17,11 @@ public class JdcloudRequest {
         this.regionId = regionId;
     }
 
-    public String getVersion() {
-        return version;
+    public String getJdcloudVersion() {
+        return jdcloudVersion;
     }
 
-    public void setVersion(String version) {
-        this.version = version;
+    public void setJdcloudVersion(String jdcloudVersion) {
+        this.jdcloudVersion = jdcloudVersion;
     }
 }

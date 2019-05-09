@@ -26,45 +26,50 @@ package com.jdcloud.sdk.service.redis.model;
 
 
 /**
- * 某缓存Redis实例规格信息
+ * 缓存Redis实例的规格信息
  */
 public class InstanceClass  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例规格代码,参见实例规格代码表
+     * 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      */
     private String instanceClass;
 
     /**
-     * cpu
+     * 规格类型：master-slave表示主从版，cluster表示集群版
+     */
+    private String instanceType;
+
+    /**
+     * cpu核数
      */
     private Integer cpu;
 
     /**
-     * 内存
+     * 内存总容量（MB）
      */
     private Integer memoryMB;
 
     /**
-     * 磁盘
+     * 磁盘总容量（GB）
      */
     private Integer diskGB;
 
     /**
-     * 最大链接数
+     * 最大连接数
      */
-    private Integer maxConnetction;
+    private Integer maxConnection;
 
     /**
-     * 带宽
+     * 内网带宽（MBps）
      */
     private Integer bandwidthMbps;
 
 
     /**
-     * get 实例规格代码,参见实例规格代码表
+     * get 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @return
      */
@@ -73,7 +78,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码,参见实例规格代码表
+     * set 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param instanceClass
      */
@@ -82,7 +87,25 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * get cpu
+     * get 规格类型：master-slave表示主从版，cluster表示集群版
+     *
+     * @return
+     */
+    public String getInstanceType() {
+        return instanceType;
+    }
+
+    /**
+     * set 规格类型：master-slave表示主从版，cluster表示集群版
+     *
+     * @param instanceType
+     */
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+    }
+
+    /**
+     * get cpu核数
      *
      * @return
      */
@@ -91,7 +114,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set cpu
+     * set cpu核数
      *
      * @param cpu
      */
@@ -100,7 +123,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * get 内存
+     * get 内存总容量（MB）
      *
      * @return
      */
@@ -109,7 +132,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set 内存
+     * set 内存总容量（MB）
      *
      * @param memoryMB
      */
@@ -118,7 +141,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * get 磁盘
+     * get 磁盘总容量（GB）
      *
      * @return
      */
@@ -127,7 +150,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘
+     * set 磁盘总容量（GB）
      *
      * @param diskGB
      */
@@ -136,25 +159,25 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * get 最大链接数
+     * get 最大连接数
      *
      * @return
      */
-    public Integer getMaxConnetction() {
-        return maxConnetction;
+    public Integer getMaxConnection() {
+        return maxConnection;
     }
 
     /**
-     * set 最大链接数
+     * set 最大连接数
      *
-     * @param maxConnetction
+     * @param maxConnection
      */
-    public void setMaxConnetction(Integer maxConnetction) {
-        this.maxConnetction = maxConnetction;
+    public void setMaxConnection(Integer maxConnection) {
+        this.maxConnection = maxConnection;
     }
 
     /**
-     * get 带宽
+     * get 内网带宽（MBps）
      *
      * @return
      */
@@ -163,7 +186,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set 带宽
+     * set 内网带宽（MBps）
      *
      * @param bandwidthMbps
      */
@@ -173,7 +196,7 @@ public class InstanceClass  implements java.io.Serializable {
 
 
     /**
-     * set 实例规格代码,参见实例规格代码表
+     * set 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param instanceClass
      */
@@ -183,7 +206,17 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set cpu
+     * set 规格类型：master-slave表示主从版，cluster表示集群版
+     *
+     * @param instanceType
+     */
+    public InstanceClass instanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+
+    /**
+     * set cpu核数
      *
      * @param cpu
      */
@@ -193,7 +226,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set 内存
+     * set 内存总容量（MB）
      *
      * @param memoryMB
      */
@@ -203,7 +236,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘
+     * set 磁盘总容量（GB）
      *
      * @param diskGB
      */
@@ -213,17 +246,17 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set 最大链接数
+     * set 最大连接数
      *
-     * @param maxConnetction
+     * @param maxConnection
      */
-    public InstanceClass maxConnetction(Integer maxConnetction) {
-        this.maxConnetction = maxConnetction;
+    public InstanceClass maxConnection(Integer maxConnection) {
+        this.maxConnection = maxConnection;
         return this;
     }
 
     /**
-     * set 带宽
+     * set 内网带宽（MBps）
      *
      * @param bandwidthMbps
      */

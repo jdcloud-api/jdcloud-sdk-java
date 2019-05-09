@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.CreateBackupSynchronicityResponse;
 
 /**
- * 创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+ * 创建一个跨地域备份同步服务。
  */
 class CreateBackupSynchronicityExecutor extends JdcloudExecutor {
 

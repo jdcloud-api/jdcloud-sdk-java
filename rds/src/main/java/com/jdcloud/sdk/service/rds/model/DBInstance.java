@@ -41,7 +41,7 @@ public class DBInstance  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      */
     private String instanceName;
 
@@ -61,6 +61,26 @@ public class DBInstance  implements java.io.Serializable {
     private String engineVersion;
 
     /**
+     * 实例规格代码
+     */
+    private String instanceClass;
+
+    /**
+     * 磁盘，单位GB
+     */
+    private Integer instanceStorageGB;
+
+    /**
+     * CPU核数
+     */
+    private Integer instanceCPU;
+
+    /**
+     * 内存，单位MB
+     */
+    private Integer instanceMemoryMB;
+
+    /**
      * 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      */
     private String regionId;
@@ -69,6 +89,16 @@ public class DBInstance  implements java.io.Serializable {
      * 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      */
     private List<String> azId;
+
+    /**
+     * VPC的ID
+     */
+    private String vpcId;
+
+    /**
+     * 子网的ID
+     */
+    private String subnetId;
 
     /**
      * 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -81,6 +111,11 @@ public class DBInstance  implements java.io.Serializable {
     private String createTime;
 
     /**
+     * 实例跨地域备份服务开启相关信息
+     */
+    private List<BackupSynchronicityAbstract> backupSynchronicity;
+
+    /**
      * 计费配置
      */
     private Charge charge;
@@ -89,6 +124,11 @@ public class DBInstance  implements java.io.Serializable {
      * 标签信息
      */
     private List<Tag> tags;
+
+    /**
+     * MySQL只读实例对应的主实例ID
+     */
+    private String sourceInstanceId;
 
 
     /**
@@ -110,7 +150,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * get 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @return
      */
@@ -119,7 +159,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -182,6 +222,78 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
+     * get 实例规格代码
+     *
+     * @return
+     */
+    public String getInstanceClass() {
+        return instanceClass;
+    }
+
+    /**
+     * set 实例规格代码
+     *
+     * @param instanceClass
+     */
+    public void setInstanceClass(String instanceClass) {
+        this.instanceClass = instanceClass;
+    }
+
+    /**
+     * get 磁盘，单位GB
+     *
+     * @return
+     */
+    public Integer getInstanceStorageGB() {
+        return instanceStorageGB;
+    }
+
+    /**
+     * set 磁盘，单位GB
+     *
+     * @param instanceStorageGB
+     */
+    public void setInstanceStorageGB(Integer instanceStorageGB) {
+        this.instanceStorageGB = instanceStorageGB;
+    }
+
+    /**
+     * get CPU核数
+     *
+     * @return
+     */
+    public Integer getInstanceCPU() {
+        return instanceCPU;
+    }
+
+    /**
+     * set CPU核数
+     *
+     * @param instanceCPU
+     */
+    public void setInstanceCPU(Integer instanceCPU) {
+        this.instanceCPU = instanceCPU;
+    }
+
+    /**
+     * get 内存，单位MB
+     *
+     * @return
+     */
+    public Integer getInstanceMemoryMB() {
+        return instanceMemoryMB;
+    }
+
+    /**
+     * set 内存，单位MB
+     *
+     * @param instanceMemoryMB
+     */
+    public void setInstanceMemoryMB(Integer instanceMemoryMB) {
+        this.instanceMemoryMB = instanceMemoryMB;
+    }
+
+    /**
      * get 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -215,6 +327,42 @@ public class DBInstance  implements java.io.Serializable {
      */
     public void setAzId(List<String> azId) {
         this.azId = azId;
+    }
+
+    /**
+     * get VPC的ID
+     *
+     * @return
+     */
+    public String getVpcId() {
+        return vpcId;
+    }
+
+    /**
+     * set VPC的ID
+     *
+     * @param vpcId
+     */
+    public void setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+    }
+
+    /**
+     * get 子网的ID
+     *
+     * @return
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
+
+    /**
+     * set 子网的ID
+     *
+     * @param subnetId
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
     }
 
     /**
@@ -254,6 +402,24 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
+     * get 实例跨地域备份服务开启相关信息
+     *
+     * @return
+     */
+    public List<BackupSynchronicityAbstract> getBackupSynchronicity() {
+        return backupSynchronicity;
+    }
+
+    /**
+     * set 实例跨地域备份服务开启相关信息
+     *
+     * @param backupSynchronicity
+     */
+    public void setBackupSynchronicity(List<BackupSynchronicityAbstract> backupSynchronicity) {
+        this.backupSynchronicity = backupSynchronicity;
+    }
+
+    /**
      * get 计费配置
      *
      * @return
@@ -289,6 +455,24 @@ public class DBInstance  implements java.io.Serializable {
         this.tags = tags;
     }
 
+    /**
+     * get MySQL只读实例对应的主实例ID
+     *
+     * @return
+     */
+    public String getSourceInstanceId() {
+        return sourceInstanceId;
+    }
+
+    /**
+     * set MySQL只读实例对应的主实例ID
+     *
+     * @param sourceInstanceId
+     */
+    public void setSourceInstanceId(String sourceInstanceId) {
+        this.sourceInstanceId = sourceInstanceId;
+    }
+
 
     /**
      * set 实例ID
@@ -301,7 +485,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param instanceName
      */
@@ -341,6 +525,46 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
+     * set 实例规格代码
+     *
+     * @param instanceClass
+     */
+    public DBInstance instanceClass(String instanceClass) {
+        this.instanceClass = instanceClass;
+        return this;
+    }
+
+    /**
+     * set 磁盘，单位GB
+     *
+     * @param instanceStorageGB
+     */
+    public DBInstance instanceStorageGB(Integer instanceStorageGB) {
+        this.instanceStorageGB = instanceStorageGB;
+        return this;
+    }
+
+    /**
+     * set CPU核数
+     *
+     * @param instanceCPU
+     */
+    public DBInstance instanceCPU(Integer instanceCPU) {
+        this.instanceCPU = instanceCPU;
+        return this;
+    }
+
+    /**
+     * set 内存，单位MB
+     *
+     * @param instanceMemoryMB
+     */
+    public DBInstance instanceMemoryMB(Integer instanceMemoryMB) {
+        this.instanceMemoryMB = instanceMemoryMB;
+        return this;
+    }
+
+    /**
      * set 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
@@ -357,6 +581,26 @@ public class DBInstance  implements java.io.Serializable {
      */
     public DBInstance azId(List<String> azId) {
         this.azId = azId;
+        return this;
+    }
+
+    /**
+     * set VPC的ID
+     *
+     * @param vpcId
+     */
+    public DBInstance vpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+
+    /**
+     * set 子网的ID
+     *
+     * @param subnetId
+     */
+    public DBInstance subnetId(String subnetId) {
+        this.subnetId = subnetId;
         return this;
     }
 
@@ -381,6 +625,16 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
+     * set 实例跨地域备份服务开启相关信息
+     *
+     * @param backupSynchronicity
+     */
+    public DBInstance backupSynchronicity(List<BackupSynchronicityAbstract> backupSynchronicity) {
+        this.backupSynchronicity = backupSynchronicity;
+        return this;
+    }
+
+    /**
      * set 计费配置
      *
      * @param charge
@@ -400,6 +654,16 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set MySQL只读实例对应的主实例ID
+     *
+     * @param sourceInstanceId
+     */
+    public DBInstance sourceInstanceId(String sourceInstanceId) {
+        this.sourceInstanceId = sourceInstanceId;
+        return this;
+    }
+
 
     /**
      * add item to 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
@@ -411,6 +675,18 @@ public class DBInstance  implements java.io.Serializable {
             this.azId = new ArrayList<>();
         }
         this.azId.add(azId);
+    }
+
+    /**
+     * add item to 实例跨地域备份服务开启相关信息
+     *
+     * @param backupSynchronicity
+     */
+    public void addBackupSynchronicity(BackupSynchronicityAbstract backupSynchronicity) {
+        if (this.backupSynchronicity == null) {
+            this.backupSynchronicity = new ArrayList<>();
+        }
+        this.backupSynchronicity.add(backupSynchronicity);
     }
 
     /**

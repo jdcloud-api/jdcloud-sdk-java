@@ -7,9 +7,11 @@ import com.jdcloud.sdk.auth.sign.SignatureComposer;
 import com.jdcloud.sdk.http.SdkHttpMethod;
 import com.jdcloud.sdk.JdcloudSdkException;
 import com.jdcloud.sdk.model.SignRequest;
+import com.jdcloud.sdk.service.JdcloudHttpResponse;
 import com.jdcloud.sdk.service.JdcloudRequest;
 import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.utils.Base64Utils;
+import com.jdcloud.sdk.utils.BinaryUtils;
 import com.jdcloud.sdk.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -70,7 +72,7 @@ public abstract class JdcloudExecutor {
     public <R1 extends JdcloudResponse, R2 extends JdcloudRequest> R1 execute(R2 request) {
 
         // 处理关键参数
-        String version = request.getVersion();
+        String version = request.getJdcloudVersion();
         version = checkImportantParams(version);
         checkRequest(request);
 
@@ -232,22 +234,37 @@ public abstract class JdcloudExecutor {
     }
 
     protected JdcloudResponse handlerHttpResponse(HttpResponse httpResponse) throws IOException,IllegalAccessException,InstantiationException{
+        JdcloudResponse response = returnType().newInstance();
+        byte[] content = null;
         if(httpResponse.getContent() != null && httpResponse.getStatusCode() != 204  && httpResponse.getStatusCode() != 304) {
-            JdcloudResponse response = jdcloudClient.readValue(httpResponse.getContent(), returnType());
+            content = BinaryUtils.toByteArray(httpResponse.getContent());
+            response = jdcloudClient.readValue(content, returnType());
             if (null == response){
                 throw new JdcloudSdkException("Illegal Content");
             }
-            return response;
+        } else {
+            Object o = httpResponse.getHeaders().get("x-jdcloud-request-id");
+            if(o instanceof ArrayList) {
+                String reqId = (String)((ArrayList) o).get(0);
+                response.setRequestId(reqId);
+            }
         }
-        Object o = httpResponse.getHeaders().get("x-jdcloud-request-id");
-        if(o instanceof ArrayList) {
-            String reqId = (String)((ArrayList) o).get(0);
+        response.setJdcloudHttpResponse(copyHttpResponse(httpResponse, content));
+        return response;
+    }
 
-            JdcloudResponse ret = returnType().newInstance();
-            ret.setRequestId(reqId);
-            return ret;
-        }
-        return returnType().newInstance();
+    private JdcloudHttpResponse copyHttpResponse(HttpResponse httpResponse, byte[] content) {
+        JdcloudHttpResponse jdcloudHttpResponse = new JdcloudHttpResponse();
+        jdcloudHttpResponse.setContent(content);
+        jdcloudHttpResponse.setContentCharset(httpResponse.getContentCharset());
+        jdcloudHttpResponse.setContentEncoding(httpResponse.getContentEncoding());
+        jdcloudHttpResponse.setContentType(httpResponse.getContentType());
+        jdcloudHttpResponse.setHeaders(httpResponse.getHeaders());
+        jdcloudHttpResponse.setMediaType(httpResponse.getMediaType());
+        jdcloudHttpResponse.setContentLoggingLimit(httpResponse.getContentLoggingLimit());
+        jdcloudHttpResponse.setStatusCode(httpResponse.getStatusCode());
+        jdcloudHttpResponse.setStatusMessage(httpResponse.getStatusMessage());
+        return jdcloudHttpResponse;
     }
 
     /**

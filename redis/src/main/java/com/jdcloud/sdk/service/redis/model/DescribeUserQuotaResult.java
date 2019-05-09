@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 缓存Redis配额接口
- * 缓存Redis配额相关接口
+ * Redis Quota API
+ * 缓存Redis配额查询、修改接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.common.model.Quota;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询账户配额信息
+ * 查询账户的缓存Redis配额信息
  */
 public class DescribeUserQuotaResult extends JdcloudResult implements java.io.Serializable {
 

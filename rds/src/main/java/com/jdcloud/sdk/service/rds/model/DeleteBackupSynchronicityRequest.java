@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+ * 删除一个跨地域备份同步服务。
  */
 public class DeleteBackupSynchronicityRequest extends JdcloudRequest implements java.io.Serializable {
 

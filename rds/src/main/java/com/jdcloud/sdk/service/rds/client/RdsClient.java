@@ -64,6 +64,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeBackupsExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyConnectionModeRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyConnectionModeResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyConnectionModeExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyInstanceAzRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyInstanceAzResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyInstanceAzExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteAuditRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteAuditResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteAuditExecutor;
@@ -256,6 +259,9 @@ import com.jdcloud.sdk.service.rds.client.DisableInternetAccessExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeInstancesExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateROInstanceRequest;
+import com.jdcloud.sdk.service.rds.model.CreateROInstanceResponse;
+import com.jdcloud.sdk.service.rds.client.CreateROInstanceExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeAuditOptionsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeAuditOptionsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeAuditOptionsExecutor;
@@ -265,6 +271,9 @@ import com.jdcloud.sdk.service.rds.client.DeleteAccountExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyParameterGroupParametersRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyParameterGroupParametersResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyParameterGroupParametersExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateInstanceByTimeInCrossRegionRequest;
+import com.jdcloud.sdk.service.rds.model.CreateInstanceByTimeInCrossRegionResponse;
+import com.jdcloud.sdk.service.rds.client.CreateInstanceByTimeInCrossRegionExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeInterceptRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeInterceptResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeInterceptExecutor;
@@ -276,7 +285,7 @@ public class RdsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.0";
     public final static String DefaultEndpoint = "rds.jdcloud-api.com";
     public final static String ServiceName = "rds";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -437,6 +446,17 @@ public class RdsClient extends JdcloudClient {
      */
     public ModifyConnectionModeResponse modifyConnectionMode(ModifyConnectionModeRequest request) throws JdcloudSdkException {
         return new ModifyConnectionModeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改实例的可用区，例如将实例的可用区从单可用区调整为多可用区
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceAzResponse modifyInstanceAz(ModifyInstanceAzRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceAzExecutor().client(this).execute(request);
     }
 
     /**
@@ -638,7 +658,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+     * 查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL
      *
      * @param request
      * @return
@@ -649,7 +669,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 创建一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+     * 创建一个跨地域备份同步服务。
      *
      * @param request
      * @return
@@ -660,7 +680,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 删除一个跨地域备份同步服务。&lt;br&gt;- 仅支持MySQL
+     * 删除一个跨地域备份同步服务。
      *
      * @param request
      * @return
@@ -946,7 +966,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Cloud-Database-and-Cache/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param request
      * @return
@@ -1067,7 +1087,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查询跨地域备份同步服务列表。&lt;br&gt;- 仅支持MySQL
+     * 查询跨地域备份同步服务列表。
      *
      * @param request
      * @return
@@ -1144,6 +1164,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateROInstanceResponse createROInstance(CreateROInstanceRequest request) throws JdcloudSdkException {
+        return new CreateROInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取当前系统所支持的各种数据库版本的审计选项及相应的推荐选项&lt;br&gt;- 仅支持SQL Server
      *
      * @param request
@@ -1174,6 +1205,17 @@ public class RdsClient extends JdcloudClient {
      */
     public ModifyParameterGroupParametersResponse modifyParameterGroupParameters(ModifyParameterGroupParametersRequest request) throws JdcloudSdkException {
         return new ModifyParameterGroupParametersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据跨地域备份同步服务时间点创建实例。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateInstanceByTimeInCrossRegionResponse createInstanceByTimeInCrossRegion(CreateInstanceByTimeInCrossRegionRequest request) throws JdcloudSdkException {
+        return new CreateInstanceByTimeInCrossRegionExecutor().client(this).execute(request);
     }
 
     /**
