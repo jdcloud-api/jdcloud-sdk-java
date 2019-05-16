@@ -63,7 +63,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 - UTC时间
   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
   示例:2018-10-21T10:00:00Z
-- 最大支持最近90天内的流历史查询
+- 最大支持最近30天内的流历史查询
 
      * Required:true
      */
@@ -75,7 +75,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 - UTC时间
   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
   示例:2018-10-21T10:00:00Z
-- 最大支持最近90天内的流历史查询
+- 最大支持最近30天内的流历史查询
 - 结束时间为空默认为当前时间
 
      */
@@ -174,7 +174,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 - UTC时间
   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
   示例:2018-10-21T10:00:00Z
-- 最大支持最近90天内的流历史查询
+- 最大支持最近30天内的流历史查询
 
      *
      * @return
@@ -188,7 +188,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 - UTC时间
   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
   示例:2018-10-21T10:00:00Z
-- 最大支持最近90天内的流历史查询
+- 最大支持最近30天内的流历史查询
 
      *
      * @param startTime
@@ -202,7 +202,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 - UTC时间
   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
   示例:2018-10-21T10:00:00Z
-- 最大支持最近90天内的流历史查询
+- 最大支持最近30天内的流历史查询
 - 结束时间为空默认为当前时间
 
      *
@@ -217,7 +217,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 - UTC时间
   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
   示例:2018-10-21T10:00:00Z
-- 最大支持最近90天内的流历史查询
+- 最大支持最近30天内的流历史查询
 - 结束时间为空默认为当前时间
 
      *
@@ -295,7 +295,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 - UTC时间
   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
   示例:2018-10-21T10:00:00Z
-- 最大支持最近90天内的流历史查询
+- 最大支持最近30天内的流历史查询
 
      *
      * @param startTime
@@ -310,7 +310,7 @@ public class DescribeLiveStreamPublishListRequest extends JdcloudRequest impleme
 - UTC时间
   格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
   示例:2018-10-21T10:00:00Z
-- 最大支持最近90天内的流历史查询
+- 最大支持最近30天内的流历史查询
 - 结束时间为空默认为当前时间
 
      *

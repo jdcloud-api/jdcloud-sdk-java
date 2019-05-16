@@ -27,11 +27,20 @@ public class JdcloudHttpResponse {
     private String statusMessage;
 
     public byte[] getContent() {
-        return content;
+        if(content != null) {
+            return content.clone();
+        } else {
+            return null;
+        }
     }
 
     public void setContent(byte[] content) {
-        this.content = content;
+        if(content != null) {
+            this.content = content.clone();
+        } else {
+            this.content = null;
+        }
+        
     }
 
     public Charset getContentCharset() {

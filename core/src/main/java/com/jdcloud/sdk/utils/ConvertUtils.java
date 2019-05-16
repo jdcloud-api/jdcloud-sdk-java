@@ -3,6 +3,7 @@ package com.jdcloud.sdk.utils;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 
 import javax.xml.bind.JAXBContext;
@@ -44,13 +45,6 @@ public class ConvertUtils {
         } else {
             String content = GSON.toJson(body);
             bodyContent = ByteArrayContent.fromString(contentType, content);
-        }
-        InputStream inputStream = bodyContent.getInputStream();
-        ByteArrayOutputStream result = new ByteArrayOutputStream();
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = inputStream.read(buffer)) != -1) {
-            result.write(buffer, 0, length);
         }
         return bodyContent;
     }
@@ -99,8 +93,8 @@ public class ConvertUtils {
         return bodyContent;
     }
 
-    public static <R> String beanToXml(R request) throws JAXBException {
-        return new String(beanToXmlByte(request));
+    public static <R> String beanToXml(R request) throws JAXBException, UnsupportedEncodingException {
+        return new String(beanToXmlByte(request),"UTF-8");
     }
 
     /**

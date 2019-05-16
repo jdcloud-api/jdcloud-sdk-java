@@ -48,17 +48,13 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     /**
      * 存储桶
 
-     * Required:true
      */
-    @Required
     private String saveBucket;
 
     /**
      * endpoint
 
-     * Required:true
      */
-    @Required
     private String saveEndpoint;
 
     /**
@@ -73,7 +69,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
 
     /**
      * 录制模板自定义名称:
- - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)
+ - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
+   最大长度50个字符
  - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      * Required:true
@@ -172,7 +169,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
 
     /**
      * get 录制模板自定义名称:
- - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)
+ - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
+   最大长度50个字符
  - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *
@@ -184,7 +182,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
 
     /**
      * set 录制模板自定义名称:
- - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)
+ - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
+   最大长度50个字符
  - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *
@@ -245,7 +244,8 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
 
     /**
      * set 录制模板自定义名称:
- - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)
+ - 取值要求：数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
+   最大长度50个字符
  - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *

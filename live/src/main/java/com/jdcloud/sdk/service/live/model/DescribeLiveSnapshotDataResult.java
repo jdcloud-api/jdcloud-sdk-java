@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.live.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.live.model.SnapshotData;
+import com.jdcloud.sdk.service.live.model.SnapshotCountStatisticResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,7 +39,7 @@ public class DescribeLiveSnapshotDataResult extends JdcloudResult implements jav
     /**
      * snapshotData
      */
-    private List<SnapshotData> snapshotData;
+    private List<SnapshotCountStatisticResult> snapshotData;
 
 
     /**
@@ -47,7 +47,7 @@ public class DescribeLiveSnapshotDataResult extends JdcloudResult implements jav
      *
      * @return
      */
-    public List<SnapshotData> getSnapshotData() {
+    public List<SnapshotCountStatisticResult> getSnapshotData() {
         return snapshotData;
     }
 
@@ -56,7 +56,7 @@ public class DescribeLiveSnapshotDataResult extends JdcloudResult implements jav
      *
      * @param snapshotData
      */
-    public void setSnapshotData(List<SnapshotData> snapshotData) {
+    public void setSnapshotData(List<SnapshotCountStatisticResult> snapshotData) {
         this.snapshotData = snapshotData;
     }
 
@@ -66,7 +66,7 @@ public class DescribeLiveSnapshotDataResult extends JdcloudResult implements jav
      *
      * @param snapshotData
      */
-    public DescribeLiveSnapshotDataResult snapshotData(List<SnapshotData> snapshotData) {
+    public DescribeLiveSnapshotDataResult snapshotData(List<SnapshotCountStatisticResult> snapshotData) {
         this.snapshotData = snapshotData;
         return this;
     }
@@ -77,7 +77,7 @@ public class DescribeLiveSnapshotDataResult extends JdcloudResult implements jav
      *
      * @param snapshotData
      */
-    public void addSnapshotData(SnapshotData snapshotData) {
+    public void addSnapshotData(SnapshotCountStatisticResult snapshotData) {
         if (this.snapshotData == null) {
             this.snapshotData = new ArrayList<>();
         }

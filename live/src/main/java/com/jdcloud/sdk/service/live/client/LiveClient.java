@@ -34,6 +34,12 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamSnapshotConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamSnapshotConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamSnapshotConfigExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveRecordFileUrlRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveRecordFileUrlResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveRecordFileUrlExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveRecordFilesRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveRecordFilesResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveRecordFilesExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamTranscodeTemplateExecutor;
@@ -58,6 +64,9 @@ import com.jdcloud.sdk.service.live.client.AddLiveRecordTaskExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainWatermarkRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainWatermarkResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainWatermarkExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveRecordFilesRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveRecordFilesResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveRecordFilesExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainSnapshotRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainSnapshotResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainSnapshotExecutor;
@@ -91,6 +100,9 @@ import com.jdcloud.sdk.service.live.client.AddLiveAppExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamSnapshotTemplateRequest;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamSnapshotTemplateResponse;
 import com.jdcloud.sdk.service.live.client.DeleteCustomLiveStreamSnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.live.model.UpdateCustomLiveStreamWatermarkTemplateRequest;
+import com.jdcloud.sdk.service.live.model.UpdateCustomLiveStreamWatermarkTemplateResponse;
+import com.jdcloud.sdk.service.live.client.UpdateCustomLiveStreamWatermarkTemplateExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppWatermarkRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppWatermarkResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamAppWatermarkExecutor;
@@ -112,15 +124,15 @@ import com.jdcloud.sdk.service.live.client.DeleteCustomLiveStreamRecordTemplateE
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPlayerRankingDataRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPlayerRankingDataResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamPlayerRankingDataExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotUrlRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotUrlResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveSnapshotUrlExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotDataRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotDataResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveSnapshotDataExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainTranscodeRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainTranscodeResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainTranscodeExecutor;
-import com.jdcloud.sdk.service.live.model.StartLiveAppRequest;
-import com.jdcloud.sdk.service.live.model.StartLiveAppResponse;
-import com.jdcloud.sdk.service.live.client.StartLiveAppExecutor;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamRecordNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamRecordNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.SetLiveStreamRecordNotifyConfigExecutor;
@@ -175,9 +187,6 @@ import com.jdcloud.sdk.service.live.client.DeleteLiveStreamRecordNotifyConfigExe
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamTranscodeConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamTranscodeConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamTranscodeConfigExecutor;
-import com.jdcloud.sdk.service.live.model.DeleteLiveAppRequest;
-import com.jdcloud.sdk.service.live.model.DeleteLiveAppResponse;
-import com.jdcloud.sdk.service.live.client.DeleteLiveAppExecutor;
 import com.jdcloud.sdk.service.live.model.SetLivePlayAuthKeyRequest;
 import com.jdcloud.sdk.service.live.model.SetLivePlayAuthKeyResponse;
 import com.jdcloud.sdk.service.live.client.SetLivePlayAuthKeyExecutor;
@@ -196,6 +205,9 @@ import com.jdcloud.sdk.service.live.client.DescribeLivePlayAuthKeyExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodingDurationDataRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodingDurationDataResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveTranscodingDurationDataExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotsRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotsResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveSnapshotsExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.live.client.DeleteCustomLiveStreamTranscodeTemplateExecutor;
@@ -214,6 +226,9 @@ import com.jdcloud.sdk.service.live.client.StopLiveDomainExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamBandwidthRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamBandwidthResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveTranscodeStreamBandwidthExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveFileStorageDataRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveFileStorageDataResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveFileStorageDataExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamInfoRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamInfoResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamInfoExecutor;
@@ -265,6 +280,9 @@ import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainTranscodeExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppTranscodeRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppTranscodeResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamAppTranscodeExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveSnapshotsRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveSnapshotsResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveSnapshotsExecutor;
 import com.jdcloud.sdk.service.live.model.OpenLiveTimeshiftRequest;
 import com.jdcloud.sdk.service.live.model.OpenLiveTimeshiftResponse;
 import com.jdcloud.sdk.service.live.client.OpenLiveTimeshiftExecutor;
@@ -276,7 +294,7 @@ public class LiveClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.1";
     public final static String DefaultEndpoint = "live.jdcloud-api.com";
     public final static String ServiceName = "live";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -331,6 +349,30 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeCustomLiveStreamSnapshotConfigResponse describeCustomLiveStreamSnapshotConfig(DescribeCustomLiveStreamSnapshotConfigRequest request) throws JdcloudSdkException {
         return new DescribeCustomLiveStreamSnapshotConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取录制文件地址
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveRecordFileUrlResponse describeLiveRecordFileUrl(DescribeLiveRecordFileUrlRequest request) throws JdcloudSdkException {
+        return new DescribeLiveRecordFileUrlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询录制文件列表
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveRecordFilesResponse describeLiveRecordFiles(DescribeLiveRecordFilesRequest request) throws JdcloudSdkException {
+        return new DescribeLiveRecordFilesExecutor().client(this).execute(request);
     }
 
     /**
@@ -431,6 +473,18 @@ public class LiveClient extends JdcloudClient {
      */
     public AddLiveStreamDomainWatermarkResponse addLiveStreamDomainWatermark(AddLiveStreamDomainWatermarkRequest request) throws JdcloudSdkException {
         return new AddLiveStreamDomainWatermarkExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除录制文件
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveRecordFilesResponse deleteLiveRecordFiles(DeleteLiveRecordFilesRequest request) throws JdcloudSdkException {
+        return new DeleteLiveRecordFilesExecutor().client(this).execute(request);
     }
 
     /**
@@ -570,6 +624,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 修改用户自定义水印模板
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCustomLiveStreamWatermarkTemplateResponse updateCustomLiveStreamWatermarkTemplate(UpdateCustomLiveStreamWatermarkTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateCustomLiveStreamWatermarkTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除应用级别水印模板配置
 - 删除应用级别的水印模板配置,重新推流后生效
 
@@ -658,6 +724,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 获取截图地址
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveSnapshotUrlResponse describeLiveSnapshotUrl(DescribeLiveSnapshotUrlRequest request) throws JdcloudSdkException {
+        return new DescribeLiveSnapshotUrlExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询直播截图张数数据
      *
      * @param request
@@ -679,19 +757,6 @@ public class LiveClient extends JdcloudClient {
      */
     public DeleteLiveStreamDomainTranscodeResponse deleteLiveStreamDomainTranscode(DeleteLiveStreamDomainTranscodeRequest request) throws JdcloudSdkException {
         return new DeleteLiveStreamDomainTranscodeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 启用应用
-- 启用 停用 状态的应用
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StartLiveAppResponse startLiveApp(StartLiveAppRequest request) throws JdcloudSdkException {
-        return new StartLiveAppExecutor().client(this).execute(request);
     }
 
     /**
@@ -916,20 +981,6 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 删除应用
-- 删除应用之前需要先停用应用
-- 删除应用同时会删除此应用下的所有数据
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteLiveAppResponse deleteLiveApp(DeleteLiveAppRequest request) throws JdcloudSdkException {
-        return new DeleteLiveAppExecutor().client(this).execute(request);
-    }
-
-    /**
      * 设置播放鉴权KEY
      *
      * @param request
@@ -998,6 +1049,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveTranscodingDurationDataResponse describeLiveTranscodingDurationData(DescribeLiveTranscodingDurationDataRequest request) throws JdcloudSdkException {
         return new DescribeLiveTranscodingDurationDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询截图列表
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveSnapshotsResponse describeLiveSnapshots(DescribeLiveSnapshotsRequest request) throws JdcloudSdkException {
+        return new DescribeLiveSnapshotsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1075,6 +1138,17 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveTranscodeStreamBandwidthResponse describeLiveTranscodeStreamBandwidth(DescribeLiveTranscodeStreamBandwidthRequest request) throws JdcloudSdkException {
         return new DescribeLiveTranscodeStreamBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询存储空间数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveFileStorageDataResponse describeLiveFileStorageData(DescribeLiveFileStorageDataRequest request) throws JdcloudSdkException {
+        return new DescribeLiveFileStorageDataExecutor().client(this).execute(request);
     }
 
     /**
@@ -1289,6 +1363,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DeleteLiveStreamAppTranscodeResponse deleteLiveStreamAppTranscode(DeleteLiveStreamAppTranscodeRequest request) throws JdcloudSdkException {
         return new DeleteLiveStreamAppTranscodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除截图
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveSnapshotsResponse deleteLiveSnapshots(DeleteLiveSnapshotsRequest request) throws JdcloudSdkException {
+        return new DeleteLiveSnapshotsExecutor().client(this).execute(request);
     }
 
     /**

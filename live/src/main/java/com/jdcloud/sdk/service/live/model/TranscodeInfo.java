@@ -76,6 +76,12 @@ public class TranscodeInfo  implements java.io.Serializable {
     private String template;
 
     /**
+     * 转码模板名称
+
+     */
+    private String templateName;
+
+    /**
      * 转码输出音频编码格式:
   - 取值: aac、mp3
   - 不区分大小写
@@ -239,6 +245,26 @@ public class TranscodeInfo  implements java.io.Serializable {
      */
     public void setTemplate(String template) {
         this.template = template;
+    }
+
+    /**
+     * get 转码模板名称
+
+     *
+     * @return
+     */
+    public String getTemplateName() {
+        return templateName;
+    }
+
+    /**
+     * set 转码模板名称
+
+     *
+     * @param templateName
+     */
+    public void setTemplateName(String templateName) {
+        this.templateName = templateName;
     }
 
     /**
@@ -425,6 +451,17 @@ public class TranscodeInfo  implements java.io.Serializable {
      */
     public TranscodeInfo template(String template) {
         this.template = template;
+        return this;
+    }
+
+    /**
+     * set 转码模板名称
+
+     *
+     * @param templateName
+     */
+    public TranscodeInfo templateName(String templateName) {
+        this.templateName = templateName;
         return this;
     }
 

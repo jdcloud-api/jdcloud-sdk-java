@@ -36,9 +36,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
 
     /**
      * 推流域名
-     * Required:true
      */
-    @Required
     private String publishDomain;
 
     /**

@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.nativecontainer.model.EnvVar;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -79,7 +80,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     /**
      * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
      */
-    private List<String> evns;
+    private List<EnvVar> envs;
 
     /**
      * Region ID
@@ -209,17 +210,17 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public List<String> getEvns() {
-        return evns;
+    public List<EnvVar> getEnvs() {
+        return envs;
     }
 
     /**
      * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
      *
-     * @param evns
+     * @param envs
      */
-    public void setEvns(List<String> evns) {
-        this.evns = evns;
+    public void setEnvs(List<EnvVar> envs) {
+        this.envs = envs;
     }
 
     /**
@@ -322,10 +323,10 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     /**
      * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
      *
-     * @param evns
+     * @param envs
      */
-    public RebuildContainerRequest evns(List<String> evns) {
-        this.evns = evns;
+    public RebuildContainerRequest envs(List<EnvVar> envs) {
+        this.envs = envs;
         return this;
     }
 
@@ -377,13 +378,13 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     /**
      * add item to 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
      *
-     * @param evn
+     * @param env
      */
-    public void addEvn(String evn) {
-        if (this.evns == null) {
-            this.evns = new ArrayList<>();
+    public void addEnv(EnvVar env) {
+        if (this.envs == null) {
+            this.envs = new ArrayList<>();
         }
-        this.evns.add(evn);
+        this.envs.add(env);
     }
 
 }

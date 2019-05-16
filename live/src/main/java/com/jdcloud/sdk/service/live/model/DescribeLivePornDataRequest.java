@@ -36,9 +36,7 @@ public class DescribeLivePornDataRequest extends JdcloudRequest implements java.
 
     /**
      * 推流域名
-     * Required:true
      */
-    @Required
     private String publishDomain;
 
     /**

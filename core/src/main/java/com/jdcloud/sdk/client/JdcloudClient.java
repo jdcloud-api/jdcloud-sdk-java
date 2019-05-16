@@ -5,6 +5,7 @@ import com.google.api.client.http.*;
 import com.google.api.client.http.apache.ApacheHttpTransport;
 import com.jdcloud.sdk.auth.CredentialsProvider;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import org.apache.http.HttpHost;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
@@ -26,7 +27,7 @@ public abstract class JdcloudClient {
 
     private Map<String, String> customHeader = new HashMap<>();
 
-    public final static Feature[] FEATURES = { Feature.AutoCloseSource, Feature.UseBigDecimal,
+    private final static Feature[] FEATURES = { Feature.AutoCloseSource, Feature.UseBigDecimal,
             Feature.AllowUnQuotedFieldNames, Feature.AllowSingleQuotes, Feature.AllowArbitraryCommas,
             Feature.AllowArbitraryCommas, Feature.SortFeidFastMatch, Feature.IgnoreNotMatch, Feature.DisableSpecialKeyDetect};
 
@@ -34,11 +35,19 @@ public abstract class JdcloudClient {
      * 构造
      */
     void init() {
+        final HttpRequestConfig httpRequestConfig = getHttpRequestConfig();
+        if(httpRequestConfig != null && httpRequestConfig.getProxyHost() != null) {
+            HttpHost proxy = new HttpHost(httpRequestConfig.getProxyHost(), httpRequestConfig.getProxyPort(), httpRequestConfig.getProxyProtocol().toString());
+            boolean staleConnectionCheck = getHttpConnectionParams().getBooleanParameter(HttpConnectionParams.STALE_CONNECTION_CHECK, false);
+            boolean tcpNodelay = getHttpConnectionParams().getBooleanParameter(HttpConnectionParams.TCP_NODELAY, false);
+            this.httpTransport = new ApacheHttpTransport.Builder().setProxy(proxy).build();
+            getHttpConnectionParams().setBooleanParameter(HttpConnectionParams.STALE_CONNECTION_CHECK, staleConnectionCheck);
+            getHttpConnectionParams().setBooleanParameter(HttpConnectionParams.TCP_NODELAY, tcpNodelay);
+        }
         this.httpRequestFactory = this.httpTransport.createRequestFactory(
                 new HttpRequestInitializer() {
                     @Override
                     public void initialize(HttpRequest request) throws IOException {
-                        HttpRequestConfig httpRequestConfig = getHttpRequestConfig();
                         if (httpRequestConfig != null) {
                             if (httpRequestConfig.getConnectionTimeout() != -1) {
                                 request.setConnectTimeout(httpRequestConfig.getConnectionTimeout());

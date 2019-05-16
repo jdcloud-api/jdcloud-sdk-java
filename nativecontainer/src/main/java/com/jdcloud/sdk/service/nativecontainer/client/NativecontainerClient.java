@@ -64,6 +64,12 @@ import com.jdcloud.sdk.service.nativecontainer.client.RebuildContainerExecutor;
 import com.jdcloud.sdk.service.nativecontainer.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.nativecontainer.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.nativecontainer.client.AssociateElasticIpExecutor;
+import com.jdcloud.sdk.service.nativecontainer.model.ExecCreateRequest;
+import com.jdcloud.sdk.service.nativecontainer.model.ExecCreateResponse;
+import com.jdcloud.sdk.service.nativecontainer.client.ExecCreateExecutor;
+import com.jdcloud.sdk.service.nativecontainer.model.ExecGetExitCodeRequest;
+import com.jdcloud.sdk.service.nativecontainer.model.ExecGetExitCodeResponse;
+import com.jdcloud.sdk.service.nativecontainer.client.ExecGetExitCodeExecutor;
 import com.jdcloud.sdk.service.nativecontainer.model.CreateContainersRequest;
 import com.jdcloud.sdk.service.nativecontainer.model.CreateContainersResponse;
 import com.jdcloud.sdk.service.nativecontainer.client.CreateContainersExecutor;
@@ -76,6 +82,9 @@ import com.jdcloud.sdk.service.nativecontainer.client.DescribeSecretsExecutor;
 import com.jdcloud.sdk.service.nativecontainer.model.ModifyContainerAttributeRequest;
 import com.jdcloud.sdk.service.nativecontainer.model.ModifyContainerAttributeResponse;
 import com.jdcloud.sdk.service.nativecontainer.client.ModifyContainerAttributeExecutor;
+import com.jdcloud.sdk.service.nativecontainer.model.ResizeTTYRequest;
+import com.jdcloud.sdk.service.nativecontainer.model.ResizeTTYResponse;
+import com.jdcloud.sdk.service.nativecontainer.client.ResizeTTYExecutor;
 import com.jdcloud.sdk.service.nativecontainer.model.DescribeContainersRequest;
 import com.jdcloud.sdk.service.nativecontainer.model.DescribeContainersResponse;
 import com.jdcloud.sdk.service.nativecontainer.client.DescribeContainersExecutor;
@@ -87,7 +96,7 @@ public class NativecontainerClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.1";
     public final static String DefaultEndpoint = "nativecontainer.jdcloud-api.com";
     public final static String ServiceName = "nativecontainer";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -275,6 +284,30 @@ public class NativecontainerClient extends JdcloudClient {
     }
 
     /**
+     * 创建exec
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExecCreateResponse execCreate(ExecCreateRequest request) throws JdcloudSdkException {
+        return new ExecCreateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取exec退出码
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExecGetExitCodeResponse execGetExitCode(ExecGetExitCodeRequest request) throws JdcloudSdkException {
+        return new ExecGetExitCodeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建一台或多台指定配置容器。
 - 创建容器需要通过实名认证
 - 镜像
@@ -374,6 +407,18 @@ public class NativecontainerClient extends JdcloudClient {
      */
     public ModifyContainerAttributeResponse modifyContainerAttribute(ModifyContainerAttributeRequest request) throws JdcloudSdkException {
         return new ModifyContainerAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 调整TTY大小
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ResizeTTYResponse resizeTTY(ResizeTTYRequest request) throws JdcloudSdkException {
+        return new ResizeTTYExecutor().client(this).execute(request);
     }
 
     /**
