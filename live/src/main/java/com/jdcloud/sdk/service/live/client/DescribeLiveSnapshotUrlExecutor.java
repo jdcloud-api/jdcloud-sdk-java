@@ -26,27 +26,26 @@ package com.jdcloud.sdk.service.live.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.live.model.StartLiveAppResponse;
+import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotUrlResponse;
 
 /**
- * 启用应用
-- 启用 停用 状态的应用
+ * 获取截图地址
 
  */
-class StartLiveAppExecutor extends JdcloudExecutor {
+class DescribeLiveSnapshotUrlExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "PUT";
+        return "GET";
     }
 
     @Override
     public String url() {
-        return "/apps:start";
+        return "/snapshots/{imgId}:url";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return StartLiveAppResponse.class;
+        return DescribeLiveSnapshotUrlResponse.class;
     }
 }

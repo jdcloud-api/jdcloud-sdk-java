@@ -51,6 +51,18 @@ public class DescribeLivePublishStreamNumRequest extends JdcloudRequest implemen
     private String protocolType;
 
     /**
+     * 运营商
+
+     */
+    private String ispName;
+
+    /**
+     * 查询的区域，如beijing,shanghai。多个用逗号分隔
+
+     */
+    private String locationName;
+
+    /**
      * 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
 
      */
@@ -132,6 +144,46 @@ public class DescribeLivePublishStreamNumRequest extends JdcloudRequest implemen
      */
     public void setProtocolType(String protocolType) {
         this.protocolType = protocolType;
+    }
+
+    /**
+     * get 运营商
+
+     *
+     * @return
+     */
+    public String getIspName() {
+        return ispName;
+    }
+
+    /**
+     * set 运营商
+
+     *
+     * @param ispName
+     */
+    public void setIspName(String ispName) {
+        this.ispName = ispName;
+    }
+
+    /**
+     * get 查询的区域，如beijing,shanghai。多个用逗号分隔
+
+     *
+     * @return
+     */
+    public String getLocationName() {
+        return locationName;
+    }
+
+    /**
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
+
+     *
+     * @param locationName
+     */
+    public void setLocationName(String locationName) {
+        this.locationName = locationName;
     }
 
     /**
@@ -237,6 +289,28 @@ public class DescribeLivePublishStreamNumRequest extends JdcloudRequest implemen
      */
     public DescribeLivePublishStreamNumRequest protocolType(String protocolType) {
         this.protocolType = protocolType;
+        return this;
+    }
+
+    /**
+     * set 运营商
+
+     *
+     * @param ispName
+     */
+    public DescribeLivePublishStreamNumRequest ispName(String ispName) {
+        this.ispName = ispName;
+        return this;
+    }
+
+    /**
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
+
+     *
+     * @param locationName
+     */
+    public DescribeLivePublishStreamNumRequest locationName(String locationName) {
+        this.locationName = locationName;
         return this;
     }
 

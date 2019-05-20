@@ -28,83 +28,88 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 启用应用
-- 启用 停用 状态的应用
+ * 获取录制文件地址
 
  */
-public class StartLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeLiveRecordFileUrlRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播的推流域名
+     * 地址有效期，单位：秒，默认：3600，最大支持7天
+
+     */
+    private Integer authExpire;
+
+    /**
+     * 录制文件ID
+
      * Required:true
      */
     @Required
-    private String publishDomain;
-
-    /**
-     * 应用名称
-     * Required:true
-     */
-    @Required
-    private String appName;
+    private String fileId;
 
 
     /**
-     * get 直播的推流域名
+     * get 地址有效期，单位：秒，默认：3600，最大支持7天
+
      *
      * @return
      */
-    public String getPublishDomain() {
-        return publishDomain;
+    public Integer getAuthExpire() {
+        return authExpire;
     }
 
     /**
-     * set 直播的推流域名
+     * set 地址有效期，单位：秒，默认：3600，最大支持7天
+
      *
-     * @param publishDomain
+     * @param authExpire
      */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
+    public void setAuthExpire(Integer authExpire) {
+        this.authExpire = authExpire;
     }
 
     /**
-     * get 应用名称
+     * get 录制文件ID
+
      *
      * @return
      */
-    public String getAppName() {
-        return appName;
+    public String getFileId() {
+        return fileId;
     }
 
     /**
-     * set 应用名称
+     * set 录制文件ID
+
      *
-     * @param appName
+     * @param fileId
      */
-    public void setAppName(String appName) {
-        this.appName = appName;
+    public void setFileId(String fileId) {
+        this.fileId = fileId;
     }
 
 
     /**
-     * set 直播的推流域名
+     * set 地址有效期，单位：秒，默认：3600，最大支持7天
+
      *
-     * @param publishDomain
+     * @param authExpire
      */
-    public StartLiveAppRequest publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
+    public DescribeLiveRecordFileUrlRequest authExpire(Integer authExpire) {
+        this.authExpire = authExpire;
         return this;
     }
 
     /**
-     * set 应用名称
+     * set 录制文件ID
+
      *
-     * @param appName
+     * @param fileId
      */
-    public StartLiveAppRequest appName(String appName) {
-        this.appName = appName;
+    public DescribeLiveRecordFileUrlRequest fileId(String fileId) {
+        this.fileId = fileId;
         return this;
     }
 

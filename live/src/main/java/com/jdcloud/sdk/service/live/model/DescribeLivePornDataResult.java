@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.live.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.live.model.PornData;
+import com.jdcloud.sdk.service.live.model.PornCountStatisticResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,7 +39,7 @@ public class DescribeLivePornDataResult extends JdcloudResult implements java.io
     /**
      * pornData
      */
-    private List<PornData> pornData;
+    private List<PornCountStatisticResult> pornData;
 
 
     /**
@@ -47,7 +47,7 @@ public class DescribeLivePornDataResult extends JdcloudResult implements java.io
      *
      * @return
      */
-    public List<PornData> getPornData() {
+    public List<PornCountStatisticResult> getPornData() {
         return pornData;
     }
 
@@ -56,7 +56,7 @@ public class DescribeLivePornDataResult extends JdcloudResult implements java.io
      *
      * @param pornData
      */
-    public void setPornData(List<PornData> pornData) {
+    public void setPornData(List<PornCountStatisticResult> pornData) {
         this.pornData = pornData;
     }
 
@@ -66,7 +66,7 @@ public class DescribeLivePornDataResult extends JdcloudResult implements java.io
      *
      * @param pornData
      */
-    public DescribeLivePornDataResult pornData(List<PornData> pornData) {
+    public DescribeLivePornDataResult pornData(List<PornCountStatisticResult> pornData) {
         this.pornData = pornData;
         return this;
     }
@@ -77,7 +77,7 @@ public class DescribeLivePornDataResult extends JdcloudResult implements java.io
      *
      * @param pornData
      */
-    public void addPornData(PornData pornData) {
+    public void addPornData(PornCountStatisticResult pornData) {
         if (this.pornData == null) {
             this.pornData = new ArrayList<>();
         }

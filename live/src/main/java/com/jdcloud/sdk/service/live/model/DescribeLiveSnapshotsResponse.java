@@ -27,11 +27,10 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 启用应用
-- 启用 停用 状态的应用
+ * 查询截图列表
 
  */
-public class StartLiveAppResponse extends JdcloudResponse<StartLiveAppResult> implements java.io.Serializable {
+public class DescribeLiveSnapshotsResponse extends JdcloudResponse<DescribeLiveSnapshotsResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

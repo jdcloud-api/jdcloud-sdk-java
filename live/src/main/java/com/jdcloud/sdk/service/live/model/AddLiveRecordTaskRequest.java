@@ -52,16 +52,12 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * 存储桶
-     * Required:true
      */
-    @Required
     private String saveBucket;
 
     /**
      * 存储地址
-     * Required:true
      */
-    @Required
     private String saveEndpoint;
 
     /**

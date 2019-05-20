@@ -71,13 +71,13 @@ public class RecordFile  implements java.io.Serializable {
     private String endTime;
 
     /**
-     * 视频时长
+     * 视频时长，单位：毫秒
 
      */
     private Integer duration;
 
     /**
-     * 文件大小
+     * 文件大小，单位：B
 
      */
     private Integer size;
@@ -98,7 +98,7 @@ public class RecordFile  implements java.io.Serializable {
      * 文件地址
 
      */
-    private String imgUrl;
+    private String fileUrl;
 
     /**
      * 创建时间
@@ -232,7 +232,7 @@ public class RecordFile  implements java.io.Serializable {
     }
 
     /**
-     * get 视频时长
+     * get 视频时长，单位：毫秒
 
      *
      * @return
@@ -242,7 +242,7 @@ public class RecordFile  implements java.io.Serializable {
     }
 
     /**
-     * set 视频时长
+     * set 视频时长，单位：毫秒
 
      *
      * @param duration
@@ -252,7 +252,7 @@ public class RecordFile  implements java.io.Serializable {
     }
 
     /**
-     * get 文件大小
+     * get 文件大小，单位：B
 
      *
      * @return
@@ -262,7 +262,7 @@ public class RecordFile  implements java.io.Serializable {
     }
 
     /**
-     * set 文件大小
+     * set 文件大小，单位：B
 
      *
      * @param size
@@ -317,18 +317,18 @@ public class RecordFile  implements java.io.Serializable {
      *
      * @return
      */
-    public String getImgUrl() {
-        return imgUrl;
+    public String getFileUrl() {
+        return fileUrl;
     }
 
     /**
      * set 文件地址
 
      *
-     * @param imgUrl
+     * @param fileUrl
      */
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public void setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
     }
 
     /**
@@ -421,7 +421,7 @@ public class RecordFile  implements java.io.Serializable {
     }
 
     /**
-     * set 视频时长
+     * set 视频时长，单位：毫秒
 
      *
      * @param duration
@@ -432,7 +432,7 @@ public class RecordFile  implements java.io.Serializable {
     }
 
     /**
-     * set 文件大小
+     * set 文件大小，单位：B
 
      *
      * @param size
@@ -468,10 +468,10 @@ public class RecordFile  implements java.io.Serializable {
      * set 文件地址
 
      *
-     * @param imgUrl
+     * @param fileUrl
      */
-    public RecordFile imgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public RecordFile fileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
         return this;
     }
 

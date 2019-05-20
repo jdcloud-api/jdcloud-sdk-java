@@ -28,84 +28,88 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除应用
-- 删除应用之前需要先停用应用
-- 删除应用同时会删除此应用下的所有数据
+ * 获取截图地址
 
  */
-public class DeleteLiveAppRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeLiveSnapshotUrlRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 推流域名
+     * 地址有效期，单位：秒，默认：3600，最大支持7天
+
+     */
+    private Integer authExpire;
+
+    /**
+     * 截图ID
+
      * Required:true
      */
     @Required
-    private String publishDomain;
-
-    /**
-     * 应用名称
-     * Required:true
-     */
-    @Required
-    private String appName;
+    private String imgId;
 
 
     /**
-     * get 推流域名
+     * get 地址有效期，单位：秒，默认：3600，最大支持7天
+
      *
      * @return
      */
-    public String getPublishDomain() {
-        return publishDomain;
+    public Integer getAuthExpire() {
+        return authExpire;
     }
 
     /**
-     * set 推流域名
+     * set 地址有效期，单位：秒，默认：3600，最大支持7天
+
      *
-     * @param publishDomain
+     * @param authExpire
      */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
+    public void setAuthExpire(Integer authExpire) {
+        this.authExpire = authExpire;
     }
 
     /**
-     * get 应用名称
+     * get 截图ID
+
      *
      * @return
      */
-    public String getAppName() {
-        return appName;
+    public String getImgId() {
+        return imgId;
     }
 
     /**
-     * set 应用名称
+     * set 截图ID
+
      *
-     * @param appName
+     * @param imgId
      */
-    public void setAppName(String appName) {
-        this.appName = appName;
+    public void setImgId(String imgId) {
+        this.imgId = imgId;
     }
 
 
     /**
-     * set 推流域名
+     * set 地址有效期，单位：秒，默认：3600，最大支持7天
+
      *
-     * @param publishDomain
+     * @param authExpire
      */
-    public DeleteLiveAppRequest publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
+    public DescribeLiveSnapshotUrlRequest authExpire(Integer authExpire) {
+        this.authExpire = authExpire;
         return this;
     }
 
     /**
-     * set 应用名称
+     * set 截图ID
+
      *
-     * @param appName
+     * @param imgId
      */
-    public DeleteLiveAppRequest appName(String appName) {
-        this.appName = appName;
+    public DescribeLiveSnapshotUrlRequest imgId(String imgId) {
+        this.imgId = imgId;
         return this;
     }
 

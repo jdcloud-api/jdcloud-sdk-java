@@ -98,22 +98,19 @@ public class AddCustomLiveStreamSnapshotTemplateRequest extends JdcloudRequest i
 
     /**
      * 存储桶
-     * Required:true
      */
-    @Required
     private String saveBucket;
 
     /**
      * 存储地址
-     * Required:true
      */
-    @Required
     private String saveEndpoint;
 
     /**
      * 截图模板自定义名称:
-- 取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+- 取值要求: 数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
   首尾不能有特殊字符(&quot;-&quot;)
+  最大长度50个字符
 - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      * Required:true
@@ -316,8 +313,9 @@ public class AddCustomLiveStreamSnapshotTemplateRequest extends JdcloudRequest i
 
     /**
      * get 截图模板自定义名称:
-- 取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+- 取值要求: 数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
   首尾不能有特殊字符(&quot;-&quot;)
+  最大长度50个字符
 - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *
@@ -329,8 +327,9 @@ public class AddCustomLiveStreamSnapshotTemplateRequest extends JdcloudRequest i
 
     /**
      * set 截图模板自定义名称:
-- 取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+- 取值要求: 数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
   首尾不能有特殊字符(&quot;-&quot;)
+  最大长度50个字符
 - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *
@@ -447,8 +446,9 @@ public class AddCustomLiveStreamSnapshotTemplateRequest extends JdcloudRequest i
 
     /**
      * set 截图模板自定义名称:
-- 取值要求: 数字、大小写字母或短横线(&quot;-&quot;),
+- 取值要求: 数字、大小写字母或短横线(&quot;-&quot;)、下划线(&quot;_&quot;),
   首尾不能有特殊字符(&quot;-&quot;)
+  最大长度50个字符
 - &lt;b&gt;注意: 不能与已定义命名重复&lt;/b&gt;
 
      *

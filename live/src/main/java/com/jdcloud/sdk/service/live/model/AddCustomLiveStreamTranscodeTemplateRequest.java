@@ -42,6 +42,13 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
     private static final long serialVersionUID = 1L;
 
     /**
+     * 转码模板名称
+- 长度范围：[1,50]
+
+     */
+    private String templateName;
+
+    /**
      * 转码输出的码率值
 - 取值范围: [200,3000]
 - 单位: kpbs
@@ -53,7 +60,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * 转码输出的帧率值
-- 取值：15、25、30、60
+- 取值：[1,30]
 
      * Required:true
      */
@@ -144,6 +151,28 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
 
     /**
+     * get 转码模板名称
+- 长度范围：[1,50]
+
+     *
+     * @return
+     */
+    public String getTemplateName() {
+        return templateName;
+    }
+
+    /**
+     * set 转码模板名称
+- 长度范围：[1,50]
+
+     *
+     * @param templateName
+     */
+    public void setTemplateName(String templateName) {
+        this.templateName = templateName;
+    }
+
+    /**
      * get 转码输出的码率值
 - 取值范围: [200,3000]
 - 单位: kpbs
@@ -169,7 +198,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * get 转码输出的帧率值
-- 取值：15、25、30、60
+- 取值：[1,30]
 
      *
      * @return
@@ -180,7 +209,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 转码输出的帧率值
-- 取值：15、25、30、60
+- 取值：[1,30]
 
      *
      * @param videoFrameRate
@@ -395,6 +424,18 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
 
     /**
+     * set 转码模板名称
+- 长度范围：[1,50]
+
+     *
+     * @param templateName
+     */
+    public AddCustomLiveStreamTranscodeTemplateRequest templateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+
+    /**
      * set 转码输出的码率值
 - 取值范围: [200,3000]
 - 单位: kpbs
@@ -409,7 +450,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 转码输出的帧率值
-- 取值：15、25、30、60
+- 取值：[1,30]
 
      *
      * @param videoFrameRate
