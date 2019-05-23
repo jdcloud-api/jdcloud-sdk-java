@@ -1,7 +1,7 @@
 
 # 简介 #
 
-[![Build Status](https://travis-ci.org/jdcloud-api/jdcloud-sdk-java.svg?branch=master)](https://travis-ci.org/jdcloud-api/jdcloud-sdk-java)
+[![Build Status](https://travis-ci.com/jdcloud-api/jdcloud-sdk-java.svg?branch=master)](https://travis-ci.com/jdcloud-api/jdcloud-sdk-java)
 
   欢迎使用京东云开发者Java工具套件（Java SDK）。使用京东云Java SDK，您无需复杂编程就可以访问京东云提供的各种服务。 
 
