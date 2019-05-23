@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.cps.model.Subnet;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询子网
+ * 查询子网详情
  */
 public class DescribeSubnetResult extends JdcloudResult implements java.io.Serializable {
 

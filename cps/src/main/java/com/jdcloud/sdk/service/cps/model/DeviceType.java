@@ -33,29 +33,19 @@ public class DeviceType  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例类型英文名称, 如 cps.c.normal
+     * 实例类型, 如 cps.c.normal
      */
-    private String nameEN;
+    private String deviceType;
 
     /**
-     * 实例类型中文名称, 如 计算型
+     * 实例类型名称, 如 标准计算型
      */
-    private String nameZH;
+    private String name;
 
     /**
      * 实例所属规格系列，如 计算、存储、GPU
      */
     private String family;
-
-    /**
-     * 镜像类型英文描述, 如 standard
-     */
-    private String useTypeEN;
-
-    /**
-     * 镜像类型中文描述, 如 标准型
-     */
-    private String useTypeZH;
 
     /**
      * 区域代码, 如 cn-east-1
@@ -93,26 +83,6 @@ public class DeviceType  implements java.io.Serializable {
     private String ifDetail;
 
     /**
-     * 系统磁盘概要信息
-     */
-    private String systemDiskConcise;
-
-    /**
-     * 系统磁盘详细信息
-     */
-    private String systemDiskDetail;
-
-    /**
-     * 数据磁盘概要信息
-     */
-    private String dataDiskConcise;
-
-    /**
-     * 数据磁盘详细信息
-     */
-    private String dataDiskDetail;
-
-    /**
      * GPU概要信息
      */
     private String gpuConcise;
@@ -123,45 +93,75 @@ public class DeviceType  implements java.io.Serializable {
     private String gpuDetail;
 
     /**
+     * 系统盘数量
+     */
+    private Integer systemDiskAmount;
+
+    /**
+     * 系统盘单盘大小（GB）
+     */
+    private Integer systemDiskSize;
+
+    /**
+     * 系统盘规格
+     */
+    private String systemDiskModel;
+
+    /**
+     * 数据盘数量
+     */
+    private Integer dataDiskAmount;
+
+    /**
+     * 数据盘单盘大小（GB）
+     */
+    private Integer dataDiskSize;
+
+    /**
+     * 数据盘规格
+     */
+    private String dataDiskModel;
+
+    /**
      * 售罄状态
      */
     private Boolean isSoldOut;
 
 
     /**
-     * get 实例类型英文名称, 如 cps.c.normal
+     * get 实例类型, 如 cps.c.normal
      *
      * @return
      */
-    public String getNameEN() {
-        return nameEN;
+    public String getDeviceType() {
+        return deviceType;
     }
 
     /**
-     * set 实例类型英文名称, 如 cps.c.normal
+     * set 实例类型, 如 cps.c.normal
      *
-     * @param nameEN
+     * @param deviceType
      */
-    public void setNameEN(String nameEN) {
-        this.nameEN = nameEN;
+    public void setDeviceType(String deviceType) {
+        this.deviceType = deviceType;
     }
 
     /**
-     * get 实例类型中文名称, 如 计算型
+     * get 实例类型名称, 如 标准计算型
      *
      * @return
      */
-    public String getNameZH() {
-        return nameZH;
+    public String getName() {
+        return name;
     }
 
     /**
-     * set 实例类型中文名称, 如 计算型
+     * set 实例类型名称, 如 标准计算型
      *
-     * @param nameZH
+     * @param name
      */
-    public void setNameZH(String nameZH) {
-        this.nameZH = nameZH;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
@@ -180,42 +180,6 @@ public class DeviceType  implements java.io.Serializable {
      */
     public void setFamily(String family) {
         this.family = family;
-    }
-
-    /**
-     * get 镜像类型英文描述, 如 standard
-     *
-     * @return
-     */
-    public String getUseTypeEN() {
-        return useTypeEN;
-    }
-
-    /**
-     * set 镜像类型英文描述, 如 standard
-     *
-     * @param useTypeEN
-     */
-    public void setUseTypeEN(String useTypeEN) {
-        this.useTypeEN = useTypeEN;
-    }
-
-    /**
-     * get 镜像类型中文描述, 如 标准型
-     *
-     * @return
-     */
-    public String getUseTypeZH() {
-        return useTypeZH;
-    }
-
-    /**
-     * set 镜像类型中文描述, 如 标准型
-     *
-     * @param useTypeZH
-     */
-    public void setUseTypeZH(String useTypeZH) {
-        this.useTypeZH = useTypeZH;
     }
 
     /**
@@ -345,78 +309,6 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * get 系统磁盘概要信息
-     *
-     * @return
-     */
-    public String getSystemDiskConcise() {
-        return systemDiskConcise;
-    }
-
-    /**
-     * set 系统磁盘概要信息
-     *
-     * @param systemDiskConcise
-     */
-    public void setSystemDiskConcise(String systemDiskConcise) {
-        this.systemDiskConcise = systemDiskConcise;
-    }
-
-    /**
-     * get 系统磁盘详细信息
-     *
-     * @return
-     */
-    public String getSystemDiskDetail() {
-        return systemDiskDetail;
-    }
-
-    /**
-     * set 系统磁盘详细信息
-     *
-     * @param systemDiskDetail
-     */
-    public void setSystemDiskDetail(String systemDiskDetail) {
-        this.systemDiskDetail = systemDiskDetail;
-    }
-
-    /**
-     * get 数据磁盘概要信息
-     *
-     * @return
-     */
-    public String getDataDiskConcise() {
-        return dataDiskConcise;
-    }
-
-    /**
-     * set 数据磁盘概要信息
-     *
-     * @param dataDiskConcise
-     */
-    public void setDataDiskConcise(String dataDiskConcise) {
-        this.dataDiskConcise = dataDiskConcise;
-    }
-
-    /**
-     * get 数据磁盘详细信息
-     *
-     * @return
-     */
-    public String getDataDiskDetail() {
-        return dataDiskDetail;
-    }
-
-    /**
-     * set 数据磁盘详细信息
-     *
-     * @param dataDiskDetail
-     */
-    public void setDataDiskDetail(String dataDiskDetail) {
-        this.dataDiskDetail = dataDiskDetail;
-    }
-
-    /**
      * get GPU概要信息
      *
      * @return
@@ -453,6 +345,114 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
+     * get 系统盘数量
+     *
+     * @return
+     */
+    public Integer getSystemDiskAmount() {
+        return systemDiskAmount;
+    }
+
+    /**
+     * set 系统盘数量
+     *
+     * @param systemDiskAmount
+     */
+    public void setSystemDiskAmount(Integer systemDiskAmount) {
+        this.systemDiskAmount = systemDiskAmount;
+    }
+
+    /**
+     * get 系统盘单盘大小（GB）
+     *
+     * @return
+     */
+    public Integer getSystemDiskSize() {
+        return systemDiskSize;
+    }
+
+    /**
+     * set 系统盘单盘大小（GB）
+     *
+     * @param systemDiskSize
+     */
+    public void setSystemDiskSize(Integer systemDiskSize) {
+        this.systemDiskSize = systemDiskSize;
+    }
+
+    /**
+     * get 系统盘规格
+     *
+     * @return
+     */
+    public String getSystemDiskModel() {
+        return systemDiskModel;
+    }
+
+    /**
+     * set 系统盘规格
+     *
+     * @param systemDiskModel
+     */
+    public void setSystemDiskModel(String systemDiskModel) {
+        this.systemDiskModel = systemDiskModel;
+    }
+
+    /**
+     * get 数据盘数量
+     *
+     * @return
+     */
+    public Integer getDataDiskAmount() {
+        return dataDiskAmount;
+    }
+
+    /**
+     * set 数据盘数量
+     *
+     * @param dataDiskAmount
+     */
+    public void setDataDiskAmount(Integer dataDiskAmount) {
+        this.dataDiskAmount = dataDiskAmount;
+    }
+
+    /**
+     * get 数据盘单盘大小（GB）
+     *
+     * @return
+     */
+    public Integer getDataDiskSize() {
+        return dataDiskSize;
+    }
+
+    /**
+     * set 数据盘单盘大小（GB）
+     *
+     * @param dataDiskSize
+     */
+    public void setDataDiskSize(Integer dataDiskSize) {
+        this.dataDiskSize = dataDiskSize;
+    }
+
+    /**
+     * get 数据盘规格
+     *
+     * @return
+     */
+    public String getDataDiskModel() {
+        return dataDiskModel;
+    }
+
+    /**
+     * set 数据盘规格
+     *
+     * @param dataDiskModel
+     */
+    public void setDataDiskModel(String dataDiskModel) {
+        this.dataDiskModel = dataDiskModel;
+    }
+
+    /**
      * get 售罄状态
      *
      * @return
@@ -472,22 +472,22 @@ public class DeviceType  implements java.io.Serializable {
 
 
     /**
-     * set 实例类型英文名称, 如 cps.c.normal
+     * set 实例类型, 如 cps.c.normal
      *
-     * @param nameEN
+     * @param deviceType
      */
-    public DeviceType nameEN(String nameEN) {
-        this.nameEN = nameEN;
+    public DeviceType deviceType(String deviceType) {
+        this.deviceType = deviceType;
         return this;
     }
 
     /**
-     * set 实例类型中文名称, 如 计算型
+     * set 实例类型名称, 如 标准计算型
      *
-     * @param nameZH
+     * @param name
      */
-    public DeviceType nameZH(String nameZH) {
-        this.nameZH = nameZH;
+    public DeviceType name(String name) {
+        this.name = name;
         return this;
     }
 
@@ -498,26 +498,6 @@ public class DeviceType  implements java.io.Serializable {
      */
     public DeviceType family(String family) {
         this.family = family;
-        return this;
-    }
-
-    /**
-     * set 镜像类型英文描述, 如 standard
-     *
-     * @param useTypeEN
-     */
-    public DeviceType useTypeEN(String useTypeEN) {
-        this.useTypeEN = useTypeEN;
-        return this;
-    }
-
-    /**
-     * set 镜像类型中文描述, 如 标准型
-     *
-     * @param useTypeZH
-     */
-    public DeviceType useTypeZH(String useTypeZH) {
-        this.useTypeZH = useTypeZH;
         return this;
     }
 
@@ -592,46 +572,6 @@ public class DeviceType  implements java.io.Serializable {
     }
 
     /**
-     * set 系统磁盘概要信息
-     *
-     * @param systemDiskConcise
-     */
-    public DeviceType systemDiskConcise(String systemDiskConcise) {
-        this.systemDiskConcise = systemDiskConcise;
-        return this;
-    }
-
-    /**
-     * set 系统磁盘详细信息
-     *
-     * @param systemDiskDetail
-     */
-    public DeviceType systemDiskDetail(String systemDiskDetail) {
-        this.systemDiskDetail = systemDiskDetail;
-        return this;
-    }
-
-    /**
-     * set 数据磁盘概要信息
-     *
-     * @param dataDiskConcise
-     */
-    public DeviceType dataDiskConcise(String dataDiskConcise) {
-        this.dataDiskConcise = dataDiskConcise;
-        return this;
-    }
-
-    /**
-     * set 数据磁盘详细信息
-     *
-     * @param dataDiskDetail
-     */
-    public DeviceType dataDiskDetail(String dataDiskDetail) {
-        this.dataDiskDetail = dataDiskDetail;
-        return this;
-    }
-
-    /**
      * set GPU概要信息
      *
      * @param gpuConcise
@@ -648,6 +588,66 @@ public class DeviceType  implements java.io.Serializable {
      */
     public DeviceType gpuDetail(String gpuDetail) {
         this.gpuDetail = gpuDetail;
+        return this;
+    }
+
+    /**
+     * set 系统盘数量
+     *
+     * @param systemDiskAmount
+     */
+    public DeviceType systemDiskAmount(Integer systemDiskAmount) {
+        this.systemDiskAmount = systemDiskAmount;
+        return this;
+    }
+
+    /**
+     * set 系统盘单盘大小（GB）
+     *
+     * @param systemDiskSize
+     */
+    public DeviceType systemDiskSize(Integer systemDiskSize) {
+        this.systemDiskSize = systemDiskSize;
+        return this;
+    }
+
+    /**
+     * set 系统盘规格
+     *
+     * @param systemDiskModel
+     */
+    public DeviceType systemDiskModel(String systemDiskModel) {
+        this.systemDiskModel = systemDiskModel;
+        return this;
+    }
+
+    /**
+     * set 数据盘数量
+     *
+     * @param dataDiskAmount
+     */
+    public DeviceType dataDiskAmount(Integer dataDiskAmount) {
+        this.dataDiskAmount = dataDiskAmount;
+        return this;
+    }
+
+    /**
+     * set 数据盘单盘大小（GB）
+     *
+     * @param dataDiskSize
+     */
+    public DeviceType dataDiskSize(Integer dataDiskSize) {
+        this.dataDiskSize = dataDiskSize;
+        return this;
+    }
+
+    /**
+     * set 数据盘规格
+     *
+     * @param dataDiskModel
+     */
+    public DeviceType dataDiskModel(String dataDiskModel) {
+        this.dataDiskModel = dataDiskModel;
         return this;
     }
 

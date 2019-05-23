@@ -26,8 +26,8 @@ package com.jdcloud.sdk.service.function.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,6 +36,23 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 public class ListFunctionRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 是否返回所有函数
+     * Required:true
+     */
+    @Required
+    private Boolean listAll;
+
+    /**
+     * 页码
+     */
+    private Integer pageNumber;
+
+    /**
+     * 分页大小
+     */
+    private Integer pageSize;
 
     /**
      * functionId -函数ID，精确匹配，支持多个
@@ -51,6 +68,60 @@ functionName  - 函数名称，模糊匹配，支持单个
     @Required
     private String regionId;
 
+
+    /**
+     * get 是否返回所有函数
+     *
+     * @return
+     */
+    public Boolean getListAll() {
+        return listAll;
+    }
+
+    /**
+     * set 是否返回所有函数
+     *
+     * @param listAll
+     */
+    public void setListAll(Boolean listAll) {
+        this.listAll = listAll;
+    }
+
+    /**
+     * get 页码
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 页码
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 分页大小
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 分页大小
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
 
     /**
      * get functionId -函数ID，精确匹配，支持多个
@@ -92,6 +163,36 @@ functionName  - 函数名称，模糊匹配，支持单个
         this.regionId = regionId;
     }
 
+
+    /**
+     * set 是否返回所有函数
+     *
+     * @param listAll
+     */
+    public ListFunctionRequest listAll(Boolean listAll) {
+        this.listAll = listAll;
+        return this;
+    }
+
+    /**
+     * set 页码
+     *
+     * @param pageNumber
+     */
+    public ListFunctionRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 分页大小
+     *
+     * @param pageSize
+     */
+    public ListFunctionRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
 
     /**
      * set functionId -函数ID，精确匹配，支持多个

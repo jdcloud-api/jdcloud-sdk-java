@@ -33,7 +33,40 @@ public class DescribeRegionesRequest extends JdcloudRequest implements java.io.S
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 网络类型basic/vpc, 默认basic
+     */
+    private String networkType;
 
+
+    /**
+     * get 网络类型basic/vpc, 默认basic
+     *
+     * @return
+     */
+    public String getNetworkType() {
+        return networkType;
+    }
+
+    /**
+     * set 网络类型basic/vpc, 默认basic
+     *
+     * @param networkType
+     */
+    public void setNetworkType(String networkType) {
+        this.networkType = networkType;
+    }
+
+
+    /**
+     * set 网络类型basic/vpc, 默认basic
+     *
+     * @param networkType
+     */
+    public DescribeRegionesRequest networkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
 
 
 }

@@ -24,9 +24,9 @@
 
 package com.jdcloud.sdk.service.function.model;
 
-import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.function.model.Code;
 import com.jdcloud.sdk.service.function.model.Env;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -38,37 +38,27 @@ public class UpdateFunctionRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * 函数描述信息
-     * Required:true
      */
-    @Required
     private String description;
 
     /**
      * 函数入口，格式为入口文件.入口函数名
-     * Required:true
      */
-    @Required
     private String entrance;
 
     /**
      * 函数运行最大内存
-     * Required:true
      */
-    @Required
     private Integer memory;
 
     /**
      * 函数运行环境
-     * Required:true
      */
-    @Required
     private String runTime;
 
     /**
      * 函数运行超时时间
-     * Required:true
      */
-    @Required
     private Integer overTime;
 
     /**
@@ -78,44 +68,32 @@ public class UpdateFunctionRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * 函数代码包
-     * Required:true
      */
-    @Required
     private Code code;
 
     /**
      * 函数运行时环境变量
-     * Required:true
      */
-    @Required
     private Env environment;
 
     /**
      * 函数指定的日志集Id
-     * Required:true
      */
-    @Required
     private String logSetId;
 
     /**
      * 函数指定的日志主题Id
-     * Required:true
      */
-    @Required
     private String logTopicId;
 
     /**
      * 函数配置的VPCId
-     * Required:true
      */
-    @Required
     private String vpcId;
 
     /**
      * 函数配置的子网Id
-     * Required:true
      */
-    @Required
     private String subnetId;
 
     /**

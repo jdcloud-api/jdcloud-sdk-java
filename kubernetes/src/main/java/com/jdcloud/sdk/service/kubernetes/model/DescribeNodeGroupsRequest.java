@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.kubernetes.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
@@ -46,6 +47,11 @@ public class DescribeNodeGroupsRequest extends JdcloudRequest implements java.io
      * 分页大小；默认为20；取值范围[10, 100]
      */
     private Integer pageSize;
+
+    /**
+     * Tag筛选条件
+     */
+    private List<TagFilter> tags;
 
     /**
      * name - 节点组名称，模糊匹配，支持单个      
@@ -98,6 +104,24 @@ clusterName - 根据名称查询 cluster
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get Tag筛选条件
+     *
+     * @return
+     */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
     }
 
     /**
@@ -166,6 +190,16 @@ clusterName - 根据名称查询 cluster
     }
 
     /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public DescribeNodeGroupsRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set name - 节点组名称，模糊匹配，支持单个      
 id - 节点组 id，支持多个     
 clusterId - 根据clusterId查询        
@@ -189,6 +223,18 @@ clusterName - 根据名称查询 cluster
         return this;
     }
 
+
+    /**
+     * add item to Tag筛选条件
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
     /**
      * add item to name - 节点组名称，模糊匹配，支持单个      

@@ -42,6 +42,11 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
     private String deviceType;
 
     /**
+     * 操作系统类型，取值范围：CentOS、Ubuntu
+     */
+    private String osType;
+
+    /**
      * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
      * Required:true
      */
@@ -65,6 +70,24 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
      */
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
+    }
+
+    /**
+     * get 操作系统类型，取值范围：CentOS、Ubuntu
+     *
+     * @return
+     */
+    public String getOsType() {
+        return osType;
+    }
+
+    /**
+     * set 操作系统类型，取值范围：CentOS、Ubuntu
+     *
+     * @param osType
+     */
+    public void setOsType(String osType) {
+        this.osType = osType;
     }
 
     /**
@@ -93,6 +116,16 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
      */
     public DescribeOSRequest deviceType(String deviceType) {
         this.deviceType = deviceType;
+        return this;
+    }
+
+    /**
+     * set 操作系统类型，取值范围：CentOS、Ubuntu
+     *
+     * @param osType
+     */
+    public DescribeOSRequest osType(String osType) {
+        this.osType = osType;
         return this;
     }
 

@@ -33,38 +33,38 @@ public class IpResourceInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 公网IP
+     * 公网 IP 地址
      */
     private String ip;
 
     /**
-     * 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+     * 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
      */
     private Integer safeStatus;
 
     /**
-     * 地域，cn-north-1、cn-south-1、cn-east-1、cn-east-2
+     * 公网 IP 所属地域编码
      */
     private String region;
 
     /**
-     * 黑洞阈值，单位bps
+     * 黑洞阈值，单位 bps
      */
     private Long blackHoleThreshold;
 
     /**
-     * 触发清洗的流量速率，单位bps
+     * 触发清洗的流量速率，单位 bps
      */
     private Long cleanThresholdBps;
 
     /**
-     * 触发清洗的包速率，单位pps
+     * 触发清洗的包速率，单位 pps
      */
     private Long cleanThresholdPps;
 
 
     /**
-     * get 公网IP
+     * get 公网 IP 地址
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 公网IP
+     * set 公网 IP 地址
      *
      * @param ip
      */
@@ -82,7 +82,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+     * get 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
      *
      * @param safeStatus
      */
@@ -100,7 +100,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 地域，cn-north-1、cn-south-1、cn-east-1、cn-east-2
+     * get 公网 IP 所属地域编码
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 地域，cn-north-1、cn-south-1、cn-east-1、cn-east-2
+     * set 公网 IP 所属地域编码
      *
      * @param region
      */
@@ -118,7 +118,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 黑洞阈值，单位bps
+     * get 黑洞阈值，单位 bps
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 黑洞阈值，单位bps
+     * set 黑洞阈值，单位 bps
      *
      * @param blackHoleThreshold
      */
@@ -136,7 +136,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 触发清洗的流量速率，单位bps
+     * get 触发清洗的流量速率，单位 bps
      *
      * @return
      */
@@ -145,7 +145,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的流量速率，单位bps
+     * set 触发清洗的流量速率，单位 bps
      *
      * @param cleanThresholdBps
      */
@@ -154,7 +154,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 触发清洗的包速率，单位pps
+     * get 触发清洗的包速率，单位 pps
      *
      * @return
      */
@@ -163,7 +163,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的包速率，单位pps
+     * set 触发清洗的包速率，单位 pps
      *
      * @param cleanThresholdPps
      */
@@ -173,7 +173,7 @@ public class IpResourceInfo  implements java.io.Serializable {
 
 
     /**
-     * set 公网IP
+     * set 公网 IP 地址
      *
      * @param ip
      */
@@ -183,7 +183,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
      *
      * @param safeStatus
      */
@@ -193,7 +193,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 地域，cn-north-1、cn-south-1、cn-east-1、cn-east-2
+     * set 公网 IP 所属地域编码
      *
      * @param region
      */
@@ -203,7 +203,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 黑洞阈值，单位bps
+     * set 黑洞阈值，单位 bps
      *
      * @param blackHoleThreshold
      */
@@ -213,7 +213,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的流量速率，单位bps
+     * set 触发清洗的流量速率，单位 bps
      *
      * @param cleanThresholdBps
      */
@@ -223,7 +223,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的包速率，单位pps
+     * set 触发清洗的包速率，单位 pps
      *
      * @param cleanThresholdPps
      */

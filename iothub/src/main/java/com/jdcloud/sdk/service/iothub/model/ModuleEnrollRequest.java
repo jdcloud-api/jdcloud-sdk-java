@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ModuleManager
- * 用于完成设备全生命周期管理
+ * EdgeManager
+ * edge管理模块
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,179 +28,211 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 客户用该接口可以登记模块
-
+ * 计算模块登记
  */
 public class ModuleEnrollRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * instanceId
+     * 待添加的设备编号
      */
-    private String instanceId;
+    private String deviceId;
 
     /**
-     * modelName
+     * 边缘计算模块名称
      */
-    private String modelName;
+    private String moduleId;
 
     /**
-     * parentDeviceName
+     * 边缘计算模块类型编号
      */
-    private String parentDeviceName;
+    private String moduleTypeId;
 
     /**
-     * name
+     * 边缘计算模块配置编号
      */
-    private String name;
+    private String moduleConfId;
 
     /**
-     * moduleName 唯一标识
+     * 是否立即部署[0-立即部署,1-暂不部署]
+     */
+    private Integer isDeploy;
+
+    /**
+     * 边缘计算节点编号
      * Required:true
      */
     @Required
-    private String moduleName;
+    private String edgeId;
 
 
     /**
-     * get instanceId
+     * get 待添加的设备编号
      *
      * @return
      */
-    public String getInstanceId() {
-        return instanceId;
+    public String getDeviceId() {
+        return deviceId;
     }
 
     /**
-     * set instanceId
+     * set 待添加的设备编号
      *
-     * @param instanceId
+     * @param deviceId
      */
-    public void setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
 
     /**
-     * get modelName
-     *
-     * @return
-     */
-    public String getModelName() {
-        return modelName;
-    }
-
-    /**
-     * set modelName
-     *
-     * @param modelName
-     */
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
-    /**
-     * get parentDeviceName
+     * get 边缘计算模块名称
      *
      * @return
      */
-    public String getParentDeviceName() {
-        return parentDeviceName;
+    public String getModuleId() {
+        return moduleId;
     }
 
     /**
-     * set parentDeviceName
+     * set 边缘计算模块名称
      *
-     * @param parentDeviceName
+     * @param moduleId
      */
-    public void setParentDeviceName(String parentDeviceName) {
-        this.parentDeviceName = parentDeviceName;
+    public void setModuleId(String moduleId) {
+        this.moduleId = moduleId;
     }
 
     /**
-     * get name
-     *
-     * @return
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * set name
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * get moduleName 唯一标识
+     * get 边缘计算模块类型编号
      *
      * @return
      */
-    public String getModuleName() {
-        return moduleName;
+    public String getModuleTypeId() {
+        return moduleTypeId;
     }
 
     /**
-     * set moduleName 唯一标识
+     * set 边缘计算模块类型编号
      *
-     * @param moduleName
+     * @param moduleTypeId
      */
-    public void setModuleName(String moduleName) {
-        this.moduleName = moduleName;
+    public void setModuleTypeId(String moduleTypeId) {
+        this.moduleTypeId = moduleTypeId;
+    }
+
+    /**
+     * get 边缘计算模块配置编号
+     *
+     * @return
+     */
+    public String getModuleConfId() {
+        return moduleConfId;
+    }
+
+    /**
+     * set 边缘计算模块配置编号
+     *
+     * @param moduleConfId
+     */
+    public void setModuleConfId(String moduleConfId) {
+        this.moduleConfId = moduleConfId;
+    }
+
+    /**
+     * get 是否立即部署[0-立即部署,1-暂不部署]
+     *
+     * @return
+     */
+    public Integer getIsDeploy() {
+        return isDeploy;
+    }
+
+    /**
+     * set 是否立即部署[0-立即部署,1-暂不部署]
+     *
+     * @param isDeploy
+     */
+    public void setIsDeploy(Integer isDeploy) {
+        this.isDeploy = isDeploy;
+    }
+
+    /**
+     * get 边缘计算节点编号
+     *
+     * @return
+     */
+    public String getEdgeId() {
+        return edgeId;
+    }
+
+    /**
+     * set 边缘计算节点编号
+     *
+     * @param edgeId
+     */
+    public void setEdgeId(String edgeId) {
+        this.edgeId = edgeId;
     }
 
 
     /**
-     * set instanceId
+     * set 待添加的设备编号
      *
-     * @param instanceId
+     * @param deviceId
      */
-    public ModuleEnrollRequest instanceId(String instanceId) {
-        this.instanceId = instanceId;
+    public ModuleEnrollRequest deviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
 
     /**
-     * set modelName
+     * set 边缘计算模块名称
      *
-     * @param modelName
+     * @param moduleId
      */
-    public ModuleEnrollRequest modelName(String modelName) {
-        this.modelName = modelName;
+    public ModuleEnrollRequest moduleId(String moduleId) {
+        this.moduleId = moduleId;
         return this;
     }
 
     /**
-     * set parentDeviceName
+     * set 边缘计算模块类型编号
      *
-     * @param parentDeviceName
+     * @param moduleTypeId
      */
-    public ModuleEnrollRequest parentDeviceName(String parentDeviceName) {
-        this.parentDeviceName = parentDeviceName;
+    public ModuleEnrollRequest moduleTypeId(String moduleTypeId) {
+        this.moduleTypeId = moduleTypeId;
         return this;
     }
 
     /**
-     * set name
+     * set 边缘计算模块配置编号
      *
-     * @param name
+     * @param moduleConfId
      */
-    public ModuleEnrollRequest name(String name) {
-        this.name = name;
+    public ModuleEnrollRequest moduleConfId(String moduleConfId) {
+        this.moduleConfId = moduleConfId;
         return this;
     }
 
     /**
-     * set moduleName 唯一标识
+     * set 是否立即部署[0-立即部署,1-暂不部署]
      *
-     * @param moduleName
+     * @param isDeploy
      */
-    public ModuleEnrollRequest moduleName(String moduleName) {
-        this.moduleName = moduleName;
+    public ModuleEnrollRequest isDeploy(Integer isDeploy) {
+        this.isDeploy = isDeploy;
+        return this;
+    }
+
+    /**
+     * set 边缘计算节点编号
+     *
+     * @param edgeId
+     */
+    public ModuleEnrollRequest edgeId(String edgeId) {
+        this.edgeId = edgeId;
         return this;
     }
 

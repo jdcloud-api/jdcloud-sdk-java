@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.cps.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 
@@ -56,7 +54,7 @@ public class InstanceSpec  implements java.io.Serializable {
     private String hostname;
 
     /**
-     * 镜像类型, 取值范围：standard、standard_app
+     * 镜像类型, 取值范围：standard
      * Required:true
      */
     @Required
@@ -99,7 +97,7 @@ public class InstanceSpec  implements java.io.Serializable {
     private String enableIpv6;
 
     /**
-     * 网络类型，目前只支持basic
+     * 网络类型，取值范围：basic、vpc
      * Required:true
      */
     @Required
@@ -109,6 +107,11 @@ public class InstanceSpec  implements java.io.Serializable {
      * 网络CIDR
      */
     private String cidr;
+
+    /**
+     * 内网IP
+     */
+    private String privateIp;
 
     /**
      * 外网链路类型, 目前只支持bgp
@@ -152,11 +155,6 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     @Required
     private ChargeSpec charge;
-
-    /**
-     * softwares
-     */
-    private List<Software> softwares;
 
 
     /**
@@ -214,7 +212,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像类型, 取值范围：standard、standard_app
+     * get 镜像类型, 取值范围：standard
      *
      * @return
      */
@@ -223,7 +221,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像类型, 取值范围：standard、standard_app
+     * set 镜像类型, 取值范围：standard
      *
      * @param imageType
      */
@@ -340,7 +338,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 网络类型，目前只支持basic
+     * get 网络类型，取值范围：basic、vpc
      *
      * @return
      */
@@ -349,7 +347,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 网络类型，目前只支持basic
+     * set 网络类型，取值范围：basic、vpc
      *
      * @param networkType
      */
@@ -373,6 +371,24 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public void setCidr(String cidr) {
         this.cidr = cidr;
+    }
+
+    /**
+     * get 内网IP
+     *
+     * @return
+     */
+    public String getPrivateIp() {
+        return privateIp;
+    }
+
+    /**
+     * set 内网IP
+     *
+     * @param privateIp
+     */
+    public void setPrivateIp(String privateIp) {
+        this.privateIp = privateIp;
     }
 
     /**
@@ -501,24 +517,6 @@ public class InstanceSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
-    /**
-     * get softwares
-     *
-     * @return
-     */
-    public List<Software> getSoftwares() {
-        return softwares;
-    }
-
-    /**
-     * set softwares
-     *
-     * @param softwares
-     */
-    public void setSoftwares(List<Software> softwares) {
-        this.softwares = softwares;
-    }
-
 
     /**
      * set 可用区, 如 cn-east-1
@@ -551,7 +549,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像类型, 取值范围：standard、standard_app
+     * set 镜像类型, 取值范围：standard
      *
      * @param imageType
      */
@@ -621,7 +619,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 网络类型，目前只支持basic
+     * set 网络类型，取值范围：basic、vpc
      *
      * @param networkType
      */
@@ -637,6 +635,16 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public InstanceSpec cidr(String cidr) {
         this.cidr = cidr;
+        return this;
+    }
+
+    /**
+     * set 内网IP
+     *
+     * @param privateIp
+     */
+    public InstanceSpec privateIp(String privateIp) {
+        this.privateIp = privateIp;
         return this;
     }
 
@@ -710,27 +718,5 @@ public class InstanceSpec  implements java.io.Serializable {
         return this;
     }
 
-    /**
-     * set softwares
-     *
-     * @param softwares
-     */
-    public InstanceSpec softwares(List<Software> softwares) {
-        this.softwares = softwares;
-        return this;
-    }
-
-
-    /**
-     * add item to softwares
-     *
-     * @param software
-     */
-    public void addSoftware(Software software) {
-        if (this.softwares == null) {
-            this.softwares = new ArrayList<>();
-        }
-        this.softwares.add(software);
-    }
 
 }

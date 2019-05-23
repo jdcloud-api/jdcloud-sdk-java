@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cps.model.RestartInstanceResponse;
 
 /**
- * 重启单个云物理服务器，只能重启running状态的服务器
+ * 重启单台云物理服务器，只能重启running状态的服务器
  */
 class RestartInstanceExecutor extends JdcloudExecutor {
 

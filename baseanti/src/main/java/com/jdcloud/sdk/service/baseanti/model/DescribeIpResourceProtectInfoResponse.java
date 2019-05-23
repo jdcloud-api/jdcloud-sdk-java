@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DDoS基础防护相关接口
- * DDoS基础防护相关接口
+ * IP Resource APIs
+ * Anti DDoS Basic IP Resource APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.baseanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询公网Ip的防护明细
+ * 查询公网 IP 的攻击记录, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeattacklogs&quot;&gt;describeAttackLogs&lt;/a&gt; 接口)
+
  */
 public class DescribeIpResourceProtectInfoResponse extends JdcloudResponse<DescribeIpResourceProtectInfoResult> implements java.io.Serializable {
 

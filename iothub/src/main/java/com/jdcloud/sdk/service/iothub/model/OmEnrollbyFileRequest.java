@@ -36,12 +36,14 @@ public class OmEnrollbyFileRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * instanceId
+     * 待上传物模型的IoT Hub实例编号
+     * Required:true
      */
+    @Required
     private String instanceId;
 
     /**
-     * fileName
+     * 物模型文件名称
      * Required:true
      */
     @Required
@@ -49,7 +51,7 @@ public class OmEnrollbyFileRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get instanceId
+     * get 待上传物模型的IoT Hub实例编号
      *
      * @return
      */
@@ -58,7 +60,7 @@ public class OmEnrollbyFileRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set instanceId
+     * set 待上传物模型的IoT Hub实例编号
      *
      * @param instanceId
      */
@@ -67,7 +69,7 @@ public class OmEnrollbyFileRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get fileName
+     * get 物模型文件名称
      *
      * @return
      */
@@ -76,7 +78,7 @@ public class OmEnrollbyFileRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set fileName
+     * set 物模型文件名称
      *
      * @param fileName
      */
@@ -86,7 +88,7 @@ public class OmEnrollbyFileRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set instanceId
+     * set 待上传物模型的IoT Hub实例编号
      *
      * @param instanceId
      */
@@ -96,7 +98,7 @@ public class OmEnrollbyFileRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set fileName
+     * set 物模型文件名称
      *
      * @param fileName
      */

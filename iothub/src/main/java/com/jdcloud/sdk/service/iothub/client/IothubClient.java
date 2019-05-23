@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.iothub.model.DeployModuleRequest;
+import com.jdcloud.sdk.service.iothub.model.DeployModuleResponse;
+import com.jdcloud.sdk.service.iothub.client.DeployModuleExecutor;
 import com.jdcloud.sdk.service.iothub.model.OmEnrollRequest;
 import com.jdcloud.sdk.service.iothub.model.OmEnrollResponse;
 import com.jdcloud.sdk.service.iothub.client.OmEnrollExecutor;
@@ -52,6 +55,12 @@ import com.jdcloud.sdk.service.iothub.client.DeviceCommandExecutor;
 import com.jdcloud.sdk.service.iothub.model.ModuleStateRequest;
 import com.jdcloud.sdk.service.iothub.model.ModuleStateResponse;
 import com.jdcloud.sdk.service.iothub.client.ModuleStateExecutor;
+import com.jdcloud.sdk.service.iothub.model.CheckDeviceIdRequest;
+import com.jdcloud.sdk.service.iothub.model.CheckDeviceIdResponse;
+import com.jdcloud.sdk.service.iothub.client.CheckDeviceIdExecutor;
+import com.jdcloud.sdk.service.iothub.model.EdgeEnrollRequest;
+import com.jdcloud.sdk.service.iothub.model.EdgeEnrollResponse;
+import com.jdcloud.sdk.service.iothub.client.EdgeEnrollExecutor;
 import com.jdcloud.sdk.service.iothub.model.OmEnrollbyFileRequest;
 import com.jdcloud.sdk.service.iothub.model.OmEnrollbyFileResponse;
 import com.jdcloud.sdk.service.iothub.client.OmEnrollbyFileExecutor;
@@ -61,6 +70,12 @@ import com.jdcloud.sdk.service.iothub.client.QueryDeviceOnlineInfosExecutor;
 import com.jdcloud.sdk.service.iothub.model.QueryDeviceStatesRequest;
 import com.jdcloud.sdk.service.iothub.model.QueryDeviceStatesResponse;
 import com.jdcloud.sdk.service.iothub.client.QueryDeviceStatesExecutor;
+import com.jdcloud.sdk.service.iothub.model.ModuleEnrollmentRequest;
+import com.jdcloud.sdk.service.iothub.model.ModuleEnrollmentResponse;
+import com.jdcloud.sdk.service.iothub.client.ModuleEnrollmentExecutor;
+import com.jdcloud.sdk.service.iothub.model.DeleteEdgeRequest;
+import com.jdcloud.sdk.service.iothub.model.DeleteEdgeResponse;
+import com.jdcloud.sdk.service.iothub.client.DeleteEdgeExecutor;
 import com.jdcloud.sdk.service.iothub.model.QueryDeviceCommandsRequest;
 import com.jdcloud.sdk.service.iothub.model.QueryDeviceCommandsResponse;
 import com.jdcloud.sdk.service.iothub.client.QueryDeviceCommandsExecutor;
@@ -70,6 +85,9 @@ import com.jdcloud.sdk.service.iothub.client.GetOMPrivateURLExecutor;
 import com.jdcloud.sdk.service.iothub.model.DeviceStateRequest;
 import com.jdcloud.sdk.service.iothub.model.DeviceStateResponse;
 import com.jdcloud.sdk.service.iothub.client.DeviceStateExecutor;
+import com.jdcloud.sdk.service.iothub.model.DeleteModuleRequest;
+import com.jdcloud.sdk.service.iothub.model.DeleteModuleResponse;
+import com.jdcloud.sdk.service.iothub.client.DeleteModuleExecutor;
 
 /**
  * iothubClient
@@ -78,7 +96,7 @@ public class IothubClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.1";
     public final static String DefaultEndpoint = "iothub.jdcloud-api.com";
     public final static String ServiceName = "iothub";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -121,6 +139,17 @@ public class IothubClient extends JdcloudClient {
 
 
     /**
+     * 计算模块部署
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeployModuleResponse deployModule(DeployModuleRequest request) throws JdcloudSdkException {
+        return new DeployModuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * 物模型注册接口
 
      *
@@ -156,8 +185,7 @@ public class IothubClient extends JdcloudClient {
     }
 
     /**
-     * 客户用该接口可以登记模块
-
+     * 计算模块登记
      *
      * @param request
      * @return
@@ -204,6 +232,29 @@ public class IothubClient extends JdcloudClient {
     }
 
     /**
+     * 验证DeviceId是否可用
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CheckDeviceIdResponse checkDeviceId(CheckDeviceIdRequest request) throws JdcloudSdkException {
+        return new CheckDeviceIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加边缘计算设备
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EdgeEnrollResponse edgeEnroll(EdgeEnrollRequest request) throws JdcloudSdkException {
+        return new EdgeEnrollExecutor().client(this).execute(request);
+    }
+
+    /**
      * 物模型通过文件上传注册接口
 
      *
@@ -236,6 +287,29 @@ public class IothubClient extends JdcloudClient {
      */
     public QueryDeviceStatesResponse queryDeviceStates(QueryDeviceStatesRequest request) throws JdcloudSdkException {
         return new QueryDeviceStatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 客户用该接口可以登记模块
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModuleEnrollmentResponse moduleEnrollment(ModuleEnrollmentRequest request) throws JdcloudSdkException {
+        return new ModuleEnrollmentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 边缘计算设备删除接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteEdgeResponse deleteEdge(DeleteEdgeRequest request) throws JdcloudSdkException {
+        return new DeleteEdgeExecutor().client(this).execute(request);
     }
 
     /**
@@ -272,6 +346,17 @@ public class IothubClient extends JdcloudClient {
      */
     public DeviceStateResponse deviceState(DeviceStateRequest request) throws JdcloudSdkException {
         return new DeviceStateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 计算模块删除接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteModuleResponse deleteModule(DeleteModuleRequest request) throws JdcloudSdkException {
+        return new DeleteModuleExecutor().client(this).execute(request);
     }
 
 

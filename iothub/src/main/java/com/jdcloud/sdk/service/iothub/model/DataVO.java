@@ -78,7 +78,7 @@ public class DataVO  implements java.io.Serializable {
     private String priDomain;
 
     /**
-     * 实例状态
+     * 实例状态[0-创建中，1-运行中，2-停止]
      */
     private String status;
 
@@ -261,7 +261,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get 实例状态
+     * get 实例状态[0-创建中，1-运行中，2-停止]
      *
      * @return
      */
@@ -270,7 +270,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态
+     * set 实例状态[0-创建中，1-运行中，2-停止]
      *
      * @param status
      */
@@ -424,7 +424,7 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态
+     * set 实例状态[0-创建中，1-运行中，2-停止]
      *
      * @param status
      */
