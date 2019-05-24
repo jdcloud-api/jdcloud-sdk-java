@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DDoS基础防护相关接口
- * DDoS基础防护相关接口
+ * IP Resource APIs
+ * Anti DDoS Basic IP Resource APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,44 +28,78 @@ import com.jdcloud.sdk.service.baseanti.model.IpResourceFlow;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询公网Ip的监控流量
+ * 查询公网 IP 的 endTime 之前 15 分钟内监控流量, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipmonitorflow&quot;&gt;describeIpMonitorFlow&lt;/a&gt; 接口)
+
  */
 public class DescribeIpResourceFlowResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * data
+     * bps
      */
-    private IpResourceFlow data;
+    private IpResourceFlow bps;
+
+    /**
+     * pps
+     */
+    private IpResourceFlow pps;
 
 
     /**
-     * get data
+     * get bps
      *
      * @return
      */
-    public IpResourceFlow getData() {
-        return data;
+    public IpResourceFlow getBps() {
+        return bps;
     }
 
     /**
-     * set data
+     * set bps
      *
-     * @param data
+     * @param bps
      */
-    public void setData(IpResourceFlow data) {
-        this.data = data;
+    public void setBps(IpResourceFlow bps) {
+        this.bps = bps;
+    }
+
+    /**
+     * get pps
+     *
+     * @return
+     */
+    public IpResourceFlow getPps() {
+        return pps;
+    }
+
+    /**
+     * set pps
+     *
+     * @param pps
+     */
+    public void setPps(IpResourceFlow pps) {
+        this.pps = pps;
     }
 
 
     /**
-     * set data
+     * set bps
      *
-     * @param data
+     * @param bps
      */
-    public DescribeIpResourceFlowResult data(IpResourceFlow data) {
-        this.data = data;
+    public DescribeIpResourceFlowResult bps(IpResourceFlow bps) {
+        this.bps = bps;
+        return this;
+    }
+
+    /**
+     * set pps
+     *
+     * @param pps
+     */
+    public DescribeIpResourceFlowResult pps(IpResourceFlow pps) {
+        this.pps = pps;
         return this;
     }
 

@@ -34,54 +34,102 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.cps.model.DescribeSubnetRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeSubnetResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeSubnetExecutor;
-import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesRequest;
-import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesResponse;
-import com.jdcloud.sdk.service.cps.client.DescribeDeviceTypesExecutor;
 import com.jdcloud.sdk.service.cps.model.StopInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.StopInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.StopInstanceExecutor;
-import com.jdcloud.sdk.service.cps.model.RestartInstanceRequest;
-import com.jdcloud.sdk.service.cps.model.RestartInstanceResponse;
-import com.jdcloud.sdk.service.cps.client.RestartInstanceExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeVpcRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeVpcResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeVpcExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeSubnetsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeSubnetsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeSubnetsExecutor;
+import com.jdcloud.sdk.service.cps.model.DeleteVpcRequest;
+import com.jdcloud.sdk.service.cps.model.DeleteVpcResponse;
+import com.jdcloud.sdk.service.cps.client.DeleteVpcExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceStatusRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceStatusResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceStatusExecutor;
+import com.jdcloud.sdk.service.cps.model.ApplyElasticIpsRequest;
+import com.jdcloud.sdk.service.cps.model.ApplyElasticIpsResponse;
+import com.jdcloud.sdk.service.cps.client.ApplyElasticIpsExecutor;
 import com.jdcloud.sdk.service.cps.model.ReinstallInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.ReinstallInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.ReinstallInstanceExecutor;
-import com.jdcloud.sdk.service.cps.model.DescribeOSRequest;
-import com.jdcloud.sdk.service.cps.model.DescribeOSResponse;
-import com.jdcloud.sdk.service.cps.client.DescribeOSExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceRaidsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceRaidsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeDeviceRaidsExecutor;
+import com.jdcloud.sdk.service.cps.model.ModifyVpcRequest;
+import com.jdcloud.sdk.service.cps.model.ModifyVpcResponse;
+import com.jdcloud.sdk.service.cps.client.ModifyVpcExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceNameRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceNameResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceNameExecutor;
+import com.jdcloud.sdk.service.cps.model.ModifySubnetRequest;
+import com.jdcloud.sdk.service.cps.model.ModifySubnetResponse;
+import com.jdcloud.sdk.service.cps.client.ModifySubnetExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeVpcsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeVpcsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeVpcsExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceRaidRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceRaidResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceRaidExecutor;
-import com.jdcloud.sdk.service.cps.model.ModifyBandwidthRequest;
-import com.jdcloud.sdk.service.cps.model.ModifyBandwidthResponse;
-import com.jdcloud.sdk.service.cps.client.ModifyBandwidthExecutor;
-import com.jdcloud.sdk.service.cps.model.DescribeInstanceRequest;
-import com.jdcloud.sdk.service.cps.model.DescribeInstanceResponse;
-import com.jdcloud.sdk.service.cps.client.DescribeInstanceExecutor;
-import com.jdcloud.sdk.service.cps.model.DescribeInstancesRequest;
-import com.jdcloud.sdk.service.cps.model.DescribeInstancesResponse;
-import com.jdcloud.sdk.service.cps.client.DescribeInstancesExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeRegionesRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeRegionesResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeRegionesExecutor;
 import com.jdcloud.sdk.service.cps.model.StartInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.StartInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.StartInstanceExecutor;
-import com.jdcloud.sdk.service.cps.model.CreateInstancesRequest;
-import com.jdcloud.sdk.service.cps.model.CreateInstancesResponse;
-import com.jdcloud.sdk.service.cps.client.CreateInstancesExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyInstanceExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeDeviceTypesExecutor;
+import com.jdcloud.sdk.service.cps.model.DisassociateElasticIpRequest;
+import com.jdcloud.sdk.service.cps.model.DisassociateElasticIpResponse;
+import com.jdcloud.sdk.service.cps.client.DisassociateElasticIpExecutor;
+import com.jdcloud.sdk.service.cps.model.CreateSubnetRequest;
+import com.jdcloud.sdk.service.cps.model.CreateSubnetResponse;
+import com.jdcloud.sdk.service.cps.client.CreateSubnetExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeElasticIpRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeElasticIpResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeElasticIpExecutor;
+import com.jdcloud.sdk.service.cps.model.RestartInstanceRequest;
+import com.jdcloud.sdk.service.cps.model.RestartInstanceResponse;
+import com.jdcloud.sdk.service.cps.client.RestartInstanceExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeElasticIpsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeElasticIpsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeElasticIpsExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeOSRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeOSResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeOSExecutor;
+import com.jdcloud.sdk.service.cps.model.ModifyElasticIpBandwidthRequest;
+import com.jdcloud.sdk.service.cps.model.ModifyElasticIpBandwidthResponse;
+import com.jdcloud.sdk.service.cps.client.ModifyElasticIpBandwidthExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeInstanceRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeInstanceResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeInstanceExecutor;
+import com.jdcloud.sdk.service.cps.model.ModifyBandwidthRequest;
+import com.jdcloud.sdk.service.cps.model.ModifyBandwidthResponse;
+import com.jdcloud.sdk.service.cps.client.ModifyBandwidthExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeInstancesRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeInstancesResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeInstancesExecutor;
+import com.jdcloud.sdk.service.cps.model.CreateInstancesRequest;
+import com.jdcloud.sdk.service.cps.model.CreateInstancesResponse;
+import com.jdcloud.sdk.service.cps.client.CreateInstancesExecutor;
+import com.jdcloud.sdk.service.cps.model.CreateVpcRequest;
+import com.jdcloud.sdk.service.cps.model.CreateVpcResponse;
+import com.jdcloud.sdk.service.cps.client.CreateVpcExecutor;
+import com.jdcloud.sdk.service.cps.model.AssociateElasticIpRequest;
+import com.jdcloud.sdk.service.cps.model.AssociateElasticIpResponse;
+import com.jdcloud.sdk.service.cps.client.AssociateElasticIpExecutor;
+import com.jdcloud.sdk.service.cps.model.DeleteSubnetRequest;
+import com.jdcloud.sdk.service.cps.model.DeleteSubnetResponse;
+import com.jdcloud.sdk.service.cps.client.DeleteSubnetExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeBasicSubnetRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeBasicSubnetResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeBasicSubnetExecutor;
 
 /**
  * cpsClient
@@ -90,7 +138,7 @@ public class CpsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.1";
     public final static String DefaultEndpoint = "cps.jdcloud-api.com";
     public final static String ServiceName = "cps";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -133,7 +181,7 @@ public class CpsClient extends JdcloudClient {
 
 
     /**
-     * 查询子网
+     * 查询子网详情
      *
      * @param request
      * @return
@@ -144,18 +192,7 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询云物理服务器实例类型
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeDeviceTypesResponse describeDeviceTypes(DescribeDeviceTypesRequest request) throws JdcloudSdkException {
-        return new DescribeDeviceTypesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 对单个云物理服务器执行关机操作，只能停止running状态的服务器
+     * 对单台云物理服务器执行关机操作，只能停止running状态的服务器
      *
      * @param request
      * @return
@@ -166,14 +203,37 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 重启单个云物理服务器，只能重启running状态的服务器
+     * 查询私有网络详情
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public RestartInstanceResponse restartInstance(RestartInstanceRequest request) throws JdcloudSdkException {
-        return new RestartInstanceExecutor().client(this).execute(request);
+    public DescribeVpcResponse describeVpc(DescribeVpcRequest request) throws JdcloudSdkException {
+        return new DescribeVpcExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询子网列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSubnetsResponse describeSubnets(DescribeSubnetsRequest request) throws JdcloudSdkException {
+        return new DescribeSubnetsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除私有网络
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVpcResponse deleteVpc(DeleteVpcRequest request) throws JdcloudSdkException {
+        return new DeleteVpcExecutor().client(this).execute(request);
     }
 
     /**
@@ -185,6 +245,18 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeInstanceStatusResponse describeInstanceStatus(DescribeInstanceStatusRequest request) throws JdcloudSdkException {
         return new DescribeInstanceStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 申请弹性公网IP
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ApplyElasticIpsResponse applyElasticIps(ApplyElasticIpsRequest request) throws JdcloudSdkException {
+        return new ApplyElasticIpsExecutor().client(this).execute(request);
     }
 
     /**
@@ -201,17 +273,6 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询云物理服务器支持的操作系统
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeOSResponse describeOS(DescribeOSRequest request) throws JdcloudSdkException {
-        return new DescribeOSExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
      *
      * @param request
@@ -220,6 +281,18 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeDeviceRaidsResponse describeDeviceRaids(DescribeDeviceRaidsRequest request) throws JdcloudSdkException {
         return new DescribeDeviceRaidsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改私有网络
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyVpcResponse modifyVpc(ModifyVpcRequest request) throws JdcloudSdkException {
+        return new ModifyVpcExecutor().client(this).execute(request);
     }
 
     /**
@@ -234,6 +307,28 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 修改子网
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifySubnetResponse modifySubnet(ModifySubnetRequest request) throws JdcloudSdkException {
+        return new ModifySubnetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询私有网络列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVpcsResponse describeVpcs(DescribeVpcsRequest request) throws JdcloudSdkException {
+        return new DescribeVpcsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
      *
      * @param request
@@ -242,6 +337,142 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeInstanceRaidResponse describeInstanceRaid(DescribeInstanceRaidRequest request) throws JdcloudSdkException {
         return new DescribeInstanceRaidExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询云物理服务器地域列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRegionesResponse describeRegiones(DescribeRegionesRequest request) throws JdcloudSdkException {
+        return new DescribeRegionesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 对单台云物理服务器执行开机操作，只能启动stopped状态的服务器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartInstanceResponse startInstance(StartInstanceRequest request) throws JdcloudSdkException {
+        return new StartInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改云物理服务器部分信息，包括名称、描述
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceResponse modifyInstance(ModifyInstanceRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询云物理服务器实例类型
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDeviceTypesResponse describeDeviceTypes(DescribeDeviceTypesRequest request) throws JdcloudSdkException {
+        return new DescribeDeviceTypesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 解绑弹性公网IP
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisassociateElasticIpResponse disassociateElasticIp(DisassociateElasticIpRequest request) throws JdcloudSdkException {
+        return new DisassociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建子网
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSubnetResponse createSubnet(CreateSubnetRequest request) throws JdcloudSdkException {
+        return new CreateSubnetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询弹性公网IP详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeElasticIpResponse describeElasticIp(DescribeElasticIpRequest request) throws JdcloudSdkException {
+        return new DescribeElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重启单台云物理服务器，只能重启running状态的服务器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestartInstanceResponse restartInstance(RestartInstanceRequest request) throws JdcloudSdkException {
+        return new RestartInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询弹性公网IP列表&lt;br/&gt;
+支持分页查询，默认每页20条&lt;br/&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeElasticIpsResponse describeElasticIps(DescribeElasticIpsRequest request) throws JdcloudSdkException {
+        return new DescribeElasticIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询云物理服务器支持的操作系统
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeOSResponse describeOS(DescribeOSRequest request) throws JdcloudSdkException {
+        return new DescribeOSExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改弹性公网IP带宽
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyElasticIpBandwidthResponse modifyElasticIpBandwidth(ModifyElasticIpBandwidthRequest request) throws JdcloudSdkException {
+        return new ModifyElasticIpBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单台云物理服务器详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceResponse describeInstance(DescribeInstanceRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -259,19 +490,8 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询单台云物理服务器详细信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeInstanceResponse describeInstance(DescribeInstanceRequest request) throws JdcloudSdkException {
-        return new DescribeInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
      * 批量查询云物理服务器详细信息&lt;br/&gt;
-支持分页查询，默认每页10条&lt;br/&gt;
+支持分页查询，默认每页20条&lt;br/&gt;
 
      *
      * @param request
@@ -283,40 +503,18 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询云物理服务器地域列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeRegionesResponse describeRegiones(DescribeRegionesRequest request) throws JdcloudSdkException {
-        return new DescribeRegionesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 对单个云物理服务器执行开机操作，只能启动stopped状态的服务器
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StartInstanceResponse startInstance(StartInstanceRequest request) throws JdcloudSdkException {
-        return new StartInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建一台或多台指定配置的云物理服务器&lt;br/&gt;
 - 地域与可用区&lt;br/&gt;
   - 调用接口（describeRegiones）获取云物理服务器支持的地域与可用区&lt;br/&gt;
 - 实例类型&lt;br/&gt;
   - 调用接口（describeDeviceTypes）获取物理实例类型列表&lt;br/&gt;
   - 不能使用已下线、或已售馨的实例类型&lt;br/&gt;
-- 操作系统和预装软件&lt;br/&gt;
+- 操作系统&lt;br/&gt;
   - 可调用接口（describeOS）获取云物理服务器支持的操作系统列表&lt;br/&gt;
 - 存储&lt;br/&gt;
   - 数据盘多种RAID可选，可调用接口（describeDeviceRaids）获取服务器支持的RAID列表&lt;br/&gt;
 - 网络&lt;br/&gt;
-  - 网络类型目前只支持basic&lt;br/&gt;
+  - 网络类型目前支持basic、vpc&lt;br/&gt;
   - 线路目前只支持bgp&lt;br/&gt;
   - 支持不启用外网，如果启用外网，带宽范围[1,200] 单位Mbps&lt;br/&gt;
 - 其他&lt;br/&gt;
@@ -333,14 +531,48 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 修改云物理服务器部分信息，包括名称、描述
+     * 创建私有网络
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyInstanceResponse modifyInstance(ModifyInstanceRequest request) throws JdcloudSdkException {
-        return new ModifyInstanceExecutor().client(this).execute(request);
+    public CreateVpcResponse createVpc(CreateVpcRequest request) throws JdcloudSdkException {
+        return new CreateVpcExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 绑定弹性公网IP
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
+        return new AssociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除子网
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSubnetResponse deleteSubnet(DeleteSubnetRequest request) throws JdcloudSdkException {
+        return new DeleteSubnetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询基础网络子网
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBasicSubnetResponse describeBasicSubnet(DescribeBasicSubnetRequest request) throws JdcloudSdkException {
+        return new DescribeBasicSubnetExecutor().client(this).execute(request);
     }
 
 

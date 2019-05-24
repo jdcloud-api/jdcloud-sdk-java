@@ -24,9 +24,7 @@
 
 package com.jdcloud.sdk.service.function.model;
 
-import java.util.List;
-import java.util.ArrayList;
-import com.jdcloud.sdk.service.function.model.FunctionSpec;
+import com.jdcloud.sdk.service.function.model.ListFunctionResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,7 +37,7 @@ public class ListFunctionResult extends JdcloudResult implements java.io.Seriali
     /**
      * data
      */
-    private List<FunctionSpec> data;
+    private ListFunctionResult data;
 
 
     /**
@@ -47,7 +45,7 @@ public class ListFunctionResult extends JdcloudResult implements java.io.Seriali
      *
      * @return
      */
-    public List<FunctionSpec> getData() {
+    public ListFunctionResult getData() {
         return data;
     }
 
@@ -56,7 +54,7 @@ public class ListFunctionResult extends JdcloudResult implements java.io.Seriali
      *
      * @param data
      */
-    public void setData(List<FunctionSpec> data) {
+    public void setData(ListFunctionResult data) {
         this.data = data;
     }
 
@@ -66,22 +64,10 @@ public class ListFunctionResult extends JdcloudResult implements java.io.Seriali
      *
      * @param data
      */
-    public ListFunctionResult data(List<FunctionSpec> data) {
+    public ListFunctionResult data(ListFunctionResult data) {
         this.data = data;
         return this;
     }
 
-
-    /**
-     * add item to data
-     *
-     * @param data
-     */
-    public void addData(FunctionSpec data) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
-        }
-        this.data.add(data);
-    }
 
 }

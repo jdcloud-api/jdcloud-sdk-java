@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.cps.model.DescribeInstancesResponse;
 
 /**
  * 批量查询云物理服务器详细信息&lt;br/&gt;
-支持分页查询，默认每页10条&lt;br/&gt;
+支持分页查询，默认每页20条&lt;br/&gt;
 
  */
 class DescribeInstancesExecutor extends JdcloudExecutor {

@@ -28,18 +28,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询子网
+ * 查询子网详情
  */
 public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
-     * Required:true
-     */
-    @Required
-    private String az;
 
     /**
      * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
@@ -48,24 +41,13 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
     @Required
     private String regionId;
 
-
     /**
-     * get 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
-     *
-     * @return
+     * 子网ID
+     * Required:true
      */
-    public String getAz() {
-        return az;
-    }
+    @Required
+    private String subnetId;
 
-    /**
-     * set 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
-     *
-     * @param az
-     */
-    public void setAz(String az) {
-        this.az = az;
-    }
 
     /**
      * get 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
@@ -85,16 +67,24 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
     }
 
+    /**
+     * get 子网ID
+     *
+     * @return
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
 
     /**
-     * set 可用区, 如cn-east-1a；可调用接口（describeRegiones）获取云物理服务器在该地域支持的可用区
+     * set 子网ID
      *
-     * @param az
+     * @param subnetId
      */
-    public DescribeSubnetRequest az(String az) {
-        this.az = az;
-        return this;
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
     }
+
 
     /**
      * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
@@ -103,6 +93,16 @@ public class DescribeSubnetRequest extends JdcloudRequest implements java.io.Ser
      */
     public DescribeSubnetRequest regionId(String regionId) {
         this.regionId = regionId;
+        return this;
+    }
+
+    /**
+     * set 子网ID
+     *
+     * @param subnetId
+     */
+    public DescribeSubnetRequest subnetId(String subnetId) {
+        this.subnetId = subnetId;
         return this;
     }
 

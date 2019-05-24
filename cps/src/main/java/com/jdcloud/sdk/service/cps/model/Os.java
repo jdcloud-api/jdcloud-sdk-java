@@ -53,7 +53,7 @@ public class Os  implements java.io.Serializable {
     private String osVersion;
 
     /**
-     * 实例类型, 如 cps.c.normal,
+     * 实例类型, 如 cps.c.normal
      */
     private String deviceType;
 
@@ -131,7 +131,7 @@ public class Os  implements java.io.Serializable {
     }
 
     /**
-     * get 实例类型, 如 cps.c.normal,
+     * get 实例类型, 如 cps.c.normal
      *
      * @return
      */
@@ -140,7 +140,7 @@ public class Os  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型, 如 cps.c.normal,
+     * set 实例类型, 如 cps.c.normal
      *
      * @param deviceType
      */
@@ -190,7 +190,7 @@ public class Os  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型, 如 cps.c.normal,
+     * set 实例类型, 如 cps.c.normal
      *
      * @param deviceType
      */

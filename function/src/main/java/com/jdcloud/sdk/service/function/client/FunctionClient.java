@@ -49,9 +49,6 @@ import com.jdcloud.sdk.service.function.client.CreateVersionExecutor;
 import com.jdcloud.sdk.service.function.model.GetFunctionRequest;
 import com.jdcloud.sdk.service.function.model.GetFunctionResponse;
 import com.jdcloud.sdk.service.function.client.GetFunctionExecutor;
-import com.jdcloud.sdk.service.function.model.ListTriggerRequest;
-import com.jdcloud.sdk.service.function.model.ListTriggerResponse;
-import com.jdcloud.sdk.service.function.client.ListTriggerExecutor;
 import com.jdcloud.sdk.service.function.model.ListVersionRequest;
 import com.jdcloud.sdk.service.function.model.ListVersionResponse;
 import com.jdcloud.sdk.service.function.client.ListVersionExecutor;
@@ -93,7 +90,7 @@ public class FunctionClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.1";
     public final static String DefaultEndpoint = "function.jdcloud-api.com";
     public final static String ServiceName = "function";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -199,17 +196,6 @@ public class FunctionClient extends JdcloudClient {
      */
     public GetFunctionResponse getFunction(GetFunctionRequest request) throws JdcloudSdkException {
         return new GetFunctionExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询触发器列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListTriggerResponse listTrigger(ListTriggerRequest request) throws JdcloudSdkException {
-        return new ListTriggerExecutor().client(this).execute(request);
     }
 
     /**

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cps.model.DescribeSubnetResponse;
 
 /**
- * 查询子网
+ * 查询子网详情
  */
 class DescribeSubnetExecutor extends JdcloudExecutor {
 
@@ -40,7 +40,7 @@ class DescribeSubnetExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/subnet";
+        return "/regions/{regionId}/subnets/{subnetId}";
     }
 
     @Override

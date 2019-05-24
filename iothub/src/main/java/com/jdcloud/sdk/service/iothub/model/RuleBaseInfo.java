@@ -33,23 +33,33 @@ public class RuleBaseInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
+     * 规则Id
      */
     private String id;
 
     /**
-     * name
+     * 规则名称
      */
     private String name;
 
     /**
-     * desc
+     * 规则说明
      */
     private String desc;
 
+    /**
+     * 状态，停止:disable,启动:enable
+     */
+    private String status;
 
     /**
-     * get id
+     * 创建时间，精确到毫秒
+     */
+    private String createdTime;
+
+
+    /**
+     * get 规则Id
      *
      * @return
      */
@@ -58,7 +68,7 @@ public class RuleBaseInfo  implements java.io.Serializable {
     }
 
     /**
-     * set id
+     * set 规则Id
      *
      * @param id
      */
@@ -67,7 +77,7 @@ public class RuleBaseInfo  implements java.io.Serializable {
     }
 
     /**
-     * get name
+     * get 规则名称
      *
      * @return
      */
@@ -76,7 +86,7 @@ public class RuleBaseInfo  implements java.io.Serializable {
     }
 
     /**
-     * set name
+     * set 规则名称
      *
      * @param name
      */
@@ -85,7 +95,7 @@ public class RuleBaseInfo  implements java.io.Serializable {
     }
 
     /**
-     * get desc
+     * get 规则说明
      *
      * @return
      */
@@ -94,7 +104,7 @@ public class RuleBaseInfo  implements java.io.Serializable {
     }
 
     /**
-     * set desc
+     * set 规则说明
      *
      * @param desc
      */
@@ -102,9 +112,45 @@ public class RuleBaseInfo  implements java.io.Serializable {
         this.desc = desc;
     }
 
+    /**
+     * get 状态，停止:disable,启动:enable
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
 
     /**
-     * set id
+     * set 状态，停止:disable,启动:enable
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 创建时间，精确到毫秒
+     *
+     * @return
+     */
+    public String getCreatedTime() {
+        return createdTime;
+    }
+
+    /**
+     * set 创建时间，精确到毫秒
+     *
+     * @param createdTime
+     */
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+    }
+
+
+    /**
+     * set 规则Id
      *
      * @param id
      */
@@ -114,7 +160,7 @@ public class RuleBaseInfo  implements java.io.Serializable {
     }
 
     /**
-     * set name
+     * set 规则名称
      *
      * @param name
      */
@@ -124,12 +170,32 @@ public class RuleBaseInfo  implements java.io.Serializable {
     }
 
     /**
-     * set desc
+     * set 规则说明
      *
      * @param desc
      */
     public RuleBaseInfo desc(String desc) {
         this.desc = desc;
+        return this;
+    }
+
+    /**
+     * set 状态，停止:disable,启动:enable
+     *
+     * @param status
+     */
+    public RuleBaseInfo status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 创建时间，精确到毫秒
+     *
+     * @param createdTime
+     */
+    public RuleBaseInfo createdTime(String createdTime) {
+        this.createdTime = createdTime;
         return this;
     }
 

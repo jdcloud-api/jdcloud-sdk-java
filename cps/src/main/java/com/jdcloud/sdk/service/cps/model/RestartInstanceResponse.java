@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 重启单个云物理服务器，只能重启running状态的服务器
+ * 重启单台云物理服务器，只能重启running状态的服务器
  */
 public class RestartInstanceResponse extends JdcloudResponse<RestartInstanceResult> implements java.io.Serializable {
 

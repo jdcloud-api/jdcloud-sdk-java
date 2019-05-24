@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云DDoS基础防护相关接口
- * 京东云DDoS基础防护相关接口
+ * Anti-DDoS Basic APIs
+ * DDoS 基础防护防护 IP、攻击记录相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,21 +31,48 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.baseanti.model.SetCleanThresholdRequest;
-import com.jdcloud.sdk.service.baseanti.model.SetCleanThresholdResponse;
-import com.jdcloud.sdk.service.baseanti.client.SetCleanThresholdExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpSafetyInfoRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpSafetyInfoResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeIpSafetyInfoExecutor;
+import com.jdcloud.sdk.service.baseanti.model.SetIpCleanThresholdRequest;
+import com.jdcloud.sdk.service.baseanti.model.SetIpCleanThresholdResponse;
+import com.jdcloud.sdk.service.baseanti.client.SetIpCleanThresholdExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpMonitorFlowRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpMonitorFlowResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeIpMonitorFlowExecutor;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourcesRequest;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourcesResponse;
 import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourcesExecutor;
-import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceFlowRequest;
-import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceFlowResponse;
-import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceFlowExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeAttackStatisticsRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeAttackStatisticsResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeAttackStatisticsExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeElasticIpResourcesRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeElasticIpResourcesResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeElasticIpResourcesExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpCleanThresholdRangeRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpCleanThresholdRangeResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeIpCleanThresholdRangeExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeAttackTypeCountRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeAttackTypeCountResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeAttackTypeCountExecutor;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceProtectInfoRequest;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceProtectInfoResponse;
 import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceProtectInfoExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeCpsIpResourcesRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeCpsIpResourcesResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeCpsIpResourcesExecutor;
+import com.jdcloud.sdk.service.baseanti.model.SetCleanThresholdRequest;
+import com.jdcloud.sdk.service.baseanti.model.SetCleanThresholdResponse;
+import com.jdcloud.sdk.service.baseanti.client.SetCleanThresholdExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceFlowRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceFlowResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceFlowExecutor;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceInfoRequest;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpResourceInfoResponse;
 import com.jdcloud.sdk.service.baseanti.client.DescribeIpResourceInfoExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeAttackLogsRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeAttackLogsResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeAttackLogsExecutor;
 
 /**
  * baseantiClient
@@ -54,7 +81,7 @@ public class BaseantiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.1";
     public final static String DefaultEndpoint = "baseanti.jdcloud-api.com";
     public final static String ServiceName = "baseanti";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -97,18 +124,41 @@ public class BaseantiClient extends JdcloudClient {
 
 
     /**
-     * 设置公网Ip的清洗阈值
+     * 查询基础防护已防护公网 IP 安全信息, 支持 ipv4 和 ipv6
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetCleanThresholdResponse setCleanThreshold(SetCleanThresholdRequest request) throws JdcloudSdkException {
-        return new SetCleanThresholdExecutor().client(this).execute(request);
+    public DescribeIpSafetyInfoResponse describeIpSafetyInfo(DescribeIpSafetyInfoRequest request) throws JdcloudSdkException {
+        return new DescribeIpSafetyInfoExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询区域下的公网Ip资源列表
+     * 设置基础防护已防护公网 IP 的清洗阈值, 支持 ipv4 和 ipv6
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetIpCleanThresholdResponse setIpCleanThreshold(SetIpCleanThresholdRequest request) throws JdcloudSdkException {
+        return new SetIpCleanThresholdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询多个公网 IP 的监控流量, 支持 ipv4 和 ipv6
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpMonitorFlowResponse describeIpMonitorFlow(DescribeIpMonitorFlowRequest request) throws JdcloudSdkException {
+        return new DescribeIpMonitorFlowExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
+
      *
      * @param request
      * @return
@@ -119,18 +169,53 @@ public class BaseantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询公网Ip的监控流量
+     * 攻击情况统计
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeIpResourceFlowResponse describeIpResourceFlow(DescribeIpResourceFlowRequest request) throws JdcloudSdkException {
-        return new DescribeIpResourceFlowExecutor().client(this).execute(request);
+    public DescribeAttackStatisticsResponse describeAttackStatistics(DescribeAttackStatisticsRequest request) throws JdcloudSdkException {
+        return new DescribeAttackStatisticsExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询公网Ip的防护明细
+     * 查询私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeElasticIpResourcesResponse describeElasticIpResources(DescribeElasticIpResourcesRequest request) throws JdcloudSdkException {
+        return new DescribeElasticIpResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询公网 IP 可设置清洗阈值范围, 支持 ipv4 和 ipv6
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpCleanThresholdRangeResponse describeIpCleanThresholdRange(DescribeIpCleanThresholdRangeRequest request) throws JdcloudSdkException {
+        return new DescribeIpCleanThresholdRangeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询各类型攻击次数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAttackTypeCountResponse describeAttackTypeCount(DescribeAttackTypeCountRequest request) throws JdcloudSdkException {
+        return new DescribeAttackTypeCountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询公网 IP 的攻击记录, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeattacklogs&quot;&gt;describeAttackLogs&lt;/a&gt; 接口)
+
      *
      * @param request
      * @return
@@ -141,7 +226,44 @@ public class BaseantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询公网Ip基本信息
+     * 查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCpsIpResourcesResponse describeCpsIpResources(DescribeCpsIpResourcesRequest request) throws JdcloudSdkException {
+        return new DescribeCpsIpResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetCleanThresholdResponse setCleanThreshold(SetCleanThresholdRequest request) throws JdcloudSdkException {
+        return new SetCleanThresholdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询公网 IP 的 endTime 之前 15 分钟内监控流量, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipmonitorflow&quot;&gt;describeIpMonitorFlow&lt;/a&gt; 接口)
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpResourceFlowResponse describeIpResourceFlow(DescribeIpResourceFlowRequest request) throws JdcloudSdkException {
+        return new DescribeIpResourceFlowExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+
      *
      * @param request
      * @return
@@ -149,6 +271,17 @@ public class BaseantiClient extends JdcloudClient {
      */
     public DescribeIpResourceInfoResponse describeIpResourceInfo(DescribeIpResourceInfoRequest request) throws JdcloudSdkException {
         return new DescribeIpResourceInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询攻击记录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAttackLogsResponse describeAttackLogs(DescribeAttackLogsRequest request) throws JdcloudSdkException {
+        return new DescribeAttackLogsExecutor().client(this).execute(request);
     }
 
 

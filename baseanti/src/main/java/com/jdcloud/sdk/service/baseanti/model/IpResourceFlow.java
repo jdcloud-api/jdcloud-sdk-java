@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.baseanti.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * ipResourceFlow
@@ -33,72 +35,174 @@ public class IpResourceFlow  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * bps
+     * UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      */
-    private IpResourceFlowDetail bps;
+    private List<String> time;
 
     /**
-     * pps
+     * 防护后流量
      */
-    private IpResourceFlowDetail pps;
+    private List<Double> postProtect;
+
+    /**
+     * 防护前流量
+     */
+    private List<Double> preProtect;
+
+    /**
+     * 流量单位
+     */
+    private String unit;
 
 
     /**
-     * get bps
+     * get UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @return
      */
-    public IpResourceFlowDetail getBps() {
-        return bps;
+    public List<String> getTime() {
+        return time;
     }
 
     /**
-     * set bps
+     * set UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
-     * @param bps
+     * @param time
      */
-    public void setBps(IpResourceFlowDetail bps) {
-        this.bps = bps;
+    public void setTime(List<String> time) {
+        this.time = time;
     }
 
     /**
-     * get pps
+     * get 防护后流量
      *
      * @return
      */
-    public IpResourceFlowDetail getPps() {
-        return pps;
+    public List<Double> getPostProtect() {
+        return postProtect;
     }
 
     /**
-     * set pps
+     * set 防护后流量
      *
-     * @param pps
+     * @param postProtect
      */
-    public void setPps(IpResourceFlowDetail pps) {
-        this.pps = pps;
+    public void setPostProtect(List<Double> postProtect) {
+        this.postProtect = postProtect;
+    }
+
+    /**
+     * get 防护前流量
+     *
+     * @return
+     */
+    public List<Double> getPreProtect() {
+        return preProtect;
+    }
+
+    /**
+     * set 防护前流量
+     *
+     * @param preProtect
+     */
+    public void setPreProtect(List<Double> preProtect) {
+        this.preProtect = preProtect;
+    }
+
+    /**
+     * get 流量单位
+     *
+     * @return
+     */
+    public String getUnit() {
+        return unit;
+    }
+
+    /**
+     * set 流量单位
+     *
+     * @param unit
+     */
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
 
     /**
-     * set bps
+     * set UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
-     * @param bps
+     * @param time
      */
-    public IpResourceFlow bps(IpResourceFlowDetail bps) {
-        this.bps = bps;
+    public IpResourceFlow time(List<String> time) {
+        this.time = time;
         return this;
     }
 
     /**
-     * set pps
+     * set 防护后流量
      *
-     * @param pps
+     * @param postProtect
      */
-    public IpResourceFlow pps(IpResourceFlowDetail pps) {
-        this.pps = pps;
+    public IpResourceFlow postProtect(List<Double> postProtect) {
+        this.postProtect = postProtect;
         return this;
     }
 
+    /**
+     * set 防护前流量
+     *
+     * @param preProtect
+     */
+    public IpResourceFlow preProtect(List<Double> preProtect) {
+        this.preProtect = preProtect;
+        return this;
+    }
+
+    /**
+     * set 流量单位
+     *
+     * @param unit
+     */
+    public IpResourceFlow unit(String unit) {
+        this.unit = unit;
+        return this;
+    }
+
+
+    /**
+     * add item to UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     *
+     * @param time
+     */
+    public void addTime(String time) {
+        if (this.time == null) {
+            this.time = new ArrayList<>();
+        }
+        this.time.add(time);
+    }
+
+    /**
+     * add item to 防护后流量
+     *
+     * @param postProtect
+     */
+    public void addPostProtect(Double postProtect) {
+        if (this.postProtect == null) {
+            this.postProtect = new ArrayList<>();
+        }
+        this.postProtect.add(postProtect);
+    }
+
+    /**
+     * add item to 防护前流量
+     *
+     * @param preProtect
+     */
+    public void addPreProtect(Double preProtect) {
+        if (this.preProtect == null) {
+            this.preProtect = new ArrayList<>();
+        }
+        this.preProtect.add(preProtect);
+    }
 
 }

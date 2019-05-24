@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ModuleManager
- * 用于完成设备全生命周期管理
+ * EdgeManager
+ * edge管理模块
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,8 +27,7 @@ package com.jdcloud.sdk.service.iothub.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 客户用该接口可以登记模块
-
+ * 计算模块登记
  */
 public class ModuleEnrollResponse extends JdcloudResponse<ModuleEnrollResult> implements java.io.Serializable {
 

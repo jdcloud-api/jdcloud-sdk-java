@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.kubernetes.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 描述节点组配置信息
@@ -91,6 +93,11 @@ public class NodeGroup  implements java.io.Serializable {
      * 状态  [pending,running,resizing,reconciling,deleting,deleted,error,running_with_error(部分节点有问题)]
      */
     private String state;
+
+    /**
+     * tags
+     */
+    private List<Tag> tags;
 
     /**
      * 更新时间
@@ -330,6 +337,24 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
+     * get tags
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+    /**
      * get 更新时间
      *
      * @return
@@ -523,6 +548,16 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
+     * set tags
+     *
+     * @param tags
+     */
+    public NodeGroup tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set 更新时间
      *
      * @param updateTime
@@ -562,5 +597,17 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to tags
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
 }

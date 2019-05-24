@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 对单个云物理服务器执行关机操作，只能停止running状态的服务器
+ * 对单台云物理服务器执行关机操作，只能停止running状态的服务器
  */
 public class StopInstanceResult extends JdcloudResult implements java.io.Serializable {
 

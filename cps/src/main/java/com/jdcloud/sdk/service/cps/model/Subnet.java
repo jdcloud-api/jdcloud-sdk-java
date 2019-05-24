@@ -43,19 +43,54 @@ public class Subnet  implements java.io.Serializable {
     private String az;
 
     /**
-     * 子网CIDR
-     */
-    private String cidr;
-
-    /**
      * 子网ID
      */
     private String subnetId;
 
     /**
+     * 子网名称
+     */
+    private String name;
+
+    /**
+     * 子网CIDR
+     */
+    private String cidr;
+
+    /**
+     * 私有网络Id
+     */
+    private String vpcId;
+
+    /**
+     * 私有网络名称
+     */
+    private String vpcName;
+
+    /**
+     * 可用ip数量
+     */
+    private Integer availableIpCount;
+
+    /**
+     * 总ip数量
+     */
+    private Integer totalIpCount;
+
+    /**
      * 网络类型
      */
     private String networkType;
+
+    /**
+     * 描述
+     */
+    private String description;
+
+    /**
+     * 创建时间
+     */
+    private String createTime;
 
 
     /**
@@ -95,24 +130,6 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * get 子网CIDR
-     *
-     * @return
-     */
-    public String getCidr() {
-        return cidr;
-    }
-
-    /**
-     * set 子网CIDR
-     *
-     * @param cidr
-     */
-    public void setCidr(String cidr) {
-        this.cidr = cidr;
-    }
-
-    /**
      * get 子网ID
      *
      * @return
@@ -131,6 +148,114 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
+     * get 子网名称
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 子网名称
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * get 子网CIDR
+     *
+     * @return
+     */
+    public String getCidr() {
+        return cidr;
+    }
+
+    /**
+     * set 子网CIDR
+     *
+     * @param cidr
+     */
+    public void setCidr(String cidr) {
+        this.cidr = cidr;
+    }
+
+    /**
+     * get 私有网络Id
+     *
+     * @return
+     */
+    public String getVpcId() {
+        return vpcId;
+    }
+
+    /**
+     * set 私有网络Id
+     *
+     * @param vpcId
+     */
+    public void setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+    }
+
+    /**
+     * get 私有网络名称
+     *
+     * @return
+     */
+    public String getVpcName() {
+        return vpcName;
+    }
+
+    /**
+     * set 私有网络名称
+     *
+     * @param vpcName
+     */
+    public void setVpcName(String vpcName) {
+        this.vpcName = vpcName;
+    }
+
+    /**
+     * get 可用ip数量
+     *
+     * @return
+     */
+    public Integer getAvailableIpCount() {
+        return availableIpCount;
+    }
+
+    /**
+     * set 可用ip数量
+     *
+     * @param availableIpCount
+     */
+    public void setAvailableIpCount(Integer availableIpCount) {
+        this.availableIpCount = availableIpCount;
+    }
+
+    /**
+     * get 总ip数量
+     *
+     * @return
+     */
+    public Integer getTotalIpCount() {
+        return totalIpCount;
+    }
+
+    /**
+     * set 总ip数量
+     *
+     * @param totalIpCount
+     */
+    public void setTotalIpCount(Integer totalIpCount) {
+        this.totalIpCount = totalIpCount;
+    }
+
+    /**
      * get 网络类型
      *
      * @return
@@ -146,6 +271,42 @@ public class Subnet  implements java.io.Serializable {
      */
     public void setNetworkType(String networkType) {
         this.networkType = networkType;
+    }
+
+    /**
+     * get 描述
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 描述
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
     }
 
 
@@ -170,16 +331,6 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 子网CIDR
-     *
-     * @param cidr
-     */
-    public Subnet cidr(String cidr) {
-        this.cidr = cidr;
-        return this;
-    }
-
-    /**
      * set 子网ID
      *
      * @param subnetId
@@ -190,12 +341,92 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
+     * set 子网名称
+     *
+     * @param name
+     */
+    public Subnet name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * set 子网CIDR
+     *
+     * @param cidr
+     */
+    public Subnet cidr(String cidr) {
+        this.cidr = cidr;
+        return this;
+    }
+
+    /**
+     * set 私有网络Id
+     *
+     * @param vpcId
+     */
+    public Subnet vpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+
+    /**
+     * set 私有网络名称
+     *
+     * @param vpcName
+     */
+    public Subnet vpcName(String vpcName) {
+        this.vpcName = vpcName;
+        return this;
+    }
+
+    /**
+     * set 可用ip数量
+     *
+     * @param availableIpCount
+     */
+    public Subnet availableIpCount(Integer availableIpCount) {
+        this.availableIpCount = availableIpCount;
+        return this;
+    }
+
+    /**
+     * set 总ip数量
+     *
+     * @param totalIpCount
+     */
+    public Subnet totalIpCount(Integer totalIpCount) {
+        this.totalIpCount = totalIpCount;
+        return this;
+    }
+
+    /**
      * set 网络类型
      *
      * @param networkType
      */
     public Subnet networkType(String networkType) {
         this.networkType = networkType;
+        return this;
+    }
+
+    /**
+     * set 描述
+     *
+     * @param description
+     */
+    public Subnet description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public Subnet createTime(String createTime) {
+        this.createTime = createTime;
         return this;
     }
 

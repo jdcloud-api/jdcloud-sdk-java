@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 批量查询云物理服务器详细信息&lt;br/&gt;
-支持分页查询，默认每页10条&lt;br/&gt;
+支持分页查询，默认每页20条&lt;br/&gt;
 
  */
 public class DescribeInstancesResult extends JdcloudResult implements java.io.Serializable {
@@ -49,7 +49,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小；默认为20；取值范围[20, 100]
      */
     private Integer pageSize;
 
@@ -96,7 +96,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小；默认为20；取值范围[20, 100]
      *
      * @return
      */
@@ -105,7 +105,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小；默认为20；取值范围[20, 100]
      *
      * @param pageSize
      */
@@ -153,7 +153,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小；默认为20；取值范围[20, 100]
      *
      * @param pageSize
      */

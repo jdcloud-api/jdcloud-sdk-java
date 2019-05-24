@@ -32,7 +32,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 批量查询云物理服务器详细信息&lt;br/&gt;
-支持分页查询，默认每页10条&lt;br/&gt;
+支持分页查询，默认每页20条&lt;br/&gt;
 
  */
 public class DescribeInstancesRequest extends JdcloudRequest implements java.io.Serializable {
@@ -45,7 +45,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 分页大小；默认为20；取值范围[20, 100]
      */
     private Integer pageSize;
 
@@ -60,7 +60,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String name;
 
     /**
-     * 网络类型，精确匹配，目前只支持basic
+     * 网络类型，精确匹配，支持basic，vpc
      */
     private String networkType;
 
@@ -70,12 +70,19 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String deviceType;
 
     /**
-     * 云物理服务器状态，参考云物理服务器状态
+     * 子网ID
      */
-    private String status;
+    private String subnetId;
 
     /**
-     * instanceId - 云物理服务器ID，精确匹配，支持多个
+     * 是否启用外网, yes/no
+     */
+    private String enableInternet;
+
+    /**
+     * instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
+privateIp - 云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
+status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个
 
      */
     private List<Filter> filters;
@@ -107,7 +114,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 分页大小；默认为20；取值范围[20, 100]
      *
      * @return
      */
@@ -116,7 +123,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小；默认为20；取值范围[20, 100]
      *
      * @param pageSize
      */
@@ -161,7 +168,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 网络类型，精确匹配，目前只支持basic
+     * get 网络类型，精确匹配，支持basic，vpc
      *
      * @return
      */
@@ -170,7 +177,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 网络类型，精确匹配，目前只支持basic
+     * set 网络类型，精确匹配，支持basic，vpc
      *
      * @param networkType
      */
@@ -197,25 +204,45 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 云物理服务器状态，参考云物理服务器状态
+     * get 子网ID
      *
      * @return
      */
-    public String getStatus() {
-        return status;
+    public String getSubnetId() {
+        return subnetId;
     }
 
     /**
-     * set 云物理服务器状态，参考云物理服务器状态
+     * set 子网ID
      *
-     * @param status
+     * @param subnetId
      */
-    public void setStatus(String status) {
-        this.status = status;
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
     }
 
     /**
-     * get instanceId - 云物理服务器ID，精确匹配，支持多个
+     * get 是否启用外网, yes/no
+     *
+     * @return
+     */
+    public String getEnableInternet() {
+        return enableInternet;
+    }
+
+    /**
+     * set 是否启用外网, yes/no
+     *
+     * @param enableInternet
+     */
+    public void setEnableInternet(String enableInternet) {
+        this.enableInternet = enableInternet;
+    }
+
+    /**
+     * get instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
+privateIp - 云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
+status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个
 
      *
      * @return
@@ -225,7 +252,9 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set instanceId - 云物理服务器ID，精确匹配，支持多个
+     * set instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
+privateIp - 云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
+status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个
 
      *
      * @param filters
@@ -264,7 +293,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 分页大小；默认为20；取值范围[20, 100]
      *
      * @param pageSize
      */
@@ -294,7 +323,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 网络类型，精确匹配，目前只支持basic
+     * set 网络类型，精确匹配，支持basic，vpc
      *
      * @param networkType
      */
@@ -314,17 +343,29 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 云物理服务器状态，参考云物理服务器状态
+     * set 子网ID
      *
-     * @param status
+     * @param subnetId
      */
-    public DescribeInstancesRequest status(String status) {
-        this.status = status;
+    public DescribeInstancesRequest subnetId(String subnetId) {
+        this.subnetId = subnetId;
         return this;
     }
 
     /**
-     * set instanceId - 云物理服务器ID，精确匹配，支持多个
+     * set 是否启用外网, yes/no
+     *
+     * @param enableInternet
+     */
+    public DescribeInstancesRequest enableInternet(String enableInternet) {
+        this.enableInternet = enableInternet;
+        return this;
+    }
+
+    /**
+     * set instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
+privateIp - 云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
+status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个
 
      *
      * @param filters
@@ -346,7 +387,9 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * add item to instanceId - 云物理服务器ID，精确匹配，支持多个
+     * add item to instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
+privateIp - 云物理服务器内网IP，精确匹配，支持多个&lt;br/&gt;
+status - 云物理服务器状态，参考云物理服务器状态，精确匹配，支持多个
 
      *
      * @param filter

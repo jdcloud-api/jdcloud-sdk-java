@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.cps.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -88,11 +86,6 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
      * 主机名
      */
     private String hostname;
-
-    /**
-     * softwares
-     */
-    private List<Software> softwares;
 
 
     /**
@@ -239,24 +232,6 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
         this.hostname = hostname;
     }
 
-    /**
-     * get softwares
-     *
-     * @return
-     */
-    public List<Software> getSoftwares() {
-        return softwares;
-    }
-
-    /**
-     * set softwares
-     *
-     * @param softwares
-     */
-    public void setSoftwares(List<Software> softwares) {
-        this.softwares = softwares;
-    }
-
 
     /**
      * set 可用区, 如cn-east-1a
@@ -338,27 +313,5 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
-    /**
-     * set softwares
-     *
-     * @param softwares
-     */
-    public ReinstallInstanceSpec softwares(List<Software> softwares) {
-        this.softwares = softwares;
-        return this;
-    }
-
-
-    /**
-     * add item to softwares
-     *
-     * @param software
-     */
-    public void addSoftware(Software software) {
-        if (this.softwares == null) {
-            this.softwares = new ArrayList<>();
-        }
-        this.softwares.add(software);
-    }
 
 }

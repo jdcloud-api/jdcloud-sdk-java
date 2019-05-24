@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.baseanti.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * cleanThresholdSpec
@@ -33,18 +34,25 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 触发清洗的流量速率，单位bps，范围是10000000到300000000
+     * 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
+
+     * Required:true
      */
+    @Required
     private Long cleanThresholdBps;
 
     /**
-     * 触发清洗的包速率，单位pps，范围是2000到70000
+     * 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
+
+     * Required:true
      */
+    @Required
     private Long cleanThresholdPps;
 
 
     /**
-     * get 触发清洗的流量速率，单位bps，范围是10000000到300000000
+     * get 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
+
      *
      * @return
      */
@@ -53,7 +61,8 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的流量速率，单位bps，范围是10000000到300000000
+     * set 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
+
      *
      * @param cleanThresholdBps
      */
@@ -62,7 +71,8 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 触发清洗的包速率，单位pps，范围是2000到70000
+     * get 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
+
      *
      * @return
      */
@@ -71,7 +81,8 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的包速率，单位pps，范围是2000到70000
+     * set 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
+
      *
      * @param cleanThresholdPps
      */
@@ -81,7 +92,8 @@ public class CleanThresholdSpec  implements java.io.Serializable {
 
 
     /**
-     * set 触发清洗的流量速率，单位bps，范围是10000000到300000000
+     * set 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
+
      *
      * @param cleanThresholdBps
      */
@@ -91,7 +103,8 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的包速率，单位pps，范围是2000到70000
+     * set 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
+
      *
      * @param cleanThresholdPps
      */

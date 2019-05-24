@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DDoS基础防护相关接口
- * DDoS基础防护相关接口
+ * IP Resource APIs
+ * Anti DDoS Basic IP Resource APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,28 +29,33 @@ import com.jdcloud.sdk.service.baseanti.model.CleanThresholdSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置公网Ip的清洗阈值
+ * 设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+
  */
 public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * cc参数
+     * 请求参数
      * Required:true
      */
     @Required
     private CleanThresholdSpec cleanThresholdSpec;
 
     /**
-     * Region ID
+     * 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
+
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 公网ip
+     * 基础防护已防护的公网 IP, 仅支持 ipv4 格式
+- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt; 接口查询基础防护已防护的私有网络弹性公网 IP
+- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口查询基础防护已防护的云物理服务器公网IP 和 弹性公网 IP
+
      * Required:true
      */
     @Required
@@ -58,7 +63,7 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get cc参数
+     * get 请求参数
      *
      * @return
      */
@@ -67,7 +72,7 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set cc参数
+     * set 请求参数
      *
      * @param cleanThresholdSpec
      */
@@ -76,7 +81,8 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get Region ID
+     * get 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
+
      *
      * @return
      */
@@ -85,7 +91,8 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Region ID
+     * set 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
+
      *
      * @param regionId
      */
@@ -94,7 +101,10 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 公网ip
+     * get 基础防护已防护的公网 IP, 仅支持 ipv4 格式
+- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt; 接口查询基础防护已防护的私有网络弹性公网 IP
+- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口查询基础防护已防护的云物理服务器公网IP 和 弹性公网 IP
+
      *
      * @return
      */
@@ -103,7 +113,10 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 公网ip
+     * set 基础防护已防护的公网 IP, 仅支持 ipv4 格式
+- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt; 接口查询基础防护已防护的私有网络弹性公网 IP
+- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口查询基础防护已防护的云物理服务器公网IP 和 弹性公网 IP
+
      *
      * @param ip
      */
@@ -113,7 +126,7 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set cc参数
+     * set 请求参数
      *
      * @param cleanThresholdSpec
      */
@@ -123,7 +136,8 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Region ID
+     * set 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
+
      *
      * @param regionId
      */
@@ -133,7 +147,10 @@ public class SetCleanThresholdRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 公网ip
+     * set 基础防护已防护的公网 IP, 仅支持 ipv4 格式
+- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt; 接口查询基础防护已防护的私有网络弹性公网 IP
+- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口查询基础防护已防护的云物理服务器公网IP 和 弹性公网 IP
+
      *
      * @param ip
      */

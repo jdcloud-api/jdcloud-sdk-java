@@ -24,9 +24,9 @@
 
 package com.jdcloud.sdk.service.function.model;
 
-import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.function.model.Code;
 import com.jdcloud.sdk.service.function.model.Env;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -38,9 +38,7 @@ public class CreateFunctionRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * 函数名称
-     * Required:true
      */
-    @Required
     private String name;
 
     /**
@@ -50,30 +48,22 @@ public class CreateFunctionRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * 函数入口，格式为入口文件.入口函数名
-     * Required:true
      */
-    @Required
     private String entrance;
 
     /**
      * 函数运行最大内存
-     * Required:true
      */
-    @Required
     private Integer memory;
 
     /**
      * 函数运行环境
-     * Required:true
      */
-    @Required
     private String runTime;
 
     /**
      * 函数运行超时时间
-     * Required:true
      */
-    @Required
     private Integer overTime;
 
     /**
@@ -83,9 +73,7 @@ public class CreateFunctionRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * 函数代码包
-     * Required:true
      */
-    @Required
     private Code code;
 
     /**

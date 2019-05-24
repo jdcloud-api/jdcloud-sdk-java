@@ -33,23 +33,126 @@ public class IpResource  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 公网IP
+     * 公网 IP 所在区域编码
+     */
+    private String region;
+
+    /**
+     * 公网 IP 类型或绑定资源类型:
+  0: 未知类型,
+  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
+  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
+  11: 云主机,
+  12: 负载均衡,
+  13: 原生容器实例,
+  14: 原生容器 Pod,
+  2: 云物理服务器,
+
+     */
+    private Integer resourceType;
+
+    /**
+     * 公网 IP 地址
      */
     private String ip;
 
     /**
-     * 带宽上限，单位Mbps
+     * 带宽上限, 单位 Mbps
      */
-    private Integer bandwidth;
+    private Long bandwidth;
 
     /**
-     * 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+     * 每秒请求流量
+     */
+    private Long cleanThresholdBps;
+
+    /**
+     * 每秒报文请求数
+     */
+    private Long cleanThresholdPps;
+
+    /**
+     * 黑洞阈值
+     */
+    private Long blackHoleThreshold;
+
+    /**
+     * 绑定防护包 ID, 为 0 时表示未绑定防护包
+     */
+    private Long instanceId;
+
+    /**
+     * 绑定防护包名称, 为空字符串时表示未绑定防护包
+     */
+    private String instanceName;
+
+    /**
+     * 套餐类型, 1: 独享 IP, 2: 共享 IP, 为 0 时未绑定防护包
+     */
+    private Integer instanceType;
+
+    /**
+     * 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
      */
     private Integer safeStatus;
 
 
     /**
-     * get 公网IP
+     * get 公网 IP 所在区域编码
+     *
+     * @return
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * set 公网 IP 所在区域编码
+     *
+     * @param region
+     */
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    /**
+     * get 公网 IP 类型或绑定资源类型:
+  0: 未知类型,
+  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
+  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
+  11: 云主机,
+  12: 负载均衡,
+  13: 原生容器实例,
+  14: 原生容器 Pod,
+  2: 云物理服务器,
+
+     *
+     * @return
+     */
+    public Integer getResourceType() {
+        return resourceType;
+    }
+
+    /**
+     * set 公网 IP 类型或绑定资源类型:
+  0: 未知类型,
+  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
+  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
+  11: 云主机,
+  12: 负载均衡,
+  13: 原生容器实例,
+  14: 原生容器 Pod,
+  2: 云物理服务器,
+
+     *
+     * @param resourceType
+     */
+    public void setResourceType(Integer resourceType) {
+        this.resourceType = resourceType;
+    }
+
+    /**
+     * get 公网 IP 地址
      *
      * @return
      */
@@ -58,7 +161,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 公网IP
+     * set 公网 IP 地址
      *
      * @param ip
      */
@@ -67,25 +170,133 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * get 带宽上限，单位Mbps
+     * get 带宽上限, 单位 Mbps
      *
      * @return
      */
-    public Integer getBandwidth() {
+    public Long getBandwidth() {
         return bandwidth;
     }
 
     /**
-     * set 带宽上限，单位Mbps
+     * set 带宽上限, 单位 Mbps
      *
      * @param bandwidth
      */
-    public void setBandwidth(Integer bandwidth) {
+    public void setBandwidth(Long bandwidth) {
         this.bandwidth = bandwidth;
     }
 
     /**
-     * get 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+     * get 每秒请求流量
+     *
+     * @return
+     */
+    public Long getCleanThresholdBps() {
+        return cleanThresholdBps;
+    }
+
+    /**
+     * set 每秒请求流量
+     *
+     * @param cleanThresholdBps
+     */
+    public void setCleanThresholdBps(Long cleanThresholdBps) {
+        this.cleanThresholdBps = cleanThresholdBps;
+    }
+
+    /**
+     * get 每秒报文请求数
+     *
+     * @return
+     */
+    public Long getCleanThresholdPps() {
+        return cleanThresholdPps;
+    }
+
+    /**
+     * set 每秒报文请求数
+     *
+     * @param cleanThresholdPps
+     */
+    public void setCleanThresholdPps(Long cleanThresholdPps) {
+        this.cleanThresholdPps = cleanThresholdPps;
+    }
+
+    /**
+     * get 黑洞阈值
+     *
+     * @return
+     */
+    public Long getBlackHoleThreshold() {
+        return blackHoleThreshold;
+    }
+
+    /**
+     * set 黑洞阈值
+     *
+     * @param blackHoleThreshold
+     */
+    public void setBlackHoleThreshold(Long blackHoleThreshold) {
+        this.blackHoleThreshold = blackHoleThreshold;
+    }
+
+    /**
+     * get 绑定防护包 ID, 为 0 时表示未绑定防护包
+     *
+     * @return
+     */
+    public Long getInstanceId() {
+        return instanceId;
+    }
+
+    /**
+     * set 绑定防护包 ID, 为 0 时表示未绑定防护包
+     *
+     * @param instanceId
+     */
+    public void setInstanceId(Long instanceId) {
+        this.instanceId = instanceId;
+    }
+
+    /**
+     * get 绑定防护包名称, 为空字符串时表示未绑定防护包
+     *
+     * @return
+     */
+    public String getInstanceName() {
+        return instanceName;
+    }
+
+    /**
+     * set 绑定防护包名称, 为空字符串时表示未绑定防护包
+     *
+     * @param instanceName
+     */
+    public void setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+    }
+
+    /**
+     * get 套餐类型, 1: 独享 IP, 2: 共享 IP, 为 0 时未绑定防护包
+     *
+     * @return
+     */
+    public Integer getInstanceType() {
+        return instanceType;
+    }
+
+    /**
+     * set 套餐类型, 1: 独享 IP, 2: 共享 IP, 为 0 时未绑定防护包
+     *
+     * @param instanceType
+     */
+    public void setInstanceType(Integer instanceType) {
+        this.instanceType = instanceType;
+    }
+
+    /**
+     * get 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
      *
      * @return
      */
@@ -94,7 +305,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
      *
      * @param safeStatus
      */
@@ -104,7 +315,36 @@ public class IpResource  implements java.io.Serializable {
 
 
     /**
-     * set 公网IP
+     * set 公网 IP 所在区域编码
+     *
+     * @param region
+     */
+    public IpResource region(String region) {
+        this.region = region;
+        return this;
+    }
+
+    /**
+     * set 公网 IP 类型或绑定资源类型:
+  0: 未知类型,
+  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
+  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
+  11: 云主机,
+  12: 负载均衡,
+  13: 原生容器实例,
+  14: 原生容器 Pod,
+  2: 云物理服务器,
+
+     *
+     * @param resourceType
+     */
+    public IpResource resourceType(Integer resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+
+    /**
+     * set 公网 IP 地址
      *
      * @param ip
      */
@@ -114,17 +354,77 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 带宽上限，单位Mbps
+     * set 带宽上限, 单位 Mbps
      *
      * @param bandwidth
      */
-    public IpResource bandwidth(Integer bandwidth) {
+    public IpResource bandwidth(Long bandwidth) {
         this.bandwidth = bandwidth;
         return this;
     }
 
     /**
-     * set 0-&gt;安全 1-&gt;清洗 2-&gt;黑洞
+     * set 每秒请求流量
+     *
+     * @param cleanThresholdBps
+     */
+    public IpResource cleanThresholdBps(Long cleanThresholdBps) {
+        this.cleanThresholdBps = cleanThresholdBps;
+        return this;
+    }
+
+    /**
+     * set 每秒报文请求数
+     *
+     * @param cleanThresholdPps
+     */
+    public IpResource cleanThresholdPps(Long cleanThresholdPps) {
+        this.cleanThresholdPps = cleanThresholdPps;
+        return this;
+    }
+
+    /**
+     * set 黑洞阈值
+     *
+     * @param blackHoleThreshold
+     */
+    public IpResource blackHoleThreshold(Long blackHoleThreshold) {
+        this.blackHoleThreshold = blackHoleThreshold;
+        return this;
+    }
+
+    /**
+     * set 绑定防护包 ID, 为 0 时表示未绑定防护包
+     *
+     * @param instanceId
+     */
+    public IpResource instanceId(Long instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 绑定防护包名称, 为空字符串时表示未绑定防护包
+     *
+     * @param instanceName
+     */
+    public IpResource instanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+
+    /**
+     * set 套餐类型, 1: 独享 IP, 2: 共享 IP, 为 0 时未绑定防护包
+     *
+     * @param instanceType
+     */
+    public IpResource instanceType(Integer instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+
+    /**
+     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
      *
      * @param safeStatus
      */

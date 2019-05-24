@@ -84,7 +84,7 @@ public class Instance  implements java.io.Serializable {
     private Integer bandwidth;
 
     /**
-     * 镜像类型, 如 standard/standard_app
+     * 镜像类型, 如 standard
      */
     private String imageType;
 
@@ -129,14 +129,19 @@ public class Instance  implements java.io.Serializable {
     private String dataRaidType;
 
     /**
-     * 网络类型, 如 basic
+     * 网络类型, 如 basic, vpc
      */
     private String networkType;
 
     /**
-     * 外网链路类型, 如 bgp
+     * 私有网络ID
      */
-    private String lineType;
+    private String vpcId;
+
+    /**
+     * 私有网络名称
+     */
+    private String vpcName;
 
     /**
      * 子网编号
@@ -144,9 +149,24 @@ public class Instance  implements java.io.Serializable {
     private String subnetId;
 
     /**
+     * 子网名称
+     */
+    private String subnetName;
+
+    /**
      * 内网IP
      */
     private String privateIp;
+
+    /**
+     * 外网链路类型, 如 bgp
+     */
+    private String lineType;
+
+    /**
+     * 弹性公网IPID
+     */
+    private String elasticIpId;
 
     /**
      * 公网IP
@@ -345,7 +365,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像类型, 如 standard/standard_app
+     * get 镜像类型, 如 standard
      *
      * @return
      */
@@ -354,7 +374,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像类型, 如 standard/standard_app
+     * set 镜像类型, 如 standard
      *
      * @param imageType
      */
@@ -507,7 +527,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 网络类型, 如 basic
+     * get 网络类型, 如 basic, vpc
      *
      * @return
      */
@@ -516,7 +536,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 网络类型, 如 basic
+     * set 网络类型, 如 basic, vpc
      *
      * @param networkType
      */
@@ -525,21 +545,39 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 外网链路类型, 如 bgp
+     * get 私有网络ID
      *
      * @return
      */
-    public String getLineType() {
-        return lineType;
+    public String getVpcId() {
+        return vpcId;
     }
 
     /**
-     * set 外网链路类型, 如 bgp
+     * set 私有网络ID
      *
-     * @param lineType
+     * @param vpcId
      */
-    public void setLineType(String lineType) {
-        this.lineType = lineType;
+    public void setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+    }
+
+    /**
+     * get 私有网络名称
+     *
+     * @return
+     */
+    public String getVpcName() {
+        return vpcName;
+    }
+
+    /**
+     * set 私有网络名称
+     *
+     * @param vpcName
+     */
+    public void setVpcName(String vpcName) {
+        this.vpcName = vpcName;
     }
 
     /**
@@ -561,6 +599,24 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 子网名称
+     *
+     * @return
+     */
+    public String getSubnetName() {
+        return subnetName;
+    }
+
+    /**
+     * set 子网名称
+     *
+     * @param subnetName
+     */
+    public void setSubnetName(String subnetName) {
+        this.subnetName = subnetName;
+    }
+
+    /**
      * get 内网IP
      *
      * @return
@@ -576,6 +632,42 @@ public class Instance  implements java.io.Serializable {
      */
     public void setPrivateIp(String privateIp) {
         this.privateIp = privateIp;
+    }
+
+    /**
+     * get 外网链路类型, 如 bgp
+     *
+     * @return
+     */
+    public String getLineType() {
+        return lineType;
+    }
+
+    /**
+     * set 外网链路类型, 如 bgp
+     *
+     * @param lineType
+     */
+    public void setLineType(String lineType) {
+        this.lineType = lineType;
+    }
+
+    /**
+     * get 弹性公网IPID
+     *
+     * @return
+     */
+    public String getElasticIpId() {
+        return elasticIpId;
+    }
+
+    /**
+     * set 弹性公网IPID
+     *
+     * @param elasticIpId
+     */
+    public void setElasticIpId(String elasticIpId) {
+        this.elasticIpId = elasticIpId;
     }
 
     /**
@@ -734,7 +826,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像类型, 如 standard/standard_app
+     * set 镜像类型, 如 standard
      *
      * @param imageType
      */
@@ -824,7 +916,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 网络类型, 如 basic
+     * set 网络类型, 如 basic, vpc
      *
      * @param networkType
      */
@@ -834,12 +926,22 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 外网链路类型, 如 bgp
+     * set 私有网络ID
      *
-     * @param lineType
+     * @param vpcId
      */
-    public Instance lineType(String lineType) {
-        this.lineType = lineType;
+    public Instance vpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+
+    /**
+     * set 私有网络名称
+     *
+     * @param vpcName
+     */
+    public Instance vpcName(String vpcName) {
+        this.vpcName = vpcName;
         return this;
     }
 
@@ -854,12 +956,42 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * set 子网名称
+     *
+     * @param subnetName
+     */
+    public Instance subnetName(String subnetName) {
+        this.subnetName = subnetName;
+        return this;
+    }
+
+    /**
      * set 内网IP
      *
      * @param privateIp
      */
     public Instance privateIp(String privateIp) {
         this.privateIp = privateIp;
+        return this;
+    }
+
+    /**
+     * set 外网链路类型, 如 bgp
+     *
+     * @param lineType
+     */
+    public Instance lineType(String lineType) {
+        this.lineType = lineType;
+        return this;
+    }
+
+    /**
+     * set 弹性公网IPID
+     *
+     * @param elasticIpId
+     */
+    public Instance elasticIpId(String elasticIpId) {
+        this.elasticIpId = elasticIpId;
         return this;
     }
 

@@ -31,12 +31,18 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.elite.model.JdxQueryPriceRequest;
+import com.jdcloud.sdk.service.elite.model.JdxQueryPriceResponse;
+import com.jdcloud.sdk.service.elite.client.JdxQueryPriceExecutor;
 import com.jdcloud.sdk.service.elite.model.ListSaleServiceRequest;
 import com.jdcloud.sdk.service.elite.model.ListSaleServiceResponse;
 import com.jdcloud.sdk.service.elite.client.ListSaleServiceExecutor;
 import com.jdcloud.sdk.service.elite.model.GetStoreServiceRequest;
 import com.jdcloud.sdk.service.elite.model.GetStoreServiceResponse;
 import com.jdcloud.sdk.service.elite.client.GetStoreServiceExecutor;
+import com.jdcloud.sdk.service.elite.model.JdxReportOrderRequest;
+import com.jdcloud.sdk.service.elite.model.JdxReportOrderResponse;
+import com.jdcloud.sdk.service.elite.client.JdxReportOrderExecutor;
 import com.jdcloud.sdk.service.elite.model.ConfirmSaleServiceDeliveryRequest;
 import com.jdcloud.sdk.service.elite.model.ConfirmSaleServiceDeliveryResponse;
 import com.jdcloud.sdk.service.elite.client.ConfirmSaleServiceDeliveryExecutor;
@@ -51,7 +57,7 @@ public class EliteClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.1.1";
     public final static String DefaultEndpoint = "elite.cn-south-1.jdcloud-api.com";
     public final static String ServiceName = "elite";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -94,6 +100,17 @@ public class EliteClient extends JdcloudClient {
 
 
     /**
+     * 查询价格
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JdxQueryPriceResponse jdxQueryPrice(JdxQueryPriceRequest request) throws JdcloudSdkException {
+        return new JdxQueryPriceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 分页查询交付单信息
      *
      * @param request
@@ -113,6 +130,17 @@ public class EliteClient extends JdcloudClient {
      */
     public GetStoreServiceResponse getStoreService(GetStoreServiceRequest request) throws JdcloudSdkException {
         return new GetStoreServiceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 上报订单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JdxReportOrderResponse jdxReportOrder(JdxReportOrderRequest request) throws JdcloudSdkException {
+        return new JdxReportOrderExecutor().client(this).execute(request);
     }
 
     /**

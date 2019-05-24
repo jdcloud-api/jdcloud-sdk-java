@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * DDoS基础防护相关接口
- * DDoS基础防护相关接口
+ * IP Resource APIs
+ * Anti DDoS Basic IP Resource APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.baseanti.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 设置公网Ip的清洗阈值
+ * 设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+
  */
 public class SetCleanThresholdResult extends JdcloudResult implements java.io.Serializable {
 
