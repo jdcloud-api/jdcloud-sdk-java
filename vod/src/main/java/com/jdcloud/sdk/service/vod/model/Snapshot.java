@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Video Transcode Template Management
- * 水印管理
+ * Video Management
+ * 视频资源管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,26 +26,21 @@ package com.jdcloud.sdk.service.vod.model;
 
 
 /**
- * 视频参数
+ * snapshot
  */
-public class Video  implements java.io.Serializable {
+public class Snapshot  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 视频编码
+     * 截图ID
      */
-    private String codec;
+    private Long imgId;
 
     /**
-     * 码率
+     * 截图URL
      */
-    private Integer bitrate;
-
-    /**
-     * 帧率
-     */
-    private Integer fps;
+    private String imgUrl;
 
     /**
      * 宽度
@@ -59,57 +54,39 @@ public class Video  implements java.io.Serializable {
 
 
     /**
-     * get 视频编码
+     * get 截图ID
      *
      * @return
      */
-    public String getCodec() {
-        return codec;
+    public Long getImgId() {
+        return imgId;
     }
 
     /**
-     * set 视频编码
+     * set 截图ID
      *
-     * @param codec
+     * @param imgId
      */
-    public void setCodec(String codec) {
-        this.codec = codec;
+    public void setImgId(Long imgId) {
+        this.imgId = imgId;
     }
 
     /**
-     * get 码率
-     *
-     * @return
-     */
-    public Integer getBitrate() {
-        return bitrate;
-    }
-
-    /**
-     * set 码率
-     *
-     * @param bitrate
-     */
-    public void setBitrate(Integer bitrate) {
-        this.bitrate = bitrate;
-    }
-
-    /**
-     * get 帧率
+     * get 截图URL
      *
      * @return
      */
-    public Integer getFps() {
-        return fps;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
     /**
-     * set 帧率
+     * set 截图URL
      *
-     * @param fps
+     * @param imgUrl
      */
-    public void setFps(Integer fps) {
-        this.fps = fps;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 
     /**
@@ -150,32 +127,22 @@ public class Video  implements java.io.Serializable {
 
 
     /**
-     * set 视频编码
+     * set 截图ID
      *
-     * @param codec
+     * @param imgId
      */
-    public Video codec(String codec) {
-        this.codec = codec;
+    public Snapshot imgId(Long imgId) {
+        this.imgId = imgId;
         return this;
     }
 
     /**
-     * set 码率
+     * set 截图URL
      *
-     * @param bitrate
+     * @param imgUrl
      */
-    public Video bitrate(Integer bitrate) {
-        this.bitrate = bitrate;
-        return this;
-    }
-
-    /**
-     * set 帧率
-     *
-     * @param fps
-     */
-    public Video fps(Integer fps) {
-        this.fps = fps;
+    public Snapshot imgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
         return this;
     }
 
@@ -184,7 +151,7 @@ public class Video  implements java.io.Serializable {
      *
      * @param width
      */
-    public Video width(Integer width) {
+    public Snapshot width(Integer width) {
         this.width = width;
         return this;
     }
@@ -194,7 +161,7 @@ public class Video  implements java.io.Serializable {
      *
      * @param height
      */
-    public Video height(Integer height) {
+    public Snapshot height(Integer height) {
         this.height = height;
         return this;
     }

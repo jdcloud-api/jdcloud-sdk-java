@@ -26,14 +26,14 @@ package com.jdcloud.sdk.service.vod.model;
 
 
 /**
- * 视频参数
+ * 音频参数
  */
-public class Video  implements java.io.Serializable {
+public class Audio  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 视频编码
+     * 音频编码
      */
     private String codec;
 
@@ -43,23 +43,18 @@ public class Video  implements java.io.Serializable {
     private Integer bitrate;
 
     /**
-     * 帧率
+     * 采样率
      */
-    private Integer fps;
+    private Integer sampleRate;
 
     /**
-     * 宽度
+     * 声道数
      */
-    private Integer width;
-
-    /**
-     * 高度
-     */
-    private Integer height;
+    private Integer channels;
 
 
     /**
-     * get 视频编码
+     * get 音频编码
      *
      * @return
      */
@@ -68,7 +63,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 视频编码
+     * set 音频编码
      *
      * @param codec
      */
@@ -95,66 +90,48 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * get 帧率
+     * get 采样率
      *
      * @return
      */
-    public Integer getFps() {
-        return fps;
+    public Integer getSampleRate() {
+        return sampleRate;
     }
 
     /**
-     * set 帧率
+     * set 采样率
      *
-     * @param fps
+     * @param sampleRate
      */
-    public void setFps(Integer fps) {
-        this.fps = fps;
+    public void setSampleRate(Integer sampleRate) {
+        this.sampleRate = sampleRate;
     }
 
     /**
-     * get 宽度
-     *
-     * @return
-     */
-    public Integer getWidth() {
-        return width;
-    }
-
-    /**
-     * set 宽度
-     *
-     * @param width
-     */
-    public void setWidth(Integer width) {
-        this.width = width;
-    }
-
-    /**
-     * get 高度
+     * get 声道数
      *
      * @return
      */
-    public Integer getHeight() {
-        return height;
+    public Integer getChannels() {
+        return channels;
     }
 
     /**
-     * set 高度
+     * set 声道数
      *
-     * @param height
+     * @param channels
      */
-    public void setHeight(Integer height) {
-        this.height = height;
+    public void setChannels(Integer channels) {
+        this.channels = channels;
     }
 
 
     /**
-     * set 视频编码
+     * set 音频编码
      *
      * @param codec
      */
-    public Video codec(String codec) {
+    public Audio codec(String codec) {
         this.codec = codec;
         return this;
     }
@@ -164,38 +141,28 @@ public class Video  implements java.io.Serializable {
      *
      * @param bitrate
      */
-    public Video bitrate(Integer bitrate) {
+    public Audio bitrate(Integer bitrate) {
         this.bitrate = bitrate;
         return this;
     }
 
     /**
-     * set 帧率
+     * set 采样率
      *
-     * @param fps
+     * @param sampleRate
      */
-    public Video fps(Integer fps) {
-        this.fps = fps;
+    public Audio sampleRate(Integer sampleRate) {
+        this.sampleRate = sampleRate;
         return this;
     }
 
     /**
-     * set 宽度
+     * set 声道数
      *
-     * @param width
+     * @param channels
      */
-    public Video width(Integer width) {
-        this.width = width;
-        return this;
-    }
-
-    /**
-     * set 高度
-     *
-     * @param height
-     */
-    public Video height(Integer height) {
-        this.height = height;
+    public Audio channels(Integer channels) {
+        this.channels = channels;
         return this;
     }
 
