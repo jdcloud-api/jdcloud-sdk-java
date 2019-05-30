@@ -19,7 +19,7 @@
 <dependency>
 	<groupId>com.jdcloud.sdk</groupId>
 	<artifactId>vm</artifactId>
-	<version>0.6.1</version>
+	<version>1.0.8</version>
 </dependency>
 ```
  
