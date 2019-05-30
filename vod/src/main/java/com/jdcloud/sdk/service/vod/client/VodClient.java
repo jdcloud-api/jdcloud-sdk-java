@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.vod.client.DeleteTranscodeTemplateExecutor;
 import com.jdcloud.sdk.service.vod.model.GetVideoPlayInfoRequest;
 import com.jdcloud.sdk.service.vod.model.GetVideoPlayInfoResponse;
 import com.jdcloud.sdk.service.vod.client.GetVideoPlayInfoExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteHeaderRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteHeaderResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteHeaderExecutor;
 import com.jdcloud.sdk.service.vod.model.UpdateWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.UpdateWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.UpdateWatermarkExecutor;
@@ -61,6 +64,9 @@ import com.jdcloud.sdk.service.vod.client.GetRefererRuleExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteDomainRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteDomainResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteDomainExecutor;
+import com.jdcloud.sdk.service.vod.model.ListHeadersRequest;
+import com.jdcloud.sdk.service.vod.model.ListHeadersResponse;
+import com.jdcloud.sdk.service.vod.client.ListHeadersExecutor;
 import com.jdcloud.sdk.service.vod.model.SetURLRuleRequest;
 import com.jdcloud.sdk.service.vod.model.SetURLRuleResponse;
 import com.jdcloud.sdk.service.vod.client.SetURLRuleExecutor;
@@ -85,6 +91,9 @@ import com.jdcloud.sdk.service.vod.client.CreateDomainExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteWatermarkExecutor;
+import com.jdcloud.sdk.service.vod.model.SetHeaderRequest;
+import com.jdcloud.sdk.service.vod.model.SetHeaderResponse;
+import com.jdcloud.sdk.service.vod.client.SetHeaderExecutor;
 import com.jdcloud.sdk.service.vod.model.SubmitTranscodeJobRequest;
 import com.jdcloud.sdk.service.vod.model.SubmitTranscodeJobResponse;
 import com.jdcloud.sdk.service.vod.client.SubmitTranscodeJobExecutor;
@@ -227,6 +236,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 删除域名访问头参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteHeaderResponse deleteHeader(DeleteHeaderRequest request) throws JdcloudSdkException {
+        return new DeleteHeaderExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改水印
      *
      * @param request
@@ -315,6 +335,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 查询域名访问头参数列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListHeadersResponse listHeaders(ListHeadersRequest request) throws JdcloudSdkException {
+        return new ListHeadersExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置CDN域名URL规则
      *
      * @param request
@@ -400,6 +431,17 @@ public class VodClient extends JdcloudClient {
      */
     public DeleteWatermarkResponse deleteWatermark(DeleteWatermarkRequest request) throws JdcloudSdkException {
         return new DeleteWatermarkExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置域名访问头参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetHeaderResponse setHeader(SetHeaderRequest request) throws JdcloudSdkException {
+        return new SetHeaderExecutor().client(this).execute(request);
     }
 
     /**

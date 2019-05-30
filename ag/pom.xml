@@ -4,10 +4,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
-  <artifactId>iothub</artifactId>
-  <version>0.6.6</version>
+  <artifactId>ag</artifactId>
+  <version>0.4.0</version>
   <packaging>jar</packaging>
-  <name>iothub</name>
+  <name>ag</name>
   <url>http://www.jdcloud.com</url>
   <description>JDCLOUD Open API SDK for Java</description>
 

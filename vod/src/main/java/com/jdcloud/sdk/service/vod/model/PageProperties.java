@@ -45,12 +45,12 @@ public class PageProperties  implements java.io.Serializable {
     /**
      * 查询总数
      */
-    private Integer total;
+    private Integer totalElements;
 
     /**
      * 总页数
      */
-    private Integer pages;
+    private Integer totalPages;
 
 
     /**
@@ -94,17 +94,17 @@ public class PageProperties  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getTotal() {
-        return total;
+    public Integer getTotalElements() {
+        return totalElements;
     }
 
     /**
      * set 查询总数
      *
-     * @param total
+     * @param totalElements
      */
-    public void setTotal(Integer total) {
-        this.total = total;
+    public void setTotalElements(Integer totalElements) {
+        this.totalElements = totalElements;
     }
 
     /**
@@ -112,17 +112,17 @@ public class PageProperties  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getPages() {
-        return pages;
+    public Integer getTotalPages() {
+        return totalPages;
     }
 
     /**
      * set 总页数
      *
-     * @param pages
+     * @param totalPages
      */
-    public void setPages(Integer pages) {
-        this.pages = pages;
+    public void setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
     }
 
 
@@ -149,20 +149,20 @@ public class PageProperties  implements java.io.Serializable {
     /**
      * set 查询总数
      *
-     * @param total
+     * @param totalElements
      */
-    public PageProperties total(Integer total) {
-        this.total = total;
+    public PageProperties totalElements(Integer totalElements) {
+        this.totalElements = totalElements;
         return this;
     }
 
     /**
      * set 总页数
      *
-     * @param pages
+     * @param totalPages
      */
-    public PageProperties pages(Integer pages) {
-        this.pages = pages;
+    public PageProperties totalPages(Integer totalPages) {
+        this.totalPages = totalPages;
         return this;
     }
 

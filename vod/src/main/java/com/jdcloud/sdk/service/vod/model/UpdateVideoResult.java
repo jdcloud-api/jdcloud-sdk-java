@@ -24,7 +24,9 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
-import com.jdcloud.sdk.service.vod.model.UpdateVideoResp;
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.vod.model.Snapshot;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,39 +37,492 @@ public class UpdateVideoResult extends JdcloudResult implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * updateVideoResp
+     * 视频ID
      */
-    private UpdateVideoResp updateVideoResp;
+    private String id;
+
+    /**
+     * 视频名称
+     */
+    private String name;
+
+    /**
+     * 视频描述
+     */
+    private String description;
+
+    /**
+     * 封面图地址
+     */
+    private String coverUrl;
+
+    /**
+     * 视频状态
+     */
+    private String status;
+
+    /**
+     * 文件大小，单位字节
+     */
+    private Long fileSize;
+
+    /**
+     * 文件校验和
+     */
+    private String checksum;
+
+    /**
+     * 视频时长
+     */
+    private Long duration;
+
+    /**
+     * 标签
+     */
+    private List<String> tags;
+
+    /**
+     * 分类ID
+     */
+    private Long categoryId;
+
+    /**
+     * 分类名称
+     */
+    private String categoryName;
+
+    /**
+     * snapshots
+     */
+    private List<Snapshot> snapshots;
+
+    /**
+     * createTime
+     */
+    private String createTime;
+
+    /**
+     * updateTime
+     */
+    private String updateTime;
 
 
     /**
-     * get updateVideoResp
+     * get 视频ID
      *
      * @return
      */
-    public UpdateVideoResp getUpdateVideoResp() {
-        return updateVideoResp;
+    public String getId() {
+        return id;
     }
 
     /**
-     * set updateVideoResp
+     * set 视频ID
      *
-     * @param updateVideoResp
+     * @param id
      */
-    public void setUpdateVideoResp(UpdateVideoResp updateVideoResp) {
-        this.updateVideoResp = updateVideoResp;
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * get 视频名称
+     *
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * set 视频名称
+     *
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * get 视频描述
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 视频描述
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * get 封面图地址
+     *
+     * @return
+     */
+    public String getCoverUrl() {
+        return coverUrl;
+    }
+
+    /**
+     * set 封面图地址
+     *
+     * @param coverUrl
+     */
+    public void setCoverUrl(String coverUrl) {
+        this.coverUrl = coverUrl;
+    }
+
+    /**
+     * get 视频状态
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 视频状态
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 文件大小，单位字节
+     *
+     * @return
+     */
+    public Long getFileSize() {
+        return fileSize;
+    }
+
+    /**
+     * set 文件大小，单位字节
+     *
+     * @param fileSize
+     */
+    public void setFileSize(Long fileSize) {
+        this.fileSize = fileSize;
+    }
+
+    /**
+     * get 文件校验和
+     *
+     * @return
+     */
+    public String getChecksum() {
+        return checksum;
+    }
+
+    /**
+     * set 文件校验和
+     *
+     * @param checksum
+     */
+    public void setChecksum(String checksum) {
+        this.checksum = checksum;
+    }
+
+    /**
+     * get 视频时长
+     *
+     * @return
+     */
+    public Long getDuration() {
+        return duration;
+    }
+
+    /**
+     * set 视频时长
+     *
+     * @param duration
+     */
+    public void setDuration(Long duration) {
+        this.duration = duration;
+    }
+
+    /**
+     * get 标签
+     *
+     * @return
+     */
+    public List<String> getTags() {
+        return tags;
+    }
+
+    /**
+     * set 标签
+     *
+     * @param tags
+     */
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * get 分类ID
+     *
+     * @return
+     */
+    public Long getCategoryId() {
+        return categoryId;
+    }
+
+    /**
+     * set 分类ID
+     *
+     * @param categoryId
+     */
+    public void setCategoryId(Long categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    /**
+     * get 分类名称
+     *
+     * @return
+     */
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    /**
+     * set 分类名称
+     *
+     * @param categoryName
+     */
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
+
+    /**
+     * get snapshots
+     *
+     * @return
+     */
+    public List<Snapshot> getSnapshots() {
+        return snapshots;
+    }
+
+    /**
+     * set snapshots
+     *
+     * @param snapshots
+     */
+    public void setSnapshots(List<Snapshot> snapshots) {
+        this.snapshots = snapshots;
+    }
+
+    /**
+     * get createTime
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set createTime
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * get updateTime
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set updateTime
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 
 
     /**
-     * set updateVideoResp
+     * set 视频ID
      *
-     * @param updateVideoResp
+     * @param id
      */
-    public UpdateVideoResult updateVideoResp(UpdateVideoResp updateVideoResp) {
-        this.updateVideoResp = updateVideoResp;
+    public UpdateVideoResult id(String id) {
+        this.id = id;
         return this;
     }
 
+    /**
+     * set 视频名称
+     *
+     * @param name
+     */
+    public UpdateVideoResult name(String name) {
+        this.name = name;
+        return this;
+    }
+
+    /**
+     * set 视频描述
+     *
+     * @param description
+     */
+    public UpdateVideoResult description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * set 封面图地址
+     *
+     * @param coverUrl
+     */
+    public UpdateVideoResult coverUrl(String coverUrl) {
+        this.coverUrl = coverUrl;
+        return this;
+    }
+
+    /**
+     * set 视频状态
+     *
+     * @param status
+     */
+    public UpdateVideoResult status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 文件大小，单位字节
+     *
+     * @param fileSize
+     */
+    public UpdateVideoResult fileSize(Long fileSize) {
+        this.fileSize = fileSize;
+        return this;
+    }
+
+    /**
+     * set 文件校验和
+     *
+     * @param checksum
+     */
+    public UpdateVideoResult checksum(String checksum) {
+        this.checksum = checksum;
+        return this;
+    }
+
+    /**
+     * set 视频时长
+     *
+     * @param duration
+     */
+    public UpdateVideoResult duration(Long duration) {
+        this.duration = duration;
+        return this;
+    }
+
+    /**
+     * set 标签
+     *
+     * @param tags
+     */
+    public UpdateVideoResult tags(List<String> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 分类ID
+     *
+     * @param categoryId
+     */
+    public UpdateVideoResult categoryId(Long categoryId) {
+        this.categoryId = categoryId;
+        return this;
+    }
+
+    /**
+     * set 分类名称
+     *
+     * @param categoryName
+     */
+    public UpdateVideoResult categoryName(String categoryName) {
+        this.categoryName = categoryName;
+        return this;
+    }
+
+    /**
+     * set snapshots
+     *
+     * @param snapshots
+     */
+    public UpdateVideoResult snapshots(List<Snapshot> snapshots) {
+        this.snapshots = snapshots;
+        return this;
+    }
+
+    /**
+     * set createTime
+     *
+     * @param createTime
+     */
+    public UpdateVideoResult createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set updateTime
+     *
+     * @param updateTime
+     */
+    public UpdateVideoResult updateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+
+
+    /**
+     * add item to 标签
+     *
+     * @param tag
+     */
+    public void addTag(String tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
+
+    /**
+     * add item to snapshots
+     *
+     * @param snapshot
+     */
+    public void addSnapshot(Snapshot snapshot) {
+        if (this.snapshots == null) {
+            this.snapshots = new ArrayList<>();
+        }
+        this.snapshots.add(snapshot);
+    }
 
 }
