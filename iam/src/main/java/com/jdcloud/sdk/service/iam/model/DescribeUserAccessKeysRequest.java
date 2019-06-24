@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询AccessKey列表
+ * 查询主账号AccessKey列表
  */
 public class DescribeUserAccessKeysRequest extends JdcloudRequest implements java.io.Serializable {
 

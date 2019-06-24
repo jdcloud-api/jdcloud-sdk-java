@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.iam.model.UserAccessKey;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询AccessKey列表
+ * 查询主账号AccessKey列表
  */
 public class DescribeUserAccessKeysResult extends JdcloudResult implements java.io.Serializable {
 

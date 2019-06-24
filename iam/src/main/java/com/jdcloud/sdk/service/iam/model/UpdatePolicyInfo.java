@@ -34,7 +34,7 @@ public class UpdatePolicyInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 策略信息详情，最多2048个字符
+     * 策略信息详情，最多6144个字符
      * Required:true
      */
     @Required
@@ -42,7 +42,7 @@ public class UpdatePolicyInfo  implements java.io.Serializable {
 
 
     /**
-     * get 策略信息详情，最多2048个字符
+     * get 策略信息详情，最多6144个字符
      *
      * @return
      */
@@ -51,7 +51,7 @@ public class UpdatePolicyInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 策略信息详情，最多2048个字符
+     * set 策略信息详情，最多6144个字符
      *
      * @param content
      */
@@ -61,7 +61,7 @@ public class UpdatePolicyInfo  implements java.io.Serializable {
 
 
     /**
-     * set 策略信息详情，最多2048个字符
+     * set 策略信息详情，最多6144个字符
      *
      * @param content
      */

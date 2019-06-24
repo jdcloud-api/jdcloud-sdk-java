@@ -34,12 +34,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 角色路径
-     */
-    private String path;
-
-    /**
-     * 角色名：支持4-64位的字母，数字以及-和_, 以字母开头
+     * 角色名，支持4~64位的字母，数字以及-和_, 以字母开头
      * Required:true
      */
     @Required
@@ -71,25 +66,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
 
 
     /**
-     * get 角色路径
-     *
-     * @return
-     */
-    public String getPath() {
-        return path;
-    }
-
-    /**
-     * set 角色路径
-     *
-     * @param path
-     */
-    public void setPath(String path) {
-        this.path = path;
-    }
-
-    /**
-     * get 角色名：支持4-64位的字母，数字以及-和_, 以字母开头
+     * get 角色名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
      * @return
      */
@@ -98,7 +75,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 角色名：支持4-64位的字母，数字以及-和_, 以字母开头
+     * set 角色名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
      * @param roleName
      */
@@ -180,17 +157,7 @@ public class CreateRoleInfo  implements java.io.Serializable {
 
 
     /**
-     * set 角色路径
-     *
-     * @param path
-     */
-    public CreateRoleInfo path(String path) {
-        this.path = path;
-        return this;
-    }
-
-    /**
-     * set 角色名：支持4-64位的字母，数字以及-和_, 以字母开头
+     * set 角色名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
      * @param roleName
      */

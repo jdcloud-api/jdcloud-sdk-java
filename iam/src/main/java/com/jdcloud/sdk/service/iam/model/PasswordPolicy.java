@@ -34,35 +34,35 @@ public class PasswordPolicy  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 密码长度，6-20之间
+     * 密码长度，6~20位，默认8位
      * Required:true
      */
     @Required
     private Integer length;
 
     /**
-     * 密码有效期，0-1095之间
+     * 密码有效期（天），0~1095，0表示永不过期
      * Required:true
      */
     @Required
     private Integer age;
 
     /**
-     * 过期重置类型：0-主账号重置，1-子账号重置
+     * 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
      * Required:true
      */
     @Required
     private Integer expirationOperation;
 
     /**
-     * 历史密码检查次数,0-10之间
+     * 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
      * Required:true
      */
     @Required
     private Integer reusePrevention;
 
     /**
-     * 密码重试次数,1-16之间
+     * 1小时内使用错误密码最多(1~16)次
      * Required:true
      */
     @Required
@@ -84,7 +84,7 @@ public class PasswordPolicy  implements java.io.Serializable {
 
 
     /**
-     * get 密码长度，6-20之间
+     * get 密码长度，6~20位，默认8位
      *
      * @return
      */
@@ -93,7 +93,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 密码长度，6-20之间
+     * set 密码长度，6~20位，默认8位
      *
      * @param length
      */
@@ -102,7 +102,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * get 密码有效期，0-1095之间
+     * get 密码有效期（天），0~1095，0表示永不过期
      *
      * @return
      */
@@ -111,7 +111,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 密码有效期，0-1095之间
+     * set 密码有效期（天），0~1095，0表示永不过期
      *
      * @param age
      */
@@ -120,7 +120,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * get 过期重置类型：0-主账号重置，1-子账号重置
+     * get 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
      *
      * @return
      */
@@ -129,7 +129,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 过期重置类型：0-主账号重置，1-子账号重置
+     * set 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
      *
      * @param expirationOperation
      */
@@ -138,7 +138,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * get 历史密码检查次数,0-10之间
+     * get 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
      *
      * @return
      */
@@ -147,7 +147,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 历史密码检查次数,0-10之间
+     * set 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
      *
      * @param reusePrevention
      */
@@ -156,7 +156,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * get 密码重试次数,1-16之间
+     * get 1小时内使用错误密码最多(1~16)次
      *
      * @return
      */
@@ -165,7 +165,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 密码重试次数,1-16之间
+     * set 1小时内使用错误密码最多(1~16)次
      *
      * @param retryTimes
      */
@@ -211,7 +211,7 @@ public class PasswordPolicy  implements java.io.Serializable {
 
 
     /**
-     * set 密码长度，6-20之间
+     * set 密码长度，6~20位，默认8位
      *
      * @param length
      */
@@ -221,7 +221,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 密码有效期，0-1095之间
+     * set 密码有效期（天），0~1095，0表示永不过期
      *
      * @param age
      */
@@ -231,7 +231,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 过期重置类型：0-主账号重置，1-子账号重置
+     * set 密码过期后重置方式：0-联系主账号重置，1-子用户登录后重置
      *
      * @param expirationOperation
      */
@@ -241,7 +241,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 历史密码检查次数,0-10之间
+     * set 历史密码检查策略，禁止使用前(0~10)次密码，0表示不启用
      *
      * @param reusePrevention
      */
@@ -251,7 +251,7 @@ public class PasswordPolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 密码重试次数,1-16之间
+     * set 1小时内使用错误密码最多(1~16)次
      *
      * @param retryTimes
      */

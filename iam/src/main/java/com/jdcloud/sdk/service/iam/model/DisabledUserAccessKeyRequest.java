@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 禁用AccessKey
+ * 禁用主账号AccessKey
  */
 public class DisabledUserAccessKeyRequest extends JdcloudRequest implements java.io.Serializable {
 

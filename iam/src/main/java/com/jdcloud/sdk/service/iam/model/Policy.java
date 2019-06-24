@@ -43,7 +43,7 @@ public class Policy  implements java.io.Serializable {
     private String name;
 
     /**
-     * jrn描述
+     * 京东云资源标识(jrn)
      */
     private String jrn;
 
@@ -53,7 +53,7 @@ public class Policy  implements java.io.Serializable {
     private String description;
 
     /**
-     * 策略类型:0-系统策略，1-用户策略
+     * 策略类型：0-系统策略，1-用户策略
      */
     private String policyType;
 
@@ -115,7 +115,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * get jrn描述
+     * get 京东云资源标识(jrn)
      *
      * @return
      */
@@ -124,7 +124,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * set jrn描述
+     * set 京东云资源标识(jrn)
      *
      * @param jrn
      */
@@ -151,7 +151,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * get 策略类型:0-系统策略，1-用户策略
+     * get 策略类型：0-系统策略，1-用户策略
      *
      * @return
      */
@@ -160,7 +160,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * set 策略类型:0-系统策略，1-用户策略
+     * set 策略类型：0-系统策略，1-用户策略
      *
      * @param policyType
      */
@@ -262,7 +262,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * set jrn描述
+     * set 京东云资源标识(jrn)
      *
      * @param jrn
      */
@@ -282,7 +282,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * set 策略类型:0-系统策略，1-用户策略
+     * set 策略类型：0-系统策略，1-用户策略
      *
      * @param policyType
      */

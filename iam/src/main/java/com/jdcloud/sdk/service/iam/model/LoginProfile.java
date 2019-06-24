@@ -43,7 +43,7 @@ public class LoginProfile  implements java.io.Serializable {
     private Boolean passwordResetRequired;
 
     /**
-     * 要求必须绑定多因素认证设备
+     * 要求必须绑定虚拟MFA设备
      */
     private Boolean mFABindRequired;
 
@@ -85,7 +85,7 @@ public class LoginProfile  implements java.io.Serializable {
     }
 
     /**
-     * get 要求必须绑定多因素认证设备
+     * get 要求必须绑定虚拟MFA设备
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class LoginProfile  implements java.io.Serializable {
     }
 
     /**
-     * set 要求必须绑定多因素认证设备
+     * set 要求必须绑定虚拟MFA设备
      *
      * @param mFABindRequired
      */
@@ -124,7 +124,7 @@ public class LoginProfile  implements java.io.Serializable {
     }
 
     /**
-     * set 要求必须绑定多因素认证设备
+     * set 要求必须绑定虚拟MFA设备
      *
      * @param mFABindRequired
      */

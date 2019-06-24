@@ -33,7 +33,7 @@ public class SubUserInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户名
+     * 子用户名
      */
     private String name;
 
@@ -43,13 +43,13 @@ public class SubUserInfo  implements java.io.Serializable {
     private String description;
 
     /**
-     * 用户更新时间
+     * 用户创建时间
      */
     private String createTime;
 
 
     /**
-     * get 用户名
+     * get 子用户名
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class SubUserInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 用户名
+     * set 子用户名
      *
      * @param name
      */
@@ -85,7 +85,7 @@ public class SubUserInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 用户更新时间
+     * get 用户创建时间
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class SubUserInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 用户更新时间
+     * set 用户创建时间
      *
      * @param createTime
      */
@@ -104,7 +104,7 @@ public class SubUserInfo  implements java.io.Serializable {
 
 
     /**
-     * set 用户名
+     * set 子用户名
      *
      * @param name
      */
@@ -124,7 +124,7 @@ public class SubUserInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 用户更新时间
+     * set 用户创建时间
      *
      * @param createTime
      */

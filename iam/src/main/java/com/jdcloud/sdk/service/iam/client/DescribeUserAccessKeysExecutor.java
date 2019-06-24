@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iam.model.DescribeUserAccessKeysResponse;
 
 /**
- * 查询AccessKey列表
+ * 查询主账号AccessKey列表
  */
 class DescribeUserAccessKeysExecutor extends JdcloudExecutor {
 

@@ -33,11 +33,6 @@ public class RoleInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 角色路径
-     */
-    private String path;
-
-    /**
      * 角色ID
      */
     private String roleId;
@@ -53,7 +48,7 @@ public class RoleInfo  implements java.io.Serializable {
     private Integer type;
 
     /**
-     * 角色代入policy
+     * 信任实体信息
      */
     private String assumeRolePolicyDocument;
 
@@ -68,7 +63,7 @@ public class RoleInfo  implements java.io.Serializable {
     private Integer maxSessionDuration;
 
     /**
-     * 资源描述
+     * 京东云资源标识(jrn)
      */
     private String jrn;
 
@@ -82,24 +77,6 @@ public class RoleInfo  implements java.io.Serializable {
      */
     private String account;
 
-
-    /**
-     * get 角色路径
-     *
-     * @return
-     */
-    public String getPath() {
-        return path;
-    }
-
-    /**
-     * set 角色路径
-     *
-     * @param path
-     */
-    public void setPath(String path) {
-        this.path = path;
-    }
 
     /**
      * get 角色ID
@@ -156,7 +133,7 @@ public class RoleInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 角色代入policy
+     * get 信任实体信息
      *
      * @return
      */
@@ -165,7 +142,7 @@ public class RoleInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 角色代入policy
+     * set 信任实体信息
      *
      * @param assumeRolePolicyDocument
      */
@@ -210,7 +187,7 @@ public class RoleInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 资源描述
+     * get 京东云资源标识(jrn)
      *
      * @return
      */
@@ -219,7 +196,7 @@ public class RoleInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 资源描述
+     * set 京东云资源标识(jrn)
      *
      * @param jrn
      */
@@ -265,16 +242,6 @@ public class RoleInfo  implements java.io.Serializable {
 
 
     /**
-     * set 角色路径
-     *
-     * @param path
-     */
-    public RoleInfo path(String path) {
-        this.path = path;
-        return this;
-    }
-
-    /**
      * set 角色ID
      *
      * @param roleId
@@ -305,7 +272,7 @@ public class RoleInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 角色代入policy
+     * set 信任实体信息
      *
      * @param assumeRolePolicyDocument
      */
@@ -335,7 +302,7 @@ public class RoleInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 资源描述
+     * set 京东云资源标识(jrn)
      *
      * @param jrn
      */

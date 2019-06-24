@@ -43,7 +43,7 @@ public class Group  implements java.io.Serializable {
     private String name;
 
     /**
-     * jrn描述
+     * 京东云资源标识(jrn)
      */
     private String jrn;
 
@@ -110,7 +110,7 @@ public class Group  implements java.io.Serializable {
     }
 
     /**
-     * get jrn描述
+     * get 京东云资源标识(jrn)
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class Group  implements java.io.Serializable {
     }
 
     /**
-     * set jrn描述
+     * set 京东云资源标识(jrn)
      *
      * @param jrn
      */
@@ -239,7 +239,7 @@ public class Group  implements java.io.Serializable {
     }
 
     /**
-     * set jrn描述
+     * set 京东云资源标识(jrn)
      *
      * @param jrn
      */

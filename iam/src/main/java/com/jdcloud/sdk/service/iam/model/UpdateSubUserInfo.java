@@ -38,7 +38,7 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     private String description;
 
     /**
-     * 手机号码，区号-手机号，目前只支持0086-中国手机号码
+     * 手机号码，区号-手机号
      */
     private String phone;
 
@@ -67,7 +67,7 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 手机号码，区号-手机号，目前只支持0086-中国手机号码
+     * get 手机号码，区号-手机号
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 手机号码，区号-手机号，目前只支持0086-中国手机号码
+     * set 手机号码，区号-手机号
      *
      * @param phone
      */
@@ -114,7 +114,7 @@ public class UpdateSubUserInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 手机号码，区号-手机号，目前只支持0086-中国手机号码
+     * set 手机号码，区号-手机号
      *
      * @param phone
      */

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建AccessKey
+ * 创建主账号AccessKey
  */
 public class CreateUserAccessKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
