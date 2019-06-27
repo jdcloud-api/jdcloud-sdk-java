@@ -35,7 +35,7 @@ public class DeleteCacheRuleRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 缓存规则id
+     * 缓存规则配置ID
      */
     private Long configId;
 
@@ -48,7 +48,7 @@ public class DeleteCacheRuleRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 缓存规则id
+     * get 缓存规则配置ID
      *
      * @return
      */
@@ -57,7 +57,7 @@ public class DeleteCacheRuleRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 缓存规则id
+     * set 缓存规则配置ID
      *
      * @param configId
      */
@@ -85,7 +85,7 @@ public class DeleteCacheRuleRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 缓存规则id
+     * set 缓存规则配置ID
      *
      * @param configId
      */

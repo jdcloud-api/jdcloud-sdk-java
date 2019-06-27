@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 启用AccessKey
+ * 启用主账号AccessKey
  */
 public class EnabledUserAccessKeyResult extends JdcloudResult implements java.io.Serializable {
 

@@ -33,9 +33,9 @@ public class AreaIspItem  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * name
+     * description
      */
-    private String name;
+    private String description;
 
     /**
      * code
@@ -44,21 +44,21 @@ public class AreaIspItem  implements java.io.Serializable {
 
 
     /**
-     * get name
+     * get description
      *
      * @return
      */
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
     /**
-     * set name
+     * set description
      *
-     * @param name
+     * @param description
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     /**
@@ -81,12 +81,12 @@ public class AreaIspItem  implements java.io.Serializable {
 
 
     /**
-     * set name
+     * set description
      *
-     * @param name
+     * @param description
      */
-    public AreaIspItem name(String name) {
-        this.name = name;
+    public AreaIspItem description(String description) {
+        this.description = description;
         return this;
     }
 

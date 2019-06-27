@@ -36,7 +36,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * domain
+     * 域名
      */
     private String domain;
 
@@ -46,13 +46,13 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     private List<Object> ips;
 
     /**
-     * status
+     * 黑名单状态,on:开启,off:关闭
      */
     private String status;
 
 
     /**
-     * get domain
+     * get 域名
      *
      * @return
      */
@@ -61,7 +61,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set domain
+     * set 域名
      *
      * @param domain
      */
@@ -88,7 +88,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get status
+     * get 黑名单状态,on:开启,off:关闭
      *
      * @return
      */
@@ -97,7 +97,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set status
+     * set 黑名单状态,on:开启,off:关闭
      *
      * @param status
      */
@@ -107,7 +107,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set domain
+     * set 域名
      *
      * @param domain
      */
@@ -127,7 +127,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set status
+     * set 黑名单状态,on:开启,off:关闭
      *
      * @param status
      */

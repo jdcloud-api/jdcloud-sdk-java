@@ -48,7 +48,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
     private Boolean autoGeneratePassword;
 
     /**
-     * 指定子用户在下次登录时是否必须绑定多因素认证器
+     * 指定子用户在下次登录时是否必须绑定虚拟MFA设备
      */
     private Boolean mFABindRequired;
 
@@ -108,7 +108,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 指定子用户在下次登录时是否必须绑定多因素认证器
+     * get 指定子用户在下次登录时是否必须绑定虚拟MFA设备
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 指定子用户在下次登录时是否必须绑定多因素认证器
+     * set 指定子用户在下次登录时是否必须绑定虚拟MFA设备
      *
      * @param mFABindRequired
      */
@@ -157,7 +157,7 @@ public class CreateLoginProfileInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 指定子用户在下次登录时是否必须绑定多因素认证器
+     * set 指定子用户在下次登录时是否必须绑定虚拟MFA设备
      *
      * @param mFABindRequired
      */

@@ -42,12 +42,12 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     private String keyWord;
 
     /**
-     * pageNumber
+     * pageNumber,默认值为1
      */
     private Integer pageNumber;
 
     /**
-     * pageSize
+     * pageSize,默认值为20,最大值为50
      */
     private Integer pageSize;
 
@@ -57,7 +57,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     private String status;
 
     /**
-     * type
+     * 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      */
     private String type;
 
@@ -86,7 +86,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get pageNumber
+     * get pageNumber,默认值为1
      *
      * @return
      */
@@ -95,7 +95,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set pageNumber
+     * set pageNumber,默认值为1
      *
      * @param pageNumber
      */
@@ -104,7 +104,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get pageSize
+     * get pageSize,默认值为20,最大值为50
      *
      * @return
      */
@@ -113,7 +113,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set pageSize
+     * set pageSize,默认值为20,最大值为50
      *
      * @param pageSize
      */
@@ -140,7 +140,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get type
+     * get 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      *
      * @return
      */
@@ -149,7 +149,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set type
+     * set 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      *
      * @param type
      */
@@ -187,7 +187,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set pageNumber
+     * set pageNumber,默认值为1
      *
      * @param pageNumber
      */
@@ -197,7 +197,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set pageSize
+     * set pageSize,默认值为20,最大值为50
      *
      * @param pageSize
      */
@@ -217,7 +217,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set type
+     * set 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      *
      * @param type
      */

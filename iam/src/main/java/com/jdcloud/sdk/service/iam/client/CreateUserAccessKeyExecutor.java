@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iam.model.CreateUserAccessKeyResponse;
 
 /**
- * 创建AccessKey
+ * 创建主账号AccessKey
  */
 class CreateUserAccessKeyExecutor extends JdcloudExecutor {
 

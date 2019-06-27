@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 短信发送接口
+ * Send-Message-Related-APIs
  * 短信发送相关API
  *
  * OpenAPI spec version: v1

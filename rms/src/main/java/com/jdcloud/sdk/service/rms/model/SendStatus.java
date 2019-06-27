@@ -43,9 +43,9 @@ public class SendStatus  implements java.io.Serializable {
     private String appId;
 
     /**
-     * 任务ID
+     * 任务序列号
      */
-    private String taskId;
+    private String sequenceNumber;
 
     /**
      * 短信ID
@@ -63,7 +63,7 @@ public class SendStatus  implements java.io.Serializable {
     private Integer stateFlag;
 
     /**
-     * 发送时间
+     * 发送时间 yyyy-MM-dd HH:mm:ss
      */
     private String sendTime;
 
@@ -105,21 +105,21 @@ public class SendStatus  implements java.io.Serializable {
     }
 
     /**
-     * get 任务ID
+     * get 任务序列号
      *
      * @return
      */
-    public String getTaskId() {
-        return taskId;
+    public String getSequenceNumber() {
+        return sequenceNumber;
     }
 
     /**
-     * set 任务ID
+     * set 任务序列号
      *
-     * @param taskId
+     * @param sequenceNumber
      */
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
+    public void setSequenceNumber(String sequenceNumber) {
+        this.sequenceNumber = sequenceNumber;
     }
 
     /**
@@ -177,7 +177,7 @@ public class SendStatus  implements java.io.Serializable {
     }
 
     /**
-     * get 发送时间
+     * get 发送时间 yyyy-MM-dd HH:mm:ss
      *
      * @return
      */
@@ -186,7 +186,7 @@ public class SendStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 发送时间
+     * set 发送时间 yyyy-MM-dd HH:mm:ss
      *
      * @param sendTime
      */
@@ -216,12 +216,12 @@ public class SendStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 任务ID
+     * set 任务序列号
      *
-     * @param taskId
+     * @param sequenceNumber
      */
-    public SendStatus taskId(String taskId) {
-        this.taskId = taskId;
+    public SendStatus sequenceNumber(String sequenceNumber) {
+        this.sequenceNumber = sequenceNumber;
         return this;
     }
 
@@ -256,7 +256,7 @@ public class SendStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 发送时间
+     * set 发送时间 yyyy-MM-dd HH:mm:ss
      *
      * @param sendTime
      */

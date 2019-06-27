@@ -47,6 +47,26 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
     private String rsaKey;
 
     /**
+     * 证书来源有两种类型：default,ssl
+     */
+    private String certFrom;
+
+    /**
+     * ssl证书id
+     */
+    private String sslCertId;
+
+    /**
+     * 是否同步到ssl,boolean值，取值true或者false
+     */
+    private Boolean syncToSsl;
+
+    /**
+     * syncToSsl是true时，certName是必填项
+     */
+    private String certName;
+
+    /**
      * protocolConverts
      */
     private List<ProtocolConvert> protocolConverts;
@@ -93,6 +113,78 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
      */
     public void setRsaKey(String rsaKey) {
         this.rsaKey = rsaKey;
+    }
+
+    /**
+     * get 证书来源有两种类型：default,ssl
+     *
+     * @return
+     */
+    public String getCertFrom() {
+        return certFrom;
+    }
+
+    /**
+     * set 证书来源有两种类型：default,ssl
+     *
+     * @param certFrom
+     */
+    public void setCertFrom(String certFrom) {
+        this.certFrom = certFrom;
+    }
+
+    /**
+     * get ssl证书id
+     *
+     * @return
+     */
+    public String getSslCertId() {
+        return sslCertId;
+    }
+
+    /**
+     * set ssl证书id
+     *
+     * @param sslCertId
+     */
+    public void setSslCertId(String sslCertId) {
+        this.sslCertId = sslCertId;
+    }
+
+    /**
+     * get 是否同步到ssl,boolean值，取值true或者false
+     *
+     * @return
+     */
+    public Boolean getSyncToSsl() {
+        return syncToSsl;
+    }
+
+    /**
+     * set 是否同步到ssl,boolean值，取值true或者false
+     *
+     * @param syncToSsl
+     */
+    public void setSyncToSsl(Boolean syncToSsl) {
+        this.syncToSsl = syncToSsl;
+    }
+
+    /**
+     * get syncToSsl是true时，certName是必填项
+     *
+     * @return
+     */
+    public String getCertName() {
+        return certName;
+    }
+
+    /**
+     * set syncToSsl是true时，certName是必填项
+     *
+     * @param certName
+     */
+    public void setCertName(String certName) {
+        this.certName = certName;
     }
 
     /**
@@ -149,6 +241,46 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
      */
     public SetProtocolConvertRequest rsaKey(String rsaKey) {
         this.rsaKey = rsaKey;
+        return this;
+    }
+
+    /**
+     * set 证书来源有两种类型：default,ssl
+     *
+     * @param certFrom
+     */
+    public SetProtocolConvertRequest certFrom(String certFrom) {
+        this.certFrom = certFrom;
+        return this;
+    }
+
+    /**
+     * set ssl证书id
+     *
+     * @param sslCertId
+     */
+    public SetProtocolConvertRequest sslCertId(String sslCertId) {
+        this.sslCertId = sslCertId;
+        return this;
+    }
+
+    /**
+     * set 是否同步到ssl,boolean值，取值true或者false
+     *
+     * @param syncToSsl
+     */
+    public SetProtocolConvertRequest syncToSsl(Boolean syncToSsl) {
+        this.syncToSsl = syncToSsl;
+        return this;
+    }
+
+    /**
+     * set syncToSsl是true时，certName是必填项
+     *
+     * @param certName
+     */
+    public SetProtocolConvertRequest certName(String certName) {
+        this.certName = certName;
         return this;
     }
 

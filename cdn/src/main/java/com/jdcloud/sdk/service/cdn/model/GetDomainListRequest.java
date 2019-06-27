@@ -39,12 +39,12 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     private String keyWord;
 
     /**
-     * pageNumber
+     * pageNumber,默认值1
      */
     private Integer pageNumber;
 
     /**
-     * pageSize
+     * pageSize,最大值50,默认值20
      */
     private Integer pageSize;
 
@@ -54,7 +54,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     private String status;
 
     /**
-     * type
+     * 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      */
     private String type;
 
@@ -78,7 +78,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get pageNumber
+     * get pageNumber,默认值1
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set pageNumber
+     * set pageNumber,默认值1
      *
      * @param pageNumber
      */
@@ -96,7 +96,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get pageSize
+     * get pageSize,最大值50,默认值20
      *
      * @return
      */
@@ -105,7 +105,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set pageSize
+     * set pageSize,最大值50,默认值20
      *
      * @param pageSize
      */
@@ -132,7 +132,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get type
+     * get 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      *
      * @return
      */
@@ -141,7 +141,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set type
+     * set 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      *
      * @param type
      */
@@ -161,7 +161,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set pageNumber
+     * set pageNumber,默认值1
      *
      * @param pageNumber
      */
@@ -171,7 +171,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set pageSize
+     * set pageSize,最大值50,默认值20
      *
      * @param pageSize
      */
@@ -191,7 +191,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set type
+     * set 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      *
      * @param type
      */

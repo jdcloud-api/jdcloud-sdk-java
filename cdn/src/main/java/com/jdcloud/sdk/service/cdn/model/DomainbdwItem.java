@@ -43,9 +43,24 @@ public class DomainbdwItem  implements java.io.Serializable {
     private String domainType;
 
     /**
-     * timeStamp
+     * topTimeStamp
      */
-    private Long timeStamp;
+    private Long topTimeStamp;
+
+    /**
+     * pv
+     */
+    private Long pv;
+
+    /**
+     * flow
+     */
+    private Double flow;
+
+    /**
+     * avgbandwidth
+     */
+    private Double avgbandwidth;
 
 
     /**
@@ -85,21 +100,75 @@ public class DomainbdwItem  implements java.io.Serializable {
     }
 
     /**
-     * get timeStamp
+     * get topTimeStamp
      *
      * @return
      */
-    public Long getTimeStamp() {
-        return timeStamp;
+    public Long getTopTimeStamp() {
+        return topTimeStamp;
     }
 
     /**
-     * set timeStamp
+     * set topTimeStamp
      *
-     * @param timeStamp
+     * @param topTimeStamp
      */
-    public void setTimeStamp(Long timeStamp) {
-        this.timeStamp = timeStamp;
+    public void setTopTimeStamp(Long topTimeStamp) {
+        this.topTimeStamp = topTimeStamp;
+    }
+
+    /**
+     * get pv
+     *
+     * @return
+     */
+    public Long getPv() {
+        return pv;
+    }
+
+    /**
+     * set pv
+     *
+     * @param pv
+     */
+    public void setPv(Long pv) {
+        this.pv = pv;
+    }
+
+    /**
+     * get flow
+     *
+     * @return
+     */
+    public Double getFlow() {
+        return flow;
+    }
+
+    /**
+     * set flow
+     *
+     * @param flow
+     */
+    public void setFlow(Double flow) {
+        this.flow = flow;
+    }
+
+    /**
+     * get avgbandwidth
+     *
+     * @return
+     */
+    public Double getAvgbandwidth() {
+        return avgbandwidth;
+    }
+
+    /**
+     * set avgbandwidth
+     *
+     * @param avgbandwidth
+     */
+    public void setAvgbandwidth(Double avgbandwidth) {
+        this.avgbandwidth = avgbandwidth;
     }
 
 
@@ -124,12 +193,42 @@ public class DomainbdwItem  implements java.io.Serializable {
     }
 
     /**
-     * set timeStamp
+     * set topTimeStamp
      *
-     * @param timeStamp
+     * @param topTimeStamp
      */
-    public DomainbdwItem timeStamp(Long timeStamp) {
-        this.timeStamp = timeStamp;
+    public DomainbdwItem topTimeStamp(Long topTimeStamp) {
+        this.topTimeStamp = topTimeStamp;
+        return this;
+    }
+
+    /**
+     * set pv
+     *
+     * @param pv
+     */
+    public DomainbdwItem pv(Long pv) {
+        this.pv = pv;
+        return this;
+    }
+
+    /**
+     * set flow
+     *
+     * @param flow
+     */
+    public DomainbdwItem flow(Double flow) {
+        this.flow = flow;
+        return this;
+    }
+
+    /**
+     * set avgbandwidth
+     *
+     * @param avgbandwidth
+     */
+    public DomainbdwItem avgbandwidth(Double avgbandwidth) {
+        this.avgbandwidth = avgbandwidth;
         return this;
     }
 

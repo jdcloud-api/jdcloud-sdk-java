@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.iam.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 禁用AccessKey
+ * 禁用主账号AccessKey
  */
 public class DisabledUserAccessKeyResponse extends JdcloudResponse<DisabledUserAccessKeyResult> implements java.io.Serializable {
 

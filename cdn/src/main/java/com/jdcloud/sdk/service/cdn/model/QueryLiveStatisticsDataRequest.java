@@ -51,12 +51,12 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     /**
      * app名
      */
-    private String appname;
+    private String appName;
 
     /**
      * 流名
      */
-    private String streamname;
+    private String streamName;
 
     /**
      * 子域名
@@ -153,17 +153,17 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
      *
      * @return
      */
-    public String getAppname() {
-        return appname;
+    public String getAppName() {
+        return appName;
     }
 
     /**
      * set app名
      *
-     * @param appname
+     * @param appName
      */
-    public void setAppname(String appname) {
-        this.appname = appname;
+    public void setAppName(String appName) {
+        this.appName = appName;
     }
 
     /**
@@ -171,17 +171,17 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
      *
      * @return
      */
-    public String getStreamname() {
-        return streamname;
+    public String getStreamName() {
+        return streamName;
     }
 
     /**
      * set 流名
      *
-     * @param streamname
+     * @param streamName
      */
-    public void setStreamname(String streamname) {
-        this.streamname = streamname;
+    public void setStreamName(String streamName) {
+        this.streamName = streamName;
     }
 
     /**
@@ -344,20 +344,20 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     /**
      * set app名
      *
-     * @param appname
+     * @param appName
      */
-    public QueryLiveStatisticsDataRequest appname(String appname) {
-        this.appname = appname;
+    public QueryLiveStatisticsDataRequest appName(String appName) {
+        this.appName = appName;
         return this;
     }
 
     /**
      * set 流名
      *
-     * @param streamname
+     * @param streamName
      */
-    public QueryLiveStatisticsDataRequest streamname(String streamname) {
-        this.streamname = streamname;
+    public QueryLiveStatisticsDataRequest streamName(String streamName) {
+        this.streamName = streamName;
         return this;
     }
 

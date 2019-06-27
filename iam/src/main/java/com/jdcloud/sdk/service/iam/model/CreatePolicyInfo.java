@@ -34,7 +34,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 策略名：支持4-64位的字母，数字以及-和_, 以字母开头
+     * 策略名，支持4~64位的字母，数字以及-和_, 以字母开头
      * Required:true
      */
     @Required
@@ -54,7 +54,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
 
 
     /**
-     * get 策略名：支持4-64位的字母，数字以及-和_, 以字母开头
+     * get 策略名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 策略名：支持4-64位的字母，数字以及-和_, 以字母开头
+     * set 策略名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
      * @param name
      */
@@ -109,7 +109,7 @@ public class CreatePolicyInfo  implements java.io.Serializable {
 
 
     /**
-     * set 策略名：支持4-64位的字母，数字以及-和_, 以字母开头
+     * set 策略名，支持4~64位的字母，数字以及-和_, 以字母开头
      *
      * @param name
      */

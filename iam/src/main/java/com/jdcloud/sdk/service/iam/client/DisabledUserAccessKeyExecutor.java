@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iam.model.DisabledUserAccessKeyResponse;
 
 /**
- * 禁用AccessKey
+ * 禁用主账号AccessKey
  */
 class DisabledUserAccessKeyExecutor extends JdcloudExecutor {
 

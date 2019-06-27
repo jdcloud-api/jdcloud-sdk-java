@@ -40,7 +40,7 @@ public class TopNRespItemDetail  implements java.io.Serializable {
     /**
      * data
      */
-    private Long data;
+    private Double data;
 
 
     /**
@@ -66,7 +66,7 @@ public class TopNRespItemDetail  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getData() {
+    public Double getData() {
         return data;
     }
 
@@ -75,7 +75,7 @@ public class TopNRespItemDetail  implements java.io.Serializable {
      *
      * @param data
      */
-    public void setData(Long data) {
+    public void setData(Double data) {
         this.data = data;
     }
 
@@ -95,7 +95,7 @@ public class TopNRespItemDetail  implements java.io.Serializable {
      *
      * @param data
      */
-    public TopNRespItemDetail data(Long data) {
+    public TopNRespItemDetail data(Double data) {
         this.data = data;
         return this;
     }

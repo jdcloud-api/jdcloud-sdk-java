@@ -38,6 +38,11 @@ public class DescribeLiveDomainDetailResult extends JdcloudResult implements jav
     private static final long serialVersionUID = 1L;
 
     /**
+     * SourceID
+     */
+    private Long sourceId;
+
+    /**
      * publishDomains
      */
     private List<PublishDomain> publishDomains;
@@ -47,6 +52,24 @@ public class DescribeLiveDomainDetailResult extends JdcloudResult implements jav
      */
     private List<PlayDomain> playDomains;
 
+
+    /**
+     * get SourceID
+     *
+     * @return
+     */
+    public Long getSourceId() {
+        return sourceId;
+    }
+
+    /**
+     * set SourceID
+     *
+     * @param sourceId
+     */
+    public void setSourceId(Long sourceId) {
+        this.sourceId = sourceId;
+    }
 
     /**
      * get publishDomains
@@ -84,6 +107,16 @@ public class DescribeLiveDomainDetailResult extends JdcloudResult implements jav
         this.playDomains = playDomains;
     }
 
+
+    /**
+     * set SourceID
+     *
+     * @param sourceId
+     */
+    public DescribeLiveDomainDetailResult sourceId(Long sourceId) {
+        this.sourceId = sourceId;
+        return this;
+    }
 
     /**
      * set publishDomains

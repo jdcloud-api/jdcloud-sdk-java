@@ -48,9 +48,14 @@ public class HitrationTableItem  implements java.io.Serializable {
     private Long pv;
 
     /**
-     * hitpv
+     * hitPv
      */
-    private Long hitpv;
+    private Long hitPv;
+
+    /**
+     * oriPV
+     */
+    private Long oriPV;
 
     /**
      * hitRatio
@@ -113,21 +118,39 @@ public class HitrationTableItem  implements java.io.Serializable {
     }
 
     /**
-     * get hitpv
+     * get hitPv
      *
      * @return
      */
-    public Long getHitpv() {
-        return hitpv;
+    public Long getHitPv() {
+        return hitPv;
     }
 
     /**
-     * set hitpv
+     * set hitPv
      *
-     * @param hitpv
+     * @param hitPv
      */
-    public void setHitpv(Long hitpv) {
-        this.hitpv = hitpv;
+    public void setHitPv(Long hitPv) {
+        this.hitPv = hitPv;
+    }
+
+    /**
+     * get oriPV
+     *
+     * @return
+     */
+    public Long getOriPV() {
+        return oriPV;
+    }
+
+    /**
+     * set oriPV
+     *
+     * @param oriPV
+     */
+    public void setOriPV(Long oriPV) {
+        this.oriPV = oriPV;
     }
 
     /**
@@ -180,12 +203,22 @@ public class HitrationTableItem  implements java.io.Serializable {
     }
 
     /**
-     * set hitpv
+     * set hitPv
      *
-     * @param hitpv
+     * @param hitPv
      */
-    public HitrationTableItem hitpv(Long hitpv) {
-        this.hitpv = hitpv;
+    public HitrationTableItem hitPv(Long hitPv) {
+        this.hitPv = hitPv;
+        return this;
+    }
+
+    /**
+     * set oriPV
+     *
+     * @param oriPV
+     */
+    public HitrationTableItem oriPV(Long oriPV) {
+        this.oriPV = oriPV;
         return this;
     }
 

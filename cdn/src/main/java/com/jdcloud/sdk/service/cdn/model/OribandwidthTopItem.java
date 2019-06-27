@@ -45,9 +45,9 @@ public class OribandwidthTopItem  implements java.io.Serializable {
     private Double total;
 
     /**
-     * detail
+     * details
      */
-    private List<OriBandwithDetailItem> detail;
+    private List<OriBandwithDetailItem> details;
 
 
     /**
@@ -87,21 +87,21 @@ public class OribandwidthTopItem  implements java.io.Serializable {
     }
 
     /**
-     * get detail
+     * get details
      *
      * @return
      */
-    public List<OriBandwithDetailItem> getDetail() {
-        return detail;
+    public List<OriBandwithDetailItem> getDetails() {
+        return details;
     }
 
     /**
-     * set detail
+     * set details
      *
-     * @param detail
+     * @param details
      */
-    public void setDetail(List<OriBandwithDetailItem> detail) {
-        this.detail = detail;
+    public void setDetails(List<OriBandwithDetailItem> details) {
+        this.details = details;
     }
 
 
@@ -126,26 +126,26 @@ public class OribandwidthTopItem  implements java.io.Serializable {
     }
 
     /**
-     * set detail
+     * set details
      *
-     * @param detail
+     * @param details
      */
-    public OribandwidthTopItem detail(List<OriBandwithDetailItem> detail) {
-        this.detail = detail;
+    public OribandwidthTopItem details(List<OriBandwithDetailItem> details) {
+        this.details = details;
         return this;
     }
 
 
     /**
-     * add item to detail
+     * add item to details
      *
      * @param detail
      */
     public void addDetail(OriBandwithDetailItem detail) {
-        if (this.detail == null) {
-            this.detail = new ArrayList<>();
+        if (this.details == null) {
+            this.details = new ArrayList<>();
         }
-        this.detail.add(detail);
+        this.details.add(detail);
     }
 
 }

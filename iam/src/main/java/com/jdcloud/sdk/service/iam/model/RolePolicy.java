@@ -33,7 +33,7 @@ public class RolePolicy  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 权限名称
+     * 策略名称
      */
     private String policyName;
 
@@ -43,18 +43,18 @@ public class RolePolicy  implements java.io.Serializable {
     private String description;
 
     /**
-     * 权限类型
+     * 策略类型：0-系统策略，1-用户策略
      */
     private String type;
 
     /**
-     * 权限资源描
+     * 京东云策略资源描述
      */
     private String policyJrn;
 
 
     /**
-     * get 权限名称
+     * get 策略名称
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class RolePolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 权限名称
+     * set 策略名称
      *
      * @param policyName
      */
@@ -90,7 +90,7 @@ public class RolePolicy  implements java.io.Serializable {
     }
 
     /**
-     * get 权限类型
+     * get 策略类型：0-系统策略，1-用户策略
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class RolePolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 权限类型
+     * set 策略类型：0-系统策略，1-用户策略
      *
      * @param type
      */
@@ -108,7 +108,7 @@ public class RolePolicy  implements java.io.Serializable {
     }
 
     /**
-     * get 权限资源描
+     * get 京东云策略资源描述
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class RolePolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 权限资源描
+     * set 京东云策略资源描述
      *
      * @param policyJrn
      */
@@ -127,7 +127,7 @@ public class RolePolicy  implements java.io.Serializable {
 
 
     /**
-     * set 权限名称
+     * set 策略名称
      *
      * @param policyName
      */
@@ -147,7 +147,7 @@ public class RolePolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 权限类型
+     * set 策略类型：0-系统策略，1-用户策略
      *
      * @param type
      */
@@ -157,7 +157,7 @@ public class RolePolicy  implements java.io.Serializable {
     }
 
     /**
-     * set 权限资源描
+     * set 京东云策略资源描述
      *
      * @param policyJrn
      */

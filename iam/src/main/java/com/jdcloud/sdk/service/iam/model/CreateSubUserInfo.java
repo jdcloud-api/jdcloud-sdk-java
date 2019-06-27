@@ -34,7 +34,7 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 子用户名：支持4-20位的字母，数字以及-和_，以字母开头
+     * 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
      * Required:true
      */
     @Required
@@ -88,7 +88,7 @@ public class CreateSubUserInfo  implements java.io.Serializable {
 
 
     /**
-     * get 子用户名：支持4-20位的字母，数字以及-和_，以字母开头
+     * get 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
      *
      * @return
      */
@@ -97,7 +97,7 @@ public class CreateSubUserInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 子用户名：支持4-20位的字母，数字以及-和_，以字母开头
+     * set 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
      *
      * @param name
      */
@@ -251,7 +251,7 @@ public class CreateSubUserInfo  implements java.io.Serializable {
 
 
     /**
-     * set 子用户名：支持4-20位的字母，数字以及-和_，以字母开头
+     * set 子用户名，支持4~20位的字母，数字以及-和_，以字母开头
      *
      * @param name
      */

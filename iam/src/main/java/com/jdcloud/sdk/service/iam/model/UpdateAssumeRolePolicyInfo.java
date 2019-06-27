@@ -33,13 +33,13 @@ public class UpdateAssumeRolePolicyInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 角色代入policy
+     * 信任实体信息
      */
     private String assumeRolePolicyDocument;
 
 
     /**
-     * get 角色代入policy
+     * get 信任实体信息
      *
      * @return
      */
@@ -48,7 +48,7 @@ public class UpdateAssumeRolePolicyInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 角色代入policy
+     * set 信任实体信息
      *
      * @param assumeRolePolicyDocument
      */
@@ -58,7 +58,7 @@ public class UpdateAssumeRolePolicyInfo  implements java.io.Serializable {
 
 
     /**
-     * set 角色代入policy
+     * set 信任实体信息
      *
      * @param assumeRolePolicyDocument
      */
