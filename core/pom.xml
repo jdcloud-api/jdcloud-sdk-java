@@ -15,9 +15,9 @@
     </properties>
     <licenses>
         <license>
-            <name></name>
-            <url></url>
-            <distribution></distribution>
+            <name/>
+            <url/>
+            <distribution/>
         </license>
     </licenses>
     <scm>
@@ -35,12 +35,12 @@
         <dependency>
             <groupId>com.google.http-client</groupId>
             <artifactId>google-http-client</artifactId>
-            <version>1.22.0</version>
+            <version>1.24.1</version>
         </dependency>
         <dependency>
             <groupId>com.google.http-client</groupId>
             <artifactId>google-http-client-gson</artifactId>
-            <version>1.22.0</version>
+            <version>1.24.1</version>
         </dependency>
         <dependency>
             <groupId>joda-time</groupId>
