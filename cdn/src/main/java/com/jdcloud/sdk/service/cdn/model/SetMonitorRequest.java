@@ -45,7 +45,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     private String monitorPath;
 
     /**
-     * httpRequestHeader
+     * http请求头
      */
     private Object httpRequestHeader;
 
@@ -94,7 +94,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get httpRequestHeader
+     * get http请求头
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set httpRequestHeader
+     * set http请求头
      *
      * @param httpRequestHeader
      */
@@ -151,7 +151,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set httpRequestHeader
+     * set http请求头
      *
      * @param httpRequestHeader
      */

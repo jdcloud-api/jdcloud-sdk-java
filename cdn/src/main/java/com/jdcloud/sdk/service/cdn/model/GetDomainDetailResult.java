@@ -37,7 +37,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * allStatus
+     * null
      */
     private String allStatus;
 
@@ -171,9 +171,39 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      */
     private String jumpType;
 
+    /**
+     * certFrom
+     */
+    private String certFrom;
 
     /**
-     * get allStatus
+     * sslCertId
+     */
+    private String sslCertId;
+
+    /**
+     * certName
+     */
+    private String certName;
+
+    /**
+     * certType
+     */
+    private String certType;
+
+    /**
+     * sslCertStartTime
+     */
+    private String sslCertStartTime;
+
+    /**
+     * sslCertEndTime
+     */
+    private String sslCertEndTime;
+
+
+    /**
+     * get null
      *
      * @return
      */
@@ -182,7 +212,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set allStatus
+     * set null
      *
      * @param allStatus
      */
@@ -658,9 +688,117 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
         this.jumpType = jumpType;
     }
 
+    /**
+     * get certFrom
+     *
+     * @return
+     */
+    public String getCertFrom() {
+        return certFrom;
+    }
 
     /**
-     * set allStatus
+     * set certFrom
+     *
+     * @param certFrom
+     */
+    public void setCertFrom(String certFrom) {
+        this.certFrom = certFrom;
+    }
+
+    /**
+     * get sslCertId
+     *
+     * @return
+     */
+    public String getSslCertId() {
+        return sslCertId;
+    }
+
+    /**
+     * set sslCertId
+     *
+     * @param sslCertId
+     */
+    public void setSslCertId(String sslCertId) {
+        this.sslCertId = sslCertId;
+    }
+
+    /**
+     * get certName
+     *
+     * @return
+     */
+    public String getCertName() {
+        return certName;
+    }
+
+    /**
+     * set certName
+     *
+     * @param certName
+     */
+    public void setCertName(String certName) {
+        this.certName = certName;
+    }
+
+    /**
+     * get certType
+     *
+     * @return
+     */
+    public String getCertType() {
+        return certType;
+    }
+
+    /**
+     * set certType
+     *
+     * @param certType
+     */
+    public void setCertType(String certType) {
+        this.certType = certType;
+    }
+
+    /**
+     * get sslCertStartTime
+     *
+     * @return
+     */
+    public String getSslCertStartTime() {
+        return sslCertStartTime;
+    }
+
+    /**
+     * set sslCertStartTime
+     *
+     * @param sslCertStartTime
+     */
+    public void setSslCertStartTime(String sslCertStartTime) {
+        this.sslCertStartTime = sslCertStartTime;
+    }
+
+    /**
+     * get sslCertEndTime
+     *
+     * @return
+     */
+    public String getSslCertEndTime() {
+        return sslCertEndTime;
+    }
+
+    /**
+     * set sslCertEndTime
+     *
+     * @param sslCertEndTime
+     */
+    public void setSslCertEndTime(String sslCertEndTime) {
+        this.sslCertEndTime = sslCertEndTime;
+    }
+
+
+    /**
+     * set null
      *
      * @param allStatus
      */
@@ -926,6 +1064,66 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      */
     public GetDomainDetailResult jumpType(String jumpType) {
         this.jumpType = jumpType;
+        return this;
+    }
+
+    /**
+     * set certFrom
+     *
+     * @param certFrom
+     */
+    public GetDomainDetailResult certFrom(String certFrom) {
+        this.certFrom = certFrom;
+        return this;
+    }
+
+    /**
+     * set sslCertId
+     *
+     * @param sslCertId
+     */
+    public GetDomainDetailResult sslCertId(String sslCertId) {
+        this.sslCertId = sslCertId;
+        return this;
+    }
+
+    /**
+     * set certName
+     *
+     * @param certName
+     */
+    public GetDomainDetailResult certName(String certName) {
+        this.certName = certName;
+        return this;
+    }
+
+    /**
+     * set certType
+     *
+     * @param certType
+     */
+    public GetDomainDetailResult certType(String certType) {
+        this.certType = certType;
+        return this;
+    }
+
+    /**
+     * set sslCertStartTime
+     *
+     * @param sslCertStartTime
+     */
+    public GetDomainDetailResult sslCertStartTime(String sslCertStartTime) {
+        this.sslCertStartTime = sslCertStartTime;
+        return this;
+    }
+
+    /**
+     * set sslCertEndTime
+     *
+     * @param sslCertEndTime
+     */
+    public GetDomainDetailResult sslCertEndTime(String sslCertEndTime) {
+        this.sslCertEndTime = sslCertEndTime;
         return this;
     }
 

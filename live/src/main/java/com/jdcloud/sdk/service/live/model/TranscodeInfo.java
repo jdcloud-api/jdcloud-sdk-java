@@ -33,6 +33,13 @@ public class TranscodeInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 视频编码格式
+  - 取值：h264,h265，默认h264
+
+     */
+    private String videoCodec;
+
+    /**
      * 转码输出的码率值:
   - 取值: [200,3000]
   - 单位: kpbs
@@ -42,7 +49,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * 转码输出的帧率值:
-  - 取值: 15/1、25/1、30/1、60/1
+  - 取值：[1,30]
 
      */
     private String videoFrameRate;
@@ -122,6 +129,28 @@ public class TranscodeInfo  implements java.io.Serializable {
 
 
     /**
+     * get 视频编码格式
+  - 取值：h264,h265，默认h264
+
+     *
+     * @return
+     */
+    public String getVideoCodec() {
+        return videoCodec;
+    }
+
+    /**
+     * set 视频编码格式
+  - 取值：h264,h265，默认h264
+
+     *
+     * @param videoCodec
+     */
+    public void setVideoCodec(String videoCodec) {
+        this.videoCodec = videoCodec;
+    }
+
+    /**
      * get 转码输出的码率值:
   - 取值: [200,3000]
   - 单位: kpbs
@@ -147,7 +176,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * get 转码输出的帧率值:
-  - 取值: 15/1、25/1、30/1、60/1
+  - 取值：[1,30]
 
      *
      * @return
@@ -158,7 +187,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * set 转码输出的帧率值:
-  - 取值: 15/1、25/1、30/1、60/1
+  - 取值：[1,30]
 
      *
      * @param videoFrameRate
@@ -387,6 +416,18 @@ public class TranscodeInfo  implements java.io.Serializable {
 
 
     /**
+     * set 视频编码格式
+  - 取值：h264,h265，默认h264
+
+     *
+     * @param videoCodec
+     */
+    public TranscodeInfo videoCodec(String videoCodec) {
+        this.videoCodec = videoCodec;
+        return this;
+    }
+
+    /**
      * set 转码输出的码率值:
   - 取值: [200,3000]
   - 单位: kpbs
@@ -401,7 +442,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * set 转码输出的帧率值:
-  - 取值: 15/1、25/1、30/1、60/1
+  - 取值：[1,30]
 
      *
      * @param videoFrameRate

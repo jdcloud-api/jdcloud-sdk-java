@@ -98,7 +98,9 @@ public class AddCustomLiveStreamSnapshotTemplateRequest extends JdcloudRequest i
 
     /**
      * 存储桶
+     * Required:true
      */
+    @Required
     private String saveBucket;
 
     /**

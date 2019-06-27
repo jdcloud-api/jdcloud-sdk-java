@@ -45,12 +45,17 @@ public class ForbiddenStream  implements java.io.Serializable {
     /**
      * 禁播类型:forever永不禁播limit限时禁播
      */
-    private String type;
+    private String forbiddenType;
 
     /**
      * 禁播时长
      */
     private Long ttl;
+
+    /**
+     * 禁播类型说明
+     */
+    private String forbiddenTypeDesc;
 
 
     /**
@@ -94,17 +99,17 @@ public class ForbiddenStream  implements java.io.Serializable {
      *
      * @return
      */
-    public String getType() {
-        return type;
+    public String getForbiddenType() {
+        return forbiddenType;
     }
 
     /**
      * set 禁播类型:forever永不禁播limit限时禁播
      *
-     * @param type
+     * @param forbiddenType
      */
-    public void setType(String type) {
-        this.type = type;
+    public void setForbiddenType(String forbiddenType) {
+        this.forbiddenType = forbiddenType;
     }
 
     /**
@@ -123,6 +128,24 @@ public class ForbiddenStream  implements java.io.Serializable {
      */
     public void setTtl(Long ttl) {
         this.ttl = ttl;
+    }
+
+    /**
+     * get 禁播类型说明
+     *
+     * @return
+     */
+    public String getForbiddenTypeDesc() {
+        return forbiddenTypeDesc;
+    }
+
+    /**
+     * set 禁播类型说明
+     *
+     * @param forbiddenTypeDesc
+     */
+    public void setForbiddenTypeDesc(String forbiddenTypeDesc) {
+        this.forbiddenTypeDesc = forbiddenTypeDesc;
     }
 
 
@@ -149,10 +172,10 @@ public class ForbiddenStream  implements java.io.Serializable {
     /**
      * set 禁播类型:forever永不禁播limit限时禁播
      *
-     * @param type
+     * @param forbiddenType
      */
-    public ForbiddenStream type(String type) {
-        this.type = type;
+    public ForbiddenStream forbiddenType(String forbiddenType) {
+        this.forbiddenType = forbiddenType;
         return this;
     }
 
@@ -163,6 +186,16 @@ public class ForbiddenStream  implements java.io.Serializable {
      */
     public ForbiddenStream ttl(Long ttl) {
         this.ttl = ttl;
+        return this;
+    }
+
+    /**
+     * set 禁播类型说明
+     *
+     * @param forbiddenTypeDesc
+     */
+    public ForbiddenStream forbiddenTypeDesc(String forbiddenTypeDesc) {
+        this.forbiddenTypeDesc = forbiddenTypeDesc;
         return this;
     }
 

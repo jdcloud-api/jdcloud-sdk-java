@@ -41,7 +41,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     private String domain;
 
     /**
-     * userAgentType
+     * userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block
      */
     private String userAgentType;
 
@@ -51,7 +51,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     private List<String> userAgentList;
 
     /**
-     * allowNoUserAgentHeader
+     * 是否允许空userAgent访问,默认为“on”
      */
     private String allowNoUserAgentHeader;
 
@@ -75,7 +75,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * get userAgentType
+     * get userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block
      *
      * @return
      */
@@ -84,7 +84,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set userAgentType
+     * set userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block
      *
      * @param userAgentType
      */
@@ -111,7 +111,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * get allowNoUserAgentHeader
+     * get 是否允许空userAgent访问,默认为“on”
      *
      * @return
      */
@@ -120,7 +120,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set allowNoUserAgentHeader
+     * set 是否允许空userAgent访问,默认为“on”
      *
      * @param allowNoUserAgentHeader
      */
@@ -140,7 +140,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set userAgentType
+     * set userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block
      *
      * @param userAgentType
      */
@@ -160,7 +160,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set allowNoUserAgentHeader
+     * set 是否允许空userAgent访问,默认为“on”
      *
      * @param allowNoUserAgentHeader
      */

@@ -33,79 +33,10 @@ public class SendBatchMsg  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 请求状态
-     */
-    private Boolean status;
-
-    /**
-     * 错误码
-     */
-    private String code;
-
-    /**
-     * 错误消息
-     */
-    private String message;
-
-    /**
      * 本次发送请求的序列号
      */
     private String sequenceNumber;
 
-
-    /**
-     * get 请求状态
-     *
-     * @return
-     */
-    public Boolean getStatus() {
-        return status;
-    }
-
-    /**
-     * set 请求状态
-     *
-     * @param status
-     */
-    public void setStatus(Boolean status) {
-        this.status = status;
-    }
-
-    /**
-     * get 错误码
-     *
-     * @return
-     */
-    public String getCode() {
-        return code;
-    }
-
-    /**
-     * set 错误码
-     *
-     * @param code
-     */
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    /**
-     * get 错误消息
-     *
-     * @return
-     */
-    public String getMessage() {
-        return message;
-    }
-
-    /**
-     * set 错误消息
-     *
-     * @param message
-     */
-    public void setMessage(String message) {
-        this.message = message;
-    }
 
     /**
      * get 本次发送请求的序列号
@@ -125,36 +56,6 @@ public class SendBatchMsg  implements java.io.Serializable {
         this.sequenceNumber = sequenceNumber;
     }
 
-
-    /**
-     * set 请求状态
-     *
-     * @param status
-     */
-    public SendBatchMsg status(Boolean status) {
-        this.status = status;
-        return this;
-    }
-
-    /**
-     * set 错误码
-     *
-     * @param code
-     */
-    public SendBatchMsg code(String code) {
-        this.code = code;
-        return this;
-    }
-
-    /**
-     * set 错误消息
-     *
-     * @param message
-     */
-    public SendBatchMsg message(String message) {
-        this.message = message;
-        return this;
-    }
 
     /**
      * set 本次发送请求的序列号

@@ -282,6 +282,36 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
      */
     private String notifyCustomAuthKey;
 
+    /**
+     * 证书来源有两种类型：default,ssl
+     */
+    private String certFrom;
+
+    /**
+     * ssl证书id
+     */
+    private String sslCertId;
+
+    /**
+     * 证书名称
+     */
+    private String certName;
+
+    /**
+     * 证书类型
+     */
+    private String certType;
+
+    /**
+     * sslCertStartTime
+     */
+    private String sslCertStartTime;
+
+    /**
+     * sslCertEndTime
+     */
+    private String sslCertEndTime;
+
 
     /**
      * get 域名类型
@@ -1165,6 +1195,114 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.notifyCustomAuthKey = notifyCustomAuthKey;
     }
 
+    /**
+     * get 证书来源有两种类型：default,ssl
+     *
+     * @return
+     */
+    public String getCertFrom() {
+        return certFrom;
+    }
+
+    /**
+     * set 证书来源有两种类型：default,ssl
+     *
+     * @param certFrom
+     */
+    public void setCertFrom(String certFrom) {
+        this.certFrom = certFrom;
+    }
+
+    /**
+     * get ssl证书id
+     *
+     * @return
+     */
+    public String getSslCertId() {
+        return sslCertId;
+    }
+
+    /**
+     * set ssl证书id
+     *
+     * @param sslCertId
+     */
+    public void setSslCertId(String sslCertId) {
+        this.sslCertId = sslCertId;
+    }
+
+    /**
+     * get 证书名称
+     *
+     * @return
+     */
+    public String getCertName() {
+        return certName;
+    }
+
+    /**
+     * set 证书名称
+     *
+     * @param certName
+     */
+    public void setCertName(String certName) {
+        this.certName = certName;
+    }
+
+    /**
+     * get 证书类型
+     *
+     * @return
+     */
+    public String getCertType() {
+        return certType;
+    }
+
+    /**
+     * set 证书类型
+     *
+     * @param certType
+     */
+    public void setCertType(String certType) {
+        this.certType = certType;
+    }
+
+    /**
+     * get sslCertStartTime
+     *
+     * @return
+     */
+    public String getSslCertStartTime() {
+        return sslCertStartTime;
+    }
+
+    /**
+     * set sslCertStartTime
+     *
+     * @param sslCertStartTime
+     */
+    public void setSslCertStartTime(String sslCertStartTime) {
+        this.sslCertStartTime = sslCertStartTime;
+    }
+
+    /**
+     * get sslCertEndTime
+     *
+     * @return
+     */
+    public String getSslCertEndTime() {
+        return sslCertEndTime;
+    }
+
+    /**
+     * set sslCertEndTime
+     *
+     * @param sslCertEndTime
+     */
+    public void setSslCertEndTime(String sslCertEndTime) {
+        this.sslCertEndTime = sslCertEndTime;
+    }
+
 
     /**
      * set 域名类型
@@ -1653,6 +1791,66 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
      */
     public QueryLiveDomainDetailResult notifyCustomAuthKey(String notifyCustomAuthKey) {
         this.notifyCustomAuthKey = notifyCustomAuthKey;
+        return this;
+    }
+
+    /**
+     * set 证书来源有两种类型：default,ssl
+     *
+     * @param certFrom
+     */
+    public QueryLiveDomainDetailResult certFrom(String certFrom) {
+        this.certFrom = certFrom;
+        return this;
+    }
+
+    /**
+     * set ssl证书id
+     *
+     * @param sslCertId
+     */
+    public QueryLiveDomainDetailResult sslCertId(String sslCertId) {
+        this.sslCertId = sslCertId;
+        return this;
+    }
+
+    /**
+     * set 证书名称
+     *
+     * @param certName
+     */
+    public QueryLiveDomainDetailResult certName(String certName) {
+        this.certName = certName;
+        return this;
+    }
+
+    /**
+     * set 证书类型
+     *
+     * @param certType
+     */
+    public QueryLiveDomainDetailResult certType(String certType) {
+        this.certType = certType;
+        return this;
+    }
+
+    /**
+     * set sslCertStartTime
+     *
+     * @param sslCertStartTime
+     */
+    public QueryLiveDomainDetailResult sslCertStartTime(String sslCertStartTime) {
+        this.sslCertStartTime = sslCertStartTime;
+        return this;
+    }
+
+    /**
+     * set sslCertEndTime
+     *
+     * @param sslCertEndTime
+     */
+    public QueryLiveDomainDetailResult sslCertEndTime(String sslCertEndTime) {
+        this.sslCertEndTime = sslCertEndTime;
         return this;
     }
 

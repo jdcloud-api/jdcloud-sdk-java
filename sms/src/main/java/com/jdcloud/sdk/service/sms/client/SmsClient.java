@@ -31,54 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.sms.model.PullMoMsgRequest;
-import com.jdcloud.sdk.service.sms.model.PullMoMsgResponse;
-import com.jdcloud.sdk.service.sms.client.PullMoMsgExecutor;
-import com.jdcloud.sdk.service.sms.model.DeleteSdkSmsSignRequest;
-import com.jdcloud.sdk.service.sms.model.DeleteSdkSmsSignResponse;
-import com.jdcloud.sdk.service.sms.client.DeleteSdkSmsSignExecutor;
-import com.jdcloud.sdk.service.sms.model.AddSdkSmsTemplateRequest;
-import com.jdcloud.sdk.service.sms.model.AddSdkSmsTemplateResponse;
-import com.jdcloud.sdk.service.sms.client.AddSdkSmsTemplateExecutor;
-import com.jdcloud.sdk.service.sms.model.DeleteSdkSmsTemplateRequest;
-import com.jdcloud.sdk.service.sms.model.DeleteSdkSmsTemplateResponse;
-import com.jdcloud.sdk.service.sms.client.DeleteSdkSmsTemplateExecutor;
-import com.jdcloud.sdk.service.sms.model.PullMtMsgRequest;
-import com.jdcloud.sdk.service.sms.model.PullMtMsgResponse;
-import com.jdcloud.sdk.service.sms.client.PullMtMsgExecutor;
-import com.jdcloud.sdk.service.sms.model.QuerySdkSmsSignStatusRequest;
-import com.jdcloud.sdk.service.sms.model.QuerySdkSmsSignStatusResponse;
-import com.jdcloud.sdk.service.sms.client.QuerySdkSmsSignStatusExecutor;
-import com.jdcloud.sdk.service.sms.model.AggSendStatusRequest;
-import com.jdcloud.sdk.service.sms.model.AggSendStatusResponse;
-import com.jdcloud.sdk.service.sms.client.AggSendStatusExecutor;
-import com.jdcloud.sdk.service.sms.model.SendSingleSmsRequest;
-import com.jdcloud.sdk.service.sms.model.SendSingleSmsResponse;
-import com.jdcloud.sdk.service.sms.client.SendSingleSmsExecutor;
 import com.jdcloud.sdk.service.sms.model.SendBatchSmsRequest;
 import com.jdcloud.sdk.service.sms.model.SendBatchSmsResponse;
 import com.jdcloud.sdk.service.sms.client.SendBatchSmsExecutor;
-import com.jdcloud.sdk.service.sms.model.QuerySdkSmsTemplateStatusRequest;
-import com.jdcloud.sdk.service.sms.model.QuerySdkSmsTemplateStatusResponse;
-import com.jdcloud.sdk.service.sms.client.QuerySdkSmsTemplateStatusExecutor;
-import com.jdcloud.sdk.service.sms.model.AggReceiptStatusRequest;
-import com.jdcloud.sdk.service.sms.model.AggReceiptStatusResponse;
-import com.jdcloud.sdk.service.sms.client.AggReceiptStatusExecutor;
-import com.jdcloud.sdk.service.sms.model.PullMoMsgByMobileRequest;
-import com.jdcloud.sdk.service.sms.model.PullMoMsgByMobileResponse;
-import com.jdcloud.sdk.service.sms.client.PullMoMsgByMobileExecutor;
-import com.jdcloud.sdk.service.sms.model.AddSdkSmsSignRequest;
-import com.jdcloud.sdk.service.sms.model.AddSdkSmsSignResponse;
-import com.jdcloud.sdk.service.sms.client.AddSdkSmsSignExecutor;
 import com.jdcloud.sdk.service.sms.model.PullMtMsgByMobileRequest;
 import com.jdcloud.sdk.service.sms.model.PullMtMsgByMobileResponse;
 import com.jdcloud.sdk.service.sms.client.PullMtMsgByMobileExecutor;
-import com.jdcloud.sdk.service.sms.model.EditSdkSmsTemplateRequest;
-import com.jdcloud.sdk.service.sms.model.EditSdkSmsTemplateResponse;
-import com.jdcloud.sdk.service.sms.client.EditSdkSmsTemplateExecutor;
-import com.jdcloud.sdk.service.sms.model.EditSdkSmsSignRequest;
-import com.jdcloud.sdk.service.sms.model.EditSdkSmsSignResponse;
-import com.jdcloud.sdk.service.sms.client.EditSdkSmsSignExecutor;
 
 /**
  * smsClient
@@ -87,7 +45,7 @@ public class SmsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.9";
+    public final static String ClientVersion = "1.1.1";
     public final static String DefaultEndpoint = "sms.jdcloud-api.com";
     public final static String ServiceName = "sms";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -130,94 +88,6 @@ public class SmsClient extends JdcloudClient {
 
 
     /**
-     * 拉取回复短信
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PullMoMsgResponse pullMoMsg(PullMoMsgRequest request) throws JdcloudSdkException {
-        return new PullMoMsgExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除短信签名接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteSdkSmsSignResponse deleteSdkSmsSign(DeleteSdkSmsSignRequest request) throws JdcloudSdkException {
-        return new DeleteSdkSmsSignExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 新增短信模板接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AddSdkSmsTemplateResponse addSdkSmsTemplate(AddSdkSmsTemplateRequest request) throws JdcloudSdkException {
-        return new AddSdkSmsTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除短信模板接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteSdkSmsTemplateResponse deleteSdkSmsTemplate(DeleteSdkSmsTemplateRequest request) throws JdcloudSdkException {
-        return new DeleteSdkSmsTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 拉取短信状态
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PullMtMsgResponse pullMtMsg(PullMtMsgRequest request) throws JdcloudSdkException {
-        return new PullMtMsgExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询短信签名接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QuerySdkSmsSignStatusResponse querySdkSmsSignStatus(QuerySdkSmsSignStatusRequest request) throws JdcloudSdkException {
-        return new QuerySdkSmsSignStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 发送数据统计
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AggSendStatusResponse aggSendStatus(AggSendStatusRequest request) throws JdcloudSdkException {
-        return new AggSendStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 指定模板单发短信
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SendSingleSmsResponse sendSingleSms(SendSingleSmsRequest request) throws JdcloudSdkException {
-        return new SendSingleSmsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 指定模板群发短信
      *
      * @param request
@@ -229,50 +99,6 @@ public class SmsClient extends JdcloudClient {
     }
 
     /**
-     * 查询短信模板接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QuerySdkSmsTemplateStatusResponse querySdkSmsTemplateStatus(QuerySdkSmsTemplateStatusRequest request) throws JdcloudSdkException {
-        return new QuerySdkSmsTemplateStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 回执数据统计
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AggReceiptStatusResponse aggReceiptStatus(AggReceiptStatusRequest request) throws JdcloudSdkException {
-        return new AggReceiptStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 拉取单个手机的回复短信
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PullMoMsgByMobileResponse pullMoMsgByMobile(PullMoMsgByMobileRequest request) throws JdcloudSdkException {
-        return new PullMoMsgByMobileExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 新增短信签名接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AddSdkSmsSignResponse addSdkSmsSign(AddSdkSmsSignRequest request) throws JdcloudSdkException {
-        return new AddSdkSmsSignExecutor().client(this).execute(request);
-    }
-
-    /**
      * 拉取单个手机短信状态
      *
      * @param request
@@ -281,28 +107,6 @@ public class SmsClient extends JdcloudClient {
      */
     public PullMtMsgByMobileResponse pullMtMsgByMobile(PullMtMsgByMobileRequest request) throws JdcloudSdkException {
         return new PullMtMsgByMobileExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 编辑短信模板接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EditSdkSmsTemplateResponse editSdkSmsTemplate(EditSdkSmsTemplateRequest request) throws JdcloudSdkException {
-        return new EditSdkSmsTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 编辑短信签名接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EditSdkSmsSignResponse editSdkSmsSign(EditSdkSmsSignRequest request) throws JdcloudSdkException {
-        return new EditSdkSmsSignExecutor().client(this).execute(request);
     }
 
 

@@ -45,14 +45,14 @@ public class TopNRespItem  implements java.io.Serializable {
     private Object topValue;
 
     /**
-     * topFlowValue
+     * topDataValue
      */
-    private Double topFlowValue;
+    private Double topDataValue;
 
     /**
-     * topFlowPercent
+     * topDataPercent
      */
-    private String topFlowPercent;
+    private String topDataPercent;
 
     /**
      * details
@@ -97,39 +97,39 @@ public class TopNRespItem  implements java.io.Serializable {
     }
 
     /**
-     * get topFlowValue
+     * get topDataValue
      *
      * @return
      */
-    public Double getTopFlowValue() {
-        return topFlowValue;
+    public Double getTopDataValue() {
+        return topDataValue;
     }
 
     /**
-     * set topFlowValue
+     * set topDataValue
      *
-     * @param topFlowValue
+     * @param topDataValue
      */
-    public void setTopFlowValue(Double topFlowValue) {
-        this.topFlowValue = topFlowValue;
+    public void setTopDataValue(Double topDataValue) {
+        this.topDataValue = topDataValue;
     }
 
     /**
-     * get topFlowPercent
+     * get topDataPercent
      *
      * @return
      */
-    public String getTopFlowPercent() {
-        return topFlowPercent;
+    public String getTopDataPercent() {
+        return topDataPercent;
     }
 
     /**
-     * set topFlowPercent
+     * set topDataPercent
      *
-     * @param topFlowPercent
+     * @param topDataPercent
      */
-    public void setTopFlowPercent(String topFlowPercent) {
-        this.topFlowPercent = topFlowPercent;
+    public void setTopDataPercent(String topDataPercent) {
+        this.topDataPercent = topDataPercent;
     }
 
     /**
@@ -172,22 +172,22 @@ public class TopNRespItem  implements java.io.Serializable {
     }
 
     /**
-     * set topFlowValue
+     * set topDataValue
      *
-     * @param topFlowValue
+     * @param topDataValue
      */
-    public TopNRespItem topFlowValue(Double topFlowValue) {
-        this.topFlowValue = topFlowValue;
+    public TopNRespItem topDataValue(Double topDataValue) {
+        this.topDataValue = topDataValue;
         return this;
     }
 
     /**
-     * set topFlowPercent
+     * set topDataPercent
      *
-     * @param topFlowPercent
+     * @param topDataPercent
      */
-    public TopNRespItem topFlowPercent(String topFlowPercent) {
-        this.topFlowPercent = topFlowPercent;
+    public TopNRespItem topDataPercent(String topDataPercent) {
+        this.topDataPercent = topDataPercent;
         return this;
     }
 

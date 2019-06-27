@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 短信发送接口
+ * Send-Message-Related-APIs
  * 短信发送相关API
  *
  * OpenAPI spec version: v1
@@ -24,8 +24,9 @@
 
 package com.jdcloud.sdk.service.sms.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.sms.model.SendBatchSmsSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,11 +37,37 @@ public class SendBatchSmsRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 指定模板群发短信请求参数
+     * 应用Id
      * Required:true
      */
     @Required
-    private SendBatchSmsSpec sendBatchSmsSpec;
+    private String appId;
+
+    /**
+     * 短信签名名称
+     * Required:true
+     */
+    @Required
+    private String signId;
+
+    /**
+     * 模板Id
+     * Required:true
+     */
+    @Required
+    private String templateId;
+
+    /**
+     * 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     * Required:true
+     */
+    @Required
+    private List<String> phone;
+
+    /**
+     * 短信模板变量对应的数据值,Array格式
+     */
+    private List<String> params;
 
     /**
      * Region ID
@@ -51,21 +78,93 @@ public class SendBatchSmsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 指定模板群发短信请求参数
+     * get 应用Id
      *
      * @return
      */
-    public SendBatchSmsSpec getSendBatchSmsSpec() {
-        return sendBatchSmsSpec;
+    public String getAppId() {
+        return appId;
     }
 
     /**
-     * set 指定模板群发短信请求参数
+     * set 应用Id
      *
-     * @param sendBatchSmsSpec
+     * @param appId
      */
-    public void setSendBatchSmsSpec(SendBatchSmsSpec sendBatchSmsSpec) {
-        this.sendBatchSmsSpec = sendBatchSmsSpec;
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    /**
+     * get 短信签名名称
+     *
+     * @return
+     */
+    public String getSignId() {
+        return signId;
+    }
+
+    /**
+     * set 短信签名名称
+     *
+     * @param signId
+     */
+    public void setSignId(String signId) {
+        this.signId = signId;
+    }
+
+    /**
+     * get 模板Id
+     *
+     * @return
+     */
+    public String getTemplateId() {
+        return templateId;
+    }
+
+    /**
+     * set 模板Id
+     *
+     * @param templateId
+     */
+    public void setTemplateId(String templateId) {
+        this.templateId = templateId;
+    }
+
+    /**
+     * get 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     *
+     * @return
+     */
+    public List<String> getPhone() {
+        return phone;
+    }
+
+    /**
+     * set 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     *
+     * @param phone
+     */
+    public void setPhone(List<String> phone) {
+        this.phone = phone;
+    }
+
+    /**
+     * get 短信模板变量对应的数据值,Array格式
+     *
+     * @return
+     */
+    public List<String> getParams() {
+        return params;
+    }
+
+    /**
+     * set 短信模板变量对应的数据值,Array格式
+     *
+     * @param params
+     */
+    public void setParams(List<String> params) {
+        this.params = params;
     }
 
     /**
@@ -88,12 +187,52 @@ public class SendBatchSmsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 指定模板群发短信请求参数
+     * set 应用Id
      *
-     * @param sendBatchSmsSpec
+     * @param appId
      */
-    public SendBatchSmsRequest sendBatchSmsSpec(SendBatchSmsSpec sendBatchSmsSpec) {
-        this.sendBatchSmsSpec = sendBatchSmsSpec;
+    public SendBatchSmsRequest appId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+
+    /**
+     * set 短信签名名称
+     *
+     * @param signId
+     */
+    public SendBatchSmsRequest signId(String signId) {
+        this.signId = signId;
+        return this;
+    }
+
+    /**
+     * set 模板Id
+     *
+     * @param templateId
+     */
+    public SendBatchSmsRequest templateId(String templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+
+    /**
+     * set 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     *
+     * @param phone
+     */
+    public SendBatchSmsRequest phone(List<String> phone) {
+        this.phone = phone;
+        return this;
+    }
+
+    /**
+     * set 短信模板变量对应的数据值,Array格式
+     *
+     * @param params
+     */
+    public SendBatchSmsRequest params(List<String> params) {
+        this.params = params;
         return this;
     }
 
@@ -107,5 +246,29 @@ public class SendBatchSmsRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
+    /**
+     * add item to 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     *
+     * @param phone
+     */
+    public void addPhone(String phone) {
+        if (this.phone == null) {
+            this.phone = new ArrayList<>();
+        }
+        this.phone.add(phone);
+    }
+
+    /**
+     * add item to 短信模板变量对应的数据值,Array格式
+     *
+     * @param param
+     */
+    public void addParam(String param) {
+        if (this.params == null) {
+            this.params = new ArrayList<>();
+        }
+        this.params.add(param);
+    }
 
 }

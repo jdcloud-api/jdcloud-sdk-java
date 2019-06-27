@@ -33,6 +33,11 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * app
+     */
+    private String app;
+
+    /**
      * stream
      */
     private String stream;
@@ -43,20 +48,43 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     private String clientIp;
 
     /**
-     * startTimeStamp
+     * nodeIp
      */
-    private Long startTimeStamp;
+    private String nodeIp;
 
     /**
-     * endTimeStamp
+     * 任务创建时间,UTC时间
      */
-    private Long endTimeStamp;
+    private String startTime;
+
+    /**
+     * 任务创建时间,UTC时间
+     */
+    private String endTime;
 
     /**
      * duration
      */
     private Long duration;
 
+
+    /**
+     * get app
+     *
+     * @return
+     */
+    public String getApp() {
+        return app;
+    }
+
+    /**
+     * set app
+     *
+     * @param app
+     */
+    public void setApp(String app) {
+        this.app = app;
+    }
 
     /**
      * get stream
@@ -95,39 +123,57 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     }
 
     /**
-     * get startTimeStamp
+     * get nodeIp
      *
      * @return
      */
-    public Long getStartTimeStamp() {
-        return startTimeStamp;
+    public String getNodeIp() {
+        return nodeIp;
     }
 
     /**
-     * set startTimeStamp
+     * set nodeIp
      *
-     * @param startTimeStamp
+     * @param nodeIp
      */
-    public void setStartTimeStamp(Long startTimeStamp) {
-        this.startTimeStamp = startTimeStamp;
+    public void setNodeIp(String nodeIp) {
+        this.nodeIp = nodeIp;
     }
 
     /**
-     * get endTimeStamp
+     * get 任务创建时间,UTC时间
      *
      * @return
      */
-    public Long getEndTimeStamp() {
-        return endTimeStamp;
+    public String getStartTime() {
+        return startTime;
     }
 
     /**
-     * set endTimeStamp
+     * set 任务创建时间,UTC时间
      *
-     * @param endTimeStamp
+     * @param startTime
      */
-    public void setEndTimeStamp(Long endTimeStamp) {
-        this.endTimeStamp = endTimeStamp;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * get 任务创建时间,UTC时间
+     *
+     * @return
+     */
+    public String getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 任务创建时间,UTC时间
+     *
+     * @param endTime
+     */
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
     /**
@@ -150,6 +196,16 @@ public class PushStreamInfoItem  implements java.io.Serializable {
 
 
     /**
+     * set app
+     *
+     * @param app
+     */
+    public PushStreamInfoItem app(String app) {
+        this.app = app;
+        return this;
+    }
+
+    /**
      * set stream
      *
      * @param stream
@@ -170,22 +226,32 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     }
 
     /**
-     * set startTimeStamp
+     * set nodeIp
      *
-     * @param startTimeStamp
+     * @param nodeIp
      */
-    public PushStreamInfoItem startTimeStamp(Long startTimeStamp) {
-        this.startTimeStamp = startTimeStamp;
+    public PushStreamInfoItem nodeIp(String nodeIp) {
+        this.nodeIp = nodeIp;
         return this;
     }
 
     /**
-     * set endTimeStamp
+     * set 任务创建时间,UTC时间
      *
-     * @param endTimeStamp
+     * @param startTime
      */
-    public PushStreamInfoItem endTimeStamp(Long endTimeStamp) {
-        this.endTimeStamp = endTimeStamp;
+    public PushStreamInfoItem startTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+
+    /**
+     * set 任务创建时间,UTC时间
+     *
+     * @param endTime
+     */
+    public PushStreamInfoItem endTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
 

@@ -48,7 +48,9 @@ public class AddCustomLiveStreamRecordTemplateRequest extends JdcloudRequest imp
     /**
      * 存储桶
 
+     * Required:true
      */
+    @Required
     private String saveBucket;
 
     /**

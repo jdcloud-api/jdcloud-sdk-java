@@ -34,17 +34,17 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * domain
+     * 域名
      */
     private String domain;
 
     /**
-     * cycle
+     * 探测周期，单位分钟
      */
     private Integer cycle;
 
     /**
-     * monitorPath
+     * 探测路径
      */
     private String monitorPath;
 
@@ -55,7 +55,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * get domain
+     * get 域名
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set domain
+     * set 域名
      *
      * @param domain
      */
@@ -73,7 +73,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get cycle
+     * get 探测周期，单位分钟
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set cycle
+     * set 探测周期，单位分钟
      *
      * @param cycle
      */
@@ -91,7 +91,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get monitorPath
+     * get 探测路径
      *
      * @return
      */
@@ -100,7 +100,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set monitorPath
+     * set 探测路径
      *
      * @param monitorPath
      */
@@ -128,7 +128,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * set domain
+     * set 域名
      *
      * @param domain
      */
@@ -138,7 +138,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set cycle
+     * set 探测周期，单位分钟
      *
      * @param cycle
      */
@@ -148,7 +148,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set monitorPath
+     * set 探测路径
      *
      * @param monitorPath
      */

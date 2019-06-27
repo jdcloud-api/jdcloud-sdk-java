@@ -55,7 +55,7 @@ public class UpdateCacheRuleRequest extends JdcloudRequest implements java.io.Se
     private Integer cacheType;
 
     /**
-     * 配置id
+     * 缓存规则配置ID
      */
     private Long configId;
 
@@ -140,7 +140,7 @@ public class UpdateCacheRuleRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 配置id
+     * get 缓存规则配置ID
      *
      * @return
      */
@@ -149,7 +149,7 @@ public class UpdateCacheRuleRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 配置id
+     * set 缓存规则配置ID
      *
      * @param configId
      */
@@ -217,7 +217,7 @@ public class UpdateCacheRuleRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 配置id
+     * set 缓存规则配置ID
      *
      * @param configId
      */

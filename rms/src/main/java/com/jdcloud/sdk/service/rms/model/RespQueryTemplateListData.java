@@ -33,115 +33,48 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * reason参数
-     */
-    private String reason;
-
-    /**
-     * createTime参数
-     */
-    private String createTime;
-
-    /**
-     * contentSize参数
-     */
-    private String contentSize;
-
-    /**
-     * description参数
-     */
-    private String description;
-
-    /**
-     * templateId参数
+     * 短信ID
      */
     private String templateId;
 
     /**
-     * title参数
+     * 短信标题
      */
     private String title;
 
     /**
-     * status参数
+     * 审核状态 0: 审核中 1: 通过 2: 未通过 4:待提交
      */
     private String status;
 
-
     /**
-     * get reason参数
-     *
-     * @return
+     * 审核未通过原因
      */
-    public String getReason() {
-        return reason;
-    }
+    private String reason;
 
     /**
-     * set reason参数
-     *
-     * @param reason
+     * 短信创建时间 yyyy-MM-dd HH:mm:ss
      */
-    public void setReason(String reason) {
-        this.reason = reason;
-    }
+    private String createTime;
 
     /**
-     * get createTime参数
-     *
-     * @return
+     * 短信内容大小
      */
-    public String getCreateTime() {
-        return createTime;
-    }
+    private String contentSize;
 
     /**
-     * set createTime参数
-     *
-     * @param createTime
+     * 资质Id
      */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
+    private String aptitudesId;
 
     /**
-     * get contentSize参数
-     *
-     * @return
+     * 短信描述
      */
-    public String getContentSize() {
-        return contentSize;
-    }
+    private String description;
+
 
     /**
-     * set contentSize参数
-     *
-     * @param contentSize
-     */
-    public void setContentSize(String contentSize) {
-        this.contentSize = contentSize;
-    }
-
-    /**
-     * get description参数
-     *
-     * @return
-     */
-    public String getDescription() {
-        return description;
-    }
-
-    /**
-     * set description参数
-     *
-     * @param description
-     */
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    /**
-     * get templateId参数
+     * get 短信ID
      *
      * @return
      */
@@ -150,7 +83,7 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
     }
 
     /**
-     * set templateId参数
+     * set 短信ID
      *
      * @param templateId
      */
@@ -159,7 +92,7 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
     }
 
     /**
-     * get title参数
+     * get 短信标题
      *
      * @return
      */
@@ -168,7 +101,7 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
     }
 
     /**
-     * set title参数
+     * set 短信标题
      *
      * @param title
      */
@@ -177,7 +110,7 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
     }
 
     /**
-     * get status参数
+     * get 审核状态 0: 审核中 1: 通过 2: 未通过 4:待提交
      *
      * @return
      */
@@ -186,7 +119,7 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
     }
 
     /**
-     * set status参数
+     * set 审核状态 0: 审核中 1: 通过 2: 未通过 4:待提交
      *
      * @param status
      */
@@ -194,49 +127,99 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
         this.status = status;
     }
 
+    /**
+     * get 审核未通过原因
+     *
+     * @return
+     */
+    public String getReason() {
+        return reason;
+    }
 
     /**
-     * set reason参数
+     * set 审核未通过原因
      *
      * @param reason
      */
-    public RespQueryTemplateListData reason(String reason) {
+    public void setReason(String reason) {
         this.reason = reason;
-        return this;
     }
 
     /**
-     * set createTime参数
+     * get 短信创建时间 yyyy-MM-dd HH:mm:ss
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 短信创建时间 yyyy-MM-dd HH:mm:ss
      *
      * @param createTime
      */
-    public RespQueryTemplateListData createTime(String createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
-        return this;
     }
 
     /**
-     * set contentSize参数
+     * get 短信内容大小
+     *
+     * @return
+     */
+    public String getContentSize() {
+        return contentSize;
+    }
+
+    /**
+     * set 短信内容大小
      *
      * @param contentSize
      */
-    public RespQueryTemplateListData contentSize(String contentSize) {
+    public void setContentSize(String contentSize) {
         this.contentSize = contentSize;
-        return this;
     }
 
     /**
-     * set description参数
+     * get 资质Id
+     *
+     * @return
+     */
+    public String getAptitudesId() {
+        return aptitudesId;
+    }
+
+    /**
+     * set 资质Id
+     *
+     * @param aptitudesId
+     */
+    public void setAptitudesId(String aptitudesId) {
+        this.aptitudesId = aptitudesId;
+    }
+
+    /**
+     * get 短信描述
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 短信描述
      *
      * @param description
      */
-    public RespQueryTemplateListData description(String description) {
+    public void setDescription(String description) {
         this.description = description;
-        return this;
     }
 
+
     /**
-     * set templateId参数
+     * set 短信ID
      *
      * @param templateId
      */
@@ -246,7 +229,7 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
     }
 
     /**
-     * set title参数
+     * set 短信标题
      *
      * @param title
      */
@@ -256,12 +239,62 @@ public class RespQueryTemplateListData  implements java.io.Serializable {
     }
 
     /**
-     * set status参数
+     * set 审核状态 0: 审核中 1: 通过 2: 未通过 4:待提交
      *
      * @param status
      */
     public RespQueryTemplateListData status(String status) {
         this.status = status;
+        return this;
+    }
+
+    /**
+     * set 审核未通过原因
+     *
+     * @param reason
+     */
+    public RespQueryTemplateListData reason(String reason) {
+        this.reason = reason;
+        return this;
+    }
+
+    /**
+     * set 短信创建时间 yyyy-MM-dd HH:mm:ss
+     *
+     * @param createTime
+     */
+    public RespQueryTemplateListData createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 短信内容大小
+     *
+     * @param contentSize
+     */
+    public RespQueryTemplateListData contentSize(String contentSize) {
+        this.contentSize = contentSize;
+        return this;
+    }
+
+    /**
+     * set 资质Id
+     *
+     * @param aptitudesId
+     */
+    public RespQueryTemplateListData aptitudesId(String aptitudesId) {
+        this.aptitudesId = aptitudesId;
+        return this;
+    }
+
+    /**
+     * set 短信描述
+     *
+     * @param description
+     */
+    public RespQueryTemplateListData description(String description) {
+        this.description = description;
         return this;
     }
 

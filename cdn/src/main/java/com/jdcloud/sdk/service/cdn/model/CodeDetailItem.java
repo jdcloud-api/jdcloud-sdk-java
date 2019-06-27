@@ -40,72 +40,72 @@ public class CodeDetailItem  implements java.io.Serializable {
     /**
      * ok
      */
-    private Long ok;
+    private Double ok;
 
     /**
      * badGateway
      */
-    private Long badGateway;
+    private Double badGateway;
 
     /**
      * badRequest
      */
-    private Long badRequest;
+    private Double badRequest;
 
     /**
      * forbidden
      */
-    private Long forbidden;
+    private Double forbidden;
 
     /**
      * found
      */
-    private Long found;
+    private Double found;
 
     /**
      * gatewayTimeout
      */
-    private Long gatewayTimeout;
+    private Double gatewayTimeout;
 
     /**
      * internalServerError
      */
-    private Long internalServerError;
+    private Double internalServerError;
 
     /**
      * movedPermanently
      */
-    private Long movedPermanently;
+    private Double movedPermanently;
 
     /**
      * notFound
      */
-    private Long notFound;
+    private Double notFound;
 
     /**
      * notModified
      */
-    private Long notModified;
+    private Double notModified;
 
     /**
      * partialContent
      */
-    private Long partialContent;
+    private Double partialContent;
 
     /**
      * requestedRangeNotSuitable
      */
-    private Long requestedRangeNotSuitable;
+    private Double requestedRangeNotSuitable;
 
     /**
      * other
      */
-    private Long other;
+    private Double other;
 
     /**
      * serviceUnavailable
      */
-    private Long serviceUnavailable;
+    private Double serviceUnavailable;
 
 
     /**
@@ -131,7 +131,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getOk() {
+    public Double getOk() {
         return ok;
     }
 
@@ -140,7 +140,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param ok
      */
-    public void setOk(Long ok) {
+    public void setOk(Double ok) {
         this.ok = ok;
     }
 
@@ -149,7 +149,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getBadGateway() {
+    public Double getBadGateway() {
         return badGateway;
     }
 
@@ -158,7 +158,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param badGateway
      */
-    public void setBadGateway(Long badGateway) {
+    public void setBadGateway(Double badGateway) {
         this.badGateway = badGateway;
     }
 
@@ -167,7 +167,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getBadRequest() {
+    public Double getBadRequest() {
         return badRequest;
     }
 
@@ -176,7 +176,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param badRequest
      */
-    public void setBadRequest(Long badRequest) {
+    public void setBadRequest(Double badRequest) {
         this.badRequest = badRequest;
     }
 
@@ -185,7 +185,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getForbidden() {
+    public Double getForbidden() {
         return forbidden;
     }
 
@@ -194,7 +194,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param forbidden
      */
-    public void setForbidden(Long forbidden) {
+    public void setForbidden(Double forbidden) {
         this.forbidden = forbidden;
     }
 
@@ -203,7 +203,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getFound() {
+    public Double getFound() {
         return found;
     }
 
@@ -212,7 +212,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param found
      */
-    public void setFound(Long found) {
+    public void setFound(Double found) {
         this.found = found;
     }
 
@@ -221,7 +221,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getGatewayTimeout() {
+    public Double getGatewayTimeout() {
         return gatewayTimeout;
     }
 
@@ -230,7 +230,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param gatewayTimeout
      */
-    public void setGatewayTimeout(Long gatewayTimeout) {
+    public void setGatewayTimeout(Double gatewayTimeout) {
         this.gatewayTimeout = gatewayTimeout;
     }
 
@@ -239,7 +239,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getInternalServerError() {
+    public Double getInternalServerError() {
         return internalServerError;
     }
 
@@ -248,7 +248,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param internalServerError
      */
-    public void setInternalServerError(Long internalServerError) {
+    public void setInternalServerError(Double internalServerError) {
         this.internalServerError = internalServerError;
     }
 
@@ -257,7 +257,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getMovedPermanently() {
+    public Double getMovedPermanently() {
         return movedPermanently;
     }
 
@@ -266,7 +266,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param movedPermanently
      */
-    public void setMovedPermanently(Long movedPermanently) {
+    public void setMovedPermanently(Double movedPermanently) {
         this.movedPermanently = movedPermanently;
     }
 
@@ -275,7 +275,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getNotFound() {
+    public Double getNotFound() {
         return notFound;
     }
 
@@ -284,7 +284,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param notFound
      */
-    public void setNotFound(Long notFound) {
+    public void setNotFound(Double notFound) {
         this.notFound = notFound;
     }
 
@@ -293,7 +293,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getNotModified() {
+    public Double getNotModified() {
         return notModified;
     }
 
@@ -302,7 +302,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param notModified
      */
-    public void setNotModified(Long notModified) {
+    public void setNotModified(Double notModified) {
         this.notModified = notModified;
     }
 
@@ -311,7 +311,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getPartialContent() {
+    public Double getPartialContent() {
         return partialContent;
     }
 
@@ -320,7 +320,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param partialContent
      */
-    public void setPartialContent(Long partialContent) {
+    public void setPartialContent(Double partialContent) {
         this.partialContent = partialContent;
     }
 
@@ -329,7 +329,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getRequestedRangeNotSuitable() {
+    public Double getRequestedRangeNotSuitable() {
         return requestedRangeNotSuitable;
     }
 
@@ -338,7 +338,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param requestedRangeNotSuitable
      */
-    public void setRequestedRangeNotSuitable(Long requestedRangeNotSuitable) {
+    public void setRequestedRangeNotSuitable(Double requestedRangeNotSuitable) {
         this.requestedRangeNotSuitable = requestedRangeNotSuitable;
     }
 
@@ -347,7 +347,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getOther() {
+    public Double getOther() {
         return other;
     }
 
@@ -356,7 +356,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param other
      */
-    public void setOther(Long other) {
+    public void setOther(Double other) {
         this.other = other;
     }
 
@@ -365,7 +365,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getServiceUnavailable() {
+    public Double getServiceUnavailable() {
         return serviceUnavailable;
     }
 
@@ -374,7 +374,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param serviceUnavailable
      */
-    public void setServiceUnavailable(Long serviceUnavailable) {
+    public void setServiceUnavailable(Double serviceUnavailable) {
         this.serviceUnavailable = serviceUnavailable;
     }
 
@@ -394,7 +394,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param ok
      */
-    public CodeDetailItem ok(Long ok) {
+    public CodeDetailItem ok(Double ok) {
         this.ok = ok;
         return this;
     }
@@ -404,7 +404,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param badGateway
      */
-    public CodeDetailItem badGateway(Long badGateway) {
+    public CodeDetailItem badGateway(Double badGateway) {
         this.badGateway = badGateway;
         return this;
     }
@@ -414,7 +414,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param badRequest
      */
-    public CodeDetailItem badRequest(Long badRequest) {
+    public CodeDetailItem badRequest(Double badRequest) {
         this.badRequest = badRequest;
         return this;
     }
@@ -424,7 +424,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param forbidden
      */
-    public CodeDetailItem forbidden(Long forbidden) {
+    public CodeDetailItem forbidden(Double forbidden) {
         this.forbidden = forbidden;
         return this;
     }
@@ -434,7 +434,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param found
      */
-    public CodeDetailItem found(Long found) {
+    public CodeDetailItem found(Double found) {
         this.found = found;
         return this;
     }
@@ -444,7 +444,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param gatewayTimeout
      */
-    public CodeDetailItem gatewayTimeout(Long gatewayTimeout) {
+    public CodeDetailItem gatewayTimeout(Double gatewayTimeout) {
         this.gatewayTimeout = gatewayTimeout;
         return this;
     }
@@ -454,7 +454,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param internalServerError
      */
-    public CodeDetailItem internalServerError(Long internalServerError) {
+    public CodeDetailItem internalServerError(Double internalServerError) {
         this.internalServerError = internalServerError;
         return this;
     }
@@ -464,7 +464,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param movedPermanently
      */
-    public CodeDetailItem movedPermanently(Long movedPermanently) {
+    public CodeDetailItem movedPermanently(Double movedPermanently) {
         this.movedPermanently = movedPermanently;
         return this;
     }
@@ -474,7 +474,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param notFound
      */
-    public CodeDetailItem notFound(Long notFound) {
+    public CodeDetailItem notFound(Double notFound) {
         this.notFound = notFound;
         return this;
     }
@@ -484,7 +484,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param notModified
      */
-    public CodeDetailItem notModified(Long notModified) {
+    public CodeDetailItem notModified(Double notModified) {
         this.notModified = notModified;
         return this;
     }
@@ -494,7 +494,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param partialContent
      */
-    public CodeDetailItem partialContent(Long partialContent) {
+    public CodeDetailItem partialContent(Double partialContent) {
         this.partialContent = partialContent;
         return this;
     }
@@ -504,7 +504,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param requestedRangeNotSuitable
      */
-    public CodeDetailItem requestedRangeNotSuitable(Long requestedRangeNotSuitable) {
+    public CodeDetailItem requestedRangeNotSuitable(Double requestedRangeNotSuitable) {
         this.requestedRangeNotSuitable = requestedRangeNotSuitable;
         return this;
     }
@@ -514,7 +514,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param other
      */
-    public CodeDetailItem other(Long other) {
+    public CodeDetailItem other(Double other) {
         this.other = other;
         return this;
     }
@@ -524,7 +524,7 @@ public class CodeDetailItem  implements java.io.Serializable {
      *
      * @param serviceUnavailable
      */
-    public CodeDetailItem serviceUnavailable(Long serviceUnavailable) {
+    public CodeDetailItem serviceUnavailable(Double serviceUnavailable) {
         this.serviceUnavailable = serviceUnavailable;
         return this;
     }

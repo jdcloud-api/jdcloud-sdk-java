@@ -45,7 +45,7 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
     /**
      * 禁播类型:forever永不禁播limit限时禁播
      */
-    private String type;
+    private String forbiddenType;
 
     /**
      * 禁播时长
@@ -61,6 +61,11 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
      * 结束禁播时间
      */
     private String endTime;
+
+    /**
+     * 禁播类型说明
+     */
+    private String forbiddenTypeDesc;
 
 
     /**
@@ -104,17 +109,17 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
      *
      * @return
      */
-    public String getType() {
-        return type;
+    public String getForbiddenType() {
+        return forbiddenType;
     }
 
     /**
      * set 禁播类型:forever永不禁播limit限时禁播
      *
-     * @param type
+     * @param forbiddenType
      */
-    public void setType(String type) {
-        this.type = type;
+    public void setForbiddenType(String forbiddenType) {
+        this.forbiddenType = forbiddenType;
     }
 
     /**
@@ -171,6 +176,24 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+    /**
+     * get 禁播类型说明
+     *
+     * @return
+     */
+    public String getForbiddenTypeDesc() {
+        return forbiddenTypeDesc;
+    }
+
+    /**
+     * set 禁播类型说明
+     *
+     * @param forbiddenTypeDesc
+     */
+    public void setForbiddenTypeDesc(String forbiddenTypeDesc) {
+        this.forbiddenTypeDesc = forbiddenTypeDesc;
+    }
+
 
     /**
      * set 禁播流
@@ -195,10 +218,10 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
     /**
      * set 禁播类型:forever永不禁播limit限时禁播
      *
-     * @param type
+     * @param forbiddenType
      */
-    public ForbiddenStreamHistoryItem type(String type) {
-        this.type = type;
+    public ForbiddenStreamHistoryItem forbiddenType(String forbiddenType) {
+        this.forbiddenType = forbiddenType;
         return this;
     }
 
@@ -229,6 +252,16 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
      */
     public ForbiddenStreamHistoryItem endTime(String endTime) {
         this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 禁播类型说明
+     *
+     * @param forbiddenTypeDesc
+     */
+    public ForbiddenStreamHistoryItem forbiddenTypeDesc(String forbiddenTypeDesc) {
+        this.forbiddenTypeDesc = forbiddenTypeDesc;
         return this;
     }
 

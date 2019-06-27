@@ -57,12 +57,12 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     private List<DomainSourceInfo> domainSource;
 
     /**
-     * ossSource
+     * oss回源域名
      */
     private String ossSource;
 
     /**
-     * defaultSourceHost
+     * 默认回源host
      */
     private String defaultSourceHost;
 
@@ -147,7 +147,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get ossSource
+     * get oss回源域名
      *
      * @return
      */
@@ -156,7 +156,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set ossSource
+     * set oss回源域名
      *
      * @param ossSource
      */
@@ -165,7 +165,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get defaultSourceHost
+     * get 默认回源host
      *
      * @return
      */
@@ -174,7 +174,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set defaultSourceHost
+     * set 默认回源host
      *
      * @param defaultSourceHost
      */
@@ -242,7 +242,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set ossSource
+     * set oss回源域名
      *
      * @param ossSource
      */
@@ -252,7 +252,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set defaultSourceHost
+     * set 默认回源host
      *
      * @param defaultSourceHost
      */

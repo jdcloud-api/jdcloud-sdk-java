@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 短信发送接口
+ * Send-Message-Related-APIs
  * 短信发送相关API
  *
  * OpenAPI spec version: v1
@@ -25,7 +25,6 @@
 package com.jdcloud.sdk.service.sms.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.sms.model.PullMtMsgByMobileSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,11 +35,18 @@ public class PullMtMsgByMobileRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 拉取单个手机短信状态请求参数
+     * 应用Id
      * Required:true
      */
     @Required
-    private PullMtMsgByMobileSpec pullMtMsgByMobileSpec;
+    private String appId;
+
+    /**
+     * 手机号码
+     * Required:true
+     */
+    @Required
+    private String phone;
 
     /**
      * Region ID
@@ -51,21 +57,39 @@ public class PullMtMsgByMobileRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 拉取单个手机短信状态请求参数
+     * get 应用Id
      *
      * @return
      */
-    public PullMtMsgByMobileSpec getPullMtMsgByMobileSpec() {
-        return pullMtMsgByMobileSpec;
+    public String getAppId() {
+        return appId;
     }
 
     /**
-     * set 拉取单个手机短信状态请求参数
+     * set 应用Id
      *
-     * @param pullMtMsgByMobileSpec
+     * @param appId
      */
-    public void setPullMtMsgByMobileSpec(PullMtMsgByMobileSpec pullMtMsgByMobileSpec) {
-        this.pullMtMsgByMobileSpec = pullMtMsgByMobileSpec;
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    /**
+     * get 手机号码
+     *
+     * @return
+     */
+    public String getPhone() {
+        return phone;
+    }
+
+    /**
+     * set 手机号码
+     *
+     * @param phone
+     */
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     /**
@@ -88,12 +112,22 @@ public class PullMtMsgByMobileRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 拉取单个手机短信状态请求参数
+     * set 应用Id
      *
-     * @param pullMtMsgByMobileSpec
+     * @param appId
      */
-    public PullMtMsgByMobileRequest pullMtMsgByMobileSpec(PullMtMsgByMobileSpec pullMtMsgByMobileSpec) {
-        this.pullMtMsgByMobileSpec = pullMtMsgByMobileSpec;
+    public PullMtMsgByMobileRequest appId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+
+    /**
+     * set 手机号码
+     *
+     * @param phone
+     */
+    public PullMtMsgByMobileRequest phone(String phone) {
+        this.phone = phone;
         return this;
     }
 

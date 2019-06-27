@@ -36,6 +36,13 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     private static final long serialVersionUID = 1L;
 
     /**
+     * 水印位置
+- 取值范围：左上：1，右上：3， 左下：7，右下：9，默认：1
+
+     */
+    private Integer position;
+
+    /**
      * x轴偏移量
 - 单位: 像素
 
@@ -98,6 +105,28 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     @Required
     private String url;
 
+
+    /**
+     * get 水印位置
+- 取值范围：左上：1，右上：3， 左下：7，右下：9，默认：1
+
+     *
+     * @return
+     */
+    public Integer getPosition() {
+        return position;
+    }
+
+    /**
+     * set 水印位置
+- 取值范围：左上：1，右上：3， 左下：7，右下：9，默认：1
+
+     *
+     * @param position
+     */
+    public void setPosition(Integer position) {
+        this.position = position;
+    }
 
     /**
      * get x轴偏移量
@@ -257,6 +286,18 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
         this.url = url;
     }
 
+
+    /**
+     * set 水印位置
+- 取值范围：左上：1，右上：3， 左下：7，右下：9，默认：1
+
+     *
+     * @param position
+     */
+    public AddCustomLiveStreamWatermarkTemplateRequest position(Integer position) {
+        this.position = position;
+        return this;
+    }
 
     /**
      * set x轴偏移量

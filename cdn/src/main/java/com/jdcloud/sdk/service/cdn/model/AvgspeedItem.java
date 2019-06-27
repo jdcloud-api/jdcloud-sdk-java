@@ -40,12 +40,22 @@ public class AvgspeedItem  implements java.io.Serializable {
     /**
      * avgspeed
      */
-    private Long avgspeed;
+    private Double avgspeed;
+
+    /**
+     * avgspeedUnit
+     */
+    private String avgspeedUnit;
 
     /**
      * firstpkgtime
      */
     private Double firstpkgtime;
+
+    /**
+     * firstpkgtimeUnit
+     */
+    private String firstpkgtimeUnit;
 
     /**
      * errorRatio
@@ -56,6 +66,11 @@ public class AvgspeedItem  implements java.io.Serializable {
      * flow
      */
     private Double flow;
+
+    /**
+     * flowUnit
+     */
+    private String flowUnit;
 
     /**
      * flowPercent
@@ -70,7 +85,7 @@ public class AvgspeedItem  implements java.io.Serializable {
     /**
      * hitRatio
      */
-    private Integer hitRatio;
+    private Double hitRatio;
 
 
     /**
@@ -96,7 +111,7 @@ public class AvgspeedItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getAvgspeed() {
+    public Double getAvgspeed() {
         return avgspeed;
     }
 
@@ -105,8 +120,26 @@ public class AvgspeedItem  implements java.io.Serializable {
      *
      * @param avgspeed
      */
-    public void setAvgspeed(Long avgspeed) {
+    public void setAvgspeed(Double avgspeed) {
         this.avgspeed = avgspeed;
+    }
+
+    /**
+     * get avgspeedUnit
+     *
+     * @return
+     */
+    public String getAvgspeedUnit() {
+        return avgspeedUnit;
+    }
+
+    /**
+     * set avgspeedUnit
+     *
+     * @param avgspeedUnit
+     */
+    public void setAvgspeedUnit(String avgspeedUnit) {
+        this.avgspeedUnit = avgspeedUnit;
     }
 
     /**
@@ -125,6 +158,24 @@ public class AvgspeedItem  implements java.io.Serializable {
      */
     public void setFirstpkgtime(Double firstpkgtime) {
         this.firstpkgtime = firstpkgtime;
+    }
+
+    /**
+     * get firstpkgtimeUnit
+     *
+     * @return
+     */
+    public String getFirstpkgtimeUnit() {
+        return firstpkgtimeUnit;
+    }
+
+    /**
+     * set firstpkgtimeUnit
+     *
+     * @param firstpkgtimeUnit
+     */
+    public void setFirstpkgtimeUnit(String firstpkgtimeUnit) {
+        this.firstpkgtimeUnit = firstpkgtimeUnit;
     }
 
     /**
@@ -161,6 +212,24 @@ public class AvgspeedItem  implements java.io.Serializable {
      */
     public void setFlow(Double flow) {
         this.flow = flow;
+    }
+
+    /**
+     * get flowUnit
+     *
+     * @return
+     */
+    public String getFlowUnit() {
+        return flowUnit;
+    }
+
+    /**
+     * set flowUnit
+     *
+     * @param flowUnit
+     */
+    public void setFlowUnit(String flowUnit) {
+        this.flowUnit = flowUnit;
     }
 
     /**
@@ -204,7 +273,7 @@ public class AvgspeedItem  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getHitRatio() {
+    public Double getHitRatio() {
         return hitRatio;
     }
 
@@ -213,7 +282,7 @@ public class AvgspeedItem  implements java.io.Serializable {
      *
      * @param hitRatio
      */
-    public void setHitRatio(Integer hitRatio) {
+    public void setHitRatio(Double hitRatio) {
         this.hitRatio = hitRatio;
     }
 
@@ -233,8 +302,18 @@ public class AvgspeedItem  implements java.io.Serializable {
      *
      * @param avgspeed
      */
-    public AvgspeedItem avgspeed(Long avgspeed) {
+    public AvgspeedItem avgspeed(Double avgspeed) {
         this.avgspeed = avgspeed;
+        return this;
+    }
+
+    /**
+     * set avgspeedUnit
+     *
+     * @param avgspeedUnit
+     */
+    public AvgspeedItem avgspeedUnit(String avgspeedUnit) {
+        this.avgspeedUnit = avgspeedUnit;
         return this;
     }
 
@@ -245,6 +324,16 @@ public class AvgspeedItem  implements java.io.Serializable {
      */
     public AvgspeedItem firstpkgtime(Double firstpkgtime) {
         this.firstpkgtime = firstpkgtime;
+        return this;
+    }
+
+    /**
+     * set firstpkgtimeUnit
+     *
+     * @param firstpkgtimeUnit
+     */
+    public AvgspeedItem firstpkgtimeUnit(String firstpkgtimeUnit) {
+        this.firstpkgtimeUnit = firstpkgtimeUnit;
         return this;
     }
 
@@ -265,6 +354,16 @@ public class AvgspeedItem  implements java.io.Serializable {
      */
     public AvgspeedItem flow(Double flow) {
         this.flow = flow;
+        return this;
+    }
+
+    /**
+     * set flowUnit
+     *
+     * @param flowUnit
+     */
+    public AvgspeedItem flowUnit(String flowUnit) {
+        this.flowUnit = flowUnit;
         return this;
     }
 
@@ -293,7 +392,7 @@ public class AvgspeedItem  implements java.io.Serializable {
      *
      * @param hitRatio
      */
-    public AvgspeedItem hitRatio(Integer hitRatio) {
+    public AvgspeedItem hitRatio(Double hitRatio) {
         this.hitRatio = hitRatio;
         return this;
     }

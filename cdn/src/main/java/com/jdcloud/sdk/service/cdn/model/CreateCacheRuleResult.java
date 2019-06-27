@@ -34,13 +34,13 @@ public class CreateCacheRuleResult extends JdcloudResult implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * configId
+     * 缓存规则配置ID
      */
     private Long configId;
 
 
     /**
-     * get configId
+     * get 缓存规则配置ID
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class CreateCacheRuleResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set configId
+     * set 缓存规则配置ID
      *
      * @param configId
      */
@@ -59,7 +59,7 @@ public class CreateCacheRuleResult extends JdcloudResult implements java.io.Seri
 
 
     /**
-     * set configId
+     * set 缓存规则配置ID
      *
      * @param configId
      */
