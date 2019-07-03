@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamSnapshotConfi
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeDomainOnlineStreamRequest;
+import com.jdcloud.sdk.service.live.model.DescribeDomainOnlineStreamResponse;
+import com.jdcloud.sdk.service.live.client.DescribeDomainOnlineStreamExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamListRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamListResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveTranscodeStreamListExecutor;
@@ -353,10 +356,10 @@ public class LiveClient extends JdcloudClient {
       sd (h.264/960*540/24f)
       hd (h.264/1280*720/25f)
       shd (h.264/1920*1080/30f)
-      ld.265 (h.265/640*360/15f)
-      sd.265 (h.265/960*540/24f)
-      hd.265 (h.265/1280*720/25f)
-      shd.265 (h.265/1920*1080/30f)
+      ld-265 (h-265/640*360/15f)
+      sd-265 (h-265/960*540/24f)
+      hd-265 (h-265/1280*720/25f)
+      shd-265 (h-265/1920*1080/30f)
 
      *
      * @param request
@@ -365,6 +368,17 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeCustomLiveStreamTranscodeTemplateResponse describeCustomLiveStreamTranscodeTemplate(DescribeCustomLiveStreamTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new DescribeCustomLiveStreamTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询在线流列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDomainOnlineStreamResponse describeDomainOnlineStream(DescribeDomainOnlineStreamRequest request) throws JdcloudSdkException {
+        return new DescribeDomainOnlineStreamExecutor().client(this).execute(request);
     }
 
     /**
@@ -1303,10 +1317,10 @@ public class LiveClient extends JdcloudClient {
     sd (h.264/960*540/24f)
     hd (h.264/1280*720/25f)
     shd (h.264/1920*1080/30f)
-    ld.265 (h.265/640*360/15f)
-    sd.265 (h.265/960*540/24f)
-    hd.265 (h.265/1280*720/25f)
-    shd.265 (h.265/1920*1080/30f)
+    ld-265 (h-265/640*360/15f)
+    sd-265 (h-265/960*540/24f)
+    hd-265 (h-265/1280*720/25f)
+    shd-265 (h-265/1920*1080/30f)
 
      *
      * @param request

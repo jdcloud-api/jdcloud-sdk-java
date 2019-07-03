@@ -24,90 +24,64 @@
 
 package com.jdcloud.sdk.service.live.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.live.model.PublishOnlineStreamResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * liveTranscodeStreamResult
+ * 查询在线流列表
  */
-public class LiveTranscodeStreamResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeDomainOnlineStreamResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 流名称
-
+     * dataList
      */
-    private String streamName;
-
-    /**
-     * 流状态
-
-     */
-    private String status;
+    private List<PublishOnlineStreamResult> dataList;
 
 
     /**
-     * get 流名称
-
+     * get dataList
      *
      * @return
      */
-    public String getStreamName() {
-        return streamName;
+    public List<PublishOnlineStreamResult> getDataList() {
+        return dataList;
     }
 
     /**
-     * set 流名称
-
+     * set dataList
      *
-     * @param streamName
+     * @param dataList
      */
-    public void setStreamName(String streamName) {
-        this.streamName = streamName;
-    }
-
-    /**
-     * get 流状态
-
-     *
-     * @return
-     */
-    public String getStatus() {
-        return status;
-    }
-
-    /**
-     * set 流状态
-
-     *
-     * @param status
-     */
-    public void setStatus(String status) {
-        this.status = status;
+    public void setDataList(List<PublishOnlineStreamResult> dataList) {
+        this.dataList = dataList;
     }
 
 
     /**
-     * set 流名称
-
+     * set dataList
      *
-     * @param streamName
+     * @param dataList
      */
-    public LiveTranscodeStreamResult streamName(String streamName) {
-        this.streamName = streamName;
+    public DescribeDomainOnlineStreamResult dataList(List<PublishOnlineStreamResult> dataList) {
+        this.dataList = dataList;
         return this;
     }
 
+
     /**
-     * set 流状态
-
+     * add item to dataList
      *
-     * @param status
+     * @param dataList
      */
-    public LiveTranscodeStreamResult status(String status) {
-        this.status = status;
-        return this;
+    public void addDataList(PublishOnlineStreamResult dataList) {
+        if (this.dataList == null) {
+            this.dataList = new ArrayList<>();
+        }
+        this.dataList.add(dataList);
     }
-
 
 }

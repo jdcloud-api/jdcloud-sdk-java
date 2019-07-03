@@ -78,6 +78,11 @@ public class QueryInstanceParam  implements java.io.Serializable {
     private String instanceId;
 
     /**
+     * 主机绑定的内网ip地址
+     */
+    private String ipAddress;
+
+    /**
      * 资源计费类型 1:按配置,3:包年包月,默认不筛选
      */
     private String billingType;
@@ -228,6 +233,24 @@ public class QueryInstanceParam  implements java.io.Serializable {
     }
 
     /**
+     * get 主机绑定的内网ip地址
+     *
+     * @return
+     */
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    /**
+     * set 主机绑定的内网ip地址
+     *
+     * @param ipAddress
+     */
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+    }
+
+    /**
      * get 资源计费类型 1:按配置,3:包年包月,默认不筛选
      *
      * @return
@@ -323,6 +346,16 @@ public class QueryInstanceParam  implements java.io.Serializable {
      */
     public QueryInstanceParam instanceId(String instanceId) {
         this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 主机绑定的内网ip地址
+     *
+     * @param ipAddress
+     */
+    public QueryInstanceParam ipAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
         return this;
     }
 

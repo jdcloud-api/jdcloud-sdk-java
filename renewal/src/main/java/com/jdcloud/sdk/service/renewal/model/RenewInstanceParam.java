@@ -81,6 +81,11 @@ public class RenewInstanceParam  implements java.io.Serializable {
     private Integer unifyDate;
 
     /**
+     * 是否自动支付 true-是 false-否（默认为true）
+     */
+    private Boolean autoPay;
+
+    /**
      * 回调地址
      */
     private String returnURL;
@@ -213,6 +218,24 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
+     * get 是否自动支付 true-是 false-否（默认为true）
+     *
+     * @return
+     */
+    public Boolean getAutoPay() {
+        return autoPay;
+    }
+
+    /**
+     * set 是否自动支付 true-是 false-否（默认为true）
+     *
+     * @param autoPay
+     */
+    public void setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+    }
+
+    /**
      * get 回调地址
      *
      * @return
@@ -298,6 +321,16 @@ public class RenewInstanceParam  implements java.io.Serializable {
      */
     public RenewInstanceParam unifyDate(Integer unifyDate) {
         this.unifyDate = unifyDate;
+        return this;
+    }
+
+    /**
+     * set 是否自动支付 true-是 false-否（默认为true）
+     *
+     * @param autoPay
+     */
+    public RenewInstanceParam autoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
 

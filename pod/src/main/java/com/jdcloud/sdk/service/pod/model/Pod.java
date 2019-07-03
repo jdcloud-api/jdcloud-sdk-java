@@ -131,6 +131,11 @@ public class Pod  implements java.io.Serializable {
     private NetworkInterfaceAttachment primaryNetworkInterface;
 
     /**
+     * tags
+     */
+    private List<Tag> tags;
+
+    /**
      * 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
      */
     private Charge charge;
@@ -484,6 +489,24 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
+     * get tags
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
+    /**
      * get 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
      *
      * @return
@@ -711,6 +734,16 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
+     * set tags
+     *
+     * @param tags
+     */
+    public Pod tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
      *
      * @param charge
@@ -765,6 +798,18 @@ public class Pod  implements java.io.Serializable {
             this.containers = new ArrayList<>();
         }
         this.containers.add(container);
+    }
+
+    /**
+     * add item to tags
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }
