@@ -38,27 +38,22 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 模板ID
-     */
-    private Long id;
-
-    /**
      * 模板名称
      */
     private String name;
 
     /**
-     * 视频参数
+     * video
      */
     private Video video;
 
     /**
-     * 音频参数
+     * audio
      */
     private Audio audio;
 
     /**
-     * 封装配置
+     * encapsulation
      */
     private Encapsulation encapsulation;
 
@@ -74,24 +69,6 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     @Required
     private Long templateId;
 
-
-    /**
-     * get 模板ID
-     *
-     * @return
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * set 模板ID
-     *
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * get 模板名称
@@ -112,7 +89,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 视频参数
+     * get video
      *
      * @return
      */
@@ -121,7 +98,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 视频参数
+     * set video
      *
      * @param video
      */
@@ -130,7 +107,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 音频参数
+     * get audio
      *
      * @return
      */
@@ -139,7 +116,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 音频参数
+     * set audio
      *
      * @param audio
      */
@@ -148,7 +125,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 封装配置
+     * get encapsulation
      *
      * @return
      */
@@ -157,7 +134,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 封装配置
+     * set encapsulation
      *
      * @param encapsulation
      */
@@ -203,16 +180,6 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 模板ID
-     *
-     * @param id
-     */
-    public UpdateTranscodeTemplateRequest id(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    /**
      * set 模板名称
      *
      * @param name
@@ -223,7 +190,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 视频参数
+     * set video
      *
      * @param video
      */
@@ -233,7 +200,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 音频参数
+     * set audio
      *
      * @param audio
      */
@@ -243,7 +210,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 封装配置
+     * set encapsulation
      *
      * @param encapsulation
      */

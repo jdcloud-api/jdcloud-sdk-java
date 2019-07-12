@@ -35,11 +35,6 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 水印ID
-     */
-    private Long id;
-
-    /**
      * 水印名称
      */
     private String name;
@@ -52,12 +47,12 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     /**
      * 宽度
      */
-    private Integer width;
+    private String width;
 
     /**
      * 高度
      */
-    private Integer height;
+    private String height;
 
     /**
      * 水印位置
@@ -86,24 +81,6 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     @Required
     private Long watermarkId;
 
-
-    /**
-     * get 水印ID
-     *
-     * @return
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * set 水印ID
-     *
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * get 水印名称
@@ -146,7 +123,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public Integer getWidth() {
+    public String getWidth() {
         return width;
     }
 
@@ -155,7 +132,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @param width
      */
-    public void setWidth(Integer width) {
+    public void setWidth(String width) {
         this.width = width;
     }
 
@@ -164,7 +141,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public Integer getHeight() {
+    public String getHeight() {
         return height;
     }
 
@@ -173,7 +150,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @param height
      */
-    public void setHeight(Integer height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
@@ -269,16 +246,6 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 水印ID
-     *
-     * @param id
-     */
-    public UpdateWatermarkRequest id(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    /**
      * set 水印名称
      *
      * @param name
@@ -303,7 +270,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @param width
      */
-    public UpdateWatermarkRequest width(Integer width) {
+    public UpdateWatermarkRequest width(String width) {
         this.width = width;
         return this;
     }
@@ -313,7 +280,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @param height
      */
-    public UpdateWatermarkRequest height(Integer height) {
+    public UpdateWatermarkRequest height(String height) {
         this.height = height;
         return this;
     }

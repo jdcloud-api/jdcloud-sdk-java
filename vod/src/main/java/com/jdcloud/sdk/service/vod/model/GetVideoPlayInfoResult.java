@@ -38,36 +38,36 @@ public class GetVideoPlayInfoResult extends JdcloudResult implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * videoInfo
+     * baseInfo
      */
-    private VideoBaseInfo videoInfo;
+    private VideoBaseInfo baseInfo;
 
     /**
-     * 播放信息列表
+     * playInfoList
      */
     private List<VideoPlayInfo> playInfoList;
 
 
     /**
-     * get videoInfo
+     * get baseInfo
      *
      * @return
      */
-    public VideoBaseInfo getVideoInfo() {
-        return videoInfo;
+    public VideoBaseInfo getBaseInfo() {
+        return baseInfo;
     }
 
     /**
-     * set videoInfo
+     * set baseInfo
      *
-     * @param videoInfo
+     * @param baseInfo
      */
-    public void setVideoInfo(VideoBaseInfo videoInfo) {
-        this.videoInfo = videoInfo;
+    public void setBaseInfo(VideoBaseInfo baseInfo) {
+        this.baseInfo = baseInfo;
     }
 
     /**
-     * get 播放信息列表
+     * get playInfoList
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class GetVideoPlayInfoResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 播放信息列表
+     * set playInfoList
      *
      * @param playInfoList
      */
@@ -86,17 +86,17 @@ public class GetVideoPlayInfoResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set videoInfo
+     * set baseInfo
      *
-     * @param videoInfo
+     * @param baseInfo
      */
-    public GetVideoPlayInfoResult videoInfo(VideoBaseInfo videoInfo) {
-        this.videoInfo = videoInfo;
+    public GetVideoPlayInfoResult baseInfo(VideoBaseInfo baseInfo) {
+        this.baseInfo = baseInfo;
         return this;
     }
 
     /**
-     * set 播放信息列表
+     * set playInfoList
      *
      * @param playInfoList
      */
@@ -107,7 +107,7 @@ public class GetVideoPlayInfoResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * add item to 播放信息列表
+     * add item to playInfoList
      *
      * @param playInfoList
      */

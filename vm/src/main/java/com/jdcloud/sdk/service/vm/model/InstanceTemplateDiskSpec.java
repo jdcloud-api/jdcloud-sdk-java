@@ -33,12 +33,12 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云硬盘类型，取值为 ssd 或 premium-hdd
+     * 云硬盘类型，取值为ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
      */
     private String diskType;
 
     /**
-     * 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+     * 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
      */
     private Integer diskSizeGB;
 
@@ -49,7 +49,7 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
 
 
     /**
-     * get 云硬盘类型，取值为 ssd 或 premium-hdd
+     * get 云硬盘类型，取值为ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘类型，取值为 ssd 或 premium-hdd
+     * set 云硬盘类型，取值为ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
      *
      * @param diskType
      */
@@ -67,7 +67,7 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+     * get 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+     * set 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
      *
      * @param diskSizeGB
      */
@@ -104,7 +104,7 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
 
 
     /**
-     * set 云硬盘类型，取值为 ssd 或 premium-hdd
+     * set 云硬盘类型，取值为ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
      *
      * @param diskType
      */
@@ -114,7 +114,7 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+     * set 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
      *
      * @param diskSizeGB
      */

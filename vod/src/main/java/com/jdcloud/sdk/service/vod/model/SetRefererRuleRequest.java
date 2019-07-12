@@ -35,11 +35,6 @@ public class SetRefererRuleRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则类型，取值 &#39;referer&#39;
-     */
-    private String ruleType;
-
-    /**
      * 规则配置对象
      */
     private Object config;
@@ -56,24 +51,6 @@ public class SetRefererRuleRequest extends JdcloudRequest implements java.io.Ser
     @Required
     private Long domainId;
 
-
-    /**
-     * get 规则类型，取值 &#39;referer&#39;
-     *
-     * @return
-     */
-    public String getRuleType() {
-        return ruleType;
-    }
-
-    /**
-     * set 规则类型，取值 &#39;referer&#39;
-     *
-     * @param ruleType
-     */
-    public void setRuleType(String ruleType) {
-        this.ruleType = ruleType;
-    }
 
     /**
      * get 规则配置对象
@@ -129,16 +106,6 @@ public class SetRefererRuleRequest extends JdcloudRequest implements java.io.Ser
         this.domainId = domainId;
     }
 
-
-    /**
-     * set 规则类型，取值 &#39;referer&#39;
-     *
-     * @param ruleType
-     */
-    public SetRefererRuleRequest ruleType(String ruleType) {
-        this.ruleType = ruleType;
-        return this;
-    }
 
     /**
      * set 规则配置对象

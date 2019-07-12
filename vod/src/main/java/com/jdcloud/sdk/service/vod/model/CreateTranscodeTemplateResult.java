@@ -47,17 +47,17 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     private String name;
 
     /**
-     * 视频参数
+     * video
      */
     private Video video;
 
     /**
-     * 音频参数
+     * audio
      */
     private Audio audio;
 
     /**
-     * 封装配置
+     * encapsulation
      */
     private Encapsulation encapsulation;
 
@@ -72,12 +72,12 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     private String source;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -119,7 +119,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * get 视频参数
+     * get video
      *
      * @return
      */
@@ -128,7 +128,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set 视频参数
+     * set video
      *
      * @param video
      */
@@ -137,7 +137,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * get 音频参数
+     * get audio
      *
      * @return
      */
@@ -146,7 +146,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set 音频参数
+     * set audio
      *
      * @param audio
      */
@@ -155,7 +155,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * get 封装配置
+     * get encapsulation
      *
      * @return
      */
@@ -164,7 +164,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set 封装配置
+     * set encapsulation
      *
      * @param encapsulation
      */
@@ -209,7 +209,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -218,7 +218,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -227,7 +227,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -236,7 +236,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -266,7 +266,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set 视频参数
+     * set video
      *
      * @param video
      */
@@ -276,7 +276,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set 音频参数
+     * set audio
      *
      * @param audio
      */
@@ -286,7 +286,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set 封装配置
+     * set encapsulation
      *
      * @param encapsulation
      */
@@ -316,7 +316,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -326,7 +326,7 @@ public class CreateTranscodeTemplateResult extends JdcloudResult implements java
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */

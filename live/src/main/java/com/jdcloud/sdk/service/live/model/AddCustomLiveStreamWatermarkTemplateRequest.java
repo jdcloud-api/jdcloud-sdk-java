@@ -43,8 +43,18 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     private Integer position;
 
     /**
+     * 偏移量单位
+- 取值: percent,pixel
+- percent:按百分比; pixel:像素 默认:pixel
+
+     */
+    private String offsetUnit;
+
+    /**
      * x轴偏移量
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      * Required:true
      */
@@ -53,7 +63,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * y轴偏移量:
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      * Required:true
      */
@@ -61,9 +73,18 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     private Integer offsetY;
 
     /**
+     * 水印大小单位
+- 取值: percent,pixel
+- percent:按百分比; pixel:像素 默认:pixel
+
+     */
+    private String sizeUnit;
+
+    /**
      * 水印宽度:
-- 取值: [0,1920]
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      * Required:true
      */
@@ -72,8 +93,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * 水印高度:
-- 取值: [0,1920]
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      * Required:true
      */
@@ -129,8 +151,34 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
+     * get 偏移量单位
+- 取值: percent,pixel
+- percent:按百分比; pixel:像素 默认:pixel
+
+     *
+     * @return
+     */
+    public String getOffsetUnit() {
+        return offsetUnit;
+    }
+
+    /**
+     * set 偏移量单位
+- 取值: percent,pixel
+- percent:按百分比; pixel:像素 默认:pixel
+
+     *
+     * @param offsetUnit
+     */
+    public void setOffsetUnit(String offsetUnit) {
+        this.offsetUnit = offsetUnit;
+    }
+
+    /**
      * get x轴偏移量
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @return
@@ -141,7 +189,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set x轴偏移量
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @param offsetX
@@ -152,7 +202,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * get y轴偏移量:
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @return
@@ -163,7 +215,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set y轴偏移量:
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @param offsetY
@@ -173,9 +227,34 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
+     * get 水印大小单位
+- 取值: percent,pixel
+- percent:按百分比; pixel:像素 默认:pixel
+
+     *
+     * @return
+     */
+    public String getSizeUnit() {
+        return sizeUnit;
+    }
+
+    /**
+     * set 水印大小单位
+- 取值: percent,pixel
+- percent:按百分比; pixel:像素 默认:pixel
+
+     *
+     * @param sizeUnit
+     */
+    public void setSizeUnit(String sizeUnit) {
+        this.sizeUnit = sizeUnit;
+    }
+
+    /**
      * get 水印宽度:
-- 取值: [0,1920]
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @return
@@ -186,8 +265,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set 水印宽度:
-- 取值: [0,1920]
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @param width
@@ -198,8 +278,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * get 水印高度:
-- 取值: [0,1920]
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @return
@@ -210,8 +291,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set 水印高度:
-- 取值: [0,1920]
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @param height
@@ -300,8 +382,23 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
+     * set 偏移量单位
+- 取值: percent,pixel
+- percent:按百分比; pixel:像素 默认:pixel
+
+     *
+     * @param offsetUnit
+     */
+    public AddCustomLiveStreamWatermarkTemplateRequest offsetUnit(String offsetUnit) {
+        this.offsetUnit = offsetUnit;
+        return this;
+    }
+
+    /**
      * set x轴偏移量
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @param offsetX
@@ -313,7 +410,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set y轴偏移量:
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @param offsetY
@@ -324,9 +423,23 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
     }
 
     /**
+     * set 水印大小单位
+- 取值: percent,pixel
+- percent:按百分比; pixel:像素 默认:pixel
+
+     *
+     * @param sizeUnit
+     */
+    public AddCustomLiveStreamWatermarkTemplateRequest sizeUnit(String sizeUnit) {
+        this.sizeUnit = sizeUnit;
+        return this;
+    }
+
+    /**
      * set 水印宽度:
-- 取值: [0,1920]
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @param width
@@ -338,8 +451,9 @@ public class AddCustomLiveStreamWatermarkTemplateRequest extends JdcloudRequest 
 
     /**
      * set 水印高度:
-- 取值: [0,1920]
-- 单位: 像素
+- 取值范围
+  percent: (0,100]
+  pixel: (0,1920]
 
      *
      * @param height

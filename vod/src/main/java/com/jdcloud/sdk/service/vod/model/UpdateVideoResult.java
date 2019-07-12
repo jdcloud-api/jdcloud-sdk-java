@@ -97,12 +97,12 @@ public class UpdateVideoResult extends JdcloudResult implements java.io.Serializ
     private List<Snapshot> snapshots;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -324,7 +324,7 @@ public class UpdateVideoResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -333,7 +333,7 @@ public class UpdateVideoResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -342,7 +342,7 @@ public class UpdateVideoResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -351,7 +351,7 @@ public class UpdateVideoResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -481,7 +481,7 @@ public class UpdateVideoResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -491,7 +491,7 @@ public class UpdateVideoResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */

@@ -70,7 +70,7 @@ public class VideoBaseInfo  implements java.io.Serializable {
     /**
      * 封面地址
      */
-    private String coverImgUrl;
+    private String coverUrl;
 
 
     /**
@@ -204,17 +204,17 @@ public class VideoBaseInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public String getCoverImgUrl() {
-        return coverImgUrl;
+    public String getCoverUrl() {
+        return coverUrl;
     }
 
     /**
      * set 封面地址
      *
-     * @param coverImgUrl
+     * @param coverUrl
      */
-    public void setCoverImgUrl(String coverImgUrl) {
-        this.coverImgUrl = coverImgUrl;
+    public void setCoverUrl(String coverUrl) {
+        this.coverUrl = coverUrl;
     }
 
 
@@ -291,10 +291,10 @@ public class VideoBaseInfo  implements java.io.Serializable {
     /**
      * set 封面地址
      *
-     * @param coverImgUrl
+     * @param coverUrl
      */
-    public VideoBaseInfo coverImgUrl(String coverImgUrl) {
-        this.coverImgUrl = coverImgUrl;
+    public VideoBaseInfo coverUrl(String coverUrl) {
+        this.coverUrl = coverUrl;
         return this;
     }
 

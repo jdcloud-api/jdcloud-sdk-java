@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 云主机缷载数据盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+ * 云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
 
  */
 public class DetachDiskRequest extends JdcloudRequest implements java.io.Serializable {

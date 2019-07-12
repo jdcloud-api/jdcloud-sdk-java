@@ -41,7 +41,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * 转码输出的码率值:
-  - 取值: [200,3000]
+  - 取值: [200,15000]
   - 单位: kpbs
 
      */
@@ -56,7 +56,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * 转码输出视频宽度:
-  - 取值: [100,1920]
+  - 取值: [100,3840]
   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
 
@@ -64,8 +64,8 @@ public class TranscodeInfo  implements java.io.Serializable {
     private Integer width;
 
     /**
-     * 转码输出视频宽度:
-  - 取值: [100,1920]
+     * 转码输出视频高度:
+  - 取值: [100,2160]
   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
 
@@ -127,6 +127,20 @@ public class TranscodeInfo  implements java.io.Serializable {
      */
     private Integer audioCodeRate;
 
+    /**
+     * 京享超清
+- 取值: jdchd-1.0,off
+
+     */
+    private String jdchd;
+
+    /**
+     * 舒适音频
+- 取值: on,off
+
+     */
+    private String audioComfort;
+
 
     /**
      * get 视频编码格式
@@ -152,7 +166,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * get 转码输出的码率值:
-  - 取值: [200,3000]
+  - 取值: [200,15000]
   - 单位: kpbs
 
      *
@@ -164,7 +178,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * set 转码输出的码率值:
-  - 取值: [200,3000]
+  - 取值: [200,15000]
   - 单位: kpbs
 
      *
@@ -198,7 +212,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * get 转码输出视频宽度:
-  - 取值: [100,1920]
+  - 取值: [100,3840]
   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
 
@@ -211,7 +225,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * set 转码输出视频宽度:
-  - 取值: [100,1920]
+  - 取值: [100,3840]
   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
 
@@ -223,8 +237,8 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 转码输出视频宽度:
-  - 取值: [100,1920]
+     * get 转码输出视频高度:
+  - 取值: [100,2160]
   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
 
@@ -236,8 +250,8 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出视频宽度:
-  - 取值: [100,1920]
+     * set 转码输出视频高度:
+  - 取值: [100,2160]
   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
 
@@ -414,6 +428,50 @@ public class TranscodeInfo  implements java.io.Serializable {
         this.audioCodeRate = audioCodeRate;
     }
 
+    /**
+     * get 京享超清
+- 取值: jdchd-1.0,off
+
+     *
+     * @return
+     */
+    public String getJdchd() {
+        return jdchd;
+    }
+
+    /**
+     * set 京享超清
+- 取值: jdchd-1.0,off
+
+     *
+     * @param jdchd
+     */
+    public void setJdchd(String jdchd) {
+        this.jdchd = jdchd;
+    }
+
+    /**
+     * get 舒适音频
+- 取值: on,off
+
+     *
+     * @return
+     */
+    public String getAudioComfort() {
+        return audioComfort;
+    }
+
+    /**
+     * set 舒适音频
+- 取值: on,off
+
+     *
+     * @param audioComfort
+     */
+    public void setAudioComfort(String audioComfort) {
+        this.audioComfort = audioComfort;
+    }
+
 
     /**
      * set 视频编码格式
@@ -429,7 +487,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * set 转码输出的码率值:
-  - 取值: [200,3000]
+  - 取值: [200,15000]
   - 单位: kpbs
 
      *
@@ -454,7 +512,7 @@ public class TranscodeInfo  implements java.io.Serializable {
 
     /**
      * set 转码输出视频宽度:
-  - 取值: [100,1920]
+  - 取值: [100,3840]
   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
 
@@ -467,8 +525,8 @@ public class TranscodeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 转码输出视频宽度:
-  - 取值: [100,1920]
+     * set 转码输出视频高度:
+  - 取值: [100,2160]
   - 等比: 如果只填写一个参数,则按参数比例调节输出转码视频
   - 随源: 如果两个参数都不填写，则按照源比例输出转码视频
 
@@ -567,6 +625,30 @@ public class TranscodeInfo  implements java.io.Serializable {
      */
     public TranscodeInfo audioCodeRate(Integer audioCodeRate) {
         this.audioCodeRate = audioCodeRate;
+        return this;
+    }
+
+    /**
+     * set 京享超清
+- 取值: jdchd-1.0,off
+
+     *
+     * @param jdchd
+     */
+    public TranscodeInfo jdchd(String jdchd) {
+        this.jdchd = jdchd;
+        return this;
+    }
+
+    /**
+     * set 舒适音频
+- 取值: on,off
+
+     *
+     * @param audioComfort
+     */
+    public TranscodeInfo audioComfort(String audioComfort) {
+        this.audioComfort = audioComfort;
         return this;
     }
 

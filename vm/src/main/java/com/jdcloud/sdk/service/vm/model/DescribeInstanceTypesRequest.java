@@ -39,6 +39,11 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
     private static final long serialVersionUID = 1L;
 
     /**
+     * 服务类型，取值为{vm、nc}，vm代表虚机、nc代表原生容器
+     */
+    private String serviceName;
+
+    /**
      * instanceTypes - 实例规格，精确匹配，支持多个
 az - 可用区，精确匹配，支持多个
 
@@ -52,6 +57,24 @@ az - 可用区，精确匹配，支持多个
     @Required
     private String regionId;
 
+
+    /**
+     * get 服务类型，取值为{vm、nc}，vm代表虚机、nc代表原生容器
+     *
+     * @return
+     */
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    /**
+     * set 服务类型，取值为{vm、nc}，vm代表虚机、nc代表原生容器
+     *
+     * @param serviceName
+     */
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
 
     /**
      * get instanceTypes - 实例规格，精确匹配，支持多个
@@ -93,6 +116,16 @@ az - 可用区，精确匹配，支持多个
         this.regionId = regionId;
     }
 
+
+    /**
+     * set 服务类型，取值为{vm、nc}，vm代表虚机、nc代表原生容器
+     *
+     * @param serviceName
+     */
+    public DescribeInstanceTypesRequest serviceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
 
     /**
      * set instanceTypes - 实例规格，精确匹配，支持多个

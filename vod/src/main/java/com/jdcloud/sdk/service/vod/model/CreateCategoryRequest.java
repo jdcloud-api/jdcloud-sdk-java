@@ -39,11 +39,6 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
     private String name;
 
     /**
-     * 分类级别
-     */
-    private Integer level;
-
-    /**
      * 父分类ID
      */
     private Long parentId;
@@ -70,24 +65,6 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setName(String name) {
         this.name = name;
-    }
-
-    /**
-     * get 分类级别
-     *
-     * @return
-     */
-    public Integer getLevel() {
-        return level;
-    }
-
-    /**
-     * set 分类级别
-     *
-     * @param level
-     */
-    public void setLevel(Integer level) {
-        this.level = level;
     }
 
     /**
@@ -134,16 +111,6 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
      */
     public CreateCategoryRequest name(String name) {
         this.name = name;
-        return this;
-    }
-
-    /**
-     * set 分类级别
-     *
-     * @param level
-     */
-    public CreateCategoryRequest level(Integer level) {
-        this.level = level;
         return this;
     }
 

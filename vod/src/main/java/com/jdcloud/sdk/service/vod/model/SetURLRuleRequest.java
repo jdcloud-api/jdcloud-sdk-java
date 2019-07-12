@@ -35,11 +35,6 @@ public class SetURLRuleRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则类型，取值 &#39;url&#39;
-     */
-    private String ruleType;
-
-    /**
      * 规则配置对象
      */
     private Object config;
@@ -56,24 +51,6 @@ public class SetURLRuleRequest extends JdcloudRequest implements java.io.Seriali
     @Required
     private Long domainId;
 
-
-    /**
-     * get 规则类型，取值 &#39;url&#39;
-     *
-     * @return
-     */
-    public String getRuleType() {
-        return ruleType;
-    }
-
-    /**
-     * set 规则类型，取值 &#39;url&#39;
-     *
-     * @param ruleType
-     */
-    public void setRuleType(String ruleType) {
-        this.ruleType = ruleType;
-    }
 
     /**
      * get 规则配置对象
@@ -129,16 +106,6 @@ public class SetURLRuleRequest extends JdcloudRequest implements java.io.Seriali
         this.domainId = domainId;
     }
 
-
-    /**
-     * set 规则类型，取值 &#39;url&#39;
-     *
-     * @param ruleType
-     */
-    public SetURLRuleRequest ruleType(String ruleType) {
-        this.ruleType = ruleType;
-        return this;
-    }
 
     /**
      * set 规则配置对象

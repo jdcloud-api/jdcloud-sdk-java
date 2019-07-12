@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 云主机挂载一块弹性网卡。&lt;br&gt;
+ * 云主机绑定一块弹性网卡。&lt;br&gt;
 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
-弹性网卡上如果绑定了公网IP，那么公网IP所在az需要与云主机的az保持一致，或者公网IP属于全可用区，才可挂载。&lt;br&gt;
+弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
 弹性网卡与云主机必须在相同vpc下。
 
@@ -47,7 +47,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
     private String networkInterfaceId;
 
     /**
-     * 随主机自动删除，默认为False
+     * 随云主机删除而自动删除，默认为False
      */
     private Boolean autoDelete;
 
@@ -85,7 +85,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 随主机自动删除，默认为False
+     * get 随云主机删除而自动删除，默认为False
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 随主机自动删除，默认为False
+     * set 随云主机删除而自动删除，默认为False
      *
      * @param autoDelete
      */
@@ -150,7 +150,7 @@ public class AttachNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 随主机自动删除，默认为False
+     * set 随云主机删除而自动删除，默认为False
      *
      * @param autoDelete
      */

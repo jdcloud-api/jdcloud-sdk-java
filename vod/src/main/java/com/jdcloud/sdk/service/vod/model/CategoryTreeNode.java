@@ -59,16 +59,6 @@ public class CategoryTreeNode  implements java.io.Serializable {
      */
     private List<CategoryTreeNode> children;
 
-    /**
-     * 创建时间
-     */
-    private String createTime;
-
-    /**
-     * 修改时间
-     */
-    private String updateTime;
-
 
     /**
      * get 分类ID
@@ -160,42 +150,6 @@ public class CategoryTreeNode  implements java.io.Serializable {
         this.children = children;
     }
 
-    /**
-     * get 创建时间
-     *
-     * @return
-     */
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * set 创建时间
-     *
-     * @param createTime
-     */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * get 修改时间
-     *
-     * @return
-     */
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * set 修改时间
-     *
-     * @param updateTime
-     */
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-    }
-
 
     /**
      * set 分类ID
@@ -244,26 +198,6 @@ public class CategoryTreeNode  implements java.io.Serializable {
      */
     public CategoryTreeNode children(List<CategoryTreeNode> children) {
         this.children = children;
-        return this;
-    }
-
-    /**
-     * set 创建时间
-     *
-     * @param createTime
-     */
-    public CategoryTreeNode createTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-
-    /**
-     * set 修改时间
-     *
-     * @param updateTime
-     */
-    public CategoryTreeNode updateTime(String updateTime) {
-        this.updateTime = updateTime;
         return this;
     }
 

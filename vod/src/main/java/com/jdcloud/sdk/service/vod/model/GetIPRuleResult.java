@@ -48,16 +48,6 @@ public class GetIPRuleResult extends JdcloudResult implements java.io.Serializab
      */
     private Boolean enabled;
 
-    /**
-     * createTime
-     */
-    private String createTime;
-
-    /**
-     * updateTime
-     */
-    private String updateTime;
-
 
     /**
      * get 规则类型，取值 &#39;ip&#39;
@@ -113,42 +103,6 @@ public class GetIPRuleResult extends JdcloudResult implements java.io.Serializab
         this.enabled = enabled;
     }
 
-    /**
-     * get createTime
-     *
-     * @return
-     */
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * set createTime
-     *
-     * @param createTime
-     */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * get updateTime
-     *
-     * @return
-     */
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * set updateTime
-     *
-     * @param updateTime
-     */
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-    }
-
 
     /**
      * set 规则类型，取值 &#39;ip&#39;
@@ -177,26 +131,6 @@ public class GetIPRuleResult extends JdcloudResult implements java.io.Serializab
      */
     public GetIPRuleResult enabled(Boolean enabled) {
         this.enabled = enabled;
-        return this;
-    }
-
-    /**
-     * set createTime
-     *
-     * @param createTime
-     */
-    public GetIPRuleResult createTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-
-    /**
-     * set updateTime
-     *
-     * @param updateTime
-     */
-    public GetIPRuleResult updateTime(String updateTime) {
-        this.updateTime = updateTime;
         return this;
     }
 

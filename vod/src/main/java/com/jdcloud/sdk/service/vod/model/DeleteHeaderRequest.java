@@ -40,11 +40,6 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
     private String headerName;
 
     /**
-     * 头参数值
-     */
-    private String headerValue;
-
-    /**
      * 头参数类型
      */
     private String headerType;
@@ -73,24 +68,6 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
      */
     public void setHeaderName(String headerName) {
         this.headerName = headerName;
-    }
-
-    /**
-     * get 头参数值
-     *
-     * @return
-     */
-    public String getHeaderValue() {
-        return headerValue;
-    }
-
-    /**
-     * set 头参数值
-     *
-     * @param headerValue
-     */
-    public void setHeaderValue(String headerValue) {
-        this.headerValue = headerValue;
     }
 
     /**
@@ -137,16 +114,6 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
      */
     public DeleteHeaderRequest headerName(String headerName) {
         this.headerName = headerName;
-        return this;
-    }
-
-    /**
-     * set 头参数值
-     *
-     * @param headerValue
-     */
-    public DeleteHeaderRequest headerValue(String headerValue) {
-        this.headerValue = headerValue;
         return this;
     }
 

@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 
 /**
- * 音频参数
+ * 音频参数配置
  */
 public class Audio  implements java.io.Serializable {
 

@@ -51,12 +51,12 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
     /**
      * 宽度
      */
-    private Integer width;
+    private String width;
 
     /**
      * 高度
      */
-    private Integer height;
+    private String height;
 
     /**
      * 水印位置
@@ -79,12 +79,12 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
     private Integer offsetY;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -148,7 +148,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
      *
      * @return
      */
-    public Integer getWidth() {
+    public String getWidth() {
         return width;
     }
 
@@ -157,7 +157,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
      *
      * @param width
      */
-    public void setWidth(Integer width) {
+    public void setWidth(String width) {
         this.width = width;
     }
 
@@ -166,7 +166,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
      *
      * @return
      */
-    public Integer getHeight() {
+    public String getHeight() {
         return height;
     }
 
@@ -175,7 +175,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
      *
      * @param height
      */
-    public void setHeight(Integer height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
@@ -252,7 +252,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -261,7 +261,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -270,7 +270,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -279,7 +279,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -323,7 +323,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
      *
      * @param width
      */
-    public UpdateWatermarkResult width(Integer width) {
+    public UpdateWatermarkResult width(String width) {
         this.width = width;
         return this;
     }
@@ -333,7 +333,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
      *
      * @param height
      */
-    public UpdateWatermarkResult height(Integer height) {
+    public UpdateWatermarkResult height(String height) {
         this.height = height;
         return this;
     }
@@ -379,7 +379,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -389,7 +389,7 @@ public class UpdateWatermarkResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */

@@ -37,11 +37,6 @@ public class UpdateVideoRequest extends JdcloudRequest implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 视频ID
-     */
-    private String id;
-
-    /**
      * 视频名称
      */
     private String name;
@@ -62,7 +57,7 @@ public class UpdateVideoRequest extends JdcloudRequest implements java.io.Serial
     private String coverUrl;
 
     /**
-     * 视频描述
+     * 视频描述信息
      */
     private String description;
 
@@ -73,24 +68,6 @@ public class UpdateVideoRequest extends JdcloudRequest implements java.io.Serial
     @Required
     private String videoId;
 
-
-    /**
-     * get 视频ID
-     *
-     * @return
-     */
-    public String getId() {
-        return id;
-    }
-
-    /**
-     * set 视频ID
-     *
-     * @param id
-     */
-    public void setId(String id) {
-        this.id = id;
-    }
 
     /**
      * get 视频名称
@@ -165,7 +142,7 @@ public class UpdateVideoRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 视频描述
+     * get 视频描述信息
      *
      * @return
      */
@@ -174,7 +151,7 @@ public class UpdateVideoRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 视频描述
+     * set 视频描述信息
      *
      * @param description
      */
@@ -200,16 +177,6 @@ public class UpdateVideoRequest extends JdcloudRequest implements java.io.Serial
         this.videoId = videoId;
     }
 
-
-    /**
-     * set 视频ID
-     *
-     * @param id
-     */
-    public UpdateVideoRequest id(String id) {
-        this.id = id;
-        return this;
-    }
 
     /**
      * set 视频名称
@@ -252,7 +219,7 @@ public class UpdateVideoRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 视频描述
+     * set 视频描述信息
      *
      * @param description
      */

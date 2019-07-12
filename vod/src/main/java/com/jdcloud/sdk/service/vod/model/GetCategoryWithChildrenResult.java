@@ -56,16 +56,6 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
     private String description;
 
     /**
-     * 创建时间
-     */
-    private String createTime;
-
-    /**
-     * 修改时间
-     */
-    private String updateTime;
-
-    /**
      * children
      */
     private List<Object> children;
@@ -144,42 +134,6 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
     }
 
     /**
-     * get 创建时间
-     *
-     * @return
-     */
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * set 创建时间
-     *
-     * @param createTime
-     */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * get 修改时间
-     *
-     * @return
-     */
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * set 修改时间
-     *
-     * @param updateTime
-     */
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    /**
      * get children
      *
      * @return
@@ -235,26 +189,6 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
      */
     public GetCategoryWithChildrenResult description(String description) {
         this.description = description;
-        return this;
-    }
-
-    /**
-     * set 创建时间
-     *
-     * @param createTime
-     */
-    public GetCategoryWithChildrenResult createTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-
-    /**
-     * set 修改时间
-     *
-     * @param updateTime
-     */
-    public GetCategoryWithChildrenResult updateTime(String updateTime) {
-        this.updateTime = updateTime;
         return this;
     }
 

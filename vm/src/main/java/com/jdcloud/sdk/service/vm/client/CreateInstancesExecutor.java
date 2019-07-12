@@ -35,17 +35,16 @@ import com.jdcloud.sdk.service.vm.model.CreateInstancesResponse;
     - 可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
     - 不能使用已下线、或已售馨的规格ID
 - 镜像
-    - Windows Server 2012 R2标准版 64位 中文版 SQL Server 2014 标准版 SP2内存需大于1GB；
     - Windows Server所有镜像CPU不可选超过64核CPU。
     - 可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
     - 选择的镜像必须支持选择的实例规格。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
 - 网络配置
     - 指定主网卡配置信息
         - 必须指定subnetId
-        - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-100]Mbps，步进1Mbps
+        - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
         - 可以指定主网卡的内网主IP(primaryIpAddress)，此时maxCount只能为1
         - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
-        - 一台云主机创建时必须指定一个安全组，至多指定5个安全组，如果没有指定安全组，默认使用默认安全组
+        - 一台云主机创建时必须至少指定一个安全组，至多指定5个安全组，如果没有指定安全组，默认使用默认安全组
         - 主网卡deviceIndex设置为1
 - 存储
     - 系统盘
@@ -54,17 +53,18 @@ import com.jdcloud.sdk.service.vm.model.CreateInstancesResponse;
             - local：不能指定大小，默认为40GB
             - cloud：取值范围: 40-500GB，并且不能小于镜像的最小系统盘大小，如果没有指定，默认以镜像中的系统盘大小为准
         - 自动删除
-            - 如果是local，默认自动删除，不能修改此属性
-            - 如果是cloud类型的按配置计费的云硬盘，可以指定为True
+            - 如果是local类型，默认自动删除，不可修改
+            - 如果是cloud类型的按配置计费的云硬盘，默认为True，可修改
+            - 如果是cloud类型的包年包月的云硬盘，默认为False，不可修改
     - 数据盘
         - 磁盘分类，数据盘仅支持cloud
-        - 云硬盘类型可以选择ssd、premium-hdd
+        - 云硬盘类型可以选择ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
             - premium-hdd：范围[20,3000]GB，步长为10G
             - ssd：范围[20,1000]GB，步长为10G
+            - hdd.std1、ssd.gp1、ssd.io1: 范围[20-16000]GB，步长为10GB
         - 自动删除
-            - 默认自动删除，如果是包年包月的数据盘或共享型数据盘，此参数不生效
-            - 可以指定SnapshotId创建云硬盘
+            - 默认自动删除，如果是包年包月的云硬盘，此参数不生效
         - 可以从快照创建磁盘
     - local类型系统的云主机可以挂载8块云硬盘
     - cloud类型系统的云主机可以挂载7块云硬盘

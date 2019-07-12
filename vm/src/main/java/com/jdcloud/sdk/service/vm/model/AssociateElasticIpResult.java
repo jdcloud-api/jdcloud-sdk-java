@@ -27,8 +27,8 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 为云主机主网卡下的主内网IP绑定弹性公网IP。&lt;br&gt;
-一台云主机只能绑定一个弹性公网IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+ * 为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
+一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
 
  */
 public class AssociateElasticIpResult extends JdcloudResult implements java.io.Serializable {

@@ -32,13 +32,13 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 - 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
 - 系统标准转码模板
     ld (h.264/640*360/15f)
-    sd (h.264/960*540/24f)
+    sd (h.264/960*540/25f)
     hd (h.264/1280*720/25f)
     shd (h.264/1920*1080/30f)
-    ld-265 (h-265/640*360/15f)
-    sd-265 (h-265/960*540/24f)
-    hd-265 (h-265/1280*720/25f)
-    shd-265 (h-265/1920*1080/30f)
+    ld-265 (h.265/640*360/15f)
+    sd-265 (h.265/960*540/25f)
+    hd-265 (h.265/1280*720/25f)
+    shd-265 (h.265/1920*1080/30f)
 
  */
 public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest implements java.io.Serializable {
@@ -54,13 +54,15 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * 视频编码格式，取值：h264,h265，默认h264
+- h264时,分辨率小于等于1080p
+- h265时,分辨率小于等于4k
 
      */
     private String videoCodec;
 
     /**
      * 转码输出的码率值
-- 取值范围: [1,6000]
+- 取值范围: [1,15000]
 - 单位: kpbs
 
      * Required:true
@@ -79,7 +81,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * 转码输出视频宽度
-- 取值: [128,1920]
+- 取值: [128,3840]
 - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
 - 如果(width,height)都不设置，则按源流大小输出转码
 
@@ -87,8 +89,8 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
     private Integer width;
 
     /**
-     * 转码输出视频宽度
-- 取值: [128,1920]
+     * 转码输出视频高度
+- 取值: [128,2160]
 - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
 - 如果(width,height)都不设置，则按源流大小输出转码
 
@@ -101,13 +103,13 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 - &lt;b&gt;注意: 不能与系统的标准的转码模板和当前用户已自定义命名重复&lt;/b&gt;
 - 系统标准转码模板
   ld (h.264/640*360/15f)
-  sd (h.264/960*540/24f)
+  sd (h.264/960*540/25f)
   hd (h.264/1280*720/25f)
   shd (h.264/1920*1080/30f)
-  ld-265 (h-265/640*360/15f)
-  sd-265 (h-265/960*540/24f)
-  hd-265 (h-265/1280*720/25f)
-  shd-265 (h-265/1920*1080/30f)
+  ld-265 (h.265/640*360/15f)
+  sd-265 (h.265/960*540/25f)
+  hd-265 (h.265/1280*720/25f)
+  shd-265 (h.265/1920*1080/30f)
 
      * Required:true
      */
@@ -126,12 +128,10 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * 转码输出音频格式
-- 取值: aac_lc，aac_low，aac_he，aac_he_v2
+- 取值: aac_lc,aac_low,aac_he,aac_he_v2; 默认:aac_he
 - 不区分大小写
 
-     * Required:true
      */
-    @Required
     private String audioFormat;
 
     /**
@@ -163,6 +163,21 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
     @Required
     private Integer audioCodeRate;
 
+    /**
+     * 京享超清开关
+- 取值: jdchd-1.0,off
+- 京享超清暂时只支持h.264
+
+     */
+    private String jdchd;
+
+    /**
+     * 舒适音频
+- 取值: on,off
+
+     */
+    private String audioComfort;
+
 
     /**
      * get 转码模板名称
@@ -188,6 +203,8 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * get 视频编码格式，取值：h264,h265，默认h264
+- h264时,分辨率小于等于1080p
+- h265时,分辨率小于等于4k
 
      *
      * @return
@@ -198,6 +215,8 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 视频编码格式，取值：h264,h265，默认h264
+- h264时,分辨率小于等于1080p
+- h265时,分辨率小于等于4k
 
      *
      * @param videoCodec
@@ -208,7 +227,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * get 转码输出的码率值
-- 取值范围: [1,6000]
+- 取值范围: [1,15000]
 - 单位: kpbs
 
      *
@@ -220,7 +239,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 转码输出的码率值
-- 取值范围: [1,6000]
+- 取值范围: [1,15000]
 - 单位: kpbs
 
      *
@@ -254,7 +273,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * get 转码输出视频宽度
-- 取值: [128,1920]
+- 取值: [128,3840]
 - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
 - 如果(width,height)都不设置，则按源流大小输出转码
 
@@ -267,7 +286,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 转码输出视频宽度
-- 取值: [128,1920]
+- 取值: [128,3840]
 - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
 - 如果(width,height)都不设置，则按源流大小输出转码
 
@@ -279,8 +298,8 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * get 转码输出视频宽度
-- 取值: [128,1920]
+     * get 转码输出视频高度
+- 取值: [128,2160]
 - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
 - 如果(width,height)都不设置，则按源流大小输出转码
 
@@ -292,8 +311,8 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 转码输出视频宽度
-- 取值: [128,1920]
+     * set 转码输出视频高度
+- 取值: [128,2160]
 - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
 - 如果(width,height)都不设置，则按源流大小输出转码
 
@@ -310,13 +329,13 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 - &lt;b&gt;注意: 不能与系统的标准的转码模板和当前用户已自定义命名重复&lt;/b&gt;
 - 系统标准转码模板
   ld (h.264/640*360/15f)
-  sd (h.264/960*540/24f)
+  sd (h.264/960*540/25f)
   hd (h.264/1280*720/25f)
   shd (h.264/1920*1080/30f)
-  ld-265 (h-265/640*360/15f)
-  sd-265 (h-265/960*540/24f)
-  hd-265 (h-265/1280*720/25f)
-  shd-265 (h-265/1920*1080/30f)
+  ld-265 (h.265/640*360/15f)
+  sd-265 (h.265/960*540/25f)
+  hd-265 (h.265/1280*720/25f)
+  shd-265 (h.265/1920*1080/30f)
 
      *
      * @return
@@ -331,13 +350,13 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 - &lt;b&gt;注意: 不能与系统的标准的转码模板和当前用户已自定义命名重复&lt;/b&gt;
 - 系统标准转码模板
   ld (h.264/640*360/15f)
-  sd (h.264/960*540/24f)
+  sd (h.264/960*540/25f)
   hd (h.264/1280*720/25f)
   shd (h.264/1920*1080/30f)
-  ld-265 (h-265/640*360/15f)
-  sd-265 (h-265/960*540/24f)
-  hd-265 (h-265/1280*720/25f)
-  shd-265 (h-265/1920*1080/30f)
+  ld-265 (h.265/640*360/15f)
+  sd-265 (h.265/960*540/25f)
+  hd-265 (h.265/1280*720/25f)
+  shd-265 (h.265/1920*1080/30f)
 
      *
      * @param template
@@ -372,7 +391,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * get 转码输出音频格式
-- 取值: aac_lc，aac_low，aac_he，aac_he_v2
+- 取值: aac_lc,aac_low,aac_he,aac_he_v2; 默认:aac_he
 - 不区分大小写
 
      *
@@ -384,7 +403,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 转码输出音频格式
-- 取值: aac_lc，aac_low，aac_he，aac_he_v2
+- 取值: aac_lc,aac_low,aac_he,aac_he_v2; 默认:aac_he
 - 不区分大小写
 
      *
@@ -464,6 +483,52 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
         this.audioCodeRate = audioCodeRate;
     }
 
+    /**
+     * get 京享超清开关
+- 取值: jdchd-1.0,off
+- 京享超清暂时只支持h.264
+
+     *
+     * @return
+     */
+    public String getJdchd() {
+        return jdchd;
+    }
+
+    /**
+     * set 京享超清开关
+- 取值: jdchd-1.0,off
+- 京享超清暂时只支持h.264
+
+     *
+     * @param jdchd
+     */
+    public void setJdchd(String jdchd) {
+        this.jdchd = jdchd;
+    }
+
+    /**
+     * get 舒适音频
+- 取值: on,off
+
+     *
+     * @return
+     */
+    public String getAudioComfort() {
+        return audioComfort;
+    }
+
+    /**
+     * set 舒适音频
+- 取值: on,off
+
+     *
+     * @param audioComfort
+     */
+    public void setAudioComfort(String audioComfort) {
+        this.audioComfort = audioComfort;
+    }
+
 
     /**
      * set 转码模板名称
@@ -479,6 +544,8 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 视频编码格式，取值：h264,h265，默认h264
+- h264时,分辨率小于等于1080p
+- h265时,分辨率小于等于4k
 
      *
      * @param videoCodec
@@ -490,7 +557,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 转码输出的码率值
-- 取值范围: [1,6000]
+- 取值范围: [1,15000]
 - 单位: kpbs
 
      *
@@ -515,7 +582,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 转码输出视频宽度
-- 取值: [128,1920]
+- 取值: [128,3840]
 - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
 - 如果(width,height)都不设置，则按源流大小输出转码
 
@@ -528,8 +595,8 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
     }
 
     /**
-     * set 转码输出视频宽度
-- 取值: [128,1920]
+     * set 转码输出视频高度
+- 取值: [128,2160]
 - 如果(width,height)只设置其中之一,则按所设置参数项等比缩放另一项输出转码
 - 如果(width,height)都不设置，则按源流大小输出转码
 
@@ -547,13 +614,13 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 - &lt;b&gt;注意: 不能与系统的标准的转码模板和当前用户已自定义命名重复&lt;/b&gt;
 - 系统标准转码模板
   ld (h.264/640*360/15f)
-  sd (h.264/960*540/24f)
+  sd (h.264/960*540/25f)
   hd (h.264/1280*720/25f)
   shd (h.264/1920*1080/30f)
-  ld-265 (h-265/640*360/15f)
-  sd-265 (h-265/960*540/24f)
-  hd-265 (h-265/1280*720/25f)
-  shd-265 (h-265/1920*1080/30f)
+  ld-265 (h.265/640*360/15f)
+  sd-265 (h.265/960*540/25f)
+  hd-265 (h.265/1280*720/25f)
+  shd-265 (h.265/1920*1080/30f)
 
      *
      * @param template
@@ -578,7 +645,7 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
 
     /**
      * set 转码输出音频格式
-- 取值: aac_lc，aac_low，aac_he，aac_he_v2
+- 取值: aac_lc,aac_low,aac_he,aac_he_v2; 默认:aac_he
 - 不区分大小写
 
      *
@@ -624,6 +691,31 @@ public class AddCustomLiveStreamTranscodeTemplateRequest extends JdcloudRequest 
      */
     public AddCustomLiveStreamTranscodeTemplateRequest audioCodeRate(Integer audioCodeRate) {
         this.audioCodeRate = audioCodeRate;
+        return this;
+    }
+
+    /**
+     * set 京享超清开关
+- 取值: jdchd-1.0,off
+- 京享超清暂时只支持h.264
+
+     *
+     * @param jdchd
+     */
+    public AddCustomLiveStreamTranscodeTemplateRequest jdchd(String jdchd) {
+        this.jdchd = jdchd;
+        return this;
+    }
+
+    /**
+     * set 舒适音频
+- 取值: on,off
+
+     *
+     * @param audioComfort
+     */
+    public AddCustomLiveStreamTranscodeTemplateRequest audioComfort(String audioComfort) {
+        this.audioComfort = audioComfort;
         return this;
     }
 

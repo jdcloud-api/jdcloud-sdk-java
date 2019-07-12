@@ -36,13 +36,13 @@ public class BatchDeleteVideosRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * videoIds
+     * 需要删除的视频ID列表
      */
     private List<String> videoIds;
 
 
     /**
-     * get videoIds
+     * get 需要删除的视频ID列表
      *
      * @return
      */
@@ -51,7 +51,7 @@ public class BatchDeleteVideosRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set videoIds
+     * set 需要删除的视频ID列表
      *
      * @param videoIds
      */
@@ -61,7 +61,7 @@ public class BatchDeleteVideosRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set videoIds
+     * set 需要删除的视频ID列表
      *
      * @param videoIds
      */
@@ -72,7 +72,7 @@ public class BatchDeleteVideosRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * add item to videoIds
+     * add item to 需要删除的视频ID列表
      *
      * @param videoId
      */

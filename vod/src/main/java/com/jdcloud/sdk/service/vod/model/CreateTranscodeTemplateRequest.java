@@ -42,17 +42,17 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     private String name;
 
     /**
-     * 视频参数
+     * video
      */
     private Video video;
 
     /**
-     * 音频参数
+     * audio
      */
     private Audio audio;
 
     /**
-     * 封装配置
+     * encapsulation
      */
     private Encapsulation encapsulation;
 
@@ -81,7 +81,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 视频参数
+     * get video
      *
      * @return
      */
@@ -90,7 +90,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 视频参数
+     * set video
      *
      * @param video
      */
@@ -99,7 +99,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 音频参数
+     * get audio
      *
      * @return
      */
@@ -108,7 +108,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 音频参数
+     * set audio
      *
      * @param audio
      */
@@ -117,7 +117,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 封装配置
+     * get encapsulation
      *
      * @return
      */
@@ -126,7 +126,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 封装配置
+     * set encapsulation
      *
      * @param encapsulation
      */
@@ -164,7 +164,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 视频参数
+     * set video
      *
      * @param video
      */
@@ -174,7 +174,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 音频参数
+     * set audio
      *
      * @param audio
      */
@@ -184,7 +184,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 封装配置
+     * set encapsulation
      *
      * @param encapsulation
      */

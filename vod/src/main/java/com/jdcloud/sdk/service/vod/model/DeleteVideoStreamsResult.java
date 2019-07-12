@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -33,7 +35,142 @@ public class DeleteVideoStreamsResult extends JdcloudResult implements java.io.S
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 删除成功的转码任务ID列表
+     */
+    private List<Long> okTaskIds;
+
+    /**
+     * 未找到的转码任务ID列表
+     */
+    private List<Long> notFoundTaskIds;
+
+    /**
+     * 删除失败的转码任务ID列表
+     */
+    private List<Long> failedTaskIds;
 
 
+    /**
+     * get 删除成功的转码任务ID列表
+     *
+     * @return
+     */
+    public List<Long> getOkTaskIds() {
+        return okTaskIds;
+    }
+
+    /**
+     * set 删除成功的转码任务ID列表
+     *
+     * @param okTaskIds
+     */
+    public void setOkTaskIds(List<Long> okTaskIds) {
+        this.okTaskIds = okTaskIds;
+    }
+
+    /**
+     * get 未找到的转码任务ID列表
+     *
+     * @return
+     */
+    public List<Long> getNotFoundTaskIds() {
+        return notFoundTaskIds;
+    }
+
+    /**
+     * set 未找到的转码任务ID列表
+     *
+     * @param notFoundTaskIds
+     */
+    public void setNotFoundTaskIds(List<Long> notFoundTaskIds) {
+        this.notFoundTaskIds = notFoundTaskIds;
+    }
+
+    /**
+     * get 删除失败的转码任务ID列表
+     *
+     * @return
+     */
+    public List<Long> getFailedTaskIds() {
+        return failedTaskIds;
+    }
+
+    /**
+     * set 删除失败的转码任务ID列表
+     *
+     * @param failedTaskIds
+     */
+    public void setFailedTaskIds(List<Long> failedTaskIds) {
+        this.failedTaskIds = failedTaskIds;
+    }
+
+
+    /**
+     * set 删除成功的转码任务ID列表
+     *
+     * @param okTaskIds
+     */
+    public DeleteVideoStreamsResult okTaskIds(List<Long> okTaskIds) {
+        this.okTaskIds = okTaskIds;
+        return this;
+    }
+
+    /**
+     * set 未找到的转码任务ID列表
+     *
+     * @param notFoundTaskIds
+     */
+    public DeleteVideoStreamsResult notFoundTaskIds(List<Long> notFoundTaskIds) {
+        this.notFoundTaskIds = notFoundTaskIds;
+        return this;
+    }
+
+    /**
+     * set 删除失败的转码任务ID列表
+     *
+     * @param failedTaskIds
+     */
+    public DeleteVideoStreamsResult failedTaskIds(List<Long> failedTaskIds) {
+        this.failedTaskIds = failedTaskIds;
+        return this;
+    }
+
+
+    /**
+     * add item to 删除成功的转码任务ID列表
+     *
+     * @param okTaskId
+     */
+    public void addOkTaskId(Long okTaskId) {
+        if (this.okTaskIds == null) {
+            this.okTaskIds = new ArrayList<>();
+        }
+        this.okTaskIds.add(okTaskId);
+    }
+
+    /**
+     * add item to 未找到的转码任务ID列表
+     *
+     * @param notFoundTaskId
+     */
+    public void addNotFoundTaskId(Long notFoundTaskId) {
+        if (this.notFoundTaskIds == null) {
+            this.notFoundTaskIds = new ArrayList<>();
+        }
+        this.notFoundTaskIds.add(notFoundTaskId);
+    }
+
+    /**
+     * add item to 删除失败的转码任务ID列表
+     *
+     * @param failedTaskId
+     */
+    public void addFailedTaskId(Long failedTaskId) {
+        if (this.failedTaskIds == null) {
+            this.failedTaskIds = new ArrayList<>();
+        }
+        this.failedTaskIds.add(failedTaskId);
+    }
 
 }

@@ -35,19 +35,9 @@ public class UpdateCategoryRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 分类ID
-     */
-    private Long id;
-
-    /**
      * 分类名称
      */
     private String name;
-
-    /**
-     * 分类级别
-     */
-    private Integer level;
 
     /**
      * 父分类ID
@@ -68,24 +58,6 @@ public class UpdateCategoryRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 分类ID
-     *
-     * @return
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * set 分类ID
-     *
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    /**
      * get 分类名称
      *
      * @return
@@ -101,24 +73,6 @@ public class UpdateCategoryRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setName(String name) {
         this.name = name;
-    }
-
-    /**
-     * get 分类级别
-     *
-     * @return
-     */
-    public Integer getLevel() {
-        return level;
-    }
-
-    /**
-     * set 分类级别
-     *
-     * @param level
-     */
-    public void setLevel(Integer level) {
-        this.level = level;
     }
 
     /**
@@ -177,32 +131,12 @@ public class UpdateCategoryRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 分类ID
-     *
-     * @param id
-     */
-    public UpdateCategoryRequest id(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    /**
      * set 分类名称
      *
      * @param name
      */
     public UpdateCategoryRequest name(String name) {
         this.name = name;
-        return this;
-    }
-
-    /**
-     * set 分类级别
-     *
-     * @param level
-     */
-    public UpdateCategoryRequest level(Integer level) {
-        this.level = level;
         return this;
     }
 

@@ -50,9 +50,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
 
     /**
      * 镜像描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
-     * Required:true
      */
-    @Required
     private String description;
 
     /**

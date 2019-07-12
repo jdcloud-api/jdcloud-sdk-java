@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamTranscodeTemp
 import com.jdcloud.sdk.service.live.model.DescribeDomainOnlineStreamRequest;
 import com.jdcloud.sdk.service.live.model.DescribeDomainOnlineStreamResponse;
 import com.jdcloud.sdk.service.live.client.DescribeDomainOnlineStreamExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeUrlRankingRequest;
+import com.jdcloud.sdk.service.live.model.DescribeUrlRankingResponse;
+import com.jdcloud.sdk.service.live.client.DescribeUrlRankingExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamListRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamListResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveTranscodeStreamListExecutor;
@@ -70,6 +73,9 @@ import com.jdcloud.sdk.service.live.client.DescribeLiveStreamBandwidthDataExecut
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamRecordTemplatesExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeDomainsLogRequest;
+import com.jdcloud.sdk.service.live.model.DescribeDomainsLogResponse;
+import com.jdcloud.sdk.service.live.client.DescribeDomainsLogExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamRecordConfigExecutor;
@@ -145,6 +151,9 @@ import com.jdcloud.sdk.service.live.client.StartLiveDomainExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeSystemLiveStreamTranscodeTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeSystemLiveStreamTranscodeTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeSystemLiveStreamTranscodeTemplatesExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStatisticGroupByAreaRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStatisticGroupByAreaResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveStatisticGroupByAreaExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamWatermarkTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamWatermarkTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamWatermarkTemplatesExecutor;
@@ -291,7 +300,7 @@ public class LiveClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "live.jdcloud-api.com";
     public final static String ServiceName = "live";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -356,10 +365,10 @@ public class LiveClient extends JdcloudClient {
       sd (h.264/960*540/24f)
       hd (h.264/1280*720/25f)
       shd (h.264/1920*1080/30f)
-      ld-265 (h-265/640*360/15f)
-      sd-265 (h-265/960*540/24f)
-      hd-265 (h-265/1280*720/25f)
-      shd-265 (h-265/1920*1080/30f)
+      ld-265 (h.265/640*360/15f)
+      sd-265 (h.265/960*540/24f)
+      hd-265 (h.265/1280*720/25f)
+      shd-265 (h.265/1920*1080/30f)
 
      *
      * @param request
@@ -379,6 +388,17 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeDomainOnlineStreamResponse describeDomainOnlineStream(DescribeDomainOnlineStreamRequest request) throws JdcloudSdkException {
         return new DescribeDomainOnlineStreamExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询URL播放排行
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeUrlRankingResponse describeUrlRanking(DescribeUrlRankingRequest request) throws JdcloudSdkException {
+        return new DescribeUrlRankingExecutor().client(this).execute(request);
     }
 
     /**
@@ -500,6 +520,17 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeCustomLiveStreamRecordTemplatesResponse describeCustomLiveStreamRecordTemplates(DescribeCustomLiveStreamRecordTemplatesRequest request) throws JdcloudSdkException {
         return new DescribeCustomLiveStreamRecordTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 日志下载
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDomainsLogResponse describeDomainsLog(DescribeDomainsLogRequest request) throws JdcloudSdkException {
+        return new DescribeDomainsLogExecutor().client(this).execute(request);
     }
 
     /**
@@ -804,6 +835,17 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeSystemLiveStreamTranscodeTemplatesResponse describeSystemLiveStreamTranscodeTemplates(DescribeSystemLiveStreamTranscodeTemplatesRequest request) throws JdcloudSdkException {
         return new DescribeSystemLiveStreamTranscodeTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询地域分组统计数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveStatisticGroupByAreaResponse describeLiveStatisticGroupByArea(DescribeLiveStatisticGroupByAreaRequest request) throws JdcloudSdkException {
+        return new DescribeLiveStatisticGroupByAreaExecutor().client(this).execute(request);
     }
 
     /**
@@ -1314,13 +1356,13 @@ public class LiveClient extends JdcloudClient {
 - 系统为您预设了标准转码模板,如果不能满足您的转码需求,可以通过此接口添加自定义转码模板
 - 系统标准转码模板
     ld (h.264/640*360/15f)
-    sd (h.264/960*540/24f)
+    sd (h.264/960*540/25f)
     hd (h.264/1280*720/25f)
     shd (h.264/1920*1080/30f)
-    ld-265 (h-265/640*360/15f)
-    sd-265 (h-265/960*540/24f)
-    hd-265 (h-265/1280*720/25f)
-    shd-265 (h-265/1920*1080/30f)
+    ld-265 (h.265/640*360/15f)
+    sd-265 (h.265/960*540/25f)
+    hd-265 (h.265/1280*720/25f)
+    shd-265 (h.265/1920*1080/30f)
 
      *
      * @param request

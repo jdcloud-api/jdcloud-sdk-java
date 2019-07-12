@@ -113,6 +113,29 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * 不使用模板中的密码。
+仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+
+     */
+    private Boolean noPassword;
+
+    /**
+     * 不使用模板中的密钥。
+仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+
+     */
+    private Boolean noKeyNames;
+
+    /**
+     * 不使用模板中的弹性公网IP。
+仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     */
+    private Boolean noElasticIp;
+
 
     /**
      * get 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
@@ -374,6 +397,76 @@ public class InstanceSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+    /**
+     * get 不使用模板中的密码。
+仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+
+     *
+     * @return
+     */
+    public Boolean getNoPassword() {
+        return noPassword;
+    }
+
+    /**
+     * set 不使用模板中的密码。
+仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+
+     *
+     * @param noPassword
+     */
+    public void setNoPassword(Boolean noPassword) {
+        this.noPassword = noPassword;
+    }
+
+    /**
+     * get 不使用模板中的密钥。
+仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+
+     *
+     * @return
+     */
+    public Boolean getNoKeyNames() {
+        return noKeyNames;
+    }
+
+    /**
+     * set 不使用模板中的密钥。
+仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+
+     *
+     * @param noKeyNames
+     */
+    public void setNoKeyNames(Boolean noKeyNames) {
+        this.noKeyNames = noKeyNames;
+    }
+
+    /**
+     * get 不使用模板中的弹性公网IP。
+仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     *
+     * @return
+     */
+    public Boolean getNoElasticIp() {
+        return noElasticIp;
+    }
+
+    /**
+     * set 不使用模板中的弹性公网IP。
+仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     *
+     * @param noElasticIp
+     */
+    public void setNoElasticIp(Boolean noElasticIp) {
+        this.noElasticIp = noElasticIp;
+    }
+
 
     /**
      * set 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
@@ -516,6 +609,44 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public InstanceSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 不使用模板中的密码。
+仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+
+     *
+     * @param noPassword
+     */
+    public InstanceSpec noPassword(Boolean noPassword) {
+        this.noPassword = noPassword;
+        return this;
+    }
+
+    /**
+     * set 不使用模板中的密钥。
+仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+
+     *
+     * @param noKeyNames
+     */
+    public InstanceSpec noKeyNames(Boolean noKeyNames) {
+        this.noKeyNames = noKeyNames;
+        return this;
+    }
+
+    /**
+     * set 不使用模板中的弹性公网IP。
+仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     *
+     * @param noElasticIp
+     */
+    public InstanceSpec noElasticIp(Boolean noElasticIp) {
+        this.noElasticIp = noElasticIp;
         return this;
     }
 

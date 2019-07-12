@@ -51,12 +51,12 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     /**
      * 宽度
      */
-    private Integer width;
+    private String width;
 
     /**
      * 高度
      */
-    private Integer height;
+    private String height;
 
     /**
      * 水印位置
@@ -64,7 +64,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     private String position;
 
     /**
-     * 偏移单位
+     * 偏移单位，目前仅支持像素
      */
     private String unit;
 
@@ -79,12 +79,12 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     private Integer offsetY;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -148,7 +148,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
      *
      * @return
      */
-    public Integer getWidth() {
+    public String getWidth() {
         return width;
     }
 
@@ -157,7 +157,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
      *
      * @param width
      */
-    public void setWidth(Integer width) {
+    public void setWidth(String width) {
         this.width = width;
     }
 
@@ -166,7 +166,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
      *
      * @return
      */
-    public Integer getHeight() {
+    public String getHeight() {
         return height;
     }
 
@@ -175,7 +175,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
      *
      * @param height
      */
-    public void setHeight(Integer height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
@@ -198,7 +198,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 偏移单位
+     * get 偏移单位，目前仅支持像素
      *
      * @return
      */
@@ -207,7 +207,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 偏移单位
+     * set 偏移单位，目前仅支持像素
      *
      * @param unit
      */
@@ -252,7 +252,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -261,7 +261,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -270,7 +270,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -279,7 +279,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -323,7 +323,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
      *
      * @param width
      */
-    public GetWatermarkResult width(Integer width) {
+    public GetWatermarkResult width(String width) {
         this.width = width;
         return this;
     }
@@ -333,7 +333,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
      *
      * @param height
      */
-    public GetWatermarkResult height(Integer height) {
+    public GetWatermarkResult height(String height) {
         this.height = height;
         return this;
     }
@@ -349,7 +349,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 偏移单位
+     * set 偏移单位，目前仅支持像素
      *
      * @param unit
      */
@@ -379,7 +379,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -389,7 +389,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */

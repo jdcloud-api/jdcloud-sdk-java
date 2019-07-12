@@ -46,12 +46,12 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
     /**
      * 宽度
      */
-    private Integer width;
+    private String width;
 
     /**
      * 高度
      */
-    private Integer height;
+    private String height;
 
     /**
      * 水印位置
@@ -115,7 +115,7 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public Integer getWidth() {
+    public String getWidth() {
         return width;
     }
 
@@ -124,7 +124,7 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @param width
      */
-    public void setWidth(Integer width) {
+    public void setWidth(String width) {
         this.width = width;
     }
 
@@ -133,7 +133,7 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public Integer getHeight() {
+    public String getHeight() {
         return height;
     }
 
@@ -142,7 +142,7 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @param height
      */
-    public void setHeight(Integer height) {
+    public void setHeight(String height) {
         this.height = height;
     }
 
@@ -244,7 +244,7 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @param width
      */
-    public CreateWatermarkRequest width(Integer width) {
+    public CreateWatermarkRequest width(String width) {
         this.width = width;
         return this;
     }
@@ -254,7 +254,7 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
      *
      * @param height
      */
-    public CreateWatermarkRequest height(Integer height) {
+    public CreateWatermarkRequest height(String height) {
         this.height = height;
         return this;
     }

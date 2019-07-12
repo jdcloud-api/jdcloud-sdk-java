@@ -34,15 +34,21 @@ import com.jdcloud.sdk.service.JdcloudResult;
       sd (h.264/960*540/24f)
       hd (h.264/1280*720/25f)
       shd (h.264/1920*1080/30f)
-      ld-265 (h-265/640*360/15f)
-      sd-265 (h-265/960*540/24f)
-      hd-265 (h-265/1280*720/25f)
-      shd-265 (h-265/1920*1080/30f)
+      ld-265 (h.265/640*360/15f)
+      sd-265 (h.265/960*540/24f)
+      hd-265 (h.265/1280*720/25f)
+      shd-265 (h.265/1920*1080/30f)
 
  */
 public class DescribeCustomLiveStreamTranscodeTemplateResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 视频编码格式，取值：h264,h265，默认h264
+
+     */
+    private String videoCodec;
 
     /**
      * 转码输出的码率值
@@ -64,7 +70,7 @@ public class DescribeCustomLiveStreamTranscodeTemplateResult extends JdcloudResu
     private Integer width;
 
     /**
-     * 转码输出视频宽度
+     * 转码输出视频高度
 
      */
     private Integer height;
@@ -108,6 +114,40 @@ public class DescribeCustomLiveStreamTranscodeTemplateResult extends JdcloudResu
      */
     private Integer audioCodeRate;
 
+    /**
+     * 京享超清
+- 取值: jdchd-1.0,off
+
+     */
+    private String jdchd;
+
+    /**
+     * 舒适音频
+- 取值: on,off
+
+     */
+    private String audioComfort;
+
+
+    /**
+     * get 视频编码格式，取值：h264,h265，默认h264
+
+     *
+     * @return
+     */
+    public String getVideoCodec() {
+        return videoCodec;
+    }
+
+    /**
+     * set 视频编码格式，取值：h264,h265，默认h264
+
+     *
+     * @param videoCodec
+     */
+    public void setVideoCodec(String videoCodec) {
+        this.videoCodec = videoCodec;
+    }
 
     /**
      * get 转码输出的码率值
@@ -172,7 +212,7 @@ public class DescribeCustomLiveStreamTranscodeTemplateResult extends JdcloudResu
     }
 
     /**
-     * get 转码输出视频宽度
+     * get 转码输出视频高度
 
      *
      * @return
@@ -182,7 +222,7 @@ public class DescribeCustomLiveStreamTranscodeTemplateResult extends JdcloudResu
     }
 
     /**
-     * set 转码输出视频宽度
+     * set 转码输出视频高度
 
      *
      * @param height
@@ -317,6 +357,61 @@ public class DescribeCustomLiveStreamTranscodeTemplateResult extends JdcloudResu
         this.audioCodeRate = audioCodeRate;
     }
 
+    /**
+     * get 京享超清
+- 取值: jdchd-1.0,off
+
+     *
+     * @return
+     */
+    public String getJdchd() {
+        return jdchd;
+    }
+
+    /**
+     * set 京享超清
+- 取值: jdchd-1.0,off
+
+     *
+     * @param jdchd
+     */
+    public void setJdchd(String jdchd) {
+        this.jdchd = jdchd;
+    }
+
+    /**
+     * get 舒适音频
+- 取值: on,off
+
+     *
+     * @return
+     */
+    public String getAudioComfort() {
+        return audioComfort;
+    }
+
+    /**
+     * set 舒适音频
+- 取值: on,off
+
+     *
+     * @param audioComfort
+     */
+    public void setAudioComfort(String audioComfort) {
+        this.audioComfort = audioComfort;
+    }
+
+
+    /**
+     * set 视频编码格式，取值：h264,h265，默认h264
+
+     *
+     * @param videoCodec
+     */
+    public DescribeCustomLiveStreamTranscodeTemplateResult videoCodec(String videoCodec) {
+        this.videoCodec = videoCodec;
+        return this;
+    }
 
     /**
      * set 转码输出的码率值
@@ -353,7 +448,7 @@ public class DescribeCustomLiveStreamTranscodeTemplateResult extends JdcloudResu
     }
 
     /**
-     * set 转码输出视频宽度
+     * set 转码输出视频高度
 
      *
      * @param height
@@ -429,6 +524,30 @@ public class DescribeCustomLiveStreamTranscodeTemplateResult extends JdcloudResu
      */
     public DescribeCustomLiveStreamTranscodeTemplateResult audioCodeRate(Integer audioCodeRate) {
         this.audioCodeRate = audioCodeRate;
+        return this;
+    }
+
+    /**
+     * set 京享超清
+- 取值: jdchd-1.0,off
+
+     *
+     * @param jdchd
+     */
+    public DescribeCustomLiveStreamTranscodeTemplateResult jdchd(String jdchd) {
+        this.jdchd = jdchd;
+        return this;
+    }
+
+    /**
+     * set 舒适音频
+- 取值: on,off
+
+     *
+     * @param audioComfort
+     */
+    public DescribeCustomLiveStreamTranscodeTemplateResult audioComfort(String audioComfort) {
+        this.audioComfort = audioComfort;
         return this;
     }
 

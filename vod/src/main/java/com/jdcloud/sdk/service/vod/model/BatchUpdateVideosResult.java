@@ -36,36 +36,41 @@ public class BatchUpdateVideosResult extends JdcloudResult implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * updateVideoIds
+     * 更新成功的视频ID列表
      */
-    private List<String> updateVideoIds;
+    private List<String> okVideoIds;
 
     /**
-     * notFoundVideoIds
+     * 未找到的视频ID列表
      */
     private List<String> notFoundVideoIds;
 
+    /**
+     * 更新失败的视频ID列表
+     */
+    private List<String> failedVideoIds;
+
 
     /**
-     * get updateVideoIds
+     * get 更新成功的视频ID列表
      *
      * @return
      */
-    public List<String> getUpdateVideoIds() {
-        return updateVideoIds;
+    public List<String> getOkVideoIds() {
+        return okVideoIds;
     }
 
     /**
-     * set updateVideoIds
+     * set 更新成功的视频ID列表
      *
-     * @param updateVideoIds
+     * @param okVideoIds
      */
-    public void setUpdateVideoIds(List<String> updateVideoIds) {
-        this.updateVideoIds = updateVideoIds;
+    public void setOkVideoIds(List<String> okVideoIds) {
+        this.okVideoIds = okVideoIds;
     }
 
     /**
-     * get notFoundVideoIds
+     * get 未找到的视频ID列表
      *
      * @return
      */
@@ -74,7 +79,7 @@ public class BatchUpdateVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set notFoundVideoIds
+     * set 未找到的视频ID列表
      *
      * @param notFoundVideoIds
      */
@@ -82,19 +87,37 @@ public class BatchUpdateVideosResult extends JdcloudResult implements java.io.Se
         this.notFoundVideoIds = notFoundVideoIds;
     }
 
+    /**
+     * get 更新失败的视频ID列表
+     *
+     * @return
+     */
+    public List<String> getFailedVideoIds() {
+        return failedVideoIds;
+    }
 
     /**
-     * set updateVideoIds
+     * set 更新失败的视频ID列表
      *
-     * @param updateVideoIds
+     * @param failedVideoIds
      */
-    public BatchUpdateVideosResult updateVideoIds(List<String> updateVideoIds) {
-        this.updateVideoIds = updateVideoIds;
+    public void setFailedVideoIds(List<String> failedVideoIds) {
+        this.failedVideoIds = failedVideoIds;
+    }
+
+
+    /**
+     * set 更新成功的视频ID列表
+     *
+     * @param okVideoIds
+     */
+    public BatchUpdateVideosResult okVideoIds(List<String> okVideoIds) {
+        this.okVideoIds = okVideoIds;
         return this;
     }
 
     /**
-     * set notFoundVideoIds
+     * set 未找到的视频ID列表
      *
      * @param notFoundVideoIds
      */
@@ -103,21 +126,31 @@ public class BatchUpdateVideosResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+    /**
+     * set 更新失败的视频ID列表
+     *
+     * @param failedVideoIds
+     */
+    public BatchUpdateVideosResult failedVideoIds(List<String> failedVideoIds) {
+        this.failedVideoIds = failedVideoIds;
+        return this;
+    }
+
 
     /**
-     * add item to updateVideoIds
+     * add item to 更新成功的视频ID列表
      *
-     * @param updateVideoId
+     * @param okVideoId
      */
-    public void addUpdateVideoId(String updateVideoId) {
-        if (this.updateVideoIds == null) {
-            this.updateVideoIds = new ArrayList<>();
+    public void addOkVideoId(String okVideoId) {
+        if (this.okVideoIds == null) {
+            this.okVideoIds = new ArrayList<>();
         }
-        this.updateVideoIds.add(updateVideoId);
+        this.okVideoIds.add(okVideoId);
     }
 
     /**
-     * add item to notFoundVideoIds
+     * add item to 未找到的视频ID列表
      *
      * @param notFoundVideoId
      */
@@ -126,6 +159,18 @@ public class BatchUpdateVideosResult extends JdcloudResult implements java.io.Se
             this.notFoundVideoIds = new ArrayList<>();
         }
         this.notFoundVideoIds.add(notFoundVideoId);
+    }
+
+    /**
+     * add item to 更新失败的视频ID列表
+     *
+     * @param failedVideoId
+     */
+    public void addFailedVideoId(String failedVideoId) {
+        if (this.failedVideoIds == null) {
+            this.failedVideoIds = new ArrayList<>();
+        }
+        this.failedVideoIds.add(failedVideoId);
     }
 
 }

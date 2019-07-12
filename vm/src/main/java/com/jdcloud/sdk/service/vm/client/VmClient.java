@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.vm.model.DescribeImageMembersRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeImageMembersResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeImageMembersExecutor;
+import com.jdcloud.sdk.service.vm.model.CreateInstanceTemplateRequest;
+import com.jdcloud.sdk.service.vm.model.CreateInstanceTemplateResponse;
+import com.jdcloud.sdk.service.vm.client.CreateInstanceTemplateExecutor;
 import com.jdcloud.sdk.service.vm.model.CreateImageRequest;
 import com.jdcloud.sdk.service.vm.model.CreateImageResponse;
 import com.jdcloud.sdk.service.vm.client.CreateImageExecutor;
@@ -55,6 +58,9 @@ import com.jdcloud.sdk.service.vm.client.StopInstanceExecutor;
 import com.jdcloud.sdk.service.vm.model.StartInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.StartInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.StartInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplateRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplateResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeInstanceTemplateExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeImagesRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeImagesResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeImagesExecutor;
@@ -79,6 +85,9 @@ import com.jdcloud.sdk.service.vm.client.ResizeInstanceExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeImageConstraintsBatchRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeImageConstraintsBatchResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeImageConstraintsBatchExecutor;
+import com.jdcloud.sdk.service.vm.model.UpdateInstanceTemplateRequest;
+import com.jdcloud.sdk.service.vm.model.UpdateInstanceTemplateResponse;
+import com.jdcloud.sdk.service.vm.client.UpdateInstanceTemplateExecutor;
 import com.jdcloud.sdk.service.vm.model.AttachDiskRequest;
 import com.jdcloud.sdk.service.vm.model.AttachDiskResponse;
 import com.jdcloud.sdk.service.vm.client.AttachDiskExecutor;
@@ -103,6 +112,9 @@ import com.jdcloud.sdk.service.vm.client.DescribeImageExecutor;
 import com.jdcloud.sdk.service.vm.model.DetachNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.vm.model.DetachNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.vm.client.DetachNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.vm.model.DeleteInstanceTemplateRequest;
+import com.jdcloud.sdk.service.vm.model.DeleteInstanceTemplateResponse;
+import com.jdcloud.sdk.service.vm.client.DeleteInstanceTemplateExecutor;
 import com.jdcloud.sdk.service.vm.model.ImportKeypairRequest;
 import com.jdcloud.sdk.service.vm.model.ImportKeypairResponse;
 import com.jdcloud.sdk.service.vm.client.ImportKeypairExecutor;
@@ -112,6 +124,9 @@ import com.jdcloud.sdk.service.vm.client.CopyImagesExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplatesRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplatesResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeInstanceTemplatesExecutor;
 import com.jdcloud.sdk.service.vm.model.ModifyInstanceNetworkAttributeRequest;
 import com.jdcloud.sdk.service.vm.model.ModifyInstanceNetworkAttributeResponse;
 import com.jdcloud.sdk.service.vm.client.ModifyInstanceNetworkAttributeExecutor;
@@ -148,6 +163,9 @@ import com.jdcloud.sdk.service.vm.client.DescribeInstancesExecutor;
 import com.jdcloud.sdk.service.vm.model.CreateKeypairRequest;
 import com.jdcloud.sdk.service.vm.model.CreateKeypairResponse;
 import com.jdcloud.sdk.service.vm.client.CreateKeypairExecutor;
+import com.jdcloud.sdk.service.vm.model.VerifyInstanceTemplateRequest;
+import com.jdcloud.sdk.service.vm.model.VerifyInstanceTemplateResponse;
+import com.jdcloud.sdk.service.vm.client.VerifyInstanceTemplateExecutor;
 
 /**
  * vmClient
@@ -156,7 +174,7 @@ public class VmClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "vm.jdcloud-api.com";
     public final static String ServiceName = "vm";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -211,6 +229,21 @@ public class VmClient extends JdcloudClient {
     }
 
     /**
+     * 创建一个指定参数的启动模板，启动模板中包含创建云主机时的大部分配置参数，避免每次创建云主机时的重复性工作。&lt;br&gt;
+如果是使用启动模板创建云主机，如果指定了某些参数与模板中的参数相冲突，那么新指定的参数会替换模板中的参数。&lt;br&gt;
+如果是使用启动模板创建云主机，如果指定了镜像ID与模板中的镜像ID不一致，那么模板中的dataDisks参数会失效。&lt;br&gt;
+如果使用高可用组(Ag)创建云主机，那么Ag所关联的模板中的参数都不可以被调整，只能以模板为准。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateInstanceTemplateResponse createInstanceTemplate(CreateInstanceTemplateRequest request) throws JdcloudSdkException {
+        return new CreateInstanceTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
 云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
 制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
@@ -232,17 +265,16 @@ public class VmClient extends JdcloudClient {
     - 可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
     - 不能使用已下线、或已售馨的规格ID
 - 镜像
-    - Windows Server 2012 R2标准版 64位 中文版 SQL Server 2014 标准版 SP2内存需大于1GB；
     - Windows Server所有镜像CPU不可选超过64核CPU。
     - 可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
     - 选择的镜像必须支持选择的实例规格。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
 - 网络配置
     - 指定主网卡配置信息
         - 必须指定subnetId
-        - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-100]Mbps，步进1Mbps
+        - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
         - 可以指定主网卡的内网主IP(primaryIpAddress)，此时maxCount只能为1
         - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
-        - 一台云主机创建时必须指定一个安全组，至多指定5个安全组，如果没有指定安全组，默认使用默认安全组
+        - 一台云主机创建时必须至少指定一个安全组，至多指定5个安全组，如果没有指定安全组，默认使用默认安全组
         - 主网卡deviceIndex设置为1
 - 存储
     - 系统盘
@@ -251,17 +283,18 @@ public class VmClient extends JdcloudClient {
             - local：不能指定大小，默认为40GB
             - cloud：取值范围: 40-500GB，并且不能小于镜像的最小系统盘大小，如果没有指定，默认以镜像中的系统盘大小为准
         - 自动删除
-            - 如果是local，默认自动删除，不能修改此属性
-            - 如果是cloud类型的按配置计费的云硬盘，可以指定为True
+            - 如果是local类型，默认自动删除，不可修改
+            - 如果是cloud类型的按配置计费的云硬盘，默认为True，可修改
+            - 如果是cloud类型的包年包月的云硬盘，默认为False，不可修改
     - 数据盘
         - 磁盘分类，数据盘仅支持cloud
-        - 云硬盘类型可以选择ssd、premium-hdd
+        - 云硬盘类型可以选择ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
             - premium-hdd：范围[20,3000]GB，步长为10G
             - ssd：范围[20,1000]GB，步长为10G
+            - hdd.std1、ssd.gp1、ssd.io1: 范围[20-16000]GB，步长为10GB
         - 自动删除
-            - 默认自动删除，如果是包年包月的数据盘或共享型数据盘，此参数不生效
-            - 可以指定SnapshotId创建云硬盘
+            - 默认自动删除，如果是包年包月的云硬盘，此参数不生效
         - 可以从快照创建磁盘
     - local类型系统的云主机可以挂载8块云硬盘
     - cloud类型系统的云主机可以挂载7块云硬盘
@@ -286,8 +319,8 @@ public class VmClient extends JdcloudClient {
     }
 
     /**
-     * 为云主机主网卡下的主内网IP绑定弹性公网IP。&lt;br&gt;
-一台云主机只能绑定一个弹性公网IP(主网卡)，若主网卡已存在弹性公网IP，会返回错误。&lt;br&gt;
+     * 为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
+一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
 
      *
      * @param request
@@ -337,7 +370,7 @@ public class VmClient extends JdcloudClient {
 
     /**
      * 启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
-只能启动正常计费状态的云主机。
+只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
 
      *
      * @param request
@@ -346,6 +379,18 @@ public class VmClient extends JdcloudClient {
      */
     public StartInstanceResponse startInstance(StartInstanceRequest request) throws JdcloudSdkException {
         return new StartInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询启动模板详情
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceTemplateResponse describeInstanceTemplate(DescribeInstanceTemplateRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -391,8 +436,8 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     /**
      * 云主机使用指定镜像重置云主机系统&lt;br&gt;
 云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-若当前云主机的系统盘类型为local类型，那么更换的镜像必须为localDisk类型的镜像；同理若当前云主机的系统盘为cloud类型，那么更换的镜像必须为cloudDisk类型的镜像。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。&lt;br&gt;
 若不指定镜像ID，默认使用当前主机的原镜像重置系统。&lt;br&gt;
+云主机系统盘类型必须与待更换镜像支持的系统盘类型保持一致，若当前云主机系统盘为local类型，则更换镜像的系统盘类型必须为loaclDisk类型；同理，若当前云主机系统盘为cloud类型，则更换镜像的系统盘类型必须为cloudDisk类型。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。&lt;br&gt;
 指定的镜像必须能够支持当前主机的实例规格(instanceType)，否则会返回错误。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像支持的系统盘类型信息。
 
      *
@@ -431,10 +476,10 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     /**
      * 云主机变更实例规格&lt;br&gt;
 云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-16年创建的云硬盘做系统盘的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
-本地盘(local类型)做系统盘的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
-使用高可用组(Ag)创建的主机，一代与二代实例规格不允许相互调整。&lt;br&gt;
-云硬盘(cloud类型)做系统盘的主机，一代与二代实例规格允许相互调整。&lt;br&gt;
+以下情况的云主机，不允许在一代与二代实例规格间互相调整，例：不允许g.n1与g.n2之间互相调配&lt;br&gt;
+1、16年创建的云硬盘做系统盘的云主机&lt;br&gt;
+2、本地盘(local类型)做系统盘的云主机。&lt;br&gt;
+3、使用高可用组(Ag)创建的云主机。&lt;br&gt;
 如果当前主机中的弹性网卡数量，大于新实例规格允许的弹性网卡数量，会返回错误。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域及可用区下的实例规格信息。&lt;br&gt;
 当前主机所使用的镜像，需要支持要变更的目标实例规格，否则返回错误。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
 云主机欠费或到期时，无法更改实例规格。
@@ -462,9 +507,21 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 为一台云主机挂载一块数据盘(云硬盘)，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
+     * 修改一个启动模板的信息，包括名称、描述
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateInstanceTemplateResponse updateInstanceTemplate(UpdateInstanceTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateInstanceTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
 云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
 
      *
      * @param request
@@ -514,9 +571,9 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 云主机挂载一块弹性网卡。&lt;br&gt;
+     * 云主机绑定一块弹性网卡。&lt;br&gt;
 云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
-弹性网卡上如果绑定了公网IP，那么公网IP所在az需要与云主机的az保持一致，或者公网IP属于全可用区，才可挂载。&lt;br&gt;
+弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
 云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
 弹性网卡与云主机必须在相同vpc下。
 
@@ -568,6 +625,18 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
+     * 删除一个启动模板
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteInstanceTemplateResponse deleteInstanceTemplate(DeleteInstanceTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteInstanceTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
 若传入已存在的密钥名称，会返回错误。
 
@@ -606,6 +675,18 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
+     * 查询启动模板列表
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceTemplatesResponse describeInstanceTemplates(DescribeInstanceTemplatesRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
 不能修改主网卡。
 
@@ -619,7 +700,7 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 查询配额，支持：云主机、镜像、密钥、模板、镜像共享
+     * 查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
 
      *
      * @param request
@@ -655,7 +736,8 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 修改云主机挂载的数据盘属性，包括是否随主机删除。
+     * 修改云主机挂载的数据盘属性，包括是否随主机删除。&lt;br&gt;
+仅按配置计费云硬盘支持设置随实例删除属性;包年包月计费云硬盘该属性不生效,实例删除时云硬盘将保留。&lt;br&gt;
 
      *
      * @param request
@@ -702,7 +784,7 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 云主机缷载数据盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+     * 云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
 
      *
      * @param request
@@ -716,8 +798,7 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     /**
      * 删除按配置计费、或包年包月已到期的单个云主机。不能删除没有计费信息的云主机。&lt;br&gt;
 云主机状态必须为运行&lt;b&gt;running&lt;/b&gt;、停止&lt;b&gt;stopped&lt;/b&gt;、错误&lt;b&gt;error&lt;/b&gt;，同时云主机没有正在进行中的任务才可删除。&lt;br&gt;
-包年包月未到期的云主机不能删除。&lt;br&gt;
-如果主机中挂载的数据盘为按配置计费的云硬盘，并且不是共享型云硬盘，并且AutoDelete属性为true，那么数据盘会随主机一起删除。
+如果主机中挂载的数据盘为按配置计费的云硬盘且AutoDelete属性为true，那么数据盘会随主机一起删除。
  [MFA enabled]
      *
      * @param request
@@ -752,6 +833,18 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public CreateKeypairResponse createKeypair(CreateKeypairRequest request) throws JdcloudSdkException {
         return new CreateKeypairExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 校验启动模板的有效性
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public VerifyInstanceTemplateResponse verifyInstanceTemplate(VerifyInstanceTemplateRequest request) throws JdcloudSdkException {
+        return new VerifyInstanceTemplateExecutor().client(this).execute(request);
     }
 
 

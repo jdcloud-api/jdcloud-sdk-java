@@ -59,12 +59,12 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     private Boolean asDefault;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -160,7 +160,7 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -169,7 +169,7 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -178,7 +178,7 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -187,7 +187,7 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -247,7 +247,7 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -257,7 +257,7 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */

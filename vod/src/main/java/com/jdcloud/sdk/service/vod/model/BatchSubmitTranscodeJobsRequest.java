@@ -38,7 +38,7 @@ public class BatchSubmitTranscodeJobsRequest extends JdcloudRequest implements j
     /**
      * jobs
      */
-    private List<SubmitTranscodeJobReq> jobs;
+    private List<SubmitTranscodeJobRequestObject> jobs;
 
 
     /**
@@ -46,7 +46,7 @@ public class BatchSubmitTranscodeJobsRequest extends JdcloudRequest implements j
      *
      * @return
      */
-    public List<SubmitTranscodeJobReq> getJobs() {
+    public List<SubmitTranscodeJobRequestObject> getJobs() {
         return jobs;
     }
 
@@ -55,7 +55,7 @@ public class BatchSubmitTranscodeJobsRequest extends JdcloudRequest implements j
      *
      * @param jobs
      */
-    public void setJobs(List<SubmitTranscodeJobReq> jobs) {
+    public void setJobs(List<SubmitTranscodeJobRequestObject> jobs) {
         this.jobs = jobs;
     }
 
@@ -65,7 +65,7 @@ public class BatchSubmitTranscodeJobsRequest extends JdcloudRequest implements j
      *
      * @param jobs
      */
-    public BatchSubmitTranscodeJobsRequest jobs(List<SubmitTranscodeJobReq> jobs) {
+    public BatchSubmitTranscodeJobsRequest jobs(List<SubmitTranscodeJobRequestObject> jobs) {
         this.jobs = jobs;
         return this;
     }
@@ -76,7 +76,7 @@ public class BatchSubmitTranscodeJobsRequest extends JdcloudRequest implements j
      *
      * @param job
      */
-    public void addJob(SubmitTranscodeJobReq job) {
+    public void addJob(SubmitTranscodeJobRequestObject job) {
         if (this.jobs == null) {
             this.jobs = new ArrayList<>();
         }

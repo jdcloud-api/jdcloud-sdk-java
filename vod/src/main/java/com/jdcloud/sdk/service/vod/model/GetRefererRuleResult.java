@@ -48,16 +48,6 @@ public class GetRefererRuleResult extends JdcloudResult implements java.io.Seria
      */
     private Boolean enabled;
 
-    /**
-     * createTime
-     */
-    private String createTime;
-
-    /**
-     * updateTime
-     */
-    private String updateTime;
-
 
     /**
      * get 规则类型，取值 &#39;referer&#39;
@@ -113,42 +103,6 @@ public class GetRefererRuleResult extends JdcloudResult implements java.io.Seria
         this.enabled = enabled;
     }
 
-    /**
-     * get createTime
-     *
-     * @return
-     */
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * set createTime
-     *
-     * @param createTime
-     */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * get updateTime
-     *
-     * @return
-     */
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * set updateTime
-     *
-     * @param updateTime
-     */
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-    }
-
 
     /**
      * set 规则类型，取值 &#39;referer&#39;
@@ -177,26 +131,6 @@ public class GetRefererRuleResult extends JdcloudResult implements java.io.Seria
      */
     public GetRefererRuleResult enabled(Boolean enabled) {
         this.enabled = enabled;
-        return this;
-    }
-
-    /**
-     * set createTime
-     *
-     * @param createTime
-     */
-    public GetRefererRuleResult createTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-
-    /**
-     * set updateTime
-     *
-     * @param updateTime
-     */
-    public GetRefererRuleResult updateTime(String updateTime) {
-        this.updateTime = updateTime;
         return this;
     }
 

@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 
 /**
- * 视频参数
+ * 视频参数配置
  */
 public class Video  implements java.io.Serializable {
 

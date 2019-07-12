@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.vod.model.UpdateVideoBulkItem;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,51 +37,51 @@ public class BatchUpdateVideosRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * contents
+     * 批量更新视频的条目列表信息
      */
-    private List<Object> contents;
+    private List<UpdateVideoBulkItem> bulk;
 
 
     /**
-     * get contents
+     * get 批量更新视频的条目列表信息
      *
      * @return
      */
-    public List<Object> getContents() {
-        return contents;
+    public List<UpdateVideoBulkItem> getBulk() {
+        return bulk;
     }
 
     /**
-     * set contents
+     * set 批量更新视频的条目列表信息
      *
-     * @param contents
+     * @param bulk
      */
-    public void setContents(List<Object> contents) {
-        this.contents = contents;
+    public void setBulk(List<UpdateVideoBulkItem> bulk) {
+        this.bulk = bulk;
     }
 
 
     /**
-     * set contents
+     * set 批量更新视频的条目列表信息
      *
-     * @param contents
+     * @param bulk
      */
-    public BatchUpdateVideosRequest contents(List<Object> contents) {
-        this.contents = contents;
+    public BatchUpdateVideosRequest bulk(List<UpdateVideoBulkItem> bulk) {
+        this.bulk = bulk;
         return this;
     }
 
 
     /**
-     * add item to contents
+     * add item to 批量更新视频的条目列表信息
      *
-     * @param content
+     * @param bulk
      */
-    public void addContent(Object content) {
-        if (this.contents == null) {
-            this.contents = new ArrayList<>();
+    public void addBulk(UpdateVideoBulkItem bulk) {
+        if (this.bulk == null) {
+            this.bulk = new ArrayList<>();
         }
-        this.contents.add(content);
+        this.bulk.add(bulk);
     }
 
 }

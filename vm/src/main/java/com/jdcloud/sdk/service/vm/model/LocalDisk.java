@@ -33,7 +33,7 @@ public class LocalDisk  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 磁盘类型，取值范围{premium-hdd, ssd}
+     * 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
      */
     private String diskType;
 
@@ -44,7 +44,7 @@ public class LocalDisk  implements java.io.Serializable {
 
 
     /**
-     * get 磁盘类型，取值范围{premium-hdd, ssd}
+     * get 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class LocalDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘类型，取值范围{premium-hdd, ssd}
+     * set 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
      *
      * @param diskType
      */
@@ -81,7 +81,7 @@ public class LocalDisk  implements java.io.Serializable {
 
 
     /**
-     * set 磁盘类型，取值范围{premium-hdd, ssd}
+     * set 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
      *
      * @param diskType
      */

@@ -33,7 +33,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 生成播放信息的任务ID
+     * 生成播放信息的转码任务ID
      */
     private String taskId;
 
@@ -48,9 +48,9 @@ public class VideoPlayInfo  implements java.io.Serializable {
     private Integer mediaType;
 
     /**
-     * 播放信息状态，目前只有完成状态
+     * 播放信息状态，目前只有正常状态(normal)
      */
-    private Integer status;
+    private String status;
 
     /**
      * CDN地址，原始地址或者鉴权地址
@@ -109,7 +109,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
 
 
     /**
-     * get 生成播放信息的任务ID
+     * get 生成播放信息的转码任务ID
      *
      * @return
      */
@@ -118,7 +118,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 生成播放信息的任务ID
+     * set 生成播放信息的转码任务ID
      *
      * @param taskId
      */
@@ -163,20 +163,20 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 播放信息状态，目前只有完成状态
+     * get 播放信息状态，目前只有正常状态(normal)
      *
      * @return
      */
-    public Integer getStatus() {
+    public String getStatus() {
         return status;
     }
 
     /**
-     * set 播放信息状态，目前只有完成状态
+     * set 播放信息状态，目前只有正常状态(normal)
      *
      * @param status
      */
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -380,7 +380,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
 
 
     /**
-     * set 生成播放信息的任务ID
+     * set 生成播放信息的转码任务ID
      *
      * @param taskId
      */
@@ -410,11 +410,11 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 播放信息状态，目前只有完成状态
+     * set 播放信息状态，目前只有正常状态(normal)
      *
      * @param status
      */
-    public VideoPlayInfo status(Integer status) {
+    public VideoPlayInfo status(String status) {
         this.status = status;
         return this;
     }

@@ -54,7 +54,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     private InstanceTemplateDisk instanceTemplateDisk;
 
     /**
-     * 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi。系统盘不需要使用，数据盘时才能够使用。
+     * 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm。系统盘不需要使用，数据盘时才能够使用。
      */
     private String deviceName;
 
@@ -135,7 +135,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi。系统盘不需要使用，数据盘时才能够使用。
+     * get 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm。系统盘不需要使用，数据盘时才能够使用。
      *
      * @return
      */
@@ -144,7 +144,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi。系统盘不需要使用，数据盘时才能够使用。
+     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm。系统盘不需要使用，数据盘时才能够使用。
      *
      * @param deviceName
      */
@@ -216,7 +216,7 @@ public class InstanceTemplateDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi。系统盘不需要使用，数据盘时才能够使用。
+     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm。系统盘不需要使用，数据盘时才能够使用。
      *
      * @param deviceName
      */
