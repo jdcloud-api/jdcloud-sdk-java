@@ -42,14 +42,12 @@ public class DescribeDomainsLogRequest extends JdcloudRequest implements java.io
     private String domains;
 
     /**
-     * 时间间隔，取值(hour，day，fiveMin),不传默认小时
+     * 时间间隔，取值(hour，day),不传默认小时
+- 按小时（hour）下载时是.log文件
+- 按天（day）下载时是.zip文件
+
      */
     private String interval;
-
-    /**
-     * 日志后缀格式，取值（zip，log，gz）,默认值为log
-     */
-    private String logType;
 
     /**
      * 起始时间
@@ -92,7 +90,10 @@ public class DescribeDomainsLogRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 时间间隔，取值(hour，day，fiveMin),不传默认小时
+     * get 时间间隔，取值(hour，day),不传默认小时
+- 按小时（hour）下载时是.log文件
+- 按天（day）下载时是.zip文件
+
      *
      * @return
      */
@@ -101,30 +102,15 @@ public class DescribeDomainsLogRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 时间间隔，取值(hour，day，fiveMin),不传默认小时
+     * set 时间间隔，取值(hour，day),不传默认小时
+- 按小时（hour）下载时是.log文件
+- 按天（day）下载时是.zip文件
+
      *
      * @param interval
      */
     public void setInterval(String interval) {
         this.interval = interval;
-    }
-
-    /**
-     * get 日志后缀格式，取值（zip，log，gz）,默认值为log
-     *
-     * @return
-     */
-    public String getLogType() {
-        return logType;
-    }
-
-    /**
-     * set 日志后缀格式，取值（zip，log，gz）,默认值为log
-     *
-     * @param logType
-     */
-    public void setLogType(String logType) {
-        this.logType = logType;
     }
 
     /**
@@ -193,22 +179,15 @@ public class DescribeDomainsLogRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 时间间隔，取值(hour，day，fiveMin),不传默认小时
+     * set 时间间隔，取值(hour，day),不传默认小时
+- 按小时（hour）下载时是.log文件
+- 按天（day）下载时是.zip文件
+
      *
      * @param interval
      */
     public DescribeDomainsLogRequest interval(String interval) {
         this.interval = interval;
-        return this;
-    }
-
-    /**
-     * set 日志后缀格式，取值（zip，log，gz）,默认值为log
-     *
-     * @param logType
-     */
-    public DescribeDomainsLogRequest logType(String logType) {
-        this.logType = logType;
         return this;
     }
 

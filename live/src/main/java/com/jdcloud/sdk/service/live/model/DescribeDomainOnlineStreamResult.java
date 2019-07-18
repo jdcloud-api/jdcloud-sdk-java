@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.live.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.live.model.PublishOnlineStreamResult;
+import com.jdcloud.sdk.service.live.model.PublishOnlineStreamResultData;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -37,51 +37,84 @@ public class DescribeDomainOnlineStreamResult extends JdcloudResult implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * dataList
+     * streamList
      */
-    private List<PublishOnlineStreamResult> dataList;
+    private List<PublishOnlineStreamResultData> streamList;
+
+    /**
+     * 流数量
+     */
+    private Integer total;
 
 
     /**
-     * get dataList
+     * get streamList
      *
      * @return
      */
-    public List<PublishOnlineStreamResult> getDataList() {
-        return dataList;
+    public List<PublishOnlineStreamResultData> getStreamList() {
+        return streamList;
     }
 
     /**
-     * set dataList
+     * set streamList
      *
-     * @param dataList
+     * @param streamList
      */
-    public void setDataList(List<PublishOnlineStreamResult> dataList) {
-        this.dataList = dataList;
+    public void setStreamList(List<PublishOnlineStreamResultData> streamList) {
+        this.streamList = streamList;
+    }
+
+    /**
+     * get 流数量
+     *
+     * @return
+     */
+    public Integer getTotal() {
+        return total;
+    }
+
+    /**
+     * set 流数量
+     *
+     * @param total
+     */
+    public void setTotal(Integer total) {
+        this.total = total;
     }
 
 
     /**
-     * set dataList
+     * set streamList
      *
-     * @param dataList
+     * @param streamList
      */
-    public DescribeDomainOnlineStreamResult dataList(List<PublishOnlineStreamResult> dataList) {
-        this.dataList = dataList;
+    public DescribeDomainOnlineStreamResult streamList(List<PublishOnlineStreamResultData> streamList) {
+        this.streamList = streamList;
+        return this;
+    }
+
+    /**
+     * set 流数量
+     *
+     * @param total
+     */
+    public DescribeDomainOnlineStreamResult total(Integer total) {
+        this.total = total;
         return this;
     }
 
 
     /**
-     * add item to dataList
+     * add item to streamList
      *
-     * @param dataList
+     * @param streamList
      */
-    public void addDataList(PublishOnlineStreamResult dataList) {
-        if (this.dataList == null) {
-            this.dataList = new ArrayList<>();
+    public void addStreamList(PublishOnlineStreamResultData streamList) {
+        if (this.streamList == null) {
+            this.streamList = new ArrayList<>();
         }
-        this.dataList.add(dataList);
+        this.streamList.add(streamList);
     }
 
 }

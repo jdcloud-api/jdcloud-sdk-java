@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamSnapshotConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamSnapshotConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamSnapshotConfigExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeRecordBindingRequest;
+import com.jdcloud.sdk.service.live.model.DescribeRecordBindingResponse;
+import com.jdcloud.sdk.service.live.client.DescribeRecordBindingExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamTranscodeTemplateExecutor;
@@ -76,6 +79,9 @@ import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamRecordTemplat
 import com.jdcloud.sdk.service.live.model.DescribeDomainsLogRequest;
 import com.jdcloud.sdk.service.live.model.DescribeDomainsLogResponse;
 import com.jdcloud.sdk.service.live.client.DescribeDomainsLogExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeTranscodeBindingRequest;
+import com.jdcloud.sdk.service.live.model.DescribeTranscodeBindingResponse;
+import com.jdcloud.sdk.service.live.client.DescribeTranscodeBindingExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamRecordConfigExecutor;
@@ -100,9 +106,6 @@ import com.jdcloud.sdk.service.live.client.AddLiveAppExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamSnapshotTemplateRequest;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamSnapshotTemplateResponse;
 import com.jdcloud.sdk.service.live.client.DeleteCustomLiveStreamSnapshotTemplateExecutor;
-import com.jdcloud.sdk.service.live.model.UpdateCustomLiveStreamWatermarkTemplateRequest;
-import com.jdcloud.sdk.service.live.model.UpdateCustomLiveStreamWatermarkTemplateResponse;
-import com.jdcloud.sdk.service.live.client.UpdateCustomLiveStreamWatermarkTemplateExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppWatermarkRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppWatermarkResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamAppWatermarkExecutor;
@@ -124,6 +127,9 @@ import com.jdcloud.sdk.service.live.client.DeleteCustomLiveStreamRecordTemplateE
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPlayerRankingDataRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPlayerRankingDataResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamPlayerRankingDataExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeWatermarkBindingRequest;
+import com.jdcloud.sdk.service.live.model.DescribeWatermarkBindingResponse;
+import com.jdcloud.sdk.service.live.client.DescribeWatermarkBindingExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStatisticGroupByStreamRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStatisticGroupByStreamResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStatisticGroupByStreamExecutor;
@@ -214,6 +220,9 @@ import com.jdcloud.sdk.service.live.client.DescribeLivePlayAuthKeyExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodingDurationDataRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodingDurationDataResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveTranscodingDurationDataExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeSnapshotBindingRequest;
+import com.jdcloud.sdk.service.live.model.DescribeSnapshotBindingResponse;
+import com.jdcloud.sdk.service.live.client.DescribeSnapshotBindingExecutor;
 import com.jdcloud.sdk.service.live.model.InterruptLiveStreamRequest;
 import com.jdcloud.sdk.service.live.model.InterruptLiveStreamResponse;
 import com.jdcloud.sdk.service.live.client.InterruptLiveStreamExecutor;
@@ -355,6 +364,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeCustomLiveStreamSnapshotConfigResponse describeCustomLiveStreamSnapshotConfig(DescribeCustomLiveStreamSnapshotConfigRequest request) throws JdcloudSdkException {
         return new DescribeCustomLiveStreamSnapshotConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询录制模板绑定
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRecordBindingResponse describeRecordBinding(DescribeRecordBindingRequest request) throws JdcloudSdkException {
+        return new DescribeRecordBindingExecutor().client(this).execute(request);
     }
 
     /**
@@ -534,6 +555,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 查询转码模板绑定
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTranscodeBindingResponse describeTranscodeBinding(DescribeTranscodeBindingRequest request) throws JdcloudSdkException {
+        return new DescribeTranscodeBindingExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询直播直播录制配置
 - 录制模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效
 - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
@@ -631,18 +664,6 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
-     * 修改用户自定义水印模板
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateCustomLiveStreamWatermarkTemplateResponse updateCustomLiveStreamWatermarkTemplate(UpdateCustomLiveStreamWatermarkTemplateRequest request) throws JdcloudSdkException {
-        return new UpdateCustomLiveStreamWatermarkTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除应用级别水印模板配置
 - 删除应用级别的水印模板配置,重新推流后生效
 
@@ -728,6 +749,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveStreamPlayerRankingDataResponse describeLiveStreamPlayerRankingData(DescribeLiveStreamPlayerRankingDataRequest request) throws JdcloudSdkException {
         return new DescribeLiveStreamPlayerRankingDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询水印模板绑定
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWatermarkBindingResponse describeWatermarkBinding(DescribeWatermarkBindingRequest request) throws JdcloudSdkException {
+        return new DescribeWatermarkBindingExecutor().client(this).execute(request);
     }
 
     /**
@@ -1089,6 +1122,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveTranscodingDurationDataResponse describeLiveTranscodingDurationData(DescribeLiveTranscodingDurationDataRequest request) throws JdcloudSdkException {
         return new DescribeLiveTranscodingDurationDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询截图模板绑定
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSnapshotBindingResponse describeSnapshotBinding(DescribeSnapshotBindingRequest request) throws JdcloudSdkException {
+        return new DescribeSnapshotBindingExecutor().client(this).execute(request);
     }
 
     /**
