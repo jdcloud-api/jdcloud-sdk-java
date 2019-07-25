@@ -92,7 +92,7 @@ public class ForwardProtectionRule  implements java.io.Serializable {
     /**
      * geo 拦截地域列表
      */
-    private List<GeoBlack> geoBlackList;
+    private List<Geo> geoBlackList;
 
 
     /**
@@ -298,7 +298,7 @@ public class ForwardProtectionRule  implements java.io.Serializable {
      *
      * @return
      */
-    public List<GeoBlack> getGeoBlackList() {
+    public List<Geo> getGeoBlackList() {
         return geoBlackList;
     }
 
@@ -307,7 +307,7 @@ public class ForwardProtectionRule  implements java.io.Serializable {
      *
      * @param geoBlackList
      */
-    public void setGeoBlackList(List<GeoBlack> geoBlackList) {
+    public void setGeoBlackList(List<Geo> geoBlackList) {
         this.geoBlackList = geoBlackList;
     }
 
@@ -427,7 +427,7 @@ public class ForwardProtectionRule  implements java.io.Serializable {
      *
      * @param geoBlackList
      */
-    public ForwardProtectionRule geoBlackList(List<GeoBlack> geoBlackList) {
+    public ForwardProtectionRule geoBlackList(List<Geo> geoBlackList) {
         this.geoBlackList = geoBlackList;
         return this;
     }
@@ -438,7 +438,7 @@ public class ForwardProtectionRule  implements java.io.Serializable {
      *
      * @param geoBlackList
      */
-    public void addGeoBlackList(GeoBlack geoBlackList) {
+    public void addGeoBlackList(Geo geoBlackList) {
         if (this.geoBlackList == null) {
             this.geoBlackList = new ArrayList<>();
         }

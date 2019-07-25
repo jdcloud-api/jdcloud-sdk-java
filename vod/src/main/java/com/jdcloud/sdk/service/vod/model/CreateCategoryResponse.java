@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 添加分类
+
  */
 public class CreateCategoryResponse extends JdcloudResponse<CreateCategoryResult> implements java.io.Serializable {
 

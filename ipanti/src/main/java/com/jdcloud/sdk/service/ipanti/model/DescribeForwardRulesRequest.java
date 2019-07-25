@@ -55,7 +55,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     private String searchValue;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -66,7 +66,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
      * Required:true
      */
     @Required
-    private Long instanceId;
+    private String instanceId;
 
 
     /**
@@ -142,7 +142,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -151,7 +151,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -164,7 +164,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -173,7 +173,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -219,7 +219,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -233,7 +233,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
      *
      * @param instanceId
      */
-    public DescribeForwardRulesRequest instanceId(Long instanceId) {
+    public DescribeForwardRulesRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.ipanti.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.ipanti.model.DDosAttackLog;
+import com.jdcloud.sdk.service.ipanti.model.CCAttackLog;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,7 +39,7 @@ public class DescribeCCAttackLogsResult extends JdcloudResult implements java.io
     /**
      * dataList
      */
-    private List<DDosAttackLog> dataList;
+    private List<CCAttackLog> dataList;
 
     /**
      * 当前页数量
@@ -62,7 +62,7 @@ public class DescribeCCAttackLogsResult extends JdcloudResult implements java.io
      *
      * @return
      */
-    public List<DDosAttackLog> getDataList() {
+    public List<CCAttackLog> getDataList() {
         return dataList;
     }
 
@@ -71,7 +71,7 @@ public class DescribeCCAttackLogsResult extends JdcloudResult implements java.io
      *
      * @param dataList
      */
-    public void setDataList(List<DDosAttackLog> dataList) {
+    public void setDataList(List<CCAttackLog> dataList) {
         this.dataList = dataList;
     }
 
@@ -135,7 +135,7 @@ public class DescribeCCAttackLogsResult extends JdcloudResult implements java.io
      *
      * @param dataList
      */
-    public DescribeCCAttackLogsResult dataList(List<DDosAttackLog> dataList) {
+    public DescribeCCAttackLogsResult dataList(List<CCAttackLog> dataList) {
         this.dataList = dataList;
         return this;
     }
@@ -176,7 +176,7 @@ public class DescribeCCAttackLogsResult extends JdcloudResult implements java.io
      *
      * @param dataList
      */
-    public void addDataList(DDosAttackLog dataList) {
+    public void addDataList(CCAttackLog dataList) {
         if (this.dataList == null) {
             this.dataList = new ArrayList<>();
         }

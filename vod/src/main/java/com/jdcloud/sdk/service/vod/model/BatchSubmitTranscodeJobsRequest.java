@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.vod.model.SubmitTranscodeJobRequestObject;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,51 +37,51 @@ public class BatchSubmitTranscodeJobsRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * jobs
+     * bulkItems
      */
-    private List<SubmitTranscodeJobRequestObject> jobs;
+    private List<SubmitTranscodeJobRequestObject> bulkItems;
 
 
     /**
-     * get jobs
+     * get bulkItems
      *
      * @return
      */
-    public List<SubmitTranscodeJobRequestObject> getJobs() {
-        return jobs;
+    public List<SubmitTranscodeJobRequestObject> getBulkItems() {
+        return bulkItems;
     }
 
     /**
-     * set jobs
+     * set bulkItems
      *
-     * @param jobs
+     * @param bulkItems
      */
-    public void setJobs(List<SubmitTranscodeJobRequestObject> jobs) {
-        this.jobs = jobs;
+    public void setBulkItems(List<SubmitTranscodeJobRequestObject> bulkItems) {
+        this.bulkItems = bulkItems;
     }
 
 
     /**
-     * set jobs
+     * set bulkItems
      *
-     * @param jobs
+     * @param bulkItems
      */
-    public BatchSubmitTranscodeJobsRequest jobs(List<SubmitTranscodeJobRequestObject> jobs) {
-        this.jobs = jobs;
+    public BatchSubmitTranscodeJobsRequest bulkItems(List<SubmitTranscodeJobRequestObject> bulkItems) {
+        this.bulkItems = bulkItems;
         return this;
     }
 
 
     /**
-     * add item to jobs
+     * add item to bulkItems
      *
-     * @param job
+     * @param bulkItem
      */
-    public void addJob(SubmitTranscodeJobRequestObject job) {
-        if (this.jobs == null) {
-            this.jobs = new ArrayList<>();
+    public void addBulkItem(SubmitTranscodeJobRequestObject bulkItem) {
+        if (this.bulkItems == null) {
+            this.bulkItems = new ArrayList<>();
         }
-        this.jobs.add(job);
+        this.bulkItems.add(bulkItem);
     }
 
 }

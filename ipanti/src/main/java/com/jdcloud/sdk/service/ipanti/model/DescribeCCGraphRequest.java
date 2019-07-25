@@ -53,7 +53,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
     /**
      * 高防实例 Id 列表
      */
-    private List<Long> instanceId;
+    private List<String> instanceId;
 
     /**
      * 规则域名列表
@@ -61,7 +61,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
     private List<String> subDomain;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -109,7 +109,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public List<Long> getInstanceId() {
+    public List<String> getInstanceId() {
         return instanceId;
     }
 
@@ -118,7 +118,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public void setInstanceId(List<Long> instanceId) {
+    public void setInstanceId(List<String> instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -141,7 +141,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -150,7 +150,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -184,7 +184,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public DescribeCCGraphRequest instanceId(List<Long> instanceId) {
+    public DescribeCCGraphRequest instanceId(List<String> instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -200,7 +200,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -215,7 +215,7 @@ public class DescribeCCGraphRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public void addInstanceId(Long instanceId) {
+    public void addInstanceId(String instanceId) {
         if (this.instanceId == null) {
             this.instanceId = new ArrayList<>();
         }

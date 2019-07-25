@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除视频，调用该接口会同时删除与该视频相关的所有信息
+ * 删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
  */
 public class DeleteVideoResult extends JdcloudResult implements java.io.Serializable {
 

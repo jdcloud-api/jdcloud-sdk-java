@@ -109,6 +109,14 @@ public class InstanceSpec  implements java.io.Serializable {
     private ChargeSpec charge;
 
     /**
+     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     */
+    private List<Userdata> userdata;
+
+    /**
      * 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String description;
@@ -380,6 +388,30 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @return
+     */
+    public List<Userdata> getUserdata() {
+        return userdata;
+    }
+
+    /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void setUserdata(List<Userdata> userdata) {
+        this.userdata = userdata;
+    }
+
+    /**
      * get 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
@@ -603,6 +635,19 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public InstanceSpec userdata(List<Userdata> userdata) {
+        this.userdata = userdata;
+        return this;
+    }
+
+    /**
      * set 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param description
@@ -673,6 +718,21 @@ public class InstanceSpec  implements java.io.Serializable {
             this.dataDisks = new ArrayList<>();
         }
         this.dataDisks.add(dataDisk);
+    }
+
+    /**
+     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void addUserdata(Userdata userdata) {
+        if (this.userdata == null) {
+            this.userdata = new ArrayList<>();
+        }
+        this.userdata.add(userdata);
     }
 
 }

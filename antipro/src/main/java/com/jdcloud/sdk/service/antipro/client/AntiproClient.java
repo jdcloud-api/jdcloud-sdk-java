@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.antipro.model.CreateInstanceRequest;
 import com.jdcloud.sdk.service.antipro.model.CreateInstanceResponse;
 import com.jdcloud.sdk.service.antipro.client.CreateInstanceExecutor;
+import com.jdcloud.sdk.service.antipro.model.DescribeCcsIpResourcesRequest;
+import com.jdcloud.sdk.service.antipro.model.DescribeCcsIpResourcesResponse;
+import com.jdcloud.sdk.service.antipro.client.DescribeCcsIpResourcesExecutor;
 import com.jdcloud.sdk.service.antipro.model.DeleteProtectedIpRequest;
 import com.jdcloud.sdk.service.antipro.model.DeleteProtectedIpResponse;
 import com.jdcloud.sdk.service.antipro.client.DeleteProtectedIpExecutor;
@@ -102,7 +105,7 @@ public class AntiproClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "antipro.jdcloud-api.com";
     public final static String ServiceName = "antipro";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -153,6 +156,17 @@ public class AntiproClient extends JdcloudClient {
      */
     public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws JdcloudSdkException {
         return new CreateInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 DDoS 防护包可防护的托管区公网 IP
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCcsIpResourcesResponse describeCcsIpResources(DescribeCcsIpResourcesRequest request) throws JdcloudSdkException {
+        return new DescribeCcsIpResourcesExecutor().client(this).execute(request);
     }
 
     /**

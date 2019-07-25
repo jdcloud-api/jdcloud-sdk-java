@@ -24,9 +24,10 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 创建域名请求信息
+ * 创建域名请求
  */
 public class CreateDomainRequestObject  implements java.io.Serializable {
 
@@ -34,7 +35,9 @@ public class CreateDomainRequestObject  implements java.io.Serializable {
 
     /**
      * 域名名称
+     * Required:true
      */
+    @Required
     private String name;
 
 

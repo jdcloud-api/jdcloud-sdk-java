@@ -25,23 +25,28 @@
 package com.jdcloud.sdk.service.vod.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vod.model.RefererRuleConfigObject;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置CDN域名Referer规则
+ * 设置CDN域名Referer防盗链规则
  */
 public class SetRefererRuleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则配置对象
+     * Referer防盗链规则配置对象
+     * Required:true
      */
-    private Object config;
+    @Required
+    private RefererRuleConfigObject config;
 
     /**
      * 是否启用该规则
+     * Required:true
      */
+    @Required
     private Boolean enabled;
 
     /**
@@ -53,20 +58,20 @@ public class SetRefererRuleRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 规则配置对象
+     * get Referer防盗链规则配置对象
      *
      * @return
      */
-    public Object getConfig() {
+    public RefererRuleConfigObject getConfig() {
         return config;
     }
 
     /**
-     * set 规则配置对象
+     * set Referer防盗链规则配置对象
      *
      * @param config
      */
-    public void setConfig(Object config) {
+    public void setConfig(RefererRuleConfigObject config) {
         this.config = config;
     }
 
@@ -108,11 +113,11 @@ public class SetRefererRuleRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 规则配置对象
+     * set Referer防盗链规则配置对象
      *
      * @param config
      */
-    public SetRefererRuleRequest config(Object config) {
+    public SetRefererRuleRequest config(RefererRuleConfigObject config) {
         this.config = config;
         return this;
     }

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -43,24 +43,38 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     private String name;
 
     /**
-     * video
+     * 视频参数配置
      */
     private Video video;
 
     /**
-     * audio
+     * 音频参数配置
      */
     private Audio audio;
 
     /**
-     * encapsulation
+     * 封装配置
      */
     private Encapsulation encapsulation;
 
     /**
-     * 清晰度规格
+     * 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      */
     private String definition;
+
+    /**
+     * 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     */
+    private String templateType;
 
     /**
      * 模板ID
@@ -89,7 +103,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get video
+     * get 视频参数配置
      *
      * @return
      */
@@ -98,7 +112,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set video
+     * set 视频参数配置
      *
      * @param video
      */
@@ -107,7 +121,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get audio
+     * get 音频参数配置
      *
      * @return
      */
@@ -116,7 +130,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set audio
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -125,7 +139,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get encapsulation
+     * get 封装配置
      *
      * @return
      */
@@ -134,7 +148,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set encapsulation
+     * set 封装配置
      *
      * @param encapsulation
      */
@@ -143,7 +157,13 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 清晰度规格
+     * get 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @return
      */
@@ -152,12 +172,42 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
     public void setDefinition(String definition) {
         this.definition = definition;
+    }
+
+    /**
+     * get 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @return
+     */
+    public String getTemplateType() {
+        return templateType;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public void setTemplateType(String templateType) {
+        this.templateType = templateType;
     }
 
     /**
@@ -190,7 +240,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set video
+     * set 视频参数配置
      *
      * @param video
      */
@@ -200,7 +250,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set audio
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -210,7 +260,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set encapsulation
+     * set 封装配置
      *
      * @param encapsulation
      */
@@ -220,12 +270,31 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
     public UpdateTranscodeTemplateRequest definition(String definition) {
         this.definition = definition;
+        return this;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public UpdateTranscodeTemplateRequest templateType(String templateType) {
+        this.templateType = templateType;
         return this;
     }
 

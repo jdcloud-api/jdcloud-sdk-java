@@ -43,7 +43,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
     private CertInfoModifySpec certInfoModifySpec;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -54,14 +54,14 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
      * Required:true
      */
     @Required
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * 网站规则 Id
      * Required:true
      */
     @Required
-    private Long webRuleId;
+    private String webRuleId;
 
 
     /**
@@ -83,7 +83,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -92,7 +92,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -105,7 +105,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -114,7 +114,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -123,7 +123,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public Long getWebRuleId() {
+    public String getWebRuleId() {
         return webRuleId;
     }
 
@@ -132,7 +132,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param webRuleId
      */
-    public void setWebRuleId(Long webRuleId) {
+    public void setWebRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
     }
 
@@ -148,7 +148,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -162,7 +162,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param instanceId
      */
-    public ModifyCertInfoRequest instanceId(Long instanceId) {
+    public ModifyCertInfoRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -172,7 +172,7 @@ public class ModifyCertInfoRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param webRuleId
      */
-    public ModifyCertInfoRequest webRuleId(Long webRuleId) {
+    public ModifyCertInfoRequest webRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
         return this;
     }

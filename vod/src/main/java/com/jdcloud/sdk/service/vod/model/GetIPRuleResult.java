@@ -24,10 +24,11 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.service.vod.model.IPRuleConfigObject;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询CDN域名IP规则
+ * 查询CDN域名IP黑名单规则配置
  */
 public class GetIPRuleResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,9 +40,9 @@ public class GetIPRuleResult extends JdcloudResult implements java.io.Serializab
     private String ruleType;
 
     /**
-     * 规则配置对象
+     * IP黑名单规则配置对象
      */
-    private Object config;
+    private IPRuleConfigObject config;
 
     /**
      * 是否启用该规则
@@ -68,20 +69,20 @@ public class GetIPRuleResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get 规则配置对象
+     * get IP黑名单规则配置对象
      *
      * @return
      */
-    public Object getConfig() {
+    public IPRuleConfigObject getConfig() {
         return config;
     }
 
     /**
-     * set 规则配置对象
+     * set IP黑名单规则配置对象
      *
      * @param config
      */
-    public void setConfig(Object config) {
+    public void setConfig(IPRuleConfigObject config) {
         this.config = config;
     }
 
@@ -115,11 +116,11 @@ public class GetIPRuleResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set 规则配置对象
+     * set IP黑名单规则配置对象
      *
      * @param config
      */
-    public GetIPRuleResult config(Object config) {
+    public GetIPRuleResult config(IPRuleConfigObject config) {
         this.config = config;
         return this;
     }

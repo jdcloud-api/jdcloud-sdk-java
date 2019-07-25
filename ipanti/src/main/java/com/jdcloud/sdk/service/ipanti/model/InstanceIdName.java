@@ -35,7 +35,7 @@ public class InstanceIdName  implements java.io.Serializable {
     /**
      * 实例id
      */
-    private Long id;
+    private String id;
 
     /**
      * 实例名称
@@ -48,7 +48,7 @@ public class InstanceIdName  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -57,7 +57,7 @@ public class InstanceIdName  implements java.io.Serializable {
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -85,7 +85,7 @@ public class InstanceIdName  implements java.io.Serializable {
      *
      * @param id
      */
-    public InstanceIdName id(Long id) {
+    public InstanceIdName id(String id) {
         this.id = id;
         return this;
     }

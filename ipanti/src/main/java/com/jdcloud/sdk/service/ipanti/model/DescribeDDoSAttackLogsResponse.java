@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ipanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询 DDos 攻击日志
+ * 查询 DDoS 攻击日志
  */
 public class DescribeDDoSAttackLogsResponse extends JdcloudResponse<DescribeDDoSAttackLogsResult> implements java.io.Serializable {
 

@@ -44,6 +44,11 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     private Integer diskSizeGB;
 
     /**
+     * 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10.
+     */
+    private Integer iops;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -74,6 +79,24 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
      */
     public void setDiskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
+    }
+
+    /**
+     * get 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10.
+     *
+     * @return
+     */
+    public Integer getIops() {
+        return iops;
+    }
+
+    /**
+     * set 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10.
+     *
+     * @param iops
+     */
+    public void setIops(Integer iops) {
+        this.iops = iops;
     }
 
     /**
@@ -120,6 +143,16 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
      */
     public ExtendDiskRequest diskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
+        return this;
+    }
+
+    /**
+     * set 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10.
+     *
+     * @param iops
+     */
+    public ExtendDiskRequest iops(Integer iops) {
+        this.iops = iops;
         return this;
     }
 

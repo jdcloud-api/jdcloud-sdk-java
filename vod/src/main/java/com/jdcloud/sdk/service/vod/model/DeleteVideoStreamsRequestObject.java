@@ -26,9 +26,10 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * deleteVideoStreamsRequestObject
+ * 删除视频转码流请求
  */
 public class DeleteVideoStreamsRequestObject  implements java.io.Serializable {
 
@@ -36,7 +37,9 @@ public class DeleteVideoStreamsRequestObject  implements java.io.Serializable {
 
     /**
      * taskIds
+     * Required:true
      */
+    @Required
     private List<Long> taskIds;
 
 

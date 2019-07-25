@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 启动模板
+ * Instance-Template
  * 与启动模板相关的接口
  *
  * OpenAPI spec version: v1

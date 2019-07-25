@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -35,27 +36,42 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * 水印名称
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
      * 图片地址
+     * Required:true
      */
+    @Required
     private String imgUrl;
 
     /**
-     * 宽度
+     * 水印宽度
+     * Required:true
      */
-    private String width;
+    @Required
+    private Integer width;
 
     /**
-     * 高度
+     * 水印高度
+     * Required:true
      */
-    private String height;
+    @Required
+    private Integer height;
 
     /**
-     * 水印位置
+     * 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
+     * Required:true
      */
+    @Required
     private String position;
 
     /**
@@ -65,12 +81,16 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * 水平偏移
+     * Required:true
      */
+    @Required
     private Integer offsetX;
 
     /**
      * 竖直偏移
+     * Required:true
      */
+    @Required
     private Integer offsetY;
 
 
@@ -111,43 +131,48 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 宽度
+     * get 水印宽度
      *
      * @return
      */
-    public String getWidth() {
+    public Integer getWidth() {
         return width;
     }
 
     /**
-     * set 宽度
+     * set 水印宽度
      *
      * @param width
      */
-    public void setWidth(String width) {
+    public void setWidth(Integer width) {
         this.width = width;
     }
 
     /**
-     * get 高度
+     * get 水印高度
      *
      * @return
      */
-    public String getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
     /**
-     * set 高度
+     * set 水印高度
      *
      * @param height
      */
-    public void setHeight(String height) {
+    public void setHeight(Integer height) {
         this.height = height;
     }
 
     /**
-     * get 水印位置
+     * get 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @return
      */
@@ -156,7 +181,12 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 水印位置
+     * set 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @param position
      */
@@ -240,27 +270,32 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 宽度
+     * set 水印宽度
      *
      * @param width
      */
-    public CreateWatermarkRequest width(String width) {
+    public CreateWatermarkRequest width(Integer width) {
         this.width = width;
         return this;
     }
 
     /**
-     * set 高度
+     * set 水印高度
      *
      * @param height
      */
-    public CreateWatermarkRequest height(String height) {
+    public CreateWatermarkRequest height(Integer height) {
         this.height = height;
         return this;
     }
 
     /**
-     * set 水印位置
+     * set 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @param position
      */

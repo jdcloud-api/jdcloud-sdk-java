@@ -26,60 +26,63 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * batchUpdateVideosRequestObject
+ * 批量修改视频信息请求
  */
 public class BatchUpdateVideosRequestObject  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 批量更新视频的条目列表信息
+     * 批量更新视频的条目集合
+     * Required:true
      */
-    private List<UpdateVideoBulkItem> bulk;
+    @Required
+    private List<BatchUpdateVideosBulkItem> bulkItems;
 
 
     /**
-     * get 批量更新视频的条目列表信息
+     * get 批量更新视频的条目集合
      *
      * @return
      */
-    public List<UpdateVideoBulkItem> getBulk() {
-        return bulk;
+    public List<BatchUpdateVideosBulkItem> getBulkItems() {
+        return bulkItems;
     }
 
     /**
-     * set 批量更新视频的条目列表信息
+     * set 批量更新视频的条目集合
      *
-     * @param bulk
+     * @param bulkItems
      */
-    public void setBulk(List<UpdateVideoBulkItem> bulk) {
-        this.bulk = bulk;
+    public void setBulkItems(List<BatchUpdateVideosBulkItem> bulkItems) {
+        this.bulkItems = bulkItems;
     }
 
 
     /**
-     * set 批量更新视频的条目列表信息
+     * set 批量更新视频的条目集合
      *
-     * @param bulk
+     * @param bulkItems
      */
-    public BatchUpdateVideosRequestObject bulk(List<UpdateVideoBulkItem> bulk) {
-        this.bulk = bulk;
+    public BatchUpdateVideosRequestObject bulkItems(List<BatchUpdateVideosBulkItem> bulkItems) {
+        this.bulkItems = bulkItems;
         return this;
     }
 
 
     /**
-     * add item to 批量更新视频的条目列表信息
+     * add item to 批量更新视频的条目集合
      *
-     * @param bulk
+     * @param bulkItem
      */
-    public void addBulk(UpdateVideoBulkItem bulk) {
-        if (this.bulk == null) {
-            this.bulk = new ArrayList<>();
+    public void addBulkItem(BatchUpdateVideosBulkItem bulkItem) {
+        if (this.bulkItems == null) {
+            this.bulkItems = new ArrayList<>();
         }
-        this.bulk.add(bulk);
+        this.bulkItems.add(bulkItem);
     }
 
 }

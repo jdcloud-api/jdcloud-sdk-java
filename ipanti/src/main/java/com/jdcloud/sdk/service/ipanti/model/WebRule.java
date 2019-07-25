@@ -37,12 +37,12 @@ public class WebRule  implements java.io.Serializable {
     /**
      * 规则 Id
      */
-    private Long id;
+    private String id;
 
     /**
      * 实例 Id
      */
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * 子域名
@@ -50,9 +50,14 @@ public class WebRule  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 规则的 cname
+     * 规则的 CNAME
      */
     private String cname;
+
+    /**
+     * CNAME 解析状态, 0: 解析异常, 1: 解析正常
+     */
+    private Integer cnameStatus;
 
     /**
      * protocol
@@ -112,7 +117,7 @@ public class WebRule  implements java.io.Serializable {
     /**
      * 证书 Id
      */
-    private Long certId;
+    private String certId;
 
     /**
      * 证书名称
@@ -148,9 +153,19 @@ public class WebRule  implements java.io.Serializable {
     private Integer ccStatus;
 
     /**
-     * webSocketStatus, 0: 关闭, 1: 开启
+     * webSocket 状态, 0: 关闭, 1: 开启
      */
     private Integer webSocketStatus;
+
+    /**
+     * 黑名单状态, 0: 关闭, 1: 开启
+     */
+    private Integer blackListEnable;
+
+    /**
+     * 白名单状态, 0: 关闭, 1: 开启
+     */
+    private Integer whiteListEnable;
 
 
     /**
@@ -158,7 +173,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -167,7 +182,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -176,7 +191,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -185,7 +200,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -208,7 +223,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 规则的 cname
+     * get 规则的 CNAME
      *
      * @return
      */
@@ -217,12 +232,30 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则的 cname
+     * set 规则的 CNAME
      *
      * @param cname
      */
     public void setCname(String cname) {
         this.cname = cname;
+    }
+
+    /**
+     * get CNAME 解析状态, 0: 解析异常, 1: 解析正常
+     *
+     * @return
+     */
+    public Integer getCnameStatus() {
+        return cnameStatus;
+    }
+
+    /**
+     * set CNAME 解析状态, 0: 解析异常, 1: 解析正常
+     *
+     * @param cnameStatus
+     */
+    public void setCnameStatus(Integer cnameStatus) {
+        this.cnameStatus = cnameStatus;
     }
 
     /**
@@ -428,7 +461,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getCertId() {
+    public String getCertId() {
         return certId;
     }
 
@@ -437,7 +470,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @param certId
      */
-    public void setCertId(Long certId) {
+    public void setCertId(String certId) {
         this.certId = certId;
     }
 
@@ -556,7 +589,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get webSocketStatus, 0: 关闭, 1: 开启
+     * get webSocket 状态, 0: 关闭, 1: 开启
      *
      * @return
      */
@@ -565,12 +598,48 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set webSocketStatus, 0: 关闭, 1: 开启
+     * set webSocket 状态, 0: 关闭, 1: 开启
      *
      * @param webSocketStatus
      */
     public void setWebSocketStatus(Integer webSocketStatus) {
         this.webSocketStatus = webSocketStatus;
+    }
+
+    /**
+     * get 黑名单状态, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getBlackListEnable() {
+        return blackListEnable;
+    }
+
+    /**
+     * set 黑名单状态, 0: 关闭, 1: 开启
+     *
+     * @param blackListEnable
+     */
+    public void setBlackListEnable(Integer blackListEnable) {
+        this.blackListEnable = blackListEnable;
+    }
+
+    /**
+     * get 白名单状态, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getWhiteListEnable() {
+        return whiteListEnable;
+    }
+
+    /**
+     * set 白名单状态, 0: 关闭, 1: 开启
+     *
+     * @param whiteListEnable
+     */
+    public void setWhiteListEnable(Integer whiteListEnable) {
+        this.whiteListEnable = whiteListEnable;
     }
 
 
@@ -579,7 +648,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @param id
      */
-    public WebRule id(Long id) {
+    public WebRule id(String id) {
         this.id = id;
         return this;
     }
@@ -589,7 +658,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @param instanceId
      */
-    public WebRule instanceId(Long instanceId) {
+    public WebRule instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -605,12 +674,22 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则的 cname
+     * set 规则的 CNAME
      *
      * @param cname
      */
     public WebRule cname(String cname) {
         this.cname = cname;
+        return this;
+    }
+
+    /**
+     * set CNAME 解析状态, 0: 解析异常, 1: 解析正常
+     *
+     * @param cnameStatus
+     */
+    public WebRule cnameStatus(Integer cnameStatus) {
+        this.cnameStatus = cnameStatus;
         return this;
     }
 
@@ -729,7 +808,7 @@ public class WebRule  implements java.io.Serializable {
      *
      * @param certId
      */
-    public WebRule certId(Long certId) {
+    public WebRule certId(String certId) {
         this.certId = certId;
         return this;
     }
@@ -798,12 +877,32 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set webSocketStatus, 0: 关闭, 1: 开启
+     * set webSocket 状态, 0: 关闭, 1: 开启
      *
      * @param webSocketStatus
      */
     public WebRule webSocketStatus(Integer webSocketStatus) {
         this.webSocketStatus = webSocketStatus;
+        return this;
+    }
+
+    /**
+     * set 黑名单状态, 0: 关闭, 1: 开启
+     *
+     * @param blackListEnable
+     */
+    public WebRule blackListEnable(Integer blackListEnable) {
+        this.blackListEnable = blackListEnable;
+        return this;
+    }
+
+    /**
+     * set 白名单状态, 0: 关闭, 1: 开启
+     *
+     * @param whiteListEnable
+     */
+    public WebRule whiteListEnable(Integer whiteListEnable) {
+        this.whiteListEnable = whiteListEnable;
         return this;
     }
 

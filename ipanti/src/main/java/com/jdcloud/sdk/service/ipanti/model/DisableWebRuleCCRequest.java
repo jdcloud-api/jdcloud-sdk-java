@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 网站类规则禁用 CC
+ * 关闭网站类规则 CC 防护, 网站类规则的 CC 防护规则和 CC 防护配置失效。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
  */
 public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -46,18 +46,18 @@ public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * 网站规则 Id
      * Required:true
      */
     @Required
-    private Long webRuleId;
+    private String webRuleId;
 
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -79,7 +79,7 @@ public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -88,7 +88,7 @@ public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.S
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -97,7 +97,7 @@ public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public Long getWebRuleId() {
+    public String getWebRuleId() {
         return webRuleId;
     }
 
@@ -106,13 +106,13 @@ public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.S
      *
      * @param webRuleId
      */
-    public void setWebRuleId(Long webRuleId) {
+    public void setWebRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
     }
 
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -126,7 +126,7 @@ public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.S
      *
      * @param instanceId
      */
-    public DisableWebRuleCCRequest instanceId(Long instanceId) {
+    public DisableWebRuleCCRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -136,7 +136,7 @@ public class DisableWebRuleCCRequest extends JdcloudRequest implements java.io.S
      *
      * @param webRuleId
      */
-    public DisableWebRuleCCRequest webRuleId(Long webRuleId) {
+    public DisableWebRuleCCRequest webRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
         return this;
     }

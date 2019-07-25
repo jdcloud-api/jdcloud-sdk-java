@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vod.model.SetIPRuleResponse;
 
 /**
- * 设置CDN域名IP规则
+ * 设置CDN域名IP黑名单规则
  */
 class SetIPRuleExecutor extends JdcloudExecutor {
 

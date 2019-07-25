@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除视频码流信息
+ * 删除视频转码流
  */
 public class DeleteVideoStreamsResult extends JdcloudResult implements java.io.Serializable {
 

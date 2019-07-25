@@ -89,6 +89,16 @@ public class ProtectionRule  implements java.io.Serializable {
      */
     private List<GeoBlack> geoBlackList;
 
+    /**
+     * IP 黑名单列表
+     */
+    private List<String> ipBlackList;
+
+    /**
+     * IP 白名单列表
+     */
+    private List<String> ipWhiteList;
+
 
     /**
      * get 防护规则类型: 0: 默认防护包规则, 1: IP 自定义规则
@@ -288,6 +298,42 @@ public class ProtectionRule  implements java.io.Serializable {
         this.geoBlackList = geoBlackList;
     }
 
+    /**
+     * get IP 黑名单列表
+     *
+     * @return
+     */
+    public List<String> getIpBlackList() {
+        return ipBlackList;
+    }
+
+    /**
+     * set IP 黑名单列表
+     *
+     * @param ipBlackList
+     */
+    public void setIpBlackList(List<String> ipBlackList) {
+        this.ipBlackList = ipBlackList;
+    }
+
+    /**
+     * get IP 白名单列表
+     *
+     * @return
+     */
+    public List<String> getIpWhiteList() {
+        return ipWhiteList;
+    }
+
+    /**
+     * set IP 白名单列表
+     *
+     * @param ipWhiteList
+     */
+    public void setIpWhiteList(List<String> ipWhiteList) {
+        this.ipWhiteList = ipWhiteList;
+    }
+
 
     /**
      * set 防护规则类型: 0: 默认防护包规则, 1: IP 自定义规则
@@ -399,6 +445,26 @@ public class ProtectionRule  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set IP 黑名单列表
+     *
+     * @param ipBlackList
+     */
+    public ProtectionRule ipBlackList(List<String> ipBlackList) {
+        this.ipBlackList = ipBlackList;
+        return this;
+    }
+
+    /**
+     * set IP 白名单列表
+     *
+     * @param ipWhiteList
+     */
+    public ProtectionRule ipWhiteList(List<String> ipWhiteList) {
+        this.ipWhiteList = ipWhiteList;
+        return this;
+    }
+
 
     /**
      * add item to geo 拦截地域列表
@@ -410,6 +476,30 @@ public class ProtectionRule  implements java.io.Serializable {
             this.geoBlackList = new ArrayList<>();
         }
         this.geoBlackList.add(geoBlackList);
+    }
+
+    /**
+     * add item to IP 黑名单列表
+     *
+     * @param ipBlackList
+     */
+    public void addIpBlackList(String ipBlackList) {
+        if (this.ipBlackList == null) {
+            this.ipBlackList = new ArrayList<>();
+        }
+        this.ipBlackList.add(ipBlackList);
+    }
+
+    /**
+     * add item to IP 白名单列表
+     *
+     * @param ipWhiteList
+     */
+    public void addIpWhiteList(String ipWhiteList) {
+        if (this.ipWhiteList == null) {
+            this.ipWhiteList = new ArrayList<>();
+        }
+        this.ipWhiteList.add(ipWhiteList);
     }
 
 }

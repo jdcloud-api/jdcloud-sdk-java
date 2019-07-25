@@ -35,18 +35,18 @@ public class GetPlayInfoResultObject  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * baseInfo
+     * 视频基础信息
      */
     private VideoBaseInfo baseInfo;
 
     /**
-     * playInfoList
+     * 视频播放信息列表
      */
     private List<VideoPlayInfo> playInfoList;
 
 
     /**
-     * get baseInfo
+     * get 视频基础信息
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class GetPlayInfoResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set baseInfo
+     * set 视频基础信息
      *
      * @param baseInfo
      */
@@ -64,7 +64,7 @@ public class GetPlayInfoResultObject  implements java.io.Serializable {
     }
 
     /**
-     * get playInfoList
+     * get 视频播放信息列表
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class GetPlayInfoResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set playInfoList
+     * set 视频播放信息列表
      *
      * @param playInfoList
      */
@@ -83,7 +83,7 @@ public class GetPlayInfoResultObject  implements java.io.Serializable {
 
 
     /**
-     * set baseInfo
+     * set 视频基础信息
      *
      * @param baseInfo
      */
@@ -93,7 +93,7 @@ public class GetPlayInfoResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set playInfoList
+     * set 视频播放信息列表
      *
      * @param playInfoList
      */
@@ -104,7 +104,7 @@ public class GetPlayInfoResultObject  implements java.io.Serializable {
 
 
     /**
-     * add item to playInfoList
+     * add item to 视频播放信息列表
      *
      * @param playInfoList
      */

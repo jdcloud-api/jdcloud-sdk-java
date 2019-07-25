@@ -49,6 +49,9 @@ import com.jdcloud.sdk.service.baseanti.client.DescribeAttackStatisticsExecutor;
 import com.jdcloud.sdk.service.baseanti.model.DescribeElasticIpResourcesRequest;
 import com.jdcloud.sdk.service.baseanti.model.DescribeElasticIpResourcesResponse;
 import com.jdcloud.sdk.service.baseanti.client.DescribeElasticIpResourcesExecutor;
+import com.jdcloud.sdk.service.baseanti.model.DescribeCcsIpResourcesRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeCcsIpResourcesResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeCcsIpResourcesExecutor;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpCleanThresholdRangeRequest;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpCleanThresholdRangeResponse;
 import com.jdcloud.sdk.service.baseanti.client.DescribeIpCleanThresholdRangeExecutor;
@@ -81,7 +84,7 @@ public class BaseantiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "baseanti.jdcloud-api.com";
     public final static String ServiceName = "baseanti";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -157,7 +160,7 @@ public class BaseantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
+     * 查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
 
      *
      * @param request
@@ -180,7 +183,7 @@ public class BaseantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
+     * 查询基础防护已防护的私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
 
      *
      * @param request
@@ -189,6 +192,17 @@ public class BaseantiClient extends JdcloudClient {
      */
     public DescribeElasticIpResourcesResponse describeElasticIpResources(DescribeElasticIpResourcesRequest request) throws JdcloudSdkException {
         return new DescribeElasticIpResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询基础防护已防护的托管区 IP 的安全信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCcsIpResourcesResponse describeCcsIpResources(DescribeCcsIpResourcesRequest request) throws JdcloudSdkException {
+        return new DescribeCcsIpResourcesExecutor().client(this).execute(request);
     }
 
     /**
@@ -226,7 +240,7 @@ public class BaseantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+     * 查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
 
      *
      * @param request

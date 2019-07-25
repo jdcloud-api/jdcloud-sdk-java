@@ -29,30 +29,30 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息
+ * 批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
  */
 public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 删除成功的视频ID列表
+     * 删除成功的视频ID集合
      */
     private List<String> okVideoIds;
 
     /**
-     * 未找到的视频ID列表
+     * 未找到的视频ID集合
      */
     private List<String> notFoundVideoIds;
 
     /**
-     * 删除失败的视频ID列表
+     * 删除失败的视频ID集合
      */
     private List<String> failedVideoIds;
 
 
     /**
-     * get 删除成功的视频ID列表
+     * get 删除成功的视频ID集合
      *
      * @return
      */
@@ -61,7 +61,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 删除成功的视频ID列表
+     * set 删除成功的视频ID集合
      *
      * @param okVideoIds
      */
@@ -70,7 +70,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * get 未找到的视频ID列表
+     * get 未找到的视频ID集合
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 未找到的视频ID列表
+     * set 未找到的视频ID集合
      *
      * @param notFoundVideoIds
      */
@@ -88,7 +88,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * get 删除失败的视频ID列表
+     * get 删除失败的视频ID集合
      *
      * @return
      */
@@ -97,7 +97,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 删除失败的视频ID列表
+     * set 删除失败的视频ID集合
      *
      * @param failedVideoIds
      */
@@ -107,7 +107,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
 
 
     /**
-     * set 删除成功的视频ID列表
+     * set 删除成功的视频ID集合
      *
      * @param okVideoIds
      */
@@ -117,7 +117,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 未找到的视频ID列表
+     * set 未找到的视频ID集合
      *
      * @param notFoundVideoIds
      */
@@ -127,7 +127,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 删除失败的视频ID列表
+     * set 删除失败的视频ID集合
      *
      * @param failedVideoIds
      */
@@ -138,7 +138,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
 
 
     /**
-     * add item to 删除成功的视频ID列表
+     * add item to 删除成功的视频ID集合
      *
      * @param okVideoId
      */
@@ -150,7 +150,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * add item to 未找到的视频ID列表
+     * add item to 未找到的视频ID集合
      *
      * @param notFoundVideoId
      */
@@ -162,7 +162,7 @@ public class BatchDeleteVideosResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * add item to 删除失败的视频ID列表
+     * add item to 删除失败的视频ID集合
      *
      * @param failedVideoId
      */

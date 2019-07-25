@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.vod.model.Video;
 import com.jdcloud.sdk.service.vod.model.Audio;
 import com.jdcloud.sdk.service.vod.model.Encapsulation;
@@ -38,28 +39,52 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
 
     /**
      * 模板名称
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
-     * video
+     * 视频参数配置
+     * Required:true
      */
+    @Required
     private Video video;
 
     /**
-     * audio
+     * 音频参数配置
+     * Required:true
      */
+    @Required
     private Audio audio;
 
     /**
-     * encapsulation
+     * 封装配置
+     * Required:true
      */
+    @Required
     private Encapsulation encapsulation;
 
     /**
-     * 清晰度规格
+     * 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
+     * Required:true
      */
+    @Required
     private String definition;
+
+    /**
+     * 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     */
+    private String templateType;
 
 
     /**
@@ -81,7 +106,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get video
+     * get 视频参数配置
      *
      * @return
      */
@@ -90,7 +115,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set video
+     * set 视频参数配置
      *
      * @param video
      */
@@ -99,7 +124,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get audio
+     * get 音频参数配置
      *
      * @return
      */
@@ -108,7 +133,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set audio
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -117,7 +142,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get encapsulation
+     * get 封装配置
      *
      * @return
      */
@@ -126,7 +151,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set encapsulation
+     * set 封装配置
      *
      * @param encapsulation
      */
@@ -135,7 +160,13 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 清晰度规格
+     * get 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @return
      */
@@ -144,12 +175,42 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
     public void setDefinition(String definition) {
         this.definition = definition;
+    }
+
+    /**
+     * get 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @return
+     */
+    public String getTemplateType() {
+        return templateType;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public void setTemplateType(String templateType) {
+        this.templateType = templateType;
     }
 
 
@@ -164,7 +225,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set video
+     * set 视频参数配置
      *
      * @param video
      */
@@ -174,7 +235,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set audio
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -184,7 +245,7 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set encapsulation
+     * set 封装配置
      *
      * @param encapsulation
      */
@@ -194,12 +255,31 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
     public CreateTranscodeTemplateRequest definition(String definition) {
         this.definition = definition;
+        return this;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public CreateTranscodeTemplateRequest templateType(String templateType) {
+        this.templateType = templateType;
         return this;
     }
 

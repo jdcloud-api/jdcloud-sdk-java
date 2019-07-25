@@ -35,36 +35,36 @@ public class ListAllCategoriesResultObject  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * flatResult
+     * 平坦结构结果
      */
-    private List<GetCategoryResultObject> flatResult;
+    private List<CategoryObject> flatResult;
 
     /**
-     * treeResult
+     * 树结构结果
      */
     private CategoryTreeNode treeResult;
 
 
     /**
-     * get flatResult
+     * get 平坦结构结果
      *
      * @return
      */
-    public List<GetCategoryResultObject> getFlatResult() {
+    public List<CategoryObject> getFlatResult() {
         return flatResult;
     }
 
     /**
-     * set flatResult
+     * set 平坦结构结果
      *
      * @param flatResult
      */
-    public void setFlatResult(List<GetCategoryResultObject> flatResult) {
+    public void setFlatResult(List<CategoryObject> flatResult) {
         this.flatResult = flatResult;
     }
 
     /**
-     * get treeResult
+     * get 树结构结果
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class ListAllCategoriesResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set treeResult
+     * set 树结构结果
      *
      * @param treeResult
      */
@@ -83,17 +83,17 @@ public class ListAllCategoriesResultObject  implements java.io.Serializable {
 
 
     /**
-     * set flatResult
+     * set 平坦结构结果
      *
      * @param flatResult
      */
-    public ListAllCategoriesResultObject flatResult(List<GetCategoryResultObject> flatResult) {
+    public ListAllCategoriesResultObject flatResult(List<CategoryObject> flatResult) {
         this.flatResult = flatResult;
         return this;
     }
 
     /**
-     * set treeResult
+     * set 树结构结果
      *
      * @param treeResult
      */
@@ -104,11 +104,11 @@ public class ListAllCategoriesResultObject  implements java.io.Serializable {
 
 
     /**
-     * add item to flatResult
+     * add item to 平坦结构结果
      *
      * @param flatResult
      */
-    public void addFlatResult(GetCategoryResultObject flatResult) {
+    public void addFlatResult(CategoryObject flatResult) {
         if (this.flatResult == null) {
             this.flatResult = new ArrayList<>();
         }

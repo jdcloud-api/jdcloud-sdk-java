@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Video Transcode Template Management
- * 水印管理
+ * Transcode Template
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -33,33 +33,33 @@ public class Video  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 视频编码
+     * 视频编码。取值范围：h265、h264
      */
     private String codec;
 
     /**
-     * 码率
+     * 视频码率。取值范围 [128、10000]，单位为 Kbps
      */
     private Integer bitrate;
 
     /**
-     * 帧率
+     * 视频帧率。取值范围为 [1、60]，单位为 fps
      */
     private Integer fps;
 
     /**
-     * 宽度
+     * 视频输出宽度。取值范围 [128，4096]，取值需为2的倍数
      */
     private Integer width;
 
     /**
-     * 高度
+     * 视频输出高度。取值范围 [128，4096]，取值需为2的倍数
      */
     private Integer height;
 
 
     /**
-     * get 视频编码
+     * get 视频编码。取值范围：h265、h264
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 视频编码
+     * set 视频编码。取值范围：h265、h264
      *
      * @param codec
      */
@@ -77,7 +77,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * get 码率
+     * get 视频码率。取值范围 [128、10000]，单位为 Kbps
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 码率
+     * set 视频码率。取值范围 [128、10000]，单位为 Kbps
      *
      * @param bitrate
      */
@@ -95,7 +95,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * get 帧率
+     * get 视频帧率。取值范围为 [1、60]，单位为 fps
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 帧率
+     * set 视频帧率。取值范围为 [1、60]，单位为 fps
      *
      * @param fps
      */
@@ -113,7 +113,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * get 宽度
+     * get 视频输出宽度。取值范围 [128，4096]，取值需为2的倍数
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 宽度
+     * set 视频输出宽度。取值范围 [128，4096]，取值需为2的倍数
      *
      * @param width
      */
@@ -131,7 +131,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * get 高度
+     * get 视频输出高度。取值范围 [128，4096]，取值需为2的倍数
      *
      * @return
      */
@@ -140,7 +140,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 高度
+     * set 视频输出高度。取值范围 [128，4096]，取值需为2的倍数
      *
      * @param height
      */
@@ -150,7 +150,7 @@ public class Video  implements java.io.Serializable {
 
 
     /**
-     * set 视频编码
+     * set 视频编码。取值范围：h265、h264
      *
      * @param codec
      */
@@ -160,7 +160,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 码率
+     * set 视频码率。取值范围 [128、10000]，单位为 Kbps
      *
      * @param bitrate
      */
@@ -170,7 +170,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 帧率
+     * set 视频帧率。取值范围为 [1、60]，单位为 fps
      *
      * @param fps
      */
@@ -180,7 +180,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 宽度
+     * set 视频输出宽度。取值范围 [128，4096]，取值需为2的倍数
      *
      * @param width
      */
@@ -190,7 +190,7 @@ public class Video  implements java.io.Serializable {
     }
 
     /**
-     * set 高度
+     * set 视频输出高度。取值范围 [128，4096]，取值需为2的倍数
      *
      * @param height
      */

@@ -24,10 +24,12 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 添加分类
+
  */
 public class CreateCategoryRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -35,11 +37,14 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * 分类名称
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
-     * 父分类ID
+     * 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      */
     private Long parentId;
 
@@ -68,7 +73,8 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 父分类ID
+     * get 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @return
      */
@@ -77,7 +83,8 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */
@@ -115,7 +122,8 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */

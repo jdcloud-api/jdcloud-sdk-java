@@ -61,11 +61,16 @@ public class DiskSpec  implements java.io.Serializable {
     private String diskType;
 
     /**
-     * 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+     * 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G
      * Required:true
      */
     @Required
     private Integer diskSizeGB;
+
+    /**
+     * 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     */
+    private Integer iops;
 
     /**
      * 用于创建云硬盘的快照ID
@@ -161,7 +166,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+     * get 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G
      *
      * @return
      */
@@ -170,12 +175,30 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+     * set 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G
      *
      * @param diskSizeGB
      */
     public void setDiskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
+    }
+
+    /**
+     * get 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     *
+     * @return
+     */
+    public Integer getIops() {
+        return iops;
+    }
+
+    /**
+     * set 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     *
+     * @param iops
+     */
+    public void setIops(Integer iops) {
+        this.iops = iops;
     }
 
     /**
@@ -292,12 +315,22 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G
+     * set 云硬盘大小，单位为 GiB，ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G, ssd.gp1, ssd.io1, hdd.std1 类型取值均是范围[20,16000]GB，步长为10G
      *
      * @param diskSizeGB
      */
     public DiskSpec diskSizeGB(Integer diskSizeGB) {
         this.diskSizeGB = diskSizeGB;
+        return this;
+    }
+
+    /**
+     * set 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     *
+     * @param iops
+     */
+    public DiskSpec iops(Integer iops) {
+        this.iops = iops;
         return this;
     }
 

@@ -49,7 +49,20 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     private String cname;
 
     /**
-     * 域名来源：系统生成 | 用户自建
+     * 域名状态。取值范围：
+  init - 初始状态
+  configuring - 配置中
+  normal - 正常
+  stopped - 已停用
+
+     */
+    private String status;
+
+    /**
+     * 域名来源。取值范围：
+  system - 系统生成
+  custom - 用户自建
+
      */
     private String source;
 
@@ -59,12 +72,12 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     private Boolean asDefault;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -124,7 +137,38 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 域名来源：系统生成 | 用户自建
+     * get 域名状态。取值范围：
+  init - 初始状态
+  configuring - 配置中
+  normal - 正常
+  stopped - 已停用
+
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 域名状态。取值范围：
+  init - 初始状态
+  configuring - 配置中
+  normal - 正常
+  stopped - 已停用
+
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 域名来源。取值范围：
+  system - 系统生成
+  custom - 用户自建
+
      *
      * @return
      */
@@ -133,7 +177,10 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 域名来源：系统生成 | 用户自建
+     * set 域名来源。取值范围：
+  system - 系统生成
+  custom - 用户自建
+
      *
      * @param source
      */
@@ -160,7 +207,7 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -169,7 +216,7 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -178,7 +225,7 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -187,7 +234,7 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -227,7 +274,25 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 域名来源：系统生成 | 用户自建
+     * set 域名状态。取值范围：
+  init - 初始状态
+  configuring - 配置中
+  normal - 正常
+  stopped - 已停用
+
+     *
+     * @param status
+     */
+    public CreateDomainResult status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 域名来源。取值范围：
+  system - 系统生成
+  custom - 用户自建
+
      *
      * @param source
      */
@@ -247,7 +312,7 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -257,7 +322,7 @@ public class CreateDomainResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */

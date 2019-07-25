@@ -28,30 +28,30 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * batchDeleteVideosResultObject
+ * 批量删除视频结果
  */
 public class BatchDeleteVideosResultObject  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 删除成功的视频ID列表
+     * 删除成功的视频ID集合
      */
     private List<String> okVideoIds;
 
     /**
-     * 未找到的视频ID列表
+     * 未找到的视频ID集合
      */
     private List<String> notFoundVideoIds;
 
     /**
-     * 删除失败的视频ID列表
+     * 删除失败的视频ID集合
      */
     private List<String> failedVideoIds;
 
 
     /**
-     * get 删除成功的视频ID列表
+     * get 删除成功的视频ID集合
      *
      * @return
      */
@@ -60,7 +60,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set 删除成功的视频ID列表
+     * set 删除成功的视频ID集合
      *
      * @param okVideoIds
      */
@@ -69,7 +69,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * get 未找到的视频ID列表
+     * get 未找到的视频ID集合
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set 未找到的视频ID列表
+     * set 未找到的视频ID集合
      *
      * @param notFoundVideoIds
      */
@@ -87,7 +87,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * get 删除失败的视频ID列表
+     * get 删除失败的视频ID集合
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set 删除失败的视频ID列表
+     * set 删除失败的视频ID集合
      *
      * @param failedVideoIds
      */
@@ -106,7 +106,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
 
 
     /**
-     * set 删除成功的视频ID列表
+     * set 删除成功的视频ID集合
      *
      * @param okVideoIds
      */
@@ -116,7 +116,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set 未找到的视频ID列表
+     * set 未找到的视频ID集合
      *
      * @param notFoundVideoIds
      */
@@ -126,7 +126,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set 删除失败的视频ID列表
+     * set 删除失败的视频ID集合
      *
      * @param failedVideoIds
      */
@@ -137,7 +137,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
 
 
     /**
-     * add item to 删除成功的视频ID列表
+     * add item to 删除成功的视频ID集合
      *
      * @param okVideoId
      */
@@ -149,7 +149,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * add item to 未找到的视频ID列表
+     * add item to 未找到的视频ID集合
      *
      * @param notFoundVideoId
      */
@@ -161,7 +161,7 @@ public class BatchDeleteVideosResultObject  implements java.io.Serializable {
     }
 
     /**
-     * add item to 删除失败的视频ID列表
+     * add item to 删除失败的视频ID集合
      *
      * @param failedVideoId
      */

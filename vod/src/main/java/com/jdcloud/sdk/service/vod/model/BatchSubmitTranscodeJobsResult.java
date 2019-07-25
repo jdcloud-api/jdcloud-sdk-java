@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.vod.model.TranscodeTask;
+import com.jdcloud.sdk.service.vod.model.SubmittedTranscodeTask;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,7 +39,7 @@ public class BatchSubmitTranscodeJobsResult extends JdcloudResult implements jav
     /**
      * tasks
      */
-    private List<TranscodeTask> tasks;
+    private List<SubmittedTranscodeTask> tasks;
 
 
     /**
@@ -47,7 +47,7 @@ public class BatchSubmitTranscodeJobsResult extends JdcloudResult implements jav
      *
      * @return
      */
-    public List<TranscodeTask> getTasks() {
+    public List<SubmittedTranscodeTask> getTasks() {
         return tasks;
     }
 
@@ -56,7 +56,7 @@ public class BatchSubmitTranscodeJobsResult extends JdcloudResult implements jav
      *
      * @param tasks
      */
-    public void setTasks(List<TranscodeTask> tasks) {
+    public void setTasks(List<SubmittedTranscodeTask> tasks) {
         this.tasks = tasks;
     }
 
@@ -66,7 +66,7 @@ public class BatchSubmitTranscodeJobsResult extends JdcloudResult implements jav
      *
      * @param tasks
      */
-    public BatchSubmitTranscodeJobsResult tasks(List<TranscodeTask> tasks) {
+    public BatchSubmitTranscodeJobsResult tasks(List<SubmittedTranscodeTask> tasks) {
         this.tasks = tasks;
         return this;
     }
@@ -77,7 +77,7 @@ public class BatchSubmitTranscodeJobsResult extends JdcloudResult implements jav
      *
      * @param task
      */
-    public void addTask(TranscodeTask task) {
+    public void addTask(SubmittedTranscodeTask task) {
         if (this.tasks == null) {
             this.tasks = new ArrayList<>();
         }

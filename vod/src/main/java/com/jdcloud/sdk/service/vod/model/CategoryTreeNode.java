@@ -55,9 +55,19 @@ public class CategoryTreeNode  implements java.io.Serializable {
     private String description;
 
     /**
-     * children
+     * 子分类
      */
     private List<CategoryTreeNode> children;
+
+    /**
+     * 创建时间
+     */
+    private String createTime;
+
+    /**
+     * 修改时间
+     */
+    private String updateTime;
 
 
     /**
@@ -133,7 +143,7 @@ public class CategoryTreeNode  implements java.io.Serializable {
     }
 
     /**
-     * get children
+     * get 子分类
      *
      * @return
      */
@@ -142,12 +152,48 @@ public class CategoryTreeNode  implements java.io.Serializable {
     }
 
     /**
-     * set children
+     * set 子分类
      *
      * @param children
      */
     public void setChildren(List<CategoryTreeNode> children) {
         this.children = children;
+    }
+
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * get 修改时间
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set 修改时间
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 
 
@@ -192,7 +238,7 @@ public class CategoryTreeNode  implements java.io.Serializable {
     }
 
     /**
-     * set children
+     * set 子分类
      *
      * @param children
      */
@@ -201,9 +247,29 @@ public class CategoryTreeNode  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public CategoryTreeNode createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
 
     /**
-     * add item to children
+     * set 修改时间
+     *
+     * @param updateTime
+     */
+    public CategoryTreeNode updateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+
+
+    /**
+     * add item to 子分类
      *
      * @param children
      */

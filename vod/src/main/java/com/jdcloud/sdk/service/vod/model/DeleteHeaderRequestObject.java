@@ -24,27 +24,48 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 删除域名头参数请求消息体
+ * 删除域名头参数请求
  */
 public class DeleteHeaderRequestObject  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 头参数名
+     * 头参数名。当前支持的访问头参数取值范围：
+  Content-Disposition
+  Content-Language
+  Expires
+  Access-Control-Allow-Origin
+  Access-Control-Allow-Methods
+  Access-Control-Max-Age
+  Access-Control-Expose-Headers
+
+     * Required:true
      */
+    @Required
     private String headerName;
 
     /**
-     * 头参数类型
+     * 头参数类型，取值范围：req、resp
+     * Required:true
      */
+    @Required
     private String headerType;
 
 
     /**
-     * get 头参数名
+     * get 头参数名。当前支持的访问头参数取值范围：
+  Content-Disposition
+  Content-Language
+  Expires
+  Access-Control-Allow-Origin
+  Access-Control-Allow-Methods
+  Access-Control-Max-Age
+  Access-Control-Expose-Headers
+
      *
      * @return
      */
@@ -53,7 +74,15 @@ public class DeleteHeaderRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 头参数名
+     * set 头参数名。当前支持的访问头参数取值范围：
+  Content-Disposition
+  Content-Language
+  Expires
+  Access-Control-Allow-Origin
+  Access-Control-Allow-Methods
+  Access-Control-Max-Age
+  Access-Control-Expose-Headers
+
      *
      * @param headerName
      */
@@ -62,7 +91,7 @@ public class DeleteHeaderRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * get 头参数类型
+     * get 头参数类型，取值范围：req、resp
      *
      * @return
      */
@@ -71,7 +100,7 @@ public class DeleteHeaderRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 头参数类型
+     * set 头参数类型，取值范围：req、resp
      *
      * @param headerType
      */
@@ -81,7 +110,15 @@ public class DeleteHeaderRequestObject  implements java.io.Serializable {
 
 
     /**
-     * set 头参数名
+     * set 头参数名。当前支持的访问头参数取值范围：
+  Content-Disposition
+  Content-Language
+  Expires
+  Access-Control-Allow-Origin
+  Access-Control-Allow-Methods
+  Access-Control-Max-Age
+  Access-Control-Expose-Headers
+
      *
      * @param headerName
      */
@@ -91,7 +128,7 @@ public class DeleteHeaderRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 头参数类型
+     * set 头参数类型，取值范围：req、resp
      *
      * @param headerType
      */

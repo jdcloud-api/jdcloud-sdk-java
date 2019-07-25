@@ -43,7 +43,7 @@ public class VerifyDomainResultObject  implements java.io.Serializable {
     private Boolean verified;
 
     /**
-     * ICP信息
+     * ICP备案信息
      */
     private String icpInfo;
 
@@ -85,7 +85,7 @@ public class VerifyDomainResultObject  implements java.io.Serializable {
     }
 
     /**
-     * get ICP信息
+     * get ICP备案信息
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class VerifyDomainResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set ICP信息
+     * set ICP备案信息
      *
      * @param icpInfo
      */
@@ -124,7 +124,7 @@ public class VerifyDomainResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set ICP信息
+     * set ICP备案信息
      *
      * @param icpInfo
      */

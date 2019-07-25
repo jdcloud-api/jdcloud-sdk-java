@@ -24,10 +24,11 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.service.vod.model.URLRuleConfigObject;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询CDN域名URL规则
+ * 查询CDN域名URL鉴权规则配置
  */
 public class GetURLRuleResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,9 +40,9 @@ public class GetURLRuleResult extends JdcloudResult implements java.io.Serializa
     private String ruleType;
 
     /**
-     * 规则配置对象
+     * URL鉴权规则配置对象
      */
-    private Object config;
+    private URLRuleConfigObject config;
 
     /**
      * 是否启用该规则
@@ -68,20 +69,20 @@ public class GetURLRuleResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * get 规则配置对象
+     * get URL鉴权规则配置对象
      *
      * @return
      */
-    public Object getConfig() {
+    public URLRuleConfigObject getConfig() {
         return config;
     }
 
     /**
-     * set 规则配置对象
+     * set URL鉴权规则配置对象
      *
      * @param config
      */
-    public void setConfig(Object config) {
+    public void setConfig(URLRuleConfigObject config) {
         this.config = config;
     }
 
@@ -115,11 +116,11 @@ public class GetURLRuleResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set 规则配置对象
+     * set URL鉴权规则配置对象
      *
      * @param config
      */
-    public GetURLRuleResult config(Object config) {
+    public GetURLRuleResult config(URLRuleConfigObject config) {
         this.config = config;
         return this;
     }

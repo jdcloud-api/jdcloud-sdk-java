@@ -35,7 +35,7 @@ public class DescribeAlarmConfigRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -46,11 +46,11 @@ public class DescribeAlarmConfigRequest extends JdcloudRequest implements java.i
      * Required:true
      */
     @Required
-    private Long instanceId;
+    private String instanceId;
 
 
     /**
-     * get Region ID
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DescribeAlarmConfigRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -72,7 +72,7 @@ public class DescribeAlarmConfigRequest extends JdcloudRequest implements java.i
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -81,13 +81,13 @@ public class DescribeAlarmConfigRequest extends JdcloudRequest implements java.i
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -101,7 +101,7 @@ public class DescribeAlarmConfigRequest extends JdcloudRequest implements java.i
      *
      * @param instanceId
      */
-    public DescribeAlarmConfigRequest instanceId(Long instanceId) {
+    public DescribeAlarmConfigRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

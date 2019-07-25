@@ -35,7 +35,7 @@ public class DescribeProtectionStatisticsRequest extends JdcloudRequest implemen
     private static final long serialVersionUID = 1L;
 
     /**
-     * Region ID
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -43,7 +43,7 @@ public class DescribeProtectionStatisticsRequest extends JdcloudRequest implemen
 
 
     /**
-     * get Region ID
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -52,7 +52,7 @@ public class DescribeProtectionStatisticsRequest extends JdcloudRequest implemen
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -62,7 +62,7 @@ public class DescribeProtectionStatisticsRequest extends JdcloudRequest implemen
 
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */

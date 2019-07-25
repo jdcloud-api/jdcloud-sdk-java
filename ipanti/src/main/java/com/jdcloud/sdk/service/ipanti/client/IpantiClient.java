@@ -31,30 +31,57 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.ipanti.model.EnableBlackListRuleOfForwardRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableBlackListRuleOfForwardRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableBlackListRuleOfForwardRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeAlarmConfigRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeAlarmConfigResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeAlarmConfigExecutor;
+import com.jdcloud.sdk.service.ipanti.model.CreateIpSetRequest;
+import com.jdcloud.sdk.service.ipanti.model.CreateIpSetResponse;
+import com.jdcloud.sdk.service.ipanti.client.CreateIpSetExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeProtectionRuleOfForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeProtectionRuleOfForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeProtectionRuleOfForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleBlackListUsageRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleBlackListUsageResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeWebRuleBlackListUsageExecutor;
+import com.jdcloud.sdk.service.ipanti.model.CreateCCProtectionRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.CreateCCProtectionRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.CreateCCProtectionRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyEPBRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyEPBResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyEPBExecutor;
-import com.jdcloud.sdk.service.ipanti.model.EnableInstanceIpWhiteListRequest;
-import com.jdcloud.sdk.service.ipanti.model.EnableInstanceIpWhiteListResponse;
-import com.jdcloud.sdk.service.ipanti.client.EnableInstanceIpWhiteListExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DisableCCObserverModeRequest;
-import com.jdcloud.sdk.service.ipanti.model.DisableCCObserverModeResponse;
-import com.jdcloud.sdk.service.ipanti.client.DisableCCObserverModeExecutor;
-import com.jdcloud.sdk.service.ipanti.model.EnableCCIpLimitRequest;
-import com.jdcloud.sdk.service.ipanti.model.EnableCCIpLimitResponse;
-import com.jdcloud.sdk.service.ipanti.client.EnableCCIpLimitExecutor;
-import com.jdcloud.sdk.service.ipanti.model.SetCCIpLimitRequest;
-import com.jdcloud.sdk.service.ipanti.model.SetCCIpLimitResponse;
-import com.jdcloud.sdk.service.ipanti.client.SetCCIpLimitExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionDefaultConfigOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionDefaultConfigOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeCCProtectionDefaultConfigOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyWhiteListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyWhiteListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyWhiteListRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleBlackListRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleBlackListResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableWebRuleBlackListExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableBlackListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableBlackListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableBlackListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetsRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetsResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeIpSetsExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableWhiteListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableWhiteListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableWhiteListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DeleteWhiteListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DeleteWhiteListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DeleteWhiteListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeIpSetExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleWhiteListRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleWhiteListResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableWebRuleWhiteListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DeleteForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DeleteForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DeleteForwardRuleExecutor;
@@ -64,12 +91,12 @@ import com.jdcloud.sdk.service.ipanti.client.SwitchWebRuleProtectExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeInstancesExecutor;
-import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceIpBlackListRequest;
-import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceIpBlackListResponse;
-import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceIpBlackListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.CreateInstanceRequest;
 import com.jdcloud.sdk.service.ipanti.model.CreateInstanceResponse;
 import com.jdcloud.sdk.service.ipanti.client.CreateInstanceExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCpsIpListRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCpsIpListResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeCpsIpListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCAttackLogDetailsRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCAttackLogDetailsResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeCCAttackLogDetailsExecutor;
@@ -79,21 +106,24 @@ import com.jdcloud.sdk.service.ipanti.client.DescribeAttackTypeCountExecutor;
 import com.jdcloud.sdk.service.ipanti.model.SwitchForwardRuleOriginRequest;
 import com.jdcloud.sdk.service.ipanti.model.SwitchForwardRuleOriginResponse;
 import com.jdcloud.sdk.service.ipanti.client.SwitchForwardRuleOriginExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRuleOfForwardRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRuleOfForwardRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeBlackListRuleOfForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableCCProtectionRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableCCProtectionRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableCCProtectionRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeGeoAreasRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeGeoAreasResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeGeoAreasExecutor;
 import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleCCRequest;
 import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleCCResponse;
 import com.jdcloud.sdk.service.ipanti.client.EnableWebRuleCCExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DescribeCCDefaultThresholdsRequest;
-import com.jdcloud.sdk.service.ipanti.model.DescribeCCDefaultThresholdsResponse;
-import com.jdcloud.sdk.service.ipanti.client.DescribeCCDefaultThresholdsExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCAttackLogsRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCAttackLogsResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeCCAttackLogsExecutor;
-import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceCCRequest;
-import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceCCResponse;
-import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceCCExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DeleteCCProtectionRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DeleteCCProtectionRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DeleteCCProtectionRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeFwdGraphRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeFwdGraphResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeFwdGraphExecutor;
@@ -103,87 +133,129 @@ import com.jdcloud.sdk.service.ipanti.client.ModifyForwardRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeNameListRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeNameListResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeNameListExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleCCObserverModeRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleCCObserverModeResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableWebRuleCCObserverModeExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeForwardRulesRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeForwardRulesResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeForwardRulesExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWebRulesRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWebRulesResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeWebRulesExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DisableCCIpLimitRequest;
-import com.jdcloud.sdk.service.ipanti.model.DisableCCIpLimitResponse;
-import com.jdcloud.sdk.service.ipanti.client.DisableCCIpLimitExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DisableInstanceIpBlackListRequest;
-import com.jdcloud.sdk.service.ipanti.model.DisableInstanceIpBlackListResponse;
-import com.jdcloud.sdk.service.ipanti.client.DisableInstanceIpBlackListExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyBlackListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyBlackListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyBlackListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DeleteIpSetRequest;
+import com.jdcloud.sdk.service.ipanti.model.DeleteIpSetResponse;
+import com.jdcloud.sdk.service.ipanti.client.DeleteIpSetExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleWhiteListRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleWhiteListResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableWebRuleWhiteListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeProtectionStatisticsRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeProtectionStatisticsResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeProtectionStatisticsExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DisableInstanceUrlWhiteListRequest;
-import com.jdcloud.sdk.service.ipanti.model.DisableInstanceUrlWhiteListResponse;
-import com.jdcloud.sdk.service.ipanti.client.DisableInstanceUrlWhiteListExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleWhiteListUsageRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleWhiteListUsageResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeWebRuleWhiteListUsageExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyCertInfoRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyCertInfoResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyCertInfoExecutor;
-import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceUrlWhiteListRequest;
-import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceUrlWhiteListResponse;
-import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceUrlWhiteListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyAlarmConfigRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyAlarmConfigResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyAlarmConfigExecutor;
-import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceIpWhiteListRequest;
-import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceIpWhiteListResponse;
-import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceIpWhiteListExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DescribeCertInfoRequest;
-import com.jdcloud.sdk.service.ipanti.model.DescribeCertInfoResponse;
-import com.jdcloud.sdk.service.ipanti.client.DescribeCertInfoExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleWhiteListGeoAreasRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleWhiteListGeoAreasResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeWebRuleWhiteListGeoAreasExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyBlackListRuleOfForwardRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyBlackListRuleOfForwardRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyBlackListRuleOfForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleBlackListRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleBlackListResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableWebRuleBlackListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.SwitchForwardRuleProtectRequest;
 import com.jdcloud.sdk.service.ipanti.model.SwitchForwardRuleProtectResponse;
 import com.jdcloud.sdk.service.ipanti.client.SwitchForwardRuleProtectExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DownloadDDoSAttackLogsRequest;
-import com.jdcloud.sdk.service.ipanti.model.DownloadDDoSAttackLogsResponse;
-import com.jdcloud.sdk.service.ipanti.client.DownloadDDoSAttackLogsExecutor;
-import com.jdcloud.sdk.service.ipanti.model.EnableInstanceUrlWhiteListRequest;
-import com.jdcloud.sdk.service.ipanti.model.EnableInstanceUrlWhiteListResponse;
-import com.jdcloud.sdk.service.ipanti.client.EnableInstanceUrlWhiteListExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DisableInstanceCCRequest;
-import com.jdcloud.sdk.service.ipanti.model.DisableInstanceCCResponse;
-import com.jdcloud.sdk.service.ipanti.client.DisableInstanceCCExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DeleteBlackListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DeleteBlackListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DeleteBlackListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeCCProtectionRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableBlackListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableBlackListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableBlackListRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.SwitchWebRuleOriginRequest;
 import com.jdcloud.sdk.service.ipanti.model.SwitchWebRuleOriginResponse;
 import com.jdcloud.sdk.service.ipanti.client.SwitchWebRuleOriginExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DownloadCCAttackLogsRequest;
-import com.jdcloud.sdk.service.ipanti.model.DownloadCCAttackLogsResponse;
-import com.jdcloud.sdk.service.ipanti.client.DownloadCCAttackLogsExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeWhiteListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeBlackListRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeAttackStatisticsRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeAttackStatisticsResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeAttackStatisticsExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeDDoSAttackLogsRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeDDoSAttackLogsResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeDDoSAttackLogsExecutor;
-import com.jdcloud.sdk.service.ipanti.model.EnableCCObserverModeRequest;
-import com.jdcloud.sdk.service.ipanti.model.EnableCCObserverModeResponse;
-import com.jdcloud.sdk.service.ipanti.client.EnableCCObserverModeExecutor;
-import com.jdcloud.sdk.service.ipanti.model.EnableInstanceIpBlackListRequest;
-import com.jdcloud.sdk.service.ipanti.model.EnableInstanceIpBlackListResponse;
-import com.jdcloud.sdk.service.ipanti.client.EnableInstanceIpBlackListExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRulesOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRulesOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeBlackListRulesOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableWhiteListRuleOfForwardRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableWhiteListRuleOfForwardRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableWhiteListRuleOfForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableWhiteListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyWhiteListRuleOfForwardRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyWhiteListRuleOfForwardRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyWhiteListRuleOfForwardRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.CreateWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.CreateWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.CreateWebRuleExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DisableInstanceIpWhiteListRequest;
-import com.jdcloud.sdk.service.ipanti.model.DisableInstanceIpWhiteListResponse;
-import com.jdcloud.sdk.service.ipanti.client.DisableInstanceIpWhiteListExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyCCProtectionRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyCCProtectionRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyCCProtectionRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionConfigOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionConfigOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeCCProtectionConfigOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionRulesOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionRulesOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeCCProtectionRulesOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleCCRequest;
 import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleCCResponse;
 import com.jdcloud.sdk.service.ipanti.client.DisableWebRuleCCExecutor;
+import com.jdcloud.sdk.service.ipanti.model.CreateWhiteListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.CreateWhiteListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.CreateWhiteListRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.CheckNameRequest;
 import com.jdcloud.sdk.service.ipanti.model.CheckNameResponse;
 import com.jdcloud.sdk.service.ipanti.client.CheckNameExecutor;
+import com.jdcloud.sdk.service.ipanti.model.CreateBlackListRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.CreateBlackListRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.CreateBlackListRuleOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeDDoSGraphRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeDDoSGraphResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeDDoSGraphExecutor;
-import com.jdcloud.sdk.service.ipanti.model.EnableInstanceCCRequest;
-import com.jdcloud.sdk.service.ipanti.model.EnableInstanceCCResponse;
-import com.jdcloud.sdk.service.ipanti.client.EnableInstanceCCExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableBlackListRuleOfForwardRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableBlackListRuleOfForwardRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableBlackListRuleOfForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetUsageRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetUsageResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeIpSetUsageExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyCCProtectionConfigOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyCCProtectionConfigOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyCCProtectionConfigOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfForwardRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfForwardRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableWhiteListRuleOfForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableCCProtectionRuleOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableCCProtectionRuleOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableCCProtectionRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRulesOfWebRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRulesOfWebRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeWhiteListRulesOfWebRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.CreateForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.CreateForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.CreateForwardRuleExecutor;
@@ -193,12 +265,12 @@ import com.jdcloud.sdk.service.ipanti.client.DescribeVpcIpListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleBlackListGeoAreasRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleBlackListGeoAreasResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeWebRuleBlackListGeoAreasExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyProtectionRuleOfForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyProtectionRuleOfForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyProtectionRuleOfForwardRuleExecutor;
-import com.jdcloud.sdk.service.ipanti.model.DownloadCCAttackLogDetailsRequest;
-import com.jdcloud.sdk.service.ipanti.model.DownloadCCAttackLogDetailsResponse;
-import com.jdcloud.sdk.service.ipanti.client.DownloadCCAttackLogDetailsExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DeleteWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DeleteWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DeleteWebRuleExecutor;
@@ -208,12 +280,18 @@ import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceNameExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRuleOfForwardRuleRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRuleOfForwardRuleResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeWhiteListRuleOfForwardRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCGraphRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCGraphResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeCCGraphExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeInstanceRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeInstanceResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeInstanceExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleCCObserverModeRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleCCObserverModeResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableWebRuleCCObserverModeExecutor;
 
 /**
  * ipantiClient
@@ -222,7 +300,7 @@ public class IpantiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "ipanti.jdcloud-api.com";
     public final static String ServiceName = "ipanti";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -265,6 +343,17 @@ public class IpantiClient extends JdcloudClient {
 
 
     /**
+     * 开启转发规则的黑名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableBlackListRuleOfForwardRuleResponse enableBlackListRuleOfForwardRule(EnableBlackListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
+        return new EnableBlackListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询告警配置
      *
      * @param request
@@ -273,6 +362,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DescribeAlarmConfigResponse describeAlarmConfig(DescribeAlarmConfigRequest request) throws JdcloudSdkException {
         return new DescribeAlarmConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加实例的 IP 黑白名单, 预定义的 IP 黑白名单绑定到转发规则的黑名单或白名单后生效
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateIpSetResponse createIpSet(CreateIpSetRequest request) throws JdcloudSdkException {
+        return new CreateIpSetExecutor().client(this).execute(request);
     }
 
     /**
@@ -287,6 +387,28 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 查询网站类防护规则的黑名单用量信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWebRuleBlackListUsageResponse describeWebRuleBlackListUsage(DescribeWebRuleBlackListUsageRequest request) throws JdcloudSdkException {
+        return new DescribeWebRuleBlackListUsageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加网站类规则的 CC 防护规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateCCProtectionRuleOfWebRuleResponse createCCProtectionRuleOfWebRule(CreateCCProtectionRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new CreateCCProtectionRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * 更新实例弹性防护带宽
      *
      * @param request
@@ -298,47 +420,25 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 开启实例 IP 白名单
+     * 查询网站类规则的 CC 防护默认配置
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public EnableInstanceIpWhiteListResponse enableInstanceIpWhiteList(EnableInstanceIpWhiteListRequest request) throws JdcloudSdkException {
-        return new EnableInstanceIpWhiteListExecutor().client(this).execute(request);
+    public DescribeCCProtectionDefaultConfigOfWebRuleResponse describeCCProtectionDefaultConfigOfWebRule(DescribeCCProtectionDefaultConfigOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DescribeCCProtectionDefaultConfigOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
-     * 关闭实例 CC 防护的观察者模式
+     * 修改网站类规则的白名单规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DisableCCObserverModeResponse disableCCObserverMode(DisableCCObserverModeRequest request) throws JdcloudSdkException {
-        return new DisableCCObserverModeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 开启 CC 防护每 IP 的限速
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EnableCCIpLimitResponse enableCCIpLimit(EnableCCIpLimitRequest request) throws JdcloudSdkException {
-        return new EnableCCIpLimitExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置实例 CC 防护每 IP 限速
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetCCIpLimitResponse setCCIpLimit(SetCCIpLimitRequest request) throws JdcloudSdkException {
-        return new SetCCIpLimitExecutor().client(this).execute(request);
+    public ModifyWhiteListRuleOfWebRuleResponse modifyWhiteListRuleOfWebRule(ModifyWhiteListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new ModifyWhiteListRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -353,7 +453,84 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 删除非网站规则
+     * 开启网站类规则的黑名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableWebRuleBlackListResponse enableWebRuleBlackList(EnableWebRuleBlackListRequest request) throws JdcloudSdkException {
+        return new EnableWebRuleBlackListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableBlackListRuleOfWebRuleResponse enableBlackListRuleOfWebRule(EnableBlackListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new EnableBlackListRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询实例的 IP 黑白名单库列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpSetsResponse describeIpSets(DescribeIpSetsRequest request) throws JdcloudSdkException {
+        return new DescribeIpSetsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableWhiteListRuleOfWebRuleResponse enableWhiteListRuleOfWebRule(EnableWhiteListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new EnableWhiteListRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteWhiteListRuleOfWebRuleResponse deleteWhiteListRuleOfWebRule(DeleteWhiteListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DeleteWhiteListRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询实例的 IP 黑白名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpSetResponse describeIpSet(DescribeIpSetRequest request) throws JdcloudSdkException {
+        return new DescribeIpSetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭网站类规则的白名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableWebRuleWhiteListResponse disableWebRuleWhiteList(DisableWebRuleWhiteListRequest request) throws JdcloudSdkException {
+        return new DisableWebRuleWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除非网站规则, 批量操作时, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
      *
      * @param request
      * @return
@@ -386,17 +563,6 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 设置实例 IP 黑名单
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyInstanceIpBlackListResponse modifyInstanceIpBlackList(ModifyInstanceIpBlackListRequest request) throws JdcloudSdkException {
-        return new ModifyInstanceIpBlackListExecutor().client(this).execute(request);
-    }
-
-    /**
      * 新购或升级高防实例
      *
      * @param request
@@ -408,7 +574,20 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询 CC 攻击日志详情
+     * 查询用户可设置为网站类规则回源 IP 的京东云云物理服务器公网 IP 资源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCpsIpListResponse describeCpsIpList(DescribeCpsIpListRequest request) throws JdcloudSdkException {
+        return new DescribeCpsIpListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 CC 攻击日志详情.
+- 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+
      *
      * @param request
      * @return
@@ -441,6 +620,28 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 查询转发规则的黑名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBlackListRuleOfForwardRuleResponse describeBlackListRuleOfForwardRule(DescribeBlackListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
+        return new DescribeBlackListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭网站类规则的 CC 防护规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableCCProtectionRuleOfWebRuleResponse disableCCProtectionRuleOfWebRule(DisableCCProtectionRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DisableCCProtectionRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询非网站类转发规则的防护规则 Geo 拦截可设置区域编码
      *
      * @param request
@@ -452,7 +653,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 网站类规则开启 CC
+     * 网站类规则开启 CC 防护, 开启后网站类规则已配置的防护规则和 CC 防护配置生效, 若没有配置过 CC 防护, 默认的 CC 防护配置生效。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
      *
      * @param request
      * @return
@@ -460,17 +661,6 @@ public class IpantiClient extends JdcloudClient {
      */
     public EnableWebRuleCCResponse enableWebRuleCC(EnableWebRuleCCRequest request) throws JdcloudSdkException {
         return new EnableWebRuleCCExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询 CC 自定义默认阈值
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeCCDefaultThresholdsResponse describeCCDefaultThresholds(DescribeCCDefaultThresholdsRequest request) throws JdcloudSdkException {
-        return new DescribeCCDefaultThresholdsExecutor().client(this).execute(request);
     }
 
     /**
@@ -485,14 +675,14 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 设置实例 CC 防护
+     * 删除网站规则的 CC 防护规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyInstanceCCResponse modifyInstanceCC(ModifyInstanceCCRequest request) throws JdcloudSdkException {
-        return new ModifyInstanceCCExecutor().client(this).execute(request);
+    public DeleteCCProtectionRuleOfWebRuleResponse deleteCCProtectionRuleOfWebRule(DeleteCCProtectionRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DeleteCCProtectionRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -529,6 +719,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 关闭网站类规则 CC 观察者模式, 观察模式下, CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableWebRuleCCObserverModeResponse disableWebRuleCCObserverMode(DisableWebRuleCCObserverModeRequest request) throws JdcloudSdkException {
+        return new DisableWebRuleCCObserverModeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询某个实例下的非网站转发配置
      *
      * @param request
@@ -551,25 +752,36 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 关闭 CC 防护每 IP 的限速
+     * 修改网站类规则的黑名单规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DisableCCIpLimitResponse disableCCIpLimit(DisableCCIpLimitRequest request) throws JdcloudSdkException {
-        return new DisableCCIpLimitExecutor().client(this).execute(request);
+    public ModifyBlackListRuleOfWebRuleResponse modifyBlackListRuleOfWebRule(ModifyBlackListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new ModifyBlackListRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
-     * 关闭实例 IP 黑名单
+     * 删除实例的 IP 黑白名单. 支持批量操作, 批量操作时 ipSetId 传多个, 以 &#39;,&#39; 分隔. IP 黑白名单规则被引用时不允许删除
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DisableInstanceIpBlackListResponse disableInstanceIpBlackList(DisableInstanceIpBlackListRequest request) throws JdcloudSdkException {
-        return new DisableInstanceIpBlackListExecutor().client(this).execute(request);
+    public DeleteIpSetResponse deleteIpSet(DeleteIpSetRequest request) throws JdcloudSdkException {
+        return new DeleteIpSetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启网站类规则的白名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableWebRuleWhiteListResponse enableWebRuleWhiteList(EnableWebRuleWhiteListRequest request) throws JdcloudSdkException {
+        return new EnableWebRuleWhiteListExecutor().client(this).execute(request);
     }
 
     /**
@@ -584,14 +796,14 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 关闭实例 Url 白名单
+     * 查询网站类防护规则的白名单用量信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DisableInstanceUrlWhiteListResponse disableInstanceUrlWhiteList(DisableInstanceUrlWhiteListRequest request) throws JdcloudSdkException {
-        return new DisableInstanceUrlWhiteListExecutor().client(this).execute(request);
+    public DescribeWebRuleWhiteListUsageResponse describeWebRuleWhiteListUsage(DescribeWebRuleWhiteListUsageRequest request) throws JdcloudSdkException {
+        return new DescribeWebRuleWhiteListUsageExecutor().client(this).execute(request);
     }
 
     /**
@@ -606,17 +818,6 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 设置实例 Url 白名单
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyInstanceUrlWhiteListResponse modifyInstanceUrlWhiteList(ModifyInstanceUrlWhiteListRequest request) throws JdcloudSdkException {
-        return new ModifyInstanceUrlWhiteListExecutor().client(this).execute(request);
-    }
-
-    /**
      * 更新告警配置
      *
      * @param request
@@ -628,25 +829,36 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 设置实例 IP 白名单
+     * 查询网站类转发规则 Geo 模式的白名单可设置区域编码
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyInstanceIpWhiteListResponse modifyInstanceIpWhiteList(ModifyInstanceIpWhiteListRequest request) throws JdcloudSdkException {
-        return new ModifyInstanceIpWhiteListExecutor().client(this).execute(request);
+    public DescribeWebRuleWhiteListGeoAreasResponse describeWebRuleWhiteListGeoAreas(DescribeWebRuleWhiteListGeoAreasRequest request) throws JdcloudSdkException {
+        return new DescribeWebRuleWhiteListGeoAreasExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询证书预览信息
+     * 修改转发规则的黑名单规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeCertInfoResponse describeCertInfo(DescribeCertInfoRequest request) throws JdcloudSdkException {
-        return new DescribeCertInfoExecutor().client(this).execute(request);
+    public ModifyBlackListRuleOfForwardRuleResponse modifyBlackListRuleOfForwardRule(ModifyBlackListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
+        return new ModifyBlackListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭网站类规则的黑名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableWebRuleBlackListResponse disableWebRuleBlackList(DisableWebRuleBlackListRequest request) throws JdcloudSdkException {
+        return new DisableWebRuleBlackListExecutor().client(this).execute(request);
     }
 
     /**
@@ -661,36 +873,36 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 下载 DDos 攻击日志
+     * 删除网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DownloadDDoSAttackLogsResponse downloadDDoSAttackLogs(DownloadDDoSAttackLogsRequest request) throws JdcloudSdkException {
-        return new DownloadDDoSAttackLogsExecutor().client(this).execute(request);
+    public DeleteBlackListRuleOfWebRuleResponse deleteBlackListRuleOfWebRule(DeleteBlackListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DeleteBlackListRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
-     * 开启实例 Url 白名单
+     * 查询网站类规则的 CC 防护规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public EnableInstanceUrlWhiteListResponse enableInstanceUrlWhiteList(EnableInstanceUrlWhiteListRequest request) throws JdcloudSdkException {
-        return new EnableInstanceUrlWhiteListExecutor().client(this).execute(request);
+    public DescribeCCProtectionRuleOfWebRuleResponse describeCCProtectionRuleOfWebRule(DescribeCCProtectionRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DescribeCCProtectionRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
-     * 关闭实例 CC 防护
+     * 关闭网站类规则的黑名单规则, 批量操作时 webBlackListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DisableInstanceCCResponse disableInstanceCC(DisableInstanceCCRequest request) throws JdcloudSdkException {
-        return new DisableInstanceCCExecutor().client(this).execute(request);
+    public DisableBlackListRuleOfWebRuleResponse disableBlackListRuleOfWebRule(DisableBlackListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DisableBlackListRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -705,14 +917,25 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 下载 CC 攻击日志
+     * 查询网站类规则的白名单规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DownloadCCAttackLogsResponse downloadCCAttackLogs(DownloadCCAttackLogsRequest request) throws JdcloudSdkException {
-        return new DownloadCCAttackLogsExecutor().client(this).execute(request);
+    public DescribeWhiteListRuleOfWebRuleResponse describeWhiteListRuleOfWebRule(DescribeWhiteListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DescribeWhiteListRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询网站类规则的黑名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBlackListRuleOfWebRuleResponse describeBlackListRuleOfWebRule(DescribeBlackListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DescribeBlackListRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -727,7 +950,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询 DDos 攻击日志
+     * 查询 DDoS 攻击日志
      *
      * @param request
      * @return
@@ -738,25 +961,47 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 开启实例 CC 防护的观察者模式
+     * 查询网站类规则的黑名单规则列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public EnableCCObserverModeResponse enableCCObserverMode(EnableCCObserverModeRequest request) throws JdcloudSdkException {
-        return new EnableCCObserverModeExecutor().client(this).execute(request);
+    public DescribeBlackListRulesOfWebRuleResponse describeBlackListRulesOfWebRule(DescribeBlackListRulesOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DescribeBlackListRulesOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
-     * 开启实例 IP 黑名单
+     * 开启转发规则的白名单规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public EnableInstanceIpBlackListResponse enableInstanceIpBlackList(EnableInstanceIpBlackListRequest request) throws JdcloudSdkException {
-        return new EnableInstanceIpBlackListExecutor().client(this).execute(request);
+    public EnableWhiteListRuleOfForwardRuleResponse enableWhiteListRuleOfForwardRule(EnableWhiteListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
+        return new EnableWhiteListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭网站类规则的白名单规则, 批量操作时 webWhiteListRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableWhiteListRuleOfWebRuleResponse disableWhiteListRuleOfWebRule(DisableWhiteListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DisableWhiteListRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改转发规则的白名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyWhiteListRuleOfForwardRuleResponse modifyWhiteListRuleOfForwardRule(ModifyWhiteListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
+        return new ModifyWhiteListRuleOfForwardRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -771,18 +1016,40 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 关闭实例 IP 白名单
+     * 修改网站类规则的 CC 防护规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DisableInstanceIpWhiteListResponse disableInstanceIpWhiteList(DisableInstanceIpWhiteListRequest request) throws JdcloudSdkException {
-        return new DisableInstanceIpWhiteListExecutor().client(this).execute(request);
+    public ModifyCCProtectionRuleOfWebRuleResponse modifyCCProtectionRuleOfWebRule(ModifyCCProtectionRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new ModifyCCProtectionRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
-     * 网站类规则禁用 CC
+     * 查询网站类规则的 CC 防护配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCCProtectionConfigOfWebRuleResponse describeCCProtectionConfigOfWebRule(DescribeCCProtectionConfigOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DescribeCCProtectionConfigOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询网站类规则的 CC 防护规则列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCCProtectionRulesOfWebRuleResponse describeCCProtectionRulesOfWebRule(DescribeCCProtectionRulesOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DescribeCCProtectionRulesOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭网站类规则 CC 防护, 网站类规则的 CC 防护规则和 CC 防护配置失效。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
      *
      * @param request
      * @return
@@ -790,6 +1057,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DisableWebRuleCCResponse disableWebRuleCC(DisableWebRuleCCRequest request) throws JdcloudSdkException {
         return new DisableWebRuleCCExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加网站类规则的白名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateWhiteListRuleOfWebRuleResponse createWhiteListRuleOfWebRule(CreateWhiteListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new CreateWhiteListRuleOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -804,6 +1082,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 添加网站类规则的黑名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateBlackListRuleOfWebRuleResponse createBlackListRuleOfWebRule(CreateBlackListRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new CreateBlackListRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * DDos 防护流量报表
      *
      * @param request
@@ -815,14 +1104,69 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 开启实例 CC 防护
+     * 关闭转发规则的黑名单规则
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public EnableInstanceCCResponse enableInstanceCC(EnableInstanceCCRequest request) throws JdcloudSdkException {
-        return new EnableInstanceCCExecutor().client(this).execute(request);
+    public DisableBlackListRuleOfForwardRuleResponse disableBlackListRuleOfForwardRule(DisableBlackListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
+        return new DisableBlackListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询实例的 IP 黑白名单用量信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpSetUsageResponse describeIpSetUsage(DescribeIpSetUsageRequest request) throws JdcloudSdkException {
+        return new DescribeIpSetUsageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改网站类规则的 CC 防护配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyCCProtectionConfigOfWebRuleResponse modifyCCProtectionConfigOfWebRule(ModifyCCProtectionConfigOfWebRuleRequest request) throws JdcloudSdkException {
+        return new ModifyCCProtectionConfigOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭转发规则的白名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableWhiteListRuleOfForwardRuleResponse disableWhiteListRuleOfForwardRule(DisableWhiteListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
+        return new DisableWhiteListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启网站类规则的 CC 防护规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableCCProtectionRuleOfWebRuleResponse enableCCProtectionRuleOfWebRule(EnableCCProtectionRuleOfWebRuleRequest request) throws JdcloudSdkException {
+        return new EnableCCProtectionRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询网站类规则的白名单规则列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWhiteListRulesOfWebRuleResponse describeWhiteListRulesOfWebRule(DescribeWhiteListRulesOfWebRuleRequest request) throws JdcloudSdkException {
+        return new DescribeWhiteListRulesOfWebRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -837,7 +1181,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询用户的京东云 IP 资源
+     * 查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源
      *
      * @param request
      * @return
@@ -859,6 +1203,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 查询网站类转发规则 Geo 模式的黑名单可设置区域编码
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWebRuleBlackListGeoAreasResponse describeWebRuleBlackListGeoAreas(DescribeWebRuleBlackListGeoAreasRequest request) throws JdcloudSdkException {
+        return new DescribeWebRuleBlackListGeoAreasExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改非网站类转发规则的防护规则
      *
      * @param request
@@ -870,18 +1225,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 下载 CC 攻击日志详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DownloadCCAttackLogDetailsResponse downloadCCAttackLogDetails(DownloadCCAttackLogDetailsRequest request) throws JdcloudSdkException {
-        return new DownloadCCAttackLogDetailsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除网站规则
+     * 删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
      *
      * @param request
      * @return
@@ -914,6 +1258,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 查询转发规则的白名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWhiteListRuleOfForwardRuleResponse describeWhiteListRuleOfForwardRule(DescribeWhiteListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
+        return new DescribeWhiteListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * CC 防护流量报表
      *
      * @param request
@@ -933,6 +1288,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DescribeInstanceResponse describeInstance(DescribeInstanceRequest request) throws JdcloudSdkException {
         return new DescribeInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启网站类规则 CC 观察者模式, 观察模式下，CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableWebRuleCCObserverModeResponse enableWebRuleCCObserverMode(EnableWebRuleCCObserverModeRequest request) throws JdcloudSdkException {
+        return new EnableWebRuleCCObserverModeExecutor().client(this).execute(request);
     }
 
 

@@ -87,6 +87,16 @@ public class DiskSpecification  implements java.io.Serializable {
      */
     private Integer maxThroughput;
 
+    /**
+     * 是否开启IOPS可调整
+     */
+    private Boolean scalableIOPS;
+
+    /**
+     * 最大iops步长
+     */
+    private Integer maxStepIOPS;
+
 
     /**
      * get 云硬盘类型
@@ -286,6 +296,42 @@ public class DiskSpecification  implements java.io.Serializable {
         this.maxThroughput = maxThroughput;
     }
 
+    /**
+     * get 是否开启IOPS可调整
+     *
+     * @return
+     */
+    public Boolean getScalableIOPS() {
+        return scalableIOPS;
+    }
+
+    /**
+     * set 是否开启IOPS可调整
+     *
+     * @param scalableIOPS
+     */
+    public void setScalableIOPS(Boolean scalableIOPS) {
+        this.scalableIOPS = scalableIOPS;
+    }
+
+    /**
+     * get 最大iops步长
+     *
+     * @return
+     */
+    public Integer getMaxStepIOPS() {
+        return maxStepIOPS;
+    }
+
+    /**
+     * set 最大iops步长
+     *
+     * @param maxStepIOPS
+     */
+    public void setMaxStepIOPS(Integer maxStepIOPS) {
+        this.maxStepIOPS = maxStepIOPS;
+    }
+
 
     /**
      * set 云硬盘类型
@@ -394,6 +440,26 @@ public class DiskSpecification  implements java.io.Serializable {
      */
     public DiskSpecification maxThroughput(Integer maxThroughput) {
         this.maxThroughput = maxThroughput;
+        return this;
+    }
+
+    /**
+     * set 是否开启IOPS可调整
+     *
+     * @param scalableIOPS
+     */
+    public DiskSpecification scalableIOPS(Boolean scalableIOPS) {
+        this.scalableIOPS = scalableIOPS;
+        return this;
+    }
+
+    /**
+     * set 最大iops步长
+     *
+     * @param maxStepIOPS
+     */
+    public DiskSpecification maxStepIOPS(Integer maxStepIOPS) {
+        this.maxStepIOPS = maxStepIOPS;
         return this;
     }
 

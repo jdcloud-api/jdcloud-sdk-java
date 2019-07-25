@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Video Transcode Template Management
- * 水印管理
+ * Transcode Template
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 创建转码模板请求信息
@@ -34,28 +35,52 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
 
     /**
      * 模板名称
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
-     * video
+     * 视频参数配置
+     * Required:true
      */
+    @Required
     private Video video;
 
     /**
-     * audio
+     * 音频参数配置
+     * Required:true
      */
+    @Required
     private Audio audio;
 
     /**
-     * encapsulation
+     * 封装配置
+     * Required:true
      */
+    @Required
     private Encapsulation encapsulation;
 
     /**
-     * 清晰度规格
+     * 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
+     * Required:true
      */
+    @Required
     private String definition;
+
+    /**
+     * 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     */
+    private String templateType;
 
 
     /**
@@ -77,7 +102,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * get video
+     * get 视频参数配置
      *
      * @return
      */
@@ -86,7 +111,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * set video
+     * set 视频参数配置
      *
      * @param video
      */
@@ -95,7 +120,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * get audio
+     * get 音频参数配置
      *
      * @return
      */
@@ -104,7 +129,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * set audio
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -113,7 +138,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * get encapsulation
+     * get 封装配置
      *
      * @return
      */
@@ -122,7 +147,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * set encapsulation
+     * set 封装配置
      *
      * @param encapsulation
      */
@@ -131,7 +156,13 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * get 清晰度规格
+     * get 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @return
      */
@@ -140,12 +171,42 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
     public void setDefinition(String definition) {
         this.definition = definition;
+    }
+
+    /**
+     * get 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @return
+     */
+    public String getTemplateType() {
+        return templateType;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public void setTemplateType(String templateType) {
+        this.templateType = templateType;
     }
 
 
@@ -160,7 +221,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * set video
+     * set 视频参数配置
      *
      * @param video
      */
@@ -170,7 +231,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * set audio
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -180,7 +241,7 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * set encapsulation
+     * set 封装配置
      *
      * @param encapsulation
      */
@@ -190,12 +251,31 @@ public class CreateTranscodeTemplateRequestObject  implements java.io.Serializab
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
     public CreateTranscodeTemplateRequestObject definition(String definition) {
         this.definition = definition;
+        return this;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public CreateTranscodeTemplateRequestObject templateType(String templateType) {
+        this.templateType = templateType;
         return this;
     }
 

@@ -24,40 +24,45 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 设置域名IP访问控制规则配置请求消息体
+ * 设置CDN域名IP黑名单规则请求
  */
 public class SetIPRuleRequestObject  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则配置对象
+     * IP黑名单规则配置对象
+     * Required:true
      */
-    private Object config;
+    @Required
+    private IPRuleConfigObject config;
 
     /**
      * 是否启用该规则
+     * Required:true
      */
+    @Required
     private Boolean enabled;
 
 
     /**
-     * get 规则配置对象
+     * get IP黑名单规则配置对象
      *
      * @return
      */
-    public Object getConfig() {
+    public IPRuleConfigObject getConfig() {
         return config;
     }
 
     /**
-     * set 规则配置对象
+     * set IP黑名单规则配置对象
      *
      * @param config
      */
-    public void setConfig(Object config) {
+    public void setConfig(IPRuleConfigObject config) {
         this.config = config;
     }
 
@@ -81,11 +86,11 @@ public class SetIPRuleRequestObject  implements java.io.Serializable {
 
 
     /**
-     * set 规则配置对象
+     * set IP黑名单规则配置对象
      *
      * @param config
      */
-    public SetIPRuleRequestObject config(Object config) {
+    public SetIPRuleRequestObject config(IPRuleConfigObject config) {
         this.config = config;
         return this;
     }

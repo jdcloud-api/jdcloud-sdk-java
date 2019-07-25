@@ -55,9 +55,19 @@ public class GetCategoryWithChildrenResultObject  implements java.io.Serializabl
     private String description;
 
     /**
-     * children
+     * 下级分类
      */
-    private List<Object> children;
+    private List<SubCategory> children;
+
+    /**
+     * 创建时间
+     */
+    private String createTime;
+
+    /**
+     * 修改时间
+     */
+    private String updateTime;
 
 
     /**
@@ -133,21 +143,57 @@ public class GetCategoryWithChildrenResultObject  implements java.io.Serializabl
     }
 
     /**
-     * get children
+     * get 下级分类
      *
      * @return
      */
-    public List<Object> getChildren() {
+    public List<SubCategory> getChildren() {
         return children;
     }
 
     /**
-     * set children
+     * set 下级分类
      *
      * @param children
      */
-    public void setChildren(List<Object> children) {
+    public void setChildren(List<SubCategory> children) {
         this.children = children;
+    }
+
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * get 修改时间
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set 修改时间
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 
 
@@ -192,22 +238,42 @@ public class GetCategoryWithChildrenResultObject  implements java.io.Serializabl
     }
 
     /**
-     * set children
+     * set 下级分类
      *
      * @param children
      */
-    public GetCategoryWithChildrenResultObject children(List<Object> children) {
+    public GetCategoryWithChildrenResultObject children(List<SubCategory> children) {
         this.children = children;
+        return this;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public GetCategoryWithChildrenResultObject createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 修改时间
+     *
+     * @param updateTime
+     */
+    public GetCategoryWithChildrenResultObject updateTime(String updateTime) {
+        this.updateTime = updateTime;
         return this;
     }
 
 
     /**
-     * add item to children
+     * add item to 下级分类
      *
      * @param children
      */
-    public void addChildren(Object children) {
+    public void addChildren(SubCategory children) {
         if (this.children == null) {
             this.children = new ArrayList<>();
         }

@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vod.model.ListCategoriesResponse;
 
 /**
- * 查询分类列表
+ * 查询分类列表，按照分页方式，返回分类列表信息
+
  */
 class ListCategoriesExecutor extends JdcloudExecutor {
 

@@ -26,22 +26,25 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * batchDeleteVideosRequestObject
+ * 批量删除视频请求
  */
 public class BatchDeleteVideosRequestObject  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要删除的视频ID列表
+     * 视频ID集合
+     * Required:true
      */
+    @Required
     private List<String> videoIds;
 
 
     /**
-     * get 需要删除的视频ID列表
+     * get 视频ID集合
      *
      * @return
      */
@@ -50,7 +53,7 @@ public class BatchDeleteVideosRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 需要删除的视频ID列表
+     * set 视频ID集合
      *
      * @param videoIds
      */
@@ -60,7 +63,7 @@ public class BatchDeleteVideosRequestObject  implements java.io.Serializable {
 
 
     /**
-     * set 需要删除的视频ID列表
+     * set 视频ID集合
      *
      * @param videoIds
      */
@@ -71,7 +74,7 @@ public class BatchDeleteVideosRequestObject  implements java.io.Serializable {
 
 
     /**
-     * add item to 需要删除的视频ID列表
+     * add item to 视频ID集合
      *
      * @param videoId
      */

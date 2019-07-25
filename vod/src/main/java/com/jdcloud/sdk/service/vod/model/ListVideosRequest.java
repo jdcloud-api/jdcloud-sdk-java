@@ -38,12 +38,12 @@ public class ListVideosRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认值为1
+     * 页码；默认值为 1
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认值为10；取值范围[10, 100]
+     * 分页大小；默认值为 10；取值范围 [10, 100]
      */
     private Integer pageSize;
 
@@ -59,7 +59,7 @@ public class ListVideosRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 页码；默认值为1
+     * get 页码；默认值为 1
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class ListVideosRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 页码；默认值为1
+     * set 页码；默认值为 1
      *
      * @param pageNumber
      */
@@ -77,7 +77,7 @@ public class ListVideosRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 分页大小；默认值为10；取值范围[10, 100]
+     * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class ListVideosRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 分页大小；默认值为10；取值范围[10, 100]
+     * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @param pageSize
      */
@@ -132,7 +132,7 @@ public class ListVideosRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 页码；默认值为1
+     * set 页码；默认值为 1
      *
      * @param pageNumber
      */
@@ -142,7 +142,7 @@ public class ListVideosRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 分页大小；默认值为10；取值范围[10, 100]
+     * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @param pageSize
      */

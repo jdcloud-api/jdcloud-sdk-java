@@ -52,7 +52,6 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     /**
      * 转发规则
 - wrr 带权重的轮询
-- wlc 加权最小连接
 - rr  不带权重的轮询
 - sh  源地址hash
 
@@ -130,7 +129,6 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     /**
      * get 转发规则
 - wrr 带权重的轮询
-- wlc 加权最小连接
 - rr  不带权重的轮询
 - sh  源地址hash
 
@@ -144,7 +142,6 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     /**
      * set 转发规则
 - wrr 带权重的轮询
-- wlc 加权最小连接
 - rr  不带权重的轮询
 - sh  源地址hash
 
@@ -269,7 +266,6 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     /**
      * set 转发规则
 - wrr 带权重的轮询
-- wlc 加权最小连接
 - rr  不带权重的轮询
 - sh  源地址hash
 

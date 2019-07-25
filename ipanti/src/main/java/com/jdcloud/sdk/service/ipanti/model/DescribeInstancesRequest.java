@@ -50,7 +50,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String name;
 
     /**
-     * Region ID
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -112,7 +112,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get Region ID
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -121,7 +121,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -161,7 +161,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */

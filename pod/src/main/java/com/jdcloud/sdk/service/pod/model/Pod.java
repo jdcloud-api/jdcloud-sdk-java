@@ -91,7 +91,7 @@ public class Pod  implements java.io.Serializable {
     private String privateIpAddress;
 
     /**
-     * pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+     * pod内容器的/etc/resolv.conf配置
      */
     private DnsConfig dnsConfig;
 
@@ -345,7 +345,7 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
-     * get pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+     * get pod内容器的/etc/resolv.conf配置
      *
      * @return
      */
@@ -354,7 +354,7 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
-     * set pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+     * set pod内容器的/etc/resolv.conf配置
      *
      * @param dnsConfig
      */
@@ -654,7 +654,7 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
-     * set pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+     * set pod内容器的/etc/resolv.conf配置
      *
      * @param dnsConfig
      */

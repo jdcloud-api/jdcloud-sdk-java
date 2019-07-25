@@ -38,12 +38,12 @@ public class DescribeLiveTranscodingDurationDataRequest extends JdcloudRequest i
      * 码率档次，可以查询指定档次的转码时长，取值：
 - video_h264_4k_1
 - video_h264_2k_1
-- video_h264_fhd_1
+- video_h264_shd_1
 - video_h264_hd_1
 - video_h264_sd_1
 - video_h265_4k_1
 - video_h265_2k_1
-- video_h265_fhd_1
+- video_h265_shd_1
 - video_h265_hd_1
 - video_h265_sd_1
 
@@ -75,12 +75,12 @@ public class DescribeLiveTranscodingDurationDataRequest extends JdcloudRequest i
      * get 码率档次，可以查询指定档次的转码时长，取值：
 - video_h264_4k_1
 - video_h264_2k_1
-- video_h264_fhd_1
+- video_h264_shd_1
 - video_h264_hd_1
 - video_h264_sd_1
 - video_h265_4k_1
 - video_h265_2k_1
-- video_h265_fhd_1
+- video_h265_shd_1
 - video_h265_hd_1
 - video_h265_sd_1
 
@@ -95,12 +95,12 @@ public class DescribeLiveTranscodingDurationDataRequest extends JdcloudRequest i
      * set 码率档次，可以查询指定档次的转码时长，取值：
 - video_h264_4k_1
 - video_h264_2k_1
-- video_h264_fhd_1
+- video_h264_shd_1
 - video_h264_hd_1
 - video_h264_sd_1
 - video_h265_4k_1
 - video_h265_2k_1
-- video_h265_fhd_1
+- video_h265_shd_1
 - video_h265_hd_1
 - video_h265_sd_1
 
@@ -176,12 +176,12 @@ public class DescribeLiveTranscodingDurationDataRequest extends JdcloudRequest i
      * set 码率档次，可以查询指定档次的转码时长，取值：
 - video_h264_4k_1
 - video_h264_2k_1
-- video_h264_fhd_1
+- video_h264_shd_1
 - video_h264_hd_1
 - video_h264_sd_1
 - video_h265_4k_1
 - video_h265_2k_1
-- video_h265_fhd_1
+- video_h265_shd_1
 - video_h265_hd_1
 - video_h265_sd_1
 

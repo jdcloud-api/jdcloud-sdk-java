@@ -43,17 +43,22 @@ public class UpdateWatermarkRequestObject  implements java.io.Serializable {
     private String imgUrl;
 
     /**
-     * 宽度
+     * 水印宽度
      */
-    private String width;
+    private Integer width;
 
     /**
-     * 高度
+     * 水印高度
      */
-    private String height;
+    private Integer height;
 
     /**
-     * 水印位置
+     * 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      */
     private String position;
 
@@ -110,43 +115,48 @@ public class UpdateWatermarkRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * get 宽度
+     * get 水印宽度
      *
      * @return
      */
-    public String getWidth() {
+    public Integer getWidth() {
         return width;
     }
 
     /**
-     * set 宽度
+     * set 水印宽度
      *
      * @param width
      */
-    public void setWidth(String width) {
+    public void setWidth(Integer width) {
         this.width = width;
     }
 
     /**
-     * get 高度
+     * get 水印高度
      *
      * @return
      */
-    public String getHeight() {
+    public Integer getHeight() {
         return height;
     }
 
     /**
-     * set 高度
+     * set 水印高度
      *
      * @param height
      */
-    public void setHeight(String height) {
+    public void setHeight(Integer height) {
         this.height = height;
     }
 
     /**
-     * get 水印位置
+     * get 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @return
      */
@@ -155,7 +165,12 @@ public class UpdateWatermarkRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 水印位置
+     * set 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @param position
      */
@@ -239,27 +254,32 @@ public class UpdateWatermarkRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 宽度
+     * set 水印宽度
      *
      * @param width
      */
-    public UpdateWatermarkRequestObject width(String width) {
+    public UpdateWatermarkRequestObject width(Integer width) {
         this.width = width;
         return this;
     }
 
     /**
-     * set 高度
+     * set 水印高度
      *
      * @param height
      */
-    public UpdateWatermarkRequestObject height(String height) {
+    public UpdateWatermarkRequestObject height(Integer height) {
         this.height = height;
         return this;
     }
 
     /**
-     * set 水印位置
+     * set 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @param position
      */

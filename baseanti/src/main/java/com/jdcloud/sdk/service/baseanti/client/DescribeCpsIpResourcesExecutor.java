@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.baseanti.model.DescribeCpsIpResourcesResponse;
 
 /**
- * 查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+ * 查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
 
  */
 class DescribeCpsIpResourcesExecutor extends JdcloudExecutor {

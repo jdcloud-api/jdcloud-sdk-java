@@ -145,6 +145,9 @@ import com.jdcloud.sdk.service.vm.client.ModifyInstanceDiskAttributeExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstancePrivateIpAddressRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstancePrivateIpAddressResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstancePrivateIpAddressExecutor;
+import com.jdcloud.sdk.service.vm.model.ImageTasksRequest;
+import com.jdcloud.sdk.service.vm.model.ImageTasksResponse;
+import com.jdcloud.sdk.service.vm.client.ImageTasksExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceStatusExecutor;
@@ -154,6 +157,9 @@ import com.jdcloud.sdk.service.vm.client.DescribeKeypairsExecutor;
 import com.jdcloud.sdk.service.vm.model.DetachDiskRequest;
 import com.jdcloud.sdk.service.vm.model.DetachDiskResponse;
 import com.jdcloud.sdk.service.vm.client.DetachDiskExecutor;
+import com.jdcloud.sdk.service.vm.model.ImportImageRequest;
+import com.jdcloud.sdk.service.vm.model.ImportImageResponse;
+import com.jdcloud.sdk.service.vm.client.ImportImageExecutor;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.DeleteInstanceExecutor;
@@ -760,6 +766,18 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
+     * 查询镜像导入任务详情
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ImageTasksResponse imageTasks(ImageTasksRequest request) throws JdcloudSdkException {
+        return new ImageTasksExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量查询云主机状态
      *
      * @param request
@@ -793,6 +811,18 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public DetachDiskResponse detachDisk(DetachDiskRequest request) throws JdcloudSdkException {
         return new DetachDiskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 导入镜像，将外部镜像导入到京东云中
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ImportImageResponse importImage(ImportImageRequest request) throws JdcloudSdkException {
+        return new ImportImageExecutor().client(this).execute(request);
     }
 
     /**

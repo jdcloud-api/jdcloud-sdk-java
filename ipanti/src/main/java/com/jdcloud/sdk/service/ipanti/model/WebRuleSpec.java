@@ -131,7 +131,7 @@ public class WebRuleSpec  implements java.io.Serializable {
   - 如果传 certId, 请确认已经上传了相应的证书
   - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      */
-    private Long certId;
+    private String certId;
 
 
     /**
@@ -423,7 +423,7 @@ public class WebRuleSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getCertId() {
+    public String getCertId() {
         return certId;
     }
 
@@ -434,7 +434,7 @@ public class WebRuleSpec  implements java.io.Serializable {
      *
      * @param certId
      */
-    public void setCertId(Long certId) {
+    public void setCertId(String certId) {
         this.certId = certId;
     }
 
@@ -602,7 +602,7 @@ public class WebRuleSpec  implements java.io.Serializable {
      *
      * @param certId
      */
-    public WebRuleSpec certId(Long certId) {
+    public WebRuleSpec certId(String certId) {
         this.certId = certId;
         return this;
     }

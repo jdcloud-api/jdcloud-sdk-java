@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.ipanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询 CC 攻击日志详情
+ * 查询 CC 攻击日志详情.
+- 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+
  */
 public class DescribeCCAttackLogDetailsResponse extends JdcloudResponse<DescribeCCAttackLogDetailsResult> implements java.io.Serializable {
 

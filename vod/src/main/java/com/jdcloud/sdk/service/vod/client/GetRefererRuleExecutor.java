@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vod.model.GetRefererRuleResponse;
 
 /**
- * 查询CDN域名Referer规则
+ * 查询CDN域名Referer防盗链规则配置
  */
 class GetRefererRuleExecutor extends JdcloudExecutor {
 

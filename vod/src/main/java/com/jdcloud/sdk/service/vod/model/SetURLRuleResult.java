@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 设置CDN域名URL规则
+ * 设置CDN域名URL鉴权规则
  */
 public class SetURLRuleResult extends JdcloudResult implements java.io.Serializable {
 

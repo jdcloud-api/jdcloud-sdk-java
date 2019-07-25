@@ -24,40 +24,45 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 设置域名URL访问控制规则配置请求消息体
+ * 设置CDN域名URL鉴权规则请求
  */
 public class SetURLRuleRequestObject  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则配置对象
+     * URL鉴权规则配置对象
+     * Required:true
      */
-    private Object config;
+    @Required
+    private URLRuleConfigObject config;
 
     /**
      * 是否启用该规则
+     * Required:true
      */
+    @Required
     private Boolean enabled;
 
 
     /**
-     * get 规则配置对象
+     * get URL鉴权规则配置对象
      *
      * @return
      */
-    public Object getConfig() {
+    public URLRuleConfigObject getConfig() {
         return config;
     }
 
     /**
-     * set 规则配置对象
+     * set URL鉴权规则配置对象
      *
      * @param config
      */
-    public void setConfig(Object config) {
+    public void setConfig(URLRuleConfigObject config) {
         this.config = config;
     }
 
@@ -81,11 +86,11 @@ public class SetURLRuleRequestObject  implements java.io.Serializable {
 
 
     /**
-     * set 规则配置对象
+     * set URL鉴权规则配置对象
      *
      * @param config
      */
-    public SetURLRuleRequestObject config(Object config) {
+    public SetURLRuleRequestObject config(URLRuleConfigObject config) {
         this.config = config;
         return this;
     }

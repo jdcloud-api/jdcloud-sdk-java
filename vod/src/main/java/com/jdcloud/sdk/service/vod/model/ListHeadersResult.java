@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.vod.model.GetHeaderResultObject;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -33,7 +36,52 @@ public class ListHeadersResult extends JdcloudResult implements java.io.Serializ
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 头参数列表
+     */
+    private List<GetHeaderResultObject> headers;
 
 
+    /**
+     * get 头参数列表
+     *
+     * @return
+     */
+    public List<GetHeaderResultObject> getHeaders() {
+        return headers;
+    }
+
+    /**
+     * set 头参数列表
+     *
+     * @param headers
+     */
+    public void setHeaders(List<GetHeaderResultObject> headers) {
+        this.headers = headers;
+    }
+
+
+    /**
+     * set 头参数列表
+     *
+     * @param headers
+     */
+    public ListHeadersResult headers(List<GetHeaderResultObject> headers) {
+        this.headers = headers;
+        return this;
+    }
+
+
+    /**
+     * add item to 头参数列表
+     *
+     * @param header
+     */
+    public void addHeader(GetHeaderResultObject header) {
+        if (this.headers == null) {
+            this.headers = new ArrayList<>();
+        }
+        this.headers.add(header);
+    }
 
 }

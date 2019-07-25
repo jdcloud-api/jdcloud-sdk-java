@@ -24,16 +24,197 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.vod.model.CategoryObject;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询分类列表
+ * 查询分类列表，按照分页方式，返回分类列表信息
+
  */
 public class ListCategoriesResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 当前页码
+     */
+    private Integer pageNumber;
+
+    /**
+     * 每页数量
+     */
+    private Integer pageSize;
+
+    /**
+     * 查询总数
+     */
+    private Integer totalElements;
+
+    /**
+     * 总页数
+     */
+    private Integer totalPages;
+
+    /**
+     * 分页内容
+     */
+    private List<CategoryObject> content;
 
 
+    /**
+     * get 当前页码
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 当前页码
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 每页数量
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页数量
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    /**
+     * get 查询总数
+     *
+     * @return
+     */
+    public Integer getTotalElements() {
+        return totalElements;
+    }
+
+    /**
+     * set 查询总数
+     *
+     * @param totalElements
+     */
+    public void setTotalElements(Integer totalElements) {
+        this.totalElements = totalElements;
+    }
+
+    /**
+     * get 总页数
+     *
+     * @return
+     */
+    public Integer getTotalPages() {
+        return totalPages;
+    }
+
+    /**
+     * set 总页数
+     *
+     * @param totalPages
+     */
+    public void setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+    }
+
+    /**
+     * get 分页内容
+     *
+     * @return
+     */
+    public List<CategoryObject> getContent() {
+        return content;
+    }
+
+    /**
+     * set 分页内容
+     *
+     * @param content
+     */
+    public void setContent(List<CategoryObject> content) {
+        this.content = content;
+    }
+
+
+    /**
+     * set 当前页码
+     *
+     * @param pageNumber
+     */
+    public ListCategoriesResult pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 每页数量
+     *
+     * @param pageSize
+     */
+    public ListCategoriesResult pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 查询总数
+     *
+     * @param totalElements
+     */
+    public ListCategoriesResult totalElements(Integer totalElements) {
+        this.totalElements = totalElements;
+        return this;
+    }
+
+    /**
+     * set 总页数
+     *
+     * @param totalPages
+     */
+    public ListCategoriesResult totalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+
+    /**
+     * set 分页内容
+     *
+     * @param content
+     */
+    public ListCategoriesResult content(List<CategoryObject> content) {
+        this.content = content;
+        return this;
+    }
+
+
+    /**
+     * add item to 分页内容
+     *
+     * @param content
+     */
+    public void addContent(CategoryObject content) {
+        if (this.content == null) {
+            this.content = new ArrayList<>();
+        }
+        this.content.add(content);
+    }
 
 }

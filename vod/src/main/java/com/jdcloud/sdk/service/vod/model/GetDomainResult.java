@@ -49,7 +49,20 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     private String cname;
 
     /**
-     * 域名来源：系统生成 | 用户自建
+     * 域名状态。取值范围：
+  init - 初始状态
+  configuring - 配置中
+  normal - 正常
+  stopped - 已停用
+
+     */
+    private String status;
+
+    /**
+     * 域名来源。取值范围：
+  system - 系统生成
+  custom - 用户自建
+
      */
     private String source;
 
@@ -124,7 +137,38 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get 域名来源：系统生成 | 用户自建
+     * get 域名状态。取值范围：
+  init - 初始状态
+  configuring - 配置中
+  normal - 正常
+  stopped - 已停用
+
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 域名状态。取值范围：
+  init - 初始状态
+  configuring - 配置中
+  normal - 正常
+  stopped - 已停用
+
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 域名来源。取值范围：
+  system - 系统生成
+  custom - 用户自建
+
      *
      * @return
      */
@@ -133,7 +177,10 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set 域名来源：系统生成 | 用户自建
+     * set 域名来源。取值范围：
+  system - 系统生成
+  custom - 用户自建
+
      *
      * @param source
      */
@@ -227,7 +274,25 @@ public class GetDomainResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set 域名来源：系统生成 | 用户自建
+     * set 域名状态。取值范围：
+  init - 初始状态
+  configuring - 配置中
+  normal - 正常
+  stopped - 已停用
+
+     *
+     * @param status
+     */
+    public GetDomainResult status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 域名来源。取值范围：
+  system - 系统生成
+  custom - 用户自建
+
      *
      * @param source
      */

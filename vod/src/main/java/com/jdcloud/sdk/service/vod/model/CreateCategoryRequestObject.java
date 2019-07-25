@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 创建分类请求信息
@@ -34,11 +35,14 @@ public class CreateCategoryRequestObject  implements java.io.Serializable {
 
     /**
      * 分类名称
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
-     * 父分类ID
+     * 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      */
     private Long parentId;
 
@@ -67,7 +71,8 @@ public class CreateCategoryRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * get 父分类ID
+     * get 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @return
      */
@@ -76,7 +81,8 @@ public class CreateCategoryRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */
@@ -114,7 +120,8 @@ public class CreateCategoryRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */

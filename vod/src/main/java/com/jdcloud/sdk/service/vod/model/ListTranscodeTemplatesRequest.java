@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,28 +24,43 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.vod.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询转码模板列表
+ * 查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
+- source 模板来源。枚举值，取值范围为：
+  - system 系统预置
+  - custom 用户自建
+- templateType 模板类型。枚举值，取值范围：
+  - jdchd 京享超清
+  - jdchs 极速转码
+
  */
 public class ListTranscodeTemplatesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认值为1
+     * 页码；默认值为 1
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认值为10；取值范围[10, 100]
+     * 分页大小；默认值为 10；取值范围 [10, 100]
      */
     private Integer pageSize;
 
+    /**
+     * filters
+     */
+    private List<Filter> filters;
+
 
     /**
-     * get 页码；默认值为1
+     * get 页码；默认值为 1
      *
      * @return
      */
@@ -54,7 +69,7 @@ public class ListTranscodeTemplatesRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 页码；默认值为1
+     * set 页码；默认值为 1
      *
      * @param pageNumber
      */
@@ -63,7 +78,7 @@ public class ListTranscodeTemplatesRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 分页大小；默认值为10；取值范围[10, 100]
+     * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @return
      */
@@ -72,7 +87,7 @@ public class ListTranscodeTemplatesRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 分页大小；默认值为10；取值范围[10, 100]
+     * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @param pageSize
      */
@@ -80,9 +95,27 @@ public class ListTranscodeTemplatesRequest extends JdcloudRequest implements jav
         this.pageSize = pageSize;
     }
 
+    /**
+     * get filters
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
 
     /**
-     * set 页码；默认值为1
+     * set filters
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+
+    /**
+     * set 页码；默认值为 1
      *
      * @param pageNumber
      */
@@ -92,7 +125,7 @@ public class ListTranscodeTemplatesRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 分页大小；默认值为10；取值范围[10, 100]
+     * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @param pageSize
      */
@@ -101,5 +134,27 @@ public class ListTranscodeTemplatesRequest extends JdcloudRequest implements jav
         return this;
     }
 
+    /**
+     * set filters
+     *
+     * @param filters
+     */
+    public ListTranscodeTemplatesRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+
+    /**
+     * add item to filters
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

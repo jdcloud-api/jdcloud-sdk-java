@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 
 /**
- * 添加域名头参数响应消息体
+ * 添加域名头参数请求
  */
 public class GetHeaderResultObject  implements java.io.Serializable {
 
@@ -43,7 +43,7 @@ public class GetHeaderResultObject  implements java.io.Serializable {
     private String headerValue;
 
     /**
-     * 头参数类型
+     * 头参数类型，取值范围：req、resp
      */
     private String headerType;
 
@@ -85,7 +85,7 @@ public class GetHeaderResultObject  implements java.io.Serializable {
     }
 
     /**
-     * get 头参数类型
+     * get 头参数类型，取值范围：req、resp
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class GetHeaderResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set 头参数类型
+     * set 头参数类型，取值范围：req、resp
      *
      * @param headerType
      */
@@ -124,7 +124,7 @@ public class GetHeaderResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set 头参数类型
+     * set 头参数类型，取值范围：req、resp
      *
      * @param headerType
      */

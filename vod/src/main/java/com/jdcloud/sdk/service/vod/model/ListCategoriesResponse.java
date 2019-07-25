@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询分类列表
+ * 查询分类列表，按照分页方式，返回分类列表信息
+
  */
 public class ListCategoriesResponse extends JdcloudResponse<ListCategoriesResult> implements java.io.Serializable {
 

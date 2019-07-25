@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.baseanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+ * 查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
 
  */
 public class DescribeCpsIpResourcesResponse extends JdcloudResponse<DescribeCpsIpResourcesResult> implements java.io.Serializable {

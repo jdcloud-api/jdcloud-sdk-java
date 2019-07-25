@@ -35,9 +35,9 @@ public class Instance  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例 Id
+     * 实例 ID
      */
-    private Long id;
+    private String id;
 
     /**
      * 实例名称
@@ -50,7 +50,7 @@ public class Instance  implements java.io.Serializable {
     private Integer carrier;
 
     /**
-     * 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+     * 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
 - 0: IPV4,
 - 1: IPV4/IPV6
 
@@ -83,9 +83,14 @@ public class Instance  implements java.io.Serializable {
     private Integer businessBitslimit;
 
     /**
-     * cc阈值大小
+     * CC 阈值大小
      */
     private Integer ccThreshold;
+
+    /**
+     * CC 防护峰值, 单位: QPS
+     */
+    private Integer ccPeakQPS;
 
     /**
      * 非网站类规则数
@@ -118,47 +123,69 @@ public class Instance  implements java.io.Serializable {
     private String expireTime;
 
     /**
-     * 资源id，升级和续费时使用
+     * 资源 ID, 升级和续费时使用
      */
     private String resourceId;
 
     /**
-     * cc防护模式，0正常、1紧急、2宽松、3自定义
+     * CC 防护观察者模式.
+- 0: 关闭
+- 1: 开启
+
+     */
+    private Integer ccObserveMode;
+
+    /**
+     * CC 防护模式.
+- 0: 正常
+- 1: 紧急
+- 2: 宽松
+- 3: 自定义
+
      */
     private Integer ccProtectMode;
 
     /**
-     * cc开关状态，0关闭，1开启
+     * CC 开关状态.
+- 0: 关闭
+- 1: 开启
+
      */
     private Integer ccProtectStatus;
 
     /**
-     * cc防护模式为自定义时的限速大小
+     * CC 防护模式为自定义时的限速大小
      */
     private Integer ccSpeedLimit;
 
     /**
-     * cc防护模式为自定义时的限速周期
+     * CC 防护模式为自定义时的限速周期
      */
     private Integer ccSpeedPeriod;
 
     /**
-     * ip黑名单列表
+     * IP 黑名单列表
      */
     private List<String> ipBlackList;
 
     /**
-     * ip黑名单状态，0关闭，1开启
+     * IP 黑名单状态.
+- 0: 关闭
+- 1: 开启
+
      */
     private Integer ipBlackStatus;
 
     /**
-     * ip白名单列表
+     * IP 白名单列表
      */
     private List<String> ipWhiteList;
 
     /**
-     * ip白名单状态，0关闭，1开启
+     * IP 白名单状态.
+- 0: 关闭
+- 1: 开启
+
      */
     private Integer ipWhiteStatus;
 
@@ -194,20 +221,20 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * get 实例 Id
+     * get 实例 ID
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
     /**
-     * set 实例 Id
+     * set 实例 ID
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -248,7 +275,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+     * get 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
 - 0: IPV4,
 - 1: IPV4/IPV6
 
@@ -260,7 +287,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+     * set 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
 - 0: IPV4,
 - 1: IPV4/IPV6
 
@@ -362,7 +389,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get cc阈值大小
+     * get CC 阈值大小
      *
      * @return
      */
@@ -371,12 +398,30 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc阈值大小
+     * set CC 阈值大小
      *
      * @param ccThreshold
      */
     public void setCcThreshold(Integer ccThreshold) {
         this.ccThreshold = ccThreshold;
+    }
+
+    /**
+     * get CC 防护峰值, 单位: QPS
+     *
+     * @return
+     */
+    public Integer getCcPeakQPS() {
+        return ccPeakQPS;
+    }
+
+    /**
+     * set CC 防护峰值, 单位: QPS
+     *
+     * @param ccPeakQPS
+     */
+    public void setCcPeakQPS(Integer ccPeakQPS) {
+        this.ccPeakQPS = ccPeakQPS;
     }
 
     /**
@@ -488,7 +533,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 资源id，升级和续费时使用
+     * get 资源 ID, 升级和续费时使用
      *
      * @return
      */
@@ -497,7 +542,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 资源id，升级和续费时使用
+     * set 资源 ID, 升级和续费时使用
      *
      * @param resourceId
      */
@@ -506,7 +551,36 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get cc防护模式，0正常、1紧急、2宽松、3自定义
+     * get CC 防护观察者模式.
+- 0: 关闭
+- 1: 开启
+
+     *
+     * @return
+     */
+    public Integer getCcObserveMode() {
+        return ccObserveMode;
+    }
+
+    /**
+     * set CC 防护观察者模式.
+- 0: 关闭
+- 1: 开启
+
+     *
+     * @param ccObserveMode
+     */
+    public void setCcObserveMode(Integer ccObserveMode) {
+        this.ccObserveMode = ccObserveMode;
+    }
+
+    /**
+     * get CC 防护模式.
+- 0: 正常
+- 1: 紧急
+- 2: 宽松
+- 3: 自定义
+
      *
      * @return
      */
@@ -515,7 +589,12 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc防护模式，0正常、1紧急、2宽松、3自定义
+     * set CC 防护模式.
+- 0: 正常
+- 1: 紧急
+- 2: 宽松
+- 3: 自定义
+
      *
      * @param ccProtectMode
      */
@@ -524,7 +603,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get cc开关状态，0关闭，1开启
+     * get CC 开关状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @return
      */
@@ -533,7 +615,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc开关状态，0关闭，1开启
+     * set CC 开关状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @param ccProtectStatus
      */
@@ -542,7 +627,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get cc防护模式为自定义时的限速大小
+     * get CC 防护模式为自定义时的限速大小
      *
      * @return
      */
@@ -551,7 +636,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc防护模式为自定义时的限速大小
+     * set CC 防护模式为自定义时的限速大小
      *
      * @param ccSpeedLimit
      */
@@ -560,7 +645,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get cc防护模式为自定义时的限速周期
+     * get CC 防护模式为自定义时的限速周期
      *
      * @return
      */
@@ -569,7 +654,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc防护模式为自定义时的限速周期
+     * set CC 防护模式为自定义时的限速周期
      *
      * @param ccSpeedPeriod
      */
@@ -578,7 +663,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get ip黑名单列表
+     * get IP 黑名单列表
      *
      * @return
      */
@@ -587,7 +672,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ip黑名单列表
+     * set IP 黑名单列表
      *
      * @param ipBlackList
      */
@@ -596,7 +681,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get ip黑名单状态，0关闭，1开启
+     * get IP 黑名单状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @return
      */
@@ -605,7 +693,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ip黑名单状态，0关闭，1开启
+     * set IP 黑名单状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @param ipBlackStatus
      */
@@ -614,7 +705,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get ip白名单列表
+     * get IP 白名单列表
      *
      * @return
      */
@@ -623,7 +714,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ip白名单列表
+     * set IP 白名单列表
      *
      * @param ipWhiteList
      */
@@ -632,7 +723,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get ip白名单状态，0关闭，1开启
+     * get IP 白名单状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @return
      */
@@ -641,7 +735,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ip白名单状态，0关闭，1开启
+     * set IP 白名单状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @param ipWhiteStatus
      */
@@ -759,11 +856,11 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * set 实例 Id
+     * set 实例 ID
      *
      * @param id
      */
-    public Instance id(Long id) {
+    public Instance id(String id) {
         this.id = id;
         return this;
     }
@@ -789,7 +886,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
+     * set 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
 - 0: IPV4,
 - 1: IPV4/IPV6
 
@@ -852,12 +949,22 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc阈值大小
+     * set CC 阈值大小
      *
      * @param ccThreshold
      */
     public Instance ccThreshold(Integer ccThreshold) {
         this.ccThreshold = ccThreshold;
+        return this;
+    }
+
+    /**
+     * set CC 防护峰值, 单位: QPS
+     *
+     * @param ccPeakQPS
+     */
+    public Instance ccPeakQPS(Integer ccPeakQPS) {
+        this.ccPeakQPS = ccPeakQPS;
         return this;
     }
 
@@ -922,7 +1029,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 资源id，升级和续费时使用
+     * set 资源 ID, 升级和续费时使用
      *
      * @param resourceId
      */
@@ -932,7 +1039,25 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc防护模式，0正常、1紧急、2宽松、3自定义
+     * set CC 防护观察者模式.
+- 0: 关闭
+- 1: 开启
+
+     *
+     * @param ccObserveMode
+     */
+    public Instance ccObserveMode(Integer ccObserveMode) {
+        this.ccObserveMode = ccObserveMode;
+        return this;
+    }
+
+    /**
+     * set CC 防护模式.
+- 0: 正常
+- 1: 紧急
+- 2: 宽松
+- 3: 自定义
+
      *
      * @param ccProtectMode
      */
@@ -942,7 +1067,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc开关状态，0关闭，1开启
+     * set CC 开关状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @param ccProtectStatus
      */
@@ -952,7 +1080,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc防护模式为自定义时的限速大小
+     * set CC 防护模式为自定义时的限速大小
      *
      * @param ccSpeedLimit
      */
@@ -962,7 +1090,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set cc防护模式为自定义时的限速周期
+     * set CC 防护模式为自定义时的限速周期
      *
      * @param ccSpeedPeriod
      */
@@ -972,7 +1100,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ip黑名单列表
+     * set IP 黑名单列表
      *
      * @param ipBlackList
      */
@@ -982,7 +1110,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ip黑名单状态，0关闭，1开启
+     * set IP 黑名单状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @param ipBlackStatus
      */
@@ -992,7 +1123,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ip白名单列表
+     * set IP 白名单列表
      *
      * @param ipWhiteList
      */
@@ -1002,7 +1133,10 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ip白名单状态，0关闭，1开启
+     * set IP 白名单状态.
+- 0: 关闭
+- 1: 开启
+
      *
      * @param ipWhiteStatus
      */
@@ -1073,7 +1207,7 @@ public class Instance  implements java.io.Serializable {
 
 
     /**
-     * add item to ip黑名单列表
+     * add item to IP 黑名单列表
      *
      * @param ipBlackList
      */
@@ -1085,7 +1219,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * add item to ip白名单列表
+     * add item to IP 白名单列表
      *
      * @param ipWhiteList
      */

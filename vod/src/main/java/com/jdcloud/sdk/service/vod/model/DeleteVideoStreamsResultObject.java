@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * deleteVideoStreamsResultObject
+ * 删除视频转码流结果
  */
 public class DeleteVideoStreamsResultObject  implements java.io.Serializable {
 

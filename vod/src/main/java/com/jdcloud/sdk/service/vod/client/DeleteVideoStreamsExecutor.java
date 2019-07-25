@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vod.model.DeleteVideoStreamsResponse;
 
 /**
- * 删除视频码流信息
+ * 删除视频转码流
  */
 class DeleteVideoStreamsExecutor extends JdcloudExecutor {
 

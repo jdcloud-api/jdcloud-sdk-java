@@ -91,8 +91,19 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
 
     /**
      * geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
+
      */
     private List<String> geoBlackList;
+
+    /**
+     * IP 黑名单列表
+     */
+    private List<String> ipBlackList;
+
+    /**
+     * IP 白名单列表
+     */
+    private List<String> ipWhiteList;
 
 
     /**
@@ -295,6 +306,7 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
 
     /**
      * get geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
+
      *
      * @return
      */
@@ -304,11 +316,48 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
 
     /**
      * set geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
+
      *
      * @param geoBlackList
      */
     public void setGeoBlackList(List<String> geoBlackList) {
         this.geoBlackList = geoBlackList;
+    }
+
+    /**
+     * get IP 黑名单列表
+     *
+     * @return
+     */
+    public List<String> getIpBlackList() {
+        return ipBlackList;
+    }
+
+    /**
+     * set IP 黑名单列表
+     *
+     * @param ipBlackList
+     */
+    public void setIpBlackList(List<String> ipBlackList) {
+        this.ipBlackList = ipBlackList;
+    }
+
+    /**
+     * get IP 白名单列表
+     *
+     * @return
+     */
+    public List<String> getIpWhiteList() {
+        return ipWhiteList;
+    }
+
+    /**
+     * set IP 白名单列表
+     *
+     * @param ipWhiteList
+     */
+    public void setIpWhiteList(List<String> ipWhiteList) {
+        this.ipWhiteList = ipWhiteList;
     }
 
 
@@ -424,6 +473,7 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
 
     /**
      * set geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
+
      *
      * @param geoBlackList
      */
@@ -432,9 +482,30 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set IP 黑名单列表
+     *
+     * @param ipBlackList
+     */
+    public ProtectionRuleSpec ipBlackList(List<String> ipBlackList) {
+        this.ipBlackList = ipBlackList;
+        return this;
+    }
+
+    /**
+     * set IP 白名单列表
+     *
+     * @param ipWhiteList
+     */
+    public ProtectionRuleSpec ipWhiteList(List<String> ipWhiteList) {
+        this.ipWhiteList = ipWhiteList;
+        return this;
+    }
+
 
     /**
      * add item to geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
+
      *
      * @param geoBlackList
      */
@@ -443,6 +514,30 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
             this.geoBlackList = new ArrayList<>();
         }
         this.geoBlackList.add(geoBlackList);
+    }
+
+    /**
+     * add item to IP 黑名单列表
+     *
+     * @param ipBlackList
+     */
+    public void addIpBlackList(String ipBlackList) {
+        if (this.ipBlackList == null) {
+            this.ipBlackList = new ArrayList<>();
+        }
+        this.ipBlackList.add(ipBlackList);
+    }
+
+    /**
+     * add item to IP 白名单列表
+     *
+     * @param ipWhiteList
+     */
+    public void addIpWhiteList(String ipWhiteList) {
+        if (this.ipWhiteList == null) {
+            this.ipWhiteList = new ArrayList<>();
+        }
+        this.ipWhiteList.add(ipWhiteList);
     }
 
 }

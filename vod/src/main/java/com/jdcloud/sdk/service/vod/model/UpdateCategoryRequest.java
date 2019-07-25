@@ -40,7 +40,8 @@ public class UpdateCategoryRequest extends JdcloudRequest implements java.io.Ser
     private String name;
 
     /**
-     * 父分类ID
+     * 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      */
     private Long parentId;
 
@@ -76,7 +77,8 @@ public class UpdateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 父分类ID
+     * get 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @return
      */
@@ -85,7 +87,8 @@ public class UpdateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */
@@ -141,7 +144,8 @@ public class UpdateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */

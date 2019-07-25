@@ -40,7 +40,7 @@ class DescribeAttackStatisticsExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/attacklog/describeAttackStatistics";
+        return "/regions/{regionId}/attacklog:describeAttackStatistics";
     }
 
     @Override

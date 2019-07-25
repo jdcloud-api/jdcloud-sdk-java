@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 
 /**
- * 获取域名URL访问控制规则配置响应消息体
+ * 查询CDN域名URL鉴权规则配置结果
  */
 public class GetURLRuleResultObject  implements java.io.Serializable {
 
@@ -38,9 +38,9 @@ public class GetURLRuleResultObject  implements java.io.Serializable {
     private String ruleType;
 
     /**
-     * 规则配置对象
+     * URL鉴权规则配置对象
      */
-    private Object config;
+    private URLRuleConfigObject config;
 
     /**
      * 是否启用该规则
@@ -67,20 +67,20 @@ public class GetURLRuleResultObject  implements java.io.Serializable {
     }
 
     /**
-     * get 规则配置对象
+     * get URL鉴权规则配置对象
      *
      * @return
      */
-    public Object getConfig() {
+    public URLRuleConfigObject getConfig() {
         return config;
     }
 
     /**
-     * set 规则配置对象
+     * set URL鉴权规则配置对象
      *
      * @param config
      */
-    public void setConfig(Object config) {
+    public void setConfig(URLRuleConfigObject config) {
         this.config = config;
     }
 
@@ -114,11 +114,11 @@ public class GetURLRuleResultObject  implements java.io.Serializable {
     }
 
     /**
-     * set 规则配置对象
+     * set URL鉴权规则配置对象
      *
      * @param config
      */
-    public GetURLRuleResultObject config(Object config) {
+    public GetURLRuleResultObject config(URLRuleConfigObject config) {
         this.config = config;
         return this;
     }

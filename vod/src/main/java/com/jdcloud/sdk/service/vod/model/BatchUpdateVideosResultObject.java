@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * batchUpdateVideosResultObject
+ * 批量修改视频信息结果
  */
 public class BatchUpdateVideosResultObject  implements java.io.Serializable {
 
