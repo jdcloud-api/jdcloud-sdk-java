@@ -29,7 +29,9 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCAttackLogDetailsResponse;
 
 /**
- * 查询 CC 攻击日志详情
+ * 查询 CC 攻击日志详情.
+- 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+
  */
 class DescribeCCAttackLogDetailsExecutor extends JdcloudExecutor {
 
@@ -40,7 +42,7 @@ class DescribeCCAttackLogDetailsExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/attacklog:CCDetail";
+        return "/regions/{regionId}/attacklog:describeCCAttackLogDetails";
     }
 
     @Override

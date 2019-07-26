@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -35,7 +36,9 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * 域名名称
+     * Required:true
      */
+    @Required
     private String name;
 
 

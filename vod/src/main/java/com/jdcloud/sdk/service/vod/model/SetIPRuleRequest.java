@@ -25,28 +25,28 @@
 package com.jdcloud.sdk.service.vod.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vod.model.IPRuleConfigObject;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置CDN域名IP规则
+ * 设置CDN域名IP黑名单规则
  */
 public class SetIPRuleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则类型，取值 &#39;ip&#39;
+     * IP黑名单规则配置对象
+     * Required:true
      */
-    private String ruleType;
-
-    /**
-     * 规则配置对象
-     */
-    private Object config;
+    @Required
+    private IPRuleConfigObject config;
 
     /**
      * 是否启用该规则
+     * Required:true
      */
+    @Required
     private Boolean enabled;
 
     /**
@@ -58,38 +58,20 @@ public class SetIPRuleRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * get 规则类型，取值 &#39;ip&#39;
+     * get IP黑名单规则配置对象
      *
      * @return
      */
-    public String getRuleType() {
-        return ruleType;
-    }
-
-    /**
-     * set 规则类型，取值 &#39;ip&#39;
-     *
-     * @param ruleType
-     */
-    public void setRuleType(String ruleType) {
-        this.ruleType = ruleType;
-    }
-
-    /**
-     * get 规则配置对象
-     *
-     * @return
-     */
-    public Object getConfig() {
+    public IPRuleConfigObject getConfig() {
         return config;
     }
 
     /**
-     * set 规则配置对象
+     * set IP黑名单规则配置对象
      *
      * @param config
      */
-    public void setConfig(Object config) {
+    public void setConfig(IPRuleConfigObject config) {
         this.config = config;
     }
 
@@ -131,21 +113,11 @@ public class SetIPRuleRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * set 规则类型，取值 &#39;ip&#39;
-     *
-     * @param ruleType
-     */
-    public SetIPRuleRequest ruleType(String ruleType) {
-        this.ruleType = ruleType;
-        return this;
-    }
-
-    /**
-     * set 规则配置对象
+     * set IP黑名单规则配置对象
      *
      * @param config
      */
-    public SetIPRuleRequest config(Object config) {
+    public SetIPRuleRequest config(IPRuleConfigObject config) {
         this.config = config;
         return this;
     }

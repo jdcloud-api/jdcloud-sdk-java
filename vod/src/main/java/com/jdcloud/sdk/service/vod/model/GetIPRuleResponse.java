@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询CDN域名IP规则
+ * 查询CDN域名IP黑名单规则配置
  */
 public class GetIPRuleResponse extends JdcloudResponse<GetIPRuleResult> implements java.io.Serializable {
 

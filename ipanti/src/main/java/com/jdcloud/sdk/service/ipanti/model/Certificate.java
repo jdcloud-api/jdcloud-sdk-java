@@ -37,7 +37,7 @@ public class Certificate  implements java.io.Serializable {
     /**
      * 证书 Id
      */
-    private Long id;
+    private String id;
 
     /**
      * 证书名称
@@ -105,7 +105,7 @@ public class Certificate  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -114,7 +114,7 @@ public class Certificate  implements java.io.Serializable {
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -340,7 +340,7 @@ public class Certificate  implements java.io.Serializable {
      *
      * @param id
      */
-    public Certificate id(Long id) {
+    public Certificate id(String id) {
         this.id = id;
         return this;
     }

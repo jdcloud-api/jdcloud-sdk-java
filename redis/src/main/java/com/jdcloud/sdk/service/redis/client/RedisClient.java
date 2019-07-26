@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.redis.client.ModifyCacheInstanceClassExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeCacheInstancesExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeClusterInfoRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeClusterInfoResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeClusterInfoExecutor;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeRequest;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeResponse;
 import com.jdcloud.sdk.service.redis.client.ModifyCacheInstanceAttributeExecutor;
@@ -66,7 +69,7 @@ public class RedisClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.0";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "redis.jdcloud-api.com";
     public final static String ServiceName = "redis";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -141,6 +144,17 @@ public class RedisClient extends JdcloudClient {
      */
     public DescribeCacheInstancesResponse describeCacheInstances(DescribeCacheInstancesRequest request) throws JdcloudSdkException {
         return new DescribeCacheInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询Redis实例的内部集群信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeClusterInfoResponse describeClusterInfo(DescribeClusterInfoRequest request) throws JdcloudSdkException {
+        return new DescribeClusterInfoExecutor().client(this).execute(request);
     }
 
     /**

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vod.model.GetIPRuleResponse;
 
 /**
- * 查询CDN域名IP规则
+ * 查询CDN域名IP黑名单规则配置
  */
 class GetIPRuleExecutor extends JdcloudExecutor {
 

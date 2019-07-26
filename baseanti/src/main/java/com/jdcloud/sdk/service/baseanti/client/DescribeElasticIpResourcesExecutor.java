@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.baseanti.model.DescribeElasticIpResourcesResponse;
 
 /**
- * 查询私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
+ * 查询基础防护已防护的私有网络的弹性公网 IP 的安全信息. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外)
 
  */
 class DescribeElasticIpResourcesExecutor extends JdcloudExecutor {

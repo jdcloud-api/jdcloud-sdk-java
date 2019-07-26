@@ -24,8 +24,8 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.vpc.model.NetworkInterfaceSpec;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 主网卡配置信息。

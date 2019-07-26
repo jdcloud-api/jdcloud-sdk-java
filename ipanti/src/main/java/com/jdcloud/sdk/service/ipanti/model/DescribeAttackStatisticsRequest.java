@@ -53,17 +53,17 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
     /**
      * 高防实例 ID
      */
-    private List<Long> instanceId;
+    private List<String> instanceId;
 
     /**
-     * 攻击类型, 0 为 DDos, 1 为 CC
+     * 攻击类型, 0 为 DDoS, 1 为 CC
      * Required:true
      */
     @Required
     private Integer type;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -111,7 +111,7 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
      *
      * @return
      */
-    public List<Long> getInstanceId() {
+    public List<String> getInstanceId() {
         return instanceId;
     }
 
@@ -120,12 +120,12 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
      *
      * @param instanceId
      */
-    public void setInstanceId(List<Long> instanceId) {
+    public void setInstanceId(List<String> instanceId) {
         this.instanceId = instanceId;
     }
 
     /**
-     * get 攻击类型, 0 为 DDos, 1 为 CC
+     * get 攻击类型, 0 为 DDoS, 1 为 CC
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 攻击类型, 0 为 DDos, 1 为 CC
+     * set 攻击类型, 0 为 DDoS, 1 为 CC
      *
      * @param type
      */
@@ -143,7 +143,7 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -152,7 +152,7 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -186,13 +186,13 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
      *
      * @param instanceId
      */
-    public DescribeAttackStatisticsRequest instanceId(List<Long> instanceId) {
+    public DescribeAttackStatisticsRequest instanceId(List<String> instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
     /**
-     * set 攻击类型, 0 为 DDos, 1 为 CC
+     * set 攻击类型, 0 为 DDoS, 1 为 CC
      *
      * @param type
      */
@@ -202,7 +202,7 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -217,7 +217,7 @@ public class DescribeAttackStatisticsRequest extends JdcloudRequest implements j
      *
      * @param instanceId
      */
-    public void addInstanceId(Long instanceId) {
+    public void addInstanceId(String instanceId) {
         if (this.instanceId == null) {
             this.instanceId = new ArrayList<>();
         }

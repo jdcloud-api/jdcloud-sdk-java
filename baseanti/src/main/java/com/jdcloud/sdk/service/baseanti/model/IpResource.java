@@ -77,9 +77,9 @@ public class IpResource  implements java.io.Serializable {
     private Long blackHoleThreshold;
 
     /**
-     * 绑定防护包 ID, 为 0 时表示未绑定防护包
+     * 绑定防护包 ID, 为空字符串时表示未绑定防护包
      */
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * 绑定防护包名称, 为空字符串时表示未绑定防护包
@@ -242,20 +242,20 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * get 绑定防护包 ID, 为 0 时表示未绑定防护包
+     * get 绑定防护包 ID, 为空字符串时表示未绑定防护包
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
     /**
-     * set 绑定防护包 ID, 为 0 时表示未绑定防护包
+     * set 绑定防护包 ID, 为空字符串时表示未绑定防护包
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -394,11 +394,11 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定防护包 ID, 为 0 时表示未绑定防护包
+     * set 绑定防护包 ID, 为空字符串时表示未绑定防护包
      *
      * @param instanceId
      */
-    public IpResource instanceId(Long instanceId) {
+    public IpResource instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

@@ -35,17 +35,17 @@ public class CCProtectionRule  implements java.io.Serializable {
     /**
      * CC 防护规则 ID
      */
-    private Long id;
+    private String id;
 
     /**
      * CC 防护规则对应的网站规则 ID
      */
-    private Long webRuleId;
+    private String webRuleId;
 
     /**
      * CC 防护规则对应的实例 ID
      */
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * CC 防护规则名称, 30 字符以内
@@ -83,7 +83,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     private Integer blockType;
 
     /**
-     * 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+     * 阻断持续时间, 单位为秒, 取值范围[10, 86400]
      */
     private Long blockTime;
 
@@ -93,7 +93,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -102,7 +102,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -111,7 +111,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getWebRuleId() {
+    public String getWebRuleId() {
         return webRuleId;
     }
 
@@ -120,7 +120,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @param webRuleId
      */
-    public void setWebRuleId(Long webRuleId) {
+    public void setWebRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
     }
 
@@ -129,7 +129,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -138,7 +138,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -269,7 +269,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * get 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+     * get 阻断持续时间, 单位为秒, 取值范围[10, 86400]
      *
      * @return
      */
@@ -278,7 +278,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * set 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+     * set 阻断持续时间, 单位为秒, 取值范围[10, 86400]
      *
      * @param blockTime
      */
@@ -292,7 +292,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @param id
      */
-    public CCProtectionRule id(Long id) {
+    public CCProtectionRule id(String id) {
         this.id = id;
         return this;
     }
@@ -302,7 +302,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @param webRuleId
      */
-    public CCProtectionRule webRuleId(Long webRuleId) {
+    public CCProtectionRule webRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
         return this;
     }
@@ -312,7 +312,7 @@ public class CCProtectionRule  implements java.io.Serializable {
      *
      * @param instanceId
      */
-    public CCProtectionRule instanceId(Long instanceId) {
+    public CCProtectionRule instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -388,7 +388,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * set 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+     * set 阻断持续时间, 单位为秒, 取值范围[10, 86400]
      *
      * @param blockTime
      */

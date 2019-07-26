@@ -67,7 +67,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     /**
      * 主网卡信息
      */
-    private InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface;
+    private InstanceTemplateNetworkInterfaceAttachment primaryNetworkInterface;
 
     /**
      * 主网卡主IP关联的弹性IP规格
@@ -193,7 +193,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
      *
      * @return
      */
-    public InstanceTemplateNetworkInterfaceAttachmentSpec getPrimaryNetworkInterface() {
+    public InstanceTemplateNetworkInterfaceAttachment getPrimaryNetworkInterface() {
         return primaryNetworkInterface;
     }
 
@@ -202,7 +202,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
      *
      * @param primaryNetworkInterface
      */
-    public void setPrimaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
+    public void setPrimaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachment primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
@@ -308,7 +308,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
      *
      * @param primaryNetworkInterface
      */
-    public InstanceTemplateData primaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
+    public InstanceTemplateData primaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachment primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
         return this;
     }

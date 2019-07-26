@@ -63,6 +63,11 @@ public class CloudDiskSpec  implements java.io.Serializable {
     private String fsType;
 
     /**
+     * 云盘的 iops 值，目前只有 ssd.io1 类型有效
+     */
+    private Integer iops;
+
+    /**
      * 是否随pod删除。默认：true
      */
     private Boolean autoDelete;
@@ -177,6 +182,24 @@ public class CloudDiskSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 云盘的 iops 值，目前只有 ssd.io1 类型有效
+     *
+     * @return
+     */
+    public Integer getIops() {
+        return iops;
+    }
+
+    /**
+     * set 云盘的 iops 值，目前只有 ssd.io1 类型有效
+     *
+     * @param iops
+     */
+    public void setIops(Integer iops) {
+        this.iops = iops;
+    }
+
+    /**
      * get 是否随pod删除。默认：true
      *
      * @return
@@ -252,6 +275,16 @@ public class CloudDiskSpec  implements java.io.Serializable {
      */
     public CloudDiskSpec fsType(String fsType) {
         this.fsType = fsType;
+        return this;
+    }
+
+    /**
+     * set 云盘的 iops 值，目前只有 ssd.io1 类型有效
+     *
+     * @param iops
+     */
+    public CloudDiskSpec iops(Integer iops) {
+        this.iops = iops;
         return this;
     }
 

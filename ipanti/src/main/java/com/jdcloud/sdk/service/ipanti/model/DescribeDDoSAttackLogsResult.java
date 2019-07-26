@@ -26,11 +26,11 @@ package com.jdcloud.sdk.service.ipanti.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.ipanti.model.DDosAttackLog;
+import com.jdcloud.sdk.service.ipanti.model.DDoSAttackLog;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询 DDos 攻击日志
+ * 查询 DDoS 攻击日志
  */
 public class DescribeDDoSAttackLogsResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,7 +39,7 @@ public class DescribeDDoSAttackLogsResult extends JdcloudResult implements java.
     /**
      * dataList
      */
-    private List<DDosAttackLog> dataList;
+    private List<DDoSAttackLog> dataList;
 
     /**
      * 当前页数量
@@ -62,7 +62,7 @@ public class DescribeDDoSAttackLogsResult extends JdcloudResult implements java.
      *
      * @return
      */
-    public List<DDosAttackLog> getDataList() {
+    public List<DDoSAttackLog> getDataList() {
         return dataList;
     }
 
@@ -71,7 +71,7 @@ public class DescribeDDoSAttackLogsResult extends JdcloudResult implements java.
      *
      * @param dataList
      */
-    public void setDataList(List<DDosAttackLog> dataList) {
+    public void setDataList(List<DDoSAttackLog> dataList) {
         this.dataList = dataList;
     }
 
@@ -135,7 +135,7 @@ public class DescribeDDoSAttackLogsResult extends JdcloudResult implements java.
      *
      * @param dataList
      */
-    public DescribeDDoSAttackLogsResult dataList(List<DDosAttackLog> dataList) {
+    public DescribeDDoSAttackLogsResult dataList(List<DDoSAttackLog> dataList) {
         this.dataList = dataList;
         return this;
     }
@@ -176,7 +176,7 @@ public class DescribeDDoSAttackLogsResult extends JdcloudResult implements java.
      *
      * @param dataList
      */
-    public void addDataList(DDosAttackLog dataList) {
+    public void addDataList(DDoSAttackLog dataList) {
         if (this.dataList == null) {
             this.dataList = new ArrayList<>();
         }

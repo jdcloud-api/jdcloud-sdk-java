@@ -113,7 +113,7 @@ public class ForwardProtectionRuleSpec  implements java.io.Serializable {
     private Long datagramRangeMax;
 
     /**
-     * geo 拦截地域编码列表, 可设置编码列表由 describeGeoAreas 接口查询可得
+     * geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      */
     private List<String> geoBlackList;
 
@@ -317,7 +317,7 @@ public class ForwardProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get geo 拦截地域编码列表, 可设置编码列表由 describeGeoAreas 接口查询可得
+     * get geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      *
      * @return
      */
@@ -326,7 +326,7 @@ public class ForwardProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set geo 拦截地域编码列表, 可设置编码列表由 describeGeoAreas 接口查询可得
+     * set geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      *
      * @param geoBlackList
      */
@@ -446,7 +446,7 @@ public class ForwardProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set geo 拦截地域编码列表, 可设置编码列表由 describeGeoAreas 接口查询可得
+     * set geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      *
      * @param geoBlackList
      */
@@ -457,7 +457,7 @@ public class ForwardProtectionRuleSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to geo 拦截地域编码列表, 可设置编码列表由 describeGeoAreas 接口查询可得
+     * add item to geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      *
      * @param geoBlackList
      */

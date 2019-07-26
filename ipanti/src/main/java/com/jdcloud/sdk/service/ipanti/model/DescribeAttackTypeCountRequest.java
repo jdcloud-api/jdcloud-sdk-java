@@ -53,10 +53,10 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     /**
      * 高防实例 ID
      */
-    private List<Long> instanceId;
+    private List<String> instanceId;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -104,7 +104,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
      *
      * @return
      */
-    public List<Long> getInstanceId() {
+    public List<String> getInstanceId() {
         return instanceId;
     }
 
@@ -113,12 +113,12 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
      *
      * @param instanceId
      */
-    public void setInstanceId(List<Long> instanceId) {
+    public void setInstanceId(List<String> instanceId) {
         this.instanceId = instanceId;
     }
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -161,13 +161,13 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
      *
      * @param instanceId
      */
-    public DescribeAttackTypeCountRequest instanceId(List<Long> instanceId) {
+    public DescribeAttackTypeCountRequest instanceId(List<String> instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -182,7 +182,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
      *
      * @param instanceId
      */
-    public void addInstanceId(Long instanceId) {
+    public void addInstanceId(String instanceId) {
         if (this.instanceId == null) {
             this.instanceId = new ArrayList<>();
         }

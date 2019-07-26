@@ -26,6 +26,8 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vod.model.BatchUpdateVideosBulkItem;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,51 +38,53 @@ public class BatchUpdateVideosRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * contents
+     * 批量更新视频的条目集合
+     * Required:true
      */
-    private List<Object> contents;
+    @Required
+    private List<BatchUpdateVideosBulkItem> bulkItems;
 
 
     /**
-     * get contents
+     * get 批量更新视频的条目集合
      *
      * @return
      */
-    public List<Object> getContents() {
-        return contents;
+    public List<BatchUpdateVideosBulkItem> getBulkItems() {
+        return bulkItems;
     }
 
     /**
-     * set contents
+     * set 批量更新视频的条目集合
      *
-     * @param contents
+     * @param bulkItems
      */
-    public void setContents(List<Object> contents) {
-        this.contents = contents;
+    public void setBulkItems(List<BatchUpdateVideosBulkItem> bulkItems) {
+        this.bulkItems = bulkItems;
     }
 
 
     /**
-     * set contents
+     * set 批量更新视频的条目集合
      *
-     * @param contents
+     * @param bulkItems
      */
-    public BatchUpdateVideosRequest contents(List<Object> contents) {
-        this.contents = contents;
+    public BatchUpdateVideosRequest bulkItems(List<BatchUpdateVideosBulkItem> bulkItems) {
+        this.bulkItems = bulkItems;
         return this;
     }
 
 
     /**
-     * add item to contents
+     * add item to 批量更新视频的条目集合
      *
-     * @param content
+     * @param bulkItem
      */
-    public void addContent(Object content) {
-        if (this.contents == null) {
-            this.contents = new ArrayList<>();
+    public void addBulkItem(BatchUpdateVideosBulkItem bulkItem) {
+        if (this.bulkItems == null) {
+            this.bulkItems = new ArrayList<>();
         }
-        this.contents.add(content);
+        this.bulkItems.add(bulkItem);
     }
 
 }

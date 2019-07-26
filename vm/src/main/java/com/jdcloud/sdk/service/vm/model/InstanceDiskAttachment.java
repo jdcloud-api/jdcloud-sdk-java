@@ -60,7 +60,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     private Disk cloudDisk;
 
     /**
-     * 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
+     * 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
      */
     private String deviceName;
 
@@ -155,7 +155,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
+     * get 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
      *
      * @return
      */
@@ -164,7 +164,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
+     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
      *
      * @param deviceName
      */
@@ -238,7 +238,7 @@ public class InstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi
+     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
      *
      * @param deviceName
      */

@@ -63,10 +63,10 @@ public class DescribeCCAttackLogsRequest extends JdcloudRequest implements java.
     /**
      * 高防实例 ID
      */
-    private List<Long> instanceId;
+    private List<String> instanceId;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -150,7 +150,7 @@ public class DescribeCCAttackLogsRequest extends JdcloudRequest implements java.
      *
      * @return
      */
-    public List<Long> getInstanceId() {
+    public List<String> getInstanceId() {
         return instanceId;
     }
 
@@ -159,12 +159,12 @@ public class DescribeCCAttackLogsRequest extends JdcloudRequest implements java.
      *
      * @param instanceId
      */
-    public void setInstanceId(List<Long> instanceId) {
+    public void setInstanceId(List<String> instanceId) {
         this.instanceId = instanceId;
     }
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -173,7 +173,7 @@ public class DescribeCCAttackLogsRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -227,13 +227,13 @@ public class DescribeCCAttackLogsRequest extends JdcloudRequest implements java.
      *
      * @param instanceId
      */
-    public DescribeCCAttackLogsRequest instanceId(List<Long> instanceId) {
+    public DescribeCCAttackLogsRequest instanceId(List<String> instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -248,7 +248,7 @@ public class DescribeCCAttackLogsRequest extends JdcloudRequest implements java.
      *
      * @param instanceId
      */
-    public void addInstanceId(Long instanceId) {
+    public void addInstanceId(String instanceId) {
         if (this.instanceId == null) {
             this.instanceId = new ArrayList<>();
         }

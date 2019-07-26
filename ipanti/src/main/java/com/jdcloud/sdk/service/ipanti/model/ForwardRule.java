@@ -37,12 +37,12 @@ public class ForwardRule  implements java.io.Serializable {
     /**
      * 规则id
      */
-    private Long id;
+    private String id;
 
     /**
      * 实例id
      */
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * TCP或UDP
@@ -67,7 +67,6 @@ public class ForwardRule  implements java.io.Serializable {
     /**
      * 转发规则
 - wrr 带权重的轮询
-- wlc 加权最小连接
 - rr  不带权重的轮询
 - sh  源地址hash
 
@@ -105,7 +104,7 @@ public class ForwardRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -114,7 +113,7 @@ public class ForwardRule  implements java.io.Serializable {
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -123,7 +122,7 @@ public class ForwardRule  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -132,7 +131,7 @@ public class ForwardRule  implements java.io.Serializable {
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -211,7 +210,6 @@ public class ForwardRule  implements java.io.Serializable {
     /**
      * get 转发规则
 - wrr 带权重的轮询
-- wlc 加权最小连接
 - rr  不带权重的轮询
 - sh  源地址hash
 
@@ -225,7 +223,6 @@ public class ForwardRule  implements java.io.Serializable {
     /**
      * set 转发规则
 - wrr 带权重的轮询
-- wlc 加权最小连接
 - rr  不带权重的轮询
 - sh  源地址hash
 
@@ -332,7 +329,7 @@ public class ForwardRule  implements java.io.Serializable {
      *
      * @param id
      */
-    public ForwardRule id(Long id) {
+    public ForwardRule id(String id) {
         this.id = id;
         return this;
     }
@@ -342,7 +339,7 @@ public class ForwardRule  implements java.io.Serializable {
      *
      * @param instanceId
      */
-    public ForwardRule instanceId(Long instanceId) {
+    public ForwardRule instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -390,7 +387,6 @@ public class ForwardRule  implements java.io.Serializable {
     /**
      * set 转发规则
 - wrr 带权重的轮询
-- wlc 加权最小连接
 - rr  不带权重的轮询
 - sh  源地址hash
 

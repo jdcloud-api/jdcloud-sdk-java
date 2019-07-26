@@ -35,18 +35,25 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 头参数名
+     * 头参数名。当前支持的访问头参数取值范围：
+  Content-Disposition
+  Content-Language
+  Expires
+  Access-Control-Allow-Origin
+  Access-Control-Allow-Methods
+  Access-Control-Max-Age
+  Access-Control-Expose-Headers
+
+     * Required:true
      */
+    @Required
     private String headerName;
 
     /**
-     * 头参数值
+     * 头参数类型，取值范围：req、resp
+     * Required:true
      */
-    private String headerValue;
-
-    /**
-     * 头参数类型
-     */
+    @Required
     private String headerType;
 
     /**
@@ -58,7 +65,15 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 头参数名
+     * get 头参数名。当前支持的访问头参数取值范围：
+  Content-Disposition
+  Content-Language
+  Expires
+  Access-Control-Allow-Origin
+  Access-Control-Allow-Methods
+  Access-Control-Max-Age
+  Access-Control-Expose-Headers
+
      *
      * @return
      */
@@ -67,7 +82,15 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 头参数名
+     * set 头参数名。当前支持的访问头参数取值范围：
+  Content-Disposition
+  Content-Language
+  Expires
+  Access-Control-Allow-Origin
+  Access-Control-Allow-Methods
+  Access-Control-Max-Age
+  Access-Control-Expose-Headers
+
      *
      * @param headerName
      */
@@ -76,25 +99,7 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 头参数值
-     *
-     * @return
-     */
-    public String getHeaderValue() {
-        return headerValue;
-    }
-
-    /**
-     * set 头参数值
-     *
-     * @param headerValue
-     */
-    public void setHeaderValue(String headerValue) {
-        this.headerValue = headerValue;
-    }
-
-    /**
-     * get 头参数类型
+     * get 头参数类型，取值范围：req、resp
      *
      * @return
      */
@@ -103,7 +108,7 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 头参数类型
+     * set 头参数类型，取值范围：req、resp
      *
      * @param headerType
      */
@@ -131,7 +136,15 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 头参数名
+     * set 头参数名。当前支持的访问头参数取值范围：
+  Content-Disposition
+  Content-Language
+  Expires
+  Access-Control-Allow-Origin
+  Access-Control-Allow-Methods
+  Access-Control-Max-Age
+  Access-Control-Expose-Headers
+
      *
      * @param headerName
      */
@@ -141,17 +154,7 @@ public class DeleteHeaderRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 头参数值
-     *
-     * @param headerValue
-     */
-    public DeleteHeaderRequest headerValue(String headerValue) {
-        this.headerValue = headerValue;
-        return this;
-    }
-
-    /**
-     * set 头参数类型
+     * set 头参数类型，取值范围：req、resp
      *
      * @param headerType
      */

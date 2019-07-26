@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.vod.model.TranscodeTask;
+import com.jdcloud.sdk.service.vod.model.SubmittedTranscodeTask;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -37,47 +37,47 @@ public class SubmitTranscodeJobResult extends JdcloudResult implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * tasks
+     * 已提交的转码任务
      */
-    private List<TranscodeTask> tasks;
+    private List<SubmittedTranscodeTask> tasks;
 
 
     /**
-     * get tasks
+     * get 已提交的转码任务
      *
      * @return
      */
-    public List<TranscodeTask> getTasks() {
+    public List<SubmittedTranscodeTask> getTasks() {
         return tasks;
     }
 
     /**
-     * set tasks
+     * set 已提交的转码任务
      *
      * @param tasks
      */
-    public void setTasks(List<TranscodeTask> tasks) {
+    public void setTasks(List<SubmittedTranscodeTask> tasks) {
         this.tasks = tasks;
     }
 
 
     /**
-     * set tasks
+     * set 已提交的转码任务
      *
      * @param tasks
      */
-    public SubmitTranscodeJobResult tasks(List<TranscodeTask> tasks) {
+    public SubmitTranscodeJobResult tasks(List<SubmittedTranscodeTask> tasks) {
         this.tasks = tasks;
         return this;
     }
 
 
     /**
-     * add item to tasks
+     * add item to 已提交的转码任务
      *
      * @param task
      */
-    public void addTask(TranscodeTask task) {
+    public void addTask(SubmittedTranscodeTask task) {
         if (this.tasks == null) {
             this.tasks = new ArrayList<>();
         }

@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询 DDos 攻击日志
+ * 查询 DDoS 攻击日志
  */
 public class DescribeDDoSAttackLogsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -63,10 +63,10 @@ public class DescribeDDoSAttackLogsRequest extends JdcloudRequest implements jav
     /**
      * 高防实例 ID
      */
-    private List<Long> instanceId;
+    private List<String> instanceId;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -150,7 +150,7 @@ public class DescribeDDoSAttackLogsRequest extends JdcloudRequest implements jav
      *
      * @return
      */
-    public List<Long> getInstanceId() {
+    public List<String> getInstanceId() {
         return instanceId;
     }
 
@@ -159,12 +159,12 @@ public class DescribeDDoSAttackLogsRequest extends JdcloudRequest implements jav
      *
      * @param instanceId
      */
-    public void setInstanceId(List<Long> instanceId) {
+    public void setInstanceId(List<String> instanceId) {
         this.instanceId = instanceId;
     }
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -173,7 +173,7 @@ public class DescribeDDoSAttackLogsRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -227,13 +227,13 @@ public class DescribeDDoSAttackLogsRequest extends JdcloudRequest implements jav
      *
      * @param instanceId
      */
-    public DescribeDDoSAttackLogsRequest instanceId(List<Long> instanceId) {
+    public DescribeDDoSAttackLogsRequest instanceId(List<String> instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -248,7 +248,7 @@ public class DescribeDDoSAttackLogsRequest extends JdcloudRequest implements jav
      *
      * @param instanceId
      */
-    public void addInstanceId(Long instanceId) {
+    public void addInstanceId(String instanceId) {
         if (this.instanceId == null) {
             this.instanceId = new ArrayList<>();
         }

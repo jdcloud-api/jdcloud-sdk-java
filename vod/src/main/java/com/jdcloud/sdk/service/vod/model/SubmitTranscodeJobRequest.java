@@ -43,12 +43,12 @@ public class SubmitTranscodeJobRequest extends JdcloudRequest implements java.io
     /**
      * 转码模板ID列表
      */
-    private List<String> templateIds;
+    private List<Long> templateIds;
 
     /**
      * 水印ID列表
      */
-    private String watermarkIds;
+    private List<Long> watermarkIds;
 
 
     /**
@@ -74,7 +74,7 @@ public class SubmitTranscodeJobRequest extends JdcloudRequest implements java.io
      *
      * @return
      */
-    public List<String> getTemplateIds() {
+    public List<Long> getTemplateIds() {
         return templateIds;
     }
 
@@ -83,7 +83,7 @@ public class SubmitTranscodeJobRequest extends JdcloudRequest implements java.io
      *
      * @param templateIds
      */
-    public void setTemplateIds(List<String> templateIds) {
+    public void setTemplateIds(List<Long> templateIds) {
         this.templateIds = templateIds;
     }
 
@@ -92,7 +92,7 @@ public class SubmitTranscodeJobRequest extends JdcloudRequest implements java.io
      *
      * @return
      */
-    public String getWatermarkIds() {
+    public List<Long> getWatermarkIds() {
         return watermarkIds;
     }
 
@@ -101,7 +101,7 @@ public class SubmitTranscodeJobRequest extends JdcloudRequest implements java.io
      *
      * @param watermarkIds
      */
-    public void setWatermarkIds(String watermarkIds) {
+    public void setWatermarkIds(List<Long> watermarkIds) {
         this.watermarkIds = watermarkIds;
     }
 
@@ -121,7 +121,7 @@ public class SubmitTranscodeJobRequest extends JdcloudRequest implements java.io
      *
      * @param templateIds
      */
-    public SubmitTranscodeJobRequest templateIds(List<String> templateIds) {
+    public SubmitTranscodeJobRequest templateIds(List<Long> templateIds) {
         this.templateIds = templateIds;
         return this;
     }
@@ -131,7 +131,7 @@ public class SubmitTranscodeJobRequest extends JdcloudRequest implements java.io
      *
      * @param watermarkIds
      */
-    public SubmitTranscodeJobRequest watermarkIds(String watermarkIds) {
+    public SubmitTranscodeJobRequest watermarkIds(List<Long> watermarkIds) {
         this.watermarkIds = watermarkIds;
         return this;
     }
@@ -142,11 +142,23 @@ public class SubmitTranscodeJobRequest extends JdcloudRequest implements java.io
      *
      * @param templateId
      */
-    public void addTemplateId(String templateId) {
+    public void addTemplateId(Long templateId) {
         if (this.templateIds == null) {
             this.templateIds = new ArrayList<>();
         }
         this.templateIds.add(templateId);
+    }
+
+    /**
+     * add item to 水印ID列表
+     *
+     * @param watermarkId
+     */
+    public void addWatermarkId(Long watermarkId) {
+        if (this.watermarkIds == null) {
+            this.watermarkIds = new ArrayList<>();
+        }
+        this.watermarkIds.add(watermarkId);
     }
 
 }

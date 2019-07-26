@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,16 +24,203 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.vod.model.TranscodeTemplateObject;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询转码模板列表
+ * 查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
+- source 模板来源。枚举值，取值范围为：
+  - system 系统预置
+  - custom 用户自建
+- templateType 模板类型。枚举值，取值范围：
+  - jdchd 京享超清
+  - jdchs 极速转码
+
  */
 public class ListTranscodeTemplatesResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 当前页码
+     */
+    private Integer pageNumber;
+
+    /**
+     * 每页数量
+     */
+    private Integer pageSize;
+
+    /**
+     * 查询总数
+     */
+    private Integer totalElements;
+
+    /**
+     * 总页数
+     */
+    private Integer totalPages;
+
+    /**
+     * 分页内容
+     */
+    private List<TranscodeTemplateObject> content;
 
 
+    /**
+     * get 当前页码
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 当前页码
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 每页数量
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页数量
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    /**
+     * get 查询总数
+     *
+     * @return
+     */
+    public Integer getTotalElements() {
+        return totalElements;
+    }
+
+    /**
+     * set 查询总数
+     *
+     * @param totalElements
+     */
+    public void setTotalElements(Integer totalElements) {
+        this.totalElements = totalElements;
+    }
+
+    /**
+     * get 总页数
+     *
+     * @return
+     */
+    public Integer getTotalPages() {
+        return totalPages;
+    }
+
+    /**
+     * set 总页数
+     *
+     * @param totalPages
+     */
+    public void setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+    }
+
+    /**
+     * get 分页内容
+     *
+     * @return
+     */
+    public List<TranscodeTemplateObject> getContent() {
+        return content;
+    }
+
+    /**
+     * set 分页内容
+     *
+     * @param content
+     */
+    public void setContent(List<TranscodeTemplateObject> content) {
+        this.content = content;
+    }
+
+
+    /**
+     * set 当前页码
+     *
+     * @param pageNumber
+     */
+    public ListTranscodeTemplatesResult pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 每页数量
+     *
+     * @param pageSize
+     */
+    public ListTranscodeTemplatesResult pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 查询总数
+     *
+     * @param totalElements
+     */
+    public ListTranscodeTemplatesResult totalElements(Integer totalElements) {
+        this.totalElements = totalElements;
+        return this;
+    }
+
+    /**
+     * set 总页数
+     *
+     * @param totalPages
+     */
+    public ListTranscodeTemplatesResult totalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+
+    /**
+     * set 分页内容
+     *
+     * @param content
+     */
+    public ListTranscodeTemplatesResult content(List<TranscodeTemplateObject> content) {
+        this.content = content;
+        return this;
+    }
+
+
+    /**
+     * add item to 分页内容
+     *
+     * @param content
+     */
+    public void addContent(TranscodeTemplateObject content) {
+        if (this.content == null) {
+            this.content = new ArrayList<>();
+        }
+        this.content.add(content);
+    }
 
 }

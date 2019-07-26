@@ -43,12 +43,12 @@ public class Snapshot  implements java.io.Serializable {
     private String imgUrl;
 
     /**
-     * 宽度
+     * 截图宽度
      */
     private Integer width;
 
     /**
-     * 高度
+     * 截图高度
      */
     private Integer height;
 
@@ -90,7 +90,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * get 宽度
+     * get 截图宽度
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 宽度
+     * set 截图宽度
      *
      * @param width
      */
@@ -108,7 +108,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * get 高度
+     * get 截图高度
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 高度
+     * set 截图高度
      *
      * @param height
      */
@@ -147,7 +147,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 宽度
+     * set 截图宽度
      *
      * @param width
      */
@@ -157,7 +157,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 高度
+     * set 截图高度
      *
      * @param height
      */

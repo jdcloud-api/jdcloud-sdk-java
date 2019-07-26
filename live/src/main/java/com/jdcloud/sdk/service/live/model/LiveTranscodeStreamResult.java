@@ -41,6 +41,7 @@ public class LiveTranscodeStreamResult extends JdcloudResult implements java.io.
 
     /**
      * 流状态
+
      */
     private String status;
 
@@ -67,6 +68,7 @@ public class LiveTranscodeStreamResult extends JdcloudResult implements java.io.
 
     /**
      * get 流状态
+
      *
      * @return
      */
@@ -76,6 +78,7 @@ public class LiveTranscodeStreamResult extends JdcloudResult implements java.io.
 
     /**
      * set 流状态
+
      *
      * @param status
      */
@@ -97,6 +100,7 @@ public class LiveTranscodeStreamResult extends JdcloudResult implements java.io.
 
     /**
      * set 流状态
+
      *
      * @param status
      */

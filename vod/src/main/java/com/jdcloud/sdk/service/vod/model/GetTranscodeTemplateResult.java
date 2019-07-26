@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -47,12 +47,12 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     private String name;
 
     /**
-     * 视频参数
+     * 视频参数配置
      */
     private Video video;
 
     /**
-     * 音频参数
+     * 音频参数配置
      */
     private Audio audio;
 
@@ -62,22 +62,39 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     private Encapsulation encapsulation;
 
     /**
-     * 清晰度规格
+     * 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      */
     private String definition;
 
     /**
-     * 模板来源
+     * 模板来源。取值范围：
+  system - 系统预置
+  custom - 用户自建
+
      */
     private String source;
 
     /**
-     * createTime
+     * 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     */
+    private String templateType;
+
+    /**
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -119,7 +136,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get 视频参数
+     * get 视频参数配置
      *
      * @return
      */
@@ -128,7 +145,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 视频参数
+     * set 视频参数配置
      *
      * @param video
      */
@@ -137,7 +154,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get 音频参数
+     * get 音频参数配置
      *
      * @return
      */
@@ -146,7 +163,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 音频参数
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -173,7 +190,13 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get 清晰度规格
+     * get 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @return
      */
@@ -182,7 +205,13 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
@@ -191,7 +220,10 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get 模板来源
+     * get 模板来源。取值范围：
+  system - 系统预置
+  custom - 用户自建
+
      *
      * @return
      */
@@ -200,7 +232,10 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 模板来源
+     * set 模板来源。取值范围：
+  system - 系统预置
+  custom - 用户自建
+
      *
      * @param source
      */
@@ -209,7 +244,31 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get createTime
+     * get 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @return
+     */
+    public String getTemplateType() {
+        return templateType;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public void setTemplateType(String templateType) {
+        this.templateType = templateType;
+    }
+
+    /**
+     * get 创建时间
      *
      * @return
      */
@@ -218,7 +277,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -227,7 +286,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -236,7 +295,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -266,7 +325,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 视频参数
+     * set 视频参数配置
      *
      * @param video
      */
@@ -276,7 +335,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 音频参数
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -296,7 +355,13 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
@@ -306,7 +371,10 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set 模板来源
+     * set 模板来源。取值范围：
+  system - 系统预置
+  custom - 用户自建
+
      *
      * @param source
      */
@@ -316,7 +384,20 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set createTime
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public GetTranscodeTemplateResult templateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+
+    /**
+     * set 创建时间
      *
      * @param createTime
      */
@@ -326,7 +407,7 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */

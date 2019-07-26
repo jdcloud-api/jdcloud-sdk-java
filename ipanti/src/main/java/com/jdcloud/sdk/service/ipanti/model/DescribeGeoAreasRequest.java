@@ -35,7 +35,7 @@ public class DescribeGeoAreasRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -43,7 +43,7 @@ public class DescribeGeoAreasRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -52,7 +52,7 @@ public class DescribeGeoAreasRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -62,7 +62,7 @@ public class DescribeGeoAreasRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */

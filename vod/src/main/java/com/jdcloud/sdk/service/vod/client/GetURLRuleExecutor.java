@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vod.model.GetURLRuleResponse;
 
 /**
- * 查询CDN域名URL规则
+ * 查询CDN域名URL鉴权规则配置
  */
 class GetURLRuleExecutor extends JdcloudExecutor {
 

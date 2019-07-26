@@ -36,19 +36,19 @@ public class Filter  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 筛选属性名
+     * 过滤器属性名
      * Required:true
      */
     @Required
     private String name;
 
     /**
-     * 筛选操作符，默认eq
+     * 过滤器操作符，默认值为 eq
      */
     private String operator;
 
     /**
-     * 筛选值列表
+     * 过滤器属性值
      * Required:true
      */
     @Required
@@ -56,7 +56,7 @@ public class Filter  implements java.io.Serializable {
 
 
     /**
-     * get 筛选属性名
+     * get 过滤器属性名
      *
      * @return
      */
@@ -65,7 +65,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set 筛选属性名
+     * set 过滤器属性名
      *
      * @param name
      */
@@ -74,7 +74,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * get 筛选操作符，默认eq
+     * get 过滤器操作符，默认值为 eq
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set 筛选操作符，默认eq
+     * set 过滤器操作符，默认值为 eq
      *
      * @param operator
      */
@@ -92,7 +92,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * get 筛选值列表
+     * get 过滤器属性值
      *
      * @return
      */
@@ -101,7 +101,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set 筛选值列表
+     * set 过滤器属性值
      *
      * @param values
      */
@@ -111,7 +111,7 @@ public class Filter  implements java.io.Serializable {
 
 
     /**
-     * set 筛选属性名
+     * set 过滤器属性名
      *
      * @param name
      */
@@ -121,7 +121,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set 筛选操作符，默认eq
+     * set 过滤器操作符，默认值为 eq
      *
      * @param operator
      */
@@ -131,7 +131,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set 筛选值列表
+     * set 过滤器属性值
      *
      * @param values
      */
@@ -142,7 +142,7 @@ public class Filter  implements java.io.Serializable {
 
 
     /**
-     * add item to 筛选值列表
+     * add item to 过滤器属性值
      *
      * @param value
      */

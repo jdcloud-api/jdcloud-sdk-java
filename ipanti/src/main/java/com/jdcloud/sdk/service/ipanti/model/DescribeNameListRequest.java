@@ -37,7 +37,7 @@ public class DescribeNameListRequest extends JdcloudRequest implements java.io.S
     /**
      * 高防实例 ID, 为空则查询所有实例名称
      */
-    private Long id;
+    private String id;
 
     /**
      * 实例名称, 可模糊匹配
@@ -55,7 +55,7 @@ public class DescribeNameListRequest extends JdcloudRequest implements java.io.S
     private Integer pageSize;
 
     /**
-     * Region ID
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -67,7 +67,7 @@ public class DescribeNameListRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -76,7 +76,7 @@ public class DescribeNameListRequest extends JdcloudRequest implements java.io.S
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -135,7 +135,7 @@ public class DescribeNameListRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get Region ID
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -144,7 +144,7 @@ public class DescribeNameListRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -158,7 +158,7 @@ public class DescribeNameListRequest extends JdcloudRequest implements java.io.S
      *
      * @param id
      */
-    public DescribeNameListRequest id(Long id) {
+    public DescribeNameListRequest id(String id) {
         this.id = id;
         return this;
     }
@@ -194,7 +194,7 @@ public class DescribeNameListRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */

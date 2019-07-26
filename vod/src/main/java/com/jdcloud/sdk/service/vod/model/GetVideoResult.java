@@ -57,17 +57,22 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     private String coverUrl;
 
     /**
-     * 视频状态
+     * 视频状态。取值范围：
+  transcoding - 转码中
+  transcode_failed - 转码失败
+  normal - 正常
+  uploaded - 上传完成（未转码）
+
      */
     private String status;
 
     /**
-     * 文件大小，单位字节
+     * 文件大小，单位为 Byte
      */
     private Long fileSize;
 
     /**
-     * 文件校验和
+     * 文件MD5校验和
      */
     private String checksum;
 
@@ -77,7 +82,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     private Long duration;
 
     /**
-     * 标签
+     * 标签集合
      */
     private List<String> tags;
 
@@ -92,17 +97,17 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     private String categoryName;
 
     /**
-     * snapshots
+     * 转码截图
      */
     private List<Snapshot> snapshots;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -180,7 +185,12 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get 视频状态
+     * get 视频状态。取值范围：
+  transcoding - 转码中
+  transcode_failed - 转码失败
+  normal - 正常
+  uploaded - 上传完成（未转码）
+
      *
      * @return
      */
@@ -189,7 +199,12 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 视频状态
+     * set 视频状态。取值范围：
+  transcoding - 转码中
+  transcode_failed - 转码失败
+  normal - 正常
+  uploaded - 上传完成（未转码）
+
      *
      * @param status
      */
@@ -198,7 +213,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get 文件大小，单位字节
+     * get 文件大小，单位为 Byte
      *
      * @return
      */
@@ -207,7 +222,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 文件大小，单位字节
+     * set 文件大小，单位为 Byte
      *
      * @param fileSize
      */
@@ -216,7 +231,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get 文件校验和
+     * get 文件MD5校验和
      *
      * @return
      */
@@ -225,7 +240,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 文件校验和
+     * set 文件MD5校验和
      *
      * @param checksum
      */
@@ -252,7 +267,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get 标签
+     * get 标签集合
      *
      * @return
      */
@@ -261,7 +276,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 标签
+     * set 标签集合
      *
      * @param tags
      */
@@ -306,7 +321,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get snapshots
+     * get 转码截图
      *
      * @return
      */
@@ -315,7 +330,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set snapshots
+     * set 转码截图
      *
      * @param snapshots
      */
@@ -324,7 +339,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -333,7 +348,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -342,7 +357,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -351,7 +366,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -401,7 +416,12 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 视频状态
+     * set 视频状态。取值范围：
+  transcoding - 转码中
+  transcode_failed - 转码失败
+  normal - 正常
+  uploaded - 上传完成（未转码）
+
      *
      * @param status
      */
@@ -411,7 +431,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 文件大小，单位字节
+     * set 文件大小，单位为 Byte
      *
      * @param fileSize
      */
@@ -421,7 +441,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 文件校验和
+     * set 文件MD5校验和
      *
      * @param checksum
      */
@@ -441,7 +461,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 标签
+     * set 标签集合
      *
      * @param tags
      */
@@ -471,7 +491,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set snapshots
+     * set 转码截图
      *
      * @param snapshots
      */
@@ -481,7 +501,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -491,7 +511,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -502,7 +522,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
 
 
     /**
-     * add item to 标签
+     * add item to 标签集合
      *
      * @param tag
      */
@@ -514,7 +534,7 @@ public class GetVideoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * add item to snapshots
+     * add item to 转码截图
      *
      * @param snapshot
      */

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Video Transcode Template Management
- * 水印管理
+ * Transcode Template
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,35 +26,40 @@ package com.jdcloud.sdk.service.vod.model;
 
 
 /**
- * 音频参数
+ * 音频参数配置
  */
 public class Audio  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 音频编码
+     * 音频编码。取值范围：aac
      */
     private String codec;
 
     /**
-     * 码率
+     * 音频目标码率。取值范围：[8，1000]，单位为 Kbps
      */
     private Integer bitrate;
 
     /**
-     * 采样率
+     * 音频采样率。取值范围：8000、11025、12000、16000、22050、24000、32000、44100、48000、64000、88200、96000
      */
     private Integer sampleRate;
 
     /**
-     * 声道数
+     * 音频声道数：1、2
      */
     private Integer channels;
 
+    /**
+     * 是否开启舒适音频：true、false
+     */
+    private Boolean comfortable;
+
 
     /**
-     * get 音频编码
+     * get 音频编码。取值范围：aac
      *
      * @return
      */
@@ -63,7 +68,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * set 音频编码
+     * set 音频编码。取值范围：aac
      *
      * @param codec
      */
@@ -72,7 +77,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * get 码率
+     * get 音频目标码率。取值范围：[8，1000]，单位为 Kbps
      *
      * @return
      */
@@ -81,7 +86,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * set 码率
+     * set 音频目标码率。取值范围：[8，1000]，单位为 Kbps
      *
      * @param bitrate
      */
@@ -90,7 +95,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * get 采样率
+     * get 音频采样率。取值范围：8000、11025、12000、16000、22050、24000、32000、44100、48000、64000、88200、96000
      *
      * @return
      */
@@ -99,7 +104,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * set 采样率
+     * set 音频采样率。取值范围：8000、11025、12000、16000、22050、24000、32000、44100、48000、64000、88200、96000
      *
      * @param sampleRate
      */
@@ -108,7 +113,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * get 声道数
+     * get 音频声道数：1、2
      *
      * @return
      */
@@ -117,7 +122,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * set 声道数
+     * set 音频声道数：1、2
      *
      * @param channels
      */
@@ -125,9 +130,27 @@ public class Audio  implements java.io.Serializable {
         this.channels = channels;
     }
 
+    /**
+     * get 是否开启舒适音频：true、false
+     *
+     * @return
+     */
+    public Boolean getComfortable() {
+        return comfortable;
+    }
 
     /**
-     * set 音频编码
+     * set 是否开启舒适音频：true、false
+     *
+     * @param comfortable
+     */
+    public void setComfortable(Boolean comfortable) {
+        this.comfortable = comfortable;
+    }
+
+
+    /**
+     * set 音频编码。取值范围：aac
      *
      * @param codec
      */
@@ -137,7 +160,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * set 码率
+     * set 音频目标码率。取值范围：[8，1000]，单位为 Kbps
      *
      * @param bitrate
      */
@@ -147,7 +170,7 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * set 采样率
+     * set 音频采样率。取值范围：8000、11025、12000、16000、22050、24000、32000、44100、48000、64000、88200、96000
      *
      * @param sampleRate
      */
@@ -157,12 +180,22 @@ public class Audio  implements java.io.Serializable {
     }
 
     /**
-     * set 声道数
+     * set 音频声道数：1、2
      *
      * @param channels
      */
     public Audio channels(Integer channels) {
         this.channels = channels;
+        return this;
+    }
+
+    /**
+     * set 是否开启舒适音频：true、false
+     *
+     * @param comfortable
+     */
+    public Audio comfortable(Boolean comfortable) {
+        this.comfortable = comfortable;
         return this;
     }
 

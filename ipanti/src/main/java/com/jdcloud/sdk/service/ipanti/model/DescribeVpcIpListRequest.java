@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询用户的京东云 IP 资源
+ * 查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源
  */
 public class DescribeVpcIpListRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -45,7 +45,7 @@ public class DescribeVpcIpListRequest extends JdcloudRequest implements java.io.
     private Integer pageSize;
 
     /**
-     * Region ID
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -89,7 +89,7 @@ public class DescribeVpcIpListRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get Region ID
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -98,7 +98,7 @@ public class DescribeVpcIpListRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -128,7 +128,7 @@ public class DescribeVpcIpListRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */

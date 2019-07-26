@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.baseanti.model.IpResource;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
+ * 查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
 
  */
 public class DescribeCpsIpResourcesResult extends JdcloudResult implements java.io.Serializable {

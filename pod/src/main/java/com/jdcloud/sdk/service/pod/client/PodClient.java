@@ -61,6 +61,9 @@ import com.jdcloud.sdk.service.pod.client.ModifyPodAttributeExecutor;
 import com.jdcloud.sdk.service.pod.model.DeletePodRequest;
 import com.jdcloud.sdk.service.pod.model.DeletePodResponse;
 import com.jdcloud.sdk.service.pod.client.DeletePodExecutor;
+import com.jdcloud.sdk.service.pod.model.RebuildPodRequest;
+import com.jdcloud.sdk.service.pod.model.RebuildPodResponse;
+import com.jdcloud.sdk.service.pod.client.RebuildPodExecutor;
 import com.jdcloud.sdk.service.pod.model.ExecStartRequest;
 import com.jdcloud.sdk.service.pod.model.ExecStartResponse;
 import com.jdcloud.sdk.service.pod.client.ExecStartExecutor;
@@ -105,7 +108,7 @@ public class PodClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "pod.jdcloud-api.com";
     public final static String ServiceName = "pod";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -259,7 +262,7 @@ public class PodClient extends JdcloudClient {
      * pod 状态必须为 stopped、running 或 error状态。 &lt;br&gt;
 按量付费的实例，如不主动删除将一直运行，不再使用的实例，可通过本接口主动停用。&lt;br&gt;
 只能支持主动删除按量计费类型的实例。包年包月过期的 pod 也可以删除，其它的情况还请发工单系统。计费状态异常的容器无法删除。
-
+ [MFA enabled]
      *
      * @param request
      * @return
@@ -267,6 +270,18 @@ public class PodClient extends JdcloudClient {
      */
     public DeletePodResponse deletePod(DeletePodRequest request) throws JdcloudSdkException {
         return new DeletePodExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 对 pod 中的容器使用新的镜像进行重置，pod 需要处于关闭状态。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RebuildPodResponse rebuildPod(RebuildPodRequest request) throws JdcloudSdkException {
+        return new RebuildPodExecutor().client(this).execute(request);
     }
 
     /**

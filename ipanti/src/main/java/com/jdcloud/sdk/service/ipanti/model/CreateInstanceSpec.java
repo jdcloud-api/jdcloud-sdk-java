@@ -36,7 +36,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     /**
      * 实例 Id, 升级时必传
      */
-    private Long id;
+    private String id;
 
     /**
      * 实例名称, 新购时必传
@@ -62,9 +62,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
 - 0: IPV4,
 - 1: IPV4/IPV6
 
-     * Required:true
      */
-    @Required
     private Integer ipType;
 
     /**
@@ -115,7 +113,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -124,7 +122,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -332,7 +330,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
      *
      * @param id
      */
-    public CreateInstanceSpec id(Long id) {
+    public CreateInstanceSpec id(String id) {
         this.id = id;
         return this;
     }

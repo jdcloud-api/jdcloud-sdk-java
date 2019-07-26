@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除视频码流信息
+ * 删除视频转码流
  */
 public class DeleteVideoStreamsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -38,7 +38,9 @@ public class DeleteVideoStreamsRequest extends JdcloudRequest implements java.io
 
     /**
      * taskIds
+     * Required:true
      */
+    @Required
     private List<Long> taskIds;
 
     /**

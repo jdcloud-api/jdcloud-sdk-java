@@ -35,7 +35,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 推流域名
+     * 播放域名
      * Required:true
      */
     @Required
@@ -102,7 +102,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
 
 
     /**
-     * get 推流域名
+     * get 播放域名
      *
      * @return
      */
@@ -111,7 +111,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
     }
 
     /**
-     * set 推流域名
+     * set 播放域名
      *
      * @param domainName
      */
@@ -291,7 +291,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
 
 
     /**
-     * set 推流域名
+     * set 播放域名
      *
      * @param domainName
      */

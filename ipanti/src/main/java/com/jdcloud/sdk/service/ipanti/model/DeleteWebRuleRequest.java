@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除网站规则
+ * 删除网站规则。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
  */
 public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -46,18 +46,18 @@ public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Seri
      * Required:true
      */
     @Required
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * 网站规则 Id
      * Required:true
      */
     @Required
-    private Long webRuleId;
+    private String webRuleId;
 
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -79,7 +79,7 @@ public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Seri
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -88,7 +88,7 @@ public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -97,7 +97,7 @@ public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Seri
      *
      * @return
      */
-    public Long getWebRuleId() {
+    public String getWebRuleId() {
         return webRuleId;
     }
 
@@ -106,13 +106,13 @@ public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param webRuleId
      */
-    public void setWebRuleId(Long webRuleId) {
+    public void setWebRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
     }
 
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -126,7 +126,7 @@ public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param instanceId
      */
-    public DeleteWebRuleRequest instanceId(Long instanceId) {
+    public DeleteWebRuleRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -136,7 +136,7 @@ public class DeleteWebRuleRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param webRuleId
      */
-    public DeleteWebRuleRequest webRuleId(Long webRuleId) {
+    public DeleteWebRuleRequest webRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
         return this;
     }

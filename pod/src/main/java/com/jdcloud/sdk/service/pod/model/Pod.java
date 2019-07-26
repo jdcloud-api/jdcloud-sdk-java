@@ -91,7 +91,7 @@ public class Pod  implements java.io.Serializable {
     private String privateIpAddress;
 
     /**
-     * pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+     * pod内容器的/etc/resolv.conf配置
      */
     private DnsConfig dnsConfig;
 
@@ -129,6 +129,11 @@ public class Pod  implements java.io.Serializable {
      * 主网卡配置信息
      */
     private NetworkInterfaceAttachment primaryNetworkInterface;
+
+    /**
+     * tags
+     */
+    private List<Tag> tags;
 
     /**
      * 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
@@ -340,7 +345,7 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
-     * get pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+     * get pod内容器的/etc/resolv.conf配置
      *
      * @return
      */
@@ -349,7 +354,7 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
-     * set pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+     * set pod内容器的/etc/resolv.conf配置
      *
      * @param dnsConfig
      */
@@ -481,6 +486,24 @@ public class Pod  implements java.io.Serializable {
      */
     public void setPrimaryNetworkInterface(NetworkInterfaceAttachment primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
+    }
+
+    /**
+     * get tags
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
     /**
@@ -631,7 +654,7 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
-     * set pod内容器的/etc/resolv.conf配置 [DnsConfig](DnsConfig.md)      pod内容器的/etc/resolv.conf配置
+     * set pod内容器的/etc/resolv.conf配置
      *
      * @param dnsConfig
      */
@@ -711,6 +734,16 @@ public class Pod  implements java.io.Serializable {
     }
 
     /**
+     * set tags
+     *
+     * @param tags
+     */
+    public Pod tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
      *
      * @param charge
@@ -765,6 +798,18 @@ public class Pod  implements java.io.Serializable {
             this.containers = new ArrayList<>();
         }
         this.containers.add(container);
+    }
+
+    /**
+     * add item to tags
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }

@@ -77,7 +77,7 @@ public class IpResource  implements java.io.Serializable {
     private Long balckHoleThreshold;
 
     /**
-     * 绑定防护包 ID, 为 0 时表示未绑定防护包
+     * 绑定防护包 ID, 为空字符时表示未绑定防护包
      */
     private String instanceId;
 
@@ -237,7 +237,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * get 绑定防护包 ID, 为 0 时表示未绑定防护包
+     * get 绑定防护包 ID, 为空字符时表示未绑定防护包
      *
      * @return
      */
@@ -246,7 +246,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定防护包 ID, 为 0 时表示未绑定防护包
+     * set 绑定防护包 ID, 为空字符时表示未绑定防护包
      *
      * @param instanceId
      */
@@ -371,7 +371,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定防护包 ID, 为 0 时表示未绑定防护包
+     * set 绑定防护包 ID, 为空字符时表示未绑定防护包
      *
      * @param instanceId
      */

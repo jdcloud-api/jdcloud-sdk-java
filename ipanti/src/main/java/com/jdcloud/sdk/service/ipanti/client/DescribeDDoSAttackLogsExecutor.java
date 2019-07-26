@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ipanti.model.DescribeDDoSAttackLogsResponse;
 
 /**
- * 查询 DDos 攻击日志
+ * 查询 DDoS 攻击日志
  */
 class DescribeDDoSAttackLogsExecutor extends JdcloudExecutor {
 
@@ -40,7 +40,7 @@ class DescribeDDoSAttackLogsExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/attacklog:DDoS";
+        return "/regions/{regionId}/attacklog:describeDDoSAttackLogs";
     }
 
     @Override

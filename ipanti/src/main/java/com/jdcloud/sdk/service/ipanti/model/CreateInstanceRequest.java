@@ -43,7 +43,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     private CreateInstanceSpec createInstanceSpec;
 
     /**
-     * Region ID
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -69,7 +69,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get Region ID
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -98,7 +98,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */

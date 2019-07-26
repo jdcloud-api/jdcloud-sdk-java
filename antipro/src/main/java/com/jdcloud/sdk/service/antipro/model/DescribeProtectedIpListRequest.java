@@ -50,7 +50,7 @@ public class DescribeProtectedIpListRequest extends JdcloudRequest implements ja
     private Integer instanceId;
 
     /**
-     * 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP
+     * 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP, 4: 托管区公网 IP
      * Required:true
      */
     @Required
@@ -117,7 +117,7 @@ public class DescribeProtectedIpListRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP
+     * get 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP, 4: 托管区公网 IP
      *
      * @return
      */
@@ -126,7 +126,7 @@ public class DescribeProtectedIpListRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP
+     * set 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP, 4: 托管区公网 IP
      *
      * @param type
      */
@@ -184,7 +184,7 @@ public class DescribeProtectedIpListRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP
+     * set 被防护 IP类型: 0: 全部, 1: 弹性公网 IP, 2: 云物理服务器公网 IP, 4: 托管区公网 IP
      *
      * @param type
      */

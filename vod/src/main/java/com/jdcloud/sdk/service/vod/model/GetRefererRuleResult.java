@@ -24,10 +24,11 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.service.vod.model.RefererRuleConfigObject;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询CDN域名Referer规则
+ * 查询CDN域名Referer防盗链规则配置
  */
 public class GetRefererRuleResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,24 +40,14 @@ public class GetRefererRuleResult extends JdcloudResult implements java.io.Seria
     private String ruleType;
 
     /**
-     * 规则配置对象
+     * Referer防盗链规则配置对象
      */
-    private Object config;
+    private RefererRuleConfigObject config;
 
     /**
      * 是否启用该规则
      */
     private Boolean enabled;
-
-    /**
-     * createTime
-     */
-    private String createTime;
-
-    /**
-     * updateTime
-     */
-    private String updateTime;
 
 
     /**
@@ -78,20 +69,20 @@ public class GetRefererRuleResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * get 规则配置对象
+     * get Referer防盗链规则配置对象
      *
      * @return
      */
-    public Object getConfig() {
+    public RefererRuleConfigObject getConfig() {
         return config;
     }
 
     /**
-     * set 规则配置对象
+     * set Referer防盗链规则配置对象
      *
      * @param config
      */
-    public void setConfig(Object config) {
+    public void setConfig(RefererRuleConfigObject config) {
         this.config = config;
     }
 
@@ -113,42 +104,6 @@ public class GetRefererRuleResult extends JdcloudResult implements java.io.Seria
         this.enabled = enabled;
     }
 
-    /**
-     * get createTime
-     *
-     * @return
-     */
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * set createTime
-     *
-     * @param createTime
-     */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
-    }
-
-    /**
-     * get updateTime
-     *
-     * @return
-     */
-    public String getUpdateTime() {
-        return updateTime;
-    }
-
-    /**
-     * set updateTime
-     *
-     * @param updateTime
-     */
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
-    }
-
 
     /**
      * set 规则类型，取值 &#39;referer&#39;
@@ -161,11 +116,11 @@ public class GetRefererRuleResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 规则配置对象
+     * set Referer防盗链规则配置对象
      *
      * @param config
      */
-    public GetRefererRuleResult config(Object config) {
+    public GetRefererRuleResult config(RefererRuleConfigObject config) {
         this.config = config;
         return this;
     }
@@ -177,26 +132,6 @@ public class GetRefererRuleResult extends JdcloudResult implements java.io.Seria
      */
     public GetRefererRuleResult enabled(Boolean enabled) {
         this.enabled = enabled;
-        return this;
-    }
-
-    /**
-     * set createTime
-     *
-     * @param createTime
-     */
-    public GetRefererRuleResult createTime(String createTime) {
-        this.createTime = createTime;
-        return this;
-    }
-
-    /**
-     * set updateTime
-     *
-     * @param updateTime
-     */
-    public GetRefererRuleResult updateTime(String updateTime) {
-        this.updateTime = updateTime;
         return this;
     }
 

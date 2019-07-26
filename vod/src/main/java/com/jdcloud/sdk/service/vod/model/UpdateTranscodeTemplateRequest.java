@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 模板管理 - 视频转码模板
+ * 转码模板管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -38,22 +38,17 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 模板ID
-     */
-    private Long id;
-
-    /**
      * 模板名称
      */
     private String name;
 
     /**
-     * 视频参数
+     * 视频参数配置
      */
     private Video video;
 
     /**
-     * 音频参数
+     * 音频参数配置
      */
     private Audio audio;
 
@@ -63,9 +58,23 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     private Encapsulation encapsulation;
 
     /**
-     * 清晰度规格
+     * 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      */
     private String definition;
+
+    /**
+     * 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     */
+    private String templateType;
 
     /**
      * 模板ID
@@ -74,24 +83,6 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     @Required
     private Long templateId;
 
-
-    /**
-     * get 模板ID
-     *
-     * @return
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * set 模板ID
-     *
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * get 模板名称
@@ -112,7 +103,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 视频参数
+     * get 视频参数配置
      *
      * @return
      */
@@ -121,7 +112,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 视频参数
+     * set 视频参数配置
      *
      * @param video
      */
@@ -130,7 +121,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 音频参数
+     * get 音频参数配置
      *
      * @return
      */
@@ -139,7 +130,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 音频参数
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -166,7 +157,13 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 清晰度规格
+     * get 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @return
      */
@@ -175,12 +172,42 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
     public void setDefinition(String definition) {
         this.definition = definition;
+    }
+
+    /**
+     * get 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @return
+     */
+    public String getTemplateType() {
+        return templateType;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public void setTemplateType(String templateType) {
+        this.templateType = templateType;
     }
 
     /**
@@ -203,16 +230,6 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 模板ID
-     *
-     * @param id
-     */
-    public UpdateTranscodeTemplateRequest id(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    /**
      * set 模板名称
      *
      * @param name
@@ -223,7 +240,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 视频参数
+     * set 视频参数配置
      *
      * @param video
      */
@@ -233,7 +250,7 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 音频参数
+     * set 音频参数配置
      *
      * @param audio
      */
@@ -253,12 +270,31 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
     public UpdateTranscodeTemplateRequest definition(String definition) {
         this.definition = definition;
+        return this;
+    }
+
+    /**
+     * set 模板类型。取值范围：
+  jdchd - 京享超清
+  jdchs - 极速转码
+
+     *
+     * @param templateType
+     */
+    public UpdateTranscodeTemplateRequest templateType(String templateType) {
+        this.templateType = templateType;
         return this;
     }
 

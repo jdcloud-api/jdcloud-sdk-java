@@ -30,7 +30,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询 CC 攻击日志详情
+ * 查询 CC 攻击日志详情.
+- 参数 attackId 优先级高于 instanceId, attackId 不为空时, 忽略 instanceId
+
  */
 public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -62,18 +64,21 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
 
     /**
      * 高防实例 ID
-     * Required:true
      */
-    @Required
-    private Long instanceId;
+    private String instanceId;
 
     /**
-     * 子域名
+     * 查询的子域名，只有选中某一个实例后才能多选子域名
      */
     private List<String> subDomain;
 
     /**
-     * 区域 Id
+     * CC 攻击记录Id
+     */
+    private String attackId;
+
+    /**
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -157,7 +162,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -166,12 +171,12 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
     /**
-     * get 子域名
+     * get 查询的子域名，只有选中某一个实例后才能多选子域名
      *
      * @return
      */
@@ -180,7 +185,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 子域名
+     * set 查询的子域名，只有选中某一个实例后才能多选子域名
      *
      * @param subDomain
      */
@@ -189,7 +194,25 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * get 区域 Id
+     * get CC 攻击记录Id
+     *
+     * @return
+     */
+    public String getAttackId() {
+        return attackId;
+    }
+
+    /**
+     * set CC 攻击记录Id
+     *
+     * @param attackId
+     */
+    public void setAttackId(String attackId) {
+        this.attackId = attackId;
+    }
+
+    /**
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -198,7 +221,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -252,13 +275,13 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
      *
      * @param instanceId
      */
-    public DescribeCCAttackLogDetailsRequest instanceId(Long instanceId) {
+    public DescribeCCAttackLogDetailsRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
     /**
-     * set 子域名
+     * set 查询的子域名，只有选中某一个实例后才能多选子域名
      *
      * @param subDomain
      */
@@ -268,7 +291,17 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 区域 Id
+     * set CC 攻击记录Id
+     *
+     * @param attackId
+     */
+    public DescribeCCAttackLogDetailsRequest attackId(String attackId) {
+        this.attackId = attackId;
+        return this;
+    }
+
+    /**
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -279,7 +312,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
 
 
     /**
-     * add item to 子域名
+     * add item to 查询的子域名，只有选中某一个实例后才能多选子域名
      *
      * @param subDomain
      */

@@ -30,19 +30,20 @@ import com.jdcloud.sdk.service.vod.model.Sort;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询分类列表
+ * 查询分类列表，按照分页方式，返回分类列表信息
+
  */
 public class ListCategoriesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认值为1
+     * 页码；默认值为 1
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认值为10；取值范围[10, 100]
+     * 分页大小；默认值为 10；取值范围 [10, 100]
      */
     private Integer pageSize;
 
@@ -53,7 +54,7 @@ public class ListCategoriesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 页码；默认值为1
+     * get 页码；默认值为 1
      *
      * @return
      */
@@ -62,7 +63,7 @@ public class ListCategoriesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 页码；默认值为1
+     * set 页码；默认值为 1
      *
      * @param pageNumber
      */
@@ -71,7 +72,7 @@ public class ListCategoriesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 分页大小；默认值为10；取值范围[10, 100]
+     * get 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @return
      */
@@ -80,7 +81,7 @@ public class ListCategoriesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分页大小；默认值为10；取值范围[10, 100]
+     * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @param pageSize
      */
@@ -108,7 +109,7 @@ public class ListCategoriesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 页码；默认值为1
+     * set 页码；默认值为 1
      *
      * @param pageNumber
      */
@@ -118,7 +119,7 @@ public class ListCategoriesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分页大小；默认值为10；取值范围[10, 100]
+     * set 分页大小；默认值为 10；取值范围 [10, 100]
      *
      * @param pageSize
      */

@@ -103,7 +103,7 @@ public class Disk  implements java.io.Serializable {
     /**
      * 云盘是否被暂停（IOPS限制为极低）
      */
-    private Boolean enable;
+    private Boolean enabled;
 
     /**
      * 创建云硬盘时间
@@ -360,17 +360,17 @@ public class Disk  implements java.io.Serializable {
      *
      * @return
      */
-    public Boolean getEnable() {
-        return enable;
+    public Boolean getEnabled() {
+        return enabled;
     }
 
     /**
      * set 云盘是否被暂停（IOPS限制为极低）
      *
-     * @param enable
+     * @param enabled
      */
-    public void setEnable(Boolean enable) {
-        this.enable = enable;
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 
     /**
@@ -561,10 +561,10 @@ public class Disk  implements java.io.Serializable {
     /**
      * set 云盘是否被暂停（IOPS限制为极低）
      *
-     * @param enable
+     * @param enabled
      */
-    public Disk enable(Boolean enable) {
-        this.enable = enable;
+    public Disk enabled(Boolean enabled) {
+        this.enabled = enabled;
         return this;
     }
 

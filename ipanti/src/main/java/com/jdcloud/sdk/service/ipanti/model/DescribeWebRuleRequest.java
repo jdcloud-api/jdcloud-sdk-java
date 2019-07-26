@@ -35,7 +35,7 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -46,18 +46,18 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * 网站规则 Id
      * Required:true
      */
     @Required
-    private Long webRuleId;
+    private String webRuleId;
 
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -79,7 +79,7 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -88,7 +88,7 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -97,7 +97,7 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
      *
      * @return
      */
-    public Long getWebRuleId() {
+    public String getWebRuleId() {
         return webRuleId;
     }
 
@@ -106,13 +106,13 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
      *
      * @param webRuleId
      */
-    public void setWebRuleId(Long webRuleId) {
+    public void setWebRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
     }
 
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -126,7 +126,7 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public DescribeWebRuleRequest instanceId(Long instanceId) {
+    public DescribeWebRuleRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -136,7 +136,7 @@ public class DescribeWebRuleRequest extends JdcloudRequest implements java.io.Se
      *
      * @param webRuleId
      */
-    public DescribeWebRuleRequest webRuleId(Long webRuleId) {
+    public DescribeWebRuleRequest webRuleId(String webRuleId) {
         this.webRuleId = webRuleId;
         return this;
     }

@@ -78,7 +78,7 @@ public class PriceSpec  implements java.io.Serializable {
     /**
      * 实例 Id, 升级高防实例查询价格时必传
      */
-    private Long id;
+    private String id;
 
     /**
      * 购买防护包时长, 新购高防实例时必传
@@ -209,7 +209,7 @@ public class PriceSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
@@ -218,7 +218,7 @@ public class PriceSpec  implements java.io.Serializable {
      *
      * @param id
      */
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -334,7 +334,7 @@ public class PriceSpec  implements java.io.Serializable {
      *
      * @param id
      */
-    public PriceSpec id(Long id) {
+    public PriceSpec id(String id) {
         this.id = id;
         return this;
     }

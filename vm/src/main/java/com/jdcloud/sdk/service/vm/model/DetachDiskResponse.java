@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 云主机缷载数据盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+ * 云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
 
  */
 public class DetachDiskResponse extends JdcloudResponse<DetachDiskResult> implements java.io.Serializable {

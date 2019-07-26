@@ -55,6 +55,11 @@ public class ForbidLiveStreamRequest extends JdcloudRequest implements java.io.S
     @Required
     private String streamName;
 
+    /**
+     * 禁流时长,单位:s 0表示永久禁流;大于0为限时禁流,超过时长自动解禁
+     */
+    private Long forbidTime;
+
 
     /**
      * get 推流域名
@@ -110,6 +115,24 @@ public class ForbidLiveStreamRequest extends JdcloudRequest implements java.io.S
         this.streamName = streamName;
     }
 
+    /**
+     * get 禁流时长,单位:s 0表示永久禁流;大于0为限时禁流,超过时长自动解禁
+     *
+     * @return
+     */
+    public Long getForbidTime() {
+        return forbidTime;
+    }
+
+    /**
+     * set 禁流时长,单位:s 0表示永久禁流;大于0为限时禁流,超过时长自动解禁
+     *
+     * @param forbidTime
+     */
+    public void setForbidTime(Long forbidTime) {
+        this.forbidTime = forbidTime;
+    }
+
 
     /**
      * set 推流域名
@@ -138,6 +161,16 @@ public class ForbidLiveStreamRequest extends JdcloudRequest implements java.io.S
      */
     public ForbidLiveStreamRequest streamName(String streamName) {
         this.streamName = streamName;
+        return this;
+    }
+
+    /**
+     * set 禁流时长,单位:s 0表示永久禁流;大于0为限时禁流,超过时长自动解禁
+     *
+     * @param forbidTime
+     */
+    public ForbidLiveStreamRequest forbidTime(Long forbidTime) {
+        this.forbidTime = forbidTime;
         return this;
     }
 

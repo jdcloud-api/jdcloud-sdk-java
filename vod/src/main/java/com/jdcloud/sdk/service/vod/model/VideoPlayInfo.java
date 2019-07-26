@@ -33,12 +33,18 @@ public class VideoPlayInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 生成播放信息的任务ID
+     * 生成播放信息的转码任务ID
      */
     private String taskId;
 
     /**
-     * 清晰度规格
+     * 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      */
     private String definition;
 
@@ -48,9 +54,9 @@ public class VideoPlayInfo  implements java.io.Serializable {
     private Integer mediaType;
 
     /**
-     * 播放信息状态，目前只有完成状态
+     * 播放信息状态，目前只有正常状态(normal)
      */
-    private Integer status;
+    private String status;
 
     /**
      * CDN地址，原始地址或者鉴权地址
@@ -83,17 +89,17 @@ public class VideoPlayInfo  implements java.io.Serializable {
     private String format;
 
     /**
-     * 宽度
+     * 视频宽度
      */
     private Integer width;
 
     /**
-     * 高度
+     * 视频高度
      */
     private Integer height;
 
     /**
-     * 帧率
+     * 视频帧率
      */
     private String fps;
 
@@ -109,7 +115,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
 
 
     /**
-     * get 生成播放信息的任务ID
+     * get 生成播放信息的转码任务ID
      *
      * @return
      */
@@ -118,7 +124,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 生成播放信息的任务ID
+     * set 生成播放信息的转码任务ID
      *
      * @param taskId
      */
@@ -127,7 +133,13 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 清晰度规格
+     * get 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @return
      */
@@ -136,7 +148,13 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
@@ -163,20 +181,20 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 播放信息状态，目前只有完成状态
+     * get 播放信息状态，目前只有正常状态(normal)
      *
      * @return
      */
-    public Integer getStatus() {
+    public String getStatus() {
         return status;
     }
 
     /**
-     * set 播放信息状态，目前只有完成状态
+     * set 播放信息状态，目前只有正常状态(normal)
      *
      * @param status
      */
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -289,7 +307,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 宽度
+     * get 视频宽度
      *
      * @return
      */
@@ -298,7 +316,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 宽度
+     * set 视频宽度
      *
      * @param width
      */
@@ -307,7 +325,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 高度
+     * get 视频高度
      *
      * @return
      */
@@ -316,7 +334,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 高度
+     * set 视频高度
      *
      * @param height
      */
@@ -325,7 +343,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 帧率
+     * get 视频帧率
      *
      * @return
      */
@@ -334,7 +352,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 帧率
+     * set 视频帧率
      *
      * @param fps
      */
@@ -380,7 +398,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
 
 
     /**
-     * set 生成播放信息的任务ID
+     * set 生成播放信息的转码任务ID
      *
      * @param taskId
      */
@@ -390,7 +408,13 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 清晰度规格
+     * set 清晰度规格标记。取值范围：
+  SD - 标清
+  HD - 高清
+  FHD - 超清
+  2K
+  4K
+
      *
      * @param definition
      */
@@ -410,11 +434,11 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 播放信息状态，目前只有完成状态
+     * set 播放信息状态，目前只有正常状态(normal)
      *
      * @param status
      */
-    public VideoPlayInfo status(Integer status) {
+    public VideoPlayInfo status(String status) {
         this.status = status;
         return this;
     }
@@ -480,7 +504,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 宽度
+     * set 视频宽度
      *
      * @param width
      */
@@ -490,7 +514,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 高度
+     * set 视频高度
      *
      * @param height
      */
@@ -500,7 +524,7 @@ public class VideoPlayInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 帧率
+     * set 视频帧率
      *
      * @param fps
      */

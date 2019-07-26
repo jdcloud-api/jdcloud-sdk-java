@@ -49,22 +49,27 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     private String imgUrl;
 
     /**
-     * 宽度
+     * 水印宽度
      */
     private Integer width;
 
     /**
-     * 高度
+     * 水印高度
      */
     private Integer height;
 
     /**
-     * 水印位置
+     * 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      */
     private String position;
 
     /**
-     * 偏移单位
+     * 偏移单位，目前仅支持像素
      */
     private String unit;
 
@@ -79,12 +84,12 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     private Integer offsetY;
 
     /**
-     * createTime
+     * 创建时间
      */
     private String createTime;
 
     /**
-     * updateTime
+     * 修改时间
      */
     private String updateTime;
 
@@ -144,7 +149,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 宽度
+     * get 水印宽度
      *
      * @return
      */
@@ -153,7 +158,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 宽度
+     * set 水印宽度
      *
      * @param width
      */
@@ -162,7 +167,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 高度
+     * get 水印高度
      *
      * @return
      */
@@ -171,7 +176,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 高度
+     * set 水印高度
      *
      * @param height
      */
@@ -180,7 +185,12 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 水印位置
+     * get 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @return
      */
@@ -189,7 +199,12 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 水印位置
+     * set 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @param position
      */
@@ -198,7 +213,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 偏移单位
+     * get 偏移单位，目前仅支持像素
      *
      * @return
      */
@@ -207,7 +222,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 偏移单位
+     * set 偏移单位，目前仅支持像素
      *
      * @param unit
      */
@@ -252,7 +267,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get createTime
+     * get 创建时间
      *
      * @return
      */
@@ -261,7 +276,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -270,7 +285,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get updateTime
+     * get 修改时间
      *
      * @return
      */
@@ -279,7 +294,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */
@@ -319,7 +334,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 宽度
+     * set 水印宽度
      *
      * @param width
      */
@@ -329,7 +344,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 高度
+     * set 水印高度
      *
      * @param height
      */
@@ -339,7 +354,12 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 水印位置
+     * set 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @param position
      */
@@ -349,7 +369,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 偏移单位
+     * set 偏移单位，目前仅支持像素
      *
      * @param unit
      */
@@ -379,7 +399,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set createTime
+     * set 创建时间
      *
      * @param createTime
      */
@@ -389,7 +409,7 @@ public class GetWatermarkResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set updateTime
+     * set 修改时间
      *
      * @param updateTime
      */

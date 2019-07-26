@@ -38,7 +38,7 @@ public class CertInfoModifySpec  implements java.io.Serializable {
 - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
 
      */
-    private Long certId;
+    private String certId;
 
     /**
      * 证书内容
@@ -59,7 +59,7 @@ public class CertInfoModifySpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getCertId() {
+    public String getCertId() {
         return certId;
     }
 
@@ -71,7 +71,7 @@ public class CertInfoModifySpec  implements java.io.Serializable {
      *
      * @param certId
      */
-    public void setCertId(Long certId) {
+    public void setCertId(String certId) {
         this.certId = certId;
     }
 
@@ -120,7 +120,7 @@ public class CertInfoModifySpec  implements java.io.Serializable {
      *
      * @param certId
      */
-    public CertInfoModifySpec certId(Long certId) {
+    public CertInfoModifySpec certId(String certId) {
         this.certId = certId;
         return this;
     }

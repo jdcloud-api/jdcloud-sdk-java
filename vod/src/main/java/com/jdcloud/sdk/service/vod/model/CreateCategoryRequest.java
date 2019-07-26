@@ -24,10 +24,12 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 添加分类
+
  */
 public class CreateCategoryRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -35,16 +37,14 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * 分类名称
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
-     * 分类级别
-     */
-    private Integer level;
+     * 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
 
-    /**
-     * 父分类ID
      */
     private Long parentId;
 
@@ -73,25 +73,8 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 分类级别
-     *
-     * @return
-     */
-    public Integer getLevel() {
-        return level;
-    }
+     * get 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
 
-    /**
-     * set 分类级别
-     *
-     * @param level
-     */
-    public void setLevel(Integer level) {
-        this.level = level;
-    }
-
-    /**
-     * get 父分类ID
      *
      * @return
      */
@@ -100,7 +83,8 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */
@@ -138,17 +122,8 @@ public class CreateCategoryRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分类级别
-     *
-     * @param level
-     */
-    public CreateCategoryRequest level(Integer level) {
-        this.level = level;
-        return this;
-    }
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
 
-    /**
-     * set 父分类ID
      *
      * @param parentId
      */

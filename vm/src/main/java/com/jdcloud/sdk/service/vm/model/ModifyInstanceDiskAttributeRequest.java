@@ -31,7 +31,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改云主机挂载的数据盘属性，包括是否随主机删除。
+ * 修改云主机挂载的数据盘属性，包括是否随主机删除。&lt;br&gt;
+仅按配置计费云硬盘支持设置随实例删除属性;包年包月计费云硬盘该属性不生效,实例删除时云硬盘将保留。&lt;br&gt;
 
  */
 public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implements java.io.Serializable {

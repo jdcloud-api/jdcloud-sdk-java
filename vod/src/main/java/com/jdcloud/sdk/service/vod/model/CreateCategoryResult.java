@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 添加分类
+
  */
 public class CreateCategoryResult extends JdcloudResult implements java.io.Serializable {
 
@@ -44,12 +45,14 @@ public class CreateCategoryResult extends JdcloudResult implements java.io.Seria
     private String name;
 
     /**
-     * 分类级别
+     * 分类级别。取值范围为 [0, 3]，取值为 0 时为虚拟根节点
+
      */
     private Integer level;
 
     /**
-     * 父分类ID
+     * 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      */
     private Long parentId;
 
@@ -106,7 +109,8 @@ public class CreateCategoryResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * get 分类级别
+     * get 分类级别。取值范围为 [0, 3]，取值为 0 时为虚拟根节点
+
      *
      * @return
      */
@@ -115,7 +119,8 @@ public class CreateCategoryResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 分类级别
+     * set 分类级别。取值范围为 [0, 3]，取值为 0 时为虚拟根节点
+
      *
      * @param level
      */
@@ -124,7 +129,8 @@ public class CreateCategoryResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * get 父分类ID
+     * get 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @return
      */
@@ -133,7 +139,8 @@ public class CreateCategoryResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */
@@ -217,7 +224,8 @@ public class CreateCategoryResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 分类级别
+     * set 分类级别。取值范围为 [0, 3]，取值为 0 时为虚拟根节点
+
      *
      * @param level
      */
@@ -227,7 +235,8 @@ public class CreateCategoryResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 父分类ID
+     * set 父分类ID，取值为 0 或 null 时，表示该分类为一级分类
+
      *
      * @param parentId
      */

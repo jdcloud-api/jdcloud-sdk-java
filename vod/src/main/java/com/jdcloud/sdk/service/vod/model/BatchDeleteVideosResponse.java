@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息
+ * 批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
  */
 public class BatchDeleteVideosResponse extends JdcloudResponse<BatchDeleteVideosResult> implements java.io.Serializable {
 

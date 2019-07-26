@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 设置CDN域名Referer规则
+ * 设置CDN域名Referer防盗链规则
  */
 public class SetRefererRuleResult extends JdcloudResult implements java.io.Serializable {
 

@@ -71,6 +71,11 @@ public class JDCloudVolumeSource  implements java.io.Serializable {
     private Boolean formatVolume;
 
     /**
+     * 云盘的 iops 值，目前只有 ssd.io1 类型有效
+     */
+    private Integer iops;
+
+    /**
      * 是否随pod删除。默认：true
      */
     private Boolean autoDelete;
@@ -203,6 +208,24 @@ public class JDCloudVolumeSource  implements java.io.Serializable {
     }
 
     /**
+     * get 云盘的 iops 值，目前只有 ssd.io1 类型有效
+     *
+     * @return
+     */
+    public Integer getIops() {
+        return iops;
+    }
+
+    /**
+     * set 云盘的 iops 值，目前只有 ssd.io1 类型有效
+     *
+     * @param iops
+     */
+    public void setIops(Integer iops) {
+        this.iops = iops;
+    }
+
+    /**
      * get 是否随pod删除。默认：true
      *
      * @return
@@ -288,6 +311,16 @@ public class JDCloudVolumeSource  implements java.io.Serializable {
      */
     public JDCloudVolumeSource formatVolume(Boolean formatVolume) {
         this.formatVolume = formatVolume;
+        return this;
+    }
+
+    /**
+     * set 云盘的 iops 值，目前只有 ssd.io1 类型有效
+     *
+     * @param iops
+     */
+    public JDCloudVolumeSource iops(Integer iops) {
+        this.iops = iops;
         return this;
     }
 

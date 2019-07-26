@@ -40,29 +40,39 @@ public class WatermarkTemplate  implements java.io.Serializable {
     private Integer position;
 
     /**
+     * 偏移量单位
+- 取值: percent,pixel
+
+     */
+    private String offsetUnit;
+
+    /**
      * x轴偏移量
-- 单位: 像素
 
      */
     private Integer offSetX;
 
     /**
      * y轴偏移量
-- 单位: 像素
 
      */
     private Integer offSetY;
 
     /**
+     * 水印大小单位
+- 取值: percent,pixel
+
+     */
+    private String sizeUnit;
+
+    /**
      * 水印宽度
-- 单位: 像素
 
      */
     private Integer width;
 
     /**
      * 水印高度
-- 单位: 像素
 
      */
     private Integer height;
@@ -103,8 +113,29 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
+     * get 偏移量单位
+- 取值: percent,pixel
+
+     *
+     * @return
+     */
+    public String getOffsetUnit() {
+        return offsetUnit;
+    }
+
+    /**
+     * set 偏移量单位
+- 取值: percent,pixel
+
+     *
+     * @param offsetUnit
+     */
+    public void setOffsetUnit(String offsetUnit) {
+        this.offsetUnit = offsetUnit;
+    }
+
+    /**
      * get x轴偏移量
-- 单位: 像素
 
      *
      * @return
@@ -115,7 +146,6 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set x轴偏移量
-- 单位: 像素
 
      *
      * @param offSetX
@@ -126,7 +156,6 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * get y轴偏移量
-- 单位: 像素
 
      *
      * @return
@@ -137,7 +166,6 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set y轴偏移量
-- 单位: 像素
 
      *
      * @param offSetY
@@ -147,8 +175,29 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
+     * get 水印大小单位
+- 取值: percent,pixel
+
+     *
+     * @return
+     */
+    public String getSizeUnit() {
+        return sizeUnit;
+    }
+
+    /**
+     * set 水印大小单位
+- 取值: percent,pixel
+
+     *
+     * @param sizeUnit
+     */
+    public void setSizeUnit(String sizeUnit) {
+        this.sizeUnit = sizeUnit;
+    }
+
+    /**
      * get 水印宽度
-- 单位: 像素
 
      *
      * @return
@@ -159,7 +208,6 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set 水印宽度
-- 单位: 像素
 
      *
      * @param width
@@ -170,7 +218,6 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * get 水印高度
-- 单位: 像素
 
      *
      * @return
@@ -181,7 +228,6 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set 水印高度
-- 单位: 像素
 
      *
      * @param height
@@ -244,8 +290,19 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
+     * set 偏移量单位
+- 取值: percent,pixel
+
+     *
+     * @param offsetUnit
+     */
+    public WatermarkTemplate offsetUnit(String offsetUnit) {
+        this.offsetUnit = offsetUnit;
+        return this;
+    }
+
+    /**
      * set x轴偏移量
-- 单位: 像素
 
      *
      * @param offSetX
@@ -257,7 +314,6 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set y轴偏移量
-- 单位: 像素
 
      *
      * @param offSetY
@@ -268,8 +324,19 @@ public class WatermarkTemplate  implements java.io.Serializable {
     }
 
     /**
+     * set 水印大小单位
+- 取值: percent,pixel
+
+     *
+     * @param sizeUnit
+     */
+    public WatermarkTemplate sizeUnit(String sizeUnit) {
+        this.sizeUnit = sizeUnit;
+        return this;
+    }
+
+    /**
      * set 水印宽度
-- 单位: 像素
 
      *
      * @param width
@@ -281,7 +348,6 @@ public class WatermarkTemplate  implements java.io.Serializable {
 
     /**
      * set 水印高度
-- 单位: 像素
 
      *
      * @param height

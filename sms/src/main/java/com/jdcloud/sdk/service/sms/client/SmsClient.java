@@ -31,12 +31,15 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.sms.model.SendBatchSmsRequest;
-import com.jdcloud.sdk.service.sms.model.SendBatchSmsResponse;
-import com.jdcloud.sdk.service.sms.client.SendBatchSmsExecutor;
-import com.jdcloud.sdk.service.sms.model.PullMtMsgByMobileRequest;
-import com.jdcloud.sdk.service.sms.model.PullMtMsgByMobileResponse;
-import com.jdcloud.sdk.service.sms.client.PullMtMsgByMobileExecutor;
+import com.jdcloud.sdk.service.sms.model.BatchSendRequest;
+import com.jdcloud.sdk.service.sms.model.BatchSendResponse;
+import com.jdcloud.sdk.service.sms.client.BatchSendExecutor;
+import com.jdcloud.sdk.service.sms.model.StatusReportRequest;
+import com.jdcloud.sdk.service.sms.model.StatusReportResponse;
+import com.jdcloud.sdk.service.sms.client.StatusReportExecutor;
+import com.jdcloud.sdk.service.sms.model.ReplyRequest;
+import com.jdcloud.sdk.service.sms.model.ReplyResponse;
+import com.jdcloud.sdk.service.sms.client.ReplyExecutor;
 
 /**
  * smsClient
@@ -45,7 +48,7 @@ public class SmsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "sms.jdcloud-api.com";
     public final static String ServiceName = "sms";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -94,19 +97,30 @@ public class SmsClient extends JdcloudClient {
      * @return
      * @throws JdcloudSdkException
      */
-    public SendBatchSmsResponse sendBatchSms(SendBatchSmsRequest request) throws JdcloudSdkException {
-        return new SendBatchSmsExecutor().client(this).execute(request);
+    public BatchSendResponse batchSend(BatchSendRequest request) throws JdcloudSdkException {
+        return new BatchSendExecutor().client(this).execute(request);
     }
 
     /**
-     * 拉取单个手机短信状态
+     * 短信发送回执接口
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public PullMtMsgByMobileResponse pullMtMsgByMobile(PullMtMsgByMobileRequest request) throws JdcloudSdkException {
-        return new PullMtMsgByMobileExecutor().client(this).execute(request);
+    public StatusReportResponse statusReport(StatusReportRequest request) throws JdcloudSdkException {
+        return new StatusReportExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 短信回复接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ReplyResponse reply(ReplyRequest request) throws JdcloudSdkException {
+        return new ReplyExecutor().client(this).execute(request);
     }
 
 

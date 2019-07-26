@@ -76,7 +76,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     private Integer blockType;
 
     /**
-     * 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+     * 阻断持续时间, 单位为秒, 取值范围[10, 86400]
      * Required:true
      */
     @Required
@@ -192,7 +192,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+     * get 阻断持续时间, 单位为秒, 取值范围[10, 86400]
      *
      * @return
      */
@@ -201,7 +201,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+     * set 阻断持续时间, 单位为秒, 取值范围[10, 86400]
      *
      * @param blockTime
      */
@@ -271,7 +271,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 阻断持续时间, 单位为分钟, 取值范围[1, 1440]
+     * set 阻断持续时间, 单位为秒, 取值范围[10, 86400]
      *
      * @param blockTime
      */

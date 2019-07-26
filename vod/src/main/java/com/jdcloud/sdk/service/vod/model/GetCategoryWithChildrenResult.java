@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.vod.model.SubCategory;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -56,6 +57,11 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
     private String description;
 
     /**
+     * 下级分类
+     */
+    private List<SubCategory> children;
+
+    /**
      * 创建时间
      */
     private String createTime;
@@ -64,11 +70,6 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
      * 修改时间
      */
     private String updateTime;
-
-    /**
-     * children
-     */
-    private List<Object> children;
 
 
     /**
@@ -144,6 +145,24 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
     }
 
     /**
+     * get 下级分类
+     *
+     * @return
+     */
+    public List<SubCategory> getChildren() {
+        return children;
+    }
+
+    /**
+     * set 下级分类
+     *
+     * @param children
+     */
+    public void setChildren(List<SubCategory> children) {
+        this.children = children;
+    }
+
+    /**
      * get 创建时间
      *
      * @return
@@ -177,24 +196,6 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
      */
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
-    }
-
-    /**
-     * get children
-     *
-     * @return
-     */
-    public List<Object> getChildren() {
-        return children;
-    }
-
-    /**
-     * set children
-     *
-     * @param children
-     */
-    public void setChildren(List<Object> children) {
-        this.children = children;
     }
 
 
@@ -239,6 +240,16 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
     }
 
     /**
+     * set 下级分类
+     *
+     * @param children
+     */
+    public GetCategoryWithChildrenResult children(List<SubCategory> children) {
+        this.children = children;
+        return this;
+    }
+
+    /**
      * set 创建时间
      *
      * @param createTime
@@ -258,23 +269,13 @@ public class GetCategoryWithChildrenResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
-     * set children
+     * add item to 下级分类
      *
      * @param children
      */
-    public GetCategoryWithChildrenResult children(List<Object> children) {
-        this.children = children;
-        return this;
-    }
-
-
-    /**
-     * add item to children
-     *
-     * @param children
-     */
-    public void addChildren(Object children) {
+    public void addChildren(SubCategory children) {
         if (this.children == null) {
             this.children = new ArrayList<>();
         }

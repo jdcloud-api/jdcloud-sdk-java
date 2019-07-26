@@ -46,6 +46,9 @@ import com.jdcloud.sdk.service.vod.client.UpdateWatermarkExecutor;
 import com.jdcloud.sdk.service.vod.model.ListDomainsRequest;
 import com.jdcloud.sdk.service.vod.model.ListDomainsResponse;
 import com.jdcloud.sdk.service.vod.client.ListDomainsExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateVideoUploadTaskRequest;
+import com.jdcloud.sdk.service.vod.model.CreateVideoUploadTaskResponse;
+import com.jdcloud.sdk.service.vod.client.CreateVideoUploadTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.UpdateCategoryRequest;
 import com.jdcloud.sdk.service.vod.model.UpdateCategoryResponse;
 import com.jdcloud.sdk.service.vod.client.UpdateCategoryExecutor;
@@ -55,9 +58,6 @@ import com.jdcloud.sdk.service.vod.client.SetRefererRuleExecutor;
 import com.jdcloud.sdk.service.vod.model.GetURLRuleRequest;
 import com.jdcloud.sdk.service.vod.model.GetURLRuleResponse;
 import com.jdcloud.sdk.service.vod.client.GetURLRuleExecutor;
-import com.jdcloud.sdk.service.vod.model.GetTranscodeTaskRequest;
-import com.jdcloud.sdk.service.vod.model.GetTranscodeTaskResponse;
-import com.jdcloud.sdk.service.vod.client.GetTranscodeTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.GetRefererRuleRequest;
 import com.jdcloud.sdk.service.vod.model.GetRefererRuleResponse;
 import com.jdcloud.sdk.service.vod.client.GetRefererRuleExecutor;
@@ -94,6 +94,9 @@ import com.jdcloud.sdk.service.vod.client.DeleteWatermarkExecutor;
 import com.jdcloud.sdk.service.vod.model.SetHeaderRequest;
 import com.jdcloud.sdk.service.vod.model.SetHeaderResponse;
 import com.jdcloud.sdk.service.vod.client.SetHeaderExecutor;
+import com.jdcloud.sdk.service.vod.model.RefreshVideoUploadTaskRequest;
+import com.jdcloud.sdk.service.vod.model.RefreshVideoUploadTaskResponse;
+import com.jdcloud.sdk.service.vod.client.RefreshVideoUploadTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.SubmitTranscodeJobRequest;
 import com.jdcloud.sdk.service.vod.model.SubmitTranscodeJobResponse;
 import com.jdcloud.sdk.service.vod.client.SubmitTranscodeJobExecutor;
@@ -109,6 +112,9 @@ import com.jdcloud.sdk.service.vod.client.ListVideosExecutor;
 import com.jdcloud.sdk.service.vod.model.BatchUpdateVideosRequest;
 import com.jdcloud.sdk.service.vod.model.BatchUpdateVideosResponse;
 import com.jdcloud.sdk.service.vod.client.BatchUpdateVideosExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateImageUploadTaskRequest;
+import com.jdcloud.sdk.service.vod.model.CreateImageUploadTaskResponse;
+import com.jdcloud.sdk.service.vod.client.CreateImageUploadTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.CreateWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.CreateWatermarkExecutor;
@@ -124,9 +130,6 @@ import com.jdcloud.sdk.service.vod.client.GetIPRuleExecutor;
 import com.jdcloud.sdk.service.vod.model.EnableDomainRequest;
 import com.jdcloud.sdk.service.vod.model.EnableDomainResponse;
 import com.jdcloud.sdk.service.vod.client.EnableDomainExecutor;
-import com.jdcloud.sdk.service.vod.model.VerifyDomainRequest;
-import com.jdcloud.sdk.service.vod.model.VerifyDomainResponse;
-import com.jdcloud.sdk.service.vod.client.VerifyDomainExecutor;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.GetWatermarkExecutor;
@@ -171,7 +174,7 @@ public class VodClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "vod.jdcloud-api.com";
     public final static String ServiceName = "vod";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -269,6 +272,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 获取视频上传地址和凭证
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVideoUploadTaskResponse createVideoUploadTask(CreateVideoUploadTaskRequest request) throws JdcloudSdkException {
+        return new CreateVideoUploadTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改分类
      *
      * @param request
@@ -280,7 +294,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 设置CDN域名Referer规则
+     * 设置CDN域名Referer防盗链规则
      *
      * @param request
      * @return
@@ -291,7 +305,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 查询CDN域名URL规则
+     * 查询CDN域名URL鉴权规则配置
      *
      * @param request
      * @return
@@ -302,18 +316,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 获取转码任务信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetTranscodeTaskResponse getTranscodeTask(GetTranscodeTaskRequest request) throws JdcloudSdkException {
-        return new GetTranscodeTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询CDN域名Referer规则
+     * 查询CDN域名Referer防盗链规则配置
      *
      * @param request
      * @return
@@ -346,7 +349,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 设置CDN域名URL规则
+     * 设置CDN域名URL鉴权规则
      *
      * @param request
      * @return
@@ -369,6 +372,7 @@ public class VodClient extends JdcloudClient {
 
     /**
      * 添加分类
+
      *
      * @param request
      * @return
@@ -379,7 +383,14 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 查询转码模板列表
+     * 查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
+- source 模板来源。枚举值，取值范围为：
+  - system 系统预置
+  - custom 用户自建
+- templateType 模板类型。枚举值，取值范围：
+  - jdchd 京享超清
+  - jdchs 极速转码
+
      *
      * @param request
      * @return
@@ -445,6 +456,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 刷新视频上传地址和凭证
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RefreshVideoUploadTaskResponse refreshVideoUploadTask(RefreshVideoUploadTaskRequest request) throws JdcloudSdkException {
+        return new RefreshVideoUploadTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 提交转码作业
      *
      * @param request
@@ -500,6 +522,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 获取图片上传地址和凭证
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateImageUploadTaskResponse createImageUploadTask(CreateImageUploadTaskRequest request) throws JdcloudSdkException {
+        return new CreateImageUploadTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 添加水印
      *
      * @param request
@@ -522,7 +555,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 删除视频，调用该接口会同时删除与该视频相关的所有信息
+     * 删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
      *
      * @param request
      * @return
@@ -533,7 +566,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 查询CDN域名IP规则
+     * 查询CDN域名IP黑名单规则配置
      *
      * @param request
      * @return
@@ -555,17 +588,6 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 校验域名
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public VerifyDomainResponse verifyDomain(VerifyDomainRequest request) throws JdcloudSdkException {
-        return new VerifyDomainExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询水印
      *
      * @param request
@@ -577,7 +599,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 删除视频码流信息
+     * 删除视频转码流
      *
      * @param request
      * @return
@@ -610,7 +632,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 设置CDN域名IP规则
+     * 设置CDN域名IP黑名单规则
      *
      * @param request
      * @return
@@ -654,7 +676,8 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 查询分类列表
+     * 查询分类列表，按照分页方式，返回分类列表信息
+
      *
      * @param request
      * @return
@@ -676,7 +699,7 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息
+     * 批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
      *
      * @param request
      * @return

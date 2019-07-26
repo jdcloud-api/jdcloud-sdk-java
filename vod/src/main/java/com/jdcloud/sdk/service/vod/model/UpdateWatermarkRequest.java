@@ -35,11 +35,6 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 水印ID
-     */
-    private Long id;
-
-    /**
      * 水印名称
      */
     private String name;
@@ -50,17 +45,22 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     private String imgUrl;
 
     /**
-     * 宽度
+     * 水印宽度
      */
     private Integer width;
 
     /**
-     * 高度
+     * 水印高度
      */
     private Integer height;
 
     /**
-     * 水印位置
+     * 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      */
     private String position;
 
@@ -86,24 +86,6 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     @Required
     private Long watermarkId;
 
-
-    /**
-     * get 水印ID
-     *
-     * @return
-     */
-    public Long getId() {
-        return id;
-    }
-
-    /**
-     * set 水印ID
-     *
-     * @param id
-     */
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     /**
      * get 水印名称
@@ -142,7 +124,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 宽度
+     * get 水印宽度
      *
      * @return
      */
@@ -151,7 +133,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 宽度
+     * set 水印宽度
      *
      * @param width
      */
@@ -160,7 +142,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 高度
+     * get 水印高度
      *
      * @return
      */
@@ -169,7 +151,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 高度
+     * set 水印高度
      *
      * @param height
      */
@@ -178,7 +160,12 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 水印位置
+     * get 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @return
      */
@@ -187,7 +174,12 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 水印位置
+     * set 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @param position
      */
@@ -269,16 +261,6 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 水印ID
-     *
-     * @param id
-     */
-    public UpdateWatermarkRequest id(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    /**
      * set 水印名称
      *
      * @param name
@@ -299,7 +281,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 宽度
+     * set 水印宽度
      *
      * @param width
      */
@@ -309,7 +291,7 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 高度
+     * set 水印高度
      *
      * @param height
      */
@@ -319,7 +301,12 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 水印位置
+     * set 水印位置。取值范围：
+  LT - 左上
+  RT - 右上
+  LB - 左下
+  RB - 右下
+
      *
      * @param position
      */

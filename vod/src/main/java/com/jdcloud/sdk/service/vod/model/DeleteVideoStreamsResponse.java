@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除视频码流信息
+ * 删除视频转码流
  */
 public class DeleteVideoStreamsResponse extends JdcloudResponse<DeleteVideoStreamsResult> implements java.io.Serializable {
 

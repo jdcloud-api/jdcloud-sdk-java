@@ -26,23 +26,26 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量删除视频信息，调用该接口会同时删除与指定视频相关的所有信息
+ * 批量删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
  */
 public class BatchDeleteVideosRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * videoIds
+     * 视频ID集合
+     * Required:true
      */
+    @Required
     private List<String> videoIds;
 
 
     /**
-     * get videoIds
+     * get 视频ID集合
      *
      * @return
      */
@@ -51,7 +54,7 @@ public class BatchDeleteVideosRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set videoIds
+     * set 视频ID集合
      *
      * @param videoIds
      */
@@ -61,7 +64,7 @@ public class BatchDeleteVideosRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set videoIds
+     * set 视频ID集合
      *
      * @param videoIds
      */
@@ -72,7 +75,7 @@ public class BatchDeleteVideosRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * add item to videoIds
+     * add item to 视频ID集合
      *
      * @param videoId
      */

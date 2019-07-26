@@ -43,7 +43,7 @@ public class ModifyEPBRequest extends JdcloudRequest implements java.io.Serializ
     private ModifyInstanceEPBSpec modifyInstanceEPBSpec;
 
     /**
-     * Region ID
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -54,7 +54,7 @@ public class ModifyEPBRequest extends JdcloudRequest implements java.io.Serializ
      * Required:true
      */
     @Required
-    private Long instanceId;
+    private String instanceId;
 
 
     /**
@@ -76,7 +76,7 @@ public class ModifyEPBRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get Region ID
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class ModifyEPBRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -98,7 +98,7 @@ public class ModifyEPBRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -107,7 +107,7 @@ public class ModifyEPBRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -123,7 +123,7 @@ public class ModifyEPBRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -137,7 +137,7 @@ public class ModifyEPBRequest extends JdcloudRequest implements java.io.Serializ
      *
      * @param instanceId
      */
-    public ModifyEPBRequest instanceId(Long instanceId) {
+    public ModifyEPBRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

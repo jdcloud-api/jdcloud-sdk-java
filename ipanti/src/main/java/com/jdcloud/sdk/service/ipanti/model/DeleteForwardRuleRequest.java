@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除非网站规则
+ * 删除非网站规则, 批量操作时, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
  */
 public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 区域 Id
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -46,18 +46,18 @@ public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.
      * Required:true
      */
     @Required
-    private Long instanceId;
+    private String instanceId;
 
     /**
      * 转发规则 Id
      * Required:true
      */
     @Required
-    private Long forwardRuleId;
+    private String forwardRuleId;
 
 
     /**
-     * get 区域 Id
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -79,7 +79,7 @@ public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.
      *
      * @return
      */
-    public Long getInstanceId() {
+    public String getInstanceId() {
         return instanceId;
     }
 
@@ -88,7 +88,7 @@ public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.
      *
      * @param instanceId
      */
-    public void setInstanceId(Long instanceId) {
+    public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
 
@@ -97,7 +97,7 @@ public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.
      *
      * @return
      */
-    public Long getForwardRuleId() {
+    public String getForwardRuleId() {
         return forwardRuleId;
     }
 
@@ -106,13 +106,13 @@ public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.
      *
      * @param forwardRuleId
      */
-    public void setForwardRuleId(Long forwardRuleId) {
+    public void setForwardRuleId(String forwardRuleId) {
         this.forwardRuleId = forwardRuleId;
     }
 
 
     /**
-     * set 区域 Id
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -126,7 +126,7 @@ public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.
      *
      * @param instanceId
      */
-    public DeleteForwardRuleRequest instanceId(Long instanceId) {
+    public DeleteForwardRuleRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -136,7 +136,7 @@ public class DeleteForwardRuleRequest extends JdcloudRequest implements java.io.
      *
      * @param forwardRuleId
      */
-    public DeleteForwardRuleRequest forwardRuleId(Long forwardRuleId) {
+    public DeleteForwardRuleRequest forwardRuleId(String forwardRuleId) {
         this.forwardRuleId = forwardRuleId;
         return this;
     }

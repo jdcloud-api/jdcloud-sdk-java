@@ -109,9 +109,40 @@ public class InstanceSpec  implements java.io.Serializable {
     private ChargeSpec charge;
 
     /**
+     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     */
+    private List<Userdata> userdata;
+
+    /**
      * 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String description;
+
+    /**
+     * 不使用模板中的密码。
+仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+
+     */
+    private Boolean noPassword;
+
+    /**
+     * 不使用模板中的密钥。
+仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+
+     */
+    private Boolean noKeyNames;
+
+    /**
+     * 不使用模板中的弹性公网IP。
+仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     */
+    private Boolean noElasticIp;
 
 
     /**
@@ -357,6 +388,30 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @return
+     */
+    public List<Userdata> getUserdata() {
+        return userdata;
+    }
+
+    /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void setUserdata(List<Userdata> userdata) {
+        this.userdata = userdata;
+    }
+
+    /**
      * get 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @return
@@ -372,6 +427,76 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 不使用模板中的密码。
+仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+
+     *
+     * @return
+     */
+    public Boolean getNoPassword() {
+        return noPassword;
+    }
+
+    /**
+     * set 不使用模板中的密码。
+仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+
+     *
+     * @param noPassword
+     */
+    public void setNoPassword(Boolean noPassword) {
+        this.noPassword = noPassword;
+    }
+
+    /**
+     * get 不使用模板中的密钥。
+仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+
+     *
+     * @return
+     */
+    public Boolean getNoKeyNames() {
+        return noKeyNames;
+    }
+
+    /**
+     * set 不使用模板中的密钥。
+仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+
+     *
+     * @param noKeyNames
+     */
+    public void setNoKeyNames(Boolean noKeyNames) {
+        this.noKeyNames = noKeyNames;
+    }
+
+    /**
+     * get 不使用模板中的弹性公网IP。
+仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     *
+     * @return
+     */
+    public Boolean getNoElasticIp() {
+        return noElasticIp;
+    }
+
+    /**
+     * set 不使用模板中的弹性公网IP。
+仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     *
+     * @param noElasticIp
+     */
+    public void setNoElasticIp(Boolean noElasticIp) {
+        this.noElasticIp = noElasticIp;
     }
 
 
@@ -510,12 +635,63 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public InstanceSpec userdata(List<Userdata> userdata) {
+        this.userdata = userdata;
+        return this;
+    }
+
+    /**
      * set 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      *
      * @param description
      */
     public InstanceSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 不使用模板中的密码。
+仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+
+     *
+     * @param noPassword
+     */
+    public InstanceSpec noPassword(Boolean noPassword) {
+        this.noPassword = noPassword;
+        return this;
+    }
+
+    /**
+     * set 不使用模板中的密钥。
+仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+
+     *
+     * @param noKeyNames
+     */
+    public InstanceSpec noKeyNames(Boolean noKeyNames) {
+        this.noKeyNames = noKeyNames;
+        return this;
+    }
+
+    /**
+     * set 不使用模板中的弹性公网IP。
+仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
+若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     *
+     * @param noElasticIp
+     */
+    public InstanceSpec noElasticIp(Boolean noElasticIp) {
+        this.noElasticIp = noElasticIp;
         return this;
     }
 
@@ -542,6 +718,21 @@ public class InstanceSpec  implements java.io.Serializable {
             this.dataDisks = new ArrayList<>();
         }
         this.dataDisks.add(dataDisk);
+    }
+
+    /**
+     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void addUserdata(Userdata userdata) {
+        if (this.userdata == null) {
+            this.userdata = new ArrayList<>();
+        }
+        this.userdata.add(userdata);
     }
 
 }

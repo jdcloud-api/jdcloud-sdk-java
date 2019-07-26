@@ -55,7 +55,7 @@ public class CategoryTreeNode  implements java.io.Serializable {
     private String description;
 
     /**
-     * children
+     * 子分类
      */
     private List<CategoryTreeNode> children;
 
@@ -143,7 +143,7 @@ public class CategoryTreeNode  implements java.io.Serializable {
     }
 
     /**
-     * get children
+     * get 子分类
      *
      * @return
      */
@@ -152,7 +152,7 @@ public class CategoryTreeNode  implements java.io.Serializable {
     }
 
     /**
-     * set children
+     * set 子分类
      *
      * @param children
      */
@@ -238,7 +238,7 @@ public class CategoryTreeNode  implements java.io.Serializable {
     }
 
     /**
-     * set children
+     * set 子分类
      *
      * @param children
      */
@@ -269,7 +269,7 @@ public class CategoryTreeNode  implements java.io.Serializable {
 
 
     /**
-     * add item to children
+     * add item to 子分类
      *
      * @param children
      */

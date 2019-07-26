@@ -42,7 +42,7 @@ public class CheckNameRequest extends JdcloudRequest implements java.io.Serializ
     private String name;
 
     /**
-     * Region ID
+     * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      * Required:true
      */
     @Required
@@ -68,7 +68,7 @@ public class CheckNameRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get Region ID
+     * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class CheckNameRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */
@@ -97,7 +97,7 @@ public class CheckNameRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set Region ID
+     * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
      */

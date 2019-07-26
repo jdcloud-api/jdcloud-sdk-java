@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ipanti.model.DescribeVpcIpListResponse;
 
 /**
- * 查询用户的京东云 IP 资源
+ * 查询用户可设置为网站类规则回源 IP 的京东云云内弹性公网 IP 资源
  */
 class DescribeVpcIpListExecutor extends JdcloudExecutor {
 
