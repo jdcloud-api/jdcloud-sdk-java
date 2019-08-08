@@ -40,7 +40,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private String containerName;
+    private String name;
 
     /**
      * 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
@@ -59,7 +59,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
 
     /**
      * 镜像名称 &lt;/br&gt;
-容器镜像名字。 nginx:latest。长度范围：[1-500]
+容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
@@ -69,7 +69,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     private String image;
 
     /**
-     * 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      */
     private String secret;
 
@@ -94,9 +94,9 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     private ProbeSpec readinessProbe;
 
     /**
-     * 容器计算资源配置
+     * 云盘挂载信息
      */
-    private List<VolumeMount> volumeMounts;
+    private List<VolumeMountSpec> volumeMounts;
 
 
     /**
@@ -104,17 +104,17 @@ public class RebuildContainerSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public String getContainerName() {
-        return containerName;
+    public String getName() {
+        return name;
     }
 
     /**
      * set 容器名称
      *
-     * @param containerName
+     * @param name
      */
-    public void setContainerName(String containerName) {
-        this.containerName = containerName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
@@ -173,7 +173,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
 
     /**
      * get 镜像名称 &lt;/br&gt;
-容器镜像名字。 nginx:latest。长度范围：[1-500]
+容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
@@ -186,7 +186,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
 
     /**
      * set 镜像名称 &lt;/br&gt;
-容器镜像名字。 nginx:latest。长度范围：[1-500]
+容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
@@ -198,7 +198,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * get 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      *
      * @return
      */
@@ -207,7 +207,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * set 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      *
      * @param secret
      */
@@ -288,20 +288,20 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器计算资源配置
+     * get 云盘挂载信息
      *
      * @return
      */
-    public List<VolumeMount> getVolumeMounts() {
+    public List<VolumeMountSpec> getVolumeMounts() {
         return volumeMounts;
     }
 
     /**
-     * set 容器计算资源配置
+     * set 云盘挂载信息
      *
      * @param volumeMounts
      */
-    public void setVolumeMounts(List<VolumeMount> volumeMounts) {
+    public void setVolumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
     }
 
@@ -309,10 +309,10 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     /**
      * set 容器名称
      *
-     * @param containerName
+     * @param name
      */
-    public RebuildContainerSpec containerName(String containerName) {
-        this.containerName = containerName;
+    public RebuildContainerSpec name(String name) {
+        this.name = name;
         return this;
     }
 
@@ -348,7 +348,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
 
     /**
      * set 镜像名称 &lt;/br&gt;
-容器镜像名字。 nginx:latest。长度范围：[1-500]
+容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
@@ -361,7 +361,7 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * set 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      *
      * @param secret
      */
@@ -411,11 +411,11 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器计算资源配置
+     * set 云盘挂载信息
      *
      * @param volumeMounts
      */
-    public RebuildContainerSpec volumeMounts(List<VolumeMount> volumeMounts) {
+    public RebuildContainerSpec volumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
         return this;
     }
@@ -458,11 +458,11 @@ public class RebuildContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 容器计算资源配置
+     * add item to 云盘挂载信息
      *
      * @param volumeMount
      */
-    public void addVolumeMount(VolumeMount volumeMount) {
+    public void addVolumeMount(VolumeMountSpec volumeMount) {
         if (this.volumeMounts == null) {
             this.volumeMounts = new ArrayList<>();
         }

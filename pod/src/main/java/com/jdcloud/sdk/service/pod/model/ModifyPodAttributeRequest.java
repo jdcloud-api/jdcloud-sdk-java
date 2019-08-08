@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * pod
- * pod 相关接口
+ * Pod
+ * Pod 相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改 pod 的 名称 和 描述。
+ * 修改 pod 的描述。
 
  */
 public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,7 +36,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * pod name 和 description 必须要指定一个
+     * 修改后的描述
      */
     private String description;
 
@@ -56,7 +56,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get pod name 和 description 必须要指定一个
+     * get 修改后的描述
      *
      * @return
      */
@@ -65,7 +65,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set pod name 和 description 必须要指定一个
+     * set 修改后的描述
      *
      * @param description
      */
@@ -111,7 +111,7 @@ public class ModifyPodAttributeRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set pod name 和 description 必须要指定一个
+     * set 修改后的描述
      *
      * @param description
      */

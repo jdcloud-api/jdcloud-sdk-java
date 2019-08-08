@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * container 详情
+ * 容器详情
  */
 public class Container  implements java.io.Serializable {
 
@@ -40,59 +40,59 @@ public class Container  implements java.io.Serializable {
     private String name;
 
     /**
-     * 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+     * 容器执行的命令。
      */
     private List<String> command;
 
     /**
-     * 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+     * 容器执行命令的参数。
      */
     private List<String> args;
 
     /**
-     * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * 容器执行的环境变量。
      */
-    private List<EnvSpec> env;
+    private List<Env> env;
 
     /**
-     * 镜像名称 &lt;/br&gt; 容器镜像名字。 nginx:latest。长度范围：[1-500] 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
+     * 容器镜像名称。
      */
     private String image;
 
     /**
-     * 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * 容器镜像仓库认证信息。
      */
     private String secret;
 
     /**
-     * 容器是否分配tty。默认不分配
+     * 容器是否分配tty。
      */
     private Boolean tty;
 
     /**
-     * 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径；长度范围：[0-1024]
+     * 容器的工作目录。
      */
     private String workingDir;
 
     /**
      * 容器存活探针配置
      */
-    private ProbeSpec livenessProbe;
+    private Probe livenessProbe;
 
     /**
      * 容器服务就绪探针配置
      */
-    private ProbeSpec readinessProbe;
+    private Probe readinessProbe;
 
     /**
      * 容器计算资源配置
      */
-    private ResourceRequestsSpec resources;
+    private ResourceRequests resources;
 
     /**
      * 容器计算资源配置
      */
-    private CloudDiskSpec systemDisk;
+    private CloudDisk systemDisk;
 
     /**
      * 容器计算资源配置
@@ -124,7 +124,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+     * get 容器执行的命令。
      *
      * @return
      */
@@ -133,7 +133,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+     * set 容器执行的命令。
      *
      * @param command
      */
@@ -142,7 +142,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+     * get 容器执行命令的参数。
      *
      * @return
      */
@@ -151,7 +151,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+     * set 容器执行命令的参数。
      *
      * @param args
      */
@@ -160,25 +160,25 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * get 容器执行的环境变量。
      *
      * @return
      */
-    public List<EnvSpec> getEnv() {
+    public List<Env> getEnv() {
         return env;
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * set 容器执行的环境变量。
      *
      * @param env
      */
-    public void setEnv(List<EnvSpec> env) {
+    public void setEnv(List<Env> env) {
         this.env = env;
     }
 
     /**
-     * get 镜像名称 &lt;/br&gt; 容器镜像名字。 nginx:latest。长度范围：[1-500] 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
+     * get 容器镜像名称。
      *
      * @return
      */
@@ -187,7 +187,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像名称 &lt;/br&gt; 容器镜像名字。 nginx:latest。长度范围：[1-500] 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
+     * set 容器镜像名称。
      *
      * @param image
      */
@@ -196,7 +196,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * get 容器镜像仓库认证信息。
      *
      * @return
      */
@@ -205,7 +205,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * set 容器镜像仓库认证信息。
      *
      * @param secret
      */
@@ -214,7 +214,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get 容器是否分配tty。默认不分配
+     * get 容器是否分配tty。
      *
      * @return
      */
@@ -223,7 +223,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器是否分配tty。默认不分配
+     * set 容器是否分配tty。
      *
      * @param tty
      */
@@ -232,7 +232,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径；长度范围：[0-1024]
+     * get 容器的工作目录。
      *
      * @return
      */
@@ -241,7 +241,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径；长度范围：[0-1024]
+     * set 容器的工作目录。
      *
      * @param workingDir
      */
@@ -254,7 +254,7 @@ public class Container  implements java.io.Serializable {
      *
      * @return
      */
-    public ProbeSpec getLivenessProbe() {
+    public Probe getLivenessProbe() {
         return livenessProbe;
     }
 
@@ -263,7 +263,7 @@ public class Container  implements java.io.Serializable {
      *
      * @param livenessProbe
      */
-    public void setLivenessProbe(ProbeSpec livenessProbe) {
+    public void setLivenessProbe(Probe livenessProbe) {
         this.livenessProbe = livenessProbe;
     }
 
@@ -272,7 +272,7 @@ public class Container  implements java.io.Serializable {
      *
      * @return
      */
-    public ProbeSpec getReadinessProbe() {
+    public Probe getReadinessProbe() {
         return readinessProbe;
     }
 
@@ -281,7 +281,7 @@ public class Container  implements java.io.Serializable {
      *
      * @param readinessProbe
      */
-    public void setReadinessProbe(ProbeSpec readinessProbe) {
+    public void setReadinessProbe(Probe readinessProbe) {
         this.readinessProbe = readinessProbe;
     }
 
@@ -290,7 +290,7 @@ public class Container  implements java.io.Serializable {
      *
      * @return
      */
-    public ResourceRequestsSpec getResources() {
+    public ResourceRequests getResources() {
         return resources;
     }
 
@@ -299,7 +299,7 @@ public class Container  implements java.io.Serializable {
      *
      * @param resources
      */
-    public void setResources(ResourceRequestsSpec resources) {
+    public void setResources(ResourceRequests resources) {
         this.resources = resources;
     }
 
@@ -308,7 +308,7 @@ public class Container  implements java.io.Serializable {
      *
      * @return
      */
-    public CloudDiskSpec getSystemDisk() {
+    public CloudDisk getSystemDisk() {
         return systemDisk;
     }
 
@@ -317,7 +317,7 @@ public class Container  implements java.io.Serializable {
      *
      * @param systemDisk
      */
-    public void setSystemDisk(CloudDiskSpec systemDisk) {
+    public void setSystemDisk(CloudDisk systemDisk) {
         this.systemDisk = systemDisk;
     }
 
@@ -369,7 +369,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+     * set 容器执行的命令。
      *
      * @param command
      */
@@ -379,7 +379,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+     * set 容器执行命令的参数。
      *
      * @param args
      */
@@ -389,17 +389,17 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * set 容器执行的环境变量。
      *
      * @param env
      */
-    public Container env(List<EnvSpec> env) {
+    public Container env(List<Env> env) {
         this.env = env;
         return this;
     }
 
     /**
-     * set 镜像名称 &lt;/br&gt; 容器镜像名字。 nginx:latest。长度范围：[1-500] 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt;
+     * set 容器镜像名称。
      *
      * @param image
      */
@@ -409,7 +409,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * set 容器镜像仓库认证信息。
      *
      * @param secret
      */
@@ -419,7 +419,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器是否分配tty。默认不分配
+     * set 容器是否分配tty。
      *
      * @param tty
      */
@@ -429,7 +429,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径；长度范围：[0-1024]
+     * set 容器的工作目录。
      *
      * @param workingDir
      */
@@ -443,7 +443,7 @@ public class Container  implements java.io.Serializable {
      *
      * @param livenessProbe
      */
-    public Container livenessProbe(ProbeSpec livenessProbe) {
+    public Container livenessProbe(Probe livenessProbe) {
         this.livenessProbe = livenessProbe;
         return this;
     }
@@ -453,7 +453,7 @@ public class Container  implements java.io.Serializable {
      *
      * @param readinessProbe
      */
-    public Container readinessProbe(ProbeSpec readinessProbe) {
+    public Container readinessProbe(Probe readinessProbe) {
         this.readinessProbe = readinessProbe;
         return this;
     }
@@ -463,7 +463,7 @@ public class Container  implements java.io.Serializable {
      *
      * @param resources
      */
-    public Container resources(ResourceRequestsSpec resources) {
+    public Container resources(ResourceRequests resources) {
         this.resources = resources;
         return this;
     }
@@ -473,7 +473,7 @@ public class Container  implements java.io.Serializable {
      *
      * @param systemDisk
      */
-    public Container systemDisk(CloudDiskSpec systemDisk) {
+    public Container systemDisk(CloudDisk systemDisk) {
         this.systemDisk = systemDisk;
         return this;
     }
@@ -500,7 +500,7 @@ public class Container  implements java.io.Serializable {
 
 
     /**
-     * add item to 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT。总长度256个字符。
+     * add item to 容器执行的命令。
      *
      * @param command
      */
@@ -512,7 +512,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * add item to 容器执行命令的参数，如果不指定默认是docker镜像的CMD。总长度2048个字符。
+     * add item to 容器执行命令的参数。
      *
      * @param arg
      */
@@ -524,11 +524,11 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * add item to 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * add item to 容器执行的环境变量。
      *
      * @param env
      */
-    public void addEnv(EnvSpec env) {
+    public void addEnv(Env env) {
         if (this.env == null) {
             this.env = new ArrayList<>();
         }

@@ -45,6 +45,16 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     private List<DescribedNoticeContacts> contacts;
 
     /**
+     * 告警持续次数
+     */
+    private Long durationTimes;
+
+    /**
+     * 告警持续时间，单位分钟
+     */
+    private Long noticeDurationTime;
+
+    /**
      * 触发的告警级别。从低到高分别为‘common’, ‘critical’, ‘fatal’
      */
     private String noticeLevelTriggered;
@@ -94,6 +104,42 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
      */
     public void setContacts(List<DescribedNoticeContacts> contacts) {
         this.contacts = contacts;
+    }
+
+    /**
+     * get 告警持续次数
+     *
+     * @return
+     */
+    public Long getDurationTimes() {
+        return durationTimes;
+    }
+
+    /**
+     * set 告警持续次数
+     *
+     * @param durationTimes
+     */
+    public void setDurationTimes(Long durationTimes) {
+        this.durationTimes = durationTimes;
+    }
+
+    /**
+     * get 告警持续时间，单位分钟
+     *
+     * @return
+     */
+    public Long getNoticeDurationTime() {
+        return noticeDurationTime;
+    }
+
+    /**
+     * set 告警持续时间，单位分钟
+     *
+     * @param noticeDurationTime
+     */
+    public void setNoticeDurationTime(Long noticeDurationTime) {
+        this.noticeDurationTime = noticeDurationTime;
     }
 
     /**
@@ -168,6 +214,26 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
      */
     public DescribedAlarmHistory contacts(List<DescribedNoticeContacts> contacts) {
         this.contacts = contacts;
+        return this;
+    }
+
+    /**
+     * set 告警持续次数
+     *
+     * @param durationTimes
+     */
+    public DescribedAlarmHistory durationTimes(Long durationTimes) {
+        this.durationTimes = durationTimes;
+        return this;
+    }
+
+    /**
+     * set 告警持续时间，单位分钟
+     *
+     * @param noticeDurationTime
+     */
+    public DescribedAlarmHistory noticeDurationTime(Long noticeDurationTime) {
+        this.noticeDurationTime = noticeDurationTime;
         return this;
     }
 

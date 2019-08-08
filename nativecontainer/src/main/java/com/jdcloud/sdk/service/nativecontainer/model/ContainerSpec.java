@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 
 /**
- * 指定挂载的Volume
+ * 容器规格
  */
 public class ContainerSpec  implements java.io.Serializable {
 
@@ -60,7 +60,7 @@ public class ContainerSpec  implements java.io.Serializable {
     /**
      * 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
      */
-    private List<HostAlias> hostAliases;
+    private List<HostAliasSpec> hostAliases;
 
     /**
      * 主机名，规范请参考说明文档；默认容器ID
@@ -78,19 +78,19 @@ public class ContainerSpec  implements java.io.Serializable {
     private List<String> args;
 
     /**
-     * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      */
     private List<EnvVar> envs;
 
     /**
-     * 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
      * Required:true
      */
     @Required
     private String image;
 
     /**
-     * secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+     * 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      */
     private String secret;
 
@@ -203,7 +203,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public List<HostAlias> getHostAliases() {
+    public List<HostAliasSpec> getHostAliases() {
         return hostAliases;
     }
 
@@ -212,7 +212,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param hostAliases
      */
-    public void setHostAliases(List<HostAlias> hostAliases) {
+    public void setHostAliases(List<HostAliasSpec> hostAliases) {
         this.hostAliases = hostAliases;
     }
 
@@ -271,7 +271,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      *
      * @return
      */
@@ -280,7 +280,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      *
      * @param envs
      */
@@ -289,7 +289,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * get 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
      *
      * @return
      */
@@ -298,7 +298,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
      *
      * @param image
      */
@@ -307,7 +307,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+     * get 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      *
      * @return
      */
@@ -316,7 +316,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+     * set 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      *
      * @param secret
      */
@@ -522,7 +522,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param hostAliases
      */
-    public ContainerSpec hostAliases(List<HostAlias> hostAliases) {
+    public ContainerSpec hostAliases(List<HostAliasSpec> hostAliases) {
         this.hostAliases = hostAliases;
         return this;
     }
@@ -558,7 +558,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      *
      * @param envs
      */
@@ -568,7 +568,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * set 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符
      *
      * @param image
      */
@@ -578,7 +578,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+     * set 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      *
      * @param secret
      */
@@ -683,7 +683,7 @@ public class ContainerSpec  implements java.io.Serializable {
      *
      * @param hostAliase
      */
-    public void addHostAliase(HostAlias hostAliase) {
+    public void addHostAliase(HostAliasSpec hostAliase) {
         if (this.hostAliases == null) {
             this.hostAliases = new ArrayList<>();
         }
@@ -715,7 +715,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * add item to 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      *
      * @param env
      */

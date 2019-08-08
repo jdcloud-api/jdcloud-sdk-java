@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * tagFilter
@@ -36,7 +37,9 @@ public class TagFilter  implements java.io.Serializable {
 
     /**
      * Tag键
+     * Required:true
      */
+    @Required
     private String key;
 
     /**

@@ -26,7 +26,6 @@ package com.jdcloud.sdk.service.pod.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * exec
@@ -36,15 +35,13 @@ public class Exec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 执行的命令,总长度256个字符。 s
-     * Required:true
+     * 执行的命令。
      */
-    @Required
     private List<String> command;
 
 
     /**
-     * get 执行的命令,总长度256个字符。 s
+     * get 执行的命令。
      *
      * @return
      */
@@ -53,7 +50,7 @@ public class Exec  implements java.io.Serializable {
     }
 
     /**
-     * set 执行的命令,总长度256个字符。 s
+     * set 执行的命令。
      *
      * @param command
      */
@@ -63,7 +60,7 @@ public class Exec  implements java.io.Serializable {
 
 
     /**
-     * set 执行的命令,总长度256个字符。 s
+     * set 执行的命令。
      *
      * @param command
      */
@@ -74,7 +71,7 @@ public class Exec  implements java.io.Serializable {
 
 
     /**
-     * add item to 执行的命令,总长度256个字符。 s
+     * add item to 执行的命令。
      *
      * @param command
      */

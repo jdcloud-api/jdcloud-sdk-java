@@ -50,12 +50,12 @@ public class PodStatus  implements java.io.Serializable {
     private String message;
 
     /**
-     * IP address allocated to the pod. Routable at least within the cluster. Empty if not yet allocated.
+     * 分配给pod的IP地址。至少在集群内是可路由的。未分配则为空。
      */
     private String podIP;
 
     /**
-     * Current service state of pod.
+     * 目前pod的状态。
      */
     private List<PodCondition> conditions;
 
@@ -120,7 +120,7 @@ public class PodStatus  implements java.io.Serializable {
     }
 
     /**
-     * get IP address allocated to the pod. Routable at least within the cluster. Empty if not yet allocated.
+     * get 分配给pod的IP地址。至少在集群内是可路由的。未分配则为空。
      *
      * @return
      */
@@ -129,7 +129,7 @@ public class PodStatus  implements java.io.Serializable {
     }
 
     /**
-     * set IP address allocated to the pod. Routable at least within the cluster. Empty if not yet allocated.
+     * set 分配给pod的IP地址。至少在集群内是可路由的。未分配则为空。
      *
      * @param podIP
      */
@@ -138,7 +138,7 @@ public class PodStatus  implements java.io.Serializable {
     }
 
     /**
-     * get Current service state of pod.
+     * get 目前pod的状态。
      *
      * @return
      */
@@ -147,7 +147,7 @@ public class PodStatus  implements java.io.Serializable {
     }
 
     /**
-     * set Current service state of pod.
+     * set 目前pod的状态。
      *
      * @param conditions
      */
@@ -205,7 +205,7 @@ public class PodStatus  implements java.io.Serializable {
     }
 
     /**
-     * set IP address allocated to the pod. Routable at least within the cluster. Empty if not yet allocated.
+     * set 分配给pod的IP地址。至少在集群内是可路由的。未分配则为空。
      *
      * @param podIP
      */
@@ -215,7 +215,7 @@ public class PodStatus  implements java.io.Serializable {
     }
 
     /**
-     * set Current service state of pod.
+     * set 目前pod的状态。
      *
      * @param conditions
      */
@@ -236,7 +236,7 @@ public class PodStatus  implements java.io.Serializable {
 
 
     /**
-     * add item to Current service state of pod.
+     * add item to 目前pod的状态。
      *
      * @param condition
      */

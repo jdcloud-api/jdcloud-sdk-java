@@ -62,11 +62,18 @@ public class MaintainAuxiliaryTags  implements java.io.Serializable {
     private List<String> resourceIds;
 
     /**
-     * 资源的产品线
+     * 资源的产品线，要对哪个产品线的资源打标签
      * Required:true
      */
     @Required
     private String serviceCode;
+
+    /**
+     * 打标签操作所属产品线的serviceCode
+     * Required:true
+     */
+    @Required
+    private String srcServiceCode;
 
     /**
      * tags
@@ -149,7 +156,7 @@ public class MaintainAuxiliaryTags  implements java.io.Serializable {
     }
 
     /**
-     * get 资源的产品线
+     * get 资源的产品线，要对哪个产品线的资源打标签
      *
      * @return
      */
@@ -158,12 +165,30 @@ public class MaintainAuxiliaryTags  implements java.io.Serializable {
     }
 
     /**
-     * set 资源的产品线
+     * set 资源的产品线，要对哪个产品线的资源打标签
      *
      * @param serviceCode
      */
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+    }
+
+    /**
+     * get 打标签操作所属产品线的serviceCode
+     *
+     * @return
+     */
+    public String getSrcServiceCode() {
+        return srcServiceCode;
+    }
+
+    /**
+     * set 打标签操作所属产品线的serviceCode
+     *
+     * @param srcServiceCode
+     */
+    public void setSrcServiceCode(String srcServiceCode) {
+        this.srcServiceCode = srcServiceCode;
     }
 
     /**
@@ -226,12 +251,22 @@ public class MaintainAuxiliaryTags  implements java.io.Serializable {
     }
 
     /**
-     * set 资源的产品线
+     * set 资源的产品线，要对哪个产品线的资源打标签
      *
      * @param serviceCode
      */
     public MaintainAuxiliaryTags serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set 打标签操作所属产品线的serviceCode
+     *
+     * @param srcServiceCode
+     */
+    public MaintainAuxiliaryTags srcServiceCode(String srcServiceCode) {
+        this.srcServiceCode = srcServiceCode;
         return this;
     }
 

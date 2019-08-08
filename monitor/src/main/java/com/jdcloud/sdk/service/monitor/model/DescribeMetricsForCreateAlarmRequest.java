@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Monitoring Items APIs
+ * 监控项相关接口
  * 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
  *
  * OpenAPI spec version: v1
@@ -38,6 +38,11 @@ public class DescribeMetricsForCreateAlarmRequest extends JdcloudRequest impleme
      */
     private String serviceCode;
 
+    /**
+     * metric类型，取值0、1；默认值：0（常规指标，用于控制台创建报警规则）、1（其它）
+     */
+    private Long type;
+
 
     /**
      * get 资源的类型，取值vm, lb, ip, database 等
@@ -57,6 +62,24 @@ public class DescribeMetricsForCreateAlarmRequest extends JdcloudRequest impleme
         this.serviceCode = serviceCode;
     }
 
+    /**
+     * get metric类型，取值0、1；默认值：0（常规指标，用于控制台创建报警规则）、1（其它）
+     *
+     * @return
+     */
+    public Long getType() {
+        return type;
+    }
+
+    /**
+     * set metric类型，取值0、1；默认值：0（常规指标，用于控制台创建报警规则）、1（其它）
+     *
+     * @param type
+     */
+    public void setType(Long type) {
+        this.type = type;
+    }
+
 
     /**
      * set 资源的类型，取值vm, lb, ip, database 等
@@ -65,6 +88,16 @@ public class DescribeMetricsForCreateAlarmRequest extends JdcloudRequest impleme
      */
     public DescribeMetricsForCreateAlarmRequest serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set metric类型，取值0、1；默认值：0（常规指标，用于控制台创建报警规则）、1（其它）
+     *
+     * @param type
+     */
+    public DescribeMetricsForCreateAlarmRequest type(Long type) {
+        this.type = type;
         return this;
     }
 

@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * tcpSocket
@@ -34,38 +33,13 @@ public class TcpSocket  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 连接到pod的host信息，默认使用pod_ip
+     * 端口号，范围：[1-65535]
      */
-    private String host;
-
-    /**
-     * 范围：[1-65535]
-     * Required:true
-     */
-    @Required
     private Integer port;
 
 
     /**
-     * get 连接到pod的host信息，默认使用pod_ip
-     *
-     * @return
-     */
-    public String getHost() {
-        return host;
-    }
-
-    /**
-     * set 连接到pod的host信息，默认使用pod_ip
-     *
-     * @param host
-     */
-    public void setHost(String host) {
-        this.host = host;
-    }
-
-    /**
-     * get 范围：[1-65535]
+     * get 端口号，范围：[1-65535]
      *
      * @return
      */
@@ -74,7 +48,7 @@ public class TcpSocket  implements java.io.Serializable {
     }
 
     /**
-     * set 范围：[1-65535]
+     * set 端口号，范围：[1-65535]
      *
      * @param port
      */
@@ -84,17 +58,7 @@ public class TcpSocket  implements java.io.Serializable {
 
 
     /**
-     * set 连接到pod的host信息，默认使用pod_ip
-     *
-     * @param host
-     */
-    public TcpSocket host(String host) {
-        this.host = host;
-        return this;
-    }
-
-    /**
-     * set 范围：[1-65535]
+     * set 端口号，范围：[1-65535]
      *
      * @param port
      */

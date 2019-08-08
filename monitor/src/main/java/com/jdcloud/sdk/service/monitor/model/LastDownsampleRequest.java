@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Monitoring Items APIs
+ * 监控项相关接口
  * 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
  *
  * OpenAPI spec version: v1
@@ -57,12 +57,12 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     private List<TagFilter> tags;
 
     /**
-     * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（早于30d时，将被重置为30d）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      */
     private String startTime;
 
     /**
-     * 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      */
     private String endTime;
 
@@ -77,7 +77,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     private String aggrType;
 
     /**
-     * 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式
+     * 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式,默认last
      */
     private String downAggrType;
 
@@ -151,7 +151,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * get 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（早于30d时，将被重置为30d）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @return
      */
@@ -160,7 +160,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * set 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（早于30d时，将被重置为30d）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @param startTime
      */
@@ -169,7 +169,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * get 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @return
      */
@@ -178,7 +178,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * set 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @param endTime
      */
@@ -223,7 +223,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式
+     * get 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式,默认last
      *
      * @return
      */
@@ -232,7 +232,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式
+     * set 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式,默认last
      *
      * @param downAggrType
      */
@@ -308,7 +308,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（默认为当前时间，早于30d时，将被重置为30d）
+     * set 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（早于30d时，将被重置为30d）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @param startTime
      */
@@ -318,7 +318,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * set 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @param endTime
      */
@@ -348,7 +348,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式
+     * set 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式,默认last
      *
      * @param downAggrType
      */

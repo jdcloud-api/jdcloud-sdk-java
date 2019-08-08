@@ -65,6 +65,11 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
     private String enabled;
 
     /**
+     * ftpOption
+     */
+    private SiteMonitorFtpOption ftpOption;
+
+    /**
      * hawkeyeId
      */
     private Long hawkeyeId;
@@ -100,6 +105,11 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
     private String port;
 
     /**
+     * smtpOption
+     */
+    private SiteMonitorSmtpOption smtpOption;
+
+    /**
      * source
      */
     private List<SiteMonitorSource> source;
@@ -110,14 +120,14 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
     private Object stats;
 
     /**
+     * taskType
+     */
+    private String taskType;
+
+    /**
      * tcpOption
      */
     private SiteMonitorTcpOption tcpOption;
-
-    /**
-     * type
-     */
-    private String type;
 
     /**
      * udpOption
@@ -236,6 +246,24 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
      */
     public void setEnabled(String enabled) {
         this.enabled = enabled;
+    }
+
+    /**
+     * get ftpOption
+     *
+     * @return
+     */
+    public SiteMonitorFtpOption getFtpOption() {
+        return ftpOption;
+    }
+
+    /**
+     * set ftpOption
+     *
+     * @param ftpOption
+     */
+    public void setFtpOption(SiteMonitorFtpOption ftpOption) {
+        this.ftpOption = ftpOption;
     }
 
     /**
@@ -365,6 +393,24 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
     }
 
     /**
+     * get smtpOption
+     *
+     * @return
+     */
+    public SiteMonitorSmtpOption getSmtpOption() {
+        return smtpOption;
+    }
+
+    /**
+     * set smtpOption
+     *
+     * @param smtpOption
+     */
+    public void setSmtpOption(SiteMonitorSmtpOption smtpOption) {
+        this.smtpOption = smtpOption;
+    }
+
+    /**
      * get source
      *
      * @return
@@ -401,6 +447,24 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
     }
 
     /**
+     * get taskType
+     *
+     * @return
+     */
+    public String getTaskType() {
+        return taskType;
+    }
+
+    /**
+     * set taskType
+     *
+     * @param taskType
+     */
+    public void setTaskType(String taskType) {
+        this.taskType = taskType;
+    }
+
+    /**
      * get tcpOption
      *
      * @return
@@ -416,24 +480,6 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
      */
     public void setTcpOption(SiteMonitorTcpOption tcpOption) {
         this.tcpOption = tcpOption;
-    }
-
-    /**
-     * get type
-     *
-     * @return
-     */
-    public String getType() {
-        return type;
-    }
-
-    /**
-     * set type
-     *
-     * @param type
-     */
-    public void setType(String type) {
-        this.type = type;
     }
 
     /**
@@ -534,6 +580,16 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
     }
 
     /**
+     * set ftpOption
+     *
+     * @param ftpOption
+     */
+    public CreateSiteMonitorSpec ftpOption(SiteMonitorFtpOption ftpOption) {
+        this.ftpOption = ftpOption;
+        return this;
+    }
+
+    /**
      * set hawkeyeId
      *
      * @param hawkeyeId
@@ -604,6 +660,16 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
     }
 
     /**
+     * set smtpOption
+     *
+     * @param smtpOption
+     */
+    public CreateSiteMonitorSpec smtpOption(SiteMonitorSmtpOption smtpOption) {
+        this.smtpOption = smtpOption;
+        return this;
+    }
+
+    /**
      * set source
      *
      * @param source
@@ -624,22 +690,22 @@ public class CreateSiteMonitorSpec  implements java.io.Serializable {
     }
 
     /**
+     * set taskType
+     *
+     * @param taskType
+     */
+    public CreateSiteMonitorSpec taskType(String taskType) {
+        this.taskType = taskType;
+        return this;
+    }
+
+    /**
      * set tcpOption
      *
      * @param tcpOption
      */
     public CreateSiteMonitorSpec tcpOption(SiteMonitorTcpOption tcpOption) {
         this.tcpOption = tcpOption;
-        return this;
-    }
-
-    /**
-     * set type
-     *
-     * @param type
-     */
-    public CreateSiteMonitorSpec type(String type) {
-        this.type = type;
         return this;
     }
 

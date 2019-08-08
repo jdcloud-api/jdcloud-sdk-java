@@ -34,14 +34,14 @@ public class BaseContact  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 联系人id
+     * 联系人id。  注：ReferenceType&#x3D;2时，联系人id请填0
      * Required:true
      */
     @Required
     private Long referenceId;
 
     /**
-     * 联系人id类型：0,联系人分组id;1,联系人id
+     * 联系人id类型：0,联系人分组id;1,联系人id，2，pin帐号主联系人
      * Required:true
      */
     @Required
@@ -49,7 +49,7 @@ public class BaseContact  implements java.io.Serializable {
 
 
     /**
-     * get 联系人id
+     * get 联系人id。  注：ReferenceType&#x3D;2时，联系人id请填0
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class BaseContact  implements java.io.Serializable {
     }
 
     /**
-     * set 联系人id
+     * set 联系人id。  注：ReferenceType&#x3D;2时，联系人id请填0
      *
      * @param referenceId
      */
@@ -67,7 +67,7 @@ public class BaseContact  implements java.io.Serializable {
     }
 
     /**
-     * get 联系人id类型：0,联系人分组id;1,联系人id
+     * get 联系人id类型：0,联系人分组id;1,联系人id，2，pin帐号主联系人
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class BaseContact  implements java.io.Serializable {
     }
 
     /**
-     * set 联系人id类型：0,联系人分组id;1,联系人id
+     * set 联系人id类型：0,联系人分组id;1,联系人id，2，pin帐号主联系人
      *
      * @param referenceType
      */
@@ -86,7 +86,7 @@ public class BaseContact  implements java.io.Serializable {
 
 
     /**
-     * set 联系人id
+     * set 联系人id。  注：ReferenceType&#x3D;2时，联系人id请填0
      *
      * @param referenceId
      */
@@ -96,7 +96,7 @@ public class BaseContact  implements java.io.Serializable {
     }
 
     /**
-     * set 联系人id类型：0,联系人分组id;1,联系人id
+     * set 联系人id类型：0,联系人分组id;1,联系人id，2，pin帐号主联系人
      *
      * @param referenceType
      */

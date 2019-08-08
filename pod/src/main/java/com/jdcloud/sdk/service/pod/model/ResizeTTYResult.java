@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 原生容器
- * container 相关接口
+ * Container
+ * Pod中容器的相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 

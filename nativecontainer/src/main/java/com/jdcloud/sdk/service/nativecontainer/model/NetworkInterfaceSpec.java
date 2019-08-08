@@ -43,7 +43,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * 可用区，用户的默认可用区
+     * 可用区，用户的默认可用区，暂不支持
      * Required:true
      */
     @Required
@@ -65,12 +65,12 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     private Integer secondaryIpCount;
 
     /**
-     * 安全组ID列表
+     * 要绑定的安全组ID列表，最多指定5个安全组
      */
     private List<String> securityGroups;
 
     /**
-     * PortSecurity，取值为0或者1，默认为1
+     * 源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能
      */
     private Boolean sanityCheck;
 
@@ -99,7 +99,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 可用区，用户的默认可用区
+     * get 可用区，用户的默认可用区，暂不支持
      *
      * @return
      */
@@ -108,7 +108,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区，用户的默认可用区
+     * set 可用区，用户的默认可用区，暂不支持
      *
      * @param az
      */
@@ -171,7 +171,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 安全组ID列表
+     * get 要绑定的安全组ID列表，最多指定5个安全组
      *
      * @return
      */
@@ -180,7 +180,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组ID列表
+     * set 要绑定的安全组ID列表，最多指定5个安全组
      *
      * @param securityGroups
      */
@@ -189,7 +189,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get PortSecurity，取值为0或者1，默认为1
+     * get 源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能
      *
      * @return
      */
@@ -198,7 +198,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set PortSecurity，取值为0或者1，默认为1
+     * set 源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能
      *
      * @param sanityCheck
      */
@@ -236,7 +236,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区，用户的默认可用区
+     * set 可用区，用户的默认可用区，暂不支持
      *
      * @param az
      */
@@ -276,7 +276,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组ID列表
+     * set 要绑定的安全组ID列表，最多指定5个安全组
      *
      * @param securityGroups
      */
@@ -286,7 +286,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set PortSecurity，取值为0或者1，默认为1
+     * set 源和目标IP地址校验，取值为0或者1，默认为1，暂不支持此功能
      *
      * @param sanityCheck
      */
@@ -319,7 +319,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 安全组ID列表
+     * add item to 要绑定的安全组ID列表，最多指定5个安全组
      *
      * @param securityGroup
      */

@@ -33,17 +33,17 @@ public class PodCondition  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Last time we probed the condition.
+     * 最后一次探测状态的时间
      */
     private String lastProbeTime;
 
     /**
-     * Last time the condition transitioned from one status to another.
+     * 最后一次改变状态的时间
      */
     private String lastTransitionTime;
 
     /**
-     * Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+     * 最后一次状态改变的简要原因
      */
     private String reason;
 
@@ -53,18 +53,18 @@ public class PodCondition  implements java.io.Serializable {
     private String status;
 
     /**
-     * Human-readable message indicating details about last transition.
+     * 最后一次状态改变的信息
      */
     private String message;
 
     /**
-     * Type is the type of the condition. Currently only Ready.
+     * 状态的条件。目前仅限 Ready.
      */
     private String conditionType;
 
 
     /**
-     * get Last time we probed the condition.
+     * get 最后一次探测状态的时间
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Last time we probed the condition.
+     * set 最后一次探测状态的时间
      *
      * @param lastProbeTime
      */
@@ -82,7 +82,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * get Last time the condition transitioned from one status to another.
+     * get 最后一次改变状态的时间
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Last time the condition transitioned from one status to another.
+     * set 最后一次改变状态的时间
      *
      * @param lastTransitionTime
      */
@@ -100,7 +100,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * get Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+     * get 最后一次状态改变的简要原因
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+     * set 最后一次状态改变的简要原因
      *
      * @param reason
      */
@@ -136,7 +136,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * get Human-readable message indicating details about last transition.
+     * get 最后一次状态改变的信息
      *
      * @return
      */
@@ -145,7 +145,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Human-readable message indicating details about last transition.
+     * set 最后一次状态改变的信息
      *
      * @param message
      */
@@ -154,7 +154,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * get Type is the type of the condition. Currently only Ready.
+     * get 状态的条件。目前仅限 Ready.
      *
      * @return
      */
@@ -163,7 +163,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Type is the type of the condition. Currently only Ready.
+     * set 状态的条件。目前仅限 Ready.
      *
      * @param conditionType
      */
@@ -173,7 +173,7 @@ public class PodCondition  implements java.io.Serializable {
 
 
     /**
-     * set Last time we probed the condition.
+     * set 最后一次探测状态的时间
      *
      * @param lastProbeTime
      */
@@ -183,7 +183,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Last time the condition transitioned from one status to another.
+     * set 最后一次改变状态的时间
      *
      * @param lastTransitionTime
      */
@@ -193,7 +193,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Unique, one-word, CamelCase reason for the condition&#39;s last transition.
+     * set 最后一次状态改变的简要原因
      *
      * @param reason
      */
@@ -213,7 +213,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Human-readable message indicating details about last transition.
+     * set 最后一次状态改变的信息
      *
      * @param message
      */
@@ -223,7 +223,7 @@ public class PodCondition  implements java.io.Serializable {
     }
 
     /**
-     * set Type is the type of the condition. Currently only Ready.
+     * set 状态的条件。目前仅限 Ready.
      *
      * @param conditionType
      */

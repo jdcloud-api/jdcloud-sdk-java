@@ -26,7 +26,6 @@ package com.jdcloud.sdk.service.pod.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 域名和IP映射的信息
@@ -36,25 +35,19 @@ public class HostAlias  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 域名列表。&lt;br&gt;
-eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
+     * 域名列表。
 
-     * Required:true
      */
-    @Required
     private List<String> hostnames;
 
     /**
-     * ipv4信息；eg &quot;127.0.0.1&quot;
-     * Required:true
+     * ipv4地址。
      */
-    @Required
     private String ip;
 
 
     /**
-     * get 域名列表。&lt;br&gt;
-eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
+     * get 域名列表。
 
      *
      * @return
@@ -64,8 +57,7 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
     }
 
     /**
-     * set 域名列表。&lt;br&gt;
-eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
+     * set 域名列表。
 
      *
      * @param hostnames
@@ -75,7 +67,7 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
     }
 
     /**
-     * get ipv4信息；eg &quot;127.0.0.1&quot;
+     * get ipv4地址。
      *
      * @return
      */
@@ -84,7 +76,7 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
     }
 
     /**
-     * set ipv4信息；eg &quot;127.0.0.1&quot;
+     * set ipv4地址。
      *
      * @param ip
      */
@@ -94,8 +86,7 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
 
 
     /**
-     * set 域名列表。&lt;br&gt;
-eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
+     * set 域名列表。
 
      *
      * @param hostnames
@@ -106,7 +97,7 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
     }
 
     /**
-     * set ipv4信息；eg &quot;127.0.0.1&quot;
+     * set ipv4地址。
      *
      * @param ip
      */
@@ -117,8 +108,7 @@ eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素�
 
 
     /**
-     * add item to 域名列表。&lt;br&gt;
-eg  [&quot;foo.local&quot;, &quot;bar.local&quot;]。长度范围 1-10; 元素符合hostname命名规范。
+     * add item to 域名列表。
 
      *
      * @param hostname

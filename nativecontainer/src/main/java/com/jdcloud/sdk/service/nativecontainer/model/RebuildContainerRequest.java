@@ -26,8 +26,8 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.nativecontainer.model.EnvVar;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.nativecontainer.model.EnvVar;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -49,21 +49,23 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
 
     /**
      * 镜像名称 &lt;/br&gt; 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; &lt;/br&gt; repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 下载镜像超时时间：10分钟
+     * Required:true
      */
+    @Required
     private String image;
 
     /**
-     * secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+     * 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      */
     private String secret;
 
     /**
-     * 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+     * 容器启动执行的命令, 如果不指定默认是镜像的ENTRYPOINT. 数组字符总长度范围：[0-256]
      */
     private List<String> command;
 
     /**
-     * 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+     * 容器启动执行命令的参数, 如果不指定默认是镜像的CMD. 数组字符总长度范围：[0-2048]
      */
     private List<String> args;
 
@@ -73,12 +75,12 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     private Boolean tty;
 
     /**
-     * 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径
+     * 容器的工作目录。如果不指定，默认是根目录（/），必须是绝对路径。字符长度范围：[0-1024]
      */
     private String workingDir;
 
     /**
-     * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      */
     private List<EnvVar> envs;
 
@@ -116,7 +118,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+     * get 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      *
      * @return
      */
@@ -125,7 +127,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+     * set 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      *
      * @param secret
      */
@@ -134,7 +136,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+     * get 容器启动执行的命令, 如果不指定默认是镜像的ENTRYPOINT. 数组字符总长度范围：[0-256]
      *
      * @return
      */
@@ -143,7 +145,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+     * set 容器启动执行的命令, 如果不指定默认是镜像的ENTRYPOINT. 数组字符总长度范围：[0-256]
      *
      * @param command
      */
@@ -152,7 +154,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+     * get 容器启动执行命令的参数, 如果不指定默认是镜像的CMD. 数组字符总长度范围：[0-2048]
      *
      * @return
      */
@@ -161,7 +163,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+     * set 容器启动执行命令的参数, 如果不指定默认是镜像的CMD. 数组字符总长度范围：[0-2048]
      *
      * @param args
      */
@@ -188,7 +190,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径
+     * get 容器的工作目录。如果不指定，默认是根目录（/），必须是绝对路径。字符长度范围：[0-1024]
      *
      * @return
      */
@@ -197,7 +199,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径
+     * set 容器的工作目录。如果不指定，默认是根目录（/），必须是绝对路径。字符长度范围：[0-1024]
      *
      * @param workingDir
      */
@@ -206,7 +208,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      *
      * @return
      */
@@ -215,7 +217,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      *
      * @param envs
      */
@@ -271,7 +273,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set secret引用名称；使用Docker Hub和京东云CR的镜像不需要secret
+     * set 镜像仓库认证信息；使用Docker Hub和京东云CR的镜像不需要secret
      *
      * @param secret
      */
@@ -281,7 +283,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+     * set 容器启动执行的命令, 如果不指定默认是镜像的ENTRYPOINT. 数组字符总长度范围：[0-256]
      *
      * @param command
      */
@@ -291,7 +293,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+     * set 容器启动执行命令的参数, 如果不指定默认是镜像的CMD. 数组字符总长度范围：[0-2048]
      *
      * @param args
      */
@@ -311,7 +313,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 容器的工作目录。如果不指定，默认是根目录（/）；必须是绝对路径
+     * set 容器的工作目录。如果不指定，默认是根目录（/），必须是绝对路径。字符长度范围：[0-1024]
      *
      * @param workingDir
      */
@@ -321,7 +323,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      *
      * @param envs
      */
@@ -352,7 +354,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * add item to 容器执行命令，如果不指定默认是docker镜像的ENTRYPOINT
+     * add item to 容器启动执行的命令, 如果不指定默认是镜像的ENTRYPOINT. 数组字符总长度范围：[0-256]
      *
      * @param command
      */
@@ -364,7 +366,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * add item to 容器执行命令的参数，如果不指定默认是docker镜像的CMD
+     * add item to 容器启动执行命令的参数, 如果不指定默认是镜像的CMD. 数组字符总长度范围：[0-2048]
      *
      * @param arg
      */
@@ -376,7 +378,7 @@ public class RebuildContainerRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * add item to 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大10对
+     * add item to 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值；&lt;/br&gt; 最大100对
      *
      * @param env
      */

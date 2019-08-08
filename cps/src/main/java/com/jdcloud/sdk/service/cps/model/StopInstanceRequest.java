@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 对单台云物理服务器执行关机操作，只能停止running状态的服务器
+ * 对单台云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
  */
 public class StopInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 

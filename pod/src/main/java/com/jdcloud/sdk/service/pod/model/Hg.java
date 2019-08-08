@@ -26,48 +26,42 @@ package com.jdcloud.sdk.service.pod.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * hg
+ * httpGet
  */
 public class Hg  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 默认值： http；可选值 http, https
+     * 默认值：http。
      */
     private String scheme;
 
     /**
-     * 连接到pod的host信息，默认使用pod_ip，满足hostname或者ipv4格式
+     * 连接到pod的host信息。
      */
     private String host;
 
     /**
-     * 范围：[1-65535]
-     * Required:true
+     * 端口号。
      */
-    @Required
     private Integer port;
 
     /**
-     * HTTP的路径。范围：[1-256]
-     * Required:true
+     * HTTP的路径。
      */
-    @Required
     private String path;
 
     /**
-     * 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
-如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 
+     * 自定义Http headers
      */
     private List<Hh> httpHeader;
 
 
     /**
-     * get 默认值： http；可选值 http, https
+     * get 默认值：http。
      *
      * @return
      */
@@ -76,7 +70,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set 默认值： http；可选值 http, https
+     * set 默认值：http。
      *
      * @param scheme
      */
@@ -85,7 +79,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * get 连接到pod的host信息，默认使用pod_ip，满足hostname或者ipv4格式
+     * get 连接到pod的host信息。
      *
      * @return
      */
@@ -94,7 +88,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set 连接到pod的host信息，默认使用pod_ip，满足hostname或者ipv4格式
+     * set 连接到pod的host信息。
      *
      * @param host
      */
@@ -103,7 +97,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * get 范围：[1-65535]
+     * get 端口号。
      *
      * @return
      */
@@ -112,7 +106,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set 范围：[1-65535]
+     * set 端口号。
      *
      * @param port
      */
@@ -121,7 +115,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * get HTTP的路径。范围：[1-256]
+     * get HTTP的路径。
      *
      * @return
      */
@@ -130,7 +124,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set HTTP的路径。范围：[1-256]
+     * set HTTP的路径。
      *
      * @param path
      */
@@ -139,8 +133,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * get 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
-如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 
+     * get 自定义Http headers
      *
      * @return
      */
@@ -149,8 +142,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
-如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 
+     * set 自定义Http headers
      *
      * @param httpHeader
      */
@@ -160,7 +152,7 @@ public class Hg  implements java.io.Serializable {
 
 
     /**
-     * set 默认值： http；可选值 http, https
+     * set 默认值：http。
      *
      * @param scheme
      */
@@ -170,7 +162,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set 连接到pod的host信息，默认使用pod_ip，满足hostname或者ipv4格式
+     * set 连接到pod的host信息。
      *
      * @param host
      */
@@ -180,7 +172,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set 范围：[1-65535]
+     * set 端口号。
      *
      * @param port
      */
@@ -190,7 +182,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set HTTP的路径。范围：[1-256]
+     * set HTTP的路径。
      *
      * @param path
      */
@@ -200,8 +192,7 @@ public class Hg  implements java.io.Serializable {
     }
 
     /**
-     * set 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
-如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 
+     * set 自定义Http headers
      *
      * @param httpHeader
      */
@@ -212,8 +203,7 @@ public class Hg  implements java.io.Serializable {
 
 
     /**
-     * add item to 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
-如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 
+     * add item to 自定义Http headers
      *
      * @param httpHeader
      */

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 原生容器
- * container 相关接口
+ * Container
+ * Pod中容器的相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -34,13 +34,13 @@ public class ExecGetExitCodeResult extends JdcloudResult implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 退出码
+     * exec命令执行的退出码
      */
     private Integer execCode;
 
 
     /**
-     * get 退出码
+     * get exec命令执行的退出码
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class ExecGetExitCodeResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 退出码
+     * set exec命令执行的退出码
      *
      * @param execCode
      */
@@ -59,7 +59,7 @@ public class ExecGetExitCodeResult extends JdcloudResult implements java.io.Seri
 
 
     /**
-     * set 退出码
+     * set exec命令执行的退出码
      *
      * @param execCode
      */

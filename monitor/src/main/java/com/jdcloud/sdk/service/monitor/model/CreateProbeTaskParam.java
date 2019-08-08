@@ -43,11 +43,6 @@ public class CreateProbeTaskParam  implements java.io.Serializable {
     private String address;
 
     /**
-     * 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-     */
-    private Long frequency;
-
-    /**
      * http body：选择探测类型为1&#x3D;http时有效，最长不超过1024字节
 in: query
      */
@@ -113,11 +108,6 @@ in: query
     @Required
     private Long taskType;
 
-    /**
-     * 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-     */
-    private Long timeout;
-
 
     /**
      * get 探测地址，探测类型为http：内容为url（校验http或https头）；探测类型为telnet：内容为ip或域名（只允许中英文 、数字、中划线（-）、小数点（.）、开头及结尾均不能含有“-”）
@@ -135,24 +125,6 @@ in: query
      */
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    /**
-     * get 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-     *
-     * @return
-     */
-    public Long getFrequency() {
-        return frequency;
-    }
-
-    /**
-     * set 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-     *
-     * @param frequency
-     */
-    public void setFrequency(Long frequency) {
-        this.frequency = frequency;
     }
 
     /**
@@ -359,24 +331,6 @@ in: query
         this.taskType = taskType;
     }
 
-    /**
-     * get 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-     *
-     * @return
-     */
-    public Long getTimeout() {
-        return timeout;
-    }
-
-    /**
-     * set 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-     *
-     * @param timeout
-     */
-    public void setTimeout(Long timeout) {
-        this.timeout = timeout;
-    }
-
 
     /**
      * set 探测地址，探测类型为http：内容为url（校验http或https头）；探测类型为telnet：内容为ip或域名（只允许中英文 、数字、中划线（-）、小数点（.）、开头及结尾均不能含有“-”）
@@ -385,16 +339,6 @@ in: query
      */
     public CreateProbeTaskParam address(String address) {
         this.address = address;
-        return this;
-    }
-
-    /**
-     * set 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-     *
-     * @param frequency
-     */
-    public CreateProbeTaskParam frequency(Long frequency) {
-        this.frequency = frequency;
         return this;
     }
 
@@ -508,16 +452,6 @@ in: query
      */
     public CreateProbeTaskParam taskType(Long taskType) {
         this.taskType = taskType;
-        return this;
-    }
-
-    /**
-     * set 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-     *
-     * @param timeout
-     */
-    public CreateProbeTaskParam timeout(Long timeout) {
-        this.timeout = timeout;
         return this;
     }
 

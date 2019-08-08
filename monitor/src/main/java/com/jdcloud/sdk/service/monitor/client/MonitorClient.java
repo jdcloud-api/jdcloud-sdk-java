@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.monitor.client.CreateAlarmExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeMetricDataRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeMetricDataResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeMetricDataExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeServicesRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeServicesResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeServicesExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeAlarmContactsRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeAlarmContactsResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeAlarmContactsExecutor;
@@ -87,7 +90,7 @@ public class MonitorClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "monitor.jdcloud-api.com";
     public final static String ServiceName = "monitor";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -152,6 +155,17 @@ public class MonitorClient extends JdcloudClient {
     }
 
     /**
+     * 概览页产品线信息接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeServicesResponse describeServices(DescribeServicesRequest request) throws JdcloudSdkException {
+        return new DescribeServicesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询规则的报警联系人
      *
      * @param request
@@ -165,12 +179,17 @@ public class MonitorClient extends JdcloudClient {
     /**
      * 查询报警历史
 检索条件组合优先级从高到低为
-1. alarmId
-2. serviceCode
-2.1 serviceCode + resourceId
-2.2 serviceCode + resourceIds
-3. serviceCodes
-4. 用户所有规则
+1：alarmIds不为空
+2：alarmId不为空
+3：serviceCode不为空
+3.1：serviceCode + resourceId
+3.2: serviceCode + resourceIds
+3.3: serviceCode + ruleName
+4：serviceCodes不为空
+4.1：serviceCode + resourceId
+4.2: serviceCode + resourceIds
+4.3: serviceCode + ruleName
+5: 所有规则
      *
      * @param request
      * @return
@@ -203,7 +222,7 @@ public class MonitorClient extends JdcloudClient {
     }
 
     /**
-     * 批量删除规则
+     * 删除规则
      *
      * @param request
      * @return
@@ -249,12 +268,17 @@ public class MonitorClient extends JdcloudClient {
     /**
      * 查询报警历史
 检索条件组合优先级从高到低为
-1. alarmId
-2. serviceCode
-2.1 serviceCode + resourceId
-2.2 serviceCode + resourceIds
-3. serviceCodes
-4. 用户所有规则
+1：alarmIds不为空
+2：alarmId不为空
+3：serviceCode不为空
+3.1：serviceCode + resourceId
+3.2: serviceCode + resourceIds
+3.3: serviceCode + ruleName
+4：serviceCodes不为空
+4.1：serviceCode + resourceId
+4.2: serviceCode + resourceIds
+4.3: serviceCode + ruleName
+5: 所有规则
      *
      * @param request
      * @return
@@ -299,12 +323,17 @@ public class MonitorClient extends JdcloudClient {
 
     /**
      * 查询规则, 查询参数组合及优先级从高到低为：
-1：alarmId不为空
-2：serviceCode不为空
-2.1：serviceCode + resourceId
-2.2: serviceCode + resourceIds
-3：serviceCodes不为空
-4: 所有规则
+1：alarmIds不为空
+2：alarmId不为空
+3：serviceCode不为空
+3.1：serviceCode + resourceId
+3.2: serviceCode + resourceIds
+3.3: serviceCode + ruleName
+4：serviceCodes不为空
+4.1：serviceCode + resourceId
+4.2: serviceCode + resourceIds
+4.3: serviceCode + ruleName
+5: 所有规则
      *
      * @param request
      * @return

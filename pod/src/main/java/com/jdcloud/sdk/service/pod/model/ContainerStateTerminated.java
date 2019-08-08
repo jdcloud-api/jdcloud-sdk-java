@@ -26,34 +26,34 @@ package com.jdcloud.sdk.service.pod.model;
 
 
 /**
- * pod 中的 contianer 状态
+ * 容器终止的详细信息
  */
 public class ContainerStateTerminated  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 容器被termination的信号。
+     * 容器被终止的信号。
      */
     private Integer signal;
 
     /**
-     * 容器被termination的退出码。
+     * 容器被终止的退出码。
      */
     private Integer exitCode;
 
     /**
-     * （简要）容器被termination的原因。
+     * （简要）容器被终止的原因。
      */
     private String reason;
 
     /**
-     * 容器被termination的详细信息。
+     * 容器被终止的详细信息。
      */
     private String message;
 
     /**
-     * 容器被termination的时间。
+     * 容器被终止的时间。
      */
     private String finishedAt;
 
@@ -64,7 +64,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
 
 
     /**
-     * get 容器被termination的信号。
+     * get 容器被终止的信号。
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set 容器被termination的信号。
+     * set 容器被终止的信号。
      *
      * @param signal
      */
@@ -82,7 +82,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * get 容器被termination的退出码。
+     * get 容器被终止的退出码。
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set 容器被termination的退出码。
+     * set 容器被终止的退出码。
      *
      * @param exitCode
      */
@@ -100,7 +100,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * get （简要）容器被termination的原因。
+     * get （简要）容器被终止的原因。
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set （简要）容器被termination的原因。
+     * set （简要）容器被终止的原因。
      *
      * @param reason
      */
@@ -118,7 +118,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * get 容器被termination的详细信息。
+     * get 容器被终止的详细信息。
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set 容器被termination的详细信息。
+     * set 容器被终止的详细信息。
      *
      * @param message
      */
@@ -136,7 +136,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * get 容器被termination的时间。
+     * get 容器被终止的时间。
      *
      * @return
      */
@@ -145,7 +145,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set 容器被termination的时间。
+     * set 容器被终止的时间。
      *
      * @param finishedAt
      */
@@ -173,7 +173,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
 
 
     /**
-     * set 容器被termination的信号。
+     * set 容器被终止的信号。
      *
      * @param signal
      */
@@ -183,7 +183,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set 容器被termination的退出码。
+     * set 容器被终止的退出码。
      *
      * @param exitCode
      */
@@ -193,7 +193,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set （简要）容器被termination的原因。
+     * set （简要）容器被终止的原因。
      *
      * @param reason
      */
@@ -203,7 +203,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set 容器被termination的详细信息。
+     * set 容器被终止的详细信息。
      *
      * @param message
      */
@@ -213,7 +213,7 @@ public class ContainerStateTerminated  implements java.io.Serializable {
     }
 
     /**
-     * set 容器被termination的时间。
+     * set 容器被终止的时间。
      *
      * @param finishedAt
      */

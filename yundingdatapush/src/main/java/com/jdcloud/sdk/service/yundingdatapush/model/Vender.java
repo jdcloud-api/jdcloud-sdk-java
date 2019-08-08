@@ -48,11 +48,11 @@ public class Vender  implements java.io.Serializable {
     private String ydRdsInstanceId;
 
     /**
-     * 商家PIN
+     * 商家ID
      * Required:true
      */
     @Required
-    private String venderPin;
+    private String venderId;
 
 
     /**
@@ -92,21 +92,21 @@ public class Vender  implements java.io.Serializable {
     }
 
     /**
-     * get 商家PIN
+     * get 商家ID
      *
      * @return
      */
-    public String getVenderPin() {
-        return venderPin;
+    public String getVenderId() {
+        return venderId;
     }
 
     /**
-     * set 商家PIN
+     * set 商家ID
      *
-     * @param venderPin
+     * @param venderId
      */
-    public void setVenderPin(String venderPin) {
-        this.venderPin = venderPin;
+    public void setVenderId(String venderId) {
+        this.venderId = venderId;
     }
 
 
@@ -131,12 +131,12 @@ public class Vender  implements java.io.Serializable {
     }
 
     /**
-     * set 商家PIN
+     * set 商家ID
      *
-     * @param venderPin
+     * @param venderId
      */
-    public Vender venderPin(String venderPin) {
-        this.venderPin = venderPin;
+    public Vender venderId(String venderId) {
+        this.venderId = venderId;
         return this;
     }
 

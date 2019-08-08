@@ -75,6 +75,11 @@ public class Alarm  implements java.io.Serializable {
     private String metricName;
 
     /**
+     * noticeLevel
+     */
+    private NoticeLevel noticeLevel;
+
+    /**
      * 通知周期 单位：小时
      */
     private Long noticePeriod;
@@ -105,6 +110,11 @@ public class Alarm  implements java.io.Serializable {
     private String resourceId;
 
     /**
+     * 规则名称
+     */
+    private String ruleName;
+
+    /**
      * 报警规则对应的产品
      */
     private String serviceCode;
@@ -133,6 +143,26 @@ public class Alarm  implements java.io.Serializable {
      * 报警值
      */
     private Double value;
+
+    /**
+     * 回调content
+     */
+    private String webHookContent;
+
+    /**
+     * webHook协议
+     */
+    private String webHookProtocol;
+
+    /**
+     * 回调secret，用户请求签名，防伪造
+     */
+    private String webHookSecret;
+
+    /**
+     * 回调url
+     */
+    private String webHookUrl;
 
 
     /**
@@ -280,6 +310,24 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
+     * get noticeLevel
+     *
+     * @return
+     */
+    public NoticeLevel getNoticeLevel() {
+        return noticeLevel;
+    }
+
+    /**
+     * set noticeLevel
+     *
+     * @param noticeLevel
+     */
+    public void setNoticeLevel(NoticeLevel noticeLevel) {
+        this.noticeLevel = noticeLevel;
+    }
+
+    /**
      * get 通知周期 单位：小时
      *
      * @return
@@ -385,6 +433,24 @@ public class Alarm  implements java.io.Serializable {
      */
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+    }
+
+    /**
+     * get 规则名称
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
     }
 
     /**
@@ -495,6 +561,78 @@ public class Alarm  implements java.io.Serializable {
         this.value = value;
     }
 
+    /**
+     * get 回调content
+     *
+     * @return
+     */
+    public String getWebHookContent() {
+        return webHookContent;
+    }
+
+    /**
+     * set 回调content
+     *
+     * @param webHookContent
+     */
+    public void setWebHookContent(String webHookContent) {
+        this.webHookContent = webHookContent;
+    }
+
+    /**
+     * get webHook协议
+     *
+     * @return
+     */
+    public String getWebHookProtocol() {
+        return webHookProtocol;
+    }
+
+    /**
+     * set webHook协议
+     *
+     * @param webHookProtocol
+     */
+    public void setWebHookProtocol(String webHookProtocol) {
+        this.webHookProtocol = webHookProtocol;
+    }
+
+    /**
+     * get 回调secret，用户请求签名，防伪造
+     *
+     * @return
+     */
+    public String getWebHookSecret() {
+        return webHookSecret;
+    }
+
+    /**
+     * set 回调secret，用户请求签名，防伪造
+     *
+     * @param webHookSecret
+     */
+    public void setWebHookSecret(String webHookSecret) {
+        this.webHookSecret = webHookSecret;
+    }
+
+    /**
+     * get 回调url
+     *
+     * @return
+     */
+    public String getWebHookUrl() {
+        return webHookUrl;
+    }
+
+    /**
+     * set 回调url
+     *
+     * @param webHookUrl
+     */
+    public void setWebHookUrl(String webHookUrl) {
+        this.webHookUrl = webHookUrl;
+    }
+
 
     /**
      * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min
@@ -577,6 +715,16 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
+     * set noticeLevel
+     *
+     * @param noticeLevel
+     */
+    public Alarm noticeLevel(NoticeLevel noticeLevel) {
+        this.noticeLevel = noticeLevel;
+        return this;
+    }
+
+    /**
      * set 通知周期 单位：小时
      *
      * @param noticePeriod
@@ -637,6 +785,16 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public Alarm ruleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+
+    /**
      * set 报警规则对应的产品
      *
      * @param serviceCode
@@ -693,6 +851,46 @@ public class Alarm  implements java.io.Serializable {
      */
     public Alarm value(Double value) {
         this.value = value;
+        return this;
+    }
+
+    /**
+     * set 回调content
+     *
+     * @param webHookContent
+     */
+    public Alarm webHookContent(String webHookContent) {
+        this.webHookContent = webHookContent;
+        return this;
+    }
+
+    /**
+     * set webHook协议
+     *
+     * @param webHookProtocol
+     */
+    public Alarm webHookProtocol(String webHookProtocol) {
+        this.webHookProtocol = webHookProtocol;
+        return this;
+    }
+
+    /**
+     * set 回调secret，用户请求签名，防伪造
+     *
+     * @param webHookSecret
+     */
+    public Alarm webHookSecret(String webHookSecret) {
+        this.webHookSecret = webHookSecret;
+        return this;
+    }
+
+    /**
+     * set 回调url
+     *
+     * @param webHookUrl
+     */
+    public Alarm webHookUrl(String webHookUrl) {
+        this.webHookUrl = webHookUrl;
         return this;
     }
 

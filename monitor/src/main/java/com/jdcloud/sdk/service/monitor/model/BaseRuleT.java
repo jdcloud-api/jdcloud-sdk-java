@@ -57,7 +57,9 @@ public class BaseRuleT  implements java.io.Serializable {
 
     /**
      * 监控项
+     * Required:true
      */
+    @Required
     private String metric;
 
     /**
@@ -85,7 +87,7 @@ public class BaseRuleT  implements java.io.Serializable {
     private String operation;
 
     /**
-     * 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，15，30，60
+     * 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，10,15，30，60
      * Required:true
      */
     @Required
@@ -281,7 +283,7 @@ public class BaseRuleT  implements java.io.Serializable {
     }
 
     /**
-     * get 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，15，30，60
+     * get 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，10,15，30，60
      *
      * @return
      */
@@ -290,7 +292,7 @@ public class BaseRuleT  implements java.io.Serializable {
     }
 
     /**
-     * set 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，15，30，60
+     * set 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，10,15，30，60
      *
      * @param period
      */
@@ -462,7 +464,7 @@ public class BaseRuleT  implements java.io.Serializable {
     }
 
     /**
-     * set 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，15，30，60
+     * set 查询指标的周期，单位为分钟,目前支持的取值：1, 2，5，10,15，30，60
      *
      * @param period
      */

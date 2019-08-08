@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * pod
- * pod 相关接口
+ * Pod
+ * Pod 相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 

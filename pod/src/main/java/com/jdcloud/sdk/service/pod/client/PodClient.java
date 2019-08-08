@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.pod.model.DescribeQuotaRequest;
 import com.jdcloud.sdk.service.pod.model.DescribeQuotaResponse;
 import com.jdcloud.sdk.service.pod.client.DescribeQuotaExecutor;
+import com.jdcloud.sdk.service.pod.model.DescribeContainerRequest;
+import com.jdcloud.sdk.service.pod.model.DescribeContainerResponse;
+import com.jdcloud.sdk.service.pod.client.DescribeContainerExecutor;
 import com.jdcloud.sdk.service.pod.model.DescribeSecretsRequest;
 import com.jdcloud.sdk.service.pod.model.DescribeSecretsResponse;
 import com.jdcloud.sdk.service.pod.client.DescribeSecretsExecutor;
@@ -49,6 +52,9 @@ import com.jdcloud.sdk.service.pod.client.DisassociateElasticIpExecutor;
 import com.jdcloud.sdk.service.pod.model.GetContainerLogsRequest;
 import com.jdcloud.sdk.service.pod.model.GetContainerLogsResponse;
 import com.jdcloud.sdk.service.pod.client.GetContainerLogsExecutor;
+import com.jdcloud.sdk.service.pod.model.DescribeInstanceTypesRequest;
+import com.jdcloud.sdk.service.pod.model.DescribeInstanceTypesResponse;
+import com.jdcloud.sdk.service.pod.client.DescribeInstanceTypesExecutor;
 import com.jdcloud.sdk.service.pod.model.ResizeTTYRequest;
 import com.jdcloud.sdk.service.pod.model.ResizeTTYResponse;
 import com.jdcloud.sdk.service.pod.client.ResizeTTYExecutor;
@@ -91,9 +97,6 @@ import com.jdcloud.sdk.service.pod.client.StopPodExecutor;
 import com.jdcloud.sdk.service.pod.model.DescribePodRequest;
 import com.jdcloud.sdk.service.pod.model.DescribePodResponse;
 import com.jdcloud.sdk.service.pod.client.DescribePodExecutor;
-import com.jdcloud.sdk.service.pod.model.DecribeContainerRequest;
-import com.jdcloud.sdk.service.pod.model.DecribeContainerResponse;
-import com.jdcloud.sdk.service.pod.client.DecribeContainerExecutor;
 import com.jdcloud.sdk.service.pod.model.DeleteSecretRequest;
 import com.jdcloud.sdk.service.pod.model.DeleteSecretResponse;
 import com.jdcloud.sdk.service.pod.client.DeleteSecretExecutor;
@@ -163,6 +166,17 @@ public class PodClient extends JdcloudClient {
     }
 
     /**
+     * 获取 pod 中某个容器的详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeContainerResponse describeContainer(DescribeContainerRequest request) throws JdcloudSdkException {
+        return new DescribeContainerExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询 secret 列表。&lt;br&gt; 
 此接口支持分页查询，默认每页20条。
 
@@ -224,6 +238,18 @@ public class PodClient extends JdcloudClient {
     }
 
     /**
+     * 查询实例规格信息列表
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceTypesResponse describeInstanceTypes(DescribeInstanceTypesRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceTypesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置TTY大小
      *
      * @param request
@@ -235,7 +261,7 @@ public class PodClient extends JdcloudClient {
     }
 
     /**
-     * 查询单个容器日志
+     * 将容器连接到本地标准输入输出
 
      *
      * @param request
@@ -247,7 +273,7 @@ public class PodClient extends JdcloudClient {
     }
 
     /**
-     * 修改 pod 的 名称 和 描述。
+     * 修改 pod 的描述。
 
      *
      * @param request
@@ -359,7 +385,8 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
     }
 
     /**
-     * - 创建pod需要通过实名认证
+     * 创建一台或多台 pod
+- 创建pod需要通过实名认证
 - hostname规范
     - 支持两种方式：以标签方式书写或以完整主机名方式书写
     - 标签规范
@@ -370,7 +397,7 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
         - 标签与标签之间使用“.”(点)进行连接
         - 不能以“.”(点)开始，也不能以“.”(点)结尾
         - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
-    - 正则：&#x60;^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$&#x60;
+    - 正则：&#x60;^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$&#x60;
 - 网络配置
     - 指定主网卡配置信息
         - 必须指定subnetId
@@ -378,32 +405,37 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
         - 可以指定网卡的主IP(primaryIpAddress)和辅助IP(secondaryIpAddresses)，此时maxCount只能为1
         - 可以设置网卡的自动删除autoDelete属性，指明是否删除实例时自动删除网卡
         - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
-        - 一个 pod 创建时必须指定一个安全组，至多指定5个安全组
+        - 一个 pod 创建时至多指定5个安全组
         - 主网卡deviceIndex设置为1
 - 存储
-    - volume分为root volume和data volume，root volume的挂载目录是/，data volume的挂载目录可以随意指定
-    - volume的底层存储介质当前只支持cloud类别，也就是云硬盘
-    - root volume
-        - root volume只能是cloud类别
-        - 云硬盘类型可以选择ssd、premium-hdd
+    - volume分为container system disk和pod data volume，container system disk的挂载目录是/，data volume的挂载目录可以随意指定
+    - container system disk
+        - 只能是cloud类别
+        - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
-            - ssd：范围[10,100]GB，步长为10G
-            - premium-hdd：范围[10,100]GB，步长为10G
+            - 所有类型：范围[20,100]GB，步长为10G
         - 自动删除
             - 默认自动删除
         - 可以选择已存在的云硬盘
     - data volume
-        - data volume当前只能选择cloud类别
-        - 云硬盘类型可以选择ssd、premium-hdd
+        - 当前只能选择cloud类别
+        - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
-            - ssd：范围[20,1000]GB，步长为10G
-            - premium-hdd：范围[20,3000]GB，步长为10G
+            - 所有类型：范围[20,4000]GB，步长为10G
         - 自动删除
             - 默认自动删除
         - 可以选择已存在的云硬盘
         - 可以从快照创建磁盘
 - pod 容器日志
     - default：默认在本地分配10MB的存储空间，自动rotate
+- DNS-1123 label规范
+    - 长度范围: [1-63]
+    - 正则表达式: &#x60;^[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?$&#x60;
+    - 例子: my-name, 123-abc
+- DNS-1123 subdomain规范
+    - 长度范围: [1-253]
+    - 正则表达式: &#x60;^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$&#x60;
+    - 例子: example.com, registry.docker-cn.com
 - 其他
     - 创建完成后，pod 状态为running
     - maxCount为最大努力，不保证一定能达到maxCount
@@ -439,17 +471,6 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
      */
     public DescribePodResponse describePod(DescribePodRequest request) throws JdcloudSdkException {
         return new DescribePodExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取 pod 中某个容器的详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DecribeContainerResponse decribeContainer(DecribeContainerRequest request) throws JdcloudSdkException {
-        return new DecribeContainerExecutor().client(this).execute(request);
     }
 
     /**

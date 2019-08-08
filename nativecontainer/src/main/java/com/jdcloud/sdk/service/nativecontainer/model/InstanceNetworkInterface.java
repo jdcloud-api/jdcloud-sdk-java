@@ -50,6 +50,11 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     private String vpcId;
 
     /**
+     * 子网ID
+     */
+    private String subnetId;
+
+    /**
      * 描述
      */
     private String description;
@@ -127,6 +132,24 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
      */
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
+    }
+
+    /**
+     * get 子网ID
+     *
+     * @return
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
+
+    /**
+     * set 子网ID
+     *
+     * @param subnetId
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
     }
 
     /**
@@ -247,6 +270,16 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
      */
     public InstanceNetworkInterface vpcId(String vpcId) {
         this.vpcId = vpcId;
+        return this;
+    }
+
+    /**
+     * set 子网ID
+     *
+     * @param subnetId
+     */
+    public InstanceNetworkInterface subnetId(String subnetId) {
+        this.subnetId = subnetId;
         return this;
     }
 

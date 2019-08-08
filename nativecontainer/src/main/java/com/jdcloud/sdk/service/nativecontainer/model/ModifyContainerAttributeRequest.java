@@ -28,7 +28,8 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改容器的 名称 和 描述。
+ * 修改容器的 名称 和 描述。&lt;br&gt;
+name 和 description 必须要指定一个
 
  */
 public class ModifyContainerAttributeRequest extends JdcloudRequest implements java.io.Serializable {
@@ -41,7 +42,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
     private String name;
 
     /**
-     * 容器描述；和description必须要指定一个
+     * 容器描述
      */
     private String description;
 
@@ -79,7 +80,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 容器描述；和description必须要指定一个
+     * get 容器描述
      *
      * @return
      */
@@ -88,7 +89,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 容器描述；和description必须要指定一个
+     * set 容器描述
      *
      * @param description
      */
@@ -144,7 +145,7 @@ public class ModifyContainerAttributeRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 容器描述；和description必须要指定一个
+     * set 容器描述
      *
      * @param description
      */

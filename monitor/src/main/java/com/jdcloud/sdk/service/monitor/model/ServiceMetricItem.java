@@ -54,6 +54,11 @@ public class ServiceMetricItem  implements java.io.Serializable {
      */
     private String name;
 
+    /**
+     * serviceCode
+     */
+    private String serviceCode;
+
 
     /**
      * get aggregates
@@ -127,6 +132,24 @@ public class ServiceMetricItem  implements java.io.Serializable {
         this.name = name;
     }
 
+    /**
+     * get serviceCode
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set serviceCode
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
 
     /**
      * set aggregates
@@ -165,6 +188,16 @@ public class ServiceMetricItem  implements java.io.Serializable {
      */
     public ServiceMetricItem name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set serviceCode
+     *
+     * @param serviceCode
+     */
+    public ServiceMetricItem serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 

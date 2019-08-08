@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * jDCloudVolumeSource
@@ -39,17 +38,12 @@ public class JDCloudVolumeSource  implements java.io.Serializable {
     private String volumeId;
 
     /**
-     * 云盘名称
-     */
-    private String name;
-
-    /**
      * 云盘快照id，根据云盘快照创建云盘。
      */
-    private String snapshot;
+    private String snapshotId;
 
     /**
-     * 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+     * 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      */
     private String diskType;
 
@@ -60,9 +54,7 @@ public class JDCloudVolumeSource  implements java.io.Serializable {
 
     /**
      * 指定volume文件系统类型，目前支持[xfs, ext4]；如果新创建的盘，不指定文件系统类型默认格式化成xfs
-     * Required:true
      */
-    @Required
     private String fsType;
 
     /**
@@ -100,43 +92,25 @@ public class JDCloudVolumeSource  implements java.io.Serializable {
     }
 
     /**
-     * get 云盘名称
-     *
-     * @return
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * set 云盘名称
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
      * get 云盘快照id，根据云盘快照创建云盘。
      *
      * @return
      */
-    public String getSnapshot() {
-        return snapshot;
+    public String getSnapshotId() {
+        return snapshotId;
     }
 
     /**
      * set 云盘快照id，根据云盘快照创建云盘。
      *
-     * @param snapshot
+     * @param snapshotId
      */
-    public void setSnapshot(String snapshot) {
-        this.snapshot = snapshot;
+    public void setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
     }
 
     /**
-     * get 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+     * get 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      *
      * @return
      */
@@ -145,7 +119,7 @@ public class JDCloudVolumeSource  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+     * set 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      *
      * @param diskType
      */
@@ -255,27 +229,17 @@ public class JDCloudVolumeSource  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘名称
-     *
-     * @param name
-     */
-    public JDCloudVolumeSource name(String name) {
-        this.name = name;
-        return this;
-    }
-
-    /**
      * set 云盘快照id，根据云盘快照创建云盘。
      *
-     * @param snapshot
+     * @param snapshotId
      */
-    public JDCloudVolumeSource snapshot(String snapshot) {
-        this.snapshot = snapshot;
+    public JDCloudVolumeSource snapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
         return this;
     }
 
     /**
-     * set 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+     * set 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      *
      * @param diskType
      */

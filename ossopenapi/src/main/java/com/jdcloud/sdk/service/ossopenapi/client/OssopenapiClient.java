@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.ossopenapi.model.GetSingleBucketCapacityRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.GetSingleBucketCapacityResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.GetSingleBucketCapacityExecutor;
 import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.GetBackSourceConfigurationExecutor;
@@ -48,7 +51,7 @@ public class OssopenapiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "ossopenapi.jdcloud-api.com";
     public final static String ServiceName = "ossopenapi";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -89,6 +92,17 @@ public class OssopenapiClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 根据type获取指定bucket用量数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetSingleBucketCapacityResponse getSingleBucketCapacity(GetSingleBucketCapacityRequest request) throws JdcloudSdkException {
+        return new GetSingleBucketCapacityExecutor().client(this).execute(request);
+    }
 
     /**
      * 获取回源配置

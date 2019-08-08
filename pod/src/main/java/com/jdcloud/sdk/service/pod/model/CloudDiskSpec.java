@@ -33,7 +33,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云盘id，使用已有云盘
+     * 云盘ID，指定使用已有云盘
      */
     private String volumeId;
 
@@ -43,12 +43,12 @@ public class CloudDiskSpec  implements java.io.Serializable {
     private String name;
 
     /**
-     * 云盘快照id，根据云盘快照创建云盘。
+     * 云盘快照ID，根据云盘快照创建云盘。
      */
-    private String snapshot;
+    private String snapshotId;
 
     /**
-     * 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+     * 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      */
     private String diskType;
 
@@ -74,7 +74,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
 
 
     /**
-     * get 云盘id，使用已有云盘
+     * get 云盘ID，指定使用已有云盘
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘id，使用已有云盘
+     * set 云盘ID，指定使用已有云盘
      *
      * @param volumeId
      */
@@ -110,25 +110,25 @@ public class CloudDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云盘快照id，根据云盘快照创建云盘。
+     * get 云盘快照ID，根据云盘快照创建云盘。
      *
      * @return
      */
-    public String getSnapshot() {
-        return snapshot;
+    public String getSnapshotId() {
+        return snapshotId;
     }
 
     /**
-     * set 云盘快照id，根据云盘快照创建云盘。
+     * set 云盘快照ID，根据云盘快照创建云盘。
      *
-     * @param snapshot
+     * @param snapshotId
      */
-    public void setSnapshot(String snapshot) {
-        this.snapshot = snapshot;
+    public void setSnapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
     }
 
     /**
-     * get 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+     * get 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      *
      * @return
      */
@@ -137,7 +137,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+     * set 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      *
      * @param diskType
      */
@@ -219,7 +219,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
 
 
     /**
-     * set 云盘id，使用已有云盘
+     * set 云盘ID，指定使用已有云盘
      *
      * @param volumeId
      */
@@ -239,17 +239,17 @@ public class CloudDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘快照id，根据云盘快照创建云盘。
+     * set 云盘快照ID，根据云盘快照创建云盘。
      *
-     * @param snapshot
+     * @param snapshotId
      */
-    public CloudDiskSpec snapshot(String snapshot) {
-        this.snapshot = snapshot;
+    public CloudDiskSpec snapshotId(String snapshotId) {
+        this.snapshotId = snapshotId;
         return this;
     }
 
     /**
-     * set 云盘类型：ssd,premium-hdd,hdd.std1,ssd.gp1,ssd.io1
+     * set 云盘类型：hdd.std1,ssd.gp1,ssd.io1
      *
      * @param diskType
      */

@@ -43,6 +43,11 @@ public class TaskInfo  implements java.io.Serializable {
     private String address;
 
     /**
+     * 该task状态[true:被删除]
+     */
+    private Boolean deleted;
+
+    /**
      * 任务状态[false：己禁用，true：己启用]
      */
     private Boolean enabled;
@@ -112,6 +117,24 @@ public class TaskInfo  implements java.io.Serializable {
      */
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    /**
+     * get 该task状态[true:被删除]
+     *
+     * @return
+     */
+    public Boolean getDeleted() {
+        return deleted;
+    }
+
+    /**
+     * set 该task状态[true:被删除]
+     *
+     * @param deleted
+     */
+    public void setDeleted(Boolean deleted) {
+        this.deleted = deleted;
     }
 
     /**
@@ -258,6 +281,16 @@ public class TaskInfo  implements java.io.Serializable {
      */
     public TaskInfo address(String address) {
         this.address = address;
+        return this;
+    }
+
+    /**
+     * set 该task状态[true:被删除]
+     *
+     * @param deleted
+     */
+    public TaskInfo deleted(Boolean deleted) {
+        this.deleted = deleted;
         return this;
     }
 

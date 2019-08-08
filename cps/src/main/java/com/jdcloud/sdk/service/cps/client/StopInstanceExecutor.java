@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cps.model.StopInstanceResponse;
 
 /**
- * 对单台云物理服务器执行关机操作，只能停止running状态的服务器
+ * 对单台云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
  */
 class StopInstanceExecutor extends JdcloudExecutor {
 

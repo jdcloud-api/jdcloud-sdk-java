@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Monitoring Items APIs
+ * 监控项相关接口
  * 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
  *
  * OpenAPI spec version: v1
@@ -41,6 +41,11 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
     @Required
     private String serviceCode;
 
+    /**
+     * metric的类型，取值0(控制台展示)、1(内部使用，控制台不展示)、2(所有).默认取0
+     */
+    private Long type;
+
 
     /**
      * get 资源的类型，取值vm, lb, ip, database 等
@@ -60,6 +65,24 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
         this.serviceCode = serviceCode;
     }
 
+    /**
+     * get metric的类型，取值0(控制台展示)、1(内部使用，控制台不展示)、2(所有).默认取0
+     *
+     * @return
+     */
+    public Long getType() {
+        return type;
+    }
+
+    /**
+     * set metric的类型，取值0(控制台展示)、1(内部使用，控制台不展示)、2(所有).默认取0
+     *
+     * @param type
+     */
+    public void setType(Long type) {
+        this.type = type;
+    }
+
 
     /**
      * set 资源的类型，取值vm, lb, ip, database 等
@@ -68,6 +91,16 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
      */
     public DescribeMetricsRequest serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set metric的类型，取值0(控制台展示)、1(内部使用，控制台不展示)、2(所有).默认取0
+     *
+     * @param type
+     */
+    public DescribeMetricsRequest type(Long type) {
+        this.type = type;
         return this;
     }
 

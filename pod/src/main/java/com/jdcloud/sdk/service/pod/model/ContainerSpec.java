@@ -29,14 +29,14 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * container 规格
+ * 容器规格
  */
 public class ContainerSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 容器名称
+     * 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
      * Required:true
      */
     @Required
@@ -53,13 +53,13 @@ public class ContainerSpec  implements java.io.Serializable {
     private List<String> args;
 
     /**
-     * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。数组范围：[0-100]
      */
     private List<EnvSpec> env;
 
     /**
      * 镜像名称 &lt;/br&gt;
-容器镜像名字。 nginx:latest。长度范围：[1-500]
+容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
@@ -69,7 +69,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private String image;
 
     /**
-     * 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      */
     private String secret;
 
@@ -106,13 +106,13 @@ public class ContainerSpec  implements java.io.Serializable {
     private CloudDiskSpec systemDisk;
 
     /**
-     * 容器计算资源配置
+     * 云盘挂载信息
      */
-    private List<VolumeMount> volumeMounts;
+    private List<VolumeMountSpec> volumeMounts;
 
 
     /**
-     * get 容器名称
+     * get 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
      *
      * @return
      */
@@ -121,7 +121,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器名称
+     * set 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
      *
      * @param name
      */
@@ -166,7 +166,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * get 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。数组范围：[0-100]
      *
      * @return
      */
@@ -175,7 +175,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。数组范围：[0-100]
      *
      * @param env
      */
@@ -185,7 +185,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
     /**
      * get 镜像名称 &lt;/br&gt;
-容器镜像名字。 nginx:latest。长度范围：[1-500]
+容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
@@ -198,7 +198,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
     /**
      * set 镜像名称 &lt;/br&gt;
-容器镜像名字。 nginx:latest。长度范围：[1-500]
+容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
@@ -210,7 +210,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * get 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      *
      * @return
      */
@@ -219,7 +219,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * set 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      *
      * @param secret
      */
@@ -336,26 +336,26 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器计算资源配置
+     * get 云盘挂载信息
      *
      * @return
      */
-    public List<VolumeMount> getVolumeMounts() {
+    public List<VolumeMountSpec> getVolumeMounts() {
         return volumeMounts;
     }
 
     /**
-     * set 容器计算资源配置
+     * set 云盘挂载信息
      *
      * @param volumeMounts
      */
-    public void setVolumeMounts(List<VolumeMount> volumeMounts) {
+    public void setVolumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
     }
 
 
     /**
-     * set 容器名称
+     * set 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
      *
      * @param name
      */
@@ -385,7 +385,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * set 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。数组范围：[0-100]
      *
      * @param env
      */
@@ -396,7 +396,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
     /**
      * set 镜像名称 &lt;/br&gt;
-容器镜像名字。 nginx:latest。长度范围：[1-500]
+容器镜像名字。 nginx:latest。长度范围：[1-639]
 1. Docker Hub官方镜像通过类似nginx, mysql/mysql-server的名字指定 &lt;/br&gt; 
 2. repository长度最大256个字符，tag最大128个字符，registry最大255个字符 &lt;/br&gt; 
 
@@ -409,7 +409,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像仓库secret名字。如果目前不传，默认选择dockerHub镜像
+     * set 镜像仓库认证信息。如果目前不传，默认选择dockerHub镜像
      *
      * @param secret
      */
@@ -479,11 +479,11 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器计算资源配置
+     * set 云盘挂载信息
      *
      * @param volumeMounts
      */
-    public ContainerSpec volumeMounts(List<VolumeMount> volumeMounts) {
+    public ContainerSpec volumeMounts(List<VolumeMountSpec> volumeMounts) {
         this.volumeMounts = volumeMounts;
         return this;
     }
@@ -514,7 +514,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。长度范围：[0-100]
+     * add item to 容器执行的环境变量；如果和镜像中的环境变量Key相同，会覆盖镜像中的值。数组范围：[0-100]
      *
      * @param env
      */
@@ -526,11 +526,11 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 容器计算资源配置
+     * add item to 云盘挂载信息
      *
      * @param volumeMount
      */
-    public void addVolumeMount(VolumeMount volumeMount) {
+    public void addVolumeMount(VolumeMountSpec volumeMount) {
         if (this.volumeMounts == null) {
             this.volumeMounts = new ArrayList<>();
         }

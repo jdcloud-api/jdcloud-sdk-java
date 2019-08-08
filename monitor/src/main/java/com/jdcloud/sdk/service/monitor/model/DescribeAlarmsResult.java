@@ -31,12 +31,17 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 查询规则, 查询参数组合及优先级从高到低为：
-1：alarmId不为空
-2：serviceCode不为空
-2.1：serviceCode + resourceId
-2.2: serviceCode + resourceIds
-3：serviceCodes不为空
-4: 所有规则
+1：alarmIds不为空
+2：alarmId不为空
+3：serviceCode不为空
+3.1：serviceCode + resourceId
+3.2: serviceCode + resourceIds
+3.3: serviceCode + ruleName
+4：serviceCodes不为空
+4.1：serviceCode + resourceId
+4.2: serviceCode + resourceIds
+4.3: serviceCode + ruleName
+5: 所有规则
  */
 public class DescribeAlarmsResult extends JdcloudResult implements java.io.Serializable {
 

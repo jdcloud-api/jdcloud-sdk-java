@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.pod.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.nc.model.DockerRegistryData;
+import com.jdcloud.sdk.service.pod.model.DockerRegistryData;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -58,7 +58,9 @@ key 的有效字符包括字母、数字、-、_和.； &lt;br&gt;
 value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使用 base64 -w 0选项），每个value长度上限为4KB，整个data的长度不能超过256KB; &lt;br&gt;
 必须包含server、username、password 字段，email 字段是可选的。&lt;br&gt;
 
+     * Required:true
      */
+    @Required
     private DockerRegistryData data;
 
     /**

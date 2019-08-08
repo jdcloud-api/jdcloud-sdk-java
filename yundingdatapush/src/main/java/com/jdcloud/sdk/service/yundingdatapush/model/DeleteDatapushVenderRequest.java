@@ -49,11 +49,11 @@ public class DeleteDatapushVenderRequest extends JdcloudRequest implements java.
     private String ydRdsInstanceId;
 
     /**
-     * 商家PIN
+     * 商家ID
      * Required:true
      */
     @Required
-    private String venderPin;
+    private String venderId;
 
 
     /**
@@ -93,21 +93,21 @@ public class DeleteDatapushVenderRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 商家PIN
+     * get 商家ID
      *
      * @return
      */
-    public String getVenderPin() {
-        return venderPin;
+    public String getVenderId() {
+        return venderId;
     }
 
     /**
-     * set 商家PIN
+     * set 商家ID
      *
-     * @param venderPin
+     * @param venderId
      */
-    public void setVenderPin(String venderPin) {
-        this.venderPin = venderPin;
+    public void setVenderId(String venderId) {
+        this.venderId = venderId;
     }
 
 
@@ -132,12 +132,12 @@ public class DeleteDatapushVenderRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 商家PIN
+     * set 商家ID
      *
-     * @param venderPin
+     * @param venderId
      */
-    public DeleteDatapushVenderRequest venderPin(String venderPin) {
-        this.venderPin = venderPin;
+    public DeleteDatapushVenderRequest venderId(String venderId) {
+        this.venderId = venderId;
         return this;
     }
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * pod
- * pod 相关接口
+ * Pod
+ * Pod 相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.pod.model.ModifyPodAttributeResponse;
 
 /**
- * 修改 pod 的 名称 和 描述。
+ * 修改 pod 的描述。
 
  */
 class ModifyPodAttributeExecutor extends JdcloudExecutor {

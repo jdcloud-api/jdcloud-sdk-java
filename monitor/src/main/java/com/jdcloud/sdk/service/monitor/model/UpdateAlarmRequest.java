@@ -56,7 +56,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private String webHookContent;
 
     /**
-     * webHook协议
+     * webHook协议，目前支持http，https
      */
     private String webHookProtocol;
 
@@ -66,12 +66,12 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private String webHookSecret;
 
     /**
-     * 回调url
+     * 回调url，例如http://www.jdcloud.com
      */
     private String webHookUrl;
 
     /**
-     * 地域 Id
+     * 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
      * Required:true
      */
     @Required
@@ -140,7 +140,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get webHook协议
+     * get webHook协议，目前支持http，https
      *
      * @return
      */
@@ -149,7 +149,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set webHook协议
+     * set webHook协议，目前支持http，https
      *
      * @param webHookProtocol
      */
@@ -176,7 +176,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 回调url
+     * get 回调url，例如http://www.jdcloud.com
      *
      * @return
      */
@@ -185,7 +185,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 回调url
+     * set 回调url，例如http://www.jdcloud.com
      *
      * @param webHookUrl
      */
@@ -194,7 +194,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 地域 Id
+     * get 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
      *
      * @return
      */
@@ -203,7 +203,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 地域 Id
+     * set 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
      *
      * @param regionId
      */
@@ -261,7 +261,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set webHook协议
+     * set webHook协议，目前支持http，https
      *
      * @param webHookProtocol
      */
@@ -281,7 +281,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 回调url
+     * set 回调url，例如http://www.jdcloud.com
      *
      * @param webHookUrl
      */
@@ -291,7 +291,7 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 地域 Id
+     * set 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
      *
      * @param regionId
      */

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Monitoring Items APIs
+ * 监控项相关接口
  * 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
  *
  * OpenAPI spec version: v1

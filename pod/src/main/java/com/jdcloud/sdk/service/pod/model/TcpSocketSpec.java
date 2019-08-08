@@ -34,7 +34,7 @@ public class TcpSocketSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 范围：[1-65535]
+     * 端口号，范围：[1-65535]
      * Required:true
      */
     @Required
@@ -42,7 +42,7 @@ public class TcpSocketSpec  implements java.io.Serializable {
 
 
     /**
-     * get 范围：[1-65535]
+     * get 端口号，范围：[1-65535]
      *
      * @return
      */
@@ -51,7 +51,7 @@ public class TcpSocketSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 范围：[1-65535]
+     * set 端口号，范围：[1-65535]
      *
      * @param port
      */
@@ -61,7 +61,7 @@ public class TcpSocketSpec  implements java.io.Serializable {
 
 
     /**
-     * set 范围：[1-65535]
+     * set 端口号，范围：[1-65535]
      *
      * @param port
      */

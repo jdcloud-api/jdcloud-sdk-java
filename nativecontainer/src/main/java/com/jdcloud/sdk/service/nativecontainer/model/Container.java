@@ -91,7 +91,7 @@ public class Container  implements java.io.Serializable {
     private String image;
 
     /**
-     * secret引用的名称
+     * 镜像仓库认证信息名称
      */
     private String secret;
 
@@ -380,7 +380,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get secret引用的名称
+     * get 镜像仓库认证信息名称
      *
      * @return
      */
@@ -389,7 +389,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set secret引用的名称
+     * set 镜像仓库认证信息名称
      *
      * @param secret
      */
@@ -815,7 +815,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set secret引用的名称
+     * set 镜像仓库认证信息名称
      *
      * @param secret
      */
