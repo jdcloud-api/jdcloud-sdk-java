@@ -32,12 +32,17 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 查询规则, 查询参数组合及优先级从高到低为：
-1：alarmId不为空
-2：serviceCode不为空
-2.1：serviceCode + resourceId
-2.2: serviceCode + resourceIds
-3：serviceCodes不为空
-4: 所有规则
+1：alarmIds不为空
+2：alarmId不为空
+3：serviceCode不为空
+3.1：serviceCode + resourceId
+3.2: serviceCode + resourceIds
+3.3: serviceCode + ruleName
+4：serviceCodes不为空
+4.1：serviceCode + resourceId
+4.2: serviceCode + resourceIds
+4.3: serviceCode + ruleName
+5: 所有规则
  */
 public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -54,12 +59,17 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     private Long pageSize;
 
     /**
-     * 产品名称
+     * 产品线标识,默认返回该serviceCode下所有group的数据。eg:serviceCode&#x3D;jdw（jdw产品线下包含jdw-master与jdw-segment两个分组)会返回jdw-master和jdw-segment的数据。
      */
     private String serviceCode;
 
     /**
-     * 资源ID
+     * 分组标识、指定该参数时，查询只返回该group的数据。groupCode参数仅在与serviceCode匹配时生效；eg:serviceCode&#x3D;jdw、groupCode&#x3D;jdw-master,只返回jdw-master分组的数据，不返回jdw-segment的数据。
+     */
+    private String groupCode;
+
+    /**
+     * 资源ID,根据resourceId查询时必须指定serviceCode才会生效
      */
     private String resourceId;
 
@@ -84,14 +94,16 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     private Long isAlarming;
 
     /**
-     * 规则的id
+     * 规则的id，若指定filter的alarmIds过滤时，忽略该参数
      */
     private String alarmId;
 
     /**
      * 服务码或资源Id列表
-filter name 为serviceCodes表示查询多个产品线的规则
-filter name 为resourceIds表示查询多个资源的规则
+serviceCodes - 产品线servicecode，精确匹配，支持多个
+resourceIds - 资源Id，精确匹配，支持多个（必须指定serviceCode才会在该serviceCode下根据resourceIds过滤，否则该参数不生效）
+alarmIds - 规则id，精确匹配，支持多个
+ruleName - 规则名称，模糊匹配，支持单个
      */
     private List<Filter> filters;
 
@@ -140,7 +152,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * get 产品名称
+     * get 产品线标识,默认返回该serviceCode下所有group的数据。eg:serviceCode&#x3D;jdw（jdw产品线下包含jdw-master与jdw-segment两个分组)会返回jdw-master和jdw-segment的数据。
      *
      * @return
      */
@@ -149,7 +161,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * set 产品名称
+     * set 产品线标识,默认返回该serviceCode下所有group的数据。eg:serviceCode&#x3D;jdw（jdw产品线下包含jdw-master与jdw-segment两个分组)会返回jdw-master和jdw-segment的数据。
      *
      * @param serviceCode
      */
@@ -158,7 +170,25 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * get 资源ID
+     * get 分组标识、指定该参数时，查询只返回该group的数据。groupCode参数仅在与serviceCode匹配时生效；eg:serviceCode&#x3D;jdw、groupCode&#x3D;jdw-master,只返回jdw-master分组的数据，不返回jdw-segment的数据。
+     *
+     * @return
+     */
+    public String getGroupCode() {
+        return groupCode;
+    }
+
+    /**
+     * set 分组标识、指定该参数时，查询只返回该group的数据。groupCode参数仅在与serviceCode匹配时生效；eg:serviceCode&#x3D;jdw、groupCode&#x3D;jdw-master,只返回jdw-master分组的数据，不返回jdw-segment的数据。
+     *
+     * @param groupCode
+     */
+    public void setGroupCode(String groupCode) {
+        this.groupCode = groupCode;
+    }
+
+    /**
+     * get 资源ID,根据resourceId查询时必须指定serviceCode才会生效
      *
      * @return
      */
@@ -167,7 +197,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * set 资源ID
+     * set 资源ID,根据resourceId查询时必须指定serviceCode才会生效
      *
      * @param resourceId
      */
@@ -248,7 +278,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * get 规则的id
+     * get 规则的id，若指定filter的alarmIds过滤时，忽略该参数
      *
      * @return
      */
@@ -257,7 +287,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * set 规则的id
+     * set 规则的id，若指定filter的alarmIds过滤时，忽略该参数
      *
      * @param alarmId
      */
@@ -267,8 +297,10 @@ filter name 为resourceIds表示查询多个资源的规则
 
     /**
      * get 服务码或资源Id列表
-filter name 为serviceCodes表示查询多个产品线的规则
-filter name 为resourceIds表示查询多个资源的规则
+serviceCodes - 产品线servicecode，精确匹配，支持多个
+resourceIds - 资源Id，精确匹配，支持多个（必须指定serviceCode才会在该serviceCode下根据resourceIds过滤，否则该参数不生效）
+alarmIds - 规则id，精确匹配，支持多个
+ruleName - 规则名称，模糊匹配，支持单个
      *
      * @return
      */
@@ -278,8 +310,10 @@ filter name 为resourceIds表示查询多个资源的规则
 
     /**
      * set 服务码或资源Id列表
-filter name 为serviceCodes表示查询多个产品线的规则
-filter name 为resourceIds表示查询多个资源的规则
+serviceCodes - 产品线servicecode，精确匹配，支持多个
+resourceIds - 资源Id，精确匹配，支持多个（必须指定serviceCode才会在该serviceCode下根据resourceIds过滤，否则该参数不生效）
+alarmIds - 规则id，精确匹配，支持多个
+ruleName - 规则名称，模糊匹配，支持单个
      *
      * @param filters
      */
@@ -327,7 +361,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * set 产品名称
+     * set 产品线标识,默认返回该serviceCode下所有group的数据。eg:serviceCode&#x3D;jdw（jdw产品线下包含jdw-master与jdw-segment两个分组)会返回jdw-master和jdw-segment的数据。
      *
      * @param serviceCode
      */
@@ -337,7 +371,17 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * set 资源ID
+     * set 分组标识、指定该参数时，查询只返回该group的数据。groupCode参数仅在与serviceCode匹配时生效；eg:serviceCode&#x3D;jdw、groupCode&#x3D;jdw-master,只返回jdw-master分组的数据，不返回jdw-segment的数据。
+     *
+     * @param groupCode
+     */
+    public DescribeAlarmsRequest groupCode(String groupCode) {
+        this.groupCode = groupCode;
+        return this;
+    }
+
+    /**
+     * set 资源ID,根据resourceId查询时必须指定serviceCode才会生效
      *
      * @param resourceId
      */
@@ -387,7 +431,7 @@ filter name 为resourceIds表示查询多个资源的规则
     }
 
     /**
-     * set 规则的id
+     * set 规则的id，若指定filter的alarmIds过滤时，忽略该参数
      *
      * @param alarmId
      */
@@ -398,8 +442,10 @@ filter name 为resourceIds表示查询多个资源的规则
 
     /**
      * set 服务码或资源Id列表
-filter name 为serviceCodes表示查询多个产品线的规则
-filter name 为resourceIds表示查询多个资源的规则
+serviceCodes - 产品线servicecode，精确匹配，支持多个
+resourceIds - 资源Id，精确匹配，支持多个（必须指定serviceCode才会在该serviceCode下根据resourceIds过滤，否则该参数不生效）
+alarmIds - 规则id，精确匹配，支持多个
+ruleName - 规则名称，模糊匹配，支持单个
      *
      * @param filters
      */
@@ -421,8 +467,10 @@ filter name 为resourceIds表示查询多个资源的规则
 
     /**
      * add item to 服务码或资源Id列表
-filter name 为serviceCodes表示查询多个产品线的规则
-filter name 为resourceIds表示查询多个资源的规则
+serviceCodes - 产品线servicecode，精确匹配，支持多个
+resourceIds - 资源Id，精确匹配，支持多个（必须指定serviceCode才会在该serviceCode下根据resourceIds过滤，否则该参数不生效）
+alarmIds - 规则id，精确匹配，支持多个
+ruleName - 规则名称，模糊匹配，支持单个
      *
      * @param filter
      */

@@ -35,6 +35,11 @@ public class ServiceInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * groupTree
+     */
+    private GroupTree groupTree;
+
+    /**
      * 产品线下的分组信息
      */
     private List<GroupInfo> metricGroup;
@@ -59,6 +64,24 @@ public class ServiceInfo  implements java.io.Serializable {
      */
     private Long timeInterval;
 
+
+    /**
+     * get groupTree
+     *
+     * @return
+     */
+    public GroupTree getGroupTree() {
+        return groupTree;
+    }
+
+    /**
+     * set groupTree
+     *
+     * @param groupTree
+     */
+    public void setGroupTree(GroupTree groupTree) {
+        this.groupTree = groupTree;
+    }
 
     /**
      * get 产品线下的分组信息
@@ -150,6 +173,16 @@ public class ServiceInfo  implements java.io.Serializable {
         this.timeInterval = timeInterval;
     }
 
+
+    /**
+     * set groupTree
+     *
+     * @param groupTree
+     */
+    public ServiceInfo groupTree(GroupTree groupTree) {
+        this.groupTree = groupTree;
+        return this;
+    }
 
     /**
      * set 产品线下的分组信息

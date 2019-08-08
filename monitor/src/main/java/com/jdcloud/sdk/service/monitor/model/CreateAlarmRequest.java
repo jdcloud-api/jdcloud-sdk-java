@@ -50,7 +50,7 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private CreateAlarmParam createAlarmSpec;
 
     /**
-     * 地域 Id
+     * 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
      * Required:true
      */
     @Required
@@ -94,7 +94,7 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 地域 Id
+     * get 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 地域 Id
+     * set 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
      *
      * @param regionId
      */
@@ -133,7 +133,7 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 地域 Id
+     * set 地域 Id，对于类似CDN这种没有地域属性的产品，regionId为cn-north-1
      *
      * @param regionId
      */

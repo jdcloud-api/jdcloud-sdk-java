@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.service.nc.model.InstanceNetworkInterface;
 
 /**
  * 主网卡配置信息。
@@ -34,7 +33,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 指明删除pod时是否删除网卡，默认True；当前只能是True
+     * 指明删除pod时是否删除网卡。
      */
     private Boolean autoDelete;
 
@@ -60,7 +59,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
 
 
     /**
-     * get 指明删除pod时是否删除网卡，默认True；当前只能是True
+     * get 指明删除pod时是否删除网卡。
      *
      * @return
      */
@@ -69,7 +68,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 指明删除pod时是否删除网卡，默认True；当前只能是True
+     * set 指明删除pod时是否删除网卡。
      *
      * @param autoDelete
      */
@@ -151,7 +150,7 @@ public class NetworkInterfaceAttachment  implements java.io.Serializable {
 
 
     /**
-     * set 指明删除pod时是否删除网卡，默认True；当前只能是True
+     * set 指明删除pod时是否删除网卡。
      *
      * @param autoDelete
      */

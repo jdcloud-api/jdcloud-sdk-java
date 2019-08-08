@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.pod.model;
 
 
 /**
- * pod 中的 contianer 状态
+ * pod 中的容器状态
  */
 public class ContainerStatus  implements java.io.Serializable {
 

@@ -80,39 +80,39 @@ public class PodSpec  implements java.io.Serializable {
     /**
      * pod内容器的/etc/resolv.conf配置
      */
-    private DnsConfig dnsConfig;
+    private DnsConfigSpec dnsConfig;
 
     /**
      * 容器日志配置信息；默认会在本地分配10MB的存储空间
      */
-    private LogConfig logConfig;
+    private LogConfigSpec logConfig;
 
     /**
      * 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
      */
-    private List<HostAlias> hostAliases;
+    private List<HostAliasSpec> hostAliases;
 
     /**
-     * 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * Pod的volume列表，可以挂载到container上。长度范围：[0,7]
      */
-    private List<Volume> volumes;
+    private List<VolumeSpec> volumes;
 
     /**
-     * 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * Pod的容器列表，至少一个容器。长度范围[1,8]
      * Required:true
      */
     @Required
     private List<ContainerSpec> containers;
 
     /**
-     * 预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
+     * 计费模式：包年包月预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
      */
     private ChargeSpec charge;
 
     /**
      * 主网卡主IP关联的弹性IP规格
      */
-    private ElasticIp elasticIp;
+    private ElasticIpSpec elasticIp;
 
     /**
      * 主网卡配置信息
@@ -253,7 +253,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public DnsConfig getDnsConfig() {
+    public DnsConfigSpec getDnsConfig() {
         return dnsConfig;
     }
 
@@ -262,7 +262,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param dnsConfig
      */
-    public void setDnsConfig(DnsConfig dnsConfig) {
+    public void setDnsConfig(DnsConfigSpec dnsConfig) {
         this.dnsConfig = dnsConfig;
     }
 
@@ -271,7 +271,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public LogConfig getLogConfig() {
+    public LogConfigSpec getLogConfig() {
         return logConfig;
     }
 
@@ -280,7 +280,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param logConfig
      */
-    public void setLogConfig(LogConfig logConfig) {
+    public void setLogConfig(LogConfigSpec logConfig) {
         this.logConfig = logConfig;
     }
 
@@ -289,7 +289,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public List<HostAlias> getHostAliases() {
+    public List<HostAliasSpec> getHostAliases() {
         return hostAliases;
     }
 
@@ -298,30 +298,30 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param hostAliases
      */
-    public void setHostAliases(List<HostAlias> hostAliases) {
+    public void setHostAliases(List<HostAliasSpec> hostAliases) {
         this.hostAliases = hostAliases;
     }
 
     /**
-     * get 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * get Pod的volume列表，可以挂载到container上。长度范围：[0,7]
      *
      * @return
      */
-    public List<Volume> getVolumes() {
+    public List<VolumeSpec> getVolumes() {
         return volumes;
     }
 
     /**
-     * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * set Pod的volume列表，可以挂载到container上。长度范围：[0,7]
      *
      * @param volumes
      */
-    public void setVolumes(List<Volume> volumes) {
+    public void setVolumes(List<VolumeSpec> volumes) {
         this.volumes = volumes;
     }
 
     /**
-     * get 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * get Pod的容器列表，至少一个容器。长度范围[1,8]
      *
      * @return
      */
@@ -330,7 +330,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * set Pod的容器列表，至少一个容器。长度范围[1,8]
      *
      * @param containers
      */
@@ -339,7 +339,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
+     * get 计费模式：包年包月预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
      *
      * @return
      */
@@ -348,7 +348,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
+     * set 计费模式：包年包月预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
      *
      * @param charge
      */
@@ -361,7 +361,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public ElasticIp getElasticIp() {
+    public ElasticIpSpec getElasticIp() {
         return elasticIp;
     }
 
@@ -370,7 +370,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param elasticIp
      */
-    public void setElasticIp(ElasticIp elasticIp) {
+    public void setElasticIp(ElasticIpSpec elasticIp) {
         this.elasticIp = elasticIp;
     }
 
@@ -468,7 +468,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param dnsConfig
      */
-    public PodSpec dnsConfig(DnsConfig dnsConfig) {
+    public PodSpec dnsConfig(DnsConfigSpec dnsConfig) {
         this.dnsConfig = dnsConfig;
         return this;
     }
@@ -478,7 +478,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param logConfig
      */
-    public PodSpec logConfig(LogConfig logConfig) {
+    public PodSpec logConfig(LogConfigSpec logConfig) {
         this.logConfig = logConfig;
         return this;
     }
@@ -488,23 +488,23 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param hostAliases
      */
-    public PodSpec hostAliases(List<HostAlias> hostAliases) {
+    public PodSpec hostAliases(List<HostAliasSpec> hostAliases) {
         this.hostAliases = hostAliases;
         return this;
     }
 
     /**
-     * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * set Pod的volume列表，可以挂载到container上。长度范围：[0,7]
      *
      * @param volumes
      */
-    public PodSpec volumes(List<Volume> volumes) {
+    public PodSpec volumes(List<VolumeSpec> volumes) {
         this.volumes = volumes;
         return this;
     }
 
     /**
-     * set 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * set Pod的容器列表，至少一个容器。长度范围[1,8]
      *
      * @param containers
      */
@@ -514,7 +514,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
+     * set 计费模式：包年包月预付费（prepaid_by_duration）, 按配置后付费（postpaid_by_duration）。默认：按配置后付费
      *
      * @param charge
      */
@@ -528,7 +528,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param elasticIp
      */
-    public PodSpec elasticIp(ElasticIp elasticIp) {
+    public PodSpec elasticIp(ElasticIpSpec elasticIp) {
         this.elasticIp = elasticIp;
         return this;
     }
@@ -549,7 +549,7 @@ public class PodSpec  implements java.io.Serializable {
      *
      * @param hostAliase
      */
-    public void addHostAliase(HostAlias hostAliase) {
+    public void addHostAliase(HostAliasSpec hostAliase) {
         if (this.hostAliases == null) {
             this.hostAliases = new ArrayList<>();
         }
@@ -557,11 +557,11 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * add item to Pod的volume列表，可以挂载到container上。长度范围：[0,7]
      *
      * @param volume
      */
-    public void addVolume(Volume volume) {
+    public void addVolume(VolumeSpec volume) {
         if (this.volumes == null) {
             this.volumes = new ArrayList<>();
         }
@@ -569,7 +569,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
+     * add item to Pod的容器列表，至少一个容器。长度范围[1,8]
      *
      * @param container
      */

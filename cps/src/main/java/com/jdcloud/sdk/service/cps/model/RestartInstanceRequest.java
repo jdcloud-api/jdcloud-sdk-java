@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 重启单台云物理服务器，只能重启running状态的服务器
+ * 重启单台云物理服务器，只能重启running状态的服务器 [MFA enabled]
  */
 public class RestartInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 

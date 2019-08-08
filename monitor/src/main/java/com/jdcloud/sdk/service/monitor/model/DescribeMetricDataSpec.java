@@ -36,7 +36,7 @@ public class DescribeMetricDataSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
+     * 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
      */
     private String aggrType;
 
@@ -46,7 +46,7 @@ public class DescribeMetricDataSpec  implements java.io.Serializable {
     private String downSampleType;
 
     /**
-     * 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
 in: query
      */
     private String endTime;
@@ -78,13 +78,13 @@ in: query
     private String serviceCode;
 
     /**
-     * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
 in: query
      */
     private String startTime;
 
     /**
-     * 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
 in: query
      */
     private List<TagFilter> tags;
@@ -97,7 +97,7 @@ in: query
 
 
     /**
-     * get 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
+     * get 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
      *
      * @return
      */
@@ -106,7 +106,7 @@ in: query
     }
 
     /**
-     * set 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
+     * set 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
      *
      * @param aggrType
      */
@@ -133,7 +133,7 @@ in: query
     }
 
     /**
-     * get 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * get 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
 in: query
      *
      * @return
@@ -143,7 +143,7 @@ in: query
     }
 
     /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * set 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
 in: query
      *
      * @param endTime
@@ -229,7 +229,7 @@ in: query
     }
 
     /**
-     * get 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * get 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
 in: query
      *
      * @return
@@ -239,7 +239,7 @@ in: query
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
 in: query
      *
      * @param startTime
@@ -249,7 +249,7 @@ in: query
     }
 
     /**
-     * get 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * get 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
 in: query
      *
      * @return
@@ -259,7 +259,7 @@ in: query
     }
 
     /**
-     * set 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * set 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
 in: query
      *
      * @param tags
@@ -290,7 +290,7 @@ in: query
 
 
     /**
-     * set 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、last、min、max
+     * set 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
      *
      * @param aggrType
      */
@@ -310,7 +310,7 @@ in: query
     }
 
     /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * set 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
 in: query
      *
      * @param endTime
@@ -363,7 +363,7 @@ in: query
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
 in: query
      *
      * @param startTime
@@ -374,7 +374,7 @@ in: query
     }
 
     /**
-     * set 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * set 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
 in: query
      *
      * @param tags
@@ -397,7 +397,7 @@ in: query
 
 
     /**
-     * add item to 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * add item to 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
 in: query
      *
      * @param tag

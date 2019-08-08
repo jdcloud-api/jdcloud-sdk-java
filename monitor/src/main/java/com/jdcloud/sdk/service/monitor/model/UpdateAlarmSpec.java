@@ -53,7 +53,7 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     private String webHookContent;
 
     /**
-     * webHook协议
+     * webHook协议，目前支持http，https
      */
     private String webHookProtocol;
 
@@ -63,7 +63,7 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     private String webHookSecret;
 
     /**
-     * 回调url
+     * 回调url，例如http://www.jdcloud.com
      */
     private String webHookUrl;
 
@@ -123,7 +123,7 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * get webHook协议
+     * get webHook协议，目前支持http，https
      *
      * @return
      */
@@ -132,7 +132,7 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set webHook协议
+     * set webHook协议，目前支持http，https
      *
      * @param webHookProtocol
      */
@@ -159,7 +159,7 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 回调url
+     * get 回调url，例如http://www.jdcloud.com
      *
      * @return
      */
@@ -168,7 +168,7 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回调url
+     * set 回调url，例如http://www.jdcloud.com
      *
      * @param webHookUrl
      */
@@ -208,7 +208,7 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set webHook协议
+     * set webHook协议，目前支持http，https
      *
      * @param webHookProtocol
      */
@@ -228,7 +228,7 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回调url
+     * set 回调url，例如http://www.jdcloud.com
      *
      * @param webHookUrl
      */

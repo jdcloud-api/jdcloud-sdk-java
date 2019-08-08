@@ -135,6 +135,11 @@ public class CmAlarmHistory  implements java.io.Serializable {
     private Long ruleId;
 
     /**
+     * 规则名称
+     */
+    private String ruleName;
+
+    /**
      * 报警规则对应的产品
      */
     private String serviceCode;
@@ -521,6 +526,24 @@ public class CmAlarmHistory  implements java.io.Serializable {
     }
 
     /**
+     * get 规则名称
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+    }
+
+    /**
      * get 报警规则对应的产品
      *
      * @return
@@ -808,6 +831,16 @@ public class CmAlarmHistory  implements java.io.Serializable {
      */
     public CmAlarmHistory ruleId(Long ruleId) {
         this.ruleId = ruleId;
+        return this;
+    }
+
+    /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public CmAlarmHistory ruleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
 

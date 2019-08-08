@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 原生容器
- * container 相关接口
+ * Container
+ * Pod中容器的相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.pod.model.AttachResponse;
 
 /**
- * 查询单个容器日志
+ * 将容器连接到本地标准输入输出
 
  */
 class AttachExecutor extends JdcloudExecutor {

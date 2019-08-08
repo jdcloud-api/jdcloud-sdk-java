@@ -31,18 +31,23 @@ import com.jdcloud.sdk.service.monitor.model.DescribeAlarmHistoryAllRegionRespon
 /**
  * 查询报警历史
 检索条件组合优先级从高到低为
-1. alarmId
-2. serviceCode
-2.1 serviceCode + resourceId
-2.2 serviceCode + resourceIds
-3. serviceCodes
-4. 用户所有规则
+1：alarmIds不为空
+2：alarmId不为空
+3：serviceCode不为空
+3.1：serviceCode + resourceId
+3.2: serviceCode + resourceIds
+3.3: serviceCode + ruleName
+4：serviceCodes不为空
+4.1：serviceCode + resourceId
+4.2: serviceCode + resourceIds
+4.3: serviceCode + ruleName
+5: 所有规则
  */
 class DescribeAlarmHistoryAllRegionExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "POST";
+        return "GET";
     }
 
     @Override

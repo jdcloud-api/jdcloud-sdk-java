@@ -33,7 +33,7 @@ public class VolumeMount  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 环境变量名称
+     * 磁盘分类
      */
     private String category;
 
@@ -64,7 +64,7 @@ public class VolumeMount  implements java.io.Serializable {
 
 
     /**
-     * get 环境变量名称
+     * get 磁盘分类
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * set 环境变量名称
+     * set 磁盘分类
      *
      * @param category
      */
@@ -173,7 +173,7 @@ public class VolumeMount  implements java.io.Serializable {
 
 
     /**
-     * set 环境变量名称
+     * set 磁盘分类
      *
      * @param category
      */

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.nativecontainer.model.DockerRegistryData;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建一个 secret，用于存放镜像仓库机密相关信息。
+ * 创建一个 secret，用于存放镜像仓库认证信息。
 
  */
 public class CreateSecretRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,7 +37,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 机密数据名称，不能重复
+     * 镜像仓库认证信息名称，不能重复
 
      * Required:true
      */
@@ -45,7 +45,7 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     private String name;
 
     /**
-     * 机密数据的类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
+     * 镜像仓库认证信息类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
 
      * Required:true
      */
@@ -53,12 +53,12 @@ public class CreateSecretRequest extends JdcloudRequest implements java.io.Seria
     private String secretType;
 
     /**
-     * 机密的数据。&lt;br&gt;
-key 的有效字符包括字母、数字、-、_和.； &lt;br&gt;
-value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使用 base64 -w 0选项），每个value长度上限为4KB，整个data的长度不能超过256KB; &lt;br&gt;
+     * 镜像仓库认证信息数据。&lt;br&gt;
 必须包含server、username、password 字段，email 字段是可选的。&lt;br&gt;
 
+     * Required:true
      */
+    @Required
     private DockerRegistryData data;
 
     /**
@@ -70,7 +70,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
 
 
     /**
-     * get 机密数据名称，不能重复
+     * get 镜像仓库认证信息名称，不能重复
 
      *
      * @return
@@ -80,7 +80,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     }
 
     /**
-     * set 机密数据名称，不能重复
+     * set 镜像仓库认证信息名称，不能重复
 
      *
      * @param name
@@ -90,7 +90,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     }
 
     /**
-     * get 机密数据的类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
+     * get 镜像仓库认证信息类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
 
      *
      * @return
@@ -100,7 +100,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     }
 
     /**
-     * set 机密数据的类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
+     * set 镜像仓库认证信息类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
 
      *
      * @param secretType
@@ -110,9 +110,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     }
 
     /**
-     * get 机密的数据。&lt;br&gt;
-key 的有效字符包括字母、数字、-、_和.； &lt;br&gt;
-value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使用 base64 -w 0选项），每个value长度上限为4KB，整个data的长度不能超过256KB; &lt;br&gt;
+     * get 镜像仓库认证信息数据。&lt;br&gt;
 必须包含server、username、password 字段，email 字段是可选的。&lt;br&gt;
 
      *
@@ -123,9 +121,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     }
 
     /**
-     * set 机密的数据。&lt;br&gt;
-key 的有效字符包括字母、数字、-、_和.； &lt;br&gt;
-value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使用 base64 -w 0选项），每个value长度上限为4KB，整个data的长度不能超过256KB; &lt;br&gt;
+     * set 镜像仓库认证信息数据。&lt;br&gt;
 必须包含server、username、password 字段，email 字段是可选的。&lt;br&gt;
 
      *
@@ -155,7 +151,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
 
 
     /**
-     * set 机密数据名称，不能重复
+     * set 镜像仓库认证信息名称，不能重复
 
      *
      * @param name
@@ -166,7 +162,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     }
 
     /**
-     * set 机密数据的类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
+     * set 镜像仓库认证信息类型，目前仅支持：docker-registry 类型，用来和docker registry认证的类型。
 
      *
      * @param secretType
@@ -177,9 +173,7 @@ value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使�
     }
 
     /**
-     * set 机密的数据。&lt;br&gt;
-key 的有效字符包括字母、数字、-、_和.； &lt;br&gt;
-value 是 Base64 编码的字符串，不能包含换行符（在 linux 下使用 base64 -w 0选项），每个value长度上限为4KB，整个data的长度不能超过256KB; &lt;br&gt;
+     * set 镜像仓库认证信息数据。&lt;br&gt;
 必须包含server、username、password 字段，email 字段是可选的。&lt;br&gt;
 
      *

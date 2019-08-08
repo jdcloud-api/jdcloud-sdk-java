@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Monitoring Items APIs
+ * 监控项相关接口
  * 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
  *
  * OpenAPI spec version: v1
@@ -48,12 +48,12 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private String downSampleType;
 
     /**
-     * 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      */
     private String startTime;
 
     /**
-     * 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      */
     private String endTime;
 
@@ -63,7 +63,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private String timeInterval;
 
     /**
-     * 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
      */
     private List<TagFilter> tags;
 
@@ -143,7 +143,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * get 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @return
      */
@@ -152,7 +152,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @param startTime
      */
@@ -161,7 +161,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * get 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @return
      */
@@ -170,7 +170,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * set 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @param endTime
      */
@@ -197,7 +197,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * get 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
      *
      * @return
      */
@@ -206,7 +206,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * set 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
      *
      * @param tags
      */
@@ -344,7 +344,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的开始时间， UTC时间，格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @param startTime
      */
@@ -354,7 +354,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12- yyyy-MM-dd&#39;T&#39;HH:mm:ssZ（为空时，将由startTime与timeInterval计算得出）
+     * set 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
      *
      * @param endTime
      */
@@ -374,7 +374,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * set 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
      *
      * @param tags
      */
@@ -445,7 +445,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * add item to 自定义标签/tag；至少要传一个tag，且tag.Values不为空
+     * add item to 监控指标数据的维度信息,根据tags来筛选指标数据不同的维度
      *
      * @param tag
      */

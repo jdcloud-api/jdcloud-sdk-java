@@ -98,6 +98,11 @@ public class CreateCmAlarmParam  implements java.io.Serializable {
     private Long period;
 
     /**
+     * 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     */
+    private String ruleName;
+
+    /**
      * 报警阈值，目前只开放数值类型功能
      * Required:true
      */
@@ -293,6 +298,24 @@ public class CreateCmAlarmParam  implements java.io.Serializable {
     }
 
     /**
+     * get 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+    }
+
+    /**
      * get 报警阈值，目前只开放数值类型功能
      *
      * @return
@@ -426,6 +449,16 @@ public class CreateCmAlarmParam  implements java.io.Serializable {
      */
     public CreateCmAlarmParam period(Long period) {
         this.period = period;
+        return this;
+    }
+
+    /**
+     * set 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public CreateCmAlarmParam ruleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
 

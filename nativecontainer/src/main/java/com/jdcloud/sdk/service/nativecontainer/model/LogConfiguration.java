@@ -37,11 +37,6 @@ public class LogConfiguration  implements java.io.Serializable {
      */
     private String logDriver;
 
-    /**
-     * 日志Driver的配置选项
-     */
-    private LogOption options;
-
 
     /**
      * get 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
@@ -61,24 +56,6 @@ public class LogConfiguration  implements java.io.Serializable {
         this.logDriver = logDriver;
     }
 
-    /**
-     * get 日志Driver的配置选项
-     *
-     * @return
-     */
-    public LogOption getOptions() {
-        return options;
-    }
-
-    /**
-     * set 日志Driver的配置选项
-     *
-     * @param options
-     */
-    public void setOptions(LogOption options) {
-        this.options = options;
-    }
-
 
     /**
      * set 日志Driver名称  default：默认在本地分配10MB的存储空间，自动rotate
@@ -87,16 +64,6 @@ public class LogConfiguration  implements java.io.Serializable {
      */
     public LogConfiguration logDriver(String logDriver) {
         this.logDriver = logDriver;
-        return this;
-    }
-
-    /**
-     * set 日志Driver的配置选项
-     *
-     * @param options
-     */
-    public LogConfiguration options(LogOption options) {
-        this.options = options;
         return this;
     }
 

@@ -33,27 +33,27 @@ public class Probe  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 容器启动多长时\间后，触发探针。默认10秒；范围:[0-300]
+     * 容器启动多久后触发探针。
      */
     private Integer initialDelaySeconds;
 
     /**
-     * 探测的时间间隔。默认值 10秒，范围:[1-300]
+     * 探测的时间间隔。
      */
     private Integer periodSeconds;
 
     /**
-     * 探测的超时时间。默认值 1秒；范围:[1-300]
+     * 探测的超时时间。
      */
     private Integer timeoutSeconds;
 
     /**
-     * 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+     * 在成功状态后，连续探活失败的次数，认为探活失败。
      */
     private Integer failureThreshold;
 
     /**
-     * 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+     * 在失败状态后，连续探活成功的次数，认为探活成功。
      */
     private Integer successThreshold;
 
@@ -63,18 +63,18 @@ public class Probe  implements java.io.Serializable {
     private Exec exec;
 
     /**
-     * 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。
+     * 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于 200 且小于 400，则认为诊断成功。
      */
     private Hg httpGet;
 
     /**
-     * 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。
+     * 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则认为诊断成功。
      */
     private TcpSocket tcpSocket;
 
 
     /**
-     * get 容器启动多长时\间后，触发探针。默认10秒；范围:[0-300]
+     * get 容器启动多久后触发探针。
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 容器启动多长时\间后，触发探针。默认10秒；范围:[0-300]
+     * set 容器启动多久后触发探针。
      *
      * @param initialDelaySeconds
      */
@@ -92,7 +92,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * get 探测的时间间隔。默认值 10秒，范围:[1-300]
+     * get 探测的时间间隔。
      *
      * @return
      */
@@ -101,7 +101,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 探测的时间间隔。默认值 10秒，范围:[1-300]
+     * set 探测的时间间隔。
      *
      * @param periodSeconds
      */
@@ -110,7 +110,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * get 探测的超时时间。默认值 1秒；范围:[1-300]
+     * get 探测的超时时间。
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 探测的超时时间。默认值 1秒；范围:[1-300]
+     * set 探测的超时时间。
      *
      * @param timeoutSeconds
      */
@@ -128,7 +128,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * get 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+     * get 在成功状态后，连续探活失败的次数，认为探活失败。
      *
      * @return
      */
@@ -137,7 +137,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+     * set 在成功状态后，连续探活失败的次数，认为探活失败。
      *
      * @param failureThreshold
      */
@@ -146,7 +146,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * get 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+     * get 在失败状态后，连续探活成功的次数，认为探活成功。
      *
      * @return
      */
@@ -155,7 +155,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+     * set 在失败状态后，连续探活成功的次数，认为探活成功。
      *
      * @param successThreshold
      */
@@ -182,7 +182,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * get 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。
+     * get 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于 200 且小于 400，则认为诊断成功。
      *
      * @return
      */
@@ -191,7 +191,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。
+     * set 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于 200 且小于 400，则认为诊断成功。
      *
      * @param httpGet
      */
@@ -200,7 +200,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * get 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。
+     * get 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则认为诊断成功。
      *
      * @return
      */
@@ -209,7 +209,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。
+     * set 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则认为诊断成功。
      *
      * @param tcpSocket
      */
@@ -219,7 +219,7 @@ public class Probe  implements java.io.Serializable {
 
 
     /**
-     * set 容器启动多长时\间后，触发探针。默认10秒；范围:[0-300]
+     * set 容器启动多久后触发探针。
      *
      * @param initialDelaySeconds
      */
@@ -229,7 +229,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 探测的时间间隔。默认值 10秒，范围:[1-300]
+     * set 探测的时间间隔。
      *
      * @param periodSeconds
      */
@@ -239,7 +239,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 探测的超时时间。默认值 1秒；范围:[1-300]
+     * set 探测的超时时间。
      *
      * @param timeoutSeconds
      */
@@ -249,7 +249,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+     * set 在成功状态后，连续探活失败的次数，认为探活失败。
      *
      * @param failureThreshold
      */
@@ -259,7 +259,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+     * set 在失败状态后，连续探活成功的次数，认为探活成功。
      *
      * @param successThreshold
      */
@@ -279,7 +279,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。
+     * set 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。如果响应的状态码大于等于 200 且小于 400，则认为诊断成功。
      *
      * @param httpGet
      */
@@ -289,7 +289,7 @@ public class Probe  implements java.io.Serializable {
     }
 
     /**
-     * set 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。
+     * set 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则认为诊断成功。
      *
      * @param tcpSocket
      */

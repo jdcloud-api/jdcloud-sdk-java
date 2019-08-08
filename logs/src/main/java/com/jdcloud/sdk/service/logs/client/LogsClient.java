@@ -31,15 +31,60 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.logs.model.DescribeLogtopicRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeLogtopicResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeLogtopicExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeLogdCARequest;
 import com.jdcloud.sdk.service.logs.model.DescribeLogdCAResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeLogdCAExecutor;
-import com.jdcloud.sdk.service.logs.model.PutRequest;
-import com.jdcloud.sdk.service.logs.model.PutResponse;
-import com.jdcloud.sdk.service.logs.client.PutExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeLogsetRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeLogsetResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeLogsetExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeInstanceCollectConfsRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeInstanceCollectConfsResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeInstanceCollectConfsExecutor;
+import com.jdcloud.sdk.service.logs.model.DeleteLogtopicRequest;
+import com.jdcloud.sdk.service.logs.model.DeleteLogtopicResponse;
+import com.jdcloud.sdk.service.logs.client.DeleteLogtopicExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeCollectResourcesExecutor;
+import com.jdcloud.sdk.service.logs.model.UpdateLogtopicRequest;
+import com.jdcloud.sdk.service.logs.model.UpdateLogtopicResponse;
+import com.jdcloud.sdk.service.logs.client.UpdateLogtopicExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeLogsetsRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeLogsetsResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeLogsetsExecutor;
+import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoRequest;
+import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoResponse;
+import com.jdcloud.sdk.service.logs.client.UpdateCollectInfoExecutor;
+import com.jdcloud.sdk.service.logs.model.PutRequest;
+import com.jdcloud.sdk.service.logs.model.PutResponse;
+import com.jdcloud.sdk.service.logs.client.PutExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectInfoRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectInfoResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeCollectInfoExecutor;
+import com.jdcloud.sdk.service.logs.model.CreateLogsetRequest;
+import com.jdcloud.sdk.service.logs.model.CreateLogsetResponse;
+import com.jdcloud.sdk.service.logs.client.CreateLogsetExecutor;
+import com.jdcloud.sdk.service.logs.model.UpdateLogsetRequest;
+import com.jdcloud.sdk.service.logs.model.UpdateLogsetResponse;
+import com.jdcloud.sdk.service.logs.client.UpdateLogsetExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeLogtopicsRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeLogtopicsResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeLogtopicsExecutor;
+import com.jdcloud.sdk.service.logs.model.CreateCollectInfoRequest;
+import com.jdcloud.sdk.service.logs.model.CreateCollectInfoResponse;
+import com.jdcloud.sdk.service.logs.client.CreateCollectInfoExecutor;
+import com.jdcloud.sdk.service.logs.model.DeleteLogsetRequest;
+import com.jdcloud.sdk.service.logs.model.DeleteLogsetResponse;
+import com.jdcloud.sdk.service.logs.client.DeleteLogsetExecutor;
+import com.jdcloud.sdk.service.logs.model.UpdateCollectResourcesRequest;
+import com.jdcloud.sdk.service.logs.model.UpdateCollectResourcesResponse;
+import com.jdcloud.sdk.service.logs.client.UpdateCollectResourcesExecutor;
+import com.jdcloud.sdk.service.logs.model.CreateLogtopicRequest;
+import com.jdcloud.sdk.service.logs.model.CreateLogtopicResponse;
+import com.jdcloud.sdk.service.logs.client.CreateLogtopicExecutor;
 
 /**
  * logsClient
@@ -91,6 +136,17 @@ public class LogsClient extends JdcloudClient {
 
 
     /**
+     * 查询日志主题基本信息。如配置了采集配置，将返回采集配置的UID
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLogtopicResponse describeLogtopic(DescribeLogtopicRequest request) throws JdcloudSdkException {
+        return new DescribeLogtopicExecutor().client(this).execute(request);
+    }
+
+    /**
      * 返回特定有效期的证书
      *
      * @param request
@@ -99,6 +155,83 @@ public class LogsClient extends JdcloudClient {
      */
     public DescribeLogdCAResponse describeLogdCA(DescribeLogdCARequest request) throws JdcloudSdkException {
         return new DescribeLogdCAExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询日志集详情。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLogsetResponse describeLogset(DescribeLogsetRequest request) throws JdcloudSdkException {
+        return new DescribeLogsetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询当前实例的采集配置列表：此接口会生成agent心跳监控数据，用以表征agent的可用性。请求中若添加了X-Jdcloud-Logs-md5的header，将按照md5的方式处理返回值。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceCollectConfsResponse describeInstanceCollectConfs(DescribeInstanceCollectConfsRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceCollectConfsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除日志主题。其采集配置与采集实例配置将一并删除。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLogtopicResponse deleteLogtopic(DeleteLogtopicRequest request) throws JdcloudSdkException {
+        return new DeleteLogtopicExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询采集配置的实例列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCollectResourcesResponse describeCollectResources(DescribeCollectResourcesRequest request) throws JdcloudSdkException {
+        return new DescribeCollectResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新日志主题。日志主题名称不可更新。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateLogtopicResponse updateLogtopic(UpdateLogtopicRequest request) throws JdcloudSdkException {
+        return new UpdateLogtopicExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLogsetsResponse describeLogsets(DescribeLogsetsRequest request) throws JdcloudSdkException {
+        return new DescribeLogsetsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新采集配置。若传入的实例列表不为空，将覆盖之前的所有实例，而非新增。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCollectInfoResponse updateCollectInfo(UpdateCollectInfoRequest request) throws JdcloudSdkException {
+        return new UpdateCollectInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -113,14 +246,91 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 查询当前实例的采集配置列表：此接口会生成agent心跳监控数据，用以表征agent的可用性。请求中若添加了X-Jdcloud-Logs-md5的header，将按照md5的方式处理返回值。
+     * 采集配置的基本信息。
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeInstanceCollectConfsResponse describeInstanceCollectConfs(DescribeInstanceCollectConfsRequest request) throws JdcloudSdkException {
-        return new DescribeInstanceCollectConfsExecutor().client(this).execute(request);
+    public DescribeCollectInfoResponse describeCollectInfo(DescribeCollectInfoRequest request) throws JdcloudSdkException {
+        return new DescribeCollectInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建日志集。名称不可重复。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateLogsetResponse createLogset(CreateLogsetRequest request) throws JdcloudSdkException {
+        return new CreateLogsetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新日志集。日志集名称不可更新。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateLogsetResponse updateLogset(UpdateLogsetRequest request) throws JdcloudSdkException {
+        return new UpdateLogsetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询日志主题列表，支持按照名称模糊查询。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLogtopicsResponse describeLogtopics(DescribeLogtopicsRequest request) throws JdcloudSdkException {
+        return new DescribeLogtopicsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建采集配置，支持基于云产品模板生成采集模板；支持用于自定义采集配置。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateCollectInfoResponse createCollectInfo(CreateCollectInfoRequest request) throws JdcloudSdkException {
+        return new CreateCollectInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLogsetResponse deleteLogset(DeleteLogsetRequest request) throws JdcloudSdkException {
+        return new DeleteLogsetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 增量更新采集实例列表。更新的动作支持 add 、 remove
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCollectResourcesResponse updateCollectResources(UpdateCollectResourcesRequest request) throws JdcloudSdkException {
+        return new UpdateCollectResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建日志主题，不可与当前日志集下现有日志主题重名。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateLogtopicResponse createLogtopic(CreateLogtopicRequest request) throws JdcloudSdkException {
+        return new CreateLogtopicExecutor().client(this).execute(request);
     }
 
 

@@ -158,6 +158,11 @@ public class Rule  implements java.io.Serializable {
     private Long rootRuleId;
 
     /**
+     * 规则名称
+     */
+    private String ruleName;
+
+    /**
      * rutye 1:经典监控  5：自定义监控   6：站点监控 7：可用性监控
      */
     private Long ruleType;
@@ -659,6 +664,24 @@ public class Rule  implements java.io.Serializable {
     }
 
     /**
+     * get 规则名称
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+    }
+
+    /**
      * get rutye 1:经典监控  5：自定义监控   6：站点监控 7：可用性监控
      *
      * @return
@@ -1086,6 +1109,16 @@ public class Rule  implements java.io.Serializable {
      */
     public Rule rootRuleId(Long rootRuleId) {
         this.rootRuleId = rootRuleId;
+        return this;
+    }
+
+    /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public Rule ruleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
 

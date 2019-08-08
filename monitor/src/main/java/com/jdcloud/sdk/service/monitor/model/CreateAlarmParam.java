@@ -92,7 +92,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     private String operation;
 
     /**
-     * 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，15，30，60
+     * 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，10,15，30，60
      * Required:true
      */
     @Required
@@ -104,6 +104,11 @@ public class CreateAlarmParam  implements java.io.Serializable {
      */
     @Required
     private List<String> resourceIds;
+
+    /**
+     * 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     */
+    private String ruleName;
 
     /**
      * 产品名称
@@ -137,7 +142,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     private String webHookContent;
 
     /**
-     * webHook协议
+     * webHook协议，目前支持http，https
      */
     private String webHookProtocol;
 
@@ -147,7 +152,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     private String webHookSecret;
 
     /**
-     * 回调url
+     * 回调url，例如http://www.jdcloud.com
      */
     private String webHookUrl;
 
@@ -315,7 +320,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * get 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，15，30，60
+     * get 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，10,15，30，60
      *
      * @return
      */
@@ -324,7 +329,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * set 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，15，30，60
+     * set 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，10,15，30，60
      *
      * @param period
      */
@@ -348,6 +353,24 @@ public class CreateAlarmParam  implements java.io.Serializable {
      */
     public void setResourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
+    }
+
+    /**
+     * get 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
     }
 
     /**
@@ -441,7 +464,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * get webHook协议
+     * get webHook协议，目前支持http，https
      *
      * @return
      */
@@ -450,7 +473,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * set webHook协议
+     * set webHook协议，目前支持http，https
      *
      * @param webHookProtocol
      */
@@ -477,7 +500,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * get 回调url
+     * get 回调url，例如http://www.jdcloud.com
      *
      * @return
      */
@@ -486,7 +509,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * set 回调url
+     * set 回调url，例如http://www.jdcloud.com
      *
      * @param webHookUrl
      */
@@ -586,7 +609,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * set 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，15，30，60
+     * set 查询指标的周期，单位为分钟,目前支持的取值：1，2，5，10,15，30，60
      *
      * @param period
      */
@@ -602,6 +625,16 @@ public class CreateAlarmParam  implements java.io.Serializable {
      */
     public CreateAlarmParam resourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
+        return this;
+    }
+
+    /**
+     * set 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public CreateAlarmParam ruleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
 
@@ -656,7 +689,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * set webHook协议
+     * set webHook协议，目前支持http，https
      *
      * @param webHookProtocol
      */
@@ -676,7 +709,7 @@ public class CreateAlarmParam  implements java.io.Serializable {
     }
 
     /**
-     * set 回调url
+     * set 回调url，例如http://www.jdcloud.com
      *
      * @param webHookUrl
      */

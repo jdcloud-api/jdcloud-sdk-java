@@ -35,29 +35,25 @@ public class DnsConfig  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
-eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素符合IPv4格式。
+     * DNS服务器IP地址列表。
 
      */
     private List<String> nameservers;
 
     /**
-     * DNS搜索域列表，用于主机名查找。&lt;br&gt;
-eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
+     * DNS搜索域列表，用于主机名查找。
 
      */
     private List<String> searches;
 
     /**
-     * DNS解析器选项列表。&lt;br&gt;
-eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
+     * DNS解析器选项列表。
      */
     private List<PodDnsConfigOption> options;
 
 
     /**
-     * get DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
-eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素符合IPv4格式。
+     * get DNS服务器IP地址列表。
 
      *
      * @return
@@ -67,8 +63,7 @@ eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素�
     }
 
     /**
-     * set DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
-eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素符合IPv4格式。
+     * set DNS服务器IP地址列表。
 
      *
      * @param nameservers
@@ -78,8 +73,7 @@ eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素�
     }
 
     /**
-     * get DNS搜索域列表，用于主机名查找。&lt;br&gt;
-eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
+     * get DNS搜索域列表，用于主机名查找。
 
      *
      * @return
@@ -89,8 +83,7 @@ eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列�
     }
 
     /**
-     * set DNS搜索域列表，用于主机名查找。&lt;br&gt;
-eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
+     * set DNS搜索域列表，用于主机名查找。
 
      *
      * @param searches
@@ -100,8 +93,7 @@ eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列�
     }
 
     /**
-     * get DNS解析器选项列表。&lt;br&gt;
-eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
+     * get DNS解析器选项列表。
      *
      * @return
      */
@@ -110,8 +102,7 @@ eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表�
     }
 
     /**
-     * set DNS解析器选项列表。&lt;br&gt;
-eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
+     * set DNS解析器选项列表。
      *
      * @param options
      */
@@ -121,8 +112,7 @@ eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表�
 
 
     /**
-     * set DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
-eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素符合IPv4格式。
+     * set DNS服务器IP地址列表。
 
      *
      * @param nameservers
@@ -133,8 +123,7 @@ eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素�
     }
 
     /**
-     * set DNS搜索域列表，用于主机名查找。&lt;br&gt;
-eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
+     * set DNS搜索域列表，用于主机名查找。
 
      *
      * @param searches
@@ -145,8 +134,7 @@ eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列�
     }
 
     /**
-     * set DNS解析器选项列表。&lt;br&gt;
-eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
+     * set DNS解析器选项列表。
      *
      * @param options
      */
@@ -157,8 +145,7 @@ eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表�
 
 
     /**
-     * add item to DNS服务器IP地址列表，重复的将会被移除。&lt;br&gt;
-eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素符合IPv4格式。
+     * add item to DNS服务器IP地址列表。
 
      *
      * @param nameserver
@@ -171,8 +158,7 @@ eg [&quot;8.8.8.8&quot;, &quot;4.2.2.2&quot;]。列表长度：[0-20]，元素�
     }
 
     /**
-     * add item to DNS搜索域列表，用于主机名查找。&lt;br&gt;
-eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列表长度：[0-6]，列表中所有字符总长度不超过256个。
+     * add item to DNS搜索域列表，用于主机名查找。
 
      *
      * @param searche
@@ -185,8 +171,7 @@ eg [&quot;ns1.svc.cluster.local&quot;, &quot;my.dns.search.suffix&quot;]。列�
     }
 
     /**
-     * add item to DNS解析器选项列表。&lt;br&gt;
-eg  [&quot;ndots&quot;:&quot;2&quot;, &quot;edns0&quot;:&quot;&quot;]。列表长度：[0-10]
+     * add item to DNS解析器选项列表。
      *
      * @param option
      */

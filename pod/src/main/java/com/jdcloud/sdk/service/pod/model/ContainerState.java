@@ -26,30 +26,30 @@ package com.jdcloud.sdk.service.pod.model;
 
 
 /**
- * pod 中的 contianer 状态
+ * 容器的状态信息
  */
 public class ContainerState  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 容器running的详细信息
+     * 容器运行的详细信息
      */
     private ContainerStateRunning running;
 
     /**
-     * 容器Terminated的详细信息
+     * 容器终止的详细信息
      */
     private ContainerStateTerminated terminated;
 
     /**
-     * 容器waiting的详细信息
+     * 容器等待的详细信息
      */
     private ContainerStateWaiting waiting;
 
 
     /**
-     * get 容器running的详细信息
+     * get 容器运行的详细信息
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class ContainerState  implements java.io.Serializable {
     }
 
     /**
-     * set 容器running的详细信息
+     * set 容器运行的详细信息
      *
      * @param running
      */
@@ -67,7 +67,7 @@ public class ContainerState  implements java.io.Serializable {
     }
 
     /**
-     * get 容器Terminated的详细信息
+     * get 容器终止的详细信息
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class ContainerState  implements java.io.Serializable {
     }
 
     /**
-     * set 容器Terminated的详细信息
+     * set 容器终止的详细信息
      *
      * @param terminated
      */
@@ -85,7 +85,7 @@ public class ContainerState  implements java.io.Serializable {
     }
 
     /**
-     * get 容器waiting的详细信息
+     * get 容器等待的详细信息
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class ContainerState  implements java.io.Serializable {
     }
 
     /**
-     * set 容器waiting的详细信息
+     * set 容器等待的详细信息
      *
      * @param waiting
      */
@@ -104,7 +104,7 @@ public class ContainerState  implements java.io.Serializable {
 
 
     /**
-     * set 容器running的详细信息
+     * set 容器运行的详细信息
      *
      * @param running
      */
@@ -114,7 +114,7 @@ public class ContainerState  implements java.io.Serializable {
     }
 
     /**
-     * set 容器Terminated的详细信息
+     * set 容器终止的详细信息
      *
      * @param terminated
      */
@@ -124,7 +124,7 @@ public class ContainerState  implements java.io.Serializable {
     }
 
     /**
-     * set 容器waiting的详细信息
+     * set 容器等待的详细信息
      *
      * @param waiting
      */

@@ -33,13 +33,13 @@ public class LogConfig  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 日志Driver名称，目前只支持默认为每一个容器在本地分配10MB的存储空间，自动rotate。默认值：default。
+     * 日志Driver名称。
      */
     private String logDriver;
 
 
     /**
-     * get 日志Driver名称，目前只支持默认为每一个容器在本地分配10MB的存储空间，自动rotate。默认值：default。
+     * get 日志Driver名称。
      *
      * @return
      */
@@ -48,7 +48,7 @@ public class LogConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 日志Driver名称，目前只支持默认为每一个容器在本地分配10MB的存储空间，自动rotate。默认值：default。
+     * set 日志Driver名称。
      *
      * @param logDriver
      */
@@ -58,7 +58,7 @@ public class LogConfig  implements java.io.Serializable {
 
 
     /**
-     * set 日志Driver名称，目前只支持默认为每一个容器在本地分配10MB的存储空间，自动rotate。默认值：default。
+     * set 日志Driver名称。
      *
      * @param logDriver
      */

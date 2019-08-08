@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * pod
- * pod 相关接口
+ * Pod
+ * Pod 相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,8 +26,8 @@ package com.jdcloud.sdk.service.pod.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.pod.model.RebuildContainerSpec;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.pod.model.RebuildContainerSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,9 @@ public class RebuildPodRequest extends JdcloudRequest implements java.io.Seriali
 
     /**
      * 重置容器相关参数
+     * Required:true
      */
+    @Required
     private List<RebuildContainerSpec> containers;
 
     /**

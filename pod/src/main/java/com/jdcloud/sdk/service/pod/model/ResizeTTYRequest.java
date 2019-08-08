@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 原生容器
- * container 相关接口
+ * Container
+ * Pod中容器的相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -36,16 +36,20 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
 
     /**
      * tty row，取值范围：[10, 2000]
+     * Required:true
      */
+    @Required
     private Integer height;
 
     /**
      * tty column，取值范围：[10, 1000]
+     * Required:true
      */
+    @Required
     private Integer width;
 
     /**
-     * tty column，取值范围：[10, 1000]
+     * exec ID
      */
     private String execId;
 
@@ -108,7 +112,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get tty column，取值范围：[10, 1000]
+     * get exec ID
      *
      * @return
      */
@@ -117,7 +121,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set tty column，取值范围：[10, 1000]
+     * set exec ID
      *
      * @param execId
      */
@@ -201,7 +205,7 @@ public class ResizeTTYRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set tty column，取值范围：[10, 1000]
+     * set exec ID
      *
      * @param execId
      */

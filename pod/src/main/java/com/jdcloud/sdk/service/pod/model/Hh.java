@@ -24,32 +24,27 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * hh
+ * httpHeader
  */
 public class Hh  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * http header key，需满足http的规则
-     * Required:true
+     * http header 键
      */
-    @Required
     private String name;
 
     /**
-     * 容器探活方式
-     * Required:true
+     * http header 值
      */
-    @Required
     private String value;
 
 
     /**
-     * get http header key，需满足http的规则
+     * get http header 键
      *
      * @return
      */
@@ -58,7 +53,7 @@ public class Hh  implements java.io.Serializable {
     }
 
     /**
-     * set http header key，需满足http的规则
+     * set http header 键
      *
      * @param name
      */
@@ -67,7 +62,7 @@ public class Hh  implements java.io.Serializable {
     }
 
     /**
-     * get 容器探活方式
+     * get http header 值
      *
      * @return
      */
@@ -76,7 +71,7 @@ public class Hh  implements java.io.Serializable {
     }
 
     /**
-     * set 容器探活方式
+     * set http header 值
      *
      * @param value
      */
@@ -86,7 +81,7 @@ public class Hh  implements java.io.Serializable {
 
 
     /**
-     * set http header key，需满足http的规则
+     * set http header 键
      *
      * @param name
      */
@@ -96,7 +91,7 @@ public class Hh  implements java.io.Serializable {
     }
 
     /**
-     * set 容器探活方式
+     * set http header 值
      *
      * @param value
      */

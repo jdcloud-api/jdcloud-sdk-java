@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.nativecontainer.model.ModifyContainerAttributeResponse;
 
 /**
- * 修改容器的 名称 和 描述。
+ * 修改容器的 名称 和 描述。&lt;br&gt;
+name 和 description 必须要指定一个
 
  */
 class ModifyContainerAttributeExecutor extends JdcloudExecutor {

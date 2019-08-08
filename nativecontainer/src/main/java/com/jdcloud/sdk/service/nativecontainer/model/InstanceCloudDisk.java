@@ -53,7 +53,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     private String description;
 
     /**
-     * 磁盘类型，取值为 ssd, premium-hdd 之一
+     * 磁盘类型
      */
     private String diskType;
 
@@ -151,7 +151,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 磁盘类型，取值为 ssd, premium-hdd 之一
+     * get 磁盘类型
      *
      * @return
      */
@@ -160,7 +160,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘类型，取值为 ssd, premium-hdd 之一
+     * set 磁盘类型
      *
      * @param diskType
      */
@@ -282,7 +282,7 @@ public class InstanceCloudDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘类型，取值为 ssd, premium-hdd 之一
+     * set 磁盘类型
      *
      * @param diskType
      */

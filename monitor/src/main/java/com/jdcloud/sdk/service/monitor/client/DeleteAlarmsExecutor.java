@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsResponse;
 
 /**
- * 批量删除规则
+ * 删除规则
  */
 class DeleteAlarmsExecutor extends JdcloudExecutor {
 

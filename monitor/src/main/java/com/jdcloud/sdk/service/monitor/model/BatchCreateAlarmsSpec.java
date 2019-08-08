@@ -65,6 +65,11 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     private List<String> resourceIds;
 
     /**
+     * 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     */
+    private String ruleName;
+
+    /**
      * 规则类型, 1表示资源监控，6表示站点监控，默认为1
      */
     private Long ruleType;
@@ -104,7 +109,7 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     private String webHookContent;
 
     /**
-     * webHook协议
+     * webHook协议，目前支持http，https
      */
     private String webHookProtocol;
 
@@ -114,7 +119,7 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     private String webHookSecret;
 
     /**
-     * 回调url
+     * 回调url，例如http://www.jdcloud.com
      */
     private String webHookUrl;
 
@@ -207,6 +212,24 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
      */
     public void setResourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
+    }
+
+    /**
+     * get 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
     }
 
     /**
@@ -336,7 +359,7 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     }
 
     /**
-     * get webHook协议
+     * get webHook协议，目前支持http，https
      *
      * @return
      */
@@ -345,7 +368,7 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set webHook协议
+     * set webHook协议，目前支持http，https
      *
      * @param webHookProtocol
      */
@@ -372,7 +395,7 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 回调url
+     * get 回调url，例如http://www.jdcloud.com
      *
      * @return
      */
@@ -381,7 +404,7 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回调url
+     * set 回调url，例如http://www.jdcloud.com
      *
      * @param webHookUrl
      */
@@ -437,6 +460,16 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
      */
     public BatchCreateAlarmsSpec resourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
+        return this;
+    }
+
+    /**
+     * set 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public BatchCreateAlarmsSpec ruleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
 
@@ -511,7 +544,7 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set webHook协议
+     * set webHook协议，目前支持http，https
      *
      * @param webHookProtocol
      */
@@ -531,7 +564,7 @@ public class BatchCreateAlarmsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回调url
+     * set 回调url，例如http://www.jdcloud.com
      *
      * @param webHookUrl
      */

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建一个 secret，用于存放镜像仓库机密相关信息。
+ * 创建一个 secret，用于存放镜像仓库认证信息。
 
  */
 public class CreateSecretResponse extends JdcloudResponse<CreateSecretResult> implements java.io.Serializable {

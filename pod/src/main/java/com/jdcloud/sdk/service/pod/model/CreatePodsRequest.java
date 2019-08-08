@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * pod
- * pod 相关接口
+ * Pod
+ * Pod 相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,12 +24,13 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.service.pod.model.PodSpec;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.pod.model.PodSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * - 创建pod需要通过实名认证
+ * 创建一台或多台 pod
+- 创建pod需要通过实名认证
 - hostname规范
     - 支持两种方式：以标签方式书写或以完整主机名方式书写
     - 标签规范
@@ -40,7 +41,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
         - 标签与标签之间使用“.”(点)进行连接
         - 不能以“.”(点)开始，也不能以“.”(点)结尾
         - 整个主机名（包括标签以及分隔点“.”）最多有63个ASCII字符
-    - 正则：&#x60;^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$&#x60;
+    - 正则：&#x60;^([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9])(\.([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]))*$&#x60;
 - 网络配置
     - 指定主网卡配置信息
         - 必须指定subnetId
@@ -48,32 +49,37 @@ import com.jdcloud.sdk.service.JdcloudRequest;
         - 可以指定网卡的主IP(primaryIpAddress)和辅助IP(secondaryIpAddresses)，此时maxCount只能为1
         - 可以设置网卡的自动删除autoDelete属性，指明是否删除实例时自动删除网卡
         - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
-        - 一个 pod 创建时必须指定一个安全组，至多指定5个安全组
+        - 一个 pod 创建时至多指定5个安全组
         - 主网卡deviceIndex设置为1
 - 存储
-    - volume分为root volume和data volume，root volume的挂载目录是/，data volume的挂载目录可以随意指定
-    - volume的底层存储介质当前只支持cloud类别，也就是云硬盘
-    - root volume
-        - root volume只能是cloud类别
-        - 云硬盘类型可以选择ssd、premium-hdd
+    - volume分为container system disk和pod data volume，container system disk的挂载目录是/，data volume的挂载目录可以随意指定
+    - container system disk
+        - 只能是cloud类别
+        - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
-            - ssd：范围[10,100]GB，步长为10G
-            - premium-hdd：范围[10,100]GB，步长为10G
+            - 所有类型：范围[20,100]GB，步长为10G
         - 自动删除
             - 默认自动删除
         - 可以选择已存在的云硬盘
     - data volume
-        - data volume当前只能选择cloud类别
-        - 云硬盘类型可以选择ssd、premium-hdd
+        - 当前只能选择cloud类别
+        - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
-            - ssd：范围[20,1000]GB，步长为10G
-            - premium-hdd：范围[20,3000]GB，步长为10G
+            - 所有类型：范围[20,4000]GB，步长为10G
         - 自动删除
             - 默认自动删除
         - 可以选择已存在的云硬盘
         - 可以从快照创建磁盘
 - pod 容器日志
     - default：默认在本地分配10MB的存储空间，自动rotate
+- DNS-1123 label规范
+    - 长度范围: [1-63]
+    - 正则表达式: &#x60;^[a-z0-9]([-a-z0-9]{0,61}[a-z0-9])?$&#x60;
+    - 例子: my-name, 123-abc
+- DNS-1123 subdomain规范
+    - 长度范围: [1-253]
+    - 正则表达式: &#x60;^[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*$&#x60;
+    - 例子: example.com, registry.docker-cn.com
 - 其他
     - 创建完成后，pod 状态为running
     - maxCount为最大努力，不保证一定能达到maxCount
@@ -85,13 +91,22 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
 
     /**
      * pod 创建参数
+     * Required:true
      */
+    @Required
     private PodSpec podSpec;
 
     /**
      * 购买实例数量；取值范围：[1,100]
+     * Required:true
      */
+    @Required
     private Integer maxCount;
+
+    /**
+     * 保证请求幂等性的字符串；最大长度64个ASCII字符
+     */
+    private String clientToken;
 
     /**
      * Region ID
@@ -138,6 +153,24 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
+     * get 保证请求幂等性的字符串；最大长度64个ASCII字符
+     *
+     * @return
+     */
+    public String getClientToken() {
+        return clientToken;
+    }
+
+    /**
+     * set 保证请求幂等性的字符串；最大长度64个ASCII字符
+     *
+     * @param clientToken
+     */
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -173,6 +206,16 @@ public class CreatePodsRequest extends JdcloudRequest implements java.io.Seriali
      */
     public CreatePodsRequest maxCount(Integer maxCount) {
         this.maxCount = maxCount;
+        return this;
+    }
+
+    /**
+     * set 保证请求幂等性的字符串；最大长度64个ASCII字符
+     *
+     * @param clientToken
+     */
+    public CreatePodsRequest clientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
 

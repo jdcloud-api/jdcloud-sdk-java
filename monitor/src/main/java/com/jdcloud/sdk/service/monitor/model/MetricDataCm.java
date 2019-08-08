@@ -62,14 +62,14 @@ public class MetricDataCm  implements java.io.Serializable {
     private Long timestamp;
 
     /**
-     * 数据上报类型，1为原始值，2为聚合数据。当上报聚合数据时，建议为60s的周期时行上报、否则无法正常查询
+     * 数据上报类型，1为原始值
      * Required:true
      */
     @Required
     private Integer type;
 
     /**
-     * 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type&#x3D;1时，key只能为”value”，上报的是原始值，当type&#x3D;2时，K的值可以为&quot;avg&quot;,&quot;sum&quot;,&quot;last&quot;,&quot;max&quot;,&quot;min&quot;,&quot;count&quot;，只支持以上类型，否则会报错，value内容为整型或浮点型数字，最大值为9223372036854775807，count只支持&gt;&#x3D;0的数
+     * 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type&#x3D;1时，key只能为”value”，上报的是原始值，value内容为整型或浮点型数字，最大值为9223372036854775807
      * Required:true
      */
     @Required
@@ -154,7 +154,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * get 数据上报类型，1为原始值，2为聚合数据。当上报聚合数据时，建议为60s的周期时行上报、否则无法正常查询
+     * get 数据上报类型，1为原始值
      *
      * @return
      */
@@ -163,7 +163,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * set 数据上报类型，1为原始值，2为聚合数据。当上报聚合数据时，建议为60s的周期时行上报、否则无法正常查询
+     * set 数据上报类型，1为原始值
      *
      * @param type
      */
@@ -172,7 +172,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * get 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type&#x3D;1时，key只能为”value”，上报的是原始值，当type&#x3D;2时，K的值可以为&quot;avg&quot;,&quot;sum&quot;,&quot;last&quot;,&quot;max&quot;,&quot;min&quot;,&quot;count&quot;，只支持以上类型，否则会报错，value内容为整型或浮点型数字，最大值为9223372036854775807，count只支持&gt;&#x3D;0的数
+     * get 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type&#x3D;1时，key只能为”value”，上报的是原始值，value内容为整型或浮点型数字，最大值为9223372036854775807
      *
      * @return
      */
@@ -181,7 +181,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * set 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type&#x3D;1时，key只能为”value”，上报的是原始值，当type&#x3D;2时，K的值可以为&quot;avg&quot;,&quot;sum&quot;,&quot;last&quot;,&quot;max&quot;,&quot;min&quot;,&quot;count&quot;，只支持以上类型，否则会报错，value内容为整型或浮点型数字，最大值为9223372036854775807，count只支持&gt;&#x3D;0的数
+     * set 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type&#x3D;1时，key只能为”value”，上报的是原始值，value内容为整型或浮点型数字，最大值为9223372036854775807
      *
      * @param values
      */
@@ -249,7 +249,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * set 数据上报类型，1为原始值，2为聚合数据。当上报聚合数据时，建议为60s的周期时行上报、否则无法正常查询
+     * set 数据上报类型，1为原始值
      *
      * @param type
      */
@@ -259,7 +259,7 @@ public class MetricDataCm  implements java.io.Serializable {
     }
 
     /**
-     * set 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type&#x3D;1时，key只能为”value”，上报的是原始值，当type&#x3D;2时，K的值可以为&quot;avg&quot;,&quot;sum&quot;,&quot;last&quot;,&quot;max&quot;,&quot;min&quot;,&quot;count&quot;，只支持以上类型，否则会报错，value内容为整型或浮点型数字，最大值为9223372036854775807，count只支持&gt;&#x3D;0的数
+     * set 指标值集合，数据类型必须为map类型，key为数据类型，value为数据值，当type&#x3D;1时，key只能为”value”，上报的是原始值，value内容为整型或浮点型数字，最大值为9223372036854775807
      *
      * @param values
      */

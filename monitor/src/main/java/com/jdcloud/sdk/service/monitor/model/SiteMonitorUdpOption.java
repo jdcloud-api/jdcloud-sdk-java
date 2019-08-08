@@ -38,9 +38,19 @@ public class SiteMonitorUdpOption  implements java.io.Serializable {
     private String reqContent;
 
     /**
+     * reqContentType
+     */
+    private String reqContentType;
+
+    /**
      * resCheck
      */
     private String resCheck;
+
+    /**
+     * resCheckType
+     */
+    private String resCheckType;
 
     /**
      * timeout
@@ -67,6 +77,24 @@ public class SiteMonitorUdpOption  implements java.io.Serializable {
     }
 
     /**
+     * get reqContentType
+     *
+     * @return
+     */
+    public String getReqContentType() {
+        return reqContentType;
+    }
+
+    /**
+     * set reqContentType
+     *
+     * @param reqContentType
+     */
+    public void setReqContentType(String reqContentType) {
+        this.reqContentType = reqContentType;
+    }
+
+    /**
      * get resCheck
      *
      * @return
@@ -82,6 +110,24 @@ public class SiteMonitorUdpOption  implements java.io.Serializable {
      */
     public void setResCheck(String resCheck) {
         this.resCheck = resCheck;
+    }
+
+    /**
+     * get resCheckType
+     *
+     * @return
+     */
+    public String getResCheckType() {
+        return resCheckType;
+    }
+
+    /**
+     * set resCheckType
+     *
+     * @param resCheckType
+     */
+    public void setResCheckType(String resCheckType) {
+        this.resCheckType = resCheckType;
     }
 
     /**
@@ -114,12 +160,32 @@ public class SiteMonitorUdpOption  implements java.io.Serializable {
     }
 
     /**
+     * set reqContentType
+     *
+     * @param reqContentType
+     */
+    public SiteMonitorUdpOption reqContentType(String reqContentType) {
+        this.reqContentType = reqContentType;
+        return this;
+    }
+
+    /**
      * set resCheck
      *
      * @param resCheck
      */
     public SiteMonitorUdpOption resCheck(String resCheck) {
         this.resCheck = resCheck;
+        return this;
+    }
+
+    /**
+     * set resCheckType
+     *
+     * @param resCheckType
+     */
+    public SiteMonitorUdpOption resCheckType(String resCheckType) {
+        this.resCheckType = resCheckType;
         return this;
     }
 

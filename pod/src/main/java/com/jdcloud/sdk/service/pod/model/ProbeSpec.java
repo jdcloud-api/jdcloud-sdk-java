@@ -48,26 +48,26 @@ public class ProbeSpec  implements java.io.Serializable {
     private Integer timeoutSeconds;
 
     /**
-     * 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+     * 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围:[1-10]
      */
     private Integer failureThreshold;
 
     /**
-     * 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+     * 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围:[1-10]
      */
     private Integer successThreshold;
 
     /**
      * 在容器内执行指定命令；如果命令退出时返回码为 0 则认为诊断成功。
      */
-    private Exec exec;
+    private ExecSpec exec;
 
     /**
      * 对指定的端口和路径上的容器的 IP 地址执行 HTTP Get 请求。&lt;br&gt;
 如果响应的状态码大于等于200 且小于 400，则诊断被认为是成功的。 
 
      */
-    private Hg httpGet;
+    private HgSpec httpGet;
 
     /**
      * 对指定端口上的容器的 IP 地址进行 TCP 检查；如果端口打开，则诊断被认为是成功的。
@@ -130,7 +130,7 @@ public class ProbeSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+     * get 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围:[1-10]
      *
      * @return
      */
@@ -139,7 +139,7 @@ public class ProbeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+     * set 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围:[1-10]
      *
      * @param failureThreshold
      */
@@ -148,7 +148,7 @@ public class ProbeSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+     * get 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围:[1-10]
      *
      * @return
      */
@@ -157,7 +157,7 @@ public class ProbeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+     * set 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围:[1-10]
      *
      * @param successThreshold
      */
@@ -170,7 +170,7 @@ public class ProbeSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Exec getExec() {
+    public ExecSpec getExec() {
         return exec;
     }
 
@@ -179,7 +179,7 @@ public class ProbeSpec  implements java.io.Serializable {
      *
      * @param exec
      */
-    public void setExec(Exec exec) {
+    public void setExec(ExecSpec exec) {
         this.exec = exec;
     }
 
@@ -190,7 +190,7 @@ public class ProbeSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Hg getHttpGet() {
+    public HgSpec getHttpGet() {
         return httpGet;
     }
 
@@ -201,7 +201,7 @@ public class ProbeSpec  implements java.io.Serializable {
      *
      * @param httpGet
      */
-    public void setHttpGet(Hg httpGet) {
+    public void setHttpGet(HgSpec httpGet) {
         this.httpGet = httpGet;
     }
 
@@ -255,7 +255,7 @@ public class ProbeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围 1-10
+     * set 在成功状态后，连续探活失败的次数，认为探活失败。默认值 3次；范围:[1-10]
      *
      * @param failureThreshold
      */
@@ -265,7 +265,7 @@ public class ProbeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围 1-10
+     * set 在失败状态后，连续探活成功的次数，认为探活成功。默认值 1次；范围:[1-10]
      *
      * @param successThreshold
      */
@@ -279,7 +279,7 @@ public class ProbeSpec  implements java.io.Serializable {
      *
      * @param exec
      */
-    public ProbeSpec exec(Exec exec) {
+    public ProbeSpec exec(ExecSpec exec) {
         this.exec = exec;
         return this;
     }
@@ -291,7 +291,7 @@ public class ProbeSpec  implements java.io.Serializable {
      *
      * @param httpGet
      */
-    public ProbeSpec httpGet(Hg httpGet) {
+    public ProbeSpec httpGet(HgSpec httpGet) {
         this.httpGet = httpGet;
         return this;
     }

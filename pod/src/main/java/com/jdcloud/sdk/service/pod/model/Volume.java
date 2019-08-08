@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * pod volume 规格
@@ -34,22 +33,18 @@ public class Volume  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * volume名字，必须是DNS_LABEL，在一个Pod是唯一的。
-     * Required:true
+     * volume名字，在一个Pod唯一。
      */
-    @Required
     private String name;
 
     /**
      * 提供给Pod的cloud disk.
-     * Required:true
      */
-    @Required
     private JDCloudVolumeSource jdcloudDisk;
 
 
     /**
-     * get volume名字，必须是DNS_LABEL，在一个Pod是唯一的。
+     * get volume名字，在一个Pod唯一。
      *
      * @return
      */
@@ -58,7 +53,7 @@ public class Volume  implements java.io.Serializable {
     }
 
     /**
-     * set volume名字，必须是DNS_LABEL，在一个Pod是唯一的。
+     * set volume名字，在一个Pod唯一。
      *
      * @param name
      */
@@ -86,7 +81,7 @@ public class Volume  implements java.io.Serializable {
 
 
     /**
-     * set volume名字，必须是DNS_LABEL，在一个Pod是唯一的。
+     * set volume名字，在一个Pod唯一。
      *
      * @param name
      */

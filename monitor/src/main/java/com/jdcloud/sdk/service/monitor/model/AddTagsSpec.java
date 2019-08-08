@@ -64,6 +64,13 @@ public class AddTagsSpec  implements java.io.Serializable {
     private String serviceCode;
 
     /**
+     * 打标签操作所属产品线的serviceCode
+     * Required:true
+     */
+    @Required
+    private String srcServiceCode;
+
+    /**
      * 标签名称。调用此API前需要与云监控确认可以使用的标签名称
      * Required:true
      */
@@ -151,6 +158,24 @@ public class AddTagsSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 打标签操作所属产品线的serviceCode
+     *
+     * @return
+     */
+    public String getSrcServiceCode() {
+        return srcServiceCode;
+    }
+
+    /**
+     * set 打标签操作所属产品线的serviceCode
+     *
+     * @param srcServiceCode
+     */
+    public void setSrcServiceCode(String srcServiceCode) {
+        this.srcServiceCode = srcServiceCode;
+    }
+
+    /**
      * get 标签名称。调用此API前需要与云监控确认可以使用的标签名称
      *
      * @return
@@ -224,6 +249,16 @@ public class AddTagsSpec  implements java.io.Serializable {
      */
     public AddTagsSpec serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set 打标签操作所属产品线的serviceCode
+     *
+     * @param srcServiceCode
+     */
+    public AddTagsSpec srcServiceCode(String srcServiceCode) {
+        this.srcServiceCode = srcServiceCode;
         return this;
     }
 

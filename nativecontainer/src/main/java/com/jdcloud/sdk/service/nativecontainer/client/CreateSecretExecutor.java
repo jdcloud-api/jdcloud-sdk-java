@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.nativecontainer.model.CreateSecretResponse;
 
 /**
- * 创建一个 secret，用于存放镜像仓库机密相关信息。
+ * 创建一个 secret，用于存放镜像仓库认证信息。
 
  */
 class CreateSecretExecutor extends JdcloudExecutor {

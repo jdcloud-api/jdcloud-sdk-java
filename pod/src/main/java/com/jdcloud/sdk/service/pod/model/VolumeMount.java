@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 容器挂载信息
@@ -34,27 +33,23 @@ public class VolumeMount  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 必须使用pod volume名称
-     * Required:true
+     * 挂载的云盘在pod中的名称。
      */
-    @Required
     private String name;
 
     /**
-     * 容器内挂载点，绝对路径，不得重复和嵌套挂载，不得挂载到根目录(&quot;/&quot;)。长度范围：[1-1024]
-     * Required:true
+     * 容器内挂载点。
      */
-    @Required
     private String mountPath;
 
     /**
-     * 是否以只读方式挂载。默认 读写模式
+     * 是否以只读方式挂载。
      */
     private Boolean readOnly;
 
 
     /**
-     * get 必须使用pod volume名称
+     * get 挂载的云盘在pod中的名称。
      *
      * @return
      */
@@ -63,7 +58,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * set 必须使用pod volume名称
+     * set 挂载的云盘在pod中的名称。
      *
      * @param name
      */
@@ -72,7 +67,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * get 容器内挂载点，绝对路径，不得重复和嵌套挂载，不得挂载到根目录(&quot;/&quot;)。长度范围：[1-1024]
+     * get 容器内挂载点。
      *
      * @return
      */
@@ -81,7 +76,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * set 容器内挂载点，绝对路径，不得重复和嵌套挂载，不得挂载到根目录(&quot;/&quot;)。长度范围：[1-1024]
+     * set 容器内挂载点。
      *
      * @param mountPath
      */
@@ -90,7 +85,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * get 是否以只读方式挂载。默认 读写模式
+     * get 是否以只读方式挂载。
      *
      * @return
      */
@@ -99,7 +94,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * set 是否以只读方式挂载。默认 读写模式
+     * set 是否以只读方式挂载。
      *
      * @param readOnly
      */
@@ -109,7 +104,7 @@ public class VolumeMount  implements java.io.Serializable {
 
 
     /**
-     * set 必须使用pod volume名称
+     * set 挂载的云盘在pod中的名称。
      *
      * @param name
      */
@@ -119,7 +114,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * set 容器内挂载点，绝对路径，不得重复和嵌套挂载，不得挂载到根目录(&quot;/&quot;)。长度范围：[1-1024]
+     * set 容器内挂载点。
      *
      * @param mountPath
      */
@@ -129,7 +124,7 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
-     * set 是否以只读方式挂载。默认 读写模式
+     * set 是否以只读方式挂载。
      *
      * @param readOnly
      */

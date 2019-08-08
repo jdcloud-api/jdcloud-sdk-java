@@ -62,6 +62,11 @@ public class ApplyTemplateSpec  implements java.io.Serializable {
     private List<String> resourceIds;
 
     /**
+     * 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     */
+    private String ruleName;
+
+    /**
      * 资源类型
      * Required:true
      */
@@ -171,6 +176,24 @@ public class ApplyTemplateSpec  implements java.io.Serializable {
      */
     public void setResourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
+    }
+
+    /**
+     * get 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
     }
 
     /**
@@ -337,6 +360,16 @@ public class ApplyTemplateSpec  implements java.io.Serializable {
      */
     public ApplyTemplateSpec resourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
+        return this;
+    }
+
+    /**
+     * set 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public ApplyTemplateSpec ruleName(String ruleName) {
+        this.ruleName = ruleName;
         return this;
     }
 

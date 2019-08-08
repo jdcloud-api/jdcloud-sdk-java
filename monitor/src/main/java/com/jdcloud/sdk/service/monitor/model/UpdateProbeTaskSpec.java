@@ -36,16 +36,6 @@ public class UpdateProbeTaskSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 探测地址，探测类型为http：内容为url（校验http或https头）；探测类型为telnet：内容为ip或域名（只允许中英文 、数字、中划线（-）、小数点（.）、开头及结尾均不能含有“-”）
-     */
-    private String address;
-
-    /**
-     * 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-     */
-    private Long frequency;
-
-    /**
      * http body：选择探测类型为1&#x3D;http时有效，最长不超过1024字节
      */
     private String httpBody;
@@ -61,14 +51,14 @@ public class UpdateProbeTaskSpec  implements java.io.Serializable {
     private List<KeyValue> httpHeader;
 
     /**
+     * http探测方法,可选值：1:get、2:post、3:head
+     */
+    private Long httpType;
+
+    /**
      * task名称，不允许重复，长度不超过32字符，只允许中英文、数字、下划线_、中划线-, [0-9][a-z] [A-Z] [- _ ]
      */
     private String name;
-
-    /**
-     * 探测端口，探测类型为telnet时必填，取值范围 [1-65535]，http类型忽略该参数
-     */
-    private Long port;
 
     /**
      * 探测源（发起对探测目标探测的云主机，需安装相应的agent才能探测）
@@ -77,57 +67,6 @@ public class UpdateProbeTaskSpec  implements java.io.Serializable {
     @Required
     private List<Probe> probes;
 
-    /**
-     * 探测目标id：该探测对象的uuid，任务类型为2：rds、3：redis时必填，
-     */
-    private String targetId;
-
-    /**
-     * 探测目标region：该探测对象所在region，任务类型为2：rds、3：redis时必填
-     */
-    private String targetRegion;
-
-    /**
-     * 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-     */
-    private Long timeout;
-
-
-    /**
-     * get 探测地址，探测类型为http：内容为url（校验http或https头）；探测类型为telnet：内容为ip或域名（只允许中英文 、数字、中划线（-）、小数点（.）、开头及结尾均不能含有“-”）
-     *
-     * @return
-     */
-    public String getAddress() {
-        return address;
-    }
-
-    /**
-     * set 探测地址，探测类型为http：内容为url（校验http或https头）；探测类型为telnet：内容为ip或域名（只允许中英文 、数字、中划线（-）、小数点（.）、开头及结尾均不能含有“-”）
-     *
-     * @param address
-     */
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    /**
-     * get 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-     *
-     * @return
-     */
-    public Long getFrequency() {
-        return frequency;
-    }
-
-    /**
-     * set 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-     *
-     * @param frequency
-     */
-    public void setFrequency(Long frequency) {
-        this.frequency = frequency;
-    }
 
     /**
      * get http body：选择探测类型为1&#x3D;http时有效，最长不超过1024字节
@@ -184,6 +123,24 @@ public class UpdateProbeTaskSpec  implements java.io.Serializable {
     }
 
     /**
+     * get http探测方法,可选值：1:get、2:post、3:head
+     *
+     * @return
+     */
+    public Long getHttpType() {
+        return httpType;
+    }
+
+    /**
+     * set http探测方法,可选值：1:get、2:post、3:head
+     *
+     * @param httpType
+     */
+    public void setHttpType(Long httpType) {
+        this.httpType = httpType;
+    }
+
+    /**
      * get task名称，不允许重复，长度不超过32字符，只允许中英文、数字、下划线_、中划线-, [0-9][a-z] [A-Z] [- _ ]
      *
      * @return
@@ -199,24 +156,6 @@ public class UpdateProbeTaskSpec  implements java.io.Serializable {
      */
     public void setName(String name) {
         this.name = name;
-    }
-
-    /**
-     * get 探测端口，探测类型为telnet时必填，取值范围 [1-65535]，http类型忽略该参数
-     *
-     * @return
-     */
-    public Long getPort() {
-        return port;
-    }
-
-    /**
-     * set 探测端口，探测类型为telnet时必填，取值范围 [1-65535]，http类型忽略该参数
-     *
-     * @param port
-     */
-    public void setPort(Long port) {
-        this.port = port;
     }
 
     /**
@@ -237,80 +176,6 @@ public class UpdateProbeTaskSpec  implements java.io.Serializable {
         this.probes = probes;
     }
 
-    /**
-     * get 探测目标id：该探测对象的uuid，任务类型为2：rds、3：redis时必填，
-     *
-     * @return
-     */
-    public String getTargetId() {
-        return targetId;
-    }
-
-    /**
-     * set 探测目标id：该探测对象的uuid，任务类型为2：rds、3：redis时必填，
-     *
-     * @param targetId
-     */
-    public void setTargetId(String targetId) {
-        this.targetId = targetId;
-    }
-
-    /**
-     * get 探测目标region：该探测对象所在region，任务类型为2：rds、3：redis时必填
-     *
-     * @return
-     */
-    public String getTargetRegion() {
-        return targetRegion;
-    }
-
-    /**
-     * set 探测目标region：该探测对象所在region，任务类型为2：rds、3：redis时必填
-     *
-     * @param targetRegion
-     */
-    public void setTargetRegion(String targetRegion) {
-        this.targetRegion = targetRegion;
-    }
-
-    /**
-     * get 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-     *
-     * @return
-     */
-    public Long getTimeout() {
-        return timeout;
-    }
-
-    /**
-     * set 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-     *
-     * @param timeout
-     */
-    public void setTimeout(Long timeout) {
-        this.timeout = timeout;
-    }
-
-
-    /**
-     * set 探测地址，探测类型为http：内容为url（校验http或https头）；探测类型为telnet：内容为ip或域名（只允许中英文 、数字、中划线（-）、小数点（.）、开头及结尾均不能含有“-”）
-     *
-     * @param address
-     */
-    public UpdateProbeTaskSpec address(String address) {
-        this.address = address;
-        return this;
-    }
-
-    /**
-     * set 探测间隔（单位：秒）：默认值：300，取值范围[60,1200]
-     *
-     * @param frequency
-     */
-    public UpdateProbeTaskSpec frequency(Long frequency) {
-        this.frequency = frequency;
-        return this;
-    }
 
     /**
      * set http body：选择探测类型为1&#x3D;http时有效，最长不超过1024字节
@@ -343,6 +208,16 @@ public class UpdateProbeTaskSpec  implements java.io.Serializable {
     }
 
     /**
+     * set http探测方法,可选值：1:get、2:post、3:head
+     *
+     * @param httpType
+     */
+    public UpdateProbeTaskSpec httpType(Long httpType) {
+        this.httpType = httpType;
+        return this;
+    }
+
+    /**
      * set task名称，不允许重复，长度不超过32字符，只允许中英文、数字、下划线_、中划线-, [0-9][a-z] [A-Z] [- _ ]
      *
      * @param name
@@ -353,52 +228,12 @@ public class UpdateProbeTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 探测端口，探测类型为telnet时必填，取值范围 [1-65535]，http类型忽略该参数
-     *
-     * @param port
-     */
-    public UpdateProbeTaskSpec port(Long port) {
-        this.port = port;
-        return this;
-    }
-
-    /**
      * set 探测源（发起对探测目标探测的云主机，需安装相应的agent才能探测）
      *
      * @param probes
      */
     public UpdateProbeTaskSpec probes(List<Probe> probes) {
         this.probes = probes;
-        return this;
-    }
-
-    /**
-     * set 探测目标id：该探测对象的uuid，任务类型为2：rds、3：redis时必填，
-     *
-     * @param targetId
-     */
-    public UpdateProbeTaskSpec targetId(String targetId) {
-        this.targetId = targetId;
-        return this;
-    }
-
-    /**
-     * set 探测目标region：该探测对象所在region，任务类型为2：rds、3：redis时必填
-     *
-     * @param targetRegion
-     */
-    public UpdateProbeTaskSpec targetRegion(String targetRegion) {
-        this.targetRegion = targetRegion;
-        return this;
-    }
-
-    /**
-     * set 探测超时时间（单位：秒）：默认值:5，取值范围 [1,300]
-     *
-     * @param timeout
-     */
-    public UpdateProbeTaskSpec timeout(Long timeout) {
-        this.timeout = timeout;
         return this;
     }
 

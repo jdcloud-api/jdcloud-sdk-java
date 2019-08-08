@@ -103,6 +103,11 @@ public class DescribedAlarm  implements java.io.Serializable {
     private String resourceId;
 
     /**
+     * 规则名称
+     */
+    private String ruleName;
+
+    /**
      * 产品线编码
      */
     private String serviceCode;
@@ -126,6 +131,26 @@ public class DescribedAlarm  implements java.io.Serializable {
      * 告警次数
      */
     private Long times;
+
+    /**
+     * 回调content
+     */
+    private String webHookContent;
+
+    /**
+     * webHook协议
+     */
+    private String webHookProtocol;
+
+    /**
+     * 回调secret，用户请求签名，防伪造
+     */
+    private String webHookSecret;
+
+    /**
+     * 回调url
+     */
+    private String webHookUrl;
 
 
     /**
@@ -381,6 +406,24 @@ public class DescribedAlarm  implements java.io.Serializable {
     }
 
     /**
+     * get 规则名称
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+    }
+
+    /**
      * get 产品线编码
      *
      * @return
@@ -468,6 +511,78 @@ public class DescribedAlarm  implements java.io.Serializable {
      */
     public void setTimes(Long times) {
         this.times = times;
+    }
+
+    /**
+     * get 回调content
+     *
+     * @return
+     */
+    public String getWebHookContent() {
+        return webHookContent;
+    }
+
+    /**
+     * set 回调content
+     *
+     * @param webHookContent
+     */
+    public void setWebHookContent(String webHookContent) {
+        this.webHookContent = webHookContent;
+    }
+
+    /**
+     * get webHook协议
+     *
+     * @return
+     */
+    public String getWebHookProtocol() {
+        return webHookProtocol;
+    }
+
+    /**
+     * set webHook协议
+     *
+     * @param webHookProtocol
+     */
+    public void setWebHookProtocol(String webHookProtocol) {
+        this.webHookProtocol = webHookProtocol;
+    }
+
+    /**
+     * get 回调secret，用户请求签名，防伪造
+     *
+     * @return
+     */
+    public String getWebHookSecret() {
+        return webHookSecret;
+    }
+
+    /**
+     * set 回调secret，用户请求签名，防伪造
+     *
+     * @param webHookSecret
+     */
+    public void setWebHookSecret(String webHookSecret) {
+        this.webHookSecret = webHookSecret;
+    }
+
+    /**
+     * get 回调url
+     *
+     * @return
+     */
+    public String getWebHookUrl() {
+        return webHookUrl;
+    }
+
+    /**
+     * set 回调url
+     *
+     * @param webHookUrl
+     */
+    public void setWebHookUrl(String webHookUrl) {
+        this.webHookUrl = webHookUrl;
     }
 
 
@@ -612,6 +727,16 @@ public class DescribedAlarm  implements java.io.Serializable {
     }
 
     /**
+     * set 规则名称
+     *
+     * @param ruleName
+     */
+    public DescribedAlarm ruleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+
+    /**
      * set 产品线编码
      *
      * @param serviceCode
@@ -658,6 +783,46 @@ public class DescribedAlarm  implements java.io.Serializable {
      */
     public DescribedAlarm times(Long times) {
         this.times = times;
+        return this;
+    }
+
+    /**
+     * set 回调content
+     *
+     * @param webHookContent
+     */
+    public DescribedAlarm webHookContent(String webHookContent) {
+        this.webHookContent = webHookContent;
+        return this;
+    }
+
+    /**
+     * set webHook协议
+     *
+     * @param webHookProtocol
+     */
+    public DescribedAlarm webHookProtocol(String webHookProtocol) {
+        this.webHookProtocol = webHookProtocol;
+        return this;
+    }
+
+    /**
+     * set 回调secret，用户请求签名，防伪造
+     *
+     * @param webHookSecret
+     */
+    public DescribedAlarm webHookSecret(String webHookSecret) {
+        this.webHookSecret = webHookSecret;
+        return this;
+    }
+
+    /**
+     * set 回调url
+     *
+     * @param webHookUrl
+     */
+    public DescribedAlarm webHookUrl(String webHookUrl) {
+        this.webHookUrl = webHookUrl;
         return this;
     }
 

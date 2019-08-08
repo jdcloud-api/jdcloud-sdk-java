@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.disk.model.DiskSpec;
 
 /**
- * 磁盘分类  cloud： 基于云硬盘的卷  root volume只能是cloud类型
+ * 指定挂载的Volume
  */
 public class VolumeMountSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 磁盘分类 cloud： 基于云硬盘的卷 root volume只能是cloud类型
+     * 磁盘分类 cloud：基于云硬盘的卷 仅支持cloud类型
      * Required:true
      */
     @Required
@@ -62,7 +62,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     private DiskSpec cloudDiskSpec;
 
     /**
-     * 云硬盘ID；如果使用已有的云硬盘，必须指定partion和fsType
+     * 云硬盘ID，使用已有的云硬盘，必须同时指定fsType
      */
     private String cloudDiskId;
 
@@ -78,7 +78,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
 
 
     /**
-     * get 磁盘分类 cloud： 基于云硬盘的卷 root volume只能是cloud类型
+     * get 磁盘分类 cloud：基于云硬盘的卷 仅支持cloud类型
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘分类 cloud： 基于云硬盘的卷 root volume只能是cloud类型
+     * set 磁盘分类 cloud：基于云硬盘的卷 仅支持cloud类型
      *
      * @param category
      */
@@ -168,7 +168,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘ID；如果使用已有的云硬盘，必须指定partion和fsType
+     * get 云硬盘ID，使用已有的云硬盘，必须同时指定fsType
      *
      * @return
      */
@@ -177,7 +177,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘ID；如果使用已有的云硬盘，必须指定partion和fsType
+     * set 云硬盘ID，使用已有的云硬盘，必须同时指定fsType
      *
      * @param cloudDiskId
      */
@@ -223,7 +223,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
 
 
     /**
-     * set 磁盘分类 cloud： 基于云硬盘的卷 root volume只能是cloud类型
+     * set 磁盘分类 cloud：基于云硬盘的卷 仅支持cloud类型
      *
      * @param category
      */
@@ -273,7 +273,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘ID；如果使用已有的云硬盘，必须指定partion和fsType
+     * set 云硬盘ID，使用已有的云硬盘，必须同时指定fsType
      *
      * @param cloudDiskId
      */

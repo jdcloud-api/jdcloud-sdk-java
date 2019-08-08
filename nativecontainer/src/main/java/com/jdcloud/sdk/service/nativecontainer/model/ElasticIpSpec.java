@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.nativecontainer.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 
 /**
@@ -35,11 +36,13 @@ public class ElasticIpSpec  implements java.io.Serializable {
 
     /**
      * 弹性公网IP的限速 单位：MB
+     * Required:true
      */
+    @Required
     private Integer bandwidthMbps;
 
     /**
-     * IP服务商，取值为bgp或no_bg
+     * IP服务商，取值为bgp或no_bgp
      */
     private String provider;
 
@@ -68,7 +71,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * get IP服务商，取值为bgp或no_bg
+     * get IP服务商，取值为bgp或no_bgp
      *
      * @return
      */
@@ -77,7 +80,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为bgp或no_bg
+     * set IP服务商，取值为bgp或no_bgp
      *
      * @param provider
      */
@@ -115,7 +118,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为bgp或no_bg
+     * set IP服务商，取值为bgp或no_bgp
      *
      * @param provider
      */

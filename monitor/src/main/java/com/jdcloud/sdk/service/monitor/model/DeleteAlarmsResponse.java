@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.monitor.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 批量删除规则
+ * 删除规则
  */
 public class DeleteAlarmsResponse extends JdcloudResponse<DeleteAlarmsResult> implements java.io.Serializable {
 

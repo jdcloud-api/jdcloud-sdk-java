@@ -26,7 +26,6 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 域名和IP映射的信息
@@ -37,16 +36,12 @@ public class HostAlias  implements java.io.Serializable {
 
     /**
      * 域名列表
-     * Required:true
      */
-    @Required
     private List<String> hostnames;
 
     /**
      * IP地址
-     * Required:true
      */
-    @Required
     private String ip;
 
 

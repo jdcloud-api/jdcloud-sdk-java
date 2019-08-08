@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.pod.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * DNS解析器选项。
@@ -35,9 +34,7 @@ public class PodDnsConfigOption  implements java.io.Serializable {
 
     /**
      * 长度范围：[1-63]，需满足linux resolver限制
-     * Required:true
      */
-    @Required
     private String name;
 
     /**

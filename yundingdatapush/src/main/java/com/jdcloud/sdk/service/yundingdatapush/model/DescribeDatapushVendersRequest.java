@@ -62,9 +62,14 @@ public class DescribeDatapushVendersRequest extends JdcloudRequest implements ja
     private String rdsInstanceName;
 
     /**
-     * 商家PIN
+     * 商家ID
      */
-    private String venderPin;
+    private String venderId;
+
+    /**
+     * 商家店铺名称
+     */
+    private String venderName;
 
 
     /**
@@ -158,21 +163,39 @@ public class DescribeDatapushVendersRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 商家PIN
+     * get 商家ID
      *
      * @return
      */
-    public String getVenderPin() {
-        return venderPin;
+    public String getVenderId() {
+        return venderId;
     }
 
     /**
-     * set 商家PIN
+     * set 商家ID
      *
-     * @param venderPin
+     * @param venderId
      */
-    public void setVenderPin(String venderPin) {
-        this.venderPin = venderPin;
+    public void setVenderId(String venderId) {
+        this.venderId = venderId;
+    }
+
+    /**
+     * get 商家店铺名称
+     *
+     * @return
+     */
+    public String getVenderName() {
+        return venderName;
+    }
+
+    /**
+     * set 商家店铺名称
+     *
+     * @param venderName
+     */
+    public void setVenderName(String venderName) {
+        this.venderName = venderName;
     }
 
 
@@ -227,12 +250,22 @@ public class DescribeDatapushVendersRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 商家PIN
+     * set 商家ID
      *
-     * @param venderPin
+     * @param venderId
      */
-    public DescribeDatapushVendersRequest venderPin(String venderPin) {
-        this.venderPin = venderPin;
+    public DescribeDatapushVendersRequest venderId(String venderId) {
+        this.venderId = venderId;
+        return this;
+    }
+
+    /**
+     * set 商家店铺名称
+     *
+     * @param venderName
+     */
+    public DescribeDatapushVendersRequest venderName(String venderName) {
+        this.venderName = venderName;
         return this;
     }
 

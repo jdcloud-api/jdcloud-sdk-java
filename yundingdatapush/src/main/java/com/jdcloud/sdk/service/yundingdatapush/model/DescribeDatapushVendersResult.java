@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.yundingdatapush.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.yundingdatapush.model.Vender;
+import com.jdcloud.sdk.service.yundingdatapush.model.VenderShow;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,7 +39,7 @@ public class DescribeDatapushVendersResult extends JdcloudResult implements java
     /**
      * venders
      */
-    private List<Vender> venders;
+    private List<VenderShow> venders;
 
 
     /**
@@ -47,7 +47,7 @@ public class DescribeDatapushVendersResult extends JdcloudResult implements java
      *
      * @return
      */
-    public List<Vender> getVenders() {
+    public List<VenderShow> getVenders() {
         return venders;
     }
 
@@ -56,7 +56,7 @@ public class DescribeDatapushVendersResult extends JdcloudResult implements java
      *
      * @param venders
      */
-    public void setVenders(List<Vender> venders) {
+    public void setVenders(List<VenderShow> venders) {
         this.venders = venders;
     }
 
@@ -66,7 +66,7 @@ public class DescribeDatapushVendersResult extends JdcloudResult implements java
      *
      * @param venders
      */
-    public DescribeDatapushVendersResult venders(List<Vender> venders) {
+    public DescribeDatapushVendersResult venders(List<VenderShow> venders) {
         this.venders = venders;
         return this;
     }
@@ -77,7 +77,7 @@ public class DescribeDatapushVendersResult extends JdcloudResult implements java
      *
      * @param vender
      */
-    public void addVender(Vender vender) {
+    public void addVender(VenderShow vender) {
         if (this.venders == null) {
             this.venders = new ArrayList<>();
         }

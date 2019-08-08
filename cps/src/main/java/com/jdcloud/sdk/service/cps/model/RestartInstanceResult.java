@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cps.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 重启单台云物理服务器，只能重启running状态的服务器
+ * 重启单台云物理服务器，只能重启running状态的服务器 [MFA enabled]
  */
 public class RestartInstanceResult extends JdcloudResult implements java.io.Serializable {
 

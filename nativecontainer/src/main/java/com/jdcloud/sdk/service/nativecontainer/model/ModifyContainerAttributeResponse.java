@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.nativecontainer.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改容器的 名称 和 描述。
+ * 修改容器的 名称 和 描述。&lt;br&gt;
+name 和 description 必须要指定一个
 
  */
 public class ModifyContainerAttributeResponse extends JdcloudResponse<ModifyContainerAttributeResult> implements java.io.Serializable {

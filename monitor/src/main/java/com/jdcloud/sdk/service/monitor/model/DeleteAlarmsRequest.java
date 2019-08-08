@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量删除规则
+ * 删除规则
  */
 public class DeleteAlarmsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 待删除的规则id，用竖线分隔
+     * 待删除的规则id，用逗号,分隔
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DeleteAlarmsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 待删除的规则id，用竖线分隔
+     * get 待删除的规则id，用逗号,分隔
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DeleteAlarmsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 待删除的规则id，用竖线分隔
+     * set 待删除的规则id，用逗号,分隔
      *
      * @param ids
      */
@@ -87,7 +87,7 @@ public class DeleteAlarmsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 待删除的规则id，用竖线分隔
+     * set 待删除的规则id，用逗号,分隔
      *
      * @param ids
      */

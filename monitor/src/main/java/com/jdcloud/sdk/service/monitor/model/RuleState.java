@@ -33,23 +33,23 @@ public class RuleState  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * resourceId
+     * 资源id
      */
     private String resourceId;
 
     /**
-     * ruleCount
+     * 规则个数
      */
     private Long ruleCount;
 
     /**
-     * state
+     * 资源的规则状态。1：正常、 2：报警、4：数据不足 -1:没有规则 -2:未启用
      */
     private Long state;
 
 
     /**
-     * get resourceId
+     * get 资源id
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class RuleState  implements java.io.Serializable {
     }
 
     /**
-     * set resourceId
+     * set 资源id
      *
      * @param resourceId
      */
@@ -67,7 +67,7 @@ public class RuleState  implements java.io.Serializable {
     }
 
     /**
-     * get ruleCount
+     * get 规则个数
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class RuleState  implements java.io.Serializable {
     }
 
     /**
-     * set ruleCount
+     * set 规则个数
      *
      * @param ruleCount
      */
@@ -85,7 +85,7 @@ public class RuleState  implements java.io.Serializable {
     }
 
     /**
-     * get state
+     * get 资源的规则状态。1：正常、 2：报警、4：数据不足 -1:没有规则 -2:未启用
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class RuleState  implements java.io.Serializable {
     }
 
     /**
-     * set state
+     * set 资源的规则状态。1：正常、 2：报警、4：数据不足 -1:没有规则 -2:未启用
      *
      * @param state
      */
@@ -104,7 +104,7 @@ public class RuleState  implements java.io.Serializable {
 
 
     /**
-     * set resourceId
+     * set 资源id
      *
      * @param resourceId
      */
@@ -114,7 +114,7 @@ public class RuleState  implements java.io.Serializable {
     }
 
     /**
-     * set ruleCount
+     * set 规则个数
      *
      * @param ruleCount
      */
@@ -124,7 +124,7 @@ public class RuleState  implements java.io.Serializable {
     }
 
     /**
-     * set state
+     * set 资源的规则状态。1：正常、 2：报警、4：数据不足 -1:没有规则 -2:未启用
      *
      * @param state
      */
