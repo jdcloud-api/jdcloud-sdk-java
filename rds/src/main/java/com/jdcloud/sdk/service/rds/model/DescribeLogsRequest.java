@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * LOG
+ * LOG相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,16 +28,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 使用实例的全量备份覆盖恢复当前实例
+ * 获取 PostgreSQL 的日志文件列表
  */
-public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeLogsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用于恢复的备份Id，仅限于本实例生成的备份
+     * 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      */
-    private String backupId;
+    private Integer pageNumber;
+
+    /**
+     * 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     */
+    private Integer pageSize;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -55,21 +60,39 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 用于恢复的备份Id，仅限于本实例生成的备份
+     * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      *
      * @return
      */
-    public String getBackupId() {
-        return backupId;
+    public Integer getPageNumber() {
+        return pageNumber;
     }
 
     /**
-     * set 用于恢复的备份Id，仅限于本实例生成的备份
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      *
-     * @param backupId
+     * @param pageNumber
      */
-    public void setBackupId(String backupId) {
-        this.backupId = backupId;
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
     /**
@@ -110,12 +133,22 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 用于恢复的备份Id，仅限于本实例生成的备份
+     * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      *
-     * @param backupId
+     * @param pageNumber
      */
-    public RestoreInstanceRequest backupId(String backupId) {
-        this.backupId = backupId;
+    public DescribeLogsRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     *
+     * @param pageSize
+     */
+    public DescribeLogsRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
 
@@ -124,7 +157,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param regionId
      */
-    public RestoreInstanceRequest regionId(String regionId) {
+    public DescribeLogsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -134,7 +167,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public RestoreInstanceRequest instanceId(String instanceId) {
+    public DescribeLogsRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

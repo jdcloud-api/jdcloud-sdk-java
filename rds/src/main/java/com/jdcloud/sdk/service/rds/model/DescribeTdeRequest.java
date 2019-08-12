@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * TDE
+ * TDE相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,16 +28,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 使用实例的全量备份覆盖恢复当前实例
+ * 查看当前实例是否开启TDE
  */
-public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeTdeRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 用于恢复的备份Id，仅限于本实例生成的备份
-     */
-    private String backupId;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -53,24 +48,6 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     @Required
     private String instanceId;
 
-
-    /**
-     * get 用于恢复的备份Id，仅限于本实例生成的备份
-     *
-     * @return
-     */
-    public String getBackupId() {
-        return backupId;
-    }
-
-    /**
-     * set 用于恢复的备份Id，仅限于本实例生成的备份
-     *
-     * @param backupId
-     */
-    public void setBackupId(String backupId) {
-        this.backupId = backupId;
-    }
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -110,21 +87,11 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 用于恢复的备份Id，仅限于本实例生成的备份
-     *
-     * @param backupId
-     */
-    public RestoreInstanceRequest backupId(String backupId) {
-        this.backupId = backupId;
-        return this;
-    }
-
-    /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
      */
-    public RestoreInstanceRequest regionId(String regionId) {
+    public DescribeTdeRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -134,7 +101,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public RestoreInstanceRequest instanceId(String instanceId) {
+    public DescribeTdeRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

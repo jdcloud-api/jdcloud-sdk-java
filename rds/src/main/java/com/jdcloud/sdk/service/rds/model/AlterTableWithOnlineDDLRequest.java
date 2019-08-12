@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * command
+ * command相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,16 +28,32 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 使用实例的全量备份覆盖恢复当前实例
+ * 通过 PT-OSC 服务来处理 DDL 命令, 避免锁表。此接口暂是对部分用户开放
  */
-public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Serializable {
+public class AlterTableWithOnlineDDLRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用于恢复的备份Id，仅限于本实例生成的备份
+     * DDL命令修改的库名
+     * Required:true
      */
-    private String backupId;
+    @Required
+    private String database;
+
+    /**
+     * DDL命令修改的表名
+     * Required:true
+     */
+    @Required
+    private String table;
+
+    /**
+     * 需要执行的的DDL命令
+     * Required:true
+     */
+    @Required
+    private String command;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -55,21 +71,57 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 用于恢复的备份Id，仅限于本实例生成的备份
+     * get DDL命令修改的库名
      *
      * @return
      */
-    public String getBackupId() {
-        return backupId;
+    public String getDatabase() {
+        return database;
     }
 
     /**
-     * set 用于恢复的备份Id，仅限于本实例生成的备份
+     * set DDL命令修改的库名
      *
-     * @param backupId
+     * @param database
      */
-    public void setBackupId(String backupId) {
-        this.backupId = backupId;
+    public void setDatabase(String database) {
+        this.database = database;
+    }
+
+    /**
+     * get DDL命令修改的表名
+     *
+     * @return
+     */
+    public String getTable() {
+        return table;
+    }
+
+    /**
+     * set DDL命令修改的表名
+     *
+     * @param table
+     */
+    public void setTable(String table) {
+        this.table = table;
+    }
+
+    /**
+     * get 需要执行的的DDL命令
+     *
+     * @return
+     */
+    public String getCommand() {
+        return command;
+    }
+
+    /**
+     * set 需要执行的的DDL命令
+     *
+     * @param command
+     */
+    public void setCommand(String command) {
+        this.command = command;
     }
 
     /**
@@ -110,12 +162,32 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 用于恢复的备份Id，仅限于本实例生成的备份
+     * set DDL命令修改的库名
      *
-     * @param backupId
+     * @param database
      */
-    public RestoreInstanceRequest backupId(String backupId) {
-        this.backupId = backupId;
+    public AlterTableWithOnlineDDLRequest database(String database) {
+        this.database = database;
+        return this;
+    }
+
+    /**
+     * set DDL命令修改的表名
+     *
+     * @param table
+     */
+    public AlterTableWithOnlineDDLRequest table(String table) {
+        this.table = table;
+        return this;
+    }
+
+    /**
+     * set 需要执行的的DDL命令
+     *
+     * @param command
+     */
+    public AlterTableWithOnlineDDLRequest command(String command) {
+        this.command = command;
         return this;
     }
 
@@ -124,7 +196,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param regionId
      */
-    public RestoreInstanceRequest regionId(String regionId) {
+    public AlterTableWithOnlineDDLRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -134,7 +206,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public RestoreInstanceRequest instanceId(String instanceId) {
+    public AlterTableWithOnlineDDLRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

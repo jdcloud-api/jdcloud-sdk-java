@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.RestoreInstanceResponse;
 
 /**
- * 使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
+ * 使用实例的全量备份覆盖恢复当前实例
  */
 class RestoreInstanceExecutor extends JdcloudExecutor {
 

@@ -35,7 +35,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
+     * 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../Cloud-on-Single-Database/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      */
     private String sharedFileGid;
 
@@ -69,7 +69,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
+     * get 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../Cloud-on-Single-Database/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
+     * set 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../Cloud-on-Single-Database/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      *
      * @param sharedFileGid
      */
@@ -160,7 +160,7 @@ public class RestoreDatabaseFromFileRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../import/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
+     * set 共享文件的全局ID，可从上传文件查询接口[describeImportFiles](../Cloud-on-Single-Database/describeImportFiles.md)获取；如果该文件不是共享文件，则不用输入该参数
      *
      * @param sharedFileGid
      */

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * 账号管理
+ * API related to Relational Database Service
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.rds.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.rds.model.ModifyInstanceSpecResponse;
+import com.jdcloud.sdk.service.rds.model.CreateSuperAccountResponse;
 
 /**
- * 实例扩容，支持升级实例的CPU，内存及磁盘。
+ * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
  */
-class ModifyInstanceSpecExecutor extends JdcloudExecutor {
+class CreateSuperAccountExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class ModifyInstanceSpecExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/instances/{instanceId}:modifyInstanceSpec";
+        return "/regions/{regionId}/instances/{instanceId}/accounts:createSuperAccount";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return ModifyInstanceSpecResponse.class;
+        return CreateSuperAccountResponse.class;
     }
 }

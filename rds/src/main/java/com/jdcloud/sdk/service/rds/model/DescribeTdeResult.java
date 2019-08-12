@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * TDE
+ * TDE相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,44 +27,44 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 实例扩容，支持升级实例的CPU，内存及磁盘。
+ * 查看当前实例是否开启TDE
  */
-public class ModifyInstanceSpecResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeTdeResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 生成的订单号
+     * 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
      */
-    private String orderId;
+    private String status;
 
 
     /**
-     * get 生成的订单号
+     * get 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
      *
      * @return
      */
-    public String getOrderId() {
-        return orderId;
+    public String getStatus() {
+        return status;
     }
 
     /**
-     * set 生成的订单号
+     * set 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
      *
-     * @param orderId
+     * @param status
      */
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
 
     /**
-     * set 生成的订单号
+     * set 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
      *
-     * @param orderId
+     * @param status
      */
-    public ModifyInstanceSpecResult orderId(String orderId) {
-        this.orderId = orderId;
+    public DescribeTdeResult status(String status) {
+        this.status = status;
         return this;
     }
 

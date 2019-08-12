@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * command
+ * command相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+ * 通过 PT-OSC 服务来处理 DDL 命令, 避免锁表。此接口暂是对部分用户开放
  */
-public class ModifyInstanceNameResponse extends JdcloudResponse<ModifyInstanceNameResult> implements java.io.Serializable {
+public class AlterTableWithOnlineDDLResponse extends JdcloudResponse<AlterTableWithOnlineDDLResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

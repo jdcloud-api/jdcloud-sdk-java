@@ -55,6 +55,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeBinlogsExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteInstanceRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteInstanceResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.AlterTableWithOnlineDDLRequest;
+import com.jdcloud.sdk.service.rds.model.AlterTableWithOnlineDDLResponse;
+import com.jdcloud.sdk.service.rds.client.AlterTableWithOnlineDDLExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateParameterGroupRequest;
 import com.jdcloud.sdk.service.rds.model.CreateParameterGroupResponse;
 import com.jdcloud.sdk.service.rds.client.CreateParameterGroupExecutor;
@@ -64,9 +67,6 @@ import com.jdcloud.sdk.service.rds.client.DescribeBackupsExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyConnectionModeRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyConnectionModeResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyConnectionModeExecutor;
-import com.jdcloud.sdk.service.rds.model.ModifyInstanceAzRequest;
-import com.jdcloud.sdk.service.rds.model.ModifyInstanceAzResponse;
-import com.jdcloud.sdk.service.rds.client.ModifyInstanceAzExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteAuditRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteAuditResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteAuditExecutor;
@@ -124,6 +124,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeQueryPerformanceExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterGroupAttachedInstancesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterGroupAttachedInstancesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeParameterGroupAttachedInstancesExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeTdeRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeTdeResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeTdeExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateBackupSynchronicityRequest;
 import com.jdcloud.sdk.service.rds.model.CreateBackupSynchronicityResponse;
 import com.jdcloud.sdk.service.rds.client.CreateBackupSynchronicityExecutor;
@@ -151,6 +154,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeLatestRestoreTimeExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeErrorLogsExecutor;
+import com.jdcloud.sdk.service.rds.model.EnableTdeRequest;
+import com.jdcloud.sdk.service.rds.model.EnableTdeResponse;
+import com.jdcloud.sdk.service.rds.client.EnableTdeExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeSlowLogsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeSlowLogsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeSlowLogsExecutor;
@@ -160,6 +166,9 @@ import com.jdcloud.sdk.service.rds.client.DeleteDatabaseExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeActiveQueryPerformanceRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeActiveQueryPerformanceResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeActiveQueryPerformanceExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateSuperAccountRequest;
+import com.jdcloud.sdk.service.rds.model.CreateSuperAccountResponse;
+import com.jdcloud.sdk.service.rds.client.CreateSuperAccountExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateInstanceFromBackupRequest;
 import com.jdcloud.sdk.service.rds.model.CreateInstanceFromBackupResponse;
 import com.jdcloud.sdk.service.rds.client.CreateInstanceFromBackupExecutor;
@@ -172,6 +181,9 @@ import com.jdcloud.sdk.service.rds.client.ModifyParametersExecutor;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordRequest;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordResponse;
 import com.jdcloud.sdk.service.rds.client.ResetPasswordExecutor;
+import com.jdcloud.sdk.service.rds.model.UpdateLogDownloadURLInternalRequest;
+import com.jdcloud.sdk.service.rds.model.UpdateLogDownloadURLInternalResponse;
+import com.jdcloud.sdk.service.rds.client.UpdateLogDownloadURLInternalExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyWhiteListExecutor;
@@ -226,6 +238,9 @@ import com.jdcloud.sdk.service.rds.client.ModifyBackupPolicyExecutor;
 import com.jdcloud.sdk.service.rds.model.RestoreInstanceRequest;
 import com.jdcloud.sdk.service.rds.model.RestoreInstanceResponse;
 import com.jdcloud.sdk.service.rds.client.RestoreInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeLogsRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeLogsResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeLogsExecutor;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromOSSRequest;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromOSSResponse;
 import com.jdcloud.sdk.service.rds.client.RestoreDatabaseFromOSSExecutor;
@@ -285,7 +300,7 @@ public class RdsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.0";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "rds.jdcloud-api.com";
     public final static String ServiceName = "rds";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -416,6 +431,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 通过 PT-OSC 服务来处理 DDL 命令, 避免锁表。此接口暂是对部分用户开放
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AlterTableWithOnlineDDLResponse alterTableWithOnlineDDL(AlterTableWithOnlineDDLRequest request) throws JdcloudSdkException {
+        return new AlterTableWithOnlineDDLExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建一个参数组&lt;br&gt;- 仅支持MySQL
      *
      * @param request
@@ -446,17 +472,6 @@ public class RdsClient extends JdcloudClient {
      */
     public ModifyConnectionModeResponse modifyConnectionMode(ModifyConnectionModeRequest request) throws JdcloudSdkException {
         return new ModifyConnectionModeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改实例的可用区，例如将实例的可用区从单可用区调整为多可用区
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyInstanceAzResponse modifyInstanceAz(ModifyInstanceAzRequest request) throws JdcloudSdkException {
-        return new ModifyInstanceAzExecutor().client(this).execute(request);
     }
 
     /**
@@ -625,7 +640,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+     * 实例扩容，支持升级实例的CPU，内存及磁盘。
      *
      * @param request
      * @return
@@ -666,6 +681,17 @@ public class RdsClient extends JdcloudClient {
      */
     public DescribeParameterGroupAttachedInstancesResponse describeParameterGroupAttachedInstances(DescribeParameterGroupAttachedInstancesRequest request) throws JdcloudSdkException {
         return new DescribeParameterGroupAttachedInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看当前实例是否开启TDE
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTdeResponse describeTde(DescribeTdeRequest request) throws JdcloudSdkException {
+        return new DescribeTdeExecutor().client(this).execute(request);
     }
 
     /**
@@ -768,6 +794,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 开启数据库的TDE功能
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableTdeResponse enableTde(EnableTdeRequest request) throws JdcloudSdkException {
+        return new EnableTdeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询MySQL实例的慢日志的概要信息。&lt;br&gt;- 仅支持MySQL
      *
      * @param request
@@ -798,6 +835,17 @@ public class RdsClient extends JdcloudClient {
      */
     public DescribeActiveQueryPerformanceResponse describeActiveQueryPerformance(DescribeActiveQueryPerformanceRequest request) throws JdcloudSdkException {
         return new DescribeActiveQueryPerformanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSuperAccountResponse createSuperAccount(CreateSuperAccountRequest request) throws JdcloudSdkException {
+        return new CreateSuperAccountExecutor().client(this).execute(request);
     }
 
     /**
@@ -842,6 +890,17 @@ public class RdsClient extends JdcloudClient {
      */
     public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws JdcloudSdkException {
         return new ResetPasswordExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置日志文件的下载链接过期时间，重新生成 PostgreSQL 的日志文件下载地址
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateLogDownloadURLInternalResponse updateLogDownloadURLInternal(UpdateLogDownloadURLInternalRequest request) throws JdcloudSdkException {
+        return new UpdateLogDownloadURLInternalExecutor().client(this).execute(request);
     }
 
     /**
@@ -966,7 +1025,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param request
      * @return
@@ -1032,7 +1091,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
+     * 使用实例的全量备份覆盖恢复当前实例
      *
      * @param request
      * @return
@@ -1040,6 +1099,17 @@ public class RdsClient extends JdcloudClient {
      */
     public RestoreInstanceResponse restoreInstance(RestoreInstanceRequest request) throws JdcloudSdkException {
         return new RestoreInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取 PostgreSQL 的日志文件列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLogsResponse describeLogs(DescribeLogsRequest request) throws JdcloudSdkException {
+        return new DescribeLogsExecutor().client(this).execute(request);
     }
 
     /**

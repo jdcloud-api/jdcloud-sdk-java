@@ -87,7 +87,7 @@ public class Backup  implements java.io.Serializable {
     /**
      * 整个备份集大小，单位：Byte
      */
-    private Integer backupSizeByte;
+    private Long backupSizeByte;
 
 
     /**
@@ -275,7 +275,7 @@ public class Backup  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getBackupSizeByte() {
+    public Long getBackupSizeByte() {
         return backupSizeByte;
     }
 
@@ -284,7 +284,7 @@ public class Backup  implements java.io.Serializable {
      *
      * @param backupSizeByte
      */
-    public void setBackupSizeByte(Integer backupSizeByte) {
+    public void setBackupSizeByte(Long backupSizeByte) {
         this.backupSizeByte = backupSizeByte;
     }
 
@@ -394,7 +394,7 @@ public class Backup  implements java.io.Serializable {
      *
      * @param backupSizeByte
      */
-    public Backup backupSizeByte(Integer backupSizeByte) {
+    public Backup backupSizeByte(Long backupSizeByte) {
         this.backupSizeByte = backupSizeByte;
         return this;
     }

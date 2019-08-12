@@ -27,29 +27,44 @@ package com.jdcloud.sdk.service.rds.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 
 /**
- * restoredNewDBInstanceSpec
+ * dBInstanceSpecWithoutCharge
  */
-public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
+public class DBInstanceSpecWithoutCharge  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 实例名，具体规则可参见帮助中心文档:[名称及密码限制](https://docs.jdcloud.com/cn/rds/sqlserver-restrictions)
+     * Required:true
      */
+    @Required
     private String instanceName;
 
     /**
-     * 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
+     * 实例引擎类型，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
+     * Required:true
+     */
+    @Required
+    private String engine;
+
+    /**
+     * 实例引擎版本，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
+     * Required:true
+     */
+    @Required
+    private String engineVersion;
+
+    /**
+     * 实例规格代码，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      * Required:true
      */
     @Required
     private String instanceClass;
 
     /**
-     * 磁盘大小，单位GB
+     * 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      * Required:true
      */
     @Required
@@ -82,21 +97,9 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     private String parameterGroup;
 
     /**
-     * 计费规格，包括计费类型，计费周期等
-     * Required:true
-     */
-    @Required
-    private ChargeSpec chargeSpec;
-
-    /**
      * 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
      */
     private String instanceStorageType;
-
-    /**
-     * 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
-     */
-    private String instancePort;
 
     /**
      * 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
@@ -110,7 +113,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * get 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * get 实例名，具体规则可参见帮助中心文档:[名称及密码限制](https://docs.jdcloud.com/cn/rds/sqlserver-restrictions)
      *
      * @return
      */
@@ -119,7 +122,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 实例名，具体规则可参见帮助中心文档:[名称及密码限制](https://docs.jdcloud.com/cn/rds/sqlserver-restrictions)
      *
      * @param instanceName
      */
@@ -128,7 +131,43 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
+     * get 实例引擎类型，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
+     *
+     * @return
+     */
+    public String getEngine() {
+        return engine;
+    }
+
+    /**
+     * set 实例引擎类型，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
+     *
+     * @param engine
+     */
+    public void setEngine(String engine) {
+        this.engine = engine;
+    }
+
+    /**
+     * get 实例引擎版本，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
+     *
+     * @return
+     */
+    public String getEngineVersion() {
+        return engineVersion;
+    }
+
+    /**
+     * set 实例引擎版本，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
+     *
+     * @param engineVersion
+     */
+    public void setEngineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+    }
+
+    /**
+     * get 实例规格代码，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      *
      * @return
      */
@@ -137,7 +176,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
+     * set 实例规格代码，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      *
      * @param instanceClass
      */
@@ -146,7 +185,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 磁盘大小，单位GB
+     * get 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      *
      * @return
      */
@@ -155,7 +194,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘大小，单位GB
+     * set 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      *
      * @param instanceStorageGB
      */
@@ -236,24 +275,6 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 计费规格，包括计费类型，计费周期等
-     *
-     * @return
-     */
-    public ChargeSpec getChargeSpec() {
-        return chargeSpec;
-    }
-
-    /**
-     * set 计费规格，包括计费类型，计费周期等
-     *
-     * @param chargeSpec
-     */
-    public void setChargeSpec(ChargeSpec chargeSpec) {
-        this.chargeSpec = chargeSpec;
-    }
-
-    /**
      * get 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
      *
      * @return
@@ -269,24 +290,6 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      */
     public void setInstanceStorageType(String instanceStorageType) {
         this.instanceStorageType = instanceStorageType;
-    }
-
-    /**
-     * get 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
-     *
-     * @return
-     */
-    public String getInstancePort() {
-        return instancePort;
-    }
-
-    /**
-     * set 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
-     *
-     * @param instancePort
-     */
-    public void setInstancePort(String instancePort) {
-        this.instancePort = instancePort;
     }
 
     /**
@@ -327,31 +330,51 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * set 数据库实例名，名称的限制可参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * set 实例名，具体规则可参见帮助中心文档:[名称及密码限制](https://docs.jdcloud.com/cn/rds/sqlserver-restrictions)
      *
      * @param instanceName
      */
-    public RestoredNewDBInstanceSpec instanceName(String instanceName) {
+    public DBInstanceSpecWithoutCharge instanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
 
     /**
-     * set 实例规格代码，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
+     * set 实例引擎类型，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
+     *
+     * @param engine
+     */
+    public DBInstanceSpecWithoutCharge engine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+
+    /**
+     * set 实例引擎版本，参见[枚举参数定义](https://docs.jdcloud.com/cn/rds/api/enum-definitions)
+     *
+     * @param engineVersion
+     */
+    public DBInstanceSpecWithoutCharge engineVersion(String engineVersion) {
+        this.engineVersion = engineVersion;
+        return this;
+    }
+
+    /**
+     * set 实例规格代码，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      *
      * @param instanceClass
      */
-    public RestoredNewDBInstanceSpec instanceClass(String instanceClass) {
+    public DBInstanceSpecWithoutCharge instanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
         return this;
     }
 
     /**
-     * set 磁盘大小，单位GB
+     * set 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-mysql)、[SQL Server实例规格](https://docs.jdcloud.com/cn/rds/api/instance-specifications-sqlserver)
      *
      * @param instanceStorageGB
      */
-    public RestoredNewDBInstanceSpec instanceStorageGB(Integer instanceStorageGB) {
+    public DBInstanceSpecWithoutCharge instanceStorageGB(Integer instanceStorageGB) {
         this.instanceStorageGB = instanceStorageGB;
         return this;
     }
@@ -361,7 +384,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      *
      * @param azId
      */
-    public RestoredNewDBInstanceSpec azId(List<String> azId) {
+    public DBInstanceSpecWithoutCharge azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
@@ -371,7 +394,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      *
      * @param vpcId
      */
-    public RestoredNewDBInstanceSpec vpcId(String vpcId) {
+    public DBInstanceSpecWithoutCharge vpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -381,7 +404,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      *
      * @param subnetId
      */
-    public RestoredNewDBInstanceSpec subnetId(String subnetId) {
+    public DBInstanceSpecWithoutCharge subnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
@@ -391,18 +414,8 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      *
      * @param parameterGroup
      */
-    public RestoredNewDBInstanceSpec parameterGroup(String parameterGroup) {
+    public DBInstanceSpecWithoutCharge parameterGroup(String parameterGroup) {
         this.parameterGroup = parameterGroup;
-        return this;
-    }
-
-    /**
-     * set 计费规格，包括计费类型，计费周期等
-     *
-     * @param chargeSpec
-     */
-    public RestoredNewDBInstanceSpec chargeSpec(ChargeSpec chargeSpec) {
-        this.chargeSpec = chargeSpec;
         return this;
     }
 
@@ -411,18 +424,8 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      *
      * @param instanceStorageType
      */
-    public RestoredNewDBInstanceSpec instanceStorageType(String instanceStorageType) {
+    public DBInstanceSpecWithoutCharge instanceStorageType(String instanceStorageType) {
         this.instanceStorageType = instanceStorageType;
-        return this;
-    }
-
-    /**
-     * set 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
-     *
-     * @param instancePort
-     */
-    public RestoredNewDBInstanceSpec instancePort(String instancePort) {
-        this.instancePort = instancePort;
         return this;
     }
 
@@ -431,7 +434,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      *
      * @param storageEncrypted
      */
-    public RestoredNewDBInstanceSpec storageEncrypted(Boolean storageEncrypted) {
+    public DBInstanceSpecWithoutCharge storageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
     }
@@ -441,7 +444,7 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      *
      * @param instanceType
      */
-    public RestoredNewDBInstanceSpec instanceType(String instanceType) {
+    public DBInstanceSpecWithoutCharge instanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }

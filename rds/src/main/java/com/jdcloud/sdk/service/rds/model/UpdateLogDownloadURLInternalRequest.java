@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 实例管理
- * 实例管理相关接口
+ * LOG
+ * LOG相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,16 +28,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 使用实例的全量备份覆盖恢复当前实例
+ * 设置日志文件的下载链接过期时间，重新生成 PostgreSQL 的日志文件下载地址
  */
-public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Serializable {
+public class UpdateLogDownloadURLInternalRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用于恢复的备份Id，仅限于本实例生成的备份
+     * 设置链接地址的过期时间，单位是秒，最长不能超过取值范围为 1 ~ 86400 秒
+     * Required:true
      */
-    private String backupId;
+    @Required
+    private Integer seconds;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -53,23 +55,30 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
     @Required
     private String instanceId;
 
+    /**
+     * 日志文件ID
+     * Required:true
+     */
+    @Required
+    private String logId;
+
 
     /**
-     * get 用于恢复的备份Id，仅限于本实例生成的备份
+     * get 设置链接地址的过期时间，单位是秒，最长不能超过取值范围为 1 ~ 86400 秒
      *
      * @return
      */
-    public String getBackupId() {
-        return backupId;
+    public Integer getSeconds() {
+        return seconds;
     }
 
     /**
-     * set 用于恢复的备份Id，仅限于本实例生成的备份
+     * set 设置链接地址的过期时间，单位是秒，最长不能超过取值范围为 1 ~ 86400 秒
      *
-     * @param backupId
+     * @param seconds
      */
-    public void setBackupId(String backupId) {
-        this.backupId = backupId;
+    public void setSeconds(Integer seconds) {
+        this.seconds = seconds;
     }
 
     /**
@@ -108,14 +117,32 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
         this.instanceId = instanceId;
     }
 
+    /**
+     * get 日志文件ID
+     *
+     * @return
+     */
+    public String getLogId() {
+        return logId;
+    }
 
     /**
-     * set 用于恢复的备份Id，仅限于本实例生成的备份
+     * set 日志文件ID
      *
-     * @param backupId
+     * @param logId
      */
-    public RestoreInstanceRequest backupId(String backupId) {
-        this.backupId = backupId;
+    public void setLogId(String logId) {
+        this.logId = logId;
+    }
+
+
+    /**
+     * set 设置链接地址的过期时间，单位是秒，最长不能超过取值范围为 1 ~ 86400 秒
+     *
+     * @param seconds
+     */
+    public UpdateLogDownloadURLInternalRequest seconds(Integer seconds) {
+        this.seconds = seconds;
         return this;
     }
 
@@ -124,7 +151,7 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param regionId
      */
-    public RestoreInstanceRequest regionId(String regionId) {
+    public UpdateLogDownloadURLInternalRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -134,8 +161,18 @@ public class RestoreInstanceRequest extends JdcloudRequest implements java.io.Se
      *
      * @param instanceId
      */
-    public RestoreInstanceRequest instanceId(String instanceId) {
+    public UpdateLogDownloadURLInternalRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 日志文件ID
+     *
+     * @param logId
+     */
+    public UpdateLogDownloadURLInternalRequest logId(String logId) {
+        this.logId = logId;
         return this;
     }
 
