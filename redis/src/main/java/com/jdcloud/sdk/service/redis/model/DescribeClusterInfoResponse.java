@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询Redis实例的内部集群信息
+ * 查询Redis实例的集群内部信息
  */
 public class DescribeClusterInfoResponse extends JdcloudResponse<DescribeClusterInfoResult> implements java.io.Serializable {
 
