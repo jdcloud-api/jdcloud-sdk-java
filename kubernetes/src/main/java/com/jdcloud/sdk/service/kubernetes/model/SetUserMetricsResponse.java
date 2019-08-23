@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 设置用户自定义监控状态
+ * Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
  */
 public class SetUserMetricsResponse extends JdcloudResponse<SetUserMetricsResult> implements java.io.Serializable {
 

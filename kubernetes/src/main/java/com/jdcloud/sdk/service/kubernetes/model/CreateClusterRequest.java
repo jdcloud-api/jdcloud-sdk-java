@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.kubernetes.model.NodeGroupSpec;
+import com.jdcloud.sdk.service.kubernetes.model.AddonConfigSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -116,9 +117,14 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     private String secretKey;
 
     /**
-     * 是否启用用户自定义监控，默认不启用
+     * deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
      */
     private Boolean userMetrics;
+
+    /**
+     * 集群组件配置
+     */
+    private List<AddonConfigSpec> addonsConfig;
 
     /**
      * 地域 ID
@@ -309,7 +315,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 是否启用用户自定义监控，默认不启用
+     * get deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
      *
      * @return
      */
@@ -318,12 +324,30 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 是否启用用户自定义监控，默认不启用
+     * set deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
      *
      * @param userMetrics
      */
     public void setUserMetrics(Boolean userMetrics) {
         this.userMetrics = userMetrics;
+    }
+
+    /**
+     * get 集群组件配置
+     *
+     * @return
+     */
+    public List<AddonConfigSpec> getAddonsConfig() {
+        return addonsConfig;
+    }
+
+    /**
+     * set 集群组件配置
+     *
+     * @param addonsConfig
+     */
+    public void setAddonsConfig(List<AddonConfigSpec> addonsConfig) {
+        this.addonsConfig = addonsConfig;
     }
 
     /**
@@ -446,12 +470,22 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 是否启用用户自定义监控，默认不启用
+     * set deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
      *
      * @param userMetrics
      */
     public CreateClusterRequest userMetrics(Boolean userMetrics) {
         this.userMetrics = userMetrics;
+        return this;
+    }
+
+    /**
+     * set 集群组件配置
+     *
+     * @param addonsConfig
+     */
+    public CreateClusterRequest addonsConfig(List<AddonConfigSpec> addonsConfig) {
+        this.addonsConfig = addonsConfig;
         return this;
     }
 
@@ -476,6 +510,18 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
             this.azs = new ArrayList<>();
         }
         this.azs.add(az);
+    }
+
+    /**
+     * add item to 集群组件配置
+     *
+     * @param addonsConfig
+     */
+    public void addAddonsConfig(AddonConfigSpec addonsConfig) {
+        if (this.addonsConfig == null) {
+            this.addonsConfig = new ArrayList<>();
+        }
+        this.addonsConfig.add(addonsConfig);
     }
 
 }

@@ -26,12 +26,12 @@ package com.jdcloud.sdk.service.kubernetes.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.kubernetes.model.SetUserMetricsResponse;
+import com.jdcloud.sdk.service.kubernetes.model.SetAddonsResponse;
 
 /**
- * Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
+ * 设置集群组件
  */
-class SetUserMetricsExecutor extends JdcloudExecutor {
+class SetAddonsExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -40,11 +40,11 @@ class SetUserMetricsExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/clusters/{clusterId}:setUserMetrics";
+        return "/regions/{regionId}/clusters/{clusterId}:setAddons";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return SetUserMetricsResponse.class;
+        return SetAddonsResponse.class;
     }
 }

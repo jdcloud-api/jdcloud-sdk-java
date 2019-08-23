@@ -27,33 +27,22 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.kubernetes.model.AddonConfigSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 触发升级
+ * 设置集群组件
  */
-public class UpgradeClusterRequest extends JdcloudRequest implements java.io.Serializable {
+public class SetAddonsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 升级范围
+     * 需要设置的集群组件配置
      * Required:true
      */
     @Required
-    private String scope;
-
-    /**
-     * 节点组 id
-     */
-    private List<String> nodeGroupIds;
-
-    /**
-     * 指定升级到的版本
-     * Required:true
-     */
-    @Required
-    private String version;
+    private List<AddonConfigSpec> addonsConfig;
 
     /**
      * 地域 ID
@@ -71,57 +60,21 @@ public class UpgradeClusterRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 升级范围
+     * get 需要设置的集群组件配置
      *
      * @return
      */
-    public String getScope() {
-        return scope;
+    public List<AddonConfigSpec> getAddonsConfig() {
+        return addonsConfig;
     }
 
     /**
-     * set 升级范围
+     * set 需要设置的集群组件配置
      *
-     * @param scope
+     * @param addonsConfig
      */
-    public void setScope(String scope) {
-        this.scope = scope;
-    }
-
-    /**
-     * get 节点组 id
-     *
-     * @return
-     */
-    public List<String> getNodeGroupIds() {
-        return nodeGroupIds;
-    }
-
-    /**
-     * set 节点组 id
-     *
-     * @param nodeGroupIds
-     */
-    public void setNodeGroupIds(List<String> nodeGroupIds) {
-        this.nodeGroupIds = nodeGroupIds;
-    }
-
-    /**
-     * get 指定升级到的版本
-     *
-     * @return
-     */
-    public String getVersion() {
-        return version;
-    }
-
-    /**
-     * set 指定升级到的版本
-     *
-     * @param version
-     */
-    public void setVersion(String version) {
-        this.version = version;
+    public void setAddonsConfig(List<AddonConfigSpec> addonsConfig) {
+        this.addonsConfig = addonsConfig;
     }
 
     /**
@@ -162,32 +115,12 @@ public class UpgradeClusterRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 升级范围
+     * set 需要设置的集群组件配置
      *
-     * @param scope
+     * @param addonsConfig
      */
-    public UpgradeClusterRequest scope(String scope) {
-        this.scope = scope;
-        return this;
-    }
-
-    /**
-     * set 节点组 id
-     *
-     * @param nodeGroupIds
-     */
-    public UpgradeClusterRequest nodeGroupIds(List<String> nodeGroupIds) {
-        this.nodeGroupIds = nodeGroupIds;
-        return this;
-    }
-
-    /**
-     * set 指定升级到的版本
-     *
-     * @param version
-     */
-    public UpgradeClusterRequest version(String version) {
-        this.version = version;
+    public SetAddonsRequest addonsConfig(List<AddonConfigSpec> addonsConfig) {
+        this.addonsConfig = addonsConfig;
         return this;
     }
 
@@ -196,7 +129,7 @@ public class UpgradeClusterRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param regionId
      */
-    public UpgradeClusterRequest regionId(String regionId) {
+    public SetAddonsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -206,22 +139,22 @@ public class UpgradeClusterRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param clusterId
      */
-    public UpgradeClusterRequest clusterId(String clusterId) {
+    public SetAddonsRequest clusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
 
 
     /**
-     * add item to 节点组 id
+     * add item to 需要设置的集群组件配置
      *
-     * @param nodeGroupId
+     * @param addonsConfig
      */
-    public void addNodeGroupId(String nodeGroupId) {
-        if (this.nodeGroupIds == null) {
-            this.nodeGroupIds = new ArrayList<>();
+    public void addAddonsConfig(AddonConfigSpec addonsConfig) {
+        if (this.addonsConfig == null) {
+            this.addonsConfig = new ArrayList<>();
         }
-        this.nodeGroupIds.add(nodeGroupId);
+        this.addonsConfig.add(addonsConfig);
     }
 
 }
