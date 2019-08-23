@@ -90,7 +90,7 @@ public class Backup  implements java.io.Serializable {
     private Integer backupStatus;
 
     /**
-     * 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
+     * 备份文件下载地址（已废弃，调用获取备份文件下载地址接口获取）
      * Required:true
      */
     @Required
@@ -242,7 +242,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * get 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
+     * get 备份文件下载地址（已废弃，调用获取备份文件下载地址接口获取）
      *
      * @return
      */
@@ -251,7 +251,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
+     * set 备份文件下载地址（已废弃，调用获取备份文件下载地址接口获取）
      *
      * @param backupDownloadURL
      */
@@ -341,7 +341,7 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
-     * set 备份文件下载地址，已置空，需要调用获取备份文件下载地址接口获取
+     * set 备份文件下载地址（已废弃，调用获取备份文件下载地址接口获取）
      *
      * @param backupDownloadURL
      */

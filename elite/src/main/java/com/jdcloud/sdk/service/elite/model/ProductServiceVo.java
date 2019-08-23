@@ -45,6 +45,21 @@ public class ProductServiceVo  implements java.io.Serializable {
     private String orderNumber;
 
     /**
+     * 购买人
+     */
+    private String buyerPin;
+
+    /**
+     * 映射编号
+     */
+    private String mappingCode;
+
+    /**
+     * 是否支持自动交付：0表示不支持，1表示支持
+     */
+    private Integer supportAutoDeliver;
+
+    /**
      * 产品ID
      */
     private Integer productId;
@@ -179,6 +194,60 @@ public class ProductServiceVo  implements java.io.Serializable {
      */
     public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
+    }
+
+    /**
+     * get 购买人
+     *
+     * @return
+     */
+    public String getBuyerPin() {
+        return buyerPin;
+    }
+
+    /**
+     * set 购买人
+     *
+     * @param buyerPin
+     */
+    public void setBuyerPin(String buyerPin) {
+        this.buyerPin = buyerPin;
+    }
+
+    /**
+     * get 映射编号
+     *
+     * @return
+     */
+    public String getMappingCode() {
+        return mappingCode;
+    }
+
+    /**
+     * set 映射编号
+     *
+     * @param mappingCode
+     */
+    public void setMappingCode(String mappingCode) {
+        this.mappingCode = mappingCode;
+    }
+
+    /**
+     * get 是否支持自动交付：0表示不支持，1表示支持
+     *
+     * @return
+     */
+    public Integer getSupportAutoDeliver() {
+        return supportAutoDeliver;
+    }
+
+    /**
+     * set 是否支持自动交付：0表示不支持，1表示支持
+     *
+     * @param supportAutoDeliver
+     */
+    public void setSupportAutoDeliver(Integer supportAutoDeliver) {
+        this.supportAutoDeliver = supportAutoDeliver;
     }
 
     /**
@@ -559,6 +628,36 @@ public class ProductServiceVo  implements java.io.Serializable {
      */
     public ProductServiceVo orderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
+        return this;
+    }
+
+    /**
+     * set 购买人
+     *
+     * @param buyerPin
+     */
+    public ProductServiceVo buyerPin(String buyerPin) {
+        this.buyerPin = buyerPin;
+        return this;
+    }
+
+    /**
+     * set 映射编号
+     *
+     * @param mappingCode
+     */
+    public ProductServiceVo mappingCode(String mappingCode) {
+        this.mappingCode = mappingCode;
+        return this;
+    }
+
+    /**
+     * set 是否支持自动交付：0表示不支持，1表示支持
+     *
+     * @param supportAutoDeliver
+     */
+    public ProductServiceVo supportAutoDeliver(Integer supportAutoDeliver) {
+        this.supportAutoDeliver = supportAutoDeliver;
         return this;
     }
 

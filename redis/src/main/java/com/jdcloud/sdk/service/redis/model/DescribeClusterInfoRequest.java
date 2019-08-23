@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询Redis实例的内部集群信息
+ * 查询Redis实例的集群内部信息
  */
 public class DescribeClusterInfoRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.redis.model.DescribeClusterInfoResponse;
 
 /**
- * 查询Redis实例的内部集群信息
+ * 查询Redis实例的集群内部信息
  */
 class DescribeClusterInfoExecutor extends JdcloudExecutor {
 

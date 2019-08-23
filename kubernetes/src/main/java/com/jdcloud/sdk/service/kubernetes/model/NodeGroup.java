@@ -112,7 +112,12 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * 是否开启自动修复
      */
-    private String autoRepair;
+    private Boolean autoRepair;
+
+    /**
+     * 控制节点操作进度
+     */
+    private NodeGroupProgress progress;
 
     /**
      * 创建时间
@@ -395,7 +400,7 @@ public class NodeGroup  implements java.io.Serializable {
      *
      * @return
      */
-    public String getAutoRepair() {
+    public Boolean getAutoRepair() {
         return autoRepair;
     }
 
@@ -404,8 +409,26 @@ public class NodeGroup  implements java.io.Serializable {
      *
      * @param autoRepair
      */
-    public void setAutoRepair(String autoRepair) {
+    public void setAutoRepair(Boolean autoRepair) {
         this.autoRepair = autoRepair;
+    }
+
+    /**
+     * get 控制节点操作进度
+     *
+     * @return
+     */
+    public NodeGroupProgress getProgress() {
+        return progress;
+    }
+
+    /**
+     * set 控制节点操作进度
+     *
+     * @param progress
+     */
+    public void setProgress(NodeGroupProgress progress) {
+        this.progress = progress;
     }
 
     /**
@@ -582,8 +605,18 @@ public class NodeGroup  implements java.io.Serializable {
      *
      * @param autoRepair
      */
-    public NodeGroup autoRepair(String autoRepair) {
+    public NodeGroup autoRepair(Boolean autoRepair) {
         this.autoRepair = autoRepair;
+        return this;
+    }
+
+    /**
+     * set 控制节点操作进度
+     *
+     * @param progress
+     */
+    public NodeGroup progress(NodeGroupProgress progress) {
+        this.progress = progress;
         return this;
     }
 

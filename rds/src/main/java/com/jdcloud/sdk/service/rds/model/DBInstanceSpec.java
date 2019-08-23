@@ -63,7 +63,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     private String instanceClass;
 
     /**
-     * 磁盘大小，单位GB
+     * 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      * Required:true
      */
     @Required
@@ -106,6 +106,11 @@ public class DBInstanceSpec  implements java.io.Serializable {
      * 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md), 缺省值为：LOCAL_SSD&lt;br&gt;- 仅支持MySQL
      */
     private String instanceStorageType;
+
+    /**
+     * 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     */
+    private String instancePort;
 
     /**
      * 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
@@ -191,7 +196,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 磁盘大小，单位GB
+     * get 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      *
      * @return
      */
@@ -200,7 +205,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘大小，单位GB
+     * set 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      *
      * @param instanceStorageGB
      */
@@ -317,6 +322,24 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     *
+     * @return
+     */
+    public String getInstancePort() {
+        return instancePort;
+    }
+
+    /**
+     * set 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     *
+     * @param instancePort
+     */
+    public void setInstancePort(String instancePort) {
+        this.instancePort = instancePort;
+    }
+
+    /**
      * get 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
      *
      * @return
@@ -394,7 +417,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘大小，单位GB
+     * set 磁盘大小，单位GB，可以查看文档[MySQL 实例规格](../Instance-Specifications/Instance-Specifications-MySQL.md)、[SQL Server实例规格](../Instance-Specifications/Instance-Specifications-SQLServer.md)
      *
      * @param instanceStorageGB
      */
@@ -460,6 +483,16 @@ public class DBInstanceSpec  implements java.io.Serializable {
      */
     public DBInstanceSpec instanceStorageType(String instanceStorageType) {
         this.instanceStorageType = instanceStorageType;
+        return this;
+    }
+
+    /**
+     * set 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     *
+     * @param instancePort
+     */
+    public DBInstanceSpec instancePort(String instancePort) {
+        this.instancePort = instancePort;
         return this;
     }
 

@@ -53,7 +53,7 @@ public class UpgradeClusterRequest extends JdcloudRequest implements java.io.Ser
      * Required:true
      */
     @Required
-    private String verison;
+    private String version;
 
     /**
      * 地域 ID
@@ -111,17 +111,17 @@ public class UpgradeClusterRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public String getVerison() {
-        return verison;
+    public String getVersion() {
+        return version;
     }
 
     /**
      * set 指定升级到的版本
      *
-     * @param verison
+     * @param version
      */
-    public void setVerison(String verison) {
-        this.verison = verison;
+    public void setVersion(String version) {
+        this.version = version;
     }
 
     /**
@@ -184,10 +184,10 @@ public class UpgradeClusterRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 指定升级到的版本
      *
-     * @param verison
+     * @param version
      */
-    public UpgradeClusterRequest verison(String verison) {
-        this.verison = verison;
+    public UpgradeClusterRequest version(String version) {
+        this.version = version;
         return this;
     }
 

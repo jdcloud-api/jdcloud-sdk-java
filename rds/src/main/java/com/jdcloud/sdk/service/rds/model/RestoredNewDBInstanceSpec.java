@@ -94,6 +94,11 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     private String instanceStorageType;
 
     /**
+     * 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     */
+    private String instancePort;
+
+    /**
      * 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
      */
     private Boolean storageEncrypted;
@@ -267,6 +272,24 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     *
+     * @return
+     */
+    public String getInstancePort() {
+        return instancePort;
+    }
+
+    /**
+     * set 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     *
+     * @param instancePort
+     */
+    public void setInstancePort(String instancePort) {
+        this.instancePort = instancePort;
+    }
+
+    /**
      * get 实例数据加密(存储类型为云硬盘才支持数据加密)。false：不加密，true：加密，缺省为false&lt;br&gt;- 仅支持MySQL
      *
      * @return
@@ -390,6 +413,16 @@ public class RestoredNewDBInstanceSpec  implements java.io.Serializable {
      */
     public RestoredNewDBInstanceSpec instanceStorageType(String instanceStorageType) {
         this.instanceStorageType = instanceStorageType;
+        return this;
+    }
+
+    /**
+     * set 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     *
+     * @param instancePort
+     */
+    public RestoredNewDBInstanceSpec instancePort(String instancePort) {
+        this.instancePort = instancePort;
         return this;
     }
 

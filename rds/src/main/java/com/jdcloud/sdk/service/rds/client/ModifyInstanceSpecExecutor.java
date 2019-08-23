@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.ModifyInstanceSpecResponse;
 
 /**
- * 实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+ * 实例扩容，支持升级实例的CPU，内存及磁盘。
  */
 class ModifyInstanceSpecExecutor extends JdcloudExecutor {
 

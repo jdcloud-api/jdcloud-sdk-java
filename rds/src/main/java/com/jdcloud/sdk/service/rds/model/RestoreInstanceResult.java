@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 使用实例的全量备份覆盖恢复当前实例&lt;br&gt;- 仅支持MySQL
+ * 使用实例的全量备份覆盖恢复当前实例
  */
 public class RestoreInstanceResult extends JdcloudResult implements java.io.Serializable {
 

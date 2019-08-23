@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 实例扩容，支持升级实例的CPU，内存及磁盘。目前暂不支持实例降配&lt;br&gt;- 仅支持MySQL
+ * 实例扩容，支持升级实例的CPU，内存及磁盘。
  */
 public class ModifyInstanceSpecResult extends JdcloudResult implements java.io.Serializable {
 

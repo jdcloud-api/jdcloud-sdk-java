@@ -37,18 +37,27 @@ import com.jdcloud.sdk.service.elite.client.JdxQueryPriceExecutor;
 import com.jdcloud.sdk.service.elite.model.ListSaleServiceRequest;
 import com.jdcloud.sdk.service.elite.model.ListSaleServiceResponse;
 import com.jdcloud.sdk.service.elite.client.ListSaleServiceExecutor;
+import com.jdcloud.sdk.service.elite.model.JdxQueryDeliveryInfoRequest;
+import com.jdcloud.sdk.service.elite.model.JdxQueryDeliveryInfoResponse;
+import com.jdcloud.sdk.service.elite.client.JdxQueryDeliveryInfoExecutor;
 import com.jdcloud.sdk.service.elite.model.GetStoreServiceRequest;
 import com.jdcloud.sdk.service.elite.model.GetStoreServiceResponse;
 import com.jdcloud.sdk.service.elite.client.GetStoreServiceExecutor;
 import com.jdcloud.sdk.service.elite.model.JdxReportOrderRequest;
 import com.jdcloud.sdk.service.elite.model.JdxReportOrderResponse;
 import com.jdcloud.sdk.service.elite.client.JdxReportOrderExecutor;
-import com.jdcloud.sdk.service.elite.model.ConfirmSaleServiceDeliveryRequest;
-import com.jdcloud.sdk.service.elite.model.ConfirmSaleServiceDeliveryResponse;
-import com.jdcloud.sdk.service.elite.client.ConfirmSaleServiceDeliveryExecutor;
+import com.jdcloud.sdk.service.elite.model.JdxCreateOrderRequest;
+import com.jdcloud.sdk.service.elite.model.JdxCreateOrderResponse;
+import com.jdcloud.sdk.service.elite.client.JdxCreateOrderExecutor;
 import com.jdcloud.sdk.service.elite.model.GetSaleServiceByDeliverNumberRequest;
 import com.jdcloud.sdk.service.elite.model.GetSaleServiceByDeliverNumberResponse;
 import com.jdcloud.sdk.service.elite.client.GetSaleServiceByDeliverNumberExecutor;
+import com.jdcloud.sdk.service.elite.model.JdxQueryProductRequest;
+import com.jdcloud.sdk.service.elite.model.JdxQueryProductResponse;
+import com.jdcloud.sdk.service.elite.client.JdxQueryProductExecutor;
+import com.jdcloud.sdk.service.elite.model.ConfirmSaleServiceDeliveryRequest;
+import com.jdcloud.sdk.service.elite.model.ConfirmSaleServiceDeliveryResponse;
+import com.jdcloud.sdk.service.elite.client.ConfirmSaleServiceDeliveryExecutor;
 
 /**
  * eliteClient
@@ -57,7 +66,7 @@ public class EliteClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "elite.cn-south-1.jdcloud-api.com";
     public final static String ServiceName = "elite";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -122,6 +131,17 @@ public class EliteClient extends JdcloudClient {
     }
 
     /**
+     * 查询交付信息接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JdxQueryDeliveryInfoResponse jdxQueryDeliveryInfo(JdxQueryDeliveryInfoRequest request) throws JdcloudSdkException {
+        return new JdxQueryDeliveryInfoExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取云存服务信息
      *
      * @param request
@@ -144,14 +164,14 @@ public class EliteClient extends JdcloudClient {
     }
 
     /**
-     * 确认交付
+     * 下单接口
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ConfirmSaleServiceDeliveryResponse confirmSaleServiceDelivery(ConfirmSaleServiceDeliveryRequest request) throws JdcloudSdkException {
-        return new ConfirmSaleServiceDeliveryExecutor().client(this).execute(request);
+    public JdxCreateOrderResponse jdxCreateOrder(JdxCreateOrderRequest request) throws JdcloudSdkException {
+        return new JdxCreateOrderExecutor().client(this).execute(request);
     }
 
     /**
@@ -163,6 +183,28 @@ public class EliteClient extends JdcloudClient {
      */
     public GetSaleServiceByDeliverNumberResponse getSaleServiceByDeliverNumber(GetSaleServiceByDeliverNumberRequest request) throws JdcloudSdkException {
         return new GetSaleServiceByDeliverNumberExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 输出商品接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public JdxQueryProductResponse jdxQueryProduct(JdxQueryProductRequest request) throws JdcloudSdkException {
+        return new JdxQueryProductExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 确认交付
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ConfirmSaleServiceDeliveryResponse confirmSaleServiceDelivery(ConfirmSaleServiceDeliveryRequest request) throws JdcloudSdkException {
+        return new ConfirmSaleServiceDeliveryExecutor().client(this).execute(request);
     }
 
 

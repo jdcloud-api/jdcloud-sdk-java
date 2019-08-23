@@ -28,20 +28,20 @@ import com.jdcloud.sdk.service.redis.model.ClusterInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询Redis实例的内部集群信息
+ * 查询Redis实例的集群内部信息
  */
 public class DescribeClusterInfoResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 内部集群信息
+     * 集群内部信息
      */
     private ClusterInfo info;
 
 
     /**
-     * get 内部集群信息
+     * get 集群内部信息
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class DescribeClusterInfoResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 内部集群信息
+     * set 集群内部信息
      *
      * @param info
      */
@@ -60,7 +60,7 @@ public class DescribeClusterInfoResult extends JdcloudResult implements java.io.
 
 
     /**
-     * set 内部集群信息
+     * set 集群内部信息
      *
      * @param info
      */

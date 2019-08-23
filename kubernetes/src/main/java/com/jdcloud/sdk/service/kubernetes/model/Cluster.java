@@ -125,9 +125,34 @@ public class Cluster  implements java.io.Serializable {
     private String dashboardPort;
 
     /**
-     * 用户是否启用集群自定义监控
+     * deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
      */
     private Boolean userMetrics;
+
+    /**
+     * 集群组件配置信息
+     */
+    private List<AddonConfig> addonsConfig;
+
+    /**
+     * 是否开启集群自动升级，true 表示开启，false 表示未开启
+     */
+    private Boolean autoUpgrade;
+
+    /**
+     * 配置集群维护策略
+     */
+    private MaintenanceWindow maintenanceWindow;
+
+    /**
+     * 集群升级计划信息, 仅展示最新一条升级计划信息
+     */
+    private UpgradePlan upgradePlan;
+
+    /**
+     * 控制节点操作进度
+     */
+    private MaintenanceWindow masterProgress;
 
 
     /**
@@ -455,7 +480,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * get 用户是否启用集群自定义监控
+     * get deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
      *
      * @return
      */
@@ -464,12 +489,102 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * set 用户是否启用集群自定义监控
+     * set deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
      *
      * @param userMetrics
      */
     public void setUserMetrics(Boolean userMetrics) {
         this.userMetrics = userMetrics;
+    }
+
+    /**
+     * get 集群组件配置信息
+     *
+     * @return
+     */
+    public List<AddonConfig> getAddonsConfig() {
+        return addonsConfig;
+    }
+
+    /**
+     * set 集群组件配置信息
+     *
+     * @param addonsConfig
+     */
+    public void setAddonsConfig(List<AddonConfig> addonsConfig) {
+        this.addonsConfig = addonsConfig;
+    }
+
+    /**
+     * get 是否开启集群自动升级，true 表示开启，false 表示未开启
+     *
+     * @return
+     */
+    public Boolean getAutoUpgrade() {
+        return autoUpgrade;
+    }
+
+    /**
+     * set 是否开启集群自动升级，true 表示开启，false 表示未开启
+     *
+     * @param autoUpgrade
+     */
+    public void setAutoUpgrade(Boolean autoUpgrade) {
+        this.autoUpgrade = autoUpgrade;
+    }
+
+    /**
+     * get 配置集群维护策略
+     *
+     * @return
+     */
+    public MaintenanceWindow getMaintenanceWindow() {
+        return maintenanceWindow;
+    }
+
+    /**
+     * set 配置集群维护策略
+     *
+     * @param maintenanceWindow
+     */
+    public void setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+    }
+
+    /**
+     * get 集群升级计划信息, 仅展示最新一条升级计划信息
+     *
+     * @return
+     */
+    public UpgradePlan getUpgradePlan() {
+        return upgradePlan;
+    }
+
+    /**
+     * set 集群升级计划信息, 仅展示最新一条升级计划信息
+     *
+     * @param upgradePlan
+     */
+    public void setUpgradePlan(UpgradePlan upgradePlan) {
+        this.upgradePlan = upgradePlan;
+    }
+
+    /**
+     * get 控制节点操作进度
+     *
+     * @return
+     */
+    public MaintenanceWindow getMasterProgress() {
+        return masterProgress;
+    }
+
+    /**
+     * set 控制节点操作进度
+     *
+     * @param masterProgress
+     */
+    public void setMasterProgress(MaintenanceWindow masterProgress) {
+        this.masterProgress = masterProgress;
     }
 
 
@@ -654,12 +769,62 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * set 用户是否启用集群自定义监控
+     * set deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
      *
      * @param userMetrics
      */
     public Cluster userMetrics(Boolean userMetrics) {
         this.userMetrics = userMetrics;
+        return this;
+    }
+
+    /**
+     * set 集群组件配置信息
+     *
+     * @param addonsConfig
+     */
+    public Cluster addonsConfig(List<AddonConfig> addonsConfig) {
+        this.addonsConfig = addonsConfig;
+        return this;
+    }
+
+    /**
+     * set 是否开启集群自动升级，true 表示开启，false 表示未开启
+     *
+     * @param autoUpgrade
+     */
+    public Cluster autoUpgrade(Boolean autoUpgrade) {
+        this.autoUpgrade = autoUpgrade;
+        return this;
+    }
+
+    /**
+     * set 配置集群维护策略
+     *
+     * @param maintenanceWindow
+     */
+    public Cluster maintenanceWindow(MaintenanceWindow maintenanceWindow) {
+        this.maintenanceWindow = maintenanceWindow;
+        return this;
+    }
+
+    /**
+     * set 集群升级计划信息, 仅展示最新一条升级计划信息
+     *
+     * @param upgradePlan
+     */
+    public Cluster upgradePlan(UpgradePlan upgradePlan) {
+        this.upgradePlan = upgradePlan;
+        return this;
+    }
+
+    /**
+     * set 控制节点操作进度
+     *
+     * @param masterProgress
+     */
+    public Cluster masterProgress(MaintenanceWindow masterProgress) {
+        this.masterProgress = masterProgress;
         return this;
     }
 
@@ -686,6 +851,18 @@ public class Cluster  implements java.io.Serializable {
             this.nodeGroups = new ArrayList<>();
         }
         this.nodeGroups.add(nodeGroup);
+    }
+
+    /**
+     * add item to 集群组件配置信息
+     *
+     * @param addonsConfig
+     */
+    public void addAddonsConfig(AddonConfig addonsConfig) {
+        if (this.addonsConfig == null) {
+            this.addonsConfig = new ArrayList<>();
+        }
+        this.addonsConfig.add(addonsConfig);
     }
 
 }

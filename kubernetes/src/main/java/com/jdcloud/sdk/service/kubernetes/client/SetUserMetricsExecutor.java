@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.SetUserMetricsResponse;
 
 /**
- * 设置用户自定义监控状态
+ * Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
  */
 class SetUserMetricsExecutor extends JdcloudExecutor {
 

@@ -35,14 +35,14 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 慢日志开始时间,格式为：YYYY-MM-DD HH:mm:ss,开始时间到结束时间不能大于30天,结束时间不能大于当前时间
+     * 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      * Required:true
      */
     @Required
     private String startTime;
 
     /**
-     * 慢日志结束时间,格式为：YYYY-MM-DD HH:mm:ss,开始时间到结束时间不能大于30天,结束时间不能大于当前时间
+     * 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      * Required:true
      */
     @Required
@@ -79,7 +79,7 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 慢日志开始时间,格式为：YYYY-MM-DD HH:mm:ss,开始时间到结束时间不能大于30天,结束时间不能大于当前时间
+     * get 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @return
      */
@@ -88,7 +88,7 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 慢日志开始时间,格式为：YYYY-MM-DD HH:mm:ss,开始时间到结束时间不能大于30天,结束时间不能大于当前时间
+     * set 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @param startTime
      */
@@ -97,7 +97,7 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 慢日志结束时间,格式为：YYYY-MM-DD HH:mm:ss,开始时间到结束时间不能大于30天,结束时间不能大于当前时间
+     * get 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @return
      */
@@ -106,7 +106,7 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 慢日志结束时间,格式为：YYYY-MM-DD HH:mm:ss,开始时间到结束时间不能大于30天,结束时间不能大于当前时间
+     * set 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @param endTime
      */
@@ -206,7 +206,7 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 慢日志开始时间,格式为：YYYY-MM-DD HH:mm:ss,开始时间到结束时间不能大于30天,结束时间不能大于当前时间
+     * set 慢日志开始时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @param startTime
      */
@@ -216,7 +216,7 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 慢日志结束时间,格式为：YYYY-MM-DD HH:mm:ss,开始时间到结束时间不能大于30天,结束时间不能大于当前时间
+     * set 慢日志结束时间，格式为：YYYY-MM-DD HH:mm:ss，开始时间到当前时间不能大于 7 天，开始时间不能大于结束时间，结束时间不能大于当前时间
      *
      * @param endTime
      */

@@ -34,7 +34,7 @@ public class InstanceName  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源Id（即实例id）
+     * 资源id（即实例id）
      * Required:true
      */
     @Required
@@ -56,7 +56,7 @@ public class InstanceName  implements java.io.Serializable {
 
 
     /**
-     * get 资源Id（即实例id）
+     * get 资源id（即实例id）
      *
      * @return
      */
@@ -65,7 +65,7 @@ public class InstanceName  implements java.io.Serializable {
     }
 
     /**
-     * set 资源Id（即实例id）
+     * set 资源id（即实例id）
      *
      * @param resourceId
      */
@@ -111,7 +111,7 @@ public class InstanceName  implements java.io.Serializable {
 
 
     /**
-     * set 资源Id（即实例id）
+     * set 资源id（即实例id）
      *
      * @param resourceId
      */

@@ -31,12 +31,39 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaRequest;
-import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaResponse;
-import com.jdcloud.sdk.service.redis.client.DescribeUserQuotaExecutor;
+import com.jdcloud.sdk.service.redis.model.ModifyBackupPolicyRequest;
+import com.jdcloud.sdk.service.redis.model.ModifyBackupPolicyResponse;
+import com.jdcloud.sdk.service.redis.client.ModifyBackupPolicyExecutor;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceClassRequest;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceClassResponse;
 import com.jdcloud.sdk.service.redis.client.ModifyCacheInstanceClassExecutor;
+import com.jdcloud.sdk.service.redis.model.CreateBackupRequest;
+import com.jdcloud.sdk.service.redis.model.CreateBackupResponse;
+import com.jdcloud.sdk.service.redis.client.CreateBackupExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeInstanceConfigRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeInstanceConfigResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeInstanceConfigExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeBackupPolicyRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeBackupPolicyResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeBackupPolicyExecutor;
+import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceRequest;
+import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceResponse;
+import com.jdcloud.sdk.service.redis.client.DeleteCacheInstanceExecutor;
+import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordRequest;
+import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordResponse;
+import com.jdcloud.sdk.service.redis.client.ResetCacheInstancePasswordExecutor;
+import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceRequest;
+import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceResponse;
+import com.jdcloud.sdk.service.redis.client.CreateCacheInstanceExecutor;
+import com.jdcloud.sdk.service.redis.model.RestoreInstanceRequest;
+import com.jdcloud.sdk.service.redis.model.RestoreInstanceResponse;
+import com.jdcloud.sdk.service.redis.client.RestoreInstanceExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeUserQuotaExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeDownloadUrlRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeDownloadUrlResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeDownloadUrlExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeCacheInstancesExecutor;
@@ -46,21 +73,18 @@ import com.jdcloud.sdk.service.redis.client.DescribeClusterInfoExecutor;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeRequest;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeResponse;
 import com.jdcloud.sdk.service.redis.client.ModifyCacheInstanceAttributeExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeBackupsRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeBackupsResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeBackupsExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstanceRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstanceResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeCacheInstanceExecutor;
-import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceRequest;
-import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceResponse;
-import com.jdcloud.sdk.service.redis.client.DeleteCacheInstanceExecutor;
-import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordRequest;
-import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordResponse;
-import com.jdcloud.sdk.service.redis.client.ResetCacheInstancePasswordExecutor;
+import com.jdcloud.sdk.service.redis.model.ModifyInstanceConfigRequest;
+import com.jdcloud.sdk.service.redis.model.ModifyInstanceConfigResponse;
+import com.jdcloud.sdk.service.redis.client.ModifyInstanceConfigExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeInstanceClassRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeInstanceClassResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeInstanceClassExecutor;
-import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceRequest;
-import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceResponse;
-import com.jdcloud.sdk.service.redis.client.CreateCacheInstanceExecutor;
 
 /**
  * redisClient
@@ -112,14 +136,14 @@ public class RedisClient extends JdcloudClient {
 
 
     /**
-     * 查询账户的缓存Redis配额信息
+     * 修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeUserQuotaResponse describeUserQuota(DescribeUserQuotaRequest request) throws JdcloudSdkException {
-        return new DescribeUserQuotaExecutor().client(this).execute(request);
+    public ModifyBackupPolicyResponse modifyBackupPolicy(ModifyBackupPolicyRequest request) throws JdcloudSdkException {
+        return new ModifyBackupPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -136,47 +160,36 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
+     * 创建并执行缓存Redis实例的备份任务，只能为手动备份，可设置备份文件名称
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeCacheInstancesResponse describeCacheInstances(DescribeCacheInstancesRequest request) throws JdcloudSdkException {
-        return new DescribeCacheInstancesExecutor().client(this).execute(request);
+    public CreateBackupResponse createBackup(CreateBackupRequest request) throws JdcloudSdkException {
+        return new CreateBackupExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询Redis实例的内部集群信息
+     * 查看缓存Redis实例的当前配置参数
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeClusterInfoResponse describeClusterInfo(DescribeClusterInfoRequest request) throws JdcloudSdkException {
-        return new DescribeClusterInfoExecutor().client(this).execute(request);
+    public DescribeInstanceConfigResponse describeInstanceConfig(DescribeInstanceConfigRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceConfigExecutor().client(this).execute(request);
     }
 
     /**
-     * 修改缓存Redis实例的资源名称或描述，二者至少选一
+     * 查询缓存Redis实例的自动备份策略
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyCacheInstanceAttributeResponse modifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) throws JdcloudSdkException {
-        return new ModifyCacheInstanceAttributeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询缓存Redis实例的详细信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeCacheInstanceResponse describeCacheInstance(DescribeCacheInstanceRequest request) throws JdcloudSdkException {
-        return new DescribeCacheInstanceExecutor().client(this).execute(request);
+    public DescribeBackupPolicyResponse describeBackupPolicy(DescribeBackupPolicyRequest request) throws JdcloudSdkException {
+        return new DescribeBackupPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -205,17 +218,6 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 查询某区域下的缓存Redis实例规格列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeInstanceClassResponse describeInstanceClass(DescribeInstanceClassRequest request) throws JdcloudSdkException {
-        return new DescribeInstanceClassExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
 
      *
@@ -225,6 +227,116 @@ public class RedisClient extends JdcloudClient {
      */
     public CreateCacheInstanceResponse createCacheInstance(CreateCacheInstanceRequest request) throws JdcloudSdkException {
         return new CreateCacheInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 恢复缓存Redis实例的某次备份
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestoreInstanceResponse restoreInstance(RestoreInstanceRequest request) throws JdcloudSdkException {
+        return new RestoreInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询账户的缓存Redis配额信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeUserQuotaResponse describeUserQuota(DescribeUserQuotaRequest request) throws JdcloudSdkException {
+        return new DescribeUserQuotaExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取缓存Redis实例的备份文件临时下载地址
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDownloadUrlResponse describeDownloadUrl(DescribeDownloadUrlRequest request) throws JdcloudSdkException {
+        return new DescribeDownloadUrlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询缓存Redis实例列表，可分页、可排序、可搜索、可过滤
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCacheInstancesResponse describeCacheInstances(DescribeCacheInstancesRequest request) throws JdcloudSdkException {
+        return new DescribeCacheInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询Redis实例的集群内部信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeClusterInfoResponse describeClusterInfo(DescribeClusterInfoRequest request) throws JdcloudSdkException {
+        return new DescribeClusterInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改缓存Redis实例的资源名称或描述，二者至少选一
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyCacheInstanceAttributeResponse modifyCacheInstanceAttribute(ModifyCacheInstanceAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyCacheInstanceAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询缓存Redis实例的备份结果（备份文件列表），可分页、可指定起止时间或备份任务ID
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackupsResponse describeBackups(DescribeBackupsRequest request) throws JdcloudSdkException {
+        return new DescribeBackupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询缓存Redis实例的详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCacheInstanceResponse describeCacheInstance(DescribeCacheInstanceRequest request) throws JdcloudSdkException {
+        return new DescribeCacheInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改缓存Redis实例的配置参数，支持部分参数修改
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceConfigResponse modifyInstanceConfig(ModifyInstanceConfigRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询某区域下的缓存Redis实例规格列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceClassResponse describeInstanceClass(DescribeInstanceClassRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceClassExecutor().client(this).execute(request);
     }
 
 
