@@ -35,12 +35,12 @@ class DownloadCertExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "GET";
+        return "POST";
     }
 
     @Override
     public String url() {
-        return "/sslCert/{certId}:download";
+        return "/sslCert:download";
     }
 
     @Override

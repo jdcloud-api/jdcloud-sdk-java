@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Watermark
- * 水印管理
+ * 水印管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -35,7 +35,8 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 水印名称
+     * 水印名称。只支持中英文、数字。长度不超过128个字符。UTF-8编码。
+
      */
     private String name;
 
@@ -45,14 +46,29 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     private String imgUrl;
 
     /**
-     * 水印宽度
+     * 水印宽度。
+当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      */
-    private Integer width;
+    private String width;
 
     /**
-     * 水印高度
+     * 水印高度。
+当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      */
-    private Integer height;
+    private String height;
+
+    /**
+     * 尺寸单位。取值范围：
+  pixel - 像素
+  percent - 百分比
+默认值为 pixel
+
+     */
+    private String sizeUnit;
 
     /**
      * 水印位置。取值范围：
@@ -65,19 +81,29 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     private String position;
 
     /**
-     * 偏移单位
+     * 水平偏移。
+当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      */
-    private String unit;
+    private String offsetX;
 
     /**
-     * 水平偏移
+     * 竖直偏移。
+当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      */
-    private Integer offsetX;
+    private String offsetY;
 
     /**
-     * 竖直偏移
+     * 偏移单位。取值范围：
+  pixel - 像素
+  percent - 百分比
+默认值为 pixel
+
      */
-    private Integer offsetY;
+    private String offsetUnit;
 
     /**
      * 水印ID
@@ -88,7 +114,8 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 水印名称
+     * get 水印名称。只支持中英文、数字。长度不超过128个字符。UTF-8编码。
+
      *
      * @return
      */
@@ -97,7 +124,8 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 水印名称
+     * set 水印名称。只支持中英文、数字。长度不超过128个字符。UTF-8编码。
+
      *
      * @param name
      */
@@ -124,39 +152,77 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 水印宽度
+     * get 水印宽度。
+当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @return
      */
-    public Integer getWidth() {
+    public String getWidth() {
         return width;
     }
 
     /**
-     * set 水印宽度
+     * set 水印宽度。
+当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @param width
      */
-    public void setWidth(Integer width) {
+    public void setWidth(String width) {
         this.width = width;
     }
 
     /**
-     * get 水印高度
+     * get 水印高度。
+当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @return
      */
-    public Integer getHeight() {
+    public String getHeight() {
         return height;
     }
 
     /**
-     * set 水印高度
+     * set 水印高度。
+当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @param height
      */
-    public void setHeight(Integer height) {
+    public void setHeight(String height) {
         this.height = height;
+    }
+
+    /**
+     * get 尺寸单位。取值范围：
+  pixel - 像素
+  percent - 百分比
+默认值为 pixel
+
+     *
+     * @return
+     */
+    public String getSizeUnit() {
+        return sizeUnit;
+    }
+
+    /**
+     * set 尺寸单位。取值范围：
+  pixel - 像素
+  percent - 百分比
+默认值为 pixel
+
+     *
+     * @param sizeUnit
+     */
+    public void setSizeUnit(String sizeUnit) {
+        this.sizeUnit = sizeUnit;
     }
 
     /**
@@ -188,57 +254,77 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 偏移单位
+     * get 水平偏移。
+当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @return
      */
-    public String getUnit() {
-        return unit;
-    }
-
-    /**
-     * set 偏移单位
-     *
-     * @param unit
-     */
-    public void setUnit(String unit) {
-        this.unit = unit;
-    }
-
-    /**
-     * get 水平偏移
-     *
-     * @return
-     */
-    public Integer getOffsetX() {
+    public String getOffsetX() {
         return offsetX;
     }
 
     /**
-     * set 水平偏移
+     * set 水平偏移。
+当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @param offsetX
      */
-    public void setOffsetX(Integer offsetX) {
+    public void setOffsetX(String offsetX) {
         this.offsetX = offsetX;
     }
 
     /**
-     * get 竖直偏移
+     * get 竖直偏移。
+当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @return
      */
-    public Integer getOffsetY() {
+    public String getOffsetY() {
         return offsetY;
     }
 
     /**
-     * set 竖直偏移
+     * set 竖直偏移。
+当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @param offsetY
      */
-    public void setOffsetY(Integer offsetY) {
+    public void setOffsetY(String offsetY) {
         this.offsetY = offsetY;
+    }
+
+    /**
+     * get 偏移单位。取值范围：
+  pixel - 像素
+  percent - 百分比
+默认值为 pixel
+
+     *
+     * @return
+     */
+    public String getOffsetUnit() {
+        return offsetUnit;
+    }
+
+    /**
+     * set 偏移单位。取值范围：
+  pixel - 像素
+  percent - 百分比
+默认值为 pixel
+
+     *
+     * @param offsetUnit
+     */
+    public void setOffsetUnit(String offsetUnit) {
+        this.offsetUnit = offsetUnit;
     }
 
     /**
@@ -261,7 +347,8 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 水印名称
+     * set 水印名称。只支持中英文、数字。长度不超过128个字符。UTF-8编码。
+
      *
      * @param name
      */
@@ -281,22 +368,42 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 水印宽度
+     * set 水印宽度。
+当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @param width
      */
-    public UpdateWatermarkRequest width(Integer width) {
+    public UpdateWatermarkRequest width(String width) {
         this.width = width;
         return this;
     }
 
     /**
-     * set 水印高度
+     * set 水印高度。
+当 sizeUnit &#x3D; pixel 时，取值范围为 [8, 4096] 整数
+当 sizeUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @param height
      */
-    public UpdateWatermarkRequest height(Integer height) {
+    public UpdateWatermarkRequest height(String height) {
         this.height = height;
+        return this;
+    }
+
+    /**
+     * set 尺寸单位。取值范围：
+  pixel - 像素
+  percent - 百分比
+默认值为 pixel
+
+     *
+     * @param sizeUnit
+     */
+    public UpdateWatermarkRequest sizeUnit(String sizeUnit) {
+        this.sizeUnit = sizeUnit;
         return this;
     }
 
@@ -316,32 +423,42 @@ public class UpdateWatermarkRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 偏移单位
-     *
-     * @param unit
-     */
-    public UpdateWatermarkRequest unit(String unit) {
-        this.unit = unit;
-        return this;
-    }
+     * set 水平偏移。
+当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
 
-    /**
-     * set 水平偏移
      *
      * @param offsetX
      */
-    public UpdateWatermarkRequest offsetX(Integer offsetX) {
+    public UpdateWatermarkRequest offsetX(String offsetX) {
         this.offsetX = offsetX;
         return this;
     }
 
     /**
-     * set 竖直偏移
+     * set 竖直偏移。
+当 offsetUnit &#x3D; pixel 时，取值范围为 [8, 4088] 整数
+当 offsetUnit &#x3D; percent 时，取值范围为 [0, 100] 小数
+
      *
      * @param offsetY
      */
-    public UpdateWatermarkRequest offsetY(Integer offsetY) {
+    public UpdateWatermarkRequest offsetY(String offsetY) {
         this.offsetY = offsetY;
+        return this;
+    }
+
+    /**
+     * set 偏移单位。取值范围：
+  pixel - 像素
+  percent - 百分比
+默认值为 pixel
+
+     *
+     * @param offsetUnit
+     */
+    public UpdateWatermarkRequest offsetUnit(String offsetUnit) {
+        this.offsetUnit = offsetUnit;
         return this;
     }
 

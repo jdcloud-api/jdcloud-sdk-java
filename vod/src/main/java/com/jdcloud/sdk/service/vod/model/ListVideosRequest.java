@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Video
- * 视频资源管理相关接口
+ * 音视频管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,7 +31,13 @@ import com.jdcloud.sdk.service.vod.model.Sort;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询视频列表信息
+ * 查询视频列表信息。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - status[eq] 按视频状态精确查询
+  - categoryId[eq] 按分类ID精确查询
+  - videoId[eq] 按视频ID精确查询
+  - name[eq] 按视频名称精确查询
+
  */
 public class ListVideosRequest extends JdcloudRequest implements java.io.Serializable {
 

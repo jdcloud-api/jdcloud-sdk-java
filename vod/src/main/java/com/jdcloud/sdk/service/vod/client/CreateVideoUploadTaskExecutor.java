@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Media Upload
- * 文件上传
+ * 媒体上传相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 

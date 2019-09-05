@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Category
- * 媒资分类相关接口
+ * 分类管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,8 +30,7 @@ import com.jdcloud.sdk.service.vod.model.CategoryObject;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询分类列表，按照分页方式，返回分类列表信息
-
+ * 查询分类列表。按照分页方式，返回分类列表信息。
  */
 public class ListCategoriesResult extends JdcloudResult implements java.io.Serializable {
 

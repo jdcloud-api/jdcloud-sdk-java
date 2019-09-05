@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 转码模板管理
+ * 转码模板管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 

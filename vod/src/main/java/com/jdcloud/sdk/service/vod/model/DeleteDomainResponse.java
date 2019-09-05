@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Domain
- * 域名管理
+ * 域名配置相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除域名
+ * 删除域名。执行该操作，需确保域名已被停用。
  */
 public class DeleteDomainResponse extends JdcloudResponse<DeleteDomainResult> implements java.io.Serializable {
 

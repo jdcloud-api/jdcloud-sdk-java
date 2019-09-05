@@ -35,15 +35,22 @@ public class DownloadCertRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 证书 Id
+     * 证书Id,以逗号分隔多个Id
      * Required:true
      */
     @Required
     private String certId;
 
+    /**
+     * 证书应用的服务器类型(Nginx Apache Tomcat IIS Other)
+     * Required:true
+     */
+    @Required
+    private String serverType;
+
 
     /**
-     * get 证书 Id
+     * get 证书Id,以逗号分隔多个Id
      *
      * @return
      */
@@ -52,7 +59,7 @@ public class DownloadCertRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 证书 Id
+     * set 证书Id,以逗号分隔多个Id
      *
      * @param certId
      */
@@ -60,14 +67,42 @@ public class DownloadCertRequest extends JdcloudRequest implements java.io.Seria
         this.certId = certId;
     }
 
+    /**
+     * get 证书应用的服务器类型(Nginx Apache Tomcat IIS Other)
+     *
+     * @return
+     */
+    public String getServerType() {
+        return serverType;
+    }
 
     /**
-     * set 证书 Id
+     * set 证书应用的服务器类型(Nginx Apache Tomcat IIS Other)
+     *
+     * @param serverType
+     */
+    public void setServerType(String serverType) {
+        this.serverType = serverType;
+    }
+
+
+    /**
+     * set 证书Id,以逗号分隔多个Id
      *
      * @param certId
      */
     public DownloadCertRequest certId(String certId) {
         this.certId = certId;
+        return this;
+    }
+
+    /**
+     * set 证书应用的服务器类型(Nginx Apache Tomcat IIS Other)
+     *
+     * @param serverType
+     */
+    public DownloadCertRequest serverType(String serverType) {
+        this.serverType = serverType;
         return this;
     }
 

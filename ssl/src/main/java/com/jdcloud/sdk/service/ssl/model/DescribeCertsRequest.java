@@ -48,6 +48,11 @@ public class DescribeCertsRequest extends JdcloudRequest implements java.io.Seri
      */
     private String domainName;
 
+    /**
+     * 证书id/别名
+     */
+    private String certIds;
+
 
     /**
      * get 第几页，从1开始计数
@@ -103,6 +108,24 @@ public class DescribeCertsRequest extends JdcloudRequest implements java.io.Seri
         this.domainName = domainName;
     }
 
+    /**
+     * get 证书id/别名
+     *
+     * @return
+     */
+    public String getCertIds() {
+        return certIds;
+    }
+
+    /**
+     * set 证书id/别名
+     *
+     * @param certIds
+     */
+    public void setCertIds(String certIds) {
+        this.certIds = certIds;
+    }
+
 
     /**
      * set 第几页，从1开始计数
@@ -131,6 +154,16 @@ public class DescribeCertsRequest extends JdcloudRequest implements java.io.Seri
      */
     public DescribeCertsRequest domainName(String domainName) {
         this.domainName = domainName;
+        return this;
+    }
+
+    /**
+     * set 证书id/别名
+     *
+     * @param certIds
+     */
+    public DescribeCertsRequest certIds(String certIds) {
+        this.certIds = certIds;
         return this;
     }
 

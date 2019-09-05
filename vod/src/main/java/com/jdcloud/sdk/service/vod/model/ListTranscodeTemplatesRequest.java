@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 转码模板管理
+ * 转码模板管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,13 +30,10 @@ import com.jdcloud.sdk.service.vod.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
-- source 模板来源。枚举值，取值范围为：
-  - system 系统预置
-  - custom 用户自建
-- templateType 模板类型。枚举值，取值范围：
-  - jdchd 京享超清
-  - jdchs 极速转码
+ * 查询转码模板列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - source[eq] 按模板来源精确查询
+  - templateType[eq] 按模板类型精确查询
 
  */
 public class ListTranscodeTemplatesRequest extends JdcloudRequest implements java.io.Serializable {

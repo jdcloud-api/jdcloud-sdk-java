@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Template
- * 转码模板管理
+ * 转码模板管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -38,7 +38,8 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 模板名称
+     * 模板名称。长度不超过128个字符。UTF-8编码。
+
      * Required:true
      */
     @Required
@@ -88,7 +89,8 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 模板名称
+     * get 模板名称。长度不超过128个字符。UTF-8编码。
+
      *
      * @return
      */
@@ -97,7 +99,8 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 模板名称
+     * set 模板名称。长度不超过128个字符。UTF-8编码。
+
      *
      * @param name
      */
@@ -215,7 +218,8 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 模板名称
+     * set 模板名称。长度不超过128个字符。UTF-8编码。
+
      *
      * @param name
      */

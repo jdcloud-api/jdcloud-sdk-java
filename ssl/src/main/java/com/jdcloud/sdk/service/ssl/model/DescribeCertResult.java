@@ -82,6 +82,11 @@ public class DescribeCertResult extends JdcloudResult implements java.io.Seriali
     private String digest;
 
     /**
+     * 绑定信息的总数量
+     */
+    private Integer totalCount;
+
+    /**
      * 证书关联信息
      */
     private List<CertBindInfo> usedBy;
@@ -250,6 +255,24 @@ public class DescribeCertResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
+     * get 绑定信息的总数量
+     *
+     * @return
+     */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set 绑定信息的总数量
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
+    /**
      * get 证书关联信息
      *
      * @return
@@ -355,6 +378,16 @@ public class DescribeCertResult extends JdcloudResult implements java.io.Seriali
      */
     public DescribeCertResult digest(String digest) {
         this.digest = digest;
+        return this;
+    }
+
+    /**
+     * set 绑定信息的总数量
+     *
+     * @param totalCount
+     */
+    public DescribeCertResult totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
 

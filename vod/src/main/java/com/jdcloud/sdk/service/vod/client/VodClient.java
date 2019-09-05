@@ -31,15 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.vod.model.BatchSubmitQualityDetectionJobsRequest;
+import com.jdcloud.sdk.service.vod.model.BatchSubmitQualityDetectionJobsResponse;
+import com.jdcloud.sdk.service.vod.client.BatchSubmitQualityDetectionJobsExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteTranscodeTemplateExecutor;
-import com.jdcloud.sdk.service.vod.model.GetVideoPlayInfoRequest;
-import com.jdcloud.sdk.service.vod.model.GetVideoPlayInfoResponse;
-import com.jdcloud.sdk.service.vod.client.GetVideoPlayInfoExecutor;
-import com.jdcloud.sdk.service.vod.model.DeleteHeaderRequest;
-import com.jdcloud.sdk.service.vod.model.DeleteHeaderResponse;
-import com.jdcloud.sdk.service.vod.client.DeleteHeaderExecutor;
 import com.jdcloud.sdk.service.vod.model.UpdateWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.UpdateWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.UpdateWatermarkExecutor;
@@ -49,21 +46,9 @@ import com.jdcloud.sdk.service.vod.client.ListDomainsExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateVideoUploadTaskRequest;
 import com.jdcloud.sdk.service.vod.model.CreateVideoUploadTaskResponse;
 import com.jdcloud.sdk.service.vod.client.CreateVideoUploadTaskExecutor;
-import com.jdcloud.sdk.service.vod.model.UpdateCategoryRequest;
-import com.jdcloud.sdk.service.vod.model.UpdateCategoryResponse;
-import com.jdcloud.sdk.service.vod.client.UpdateCategoryExecutor;
-import com.jdcloud.sdk.service.vod.model.SetRefererRuleRequest;
-import com.jdcloud.sdk.service.vod.model.SetRefererRuleResponse;
-import com.jdcloud.sdk.service.vod.client.SetRefererRuleExecutor;
 import com.jdcloud.sdk.service.vod.model.GetURLRuleRequest;
 import com.jdcloud.sdk.service.vod.model.GetURLRuleResponse;
 import com.jdcloud.sdk.service.vod.client.GetURLRuleExecutor;
-import com.jdcloud.sdk.service.vod.model.GetRefererRuleRequest;
-import com.jdcloud.sdk.service.vod.model.GetRefererRuleResponse;
-import com.jdcloud.sdk.service.vod.client.GetRefererRuleExecutor;
-import com.jdcloud.sdk.service.vod.model.DeleteDomainRequest;
-import com.jdcloud.sdk.service.vod.model.DeleteDomainResponse;
-import com.jdcloud.sdk.service.vod.client.DeleteDomainExecutor;
 import com.jdcloud.sdk.service.vod.model.ListHeadersRequest;
 import com.jdcloud.sdk.service.vod.model.ListHeadersResponse;
 import com.jdcloud.sdk.service.vod.client.ListHeadersExecutor;
@@ -73,15 +58,9 @@ import com.jdcloud.sdk.service.vod.client.SetURLRuleExecutor;
 import com.jdcloud.sdk.service.vod.model.GetCategoryWithChildrenRequest;
 import com.jdcloud.sdk.service.vod.model.GetCategoryWithChildrenResponse;
 import com.jdcloud.sdk.service.vod.client.GetCategoryWithChildrenExecutor;
-import com.jdcloud.sdk.service.vod.model.CreateCategoryRequest;
-import com.jdcloud.sdk.service.vod.model.CreateCategoryResponse;
-import com.jdcloud.sdk.service.vod.client.CreateCategoryExecutor;
 import com.jdcloud.sdk.service.vod.model.ListTranscodeTemplatesRequest;
 import com.jdcloud.sdk.service.vod.model.ListTranscodeTemplatesResponse;
 import com.jdcloud.sdk.service.vod.client.ListTranscodeTemplatesExecutor;
-import com.jdcloud.sdk.service.vod.model.ListWatermarksRequest;
-import com.jdcloud.sdk.service.vod.model.ListWatermarksResponse;
-import com.jdcloud.sdk.service.vod.client.ListWatermarksExecutor;
 import com.jdcloud.sdk.service.vod.model.GetCategoryRequest;
 import com.jdcloud.sdk.service.vod.model.GetCategoryResponse;
 import com.jdcloud.sdk.service.vod.client.GetCategoryExecutor;
@@ -91,54 +70,33 @@ import com.jdcloud.sdk.service.vod.client.CreateDomainExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteWatermarkExecutor;
-import com.jdcloud.sdk.service.vod.model.SetHeaderRequest;
-import com.jdcloud.sdk.service.vod.model.SetHeaderResponse;
-import com.jdcloud.sdk.service.vod.client.SetHeaderExecutor;
-import com.jdcloud.sdk.service.vod.model.RefreshVideoUploadTaskRequest;
-import com.jdcloud.sdk.service.vod.model.RefreshVideoUploadTaskResponse;
-import com.jdcloud.sdk.service.vod.client.RefreshVideoUploadTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.SubmitTranscodeJobRequest;
 import com.jdcloud.sdk.service.vod.model.SubmitTranscodeJobResponse;
 import com.jdcloud.sdk.service.vod.client.SubmitTranscodeJobExecutor;
 import com.jdcloud.sdk.service.vod.model.UpdateTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.vod.model.UpdateTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.vod.client.UpdateTranscodeTemplateExecutor;
-import com.jdcloud.sdk.service.vod.model.GetVideoRequest;
-import com.jdcloud.sdk.service.vod.model.GetVideoResponse;
-import com.jdcloud.sdk.service.vod.client.GetVideoExecutor;
-import com.jdcloud.sdk.service.vod.model.ListVideosRequest;
-import com.jdcloud.sdk.service.vod.model.ListVideosResponse;
-import com.jdcloud.sdk.service.vod.client.ListVideosExecutor;
+import com.jdcloud.sdk.service.vod.model.ListQualityDetectionTemplatesRequest;
+import com.jdcloud.sdk.service.vod.model.ListQualityDetectionTemplatesResponse;
+import com.jdcloud.sdk.service.vod.client.ListQualityDetectionTemplatesExecutor;
 import com.jdcloud.sdk.service.vod.model.BatchUpdateVideosRequest;
 import com.jdcloud.sdk.service.vod.model.BatchUpdateVideosResponse;
 import com.jdcloud.sdk.service.vod.client.BatchUpdateVideosExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateImageUploadTaskRequest;
 import com.jdcloud.sdk.service.vod.model.CreateImageUploadTaskResponse;
 import com.jdcloud.sdk.service.vod.client.CreateImageUploadTaskExecutor;
-import com.jdcloud.sdk.service.vod.model.CreateWatermarkRequest;
-import com.jdcloud.sdk.service.vod.model.CreateWatermarkResponse;
-import com.jdcloud.sdk.service.vod.client.CreateWatermarkExecutor;
+import com.jdcloud.sdk.service.vod.model.UpdateQualityDetectionTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.UpdateQualityDetectionTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.UpdateQualityDetectionTemplateExecutor;
 import com.jdcloud.sdk.service.vod.model.GetDomainRequest;
 import com.jdcloud.sdk.service.vod.model.GetDomainResponse;
 import com.jdcloud.sdk.service.vod.client.GetDomainExecutor;
-import com.jdcloud.sdk.service.vod.model.DeleteVideoRequest;
-import com.jdcloud.sdk.service.vod.model.DeleteVideoResponse;
-import com.jdcloud.sdk.service.vod.client.DeleteVideoExecutor;
-import com.jdcloud.sdk.service.vod.model.GetIPRuleRequest;
-import com.jdcloud.sdk.service.vod.model.GetIPRuleResponse;
-import com.jdcloud.sdk.service.vod.client.GetIPRuleExecutor;
-import com.jdcloud.sdk.service.vod.model.EnableDomainRequest;
-import com.jdcloud.sdk.service.vod.model.EnableDomainResponse;
-import com.jdcloud.sdk.service.vod.client.EnableDomainExecutor;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.GetWatermarkExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteVideoStreamsRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteVideoStreamsResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteVideoStreamsExecutor;
-import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateRequest;
-import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateResponse;
-import com.jdcloud.sdk.service.vod.client.CreateTranscodeTemplateExecutor;
 import com.jdcloud.sdk.service.vod.model.BatchSubmitTranscodeJobsRequest;
 import com.jdcloud.sdk.service.vod.model.BatchSubmitTranscodeJobsResponse;
 import com.jdcloud.sdk.service.vod.client.BatchSubmitTranscodeJobsExecutor;
@@ -154,18 +112,87 @@ import com.jdcloud.sdk.service.vod.client.SetDefaultDomainExecutor;
 import com.jdcloud.sdk.service.vod.model.GetTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.vod.model.GetTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.vod.client.GetTranscodeTemplateExecutor;
-import com.jdcloud.sdk.service.vod.model.ListCategoriesRequest;
-import com.jdcloud.sdk.service.vod.model.ListCategoriesResponse;
-import com.jdcloud.sdk.service.vod.client.ListCategoriesExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteCategoryRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteCategoryResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteCategoryExecutor;
+import com.jdcloud.sdk.service.vod.model.GetVideoPlayInfoRequest;
+import com.jdcloud.sdk.service.vod.model.GetVideoPlayInfoResponse;
+import com.jdcloud.sdk.service.vod.client.GetVideoPlayInfoExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteHeaderRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteHeaderResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteHeaderExecutor;
+import com.jdcloud.sdk.service.vod.model.UpdateCategoryRequest;
+import com.jdcloud.sdk.service.vod.model.UpdateCategoryResponse;
+import com.jdcloud.sdk.service.vod.client.UpdateCategoryExecutor;
+import com.jdcloud.sdk.service.vod.model.SetRefererRuleRequest;
+import com.jdcloud.sdk.service.vod.model.SetRefererRuleResponse;
+import com.jdcloud.sdk.service.vod.client.SetRefererRuleExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateQualityDetectionTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.CreateQualityDetectionTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.CreateQualityDetectionTemplateExecutor;
+import com.jdcloud.sdk.service.vod.model.GetRefererRuleRequest;
+import com.jdcloud.sdk.service.vod.model.GetRefererRuleResponse;
+import com.jdcloud.sdk.service.vod.client.GetRefererRuleExecutor;
+import com.jdcloud.sdk.service.vod.model.GetQualityDetectionTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.GetQualityDetectionTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.GetQualityDetectionTemplateExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteDomainRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteDomainResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteDomainExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateCategoryRequest;
+import com.jdcloud.sdk.service.vod.model.CreateCategoryResponse;
+import com.jdcloud.sdk.service.vod.client.CreateCategoryExecutor;
+import com.jdcloud.sdk.service.vod.model.ListWatermarksRequest;
+import com.jdcloud.sdk.service.vod.model.ListWatermarksResponse;
+import com.jdcloud.sdk.service.vod.client.ListWatermarksExecutor;
+import com.jdcloud.sdk.service.vod.model.GetHttpSslRequest;
+import com.jdcloud.sdk.service.vod.model.GetHttpSslResponse;
+import com.jdcloud.sdk.service.vod.client.GetHttpSslExecutor;
+import com.jdcloud.sdk.service.vod.model.SetHeaderRequest;
+import com.jdcloud.sdk.service.vod.model.SetHeaderResponse;
+import com.jdcloud.sdk.service.vod.client.SetHeaderExecutor;
+import com.jdcloud.sdk.service.vod.model.RefreshVideoUploadTaskRequest;
+import com.jdcloud.sdk.service.vod.model.RefreshVideoUploadTaskResponse;
+import com.jdcloud.sdk.service.vod.client.RefreshVideoUploadTaskExecutor;
+import com.jdcloud.sdk.service.vod.model.GetVideoRequest;
+import com.jdcloud.sdk.service.vod.model.GetVideoResponse;
+import com.jdcloud.sdk.service.vod.client.GetVideoExecutor;
+import com.jdcloud.sdk.service.vod.model.ListVideosRequest;
+import com.jdcloud.sdk.service.vod.model.ListVideosResponse;
+import com.jdcloud.sdk.service.vod.client.ListVideosExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateWatermarkRequest;
+import com.jdcloud.sdk.service.vod.model.CreateWatermarkResponse;
+import com.jdcloud.sdk.service.vod.client.CreateWatermarkExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteVideoRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteVideoResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteVideoExecutor;
+import com.jdcloud.sdk.service.vod.model.SubmitQualityDetectionJobRequest;
+import com.jdcloud.sdk.service.vod.model.SubmitQualityDetectionJobResponse;
+import com.jdcloud.sdk.service.vod.client.SubmitQualityDetectionJobExecutor;
+import com.jdcloud.sdk.service.vod.model.GetIPRuleRequest;
+import com.jdcloud.sdk.service.vod.model.GetIPRuleResponse;
+import com.jdcloud.sdk.service.vod.client.GetIPRuleExecutor;
+import com.jdcloud.sdk.service.vod.model.EnableDomainRequest;
+import com.jdcloud.sdk.service.vod.model.EnableDomainResponse;
+import com.jdcloud.sdk.service.vod.client.EnableDomainExecutor;
+import com.jdcloud.sdk.service.vod.model.SetHttpSslRequest;
+import com.jdcloud.sdk.service.vod.model.SetHttpSslResponse;
+import com.jdcloud.sdk.service.vod.client.SetHttpSslExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.CreateTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.vod.model.ListCategoriesRequest;
+import com.jdcloud.sdk.service.vod.model.ListCategoriesResponse;
+import com.jdcloud.sdk.service.vod.client.ListCategoriesExecutor;
 import com.jdcloud.sdk.service.vod.model.BatchDeleteVideosRequest;
 import com.jdcloud.sdk.service.vod.model.BatchDeleteVideosResponse;
 import com.jdcloud.sdk.service.vod.client.BatchDeleteVideosExecutor;
 import com.jdcloud.sdk.service.vod.model.DisableDomainRequest;
 import com.jdcloud.sdk.service.vod.model.DisableDomainResponse;
 import com.jdcloud.sdk.service.vod.client.DisableDomainExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteQualityDetectionTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteQualityDetectionTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteQualityDetectionTemplateExecutor;
 
 /**
  * vodClient
@@ -217,6 +244,17 @@ public class VodClient extends JdcloudClient {
 
 
     /**
+     * 批量提交质检作业
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BatchSubmitQualityDetectionJobsResponse batchSubmitQualityDetectionJobs(BatchSubmitQualityDetectionJobsRequest request) throws JdcloudSdkException {
+        return new BatchSubmitQualityDetectionJobsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除转码模板
      *
      * @param request
@@ -225,28 +263,6 @@ public class VodClient extends JdcloudClient {
      */
     public DeleteTranscodeTemplateResponse deleteTranscodeTemplate(DeleteTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new DeleteTranscodeTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取视频播放信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetVideoPlayInfoResponse getVideoPlayInfo(GetVideoPlayInfoRequest request) throws JdcloudSdkException {
-        return new GetVideoPlayInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除域名访问头参数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteHeaderResponse deleteHeader(DeleteHeaderRequest request) throws JdcloudSdkException {
-        return new DeleteHeaderExecutor().client(this).execute(request);
     }
 
     /**
@@ -283,28 +299,6 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 修改分类
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateCategoryResponse updateCategory(UpdateCategoryRequest request) throws JdcloudSdkException {
-        return new UpdateCategoryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置CDN域名Referer防盗链规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetRefererRuleResponse setRefererRule(SetRefererRuleRequest request) throws JdcloudSdkException {
-        return new SetRefererRuleExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询CDN域名URL鉴权规则配置
      *
      * @param request
@@ -313,28 +307,6 @@ public class VodClient extends JdcloudClient {
      */
     public GetURLRuleResponse getURLRule(GetURLRuleRequest request) throws JdcloudSdkException {
         return new GetURLRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询CDN域名Referer防盗链规则配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetRefererRuleResponse getRefererRule(GetRefererRuleRequest request) throws JdcloudSdkException {
-        return new GetRefererRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除域名
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteDomainResponse deleteDomain(DeleteDomainRequest request) throws JdcloudSdkException {
-        return new DeleteDomainExecutor().client(this).execute(request);
     }
 
     /**
@@ -371,25 +343,10 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 添加分类
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateCategoryResponse createCategory(CreateCategoryRequest request) throws JdcloudSdkException {
-        return new CreateCategoryExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询转码模板列表。允许通过条件过滤查询，支持的过滤字段如下：
-- source 模板来源。枚举值，取值范围为：
-  - system 系统预置
-  - custom 用户自建
-- templateType 模板类型。枚举值，取值范围：
-  - jdchd 京享超清
-  - jdchs 极速转码
+     * 查询转码模板列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - source[eq] 按模板来源精确查询
+  - templateType[eq] 按模板类型精确查询
 
      *
      * @param request
@@ -398,17 +355,6 @@ public class VodClient extends JdcloudClient {
      */
     public ListTranscodeTemplatesResponse listTranscodeTemplates(ListTranscodeTemplatesRequest request) throws JdcloudSdkException {
         return new ListTranscodeTemplatesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询水印列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListWatermarksResponse listWatermarks(ListWatermarksRequest request) throws JdcloudSdkException {
-        return new ListWatermarksExecutor().client(this).execute(request);
     }
 
     /**
@@ -445,28 +391,6 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 设置域名访问头参数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetHeaderResponse setHeader(SetHeaderRequest request) throws JdcloudSdkException {
-        return new SetHeaderExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 刷新视频上传地址和凭证
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RefreshVideoUploadTaskResponse refreshVideoUploadTask(RefreshVideoUploadTaskRequest request) throws JdcloudSdkException {
-        return new RefreshVideoUploadTaskExecutor().client(this).execute(request);
-    }
-
-    /**
      * 提交转码作业
      *
      * @param request
@@ -489,25 +413,15 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 查询单个视频信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetVideoResponse getVideo(GetVideoRequest request) throws JdcloudSdkException {
-        return new GetVideoExecutor().client(this).execute(request);
-    }
+     * 查询质测模板列表。
 
-    /**
-     * 查询视频列表信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ListVideosResponse listVideos(ListVideosRequest request) throws JdcloudSdkException {
-        return new ListVideosExecutor().client(this).execute(request);
+    public ListQualityDetectionTemplatesResponse listQualityDetectionTemplates(ListQualityDetectionTemplatesRequest request) throws JdcloudSdkException {
+        return new ListQualityDetectionTemplatesExecutor().client(this).execute(request);
     }
 
     /**
@@ -533,14 +447,14 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 添加水印
+     * 修改质检模板
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateWatermarkResponse createWatermark(CreateWatermarkRequest request) throws JdcloudSdkException {
-        return new CreateWatermarkExecutor().client(this).execute(request);
+    public UpdateQualityDetectionTemplateResponse updateQualityDetectionTemplate(UpdateQualityDetectionTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateQualityDetectionTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -552,39 +466,6 @@ public class VodClient extends JdcloudClient {
      */
     public GetDomainResponse getDomain(GetDomainRequest request) throws JdcloudSdkException {
         return new GetDomainExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteVideoResponse deleteVideo(DeleteVideoRequest request) throws JdcloudSdkException {
-        return new DeleteVideoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询CDN域名IP黑名单规则配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetIPRuleResponse getIPRule(GetIPRuleRequest request) throws JdcloudSdkException {
-        return new GetIPRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 启用域名
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EnableDomainResponse enableDomain(EnableDomainRequest request) throws JdcloudSdkException {
-        return new EnableDomainExecutor().client(this).execute(request);
     }
 
     /**
@@ -607,17 +488,6 @@ public class VodClient extends JdcloudClient {
      */
     public DeleteVideoStreamsResponse deleteVideoStreams(DeleteVideoStreamsRequest request) throws JdcloudSdkException {
         return new DeleteVideoStreamsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建转码模板
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateTranscodeTemplateResponse createTranscodeTemplate(CreateTranscodeTemplateRequest request) throws JdcloudSdkException {
-        return new CreateTranscodeTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -676,18 +546,6 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
-     * 查询分类列表，按照分页方式，返回分类列表信息
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListCategoriesResponse listCategories(ListCategoriesRequest request) throws JdcloudSdkException {
-        return new ListCategoriesExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除分类
      *
      * @param request
@@ -696,6 +554,265 @@ public class VodClient extends JdcloudClient {
      */
     public DeleteCategoryResponse deleteCategory(DeleteCategoryRequest request) throws JdcloudSdkException {
         return new DeleteCategoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取视频播放信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVideoPlayInfoResponse getVideoPlayInfo(GetVideoPlayInfoRequest request) throws JdcloudSdkException {
+        return new GetVideoPlayInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除域名访问头参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteHeaderResponse deleteHeader(DeleteHeaderRequest request) throws JdcloudSdkException {
+        return new DeleteHeaderExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改分类
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCategoryResponse updateCategory(UpdateCategoryRequest request) throws JdcloudSdkException {
+        return new UpdateCategoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置CDN域名Referer防盗链规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetRefererRuleResponse setRefererRule(SetRefererRuleRequest request) throws JdcloudSdkException {
+        return new SetRefererRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建质检模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateQualityDetectionTemplateResponse createQualityDetectionTemplate(CreateQualityDetectionTemplateRequest request) throws JdcloudSdkException {
+        return new CreateQualityDetectionTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询CDN域名Referer防盗链规则配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetRefererRuleResponse getRefererRule(GetRefererRuleRequest request) throws JdcloudSdkException {
+        return new GetRefererRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询质检模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetQualityDetectionTemplateResponse getQualityDetectionTemplate(GetQualityDetectionTemplateRequest request) throws JdcloudSdkException {
+        return new GetQualityDetectionTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除域名。执行该操作，需确保域名已被停用。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteDomainResponse deleteDomain(DeleteDomainRequest request) throws JdcloudSdkException {
+        return new DeleteDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加分类
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateCategoryResponse createCategory(CreateCategoryRequest request) throws JdcloudSdkException {
+        return new CreateCategoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询水印列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListWatermarksResponse listWatermarks(ListWatermarksRequest request) throws JdcloudSdkException {
+        return new ListWatermarksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询CDN域名SSL配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetHttpSslResponse getHttpSsl(GetHttpSslRequest request) throws JdcloudSdkException {
+        return new GetHttpSslExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置域名访问头参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetHeaderResponse setHeader(SetHeaderRequest request) throws JdcloudSdkException {
+        return new SetHeaderExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 刷新视频上传地址和凭证
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RefreshVideoUploadTaskResponse refreshVideoUploadTask(RefreshVideoUploadTaskRequest request) throws JdcloudSdkException {
+        return new RefreshVideoUploadTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单个视频信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVideoResponse getVideo(GetVideoRequest request) throws JdcloudSdkException {
+        return new GetVideoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频列表信息。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - status[eq] 按视频状态精确查询
+  - categoryId[eq] 按分类ID精确查询
+  - videoId[eq] 按视频ID精确查询
+  - name[eq] 按视频名称精确查询
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListVideosResponse listVideos(ListVideosRequest request) throws JdcloudSdkException {
+        return new ListVideosExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加水印
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateWatermarkResponse createWatermark(CreateWatermarkRequest request) throws JdcloudSdkException {
+        return new CreateWatermarkExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除视频，调用该接口会同时删除与指定视频相关的所有信息，包括转码任务信息、转码流数据等，同时清除云存储中相关文件资源。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVideoResponse deleteVideo(DeleteVideoRequest request) throws JdcloudSdkException {
+        return new DeleteVideoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 提交质检作业
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SubmitQualityDetectionJobResponse submitQualityDetectionJob(SubmitQualityDetectionJobRequest request) throws JdcloudSdkException {
+        return new SubmitQualityDetectionJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询CDN域名IP黑名单规则配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetIPRuleResponse getIPRule(GetIPRuleRequest request) throws JdcloudSdkException {
+        return new GetIPRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启用域名
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableDomainResponse enableDomain(EnableDomainRequest request) throws JdcloudSdkException {
+        return new EnableDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置CDN域名SSL配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetHttpSslResponse setHttpSsl(SetHttpSslRequest request) throws JdcloudSdkException {
+        return new SetHttpSslExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建转码模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateTranscodeTemplateResponse createTranscodeTemplate(CreateTranscodeTemplateRequest request) throws JdcloudSdkException {
+        return new CreateTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询分类列表。按照分页方式，返回分类列表信息。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListCategoriesResponse listCategories(ListCategoriesRequest request) throws JdcloudSdkException {
+        return new ListCategoriesExecutor().client(this).execute(request);
     }
 
     /**
@@ -718,6 +835,17 @@ public class VodClient extends JdcloudClient {
      */
     public DisableDomainResponse disableDomain(DisableDomainRequest request) throws JdcloudSdkException {
         return new DisableDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除质检模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteQualityDetectionTemplateResponse deleteQualityDetectionTemplate(DeleteQualityDetectionTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteQualityDetectionTemplateExecutor().client(this).execute(request);
     }
 
 
