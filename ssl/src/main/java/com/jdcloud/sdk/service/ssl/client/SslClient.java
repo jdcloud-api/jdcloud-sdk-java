@@ -31,12 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.ssl.model.DownloadCertRequest;
-import com.jdcloud.sdk.service.ssl.model.DownloadCertResponse;
-import com.jdcloud.sdk.service.ssl.client.DownloadCertExecutor;
-import com.jdcloud.sdk.service.ssl.model.DescribeCertsRequest;
-import com.jdcloud.sdk.service.ssl.model.DescribeCertsResponse;
-import com.jdcloud.sdk.service.ssl.client.DescribeCertsExecutor;
+import com.jdcloud.sdk.service.ssl.model.UpdateCertRequest;
+import com.jdcloud.sdk.service.ssl.model.UpdateCertResponse;
+import com.jdcloud.sdk.service.ssl.client.UpdateCertExecutor;
 import com.jdcloud.sdk.service.ssl.model.DescribeCertRequest;
 import com.jdcloud.sdk.service.ssl.model.DescribeCertResponse;
 import com.jdcloud.sdk.service.ssl.client.DescribeCertExecutor;
@@ -46,6 +43,15 @@ import com.jdcloud.sdk.service.ssl.client.UploadCertExecutor;
 import com.jdcloud.sdk.service.ssl.model.DeleteCertsRequest;
 import com.jdcloud.sdk.service.ssl.model.DeleteCertsResponse;
 import com.jdcloud.sdk.service.ssl.client.DeleteCertsExecutor;
+import com.jdcloud.sdk.service.ssl.model.DownloadCertRequest;
+import com.jdcloud.sdk.service.ssl.model.DownloadCertResponse;
+import com.jdcloud.sdk.service.ssl.client.DownloadCertExecutor;
+import com.jdcloud.sdk.service.ssl.model.DescribeCertsRequest;
+import com.jdcloud.sdk.service.ssl.model.DescribeCertsResponse;
+import com.jdcloud.sdk.service.ssl.client.DescribeCertsExecutor;
+import com.jdcloud.sdk.service.ssl.model.UpdateCertNameRequest;
+import com.jdcloud.sdk.service.ssl.model.UpdateCertNameResponse;
+import com.jdcloud.sdk.service.ssl.client.UpdateCertNameExecutor;
 
 /**
  * sslClient
@@ -54,7 +60,7 @@ public class SslClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.0";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "ssl.jdcloud-api.com";
     public final static String ServiceName = "ssl";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -97,25 +103,14 @@ public class SslClient extends JdcloudClient {
 
 
     /**
-     * 下载证书 [MFA enabled]
+     * 更新证书 [MFA enabled]
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DownloadCertResponse downloadCert(DownloadCertRequest request) throws JdcloudSdkException {
-        return new DownloadCertExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查看证书列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeCertsResponse describeCerts(DescribeCertsRequest request) throws JdcloudSdkException {
-        return new DescribeCertsExecutor().client(this).execute(request);
+    public UpdateCertResponse updateCert(UpdateCertRequest request) throws JdcloudSdkException {
+        return new UpdateCertExecutor().client(this).execute(request);
     }
 
     /**
@@ -149,6 +144,39 @@ public class SslClient extends JdcloudClient {
      */
     public DeleteCertsResponse deleteCerts(DeleteCertsRequest request) throws JdcloudSdkException {
         return new DeleteCertsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 下载证书 [MFA enabled]
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DownloadCertResponse downloadCert(DownloadCertRequest request) throws JdcloudSdkException {
+        return new DownloadCertExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看证书列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCertsResponse describeCerts(DescribeCertsRequest request) throws JdcloudSdkException {
+        return new DescribeCertsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改证书名称
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCertNameResponse updateCertName(UpdateCertNameRequest request) throws JdcloudSdkException {
+        return new UpdateCertNameExecutor().client(this).execute(request);
     }
 
 

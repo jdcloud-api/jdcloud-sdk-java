@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Transcode Task
- * 媒体处理 - 视频转码
+ * 视频转码任务相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 

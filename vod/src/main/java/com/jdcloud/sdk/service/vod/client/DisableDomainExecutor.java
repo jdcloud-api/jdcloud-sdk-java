@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Domain
- * 域名管理
+ * 域名配置相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 

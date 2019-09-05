@@ -60,9 +60,14 @@ public class RecordDescDetail  implements java.io.Serializable {
     private String certType;
 
     /**
-     * 域名个数
+     * 域名的个数
      */
     private Integer domainCount;
+
+    /**
+     * 泛域名的个数
+     */
+    private Integer wildcardDomainCount;
 
     /**
      * 证书年限
@@ -108,6 +113,11 @@ public class RecordDescDetail  implements java.io.Serializable {
      * 联系人邮箱
      */
     private String email;
+
+    /**
+     * 自动DNS验证结果信息
+     */
+    private String errorMessage;
 
 
     /**
@@ -201,7 +211,7 @@ public class RecordDescDetail  implements java.io.Serializable {
     }
 
     /**
-     * get 域名个数
+     * get 域名的个数
      *
      * @return
      */
@@ -210,12 +220,30 @@ public class RecordDescDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 域名个数
+     * set 域名的个数
      *
      * @param domainCount
      */
     public void setDomainCount(Integer domainCount) {
         this.domainCount = domainCount;
+    }
+
+    /**
+     * get 泛域名的个数
+     *
+     * @return
+     */
+    public Integer getWildcardDomainCount() {
+        return wildcardDomainCount;
+    }
+
+    /**
+     * set 泛域名的个数
+     *
+     * @param wildcardDomainCount
+     */
+    public void setWildcardDomainCount(Integer wildcardDomainCount) {
+        this.wildcardDomainCount = wildcardDomainCount;
     }
 
     /**
@@ -380,6 +408,24 @@ public class RecordDescDetail  implements java.io.Serializable {
         this.email = email;
     }
 
+    /**
+     * get 自动DNS验证结果信息
+     *
+     * @return
+     */
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    /**
+     * set 自动DNS验证结果信息
+     *
+     * @param errorMessage
+     */
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+    }
+
 
     /**
      * set 证书申购记录Id
@@ -432,12 +478,22 @@ public class RecordDescDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 域名个数
+     * set 域名的个数
      *
      * @param domainCount
      */
     public RecordDescDetail domainCount(Integer domainCount) {
         this.domainCount = domainCount;
+        return this;
+    }
+
+    /**
+     * set 泛域名的个数
+     *
+     * @param wildcardDomainCount
+     */
+    public RecordDescDetail wildcardDomainCount(Integer wildcardDomainCount) {
+        this.wildcardDomainCount = wildcardDomainCount;
         return this;
     }
 
@@ -528,6 +584,16 @@ public class RecordDescDetail  implements java.io.Serializable {
      */
     public RecordDescDetail email(String email) {
         this.email = email;
+        return this;
+    }
+
+    /**
+     * set 自动DNS验证结果信息
+     *
+     * @param errorMessage
+     */
+    public RecordDescDetail errorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
 

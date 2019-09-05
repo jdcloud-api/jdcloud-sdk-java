@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Category
- * 媒资分类相关接口
+ * 分类管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,6 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 添加分类
-
  */
 public class CreateCategoryResponse extends JdcloudResponse<CreateCategoryResult> implements java.io.Serializable {
 

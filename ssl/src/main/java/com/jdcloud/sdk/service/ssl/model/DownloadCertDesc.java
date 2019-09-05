@@ -57,6 +57,26 @@ public class DownloadCertDesc  implements java.io.Serializable {
      */
     private String digest;
 
+    /**
+     * 中间证书
+     */
+    private String caCertFile;
+
+    /**
+     * 证书应用服务器类型
+     */
+    private String serverType;
+
+    /**
+     * 证书加密密码
+     */
+    private String certEncryptePassword;
+
+    /**
+     * 域名
+     */
+    private String commonName;
+
 
     /**
      * get 证书Id
@@ -148,6 +168,78 @@ public class DownloadCertDesc  implements java.io.Serializable {
         this.digest = digest;
     }
 
+    /**
+     * get 中间证书
+     *
+     * @return
+     */
+    public String getCaCertFile() {
+        return caCertFile;
+    }
+
+    /**
+     * set 中间证书
+     *
+     * @param caCertFile
+     */
+    public void setCaCertFile(String caCertFile) {
+        this.caCertFile = caCertFile;
+    }
+
+    /**
+     * get 证书应用服务器类型
+     *
+     * @return
+     */
+    public String getServerType() {
+        return serverType;
+    }
+
+    /**
+     * set 证书应用服务器类型
+     *
+     * @param serverType
+     */
+    public void setServerType(String serverType) {
+        this.serverType = serverType;
+    }
+
+    /**
+     * get 证书加密密码
+     *
+     * @return
+     */
+    public String getCertEncryptePassword() {
+        return certEncryptePassword;
+    }
+
+    /**
+     * set 证书加密密码
+     *
+     * @param certEncryptePassword
+     */
+    public void setCertEncryptePassword(String certEncryptePassword) {
+        this.certEncryptePassword = certEncryptePassword;
+    }
+
+    /**
+     * get 域名
+     *
+     * @return
+     */
+    public String getCommonName() {
+        return commonName;
+    }
+
+    /**
+     * set 域名
+     *
+     * @param commonName
+     */
+    public void setCommonName(String commonName) {
+        this.commonName = commonName;
+    }
+
 
     /**
      * set 证书Id
@@ -196,6 +288,46 @@ public class DownloadCertDesc  implements java.io.Serializable {
      */
     public DownloadCertDesc digest(String digest) {
         this.digest = digest;
+        return this;
+    }
+
+    /**
+     * set 中间证书
+     *
+     * @param caCertFile
+     */
+    public DownloadCertDesc caCertFile(String caCertFile) {
+        this.caCertFile = caCertFile;
+        return this;
+    }
+
+    /**
+     * set 证书应用服务器类型
+     *
+     * @param serverType
+     */
+    public DownloadCertDesc serverType(String serverType) {
+        this.serverType = serverType;
+        return this;
+    }
+
+    /**
+     * set 证书加密密码
+     *
+     * @param certEncryptePassword
+     */
+    public DownloadCertDesc certEncryptePassword(String certEncryptePassword) {
+        this.certEncryptePassword = certEncryptePassword;
+        return this;
+    }
+
+    /**
+     * set 域名
+     *
+     * @param commonName
+     */
+    public DownloadCertDesc commonName(String commonName) {
+        this.commonName = commonName;
         return this;
     }
 

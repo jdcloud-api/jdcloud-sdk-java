@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Watermark
- * 水印管理
+ * 水印管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 

@@ -85,9 +85,19 @@ public class RecordListDetail  implements java.io.Serializable {
     private Integer domainCount;
 
     /**
+     * 购买泛域名数量
+     */
+    private Integer wildcardDomainCount;
+
+    /**
      * 备用域名
      */
     private List<String> dnsNames;
+
+    /**
+     * 证书Id
+     */
+    private String certId;
 
 
     /**
@@ -271,6 +281,24 @@ public class RecordListDetail  implements java.io.Serializable {
     }
 
     /**
+     * get 购买泛域名数量
+     *
+     * @return
+     */
+    public Integer getWildcardDomainCount() {
+        return wildcardDomainCount;
+    }
+
+    /**
+     * set 购买泛域名数量
+     *
+     * @param wildcardDomainCount
+     */
+    public void setWildcardDomainCount(Integer wildcardDomainCount) {
+        this.wildcardDomainCount = wildcardDomainCount;
+    }
+
+    /**
      * get 备用域名
      *
      * @return
@@ -286,6 +314,24 @@ public class RecordListDetail  implements java.io.Serializable {
      */
     public void setDnsNames(List<String> dnsNames) {
         this.dnsNames = dnsNames;
+    }
+
+    /**
+     * get 证书Id
+     *
+     * @return
+     */
+    public String getCertId() {
+        return certId;
+    }
+
+    /**
+     * set 证书Id
+     *
+     * @param certId
+     */
+    public void setCertId(String certId) {
+        this.certId = certId;
     }
 
 
@@ -390,12 +436,32 @@ public class RecordListDetail  implements java.io.Serializable {
     }
 
     /**
+     * set 购买泛域名数量
+     *
+     * @param wildcardDomainCount
+     */
+    public RecordListDetail wildcardDomainCount(Integer wildcardDomainCount) {
+        this.wildcardDomainCount = wildcardDomainCount;
+        return this;
+    }
+
+    /**
      * set 备用域名
      *
      * @param dnsNames
      */
     public RecordListDetail dnsNames(List<String> dnsNames) {
         this.dnsNames = dnsNames;
+        return this;
+    }
+
+    /**
+     * set 证书Id
+     *
+     * @param certId
+     */
+    public RecordListDetail certId(String certId) {
+        this.certId = certId;
         return this;
     }
 

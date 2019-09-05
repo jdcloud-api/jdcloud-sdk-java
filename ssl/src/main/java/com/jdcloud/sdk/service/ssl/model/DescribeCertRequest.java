@@ -35,12 +35,58 @@ public class DescribeCertRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
+     * 第几页，从1开始计数
+     */
+    private Integer pageNumber;
+
+    /**
+     * 每页显示的数目
+     */
+    private Integer pageSize;
+
+    /**
      * 证书 Id
      * Required:true
      */
     @Required
     private String certId;
 
+
+    /**
+     * get 第几页，从1开始计数
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 第几页，从1开始计数
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 每页显示的数目
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页显示的数目
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
 
     /**
      * get 证书 Id
@@ -60,6 +106,26 @@ public class DescribeCertRequest extends JdcloudRequest implements java.io.Seria
         this.certId = certId;
     }
 
+
+    /**
+     * set 第几页，从1开始计数
+     *
+     * @param pageNumber
+     */
+    public DescribeCertRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 每页显示的数目
+     *
+     * @param pageSize
+     */
+    public DescribeCertRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
 
     /**
      * set 证书 Id

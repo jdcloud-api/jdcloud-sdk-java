@@ -80,6 +80,11 @@ public class CertDescDetail  implements java.io.Serializable {
     private String digest;
 
     /**
+     * 绑定信息的总数量
+     */
+    private Integer totalCount;
+
+    /**
      * 证书关联信息
      */
     private List<CertBindInfo> usedBy;
@@ -248,6 +253,24 @@ public class CertDescDetail  implements java.io.Serializable {
     }
 
     /**
+     * get 绑定信息的总数量
+     *
+     * @return
+     */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set 绑定信息的总数量
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
+    /**
      * get 证书关联信息
      *
      * @return
@@ -353,6 +376,16 @@ public class CertDescDetail  implements java.io.Serializable {
      */
     public CertDescDetail digest(String digest) {
         this.digest = digest;
+        return this;
+    }
+
+    /**
+     * set 绑定信息的总数量
+     *
+     * @param totalCount
+     */
+    public CertDescDetail totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
 

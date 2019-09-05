@@ -89,6 +89,16 @@ public class CertListDetail  implements java.io.Serializable {
      */
     private Integer downloadable;
 
+    /**
+     * 是否允许被更新,0-&gt;不允许,1-&gt;允许
+     */
+    private Integer updateable;
+
+    /**
+     * 证书状态
+     */
+    private Integer certStatus;
+
 
     /**
      * get 证书Id
@@ -288,6 +298,42 @@ public class CertListDetail  implements java.io.Serializable {
         this.downloadable = downloadable;
     }
 
+    /**
+     * get 是否允许被更新,0-&gt;不允许,1-&gt;允许
+     *
+     * @return
+     */
+    public Integer getUpdateable() {
+        return updateable;
+    }
+
+    /**
+     * set 是否允许被更新,0-&gt;不允许,1-&gt;允许
+     *
+     * @param updateable
+     */
+    public void setUpdateable(Integer updateable) {
+        this.updateable = updateable;
+    }
+
+    /**
+     * get 证书状态
+     *
+     * @return
+     */
+    public Integer getCertStatus() {
+        return certStatus;
+    }
+
+    /**
+     * set 证书状态
+     *
+     * @param certStatus
+     */
+    public void setCertStatus(Integer certStatus) {
+        this.certStatus = certStatus;
+    }
+
 
     /**
      * set 证书Id
@@ -396,6 +442,26 @@ public class CertListDetail  implements java.io.Serializable {
      */
     public CertListDetail downloadable(Integer downloadable) {
         this.downloadable = downloadable;
+        return this;
+    }
+
+    /**
+     * set 是否允许被更新,0-&gt;不允许,1-&gt;允许
+     *
+     * @param updateable
+     */
+    public CertListDetail updateable(Integer updateable) {
+        this.updateable = updateable;
+        return this;
+    }
+
+    /**
+     * set 证书状态
+     *
+     * @param certStatus
+     */
+    public CertListDetail certStatus(Integer certStatus) {
+        this.certStatus = certStatus;
         return this;
     }
 
