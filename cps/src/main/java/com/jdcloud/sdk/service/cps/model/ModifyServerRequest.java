@@ -40,7 +40,7 @@ public class ModifyServerRequest extends JdcloudRequest implements java.io.Seria
     private Integer weight;
 
     /**
-     * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -80,7 +80,7 @@ public class ModifyServerRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * get 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @return
      */
@@ -89,7 +89,7 @@ public class ModifyServerRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -145,7 +145,7 @@ public class ModifyServerRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */

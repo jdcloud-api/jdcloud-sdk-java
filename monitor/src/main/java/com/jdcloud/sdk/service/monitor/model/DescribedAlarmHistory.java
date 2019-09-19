@@ -35,14 +35,19 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * alarm
+     * 报警规则ID
      */
-    private DescribedAlarm alarm;
+    private String alarmId;
 
     /**
-     * 告警联系人
+     * 资源维度
      */
-    private List<DescribedNoticeContacts> contacts;
+    private String dimension;
+
+    /**
+     * 资源维度名称
+     */
+    private String dimensionName;
 
     /**
      * 告警持续次数
@@ -55,6 +60,11 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     private Long noticeDurationTime;
 
     /**
+     * 用于前端显示的‘触发告警级别’。从低到高分别为‘普通’, ‘紧急’, ‘严重’
+     */
+    private String noticeLevel;
+
+    /**
      * 触发的告警级别。从低到高分别为‘common’, ‘critical’, ‘fatal’
      */
     private String noticeLevelTriggered;
@@ -65,45 +75,103 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     private String noticeTime;
 
     /**
+     * 资源类型
+     */
+    private String product;
+
+    /**
+     * 资源类型名称
+     */
+    private String productName;
+
+    /**
+     * 告警通知人
+     */
+    private List<NoticeReceiver> receivers;
+
+    /**
+     * 资源Id
+     */
+    private String resourceId;
+
+    /**
+     * rule
+     */
+    private BasicRuleDetail rule;
+
+    /**
+     * 规则类型
+     */
+    private String ruleType;
+
+    /**
+     * 告警类型  1-告警恢复  2-告警 4-数据不足
+     */
+    private Long status;
+
+    /**
+     * 资源tags
+     */
+    private Object tags;
+
+    /**
      * 告警值
      */
     private Double value;
 
 
     /**
-     * get alarm
+     * get 报警规则ID
      *
      * @return
      */
-    public DescribedAlarm getAlarm() {
-        return alarm;
+    public String getAlarmId() {
+        return alarmId;
     }
 
     /**
-     * set alarm
+     * set 报警规则ID
      *
-     * @param alarm
+     * @param alarmId
      */
-    public void setAlarm(DescribedAlarm alarm) {
-        this.alarm = alarm;
+    public void setAlarmId(String alarmId) {
+        this.alarmId = alarmId;
     }
 
     /**
-     * get 告警联系人
+     * get 资源维度
      *
      * @return
      */
-    public List<DescribedNoticeContacts> getContacts() {
-        return contacts;
+    public String getDimension() {
+        return dimension;
     }
 
     /**
-     * set 告警联系人
+     * set 资源维度
      *
-     * @param contacts
+     * @param dimension
      */
-    public void setContacts(List<DescribedNoticeContacts> contacts) {
-        this.contacts = contacts;
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
+    }
+
+    /**
+     * get 资源维度名称
+     *
+     * @return
+     */
+    public String getDimensionName() {
+        return dimensionName;
+    }
+
+    /**
+     * set 资源维度名称
+     *
+     * @param dimensionName
+     */
+    public void setDimensionName(String dimensionName) {
+        this.dimensionName = dimensionName;
     }
 
     /**
@@ -143,6 +211,24 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     }
 
     /**
+     * get 用于前端显示的‘触发告警级别’。从低到高分别为‘普通’, ‘紧急’, ‘严重’
+     *
+     * @return
+     */
+    public String getNoticeLevel() {
+        return noticeLevel;
+    }
+
+    /**
+     * set 用于前端显示的‘触发告警级别’。从低到高分别为‘普通’, ‘紧急’, ‘严重’
+     *
+     * @param noticeLevel
+     */
+    public void setNoticeLevel(String noticeLevel) {
+        this.noticeLevel = noticeLevel;
+    }
+
+    /**
      * get 触发的告警级别。从低到高分别为‘common’, ‘critical’, ‘fatal’
      *
      * @return
@@ -179,6 +265,150 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     }
 
     /**
+     * get 资源类型
+     *
+     * @return
+     */
+    public String getProduct() {
+        return product;
+    }
+
+    /**
+     * set 资源类型
+     *
+     * @param product
+     */
+    public void setProduct(String product) {
+        this.product = product;
+    }
+
+    /**
+     * get 资源类型名称
+     *
+     * @return
+     */
+    public String getProductName() {
+        return productName;
+    }
+
+    /**
+     * set 资源类型名称
+     *
+     * @param productName
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    /**
+     * get 告警通知人
+     *
+     * @return
+     */
+    public List<NoticeReceiver> getReceivers() {
+        return receivers;
+    }
+
+    /**
+     * set 告警通知人
+     *
+     * @param receivers
+     */
+    public void setReceivers(List<NoticeReceiver> receivers) {
+        this.receivers = receivers;
+    }
+
+    /**
+     * get 资源Id
+     *
+     * @return
+     */
+    public String getResourceId() {
+        return resourceId;
+    }
+
+    /**
+     * set 资源Id
+     *
+     * @param resourceId
+     */
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
+    }
+
+    /**
+     * get rule
+     *
+     * @return
+     */
+    public BasicRuleDetail getRule() {
+        return rule;
+    }
+
+    /**
+     * set rule
+     *
+     * @param rule
+     */
+    public void setRule(BasicRuleDetail rule) {
+        this.rule = rule;
+    }
+
+    /**
+     * get 规则类型
+     *
+     * @return
+     */
+    public String getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 规则类型
+     *
+     * @param ruleType
+     */
+    public void setRuleType(String ruleType) {
+        this.ruleType = ruleType;
+    }
+
+    /**
+     * get 告警类型  1-告警恢复  2-告警 4-数据不足
+     *
+     * @return
+     */
+    public Long getStatus() {
+        return status;
+    }
+
+    /**
+     * set 告警类型  1-告警恢复  2-告警 4-数据不足
+     *
+     * @param status
+     */
+    public void setStatus(Long status) {
+        this.status = status;
+    }
+
+    /**
+     * get 资源tags
+     *
+     * @return
+     */
+    public Object getTags() {
+        return tags;
+    }
+
+    /**
+     * set 资源tags
+     *
+     * @param tags
+     */
+    public void setTags(Object tags) {
+        this.tags = tags;
+    }
+
+    /**
      * get 告警值
      *
      * @return
@@ -198,22 +428,32 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
 
 
     /**
-     * set alarm
+     * set 报警规则ID
      *
-     * @param alarm
+     * @param alarmId
      */
-    public DescribedAlarmHistory alarm(DescribedAlarm alarm) {
-        this.alarm = alarm;
+    public DescribedAlarmHistory alarmId(String alarmId) {
+        this.alarmId = alarmId;
         return this;
     }
 
     /**
-     * set 告警联系人
+     * set 资源维度
      *
-     * @param contacts
+     * @param dimension
      */
-    public DescribedAlarmHistory contacts(List<DescribedNoticeContacts> contacts) {
-        this.contacts = contacts;
+    public DescribedAlarmHistory dimension(String dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+
+    /**
+     * set 资源维度名称
+     *
+     * @param dimensionName
+     */
+    public DescribedAlarmHistory dimensionName(String dimensionName) {
+        this.dimensionName = dimensionName;
         return this;
     }
 
@@ -238,6 +478,16 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     }
 
     /**
+     * set 用于前端显示的‘触发告警级别’。从低到高分别为‘普通’, ‘紧急’, ‘严重’
+     *
+     * @param noticeLevel
+     */
+    public DescribedAlarmHistory noticeLevel(String noticeLevel) {
+        this.noticeLevel = noticeLevel;
+        return this;
+    }
+
+    /**
      * set 触发的告警级别。从低到高分别为‘common’, ‘critical’, ‘fatal’
      *
      * @param noticeLevelTriggered
@@ -258,6 +508,86 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     }
 
     /**
+     * set 资源类型
+     *
+     * @param product
+     */
+    public DescribedAlarmHistory product(String product) {
+        this.product = product;
+        return this;
+    }
+
+    /**
+     * set 资源类型名称
+     *
+     * @param productName
+     */
+    public DescribedAlarmHistory productName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+
+    /**
+     * set 告警通知人
+     *
+     * @param receivers
+     */
+    public DescribedAlarmHistory receivers(List<NoticeReceiver> receivers) {
+        this.receivers = receivers;
+        return this;
+    }
+
+    /**
+     * set 资源Id
+     *
+     * @param resourceId
+     */
+    public DescribedAlarmHistory resourceId(String resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+
+    /**
+     * set rule
+     *
+     * @param rule
+     */
+    public DescribedAlarmHistory rule(BasicRuleDetail rule) {
+        this.rule = rule;
+        return this;
+    }
+
+    /**
+     * set 规则类型
+     *
+     * @param ruleType
+     */
+    public DescribedAlarmHistory ruleType(String ruleType) {
+        this.ruleType = ruleType;
+        return this;
+    }
+
+    /**
+     * set 告警类型  1-告警恢复  2-告警 4-数据不足
+     *
+     * @param status
+     */
+    public DescribedAlarmHistory status(Long status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 资源tags
+     *
+     * @param tags
+     */
+    public DescribedAlarmHistory tags(Object tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set 告警值
      *
      * @param value
@@ -269,15 +599,15 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
 
 
     /**
-     * add item to 告警联系人
+     * add item to 告警通知人
      *
-     * @param contact
+     * @param receiver
      */
-    public void addContact(DescribedNoticeContacts contact) {
-        if (this.contacts == null) {
-            this.contacts = new ArrayList<>();
+    public void addReceiver(NoticeReceiver receiver) {
+        if (this.receivers == null) {
+            this.receivers = new ArrayList<>();
         }
-        this.contacts.add(contact);
+        this.receivers.add(receiver);
     }
 
 }

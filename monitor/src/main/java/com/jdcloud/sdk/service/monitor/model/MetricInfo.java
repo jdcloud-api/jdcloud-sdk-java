@@ -33,33 +33,23 @@ public class MetricInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * metric单位
+     * metric 单位
      */
     private String calculateUnit;
 
     /**
-     * metric
-     */
-    private String metric;
-
-    /**
-     * metricID
-     */
-    private Long metricId;
-
-    /**
-     * metric中文显示名称
+     * metric名称
      */
     private String metricName;
 
     /**
-     * 资源的类型
+     * metric uid
      */
-    private String serviceCode;
+    private String metricUid;
 
 
     /**
-     * get metric单位
+     * get metric 单位
      *
      * @return
      */
@@ -68,7 +58,7 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * set metric单位
+     * set metric 单位
      *
      * @param calculateUnit
      */
@@ -77,43 +67,7 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * get metric
-     *
-     * @return
-     */
-    public String getMetric() {
-        return metric;
-    }
-
-    /**
-     * set metric
-     *
-     * @param metric
-     */
-    public void setMetric(String metric) {
-        this.metric = metric;
-    }
-
-    /**
-     * get metricID
-     *
-     * @return
-     */
-    public Long getMetricId() {
-        return metricId;
-    }
-
-    /**
-     * set metricID
-     *
-     * @param metricId
-     */
-    public void setMetricId(Long metricId) {
-        this.metricId = metricId;
-    }
-
-    /**
-     * get metric中文显示名称
+     * get metric名称
      *
      * @return
      */
@@ -122,7 +76,7 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * set metric中文显示名称
+     * set metric名称
      *
      * @param metricName
      */
@@ -131,26 +85,26 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 资源的类型
+     * get metric uid
      *
      * @return
      */
-    public String getServiceCode() {
-        return serviceCode;
+    public String getMetricUid() {
+        return metricUid;
     }
 
     /**
-     * set 资源的类型
+     * set metric uid
      *
-     * @param serviceCode
+     * @param metricUid
      */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public void setMetricUid(String metricUid) {
+        this.metricUid = metricUid;
     }
 
 
     /**
-     * set metric单位
+     * set metric 单位
      *
      * @param calculateUnit
      */
@@ -160,27 +114,7 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * set metric
-     *
-     * @param metric
-     */
-    public MetricInfo metric(String metric) {
-        this.metric = metric;
-        return this;
-    }
-
-    /**
-     * set metricID
-     *
-     * @param metricId
-     */
-    public MetricInfo metricId(Long metricId) {
-        this.metricId = metricId;
-        return this;
-    }
-
-    /**
-     * set metric中文显示名称
+     * set metric名称
      *
      * @param metricName
      */
@@ -190,12 +124,12 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 资源的类型
+     * set metric uid
      *
-     * @param serviceCode
+     * @param metricUid
      */
-    public MetricInfo serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public MetricInfo metricUid(String metricUid) {
+        this.metricUid = metricUid;
         return this;
     }
 

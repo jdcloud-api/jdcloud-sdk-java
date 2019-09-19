@@ -87,6 +87,16 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
      */
     private String hostname;
 
+    /**
+     * 可执行脚本Base64编码后的内容，支持shell和python脚本
+     */
+    private String userData;
+
+    /**
+     * 秘钥对id
+     */
+    private String keypairId;
+
 
     /**
      * get 可用区, 如cn-east-1a
@@ -232,6 +242,42 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
         this.hostname = hostname;
     }
 
+    /**
+     * get 可执行脚本Base64编码后的内容，支持shell和python脚本
+     *
+     * @return
+     */
+    public String getUserData() {
+        return userData;
+    }
+
+    /**
+     * set 可执行脚本Base64编码后的内容，支持shell和python脚本
+     *
+     * @param userData
+     */
+    public void setUserData(String userData) {
+        this.userData = userData;
+    }
+
+    /**
+     * get 秘钥对id
+     *
+     * @return
+     */
+    public String getKeypairId() {
+        return keypairId;
+    }
+
+    /**
+     * set 秘钥对id
+     *
+     * @param keypairId
+     */
+    public void setKeypairId(String keypairId) {
+        this.keypairId = keypairId;
+    }
+
 
     /**
      * set 可用区, 如cn-east-1a
@@ -310,6 +356,26 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
      */
     public ReinstallInstanceSpec hostname(String hostname) {
         this.hostname = hostname;
+        return this;
+    }
+
+    /**
+     * set 可执行脚本Base64编码后的内容，支持shell和python脚本
+     *
+     * @param userData
+     */
+    public ReinstallInstanceSpec userData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+
+    /**
+     * set 秘钥对id
+     *
+     * @param keypairId
+     */
+    public ReinstallInstanceSpec keypairId(String keypairId) {
+        this.keypairId = keypairId;
         return this;
     }
 

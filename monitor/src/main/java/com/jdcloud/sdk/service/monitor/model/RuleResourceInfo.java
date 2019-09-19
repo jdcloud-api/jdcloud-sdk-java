@@ -33,18 +33,82 @@ public class RuleResourceInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * RuleCnt     int64  &#x60;json:&quot;ruleCnt&quot; xorm:&quot;cnt&quot;&#x60;
+     * 维度
+     */
+    private String dimension;
+
+    /**
+     * 产品类型
+     */
+    private String product;
+
+    /**
+     * region
+     */
+    private String region;
+
+    /**
+     * resourceId
      */
     private String resourceId;
 
+
     /**
-     * serviceCode
+     * get 维度
+     *
+     * @return
      */
-    private String serviceCode;
-
+    public String getDimension() {
+        return dimension;
+    }
 
     /**
-     * get RuleCnt     int64  &#x60;json:&quot;ruleCnt&quot; xorm:&quot;cnt&quot;&#x60;
+     * set 维度
+     *
+     * @param dimension
+     */
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
+    }
+
+    /**
+     * get 产品类型
+     *
+     * @return
+     */
+    public String getProduct() {
+        return product;
+    }
+
+    /**
+     * set 产品类型
+     *
+     * @param product
+     */
+    public void setProduct(String product) {
+        this.product = product;
+    }
+
+    /**
+     * get region
+     *
+     * @return
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * set region
+     *
+     * @param region
+     */
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    /**
+     * get resourceId
      *
      * @return
      */
@@ -53,7 +117,7 @@ public class RuleResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set RuleCnt     int64  &#x60;json:&quot;ruleCnt&quot; xorm:&quot;cnt&quot;&#x60;
+     * set resourceId
      *
      * @param resourceId
      */
@@ -61,42 +125,44 @@ public class RuleResourceInfo  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
-     * get serviceCode
+     * set 维度
      *
-     * @return
+     * @param dimension
      */
-    public String getServiceCode() {
-        return serviceCode;
+    public RuleResourceInfo dimension(String dimension) {
+        this.dimension = dimension;
+        return this;
     }
 
     /**
-     * set serviceCode
+     * set 产品类型
      *
-     * @param serviceCode
+     * @param product
      */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public RuleResourceInfo product(String product) {
+        this.product = product;
+        return this;
     }
 
+    /**
+     * set region
+     *
+     * @param region
+     */
+    public RuleResourceInfo region(String region) {
+        this.region = region;
+        return this;
+    }
 
     /**
-     * set RuleCnt     int64  &#x60;json:&quot;ruleCnt&quot; xorm:&quot;cnt&quot;&#x60;
+     * set resourceId
      *
      * @param resourceId
      */
     public RuleResourceInfo resourceId(String resourceId) {
         this.resourceId = resourceId;
-        return this;
-    }
-
-    /**
-     * set serviceCode
-     *
-     * @param serviceCode
-     */
-    public RuleResourceInfo serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
         return this;
     }
 

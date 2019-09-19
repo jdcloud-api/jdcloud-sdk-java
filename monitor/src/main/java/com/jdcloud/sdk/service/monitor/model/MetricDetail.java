@@ -26,40 +26,45 @@ package com.jdcloud.sdk.service.monitor.model;
 
 
 /**
- * metricDetail
+ * 详情
  */
 public class MetricDetail  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 指标的计算单位，比如bit/s、%、byte等
+     * 指标的计算单位，比如bit/s、%、k等
      */
     private String calculateUnit;
 
     /**
-     * 监控指标英文标识
+     * 维度标识
      */
-    private String metric;
-
-    /**
-     * 监控指标名称
-     */
-    private String metricName;
-
-    /**
-     * 资源类型标识
-     */
-    private String serviceCode;
+    private String dimension;
 
     /**
      * 取样频次
      */
     private String downSample;
 
+    /**
+     * 监控项英文标识
+     */
+    private String metric;
 
     /**
-     * get 指标的计算单位，比如bit/s、%、byte等
+     * 监控项名称
+     */
+    private String metricName;
+
+    /**
+     * 产品线标识
+     */
+    private String serviceCode;
+
+
+    /**
+     * get 指标的计算单位，比如bit/s、%、k等
      *
      * @return
      */
@@ -68,7 +73,7 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 指标的计算单位，比如bit/s、%、byte等
+     * set 指标的计算单位，比如bit/s、%、k等
      *
      * @param calculateUnit
      */
@@ -77,57 +82,21 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * get 监控指标英文标识
+     * get 维度标识
      *
      * @return
      */
-    public String getMetric() {
-        return metric;
+    public String getDimension() {
+        return dimension;
     }
 
     /**
-     * set 监控指标英文标识
+     * set 维度标识
      *
-     * @param metric
+     * @param dimension
      */
-    public void setMetric(String metric) {
-        this.metric = metric;
-    }
-
-    /**
-     * get 监控指标名称
-     *
-     * @return
-     */
-    public String getMetricName() {
-        return metricName;
-    }
-
-    /**
-     * set 监控指标名称
-     *
-     * @param metricName
-     */
-    public void setMetricName(String metricName) {
-        this.metricName = metricName;
-    }
-
-    /**
-     * get 资源类型标识
-     *
-     * @return
-     */
-    public String getServiceCode() {
-        return serviceCode;
-    }
-
-    /**
-     * set 资源类型标识
-     *
-     * @param serviceCode
-     */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
     }
 
     /**
@@ -148,9 +117,63 @@ public class MetricDetail  implements java.io.Serializable {
         this.downSample = downSample;
     }
 
+    /**
+     * get 监控项英文标识
+     *
+     * @return
+     */
+    public String getMetric() {
+        return metric;
+    }
 
     /**
-     * set 指标的计算单位，比如bit/s、%、byte等
+     * set 监控项英文标识
+     *
+     * @param metric
+     */
+    public void setMetric(String metric) {
+        this.metric = metric;
+    }
+
+    /**
+     * get 监控项名称
+     *
+     * @return
+     */
+    public String getMetricName() {
+        return metricName;
+    }
+
+    /**
+     * set 监控项名称
+     *
+     * @param metricName
+     */
+    public void setMetricName(String metricName) {
+        this.metricName = metricName;
+    }
+
+    /**
+     * get 产品线标识
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 产品线标识
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+
+    /**
+     * set 指标的计算单位，比如bit/s、%、k等
      *
      * @param calculateUnit
      */
@@ -160,32 +183,12 @@ public class MetricDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 监控指标英文标识
+     * set 维度标识
      *
-     * @param metric
+     * @param dimension
      */
-    public MetricDetail metric(String metric) {
-        this.metric = metric;
-        return this;
-    }
-
-    /**
-     * set 监控指标名称
-     *
-     * @param metricName
-     */
-    public MetricDetail metricName(String metricName) {
-        this.metricName = metricName;
-        return this;
-    }
-
-    /**
-     * set 资源类型标识
-     *
-     * @param serviceCode
-     */
-    public MetricDetail serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public MetricDetail dimension(String dimension) {
+        this.dimension = dimension;
         return this;
     }
 
@@ -196,6 +199,36 @@ public class MetricDetail  implements java.io.Serializable {
      */
     public MetricDetail downSample(String downSample) {
         this.downSample = downSample;
+        return this;
+    }
+
+    /**
+     * set 监控项英文标识
+     *
+     * @param metric
+     */
+    public MetricDetail metric(String metric) {
+        this.metric = metric;
+        return this;
+    }
+
+    /**
+     * set 监控项名称
+     *
+     * @param metricName
+     */
+    public MetricDetail metricName(String metricName) {
+        this.metricName = metricName;
+        return this;
+    }
+
+    /**
+     * set 产品线标识
+     *
+     * @param serviceCode
+     */
+    public MetricDetail serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 
