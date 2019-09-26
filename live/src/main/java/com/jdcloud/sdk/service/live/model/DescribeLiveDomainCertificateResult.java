@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询(直播or时移)播放鉴权KEY
+ * 查询直播播放证书
  */
-public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeLiveDomainCertificateResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -39,17 +39,22 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     private String playDomain;
 
     /**
-     * (直播or时移)播放鉴权状态
+     * (直播or时移)播放证书状态
   on: 开启
   off: 关闭
 
      */
-    private String authStatus;
+    private String certStatus;
 
     /**
-     * (直播or时移)播放鉴权key
+     * (直播or时移)播放证书
      */
-    private String authKey;
+    private String cert;
+
+    /**
+     * (直播or时移)播放证书别名
+     */
+    private String title;
 
 
     /**
@@ -71,45 +76,63 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * get (直播or时移)播放鉴权状态
+     * get (直播or时移)播放证书状态
   on: 开启
   off: 关闭
 
      *
      * @return
      */
-    public String getAuthStatus() {
-        return authStatus;
+    public String getCertStatus() {
+        return certStatus;
     }
 
     /**
-     * set (直播or时移)播放鉴权状态
+     * set (直播or时移)播放证书状态
   on: 开启
   off: 关闭
 
      *
-     * @param authStatus
+     * @param certStatus
      */
-    public void setAuthStatus(String authStatus) {
-        this.authStatus = authStatus;
+    public void setCertStatus(String certStatus) {
+        this.certStatus = certStatus;
     }
 
     /**
-     * get (直播or时移)播放鉴权key
+     * get (直播or时移)播放证书
      *
      * @return
      */
-    public String getAuthKey() {
-        return authKey;
+    public String getCert() {
+        return cert;
     }
 
     /**
-     * set (直播or时移)播放鉴权key
+     * set (直播or时移)播放证书
      *
-     * @param authKey
+     * @param cert
      */
-    public void setAuthKey(String authKey) {
-        this.authKey = authKey;
+    public void setCert(String cert) {
+        this.cert = cert;
+    }
+
+    /**
+     * get (直播or时移)播放证书别名
+     *
+     * @return
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * set (直播or时移)播放证书别名
+     *
+     * @param title
+     */
+    public void setTitle(String title) {
+        this.title = title;
     }
 
 
@@ -118,31 +141,41 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
      *
      * @param playDomain
      */
-    public DescribeLivePlayAuthKeyResult playDomain(String playDomain) {
+    public DescribeLiveDomainCertificateResult playDomain(String playDomain) {
         this.playDomain = playDomain;
         return this;
     }
 
     /**
-     * set (直播or时移)播放鉴权状态
+     * set (直播or时移)播放证书状态
   on: 开启
   off: 关闭
 
      *
-     * @param authStatus
+     * @param certStatus
      */
-    public DescribeLivePlayAuthKeyResult authStatus(String authStatus) {
-        this.authStatus = authStatus;
+    public DescribeLiveDomainCertificateResult certStatus(String certStatus) {
+        this.certStatus = certStatus;
         return this;
     }
 
     /**
-     * set (直播or时移)播放鉴权key
+     * set (直播or时移)播放证书
      *
-     * @param authKey
+     * @param cert
      */
-    public DescribeLivePlayAuthKeyResult authKey(String authKey) {
-        this.authKey = authKey;
+    public DescribeLiveDomainCertificateResult cert(String cert) {
+        this.cert = cert;
+        return this;
+    }
+
+    /**
+     * set (直播or时移)播放证书别名
+     *
+     * @param title
+     */
+    public DescribeLiveDomainCertificateResult title(String title) {
+        this.title = title;
         return this;
     }
 

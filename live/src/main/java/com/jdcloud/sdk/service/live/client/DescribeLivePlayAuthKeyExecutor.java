@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.live.model.DescribeLivePlayAuthKeyResponse;
 
 /**
- * 查询播放鉴权KEY
+ * 查询(直播or时移)播放鉴权KEY
  */
 class DescribeLivePlayAuthKeyExecutor extends JdcloudExecutor {
 

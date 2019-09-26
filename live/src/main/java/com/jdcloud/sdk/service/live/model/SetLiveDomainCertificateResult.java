@@ -24,12 +24,14 @@
 
 package com.jdcloud.sdk.service.live.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询(直播or时移)播放鉴权KEY
+ * 设置(直播or时移)播放证书
+-- 设置成功之后30分钟以内生效
+
  */
-public class DescribeLivePlayAuthKeyResponse extends JdcloudResponse<DescribeLivePlayAuthKeyResult> implements java.io.Serializable {
+public class SetLiveDomainCertificateResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

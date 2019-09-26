@@ -28,54 +28,54 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询(直播or时移)播放鉴权KEY
+ * 查询直播回看播放鉴权KEY
  */
-public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeLiveRestartAuthKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * (直播or时移)播放域名
+     * 直播回看播放域名
 - 仅支持精确匹配
 
      * Required:true
      */
     @Required
-    private String playDomain;
+    private String restartDomain;
 
 
     /**
-     * get (直播or时移)播放域名
+     * get 直播回看播放域名
 - 仅支持精确匹配
 
      *
      * @return
      */
-    public String getPlayDomain() {
-        return playDomain;
+    public String getRestartDomain() {
+        return restartDomain;
     }
 
     /**
-     * set (直播or时移)播放域名
+     * set 直播回看播放域名
 - 仅支持精确匹配
 
      *
-     * @param playDomain
+     * @param restartDomain
      */
-    public void setPlayDomain(String playDomain) {
-        this.playDomain = playDomain;
+    public void setRestartDomain(String restartDomain) {
+        this.restartDomain = restartDomain;
     }
 
 
     /**
-     * set (直播or时移)播放域名
+     * set 直播回看播放域名
 - 仅支持精确匹配
 
      *
-     * @param playDomain
+     * @param restartDomain
      */
-    public DescribeLivePlayAuthKeyRequest playDomain(String playDomain) {
-        this.playDomain = playDomain;
+    public DescribeLiveRestartAuthKeyRequest restartDomain(String restartDomain) {
+        this.restartDomain = restartDomain;
         return this;
     }
 

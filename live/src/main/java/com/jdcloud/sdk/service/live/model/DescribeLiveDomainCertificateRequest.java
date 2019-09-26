@@ -28,9 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询(直播or时移)播放鉴权KEY
+ * 查询直播播放证书
  */
-public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeLiveDomainCertificateRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -74,7 +74,7 @@ public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements ja
      *
      * @param playDomain
      */
-    public DescribeLivePlayAuthKeyRequest playDomain(String playDomain) {
+    public DescribeLiveDomainCertificateRequest playDomain(String playDomain) {
         this.playDomain = playDomain;
         return this;
     }

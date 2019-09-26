@@ -24,56 +24,63 @@
 
 package com.jdcloud.sdk.service.live.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询(直播or时移)播放鉴权KEY
+ * 设置直播回看播放鉴权KEY
  */
-public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java.io.Serializable {
+public class SetLiveRestartAuthKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 播放域名
+     * 直播回看播放域名
+     * Required:true
      */
-    private String playDomain;
+    @Required
+    private String restartDomain;
 
     /**
-     * (直播or时移)播放鉴权状态
+     * 直播回看播放鉴权状态
   on: 开启
   off: 关闭
+- 当回看播放鉴权状态on(开启)时,authKey不能为空
 
      */
     private String authStatus;
 
     /**
-     * (直播or时移)播放鉴权key
+     * 直播回看播放鉴权key
+- 取值: 支持大小写字母和数字 长度6-32位
+
      */
     private String authKey;
 
 
     /**
-     * get 播放域名
+     * get 直播回看播放域名
      *
      * @return
      */
-    public String getPlayDomain() {
-        return playDomain;
+    public String getRestartDomain() {
+        return restartDomain;
     }
 
     /**
-     * set 播放域名
+     * set 直播回看播放域名
      *
-     * @param playDomain
+     * @param restartDomain
      */
-    public void setPlayDomain(String playDomain) {
-        this.playDomain = playDomain;
+    public void setRestartDomain(String restartDomain) {
+        this.restartDomain = restartDomain;
     }
 
     /**
-     * get (直播or时移)播放鉴权状态
+     * get 直播回看播放鉴权状态
   on: 开启
   off: 关闭
+- 当回看播放鉴权状态on(开启)时,authKey不能为空
 
      *
      * @return
@@ -83,9 +90,10 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * set (直播or时移)播放鉴权状态
+     * set 直播回看播放鉴权状态
   on: 开启
   off: 关闭
+- 当回看播放鉴权状态on(开启)时,authKey不能为空
 
      *
      * @param authStatus
@@ -95,7 +103,9 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * get (直播or时移)播放鉴权key
+     * get 直播回看播放鉴权key
+- 取值: 支持大小写字母和数字 长度6-32位
+
      *
      * @return
      */
@@ -104,7 +114,9 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * set (直播or时移)播放鉴权key
+     * set 直播回看播放鉴权key
+- 取值: 支持大小写字母和数字 长度6-32位
+
      *
      * @param authKey
      */
@@ -114,34 +126,37 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
 
 
     /**
-     * set 播放域名
+     * set 直播回看播放域名
      *
-     * @param playDomain
+     * @param restartDomain
      */
-    public DescribeLivePlayAuthKeyResult playDomain(String playDomain) {
-        this.playDomain = playDomain;
+    public SetLiveRestartAuthKeyRequest restartDomain(String restartDomain) {
+        this.restartDomain = restartDomain;
         return this;
     }
 
     /**
-     * set (直播or时移)播放鉴权状态
+     * set 直播回看播放鉴权状态
   on: 开启
   off: 关闭
+- 当回看播放鉴权状态on(开启)时,authKey不能为空
 
      *
      * @param authStatus
      */
-    public DescribeLivePlayAuthKeyResult authStatus(String authStatus) {
+    public SetLiveRestartAuthKeyRequest authStatus(String authStatus) {
         this.authStatus = authStatus;
         return this;
     }
 
     /**
-     * set (直播or时移)播放鉴权key
+     * set 直播回看播放鉴权key
+- 取值: 支持大小写字母和数字 长度6-32位
+
      *
      * @param authKey
      */
-    public DescribeLivePlayAuthKeyResult authKey(String authKey) {
+    public SetLiveRestartAuthKeyRequest authKey(String authKey) {
         this.authKey = authKey;
         return this;
     }
