@@ -36,12 +36,17 @@ public class DescribeMetricDataSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
+     * 聚合方式，可选值参考:sum、avg、min、max
      */
     private String aggrType;
 
     /**
-     * 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
+     * 资源的维度。当serviceCode下存在多个维度时，查询数据必须指定相应的维度
+     */
+    private String dimension;
+
+    /**
+     * 采样方式，可选值参考：sum、avg、last、min、max
      */
     private String downSampleType;
 
@@ -71,10 +76,8 @@ in: query
     private String resourceId;
 
     /**
-     * 资源的类型，取值vm, lb, ip, database 等
-     * Required:true
+     * 资源的类型，取值vm, lb, ip, database 等,&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
      */
-    @Required
     private String serviceCode;
 
     /**
@@ -97,7 +100,7 @@ in: query
 
 
     /**
-     * get 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
+     * get 聚合方式，可选值参考:sum、avg、min、max
      *
      * @return
      */
@@ -106,7 +109,7 @@ in: query
     }
 
     /**
-     * set 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
+     * set 聚合方式，可选值参考:sum、avg、min、max
      *
      * @param aggrType
      */
@@ -115,7 +118,25 @@ in: query
     }
 
     /**
-     * get 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
+     * get 资源的维度。当serviceCode下存在多个维度时，查询数据必须指定相应的维度
+     *
+     * @return
+     */
+    public String getDimension() {
+        return dimension;
+    }
+
+    /**
+     * set 资源的维度。当serviceCode下存在多个维度时，查询数据必须指定相应的维度
+     *
+     * @param dimension
+     */
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
+    }
+
+    /**
+     * get 采样方式，可选值参考：sum、avg、last、min、max
      *
      * @return
      */
@@ -124,7 +145,7 @@ in: query
     }
 
     /**
-     * set 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
+     * set 采样方式，可选值参考：sum、avg、last、min、max
      *
      * @param downSampleType
      */
@@ -211,7 +232,7 @@ in: query
     }
 
     /**
-     * get 资源的类型，取值vm, lb, ip, database 等
+     * get 资源的类型，取值vm, lb, ip, database 等,&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
      *
      * @return
      */
@@ -220,7 +241,7 @@ in: query
     }
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等
+     * set 资源的类型，取值vm, lb, ip, database 等,&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
      *
      * @param serviceCode
      */
@@ -290,7 +311,7 @@ in: query
 
 
     /**
-     * set 聚合方式，默认等于downSampleType或avg，可选值参考:sum、avg、min、max
+     * set 聚合方式，可选值参考:sum、avg、min、max
      *
      * @param aggrType
      */
@@ -300,7 +321,17 @@ in: query
     }
 
     /**
-     * set 采样方式，默认等于aggrType或avg，可选值参考：sum、avg、last、min、max
+     * set 资源的维度。当serviceCode下存在多个维度时，查询数据必须指定相应的维度
+     *
+     * @param dimension
+     */
+    public DescribeMetricDataSpec dimension(String dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+
+    /**
+     * set 采样方式，可选值参考：sum、avg、last、min、max
      *
      * @param downSampleType
      */
@@ -353,7 +384,7 @@ in: query
     }
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等
+     * set 资源的类型，取值vm, lb, ip, database 等,&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
      *
      * @param serviceCode
      */

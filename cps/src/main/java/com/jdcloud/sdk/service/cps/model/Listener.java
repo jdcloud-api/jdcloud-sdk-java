@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.cps.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * listener
@@ -65,24 +63,9 @@ public class Listener  implements java.io.Serializable {
     private String stickySession;
 
     /**
-     * 会话保持超时时间，单位s
-     */
-    private Integer stickySessionTimeout;
-
-    /**
-     * 会话类型
-     */
-    private String cookieType;
-
-    /**
      * 获取真实ip
      */
     private String realIp;
-
-    /**
-     * 证书ID
-     */
-    private String certificateId;
 
     /**
      * 状态
@@ -98,11 +81,6 @@ public class Listener  implements java.io.Serializable {
      * 描述
      */
     private String description;
-
-    /**
-     * HTTP扩展头部
-     */
-    private List<String> headers;
 
     /**
      * 健康检查状态，取值on|off
@@ -128,16 +106,6 @@ public class Listener  implements java.io.Serializable {
      * 健康检查结果为fail的阈值
      */
     private Integer unhealthyThreshold;
-
-    /**
-     * 健康检查的URI
-     */
-    private String healthCheckUri;
-
-    /**
-     * 健康检查正常的HTTP状态码
-     */
-    private String healthCheckHttpCode;
 
     /**
      * 健康检查ip
@@ -259,42 +227,6 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * get 会话保持超时时间，单位s
-     *
-     * @return
-     */
-    public Integer getStickySessionTimeout() {
-        return stickySessionTimeout;
-    }
-
-    /**
-     * set 会话保持超时时间，单位s
-     *
-     * @param stickySessionTimeout
-     */
-    public void setStickySessionTimeout(Integer stickySessionTimeout) {
-        this.stickySessionTimeout = stickySessionTimeout;
-    }
-
-    /**
-     * get 会话类型
-     *
-     * @return
-     */
-    public String getCookieType() {
-        return cookieType;
-    }
-
-    /**
-     * set 会话类型
-     *
-     * @param cookieType
-     */
-    public void setCookieType(String cookieType) {
-        this.cookieType = cookieType;
-    }
-
-    /**
      * get 获取真实ip
      *
      * @return
@@ -310,24 +242,6 @@ public class Listener  implements java.io.Serializable {
      */
     public void setRealIp(String realIp) {
         this.realIp = realIp;
-    }
-
-    /**
-     * get 证书ID
-     *
-     * @return
-     */
-    public String getCertificateId() {
-        return certificateId;
-    }
-
-    /**
-     * set 证书ID
-     *
-     * @param certificateId
-     */
-    public void setCertificateId(String certificateId) {
-        this.certificateId = certificateId;
     }
 
     /**
@@ -382,24 +296,6 @@ public class Listener  implements java.io.Serializable {
      */
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    /**
-     * get HTTP扩展头部
-     *
-     * @return
-     */
-    public List<String> getHeaders() {
-        return headers;
-    }
-
-    /**
-     * set HTTP扩展头部
-     *
-     * @param headers
-     */
-    public void setHeaders(List<String> headers) {
-        this.headers = headers;
     }
 
     /**
@@ -490,42 +386,6 @@ public class Listener  implements java.io.Serializable {
      */
     public void setUnhealthyThreshold(Integer unhealthyThreshold) {
         this.unhealthyThreshold = unhealthyThreshold;
-    }
-
-    /**
-     * get 健康检查的URI
-     *
-     * @return
-     */
-    public String getHealthCheckUri() {
-        return healthCheckUri;
-    }
-
-    /**
-     * set 健康检查的URI
-     *
-     * @param healthCheckUri
-     */
-    public void setHealthCheckUri(String healthCheckUri) {
-        this.healthCheckUri = healthCheckUri;
-    }
-
-    /**
-     * get 健康检查正常的HTTP状态码
-     *
-     * @return
-     */
-    public String getHealthCheckHttpCode() {
-        return healthCheckHttpCode;
-    }
-
-    /**
-     * set 健康检查正常的HTTP状态码
-     *
-     * @param healthCheckHttpCode
-     */
-    public void setHealthCheckHttpCode(String healthCheckHttpCode) {
-        this.healthCheckHttpCode = healthCheckHttpCode;
     }
 
     /**
@@ -626,42 +486,12 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 会话保持超时时间，单位s
-     *
-     * @param stickySessionTimeout
-     */
-    public Listener stickySessionTimeout(Integer stickySessionTimeout) {
-        this.stickySessionTimeout = stickySessionTimeout;
-        return this;
-    }
-
-    /**
-     * set 会话类型
-     *
-     * @param cookieType
-     */
-    public Listener cookieType(String cookieType) {
-        this.cookieType = cookieType;
-        return this;
-    }
-
-    /**
      * set 获取真实ip
      *
      * @param realIp
      */
     public Listener realIp(String realIp) {
         this.realIp = realIp;
-        return this;
-    }
-
-    /**
-     * set 证书ID
-     *
-     * @param certificateId
-     */
-    public Listener certificateId(String certificateId) {
-        this.certificateId = certificateId;
         return this;
     }
 
@@ -692,16 +522,6 @@ public class Listener  implements java.io.Serializable {
      */
     public Listener description(String description) {
         this.description = description;
-        return this;
-    }
-
-    /**
-     * set HTTP扩展头部
-     *
-     * @param headers
-     */
-    public Listener headers(List<String> headers) {
-        this.headers = headers;
         return this;
     }
 
@@ -756,26 +576,6 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 健康检查的URI
-     *
-     * @param healthCheckUri
-     */
-    public Listener healthCheckUri(String healthCheckUri) {
-        this.healthCheckUri = healthCheckUri;
-        return this;
-    }
-
-    /**
-     * set 健康检查正常的HTTP状态码
-     *
-     * @param healthCheckHttpCode
-     */
-    public Listener healthCheckHttpCode(String healthCheckHttpCode) {
-        this.healthCheckHttpCode = healthCheckHttpCode;
-        return this;
-    }
-
-    /**
      * set 健康检查ip
      *
      * @param healthCheckIp
@@ -795,17 +595,5 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
-
-    /**
-     * add item to HTTP扩展头部
-     *
-     * @param header
-     */
-    public void addHeader(String header) {
-        if (this.headers == null) {
-            this.headers = new ArrayList<>();
-        }
-        this.headers.add(header);
-    }
 
 }

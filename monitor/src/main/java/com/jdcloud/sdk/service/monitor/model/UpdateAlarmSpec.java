@@ -36,218 +36,401 @@ public class UpdateAlarmSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 通知联系人
+     * 告警通知联系人
      */
-    private List<BaseContact> contacts;
+    private List<BaseContact> baseContact;
 
     /**
-     * rule
+     * 资源维度，可用的维度请使用 describeProductsForAlarm接口查询
+     */
+    private String dimension;
+
+    /**
+     * 是否启用, 1表示启用规则，0表示禁用规则，默认为1
+     */
+    private Long enabled;
+
+    /**
+     * 通知策略
+     */
+    private List<NoticeOption> noticeOption;
+
+    /**
+     * 资源类型, 可用的资源类型列表请使用 describeProductsForAlarm接口查询。
      * Required:true
      */
     @Required
-    private BaseRule rule;
+    private String product;
 
     /**
-     * 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
+     * resourceOption
+     * Required:true
      */
-    private String webHookContent;
+    @Required
+    private ResourceOption resourceOption;
 
     /**
-     * webHook协议，目前支持http，https
+     * 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     * Required:true
      */
-    private String webHookProtocol;
+    @Required
+    private String ruleName;
 
     /**
-     * 回调secret，用户请求签名，防伪造
+     * ruleOption
+     * Required:true
      */
-    private String webHookSecret;
+    @Required
+    private RuleOption ruleOption;
 
     /**
-     * 回调url，例如http://www.jdcloud.com
+     * 规则类型, 默认为resourceMonitor
      */
-    private String webHookUrl;
+    private String ruleType;
+
+    /**
+     * 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)
+     */
+    private Object tags;
+
+    /**
+     * webHookOption
+     */
+    private WebHookOption webHookOption;
 
 
     /**
-     * get 通知联系人
+     * get 告警通知联系人
      *
      * @return
      */
-    public List<BaseContact> getContacts() {
-        return contacts;
+    public List<BaseContact> getBaseContact() {
+        return baseContact;
     }
 
     /**
-     * set 通知联系人
+     * set 告警通知联系人
      *
-     * @param contacts
+     * @param baseContact
      */
-    public void setContacts(List<BaseContact> contacts) {
-        this.contacts = contacts;
+    public void setBaseContact(List<BaseContact> baseContact) {
+        this.baseContact = baseContact;
     }
 
     /**
-     * get rule
-     *
-     * @return
-     */
-    public BaseRule getRule() {
-        return rule;
-    }
-
-    /**
-     * set rule
-     *
-     * @param rule
-     */
-    public void setRule(BaseRule rule) {
-        this.rule = rule;
-    }
-
-    /**
-     * get 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
+     * get 资源维度，可用的维度请使用 describeProductsForAlarm接口查询
      *
      * @return
      */
-    public String getWebHookContent() {
-        return webHookContent;
+    public String getDimension() {
+        return dimension;
     }
 
     /**
-     * set 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
+     * set 资源维度，可用的维度请使用 describeProductsForAlarm接口查询
      *
-     * @param webHookContent
+     * @param dimension
      */
-    public void setWebHookContent(String webHookContent) {
-        this.webHookContent = webHookContent;
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
     }
 
     /**
-     * get webHook协议，目前支持http，https
-     *
-     * @return
-     */
-    public String getWebHookProtocol() {
-        return webHookProtocol;
-    }
-
-    /**
-     * set webHook协议，目前支持http，https
-     *
-     * @param webHookProtocol
-     */
-    public void setWebHookProtocol(String webHookProtocol) {
-        this.webHookProtocol = webHookProtocol;
-    }
-
-    /**
-     * get 回调secret，用户请求签名，防伪造
+     * get 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      *
      * @return
      */
-    public String getWebHookSecret() {
-        return webHookSecret;
+    public Long getEnabled() {
+        return enabled;
     }
 
     /**
-     * set 回调secret，用户请求签名，防伪造
+     * set 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      *
-     * @param webHookSecret
+     * @param enabled
      */
-    public void setWebHookSecret(String webHookSecret) {
-        this.webHookSecret = webHookSecret;
+    public void setEnabled(Long enabled) {
+        this.enabled = enabled;
     }
 
     /**
-     * get 回调url，例如http://www.jdcloud.com
+     * get 通知策略
      *
      * @return
      */
-    public String getWebHookUrl() {
-        return webHookUrl;
+    public List<NoticeOption> getNoticeOption() {
+        return noticeOption;
     }
 
     /**
-     * set 回调url，例如http://www.jdcloud.com
+     * set 通知策略
      *
-     * @param webHookUrl
+     * @param noticeOption
      */
-    public void setWebHookUrl(String webHookUrl) {
-        this.webHookUrl = webHookUrl;
+    public void setNoticeOption(List<NoticeOption> noticeOption) {
+        this.noticeOption = noticeOption;
+    }
+
+    /**
+     * get 资源类型, 可用的资源类型列表请使用 describeProductsForAlarm接口查询。
+     *
+     * @return
+     */
+    public String getProduct() {
+        return product;
+    }
+
+    /**
+     * set 资源类型, 可用的资源类型列表请使用 describeProductsForAlarm接口查询。
+     *
+     * @param product
+     */
+    public void setProduct(String product) {
+        this.product = product;
+    }
+
+    /**
+     * get resourceOption
+     *
+     * @return
+     */
+    public ResourceOption getResourceOption() {
+        return resourceOption;
+    }
+
+    /**
+     * set resourceOption
+     *
+     * @param resourceOption
+     */
+    public void setResourceOption(ResourceOption resourceOption) {
+        this.resourceOption = resourceOption;
+    }
+
+    /**
+     * get 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @return
+     */
+    public String getRuleName() {
+        return ruleName;
+    }
+
+    /**
+     * set 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public void setRuleName(String ruleName) {
+        this.ruleName = ruleName;
+    }
+
+    /**
+     * get ruleOption
+     *
+     * @return
+     */
+    public RuleOption getRuleOption() {
+        return ruleOption;
+    }
+
+    /**
+     * set ruleOption
+     *
+     * @param ruleOption
+     */
+    public void setRuleOption(RuleOption ruleOption) {
+        this.ruleOption = ruleOption;
+    }
+
+    /**
+     * get 规则类型, 默认为resourceMonitor
+     *
+     * @return
+     */
+    public String getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 规则类型, 默认为resourceMonitor
+     *
+     * @param ruleType
+     */
+    public void setRuleType(String ruleType) {
+        this.ruleType = ruleType;
+    }
+
+    /**
+     * get 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)
+     *
+     * @return
+     */
+    public Object getTags() {
+        return tags;
+    }
+
+    /**
+     * set 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)
+     *
+     * @param tags
+     */
+    public void setTags(Object tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * get webHookOption
+     *
+     * @return
+     */
+    public WebHookOption getWebHookOption() {
+        return webHookOption;
+    }
+
+    /**
+     * set webHookOption
+     *
+     * @param webHookOption
+     */
+    public void setWebHookOption(WebHookOption webHookOption) {
+        this.webHookOption = webHookOption;
     }
 
 
     /**
-     * set 通知联系人
+     * set 告警通知联系人
      *
-     * @param contacts
+     * @param baseContact
      */
-    public UpdateAlarmSpec contacts(List<BaseContact> contacts) {
-        this.contacts = contacts;
+    public UpdateAlarmSpec baseContact(List<BaseContact> baseContact) {
+        this.baseContact = baseContact;
         return this;
     }
 
     /**
-     * set rule
+     * set 资源维度，可用的维度请使用 describeProductsForAlarm接口查询
      *
-     * @param rule
+     * @param dimension
      */
-    public UpdateAlarmSpec rule(BaseRule rule) {
-        this.rule = rule;
+    public UpdateAlarmSpec dimension(String dimension) {
+        this.dimension = dimension;
         return this;
     }
 
     /**
-     * set 回调content 注：仅webHookUrl和webHookContent均不为空时，才会创建webHook
+     * set 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      *
-     * @param webHookContent
+     * @param enabled
      */
-    public UpdateAlarmSpec webHookContent(String webHookContent) {
-        this.webHookContent = webHookContent;
+    public UpdateAlarmSpec enabled(Long enabled) {
+        this.enabled = enabled;
         return this;
     }
 
     /**
-     * set webHook协议，目前支持http，https
+     * set 通知策略
      *
-     * @param webHookProtocol
+     * @param noticeOption
      */
-    public UpdateAlarmSpec webHookProtocol(String webHookProtocol) {
-        this.webHookProtocol = webHookProtocol;
+    public UpdateAlarmSpec noticeOption(List<NoticeOption> noticeOption) {
+        this.noticeOption = noticeOption;
         return this;
     }
 
     /**
-     * set 回调secret，用户请求签名，防伪造
+     * set 资源类型, 可用的资源类型列表请使用 describeProductsForAlarm接口查询。
      *
-     * @param webHookSecret
+     * @param product
      */
-    public UpdateAlarmSpec webHookSecret(String webHookSecret) {
-        this.webHookSecret = webHookSecret;
+    public UpdateAlarmSpec product(String product) {
+        this.product = product;
         return this;
     }
 
     /**
-     * set 回调url，例如http://www.jdcloud.com
+     * set resourceOption
      *
-     * @param webHookUrl
+     * @param resourceOption
      */
-    public UpdateAlarmSpec webHookUrl(String webHookUrl) {
-        this.webHookUrl = webHookUrl;
+    public UpdateAlarmSpec resourceOption(ResourceOption resourceOption) {
+        this.resourceOption = resourceOption;
+        return this;
+    }
+
+    /**
+     * set 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     *
+     * @param ruleName
+     */
+    public UpdateAlarmSpec ruleName(String ruleName) {
+        this.ruleName = ruleName;
+        return this;
+    }
+
+    /**
+     * set ruleOption
+     *
+     * @param ruleOption
+     */
+    public UpdateAlarmSpec ruleOption(RuleOption ruleOption) {
+        this.ruleOption = ruleOption;
+        return this;
+    }
+
+    /**
+     * set 规则类型, 默认为resourceMonitor
+     *
+     * @param ruleType
+     */
+    public UpdateAlarmSpec ruleType(String ruleType) {
+        this.ruleType = ruleType;
+        return this;
+    }
+
+    /**
+     * set 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)
+     *
+     * @param tags
+     */
+    public UpdateAlarmSpec tags(Object tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set webHookOption
+     *
+     * @param webHookOption
+     */
+    public UpdateAlarmSpec webHookOption(WebHookOption webHookOption) {
+        this.webHookOption = webHookOption;
         return this;
     }
 
 
     /**
-     * add item to 通知联系人
+     * add item to 告警通知联系人
      *
-     * @param contact
+     * @param baseContact
      */
-    public void addContact(BaseContact contact) {
-        if (this.contacts == null) {
-            this.contacts = new ArrayList<>();
+    public void addBaseContact(BaseContact baseContact) {
+        if (this.baseContact == null) {
+            this.baseContact = new ArrayList<>();
         }
-        this.contacts.add(contact);
+        this.baseContact.add(baseContact);
+    }
+
+    /**
+     * add item to 通知策略
+     *
+     * @param noticeOption
+     */
+    public void addNoticeOption(NoticeOption noticeOption) {
+        if (this.noticeOption == null) {
+            this.noticeOption = new ArrayList<>();
+        }
+        this.noticeOption.add(noticeOption);
     }
 
 }

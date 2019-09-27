@@ -74,7 +74,7 @@ public class QueryLoadBalancersRequest extends JdcloudRequest implements java.io
     private List<Filter> filters;
 
     /**
-     * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -210,7 +210,7 @@ public class QueryLoadBalancersRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * get 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @return
      */
@@ -219,7 +219,7 @@ public class QueryLoadBalancersRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -300,7 +300,7 @@ public class QueryLoadBalancersRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */

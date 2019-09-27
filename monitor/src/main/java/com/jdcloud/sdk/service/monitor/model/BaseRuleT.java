@@ -56,7 +56,7 @@ public class BaseRuleT  implements java.io.Serializable {
     private String downSample;
 
     /**
-     * 监控项
+     * 监控项唯一标识，可根据DescribeMetricsForCreateAlarm接口查询各产品线可用的监控项（创建规则时使用Metric字段）。格式：metric:downsample
      * Required:true
      */
     @Required
@@ -193,7 +193,7 @@ public class BaseRuleT  implements java.io.Serializable {
     }
 
     /**
-     * get 监控项
+     * get 监控项唯一标识，可根据DescribeMetricsForCreateAlarm接口查询各产品线可用的监控项（创建规则时使用Metric字段）。格式：metric:downsample
      *
      * @return
      */
@@ -202,7 +202,7 @@ public class BaseRuleT  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项
+     * set 监控项唯一标识，可根据DescribeMetricsForCreateAlarm接口查询各产品线可用的监控项（创建规则时使用Metric字段）。格式：metric:downsample
      *
      * @param metric
      */
@@ -414,7 +414,7 @@ public class BaseRuleT  implements java.io.Serializable {
     }
 
     /**
-     * set 监控项
+     * set 监控项唯一标识，可根据DescribeMetricsForCreateAlarm接口查询各产品线可用的监控项（创建规则时使用Metric字段）。格式：metric:downsample
      *
      * @param metric
      */

@@ -179,6 +179,16 @@ public class Instance  implements java.io.Serializable {
     private String publicIpv6;
 
     /**
+     * 密钥对id
+     */
+    private String keypairId;
+
+    /**
+     * agent状态
+     */
+    private String agentStatus;
+
+    /**
      * 计费信息
      */
     private Charge charge;
@@ -707,6 +717,42 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 密钥对id
+     *
+     * @return
+     */
+    public String getKeypairId() {
+        return keypairId;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public void setKeypairId(String keypairId) {
+        this.keypairId = keypairId;
+    }
+
+    /**
+     * get agent状态
+     *
+     * @return
+     */
+    public String getAgentStatus() {
+        return agentStatus;
+    }
+
+    /**
+     * set agent状态
+     *
+     * @param agentStatus
+     */
+    public void setAgentStatus(String agentStatus) {
+        this.agentStatus = agentStatus;
+    }
+
+    /**
      * get 计费信息
      *
      * @return
@@ -1012,6 +1058,26 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance publicIpv6(String publicIpv6) {
         this.publicIpv6 = publicIpv6;
+        return this;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public Instance keypairId(String keypairId) {
+        this.keypairId = keypairId;
+        return this;
+    }
+
+    /**
+     * set agent状态
+     *
+     * @param agentStatus
+     */
+    public Instance agentStatus(String agentStatus) {
+        this.agentStatus = agentStatus;
         return this;
     }
 

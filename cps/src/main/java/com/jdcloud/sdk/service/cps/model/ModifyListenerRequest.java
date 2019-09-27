@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.cps.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -47,24 +45,9 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     private String stickySession;
 
     /**
-     * 会话保持超时时间，单位s
-     */
-    private Integer stickySessionTimeout;
-
-    /**
-     * 会话类型ImplantCookie|RewriteCookie
-     */
-    private String cookieType;
-
-    /**
      * 是否获取真实ip，取值范围on|off
      */
     private String realIp;
-
-    /**
-     * 证书ID
-     */
-    private String certificateId;
 
     /**
      * 名称
@@ -75,11 +58,6 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
      * 描述
      */
     private String description;
-
-    /**
-     * HTTP扩展头部
-     */
-    private List<String> headers;
 
     /**
      * 健康检查
@@ -107,27 +85,12 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     private Integer unhealthyThreshold;
 
     /**
-     * 健康检查的URI
-     */
-    private String healthCheckUri;
-
-    /**
-     * 健康检查正常的HTTP状态码
-     */
-    private String healthCheckHttpCode;
-
-    /**
-     * 健康检查ip
-     */
-    private String healthCheckIp;
-
-    /**
      * 服务器组id
      */
     private String serverGroupId;
 
     /**
-     * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -178,42 +141,6 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 会话保持超时时间，单位s
-     *
-     * @return
-     */
-    public Integer getStickySessionTimeout() {
-        return stickySessionTimeout;
-    }
-
-    /**
-     * set 会话保持超时时间，单位s
-     *
-     * @param stickySessionTimeout
-     */
-    public void setStickySessionTimeout(Integer stickySessionTimeout) {
-        this.stickySessionTimeout = stickySessionTimeout;
-    }
-
-    /**
-     * get 会话类型ImplantCookie|RewriteCookie
-     *
-     * @return
-     */
-    public String getCookieType() {
-        return cookieType;
-    }
-
-    /**
-     * set 会话类型ImplantCookie|RewriteCookie
-     *
-     * @param cookieType
-     */
-    public void setCookieType(String cookieType) {
-        this.cookieType = cookieType;
-    }
-
-    /**
      * get 是否获取真实ip，取值范围on|off
      *
      * @return
@@ -229,24 +156,6 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setRealIp(String realIp) {
         this.realIp = realIp;
-    }
-
-    /**
-     * get 证书ID
-     *
-     * @return
-     */
-    public String getCertificateId() {
-        return certificateId;
-    }
-
-    /**
-     * set 证书ID
-     *
-     * @param certificateId
-     */
-    public void setCertificateId(String certificateId) {
-        this.certificateId = certificateId;
     }
 
     /**
@@ -283,24 +192,6 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    /**
-     * get HTTP扩展头部
-     *
-     * @return
-     */
-    public List<String> getHeaders() {
-        return headers;
-    }
-
-    /**
-     * set HTTP扩展头部
-     *
-     * @param headers
-     */
-    public void setHeaders(List<String> headers) {
-        this.headers = headers;
     }
 
     /**
@@ -394,60 +285,6 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 健康检查的URI
-     *
-     * @return
-     */
-    public String getHealthCheckUri() {
-        return healthCheckUri;
-    }
-
-    /**
-     * set 健康检查的URI
-     *
-     * @param healthCheckUri
-     */
-    public void setHealthCheckUri(String healthCheckUri) {
-        this.healthCheckUri = healthCheckUri;
-    }
-
-    /**
-     * get 健康检查正常的HTTP状态码
-     *
-     * @return
-     */
-    public String getHealthCheckHttpCode() {
-        return healthCheckHttpCode;
-    }
-
-    /**
-     * set 健康检查正常的HTTP状态码
-     *
-     * @param healthCheckHttpCode
-     */
-    public void setHealthCheckHttpCode(String healthCheckHttpCode) {
-        this.healthCheckHttpCode = healthCheckHttpCode;
-    }
-
-    /**
-     * get 健康检查ip
-     *
-     * @return
-     */
-    public String getHealthCheckIp() {
-        return healthCheckIp;
-    }
-
-    /**
-     * set 健康检查ip
-     *
-     * @param healthCheckIp
-     */
-    public void setHealthCheckIp(String healthCheckIp) {
-        this.healthCheckIp = healthCheckIp;
-    }
-
-    /**
      * get 服务器组id
      *
      * @return
@@ -466,7 +303,7 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * get 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @return
      */
@@ -475,7 +312,7 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -523,42 +360,12 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 会话保持超时时间，单位s
-     *
-     * @param stickySessionTimeout
-     */
-    public ModifyListenerRequest stickySessionTimeout(Integer stickySessionTimeout) {
-        this.stickySessionTimeout = stickySessionTimeout;
-        return this;
-    }
-
-    /**
-     * set 会话类型ImplantCookie|RewriteCookie
-     *
-     * @param cookieType
-     */
-    public ModifyListenerRequest cookieType(String cookieType) {
-        this.cookieType = cookieType;
-        return this;
-    }
-
-    /**
      * set 是否获取真实ip，取值范围on|off
      *
      * @param realIp
      */
     public ModifyListenerRequest realIp(String realIp) {
         this.realIp = realIp;
-        return this;
-    }
-
-    /**
-     * set 证书ID
-     *
-     * @param certificateId
-     */
-    public ModifyListenerRequest certificateId(String certificateId) {
-        this.certificateId = certificateId;
         return this;
     }
 
@@ -579,16 +386,6 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
      */
     public ModifyListenerRequest description(String description) {
         this.description = description;
-        return this;
-    }
-
-    /**
-     * set HTTP扩展头部
-     *
-     * @param headers
-     */
-    public ModifyListenerRequest headers(List<String> headers) {
-        this.headers = headers;
         return this;
     }
 
@@ -643,36 +440,6 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 健康检查的URI
-     *
-     * @param healthCheckUri
-     */
-    public ModifyListenerRequest healthCheckUri(String healthCheckUri) {
-        this.healthCheckUri = healthCheckUri;
-        return this;
-    }
-
-    /**
-     * set 健康检查正常的HTTP状态码
-     *
-     * @param healthCheckHttpCode
-     */
-    public ModifyListenerRequest healthCheckHttpCode(String healthCheckHttpCode) {
-        this.healthCheckHttpCode = healthCheckHttpCode;
-        return this;
-    }
-
-    /**
-     * set 健康检查ip
-     *
-     * @param healthCheckIp
-     */
-    public ModifyListenerRequest healthCheckIp(String healthCheckIp) {
-        this.healthCheckIp = healthCheckIp;
-        return this;
-    }
-
-    /**
      * set 服务器组id
      *
      * @param serverGroupId
@@ -683,7 +450,7 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -702,17 +469,5 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
-
-    /**
-     * add item to HTTP扩展头部
-     *
-     * @param header
-     */
-    public void addHeader(String header) {
-        if (this.headers == null) {
-            this.headers = new ArrayList<>();
-        }
-        this.headers.add(header);
-    }
 
 }

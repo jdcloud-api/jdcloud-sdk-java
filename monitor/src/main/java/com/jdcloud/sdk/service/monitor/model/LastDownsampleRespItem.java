@@ -43,6 +43,11 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     private String name;
 
     /**
+     * tags
+     */
+    private Object tags;
+
+    /**
      * value
      */
     private Object value;
@@ -85,6 +90,24 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     }
 
     /**
+     * get tags
+     *
+     * @return
+     */
+    public Object getTags() {
+        return tags;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public void setTags(Object tags) {
+        this.tags = tags;
+    }
+
+    /**
      * get value
      *
      * @return
@@ -120,6 +143,16 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
      */
     public LastDownsampleRespItem name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public LastDownsampleRespItem tags(Object tags) {
+        this.tags = tags;
         return this;
     }
 

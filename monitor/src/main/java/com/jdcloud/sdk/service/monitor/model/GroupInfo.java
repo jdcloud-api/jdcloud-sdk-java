@@ -50,11 +50,6 @@ public class GroupInfo  implements java.io.Serializable {
     private String groupName;
 
     /**
-     * 分组内的metric列表
-     */
-    private List<String> metrics;
-
-    /**
      * 分组下metric对应的tags
      */
     private Object tags;
@@ -117,24 +112,6 @@ public class GroupInfo  implements java.io.Serializable {
      */
     public void setGroupName(String groupName) {
         this.groupName = groupName;
-    }
-
-    /**
-     * get 分组内的metric列表
-     *
-     * @return
-     */
-    public List<String> getMetrics() {
-        return metrics;
-    }
-
-    /**
-     * set 分组内的metric列表
-     *
-     * @param metrics
-     */
-    public void setMetrics(List<String> metrics) {
-        this.metrics = metrics;
     }
 
     /**
@@ -205,16 +182,6 @@ public class GroupInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 分组内的metric列表
-     *
-     * @param metrics
-     */
-    public GroupInfo metrics(List<String> metrics) {
-        this.metrics = metrics;
-        return this;
-    }
-
-    /**
      * set 分组下metric对应的tags
      *
      * @param tags
@@ -245,18 +212,6 @@ public class GroupInfo  implements java.io.Serializable {
             this.charts = new ArrayList<>();
         }
         this.charts.add(chart);
-    }
-
-    /**
-     * add item to 分组内的metric列表
-     *
-     * @param metric
-     */
-    public void addMetric(String metric) {
-        if (this.metrics == null) {
-            this.metrics = new ArrayList<>();
-        }
-        this.metrics.add(metric);
     }
 
 }

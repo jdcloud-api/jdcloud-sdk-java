@@ -48,9 +48,9 @@ public class RuleCounting  implements java.io.Serializable {
     private Long normalRuleCount;
 
     /**
-     * 报警联系人列表
+     * 产品标识
      */
-    private String serviceCode;
+    private String product;
 
     /**
      * 监控规则 总数
@@ -118,21 +118,21 @@ public class RuleCounting  implements java.io.Serializable {
     }
 
     /**
-     * get 报警联系人列表
+     * get 产品标识
      *
      * @return
      */
-    public String getServiceCode() {
-        return serviceCode;
+    public String getProduct() {
+        return product;
     }
 
     /**
-     * set 报警联系人列表
+     * set 产品标识
      *
-     * @param serviceCode
+     * @param product
      */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public void setProduct(String product) {
+        this.product = product;
     }
 
     /**
@@ -203,12 +203,12 @@ public class RuleCounting  implements java.io.Serializable {
     }
 
     /**
-     * set 报警联系人列表
+     * set 产品标识
      *
-     * @param serviceCode
+     * @param product
      */
-    public RuleCounting serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public RuleCounting product(String product) {
+        this.product = product;
         return this;
     }
 

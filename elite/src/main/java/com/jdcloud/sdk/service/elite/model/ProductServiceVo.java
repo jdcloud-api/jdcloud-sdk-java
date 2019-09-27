@@ -45,6 +45,16 @@ public class ProductServiceVo  implements java.io.Serializable {
     private String orderNumber;
 
     /**
+     * 订单类型
+     */
+    private Integer orderType;
+
+    /**
+     * 订单类型名称
+     */
+    private String orderTypeName;
+
+    /**
      * 购买人
      */
     private String buyerPin;
@@ -194,6 +204,42 @@ public class ProductServiceVo  implements java.io.Serializable {
      */
     public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
+    }
+
+    /**
+     * get 订单类型
+     *
+     * @return
+     */
+    public Integer getOrderType() {
+        return orderType;
+    }
+
+    /**
+     * set 订单类型
+     *
+     * @param orderType
+     */
+    public void setOrderType(Integer orderType) {
+        this.orderType = orderType;
+    }
+
+    /**
+     * get 订单类型名称
+     *
+     * @return
+     */
+    public String getOrderTypeName() {
+        return orderTypeName;
+    }
+
+    /**
+     * set 订单类型名称
+     *
+     * @param orderTypeName
+     */
+    public void setOrderTypeName(String orderTypeName) {
+        this.orderTypeName = orderTypeName;
     }
 
     /**
@@ -628,6 +674,26 @@ public class ProductServiceVo  implements java.io.Serializable {
      */
     public ProductServiceVo orderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
+        return this;
+    }
+
+    /**
+     * set 订单类型
+     *
+     * @param orderType
+     */
+    public ProductServiceVo orderType(Integer orderType) {
+        this.orderType = orderType;
+        return this;
+    }
+
+    /**
+     * set 订单类型名称
+     *
+     * @param orderTypeName
+     */
+    public ProductServiceVo orderTypeName(String orderTypeName) {
+        this.orderTypeName = orderTypeName;
         return this;
     }
 

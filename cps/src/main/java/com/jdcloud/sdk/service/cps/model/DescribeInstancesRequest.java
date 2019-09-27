@@ -75,6 +75,11 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String subnetId;
 
     /**
+     * 密钥对ID
+     */
+    private String keypairId;
+
+    /**
      * 是否启用外网, yes/no
      */
     private String enableInternet;
@@ -222,6 +227,24 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
     }
 
     /**
+     * get 密钥对ID
+     *
+     * @return
+     */
+    public String getKeypairId() {
+        return keypairId;
+    }
+
+    /**
+     * set 密钥对ID
+     *
+     * @param keypairId
+     */
+    public void setKeypairId(String keypairId) {
+        this.keypairId = keypairId;
+    }
+
+    /**
      * get 是否启用外网, yes/no
      *
      * @return
@@ -349,6 +372,16 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
      */
     public DescribeInstancesRequest subnetId(String subnetId) {
         this.subnetId = subnetId;
+        return this;
+    }
+
+    /**
+     * set 密钥对ID
+     *
+     * @param keypairId
+     */
+    public DescribeInstancesRequest keypairId(String keypairId) {
+        this.keypairId = keypairId;
         return this;
     }
 

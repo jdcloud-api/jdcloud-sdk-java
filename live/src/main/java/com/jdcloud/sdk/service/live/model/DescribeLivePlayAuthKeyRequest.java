@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询播放鉴权KEY
+ * 查询(直播or时移)播放鉴权KEY
  */
 public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 直播的播放域名
+     * (直播or时移)播放域名
 - 仅支持精确匹配
 
      * Required:true
@@ -45,7 +45,7 @@ public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 直播的播放域名
+     * get (直播or时移)播放域名
 - 仅支持精确匹配
 
      *
@@ -56,7 +56,7 @@ public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 直播的播放域名
+     * set (直播or时移)播放域名
 - 仅支持精确匹配
 
      *
@@ -68,7 +68,7 @@ public class DescribeLivePlayAuthKeyRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 直播的播放域名
+     * set (直播or时移)播放域名
 - 仅支持精确匹配
 
      *

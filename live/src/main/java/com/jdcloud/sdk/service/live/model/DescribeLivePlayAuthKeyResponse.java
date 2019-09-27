@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询播放鉴权KEY
+ * 查询(直播or时移)播放鉴权KEY
  */
 public class DescribeLivePlayAuthKeyResponse extends JdcloudResponse<DescribeLivePlayAuthKeyResult> implements java.io.Serializable {
 

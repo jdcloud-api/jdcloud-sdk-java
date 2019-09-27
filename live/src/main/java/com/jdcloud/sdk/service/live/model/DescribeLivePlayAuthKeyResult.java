@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.live.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询播放鉴权KEY
+ * 查询(直播or时移)播放鉴权KEY
  */
 public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,7 +39,7 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     private String playDomain;
 
     /**
-     * 播放鉴权状态
+     * (直播or时移)播放鉴权状态
   on: 开启
   off: 关闭
 
@@ -47,7 +47,7 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     private String authStatus;
 
     /**
-     * 播放鉴权key
+     * (直播or时移)播放鉴权key
      */
     private String authKey;
 
@@ -71,7 +71,7 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * get 播放鉴权状态
+     * get (直播or时移)播放鉴权状态
   on: 开启
   off: 关闭
 
@@ -83,7 +83,7 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * set 播放鉴权状态
+     * set (直播or时移)播放鉴权状态
   on: 开启
   off: 关闭
 
@@ -95,7 +95,7 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * get 播放鉴权key
+     * get (直播or时移)播放鉴权key
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * set 播放鉴权key
+     * set (直播or时移)播放鉴权key
      *
      * @param authKey
      */
@@ -124,7 +124,7 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * set 播放鉴权状态
+     * set (直播or时移)播放鉴权状态
   on: 开启
   off: 关闭
 
@@ -137,7 +137,7 @@ public class DescribeLivePlayAuthKeyResult extends JdcloudResult implements java
     }
 
     /**
-     * set 播放鉴权key
+     * set (直播or时移)播放鉴权key
      *
      * @param authKey
      */

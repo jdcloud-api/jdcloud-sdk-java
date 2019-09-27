@@ -136,10 +136,8 @@ public class InstanceSpec  implements java.io.Serializable {
     private String description;
 
     /**
-     * 密码
-     * Required:true
+     * 密码，不传值会随机生成密码
      */
-    @Required
     private String password;
 
     /**
@@ -148,6 +146,16 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     @Required
     private Integer count;
+
+    /**
+     * 可执行脚本Base64编码后的内容，支持shell和python脚本
+     */
+    private String userData;
+
+    /**
+     * 密钥对id
+     */
+    private String keypairId;
 
     /**
      * 计费配置
@@ -464,7 +472,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 密码
+     * get 密码，不传值会随机生成密码
      *
      * @return
      */
@@ -473,7 +481,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密码
+     * set 密码，不传值会随机生成密码
      *
      * @param password
      */
@@ -497,6 +505,42 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public void setCount(Integer count) {
         this.count = count;
+    }
+
+    /**
+     * get 可执行脚本Base64编码后的内容，支持shell和python脚本
+     *
+     * @return
+     */
+    public String getUserData() {
+        return userData;
+    }
+
+    /**
+     * set 可执行脚本Base64编码后的内容，支持shell和python脚本
+     *
+     * @param userData
+     */
+    public void setUserData(String userData) {
+        this.userData = userData;
+    }
+
+    /**
+     * get 密钥对id
+     *
+     * @return
+     */
+    public String getKeypairId() {
+        return keypairId;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public void setKeypairId(String keypairId) {
+        this.keypairId = keypairId;
     }
 
     /**
@@ -689,7 +733,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密码
+     * set 密码，不传值会随机生成密码
      *
      * @param password
      */
@@ -705,6 +749,26 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public InstanceSpec count(Integer count) {
         this.count = count;
+        return this;
+    }
+
+    /**
+     * set 可执行脚本Base64编码后的内容，支持shell和python脚本
+     *
+     * @param userData
+     */
+    public InstanceSpec userData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public InstanceSpec keypairId(String keypairId) {
+        this.keypairId = keypairId;
         return this;
     }
 

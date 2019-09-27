@@ -85,6 +85,9 @@ import com.jdcloud.sdk.service.cps.client.DescribeVpcsExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceRaidRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceRaidResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceRaidExecutor;
+import com.jdcloud.sdk.service.cps.model.QueryKeypairRequest;
+import com.jdcloud.sdk.service.cps.model.QueryKeypairResponse;
+import com.jdcloud.sdk.service.cps.client.QueryKeypairExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeRegionesRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeRegionesResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeRegionesExecutor;
@@ -97,6 +100,9 @@ import com.jdcloud.sdk.service.cps.client.ModifyServerGroupExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyInstanceExecutor;
+import com.jdcloud.sdk.service.cps.model.QueryKeypairsRequest;
+import com.jdcloud.sdk.service.cps.model.QueryKeypairsResponse;
+import com.jdcloud.sdk.service.cps.client.QueryKeypairsExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeDeviceTypesExecutor;
@@ -133,6 +139,9 @@ import com.jdcloud.sdk.service.cps.client.QueryServerGroupsExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateInstancesRequest;
 import com.jdcloud.sdk.service.cps.model.CreateInstancesResponse;
 import com.jdcloud.sdk.service.cps.client.CreateInstancesExecutor;
+import com.jdcloud.sdk.service.cps.model.ResetPasswordRequest;
+import com.jdcloud.sdk.service.cps.model.ResetPasswordResponse;
+import com.jdcloud.sdk.service.cps.client.ResetPasswordExecutor;
 import com.jdcloud.sdk.service.cps.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.cps.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.cps.client.AssociateElasticIpExecutor;
@@ -154,9 +163,15 @@ import com.jdcloud.sdk.service.cps.client.ApplyElasticIpsExecutor;
 import com.jdcloud.sdk.service.cps.model.DeleteListenerRequest;
 import com.jdcloud.sdk.service.cps.model.DeleteListenerResponse;
 import com.jdcloud.sdk.service.cps.client.DeleteListenerExecutor;
+import com.jdcloud.sdk.service.cps.model.CreateKeypairsRequest;
+import com.jdcloud.sdk.service.cps.model.CreateKeypairsResponse;
+import com.jdcloud.sdk.service.cps.client.CreateKeypairsExecutor;
 import com.jdcloud.sdk.service.cps.model.RemoveServerRequest;
 import com.jdcloud.sdk.service.cps.model.RemoveServerResponse;
 import com.jdcloud.sdk.service.cps.client.RemoveServerExecutor;
+import com.jdcloud.sdk.service.cps.model.ImportKeypairsRequest;
+import com.jdcloud.sdk.service.cps.model.ImportKeypairsResponse;
+import com.jdcloud.sdk.service.cps.client.ImportKeypairsExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateServerGroupRequest;
 import com.jdcloud.sdk.service.cps.model.CreateServerGroupResponse;
 import com.jdcloud.sdk.service.cps.client.CreateServerGroupExecutor;
@@ -205,6 +220,9 @@ import com.jdcloud.sdk.service.cps.client.CreateLoadBalancerExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateVpcRequest;
 import com.jdcloud.sdk.service.cps.model.CreateVpcResponse;
 import com.jdcloud.sdk.service.cps.client.CreateVpcExecutor;
+import com.jdcloud.sdk.service.cps.model.DeleteKeypairsRequest;
+import com.jdcloud.sdk.service.cps.model.DeleteKeypairsResponse;
+import com.jdcloud.sdk.service.cps.client.DeleteKeypairsExecutor;
 import com.jdcloud.sdk.service.cps.model.StopListenerRequest;
 import com.jdcloud.sdk.service.cps.model.StopListenerResponse;
 import com.jdcloud.sdk.service.cps.client.StopListenerExecutor;
@@ -467,6 +485,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询密钥对详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryKeypairResponse queryKeypair(QueryKeypairRequest request) throws JdcloudSdkException {
+        return new QueryKeypairExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询云物理服务器地域列表
      *
      * @param request
@@ -508,6 +537,17 @@ public class CpsClient extends JdcloudClient {
      */
     public ModifyInstanceResponse modifyInstance(ModifyInstanceRequest request) throws JdcloudSdkException {
         return new ModifyInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询密钥对列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryKeypairsResponse queryKeypairs(QueryKeypairsRequest request) throws JdcloudSdkException {
+        return new QueryKeypairsExecutor().client(this).execute(request);
     }
 
     /**
@@ -664,6 +704,18 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 重置云物理服务器密码
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ResetPasswordResponse resetPassword(ResetPasswordRequest request) throws JdcloudSdkException {
+        return new ResetPasswordExecutor().client(this).execute(request);
+    }
+
+    /**
      * 绑定弹性公网IP
 
      *
@@ -743,6 +795,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 创建密钥对
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateKeypairsResponse createKeypairs(CreateKeypairsRequest request) throws JdcloudSdkException {
+        return new CreateKeypairsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 移除后端服务器
      *
      * @param request
@@ -751,6 +814,17 @@ public class CpsClient extends JdcloudClient {
      */
     public RemoveServerResponse removeServer(RemoveServerRequest request) throws JdcloudSdkException {
         return new RemoveServerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 导入密钥对
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ImportKeypairsResponse importKeypairs(ImportKeypairsRequest request) throws JdcloudSdkException {
+        return new ImportKeypairsExecutor().client(this).execute(request);
     }
 
     /**
@@ -932,6 +1006,17 @@ public class CpsClient extends JdcloudClient {
      */
     public CreateVpcResponse createVpc(CreateVpcRequest request) throws JdcloudSdkException {
         return new CreateVpcExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除密钥对
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteKeypairsResponse deleteKeypairs(DeleteKeypairsRequest request) throws JdcloudSdkException {
+        return new DeleteKeypairsExecutor().client(this).execute(request);
     }
 
     /**
