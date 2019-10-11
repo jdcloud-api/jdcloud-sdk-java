@@ -78,24 +78,39 @@ public class DataVO  implements java.io.Serializable {
     private String priDomain;
 
     /**
-     * 实例状态[0-创建中，1-运行中，2-停止]
+     * IoT Hub实例状态[10~100为创建中,0或1-运行中,2-欠费停服,3-待删除]
      */
-    private String status;
-
-    /**
-     * 资费形式
-     */
-    private String feetype;
+    private Integer status;
 
     /**
      * 创建时间
      */
-    private String createTime;
+    private Integer createTime;
+
+    /**
+     * 实例到期时间
+     */
+    private Integer endTime;
+
+    /**
+     * 最大在线设备数
+     */
+    private Integer maxDevices;
+
+    /**
+     * 最大消息条数
+     */
+    private Integer maxMessage;
 
     /**
      * 实例编号
      */
     private String instanceId;
+
+    /**
+     * 实例类型[0-独享，1-共享]
+     */
+    private String instanceType;
 
 
     /**
@@ -261,39 +276,21 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * get 实例状态[0-创建中，1-运行中，2-停止]
+     * get IoT Hub实例状态[10~100为创建中,0或1-运行中,2-欠费停服,3-待删除]
      *
      * @return
      */
-    public String getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
     /**
-     * set 实例状态[0-创建中，1-运行中，2-停止]
+     * set IoT Hub实例状态[10~100为创建中,0或1-运行中,2-欠费停服,3-待删除]
      *
      * @param status
      */
-    public void setStatus(String status) {
+    public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    /**
-     * get 资费形式
-     *
-     * @return
-     */
-    public String getFeetype() {
-        return feetype;
-    }
-
-    /**
-     * set 资费形式
-     *
-     * @param feetype
-     */
-    public void setFeetype(String feetype) {
-        this.feetype = feetype;
     }
 
     /**
@@ -301,7 +298,7 @@ public class DataVO  implements java.io.Serializable {
      *
      * @return
      */
-    public String getCreateTime() {
+    public Integer getCreateTime() {
         return createTime;
     }
 
@@ -310,8 +307,62 @@ public class DataVO  implements java.io.Serializable {
      *
      * @param createTime
      */
-    public void setCreateTime(String createTime) {
+    public void setCreateTime(Integer createTime) {
         this.createTime = createTime;
+    }
+
+    /**
+     * get 实例到期时间
+     *
+     * @return
+     */
+    public Integer getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 实例到期时间
+     *
+     * @param endTime
+     */
+    public void setEndTime(Integer endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * get 最大在线设备数
+     *
+     * @return
+     */
+    public Integer getMaxDevices() {
+        return maxDevices;
+    }
+
+    /**
+     * set 最大在线设备数
+     *
+     * @param maxDevices
+     */
+    public void setMaxDevices(Integer maxDevices) {
+        this.maxDevices = maxDevices;
+    }
+
+    /**
+     * get 最大消息条数
+     *
+     * @return
+     */
+    public Integer getMaxMessage() {
+        return maxMessage;
+    }
+
+    /**
+     * set 最大消息条数
+     *
+     * @param maxMessage
+     */
+    public void setMaxMessage(Integer maxMessage) {
+        this.maxMessage = maxMessage;
     }
 
     /**
@@ -330,6 +381,24 @@ public class DataVO  implements java.io.Serializable {
      */
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
+    }
+
+    /**
+     * get 实例类型[0-独享，1-共享]
+     *
+     * @return
+     */
+    public String getInstanceType() {
+        return instanceType;
+    }
+
+    /**
+     * set 实例类型[0-独享，1-共享]
+     *
+     * @param instanceType
+     */
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
     }
 
 
@@ -424,22 +493,12 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态[0-创建中，1-运行中，2-停止]
+     * set IoT Hub实例状态[10~100为创建中,0或1-运行中,2-欠费停服,3-待删除]
      *
      * @param status
      */
-    public DataVO status(String status) {
+    public DataVO status(Integer status) {
         this.status = status;
-        return this;
-    }
-
-    /**
-     * set 资费形式
-     *
-     * @param feetype
-     */
-    public DataVO feetype(String feetype) {
-        this.feetype = feetype;
         return this;
     }
 
@@ -448,8 +507,38 @@ public class DataVO  implements java.io.Serializable {
      *
      * @param createTime
      */
-    public DataVO createTime(String createTime) {
+    public DataVO createTime(Integer createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 实例到期时间
+     *
+     * @param endTime
+     */
+    public DataVO endTime(Integer endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 最大在线设备数
+     *
+     * @param maxDevices
+     */
+    public DataVO maxDevices(Integer maxDevices) {
+        this.maxDevices = maxDevices;
+        return this;
+    }
+
+    /**
+     * set 最大消息条数
+     *
+     * @param maxMessage
+     */
+    public DataVO maxMessage(Integer maxMessage) {
+        this.maxMessage = maxMessage;
         return this;
     }
 
@@ -460,6 +549,16 @@ public class DataVO  implements java.io.Serializable {
      */
     public DataVO instanceId(String instanceId) {
         this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 实例类型[0-独享，1-共享]
+     *
+     * @param instanceType
+     */
+    public DataVO instanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
 

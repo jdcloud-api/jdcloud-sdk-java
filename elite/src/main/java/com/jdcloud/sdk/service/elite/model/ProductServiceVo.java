@@ -45,6 +45,11 @@ public class ProductServiceVo  implements java.io.Serializable {
     private String orderNumber;
 
     /**
+     * 续费订单所关联的新购订单号，该字段只针对续费单有效，新购单该字段为null
+     */
+    private String refOrderNumber;
+
+    /**
      * 订单类型
      */
     private Integer orderType;
@@ -204,6 +209,24 @@ public class ProductServiceVo  implements java.io.Serializable {
      */
     public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
+    }
+
+    /**
+     * get 续费订单所关联的新购订单号，该字段只针对续费单有效，新购单该字段为null
+     *
+     * @return
+     */
+    public String getRefOrderNumber() {
+        return refOrderNumber;
+    }
+
+    /**
+     * set 续费订单所关联的新购订单号，该字段只针对续费单有效，新购单该字段为null
+     *
+     * @param refOrderNumber
+     */
+    public void setRefOrderNumber(String refOrderNumber) {
+        this.refOrderNumber = refOrderNumber;
     }
 
     /**
@@ -674,6 +697,16 @@ public class ProductServiceVo  implements java.io.Serializable {
      */
     public ProductServiceVo orderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
+        return this;
+    }
+
+    /**
+     * set 续费订单所关联的新购订单号，该字段只针对续费单有效，新购单该字段为null
+     *
+     * @param refOrderNumber
+     */
+    public ProductServiceVo refOrderNumber(String refOrderNumber) {
+        this.refOrderNumber = refOrderNumber;
         return this;
     }
 
