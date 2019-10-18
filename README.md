@@ -25,7 +25,7 @@
  
 您还可以下载sdk源代码自行使用。
  
-SDK使用中的任何问题，欢迎您在Issues页面交流。
+SDK使用中的任何问题，欢迎您在[SDK使用问题反馈页面](https://github.com/jdcloud-api/jdcloud-sdk-java/issues)交流。
 
 **注意：**
 
