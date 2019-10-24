@@ -31,6 +31,27 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.jcq.model.ListDeadLettersRequest;
+import com.jdcloud.sdk.service.jcq.model.ListDeadLettersResponse;
+import com.jdcloud.sdk.service.jcq.client.ListDeadLettersExecutor;
+import com.jdcloud.sdk.service.jcq.model.DescribeDeadLetterNumbersRequest;
+import com.jdcloud.sdk.service.jcq.model.DescribeDeadLetterNumbersResponse;
+import com.jdcloud.sdk.service.jcq.client.DescribeDeadLetterNumbersExecutor;
+import com.jdcloud.sdk.service.jcq.model.CleanMessagesRequest;
+import com.jdcloud.sdk.service.jcq.model.CleanMessagesResponse;
+import com.jdcloud.sdk.service.jcq.client.CleanMessagesExecutor;
+import com.jdcloud.sdk.service.jcq.model.DeleteTopicRequest;
+import com.jdcloud.sdk.service.jcq.model.DeleteTopicResponse;
+import com.jdcloud.sdk.service.jcq.client.DeleteTopicExecutor;
+import com.jdcloud.sdk.service.jcq.model.ResendDeadLettersRequest;
+import com.jdcloud.sdk.service.jcq.model.ResendDeadLettersResponse;
+import com.jdcloud.sdk.service.jcq.client.ResendDeadLettersExecutor;
+import com.jdcloud.sdk.service.jcq.model.DescribeAccessPointRequest;
+import com.jdcloud.sdk.service.jcq.model.DescribeAccessPointResponse;
+import com.jdcloud.sdk.service.jcq.client.DescribeAccessPointExecutor;
+import com.jdcloud.sdk.service.jcq.model.DescribeTopicsRequest;
+import com.jdcloud.sdk.service.jcq.model.DescribeTopicsResponse;
+import com.jdcloud.sdk.service.jcq.client.DescribeTopicsExecutor;
 import com.jdcloud.sdk.service.jcq.model.RemovePermissionRequest;
 import com.jdcloud.sdk.service.jcq.model.RemovePermissionResponse;
 import com.jdcloud.sdk.service.jcq.client.RemovePermissionExecutor;
@@ -43,30 +64,18 @@ import com.jdcloud.sdk.service.jcq.client.DeleteDeadLettersExecutor;
 import com.jdcloud.sdk.service.jcq.model.CreateTopicRequest;
 import com.jdcloud.sdk.service.jcq.model.CreateTopicResponse;
 import com.jdcloud.sdk.service.jcq.client.CreateTopicExecutor;
-import com.jdcloud.sdk.service.jcq.model.ListDeadLettersRequest;
-import com.jdcloud.sdk.service.jcq.model.ListDeadLettersResponse;
-import com.jdcloud.sdk.service.jcq.client.ListDeadLettersExecutor;
-import com.jdcloud.sdk.service.jcq.model.DescribeDeadLetterNumbersRequest;
-import com.jdcloud.sdk.service.jcq.model.DescribeDeadLetterNumbersResponse;
-import com.jdcloud.sdk.service.jcq.client.DescribeDeadLetterNumbersExecutor;
 import com.jdcloud.sdk.service.jcq.model.CreateSubscriptionRequest;
 import com.jdcloud.sdk.service.jcq.model.CreateSubscriptionResponse;
 import com.jdcloud.sdk.service.jcq.client.CreateSubscriptionExecutor;
-import com.jdcloud.sdk.service.jcq.model.CleanMessagesRequest;
-import com.jdcloud.sdk.service.jcq.model.CleanMessagesResponse;
-import com.jdcloud.sdk.service.jcq.client.CleanMessagesExecutor;
-import com.jdcloud.sdk.service.jcq.model.DeleteTopicRequest;
-import com.jdcloud.sdk.service.jcq.model.DeleteTopicResponse;
-import com.jdcloud.sdk.service.jcq.client.DeleteTopicExecutor;
-import com.jdcloud.sdk.service.jcq.model.ResendDeadLettersRequest;
-import com.jdcloud.sdk.service.jcq.model.ResendDeadLettersResponse;
-import com.jdcloud.sdk.service.jcq.client.ResendDeadLettersExecutor;
+import com.jdcloud.sdk.service.jcq.model.DescribeMessageTraceRequest;
+import com.jdcloud.sdk.service.jcq.model.DescribeMessageTraceResponse;
+import com.jdcloud.sdk.service.jcq.client.DescribeMessageTraceExecutor;
 import com.jdcloud.sdk.service.jcq.model.DescribeConsumerGroupIdsRequest;
 import com.jdcloud.sdk.service.jcq.model.DescribeConsumerGroupIdsResponse;
 import com.jdcloud.sdk.service.jcq.client.DescribeConsumerGroupIdsExecutor;
-import com.jdcloud.sdk.service.jcq.model.DescribeAccessPointRequest;
-import com.jdcloud.sdk.service.jcq.model.DescribeAccessPointResponse;
-import com.jdcloud.sdk.service.jcq.client.DescribeAccessPointExecutor;
+import com.jdcloud.sdk.service.jcq.model.ModifySubscriptionAttributeRequest;
+import com.jdcloud.sdk.service.jcq.model.ModifySubscriptionAttributeResponse;
+import com.jdcloud.sdk.service.jcq.client.ModifySubscriptionAttributeExecutor;
 import com.jdcloud.sdk.service.jcq.model.AddPermissionRequest;
 import com.jdcloud.sdk.service.jcq.model.AddPermissionResponse;
 import com.jdcloud.sdk.service.jcq.client.AddPermissionExecutor;
@@ -79,15 +88,15 @@ import com.jdcloud.sdk.service.jcq.client.DescribeTopicExecutor;
 import com.jdcloud.sdk.service.jcq.model.DescribeMessagesRequest;
 import com.jdcloud.sdk.service.jcq.model.DescribeMessagesResponse;
 import com.jdcloud.sdk.service.jcq.client.DescribeMessagesExecutor;
-import com.jdcloud.sdk.service.jcq.model.DescribeTopicsRequest;
-import com.jdcloud.sdk.service.jcq.model.DescribeTopicsResponse;
-import com.jdcloud.sdk.service.jcq.client.DescribeTopicsExecutor;
 import com.jdcloud.sdk.service.jcq.model.DescribeSubscriptionsRequest;
 import com.jdcloud.sdk.service.jcq.model.DescribeSubscriptionsResponse;
 import com.jdcloud.sdk.service.jcq.client.DescribeSubscriptionsExecutor;
 import com.jdcloud.sdk.service.jcq.model.DescribeMessageRequest;
 import com.jdcloud.sdk.service.jcq.model.DescribeMessageResponse;
 import com.jdcloud.sdk.service.jcq.client.DescribeMessageExecutor;
+import com.jdcloud.sdk.service.jcq.model.DescribeMessagesByBusinessIdRequest;
+import com.jdcloud.sdk.service.jcq.model.DescribeMessagesByBusinessIdResponse;
+import com.jdcloud.sdk.service.jcq.client.DescribeMessagesByBusinessIdExecutor;
 import com.jdcloud.sdk.service.jcq.model.DescribePermissionRequest;
 import com.jdcloud.sdk.service.jcq.model.DescribePermissionResponse;
 import com.jdcloud.sdk.service.jcq.client.DescribePermissionExecutor;
@@ -105,7 +114,7 @@ public class JcqClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "jcq.jdcloud-api.com";
     public final static String ServiceName = "jcq";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -146,6 +155,83 @@ public class JcqClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 死信队列列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListDeadLettersResponse listDeadLetters(ListDeadLettersRequest request) throws JdcloudSdkException {
+        return new ListDeadLettersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 死信消息数(按照用户或者consumerGroupId)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDeadLetterNumbersResponse describeDeadLetterNumbers(DescribeDeadLetterNumbersRequest request) throws JdcloudSdkException {
+        return new DescribeDeadLetterNumbersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 清除消息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CleanMessagesResponse cleanMessages(CleanMessagesRequest request) throws JdcloudSdkException {
+        return new CleanMessagesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除单个topic
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteTopicResponse deleteTopic(DeleteTopicRequest request) throws JdcloudSdkException {
+        return new DeleteTopicExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重发死信消息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ResendDeadLettersResponse resendDeadLetters(ResendDeadLettersRequest request) throws JdcloudSdkException {
+        return new ResendDeadLettersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看接入点接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAccessPointResponse describeAccessPoint(DescribeAccessPointRequest request) throws JdcloudSdkException {
+        return new DescribeAccessPointExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询topic列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTopicsResponse describeTopics(DescribeTopicsRequest request) throws JdcloudSdkException {
+        return new DescribeTopicsExecutor().client(this).execute(request);
+    }
 
     /**
      * 删除当前topic对目标用户授权的权限
@@ -192,28 +278,6 @@ public class JcqClient extends JdcloudClient {
     }
 
     /**
-     * 死信队列列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListDeadLettersResponse listDeadLetters(ListDeadLettersRequest request) throws JdcloudSdkException {
-        return new ListDeadLettersExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 死信消息数(按照用户或者consumerGroupId)
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeDeadLetterNumbersResponse describeDeadLetterNumbers(DescribeDeadLetterNumbersRequest request) throws JdcloudSdkException {
-        return new DescribeDeadLetterNumbersExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建订阅
      *
      * @param request
@@ -225,36 +289,14 @@ public class JcqClient extends JdcloudClient {
     }
 
     /**
-     * 清除消息
+     * 查询消息轨迹
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CleanMessagesResponse cleanMessages(CleanMessagesRequest request) throws JdcloudSdkException {
-        return new CleanMessagesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除单个topic
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteTopicResponse deleteTopic(DeleteTopicRequest request) throws JdcloudSdkException {
-        return new DeleteTopicExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 重发死信消息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ResendDeadLettersResponse resendDeadLetters(ResendDeadLettersRequest request) throws JdcloudSdkException {
-        return new ResendDeadLettersExecutor().client(this).execute(request);
+    public DescribeMessageTraceResponse describeMessageTrace(DescribeMessageTraceRequest request) throws JdcloudSdkException {
+        return new DescribeMessageTraceExecutor().client(this).execute(request);
     }
 
     /**
@@ -269,14 +311,14 @@ public class JcqClient extends JdcloudClient {
     }
 
     /**
-     * 查看接入点接口
+     * 修改订阅
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeAccessPointResponse describeAccessPoint(DescribeAccessPointRequest request) throws JdcloudSdkException {
-        return new DescribeAccessPointExecutor().client(this).execute(request);
+    public ModifySubscriptionAttributeResponse modifySubscriptionAttribute(ModifySubscriptionAttributeRequest request) throws JdcloudSdkException {
+        return new ModifySubscriptionAttributeExecutor().client(this).execute(request);
     }
 
     /**
@@ -324,17 +366,6 @@ public class JcqClient extends JdcloudClient {
     }
 
     /**
-     * 查询topic列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeTopicsResponse describeTopics(DescribeTopicsRequest request) throws JdcloudSdkException {
-        return new DescribeTopicsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 订阅列表
      *
      * @param request
@@ -354,6 +385,17 @@ public class JcqClient extends JdcloudClient {
      */
     public DescribeMessageResponse describeMessage(DescribeMessageRequest request) throws JdcloudSdkException {
         return new DescribeMessageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据businessId查询消息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeMessagesByBusinessIdResponse describeMessagesByBusinessId(DescribeMessagesByBusinessIdRequest request) throws JdcloudSdkException {
+        return new DescribeMessagesByBusinessIdExecutor().client(this).execute(request);
     }
 
     /**

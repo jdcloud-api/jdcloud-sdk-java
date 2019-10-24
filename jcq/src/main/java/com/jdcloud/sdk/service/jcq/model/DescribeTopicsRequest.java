@@ -38,12 +38,12 @@ public class DescribeTopicsRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 分页之中的每页大小
+     * 分页大小；默认为10；取值范围[10, 100]
      */
     private Integer pageSize;
 
     /**
-     * 分页之中的页码
+     * 页码
      */
     private Integer pageNumber;
 
@@ -66,7 +66,7 @@ public class DescribeTopicsRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 分页之中的每页大小
+     * get 分页大小；默认为10；取值范围[10, 100]
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class DescribeTopicsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分页之中的每页大小
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -84,7 +84,7 @@ public class DescribeTopicsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 分页之中的页码
+     * get 页码
      *
      * @return
      */
@@ -93,7 +93,7 @@ public class DescribeTopicsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分页之中的页码
+     * set 页码
      *
      * @param pageNumber
      */
@@ -157,7 +157,7 @@ public class DescribeTopicsRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 分页之中的每页大小
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -167,7 +167,7 @@ public class DescribeTopicsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分页之中的页码
+     * set 页码
      *
      * @param pageNumber
      */

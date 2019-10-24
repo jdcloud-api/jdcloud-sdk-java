@@ -59,7 +59,7 @@ public class DescribeVpcsRequest extends JdcloudRequest implements java.io.Seria
     private List<Filter> filters;
 
     /**
-     * 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -141,7 +141,7 @@ public class DescribeVpcsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * get 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @return
      */
@@ -150,7 +150,7 @@ public class DescribeVpcsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -201,7 +201,7 @@ public class DescribeVpcsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */

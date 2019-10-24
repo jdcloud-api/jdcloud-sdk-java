@@ -40,7 +40,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
+     * 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
      */
     private String imageSource;
 
@@ -58,6 +58,11 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      * 镜像支持的系统盘类型，[localDisk,cloudDisk]
      */
     private String rootDeviceType;
+
+    /**
+     * 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+     */
+    private String launchPermission;
 
     /**
      * &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
@@ -83,7 +88,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
+     * get 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
      *
      * @return
      */
@@ -92,7 +97,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
+     * set 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
      *
      * @param imageSource
      */
@@ -152,6 +157,24 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setRootDeviceType(String rootDeviceType) {
         this.rootDeviceType = rootDeviceType;
+    }
+
+    /**
+     * get 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+     *
+     * @return
+     */
+    public String getLaunchPermission() {
+        return launchPermission;
+    }
+
+    /**
+     * set 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+     *
+     * @param launchPermission
+     */
+    public void setLaunchPermission(String launchPermission) {
+        this.launchPermission = launchPermission;
     }
 
     /**
@@ -228,7 +251,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private
+     * set 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
      *
      * @param imageSource
      */
@@ -264,6 +287,16 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      */
     public DescribeImagesRequest rootDeviceType(String rootDeviceType) {
         this.rootDeviceType = rootDeviceType;
+        return this;
+    }
+
+    /**
+     * set 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+     *
+     * @param launchPermission
+     */
+    public DescribeImagesRequest launchPermission(String launchPermission) {
+        this.launchPermission = launchPermission;
         return this;
     }
 

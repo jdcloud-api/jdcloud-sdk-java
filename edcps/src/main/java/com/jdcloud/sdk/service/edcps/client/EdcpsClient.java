@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.edcps.client.ModifyInstanceExecutor;
 import com.jdcloud.sdk.service.edcps.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.edcps.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.edcps.client.DisassociateElasticIpExecutor;
+import com.jdcloud.sdk.service.edcps.model.CreateKeypairsRequest;
+import com.jdcloud.sdk.service.edcps.model.CreateKeypairsResponse;
+import com.jdcloud.sdk.service.edcps.client.CreateKeypairsExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeVpcsRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeVpcsResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeVpcsExecutor;
@@ -76,30 +79,45 @@ import com.jdcloud.sdk.service.edcps.client.DescribeSubnetsExecutor;
 import com.jdcloud.sdk.service.edcps.model.DeleteVpcRequest;
 import com.jdcloud.sdk.service.edcps.model.DeleteVpcResponse;
 import com.jdcloud.sdk.service.edcps.client.DeleteVpcExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeElasticIpStockRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeElasticIpStockResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeElasticIpStockExecutor;
+import com.jdcloud.sdk.service.edcps.model.ImportKeypairsRequest;
+import com.jdcloud.sdk.service.edcps.model.ImportKeypairsResponse;
+import com.jdcloud.sdk.service.edcps.client.ImportKeypairsExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeSubnetRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeSubnetResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeSubnetExecutor;
-import com.jdcloud.sdk.service.edcps.model.ModifyBandwidthRequest;
-import com.jdcloud.sdk.service.edcps.model.ModifyBandwidthResponse;
-import com.jdcloud.sdk.service.edcps.client.ModifyBandwidthExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeLineTypesRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeLineTypesResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeLineTypesExecutor;
 import com.jdcloud.sdk.service.edcps.model.StartInstanceRequest;
 import com.jdcloud.sdk.service.edcps.model.StartInstanceResponse;
 import com.jdcloud.sdk.service.edcps.client.StartInstanceExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeKeypairsRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeKeypairsResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeKeypairsExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeKeypairRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeKeypairResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeKeypairExecutor;
 import com.jdcloud.sdk.service.edcps.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.edcps.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.edcps.client.AssociateElasticIpExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeDeviceStockRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeDeviceStockResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeDeviceStockExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeInstanceRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeInstanceResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeInstanceExecutor;
 import com.jdcloud.sdk.service.edcps.model.CreateInstancesRequest;
 import com.jdcloud.sdk.service.edcps.model.CreateInstancesResponse;
 import com.jdcloud.sdk.service.edcps.client.CreateInstancesExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeAvailablePrivateIpRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeAvailablePrivateIpResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeAvailablePrivateIpExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeInstanceNameRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeInstanceNameResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeInstanceNameExecutor;
-import com.jdcloud.sdk.service.edcps.model.QueryEdCPSRegionsRequest;
-import com.jdcloud.sdk.service.edcps.model.QueryEdCPSRegionsResponse;
-import com.jdcloud.sdk.service.edcps.client.QueryEdCPSRegionsExecutor;
 import com.jdcloud.sdk.service.edcps.model.ResetPasswordRequest;
 import com.jdcloud.sdk.service.edcps.model.ResetPasswordResponse;
 import com.jdcloud.sdk.service.edcps.client.ResetPasswordExecutor;
@@ -109,6 +127,9 @@ import com.jdcloud.sdk.service.edcps.client.CreateSubnetExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeElasticIpRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeElasticIpResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeElasticIpExecutor;
+import com.jdcloud.sdk.service.edcps.model.DeleteKeypairsRequest;
+import com.jdcloud.sdk.service.edcps.model.DeleteKeypairsResponse;
+import com.jdcloud.sdk.service.edcps.client.DeleteKeypairsExecutor;
 import com.jdcloud.sdk.service.edcps.model.ModifyVpcRequest;
 import com.jdcloud.sdk.service.edcps.model.ModifyVpcResponse;
 import com.jdcloud.sdk.service.edcps.client.ModifyVpcExecutor;
@@ -130,6 +151,9 @@ import com.jdcloud.sdk.service.edcps.client.StopInstanceExecutor;
 import com.jdcloud.sdk.service.edcps.model.ApplyElasticIpsRequest;
 import com.jdcloud.sdk.service.edcps.model.ApplyElasticIpsResponse;
 import com.jdcloud.sdk.service.edcps.client.ApplyElasticIpsExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeEdCPSRegionsRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeEdCPSRegionsResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeEdCPSRegionsExecutor;
 
 /**
  * edcpsClient
@@ -201,6 +225,17 @@ public class EdcpsClient extends JdcloudClient {
      */
     public DisassociateElasticIpResponse disassociateElasticIp(DisassociateElasticIpRequest request) throws JdcloudSdkException {
         return new DisassociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建密钥对
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateKeypairsResponse createKeypairs(CreateKeypairsRequest request) throws JdcloudSdkException {
+        return new CreateKeypairsExecutor().client(this).execute(request);
     }
 
     /**
@@ -353,6 +388,28 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询弹性公网IP库存
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeElasticIpStockResponse describeElasticIpStock(DescribeElasticIpStockRequest request) throws JdcloudSdkException {
+        return new DescribeElasticIpStockExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 导入密钥对
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ImportKeypairsResponse importKeypairs(ImportKeypairsRequest request) throws JdcloudSdkException {
+        return new ImportKeypairsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询子网详情
      *
      * @param request
@@ -364,17 +421,14 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
-     * 升级分布式云物理服务器外网带宽，只能操作running或者stopped状态的服务器&lt;br/&gt;
-- 不支持未启用外网的服务器升级带宽
-- 外网带宽不支持降级
-
+     * 查询链路类型列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyBandwidthResponse modifyBandwidth(ModifyBandwidthRequest request) throws JdcloudSdkException {
-        return new ModifyBandwidthExecutor().client(this).execute(request);
+    public DescribeLineTypesResponse describeLineTypes(DescribeLineTypesRequest request) throws JdcloudSdkException {
+        return new DescribeLineTypesExecutor().client(this).execute(request);
     }
 
     /**
@@ -389,6 +443,28 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询密钥对列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKeypairsResponse describeKeypairs(DescribeKeypairsRequest request) throws JdcloudSdkException {
+        return new DescribeKeypairsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询密钥对详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKeypairResponse describeKeypair(DescribeKeypairRequest request) throws JdcloudSdkException {
+        return new DescribeKeypairExecutor().client(this).execute(request);
+    }
+
+    /**
      * 绑定弹性公网IP
 
      *
@@ -398,6 +474,17 @@ public class EdcpsClient extends JdcloudClient {
      */
     public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
         return new AssociateElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询分布式云物理服务器库存
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDeviceStockResponse describeDeviceStock(DescribeDeviceStockRequest request) throws JdcloudSdkException {
+        return new DescribeDeviceStockExecutor().client(this).execute(request);
     }
 
     /**
@@ -440,6 +527,17 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询可用的私有IP列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAvailablePrivateIpResponse describeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) throws JdcloudSdkException {
+        return new DescribeAvailablePrivateIpExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询分布式云物理服务器名称
      *
      * @param request
@@ -448,17 +546,6 @@ public class EdcpsClient extends JdcloudClient {
      */
     public DescribeInstanceNameResponse describeInstanceName(DescribeInstanceNameRequest request) throws JdcloudSdkException {
         return new DescribeInstanceNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询分布式分布式云物理服务器地域列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryEdCPSRegionsResponse queryEdCPSRegions(QueryEdCPSRegionsRequest request) throws JdcloudSdkException {
-        return new QueryEdCPSRegionsExecutor().client(this).execute(request);
     }
 
     /**
@@ -493,6 +580,17 @@ public class EdcpsClient extends JdcloudClient {
      */
     public DescribeElasticIpResponse describeElasticIp(DescribeElasticIpRequest request) throws JdcloudSdkException {
         return new DescribeElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除密钥对
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteKeypairsResponse deleteKeypairs(DeleteKeypairsRequest request) throws JdcloudSdkException {
+        return new DeleteKeypairsExecutor().client(this).execute(request);
     }
 
     /**
@@ -574,6 +672,17 @@ public class EdcpsClient extends JdcloudClient {
      */
     public ApplyElasticIpsResponse applyElasticIps(ApplyElasticIpsRequest request) throws JdcloudSdkException {
         return new ApplyElasticIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询分布式分布式云物理服务器地域列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeEdCPSRegionsResponse describeEdCPSRegions(DescribeEdCPSRegionsRequest request) throws JdcloudSdkException {
+        return new DescribeEdCPSRegionsExecutor().client(this).execute(request);
     }
 
 

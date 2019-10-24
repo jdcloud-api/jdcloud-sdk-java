@@ -84,6 +84,11 @@ public class Instance  implements java.io.Serializable {
     private Integer bandwidth;
 
     /**
+     * 额外上行带宽, 单位Mbps
+     */
+    private Integer extraUplinkBandwidth;
+
+    /**
      * 镜像类型, 如 standard
      */
     private String imageType;
@@ -177,6 +182,16 @@ public class Instance  implements java.io.Serializable {
      * 公网IPv6
      */
     private String publicIpv6;
+
+    /**
+     * 密钥对id
+     */
+    private String keypairId;
+
+    /**
+     * agent状态
+     */
+    private String agentStatus;
 
     /**
      * 计费信息
@@ -362,6 +377,24 @@ public class Instance  implements java.io.Serializable {
      */
     public void setBandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+    }
+
+    /**
+     * get 额外上行带宽, 单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtraUplinkBandwidth() {
+        return extraUplinkBandwidth;
+    }
+
+    /**
+     * set 额外上行带宽, 单位Mbps
+     *
+     * @param extraUplinkBandwidth
+     */
+    public void setExtraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
     }
 
     /**
@@ -707,6 +740,42 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 密钥对id
+     *
+     * @return
+     */
+    public String getKeypairId() {
+        return keypairId;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public void setKeypairId(String keypairId) {
+        this.keypairId = keypairId;
+    }
+
+    /**
+     * get agent状态
+     *
+     * @return
+     */
+    public String getAgentStatus() {
+        return agentStatus;
+    }
+
+    /**
+     * set agent状态
+     *
+     * @param agentStatus
+     */
+    public void setAgentStatus(String agentStatus) {
+        this.agentStatus = agentStatus;
+    }
+
+    /**
      * get 计费信息
      *
      * @return
@@ -822,6 +891,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance bandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+        return this;
+    }
+
+    /**
+     * set 额外上行带宽, 单位Mbps
+     *
+     * @param extraUplinkBandwidth
+     */
+    public Instance extraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
         return this;
     }
 
@@ -1012,6 +1091,26 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance publicIpv6(String publicIpv6) {
         this.publicIpv6 = publicIpv6;
+        return this;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public Instance keypairId(String keypairId) {
+        this.keypairId = keypairId;
+        return this;
+    }
+
+    /**
+     * set agent状态
+     *
+     * @param agentStatus
+     */
+    public Instance agentStatus(String agentStatus) {
+        this.agentStatus = agentStatus;
         return this;
     }
 

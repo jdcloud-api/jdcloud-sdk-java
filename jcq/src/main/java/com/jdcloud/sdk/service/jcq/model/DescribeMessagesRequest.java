@@ -49,6 +49,16 @@ public class DescribeMessagesRequest extends JdcloudRequest implements java.io.S
     private String endTime;
 
     /**
+     * 分页大小；默认为10；取值范围[10, 100]
+     */
+    private Integer pageSize;
+
+    /**
+     * 页码
+     */
+    private Integer pageNumber;
+
+    /**
      * 所在区域的Region ID
      * Required:true
      */
@@ -97,6 +107,42 @@ public class DescribeMessagesRequest extends JdcloudRequest implements java.io.S
      */
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    /**
+     * get 分页大小；默认为10；取值范围[10, 100]
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 分页大小；默认为10；取值范围[10, 100]
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    /**
+     * get 页码
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 页码
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
     }
 
     /**
@@ -153,6 +199,26 @@ public class DescribeMessagesRequest extends JdcloudRequest implements java.io.S
      */
     public DescribeMessagesRequest endTime(String endTime) {
         this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 分页大小；默认为10；取值范围[10, 100]
+     *
+     * @param pageSize
+     */
+    public DescribeMessagesRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 页码
+     *
+     * @param pageNumber
+     */
+    public DescribeMessagesRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
 

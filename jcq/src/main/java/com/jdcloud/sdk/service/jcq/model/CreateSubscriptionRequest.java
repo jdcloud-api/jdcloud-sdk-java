@@ -42,6 +42,21 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
     private String consumerGroupId;
 
     /**
+     * 消息隐藏时间单位秒
+     */
+    private Integer messageInvisibleTimeInSeconds;
+
+    /**
+     * 是否开启死信队列[true, false]
+     */
+    private Boolean dlqEnable;
+
+    /**
+     * 最大重试次数dlqEnable为true必填,范围[0,16]
+     */
+    private Integer maxRetryTimes;
+
+    /**
      * 所在区域的Region ID
      * Required:true
      */
@@ -72,6 +87,60 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
      */
     public void setConsumerGroupId(String consumerGroupId) {
         this.consumerGroupId = consumerGroupId;
+    }
+
+    /**
+     * get 消息隐藏时间单位秒
+     *
+     * @return
+     */
+    public Integer getMessageInvisibleTimeInSeconds() {
+        return messageInvisibleTimeInSeconds;
+    }
+
+    /**
+     * set 消息隐藏时间单位秒
+     *
+     * @param messageInvisibleTimeInSeconds
+     */
+    public void setMessageInvisibleTimeInSeconds(Integer messageInvisibleTimeInSeconds) {
+        this.messageInvisibleTimeInSeconds = messageInvisibleTimeInSeconds;
+    }
+
+    /**
+     * get 是否开启死信队列[true, false]
+     *
+     * @return
+     */
+    public Boolean getDlqEnable() {
+        return dlqEnable;
+    }
+
+    /**
+     * set 是否开启死信队列[true, false]
+     *
+     * @param dlqEnable
+     */
+    public void setDlqEnable(Boolean dlqEnable) {
+        this.dlqEnable = dlqEnable;
+    }
+
+    /**
+     * get 最大重试次数dlqEnable为true必填,范围[0,16]
+     *
+     * @return
+     */
+    public Integer getMaxRetryTimes() {
+        return maxRetryTimes;
+    }
+
+    /**
+     * set 最大重试次数dlqEnable为true必填,范围[0,16]
+     *
+     * @param maxRetryTimes
+     */
+    public void setMaxRetryTimes(Integer maxRetryTimes) {
+        this.maxRetryTimes = maxRetryTimes;
     }
 
     /**
@@ -118,6 +187,36 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
      */
     public CreateSubscriptionRequest consumerGroupId(String consumerGroupId) {
         this.consumerGroupId = consumerGroupId;
+        return this;
+    }
+
+    /**
+     * set 消息隐藏时间单位秒
+     *
+     * @param messageInvisibleTimeInSeconds
+     */
+    public CreateSubscriptionRequest messageInvisibleTimeInSeconds(Integer messageInvisibleTimeInSeconds) {
+        this.messageInvisibleTimeInSeconds = messageInvisibleTimeInSeconds;
+        return this;
+    }
+
+    /**
+     * set 是否开启死信队列[true, false]
+     *
+     * @param dlqEnable
+     */
+    public CreateSubscriptionRequest dlqEnable(Boolean dlqEnable) {
+        this.dlqEnable = dlqEnable;
+        return this;
+    }
+
+    /**
+     * set 最大重试次数dlqEnable为true必填,范围[0,16]
+     *
+     * @param maxRetryTimes
+     */
+    public CreateSubscriptionRequest maxRetryTimes(Integer maxRetryTimes) {
+        this.maxRetryTimes = maxRetryTimes;
         return this;
     }
 

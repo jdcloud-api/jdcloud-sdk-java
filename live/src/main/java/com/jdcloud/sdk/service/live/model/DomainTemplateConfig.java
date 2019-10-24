@@ -50,22 +50,12 @@ public class DomainTemplateConfig  implements java.io.Serializable {
     /**
      * 模板名称
      */
-    private String templateName;
+    private String template;
 
     /**
-     * 录制周期
+     * 检测项列表
      */
-    private Integer recordPeriod;
-
-    /**
-     * 录制格式
-     */
-    private Integer recordFileType;
-
-    /**
-     * 创建时间
-     */
-    private String createTime;
+    private String modules;
 
 
     /**
@@ -127,71 +117,35 @@ public class DomainTemplateConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public String getTemplateName() {
-        return templateName;
+    public String getTemplate() {
+        return template;
     }
 
     /**
      * set 模板名称
      *
-     * @param templateName
+     * @param template
      */
-    public void setTemplateName(String templateName) {
-        this.templateName = templateName;
+    public void setTemplate(String template) {
+        this.template = template;
     }
 
     /**
-     * get 录制周期
+     * get 检测项列表
      *
      * @return
      */
-    public Integer getRecordPeriod() {
-        return recordPeriod;
+    public String getModules() {
+        return modules;
     }
 
     /**
-     * set 录制周期
+     * set 检测项列表
      *
-     * @param recordPeriod
+     * @param modules
      */
-    public void setRecordPeriod(Integer recordPeriod) {
-        this.recordPeriod = recordPeriod;
-    }
-
-    /**
-     * get 录制格式
-     *
-     * @return
-     */
-    public Integer getRecordFileType() {
-        return recordFileType;
-    }
-
-    /**
-     * set 录制格式
-     *
-     * @param recordFileType
-     */
-    public void setRecordFileType(Integer recordFileType) {
-        this.recordFileType = recordFileType;
-    }
-
-    /**
-     * get 创建时间
-     *
-     * @return
-     */
-    public String getCreateTime() {
-        return createTime;
-    }
-
-    /**
-     * set 创建时间
-     *
-     * @param createTime
-     */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public void setModules(String modules) {
+        this.modules = modules;
     }
 
 
@@ -228,40 +182,20 @@ public class DomainTemplateConfig  implements java.io.Serializable {
     /**
      * set 模板名称
      *
-     * @param templateName
+     * @param template
      */
-    public DomainTemplateConfig templateName(String templateName) {
-        this.templateName = templateName;
+    public DomainTemplateConfig template(String template) {
+        this.template = template;
         return this;
     }
 
     /**
-     * set 录制周期
+     * set 检测项列表
      *
-     * @param recordPeriod
+     * @param modules
      */
-    public DomainTemplateConfig recordPeriod(Integer recordPeriod) {
-        this.recordPeriod = recordPeriod;
-        return this;
-    }
-
-    /**
-     * set 录制格式
-     *
-     * @param recordFileType
-     */
-    public DomainTemplateConfig recordFileType(Integer recordFileType) {
-        this.recordFileType = recordFileType;
-        return this;
-    }
-
-    /**
-     * set 创建时间
-     *
-     * @param createTime
-     */
-    public DomainTemplateConfig createTime(String createTime) {
-        this.createTime = createTime;
+    public DomainTemplateConfig modules(String modules) {
+        this.modules = modules;
         return this;
     }
 

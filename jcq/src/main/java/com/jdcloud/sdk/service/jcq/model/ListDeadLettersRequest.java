@@ -35,12 +35,12 @@ public class ListDeadLettersRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1
+     * 页码
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 分页大小；默认为10；取值范围[10, 100]
      */
     private Integer pageSize;
 
@@ -81,7 +81,7 @@ public class ListDeadLettersRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 页码；默认为1
+     * get 页码
      *
      * @return
      */
@@ -90,7 +90,7 @@ public class ListDeadLettersRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码
      *
      * @param pageNumber
      */
@@ -99,7 +99,7 @@ public class ListDeadLettersRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小；默认为10；取值范围[10, 100]
      *
      * @return
      */
@@ -108,7 +108,7 @@ public class ListDeadLettersRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -208,7 +208,7 @@ public class ListDeadLettersRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 页码；默认为1
+     * set 页码
      *
      * @param pageNumber
      */
@@ -218,7 +218,7 @@ public class ListDeadLettersRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */

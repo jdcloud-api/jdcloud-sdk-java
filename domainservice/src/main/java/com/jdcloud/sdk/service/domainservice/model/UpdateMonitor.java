@@ -143,6 +143,21 @@ public class UpdateMonitor  implements java.io.Serializable {
     @Required
     private Integer switchRecoverRule;
 
+    /**
+     * 探测请求携带自定义头域及其域值列表
+     */
+    private List<HttpHeader> requestHeaders;
+
+    /**
+     * 探测响应Body体中包含的字符串
+     */
+    private String responseBodyMatch;
+
+    /**
+     * 探测响应码范围列表
+     */
+    private List<HttpResponseCodeRange> responseCodeRanges;
+
 
     /**
      * get 连续几次触发报警
@@ -432,6 +447,60 @@ public class UpdateMonitor  implements java.io.Serializable {
         this.switchRecoverRule = switchRecoverRule;
     }
 
+    /**
+     * get 探测请求携带自定义头域及其域值列表
+     *
+     * @return
+     */
+    public List<HttpHeader> getRequestHeaders() {
+        return requestHeaders;
+    }
+
+    /**
+     * set 探测请求携带自定义头域及其域值列表
+     *
+     * @param requestHeaders
+     */
+    public void setRequestHeaders(List<HttpHeader> requestHeaders) {
+        this.requestHeaders = requestHeaders;
+    }
+
+    /**
+     * get 探测响应Body体中包含的字符串
+     *
+     * @return
+     */
+    public String getResponseBodyMatch() {
+        return responseBodyMatch;
+    }
+
+    /**
+     * set 探测响应Body体中包含的字符串
+     *
+     * @param responseBodyMatch
+     */
+    public void setResponseBodyMatch(String responseBodyMatch) {
+        this.responseBodyMatch = responseBodyMatch;
+    }
+
+    /**
+     * get 探测响应码范围列表
+     *
+     * @return
+     */
+    public List<HttpResponseCodeRange> getResponseCodeRanges() {
+        return responseCodeRanges;
+    }
+
+    /**
+     * set 探测响应码范围列表
+     *
+     * @param responseCodeRanges
+     */
+    public void setResponseCodeRanges(List<HttpResponseCodeRange> responseCodeRanges) {
+        this.responseCodeRanges = responseCodeRanges;
+    }
+
 
     /**
      * set 连续几次触发报警
@@ -593,6 +662,36 @@ public class UpdateMonitor  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 探测请求携带自定义头域及其域值列表
+     *
+     * @param requestHeaders
+     */
+    public UpdateMonitor requestHeaders(List<HttpHeader> requestHeaders) {
+        this.requestHeaders = requestHeaders;
+        return this;
+    }
+
+    /**
+     * set 探测响应Body体中包含的字符串
+     *
+     * @param responseBodyMatch
+     */
+    public UpdateMonitor responseBodyMatch(String responseBodyMatch) {
+        this.responseBodyMatch = responseBodyMatch;
+        return this;
+    }
+
+    /**
+     * set 探测响应码范围列表
+     *
+     * @param responseCodeRanges
+     */
+    public UpdateMonitor responseCodeRanges(List<HttpResponseCodeRange> responseCodeRanges) {
+        this.responseCodeRanges = responseCodeRanges;
+        return this;
+    }
+
 
     /**
      * add item to 备用地址列表，存在该参数时，可不填写参数备用地址1、备用地址2
@@ -604,6 +703,30 @@ public class UpdateMonitor  implements java.io.Serializable {
             this.backupAddressList = new ArrayList<>();
         }
         this.backupAddressList.add(backupAddressList);
+    }
+
+    /**
+     * add item to 探测请求携带自定义头域及其域值列表
+     *
+     * @param requestHeader
+     */
+    public void addRequestHeader(HttpHeader requestHeader) {
+        if (this.requestHeaders == null) {
+            this.requestHeaders = new ArrayList<>();
+        }
+        this.requestHeaders.add(requestHeader);
+    }
+
+    /**
+     * add item to 探测响应码范围列表
+     *
+     * @param responseCodeRange
+     */
+    public void addResponseCodeRange(HttpResponseCodeRange responseCodeRange) {
+        if (this.responseCodeRanges == null) {
+            this.responseCodeRanges = new ArrayList<>();
+        }
+        this.responseCodeRanges.add(responseCodeRange);
     }
 
 }

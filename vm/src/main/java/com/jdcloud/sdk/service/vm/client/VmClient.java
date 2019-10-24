@@ -34,30 +34,87 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.vm.model.DescribeImageMembersRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeImageMembersResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeImageMembersExecutor;
+import com.jdcloud.sdk.service.vm.model.CreateInstancesRequest;
+import com.jdcloud.sdk.service.vm.model.CreateInstancesResponse;
+import com.jdcloud.sdk.service.vm.client.CreateInstancesExecutor;
+import com.jdcloud.sdk.service.vm.model.ShareImageRequest;
+import com.jdcloud.sdk.service.vm.model.ShareImageResponse;
+import com.jdcloud.sdk.service.vm.client.ShareImageExecutor;
+import com.jdcloud.sdk.service.vm.model.StartInstanceRequest;
+import com.jdcloud.sdk.service.vm.model.StartInstanceResponse;
+import com.jdcloud.sdk.service.vm.client.StartInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.UnReleaseImageRequest;
+import com.jdcloud.sdk.service.vm.model.UnReleaseImageResponse;
+import com.jdcloud.sdk.service.vm.client.UnReleaseImageExecutor;
+import com.jdcloud.sdk.service.vm.model.UnShareImageRequest;
+import com.jdcloud.sdk.service.vm.model.UnShareImageResponse;
+import com.jdcloud.sdk.service.vm.client.UnShareImageExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeImageConstraintsBatchRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeImageConstraintsBatchResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeImageConstraintsBatchExecutor;
+import com.jdcloud.sdk.service.vm.model.UpdateInstanceTemplateRequest;
+import com.jdcloud.sdk.service.vm.model.UpdateInstanceTemplateResponse;
+import com.jdcloud.sdk.service.vm.client.UpdateInstanceTemplateExecutor;
+import com.jdcloud.sdk.service.vm.model.AttachDiskRequest;
+import com.jdcloud.sdk.service.vm.model.AttachDiskResponse;
+import com.jdcloud.sdk.service.vm.client.AttachDiskExecutor;
+import com.jdcloud.sdk.service.vm.model.ModifyInstancePasswordRequest;
+import com.jdcloud.sdk.service.vm.model.ModifyInstancePasswordResponse;
+import com.jdcloud.sdk.service.vm.client.ModifyInstancePasswordExecutor;
+import com.jdcloud.sdk.service.vm.model.AttachNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.vm.model.AttachNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.vm.client.AttachNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.vm.model.DeleteKeypairRequest;
+import com.jdcloud.sdk.service.vm.model.DeleteKeypairResponse;
+import com.jdcloud.sdk.service.vm.client.DeleteKeypairExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeImageRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeImageResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeImageExecutor;
+import com.jdcloud.sdk.service.vm.model.ImportKeypairRequest;
+import com.jdcloud.sdk.service.vm.model.ImportKeypairResponse;
+import com.jdcloud.sdk.service.vm.client.ImportKeypairExecutor;
+import com.jdcloud.sdk.service.vm.model.CopyImagesRequest;
+import com.jdcloud.sdk.service.vm.model.CopyImagesResponse;
+import com.jdcloud.sdk.service.vm.client.CopyImagesExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.ModifyInstanceNetworkAttributeRequest;
+import com.jdcloud.sdk.service.vm.model.ModifyInstanceNetworkAttributeResponse;
+import com.jdcloud.sdk.service.vm.client.ModifyInstanceNetworkAttributeExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeQuotasRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeQuotasResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeQuotasExecutor;
+import com.jdcloud.sdk.service.vm.model.ModifyImageAttributeRequest;
+import com.jdcloud.sdk.service.vm.model.ModifyImageAttributeResponse;
+import com.jdcloud.sdk.service.vm.client.ModifyImageAttributeExecutor;
+import com.jdcloud.sdk.service.vm.model.RebootInstanceRequest;
+import com.jdcloud.sdk.service.vm.model.RebootInstanceResponse;
+import com.jdcloud.sdk.service.vm.client.RebootInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeKeypairsRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeKeypairsResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeKeypairsExecutor;
+import com.jdcloud.sdk.service.vm.model.DetachDiskRequest;
+import com.jdcloud.sdk.service.vm.model.DetachDiskResponse;
+import com.jdcloud.sdk.service.vm.client.DetachDiskExecutor;
+import com.jdcloud.sdk.service.vm.model.ImportImageRequest;
+import com.jdcloud.sdk.service.vm.model.ImportImageResponse;
+import com.jdcloud.sdk.service.vm.client.ImportImageExecutor;
 import com.jdcloud.sdk.service.vm.model.CreateInstanceTemplateRequest;
 import com.jdcloud.sdk.service.vm.model.CreateInstanceTemplateResponse;
 import com.jdcloud.sdk.service.vm.client.CreateInstanceTemplateExecutor;
 import com.jdcloud.sdk.service.vm.model.CreateImageRequest;
 import com.jdcloud.sdk.service.vm.model.CreateImageResponse;
 import com.jdcloud.sdk.service.vm.client.CreateImageExecutor;
-import com.jdcloud.sdk.service.vm.model.CreateInstancesRequest;
-import com.jdcloud.sdk.service.vm.model.CreateInstancesResponse;
-import com.jdcloud.sdk.service.vm.client.CreateInstancesExecutor;
 import com.jdcloud.sdk.service.vm.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.vm.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.vm.client.AssociateElasticIpExecutor;
-import com.jdcloud.sdk.service.vm.model.ShareImageRequest;
-import com.jdcloud.sdk.service.vm.model.ShareImageResponse;
-import com.jdcloud.sdk.service.vm.client.ShareImageExecutor;
 import com.jdcloud.sdk.service.vm.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.vm.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.vm.client.DisassociateElasticIpExecutor;
 import com.jdcloud.sdk.service.vm.model.StopInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.StopInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.StopInstanceExecutor;
-import com.jdcloud.sdk.service.vm.model.StartInstanceRequest;
-import com.jdcloud.sdk.service.vm.model.StartInstanceResponse;
-import com.jdcloud.sdk.service.vm.client.StartInstanceExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplateRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplateResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceTemplateExecutor;
@@ -73,72 +130,30 @@ import com.jdcloud.sdk.service.vm.client.DescribeInstanceVncUrlExecutor;
 import com.jdcloud.sdk.service.vm.model.RebuildInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.RebuildInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.RebuildInstanceExecutor;
-import com.jdcloud.sdk.service.vm.model.UnShareImageRequest;
-import com.jdcloud.sdk.service.vm.model.UnShareImageResponse;
-import com.jdcloud.sdk.service.vm.client.UnShareImageExecutor;
+import com.jdcloud.sdk.service.vm.model.ReleaseImageRequest;
+import com.jdcloud.sdk.service.vm.model.ReleaseImageResponse;
+import com.jdcloud.sdk.service.vm.client.ReleaseImageExecutor;
 import com.jdcloud.sdk.service.vm.model.ModifyInstanceAttributeRequest;
 import com.jdcloud.sdk.service.vm.model.ModifyInstanceAttributeResponse;
 import com.jdcloud.sdk.service.vm.client.ModifyInstanceAttributeExecutor;
 import com.jdcloud.sdk.service.vm.model.ResizeInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.ResizeInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.ResizeInstanceExecutor;
-import com.jdcloud.sdk.service.vm.model.DescribeImageConstraintsBatchRequest;
-import com.jdcloud.sdk.service.vm.model.DescribeImageConstraintsBatchResponse;
-import com.jdcloud.sdk.service.vm.client.DescribeImageConstraintsBatchExecutor;
-import com.jdcloud.sdk.service.vm.model.UpdateInstanceTemplateRequest;
-import com.jdcloud.sdk.service.vm.model.UpdateInstanceTemplateResponse;
-import com.jdcloud.sdk.service.vm.client.UpdateInstanceTemplateExecutor;
-import com.jdcloud.sdk.service.vm.model.AttachDiskRequest;
-import com.jdcloud.sdk.service.vm.model.AttachDiskResponse;
-import com.jdcloud.sdk.service.vm.client.AttachDiskExecutor;
-import com.jdcloud.sdk.service.vm.model.ModifyInstancePasswordRequest;
-import com.jdcloud.sdk.service.vm.model.ModifyInstancePasswordResponse;
-import com.jdcloud.sdk.service.vm.client.ModifyInstancePasswordExecutor;
 import com.jdcloud.sdk.service.vm.model.DeleteImageRequest;
 import com.jdcloud.sdk.service.vm.model.DeleteImageResponse;
 import com.jdcloud.sdk.service.vm.client.DeleteImageExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTypesRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTypesResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceTypesExecutor;
-import com.jdcloud.sdk.service.vm.model.AttachNetworkInterfaceRequest;
-import com.jdcloud.sdk.service.vm.model.AttachNetworkInterfaceResponse;
-import com.jdcloud.sdk.service.vm.client.AttachNetworkInterfaceExecutor;
-import com.jdcloud.sdk.service.vm.model.DeleteKeypairRequest;
-import com.jdcloud.sdk.service.vm.model.DeleteKeypairResponse;
-import com.jdcloud.sdk.service.vm.client.DeleteKeypairExecutor;
-import com.jdcloud.sdk.service.vm.model.DescribeImageRequest;
-import com.jdcloud.sdk.service.vm.model.DescribeImageResponse;
-import com.jdcloud.sdk.service.vm.client.DescribeImageExecutor;
 import com.jdcloud.sdk.service.vm.model.DetachNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.vm.model.DetachNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.vm.client.DetachNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceTemplateRequest;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceTemplateResponse;
 import com.jdcloud.sdk.service.vm.client.DeleteInstanceTemplateExecutor;
-import com.jdcloud.sdk.service.vm.model.ImportKeypairRequest;
-import com.jdcloud.sdk.service.vm.model.ImportKeypairResponse;
-import com.jdcloud.sdk.service.vm.client.ImportKeypairExecutor;
-import com.jdcloud.sdk.service.vm.model.CopyImagesRequest;
-import com.jdcloud.sdk.service.vm.model.CopyImagesResponse;
-import com.jdcloud.sdk.service.vm.client.CopyImagesExecutor;
-import com.jdcloud.sdk.service.vm.model.DescribeInstanceRequest;
-import com.jdcloud.sdk.service.vm.model.DescribeInstanceResponse;
-import com.jdcloud.sdk.service.vm.client.DescribeInstanceExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplatesRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplatesResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceTemplatesExecutor;
-import com.jdcloud.sdk.service.vm.model.ModifyInstanceNetworkAttributeRequest;
-import com.jdcloud.sdk.service.vm.model.ModifyInstanceNetworkAttributeResponse;
-import com.jdcloud.sdk.service.vm.client.ModifyInstanceNetworkAttributeExecutor;
-import com.jdcloud.sdk.service.vm.model.DescribeQuotasRequest;
-import com.jdcloud.sdk.service.vm.model.DescribeQuotasResponse;
-import com.jdcloud.sdk.service.vm.client.DescribeQuotasExecutor;
-import com.jdcloud.sdk.service.vm.model.ModifyImageAttributeRequest;
-import com.jdcloud.sdk.service.vm.model.ModifyImageAttributeResponse;
-import com.jdcloud.sdk.service.vm.client.ModifyImageAttributeExecutor;
-import com.jdcloud.sdk.service.vm.model.RebootInstanceRequest;
-import com.jdcloud.sdk.service.vm.model.RebootInstanceResponse;
-import com.jdcloud.sdk.service.vm.client.RebootInstanceExecutor;
 import com.jdcloud.sdk.service.vm.model.ModifyInstanceDiskAttributeRequest;
 import com.jdcloud.sdk.service.vm.model.ModifyInstanceDiskAttributeResponse;
 import com.jdcloud.sdk.service.vm.client.ModifyInstanceDiskAttributeExecutor;
@@ -151,15 +166,6 @@ import com.jdcloud.sdk.service.vm.client.ImageTasksExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceStatusExecutor;
-import com.jdcloud.sdk.service.vm.model.DescribeKeypairsRequest;
-import com.jdcloud.sdk.service.vm.model.DescribeKeypairsResponse;
-import com.jdcloud.sdk.service.vm.client.DescribeKeypairsExecutor;
-import com.jdcloud.sdk.service.vm.model.DetachDiskRequest;
-import com.jdcloud.sdk.service.vm.model.DetachDiskResponse;
-import com.jdcloud.sdk.service.vm.client.DetachDiskExecutor;
-import com.jdcloud.sdk.service.vm.model.ImportImageRequest;
-import com.jdcloud.sdk.service.vm.model.ImportImageResponse;
-import com.jdcloud.sdk.service.vm.client.ImportImageExecutor;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.DeleteInstanceExecutor;
@@ -235,36 +241,6 @@ public class VmClient extends JdcloudClient {
     }
 
     /**
-     * 创建一个指定参数的启动模板，启动模板中包含创建云主机时的大部分配置参数，避免每次创建云主机时的重复性工作。&lt;br&gt;
-如果是使用启动模板创建云主机，如果指定了某些参数与模板中的参数相冲突，那么新指定的参数会替换模板中的参数。&lt;br&gt;
-如果是使用启动模板创建云主机，如果指定了镜像ID与模板中的镜像ID不一致，那么模板中的dataDisks参数会失效。&lt;br&gt;
-如果使用高可用组(Ag)创建云主机，那么Ag所关联的模板中的参数都不可以被调整，只能以模板为准。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateInstanceTemplateResponse createInstanceTemplate(CreateInstanceTemplateRequest request) throws JdcloudSdkException {
-        return new CreateInstanceTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
-云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
-制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
-调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateImageResponse createImage(CreateImageRequest request) throws JdcloudSdkException {
-        return new CreateImageExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建一台或多台指定配置的云主机，创建模式分为三种：1.普通方式、2.使用高可用组、3.使用启动模板。三种方式创建云主机时参数的必传与非必传是不同的，具体请参考&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/create_vm_sample&quot;&gt;参数详细说明&lt;/a&gt;&lt;br&gt;
 - 创建云主机需要通过实名认证
 - 实例规格
@@ -325,19 +301,6 @@ public class VmClient extends JdcloudClient {
     }
 
     /**
-     * 为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
-一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
-        return new AssociateElasticIpExecutor().client(this).execute(request);
-    }
-
-    /**
      * 共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
 整机镜像目前不支持共享。
 
@@ -348,6 +311,302 @@ public class VmClient extends JdcloudClient {
      */
     public ShareImageResponse shareImage(ShareImageRequest request) throws JdcloudSdkException {
         return new ShareImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
+只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartInstanceResponse startInstance(StartInstanceRequest request) throws JdcloudSdkException {
+        return new StartInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 撤销社区镜像，只允许操作您的个人私有镜像。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UnReleaseImageResponse unReleaseImage(UnReleaseImageRequest request) throws JdcloudSdkException {
+        return new UnReleaseImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 取消共享镜像，只允许操作您的个人私有镜像。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UnShareImageResponse unShareImage(UnShareImageRequest request) throws JdcloudSdkException {
+        return new UnShareImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询镜像的实例规格限制。&lt;br&gt;
+通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeImageConstraintsBatchResponse describeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) throws JdcloudSdkException {
+        return new DescribeImageConstraintsBatchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改一个启动模板的信息，包括名称、描述
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateInstanceTemplateResponse updateInstanceTemplate(UpdateInstanceTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateInstanceTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
+云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
+本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AttachDiskResponse attachDisk(AttachDiskRequest request) throws JdcloudSdkException {
+        return new AttachDiskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
+修改密码后，需要重启云主机后生效。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstancePasswordResponse modifyInstancePassword(ModifyInstancePasswordRequest request) throws JdcloudSdkException {
+        return new ModifyInstancePasswordExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 云主机绑定一块弹性网卡。&lt;br&gt;
+云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
+弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
+云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
+弹性网卡与云主机必须在相同vpc下。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AttachNetworkInterfaceResponse attachNetworkInterface(AttachNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new AttachNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除ssh密钥对。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteKeypairResponse deleteKeypair(DeleteKeypairRequest request) throws JdcloudSdkException {
+        return new DeleteKeypairExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询镜像详情。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeImageResponse describeImage(DescribeImageRequest request) throws JdcloudSdkException {
+        return new DescribeImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
+若传入已存在的密钥名称，会返回错误。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ImportKeypairResponse importKeypair(ImportKeypairRequest request) throws JdcloudSdkException {
+        return new ImportKeypairExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
+只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CopyImagesResponse copyImages(CopyImagesRequest request) throws JdcloudSdkException {
+        return new CopyImagesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询一台云主机的详细信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceResponse describeInstance(DescribeInstanceRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
+不能修改主网卡。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceNetworkAttributeResponse modifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceNetworkAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
+        return new DescribeQuotasExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyImageAttributeResponse modifyImageAttribute(ModifyImageAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyImageAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重启单个云主机，只能重启&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可重启。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RebootInstanceResponse rebootInstance(RebootInstanceRequest request) throws JdcloudSdkException {
+        return new RebootInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询密钥对。&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKeypairsResponse describeKeypairs(DescribeKeypairsRequest request) throws JdcloudSdkException {
+        return new DescribeKeypairsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DetachDiskResponse detachDisk(DetachDiskRequest request) throws JdcloudSdkException {
+        return new DetachDiskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 导入镜像，将外部镜像导入到京东云中
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ImportImageResponse importImage(ImportImageRequest request) throws JdcloudSdkException {
+        return new ImportImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个指定参数的启动模板，启动模板中包含创建云主机时的大部分配置参数，避免每次创建云主机时的重复性工作。&lt;br&gt;
+如果是使用启动模板创建云主机，如果指定了某些参数与模板中的参数相冲突，那么新指定的参数会替换模板中的参数。&lt;br&gt;
+如果是使用启动模板创建云主机，如果指定了镜像ID与模板中的镜像ID不一致，那么模板中的dataDisks参数会失效。&lt;br&gt;
+如果使用高可用组(Ag)创建云主机，那么Ag所关联的模板中的参数都不可以被调整，只能以模板为准。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateInstanceTemplateResponse createInstanceTemplate(CreateInstanceTemplateRequest request) throws JdcloudSdkException {
+        return new CreateInstanceTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
+云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
+制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
+调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateImageResponse createImage(CreateImageRequest request) throws JdcloudSdkException {
+        return new CreateImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
+一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssociateElasticIpResponse associateElasticIp(AssociateElasticIpRequest request) throws JdcloudSdkException {
+        return new AssociateElasticIpExecutor().client(this).execute(request);
     }
 
     /**
@@ -372,19 +631,6 @@ public class VmClient extends JdcloudClient {
      */
     public StopInstanceResponse stopInstance(StopInstanceRequest request) throws JdcloudSdkException {
         return new StopInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
-只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StartInstanceResponse startInstance(StartInstanceRequest request) throws JdcloudSdkException {
-        return new StartInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -456,15 +702,15 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 取消共享镜像，只允许操作您的个人私有镜像。
+     * 发布社区镜像，只允许操作您的个人私有镜像。发布为社区镜像后会撤销共享关系。&lt;br&gt;
 
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UnShareImageResponse unShareImage(UnShareImageRequest request) throws JdcloudSdkException {
-        return new UnShareImageExecutor().client(this).execute(request);
+    public ReleaseImageResponse releaseImage(ReleaseImageRequest request) throws JdcloudSdkException {
+        return new ReleaseImageExecutor().client(this).execute(request);
     }
 
     /**
@@ -500,58 +746,6 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 批量查询镜像的实例规格限制。&lt;br&gt;
-通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeImageConstraintsBatchResponse describeImageConstraintsBatch(DescribeImageConstraintsBatchRequest request) throws JdcloudSdkException {
-        return new DescribeImageConstraintsBatchExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改一个启动模板的信息，包括名称、描述
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateInstanceTemplateResponse updateInstanceTemplate(UpdateInstanceTemplateRequest request) throws JdcloudSdkException {
-        return new UpdateInstanceTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
-云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AttachDiskResponse attachDisk(AttachDiskRequest request) throws JdcloudSdkException {
-        return new AttachDiskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
-修改密码后，需要重启云主机后生效。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyInstancePasswordResponse modifyInstancePassword(ModifyInstancePasswordRequest request) throws JdcloudSdkException {
-        return new ModifyInstancePasswordExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除一个私有镜像，只允许操作您的个人私有镜像。&lt;br&gt;
 若镜像已共享给其他用户，需先取消共享才可删除。
 
@@ -574,46 +768,6 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public DescribeInstanceTypesResponse describeInstanceTypes(DescribeInstanceTypesRequest request) throws JdcloudSdkException {
         return new DescribeInstanceTypesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 云主机绑定一块弹性网卡。&lt;br&gt;
-云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
-弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
-云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
-弹性网卡与云主机必须在相同vpc下。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AttachNetworkInterfaceResponse attachNetworkInterface(AttachNetworkInterfaceRequest request) throws JdcloudSdkException {
-        return new AttachNetworkInterfaceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除ssh密钥对。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteKeypairResponse deleteKeypair(DeleteKeypairRequest request) throws JdcloudSdkException {
-        return new DeleteKeypairExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询镜像详情。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeImageResponse describeImage(DescribeImageRequest request) throws JdcloudSdkException {
-        return new DescribeImageExecutor().client(this).execute(request);
     }
 
     /**
@@ -643,44 +797,6 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
-若传入已存在的密钥名称，会返回错误。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ImportKeypairResponse importKeypair(ImportKeypairRequest request) throws JdcloudSdkException {
-        return new ImportKeypairExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CopyImagesResponse copyImages(CopyImagesRequest request) throws JdcloudSdkException {
-        return new CopyImagesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询一台云主机的详细信息
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeInstanceResponse describeInstance(DescribeInstanceRequest request) throws JdcloudSdkException {
-        return new DescribeInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询启动模板列表
 
      *
@@ -690,55 +806,6 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public DescribeInstanceTemplatesResponse describeInstanceTemplates(DescribeInstanceTemplatesRequest request) throws JdcloudSdkException {
         return new DescribeInstanceTemplatesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
-不能修改主网卡。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyInstanceNetworkAttributeResponse modifyInstanceNetworkAttribute(ModifyInstanceNetworkAttributeRequest request) throws JdcloudSdkException {
-        return new ModifyInstanceNetworkAttributeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
-        return new DescribeQuotasExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyImageAttributeResponse modifyImageAttribute(ModifyImageAttributeRequest request) throws JdcloudSdkException {
-        return new ModifyImageAttributeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 重启单个云主机，只能重启&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可重启。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RebootInstanceResponse rebootInstance(RebootInstanceRequest request) throws JdcloudSdkException {
-        return new RebootInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -786,43 +853,6 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public DescribeInstanceStatusResponse describeInstanceStatus(DescribeInstanceStatusRequest request) throws JdcloudSdkException {
         return new DescribeInstanceStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 批量查询密钥对。&lt;br&gt;
-此接口支持分页查询，默认每页20条。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeKeypairsResponse describeKeypairs(DescribeKeypairsRequest request) throws JdcloudSdkException {
-        return new DescribeKeypairsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DetachDiskResponse detachDisk(DetachDiskRequest request) throws JdcloudSdkException {
-        return new DetachDiskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 导入镜像，将外部镜像导入到京东云中
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ImportImageResponse importImage(ImportImageRequest request) throws JdcloudSdkException {
-        return new ImportImageExecutor().client(this).execute(request);
     }
 
     /**

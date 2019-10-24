@@ -45,7 +45,7 @@ public class DescribeDeadLetterNumbersRequest extends JdcloudRequest implements 
     private Integer pageNumber;
 
     /**
-     * 每页数
+     * 分页大小；默认为10；取值范围[10, 100]
      */
     private Integer pageSize;
 
@@ -94,7 +94,7 @@ public class DescribeDeadLetterNumbersRequest extends JdcloudRequest implements 
     }
 
     /**
-     * get 每页数
+     * get 分页大小；默认为10；取值范围[10, 100]
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class DescribeDeadLetterNumbersRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 每页数
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -151,7 +151,7 @@ public class DescribeDeadLetterNumbersRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 每页数
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */

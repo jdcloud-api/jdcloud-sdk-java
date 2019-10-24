@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.domainservice.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * domainInfo
@@ -63,7 +65,7 @@ public class DomainInfo  implements java.io.Serializable {
     private String packName;
 
     /**
-     * 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5
+     * 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5，域名探测错误:7，域名未注册:8，注册局暂停解析:9
      */
     private String resolvingStatus;
 
@@ -81,6 +83,16 @@ public class DomainInfo  implements java.io.Serializable {
      * 域名的锁定状态，0:未锁定， 1:已锁定
      */
     private Integer lockStatus;
+
+    /**
+     * 主域名当前的Nameserver列表
+     */
+    private List<String> probeNsList;
+
+    /**
+     * 主域名应该设置的Nameserver列表
+     */
+    private List<String> defNsList;
 
 
     /**
@@ -192,7 +204,7 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5
+     * get 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5，域名探测错误:7，域名未注册:8，注册局暂停解析:9
      *
      * @return
      */
@@ -201,7 +213,7 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5
+     * set 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5，域名探测错误:7，域名未注册:8，注册局暂停解析:9
      *
      * @param resolvingStatus
      */
@@ -261,6 +273,42 @@ public class DomainInfo  implements java.io.Serializable {
      */
     public void setLockStatus(Integer lockStatus) {
         this.lockStatus = lockStatus;
+    }
+
+    /**
+     * get 主域名当前的Nameserver列表
+     *
+     * @return
+     */
+    public List<String> getProbeNsList() {
+        return probeNsList;
+    }
+
+    /**
+     * set 主域名当前的Nameserver列表
+     *
+     * @param probeNsList
+     */
+    public void setProbeNsList(List<String> probeNsList) {
+        this.probeNsList = probeNsList;
+    }
+
+    /**
+     * get 主域名应该设置的Nameserver列表
+     *
+     * @return
+     */
+    public List<String> getDefNsList() {
+        return defNsList;
+    }
+
+    /**
+     * set 主域名应该设置的Nameserver列表
+     *
+     * @param defNsList
+     */
+    public void setDefNsList(List<String> defNsList) {
+        this.defNsList = defNsList;
     }
 
 
@@ -325,7 +373,7 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5
+     * set 解析的状态, 暂无解析:1，正常解析:2， 部分解析:3， 暂停解析:4 NS未修改:5，域名探测错误:7，域名未注册:8，注册局暂停解析:9
      *
      * @param resolvingStatus
      */
@@ -364,5 +412,49 @@ public class DomainInfo  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 主域名当前的Nameserver列表
+     *
+     * @param probeNsList
+     */
+    public DomainInfo probeNsList(List<String> probeNsList) {
+        this.probeNsList = probeNsList;
+        return this;
+    }
+
+    /**
+     * set 主域名应该设置的Nameserver列表
+     *
+     * @param defNsList
+     */
+    public DomainInfo defNsList(List<String> defNsList) {
+        this.defNsList = defNsList;
+        return this;
+    }
+
+
+    /**
+     * add item to 主域名当前的Nameserver列表
+     *
+     * @param probeNsList
+     */
+    public void addProbeNsList(String probeNsList) {
+        if (this.probeNsList == null) {
+            this.probeNsList = new ArrayList<>();
+        }
+        this.probeNsList.add(probeNsList);
+    }
+
+    /**
+     * add item to 主域名应该设置的Nameserver列表
+     *
+     * @param defNsList
+     */
+    public void addDefNsList(String defNsList) {
+        if (this.defNsList == null) {
+            this.defNsList = new ArrayList<>();
+        }
+        this.defNsList.add(defNsList);
+    }
 
 }

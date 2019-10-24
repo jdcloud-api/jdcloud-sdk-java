@@ -54,6 +54,11 @@ public class ElasticIp  implements java.io.Serializable {
     private Integer bandwidth;
 
     /**
+     * 额外上行带宽, 单位Mbps
+     */
+    private Integer extraUplinkBandwidth;
+
+    /**
      * 链路类型
      */
     private String lineType;
@@ -154,6 +159,24 @@ public class ElasticIp  implements java.io.Serializable {
      */
     public void setBandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+    }
+
+    /**
+     * get 额外上行带宽, 单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtraUplinkBandwidth() {
+        return extraUplinkBandwidth;
+    }
+
+    /**
+     * set 额外上行带宽, 单位Mbps
+     *
+     * @param extraUplinkBandwidth
+     */
+    public void setExtraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
     }
 
     /**
@@ -302,6 +325,16 @@ public class ElasticIp  implements java.io.Serializable {
      */
     public ElasticIp bandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+        return this;
+    }
+
+    /**
+     * set 额外上行带宽, 单位Mbps
+     *
+     * @param extraUplinkBandwidth
+     */
+    public ElasticIp extraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
         return this;
     }
 

@@ -95,6 +95,16 @@ public class Image  implements java.io.Serializable {
     private String desc;
 
     /**
+     * 该镜像所有者的用户PIN
+     */
+    private String ownerPin;
+
+    /**
+     * 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+     */
+    private String launchPermission;
+
+    /**
      * 镜像系统盘配置
      */
     private InstanceDiskAttachment systemDisk;
@@ -337,6 +347,42 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
+     * get 该镜像所有者的用户PIN
+     *
+     * @return
+     */
+    public String getOwnerPin() {
+        return ownerPin;
+    }
+
+    /**
+     * set 该镜像所有者的用户PIN
+     *
+     * @param ownerPin
+     */
+    public void setOwnerPin(String ownerPin) {
+        this.ownerPin = ownerPin;
+    }
+
+    /**
+     * get 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+     *
+     * @return
+     */
+    public String getLaunchPermission() {
+        return launchPermission;
+    }
+
+    /**
+     * set 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+     *
+     * @param launchPermission
+     */
+    public void setLaunchPermission(String launchPermission) {
+        this.launchPermission = launchPermission;
+    }
+
+    /**
      * get 镜像系统盘配置
      *
      * @return
@@ -544,6 +590,26 @@ public class Image  implements java.io.Serializable {
      */
     public Image desc(String desc) {
         this.desc = desc;
+        return this;
+    }
+
+    /**
+     * set 该镜像所有者的用户PIN
+     *
+     * @param ownerPin
+     */
+    public Image ownerPin(String ownerPin) {
+        this.ownerPin = ownerPin;
+        return this;
+    }
+
+    /**
+     * set 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+     *
+     * @param launchPermission
+     */
+    public Image launchPermission(String launchPermission) {
+        this.launchPermission = launchPermission;
         return this;
     }
 
