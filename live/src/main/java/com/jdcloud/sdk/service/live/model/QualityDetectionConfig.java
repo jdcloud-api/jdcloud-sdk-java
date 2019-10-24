@@ -24,13 +24,20 @@
 
 package com.jdcloud.sdk.service.live.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
- * domainTemplateConfig
+ * qualityDetectionConfig
  */
-public class DomainTemplateConfig  implements java.io.Serializable {
+public class QualityDetectionConfig  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 推流域名
+     */
+    private String publishDomain;
 
     /**
      * 应用名称
@@ -43,20 +50,28 @@ public class DomainTemplateConfig  implements java.io.Serializable {
     private String streamName;
 
     /**
-     * 模板ID
+     * qualityDetectionConfig
      */
-    private Long templateId;
+    private List<String> qualityDetectionConfig;
+
 
     /**
-     * 模板名称
+     * get 推流域名
+     *
+     * @return
      */
-    private String template;
+    public String getPublishDomain() {
+        return publishDomain;
+    }
 
     /**
-     * 检测项列表
+     * set 推流域名
+     *
+     * @param publishDomain
      */
-    private String modules;
-
+    public void setPublishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
+    }
 
     /**
      * get 应用名称
@@ -95,66 +110,40 @@ public class DomainTemplateConfig  implements java.io.Serializable {
     }
 
     /**
-     * get 模板ID
+     * get qualityDetectionConfig
      *
      * @return
      */
-    public Long getTemplateId() {
-        return templateId;
+    public List<String> getQualityDetectionConfig() {
+        return qualityDetectionConfig;
     }
 
     /**
-     * set 模板ID
+     * set qualityDetectionConfig
      *
-     * @param templateId
+     * @param qualityDetectionConfig
      */
-    public void setTemplateId(Long templateId) {
-        this.templateId = templateId;
+    public void setQualityDetectionConfig(List<String> qualityDetectionConfig) {
+        this.qualityDetectionConfig = qualityDetectionConfig;
     }
+
 
     /**
-     * get 模板名称
+     * set 推流域名
      *
-     * @return
+     * @param publishDomain
      */
-    public String getTemplate() {
-        return template;
+    public QualityDetectionConfig publishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
+        return this;
     }
-
-    /**
-     * set 模板名称
-     *
-     * @param template
-     */
-    public void setTemplate(String template) {
-        this.template = template;
-    }
-
-    /**
-     * get 检测项列表
-     *
-     * @return
-     */
-    public String getModules() {
-        return modules;
-    }
-
-    /**
-     * set 检测项列表
-     *
-     * @param modules
-     */
-    public void setModules(String modules) {
-        this.modules = modules;
-    }
-
 
     /**
      * set 应用名称
      *
      * @param appName
      */
-    public DomainTemplateConfig appName(String appName) {
+    public QualityDetectionConfig appName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -164,40 +153,32 @@ public class DomainTemplateConfig  implements java.io.Serializable {
      *
      * @param streamName
      */
-    public DomainTemplateConfig streamName(String streamName) {
+    public QualityDetectionConfig streamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
 
     /**
-     * set 模板ID
+     * set qualityDetectionConfig
      *
-     * @param templateId
+     * @param qualityDetectionConfig
      */
-    public DomainTemplateConfig templateId(Long templateId) {
-        this.templateId = templateId;
+    public QualityDetectionConfig qualityDetectionConfig(List<String> qualityDetectionConfig) {
+        this.qualityDetectionConfig = qualityDetectionConfig;
         return this;
     }
+
 
     /**
-     * set 模板名称
+     * add item to qualityDetectionConfig
      *
-     * @param template
+     * @param qualityDetectionConfig
      */
-    public DomainTemplateConfig template(String template) {
-        this.template = template;
-        return this;
+    public void addQualityDetectionConfig(String qualityDetectionConfig) {
+        if (this.qualityDetectionConfig == null) {
+            this.qualityDetectionConfig = new ArrayList<>();
+        }
+        this.qualityDetectionConfig.add(qualityDetectionConfig);
     }
-
-    /**
-     * set 检测项列表
-     *
-     * @param modules
-     */
-    public DomainTemplateConfig modules(String modules) {
-        this.modules = modules;
-        return this;
-    }
-
 
 }

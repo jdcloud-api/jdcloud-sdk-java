@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>live</artifactId>
-  <version>1.0.12</version>
+  <version>1.0.13</version>
   <packaging>jar</packaging>
   <name>live</name>
   <url>http://www.jdcloud.com</url>
@@ -55,6 +55,11 @@
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>common</artifactId>
       <version>0.4.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jdcloud.sdk</groupId>
+      <artifactId>vod</artifactId>
+      <version>1.1.5</version>
     </dependency>
   </dependencies>
 

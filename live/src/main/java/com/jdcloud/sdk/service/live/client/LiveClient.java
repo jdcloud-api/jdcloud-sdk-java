@@ -40,6 +40,12 @@ import com.jdcloud.sdk.service.live.client.DescribeUrlRankingExecutor;
 import com.jdcloud.sdk.service.live.model.OpenLiveRestartRequest;
 import com.jdcloud.sdk.service.live.model.OpenLiveRestartResponse;
 import com.jdcloud.sdk.service.live.client.OpenLiveRestartExecutor;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamAppQualityDetectionRequest;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamAppQualityDetectionResponse;
+import com.jdcloud.sdk.service.live.client.AddLiveStreamAppQualityDetectionExecutor;
+import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamQualityDetectionTemplateRequest;
+import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamQualityDetectionTemplateResponse;
+import com.jdcloud.sdk.service.live.client.AddCustomLiveStreamQualityDetectionTemplateExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamNotifyConfigExecutor;
@@ -151,6 +157,9 @@ import com.jdcloud.sdk.service.live.client.SetLiveStreamNotifyConfigExecutor;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamSnapshotNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamSnapshotNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.SetLiveStreamSnapshotNotifyConfigExecutor;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainQualityDetectionRequest;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainQualityDetectionResponse;
+import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainQualityDetectionExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveDomainRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveDomainResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveDomainExecutor;
@@ -166,6 +175,9 @@ import com.jdcloud.sdk.service.live.client.SetLiveDomainCertificateExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamSnapshotConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamSnapshotConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamSnapshotConfigExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeQualityDetectionBindingRequest;
+import com.jdcloud.sdk.service.live.model.DescribeQualityDetectionBindingResponse;
+import com.jdcloud.sdk.service.live.client.DescribeQualityDetectionBindingExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveRestartConfigsRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveRestartConfigsResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveRestartConfigsExecutor;
@@ -187,6 +199,9 @@ import com.jdcloud.sdk.service.live.client.AddLiveStreamAppSnapshotExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveDomainCertificateRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveDomainCertificateResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveDomainCertificateExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamQualityDetectionTemplateRequest;
+import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamQualityDetectionTemplateResponse;
+import com.jdcloud.sdk.service.live.client.DeleteCustomLiveStreamQualityDetectionTemplateExecutor;
 import com.jdcloud.sdk.service.live.model.CloseLiveTimeshiftRequest;
 import com.jdcloud.sdk.service.live.model.CloseLiveTimeshiftResponse;
 import com.jdcloud.sdk.service.live.client.CloseLiveTimeshiftExecutor;
@@ -199,6 +214,9 @@ import com.jdcloud.sdk.service.live.client.AddLiveRecordTaskExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainWatermarkRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainWatermarkResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainWatermarkExecutor;
+import com.jdcloud.sdk.service.live.model.SetLiveStreamQualityDetectionNotifyConfigRequest;
+import com.jdcloud.sdk.service.live.model.SetLiveStreamQualityDetectionNotifyConfigResponse;
+import com.jdcloud.sdk.service.live.client.SetLiveStreamQualityDetectionNotifyConfigExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainSnapshotRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainSnapshotResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainSnapshotExecutor;
@@ -211,6 +229,9 @@ import com.jdcloud.sdk.service.live.client.DescribeDomainsLogExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveRestartDomainRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveRestartDomainResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveRestartDomainExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainQualityDetectionRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainQualityDetectionResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainQualityDetectionExecutor;
 import com.jdcloud.sdk.service.live.model.DescribePublishStreamInfoDataRequest;
 import com.jdcloud.sdk.service.live.model.DescribePublishStreamInfoDataResponse;
 import com.jdcloud.sdk.service.live.client.DescribePublishStreamInfoDataExecutor;
@@ -244,12 +265,18 @@ import com.jdcloud.sdk.service.live.client.DeleteLiveStreamAppRecordExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamRecordTemplateRequest;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamRecordTemplateResponse;
 import com.jdcloud.sdk.service.live.client.DeleteCustomLiveStreamRecordTemplateExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamQualityDetectionNotifyConfigRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamQualityDetectionNotifyConfigResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveStreamQualityDetectionNotifyConfigExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotDataRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveSnapshotDataResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveSnapshotDataExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainTranscodeRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainTranscodeResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainTranscodeExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppQualityDetectionRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppQualityDetectionResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveStreamAppQualityDetectionExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainRecordRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainRecordResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainRecordExecutor;
@@ -289,6 +316,9 @@ import com.jdcloud.sdk.service.live.client.SetLivePlayAuthKeyExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveAppRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveAppResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveAppExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStreamQualityDetectionNotifyConfigRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStreamQualityDetectionNotifyConfigResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveStreamQualityDetectionNotifyConfigExecutor;
 import com.jdcloud.sdk.service.live.model.InterruptLiveStreamRequest;
 import com.jdcloud.sdk.service.live.model.InterruptLiveStreamResponse;
 import com.jdcloud.sdk.service.live.client.InterruptLiveStreamExecutor;
@@ -301,6 +331,9 @@ import com.jdcloud.sdk.service.live.client.DescribeLiveTranscodeStreamBandwidthE
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamInfoRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamInfoResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamInfoExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamQualityDetectionTemplatesRequest;
+import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamQualityDetectionTemplatesResponse;
+import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamQualityDetectionTemplatesExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamNotifyConfigExecutor;
@@ -411,6 +444,30 @@ public class LiveClient extends JdcloudClient {
      */
     public OpenLiveRestartResponse openLiveRestart(OpenLiveRestartRequest request) throws JdcloudSdkException {
         return new OpenLiveRestartExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加应用质量检测配置
+- 添加应用级别的质量检测模板配置
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddLiveStreamAppQualityDetectionResponse addLiveStreamAppQualityDetection(AddLiveStreamAppQualityDetectionRequest request) throws JdcloudSdkException {
+        return new AddLiveStreamAppQualityDetectionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加直播质量检测模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddCustomLiveStreamQualityDetectionTemplateResponse addCustomLiveStreamQualityDetectionTemplate(AddCustomLiveStreamQualityDetectionTemplateRequest request) throws JdcloudSdkException {
+        return new AddCustomLiveStreamQualityDetectionTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -858,6 +915,19 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 添加域名质量检测配置
+- 添加域名级别的质量检测模板配置
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddLiveStreamDomainQualityDetectionResponse addLiveStreamDomainQualityDetection(AddLiveStreamDomainQualityDetectionRequest request) throws JdcloudSdkException {
+        return new AddLiveStreamDomainQualityDetectionExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除直播域名
 - 请慎重操作（建议在进行域名删除前到域名解析服务商处恢复域名A记录），以免导致删除操作后此域名不可访问。
   deleteLiveDomain调用成功后将删除本条直播域名的全部相关记录，对于仅需要暂停使用该直播域名，推荐stopLiveDomain接口
@@ -922,6 +992,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeCustomLiveStreamSnapshotConfigResponse describeCustomLiveStreamSnapshotConfig(DescribeCustomLiveStreamSnapshotConfigRequest request) throws JdcloudSdkException {
         return new DescribeCustomLiveStreamSnapshotConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询质量检测模板绑定
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQualityDetectionBindingResponse describeQualityDetectionBinding(DescribeQualityDetectionBindingRequest request) throws JdcloudSdkException {
+        return new DescribeQualityDetectionBindingExecutor().client(this).execute(request);
     }
 
     /**
@@ -1016,6 +1098,19 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 删除直播质量检测模板
+- 删除质量检测模板前,请先删除此模板相关的质量检测配置,否则无法删除
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCustomLiveStreamQualityDetectionTemplateResponse deleteCustomLiveStreamQualityDetectionTemplate(DeleteCustomLiveStreamQualityDetectionTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteCustomLiveStreamQualityDetectionTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 关闭时移
      *
      * @param request
@@ -1060,6 +1155,18 @@ public class LiveClient extends JdcloudClient {
      */
     public AddLiveStreamDomainWatermarkResponse addLiveStreamDomainWatermark(AddLiveStreamDomainWatermarkRequest request) throws JdcloudSdkException {
         return new AddLiveStreamDomainWatermarkExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置直播质量检测回调通知地址
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetLiveStreamQualityDetectionNotifyConfigResponse setLiveStreamQualityDetectionNotifyConfig(SetLiveStreamQualityDetectionNotifyConfigRequest request) throws JdcloudSdkException {
+        return new SetLiveStreamQualityDetectionNotifyConfigExecutor().client(this).execute(request);
     }
 
     /**
@@ -1110,6 +1217,19 @@ public class LiveClient extends JdcloudClient {
      */
     public AddLiveRestartDomainResponse addLiveRestartDomain(AddLiveRestartDomainRequest request) throws JdcloudSdkException {
         return new AddLiveRestartDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除域名质量检测配置
+- 删除域名级别的质量检测模板配置,重新推流后生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveStreamDomainQualityDetectionResponse deleteLiveStreamDomainQualityDetection(DeleteLiveStreamDomainQualityDetectionRequest request) throws JdcloudSdkException {
+        return new DeleteLiveStreamDomainQualityDetectionExecutor().client(this).execute(request);
     }
 
     /**
@@ -1245,6 +1365,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 删除质量检测回调配置
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveStreamQualityDetectionNotifyConfigResponse deleteLiveStreamQualityDetectionNotifyConfig(DeleteLiveStreamQualityDetectionNotifyConfigRequest request) throws JdcloudSdkException {
+        return new DeleteLiveStreamQualityDetectionNotifyConfigExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询直播截图张数数据
      *
      * @param request
@@ -1266,6 +1398,19 @@ public class LiveClient extends JdcloudClient {
      */
     public DeleteLiveStreamDomainTranscodeResponse deleteLiveStreamDomainTranscode(DeleteLiveStreamDomainTranscodeRequest request) throws JdcloudSdkException {
         return new DeleteLiveStreamDomainTranscodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除应用级别质量检测模板配置
+- 删除应用级别质量检测模板配置,重新推流后生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveStreamAppQualityDetectionResponse deleteLiveStreamAppQualityDetection(DeleteLiveStreamAppQualityDetectionRequest request) throws JdcloudSdkException {
+        return new DeleteLiveStreamAppQualityDetectionExecutor().client(this).execute(request);
     }
 
     /**
@@ -1427,6 +1572,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 查询质量检测回调配置
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveStreamQualityDetectionNotifyConfigResponse describeLiveStreamQualityDetectionNotifyConfig(DescribeLiveStreamQualityDetectionNotifyConfigRequest request) throws JdcloudSdkException {
+        return new DescribeLiveStreamQualityDetectionNotifyConfigExecutor().client(this).execute(request);
+    }
+
+    /**
      * 中断直播流推送
 - 中断操作1秒后可以继续推流
 
@@ -1476,6 +1633,17 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveStreamInfoResponse describeLiveStreamInfo(DescribeLiveStreamInfoRequest request) throws JdcloudSdkException {
         return new DescribeLiveStreamInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询直播质量检测模板列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCustomLiveStreamQualityDetectionTemplatesResponse describeCustomLiveStreamQualityDetectionTemplates(DescribeCustomLiveStreamQualityDetectionTemplatesRequest request) throws JdcloudSdkException {
+        return new DescribeCustomLiveStreamQualityDetectionTemplatesExecutor().client(this).execute(request);
     }
 
     /**
