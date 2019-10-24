@@ -46,7 +46,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
     private String description;
 
     /**
-     * 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -97,7 +97,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * get 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @return
      */
@@ -106,7 +106,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -154,7 +154,7 @@ public class ModifyVpcRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */

@@ -35,11 +35,16 @@ public class ElasticIpSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 带宽, 范围[1,200] 单位Mbps
+     * 带宽, 范围[1,10240] 单位Mbps
      * Required:true
      */
     @Required
     private Integer bandwidth;
+
+    /**
+     * 额外上行带宽, 范围[0,10240] 单位Mbps
+     */
+    private Integer extraUplinkBandwidth;
 
     /**
      * 购买数量
@@ -57,7 +62,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
 
 
     /**
-     * get 带宽, 范围[1,200] 单位Mbps
+     * get 带宽, 范围[1,10240] 单位Mbps
      *
      * @return
      */
@@ -66,12 +71,30 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 带宽, 范围[1,200] 单位Mbps
+     * set 带宽, 范围[1,10240] 单位Mbps
      *
      * @param bandwidth
      */
     public void setBandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+    }
+
+    /**
+     * get 额外上行带宽, 范围[0,10240] 单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtraUplinkBandwidth() {
+        return extraUplinkBandwidth;
+    }
+
+    /**
+     * set 额外上行带宽, 范围[0,10240] 单位Mbps
+     *
+     * @param extraUplinkBandwidth
+     */
+    public void setExtraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
     }
 
     /**
@@ -112,12 +135,22 @@ public class ElasticIpSpec  implements java.io.Serializable {
 
 
     /**
-     * set 带宽, 范围[1,200] 单位Mbps
+     * set 带宽, 范围[1,10240] 单位Mbps
      *
      * @param bandwidth
      */
     public ElasticIpSpec bandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+        return this;
+    }
+
+    /**
+     * set 额外上行带宽, 范围[0,10240] 单位Mbps
+     *
+     * @param extraUplinkBandwidth
+     */
+    public ElasticIpSpec extraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
         return this;
     }
 

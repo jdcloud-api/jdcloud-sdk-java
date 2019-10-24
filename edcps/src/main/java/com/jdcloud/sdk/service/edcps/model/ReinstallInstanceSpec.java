@@ -92,6 +92,11 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
      */
     private String userData;
 
+    /**
+     * 密钥对id
+     */
+    private String keypairId;
+
 
     /**
      * get 可用区, 如cn-east-tz1a
@@ -255,6 +260,24 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
         this.userData = userData;
     }
 
+    /**
+     * get 密钥对id
+     *
+     * @return
+     */
+    public String getKeypairId() {
+        return keypairId;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public void setKeypairId(String keypairId) {
+        this.keypairId = keypairId;
+    }
+
 
     /**
      * set 可用区, 如cn-east-tz1a
@@ -343,6 +366,16 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
      */
     public ReinstallInstanceSpec userData(String userData) {
         this.userData = userData;
+        return this;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public ReinstallInstanceSpec keypairId(String keypairId) {
+        this.keypairId = keypairId;
         return this;
     }
 

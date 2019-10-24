@@ -67,7 +67,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     private InstanceSpec instanceSpec;
 
     /**
-     * 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -115,7 +115,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * get 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @return
      */
@@ -124,7 +124,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -156,7 +156,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */

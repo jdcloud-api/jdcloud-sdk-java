@@ -50,7 +50,12 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     private String elasticIpId;
 
     /**
-     * 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * 私有IP
+     */
+    private String targetIp;
+
+    /**
+     * 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -105,7 +110,25 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * get 私有IP
+     *
+     * @return
+     */
+    public String getTargetIp() {
+        return targetIp;
+    }
+
+    /**
+     * set 私有IP
+     *
+     * @param targetIp
+     */
+    public void setTargetIp(String targetIp) {
+        this.targetIp = targetIp;
+    }
+
+    /**
+     * get 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @return
      */
@@ -114,7 +137,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -164,7 +187,17 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 私有IP
+     *
+     * @param targetIp
+     */
+    public AssociateElasticIpRequest targetIp(String targetIp) {
+        this.targetIp = targetIp;
+        return this;
+    }
+
+    /**
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */

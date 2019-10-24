@@ -43,14 +43,19 @@ public class ModifyElasticIpBandwidthRequest extends JdcloudRequest implements j
     private String clientToken;
 
     /**
-     * 带宽，单位Mbps，取值范围[1,200]
+     * 带宽，单位Mbps，取值范围[1,10240]
      * Required:true
      */
     @Required
     private Integer bandwidth;
 
     /**
-     * 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * 额外上行带宽，单位Mbps，取值范围[0,10240]
+     */
+    private Integer extraUplinkBandwidth;
+
+    /**
+     * 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -87,7 +92,7 @@ public class ModifyElasticIpBandwidthRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 带宽，单位Mbps，取值范围[1,200]
+     * get 带宽，单位Mbps，取值范围[1,10240]
      *
      * @return
      */
@@ -96,7 +101,7 @@ public class ModifyElasticIpBandwidthRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 带宽，单位Mbps，取值范围[1,200]
+     * set 带宽，单位Mbps，取值范围[1,10240]
      *
      * @param bandwidth
      */
@@ -105,7 +110,25 @@ public class ModifyElasticIpBandwidthRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * get 额外上行带宽，单位Mbps，取值范围[0,10240]
+     *
+     * @return
+     */
+    public Integer getExtraUplinkBandwidth() {
+        return extraUplinkBandwidth;
+    }
+
+    /**
+     * set 额外上行带宽，单位Mbps，取值范围[0,10240]
+     *
+     * @param extraUplinkBandwidth
+     */
+    public void setExtraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
+    }
+
+    /**
+     * get 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @return
      */
@@ -114,7 +137,7 @@ public class ModifyElasticIpBandwidthRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -154,7 +177,7 @@ public class ModifyElasticIpBandwidthRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 带宽，单位Mbps，取值范围[1,200]
+     * set 带宽，单位Mbps，取值范围[1,10240]
      *
      * @param bandwidth
      */
@@ -164,7 +187,17 @@ public class ModifyElasticIpBandwidthRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 地域ID，可调用接口（queryEdCPSRegions）获取分布式云物理服务器支持的地域
+     * set 额外上行带宽，单位Mbps，取值范围[0,10240]
+     *
+     * @param extraUplinkBandwidth
+     */
+    public ModifyElasticIpBandwidthRequest extraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
+        return this;
+    }
+
+    /**
+     * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
      */

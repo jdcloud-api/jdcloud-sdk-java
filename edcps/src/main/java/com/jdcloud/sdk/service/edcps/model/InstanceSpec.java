@@ -114,9 +114,14 @@ public class InstanceSpec  implements java.io.Serializable {
     private String lineType;
 
     /**
-     * 外网带宽, 范围[1,200] 单位Mbps
+     * 外网带宽, 范围[1,10240] 单位Mbps
      */
     private Integer bandwidth;
+
+    /**
+     * 额外上行带宽, 范围[0,10240] 单位Mbps
+     */
+    private Integer extraUplinkBandwidth;
 
     /**
      * 云物理服务器名称
@@ -146,6 +151,11 @@ public class InstanceSpec  implements java.io.Serializable {
      * 可执行脚本Base64编码后的内容，支持shell和python脚本
      */
     private String userData;
+
+    /**
+     * 密钥对id
+     */
+    private String keypairId;
 
     /**
      * 计费配置
@@ -390,7 +400,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 外网带宽, 范围[1,200] 单位Mbps
+     * get 外网带宽, 范围[1,10240] 单位Mbps
      *
      * @return
      */
@@ -399,12 +409,30 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 外网带宽, 范围[1,200] 单位Mbps
+     * set 外网带宽, 范围[1,10240] 单位Mbps
      *
      * @param bandwidth
      */
     public void setBandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+    }
+
+    /**
+     * get 额外上行带宽, 范围[0,10240] 单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtraUplinkBandwidth() {
+        return extraUplinkBandwidth;
+    }
+
+    /**
+     * set 额外上行带宽, 范围[0,10240] 单位Mbps
+     *
+     * @param extraUplinkBandwidth
+     */
+    public void setExtraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
     }
 
     /**
@@ -495,6 +523,24 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public void setUserData(String userData) {
         this.userData = userData;
+    }
+
+    /**
+     * get 密钥对id
+     *
+     * @return
+     */
+    public String getKeypairId() {
+        return keypairId;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public void setKeypairId(String keypairId) {
+        this.keypairId = keypairId;
     }
 
     /**
@@ -647,12 +693,22 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 外网带宽, 范围[1,200] 单位Mbps
+     * set 外网带宽, 范围[1,10240] 单位Mbps
      *
      * @param bandwidth
      */
     public InstanceSpec bandwidth(Integer bandwidth) {
         this.bandwidth = bandwidth;
+        return this;
+    }
+
+    /**
+     * set 额外上行带宽, 范围[0,10240] 单位Mbps
+     *
+     * @param extraUplinkBandwidth
+     */
+    public InstanceSpec extraUplinkBandwidth(Integer extraUplinkBandwidth) {
+        this.extraUplinkBandwidth = extraUplinkBandwidth;
         return this;
     }
 
@@ -703,6 +759,16 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public InstanceSpec userData(String userData) {
         this.userData = userData;
+        return this;
+    }
+
+    /**
+     * set 密钥对id
+     *
+     * @param keypairId
+     */
+    public InstanceSpec keypairId(String keypairId) {
+        this.keypairId = keypairId;
         return this;
     }
 
