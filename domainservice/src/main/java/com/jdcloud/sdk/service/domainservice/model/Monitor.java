@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.domainservice.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * monitor
@@ -196,6 +198,31 @@ public class Monitor  implements java.io.Serializable {
      * 使用记录，host_value 0，ip_backup_01 1，ip_backup_02 2，cname_backup 3
      */
     private Integer usedType;
+
+    /**
+     * 备用地址及其状态列表
+     */
+    private List<BackupAddressesInfo> backupAddressList;
+
+    /**
+     * 探测请求携带自定义头域及其域值列表
+     */
+    private List<HttpHeader> requestHeaders;
+
+    /**
+     * 探测响应Body体中包含的字符串
+     */
+    private String responseBodyMatch;
+
+    /**
+     * 探测响应码范围列表
+     */
+    private List<HttpResponseCodeRange> responseCodeRanges;
+
+    /**
+     * 正在使用的有效解析地址
+     */
+    private String effectAddr;
 
 
     /**
@@ -792,6 +819,96 @@ public class Monitor  implements java.io.Serializable {
         this.usedType = usedType;
     }
 
+    /**
+     * get 备用地址及其状态列表
+     *
+     * @return
+     */
+    public List<BackupAddressesInfo> getBackupAddressList() {
+        return backupAddressList;
+    }
+
+    /**
+     * set 备用地址及其状态列表
+     *
+     * @param backupAddressList
+     */
+    public void setBackupAddressList(List<BackupAddressesInfo> backupAddressList) {
+        this.backupAddressList = backupAddressList;
+    }
+
+    /**
+     * get 探测请求携带自定义头域及其域值列表
+     *
+     * @return
+     */
+    public List<HttpHeader> getRequestHeaders() {
+        return requestHeaders;
+    }
+
+    /**
+     * set 探测请求携带自定义头域及其域值列表
+     *
+     * @param requestHeaders
+     */
+    public void setRequestHeaders(List<HttpHeader> requestHeaders) {
+        this.requestHeaders = requestHeaders;
+    }
+
+    /**
+     * get 探测响应Body体中包含的字符串
+     *
+     * @return
+     */
+    public String getResponseBodyMatch() {
+        return responseBodyMatch;
+    }
+
+    /**
+     * set 探测响应Body体中包含的字符串
+     *
+     * @param responseBodyMatch
+     */
+    public void setResponseBodyMatch(String responseBodyMatch) {
+        this.responseBodyMatch = responseBodyMatch;
+    }
+
+    /**
+     * get 探测响应码范围列表
+     *
+     * @return
+     */
+    public List<HttpResponseCodeRange> getResponseCodeRanges() {
+        return responseCodeRanges;
+    }
+
+    /**
+     * set 探测响应码范围列表
+     *
+     * @param responseCodeRanges
+     */
+    public void setResponseCodeRanges(List<HttpResponseCodeRange> responseCodeRanges) {
+        this.responseCodeRanges = responseCodeRanges;
+    }
+
+    /**
+     * get 正在使用的有效解析地址
+     *
+     * @return
+     */
+    public String getEffectAddr() {
+        return effectAddr;
+    }
+
+    /**
+     * set 正在使用的有效解析地址
+     *
+     * @param effectAddr
+     */
+    public void setEffectAddr(String effectAddr) {
+        this.effectAddr = effectAddr;
+    }
+
 
     /**
      * set 连续几次触发报警
@@ -1123,5 +1240,91 @@ public class Monitor  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 备用地址及其状态列表
+     *
+     * @param backupAddressList
+     */
+    public Monitor backupAddressList(List<BackupAddressesInfo> backupAddressList) {
+        this.backupAddressList = backupAddressList;
+        return this;
+    }
+
+    /**
+     * set 探测请求携带自定义头域及其域值列表
+     *
+     * @param requestHeaders
+     */
+    public Monitor requestHeaders(List<HttpHeader> requestHeaders) {
+        this.requestHeaders = requestHeaders;
+        return this;
+    }
+
+    /**
+     * set 探测响应Body体中包含的字符串
+     *
+     * @param responseBodyMatch
+     */
+    public Monitor responseBodyMatch(String responseBodyMatch) {
+        this.responseBodyMatch = responseBodyMatch;
+        return this;
+    }
+
+    /**
+     * set 探测响应码范围列表
+     *
+     * @param responseCodeRanges
+     */
+    public Monitor responseCodeRanges(List<HttpResponseCodeRange> responseCodeRanges) {
+        this.responseCodeRanges = responseCodeRanges;
+        return this;
+    }
+
+    /**
+     * set 正在使用的有效解析地址
+     *
+     * @param effectAddr
+     */
+    public Monitor effectAddr(String effectAddr) {
+        this.effectAddr = effectAddr;
+        return this;
+    }
+
+
+    /**
+     * add item to 备用地址及其状态列表
+     *
+     * @param backupAddressList
+     */
+    public void addBackupAddressList(BackupAddressesInfo backupAddressList) {
+        if (this.backupAddressList == null) {
+            this.backupAddressList = new ArrayList<>();
+        }
+        this.backupAddressList.add(backupAddressList);
+    }
+
+    /**
+     * add item to 探测请求携带自定义头域及其域值列表
+     *
+     * @param requestHeader
+     */
+    public void addRequestHeader(HttpHeader requestHeader) {
+        if (this.requestHeaders == null) {
+            this.requestHeaders = new ArrayList<>();
+        }
+        this.requestHeaders.add(requestHeader);
+    }
+
+    /**
+     * add item to 探测响应码范围列表
+     *
+     * @param responseCodeRange
+     */
+    public void addResponseCodeRange(HttpResponseCodeRange responseCodeRange) {
+        if (this.responseCodeRanges == null) {
+            this.responseCodeRanges = new ArrayList<>();
+        }
+        this.responseCodeRanges.add(responseCodeRange);
+    }
 
 }
