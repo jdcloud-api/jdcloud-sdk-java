@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,6 +51,11 @@ public class Charge  implements java.io.Serializable {
      * 过期时间，预付费资源的到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ，后付费资源此字段内容为空
      */
     private String chargeExpiredTime;
+
+    /**
+     * 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     */
+    private String chargeRetireTime;
 
 
     /**
@@ -125,6 +130,24 @@ public class Charge  implements java.io.Serializable {
         this.chargeExpiredTime = chargeExpiredTime;
     }
 
+    /**
+     * get 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @return
+     */
+    public String getChargeRetireTime() {
+        return chargeRetireTime;
+    }
+
+    /**
+     * set 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param chargeRetireTime
+     */
+    public void setChargeRetireTime(String chargeRetireTime) {
+        this.chargeRetireTime = chargeRetireTime;
+    }
+
 
     /**
      * set 支付模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
@@ -163,6 +186,16 @@ public class Charge  implements java.io.Serializable {
      */
     public Charge chargeExpiredTime(String chargeExpiredTime) {
         this.chargeExpiredTime = chargeExpiredTime;
+        return this;
+    }
+
+    /**
+     * set 预期释放时间，资源的预期释放时间，预付费/后付费资源均有此值，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param chargeRetireTime
+     */
+    public Charge chargeRetireTime(String chargeRetireTime) {
+        this.chargeRetireTime = chargeRetireTime;
         return this;
     }
 

@@ -1,5 +1,5 @@
 /*
- * Copyright 2018-2025 JDCLOUD.COM
+ * Copyright 2018 JDCLOUD.COM
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,23 +33,33 @@ public class ChargeSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+     * 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
      */
     private String chargeMode;
 
     /**
-     * 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
      */
     private String chargeUnit;
 
     /**
-     * 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      */
     private Integer chargeDuration;
 
+    /**
+     * True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
+     */
+    private Boolean autoRenew;
 
     /**
-     * get 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+     * 产品线统一活动凭证JSON字符串，需要BASE64编码，目前要求编码前格式为 {&quot;activity&quot;:{&quot;activityType&quot;:必填字段, &quot;activityIdentifier&quot;:必填字段}}
+     */
+    private String buyScenario;
+
+
+    /**
+     * get 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @return
      */
@@ -58,7 +68,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @param chargeMode
      */
@@ -67,7 +77,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * get 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
      *
      * @return
      */
@@ -76,7 +86,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * set 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
      *
      * @param chargeUnit
      */
@@ -85,7 +95,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * get 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @return
      */
@@ -94,7 +104,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * set 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @param chargeDuration
      */
@@ -102,9 +112,45 @@ public class ChargeSpec  implements java.io.Serializable {
         this.chargeDuration = chargeDuration;
     }
 
+    /**
+     * get True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
+     *
+     * @return
+     */
+    public Boolean getAutoRenew() {
+        return autoRenew;
+    }
 
     /**
-     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration
+     * set True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
+     *
+     * @param autoRenew
+     */
+    public void setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+    }
+
+    /**
+     * get 产品线统一活动凭证JSON字符串，需要BASE64编码，目前要求编码前格式为 {&quot;activity&quot;:{&quot;activityType&quot;:必填字段, &quot;activityIdentifier&quot;:必填字段}}
+     *
+     * @return
+     */
+    public String getBuyScenario() {
+        return buyScenario;
+    }
+
+    /**
+     * set 产品线统一活动凭证JSON字符串，需要BASE64编码，目前要求编码前格式为 {&quot;activity&quot;:{&quot;activityType&quot;:必填字段, &quot;activityIdentifier&quot;:必填字段}}
+     *
+     * @param buyScenario
+     */
+    public void setBuyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
+    }
+
+
+    /**
+     * set 计费模式，取值为：prepaid_by_duration，postpaid_by_usage或postpaid_by_duration，prepaid_by_duration表示预付费，postpaid_by_usage表示按用量后付费，postpaid_by_duration表示按配置后付费，默认为postpaid_by_duration.请参阅具体产品线帮助文档确认该产品线支持的计费类型
      *
      * @param chargeMode
      */
@@ -114,7 +160,7 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费单位，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
+     * set 预付费计费单位，预付费必填，当chargeMode为prepaid_by_duration时有效，取值为：month、year，默认为month
      *
      * @param chargeUnit
      */
@@ -124,12 +170,32 @@ public class ChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 预付费计费时长，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
+     * set 预付费计费时长，预付费必填，当chargeMode取值为prepaid_by_duration时有效。当chargeUnit为month时取值为：1~9，当chargeUnit为year时取值为：1、2、3
      *
      * @param chargeDuration
      */
     public ChargeSpec chargeDuration(Integer chargeDuration) {
         this.chargeDuration = chargeDuration;
+        return this;
+    }
+
+    /**
+     * set True&#x3D;：OPEN——开通自动续费、False&#x3D;CLOSE—— 不开通自动续费，默认为CLOSE
+     *
+     * @param autoRenew
+     */
+    public ChargeSpec autoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+
+    /**
+     * set 产品线统一活动凭证JSON字符串，需要BASE64编码，目前要求编码前格式为 {&quot;activity&quot;:{&quot;activityType&quot;:必填字段, &quot;activityIdentifier&quot;:必填字段}}
+     *
+     * @param buyScenario
+     */
+    public ChargeSpec buyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
         return this;
     }
 

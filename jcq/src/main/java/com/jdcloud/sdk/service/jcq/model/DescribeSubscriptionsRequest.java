@@ -40,12 +40,12 @@ public class DescribeSubscriptionsRequest extends JdcloudRequest implements java
     private String consumerGroupFilter;
 
     /**
-     * 分页之中的每页大小
+     * 分页大小；默认为10；取值范围[10, 100]
      */
     private Integer pageSize;
 
     /**
-     * 分页之中的页码
+     * 页码
      */
     private Integer pageNumber;
 
@@ -83,7 +83,7 @@ public class DescribeSubscriptionsRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 分页之中的每页大小
+     * get 分页大小；默认为10；取值范围[10, 100]
      *
      * @return
      */
@@ -92,7 +92,7 @@ public class DescribeSubscriptionsRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 分页之中的每页大小
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -101,7 +101,7 @@ public class DescribeSubscriptionsRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 分页之中的页码
+     * get 页码
      *
      * @return
      */
@@ -110,7 +110,7 @@ public class DescribeSubscriptionsRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 分页之中的页码
+     * set 页码
      *
      * @param pageNumber
      */
@@ -166,7 +166,7 @@ public class DescribeSubscriptionsRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 分页之中的每页大小
+     * set 分页大小；默认为10；取值范围[10, 100]
      *
      * @param pageSize
      */
@@ -176,7 +176,7 @@ public class DescribeSubscriptionsRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 分页之中的页码
+     * set 页码
      *
      * @param pageNumber
      */

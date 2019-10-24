@@ -28,21 +28,19 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建订阅
+ * 修改订阅
  */
-public class CreateSubscriptionRequest extends JdcloudRequest implements java.io.Serializable {
+public class ModifySubscriptionAttributeRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * consumerGroupId
-     * Required:true
+     * 最大重试次数
      */
-    @Required
-    private String consumerGroupId;
+    private Integer maxRetryTimes;
 
     /**
-     * 消息隐藏时间单位秒
+     * 消息ack超时时间
      */
     private Integer messageInvisibleTimeInSeconds;
 
@@ -50,11 +48,6 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
      * 是否开启死信队列[true, false]
      */
     private Boolean dlqEnable;
-
-    /**
-     * 最大重试次数dlqEnable为true必填,范围[0,16]
-     */
-    private Integer maxRetryTimes;
 
     /**
      * 所在区域的Region ID
@@ -70,27 +63,34 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
     @Required
     private String topicName;
 
+    /**
+     * consumerGroupId
+     * Required:true
+     */
+    @Required
+    private String consumerGroupId;
+
 
     /**
-     * get consumerGroupId
+     * get 最大重试次数
      *
      * @return
      */
-    public String getConsumerGroupId() {
-        return consumerGroupId;
+    public Integer getMaxRetryTimes() {
+        return maxRetryTimes;
     }
 
     /**
-     * set consumerGroupId
+     * set 最大重试次数
      *
-     * @param consumerGroupId
+     * @param maxRetryTimes
      */
-    public void setConsumerGroupId(String consumerGroupId) {
-        this.consumerGroupId = consumerGroupId;
+    public void setMaxRetryTimes(Integer maxRetryTimes) {
+        this.maxRetryTimes = maxRetryTimes;
     }
 
     /**
-     * get 消息隐藏时间单位秒
+     * get 消息ack超时时间
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 消息隐藏时间单位秒
+     * set 消息ack超时时间
      *
      * @param messageInvisibleTimeInSeconds
      */
@@ -123,24 +123,6 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
      */
     public void setDlqEnable(Boolean dlqEnable) {
         this.dlqEnable = dlqEnable;
-    }
-
-    /**
-     * get 最大重试次数dlqEnable为true必填,范围[0,16]
-     *
-     * @return
-     */
-    public Integer getMaxRetryTimes() {
-        return maxRetryTimes;
-    }
-
-    /**
-     * set 最大重试次数dlqEnable为true必填,范围[0,16]
-     *
-     * @param maxRetryTimes
-     */
-    public void setMaxRetryTimes(Integer maxRetryTimes) {
-        this.maxRetryTimes = maxRetryTimes;
     }
 
     /**
@@ -179,23 +161,41 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
         this.topicName = topicName;
     }
 
+    /**
+     * get consumerGroupId
+     *
+     * @return
+     */
+    public String getConsumerGroupId() {
+        return consumerGroupId;
+    }
 
     /**
      * set consumerGroupId
      *
      * @param consumerGroupId
      */
-    public CreateSubscriptionRequest consumerGroupId(String consumerGroupId) {
+    public void setConsumerGroupId(String consumerGroupId) {
         this.consumerGroupId = consumerGroupId;
+    }
+
+
+    /**
+     * set 最大重试次数
+     *
+     * @param maxRetryTimes
+     */
+    public ModifySubscriptionAttributeRequest maxRetryTimes(Integer maxRetryTimes) {
+        this.maxRetryTimes = maxRetryTimes;
         return this;
     }
 
     /**
-     * set 消息隐藏时间单位秒
+     * set 消息ack超时时间
      *
      * @param messageInvisibleTimeInSeconds
      */
-    public CreateSubscriptionRequest messageInvisibleTimeInSeconds(Integer messageInvisibleTimeInSeconds) {
+    public ModifySubscriptionAttributeRequest messageInvisibleTimeInSeconds(Integer messageInvisibleTimeInSeconds) {
         this.messageInvisibleTimeInSeconds = messageInvisibleTimeInSeconds;
         return this;
     }
@@ -205,18 +205,8 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
      *
      * @param dlqEnable
      */
-    public CreateSubscriptionRequest dlqEnable(Boolean dlqEnable) {
+    public ModifySubscriptionAttributeRequest dlqEnable(Boolean dlqEnable) {
         this.dlqEnable = dlqEnable;
-        return this;
-    }
-
-    /**
-     * set 最大重试次数dlqEnable为true必填,范围[0,16]
-     *
-     * @param maxRetryTimes
-     */
-    public CreateSubscriptionRequest maxRetryTimes(Integer maxRetryTimes) {
-        this.maxRetryTimes = maxRetryTimes;
         return this;
     }
 
@@ -225,7 +215,7 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
      *
      * @param regionId
      */
-    public CreateSubscriptionRequest regionId(String regionId) {
+    public ModifySubscriptionAttributeRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -235,8 +225,18 @@ public class CreateSubscriptionRequest extends JdcloudRequest implements java.io
      *
      * @param topicName
      */
-    public CreateSubscriptionRequest topicName(String topicName) {
+    public ModifySubscriptionAttributeRequest topicName(String topicName) {
         this.topicName = topicName;
+        return this;
+    }
+
+    /**
+     * set consumerGroupId
+     *
+     * @param consumerGroupId
+     */
+    public ModifySubscriptionAttributeRequest consumerGroupId(String consumerGroupId) {
+        this.consumerGroupId = consumerGroupId;
         return this;
     }
 
