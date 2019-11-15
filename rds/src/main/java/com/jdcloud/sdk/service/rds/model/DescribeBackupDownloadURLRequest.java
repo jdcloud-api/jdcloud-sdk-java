@@ -40,7 +40,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     private String fileName;
 
     /**
-     * 指定下载链接的过期时间，单位秒,缺省为86400秒，即24小时。&lt;br&gt;- MySQL：不支持该参数，只能是默认值&lt;br&gt;- SQL Server：支持
+     * 指定下载链接的过期时间，单位秒, 取值范围为 1 ~ 86400 秒；支持 SQL Server：缺省为 86400 秒。支持 MySQL, Percona, MariaDB：缺省为 300 秒。
      */
     private String urlExpirationSecond;
 
@@ -78,7 +78,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     }
 
     /**
-     * get 指定下载链接的过期时间，单位秒,缺省为86400秒，即24小时。&lt;br&gt;- MySQL：不支持该参数，只能是默认值&lt;br&gt;- SQL Server：支持
+     * get 指定下载链接的过期时间，单位秒, 取值范围为 1 ~ 86400 秒；支持 SQL Server：缺省为 86400 秒。支持 MySQL, Percona, MariaDB：缺省为 300 秒。
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 指定下载链接的过期时间，单位秒,缺省为86400秒，即24小时。&lt;br&gt;- MySQL：不支持该参数，只能是默认值&lt;br&gt;- SQL Server：支持
+     * set 指定下载链接的过期时间，单位秒, 取值范围为 1 ~ 86400 秒；支持 SQL Server：缺省为 86400 秒。支持 MySQL, Percona, MariaDB：缺省为 300 秒。
      *
      * @param urlExpirationSecond
      */
@@ -143,7 +143,7 @@ public class DescribeBackupDownloadURLRequest extends JdcloudRequest implements 
     }
 
     /**
-     * set 指定下载链接的过期时间，单位秒,缺省为86400秒，即24小时。&lt;br&gt;- MySQL：不支持该参数，只能是默认值&lt;br&gt;- SQL Server：支持
+     * set 指定下载链接的过期时间，单位秒, 取值范围为 1 ~ 86400 秒；支持 SQL Server：缺省为 86400 秒。支持 MySQL, Percona, MariaDB：缺省为 300 秒。
      *
      * @param urlExpirationSecond
      */

@@ -55,6 +55,16 @@ public class SubnetSpec  implements java.io.Serializable {
     private String cidr;
 
     /**
+     * 子网的次要cidr
+     */
+    private String secondaryCidr;
+
+    /**
+     * 子网的次要cidr名称
+     */
+    private String secondaryCidrName;
+
+    /**
      * 名称
      * Required:true
      */
@@ -124,6 +134,42 @@ public class SubnetSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 子网的次要cidr
+     *
+     * @return
+     */
+    public String getSecondaryCidr() {
+        return secondaryCidr;
+    }
+
+    /**
+     * set 子网的次要cidr
+     *
+     * @param secondaryCidr
+     */
+    public void setSecondaryCidr(String secondaryCidr) {
+        this.secondaryCidr = secondaryCidr;
+    }
+
+    /**
+     * get 子网的次要cidr名称
+     *
+     * @return
+     */
+    public String getSecondaryCidrName() {
+        return secondaryCidrName;
+    }
+
+    /**
+     * set 子网的次要cidr名称
+     *
+     * @param secondaryCidrName
+     */
+    public void setSecondaryCidrName(String secondaryCidrName) {
+        this.secondaryCidrName = secondaryCidrName;
+    }
+
+    /**
      * get 名称
      *
      * @return
@@ -187,6 +233,26 @@ public class SubnetSpec  implements java.io.Serializable {
      */
     public SubnetSpec cidr(String cidr) {
         this.cidr = cidr;
+        return this;
+    }
+
+    /**
+     * set 子网的次要cidr
+     *
+     * @param secondaryCidr
+     */
+    public SubnetSpec secondaryCidr(String secondaryCidr) {
+        this.secondaryCidr = secondaryCidr;
+        return this;
+    }
+
+    /**
+     * set 子网的次要cidr名称
+     *
+     * @param secondaryCidrName
+     */
+    public SubnetSpec secondaryCidrName(String secondaryCidrName) {
+        this.secondaryCidrName = secondaryCidrName;
         return this;
     }
 

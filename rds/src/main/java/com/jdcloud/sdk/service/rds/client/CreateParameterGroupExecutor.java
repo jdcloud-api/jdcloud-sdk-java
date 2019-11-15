@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.CreateParameterGroupResponse;
 
 /**
- * 创建一个参数组&lt;br&gt;- 仅支持MySQL
+ * 创建一个参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 class CreateParameterGroupExecutor extends JdcloudExecutor {
 

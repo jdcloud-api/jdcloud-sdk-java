@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+ * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DescribeParameterModifyRecordsRequest extends JdcloudRequest implements java.io.Serializable {
 

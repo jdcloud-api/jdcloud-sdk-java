@@ -59,9 +59,7 @@ public class CreateMountTargetRequest extends JdcloudRequest implements java.io.
 
     /**
      * 安全组id
-     * Required:true
      */
-    @Required
     private String securityGroupId;
 
     /**

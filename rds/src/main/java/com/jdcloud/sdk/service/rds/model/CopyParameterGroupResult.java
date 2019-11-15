@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 拷贝参数组&lt;br&gt;- 仅支持MySQL
+ * 拷贝参数组
  */
 public class CopyParameterGroupResult extends JdcloudResult implements java.io.Serializable {
 

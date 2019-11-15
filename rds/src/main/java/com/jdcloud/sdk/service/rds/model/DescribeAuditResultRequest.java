@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 仅支持查看MySQL实例的审计内容
+ * 仅支持查看MySQL实例的审计内容&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB
  */
 public class DescribeAuditResultRequest extends JdcloudRequest implements java.io.Serializable {
 

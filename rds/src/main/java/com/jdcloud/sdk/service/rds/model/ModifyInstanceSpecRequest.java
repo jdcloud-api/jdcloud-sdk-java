@@ -49,6 +49,16 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     private Integer newInstanceStorageGB;
 
     /**
+     * 存储类型，如果不指定，默认会采用实例原存储类型.
+     */
+    private String newInstanceStorageType;
+
+    /**
+     * 实例数据加密(存储类型为云硬盘才支持数据加密). false：不加密; true：加密. 如果实例从本地盘变为云硬盘，缺省为false. 如果实例本来就是使用云硬盘的，缺省和源实例保持一致
+     */
+    private Boolean storageEncrypted;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -97,6 +107,42 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
      */
     public void setNewInstanceStorageGB(Integer newInstanceStorageGB) {
         this.newInstanceStorageGB = newInstanceStorageGB;
+    }
+
+    /**
+     * get 存储类型，如果不指定，默认会采用实例原存储类型.
+     *
+     * @return
+     */
+    public String getNewInstanceStorageType() {
+        return newInstanceStorageType;
+    }
+
+    /**
+     * set 存储类型，如果不指定，默认会采用实例原存储类型.
+     *
+     * @param newInstanceStorageType
+     */
+    public void setNewInstanceStorageType(String newInstanceStorageType) {
+        this.newInstanceStorageType = newInstanceStorageType;
+    }
+
+    /**
+     * get 实例数据加密(存储类型为云硬盘才支持数据加密). false：不加密; true：加密. 如果实例从本地盘变为云硬盘，缺省为false. 如果实例本来就是使用云硬盘的，缺省和源实例保持一致
+     *
+     * @return
+     */
+    public Boolean getStorageEncrypted() {
+        return storageEncrypted;
+    }
+
+    /**
+     * set 实例数据加密(存储类型为云硬盘才支持数据加密). false：不加密; true：加密. 如果实例从本地盘变为云硬盘，缺省为false. 如果实例本来就是使用云硬盘的，缺省和源实例保持一致
+     *
+     * @param storageEncrypted
+     */
+    public void setStorageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
     }
 
     /**
@@ -153,6 +199,26 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
      */
     public ModifyInstanceSpecRequest newInstanceStorageGB(Integer newInstanceStorageGB) {
         this.newInstanceStorageGB = newInstanceStorageGB;
+        return this;
+    }
+
+    /**
+     * set 存储类型，如果不指定，默认会采用实例原存储类型.
+     *
+     * @param newInstanceStorageType
+     */
+    public ModifyInstanceSpecRequest newInstanceStorageType(String newInstanceStorageType) {
+        this.newInstanceStorageType = newInstanceStorageType;
+        return this;
+    }
+
+    /**
+     * set 实例数据加密(存储类型为云硬盘才支持数据加密). false：不加密; true：加密. 如果实例从本地盘变为云硬盘，缺省为false. 如果实例本来就是使用云硬盘的，缺省和源实例保持一致
+     *
+     * @param storageEncrypted
+     */
+    public ModifyInstanceSpecRequest storageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
         return this;
     }
 

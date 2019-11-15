@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改参数组名称，描述&lt;br&gt;- 仅支持MySQL
+ * 修改参数组名称，描述&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class ModifyParameterGroupAttributeResponse extends JdcloudResponse<ModifyParameterGroupAttributeResult> implements java.io.Serializable {
 

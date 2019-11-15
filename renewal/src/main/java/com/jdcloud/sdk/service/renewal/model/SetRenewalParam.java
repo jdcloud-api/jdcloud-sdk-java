@@ -34,20 +34,6 @@ public class SetRenewalParam  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源id列表,英文逗号分隔
-     * Required:true
-     */
-    @Required
-    private String instanceIds;
-
-    /**
-     * 自动续费状态 0-关闭自动续费,1-开通或修改自动续费
-     * Required:true
-     */
-    @Required
-    private Integer autoRenewStatus;
-
-    /**
      * 业务线
      * Required:true
      */
@@ -62,56 +48,34 @@ public class SetRenewalParam  implements java.io.Serializable {
     private String serviceCode;
 
     /**
-     * 续费周期（autoRenewStatus&#x3D;1时必传）
+     * 续费时长
      */
     private Integer timeSpan;
 
     /**
-     * 时间单位 1-小时 2-天 3-月 4-年（autoRenewStatus&#x3D;1时必传）
+     * 时间单位(MONTH-月,YEAR-年)
      */
-    private Integer timeUnit;
+    private String timeUnit;
 
     /**
-     * 是否绑定关联资源一并续费 0-不绑定,1-绑定（autoRenewStatus&#x3D;1时必传）
+     * 资源ID列表,英文逗号分隔
+     * Required:true
      */
-    private Integer allAutoPay;
-
-
-    /**
-     * get 资源id列表,英文逗号分隔
-     *
-     * @return
-     */
-    public String getInstanceIds() {
-        return instanceIds;
-    }
+    @Required
+    private String instanceIds;
 
     /**
-     * set 资源id列表,英文逗号分隔
-     *
-     * @param instanceIds
+     * 自动续费状态(OPEN-开通自动续费,CLOSE-关闭自动续费,MODIFY-修改自动续费)
+     * Required:true
      */
-    public void setInstanceIds(String instanceIds) {
-        this.instanceIds = instanceIds;
-    }
+    @Required
+    private String autoRenewStatus;
 
     /**
-     * get 自动续费状态 0-关闭自动续费,1-开通或修改自动续费
-     *
-     * @return
+     * 是否绑定关联资源一并开通自动续费(UNBIND：不绑定，BIND：绑定)
      */
-    public Integer getAutoRenewStatus() {
-        return autoRenewStatus;
-    }
+    private String allAutoPay;
 
-    /**
-     * set 自动续费状态 0-关闭自动续费,1-开通或修改自动续费
-     *
-     * @param autoRenewStatus
-     */
-    public void setAutoRenewStatus(Integer autoRenewStatus) {
-        this.autoRenewStatus = autoRenewStatus;
-    }
 
     /**
      * get 业务线
@@ -150,7 +114,7 @@ public class SetRenewalParam  implements java.io.Serializable {
     }
 
     /**
-     * get 续费周期（autoRenewStatus&#x3D;1时必传）
+     * get 续费时长
      *
      * @return
      */
@@ -159,7 +123,7 @@ public class SetRenewalParam  implements java.io.Serializable {
     }
 
     /**
-     * set 续费周期（autoRenewStatus&#x3D;1时必传）
+     * set 续费时长
      *
      * @param timeSpan
      */
@@ -168,61 +132,77 @@ public class SetRenewalParam  implements java.io.Serializable {
     }
 
     /**
-     * get 时间单位 1-小时 2-天 3-月 4-年（autoRenewStatus&#x3D;1时必传）
+     * get 时间单位(MONTH-月,YEAR-年)
      *
      * @return
      */
-    public Integer getTimeUnit() {
+    public String getTimeUnit() {
         return timeUnit;
     }
 
     /**
-     * set 时间单位 1-小时 2-天 3-月 4-年（autoRenewStatus&#x3D;1时必传）
+     * set 时间单位(MONTH-月,YEAR-年)
      *
      * @param timeUnit
      */
-    public void setTimeUnit(Integer timeUnit) {
+    public void setTimeUnit(String timeUnit) {
         this.timeUnit = timeUnit;
     }
 
     /**
-     * get 是否绑定关联资源一并续费 0-不绑定,1-绑定（autoRenewStatus&#x3D;1时必传）
+     * get 资源ID列表,英文逗号分隔
      *
      * @return
      */
-    public Integer getAllAutoPay() {
+    public String getInstanceIds() {
+        return instanceIds;
+    }
+
+    /**
+     * set 资源ID列表,英文逗号分隔
+     *
+     * @param instanceIds
+     */
+    public void setInstanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+    }
+
+    /**
+     * get 自动续费状态(OPEN-开通自动续费,CLOSE-关闭自动续费,MODIFY-修改自动续费)
+     *
+     * @return
+     */
+    public String getAutoRenewStatus() {
+        return autoRenewStatus;
+    }
+
+    /**
+     * set 自动续费状态(OPEN-开通自动续费,CLOSE-关闭自动续费,MODIFY-修改自动续费)
+     *
+     * @param autoRenewStatus
+     */
+    public void setAutoRenewStatus(String autoRenewStatus) {
+        this.autoRenewStatus = autoRenewStatus;
+    }
+
+    /**
+     * get 是否绑定关联资源一并开通自动续费(UNBIND：不绑定，BIND：绑定)
+     *
+     * @return
+     */
+    public String getAllAutoPay() {
         return allAutoPay;
     }
 
     /**
-     * set 是否绑定关联资源一并续费 0-不绑定,1-绑定（autoRenewStatus&#x3D;1时必传）
+     * set 是否绑定关联资源一并开通自动续费(UNBIND：不绑定，BIND：绑定)
      *
      * @param allAutoPay
      */
-    public void setAllAutoPay(Integer allAutoPay) {
+    public void setAllAutoPay(String allAutoPay) {
         this.allAutoPay = allAutoPay;
     }
 
-
-    /**
-     * set 资源id列表,英文逗号分隔
-     *
-     * @param instanceIds
-     */
-    public SetRenewalParam instanceIds(String instanceIds) {
-        this.instanceIds = instanceIds;
-        return this;
-    }
-
-    /**
-     * set 自动续费状态 0-关闭自动续费,1-开通或修改自动续费
-     *
-     * @param autoRenewStatus
-     */
-    public SetRenewalParam autoRenewStatus(Integer autoRenewStatus) {
-        this.autoRenewStatus = autoRenewStatus;
-        return this;
-    }
 
     /**
      * set 业务线
@@ -245,7 +225,7 @@ public class SetRenewalParam  implements java.io.Serializable {
     }
 
     /**
-     * set 续费周期（autoRenewStatus&#x3D;1时必传）
+     * set 续费时长
      *
      * @param timeSpan
      */
@@ -255,21 +235,41 @@ public class SetRenewalParam  implements java.io.Serializable {
     }
 
     /**
-     * set 时间单位 1-小时 2-天 3-月 4-年（autoRenewStatus&#x3D;1时必传）
+     * set 时间单位(MONTH-月,YEAR-年)
      *
      * @param timeUnit
      */
-    public SetRenewalParam timeUnit(Integer timeUnit) {
+    public SetRenewalParam timeUnit(String timeUnit) {
         this.timeUnit = timeUnit;
         return this;
     }
 
     /**
-     * set 是否绑定关联资源一并续费 0-不绑定,1-绑定（autoRenewStatus&#x3D;1时必传）
+     * set 资源ID列表,英文逗号分隔
+     *
+     * @param instanceIds
+     */
+    public SetRenewalParam instanceIds(String instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+
+    /**
+     * set 自动续费状态(OPEN-开通自动续费,CLOSE-关闭自动续费,MODIFY-修改自动续费)
+     *
+     * @param autoRenewStatus
+     */
+    public SetRenewalParam autoRenewStatus(String autoRenewStatus) {
+        this.autoRenewStatus = autoRenewStatus;
+        return this;
+    }
+
+    /**
+     * set 是否绑定关联资源一并开通自动续费(UNBIND：不绑定，BIND：绑定)
      *
      * @param allAutoPay
      */
-    public SetRenewalParam allAutoPay(Integer allAutoPay) {
+    public SetRenewalParam allAutoPay(String allAutoPay) {
         this.allAutoPay = allAutoPay;
         return this;
     }

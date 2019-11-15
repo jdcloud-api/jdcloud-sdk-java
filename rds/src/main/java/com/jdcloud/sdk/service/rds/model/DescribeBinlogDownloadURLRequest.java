@@ -28,11 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持MySQL
+ * 获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
  */
 public class DescribeBinlogDownloadURLRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 设置链接地址的过期时间，单位是秒，默认值是 300 秒，最长不能超过取值范围为 1 ~ 86400 秒
+     */
+    private Integer seconds;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -55,6 +60,24 @@ public class DescribeBinlogDownloadURLRequest extends JdcloudRequest implements 
     @Required
     private String binlogBackupId;
 
+
+    /**
+     * get 设置链接地址的过期时间，单位是秒，默认值是 300 秒，最长不能超过取值范围为 1 ~ 86400 秒
+     *
+     * @return
+     */
+    public Integer getSeconds() {
+        return seconds;
+    }
+
+    /**
+     * set 设置链接地址的过期时间，单位是秒，默认值是 300 秒，最长不能超过取值范围为 1 ~ 86400 秒
+     *
+     * @param seconds
+     */
+    public void setSeconds(Integer seconds) {
+        this.seconds = seconds;
+    }
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -110,6 +133,16 @@ public class DescribeBinlogDownloadURLRequest extends JdcloudRequest implements 
         this.binlogBackupId = binlogBackupId;
     }
 
+
+    /**
+     * set 设置链接地址的过期时间，单位是秒，默认值是 300 秒，最长不能超过取值范围为 1 ~ 86400 秒
+     *
+     * @param seconds
+     */
+    public DescribeBinlogDownloadURLRequest seconds(Integer seconds) {
+        this.seconds = seconds;
+        return this;
+    }
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

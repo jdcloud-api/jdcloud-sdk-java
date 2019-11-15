@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterGroupParametersResponse;
 
 /**
- * 查看参数组的参数&lt;br&gt;- 仅支持MySQL
+ * 查看参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 class DescribeParameterGroupParametersExecutor extends JdcloudExecutor {
 

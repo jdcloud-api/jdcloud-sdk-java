@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+ * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DescribeParameterModifyRecordsResponse extends JdcloudResponse<DescribeParameterModifyRecordsResult> implements java.io.Serializable {
 

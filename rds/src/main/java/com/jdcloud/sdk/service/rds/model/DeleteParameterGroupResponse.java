@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除参数组&lt;br&gt;- 仅支持MySQL
+ * 删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DeleteParameterGroupResponse extends JdcloudResponse<DeleteParameterGroupResult> implements java.io.Serializable {
 

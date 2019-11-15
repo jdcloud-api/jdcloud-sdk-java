@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建一个参数组&lt;br&gt;- 仅支持MySQL
+ * 创建一个参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class CreateParameterGroupRequest extends JdcloudRequest implements java.io.Serializable {
 

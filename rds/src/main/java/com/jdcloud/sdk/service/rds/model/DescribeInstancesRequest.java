@@ -32,7 +32,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取当前账号下所有RDS实例及MySQL只读实例的概要信息，例如实例类型，版本，计费信息等
+ * 获取当前账号下所有RDS实例及MySQL/PostgreSQL只读实例的概要信息，例如实例类型，版本，计费信息等
  */
 public class DescribeInstancesRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -44,7 +44,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private Integer pageNumber;
 
     /**
-     * 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     * 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
      */
     private Integer pageSize;
 
@@ -52,12 +52,14 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
      * 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
-instanceName, 支持operator选项：eq
+instanceName, 支持operator选项：eq, like
 engine, 支持operator选项：eq
 engineVersion, 支持operator选项：eq
 instanceStatus, 支持operator选项：eq
-chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
+instanceType, 支持operator选项：eq
+internalDomainName, 支持operator选项：eq
+publicDomainName, 支持operator选项：eq
 
      */
     private List<Filter> filters;
@@ -94,7 +96,7 @@ vpcId, 支持operator选项：eq
     }
 
     /**
-     * get 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     * get 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
      *
      * @return
      */
@@ -103,7 +105,7 @@ vpcId, 支持operator选项：eq
     }
 
     /**
-     * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
      *
      * @param pageSize
      */
@@ -115,12 +117,14 @@ vpcId, 支持operator选项：eq
      * get 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
-instanceName, 支持operator选项：eq
+instanceName, 支持operator选项：eq, like
 engine, 支持operator选项：eq
 engineVersion, 支持operator选项：eq
 instanceStatus, 支持operator选项：eq
-chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
+instanceType, 支持operator选项：eq
+internalDomainName, 支持operator选项：eq
+publicDomainName, 支持operator选项：eq
 
      *
      * @return
@@ -133,12 +137,14 @@ vpcId, 支持operator选项：eq
      * set 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
-instanceName, 支持operator选项：eq
+instanceName, 支持operator选项：eq, like
 engine, 支持operator选项：eq
 engineVersion, 支持operator选项：eq
 instanceStatus, 支持operator选项：eq
-chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
+instanceType, 支持operator选项：eq
+internalDomainName, 支持operator选项：eq
+publicDomainName, 支持operator选项：eq
 
      *
      * @param filters
@@ -195,7 +201,7 @@ vpcId, 支持operator选项：eq
     }
 
     /**
-     * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
+     * set 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
      *
      * @param pageSize
      */
@@ -208,12 +214,14 @@ vpcId, 支持operator选项：eq
      * set 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
-instanceName, 支持operator选项：eq
+instanceName, 支持operator选项：eq, like
 engine, 支持operator选项：eq
 engineVersion, 支持operator选项：eq
 instanceStatus, 支持operator选项：eq
-chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
+instanceType, 支持operator选项：eq
+internalDomainName, 支持operator选项：eq
+publicDomainName, 支持operator选项：eq
 
      *
      * @param filters
@@ -248,12 +256,14 @@ vpcId, 支持operator选项：eq
      * add item to 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
-instanceName, 支持operator选项：eq
+instanceName, 支持operator选项：eq, like
 engine, 支持operator选项：eq
 engineVersion, 支持operator选项：eq
 instanceStatus, 支持operator选项：eq
-chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
+instanceType, 支持operator选项：eq
+internalDomainName, 支持operator选项：eq
+publicDomainName, 支持operator选项：eq
 
      *
      * @param filter

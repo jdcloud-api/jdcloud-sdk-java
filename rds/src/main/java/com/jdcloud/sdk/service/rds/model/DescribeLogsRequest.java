@@ -24,11 +24,14 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取 PostgreSQL 的日志文件列表
+ * 获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB
  */
 public class DescribeLogsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -43,6 +46,13 @@ public class DescribeLogsRequest extends JdcloudRequest implements java.io.Seria
      * 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
      */
     private Integer pageSize;
+
+    /**
+     * 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：logType, 支持operator选项：eq, 仅支持 MySQL，Percona，MariaDB
+
+     */
+    private List<Filter> filters;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -93,6 +103,28 @@ public class DescribeLogsRequest extends JdcloudRequest implements java.io.Seria
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：logType, 支持operator选项：eq, 仅支持 MySQL，Percona，MariaDB
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：logType, 支持operator选项：eq, 仅支持 MySQL，Percona，MariaDB
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -153,6 +185,18 @@ public class DescribeLogsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
+     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：logType, 支持operator选项：eq, 仅支持 MySQL，Percona，MariaDB
+
+     *
+     * @param filters
+     */
+    public DescribeLogsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
@@ -172,5 +216,19 @@ public class DescribeLogsRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
+    /**
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and)
+支持以下属性的过滤：logType, 支持operator选项：eq, 仅支持 MySQL，Percona，MariaDB
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

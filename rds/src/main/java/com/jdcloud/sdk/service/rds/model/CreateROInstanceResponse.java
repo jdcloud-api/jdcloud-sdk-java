@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
+ * 创建MySQL的只读实例&lt;br&gt; - 仅支持MySQL&lt;br&gt; - 创建的只读实例跟主实例在同一个VPC同一个子网中&lt;br&gt; * 只读实例只支持按配置计费
  */
 public class CreateROInstanceResponse extends JdcloudResponse<CreateROInstanceResult> implements java.io.Serializable {
 

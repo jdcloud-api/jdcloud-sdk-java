@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.ParameterGroupParameter;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看参数组的参数&lt;br&gt;- 仅支持MySQL
+ * 查看参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DescribeParameterGroupParametersResult extends JdcloudResult implements java.io.Serializable {
 

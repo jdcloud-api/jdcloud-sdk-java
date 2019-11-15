@@ -35,9 +35,9 @@ public class ListQuery  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 到期时间
+     * 业务线
      */
-    private String expireTime;
+    private String appCode;
 
     /**
      * 产品线
@@ -45,9 +45,9 @@ public class ListQuery  implements java.io.Serializable {
     private String serviceCode;
 
     /**
-     * 倒计时
+     * 资源ID
      */
-    private Integer lastTime;
+    private String resourceId;
 
     /**
      * 资源名称
@@ -55,44 +55,44 @@ public class ListQuery  implements java.io.Serializable {
     private String resourceName;
 
     /**
-     * 资源ID
-     */
-    private String resourceId;
-
-    /**
      * 地域
      */
-    private String dataCenter;
+    private String region;
 
     /**
-     * 计费类型
+     * 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
      */
-    private Integer billingType;
+    private String billingType;
 
     /**
-     * 是否开通自动续费(0:未开通,1:已开通)
+     * 资源到期时间
      */
-    private Integer autoRenew;
+    private String expireTime;
 
     /**
-     * 1:关联包年包月资源一并自动续费 2：关联包年包月资源不自动续费
+     * 倒计时
      */
-    private Integer associateResource;
+    private Integer lastTime;
 
     /**
-     * 续费周期
+     * 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
      */
-    private Integer renewTime;
+    private String autoRenewStatus;
 
     /**
-     * 数据库类型
+     * 自动续费周期，单位为月
      */
-    private String databaseType;
+    private String autoRenewPeriod;
 
     /**
-     * 特殊需求
+     * 是否绑定关联资源一并开通自动续费(AUTO_RENEW:关联包年包月资源一并自动续费 UN_AUTO_RENEW：关联包年包月资源不自动续费)
      */
-    private String remark;
+    private String associateResource;
+
+    /**
+     * 扩展字段，包括数据库类型、资源特殊说明等
+     */
+    private String extendField;
 
     /**
      * 绑定资源列表
@@ -101,21 +101,21 @@ public class ListQuery  implements java.io.Serializable {
 
 
     /**
-     * get 到期时间
+     * get 业务线
      *
      * @return
      */
-    public String getExpireTime() {
-        return expireTime;
+    public String getAppCode() {
+        return appCode;
     }
 
     /**
-     * set 到期时间
+     * set 业务线
      *
-     * @param expireTime
+     * @param appCode
      */
-    public void setExpireTime(String expireTime) {
-        this.expireTime = expireTime;
+    public void setAppCode(String appCode) {
+        this.appCode = appCode;
     }
 
     /**
@@ -137,21 +137,21 @@ public class ListQuery  implements java.io.Serializable {
     }
 
     /**
-     * get 倒计时
+     * get 资源ID
      *
      * @return
      */
-    public Integer getLastTime() {
-        return lastTime;
+    public String getResourceId() {
+        return resourceId;
     }
 
     /**
-     * set 倒计时
+     * set 资源ID
      *
-     * @param lastTime
+     * @param resourceId
      */
-    public void setLastTime(Integer lastTime) {
-        this.lastTime = lastTime;
+    public void setResourceId(String resourceId) {
+        this.resourceId = resourceId;
     }
 
     /**
@@ -173,147 +173,147 @@ public class ListQuery  implements java.io.Serializable {
     }
 
     /**
-     * get 资源ID
-     *
-     * @return
-     */
-    public String getResourceId() {
-        return resourceId;
-    }
-
-    /**
-     * set 资源ID
-     *
-     * @param resourceId
-     */
-    public void setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-    }
-
-    /**
      * get 地域
      *
      * @return
      */
-    public String getDataCenter() {
-        return dataCenter;
+    public String getRegion() {
+        return region;
     }
 
     /**
      * set 地域
      *
-     * @param dataCenter
+     * @param region
      */
-    public void setDataCenter(String dataCenter) {
-        this.dataCenter = dataCenter;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     /**
-     * get 计费类型
+     * get 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
      *
      * @return
      */
-    public Integer getBillingType() {
+    public String getBillingType() {
         return billingType;
     }
 
     /**
-     * set 计费类型
+     * set 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
      *
      * @param billingType
      */
-    public void setBillingType(Integer billingType) {
+    public void setBillingType(String billingType) {
         this.billingType = billingType;
     }
 
     /**
-     * get 是否开通自动续费(0:未开通,1:已开通)
+     * get 资源到期时间
      *
      * @return
      */
-    public Integer getAutoRenew() {
-        return autoRenew;
+    public String getExpireTime() {
+        return expireTime;
     }
 
     /**
-     * set 是否开通自动续费(0:未开通,1:已开通)
+     * set 资源到期时间
      *
-     * @param autoRenew
+     * @param expireTime
      */
-    public void setAutoRenew(Integer autoRenew) {
-        this.autoRenew = autoRenew;
+    public void setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
     }
 
     /**
-     * get 1:关联包年包月资源一并自动续费 2：关联包年包月资源不自动续费
+     * get 倒计时
      *
      * @return
      */
-    public Integer getAssociateResource() {
+    public Integer getLastTime() {
+        return lastTime;
+    }
+
+    /**
+     * set 倒计时
+     *
+     * @param lastTime
+     */
+    public void setLastTime(Integer lastTime) {
+        this.lastTime = lastTime;
+    }
+
+    /**
+     * get 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
+     *
+     * @return
+     */
+    public String getAutoRenewStatus() {
+        return autoRenewStatus;
+    }
+
+    /**
+     * set 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
+     *
+     * @param autoRenewStatus
+     */
+    public void setAutoRenewStatus(String autoRenewStatus) {
+        this.autoRenewStatus = autoRenewStatus;
+    }
+
+    /**
+     * get 自动续费周期，单位为月
+     *
+     * @return
+     */
+    public String getAutoRenewPeriod() {
+        return autoRenewPeriod;
+    }
+
+    /**
+     * set 自动续费周期，单位为月
+     *
+     * @param autoRenewPeriod
+     */
+    public void setAutoRenewPeriod(String autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+    }
+
+    /**
+     * get 是否绑定关联资源一并开通自动续费(AUTO_RENEW:关联包年包月资源一并自动续费 UN_AUTO_RENEW：关联包年包月资源不自动续费)
+     *
+     * @return
+     */
+    public String getAssociateResource() {
         return associateResource;
     }
 
     /**
-     * set 1:关联包年包月资源一并自动续费 2：关联包年包月资源不自动续费
+     * set 是否绑定关联资源一并开通自动续费(AUTO_RENEW:关联包年包月资源一并自动续费 UN_AUTO_RENEW：关联包年包月资源不自动续费)
      *
      * @param associateResource
      */
-    public void setAssociateResource(Integer associateResource) {
+    public void setAssociateResource(String associateResource) {
         this.associateResource = associateResource;
     }
 
     /**
-     * get 续费周期
+     * get 扩展字段，包括数据库类型、资源特殊说明等
      *
      * @return
      */
-    public Integer getRenewTime() {
-        return renewTime;
+    public String getExtendField() {
+        return extendField;
     }
 
     /**
-     * set 续费周期
+     * set 扩展字段，包括数据库类型、资源特殊说明等
      *
-     * @param renewTime
+     * @param extendField
      */
-    public void setRenewTime(Integer renewTime) {
-        this.renewTime = renewTime;
-    }
-
-    /**
-     * get 数据库类型
-     *
-     * @return
-     */
-    public String getDatabaseType() {
-        return databaseType;
-    }
-
-    /**
-     * set 数据库类型
-     *
-     * @param databaseType
-     */
-    public void setDatabaseType(String databaseType) {
-        this.databaseType = databaseType;
-    }
-
-    /**
-     * get 特殊需求
-     *
-     * @return
-     */
-    public String getRemark() {
-        return remark;
-    }
-
-    /**
-     * set 特殊需求
-     *
-     * @param remark
-     */
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setExtendField(String extendField) {
+        this.extendField = extendField;
     }
 
     /**
@@ -336,12 +336,12 @@ public class ListQuery  implements java.io.Serializable {
 
 
     /**
-     * set 到期时间
+     * set 业务线
      *
-     * @param expireTime
+     * @param appCode
      */
-    public ListQuery expireTime(String expireTime) {
-        this.expireTime = expireTime;
+    public ListQuery appCode(String appCode) {
+        this.appCode = appCode;
         return this;
     }
 
@@ -356,12 +356,12 @@ public class ListQuery  implements java.io.Serializable {
     }
 
     /**
-     * set 倒计时
+     * set 资源ID
      *
-     * @param lastTime
+     * @param resourceId
      */
-    public ListQuery lastTime(Integer lastTime) {
-        this.lastTime = lastTime;
+    public ListQuery resourceId(String resourceId) {
+        this.resourceId = resourceId;
         return this;
     }
 
@@ -376,82 +376,82 @@ public class ListQuery  implements java.io.Serializable {
     }
 
     /**
-     * set 资源ID
-     *
-     * @param resourceId
-     */
-    public ListQuery resourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
-
-    /**
      * set 地域
      *
-     * @param dataCenter
+     * @param region
      */
-    public ListQuery dataCenter(String dataCenter) {
-        this.dataCenter = dataCenter;
+    public ListQuery region(String region) {
+        this.region = region;
         return this;
     }
 
     /**
-     * set 计费类型
+     * set 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
      *
      * @param billingType
      */
-    public ListQuery billingType(Integer billingType) {
+    public ListQuery billingType(String billingType) {
         this.billingType = billingType;
         return this;
     }
 
     /**
-     * set 是否开通自动续费(0:未开通,1:已开通)
+     * set 资源到期时间
      *
-     * @param autoRenew
+     * @param expireTime
      */
-    public ListQuery autoRenew(Integer autoRenew) {
-        this.autoRenew = autoRenew;
+    public ListQuery expireTime(String expireTime) {
+        this.expireTime = expireTime;
         return this;
     }
 
     /**
-     * set 1:关联包年包月资源一并自动续费 2：关联包年包月资源不自动续费
+     * set 倒计时
+     *
+     * @param lastTime
+     */
+    public ListQuery lastTime(Integer lastTime) {
+        this.lastTime = lastTime;
+        return this;
+    }
+
+    /**
+     * set 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
+     *
+     * @param autoRenewStatus
+     */
+    public ListQuery autoRenewStatus(String autoRenewStatus) {
+        this.autoRenewStatus = autoRenewStatus;
+        return this;
+    }
+
+    /**
+     * set 自动续费周期，单位为月
+     *
+     * @param autoRenewPeriod
+     */
+    public ListQuery autoRenewPeriod(String autoRenewPeriod) {
+        this.autoRenewPeriod = autoRenewPeriod;
+        return this;
+    }
+
+    /**
+     * set 是否绑定关联资源一并开通自动续费(AUTO_RENEW:关联包年包月资源一并自动续费 UN_AUTO_RENEW：关联包年包月资源不自动续费)
      *
      * @param associateResource
      */
-    public ListQuery associateResource(Integer associateResource) {
+    public ListQuery associateResource(String associateResource) {
         this.associateResource = associateResource;
         return this;
     }
 
     /**
-     * set 续费周期
+     * set 扩展字段，包括数据库类型、资源特殊说明等
      *
-     * @param renewTime
+     * @param extendField
      */
-    public ListQuery renewTime(Integer renewTime) {
-        this.renewTime = renewTime;
-        return this;
-    }
-
-    /**
-     * set 数据库类型
-     *
-     * @param databaseType
-     */
-    public ListQuery databaseType(String databaseType) {
-        this.databaseType = databaseType;
-        return this;
-    }
-
-    /**
-     * set 特殊需求
-     *
-     * @param remark
-     */
-    public ListQuery remark(String remark) {
-        this.remark = remark;
+    public ListQuery extendField(String extendField) {
+        this.extendField = extendField;
         return this;
     }
 

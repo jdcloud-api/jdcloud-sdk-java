@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeBinlogsResponse;
 
 /**
- * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
+ * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
  */
 class DescribeBinlogsExecutor extends JdcloudExecutor {
 

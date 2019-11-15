@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.ParameterModifyRecords;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+ * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DescribeParameterModifyRecordsResult extends JdcloudResult implements java.io.Serializable {
 

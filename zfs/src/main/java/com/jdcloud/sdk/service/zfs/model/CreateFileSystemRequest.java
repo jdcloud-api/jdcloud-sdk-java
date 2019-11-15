@@ -57,6 +57,11 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
     private String clientToken;
 
     /**
+     * 文件系统类型(通用型:gp1,容量型:std1),默认为通用型
+     */
+    private String fileSystemType;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -119,6 +124,24 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get 文件系统类型(通用型:gp1,容量型:std1),默认为通用型
+     *
+     * @return
+     */
+    public String getFileSystemType() {
+        return fileSystemType;
+    }
+
+    /**
+     * set 文件系统类型(通用型:gp1,容量型:std1),默认为通用型
+     *
+     * @param fileSystemType
+     */
+    public void setFileSystemType(String fileSystemType) {
+        this.fileSystemType = fileSystemType;
+    }
+
+    /**
      * get 地域ID
      *
      * @return
@@ -164,6 +187,16 @@ public class CreateFileSystemRequest extends JdcloudRequest implements java.io.S
      */
     public CreateFileSystemRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
+        return this;
+    }
+
+    /**
+     * set 文件系统类型(通用型:gp1,容量型:std1),默认为通用型
+     *
+     * @param fileSystemType
+     */
+    public CreateFileSystemRequest fileSystemType(String fileSystemType) {
+        this.fileSystemType = fileSystemType;
         return this;
     }
 

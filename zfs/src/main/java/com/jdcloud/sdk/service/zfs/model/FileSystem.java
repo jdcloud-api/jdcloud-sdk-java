@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.zfs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 描述一个文件系统
@@ -63,6 +65,11 @@ public class FileSystem  implements java.io.Serializable {
     private String status;
 
     /**
+     * 文件系统类型(通用型:gp1,容量型:std1)
+     */
+    private String fileSystemType;
+
+    /**
      * 创建时间
      */
     private String createTime;
@@ -71,6 +78,11 @@ public class FileSystem  implements java.io.Serializable {
      * dns名称
      */
     private String dnsName;
+
+    /**
+     * Tag信息
+     */
+    private List<Tag> tags;
 
 
     /**
@@ -182,6 +194,24 @@ public class FileSystem  implements java.io.Serializable {
     }
 
     /**
+     * get 文件系统类型(通用型:gp1,容量型:std1)
+     *
+     * @return
+     */
+    public String getFileSystemType() {
+        return fileSystemType;
+    }
+
+    /**
+     * set 文件系统类型(通用型:gp1,容量型:std1)
+     *
+     * @param fileSystemType
+     */
+    public void setFileSystemType(String fileSystemType) {
+        this.fileSystemType = fileSystemType;
+    }
+
+    /**
      * get 创建时间
      *
      * @return
@@ -215,6 +245,24 @@ public class FileSystem  implements java.io.Serializable {
      */
     public void setDnsName(String dnsName) {
         this.dnsName = dnsName;
+    }
+
+    /**
+     * get Tag信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
 
@@ -279,6 +327,16 @@ public class FileSystem  implements java.io.Serializable {
     }
 
     /**
+     * set 文件系统类型(通用型:gp1,容量型:std1)
+     *
+     * @param fileSystemType
+     */
+    public FileSystem fileSystemType(String fileSystemType) {
+        this.fileSystemType = fileSystemType;
+        return this;
+    }
+
+    /**
      * set 创建时间
      *
      * @param createTime
@@ -298,5 +356,27 @@ public class FileSystem  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public FileSystem tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
 }

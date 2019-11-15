@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterModifyRecordsResponse;
 
 /**
- * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+ * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 class DescribeParameterModifyRecordsExecutor extends JdcloudExecutor {
 

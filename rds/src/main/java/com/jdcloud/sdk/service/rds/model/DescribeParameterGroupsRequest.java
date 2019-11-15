@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL
+ * 获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DescribeParameterGroupsRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD Renewal API v2
- * API related to Renewal
+ * Renew Management APIs
+ * 续费管理相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.renewal.model.QueryInstanceParam;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询可续费实例
+ * 提供可续费的实例信息查询。
  */
 public class QueryInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.edcps.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 
@@ -163,6 +165,11 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     @Required
     private ChargeSpec charge;
+
+    /**
+     * 别名ip配置
+     */
+    private List<AliasIpInfo> aliasIps;
 
 
     /**
@@ -561,6 +568,24 @@ public class InstanceSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 别名ip配置
+     *
+     * @return
+     */
+    public List<AliasIpInfo> getAliasIps() {
+        return aliasIps;
+    }
+
+    /**
+     * set 别名ip配置
+     *
+     * @param aliasIps
+     */
+    public void setAliasIps(List<AliasIpInfo> aliasIps) {
+        this.aliasIps = aliasIps;
+    }
+
 
     /**
      * set 可用区, 如 cn-east-tz1
@@ -782,5 +807,27 @@ public class InstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 别名ip配置
+     *
+     * @param aliasIps
+     */
+    public InstanceSpec aliasIps(List<AliasIpInfo> aliasIps) {
+        this.aliasIps = aliasIps;
+        return this;
+    }
+
+
+    /**
+     * add item to 别名ip配置
+     *
+     * @param aliasIp
+     */
+    public void addAliasIp(AliasIpInfo aliasIp) {
+        if (this.aliasIps == null) {
+            this.aliasIps = new ArrayList<>();
+        }
+        this.aliasIps.add(aliasIp);
+    }
 
 }

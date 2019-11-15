@@ -35,7 +35,7 @@ public class Log  implements java.io.Serializable {
     /**
      * 日志文件id
      */
-    private Integer id;
+    private String id;
 
     /**
      * 日志文件名称
@@ -68,7 +68,7 @@ public class Log  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
@@ -77,7 +77,7 @@ public class Log  implements java.io.Serializable {
      *
      * @param id
      */
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -177,7 +177,7 @@ public class Log  implements java.io.Serializable {
      *
      * @param id
      */
-    public Log id(Integer id) {
+    public Log id(String id) {
         this.id = id;
         return this;
     }

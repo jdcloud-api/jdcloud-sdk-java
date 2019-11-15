@@ -84,6 +84,11 @@ public class ElasticIp  implements java.io.Serializable {
     private String createTime;
 
     /**
+     * 别名IP id
+     */
+    private String aliasIpId;
+
+    /**
      * 计费信息
      */
     private Charge charge;
@@ -270,6 +275,24 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
+     * get 别名IP id
+     *
+     * @return
+     */
+    public String getAliasIpId() {
+        return aliasIpId;
+    }
+
+    /**
+     * set 别名IP id
+     *
+     * @param aliasIpId
+     */
+    public void setAliasIpId(String aliasIpId) {
+        this.aliasIpId = aliasIpId;
+    }
+
+    /**
      * get 计费信息
      *
      * @return
@@ -385,6 +408,16 @@ public class ElasticIp  implements java.io.Serializable {
      */
     public ElasticIp createTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 别名IP id
+     *
+     * @param aliasIpId
+     */
+    public ElasticIp aliasIpId(String aliasIpId) {
+        this.aliasIpId = aliasIpId;
         return this;
     }
 

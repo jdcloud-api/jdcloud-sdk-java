@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeLogsResponse;
 
 /**
- * 获取 PostgreSQL 的日志文件列表
+ * 获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB
  */
 class DescribeLogsExecutor extends JdcloudExecutor {
 

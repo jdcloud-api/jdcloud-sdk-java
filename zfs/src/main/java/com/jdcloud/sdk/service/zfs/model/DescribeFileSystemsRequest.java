@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.zfs.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.zfs.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
@@ -48,6 +49,11 @@ public class DescribeFileSystemsRequest extends JdcloudRequest implements java.i
      * 分页大小，默认为20，取值范围：[10,100]
      */
     private Integer pageSize;
+
+    /**
+     * Tag筛选条件
+     */
+    private List<TagFilter> tags;
 
     /**
      * fileSystemId - 文件系统ID，精确匹配，支持多个
@@ -99,6 +105,24 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get Tag筛选条件
+     *
+     * @return
+     */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
     }
 
     /**
@@ -165,6 +189,16 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
     }
 
     /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public DescribeFileSystemsRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set fileSystemId - 文件系统ID，精确匹配，支持多个
 name - 文件系统名称，模糊匹配，支持单个
 status - 文件系统状态，精确匹配，支持多个 FileSystem Status/creating、available、in-use
@@ -187,6 +221,18 @@ status - 文件系统状态，精确匹配，支持多个 FileSystem Status/crea
         return this;
     }
 
+
+    /**
+     * add item to Tag筛选条件
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
     /**
      * add item to fileSystemId - 文件系统ID，精确匹配，支持多个

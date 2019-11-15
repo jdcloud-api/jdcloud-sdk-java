@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
+ * 创建MySQL的只读实例&lt;br&gt; - 仅支持MySQL&lt;br&gt; - 创建的只读实例跟主实例在同一个VPC同一个子网中&lt;br&gt; * 只读实例只支持按配置计费
  */
 public class CreateROInstanceResult extends JdcloudResult implements java.io.Serializable {
 

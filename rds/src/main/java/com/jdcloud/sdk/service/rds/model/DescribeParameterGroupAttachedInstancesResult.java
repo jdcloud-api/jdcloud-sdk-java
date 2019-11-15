@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.AttachedDBInstance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL
+ * 查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DescribeParameterGroupAttachedInstancesResult extends JdcloudResult implements java.io.Serializable {
 
