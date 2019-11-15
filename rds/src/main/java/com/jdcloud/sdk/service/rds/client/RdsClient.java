@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 云数据库RDS
- * 目前RDS OpenAPI支持云数据库 MySQL、Percona、MariaDB、SQL Server
+ * 目前RDS OpenAPI支持云数据库 MySQL、Percona、MariaDB、SQL Server、PostgreSQL
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -184,6 +184,9 @@ import com.jdcloud.sdk.service.rds.client.ResetPasswordExecutor;
 import com.jdcloud.sdk.service.rds.model.UpdateLogDownloadURLInternalRequest;
 import com.jdcloud.sdk.service.rds.model.UpdateLogDownloadURLInternalResponse;
 import com.jdcloud.sdk.service.rds.client.UpdateLogDownloadURLInternalExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeLogDownloadURLRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeLogDownloadURLResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeLogDownloadURLExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyWhiteListExecutor;
@@ -398,7 +401,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 拷贝参数组&lt;br&gt;- 仅支持MySQL
+     * 拷贝参数组
      *
      * @param request
      * @return
@@ -409,7 +412,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
+     * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
      *
      * @param request
      * @return
@@ -420,7 +423,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 删除一个RDS实例或者MySQL的只读实例。删除MySQL主实例时，会同时将对应的MySQL只读实例也删除 [MFA enabled]
+     * 删除一个RDS实例或者MySQL/PostgreSQL的只读实例。删除MySQL/PostgreSQL主实例时，会同时将对应的MySQL/PostgreSQL只读实例也删除 [MFA enabled]
      *
      * @param request
      * @return
@@ -442,7 +445,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 创建一个参数组&lt;br&gt;- 仅支持MySQL
+     * 创建一个参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
      * @return
@@ -530,7 +533,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL
+     * 查看参数的修改历史&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
      * @return
@@ -541,7 +544,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持MySQL
+     * 获取MySQL实例的binlog的下载链接&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
      *
      * @param request
      * @return
@@ -629,7 +632,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
+     * 查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL/PostgreSQL只读实例详细信息
      *
      * @param request
      * @return
@@ -673,7 +676,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL
+     * 查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
      * @return
@@ -739,7 +742,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 修改参数组名称，描述&lt;br&gt;- 仅支持MySQL
+     * 修改参数组名称，描述&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
      * @return
@@ -761,7 +764,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 仅支持查看MySQL实例的审计内容
+     * 仅支持查看MySQL实例的审计内容&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB
      *
      * @param request
      * @return
@@ -904,6 +907,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 根据日志文件的下载链接过期时间，生成日志文件下载地址 仅支持 PostgreSQL, MySQL, Percona, MariaDB
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLogDownloadURLResponse describeLogDownloadURL(DescribeLogDownloadURLRequest request) throws JdcloudSdkException {
+        return new DescribeLogDownloadURLExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
      *
      * @param request
@@ -937,7 +951,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 仅支持MySQL实例关闭数据库审计
+     * 仅支持MySQL实例关闭数据库审计&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB
      *
      * @param request
      * @return
@@ -1036,7 +1050,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 仅支持MySQL实例开启数据库审计
+     * 仅支持MySQL实例开启数据库审计&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB
      *
      * @param request
      * @return
@@ -1047,7 +1061,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 删除参数组&lt;br&gt;- 仅支持MySQL
+     * 删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
      * @return
@@ -1102,7 +1116,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 获取 PostgreSQL 的日志文件列表
+     * 获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB
      *
      * @param request
      * @return
@@ -1135,7 +1149,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL
+     * 获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
      * @return
@@ -1190,7 +1204,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 查看参数组的参数&lt;br&gt;- 仅支持MySQL
+     * 查看参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
      * @return
@@ -1223,7 +1237,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 获取当前账号下所有RDS实例及MySQL只读实例的概要信息，例如实例类型，版本，计费信息等
+     * 获取当前账号下所有RDS实例及MySQL/PostgreSQL只读实例的概要信息，例如实例类型，版本，计费信息等
      *
      * @param request
      * @return
@@ -1234,7 +1248,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 创建MySQL的只读实例&lt;br&gt;- 仅支持MySQL
+     * 创建MySQL的只读实例&lt;br&gt; - 仅支持MySQL&lt;br&gt; - 创建的只读实例跟主实例在同一个VPC同一个子网中&lt;br&gt; * 只读实例只支持按配置计费
      *
      * @param request
      * @return
@@ -1267,7 +1281,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 修改参数组的参数&lt;br&gt;- 仅支持MySQL
+     * 修改参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
      * @return

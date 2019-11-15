@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD Renewal API v2
- * API related to Renewal
+ * Renew Management APIs
+ * 续费管理相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -27,20 +27,20 @@ package com.jdcloud.sdk.service.renewal.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 开通、取消实例自动续费
+ * 为一个或多个实例设置自动续费服务。
  */
 public class SetRenewalResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 更新成功条数
+     * 设置成功条数
      */
     private String stringResult;
 
 
     /**
-     * get 更新成功条数
+     * get 设置成功条数
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class SetRenewalResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set 更新成功条数
+     * set 设置成功条数
      *
      * @param stringResult
      */
@@ -59,7 +59,7 @@ public class SetRenewalResult extends JdcloudResult implements java.io.Serializa
 
 
     /**
-     * set 更新成功条数
+     * set 设置成功条数
      *
      * @param stringResult
      */

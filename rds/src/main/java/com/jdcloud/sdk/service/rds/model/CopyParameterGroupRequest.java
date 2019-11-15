@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 拷贝参数组&lt;br&gt;- 仅支持MySQL
+ * 拷贝参数组
  */
 public class CopyParameterGroupRequest extends JdcloudRequest implements java.io.Serializable {
 

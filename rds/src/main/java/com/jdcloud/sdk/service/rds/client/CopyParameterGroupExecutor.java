@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.CopyParameterGroupResponse;
 
 /**
- * 拷贝参数组&lt;br&gt;- 仅支持MySQL
+ * 拷贝参数组
  */
 class CopyParameterGroupExecutor extends JdcloudExecutor {
 

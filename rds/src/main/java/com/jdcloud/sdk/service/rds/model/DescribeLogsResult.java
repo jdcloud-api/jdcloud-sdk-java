@@ -30,16 +30,16 @@ import com.jdcloud.sdk.service.rds.model.Log;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取 PostgreSQL 的日志文件列表
+ * 获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB
  */
 public class DescribeLogsResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * dbInstances
+     * logs
      */
-    private List<Log> dbInstances;
+    private List<Log> logs;
 
     /**
      * totalCount
@@ -48,21 +48,21 @@ public class DescribeLogsResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * get dbInstances
+     * get logs
      *
      * @return
      */
-    public List<Log> getDbInstances() {
-        return dbInstances;
+    public List<Log> getLogs() {
+        return logs;
     }
 
     /**
-     * set dbInstances
+     * set logs
      *
-     * @param dbInstances
+     * @param logs
      */
-    public void setDbInstances(List<Log> dbInstances) {
-        this.dbInstances = dbInstances;
+    public void setLogs(List<Log> logs) {
+        this.logs = logs;
     }
 
     /**
@@ -85,12 +85,12 @@ public class DescribeLogsResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * set dbInstances
+     * set logs
      *
-     * @param dbInstances
+     * @param logs
      */
-    public DescribeLogsResult dbInstances(List<Log> dbInstances) {
-        this.dbInstances = dbInstances;
+    public DescribeLogsResult logs(List<Log> logs) {
+        this.logs = logs;
         return this;
     }
 
@@ -106,15 +106,15 @@ public class DescribeLogsResult extends JdcloudResult implements java.io.Seriali
 
 
     /**
-     * add item to dbInstances
+     * add item to logs
      *
-     * @param dbInstance
+     * @param log
      */
-    public void addDbInstance(Log dbInstance) {
-        if (this.dbInstances == null) {
-            this.dbInstances = new ArrayList<>();
+    public void addLog(Log log) {
+        if (this.logs == null) {
+            this.logs = new ArrayList<>();
         }
-        this.dbInstances.add(dbInstance);
+        this.logs.add(log);
     }
 
 }

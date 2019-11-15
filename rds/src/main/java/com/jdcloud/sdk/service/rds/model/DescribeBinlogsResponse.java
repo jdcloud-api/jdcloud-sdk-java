@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
+ * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
  */
 public class DescribeBinlogsResponse extends JdcloudResponse<DescribeBinlogsResult> implements java.io.Serializable {
 

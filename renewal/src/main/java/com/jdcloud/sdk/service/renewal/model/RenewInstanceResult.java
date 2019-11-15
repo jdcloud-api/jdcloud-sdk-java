@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD Renewal API v2
- * API related to Renewal
+ * Renew Management APIs
+ * 续费管理相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -27,20 +27,20 @@ package com.jdcloud.sdk.service.renewal.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 实例续费
+ * 对相关实例进行续费。调用该接口会创建一个续费订单，并自动扣除您账户可用代金券和余额完成支付，如因为某些原因支付失败，订单会自动取消。
  */
 public class RenewInstanceResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 创建成功的订单id
+     * 创建成功的订单ID
      */
     private String orderNumber;
 
 
     /**
-     * get 创建成功的订单id
+     * get 创建成功的订单ID
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class RenewInstanceResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 创建成功的订单id
+     * set 创建成功的订单ID
      *
      * @param orderNumber
      */
@@ -59,7 +59,7 @@ public class RenewInstanceResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * set 创建成功的订单id
+     * set 创建成功的订单ID
      *
      * @param orderNumber
      */

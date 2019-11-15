@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterGroupsResponse;
 
 /**
- * 获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL
+ * 获取当前账号下所有的参数组列表&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 class DescribeParameterGroupsExecutor extends JdcloudExecutor {
 

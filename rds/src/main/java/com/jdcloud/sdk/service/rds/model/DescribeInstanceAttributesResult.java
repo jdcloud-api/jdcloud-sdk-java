@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.rds.model.DBInstanceAttribute;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
+ * 查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL/PostgreSQL只读实例详细信息
  */
 public class DescribeInstanceAttributesResult extends JdcloudResult implements java.io.Serializable {
 

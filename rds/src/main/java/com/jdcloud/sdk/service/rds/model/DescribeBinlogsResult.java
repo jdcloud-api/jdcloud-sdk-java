@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.rds.model.Binlog;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
+ * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
  */
 public class DescribeBinlogsResult extends JdcloudResult implements java.io.Serializable {
 

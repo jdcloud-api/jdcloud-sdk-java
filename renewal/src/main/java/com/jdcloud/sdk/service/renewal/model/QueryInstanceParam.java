@@ -48,26 +48,6 @@ public class QueryInstanceParam  implements java.io.Serializable {
     private String serviceCode;
 
     /**
-     * 当前页码
-     */
-    private Integer pageNumber;
-
-    /**
-     * 每页条数
-     */
-    private Integer pageSize;
-
-    /**
-     * 资源续费状态 0:手动续费资源 1:全部资源 2:自动续费资源,默认全部
-     */
-    private Integer renewStatus;
-
-    /**
-     * 到期时间 0:已过期,n:n天内到期,-1:全部,-2:未到期,默认全部
-     */
-    private String expireTime;
-
-    /**
      * 资源名称
      */
     private String instanceName;
@@ -78,14 +58,34 @@ public class QueryInstanceParam  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 主机绑定的内网ip地址
+     * 资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)，默认为全部
+     */
+    private String renewStatus;
+
+    /**
+     * 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部计费类型的资源
+     */
+    private String billingType;
+
+    /**
+     * 资源到期类型(EXPIRED-已到期,UNEXPIRED-未到期,ONE-1天内到期,THREE-3天内到期,SEVEN-7天内到期,ALL_TIME-全部)，默认为全部
+     */
+    private String expireType;
+
+    /**
+     * 主机绑定的内网IP地址
      */
     private String ipAddress;
 
     /**
-     * 资源计费类型 1:按配置,3:包年包月,默认不筛选
+     * 当前页码，不传默认为1
      */
-    private String billingType;
+    private Integer pageNumber;
+
+    /**
+     * 每页条数，不传默认为10
+     */
+    private Integer pageSize;
 
 
     /**
@@ -125,78 +125,6 @@ public class QueryInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * get 当前页码
-     *
-     * @return
-     */
-    public Integer getPageNumber() {
-        return pageNumber;
-    }
-
-    /**
-     * set 当前页码
-     *
-     * @param pageNumber
-     */
-    public void setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-    }
-
-    /**
-     * get 每页条数
-     *
-     * @return
-     */
-    public Integer getPageSize() {
-        return pageSize;
-    }
-
-    /**
-     * set 每页条数
-     *
-     * @param pageSize
-     */
-    public void setPageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-    }
-
-    /**
-     * get 资源续费状态 0:手动续费资源 1:全部资源 2:自动续费资源,默认全部
-     *
-     * @return
-     */
-    public Integer getRenewStatus() {
-        return renewStatus;
-    }
-
-    /**
-     * set 资源续费状态 0:手动续费资源 1:全部资源 2:自动续费资源,默认全部
-     *
-     * @param renewStatus
-     */
-    public void setRenewStatus(Integer renewStatus) {
-        this.renewStatus = renewStatus;
-    }
-
-    /**
-     * get 到期时间 0:已过期,n:n天内到期,-1:全部,-2:未到期,默认全部
-     *
-     * @return
-     */
-    public String getExpireTime() {
-        return expireTime;
-    }
-
-    /**
-     * set 到期时间 0:已过期,n:n天内到期,-1:全部,-2:未到期,默认全部
-     *
-     * @param expireTime
-     */
-    public void setExpireTime(String expireTime) {
-        this.expireTime = expireTime;
-    }
-
-    /**
      * get 资源名称
      *
      * @return
@@ -233,25 +161,25 @@ public class QueryInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * get 主机绑定的内网ip地址
+     * get 资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)，默认为全部
      *
      * @return
      */
-    public String getIpAddress() {
-        return ipAddress;
+    public String getRenewStatus() {
+        return renewStatus;
     }
 
     /**
-     * set 主机绑定的内网ip地址
+     * set 资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)，默认为全部
      *
-     * @param ipAddress
+     * @param renewStatus
      */
-    public void setIpAddress(String ipAddress) {
-        this.ipAddress = ipAddress;
+    public void setRenewStatus(String renewStatus) {
+        this.renewStatus = renewStatus;
     }
 
     /**
-     * get 资源计费类型 1:按配置,3:包年包月,默认不筛选
+     * get 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部计费类型的资源
      *
      * @return
      */
@@ -260,12 +188,84 @@ public class QueryInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 资源计费类型 1:按配置,3:包年包月,默认不筛选
+     * set 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部计费类型的资源
      *
      * @param billingType
      */
     public void setBillingType(String billingType) {
         this.billingType = billingType;
+    }
+
+    /**
+     * get 资源到期类型(EXPIRED-已到期,UNEXPIRED-未到期,ONE-1天内到期,THREE-3天内到期,SEVEN-7天内到期,ALL_TIME-全部)，默认为全部
+     *
+     * @return
+     */
+    public String getExpireType() {
+        return expireType;
+    }
+
+    /**
+     * set 资源到期类型(EXPIRED-已到期,UNEXPIRED-未到期,ONE-1天内到期,THREE-3天内到期,SEVEN-7天内到期,ALL_TIME-全部)，默认为全部
+     *
+     * @param expireType
+     */
+    public void setExpireType(String expireType) {
+        this.expireType = expireType;
+    }
+
+    /**
+     * get 主机绑定的内网IP地址
+     *
+     * @return
+     */
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    /**
+     * set 主机绑定的内网IP地址
+     *
+     * @param ipAddress
+     */
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+    }
+
+    /**
+     * get 当前页码，不传默认为1
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 当前页码，不传默认为1
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 每页条数，不传默认为10
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页条数，不传默认为10
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
 
@@ -290,46 +290,6 @@ public class QueryInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 当前页码
-     *
-     * @param pageNumber
-     */
-    public QueryInstanceParam pageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-
-    /**
-     * set 每页条数
-     *
-     * @param pageSize
-     */
-    public QueryInstanceParam pageSize(Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-
-    /**
-     * set 资源续费状态 0:手动续费资源 1:全部资源 2:自动续费资源,默认全部
-     *
-     * @param renewStatus
-     */
-    public QueryInstanceParam renewStatus(Integer renewStatus) {
-        this.renewStatus = renewStatus;
-        return this;
-    }
-
-    /**
-     * set 到期时间 0:已过期,n:n天内到期,-1:全部,-2:未到期,默认全部
-     *
-     * @param expireTime
-     */
-    public QueryInstanceParam expireTime(String expireTime) {
-        this.expireTime = expireTime;
-        return this;
-    }
-
-    /**
      * set 资源名称
      *
      * @param instanceName
@@ -350,7 +310,37 @@ public class QueryInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 主机绑定的内网ip地址
+     * set 资源续费状态(AUTO-开通自动续费资源,MANUAL-未开通自动续费资源,ALL-全部资源)，默认为全部
+     *
+     * @param renewStatus
+     */
+    public QueryInstanceParam renewStatus(String renewStatus) {
+        this.renewStatus = renewStatus;
+        return this;
+    }
+
+    /**
+     * set 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)，不传显示全部计费类型的资源
+     *
+     * @param billingType
+     */
+    public QueryInstanceParam billingType(String billingType) {
+        this.billingType = billingType;
+        return this;
+    }
+
+    /**
+     * set 资源到期类型(EXPIRED-已到期,UNEXPIRED-未到期,ONE-1天内到期,THREE-3天内到期,SEVEN-7天内到期,ALL_TIME-全部)，默认为全部
+     *
+     * @param expireType
+     */
+    public QueryInstanceParam expireType(String expireType) {
+        this.expireType = expireType;
+        return this;
+    }
+
+    /**
+     * set 主机绑定的内网IP地址
      *
      * @param ipAddress
      */
@@ -360,12 +350,22 @@ public class QueryInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 资源计费类型 1:按配置,3:包年包月,默认不筛选
+     * set 当前页码，不传默认为1
      *
-     * @param billingType
+     * @param pageNumber
      */
-    public QueryInstanceParam billingType(String billingType) {
-        this.billingType = billingType;
+    public QueryInstanceParam pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 每页条数，不传默认为10
+     *
+     * @param pageSize
+     */
+    public QueryInstanceParam pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
 

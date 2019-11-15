@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持MySQL
+ * 获取MySQL实例中binlog的详细信息&lt;br&gt;- 仅支持 MySQL, Percona, MariaDB
  */
 public class DescribeBinlogsRequest extends JdcloudRequest implements java.io.Serializable {
 

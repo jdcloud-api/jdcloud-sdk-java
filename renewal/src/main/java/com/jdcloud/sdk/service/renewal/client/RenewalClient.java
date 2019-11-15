@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD Renewal API v2
- * API related to Renewal
+ * 续费管理
+ * 续费管理相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -48,7 +48,7 @@ public class RenewalClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "renewal.jdcloud-api.com";
     public final static String ServiceName = "renewal";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -91,7 +91,7 @@ public class RenewalClient extends JdcloudClient {
 
 
     /**
-     * 开通、取消实例自动续费
+     * 为一个或多个实例设置自动续费服务。
      *
      * @param request
      * @return
@@ -102,7 +102,7 @@ public class RenewalClient extends JdcloudClient {
     }
 
     /**
-     * 实例续费
+     * 对相关实例进行续费。调用该接口会创建一个续费订单，并自动扣除您账户可用代金券和余额完成支付，如因为某些原因支付失败，订单会自动取消。
      *
      * @param request
      * @return
@@ -113,7 +113,7 @@ public class RenewalClient extends JdcloudClient {
     }
 
     /**
-     * 查询可续费实例
+     * 提供可续费的实例信息查询。
      *
      * @param request
      * @return

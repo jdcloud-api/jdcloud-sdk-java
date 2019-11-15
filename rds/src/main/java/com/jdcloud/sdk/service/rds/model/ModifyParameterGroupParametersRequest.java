@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改参数组的参数&lt;br&gt;- 仅支持MySQL
+ * 修改参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class ModifyParameterGroupParametersRequest extends JdcloudRequest implements java.io.Serializable {
 

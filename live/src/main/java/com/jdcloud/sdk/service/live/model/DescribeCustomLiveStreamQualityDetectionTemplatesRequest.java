@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.live.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.live.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**

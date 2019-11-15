@@ -48,45 +48,38 @@ public class RenewInstanceParam  implements java.io.Serializable {
     private String serviceCode;
 
     /**
-     * 时间单位 1:小时 2:天 3:月 4:年
-     * Required:true
-     */
-    @Required
-    private Integer timeUnit;
-
-    /**
-     * 时长
+     * 续费时长(timeUnit&#x3D;MONTH时只能传1、2、3、4、5、6、7、8、9,timeUnit&#x3D;YEAR时只能传1、2、3)
      * Required:true
      */
     @Required
     private Integer timeSpan;
 
     /**
-     * 签名 md5(pin+serviceCode+key)
+     * 时间单位(MONTH-月,YEAR-年)
      * Required:true
      */
     @Required
-    private String sign;
+    private String timeUnit;
 
     /**
-     * 待续费资源id列表,英文逗号分隔
+     * 待续费资源ID列表,英文逗号分隔
      * Required:true
      */
     @Required
     private String instanceIds;
 
     /**
-     * 是否统一续费到期日续费 1-是 0-否（默认为0）
+     * 是否统一到期日续费(YES-是,NO-否)，默认为NO
      */
-    private Integer unifyDate;
+    private String unifyDate;
 
     /**
-     * 是否自动支付 true-是 false-否（默认为true）
+     * 是否自动支付，默认为true，外部用户调用时只能传true
      */
     private Boolean autoPay;
 
     /**
-     * 回调地址
+     * 支付成功后的回调地址
      */
     private String returnURL;
 
@@ -128,25 +121,7 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * get 时间单位 1:小时 2:天 3:月 4:年
-     *
-     * @return
-     */
-    public Integer getTimeUnit() {
-        return timeUnit;
-    }
-
-    /**
-     * set 时间单位 1:小时 2:天 3:月 4:年
-     *
-     * @param timeUnit
-     */
-    public void setTimeUnit(Integer timeUnit) {
-        this.timeUnit = timeUnit;
-    }
-
-    /**
-     * get 时长
+     * get 续费时长(timeUnit&#x3D;MONTH时只能传1、2、3、4、5、6、7、8、9,timeUnit&#x3D;YEAR时只能传1、2、3)
      *
      * @return
      */
@@ -155,7 +130,7 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 时长
+     * set 续费时长(timeUnit&#x3D;MONTH时只能传1、2、3、4、5、6、7、8、9,timeUnit&#x3D;YEAR时只能传1、2、3)
      *
      * @param timeSpan
      */
@@ -164,25 +139,25 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * get 签名 md5(pin+serviceCode+key)
+     * get 时间单位(MONTH-月,YEAR-年)
      *
      * @return
      */
-    public String getSign() {
-        return sign;
+    public String getTimeUnit() {
+        return timeUnit;
     }
 
     /**
-     * set 签名 md5(pin+serviceCode+key)
+     * set 时间单位(MONTH-月,YEAR-年)
      *
-     * @param sign
+     * @param timeUnit
      */
-    public void setSign(String sign) {
-        this.sign = sign;
+    public void setTimeUnit(String timeUnit) {
+        this.timeUnit = timeUnit;
     }
 
     /**
-     * get 待续费资源id列表,英文逗号分隔
+     * get 待续费资源ID列表,英文逗号分隔
      *
      * @return
      */
@@ -191,7 +166,7 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 待续费资源id列表,英文逗号分隔
+     * set 待续费资源ID列表,英文逗号分隔
      *
      * @param instanceIds
      */
@@ -200,25 +175,25 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * get 是否统一续费到期日续费 1-是 0-否（默认为0）
+     * get 是否统一到期日续费(YES-是,NO-否)，默认为NO
      *
      * @return
      */
-    public Integer getUnifyDate() {
+    public String getUnifyDate() {
         return unifyDate;
     }
 
     /**
-     * set 是否统一续费到期日续费 1-是 0-否（默认为0）
+     * set 是否统一到期日续费(YES-是,NO-否)，默认为NO
      *
      * @param unifyDate
      */
-    public void setUnifyDate(Integer unifyDate) {
+    public void setUnifyDate(String unifyDate) {
         this.unifyDate = unifyDate;
     }
 
     /**
-     * get 是否自动支付 true-是 false-否（默认为true）
+     * get 是否自动支付，默认为true，外部用户调用时只能传true
      *
      * @return
      */
@@ -227,7 +202,7 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 是否自动支付 true-是 false-否（默认为true）
+     * set 是否自动支付，默认为true，外部用户调用时只能传true
      *
      * @param autoPay
      */
@@ -236,7 +211,7 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * get 回调地址
+     * get 支付成功后的回调地址
      *
      * @return
      */
@@ -245,7 +220,7 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 回调地址
+     * set 支付成功后的回调地址
      *
      * @param returnURL
      */
@@ -275,17 +250,7 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 时间单位 1:小时 2:天 3:月 4:年
-     *
-     * @param timeUnit
-     */
-    public RenewInstanceParam timeUnit(Integer timeUnit) {
-        this.timeUnit = timeUnit;
-        return this;
-    }
-
-    /**
-     * set 时长
+     * set 续费时长(timeUnit&#x3D;MONTH时只能传1、2、3、4、5、6、7、8、9,timeUnit&#x3D;YEAR时只能传1、2、3)
      *
      * @param timeSpan
      */
@@ -295,17 +260,17 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 签名 md5(pin+serviceCode+key)
+     * set 时间单位(MONTH-月,YEAR-年)
      *
-     * @param sign
+     * @param timeUnit
      */
-    public RenewInstanceParam sign(String sign) {
-        this.sign = sign;
+    public RenewInstanceParam timeUnit(String timeUnit) {
+        this.timeUnit = timeUnit;
         return this;
     }
 
     /**
-     * set 待续费资源id列表,英文逗号分隔
+     * set 待续费资源ID列表,英文逗号分隔
      *
      * @param instanceIds
      */
@@ -315,17 +280,17 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 是否统一续费到期日续费 1-是 0-否（默认为0）
+     * set 是否统一到期日续费(YES-是,NO-否)，默认为NO
      *
      * @param unifyDate
      */
-    public RenewInstanceParam unifyDate(Integer unifyDate) {
+    public RenewInstanceParam unifyDate(String unifyDate) {
         this.unifyDate = unifyDate;
         return this;
     }
 
     /**
-     * set 是否自动支付 true-是 false-否（默认为true）
+     * set 是否自动支付，默认为true，外部用户调用时只能传true
      *
      * @param autoPay
      */
@@ -335,7 +300,7 @@ public class RenewInstanceParam  implements java.io.Serializable {
     }
 
     /**
-     * set 回调地址
+     * set 支付成功后的回调地址
      *
      * @param returnURL
      */

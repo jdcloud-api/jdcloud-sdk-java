@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看参数组的参数&lt;br&gt;- 仅支持MySQL
+ * 查看参数组的参数&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DescribeParameterGroupParametersResponse extends JdcloudResponse<DescribeParameterGroupParametersResult> implements java.io.Serializable {
 

@@ -66,7 +66,7 @@ public class ZfsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "cfs.jdcloud-api.com";
     public final static String ServiceName = "zfs";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -171,7 +171,7 @@ public class ZfsClient extends JdcloudClient {
 
     /**
      * -   删除一个文件系统，一旦删除，该文件系统将不存在，也无法访问已删除的文件系统里的任何内容。
-
+ [MFA enabled]
      *
      * @param request
      * @return

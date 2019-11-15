@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.vpc.model.ElasticIpSpec;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
+import com.jdcloud.sdk.service.disk.model.Tag;
 
 /**
  * instanceSpec
@@ -141,8 +142,14 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      * 不使用模板中的弹性公网IP。
 仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
 若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+
      */
     private Boolean noElasticIp;
+
+    /**
+     * 用户普通标签集合
+     */
+    private List<Tag> userTags;
 
 
     /**
@@ -481,6 +488,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      * get 不使用模板中的弹性公网IP。
 仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
 若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+
      *
      * @return
      */
@@ -492,11 +500,30 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      * set 不使用模板中的弹性公网IP。
 仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
 若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+
      *
      * @param noElasticIp
      */
     public void setNoElasticIp(Boolean noElasticIp) {
         this.noElasticIp = noElasticIp;
+    }
+
+    /**
+     * get 用户普通标签集合
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户普通标签集合
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
     }
 
 
@@ -687,11 +714,22 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      * set 不使用模板中的弹性公网IP。
 仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
 若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+
      *
      * @param noElasticIp
      */
     public InstanceSpec noElasticIp(Boolean noElasticIp) {
         this.noElasticIp = noElasticIp;
+        return this;
+    }
+
+    /**
+     * set 用户普通标签集合
+     *
+     * @param userTags
+     */
+    public InstanceSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
         return this;
     }
 
@@ -733,6 +771,18 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
             this.userdata = new ArrayList<>();
         }
         this.userdata.add(userdata);
+    }
+
+    /**
+     * add item to 用户普通标签集合
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 
 }

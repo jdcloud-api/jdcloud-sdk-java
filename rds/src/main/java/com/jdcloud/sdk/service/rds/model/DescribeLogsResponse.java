@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.rds.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取 PostgreSQL 的日志文件列表
+ * 获取日志文件列表&lt;br&gt;- 仅支持PostgreSQL, MySQL, Percona, MariaDB
  */
 public class DescribeLogsResponse extends JdcloudResponse<DescribeLogsResult> implements java.io.Serializable {
 

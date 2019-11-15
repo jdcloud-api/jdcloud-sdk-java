@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除参数组&lt;br&gt;- 仅支持MySQL
+ * 删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DeleteParameterGroupRequest extends JdcloudRequest implements java.io.Serializable {
 

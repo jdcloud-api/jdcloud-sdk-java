@@ -106,6 +106,16 @@ public class DBInstance  implements java.io.Serializable {
     private String instanceStatus;
 
     /**
+     * 实例公网域名&lt;br&gt;- 仅支持MySQL
+     */
+    private String publicDomainName;
+
+    /**
+     * 实例内网域名&lt;br&gt;- 仅支持MySQL
+     */
+    private String internalDomainName;
+
+    /**
      * 实例创建时间
      */
     private String createTime;
@@ -126,7 +136,7 @@ public class DBInstance  implements java.io.Serializable {
     private List<Tag> tags;
 
     /**
-     * MySQL只读实例对应的主实例ID
+     * MySQL、PostgreSQL只读实例对应的主实例ID
      */
     private String sourceInstanceId;
 
@@ -384,6 +394,42 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
+     * get 实例公网域名&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getPublicDomainName() {
+        return publicDomainName;
+    }
+
+    /**
+     * set 实例公网域名&lt;br&gt;- 仅支持MySQL
+     *
+     * @param publicDomainName
+     */
+    public void setPublicDomainName(String publicDomainName) {
+        this.publicDomainName = publicDomainName;
+    }
+
+    /**
+     * get 实例内网域名&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getInternalDomainName() {
+        return internalDomainName;
+    }
+
+    /**
+     * set 实例内网域名&lt;br&gt;- 仅支持MySQL
+     *
+     * @param internalDomainName
+     */
+    public void setInternalDomainName(String internalDomainName) {
+        this.internalDomainName = internalDomainName;
+    }
+
+    /**
      * get 实例创建时间
      *
      * @return
@@ -456,7 +502,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get MySQL只读实例对应的主实例ID
+     * get MySQL、PostgreSQL只读实例对应的主实例ID
      *
      * @return
      */
@@ -465,7 +511,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set MySQL只读实例对应的主实例ID
+     * set MySQL、PostgreSQL只读实例对应的主实例ID
      *
      * @param sourceInstanceId
      */
@@ -615,6 +661,26 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
+     * set 实例公网域名&lt;br&gt;- 仅支持MySQL
+     *
+     * @param publicDomainName
+     */
+    public DBInstance publicDomainName(String publicDomainName) {
+        this.publicDomainName = publicDomainName;
+        return this;
+    }
+
+    /**
+     * set 实例内网域名&lt;br&gt;- 仅支持MySQL
+     *
+     * @param internalDomainName
+     */
+    public DBInstance internalDomainName(String internalDomainName) {
+        this.internalDomainName = internalDomainName;
+        return this;
+    }
+
+    /**
      * set 实例创建时间
      *
      * @param createTime
@@ -655,7 +721,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set MySQL只读实例对应的主实例ID
+     * set MySQL、PostgreSQL只读实例对应的主实例ID
      *
      * @param sourceInstanceId
      */

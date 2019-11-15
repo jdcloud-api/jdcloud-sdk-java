@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DeleteParameterGroupResponse;
 
 /**
- * 删除参数组&lt;br&gt;- 仅支持MySQL
+ * 删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 class DeleteParameterGroupExecutor extends JdcloudExecutor {
 

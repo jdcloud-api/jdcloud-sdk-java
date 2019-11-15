@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.ModifyParameterGroupAttributeResponse;
 
 /**
- * 修改参数组名称，描述&lt;br&gt;- 仅支持MySQL
+ * 修改参数组名称，描述&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 class ModifyParameterGroupAttributeExecutor extends JdcloudExecutor {
 

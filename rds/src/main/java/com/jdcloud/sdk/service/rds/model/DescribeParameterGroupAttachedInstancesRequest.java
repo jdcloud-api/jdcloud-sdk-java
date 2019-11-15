@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL
+ * 查看参数组绑定的云数据库实例&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
  */
 public class DescribeParameterGroupAttachedInstancesRequest extends JdcloudRequest implements java.io.Serializable {
 

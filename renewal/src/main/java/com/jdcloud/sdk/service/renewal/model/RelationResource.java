@@ -33,6 +33,16 @@ public class RelationResource  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 业务线
+     */
+    private String appCode;
+
+    /**
+     * 产品线
+     */
+    private String serviceCode;
+
+    /**
      * 资源ID
      */
     private String resourceId;
@@ -43,29 +53,19 @@ public class RelationResource  implements java.io.Serializable {
     private String resourceName;
 
     /**
-     * 产品线
-     */
-    private String serviceCode;
-
-    /**
-     * 计费类型
-     */
-    private Integer billingType;
-
-    /**
-     * 到期时间
-     */
-    private String expireTime;
-
-    /**
      * 地域
      */
-    private String dataCenter;
+    private String region;
 
     /**
-     * 是否开通自动续费(0:未开通,1:已开通)
+     * 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
      */
-    private Integer autoRenew;
+    private String billingType;
+
+    /**
+     * 资源到期时间
+     */
+    private String expireTime;
 
     /**
      * 倒计时
@@ -73,10 +73,51 @@ public class RelationResource  implements java.io.Serializable {
     private Integer lastTime;
 
     /**
-     * 关联资源特殊需求
+     * 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
      */
-    private String remark;
+    private String autoRenewStatus;
 
+    /**
+     * 扩展字段，包括数据库类型、资源特殊说明等
+     */
+    private String extendField;
+
+
+    /**
+     * get 业务线
+     *
+     * @return
+     */
+    public String getAppCode() {
+        return appCode;
+    }
+
+    /**
+     * set 业务线
+     *
+     * @param appCode
+     */
+    public void setAppCode(String appCode) {
+        this.appCode = appCode;
+    }
+
+    /**
+     * get 产品线
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 产品线
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
 
     /**
      * get 资源ID
@@ -115,43 +156,43 @@ public class RelationResource  implements java.io.Serializable {
     }
 
     /**
-     * get 产品线
+     * get 地域
      *
      * @return
      */
-    public String getServiceCode() {
-        return serviceCode;
+    public String getRegion() {
+        return region;
     }
 
     /**
-     * set 产品线
+     * set 地域
      *
-     * @param serviceCode
+     * @param region
      */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     /**
-     * get 计费类型
+     * get 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
      *
      * @return
      */
-    public Integer getBillingType() {
+    public String getBillingType() {
         return billingType;
     }
 
     /**
-     * set 计费类型
+     * set 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
      *
      * @param billingType
      */
-    public void setBillingType(Integer billingType) {
+    public void setBillingType(String billingType) {
         this.billingType = billingType;
     }
 
     /**
-     * get 到期时间
+     * get 资源到期时间
      *
      * @return
      */
@@ -160,48 +201,12 @@ public class RelationResource  implements java.io.Serializable {
     }
 
     /**
-     * set 到期时间
+     * set 资源到期时间
      *
      * @param expireTime
      */
     public void setExpireTime(String expireTime) {
         this.expireTime = expireTime;
-    }
-
-    /**
-     * get 地域
-     *
-     * @return
-     */
-    public String getDataCenter() {
-        return dataCenter;
-    }
-
-    /**
-     * set 地域
-     *
-     * @param dataCenter
-     */
-    public void setDataCenter(String dataCenter) {
-        this.dataCenter = dataCenter;
-    }
-
-    /**
-     * get 是否开通自动续费(0:未开通,1:已开通)
-     *
-     * @return
-     */
-    public Integer getAutoRenew() {
-        return autoRenew;
-    }
-
-    /**
-     * set 是否开通自动续费(0:未开通,1:已开通)
-     *
-     * @param autoRenew
-     */
-    public void setAutoRenew(Integer autoRenew) {
-        this.autoRenew = autoRenew;
     }
 
     /**
@@ -223,23 +228,61 @@ public class RelationResource  implements java.io.Serializable {
     }
 
     /**
-     * get 关联资源特殊需求
+     * get 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
      *
      * @return
      */
-    public String getRemark() {
-        return remark;
+    public String getAutoRenewStatus() {
+        return autoRenewStatus;
     }
 
     /**
-     * set 关联资源特殊需求
+     * set 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
      *
-     * @param remark
+     * @param autoRenewStatus
      */
-    public void setRemark(String remark) {
-        this.remark = remark;
+    public void setAutoRenewStatus(String autoRenewStatus) {
+        this.autoRenewStatus = autoRenewStatus;
     }
 
+    /**
+     * get 扩展字段，包括数据库类型、资源特殊说明等
+     *
+     * @return
+     */
+    public String getExtendField() {
+        return extendField;
+    }
+
+    /**
+     * set 扩展字段，包括数据库类型、资源特殊说明等
+     *
+     * @param extendField
+     */
+    public void setExtendField(String extendField) {
+        this.extendField = extendField;
+    }
+
+
+    /**
+     * set 业务线
+     *
+     * @param appCode
+     */
+    public RelationResource appCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+
+    /**
+     * set 产品线
+     *
+     * @param serviceCode
+     */
+    public RelationResource serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
 
     /**
      * set 资源ID
@@ -262,52 +305,32 @@ public class RelationResource  implements java.io.Serializable {
     }
 
     /**
-     * set 产品线
+     * set 地域
      *
-     * @param serviceCode
+     * @param region
      */
-    public RelationResource serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public RelationResource region(String region) {
+        this.region = region;
         return this;
     }
 
     /**
-     * set 计费类型
+     * set 资源计费类型(CONFIG-按配置,FLOW-按用量,MONTHLY-包年包月)
      *
      * @param billingType
      */
-    public RelationResource billingType(Integer billingType) {
+    public RelationResource billingType(String billingType) {
         this.billingType = billingType;
         return this;
     }
 
     /**
-     * set 到期时间
+     * set 资源到期时间
      *
      * @param expireTime
      */
     public RelationResource expireTime(String expireTime) {
         this.expireTime = expireTime;
-        return this;
-    }
-
-    /**
-     * set 地域
-     *
-     * @param dataCenter
-     */
-    public RelationResource dataCenter(String dataCenter) {
-        this.dataCenter = dataCenter;
-        return this;
-    }
-
-    /**
-     * set 是否开通自动续费(0:未开通,1:已开通)
-     *
-     * @param autoRenew
-     */
-    public RelationResource autoRenew(Integer autoRenew) {
-        this.autoRenew = autoRenew;
         return this;
     }
 
@@ -322,12 +345,22 @@ public class RelationResource  implements java.io.Serializable {
     }
 
     /**
-     * set 关联资源特殊需求
+     * set 开通自动续费状态(UNOPENED-未开通,OPENED-已开通)
      *
-     * @param remark
+     * @param autoRenewStatus
      */
-    public RelationResource remark(String remark) {
-        this.remark = remark;
+    public RelationResource autoRenewStatus(String autoRenewStatus) {
+        this.autoRenewStatus = autoRenewStatus;
+        return this;
+    }
+
+    /**
+     * set 扩展字段，包括数据库类型、资源特殊说明等
+     *
+     * @param extendField
+     */
+    public RelationResource extendField(String extendField) {
+        this.extendField = extendField;
         return this;
     }
 
