@@ -11,6 +11,7 @@
         <module>vm-example</module>
         <module>vpc-example</module>
         <module>nc-example</module>
+        <module>cdn-example</module>
     </modules>
     <distributionManagement>
         <repository>
