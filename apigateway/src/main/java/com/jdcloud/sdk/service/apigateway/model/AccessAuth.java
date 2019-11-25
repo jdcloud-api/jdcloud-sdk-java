@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.apigateway.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * accessAuth
@@ -55,9 +53,9 @@ public class AccessAuth  implements java.io.Serializable {
     private String description;
 
     /**
-     * 绑定分组
+     * 绑定分组,用英文逗号分隔
      */
-    private List<BindGroups> bindGroups;
+    private String bindGroups;
 
     /**
      * api调用者的appid
@@ -138,20 +136,20 @@ public class AccessAuth  implements java.io.Serializable {
     }
 
     /**
-     * get 绑定分组
+     * get 绑定分组,用英文逗号分隔
      *
      * @return
      */
-    public List<BindGroups> getBindGroups() {
+    public String getBindGroups() {
         return bindGroups;
     }
 
     /**
-     * set 绑定分组
+     * set 绑定分组,用英文逗号分隔
      *
      * @param bindGroups
      */
-    public void setBindGroups(List<BindGroups> bindGroups) {
+    public void setBindGroups(String bindGroups) {
         this.bindGroups = bindGroups;
     }
 
@@ -215,11 +213,11 @@ public class AccessAuth  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定分组
+     * set 绑定分组,用英文逗号分隔
      *
      * @param bindGroups
      */
-    public AccessAuth bindGroups(List<BindGroups> bindGroups) {
+    public AccessAuth bindGroups(String bindGroups) {
         this.bindGroups = bindGroups;
         return this;
     }
@@ -234,17 +232,5 @@ public class AccessAuth  implements java.io.Serializable {
         return this;
     }
 
-
-    /**
-     * add item to 绑定分组
-     *
-     * @param bindGroup
-     */
-    public void addBindGroup(BindGroups bindGroup) {
-        if (this.bindGroups == null) {
-            this.bindGroups = new ArrayList<>();
-        }
-        this.bindGroups.add(bindGroup);
-    }
 
 }

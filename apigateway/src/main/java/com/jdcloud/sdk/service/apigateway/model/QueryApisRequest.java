@@ -53,6 +53,7 @@ action - 动作，精确匹配，支持多个
 backServiceType- 后端服务类型，精确匹配，支持多个
 path - 路径，模糊匹配，支持单个
 description - 描述，模糊匹配，支持单个
+isApiProduct - 是否API产品，精确匹配，1为是
 
      */
     private List<Filter> filters;
@@ -121,6 +122,7 @@ action - 动作，精确匹配，支持多个
 backServiceType- 后端服务类型，精确匹配，支持多个
 path - 路径，模糊匹配，支持单个
 description - 描述，模糊匹配，支持单个
+isApiProduct - 是否API产品，精确匹配，1为是
 
      *
      * @return
@@ -135,6 +137,7 @@ action - 动作，精确匹配，支持多个
 backServiceType- 后端服务类型，精确匹配，支持多个
 path - 路径，模糊匹配，支持单个
 description - 描述，模糊匹配，支持单个
+isApiProduct - 是否API产品，精确匹配，1为是
 
      *
      * @param filters
@@ -224,6 +227,7 @@ action - 动作，精确匹配，支持多个
 backServiceType- 后端服务类型，精确匹配，支持多个
 path - 路径，模糊匹配，支持单个
 description - 描述，模糊匹配，支持单个
+isApiProduct - 是否API产品，精确匹配，1为是
 
      *
      * @param filters
@@ -270,6 +274,7 @@ action - 动作，精确匹配，支持多个
 backServiceType- 后端服务类型，精确匹配，支持多个
 path - 路径，模糊匹配，支持单个
 description - 描述，模糊匹配，支持单个
+isApiProduct - 是否API产品，精确匹配，1为是
 
      *
      * @param filter

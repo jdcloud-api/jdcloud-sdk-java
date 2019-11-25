@@ -36,12 +36,127 @@ public class ApiChargeSpecView  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * appCode
+     */
+    private String appCode;
+
+    /**
+     * serviceCode
+     */
+    private String serviceCode;
+
+    /**
+     * api中心展示，1展示，0 不展示 默认不展示
+     */
+    private Integer showStatus;
+
+    /**
+     * 计费类型 0 标准计费 1 阶梯计费
+     */
+    private Integer chargeType;
+
+    /**
+     * 计费方式 0 200请求计费 1 后端处理计费
+     */
+    private Integer accessSuccessType;
+
+    /**
      * 请求参数列表
      * Required:true
      */
     @Required
     private List<ApiChargeSpec> apiChargeSpecs;
 
+
+    /**
+     * get appCode
+     *
+     * @return
+     */
+    public String getAppCode() {
+        return appCode;
+    }
+
+    /**
+     * set appCode
+     *
+     * @param appCode
+     */
+    public void setAppCode(String appCode) {
+        this.appCode = appCode;
+    }
+
+    /**
+     * get serviceCode
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set serviceCode
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    /**
+     * get api中心展示，1展示，0 不展示 默认不展示
+     *
+     * @return
+     */
+    public Integer getShowStatus() {
+        return showStatus;
+    }
+
+    /**
+     * set api中心展示，1展示，0 不展示 默认不展示
+     *
+     * @param showStatus
+     */
+    public void setShowStatus(Integer showStatus) {
+        this.showStatus = showStatus;
+    }
+
+    /**
+     * get 计费类型 0 标准计费 1 阶梯计费
+     *
+     * @return
+     */
+    public Integer getChargeType() {
+        return chargeType;
+    }
+
+    /**
+     * set 计费类型 0 标准计费 1 阶梯计费
+     *
+     * @param chargeType
+     */
+    public void setChargeType(Integer chargeType) {
+        this.chargeType = chargeType;
+    }
+
+    /**
+     * get 计费方式 0 200请求计费 1 后端处理计费
+     *
+     * @return
+     */
+    public Integer getAccessSuccessType() {
+        return accessSuccessType;
+    }
+
+    /**
+     * set 计费方式 0 200请求计费 1 后端处理计费
+     *
+     * @param accessSuccessType
+     */
+    public void setAccessSuccessType(Integer accessSuccessType) {
+        this.accessSuccessType = accessSuccessType;
+    }
 
     /**
      * get 请求参数列表
@@ -61,6 +176,56 @@ public class ApiChargeSpecView  implements java.io.Serializable {
         this.apiChargeSpecs = apiChargeSpecs;
     }
 
+
+    /**
+     * set appCode
+     *
+     * @param appCode
+     */
+    public ApiChargeSpecView appCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+
+    /**
+     * set serviceCode
+     *
+     * @param serviceCode
+     */
+    public ApiChargeSpecView serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set api中心展示，1展示，0 不展示 默认不展示
+     *
+     * @param showStatus
+     */
+    public ApiChargeSpecView showStatus(Integer showStatus) {
+        this.showStatus = showStatus;
+        return this;
+    }
+
+    /**
+     * set 计费类型 0 标准计费 1 阶梯计费
+     *
+     * @param chargeType
+     */
+    public ApiChargeSpecView chargeType(Integer chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+
+    /**
+     * set 计费方式 0 200请求计费 1 后端处理计费
+     *
+     * @param accessSuccessType
+     */
+    public ApiChargeSpecView accessSuccessType(Integer accessSuccessType) {
+        this.accessSuccessType = accessSuccessType;
+        return this;
+    }
 
     /**
      * set 请求参数列表

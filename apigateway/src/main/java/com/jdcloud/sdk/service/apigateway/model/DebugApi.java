@@ -105,6 +105,18 @@ public class DebugApi  implements java.io.Serializable {
      */
     private String headerString;
 
+    /**
+     * 发布的环境信息，如：online,preview,test
+     * Required:true
+     */
+    @Required
+    private String environment;
+
+    /**
+     * 是否API产品, 1为是
+     */
+    private String isApiProduct;
+
 
     /**
      * get assessKey：京东云用户、API调用者、订阅密钥key
@@ -322,6 +334,42 @@ public class DebugApi  implements java.io.Serializable {
         this.headerString = headerString;
     }
 
+    /**
+     * get 发布的环境信息，如：online,preview,test
+     *
+     * @return
+     */
+    public String getEnvironment() {
+        return environment;
+    }
+
+    /**
+     * set 发布的环境信息，如：online,preview,test
+     *
+     * @param environment
+     */
+    public void setEnvironment(String environment) {
+        this.environment = environment;
+    }
+
+    /**
+     * get 是否API产品, 1为是
+     *
+     * @return
+     */
+    public String getIsApiProduct() {
+        return isApiProduct;
+    }
+
+    /**
+     * set 是否API产品, 1为是
+     *
+     * @param isApiProduct
+     */
+    public void setIsApiProduct(String isApiProduct) {
+        this.isApiProduct = isApiProduct;
+    }
+
 
     /**
      * set assessKey：京东云用户、API调用者、订阅密钥key
@@ -440,6 +488,26 @@ public class DebugApi  implements java.io.Serializable {
      */
     public DebugApi headerString(String headerString) {
         this.headerString = headerString;
+        return this;
+    }
+
+    /**
+     * set 发布的环境信息，如：online,preview,test
+     *
+     * @param environment
+     */
+    public DebugApi environment(String environment) {
+        this.environment = environment;
+        return this;
+    }
+
+    /**
+     * set 是否API产品, 1为是
+     *
+     * @param isApiProduct
+     */
+    public DebugApi isApiProduct(String isApiProduct) {
+        this.isApiProduct = isApiProduct;
         return this;
     }
 

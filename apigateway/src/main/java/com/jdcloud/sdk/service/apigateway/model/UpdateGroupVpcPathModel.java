@@ -24,98 +24,86 @@
 
 package com.jdcloud.sdk.service.apigateway.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * apiChargeSpec
+ * null
  */
-public class ApiChargeSpec  implements java.io.Serializable {
+public class UpdateGroupVpcPathModel  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * API ID
+     * 微服务网关ID
      * Required:true
      */
     @Required
-    private String apiId;
+    private String jdsfGwId;
 
     /**
-     * 计费项
+     * vpc内ip:port,如：192.168.1.2:8000
+     * Required:true
      */
-    private List<Formula> formulas;
+    @Required
+    private String vpcPath;
 
 
     /**
-     * get API ID
+     * get 微服务网关ID
      *
      * @return
      */
-    public String getApiId() {
-        return apiId;
+    public String getJdsfGwId() {
+        return jdsfGwId;
     }
 
     /**
-     * set API ID
+     * set 微服务网关ID
      *
-     * @param apiId
+     * @param jdsfGwId
      */
-    public void setApiId(String apiId) {
-        this.apiId = apiId;
+    public void setJdsfGwId(String jdsfGwId) {
+        this.jdsfGwId = jdsfGwId;
     }
 
     /**
-     * get 计费项
+     * get vpc内ip:port,如：192.168.1.2:8000
      *
      * @return
      */
-    public List<Formula> getFormulas() {
-        return formulas;
+    public String getVpcPath() {
+        return vpcPath;
     }
 
     /**
-     * set 计费项
+     * set vpc内ip:port,如：192.168.1.2:8000
      *
-     * @param formulas
+     * @param vpcPath
      */
-    public void setFormulas(List<Formula> formulas) {
-        this.formulas = formulas;
+    public void setVpcPath(String vpcPath) {
+        this.vpcPath = vpcPath;
     }
 
 
     /**
-     * set API ID
+     * set 微服务网关ID
      *
-     * @param apiId
+     * @param jdsfGwId
      */
-    public ApiChargeSpec apiId(String apiId) {
-        this.apiId = apiId;
+    public UpdateGroupVpcPathModel jdsfGwId(String jdsfGwId) {
+        this.jdsfGwId = jdsfGwId;
         return this;
     }
 
     /**
-     * set 计费项
+     * set vpc内ip:port,如：192.168.1.2:8000
      *
-     * @param formulas
+     * @param vpcPath
      */
-    public ApiChargeSpec formulas(List<Formula> formulas) {
-        this.formulas = formulas;
+    public UpdateGroupVpcPathModel vpcPath(String vpcPath) {
+        this.vpcPath = vpcPath;
         return this;
     }
 
-
-    /**
-     * add item to 计费项
-     *
-     * @param formula
-     */
-    public void addFormula(Formula formula) {
-        if (this.formulas == null) {
-            this.formulas = new ArrayList<>();
-        }
-        this.formulas.add(formula);
-    }
 
 }

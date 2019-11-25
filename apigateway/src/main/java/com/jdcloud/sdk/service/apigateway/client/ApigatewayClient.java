@@ -70,9 +70,6 @@ import com.jdcloud.sdk.service.apigateway.client.OfflineExecutor;
 import com.jdcloud.sdk.service.apigateway.model.BindGroupAuthRequest;
 import com.jdcloud.sdk.service.apigateway.model.BindGroupAuthResponse;
 import com.jdcloud.sdk.service.apigateway.client.BindGroupAuthExecutor;
-import com.jdcloud.sdk.service.apigateway.model.DownloadSdkRequest;
-import com.jdcloud.sdk.service.apigateway.model.DownloadSdkResponse;
-import com.jdcloud.sdk.service.apigateway.client.DownloadSdkExecutor;
 import com.jdcloud.sdk.service.apigateway.model.GetRevisionIdsRequest;
 import com.jdcloud.sdk.service.apigateway.model.GetRevisionIdsResponse;
 import com.jdcloud.sdk.service.apigateway.client.GetRevisionIdsExecutor;
@@ -82,9 +79,6 @@ import com.jdcloud.sdk.service.apigateway.client.CheckKeyExistExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryAccessAuthsRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryAccessAuthsResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryAccessAuthsExecutor;
-import com.jdcloud.sdk.service.apigateway.model.CreateChargeAuthRequest;
-import com.jdcloud.sdk.service.apigateway.model.CreateChargeAuthResponse;
-import com.jdcloud.sdk.service.apigateway.client.CreateChargeAuthExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryRevisionRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryRevisionResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryRevisionExecutor;
@@ -142,9 +136,6 @@ import com.jdcloud.sdk.service.apigateway.client.QueryBindGroupKeyExecutor;
 import com.jdcloud.sdk.service.apigateway.model.ModifyRevisionRequest;
 import com.jdcloud.sdk.service.apigateway.model.ModifyRevisionResponse;
 import com.jdcloud.sdk.service.apigateway.client.ModifyRevisionExecutor;
-import com.jdcloud.sdk.service.apigateway.model.DescribeApiGroupMonitorRequest;
-import com.jdcloud.sdk.service.apigateway.model.DescribeApiGroupMonitorResponse;
-import com.jdcloud.sdk.service.apigateway.client.DescribeApiGroupMonitorExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryBindGroupPolicyRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryBindGroupPolicyResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryBindGroupPolicyExecutor;
@@ -160,18 +151,9 @@ import com.jdcloud.sdk.service.apigateway.client.DescribeBackendConfigExecutor;
 import com.jdcloud.sdk.service.apigateway.model.CreateAccessAuthRequest;
 import com.jdcloud.sdk.service.apigateway.model.CreateAccessAuthResponse;
 import com.jdcloud.sdk.service.apigateway.client.CreateAccessAuthExecutor;
-import com.jdcloud.sdk.service.apigateway.model.GetGroupNamesRequest;
-import com.jdcloud.sdk.service.apigateway.model.GetGroupNamesResponse;
-import com.jdcloud.sdk.service.apigateway.client.GetGroupNamesExecutor;
 import com.jdcloud.sdk.service.apigateway.model.BatchOfflineRequest;
 import com.jdcloud.sdk.service.apigateway.model.BatchOfflineResponse;
 import com.jdcloud.sdk.service.apigateway.client.BatchOfflineExecutor;
-import com.jdcloud.sdk.service.apigateway.model.DebugApiRequest;
-import com.jdcloud.sdk.service.apigateway.model.DebugApiResponse;
-import com.jdcloud.sdk.service.apigateway.client.DebugApiExecutor;
-import com.jdcloud.sdk.service.apigateway.model.QuerySourceApisRequest;
-import com.jdcloud.sdk.service.apigateway.model.QuerySourceApisResponse;
-import com.jdcloud.sdk.service.apigateway.client.QuerySourceApisExecutor;
 import com.jdcloud.sdk.service.apigateway.model.DescribeApiGroupRequest;
 import com.jdcloud.sdk.service.apigateway.model.DescribeApiGroupResponse;
 import com.jdcloud.sdk.service.apigateway.client.DescribeApiGroupExecutor;
@@ -193,18 +175,12 @@ import com.jdcloud.sdk.service.apigateway.client.UpdateAccessAuthExecutor;
 import com.jdcloud.sdk.service.apigateway.model.CheckRevisionExistRequest;
 import com.jdcloud.sdk.service.apigateway.model.CheckRevisionExistResponse;
 import com.jdcloud.sdk.service.apigateway.client.CheckRevisionExistExecutor;
-import com.jdcloud.sdk.service.apigateway.model.DescribeApisByFunctionIdRequest;
-import com.jdcloud.sdk.service.apigateway.model.DescribeApisByFunctionIdResponse;
-import com.jdcloud.sdk.service.apigateway.client.DescribeApisByFunctionIdExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryKeyInfoRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryKeyInfoResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryKeyInfoExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryUcAccessKeysRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryUcAccessKeysResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryUcAccessKeysExecutor;
-import com.jdcloud.sdk.service.apigateway.model.CreateApiChargeSpecRequest;
-import com.jdcloud.sdk.service.apigateway.model.CreateApiChargeSpecResponse;
-import com.jdcloud.sdk.service.apigateway.client.CreateApiChargeSpecExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryKeysRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryKeysResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryKeysExecutor;
@@ -214,9 +190,6 @@ import com.jdcloud.sdk.service.apigateway.client.QueryPolicyGroupListExecutor;
 import com.jdcloud.sdk.service.apigateway.model.UpdateBackendConfigRequest;
 import com.jdcloud.sdk.service.apigateway.model.UpdateBackendConfigResponse;
 import com.jdcloud.sdk.service.apigateway.client.UpdateBackendConfigExecutor;
-import com.jdcloud.sdk.service.apigateway.model.DescribeApiGroupsMonitorRequest;
-import com.jdcloud.sdk.service.apigateway.model.DescribeApiGroupsMonitorResponse;
-import com.jdcloud.sdk.service.apigateway.client.DescribeApiGroupsMonitorExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryBindGroupAuthRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryBindGroupAuthResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryBindGroupAuthExecutor;
@@ -241,18 +214,9 @@ import com.jdcloud.sdk.service.apigateway.client.DeleteRateLimitPolicyExecutor;
 import com.jdcloud.sdk.service.apigateway.model.BindGroupPolicyRequest;
 import com.jdcloud.sdk.service.apigateway.model.BindGroupPolicyResponse;
 import com.jdcloud.sdk.service.apigateway.client.BindGroupPolicyExecutor;
-import com.jdcloud.sdk.service.apigateway.model.GenerateSdkAndDocumentRequest;
-import com.jdcloud.sdk.service.apigateway.model.GenerateSdkAndDocumentResponse;
-import com.jdcloud.sdk.service.apigateway.client.GenerateSdkAndDocumentExecutor;
-import com.jdcloud.sdk.service.apigateway.model.ImportApiRequest;
-import com.jdcloud.sdk.service.apigateway.model.ImportApiResponse;
-import com.jdcloud.sdk.service.apigateway.client.ImportApiExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryAccessKeysRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryAccessKeysResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryAccessKeysExecutor;
-import com.jdcloud.sdk.service.apigateway.model.DescribeApiChargeSpecsRequest;
-import com.jdcloud.sdk.service.apigateway.model.DescribeApiChargeSpecsResponse;
-import com.jdcloud.sdk.service.apigateway.client.DescribeApiChargeSpecsExecutor;
 import com.jdcloud.sdk.service.apigateway.model.DeployRequest;
 import com.jdcloud.sdk.service.apigateway.model.DeployResponse;
 import com.jdcloud.sdk.service.apigateway.client.DeployExecutor;
@@ -277,33 +241,21 @@ import com.jdcloud.sdk.service.apigateway.client.DeleteRevisionExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryApiRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryApiResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryApiExecutor;
-import com.jdcloud.sdk.service.apigateway.model.QueryKeyBindedGroupListRequest;
-import com.jdcloud.sdk.service.apigateway.model.QueryKeyBindedGroupListResponse;
-import com.jdcloud.sdk.service.apigateway.client.QueryKeyBindedGroupListExecutor;
 import com.jdcloud.sdk.service.apigateway.model.CheckApiNameExistRequest;
 import com.jdcloud.sdk.service.apigateway.model.CheckApiNameExistResponse;
 import com.jdcloud.sdk.service.apigateway.client.CheckApiNameExistExecutor;
-import com.jdcloud.sdk.service.apigateway.model.DeleteAccessKeysRequest;
-import com.jdcloud.sdk.service.apigateway.model.DeleteAccessKeysResponse;
-import com.jdcloud.sdk.service.apigateway.client.DeleteAccessKeysExecutor;
 import com.jdcloud.sdk.service.apigateway.model.QueryApisRequest;
 import com.jdcloud.sdk.service.apigateway.model.QueryApisResponse;
 import com.jdcloud.sdk.service.apigateway.client.QueryApisExecutor;
 import com.jdcloud.sdk.service.apigateway.model.ResetKeyRequest;
 import com.jdcloud.sdk.service.apigateway.model.ResetKeyResponse;
 import com.jdcloud.sdk.service.apigateway.client.ResetKeyExecutor;
-import com.jdcloud.sdk.service.apigateway.model.QuerySdkAndDocumentRequest;
-import com.jdcloud.sdk.service.apigateway.model.QuerySdkAndDocumentResponse;
-import com.jdcloud.sdk.service.apigateway.client.QuerySdkAndDocumentExecutor;
 import com.jdcloud.sdk.service.apigateway.model.DeleteBackendConfigRequest;
 import com.jdcloud.sdk.service.apigateway.model.DeleteBackendConfigResponse;
 import com.jdcloud.sdk.service.apigateway.client.DeleteBackendConfigExecutor;
 import com.jdcloud.sdk.service.apigateway.model.DeleteApiGroupRequest;
 import com.jdcloud.sdk.service.apigateway.model.DeleteApiGroupResponse;
 import com.jdcloud.sdk.service.apigateway.client.DeleteApiGroupExecutor;
-import com.jdcloud.sdk.service.apigateway.model.CloneApisRequest;
-import com.jdcloud.sdk.service.apigateway.model.CloneApisResponse;
-import com.jdcloud.sdk.service.apigateway.client.CloneApisExecutor;
 
 /**
  * apigatewayClient
@@ -498,17 +450,6 @@ public class ApigatewayClient extends JdcloudClient {
     }
 
     /**
-     * 下载sdk、文档的生成结果
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DownloadSdkResponse downloadSdk(DownloadSdkRequest request) throws JdcloudSdkException {
-        return new DownloadSdkExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询分组内全部修订版本号
      *
      * @param request
@@ -539,17 +480,6 @@ public class ApigatewayClient extends JdcloudClient {
      */
     public QueryAccessAuthsResponse queryAccessAuths(QueryAccessAuthsRequest request) throws JdcloudSdkException {
         return new QueryAccessAuthsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建计费授权
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateChargeAuthResponse createChargeAuth(CreateChargeAuthRequest request) throws JdcloudSdkException {
-        return new CreateChargeAuthExecutor().client(this).execute(request);
     }
 
     /**
@@ -762,17 +692,6 @@ public class ApigatewayClient extends JdcloudClient {
     }
 
     /**
-     * 查询API分组详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeApiGroupMonitorResponse describeApiGroupMonitor(DescribeApiGroupMonitorRequest request) throws JdcloudSdkException {
-        return new DescribeApiGroupMonitorExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询绑定部署详情
      *
      * @param request
@@ -828,17 +747,6 @@ public class ApigatewayClient extends JdcloudClient {
     }
 
     /**
-     * 查询region内全部分组名称
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetGroupNamesResponse getGroupNames(GetGroupNamesRequest request) throws JdcloudSdkException {
-        return new GetGroupNamesExecutor().client(this).execute(request);
-    }
-
-    /**
      * 批量下线
      *
      * @param request
@@ -847,28 +755,6 @@ public class ApigatewayClient extends JdcloudClient {
      */
     public BatchOfflineResponse batchOffline(BatchOfflineRequest request) throws JdcloudSdkException {
         return new BatchOfflineExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 调试API
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DebugApiResponse debugApi(DebugApiRequest request) throws JdcloudSdkException {
-        return new DebugApiExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询待克隆api，将名称添加_clone后返回
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QuerySourceApisResponse querySourceApis(QuerySourceApisRequest request) throws JdcloudSdkException {
-        return new QuerySourceApisExecutor().client(this).execute(request);
     }
 
     /**
@@ -949,17 +835,6 @@ public class ApigatewayClient extends JdcloudClient {
     }
 
     /**
-     * function查询绑定所有api
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeApisByFunctionIdResponse describeApisByFunctionId(DescribeApisByFunctionIdRequest request) throws JdcloudSdkException {
-        return new DescribeApisByFunctionIdExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询key详情
      *
      * @param request
@@ -979,17 +854,6 @@ public class ApigatewayClient extends JdcloudClient {
      */
     public QueryUcAccessKeysResponse queryUcAccessKeys(QueryUcAccessKeysRequest request) throws JdcloudSdkException {
         return new QueryUcAccessKeysExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建计费规格
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateApiChargeSpecResponse createApiChargeSpec(CreateApiChargeSpecRequest request) throws JdcloudSdkException {
-        return new CreateApiChargeSpecExecutor().client(this).execute(request);
     }
 
     /**
@@ -1023,17 +887,6 @@ public class ApigatewayClient extends JdcloudClient {
      */
     public UpdateBackendConfigResponse updateBackendConfig(UpdateBackendConfigRequest request) throws JdcloudSdkException {
         return new UpdateBackendConfigExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询分组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeApiGroupsMonitorResponse describeApiGroupsMonitor(DescribeApiGroupsMonitorRequest request) throws JdcloudSdkException {
-        return new DescribeApiGroupsMonitorExecutor().client(this).execute(request);
     }
 
     /**
@@ -1125,28 +978,6 @@ public class ApigatewayClient extends JdcloudClient {
     }
 
     /**
-     * 生成sdk、文档
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GenerateSdkAndDocumentResponse generateSdkAndDocument(GenerateSdkAndDocumentRequest request) throws JdcloudSdkException {
-        return new GenerateSdkAndDocumentExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 导入api
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ImportApiResponse importApi(ImportApiRequest request) throws JdcloudSdkException {
-        return new ImportApiExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询密钥列表
      *
      * @param request
@@ -1155,17 +986,6 @@ public class ApigatewayClient extends JdcloudClient {
      */
     public QueryAccessKeysResponse queryAccessKeys(QueryAccessKeysRequest request) throws JdcloudSdkException {
         return new QueryAccessKeysExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询计费规格
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeApiChargeSpecsResponse describeApiChargeSpecs(DescribeApiChargeSpecsRequest request) throws JdcloudSdkException {
-        return new DescribeApiChargeSpecsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1257,17 +1077,6 @@ public class ApigatewayClient extends JdcloudClient {
     }
 
     /**
-     * 查询APPId已绑定分组列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryKeyBindedGroupListResponse queryKeyBindedGroupList(QueryKeyBindedGroupListRequest request) throws JdcloudSdkException {
-        return new QueryKeyBindedGroupListExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建API时，检查API名称是否重复,返回重复的apiId,如果没有返回空
      *
      * @param request
@@ -1276,17 +1085,6 @@ public class ApigatewayClient extends JdcloudClient {
      */
     public CheckApiNameExistResponse checkApiNameExist(CheckApiNameExistRequest request) throws JdcloudSdkException {
         return new CheckApiNameExistExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 批量删除密钥接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteAccessKeysResponse deleteAccessKeys(DeleteAccessKeysRequest request) throws JdcloudSdkException {
-        return new DeleteAccessKeysExecutor().client(this).execute(request);
     }
 
     /**
@@ -1312,17 +1110,6 @@ public class ApigatewayClient extends JdcloudClient {
     }
 
     /**
-     * 查询sdk、文档的生成结果
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QuerySdkAndDocumentResponse querySdkAndDocument(QuerySdkAndDocumentRequest request) throws JdcloudSdkException {
-        return new QuerySdkAndDocumentExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除后端配置
      *
      * @param request
@@ -1342,17 +1129,6 @@ public class ApigatewayClient extends JdcloudClient {
      */
     public DeleteApiGroupResponse deleteApiGroup(DeleteApiGroupRequest request) throws JdcloudSdkException {
         return new DeleteApiGroupExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 克隆api,复制api到哪个分组，由operationId为getGroupNames的方法，根据传回的regionId确定可选下拉列表,复制api到哪个修订版，由operationId为getRevisionIds的方法，根据传回的apiGroupId确定可选下拉列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CloneApisResponse cloneApis(CloneApisRequest request) throws JdcloudSdkException {
-        return new CloneApisExecutor().client(this).execute(request);
     }
 
 

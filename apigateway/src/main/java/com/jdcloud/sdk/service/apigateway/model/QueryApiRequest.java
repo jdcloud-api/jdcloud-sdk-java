@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.apigateway.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -33,6 +36,12 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 public class QueryApiRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * isApiProduct - 是否API产品，精确匹配，1为是
+
+     */
+    private List<Filter> filters;
 
     /**
      * 地域ID
@@ -62,6 +71,26 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
     @Required
     private String apiId;
 
+
+    /**
+     * get isApiProduct - 是否API产品，精确匹配，1为是
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set isApiProduct - 是否API产品，精确匹配，1为是
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
 
     /**
      * get 地域ID
@@ -137,6 +166,17 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
 
 
     /**
+     * set isApiProduct - 是否API产品，精确匹配，1为是
+
+     *
+     * @param filters
+     */
+    public QueryApiRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
      * set 地域ID
      *
      * @param regionId
@@ -176,5 +216,18 @@ public class QueryApiRequest extends JdcloudRequest implements java.io.Serializa
         return this;
     }
 
+
+    /**
+     * add item to isApiProduct - 是否API产品，精确匹配，1为是
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }
