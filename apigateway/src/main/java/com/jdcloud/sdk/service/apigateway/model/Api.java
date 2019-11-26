@@ -124,6 +124,11 @@ public class Api  implements java.io.Serializable {
      */
     private String editableResBodyType;
 
+    /**
+     * waf状态，如：observe,deny,off
+     */
+    private String wafStatus;
+
 
     /**
      * get apiId
@@ -449,6 +454,24 @@ public class Api  implements java.io.Serializable {
         this.editableResBodyType = editableResBodyType;
     }
 
+    /**
+     * get waf状态，如：observe,deny,off
+     *
+     * @return
+     */
+    public String getWafStatus() {
+        return wafStatus;
+    }
+
+    /**
+     * set waf状态，如：observe,deny,off
+     *
+     * @param wafStatus
+     */
+    public void setWafStatus(String wafStatus) {
+        this.wafStatus = wafStatus;
+    }
+
 
     /**
      * set apiId
@@ -627,6 +650,16 @@ public class Api  implements java.io.Serializable {
      */
     public Api editableResBodyType(String editableResBodyType) {
         this.editableResBodyType = editableResBodyType;
+        return this;
+    }
+
+    /**
+     * set waf状态，如：observe,deny,off
+     *
+     * @param wafStatus
+     */
+    public Api wafStatus(String wafStatus) {
+        this.wafStatus = wafStatus;
         return this;
     }
 

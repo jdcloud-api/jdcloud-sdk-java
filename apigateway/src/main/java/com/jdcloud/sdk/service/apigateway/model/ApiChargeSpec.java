@@ -36,45 +36,20 @@ public class ApiChargeSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 分组ID
+     * API ID
      * Required:true
      */
     @Required
-    private String apiGroupId;
-
-    /**
-     * 接口ID
-     */
     private String apiId;
 
     /**
      * 计费项
-     * Required:true
      */
-    @Required
     private List<Formula> formulas;
 
 
     /**
-     * get 分组ID
-     *
-     * @return
-     */
-    public String getApiGroupId() {
-        return apiGroupId;
-    }
-
-    /**
-     * set 分组ID
-     *
-     * @param apiGroupId
-     */
-    public void setApiGroupId(String apiGroupId) {
-        this.apiGroupId = apiGroupId;
-    }
-
-    /**
-     * get 接口ID
+     * get API ID
      *
      * @return
      */
@@ -83,7 +58,7 @@ public class ApiChargeSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 接口ID
+     * set API ID
      *
      * @param apiId
      */
@@ -111,17 +86,7 @@ public class ApiChargeSpec  implements java.io.Serializable {
 
 
     /**
-     * set 分组ID
-     *
-     * @param apiGroupId
-     */
-    public ApiChargeSpec apiGroupId(String apiGroupId) {
-        this.apiGroupId = apiGroupId;
-        return this;
-    }
-
-    /**
-     * set 接口ID
+     * set API ID
      *
      * @param apiId
      */

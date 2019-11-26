@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.apigateway.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * formula
@@ -34,12 +35,16 @@ public class Formula  implements java.io.Serializable {
 
     /**
      * key
+     * Required:true
      */
+    @Required
     private String key;
 
     /**
      * value
+     * Required:true
      */
+    @Required
     private String value;
 
     /**
