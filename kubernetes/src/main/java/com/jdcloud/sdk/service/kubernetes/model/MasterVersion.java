@@ -45,7 +45,7 @@ public class MasterVersion  implements java.io.Serializable {
     private Boolean isDefault;
 
     /**
-     * 默认ndoe版本号
+     * 默认工作节点版本号
      */
     private String defaultNodeVersion;
 
@@ -97,7 +97,7 @@ public class MasterVersion  implements java.io.Serializable {
     }
 
     /**
-     * get 默认ndoe版本号
+     * get 默认工作节点版本号
      *
      * @return
      */
@@ -106,7 +106,7 @@ public class MasterVersion  implements java.io.Serializable {
     }
 
     /**
-     * set 默认ndoe版本号
+     * set 默认工作节点版本号
      *
      * @param defaultNodeVersion
      */
@@ -172,7 +172,7 @@ public class MasterVersion  implements java.io.Serializable {
     }
 
     /**
-     * set 默认ndoe版本号
+     * set 默认工作节点版本号
      *
      * @param defaultNodeVersion
      */

@@ -67,6 +67,11 @@ public class Consumption  implements java.io.Serializable {
      */
     private Number arrearFee;
 
+    /**
+     * 分组显示值
+     */
+    private String groupTagValue;
+
 
     /**
      * get 计费类型
@@ -194,6 +199,24 @@ public class Consumption  implements java.io.Serializable {
         this.arrearFee = arrearFee;
     }
 
+    /**
+     * get 分组显示值
+     *
+     * @return
+     */
+    public String getGroupTagValue() {
+        return groupTagValue;
+    }
+
+    /**
+     * set 分组显示值
+     *
+     * @param groupTagValue
+     */
+    public void setGroupTagValue(String groupTagValue) {
+        this.groupTagValue = groupTagValue;
+    }
+
 
     /**
      * set 计费类型
@@ -262,6 +285,16 @@ public class Consumption  implements java.io.Serializable {
      */
     public Consumption arrearFee(Number arrearFee) {
         this.arrearFee = arrearFee;
+        return this;
+    }
+
+    /**
+     * set 分组显示值
+     *
+     * @param groupTagValue
+     */
+    public Consumption groupTagValue(String groupTagValue) {
+        this.groupTagValue = groupTagValue;
         return this;
     }
 

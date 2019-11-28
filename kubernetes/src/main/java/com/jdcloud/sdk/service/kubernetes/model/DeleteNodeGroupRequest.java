@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * cluster 摘除 nodeGroup 并删除 nodeGroup
+ * 集群摘除工作节点组并删除工作节点组
  */
 public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
     /**
-     * 节点组 ID
+     * 工作节点组 ID
      * Required:true
      */
     @Required
@@ -68,7 +68,7 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 节点组 ID
+     * get 工作节点组 ID
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */
@@ -97,7 +97,7 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 立即轮换密钥，自动轮换周期顺延
+ * 立即轮换密钥，自动轮换周期顺延-支持对称密钥
  */
 public class KeyRotationRequest extends JdcloudRequest implements java.io.Serializable {
 

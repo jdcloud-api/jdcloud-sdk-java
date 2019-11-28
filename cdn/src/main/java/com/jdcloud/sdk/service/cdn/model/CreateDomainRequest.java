@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -105,6 +105,11 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
      * ossSource
      */
     private String ossSource;
+
+    /**
+     * 加速区域:(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
+     */
+    private String accelerateRegion;
 
     /**
      * 用户域名
@@ -367,6 +372,24 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
+     * get 加速区域:(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
+     *
+     * @return
+     */
+    public String getAccelerateRegion() {
+        return accelerateRegion;
+    }
+
+    /**
+     * set 加速区域:(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
+     *
+     * @param accelerateRegion
+     */
+    public void setAccelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
+    }
+
+    /**
      * get 用户域名
      *
      * @return
@@ -522,6 +545,16 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
      */
     public CreateDomainRequest ossSource(String ossSource) {
         this.ossSource = ossSource;
+        return this;
+    }
+
+    /**
+     * set 加速区域:(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
+     *
+     * @param accelerateRegion
+     */
+    public CreateDomainRequest accelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
         return this;
     }
 

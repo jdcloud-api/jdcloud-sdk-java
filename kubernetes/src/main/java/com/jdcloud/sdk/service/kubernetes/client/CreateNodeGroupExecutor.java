@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,8 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.CreateNodeGroupResponse;
 
 /**
- * 创建k8s的nodeGroup
-要求集群状态为running
+ * 创建工作节点组&lt;br&gt;
+- 要求集群状态为running
 
  */
 class CreateNodeGroupExecutor extends JdcloudExecutor {

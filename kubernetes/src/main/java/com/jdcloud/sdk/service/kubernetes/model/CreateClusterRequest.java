@@ -89,7 +89,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     private List<String> azs;
 
     /**
-     * pod 创建参数
+     * 集群节点组
      * Required:true
      */
     @Required
@@ -243,7 +243,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get pod 创建参数
+     * get 集群节点组
      *
      * @return
      */
@@ -252,7 +252,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set pod 创建参数
+     * set 集群节点组
      *
      * @param nodeGroup
      */
@@ -430,7 +430,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set pod 创建参数
+     * set 集群节点组
      *
      * @param nodeGroup
      */

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改集群的 名称 和 描述。
+ * 修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
  */
 public class ModifyClusterRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -40,7 +40,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     private String name;
 
     /**
-     * 集群 name 和 description 必须要指定一个
+     * 集群描述
      */
     private String description;
 
@@ -78,7 +78,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 集群 name 和 description 必须要指定一个
+     * get 集群描述
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 集群 name 和 description 必须要指定一个
+     * set 集群描述
      *
      * @param description
      */
@@ -143,7 +143,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 集群 name 和 description 必须要指定一个
+     * set 集群描述
      *
      * @param description
      */

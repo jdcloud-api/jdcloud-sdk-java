@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * cluster 摘除 nodeGroup 并删除 nodeGroup
+ * 集群摘除工作节点组并删除工作节点组
  */
 public class DeleteNodeGroupResponse extends JdcloudResponse<DeleteNodeGroupResult> implements java.io.Serializable {
 

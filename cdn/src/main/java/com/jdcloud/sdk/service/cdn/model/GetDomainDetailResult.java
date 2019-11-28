@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -200,6 +200,11 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      * sslCertEndTime
      */
     private String sslCertEndTime;
+
+    /**
+     * 加速区域
+     */
+    private String accelerateRegion;
 
 
     /**
@@ -796,6 +801,24 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
         this.sslCertEndTime = sslCertEndTime;
     }
 
+    /**
+     * get 加速区域
+     *
+     * @return
+     */
+    public String getAccelerateRegion() {
+        return accelerateRegion;
+    }
+
+    /**
+     * set 加速区域
+     *
+     * @param accelerateRegion
+     */
+    public void setAccelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
+    }
+
 
     /**
      * set null
@@ -1124,6 +1147,16 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      */
     public GetDomainDetailResult sslCertEndTime(String sslCertEndTime) {
         this.sslCertEndTime = sslCertEndTime;
+        return this;
+    }
+
+    /**
+     * set 加速区域
+     *
+     * @param accelerateRegion
+     */
+    public GetDomainDetailResult accelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
         return this;
     }
 

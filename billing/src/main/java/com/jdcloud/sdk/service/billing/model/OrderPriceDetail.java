@@ -140,7 +140,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     private String endTime;
 
     /**
-     * 变配明细（1-升配补差价，2-降配延时）
+     * 变配明细（1-升配补差价，2-降配延时，3-临时升配）
      */
     private Integer processType;
 
@@ -529,7 +529,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * get 变配明细（1-升配补差价，2-降配延时）
+     * get 变配明细（1-升配补差价，2-降配延时，3-临时升配）
      *
      * @return
      */
@@ -538,7 +538,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 变配明细（1-升配补差价，2-降配延时）
+     * set 变配明细（1-升配补差价，2-降配延时，3-临时升配）
      *
      * @param processType
      */
@@ -776,7 +776,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 变配明细（1-升配补差价，2-降配延时）
+     * set 变配明细（1-升配补差价，2-降配延时，3-临时升配）
      *
      * @param processType
      */

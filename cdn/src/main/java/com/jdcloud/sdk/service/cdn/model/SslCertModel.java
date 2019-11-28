@@ -37,7 +37,7 @@ public class SslCertModel  implements java.io.Serializable {
     /**
      * 证书Id
      */
-    private String certId;
+    private String sslCertId;
 
     /**
      * 证书名称
@@ -57,12 +57,12 @@ public class SslCertModel  implements java.io.Serializable {
     /**
      * 开始时间
      */
-    private String startTime;
+    private String sslCertStartTime;
 
     /**
      * 结束时间
      */
-    private String endTime;
+    private String sslCertEndTime;
 
     /**
      * 是否允许被删除,1允许,0不允许
@@ -75,19 +75,9 @@ public class SslCertModel  implements java.io.Serializable {
     private String digest;
 
     /**
-     * 证书别名
+     * 绑定的域名
      */
-    private String aliasName;
-
-    /**
-     * 域名
-     */
-    private List<String> dnsNames;
-
-    /**
-     * 是否允许被下载,0-&gt;不允许,1-&gt;允许
-     */
-    private Integer downloadable;
+    private List<String> relatedDomains;
 
 
     /**
@@ -95,17 +85,17 @@ public class SslCertModel  implements java.io.Serializable {
      *
      * @return
      */
-    public String getCertId() {
-        return certId;
+    public String getSslCertId() {
+        return sslCertId;
     }
 
     /**
      * set 证书Id
      *
-     * @param certId
+     * @param sslCertId
      */
-    public void setCertId(String certId) {
-        this.certId = certId;
+    public void setSslCertId(String sslCertId) {
+        this.sslCertId = sslCertId;
     }
 
     /**
@@ -167,17 +157,17 @@ public class SslCertModel  implements java.io.Serializable {
      *
      * @return
      */
-    public String getStartTime() {
-        return startTime;
+    public String getSslCertStartTime() {
+        return sslCertStartTime;
     }
 
     /**
      * set 开始时间
      *
-     * @param startTime
+     * @param sslCertStartTime
      */
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
+    public void setSslCertStartTime(String sslCertStartTime) {
+        this.sslCertStartTime = sslCertStartTime;
     }
 
     /**
@@ -185,17 +175,17 @@ public class SslCertModel  implements java.io.Serializable {
      *
      * @return
      */
-    public String getEndTime() {
-        return endTime;
+    public String getSslCertEndTime() {
+        return sslCertEndTime;
     }
 
     /**
      * set 结束时间
      *
-     * @param endTime
+     * @param sslCertEndTime
      */
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
+    public void setSslCertEndTime(String sslCertEndTime) {
+        this.sslCertEndTime = sslCertEndTime;
     }
 
     /**
@@ -235,67 +225,31 @@ public class SslCertModel  implements java.io.Serializable {
     }
 
     /**
-     * get 证书别名
+     * get 绑定的域名
      *
      * @return
      */
-    public String getAliasName() {
-        return aliasName;
+    public List<String> getRelatedDomains() {
+        return relatedDomains;
     }
 
     /**
-     * set 证书别名
+     * set 绑定的域名
      *
-     * @param aliasName
+     * @param relatedDomains
      */
-    public void setAliasName(String aliasName) {
-        this.aliasName = aliasName;
-    }
-
-    /**
-     * get 域名
-     *
-     * @return
-     */
-    public List<String> getDnsNames() {
-        return dnsNames;
-    }
-
-    /**
-     * set 域名
-     *
-     * @param dnsNames
-     */
-    public void setDnsNames(List<String> dnsNames) {
-        this.dnsNames = dnsNames;
-    }
-
-    /**
-     * get 是否允许被下载,0-&gt;不允许,1-&gt;允许
-     *
-     * @return
-     */
-    public Integer getDownloadable() {
-        return downloadable;
-    }
-
-    /**
-     * set 是否允许被下载,0-&gt;不允许,1-&gt;允许
-     *
-     * @param downloadable
-     */
-    public void setDownloadable(Integer downloadable) {
-        this.downloadable = downloadable;
+    public void setRelatedDomains(List<String> relatedDomains) {
+        this.relatedDomains = relatedDomains;
     }
 
 
     /**
      * set 证书Id
      *
-     * @param certId
+     * @param sslCertId
      */
-    public SslCertModel certId(String certId) {
-        this.certId = certId;
+    public SslCertModel sslCertId(String sslCertId) {
+        this.sslCertId = sslCertId;
         return this;
     }
 
@@ -332,20 +286,20 @@ public class SslCertModel  implements java.io.Serializable {
     /**
      * set 开始时间
      *
-     * @param startTime
+     * @param sslCertStartTime
      */
-    public SslCertModel startTime(String startTime) {
-        this.startTime = startTime;
+    public SslCertModel sslCertStartTime(String sslCertStartTime) {
+        this.sslCertStartTime = sslCertStartTime;
         return this;
     }
 
     /**
      * set 结束时间
      *
-     * @param endTime
+     * @param sslCertEndTime
      */
-    public SslCertModel endTime(String endTime) {
-        this.endTime = endTime;
+    public SslCertModel sslCertEndTime(String sslCertEndTime) {
+        this.sslCertEndTime = sslCertEndTime;
         return this;
     }
 
@@ -370,46 +324,26 @@ public class SslCertModel  implements java.io.Serializable {
     }
 
     /**
-     * set 证书别名
+     * set 绑定的域名
      *
-     * @param aliasName
+     * @param relatedDomains
      */
-    public SslCertModel aliasName(String aliasName) {
-        this.aliasName = aliasName;
-        return this;
-    }
-
-    /**
-     * set 域名
-     *
-     * @param dnsNames
-     */
-    public SslCertModel dnsNames(List<String> dnsNames) {
-        this.dnsNames = dnsNames;
-        return this;
-    }
-
-    /**
-     * set 是否允许被下载,0-&gt;不允许,1-&gt;允许
-     *
-     * @param downloadable
-     */
-    public SslCertModel downloadable(Integer downloadable) {
-        this.downloadable = downloadable;
+    public SslCertModel relatedDomains(List<String> relatedDomains) {
+        this.relatedDomains = relatedDomains;
         return this;
     }
 
 
     /**
-     * add item to 域名
+     * add item to 绑定的域名
      *
-     * @param dnsName
+     * @param relatedDomain
      */
-    public void addDnsName(String dnsName) {
-        if (this.dnsNames == null) {
-            this.dnsNames = new ArrayList<>();
+    public void addRelatedDomain(String relatedDomain) {
+        if (this.relatedDomains == null) {
+            this.relatedDomains = new ArrayList<>();
         }
-        this.dnsNames.add(dnsName);
+        this.relatedDomains.add(relatedDomain);
     }
 
 }

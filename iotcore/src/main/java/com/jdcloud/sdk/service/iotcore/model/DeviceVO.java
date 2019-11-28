@@ -58,11 +58,6 @@ public class DeviceVO  implements java.io.Serializable {
     private Integer status;
 
     /**
-     * 产品Key
-     */
-    private String productKey;
-
-    /**
      * 设备标识符
      */
     private String identifier;
@@ -98,9 +93,19 @@ public class DeviceVO  implements java.io.Serializable {
     private Long updatedTime;
 
     /**
+     * 产品Key
+     */
+    private String productKey;
+
+    /**
      * 产品名称
      */
     private String productName;
+
+    /**
+     * 产品秘钥
+     */
+    private String productSecret;
 
     /**
      * 设备型号
@@ -111,6 +116,11 @@ public class DeviceVO  implements java.io.Serializable {
      * 设备厂商
      */
     private String manufacturer;
+
+    /**
+     * 是否开启动态注册,0:关闭,1:开启，开启动态注册的设备认证类型为一型一密，否则为一机一密
+     */
+    private Integer dynamicRegister;
 
 
     /**
@@ -201,24 +211,6 @@ public class DeviceVO  implements java.io.Serializable {
      */
     public void setStatus(Integer status) {
         this.status = status;
-    }
-
-    /**
-     * get 产品Key
-     *
-     * @return
-     */
-    public String getProductKey() {
-        return productKey;
-    }
-
-    /**
-     * set 产品Key
-     *
-     * @param productKey
-     */
-    public void setProductKey(String productKey) {
-        this.productKey = productKey;
     }
 
     /**
@@ -348,6 +340,24 @@ public class DeviceVO  implements java.io.Serializable {
     }
 
     /**
+     * get 产品Key
+     *
+     * @return
+     */
+    public String getProductKey() {
+        return productKey;
+    }
+
+    /**
+     * set 产品Key
+     *
+     * @param productKey
+     */
+    public void setProductKey(String productKey) {
+        this.productKey = productKey;
+    }
+
+    /**
      * get 产品名称
      *
      * @return
@@ -363,6 +373,24 @@ public class DeviceVO  implements java.io.Serializable {
      */
     public void setProductName(String productName) {
         this.productName = productName;
+    }
+
+    /**
+     * get 产品秘钥
+     *
+     * @return
+     */
+    public String getProductSecret() {
+        return productSecret;
+    }
+
+    /**
+     * set 产品秘钥
+     *
+     * @param productSecret
+     */
+    public void setProductSecret(String productSecret) {
+        this.productSecret = productSecret;
     }
 
     /**
@@ -399,6 +427,24 @@ public class DeviceVO  implements java.io.Serializable {
      */
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
+    }
+
+    /**
+     * get 是否开启动态注册,0:关闭,1:开启，开启动态注册的设备认证类型为一型一密，否则为一机一密
+     *
+     * @return
+     */
+    public Integer getDynamicRegister() {
+        return dynamicRegister;
+    }
+
+    /**
+     * set 是否开启动态注册,0:关闭,1:开启，开启动态注册的设备认证类型为一型一密，否则为一机一密
+     *
+     * @param dynamicRegister
+     */
+    public void setDynamicRegister(Integer dynamicRegister) {
+        this.dynamicRegister = dynamicRegister;
     }
 
 
@@ -449,16 +495,6 @@ public class DeviceVO  implements java.io.Serializable {
      */
     public DeviceVO status(Integer status) {
         this.status = status;
-        return this;
-    }
-
-    /**
-     * set 产品Key
-     *
-     * @param productKey
-     */
-    public DeviceVO productKey(String productKey) {
-        this.productKey = productKey;
         return this;
     }
 
@@ -533,12 +569,32 @@ public class DeviceVO  implements java.io.Serializable {
     }
 
     /**
+     * set 产品Key
+     *
+     * @param productKey
+     */
+    public DeviceVO productKey(String productKey) {
+        this.productKey = productKey;
+        return this;
+    }
+
+    /**
      * set 产品名称
      *
      * @param productName
      */
     public DeviceVO productName(String productName) {
         this.productName = productName;
+        return this;
+    }
+
+    /**
+     * set 产品秘钥
+     *
+     * @param productSecret
+     */
+    public DeviceVO productSecret(String productSecret) {
+        this.productSecret = productSecret;
         return this;
     }
 
@@ -559,6 +615,16 @@ public class DeviceVO  implements java.io.Serializable {
      */
     public DeviceVO manufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
+        return this;
+    }
+
+    /**
+     * set 是否开启动态注册,0:关闭,1:开启，开启动态注册的设备认证类型为一型一密，否则为一机一密
+     *
+     * @param dynamicRegister
+     */
+    public DeviceVO dynamicRegister(Integer dynamicRegister) {
+        this.dynamicRegister = dynamicRegister;
         return this;
     }
 

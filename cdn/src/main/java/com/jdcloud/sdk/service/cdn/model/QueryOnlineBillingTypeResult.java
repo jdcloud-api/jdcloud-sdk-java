@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 计费相关接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1

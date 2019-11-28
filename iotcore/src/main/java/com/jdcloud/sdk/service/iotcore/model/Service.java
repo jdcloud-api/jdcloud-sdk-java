@@ -67,6 +67,16 @@ public class Service  implements java.io.Serializable {
      */
     private Long createdTime;
 
+    /**
+     * 记录ID
+     */
+    private String msgId;
+
+    /**
+     * 失败原因
+     */
+    private String message;
+
 
     /**
      * get 服务名称
@@ -194,6 +204,42 @@ public class Service  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+    /**
+     * get 记录ID
+     *
+     * @return
+     */
+    public String getMsgId() {
+        return msgId;
+    }
+
+    /**
+     * set 记录ID
+     *
+     * @param msgId
+     */
+    public void setMsgId(String msgId) {
+        this.msgId = msgId;
+    }
+
+    /**
+     * get 失败原因
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 失败原因
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
 
     /**
      * set 服务名称
@@ -262,6 +308,26 @@ public class Service  implements java.io.Serializable {
      */
     public Service createdTime(Long createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+    /**
+     * set 记录ID
+     *
+     * @param msgId
+     */
+    public Service msgId(String msgId) {
+        this.msgId = msgId;
+        return this;
+    }
+
+    /**
+     * set 失败原因
+     *
+     * @param message
+     */
+    public Service message(String message) {
+        this.message = message;
         return this;
     }
 

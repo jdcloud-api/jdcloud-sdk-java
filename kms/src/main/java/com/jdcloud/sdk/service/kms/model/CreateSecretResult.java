@@ -33,7 +33,40 @@ public class CreateSecretResult extends JdcloudResult implements java.io.Seriali
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * secretId
+     */
+    private String secretId;
 
+
+    /**
+     * get secretId
+     *
+     * @return
+     */
+    public String getSecretId() {
+        return secretId;
+    }
+
+    /**
+     * set secretId
+     *
+     * @param secretId
+     */
+    public void setSecretId(String secretId) {
+        this.secretId = secretId;
+    }
+
+
+    /**
+     * set secretId
+     *
+     * @param secretId
+     */
+    public CreateSecretResult secretId(String secretId) {
+        this.secretId = secretId;
+        return this;
+    }
 
 
 }

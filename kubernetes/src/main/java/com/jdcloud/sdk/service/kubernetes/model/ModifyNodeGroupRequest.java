@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,19 +28,19 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改节点组的 名称 和 描述
+ * 修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
  */
 public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 节点组名称
+     * 工作节点组名称
      */
     private String name;
 
     /**
-     * 集群 name 和 description 必须要指定一个
+     * 工作节点组描述
      */
     private String description;
 
@@ -52,7 +52,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
     /**
-     * 节点组 ID
+     * 工作节点组 ID
      * Required:true
      */
     @Required
@@ -60,7 +60,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 节点组名称
+     * get 工作节点组名称
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 节点组名称
+     * set 工作节点组名称
      *
      * @param name
      */
@@ -78,7 +78,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 集群 name 和 description 必须要指定一个
+     * get 工作节点组描述
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 集群 name 和 description 必须要指定一个
+     * set 工作节点组描述
      *
      * @param description
      */
@@ -114,7 +114,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 节点组 ID
+     * get 工作节点组 ID
      *
      * @return
      */
@@ -123,7 +123,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */
@@ -133,7 +133,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 节点组名称
+     * set 工作节点组名称
      *
      * @param name
      */
@@ -143,7 +143,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 集群 name 和 description 必须要指定一个
+     * set 工作节点组描述
      *
      * @param description
      */
@@ -163,7 +163,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */

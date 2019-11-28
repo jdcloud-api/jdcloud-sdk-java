@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改集群的 名称 和 描述。
+ * 修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
  */
 public class ModifyClusterResult extends JdcloudResult implements java.io.Serializable {
 

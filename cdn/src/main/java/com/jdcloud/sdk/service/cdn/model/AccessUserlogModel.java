@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * accessUserlogModel
@@ -33,138 +35,84 @@ public class AccessUserlogModel  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 日志下载url地址
+     * 域名
      */
-    private String logUrl;
+    private String domain;
 
     /**
-     * 日志大小，单位：Byte（字节）
+     * 日志对象
      */
-    private Long logSize;
-
-    /**
-     * 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
-     */
-    private String startTime;
-
-    /**
-     * 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05
-     */
-    private String endTime;
+    private List<DomainlogModel> urls;
 
 
     /**
-     * get 日志下载url地址
+     * get 域名
      *
      * @return
      */
-    public String getLogUrl() {
-        return logUrl;
+    public String getDomain() {
+        return domain;
     }
 
     /**
-     * set 日志下载url地址
+     * set 域名
      *
-     * @param logUrl
+     * @param domain
      */
-    public void setLogUrl(String logUrl) {
-        this.logUrl = logUrl;
+    public void setDomain(String domain) {
+        this.domain = domain;
     }
 
     /**
-     * get 日志大小，单位：Byte（字节）
-     *
-     * @return
-     */
-    public Long getLogSize() {
-        return logSize;
-    }
-
-    /**
-     * set 日志大小，单位：Byte（字节）
-     *
-     * @param logSize
-     */
-    public void setLogSize(Long logSize) {
-        this.logSize = logSize;
-    }
-
-    /**
-     * get 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
+     * get 日志对象
      *
      * @return
      */
-    public String getStartTime() {
-        return startTime;
+    public List<DomainlogModel> getUrls() {
+        return urls;
     }
 
     /**
-     * set 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
+     * set 日志对象
      *
-     * @param startTime
+     * @param urls
      */
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
-
-    /**
-     * get 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05
-     *
-     * @return
-     */
-    public String getEndTime() {
-        return endTime;
-    }
-
-    /**
-     * set 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05
-     *
-     * @param endTime
-     */
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
+    public void setUrls(List<DomainlogModel> urls) {
+        this.urls = urls;
     }
 
 
     /**
-     * set 日志下载url地址
+     * set 域名
      *
-     * @param logUrl
+     * @param domain
      */
-    public AccessUserlogModel logUrl(String logUrl) {
-        this.logUrl = logUrl;
+    public AccessUserlogModel domain(String domain) {
+        this.domain = domain;
         return this;
     }
 
     /**
-     * set 日志大小，单位：Byte（字节）
+     * set 日志对象
      *
-     * @param logSize
+     * @param urls
      */
-    public AccessUserlogModel logSize(Long logSize) {
-        this.logSize = logSize;
+    public AccessUserlogModel urls(List<DomainlogModel> urls) {
+        this.urls = urls;
         return this;
     }
+
 
     /**
-     * set 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
+     * add item to 日志对象
      *
-     * @param startTime
+     * @param url
      */
-    public AccessUserlogModel startTime(String startTime) {
-        this.startTime = startTime;
-        return this;
+    public void addUrl(DomainlogModel url) {
+        if (this.urls == null) {
+            this.urls = new ArrayList<>();
+        }
+        this.urls.add(url);
     }
-
-    /**
-     * set 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05
-     *
-     * @param endTime
-     */
-    public AccessUserlogModel endTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-
 
 }

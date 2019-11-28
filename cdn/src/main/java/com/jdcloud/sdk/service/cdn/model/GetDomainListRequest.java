@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -57,6 +57,11 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
      * 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      */
     private String type;
+
+    /**
+     * 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
+     */
+    private String accelerateRegion;
 
 
     /**
@@ -149,6 +154,24 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
         this.type = type;
     }
 
+    /**
+     * get 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
+     *
+     * @return
+     */
+    public String getAccelerateRegion() {
+        return accelerateRegion;
+    }
+
+    /**
+     * set 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
+     *
+     * @param accelerateRegion
+     */
+    public void setAccelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
+    }
+
 
     /**
      * set 根据关键字进行模糊匹配
@@ -197,6 +220,16 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
      */
     public GetDomainListRequest type(String type) {
         this.type = type;
+        return this;
+    }
+
+    /**
+     * set 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
+     *
+     * @param accelerateRegion
+     */
+    public GetDomainListRequest accelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
         return this;
     }
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询节点组列表
+ * 查询工作节点组列表
  */
 public class DescribeNodeGroupsResponse extends JdcloudResponse<DescribeNodeGroupsResult> implements java.io.Serializable {
 

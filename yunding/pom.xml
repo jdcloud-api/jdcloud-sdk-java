@@ -54,22 +54,27 @@
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>vpc</artifactId>
-      <version>0.9.0</version>
+      <version>0.5.1</version>
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>rds</artifactId>
-      <version>0.6.9</version>
+      <version>0.7.3</version>
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>vm</artifactId>
-      <version>1.2.4</version>
+      <version>1.2.5</version>
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>charge</artifactId>
       <version>0.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jdcloud.sdk</groupId>
+      <artifactId>monitor</artifactId>
+      <version>2.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>

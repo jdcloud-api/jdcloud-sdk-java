@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,13 +24,15 @@
 
 package com.jdcloud.sdk.service.kubernetes.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.kubernetes.model.NodeConfigSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建k8s的nodeGroup
-要求集群状态为running
+ * 创建工作节点组&lt;br&gt;
+- 要求集群状态为running
 
  */
 public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Serializable {
@@ -50,42 +52,47 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     private String description;
 
     /**
-     * node group所属的cluster
+     * 工作节点所属的集群
      * Required:true
      */
     @Required
     private String clusterId;
 
     /**
-     * 节点组配置
+     * 工作节点配置信息
      * Required:true
      */
     @Required
     private NodeConfigSpec nodeConfig;
 
     /**
-     * nodeGroup初始化大小
+     * 工作节点组的 az，必须为集群az的子集，默认为集群az
+     */
+    private List<String> azs;
+
+    /**
+     * 工作节点组初始化大小
      * Required:true
      */
     @Required
     private Integer initialNodeCount;
 
     /**
-     * k8s运行的vpc
+     * 工作节点组初始化大小运行的VPC
      * Required:true
      */
     @Required
     private String vpcId;
 
     /**
-     * k8s的node的cidr
+     * 工作节点组的cidr
      * Required:true
      */
     @Required
     private String nodeCidr;
 
     /**
-     * 是否开启 node group 的自动修复，默认关闭
+     * 是否开启工作节点组的自动修复，默认关闭
      */
     private Boolean autoRepair;
 
@@ -134,7 +141,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get node group所属的cluster
+     * get 工作节点所属的集群
      *
      * @return
      */
@@ -143,7 +150,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set node group所属的cluster
+     * set 工作节点所属的集群
      *
      * @param clusterId
      */
@@ -152,7 +159,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 节点组配置
+     * get 工作节点配置信息
      *
      * @return
      */
@@ -161,7 +168,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 节点组配置
+     * set 工作节点配置信息
      *
      * @param nodeConfig
      */
@@ -170,7 +177,25 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get nodeGroup初始化大小
+     * get 工作节点组的 az，必须为集群az的子集，默认为集群az
+     *
+     * @return
+     */
+    public List<String> getAzs() {
+        return azs;
+    }
+
+    /**
+     * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+     *
+     * @param azs
+     */
+    public void setAzs(List<String> azs) {
+        this.azs = azs;
+    }
+
+    /**
+     * get 工作节点组初始化大小
      *
      * @return
      */
@@ -179,7 +204,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set nodeGroup初始化大小
+     * set 工作节点组初始化大小
      *
      * @param initialNodeCount
      */
@@ -188,7 +213,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get k8s运行的vpc
+     * get 工作节点组初始化大小运行的VPC
      *
      * @return
      */
@@ -197,7 +222,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set k8s运行的vpc
+     * set 工作节点组初始化大小运行的VPC
      *
      * @param vpcId
      */
@@ -206,7 +231,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get k8s的node的cidr
+     * get 工作节点组的cidr
      *
      * @return
      */
@@ -215,7 +240,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set k8s的node的cidr
+     * set 工作节点组的cidr
      *
      * @param nodeCidr
      */
@@ -224,7 +249,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 是否开启 node group 的自动修复，默认关闭
+     * get 是否开启工作节点组的自动修复，默认关闭
      *
      * @return
      */
@@ -233,7 +258,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 是否开启 node group 的自动修复，默认关闭
+     * set 是否开启工作节点组的自动修复，默认关闭
      *
      * @param autoRepair
      */
@@ -281,7 +306,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set node group所属的cluster
+     * set 工作节点所属的集群
      *
      * @param clusterId
      */
@@ -291,7 +316,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 节点组配置
+     * set 工作节点配置信息
      *
      * @param nodeConfig
      */
@@ -301,7 +326,17 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set nodeGroup初始化大小
+     * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+     *
+     * @param azs
+     */
+    public CreateNodeGroupRequest azs(List<String> azs) {
+        this.azs = azs;
+        return this;
+    }
+
+    /**
+     * set 工作节点组初始化大小
      *
      * @param initialNodeCount
      */
@@ -311,7 +346,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set k8s运行的vpc
+     * set 工作节点组初始化大小运行的VPC
      *
      * @param vpcId
      */
@@ -321,7 +356,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set k8s的node的cidr
+     * set 工作节点组的cidr
      *
      * @param nodeCidr
      */
@@ -331,7 +366,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 是否开启 node group 的自动修复，默认关闭
+     * set 是否开启工作节点组的自动修复，默认关闭
      *
      * @param autoRepair
      */
@@ -350,5 +385,17 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
+    /**
+     * add item to 工作节点组的 az，必须为集群az的子集，默认为集群az
+     *
+     * @param az
+     */
+    public void addAz(String az) {
+        if (this.azs == null) {
+            this.azs = new ArrayList<>();
+        }
+        this.azs.add(az);
+    }
 
 }

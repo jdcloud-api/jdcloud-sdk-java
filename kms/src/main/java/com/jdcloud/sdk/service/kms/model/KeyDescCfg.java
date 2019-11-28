@@ -47,6 +47,11 @@ public class KeyDescCfg  implements java.io.Serializable {
     @Required
     private String keyDesc;
 
+    /**
+     * 密钥类型： 1: rsa-2048, 0: aes-256，default: aes-256
+     */
+    private Integer keyType;
+
 
     /**
      * get key名称，默认为&quot;&quot;
@@ -84,6 +89,24 @@ public class KeyDescCfg  implements java.io.Serializable {
         this.keyDesc = keyDesc;
     }
 
+    /**
+     * get 密钥类型： 1: rsa-2048, 0: aes-256，default: aes-256
+     *
+     * @return
+     */
+    public Integer getKeyType() {
+        return keyType;
+    }
+
+    /**
+     * set 密钥类型： 1: rsa-2048, 0: aes-256，default: aes-256
+     *
+     * @param keyType
+     */
+    public void setKeyType(Integer keyType) {
+        this.keyType = keyType;
+    }
+
 
     /**
      * set key名称，默认为&quot;&quot;
@@ -102,6 +125,16 @@ public class KeyDescCfg  implements java.io.Serializable {
      */
     public KeyDescCfg keyDesc(String keyDesc) {
         this.keyDesc = keyDesc;
+        return this;
+    }
+
+    /**
+     * set 密钥类型： 1: rsa-2048, 0: aes-256，default: aes-256
+     *
+     * @param keyType
+     */
+    public KeyDescCfg keyType(Integer keyType) {
+        this.keyType = keyType;
         return this;
     }
 

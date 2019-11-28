@@ -79,6 +79,7 @@ public class InstanceinfoVO  implements java.io.Serializable {
 
     /**
      * IoT Hub实例状态
+PREPARING-准备资源 |
 BUILDING-创建中 |
 RUNNING-运行中 |
 SUSPENDING-暂停使用
@@ -291,6 +292,7 @@ SUSPENDING-暂停使用
 
     /**
      * get IoT Hub实例状态
+PREPARING-准备资源 |
 BUILDING-创建中 |
 RUNNING-运行中 |
 SUSPENDING-暂停使用
@@ -304,6 +306,7 @@ SUSPENDING-暂停使用
 
     /**
      * set IoT Hub实例状态
+PREPARING-准备资源 |
 BUILDING-创建中 |
 RUNNING-运行中 |
 SUSPENDING-暂停使用
@@ -552,6 +555,7 @@ SUSPENDING-暂停使用
 
     /**
      * set IoT Hub实例状态
+PREPARING-准备资源 |
 BUILDING-创建中 |
 RUNNING-运行中 |
 SUSPENDING-暂停使用

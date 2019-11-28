@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.SetAutoRepairResponse;
 
 /**
- * 设置节点组的自动修复
+ * 设置工作节点组的自动修复
  */
 class SetAutoRepairExecutor extends JdcloudExecutor {
 

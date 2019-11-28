@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kms.model.DecryptResponse;
 
 /**
- * 使用密钥对数据进行解密
+ * 使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密
  */
 class DecryptExecutor extends JdcloudExecutor {
 

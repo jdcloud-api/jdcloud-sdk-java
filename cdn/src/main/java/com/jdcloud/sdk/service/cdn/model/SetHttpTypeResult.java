@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -33,7 +33,40 @@ public class SetHttpTypeResult extends JdcloudResult implements java.io.Serializ
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 任务taskId
+     */
+    private String taskId;
 
+
+    /**
+     * get 任务taskId
+     *
+     * @return
+     */
+    public String getTaskId() {
+        return taskId;
+    }
+
+    /**
+     * set 任务taskId
+     *
+     * @param taskId
+     */
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+
+    /**
+     * set 任务taskId
+     *
+     * @param taskId
+     */
+    public SetHttpTypeResult taskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
 
 
 }

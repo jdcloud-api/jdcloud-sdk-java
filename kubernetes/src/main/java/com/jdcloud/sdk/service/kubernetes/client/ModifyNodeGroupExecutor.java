@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.ModifyNodeGroupResponse;
 
 /**
- * 修改节点组的 名称 和 描述
+ * 修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
  */
 class ModifyNodeGroupExecutor extends JdcloudExecutor {
 

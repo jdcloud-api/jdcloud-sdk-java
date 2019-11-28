@@ -31,7 +31,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询(k8s 集群)配额
+ * 查询 kubernetes 集群配额
  */
 public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Serializable {
 

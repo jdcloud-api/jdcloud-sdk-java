@@ -33,18 +33,18 @@ public class RequestSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 容器必需的计算资源
+     * 容器必需的计算资源，例：300m，1000m
      */
     private String cpu;
 
     /**
-     * 容器使用计算资源上限
+     * 容器使用计算资源上限，例：1024Mi，16384Mi
      */
     private String memoryMB;
 
 
     /**
-     * get 容器必需的计算资源
+     * get 容器必需的计算资源，例：300m，1000m
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class RequestSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器必需的计算资源
+     * set 容器必需的计算资源，例：300m，1000m
      *
      * @param cpu
      */
@@ -62,7 +62,7 @@ public class RequestSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器使用计算资源上限
+     * get 容器使用计算资源上限，例：1024Mi，16384Mi
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class RequestSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器使用计算资源上限
+     * set 容器使用计算资源上限，例：1024Mi，16384Mi
      *
      * @param memoryMB
      */
@@ -81,7 +81,7 @@ public class RequestSpec  implements java.io.Serializable {
 
 
     /**
-     * set 容器必需的计算资源
+     * set 容器必需的计算资源，例：300m，1000m
      *
      * @param cpu
      */
@@ -91,7 +91,7 @@ public class RequestSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器使用计算资源上限
+     * set 容器使用计算资源上限，例：1024Mi，16384Mi
      *
      * @param memoryMB
      */

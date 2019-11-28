@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 使用密钥对数据进行解密
+ * 使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密
  */
 public class DecryptResult extends JdcloudResult implements java.io.Serializable {
 

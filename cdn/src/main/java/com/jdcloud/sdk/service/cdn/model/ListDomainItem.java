@@ -63,6 +63,11 @@ public class ListDomainItem  implements java.io.Serializable {
     private String status;
 
     /**
+     * wafStatus
+     */
+    private String wafStatus;
+
+    /**
      * type
      */
     private String type;
@@ -71,6 +76,11 @@ public class ListDomainItem  implements java.io.Serializable {
      * auditStatus
      */
     private String auditStatus;
+
+    /**
+     * accelerateRegion
+     */
+    private String accelerateRegion;
 
 
     /**
@@ -182,6 +192,24 @@ public class ListDomainItem  implements java.io.Serializable {
     }
 
     /**
+     * get wafStatus
+     *
+     * @return
+     */
+    public String getWafStatus() {
+        return wafStatus;
+    }
+
+    /**
+     * set wafStatus
+     *
+     * @param wafStatus
+     */
+    public void setWafStatus(String wafStatus) {
+        this.wafStatus = wafStatus;
+    }
+
+    /**
      * get type
      *
      * @return
@@ -215,6 +243,24 @@ public class ListDomainItem  implements java.io.Serializable {
      */
     public void setAuditStatus(String auditStatus) {
         this.auditStatus = auditStatus;
+    }
+
+    /**
+     * get accelerateRegion
+     *
+     * @return
+     */
+    public String getAccelerateRegion() {
+        return accelerateRegion;
+    }
+
+    /**
+     * set accelerateRegion
+     *
+     * @param accelerateRegion
+     */
+    public void setAccelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
     }
 
 
@@ -279,6 +325,16 @@ public class ListDomainItem  implements java.io.Serializable {
     }
 
     /**
+     * set wafStatus
+     *
+     * @param wafStatus
+     */
+    public ListDomainItem wafStatus(String wafStatus) {
+        this.wafStatus = wafStatus;
+        return this;
+    }
+
+    /**
      * set type
      *
      * @param type
@@ -295,6 +351,16 @@ public class ListDomainItem  implements java.io.Serializable {
      */
     public ListDomainItem auditStatus(String auditStatus) {
         this.auditStatus = auditStatus;
+        return this;
+    }
+
+    /**
+     * set accelerateRegion
+     *
+     * @param accelerateRegion
+     */
+    public ListDomainItem accelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
         return this;
     }
 

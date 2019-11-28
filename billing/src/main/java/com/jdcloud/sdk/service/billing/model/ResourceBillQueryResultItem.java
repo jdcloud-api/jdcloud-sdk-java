@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.billing.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * resourceBillQueryResultItem
@@ -166,6 +168,11 @@ public class ResourceBillQueryResultItem  implements java.io.Serializable {
      * 资源名称
      */
     private String resourceName;
+
+    /**
+     * 标签明细
+     */
+    private List<ResourceTagVo> tagDetails;
 
 
     /**
@@ -654,6 +661,24 @@ public class ResourceBillQueryResultItem  implements java.io.Serializable {
         this.resourceName = resourceName;
     }
 
+    /**
+     * get 标签明细
+     *
+     * @return
+     */
+    public List<ResourceTagVo> getTagDetails() {
+        return tagDetails;
+    }
+
+    /**
+     * set 标签明细
+     *
+     * @param tagDetails
+     */
+    public void setTagDetails(List<ResourceTagVo> tagDetails) {
+        this.tagDetails = tagDetails;
+    }
+
 
     /**
      * set 账单id
@@ -925,5 +950,27 @@ public class ResourceBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 标签明细
+     *
+     * @param tagDetails
+     */
+    public ResourceBillQueryResultItem tagDetails(List<ResourceTagVo> tagDetails) {
+        this.tagDetails = tagDetails;
+        return this;
+    }
+
+
+    /**
+     * add item to 标签明细
+     *
+     * @param tagDetail
+     */
+    public void addTagDetail(ResourceTagVo tagDetail) {
+        if (this.tagDetails == null) {
+            this.tagDetails = new ArrayList<>();
+        }
+        this.tagDetails.add(tagDetail);
+    }
 
 }

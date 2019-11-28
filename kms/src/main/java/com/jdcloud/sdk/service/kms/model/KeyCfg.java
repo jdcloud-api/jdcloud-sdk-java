@@ -41,7 +41,7 @@ public class KeyCfg  implements java.io.Serializable {
     private KeyDescCfg keyDescCfg;
 
     /**
-     * 密钥轮换配置
+     * 对称密钥的轮换配置；非对称密钥的操作，不支持该配置
      * Required:true
      */
     @Required
@@ -67,7 +67,7 @@ public class KeyCfg  implements java.io.Serializable {
     }
 
     /**
-     * get 密钥轮换配置
+     * get 对称密钥的轮换配置；非对称密钥的操作，不支持该配置
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class KeyCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥轮换配置
+     * set 对称密钥的轮换配置；非对称密钥的操作，不支持该配置
      *
      * @param keyRotateCfg
      */
@@ -96,7 +96,7 @@ public class KeyCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥轮换配置
+     * set 对称密钥的轮换配置；非对称密钥的操作，不支持该配置
      *
      * @param keyRotateCfg
      */

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 描述配置信息
+ * 工作节点组标签
  */
 public class LabelSpec  implements java.io.Serializable {
 

@@ -50,6 +50,11 @@ public class UpdateDeviceRequest extends JdcloudRequest implements java.io.Seria
     private String description;
 
     /**
+     * 设备状态
+     */
+    private Integer status;
+
+    /**
      * 设备归属的实例ID
      * Required:true
      */
@@ -123,6 +128,24 @@ public class UpdateDeviceRequest extends JdcloudRequest implements java.io.Seria
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 设备状态
+     *
+     * @return
+     */
+    public Integer getStatus() {
+        return status;
+    }
+
+    /**
+     * set 设备状态
+     *
+     * @param status
+     */
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 
     /**
@@ -207,6 +230,16 @@ public class UpdateDeviceRequest extends JdcloudRequest implements java.io.Seria
      */
     public UpdateDeviceRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 设备状态
+     *
+     * @param status
+     */
+    public UpdateDeviceRequest status(Integer status) {
+        this.status = status;
         return this;
     }
 

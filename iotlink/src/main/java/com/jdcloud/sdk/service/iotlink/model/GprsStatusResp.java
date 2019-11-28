@@ -43,6 +43,11 @@ public class GprsStatusResp  implements java.io.Serializable {
     private String msisdn;
 
     /**
+     * 物联网卡imsi
+     */
+    private String imsi;
+
+    /**
      * GPRS在线状态(00:离线;01:在线;02:该运营商不支持查询;03:未知)
      */
     private String onlinestatus;
@@ -85,6 +90,24 @@ public class GprsStatusResp  implements java.io.Serializable {
     }
 
     /**
+     * get 物联网卡imsi
+     *
+     * @return
+     */
+    public String getImsi() {
+        return imsi;
+    }
+
+    /**
+     * set 物联网卡imsi
+     *
+     * @param imsi
+     */
+    public void setImsi(String imsi) {
+        this.imsi = imsi;
+    }
+
+    /**
      * get GPRS在线状态(00:离线;01:在线;02:该运营商不支持查询;03:未知)
      *
      * @return
@@ -120,6 +143,16 @@ public class GprsStatusResp  implements java.io.Serializable {
      */
     public GprsStatusResp msisdn(String msisdn) {
         this.msisdn = msisdn;
+        return this;
+    }
+
+    /**
+     * set 物联网卡imsi
+     *
+     * @param imsi
+     */
+    public GprsStatusResp imsi(String imsi) {
+        this.imsi = imsi;
         return this;
     }
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -32,7 +32,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询节点组列表
+ * 查询工作节点组列表
  */
 public class DescribeNodeGroupsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -54,10 +54,10 @@ public class DescribeNodeGroupsRequest extends JdcloudRequest implements java.io
     private List<TagFilter> tags;
 
     /**
-     * name - 节点组名称，模糊匹配，支持单个      
-id - 节点组 id，支持多个     
-clusterId - 根据clusterId查询        
-clusterName - 根据名称查询 cluster             
+     * name - 节点组名称，模糊匹配，支持单个
+id - 节点组 id，支持多个
+clusterId - 根据 clusterId 查询
+clusterName - 根据 cluster 名称查询
 
      */
     private List<Filter> filters;
@@ -125,10 +125,10 @@ clusterName - 根据名称查询 cluster
     }
 
     /**
-     * get name - 节点组名称，模糊匹配，支持单个      
-id - 节点组 id，支持多个     
-clusterId - 根据clusterId查询        
-clusterName - 根据名称查询 cluster             
+     * get name - 节点组名称，模糊匹配，支持单个
+id - 节点组 id，支持多个
+clusterId - 根据 clusterId 查询
+clusterName - 根据 cluster 名称查询
 
      *
      * @return
@@ -138,10 +138,10 @@ clusterName - 根据名称查询 cluster
     }
 
     /**
-     * set name - 节点组名称，模糊匹配，支持单个      
-id - 节点组 id，支持多个     
-clusterId - 根据clusterId查询        
-clusterName - 根据名称查询 cluster             
+     * set name - 节点组名称，模糊匹配，支持单个
+id - 节点组 id，支持多个
+clusterId - 根据 clusterId 查询
+clusterName - 根据 cluster 名称查询
 
      *
      * @param filters
@@ -200,10 +200,10 @@ clusterName - 根据名称查询 cluster
     }
 
     /**
-     * set name - 节点组名称，模糊匹配，支持单个      
-id - 节点组 id，支持多个     
-clusterId - 根据clusterId查询        
-clusterName - 根据名称查询 cluster             
+     * set name - 节点组名称，模糊匹配，支持单个
+id - 节点组 id，支持多个
+clusterId - 根据 clusterId 查询
+clusterName - 根据 cluster 名称查询
 
      *
      * @param filters
@@ -237,10 +237,10 @@ clusterName - 根据名称查询 cluster
     }
 
     /**
-     * add item to name - 节点组名称，模糊匹配，支持单个      
-id - 节点组 id，支持多个     
-clusterId - 根据clusterId查询        
-clusterName - 根据名称查询 cluster             
+     * add item to name - 节点组名称，模糊匹配，支持单个
+id - 节点组 id，支持多个
+clusterId - 根据 clusterId 查询
+clusterName - 根据 cluster 名称查询
 
      *
      * @param filter

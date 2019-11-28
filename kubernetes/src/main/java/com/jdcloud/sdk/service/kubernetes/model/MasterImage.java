@@ -65,12 +65,12 @@ public class MasterImage  implements java.io.Serializable {
     private Integer visibility;
 
     /**
-     * 默认ndoe镜像编码
+     * 默认节点镜像编码
      */
     private String defaultNodeImageCode;
 
     /**
-     * node 节点的配置
+     * 工作节点镜像
      */
     private List<NodeImage> nodeImages;
 
@@ -184,7 +184,7 @@ public class MasterImage  implements java.io.Serializable {
     }
 
     /**
-     * get 默认ndoe镜像编码
+     * get 默认节点镜像编码
      *
      * @return
      */
@@ -193,7 +193,7 @@ public class MasterImage  implements java.io.Serializable {
     }
 
     /**
-     * set 默认ndoe镜像编码
+     * set 默认节点镜像编码
      *
      * @param defaultNodeImageCode
      */
@@ -202,7 +202,7 @@ public class MasterImage  implements java.io.Serializable {
     }
 
     /**
-     * get node 节点的配置
+     * get 工作节点镜像
      *
      * @return
      */
@@ -211,7 +211,7 @@ public class MasterImage  implements java.io.Serializable {
     }
 
     /**
-     * set node 节点的配置
+     * set 工作节点镜像
      *
      * @param nodeImages
      */
@@ -281,7 +281,7 @@ public class MasterImage  implements java.io.Serializable {
     }
 
     /**
-     * set 默认ndoe镜像编码
+     * set 默认节点镜像编码
      *
      * @param defaultNodeImageCode
      */
@@ -291,7 +291,7 @@ public class MasterImage  implements java.io.Serializable {
     }
 
     /**
-     * set node 节点的配置
+     * set 工作节点镜像
      *
      * @param nodeImages
      */
@@ -302,7 +302,7 @@ public class MasterImage  implements java.io.Serializable {
 
 
     /**
-     * add item to node 节点的配置
+     * add item to 工作节点镜像
      *
      * @param nodeImage
      */

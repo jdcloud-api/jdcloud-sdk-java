@@ -100,12 +100,12 @@ public class Cluster  implements java.io.Serializable {
     private String accessKey;
 
     /**
-     * basicAuth
+     * 基本验证方式
      */
     private Boolean basicAuth;
 
     /**
-     * clientCertificate
+     * 证书验证方式
      */
     private Boolean clientCertificate;
 
@@ -390,7 +390,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * get basicAuth
+     * get 基本验证方式
      *
      * @return
      */
@@ -399,7 +399,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * set basicAuth
+     * set 基本验证方式
      *
      * @param basicAuth
      */
@@ -408,7 +408,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * get clientCertificate
+     * get 证书验证方式
      *
      * @return
      */
@@ -417,7 +417,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * set clientCertificate
+     * set 证书验证方式
      *
      * @param clientCertificate
      */
@@ -719,7 +719,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * set basicAuth
+     * set 基本验证方式
      *
      * @param basicAuth
      */
@@ -729,7 +729,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * set clientCertificate
+     * set 证书验证方式
      *
      * @param clientCertificate
      */

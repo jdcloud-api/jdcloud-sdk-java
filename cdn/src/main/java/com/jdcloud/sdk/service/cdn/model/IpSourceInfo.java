@@ -33,23 +33,23 @@ public class IpSourceInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * master
+     * 1：主；2：备
      */
     private Integer master;
 
     /**
-     * ip
+     * 回源IP
      */
     private String ip;
 
     /**
-     * ratio
+     * 占比
      */
     private Double ratio;
 
 
     /**
-     * get master
+     * get 1：主；2：备
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set master
+     * set 1：主；2：备
      *
      * @param master
      */
@@ -67,7 +67,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get ip
+     * get 回源IP
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set ip
+     * set 回源IP
      *
      * @param ip
      */
@@ -85,7 +85,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get ratio
+     * get 占比
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set ratio
+     * set 占比
      *
      * @param ratio
      */
@@ -104,7 +104,7 @@ public class IpSourceInfo  implements java.io.Serializable {
 
 
     /**
-     * set master
+     * set 1：主；2：备
      *
      * @param master
      */
@@ -114,7 +114,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set ip
+     * set 回源IP
      *
      * @param ip
      */
@@ -124,7 +124,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set ratio
+     * set 占比
      *
      * @param ratio
      */

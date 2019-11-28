@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JCloud Openapi For CDN
+ * 直播域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -31,7 +31,7 @@ import com.jdcloud.sdk.service.cdn.model.ProtocolConvert;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询直播域名详情
+ * 查询直播域名详情v1
  */
 public class QueryLiveDomainDetailResult extends JdcloudResult implements java.io.Serializable {
 
@@ -311,6 +311,11 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
      * sslCertEndTime
      */
     private String sslCertEndTime;
+
+    /**
+     * accelerateRegion
+     */
+    private String accelerateRegion;
 
 
     /**
@@ -1303,6 +1308,24 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.sslCertEndTime = sslCertEndTime;
     }
 
+    /**
+     * get accelerateRegion
+     *
+     * @return
+     */
+    public String getAccelerateRegion() {
+        return accelerateRegion;
+    }
+
+    /**
+     * set accelerateRegion
+     *
+     * @param accelerateRegion
+     */
+    public void setAccelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
+    }
+
 
     /**
      * set 域名类型
@@ -1851,6 +1874,16 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
      */
     public QueryLiveDomainDetailResult sslCertEndTime(String sslCertEndTime) {
         this.sslCertEndTime = sslCertEndTime;
+        return this;
+    }
+
+    /**
+     * set accelerateRegion
+     *
+     * @param accelerateRegion
+     */
+    public QueryLiveDomainDetailResult accelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
         return this;
     }
 

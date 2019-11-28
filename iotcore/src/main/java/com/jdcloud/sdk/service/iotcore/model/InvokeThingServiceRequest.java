@@ -36,13 +36,20 @@ public class InvokeThingServiceRequest extends JdcloudRequest implements java.io
 
     /**
      * 服务名称
+     * Required:true
      */
+    @Required
     private String name;
 
     /**
      * 输入参数,object的key为参数名称，value为参数值
      */
     private Object input;
+
+    /**
+     * 回调spring的bean的名称
+     */
+    private String callbackBeanName;
 
     /**
      * 设备归属的实例ID
@@ -107,6 +114,24 @@ public class InvokeThingServiceRequest extends JdcloudRequest implements java.io
      */
     public void setInput(Object input) {
         this.input = input;
+    }
+
+    /**
+     * get 回调spring的bean的名称
+     *
+     * @return
+     */
+    public String getCallbackBeanName() {
+        return callbackBeanName;
+    }
+
+    /**
+     * set 回调spring的bean的名称
+     *
+     * @param callbackBeanName
+     */
+    public void setCallbackBeanName(String callbackBeanName) {
+        this.callbackBeanName = callbackBeanName;
     }
 
     /**
@@ -199,6 +224,16 @@ public class InvokeThingServiceRequest extends JdcloudRequest implements java.io
      */
     public InvokeThingServiceRequest input(Object input) {
         this.input = input;
+        return this;
+    }
+
+    /**
+     * set 回调spring的bean的名称
+     *
+     * @param callbackBeanName
+     */
+    public InvokeThingServiceRequest callbackBeanName(String callbackBeanName) {
+        this.callbackBeanName = callbackBeanName;
         return this;
     }
 

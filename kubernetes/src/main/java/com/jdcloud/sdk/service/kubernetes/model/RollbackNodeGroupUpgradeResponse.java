@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 回滚未升级完的节点组
+ * 回滚未升级完的工作节点组
  */
 public class RollbackNodeGroupUpgradeResponse extends JdcloudResponse<RollbackNodeGroupUpgradeResult> implements java.io.Serializable {
 

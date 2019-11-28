@@ -27,7 +27,9 @@ package com.jdcloud.sdk.service.kms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
+ * -   修改对称密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等;
+-   修改非对称密钥配置，包括key的名称、用途等。
+
  */
 public class UpdateKeyDescriptionResult extends JdcloudResult implements java.io.Serializable {
 

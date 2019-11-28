@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 使用密钥对数据进行加密
+ * 使用密钥对数据进行加密，针对非对称密钥：使用公钥进行加密，仅支持RSA_PKCS1_PADDING填充方式，最大加密数据长度为245字节
  */
 public class EncryptRequest extends JdcloudRequest implements java.io.Serializable {
 
