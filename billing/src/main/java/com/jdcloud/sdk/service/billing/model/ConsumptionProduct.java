@@ -89,6 +89,11 @@ public class ConsumptionProduct  implements java.io.Serializable {
      */
     private Object productDetailList;
 
+    /**
+     * 分组显示值
+     */
+    private String groupTagValue;
+
 
     /**
      * get appCode
@@ -288,6 +293,24 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.productDetailList = productDetailList;
     }
 
+    /**
+     * get 分组显示值
+     *
+     * @return
+     */
+    public String getGroupTagValue() {
+        return groupTagValue;
+    }
+
+    /**
+     * set 分组显示值
+     *
+     * @param groupTagValue
+     */
+    public void setGroupTagValue(String groupTagValue) {
+        this.groupTagValue = groupTagValue;
+    }
+
 
     /**
      * set appCode
@@ -396,6 +419,16 @@ public class ConsumptionProduct  implements java.io.Serializable {
      */
     public ConsumptionProduct productDetailList(Object productDetailList) {
         this.productDetailList = productDetailList;
+        return this;
+    }
+
+    /**
+     * set 分组显示值
+     *
+     * @param groupTagValue
+     */
+    public ConsumptionProduct groupTagValue(String groupTagValue) {
+        this.groupTagValue = groupTagValue;
         return this;
     }
 

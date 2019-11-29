@@ -43,7 +43,12 @@ public class ForbiddenStream  implements java.io.Serializable {
     private String app;
 
     /**
-     * 禁播类型:forever永不禁播limit限时禁播
+     * 禁播Ip
+     */
+    private String publishIp;
+
+    /**
+     * 禁播类型:forever永不禁播limit限时禁播stop剔流
      */
     private String forbiddenType;
 
@@ -56,6 +61,16 @@ public class ForbiddenStream  implements java.io.Serializable {
      * 禁播类型说明
      */
     private String forbiddenTypeDesc;
+
+    /**
+     * 开始禁播时间
+     */
+    private String startTime;
+
+    /**
+     * 结束禁播时间
+     */
+    private String endTime;
 
 
     /**
@@ -95,7 +110,25 @@ public class ForbiddenStream  implements java.io.Serializable {
     }
 
     /**
-     * get 禁播类型:forever永不禁播limit限时禁播
+     * get 禁播Ip
+     *
+     * @return
+     */
+    public String getPublishIp() {
+        return publishIp;
+    }
+
+    /**
+     * set 禁播Ip
+     *
+     * @param publishIp
+     */
+    public void setPublishIp(String publishIp) {
+        this.publishIp = publishIp;
+    }
+
+    /**
+     * get 禁播类型:forever永不禁播limit限时禁播stop剔流
      *
      * @return
      */
@@ -104,7 +137,7 @@ public class ForbiddenStream  implements java.io.Serializable {
     }
 
     /**
-     * set 禁播类型:forever永不禁播limit限时禁播
+     * set 禁播类型:forever永不禁播limit限时禁播stop剔流
      *
      * @param forbiddenType
      */
@@ -148,6 +181,42 @@ public class ForbiddenStream  implements java.io.Serializable {
         this.forbiddenTypeDesc = forbiddenTypeDesc;
     }
 
+    /**
+     * get 开始禁播时间
+     *
+     * @return
+     */
+    public String getStartTime() {
+        return startTime;
+    }
+
+    /**
+     * set 开始禁播时间
+     *
+     * @param startTime
+     */
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * get 结束禁播时间
+     *
+     * @return
+     */
+    public String getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 结束禁播时间
+     *
+     * @param endTime
+     */
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
 
     /**
      * set 禁播流
@@ -170,7 +239,17 @@ public class ForbiddenStream  implements java.io.Serializable {
     }
 
     /**
-     * set 禁播类型:forever永不禁播limit限时禁播
+     * set 禁播Ip
+     *
+     * @param publishIp
+     */
+    public ForbiddenStream publishIp(String publishIp) {
+        this.publishIp = publishIp;
+        return this;
+    }
+
+    /**
+     * set 禁播类型:forever永不禁播limit限时禁播stop剔流
      *
      * @param forbiddenType
      */
@@ -196,6 +275,26 @@ public class ForbiddenStream  implements java.io.Serializable {
      */
     public ForbiddenStream forbiddenTypeDesc(String forbiddenTypeDesc) {
         this.forbiddenTypeDesc = forbiddenTypeDesc;
+        return this;
+    }
+
+    /**
+     * set 开始禁播时间
+     *
+     * @param startTime
+     */
+    public ForbiddenStream startTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+
+    /**
+     * set 结束禁播时间
+     *
+     * @param endTime
+     */
+    public ForbiddenStream endTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
 

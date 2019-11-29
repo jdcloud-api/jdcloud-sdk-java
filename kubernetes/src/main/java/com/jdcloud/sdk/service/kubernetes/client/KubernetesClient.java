@@ -157,7 +157,7 @@ public class KubernetesClient extends JdcloudClient {
 
 
     /**
-     * cluster 摘除 nodeGroup 并删除 nodeGroup
+     * 集群摘除工作节点组并删除工作节点组
      *
      * @param request
      * @return
@@ -168,7 +168,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 查询节点组列表
+     * 查询工作节点组列表
      *
      * @param request
      * @return
@@ -201,8 +201,8 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 创建k8s的nodeGroup
-要求集群状态为running
+     * 创建工作节点组&lt;br&gt;
+- 要求集群状态为running
 
      *
      * @param request
@@ -225,7 +225,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 修改节点组的 名称 和 描述
+     * 修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
      *
      * @param request
      * @return
@@ -247,7 +247,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 调整节点组实例数量
+     * 调整工作节点组实例数量
      *
      * @param request
      * @return
@@ -258,7 +258,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 查询(k8s 集群)服务配置信息
+     * 查询 kubernetes 集群服务配置信息
      *
      * @param request
      * @return
@@ -291,7 +291,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 设置节点组的自动修复
+     * 设置工作节点组的自动修复
      *
      * @param request
      * @return
@@ -302,7 +302,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 查询(k8s 集群)配额
+     * 查询 kubernetes 集群配额
      *
      * @param request
      * @return
@@ -313,7 +313,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 查询单个节点组详情
+     * 查询单个工作节点组详情
      *
      * @param request
      * @return
@@ -346,7 +346,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 回滚未升级完的节点组
+     * 回滚未升级完的工作节点组
      *
      * @param request
      * @return
@@ -428,7 +428,7 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 修改集群的 名称 和 描述。
+     * 修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
      *
      * @param request
      * @return

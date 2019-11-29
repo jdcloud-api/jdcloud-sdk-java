@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.ModifyClusterResponse;
 
 /**
- * 修改集群的 名称 和 描述。
+ * 修改集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
  */
 class ModifyClusterExecutor extends JdcloudExecutor {
 

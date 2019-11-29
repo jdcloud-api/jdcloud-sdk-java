@@ -34,7 +34,7 @@ public class EnvSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;[a-zA-Z0-9]*$&#x60;。
+     * 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
      * Required:true
      */
     @Required
@@ -47,7 +47,7 @@ public class EnvSpec  implements java.io.Serializable {
 
 
     /**
-     * get 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;[a-zA-Z0-9]*$&#x60;。
+     * get 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
      *
      * @return
      */
@@ -56,7 +56,7 @@ public class EnvSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;[a-zA-Z0-9]*$&#x60;。
+     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
      *
      * @param name
      */
@@ -84,7 +84,7 @@ public class EnvSpec  implements java.io.Serializable {
 
 
     /**
-     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;[a-zA-Z0-9]*$&#x60;。
+     * set 环境变量名称（ASCII）。范围：[1-64]。必须为字母、数字、下划线(_)，正则为&#x60;^[a-zA-Z0-9]*$&#x60;。
      *
      * @param name
      */

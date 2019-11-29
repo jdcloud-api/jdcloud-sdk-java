@@ -24,10 +24,12 @@
 
 package com.jdcloud.sdk.service.kubernetes.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 描述节点组配置信息
+ * 描述工作节点组配置信息
  */
 public class NodeGroupSpec  implements java.io.Serializable {
 
@@ -46,28 +48,33 @@ public class NodeGroupSpec  implements java.io.Serializable {
     private String description;
 
     /**
-     * Node的信息
+     * 工作节点组的信息
      * Required:true
      */
     @Required
     private NodeConfigSpec nodeConfig;
 
     /**
-     * nodeGroup初始化大小，至少为1个
+     * 工作节点组的 az，必须为集群az的子集，默认为集群az
+     */
+    private List<String> azs;
+
+    /**
+     * 工作节点组初始化大小，至少为1个
      * Required:true
      */
     @Required
     private Integer initialNodeCount;
 
     /**
-     * k8s运行的vpc
+     * 工作节点组运行的vpc
      * Required:true
      */
     @Required
     private String vpcId;
 
     /**
-     * k8s的node的cidr
+     * 工作节点组的cidr
      */
     private String nodeCidr;
 
@@ -114,7 +121,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * get Node的信息
+     * get 工作节点组的信息
      *
      * @return
      */
@@ -123,7 +130,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Node的信息
+     * set 工作节点组的信息
      *
      * @param nodeConfig
      */
@@ -132,7 +139,25 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * get nodeGroup初始化大小，至少为1个
+     * get 工作节点组的 az，必须为集群az的子集，默认为集群az
+     *
+     * @return
+     */
+    public List<String> getAzs() {
+        return azs;
+    }
+
+    /**
+     * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+     *
+     * @param azs
+     */
+    public void setAzs(List<String> azs) {
+        this.azs = azs;
+    }
+
+    /**
+     * get 工作节点组初始化大小，至少为1个
      *
      * @return
      */
@@ -141,7 +166,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set nodeGroup初始化大小，至少为1个
+     * set 工作节点组初始化大小，至少为1个
      *
      * @param initialNodeCount
      */
@@ -150,7 +175,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * get k8s运行的vpc
+     * get 工作节点组运行的vpc
      *
      * @return
      */
@@ -159,7 +184,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set k8s运行的vpc
+     * set 工作节点组运行的vpc
      *
      * @param vpcId
      */
@@ -168,7 +193,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * get k8s的node的cidr
+     * get 工作节点组的cidr
      *
      * @return
      */
@@ -177,7 +202,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set k8s的node的cidr
+     * set 工作节点组的cidr
      *
      * @param nodeCidr
      */
@@ -225,7 +250,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Node的信息
+     * set 工作节点组的信息
      *
      * @param nodeConfig
      */
@@ -235,7 +260,17 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set nodeGroup初始化大小，至少为1个
+     * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+     *
+     * @param azs
+     */
+    public NodeGroupSpec azs(List<String> azs) {
+        this.azs = azs;
+        return this;
+    }
+
+    /**
+     * set 工作节点组初始化大小，至少为1个
      *
      * @param initialNodeCount
      */
@@ -245,7 +280,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set k8s运行的vpc
+     * set 工作节点组运行的vpc
      *
      * @param vpcId
      */
@@ -255,7 +290,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set k8s的node的cidr
+     * set 工作节点组的cidr
      *
      * @param nodeCidr
      */
@@ -274,5 +309,17 @@ public class NodeGroupSpec  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 工作节点组的 az，必须为集群az的子集，默认为集群az
+     *
+     * @param az
+     */
+    public void addAz(String az) {
+        if (this.azs == null) {
+            this.azs = new ArrayList<>();
+        }
+        this.azs.add(az);
+    }
 
 }

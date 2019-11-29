@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 立即轮换密钥，自动轮换周期顺延
+ * 立即轮换密钥，自动轮换周期顺延-支持对称密钥
  */
 public class KeyRotationResult extends JdcloudResult implements java.io.Serializable {
 

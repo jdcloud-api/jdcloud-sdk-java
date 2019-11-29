@@ -43,6 +43,11 @@ public class LifeStatusResp  implements java.io.Serializable {
     private String msisdn;
 
     /**
+     * 物联网卡imsi
+     */
+    private String imsi;
+
+    /**
      * 生命周期状态(00:可激活;01:已激活;02:已停用;03:已失效;04:未知;05:可测试)
      */
     private String status;
@@ -85,6 +90,24 @@ public class LifeStatusResp  implements java.io.Serializable {
     }
 
     /**
+     * get 物联网卡imsi
+     *
+     * @return
+     */
+    public String getImsi() {
+        return imsi;
+    }
+
+    /**
+     * set 物联网卡imsi
+     *
+     * @param imsi
+     */
+    public void setImsi(String imsi) {
+        this.imsi = imsi;
+    }
+
+    /**
      * get 生命周期状态(00:可激活;01:已激活;02:已停用;03:已失效;04:未知;05:可测试)
      *
      * @return
@@ -120,6 +143,16 @@ public class LifeStatusResp  implements java.io.Serializable {
      */
     public LifeStatusResp msisdn(String msisdn) {
         this.msisdn = msisdn;
+        return this;
+    }
+
+    /**
+     * set 物联网卡imsi
+     *
+     * @param imsi
+     */
+    public LifeStatusResp imsi(String imsi) {
+        this.imsi = imsi;
         return this;
     }
 

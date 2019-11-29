@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * iot-link-Related-API
+ * Iotlink-Related-API
  * 物联网卡服务相关API
  *
  * OpenAPI spec version: v1

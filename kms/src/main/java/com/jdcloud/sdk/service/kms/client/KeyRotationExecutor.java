@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kms.model.KeyRotationResponse;
 
 /**
- * 立即轮换密钥，自动轮换周期顺延
+ * 立即轮换密钥，自动轮换周期顺延-支持对称密钥
  */
 class KeyRotationExecutor extends JdcloudExecutor {
 

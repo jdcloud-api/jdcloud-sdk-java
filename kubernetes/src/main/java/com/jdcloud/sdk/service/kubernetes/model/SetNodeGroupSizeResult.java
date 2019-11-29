@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 调整节点组实例数量
+ * 调整工作节点组实例数量
  */
 public class SetNodeGroupSizeResult extends JdcloudResult implements java.io.Serializable {
 

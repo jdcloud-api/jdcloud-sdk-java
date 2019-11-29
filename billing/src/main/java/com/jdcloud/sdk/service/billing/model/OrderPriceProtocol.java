@@ -105,6 +105,11 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     private String startTime;
 
     /**
+     * 临时升配结束时间,临时升配时必传
+     */
+    private String endTime;
+
+    /**
      * 自然单列表
      */
     private String taskId;
@@ -368,6 +373,24 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
+     * get 临时升配结束时间,临时升配时必传
+     *
+     * @return
+     */
+    public String getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 临时升配结束时间,临时升配时必传
+     *
+     * @param endTime
+     */
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
      * get 自然单列表
      *
      * @return
@@ -541,6 +564,16 @@ public class OrderPriceProtocol  implements java.io.Serializable {
      */
     public OrderPriceProtocol startTime(String startTime) {
         this.startTime = startTime;
+        return this;
+    }
+
+    /**
+     * set 临时升配结束时间,临时升配时必传
+     *
+     * @param endTime
+     */
+    public OrderPriceProtocol endTime(String endTime) {
+        this.endTime = endTime;
         return this;
     }
 

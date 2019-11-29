@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JDCLOUD 密钥管理服务(Key Management Service) API
+ * 密钥管理服务
  * 基于硬件保护密钥的安全数据托管服务
  *
  * OpenAPI spec version: v1
@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.kms.model.GetPublicKeyRequest;
+import com.jdcloud.sdk.service.kms.model.GetPublicKeyResponse;
+import com.jdcloud.sdk.service.kms.client.GetPublicKeyExecutor;
 import com.jdcloud.sdk.service.kms.model.DescribeKeyListRequest;
 import com.jdcloud.sdk.service.kms.model.DescribeKeyListResponse;
 import com.jdcloud.sdk.service.kms.client.DescribeKeyListExecutor;
@@ -70,9 +73,15 @@ import com.jdcloud.sdk.service.kms.client.CreateKeyExecutor;
 import com.jdcloud.sdk.service.kms.model.UpdateKeyDescriptionRequest;
 import com.jdcloud.sdk.service.kms.model.UpdateKeyDescriptionResponse;
 import com.jdcloud.sdk.service.kms.client.UpdateKeyDescriptionExecutor;
+import com.jdcloud.sdk.service.kms.model.SignRequest;
+import com.jdcloud.sdk.service.kms.model.SignResponse;
+import com.jdcloud.sdk.service.kms.client.SignExecutor;
 import com.jdcloud.sdk.service.kms.model.DescribeSecretVersionListRequest;
 import com.jdcloud.sdk.service.kms.model.DescribeSecretVersionListResponse;
 import com.jdcloud.sdk.service.kms.client.DescribeSecretVersionListExecutor;
+import com.jdcloud.sdk.service.kms.model.ValidateRequest;
+import com.jdcloud.sdk.service.kms.model.ValidateResponse;
+import com.jdcloud.sdk.service.kms.client.ValidateExecutor;
 import com.jdcloud.sdk.service.kms.model.ExportSecretRequest;
 import com.jdcloud.sdk.service.kms.model.ExportSecretResponse;
 import com.jdcloud.sdk.service.kms.client.ExportSecretExecutor;
@@ -135,7 +144,7 @@ public class KmsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "kms.jdcloud-api.com";
     public final static String ServiceName = "kms";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -176,6 +185,17 @@ public class KmsClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 获取非对称密钥的公钥
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetPublicKeyResponse getPublicKey(GetPublicKeyRequest request) throws JdcloudSdkException {
+        return new GetPublicKeyExecutor().client(this).execute(request);
+    }
 
     /**
      * 获取密钥列表
@@ -233,7 +253,7 @@ public class KmsClient extends JdcloudClient {
     }
 
     /**
-     * 使用密钥对数据进行加密
+     * 使用密钥对数据进行加密，针对非对称密钥：使用公钥进行加密，仅支持RSA_PKCS1_PADDING填充方式，最大加密数据长度为245字节
      *
      * @param request
      * @return
@@ -310,7 +330,9 @@ public class KmsClient extends JdcloudClient {
     }
 
     /**
-     * 修改密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等
+     * -   修改对称密钥配置，包括key的名称、用途、是否自动轮换和轮换周期等;
+-   修改非对称密钥配置，包括key的名称、用途等。
+
      *
      * @param request
      * @return
@@ -318,6 +340,17 @@ public class KmsClient extends JdcloudClient {
      */
     public UpdateKeyDescriptionResponse updateKeyDescription(UpdateKeyDescriptionRequest request) throws JdcloudSdkException {
         return new UpdateKeyDescriptionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 使用非对称密钥的私钥签名,签名算法仅支持RSA_PKCS1_PADDING填充方式,最大签名数据长度为4K字节
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SignResponse sign(SignRequest request) throws JdcloudSdkException {
+        return new SignExecutor().client(this).execute(request);
     }
 
     /**
@@ -329,6 +362,17 @@ public class KmsClient extends JdcloudClient {
      */
     public DescribeSecretVersionListResponse describeSecretVersionList(DescribeSecretVersionListRequest request) throws JdcloudSdkException {
         return new DescribeSecretVersionListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 使用非对称密钥的公钥验证签名
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ValidateResponse validate(ValidateRequest request) throws JdcloudSdkException {
+        return new ValidateExecutor().client(this).execute(request);
     }
 
     /**
@@ -387,7 +431,7 @@ public class KmsClient extends JdcloudClient {
     }
 
     /**
-     * 立即轮换密钥，自动轮换周期顺延
+     * 立即轮换密钥，自动轮换周期顺延-支持对称密钥
      *
      * @param request
      * @return
@@ -431,7 +475,7 @@ public class KmsClient extends JdcloudClient {
     }
 
     /**
-     * 使用密钥对数据进行解密
+     * 使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密
      *
      * @param request
      * @return

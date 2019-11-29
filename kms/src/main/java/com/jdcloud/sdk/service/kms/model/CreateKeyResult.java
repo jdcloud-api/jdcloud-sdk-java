@@ -33,7 +33,40 @@ public class CreateKeyResult extends JdcloudResult implements java.io.Serializab
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 创建的密钥ID
+     */
+    private String keyId;
 
+
+    /**
+     * get 创建的密钥ID
+     *
+     * @return
+     */
+    public String getKeyId() {
+        return keyId;
+    }
+
+    /**
+     * set 创建的密钥ID
+     *
+     * @param keyId
+     */
+    public void setKeyId(String keyId) {
+        this.keyId = keyId;
+    }
+
+
+    /**
+     * set 创建的密钥ID
+     *
+     * @param keyId
+     */
+    public CreateKeyResult keyId(String keyId) {
+        this.keyId = keyId;
+        return this;
+    }
 
 
 }

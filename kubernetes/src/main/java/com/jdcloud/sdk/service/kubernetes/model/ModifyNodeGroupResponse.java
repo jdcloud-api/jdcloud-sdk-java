@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改节点组的 名称 和 描述
+ * 修改工作节点组的 名称 和 描述&lt;br&gt;name 和 description 必须要指定一个
  */
 public class ModifyNodeGroupResponse extends JdcloudResponse<ModifyNodeGroupResult> implements java.io.Serializable {
 

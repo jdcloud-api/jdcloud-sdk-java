@@ -88,6 +88,21 @@ public class DataVO  implements java.io.Serializable {
     private Integer createTime;
 
     /**
+     * 实例到期时间
+     */
+    private Integer endTime;
+
+    /**
+     * 最大在线设备数
+     */
+    private Integer maxDevices;
+
+    /**
+     * 最大消息条数
+     */
+    private Integer maxMessage;
+
+    /**
      * 实例编号
      */
     private String instanceId;
@@ -297,6 +312,60 @@ public class DataVO  implements java.io.Serializable {
     }
 
     /**
+     * get 实例到期时间
+     *
+     * @return
+     */
+    public Integer getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 实例到期时间
+     *
+     * @param endTime
+     */
+    public void setEndTime(Integer endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * get 最大在线设备数
+     *
+     * @return
+     */
+    public Integer getMaxDevices() {
+        return maxDevices;
+    }
+
+    /**
+     * set 最大在线设备数
+     *
+     * @param maxDevices
+     */
+    public void setMaxDevices(Integer maxDevices) {
+        this.maxDevices = maxDevices;
+    }
+
+    /**
+     * get 最大消息条数
+     *
+     * @return
+     */
+    public Integer getMaxMessage() {
+        return maxMessage;
+    }
+
+    /**
+     * set 最大消息条数
+     *
+     * @param maxMessage
+     */
+    public void setMaxMessage(Integer maxMessage) {
+        this.maxMessage = maxMessage;
+    }
+
+    /**
      * get 实例编号
      *
      * @return
@@ -440,6 +509,36 @@ public class DataVO  implements java.io.Serializable {
      */
     public DataVO createTime(Integer createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 实例到期时间
+     *
+     * @param endTime
+     */
+    public DataVO endTime(Integer endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 最大在线设备数
+     *
+     * @param maxDevices
+     */
+    public DataVO maxDevices(Integer maxDevices) {
+        this.maxDevices = maxDevices;
+        return this;
+    }
+
+    /**
+     * set 最大消息条数
+     *
+     * @param maxMessage
+     */
+    public DataVO maxMessage(Integer maxMessage) {
+        this.maxMessage = maxMessage;
         return this;
     }
 

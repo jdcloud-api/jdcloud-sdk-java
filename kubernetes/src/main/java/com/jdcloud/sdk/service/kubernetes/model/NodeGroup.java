@@ -28,64 +28,69 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * 描述节点组配置信息
+ * 描述工作节点组配置信息
  */
 public class NodeGroup  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 集群id
+     * 集群 id
      */
     private String clusterId;
 
     /**
-     * node group id
+     * 工作节点组 id
      */
     private String nodeGroupId;
 
     /**
-     * 名称
+     * 工作节点组名称
      */
     private String name;
 
     /**
-     * 描述
+     * 工作节点组描述
      */
     private String description;
 
     /**
-     * Node的信息
+     * 工作节点组配置信息
      */
     private NodeConfig nodeConfig;
 
     /**
-     * k8s中的node的版本
+     * 工作节点版本
      */
     private String version;
 
     /**
-     * node所属的网络信息
+     * 工作节点所属的网络信息
      */
     private NodeNetwork nodeNetwork;
 
     /**
-     * 当前node数量
+     * 当前工作节点数量
      */
     private Integer currentCount;
 
     /**
-     * 期望的node数量
+     * 期望的工作节点数量
      */
     private Integer expectCount;
 
     /**
-     * node group的ag id ，通过agid可以查询该node group下的实例
+     * 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
      */
     private String agId;
 
     /**
-     * node group的ag id对应的实例模板
+     * 工作节点组所在的 az
+     */
+    private List<String> azs;
+
+    /**
+     * 工作节点组的 ag 对应的实例模板
      */
     private String instanceTemplateId;
 
@@ -126,7 +131,7 @@ public class NodeGroup  implements java.io.Serializable {
 
 
     /**
-     * get 集群id
+     * get 集群 id
      *
      * @return
      */
@@ -135,7 +140,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 集群id
+     * set 集群 id
      *
      * @param clusterId
      */
@@ -144,7 +149,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get node group id
+     * get 工作节点组 id
      *
      * @return
      */
@@ -153,7 +158,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set node group id
+     * set 工作节点组 id
      *
      * @param nodeGroupId
      */
@@ -162,7 +167,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 名称
+     * get 工作节点组名称
      *
      * @return
      */
@@ -171,7 +176,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 名称
+     * set 工作节点组名称
      *
      * @param name
      */
@@ -180,7 +185,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 描述
+     * get 工作节点组描述
      *
      * @return
      */
@@ -189,7 +194,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 描述
+     * set 工作节点组描述
      *
      * @param description
      */
@@ -198,7 +203,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get Node的信息
+     * get 工作节点组配置信息
      *
      * @return
      */
@@ -207,7 +212,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set Node的信息
+     * set 工作节点组配置信息
      *
      * @param nodeConfig
      */
@@ -216,7 +221,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get k8s中的node的版本
+     * get 工作节点版本
      *
      * @return
      */
@@ -225,7 +230,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set k8s中的node的版本
+     * set 工作节点版本
      *
      * @param version
      */
@@ -234,7 +239,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get node所属的网络信息
+     * get 工作节点所属的网络信息
      *
      * @return
      */
@@ -243,7 +248,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set node所属的网络信息
+     * set 工作节点所属的网络信息
      *
      * @param nodeNetwork
      */
@@ -252,7 +257,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 当前node数量
+     * get 当前工作节点数量
      *
      * @return
      */
@@ -261,7 +266,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 当前node数量
+     * set 当前工作节点数量
      *
      * @param currentCount
      */
@@ -270,7 +275,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 期望的node数量
+     * get 期望的工作节点数量
      *
      * @return
      */
@@ -279,7 +284,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 期望的node数量
+     * set 期望的工作节点数量
      *
      * @param expectCount
      */
@@ -288,7 +293,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get node group的ag id ，通过agid可以查询该node group下的实例
+     * get 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
      *
      * @return
      */
@@ -297,7 +302,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set node group的ag id ，通过agid可以查询该node group下的实例
+     * set 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
      *
      * @param agId
      */
@@ -306,7 +311,25 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * get node group的ag id对应的实例模板
+     * get 工作节点组所在的 az
+     *
+     * @return
+     */
+    public List<String> getAzs() {
+        return azs;
+    }
+
+    /**
+     * set 工作节点组所在的 az
+     *
+     * @param azs
+     */
+    public void setAzs(List<String> azs) {
+        this.azs = azs;
+    }
+
+    /**
+     * get 工作节点组的 ag 对应的实例模板
      *
      * @return
      */
@@ -315,7 +338,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set node group的ag id对应的实例模板
+     * set 工作节点组的 ag 对应的实例模板
      *
      * @param instanceTemplateId
      */
@@ -451,7 +474,7 @@ public class NodeGroup  implements java.io.Serializable {
 
 
     /**
-     * set 集群id
+     * set 集群 id
      *
      * @param clusterId
      */
@@ -461,7 +484,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set node group id
+     * set 工作节点组 id
      *
      * @param nodeGroupId
      */
@@ -471,7 +494,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 名称
+     * set 工作节点组名称
      *
      * @param name
      */
@@ -481,7 +504,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 描述
+     * set 工作节点组描述
      *
      * @param description
      */
@@ -491,7 +514,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set Node的信息
+     * set 工作节点组配置信息
      *
      * @param nodeConfig
      */
@@ -501,7 +524,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set k8s中的node的版本
+     * set 工作节点版本
      *
      * @param version
      */
@@ -511,7 +534,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set node所属的网络信息
+     * set 工作节点所属的网络信息
      *
      * @param nodeNetwork
      */
@@ -521,7 +544,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 当前node数量
+     * set 当前工作节点数量
      *
      * @param currentCount
      */
@@ -531,7 +554,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 期望的node数量
+     * set 期望的工作节点数量
      *
      * @param expectCount
      */
@@ -541,7 +564,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set node group的ag id ，通过agid可以查询该node group下的实例
+     * set 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
      *
      * @param agId
      */
@@ -551,7 +574,17 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
-     * set node group的ag id对应的实例模板
+     * set 工作节点组所在的 az
+     *
+     * @param azs
+     */
+    public NodeGroup azs(List<String> azs) {
+        this.azs = azs;
+        return this;
+    }
+
+    /**
+     * set 工作节点组的 ag 对应的实例模板
      *
      * @param instanceTemplateId
      */
@@ -630,6 +663,18 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 工作节点组所在的 az
+     *
+     * @param az
+     */
+    public void addAz(String az) {
+        if (this.azs == null) {
+            this.azs = new ArrayList<>();
+        }
+        this.azs.add(az);
+    }
 
     /**
      * add item to tags

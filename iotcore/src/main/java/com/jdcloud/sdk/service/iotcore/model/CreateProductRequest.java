@@ -62,6 +62,11 @@ public class CreateProductRequest extends JdcloudRequest implements java.io.Seri
     private String templateId;
 
     /**
+     * 内部标签，内部参数，用户不可见，隐藏标签：hidden:true
+     */
+    private Object internalTags;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -155,6 +160,24 @@ public class CreateProductRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
+     * get 内部标签，内部参数，用户不可见，隐藏标签：hidden:true
+     *
+     * @return
+     */
+    public Object getInternalTags() {
+        return internalTags;
+    }
+
+    /**
+     * set 内部标签，内部参数，用户不可见，隐藏标签：hidden:true
+     *
+     * @param internalTags
+     */
+    public void setInternalTags(Object internalTags) {
+        this.internalTags = internalTags;
+    }
+
+    /**
      * get 地域ID
      *
      * @return
@@ -231,6 +254,16 @@ public class CreateProductRequest extends JdcloudRequest implements java.io.Seri
      */
     public CreateProductRequest templateId(String templateId) {
         this.templateId = templateId;
+        return this;
+    }
+
+    /**
+     * set 内部标签，内部参数，用户不可见，隐藏标签：hidden:true
+     *
+     * @param internalTags
+     */
+    public CreateProductRequest internalTags(Object internalTags) {
+        this.internalTags = internalTags;
         return this;
     }
 

@@ -27,6 +27,8 @@ package com.jdcloud.sdk.service.pod.model;
 
 /**
  * 容器计算资源信息
+  - 容器必需的 CPU，不指定时按照 2m 处理
+
  */
 public class ResourceRequestsSpec  implements java.io.Serializable {
 

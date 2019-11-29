@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeQuotasResponse;
 
 /**
- * 查询(k8s 集群)配额
+ * 查询 kubernetes 集群配额
  */
 class DescribeQuotasExecutor extends JdcloudExecutor {
 

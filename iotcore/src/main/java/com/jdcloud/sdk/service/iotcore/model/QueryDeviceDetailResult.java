@@ -113,6 +113,11 @@ public class QueryDeviceDetailResult extends JdcloudResult implements java.io.Se
      */
     private String manufacturer;
 
+    /**
+     * 动态注册,0:关闭，1:开启
+     */
+    private Integer dynamicRegister;
+
 
     /**
      * get 设备ID
@@ -402,6 +407,24 @@ public class QueryDeviceDetailResult extends JdcloudResult implements java.io.Se
         this.manufacturer = manufacturer;
     }
 
+    /**
+     * get 动态注册,0:关闭，1:开启
+     *
+     * @return
+     */
+    public Integer getDynamicRegister() {
+        return dynamicRegister;
+    }
+
+    /**
+     * set 动态注册,0:关闭，1:开启
+     *
+     * @param dynamicRegister
+     */
+    public void setDynamicRegister(Integer dynamicRegister) {
+        this.dynamicRegister = dynamicRegister;
+    }
+
 
     /**
      * set 设备ID
@@ -560,6 +583,16 @@ public class QueryDeviceDetailResult extends JdcloudResult implements java.io.Se
      */
     public QueryDeviceDetailResult manufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
+        return this;
+    }
+
+    /**
+     * set 动态注册,0:关闭，1:开启
+     *
+     * @param dynamicRegister
+     */
+    public QueryDeviceDetailResult dynamicRegister(Integer dynamicRegister) {
+        this.dynamicRegister = dynamicRegister;
         return this;
     }
 

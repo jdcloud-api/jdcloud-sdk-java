@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 使用密钥对数据进行解密
+ * 使用密钥对数据进行解密，针对非对称密钥：使用私钥进行加密
  */
 public class DecryptRequest extends JdcloudRequest implements java.io.Serializable {
 

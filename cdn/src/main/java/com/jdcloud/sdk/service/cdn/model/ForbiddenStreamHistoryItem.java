@@ -43,6 +43,11 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
     private String app;
 
     /**
+     * 封禁的IP
+     */
+    private String publishIp;
+
+    /**
      * 禁播类型:forever永不禁播limit限时禁播
      */
     private String forbiddenType;
@@ -102,6 +107,24 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
      */
     public void setApp(String app) {
         this.app = app;
+    }
+
+    /**
+     * get 封禁的IP
+     *
+     * @return
+     */
+    public String getPublishIp() {
+        return publishIp;
+    }
+
+    /**
+     * set 封禁的IP
+     *
+     * @param publishIp
+     */
+    public void setPublishIp(String publishIp) {
+        this.publishIp = publishIp;
     }
 
     /**
@@ -212,6 +235,16 @@ public class ForbiddenStreamHistoryItem  implements java.io.Serializable {
      */
     public ForbiddenStreamHistoryItem app(String app) {
         this.app = app;
+        return this;
+    }
+
+    /**
+     * set 封禁的IP
+     *
+     * @param publishIp
+     */
+    public ForbiddenStreamHistoryItem publishIp(String publishIp) {
+        this.publishIp = publishIp;
         return this;
     }
 

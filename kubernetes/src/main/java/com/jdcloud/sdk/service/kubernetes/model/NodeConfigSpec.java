@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 描述节点配置信息
+ * 工作节点配置信息
  */
 public class NodeConfigSpec  implements java.io.Serializable {
 
@@ -43,26 +43,27 @@ public class NodeConfigSpec  implements java.io.Serializable {
     private String instanceType;
 
     /**
-     * 镜像信息
+     * 工作节点版本，不指定则使用默认版本
      */
     private String version;
 
     /**
-     * 云盘系统盘的大小  单位(GB)
-     * Required:true
+     * 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
      */
-    @Required
-    private Integer systemDiskSize;
+    private String password;
 
     /**
-     * 云盘系统盘的大小[ssd,premium-hdd]
-     * Required:true
+     * 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
      */
-    @Required
-    private String systemDiskType;
+    private List<String> keyNames;
 
     /**
-     * Node的信息
+     * 云主机系统盘配置信息
+     */
+    private DiskSpec systemDisk;
+
+    /**
+     * 工作节点组标签，最多支持 10 个
      */
     private List<LabelSpec> labels;
 
@@ -86,7 +87,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像信息
+     * get 工作节点版本，不指定则使用默认版本
      *
      * @return
      */
@@ -95,7 +96,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像信息
+     * set 工作节点版本，不指定则使用默认版本
      *
      * @param version
      */
@@ -104,43 +105,61 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云盘系统盘的大小  单位(GB)
+     * get 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
      *
      * @return
      */
-    public Integer getSystemDiskSize() {
-        return systemDiskSize;
+    public String getPassword() {
+        return password;
     }
 
     /**
-     * set 云盘系统盘的大小  单位(GB)
+     * set 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
      *
-     * @param systemDiskSize
+     * @param password
      */
-    public void setSystemDiskSize(Integer systemDiskSize) {
-        this.systemDiskSize = systemDiskSize;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     /**
-     * get 云盘系统盘的大小[ssd,premium-hdd]
+     * get 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
      *
      * @return
      */
-    public String getSystemDiskType() {
-        return systemDiskType;
+    public List<String> getKeyNames() {
+        return keyNames;
     }
 
     /**
-     * set 云盘系统盘的大小[ssd,premium-hdd]
+     * set 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
      *
-     * @param systemDiskType
+     * @param keyNames
      */
-    public void setSystemDiskType(String systemDiskType) {
-        this.systemDiskType = systemDiskType;
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
     }
 
     /**
-     * get Node的信息
+     * get 云主机系统盘配置信息
+     *
+     * @return
+     */
+    public DiskSpec getSystemDisk() {
+        return systemDisk;
+    }
+
+    /**
+     * set 云主机系统盘配置信息
+     *
+     * @param systemDisk
+     */
+    public void setSystemDisk(DiskSpec systemDisk) {
+        this.systemDisk = systemDisk;
+    }
+
+    /**
+     * get 工作节点组标签，最多支持 10 个
      *
      * @return
      */
@@ -149,7 +168,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Node的信息
+     * set 工作节点组标签，最多支持 10 个
      *
      * @param labels
      */
@@ -169,7 +188,7 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像信息
+     * set 工作节点版本，不指定则使用默认版本
      *
      * @param version
      */
@@ -179,27 +198,37 @@ public class NodeConfigSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘系统盘的大小  单位(GB)
+     * set 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
      *
-     * @param systemDiskSize
+     * @param password
      */
-    public NodeConfigSpec systemDiskSize(Integer systemDiskSize) {
-        this.systemDiskSize = systemDiskSize;
+    public NodeConfigSpec password(String password) {
+        this.password = password;
         return this;
     }
 
     /**
-     * set 云盘系统盘的大小[ssd,premium-hdd]
+     * set 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
      *
-     * @param systemDiskType
+     * @param keyNames
      */
-    public NodeConfigSpec systemDiskType(String systemDiskType) {
-        this.systemDiskType = systemDiskType;
+    public NodeConfigSpec keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
         return this;
     }
 
     /**
-     * set Node的信息
+     * set 云主机系统盘配置信息
+     *
+     * @param systemDisk
+     */
+    public NodeConfigSpec systemDisk(DiskSpec systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+
+    /**
+     * set 工作节点组标签，最多支持 10 个
      *
      * @param labels
      */
@@ -210,7 +239,19 @@ public class NodeConfigSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to Node的信息
+     * add item to 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
+    }
+
+    /**
+     * add item to 工作节点组标签，最多支持 10 个
      *
      * @param label
      */

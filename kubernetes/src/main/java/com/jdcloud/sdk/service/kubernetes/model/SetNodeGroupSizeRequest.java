@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 调整节点组实例数量
+ * 调整工作节点组实例数量
  */
 public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 创建集群请求参数模型
+     * 预期目标节点数量
      * Required:true
      */
     @Required
@@ -49,7 +49,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
     /**
-     * 节点组 ID
+     * 工作节点组 ID
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 创建集群请求参数模型
+     * get 预期目标节点数量
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 创建集群请求参数模型
+     * set 预期目标节点数量
      *
      * @param expectCount
      */
@@ -93,7 +93,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 节点组 ID
+     * get 工作节点组 ID
      *
      * @return
      */
@@ -102,7 +102,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */
@@ -112,7 +112,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 创建集群请求参数模型
+     * set 预期目标节点数量
      *
      * @param expectCount
      */
@@ -132,7 +132,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */

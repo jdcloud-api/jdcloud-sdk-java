@@ -66,6 +66,11 @@ public class QueryBillSummaryRequest extends JdcloudRequest implements java.io.S
     private List<String> resourceIds;
 
     /**
+     * 标签
+     */
+    private List<Object> tags;
+
+    /**
      * pageIndex
      */
     private Integer pageIndex;
@@ -174,6 +179,24 @@ public class QueryBillSummaryRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get 标签
+     *
+     * @return
+     */
+    public List<Object> getTags() {
+        return tags;
+    }
+
+    /**
+     * set 标签
+     *
+     * @param tags
+     */
+    public void setTags(List<Object> tags) {
+        this.tags = tags;
+    }
+
+    /**
      * get pageIndex
      *
      * @return
@@ -279,6 +302,16 @@ public class QueryBillSummaryRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * set 标签
+     *
+     * @param tags
+     */
+    public QueryBillSummaryRequest tags(List<Object> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set pageIndex
      *
      * @param pageIndex
@@ -319,6 +352,18 @@ public class QueryBillSummaryRequest extends JdcloudRequest implements java.io.S
             this.resourceIds = new ArrayList<>();
         }
         this.resourceIds.add(resourceId);
+    }
+
+    /**
+     * add item to 标签
+     *
+     * @param tag
+     */
+    public void addTag(Object tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }

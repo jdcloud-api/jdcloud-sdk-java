@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.iotcore.client.AddDeviceExecutor;
 import com.jdcloud.sdk.service.iotcore.model.UpdateThingShadowRequest;
 import com.jdcloud.sdk.service.iotcore.model.UpdateThingShadowResponse;
 import com.jdcloud.sdk.service.iotcore.client.UpdateThingShadowExecutor;
+import com.jdcloud.sdk.service.iotcore.model.CreateProductTopicRequest;
+import com.jdcloud.sdk.service.iotcore.model.CreateProductTopicResponse;
+import com.jdcloud.sdk.service.iotcore.client.CreateProductTopicExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DeleteProductRequest;
 import com.jdcloud.sdk.service.iotcore.model.DeleteProductResponse;
 import com.jdcloud.sdk.service.iotcore.client.DeleteProductExecutor;
@@ -49,6 +52,9 @@ import com.jdcloud.sdk.service.iotcore.client.InvokeThingServiceExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DescribeThingShadowRequest;
 import com.jdcloud.sdk.service.iotcore.model.DescribeThingShadowResponse;
 import com.jdcloud.sdk.service.iotcore.client.DescribeThingShadowExecutor;
+import com.jdcloud.sdk.service.iotcore.model.InvokeThingTopicRequest;
+import com.jdcloud.sdk.service.iotcore.model.InvokeThingTopicResponse;
+import com.jdcloud.sdk.service.iotcore.client.InvokeThingTopicExecutor;
 import com.jdcloud.sdk.service.iotcore.model.ListProductsRequest;
 import com.jdcloud.sdk.service.iotcore.model.ListProductsResponse;
 import com.jdcloud.sdk.service.iotcore.client.ListProductsExecutor;
@@ -152,6 +158,17 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
+     * 新建产品Topic
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateProductTopicResponse createProductTopic(CreateProductTopicRequest request) throws JdcloudSdkException {
+        return new CreateProductTopicExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除产品
      *
      * @param request
@@ -193,6 +210,17 @@ public class IotcoreClient extends JdcloudClient {
      */
     public DescribeThingShadowResponse describeThingShadow(DescribeThingShadowRequest request) throws JdcloudSdkException {
         return new DescribeThingShadowExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设备Topic调用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public InvokeThingTopicResponse invokeThingTopic(InvokeThingTopicRequest request) throws JdcloudSdkException {
+        return new InvokeThingTopicExecutor().client(this).execute(request);
     }
 
     /**

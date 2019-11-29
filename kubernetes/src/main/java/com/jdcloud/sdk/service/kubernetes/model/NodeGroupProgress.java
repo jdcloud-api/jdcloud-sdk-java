@@ -26,14 +26,14 @@ package com.jdcloud.sdk.service.kubernetes.model;
 
 
 /**
- * 节点组进度
+ * 工作节点组进度
  */
 public class NodeGroupProgress  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 节点组 id
+     * 工作节点组 id
      */
     private String nodeGroupId;
 
@@ -43,18 +43,18 @@ public class NodeGroupProgress  implements java.io.Serializable {
     private String action;
 
     /**
-     * 总node个数
+     * 总工作节点个数
      */
     private Integer totalCount;
 
     /**
-     * 升级完成node个数
+     * 升级完成工作节点个数
      */
     private Integer updatedCount;
 
 
     /**
-     * get 节点组 id
+     * get 工作节点组 id
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     }
 
     /**
-     * set 节点组 id
+     * set 工作节点组 id
      *
      * @param nodeGroupId
      */
@@ -90,7 +90,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     }
 
     /**
-     * get 总node个数
+     * get 总工作节点个数
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     }
 
     /**
-     * set 总node个数
+     * set 总工作节点个数
      *
      * @param totalCount
      */
@@ -108,7 +108,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     }
 
     /**
-     * get 升级完成node个数
+     * get 升级完成工作节点个数
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     }
 
     /**
-     * set 升级完成node个数
+     * set 升级完成工作节点个数
      *
      * @param updatedCount
      */
@@ -127,7 +127,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
 
 
     /**
-     * set 节点组 id
+     * set 工作节点组 id
      *
      * @param nodeGroupId
      */
@@ -147,7 +147,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     }
 
     /**
-     * set 总node个数
+     * set 总工作节点个数
      *
      * @param totalCount
      */
@@ -157,7 +157,7 @@ public class NodeGroupProgress  implements java.io.Serializable {
     }
 
     /**
-     * set 升级完成node个数
+     * set 升级完成工作节点个数
      *
      * @param updatedCount
      */

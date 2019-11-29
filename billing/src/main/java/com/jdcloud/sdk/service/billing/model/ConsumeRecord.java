@@ -142,6 +142,16 @@ public class ConsumeRecord  implements java.io.Serializable {
      */
     private String refundNo;
 
+    /**
+     * 优惠后金额
+     */
+    private Number actualFee;
+
+    /**
+     * 规格名称
+     */
+    private String formulaName;
+
 
     /**
      * get 消费记录数据库唯一id
@@ -539,6 +549,42 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.refundNo = refundNo;
     }
 
+    /**
+     * get 优惠后金额
+     *
+     * @return
+     */
+    public Number getActualFee() {
+        return actualFee;
+    }
+
+    /**
+     * set 优惠后金额
+     *
+     * @param actualFee
+     */
+    public void setActualFee(Number actualFee) {
+        this.actualFee = actualFee;
+    }
+
+    /**
+     * get 规格名称
+     *
+     * @return
+     */
+    public String getFormulaName() {
+        return formulaName;
+    }
+
+    /**
+     * set 规格名称
+     *
+     * @param formulaName
+     */
+    public void setFormulaName(String formulaName) {
+        this.formulaName = formulaName;
+    }
+
 
     /**
      * set 消费记录数据库唯一id
@@ -757,6 +803,26 @@ public class ConsumeRecord  implements java.io.Serializable {
      */
     public ConsumeRecord refundNo(String refundNo) {
         this.refundNo = refundNo;
+        return this;
+    }
+
+    /**
+     * set 优惠后金额
+     *
+     * @param actualFee
+     */
+    public ConsumeRecord actualFee(Number actualFee) {
+        this.actualFee = actualFee;
+        return this;
+    }
+
+    /**
+     * set 规格名称
+     *
+     * @param formulaName
+     */
+    public ConsumeRecord formulaName(String formulaName) {
+        this.formulaName = formulaName;
         return this;
     }
 

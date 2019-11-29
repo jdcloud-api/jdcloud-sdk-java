@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 使用密钥对数据进行加密
+ * 使用密钥对数据进行加密，针对非对称密钥：使用公钥进行加密，仅支持RSA_PKCS1_PADDING填充方式，最大加密数据长度为245字节
  */
 public class EncryptResult extends JdcloudResult implements java.io.Serializable {
 

@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.logs.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * searchLogContextSpec
@@ -35,33 +36,41 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 查询anchor，基于该值偏移进行上下文检索
+     * 查询anchor,基于该值偏移进行上下文检索
+     * Required:true
      */
+    @Required
     private List<Object> anchor;
 
     /**
-     * 搜索方向， 默认both, 可取值: up，down, both
+     * 搜索方向,默认both,可取值:up,down,both
      */
     private String direction;
 
     /**
-     * 日志记录ID，系统日志必填
+     * 日志记录ID
+     * Required:true
      */
+    @Required
     private String id;
 
     /**
      * 查看上下文行数大小，最大支持200
+     * Required:true
      */
-    private String lineSize;
+    @Required
+    private Long lineSize;
 
     /**
      * 查询日志时返回的时间戳
+     * Required:true
      */
+    @Required
     private Long time;
 
 
     /**
-     * get 查询anchor，基于该值偏移进行上下文检索
+     * get 查询anchor,基于该值偏移进行上下文检索
      *
      * @return
      */
@@ -70,7 +79,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 查询anchor，基于该值偏移进行上下文检索
+     * set 查询anchor,基于该值偏移进行上下文检索
      *
      * @param anchor
      */
@@ -79,7 +88,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 搜索方向， 默认both, 可取值: up，down, both
+     * get 搜索方向,默认both,可取值:up,down,both
      *
      * @return
      */
@@ -88,7 +97,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 搜索方向， 默认both, 可取值: up，down, both
+     * set 搜索方向,默认both,可取值:up,down,both
      *
      * @param direction
      */
@@ -97,7 +106,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 日志记录ID，系统日志必填
+     * get 日志记录ID
      *
      * @return
      */
@@ -106,7 +115,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 日志记录ID，系统日志必填
+     * set 日志记录ID
      *
      * @param id
      */
@@ -119,7 +128,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public String getLineSize() {
+    public Long getLineSize() {
         return lineSize;
     }
 
@@ -128,7 +137,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
      *
      * @param lineSize
      */
-    public void setLineSize(String lineSize) {
+    public void setLineSize(Long lineSize) {
         this.lineSize = lineSize;
     }
 
@@ -152,7 +161,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
 
 
     /**
-     * set 查询anchor，基于该值偏移进行上下文检索
+     * set 查询anchor,基于该值偏移进行上下文检索
      *
      * @param anchor
      */
@@ -162,7 +171,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 搜索方向， 默认both, 可取值: up，down, both
+     * set 搜索方向,默认both,可取值:up,down,both
      *
      * @param direction
      */
@@ -172,7 +181,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 日志记录ID，系统日志必填
+     * set 日志记录ID
      *
      * @param id
      */
@@ -186,7 +195,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
      *
      * @param lineSize
      */
-    public SearchLogContextSpec lineSize(String lineSize) {
+    public SearchLogContextSpec lineSize(Long lineSize) {
         this.lineSize = lineSize;
         return this;
     }
@@ -203,7 +212,7 @@ public class SearchLogContextSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 查询anchor，基于该值偏移进行上下文检索
+     * add item to 查询anchor,基于该值偏移进行上下文检索
      *
      * @param anchor
      */

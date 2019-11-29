@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.billing.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * billSummary
@@ -141,6 +143,11 @@ public class BillSummary  implements java.io.Serializable {
      * 欠费金额
      */
     private Number arrearFee;
+
+    /**
+     * 标签明细
+     */
+    private List<ResourceTagVo> tagDetails;
 
 
     /**
@@ -539,6 +546,24 @@ public class BillSummary  implements java.io.Serializable {
         this.arrearFee = arrearFee;
     }
 
+    /**
+     * get 标签明细
+     *
+     * @return
+     */
+    public List<ResourceTagVo> getTagDetails() {
+        return tagDetails;
+    }
+
+    /**
+     * set 标签明细
+     *
+     * @param tagDetails
+     */
+    public void setTagDetails(List<ResourceTagVo> tagDetails) {
+        this.tagDetails = tagDetails;
+    }
+
 
     /**
      * set 用户pin
@@ -760,5 +785,27 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 标签明细
+     *
+     * @param tagDetails
+     */
+    public BillSummary tagDetails(List<ResourceTagVo> tagDetails) {
+        this.tagDetails = tagDetails;
+        return this;
+    }
+
+
+    /**
+     * add item to 标签明细
+     *
+     * @param tagDetail
+     */
+    public void addTagDetail(ResourceTagVo tagDetail) {
+        if (this.tagDetails == null) {
+            this.tagDetails = new ArrayList<>();
+        }
+        this.tagDetails.add(tagDetail);
+    }
 
 }

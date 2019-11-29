@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.kubernetes.model.Quota;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询(k8s 集群)配额
+ * 查询 kubernetes 集群配额
  */
 public class DescribeQuotasResult extends JdcloudResult implements java.io.Serializable {
 

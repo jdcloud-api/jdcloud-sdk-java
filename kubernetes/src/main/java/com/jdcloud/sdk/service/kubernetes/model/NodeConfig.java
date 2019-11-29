@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * 描述节点配置信息
+ * 工作节点配置信息
  */
 public class NodeConfig  implements java.io.Serializable {
 
@@ -45,17 +45,32 @@ public class NodeConfig  implements java.io.Serializable {
     private String imageId;
 
     /**
-     * 云盘系统盘的大小  单位(GB)
+     * 云主机SSH密钥对名称
+     */
+    private List<String> keyNames;
+
+    /**
+     * 云主机磁盘类型
+     */
+    private String systemDiskCategory;
+
+    /**
+     * 云主机云盘系统盘大小  单位(GB)
      */
     private Integer systemDiskSize;
 
     /**
-     * 云盘系统盘的大小[ssd,premium-hdd]
+     * 云主机云盘系统盘类型
      */
     private String systemDiskType;
 
     /**
-     * Node的信息
+     * 云主机云盘 iops，仅限 ssd 类型云盘有效
+     */
+    private Integer systemDiskIops;
+
+    /**
+     * 工作节点组标签
      */
     private List<LabelSpec> labels;
 
@@ -97,7 +112,43 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * get 云盘系统盘的大小  单位(GB)
+     * get 云主机SSH密钥对名称
+     *
+     * @return
+     */
+    public List<String> getKeyNames() {
+        return keyNames;
+    }
+
+    /**
+     * set 云主机SSH密钥对名称
+     *
+     * @param keyNames
+     */
+    public void setKeyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
+    }
+
+    /**
+     * get 云主机磁盘类型
+     *
+     * @return
+     */
+    public String getSystemDiskCategory() {
+        return systemDiskCategory;
+    }
+
+    /**
+     * set 云主机磁盘类型
+     *
+     * @param systemDiskCategory
+     */
+    public void setSystemDiskCategory(String systemDiskCategory) {
+        this.systemDiskCategory = systemDiskCategory;
+    }
+
+    /**
+     * get 云主机云盘系统盘大小  单位(GB)
      *
      * @return
      */
@@ -106,7 +157,7 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘系统盘的大小  单位(GB)
+     * set 云主机云盘系统盘大小  单位(GB)
      *
      * @param systemDiskSize
      */
@@ -115,7 +166,7 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * get 云盘系统盘的大小[ssd,premium-hdd]
+     * get 云主机云盘系统盘类型
      *
      * @return
      */
@@ -124,7 +175,7 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘系统盘的大小[ssd,premium-hdd]
+     * set 云主机云盘系统盘类型
      *
      * @param systemDiskType
      */
@@ -133,7 +184,25 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * get Node的信息
+     * get 云主机云盘 iops，仅限 ssd 类型云盘有效
+     *
+     * @return
+     */
+    public Integer getSystemDiskIops() {
+        return systemDiskIops;
+    }
+
+    /**
+     * set 云主机云盘 iops，仅限 ssd 类型云盘有效
+     *
+     * @param systemDiskIops
+     */
+    public void setSystemDiskIops(Integer systemDiskIops) {
+        this.systemDiskIops = systemDiskIops;
+    }
+
+    /**
+     * get 工作节点组标签
      *
      * @return
      */
@@ -142,7 +211,7 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * set Node的信息
+     * set 工作节点组标签
      *
      * @param labels
      */
@@ -172,7 +241,27 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘系统盘的大小  单位(GB)
+     * set 云主机SSH密钥对名称
+     *
+     * @param keyNames
+     */
+    public NodeConfig keyNames(List<String> keyNames) {
+        this.keyNames = keyNames;
+        return this;
+    }
+
+    /**
+     * set 云主机磁盘类型
+     *
+     * @param systemDiskCategory
+     */
+    public NodeConfig systemDiskCategory(String systemDiskCategory) {
+        this.systemDiskCategory = systemDiskCategory;
+        return this;
+    }
+
+    /**
+     * set 云主机云盘系统盘大小  单位(GB)
      *
      * @param systemDiskSize
      */
@@ -182,7 +271,7 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 云盘系统盘的大小[ssd,premium-hdd]
+     * set 云主机云盘系统盘类型
      *
      * @param systemDiskType
      */
@@ -192,7 +281,17 @@ public class NodeConfig  implements java.io.Serializable {
     }
 
     /**
-     * set Node的信息
+     * set 云主机云盘 iops，仅限 ssd 类型云盘有效
+     *
+     * @param systemDiskIops
+     */
+    public NodeConfig systemDiskIops(Integer systemDiskIops) {
+        this.systemDiskIops = systemDiskIops;
+        return this;
+    }
+
+    /**
+     * set 工作节点组标签
      *
      * @param labels
      */
@@ -203,7 +302,19 @@ public class NodeConfig  implements java.io.Serializable {
 
 
     /**
-     * add item to Node的信息
+     * add item to 云主机SSH密钥对名称
+     *
+     * @param keyName
+     */
+    public void addKeyName(String keyName) {
+        if (this.keyNames == null) {
+            this.keyNames = new ArrayList<>();
+        }
+        this.keyNames.add(keyName);
+    }
+
+    /**
+     * add item to 工作节点组标签
      *
      * @param label
      */

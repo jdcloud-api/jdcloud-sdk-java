@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置节点组的自动修复
+ * 设置工作节点组的自动修复
  */
 public class SetAutoRepairRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,7 +49,7 @@ public class SetAutoRepairRequest extends JdcloudRequest implements java.io.Seri
     private String regionId;
 
     /**
-     * 节点组 ID
+     * 工作节点组 ID
      * Required:true
      */
     @Required
@@ -93,7 +93,7 @@ public class SetAutoRepairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 节点组 ID
+     * get 工作节点组 ID
      *
      * @return
      */
@@ -102,7 +102,7 @@ public class SetAutoRepairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */
@@ -132,7 +132,7 @@ public class SetAutoRepairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */

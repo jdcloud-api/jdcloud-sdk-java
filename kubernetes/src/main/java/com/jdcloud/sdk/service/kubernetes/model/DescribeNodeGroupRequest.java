@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * NodeGroup
- * 节点组相关接口
+ * 工作节点组相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询单个节点组详情
+ * 查询单个工作节点组详情
  */
 public class DescribeNodeGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class DescribeNodeGroupRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
     /**
-     * 节点组 ID
+     * 工作节点组 ID
      * Required:true
      */
     @Required
@@ -68,7 +68,7 @@ public class DescribeNodeGroupRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 节点组 ID
+     * get 工作节点组 ID
      *
      * @return
      */
@@ -77,7 +77,7 @@ public class DescribeNodeGroupRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */
@@ -97,7 +97,7 @@ public class DescribeNodeGroupRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 节点组 ID
+     * set 工作节点组 ID
      *
      * @param nodeGroupId
      */

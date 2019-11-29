@@ -33,23 +33,23 @@ public class DomainSourceInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * priority
+     * 优先级（1-10）
      */
     private Integer priority;
 
     /**
-     * sourceHost
+     * 回源host
      */
     private String sourceHost;
 
     /**
-     * domain
+     * 回源域名
      */
     private String domain;
 
 
     /**
-     * get priority
+     * get 优先级（1-10）
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set priority
+     * set 优先级（1-10）
      *
      * @param priority
      */
@@ -67,7 +67,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get sourceHost
+     * get 回源host
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set sourceHost
+     * set 回源host
      *
      * @param sourceHost
      */
@@ -85,7 +85,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get domain
+     * get 回源域名
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set domain
+     * set 回源域名
      *
      * @param domain
      */
@@ -104,7 +104,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
 
 
     /**
-     * set priority
+     * set 优先级（1-10）
      *
      * @param priority
      */
@@ -114,7 +114,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set sourceHost
+     * set 回源host
      *
      * @param sourceHost
      */
@@ -124,7 +124,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set domain
+     * set 回源域名
      *
      * @param domain
      */

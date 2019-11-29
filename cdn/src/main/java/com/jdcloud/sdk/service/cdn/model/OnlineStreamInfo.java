@@ -70,7 +70,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     /**
      * realFps
      */
-    private Long realFps;
+    private Double realFps;
 
     /**
      * uploadSpeed
@@ -224,7 +224,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getRealFps() {
+    public Double getRealFps() {
         return realFps;
     }
 
@@ -233,7 +233,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
      *
      * @param realFps
      */
-    public void setRealFps(Long realFps) {
+    public void setRealFps(Double realFps) {
         this.realFps = realFps;
     }
 
@@ -385,7 +385,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
      *
      * @param realFps
      */
-    public OnlineStreamInfo realFps(Long realFps) {
+    public OnlineStreamInfo realFps(Double realFps) {
         this.realFps = realFps;
         return this;
     }
