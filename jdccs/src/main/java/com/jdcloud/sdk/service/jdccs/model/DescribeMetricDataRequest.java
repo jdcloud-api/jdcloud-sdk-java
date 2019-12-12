@@ -35,7 +35,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源的uuid
+     * 资源ID
      * Required:true
      */
     @Required
@@ -61,7 +61,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private String timeInterval;
 
     /**
-     * 机房名称（英文标识）
+     * IDC机房ID
      * Required:true
      */
     @Required
@@ -76,7 +76,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 资源的uuid
+     * get 资源ID
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 资源的uuid
+     * set 资源ID
      *
      * @param resourceId
      */
@@ -148,7 +148,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 机房名称（英文标识）
+     * get IDC机房ID
      *
      * @return
      */
@@ -157,7 +157,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 机房名称（英文标识）
+     * set IDC机房ID
      *
      * @param idc
      */
@@ -185,7 +185,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 资源的uuid
+     * set 资源ID
      *
      * @param resourceId
      */
@@ -225,7 +225,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 机房名称（英文标识）
+     * set IDC机房ID
      *
      * @param idc
      */

@@ -38,12 +38,12 @@ public class DescribeCabinetsRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码, 默认为1, 取值范围：[1,∞)
+     * 页码, 默认为1
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,100]
+     * 分页大小，默认为20
      */
     private Integer pageSize;
 
@@ -55,7 +55,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
     private List<Filter> filters;
 
     /**
-     * IDC机房id
+     * IDC机房ID
      * Required:true
      */
     @Required
@@ -63,7 +63,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
 
 
     /**
-     * get 页码, 默认为1, 取值范围：[1,∞)
+     * get 页码, 默认为1
      *
      * @return
      */
@@ -72,7 +72,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 页码, 默认为1
      *
      * @param pageNumber
      */
@@ -81,7 +81,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,100]
+     * get 分页大小，默认为20
      *
      * @return
      */
@@ -90,7 +90,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 分页大小，默认为20
      *
      * @param pageSize
      */
@@ -121,7 +121,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * get IDC机房id
+     * get IDC机房ID
      *
      * @return
      */
@@ -130,7 +130,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * set IDC机房id
+     * set IDC机房ID
      *
      * @param idc
      */
@@ -140,7 +140,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
 
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 页码, 默认为1
      *
      * @param pageNumber
      */
@@ -150,7 +150,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 分页大小，默认为20
      *
      * @param pageSize
      */
@@ -172,7 +172,7 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * set IDC机房id
+     * set IDC机房ID
      *
      * @param idc
      */

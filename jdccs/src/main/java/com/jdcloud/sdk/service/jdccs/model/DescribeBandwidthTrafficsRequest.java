@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Resource API
- * 云托管服务的资源API
+ * Monitor API
+ * 云托管服务的监控API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,16 +24,13 @@
 
 package com.jdcloud.sdk.service.jdccs.model;
 
-import java.util.List;
-import java.util.ArrayList;
-import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询机房房间号列表
+ * 查询带宽（出口）流量列表
  */
-public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -46,12 +43,6 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
      * 分页大小，默认为20
      */
     private Integer pageSize;
-
-    /**
-     * roomNo - 房间号，精确匹配，支持多个
-
-     */
-    private List<Filter> filters;
 
     /**
      * IDC机房ID
@@ -98,26 +89,6 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get roomNo - 房间号，精确匹配，支持多个
-
-     *
-     * @return
-     */
-    public List<Filter> getFilters() {
-        return filters;
-    }
-
-    /**
-     * set roomNo - 房间号，精确匹配，支持多个
-
-     *
-     * @param filters
-     */
-    public void setFilters(List<Filter> filters) {
-        this.filters = filters;
-    }
-
-    /**
      * get IDC机房ID
      *
      * @return
@@ -141,7 +112,7 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param pageNumber
      */
-    public DescribeRoomsRequest pageNumber(Integer pageNumber) {
+    public DescribeBandwidthTrafficsRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -151,19 +122,8 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param pageSize
      */
-    public DescribeRoomsRequest pageSize(Integer pageSize) {
+    public DescribeBandwidthTrafficsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
-        return this;
-    }
-
-    /**
-     * set roomNo - 房间号，精确匹配，支持多个
-
-     *
-     * @param filters
-     */
-    public DescribeRoomsRequest filters(List<Filter> filters) {
-        this.filters = filters;
         return this;
     }
 
@@ -172,23 +132,10 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param idc
      */
-    public DescribeRoomsRequest idc(String idc) {
+    public DescribeBandwidthTrafficsRequest idc(String idc) {
         this.idc = idc;
         return this;
     }
 
-
-    /**
-     * add item to roomNo - 房间号，精确匹配，支持多个
-
-     *
-     * @param filter
-     */
-    public void addFilter(Filter filter) {
-        if (this.filters == null) {
-            this.filters = new ArrayList<>();
-        }
-        this.filters.add(filter);
-    }
 
 }

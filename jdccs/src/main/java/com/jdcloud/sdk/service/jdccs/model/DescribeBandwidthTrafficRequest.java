@@ -28,18 +28,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看某资源的最后一个监控数据点（目前只支持机柜电流）
+ * 查询带宽（出口）流量（资源）详情
  */
-public class LastDownsampleRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeBandwidthTrafficRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
-     * Required:true
-     */
-    @Required
-    private String resourceId;
 
     /**
      * IDC机房ID
@@ -49,30 +42,12 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     private String idc;
 
     /**
-     * 监控项英文标识(id)
+     * 带宽（出口）实例ID
      * Required:true
      */
     @Required
-    private String metric;
+    private String bandwidthId;
 
-
-    /**
-     * get 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
-     *
-     * @return
-     */
-    public String getResourceId() {
-        return resourceId;
-    }
-
-    /**
-     * set 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
-     *
-     * @param resourceId
-     */
-    public void setResourceId(String resourceId) {
-        this.resourceId = resourceId;
-    }
 
     /**
      * get IDC机房ID
@@ -93,51 +68,41 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 监控项英文标识(id)
+     * get 带宽（出口）实例ID
      *
      * @return
      */
-    public String getMetric() {
-        return metric;
+    public String getBandwidthId() {
+        return bandwidthId;
     }
 
     /**
-     * set 监控项英文标识(id)
+     * set 带宽（出口）实例ID
      *
-     * @param metric
+     * @param bandwidthId
      */
-    public void setMetric(String metric) {
-        this.metric = metric;
+    public void setBandwidthId(String bandwidthId) {
+        this.bandwidthId = bandwidthId;
     }
 
-
-    /**
-     * set 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
-     *
-     * @param resourceId
-     */
-    public LastDownsampleRequest resourceId(String resourceId) {
-        this.resourceId = resourceId;
-        return this;
-    }
 
     /**
      * set IDC机房ID
      *
      * @param idc
      */
-    public LastDownsampleRequest idc(String idc) {
+    public DescribeBandwidthTrafficRequest idc(String idc) {
         this.idc = idc;
         return this;
     }
 
     /**
-     * set 监控项英文标识(id)
+     * set 带宽（出口）实例ID
      *
-     * @param metric
+     * @param bandwidthId
      */
-    public LastDownsampleRequest metric(String metric) {
-        this.metric = metric;
+    public DescribeBandwidthTrafficRequest bandwidthId(String bandwidthId) {
+        this.bandwidthId = bandwidthId;
         return this;
     }
 
