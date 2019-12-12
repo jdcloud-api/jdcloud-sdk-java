@@ -37,18 +37,24 @@ import com.jdcloud.sdk.service.jdccs.client.DescribeMetricDataExecutor;
 import com.jdcloud.sdk.service.jdccs.model.LastDownsampleRequest;
 import com.jdcloud.sdk.service.jdccs.model.LastDownsampleResponse;
 import com.jdcloud.sdk.service.jdccs.client.LastDownsampleExecutor;
-import com.jdcloud.sdk.service.jdccs.model.DescribeIdcsRequest;
-import com.jdcloud.sdk.service.jdccs.model.DescribeIdcsResponse;
-import com.jdcloud.sdk.service.jdccs.client.DescribeIdcsExecutor;
-import com.jdcloud.sdk.service.jdccs.model.DescribeCabinetsRequest;
-import com.jdcloud.sdk.service.jdccs.model.DescribeCabinetsResponse;
-import com.jdcloud.sdk.service.jdccs.client.DescribeCabinetsExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeMetricsExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeRoomsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeRoomsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeRoomsExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthTrafficRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthTrafficResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeBandwidthTrafficExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthTrafficsRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthTrafficsResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeBandwidthTrafficsExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeIdcsRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeIdcsResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeIdcsExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeCabinetsRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeCabinetsResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeCabinetsExecutor;
 
 /**
  * jdccsClient
@@ -111,7 +117,7 @@ public class JdccsClient extends JdcloudClient {
     }
 
     /**
-     * 查看某资源的最后一个监控数据点
+     * 查看某资源的最后一个监控数据点（目前只支持机柜电流）
      *
      * @param request
      * @return
@@ -119,28 +125,6 @@ public class JdccsClient extends JdcloudClient {
      */
     public LastDownsampleResponse lastDownsample(LastDownsampleRequest request) throws JdcloudSdkException {
         return new LastDownsampleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询IDC机房列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeIdcsResponse describeIdcs(DescribeIdcsRequest request) throws JdcloudSdkException {
-        return new DescribeIdcsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询机柜列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeCabinetsResponse describeCabinets(DescribeCabinetsRequest request) throws JdcloudSdkException {
-        return new DescribeCabinetsExecutor().client(this).execute(request);
     }
 
     /**
@@ -163,6 +147,50 @@ public class JdccsClient extends JdcloudClient {
      */
     public DescribeRoomsResponse describeRooms(DescribeRoomsRequest request) throws JdcloudSdkException {
         return new DescribeRoomsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询带宽（出口）流量（资源）详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBandwidthTrafficResponse describeBandwidthTraffic(DescribeBandwidthTrafficRequest request) throws JdcloudSdkException {
+        return new DescribeBandwidthTrafficExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询带宽（出口）流量列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBandwidthTrafficsResponse describeBandwidthTraffics(DescribeBandwidthTrafficsRequest request) throws JdcloudSdkException {
+        return new DescribeBandwidthTrafficsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询IDC机房列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIdcsResponse describeIdcs(DescribeIdcsRequest request) throws JdcloudSdkException {
+        return new DescribeIdcsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询机柜列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCabinetsResponse describeCabinets(DescribeCabinetsRequest request) throws JdcloudSdkException {
+        return new DescribeCabinetsExecutor().client(this).execute(request);
     }
 
 

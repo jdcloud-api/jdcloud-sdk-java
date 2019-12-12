@@ -28,7 +28,7 @@ package com.jdcloud.sdk.service.jdccs.model;
 /**
  * 机柜
  */
-public class Cabinet  implements java.io.Serializable {
+public class DescribeCabinet  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -91,21 +91,6 @@ public class Cabinet  implements java.io.Serializable {
      * 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      */
     private String endTime;
-
-    /**
-     * 设备数量
-     */
-    private Integer deviceNum;
-
-    /**
-     * 占用U数(U)
-     */
-    private Integer rackUOccupy;
-
-    /**
-     * 空闲U数(U)
-     */
-    private Integer rackUFree;
 
 
     /**
@@ -324,67 +309,13 @@ public class Cabinet  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
-    /**
-     * get 设备数量
-     *
-     * @return
-     */
-    public Integer getDeviceNum() {
-        return deviceNum;
-    }
-
-    /**
-     * set 设备数量
-     *
-     * @param deviceNum
-     */
-    public void setDeviceNum(Integer deviceNum) {
-        this.deviceNum = deviceNum;
-    }
-
-    /**
-     * get 占用U数(U)
-     *
-     * @return
-     */
-    public Integer getRackUOccupy() {
-        return rackUOccupy;
-    }
-
-    /**
-     * set 占用U数(U)
-     *
-     * @param rackUOccupy
-     */
-    public void setRackUOccupy(Integer rackUOccupy) {
-        this.rackUOccupy = rackUOccupy;
-    }
-
-    /**
-     * get 空闲U数(U)
-     *
-     * @return
-     */
-    public Integer getRackUFree() {
-        return rackUFree;
-    }
-
-    /**
-     * set 空闲U数(U)
-     *
-     * @param rackUFree
-     */
-    public void setRackUFree(Integer rackUFree) {
-        this.rackUFree = rackUFree;
-    }
-
 
     /**
      * set 机房英文标识
      *
      * @param idc
      */
-    public Cabinet idc(String idc) {
+    public DescribeCabinet idc(String idc) {
         this.idc = idc;
         return this;
     }
@@ -394,7 +325,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param idcName
      */
-    public Cabinet idcName(String idcName) {
+    public DescribeCabinet idcName(String idcName) {
         this.idcName = idcName;
         return this;
     }
@@ -404,7 +335,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param cabinetId
      */
-    public Cabinet cabinetId(String cabinetId) {
+    public DescribeCabinet cabinetId(String cabinetId) {
         this.cabinetId = cabinetId;
         return this;
     }
@@ -414,7 +345,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param cabinetNo
      */
-    public Cabinet cabinetNo(String cabinetNo) {
+    public DescribeCabinet cabinetNo(String cabinetNo) {
         this.cabinetNo = cabinetNo;
         return this;
     }
@@ -424,7 +355,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param roomNo
      */
-    public Cabinet roomNo(String roomNo) {
+    public DescribeCabinet roomNo(String roomNo) {
         this.roomNo = roomNo;
         return this;
     }
@@ -434,7 +365,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param cabinetSpace
      */
-    public Cabinet cabinetSpace(Integer cabinetSpace) {
+    public DescribeCabinet cabinetSpace(Integer cabinetSpace) {
         this.cabinetSpace = cabinetSpace;
         return this;
     }
@@ -444,7 +375,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param cabinetPower
      */
-    public Cabinet cabinetPower(Integer cabinetPower) {
+    public DescribeCabinet cabinetPower(Integer cabinetPower) {
         this.cabinetPower = cabinetPower;
         return this;
     }
@@ -454,7 +385,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param cabinetType
      */
-    public Cabinet cabinetType(String cabinetType) {
+    public DescribeCabinet cabinetType(String cabinetType) {
         this.cabinetType = cabinetType;
         return this;
     }
@@ -464,7 +395,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param cabinetOpenStatus
      */
-    public Cabinet cabinetOpenStatus(String cabinetOpenStatus) {
+    public DescribeCabinet cabinetOpenStatus(String cabinetOpenStatus) {
         this.cabinetOpenStatus = cabinetOpenStatus;
         return this;
     }
@@ -474,7 +405,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param cabinetOpenTime
      */
-    public Cabinet cabinetOpenTime(String cabinetOpenTime) {
+    public DescribeCabinet cabinetOpenTime(String cabinetOpenTime) {
         this.cabinetOpenTime = cabinetOpenTime;
         return this;
     }
@@ -484,7 +415,7 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param startTime
      */
-    public Cabinet startTime(String startTime) {
+    public DescribeCabinet startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -494,38 +425,8 @@ public class Cabinet  implements java.io.Serializable {
      *
      * @param endTime
      */
-    public Cabinet endTime(String endTime) {
+    public DescribeCabinet endTime(String endTime) {
         this.endTime = endTime;
-        return this;
-    }
-
-    /**
-     * set 设备数量
-     *
-     * @param deviceNum
-     */
-    public Cabinet deviceNum(Integer deviceNum) {
-        this.deviceNum = deviceNum;
-        return this;
-    }
-
-    /**
-     * set 占用U数(U)
-     *
-     * @param rackUOccupy
-     */
-    public Cabinet rackUOccupy(Integer rackUOccupy) {
-        this.rackUOccupy = rackUOccupy;
-        return this;
-    }
-
-    /**
-     * set 空闲U数(U)
-     *
-     * @param rackUFree
-     */
-    public Cabinet rackUFree(Integer rackUFree) {
-        this.rackUFree = rackUFree;
         return this;
     }
 

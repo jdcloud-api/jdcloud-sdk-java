@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.jdccs.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看某资源的最后一个监控数据点（目前只支持机柜电流）
+ * 查询带宽（出口）流量（资源）详情
  */
-public class LastDownsampleResponse extends JdcloudResponse<LastDownsampleResult> implements java.io.Serializable {
+public class DescribeBandwidthTrafficResponse extends JdcloudResponse<DescribeBandwidthTrafficResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jdccs.model.LastDownsampleResponse;
 
 /**
- * 查看某资源的最后一个监控数据点
+ * 查看某资源的最后一个监控数据点（目前只支持机柜电流）
  */
 class LastDownsampleExecutor extends JdcloudExecutor {
 

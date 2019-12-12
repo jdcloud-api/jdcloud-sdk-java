@@ -38,7 +38,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     private String metric;
 
     /**
-     * 资源的uuid
+     * 资源ID
      */
     private String resourceId;
 
@@ -67,7 +67,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     }
 
     /**
-     * get 资源的uuid
+     * get 资源ID
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     }
 
     /**
-     * set 资源的uuid
+     * set 资源ID
      *
      * @param resourceId
      */
@@ -114,7 +114,7 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     }
 
     /**
-     * set 资源的uuid
+     * set 资源ID
      *
      * @param resourceId
      */

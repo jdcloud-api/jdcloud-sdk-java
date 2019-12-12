@@ -34,18 +34,18 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码, 默认为1, 取值范围：[1,∞)
+     * 页码, 默认为1
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小，默认为20，取值范围：[10,100]
+     * 分页大小，默认为20
      */
     private Integer pageSize;
 
 
     /**
-     * get 页码, 默认为1, 取值范围：[1,∞)
+     * get 页码, 默认为1
      *
      * @return
      */
@@ -54,7 +54,7 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 页码, 默认为1
      *
      * @param pageNumber
      */
@@ -63,7 +63,7 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 分页大小，默认为20，取值范围：[10,100]
+     * get 分页大小，默认为20
      *
      * @return
      */
@@ -72,7 +72,7 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 分页大小，默认为20
      *
      * @param pageSize
      */
@@ -82,7 +82,7 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 页码, 默认为1, 取值范围：[1,∞)
+     * set 页码, 默认为1
      *
      * @param pageNumber
      */
@@ -92,7 +92,7 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 分页大小，默认为20，取值范围：[10,100]
+     * set 分页大小，默认为20
      *
      * @param pageSize
      */

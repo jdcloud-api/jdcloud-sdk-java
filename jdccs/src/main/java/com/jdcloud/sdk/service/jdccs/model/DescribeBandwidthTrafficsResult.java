@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Resource API
- * 云托管服务的资源API
+ * Monitor API
+ * 云托管服务的监控API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,20 +26,20 @@ package com.jdcloud.sdk.service.jdccs.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.jdccs.model.DescribeCabinet;
+import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthTraffic;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询机柜列表
+ * 查询带宽（出口）流量列表
  */
-public class DescribeCabinetsResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeBandwidthTrafficsResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * cabinets
+     * bandwidthTraffics
      */
-    private List<DescribeCabinet> cabinets;
+    private List<DescribeBandwidthTraffic> bandwidthTraffics;
 
     /**
      * 页码
@@ -58,21 +58,21 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * get cabinets
+     * get bandwidthTraffics
      *
      * @return
      */
-    public List<DescribeCabinet> getCabinets() {
-        return cabinets;
+    public List<DescribeBandwidthTraffic> getBandwidthTraffics() {
+        return bandwidthTraffics;
     }
 
     /**
-     * set cabinets
+     * set bandwidthTraffics
      *
-     * @param cabinets
+     * @param bandwidthTraffics
      */
-    public void setCabinets(List<DescribeCabinet> cabinets) {
-        this.cabinets = cabinets;
+    public void setBandwidthTraffics(List<DescribeBandwidthTraffic> bandwidthTraffics) {
+        this.bandwidthTraffics = bandwidthTraffics;
     }
 
     /**
@@ -131,12 +131,12 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set cabinets
+     * set bandwidthTraffics
      *
-     * @param cabinets
+     * @param bandwidthTraffics
      */
-    public DescribeCabinetsResult cabinets(List<DescribeCabinet> cabinets) {
-        this.cabinets = cabinets;
+    public DescribeBandwidthTrafficsResult bandwidthTraffics(List<DescribeBandwidthTraffic> bandwidthTraffics) {
+        this.bandwidthTraffics = bandwidthTraffics;
         return this;
     }
 
@@ -145,7 +145,7 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
      *
      * @param pageNumber
      */
-    public DescribeCabinetsResult pageNumber(Integer pageNumber) {
+    public DescribeBandwidthTrafficsResult pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -155,7 +155,7 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
      *
      * @param pageSize
      */
-    public DescribeCabinetsResult pageSize(Integer pageSize) {
+    public DescribeBandwidthTrafficsResult pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -165,22 +165,22 @@ public class DescribeCabinetsResult extends JdcloudResult implements java.io.Ser
      *
      * @param totalCount
      */
-    public DescribeCabinetsResult totalCount(Integer totalCount) {
+    public DescribeBandwidthTrafficsResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
 
 
     /**
-     * add item to cabinets
+     * add item to bandwidthTraffics
      *
-     * @param cabinet
+     * @param bandwidthTraffic
      */
-    public void addCabinet(DescribeCabinet cabinet) {
-        if (this.cabinets == null) {
-            this.cabinets = new ArrayList<>();
+    public void addBandwidthTraffic(DescribeBandwidthTraffic bandwidthTraffic) {
+        if (this.bandwidthTraffics == null) {
+            this.bandwidthTraffics = new ArrayList<>();
         }
-        this.cabinets.add(cabinet);
+        this.bandwidthTraffics.add(bandwidthTraffic);
     }
 
 }

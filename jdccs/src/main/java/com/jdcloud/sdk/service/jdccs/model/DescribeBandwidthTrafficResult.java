@@ -24,64 +24,50 @@
 
 package com.jdcloud.sdk.service.jdccs.model;
 
-import java.util.List;
-import java.util.ArrayList;
-import com.jdcloud.sdk.service.jdccs.model.LastDownsampleRespItem;
+import com.jdcloud.sdk.service.jdccs.model.BandwidthTraffic;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看某资源的最后一个监控数据点（目前只支持机柜电流）
+ * 查询带宽（出口）流量（资源）详情
  */
-public class LastDownsampleResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeBandwidthTrafficResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * items
+     * 带宽（出口）流量（资源）详情
      */
-    private List<LastDownsampleRespItem> items;
+    private BandwidthTraffic bandwidthTraffic;
 
 
     /**
-     * get items
+     * get 带宽（出口）流量（资源）详情
      *
      * @return
      */
-    public List<LastDownsampleRespItem> getItems() {
-        return items;
+    public BandwidthTraffic getBandwidthTraffic() {
+        return bandwidthTraffic;
     }
 
     /**
-     * set items
+     * set 带宽（出口）流量（资源）详情
      *
-     * @param items
+     * @param bandwidthTraffic
      */
-    public void setItems(List<LastDownsampleRespItem> items) {
-        this.items = items;
+    public void setBandwidthTraffic(BandwidthTraffic bandwidthTraffic) {
+        this.bandwidthTraffic = bandwidthTraffic;
     }
 
 
     /**
-     * set items
+     * set 带宽（出口）流量（资源）详情
      *
-     * @param items
+     * @param bandwidthTraffic
      */
-    public LastDownsampleResult items(List<LastDownsampleRespItem> items) {
-        this.items = items;
+    public DescribeBandwidthTrafficResult bandwidthTraffic(BandwidthTraffic bandwidthTraffic) {
+        this.bandwidthTraffic = bandwidthTraffic;
         return this;
     }
 
-
-    /**
-     * add item to items
-     *
-     * @param item
-     */
-    public void addItem(LastDownsampleRespItem item) {
-        if (this.items == null) {
-            this.items = new ArrayList<>();
-        }
-        this.items.add(item);
-    }
 
 }
