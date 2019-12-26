@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vpc.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.charge.model.Charge;
 
 /**
@@ -69,7 +71,7 @@ public class ElasticIp  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 实例类型
+     * 实例类型,取值为：compute、lb、container、pod
      */
     private String instanceType;
 
@@ -87,6 +89,11 @@ public class ElasticIp  implements java.io.Serializable {
      * 弹性ip可用区属性，如果为空，表示全可用区
      */
     private String az;
+
+    /**
+     * Tag信息
+     */
+    private List<Tag> tags;
 
 
     /**
@@ -216,7 +223,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get 实例类型
+     * get 实例类型,取值为：compute、lb、container、pod
      *
      * @return
      */
@@ -225,7 +232,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 实例类型,取值为：compute、lb、container、pod
      *
      * @param instanceType
      */
@@ -285,6 +292,24 @@ public class ElasticIp  implements java.io.Serializable {
      */
     public void setAz(String az) {
         this.az = az;
+    }
+
+    /**
+     * get Tag信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
 
@@ -359,7 +384,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型
+     * set 实例类型,取值为：compute、lb、container、pod
      *
      * @param instanceType
      */
@@ -398,5 +423,27 @@ public class ElasticIp  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public ElasticIp tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
 }

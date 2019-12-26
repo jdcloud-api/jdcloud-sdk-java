@@ -43,6 +43,11 @@ public class Customer  implements java.io.Serializable {
     private String pin;
 
     /**
+     * 账户名
+     */
+    private String loginName;
+
+    /**
      * 渠道商ID
      */
     private String distributorId;
@@ -172,6 +177,24 @@ public class Customer  implements java.io.Serializable {
      */
     public void setPin(String pin) {
         this.pin = pin;
+    }
+
+    /**
+     * get 账户名
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 账户名
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 
     /**
@@ -534,6 +557,16 @@ public class Customer  implements java.io.Serializable {
      */
     public Customer pin(String pin) {
         this.pin = pin;
+        return this;
+    }
+
+    /**
+     * set 账户名
+     *
+     * @param loginName
+     */
+    public Customer loginName(String loginName) {
+        this.loginName = loginName;
         return this;
     }
 

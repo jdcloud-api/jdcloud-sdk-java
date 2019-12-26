@@ -125,6 +125,11 @@ public class NodeGroup  implements java.io.Serializable {
     private NodeGroupProgress progress;
 
     /**
+     * 自动伸缩配置
+     */
+    private CAConfig caConfig;
+
+    /**
      * 创建时间
      */
     private String createdTime;
@@ -455,6 +460,24 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
     /**
+     * get 自动伸缩配置
+     *
+     * @return
+     */
+    public CAConfig getCaConfig() {
+        return caConfig;
+    }
+
+    /**
+     * set 自动伸缩配置
+     *
+     * @param caConfig
+     */
+    public void setCaConfig(CAConfig caConfig) {
+        this.caConfig = caConfig;
+    }
+
+    /**
      * get 创建时间
      *
      * @return
@@ -650,6 +673,16 @@ public class NodeGroup  implements java.io.Serializable {
      */
     public NodeGroup progress(NodeGroupProgress progress) {
         this.progress = progress;
+        return this;
+    }
+
+    /**
+     * set 自动伸缩配置
+     *
+     * @param caConfig
+     */
+    public NodeGroup caConfig(CAConfig caConfig) {
+        this.caConfig = caConfig;
         return this;
     }
 

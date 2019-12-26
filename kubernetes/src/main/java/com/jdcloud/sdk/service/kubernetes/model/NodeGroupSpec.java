@@ -83,6 +83,11 @@ public class NodeGroupSpec  implements java.io.Serializable {
      */
     private Boolean autoRepair;
 
+    /**
+     * 自动伸缩配置
+     */
+    private CAConfigSpec caConfig;
+
 
     /**
      * get 名称
@@ -228,6 +233,24 @@ public class NodeGroupSpec  implements java.io.Serializable {
         this.autoRepair = autoRepair;
     }
 
+    /**
+     * get 自动伸缩配置
+     *
+     * @return
+     */
+    public CAConfigSpec getCaConfig() {
+        return caConfig;
+    }
+
+    /**
+     * set 自动伸缩配置
+     *
+     * @param caConfig
+     */
+    public void setCaConfig(CAConfigSpec caConfig) {
+        this.caConfig = caConfig;
+    }
+
 
     /**
      * set 名称
@@ -306,6 +329,16 @@ public class NodeGroupSpec  implements java.io.Serializable {
      */
     public NodeGroupSpec autoRepair(Boolean autoRepair) {
         this.autoRepair = autoRepair;
+        return this;
+    }
+
+    /**
+     * set 自动伸缩配置
+     *
+     * @param caConfig
+     */
+    public NodeGroupSpec caConfig(CAConfigSpec caConfig) {
+        this.caConfig = caConfig;
         return this;
     }
 

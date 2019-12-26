@@ -77,6 +77,11 @@ public class SecurityGroupRule  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * 安全组规则类型, default：默认安全组规则，custom：自定义安全组规则
+     */
+    private String ruleType;
+
 
     /**
      * get 安全组规则ID
@@ -240,6 +245,24 @@ public class SecurityGroupRule  implements java.io.Serializable {
         this.description = description;
     }
 
+    /**
+     * get 安全组规则类型, default：默认安全组规则，custom：自定义安全组规则
+     *
+     * @return
+     */
+    public String getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 安全组规则类型, default：默认安全组规则，custom：自定义安全组规则
+     *
+     * @param ruleType
+     */
+    public void setRuleType(String ruleType) {
+        this.ruleType = ruleType;
+    }
+
 
     /**
      * set 安全组规则ID
@@ -328,6 +351,16 @@ public class SecurityGroupRule  implements java.io.Serializable {
      */
     public SecurityGroupRule description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 安全组规则类型, default：默认安全组规则，custom：自定义安全组规则
+     *
+     * @param ruleType
+     */
+    public SecurityGroupRule ruleType(String ruleType) {
+        this.ruleType = ruleType;
         return this;
     }
 

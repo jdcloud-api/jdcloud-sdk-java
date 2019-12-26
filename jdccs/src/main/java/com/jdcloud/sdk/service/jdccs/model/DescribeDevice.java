@@ -88,9 +88,14 @@ public class DescribeDevice  implements java.io.Serializable {
     private String assetBelong;
 
     /**
-     * 资产状态 inWarehouse:已入库 launched:已上架
+     * 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      */
     private String assetStatus;
+
+    /**
+     * 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     */
+    private String deviceOpenTime;
 
 
     /**
@@ -292,7 +297,7 @@ public class DescribeDevice  implements java.io.Serializable {
     }
 
     /**
-     * get 资产状态 inWarehouse:已入库 launched:已上架
+     * get 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      *
      * @return
      */
@@ -301,12 +306,30 @@ public class DescribeDevice  implements java.io.Serializable {
     }
 
     /**
-     * set 资产状态 inWarehouse:已入库 launched:已上架
+     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      *
      * @param assetStatus
      */
     public void setAssetStatus(String assetStatus) {
         this.assetStatus = assetStatus;
+    }
+
+    /**
+     * get 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @return
+     */
+    public String getDeviceOpenTime() {
+        return deviceOpenTime;
+    }
+
+    /**
+     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param deviceOpenTime
+     */
+    public void setDeviceOpenTime(String deviceOpenTime) {
+        this.deviceOpenTime = deviceOpenTime;
     }
 
 
@@ -421,12 +444,22 @@ public class DescribeDevice  implements java.io.Serializable {
     }
 
     /**
-     * set 资产状态 inWarehouse:已入库 launched:已上架
+     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      *
      * @param assetStatus
      */
     public DescribeDevice assetStatus(String assetStatus) {
         this.assetStatus = assetStatus;
+        return this;
+    }
+
+    /**
+     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param deviceOpenTime
+     */
+    public DescribeDevice deviceOpenTime(String deviceOpenTime) {
+        this.deviceOpenTime = deviceOpenTime;
         return this;
     }
 

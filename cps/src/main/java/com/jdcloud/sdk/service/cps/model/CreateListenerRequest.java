@@ -47,10 +47,10 @@ public class CreateListenerRequest extends JdcloudRequest implements java.io.Ser
      * Required:true
      */
     @Required
-    private ListenerSpec loadBalancerSpec;
+    private ListenerSpec listenerSpec;
 
     /**
-     * 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+     * 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -84,21 +84,21 @@ public class CreateListenerRequest extends JdcloudRequest implements java.io.Ser
      *
      * @return
      */
-    public ListenerSpec getLoadBalancerSpec() {
-        return loadBalancerSpec;
+    public ListenerSpec getListenerSpec() {
+        return listenerSpec;
     }
 
     /**
      * set 监听器配置
      *
-     * @param loadBalancerSpec
+     * @param listenerSpec
      */
-    public void setLoadBalancerSpec(ListenerSpec loadBalancerSpec) {
-        this.loadBalancerSpec = loadBalancerSpec;
+    public void setListenerSpec(ListenerSpec listenerSpec) {
+        this.listenerSpec = listenerSpec;
     }
 
     /**
-     * get 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+     * get 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      *
      * @return
      */
@@ -107,7 +107,7 @@ public class CreateListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -131,15 +131,15 @@ public class CreateListenerRequest extends JdcloudRequest implements java.io.Ser
     /**
      * set 监听器配置
      *
-     * @param loadBalancerSpec
+     * @param listenerSpec
      */
-    public CreateListenerRequest loadBalancerSpec(ListenerSpec loadBalancerSpec) {
-        this.loadBalancerSpec = loadBalancerSpec;
+    public CreateListenerRequest listenerSpec(ListenerSpec listenerSpec) {
+        this.listenerSpec = listenerSpec;
         return this;
     }
 
     /**
-     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */

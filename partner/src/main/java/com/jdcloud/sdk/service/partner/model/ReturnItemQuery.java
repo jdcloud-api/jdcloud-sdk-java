@@ -68,6 +68,11 @@ public class ReturnItemQuery  implements java.io.Serializable {
     private Integer returnType;
 
     /**
+     * 返还依据
+     */
+    private Integer returnRuleType;
+
+    /**
      * 项目条件
      */
     private String conditionItem;
@@ -257,6 +262,24 @@ public class ReturnItemQuery  implements java.io.Serializable {
      */
     public void setReturnType(Integer returnType) {
         this.returnType = returnType;
+    }
+
+    /**
+     * get 返还依据
+     *
+     * @return
+     */
+    public Integer getReturnRuleType() {
+        return returnRuleType;
+    }
+
+    /**
+     * set 返还依据
+     *
+     * @param returnRuleType
+     */
+    public void setReturnRuleType(Integer returnRuleType) {
+        this.returnRuleType = returnRuleType;
     }
 
     /**
@@ -561,6 +584,16 @@ public class ReturnItemQuery  implements java.io.Serializable {
      */
     public ReturnItemQuery returnType(Integer returnType) {
         this.returnType = returnType;
+        return this;
+    }
+
+    /**
+     * set 返还依据
+     *
+     * @param returnRuleType
+     */
+    public ReturnItemQuery returnRuleType(Integer returnRuleType) {
+        this.returnRuleType = returnRuleType;
         return this;
     }
 

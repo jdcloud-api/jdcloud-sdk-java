@@ -33,7 +33,40 @@ public class AddDatapushVenderResult extends JdcloudResult implements java.io.Se
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 操作是否成功
+     */
+    private Boolean success;
 
+
+    /**
+     * get 操作是否成功
+     *
+     * @return
+     */
+    public Boolean getSuccess() {
+        return success;
+    }
+
+    /**
+     * set 操作是否成功
+     *
+     * @param success
+     */
+    public void setSuccess(Boolean success) {
+        this.success = success;
+    }
+
+
+    /**
+     * set 操作是否成功
+     *
+     * @param success
+     */
+    public AddDatapushVenderResult success(Boolean success) {
+        this.success = success;
+        return this;
+    }
 
 
 }

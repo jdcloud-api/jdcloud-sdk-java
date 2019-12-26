@@ -37,7 +37,7 @@ public class ModifyListenerResult extends JdcloudResult implements java.io.Seria
     /**
      * 监听器详细信息
      */
-    private Listener loadBalancer;
+    private Listener listener;
 
 
     /**
@@ -45,27 +45,27 @@ public class ModifyListenerResult extends JdcloudResult implements java.io.Seria
      *
      * @return
      */
-    public Listener getLoadBalancer() {
-        return loadBalancer;
+    public Listener getListener() {
+        return listener;
     }
 
     /**
      * set 监听器详细信息
      *
-     * @param loadBalancer
+     * @param listener
      */
-    public void setLoadBalancer(Listener loadBalancer) {
-        this.loadBalancer = loadBalancer;
+    public void setListener(Listener listener) {
+        this.listener = listener;
     }
 
 
     /**
      * set 监听器详细信息
      *
-     * @param loadBalancer
+     * @param listener
      */
-    public ModifyListenerResult loadBalancer(Listener loadBalancer) {
-        this.loadBalancer = loadBalancer;
+    public ModifyListenerResult listener(Listener listener) {
+        this.listener = listener;
         return this;
     }
 

@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vpc.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -51,6 +53,11 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
      */
     @Required
     private ElasticIpSpec elasticIpSpec;
+
+    /**
+     * 用户标签
+     */
+    private List<Tag> userTags;
 
 
     /**
@@ -107,6 +114,24 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         this.elasticIpSpec = elasticIpSpec;
     }
 
+    /**
+     * get 用户标签
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户标签
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
 
     /**
      * set 购买弹性ip数量；取值范围：[1,100]
@@ -138,5 +163,27 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 用户标签
+     *
+     * @param userTags
+     */
+    public CreateElasticIpSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
+    }
 
 }

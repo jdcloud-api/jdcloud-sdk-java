@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询开通数据推送的数据库实例
+ * 查询已绑定数据推送的数据库实例
  */
 public class DescribeRdsInstancesRequest extends JdcloudRequest implements java.io.Serializable {
 

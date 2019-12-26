@@ -55,6 +55,11 @@ public class DescribeElasticIpsRequest extends JdcloudRequest implements java.io
     private String status;
 
     /**
+     * 是否包含负载均衡
+     */
+    private String includeLB;
+
+    /**
      * elasticIpId - 弹性公网IPID，精确匹配，支持多个&lt;br/&gt;
 elasticIp - 弹性公网IP，精确匹配，支持多个
 
@@ -121,6 +126,24 @@ elasticIp - 弹性公网IP，精确匹配，支持多个
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    /**
+     * get 是否包含负载均衡
+     *
+     * @return
+     */
+    public String getIncludeLB() {
+        return includeLB;
+    }
+
+    /**
+     * set 是否包含负载均衡
+     *
+     * @param includeLB
+     */
+    public void setIncludeLB(String includeLB) {
+        this.includeLB = includeLB;
     }
 
     /**
@@ -191,6 +214,16 @@ elasticIp - 弹性公网IP，精确匹配，支持多个
      */
     public DescribeElasticIpsRequest status(String status) {
         this.status = status;
+        return this;
+    }
+
+    /**
+     * set 是否包含负载均衡
+     *
+     * @param includeLB
+     */
+    public DescribeElasticIpsRequest includeLB(String includeLB) {
+        this.includeLB = includeLB;
         return this;
     }
 

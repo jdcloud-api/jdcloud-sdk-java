@@ -98,6 +98,11 @@ public class OperatorAchievement  implements java.io.Serializable {
     private String serviceCodeName;
 
     /**
+     * 帐户名
+     */
+    private String loginName;
+
+    /**
      * 时间
      */
     private String consumeDate;
@@ -363,6 +368,24 @@ public class OperatorAchievement  implements java.io.Serializable {
     }
 
     /**
+     * get 帐户名
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    /**
      * get 时间
      *
      * @return
@@ -598,6 +621,16 @@ public class OperatorAchievement  implements java.io.Serializable {
      */
     public OperatorAchievement serviceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
+        return this;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public OperatorAchievement loginName(String loginName) {
+        this.loginName = loginName;
         return this;
     }
 

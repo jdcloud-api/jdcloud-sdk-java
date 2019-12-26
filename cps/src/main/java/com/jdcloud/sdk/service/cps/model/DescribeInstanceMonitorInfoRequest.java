@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.cps.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -47,7 +48,8 @@ public class DescribeInstanceMonitorInfoRequest extends JdcloudRequest implement
     private Long endTime;
 
     /**
-     * cps.cpu.util - CPU使用率&lt;br/&gt;
+     * metric - 监控指标，精确匹配，支持多个，具体如下&lt;br/&gt;
+cps.cpu.util - CPU使用率&lt;br/&gt;
 cps.memory.util - 内存使用率&lt;br/&gt;
 cps.memory.used - 内存使用量&lt;br/&gt;
 cps.disk.used - 磁盘使用量&lt;br/&gt;
@@ -68,7 +70,7 @@ cps.tcp.connect.established - TCP正常连接数&lt;br/&gt;
 cps.process.total - 总进程数
 
      */
-    private List<String> metrics;
+    private List<Filter> filters;
 
     /**
      * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
@@ -122,7 +124,8 @@ cps.process.total - 总进程数
     }
 
     /**
-     * get cps.cpu.util - CPU使用率&lt;br/&gt;
+     * get metric - 监控指标，精确匹配，支持多个，具体如下&lt;br/&gt;
+cps.cpu.util - CPU使用率&lt;br/&gt;
 cps.memory.util - 内存使用率&lt;br/&gt;
 cps.memory.used - 内存使用量&lt;br/&gt;
 cps.disk.used - 磁盘使用量&lt;br/&gt;
@@ -145,12 +148,13 @@ cps.process.total - 总进程数
      *
      * @return
      */
-    public List<String> getMetrics() {
-        return metrics;
+    public List<Filter> getFilters() {
+        return filters;
     }
 
     /**
-     * set cps.cpu.util - CPU使用率&lt;br/&gt;
+     * set metric - 监控指标，精确匹配，支持多个，具体如下&lt;br/&gt;
+cps.cpu.util - CPU使用率&lt;br/&gt;
 cps.memory.util - 内存使用率&lt;br/&gt;
 cps.memory.used - 内存使用量&lt;br/&gt;
 cps.disk.used - 磁盘使用量&lt;br/&gt;
@@ -171,10 +175,10 @@ cps.tcp.connect.established - TCP正常连接数&lt;br/&gt;
 cps.process.total - 总进程数
 
      *
-     * @param metrics
+     * @param filters
      */
-    public void setMetrics(List<String> metrics) {
-        this.metrics = metrics;
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -235,7 +239,8 @@ cps.process.total - 总进程数
     }
 
     /**
-     * set cps.cpu.util - CPU使用率&lt;br/&gt;
+     * set metric - 监控指标，精确匹配，支持多个，具体如下&lt;br/&gt;
+cps.cpu.util - CPU使用率&lt;br/&gt;
 cps.memory.util - 内存使用率&lt;br/&gt;
 cps.memory.used - 内存使用量&lt;br/&gt;
 cps.disk.used - 磁盘使用量&lt;br/&gt;
@@ -256,10 +261,10 @@ cps.tcp.connect.established - TCP正常连接数&lt;br/&gt;
 cps.process.total - 总进程数
 
      *
-     * @param metrics
+     * @param filters
      */
-    public DescribeInstanceMonitorInfoRequest metrics(List<String> metrics) {
-        this.metrics = metrics;
+    public DescribeInstanceMonitorInfoRequest filters(List<Filter> filters) {
+        this.filters = filters;
         return this;
     }
 
@@ -285,7 +290,8 @@ cps.process.total - 总进程数
 
 
     /**
-     * add item to cps.cpu.util - CPU使用率&lt;br/&gt;
+     * add item to metric - 监控指标，精确匹配，支持多个，具体如下&lt;br/&gt;
+cps.cpu.util - CPU使用率&lt;br/&gt;
 cps.memory.util - 内存使用率&lt;br/&gt;
 cps.memory.used - 内存使用量&lt;br/&gt;
 cps.disk.used - 磁盘使用量&lt;br/&gt;
@@ -306,13 +312,13 @@ cps.tcp.connect.established - TCP正常连接数&lt;br/&gt;
 cps.process.total - 总进程数
 
      *
-     * @param metric
+     * @param filter
      */
-    public void addMetric(String metric) {
-        if (this.metrics == null) {
-            this.metrics = new ArrayList<>();
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
         }
-        this.metrics.add(metric);
+        this.filters.add(filter);
     }
 
 }

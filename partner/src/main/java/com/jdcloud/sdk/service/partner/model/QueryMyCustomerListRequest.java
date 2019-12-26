@@ -35,7 +35,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 客户pin（客户账户）
+     * 客户pin
      */
     private String customerPin;
 
@@ -43,6 +43,11 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
      * 客户昵称
      */
     private String aliasName;
+
+    /**
+     * 帐户名
+     */
+    private String loginName;
 
     /**
      * 关联开始时间（格式：yyyy-MM-dd HH:mm:ss）
@@ -73,7 +78,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 客户pin（客户账户）
+     * get 客户pin
      *
      * @return
      */
@@ -82,7 +87,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 客户pin（客户账户）
+     * set 客户pin
      *
      * @param customerPin
      */
@@ -106,6 +111,24 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
      */
     public void setAliasName(String aliasName) {
         this.aliasName = aliasName;
+    }
+
+    /**
+     * get 帐户名
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 
     /**
@@ -200,7 +223,7 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 客户pin（客户账户）
+     * set 客户pin
      *
      * @param customerPin
      */
@@ -216,6 +239,16 @@ public class QueryMyCustomerListRequest extends JdcloudRequest implements java.i
      */
     public QueryMyCustomerListRequest aliasName(String aliasName) {
         this.aliasName = aliasName;
+        return this;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public QueryMyCustomerListRequest loginName(String loginName) {
+        this.loginName = loginName;
         return this;
     }
 

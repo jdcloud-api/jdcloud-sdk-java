@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.edcps.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -58,6 +61,12 @@ public class DescribeAliasIpsRequest extends JdcloudRequest implements java.io.S
      * CIDR段，模糊搜索
      */
     private String cidr;
+
+    /**
+     * aliasIpId - 别名IP id&lt;br/&gt;
+
+     */
+    private List<Filter> filters;
 
     /**
      * 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
@@ -158,6 +167,26 @@ public class DescribeAliasIpsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get aliasIpId - 别名IP id&lt;br/&gt;
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set aliasIpId - 别名IP id&lt;br/&gt;
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+    /**
      * get 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @return
@@ -227,6 +256,17 @@ public class DescribeAliasIpsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * set aliasIpId - 别名IP id&lt;br/&gt;
+
+     *
+     * @param filters
+     */
+    public DescribeAliasIpsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
      * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @param regionId
@@ -236,5 +276,18 @@ public class DescribeAliasIpsRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
+    /**
+     * add item to aliasIpId - 别名IP id&lt;br/&gt;
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

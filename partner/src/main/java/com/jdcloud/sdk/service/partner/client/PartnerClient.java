@@ -34,6 +34,15 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.partner.model.QueryMyCustomerListRequest;
 import com.jdcloud.sdk.service.partner.model.QueryMyCustomerListResponse;
 import com.jdcloud.sdk.service.partner.client.QueryMyCustomerListExecutor;
+import com.jdcloud.sdk.service.partner.model.GetEachConsumptionRequest;
+import com.jdcloud.sdk.service.partner.model.GetEachConsumptionResponse;
+import com.jdcloud.sdk.service.partner.client.GetEachConsumptionExecutor;
+import com.jdcloud.sdk.service.partner.model.DescribeCustomerBillByProductRequest;
+import com.jdcloud.sdk.service.partner.model.DescribeCustomerBillByProductResponse;
+import com.jdcloud.sdk.service.partner.client.DescribeCustomerBillByProductExecutor;
+import com.jdcloud.sdk.service.partner.model.GetTotalConsumptionRequest;
+import com.jdcloud.sdk.service.partner.model.GetTotalConsumptionResponse;
+import com.jdcloud.sdk.service.partner.client.GetTotalConsumptionExecutor;
 
 /**
  * partnerClient
@@ -42,7 +51,7 @@ public class PartnerClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "partner.jdcloud-api.com";
     public final static String ServiceName = "partner";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -93,6 +102,39 @@ public class PartnerClient extends JdcloudClient {
      */
     public QueryMyCustomerListResponse queryMyCustomerList(QueryMyCustomerListRequest request) throws JdcloudSdkException {
         return new QueryMyCustomerListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询服务商下每个客户总消费数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetEachConsumptionResponse getEachConsumption(GetEachConsumptionRequest request) throws JdcloudSdkException {
+        return new GetEachConsumptionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询服务商相关pin下每个产品的消费数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCustomerBillByProductResponse describeCustomerBillByProduct(DescribeCustomerBillByProductRequest request) throws JdcloudSdkException {
+        return new DescribeCustomerBillByProductExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询服务商相关的总消费数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTotalConsumptionResponse getTotalConsumption(GetTotalConsumptionRequest request) throws JdcloudSdkException {
+        return new GetTotalConsumptionExecutor().client(this).execute(request);
     }
 
 

@@ -82,6 +82,11 @@ public class NetworkAclRule  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * 规则类型，default：默认规则，custom：自定义规则
+     */
+    private String ruleType;
+
 
     /**
      * get networkAcl规则ID
@@ -263,6 +268,24 @@ public class NetworkAclRule  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+    /**
+     * get 规则类型，default：默认规则，custom：自定义规则
+     *
+     * @return
+     */
+    public String getRuleType() {
+        return ruleType;
+    }
+
+    /**
+     * set 规则类型，default：默认规则，custom：自定义规则
+     *
+     * @param ruleType
+     */
+    public void setRuleType(String ruleType) {
+        this.ruleType = ruleType;
+    }
+
 
     /**
      * set networkAcl规则ID
@@ -361,6 +384,16 @@ public class NetworkAclRule  implements java.io.Serializable {
      */
     public NetworkAclRule createdTime(String createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+    /**
+     * set 规则类型，default：默认规则，custom：自定义规则
+     *
+     * @param ruleType
+     */
+    public NetworkAclRule ruleType(String ruleType) {
+        this.ruleType = ruleType;
         return this;
     }
 

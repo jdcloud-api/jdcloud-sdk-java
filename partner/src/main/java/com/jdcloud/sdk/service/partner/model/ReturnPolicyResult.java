@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.partner.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -64,6 +66,16 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     private Integer returnType;
 
     /**
+     * 返还政策主ID
+     */
+    private Number returnPolicyId;
+
+    /**
+     * 返还政策主名称
+     */
+    private String returnPolicyName;
+
+    /**
      * 项目编码
      */
     private Number itemId;
@@ -72,6 +84,41 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
      * 项目名称
      */
     private String itemName;
+
+    /**
+     * 返还依据类型
+     */
+    private Integer returnRuleType;
+
+    /**
+     * 返还依据类型名称
+     */
+    private String returnRuleTypeName;
+
+    /**
+     * returnPolicyProductList
+     */
+    private List<ReturnPolicyProduct> returnPolicyProductList;
+
+    /**
+     * 产品ID
+     */
+    private String productId;
+
+    /**
+     * 产品名称
+     */
+    private String productName;
+
+    /**
+     * 产品类型
+     */
+    private Integer productType;
+
+    /**
+     * 产品类型名称
+     */
+    private Integer productTypeName;
 
     /**
      * 周期类型
@@ -248,6 +295,42 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
+     * get 返还政策主ID
+     *
+     * @return
+     */
+    public Number getReturnPolicyId() {
+        return returnPolicyId;
+    }
+
+    /**
+     * set 返还政策主ID
+     *
+     * @param returnPolicyId
+     */
+    public void setReturnPolicyId(Number returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+    }
+
+    /**
+     * get 返还政策主名称
+     *
+     * @return
+     */
+    public String getReturnPolicyName() {
+        return returnPolicyName;
+    }
+
+    /**
+     * set 返还政策主名称
+     *
+     * @param returnPolicyName
+     */
+    public void setReturnPolicyName(String returnPolicyName) {
+        this.returnPolicyName = returnPolicyName;
+    }
+
+    /**
      * get 项目编码
      *
      * @return
@@ -281,6 +364,132 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
      */
     public void setItemName(String itemName) {
         this.itemName = itemName;
+    }
+
+    /**
+     * get 返还依据类型
+     *
+     * @return
+     */
+    public Integer getReturnRuleType() {
+        return returnRuleType;
+    }
+
+    /**
+     * set 返还依据类型
+     *
+     * @param returnRuleType
+     */
+    public void setReturnRuleType(Integer returnRuleType) {
+        this.returnRuleType = returnRuleType;
+    }
+
+    /**
+     * get 返还依据类型名称
+     *
+     * @return
+     */
+    public String getReturnRuleTypeName() {
+        return returnRuleTypeName;
+    }
+
+    /**
+     * set 返还依据类型名称
+     *
+     * @param returnRuleTypeName
+     */
+    public void setReturnRuleTypeName(String returnRuleTypeName) {
+        this.returnRuleTypeName = returnRuleTypeName;
+    }
+
+    /**
+     * get returnPolicyProductList
+     *
+     * @return
+     */
+    public List<ReturnPolicyProduct> getReturnPolicyProductList() {
+        return returnPolicyProductList;
+    }
+
+    /**
+     * set returnPolicyProductList
+     *
+     * @param returnPolicyProductList
+     */
+    public void setReturnPolicyProductList(List<ReturnPolicyProduct> returnPolicyProductList) {
+        this.returnPolicyProductList = returnPolicyProductList;
+    }
+
+    /**
+     * get 产品ID
+     *
+     * @return
+     */
+    public String getProductId() {
+        return productId;
+    }
+
+    /**
+     * set 产品ID
+     *
+     * @param productId
+     */
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    /**
+     * get 产品名称
+     *
+     * @return
+     */
+    public String getProductName() {
+        return productName;
+    }
+
+    /**
+     * set 产品名称
+     *
+     * @param productName
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    /**
+     * get 产品类型
+     *
+     * @return
+     */
+    public Integer getProductType() {
+        return productType;
+    }
+
+    /**
+     * set 产品类型
+     *
+     * @param productType
+     */
+    public void setProductType(Integer productType) {
+        this.productType = productType;
+    }
+
+    /**
+     * get 产品类型名称
+     *
+     * @return
+     */
+    public Integer getProductTypeName() {
+        return productTypeName;
+    }
+
+    /**
+     * set 产品类型名称
+     *
+     * @param productTypeName
+     */
+    public void setProductTypeName(Integer productTypeName) {
+        this.productTypeName = productTypeName;
     }
 
     /**
@@ -579,6 +788,26 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
+     * set 返还政策主ID
+     *
+     * @param returnPolicyId
+     */
+    public ReturnPolicyResult returnPolicyId(Number returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+        return this;
+    }
+
+    /**
+     * set 返还政策主名称
+     *
+     * @param returnPolicyName
+     */
+    public ReturnPolicyResult returnPolicyName(String returnPolicyName) {
+        this.returnPolicyName = returnPolicyName;
+        return this;
+    }
+
+    /**
      * set 项目编码
      *
      * @param itemId
@@ -595,6 +824,76 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
      */
     public ReturnPolicyResult itemName(String itemName) {
         this.itemName = itemName;
+        return this;
+    }
+
+    /**
+     * set 返还依据类型
+     *
+     * @param returnRuleType
+     */
+    public ReturnPolicyResult returnRuleType(Integer returnRuleType) {
+        this.returnRuleType = returnRuleType;
+        return this;
+    }
+
+    /**
+     * set 返还依据类型名称
+     *
+     * @param returnRuleTypeName
+     */
+    public ReturnPolicyResult returnRuleTypeName(String returnRuleTypeName) {
+        this.returnRuleTypeName = returnRuleTypeName;
+        return this;
+    }
+
+    /**
+     * set returnPolicyProductList
+     *
+     * @param returnPolicyProductList
+     */
+    public ReturnPolicyResult returnPolicyProductList(List<ReturnPolicyProduct> returnPolicyProductList) {
+        this.returnPolicyProductList = returnPolicyProductList;
+        return this;
+    }
+
+    /**
+     * set 产品ID
+     *
+     * @param productId
+     */
+    public ReturnPolicyResult productId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+
+    /**
+     * set 产品名称
+     *
+     * @param productName
+     */
+    public ReturnPolicyResult productName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+
+    /**
+     * set 产品类型
+     *
+     * @param productType
+     */
+    public ReturnPolicyResult productType(Integer productType) {
+        this.productType = productType;
+        return this;
+    }
+
+    /**
+     * set 产品类型名称
+     *
+     * @param productTypeName
+     */
+    public ReturnPolicyResult productTypeName(Integer productTypeName) {
+        this.productTypeName = productTypeName;
         return this;
     }
 
@@ -728,5 +1027,17 @@ public class ReturnPolicyResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
+    /**
+     * add item to returnPolicyProductList
+     *
+     * @param returnPolicyProductList
+     */
+    public void addReturnPolicyProductList(ReturnPolicyProduct returnPolicyProductList) {
+        if (this.returnPolicyProductList == null) {
+            this.returnPolicyProductList = new ArrayList<>();
+        }
+        this.returnPolicyProductList.add(returnPolicyProductList);
+    }
 
 }

@@ -36,7 +36,7 @@ public class AddDatapushVenderRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 添加/删除数据推送用户对象
+     * 添加数据推送用户对象
 
      * Required:true
      */
@@ -45,7 +45,7 @@ public class AddDatapushVenderRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 添加/删除数据推送用户对象
+     * get 添加数据推送用户对象
 
      *
      * @return
@@ -55,7 +55,7 @@ public class AddDatapushVenderRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 添加/删除数据推送用户对象
+     * set 添加数据推送用户对象
 
      *
      * @param datapushVender
@@ -66,7 +66,7 @@ public class AddDatapushVenderRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 添加/删除数据推送用户对象
+     * set 添加数据推送用户对象
 
      *
      * @param datapushVender

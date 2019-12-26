@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.yundingdatapush.model.DescribeRdsInstancesResponse;
 
 /**
- * 查询开通数据推送的数据库实例
+ * 查询已绑定数据推送的数据库实例
  */
 class DescribeRdsInstancesExecutor extends JdcloudExecutor {
 

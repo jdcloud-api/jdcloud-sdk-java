@@ -83,14 +83,19 @@ public class DescribeCabinet  implements java.io.Serializable {
     private String cabinetOpenTime;
 
     /**
-     * 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      */
-    private String startTime;
+    private String expireTime;
 
     /**
-     * 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      */
-    private String endTime;
+    private String reserveStartTime;
+
+    /**
+     * 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     */
+    private String reserveEndTime;
 
 
     /**
@@ -274,39 +279,57 @@ public class DescribeCabinet  implements java.io.Serializable {
     }
 
     /**
-     * get 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
      * @return
      */
-    public String getStartTime() {
-        return startTime;
+    public String getExpireTime() {
+        return expireTime;
     }
 
     /**
-     * set 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
-     * @param startTime
+     * @param expireTime
      */
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
+    public void setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
     }
 
     /**
-     * get 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
      * @return
      */
-    public String getEndTime() {
-        return endTime;
+    public String getReserveStartTime() {
+        return reserveStartTime;
     }
 
     /**
-     * set 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
-     * @param endTime
+     * @param reserveStartTime
      */
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
+    public void setReserveStartTime(String reserveStartTime) {
+        this.reserveStartTime = reserveStartTime;
+    }
+
+    /**
+     * get 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @return
+     */
+    public String getReserveEndTime() {
+        return reserveEndTime;
+    }
+
+    /**
+     * set 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param reserveEndTime
+     */
+    public void setReserveEndTime(String reserveEndTime) {
+        this.reserveEndTime = reserveEndTime;
     }
 
 
@@ -411,22 +434,32 @@ public class DescribeCabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
-     * @param startTime
+     * @param expireTime
      */
-    public DescribeCabinet startTime(String startTime) {
-        this.startTime = startTime;
+    public DescribeCabinet expireTime(String expireTime) {
+        this.expireTime = expireTime;
         return this;
     }
 
     /**
-     * set 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
      *
-     * @param endTime
+     * @param reserveStartTime
      */
-    public DescribeCabinet endTime(String endTime) {
-        this.endTime = endTime;
+    public DescribeCabinet reserveStartTime(String reserveStartTime) {
+        this.reserveStartTime = reserveStartTime;
+        return this;
+    }
+
+    /**
+     * set 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param reserveEndTime
+     */
+    public DescribeCabinet reserveEndTime(String reserveEndTime) {
+        this.reserveEndTime = reserveEndTime;
         return this;
     }
 

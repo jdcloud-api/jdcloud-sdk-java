@@ -78,6 +78,16 @@ public class Device  implements java.io.Serializable {
     private String model;
 
     /**
+     * 系统IP
+     */
+    private String sysIp;
+
+    /**
+     * 管理IP
+     */
+    private String manageIp;
+
+    /**
      * 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
      */
     private String deviceType;
@@ -88,39 +98,29 @@ public class Device  implements java.io.Serializable {
     private String assetBelong;
 
     /**
-     * 资产状态 inWarehouse:已入库 launched:已上架
+     * 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      */
     private String assetStatus;
 
     /**
-     * CPU逻辑核数(核)
+     * 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     */
+    private String deviceOpenTime;
+
+    /**
+     * CPU
      */
     private String cpuCore;
 
     /**
-     * 内存总容量(GB)
+     * 内存
      */
     private String memory;
 
     /**
-     * 硬盘总容量(GB)
+     * 磁盘
      */
     private String disk;
-
-    /**
-     * 网卡带宽(Mbps)
-     */
-    private String networkCardBandwidth;
-
-    /**
-     * 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-     */
-    private String startTime;
-
-    /**
-     * 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-     */
-    private String endTime;
 
 
     /**
@@ -286,6 +286,42 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
+     * get 系统IP
+     *
+     * @return
+     */
+    public String getSysIp() {
+        return sysIp;
+    }
+
+    /**
+     * set 系统IP
+     *
+     * @param sysIp
+     */
+    public void setSysIp(String sysIp) {
+        this.sysIp = sysIp;
+    }
+
+    /**
+     * get 管理IP
+     *
+     * @return
+     */
+    public String getManageIp() {
+        return manageIp;
+    }
+
+    /**
+     * set 管理IP
+     *
+     * @param manageIp
+     */
+    public void setManageIp(String manageIp) {
+        this.manageIp = manageIp;
+    }
+
+    /**
      * get 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
      *
      * @return
@@ -322,7 +358,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * get 资产状态 inWarehouse:已入库 launched:已上架
+     * get 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      *
      * @return
      */
@@ -331,7 +367,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 资产状态 inWarehouse:已入库 launched:已上架
+     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      *
      * @param assetStatus
      */
@@ -340,7 +376,25 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * get CPU逻辑核数(核)
+     * get 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @return
+     */
+    public String getDeviceOpenTime() {
+        return deviceOpenTime;
+    }
+
+    /**
+     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param deviceOpenTime
+     */
+    public void setDeviceOpenTime(String deviceOpenTime) {
+        this.deviceOpenTime = deviceOpenTime;
+    }
+
+    /**
+     * get CPU
      *
      * @return
      */
@@ -349,7 +403,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set CPU逻辑核数(核)
+     * set CPU
      *
      * @param cpuCore
      */
@@ -358,7 +412,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * get 内存总容量(GB)
+     * get 内存
      *
      * @return
      */
@@ -367,7 +421,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 内存总容量(GB)
+     * set 内存
      *
      * @param memory
      */
@@ -376,7 +430,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * get 硬盘总容量(GB)
+     * get 磁盘
      *
      * @return
      */
@@ -385,66 +439,12 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 硬盘总容量(GB)
+     * set 磁盘
      *
      * @param disk
      */
     public void setDisk(String disk) {
         this.disk = disk;
-    }
-
-    /**
-     * get 网卡带宽(Mbps)
-     *
-     * @return
-     */
-    public String getNetworkCardBandwidth() {
-        return networkCardBandwidth;
-    }
-
-    /**
-     * set 网卡带宽(Mbps)
-     *
-     * @param networkCardBandwidth
-     */
-    public void setNetworkCardBandwidth(String networkCardBandwidth) {
-        this.networkCardBandwidth = networkCardBandwidth;
-    }
-
-    /**
-     * get 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-     *
-     * @return
-     */
-    public String getStartTime() {
-        return startTime;
-    }
-
-    /**
-     * set 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-     *
-     * @param startTime
-     */
-    public void setStartTime(String startTime) {
-        this.startTime = startTime;
-    }
-
-    /**
-     * get 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-     *
-     * @return
-     */
-    public String getEndTime() {
-        return endTime;
-    }
-
-    /**
-     * set 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-     *
-     * @param endTime
-     */
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
     }
 
 
@@ -539,6 +539,26 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
+     * set 系统IP
+     *
+     * @param sysIp
+     */
+    public Device sysIp(String sysIp) {
+        this.sysIp = sysIp;
+        return this;
+    }
+
+    /**
+     * set 管理IP
+     *
+     * @param manageIp
+     */
+    public Device manageIp(String manageIp) {
+        this.manageIp = manageIp;
+        return this;
+    }
+
+    /**
      * set 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
      *
      * @param deviceType
@@ -559,7 +579,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 资产状态 inWarehouse:已入库 launched:已上架
+     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
      *
      * @param assetStatus
      */
@@ -569,7 +589,17 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set CPU逻辑核数(核)
+     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param deviceOpenTime
+     */
+    public Device deviceOpenTime(String deviceOpenTime) {
+        this.deviceOpenTime = deviceOpenTime;
+        return this;
+    }
+
+    /**
+     * set CPU
      *
      * @param cpuCore
      */
@@ -579,7 +609,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 内存总容量(GB)
+     * set 内存
      *
      * @param memory
      */
@@ -589,42 +619,12 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 硬盘总容量(GB)
+     * set 磁盘
      *
      * @param disk
      */
     public Device disk(String disk) {
         this.disk = disk;
-        return this;
-    }
-
-    /**
-     * set 网卡带宽(Mbps)
-     *
-     * @param networkCardBandwidth
-     */
-    public Device networkCardBandwidth(String networkCardBandwidth) {
-        this.networkCardBandwidth = networkCardBandwidth;
-        return this;
-    }
-
-    /**
-     * set 起租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-     *
-     * @param startTime
-     */
-    public Device startTime(String startTime) {
-        this.startTime = startTime;
-        return this;
-    }
-
-    /**
-     * set 退租时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
-     *
-     * @param endTime
-     */
-    public Device endTime(String endTime) {
-        this.endTime = endTime;
         return this;
     }
 

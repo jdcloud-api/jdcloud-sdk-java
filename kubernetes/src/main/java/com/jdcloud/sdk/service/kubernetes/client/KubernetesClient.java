@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.kubernetes.model.DeleteNodeGroupRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DeleteNodeGroupResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DeleteNodeGroupExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.DeleteNodeInstancesRequest;
+import com.jdcloud.sdk.service.kubernetes.model.DeleteNodeInstancesResponse;
+import com.jdcloud.sdk.service.kubernetes.client.DeleteNodeInstancesExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeGroupsRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeGroupsResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DescribeNodeGroupsExecutor;
@@ -70,6 +73,9 @@ import com.jdcloud.sdk.service.kubernetes.client.DescribeVersionsExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.SetAutoRepairRequest;
 import com.jdcloud.sdk.service.kubernetes.model.SetAutoRepairResponse;
 import com.jdcloud.sdk.service.kubernetes.client.SetAutoRepairExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupCARequest;
+import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupCAResponse;
+import com.jdcloud.sdk.service.kubernetes.client.SetNodeGroupCAExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeQuotasRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeQuotasResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DescribeQuotasExecutor;
@@ -165,6 +171,17 @@ public class KubernetesClient extends JdcloudClient {
      */
     public DeleteNodeGroupResponse deleteNodeGroup(DeleteNodeGroupRequest request) throws JdcloudSdkException {
         return new DeleteNodeGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 从工作节点组中删除指定实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteNodeInstancesResponse deleteNodeInstances(DeleteNodeInstancesRequest request) throws JdcloudSdkException {
+        return new DeleteNodeInstancesExecutor().client(this).execute(request);
     }
 
     /**
@@ -299,6 +316,17 @@ public class KubernetesClient extends JdcloudClient {
      */
     public SetAutoRepairResponse setAutoRepair(SetAutoRepairRequest request) throws JdcloudSdkException {
         return new SetAutoRepairExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置工作节点组自动扩容
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetNodeGroupCAResponse setNodeGroupCA(SetNodeGroupCARequest request) throws JdcloudSdkException {
+        return new SetNodeGroupCAExecutor().client(this).execute(request);
     }
 
     /**

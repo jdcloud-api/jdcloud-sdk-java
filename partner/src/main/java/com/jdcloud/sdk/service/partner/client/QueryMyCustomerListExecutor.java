@@ -40,7 +40,7 @@ class QueryMyCustomerListExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/customerManage/queryMyCustomerList";
+        return "/regions/{regionId}/customerManage:queryMyCustomerList";
     }
 
     @Override

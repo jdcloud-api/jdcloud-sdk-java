@@ -116,7 +116,7 @@ public class YundingdatapushClient extends JdcloudClient {
     }
 
     /**
-     * 查询开通数据推送的数据库实例
+     * 查询已绑定数据推送的数据库实例
      *
      * @param request
      * @return

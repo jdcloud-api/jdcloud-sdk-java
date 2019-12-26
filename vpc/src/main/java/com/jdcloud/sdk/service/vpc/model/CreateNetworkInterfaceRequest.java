@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 弹性网卡
+ * Elastic-Network-Interface
  * 弹性网卡相关接口
  *
  * OpenAPI spec version: v1
@@ -44,7 +44,7 @@ public class CreateNetworkInterfaceRequest extends JdcloudRequest implements jav
     private String subnetId;
 
     /**
-     * 可用区，用户的默认可用区
+     * 可用区，用户的默认可用区，该参数无效，不建议使用
      */
     private String az;
 
@@ -110,7 +110,7 @@ public class CreateNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 可用区，用户的默认可用区
+     * get 可用区，用户的默认可用区，该参数无效，不建议使用
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class CreateNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 可用区，用户的默认可用区
+     * set 可用区，用户的默认可用区，该参数无效，不建议使用
      *
      * @param az
      */
@@ -283,7 +283,7 @@ public class CreateNetworkInterfaceRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 可用区，用户的默认可用区
+     * set 可用区，用户的默认可用区，该参数无效，不建议使用
      *
      * @param az
      */

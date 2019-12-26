@@ -46,7 +46,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     private Number priority;
 
     /**
-     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      */
     private String nextHopType;
 
@@ -59,6 +59,11 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
      * 路由表规则前缀, internet类型路由跟其他类型的路由，addressPrefix不允许重复
      */
     private String addressPrefix;
+
+    /**
+     * 描述,允许输入UTF-8编码下的全部字符，不超过256字符
+     */
+    private String description;
 
 
     /**
@@ -98,7 +103,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @return
      */
@@ -107,7 +112,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @param nextHopType
      */
@@ -151,6 +156,24 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
     }
 
+    /**
+     * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 
     /**
      * set 路由表规则的ID
@@ -173,7 +196,7 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @param nextHopType
      */
@@ -199,6 +222,16 @@ public class ModifyRouteTableRules  implements java.io.Serializable {
      */
     public ModifyRouteTableRules addressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
+        return this;
+    }
+
+    /**
+     * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @param description
+     */
+    public ModifyRouteTableRules description(String description) {
+        this.description = description;
         return this;
     }
 

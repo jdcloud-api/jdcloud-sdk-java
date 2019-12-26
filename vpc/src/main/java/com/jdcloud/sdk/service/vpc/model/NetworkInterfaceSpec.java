@@ -43,7 +43,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     private String subnetId;
 
     /**
-     * 可用区，用户的默认可用区
+     * 可用区，用户的默认可用区，该参数无效，不建议使用
      */
     private String az;
 
@@ -102,7 +102,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 可用区，用户的默认可用区
+     * get 可用区，用户的默认可用区，该参数无效，不建议使用
      *
      * @return
      */
@@ -111,7 +111,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区，用户的默认可用区
+     * set 可用区，用户的默认可用区，该参数无效，不建议使用
      *
      * @param az
      */
@@ -257,7 +257,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区，用户的默认可用区
+     * set 可用区，用户的默认可用区，该参数无效，不建议使用
      *
      * @param az
      */

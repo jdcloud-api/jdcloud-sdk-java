@@ -103,6 +103,11 @@ public class ReturnBillQuery  implements java.io.Serializable {
     private Number returnMount;
 
     /**
+     * 返还方式
+     */
+    private Integer returnMode;
+
+    /**
      * 状态
      */
     private Integer status;
@@ -413,6 +418,24 @@ public class ReturnBillQuery  implements java.io.Serializable {
      */
     public void setReturnMount(Number returnMount) {
         this.returnMount = returnMount;
+    }
+
+    /**
+     * get 返还方式
+     *
+     * @return
+     */
+    public Integer getReturnMode() {
+        return returnMode;
+    }
+
+    /**
+     * set 返还方式
+     *
+     * @param returnMode
+     */
+    public void setReturnMode(Integer returnMode) {
+        this.returnMode = returnMode;
     }
 
     /**
@@ -769,6 +792,16 @@ public class ReturnBillQuery  implements java.io.Serializable {
      */
     public ReturnBillQuery returnMount(Number returnMount) {
         this.returnMount = returnMount;
+        return this;
+    }
+
+    /**
+     * set 返还方式
+     *
+     * @param returnMode
+     */
+    public ReturnBillQuery returnMode(Integer returnMode) {
+        this.returnMode = returnMode;
         return this;
     }
 

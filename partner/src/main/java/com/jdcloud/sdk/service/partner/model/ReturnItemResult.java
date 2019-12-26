@@ -74,6 +74,16 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
     private Integer returnType;
 
     /**
+     * 返还依据
+     */
+    private Integer returnRuleType;
+
+    /**
+     * 返还依据名称
+     */
+    private String returnRuleTypeName;
+
+    /**
      * 项目条件
      */
     private String conditionItem;
@@ -271,6 +281,42 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
      */
     public void setReturnType(Integer returnType) {
         this.returnType = returnType;
+    }
+
+    /**
+     * get 返还依据
+     *
+     * @return
+     */
+    public Integer getReturnRuleType() {
+        return returnRuleType;
+    }
+
+    /**
+     * set 返还依据
+     *
+     * @param returnRuleType
+     */
+    public void setReturnRuleType(Integer returnRuleType) {
+        this.returnRuleType = returnRuleType;
+    }
+
+    /**
+     * get 返还依据名称
+     *
+     * @return
+     */
+    public String getReturnRuleTypeName() {
+        return returnRuleTypeName;
+    }
+
+    /**
+     * set 返还依据名称
+     *
+     * @param returnRuleTypeName
+     */
+    public void setReturnRuleTypeName(String returnRuleTypeName) {
+        this.returnRuleTypeName = returnRuleTypeName;
     }
 
     /**
@@ -549,6 +595,26 @@ public class ReturnItemResult extends JdcloudResult implements java.io.Serializa
      */
     public ReturnItemResult returnType(Integer returnType) {
         this.returnType = returnType;
+        return this;
+    }
+
+    /**
+     * set 返还依据
+     *
+     * @param returnRuleType
+     */
+    public ReturnItemResult returnRuleType(Integer returnRuleType) {
+        this.returnRuleType = returnRuleType;
+        return this;
+    }
+
+    /**
+     * set 返还依据名称
+     *
+     * @param returnRuleTypeName
+     */
+    public ReturnItemResult returnRuleTypeName(String returnRuleTypeName) {
+        this.returnRuleTypeName = returnRuleTypeName;
         return this;
     }
 

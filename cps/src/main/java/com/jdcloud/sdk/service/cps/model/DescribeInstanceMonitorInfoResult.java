@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.cps.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.cps.model.MetricData;
 import com.jdcloud.sdk.service.JdcloudResult;
 
@@ -35,39 +37,51 @@ public class DescribeInstanceMonitorInfoResult extends JdcloudResult implements 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云物理服务器监控信息
+     * metricDatas
      */
-    private MetricData metricDatas;
+    private List<MetricData> metricDatas;
 
 
     /**
-     * get 云物理服务器监控信息
+     * get metricDatas
      *
      * @return
      */
-    public MetricData getMetricDatas() {
+    public List<MetricData> getMetricDatas() {
         return metricDatas;
     }
 
     /**
-     * set 云物理服务器监控信息
+     * set metricDatas
      *
      * @param metricDatas
      */
-    public void setMetricDatas(MetricData metricDatas) {
+    public void setMetricDatas(List<MetricData> metricDatas) {
         this.metricDatas = metricDatas;
     }
 
 
     /**
-     * set 云物理服务器监控信息
+     * set metricDatas
      *
      * @param metricDatas
      */
-    public DescribeInstanceMonitorInfoResult metricDatas(MetricData metricDatas) {
+    public DescribeInstanceMonitorInfoResult metricDatas(List<MetricData> metricDatas) {
         this.metricDatas = metricDatas;
         return this;
     }
 
+
+    /**
+     * add item to metricDatas
+     *
+     * @param metricData
+     */
+    public void addMetricData(MetricData metricData) {
+        if (this.metricDatas == null) {
+            this.metricDatas = new ArrayList<>();
+        }
+        this.metricDatas.add(metricData);
+    }
 
 }
