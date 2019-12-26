@@ -49,7 +49,7 @@ public class AssociateElasticIpLBRequest extends JdcloudRequest implements java.
     private String elasticIpId;
 
     /**
-     * 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+     * 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      * Required:true
      */
     @Required
@@ -104,7 +104,7 @@ public class AssociateElasticIpLBRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+     * get 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      *
      * @return
      */
@@ -113,7 +113,7 @@ public class AssociateElasticIpLBRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */
@@ -163,7 +163,7 @@ public class AssociateElasticIpLBRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 地域ID，可调用接口（queryCPSLBRegions）获取云物理服务器支持的地域
+     * set 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
      */

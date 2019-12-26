@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.edcps.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -33,7 +35,52 @@ public class DescribeAvailablePrivateIpResult extends JdcloudResult implements j
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * availablePrivateIps
+     */
+    private List<String> availablePrivateIps;
 
 
+    /**
+     * get availablePrivateIps
+     *
+     * @return
+     */
+    public List<String> getAvailablePrivateIps() {
+        return availablePrivateIps;
+    }
+
+    /**
+     * set availablePrivateIps
+     *
+     * @param availablePrivateIps
+     */
+    public void setAvailablePrivateIps(List<String> availablePrivateIps) {
+        this.availablePrivateIps = availablePrivateIps;
+    }
+
+
+    /**
+     * set availablePrivateIps
+     *
+     * @param availablePrivateIps
+     */
+    public DescribeAvailablePrivateIpResult availablePrivateIps(List<String> availablePrivateIps) {
+        this.availablePrivateIps = availablePrivateIps;
+        return this;
+    }
+
+
+    /**
+     * add item to availablePrivateIps
+     *
+     * @param availablePrivateIp
+     */
+    public void addAvailablePrivateIp(String availablePrivateIp) {
+        if (this.availablePrivateIps == null) {
+            this.availablePrivateIps = new ArrayList<>();
+        }
+        this.availablePrivateIps.add(availablePrivateIp);
+    }
 
 }

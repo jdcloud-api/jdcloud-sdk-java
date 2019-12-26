@@ -37,9 +37,9 @@ public class DescribeKeypairsResult extends JdcloudResult implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * servers
+     * keypairs
      */
-    private List<Keypair> servers;
+    private List<Keypair> keypairs;
 
     /**
      * 页码；默认为1
@@ -58,21 +58,21 @@ public class DescribeKeypairsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * get servers
+     * get keypairs
      *
      * @return
      */
-    public List<Keypair> getServers() {
-        return servers;
+    public List<Keypair> getKeypairs() {
+        return keypairs;
     }
 
     /**
-     * set servers
+     * set keypairs
      *
-     * @param servers
+     * @param keypairs
      */
-    public void setServers(List<Keypair> servers) {
-        this.servers = servers;
+    public void setKeypairs(List<Keypair> keypairs) {
+        this.keypairs = keypairs;
     }
 
     /**
@@ -131,12 +131,12 @@ public class DescribeKeypairsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set servers
+     * set keypairs
      *
-     * @param servers
+     * @param keypairs
      */
-    public DescribeKeypairsResult servers(List<Keypair> servers) {
-        this.servers = servers;
+    public DescribeKeypairsResult keypairs(List<Keypair> keypairs) {
+        this.keypairs = keypairs;
         return this;
     }
 
@@ -172,15 +172,15 @@ public class DescribeKeypairsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * add item to servers
+     * add item to keypairs
      *
-     * @param server
+     * @param keypair
      */
-    public void addServer(Keypair server) {
-        if (this.servers == null) {
-            this.servers = new ArrayList<>();
+    public void addKeypair(Keypair keypair) {
+        if (this.keypairs == null) {
+            this.keypairs = new ArrayList<>();
         }
-        this.servers.add(server);
+        this.keypairs.add(keypair);
     }
 
 }

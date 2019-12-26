@@ -37,7 +37,7 @@ public class DescribeKeypairResult extends JdcloudResult implements java.io.Seri
     /**
      * 密钥对详细信息
      */
-    private Keypair server;
+    private Keypair keypair;
 
 
     /**
@@ -45,27 +45,27 @@ public class DescribeKeypairResult extends JdcloudResult implements java.io.Seri
      *
      * @return
      */
-    public Keypair getServer() {
-        return server;
+    public Keypair getKeypair() {
+        return keypair;
     }
 
     /**
      * set 密钥对详细信息
      *
-     * @param server
+     * @param keypair
      */
-    public void setServer(Keypair server) {
-        this.server = server;
+    public void setKeypair(Keypair keypair) {
+        this.keypair = keypair;
     }
 
 
     /**
      * set 密钥对详细信息
      *
-     * @param server
+     * @param keypair
      */
-    public DescribeKeypairResult server(Keypair server) {
-        this.server = server;
+    public DescribeKeypairResult keypair(Keypair keypair) {
+        this.keypair = keypair;
         return this;
     }
 

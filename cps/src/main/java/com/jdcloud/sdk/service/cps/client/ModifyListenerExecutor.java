@@ -40,7 +40,7 @@ class ModifyListenerExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/listeners/{listenerId}:modifylistenerAttributes";
+        return "/regions/{regionId}/listeners/{listenerId}:modifyListenerAttributes";
     }
 
     @Override

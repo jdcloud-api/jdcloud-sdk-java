@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.jdccs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 报警规则
@@ -111,6 +113,11 @@ public class DescribeAlarm  implements java.io.Serializable {
      * 规则状态 disabled:禁用 enabled:启用
      */
     private String status;
+
+    /**
+     * switchboard
+     */
+    private List<Object> switchboard;
 
 
     /**
@@ -401,6 +408,24 @@ public class DescribeAlarm  implements java.io.Serializable {
         this.status = status;
     }
 
+    /**
+     * get switchboard
+     *
+     * @return
+     */
+    public List<Object> getSwitchboard() {
+        return switchboard;
+    }
+
+    /**
+     * set switchboard
+     *
+     * @param switchboard
+     */
+    public void setSwitchboard(List<Object> switchboard) {
+        this.switchboard = switchboard;
+    }
+
 
     /**
      * set 规则实例ID
@@ -562,5 +587,27 @@ public class DescribeAlarm  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set switchboard
+     *
+     * @param switchboard
+     */
+    public DescribeAlarm switchboard(List<Object> switchboard) {
+        this.switchboard = switchboard;
+        return this;
+    }
+
+
+    /**
+     * add item to switchboard
+     *
+     * @param switchboard
+     */
+    public void addSwitchboard(Object switchboard) {
+        if (this.switchboard == null) {
+            this.switchboard = new ArrayList<>();
+        }
+        this.switchboard.add(switchboard);
+    }
 
 }

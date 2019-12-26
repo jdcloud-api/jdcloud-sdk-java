@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.cps.model.DescribeServersRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeServersResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeServersExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeSubnetRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeSubnetResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeSubnetExecutor;
@@ -40,9 +43,6 @@ import com.jdcloud.sdk.service.cps.client.ModifyListenerExecutor;
 import com.jdcloud.sdk.service.cps.model.AssociateElasticIpLBRequest;
 import com.jdcloud.sdk.service.cps.model.AssociateElasticIpLBResponse;
 import com.jdcloud.sdk.service.cps.client.AssociateElasticIpLBExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryListenerRequest;
-import com.jdcloud.sdk.service.cps.model.QueryListenerResponse;
-import com.jdcloud.sdk.service.cps.client.QueryListenerExecutor;
 import com.jdcloud.sdk.service.cps.model.DeleteVpcRequest;
 import com.jdcloud.sdk.service.cps.model.DeleteVpcResponse;
 import com.jdcloud.sdk.service.cps.client.DeleteVpcExecutor;
@@ -58,24 +58,24 @@ import com.jdcloud.sdk.service.cps.client.ReinstallInstanceExecutor;
 import com.jdcloud.sdk.service.cps.model.DeleteServerGroupRequest;
 import com.jdcloud.sdk.service.cps.model.DeleteServerGroupResponse;
 import com.jdcloud.sdk.service.cps.client.DeleteServerGroupExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeKeypairRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeKeypairResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeKeypairExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceRaidsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceRaidsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeDeviceRaidsExecutor;
 import com.jdcloud.sdk.service.cps.model.DisassociateElasticIpLBRequest;
 import com.jdcloud.sdk.service.cps.model.DisassociateElasticIpLBResponse;
 import com.jdcloud.sdk.service.cps.client.DisassociateElasticIpLBExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeServerGroupsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeServerGroupsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeServerGroupsExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyVpcRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyVpcResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyVpcExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryLoadBalancerRequest;
-import com.jdcloud.sdk.service.cps.model.QueryLoadBalancerResponse;
-import com.jdcloud.sdk.service.cps.client.QueryLoadBalancerExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceNameRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceNameResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceNameExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryServersRequest;
-import com.jdcloud.sdk.service.cps.model.QueryServersResponse;
-import com.jdcloud.sdk.service.cps.client.QueryServersExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifySubnetRequest;
 import com.jdcloud.sdk.service.cps.model.ModifySubnetResponse;
 import com.jdcloud.sdk.service.cps.client.ModifySubnetExecutor;
@@ -85,24 +85,21 @@ import com.jdcloud.sdk.service.cps.client.DescribeVpcsExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceRaidRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceRaidResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceRaidExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryKeypairRequest;
-import com.jdcloud.sdk.service.cps.model.QueryKeypairResponse;
-import com.jdcloud.sdk.service.cps.client.QueryKeypairExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeListenersRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeListenersResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeListenersExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeRegionesRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeRegionesResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeRegionesExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryLoadBalancersRequest;
-import com.jdcloud.sdk.service.cps.model.QueryLoadBalancersResponse;
-import com.jdcloud.sdk.service.cps.client.QueryLoadBalancersExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyServerGroupRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyServerGroupResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyServerGroupExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyInstanceExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryKeypairsRequest;
-import com.jdcloud.sdk.service.cps.model.QueryKeypairsResponse;
-import com.jdcloud.sdk.service.cps.client.QueryKeypairsExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeKeypairsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeKeypairsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeKeypairsExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeDeviceTypesExecutor;
@@ -112,15 +109,15 @@ import com.jdcloud.sdk.service.cps.client.DisassociateElasticIpExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeElasticIpRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeElasticIpResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeElasticIpExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryRouteTablesRequest;
-import com.jdcloud.sdk.service.cps.model.QueryRouteTablesResponse;
-import com.jdcloud.sdk.service.cps.client.QueryRouteTablesExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyLoadBalancerRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyLoadBalancerResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyLoadBalancerExecutor;
 import com.jdcloud.sdk.service.cps.model.StartLoadBalancerRequest;
 import com.jdcloud.sdk.service.cps.model.StartLoadBalancerResponse;
 import com.jdcloud.sdk.service.cps.client.StartLoadBalancerExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeRouteTablesRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeRouteTablesResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeRouteTablesExecutor;
 import com.jdcloud.sdk.service.cps.model.StopLoadBalancerRequest;
 import com.jdcloud.sdk.service.cps.model.StopLoadBalancerResponse;
 import com.jdcloud.sdk.service.cps.client.StopLoadBalancerExecutor;
@@ -133,9 +130,6 @@ import com.jdcloud.sdk.service.cps.client.ModifyBandwidthExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceMonitorInfoRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceMonitorInfoResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceMonitorInfoExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryServerGroupsRequest;
-import com.jdcloud.sdk.service.cps.model.QueryServerGroupsResponse;
-import com.jdcloud.sdk.service.cps.client.QueryServerGroupsExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateInstancesRequest;
 import com.jdcloud.sdk.service.cps.model.CreateInstancesResponse;
 import com.jdcloud.sdk.service.cps.client.CreateInstancesExecutor;
@@ -145,6 +139,9 @@ import com.jdcloud.sdk.service.cps.client.ResetPasswordExecutor;
 import com.jdcloud.sdk.service.cps.model.AssociateElasticIpRequest;
 import com.jdcloud.sdk.service.cps.model.AssociateElasticIpResponse;
 import com.jdcloud.sdk.service.cps.client.AssociateElasticIpExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeListenerRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeListenerResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeListenerExecutor;
 import com.jdcloud.sdk.service.cps.model.StopInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.StopInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.StopInstanceExecutor;
@@ -154,9 +151,6 @@ import com.jdcloud.sdk.service.cps.client.DescribeVpcExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeSubnetsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeSubnetsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeSubnetsExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryRouteTableRequest;
-import com.jdcloud.sdk.service.cps.model.QueryRouteTableResponse;
-import com.jdcloud.sdk.service.cps.client.QueryRouteTableExecutor;
 import com.jdcloud.sdk.service.cps.model.ApplyElasticIpsRequest;
 import com.jdcloud.sdk.service.cps.model.ApplyElasticIpsResponse;
 import com.jdcloud.sdk.service.cps.client.ApplyElasticIpsExecutor;
@@ -178,36 +172,42 @@ import com.jdcloud.sdk.service.cps.client.CreateServerGroupExecutor;
 import com.jdcloud.sdk.service.cps.model.StartListenerRequest;
 import com.jdcloud.sdk.service.cps.model.StartListenerResponse;
 import com.jdcloud.sdk.service.cps.client.StartListenerExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryCPSLBRegionsRequest;
-import com.jdcloud.sdk.service.cps.model.QueryCPSLBRegionsResponse;
-import com.jdcloud.sdk.service.cps.client.QueryCPSLBRegionsExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryServerGroupRequest;
-import com.jdcloud.sdk.service.cps.model.QueryServerGroupResponse;
-import com.jdcloud.sdk.service.cps.client.QueryServerGroupExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeLoadBalancersRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeLoadBalancersResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeLoadBalancersExecutor;
 import com.jdcloud.sdk.service.cps.model.StartInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.StartInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.StartInstanceExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeCPSLBRegionsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeCPSLBRegionsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeCPSLBRegionsExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeRouteTableRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeRouteTableResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeRouteTableExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateSubnetRequest;
 import com.jdcloud.sdk.service.cps.model.CreateSubnetResponse;
 import com.jdcloud.sdk.service.cps.client.CreateSubnetExecutor;
 import com.jdcloud.sdk.service.cps.model.RestartInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.RestartInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.RestartInstanceExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeLoadBalancerRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeLoadBalancerResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeLoadBalancerExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeElasticIpsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeElasticIpsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeElasticIpsExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeOSRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeOSResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeOSExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeServerGroupRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeServerGroupResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeServerGroupExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateListenerRequest;
 import com.jdcloud.sdk.service.cps.model.CreateListenerResponse;
 import com.jdcloud.sdk.service.cps.client.CreateListenerExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyElasticIpBandwidthRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyElasticIpBandwidthResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyElasticIpBandwidthExecutor;
-import com.jdcloud.sdk.service.cps.model.QueryListenersRequest;
-import com.jdcloud.sdk.service.cps.model.QueryListenersResponse;
-import com.jdcloud.sdk.service.cps.client.QueryListenersExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyServerRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyServerResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyServerExecutor;
@@ -283,6 +283,17 @@ public class CpsClient extends JdcloudClient {
 
 
     /**
+     * 查询后端服务器列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeServersResponse describeServers(DescribeServersRequest request) throws JdcloudSdkException {
+        return new DescribeServersExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询子网详情
      *
      * @param request
@@ -313,17 +324,6 @@ public class CpsClient extends JdcloudClient {
      */
     public AssociateElasticIpLBResponse associateElasticIpLB(AssociateElasticIpLBRequest request) throws JdcloudSdkException {
         return new AssociateElasticIpLBExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询监听器详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryListenerResponse queryListener(QueryListenerRequest request) throws JdcloudSdkException {
-        return new QueryListenerExecutor().client(this).execute(request);
     }
 
     /**
@@ -385,6 +385,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询密钥对详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKeypairResponse describeKeypair(DescribeKeypairRequest request) throws JdcloudSdkException {
+        return new DescribeKeypairExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询某种实例类型的云物理服务器支持的RAID类型，可查询系统盘RAID类型和数据盘RAID类型
      *
      * @param request
@@ -407,6 +418,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询虚拟服务器组列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeServerGroupsResponse describeServerGroups(DescribeServerGroupsRequest request) throws JdcloudSdkException {
+        return new DescribeServerGroupsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改私有网络
 
      *
@@ -419,17 +441,6 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询负载均衡实例详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryLoadBalancerResponse queryLoadBalancer(QueryLoadBalancerRequest request) throws JdcloudSdkException {
-        return new QueryLoadBalancerExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询云物理服务器名称
      *
      * @param request
@@ -438,17 +449,6 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeInstanceNameResponse describeInstanceName(DescribeInstanceNameRequest request) throws JdcloudSdkException {
         return new DescribeInstanceNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询后端服务器列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryServersResponse queryServers(QueryServersRequest request) throws JdcloudSdkException {
-        return new QueryServersExecutor().client(this).execute(request);
     }
 
     /**
@@ -485,14 +485,14 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询密钥对详情
+     * 查询监听器
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryKeypairResponse queryKeypair(QueryKeypairRequest request) throws JdcloudSdkException {
-        return new QueryKeypairExecutor().client(this).execute(request);
+    public DescribeListenersResponse describeListeners(DescribeListenersRequest request) throws JdcloudSdkException {
+        return new DescribeListenersExecutor().client(this).execute(request);
     }
 
     /**
@@ -504,17 +504,6 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeRegionesResponse describeRegiones(DescribeRegionesRequest request) throws JdcloudSdkException {
         return new DescribeRegionesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询负载均衡实例列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryLoadBalancersResponse queryLoadBalancers(QueryLoadBalancersRequest request) throws JdcloudSdkException {
-        return new QueryLoadBalancersExecutor().client(this).execute(request);
     }
 
     /**
@@ -546,8 +535,8 @@ public class CpsClient extends JdcloudClient {
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryKeypairsResponse queryKeypairs(QueryKeypairsRequest request) throws JdcloudSdkException {
-        return new QueryKeypairsExecutor().client(this).execute(request);
+    public DescribeKeypairsResponse describeKeypairs(DescribeKeypairsRequest request) throws JdcloudSdkException {
+        return new DescribeKeypairsExecutor().client(this).execute(request);
     }
 
     /**
@@ -585,17 +574,6 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询路由表列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryRouteTablesResponse queryRouteTables(QueryRouteTablesRequest request) throws JdcloudSdkException {
-        return new QueryRouteTablesExecutor().client(this).execute(request);
-    }
-
-    /**
      * 修改负载均衡实例
      *
      * @param request
@@ -615,6 +593,17 @@ public class CpsClient extends JdcloudClient {
      */
     public StartLoadBalancerResponse startLoadBalancer(StartLoadBalancerRequest request) throws JdcloudSdkException {
         return new StartLoadBalancerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询路由表列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRouteTablesResponse describeRouteTables(DescribeRouteTablesRequest request) throws JdcloudSdkException {
+        return new DescribeRouteTablesExecutor().client(this).execute(request);
     }
 
     /**
@@ -662,17 +651,6 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeInstanceMonitorInfoResponse describeInstanceMonitorInfo(DescribeInstanceMonitorInfoRequest request) throws JdcloudSdkException {
         return new DescribeInstanceMonitorInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询虚拟服务器组列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryServerGroupsResponse queryServerGroups(QueryServerGroupsRequest request) throws JdcloudSdkException {
-        return new QueryServerGroupsExecutor().client(this).execute(request);
     }
 
     /**
@@ -728,6 +706,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询监听器详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeListenerResponse describeListener(DescribeListenerRequest request) throws JdcloudSdkException {
+        return new DescribeListenerExecutor().client(this).execute(request);
+    }
+
+    /**
      * 对单台云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
      *
      * @param request
@@ -758,17 +747,6 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeSubnetsResponse describeSubnets(DescribeSubnetsRequest request) throws JdcloudSdkException {
         return new DescribeSubnetsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询路由表详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryRouteTableResponse queryRouteTable(QueryRouteTableRequest request) throws JdcloudSdkException {
-        return new QueryRouteTableExecutor().client(this).execute(request);
     }
 
     /**
@@ -850,25 +828,14 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询负载均衡地域列表
+     * 查询负载均衡实例列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryCPSLBRegionsResponse queryCPSLBRegions(QueryCPSLBRegionsRequest request) throws JdcloudSdkException {
-        return new QueryCPSLBRegionsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询虚拟服务器组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryServerGroupResponse queryServerGroup(QueryServerGroupRequest request) throws JdcloudSdkException {
-        return new QueryServerGroupExecutor().client(this).execute(request);
+    public DescribeLoadBalancersResponse describeLoadBalancers(DescribeLoadBalancersRequest request) throws JdcloudSdkException {
+        return new DescribeLoadBalancersExecutor().client(this).execute(request);
     }
 
     /**
@@ -880,6 +847,28 @@ public class CpsClient extends JdcloudClient {
      */
     public StartInstanceResponse startInstance(StartInstanceRequest request) throws JdcloudSdkException {
         return new StartInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询负载均衡地域列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCPSLBRegionsResponse describeCPSLBRegions(DescribeCPSLBRegionsRequest request) throws JdcloudSdkException {
+        return new DescribeCPSLBRegionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询路由表详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRouteTableResponse describeRouteTable(DescribeRouteTableRequest request) throws JdcloudSdkException {
+        return new DescribeRouteTableExecutor().client(this).execute(request);
     }
 
     /**
@@ -902,6 +891,17 @@ public class CpsClient extends JdcloudClient {
      */
     public RestartInstanceResponse restartInstance(RestartInstanceRequest request) throws JdcloudSdkException {
         return new RestartInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询负载均衡实例详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLoadBalancerResponse describeLoadBalancer(DescribeLoadBalancerRequest request) throws JdcloudSdkException {
+        return new DescribeLoadBalancerExecutor().client(this).execute(request);
     }
 
     /**
@@ -929,6 +929,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询虚拟服务器组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeServerGroupResponse describeServerGroup(DescribeServerGroupRequest request) throws JdcloudSdkException {
+        return new DescribeServerGroupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建监听器
      *
      * @param request
@@ -949,17 +960,6 @@ public class CpsClient extends JdcloudClient {
      */
     public ModifyElasticIpBandwidthResponse modifyElasticIpBandwidth(ModifyElasticIpBandwidthRequest request) throws JdcloudSdkException {
         return new ModifyElasticIpBandwidthExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询监听器
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryListenersResponse queryListeners(QueryListenersRequest request) throws JdcloudSdkException {
-        return new QueryListenersExecutor().client(this).execute(request);
     }
 
     /**

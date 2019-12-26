@@ -61,6 +61,16 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private String timeInterval;
 
     /**
+     * 交换机IP，指定ip时须同时指定port
+     */
+    private String ip;
+
+    /**
+     * 端口，指定port时须同时指定ip
+     */
+    private String port;
+
+    /**
      * IDC机房ID
      * Required:true
      */
@@ -148,6 +158,42 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 交换机IP，指定ip时须同时指定port
+     *
+     * @return
+     */
+    public String getIp() {
+        return ip;
+    }
+
+    /**
+     * set 交换机IP，指定ip时须同时指定port
+     *
+     * @param ip
+     */
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    /**
+     * get 端口，指定port时须同时指定ip
+     *
+     * @return
+     */
+    public String getPort() {
+        return port;
+    }
+
+    /**
+     * set 端口，指定port时须同时指定ip
+     *
+     * @param port
+     */
+    public void setPort(String port) {
+        this.port = port;
+    }
+
+    /**
      * get IDC机房ID
      *
      * @return
@@ -221,6 +267,26 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
      */
     public DescribeMetricDataRequest timeInterval(String timeInterval) {
         this.timeInterval = timeInterval;
+        return this;
+    }
+
+    /**
+     * set 交换机IP，指定ip时须同时指定port
+     *
+     * @param ip
+     */
+    public DescribeMetricDataRequest ip(String ip) {
+        this.ip = ip;
+        return this;
+    }
+
+    /**
+     * set 端口，指定port时须同时指定ip
+     *
+     * @param port
+     */
+    public DescribeMetricDataRequest port(String port) {
+        this.port = port;
         return this;
     }
 

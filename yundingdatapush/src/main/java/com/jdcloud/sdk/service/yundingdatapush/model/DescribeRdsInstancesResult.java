@@ -30,58 +30,58 @@ import com.jdcloud.sdk.service.yundingdatapush.model.RdsInstance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询开通数据推送的数据库实例
+ * 查询已绑定数据推送的数据库实例
  */
 public class DescribeRdsInstancesResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * venders
+     * rdsInstances
      */
-    private List<RdsInstance> venders;
+    private List<RdsInstance> rdsInstances;
 
 
     /**
-     * get venders
+     * get rdsInstances
      *
      * @return
      */
-    public List<RdsInstance> getVenders() {
-        return venders;
+    public List<RdsInstance> getRdsInstances() {
+        return rdsInstances;
     }
 
     /**
-     * set venders
+     * set rdsInstances
      *
-     * @param venders
+     * @param rdsInstances
      */
-    public void setVenders(List<RdsInstance> venders) {
-        this.venders = venders;
+    public void setRdsInstances(List<RdsInstance> rdsInstances) {
+        this.rdsInstances = rdsInstances;
     }
 
 
     /**
-     * set venders
+     * set rdsInstances
      *
-     * @param venders
+     * @param rdsInstances
      */
-    public DescribeRdsInstancesResult venders(List<RdsInstance> venders) {
-        this.venders = venders;
+    public DescribeRdsInstancesResult rdsInstances(List<RdsInstance> rdsInstances) {
+        this.rdsInstances = rdsInstances;
         return this;
     }
 
 
     /**
-     * add item to venders
+     * add item to rdsInstances
      *
-     * @param vender
+     * @param rdsInstance
      */
-    public void addVender(RdsInstance vender) {
-        if (this.venders == null) {
-            this.venders = new ArrayList<>();
+    public void addRdsInstance(RdsInstance rdsInstance) {
+        if (this.rdsInstances == null) {
+            this.rdsInstances = new ArrayList<>();
         }
-        this.venders.add(vender);
+        this.rdsInstances.add(rdsInstance);
     }
 
 }

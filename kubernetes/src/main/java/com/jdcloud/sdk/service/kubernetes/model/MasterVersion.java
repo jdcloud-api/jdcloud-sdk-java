@@ -59,6 +59,11 @@ public class MasterVersion  implements java.io.Serializable {
      */
     private List<NodeVersion> nodeVersions;
 
+    /**
+     * node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+     */
+    private String nodeOsTypes;
+
 
     /**
      * get 集群版本号
@@ -150,6 +155,24 @@ public class MasterVersion  implements java.io.Serializable {
         this.nodeVersions = nodeVersions;
     }
 
+    /**
+     * get node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+     *
+     * @return
+     */
+    public String getNodeOsTypes() {
+        return nodeOsTypes;
+    }
+
+    /**
+     * set node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+     *
+     * @param nodeOsTypes
+     */
+    public void setNodeOsTypes(String nodeOsTypes) {
+        this.nodeOsTypes = nodeOsTypes;
+    }
+
 
     /**
      * set 集群版本号
@@ -198,6 +221,16 @@ public class MasterVersion  implements java.io.Serializable {
      */
     public MasterVersion nodeVersions(List<NodeVersion> nodeVersions) {
         this.nodeVersions = nodeVersions;
+        return this;
+    }
+
+    /**
+     * set node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
+     *
+     * @param nodeOsTypes
+     */
+    public MasterVersion nodeOsTypes(String nodeOsTypes) {
+        this.nodeOsTypes = nodeOsTypes;
         return this;
     }
 

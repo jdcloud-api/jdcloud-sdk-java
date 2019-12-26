@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.kubernetes.model.NodeConfigSpec;
+import com.jdcloud.sdk.service.kubernetes.model.CAConfigSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -95,6 +96,11 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
      * 是否开启工作节点组的自动修复，默认关闭
      */
     private Boolean autoRepair;
+
+    /**
+     * 自动伸缩配置
+     */
+    private CAConfigSpec caConfig;
 
     /**
      * 地域 ID
@@ -267,6 +273,24 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * get 自动伸缩配置
+     *
+     * @return
+     */
+    public CAConfigSpec getCaConfig() {
+        return caConfig;
+    }
+
+    /**
+     * set 自动伸缩配置
+     *
+     * @param caConfig
+     */
+    public void setCaConfig(CAConfigSpec caConfig) {
+        this.caConfig = caConfig;
+    }
+
+    /**
      * get 地域 ID
      *
      * @return
@@ -372,6 +396,16 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
      */
     public CreateNodeGroupRequest autoRepair(Boolean autoRepair) {
         this.autoRepair = autoRepair;
+        return this;
+    }
+
+    /**
+     * set 自动伸缩配置
+     *
+     * @param caConfig
+     */
+    public CreateNodeGroupRequest caConfig(CAConfigSpec caConfig) {
+        this.caConfig = caConfig;
         return this;
     }
 

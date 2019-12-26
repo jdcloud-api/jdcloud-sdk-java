@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.yundingdatapush.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询开通数据推送的数据库实例
+ * 查询已绑定数据推送的数据库实例
  */
 public class DescribeRdsInstancesResponse extends JdcloudResponse<DescribeRdsInstancesResult> implements java.io.Serializable {
 
