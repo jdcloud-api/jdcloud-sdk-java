@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.partner.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * distributorDTO
@@ -43,7 +45,7 @@ public class DistributorDTO  implements java.io.Serializable {
     private String distributorName;
 
     /**
-     * 京东云账户
+     * pin
      */
     private String pin;
 
@@ -158,6 +160,56 @@ public class DistributorDTO  implements java.io.Serializable {
     private Integer dept;
 
     /**
+     * 是否需要返还（0需要1不需要）
+     */
+    private Integer returnFlag;
+
+    /**
+     * 返还政策ID
+     */
+    private String returnPolicyId;
+
+    /**
+     * distributorProductList
+     */
+    private List<DistributorProductDTO> distributorProductList;
+
+    /**
+     * 结算周期类型（1月、2季度、3年、4天、5周）
+     */
+    private Integer circleType;
+
+    /**
+     * 服务商返还方式（1现金2代金券）
+     */
+    private Integer returnMode;
+
+    /**
+     * 是否有下级服务商（0有1不没有）
+     */
+    private Integer subFlag;
+
+    /**
+     * 下级服务商是否需要返还（0需要1不需要）
+     */
+    private Integer subReturnFlag;
+
+    /**
+     * 下级服务商返还政策ID
+     */
+    private String subReturnPolicyId;
+
+    /**
+     * 结算周期类型（1月、2季度、3年、4天、5周）
+     */
+    private Integer subCircleType;
+
+    /**
+     * 下级服务商返还方式（1现金2代金券）
+     */
+    private Integer subReturnMode;
+
+    /**
      * 京东云负责人(京东云人员erp或名称)
      */
     private String erp;
@@ -200,7 +252,7 @@ public class DistributorDTO  implements java.io.Serializable {
     }
 
     /**
-     * get 京东云账户
+     * get pin
      *
      * @return
      */
@@ -209,7 +261,7 @@ public class DistributorDTO  implements java.io.Serializable {
     }
 
     /**
-     * set 京东云账户
+     * set pin
      *
      * @param pin
      */
@@ -614,6 +666,186 @@ public class DistributorDTO  implements java.io.Serializable {
     }
 
     /**
+     * get 是否需要返还（0需要1不需要）
+     *
+     * @return
+     */
+    public Integer getReturnFlag() {
+        return returnFlag;
+    }
+
+    /**
+     * set 是否需要返还（0需要1不需要）
+     *
+     * @param returnFlag
+     */
+    public void setReturnFlag(Integer returnFlag) {
+        this.returnFlag = returnFlag;
+    }
+
+    /**
+     * get 返还政策ID
+     *
+     * @return
+     */
+    public String getReturnPolicyId() {
+        return returnPolicyId;
+    }
+
+    /**
+     * set 返还政策ID
+     *
+     * @param returnPolicyId
+     */
+    public void setReturnPolicyId(String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+    }
+
+    /**
+     * get distributorProductList
+     *
+     * @return
+     */
+    public List<DistributorProductDTO> getDistributorProductList() {
+        return distributorProductList;
+    }
+
+    /**
+     * set distributorProductList
+     *
+     * @param distributorProductList
+     */
+    public void setDistributorProductList(List<DistributorProductDTO> distributorProductList) {
+        this.distributorProductList = distributorProductList;
+    }
+
+    /**
+     * get 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @return
+     */
+    public Integer getCircleType() {
+        return circleType;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param circleType
+     */
+    public void setCircleType(Integer circleType) {
+        this.circleType = circleType;
+    }
+
+    /**
+     * get 服务商返还方式（1现金2代金券）
+     *
+     * @return
+     */
+    public Integer getReturnMode() {
+        return returnMode;
+    }
+
+    /**
+     * set 服务商返还方式（1现金2代金券）
+     *
+     * @param returnMode
+     */
+    public void setReturnMode(Integer returnMode) {
+        this.returnMode = returnMode;
+    }
+
+    /**
+     * get 是否有下级服务商（0有1不没有）
+     *
+     * @return
+     */
+    public Integer getSubFlag() {
+        return subFlag;
+    }
+
+    /**
+     * set 是否有下级服务商（0有1不没有）
+     *
+     * @param subFlag
+     */
+    public void setSubFlag(Integer subFlag) {
+        this.subFlag = subFlag;
+    }
+
+    /**
+     * get 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @return
+     */
+    public Integer getSubReturnFlag() {
+        return subReturnFlag;
+    }
+
+    /**
+     * set 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @param subReturnFlag
+     */
+    public void setSubReturnFlag(Integer subReturnFlag) {
+        this.subReturnFlag = subReturnFlag;
+    }
+
+    /**
+     * get 下级服务商返还政策ID
+     *
+     * @return
+     */
+    public String getSubReturnPolicyId() {
+        return subReturnPolicyId;
+    }
+
+    /**
+     * set 下级服务商返还政策ID
+     *
+     * @param subReturnPolicyId
+     */
+    public void setSubReturnPolicyId(String subReturnPolicyId) {
+        this.subReturnPolicyId = subReturnPolicyId;
+    }
+
+    /**
+     * get 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @return
+     */
+    public Integer getSubCircleType() {
+        return subCircleType;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param subCircleType
+     */
+    public void setSubCircleType(Integer subCircleType) {
+        this.subCircleType = subCircleType;
+    }
+
+    /**
+     * get 下级服务商返还方式（1现金2代金券）
+     *
+     * @return
+     */
+    public Integer getSubReturnMode() {
+        return subReturnMode;
+    }
+
+    /**
+     * set 下级服务商返还方式（1现金2代金券）
+     *
+     * @param subReturnMode
+     */
+    public void setSubReturnMode(Integer subReturnMode) {
+        this.subReturnMode = subReturnMode;
+    }
+
+    /**
      * get 京东云负责人(京东云人员erp或名称)
      *
      * @return
@@ -653,7 +885,7 @@ public class DistributorDTO  implements java.io.Serializable {
     }
 
     /**
-     * set 京东云账户
+     * set pin
      *
      * @param pin
      */
@@ -883,6 +1115,106 @@ public class DistributorDTO  implements java.io.Serializable {
     }
 
     /**
+     * set 是否需要返还（0需要1不需要）
+     *
+     * @param returnFlag
+     */
+    public DistributorDTO returnFlag(Integer returnFlag) {
+        this.returnFlag = returnFlag;
+        return this;
+    }
+
+    /**
+     * set 返还政策ID
+     *
+     * @param returnPolicyId
+     */
+    public DistributorDTO returnPolicyId(String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+        return this;
+    }
+
+    /**
+     * set distributorProductList
+     *
+     * @param distributorProductList
+     */
+    public DistributorDTO distributorProductList(List<DistributorProductDTO> distributorProductList) {
+        this.distributorProductList = distributorProductList;
+        return this;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param circleType
+     */
+    public DistributorDTO circleType(Integer circleType) {
+        this.circleType = circleType;
+        return this;
+    }
+
+    /**
+     * set 服务商返还方式（1现金2代金券）
+     *
+     * @param returnMode
+     */
+    public DistributorDTO returnMode(Integer returnMode) {
+        this.returnMode = returnMode;
+        return this;
+    }
+
+    /**
+     * set 是否有下级服务商（0有1不没有）
+     *
+     * @param subFlag
+     */
+    public DistributorDTO subFlag(Integer subFlag) {
+        this.subFlag = subFlag;
+        return this;
+    }
+
+    /**
+     * set 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @param subReturnFlag
+     */
+    public DistributorDTO subReturnFlag(Integer subReturnFlag) {
+        this.subReturnFlag = subReturnFlag;
+        return this;
+    }
+
+    /**
+     * set 下级服务商返还政策ID
+     *
+     * @param subReturnPolicyId
+     */
+    public DistributorDTO subReturnPolicyId(String subReturnPolicyId) {
+        this.subReturnPolicyId = subReturnPolicyId;
+        return this;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param subCircleType
+     */
+    public DistributorDTO subCircleType(Integer subCircleType) {
+        this.subCircleType = subCircleType;
+        return this;
+    }
+
+    /**
+     * set 下级服务商返还方式（1现金2代金券）
+     *
+     * @param subReturnMode
+     */
+    public DistributorDTO subReturnMode(Integer subReturnMode) {
+        this.subReturnMode = subReturnMode;
+        return this;
+    }
+
+    /**
      * set 京东云负责人(京东云人员erp或名称)
      *
      * @param erp
@@ -892,5 +1224,17 @@ public class DistributorDTO  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to distributorProductList
+     *
+     * @param distributorProductList
+     */
+    public void addDistributorProductList(DistributorProductDTO distributorProductList) {
+        if (this.distributorProductList == null) {
+            this.distributorProductList = new ArrayList<>();
+        }
+        this.distributorProductList.add(distributorProductList);
+    }
 
 }

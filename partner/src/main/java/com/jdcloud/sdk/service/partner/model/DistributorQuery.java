@@ -43,9 +43,14 @@ public class DistributorQuery  implements java.io.Serializable {
     private String distributorName;
 
     /**
-     * 京东云账户
+     * pin
      */
     private String pin;
+
+    /**
+     * 帐户名
+     */
+    private String loginName;
 
     /**
      * 合同编号
@@ -143,6 +148,41 @@ public class DistributorQuery  implements java.io.Serializable {
     private Integer dept;
 
     /**
+     * 是否需要返还（0需要1不需要）
+     */
+    private Integer returnFlag;
+
+    /**
+     * 返还政策ID
+     */
+    private String returnPolicyId;
+
+    /**
+     * 结算周期类型（1月、2季度、3年、4天、5周）
+     */
+    private Integer circleType;
+
+    /**
+     * 是否有下级服务商（0有1不没有）
+     */
+    private Integer subFlag;
+
+    /**
+     * 下级服务商是否需要返还（0需要1不需要）
+     */
+    private Integer subReturnFlag;
+
+    /**
+     * 下级服务商返还政策ID
+     */
+    private String subReturnPolicyId;
+
+    /**
+     * 结算周期类型（1月、2季度、3年、4天、5周）
+     */
+    private Integer subCircleType;
+
+    /**
      * 京东云负责人(京东云人员erp或名称)
      */
     private String erp;
@@ -210,7 +250,7 @@ public class DistributorQuery  implements java.io.Serializable {
     }
 
     /**
-     * get 京东云账户
+     * get pin
      *
      * @return
      */
@@ -219,12 +259,30 @@ public class DistributorQuery  implements java.io.Serializable {
     }
 
     /**
-     * set 京东云账户
+     * set pin
      *
      * @param pin
      */
     public void setPin(String pin) {
         this.pin = pin;
+    }
+
+    /**
+     * get 帐户名
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 
     /**
@@ -570,6 +628,132 @@ public class DistributorQuery  implements java.io.Serializable {
     }
 
     /**
+     * get 是否需要返还（0需要1不需要）
+     *
+     * @return
+     */
+    public Integer getReturnFlag() {
+        return returnFlag;
+    }
+
+    /**
+     * set 是否需要返还（0需要1不需要）
+     *
+     * @param returnFlag
+     */
+    public void setReturnFlag(Integer returnFlag) {
+        this.returnFlag = returnFlag;
+    }
+
+    /**
+     * get 返还政策ID
+     *
+     * @return
+     */
+    public String getReturnPolicyId() {
+        return returnPolicyId;
+    }
+
+    /**
+     * set 返还政策ID
+     *
+     * @param returnPolicyId
+     */
+    public void setReturnPolicyId(String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+    }
+
+    /**
+     * get 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @return
+     */
+    public Integer getCircleType() {
+        return circleType;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param circleType
+     */
+    public void setCircleType(Integer circleType) {
+        this.circleType = circleType;
+    }
+
+    /**
+     * get 是否有下级服务商（0有1不没有）
+     *
+     * @return
+     */
+    public Integer getSubFlag() {
+        return subFlag;
+    }
+
+    /**
+     * set 是否有下级服务商（0有1不没有）
+     *
+     * @param subFlag
+     */
+    public void setSubFlag(Integer subFlag) {
+        this.subFlag = subFlag;
+    }
+
+    /**
+     * get 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @return
+     */
+    public Integer getSubReturnFlag() {
+        return subReturnFlag;
+    }
+
+    /**
+     * set 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @param subReturnFlag
+     */
+    public void setSubReturnFlag(Integer subReturnFlag) {
+        this.subReturnFlag = subReturnFlag;
+    }
+
+    /**
+     * get 下级服务商返还政策ID
+     *
+     * @return
+     */
+    public String getSubReturnPolicyId() {
+        return subReturnPolicyId;
+    }
+
+    /**
+     * set 下级服务商返还政策ID
+     *
+     * @param subReturnPolicyId
+     */
+    public void setSubReturnPolicyId(String subReturnPolicyId) {
+        this.subReturnPolicyId = subReturnPolicyId;
+    }
+
+    /**
+     * get 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @return
+     */
+    public Integer getSubCircleType() {
+        return subCircleType;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param subCircleType
+     */
+    public void setSubCircleType(Integer subCircleType) {
+        this.subCircleType = subCircleType;
+    }
+
+    /**
      * get 京东云负责人(京东云人员erp或名称)
      *
      * @return
@@ -699,12 +883,22 @@ public class DistributorQuery  implements java.io.Serializable {
     }
 
     /**
-     * set 京东云账户
+     * set pin
      *
      * @param pin
      */
     public DistributorQuery pin(String pin) {
         this.pin = pin;
+        return this;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public DistributorQuery loginName(String loginName) {
+        this.loginName = loginName;
         return this;
     }
 
@@ -895,6 +1089,76 @@ public class DistributorQuery  implements java.io.Serializable {
      */
     public DistributorQuery dept(Integer dept) {
         this.dept = dept;
+        return this;
+    }
+
+    /**
+     * set 是否需要返还（0需要1不需要）
+     *
+     * @param returnFlag
+     */
+    public DistributorQuery returnFlag(Integer returnFlag) {
+        this.returnFlag = returnFlag;
+        return this;
+    }
+
+    /**
+     * set 返还政策ID
+     *
+     * @param returnPolicyId
+     */
+    public DistributorQuery returnPolicyId(String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+        return this;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param circleType
+     */
+    public DistributorQuery circleType(Integer circleType) {
+        this.circleType = circleType;
+        return this;
+    }
+
+    /**
+     * set 是否有下级服务商（0有1不没有）
+     *
+     * @param subFlag
+     */
+    public DistributorQuery subFlag(Integer subFlag) {
+        this.subFlag = subFlag;
+        return this;
+    }
+
+    /**
+     * set 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @param subReturnFlag
+     */
+    public DistributorQuery subReturnFlag(Integer subReturnFlag) {
+        this.subReturnFlag = subReturnFlag;
+        return this;
+    }
+
+    /**
+     * set 下级服务商返还政策ID
+     *
+     * @param subReturnPolicyId
+     */
+    public DistributorQuery subReturnPolicyId(String subReturnPolicyId) {
+        this.subReturnPolicyId = subReturnPolicyId;
+        return this;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param subCircleType
+     */
+    public DistributorQuery subCircleType(Integer subCircleType) {
+        this.subCircleType = subCircleType;
         return this;
     }
 

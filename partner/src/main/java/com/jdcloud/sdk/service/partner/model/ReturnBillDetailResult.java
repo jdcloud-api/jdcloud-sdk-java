@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.partner.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -67,6 +69,41 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
      * 返还项目名称
      */
     private String itemName;
+
+    /**
+     * 返还依据类型
+     */
+    private Integer returnRuleType;
+
+    /**
+     * 产品类型
+     */
+    private Integer productType;
+
+    /**
+     * 产品ID
+     */
+    private String productId;
+
+    /**
+     * 产品名称
+     */
+    private String productName;
+
+    /**
+     * returnBillDetailProductList
+     */
+    private List<ReturnBillDetailProduct> returnBillDetailProductList;
+
+    /**
+     * 账单ID
+     */
+    private Number accountingBillId;
+
+    /**
+     * 订单号
+     */
+    private String mainTransactionNo;
 
     /**
      * 周期类型
@@ -303,6 +340,132 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
      */
     public void setItemName(String itemName) {
         this.itemName = itemName;
+    }
+
+    /**
+     * get 返还依据类型
+     *
+     * @return
+     */
+    public Integer getReturnRuleType() {
+        return returnRuleType;
+    }
+
+    /**
+     * set 返还依据类型
+     *
+     * @param returnRuleType
+     */
+    public void setReturnRuleType(Integer returnRuleType) {
+        this.returnRuleType = returnRuleType;
+    }
+
+    /**
+     * get 产品类型
+     *
+     * @return
+     */
+    public Integer getProductType() {
+        return productType;
+    }
+
+    /**
+     * set 产品类型
+     *
+     * @param productType
+     */
+    public void setProductType(Integer productType) {
+        this.productType = productType;
+    }
+
+    /**
+     * get 产品ID
+     *
+     * @return
+     */
+    public String getProductId() {
+        return productId;
+    }
+
+    /**
+     * set 产品ID
+     *
+     * @param productId
+     */
+    public void setProductId(String productId) {
+        this.productId = productId;
+    }
+
+    /**
+     * get 产品名称
+     *
+     * @return
+     */
+    public String getProductName() {
+        return productName;
+    }
+
+    /**
+     * set 产品名称
+     *
+     * @param productName
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    /**
+     * get returnBillDetailProductList
+     *
+     * @return
+     */
+    public List<ReturnBillDetailProduct> getReturnBillDetailProductList() {
+        return returnBillDetailProductList;
+    }
+
+    /**
+     * set returnBillDetailProductList
+     *
+     * @param returnBillDetailProductList
+     */
+    public void setReturnBillDetailProductList(List<ReturnBillDetailProduct> returnBillDetailProductList) {
+        this.returnBillDetailProductList = returnBillDetailProductList;
+    }
+
+    /**
+     * get 账单ID
+     *
+     * @return
+     */
+    public Number getAccountingBillId() {
+        return accountingBillId;
+    }
+
+    /**
+     * set 账单ID
+     *
+     * @param accountingBillId
+     */
+    public void setAccountingBillId(Number accountingBillId) {
+        this.accountingBillId = accountingBillId;
+    }
+
+    /**
+     * get 订单号
+     *
+     * @return
+     */
+    public String getMainTransactionNo() {
+        return mainTransactionNo;
+    }
+
+    /**
+     * set 订单号
+     *
+     * @param mainTransactionNo
+     */
+    public void setMainTransactionNo(String mainTransactionNo) {
+        this.mainTransactionNo = mainTransactionNo;
     }
 
     /**
@@ -773,6 +936,76 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
+     * set 返还依据类型
+     *
+     * @param returnRuleType
+     */
+    public ReturnBillDetailResult returnRuleType(Integer returnRuleType) {
+        this.returnRuleType = returnRuleType;
+        return this;
+    }
+
+    /**
+     * set 产品类型
+     *
+     * @param productType
+     */
+    public ReturnBillDetailResult productType(Integer productType) {
+        this.productType = productType;
+        return this;
+    }
+
+    /**
+     * set 产品ID
+     *
+     * @param productId
+     */
+    public ReturnBillDetailResult productId(String productId) {
+        this.productId = productId;
+        return this;
+    }
+
+    /**
+     * set 产品名称
+     *
+     * @param productName
+     */
+    public ReturnBillDetailResult productName(String productName) {
+        this.productName = productName;
+        return this;
+    }
+
+    /**
+     * set returnBillDetailProductList
+     *
+     * @param returnBillDetailProductList
+     */
+    public ReturnBillDetailResult returnBillDetailProductList(List<ReturnBillDetailProduct> returnBillDetailProductList) {
+        this.returnBillDetailProductList = returnBillDetailProductList;
+        return this;
+    }
+
+    /**
+     * set 账单ID
+     *
+     * @param accountingBillId
+     */
+    public ReturnBillDetailResult accountingBillId(Number accountingBillId) {
+        this.accountingBillId = accountingBillId;
+        return this;
+    }
+
+    /**
+     * set 订单号
+     *
+     * @param mainTransactionNo
+     */
+    public ReturnBillDetailResult mainTransactionNo(String mainTransactionNo) {
+        this.mainTransactionNo = mainTransactionNo;
+        return this;
+    }
+
+    /**
      * set 周期类型
      *
      * @param circleType
@@ -992,5 +1225,17 @@ public class ReturnBillDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
+    /**
+     * add item to returnBillDetailProductList
+     *
+     * @param returnBillDetailProductList
+     */
+    public void addReturnBillDetailProductList(ReturnBillDetailProduct returnBillDetailProductList) {
+        if (this.returnBillDetailProductList == null) {
+            this.returnBillDetailProductList = new ArrayList<>();
+        }
+        this.returnBillDetailProductList.add(returnBillDetailProductList);
+    }
 
 }

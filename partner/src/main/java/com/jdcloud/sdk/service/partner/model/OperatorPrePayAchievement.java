@@ -108,6 +108,11 @@ public class OperatorPrePayAchievement  implements java.io.Serializable {
     private String opTypeName;
 
     /**
+     * 帐户名
+     */
+    private String loginName;
+
+    /**
      * 开始时间
      */
     private String billTime;
@@ -419,6 +424,24 @@ public class OperatorPrePayAchievement  implements java.io.Serializable {
     }
 
     /**
+     * get 帐户名
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    /**
      * get 开始时间
      *
      * @return
@@ -710,6 +733,16 @@ public class OperatorPrePayAchievement  implements java.io.Serializable {
      */
     public OperatorPrePayAchievement opTypeName(String opTypeName) {
         this.opTypeName = opTypeName;
+        return this;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public OperatorPrePayAchievement loginName(String loginName) {
+        this.loginName = loginName;
         return this;
     }
 

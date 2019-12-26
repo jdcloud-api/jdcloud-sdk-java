@@ -58,6 +58,11 @@ public class Achievement  implements java.io.Serializable {
     private String serviceCodeName;
 
     /**
+     * loginName
+     */
+    private String loginName;
+
+    /**
      * 时间
      */
     private String consumeDate;
@@ -176,6 +181,24 @@ public class Achievement  implements java.io.Serializable {
      */
     public void setServiceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
+    }
+
+    /**
+     * get loginName
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set loginName
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 
     /**
@@ -334,6 +357,16 @@ public class Achievement  implements java.io.Serializable {
      */
     public Achievement serviceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
+        return this;
+    }
+
+    /**
+     * set loginName
+     *
+     * @param loginName
+     */
+    public Achievement loginName(String loginName) {
+        this.loginName = loginName;
         return this;
     }
 

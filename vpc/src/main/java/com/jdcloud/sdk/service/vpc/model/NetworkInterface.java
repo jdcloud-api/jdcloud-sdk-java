@@ -45,7 +45,7 @@ public class NetworkInterface  implements java.io.Serializable {
     private String networkInterfaceId;
 
     /**
-     * 可用区名称
+     * 可用区名称，该参数无效，不建议使用
      */
     private String az;
 
@@ -115,6 +115,16 @@ public class NetworkInterface  implements java.io.Serializable {
     private String description;
 
     /**
+     * 弹性网卡绑定实例状态，attached（已绑定）、detached（未绑定）
+     */
+    private String attachmentStatus;
+
+    /**
+     * 弹性网卡可用状态，enabled（启用）、disabled（停用）
+     */
+    private String networkInterfaceStatus;
+
+    /**
      * 弹性网卡创建时间
      */
     private String createdTime;
@@ -157,7 +167,7 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 可用区名称
+     * get 可用区名称，该参数无效，不建议使用
      *
      * @return
      */
@@ -166,7 +176,7 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区名称
+     * set 可用区名称，该参数无效，不建议使用
      *
      * @param az
      */
@@ -409,6 +419,42 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
+     * get 弹性网卡绑定实例状态，attached（已绑定）、detached（未绑定）
+     *
+     * @return
+     */
+    public String getAttachmentStatus() {
+        return attachmentStatus;
+    }
+
+    /**
+     * set 弹性网卡绑定实例状态，attached（已绑定）、detached（未绑定）
+     *
+     * @param attachmentStatus
+     */
+    public void setAttachmentStatus(String attachmentStatus) {
+        this.attachmentStatus = attachmentStatus;
+    }
+
+    /**
+     * get 弹性网卡可用状态，enabled（启用）、disabled（停用）
+     *
+     * @return
+     */
+    public String getNetworkInterfaceStatus() {
+        return networkInterfaceStatus;
+    }
+
+    /**
+     * set 弹性网卡可用状态，enabled（启用）、disabled（停用）
+     *
+     * @param networkInterfaceStatus
+     */
+    public void setNetworkInterfaceStatus(String networkInterfaceStatus) {
+        this.networkInterfaceStatus = networkInterfaceStatus;
+    }
+
+    /**
      * get 弹性网卡创建时间
      *
      * @return
@@ -448,7 +494,7 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区名称
+     * set 可用区名称，该参数无效，不建议使用
      *
      * @param az
      */
@@ -584,6 +630,26 @@ public class NetworkInterface  implements java.io.Serializable {
      */
     public NetworkInterface description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 弹性网卡绑定实例状态，attached（已绑定）、detached（未绑定）
+     *
+     * @param attachmentStatus
+     */
+    public NetworkInterface attachmentStatus(String attachmentStatus) {
+        this.attachmentStatus = attachmentStatus;
+        return this;
+    }
+
+    /**
+     * set 弹性网卡可用状态，enabled（启用）、disabled（停用）
+     *
+     * @param networkInterfaceStatus
+     */
+    public NetworkInterface networkInterfaceStatus(String networkInterfaceStatus) {
+        this.networkInterfaceStatus = networkInterfaceStatus;
         return this;
     }
 

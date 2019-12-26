@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 弹性公网ip
+ * Elastic-IP
  * 弹性公网ip相关接口
  *
  * OpenAPI spec version: v1

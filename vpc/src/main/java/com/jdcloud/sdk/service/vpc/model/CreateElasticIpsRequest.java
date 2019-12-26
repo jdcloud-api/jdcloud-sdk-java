@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 弹性公网ip
+ * Elastic-IP
  * 弹性公网ip相关接口
  *
  * OpenAPI spec version: v1
@@ -24,8 +24,11 @@
 
 package com.jdcloud.sdk.service.vpc.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.vpc.model.ElasticIpSpec;
+import com.jdcloud.sdk.service.vpc.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -53,6 +56,11 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
      */
     @Required
     private ElasticIpSpec elasticIpSpec;
+
+    /**
+     * 用户标签
+     */
+    private List<Tag> userTags;
 
     /**
      * Region ID
@@ -117,6 +125,24 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get 用户标签
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户标签
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -166,6 +192,16 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * set 用户标签
+     *
+     * @param userTags
+     */
+    public CreateElasticIpsRequest userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+    /**
      * set Region ID
      *
      * @param regionId
@@ -175,5 +211,17 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
+    }
 
 }

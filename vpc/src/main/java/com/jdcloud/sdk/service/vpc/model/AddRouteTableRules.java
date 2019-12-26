@@ -34,7 +34,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      * Required:true
      */
     @Required
@@ -59,9 +59,14 @@ public class AddRouteTableRules  implements java.io.Serializable {
      */
     private Number priority;
 
+    /**
+     * 描述,允许输入UTF-8编码下的全部字符，不超过256字符
+     */
+    private String description;
+
 
     /**
-     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * get 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @return
      */
@@ -70,7 +75,7 @@ public class AddRouteTableRules  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @param nextHopType
      */
@@ -132,9 +137,27 @@ public class AddRouteTableRules  implements java.io.Serializable {
         this.priority = priority;
     }
 
+    /**
+     * get 描述,允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
 
     /**
-     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+
+    /**
+     * set 下一跳类型, 取值范围:instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @param nextHopType
      */
@@ -170,6 +193,16 @@ public class AddRouteTableRules  implements java.io.Serializable {
      */
     public AddRouteTableRules priority(Number priority) {
         this.priority = priority;
+        return this;
+    }
+
+    /**
+     * set 描述,允许输入UTF-8编码下的全部字符，不超过256字符
+     *
+     * @param description
+     */
+    public AddRouteTableRules description(String description) {
+        this.description = description;
         return this;
     }
 

@@ -31,18 +31,51 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.yunding.model.DeleteRdsDatabaseRequest;
-import com.jdcloud.sdk.service.yunding.model.DeleteRdsDatabaseResponse;
-import com.jdcloud.sdk.service.yunding.client.DeleteRdsDatabaseExecutor;
-import com.jdcloud.sdk.service.yunding.model.DeleteVmInstanceRequest;
-import com.jdcloud.sdk.service.yunding.model.DeleteVmInstanceResponse;
-import com.jdcloud.sdk.service.yunding.client.DeleteVmInstanceExecutor;
-import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsRequest;
-import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsResponse;
-import com.jdcloud.sdk.service.yunding.client.UnassignSecondaryIpsExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstanceRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstanceResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeRdsInstanceExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeYdRdsInstancesRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeYdRdsInstancesResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeYdRdsInstancesExecutor;
 import com.jdcloud.sdk.service.yunding.model.AssignSecondaryIpsRequest;
 import com.jdcloud.sdk.service.yunding.model.AssignSecondaryIpsResponse;
 import com.jdcloud.sdk.service.yunding.client.AssignSecondaryIpsExecutor;
+import com.jdcloud.sdk.service.yunding.model.ModifyRdsWhiteListRequest;
+import com.jdcloud.sdk.service.yunding.model.ModifyRdsWhiteListResponse;
+import com.jdcloud.sdk.service.yunding.client.ModifyRdsWhiteListExecutor;
+import com.jdcloud.sdk.service.yunding.model.CreateRdsDatabaseRequest;
+import com.jdcloud.sdk.service.yunding.model.CreateRdsDatabaseResponse;
+import com.jdcloud.sdk.service.yunding.client.CreateRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsAccountsRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsAccountsResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeRdsAccountsExecutor;
+import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeRequest;
+import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeResponse;
+import com.jdcloud.sdk.service.yunding.client.GrantRdsPrivilegeExecutor;
+import com.jdcloud.sdk.service.yunding.model.DeleteRdsDatabaseRequest;
+import com.jdcloud.sdk.service.yunding.model.DeleteRdsDatabaseResponse;
+import com.jdcloud.sdk.service.yunding.client.DeleteRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsDatabasesRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsDatabasesResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeRdsDatabasesExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeRdsInstancesExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeInstanceInfoRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeInstanceInfoResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeInstanceInfoExecutor;
+import com.jdcloud.sdk.service.yunding.model.CreateRdsAccountRequest;
+import com.jdcloud.sdk.service.yunding.model.CreateRdsAccountResponse;
+import com.jdcloud.sdk.service.yunding.client.CreateRdsAccountExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsWhiteListRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsWhiteListResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeRdsWhiteListExecutor;
+import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsRequest;
+import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsResponse;
+import com.jdcloud.sdk.service.yunding.client.UnassignSecondaryIpsExecutor;
+import com.jdcloud.sdk.service.yunding.model.DeleteRdsAccountRequest;
+import com.jdcloud.sdk.service.yunding.model.DeleteRdsAccountResponse;
+import com.jdcloud.sdk.service.yunding.client.DeleteRdsAccountExecutor;
 
 /**
  * yundingClient
@@ -94,6 +127,84 @@ public class YundingClient extends JdcloudClient {
 
 
     /**
+     * 查询RDS实例（MySQL、SQL Server等）的详细信息以及MySQL只读实例详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRdsInstanceResponse describeRdsInstance(DescribeRdsInstanceRequest request) throws JdcloudSdkException {
+        return new DescribeRdsInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询云鼎数据库实例列表
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeYdRdsInstancesResponse describeYdRdsInstances(DescribeYdRdsInstancesRequest request) throws JdcloudSdkException {
+        return new DescribeYdRdsInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给网卡分配secondaryIp接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssignSecondaryIpsResponse assignSecondaryIps(AssignSecondaryIpsRequest request) throws JdcloudSdkException {
+        return new AssignSecondaryIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyRdsWhiteListResponse modifyRdsWhiteList(ModifyRdsWhiteListRequest request) throws JdcloudSdkException {
+        return new ModifyRdsWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRdsDatabaseResponse createRdsDatabase(CreateRdsDatabaseRequest request) throws JdcloudSdkException {
+        return new CreateRdsDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看某个RDS实例下所有账号信息，包括账号名称、对各个数据库的访问权限信息等
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRdsAccountsResponse describeRdsAccounts(DescribeRdsAccountsRequest request) throws JdcloudSdkException {
+        return new DescribeRdsAccountsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GrantRdsPrivilegeResponse grantRdsPrivilege(GrantRdsPrivilegeRequest request) throws JdcloudSdkException {
+        return new GrantRdsPrivilegeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库 [MFA enabled]
      *
      * @param request
@@ -105,17 +216,58 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
-     * 删除按配置计费、或包年包月已到期的单个云主机。不能删除没有计费信息的云主机。&lt;br&gt;
-云主机状态必须为运行&lt;b&gt;running&lt;/b&gt;、停止&lt;b&gt;stopped&lt;/b&gt;、错误&lt;b&gt;error&lt;/b&gt;，同时云主机没有正在进行中的任务才可删除。&lt;br&gt;
-如果主机中挂载的数据盘为按配置计费的云硬盘且AutoDelete属性为true，那么数据盘会随主机一起删除。
- [MFA enabled]
+     * 获取当前实例的所有数据库详细信息的列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteVmInstanceResponse deleteVmInstance(DeleteVmInstanceRequest request) throws JdcloudSdkException {
-        return new DeleteVmInstanceExecutor().client(this).execute(request);
+    public DescribeRdsDatabasesResponse describeRdsDatabases(DescribeRdsDatabasesRequest request) throws JdcloudSdkException {
+        return new DescribeRdsDatabasesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询云数据库实例列表信息&lt;br&gt;此接口支持分页查询，默认每页20条。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRdsInstancesResponse describeRdsInstances(DescribeRdsInstancesRequest request) throws JdcloudSdkException {
+        return new DescribeRdsInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询RDS实例（MySQL、SQL Server等）的真实状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceInfoResponse describeInstanceInfo(DescribeInstanceInfoRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。&lt;br&gt;为便于管理和恢复，RDS对账号进行了限制，数据库账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRdsAccountResponse createRdsAccount(CreateRdsAccountRequest request) throws JdcloudSdkException {
+        return new CreateRdsAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRdsWhiteListResponse describeRdsWhiteList(DescribeRdsWhiteListRequest request) throws JdcloudSdkException {
+        return new DescribeRdsWhiteListExecutor().client(this).execute(request);
     }
 
     /**
@@ -130,14 +282,14 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
-     * 给网卡分配secondaryIp接口
+     * 删除数据库账号，账号删除后不可恢复，用户无法再使用该账号登录RDS实例
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public AssignSecondaryIpsResponse assignSecondaryIps(AssignSecondaryIpsRequest request) throws JdcloudSdkException {
-        return new AssignSecondaryIpsExecutor().client(this).execute(request);
+    public DeleteRdsAccountResponse deleteRdsAccount(DeleteRdsAccountRequest request) throws JdcloudSdkException {
+        return new DeleteRdsAccountExecutor().client(this).execute(request);
     }
 
 

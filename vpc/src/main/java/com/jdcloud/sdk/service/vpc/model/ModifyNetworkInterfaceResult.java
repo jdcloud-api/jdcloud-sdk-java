@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 弹性网卡
+ * Elastic-Network-Interface
  * 弹性网卡相关接口
  *
  * OpenAPI spec version: v1

@@ -53,6 +53,11 @@ public class CustomerVo  implements java.io.Serializable {
     private String relTime;
 
     /**
+     * 账户名
+     */
+    private String loginName;
+
+    /**
      * 来源(0渠道商自身,1京东云客户)
      */
     private Integer source;
@@ -198,6 +203,24 @@ public class CustomerVo  implements java.io.Serializable {
      */
     public void setRelTime(String relTime) {
         this.relTime = relTime;
+    }
+
+    /**
+     * get 账户名
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 账户名
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 
     /**
@@ -508,6 +531,16 @@ public class CustomerVo  implements java.io.Serializable {
      */
     public CustomerVo relTime(String relTime) {
         this.relTime = relTime;
+        return this;
+    }
+
+    /**
+     * set 账户名
+     *
+     * @param loginName
+     */
+    public CustomerVo loginName(String loginName) {
+        this.loginName = loginName;
         return this;
     }
 

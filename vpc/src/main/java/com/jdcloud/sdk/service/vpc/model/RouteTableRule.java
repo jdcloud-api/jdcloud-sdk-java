@@ -43,7 +43,7 @@ public class RouteTableRule  implements java.io.Serializable {
     private Number priority;
 
     /**
-     * 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      */
     private String nextHopType;
 
@@ -56,6 +56,16 @@ public class RouteTableRule  implements java.io.Serializable {
      * 匹配地址前缀, internet类型路由跟其他类型的路由，addressPrefix不允许重复
      */
     private String addressPrefix;
+
+    /**
+     * 路由类型，propagated:传播、static:静态
+     */
+    private String routeType;
+
+    /**
+     * 路由描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     */
+    private String description;
 
 
     /**
@@ -95,7 +105,7 @@ public class RouteTableRule  implements java.io.Serializable {
     }
 
     /**
-     * get 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * get 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @return
      */
@@ -104,7 +114,7 @@ public class RouteTableRule  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * set 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @param nextHopType
      */
@@ -148,6 +158,42 @@ public class RouteTableRule  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
     }
 
+    /**
+     * get 路由类型，propagated:传播、static:静态
+     *
+     * @return
+     */
+    public String getRouteType() {
+        return routeType;
+    }
+
+    /**
+     * set 路由类型，propagated:传播、static:静态
+     *
+     * @param routeType
+     */
+    public void setRouteType(String routeType) {
+        this.routeType = routeType;
+    }
+
+    /**
+     * get 路由描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 路由描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 
     /**
      * set 路由表规则ID
@@ -170,7 +216,7 @@ public class RouteTableRule  implements java.io.Serializable {
     }
 
     /**
-     * set 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关
+     * set 下一跳类型, 取值范围:local:本地, instance:云主机, internet:公网, vpc_peering:vpc对等连接, bgw:边界网关, natgw:NAT网关
      *
      * @param nextHopType
      */
@@ -196,6 +242,26 @@ public class RouteTableRule  implements java.io.Serializable {
      */
     public RouteTableRule addressPrefix(String addressPrefix) {
         this.addressPrefix = addressPrefix;
+        return this;
+    }
+
+    /**
+     * set 路由类型，propagated:传播、static:静态
+     *
+     * @param routeType
+     */
+    public RouteTableRule routeType(String routeType) {
+        this.routeType = routeType;
+        return this;
+    }
+
+    /**
+     * set 路由描述，允许输入UTF-8编码下的全部字符，不超过256字符。
+     *
+     * @param description
+     */
+    public RouteTableRule description(String description) {
+        this.description = description;
         return this;
     }
 

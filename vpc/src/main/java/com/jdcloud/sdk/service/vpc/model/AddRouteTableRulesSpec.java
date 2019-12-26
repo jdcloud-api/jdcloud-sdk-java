@@ -36,7 +36,7 @@ public class AddRouteTableRulesSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 安全组规则信息
+     * 路由表规则信息
      * Required:true
      */
     @Required
@@ -44,7 +44,7 @@ public class AddRouteTableRulesSpec  implements java.io.Serializable {
 
 
     /**
-     * get 安全组规则信息
+     * get 路由表规则信息
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class AddRouteTableRulesSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组规则信息
+     * set 路由表规则信息
      *
      * @param routeTableRuleSpecs
      */
@@ -63,7 +63,7 @@ public class AddRouteTableRulesSpec  implements java.io.Serializable {
 
 
     /**
-     * set 安全组规则信息
+     * set 路由表规则信息
      *
      * @param routeTableRuleSpecs
      */
@@ -74,7 +74,7 @@ public class AddRouteTableRulesSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 安全组规则信息
+     * add item to 路由表规则信息
      *
      * @param routeTableRuleSpec
      */

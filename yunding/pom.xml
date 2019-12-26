@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>yunding</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.1</version>
   <packaging>jar</packaging>
   <name>yunding</name>
   <url>http://www.jdcloud.com</url>
@@ -54,7 +54,7 @@
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>vpc</artifactId>
-      <version>0.5.1</version>
+      <version>0.9.1</version>
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>

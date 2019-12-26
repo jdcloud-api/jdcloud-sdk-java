@@ -38,7 +38,7 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 安全组规则信息
+     * 路由表规则信息
      * Required:true
      */
     @Required
@@ -60,7 +60,7 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 安全组规则信息
+     * get 路由表规则信息
      *
      * @return
      */
@@ -69,7 +69,7 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 安全组规则信息
+     * set 路由表规则信息
      *
      * @param routeTableRuleSpecs
      */
@@ -115,7 +115,7 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 安全组规则信息
+     * set 路由表规则信息
      *
      * @param routeTableRuleSpecs
      */
@@ -146,7 +146,7 @@ public class AddRouteTableRulesRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * add item to 安全组规则信息
+     * add item to 路由表规则信息
      *
      * @param routeTableRuleSpec
      */

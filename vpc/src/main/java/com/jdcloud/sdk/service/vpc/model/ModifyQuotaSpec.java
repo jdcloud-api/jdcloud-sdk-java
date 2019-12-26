@@ -34,14 +34,14 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、route、securityGroupRule
      * Required:true
      */
     @Required
     private String type;
 
     /**
-     * type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering设置为vpcId
+     * type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为route设置为routeTableId, type为securityGroupRule为securityGroupId
      */
     private String parentResourceId;
 
@@ -54,7 +54,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
 
 
     /**
-     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、route、securityGroupRule
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、route、securityGroupRule
      *
      * @param type
      */
@@ -72,7 +72,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * get type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering设置为vpcId
+     * get type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为route设置为routeTableId, type为securityGroupRule为securityGroupId
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering设置为vpcId
+     * set type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为route设置为routeTableId, type为securityGroupRule为securityGroupId
      *
      * @param parentResourceId
      */
@@ -109,7 +109,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
 
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、route、securityGroupRule
      *
      * @param type
      */
@@ -119,7 +119,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering设置为vpcId
+     * set type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为route设置为routeTableId, type为securityGroupRule为securityGroupId
      *
      * @param parentResourceId
      */

@@ -101,6 +101,21 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     private Number returnMount;
 
     /**
+     * 返还方式
+     */
+    private Integer returnMode;
+
+    /**
+     * 返还方式
+     */
+    private String returnModeName;
+
+    /**
+     * 合同主体
+     */
+    private String contractSubject;
+
+    /**
      * 次数
      */
     private Integer redoQty;
@@ -129,6 +144,11 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
      * 部门名称
      */
     private String deptName;
+
+    /**
+     * 返还明细展示类型
+     */
+    private Integer returnDetailRuleType;
 
     /**
      * 创建时间
@@ -401,6 +421,60 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
+     * get 返还方式
+     *
+     * @return
+     */
+    public Integer getReturnMode() {
+        return returnMode;
+    }
+
+    /**
+     * set 返还方式
+     *
+     * @param returnMode
+     */
+    public void setReturnMode(Integer returnMode) {
+        this.returnMode = returnMode;
+    }
+
+    /**
+     * get 返还方式
+     *
+     * @return
+     */
+    public String getReturnModeName() {
+        return returnModeName;
+    }
+
+    /**
+     * set 返还方式
+     *
+     * @param returnModeName
+     */
+    public void setReturnModeName(String returnModeName) {
+        this.returnModeName = returnModeName;
+    }
+
+    /**
+     * get 合同主体
+     *
+     * @return
+     */
+    public String getContractSubject() {
+        return contractSubject;
+    }
+
+    /**
+     * set 合同主体
+     *
+     * @param contractSubject
+     */
+    public void setContractSubject(String contractSubject) {
+        this.contractSubject = contractSubject;
+    }
+
+    /**
      * get 次数
      *
      * @return
@@ -506,6 +580,24 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
      */
     public void setDeptName(String deptName) {
         this.deptName = deptName;
+    }
+
+    /**
+     * get 返还明细展示类型
+     *
+     * @return
+     */
+    public Integer getReturnDetailRuleType() {
+        return returnDetailRuleType;
+    }
+
+    /**
+     * set 返还明细展示类型
+     *
+     * @param returnDetailRuleType
+     */
+    public void setReturnDetailRuleType(Integer returnDetailRuleType) {
+        this.returnDetailRuleType = returnDetailRuleType;
     }
 
     /**
@@ -766,6 +858,36 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
+     * set 返还方式
+     *
+     * @param returnMode
+     */
+    public ReturnBillResult returnMode(Integer returnMode) {
+        this.returnMode = returnMode;
+        return this;
+    }
+
+    /**
+     * set 返还方式
+     *
+     * @param returnModeName
+     */
+    public ReturnBillResult returnModeName(String returnModeName) {
+        this.returnModeName = returnModeName;
+        return this;
+    }
+
+    /**
+     * set 合同主体
+     *
+     * @param contractSubject
+     */
+    public ReturnBillResult contractSubject(String contractSubject) {
+        this.contractSubject = contractSubject;
+        return this;
+    }
+
+    /**
      * set 次数
      *
      * @param redoQty
@@ -822,6 +944,16 @@ public class ReturnBillResult extends JdcloudResult implements java.io.Serializa
      */
     public ReturnBillResult deptName(String deptName) {
         this.deptName = deptName;
+        return this;
+    }
+
+    /**
+     * set 返还明细展示类型
+     *
+     * @param returnDetailRuleType
+     */
+    public ReturnBillResult returnDetailRuleType(Integer returnDetailRuleType) {
+        this.returnDetailRuleType = returnDetailRuleType;
         return this;
     }
 

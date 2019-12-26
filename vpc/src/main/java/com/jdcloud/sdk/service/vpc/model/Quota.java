@@ -33,12 +33,12 @@ public class Quota  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule
      */
     private String type;
 
     /**
-     * vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering为vpcId
+     * vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId
      */
     private String parentResourceId;
 
@@ -54,7 +54,7 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule
      *
      * @param type
      */
@@ -72,7 +72,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * get vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering为vpcId
+     * get vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering为vpcId
+     * set vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId
      *
      * @param parentResourceId
      */
@@ -127,7 +127,7 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule
      *
      * @param type
      */
@@ -137,7 +137,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering为vpcId
+     * set vpc、elastic_ip、network_interface为空, subnet、security_group、vpcpeering、acl、routeTable为vpcId, aclRule为aclId，staticRoute、propagatedRoute为routeTableId, securityGroupRule为securityGroupId
      *
      * @param parentResourceId
      */

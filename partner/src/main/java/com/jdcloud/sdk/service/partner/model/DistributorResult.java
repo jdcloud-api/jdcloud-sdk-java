@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.partner.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -44,7 +46,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     private String distributorName;
 
     /**
-     * 京东云账户
+     * pin
      */
     private String pin;
 
@@ -139,9 +141,99 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     private String deptName;
 
     /**
+     * 是否需要返还（0需要1不需要）
+     */
+    private Integer returnFlag;
+
+    /**
+     * 返还政策ID
+     */
+    private String returnPolicyId;
+
+    /**
+     * 结算周期类型（1月、2季度、3年、4天、5周）
+     */
+    private Integer circleType;
+
+    /**
+     * 结算周期类型名称
+     */
+    private String circleTypeName;
+
+    /**
+     * 服务商返还方式
+     */
+    private Integer returnMode;
+
+    /**
+     * 服务商返还方式名称（1现金2代金券）
+     */
+    private String returnModeName;
+
+    /**
+     * 合同主体
+     */
+    private String contractSubject;
+
+    /**
+     * 合同主体名称
+     */
+    private String contractSubjectName;
+
+    /**
+     * 是否有下级服务商（0有1不没有）
+     */
+    private Integer subFlag;
+
+    /**
+     * 下级服务商是否需要返还（0需要1不需要）
+     */
+    private Integer subReturnFlag;
+
+    /**
+     * 下级服务商返还政策ID
+     */
+    private String subReturnPolicyId;
+
+    /**
+     * 结算周期类型（1月、2季度、3年、4天、5周）
+     */
+    private Integer subCircleType;
+
+    /**
+     * 结算周期类型名称
+     */
+    private String subCircleTypeName;
+
+    /**
+     * 下级服务商返还方式
+     */
+    private Integer subReturnMode;
+
+    /**
+     * 下级服务商返还方式名称（1现金2代金券）
+     */
+    private String subReturnModeName;
+
+    /**
      * 京东云负责人(京东云人员erp或名称)
      */
     private String erp;
+
+    /**
+     * distributorProductList
+     */
+    private List<DistributorProduct> distributorProductList;
+
+    /**
+     * distributorPolicyList
+     */
+    private List<DistributorPolicy> distributorPolicyList;
+
+    /**
+     * subDistributorPolicyList
+     */
+    private List<DistributorPolicy> subDistributorPolicyList;
 
     /**
      * customerCount
@@ -157,6 +249,11 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
      * 入驻时间
      */
     private String settleTimeStr;
+
+    /**
+     * 帐户名
+     */
+    private String loginName;
 
     /**
      * 服务商最大层级
@@ -201,7 +298,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * get 京东云账户
+     * get pin
      *
      * @return
      */
@@ -210,7 +307,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 京东云账户
+     * set pin
      *
      * @param pin
      */
@@ -543,6 +640,276 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
+     * get 是否需要返还（0需要1不需要）
+     *
+     * @return
+     */
+    public Integer getReturnFlag() {
+        return returnFlag;
+    }
+
+    /**
+     * set 是否需要返还（0需要1不需要）
+     *
+     * @param returnFlag
+     */
+    public void setReturnFlag(Integer returnFlag) {
+        this.returnFlag = returnFlag;
+    }
+
+    /**
+     * get 返还政策ID
+     *
+     * @return
+     */
+    public String getReturnPolicyId() {
+        return returnPolicyId;
+    }
+
+    /**
+     * set 返还政策ID
+     *
+     * @param returnPolicyId
+     */
+    public void setReturnPolicyId(String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+    }
+
+    /**
+     * get 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @return
+     */
+    public Integer getCircleType() {
+        return circleType;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param circleType
+     */
+    public void setCircleType(Integer circleType) {
+        this.circleType = circleType;
+    }
+
+    /**
+     * get 结算周期类型名称
+     *
+     * @return
+     */
+    public String getCircleTypeName() {
+        return circleTypeName;
+    }
+
+    /**
+     * set 结算周期类型名称
+     *
+     * @param circleTypeName
+     */
+    public void setCircleTypeName(String circleTypeName) {
+        this.circleTypeName = circleTypeName;
+    }
+
+    /**
+     * get 服务商返还方式
+     *
+     * @return
+     */
+    public Integer getReturnMode() {
+        return returnMode;
+    }
+
+    /**
+     * set 服务商返还方式
+     *
+     * @param returnMode
+     */
+    public void setReturnMode(Integer returnMode) {
+        this.returnMode = returnMode;
+    }
+
+    /**
+     * get 服务商返还方式名称（1现金2代金券）
+     *
+     * @return
+     */
+    public String getReturnModeName() {
+        return returnModeName;
+    }
+
+    /**
+     * set 服务商返还方式名称（1现金2代金券）
+     *
+     * @param returnModeName
+     */
+    public void setReturnModeName(String returnModeName) {
+        this.returnModeName = returnModeName;
+    }
+
+    /**
+     * get 合同主体
+     *
+     * @return
+     */
+    public String getContractSubject() {
+        return contractSubject;
+    }
+
+    /**
+     * set 合同主体
+     *
+     * @param contractSubject
+     */
+    public void setContractSubject(String contractSubject) {
+        this.contractSubject = contractSubject;
+    }
+
+    /**
+     * get 合同主体名称
+     *
+     * @return
+     */
+    public String getContractSubjectName() {
+        return contractSubjectName;
+    }
+
+    /**
+     * set 合同主体名称
+     *
+     * @param contractSubjectName
+     */
+    public void setContractSubjectName(String contractSubjectName) {
+        this.contractSubjectName = contractSubjectName;
+    }
+
+    /**
+     * get 是否有下级服务商（0有1不没有）
+     *
+     * @return
+     */
+    public Integer getSubFlag() {
+        return subFlag;
+    }
+
+    /**
+     * set 是否有下级服务商（0有1不没有）
+     *
+     * @param subFlag
+     */
+    public void setSubFlag(Integer subFlag) {
+        this.subFlag = subFlag;
+    }
+
+    /**
+     * get 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @return
+     */
+    public Integer getSubReturnFlag() {
+        return subReturnFlag;
+    }
+
+    /**
+     * set 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @param subReturnFlag
+     */
+    public void setSubReturnFlag(Integer subReturnFlag) {
+        this.subReturnFlag = subReturnFlag;
+    }
+
+    /**
+     * get 下级服务商返还政策ID
+     *
+     * @return
+     */
+    public String getSubReturnPolicyId() {
+        return subReturnPolicyId;
+    }
+
+    /**
+     * set 下级服务商返还政策ID
+     *
+     * @param subReturnPolicyId
+     */
+    public void setSubReturnPolicyId(String subReturnPolicyId) {
+        this.subReturnPolicyId = subReturnPolicyId;
+    }
+
+    /**
+     * get 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @return
+     */
+    public Integer getSubCircleType() {
+        return subCircleType;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param subCircleType
+     */
+    public void setSubCircleType(Integer subCircleType) {
+        this.subCircleType = subCircleType;
+    }
+
+    /**
+     * get 结算周期类型名称
+     *
+     * @return
+     */
+    public String getSubCircleTypeName() {
+        return subCircleTypeName;
+    }
+
+    /**
+     * set 结算周期类型名称
+     *
+     * @param subCircleTypeName
+     */
+    public void setSubCircleTypeName(String subCircleTypeName) {
+        this.subCircleTypeName = subCircleTypeName;
+    }
+
+    /**
+     * get 下级服务商返还方式
+     *
+     * @return
+     */
+    public Integer getSubReturnMode() {
+        return subReturnMode;
+    }
+
+    /**
+     * set 下级服务商返还方式
+     *
+     * @param subReturnMode
+     */
+    public void setSubReturnMode(Integer subReturnMode) {
+        this.subReturnMode = subReturnMode;
+    }
+
+    /**
+     * get 下级服务商返还方式名称（1现金2代金券）
+     *
+     * @return
+     */
+    public String getSubReturnModeName() {
+        return subReturnModeName;
+    }
+
+    /**
+     * set 下级服务商返还方式名称（1现金2代金券）
+     *
+     * @param subReturnModeName
+     */
+    public void setSubReturnModeName(String subReturnModeName) {
+        this.subReturnModeName = subReturnModeName;
+    }
+
+    /**
      * get 京东云负责人(京东云人员erp或名称)
      *
      * @return
@@ -558,6 +925,60 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
      */
     public void setErp(String erp) {
         this.erp = erp;
+    }
+
+    /**
+     * get distributorProductList
+     *
+     * @return
+     */
+    public List<DistributorProduct> getDistributorProductList() {
+        return distributorProductList;
+    }
+
+    /**
+     * set distributorProductList
+     *
+     * @param distributorProductList
+     */
+    public void setDistributorProductList(List<DistributorProduct> distributorProductList) {
+        this.distributorProductList = distributorProductList;
+    }
+
+    /**
+     * get distributorPolicyList
+     *
+     * @return
+     */
+    public List<DistributorPolicy> getDistributorPolicyList() {
+        return distributorPolicyList;
+    }
+
+    /**
+     * set distributorPolicyList
+     *
+     * @param distributorPolicyList
+     */
+    public void setDistributorPolicyList(List<DistributorPolicy> distributorPolicyList) {
+        this.distributorPolicyList = distributorPolicyList;
+    }
+
+    /**
+     * get subDistributorPolicyList
+     *
+     * @return
+     */
+    public List<DistributorPolicy> getSubDistributorPolicyList() {
+        return subDistributorPolicyList;
+    }
+
+    /**
+     * set subDistributorPolicyList
+     *
+     * @param subDistributorPolicyList
+     */
+    public void setSubDistributorPolicyList(List<DistributorPolicy> subDistributorPolicyList) {
+        this.subDistributorPolicyList = subDistributorPolicyList;
     }
 
     /**
@@ -615,6 +1036,24 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
+     * get 帐户名
+     *
+     * @return
+     */
+    public String getLoginName() {
+        return loginName;
+    }
+
+    /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
+    }
+
+    /**
      * get 服务商最大层级
      *
      * @return
@@ -654,7 +1093,7 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 京东云账户
+     * set pin
      *
      * @param pin
      */
@@ -844,12 +1283,192 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
+     * set 是否需要返还（0需要1不需要）
+     *
+     * @param returnFlag
+     */
+    public DistributorResult returnFlag(Integer returnFlag) {
+        this.returnFlag = returnFlag;
+        return this;
+    }
+
+    /**
+     * set 返还政策ID
+     *
+     * @param returnPolicyId
+     */
+    public DistributorResult returnPolicyId(String returnPolicyId) {
+        this.returnPolicyId = returnPolicyId;
+        return this;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param circleType
+     */
+    public DistributorResult circleType(Integer circleType) {
+        this.circleType = circleType;
+        return this;
+    }
+
+    /**
+     * set 结算周期类型名称
+     *
+     * @param circleTypeName
+     */
+    public DistributorResult circleTypeName(String circleTypeName) {
+        this.circleTypeName = circleTypeName;
+        return this;
+    }
+
+    /**
+     * set 服务商返还方式
+     *
+     * @param returnMode
+     */
+    public DistributorResult returnMode(Integer returnMode) {
+        this.returnMode = returnMode;
+        return this;
+    }
+
+    /**
+     * set 服务商返还方式名称（1现金2代金券）
+     *
+     * @param returnModeName
+     */
+    public DistributorResult returnModeName(String returnModeName) {
+        this.returnModeName = returnModeName;
+        return this;
+    }
+
+    /**
+     * set 合同主体
+     *
+     * @param contractSubject
+     */
+    public DistributorResult contractSubject(String contractSubject) {
+        this.contractSubject = contractSubject;
+        return this;
+    }
+
+    /**
+     * set 合同主体名称
+     *
+     * @param contractSubjectName
+     */
+    public DistributorResult contractSubjectName(String contractSubjectName) {
+        this.contractSubjectName = contractSubjectName;
+        return this;
+    }
+
+    /**
+     * set 是否有下级服务商（0有1不没有）
+     *
+     * @param subFlag
+     */
+    public DistributorResult subFlag(Integer subFlag) {
+        this.subFlag = subFlag;
+        return this;
+    }
+
+    /**
+     * set 下级服务商是否需要返还（0需要1不需要）
+     *
+     * @param subReturnFlag
+     */
+    public DistributorResult subReturnFlag(Integer subReturnFlag) {
+        this.subReturnFlag = subReturnFlag;
+        return this;
+    }
+
+    /**
+     * set 下级服务商返还政策ID
+     *
+     * @param subReturnPolicyId
+     */
+    public DistributorResult subReturnPolicyId(String subReturnPolicyId) {
+        this.subReturnPolicyId = subReturnPolicyId;
+        return this;
+    }
+
+    /**
+     * set 结算周期类型（1月、2季度、3年、4天、5周）
+     *
+     * @param subCircleType
+     */
+    public DistributorResult subCircleType(Integer subCircleType) {
+        this.subCircleType = subCircleType;
+        return this;
+    }
+
+    /**
+     * set 结算周期类型名称
+     *
+     * @param subCircleTypeName
+     */
+    public DistributorResult subCircleTypeName(String subCircleTypeName) {
+        this.subCircleTypeName = subCircleTypeName;
+        return this;
+    }
+
+    /**
+     * set 下级服务商返还方式
+     *
+     * @param subReturnMode
+     */
+    public DistributorResult subReturnMode(Integer subReturnMode) {
+        this.subReturnMode = subReturnMode;
+        return this;
+    }
+
+    /**
+     * set 下级服务商返还方式名称（1现金2代金券）
+     *
+     * @param subReturnModeName
+     */
+    public DistributorResult subReturnModeName(String subReturnModeName) {
+        this.subReturnModeName = subReturnModeName;
+        return this;
+    }
+
+    /**
      * set 京东云负责人(京东云人员erp或名称)
      *
      * @param erp
      */
     public DistributorResult erp(String erp) {
         this.erp = erp;
+        return this;
+    }
+
+    /**
+     * set distributorProductList
+     *
+     * @param distributorProductList
+     */
+    public DistributorResult distributorProductList(List<DistributorProduct> distributorProductList) {
+        this.distributorProductList = distributorProductList;
+        return this;
+    }
+
+    /**
+     * set distributorPolicyList
+     *
+     * @param distributorPolicyList
+     */
+    public DistributorResult distributorPolicyList(List<DistributorPolicy> distributorPolicyList) {
+        this.distributorPolicyList = distributorPolicyList;
+        return this;
+    }
+
+    /**
+     * set subDistributorPolicyList
+     *
+     * @param subDistributorPolicyList
+     */
+    public DistributorResult subDistributorPolicyList(List<DistributorPolicy> subDistributorPolicyList) {
+        this.subDistributorPolicyList = subDistributorPolicyList;
         return this;
     }
 
@@ -884,6 +1503,16 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
+     * set 帐户名
+     *
+     * @param loginName
+     */
+    public DistributorResult loginName(String loginName) {
+        this.loginName = loginName;
+        return this;
+    }
+
+    /**
      * set 服务商最大层级
      *
      * @param level
@@ -893,5 +1522,41 @@ public class DistributorResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
+    /**
+     * add item to distributorProductList
+     *
+     * @param distributorProductList
+     */
+    public void addDistributorProductList(DistributorProduct distributorProductList) {
+        if (this.distributorProductList == null) {
+            this.distributorProductList = new ArrayList<>();
+        }
+        this.distributorProductList.add(distributorProductList);
+    }
+
+    /**
+     * add item to distributorPolicyList
+     *
+     * @param distributorPolicyList
+     */
+    public void addDistributorPolicyList(DistributorPolicy distributorPolicyList) {
+        if (this.distributorPolicyList == null) {
+            this.distributorPolicyList = new ArrayList<>();
+        }
+        this.distributorPolicyList.add(distributorPolicyList);
+    }
+
+    /**
+     * add item to subDistributorPolicyList
+     *
+     * @param subDistributorPolicyList
+     */
+    public void addSubDistributorPolicyList(DistributorPolicy subDistributorPolicyList) {
+        if (this.subDistributorPolicyList == null) {
+            this.subDistributorPolicyList = new ArrayList<>();
+        }
+        this.subDistributorPolicyList.add(subDistributorPolicyList);
+    }
 
 }

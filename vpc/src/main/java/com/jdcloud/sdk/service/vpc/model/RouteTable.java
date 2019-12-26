@@ -65,6 +65,11 @@ public class RouteTable  implements java.io.Serializable {
     private List<RouteTableRule> routeTableRules;
 
     /**
+     * 路由传播列表
+     */
+    private List<RoutePropagation> routePropagations;
+
+    /**
      * 路由表绑定的子网列表
      */
     private List<String> subnetIds;
@@ -184,6 +189,24 @@ public class RouteTable  implements java.io.Serializable {
     }
 
     /**
+     * get 路由传播列表
+     *
+     * @return
+     */
+    public List<RoutePropagation> getRoutePropagations() {
+        return routePropagations;
+    }
+
+    /**
+     * set 路由传播列表
+     *
+     * @param routePropagations
+     */
+    public void setRoutePropagations(List<RoutePropagation> routePropagations) {
+        this.routePropagations = routePropagations;
+    }
+
+    /**
      * get 路由表绑定的子网列表
      *
      * @return
@@ -281,6 +304,16 @@ public class RouteTable  implements java.io.Serializable {
     }
 
     /**
+     * set 路由传播列表
+     *
+     * @param routePropagations
+     */
+    public RouteTable routePropagations(List<RoutePropagation> routePropagations) {
+        this.routePropagations = routePropagations;
+        return this;
+    }
+
+    /**
      * set 路由表绑定的子网列表
      *
      * @param subnetIds
@@ -311,6 +344,18 @@ public class RouteTable  implements java.io.Serializable {
             this.routeTableRules = new ArrayList<>();
         }
         this.routeTableRules.add(routeTableRule);
+    }
+
+    /**
+     * add item to 路由传播列表
+     *
+     * @param routePropagation
+     */
+    public void addRoutePropagation(RoutePropagation routePropagation) {
+        if (this.routePropagations == null) {
+            this.routePropagations = new ArrayList<>();
+        }
+        this.routePropagations.add(routePropagation);
     }
 
     /**

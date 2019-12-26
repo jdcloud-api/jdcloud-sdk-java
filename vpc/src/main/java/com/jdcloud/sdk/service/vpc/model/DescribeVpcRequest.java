@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 私有网络
+ * Virtual-Private-Cloud
  * 私有网络相关接口
  *
  * OpenAPI spec version: v1

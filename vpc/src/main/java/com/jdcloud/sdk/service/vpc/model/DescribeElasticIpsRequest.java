@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 弹性公网ip
+ * Elastic-IP
  * 弹性公网ip相关接口
  *
  * OpenAPI spec version: v1
@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.vpc.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.vpc.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -54,6 +55,11 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
 
      */
     private List<Filter> filters;
+
+    /**
+     * Tag筛选条件
+     */
+    private List<TagFilter> tags;
 
     /**
      * Region ID
@@ -124,6 +130,24 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
     }
 
     /**
+     * get Tag筛选条件
+     *
+     * @return
+     */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -176,6 +200,16 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
     }
 
     /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public DescribeElasticIpsRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set Region ID
      *
      * @param regionId
@@ -199,6 +233,18 @@ chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付�
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to Tag筛选条件
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }
