@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.redis.model.Backup;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询缓存Redis实例的备份结果（备份文件列表），可分页、可指定起止时间或备份任务ID
+ * 查询缓存Redis实例的备份任务（文件）列表，可分页、可指定起止时间或备份任务ID
  */
 public class DescribeBackupsResult extends JdcloudResult implements java.io.Serializable {
 
@@ -42,7 +42,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     private List<Backup> backups;
 
     /**
-     * 备份结果总数
+     * 备份任务（文件）总数
      */
     private Integer totalCount;
 
@@ -66,7 +66,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get 备份结果总数
+     * get 备份任务（文件）总数
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 备份结果总数
+     * set 备份任务（文件）总数
      *
      * @param totalCount
      */
@@ -95,7 +95,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 备份结果总数
+     * set 备份任务（文件）总数
      *
      * @param totalCount
      */

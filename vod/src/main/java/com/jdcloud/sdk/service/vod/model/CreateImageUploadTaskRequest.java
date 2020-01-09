@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +41,9 @@ public class CreateImageUploadTaskRequest extends JdcloudRequest implements java
 
     /**
      * 文件名称
+     * Required:true
      */
+    @Required
     private String fileName;
 
     /**

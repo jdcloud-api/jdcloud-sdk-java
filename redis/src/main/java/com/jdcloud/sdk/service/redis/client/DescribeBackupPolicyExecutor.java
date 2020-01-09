@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
  *
  * OpenAPI spec version: v1
  * Contact: 

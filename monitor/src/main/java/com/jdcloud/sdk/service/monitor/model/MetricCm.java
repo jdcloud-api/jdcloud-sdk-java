@@ -33,11 +33,6 @@ public class MetricCm  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * aggrPeriod
-     */
-    private String aggrPeriod;
-
-    /**
      * aggrType
      */
     private String aggrType;
@@ -46,6 +41,16 @@ public class MetricCm  implements java.io.Serializable {
      * calculateUnit
      */
     private String calculateUnit;
+
+    /**
+     * dimensions
+     */
+    private Object dimensions;
+
+    /**
+     * downSamplePeriod
+     */
+    private String downSamplePeriod;
 
     /**
      * downSampleType
@@ -62,34 +67,6 @@ public class MetricCm  implements java.io.Serializable {
      */
     private String metricName;
 
-    /**
-     * metricUID
-     */
-    private String metricUID;
-
-    /**
-     * tags
-     */
-    private Object tags;
-
-
-    /**
-     * get aggrPeriod
-     *
-     * @return
-     */
-    public String getAggrPeriod() {
-        return aggrPeriod;
-    }
-
-    /**
-     * set aggrPeriod
-     *
-     * @param aggrPeriod
-     */
-    public void setAggrPeriod(String aggrPeriod) {
-        this.aggrPeriod = aggrPeriod;
-    }
 
     /**
      * get aggrType
@@ -125,6 +102,42 @@ public class MetricCm  implements java.io.Serializable {
      */
     public void setCalculateUnit(String calculateUnit) {
         this.calculateUnit = calculateUnit;
+    }
+
+    /**
+     * get dimensions
+     *
+     * @return
+     */
+    public Object getDimensions() {
+        return dimensions;
+    }
+
+    /**
+     * set dimensions
+     *
+     * @param dimensions
+     */
+    public void setDimensions(Object dimensions) {
+        this.dimensions = dimensions;
+    }
+
+    /**
+     * get downSamplePeriod
+     *
+     * @return
+     */
+    public String getDownSamplePeriod() {
+        return downSamplePeriod;
+    }
+
+    /**
+     * set downSamplePeriod
+     *
+     * @param downSamplePeriod
+     */
+    public void setDownSamplePeriod(String downSamplePeriod) {
+        this.downSamplePeriod = downSamplePeriod;
     }
 
     /**
@@ -181,52 +194,6 @@ public class MetricCm  implements java.io.Serializable {
         this.metricName = metricName;
     }
 
-    /**
-     * get metricUID
-     *
-     * @return
-     */
-    public String getMetricUID() {
-        return metricUID;
-    }
-
-    /**
-     * set metricUID
-     *
-     * @param metricUID
-     */
-    public void setMetricUID(String metricUID) {
-        this.metricUID = metricUID;
-    }
-
-    /**
-     * get tags
-     *
-     * @return
-     */
-    public Object getTags() {
-        return tags;
-    }
-
-    /**
-     * set tags
-     *
-     * @param tags
-     */
-    public void setTags(Object tags) {
-        this.tags = tags;
-    }
-
-
-    /**
-     * set aggrPeriod
-     *
-     * @param aggrPeriod
-     */
-    public MetricCm aggrPeriod(String aggrPeriod) {
-        this.aggrPeriod = aggrPeriod;
-        return this;
-    }
 
     /**
      * set aggrType
@@ -245,6 +212,26 @@ public class MetricCm  implements java.io.Serializable {
      */
     public MetricCm calculateUnit(String calculateUnit) {
         this.calculateUnit = calculateUnit;
+        return this;
+    }
+
+    /**
+     * set dimensions
+     *
+     * @param dimensions
+     */
+    public MetricCm dimensions(Object dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+
+    /**
+     * set downSamplePeriod
+     *
+     * @param downSamplePeriod
+     */
+    public MetricCm downSamplePeriod(String downSamplePeriod) {
+        this.downSamplePeriod = downSamplePeriod;
         return this;
     }
 
@@ -275,26 +262,6 @@ public class MetricCm  implements java.io.Serializable {
      */
     public MetricCm metricName(String metricName) {
         this.metricName = metricName;
-        return this;
-    }
-
-    /**
-     * set metricUID
-     *
-     * @param metricUID
-     */
-    public MetricCm metricUID(String metricUID) {
-        this.metricUID = metricUID;
-        return this;
-    }
-
-    /**
-     * set tags
-     *
-     * @param tags
-     */
-    public MetricCm tags(Object tags) {
-        this.tags = tags;
         return this;
     }
 

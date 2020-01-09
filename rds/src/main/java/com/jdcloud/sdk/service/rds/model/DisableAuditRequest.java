@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 仅支持MySQL实例关闭数据库审计&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB
+ * 仅支持MySQL实例关闭数据库审计&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB, PostgreSQL
  */
 public class DisableAuditRequest extends JdcloudRequest implements java.io.Serializable {
 

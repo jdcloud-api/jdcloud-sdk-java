@@ -42,6 +42,11 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
+     * 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+     */
+    private String autoScalingPolicyId;
+
+    /**
      * 告警通知联系人
      */
     private List<BaseContact> baseContact;
@@ -111,6 +116,24 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
     @Required
     private String alarmId;
 
+
+    /**
+     * get 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+     *
+     * @return
+     */
+    public String getAutoScalingPolicyId() {
+        return autoScalingPolicyId;
+    }
+
+    /**
+     * set 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+     *
+     * @param autoScalingPolicyId
+     */
+    public void setAutoScalingPolicyId(String autoScalingPolicyId) {
+        this.autoScalingPolicyId = autoScalingPolicyId;
+    }
 
     /**
      * get 告警通知联系人
@@ -328,6 +351,16 @@ public class UpdateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.alarmId = alarmId;
     }
 
+
+    /**
+     * set 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+     *
+     * @param autoScalingPolicyId
+     */
+    public UpdateAlarmRequest autoScalingPolicyId(String autoScalingPolicyId) {
+        this.autoScalingPolicyId = autoScalingPolicyId;
+        return this;
+    }
 
     /**
      * set 告警通知联系人

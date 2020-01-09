@@ -45,6 +45,26 @@ public class Account  implements java.io.Serializable {
     private String accountStatus;
 
     /**
+     * 账号类型，normal：普通，super：高权限&lt;br&gt;- 仅支持SQL Server
+     */
+    private String accountType;
+
+    /**
+     * 创建账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+     */
+    private String createTime;
+
+    /**
+     * 修改账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+     */
+    private String updateTime;
+
+    /**
+     * 账号备注内容&lt;br&gt;- 仅支持PostgreSQL
+     */
+    private String notes;
+
+    /**
      * 具有的权限
      */
     private List<AccountPrivilege> accountPrivileges;
@@ -87,6 +107,78 @@ public class Account  implements java.io.Serializable {
     }
 
     /**
+     * get 账号类型，normal：普通，super：高权限&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public String getAccountType() {
+        return accountType;
+    }
+
+    /**
+     * set 账号类型，normal：普通，super：高权限&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param accountType
+     */
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    /**
+     * get 创建账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * get 修改账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set 修改账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    /**
+     * get 账号备注内容&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @return
+     */
+    public String getNotes() {
+        return notes;
+    }
+
+    /**
+     * set 账号备注内容&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @param notes
+     */
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    /**
      * get 具有的权限
      *
      * @return
@@ -122,6 +214,46 @@ public class Account  implements java.io.Serializable {
      */
     public Account accountStatus(String accountStatus) {
         this.accountStatus = accountStatus;
+        return this;
+    }
+
+    /**
+     * set 账号类型，normal：普通，super：高权限&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param accountType
+     */
+    public Account accountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+
+    /**
+     * set 创建账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @param createTime
+     */
+    public Account createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 修改账号时间，格式为：YYYY-MM-DD HH:mm:ss&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @param updateTime
+     */
+    public Account updateTime(String updateTime) {
+        this.updateTime = updateTime;
+        return this;
+    }
+
+    /**
+     * set 账号备注内容&lt;br&gt;- 仅支持PostgreSQL
+     *
+     * @param notes
+     */
+    public Account notes(String notes) {
+        this.notes = notes;
         return this;
     }
 

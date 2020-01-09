@@ -1,9 +1,13 @@
 #更新历史
 
-API版本：1.5.0
+API版本：1.9.0
 
 | 发布时间   | 版本号 | 更新     | 说明                                                         |
 | ---------- | ------ | -------- | ------------------------------------------------------------ |
+| 2019-12-02 | 1.9.0  | 增加接口 | 内部接口调整     |
+| 2019-10-28 | 1.8.0  | 接口更新 | 修改createCacheInstance、modifyCacheInstanceClass接口返回参数，更新文档，内部接口调整     |
+| 2019-10-15 | 1.7.0  | 接口更新 | 发布接口：describeSlowLog     |
+| 2019-08-27 | 1.6.0  | 接口更新 | 内部接口调整     |
 | 2019-08-22 | 1.5.0  | 接口更新 | 发布接口：describeInstanceConfig、modifyInstanceConfig、describeBackupPolicy、modifyBackupPolicy、createBackup、describeBackups、describeDownloadUrl、restoreInstance    |
 | 2019-08-14 | 1.4.0  | 增加接口 | 内部接口调整     |
 | 2019-07-23 | 1.3.0  | 接口更新 | 发布接口：describeClusterInfo     |

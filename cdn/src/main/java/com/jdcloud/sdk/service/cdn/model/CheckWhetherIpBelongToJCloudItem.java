@@ -53,6 +53,11 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
     private String province;
 
     /**
+     * city
+     */
+    private String city;
+
+    /**
      * isp
      */
     private String isp;
@@ -131,6 +136,24 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
     }
 
     /**
+     * get city
+     *
+     * @return
+     */
+    public String getCity() {
+        return city;
+    }
+
+    /**
+     * set city
+     *
+     * @param city
+     */
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    /**
      * get isp
      *
      * @return
@@ -186,6 +209,16 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
      */
     public CheckWhetherIpBelongToJCloudItem province(String province) {
         this.province = province;
+        return this;
+    }
+
+    /**
+     * set city
+     *
+     * @param city
+     */
+    public CheckWhetherIpBelongToJCloudItem city(String city) {
+        this.city = city;
         return this;
     }
 

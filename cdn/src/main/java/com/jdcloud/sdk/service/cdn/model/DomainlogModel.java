@@ -53,6 +53,11 @@ public class DomainlogModel  implements java.io.Serializable {
     private String endTime;
 
     /**
+     * 日志修改时间，UTC时间
+     */
+    private String lastModified;
+
+    /**
      * MD5值
      */
     private String md5;
@@ -131,6 +136,24 @@ public class DomainlogModel  implements java.io.Serializable {
     }
 
     /**
+     * get 日志修改时间，UTC时间
+     *
+     * @return
+     */
+    public String getLastModified() {
+        return lastModified;
+    }
+
+    /**
+     * set 日志修改时间，UTC时间
+     *
+     * @param lastModified
+     */
+    public void setLastModified(String lastModified) {
+        this.lastModified = lastModified;
+    }
+
+    /**
      * get MD5值
      *
      * @return
@@ -186,6 +209,16 @@ public class DomainlogModel  implements java.io.Serializable {
      */
     public DomainlogModel endTime(String endTime) {
         this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 日志修改时间，UTC时间
+     *
+     * @param lastModified
+     */
+    public DomainlogModel lastModified(String lastModified) {
+        this.lastModified = lastModified;
         return this;
     }
 

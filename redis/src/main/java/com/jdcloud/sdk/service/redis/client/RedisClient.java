@@ -52,6 +52,9 @@ import com.jdcloud.sdk.service.redis.client.DeleteCacheInstanceExecutor;
 import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordRequest;
 import com.jdcloud.sdk.service.redis.model.ResetCacheInstancePasswordResponse;
 import com.jdcloud.sdk.service.redis.client.ResetCacheInstancePasswordExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeSlowLogRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeSlowLogResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeSlowLogExecutor;
 import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceRequest;
 import com.jdcloud.sdk.service.redis.model.CreateCacheInstanceResponse;
 import com.jdcloud.sdk.service.redis.client.CreateCacheInstanceExecutor;
@@ -147,8 +150,7 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 变更缓存Redis实例规格（变配），只能变更运行状态的实例规格，变更的规格不能与之前的相同。
-预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小。
+     * 变更缓存Redis实例规格（变配），实例运行时可以变配，新规格不能与之前的老规格相同，新规格内存大小不能小于实例的已使用内存。
 
      *
      * @param request
@@ -207,7 +209,7 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 重置缓存Redis实例的密码，可为空
+     * 修改缓存Redis实例的密码，可为空
      *
      * @param request
      * @return
@@ -218,7 +220,18 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * 获取缓存Redis实例的慢查询日志，可分页、可搜索
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSlowLogResponse describeSlowLog(DescribeSlowLogRequest request) throws JdcloudSdkException {
+        return new DescribeSlowLogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个指定配置的缓存Redis实例：可选择主从版或集群版，每种类型又分为多种规格（按CPU核数、内存容量、磁盘容量、带宽等划分），不同规格价格也不同，具体可参考产品规格代码，https://docs.jdcloud.com/cn/jcs-for-redis/specifications
 
      *
      * @param request
@@ -252,7 +265,7 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 获取缓存Redis实例的备份文件临时下载地址
+     * 获取缓存Redis实例的备份文件临时下载地址（1个小时有效期）
      *
      * @param request
      * @return
@@ -296,7 +309,7 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 查询缓存Redis实例的备份结果（备份文件列表），可分页、可指定起止时间或备份任务ID
+     * 查询缓存Redis实例的备份任务（文件）列表，可分页、可指定起止时间或备份任务ID
      *
      * @param request
      * @return
@@ -318,7 +331,7 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
-     * 修改缓存Redis实例的配置参数，支持部分参数修改
+     * 修改缓存Redis实例的配置参数，支持部分配置参数修改
      *
      * @param request
      * @return

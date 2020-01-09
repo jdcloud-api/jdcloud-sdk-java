@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,8 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 变更缓存Redis实例规格（变配），只能变更运行状态的实例规格，变更的规格不能与之前的相同。
-预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小。
+ * 变更缓存Redis实例规格（变配），实例运行时可以变配，新规格不能与之前的老规格相同，新规格内存大小不能小于实例的已使用内存。
 
  */
 public class ModifyCacheInstanceClassResult extends JdcloudResult implements java.io.Serializable {
@@ -36,13 +35,18 @@ public class ModifyCacheInstanceClassResult extends JdcloudResult implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * 本次变更请求的订单编号
+     * 订单编号
      */
     private String orderNum;
 
+    /**
+     * 购买ID
+     */
+    private String buyId;
+
 
     /**
-     * get 本次变更请求的订单编号
+     * get 订单编号
      *
      * @return
      */
@@ -51,7 +55,7 @@ public class ModifyCacheInstanceClassResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 本次变更请求的订单编号
+     * set 订单编号
      *
      * @param orderNum
      */
@@ -59,14 +63,42 @@ public class ModifyCacheInstanceClassResult extends JdcloudResult implements jav
         this.orderNum = orderNum;
     }
 
+    /**
+     * get 购买ID
+     *
+     * @return
+     */
+    public String getBuyId() {
+        return buyId;
+    }
 
     /**
-     * set 本次变更请求的订单编号
+     * set 购买ID
+     *
+     * @param buyId
+     */
+    public void setBuyId(String buyId) {
+        this.buyId = buyId;
+    }
+
+
+    /**
+     * set 订单编号
      *
      * @param orderNum
      */
     public ModifyCacheInstanceClassResult orderNum(String orderNum) {
         this.orderNum = orderNum;
+        return this;
+    }
+
+    /**
+     * set 购买ID
+     *
+     * @param buyId
+     */
+    public ModifyCacheInstanceClassResult buyId(String buyId) {
+        this.buyId = buyId;
         return this;
     }
 

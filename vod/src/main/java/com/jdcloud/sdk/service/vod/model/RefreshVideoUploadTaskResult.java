@@ -39,9 +39,14 @@ public class RefreshVideoUploadTaskResult extends JdcloudResult implements java.
     private String videoId;
 
     /**
-     * 视频上传地址
+     * 上传地址
      */
     private String uploadUrl;
+
+    /**
+     * 上传凭证
+     */
+    private String authToken;
 
 
     /**
@@ -63,7 +68,7 @@ public class RefreshVideoUploadTaskResult extends JdcloudResult implements java.
     }
 
     /**
-     * get 视频上传地址
+     * get 上传地址
      *
      * @return
      */
@@ -72,12 +77,30 @@ public class RefreshVideoUploadTaskResult extends JdcloudResult implements java.
     }
 
     /**
-     * set 视频上传地址
+     * set 上传地址
      *
      * @param uploadUrl
      */
     public void setUploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
+    }
+
+    /**
+     * get 上传凭证
+     *
+     * @return
+     */
+    public String getAuthToken() {
+        return authToken;
+    }
+
+    /**
+     * set 上传凭证
+     *
+     * @param authToken
+     */
+    public void setAuthToken(String authToken) {
+        this.authToken = authToken;
     }
 
 
@@ -92,12 +115,22 @@ public class RefreshVideoUploadTaskResult extends JdcloudResult implements java.
     }
 
     /**
-     * set 视频上传地址
+     * set 上传地址
      *
      * @param uploadUrl
      */
     public RefreshVideoUploadTaskResult uploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
+        return this;
+    }
+
+    /**
+     * set 上传凭证
+     *
+     * @param authToken
+     */
+    public RefreshVideoUploadTaskResult authToken(String authToken) {
+        this.authToken = authToken;
         return this;
     }
 

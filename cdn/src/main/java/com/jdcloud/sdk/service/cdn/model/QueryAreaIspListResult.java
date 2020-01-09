@@ -51,6 +51,36 @@ public class QueryAreaIspListResult extends JdcloudResult implements java.io.Ser
      */
     private List<AreaIspItem> isp;
 
+    /**
+     * gangaotai
+     */
+    private List<AreaIspItem> gangaotai;
+
+    /**
+     * oceanica
+     */
+    private List<AreaIspItem> oceanica;
+
+    /**
+     * southAmerica
+     */
+    private List<AreaIspItem> southAmerica;
+
+    /**
+     * northAmerica
+     */
+    private List<AreaIspItem> northAmerica;
+
+    /**
+     * asia
+     */
+    private List<AreaIspItem> asia;
+
+    /**
+     * europe
+     */
+    private List<AreaIspItem> europe;
+
 
     /**
      * get mainLand
@@ -106,6 +136,114 @@ public class QueryAreaIspListResult extends JdcloudResult implements java.io.Ser
         this.isp = isp;
     }
 
+    /**
+     * get gangaotai
+     *
+     * @return
+     */
+    public List<AreaIspItem> getGangaotai() {
+        return gangaotai;
+    }
+
+    /**
+     * set gangaotai
+     *
+     * @param gangaotai
+     */
+    public void setGangaotai(List<AreaIspItem> gangaotai) {
+        this.gangaotai = gangaotai;
+    }
+
+    /**
+     * get oceanica
+     *
+     * @return
+     */
+    public List<AreaIspItem> getOceanica() {
+        return oceanica;
+    }
+
+    /**
+     * set oceanica
+     *
+     * @param oceanica
+     */
+    public void setOceanica(List<AreaIspItem> oceanica) {
+        this.oceanica = oceanica;
+    }
+
+    /**
+     * get southAmerica
+     *
+     * @return
+     */
+    public List<AreaIspItem> getSouthAmerica() {
+        return southAmerica;
+    }
+
+    /**
+     * set southAmerica
+     *
+     * @param southAmerica
+     */
+    public void setSouthAmerica(List<AreaIspItem> southAmerica) {
+        this.southAmerica = southAmerica;
+    }
+
+    /**
+     * get northAmerica
+     *
+     * @return
+     */
+    public List<AreaIspItem> getNorthAmerica() {
+        return northAmerica;
+    }
+
+    /**
+     * set northAmerica
+     *
+     * @param northAmerica
+     */
+    public void setNorthAmerica(List<AreaIspItem> northAmerica) {
+        this.northAmerica = northAmerica;
+    }
+
+    /**
+     * get asia
+     *
+     * @return
+     */
+    public List<AreaIspItem> getAsia() {
+        return asia;
+    }
+
+    /**
+     * set asia
+     *
+     * @param asia
+     */
+    public void setAsia(List<AreaIspItem> asia) {
+        this.asia = asia;
+    }
+
+    /**
+     * get europe
+     *
+     * @return
+     */
+    public List<AreaIspItem> getEurope() {
+        return europe;
+    }
+
+    /**
+     * set europe
+     *
+     * @param europe
+     */
+    public void setEurope(List<AreaIspItem> europe) {
+        this.europe = europe;
+    }
+
 
     /**
      * set mainLand
@@ -134,6 +272,66 @@ public class QueryAreaIspListResult extends JdcloudResult implements java.io.Ser
      */
     public QueryAreaIspListResult isp(List<AreaIspItem> isp) {
         this.isp = isp;
+        return this;
+    }
+
+    /**
+     * set gangaotai
+     *
+     * @param gangaotai
+     */
+    public QueryAreaIspListResult gangaotai(List<AreaIspItem> gangaotai) {
+        this.gangaotai = gangaotai;
+        return this;
+    }
+
+    /**
+     * set oceanica
+     *
+     * @param oceanica
+     */
+    public QueryAreaIspListResult oceanica(List<AreaIspItem> oceanica) {
+        this.oceanica = oceanica;
+        return this;
+    }
+
+    /**
+     * set southAmerica
+     *
+     * @param southAmerica
+     */
+    public QueryAreaIspListResult southAmerica(List<AreaIspItem> southAmerica) {
+        this.southAmerica = southAmerica;
+        return this;
+    }
+
+    /**
+     * set northAmerica
+     *
+     * @param northAmerica
+     */
+    public QueryAreaIspListResult northAmerica(List<AreaIspItem> northAmerica) {
+        this.northAmerica = northAmerica;
+        return this;
+    }
+
+    /**
+     * set asia
+     *
+     * @param asia
+     */
+    public QueryAreaIspListResult asia(List<AreaIspItem> asia) {
+        this.asia = asia;
+        return this;
+    }
+
+    /**
+     * set europe
+     *
+     * @param europe
+     */
+    public QueryAreaIspListResult europe(List<AreaIspItem> europe) {
+        this.europe = europe;
         return this;
     }
 
@@ -172,6 +370,78 @@ public class QueryAreaIspListResult extends JdcloudResult implements java.io.Ser
             this.isp = new ArrayList<>();
         }
         this.isp.add(isp);
+    }
+
+    /**
+     * add item to gangaotai
+     *
+     * @param gangaotai
+     */
+    public void addGangaotai(AreaIspItem gangaotai) {
+        if (this.gangaotai == null) {
+            this.gangaotai = new ArrayList<>();
+        }
+        this.gangaotai.add(gangaotai);
+    }
+
+    /**
+     * add item to oceanica
+     *
+     * @param oceanica
+     */
+    public void addOceanica(AreaIspItem oceanica) {
+        if (this.oceanica == null) {
+            this.oceanica = new ArrayList<>();
+        }
+        this.oceanica.add(oceanica);
+    }
+
+    /**
+     * add item to southAmerica
+     *
+     * @param southAmerica
+     */
+    public void addSouthAmerica(AreaIspItem southAmerica) {
+        if (this.southAmerica == null) {
+            this.southAmerica = new ArrayList<>();
+        }
+        this.southAmerica.add(southAmerica);
+    }
+
+    /**
+     * add item to northAmerica
+     *
+     * @param northAmerica
+     */
+    public void addNorthAmerica(AreaIspItem northAmerica) {
+        if (this.northAmerica == null) {
+            this.northAmerica = new ArrayList<>();
+        }
+        this.northAmerica.add(northAmerica);
+    }
+
+    /**
+     * add item to asia
+     *
+     * @param asia
+     */
+    public void addAsia(AreaIspItem asia) {
+        if (this.asia == null) {
+            this.asia = new ArrayList<>();
+        }
+        this.asia.add(asia);
+    }
+
+    /**
+     * add item to europe
+     *
+     * @param europe
+     */
+    public void addEurope(AreaIspItem europe) {
+        if (this.europe == null) {
+            this.europe = new ArrayList<>();
+        }
+        this.europe.add(europe);
     }
 
 }

@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -37,6 +39,11 @@ public class CreateAlarmResult extends JdcloudResult implements java.io.Serializ
      * 创建成功的规则id
      */
     private String alarmId;
+
+    /**
+     * ruleIds
+     */
+    private List<Long> ruleIds;
 
 
     /**
@@ -57,6 +64,24 @@ public class CreateAlarmResult extends JdcloudResult implements java.io.Serializ
         this.alarmId = alarmId;
     }
 
+    /**
+     * get ruleIds
+     *
+     * @return
+     */
+    public List<Long> getRuleIds() {
+        return ruleIds;
+    }
+
+    /**
+     * set ruleIds
+     *
+     * @param ruleIds
+     */
+    public void setRuleIds(List<Long> ruleIds) {
+        this.ruleIds = ruleIds;
+    }
+
 
     /**
      * set 创建成功的规则id
@@ -68,5 +93,27 @@ public class CreateAlarmResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+    /**
+     * set ruleIds
+     *
+     * @param ruleIds
+     */
+    public CreateAlarmResult ruleIds(List<Long> ruleIds) {
+        this.ruleIds = ruleIds;
+        return this;
+    }
+
+
+    /**
+     * add item to ruleIds
+     *
+     * @param ruleId
+     */
+    public void addRuleId(Long ruleId) {
+        if (this.ruleIds == null) {
+            this.ruleIds = new ArrayList<>();
+        }
+        this.ruleIds.add(ruleId);
+    }
 
 }

@@ -48,6 +48,11 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     private Object tags;
 
     /**
+     * unit
+     */
+    private String unit;
+
+    /**
      * value
      */
     private Object value;
@@ -108,6 +113,24 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
     }
 
     /**
+     * get unit
+     *
+     * @return
+     */
+    public String getUnit() {
+        return unit;
+    }
+
+    /**
+     * set unit
+     *
+     * @param unit
+     */
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
+
+    /**
      * get value
      *
      * @return
@@ -153,6 +176,16 @@ public class LastDownsampleRespItem  implements java.io.Serializable {
      */
     public LastDownsampleRespItem tags(Object tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set unit
+     *
+     * @param unit
+     */
+    public LastDownsampleRespItem unit(String unit) {
+        this.unit = unit;
         return this;
     }
 

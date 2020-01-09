@@ -51,6 +51,11 @@ public class DBInstance  implements java.io.Serializable {
     private String instanceType;
 
     /**
+     * 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL，Percona，MariaDB, SQL Server
+     */
+    private String instanceStorageType;
+
+    /**
      * 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
     private String engine;
@@ -193,6 +198,24 @@ public class DBInstance  implements java.io.Serializable {
      */
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
+    }
+
+    /**
+     * get 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL，Percona，MariaDB, SQL Server
+     *
+     * @return
+     */
+    public String getInstanceStorageType() {
+        return instanceStorageType;
+    }
+
+    /**
+     * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL，Percona，MariaDB, SQL Server
+     *
+     * @param instanceStorageType
+     */
+    public void setInstanceStorageType(String instanceStorageType) {
+        this.instanceStorageType = instanceStorageType;
     }
 
     /**
@@ -547,6 +570,16 @@ public class DBInstance  implements java.io.Serializable {
      */
     public DBInstance instanceType(String instanceType) {
         this.instanceType = instanceType;
+        return this;
+    }
+
+    /**
+     * set 存储类型，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- 仅支持MySQL，Percona，MariaDB, SQL Server
+     *
+     * @param instanceStorageType
+     */
+    public DBInstance instanceStorageType(String instanceStorageType) {
+        this.instanceStorageType = instanceStorageType;
         return this;
     }
 

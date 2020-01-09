@@ -41,6 +41,16 @@ public class WafQueryPvResult extends JdcloudResult implements java.io.Serializa
      */
     private List<PvItem> pvs;
 
+    /**
+     * peakAttackPv
+     */
+    private Integer peakAttackPv;
+
+    /**
+     * peakTotalPv
+     */
+    private Integer peakTotalPv;
+
 
     /**
      * get pvs
@@ -60,6 +70,42 @@ public class WafQueryPvResult extends JdcloudResult implements java.io.Serializa
         this.pvs = pvs;
     }
 
+    /**
+     * get peakAttackPv
+     *
+     * @return
+     */
+    public Integer getPeakAttackPv() {
+        return peakAttackPv;
+    }
+
+    /**
+     * set peakAttackPv
+     *
+     * @param peakAttackPv
+     */
+    public void setPeakAttackPv(Integer peakAttackPv) {
+        this.peakAttackPv = peakAttackPv;
+    }
+
+    /**
+     * get peakTotalPv
+     *
+     * @return
+     */
+    public Integer getPeakTotalPv() {
+        return peakTotalPv;
+    }
+
+    /**
+     * set peakTotalPv
+     *
+     * @param peakTotalPv
+     */
+    public void setPeakTotalPv(Integer peakTotalPv) {
+        this.peakTotalPv = peakTotalPv;
+    }
+
 
     /**
      * set pvs
@@ -68,6 +114,26 @@ public class WafQueryPvResult extends JdcloudResult implements java.io.Serializa
      */
     public WafQueryPvResult pvs(List<PvItem> pvs) {
         this.pvs = pvs;
+        return this;
+    }
+
+    /**
+     * set peakAttackPv
+     *
+     * @param peakAttackPv
+     */
+    public WafQueryPvResult peakAttackPv(Integer peakAttackPv) {
+        this.peakAttackPv = peakAttackPv;
+        return this;
+    }
+
+    /**
+     * set peakTotalPv
+     *
+     * @param peakTotalPv
+     */
+    public WafQueryPvResult peakTotalPv(Integer peakTotalPv) {
+        this.peakTotalPv = peakTotalPv;
         return this;
     }
 

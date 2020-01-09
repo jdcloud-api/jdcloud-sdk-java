@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * resourceInfo
@@ -41,6 +43,16 @@ public class ResourceInfo  implements java.io.Serializable {
      * 实例名称
      */
     private String resourceName;
+
+    /**
+     * 备注
+     */
+    private String remark;
+
+    /**
+     * 绑定的资源
+     */
+    private List<ResourceInfo> bind;
 
 
     /**
@@ -79,6 +91,42 @@ public class ResourceInfo  implements java.io.Serializable {
         this.resourceName = resourceName;
     }
 
+    /**
+     * get 备注
+     *
+     * @return
+     */
+    public String getRemark() {
+        return remark;
+    }
+
+    /**
+     * set 备注
+     *
+     * @param remark
+     */
+    public void setRemark(String remark) {
+        this.remark = remark;
+    }
+
+    /**
+     * get 绑定的资源
+     *
+     * @return
+     */
+    public List<ResourceInfo> getBind() {
+        return bind;
+    }
+
+    /**
+     * set 绑定的资源
+     *
+     * @param bind
+     */
+    public void setBind(List<ResourceInfo> bind) {
+        this.bind = bind;
+    }
+
 
     /**
      * set 实例id
@@ -100,5 +148,37 @@ public class ResourceInfo  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 备注
+     *
+     * @param remark
+     */
+    public ResourceInfo remark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+
+    /**
+     * set 绑定的资源
+     *
+     * @param bind
+     */
+    public ResourceInfo bind(List<ResourceInfo> bind) {
+        this.bind = bind;
+        return this;
+    }
+
+
+    /**
+     * add item to 绑定的资源
+     *
+     * @param bind
+     */
+    public void addBind(ResourceInfo bind) {
+        if (this.bind == null) {
+            this.bind = new ArrayList<>();
+        }
+        this.bind.add(bind);
+    }
 
 }

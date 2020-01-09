@@ -33,23 +33,23 @@ public class MetricInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * metric 单位
+     * 单位
      */
     private String calculateUnit;
 
     /**
-     * metric名称
+     * metricName
      */
     private String metricName;
 
     /**
-     * metric uid
+     * metricUID
      */
-    private String metricUid;
+    private String metricUID;
 
 
     /**
-     * get metric 单位
+     * get 单位
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * set metric 单位
+     * set 单位
      *
      * @param calculateUnit
      */
@@ -67,7 +67,7 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * get metric名称
+     * get metricName
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * set metric名称
+     * set metricName
      *
      * @param metricName
      */
@@ -85,26 +85,26 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * get metric uid
+     * get metricUID
      *
      * @return
      */
-    public String getMetricUid() {
-        return metricUid;
+    public String getMetricUID() {
+        return metricUID;
     }
 
     /**
-     * set metric uid
+     * set metricUID
      *
-     * @param metricUid
+     * @param metricUID
      */
-    public void setMetricUid(String metricUid) {
-        this.metricUid = metricUid;
+    public void setMetricUID(String metricUID) {
+        this.metricUID = metricUID;
     }
 
 
     /**
-     * set metric 单位
+     * set 单位
      *
      * @param calculateUnit
      */
@@ -114,7 +114,7 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * set metric名称
+     * set metricName
      *
      * @param metricName
      */
@@ -124,12 +124,12 @@ public class MetricInfo  implements java.io.Serializable {
     }
 
     /**
-     * set metric uid
+     * set metricUID
      *
-     * @param metricUid
+     * @param metricUID
      */
-    public MetricInfo metricUid(String metricUid) {
-        this.metricUid = metricUid;
+    public MetricInfo metricUID(String metricUID) {
+        this.metricUID = metricUID;
         return this;
     }
 

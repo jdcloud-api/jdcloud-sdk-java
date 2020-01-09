@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 获取视频上传地址和凭证请求
@@ -41,12 +42,16 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
 
     /**
      * 视频标题
+     * Required:true
      */
+    @Required
     private String title;
 
     /**
      * 文件名称
+     * Required:true
      */
+    @Required
     private String fileName;
 
     /**
