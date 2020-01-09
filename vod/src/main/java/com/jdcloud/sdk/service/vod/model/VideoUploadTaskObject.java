@@ -38,9 +38,14 @@ public class VideoUploadTaskObject  implements java.io.Serializable {
     private String videoId;
 
     /**
-     * 视频上传地址
+     * 上传地址
      */
     private String uploadUrl;
+
+    /**
+     * 上传凭证
+     */
+    private String authToken;
 
 
     /**
@@ -62,7 +67,7 @@ public class VideoUploadTaskObject  implements java.io.Serializable {
     }
 
     /**
-     * get 视频上传地址
+     * get 上传地址
      *
      * @return
      */
@@ -71,12 +76,30 @@ public class VideoUploadTaskObject  implements java.io.Serializable {
     }
 
     /**
-     * set 视频上传地址
+     * set 上传地址
      *
      * @param uploadUrl
      */
     public void setUploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
+    }
+
+    /**
+     * get 上传凭证
+     *
+     * @return
+     */
+    public String getAuthToken() {
+        return authToken;
+    }
+
+    /**
+     * set 上传凭证
+     *
+     * @param authToken
+     */
+    public void setAuthToken(String authToken) {
+        this.authToken = authToken;
     }
 
 
@@ -91,12 +114,22 @@ public class VideoUploadTaskObject  implements java.io.Serializable {
     }
 
     /**
-     * set 视频上传地址
+     * set 上传地址
      *
      * @param uploadUrl
      */
     public VideoUploadTaskObject uploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
+        return this;
+    }
+
+    /**
+     * set 上传凭证
+     *
+     * @param authToken
+     */
+    public VideoUploadTaskObject authToken(String authToken) {
+        this.authToken = authToken;
         return this;
     }
 

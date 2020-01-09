@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,8 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 变更缓存Redis实例规格（变配），只能变更运行状态的实例规格，变更的规格不能与之前的相同。
-预付费用户，从集群版变配到主从版，新规格的内存大小要大于老规格的内存大小，从主从版到集群版，新规格的内存大小要不小于老规格的内存大小。
+ * 变更缓存Redis实例规格（变配），实例运行时可以变配，新规格不能与之前的老规格相同，新规格内存大小不能小于实例的已使用内存。
 
  */
 public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,7 +36,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * 变更后的实例规格
+     * 新规格
      * Required:true
      */
     @Required
@@ -59,7 +58,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 变更后的实例规格
+     * get 新规格
      *
      * @return
      */
@@ -68,7 +67,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 变更后的实例规格
+     * set 新规格
      *
      * @param cacheInstanceClass
      */
@@ -114,7 +113,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 变更后的实例规格
+     * set 新规格
      *
      * @param cacheInstanceClass
      */

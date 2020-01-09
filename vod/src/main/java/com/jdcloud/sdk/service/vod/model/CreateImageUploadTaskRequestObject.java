@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 获取图片上传地址和凭证请求
@@ -39,7 +40,9 @@ public class CreateImageUploadTaskRequestObject  implements java.io.Serializable
 
     /**
      * 文件名称
+     * Required:true
      */
+    @Required
     private String fileName;
 
     /**

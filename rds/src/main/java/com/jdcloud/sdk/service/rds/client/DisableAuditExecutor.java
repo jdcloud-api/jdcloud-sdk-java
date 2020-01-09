@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.rds.model.DisableAuditResponse;
 
 /**
- * 仅支持MySQL实例关闭数据库审计&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB
+ * 仅支持MySQL实例关闭数据库审计&lt;br&gt;- 仅支持 MySQL 5.6, MySQL 5.7, Percona, MariaDB, PostgreSQL
  */
 class DisableAuditExecutor extends JdcloudExecutor {
 

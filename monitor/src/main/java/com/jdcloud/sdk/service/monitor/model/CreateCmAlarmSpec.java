@@ -34,7 +34,7 @@ public class CreateCmAlarmSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 幂等性校验参数,最长36位
+     * 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，保证只创建一次规则
      * Required:true
      */
     @Required
@@ -45,11 +45,11 @@ public class CreateCmAlarmSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private CreateCmAlarmParam createCmAlarmSpec;
+    private CreateCustomAlarmParam createCmAlarmSpec;
 
 
     /**
-     * get 幂等性校验参数,最长36位
+     * get 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，保证只创建一次规则
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class CreateCmAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 幂等性校验参数,最长36位
+     * set 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，保证只创建一次规则
      *
      * @param clientToken
      */
@@ -71,7 +71,7 @@ public class CreateCmAlarmSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public CreateCmAlarmParam getCreateCmAlarmSpec() {
+    public CreateCustomAlarmParam getCreateCmAlarmSpec() {
         return createCmAlarmSpec;
     }
 
@@ -80,13 +80,13 @@ public class CreateCmAlarmSpec  implements java.io.Serializable {
      *
      * @param createCmAlarmSpec
      */
-    public void setCreateCmAlarmSpec(CreateCmAlarmParam createCmAlarmSpec) {
+    public void setCreateCmAlarmSpec(CreateCustomAlarmParam createCmAlarmSpec) {
         this.createCmAlarmSpec = createCmAlarmSpec;
     }
 
 
     /**
-     * set 幂等性校验参数,最长36位
+     * set 幂等性校验参数,最长36位,若两个请求clientToken相等，则返回第一次创建的规则id，保证只创建一次规则
      *
      * @param clientToken
      */
@@ -100,7 +100,7 @@ public class CreateCmAlarmSpec  implements java.io.Serializable {
      *
      * @param createCmAlarmSpec
      */
-    public CreateCmAlarmSpec createCmAlarmSpec(CreateCmAlarmParam createCmAlarmSpec) {
+    public CreateCmAlarmSpec createCmAlarmSpec(CreateCustomAlarmParam createCmAlarmSpec) {
         this.createCmAlarmSpec = createCmAlarmSpec;
         return this;
     }

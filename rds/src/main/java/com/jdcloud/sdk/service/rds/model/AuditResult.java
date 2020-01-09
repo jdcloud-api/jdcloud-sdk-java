@@ -59,6 +59,11 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
     private String threadId;
 
     /**
+     * 线程ID，仅 PostgreSQL 支持此参数
+     */
+    private String processId;
+
+    /**
      * 数据库名
      */
     private String dbName;
@@ -160,6 +165,24 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
     }
 
     /**
+     * get 线程ID，仅 PostgreSQL 支持此参数
+     *
+     * @return
+     */
+    public String getProcessId() {
+        return processId;
+    }
+
+    /**
+     * set 线程ID，仅 PostgreSQL 支持此参数
+     *
+     * @param processId
+     */
+    public void setProcessId(String processId) {
+        this.processId = processId;
+    }
+
+    /**
      * get 数据库名
      *
      * @return
@@ -243,6 +266,16 @@ public class AuditResult extends JdcloudResult implements java.io.Serializable {
      */
     public AuditResult threadId(String threadId) {
         this.threadId = threadId;
+        return this;
+    }
+
+    /**
+     * set 线程ID，仅 PostgreSQL 支持此参数
+     *
+     * @param processId
+     */
+    public AuditResult processId(String processId) {
+        this.processId = processId;
         return this;
     }
 

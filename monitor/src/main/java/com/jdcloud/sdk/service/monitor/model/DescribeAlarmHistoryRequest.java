@@ -62,6 +62,11 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     private String dimension;
 
     /**
+     * 根据region筛选对应region的资源的报警历史
+     */
+    private String region;
+
+    /**
      * 正在报警, 取值为1
      */
     private Long isAlarming;
@@ -187,6 +192,24 @@ alarmIds - 规则Id，精确匹配，支持多个
      */
     public void setDimension(String dimension) {
         this.dimension = dimension;
+    }
+
+    /**
+     * get 根据region筛选对应region的资源的报警历史
+     *
+     * @return
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * set 根据region筛选对应region的资源的报警历史
+     *
+     * @param region
+     */
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     /**
@@ -367,6 +390,16 @@ alarmIds - 规则Id，精确匹配，支持多个
      */
     public DescribeAlarmHistoryRequest dimension(String dimension) {
         this.dimension = dimension;
+        return this;
+    }
+
+    /**
+     * set 根据region筛选对应region的资源的报警历史
+     *
+     * @param region
+     */
+    public DescribeAlarmHistoryRequest region(String region) {
+        this.region = region;
         return this;
     }
 

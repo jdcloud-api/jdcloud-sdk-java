@@ -108,7 +108,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     private String instanceStorageType;
 
     /**
-     * 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     * 应用访问端口，支持的端口范围：1150～5999。MySQL、Percona、MariaDB的默认值为 3306；SQL SQL Server的默认值为1433，不支持5022；PostgreSQL的默认端口号为5432；
      */
     private String instancePort;
 
@@ -322,7 +322,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     * get 应用访问端口，支持的端口范围：1150～5999。MySQL、Percona、MariaDB的默认值为 3306；SQL SQL Server的默认值为1433，不支持5022；PostgreSQL的默认端口号为5432；
      *
      * @return
      */
@@ -331,7 +331,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     * set 应用访问端口，支持的端口范围：1150～5999。MySQL、Percona、MariaDB的默认值为 3306；SQL SQL Server的默认值为1433，不支持5022；PostgreSQL的默认端口号为5432；
      *
      * @param instancePort
      */
@@ -487,7 +487,7 @@ public class DBInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 应用访问端口, 仅支持 MySQL，Percona, MariaDB, 默认值为 3306
+     * set 应用访问端口，支持的端口范围：1150～5999。MySQL、Percona、MariaDB的默认值为 3306；SQL SQL Server的默认值为1433，不支持5022；PostgreSQL的默认端口号为5432；
      *
      * @param instancePort
      */

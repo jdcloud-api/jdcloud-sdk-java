@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -37,6 +39,11 @@ public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializ
      * 创建成功的规则id
      */
     private String alarmId;
+
+    /**
+     * ruleIds
+     */
+    private List<Long> ruleIds;
 
     /**
      * 成功则返回true
@@ -60,6 +67,24 @@ public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializ
      */
     public void setAlarmId(String alarmId) {
         this.alarmId = alarmId;
+    }
+
+    /**
+     * get ruleIds
+     *
+     * @return
+     */
+    public List<Long> getRuleIds() {
+        return ruleIds;
+    }
+
+    /**
+     * set ruleIds
+     *
+     * @param ruleIds
+     */
+    public void setRuleIds(List<Long> ruleIds) {
+        this.ruleIds = ruleIds;
     }
 
     /**
@@ -92,6 +117,16 @@ public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
+     * set ruleIds
+     *
+     * @param ruleIds
+     */
+    public UpdateAlarmResult ruleIds(List<Long> ruleIds) {
+        this.ruleIds = ruleIds;
+        return this;
+    }
+
+    /**
      * set 成功则返回true
      *
      * @param success
@@ -101,5 +136,17 @@ public class UpdateAlarmResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
+    /**
+     * add item to ruleIds
+     *
+     * @param ruleId
+     */
+    public void addRuleId(Long ruleId) {
+        if (this.ruleIds == null) {
+            this.ruleIds = new ArrayList<>();
+        }
+        this.ruleIds.add(ruleId);
+    }
 
 }

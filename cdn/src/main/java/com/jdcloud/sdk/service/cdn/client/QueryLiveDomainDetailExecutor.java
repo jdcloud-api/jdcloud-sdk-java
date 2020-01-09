@@ -40,7 +40,7 @@ class QueryLiveDomainDetailExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/liveDomains/{domain}";
+        return "/liveDomain/{domain}";
     }
 
     @Override

@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -42,12 +43,16 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
 
     /**
      * 视频标题
+     * Required:true
      */
+    @Required
     private String title;
 
     /**
      * 文件名称
+     * Required:true
      */
+    @Required
     private String fileName;
 
     /**

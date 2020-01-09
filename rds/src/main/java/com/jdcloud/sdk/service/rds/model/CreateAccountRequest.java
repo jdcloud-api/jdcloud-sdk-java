@@ -49,6 +49,11 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     private String accountPassword;
 
     /**
+     * 备注信息，仅支持PostgreSQL
+     */
+    private String notes;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -97,6 +102,24 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
      */
     public void setAccountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
+    }
+
+    /**
+     * get 备注信息，仅支持PostgreSQL
+     *
+     * @return
+     */
+    public String getNotes() {
+        return notes;
+    }
+
+    /**
+     * set 备注信息，仅支持PostgreSQL
+     *
+     * @param notes
+     */
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
     /**
@@ -153,6 +176,16 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
      */
     public CreateAccountRequest accountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
+        return this;
+    }
+
+    /**
+     * set 备注信息，仅支持PostgreSQL
+     *
+     * @param notes
+     */
+    public CreateAccountRequest notes(String notes) {
+        this.notes = notes;
         return this;
     }
 

@@ -35,12 +35,12 @@ public class NoticeOption  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 生效截止时间，默认值:23:59
+     * 生效截止时间，默认值:23:59:59
      */
     private String effectiveIntervalEnd;
 
     /**
-     * 生效起始时间，默认值:00:00
+     * 生效起始时间，默认值:00:00:00
      */
     private String effectiveIntervalStart;
 
@@ -61,7 +61,7 @@ public class NoticeOption  implements java.io.Serializable {
 
 
     /**
-     * get 生效截止时间，默认值:23:59
+     * get 生效截止时间，默认值:23:59:59
      *
      * @return
      */
@@ -70,7 +70,7 @@ public class NoticeOption  implements java.io.Serializable {
     }
 
     /**
-     * set 生效截止时间，默认值:23:59
+     * set 生效截止时间，默认值:23:59:59
      *
      * @param effectiveIntervalEnd
      */
@@ -79,7 +79,7 @@ public class NoticeOption  implements java.io.Serializable {
     }
 
     /**
-     * get 生效起始时间，默认值:00:00
+     * get 生效起始时间，默认值:00:00:00
      *
      * @return
      */
@@ -88,7 +88,7 @@ public class NoticeOption  implements java.io.Serializable {
     }
 
     /**
-     * set 生效起始时间，默认值:00:00
+     * set 生效起始时间，默认值:00:00:00
      *
      * @param effectiveIntervalStart
      */
@@ -152,7 +152,7 @@ public class NoticeOption  implements java.io.Serializable {
 
 
     /**
-     * set 生效截止时间，默认值:23:59
+     * set 生效截止时间，默认值:23:59:59
      *
      * @param effectiveIntervalEnd
      */
@@ -162,7 +162,7 @@ public class NoticeOption  implements java.io.Serializable {
     }
 
     /**
-     * set 生效起始时间，默认值:00:00
+     * set 生效起始时间，默认值:00:00:00
      *
      * @param effectiveIntervalStart
      */

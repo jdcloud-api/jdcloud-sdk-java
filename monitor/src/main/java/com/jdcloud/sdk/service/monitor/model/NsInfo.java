@@ -33,136 +33,70 @@ public class NsInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * metric个数
+     * namespace名字
      */
-    private Long metricCount;
+    private String namespaceName;
 
     /**
-     * 命名空间名称
+     * namespaceUUID
      */
-    private String nsName;
-
-    /**
-     * 命名空间uid
-     */
-    private String nsUid;
-
-    /**
-     * obj个数
-     */
-    private Long objCount;
+    private String namespaceUuid;
 
 
     /**
-     * get metric个数
+     * get namespace名字
      *
      * @return
      */
-    public Long getMetricCount() {
-        return metricCount;
+    public String getNamespaceName() {
+        return namespaceName;
     }
 
     /**
-     * set metric个数
+     * set namespace名字
      *
-     * @param metricCount
+     * @param namespaceName
      */
-    public void setMetricCount(Long metricCount) {
-        this.metricCount = metricCount;
+    public void setNamespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
     }
 
     /**
-     * get 命名空间名称
-     *
-     * @return
-     */
-    public String getNsName() {
-        return nsName;
-    }
-
-    /**
-     * set 命名空间名称
-     *
-     * @param nsName
-     */
-    public void setNsName(String nsName) {
-        this.nsName = nsName;
-    }
-
-    /**
-     * get 命名空间uid
+     * get namespaceUUID
      *
      * @return
      */
-    public String getNsUid() {
-        return nsUid;
+    public String getNamespaceUuid() {
+        return namespaceUuid;
     }
 
     /**
-     * set 命名空间uid
+     * set namespaceUUID
      *
-     * @param nsUid
+     * @param namespaceUuid
      */
-    public void setNsUid(String nsUid) {
-        this.nsUid = nsUid;
-    }
-
-    /**
-     * get obj个数
-     *
-     * @return
-     */
-    public Long getObjCount() {
-        return objCount;
-    }
-
-    /**
-     * set obj个数
-     *
-     * @param objCount
-     */
-    public void setObjCount(Long objCount) {
-        this.objCount = objCount;
+    public void setNamespaceUuid(String namespaceUuid) {
+        this.namespaceUuid = namespaceUuid;
     }
 
 
     /**
-     * set metric个数
+     * set namespace名字
      *
-     * @param metricCount
+     * @param namespaceName
      */
-    public NsInfo metricCount(Long metricCount) {
-        this.metricCount = metricCount;
+    public NsInfo namespaceName(String namespaceName) {
+        this.namespaceName = namespaceName;
         return this;
     }
 
     /**
-     * set 命名空间名称
+     * set namespaceUUID
      *
-     * @param nsName
+     * @param namespaceUuid
      */
-    public NsInfo nsName(String nsName) {
-        this.nsName = nsName;
-        return this;
-    }
-
-    /**
-     * set 命名空间uid
-     *
-     * @param nsUid
-     */
-    public NsInfo nsUid(String nsUid) {
-        this.nsUid = nsUid;
-        return this;
-    }
-
-    /**
-     * set obj个数
-     *
-     * @param objCount
-     */
-    public NsInfo objCount(Long objCount) {
-        this.objCount = objCount;
+    public NsInfo namespaceUuid(String namespaceUuid) {
+        this.namespaceUuid = namespaceUuid;
         return this;
     }
 

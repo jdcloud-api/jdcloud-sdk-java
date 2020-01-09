@@ -36,226 +36,196 @@ public class UpdateCmAlarmSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+     * 聚合方式，多个维度聚合成1个维度时，多维度值之间的聚合方式。可选值:sum、avg、min、max
      * Required:true
      */
     @Required
-    private String calculation;
+    private String aggrType;
 
     /**
-     * 通知的联系组，如 [“联系组1”,”联系组2”]
+     * 告警通知联系人
      */
-    private List<String> contactGroups;
+    private List<BaseContact> baseContact;
 
     /**
-     * 通知的联系人，如 [“联系人1”,”联系人2”]
-     */
-    private List<String> contactPersons;
-
-    /**
-     * 取样频次
-     */
-    private String downSample;
-
-    /**
-     * 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
      * Required:true
      */
     @Required
-    private String metric;
+    private List<DimensionsParam> dimensions;
 
     /**
-     * 通知周期 单位：小时
+     * 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      */
-    private Long noticePeriod;
+    private Long enabled;
 
     /**
-     * &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
+     * 命名空间
      * Required:true
      */
     @Required
-    private String operation;
+    private String namespace;
 
     /**
-     * 统计周期（单位：分钟）目前支持的取值：2，5，15，30，60
+     * 通知策略
+     */
+    private List<NoticeOption> noticeOption;
+
+    /**
+     * 规则绑定资源所在地域
      * Required:true
      */
     @Required
-    private Long period;
+    private String region;
 
     /**
-     * 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     * 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     * Required:true
      */
+    @Required
     private String ruleName;
 
     /**
-     * 产品名称
+     * 规则的触发条件设置选项
      * Required:true
      */
     @Required
-    private String serviceCode;
+    private List<BasicCustomRule> ruleOption;
 
     /**
-     * 阈值
-     * Required:true
+     * webHookOption
      */
-    @Required
-    private Double threshold;
-
-    /**
-     * 连续多少次后报警，可选值:1,2,3,5
-     * Required:true
-     */
-    @Required
-    private Long times;
+    private WebHookOption webHookOption;
 
 
     /**
-     * get 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+     * get 聚合方式，多个维度聚合成1个维度时，多维度值之间的聚合方式。可选值:sum、avg、min、max
      *
      * @return
      */
-    public String getCalculation() {
-        return calculation;
+    public String getAggrType() {
+        return aggrType;
     }
 
     /**
-     * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+     * set 聚合方式，多个维度聚合成1个维度时，多维度值之间的聚合方式。可选值:sum、avg、min、max
      *
-     * @param calculation
+     * @param aggrType
      */
-    public void setCalculation(String calculation) {
-        this.calculation = calculation;
+    public void setAggrType(String aggrType) {
+        this.aggrType = aggrType;
     }
 
     /**
-     * get 通知的联系组，如 [“联系组1”,”联系组2”]
-     *
-     * @return
-     */
-    public List<String> getContactGroups() {
-        return contactGroups;
-    }
-
-    /**
-     * set 通知的联系组，如 [“联系组1”,”联系组2”]
-     *
-     * @param contactGroups
-     */
-    public void setContactGroups(List<String> contactGroups) {
-        this.contactGroups = contactGroups;
-    }
-
-    /**
-     * get 通知的联系人，如 [“联系人1”,”联系人2”]
+     * get 告警通知联系人
      *
      * @return
      */
-    public List<String> getContactPersons() {
-        return contactPersons;
+    public List<BaseContact> getBaseContact() {
+        return baseContact;
     }
 
     /**
-     * set 通知的联系人，如 [“联系人1”,”联系人2”]
+     * set 告警通知联系人
      *
-     * @param contactPersons
+     * @param baseContact
      */
-    public void setContactPersons(List<String> contactPersons) {
-        this.contactPersons = contactPersons;
+    public void setBaseContact(List<BaseContact> baseContact) {
+        this.baseContact = baseContact;
     }
 
     /**
-     * get 取样频次
-     *
-     * @return
-     */
-    public String getDownSample() {
-        return downSample;
-    }
-
-    /**
-     * set 取样频次
-     *
-     * @param downSample
-     */
-    public void setDownSample(String downSample) {
-        this.downSample = downSample;
-    }
-
-    /**
-     * get 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * get 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
      *
      * @return
      */
-    public String getMetric() {
-        return metric;
+    public List<DimensionsParam> getDimensions() {
+        return dimensions;
     }
 
     /**
-     * set 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * set 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
      *
-     * @param metric
+     * @param dimensions
      */
-    public void setMetric(String metric) {
-        this.metric = metric;
+    public void setDimensions(List<DimensionsParam> dimensions) {
+        this.dimensions = dimensions;
     }
 
     /**
-     * get 通知周期 单位：小时
-     *
-     * @return
-     */
-    public Long getNoticePeriod() {
-        return noticePeriod;
-    }
-
-    /**
-     * set 通知周期 单位：小时
-     *
-     * @param noticePeriod
-     */
-    public void setNoticePeriod(Long noticePeriod) {
-        this.noticePeriod = noticePeriod;
-    }
-
-    /**
-     * get &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
+     * get 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      *
      * @return
      */
-    public String getOperation() {
-        return operation;
+    public Long getEnabled() {
+        return enabled;
     }
 
     /**
-     * set &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
+     * set 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      *
-     * @param operation
+     * @param enabled
      */
-    public void setOperation(String operation) {
-        this.operation = operation;
+    public void setEnabled(Long enabled) {
+        this.enabled = enabled;
     }
 
     /**
-     * get 统计周期（单位：分钟）目前支持的取值：2，5，15，30，60
+     * get 命名空间
      *
      * @return
      */
-    public Long getPeriod() {
-        return period;
+    public String getNamespace() {
+        return namespace;
     }
 
     /**
-     * set 统计周期（单位：分钟）目前支持的取值：2，5，15，30，60
+     * set 命名空间
      *
-     * @param period
+     * @param namespace
      */
-    public void setPeriod(Long period) {
-        this.period = period;
+    public void setNamespace(String namespace) {
+        this.namespace = namespace;
     }
 
     /**
-     * get 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     * get 通知策略
+     *
+     * @return
+     */
+    public List<NoticeOption> getNoticeOption() {
+        return noticeOption;
+    }
+
+    /**
+     * set 通知策略
+     *
+     * @param noticeOption
+     */
+    public void setNoticeOption(List<NoticeOption> noticeOption) {
+        this.noticeOption = noticeOption;
+    }
+
+    /**
+     * get 规则绑定资源所在地域
+     *
+     * @return
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * set 规则绑定资源所在地域
+     *
+     * @param region
+     */
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    /**
+     * get 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
      *
      * @return
      */
@@ -264,7 +234,7 @@ public class UpdateCmAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     * set 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
      *
      * @param ruleName
      */
@@ -273,142 +243,114 @@ public class UpdateCmAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 产品名称
+     * get 规则的触发条件设置选项
      *
      * @return
      */
-    public String getServiceCode() {
-        return serviceCode;
+    public List<BasicCustomRule> getRuleOption() {
+        return ruleOption;
     }
 
     /**
-     * set 产品名称
+     * set 规则的触发条件设置选项
      *
-     * @param serviceCode
+     * @param ruleOption
      */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public void setRuleOption(List<BasicCustomRule> ruleOption) {
+        this.ruleOption = ruleOption;
     }
 
     /**
-     * get 阈值
-     *
-     * @return
-     */
-    public Double getThreshold() {
-        return threshold;
-    }
-
-    /**
-     * set 阈值
-     *
-     * @param threshold
-     */
-    public void setThreshold(Double threshold) {
-        this.threshold = threshold;
-    }
-
-    /**
-     * get 连续多少次后报警，可选值:1,2,3,5
+     * get webHookOption
      *
      * @return
      */
-    public Long getTimes() {
-        return times;
+    public WebHookOption getWebHookOption() {
+        return webHookOption;
     }
 
     /**
-     * set 连续多少次后报警，可选值:1,2,3,5
+     * set webHookOption
      *
-     * @param times
+     * @param webHookOption
      */
-    public void setTimes(Long times) {
-        this.times = times;
+    public void setWebHookOption(WebHookOption webHookOption) {
+        this.webHookOption = webHookOption;
     }
 
 
     /**
-     * set 统计方法：平均值&#x3D;avg、最大值&#x3D;max、最小值&#x3D;min、总和&#x3D;sum
+     * set 聚合方式，多个维度聚合成1个维度时，多维度值之间的聚合方式。可选值:sum、avg、min、max
      *
-     * @param calculation
+     * @param aggrType
      */
-    public UpdateCmAlarmSpec calculation(String calculation) {
-        this.calculation = calculation;
+    public UpdateCmAlarmSpec aggrType(String aggrType) {
+        this.aggrType = aggrType;
         return this;
     }
 
     /**
-     * set 通知的联系组，如 [“联系组1”,”联系组2”]
+     * set 告警通知联系人
      *
-     * @param contactGroups
+     * @param baseContact
      */
-    public UpdateCmAlarmSpec contactGroups(List<String> contactGroups) {
-        this.contactGroups = contactGroups;
+    public UpdateCmAlarmSpec baseContact(List<BaseContact> baseContact) {
+        this.baseContact = baseContact;
         return this;
     }
 
     /**
-     * set 通知的联系人，如 [“联系人1”,”联系人2”]
+     * set 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
      *
-     * @param contactPersons
+     * @param dimensions
      */
-    public UpdateCmAlarmSpec contactPersons(List<String> contactPersons) {
-        this.contactPersons = contactPersons;
+    public UpdateCmAlarmSpec dimensions(List<DimensionsParam> dimensions) {
+        this.dimensions = dimensions;
         return this;
     }
 
     /**
-     * set 取样频次
+     * set 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      *
-     * @param downSample
+     * @param enabled
      */
-    public UpdateCmAlarmSpec downSample(String downSample) {
-        this.downSample = downSample;
+    public UpdateCmAlarmSpec enabled(Long enabled) {
+        this.enabled = enabled;
         return this;
     }
 
     /**
-     * set 根据产品线查询可用监控项列表 接口 返回的Metric字段
+     * set 命名空间
      *
-     * @param metric
+     * @param namespace
      */
-    public UpdateCmAlarmSpec metric(String metric) {
-        this.metric = metric;
+    public UpdateCmAlarmSpec namespace(String namespace) {
+        this.namespace = namespace;
         return this;
     }
 
     /**
-     * set 通知周期 单位：小时
+     * set 通知策略
      *
-     * @param noticePeriod
+     * @param noticeOption
      */
-    public UpdateCmAlarmSpec noticePeriod(Long noticePeriod) {
-        this.noticePeriod = noticePeriod;
+    public UpdateCmAlarmSpec noticeOption(List<NoticeOption> noticeOption) {
+        this.noticeOption = noticeOption;
         return this;
     }
 
     /**
-     * set &gt;&#x3D;、&gt;、&lt;、&lt;&#x3D;、&#x3D;、！&#x3D;
+     * set 规则绑定资源所在地域
      *
-     * @param operation
+     * @param region
      */
-    public UpdateCmAlarmSpec operation(String operation) {
-        this.operation = operation;
+    public UpdateCmAlarmSpec region(String region) {
+        this.region = region;
         return this;
     }
 
     /**
-     * set 统计周期（单位：分钟）目前支持的取值：2，5，15，30，60
-     *
-     * @param period
-     */
-    public UpdateCmAlarmSpec period(Long period) {
-        this.period = period;
-        return this;
-    }
-
-    /**
-     * set 规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
+     * set 规则名称，规则名称，最大长度42个字符，只允许中英文、数字、&#39;&#39;-&#39;&#39;和&quot;_&quot;
      *
      * @param ruleName
      */
@@ -418,58 +360,72 @@ public class UpdateCmAlarmSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 产品名称
+     * set 规则的触发条件设置选项
      *
-     * @param serviceCode
+     * @param ruleOption
      */
-    public UpdateCmAlarmSpec serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
+    public UpdateCmAlarmSpec ruleOption(List<BasicCustomRule> ruleOption) {
+        this.ruleOption = ruleOption;
         return this;
     }
 
     /**
-     * set 阈值
+     * set webHookOption
      *
-     * @param threshold
+     * @param webHookOption
      */
-    public UpdateCmAlarmSpec threshold(Double threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-
-    /**
-     * set 连续多少次后报警，可选值:1,2,3,5
-     *
-     * @param times
-     */
-    public UpdateCmAlarmSpec times(Long times) {
-        this.times = times;
+    public UpdateCmAlarmSpec webHookOption(WebHookOption webHookOption) {
+        this.webHookOption = webHookOption;
         return this;
     }
 
 
     /**
-     * add item to 通知的联系组，如 [“联系组1”,”联系组2”]
+     * add item to 告警通知联系人
      *
-     * @param contactGroup
+     * @param baseContact
      */
-    public void addContactGroup(String contactGroup) {
-        if (this.contactGroups == null) {
-            this.contactGroups = new ArrayList<>();
+    public void addBaseContact(BaseContact baseContact) {
+        if (this.baseContact == null) {
+            this.baseContact = new ArrayList<>();
         }
-        this.contactGroups.add(contactGroup);
+        this.baseContact.add(baseContact);
     }
 
     /**
-     * add item to 通知的联系人，如 [“联系人1”,”联系人2”]
+     * add item to 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
      *
-     * @param contactPerson
+     * @param dimension
      */
-    public void addContactPerson(String contactPerson) {
-        if (this.contactPersons == null) {
-            this.contactPersons = new ArrayList<>();
+    public void addDimension(DimensionsParam dimension) {
+        if (this.dimensions == null) {
+            this.dimensions = new ArrayList<>();
         }
-        this.contactPersons.add(contactPerson);
+        this.dimensions.add(dimension);
+    }
+
+    /**
+     * add item to 通知策略
+     *
+     * @param noticeOption
+     */
+    public void addNoticeOption(NoticeOption noticeOption) {
+        if (this.noticeOption == null) {
+            this.noticeOption = new ArrayList<>();
+        }
+        this.noticeOption.add(noticeOption);
+    }
+
+    /**
+     * add item to 规则的触发条件设置选项
+     *
+     * @param ruleOption
+     */
+    public void addRuleOption(BasicCustomRule ruleOption) {
+        if (this.ruleOption == null) {
+            this.ruleOption = new ArrayList<>();
+        }
+        this.ruleOption.add(ruleOption);
     }
 
 }

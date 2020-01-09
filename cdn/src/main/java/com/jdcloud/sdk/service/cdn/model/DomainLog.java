@@ -48,6 +48,16 @@ public class DomainLog  implements java.io.Serializable {
     private String fileName;
 
     /**
+     * 日志格式
+     */
+    private String logType;
+
+    /**
+     * 日志粒度
+     */
+    private String interval;
+
+    /**
      * 文件大小
      */
     private Long size;
@@ -61,6 +71,11 @@ public class DomainLog  implements java.io.Serializable {
      * 日志结束时间，UTC时间
      */
     private String endTime;
+
+    /**
+     * 日志修改时间，UTC时间
+     */
+    private String lastModified;
 
 
     /**
@@ -118,6 +133,42 @@ public class DomainLog  implements java.io.Serializable {
     }
 
     /**
+     * get 日志格式
+     *
+     * @return
+     */
+    public String getLogType() {
+        return logType;
+    }
+
+    /**
+     * set 日志格式
+     *
+     * @param logType
+     */
+    public void setLogType(String logType) {
+        this.logType = logType;
+    }
+
+    /**
+     * get 日志粒度
+     *
+     * @return
+     */
+    public String getInterval() {
+        return interval;
+    }
+
+    /**
+     * set 日志粒度
+     *
+     * @param interval
+     */
+    public void setInterval(String interval) {
+        this.interval = interval;
+    }
+
+    /**
      * get 文件大小
      *
      * @return
@@ -171,6 +222,24 @@ public class DomainLog  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+    /**
+     * get 日志修改时间，UTC时间
+     *
+     * @return
+     */
+    public String getLastModified() {
+        return lastModified;
+    }
+
+    /**
+     * set 日志修改时间，UTC时间
+     *
+     * @param lastModified
+     */
+    public void setLastModified(String lastModified) {
+        this.lastModified = lastModified;
+    }
+
 
     /**
      * set 下载链接
@@ -203,6 +272,26 @@ public class DomainLog  implements java.io.Serializable {
     }
 
     /**
+     * set 日志格式
+     *
+     * @param logType
+     */
+    public DomainLog logType(String logType) {
+        this.logType = logType;
+        return this;
+    }
+
+    /**
+     * set 日志粒度
+     *
+     * @param interval
+     */
+    public DomainLog interval(String interval) {
+        this.interval = interval;
+        return this;
+    }
+
+    /**
      * set 文件大小
      *
      * @param size
@@ -229,6 +318,16 @@ public class DomainLog  implements java.io.Serializable {
      */
     public DomainLog endTime(String endTime) {
         this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 日志修改时间，UTC时间
+     *
+     * @param lastModified
+     */
+    public DomainLog lastModified(String lastModified) {
+        this.lastModified = lastModified;
         return this;
     }
 

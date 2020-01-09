@@ -75,6 +75,11 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     private String noticeTime;
 
     /**
+     * 告警时间对应的时间戳
+     */
+    private Long noticeTimeUnix;
+
+    /**
      * 资源类型
      */
     private String product;
@@ -88,6 +93,11 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
      * 告警通知人
      */
     private List<NoticeReceiver> receivers;
+
+    /**
+     * 资源Id对应的region
+     */
+    private String region;
 
     /**
      * 资源Id
@@ -265,6 +275,24 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     }
 
     /**
+     * get 告警时间对应的时间戳
+     *
+     * @return
+     */
+    public Long getNoticeTimeUnix() {
+        return noticeTimeUnix;
+    }
+
+    /**
+     * set 告警时间对应的时间戳
+     *
+     * @param noticeTimeUnix
+     */
+    public void setNoticeTimeUnix(Long noticeTimeUnix) {
+        this.noticeTimeUnix = noticeTimeUnix;
+    }
+
+    /**
      * get 资源类型
      *
      * @return
@@ -316,6 +344,24 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
      */
     public void setReceivers(List<NoticeReceiver> receivers) {
         this.receivers = receivers;
+    }
+
+    /**
+     * get 资源Id对应的region
+     *
+     * @return
+     */
+    public String getRegion() {
+        return region;
+    }
+
+    /**
+     * set 资源Id对应的region
+     *
+     * @param region
+     */
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     /**
@@ -508,6 +554,16 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     }
 
     /**
+     * set 告警时间对应的时间戳
+     *
+     * @param noticeTimeUnix
+     */
+    public DescribedAlarmHistory noticeTimeUnix(Long noticeTimeUnix) {
+        this.noticeTimeUnix = noticeTimeUnix;
+        return this;
+    }
+
+    /**
      * set 资源类型
      *
      * @param product
@@ -534,6 +590,16 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
      */
     public DescribedAlarmHistory receivers(List<NoticeReceiver> receivers) {
         this.receivers = receivers;
+        return this;
+    }
+
+    /**
+     * set 资源Id对应的region
+     *
+     * @param region
+     */
+    public DescribedAlarmHistory region(String region) {
+        this.region = region;
         return this;
     }
 

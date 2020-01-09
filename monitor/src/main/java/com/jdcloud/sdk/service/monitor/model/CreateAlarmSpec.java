@@ -36,6 +36,11 @@ public class CreateAlarmSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+     */
+    private String autoScalingPolicyId;
+
+    /**
      * 告警通知联系人
      */
     private List<BaseContact> baseContact;
@@ -105,6 +110,24 @@ public class CreateAlarmSpec  implements java.io.Serializable {
      */
     private WebHookOption webHookOption;
 
+
+    /**
+     * get 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+     *
+     * @return
+     */
+    public String getAutoScalingPolicyId() {
+        return autoScalingPolicyId;
+    }
+
+    /**
+     * set 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+     *
+     * @param autoScalingPolicyId
+     */
+    public void setAutoScalingPolicyId(String autoScalingPolicyId) {
+        this.autoScalingPolicyId = autoScalingPolicyId;
+    }
 
     /**
      * get 告警通知联系人
@@ -322,6 +345,16 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.webHookOption = webHookOption;
     }
 
+
+    /**
+     * set 弹性伸缩组Id。注：仅ag\asg产品线内部使用
+     *
+     * @param autoScalingPolicyId
+     */
+    public CreateAlarmSpec autoScalingPolicyId(String autoScalingPolicyId) {
+        this.autoScalingPolicyId = autoScalingPolicyId;
+        return this;
+    }
 
     /**
      * set 告警通知联系人

@@ -35,11 +35,16 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
+     * 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表
      * Required:true
      */
     @Required
     private String serviceCode;
+
+    /**
+     * dimension
+     */
+    private String dimension;
 
     /**
      * metric的类型，取值0(控制台展示)、1(内部使用，控制台不展示)、2(所有).默认取0
@@ -48,7 +53,7 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
+     * get 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表
      *
      * @return
      */
@@ -57,12 +62,30 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
+     * set 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表
      *
      * @param serviceCode
      */
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+    }
+
+    /**
+     * get dimension
+     *
+     * @return
+     */
+    public String getDimension() {
+        return dimension;
+    }
+
+    /**
+     * set dimension
+     *
+     * @param dimension
+     */
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
     }
 
     /**
@@ -85,12 +108,22 @@ public class DescribeMetricsRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表，当产品线下有多个分组时，查询分组对应的监控项，serviceCode请传对应分组的groupCode字段值
+     * set 资源的类型，取值vm, lb, ip, database 等。&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/api/describeservices?content&#x3D;API&amp;SOP&#x3D;JDCloud&quot;&gt;describeServices&lt;/a&gt;：查询己接入云监控的产品线列表
      *
      * @param serviceCode
      */
     public DescribeMetricsRequest serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set dimension
+     *
+     * @param dimension
+     */
+    public DescribeMetricsRequest dimension(String dimension) {
+        this.dimension = dimension;
         return this;
     }
 

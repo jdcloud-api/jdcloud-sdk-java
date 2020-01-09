@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Redis Instance API
- * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、列表查询、备份、配置参数接口
+ * 缓存Redis实例的创建、删除、修改基本信息、设置密码、变配、实例列表、备份、配置参数等接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取缓存Redis实例的备份文件临时下载地址
+ * 获取缓存Redis实例的备份文件临时下载地址（1个小时有效期）
  */
 public class DescribeDownloadUrlResponse extends JdcloudResponse<DescribeDownloadUrlResult> implements java.io.Serializable {
 
