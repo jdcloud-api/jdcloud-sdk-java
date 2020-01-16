@@ -73,27 +73,27 @@ public class Cabinet  implements java.io.Serializable {
     private String cabinetType;
 
     /**
-     * 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关闭中
+     * 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
      */
     private String cabinetOpenStatus;
 
     /**
-     * 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String cabinetOpenTime;
 
     /**
-     * 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 到期时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String expireTime;
 
     /**
-     * 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String reserveStartTime;
 
     /**
-     * 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String reserveEndTime;
 
@@ -263,7 +263,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * get 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关闭中
+     * get 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
      *
      * @return
      */
@@ -272,7 +272,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关闭中
+     * set 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
      *
      * @param cabinetOpenStatus
      */
@@ -281,7 +281,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * get 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @return
      */
@@ -290,7 +290,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param cabinetOpenTime
      */
@@ -299,7 +299,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * get 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 到期时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @return
      */
@@ -308,7 +308,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 到期时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param expireTime
      */
@@ -317,7 +317,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * get 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @return
      */
@@ -326,7 +326,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param reserveStartTime
      */
@@ -335,7 +335,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * get 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @return
      */
@@ -344,7 +344,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param reserveEndTime
      */
@@ -506,7 +506,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关闭中
+     * set 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
      *
      * @param cabinetOpenStatus
      */
@@ -516,7 +516,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param cabinetOpenTime
      */
@@ -526,7 +526,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 到期时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 到期时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param expireTime
      */
@@ -536,7 +536,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 预留开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param reserveStartTime
      */
@@ -546,7 +546,7 @@ public class Cabinet  implements java.io.Serializable {
     }
 
     /**
-     * set 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 预留结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param reserveEndTime
      */

@@ -35,7 +35,9 @@ public class SubmitVqdTaskRequestObject  implements java.io.Serializable {
 
     /**
      * media
+     * Required:true
      */
+    @Required
     private VqdMediaObject media;
 
     /**

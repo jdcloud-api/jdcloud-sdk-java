@@ -37,7 +37,9 @@ public class BatchSubmitVqdTaskRequestObject  implements java.io.Serializable {
 
     /**
      * 媒体列表
+     * Required:true
      */
+    @Required
     private List<VqdMediaObject> mediaList;
 
     /**

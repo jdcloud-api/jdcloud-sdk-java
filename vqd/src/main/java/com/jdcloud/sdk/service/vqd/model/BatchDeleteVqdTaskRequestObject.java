@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vqd.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 批量删除视频质检任务
@@ -36,7 +37,9 @@ public class BatchDeleteVqdTaskRequestObject  implements java.io.Serializable {
 
     /**
      * taskIds
+     * Required:true
      */
+    @Required
     private List<String> taskIds;
 
 

@@ -37,36 +37,6 @@ import com.jdcloud.sdk.service.logs.client.DescribeLogtopicExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeLogdCARequest;
 import com.jdcloud.sdk.service.logs.model.DescribeLogdCAResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeLogdCAExecutor;
-import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesRequest;
-import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesResponse;
-import com.jdcloud.sdk.service.logs.client.DescribeCollectResourcesExecutor;
-import com.jdcloud.sdk.service.logs.model.UpdateLogtopicRequest;
-import com.jdcloud.sdk.service.logs.model.UpdateLogtopicResponse;
-import com.jdcloud.sdk.service.logs.client.UpdateLogtopicExecutor;
-import com.jdcloud.sdk.service.logs.model.DescribeLogsetsRequest;
-import com.jdcloud.sdk.service.logs.model.DescribeLogsetsResponse;
-import com.jdcloud.sdk.service.logs.client.DescribeLogsetsExecutor;
-import com.jdcloud.sdk.service.logs.model.DescribeMetricTasksRequest;
-import com.jdcloud.sdk.service.logs.model.DescribeMetricTasksResponse;
-import com.jdcloud.sdk.service.logs.client.DescribeMetricTasksExecutor;
-import com.jdcloud.sdk.service.logs.model.DescribeMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.DescribeMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.DescribeMetricTaskExecutor;
-import com.jdcloud.sdk.service.logs.model.PutRequest;
-import com.jdcloud.sdk.service.logs.model.PutResponse;
-import com.jdcloud.sdk.service.logs.client.PutExecutor;
-import com.jdcloud.sdk.service.logs.model.SearchLogContextRequest;
-import com.jdcloud.sdk.service.logs.model.SearchLogContextResponse;
-import com.jdcloud.sdk.service.logs.client.SearchLogContextExecutor;
-import com.jdcloud.sdk.service.logs.model.DeleteLogsetRequest;
-import com.jdcloud.sdk.service.logs.model.DeleteLogsetResponse;
-import com.jdcloud.sdk.service.logs.client.DeleteLogsetExecutor;
-import com.jdcloud.sdk.service.logs.model.SearchRequest;
-import com.jdcloud.sdk.service.logs.model.SearchResponse;
-import com.jdcloud.sdk.service.logs.client.SearchExecutor;
-import com.jdcloud.sdk.service.logs.model.TestMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.TestMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.TestMetricTaskExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeLogsetRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeLogsetResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeLogsetExecutor;
@@ -76,12 +46,21 @@ import com.jdcloud.sdk.service.logs.client.DescribeInstanceCollectConfsExecutor;
 import com.jdcloud.sdk.service.logs.model.DeleteLogtopicRequest;
 import com.jdcloud.sdk.service.logs.model.DeleteLogtopicResponse;
 import com.jdcloud.sdk.service.logs.client.DeleteLogtopicExecutor;
-import com.jdcloud.sdk.service.logs.model.CreateMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.CreateMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.CreateMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeCollectResourcesResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeCollectResourcesExecutor;
+import com.jdcloud.sdk.service.logs.model.UpdateLogtopicRequest;
+import com.jdcloud.sdk.service.logs.model.UpdateLogtopicResponse;
+import com.jdcloud.sdk.service.logs.client.UpdateLogtopicExecutor;
+import com.jdcloud.sdk.service.logs.model.DescribeLogsetsRequest;
+import com.jdcloud.sdk.service.logs.model.DescribeLogsetsResponse;
+import com.jdcloud.sdk.service.logs.client.DescribeLogsetsExecutor;
 import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoRequest;
 import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoResponse;
 import com.jdcloud.sdk.service.logs.client.UpdateCollectInfoExecutor;
+import com.jdcloud.sdk.service.logs.model.PutRequest;
+import com.jdcloud.sdk.service.logs.model.PutResponse;
+import com.jdcloud.sdk.service.logs.client.PutExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeCollectInfoRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeCollectInfoResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeCollectInfoExecutor;
@@ -94,15 +73,18 @@ import com.jdcloud.sdk.service.logs.client.UpdateLogsetExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeLogtopicsRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeLogtopicsResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeLogtopicsExecutor;
+import com.jdcloud.sdk.service.logs.model.SearchLogContextRequest;
+import com.jdcloud.sdk.service.logs.model.SearchLogContextResponse;
+import com.jdcloud.sdk.service.logs.client.SearchLogContextExecutor;
 import com.jdcloud.sdk.service.logs.model.CreateCollectInfoRequest;
 import com.jdcloud.sdk.service.logs.model.CreateCollectInfoResponse;
 import com.jdcloud.sdk.service.logs.client.CreateCollectInfoExecutor;
-import com.jdcloud.sdk.service.logs.model.UpdateMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.UpdateMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.UpdateMetricTaskExecutor;
-import com.jdcloud.sdk.service.logs.model.DeleteMetricTaskRequest;
-import com.jdcloud.sdk.service.logs.model.DeleteMetricTaskResponse;
-import com.jdcloud.sdk.service.logs.client.DeleteMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.DeleteLogsetRequest;
+import com.jdcloud.sdk.service.logs.model.DeleteLogsetResponse;
+import com.jdcloud.sdk.service.logs.client.DeleteLogsetExecutor;
+import com.jdcloud.sdk.service.logs.model.SearchRequest;
+import com.jdcloud.sdk.service.logs.model.SearchResponse;
+import com.jdcloud.sdk.service.logs.client.SearchExecutor;
 import com.jdcloud.sdk.service.logs.model.UpdateCollectResourcesRequest;
 import com.jdcloud.sdk.service.logs.model.UpdateCollectResourcesResponse;
 import com.jdcloud.sdk.service.logs.client.UpdateCollectResourcesExecutor;
@@ -182,116 +164,6 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 查询采集配置的实例列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeCollectResourcesResponse describeCollectResources(DescribeCollectResourcesRequest request) throws JdcloudSdkException {
-        return new DescribeCollectResourcesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 更新日志主题。日志主题名称不可更新。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateLogtopicResponse updateLogtopic(UpdateLogtopicRequest request) throws JdcloudSdkException {
-        return new UpdateLogtopicExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeLogsetsResponse describeLogsets(DescribeLogsetsRequest request) throws JdcloudSdkException {
-        return new DescribeLogsetsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询监控任务列表，返回该主题下的所有监控任务信息。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeMetricTasksResponse describeMetricTasks(DescribeMetricTasksRequest request) throws JdcloudSdkException {
-        return new DescribeMetricTasksExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询指定监控任务的详情信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeMetricTaskResponse describeMetricTask(DescribeMetricTaskRequest request) throws JdcloudSdkException {
-        return new DescribeMetricTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 自定义日志上报。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PutResponse put(PutRequest request) throws JdcloudSdkException {
-        return new PutExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 搜索日志上下文
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SearchLogContextResponse searchLogContext(SearchLogContextRequest request) throws JdcloudSdkException {
-        return new SearchLogContextExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteLogsetResponse deleteLogset(DeleteLogsetRequest request) throws JdcloudSdkException {
-        return new DeleteLogsetExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 搜索日志
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SearchResponse search(SearchRequest request) throws JdcloudSdkException {
-        return new SearchExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 日志测试，根据用户输入的日志筛选条件以及监控指标设置进行模拟监控统计
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public TestMetricTaskResponse testMetricTask(TestMetricTaskRequest request) throws JdcloudSdkException {
-        return new TestMetricTaskExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询日志集详情。
      *
      * @param request
@@ -325,14 +197,36 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 创建监控任务，不可与当前日志主题下现有日志监控任务重名。
+     * 查询采集配置的实例列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateMetricTaskResponse createMetricTask(CreateMetricTaskRequest request) throws JdcloudSdkException {
-        return new CreateMetricTaskExecutor().client(this).execute(request);
+    public DescribeCollectResourcesResponse describeCollectResources(DescribeCollectResourcesRequest request) throws JdcloudSdkException {
+        return new DescribeCollectResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新日志主题。日志主题名称不可更新。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateLogtopicResponse updateLogtopic(UpdateLogtopicRequest request) throws JdcloudSdkException {
+        return new UpdateLogtopicExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询日志集列表。支持按照名称进行模糊查询。结果中包含了该日志集是否存在日志主题的信息。存在日志主题的日志集不允许删除。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLogsetsResponse describeLogsets(DescribeLogsetsRequest request) throws JdcloudSdkException {
+        return new DescribeLogsetsExecutor().client(this).execute(request);
     }
 
     /**
@@ -344,6 +238,17 @@ public class LogsClient extends JdcloudClient {
      */
     public UpdateCollectInfoResponse updateCollectInfo(UpdateCollectInfoRequest request) throws JdcloudSdkException {
         return new UpdateCollectInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 自定义日志上报。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PutResponse put(PutRequest request) throws JdcloudSdkException {
+        return new PutExecutor().client(this).execute(request);
     }
 
     /**
@@ -391,6 +296,17 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
+     * 搜索日志上下文
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SearchLogContextResponse searchLogContext(SearchLogContextRequest request) throws JdcloudSdkException {
+        return new SearchLogContextExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建采集配置，支持基于云产品模板生成采集模板；支持用于自定义采集配置。
      *
      * @param request
@@ -402,25 +318,25 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 更新监控任务，日志监控任务不许重名。
+     * 删除日志集,删除多个日志集时，任意的日志集包含了日志主题的，将导致全部删除失败。
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateMetricTaskResponse updateMetricTask(UpdateMetricTaskRequest request) throws JdcloudSdkException {
-        return new UpdateMetricTaskExecutor().client(this).execute(request);
+    public DeleteLogsetResponse deleteLogset(DeleteLogsetRequest request) throws JdcloudSdkException {
+        return new DeleteLogsetExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除指定监控任务。
+     * 搜索日志
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteMetricTaskResponse deleteMetricTask(DeleteMetricTaskRequest request) throws JdcloudSdkException {
-        return new DeleteMetricTaskExecutor().client(this).execute(request);
+    public SearchResponse search(SearchRequest request) throws JdcloudSdkException {
+        return new SearchExecutor().client(this).execute(request);
     }
 
     /**

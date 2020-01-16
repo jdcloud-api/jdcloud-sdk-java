@@ -62,7 +62,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
     /**
      * 线路类型 bgp:BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      */
-    private Integer lineType;
+    private String lineType;
 
     /**
      * 合同带宽（Mbps）
@@ -72,7 +72,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
     /**
      * 关联的公网IP
      */
-    private List<Object> relatedIp;
+    private List<RelatedIp> relatedIp;
 
 
     /**
@@ -170,7 +170,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getLineType() {
+    public String getLineType() {
         return lineType;
     }
 
@@ -179,7 +179,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
      *
      * @param lineType
      */
-    public void setLineType(Integer lineType) {
+    public void setLineType(String lineType) {
         this.lineType = lineType;
     }
 
@@ -206,7 +206,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
      *
      * @return
      */
-    public List<Object> getRelatedIp() {
+    public List<RelatedIp> getRelatedIp() {
         return relatedIp;
     }
 
@@ -215,7 +215,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public void setRelatedIp(List<Object> relatedIp) {
+    public void setRelatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
     }
 
@@ -275,7 +275,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
      *
      * @param lineType
      */
-    public DescribeBandwidth lineType(Integer lineType) {
+    public DescribeBandwidth lineType(String lineType) {
         this.lineType = lineType;
         return this;
     }
@@ -295,7 +295,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public DescribeBandwidth relatedIp(List<Object> relatedIp) {
+    public DescribeBandwidth relatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
         return this;
     }
@@ -306,7 +306,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public void addRelatedIp(Object relatedIp) {
+    public void addRelatedIp(RelatedIp relatedIp) {
         if (this.relatedIp == null) {
             this.relatedIp = new ArrayList<>();
         }

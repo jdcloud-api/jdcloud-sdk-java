@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vqd.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -37,7 +38,9 @@ public class BatchDeleteVqdTasksRequest extends JdcloudRequest implements java.i
 
     /**
      * taskIds
+     * Required:true
      */
+    @Required
     private List<String> taskIds;
 
 

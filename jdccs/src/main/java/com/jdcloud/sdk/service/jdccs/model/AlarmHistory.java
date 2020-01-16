@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.jdccs.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * 报警历史
@@ -115,9 +113,14 @@ public class AlarmHistory  implements java.io.Serializable {
     private String status;
 
     /**
-     * switchboard
+     * IP地址
      */
-    private List<Object> switchboard;
+    private String managementIp;
+
+    /**
+     * 端口名称
+     */
+    private String ifName;
 
     /**
      * 报警状态 normal:正常 alarm:报警
@@ -130,7 +133,7 @@ public class AlarmHistory  implements java.io.Serializable {
     private Double value;
 
     /**
-     * 报警时间 遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 报警时间 遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String noticeTime;
 
@@ -424,21 +427,39 @@ public class AlarmHistory  implements java.io.Serializable {
     }
 
     /**
-     * get switchboard
+     * get IP地址
      *
      * @return
      */
-    public List<Object> getSwitchboard() {
-        return switchboard;
+    public String getManagementIp() {
+        return managementIp;
     }
 
     /**
-     * set switchboard
+     * set IP地址
      *
-     * @param switchboard
+     * @param managementIp
      */
-    public void setSwitchboard(List<Object> switchboard) {
-        this.switchboard = switchboard;
+    public void setManagementIp(String managementIp) {
+        this.managementIp = managementIp;
+    }
+
+    /**
+     * get 端口名称
+     *
+     * @return
+     */
+    public String getIfName() {
+        return ifName;
+    }
+
+    /**
+     * set 端口名称
+     *
+     * @param ifName
+     */
+    public void setIfName(String ifName) {
+        this.ifName = ifName;
     }
 
     /**
@@ -478,7 +499,7 @@ public class AlarmHistory  implements java.io.Serializable {
     }
 
     /**
-     * get 报警时间 遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 报警时间 遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @return
      */
@@ -487,7 +508,7 @@ public class AlarmHistory  implements java.io.Serializable {
     }
 
     /**
-     * set 报警时间 遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 报警时间 遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param noticeTime
      */
@@ -657,12 +678,22 @@ public class AlarmHistory  implements java.io.Serializable {
     }
 
     /**
-     * set switchboard
+     * set IP地址
      *
-     * @param switchboard
+     * @param managementIp
      */
-    public AlarmHistory switchboard(List<Object> switchboard) {
-        this.switchboard = switchboard;
+    public AlarmHistory managementIp(String managementIp) {
+        this.managementIp = managementIp;
+        return this;
+    }
+
+    /**
+     * set 端口名称
+     *
+     * @param ifName
+     */
+    public AlarmHistory ifName(String ifName) {
+        this.ifName = ifName;
         return this;
     }
 
@@ -687,7 +718,7 @@ public class AlarmHistory  implements java.io.Serializable {
     }
 
     /**
-     * set 报警时间 遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 报警时间 遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param noticeTime
      */
@@ -696,17 +727,5 @@ public class AlarmHistory  implements java.io.Serializable {
         return this;
     }
 
-
-    /**
-     * add item to switchboard
-     *
-     * @param switchboard
-     */
-    public void addSwitchboard(Object switchboard) {
-        if (this.switchboard == null) {
-            this.switchboard = new ArrayList<>();
-        }
-        this.switchboard.add(switchboard);
-    }
 
 }

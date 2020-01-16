@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.logs.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.logs.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -47,6 +48,11 @@ public class SearchLogContextRequest extends JdcloudRequest implements java.io.S
      * 搜索方向,默认both,可取值:up,down,both
      */
     private String direction;
+
+    /**
+     * 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     */
+    private List<Filter> filters;
 
     /**
      * 日志记录ID
@@ -125,6 +131,24 @@ public class SearchLogContextRequest extends JdcloudRequest implements java.io.S
      */
     public void setDirection(String direction) {
         this.direction = direction;
+    }
+
+    /**
+     * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -257,6 +281,16 @@ public class SearchLogContextRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filters
+     */
+    public SearchLogContextRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
      * set 日志记录ID
      *
      * @param id
@@ -327,6 +361,18 @@ public class SearchLogContextRequest extends JdcloudRequest implements java.io.S
             this.anchor = new ArrayList<>();
         }
         this.anchor.add(anchor);
+    }
+
+    /**
+     * add item to 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
     }
 
 }

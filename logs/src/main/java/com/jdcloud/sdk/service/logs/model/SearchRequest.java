@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.logs.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -52,12 +55,12 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     private Boolean caseSensitive;
 
     /**
-     * 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+     * 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
      */
     private String startTime;
 
     /**
-     * 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+     * 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
      */
     private String endTime;
 
@@ -70,6 +73,16 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
      * 每页个数。默认为10，最大100
      */
     private Long pageSize;
+
+    /**
+     * 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
+     */
+    private String sort;
+
+    /**
+     * 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     */
+    private List<Filter> filters;
 
     /**
      * 地域 Id
@@ -148,7 +161,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * get 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+     * get 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
      *
      * @return
      */
@@ -157,7 +170,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+     * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
      *
      * @param startTime
      */
@@ -166,7 +179,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * get 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+     * get 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
      *
      * @return
      */
@@ -175,7 +188,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+     * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
      *
      * @param endTime
      */
@@ -217,6 +230,42 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
      */
     public void setPageSize(Long pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
+     *
+     * @return
+     */
+    public String getSort() {
+        return sort;
+    }
+
+    /**
+     * set 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
+     *
+     * @param sort
+     */
+    public void setSort(String sort) {
+        this.sort = sort;
+    }
+
+    /**
+     * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -305,7 +354,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+     * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
      *
      * @param startTime
      */
@@ -315,7 +364,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”
+     * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
      *
      * @param endTime
      */
@@ -341,6 +390,26 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
      */
     public SearchRequest pageSize(Long pageSize) {
         this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 返回排序,不填或者为空，默认为desc，&quot;asc&quot;:按照时间正序返回结果，&quot;desc&quot;:按照时间倒序返回结果
+     *
+     * @param sort
+     */
+    public SearchRequest sort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+
+    /**
+     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filters
+     */
+    public SearchRequest filters(List<Filter> filters) {
+        this.filters = filters;
         return this;
     }
 
@@ -374,5 +443,17 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
         return this;
     }
 
+
+    /**
+     * add item to 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

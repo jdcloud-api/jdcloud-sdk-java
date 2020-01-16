@@ -49,7 +49,11 @@ public class SetCallbackRequest extends JdcloudRequest implements java.io.Serial
     private String httpUrl;
 
     /**
-     * 回调事件列表
+     * 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      * Required:true
      */
     @Required
@@ -93,7 +97,11 @@ public class SetCallbackRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 回调事件列表
+     * get 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      *
      * @return
      */
@@ -102,7 +110,11 @@ public class SetCallbackRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 回调事件列表
+     * set 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      *
      * @param callbackEvents
      */
@@ -132,7 +144,11 @@ public class SetCallbackRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 回调事件列表
+     * set 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      *
      * @param callbackEvents
      */
@@ -143,7 +159,11 @@ public class SetCallbackRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * add item to 回调事件列表
+     * add item to 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      *
      * @param callbackEvent
      */

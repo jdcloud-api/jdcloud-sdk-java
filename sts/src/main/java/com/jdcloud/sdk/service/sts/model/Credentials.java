@@ -48,7 +48,7 @@ public class Credentials  implements java.io.Serializable {
     private String sessionToken;
 
     /**
-     * 有效期
+     * 失效时间，格式：yyyy-MM-dd HH:mm:ss(eg 2019-01-01 00:00:00)
      */
     private String expiration;
 
@@ -108,7 +108,7 @@ public class Credentials  implements java.io.Serializable {
     }
 
     /**
-     * get 有效期
+     * get 失效时间，格式：yyyy-MM-dd HH:mm:ss(eg 2019-01-01 00:00:00)
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class Credentials  implements java.io.Serializable {
     }
 
     /**
-     * set 有效期
+     * set 失效时间，格式：yyyy-MM-dd HH:mm:ss(eg 2019-01-01 00:00:00)
      *
      * @param expiration
      */
@@ -157,7 +157,7 @@ public class Credentials  implements java.io.Serializable {
     }
 
     /**
-     * set 有效期
+     * set 失效时间，格式：yyyy-MM-dd HH:mm:ss(eg 2019-01-01 00:00:00)
      *
      * @param expiration
      */

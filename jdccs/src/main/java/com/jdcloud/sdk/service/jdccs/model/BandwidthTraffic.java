@@ -77,12 +77,12 @@ public class BandwidthTraffic  implements java.io.Serializable {
     /**
      * 关联的公网IP
      */
-    private List<Object> relatedIp;
+    private List<RelatedIp> relatedIp;
 
     /**
-     * switchboard
+     * 交换机信息
      */
-    private List<Object> switchboard;
+    private List<DescribeSwitchboard> switchboard;
 
 
     /**
@@ -234,7 +234,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
      *
      * @return
      */
-    public List<Object> getRelatedIp() {
+    public List<RelatedIp> getRelatedIp() {
         return relatedIp;
     }
 
@@ -243,25 +243,25 @@ public class BandwidthTraffic  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public void setRelatedIp(List<Object> relatedIp) {
+    public void setRelatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
     }
 
     /**
-     * get switchboard
+     * get 交换机信息
      *
      * @return
      */
-    public List<Object> getSwitchboard() {
+    public List<DescribeSwitchboard> getSwitchboard() {
         return switchboard;
     }
 
     /**
-     * set switchboard
+     * set 交换机信息
      *
      * @param switchboard
      */
-    public void setSwitchboard(List<Object> switchboard) {
+    public void setSwitchboard(List<DescribeSwitchboard> switchboard) {
         this.switchboard = switchboard;
     }
 
@@ -351,17 +351,17 @@ public class BandwidthTraffic  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public BandwidthTraffic relatedIp(List<Object> relatedIp) {
+    public BandwidthTraffic relatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
         return this;
     }
 
     /**
-     * set switchboard
+     * set 交换机信息
      *
      * @param switchboard
      */
-    public BandwidthTraffic switchboard(List<Object> switchboard) {
+    public BandwidthTraffic switchboard(List<DescribeSwitchboard> switchboard) {
         this.switchboard = switchboard;
         return this;
     }
@@ -372,7 +372,7 @@ public class BandwidthTraffic  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public void addRelatedIp(Object relatedIp) {
+    public void addRelatedIp(RelatedIp relatedIp) {
         if (this.relatedIp == null) {
             this.relatedIp = new ArrayList<>();
         }
@@ -380,11 +380,11 @@ public class BandwidthTraffic  implements java.io.Serializable {
     }
 
     /**
-     * add item to switchboard
+     * add item to 交换机信息
      *
      * @param switchboard
      */
-    public void addSwitchboard(Object switchboard) {
+    public void addSwitchboard(DescribeSwitchboard switchboard) {
         if (this.switchboard == null) {
             this.switchboard = new ArrayList<>();
         }

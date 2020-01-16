@@ -48,7 +48,11 @@ public class SetCallbackRequestObject  implements java.io.Serializable {
     private String httpUrl;
 
     /**
-     * 回调事件列表
+     * 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      * Required:true
      */
     @Required
@@ -92,7 +96,11 @@ public class SetCallbackRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * get 回调事件列表
+     * get 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      *
      * @return
      */
@@ -101,7 +109,11 @@ public class SetCallbackRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 回调事件列表
+     * set 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      *
      * @param callbackEvents
      */
@@ -131,7 +143,11 @@ public class SetCallbackRequestObject  implements java.io.Serializable {
     }
 
     /**
-     * set 回调事件列表
+     * set 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      *
      * @param callbackEvents
      */
@@ -142,7 +158,11 @@ public class SetCallbackRequestObject  implements java.io.Serializable {
 
 
     /**
-     * add item to 回调事件列表
+     * add item to 回调事件列表。
+- VqdSuccess 视频质检成功
+- VqdFailure 视频质检失败
+- VqdStart 视频质检开始
+
      *
      * @param callbackEvent
      */
