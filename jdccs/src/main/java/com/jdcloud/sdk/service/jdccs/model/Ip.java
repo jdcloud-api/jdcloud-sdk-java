@@ -60,12 +60,12 @@ public class Ip  implements java.io.Serializable {
     /**
      * 网关地址
      */
-    private Integer gatewayAddr;
+    private String gatewayAddr;
 
     /**
      * 广播地址
      */
-    private Integer broadcastAddr;
+    private String broadcastAddr;
 
     /**
      * 状态 normal:正常 abnormal:异常
@@ -168,7 +168,7 @@ public class Ip  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getGatewayAddr() {
+    public String getGatewayAddr() {
         return gatewayAddr;
     }
 
@@ -177,7 +177,7 @@ public class Ip  implements java.io.Serializable {
      *
      * @param gatewayAddr
      */
-    public void setGatewayAddr(Integer gatewayAddr) {
+    public void setGatewayAddr(String gatewayAddr) {
         this.gatewayAddr = gatewayAddr;
     }
 
@@ -186,7 +186,7 @@ public class Ip  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getBroadcastAddr() {
+    public String getBroadcastAddr() {
         return broadcastAddr;
     }
 
@@ -195,7 +195,7 @@ public class Ip  implements java.io.Serializable {
      *
      * @param broadcastAddr
      */
-    public void setBroadcastAddr(Integer broadcastAddr) {
+    public void setBroadcastAddr(String broadcastAddr) {
         this.broadcastAddr = broadcastAddr;
     }
 
@@ -273,7 +273,7 @@ public class Ip  implements java.io.Serializable {
      *
      * @param gatewayAddr
      */
-    public Ip gatewayAddr(Integer gatewayAddr) {
+    public Ip gatewayAddr(String gatewayAddr) {
         this.gatewayAddr = gatewayAddr;
         return this;
     }
@@ -283,7 +283,7 @@ public class Ip  implements java.io.Serializable {
      *
      * @param broadcastAddr
      */
-    public Ip broadcastAddr(Integer broadcastAddr) {
+    public Ip broadcastAddr(String broadcastAddr) {
         this.broadcastAddr = broadcastAddr;
         return this;
     }

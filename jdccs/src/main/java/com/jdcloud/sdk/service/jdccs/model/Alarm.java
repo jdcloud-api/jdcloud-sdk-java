@@ -115,9 +115,9 @@ public class Alarm  implements java.io.Serializable {
     private String status;
 
     /**
-     * switchboard
+     * 交换机信息
      */
-    private List<Object> switchboard;
+    private List<Switchboard> switchboard;
 
 
     /**
@@ -409,20 +409,20 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * get switchboard
+     * get 交换机信息
      *
      * @return
      */
-    public List<Object> getSwitchboard() {
+    public List<Switchboard> getSwitchboard() {
         return switchboard;
     }
 
     /**
-     * set switchboard
+     * set 交换机信息
      *
      * @param switchboard
      */
-    public void setSwitchboard(List<Object> switchboard) {
+    public void setSwitchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
     }
 
@@ -588,22 +588,22 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
-     * set switchboard
+     * set 交换机信息
      *
      * @param switchboard
      */
-    public Alarm switchboard(List<Object> switchboard) {
+    public Alarm switchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
         return this;
     }
 
 
     /**
-     * add item to switchboard
+     * add item to 交换机信息
      *
      * @param switchboard
      */
-    public void addSwitchboard(Object switchboard) {
+    public void addSwitchboard(Switchboard switchboard) {
         if (this.switchboard == null) {
             this.switchboard = new ArrayList<>();
         }

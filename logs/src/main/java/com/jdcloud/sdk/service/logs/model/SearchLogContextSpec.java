@@ -48,6 +48,11 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     private String direction;
 
     /**
+     * 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     */
+    private List<Filter> filters;
+
+    /**
      * 日志记录ID
      * Required:true
      */
@@ -103,6 +108,24 @@ public class SearchLogContextSpec  implements java.io.Serializable {
      */
     public void setDirection(String direction) {
         this.direction = direction;
+    }
+
+    /**
+     * get 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -181,6 +204,16 @@ public class SearchLogContextSpec  implements java.io.Serializable {
     }
 
     /**
+     * set 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filters
+     */
+    public SearchLogContextSpec filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
      * set 日志记录ID
      *
      * @param id
@@ -221,6 +254,18 @@ public class SearchLogContextSpec  implements java.io.Serializable {
             this.anchor = new ArrayList<>();
         }
         this.anchor.add(anchor);
+    }
+
+    /**
+     * add item to 指定返回字段，只对系统日志生效，不填默认按照产品线配置返回字段，Name支持：key，Values填入返回字段
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
     }
 
 }

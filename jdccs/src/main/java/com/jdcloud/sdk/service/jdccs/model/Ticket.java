@@ -63,12 +63,12 @@ public class Ticket  implements java.io.Serializable {
     private String description;
 
     /**
-     * 创建时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String createdTime;
 
     /**
-     * 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String closedTime;
 
@@ -202,7 +202,7 @@ public class Ticket  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @return
      */
@@ -211,7 +211,7 @@ public class Ticket  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param createdTime
      */
@@ -220,7 +220,7 @@ public class Ticket  implements java.io.Serializable {
     }
 
     /**
-     * get 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @return
      */
@@ -229,7 +229,7 @@ public class Ticket  implements java.io.Serializable {
     }
 
     /**
-     * set 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param closedTime
      */
@@ -371,7 +371,7 @@ public class Ticket  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param createdTime
      */
@@ -381,7 +381,7 @@ public class Ticket  implements java.io.Serializable {
     }
 
     /**
-     * set 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 关闭时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param closedTime
      */

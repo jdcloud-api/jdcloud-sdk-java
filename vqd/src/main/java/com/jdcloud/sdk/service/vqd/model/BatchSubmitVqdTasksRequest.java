@@ -26,8 +26,8 @@ package com.jdcloud.sdk.service.vqd.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.vqd.model.VqdMediaObject;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vqd.model.VqdMediaObject;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -39,7 +39,9 @@ public class BatchSubmitVqdTasksRequest extends JdcloudRequest implements java.i
 
     /**
      * 媒体列表
+     * Required:true
      */
+    @Required
     private List<VqdMediaObject> mediaList;
 
     /**

@@ -62,7 +62,7 @@ public class Bandwidth  implements java.io.Serializable {
     /**
      * 线路类型 bgp:BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      */
-    private Integer lineType;
+    private String lineType;
 
     /**
      * 合同带宽（Mbps）
@@ -72,12 +72,12 @@ public class Bandwidth  implements java.io.Serializable {
     /**
      * 关联的公网IP
      */
-    private List<Object> relatedIp;
+    private List<RelatedIp> relatedIp;
 
     /**
      * 交换机信息
      */
-    private List<Object> switchboard;
+    private List<Switchboard> switchboard;
 
 
     /**
@@ -175,7 +175,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getLineType() {
+    public String getLineType() {
         return lineType;
     }
 
@@ -184,7 +184,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @param lineType
      */
-    public void setLineType(Integer lineType) {
+    public void setLineType(String lineType) {
         this.lineType = lineType;
     }
 
@@ -211,7 +211,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @return
      */
-    public List<Object> getRelatedIp() {
+    public List<RelatedIp> getRelatedIp() {
         return relatedIp;
     }
 
@@ -220,7 +220,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public void setRelatedIp(List<Object> relatedIp) {
+    public void setRelatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
     }
 
@@ -229,7 +229,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @return
      */
-    public List<Object> getSwitchboard() {
+    public List<Switchboard> getSwitchboard() {
         return switchboard;
     }
 
@@ -238,7 +238,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @param switchboard
      */
-    public void setSwitchboard(List<Object> switchboard) {
+    public void setSwitchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
     }
 
@@ -298,7 +298,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @param lineType
      */
-    public Bandwidth lineType(Integer lineType) {
+    public Bandwidth lineType(String lineType) {
         this.lineType = lineType;
         return this;
     }
@@ -318,7 +318,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public Bandwidth relatedIp(List<Object> relatedIp) {
+    public Bandwidth relatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
         return this;
     }
@@ -328,7 +328,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @param switchboard
      */
-    public Bandwidth switchboard(List<Object> switchboard) {
+    public Bandwidth switchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
         return this;
     }
@@ -339,7 +339,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @param relatedIp
      */
-    public void addRelatedIp(Object relatedIp) {
+    public void addRelatedIp(RelatedIp relatedIp) {
         if (this.relatedIp == null) {
             this.relatedIp = new ArrayList<>();
         }
@@ -351,7 +351,7 @@ public class Bandwidth  implements java.io.Serializable {
      *
      * @param switchboard
      */
-    public void addSwitchboard(Object switchboard) {
+    public void addSwitchboard(Switchboard switchboard) {
         if (this.switchboard == null) {
             this.switchboard = new ArrayList<>();
         }

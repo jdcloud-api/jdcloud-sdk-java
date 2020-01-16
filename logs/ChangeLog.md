@@ -1,10 +1,10 @@
 # 更新历史 #
-API版本：1.2.3
+API版本：1.2.4
 
 |发布时间|版本号|更新|说明|
 |---|---|---|---|
-|2019-09-25|1.2.3| 日志监控，添加测试接口，修改更新接口
-|2019-09-18|1.2.2|日志监控|增加createMetricTask describeMetricTasks updateMetricTask deleteMetricTask describeMetricTask|
+|2020-02-08|1.2.4| 日志服务| 更新search，searchLogContext接口，添加可选参数，兼容历史版本 |
+|2019-12-05|1.2.3| 更新接口| 增加/更新 search，searchContext 接口 |
 |2019-08-06|1.2.1 |日志服务二期|增加上下文检索 |
 |2019-06-01|1.2.0 |日志服务二期|增加自定义日志类型 |
 |2019-05-09|1.1.2 |删除和修改接口|* 删除BatchDeleteLogset 和BatchDeletelogtopic<br>* 更新DeleteLogset 支持批量删除 使用path参数，逗号分割多个logsetUID<br>* 增加DeleteLogtopic 支持批量删除 使用path参数，逗号分割<br>* 修改DescribeCollectInfo 返回结果中增加logsetUID 和 logtopicUID |

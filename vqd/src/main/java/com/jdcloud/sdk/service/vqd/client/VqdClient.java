@@ -31,18 +31,48 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.vqd.model.SetCallbackRequest;
-import com.jdcloud.sdk.service.vqd.model.SetCallbackResponse;
-import com.jdcloud.sdk.service.vqd.client.SetCallbackExecutor;
-import com.jdcloud.sdk.service.vqd.model.QueryCallbackRequest;
-import com.jdcloud.sdk.service.vqd.model.QueryCallbackResponse;
-import com.jdcloud.sdk.service.vqd.client.QueryCallbackExecutor;
-import com.jdcloud.sdk.service.vqd.model.BatchSubmitVqdTasksRequest;
-import com.jdcloud.sdk.service.vqd.model.BatchSubmitVqdTasksResponse;
-import com.jdcloud.sdk.service.vqd.client.BatchSubmitVqdTasksExecutor;
+import com.jdcloud.sdk.service.vqd.model.DeleteVqdTemplateRequest;
+import com.jdcloud.sdk.service.vqd.model.DeleteVqdTemplateResponse;
+import com.jdcloud.sdk.service.vqd.client.DeleteVqdTemplateExecutor;
 import com.jdcloud.sdk.service.vqd.model.BatchDeleteVqdTasksRequest;
 import com.jdcloud.sdk.service.vqd.model.BatchDeleteVqdTasksResponse;
 import com.jdcloud.sdk.service.vqd.client.BatchDeleteVqdTasksExecutor;
+import com.jdcloud.sdk.service.vqd.model.ListVqdTemplatesRequest;
+import com.jdcloud.sdk.service.vqd.model.ListVqdTemplatesResponse;
+import com.jdcloud.sdk.service.vqd.client.ListVqdTemplatesExecutor;
+import com.jdcloud.sdk.service.vqd.model.QueryCallbackRequest;
+import com.jdcloud.sdk.service.vqd.model.QueryCallbackResponse;
+import com.jdcloud.sdk.service.vqd.client.QueryCallbackExecutor;
+import com.jdcloud.sdk.service.vqd.model.GetVqdTaskRequest;
+import com.jdcloud.sdk.service.vqd.model.GetVqdTaskResponse;
+import com.jdcloud.sdk.service.vqd.client.GetVqdTaskExecutor;
+import com.jdcloud.sdk.service.vqd.model.GetVqdTemplateRequest;
+import com.jdcloud.sdk.service.vqd.model.GetVqdTemplateResponse;
+import com.jdcloud.sdk.service.vqd.client.GetVqdTemplateExecutor;
+import com.jdcloud.sdk.service.vqd.model.ListVqdTasksRequest;
+import com.jdcloud.sdk.service.vqd.model.ListVqdTasksResponse;
+import com.jdcloud.sdk.service.vqd.client.ListVqdTasksExecutor;
+import com.jdcloud.sdk.service.vqd.model.QueryVqdTaskResultRequest;
+import com.jdcloud.sdk.service.vqd.model.QueryVqdTaskResultResponse;
+import com.jdcloud.sdk.service.vqd.client.QueryVqdTaskResultExecutor;
+import com.jdcloud.sdk.service.vqd.model.SetCallbackRequest;
+import com.jdcloud.sdk.service.vqd.model.SetCallbackResponse;
+import com.jdcloud.sdk.service.vqd.client.SetCallbackExecutor;
+import com.jdcloud.sdk.service.vqd.model.BatchSubmitVqdTasksRequest;
+import com.jdcloud.sdk.service.vqd.model.BatchSubmitVqdTasksResponse;
+import com.jdcloud.sdk.service.vqd.client.BatchSubmitVqdTasksExecutor;
+import com.jdcloud.sdk.service.vqd.model.DeleteVqdTaskRequest;
+import com.jdcloud.sdk.service.vqd.model.DeleteVqdTaskResponse;
+import com.jdcloud.sdk.service.vqd.client.DeleteVqdTaskExecutor;
+import com.jdcloud.sdk.service.vqd.model.CreateVqdTemplateRequest;
+import com.jdcloud.sdk.service.vqd.model.CreateVqdTemplateResponse;
+import com.jdcloud.sdk.service.vqd.client.CreateVqdTemplateExecutor;
+import com.jdcloud.sdk.service.vqd.model.UpdateVqdTemplateRequest;
+import com.jdcloud.sdk.service.vqd.model.UpdateVqdTemplateResponse;
+import com.jdcloud.sdk.service.vqd.client.UpdateVqdTemplateExecutor;
+import com.jdcloud.sdk.service.vqd.model.SubmitVqdTaskRequest;
+import com.jdcloud.sdk.service.vqd.model.SubmitVqdTaskResponse;
+import com.jdcloud.sdk.service.vqd.client.SubmitVqdTaskExecutor;
 
 /**
  * vqdClient
@@ -94,14 +124,39 @@ public class VqdClient extends JdcloudClient {
 
 
     /**
-     * 设置回调配置
+     * 删除视频质检模板
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetCallbackResponse setCallback(SetCallbackRequest request) throws JdcloudSdkException {
-        return new SetCallbackExecutor().client(this).execute(request);
+    public DeleteVqdTemplateResponse deleteVqdTemplate(DeleteVqdTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteVqdTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等。一次最多删除50条
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BatchDeleteVqdTasksResponse batchDeleteVqdTasks(BatchDeleteVqdTasksRequest request) throws JdcloudSdkException {
+        return new BatchDeleteVqdTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频质检模板列表。
+支持过滤查询：
+  - templateId,eq 精确匹配模板ID，非必选
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListVqdTemplatesResponse listVqdTemplates(ListVqdTemplatesRequest request) throws JdcloudSdkException {
+        return new ListVqdTemplatesExecutor().client(this).execute(request);
     }
 
     /**
@@ -116,6 +171,66 @@ public class VqdClient extends JdcloudClient {
     }
 
     /**
+     * 获取视频质检任务详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVqdTaskResponse getVqdTask(GetVqdTaskRequest request) throws JdcloudSdkException {
+        return new GetVqdTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频质检模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVqdTemplateResponse getVqdTemplate(GetVqdTemplateRequest request) throws JdcloudSdkException {
+        return new GetVqdTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频质检任务列表
+支持过滤查询：
+  - createTime,ge 最早任务创建时间
+  - createTime,le 最晚任务创建时间
+  - status,in 任务状态
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListVqdTasksResponse listVqdTasks(ListVqdTasksRequest request) throws JdcloudSdkException {
+        return new ListVqdTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频质检任务结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryVqdTaskResultResponse queryVqdTaskResult(QueryVqdTaskResultRequest request) throws JdcloudSdkException {
+        return new QueryVqdTaskResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置回调配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetCallbackResponse setCallback(SetCallbackRequest request) throws JdcloudSdkException {
+        return new SetCallbackExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量提交视频质检任务，一次同时最多提交50个输入媒体
      *
      * @param request
@@ -127,14 +242,47 @@ public class VqdClient extends JdcloudClient {
     }
 
     /**
-     * 批量删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等。一次最多删除50条
+     * 删除视频质检任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public BatchDeleteVqdTasksResponse batchDeleteVqdTasks(BatchDeleteVqdTasksRequest request) throws JdcloudSdkException {
-        return new BatchDeleteVqdTasksExecutor().client(this).execute(request);
+    public DeleteVqdTaskResponse deleteVqdTask(DeleteVqdTaskRequest request) throws JdcloudSdkException {
+        return new DeleteVqdTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建视频质检模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVqdTemplateResponse createVqdTemplate(CreateVqdTemplateRequest request) throws JdcloudSdkException {
+        return new CreateVqdTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改视频质检模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateVqdTemplateResponse updateVqdTemplate(UpdateVqdTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateVqdTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 提交视频质检任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SubmitVqdTaskResponse submitVqdTask(SubmitVqdTaskRequest request) throws JdcloudSdkException {
+        return new SubmitVqdTaskExecutor().client(this).execute(request);
     }
 
 

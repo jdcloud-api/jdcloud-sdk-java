@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vqd.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 质量检测媒体信息
@@ -34,7 +35,9 @@ public class VqdMediaObject  implements java.io.Serializable {
 
     /**
      * 媒体URL
+     * Required:true
      */
+    @Required
     private String mediaUrl;
 
     /**

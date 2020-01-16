@@ -48,6 +48,11 @@ public class AssumeRoleInfo  implements java.io.Serializable {
     private String roleSessionName;
 
     /**
+     * 会话策略，策略描述需遵循 IAM 策略语法，但不可包含 Principal元素，长度限制 2048 字节。会话策略限制临时凭证的权限；如不指定，则临时凭证默认拥有附加到角色的所有权限。
+     */
+    private String policy;
+
+    /**
      * 临时凭证有效期，单位秒，取值范围：3600~您所扮演的角色设置的maxSessionDuration，默认3600
      */
     private Integer durationSeconds;
@@ -90,6 +95,24 @@ public class AssumeRoleInfo  implements java.io.Serializable {
     }
 
     /**
+     * get 会话策略，策略描述需遵循 IAM 策略语法，但不可包含 Principal元素，长度限制 2048 字节。会话策略限制临时凭证的权限；如不指定，则临时凭证默认拥有附加到角色的所有权限。
+     *
+     * @return
+     */
+    public String getPolicy() {
+        return policy;
+    }
+
+    /**
+     * set 会话策略，策略描述需遵循 IAM 策略语法，但不可包含 Principal元素，长度限制 2048 字节。会话策略限制临时凭证的权限；如不指定，则临时凭证默认拥有附加到角色的所有权限。
+     *
+     * @param policy
+     */
+    public void setPolicy(String policy) {
+        this.policy = policy;
+    }
+
+    /**
      * get 临时凭证有效期，单位秒，取值范围：3600~您所扮演的角色设置的maxSessionDuration，默认3600
      *
      * @return
@@ -125,6 +148,16 @@ public class AssumeRoleInfo  implements java.io.Serializable {
      */
     public AssumeRoleInfo roleSessionName(String roleSessionName) {
         this.roleSessionName = roleSessionName;
+        return this;
+    }
+
+    /**
+     * set 会话策略，策略描述需遵循 IAM 策略语法，但不可包含 Principal元素，长度限制 2048 字节。会话策略限制临时凭证的权限；如不指定，则临时凭证默认拥有附加到角色的所有权限。
+     *
+     * @param policy
+     */
+    public AssumeRoleInfo policy(String policy) {
+        this.policy = policy;
         return this;
     }
 

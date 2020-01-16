@@ -103,7 +103,7 @@ public class Device  implements java.io.Serializable {
     private String assetStatus;
 
     /**
-     * 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String deviceOpenTime;
 
@@ -376,7 +376,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * get 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @return
      */
@@ -385,7 +385,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param deviceOpenTime
      */
@@ -589,7 +589,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 开通时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param deviceOpenTime
      */
