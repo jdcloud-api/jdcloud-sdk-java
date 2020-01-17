@@ -26,26 +26,26 @@ package com.jdcloud.sdk.service.vm.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.vm.model.ImageTasksResponse;
+import com.jdcloud.sdk.service.vm.model.ExportImageResponse;
 
 /**
- * 查询镜像导入导出任务详情
+ * 导出镜像，将京东云私有镜像导出至京东云以外环境
 
  */
-class ImageTasksExecutor extends JdcloudExecutor {
+class ExportImageExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "GET";
+        return "POST";
     }
 
     @Override
     public String url() {
-        return "/regions/{regionId}/imageTasks";
+        return "/regions/{regionId}/images/{imageId}:exportImage";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return ImageTasksResponse.class;
+        return ExportImageResponse.class;
     }
 }

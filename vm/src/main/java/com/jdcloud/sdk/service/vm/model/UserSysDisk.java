@@ -52,6 +52,11 @@ public class UserSysDisk  implements java.io.Serializable {
      */
     private Integer systemDiskSize;
 
+    /**
+     * 逗号分隔的规格列表，*代表所有。
+     */
+    private String flavors;
+
 
     /**
      * get 用户pin
@@ -125,6 +130,24 @@ public class UserSysDisk  implements java.io.Serializable {
         this.systemDiskSize = systemDiskSize;
     }
 
+    /**
+     * get 逗号分隔的规格列表，*代表所有。
+     *
+     * @return
+     */
+    public String getFlavors() {
+        return flavors;
+    }
+
+    /**
+     * set 逗号分隔的规格列表，*代表所有。
+     *
+     * @param flavors
+     */
+    public void setFlavors(String flavors) {
+        this.flavors = flavors;
+    }
+
 
     /**
      * set 用户pin
@@ -163,6 +186,16 @@ public class UserSysDisk  implements java.io.Serializable {
      */
     public UserSysDisk systemDiskSize(Integer systemDiskSize) {
         this.systemDiskSize = systemDiskSize;
+        return this;
+    }
+
+    /**
+     * set 逗号分隔的规格列表，*代表所有。
+     *
+     * @param flavors
+     */
+    public UserSysDisk flavors(String flavors) {
+        this.flavors = flavors;
         return this;
     }
 

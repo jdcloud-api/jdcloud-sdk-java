@@ -79,6 +79,11 @@ public class InstanceType  implements java.io.Serializable {
      */
     private List<LocalDisk> localDisks;
 
+    /**
+     * 实例规格代数
+     */
+    private Integer generation;
+
 
     /**
      * get 实例规格类型
@@ -242,6 +247,24 @@ public class InstanceType  implements java.io.Serializable {
         this.localDisks = localDisks;
     }
 
+    /**
+     * get 实例规格代数
+     *
+     * @return
+     */
+    public Integer getGeneration() {
+        return generation;
+    }
+
+    /**
+     * set 实例规格代数
+     *
+     * @param generation
+     */
+    public void setGeneration(Integer generation) {
+        this.generation = generation;
+    }
+
 
     /**
      * set 实例规格类型
@@ -330,6 +353,16 @@ public class InstanceType  implements java.io.Serializable {
      */
     public InstanceType localDisks(List<LocalDisk> localDisks) {
         this.localDisks = localDisks;
+        return this;
+    }
+
+    /**
+     * set 实例规格代数
+     *
+     * @param generation
+     */
+    public InstanceType generation(Integer generation) {
+        this.generation = generation;
         return this;
     }
 

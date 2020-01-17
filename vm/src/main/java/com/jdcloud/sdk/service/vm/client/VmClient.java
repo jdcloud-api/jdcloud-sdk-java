@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.vm.client.CreateInstancesExecutor;
 import com.jdcloud.sdk.service.vm.model.ShareImageRequest;
 import com.jdcloud.sdk.service.vm.model.ShareImageResponse;
 import com.jdcloud.sdk.service.vm.client.ShareImageExecutor;
+import com.jdcloud.sdk.service.vm.model.ExportImageRequest;
+import com.jdcloud.sdk.service.vm.model.ExportImageResponse;
+import com.jdcloud.sdk.service.vm.client.ExportImageExecutor;
 import com.jdcloud.sdk.service.vm.model.StartInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.StartInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.StartInstanceExecutor;
@@ -311,6 +314,18 @@ public class VmClient extends JdcloudClient {
      */
     public ShareImageResponse shareImage(ShareImageRequest request) throws JdcloudSdkException {
         return new ShareImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 导出镜像，将京东云私有镜像导出至京东云以外环境
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExportImageResponse exportImage(ExportImageRequest request) throws JdcloudSdkException {
+        return new ExportImageExecutor().client(this).execute(request);
     }
 
     /**
@@ -833,7 +848,7 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
     }
 
     /**
-     * 查询镜像导入任务详情
+     * 查询镜像导入导出任务详情
 
      *
      * @param request

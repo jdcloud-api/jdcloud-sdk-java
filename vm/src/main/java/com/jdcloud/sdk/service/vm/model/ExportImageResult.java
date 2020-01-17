@@ -24,17 +24,50 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询镜像导入导出任务详情
+ * 导出镜像，将京东云私有镜像导出至京东云以外环境
 
  */
-public class ImageTasksResponse extends JdcloudResponse<ImageTasksResult> implements java.io.Serializable {
+public class ExportImageResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 导出任务id
+     */
+    private Integer exportTaskId;
 
+
+    /**
+     * get 导出任务id
+     *
+     * @return
+     */
+    public Integer getExportTaskId() {
+        return exportTaskId;
+    }
+
+    /**
+     * set 导出任务id
+     *
+     * @param exportTaskId
+     */
+    public void setExportTaskId(Integer exportTaskId) {
+        this.exportTaskId = exportTaskId;
+    }
+
+
+    /**
+     * set 导出任务id
+     *
+     * @param exportTaskId
+     */
+    public ExportImageResult exportTaskId(Integer exportTaskId) {
+        this.exportTaskId = exportTaskId;
+        return this;
+    }
 
 
 }
