@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.vm.model.TaskInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询镜像导入任务详情
+ * 查询镜像导入导出任务详情
 
  */
 public class ImageTasksResult extends JdcloudResult implements java.io.Serializable {

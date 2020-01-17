@@ -51,6 +51,11 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
     private String instanceType;
 
     /**
+     * 是否强制调配，默认为false；如果指定为true, 将会清除本地数据盘。
+     */
+    private Boolean force;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -81,6 +86,24 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setInstanceType(String instanceType) {
         this.instanceType = instanceType;
+    }
+
+    /**
+     * get 是否强制调配，默认为false；如果指定为true, 将会清除本地数据盘。
+     *
+     * @return
+     */
+    public Boolean getForce() {
+        return force;
+    }
+
+    /**
+     * set 是否强制调配，默认为false；如果指定为true, 将会清除本地数据盘。
+     *
+     * @param force
+     */
+    public void setForce(Boolean force) {
+        this.force = force;
     }
 
     /**
@@ -127,6 +150,16 @@ public class ResizeInstanceRequest extends JdcloudRequest implements java.io.Ser
      */
     public ResizeInstanceRequest instanceType(String instanceType) {
         this.instanceType = instanceType;
+        return this;
+    }
+
+    /**
+     * set 是否强制调配，默认为false；如果指定为true, 将会清除本地数据盘。
+     *
+     * @param force
+     */
+    public ResizeInstanceRequest force(Boolean force) {
+        this.force = force;
         return this;
     }
 

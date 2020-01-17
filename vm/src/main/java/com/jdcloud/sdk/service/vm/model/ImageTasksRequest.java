@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询镜像导入任务详情
+ * 查询镜像导入导出任务详情
 
  */
 public class ImageTasksRequest extends JdcloudRequest implements java.io.Serializable {
@@ -38,7 +38,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 任务种类。可选值：ImportImage
+     * 任务种类。可选值：ImportImage， ExportImage
      * Required:true
      */
     @Required
@@ -83,7 +83,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 任务种类。可选值：ImportImage
+     * get 任务种类。可选值：ImportImage， ExportImage
      *
      * @return
      */
@@ -92,7 +92,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 任务种类。可选值：ImportImage
+     * set 任务种类。可选值：ImportImage， ExportImage
      *
      * @param taskAction
      */
@@ -228,7 +228,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 任务种类。可选值：ImportImage
+     * set 任务种类。可选值：ImportImage， ExportImage
      *
      * @param taskAction
      */
