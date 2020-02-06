@@ -42,14 +42,14 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private String resourceId;
 
     /**
-     * 查询时间范围的开始时间， UNIX时间戳，（最多支持最近90天数据查询）
+     * 查询时间范围的开始时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      * Required:true
      */
     @Required
     private Integer startTime;
 
     /**
-     * 查询时间范围的结束时间， UNIX时间戳，（最多支持最近90天数据查询）
+     * 查询时间范围的结束时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      * Required:true
      */
     @Required
@@ -104,7 +104,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 查询时间范围的开始时间， UNIX时间戳，（最多支持最近90天数据查询）
+     * get 查询时间范围的开始时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      *
      * @return
      */
@@ -113,7 +113,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的开始时间， UNIX时间戳，（最多支持最近90天数据查询）
+     * set 查询时间范围的开始时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      *
      * @param startTime
      */
@@ -122,7 +122,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 查询时间范围的结束时间， UNIX时间戳，（最多支持最近90天数据查询）
+     * get 查询时间范围的结束时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      *
      * @return
      */
@@ -131,7 +131,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的结束时间， UNIX时间戳，（最多支持最近90天数据查询）
+     * set 查询时间范围的结束时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      *
      * @param endTime
      */
@@ -241,7 +241,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的开始时间， UNIX时间戳，（最多支持最近90天数据查询）
+     * set 查询时间范围的开始时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      *
      * @param startTime
      */
@@ -251,7 +251,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的结束时间， UNIX时间戳，（最多支持最近90天数据查询）
+     * set 查询时间范围的结束时间， UNIX时间戳，（机柜电流最多支持最近90天数据查询、带宽流量最多支持最近30天数据查询）
      *
      * @param endTime
      */

@@ -137,6 +137,16 @@ public class AlarmHistory  implements java.io.Serializable {
      */
     private String noticeTime;
 
+    /**
+     * 报警条件
+     */
+    private String condition;
+
+    /**
+     * 策略ID
+     */
+    private Integer strategyId;
+
 
     /**
      * get 规则实例ID
@@ -516,6 +526,42 @@ public class AlarmHistory  implements java.io.Serializable {
         this.noticeTime = noticeTime;
     }
 
+    /**
+     * get 报警条件
+     *
+     * @return
+     */
+    public String getCondition() {
+        return condition;
+    }
+
+    /**
+     * set 报警条件
+     *
+     * @param condition
+     */
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
+    /**
+     * get 策略ID
+     *
+     * @return
+     */
+    public Integer getStrategyId() {
+        return strategyId;
+    }
+
+    /**
+     * set 策略ID
+     *
+     * @param strategyId
+     */
+    public void setStrategyId(Integer strategyId) {
+        this.strategyId = strategyId;
+    }
+
 
     /**
      * set 规则实例ID
@@ -724,6 +770,26 @@ public class AlarmHistory  implements java.io.Serializable {
      */
     public AlarmHistory noticeTime(String noticeTime) {
         this.noticeTime = noticeTime;
+        return this;
+    }
+
+    /**
+     * set 报警条件
+     *
+     * @param condition
+     */
+    public AlarmHistory condition(String condition) {
+        this.condition = condition;
+        return this;
+    }
+
+    /**
+     * set 策略ID
+     *
+     * @param strategyId
+     */
+    public AlarmHistory strategyId(Integer strategyId) {
+        this.strategyId = strategyId;
         return this;
     }
 
