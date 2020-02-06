@@ -48,6 +48,16 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
      */
     private String alarmId;
 
+    /**
+     * 查询时间范围的开始时间， UNIX时间戳
+     */
+    private Integer startTime;
+
+    /**
+     * 查询时间范围的结束时间， UNIX时间戳
+     */
+    private Integer endTime;
+
 
     /**
      * get 页码, 默认为1
@@ -103,6 +113,42 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
         this.alarmId = alarmId;
     }
 
+    /**
+     * get 查询时间范围的开始时间， UNIX时间戳
+     *
+     * @return
+     */
+    public Integer getStartTime() {
+        return startTime;
+    }
+
+    /**
+     * set 查询时间范围的开始时间， UNIX时间戳
+     *
+     * @param startTime
+     */
+    public void setStartTime(Integer startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * get 查询时间范围的结束时间， UNIX时间戳
+     *
+     * @return
+     */
+    public Integer getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 查询时间范围的结束时间， UNIX时间戳
+     *
+     * @param endTime
+     */
+    public void setEndTime(Integer endTime) {
+        this.endTime = endTime;
+    }
+
 
     /**
      * set 页码, 默认为1
@@ -131,6 +177,26 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
      */
     public DescribeAlarmHistoryRequest alarmId(String alarmId) {
         this.alarmId = alarmId;
+        return this;
+    }
+
+    /**
+     * set 查询时间范围的开始时间， UNIX时间戳
+     *
+     * @param startTime
+     */
+    public DescribeAlarmHistoryRequest startTime(Integer startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+
+    /**
+     * set 查询时间范围的结束时间， UNIX时间戳
+     *
+     * @param endTime
+     */
+    public DescribeAlarmHistoryRequest endTime(Integer endTime) {
+        this.endTime = endTime;
         return this;
     }
 
