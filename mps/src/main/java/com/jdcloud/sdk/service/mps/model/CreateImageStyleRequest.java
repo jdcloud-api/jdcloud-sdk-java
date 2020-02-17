@@ -25,11 +25,12 @@
 package com.jdcloud.sdk.service.mps.model;
 
 import java.util.Date;
+import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * imageStyle
+ * 添加图片样式
  */
-public class ImageStyle  implements java.io.Serializable {
+public class CreateImageStyleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -270,7 +271,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param id
      */
-    public ImageStyle id(Long id) {
+    public CreateImageStyleRequest id(Long id) {
         this.id = id;
         return this;
     }
@@ -280,7 +281,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param userId
      */
-    public ImageStyle userId(String userId) {
+    public CreateImageStyleRequest userId(String userId) {
         this.userId = userId;
         return this;
     }
@@ -290,7 +291,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param styleName
      */
-    public ImageStyle styleName(String styleName) {
+    public CreateImageStyleRequest styleName(String styleName) {
         this.styleName = styleName;
         return this;
     }
@@ -300,7 +301,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param params
      */
-    public ImageStyle params(String params) {
+    public CreateImageStyleRequest params(String params) {
         this.params = params;
         return this;
     }
@@ -310,7 +311,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param paramAlias
      */
-    public ImageStyle paramAlias(String paramAlias) {
+    public CreateImageStyleRequest paramAlias(String paramAlias) {
         this.paramAlias = paramAlias;
         return this;
     }
@@ -320,7 +321,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param regionId
      */
-    public ImageStyle regionId(String regionId) {
+    public CreateImageStyleRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -330,7 +331,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param bucketName
      */
-    public ImageStyle bucketName(String bucketName) {
+    public CreateImageStyleRequest bucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
@@ -340,7 +341,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param status
      */
-    public ImageStyle status(Integer status) {
+    public CreateImageStyleRequest status(Integer status) {
         this.status = status;
         return this;
     }
@@ -350,7 +351,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param modifyTime
      */
-    public ImageStyle modifyTime(String modifyTime) {
+    public CreateImageStyleRequest modifyTime(String modifyTime) {
         this.modifyTime = modifyTime;
         return this;
     }
@@ -360,7 +361,7 @@ public class ImageStyle  implements java.io.Serializable {
      *
      * @param createdTime
      */
-    public ImageStyle createdTime(String createdTime) {
+    public CreateImageStyleRequest createdTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
     }
