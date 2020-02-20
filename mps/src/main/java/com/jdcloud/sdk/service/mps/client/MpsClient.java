@@ -31,6 +31,24 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.mps.model.ListTranscodeJobsRequest;
+import com.jdcloud.sdk.service.mps.model.ListTranscodeJobsResponse;
+import com.jdcloud.sdk.service.mps.client.ListTranscodeJobsExecutor;
+import com.jdcloud.sdk.service.mps.model.GetImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.GetImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.GetImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.SubmitTranscodeJobRequest;
+import com.jdcloud.sdk.service.mps.model.SubmitTranscodeJobResponse;
+import com.jdcloud.sdk.service.mps.client.SubmitTranscodeJobExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.CountImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.CountImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.CountImageStyleExecutor;
 import com.jdcloud.sdk.service.mps.model.CreateThumbnailTaskRequest;
 import com.jdcloud.sdk.service.mps.model.CreateThumbnailTaskResponse;
 import com.jdcloud.sdk.service.mps.client.CreateThumbnailTaskExecutor;
@@ -55,6 +73,12 @@ import com.jdcloud.sdk.service.mps.client.SetStyleDelimiterExecutor;
 import com.jdcloud.sdk.service.mps.model.GetStyleDelimiterRequest;
 import com.jdcloud.sdk.service.mps.model.GetStyleDelimiterResponse;
 import com.jdcloud.sdk.service.mps.client.GetStyleDelimiterExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.CreateImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.CreateImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.ListImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.ListImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.ListImageStyleExecutor;
 
 /**
  * mpsClient
@@ -63,7 +87,7 @@ public class MpsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.0";
     public final static String DefaultEndpoint = "mps.jdcloud-api.com";
     public final static String ServiceName = "mps";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -104,6 +128,75 @@ public class MpsClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 查询转码作业列表。
+支持如下过滤器：
+- title[eq] 按照输入视频标题进行精确匹配
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListTranscodeJobsResponse listTranscodeJobs(ListTranscodeJobsRequest request) throws JdcloudSdkException {
+        return new ListTranscodeJobsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 图片样式详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetImageStyleResponse getImageStyle(GetImageStyleRequest request) throws JdcloudSdkException {
+        return new GetImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 提交转码作业
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SubmitTranscodeJobResponse submitTranscodeJob(SubmitTranscodeJobRequest request) throws JdcloudSdkException {
+        return new SubmitTranscodeJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改图片样式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateImageStyleResponse updateImageStyle(UpdateImageStyleRequest request) throws JdcloudSdkException {
+        return new UpdateImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除图片样式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteImageStyleResponse deleteImageStyle(DeleteImageStyleRequest request) throws JdcloudSdkException {
+        return new DeleteImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 图片样式总数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CountImageStyleResponse countImageStyle(CountImageStyleRequest request) throws JdcloudSdkException {
+        return new CountImageStyleExecutor().client(this).execute(request);
+    }
 
     /**
      * 创建截图任务，创建成功时返回任务ID。本接口用于截取指定时间点的画面。
@@ -191,6 +284,28 @@ public class MpsClient extends JdcloudClient {
      */
     public GetStyleDelimiterResponse getStyleDelimiter(GetStyleDelimiterRequest request) throws JdcloudSdkException {
         return new GetStyleDelimiterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加图片样式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateImageStyleResponse createImageStyle(CreateImageStyleRequest request) throws JdcloudSdkException {
+        return new CreateImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 图片样式列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListImageStyleResponse listImageStyle(ListImageStyleRequest request) throws JdcloudSdkException {
+        return new ListImageStyleExecutor().client(this).execute(request);
     }
 
 

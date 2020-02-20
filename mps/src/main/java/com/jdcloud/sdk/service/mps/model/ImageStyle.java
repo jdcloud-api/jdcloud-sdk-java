@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.mps.model;
 
+import java.util.Date;
 
 /**
  * imageStyle

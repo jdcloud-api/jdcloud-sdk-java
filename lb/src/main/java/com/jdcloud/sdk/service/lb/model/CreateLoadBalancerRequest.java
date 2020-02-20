@@ -65,7 +65,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     private List<String> azs;
 
     /**
-     * 【alb】支持按用量和按配置(按配置即将下线，请勿使用，已使用该计费方式的服务后续请使用按用量方式创建alb)计费，默认为按用量，目前免费。【nlb】支持按用量计费，目前免费。【dnlb】支持按配置计费，目前免费
+     * 【alb】支持按用量计费，默认为按用量。【nlb】支持按用量计费。【dnlb】支持按配置计费
      */
     private ChargeSpec chargeSpec;
 
@@ -170,7 +170,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 【alb】支持按用量和按配置(按配置即将下线，请勿使用，已使用该计费方式的服务后续请使用按用量方式创建alb)计费，默认为按用量，目前免费。【nlb】支持按用量计费，目前免费。【dnlb】支持按配置计费，目前免费
+     * get 【alb】支持按用量计费，默认为按用量。【nlb】支持按用量计费。【dnlb】支持按配置计费
      *
      * @return
      */
@@ -179,7 +179,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 【alb】支持按用量和按配置(按配置即将下线，请勿使用，已使用该计费方式的服务后续请使用按用量方式创建alb)计费，默认为按用量，目前免费。【nlb】支持按用量计费，目前免费。【dnlb】支持按配置计费，目前免费
+     * set 【alb】支持按用量计费，默认为按用量。【nlb】支持按用量计费。【dnlb】支持按配置计费
      *
      * @param chargeSpec
      */
@@ -319,7 +319,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 【alb】支持按用量和按配置(按配置即将下线，请勿使用，已使用该计费方式的服务后续请使用按用量方式创建alb)计费，默认为按用量，目前免费。【nlb】支持按用量计费，目前免费。【dnlb】支持按配置计费，目前免费
+     * set 【alb】支持按用量计费，默认为按用量。【nlb】支持按用量计费。【dnlb】支持按配置计费
      *
      * @param chargeSpec
      */

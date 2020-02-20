@@ -36,6 +36,7 @@ import com.jdcloud.sdk.service.disk.model.CreateDisksResponse;
 -   可选参数快照 ID用于从快照创建新盘。
 -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
 -   maxCount为最大努力，不保证一定能达到maxCount。
+-   userTags 为创建云盘时打的标签
 
  */
 class CreateDisksExecutor extends JdcloudExecutor {
