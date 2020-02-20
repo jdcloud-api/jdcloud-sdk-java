@@ -45,6 +45,11 @@ public class Data  implements java.io.Serializable {
     private String resourceName;
 
     /**
+     * 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+     */
+    private String status;
+
+    /**
      * 绑定资源列表
      */
     private List<Bind> bind;
@@ -87,6 +92,24 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
+     * get 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
      * get 绑定资源列表
      *
      * @return
@@ -122,6 +145,16 @@ public class Data  implements java.io.Serializable {
      */
     public Data resourceName(String resourceName) {
         this.resourceName = resourceName;
+        return this;
+    }
+
+    /**
+     * set 云硬盘状态，取值为 creating、available、in-use、extending、restoring、deleting、deleted、error_create、error_delete、error_restore、error_extend 之一
+     *
+     * @param status
+     */
+    public Data status(String status) {
+        this.status = status;
         return this;
     }
 

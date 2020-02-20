@@ -36,6 +36,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 -   可选参数快照 ID用于从快照创建新盘。
 -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
 -   maxCount为最大努力，不保证一定能达到maxCount。
+-   userTags 为创建云盘时打的标签
 
  */
 public class CreateDisksResult extends JdcloudResult implements java.io.Serializable {
@@ -46,6 +47,11 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
      * diskIds
      */
     private List<String> diskIds;
+
+    /**
+     * 标签结果信息
+     */
+    private String tagmsg;
 
 
     /**
@@ -66,6 +72,24 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
         this.diskIds = diskIds;
     }
 
+    /**
+     * get 标签结果信息
+     *
+     * @return
+     */
+    public String getTagmsg() {
+        return tagmsg;
+    }
+
+    /**
+     * set 标签结果信息
+     *
+     * @param tagmsg
+     */
+    public void setTagmsg(String tagmsg) {
+        this.tagmsg = tagmsg;
+    }
+
 
     /**
      * set diskIds
@@ -74,6 +98,16 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
      */
     public CreateDisksResult diskIds(List<String> diskIds) {
         this.diskIds = diskIds;
+        return this;
+    }
+
+    /**
+     * set 标签结果信息
+     *
+     * @param tagmsg
+     */
+    public CreateDisksResult tagmsg(String tagmsg) {
+        this.tagmsg = tagmsg;
         return this;
     }
 

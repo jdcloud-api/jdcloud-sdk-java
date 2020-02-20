@@ -58,6 +58,11 @@ public class DiskSpecification  implements java.io.Serializable {
     private String description;
 
     /**
+     * 类型名称
+     */
+    private String diskTypeName;
+
+    /**
      * 默认的iops数量(基础iops数量)
      */
     private Integer defaultIOPS;
@@ -186,6 +191,24 @@ public class DiskSpecification  implements java.io.Serializable {
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 类型名称
+     *
+     * @return
+     */
+    public String getDiskTypeName() {
+        return diskTypeName;
+    }
+
+    /**
+     * set 类型名称
+     *
+     * @param diskTypeName
+     */
+    public void setDiskTypeName(String diskTypeName) {
+        this.diskTypeName = diskTypeName;
     }
 
     /**
@@ -380,6 +403,16 @@ public class DiskSpecification  implements java.io.Serializable {
      */
     public DiskSpecification description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 类型名称
+     *
+     * @param diskTypeName
+     */
+    public DiskSpecification diskTypeName(String diskTypeName) {
+        this.diskTypeName = diskTypeName;
         return this;
     }
 

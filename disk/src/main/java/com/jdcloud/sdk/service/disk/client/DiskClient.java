@@ -34,6 +34,18 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.disk.model.ModifySnapshotAttributeRequest;
 import com.jdcloud.sdk.service.disk.model.ModifySnapshotAttributeResponse;
 import com.jdcloud.sdk.service.disk.client.ModifySnapshotAttributeExecutor;
+import com.jdcloud.sdk.service.disk.model.DeleteSnapshotsRequest;
+import com.jdcloud.sdk.service.disk.model.DeleteSnapshotsResponse;
+import com.jdcloud.sdk.service.disk.client.DeleteSnapshotsExecutor;
+import com.jdcloud.sdk.service.disk.model.DescribeDiskRequest;
+import com.jdcloud.sdk.service.disk.model.DescribeDiskResponse;
+import com.jdcloud.sdk.service.disk.client.DescribeDiskExecutor;
+import com.jdcloud.sdk.service.disk.model.ExtendDiskRequest;
+import com.jdcloud.sdk.service.disk.model.ExtendDiskResponse;
+import com.jdcloud.sdk.service.disk.client.ExtendDiskExecutor;
+import com.jdcloud.sdk.service.disk.model.ModifyDiskAttributeRequest;
+import com.jdcloud.sdk.service.disk.model.ModifyDiskAttributeResponse;
+import com.jdcloud.sdk.service.disk.client.ModifyDiskAttributeExecutor;
 import com.jdcloud.sdk.service.disk.model.CreateDisksRequest;
 import com.jdcloud.sdk.service.disk.model.CreateDisksResponse;
 import com.jdcloud.sdk.service.disk.client.CreateDisksExecutor;
@@ -46,15 +58,6 @@ import com.jdcloud.sdk.service.disk.client.DescribeSnapshotsExecutor;
 import com.jdcloud.sdk.service.disk.model.RestoreDiskRequest;
 import com.jdcloud.sdk.service.disk.model.RestoreDiskResponse;
 import com.jdcloud.sdk.service.disk.client.RestoreDiskExecutor;
-import com.jdcloud.sdk.service.disk.model.DescribeDiskRequest;
-import com.jdcloud.sdk.service.disk.model.DescribeDiskResponse;
-import com.jdcloud.sdk.service.disk.client.DescribeDiskExecutor;
-import com.jdcloud.sdk.service.disk.model.ExtendDiskRequest;
-import com.jdcloud.sdk.service.disk.model.ExtendDiskResponse;
-import com.jdcloud.sdk.service.disk.client.ExtendDiskExecutor;
-import com.jdcloud.sdk.service.disk.model.ModifyDiskAttributeRequest;
-import com.jdcloud.sdk.service.disk.model.ModifyDiskAttributeResponse;
-import com.jdcloud.sdk.service.disk.client.ModifyDiskAttributeExecutor;
 import com.jdcloud.sdk.service.disk.model.DescribeDisksRequest;
 import com.jdcloud.sdk.service.disk.model.DescribeDisksResponse;
 import com.jdcloud.sdk.service.disk.client.DescribeDisksExecutor;
@@ -129,6 +132,55 @@ public class DiskClient extends JdcloudClient {
     }
 
     /**
+     * -   删除云硬盘快照:快照状态必须为 available 或 error 状态。
+-   快照独立于云硬盘生命周期，删除快照不会对创建快照的云硬盘有任何影响。
+-   快照删除后不可恢复，请谨慎操作。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSnapshotsResponse deleteSnapshots(DeleteSnapshotsRequest request) throws JdcloudSdkException {
+        return new DeleteSnapshotsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询某一块云硬盘的信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDiskResponse describeDisk(DescribeDiskRequest request) throws JdcloudSdkException {
+        return new DescribeDiskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * -   扩容云硬盘到指定大小，云硬盘状态必须为 available。
+-   当云硬盘正在创建快照时，不允许扩容。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExtendDiskResponse extendDisk(ExtendDiskRequest request) throws JdcloudSdkException {
+        return new ExtendDiskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改云硬盘的名字或描述信息，名字或描述信息至少要指定一个。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyDiskAttributeResponse modifyDiskAttribute(ModifyDiskAttributeRequest request) throws JdcloudSdkException {
+        return new ModifyDiskAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
      * -   创建一块或多块按配置或者按使用时长付费的云硬盘。
 -   云硬盘类型包括高效云盘(premium-hdd)、SSD云盘(ssd)、通用型SSD(ssd.gp1)、性能型SSD(ssd.io1)、容量型HDD(hdd.std1)。
 -   计费方式默认为按配置付费。
@@ -136,6 +188,7 @@ public class DiskClient extends JdcloudClient {
 -   可选参数快照 ID用于从快照创建新盘。
 -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
 -   maxCount为最大努力，不保证一定能达到maxCount。
+-   userTags 为创建云盘时打的标签
 
      *
      * @param request
@@ -183,41 +236,6 @@ public class DiskClient extends JdcloudClient {
      */
     public RestoreDiskResponse restoreDisk(RestoreDiskRequest request) throws JdcloudSdkException {
         return new RestoreDiskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询某一块云硬盘的信息详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeDiskResponse describeDisk(DescribeDiskRequest request) throws JdcloudSdkException {
-        return new DescribeDiskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * -   扩容云硬盘到指定大小，云硬盘状态必须为 available。
--   当云硬盘正在创建快照时，不允许扩容。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ExtendDiskResponse extendDisk(ExtendDiskRequest request) throws JdcloudSdkException {
-        return new ExtendDiskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改云硬盘的名字或描述信息，名字或描述信息至少要指定一个。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyDiskAttributeResponse modifyDiskAttribute(ModifyDiskAttributeRequest request) throws JdcloudSdkException {
-        return new ModifyDiskAttributeExecutor().client(this).execute(request);
     }
 
     /**

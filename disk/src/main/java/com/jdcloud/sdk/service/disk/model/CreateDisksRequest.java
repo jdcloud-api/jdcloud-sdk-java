@@ -24,8 +24,11 @@
 
 package com.jdcloud.sdk.service.disk.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.disk.model.DiskSpec;
+import com.jdcloud.sdk.service.disk.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -36,6 +39,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 -   可选参数快照 ID用于从快照创建新盘。
 -   批量创建时，云硬盘的命名为 硬盘名称-数字，例如 myDisk-1，myDisk-2。
 -   maxCount为最大努力，不保证一定能达到maxCount。
+-   userTags 为创建云盘时打的标签
 
  */
 public class CreateDisksRequest extends JdcloudRequest implements java.io.Serializable {
@@ -55,6 +59,11 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
      */
     @Required
     private Integer maxCount;
+
+    /**
+     * 用户标签
+     */
+    private List<Tag> userTags;
 
     /**
      * 幂等性校验参数
@@ -105,6 +114,24 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
      */
     public void setMaxCount(Integer maxCount) {
         this.maxCount = maxCount;
+    }
+
+    /**
+     * get 用户标签
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户标签
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
     }
 
     /**
@@ -165,6 +192,16 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
+     * set 用户标签
+     *
+     * @param userTags
+     */
+    public CreateDisksRequest userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+    /**
      * set 幂等性校验参数
      *
      * @param clientToken
@@ -184,5 +221,17 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
+    /**
+     * add item to 用户标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
+    }
 
 }
