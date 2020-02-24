@@ -53,7 +53,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
 
     /**
      * 转码模板查询过滤条件:
-  - name:   template 录制模板自定义名称
+  - name:   template 转码模板自定义名称
   - value:  如果参数为空，则查询全部
   - 如果为空,则表示查询该用下所有自定义的转码模板
 
@@ -107,7 +107,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
 
     /**
      * get 转码模板查询过滤条件:
-  - name:   template 录制模板自定义名称
+  - name:   template 转码模板自定义名称
   - value:  如果参数为空，则查询全部
   - 如果为空,则表示查询该用下所有自定义的转码模板
 
@@ -120,7 +120,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
 
     /**
      * set 转码模板查询过滤条件:
-  - name:   template 录制模板自定义名称
+  - name:   template 转码模板自定义名称
   - value:  如果参数为空，则查询全部
   - 如果为空,则表示查询该用下所有自定义的转码模板
 
@@ -158,7 +158,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
 
     /**
      * set 转码模板查询过滤条件:
-  - name:   template 录制模板自定义名称
+  - name:   template 转码模板自定义名称
   - value:  如果参数为空，则查询全部
   - 如果为空,则表示查询该用下所有自定义的转码模板
 
@@ -173,7 +173,7 @@ public class DescribeCustomLiveStreamTranscodeTemplatesRequest extends JdcloudRe
 
     /**
      * add item to 转码模板查询过滤条件:
-  - name:   template 录制模板自定义名称
+  - name:   template 转码模板自定义名称
   - value:  如果参数为空，则查询全部
   - 如果为空,则表示查询该用下所有自定义的转码模板
 

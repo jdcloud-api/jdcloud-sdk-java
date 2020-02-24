@@ -52,17 +52,21 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * 存储桶
+     * Required:true
      */
+    @Required
     private String saveBucket;
 
     /**
      * 存储地址
+     * Required:true
      */
+    @Required
     private String saveEndpoint;
 
     /**
      * 录制文件类型:
-- 取值: ts,flv,mp4 (多种类型之前用;隔开)
+- 取值: ts,flv,mp4 (多种类型之间用;隔开)
 - 不区分大小写
 
      * Required:true
@@ -71,14 +75,14 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     private String recordFileType;
 
     /**
-     * 录制文件存储路径:
-- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
+     * 录制文件存储Object:
+- 默认: /record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
 
      */
     private String saveObject;
 
     /**
-     * 打点录制任务外键
+     * 打点录制任务外部id(可传入您的id,在回调时会在该字段返回)
 
      */
     private String taskExternalId;
@@ -169,7 +173,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * get 录制文件类型:
-- 取值: ts,flv,mp4 (多种类型之前用;隔开)
+- 取值: ts,flv,mp4 (多种类型之间用;隔开)
 - 不区分大小写
 
      *
@@ -181,7 +185,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * set 录制文件类型:
-- 取值: ts,flv,mp4 (多种类型之前用;隔开)
+- 取值: ts,flv,mp4 (多种类型之间用;隔开)
 - 不区分大小写
 
      *
@@ -192,8 +196,8 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 录制文件存储路径:
-- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
+     * get 录制文件存储Object:
+- 默认: /record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
 
      *
      * @return
@@ -203,8 +207,8 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 录制文件存储路径:
-- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
+     * set 录制文件存储Object:
+- 默认: /record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
 
      *
      * @param saveObject
@@ -214,7 +218,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 打点录制任务外键
+     * get 打点录制任务外部id(可传入您的id,在回调时会在该字段返回)
 
      *
      * @return
@@ -224,7 +228,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 打点录制任务外键
+     * set 打点录制任务外部id(可传入您的id,在回调时会在该字段返回)
 
      *
      * @param taskExternalId
@@ -324,7 +328,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
 
     /**
      * set 录制文件类型:
-- 取值: ts,flv,mp4 (多种类型之前用;隔开)
+- 取值: ts,flv,mp4 (多种类型之间用;隔开)
 - 不区分大小写
 
      *
@@ -336,8 +340,8 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 录制文件存储路径:
-- 默认地址: record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
+     * set 录制文件存储Object:
+- 默认: /record/{Date}/{ServerId}/{AppName}/{StreamName}/{StartTime}_{EndTime}
 
      *
      * @param saveObject
@@ -348,7 +352,7 @@ public class AddLiveRecordTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 打点录制任务外键
+     * set 打点录制任务外部id(可传入您的id,在回调时会在该字段返回)
 
      *
      * @param taskExternalId
