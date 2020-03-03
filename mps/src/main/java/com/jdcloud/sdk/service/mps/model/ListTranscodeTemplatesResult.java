@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Transcode
- * 视频转码任务相关接口
+ * Transcode Template
+ * 转码模板管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,16 +26,16 @@ package com.jdcloud.sdk.service.mps.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.mps.model.TranscodeJobInfo;
+import com.jdcloud.sdk.service.mps.model.TranscodeTemplateInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询转码作业列表。
-支持如下过滤器：
-- title[eq] 按照输入视频标题进行精确匹配
+ * 查询转码模板列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - transcodeType[eq] 按转码方式精确查询
 
  */
-public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Serializable {
+public class ListTranscodeTemplatesResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -62,7 +62,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
     /**
      * 分页内容
      */
-    private List<TranscodeJobInfo> content;
+    private List<TranscodeTemplateInfo> content;
 
 
     /**
@@ -142,7 +142,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
      *
      * @return
      */
-    public List<TranscodeJobInfo> getContent() {
+    public List<TranscodeTemplateInfo> getContent() {
         return content;
     }
 
@@ -151,7 +151,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
      *
      * @param content
      */
-    public void setContent(List<TranscodeJobInfo> content) {
+    public void setContent(List<TranscodeTemplateInfo> content) {
         this.content = content;
     }
 
@@ -161,7 +161,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
      *
      * @param pageNumber
      */
-    public ListTranscodeJobsResult pageNumber(Integer pageNumber) {
+    public ListTranscodeTemplatesResult pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -171,7 +171,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
      *
      * @param pageSize
      */
-    public ListTranscodeJobsResult pageSize(Integer pageSize) {
+    public ListTranscodeTemplatesResult pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -181,7 +181,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
      *
      * @param totalElements
      */
-    public ListTranscodeJobsResult totalElements(Integer totalElements) {
+    public ListTranscodeTemplatesResult totalElements(Integer totalElements) {
         this.totalElements = totalElements;
         return this;
     }
@@ -191,7 +191,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
      *
      * @param totalPages
      */
-    public ListTranscodeJobsResult totalPages(Integer totalPages) {
+    public ListTranscodeTemplatesResult totalPages(Integer totalPages) {
         this.totalPages = totalPages;
         return this;
     }
@@ -201,7 +201,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
      *
      * @param content
      */
-    public ListTranscodeJobsResult content(List<TranscodeJobInfo> content) {
+    public ListTranscodeTemplatesResult content(List<TranscodeTemplateInfo> content) {
         this.content = content;
         return this;
     }
@@ -212,7 +212,7 @@ public class ListTranscodeJobsResult extends JdcloudResult implements java.io.Se
      *
      * @param content
      */
-    public void addContent(TranscodeJobInfo content) {
+    public void addContent(TranscodeTemplateInfo content) {
         if (this.content == null) {
             this.content = new ArrayList<>();
         }

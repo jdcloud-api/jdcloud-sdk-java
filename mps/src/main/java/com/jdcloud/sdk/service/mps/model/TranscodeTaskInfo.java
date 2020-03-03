@@ -28,7 +28,7 @@ package com.jdcloud.sdk.service.mps.model;
 /**
  * 转码任务信息
  */
-public class TranscodeTask  implements java.io.Serializable {
+public class TranscodeTaskInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -43,9 +43,9 @@ public class TranscodeTask  implements java.io.Serializable {
     private String taskId;
 
     /**
-     * 输出文件地址
+     * 输出文件 objectKey
      */
-    private String fileUrl;
+    private String objectKey;
 
     /**
      * 输出视频格式
@@ -78,7 +78,8 @@ public class TranscodeTask  implements java.io.Serializable {
     private String definition;
 
     /**
-     * 任务状态
+     * 任务状态。in-process, succeeded, failed
+
      */
     private String status;
 
@@ -125,21 +126,21 @@ public class TranscodeTask  implements java.io.Serializable {
     }
 
     /**
-     * get 输出文件地址
+     * get 输出文件 objectKey
      *
      * @return
      */
-    public String getFileUrl() {
-        return fileUrl;
+    public String getObjectKey() {
+        return objectKey;
     }
 
     /**
-     * set 输出文件地址
+     * set 输出文件 objectKey
      *
-     * @param fileUrl
+     * @param objectKey
      */
-    public void setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
+    public void setObjectKey(String objectKey) {
+        this.objectKey = objectKey;
     }
 
     /**
@@ -251,7 +252,8 @@ public class TranscodeTask  implements java.io.Serializable {
     }
 
     /**
-     * get 任务状态
+     * get 任务状态。in-process, succeeded, failed
+
      *
      * @return
      */
@@ -260,7 +262,8 @@ public class TranscodeTask  implements java.io.Serializable {
     }
 
     /**
-     * set 任务状态
+     * set 任务状态。in-process, succeeded, failed
+
      *
      * @param status
      */
@@ -292,7 +295,7 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param jobId
      */
-    public TranscodeTask jobId(String jobId) {
+    public TranscodeTaskInfo jobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
@@ -302,18 +305,18 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param taskId
      */
-    public TranscodeTask taskId(String taskId) {
+    public TranscodeTaskInfo taskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
 
     /**
-     * set 输出文件地址
+     * set 输出文件 objectKey
      *
-     * @param fileUrl
+     * @param objectKey
      */
-    public TranscodeTask fileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
+    public TranscodeTaskInfo objectKey(String objectKey) {
+        this.objectKey = objectKey;
         return this;
     }
 
@@ -322,7 +325,7 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param format
      */
-    public TranscodeTask format(String format) {
+    public TranscodeTaskInfo format(String format) {
         this.format = format;
         return this;
     }
@@ -332,7 +335,7 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param width
      */
-    public TranscodeTask width(String width) {
+    public TranscodeTaskInfo width(String width) {
         this.width = width;
         return this;
     }
@@ -342,7 +345,7 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param height
      */
-    public TranscodeTask height(String height) {
+    public TranscodeTaskInfo height(String height) {
         this.height = height;
         return this;
     }
@@ -352,7 +355,7 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param bitrate
      */
-    public TranscodeTask bitrate(String bitrate) {
+    public TranscodeTaskInfo bitrate(String bitrate) {
         this.bitrate = bitrate;
         return this;
     }
@@ -362,7 +365,7 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param framerate
      */
-    public TranscodeTask framerate(String framerate) {
+    public TranscodeTaskInfo framerate(String framerate) {
         this.framerate = framerate;
         return this;
     }
@@ -372,17 +375,18 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param definition
      */
-    public TranscodeTask definition(String definition) {
+    public TranscodeTaskInfo definition(String definition) {
         this.definition = definition;
         return this;
     }
 
     /**
-     * set 任务状态
+     * set 任务状态。in-process, succeeded, failed
+
      *
      * @param status
      */
-    public TranscodeTask status(String status) {
+    public TranscodeTaskInfo status(String status) {
         this.status = status;
         return this;
     }
@@ -392,7 +396,7 @@ public class TranscodeTask  implements java.io.Serializable {
      *
      * @param finishTime
      */
-    public TranscodeTask finishTime(String finishTime) {
+    public TranscodeTaskInfo finishTime(String finishTime) {
         this.finishTime = finishTime;
         return this;
     }
