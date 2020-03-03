@@ -57,7 +57,7 @@ public class ListTranscodeJobsResultInfo  implements java.io.Serializable {
     /**
      * 分页内容
      */
-    private List<TranscodeJob> content;
+    private List<TranscodeJobInfo> content;
 
 
     /**
@@ -137,7 +137,7 @@ public class ListTranscodeJobsResultInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public List<TranscodeJob> getContent() {
+    public List<TranscodeJobInfo> getContent() {
         return content;
     }
 
@@ -146,7 +146,7 @@ public class ListTranscodeJobsResultInfo  implements java.io.Serializable {
      *
      * @param content
      */
-    public void setContent(List<TranscodeJob> content) {
+    public void setContent(List<TranscodeJobInfo> content) {
         this.content = content;
     }
 
@@ -196,7 +196,7 @@ public class ListTranscodeJobsResultInfo  implements java.io.Serializable {
      *
      * @param content
      */
-    public ListTranscodeJobsResultInfo content(List<TranscodeJob> content) {
+    public ListTranscodeJobsResultInfo content(List<TranscodeJobInfo> content) {
         this.content = content;
         return this;
     }
@@ -207,7 +207,7 @@ public class ListTranscodeJobsResultInfo  implements java.io.Serializable {
      *
      * @param content
      */
-    public void addContent(TranscodeJob content) {
+    public void addContent(TranscodeJobInfo content) {
         if (this.content == null) {
             this.content = new ArrayList<>();
         }

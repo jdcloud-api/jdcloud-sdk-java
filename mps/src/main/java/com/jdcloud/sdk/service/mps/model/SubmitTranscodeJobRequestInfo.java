@@ -50,7 +50,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     private String secretKey;
 
     /**
-     * 输入对象存储 endpoint，必须参数，如 s3.cn-north-1.jcloudcs.com
+     * 输入对象存储 endpoint。必须参数，内网域名，如 s3-internal.cn-north-1.jcloudcs.com
      * Required:true
      */
     @Required
@@ -127,7 +127,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 输入对象存储 endpoint，必须参数，如 s3.cn-north-1.jcloudcs.com
+     * get 输入对象存储 endpoint。必须参数，内网域名，如 s3-internal.cn-north-1.jcloudcs.com
      *
      * @return
      */
@@ -136,7 +136,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 输入对象存储 endpoint，必须参数，如 s3.cn-north-1.jcloudcs.com
+     * set 输入对象存储 endpoint。必须参数，内网域名，如 s3-internal.cn-north-1.jcloudcs.com
      *
      * @param endpoint
      */
@@ -256,7 +256,7 @@ public class SubmitTranscodeJobRequestInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 输入对象存储 endpoint，必须参数，如 s3.cn-north-1.jcloudcs.com
+     * set 输入对象存储 endpoint。必须参数，内网域名，如 s3-internal.cn-north-1.jcloudcs.com
      *
      * @param endpoint
      */
