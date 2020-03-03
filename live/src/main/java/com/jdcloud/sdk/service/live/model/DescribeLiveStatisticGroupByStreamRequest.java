@@ -36,23 +36,17 @@ public class DescribeLiveStatisticGroupByStreamRequest extends JdcloudRequest im
 
     /**
      * 播放域名
-     * Required:true
      */
-    @Required
     private String domainName;
 
     /**
      * 应用名称
-     * Required:true
      */
-    @Required
     private String appName;
 
     /**
      * 流名称
-     * Required:true
      */
-    @Required
     private String streamName;
 
     /**

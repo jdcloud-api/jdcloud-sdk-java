@@ -52,6 +52,9 @@ import com.jdcloud.sdk.service.live.client.DeleteLiveStreamNotifyConfigExecutor;
 import com.jdcloud.sdk.service.live.model.OpenLiveP2pRequest;
 import com.jdcloud.sdk.service.live.model.OpenLiveP2pResponse;
 import com.jdcloud.sdk.service.live.client.OpenLiveP2pExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveBillDataRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveBillDataResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveBillDataExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamRecordTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamRecordTemplatesExecutor;
@@ -506,6 +509,23 @@ public class LiveClient extends JdcloudClient {
      */
     public OpenLiveP2pResponse openLiveP2p(OpenLiveP2pRequest request) throws JdcloudSdkException {
         return new OpenLiveP2pExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询直播计费账单用量数据
+允许通过条件过滤查询，支持的过滤字段如下：
+  - startTime[eq]  账单开始时间
+  - endTime[eq]    账单结束时间
+  - billType[eq]   账单计费类型
+  - userPin[like]  用户PIN
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveBillDataResponse describeLiveBillData(DescribeLiveBillDataRequest request) throws JdcloudSdkException {
+        return new DescribeLiveBillDataExecutor().client(this).execute(request);
     }
 
     /**
