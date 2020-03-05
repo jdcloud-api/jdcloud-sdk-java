@@ -45,7 +45,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private Integer pageSize;
 
     /**
-     * 实例名称，可模糊匹配
+     * 实例名称, 可模糊匹配
      */
     private String name;
 
@@ -94,7 +94,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 实例名称，可模糊匹配
+     * get 实例名称, 可模糊匹配
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 实例名称，可模糊匹配
+     * set 实例名称, 可模糊匹配
      *
      * @param name
      */
@@ -151,7 +151,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 实例名称，可模糊匹配
+     * set 实例名称, 可模糊匹配
      *
      * @param name
      */

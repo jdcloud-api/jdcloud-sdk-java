@@ -36,11 +36,16 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 协议: TCP或者UDP
+     * 协议: TCP 或者 UDP
      * Required:true
      */
     @Required
     private String protocol;
+
+    /**
+     * 高防 IP
+     */
+    private String serviceIp;
 
     /**
      * 端口号, 取值范围[1, 65535]
@@ -50,11 +55,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     private Integer port;
 
     /**
-     * 转发规则
-- wrr 带权重的轮询
-- rr  不带权重的轮询
-- sh  源地址hash
-
+     * 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      * Required:true
      */
     @Required
@@ -91,7 +92,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
 
 
     /**
-     * get 协议: TCP或者UDP
+     * get 协议: TCP 或者 UDP
      *
      * @return
      */
@@ -100,12 +101,30 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 协议: TCP或者UDP
+     * set 协议: TCP 或者 UDP
      *
      * @param protocol
      */
     public void setProtocol(String protocol) {
         this.protocol = protocol;
+    }
+
+    /**
+     * get 高防 IP
+     *
+     * @return
+     */
+    public String getServiceIp() {
+        return serviceIp;
+    }
+
+    /**
+     * set 高防 IP
+     *
+     * @param serviceIp
+     */
+    public void setServiceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
     }
 
     /**
@@ -127,11 +146,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 转发规则
-- wrr 带权重的轮询
-- rr  不带权重的轮询
-- sh  源地址hash
-
+     * get 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @return
      */
@@ -140,11 +155,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则
-- wrr 带权重的轮询
-- rr  不带权重的轮询
-- sh  源地址hash
-
+     * set 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @param algorithm
      */
@@ -244,12 +255,22 @@ public class ForwardRuleSpec  implements java.io.Serializable {
 
 
     /**
-     * set 协议: TCP或者UDP
+     * set 协议: TCP 或者 UDP
      *
      * @param protocol
      */
     public ForwardRuleSpec protocol(String protocol) {
         this.protocol = protocol;
+        return this;
+    }
+
+    /**
+     * set 高防 IP
+     *
+     * @param serviceIp
+     */
+    public ForwardRuleSpec serviceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
         return this;
     }
 
@@ -264,11 +285,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则
-- wrr 带权重的轮询
-- rr  不带权重的轮询
-- sh  源地址hash
-
+     * set 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @param algorithm
      */

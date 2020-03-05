@@ -60,6 +60,11 @@ public class WebRule  implements java.io.Serializable {
     private Integer cnameStatus;
 
     /**
+     * 高防 IP
+     */
+    private String serviceIp;
+
+    /**
      * protocol
      */
     private WebRuleProtocol protocol;
@@ -80,7 +85,7 @@ public class WebRule  implements java.io.Serializable {
     private List<Integer> httpsPort;
 
     /**
-     * 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+     * 是否开启 HTTP 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
      */
     private Integer httpOrigin;
 
@@ -95,7 +100,7 @@ public class WebRule  implements java.io.Serializable {
     private String originType;
 
     /**
-     * originAddr
+     * 回源域名, originType 为 A 时返回该字段
      */
     private List<OriginAddrItem> originAddr;
 
@@ -105,12 +110,12 @@ public class WebRule  implements java.io.Serializable {
     private String originDomain;
 
     /**
-     * onlineAddr
+     * 备用的回源地址列表, 为一个域名或者多个 IP 地址
      */
     private List<String> onlineAddr;
 
     /**
-     * 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
+     * 证书状态. &lt;br&gt;- 0: 异常&lt;br&gt;- 1: 正常&lt;br&gt;- 2: 证书未上传
      */
     private Integer httpCertStatus;
 
@@ -135,15 +140,12 @@ public class WebRule  implements java.io.Serializable {
     private String httpsRsaKey;
 
     /**
-     * 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
-  - 0 不强跳
-  - 1 开启强跳
-
+     * 是否开启 HTTPS 强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性&lt;br&gt;- 0: 不强跳&lt;br&gt;- 1: 开启强跳
      */
     private Integer forceJump;
 
     /**
-     * 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
+     * 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      */
     private String algorithm;
 
@@ -166,6 +168,11 @@ public class WebRule  implements java.io.Serializable {
      * 白名单状态, 0: 关闭, 1: 开启
      */
     private Integer whiteListEnable;
+
+    /**
+     * 按区域分流回源配置
+     */
+    private List<GeoRsRoute> geoRsRoute;
 
 
     /**
@@ -259,6 +266,24 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
+     * get 高防 IP
+     *
+     * @return
+     */
+    public String getServiceIp() {
+        return serviceIp;
+    }
+
+    /**
+     * set 高防 IP
+     *
+     * @param serviceIp
+     */
+    public void setServiceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
+    }
+
+    /**
      * get protocol
      *
      * @return
@@ -331,7 +356,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+     * get 是否开启 HTTP 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
      *
      * @return
      */
@@ -340,7 +365,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+     * set 是否开启 HTTP 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
      *
      * @param httpOrigin
      */
@@ -385,7 +410,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get originAddr
+     * get 回源域名, originType 为 A 时返回该字段
      *
      * @return
      */
@@ -394,7 +419,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set originAddr
+     * set 回源域名, originType 为 A 时返回该字段
      *
      * @param originAddr
      */
@@ -421,7 +446,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get onlineAddr
+     * get 备用的回源地址列表, 为一个域名或者多个 IP 地址
      *
      * @return
      */
@@ -430,7 +455,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set onlineAddr
+     * set 备用的回源地址列表, 为一个域名或者多个 IP 地址
      *
      * @param onlineAddr
      */
@@ -439,7 +464,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
+     * get 证书状态. &lt;br&gt;- 0: 异常&lt;br&gt;- 1: 正常&lt;br&gt;- 2: 证书未上传
      *
      * @return
      */
@@ -448,7 +473,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
+     * set 证书状态. &lt;br&gt;- 0: 异常&lt;br&gt;- 1: 正常&lt;br&gt;- 2: 证书未上传
      *
      * @param httpCertStatus
      */
@@ -529,10 +554,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
-  - 0 不强跳
-  - 1 开启强跳
-
+     * get 是否开启 HTTPS 强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性&lt;br&gt;- 0: 不强跳&lt;br&gt;- 1: 开启强跳
      *
      * @return
      */
@@ -541,10 +563,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
-  - 0 不强跳
-  - 1 开启强跳
-
+     * set 是否开启 HTTPS 强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性&lt;br&gt;- 0: 不强跳&lt;br&gt;- 1: 开启强跳
      *
      * @param forceJump
      */
@@ -553,7 +572,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
+     * get 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @return
      */
@@ -562,7 +581,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
+     * set 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @param algorithm
      */
@@ -642,6 +661,24 @@ public class WebRule  implements java.io.Serializable {
         this.whiteListEnable = whiteListEnable;
     }
 
+    /**
+     * get 按区域分流回源配置
+     *
+     * @return
+     */
+    public List<GeoRsRoute> getGeoRsRoute() {
+        return geoRsRoute;
+    }
+
+    /**
+     * set 按区域分流回源配置
+     *
+     * @param geoRsRoute
+     */
+    public void setGeoRsRoute(List<GeoRsRoute> geoRsRoute) {
+        this.geoRsRoute = geoRsRoute;
+    }
+
 
     /**
      * set 规则 Id
@@ -694,6 +731,16 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
+     * set 高防 IP
+     *
+     * @param serviceIp
+     */
+    public WebRule serviceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
+        return this;
+    }
+
+    /**
      * set protocol
      *
      * @param protocol
@@ -734,7 +781,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启 http 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
+     * set 是否开启 HTTP 回源, 0: 为不开启, 1: 为开启, 当勾选 HTTPS 时可以配置该属性
      *
      * @param httpOrigin
      */
@@ -764,7 +811,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set originAddr
+     * set 回源域名, originType 为 A 时返回该字段
      *
      * @param originAddr
      */
@@ -784,7 +831,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set onlineAddr
+     * set 备用的回源地址列表, 为一个域名或者多个 IP 地址
      *
      * @param onlineAddr
      */
@@ -794,7 +841,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书状态, 0: 异常, 1: 正常, 2: 证书未上传
+     * set 证书状态. &lt;br&gt;- 0: 异常&lt;br&gt;- 1: 正常&lt;br&gt;- 2: 证书未上传
      *
      * @param httpCertStatus
      */
@@ -844,10 +891,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启https强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性
-  - 0 不强跳
-  - 1 开启强跳
-
+     * set 是否开启 HTTPS 强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性&lt;br&gt;- 0: 不强跳&lt;br&gt;- 1: 开启强跳
      *
      * @param forceJump
      */
@@ -857,7 +901,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则,  wrr: 带权重的轮询, rr: 不带权重的轮询
+     * set 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @param algorithm
      */
@@ -906,6 +950,16 @@ public class WebRule  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 按区域分流回源配置
+     *
+     * @param geoRsRoute
+     */
+    public WebRule geoRsRoute(List<GeoRsRoute> geoRsRoute) {
+        this.geoRsRoute = geoRsRoute;
+        return this;
+    }
+
 
     /**
      * add item to HTTP 协议的端口号, 如 80,81
@@ -932,7 +986,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * add item to originAddr
+     * add item to 回源域名, originType 为 A 时返回该字段
      *
      * @param originAddr
      */
@@ -944,7 +998,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * add item to onlineAddr
+     * add item to 备用的回源地址列表, 为一个域名或者多个 IP 地址
      *
      * @param onlineAddr
      */
@@ -953,6 +1007,18 @@ public class WebRule  implements java.io.Serializable {
             this.onlineAddr = new ArrayList<>();
         }
         this.onlineAddr.add(onlineAddr);
+    }
+
+    /**
+     * add item to 按区域分流回源配置
+     *
+     * @param geoRsRoute
+     */
+    public void addGeoRsRoute(GeoRsRoute geoRsRoute) {
+        if (this.geoRsRoute == null) {
+            this.geoRsRoute = new ArrayList<>();
+        }
+        this.geoRsRoute.add(geoRsRoute);
     }
 
 }

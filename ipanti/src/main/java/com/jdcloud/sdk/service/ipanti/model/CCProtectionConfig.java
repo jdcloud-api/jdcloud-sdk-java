@@ -73,7 +73,7 @@ public class CCProtectionConfig  implements java.io.Serializable {
     private Long ipHostUrlQps;
 
     /**
-     * 开启的 cc 防护规则数量
+     * 开启的 CC 防护规则数量
      */
     private Long ccProtectionRuleEnableCount;
 
@@ -223,7 +223,7 @@ public class CCProtectionConfig  implements java.io.Serializable {
     }
 
     /**
-     * get 开启的 cc 防护规则数量
+     * get 开启的 CC 防护规则数量
      *
      * @return
      */
@@ -232,7 +232,7 @@ public class CCProtectionConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 开启的 cc 防护规则数量
+     * set 开启的 CC 防护规则数量
      *
      * @param ccProtectionRuleEnableCount
      */
@@ -322,7 +322,7 @@ public class CCProtectionConfig  implements java.io.Serializable {
     }
 
     /**
-     * set 开启的 cc 防护规则数量
+     * set 开启的 CC 防护规则数量
      *
      * @param ccProtectionRuleEnableCount
      */

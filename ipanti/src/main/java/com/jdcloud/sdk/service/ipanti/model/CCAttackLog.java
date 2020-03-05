@@ -43,7 +43,7 @@ public class CCAttackLog  implements java.io.Serializable {
     private Double attackTraffic;
 
     /**
-     * 是否触发黑洞，0否 1是
+     * 是否触发黑洞, 0否 1是
      */
     private Integer blackHole;
 
@@ -58,7 +58,7 @@ public class CCAttackLog  implements java.io.Serializable {
     private String endTime;
 
     /**
-     * 流量单位，bps、Kbps、Mbps、Gbps
+     * 流量单位, bps、Kbps、Mbps、Gbps
      */
     private String unit;
 
@@ -110,7 +110,7 @@ public class CCAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * get 是否触发黑洞，0否 1是
+     * get 是否触发黑洞, 0否 1是
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class CCAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 是否触发黑洞，0否 1是
+     * set 是否触发黑洞, 0否 1是
      *
      * @param blackHole
      */
@@ -164,7 +164,7 @@ public class CCAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * get 流量单位，bps、Kbps、Mbps、Gbps
+     * get 流量单位, bps、Kbps、Mbps、Gbps
      *
      * @return
      */
@@ -173,7 +173,7 @@ public class CCAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 流量单位，bps、Kbps、Mbps、Gbps
+     * set 流量单位, bps、Kbps、Mbps、Gbps
      *
      * @param unit
      */
@@ -239,7 +239,7 @@ public class CCAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 是否触发黑洞，0否 1是
+     * set 是否触发黑洞, 0否 1是
      *
      * @param blackHole
      */
@@ -269,7 +269,7 @@ public class CCAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 流量单位，bps、Kbps、Mbps、Gbps
+     * set 流量单位, bps、Kbps、Mbps、Gbps
      *
      * @param unit
      */

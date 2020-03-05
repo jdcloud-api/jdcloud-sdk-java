@@ -37,17 +37,15 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      * Required:true
      */
     @Required
     private String startTime;
 
     /**
-     * 查询的结束时间, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
-     * Required:true
+     * 查询的结束时间, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      */
-    @Required
     private String endTime;
 
     /**
@@ -64,7 +62,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * get 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @return
      */
@@ -73,7 +71,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param startTime
      */
@@ -82,7 +80,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 查询的结束时间, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * get 查询的结束时间, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @return
      */
@@ -91,7 +89,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 查询的结束时间, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 查询的结束时间, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param endTime
      */
@@ -137,7 +135,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param startTime
      */
@@ -147,7 +145,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 查询的结束时间, UTC 时间, 格式：yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 查询的结束时间, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param endTime
      */

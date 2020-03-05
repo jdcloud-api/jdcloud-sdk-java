@@ -48,52 +48,31 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     private Integer mode;
 
     /**
-     * 匹配 key. mode 为 cookie 和 header 时必传.
-- mode 为 cookie 时, 传 cookie 的 name
-- mode 为 header 时, 传 header 的 key
-
+     * 匹配 key, mode 为 cookie 和 header 时必传. &lt;br&gt;- mode 为 cookie 时, 传 cookie 的 name&lt;br&gt;- mode 为 header 时, 传 header 的 key
      */
     private String key;
 
     /**
-     * 匹配 value.
-- mode 为 uri 时, 传要匹配的 uri
-- mode 为 ip 时, 传引用的 ip 黑白名单 Id
-- mode 为 cookie 时, 传 cookie 的 value
-- mode 为 geo 时, 传 geo 区域编码以 &#39;,&#39; 分隔的字符串. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-- mode 为 header 时, 传 header 的 value
-
+     * 匹配 value. &lt;br&gt;- mode 为 uri 时, 传要匹配的 uri&lt;br&gt;- mode 为 ip 时, 传引用的 ip 黑白名单 Id&lt;br&gt;- mode 为 cookie 时, 传 cookie 的 value&lt;br&gt;- mode 为 geo 时, 传 geo 区域编码以 &#39;,&#39; 分隔的字符串. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describewebrulewhitelistgeoareas&#39;&gt;describeWebRuleWhiteListGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表&lt;br&gt;- mode 为 header 时, 传 header 的 value
      * Required:true
      */
     @Required
     private String value;
 
     /**
-     * 匹配规则. mode 为 uri, cookie 和 header 时必传. 支持以下匹配规则
-- 0: 完全匹配
-- 1: 前缀匹配
-- 2: 包含
-- 3: 正则匹配
-- 4: 后缀匹配
-
+     * 匹配规则, mode 为 uri, cookie 和 header 时必传. 支持以下匹配规则: &lt;br&gt;- 0: 完全匹配&lt;br&gt;- 1: 前缀匹配&lt;br&gt;- 2: 包含&lt;br&gt;- 3: 正则匹配&lt;br&gt;- 4: 后缀匹配
      */
     private Integer pattern;
 
     /**
-     * 命中后处理动作.
-- 0: 放行
-- 1: CC 防护
-
+     * 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
      * Required:true
      */
     @Required
     private Integer action;
 
     /**
-     * 规则状态.
-- 0: 关闭
-- 1: 开启
-
+     * 规则状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      * Required:true
      */
     @Required
@@ -137,10 +116,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 匹配 key. mode 为 cookie 和 header 时必传.
-- mode 为 cookie 时, 传 cookie 的 name
-- mode 为 header 时, 传 header 的 key
-
+     * get 匹配 key, mode 为 cookie 和 header 时必传. &lt;br&gt;- mode 为 cookie 时, 传 cookie 的 name&lt;br&gt;- mode 为 header 时, 传 header 的 key
      *
      * @return
      */
@@ -149,10 +125,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配 key. mode 为 cookie 和 header 时必传.
-- mode 为 cookie 时, 传 cookie 的 name
-- mode 为 header 时, 传 header 的 key
-
+     * set 匹配 key, mode 为 cookie 和 header 时必传. &lt;br&gt;- mode 为 cookie 时, 传 cookie 的 name&lt;br&gt;- mode 为 header 时, 传 header 的 key
      *
      * @param key
      */
@@ -161,13 +134,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 匹配 value.
-- mode 为 uri 时, 传要匹配的 uri
-- mode 为 ip 时, 传引用的 ip 黑白名单 Id
-- mode 为 cookie 时, 传 cookie 的 value
-- mode 为 geo 时, 传 geo 区域编码以 &#39;,&#39; 分隔的字符串. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-- mode 为 header 时, 传 header 的 value
-
+     * get 匹配 value. &lt;br&gt;- mode 为 uri 时, 传要匹配的 uri&lt;br&gt;- mode 为 ip 时, 传引用的 ip 黑白名单 Id&lt;br&gt;- mode 为 cookie 时, 传 cookie 的 value&lt;br&gt;- mode 为 geo 时, 传 geo 区域编码以 &#39;,&#39; 分隔的字符串. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describewebrulewhitelistgeoareas&#39;&gt;describeWebRuleWhiteListGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表&lt;br&gt;- mode 为 header 时, 传 header 的 value
      *
      * @return
      */
@@ -176,13 +143,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配 value.
-- mode 为 uri 时, 传要匹配的 uri
-- mode 为 ip 时, 传引用的 ip 黑白名单 Id
-- mode 为 cookie 时, 传 cookie 的 value
-- mode 为 geo 时, 传 geo 区域编码以 &#39;,&#39; 分隔的字符串. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-- mode 为 header 时, 传 header 的 value
-
+     * set 匹配 value. &lt;br&gt;- mode 为 uri 时, 传要匹配的 uri&lt;br&gt;- mode 为 ip 时, 传引用的 ip 黑白名单 Id&lt;br&gt;- mode 为 cookie 时, 传 cookie 的 value&lt;br&gt;- mode 为 geo 时, 传 geo 区域编码以 &#39;,&#39; 分隔的字符串. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describewebrulewhitelistgeoareas&#39;&gt;describeWebRuleWhiteListGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表&lt;br&gt;- mode 为 header 时, 传 header 的 value
      *
      * @param value
      */
@@ -191,13 +152,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 匹配规则. mode 为 uri, cookie 和 header 时必传. 支持以下匹配规则
-- 0: 完全匹配
-- 1: 前缀匹配
-- 2: 包含
-- 3: 正则匹配
-- 4: 后缀匹配
-
+     * get 匹配规则, mode 为 uri, cookie 和 header 时必传. 支持以下匹配规则: &lt;br&gt;- 0: 完全匹配&lt;br&gt;- 1: 前缀匹配&lt;br&gt;- 2: 包含&lt;br&gt;- 3: 正则匹配&lt;br&gt;- 4: 后缀匹配
      *
      * @return
      */
@@ -206,13 +161,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配规则. mode 为 uri, cookie 和 header 时必传. 支持以下匹配规则
-- 0: 完全匹配
-- 1: 前缀匹配
-- 2: 包含
-- 3: 正则匹配
-- 4: 后缀匹配
-
+     * set 匹配规则, mode 为 uri, cookie 和 header 时必传. 支持以下匹配规则: &lt;br&gt;- 0: 完全匹配&lt;br&gt;- 1: 前缀匹配&lt;br&gt;- 2: 包含&lt;br&gt;- 3: 正则匹配&lt;br&gt;- 4: 后缀匹配
      *
      * @param pattern
      */
@@ -221,10 +170,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 命中后处理动作.
-- 0: 放行
-- 1: CC 防护
-
+     * get 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
      *
      * @return
      */
@@ -233,10 +179,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理动作.
-- 0: 放行
-- 1: CC 防护
-
+     * set 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
      *
      * @param action
      */
@@ -245,10 +188,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 规则状态.
-- 0: 关闭
-- 1: 开启
-
+     * get 规则状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @return
      */
@@ -257,10 +197,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 规则状态.
-- 0: 关闭
-- 1: 开启
-
+     * set 规则状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @param status
      */
@@ -290,10 +227,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配 key. mode 为 cookie 和 header 时必传.
-- mode 为 cookie 时, 传 cookie 的 name
-- mode 为 header 时, 传 header 的 key
-
+     * set 匹配 key, mode 为 cookie 和 header 时必传. &lt;br&gt;- mode 为 cookie 时, 传 cookie 的 name&lt;br&gt;- mode 为 header 时, 传 header 的 key
      *
      * @param key
      */
@@ -303,13 +237,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配 value.
-- mode 为 uri 时, 传要匹配的 uri
-- mode 为 ip 时, 传引用的 ip 黑白名单 Id
-- mode 为 cookie 时, 传 cookie 的 value
-- mode 为 geo 时, 传 geo 区域编码以 &#39;,&#39; 分隔的字符串. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-pro/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-- mode 为 header 时, 传 header 的 value
-
+     * set 匹配 value. &lt;br&gt;- mode 为 uri 时, 传要匹配的 uri&lt;br&gt;- mode 为 ip 时, 传引用的 ip 黑白名单 Id&lt;br&gt;- mode 为 cookie 时, 传 cookie 的 value&lt;br&gt;- mode 为 geo 时, 传 geo 区域编码以 &#39;,&#39; 分隔的字符串. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describewebrulewhitelistgeoareas&#39;&gt;describeWebRuleWhiteListGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表&lt;br&gt;- mode 为 header 时, 传 header 的 value
      *
      * @param value
      */
@@ -319,13 +247,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配规则. mode 为 uri, cookie 和 header 时必传. 支持以下匹配规则
-- 0: 完全匹配
-- 1: 前缀匹配
-- 2: 包含
-- 3: 正则匹配
-- 4: 后缀匹配
-
+     * set 匹配规则, mode 为 uri, cookie 和 header 时必传. 支持以下匹配规则: &lt;br&gt;- 0: 完全匹配&lt;br&gt;- 1: 前缀匹配&lt;br&gt;- 2: 包含&lt;br&gt;- 3: 正则匹配&lt;br&gt;- 4: 后缀匹配
      *
      * @param pattern
      */
@@ -335,10 +257,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理动作.
-- 0: 放行
-- 1: CC 防护
-
+     * set 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
      *
      * @param action
      */
@@ -348,10 +267,7 @@ public class WebWhiteListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 规则状态.
-- 0: 关闭
-- 1: 开启
-
+     * set 规则状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @param status
      */

@@ -26,77 +26,77 @@ package com.jdcloud.sdk.service.ipanti.model;
 
 
 /**
- * geoBlack
+ * failedPort
  */
-public class GeoBlack  implements java.io.Serializable {
+public class FailedPort  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * geo 拦截地域
+     * 端口号
      */
-    private String label;
+    private Integer port;
 
     /**
-     * geo 拦截地域编码
+     * 错误原因
      */
-    private String value;
+    private String message;
 
 
     /**
-     * get geo 拦截地域
+     * get 端口号
      *
      * @return
      */
-    public String getLabel() {
-        return label;
+    public Integer getPort() {
+        return port;
     }
 
     /**
-     * set geo 拦截地域
+     * set 端口号
      *
-     * @param label
+     * @param port
      */
-    public void setLabel(String label) {
-        this.label = label;
+    public void setPort(Integer port) {
+        this.port = port;
     }
 
     /**
-     * get geo 拦截地域编码
+     * get 错误原因
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public String getMessage() {
+        return message;
     }
 
     /**
-     * set geo 拦截地域编码
+     * set 错误原因
      *
-     * @param value
+     * @param message
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
 
     /**
-     * set geo 拦截地域
+     * set 端口号
      *
-     * @param label
+     * @param port
      */
-    public GeoBlack label(String label) {
-        this.label = label;
+    public FailedPort port(Integer port) {
+        this.port = port;
         return this;
     }
 
     /**
-     * set geo 拦截地域编码
+     * set 错误原因
      *
-     * @param value
+     * @param message
      */
-    public GeoBlack value(String value) {
-        this.value = value;
+    public FailedPort message(String message) {
+        this.message = message;
         return this;
     }
 

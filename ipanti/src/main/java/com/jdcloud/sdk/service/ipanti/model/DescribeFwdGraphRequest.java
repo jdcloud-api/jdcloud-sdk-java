@@ -37,7 +37,7 @@ public class DescribeFwdGraphRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 开始时间, 最多查最近 60 天, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      * Required:true
      */
     @Required
@@ -45,9 +45,7 @@ public class DescribeFwdGraphRequest extends JdcloudRequest implements java.io.S
 
     /**
      * 查询的结束时间, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
-     * Required:true
      */
-    @Required
     private String endTime;
 
     /**
@@ -64,7 +62,7 @@ public class DescribeFwdGraphRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 开始时间, 最多查最近 60 天, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * get 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @return
      */
@@ -73,7 +71,7 @@ public class DescribeFwdGraphRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 开始时间, 最多查最近 60 天, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param startTime
      */
@@ -137,7 +135,7 @@ public class DescribeFwdGraphRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 开始时间, 最多查最近 60 天, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param startTime
      */
