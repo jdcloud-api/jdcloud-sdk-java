@@ -36,6 +36,11 @@ public class WebRuleSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 高防 IP
+     */
+    private String serviceIp;
+
+    /**
      * 子域名
      * Required:true
      */
@@ -50,89 +55,89 @@ public class WebRuleSpec  implements java.io.Serializable {
     private WebRuleProtocol protocol;
 
     /**
-     * HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      */
     private List<Integer> port;
 
     /**
-     * HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      */
     private List<Integer> httpsPort;
 
     /**
-     * 回源类型：A或者CNAME
+     * 回源类型：A 或者 CNAME
      * Required:true
      */
     @Required
     private String originType;
 
     /**
-     * originType 为 A 时，需要设置该字段
+     * originType 为 A 时, 需要设置该字段
      */
     private List<OriginAddrItem> originAddr;
 
     /**
-     * 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
+     * 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      */
     private List<String> onlineAddr;
 
     /**
-     * 回源域名,originType为CNAME时需要指定该字段
+     * 回源域名, originType 为 CNAME 时需要指定该字段
      */
     private String originDomain;
 
     /**
-     * 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      * Required:true
      */
     @Required
     private String algorithm;
 
     /**
-     * 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
-  - 0 不开启强制跳转
-  - 1 开启强制跳转
-
+     * 是否开启 HTTPS 强制跳转, protocol.http 和 protocol.https 都为 true 时此参数生效. &lt;br&gt;- 0: 不开启强制跳转. &lt;br&gt;- 1: 开启强制跳转
      */
     private Integer forceJump;
 
     /**
-     * 是否为自定义端口号，0为默认 1为自定义
+     * 是否为自定义端口号. 0: 默认&lt;br&gt;- 1: 自定义
      */
     private Integer customPortStatus;
 
     /**
-     * 是否开启http回源, 当勾选HTTPS时可以配置该属性
-  - 0 不开启
-  - 1 开启
-
+     * 是否开启 HTTP 回源, protocol.https 为 true 时此参数生效. &lt;br&gt;- 0: 不开启. &lt;br&gt;- 1: 开启
      */
     private Integer httpOrigin;
 
     /**
-     * 是否开启 WebSocket, 0 为不开启, 1 为开启
+     * 是否开启 WebSocket.&lt;br&gt;- 0: 不开启&lt;br&gt;- 1: 开启
      * Required:true
      */
     @Required
     private Integer webSocketStatus;
 
     /**
-     * 证书内容
+     * 按区域分流回源配置
      */
-    private String httpsCertContent;
+    private List<GeoRsRoute> geoRsRoute;
+
 
     /**
-     * 证书私钥
+     * get 高防 IP
+     *
+     * @return
      */
-    private String httpsRsaKey;
+    public String getServiceIp() {
+        return serviceIp;
+    }
 
     /**
-     * 证书 Id
-  - 如果传 certId, 请确认已经上传了相应的证书
-  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
+     * set 高防 IP
+     *
+     * @param serviceIp
      */
-    private String certId;
-
+    public void setServiceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
+    }
 
     /**
      * get 子域名
@@ -171,7 +176,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * get HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @return
      */
@@ -180,7 +185,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * set HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param port
      */
@@ -189,7 +194,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * get HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @return
      */
@@ -198,7 +203,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * set HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param httpsPort
      */
@@ -207,7 +212,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 回源类型：A或者CNAME
+     * get 回源类型：A 或者 CNAME
      *
      * @return
      */
@@ -216,7 +221,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型：A或者CNAME
+     * set 回源类型：A 或者 CNAME
      *
      * @param originType
      */
@@ -225,7 +230,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get originType 为 A 时，需要设置该字段
+     * get originType 为 A 时, 需要设置该字段
      *
      * @return
      */
@@ -234,7 +239,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set originType 为 A 时，需要设置该字段
+     * set originType 为 A 时, 需要设置该字段
      *
      * @param originAddr
      */
@@ -243,7 +248,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
+     * get 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      *
      * @return
      */
@@ -252,7 +257,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
+     * set 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */
@@ -261,7 +266,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 回源域名,originType为CNAME时需要指定该字段
+     * get 回源域名, originType 为 CNAME 时需要指定该字段
      *
      * @return
      */
@@ -270,7 +275,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源域名,originType为CNAME时需要指定该字段
+     * set 回源域名, originType 为 CNAME 时需要指定该字段
      *
      * @param originDomain
      */
@@ -279,7 +284,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * get 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @return
      */
@@ -288,7 +293,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * set 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @param algorithm
      */
@@ -297,10 +302,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
-  - 0 不开启强制跳转
-  - 1 开启强制跳转
-
+     * get 是否开启 HTTPS 强制跳转, protocol.http 和 protocol.https 都为 true 时此参数生效. &lt;br&gt;- 0: 不开启强制跳转. &lt;br&gt;- 1: 开启强制跳转
      *
      * @return
      */
@@ -309,10 +311,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
-  - 0 不开启强制跳转
-  - 1 开启强制跳转
-
+     * set 是否开启 HTTPS 强制跳转, protocol.http 和 protocol.https 都为 true 时此参数生效. &lt;br&gt;- 0: 不开启强制跳转. &lt;br&gt;- 1: 开启强制跳转
      *
      * @param forceJump
      */
@@ -321,7 +320,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否为自定义端口号，0为默认 1为自定义
+     * get 是否为自定义端口号. 0: 默认&lt;br&gt;- 1: 自定义
      *
      * @return
      */
@@ -330,7 +329,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否为自定义端口号，0为默认 1为自定义
+     * set 是否为自定义端口号. 0: 默认&lt;br&gt;- 1: 自定义
      *
      * @param customPortStatus
      */
@@ -339,10 +338,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否开启http回源, 当勾选HTTPS时可以配置该属性
-  - 0 不开启
-  - 1 开启
-
+     * get 是否开启 HTTP 回源, protocol.https 为 true 时此参数生效. &lt;br&gt;- 0: 不开启. &lt;br&gt;- 1: 开启
      *
      * @return
      */
@@ -351,10 +347,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启http回源, 当勾选HTTPS时可以配置该属性
-  - 0 不开启
-  - 1 开启
-
+     * set 是否开启 HTTP 回源, protocol.https 为 true 时此参数生效. &lt;br&gt;- 0: 不开启. &lt;br&gt;- 1: 开启
      *
      * @param httpOrigin
      */
@@ -363,7 +356,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否开启 WebSocket, 0 为不开启, 1 为开启
+     * get 是否开启 WebSocket.&lt;br&gt;- 0: 不开启&lt;br&gt;- 1: 开启
      *
      * @return
      */
@@ -372,7 +365,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启 WebSocket, 0 为不开启, 1 为开启
+     * set 是否开启 WebSocket.&lt;br&gt;- 0: 不开启&lt;br&gt;- 1: 开启
      *
      * @param webSocketStatus
      */
@@ -381,63 +374,33 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 证书内容
+     * get 按区域分流回源配置
      *
      * @return
      */
-    public String getHttpsCertContent() {
-        return httpsCertContent;
+    public List<GeoRsRoute> getGeoRsRoute() {
+        return geoRsRoute;
     }
 
     /**
-     * set 证书内容
+     * set 按区域分流回源配置
      *
-     * @param httpsCertContent
+     * @param geoRsRoute
      */
-    public void setHttpsCertContent(String httpsCertContent) {
-        this.httpsCertContent = httpsCertContent;
+    public void setGeoRsRoute(List<GeoRsRoute> geoRsRoute) {
+        this.geoRsRoute = geoRsRoute;
     }
+
 
     /**
-     * get 证书私钥
+     * set 高防 IP
      *
-     * @return
+     * @param serviceIp
      */
-    public String getHttpsRsaKey() {
-        return httpsRsaKey;
+    public WebRuleSpec serviceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
+        return this;
     }
-
-    /**
-     * set 证书私钥
-     *
-     * @param httpsRsaKey
-     */
-    public void setHttpsRsaKey(String httpsRsaKey) {
-        this.httpsRsaKey = httpsRsaKey;
-    }
-
-    /**
-     * get 证书 Id
-  - 如果传 certId, 请确认已经上传了相应的证书
-  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-     *
-     * @return
-     */
-    public String getCertId() {
-        return certId;
-    }
-
-    /**
-     * set 证书 Id
-  - 如果传 certId, 请确认已经上传了相应的证书
-  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-     *
-     * @param certId
-     */
-    public void setCertId(String certId) {
-        this.certId = certId;
-    }
-
 
     /**
      * set 子域名
@@ -460,7 +423,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * set HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param port
      */
@@ -470,7 +433,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * set HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param httpsPort
      */
@@ -480,7 +443,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型：A或者CNAME
+     * set 回源类型：A 或者 CNAME
      *
      * @param originType
      */
@@ -490,7 +453,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set originType 为 A 时，需要设置该字段
+     * set originType 为 A 时, 需要设置该字段
      *
      * @param originAddr
      */
@@ -500,7 +463,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
+     * set 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */
@@ -510,7 +473,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 回源域名,originType为CNAME时需要指定该字段
+     * set 回源域名, originType 为 CNAME 时需要指定该字段
      *
      * @param originDomain
      */
@@ -520,7 +483,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则：wrr-&gt;带权重的轮询，rr-&gt;不带权重的轮询
+     * set 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @param algorithm
      */
@@ -530,10 +493,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启 https 强制跳转，当 protocol 为 HTTP_HTTPS 时可以配置该属性
-  - 0 不开启强制跳转
-  - 1 开启强制跳转
-
+     * set 是否开启 HTTPS 强制跳转, protocol.http 和 protocol.https 都为 true 时此参数生效. &lt;br&gt;- 0: 不开启强制跳转. &lt;br&gt;- 1: 开启强制跳转
      *
      * @param forceJump
      */
@@ -543,7 +503,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否为自定义端口号，0为默认 1为自定义
+     * set 是否为自定义端口号. 0: 默认&lt;br&gt;- 1: 自定义
      *
      * @param customPortStatus
      */
@@ -553,10 +513,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启http回源, 当勾选HTTPS时可以配置该属性
-  - 0 不开启
-  - 1 开启
-
+     * set 是否开启 HTTP 回源, protocol.https 为 true 时此参数生效. &lt;br&gt;- 0: 不开启. &lt;br&gt;- 1: 开启
      *
      * @param httpOrigin
      */
@@ -566,7 +523,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否开启 WebSocket, 0 为不开启, 1 为开启
+     * set 是否开启 WebSocket.&lt;br&gt;- 0: 不开启&lt;br&gt;- 1: 开启
      *
      * @param webSocketStatus
      */
@@ -576,40 +533,18 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 证书内容
+     * set 按区域分流回源配置
      *
-     * @param httpsCertContent
+     * @param geoRsRoute
      */
-    public WebRuleSpec httpsCertContent(String httpsCertContent) {
-        this.httpsCertContent = httpsCertContent;
-        return this;
-    }
-
-    /**
-     * set 证书私钥
-     *
-     * @param httpsRsaKey
-     */
-    public WebRuleSpec httpsRsaKey(String httpsRsaKey) {
-        this.httpsRsaKey = httpsRsaKey;
-        return this;
-    }
-
-    /**
-     * set 证书 Id
-  - 如果传 certId, 请确认已经上传了相应的证书
-  - certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-     *
-     * @param certId
-     */
-    public WebRuleSpec certId(String certId) {
-        this.certId = certId;
+    public WebRuleSpec geoRsRoute(List<GeoRsRoute> geoRsRoute) {
+        this.geoRsRoute = geoRsRoute;
         return this;
     }
 
 
     /**
-     * add item to HTTP协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * add item to HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param port
      */
@@ -621,7 +556,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to HTTPS协议的端口号，如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * add item to HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
      *
      * @param httpsPort
      */
@@ -633,7 +568,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to originType 为 A 时，需要设置该字段
+     * add item to originType 为 A 时, 需要设置该字段
      *
      * @param originAddr
      */
@@ -645,7 +580,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 备用的回源地址列表，可以配置为一个域名或者多个 ip 地址
+     * add item to 备用的回源地址列表, 可以配置为一个域名或者多个 ip 地址
      *
      * @param onlineAddr
      */
@@ -654,6 +589,18 @@ public class WebRuleSpec  implements java.io.Serializable {
             this.onlineAddr = new ArrayList<>();
         }
         this.onlineAddr.add(onlineAddr);
+    }
+
+    /**
+     * add item to 按区域分流回源配置
+     *
+     * @param geoRsRoute
+     */
+    public void addGeoRsRoute(GeoRsRoute geoRsRoute) {
+        if (this.geoRsRoute == null) {
+            this.geoRsRoute = new ArrayList<>();
+        }
+        this.geoRsRoute.add(geoRsRoute);
     }
 
 }

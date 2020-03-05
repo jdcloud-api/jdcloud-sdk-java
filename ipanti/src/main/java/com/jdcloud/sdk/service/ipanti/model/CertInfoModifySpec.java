@@ -33,10 +33,7 @@ public class CertInfoModifySpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 证书 Id
-- 如果传 certId, 请确认已经上传了相应的证书
-- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-
+     * 证书 Id&lt;br&gt;- 如果传 certId, 请确认已经上传了相应的证书&lt;br&gt;- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      */
     private String certId;
 
@@ -52,10 +49,7 @@ public class CertInfoModifySpec  implements java.io.Serializable {
 
 
     /**
-     * get 证书 Id
-- 如果传 certId, 请确认已经上传了相应的证书
-- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-
+     * get 证书 Id&lt;br&gt;- 如果传 certId, 请确认已经上传了相应的证书&lt;br&gt;- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      *
      * @return
      */
@@ -64,10 +58,7 @@ public class CertInfoModifySpec  implements java.io.Serializable {
     }
 
     /**
-     * set 证书 Id
-- 如果传 certId, 请确认已经上传了相应的证书
-- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-
+     * set 证书 Id&lt;br&gt;- 如果传 certId, 请确认已经上传了相应的证书&lt;br&gt;- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      *
      * @param certId
      */
@@ -113,10 +104,7 @@ public class CertInfoModifySpec  implements java.io.Serializable {
 
 
     /**
-     * set 证书 Id
-- 如果传 certId, 请确认已经上传了相应的证书
-- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
-
+     * set 证书 Id&lt;br&gt;- 如果传 certId, 请确认已经上传了相应的证书&lt;br&gt;- certId 缺省时网站规则将使用 httpsCertContent, httpsRsaKey 对应的证书
      *
      * @param certId
      */

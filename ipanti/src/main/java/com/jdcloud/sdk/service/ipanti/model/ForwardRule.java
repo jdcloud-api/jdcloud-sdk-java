@@ -35,29 +35,34 @@ public class ForwardRule  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则id
+     * 规则 Id
      */
     private String id;
 
     /**
-     * 实例id
+     * 实例 Id
      */
     private String instanceId;
 
     /**
-     * TCP或UDP
+     * TCP 或 UDP
      */
     private String protocol;
 
     /**
-     * 规则的cname
+     * 规则的 CNAME
      */
     private String cname;
 
     /**
-     * 回源类型: ip或者domain
+     * 回源类型: ip 或者 domain
      */
     private String originType;
+
+    /**
+     * 高防 IP
+     */
+    private String serviceIp;
 
     /**
      * 端口号
@@ -65,11 +70,7 @@ public class ForwardRule  implements java.io.Serializable {
     private Integer port;
 
     /**
-     * 转发规则
-- wrr 带权重的轮询
-- rr  不带权重的轮询
-- sh  源地址hash
-
+     * 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      */
     private String algorithm;
 
@@ -94,13 +95,13 @@ public class ForwardRule  implements java.io.Serializable {
     private Integer originPort;
 
     /**
-     * 0防御状态，1回源状态
+     * 0: 防御状态&lt;br&gt;1: 回源状态
      */
     private Integer status;
 
 
     /**
-     * get 规则id
+     * get 规则 Id
      *
      * @return
      */
@@ -109,7 +110,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则id
+     * set 规则 Id
      *
      * @param id
      */
@@ -118,7 +119,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get 实例id
+     * get 实例 Id
      *
      * @return
      */
@@ -127,7 +128,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 实例id
+     * set 实例 Id
      *
      * @param instanceId
      */
@@ -136,7 +137,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get TCP或UDP
+     * get TCP 或 UDP
      *
      * @return
      */
@@ -145,7 +146,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set TCP或UDP
+     * set TCP 或 UDP
      *
      * @param protocol
      */
@@ -154,7 +155,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get 规则的cname
+     * get 规则的 CNAME
      *
      * @return
      */
@@ -163,7 +164,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则的cname
+     * set 规则的 CNAME
      *
      * @param cname
      */
@@ -172,7 +173,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get 回源类型: ip或者domain
+     * get 回源类型: ip 或者 domain
      *
      * @return
      */
@@ -181,12 +182,30 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型: ip或者domain
+     * set 回源类型: ip 或者 domain
      *
      * @param originType
      */
     public void setOriginType(String originType) {
         this.originType = originType;
+    }
+
+    /**
+     * get 高防 IP
+     *
+     * @return
+     */
+    public String getServiceIp() {
+        return serviceIp;
+    }
+
+    /**
+     * set 高防 IP
+     *
+     * @param serviceIp
+     */
+    public void setServiceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
     }
 
     /**
@@ -208,11 +227,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get 转发规则
-- wrr 带权重的轮询
-- rr  不带权重的轮询
-- sh  源地址hash
-
+     * get 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @return
      */
@@ -221,11 +236,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则
-- wrr 带权重的轮询
-- rr  不带权重的轮询
-- sh  源地址hash
-
+     * set 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @param algorithm
      */
@@ -306,7 +317,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get 0防御状态，1回源状态
+     * get 0: 防御状态&lt;br&gt;1: 回源状态
      *
      * @return
      */
@@ -315,7 +326,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 0防御状态，1回源状态
+     * set 0: 防御状态&lt;br&gt;1: 回源状态
      *
      * @param status
      */
@@ -325,7 +336,7 @@ public class ForwardRule  implements java.io.Serializable {
 
 
     /**
-     * set 规则id
+     * set 规则 Id
      *
      * @param id
      */
@@ -335,7 +346,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 实例id
+     * set 实例 Id
      *
      * @param instanceId
      */
@@ -345,7 +356,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set TCP或UDP
+     * set TCP 或 UDP
      *
      * @param protocol
      */
@@ -355,7 +366,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 规则的cname
+     * set 规则的 CNAME
      *
      * @param cname
      */
@@ -365,12 +376,22 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 回源类型: ip或者domain
+     * set 回源类型: ip 或者 domain
      *
      * @param originType
      */
     public ForwardRule originType(String originType) {
         this.originType = originType;
+        return this;
+    }
+
+    /**
+     * set 高防 IP
+     *
+     * @param serviceIp
+     */
+    public ForwardRule serviceIp(String serviceIp) {
+        this.serviceIp = serviceIp;
         return this;
     }
 
@@ -385,11 +406,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 转发规则
-- wrr 带权重的轮询
-- rr  不带权重的轮询
-- sh  源地址hash
-
+     * set 转发规则. &lt;br&gt;- wrr: 带权重的轮询&lt;br&gt;- rr:  不带权重的轮询&lt;br&gt;- sh:  源地址hash
      *
      * @param algorithm
      */
@@ -439,7 +456,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 0防御状态，1回源状态
+     * set 0: 防御状态&lt;br&gt;1: 回源状态
      *
      * @param status
      */

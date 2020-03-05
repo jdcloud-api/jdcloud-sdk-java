@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.yundingdatapush.model.AddDatapushVenderRequest;
 import com.jdcloud.sdk.service.yundingdatapush.model.AddDatapushVenderResponse;
 import com.jdcloud.sdk.service.yundingdatapush.client.AddDatapushVenderExecutor;
+import com.jdcloud.sdk.service.yundingdatapush.model.CreateOrderSyncRequest;
+import com.jdcloud.sdk.service.yundingdatapush.model.CreateOrderSyncResponse;
+import com.jdcloud.sdk.service.yundingdatapush.client.CreateOrderSyncExecutor;
 import com.jdcloud.sdk.service.yundingdatapush.model.DescribeDatapushVendersRequest;
 import com.jdcloud.sdk.service.yundingdatapush.model.DescribeDatapushVendersResponse;
 import com.jdcloud.sdk.service.yundingdatapush.client.DescribeDatapushVendersExecutor;
@@ -102,6 +105,17 @@ public class YundingdatapushClient extends JdcloudClient {
      */
     public AddDatapushVenderResponse addDatapushVender(AddDatapushVenderRequest request) throws JdcloudSdkException {
         return new AddDatapushVenderExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建历史订单同步
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateOrderSyncResponse createOrderSync(CreateOrderSyncRequest request) throws JdcloudSdkException {
+        return new CreateOrderSyncExecutor().client(this).execute(request);
     }
 
     /**

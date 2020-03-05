@@ -45,17 +45,29 @@ public class Instance  implements java.io.Serializable {
     private String name;
 
     /**
-     * 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+     * 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      */
     private Integer carrier;
 
     /**
-     * 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
-- 0: IPV4,
-- 1: IPV4/IPV6
-
+     * 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路. &lt;br&gt;- 0: IPV4. &lt;br&gt;- 1: IPV4/IPV6
      */
     private Integer ipType;
+
+    /**
+     * IP 数量
+     */
+    private Integer ipCount;
+
+    /**
+     * 可配的转发端口数量
+     */
+    private Integer portCount;
+
+    /**
+     * 可配的网站规则域名数量
+     */
+    private Integer domainCount;
 
     /**
      * 触发弹性带宽的次数
@@ -103,12 +115,12 @@ public class Instance  implements java.io.Serializable {
     private Integer webRuleCount;
 
     /**
-     * PAID|ARREARS|EXPIRED
+     * 计费状态. &lt;br&gt;- PAID: 已支付&lt;br&gt;- ARREARS: 欠费&lt;br&gt;- EXPIRED: 过期
      */
     private String chargeStatus;
 
     /**
-     * SAFE|CLEANING|BLOCKING
+     * 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
      */
     private String securityStatus;
 
@@ -128,28 +140,17 @@ public class Instance  implements java.io.Serializable {
     private String resourceId;
 
     /**
-     * CC 防护观察者模式.
-- 0: 关闭
-- 1: 开启
-
+     * CC 防护观察者模式. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      */
     private Integer ccObserveMode;
 
     /**
-     * CC 防护模式.
-- 0: 正常
-- 1: 紧急
-- 2: 宽松
-- 3: 自定义
-
+     * CC 防护模式. &lt;br&gt;- 0: 正常 &lt;br&gt;- 1: 紧急 &lt;br&gt;- 2: 宽松 &lt;br&gt;- 3: 自定义
      */
     private Integer ccProtectMode;
 
     /**
-     * CC 开关状态.
-- 0: 关闭
-- 1: 开启
-
+     * CC 开关状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      */
     private Integer ccProtectStatus;
 
@@ -169,10 +170,7 @@ public class Instance  implements java.io.Serializable {
     private List<String> ipBlackList;
 
     /**
-     * IP 黑名单状态.
-- 0: 关闭
-- 1: 开启
-
+     * IP 黑名单状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      */
     private Integer ipBlackStatus;
 
@@ -182,10 +180,7 @@ public class Instance  implements java.io.Serializable {
     private List<String> ipWhiteList;
 
     /**
-     * IP 白名单状态.
-- 0: 关闭
-- 1: 开启
-
+     * IP 白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      */
     private Integer ipWhiteStatus;
 
@@ -195,27 +190,27 @@ public class Instance  implements java.io.Serializable {
     private List<String> urlWhitelist;
 
     /**
-     * url白名单状态，0关闭，1开启
+     * url白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      */
     private Integer urlWhitelistStatus;
 
     /**
-     * ccProtectMode为自定义模式时，每个Host的防护阈值
+     * ccProtectMode为自定义模式时, 每个Host的防护阈值
      */
     private Integer hostQps;
 
     /**
-     * ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+     * ccProtectMode为自定义模式时, 每个Host+URI的防护阈值
      */
     private Integer hostUrlQps;
 
     /**
-     * ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+     * ccProtectMode为自定义模式时, 每个源IP对Host的防护阈值
      */
     private Integer ipHostQps;
 
     /**
-     * ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+     * ccProtectMode为自定义模式时, 每个源IP对Host+URI的防护阈值
      */
     private Integer ipHostUrlQps;
 
@@ -257,7 +252,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+     * get 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @return
      */
@@ -266,7 +261,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+     * set 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @param carrier
      */
@@ -275,10 +270,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
-- 0: IPV4,
-- 1: IPV4/IPV6
-
+     * get 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路. &lt;br&gt;- 0: IPV4. &lt;br&gt;- 1: IPV4/IPV6
      *
      * @return
      */
@@ -287,15 +279,66 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
-- 0: IPV4,
-- 1: IPV4/IPV6
-
+     * set 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路. &lt;br&gt;- 0: IPV4. &lt;br&gt;- 1: IPV4/IPV6
      *
      * @param ipType
      */
     public void setIpType(Integer ipType) {
         this.ipType = ipType;
+    }
+
+    /**
+     * get IP 数量
+     *
+     * @return
+     */
+    public Integer getIpCount() {
+        return ipCount;
+    }
+
+    /**
+     * set IP 数量
+     *
+     * @param ipCount
+     */
+    public void setIpCount(Integer ipCount) {
+        this.ipCount = ipCount;
+    }
+
+    /**
+     * get 可配的转发端口数量
+     *
+     * @return
+     */
+    public Integer getPortCount() {
+        return portCount;
+    }
+
+    /**
+     * set 可配的转发端口数量
+     *
+     * @param portCount
+     */
+    public void setPortCount(Integer portCount) {
+        this.portCount = portCount;
+    }
+
+    /**
+     * get 可配的网站规则域名数量
+     *
+     * @return
+     */
+    public Integer getDomainCount() {
+        return domainCount;
+    }
+
+    /**
+     * set 可配的网站规则域名数量
+     *
+     * @param domainCount
+     */
+    public void setDomainCount(Integer domainCount) {
+        this.domainCount = domainCount;
     }
 
     /**
@@ -461,7 +504,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get PAID|ARREARS|EXPIRED
+     * get 计费状态. &lt;br&gt;- PAID: 已支付&lt;br&gt;- ARREARS: 欠费&lt;br&gt;- EXPIRED: 过期
      *
      * @return
      */
@@ -470,7 +513,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set PAID|ARREARS|EXPIRED
+     * set 计费状态. &lt;br&gt;- PAID: 已支付&lt;br&gt;- ARREARS: 欠费&lt;br&gt;- EXPIRED: 过期
      *
      * @param chargeStatus
      */
@@ -479,7 +522,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get SAFE|CLEANING|BLOCKING
+     * get 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
      *
      * @return
      */
@@ -488,7 +531,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set SAFE|CLEANING|BLOCKING
+     * set 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
      *
      * @param securityStatus
      */
@@ -551,10 +594,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get CC 防护观察者模式.
-- 0: 关闭
-- 1: 开启
-
+     * get CC 防护观察者模式. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @return
      */
@@ -563,10 +603,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set CC 防护观察者模式.
-- 0: 关闭
-- 1: 开启
-
+     * set CC 防护观察者模式. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @param ccObserveMode
      */
@@ -575,12 +612,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get CC 防护模式.
-- 0: 正常
-- 1: 紧急
-- 2: 宽松
-- 3: 自定义
-
+     * get CC 防护模式. &lt;br&gt;- 0: 正常 &lt;br&gt;- 1: 紧急 &lt;br&gt;- 2: 宽松 &lt;br&gt;- 3: 自定义
      *
      * @return
      */
@@ -589,12 +621,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set CC 防护模式.
-- 0: 正常
-- 1: 紧急
-- 2: 宽松
-- 3: 自定义
-
+     * set CC 防护模式. &lt;br&gt;- 0: 正常 &lt;br&gt;- 1: 紧急 &lt;br&gt;- 2: 宽松 &lt;br&gt;- 3: 自定义
      *
      * @param ccProtectMode
      */
@@ -603,10 +630,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get CC 开关状态.
-- 0: 关闭
-- 1: 开启
-
+     * get CC 开关状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @return
      */
@@ -615,10 +639,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set CC 开关状态.
-- 0: 关闭
-- 1: 开启
-
+     * set CC 开关状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @param ccProtectStatus
      */
@@ -681,10 +702,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get IP 黑名单状态.
-- 0: 关闭
-- 1: 开启
-
+     * get IP 黑名单状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @return
      */
@@ -693,10 +711,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set IP 黑名单状态.
-- 0: 关闭
-- 1: 开启
-
+     * set IP 黑名单状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @param ipBlackStatus
      */
@@ -723,10 +738,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get IP 白名单状态.
-- 0: 关闭
-- 1: 开启
-
+     * get IP 白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @return
      */
@@ -735,10 +747,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set IP 白名单状态.
-- 0: 关闭
-- 1: 开启
-
+     * set IP 白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @param ipWhiteStatus
      */
@@ -765,7 +774,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get url白名单状态，0关闭，1开启
+     * get url白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @return
      */
@@ -774,7 +783,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set url白名单状态，0关闭，1开启
+     * set url白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @param urlWhitelistStatus
      */
@@ -783,7 +792,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get ccProtectMode为自定义模式时，每个Host的防护阈值
+     * get ccProtectMode为自定义模式时, 每个Host的防护阈值
      *
      * @return
      */
@@ -792,7 +801,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ccProtectMode为自定义模式时，每个Host的防护阈值
+     * set ccProtectMode为自定义模式时, 每个Host的防护阈值
      *
      * @param hostQps
      */
@@ -801,7 +810,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+     * get ccProtectMode为自定义模式时, 每个Host+URI的防护阈值
      *
      * @return
      */
@@ -810,7 +819,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+     * set ccProtectMode为自定义模式时, 每个Host+URI的防护阈值
      *
      * @param hostUrlQps
      */
@@ -819,7 +828,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+     * get ccProtectMode为自定义模式时, 每个源IP对Host的防护阈值
      *
      * @return
      */
@@ -828,7 +837,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+     * set ccProtectMode为自定义模式时, 每个源IP对Host的防护阈值
      *
      * @param ipHostQps
      */
@@ -837,7 +846,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+     * get ccProtectMode为自定义模式时, 每个源IP对Host+URI的防护阈值
      *
      * @return
      */
@@ -846,7 +855,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+     * set ccProtectMode为自定义模式时, 每个源IP对Host+URI的防护阈值
      *
      * @param ipHostUrlQps
      */
@@ -876,7 +885,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+     * set 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @param carrier
      */
@@ -886,15 +895,42 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路:
-- 0: IPV4,
-- 1: IPV4/IPV6
-
+     * set 可防护 IP 类型, 目前仅电信线路支持 IPV6 线路. &lt;br&gt;- 0: IPV4. &lt;br&gt;- 1: IPV4/IPV6
      *
      * @param ipType
      */
     public Instance ipType(Integer ipType) {
         this.ipType = ipType;
+        return this;
+    }
+
+    /**
+     * set IP 数量
+     *
+     * @param ipCount
+     */
+    public Instance ipCount(Integer ipCount) {
+        this.ipCount = ipCount;
+        return this;
+    }
+
+    /**
+     * set 可配的转发端口数量
+     *
+     * @param portCount
+     */
+    public Instance portCount(Integer portCount) {
+        this.portCount = portCount;
+        return this;
+    }
+
+    /**
+     * set 可配的网站规则域名数量
+     *
+     * @param domainCount
+     */
+    public Instance domainCount(Integer domainCount) {
+        this.domainCount = domainCount;
         return this;
     }
 
@@ -989,7 +1025,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set PAID|ARREARS|EXPIRED
+     * set 计费状态. &lt;br&gt;- PAID: 已支付&lt;br&gt;- ARREARS: 欠费&lt;br&gt;- EXPIRED: 过期
      *
      * @param chargeStatus
      */
@@ -999,7 +1035,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set SAFE|CLEANING|BLOCKING
+     * set 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
      *
      * @param securityStatus
      */
@@ -1039,10 +1075,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set CC 防护观察者模式.
-- 0: 关闭
-- 1: 开启
-
+     * set CC 防护观察者模式. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @param ccObserveMode
      */
@@ -1052,12 +1085,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set CC 防护模式.
-- 0: 正常
-- 1: 紧急
-- 2: 宽松
-- 3: 自定义
-
+     * set CC 防护模式. &lt;br&gt;- 0: 正常 &lt;br&gt;- 1: 紧急 &lt;br&gt;- 2: 宽松 &lt;br&gt;- 3: 自定义
      *
      * @param ccProtectMode
      */
@@ -1067,10 +1095,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set CC 开关状态.
-- 0: 关闭
-- 1: 开启
-
+     * set CC 开关状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @param ccProtectStatus
      */
@@ -1110,10 +1135,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set IP 黑名单状态.
-- 0: 关闭
-- 1: 开启
-
+     * set IP 黑名单状态. &lt;br&gt;- 0: 关闭 &lt;br&gt;- 1: 开启
      *
      * @param ipBlackStatus
      */
@@ -1133,10 +1155,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set IP 白名单状态.
-- 0: 关闭
-- 1: 开启
-
+     * set IP 白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @param ipWhiteStatus
      */
@@ -1156,7 +1175,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set url白名单状态，0关闭，1开启
+     * set url白名单状态. &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
      *
      * @param urlWhitelistStatus
      */
@@ -1166,7 +1185,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ccProtectMode为自定义模式时，每个Host的防护阈值
+     * set ccProtectMode为自定义模式时, 每个Host的防护阈值
      *
      * @param hostQps
      */
@@ -1176,7 +1195,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ccProtectMode为自定义模式时，每个Host+URI的防护阈值
+     * set ccProtectMode为自定义模式时, 每个Host+URI的防护阈值
      *
      * @param hostUrlQps
      */
@@ -1186,7 +1205,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ccProtectMode为自定义模式时，每个源IP对Host的防护阈值
+     * set ccProtectMode为自定义模式时, 每个源IP对Host的防护阈值
      *
      * @param ipHostQps
      */
@@ -1196,7 +1215,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set ccProtectMode为自定义模式时，每个源IP对Host+URI的防护阈值
+     * set ccProtectMode为自定义模式时, 每个源IP对Host+URI的防护阈值
      *
      * @param ipHostUrlQps
      */

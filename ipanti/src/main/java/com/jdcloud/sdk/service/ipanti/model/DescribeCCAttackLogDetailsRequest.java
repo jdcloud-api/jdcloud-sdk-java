@@ -49,17 +49,13 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     private Integer pageSize;
 
     /**
-     * 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
-     * Required:true
+     * 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ, attackId 为空时必传
      */
-    @Required
     private String startTime;
 
     /**
      * 查询的结束时间, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
-     * Required:true
      */
-    @Required
     private String endTime;
 
     /**
@@ -68,12 +64,12 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     private String instanceId;
 
     /**
-     * 查询的子域名，只有选中某一个实例后才能多选子域名
+     * 查询的子域名, 只有选中某一个实例后才能多选子域名
      */
     private List<String> subDomain;
 
     /**
-     * CC 攻击记录Id
+     * CC 攻击记录 Id, 不为空时忽略 startTime, endTime
      */
     private String attackId;
 
@@ -122,7 +118,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * get 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * get 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ, attackId 为空时必传
      *
      * @return
      */
@@ -131,7 +127,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ, attackId 为空时必传
      *
      * @param startTime
      */
@@ -176,7 +172,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * get 查询的子域名，只有选中某一个实例后才能多选子域名
+     * get 查询的子域名, 只有选中某一个实例后才能多选子域名
      *
      * @return
      */
@@ -185,7 +181,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 查询的子域名，只有选中某一个实例后才能多选子域名
+     * set 查询的子域名, 只有选中某一个实例后才能多选子域名
      *
      * @param subDomain
      */
@@ -194,7 +190,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * get CC 攻击记录Id
+     * get CC 攻击记录 Id, 不为空时忽略 startTime, endTime
      *
      * @return
      */
@@ -203,7 +199,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set CC 攻击记录Id
+     * set CC 攻击记录 Id, 不为空时忽略 startTime, endTime
      *
      * @param attackId
      */
@@ -251,7 +247,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 开始时间, 只能查询最近 60 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ, attackId 为空时必传
      *
      * @param startTime
      */
@@ -281,7 +277,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set 查询的子域名，只有选中某一个实例后才能多选子域名
+     * set 查询的子域名, 只有选中某一个实例后才能多选子域名
      *
      * @param subDomain
      */
@@ -291,7 +287,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
     }
 
     /**
-     * set CC 攻击记录Id
+     * set CC 攻击记录 Id, 不为空时忽略 startTime, endTime
      *
      * @param attackId
      */
@@ -312,7 +308,7 @@ public class DescribeCCAttackLogDetailsRequest extends JdcloudRequest implements
 
 
     /**
-     * add item to 查询的子域名，只有选中某一个实例后才能多选子域名
+     * add item to 查询的子域名, 只有选中某一个实例后才能多选子域名
      *
      * @param subDomain
      */

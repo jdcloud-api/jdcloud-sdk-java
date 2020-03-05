@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.ipanti.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * ipSet
@@ -43,11 +41,6 @@ public class IpSet  implements java.io.Serializable {
      * IP 黑白名单的名称
      */
     private String name;
-
-    /**
-     * IP 或 IP 段的数组
-     */
-    private List<String> ip;
 
 
     /**
@@ -86,24 +79,6 @@ public class IpSet  implements java.io.Serializable {
         this.name = name;
     }
 
-    /**
-     * get IP 或 IP 段的数组
-     *
-     * @return
-     */
-    public List<String> getIp() {
-        return ip;
-    }
-
-    /**
-     * set IP 或 IP 段的数组
-     *
-     * @param ip
-     */
-    public void setIp(List<String> ip) {
-        this.ip = ip;
-    }
-
 
     /**
      * set IP 黑白名单 Id
@@ -125,27 +100,5 @@ public class IpSet  implements java.io.Serializable {
         return this;
     }
 
-    /**
-     * set IP 或 IP 段的数组
-     *
-     * @param ip
-     */
-    public IpSet ip(List<String> ip) {
-        this.ip = ip;
-        return this;
-    }
-
-
-    /**
-     * add item to IP 或 IP 段的数组
-     *
-     * @param ip
-     */
-    public void addIp(String ip) {
-        if (this.ip == null) {
-            this.ip = new ArrayList<>();
-        }
-        this.ip.add(ip);
-    }
 
 }

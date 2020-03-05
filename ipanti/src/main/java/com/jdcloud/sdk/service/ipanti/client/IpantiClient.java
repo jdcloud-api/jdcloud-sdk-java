@@ -184,6 +184,9 @@ import com.jdcloud.sdk.service.ipanti.client.DescribeCCProtectionRuleOfWebRuleEx
 import com.jdcloud.sdk.service.ipanti.model.DisableBlackListRuleOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DisableBlackListRuleOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DisableBlackListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.BindCertRequest;
+import com.jdcloud.sdk.service.ipanti.model.BindCertResponse;
+import com.jdcloud.sdk.service.ipanti.client.BindCertExecutor;
 import com.jdcloud.sdk.service.ipanti.model.SwitchWebRuleOriginRequest;
 import com.jdcloud.sdk.service.ipanti.model.SwitchWebRuleOriginResponse;
 import com.jdcloud.sdk.service.ipanti.client.SwitchWebRuleOriginExecutor;
@@ -247,6 +250,9 @@ import com.jdcloud.sdk.service.ipanti.client.DescribeIpSetUsageExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyCCProtectionConfigOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyCCProtectionConfigOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyCCProtectionConfigOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleRSGeoAreasRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleRSGeoAreasResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeWebRuleRSGeoAreasExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DisableWhiteListRuleOfForwardRuleExecutor;
@@ -906,6 +912,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 网站类规则绑定 SSL 证书
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BindCertResponse bindCert(BindCertRequest request) throws JdcloudSdkException {
+        return new BindCertExecutor().client(this).execute(request);
+    }
+
+    /**
      * 网站类规则切换成回源状态
      *
      * @param request
@@ -1137,6 +1154,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 查询网站类转发规则按地域回源配置 geoRsRoute 可设置的区域
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWebRuleRSGeoAreasResponse describeWebRuleRSGeoAreas(DescribeWebRuleRSGeoAreasRequest request) throws JdcloudSdkException {
+        return new DescribeWebRuleRSGeoAreasExecutor().client(this).execute(request);
+    }
+
+    /**
      * 关闭转发规则的白名单规则
      *
      * @param request
@@ -1291,7 +1319,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 开启网站类规则 CC 观察者模式, 观察模式下，CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
+     * 开启网站类规则 CC 观察者模式, 观察模式下, CC 防护只告警不防御。支持批量操作, 批量操作时 webRuleId 传多个, 以 &#39;,&#39; 分隔, 返回 result.code 为 1 表示操作成功, 为 0 时可能全部失败, 也可能部分失败
      *
      * @param request
      * @return

@@ -44,66 +44,76 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     private String name;
 
     /**
-     * 购买类型：1新购 3升级
+     * 购买类型. &lt;br&gt;- 1: 新购&lt;br&gt;- 3: 升级
      * Required:true
      */
     @Required
     private Integer buyType;
 
     /**
-     * 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+     * 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      * Required:true
      */
     @Required
     private Integer carrier;
 
     /**
-     * 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
-- 0: IPV4,
-- 1: IPV4/IPV6
-
+     * 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路&lt;br&gt;- 0: IPV4,&lt;br&gt;- 1: IPV4/IPV6
      */
     private Integer ipType;
 
     /**
-     * 保底带宽：单位Gbps
+     * IP 数量
+     * Required:true
+     */
+    @Required
+    private Integer ipCount;
+
+    /**
+     * 可配的转发端口数量
+     * Required:true
+     */
+    @Required
+    private Integer portCount;
+
+    /**
+     * 可配的网站规则域名数量
+     */
+    private Integer domainCount;
+
+    /**
+     * 保底带宽: 单位 Gbps
      * Required:true
      */
     @Required
     private Integer bp;
 
     /**
-     * 弹性带宽：单位Gbps
+     * 弹性带宽: 单位 Gbps
      * Required:true
      */
     @Required
     private Integer ep;
 
     /**
-     * 业务带宽：单位Mbps
+     * 业务带宽: 单位 Mbps
      * Required:true
      */
     @Required
     private Integer bw;
 
     /**
-     * 购买防护包时长, 新购高防实例时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      */
     private Long timeSpan;
 
     /**
-     * 购买时长类型, 新购高防实例时必传
-- 3: 月
-- 4: 年
-
+     * 购买时长类型, 新购高防实例时必传&lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      */
     private Integer timeUnit;
 
     /**
-     * 支付成功后跳转的页面，控制台交互模式传该字段
+     * 支付成功后跳转的页面, 控制台交互模式传该字段
      */
     private String returnUrl;
 
@@ -145,7 +155,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 购买类型：1新购 3升级
+     * get 购买类型. &lt;br&gt;- 1: 新购&lt;br&gt;- 3: 升级
      *
      * @return
      */
@@ -154,7 +164,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买类型：1新购 3升级
+     * set 购买类型. &lt;br&gt;- 1: 新购&lt;br&gt;- 3: 升级
      *
      * @param buyType
      */
@@ -163,7 +173,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+     * get 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @return
      */
@@ -172,7 +182,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+     * set 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @param carrier
      */
@@ -181,10 +191,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
-- 0: IPV4,
-- 1: IPV4/IPV6
-
+     * get 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路&lt;br&gt;- 0: IPV4,&lt;br&gt;- 1: IPV4/IPV6
      *
      * @return
      */
@@ -193,10 +200,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
-- 0: IPV4,
-- 1: IPV4/IPV6
-
+     * set 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路&lt;br&gt;- 0: IPV4,&lt;br&gt;- 1: IPV4/IPV6
      *
      * @param ipType
      */
@@ -205,7 +209,61 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 保底带宽：单位Gbps
+     * get IP 数量
+     *
+     * @return
+     */
+    public Integer getIpCount() {
+        return ipCount;
+    }
+
+    /**
+     * set IP 数量
+     *
+     * @param ipCount
+     */
+    public void setIpCount(Integer ipCount) {
+        this.ipCount = ipCount;
+    }
+
+    /**
+     * get 可配的转发端口数量
+     *
+     * @return
+     */
+    public Integer getPortCount() {
+        return portCount;
+    }
+
+    /**
+     * set 可配的转发端口数量
+     *
+     * @param portCount
+     */
+    public void setPortCount(Integer portCount) {
+        this.portCount = portCount;
+    }
+
+    /**
+     * get 可配的网站规则域名数量
+     *
+     * @return
+     */
+    public Integer getDomainCount() {
+        return domainCount;
+    }
+
+    /**
+     * set 可配的网站规则域名数量
+     *
+     * @param domainCount
+     */
+    public void setDomainCount(Integer domainCount) {
+        this.domainCount = domainCount;
+    }
+
+    /**
+     * get 保底带宽: 单位 Gbps
      *
      * @return
      */
@@ -214,7 +272,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 保底带宽：单位Gbps
+     * set 保底带宽: 单位 Gbps
      *
      * @param bp
      */
@@ -223,7 +281,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 弹性带宽：单位Gbps
+     * get 弹性带宽: 单位 Gbps
      *
      * @return
      */
@@ -232,7 +290,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性带宽：单位Gbps
+     * set 弹性带宽: 单位 Gbps
      *
      * @param ep
      */
@@ -241,7 +299,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 业务带宽：单位Mbps
+     * get 业务带宽: 单位 Mbps
      *
      * @return
      */
@@ -250,7 +308,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 业务带宽：单位Mbps
+     * set 业务带宽: 单位 Mbps
      *
      * @param bw
      */
@@ -259,10 +317,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 购买防护包时长, 新购高防实例时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * get 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @return
      */
@@ -271,10 +326,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买防护包时长, 新购高防实例时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * set 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @param timeSpan
      */
@@ -283,10 +335,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 购买时长类型, 新购高防实例时必传
-- 3: 月
-- 4: 年
-
+     * get 购买时长类型, 新购高防实例时必传&lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @return
      */
@@ -295,10 +344,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买时长类型, 新购高防实例时必传
-- 3: 月
-- 4: 年
-
+     * set 购买时长类型, 新购高防实例时必传&lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @param timeUnit
      */
@@ -307,7 +353,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 支付成功后跳转的页面，控制台交互模式传该字段
+     * get 支付成功后跳转的页面, 控制台交互模式传该字段
      *
      * @return
      */
@@ -316,7 +362,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 支付成功后跳转的页面，控制台交互模式传该字段
+     * set 支付成功后跳转的页面, 控制台交互模式传该字段
      *
      * @param returnUrl
      */
@@ -346,7 +392,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买类型：1新购 3升级
+     * set 购买类型. &lt;br&gt;- 1: 新购&lt;br&gt;- 3: 升级
      *
      * @param buyType
      */
@@ -356,7 +402,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 链路类型, 1: 电信, 2: 电信、联通, 3: 电信、联通和移动
+     * set 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @param carrier
      */
@@ -366,10 +412,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路:
-- 0: IPV4,
-- 1: IPV4/IPV6
-
+     * set 可防护 ip 类型, 目前仅电信线路支持 IPV6 线路&lt;br&gt;- 0: IPV4,&lt;br&gt;- 1: IPV4/IPV6
      *
      * @param ipType
      */
@@ -379,7 +422,37 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 保底带宽：单位Gbps
+     * set IP 数量
+     *
+     * @param ipCount
+     */
+    public CreateInstanceSpec ipCount(Integer ipCount) {
+        this.ipCount = ipCount;
+        return this;
+    }
+
+    /**
+     * set 可配的转发端口数量
+     *
+     * @param portCount
+     */
+    public CreateInstanceSpec portCount(Integer portCount) {
+        this.portCount = portCount;
+        return this;
+    }
+
+    /**
+     * set 可配的网站规则域名数量
+     *
+     * @param domainCount
+     */
+    public CreateInstanceSpec domainCount(Integer domainCount) {
+        this.domainCount = domainCount;
+        return this;
+    }
+
+    /**
+     * set 保底带宽: 单位 Gbps
      *
      * @param bp
      */
@@ -389,7 +462,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性带宽：单位Gbps
+     * set 弹性带宽: 单位 Gbps
      *
      * @param ep
      */
@@ -399,7 +472,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 业务带宽：单位Mbps
+     * set 业务带宽: 单位 Mbps
      *
      * @param bw
      */
@@ -409,10 +482,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买防护包时长, 新购高防实例时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * set 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @param timeSpan
      */
@@ -422,10 +492,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买时长类型, 新购高防实例时必传
-- 3: 月
-- 4: 年
-
+     * set 购买时长类型, 新购高防实例时必传&lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @param timeUnit
      */
@@ -435,7 +502,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 支付成功后跳转的页面，控制台交互模式传该字段
+     * set 支付成功后跳转的页面, 控制台交互模式传该字段
      *
      * @param returnUrl
      */
