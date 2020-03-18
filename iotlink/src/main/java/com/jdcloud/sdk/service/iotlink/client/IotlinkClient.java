@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 京东云iotlink接口
- * iotlink相关接口
+ * iotlink接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -40,6 +40,12 @@ import com.jdcloud.sdk.service.iotlink.client.OpenIotCardExecutor;
 import com.jdcloud.sdk.service.iotlink.model.CloseIotCardRequest;
 import com.jdcloud.sdk.service.iotlink.model.CloseIotCardResponse;
 import com.jdcloud.sdk.service.iotlink.client.CloseIotCardExecutor;
+import com.jdcloud.sdk.service.iotlink.model.SearchRequest;
+import com.jdcloud.sdk.service.iotlink.model.SearchResponse;
+import com.jdcloud.sdk.service.iotlink.client.SearchExecutor;
+import com.jdcloud.sdk.service.iotlink.model.OperateRequest;
+import com.jdcloud.sdk.service.iotlink.model.OperateResponse;
+import com.jdcloud.sdk.service.iotlink.client.OperateExecutor;
 import com.jdcloud.sdk.service.iotlink.model.LifeStatusRequest;
 import com.jdcloud.sdk.service.iotlink.model.LifeStatusResponse;
 import com.jdcloud.sdk.service.iotlink.client.LifeStatusExecutor;
@@ -136,6 +142,28 @@ public class IotlinkClient extends JdcloudClient {
      */
     public CloseIotCardResponse closeIotCard(CloseIotCardRequest request) throws JdcloudSdkException {
         return new CloseIotCardExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡查询通用操作
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SearchResponse search(SearchRequest request) throws JdcloudSdkException {
+        return new SearchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡卡操作通用操作
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OperateResponse operate(OperateRequest request) throws JdcloudSdkException {
+        return new OperateExecutor().client(this).execute(request);
     }
 
     /**
