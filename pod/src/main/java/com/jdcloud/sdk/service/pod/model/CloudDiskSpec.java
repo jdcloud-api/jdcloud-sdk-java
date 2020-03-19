@@ -33,6 +33,11 @@ public class CloudDiskSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 磁盘类型，cloud 云盘，local 本地盘（使用前需申请）
+     */
+    private String category;
+
+    /**
      * 云盘ID，指定使用已有云盘
      */
     private String volumeId;
@@ -72,6 +77,24 @@ public class CloudDiskSpec  implements java.io.Serializable {
      */
     private Boolean autoDelete;
 
+
+    /**
+     * get 磁盘类型，cloud 云盘，local 本地盘（使用前需申请）
+     *
+     * @return
+     */
+    public String getCategory() {
+        return category;
+    }
+
+    /**
+     * set 磁盘类型，cloud 云盘，local 本地盘（使用前需申请）
+     *
+     * @param category
+     */
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     /**
      * get 云盘ID，指定使用已有云盘
@@ -217,6 +240,16 @@ public class CloudDiskSpec  implements java.io.Serializable {
         this.autoDelete = autoDelete;
     }
 
+
+    /**
+     * set 磁盘类型，cloud 云盘，local 本地盘（使用前需申请）
+     *
+     * @param category
+     */
+    public CloudDiskSpec category(String category) {
+        this.category = category;
+        return this;
+    }
 
     /**
      * set 云盘ID，指定使用已有云盘

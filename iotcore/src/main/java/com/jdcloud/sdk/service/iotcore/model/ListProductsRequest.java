@@ -48,9 +48,10 @@ public class ListProductsRequest extends JdcloudRequest implements java.io.Seria
     private Integer pageSize;
 
     /**
-     * productName-产品名称，精确匹配，支持单个
+     * productName-产品名称，模糊匹配，支持单个
 productKey-产品key，精确匹配，支持单个
 productType-产品类型，精确匹配，支持单个
+templateName-模板名称，精确匹配，支持多个
 
      */
     private List<Filter> filters;
@@ -107,9 +108,10 @@ productType-产品类型，精确匹配，支持单个
     }
 
     /**
-     * get productName-产品名称，精确匹配，支持单个
+     * get productName-产品名称，模糊匹配，支持单个
 productKey-产品key，精确匹配，支持单个
 productType-产品类型，精确匹配，支持单个
+templateName-模板名称，精确匹配，支持多个
 
      *
      * @return
@@ -119,9 +121,10 @@ productType-产品类型，精确匹配，支持单个
     }
 
     /**
-     * set productName-产品名称，精确匹配，支持单个
+     * set productName-产品名称，模糊匹配，支持单个
 productKey-产品key，精确匹配，支持单个
 productType-产品类型，精确匹配，支持单个
+templateName-模板名称，精确匹配，支持多个
 
      *
      * @param filters
@@ -188,9 +191,10 @@ productType-产品类型，精确匹配，支持单个
     }
 
     /**
-     * set productName-产品名称，精确匹配，支持单个
+     * set productName-产品名称，模糊匹配，支持单个
 productKey-产品key，精确匹配，支持单个
 productType-产品类型，精确匹配，支持单个
+templateName-模板名称，精确匹配，支持多个
 
      *
      * @param filters
@@ -222,9 +226,10 @@ productType-产品类型，精确匹配，支持单个
 
 
     /**
-     * add item to productName-产品名称，精确匹配，支持单个
+     * add item to productName-产品名称，模糊匹配，支持单个
 productKey-产品key，精确匹配，支持单个
 productType-产品类型，精确匹配，支持单个
+templateName-模板名称，精确匹配，支持多个
 
      *
      * @param filter

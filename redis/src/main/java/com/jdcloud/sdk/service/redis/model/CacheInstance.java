@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.charge.model.Charge;
 
 /**
- * 查询缓存Redis实例时，返回的实例信息（列表和详情的信息一样）
+ * 缓存Redis实例信息
  */
 public class CacheInstance  implements java.io.Serializable {
 
@@ -46,7 +46,7 @@ public class CacheInstance  implements java.io.Serializable {
     private String cacheInstanceName;
 
     /**
-     * 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      */
     private String cacheInstanceClass;
 
@@ -76,27 +76,27 @@ public class CacheInstance  implements java.io.Serializable {
     private AzId azId;
 
     /**
-     * 所属VPC的ID
+     * 实例所属VPC ID
      */
     private String vpcId;
 
     /**
-     * 所属子网的ID
+     * 实例所属子网ID
      */
     private String subnetId;
 
     /**
-     * 访问域名
+     * 实例的访问域名
      */
     private String connectionDomain;
 
     /**
-     * 端口
+     * 实例的访问端口
      */
     private Integer port;
 
     /**
-     * 计费信息
+     * 实例的计费信息
      */
     private Charge charge;
 
@@ -129,6 +129,16 @@ public class CacheInstance  implements java.io.Serializable {
      * 标签信息
      */
     private List<Tag> tags;
+
+    /**
+     * 实例分片数，自定义分片规格的实例分片数由用户创建时选择，其他实例为固定分片数
+     */
+    private Integer shardNumber;
+
+    /**
+     * 单分片内存大小（MB）
+     */
+    private Integer memoryMBPerShard;
 
 
     /**
@@ -168,7 +178,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * get 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @return
      */
@@ -177,7 +187,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * set 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param cacheInstanceClass
      */
@@ -276,7 +286,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 所属VPC的ID
+     * get 实例所属VPC ID
      *
      * @return
      */
@@ -285,7 +295,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 所属VPC的ID
+     * set 实例所属VPC ID
      *
      * @param vpcId
      */
@@ -294,7 +304,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 所属子网的ID
+     * get 实例所属子网ID
      *
      * @return
      */
@@ -303,7 +313,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 所属子网的ID
+     * set 实例所属子网ID
      *
      * @param subnetId
      */
@@ -312,7 +322,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 访问域名
+     * get 实例的访问域名
      *
      * @return
      */
@@ -321,7 +331,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 访问域名
+     * set 实例的访问域名
      *
      * @param connectionDomain
      */
@@ -330,7 +340,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 端口
+     * get 实例的访问端口
      *
      * @return
      */
@@ -339,7 +349,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 端口
+     * set 实例的访问端口
      *
      * @param port
      */
@@ -348,7 +358,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 计费信息
+     * get 实例的计费信息
      *
      * @return
      */
@@ -357,7 +367,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 计费信息
+     * set 实例的计费信息
      *
      * @param charge
      */
@@ -473,6 +483,42 @@ public class CacheInstance  implements java.io.Serializable {
         this.tags = tags;
     }
 
+    /**
+     * get 实例分片数，自定义分片规格的实例分片数由用户创建时选择，其他实例为固定分片数
+     *
+     * @return
+     */
+    public Integer getShardNumber() {
+        return shardNumber;
+    }
+
+    /**
+     * set 实例分片数，自定义分片规格的实例分片数由用户创建时选择，其他实例为固定分片数
+     *
+     * @param shardNumber
+     */
+    public void setShardNumber(Integer shardNumber) {
+        this.shardNumber = shardNumber;
+    }
+
+    /**
+     * get 单分片内存大小（MB）
+     *
+     * @return
+     */
+    public Integer getMemoryMBPerShard() {
+        return memoryMBPerShard;
+    }
+
+    /**
+     * set 单分片内存大小（MB）
+     *
+     * @param memoryMBPerShard
+     */
+    public void setMemoryMBPerShard(Integer memoryMBPerShard) {
+        this.memoryMBPerShard = memoryMBPerShard;
+    }
+
 
     /**
      * set 实例ID
@@ -495,7 +541,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * set 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param cacheInstanceClass
      */
@@ -555,7 +601,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 所属VPC的ID
+     * set 实例所属VPC ID
      *
      * @param vpcId
      */
@@ -565,7 +611,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 所属子网的ID
+     * set 实例所属子网ID
      *
      * @param subnetId
      */
@@ -575,7 +621,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 访问域名
+     * set 实例的访问域名
      *
      * @param connectionDomain
      */
@@ -585,7 +631,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 端口
+     * set 实例的访问端口
      *
      * @param port
      */
@@ -595,7 +641,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 计费信息
+     * set 实例的计费信息
      *
      * @param charge
      */
@@ -661,6 +707,26 @@ public class CacheInstance  implements java.io.Serializable {
      */
     public CacheInstance tags(List<Tag> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 实例分片数，自定义分片规格的实例分片数由用户创建时选择，其他实例为固定分片数
+     *
+     * @param shardNumber
+     */
+    public CacheInstance shardNumber(Integer shardNumber) {
+        this.shardNumber = shardNumber;
+        return this;
+    }
+
+    /**
+     * set 单分片内存大小（MB）
+     *
+     * @param memoryMBPerShard
+     */
+    public CacheInstance memoryMBPerShard(Integer memoryMBPerShard) {
+        this.memoryMBPerShard = memoryMBPerShard;
         return this;
     }
 

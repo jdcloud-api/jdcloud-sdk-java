@@ -75,12 +75,12 @@ public class InternalInstance  implements java.io.Serializable {
     private String createdTime;
 
     /**
-     * 所属VPC的ID
+     * 所属VPC ID
      */
     private String vpcId;
 
     /**
-     * 所属子网的ID
+     * 所属子网ID
      */
     private String subnetId;
 
@@ -260,7 +260,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 所属VPC的ID
+     * get 所属VPC ID
      *
      * @return
      */
@@ -269,7 +269,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 所属VPC的ID
+     * set 所属VPC ID
      *
      * @param vpcId
      */
@@ -278,7 +278,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 所属子网的ID
+     * get 所属子网ID
      *
      * @return
      */
@@ -287,7 +287,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 所属子网的ID
+     * set 所属子网ID
      *
      * @param subnetId
      */
@@ -485,7 +485,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 所属VPC的ID
+     * set 所属VPC ID
      *
      * @param vpcId
      */
@@ -495,7 +495,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 所属子网的ID
+     * set 所属子网ID
      *
      * @param subnetId
      */

@@ -36,7 +36,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
+     * 容器名称，符合DNS-1123 label规范，在一个Pod内不可重复、不支持修改
      * Required:true
      */
     @Required
@@ -112,7 +112,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
 
     /**
-     * get 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
+     * get 容器名称，符合DNS-1123 label规范，在一个Pod内不可重复、不支持修改
      *
      * @return
      */
@@ -121,7 +121,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
+     * set 容器名称，符合DNS-1123 label规范，在一个Pod内不可重复、不支持修改
      *
      * @param name
      */
@@ -355,7 +355,7 @@ public class ContainerSpec  implements java.io.Serializable {
 
 
     /**
-     * set 容器名称，符合DNS-1123 label规范，在一个Pod内不能重复。
+     * set 容器名称，符合DNS-1123 label规范，在一个Pod内不可重复、不支持修改
      *
      * @param name
      */

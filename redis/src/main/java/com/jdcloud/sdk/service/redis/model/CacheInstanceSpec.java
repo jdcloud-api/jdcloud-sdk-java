@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 创建缓存Redis实例时，用户输入的参数
+ * 创建缓存Redis实例时，用户指定的参数
  */
 public class CacheInstanceSpec  implements java.io.Serializable {
 
@@ -55,7 +55,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     private String cacheInstanceName;
 
     /**
-     * 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * 缓存Redis实例的规格代码（可调用describeInstanceClass接口获取），或者自定义分片实例的单分片规格代码（可调用describeSpecConfig接口获取）
      * Required:true
      */
     @Required
@@ -79,14 +79,19 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     private String cacheInstanceDescription;
 
     /**
-     * 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+     * 缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
      */
     private String redisVersion;
 
     /**
-     * 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+     * 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6，且必须保证VPC支持IPv6
      */
     private Integer ipv6On;
+
+    /**
+     * 自定义分片数，只对自定义规格实例有效
+     */
+    private Integer shardNumber;
 
 
     /**
@@ -144,7 +149,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * get 缓存Redis实例的规格代码（可调用describeInstanceClass接口获取），或者自定义分片实例的单分片规格代码（可调用describeSpecConfig接口获取）
      *
      * @return
      */
@@ -153,7 +158,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * set 缓存Redis实例的规格代码（可调用describeInstanceClass接口获取），或者自定义分片实例的单分片规格代码（可调用describeSpecConfig接口获取）
      *
      * @param cacheInstanceClass
      */
@@ -216,7 +221,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+     * get 缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
      *
      * @return
      */
@@ -225,7 +230,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+     * set 缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
      *
      * @param redisVersion
      */
@@ -234,7 +239,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+     * get 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6，且必须保证VPC支持IPv6
      *
      * @return
      */
@@ -243,12 +248,30 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+     * set 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6，且必须保证VPC支持IPv6
      *
      * @param ipv6On
      */
     public void setIpv6On(Integer ipv6On) {
         this.ipv6On = ipv6On;
+    }
+
+    /**
+     * get 自定义分片数，只对自定义规格实例有效
+     *
+     * @return
+     */
+    public Integer getShardNumber() {
+        return shardNumber;
+    }
+
+    /**
+     * set 自定义分片数，只对自定义规格实例有效
+     *
+     * @param shardNumber
+     */
+    public void setShardNumber(Integer shardNumber) {
+        this.shardNumber = shardNumber;
     }
 
 
@@ -283,7 +306,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis实例的规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * set 缓存Redis实例的规格代码（可调用describeInstanceClass接口获取），或者自定义分片实例的单分片规格代码（可调用describeSpecConfig接口获取）
      *
      * @param cacheInstanceClass
      */
@@ -323,7 +346,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 支持的缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
+     * set 缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
      *
      * @param redisVersion
      */
@@ -333,12 +356,22 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6
+     * set 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6，且必须保证VPC支持IPv6
      *
      * @param ipv6On
      */
     public CacheInstanceSpec ipv6On(Integer ipv6On) {
         this.ipv6On = ipv6On;
+        return this;
+    }
+
+    /**
+     * set 自定义分片数，只对自定义规格实例有效
+     *
+     * @param shardNumber
+     */
+    public CacheInstanceSpec shardNumber(Integer shardNumber) {
+        this.shardNumber = shardNumber;
         return this;
     }
 

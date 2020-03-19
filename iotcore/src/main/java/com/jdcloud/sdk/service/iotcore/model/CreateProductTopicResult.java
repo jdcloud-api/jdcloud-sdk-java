@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * ProductTopic
- * 关于产品Topic信息操作的相关接口
+ * 关于产品自定义Topic信息操作的相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.iotcore.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 新建产品Topic
+ * 新建产品自定义Topic
  */
 public class CreateProductTopicResult extends JdcloudResult implements java.io.Serializable {
 

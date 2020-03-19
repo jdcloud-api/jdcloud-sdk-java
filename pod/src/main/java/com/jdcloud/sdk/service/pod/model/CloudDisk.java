@@ -33,6 +33,11 @@ public class CloudDisk  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * category
+     */
+    private String category;
+
+    /**
      * 云盘ID。
      */
     private String volumeId;
@@ -67,6 +72,24 @@ public class CloudDisk  implements java.io.Serializable {
      */
     private Boolean autoDelete;
 
+
+    /**
+     * get category
+     *
+     * @return
+     */
+    public String getCategory() {
+        return category;
+    }
+
+    /**
+     * set category
+     *
+     * @param category
+     */
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     /**
      * get 云盘ID。
@@ -194,6 +217,16 @@ public class CloudDisk  implements java.io.Serializable {
         this.autoDelete = autoDelete;
     }
 
+
+    /**
+     * set category
+     *
+     * @param category
+     */
+    public CloudDisk category(String category) {
+        this.category = category;
+        return this;
+    }
 
     /**
      * set 云盘ID。

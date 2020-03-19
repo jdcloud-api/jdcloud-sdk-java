@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 变更缓存Redis实例规格（变配），实例运行时可以变配，新规格不能与之前的老规格相同，新规格内存大小不能小于实例的已使用内存。
+ * 变更缓存Redis实例规格（变配），实例运行时可以变配，新规格不能与之前的老规格相同，新规格内存大小不能小于实例的已使用内存
 
  */
 public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements java.io.Serializable {
@@ -41,6 +41,11 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
      */
     @Required
     private String cacheInstanceClass;
+
+    /**
+     * 自定义分片数，只对自定义分片规格实例有效
+     */
+    private Integer shardNumber;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -73,6 +78,24 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
      */
     public void setCacheInstanceClass(String cacheInstanceClass) {
         this.cacheInstanceClass = cacheInstanceClass;
+    }
+
+    /**
+     * get 自定义分片数，只对自定义分片规格实例有效
+     *
+     * @return
+     */
+    public Integer getShardNumber() {
+        return shardNumber;
+    }
+
+    /**
+     * set 自定义分片数，只对自定义分片规格实例有效
+     *
+     * @param shardNumber
+     */
+    public void setShardNumber(Integer shardNumber) {
+        this.shardNumber = shardNumber;
     }
 
     /**
@@ -119,6 +142,16 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
      */
     public ModifyCacheInstanceClassRequest cacheInstanceClass(String cacheInstanceClass) {
         this.cacheInstanceClass = cacheInstanceClass;
+        return this;
+    }
+
+    /**
+     * set 自定义分片数，只对自定义分片规格实例有效
+     *
+     * @param shardNumber
+     */
+    public ModifyCacheInstanceClassRequest shardNumber(Integer shardNumber) {
+        this.shardNumber = shardNumber;
         return this;
     }
 

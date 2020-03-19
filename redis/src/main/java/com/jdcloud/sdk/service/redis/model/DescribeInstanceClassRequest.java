@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询某区域下的缓存Redis实例规格列表
+ * 查询缓存Redis实例的规格列表
  */
 public class DescribeInstanceClassRequest extends JdcloudRequest implements java.io.Serializable {
 

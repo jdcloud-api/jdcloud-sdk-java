@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询某区域下的缓存Redis实例规格列表
+ * 查询缓存Redis实例的规格列表
  */
 public class DescribeInstanceClassResponse extends JdcloudResponse<DescribeInstanceClassResult> implements java.io.Serializable {
 
