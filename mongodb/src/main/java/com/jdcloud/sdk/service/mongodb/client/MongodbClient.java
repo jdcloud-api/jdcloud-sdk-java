@@ -31,12 +31,21 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.mongodb.model.DeleteBackupSynchronicitiesRequest;
+import com.jdcloud.sdk.service.mongodb.model.DeleteBackupSynchronicitiesResponse;
+import com.jdcloud.sdk.service.mongodb.client.DeleteBackupSynchronicitiesExecutor;
 import com.jdcloud.sdk.service.mongodb.model.ModifyInstanceSpecRequest;
 import com.jdcloud.sdk.service.mongodb.model.ModifyInstanceSpecResponse;
 import com.jdcloud.sdk.service.mongodb.client.ModifyInstanceSpecExecutor;
+import com.jdcloud.sdk.service.mongodb.model.RestartInstanceRequest;
+import com.jdcloud.sdk.service.mongodb.model.RestartInstanceResponse;
+import com.jdcloud.sdk.service.mongodb.client.RestartInstanceExecutor;
 import com.jdcloud.sdk.service.mongodb.model.CreateInstanceRequest;
 import com.jdcloud.sdk.service.mongodb.model.CreateInstanceResponse;
 import com.jdcloud.sdk.service.mongodb.client.CreateInstanceExecutor;
+import com.jdcloud.sdk.service.mongodb.model.ModifyNodeSpecRequest;
+import com.jdcloud.sdk.service.mongodb.model.ModifyNodeSpecResponse;
+import com.jdcloud.sdk.service.mongodb.client.ModifyNodeSpecExecutor;
 import com.jdcloud.sdk.service.mongodb.model.DescribeBackupPolicyRequest;
 import com.jdcloud.sdk.service.mongodb.model.DescribeBackupPolicyResponse;
 import com.jdcloud.sdk.service.mongodb.client.DescribeBackupPolicyExecutor;
@@ -46,15 +55,27 @@ import com.jdcloud.sdk.service.mongodb.client.DescribeSecurityIpsExecutor;
 import com.jdcloud.sdk.service.mongodb.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.mongodb.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.mongodb.client.DescribeInstancesExecutor;
+import com.jdcloud.sdk.service.mongodb.model.CreateShardingInstanceRequest;
+import com.jdcloud.sdk.service.mongodb.model.CreateShardingInstanceResponse;
+import com.jdcloud.sdk.service.mongodb.client.CreateShardingInstanceExecutor;
 import com.jdcloud.sdk.service.mongodb.model.BackupDownloadURLRequest;
 import com.jdcloud.sdk.service.mongodb.model.BackupDownloadURLResponse;
 import com.jdcloud.sdk.service.mongodb.client.BackupDownloadURLExecutor;
+import com.jdcloud.sdk.service.mongodb.model.RestartNodeRequest;
+import com.jdcloud.sdk.service.mongodb.model.RestartNodeResponse;
+import com.jdcloud.sdk.service.mongodb.client.RestartNodeExecutor;
+import com.jdcloud.sdk.service.mongodb.model.DescribeBackupSynchronicitiesRequest;
+import com.jdcloud.sdk.service.mongodb.model.DescribeBackupSynchronicitiesResponse;
+import com.jdcloud.sdk.service.mongodb.client.DescribeBackupSynchronicitiesExecutor;
 import com.jdcloud.sdk.service.mongodb.model.DeleteInstanceRequest;
 import com.jdcloud.sdk.service.mongodb.model.DeleteInstanceResponse;
 import com.jdcloud.sdk.service.mongodb.client.DeleteInstanceExecutor;
 import com.jdcloud.sdk.service.mongodb.model.RestoreInstanceRequest;
 import com.jdcloud.sdk.service.mongodb.model.RestoreInstanceResponse;
 import com.jdcloud.sdk.service.mongodb.client.RestoreInstanceExecutor;
+import com.jdcloud.sdk.service.mongodb.model.CreateBackupSynchronicityRequest;
+import com.jdcloud.sdk.service.mongodb.model.CreateBackupSynchronicityResponse;
+import com.jdcloud.sdk.service.mongodb.client.CreateBackupSynchronicityExecutor;
 import com.jdcloud.sdk.service.mongodb.model.DescribeFlavorsRequest;
 import com.jdcloud.sdk.service.mongodb.model.DescribeFlavorsResponse;
 import com.jdcloud.sdk.service.mongodb.client.DescribeFlavorsExecutor;
@@ -90,7 +111,7 @@ public class MongodbClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.10";
+    public final static String ClientVersion = "1.2.1";
     public final static String DefaultEndpoint = "mongodb.jdcloud-api.com";
     public final static String ServiceName = "mongodb";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -133,6 +154,17 @@ public class MongodbClient extends JdcloudClient {
 
 
     /**
+     * 删除跨地域备份同步服务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteBackupSynchronicitiesResponse deleteBackupSynchronicities(DeleteBackupSynchronicitiesRequest request) throws JdcloudSdkException {
+        return new DeleteBackupSynchronicitiesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 变更实例规格
      *
      * @param request
@@ -144,6 +176,17 @@ public class MongodbClient extends JdcloudClient {
     }
 
     /**
+     * 重启实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestartInstanceResponse restartInstance(RestartInstanceRequest request) throws JdcloudSdkException {
+        return new RestartInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建实例
      *
      * @param request
@@ -152,6 +195,17 @@ public class MongodbClient extends JdcloudClient {
      */
     public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws JdcloudSdkException {
         return new CreateInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 变更分片集群的节点规格，支持Mognos、Shard节点。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyNodeSpecResponse modifyNodeSpec(ModifyNodeSpecRequest request) throws JdcloudSdkException {
+        return new ModifyNodeSpecExecutor().client(this).execute(request);
     }
 
     /**
@@ -188,6 +242,17 @@ public class MongodbClient extends JdcloudClient {
     }
 
     /**
+     * 创建分片集群
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateShardingInstanceResponse createShardingInstance(CreateShardingInstanceRequest request) throws JdcloudSdkException {
+        return new CreateShardingInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取备份下载链接
      *
      * @param request
@@ -196,6 +261,28 @@ public class MongodbClient extends JdcloudClient {
      */
     public BackupDownloadURLResponse backupDownloadURL(BackupDownloadURLRequest request) throws JdcloudSdkException {
         return new BackupDownloadURLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重启MongoDB分片集群节点，支持重启Mongos、Shard。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestartNodeResponse restartNode(RestartNodeRequest request) throws JdcloudSdkException {
+        return new RestartNodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询跨区域备份同步服务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackupSynchronicitiesResponse describeBackupSynchronicities(DescribeBackupSynchronicitiesRequest request) throws JdcloudSdkException {
+        return new DescribeBackupSynchronicitiesExecutor().client(this).execute(request);
     }
 
     /**
@@ -218,6 +305,17 @@ public class MongodbClient extends JdcloudClient {
      */
     public RestoreInstanceResponse restoreInstance(RestoreInstanceRequest request) throws JdcloudSdkException {
         return new RestoreInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建跨区域备份同步服务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateBackupSynchronicityResponse createBackupSynchronicity(CreateBackupSynchronicityRequest request) throws JdcloudSdkException {
+        return new CreateBackupSynchronicityExecutor().client(this).execute(request);
     }
 
     /**

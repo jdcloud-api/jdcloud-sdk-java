@@ -154,6 +154,16 @@ public class Cluster  implements java.io.Serializable {
      */
     private MaintenanceWindow masterProgress;
 
+    /**
+     * 网络配置信息
+     */
+    private ClusterNetwork clusterNetwork;
+
+    /**
+     * 集群网络类型,可取值为auto和customized
+     */
+    private String networkMode;
+
 
     /**
      * get 集群id
@@ -587,6 +597,42 @@ public class Cluster  implements java.io.Serializable {
         this.masterProgress = masterProgress;
     }
 
+    /**
+     * get 网络配置信息
+     *
+     * @return
+     */
+    public ClusterNetwork getClusterNetwork() {
+        return clusterNetwork;
+    }
+
+    /**
+     * set 网络配置信息
+     *
+     * @param clusterNetwork
+     */
+    public void setClusterNetwork(ClusterNetwork clusterNetwork) {
+        this.clusterNetwork = clusterNetwork;
+    }
+
+    /**
+     * get 集群网络类型,可取值为auto和customized
+     *
+     * @return
+     */
+    public String getNetworkMode() {
+        return networkMode;
+    }
+
+    /**
+     * set 集群网络类型,可取值为auto和customized
+     *
+     * @param networkMode
+     */
+    public void setNetworkMode(String networkMode) {
+        this.networkMode = networkMode;
+    }
+
 
     /**
      * set 集群id
@@ -825,6 +871,26 @@ public class Cluster  implements java.io.Serializable {
      */
     public Cluster masterProgress(MaintenanceWindow masterProgress) {
         this.masterProgress = masterProgress;
+        return this;
+    }
+
+    /**
+     * set 网络配置信息
+     *
+     * @param clusterNetwork
+     */
+    public Cluster clusterNetwork(ClusterNetwork clusterNetwork) {
+        this.clusterNetwork = clusterNetwork;
+        return this;
+    }
+
+    /**
+     * set 集群网络类型,可取值为auto和customized
+     *
+     * @param networkMode
+     */
+    public Cluster networkMode(String networkMode) {
+        this.networkMode = networkMode;
         return this;
     }
 

@@ -68,6 +68,11 @@ public class Backup  implements java.io.Serializable {
     private String backupMode;
 
     /**
+     * 备份方式，Logical - 逻辑备份、Physical - 物理备份
+     */
+    private String backupMethod;
+
+    /**
      * 整个备份集大小，单位：Byte
      */
     private Integer backupSizeByte;
@@ -200,6 +205,24 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
+     * get 备份方式，Logical - 逻辑备份、Physical - 物理备份
+     *
+     * @return
+     */
+    public String getBackupMethod() {
+        return backupMethod;
+    }
+
+    /**
+     * set 备份方式，Logical - 逻辑备份、Physical - 物理备份
+     *
+     * @param backupMethod
+     */
+    public void setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
+    }
+
+    /**
      * get 整个备份集大小，单位：Byte
      *
      * @return
@@ -285,6 +308,16 @@ public class Backup  implements java.io.Serializable {
      */
     public Backup backupMode(String backupMode) {
         this.backupMode = backupMode;
+        return this;
+    }
+
+    /**
+     * set 备份方式，Logical - 逻辑备份、Physical - 物理备份
+     *
+     * @param backupMethod
+     */
+    public Backup backupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
         return this;
     }
 

@@ -47,6 +47,11 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     private String backupName;
 
     /**
+     * 备份方式，Logical - 逻辑备份、Physical - 物理备份
+     */
+    private String backupMethod;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -91,6 +96,24 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
+     * get 备份方式，Logical - 逻辑备份、Physical - 物理备份
+     *
+     * @return
+     */
+    public String getBackupMethod() {
+        return backupMethod;
+    }
+
+    /**
+     * set 备份方式，Logical - 逻辑备份、Physical - 物理备份
+     *
+     * @param backupMethod
+     */
+    public void setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -126,6 +149,16 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
      */
     public CreateBackupRequest backupName(String backupName) {
         this.backupName = backupName;
+        return this;
+    }
+
+    /**
+     * set 备份方式，Logical - 逻辑备份、Physical - 物理备份
+     *
+     * @param backupMethod
+     */
+    public CreateBackupRequest backupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
         return this;
     }
 
