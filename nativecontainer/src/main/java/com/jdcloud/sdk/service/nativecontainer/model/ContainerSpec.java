@@ -51,7 +51,7 @@ public class ContainerSpec  implements java.io.Serializable {
     private String az;
 
     /**
-     * 容器名称
+     * 容器名称，不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符
      * Required:true
      */
     @Required
@@ -181,7 +181,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器名称
+     * get 容器名称，不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符
      *
      * @return
      */
@@ -190,7 +190,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器名称
+     * set 容器名称，不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符
      *
      * @param name
      */
@@ -508,7 +508,7 @@ public class ContainerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器名称
+     * set 容器名称，不可为空，只支持中文、数字、大小写字母、英文下划线“_”及中划线“-”，且不能超过32字符
      *
      * @param name
      */

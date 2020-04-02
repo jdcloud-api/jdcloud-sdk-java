@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * es实例接口
+ * ES Instance API
  * es实例的创建、变配、删除、查询接口
  *
  * OpenAPI spec version: v1

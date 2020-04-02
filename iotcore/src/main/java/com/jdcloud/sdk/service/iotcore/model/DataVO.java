@@ -112,6 +112,16 @@ public class DataVO  implements java.io.Serializable {
      */
     private String instanceType;
 
+    /**
+     * Edge是否开通，0-未开通，1-已开通
+     */
+    private String edgeStatus;
+
+    /**
+     * Edge开通时间
+     */
+    private String edgeOpenTime;
+
 
     /**
      * get 系统流水号
@@ -401,6 +411,42 @@ public class DataVO  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+    /**
+     * get Edge是否开通，0-未开通，1-已开通
+     *
+     * @return
+     */
+    public String getEdgeStatus() {
+        return edgeStatus;
+    }
+
+    /**
+     * set Edge是否开通，0-未开通，1-已开通
+     *
+     * @param edgeStatus
+     */
+    public void setEdgeStatus(String edgeStatus) {
+        this.edgeStatus = edgeStatus;
+    }
+
+    /**
+     * get Edge开通时间
+     *
+     * @return
+     */
+    public String getEdgeOpenTime() {
+        return edgeOpenTime;
+    }
+
+    /**
+     * set Edge开通时间
+     *
+     * @param edgeOpenTime
+     */
+    public void setEdgeOpenTime(String edgeOpenTime) {
+        this.edgeOpenTime = edgeOpenTime;
+    }
+
 
     /**
      * set 系统流水号
@@ -559,6 +605,26 @@ public class DataVO  implements java.io.Serializable {
      */
     public DataVO instanceType(String instanceType) {
         this.instanceType = instanceType;
+        return this;
+    }
+
+    /**
+     * set Edge是否开通，0-未开通，1-已开通
+     *
+     * @param edgeStatus
+     */
+    public DataVO edgeStatus(String edgeStatus) {
+        this.edgeStatus = edgeStatus;
+        return this;
+    }
+
+    /**
+     * set Edge开通时间
+     *
+     * @param edgeOpenTime
+     */
+    public DataVO edgeOpenTime(String edgeOpenTime) {
+        this.edgeOpenTime = edgeOpenTime;
         return this;
     }
 

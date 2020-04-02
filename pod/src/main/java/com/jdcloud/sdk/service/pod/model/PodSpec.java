@@ -37,7 +37,7 @@ public class PodSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Pod名称
+     * Pod名称，符合DNS-1123 subdomain规范；名称不可重复、不支持修改
      * Required:true
      */
     @Required
@@ -49,7 +49,7 @@ public class PodSpec  implements java.io.Serializable {
     private String description;
 
     /**
-     * 主机名；范围：[1-63]个ASCII字符，默认值为 podId
+     * 主机名；符合hostname规范，默认值为 podId
      */
     private String hostname;
 
@@ -123,7 +123,7 @@ public class PodSpec  implements java.io.Serializable {
 
 
     /**
-     * get Pod名称
+     * get Pod名称，符合DNS-1123 subdomain规范；名称不可重复、不支持修改
      *
      * @return
      */
@@ -132,7 +132,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Pod名称
+     * set Pod名称，符合DNS-1123 subdomain规范；名称不可重复、不支持修改
      *
      * @param name
      */
@@ -159,7 +159,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 主机名；范围：[1-63]个ASCII字符，默认值为 podId
+     * get 主机名；符合hostname规范，默认值为 podId
      *
      * @return
      */
@@ -168,7 +168,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 主机名；范围：[1-63]个ASCII字符，默认值为 podId
+     * set 主机名；符合hostname规范，默认值为 podId
      *
      * @param hostname
      */
@@ -394,7 +394,7 @@ public class PodSpec  implements java.io.Serializable {
 
 
     /**
-     * set Pod名称
+     * set Pod名称，符合DNS-1123 subdomain规范；名称不可重复、不支持修改
      *
      * @param name
      */
@@ -414,7 +414,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 主机名；范围：[1-63]个ASCII字符，默认值为 podId
+     * set 主机名；符合hostname规范，默认值为 podId
      *
      * @param hostname
      */

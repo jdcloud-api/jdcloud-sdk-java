@@ -33,21 +33,30 @@ public class EncryptionSettings  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 加密Key。HLS AES129KEY，必须为 16 个 ASCII 可打印字符
+     * HLS加密公钥，按指定编码方式编码
+必须为 16 字节值，按照 hlsKeyEncodeType 所指定的编码方式进行编码后的字符串
 
      */
     private String hlsKey;
 
     /**
-     * 加密Key地址。必须为合法的HTTP地址。
-若 hleKey 已设置，表示开启 HLS 加密，其时该参数必须
+     * HLS加密公钥地址，仅支持HTTP(s)地址
+若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
 
      */
     private String hlsKeyUrl;
 
+    /**
+     * HLS加密公钥编码方式。取值范围：base16, base32, base64
+若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
+
+     */
+    private String hlsKeyEncodeType;
+
 
     /**
-     * get 加密Key。HLS AES129KEY，必须为 16 个 ASCII 可打印字符
+     * get HLS加密公钥，按指定编码方式编码
+必须为 16 字节值，按照 hlsKeyEncodeType 所指定的编码方式进行编码后的字符串
 
      *
      * @return
@@ -57,7 +66,8 @@ public class EncryptionSettings  implements java.io.Serializable {
     }
 
     /**
-     * set 加密Key。HLS AES129KEY，必须为 16 个 ASCII 可打印字符
+     * set HLS加密公钥，按指定编码方式编码
+必须为 16 字节值，按照 hlsKeyEncodeType 所指定的编码方式进行编码后的字符串
 
      *
      * @param hlsKey
@@ -67,8 +77,8 @@ public class EncryptionSettings  implements java.io.Serializable {
     }
 
     /**
-     * get 加密Key地址。必须为合法的HTTP地址。
-若 hleKey 已设置，表示开启 HLS 加密，其时该参数必须
+     * get HLS加密公钥地址，仅支持HTTP(s)地址
+若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
 
      *
      * @return
@@ -78,8 +88,8 @@ public class EncryptionSettings  implements java.io.Serializable {
     }
 
     /**
-     * set 加密Key地址。必须为合法的HTTP地址。
-若 hleKey 已设置，表示开启 HLS 加密，其时该参数必须
+     * set HLS加密公钥地址，仅支持HTTP(s)地址
+若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
 
      *
      * @param hlsKeyUrl
@@ -88,9 +98,32 @@ public class EncryptionSettings  implements java.io.Serializable {
         this.hlsKeyUrl = hlsKeyUrl;
     }
 
+    /**
+     * get HLS加密公钥编码方式。取值范围：base16, base32, base64
+若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
+
+     *
+     * @return
+     */
+    public String getHlsKeyEncodeType() {
+        return hlsKeyEncodeType;
+    }
 
     /**
-     * set 加密Key。HLS AES129KEY，必须为 16 个 ASCII 可打印字符
+     * set HLS加密公钥编码方式。取值范围：base16, base32, base64
+若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
+
+     *
+     * @param hlsKeyEncodeType
+     */
+    public void setHlsKeyEncodeType(String hlsKeyEncodeType) {
+        this.hlsKeyEncodeType = hlsKeyEncodeType;
+    }
+
+
+    /**
+     * set HLS加密公钥，按指定编码方式编码
+必须为 16 字节值，按照 hlsKeyEncodeType 所指定的编码方式进行编码后的字符串
 
      *
      * @param hlsKey
@@ -101,14 +134,26 @@ public class EncryptionSettings  implements java.io.Serializable {
     }
 
     /**
-     * set 加密Key地址。必须为合法的HTTP地址。
-若 hleKey 已设置，表示开启 HLS 加密，其时该参数必须
+     * set HLS加密公钥地址，仅支持HTTP(s)地址
+若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
 
      *
      * @param hlsKeyUrl
      */
     public EncryptionSettings hlsKeyUrl(String hlsKeyUrl) {
         this.hlsKeyUrl = hlsKeyUrl;
+        return this;
+    }
+
+    /**
+     * set HLS加密公钥编码方式。取值范围：base16, base32, base64
+若 hlsKey 已设置，则表示开启 HLS 加密，此时为必须参数
+
+     *
+     * @param hlsKeyEncodeType
+     */
+    public EncryptionSettings hlsKeyEncodeType(String hlsKeyEncodeType) {
+        this.hlsKeyEncodeType = hlsKeyEncodeType;
         return this;
     }
 

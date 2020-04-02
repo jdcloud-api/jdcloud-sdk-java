@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * es自定义词典接口
+ * ES Dictionary API
  * es自定义词典上传、删除、查询接口
  *
  * OpenAPI spec version: v1

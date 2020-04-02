@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * ProductTopic
- * 关于产品Topic信息操作的相关接口
+ * 关于产品自定义Topic信息操作的相关接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -28,23 +28,26 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 新建产品Topic
+ * 新建产品自定义Topic
  */
 public class CreateProductTopicRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 自定义类目名称, /user/{productKey}/{identifier}/topicShortName
+     * Topic名称为必填，同一个产品下的Topic名称不能重复
+只能包含字母，数字和下划线，最多64个字符，每个层级都不能为空
+不能以/结尾
+
      * Required:true
      */
     @Required
     private String topicShortName;
 
     /**
-     * 设备对该Topic类的操作权限，取值
-sub:订阅
+     * 操作权限，设备对该Topic类的操作权限，取值
 pub:发布
+sub:订阅
 
      * Required:true
      */
@@ -64,7 +67,7 @@ pub:发布
     private String regionId;
 
     /**
-     * IoT Engine实例ID信息
+     * IoTCore实例ID信息
      * Required:true
      */
     @Required
@@ -79,7 +82,10 @@ pub:发布
 
 
     /**
-     * get 自定义类目名称, /user/{productKey}/{identifier}/topicShortName
+     * get Topic名称为必填，同一个产品下的Topic名称不能重复
+只能包含字母，数字和下划线，最多64个字符，每个层级都不能为空
+不能以/结尾
+
      *
      * @return
      */
@@ -88,7 +94,10 @@ pub:发布
     }
 
     /**
-     * set 自定义类目名称, /user/{productKey}/{identifier}/topicShortName
+     * set Topic名称为必填，同一个产品下的Topic名称不能重复
+只能包含字母，数字和下划线，最多64个字符，每个层级都不能为空
+不能以/结尾
+
      *
      * @param topicShortName
      */
@@ -97,9 +106,9 @@ pub:发布
     }
 
     /**
-     * get 设备对该Topic类的操作权限，取值
-sub:订阅
+     * get 操作权限，设备对该Topic类的操作权限，取值
 pub:发布
+sub:订阅
 
      *
      * @return
@@ -109,9 +118,9 @@ pub:发布
     }
 
     /**
-     * set 设备对该Topic类的操作权限，取值
-sub:订阅
+     * set 操作权限，设备对该Topic类的操作权限，取值
 pub:发布
+sub:订阅
 
      *
      * @param topicOperation
@@ -157,7 +166,7 @@ pub:发布
     }
 
     /**
-     * get IoT Engine实例ID信息
+     * get IoTCore实例ID信息
      *
      * @return
      */
@@ -166,7 +175,7 @@ pub:发布
     }
 
     /**
-     * set IoT Engine实例ID信息
+     * set IoTCore实例ID信息
      *
      * @param instanceId
      */
@@ -194,7 +203,10 @@ pub:发布
 
 
     /**
-     * set 自定义类目名称, /user/{productKey}/{identifier}/topicShortName
+     * set Topic名称为必填，同一个产品下的Topic名称不能重复
+只能包含字母，数字和下划线，最多64个字符，每个层级都不能为空
+不能以/结尾
+
      *
      * @param topicShortName
      */
@@ -204,9 +216,9 @@ pub:发布
     }
 
     /**
-     * set 设备对该Topic类的操作权限，取值
-sub:订阅
+     * set 操作权限，设备对该Topic类的操作权限，取值
 pub:发布
+sub:订阅
 
      *
      * @param topicOperation
@@ -237,7 +249,7 @@ pub:发布
     }
 
     /**
-     * set IoT Engine实例ID信息
+     * set IoTCore实例ID信息
      *
      * @param instanceId
      */

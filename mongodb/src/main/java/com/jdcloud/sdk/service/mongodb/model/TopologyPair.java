@@ -47,6 +47,11 @@ public class TopologyPair  implements java.io.Serializable {
      */
     private String port;
 
+    /**
+     * floatingIp地址
+     */
+    private String floatingIp;
+
 
     /**
      * get 域名
@@ -102,6 +107,24 @@ public class TopologyPair  implements java.io.Serializable {
         this.port = port;
     }
 
+    /**
+     * get floatingIp地址
+     *
+     * @return
+     */
+    public String getFloatingIp() {
+        return floatingIp;
+    }
+
+    /**
+     * set floatingIp地址
+     *
+     * @param floatingIp
+     */
+    public void setFloatingIp(String floatingIp) {
+        this.floatingIp = floatingIp;
+    }
+
 
     /**
      * set 域名
@@ -130,6 +153,16 @@ public class TopologyPair  implements java.io.Serializable {
      */
     public TopologyPair port(String port) {
         this.port = port;
+        return this;
+    }
+
+    /**
+     * set floatingIp地址
+     *
+     * @param floatingIp
+     */
+    public TopologyPair floatingIp(String floatingIp) {
+        this.floatingIp = floatingIp;
         return this;
     }
 

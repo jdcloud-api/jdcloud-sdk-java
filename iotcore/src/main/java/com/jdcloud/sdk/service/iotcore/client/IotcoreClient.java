@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.iotcore.model.AddDeviceLinksRequest;
+import com.jdcloud.sdk.service.iotcore.model.AddDeviceLinksResponse;
+import com.jdcloud.sdk.service.iotcore.client.AddDeviceLinksExecutor;
 import com.jdcloud.sdk.service.iotcore.model.AddDeviceRequest;
 import com.jdcloud.sdk.service.iotcore.model.AddDeviceResponse;
 import com.jdcloud.sdk.service.iotcore.client.AddDeviceExecutor;
@@ -43,9 +46,15 @@ import com.jdcloud.sdk.service.iotcore.client.CreateProductTopicExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DeleteProductRequest;
 import com.jdcloud.sdk.service.iotcore.model.DeleteProductResponse;
 import com.jdcloud.sdk.service.iotcore.client.DeleteProductExecutor;
+import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicRequest;
+import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicResponse;
+import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicExecutor;
 import com.jdcloud.sdk.service.iotcore.model.QueryDevicePageRequest;
 import com.jdcloud.sdk.service.iotcore.model.QueryDevicePageResponse;
 import com.jdcloud.sdk.service.iotcore.client.QueryDevicePageExecutor;
+import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsRequest;
+import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsResponse;
+import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicsExecutor;
 import com.jdcloud.sdk.service.iotcore.model.InvokeThingServiceRequest;
 import com.jdcloud.sdk.service.iotcore.model.InvokeThingServiceResponse;
 import com.jdcloud.sdk.service.iotcore.client.InvokeThingServiceExecutor;
@@ -136,6 +145,17 @@ public class IotcoreClient extends JdcloudClient {
 
 
     /**
+     * 建立设备间的父子关系
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddDeviceLinksResponse addDeviceLinks(AddDeviceLinksRequest request) throws JdcloudSdkException {
+        return new AddDeviceLinksExecutor().client(this).execute(request);
+    }
+
+    /**
      * 注册单个设备并返回秘钥信息
      *
      * @param request
@@ -158,7 +178,7 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
-     * 新建产品Topic
+     * 新建产品自定义Topic
      *
      * @param request
      * @return
@@ -180,6 +200,17 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
+     * 查看产品自定义Topic
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeProductTopicResponse describeProductTopic(DescribeProductTopicRequest request) throws JdcloudSdkException {
+        return new DescribeProductTopicExecutor().client(this).execute(request);
+    }
+
+    /**
      * 分页查询设备信息,支持一个或多个条件
      *
      * @param request
@@ -188,6 +219,17 @@ public class IotcoreClient extends JdcloudClient {
      */
     public QueryDevicePageResponse queryDevicePage(QueryDevicePageRequest request) throws JdcloudSdkException {
         return new QueryDevicePageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看产品自定义Topic列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeProductTopicsResponse describeProductTopics(DescribeProductTopicsRequest request) throws JdcloudSdkException {
+        return new DescribeProductTopicsExecutor().client(this).execute(request);
     }
 
     /**

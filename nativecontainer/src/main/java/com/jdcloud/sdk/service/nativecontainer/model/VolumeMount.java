@@ -58,6 +58,11 @@ public class VolumeMount  implements java.io.Serializable {
     private InstanceCloudDisk cloudDisk;
 
     /**
+     * 云硬盘规格
+     */
+    private InstanceLocalDisk localDisk;
+
+    /**
      * 指定volume文件系统类型，目前支持[xfs, ext4]
      */
     private String fsType;
@@ -154,6 +159,24 @@ public class VolumeMount  implements java.io.Serializable {
     }
 
     /**
+     * get 云硬盘规格
+     *
+     * @return
+     */
+    public InstanceLocalDisk getLocalDisk() {
+        return localDisk;
+    }
+
+    /**
+     * set 云硬盘规格
+     *
+     * @param localDisk
+     */
+    public void setLocalDisk(InstanceLocalDisk localDisk) {
+        this.localDisk = localDisk;
+    }
+
+    /**
      * get 指定volume文件系统类型，目前支持[xfs, ext4]
      *
      * @return
@@ -219,6 +242,16 @@ public class VolumeMount  implements java.io.Serializable {
      */
     public VolumeMount cloudDisk(InstanceCloudDisk cloudDisk) {
         this.cloudDisk = cloudDisk;
+        return this;
+    }
+
+    /**
+     * set 云硬盘规格
+     *
+     * @param localDisk
+     */
+    public VolumeMount localDisk(InstanceLocalDisk localDisk) {
+        this.localDisk = localDisk;
         return this;
     }
 

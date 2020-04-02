@@ -35,7 +35,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
+     * 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
+     * get 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
+     * set 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
      * @param resourceId
      */
@@ -112,7 +112,7 @@ public class LastDownsampleRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 资源ID，支持多个resourceId批量查询，每个id用竖线 | 分隔
+     * set 资源ID，支持多个resourceId批量查询，每个id用英文竖线分隔
      *
      * @param resourceId
      */

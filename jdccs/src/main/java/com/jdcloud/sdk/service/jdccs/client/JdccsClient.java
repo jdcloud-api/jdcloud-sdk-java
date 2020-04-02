@@ -79,6 +79,9 @@ import com.jdcloud.sdk.service.jdccs.client.DescribeBandwidthExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeMetricsExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeTrafficSamplingRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeTrafficSamplingResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeTrafficSamplingExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeCabinetRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeCabinetResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeCabinetExecutor;
@@ -312,6 +315,17 @@ public class JdccsClient extends JdcloudClient {
      */
     public DescribeMetricsResponse describeMetrics(DescribeMetricsRequest request) throws JdcloudSdkException {
         return new DescribeMetricsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据IP网段查询流量采样数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTrafficSamplingResponse describeTrafficSampling(DescribeTrafficSamplingRequest request) throws JdcloudSdkException {
+        return new DescribeTrafficSamplingExecutor().client(this).execute(request);
     }
 
     /**

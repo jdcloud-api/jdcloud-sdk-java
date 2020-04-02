@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.kubernetes.model.NodeConfigSpec;
 import com.jdcloud.sdk.service.kubernetes.model.CAConfigSpec;
+import com.jdcloud.sdk.service.kubernetes.model.NodeGroupNetworkSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -87,9 +88,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * 工作节点组的cidr
-     * Required:true
      */
-    @Required
     private String nodeCidr;
 
     /**
@@ -101,6 +100,11 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
      * 自动伸缩配置
      */
     private CAConfigSpec caConfig;
+
+    /**
+     * 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+     */
+    private NodeGroupNetworkSpec nodeGroupNetwork;
 
     /**
      * 地域 ID
@@ -291,6 +295,24 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * get 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+     *
+     * @return
+     */
+    public NodeGroupNetworkSpec getNodeGroupNetwork() {
+        return nodeGroupNetwork;
+    }
+
+    /**
+     * set 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+     *
+     * @param nodeGroupNetwork
+     */
+    public void setNodeGroupNetwork(NodeGroupNetworkSpec nodeGroupNetwork) {
+        this.nodeGroupNetwork = nodeGroupNetwork;
+    }
+
+    /**
      * get 地域 ID
      *
      * @return
@@ -406,6 +428,16 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
      */
     public CreateNodeGroupRequest caConfig(CAConfigSpec caConfig) {
         this.caConfig = caConfig;
+        return this;
+    }
+
+    /**
+     * set 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
+     *
+     * @param nodeGroupNetwork
+     */
+    public CreateNodeGroupRequest nodeGroupNetwork(NodeGroupNetworkSpec nodeGroupNetwork) {
+        this.nodeGroupNetwork = nodeGroupNetwork;
         return this;
     }
 

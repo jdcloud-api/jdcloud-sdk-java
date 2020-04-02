@@ -35,13 +35,13 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 该实例的详细信息
+     * 实例的详细信息
      */
     private CacheInstance cacheInstance;
 
 
     /**
-     * get 该实例的详细信息
+     * get 实例的详细信息
      *
      * @return
      */
@@ -50,7 +50,7 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
     }
 
     /**
-     * set 该实例的详细信息
+     * set 实例的详细信息
      *
      * @param cacheInstance
      */
@@ -60,7 +60,7 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
 
 
     /**
-     * set 该实例的详细信息
+     * set 实例的详细信息
      *
      * @param cacheInstance
      */

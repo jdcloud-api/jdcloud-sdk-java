@@ -46,6 +46,11 @@ public class DBInstance  implements java.io.Serializable {
     private String instanceName;
 
     /**
+     * 实例类型，副本集：Replication；分片集群：Sharding；
+     */
+    private String instanceType;
+
+    /**
      * 数据库类型
      */
     private String engine;
@@ -56,27 +61,37 @@ public class DBInstance  implements java.io.Serializable {
     private String engineVersion;
 
     /**
-     * 实例规格代码
+     * 存储类型。LOCAL_SSD -本地盘SSD、LOCAL_NVMe -本地盘NVMe、EBS_SSD-SSD云盘。
+     */
+    private String instanceStorageType;
+
+    /**
+     * 实例数据加密（存储类型为云硬盘才支持数据加密）。 false：不加密；true：加密。缺省为false。
+     */
+    private Boolean storageEncrypted;
+
+    /**
+     * 副本集实例规格代码
      */
     private String instanceClass;
 
     /**
-     * 存储空间
+     * 副本集存储空间
      */
     private Integer instanceStorageGB;
 
     /**
-     * CPU核数
+     * 副本集CPU核数
      */
     private Integer instanceCPU;
 
     /**
-     * 内存，单位GB
+     * 副本集内存，单位GB
      */
     private Integer instanceMemoryGB;
 
     /**
-     * 可取区ID，依次为主、从、隐藏节点所在可用区
+     * 副本集可用区区ID，依次为主、从、隐藏节点所在可用区
      */
     private List<String> azId;
 
@@ -96,7 +111,7 @@ public class DBInstance  implements java.io.Serializable {
     private String replicaSetName;
 
     /**
-     * 域名
+     * 副本集域名
      */
     private String instanceDomain;
 
@@ -111,7 +126,7 @@ public class DBInstance  implements java.io.Serializable {
     private String accountName;
 
     /**
-     * 应用访问端口
+     * 副本集访问端口
      */
     private String instancePort;
 
@@ -155,6 +170,21 @@ public class DBInstance  implements java.io.Serializable {
      */
     private List<Tag> tags;
 
+    /**
+     * mongos信息
+     */
+    private List<Mongos> mongos;
+
+    /**
+     * configserver信息
+     */
+    private List<Configserver> configserver;
+
+    /**
+     * shard信息
+     */
+    private List<Shard> shard;
+
 
     /**
      * get 实例ID
@@ -190,6 +220,24 @@ public class DBInstance  implements java.io.Serializable {
      */
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
+    }
+
+    /**
+     * get 实例类型，副本集：Replication；分片集群：Sharding；
+     *
+     * @return
+     */
+    public String getInstanceType() {
+        return instanceType;
+    }
+
+    /**
+     * set 实例类型，副本集：Replication；分片集群：Sharding；
+     *
+     * @param instanceType
+     */
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
     }
 
     /**
@@ -229,7 +277,43 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格代码
+     * get 存储类型。LOCAL_SSD -本地盘SSD、LOCAL_NVMe -本地盘NVMe、EBS_SSD-SSD云盘。
+     *
+     * @return
+     */
+    public String getInstanceStorageType() {
+        return instanceStorageType;
+    }
+
+    /**
+     * set 存储类型。LOCAL_SSD -本地盘SSD、LOCAL_NVMe -本地盘NVMe、EBS_SSD-SSD云盘。
+     *
+     * @param instanceStorageType
+     */
+    public void setInstanceStorageType(String instanceStorageType) {
+        this.instanceStorageType = instanceStorageType;
+    }
+
+    /**
+     * get 实例数据加密（存储类型为云硬盘才支持数据加密）。 false：不加密；true：加密。缺省为false。
+     *
+     * @return
+     */
+    public Boolean getStorageEncrypted() {
+        return storageEncrypted;
+    }
+
+    /**
+     * set 实例数据加密（存储类型为云硬盘才支持数据加密）。 false：不加密；true：加密。缺省为false。
+     *
+     * @param storageEncrypted
+     */
+    public void setStorageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
+    }
+
+    /**
+     * get 副本集实例规格代码
      *
      * @return
      */
@@ -238,7 +322,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码
+     * set 副本集实例规格代码
      *
      * @param instanceClass
      */
@@ -247,7 +331,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 存储空间
+     * get 副本集存储空间
      *
      * @return
      */
@@ -256,7 +340,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 存储空间
+     * set 副本集存储空间
      *
      * @param instanceStorageGB
      */
@@ -265,7 +349,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get CPU核数
+     * get 副本集CPU核数
      *
      * @return
      */
@@ -274,7 +358,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set CPU核数
+     * set 副本集CPU核数
      *
      * @param instanceCPU
      */
@@ -283,7 +367,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 内存，单位GB
+     * get 副本集内存，单位GB
      *
      * @return
      */
@@ -292,7 +376,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 内存，单位GB
+     * set 副本集内存，单位GB
      *
      * @param instanceMemoryGB
      */
@@ -301,7 +385,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 可取区ID，依次为主、从、隐藏节点所在可用区
+     * get 副本集可用区区ID，依次为主、从、隐藏节点所在可用区
      *
      * @return
      */
@@ -310,7 +394,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 可取区ID，依次为主、从、隐藏节点所在可用区
+     * set 副本集可用区区ID，依次为主、从、隐藏节点所在可用区
      *
      * @param azId
      */
@@ -373,7 +457,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 域名
+     * get 副本集域名
      *
      * @return
      */
@@ -382,7 +466,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 域名
+     * set 副本集域名
      *
      * @param instanceDomain
      */
@@ -427,7 +511,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 应用访问端口
+     * get 副本集访问端口
      *
      * @return
      */
@@ -436,7 +520,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 应用访问端口
+     * set 副本集访问端口
      *
      * @param instancePort
      */
@@ -588,6 +672,60 @@ public class DBInstance  implements java.io.Serializable {
         this.tags = tags;
     }
 
+    /**
+     * get mongos信息
+     *
+     * @return
+     */
+    public List<Mongos> getMongos() {
+        return mongos;
+    }
+
+    /**
+     * set mongos信息
+     *
+     * @param mongos
+     */
+    public void setMongos(List<Mongos> mongos) {
+        this.mongos = mongos;
+    }
+
+    /**
+     * get configserver信息
+     *
+     * @return
+     */
+    public List<Configserver> getConfigserver() {
+        return configserver;
+    }
+
+    /**
+     * set configserver信息
+     *
+     * @param configserver
+     */
+    public void setConfigserver(List<Configserver> configserver) {
+        this.configserver = configserver;
+    }
+
+    /**
+     * get shard信息
+     *
+     * @return
+     */
+    public List<Shard> getShard() {
+        return shard;
+    }
+
+    /**
+     * set shard信息
+     *
+     * @param shard
+     */
+    public void setShard(List<Shard> shard) {
+        this.shard = shard;
+    }
+
 
     /**
      * set 实例ID
@@ -606,6 +744,16 @@ public class DBInstance  implements java.io.Serializable {
      */
     public DBInstance instanceName(String instanceName) {
         this.instanceName = instanceName;
+        return this;
+    }
+
+    /**
+     * set 实例类型，副本集：Replication；分片集群：Sharding；
+     *
+     * @param instanceType
+     */
+    public DBInstance instanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
 
@@ -630,7 +778,27 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格代码
+     * set 存储类型。LOCAL_SSD -本地盘SSD、LOCAL_NVMe -本地盘NVMe、EBS_SSD-SSD云盘。
+     *
+     * @param instanceStorageType
+     */
+    public DBInstance instanceStorageType(String instanceStorageType) {
+        this.instanceStorageType = instanceStorageType;
+        return this;
+    }
+
+    /**
+     * set 实例数据加密（存储类型为云硬盘才支持数据加密）。 false：不加密；true：加密。缺省为false。
+     *
+     * @param storageEncrypted
+     */
+    public DBInstance storageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
+        return this;
+    }
+
+    /**
+     * set 副本集实例规格代码
      *
      * @param instanceClass
      */
@@ -640,7 +808,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 存储空间
+     * set 副本集存储空间
      *
      * @param instanceStorageGB
      */
@@ -650,7 +818,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set CPU核数
+     * set 副本集CPU核数
      *
      * @param instanceCPU
      */
@@ -660,7 +828,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 内存，单位GB
+     * set 副本集内存，单位GB
      *
      * @param instanceMemoryGB
      */
@@ -670,7 +838,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 可取区ID，依次为主、从、隐藏节点所在可用区
+     * set 副本集可用区区ID，依次为主、从、隐藏节点所在可用区
      *
      * @param azId
      */
@@ -710,7 +878,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 域名
+     * set 副本集域名
      *
      * @param instanceDomain
      */
@@ -740,7 +908,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 应用访问端口
+     * set 副本集访问端口
      *
      * @param instancePort
      */
@@ -829,9 +997,39 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set mongos信息
+     *
+     * @param mongos
+     */
+    public DBInstance mongos(List<Mongos> mongos) {
+        this.mongos = mongos;
+        return this;
+    }
 
     /**
-     * add item to 可取区ID，依次为主、从、隐藏节点所在可用区
+     * set configserver信息
+     *
+     * @param configserver
+     */
+    public DBInstance configserver(List<Configserver> configserver) {
+        this.configserver = configserver;
+        return this;
+    }
+
+    /**
+     * set shard信息
+     *
+     * @param shard
+     */
+    public DBInstance shard(List<Shard> shard) {
+        this.shard = shard;
+        return this;
+    }
+
+
+    /**
+     * add item to 副本集可用区区ID，依次为主、从、隐藏节点所在可用区
      *
      * @param azId
      */
@@ -852,6 +1050,42 @@ public class DBInstance  implements java.io.Serializable {
             this.tags = new ArrayList<>();
         }
         this.tags.add(tag);
+    }
+
+    /**
+     * add item to mongos信息
+     *
+     * @param mongo
+     */
+    public void addMongo(Mongos mongo) {
+        if (this.mongos == null) {
+            this.mongos = new ArrayList<>();
+        }
+        this.mongos.add(mongo);
+    }
+
+    /**
+     * add item to configserver信息
+     *
+     * @param configserver
+     */
+    public void addConfigserver(Configserver configserver) {
+        if (this.configserver == null) {
+            this.configserver = new ArrayList<>();
+        }
+        this.configserver.add(configserver);
+    }
+
+    /**
+     * add item to shard信息
+     *
+     * @param shard
+     */
+    public void addShard(Shard shard) {
+        if (this.shard == null) {
+            this.shard = new ArrayList<>();
+        }
+        this.shard.add(shard);
     }
 
 }

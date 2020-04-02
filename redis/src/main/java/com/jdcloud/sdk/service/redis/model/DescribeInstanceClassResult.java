@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.redis.model.InstanceClass;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询某区域下的缓存Redis实例规格列表
+ * 查询缓存Redis实例的规格列表
  */
 public class DescribeInstanceClassResult extends JdcloudResult implements java.io.Serializable {
 
