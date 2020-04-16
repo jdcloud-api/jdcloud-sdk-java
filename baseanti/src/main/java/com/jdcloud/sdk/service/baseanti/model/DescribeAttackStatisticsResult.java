@@ -46,7 +46,7 @@ public class DescribeAttackStatisticsResult extends JdcloudResult implements jav
     /**
      * 攻击流量峰值
      */
-    private Number peak;
+    private Double peak;
 
     /**
      * 攻击流量单位
@@ -95,7 +95,7 @@ public class DescribeAttackStatisticsResult extends JdcloudResult implements jav
      *
      * @return
      */
-    public Number getPeak() {
+    public Double getPeak() {
         return peak;
     }
 
@@ -104,7 +104,7 @@ public class DescribeAttackStatisticsResult extends JdcloudResult implements jav
      *
      * @param peak
      */
-    public void setPeak(Number peak) {
+    public void setPeak(Double peak) {
         this.peak = peak;
     }
 
@@ -152,7 +152,7 @@ public class DescribeAttackStatisticsResult extends JdcloudResult implements jav
      *
      * @param peak
      */
-    public DescribeAttackStatisticsResult peak(Number peak) {
+    public DescribeAttackStatisticsResult peak(Double peak) {
         this.peak = peak;
         return this;
     }

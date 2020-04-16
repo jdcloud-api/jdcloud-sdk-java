@@ -44,7 +44,6 @@ public class SetIpCleanThresholdRequest extends JdcloudRequest implements java.i
 
     /**
      * 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      * Required:true
      */
     @Required
@@ -71,7 +70,6 @@ public class SetIpCleanThresholdRequest extends JdcloudRequest implements java.i
 
     /**
      * get 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @return
      */
@@ -81,7 +79,6 @@ public class SetIpCleanThresholdRequest extends JdcloudRequest implements java.i
 
     /**
      * set 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @param regionId
      */
@@ -102,7 +99,6 @@ public class SetIpCleanThresholdRequest extends JdcloudRequest implements java.i
 
     /**
      * set 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @param regionId
      */

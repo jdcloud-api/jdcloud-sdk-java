@@ -33,7 +33,7 @@ public class InstanceClass  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications，自定义分片规格请调用describeSpecConfig获取
+     * 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      */
     private String instanceClass;
 
@@ -69,7 +69,7 @@ public class InstanceClass  implements java.io.Serializable {
 
 
     /**
-     * get 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications，自定义分片规格请调用describeSpecConfig获取
+     * get 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
     /**
-     * set 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications，自定义分片规格请调用describeSpecConfig获取
+     * set 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param instanceClass
      */
@@ -196,7 +196,7 @@ public class InstanceClass  implements java.io.Serializable {
 
 
     /**
-     * set 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications，自定义分片规格请调用describeSpecConfig获取
+     * set 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
      * @param instanceClass
      */

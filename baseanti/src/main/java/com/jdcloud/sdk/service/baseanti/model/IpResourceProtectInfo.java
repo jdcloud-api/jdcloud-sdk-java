@@ -43,12 +43,12 @@ public class IpResourceProtectInfo  implements java.io.Serializable {
     private String endTime;
 
     /**
-     * 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      */
     private Integer status;
 
     /**
-     * 触发原因，0-&gt;未知 1-&gt;四层 2-&gt;七层 3-&gt;四和7层
+     * 触发原因. &lt;br&gt;- 0: 未知&lt;br&gt;- 1: 四层&lt;br&gt;- 2: 七层&lt;br&gt;- 3: 四和7层
      */
     private Integer cause;
 
@@ -90,7 +90,7 @@ public class IpResourceProtectInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * get 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class IpResourceProtectInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * set 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @param status
      */
@@ -108,7 +108,7 @@ public class IpResourceProtectInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 触发原因，0-&gt;未知 1-&gt;四层 2-&gt;七层 3-&gt;四和7层
+     * get 触发原因. &lt;br&gt;- 0: 未知&lt;br&gt;- 1: 四层&lt;br&gt;- 2: 七层&lt;br&gt;- 3: 四和7层
      *
      * @return
      */
@@ -117,7 +117,7 @@ public class IpResourceProtectInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 触发原因，0-&gt;未知 1-&gt;四层 2-&gt;七层 3-&gt;四和7层
+     * set 触发原因. &lt;br&gt;- 0: 未知&lt;br&gt;- 1: 四层&lt;br&gt;- 2: 七层&lt;br&gt;- 3: 四和7层
      *
      * @param cause
      */
@@ -147,7 +147,7 @@ public class IpResourceProtectInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * set 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @param status
      */
@@ -157,7 +157,7 @@ public class IpResourceProtectInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 触发原因，0-&gt;未知 1-&gt;四层 2-&gt;七层 3-&gt;四和7层
+     * set 触发原因. &lt;br&gt;- 0: 未知&lt;br&gt;- 1: 四层&lt;br&gt;- 2: 七层&lt;br&gt;- 3: 四和7层
      *
      * @param cause
      */

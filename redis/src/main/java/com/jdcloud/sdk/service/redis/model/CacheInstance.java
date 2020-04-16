@@ -46,7 +46,7 @@ public class CacheInstance  implements java.io.Serializable {
     private String cacheInstanceName;
 
     /**
-     * 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * 规格代码，或者自定义分片实例的单分片规格代码
      */
     private String cacheInstanceClass;
 
@@ -178,7 +178,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * get 规格代码，或者自定义分片实例的单分片规格代码
      *
      * @return
      */
@@ -187,7 +187,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * set 规格代码，或者自定义分片实例的单分片规格代码
      *
      * @param cacheInstanceClass
      */
@@ -541,7 +541,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 规格代码，或者自定义分片实例的单分片规格代码，参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
+     * set 规格代码，或者自定义分片实例的单分片规格代码
      *
      * @param cacheInstanceClass
      */

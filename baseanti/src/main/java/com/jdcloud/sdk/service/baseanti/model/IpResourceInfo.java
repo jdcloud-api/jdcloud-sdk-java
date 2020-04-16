@@ -38,7 +38,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     private String ip;
 
     /**
-     * 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      */
     private Integer safeStatus;
 
@@ -82,7 +82,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * get 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * set 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @param safeStatus
      */
@@ -183,7 +183,7 @@ public class IpResourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * set 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @param safeStatus
      */

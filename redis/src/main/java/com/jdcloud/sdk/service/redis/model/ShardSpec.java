@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 单分片规格
@@ -51,6 +53,21 @@ public class ShardSpec  implements java.io.Serializable {
      * 单分片磁盘大小（GB）
      */
     private Integer diskGB;
+
+    /**
+     * 单分片最大连接数
+     */
+    private Integer maxConnection;
+
+    /**
+     * 单分片带宽（Mbps）
+     */
+    private Integer bandwidthMbps;
+
+    /**
+     * 支持的分片数列表
+     */
+    private List<Integer> shardNumberList;
 
 
     /**
@@ -125,6 +142,60 @@ public class ShardSpec  implements java.io.Serializable {
         this.diskGB = diskGB;
     }
 
+    /**
+     * get 单分片最大连接数
+     *
+     * @return
+     */
+    public Integer getMaxConnection() {
+        return maxConnection;
+    }
+
+    /**
+     * set 单分片最大连接数
+     *
+     * @param maxConnection
+     */
+    public void setMaxConnection(Integer maxConnection) {
+        this.maxConnection = maxConnection;
+    }
+
+    /**
+     * get 单分片带宽（Mbps）
+     *
+     * @return
+     */
+    public Integer getBandwidthMbps() {
+        return bandwidthMbps;
+    }
+
+    /**
+     * set 单分片带宽（Mbps）
+     *
+     * @param bandwidthMbps
+     */
+    public void setBandwidthMbps(Integer bandwidthMbps) {
+        this.bandwidthMbps = bandwidthMbps;
+    }
+
+    /**
+     * get 支持的分片数列表
+     *
+     * @return
+     */
+    public List<Integer> getShardNumberList() {
+        return shardNumberList;
+    }
+
+    /**
+     * set 支持的分片数列表
+     *
+     * @param shardNumberList
+     */
+    public void setShardNumberList(List<Integer> shardNumberList) {
+        this.shardNumberList = shardNumberList;
+    }
+
 
     /**
      * set 单分片规格代码，自定义分片实例才有
@@ -166,5 +237,47 @@ public class ShardSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 单分片最大连接数
+     *
+     * @param maxConnection
+     */
+    public ShardSpec maxConnection(Integer maxConnection) {
+        this.maxConnection = maxConnection;
+        return this;
+    }
+
+    /**
+     * set 单分片带宽（Mbps）
+     *
+     * @param bandwidthMbps
+     */
+    public ShardSpec bandwidthMbps(Integer bandwidthMbps) {
+        this.bandwidthMbps = bandwidthMbps;
+        return this;
+    }
+
+    /**
+     * set 支持的分片数列表
+     *
+     * @param shardNumberList
+     */
+    public ShardSpec shardNumberList(List<Integer> shardNumberList) {
+        this.shardNumberList = shardNumberList;
+        return this;
+    }
+
+
+    /**
+     * add item to 支持的分片数列表
+     *
+     * @param shardNumberList
+     */
+    public void addShardNumberList(Integer shardNumberList) {
+        if (this.shardNumberList == null) {
+            this.shardNumberList = new ArrayList<>();
+        }
+        this.shardNumberList.add(shardNumberList);
+    }
 
 }
