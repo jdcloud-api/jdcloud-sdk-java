@@ -38,16 +38,7 @@ public class IpResource  implements java.io.Serializable {
     private String region;
 
     /**
-     * 公网 IP 类型或绑定资源类型:
-  0: 未知类型,
-  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-  11: 云主机,
-  12: 负载均衡,
-  13: 原生容器实例,
-  14: 原生容器 Pod,
-  2: 云物理服务器,
-
+     * 公网 IP 类型或绑定资源类型. &lt;br&gt;- 0: 未知类型,&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),&lt;br&gt;- 11: 云主机,&lt;br&gt;- 12: 负载均衡,&lt;br&gt;- 13: 原生容器实例,&lt;br&gt;- 14: 原生容器 Pod,&lt;br&gt;- 2: 云物理服务器公网 IP,&lt;br&gt;- 4: 托管区公网 IP
      */
     private Integer resourceType;
 
@@ -87,12 +78,12 @@ public class IpResource  implements java.io.Serializable {
     private String instanceName;
 
     /**
-     * 套餐类型, 1: 独享 IP, 2: 共享 IP, 为 0 时未绑定防护包
+     * 套餐类型, 为 0 时未绑定防护包. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      */
     private Integer instanceType;
 
     /**
-     * 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      */
     private Integer safeStatus;
 
@@ -116,16 +107,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * get 公网 IP 类型或绑定资源类型:
-  0: 未知类型,
-  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-  11: 云主机,
-  12: 负载均衡,
-  13: 原生容器实例,
-  14: 原生容器 Pod,
-  2: 云物理服务器,
-
+     * get 公网 IP 类型或绑定资源类型. &lt;br&gt;- 0: 未知类型,&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),&lt;br&gt;- 11: 云主机,&lt;br&gt;- 12: 负载均衡,&lt;br&gt;- 13: 原生容器实例,&lt;br&gt;- 14: 原生容器 Pod,&lt;br&gt;- 2: 云物理服务器公网 IP,&lt;br&gt;- 4: 托管区公网 IP
      *
      * @return
      */
@@ -134,16 +116,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 公网 IP 类型或绑定资源类型:
-  0: 未知类型,
-  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-  11: 云主机,
-  12: 负载均衡,
-  13: 原生容器实例,
-  14: 原生容器 Pod,
-  2: 云物理服务器,
-
+     * set 公网 IP 类型或绑定资源类型. &lt;br&gt;- 0: 未知类型,&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),&lt;br&gt;- 11: 云主机,&lt;br&gt;- 12: 负载均衡,&lt;br&gt;- 13: 原生容器实例,&lt;br&gt;- 14: 原生容器 Pod,&lt;br&gt;- 2: 云物理服务器公网 IP,&lt;br&gt;- 4: 托管区公网 IP
      *
      * @param resourceType
      */
@@ -278,7 +251,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * get 套餐类型, 1: 独享 IP, 2: 共享 IP, 为 0 时未绑定防护包
+     * get 套餐类型, 为 0 时未绑定防护包. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @return
      */
@@ -287,7 +260,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型, 1: 独享 IP, 2: 共享 IP, 为 0 时未绑定防护包
+     * set 套餐类型, 为 0 时未绑定防护包. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @param instanceType
      */
@@ -296,7 +269,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * get 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * get 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @return
      */
@@ -305,7 +278,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * set 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @param safeStatus
      */
@@ -325,16 +298,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 公网 IP 类型或绑定资源类型:
-  0: 未知类型,
-  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-  11: 云主机,
-  12: 负载均衡,
-  13: 原生容器实例,
-  14: 原生容器 Pod,
-  2: 云物理服务器,
-
+     * set 公网 IP 类型或绑定资源类型. &lt;br&gt;- 0: 未知类型,&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),&lt;br&gt;- 11: 云主机,&lt;br&gt;- 12: 负载均衡,&lt;br&gt;- 13: 原生容器实例,&lt;br&gt;- 14: 原生容器 Pod,&lt;br&gt;- 2: 云物理服务器公网 IP,&lt;br&gt;- 4: 托管区公网 IP
      *
      * @param resourceType
      */
@@ -414,7 +378,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型, 1: 独享 IP, 2: 共享 IP, 为 0 时未绑定防护包
+     * set 套餐类型, 为 0 时未绑定防护包. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @param instanceType
      */
@@ -424,7 +388,7 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 安全状态, 0: 安全, 1: 清洗, 2: 黑洞
+     * set 安全状态. &lt;br&gt;- 0: 安全&lt;br&gt;- 1: 清洗&lt;br&gt;- 2: 黑洞
      *
      * @param safeStatus
      */

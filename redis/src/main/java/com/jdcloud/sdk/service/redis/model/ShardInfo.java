@@ -49,6 +49,11 @@ public class ShardInfo  implements java.io.Serializable {
      */
     private List<Integer> shardNumberList;
 
+    /**
+     * 需要的IP数列表
+     */
+    private List<Integer> ipNumberList;
+
 
     /**
      * get 默认分片数
@@ -104,6 +109,24 @@ public class ShardInfo  implements java.io.Serializable {
         this.shardNumberList = shardNumberList;
     }
 
+    /**
+     * get 需要的IP数列表
+     *
+     * @return
+     */
+    public List<Integer> getIpNumberList() {
+        return ipNumberList;
+    }
+
+    /**
+     * set 需要的IP数列表
+     *
+     * @param ipNumberList
+     */
+    public void setIpNumberList(List<Integer> ipNumberList) {
+        this.ipNumberList = ipNumberList;
+    }
+
 
     /**
      * set 默认分片数
@@ -135,6 +158,16 @@ public class ShardInfo  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 需要的IP数列表
+     *
+     * @param ipNumberList
+     */
+    public ShardInfo ipNumberList(List<Integer> ipNumberList) {
+        this.ipNumberList = ipNumberList;
+        return this;
+    }
+
 
     /**
      * add item to 分片数列表
@@ -146,6 +179,18 @@ public class ShardInfo  implements java.io.Serializable {
             this.shardNumberList = new ArrayList<>();
         }
         this.shardNumberList.add(shardNumberList);
+    }
+
+    /**
+     * add item to 需要的IP数列表
+     *
+     * @param ipNumberList
+     */
+    public void addIpNumberList(Integer ipNumberList) {
+        if (this.ipNumberList == null) {
+            this.ipNumberList = new ArrayList<>();
+        }
+        this.ipNumberList.add(ipNumberList);
     }
 
 }

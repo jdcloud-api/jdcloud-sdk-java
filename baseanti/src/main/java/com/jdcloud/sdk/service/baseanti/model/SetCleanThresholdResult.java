@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.baseanti.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&quot;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
+ * 设置基础防护已防护公网 IP 的清洗阈值, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/setipcleanthreshold&#39;&gt;setIpCleanThreshold&lt;/a&gt; 接口)
 
  */
 public class SetCleanThresholdResult extends JdcloudResult implements java.io.Serializable {

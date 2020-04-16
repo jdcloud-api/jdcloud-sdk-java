@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.baseanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&quot;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
+ * 查询公网 IP 安全信息, 仅支持 ipv4. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipsafetyinfo&#39;&gt;describeIpSafetyInfo&lt;/a&gt; 接口)
 
  */
 public class DescribeIpResourceInfoResponse extends JdcloudResponse<DescribeIpResourceInfoResult> implements java.io.Serializable {

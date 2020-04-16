@@ -28,8 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口)&quot;
-
+ * 查询基础防护已防护的公网 IP 的安全信息列表. 包括私有网络的弹性公网 IP(运营商级 NAT 保留地址除外), 云物理服务器的公网 IP 和弹性公网 IP. (已废弃, 建议使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt;, &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describecpsipresources&#39;&gt;describeCpsIpResources&lt;/a&gt; 接口)
  */
 public class DescribeIpResourcesRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,7 +41,6 @@ public class DescribeIpResourcesRequest extends JdcloudRequest implements java.i
 
     /**
      * 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      * Required:true
      */
     @Required
@@ -69,7 +67,6 @@ public class DescribeIpResourcesRequest extends JdcloudRequest implements java.i
 
     /**
      * get 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @return
      */
@@ -79,7 +76,6 @@ public class DescribeIpResourcesRequest extends JdcloudRequest implements java.i
 
     /**
      * set 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @param regionId
      */
@@ -100,7 +96,6 @@ public class DescribeIpResourcesRequest extends JdcloudRequest implements java.i
 
     /**
      * set 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @param regionId
      */

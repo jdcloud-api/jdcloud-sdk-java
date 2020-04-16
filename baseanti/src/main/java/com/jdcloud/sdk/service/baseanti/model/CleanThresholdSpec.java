@@ -34,16 +34,14 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-
+     * 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
      * Required:true
      */
     @Required
     private Long cleanThresholdBps;
 
     /**
-     * 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-
+     * 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
      * Required:true
      */
     @Required
@@ -51,8 +49,7 @@ public class CleanThresholdSpec  implements java.io.Serializable {
 
 
     /**
-     * get 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-
+     * get 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
      *
      * @return
      */
@@ -61,8 +58,7 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-
+     * set 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
      *
      * @param cleanThresholdBps
      */
@@ -71,8 +67,7 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-
+     * get 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
      *
      * @return
      */
@@ -81,8 +76,7 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-
+     * set 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
      *
      * @param cleanThresholdPps
      */
@@ -92,8 +86,7 @@ public class CleanThresholdSpec  implements java.io.Serializable {
 
 
     /**
-     * set 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-
+     * set 触发清洗的流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
      *
      * @param cleanThresholdBps
      */
@@ -103,8 +96,7 @@ public class CleanThresholdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&quot;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
-
+     * set 触发清洗的报文流量速率, 单位 bps. 取值范围由 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-basic/api/describeipcleanthresholdrange&#39;&gt;describeIpCleanThresholdRange&lt;/a&gt; 接口查询可知
      *
      * @param cleanThresholdPps
      */

@@ -46,7 +46,6 @@ public class DescribeCcsIpResourcesRequest extends JdcloudRequest implements jav
 
     /**
      * 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      * Required:true
      */
     @Required
@@ -91,7 +90,6 @@ public class DescribeCcsIpResourcesRequest extends JdcloudRequest implements jav
 
     /**
      * get 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @return
      */
@@ -101,7 +99,6 @@ public class DescribeCcsIpResourcesRequest extends JdcloudRequest implements jav
 
     /**
      * set 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @param regionId
      */
@@ -132,7 +129,6 @@ public class DescribeCcsIpResourcesRequest extends JdcloudRequest implements jav
 
     /**
      * set 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
-
      *
      * @param regionId
      */

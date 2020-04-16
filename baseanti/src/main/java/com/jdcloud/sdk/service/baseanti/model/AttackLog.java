@@ -40,16 +40,7 @@ public class AttackLog  implements java.io.Serializable {
     private String ip;
 
     /**
-     * 公网 IP 类型或绑定资源类型:
-  0: 未知类型,
-  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-  11: 云主机,
-  12: 负载均衡,
-  13: 原生容器实例,
-  14: 原生容器 Pod,
-  2: 云物理服务器,
-
+     * 公网 IP 类型或绑定资源类型.&lt;br&gt;- 0: 未知类型,&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),&lt;br&gt;- 11: 云主机,&lt;br&gt;- 12: 负载均衡,&lt;br&gt;- 13: 原生容器实例,&lt;br&gt;- 14: 原生容器 Pod,&lt;br&gt;- 2: 云物理服务器,&lt;br&gt;- 4: 托管区公网 IP
      */
     private Integer resourceType;
 
@@ -69,17 +60,12 @@ public class AttackLog  implements java.io.Serializable {
     private String endTime;
 
     /**
-     * 触发原因:
-0: 未知,
-1: 四层,
-2: 七层,
-3: 四层和七层
-
+     * 触发原因.&lt;br&gt;- 0: 未知,&lt;br&gt;- 1: 四层,&lt;br&gt;- 2: 七层,&lt;br&gt;- 3: 四层和七层
      */
     private Integer cause;
 
     /**
-     * 状态, 0: 清洗完成, 1: 清洗中, 2: 黑洞中
+     * 状态. &lt;br&gt;- 0: 清洗完成&lt;br&gt;- 1: 清洗中&lt;br&gt;- 2: 黑洞中
      */
     private Integer status;
 
@@ -91,7 +77,7 @@ public class AttackLog  implements java.io.Serializable {
     /**
      * 攻击流量峰值
      */
-    private Number peak;
+    private Double peak;
 
     /**
      * 攻击流量峰值单位
@@ -123,16 +109,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * get 公网 IP 类型或绑定资源类型:
-  0: 未知类型,
-  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-  11: 云主机,
-  12: 负载均衡,
-  13: 原生容器实例,
-  14: 原生容器 Pod,
-  2: 云物理服务器,
-
+     * get 公网 IP 类型或绑定资源类型.&lt;br&gt;- 0: 未知类型,&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),&lt;br&gt;- 11: 云主机,&lt;br&gt;- 12: 负载均衡,&lt;br&gt;- 13: 原生容器实例,&lt;br&gt;- 14: 原生容器 Pod,&lt;br&gt;- 2: 云物理服务器,&lt;br&gt;- 4: 托管区公网 IP
      *
      * @return
      */
@@ -141,16 +118,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 公网 IP 类型或绑定资源类型:
-  0: 未知类型,
-  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-  11: 云主机,
-  12: 负载均衡,
-  13: 原生容器实例,
-  14: 原生容器 Pod,
-  2: 云物理服务器,
-
+     * set 公网 IP 类型或绑定资源类型.&lt;br&gt;- 0: 未知类型,&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),&lt;br&gt;- 11: 云主机,&lt;br&gt;- 12: 负载均衡,&lt;br&gt;- 13: 原生容器实例,&lt;br&gt;- 14: 原生容器 Pod,&lt;br&gt;- 2: 云物理服务器,&lt;br&gt;- 4: 托管区公网 IP
      *
      * @param resourceType
      */
@@ -213,12 +181,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * get 触发原因:
-0: 未知,
-1: 四层,
-2: 七层,
-3: 四层和七层
-
+     * get 触发原因.&lt;br&gt;- 0: 未知,&lt;br&gt;- 1: 四层,&lt;br&gt;- 2: 七层,&lt;br&gt;- 3: 四层和七层
      *
      * @return
      */
@@ -227,12 +190,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 触发原因:
-0: 未知,
-1: 四层,
-2: 七层,
-3: 四层和七层
-
+     * set 触发原因.&lt;br&gt;- 0: 未知,&lt;br&gt;- 1: 四层,&lt;br&gt;- 2: 七层,&lt;br&gt;- 3: 四层和七层
      *
      * @param cause
      */
@@ -241,7 +199,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * get 状态, 0: 清洗完成, 1: 清洗中, 2: 黑洞中
+     * get 状态. &lt;br&gt;- 0: 清洗完成&lt;br&gt;- 1: 清洗中&lt;br&gt;- 2: 黑洞中
      *
      * @return
      */
@@ -250,7 +208,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 状态, 0: 清洗完成, 1: 清洗中, 2: 黑洞中
+     * set 状态. &lt;br&gt;- 0: 清洗完成&lt;br&gt;- 1: 清洗中&lt;br&gt;- 2: 黑洞中
      *
      * @param status
      */
@@ -281,7 +239,7 @@ public class AttackLog  implements java.io.Serializable {
      *
      * @return
      */
-    public Number getPeak() {
+    public Double getPeak() {
         return peak;
     }
 
@@ -290,7 +248,7 @@ public class AttackLog  implements java.io.Serializable {
      *
      * @param peak
      */
-    public void setPeak(Number peak) {
+    public void setPeak(Double peak) {
         this.peak = peak;
     }
 
@@ -342,16 +300,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 公网 IP 类型或绑定资源类型:
-  0: 未知类型,
-  1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),
-  10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),
-  11: 云主机,
-  12: 负载均衡,
-  13: 原生容器实例,
-  14: 原生容器 Pod,
-  2: 云物理服务器,
-
+     * set 公网 IP 类型或绑定资源类型.&lt;br&gt;- 0: 未知类型,&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知),&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源),&lt;br&gt;- 11: 云主机,&lt;br&gt;- 12: 负载均衡,&lt;br&gt;- 13: 原生容器实例,&lt;br&gt;- 14: 原生容器 Pod,&lt;br&gt;- 2: 云物理服务器,&lt;br&gt;- 4: 托管区公网 IP
      *
      * @param resourceType
      */
@@ -391,12 +340,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 触发原因:
-0: 未知,
-1: 四层,
-2: 七层,
-3: 四层和七层
-
+     * set 触发原因.&lt;br&gt;- 0: 未知,&lt;br&gt;- 1: 四层,&lt;br&gt;- 2: 七层,&lt;br&gt;- 3: 四层和七层
      *
      * @param cause
      */
@@ -406,7 +350,7 @@ public class AttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 状态, 0: 清洗完成, 1: 清洗中, 2: 黑洞中
+     * set 状态. &lt;br&gt;- 0: 清洗完成&lt;br&gt;- 1: 清洗中&lt;br&gt;- 2: 黑洞中
      *
      * @param status
      */
@@ -430,7 +374,7 @@ public class AttackLog  implements java.io.Serializable {
      *
      * @param peak
      */
-    public AttackLog peak(Number peak) {
+    public AttackLog peak(Double peak) {
         this.peak = peak;
         return this;
     }

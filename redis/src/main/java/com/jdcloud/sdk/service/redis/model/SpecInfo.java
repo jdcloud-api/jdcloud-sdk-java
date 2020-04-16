@@ -65,6 +65,11 @@ public class SpecInfo  implements java.io.Serializable {
     private Integer bandwidthMbps;
 
     /**
+     * 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+     */
+    private Integer ipNumber;
+
+    /**
      * 该内存对应的分片列表信息，redis 2.8以及redis 4.0主从版没有分片列表信息
      */
     private ShardInfo shard;
@@ -184,6 +189,24 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
+     * get 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+     *
+     * @return
+     */
+    public Integer getIpNumber() {
+        return ipNumber;
+    }
+
+    /**
+     * set 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+     *
+     * @param ipNumber
+     */
+    public void setIpNumber(Integer ipNumber) {
+        this.ipNumber = ipNumber;
+    }
+
+    /**
      * get 该内存对应的分片列表信息，redis 2.8以及redis 4.0主从版没有分片列表信息
      *
      * @return
@@ -277,6 +300,16 @@ public class SpecInfo  implements java.io.Serializable {
      */
     public SpecInfo bandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
+        return this;
+    }
+
+    /**
+     * set 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+     *
+     * @param ipNumber
+     */
+    public SpecInfo ipNumber(Integer ipNumber) {
+        this.ipNumber = ipNumber;
         return this;
     }
 
