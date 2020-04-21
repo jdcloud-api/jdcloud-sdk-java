@@ -53,6 +53,8 @@ subnetNames - subnet名称列表，支持多个
 routeTableId	- 子网关联路由表Id，支持单个
 aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
+subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      */
     private List<Filter> filters;
@@ -107,6 +109,8 @@ subnetNames - subnet名称列表，支持多个
 routeTableId	- 子网关联路由表Id，支持单个
 aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
+subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      *
      * @return
@@ -121,6 +125,8 @@ subnetNames - subnet名称列表，支持多个
 routeTableId	- 子网关联路由表Id，支持单个
 aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
+subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      *
      * @param filters
@@ -174,6 +180,8 @@ subnetNames - subnet名称列表，支持多个
 routeTableId	- 子网关联路由表Id，支持单个
 aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
+subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      *
      * @param filters
@@ -200,6 +208,8 @@ subnetNames - subnet名称列表，支持多个
 routeTableId	- 子网关联路由表Id，支持单个
 aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
+subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      *
      * @param filter

@@ -58,7 +58,7 @@ public class Segment  implements java.io.Serializable {
     private Integer availableIpCount;
 
     /**
-     * IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+     * IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp
      */
     private String provider;
 
@@ -164,7 +164,7 @@ public class Segment  implements java.io.Serializable {
     }
 
     /**
-     * get IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+     * get IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp
      *
      * @return
      */
@@ -173,7 +173,7 @@ public class Segment  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+     * set IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp
      *
      * @param provider
      */
@@ -269,7 +269,7 @@ public class Segment  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+     * set IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp
      *
      * @param provider
      */

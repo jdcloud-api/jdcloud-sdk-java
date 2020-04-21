@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Elastic-IP
- * 弹性公网ip相关接口
+ * 弹性公网IP相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除弹性Ip
+ * 删除弹性公网IP
  */
 public class DeleteElasticIpRequest extends JdcloudRequest implements java.io.Serializable {
 

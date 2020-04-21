@@ -37,7 +37,7 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。
+     * 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      * Required:true
      */
     @Required
@@ -59,7 +59,7 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。
+     * get 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。
+     * set 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      *
      * @param subnetIds
      */
@@ -114,7 +114,7 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。
+     * set 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      *
      * @param subnetIds
      */
@@ -145,7 +145,7 @@ public class AssociateRouteTableRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * add item to 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。
+     * add item to 路由表要绑定的子网ID列表, subnet已被其他路由表绑定时，自动解绑。路由表绑定的子网属性要相同，或者都是标准子网，或者都是相同边缘可用区的边缘子网。
      *
      * @param subnetId
      */

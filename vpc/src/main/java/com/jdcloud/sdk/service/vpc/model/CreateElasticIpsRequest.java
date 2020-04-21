@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Elastic-IP
- * 弹性公网ip相关接口
+ * 弹性公网IP相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -32,7 +32,7 @@ import com.jdcloud.sdk.service.vpc.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建一个或者多个弹性Ip
+ * 创建一个或者多个弹性公网IP
  */
 public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -61,6 +61,11 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
      * 用户标签
      */
     private List<Tag> userTags;
+
+    /**
+     * 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+     */
+    private String ipType;
 
     /**
      * Region ID
@@ -143,6 +148,24 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+     *
+     * @return
+     */
+    public String getIpType() {
+        return ipType;
+    }
+
+    /**
+     * set 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+     *
+     * @param ipType
+     */
+    public void setIpType(String ipType) {
+        this.ipType = ipType;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -198,6 +221,16 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
      */
     public CreateElasticIpsRequest userTags(List<Tag> userTags) {
         this.userTags = userTags;
+        return this;
+    }
+
+    /**
+     * set 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+     *
+     * @param ipType
+     */
+    public CreateElasticIpsRequest ipType(String ipType) {
+        this.ipType = ipType;
         return this;
     }
 

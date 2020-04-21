@@ -103,6 +103,9 @@ import com.jdcloud.sdk.service.vpc.client.DescribeVpcExecutor;
 import com.jdcloud.sdk.service.vpc.model.DisassociateNetworkAclRequest;
 import com.jdcloud.sdk.service.vpc.model.DisassociateNetworkAclResponse;
 import com.jdcloud.sdk.service.vpc.client.DisassociateNetworkAclExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeEdgeIpProvidersRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeEdgeIpProvidersResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeEdgeIpProvidersExecutor;
 import com.jdcloud.sdk.service.vpc.model.RemoveNetworkAclRulesRequest;
 import com.jdcloud.sdk.service.vpc.model.RemoveNetworkAclRulesResponse;
 import com.jdcloud.sdk.service.vpc.client.RemoveNetworkAclRulesExecutor;
@@ -213,7 +216,7 @@ public class VpcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.1";
     public final static String DefaultEndpoint = "vpc.jdcloud-api.com";
     public final static String ServiceName = "vpc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -256,7 +259,7 @@ public class VpcClient extends JdcloudClient {
 
 
     /**
-     * 删除弹性Ip
+     * 删除弹性公网IP
      *
      * @param request
      * @return
@@ -278,7 +281,7 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 修改弹性IP
+     * 修改弹性公网IP
      *
      * @param request
      * @return
@@ -520,6 +523,17 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 查询边缘公网IP可用线路列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeEdgeIpProvidersResponse describeEdgeIpProviders(DescribeEdgeIpProvidersRequest request) throws JdcloudSdkException {
+        return new DescribeEdgeIpProvidersExecutor().client(this).execute(request);
+    }
+
+    /**
      * 移除networkAcl规则
      *
      * @param request
@@ -652,7 +666,7 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 查询弹性ip列表
+     * 查询弹性公网IP列表
      *
      * @param request
      * @return
@@ -850,7 +864,7 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 创建一个或者多个弹性Ip
+     * 创建一个或者多个弹性公网IP
      *
      * @param request
      * @return

@@ -42,14 +42,14 @@ public class ElasticIpSpec  implements java.io.Serializable {
     private Integer bandwidthMbps;
 
     /**
-     * IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+     * IP线路信息。当IP类型为标准公网IP时，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp。当IP类型为边缘公网IP时，其值可通过调用describeEdgeIpProviders、获取不同边缘节点的边缘公网IP线路信息
      * Required:true
      */
     @Required
     private String provider;
 
     /**
-     * 计费配置
+     * 计费配置。边缘公网IP支持包年包月、按配置；标准公网IP支持包年包月、按配置、按流量
      */
     private ChargeSpec chargeSpec;
 
@@ -73,7 +73,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * get IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+     * get IP线路信息。当IP类型为标准公网IP时，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp。当IP类型为边缘公网IP时，其值可通过调用describeEdgeIpProviders、获取不同边缘节点的边缘公网IP线路信息
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+     * set IP线路信息。当IP类型为标准公网IP时，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp。当IP类型为边缘公网IP时，其值可通过调用describeEdgeIpProviders、获取不同边缘节点的边缘公网IP线路信息
      *
      * @param provider
      */
@@ -91,7 +91,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 计费配置
+     * get 计费配置。边缘公网IP支持包年包月、按配置；标准公网IP支持包年包月、按配置、按流量
      *
      * @return
      */
@@ -100,7 +100,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费配置
+     * set 计费配置。边缘公网IP支持包年包月、按配置；标准公网IP支持包年包月、按配置、按流量
      *
      * @param chargeSpec
      */
@@ -120,7 +120,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：[bgp，no_bgp]；cn-east-2：bgp
+     * set IP线路信息。当IP类型为标准公网IP时，取值为bgp或no_bgp，cn-north-1：bgp；cn-south-1：bgp；cn-east-1：bgp；cn-east-2：bgp。当IP类型为边缘公网IP时，其值可通过调用describeEdgeIpProviders、获取不同边缘节点的边缘公网IP线路信息
      *
      * @param provider
      */
@@ -130,7 +130,7 @@ public class ElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费配置
+     * set 计费配置。边缘公网IP支持包年包月、按配置；标准公网IP支持包年包月、按配置、按流量
      *
      * @param chargeSpec
      */

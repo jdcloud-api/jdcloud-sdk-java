@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Elastic-IP
- * 弹性公网ip相关接口
+ * 弹性公网IP相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,14 +29,14 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建一个或者多个弹性Ip
+ * 创建一个或者多个弹性公网IP
  */
 public class CreateElasticIpsResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性IP ID
+     * 弹性公网IP ID
      */
     private List<String> elasticIpIds;
 
@@ -47,7 +47,7 @@ public class CreateElasticIpsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * get 弹性IP ID
+     * get 弹性公网IP ID
      *
      * @return
      */
@@ -56,7 +56,7 @@ public class CreateElasticIpsResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 弹性IP ID
+     * set 弹性公网IP ID
      *
      * @param elasticIpIds
      */
@@ -84,7 +84,7 @@ public class CreateElasticIpsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set 弹性IP ID
+     * set 弹性公网IP ID
      *
      * @param elasticIpIds
      */
@@ -105,7 +105,7 @@ public class CreateElasticIpsResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * add item to 弹性IP ID
+     * add item to 弹性公网IP ID
      *
      * @param elasticIpId
      */

@@ -1,8 +1,9 @@
 # 更新历史 #
-API版本：0.9.1
+API版本：0.9.2
 
 |发布时间|版本号|更新|说明|
 |---|---|---|---|
+|2020-04-13|0.9.2|扩展支持|* 支持边缘计算|
 |2019-11-04|0.9.1|增加新接口|* 增加SetEipTag<br>* 增加GetStatus|
 |2019-09-12|0.9.0|增加新接口|* 增加AddRoutePropagation<br>* 增加ModifyRoutePropagation<br>* 增加RemoveRoutePropagation<br>* 修改AddRouteTableRules，增加description属性<br>* 修改ModifyRouteTableRules，增加description属性<br>* 修改DescribeRouteTable/DescribeRouteTables返回信息增加路由传播列表（routePropagations）、路由信息增加路由类型、description属性<br>* 查询和修改配额接口支持传播路由|
 |2019-07-23|0.8.0|增加新接口|* 增加createNetworkInterfacePermission<br>* 增加describeNetworkInterfacePermissions<br>* 增加deleteNetworkInterfacePermission<br>* 弹性网卡列表增加attachmentStatus和networkInterfaceStatus<br>* 弹性网卡增加enableNetworkInterface、disableNetworkInterface<br>* 增加describeAuthorizedNetworkInterface和describeAuthorizedNetworkInterfaces|
