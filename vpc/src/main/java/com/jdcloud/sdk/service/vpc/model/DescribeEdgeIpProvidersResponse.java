@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Elastic-IP
- * 弹性公网IP相关接口
+ * Segment
+ * 网段相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,12 +24,12 @@
 
 package com.jdcloud.sdk.service.vpc.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改弹性公网IP
+ * 查询边缘公网IP可用线路列表
  */
-public class ModifyElasticIpResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeEdgeIpProvidersResponse extends JdcloudResponse<DescribeEdgeIpProvidersResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

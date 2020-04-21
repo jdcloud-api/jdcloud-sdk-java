@@ -87,6 +87,16 @@ public class Subnet  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     */
+    private String subnetType;
+
+    /**
+     * 子网可用区
+     */
+    private String az;
+
 
     /**
      * get Subnet的Id
@@ -286,6 +296,42 @@ public class Subnet  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+    /**
+     * get 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     *
+     * @return
+     */
+    public String getSubnetType() {
+        return subnetType;
+    }
+
+    /**
+     * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     *
+     * @param subnetType
+     */
+    public void setSubnetType(String subnetType) {
+        this.subnetType = subnetType;
+    }
+
+    /**
+     * get 子网可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 子网可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
 
     /**
      * set Subnet的Id
@@ -394,6 +440,26 @@ public class Subnet  implements java.io.Serializable {
      */
     public Subnet createdTime(String createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+    /**
+     * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     *
+     * @param subnetType
+     */
+    public Subnet subnetType(String subnetType) {
+        this.subnetType = subnetType;
+        return this;
+    }
+
+    /**
+     * set 子网可用区
+     *
+     * @param az
+     */
+    public Subnet az(String az) {
+        this.az = az;
         return this;
     }
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Elastic-IP
- * 弹性公网IP相关接口
+ * Segment
+ * 网段相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,20 +26,20 @@ package com.jdcloud.sdk.service.vpc.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.vpc.model.ElasticIp;
+import com.jdcloud.sdk.service.vpc.model.EdgeIpProvider;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询弹性公网IP列表
+ * 查询边缘公网IP可用线路列表
  */
-public class DescribeElasticIpsResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeEdgeIpProvidersResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * elasticIps
+     * edgeIpProviders
      */
-    private List<ElasticIp> elasticIps;
+    private List<EdgeIpProvider> edgeIpProviders;
 
     /**
      * 总数量
@@ -48,21 +48,21 @@ public class DescribeElasticIpsResult extends JdcloudResult implements java.io.S
 
 
     /**
-     * get elasticIps
+     * get edgeIpProviders
      *
      * @return
      */
-    public List<ElasticIp> getElasticIps() {
-        return elasticIps;
+    public List<EdgeIpProvider> getEdgeIpProviders() {
+        return edgeIpProviders;
     }
 
     /**
-     * set elasticIps
+     * set edgeIpProviders
      *
-     * @param elasticIps
+     * @param edgeIpProviders
      */
-    public void setElasticIps(List<ElasticIp> elasticIps) {
-        this.elasticIps = elasticIps;
+    public void setEdgeIpProviders(List<EdgeIpProvider> edgeIpProviders) {
+        this.edgeIpProviders = edgeIpProviders;
     }
 
     /**
@@ -85,12 +85,12 @@ public class DescribeElasticIpsResult extends JdcloudResult implements java.io.S
 
 
     /**
-     * set elasticIps
+     * set edgeIpProviders
      *
-     * @param elasticIps
+     * @param edgeIpProviders
      */
-    public DescribeElasticIpsResult elasticIps(List<ElasticIp> elasticIps) {
-        this.elasticIps = elasticIps;
+    public DescribeEdgeIpProvidersResult edgeIpProviders(List<EdgeIpProvider> edgeIpProviders) {
+        this.edgeIpProviders = edgeIpProviders;
         return this;
     }
 
@@ -99,22 +99,22 @@ public class DescribeElasticIpsResult extends JdcloudResult implements java.io.S
      *
      * @param totalCount
      */
-    public DescribeElasticIpsResult totalCount(Integer totalCount) {
+    public DescribeEdgeIpProvidersResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
 
 
     /**
-     * add item to elasticIps
+     * add item to edgeIpProviders
      *
-     * @param elasticIp
+     * @param edgeIpProvider
      */
-    public void addElasticIp(ElasticIp elasticIp) {
-        if (this.elasticIps == null) {
-            this.elasticIps = new ArrayList<>();
+    public void addEdgeIpProvider(EdgeIpProvider edgeIpProvider) {
+        if (this.edgeIpProviders == null) {
+            this.edgeIpProviders = new ArrayList<>();
         }
-        this.elasticIps.add(elasticIp);
+        this.edgeIpProviders.add(edgeIpProvider);
     }
 
 }

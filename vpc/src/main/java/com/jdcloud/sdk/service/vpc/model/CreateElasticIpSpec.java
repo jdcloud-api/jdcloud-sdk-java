@@ -59,6 +59,11 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
      */
     private List<Tag> userTags;
 
+    /**
+     * 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+     */
+    private String ipType;
+
 
     /**
      * get 购买弹性ip数量；取值范围：[1,100]
@@ -132,6 +137,24 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         this.userTags = userTags;
     }
 
+    /**
+     * get 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+     *
+     * @return
+     */
+    public String getIpType() {
+        return ipType;
+    }
+
+    /**
+     * set 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+     *
+     * @param ipType
+     */
+    public void setIpType(String ipType) {
+        this.ipType = ipType;
+    }
+
 
     /**
      * set 购买弹性ip数量；取值范围：[1,100]
@@ -170,6 +193,16 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
      */
     public CreateElasticIpSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
+        return this;
+    }
+
+    /**
+     * set 弹性ip类型，取值：standard(标准公网IP)，edge(边缘公网IP)，默认为standard
+     *
+     * @param ipType
+     */
+    public CreateElasticIpSpec ipType(String ipType) {
+        this.ipType = ipType;
         return this;
     }
 

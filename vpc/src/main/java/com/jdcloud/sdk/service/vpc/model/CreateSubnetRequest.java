@@ -56,7 +56,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     private String addressPrefix;
 
     /**
-     * 子网关联的路由表Id, 默认为vpc的默认路由表
+     * 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
      */
     private String routeTableId;
 
@@ -64,6 +64,16 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
      * 子网描述信息,允许输入UTF-8编码下的全部字符，不超过256字符。
      */
     private String description;
+
+    /**
+     * 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     */
+    private String subnetType;
+
+    /**
+     * 子网可用区，边缘子网必须指定可用区
+     */
+    private String az;
 
     /**
      * Region ID
@@ -128,7 +138,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 子网关联的路由表Id, 默认为vpc的默认路由表
+     * get 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
      *
      * @return
      */
@@ -137,7 +147,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 子网关联的路由表Id, 默认为vpc的默认路由表
+     * set 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
      *
      * @param routeTableId
      */
@@ -161,6 +171,42 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     *
+     * @return
+     */
+    public String getSubnetType() {
+        return subnetType;
+    }
+
+    /**
+     * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     *
+     * @param subnetType
+     */
+    public void setSubnetType(String subnetType) {
+        this.subnetType = subnetType;
+    }
+
+    /**
+     * get 子网可用区，边缘子网必须指定可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 子网可用区，边缘子网必须指定可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
     }
 
     /**
@@ -213,7 +259,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 子网关联的路由表Id, 默认为vpc的默认路由表
+     * set 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
      *
      * @param routeTableId
      */
@@ -229,6 +275,26 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
      */
     public CreateSubnetRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     *
+     * @param subnetType
+     */
+    public CreateSubnetRequest subnetType(String subnetType) {
+        this.subnetType = subnetType;
+        return this;
+    }
+
+    /**
+     * set 子网可用区，边缘子网必须指定可用区
+     *
+     * @param az
+     */
+    public CreateSubnetRequest az(String az) {
+        this.az = az;
         return this;
     }
 

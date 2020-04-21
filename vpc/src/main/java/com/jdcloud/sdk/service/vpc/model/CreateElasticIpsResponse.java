@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Elastic-IP
- * 弹性公网ip相关接口
+ * 弹性公网IP相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vpc.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建一个或者多个弹性Ip
+ * 创建一个或者多个弹性公网IP
  */
 public class CreateElasticIpsResponse extends JdcloudResponse<CreateElasticIpsResult> implements java.io.Serializable {
 

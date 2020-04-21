@@ -36,22 +36,22 @@ public class ElasticIp  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性IP的Id
+     * 弹性公网IP的Id
      */
     private String elasticIpId;
 
     /**
-     * 弹性IP地址
+     * 弹性公网IP的地址
      */
     private String elasticIpAddress;
 
     /**
-     * 弹性ip的限速（单位：Mbps)
+     * 弹性公网IP的限速（单位：Mbps)
      */
     private Integer bandwidthMbps;
 
     /**
-     * IP服务商，取值为bgp或no_bgp
+     * 弹性公网IP的线路，标准公网IP的线路、取值为bgp或no_bgp；边缘公网IP的线路、可通过describeEdgeIpProviders接口获取
      */
     private String provider;
 
@@ -81,12 +81,12 @@ public class ElasticIp  implements java.io.Serializable {
     private Charge charge;
 
     /**
-     * 弹性ip创建时间
+     * 弹性公网IP的创建时间
      */
     private String createdTime;
 
     /**
-     * 弹性ip可用区属性，如果为空，表示全可用区
+     * 弹性公网IP的可用区属性，如果为空，表示全可用区
      */
     private String az;
 
@@ -95,9 +95,14 @@ public class ElasticIp  implements java.io.Serializable {
      */
     private List<Tag> tags;
 
+    /**
+     * 弹性公网IP的IP类型，取值：standard(标准弹性IP)、edge(边缘弹性IP)
+     */
+    private String ipType;
+
 
     /**
-     * get 弹性IP的Id
+     * get 弹性公网IP的Id
      *
      * @return
      */
@@ -106,7 +111,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性IP的Id
+     * set 弹性公网IP的Id
      *
      * @param elasticIpId
      */
@@ -115,7 +120,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get 弹性IP地址
+     * get 弹性公网IP的地址
      *
      * @return
      */
@@ -124,7 +129,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性IP地址
+     * set 弹性公网IP的地址
      *
      * @param elasticIpAddress
      */
@@ -133,7 +138,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get 弹性ip的限速（单位：Mbps)
+     * get 弹性公网IP的限速（单位：Mbps)
      *
      * @return
      */
@@ -142,7 +147,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性ip的限速（单位：Mbps)
+     * set 弹性公网IP的限速（单位：Mbps)
      *
      * @param bandwidthMbps
      */
@@ -151,7 +156,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get IP服务商，取值为bgp或no_bgp
+     * get 弹性公网IP的线路，标准公网IP的线路、取值为bgp或no_bgp；边缘公网IP的线路、可通过describeEdgeIpProviders接口获取
      *
      * @return
      */
@@ -160,7 +165,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为bgp或no_bgp
+     * set 弹性公网IP的线路，标准公网IP的线路、取值为bgp或no_bgp；边缘公网IP的线路、可通过describeEdgeIpProviders接口获取
      *
      * @param provider
      */
@@ -259,7 +264,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get 弹性ip创建时间
+     * get 弹性公网IP的创建时间
      *
      * @return
      */
@@ -268,7 +273,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性ip创建时间
+     * set 弹性公网IP的创建时间
      *
      * @param createdTime
      */
@@ -277,7 +282,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get 弹性ip可用区属性，如果为空，表示全可用区
+     * get 弹性公网IP的可用区属性，如果为空，表示全可用区
      *
      * @return
      */
@@ -286,7 +291,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性ip可用区属性，如果为空，表示全可用区
+     * set 弹性公网IP的可用区属性，如果为空，表示全可用区
      *
      * @param az
      */
@@ -312,9 +317,27 @@ public class ElasticIp  implements java.io.Serializable {
         this.tags = tags;
     }
 
+    /**
+     * get 弹性公网IP的IP类型，取值：standard(标准弹性IP)、edge(边缘弹性IP)
+     *
+     * @return
+     */
+    public String getIpType() {
+        return ipType;
+    }
 
     /**
-     * set 弹性IP的Id
+     * set 弹性公网IP的IP类型，取值：standard(标准弹性IP)、edge(边缘弹性IP)
+     *
+     * @param ipType
+     */
+    public void setIpType(String ipType) {
+        this.ipType = ipType;
+    }
+
+
+    /**
+     * set 弹性公网IP的Id
      *
      * @param elasticIpId
      */
@@ -324,7 +347,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性IP地址
+     * set 弹性公网IP的地址
      *
      * @param elasticIpAddress
      */
@@ -334,7 +357,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性ip的限速（单位：Mbps)
+     * set 弹性公网IP的限速（单位：Mbps)
      *
      * @param bandwidthMbps
      */
@@ -344,7 +367,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为bgp或no_bgp
+     * set 弹性公网IP的线路，标准公网IP的线路、取值为bgp或no_bgp；边缘公网IP的线路、可通过describeEdgeIpProviders接口获取
      *
      * @param provider
      */
@@ -404,7 +427,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性ip创建时间
+     * set 弹性公网IP的创建时间
      *
      * @param createdTime
      */
@@ -414,7 +437,7 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性ip可用区属性，如果为空，表示全可用区
+     * set 弹性公网IP的可用区属性，如果为空，表示全可用区
      *
      * @param az
      */
@@ -430,6 +453,16 @@ public class ElasticIp  implements java.io.Serializable {
      */
     public ElasticIp tags(List<Tag> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 弹性公网IP的IP类型，取值：standard(标准弹性IP)、edge(边缘弹性IP)
+     *
+     * @param ipType
+     */
+    public ElasticIp ipType(String ipType) {
+        this.ipType = ipType;
         return this;
     }
 
