@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 指定模板群发短信
+ * 指定模板群发短信接口。接口调用需要使用京东云统一鉴权的SDK方式接入，以下文档仅是接口出参、入参描述，并不是最终程序实现逻辑的范例，具体接口实现请查看SDK参考：https://docs.jdcloud.com/cn/text-message/java
  */
 public class BatchSendRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -51,7 +51,7 @@ public class BatchSendRequest extends JdcloudRequest implements java.io.Serializ
     private String signId;
 
     /**
-     * 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     * 群发的国内电话号码,群发时一次最多不要超过100个手机号
      * Required:true
      */
     @Required
@@ -107,7 +107,7 @@ public class BatchSendRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * get 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     * get 群发的国内电话号码,群发时一次最多不要超过100个手机号
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class BatchSendRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     * set 群发的国内电话号码,群发时一次最多不要超过100个手机号
      *
      * @param phoneList
      */
@@ -182,7 +182,7 @@ public class BatchSendRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
-     * set 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     * set 群发的国内电话号码,群发时一次最多不要超过100个手机号
      *
      * @param phoneList
      */
@@ -213,7 +213,7 @@ public class BatchSendRequest extends JdcloudRequest implements java.io.Serializ
 
 
     /**
-     * add item to 群发的国内电话号码,群发时一次最多不要超过200个手机号
+     * add item to 群发的国内电话号码,群发时一次最多不要超过100个手机号
      *
      * @param phoneList
      */
