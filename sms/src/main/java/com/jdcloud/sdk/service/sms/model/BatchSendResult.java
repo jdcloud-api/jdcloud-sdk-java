@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.sms.model.BatchSendResp;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 指定模板群发短信
+ * 指定模板群发短信接口。接口调用需要使用京东云统一鉴权的SDK方式接入，以下文档仅是接口出参、入参描述，并不是最终程序实现逻辑的范例，具体接口实现请查看SDK参考：https://docs.jdcloud.com/cn/text-message/java
  */
 public class BatchSendResult extends JdcloudResult implements java.io.Serializable {
 
@@ -47,7 +47,7 @@ public class BatchSendResult extends JdcloudResult implements java.io.Serializab
     /**
      * 错误码
      */
-    private String code;
+    private Long code;
 
     /**
      * 错误消息
@@ -96,7 +96,7 @@ public class BatchSendResult extends JdcloudResult implements java.io.Serializab
      *
      * @return
      */
-    public String getCode() {
+    public Long getCode() {
         return code;
     }
 
@@ -105,7 +105,7 @@ public class BatchSendResult extends JdcloudResult implements java.io.Serializab
      *
      * @param code
      */
-    public void setCode(String code) {
+    public void setCode(Long code) {
         this.code = code;
     }
 
@@ -153,7 +153,7 @@ public class BatchSendResult extends JdcloudResult implements java.io.Serializab
      *
      * @param code
      */
-    public BatchSendResult code(String code) {
+    public BatchSendResult code(Long code) {
         this.code = code;
         return this;
     }

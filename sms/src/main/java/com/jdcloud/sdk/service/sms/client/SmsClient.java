@@ -48,7 +48,7 @@ public class SmsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.1";
     public final static String DefaultEndpoint = "sms.jdcloud-api.com";
     public final static String ServiceName = "sms";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -91,7 +91,7 @@ public class SmsClient extends JdcloudClient {
 
 
     /**
-     * 指定模板群发短信
+     * 指定模板群发短信接口。接口调用需要使用京东云统一鉴权的SDK方式接入，以下文档仅是接口出参、入参描述，并不是最终程序实现逻辑的范例，具体接口实现请查看SDK参考：https://docs.jdcloud.com/cn/text-message/java
      *
      * @param request
      * @return
@@ -102,7 +102,7 @@ public class SmsClient extends JdcloudClient {
     }
 
     /**
-     * 短信发送回执接口
+     * 短信发送回执接口。接口调用需要使用京东云统一鉴权的SDK方式接入，以下文档仅是接口出参、入参描述，并不是最终程序实现逻辑的范例，具体接口实现请查看SDK参考：https://docs.jdcloud.com/cn/text-message/java
      *
      * @param request
      * @return
@@ -113,7 +113,7 @@ public class SmsClient extends JdcloudClient {
     }
 
     /**
-     * 短信回复接口
+     * 短信回复接口。 接口调用需要使用京东云统一鉴权的SDK方式接入，以下文档仅是接口出参、入参描述，并不是最终程序实现逻辑的范例，具体接口实现请查看SDK参考：https://docs.jdcloud.com/cn/text-message/java
      *
      * @param request
      * @return
