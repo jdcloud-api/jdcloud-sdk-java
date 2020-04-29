@@ -31,27 +31,33 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.mps.model.QueryCallbackSettingsRequest;
+import com.jdcloud.sdk.service.mps.model.QueryCallbackSettingsResponse;
+import com.jdcloud.sdk.service.mps.client.QueryCallbackSettingsExecutor;
+import com.jdcloud.sdk.service.mps.model.GetSnapshotTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.GetSnapshotTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.GetSnapshotTemplateExecutor;
 import com.jdcloud.sdk.service.mps.model.ListTranscodeJobsRequest;
 import com.jdcloud.sdk.service.mps.model.ListTranscodeJobsResponse;
 import com.jdcloud.sdk.service.mps.client.ListTranscodeJobsExecutor;
-import com.jdcloud.sdk.service.mps.model.GetImageStyleRequest;
-import com.jdcloud.sdk.service.mps.model.GetImageStyleResponse;
-import com.jdcloud.sdk.service.mps.client.GetImageStyleExecutor;
 import com.jdcloud.sdk.service.mps.model.SubmitTranscodeJobRequest;
 import com.jdcloud.sdk.service.mps.model.SubmitTranscodeJobResponse;
 import com.jdcloud.sdk.service.mps.client.SubmitTranscodeJobExecutor;
-import com.jdcloud.sdk.service.mps.model.UpdateImageStyleRequest;
-import com.jdcloud.sdk.service.mps.model.UpdateImageStyleResponse;
-import com.jdcloud.sdk.service.mps.client.UpdateImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.ListSnapshotTemplatesRequest;
+import com.jdcloud.sdk.service.mps.model.ListSnapshotTemplatesResponse;
+import com.jdcloud.sdk.service.mps.client.ListSnapshotTemplatesExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteSnapshotTaskRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteSnapshotTaskResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteSnapshotTaskExecutor;
 import com.jdcloud.sdk.service.mps.model.GetTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.GetTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.GetTranscodeTemplateExecutor;
-import com.jdcloud.sdk.service.mps.model.DeleteImageStyleRequest;
-import com.jdcloud.sdk.service.mps.model.DeleteImageStyleResponse;
-import com.jdcloud.sdk.service.mps.client.DeleteImageStyleExecutor;
-import com.jdcloud.sdk.service.mps.model.CountImageStyleRequest;
-import com.jdcloud.sdk.service.mps.model.CountImageStyleResponse;
-import com.jdcloud.sdk.service.mps.client.CountImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.ListSnapshotTasksRequest;
+import com.jdcloud.sdk.service.mps.model.ListSnapshotTasksResponse;
+import com.jdcloud.sdk.service.mps.client.ListSnapshotTasksExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateSnapshotTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.CreateSnapshotTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.CreateSnapshotTemplateExecutor;
 import com.jdcloud.sdk.service.mps.model.CreateTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.CreateTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.CreateTranscodeTemplateExecutor;
@@ -61,18 +67,57 @@ import com.jdcloud.sdk.service.mps.client.CreateThumbnailTaskExecutor;
 import com.jdcloud.sdk.service.mps.model.GetTranscodeJobRequest;
 import com.jdcloud.sdk.service.mps.model.GetTranscodeJobResponse;
 import com.jdcloud.sdk.service.mps.client.GetTranscodeJobExecutor;
-import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskRequest;
-import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskResponse;
-import com.jdcloud.sdk.service.mps.client.ListThumbnailTaskExecutor;
 import com.jdcloud.sdk.service.mps.model.DeleteStyleDelimiterRequest;
 import com.jdcloud.sdk.service.mps.model.DeleteStyleDelimiterResponse;
 import com.jdcloud.sdk.service.mps.client.DeleteStyleDelimiterExecutor;
-import com.jdcloud.sdk.service.mps.model.GetNotificationRequest;
-import com.jdcloud.sdk.service.mps.model.GetNotificationResponse;
-import com.jdcloud.sdk.service.mps.client.GetNotificationExecutor;
 import com.jdcloud.sdk.service.mps.model.ModifyTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.ModifyTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.ModifyTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.ModifySnapshotTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.ModifySnapshotTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.ModifySnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.CreateImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.CreateImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.CreateImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateTranscodeTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateTranscodeTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.ListImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.ListImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.ListImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.QuerySnapshotTaskResultRequest;
+import com.jdcloud.sdk.service.mps.model.QuerySnapshotTaskResultResponse;
+import com.jdcloud.sdk.service.mps.client.QuerySnapshotTaskResultExecutor;
+import com.jdcloud.sdk.service.mps.model.SetCallbackSettingsRequest;
+import com.jdcloud.sdk.service.mps.model.SetCallbackSettingsResponse;
+import com.jdcloud.sdk.service.mps.client.SetCallbackSettingsExecutor;
+import com.jdcloud.sdk.service.mps.model.GetImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.GetImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.GetImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.SubmitSnapshotTaskRequest;
+import com.jdcloud.sdk.service.mps.model.SubmitSnapshotTaskResponse;
+import com.jdcloud.sdk.service.mps.client.SubmitSnapshotTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteSnapshotTemplateRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteSnapshotTemplateResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteSnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.mps.model.UpdateImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.UpdateImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.UpdateImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.DeleteImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.DeleteImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.DeleteImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.GetSnapshotTaskRequest;
+import com.jdcloud.sdk.service.mps.model.GetSnapshotTaskResponse;
+import com.jdcloud.sdk.service.mps.client.GetSnapshotTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.CountImageStyleRequest;
+import com.jdcloud.sdk.service.mps.model.CountImageStyleResponse;
+import com.jdcloud.sdk.service.mps.client.CountImageStyleExecutor;
+import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskRequest;
+import com.jdcloud.sdk.service.mps.model.ListThumbnailTaskResponse;
+import com.jdcloud.sdk.service.mps.client.ListThumbnailTaskExecutor;
+import com.jdcloud.sdk.service.mps.model.GetNotificationRequest;
+import com.jdcloud.sdk.service.mps.model.GetNotificationResponse;
+import com.jdcloud.sdk.service.mps.client.GetNotificationExecutor;
 import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskRequest;
 import com.jdcloud.sdk.service.mps.model.GetThumbnailTaskResponse;
 import com.jdcloud.sdk.service.mps.client.GetThumbnailTaskExecutor;
@@ -88,15 +133,6 @@ import com.jdcloud.sdk.service.mps.client.GetStyleDelimiterExecutor;
 import com.jdcloud.sdk.service.mps.model.ListTranscodeTemplatesRequest;
 import com.jdcloud.sdk.service.mps.model.ListTranscodeTemplatesResponse;
 import com.jdcloud.sdk.service.mps.client.ListTranscodeTemplatesExecutor;
-import com.jdcloud.sdk.service.mps.model.CreateImageStyleRequest;
-import com.jdcloud.sdk.service.mps.model.CreateImageStyleResponse;
-import com.jdcloud.sdk.service.mps.client.CreateImageStyleExecutor;
-import com.jdcloud.sdk.service.mps.model.UpdateTranscodeTemplateRequest;
-import com.jdcloud.sdk.service.mps.model.UpdateTranscodeTemplateResponse;
-import com.jdcloud.sdk.service.mps.client.UpdateTranscodeTemplateExecutor;
-import com.jdcloud.sdk.service.mps.model.ListImageStyleRequest;
-import com.jdcloud.sdk.service.mps.model.ListImageStyleResponse;
-import com.jdcloud.sdk.service.mps.client.ListImageStyleExecutor;
 import com.jdcloud.sdk.service.mps.model.DeleteTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.mps.model.DeleteTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.mps.client.DeleteTranscodeTemplateExecutor;
@@ -151,6 +187,28 @@ public class MpsClient extends JdcloudClient {
 
 
     /**
+     * 查询回调配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryCallbackSettingsResponse queryCallbackSettings(QueryCallbackSettingsRequest request) throws JdcloudSdkException {
+        return new QueryCallbackSettingsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetSnapshotTemplateResponse getSnapshotTemplate(GetSnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new GetSnapshotTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询转码作业列表。
 支持如下过滤器：
 - title[eq] 按照输入视频标题进行精确匹配
@@ -165,17 +223,6 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 图片样式详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetImageStyleResponse getImageStyle(GetImageStyleRequest request) throws JdcloudSdkException {
-        return new GetImageStyleExecutor().client(this).execute(request);
-    }
-
-    /**
      * 提交转码作业
      *
      * @param request
@@ -187,14 +234,28 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 修改图片样式
+     * 查询截图模板列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - templateId[eq] 按模板ID精确查询
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateImageStyleResponse updateImageStyle(UpdateImageStyleRequest request) throws JdcloudSdkException {
-        return new UpdateImageStyleExecutor().client(this).execute(request);
+    public ListSnapshotTemplatesResponse listSnapshotTemplates(ListSnapshotTemplatesRequest request) throws JdcloudSdkException {
+        return new ListSnapshotTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除视频截图任务。删除任务时，会同时删除任务相关的数据，如任务执行结果等
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSnapshotTaskResponse deleteSnapshotTask(DeleteSnapshotTaskRequest request) throws JdcloudSdkException {
+        return new DeleteSnapshotTaskExecutor().client(this).execute(request);
     }
 
     /**
@@ -209,25 +270,31 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 删除图片样式
+     * 查询视频截图任务列表
+支持过滤查询：
+  - createTime,ge 最早任务创建时间
+  - createTime,le 最晚任务创建时间
+  - status,in 任务状态IN查询
+  - taskId,eq 任务ID精确查询
+
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DeleteImageStyleResponse deleteImageStyle(DeleteImageStyleRequest request) throws JdcloudSdkException {
-        return new DeleteImageStyleExecutor().client(this).execute(request);
+    public ListSnapshotTasksResponse listSnapshotTasks(ListSnapshotTasksRequest request) throws JdcloudSdkException {
+        return new ListSnapshotTasksExecutor().client(this).execute(request);
     }
 
     /**
-     * 图片样式总数
+     * 创建截图模板
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CountImageStyleResponse countImageStyle(CountImageStyleRequest request) throws JdcloudSdkException {
-        return new CountImageStyleExecutor().client(this).execute(request);
+    public CreateSnapshotTemplateResponse createSnapshotTemplate(CreateSnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new CreateSnapshotTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -265,17 +332,6 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询截图任务，返回满足查询条件的任务列表。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListThumbnailTaskResponse listThumbnailTask(ListThumbnailTaskRequest request) throws JdcloudSdkException {
-        return new ListThumbnailTaskExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除bucket的图片样式分隔符配置
      *
      * @param request
@@ -287,17 +343,6 @@ public class MpsClient extends JdcloudClient {
     }
 
     /**
-     * 获取媒体处理通知
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetNotificationResponse getNotification(GetNotificationRequest request) throws JdcloudSdkException {
-        return new GetNotificationExecutor().client(this).execute(request);
-    }
-
-    /**
      * 部分修改转码模板
      *
      * @param request
@@ -306,6 +351,171 @@ public class MpsClient extends JdcloudClient {
      */
     public ModifyTranscodeTemplateResponse modifyTranscodeTemplate(ModifyTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new ModifyTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifySnapshotTemplateResponse modifySnapshotTemplate(ModifySnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new ModifySnapshotTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加图片样式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateImageStyleResponse createImageStyle(CreateImageStyleRequest request) throws JdcloudSdkException {
+        return new CreateImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 完整更新转码模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateTranscodeTemplateResponse updateTranscodeTemplate(UpdateTranscodeTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 图片样式列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListImageStyleResponse listImageStyle(ListImageStyleRequest request) throws JdcloudSdkException {
+        return new ListImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频截图任务结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QuerySnapshotTaskResultResponse querySnapshotTaskResult(QuerySnapshotTaskResultRequest request) throws JdcloudSdkException {
+        return new QuerySnapshotTaskResultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置回调配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetCallbackSettingsResponse setCallbackSettings(SetCallbackSettingsRequest request) throws JdcloudSdkException {
+        return new SetCallbackSettingsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 图片样式详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetImageStyleResponse getImageStyle(GetImageStyleRequest request) throws JdcloudSdkException {
+        return new GetImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 提交视频截图任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SubmitSnapshotTaskResponse submitSnapshotTask(SubmitSnapshotTaskRequest request) throws JdcloudSdkException {
+        return new SubmitSnapshotTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSnapshotTemplateResponse deleteSnapshotTemplate(DeleteSnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteSnapshotTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改图片样式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateImageStyleResponse updateImageStyle(UpdateImageStyleRequest request) throws JdcloudSdkException {
+        return new UpdateImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除图片样式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteImageStyleResponse deleteImageStyle(DeleteImageStyleRequest request) throws JdcloudSdkException {
+        return new DeleteImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取视频截图任务详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetSnapshotTaskResponse getSnapshotTask(GetSnapshotTaskRequest request) throws JdcloudSdkException {
+        return new GetSnapshotTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 图片样式总数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CountImageStyleResponse countImageStyle(CountImageStyleRequest request) throws JdcloudSdkException {
+        return new CountImageStyleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询截图任务，返回满足查询条件的任务列表。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListThumbnailTaskResponse listThumbnailTask(ListThumbnailTaskRequest request) throws JdcloudSdkException {
+        return new ListThumbnailTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取媒体处理通知
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetNotificationResponse getNotification(GetNotificationRequest request) throws JdcloudSdkException {
+        return new GetNotificationExecutor().client(this).execute(request);
     }
 
     /**
@@ -364,39 +574,6 @@ public class MpsClient extends JdcloudClient {
      */
     public ListTranscodeTemplatesResponse listTranscodeTemplates(ListTranscodeTemplatesRequest request) throws JdcloudSdkException {
         return new ListTranscodeTemplatesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 添加图片样式
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateImageStyleResponse createImageStyle(CreateImageStyleRequest request) throws JdcloudSdkException {
-        return new CreateImageStyleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 完整更新转码模板
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateTranscodeTemplateResponse updateTranscodeTemplate(UpdateTranscodeTemplateRequest request) throws JdcloudSdkException {
-        return new UpdateTranscodeTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 图片样式列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ListImageStyleResponse listImageStyle(ListImageStyleRequest request) throws JdcloudSdkException {
-        return new ListImageStyleExecutor().client(this).execute(request);
     }
 
     /**

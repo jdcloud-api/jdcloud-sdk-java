@@ -79,6 +79,11 @@ public class InstanceTemplateData  implements java.io.Serializable {
      */
     private List<String> keyNames;
 
+    /**
+     * 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     */
+    private String chargeOnStopped;
+
 
     /**
      * get 实例规格
@@ -242,6 +247,24 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.keyNames = keyNames;
     }
 
+    /**
+     * get 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @return
+     */
+    public String getChargeOnStopped() {
+        return chargeOnStopped;
+    }
+
+    /**
+     * set 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public void setChargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
+    }
+
 
     /**
      * set 实例规格
@@ -330,6 +353,16 @@ public class InstanceTemplateData  implements java.io.Serializable {
      */
     public InstanceTemplateData keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
+        return this;
+    }
+
+    /**
+     * set 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public InstanceTemplateData chargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
         return this;
     }
 

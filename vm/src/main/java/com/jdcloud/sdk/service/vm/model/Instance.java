@@ -146,6 +146,11 @@ public class Instance  implements java.io.Serializable {
      */
     private List<Tag> tags;
 
+    /**
+     * 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     */
+    private String chargeOnStopped;
+
 
     /**
      * get 云主机ID
@@ -543,6 +548,24 @@ public class Instance  implements java.io.Serializable {
         this.tags = tags;
     }
 
+    /**
+     * get 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @return
+     */
+    public String getChargeOnStopped() {
+        return chargeOnStopped;
+    }
+
+    /**
+     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public void setChargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
+    }
+
 
     /**
      * set 云主机ID
@@ -761,6 +784,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance tags(List<Tag> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public Instance chargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
         return this;
     }
 

@@ -110,7 +110,7 @@ public class InstanceSpec  implements java.io.Serializable {
     private ChargeSpec charge;
 
     /**
-     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
 launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
 launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
 
@@ -150,6 +150,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      * 用户普通标签集合
      */
     private List<Tag> userTags;
+
+    /**
+     * 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     */
+    private String chargeOnStopped;
 
 
     /**
@@ -395,7 +400,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
 launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
 launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
 
@@ -407,7 +412,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
 launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
 launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
 
@@ -524,6 +529,24 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
+    }
+
+    /**
+     * get 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @return
+     */
+    public String getChargeOnStopped() {
+        return chargeOnStopped;
+    }
+
+    /**
+     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public void setChargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
     }
 
 
@@ -662,7 +685,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
 launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
 launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
 
@@ -733,6 +756,16 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
         return this;
     }
 
+    /**
+     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public InstanceSpec chargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
+        return this;
+    }
+
 
     /**
      * add item to 密钥对名称，当前只支持传入一个。
@@ -759,7 +792,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
 launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
 launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
 
