@@ -172,6 +172,9 @@ import com.jdcloud.sdk.service.vm.client.DescribeInstanceStatusExecutor;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.DeleteInstanceExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeBriefInstancesRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeBriefInstancesResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeBriefInstancesExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstancesExecutor;
@@ -189,7 +192,7 @@ public class VmClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.1";
     public final static String DefaultEndpoint = "vm.jdcloud-api.com";
     public final static String ServiceName = "vm";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -281,6 +284,8 @@ public class VmClient extends JdcloudClient {
         - 自动删除
             - 默认自动删除，如果是包年包月的云硬盘，此参数不生效
         - 可以从快照创建磁盘
+    - iops
+        - 仅当云盘类型为ssd.io1时，可指定iops值，范围为【200， min（32000，size * 50 ）】，步长为10，若不指定则按此公式计算默认值
     - local类型系统的云主机可以挂载8块云硬盘
     - cloud类型系统的云主机可以挂载7块云硬盘
 - 计费
@@ -882,6 +887,19 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public DeleteInstanceResponse deleteInstance(DeleteInstanceRequest request) throws JdcloudSdkException {
         return new DeleteInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询云主机信息的轻量接口，不返回云盘、网络、计费、标签等信息。如果不需要关联资源属性，尽量选择使用该接口。&lt;br&gt;
+此接口支持分页查询，默认每页20条。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBriefInstancesResponse describeBriefInstances(DescribeBriefInstancesRequest request) throws JdcloudSdkException {
+        return new DescribeBriefInstancesExecutor().client(this).execute(request);
     }
 
     /**

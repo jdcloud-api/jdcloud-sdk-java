@@ -41,7 +41,7 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     private Integer bandwidthMbps;
 
     /**
-     * IP服务商，取值为BGP,nonBGP
+     * IP服务商，取值为BGP,nonBGP，不支持边缘可用区
      */
     private String provider;
 
@@ -72,7 +72,7 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * get IP服务商，取值为BGP,nonBGP
+     * get IP服务商，取值为BGP,nonBGP，不支持边缘可用区
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为BGP,nonBGP
+     * set IP服务商，取值为BGP,nonBGP，不支持边缘可用区
      *
      * @param provider
      */
@@ -119,7 +119,7 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值为BGP,nonBGP
+     * set IP服务商，取值为BGP,nonBGP，不支持边缘可用区
      *
      * @param provider
      */

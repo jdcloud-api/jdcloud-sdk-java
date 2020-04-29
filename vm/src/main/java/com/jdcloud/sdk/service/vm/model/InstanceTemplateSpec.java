@@ -83,6 +83,11 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      */
     private List<InstanceTemplateDiskAttachmentSpec> dataDisks;
 
+    /**
+     * 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     */
+    private String chargeOnStopped;
+
 
     /**
      * get 实例规格，可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
@@ -228,6 +233,24 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.dataDisks = dataDisks;
     }
 
+    /**
+     * get 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @return
+     */
+    public String getChargeOnStopped() {
+        return chargeOnStopped;
+    }
+
+    /**
+     * set 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public void setChargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
+    }
+
 
     /**
      * set 实例规格，可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
@@ -306,6 +329,16 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      */
     public InstanceTemplateSpec dataDisks(List<InstanceTemplateDiskAttachmentSpec> dataDisks) {
         this.dataDisks = dataDisks;
+        return this;
+    }
+
+    /**
+     * set 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public InstanceTemplateSpec chargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
         return this;
     }
 

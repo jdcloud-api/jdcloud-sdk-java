@@ -26,13 +26,11 @@ package com.jdcloud.sdk.service.vm.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.charge.model.Charge;
-import com.jdcloud.sdk.service.disk.model.Tag;
 
 /**
- * instance
+ * internalInstance
  */
-public class Instance  implements java.io.Serializable {
+public class InternalInstance  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -67,16 +65,6 @@ public class Instance  implements java.io.Serializable {
     private String privateIpAddress;
 
     /**
-     * 主网卡主IP绑定弹性IP的ID
-     */
-    private String elasticIpId;
-
-    /**
-     * 主网卡主IP绑定弹性IP的地址
-     */
-    private String elasticIpAddress;
-
-    /**
      * 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
      */
     private String status;
@@ -94,22 +82,22 @@ public class Instance  implements java.io.Serializable {
     /**
      * 系统盘配置
      */
-    private InstanceDiskAttachment systemDisk;
+    private BriefInstanceDiskAttachment systemDisk;
 
     /**
      * 数据盘配置
      */
-    private List<InstanceDiskAttachment> dataDisks;
+    private List<BriefInstanceDiskAttachment> dataDisks;
 
     /**
      * 主网卡配置
      */
-    private InstanceNetworkInterfaceAttachment primaryNetworkInterface;
+    private BriefInstanceNetworkInterfaceAttachment primaryNetworkInterface;
 
     /**
      * 辅助网卡配置
      */
-    private List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
+    private List<BriefInstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
 
     /**
      * 创建时间
@@ -127,29 +115,29 @@ public class Instance  implements java.io.Serializable {
     private List<String> keyNames;
 
     /**
-     * 计费信息
-     */
-    private Charge charge;
-
-    /**
-     * 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
-     */
-    private Ag ag;
-
-    /**
      * 高可用组中的错误域
      */
     private String faultDomain;
 
     /**
-     * Tag信息
-     */
-    private List<Tag> tags;
-
-    /**
-     * 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
      */
     private String chargeOnStopped;
+
+    /**
+     * 实例所属的专有宿主机池
+     */
+    private String dedicatedPoolId;
+
+    /**
+     * 专有宿主机ID
+     */
+    private String dedicatedHostId;
+
+    /**
+     * 实例的物理机 IP
+     */
+    private String hostIp;
 
 
     /**
@@ -261,42 +249,6 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡主IP绑定弹性IP的ID
-     *
-     * @return
-     */
-    public String getElasticIpId() {
-        return elasticIpId;
-    }
-
-    /**
-     * set 主网卡主IP绑定弹性IP的ID
-     *
-     * @param elasticIpId
-     */
-    public void setElasticIpId(String elasticIpId) {
-        this.elasticIpId = elasticIpId;
-    }
-
-    /**
-     * get 主网卡主IP绑定弹性IP的地址
-     *
-     * @return
-     */
-    public String getElasticIpAddress() {
-        return elasticIpAddress;
-    }
-
-    /**
-     * set 主网卡主IP绑定弹性IP的地址
-     *
-     * @param elasticIpAddress
-     */
-    public void setElasticIpAddress(String elasticIpAddress) {
-        this.elasticIpAddress = elasticIpAddress;
-    }
-
-    /**
      * get 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
      *
      * @return
@@ -355,7 +307,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public InstanceDiskAttachment getSystemDisk() {
+    public BriefInstanceDiskAttachment getSystemDisk() {
         return systemDisk;
     }
 
@@ -364,7 +316,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param systemDisk
      */
-    public void setSystemDisk(InstanceDiskAttachment systemDisk) {
+    public void setSystemDisk(BriefInstanceDiskAttachment systemDisk) {
         this.systemDisk = systemDisk;
     }
 
@@ -373,7 +325,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public List<InstanceDiskAttachment> getDataDisks() {
+    public List<BriefInstanceDiskAttachment> getDataDisks() {
         return dataDisks;
     }
 
@@ -382,7 +334,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param dataDisks
      */
-    public void setDataDisks(List<InstanceDiskAttachment> dataDisks) {
+    public void setDataDisks(List<BriefInstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
     }
 
@@ -391,7 +343,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public InstanceNetworkInterfaceAttachment getPrimaryNetworkInterface() {
+    public BriefInstanceNetworkInterfaceAttachment getPrimaryNetworkInterface() {
         return primaryNetworkInterface;
     }
 
@@ -400,7 +352,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param primaryNetworkInterface
      */
-    public void setPrimaryNetworkInterface(InstanceNetworkInterfaceAttachment primaryNetworkInterface) {
+    public void setPrimaryNetworkInterface(BriefInstanceNetworkInterfaceAttachment primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
@@ -409,7 +361,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @return
      */
-    public List<InstanceNetworkInterfaceAttachment> getSecondaryNetworkInterfaces() {
+    public List<BriefInstanceNetworkInterfaceAttachment> getSecondaryNetworkInterfaces() {
         return secondaryNetworkInterfaces;
     }
 
@@ -418,7 +370,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param secondaryNetworkInterfaces
      */
-    public void setSecondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
+    public void setSecondaryNetworkInterfaces(List<BriefInstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
     }
 
@@ -477,42 +429,6 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 计费信息
-     *
-     * @return
-     */
-    public Charge getCharge() {
-        return charge;
-    }
-
-    /**
-     * set 计费信息
-     *
-     * @param charge
-     */
-    public void setCharge(Charge charge) {
-        this.charge = charge;
-    }
-
-    /**
-     * get 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
-     *
-     * @return
-     */
-    public Ag getAg() {
-        return ag;
-    }
-
-    /**
-     * set 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
-     *
-     * @param ag
-     */
-    public void setAg(Ag ag) {
-        this.ag = ag;
-    }
-
-    /**
      * get 高可用组中的错误域
      *
      * @return
@@ -531,25 +447,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get Tag信息
-     *
-     * @return
-     */
-    public List<Tag> getTags() {
-        return tags;
-    }
-
-    /**
-     * set Tag信息
-     *
-     * @param tags
-     */
-    public void setTags(List<Tag> tags) {
-        this.tags = tags;
-    }
-
-    /**
-     * get 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * get 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
      *
      * @return
      */
@@ -558,12 +456,66 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
      *
      * @param chargeOnStopped
      */
     public void setChargeOnStopped(String chargeOnStopped) {
         this.chargeOnStopped = chargeOnStopped;
+    }
+
+    /**
+     * get 实例所属的专有宿主机池
+     *
+     * @return
+     */
+    public String getDedicatedPoolId() {
+        return dedicatedPoolId;
+    }
+
+    /**
+     * set 实例所属的专有宿主机池
+     *
+     * @param dedicatedPoolId
+     */
+    public void setDedicatedPoolId(String dedicatedPoolId) {
+        this.dedicatedPoolId = dedicatedPoolId;
+    }
+
+    /**
+     * get 专有宿主机ID
+     *
+     * @return
+     */
+    public String getDedicatedHostId() {
+        return dedicatedHostId;
+    }
+
+    /**
+     * set 专有宿主机ID
+     *
+     * @param dedicatedHostId
+     */
+    public void setDedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+    }
+
+    /**
+     * get 实例的物理机 IP
+     *
+     * @return
+     */
+    public String getHostIp() {
+        return hostIp;
+    }
+
+    /**
+     * set 实例的物理机 IP
+     *
+     * @param hostIp
+     */
+    public void setHostIp(String hostIp) {
+        this.hostIp = hostIp;
     }
 
 
@@ -572,7 +524,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param instanceId
      */
-    public Instance instanceId(String instanceId) {
+    public InternalInstance instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -582,7 +534,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param instanceName
      */
-    public Instance instanceName(String instanceName) {
+    public InternalInstance instanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -592,7 +544,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param instanceType
      */
-    public Instance instanceType(String instanceType) {
+    public InternalInstance instanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -602,7 +554,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param vpcId
      */
-    public Instance vpcId(String vpcId) {
+    public InternalInstance vpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -612,7 +564,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param subnetId
      */
-    public Instance subnetId(String subnetId) {
+    public InternalInstance subnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
@@ -622,28 +574,8 @@ public class Instance  implements java.io.Serializable {
      *
      * @param privateIpAddress
      */
-    public Instance privateIpAddress(String privateIpAddress) {
+    public InternalInstance privateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
-        return this;
-    }
-
-    /**
-     * set 主网卡主IP绑定弹性IP的ID
-     *
-     * @param elasticIpId
-     */
-    public Instance elasticIpId(String elasticIpId) {
-        this.elasticIpId = elasticIpId;
-        return this;
-    }
-
-    /**
-     * set 主网卡主IP绑定弹性IP的地址
-     *
-     * @param elasticIpAddress
-     */
-    public Instance elasticIpAddress(String elasticIpAddress) {
-        this.elasticIpAddress = elasticIpAddress;
         return this;
     }
 
@@ -652,7 +584,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param status
      */
-    public Instance status(String status) {
+    public InternalInstance status(String status) {
         this.status = status;
         return this;
     }
@@ -662,7 +594,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param description
      */
-    public Instance description(String description) {
+    public InternalInstance description(String description) {
         this.description = description;
         return this;
     }
@@ -672,7 +604,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param imageId
      */
-    public Instance imageId(String imageId) {
+    public InternalInstance imageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
@@ -682,7 +614,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param systemDisk
      */
-    public Instance systemDisk(InstanceDiskAttachment systemDisk) {
+    public InternalInstance systemDisk(BriefInstanceDiskAttachment systemDisk) {
         this.systemDisk = systemDisk;
         return this;
     }
@@ -692,7 +624,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param dataDisks
      */
-    public Instance dataDisks(List<InstanceDiskAttachment> dataDisks) {
+    public InternalInstance dataDisks(List<BriefInstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
@@ -702,7 +634,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param primaryNetworkInterface
      */
-    public Instance primaryNetworkInterface(InstanceNetworkInterfaceAttachment primaryNetworkInterface) {
+    public InternalInstance primaryNetworkInterface(BriefInstanceNetworkInterfaceAttachment primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
         return this;
     }
@@ -712,7 +644,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param secondaryNetworkInterfaces
      */
-    public Instance secondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
+    public InternalInstance secondaryNetworkInterfaces(List<BriefInstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
         return this;
     }
@@ -722,7 +654,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param launchTime
      */
-    public Instance launchTime(String launchTime) {
+    public InternalInstance launchTime(String launchTime) {
         this.launchTime = launchTime;
         return this;
     }
@@ -732,7 +664,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param az
      */
-    public Instance az(String az) {
+    public InternalInstance az(String az) {
         this.az = az;
         return this;
     }
@@ -742,28 +674,8 @@ public class Instance  implements java.io.Serializable {
      *
      * @param keyNames
      */
-    public Instance keyNames(List<String> keyNames) {
+    public InternalInstance keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
-        return this;
-    }
-
-    /**
-     * set 计费信息
-     *
-     * @param charge
-     */
-    public Instance charge(Charge charge) {
-        this.charge = charge;
-        return this;
-    }
-
-    /**
-     * set 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
-     *
-     * @param ag
-     */
-    public Instance ag(Ag ag) {
-        this.ag = ag;
         return this;
     }
 
@@ -772,28 +684,48 @@ public class Instance  implements java.io.Serializable {
      *
      * @param faultDomain
      */
-    public Instance faultDomain(String faultDomain) {
+    public InternalInstance faultDomain(String faultDomain) {
         this.faultDomain = faultDomain;
         return this;
     }
 
     /**
-     * set Tag信息
+     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
      *
-     * @param tags
+     * @param chargeOnStopped
      */
-    public Instance tags(List<Tag> tags) {
-        this.tags = tags;
+    public InternalInstance chargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
         return this;
     }
 
     /**
-     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * set 实例所属的专有宿主机池
      *
-     * @param chargeOnStopped
+     * @param dedicatedPoolId
      */
-    public Instance chargeOnStopped(String chargeOnStopped) {
-        this.chargeOnStopped = chargeOnStopped;
+    public InternalInstance dedicatedPoolId(String dedicatedPoolId) {
+        this.dedicatedPoolId = dedicatedPoolId;
+        return this;
+    }
+
+    /**
+     * set 专有宿主机ID
+     *
+     * @param dedicatedHostId
+     */
+    public InternalInstance dedicatedHostId(String dedicatedHostId) {
+        this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+
+    /**
+     * set 实例的物理机 IP
+     *
+     * @param hostIp
+     */
+    public InternalInstance hostIp(String hostIp) {
+        this.hostIp = hostIp;
         return this;
     }
 
@@ -803,7 +735,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param dataDisk
      */
-    public void addDataDisk(InstanceDiskAttachment dataDisk) {
+    public void addDataDisk(BriefInstanceDiskAttachment dataDisk) {
         if (this.dataDisks == null) {
             this.dataDisks = new ArrayList<>();
         }
@@ -815,7 +747,7 @@ public class Instance  implements java.io.Serializable {
      *
      * @param secondaryNetworkInterface
      */
-    public void addSecondaryNetworkInterface(InstanceNetworkInterfaceAttachment secondaryNetworkInterface) {
+    public void addSecondaryNetworkInterface(BriefInstanceNetworkInterfaceAttachment secondaryNetworkInterface) {
         if (this.secondaryNetworkInterfaces == null) {
             this.secondaryNetworkInterfaces = new ArrayList<>();
         }
@@ -832,18 +764,6 @@ public class Instance  implements java.io.Serializable {
             this.keyNames = new ArrayList<>();
         }
         this.keyNames.add(keyName);
-    }
-
-    /**
-     * add item to Tag信息
-     *
-     * @param tag
-     */
-    public void addTag(Tag tag) {
-        if (this.tags == null) {
-            this.tags = new ArrayList<>();
-        }
-        this.tags.add(tag);
     }
 
 }

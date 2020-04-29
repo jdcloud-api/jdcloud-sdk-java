@@ -26,16 +26,17 @@ package com.jdcloud.sdk.service.vm.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.vm.model.TagFilter;
 import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量查询云主机的详细信息&lt;br&gt;
+ * 批量查询云主机信息的轻量接口，不返回云盘、网络、计费、标签等信息。如果不需要关联资源属性，尽量选择使用该接口。&lt;br&gt;
 此接口支持分页查询，默认每页20条。
 
  */
-public class DescribeInstancesRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeBriefInstancesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -48,6 +49,11 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
      * 分页大小；默认为20；取值范围[10, 100]
      */
     private Integer pageSize;
+
+    /**
+     * Tag筛选条件
+     */
+    private List<TagFilter> tags;
 
     /**
      * instanceId - 云主机ID，精确匹配，支持多个
@@ -111,6 +117,24 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get Tag筛选条件
+     *
+     * @return
+     */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
     }
 
     /**
@@ -185,7 +209,7 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个
      *
      * @param pageNumber
      */
-    public DescribeInstancesRequest pageNumber(Integer pageNumber) {
+    public DescribeBriefInstancesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -195,8 +219,18 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个
      *
      * @param pageSize
      */
-    public DescribeInstancesRequest pageSize(Integer pageSize) {
+    public DescribeBriefInstancesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public DescribeBriefInstancesRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
         return this;
     }
 
@@ -220,7 +254,7 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个
      *
      * @param filters
      */
-    public DescribeInstancesRequest filters(List<Filter> filters) {
+    public DescribeBriefInstancesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
@@ -230,11 +264,23 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个
      *
      * @param regionId
      */
-    public DescribeInstancesRequest regionId(String regionId) {
+    public DescribeBriefInstancesRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
+
+    /**
+     * add item to Tag筛选条件
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
+    }
 
     /**
      * add item to instanceId - 云主机ID，精确匹配，支持多个

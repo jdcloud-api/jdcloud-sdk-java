@@ -36,6 +36,11 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
+     * 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     */
+    private String chargeOnStopped;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -49,6 +54,24 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     @Required
     private String instanceId;
 
+
+    /**
+     * get 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @return
+     */
+    public String getChargeOnStopped() {
+        return chargeOnStopped;
+    }
+
+    /**
+     * set 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public void setChargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
+    }
 
     /**
      * get 地域ID
@@ -86,6 +109,16 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
         this.instanceId = instanceId;
     }
 
+
+    /**
+     * set 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     *
+     * @param chargeOnStopped
+     */
+    public StopInstanceRequest chargeOnStopped(String chargeOnStopped) {
+        this.chargeOnStopped = chargeOnStopped;
+        return this;
+    }
 
     /**
      * set 地域ID

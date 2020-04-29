@@ -129,6 +129,16 @@ public class Image  implements java.io.Serializable {
      */
     private String progress;
 
+    /**
+     * 该镜像的上下线状态
+     */
+    private Boolean offline;
+
+    /**
+     * 该镜像所属的产品线标识
+     */
+    private String serviceCode;
+
 
     /**
      * get 镜像ID
@@ -472,6 +482,42 @@ public class Image  implements java.io.Serializable {
         this.progress = progress;
     }
 
+    /**
+     * get 该镜像的上下线状态
+     *
+     * @return
+     */
+    public Boolean getOffline() {
+        return offline;
+    }
+
+    /**
+     * set 该镜像的上下线状态
+     *
+     * @param offline
+     */
+    public void setOffline(Boolean offline) {
+        this.offline = offline;
+    }
+
+    /**
+     * get 该镜像所属的产品线标识
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 该镜像所属的产品线标识
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
 
     /**
      * set 镜像ID
@@ -660,6 +706,26 @@ public class Image  implements java.io.Serializable {
      */
     public Image progress(String progress) {
         this.progress = progress;
+        return this;
+    }
+
+    /**
+     * set 该镜像的上下线状态
+     *
+     * @param offline
+     */
+    public Image offline(Boolean offline) {
+        this.offline = offline;
+        return this;
+    }
+
+    /**
+     * set 该镜像所属的产品线标识
+     *
+     * @param serviceCode
+     */
+    public Image serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 

@@ -43,9 +43,19 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     private Integer diskSizeGB;
 
     /**
-     * 用于创建云硬盘的快照ID
+     * 创建云硬盘的快照ID
      */
     private String snapshotId;
+
+    /**
+     * 是否加密，false:(默认)不加密；true:加密
+     */
+    private Boolean encrypt;
+
+    /**
+     * 云硬盘的iops值
+     */
+    private Integer iops;
 
 
     /**
@@ -85,7 +95,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 用于创建云硬盘的快照ID
+     * get 创建云硬盘的快照ID
      *
      * @return
      */
@@ -94,12 +104,48 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 用于创建云硬盘的快照ID
+     * set 创建云硬盘的快照ID
      *
      * @param snapshotId
      */
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+    }
+
+    /**
+     * get 是否加密，false:(默认)不加密；true:加密
+     *
+     * @return
+     */
+    public Boolean getEncrypt() {
+        return encrypt;
+    }
+
+    /**
+     * set 是否加密，false:(默认)不加密；true:加密
+     *
+     * @param encrypt
+     */
+    public void setEncrypt(Boolean encrypt) {
+        this.encrypt = encrypt;
+    }
+
+    /**
+     * get 云硬盘的iops值
+     *
+     * @return
+     */
+    public Integer getIops() {
+        return iops;
+    }
+
+    /**
+     * set 云硬盘的iops值
+     *
+     * @param iops
+     */
+    public void setIops(Integer iops) {
+        this.iops = iops;
     }
 
 
@@ -124,12 +170,32 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 用于创建云硬盘的快照ID
+     * set 创建云硬盘的快照ID
      *
      * @param snapshotId
      */
     public InstanceTemplateDisk snapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+        return this;
+    }
+
+    /**
+     * set 是否加密，false:(默认)不加密；true:加密
+     *
+     * @param encrypt
+     */
+    public InstanceTemplateDisk encrypt(Boolean encrypt) {
+        this.encrypt = encrypt;
+        return this;
+    }
+
+    /**
+     * set 云硬盘的iops值
+     *
+     * @param iops
+     */
+    public InstanceTemplateDisk iops(Integer iops) {
+        this.iops = iops;
         return this;
     }
 

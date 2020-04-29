@@ -36,7 +36,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     private static final long serialVersionUID = 1L;
 
     /**
-     * 子网ID
+     * 子网ID 仅支持中心可用区的子网
      * Required:true
      */
     @Required
@@ -54,7 +54,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
 
 
     /**
-     * get 子网ID
+     * get 子网ID 仅支持中心可用区的子网
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     }
 
     /**
-     * set 子网ID
+     * set 子网ID 仅支持中心可用区的子网
      *
      * @param subnetId
      */
@@ -109,7 +109,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
 
 
     /**
-     * set 子网ID
+     * set 子网ID 仅支持中心可用区的子网
      *
      * @param subnetId
      */

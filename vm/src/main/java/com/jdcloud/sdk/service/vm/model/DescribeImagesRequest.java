@@ -45,6 +45,16 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private String imageSource;
 
     /**
+     * 产品线标识，非必传，不传的时候返回全部产品线镜像
+     */
+    private String serviceCode;
+
+    /**
+     * 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
+     */
+    private Boolean offline;
+
+    /**
      * 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
      */
     private String platform;
@@ -103,6 +113,42 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setImageSource(String imageSource) {
         this.imageSource = imageSource;
+    }
+
+    /**
+     * get 产品线标识，非必传，不传的时候返回全部产品线镜像
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 产品线标识，非必传，不传的时候返回全部产品线镜像
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    /**
+     * get 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
+     *
+     * @return
+     */
+    public Boolean getOffline() {
+        return offline;
+    }
+
+    /**
+     * set 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
+     *
+     * @param offline
+     */
+    public void setOffline(Boolean offline) {
+        this.offline = offline;
     }
 
     /**
@@ -257,6 +303,26 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      */
     public DescribeImagesRequest imageSource(String imageSource) {
         this.imageSource = imageSource;
+        return this;
+    }
+
+    /**
+     * set 产品线标识，非必传，不传的时候返回全部产品线镜像
+     *
+     * @param serviceCode
+     */
+    public DescribeImagesRequest serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
+     *
+     * @param offline
+     */
+    public DescribeImagesRequest offline(Boolean offline) {
+        this.offline = offline;
         return this;
     }
 

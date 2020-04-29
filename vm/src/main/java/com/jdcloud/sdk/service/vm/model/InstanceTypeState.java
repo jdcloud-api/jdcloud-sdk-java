@@ -42,6 +42,11 @@ public class InstanceTypeState  implements java.io.Serializable {
      */
     private Boolean inStock;
 
+    /**
+     * 可用库存数量，预留字段，敬请期待。
+     */
+    private Integer availableCount;
+
 
     /**
      * get 可用区
@@ -79,6 +84,24 @@ public class InstanceTypeState  implements java.io.Serializable {
         this.inStock = inStock;
     }
 
+    /**
+     * get 可用库存数量，预留字段，敬请期待。
+     *
+     * @return
+     */
+    public Integer getAvailableCount() {
+        return availableCount;
+    }
+
+    /**
+     * set 可用库存数量，预留字段，敬请期待。
+     *
+     * @param availableCount
+     */
+    public void setAvailableCount(Integer availableCount) {
+        this.availableCount = availableCount;
+    }
+
 
     /**
      * set 可用区
@@ -97,6 +120,16 @@ public class InstanceTypeState  implements java.io.Serializable {
      */
     public InstanceTypeState inStock(Boolean inStock) {
         this.inStock = inStock;
+        return this;
+    }
+
+    /**
+     * set 可用库存数量，预留字段，敬请期待。
+     *
+     * @param availableCount
+     */
+    public InstanceTypeState availableCount(Integer availableCount) {
+        this.availableCount = availableCount;
         return this;
     }
 

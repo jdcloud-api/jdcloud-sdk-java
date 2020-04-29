@@ -47,6 +47,16 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
      */
     private String snapshotId;
 
+    /**
+     * 用于指定是否加密，false:(默认)不加密；true:加密，未指定快照时生效，只有打包创建2代主机的时候才允许创建加密数据盘。
+     */
+    private Boolean encrypt;
+
+    /**
+     * 用于指定云硬盘的iops值，仅支持ssd.io1类型的云盘
+     */
+    private Integer iops;
+
 
     /**
      * get 云硬盘类型，取值为ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
@@ -102,6 +112,42 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
         this.snapshotId = snapshotId;
     }
 
+    /**
+     * get 用于指定是否加密，false:(默认)不加密；true:加密，未指定快照时生效，只有打包创建2代主机的时候才允许创建加密数据盘。
+     *
+     * @return
+     */
+    public Boolean getEncrypt() {
+        return encrypt;
+    }
+
+    /**
+     * set 用于指定是否加密，false:(默认)不加密；true:加密，未指定快照时生效，只有打包创建2代主机的时候才允许创建加密数据盘。
+     *
+     * @param encrypt
+     */
+    public void setEncrypt(Boolean encrypt) {
+        this.encrypt = encrypt;
+    }
+
+    /**
+     * get 用于指定云硬盘的iops值，仅支持ssd.io1类型的云盘
+     *
+     * @return
+     */
+    public Integer getIops() {
+        return iops;
+    }
+
+    /**
+     * set 用于指定云硬盘的iops值，仅支持ssd.io1类型的云盘
+     *
+     * @param iops
+     */
+    public void setIops(Integer iops) {
+        this.iops = iops;
+    }
+
 
     /**
      * set 云硬盘类型，取值为ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
@@ -130,6 +176,26 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
      */
     public InstanceTemplateDiskSpec snapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+        return this;
+    }
+
+    /**
+     * set 用于指定是否加密，false:(默认)不加密；true:加密，未指定快照时生效，只有打包创建2代主机的时候才允许创建加密数据盘。
+     *
+     * @param encrypt
+     */
+    public InstanceTemplateDiskSpec encrypt(Boolean encrypt) {
+        this.encrypt = encrypt;
+        return this;
+    }
+
+    /**
+     * set 用于指定云硬盘的iops值，仅支持ssd.io1类型的云盘
+     *
+     * @param iops
+     */
+    public InstanceTemplateDiskSpec iops(Integer iops) {
+        this.iops = iops;
         return this;
     }
 
