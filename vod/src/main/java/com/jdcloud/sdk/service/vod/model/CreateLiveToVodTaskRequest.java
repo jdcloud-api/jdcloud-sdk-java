@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Media Upload
- * 媒体上传相关接口
+ * Live-to-Vod
+ * 直播转点播相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,19 +27,15 @@ package com.jdcloud.sdk.service.vod.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vod.model.RecordTime;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取视频上传地址和凭证
+ * 创建直播转点播任务
  */
-public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java.io.Serializable {
+public class CreateLiveToVodTaskRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
-     */
-    private String httpMethod;
 
     /**
      * 视频标题
@@ -91,28 +87,61 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
     private List<Long> watermarkIds;
 
     /**
-     * 自定义数据
+     * 推流域名
+     * Required:true
      */
-    private String userData;
-
-
-    /**
-     * get HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
-     *
-     * @return
-     */
-    public String getHttpMethod() {
-        return httpMethod;
-    }
+    @Required
+    private String publishDomain;
 
     /**
-     * set HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
-     *
-     * @param httpMethod
+     * 应用名称
+     * Required:true
      */
-    public void setHttpMethod(String httpMethod) {
-        this.httpMethod = httpMethod;
-    }
+    @Required
+    private String appName;
+
+    /**
+     * 流名称
+     * Required:true
+     */
+    @Required
+    private String streamName;
+
+    /**
+     * 录制时间段集合
+- 支持自定义1-10个时间段,拼接成一个文件
+- 每个时间段不小于10s
+- 总跨度不超过12小时
+- 时间段按升序排列且无重叠
+
+     * Required:true
+     */
+    @Required
+    private List<RecordTime> recordTimes;
+
+    /**
+     * 录制文件类型:
+- 取值: ts, flv, mp4
+- 不区分大小写
+
+     * Required:true
+     */
+    @Required
+    private String recordFileType;
+
+    /**
+     * 直播录制任务外键
+     */
+    private String taskExternalId;
+
+    /**
+     * 任务优先级:
+- 取值: low, medium, high
+- 不区分大小写
+
+     */
+    private String priority;
+
 
     /**
      * get 视频标题
@@ -277,40 +306,160 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 自定义数据
+     * get 推流域名
      *
      * @return
      */
-    public String getUserData() {
-        return userData;
+    public String getPublishDomain() {
+        return publishDomain;
     }
 
     /**
-     * set 自定义数据
+     * set 推流域名
      *
-     * @param userData
+     * @param publishDomain
      */
-    public void setUserData(String userData) {
-        this.userData = userData;
+    public void setPublishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
     }
-
 
     /**
-     * set HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
+     * get 应用名称
      *
-     * @param httpMethod
+     * @return
      */
-    public CreateVideoUploadTaskRequest httpMethod(String httpMethod) {
-        this.httpMethod = httpMethod;
-        return this;
+    public String getAppName() {
+        return appName;
     }
+
+    /**
+     * set 应用名称
+     *
+     * @param appName
+     */
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    /**
+     * get 流名称
+     *
+     * @return
+     */
+    public String getStreamName() {
+        return streamName;
+    }
+
+    /**
+     * set 流名称
+     *
+     * @param streamName
+     */
+    public void setStreamName(String streamName) {
+        this.streamName = streamName;
+    }
+
+    /**
+     * get 录制时间段集合
+- 支持自定义1-10个时间段,拼接成一个文件
+- 每个时间段不小于10s
+- 总跨度不超过12小时
+- 时间段按升序排列且无重叠
+
+     *
+     * @return
+     */
+    public List<RecordTime> getRecordTimes() {
+        return recordTimes;
+    }
+
+    /**
+     * set 录制时间段集合
+- 支持自定义1-10个时间段,拼接成一个文件
+- 每个时间段不小于10s
+- 总跨度不超过12小时
+- 时间段按升序排列且无重叠
+
+     *
+     * @param recordTimes
+     */
+    public void setRecordTimes(List<RecordTime> recordTimes) {
+        this.recordTimes = recordTimes;
+    }
+
+    /**
+     * get 录制文件类型:
+- 取值: ts, flv, mp4
+- 不区分大小写
+
+     *
+     * @return
+     */
+    public String getRecordFileType() {
+        return recordFileType;
+    }
+
+    /**
+     * set 录制文件类型:
+- 取值: ts, flv, mp4
+- 不区分大小写
+
+     *
+     * @param recordFileType
+     */
+    public void setRecordFileType(String recordFileType) {
+        this.recordFileType = recordFileType;
+    }
+
+    /**
+     * get 直播录制任务外键
+     *
+     * @return
+     */
+    public String getTaskExternalId() {
+        return taskExternalId;
+    }
+
+    /**
+     * set 直播录制任务外键
+     *
+     * @param taskExternalId
+     */
+    public void setTaskExternalId(String taskExternalId) {
+        this.taskExternalId = taskExternalId;
+    }
+
+    /**
+     * get 任务优先级:
+- 取值: low, medium, high
+- 不区分大小写
+
+     *
+     * @return
+     */
+    public String getPriority() {
+        return priority;
+    }
+
+    /**
+     * set 任务优先级:
+- 取值: low, medium, high
+- 不区分大小写
+
+     *
+     * @param priority
+     */
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
 
     /**
      * set 视频标题
      *
      * @param title
      */
-    public CreateVideoUploadTaskRequest title(String title) {
+    public CreateLiveToVodTaskRequest title(String title) {
         this.title = title;
         return this;
     }
@@ -320,7 +469,7 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
      *
      * @param fileName
      */
-    public CreateVideoUploadTaskRequest fileName(String fileName) {
+    public CreateLiveToVodTaskRequest fileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -330,7 +479,7 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
      *
      * @param fileSize
      */
-    public CreateVideoUploadTaskRequest fileSize(Long fileSize) {
+    public CreateLiveToVodTaskRequest fileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }
@@ -340,7 +489,7 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
      *
      * @param coverUrl
      */
-    public CreateVideoUploadTaskRequest coverUrl(String coverUrl) {
+    public CreateLiveToVodTaskRequest coverUrl(String coverUrl) {
         this.coverUrl = coverUrl;
         return this;
     }
@@ -350,7 +499,7 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
      *
      * @param description
      */
-    public CreateVideoUploadTaskRequest description(String description) {
+    public CreateLiveToVodTaskRequest description(String description) {
         this.description = description;
         return this;
     }
@@ -360,7 +509,7 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
      *
      * @param categoryId
      */
-    public CreateVideoUploadTaskRequest categoryId(Long categoryId) {
+    public CreateLiveToVodTaskRequest categoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
     }
@@ -370,7 +519,7 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
      *
      * @param tags
      */
-    public CreateVideoUploadTaskRequest tags(List<String> tags) {
+    public CreateLiveToVodTaskRequest tags(List<String> tags) {
         this.tags = tags;
         return this;
     }
@@ -380,7 +529,7 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
      *
      * @param transcodeTemplateIds
      */
-    public CreateVideoUploadTaskRequest transcodeTemplateIds(List<Long> transcodeTemplateIds) {
+    public CreateLiveToVodTaskRequest transcodeTemplateIds(List<Long> transcodeTemplateIds) {
         this.transcodeTemplateIds = transcodeTemplateIds;
         return this;
     }
@@ -390,18 +539,89 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
      *
      * @param watermarkIds
      */
-    public CreateVideoUploadTaskRequest watermarkIds(List<Long> watermarkIds) {
+    public CreateLiveToVodTaskRequest watermarkIds(List<Long> watermarkIds) {
         this.watermarkIds = watermarkIds;
         return this;
     }
 
     /**
-     * set 自定义数据
+     * set 推流域名
      *
-     * @param userData
+     * @param publishDomain
      */
-    public CreateVideoUploadTaskRequest userData(String userData) {
-        this.userData = userData;
+    public CreateLiveToVodTaskRequest publishDomain(String publishDomain) {
+        this.publishDomain = publishDomain;
+        return this;
+    }
+
+    /**
+     * set 应用名称
+     *
+     * @param appName
+     */
+    public CreateLiveToVodTaskRequest appName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+
+    /**
+     * set 流名称
+     *
+     * @param streamName
+     */
+    public CreateLiveToVodTaskRequest streamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+
+    /**
+     * set 录制时间段集合
+- 支持自定义1-10个时间段,拼接成一个文件
+- 每个时间段不小于10s
+- 总跨度不超过12小时
+- 时间段按升序排列且无重叠
+
+     *
+     * @param recordTimes
+     */
+    public CreateLiveToVodTaskRequest recordTimes(List<RecordTime> recordTimes) {
+        this.recordTimes = recordTimes;
+        return this;
+    }
+
+    /**
+     * set 录制文件类型:
+- 取值: ts, flv, mp4
+- 不区分大小写
+
+     *
+     * @param recordFileType
+     */
+    public CreateLiveToVodTaskRequest recordFileType(String recordFileType) {
+        this.recordFileType = recordFileType;
+        return this;
+    }
+
+    /**
+     * set 直播录制任务外键
+     *
+     * @param taskExternalId
+     */
+    public CreateLiveToVodTaskRequest taskExternalId(String taskExternalId) {
+        this.taskExternalId = taskExternalId;
+        return this;
+    }
+
+    /**
+     * set 任务优先级:
+- 取值: low, medium, high
+- 不区分大小写
+
+     *
+     * @param priority
+     */
+    public CreateLiveToVodTaskRequest priority(String priority) {
+        this.priority = priority;
         return this;
     }
 
@@ -440,6 +660,23 @@ public class CreateVideoUploadTaskRequest extends JdcloudRequest implements java
             this.watermarkIds = new ArrayList<>();
         }
         this.watermarkIds.add(watermarkId);
+    }
+
+    /**
+     * add item to 录制时间段集合
+- 支持自定义1-10个时间段,拼接成一个文件
+- 每个时间段不小于10s
+- 总跨度不超过12小时
+- 时间段按升序排列且无重叠
+
+     *
+     * @param recordTime
+     */
+    public void addRecordTime(RecordTime recordTime) {
+        if (this.recordTimes == null) {
+            this.recordTimes = new ArrayList<>();
+        }
+        this.recordTimes.add(recordTime);
     }
 
 }
