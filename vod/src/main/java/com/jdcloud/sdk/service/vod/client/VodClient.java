@@ -139,9 +139,15 @@ import com.jdcloud.sdk.service.vod.client.GetQualityDetectionTemplateExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteDomainRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteDomainResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteDomainExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateLiveToVodTaskRequest;
+import com.jdcloud.sdk.service.vod.model.CreateLiveToVodTaskResponse;
+import com.jdcloud.sdk.service.vod.client.CreateLiveToVodTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateCategoryRequest;
 import com.jdcloud.sdk.service.vod.model.CreateCategoryResponse;
 import com.jdcloud.sdk.service.vod.client.CreateCategoryExecutor;
+import com.jdcloud.sdk.service.vod.model.VideoAuditRequest;
+import com.jdcloud.sdk.service.vod.model.VideoAuditResponse;
+import com.jdcloud.sdk.service.vod.client.VideoAuditExecutor;
 import com.jdcloud.sdk.service.vod.model.ListWatermarksRequest;
 import com.jdcloud.sdk.service.vod.model.ListWatermarksResponse;
 import com.jdcloud.sdk.service.vod.client.ListWatermarksExecutor;
@@ -201,7 +207,7 @@ public class VodClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.1";
     public final static String DefaultEndpoint = "vod.jdcloud-api.com";
     public final static String ServiceName = "vod";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -645,6 +651,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 创建直播转点播任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateLiveToVodTaskResponse createLiveToVodTask(CreateLiveToVodTaskRequest request) throws JdcloudSdkException {
+        return new CreateLiveToVodTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 添加分类
      *
      * @param request
@@ -653,6 +670,19 @@ public class VodClient extends JdcloudClient {
      */
     public CreateCategoryResponse createCategory(CreateCategoryRequest request) throws JdcloudSdkException {
         return new CreateCategoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 视频审核
+视频在上传中或者转码中不允许更改视频审核状态，即视频只有在正常或屏蔽状态下才可以调用此接口设置审核状态
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public VideoAuditResponse videoAudit(VideoAuditRequest request) throws JdcloudSdkException {
+        return new VideoAuditExecutor().client(this).execute(request);
     }
 
     /**

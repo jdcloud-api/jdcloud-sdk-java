@@ -36,7 +36,7 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
     private static final long serialVersionUID = 1L;
 
     /**
-     * HTTP 请求方法，取值范围：GET、POST、PUT、DELETE、HEAD、PATCH，默认值为 PUT
+     * HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
      */
     private String httpMethod;
 
@@ -89,9 +89,14 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
      */
     private List<Long> watermarkIds;
 
+    /**
+     * 自定义数据
+     */
+    private String userData;
+
 
     /**
-     * get HTTP 请求方法，取值范围：GET、POST、PUT、DELETE、HEAD、PATCH，默认值为 PUT
+     * get HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
      *
      * @return
      */
@@ -100,7 +105,7 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
     }
 
     /**
-     * set HTTP 请求方法，取值范围：GET、POST、PUT、DELETE、HEAD、PATCH，默认值为 PUT
+     * set HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
      *
      * @param httpMethod
      */
@@ -270,9 +275,27 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
         this.watermarkIds = watermarkIds;
     }
 
+    /**
+     * get 自定义数据
+     *
+     * @return
+     */
+    public String getUserData() {
+        return userData;
+    }
 
     /**
-     * set HTTP 请求方法，取值范围：GET、POST、PUT、DELETE、HEAD、PATCH，默认值为 PUT
+     * set 自定义数据
+     *
+     * @param userData
+     */
+    public void setUserData(String userData) {
+        this.userData = userData;
+    }
+
+
+    /**
+     * set HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
      *
      * @param httpMethod
      */
@@ -368,6 +391,16 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
      */
     public CreateVideoUploadTaskRequestObject watermarkIds(List<Long> watermarkIds) {
         this.watermarkIds = watermarkIds;
+        return this;
+    }
+
+    /**
+     * set 自定义数据
+     *
+     * @param userData
+     */
+    public CreateVideoUploadTaskRequestObject userData(String userData) {
+        this.userData = userData;
         return this;
     }
 
