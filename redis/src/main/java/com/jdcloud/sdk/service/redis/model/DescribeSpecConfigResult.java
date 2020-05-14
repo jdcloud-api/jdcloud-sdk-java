@@ -35,7 +35,7 @@ public class DescribeSpecConfigResult extends JdcloudResult implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 单分片规格，自定义分片规格实例才有
+     * 单分片规格，自定义分片规格集群实例才需要
      */
     private Object shardSpec;
 
@@ -46,7 +46,7 @@ public class DescribeSpecConfigResult extends JdcloudResult implements java.io.S
 
 
     /**
-     * get 单分片规格，自定义分片规格实例才有
+     * get 单分片规格，自定义分片规格集群实例才需要
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class DescribeSpecConfigResult extends JdcloudResult implements java.io.S
     }
 
     /**
-     * set 单分片规格，自定义分片规格实例才有
+     * set 单分片规格，自定义分片规格集群实例才需要
      *
      * @param shardSpec
      */
@@ -83,7 +83,7 @@ public class DescribeSpecConfigResult extends JdcloudResult implements java.io.S
 
 
     /**
-     * set 单分片规格，自定义分片规格实例才有
+     * set 单分片规格，自定义分片规格集群实例才需要
      *
      * @param shardSpec
      */

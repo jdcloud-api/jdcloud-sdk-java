@@ -39,7 +39,7 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
     private Boolean autoDelete;
 
     /**
-     * 设备Index
+     * 设备Index，主网卡为1
      */
     private Integer deviceIndex;
 
@@ -70,7 +70,7 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
     }
 
     /**
-     * get 设备Index
+     * get 设备Index，主网卡为1
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
     }
 
     /**
-     * set 设备Index
+     * set 设备Index，主网卡为1
      *
      * @param deviceIndex
      */
@@ -117,7 +117,7 @@ public class ContainerNetworkInterfaceAttachmentSpec  implements java.io.Seriali
     }
 
     /**
-     * set 设备Index
+     * set 设备Index，主网卡为1
      *
      * @param deviceIndex
      */

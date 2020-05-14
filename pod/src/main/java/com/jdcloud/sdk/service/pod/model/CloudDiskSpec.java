@@ -33,7 +33,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 磁盘类型，cloud 云盘，local 本地盘（使用前需申请）
+     * 磁盘类型，支持云盘： cloud
      */
     private String category;
 
@@ -79,7 +79,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
 
 
     /**
-     * get 磁盘类型，cloud 云盘，local 本地盘（使用前需申请）
+     * get 磁盘类型，支持云盘： cloud
      *
      * @return
      */
@@ -88,7 +88,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘类型，cloud 云盘，local 本地盘（使用前需申请）
+     * set 磁盘类型，支持云盘： cloud
      *
      * @param category
      */
@@ -242,7 +242,7 @@ public class CloudDiskSpec  implements java.io.Serializable {
 
 
     /**
-     * set 磁盘类型，cloud 云盘，local 本地盘（使用前需申请）
+     * set 磁盘类型，支持云盘： cloud
      *
      * @param category
      */

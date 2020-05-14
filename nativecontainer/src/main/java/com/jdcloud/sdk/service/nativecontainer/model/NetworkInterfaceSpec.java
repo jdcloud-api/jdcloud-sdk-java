@@ -55,12 +55,12 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     private String primaryIpAddress;
 
     /**
-     * SecondaryIp列表
+     * 网卡辅助IP，暂不支持
      */
     private List<String> secondaryIpAddresses;
 
     /**
-     * 自动分配的SecondaryIp数量
+     * 自动分配的辅助Ip数量，暂不支持
      */
     private Integer secondaryIpCount;
 
@@ -75,7 +75,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     private Boolean sanityCheck;
 
     /**
-     * 描述
+     * 描述，最大长度256字符
      */
     private String description;
 
@@ -135,7 +135,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get SecondaryIp列表
+     * get 网卡辅助IP，暂不支持
      *
      * @return
      */
@@ -144,7 +144,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set SecondaryIp列表
+     * set 网卡辅助IP，暂不支持
      *
      * @param secondaryIpAddresses
      */
@@ -153,7 +153,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 自动分配的SecondaryIp数量
+     * get 自动分配的辅助Ip数量，暂不支持
      *
      * @return
      */
@@ -162,7 +162,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 自动分配的SecondaryIp数量
+     * set 自动分配的辅助Ip数量，暂不支持
      *
      * @param secondaryIpCount
      */
@@ -207,7 +207,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 描述
+     * get 描述，最大长度256字符
      *
      * @return
      */
@@ -216,7 +216,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 描述
+     * set 描述，最大长度256字符
      *
      * @param description
      */
@@ -256,7 +256,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set SecondaryIp列表
+     * set 网卡辅助IP，暂不支持
      *
      * @param secondaryIpAddresses
      */
@@ -266,7 +266,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 自动分配的SecondaryIp数量
+     * set 自动分配的辅助Ip数量，暂不支持
      *
      * @param secondaryIpCount
      */
@@ -296,7 +296,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 描述
+     * set 描述，最大长度256字符
      *
      * @param description
      */
@@ -307,7 +307,7 @@ public class NetworkInterfaceSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to SecondaryIp列表
+     * add item to 网卡辅助IP，暂不支持
      *
      * @param secondaryIpAddresse
      */

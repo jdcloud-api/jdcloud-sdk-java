@@ -35,7 +35,7 @@ public class ShardSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 单分片规格代码，自定义分片实例才有
+     * 单分片规格代码，自定义分片集群实例才需要，标准版不需要
      */
     private String shardClass;
 
@@ -71,7 +71,7 @@ public class ShardSpec  implements java.io.Serializable {
 
 
     /**
-     * get 单分片规格代码，自定义分片实例才有
+     * get 单分片规格代码，自定义分片集群实例才需要，标准版不需要
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class ShardSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 单分片规格代码，自定义分片实例才有
+     * set 单分片规格代码，自定义分片集群实例才需要，标准版不需要
      *
      * @param shardClass
      */
@@ -198,7 +198,7 @@ public class ShardSpec  implements java.io.Serializable {
 
 
     /**
-     * set 单分片规格代码，自定义分片实例才有
+     * set 单分片规格代码，自定义分片集群实例才需要，标准版不需要
      *
      * @param shardClass
      */
