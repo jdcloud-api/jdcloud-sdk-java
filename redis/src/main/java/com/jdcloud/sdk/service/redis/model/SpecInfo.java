@@ -40,37 +40,37 @@ public class SpecInfo  implements java.io.Serializable {
     private Integer memoryGB;
 
     /**
-     * 实例规格，空表示自定义分片集群，只有分片规格，没有实例规格
+     * 实例规格，标准版不为空，4.0 自定义分片集群版规格为空，具体规格参考单分片规格
      */
     private String instanceClass;
 
     /**
-     * 实例CPU核数，0表示自定义分片集群，CPU核数由分片数变化
+     * 实例CPU核数，0表示自定义分片集群版规格，CPU核数由分片数变化
      */
     private Integer cpu;
 
     /**
-     * 实例磁盘大小（GB)，0表示自定义分片集群，磁盘大小由分片数变化
+     * 实例磁盘大小（GB)，0表示自定义分片集群版规格，磁盘大小由分片数变化
      */
     private Integer diskGB;
 
     /**
-     * 最大连接数，0表示自定义分片集群，最大连接数由分片数变化
+     * 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
      */
     private Integer maxConntion;
 
     /**
-     * 带宽（Mbps)，0表示自定义分片集群，带宽由分片数变化
+     * 带宽（Mbps)，0表示自定义分片集群版规格，带宽由分片数变化
      */
     private Integer bandwidthMbps;
 
     /**
-     * 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+     * 需要的IP数，0表示自定义分片集群版规格，IP数由分片数变化
      */
     private Integer ipNumber;
 
     /**
-     * 该内存对应的分片列表信息，redis 2.8以及redis 4.0主从版没有分片列表信息
+     * 实例的分片列表信息，redis 2.8标准版、集群版以及redis 4.0标准版没有分片列表信息
      */
     private ShardInfo shard;
 
@@ -99,7 +99,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格，空表示自定义分片集群，只有分片规格，没有实例规格
+     * get 实例规格，标准版不为空，4.0 自定义分片集群版规格为空，具体规格参考单分片规格
      *
      * @return
      */
@@ -108,7 +108,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格，空表示自定义分片集群，只有分片规格，没有实例规格
+     * set 实例规格，标准版不为空，4.0 自定义分片集群版规格为空，具体规格参考单分片规格
      *
      * @param instanceClass
      */
@@ -117,7 +117,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 实例CPU核数，0表示自定义分片集群，CPU核数由分片数变化
+     * get 实例CPU核数，0表示自定义分片集群版规格，CPU核数由分片数变化
      *
      * @return
      */
@@ -126,7 +126,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 实例CPU核数，0表示自定义分片集群，CPU核数由分片数变化
+     * set 实例CPU核数，0表示自定义分片集群版规格，CPU核数由分片数变化
      *
      * @param cpu
      */
@@ -135,7 +135,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 实例磁盘大小（GB)，0表示自定义分片集群，磁盘大小由分片数变化
+     * get 实例磁盘大小（GB)，0表示自定义分片集群版规格，磁盘大小由分片数变化
      *
      * @return
      */
@@ -144,7 +144,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 实例磁盘大小（GB)，0表示自定义分片集群，磁盘大小由分片数变化
+     * set 实例磁盘大小（GB)，0表示自定义分片集群版规格，磁盘大小由分片数变化
      *
      * @param diskGB
      */
@@ -153,7 +153,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 最大连接数，0表示自定义分片集群，最大连接数由分片数变化
+     * get 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
      *
      * @return
      */
@@ -162,7 +162,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 最大连接数，0表示自定义分片集群，最大连接数由分片数变化
+     * set 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
      *
      * @param maxConntion
      */
@@ -171,7 +171,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 带宽（Mbps)，0表示自定义分片集群，带宽由分片数变化
+     * get 带宽（Mbps)，0表示自定义分片集群版规格，带宽由分片数变化
      *
      * @return
      */
@@ -180,7 +180,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 带宽（Mbps)，0表示自定义分片集群，带宽由分片数变化
+     * set 带宽（Mbps)，0表示自定义分片集群版规格，带宽由分片数变化
      *
      * @param bandwidthMbps
      */
@@ -189,7 +189,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+     * get 需要的IP数，0表示自定义分片集群版规格，IP数由分片数变化
      *
      * @return
      */
@@ -198,7 +198,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+     * set 需要的IP数，0表示自定义分片集群版规格，IP数由分片数变化
      *
      * @param ipNumber
      */
@@ -207,7 +207,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 该内存对应的分片列表信息，redis 2.8以及redis 4.0主从版没有分片列表信息
+     * get 实例的分片列表信息，redis 2.8标准版、集群版以及redis 4.0标准版没有分片列表信息
      *
      * @return
      */
@@ -216,7 +216,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 该内存对应的分片列表信息，redis 2.8以及redis 4.0主从版没有分片列表信息
+     * set 实例的分片列表信息，redis 2.8标准版、集群版以及redis 4.0标准版没有分片列表信息
      *
      * @param shard
      */
@@ -254,7 +254,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格，空表示自定义分片集群，只有分片规格，没有实例规格
+     * set 实例规格，标准版不为空，4.0 自定义分片集群版规格为空，具体规格参考单分片规格
      *
      * @param instanceClass
      */
@@ -264,7 +264,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 实例CPU核数，0表示自定义分片集群，CPU核数由分片数变化
+     * set 实例CPU核数，0表示自定义分片集群版规格，CPU核数由分片数变化
      *
      * @param cpu
      */
@@ -274,7 +274,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 实例磁盘大小（GB)，0表示自定义分片集群，磁盘大小由分片数变化
+     * set 实例磁盘大小（GB)，0表示自定义分片集群版规格，磁盘大小由分片数变化
      *
      * @param diskGB
      */
@@ -284,7 +284,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 最大连接数，0表示自定义分片集群，最大连接数由分片数变化
+     * set 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
      *
      * @param maxConntion
      */
@@ -294,7 +294,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 带宽（Mbps)，0表示自定义分片集群，带宽由分片数变化
+     * set 带宽（Mbps)，0表示自定义分片集群版规格，带宽由分片数变化
      *
      * @param bandwidthMbps
      */
@@ -304,7 +304,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 需要的IP数，0表示自定义分片集群，IP数由分片数变化
+     * set 需要的IP数，0表示自定义分片集群版规格，IP数由分片数变化
      *
      * @param ipNumber
      */
@@ -314,7 +314,7 @@ public class SpecInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 该内存对应的分片列表信息，redis 2.8以及redis 4.0主从版没有分片列表信息
+     * set 实例的分片列表信息，redis 2.8标准版、集群版以及redis 4.0标准版没有分片列表信息
      *
      * @param shard
      */

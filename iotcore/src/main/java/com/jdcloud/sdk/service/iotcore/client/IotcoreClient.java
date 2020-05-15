@@ -37,6 +37,30 @@ import com.jdcloud.sdk.service.iotcore.client.AddDeviceLinksExecutor;
 import com.jdcloud.sdk.service.iotcore.model.AddDeviceRequest;
 import com.jdcloud.sdk.service.iotcore.model.AddDeviceResponse;
 import com.jdcloud.sdk.service.iotcore.client.AddDeviceExecutor;
+import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsRequest;
+import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsResponse;
+import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicsExecutor;
+import com.jdcloud.sdk.service.iotcore.model.InvokeThingServiceRequest;
+import com.jdcloud.sdk.service.iotcore.model.InvokeThingServiceResponse;
+import com.jdcloud.sdk.service.iotcore.client.InvokeThingServiceExecutor;
+import com.jdcloud.sdk.service.iotcore.model.ListProductsRequest;
+import com.jdcloud.sdk.service.iotcore.model.ListProductsResponse;
+import com.jdcloud.sdk.service.iotcore.client.ListProductsExecutor;
+import com.jdcloud.sdk.service.iotcore.model.CreateProductRequest;
+import com.jdcloud.sdk.service.iotcore.model.CreateProductResponse;
+import com.jdcloud.sdk.service.iotcore.client.CreateProductExecutor;
+import com.jdcloud.sdk.service.iotcore.model.RemoveLoongrayDeviceRequest;
+import com.jdcloud.sdk.service.iotcore.model.RemoveLoongrayDeviceResponse;
+import com.jdcloud.sdk.service.iotcore.client.RemoveLoongrayDeviceExecutor;
+import com.jdcloud.sdk.service.iotcore.model.UpdateProductRequest;
+import com.jdcloud.sdk.service.iotcore.model.UpdateProductResponse;
+import com.jdcloud.sdk.service.iotcore.client.UpdateProductExecutor;
+import com.jdcloud.sdk.service.iotcore.model.QueryDeviceDetailRequest;
+import com.jdcloud.sdk.service.iotcore.model.QueryDeviceDetailResponse;
+import com.jdcloud.sdk.service.iotcore.client.QueryDeviceDetailExecutor;
+import com.jdcloud.sdk.service.iotcore.model.RemoveDeviceRequest;
+import com.jdcloud.sdk.service.iotcore.model.RemoveDeviceResponse;
+import com.jdcloud.sdk.service.iotcore.client.RemoveDeviceExecutor;
 import com.jdcloud.sdk.service.iotcore.model.UpdateThingShadowRequest;
 import com.jdcloud.sdk.service.iotcore.model.UpdateThingShadowResponse;
 import com.jdcloud.sdk.service.iotcore.client.UpdateThingShadowExecutor;
@@ -52,48 +76,36 @@ import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicExecutor;
 import com.jdcloud.sdk.service.iotcore.model.QueryDevicePageRequest;
 import com.jdcloud.sdk.service.iotcore.model.QueryDevicePageResponse;
 import com.jdcloud.sdk.service.iotcore.client.QueryDevicePageExecutor;
-import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsRequest;
-import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsResponse;
-import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicsExecutor;
-import com.jdcloud.sdk.service.iotcore.model.InvokeThingServiceRequest;
-import com.jdcloud.sdk.service.iotcore.model.InvokeThingServiceResponse;
-import com.jdcloud.sdk.service.iotcore.client.InvokeThingServiceExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DescribeThingShadowRequest;
 import com.jdcloud.sdk.service.iotcore.model.DescribeThingShadowResponse;
 import com.jdcloud.sdk.service.iotcore.client.DescribeThingShadowExecutor;
 import com.jdcloud.sdk.service.iotcore.model.InvokeThingTopicRequest;
 import com.jdcloud.sdk.service.iotcore.model.InvokeThingTopicResponse;
 import com.jdcloud.sdk.service.iotcore.client.InvokeThingTopicExecutor;
-import com.jdcloud.sdk.service.iotcore.model.ListProductsRequest;
-import com.jdcloud.sdk.service.iotcore.model.ListProductsResponse;
-import com.jdcloud.sdk.service.iotcore.client.ListProductsExecutor;
-import com.jdcloud.sdk.service.iotcore.model.CreateProductRequest;
-import com.jdcloud.sdk.service.iotcore.model.CreateProductResponse;
-import com.jdcloud.sdk.service.iotcore.client.CreateProductExecutor;
+import com.jdcloud.sdk.service.iotcore.model.UpdateLooDeviceRequest;
+import com.jdcloud.sdk.service.iotcore.model.UpdateLooDeviceResponse;
+import com.jdcloud.sdk.service.iotcore.client.UpdateLooDeviceExecutor;
 import com.jdcloud.sdk.service.iotcore.model.ExportThingModelRequest;
 import com.jdcloud.sdk.service.iotcore.model.ExportThingModelResponse;
 import com.jdcloud.sdk.service.iotcore.client.ExportThingModelExecutor;
 import com.jdcloud.sdk.service.iotcore.model.ListProductAbilitiesRequest;
 import com.jdcloud.sdk.service.iotcore.model.ListProductAbilitiesResponse;
 import com.jdcloud.sdk.service.iotcore.client.ListProductAbilitiesExecutor;
+import com.jdcloud.sdk.service.iotcore.model.LoongrayQueryPageRequest;
+import com.jdcloud.sdk.service.iotcore.model.LoongrayQueryPageResponse;
+import com.jdcloud.sdk.service.iotcore.client.LoongrayQueryPageExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DescribeProductRequest;
 import com.jdcloud.sdk.service.iotcore.model.DescribeProductResponse;
 import com.jdcloud.sdk.service.iotcore.client.DescribeProductExecutor;
 import com.jdcloud.sdk.service.iotcore.model.UpdateDeviceRequest;
 import com.jdcloud.sdk.service.iotcore.model.UpdateDeviceResponse;
 import com.jdcloud.sdk.service.iotcore.client.UpdateDeviceExecutor;
-import com.jdcloud.sdk.service.iotcore.model.UpdateProductRequest;
-import com.jdcloud.sdk.service.iotcore.model.UpdateProductResponse;
-import com.jdcloud.sdk.service.iotcore.client.UpdateProductExecutor;
-import com.jdcloud.sdk.service.iotcore.model.QueryDeviceDetailRequest;
-import com.jdcloud.sdk.service.iotcore.model.QueryDeviceDetailResponse;
-import com.jdcloud.sdk.service.iotcore.client.QueryDeviceDetailExecutor;
+import com.jdcloud.sdk.service.iotcore.model.AddLooDeviceRequest;
+import com.jdcloud.sdk.service.iotcore.model.AddLooDeviceResponse;
+import com.jdcloud.sdk.service.iotcore.client.AddLooDeviceExecutor;
 import com.jdcloud.sdk.service.iotcore.model.ImportThingModelRequest;
 import com.jdcloud.sdk.service.iotcore.model.ImportThingModelResponse;
 import com.jdcloud.sdk.service.iotcore.client.ImportThingModelExecutor;
-import com.jdcloud.sdk.service.iotcore.model.RemoveDeviceRequest;
-import com.jdcloud.sdk.service.iotcore.model.RemoveDeviceResponse;
-import com.jdcloud.sdk.service.iotcore.client.RemoveDeviceExecutor;
 
 /**
  * iotcoreClient
@@ -102,7 +114,7 @@ public class IotcoreClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.1";
     public final static String DefaultEndpoint = "iotcore.jdcloud-api.com";
     public final static String ServiceName = "iotcore";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -167,6 +179,94 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
+     * 查看产品自定义Topic列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeProductTopicsResponse describeProductTopics(DescribeProductTopicsRequest request) throws JdcloudSdkException {
+        return new DescribeProductTopicsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设备服务调用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public InvokeThingServiceResponse invokeThingService(InvokeThingServiceRequest request) throws JdcloudSdkException {
+        return new InvokeThingServiceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看产品列表接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListProductsResponse listProducts(ListProductsRequest request) throws JdcloudSdkException {
+        return new ListProductsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新建产品
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateProductResponse createProduct(CreateProductRequest request) throws JdcloudSdkException {
+        return new CreateProductExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除设备
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RemoveLoongrayDeviceResponse removeLoongrayDevice(RemoveLoongrayDeviceRequest request) throws JdcloudSdkException {
+        return new RemoveLoongrayDeviceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改产品
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateProductResponse updateProduct(UpdateProductRequest request) throws JdcloudSdkException {
+        return new UpdateProductExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询设备详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDeviceDetailResponse queryDeviceDetail(QueryDeviceDetailRequest request) throws JdcloudSdkException {
+        return new QueryDeviceDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除设备
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RemoveDeviceResponse removeDevice(RemoveDeviceRequest request) throws JdcloudSdkException {
+        return new RemoveDeviceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 更新设备影子的期望值
      *
      * @param request
@@ -222,28 +322,6 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
-     * 查看产品自定义Topic列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeProductTopicsResponse describeProductTopics(DescribeProductTopicsRequest request) throws JdcloudSdkException {
-        return new DescribeProductTopicsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设备服务调用
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public InvokeThingServiceResponse invokeThingService(InvokeThingServiceRequest request) throws JdcloudSdkException {
-        return new InvokeThingServiceExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查看设备影子
      *
      * @param request
@@ -266,25 +344,14 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
-     * 查看产品列表接口
+     * 修改设备详情
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ListProductsResponse listProducts(ListProductsRequest request) throws JdcloudSdkException {
-        return new ListProductsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 新建产品
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateProductResponse createProduct(CreateProductRequest request) throws JdcloudSdkException {
-        return new CreateProductExecutor().client(this).execute(request);
+    public UpdateLooDeviceResponse updateLooDevice(UpdateLooDeviceRequest request) throws JdcloudSdkException {
+        return new UpdateLooDeviceExecutor().client(this).execute(request);
     }
 
     /**
@@ -310,6 +377,17 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
+     * 朗瑞分页查询设备信息,支持一个或多个条件
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LoongrayQueryPageResponse loongrayQueryPage(LoongrayQueryPageRequest request) throws JdcloudSdkException {
+        return new LoongrayQueryPageExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看产品
      *
      * @param request
@@ -332,25 +410,14 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
-     * 修改产品
+     * 注册单个朗讯设备并返回秘钥信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateProductResponse updateProduct(UpdateProductRequest request) throws JdcloudSdkException {
-        return new UpdateProductExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询设备详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryDeviceDetailResponse queryDeviceDetail(QueryDeviceDetailRequest request) throws JdcloudSdkException {
-        return new QueryDeviceDetailExecutor().client(this).execute(request);
+    public AddLooDeviceResponse addLooDevice(AddLooDeviceRequest request) throws JdcloudSdkException {
+        return new AddLooDeviceExecutor().client(this).execute(request);
     }
 
     /**
@@ -362,17 +429,6 @@ public class IotcoreClient extends JdcloudClient {
      */
     public ImportThingModelResponse importThingModel(ImportThingModelRequest request) throws JdcloudSdkException {
         return new ImportThingModelExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除设备
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RemoveDeviceResponse removeDevice(RemoveDeviceRequest request) throws JdcloudSdkException {
-        return new RemoveDeviceExecutor().client(this).execute(request);
     }
 
 

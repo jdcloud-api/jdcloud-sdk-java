@@ -1,9 +1,10 @@
 # 更新历史
 
-API版本：2.1.1
+API版本：2.1.2
 
 | 发布时间   | 版本号 | 更新     | 说明                                                         |
 | ---------- | ------ | -------- | ------------------------------------------------------------ |
+| 2020-05-13 | 2.1.2  | 接口更新 | 更新describeSpecConfig接口返回结果     |
 | 2020-03-27 | 2.1.1  | 接口更新 | 更新describeSpecConfig接口返回结果     |
 | 2020-03-17 | 2.1.0  | 接口更新 | createCacheInstance、modifyCacheInstanceClass接口新增shardNumber参数；新增describeSpecConfig接口     |
 | 2020-03-16 | 2.0.0  | 增加接口 | 发布IP白名单接口：describeIpWhiteList、modifyIpWhiteList；新增大key热key分析接口：describeAnalysisTime、describeCacheAnalysisList、describeCacheAnalysisResult、modifyAnalysisTime、createCacheAnalysis     |

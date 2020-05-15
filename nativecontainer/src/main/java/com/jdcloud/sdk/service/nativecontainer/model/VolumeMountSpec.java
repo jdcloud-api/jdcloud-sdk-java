@@ -35,7 +35,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 磁盘分类 cloud：基于云硬盘的卷 local：本地盘（使用前需申请）
+     * 磁盘类型，支持云盘： cloud
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     private Boolean readOnly;
 
     /**
-     * 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统
+     * 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统 &lt;br&gt;注：其中az、chargeSpec、multiAttachable、encrypt字段无效
      */
     private DiskSpec cloudDiskSpec;
 
@@ -78,7 +78,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
 
 
     /**
-     * get 磁盘分类 cloud：基于云硬盘的卷 local：本地盘（使用前需申请）
+     * get 磁盘类型，支持云盘： cloud
      *
      * @return
      */
@@ -87,7 +87,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘分类 cloud：基于云硬盘的卷 local：本地盘（使用前需申请）
+     * set 磁盘类型，支持云盘： cloud
      *
      * @param category
      */
@@ -150,7 +150,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统
+     * get 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统 &lt;br&gt;注：其中az、chargeSpec、multiAttachable、encrypt字段无效
      *
      * @return
      */
@@ -159,7 +159,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统
+     * set 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统 &lt;br&gt;注：其中az、chargeSpec、multiAttachable、encrypt字段无效
      *
      * @param cloudDiskSpec
      */
@@ -223,7 +223,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
 
 
     /**
-     * set 磁盘分类 cloud：基于云硬盘的卷 local：本地盘（使用前需申请）
+     * set 磁盘类型，支持云盘： cloud
      *
      * @param category
      */
@@ -263,7 +263,7 @@ public class VolumeMountSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统
+     * set 云硬盘规格；随容器自动创建的云硬盘，不会对磁盘分区，只会格式化文件系统 &lt;br&gt;注：其中az、chargeSpec、multiAttachable、encrypt字段无效
      *
      * @param cloudDiskSpec
      */

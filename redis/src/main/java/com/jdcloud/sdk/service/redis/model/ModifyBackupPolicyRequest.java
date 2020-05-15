@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改缓存Redis实例的自动备份策略，可修改备份周期和备份时间
+ * 开启或更新缓存Redis实例的自动备份策略，可修改备份周期和备份时间
  */
 public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
+     * 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
      * Required:true
      */
     @Required
@@ -64,7 +64,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
+     * get 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
+     * set 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
      *
      * @param backupTime
      */
@@ -137,7 +137,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
+     * set 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
      *
      * @param backupTime
      */

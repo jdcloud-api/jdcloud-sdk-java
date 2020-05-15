@@ -141,12 +141,12 @@ public class Container  implements java.io.Serializable {
     private String elasticIpAddress;
 
     /**
-     * 主网卡信息
+     * 主网卡配置信息
      */
     private InstanceNetworkInterfaceAttachment primaryNetworkInterface;
 
     /**
-     * 弹性网卡信息
+     * 辅助网卡配置信息
      */
     private List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
 
@@ -560,7 +560,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡信息
+     * get 主网卡配置信息
      *
      * @return
      */
@@ -569,7 +569,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡信息
+     * set 主网卡配置信息
      *
      * @param primaryNetworkInterface
      */
@@ -578,7 +578,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * get 弹性网卡信息
+     * get 辅助网卡配置信息
      *
      * @return
      */
@@ -587,7 +587,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性网卡信息
+     * set 辅助网卡配置信息
      *
      * @param secondaryNetworkInterfaces
      */
@@ -915,7 +915,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡信息
+     * set 主网卡配置信息
      *
      * @param primaryNetworkInterface
      */
@@ -925,7 +925,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性网卡信息
+     * set 辅助网卡配置信息
      *
      * @param secondaryNetworkInterfaces
      */
@@ -1056,7 +1056,7 @@ public class Container  implements java.io.Serializable {
     }
 
     /**
-     * add item to 弹性网卡信息
+     * add item to 辅助网卡配置信息
      *
      * @param secondaryNetworkInterface
      */

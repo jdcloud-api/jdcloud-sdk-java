@@ -89,7 +89,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     private Integer ipv6On;
 
     /**
-     * 分片数，只对自定义分片规格实例有效，主从版固定为1，集群版大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
+     * 分片数，自定义分片规格集群版实例必须有，且大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
      */
     private Integer shardNumber;
 
@@ -257,7 +257,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 分片数，只对自定义分片规格实例有效，主从版固定为1，集群版大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
+     * get 分片数，自定义分片规格集群版实例必须有，且大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
      *
      * @return
      */
@@ -266,7 +266,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 分片数，只对自定义分片规格实例有效，主从版固定为1，集群版大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
+     * set 分片数，自定义分片规格集群版实例必须有，且大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
      *
      * @param shardNumber
      */
@@ -366,7 +366,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 分片数，只对自定义分片规格实例有效，主从版固定为1，集群版大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
+     * set 分片数，自定义分片规格集群版实例必须有，且大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
      *
      * @param shardNumber
      */

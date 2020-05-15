@@ -35,7 +35,7 @@ public class TypeInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例类型：目前支持主从版（master-slave）、集群版（cluster）
+     * 实例类型：目前支持标准版（master-slave）、集群版（cluster）
      */
     private String instanceType;
 
@@ -46,7 +46,7 @@ public class TypeInfo  implements java.io.Serializable {
 
 
     /**
-     * get 实例类型：目前支持主从版（master-slave）、集群版（cluster）
+     * get 实例类型：目前支持标准版（master-slave）、集群版（cluster）
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class TypeInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型：目前支持主从版（master-slave）、集群版（cluster）
+     * set 实例类型：目前支持标准版（master-slave）、集群版（cluster）
      *
      * @param instanceType
      */
@@ -83,7 +83,7 @@ public class TypeInfo  implements java.io.Serializable {
 
 
     /**
-     * set 实例类型：目前支持主从版（master-slave）、集群版（cluster）
+     * set 实例类型：目前支持标准版（master-slave）、集群版（cluster）
      *
      * @param instanceType
      */
