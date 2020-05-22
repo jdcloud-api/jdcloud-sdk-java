@@ -72,6 +72,13 @@ public class AddLooDeviceRequest extends JdcloudRequest implements java.io.Seria
     private String description;
 
     /**
+     * 设备类型
+     * Required:true
+     */
+    @Required
+    private String deviceType;
+
+    /**
      * 设备归属的实例ID
      * Required:true
      */
@@ -220,6 +227,24 @@ public class AddLooDeviceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
+     * get 设备类型
+     *
+     * @return
+     */
+    public String getDeviceType() {
+        return deviceType;
+    }
+
+    /**
+     * set 设备类型
+     *
+     * @param deviceType
+     */
+    public void setDeviceType(String deviceType) {
+        this.deviceType = deviceType;
+    }
+
+    /**
      * get 设备归属的实例ID
      *
      * @return
@@ -341,6 +366,16 @@ public class AddLooDeviceRequest extends JdcloudRequest implements java.io.Seria
      */
     public AddLooDeviceRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 设备类型
+     *
+     * @param deviceType
+     */
+    public AddLooDeviceRequest deviceType(String deviceType) {
+        this.deviceType = deviceType;
         return this;
     }
 

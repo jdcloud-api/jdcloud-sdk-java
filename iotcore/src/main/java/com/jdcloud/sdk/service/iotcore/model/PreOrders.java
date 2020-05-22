@@ -48,6 +48,11 @@ public class PreOrders  implements java.io.Serializable {
     private String productKey;
 
     /**
+     * 产品名称
+     */
+    private String productName;
+
+    /**
      * 用户Pin
      */
     private String userPin;
@@ -125,6 +130,24 @@ public class PreOrders  implements java.io.Serializable {
      */
     public void setProductKey(String productKey) {
         this.productKey = productKey;
+    }
+
+    /**
+     * get 产品名称
+     *
+     * @return
+     */
+    public String getProductName() {
+        return productName;
+    }
+
+    /**
+     * set 产品名称
+     *
+     * @param productName
+     */
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     /**
@@ -245,6 +268,16 @@ public class PreOrders  implements java.io.Serializable {
      */
     public PreOrders productKey(String productKey) {
         this.productKey = productKey;
+        return this;
+    }
+
+    /**
+     * set 产品名称
+     *
+     * @param productName
+     */
+    public PreOrders productName(String productName) {
+        this.productName = productName;
         return this;
     }
 
