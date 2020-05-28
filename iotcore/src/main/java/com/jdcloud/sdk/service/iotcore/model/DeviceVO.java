@@ -122,6 +122,21 @@ public class DeviceVO  implements java.io.Serializable {
      */
     private Integer dynamicRegister;
 
+    /**
+     * 设备采集器类型
+     */
+    private String deviceCollectorType;
+
+    /**
+     * 最后离线时间
+     */
+    private Long lastDisconnectTime;
+
+    /**
+     * 订单号
+     */
+    private Long orderId;
+
 
     /**
      * get 设备ID
@@ -447,6 +462,60 @@ public class DeviceVO  implements java.io.Serializable {
         this.dynamicRegister = dynamicRegister;
     }
 
+    /**
+     * get 设备采集器类型
+     *
+     * @return
+     */
+    public String getDeviceCollectorType() {
+        return deviceCollectorType;
+    }
+
+    /**
+     * set 设备采集器类型
+     *
+     * @param deviceCollectorType
+     */
+    public void setDeviceCollectorType(String deviceCollectorType) {
+        this.deviceCollectorType = deviceCollectorType;
+    }
+
+    /**
+     * get 最后离线时间
+     *
+     * @return
+     */
+    public Long getLastDisconnectTime() {
+        return lastDisconnectTime;
+    }
+
+    /**
+     * set 最后离线时间
+     *
+     * @param lastDisconnectTime
+     */
+    public void setLastDisconnectTime(Long lastDisconnectTime) {
+        this.lastDisconnectTime = lastDisconnectTime;
+    }
+
+    /**
+     * get 订单号
+     *
+     * @return
+     */
+    public Long getOrderId() {
+        return orderId;
+    }
+
+    /**
+     * set 订单号
+     *
+     * @param orderId
+     */
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
+    }
+
 
     /**
      * set 设备ID
@@ -625,6 +694,36 @@ public class DeviceVO  implements java.io.Serializable {
      */
     public DeviceVO dynamicRegister(Integer dynamicRegister) {
         this.dynamicRegister = dynamicRegister;
+        return this;
+    }
+
+    /**
+     * set 设备采集器类型
+     *
+     * @param deviceCollectorType
+     */
+    public DeviceVO deviceCollectorType(String deviceCollectorType) {
+        this.deviceCollectorType = deviceCollectorType;
+        return this;
+    }
+
+    /**
+     * set 最后离线时间
+     *
+     * @param lastDisconnectTime
+     */
+    public DeviceVO lastDisconnectTime(Long lastDisconnectTime) {
+        this.lastDisconnectTime = lastDisconnectTime;
+        return this;
+    }
+
+    /**
+     * set 订单号
+     *
+     * @param orderId
+     */
+    public DeviceVO orderId(Long orderId) {
+        this.orderId = orderId;
         return this;
     }
 

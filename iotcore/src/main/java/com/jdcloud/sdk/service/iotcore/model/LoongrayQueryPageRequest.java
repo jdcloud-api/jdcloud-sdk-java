@@ -80,6 +80,16 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
     private String parentId;
 
     /**
+     * 订单号
+     */
+    private Integer orderId;
+
+    /**
+     * 设备采集器类型
+     */
+    private String deviceCollectorType;
+
+    /**
      * 设备归属的实例ID
      * Required:true
      */
@@ -257,6 +267,42 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
     }
 
     /**
+     * get 订单号
+     *
+     * @return
+     */
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    /**
+     * set 订单号
+     *
+     * @param orderId
+     */
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
+    }
+
+    /**
+     * get 设备采集器类型
+     *
+     * @return
+     */
+    public String getDeviceCollectorType() {
+        return deviceCollectorType;
+    }
+
+    /**
+     * set 设备采集器类型
+     *
+     * @param deviceCollectorType
+     */
+    public void setDeviceCollectorType(String deviceCollectorType) {
+        this.deviceCollectorType = deviceCollectorType;
+    }
+
+    /**
      * get 设备归属的实例ID
      *
      * @return
@@ -380,6 +426,26 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
      */
     public LoongrayQueryPageRequest parentId(String parentId) {
         this.parentId = parentId;
+        return this;
+    }
+
+    /**
+     * set 订单号
+     *
+     * @param orderId
+     */
+    public LoongrayQueryPageRequest orderId(Integer orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+
+    /**
+     * set 设备采集器类型
+     *
+     * @param deviceCollectorType
+     */
+    public LoongrayQueryPageRequest deviceCollectorType(String deviceCollectorType) {
+        this.deviceCollectorType = deviceCollectorType;
         return this;
     }
 
