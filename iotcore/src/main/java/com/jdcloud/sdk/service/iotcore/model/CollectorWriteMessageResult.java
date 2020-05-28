@@ -33,7 +33,40 @@ public class CollectorWriteMessageResult extends JdcloudResult implements java.i
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * writeStatus
+     */
+    private String writeStatus;
 
+
+    /**
+     * get writeStatus
+     *
+     * @return
+     */
+    public String getWriteStatus() {
+        return writeStatus;
+    }
+
+    /**
+     * set writeStatus
+     *
+     * @param writeStatus
+     */
+    public void setWriteStatus(String writeStatus) {
+        this.writeStatus = writeStatus;
+    }
+
+
+    /**
+     * set writeStatus
+     *
+     * @param writeStatus
+     */
+    public CollectorWriteMessageResult writeStatus(String writeStatus) {
+        this.writeStatus = writeStatus;
+        return this;
+    }
 
 
 }

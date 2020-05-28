@@ -36,12 +36,22 @@ public class CollectorReadMessageRequest extends JdcloudRequest implements java.
 
     /**
      * 当前的链接码
+     * Required:true
      */
+    @Required
     private String identifier;
 
     /**
-     * 当前的协议类型
+     * 当前的协议类型：
+语音播报控制器-输入端子,0X00000~X0007：inputTerminal
+语音播报控制器-播放信息,0X00024~X0027：playInfo
+LR001-516-5B边缘数据采集器-传感器管理：sensor
+LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
+LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
+
+     * Required:true
      */
+    @Required
     private String protocol;
 
     /**
@@ -78,7 +88,13 @@ public class CollectorReadMessageRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 当前的协议类型
+     * get 当前的协议类型：
+语音播报控制器-输入端子,0X00000~X0007：inputTerminal
+语音播报控制器-播放信息,0X00024~X0027：playInfo
+LR001-516-5B边缘数据采集器-传感器管理：sensor
+LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
+LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
+
      *
      * @return
      */
@@ -87,7 +103,13 @@ public class CollectorReadMessageRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 当前的协议类型
+     * set 当前的协议类型：
+语音播报控制器-输入端子,0X00000~X0007：inputTerminal
+语音播报控制器-播放信息,0X00024~X0027：playInfo
+LR001-516-5B边缘数据采集器-传感器管理：sensor
+LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
+LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
+
      *
      * @param protocol
      */
@@ -143,7 +165,13 @@ public class CollectorReadMessageRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 当前的协议类型
+     * set 当前的协议类型：
+语音播报控制器-输入端子,0X00000~X0007：inputTerminal
+语音播报控制器-播放信息,0X00024~X0027：playInfo
+LR001-516-5B边缘数据采集器-传感器管理：sensor
+LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
+LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
+
      *
      * @param protocol
      */

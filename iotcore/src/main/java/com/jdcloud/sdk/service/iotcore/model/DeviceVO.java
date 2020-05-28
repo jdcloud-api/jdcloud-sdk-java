@@ -132,6 +132,11 @@ public class DeviceVO  implements java.io.Serializable {
      */
     private Long lastDisconnectTime;
 
+    /**
+     * 订单号
+     */
+    private Long orderId;
+
 
     /**
      * get 设备ID
@@ -493,6 +498,24 @@ public class DeviceVO  implements java.io.Serializable {
         this.lastDisconnectTime = lastDisconnectTime;
     }
 
+    /**
+     * get 订单号
+     *
+     * @return
+     */
+    public Long getOrderId() {
+        return orderId;
+    }
+
+    /**
+     * set 订单号
+     *
+     * @param orderId
+     */
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
+    }
+
 
     /**
      * set 设备ID
@@ -691,6 +714,16 @@ public class DeviceVO  implements java.io.Serializable {
      */
     public DeviceVO lastDisconnectTime(Long lastDisconnectTime) {
         this.lastDisconnectTime = lastDisconnectTime;
+        return this;
+    }
+
+    /**
+     * set 订单号
+     *
+     * @param orderId
+     */
+    public DeviceVO orderId(Long orderId) {
+        this.orderId = orderId;
         return this;
     }
 
