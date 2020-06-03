@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.iotcore.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询物类型列表
+ * 查询物类型详情
  */
 public class ThingTypeDescribeResponse extends JdcloudResponse<ThingTypeDescribeResult> implements java.io.Serializable {
 

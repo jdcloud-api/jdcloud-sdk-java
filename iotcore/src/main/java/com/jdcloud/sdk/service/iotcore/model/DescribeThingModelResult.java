@@ -24,48 +24,48 @@
 
 package com.jdcloud.sdk.service.iotcore.model;
 
-import com.jdcloud.sdk.service.iotcore.model.ThingTypeInfoVO;
+import com.jdcloud.sdk.service.iotcore.model.ThingModelRespTO;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询物类型详情
+ * 根据模型ID查看物模型完整信息
  */
-public class ThingTypeDescribeResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeThingModelResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * thingTypeInfoVO
+     * thingModelRespTO
      */
-    private ThingTypeInfoVO thingTypeInfoVO;
+    private ThingModelRespTO thingModelRespTO;
 
 
     /**
-     * get thingTypeInfoVO
+     * get thingModelRespTO
      *
      * @return
      */
-    public ThingTypeInfoVO getThingTypeInfoVO() {
-        return thingTypeInfoVO;
+    public ThingModelRespTO getThingModelRespTO() {
+        return thingModelRespTO;
     }
 
     /**
-     * set thingTypeInfoVO
+     * set thingModelRespTO
      *
-     * @param thingTypeInfoVO
+     * @param thingModelRespTO
      */
-    public void setThingTypeInfoVO(ThingTypeInfoVO thingTypeInfoVO) {
-        this.thingTypeInfoVO = thingTypeInfoVO;
+    public void setThingModelRespTO(ThingModelRespTO thingModelRespTO) {
+        this.thingModelRespTO = thingModelRespTO;
     }
 
 
     /**
-     * set thingTypeInfoVO
+     * set thingModelRespTO
      *
-     * @param thingTypeInfoVO
+     * @param thingModelRespTO
      */
-    public ThingTypeDescribeResult thingTypeInfoVO(ThingTypeInfoVO thingTypeInfoVO) {
-        this.thingTypeInfoVO = thingTypeInfoVO;
+    public DescribeThingModelResult thingModelRespTO(ThingModelRespTO thingModelRespTO) {
+        this.thingModelRespTO = thingModelRespTO;
         return this;
     }
 

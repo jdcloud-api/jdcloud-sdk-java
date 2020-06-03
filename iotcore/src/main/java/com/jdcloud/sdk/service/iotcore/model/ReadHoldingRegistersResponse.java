@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.iotcore.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取电梯运行状态
+ * (0x03)读保持寄存器
  */
-public class ElevatorOperatingStatusResponse extends JdcloudResponse<ElevatorOperatingStatusResult> implements java.io.Serializable {
+public class ReadHoldingRegistersResponse extends JdcloudResponse<ReadHoldingRegistersResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

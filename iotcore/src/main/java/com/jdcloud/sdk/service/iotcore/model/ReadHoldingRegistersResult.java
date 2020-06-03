@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * CoreWebConsoleAPI
- * 控制台开放API
+ * LoongrayElevator
+ * 朗锐电梯服务
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -24,48 +24,47 @@
 
 package com.jdcloud.sdk.service.iotcore.model;
 
-import com.jdcloud.sdk.service.iotcore.model.ThingTypeInfoVO;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询物类型详情
+ * (0x03)读保持寄存器
  */
-public class ThingTypeDescribeResult extends JdcloudResult implements java.io.Serializable {
+public class ReadHoldingRegistersResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * thingTypeInfoVO
+     * 读取寄存器值，key：寄存器地址 value:寄存器值
      */
-    private ThingTypeInfoVO thingTypeInfoVO;
+    private Object readData;
 
 
     /**
-     * get thingTypeInfoVO
+     * get 读取寄存器值，key：寄存器地址 value:寄存器值
      *
      * @return
      */
-    public ThingTypeInfoVO getThingTypeInfoVO() {
-        return thingTypeInfoVO;
+    public Object getReadData() {
+        return readData;
     }
 
     /**
-     * set thingTypeInfoVO
+     * set 读取寄存器值，key：寄存器地址 value:寄存器值
      *
-     * @param thingTypeInfoVO
+     * @param readData
      */
-    public void setThingTypeInfoVO(ThingTypeInfoVO thingTypeInfoVO) {
-        this.thingTypeInfoVO = thingTypeInfoVO;
+    public void setReadData(Object readData) {
+        this.readData = readData;
     }
 
 
     /**
-     * set thingTypeInfoVO
+     * set 读取寄存器值，key：寄存器地址 value:寄存器值
      *
-     * @param thingTypeInfoVO
+     * @param readData
      */
-    public ThingTypeDescribeResult thingTypeInfoVO(ThingTypeInfoVO thingTypeInfoVO) {
-        this.thingTypeInfoVO = thingTypeInfoVO;
+    public ReadHoldingRegistersResult readData(Object readData) {
+        this.readData = readData;
         return this;
     }
 

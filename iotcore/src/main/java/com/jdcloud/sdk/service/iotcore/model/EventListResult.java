@@ -47,14 +47,9 @@ public class EventListResult extends JdcloudResult implements java.io.Serializab
     private Integer currentPage;
 
     /**
-     * totalSize
+     * totalCount
      */
-    private Integer totalSize;
-
-    /**
-     * totalPage
-     */
-    private Integer totalPage;
+    private Integer totalCount;
 
     /**
      * data
@@ -99,39 +94,21 @@ public class EventListResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * get totalSize
+     * get totalCount
      *
      * @return
      */
-    public Integer getTotalSize() {
-        return totalSize;
+    public Integer getTotalCount() {
+        return totalCount;
     }
 
     /**
-     * set totalSize
+     * set totalCount
      *
-     * @param totalSize
+     * @param totalCount
      */
-    public void setTotalSize(Integer totalSize) {
-        this.totalSize = totalSize;
-    }
-
-    /**
-     * get totalPage
-     *
-     * @return
-     */
-    public Integer getTotalPage() {
-        return totalPage;
-    }
-
-    /**
-     * set totalPage
-     *
-     * @param totalPage
-     */
-    public void setTotalPage(Integer totalPage) {
-        this.totalPage = totalPage;
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
     }
 
     /**
@@ -174,22 +151,12 @@ public class EventListResult extends JdcloudResult implements java.io.Serializab
     }
 
     /**
-     * set totalSize
+     * set totalCount
      *
-     * @param totalSize
+     * @param totalCount
      */
-    public EventListResult totalSize(Integer totalSize) {
-        this.totalSize = totalSize;
-        return this;
-    }
-
-    /**
-     * set totalPage
-     *
-     * @param totalPage
-     */
-    public EventListResult totalPage(Integer totalPage) {
-        this.totalPage = totalPage;
+    public EventListResult totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
         return this;
     }
 

@@ -136,11 +136,6 @@ public class DeviceInfoVO  implements java.io.Serializable {
     private String thingModelVersion;
 
     /**
-     * 物模型类型
-     */
-    private String thingType;
-
-    /**
      * 物类型ID
      */
     private String thingTypeCode;
@@ -522,24 +517,6 @@ public class DeviceInfoVO  implements java.io.Serializable {
     }
 
     /**
-     * get 物模型类型
-     *
-     * @return
-     */
-    public String getThingType() {
-        return thingType;
-    }
-
-    /**
-     * set 物模型类型
-     *
-     * @param thingType
-     */
-    public void setThingType(String thingType) {
-        this.thingType = thingType;
-    }
-
-    /**
      * get 物类型ID
      *
      * @return
@@ -809,16 +786,6 @@ public class DeviceInfoVO  implements java.io.Serializable {
      */
     public DeviceInfoVO thingModelVersion(String thingModelVersion) {
         this.thingModelVersion = thingModelVersion;
-        return this;
-    }
-
-    /**
-     * set 物模型类型
-     *
-     * @param thingType
-     */
-    public DeviceInfoVO thingType(String thingType) {
-        this.thingType = thingType;
         return this;
     }
 

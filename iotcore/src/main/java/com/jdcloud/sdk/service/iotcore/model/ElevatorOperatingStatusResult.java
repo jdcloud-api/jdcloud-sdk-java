@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * ElevatorAPI
- * 电梯API
+ * LoongrayElevator
+ * 朗锐电梯服务
  *
  * OpenAPI spec version: v2
  * Contact: 

@@ -28,16 +28,23 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询物类型详情
+ * 根据模型ID查看物模型完整信息
  */
-public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeThingModelRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备型号标识
+     * 物模型ID编号
+     * Required:true
      */
-    private String deviceMetaId;
+    @Required
+    private String thingModelId;
+
+    /**
+     * 版本号。如果为空，则返回最新版本
+     */
+    private String thingModelVersion;
 
     /**
      * 区域id
@@ -55,21 +62,39 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 设备型号标识
+     * get 物模型ID编号
      *
      * @return
      */
-    public String getDeviceMetaId() {
-        return deviceMetaId;
+    public String getThingModelId() {
+        return thingModelId;
     }
 
     /**
-     * set 设备型号标识
+     * set 物模型ID编号
      *
-     * @param deviceMetaId
+     * @param thingModelId
      */
-    public void setDeviceMetaId(String deviceMetaId) {
-        this.deviceMetaId = deviceMetaId;
+    public void setThingModelId(String thingModelId) {
+        this.thingModelId = thingModelId;
+    }
+
+    /**
+     * get 版本号。如果为空，则返回最新版本
+     *
+     * @return
+     */
+    public String getThingModelVersion() {
+        return thingModelVersion;
+    }
+
+    /**
+     * set 版本号。如果为空，则返回最新版本
+     *
+     * @param thingModelVersion
+     */
+    public void setThingModelVersion(String thingModelVersion) {
+        this.thingModelVersion = thingModelVersion;
     }
 
     /**
@@ -110,12 +135,22 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 设备型号标识
+     * set 物模型ID编号
      *
-     * @param deviceMetaId
+     * @param thingModelId
      */
-    public ThingTypeDescribeRequest deviceMetaId(String deviceMetaId) {
-        this.deviceMetaId = deviceMetaId;
+    public DescribeThingModelRequest thingModelId(String thingModelId) {
+        this.thingModelId = thingModelId;
+        return this;
+    }
+
+    /**
+     * set 版本号。如果为空，则返回最新版本
+     *
+     * @param thingModelVersion
+     */
+    public DescribeThingModelRequest thingModelVersion(String thingModelVersion) {
+        this.thingModelVersion = thingModelVersion;
         return this;
     }
 
@@ -124,7 +159,7 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
      *
      * @param regionId
      */
-    public ThingTypeDescribeRequest regionId(String regionId) {
+    public DescribeThingModelRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -134,7 +169,7 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
      *
      * @param instanceId
      */
-    public ThingTypeDescribeRequest instanceId(String instanceId) {
+    public DescribeThingModelRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
