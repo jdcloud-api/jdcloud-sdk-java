@@ -33,7 +33,73 @@ public class DownloadCertificateResult extends JdcloudResult implements java.io.
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 证书对应deviceId
+     */
+    private String deviceId;
 
+    /**
+     * 证书zip包对应链接，默认有效时长10分钟
+     */
+    private String deviceCertUrl;
+
+
+    /**
+     * get 证书对应deviceId
+     *
+     * @return
+     */
+    public String getDeviceId() {
+        return deviceId;
+    }
+
+    /**
+     * set 证书对应deviceId
+     *
+     * @param deviceId
+     */
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
+    }
+
+    /**
+     * get 证书zip包对应链接，默认有效时长10分钟
+     *
+     * @return
+     */
+    public String getDeviceCertUrl() {
+        return deviceCertUrl;
+    }
+
+    /**
+     * set 证书zip包对应链接，默认有效时长10分钟
+     *
+     * @param deviceCertUrl
+     */
+    public void setDeviceCertUrl(String deviceCertUrl) {
+        this.deviceCertUrl = deviceCertUrl;
+    }
+
+
+    /**
+     * set 证书对应deviceId
+     *
+     * @param deviceId
+     */
+    public DownloadCertificateResult deviceId(String deviceId) {
+        this.deviceId = deviceId;
+        return this;
+    }
+
+    /**
+     * set 证书zip包对应链接，默认有效时长10分钟
+     *
+     * @param deviceCertUrl
+     */
+    public DownloadCertificateResult deviceCertUrl(String deviceCertUrl) {
+        this.deviceCertUrl = deviceCertUrl;
+        return this;
+    }
 
 
 }

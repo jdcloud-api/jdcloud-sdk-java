@@ -27,6 +27,8 @@ public abstract class JdcloudClient {
 
     private Map<String, String> customHeader = new HashMap<>();
 
+    private boolean retryQuest = true;
+
     private final static Feature[] FEATURES = { Feature.AutoCloseSource, Feature.UseBigDecimal,
             Feature.AllowUnQuotedFieldNames, Feature.AllowSingleQuotes, Feature.AllowArbitraryCommas,
             Feature.AllowArbitraryCommas, Feature.SortFeidFastMatch, Feature.IgnoreNotMatch, Feature.DisableSpecialKeyDetect};
@@ -137,5 +139,13 @@ public abstract class JdcloudClient {
 
     public Map<String, String> getCustomHeader() {
         return this.customHeader;
+    }
+
+    public boolean isRetryQuest() {
+        return retryQuest;
+    }
+
+    public void setRetryQuest(boolean retryQuest) {
+        this.retryQuest = retryQuest;
     }
 }

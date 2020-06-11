@@ -28,31 +28,32 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取协议信息
+ * (0x03)读保持寄存器
  */
-public class CollectorReadMessageRequest extends JdcloudRequest implements java.io.Serializable {
+public class ReadHoldingRegistersRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 当前的链接码
+     * 连接码
      * Required:true
      */
     @Required
     private String identifier;
 
     /**
-     * 当前的协议类型：
-语音播报控制器-输入端子,0X00000~X0007：inputTerminal
-语音播报控制器-播放信息,0X00024~X0027：playInfo
-LR001-516-5B边缘数据采集器-传感器管理：sensor
-LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
-LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
-
+     * 起始地址，如40301
      * Required:true
      */
     @Required
-    private String protocol;
+    private Integer addressOfFirstRegister;
+
+    /**
+     * 寄存器数量
+     * Required:true
+     */
+    @Required
+    private Integer numberOfRegisters;
 
     /**
      * Hub实例Id
@@ -70,7 +71,7 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
 
 
     /**
-     * get 当前的链接码
+     * get 连接码
      *
      * @return
      */
@@ -79,7 +80,7 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
     }
 
     /**
-     * set 当前的链接码
+     * set 连接码
      *
      * @param identifier
      */
@@ -88,33 +89,39 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
     }
 
     /**
-     * get 当前的协议类型：
-语音播报控制器-输入端子,0X00000~X0007：inputTerminal
-语音播报控制器-播放信息,0X00024~X0027：playInfo
-LR001-516-5B边缘数据采集器-传感器管理：sensor
-LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
-LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
-
+     * get 起始地址，如40301
      *
      * @return
      */
-    public String getProtocol() {
-        return protocol;
+    public Integer getAddressOfFirstRegister() {
+        return addressOfFirstRegister;
     }
 
     /**
-     * set 当前的协议类型：
-语音播报控制器-输入端子,0X00000~X0007：inputTerminal
-语音播报控制器-播放信息,0X00024~X0027：playInfo
-LR001-516-5B边缘数据采集器-传感器管理：sensor
-LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
-LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
-
+     * set 起始地址，如40301
      *
-     * @param protocol
+     * @param addressOfFirstRegister
      */
-    public void setProtocol(String protocol) {
-        this.protocol = protocol;
+    public void setAddressOfFirstRegister(Integer addressOfFirstRegister) {
+        this.addressOfFirstRegister = addressOfFirstRegister;
+    }
+
+    /**
+     * get 寄存器数量
+     *
+     * @return
+     */
+    public Integer getNumberOfRegisters() {
+        return numberOfRegisters;
+    }
+
+    /**
+     * set 寄存器数量
+     *
+     * @param numberOfRegisters
+     */
+    public void setNumberOfRegisters(Integer numberOfRegisters) {
+        this.numberOfRegisters = numberOfRegisters;
     }
 
     /**
@@ -155,28 +162,32 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
 
 
     /**
-     * set 当前的链接码
+     * set 连接码
      *
      * @param identifier
      */
-    public CollectorReadMessageRequest identifier(String identifier) {
+    public ReadHoldingRegistersRequest identifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
 
     /**
-     * set 当前的协议类型：
-语音播报控制器-输入端子,0X00000~X0007：inputTerminal
-语音播报控制器-播放信息,0X00024~X0027：playInfo
-LR001-516-5B边缘数据采集器-传感器管理：sensor
-LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
-LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
-
+     * set 起始地址，如40301
      *
-     * @param protocol
+     * @param addressOfFirstRegister
      */
-    public CollectorReadMessageRequest protocol(String protocol) {
-        this.protocol = protocol;
+    public ReadHoldingRegistersRequest addressOfFirstRegister(Integer addressOfFirstRegister) {
+        this.addressOfFirstRegister = addressOfFirstRegister;
+        return this;
+    }
+
+    /**
+     * set 寄存器数量
+     *
+     * @param numberOfRegisters
+     */
+    public ReadHoldingRegistersRequest numberOfRegisters(Integer numberOfRegisters) {
+        this.numberOfRegisters = numberOfRegisters;
         return this;
     }
 
@@ -185,7 +196,7 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
      *
      * @param instanceId
      */
-    public CollectorReadMessageRequest instanceId(String instanceId) {
+    public ReadHoldingRegistersRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -195,7 +206,7 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
      *
      * @param regionId
      */
-    public CollectorReadMessageRequest regionId(String regionId) {
+    public ReadHoldingRegistersRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iotcore.model.ThingTypeDescribeResponse;
 
 /**
- * 查询物类型列表
+ * 查询物类型详情
  */
 class ThingTypeDescribeExecutor extends JdcloudExecutor {
 

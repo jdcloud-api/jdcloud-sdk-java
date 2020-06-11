@@ -25,19 +25,22 @@
 package com.jdcloud.sdk.service.iotcore.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.iotcore.model.DeviceSnapshotRequestVO;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询物类型详情
+ * 属性获取接口
  */
-public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.Serializable {
+public class GetPropertySnapshotRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备型号标识
+     * 方法查询请求
+     * Required:true
      */
-    private String deviceMetaId;
+    @Required
+    private DeviceSnapshotRequestVO deviceSnapshotRequestVO;
 
     /**
      * 区域id
@@ -55,21 +58,21 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 设备型号标识
+     * get 方法查询请求
      *
      * @return
      */
-    public String getDeviceMetaId() {
-        return deviceMetaId;
+    public DeviceSnapshotRequestVO getDeviceSnapshotRequestVO() {
+        return deviceSnapshotRequestVO;
     }
 
     /**
-     * set 设备型号标识
+     * set 方法查询请求
      *
-     * @param deviceMetaId
+     * @param deviceSnapshotRequestVO
      */
-    public void setDeviceMetaId(String deviceMetaId) {
-        this.deviceMetaId = deviceMetaId;
+    public void setDeviceSnapshotRequestVO(DeviceSnapshotRequestVO deviceSnapshotRequestVO) {
+        this.deviceSnapshotRequestVO = deviceSnapshotRequestVO;
     }
 
     /**
@@ -110,12 +113,12 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 设备型号标识
+     * set 方法查询请求
      *
-     * @param deviceMetaId
+     * @param deviceSnapshotRequestVO
      */
-    public ThingTypeDescribeRequest deviceMetaId(String deviceMetaId) {
-        this.deviceMetaId = deviceMetaId;
+    public GetPropertySnapshotRequest deviceSnapshotRequestVO(DeviceSnapshotRequestVO deviceSnapshotRequestVO) {
+        this.deviceSnapshotRequestVO = deviceSnapshotRequestVO;
         return this;
     }
 
@@ -124,7 +127,7 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
      *
      * @param regionId
      */
-    public ThingTypeDescribeRequest regionId(String regionId) {
+    public GetPropertySnapshotRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -134,7 +137,7 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
      *
      * @param instanceId
      */
-    public ThingTypeDescribeRequest instanceId(String instanceId) {
+    public GetPropertySnapshotRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

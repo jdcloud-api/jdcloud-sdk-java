@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * LoongrayElevator
- * 朗锐电梯服务
+ * CoreWebConsoleAPI
+ * 控制台开放API
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -24,12 +24,12 @@
 
 package com.jdcloud.sdk.service.iotcore.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取电梯运行状态
+ * 属性获取接口
  */
-public class ElevatorOperatingStatusResponse extends JdcloudResponse<ElevatorOperatingStatusResult> implements java.io.Serializable {
+public class GetPropertySnapshotResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

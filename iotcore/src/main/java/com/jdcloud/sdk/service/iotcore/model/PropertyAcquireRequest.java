@@ -28,16 +28,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询物类型详情
+ * 查询属性接口
  */
-public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.Serializable {
+public class PropertyAcquireRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备型号标识
+     * 设备ID
+     * Required:true
      */
-    private String deviceMetaId;
+    @Required
+    private String deviceId;
 
     /**
      * 区域id
@@ -55,21 +57,21 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 设备型号标识
+     * get 设备ID
      *
      * @return
      */
-    public String getDeviceMetaId() {
-        return deviceMetaId;
+    public String getDeviceId() {
+        return deviceId;
     }
 
     /**
-     * set 设备型号标识
+     * set 设备ID
      *
-     * @param deviceMetaId
+     * @param deviceId
      */
-    public void setDeviceMetaId(String deviceMetaId) {
-        this.deviceMetaId = deviceMetaId;
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
 
     /**
@@ -110,12 +112,12 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 设备型号标识
+     * set 设备ID
      *
-     * @param deviceMetaId
+     * @param deviceId
      */
-    public ThingTypeDescribeRequest deviceMetaId(String deviceMetaId) {
-        this.deviceMetaId = deviceMetaId;
+    public PropertyAcquireRequest deviceId(String deviceId) {
+        this.deviceId = deviceId;
         return this;
     }
 
@@ -124,7 +126,7 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
      *
      * @param regionId
      */
-    public ThingTypeDescribeRequest regionId(String regionId) {
+    public PropertyAcquireRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -134,7 +136,7 @@ public class ThingTypeDescribeRequest extends JdcloudRequest implements java.io.
      *
      * @param instanceId
      */
-    public ThingTypeDescribeRequest instanceId(String instanceId) {
+    public PropertyAcquireRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }

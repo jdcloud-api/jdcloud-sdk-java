@@ -24,48 +24,48 @@
 
 package com.jdcloud.sdk.service.iotcore.model;
 
-import com.jdcloud.sdk.service.iotcore.model.ThingTypeInfoVO;
+import com.jdcloud.sdk.service.iotcore.model.PropertyAcquireVo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询物类型详情
+ * 查询属性接口
  */
-public class ThingTypeDescribeResult extends JdcloudResult implements java.io.Serializable {
+public class PropertyAcquireResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * thingTypeInfoVO
+     * propertyAcquireVo
      */
-    private ThingTypeInfoVO thingTypeInfoVO;
+    private PropertyAcquireVo propertyAcquireVo;
 
 
     /**
-     * get thingTypeInfoVO
+     * get propertyAcquireVo
      *
      * @return
      */
-    public ThingTypeInfoVO getThingTypeInfoVO() {
-        return thingTypeInfoVO;
+    public PropertyAcquireVo getPropertyAcquireVo() {
+        return propertyAcquireVo;
     }
 
     /**
-     * set thingTypeInfoVO
+     * set propertyAcquireVo
      *
-     * @param thingTypeInfoVO
+     * @param propertyAcquireVo
      */
-    public void setThingTypeInfoVO(ThingTypeInfoVO thingTypeInfoVO) {
-        this.thingTypeInfoVO = thingTypeInfoVO;
+    public void setPropertyAcquireVo(PropertyAcquireVo propertyAcquireVo) {
+        this.propertyAcquireVo = propertyAcquireVo;
     }
 
 
     /**
-     * set thingTypeInfoVO
+     * set propertyAcquireVo
      *
-     * @param thingTypeInfoVO
+     * @param propertyAcquireVo
      */
-    public ThingTypeDescribeResult thingTypeInfoVO(ThingTypeInfoVO thingTypeInfoVO) {
-        this.thingTypeInfoVO = thingTypeInfoVO;
+    public PropertyAcquireResult propertyAcquireVo(PropertyAcquireVo propertyAcquireVo) {
+        this.propertyAcquireVo = propertyAcquireVo;
         return this;
     }
 

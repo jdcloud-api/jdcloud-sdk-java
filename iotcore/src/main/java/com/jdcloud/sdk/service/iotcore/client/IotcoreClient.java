@@ -49,6 +49,9 @@ import com.jdcloud.sdk.service.iotcore.client.FunctionListExecutor;
 import com.jdcloud.sdk.service.iotcore.model.EventListRequest;
 import com.jdcloud.sdk.service.iotcore.model.EventListResponse;
 import com.jdcloud.sdk.service.iotcore.client.EventListExecutor;
+import com.jdcloud.sdk.service.iotcore.model.PropertyAcquireRequest;
+import com.jdcloud.sdk.service.iotcore.model.PropertyAcquireResponse;
+import com.jdcloud.sdk.service.iotcore.client.PropertyAcquireExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsRequest;
 import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsResponse;
 import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicsExecutor;
@@ -82,9 +85,6 @@ import com.jdcloud.sdk.service.iotcore.client.UpdateProductExecutor;
 import com.jdcloud.sdk.service.iotcore.model.QueryDeviceDetailRequest;
 import com.jdcloud.sdk.service.iotcore.model.QueryDeviceDetailResponse;
 import com.jdcloud.sdk.service.iotcore.client.QueryDeviceDetailExecutor;
-import com.jdcloud.sdk.service.iotcore.model.DiscribeThingModelRequest;
-import com.jdcloud.sdk.service.iotcore.model.DiscribeThingModelResponse;
-import com.jdcloud.sdk.service.iotcore.client.DiscribeThingModelExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DownloadCertificateRequest;
 import com.jdcloud.sdk.service.iotcore.model.DownloadCertificateResponse;
 import com.jdcloud.sdk.service.iotcore.client.DownloadCertificateExecutor;
@@ -94,6 +94,9 @@ import com.jdcloud.sdk.service.iotcore.client.CreateAdminProductExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DeviceQueryRequest;
 import com.jdcloud.sdk.service.iotcore.model.DeviceQueryResponse;
 import com.jdcloud.sdk.service.iotcore.client.DeviceQueryExecutor;
+import com.jdcloud.sdk.service.iotcore.model.GetPropertySnapshotRequest;
+import com.jdcloud.sdk.service.iotcore.model.GetPropertySnapshotResponse;
+import com.jdcloud.sdk.service.iotcore.client.GetPropertySnapshotExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DeviceRegisterRequest;
 import com.jdcloud.sdk.service.iotcore.model.DeviceRegisterResponse;
 import com.jdcloud.sdk.service.iotcore.client.DeviceRegisterExecutor;
@@ -118,6 +121,12 @@ import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicExecutor;
 import com.jdcloud.sdk.service.iotcore.model.QueryDevicePageRequest;
 import com.jdcloud.sdk.service.iotcore.model.QueryDevicePageResponse;
 import com.jdcloud.sdk.service.iotcore.client.QueryDevicePageExecutor;
+import com.jdcloud.sdk.service.iotcore.model.DescribeThingModelRequest;
+import com.jdcloud.sdk.service.iotcore.model.DescribeThingModelResponse;
+import com.jdcloud.sdk.service.iotcore.client.DescribeThingModelExecutor;
+import com.jdcloud.sdk.service.iotcore.model.ReadHoldingRegistersRequest;
+import com.jdcloud.sdk.service.iotcore.model.ReadHoldingRegistersResponse;
+import com.jdcloud.sdk.service.iotcore.client.ReadHoldingRegistersExecutor;
 import com.jdcloud.sdk.service.iotcore.model.CollectorReadMessageRequest;
 import com.jdcloud.sdk.service.iotcore.model.CollectorReadMessageResponse;
 import com.jdcloud.sdk.service.iotcore.client.CollectorReadMessageExecutor;
@@ -171,7 +180,7 @@ public class IotcoreClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "iotcore.jdcloud-api.com";
     public final static String ServiceName = "iotcore";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -277,6 +286,17 @@ public class IotcoreClient extends JdcloudClient {
      */
     public EventListResponse eventList(EventListRequest request) throws JdcloudSdkException {
         return new EventListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询属性接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PropertyAcquireResponse propertyAcquire(PropertyAcquireRequest request) throws JdcloudSdkException {
+        return new PropertyAcquireExecutor().client(this).execute(request);
     }
 
     /**
@@ -401,17 +421,6 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
-     * 根据模型ID查看物模型完整信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DiscribeThingModelResponse discribeThingModel(DiscribeThingModelRequest request) throws JdcloudSdkException {
-        return new DiscribeThingModelExecutor().client(this).execute(request);
-    }
-
-    /**
      * 下载设备证书接口
      *
      * @param request
@@ -442,6 +451,17 @@ public class IotcoreClient extends JdcloudClient {
      */
     public DeviceQueryResponse deviceQuery(DeviceQueryRequest request) throws JdcloudSdkException {
         return new DeviceQueryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 属性获取接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetPropertySnapshotResponse getPropertySnapshot(GetPropertySnapshotRequest request) throws JdcloudSdkException {
+        return new GetPropertySnapshotExecutor().client(this).execute(request);
     }
 
     /**
@@ -530,6 +550,28 @@ public class IotcoreClient extends JdcloudClient {
      */
     public QueryDevicePageResponse queryDevicePage(QueryDevicePageRequest request) throws JdcloudSdkException {
         return new QueryDevicePageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据模型ID查看物模型完整信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeThingModelResponse describeThingModel(DescribeThingModelRequest request) throws JdcloudSdkException {
+        return new DescribeThingModelExecutor().client(this).execute(request);
+    }
+
+    /**
+     * (0x03)读保持寄存器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ReadHoldingRegistersResponse readHoldingRegisters(ReadHoldingRegistersRequest request) throws JdcloudSdkException {
+        return new ReadHoldingRegistersExecutor().client(this).execute(request);
     }
 
     /**
@@ -676,7 +718,7 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
-     * 查询物类型列表
+     * 查询物类型详情
      *
      * @param request
      * @return

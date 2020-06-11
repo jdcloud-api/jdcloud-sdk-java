@@ -13,6 +13,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.utils.Base64Utils;
 import com.jdcloud.sdk.utils.BinaryUtils;
 import com.jdcloud.sdk.utils.StringUtils;
+import org.apache.http.NoHttpResponseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,15 +38,16 @@ public abstract class JdcloudExecutor {
     private static Logger logger = LoggerFactory.getLogger(JdcloudExecutor.class);
     private static String dateFormat = "yyyy-MM-dd'T'HH:mm:ss";
     private static String charset = "UTF-8";
+    private final int RETRY_MAX_TIMES = 3;
     private static Pattern pattern = Pattern.compile("\\{([a-zA-Z0-9-_]+)\\}");
     private static Set<String> base64Headers = new HashSet<String>() {
         private static final long serialVersionUID = 1L;
-    {
-        add("x-jdcloud-security-token");
-        add("x-jdcloud-pin");
-        add("x-jdcloud-erp");
-    }};
-    
+        {
+            add("x-jdcloud-security-token");
+            add("x-jdcloud-pin");
+            add("x-jdcloud-erp");
+        }};
+
     /**
      * jdcloud客户端
      */
@@ -133,9 +135,20 @@ public abstract class JdcloudExecutor {
             signer.sign(signRequest);
             logger.debug("Authorization: {}", httpRequest.getHeaders().getAuthorization());
 
-            // 请求及响应
+            int times = 1;
+            while (times < RETRY_MAX_TIMES && jdcloudClient.isRetryQuest()) {
+                try {
+                    httpResponse = httpRequest.execute();
+                    return (R1)handlerHttpResponse(httpResponse);
+                } catch (NoHttpResponseException e) {
+                    times++;
+                    Thread.sleep(100);
+                }
+            }
+
             httpResponse = httpRequest.execute();
             return (R1)handlerHttpResponse(httpResponse);
+
         } catch (HttpResponseException e) {
             logger.error(e.getContent());
             if (e.getContent() == null) {

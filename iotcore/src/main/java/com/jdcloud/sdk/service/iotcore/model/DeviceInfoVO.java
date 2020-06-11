@@ -73,7 +73,7 @@ public class DeviceInfoVO  implements java.io.Serializable {
     /**
      * globalProfiles
      */
-    private GlobalProfileVO globalProfiles;
+    private List<GlobalProfileVO> globalProfiles;
 
     /**
      * 最近一次上线时间
@@ -134,11 +134,6 @@ public class DeviceInfoVO  implements java.io.Serializable {
      * 物模型版本号
      */
     private String thingModelVersion;
-
-    /**
-     * 物模型类型
-     */
-    private String thingType;
 
     /**
      * 物类型ID
@@ -292,7 +287,7 @@ public class DeviceInfoVO  implements java.io.Serializable {
      *
      * @return
      */
-    public GlobalProfileVO getGlobalProfiles() {
+    public List<GlobalProfileVO> getGlobalProfiles() {
         return globalProfiles;
     }
 
@@ -301,7 +296,7 @@ public class DeviceInfoVO  implements java.io.Serializable {
      *
      * @param globalProfiles
      */
-    public void setGlobalProfiles(GlobalProfileVO globalProfiles) {
+    public void setGlobalProfiles(List<GlobalProfileVO> globalProfiles) {
         this.globalProfiles = globalProfiles;
     }
 
@@ -522,24 +517,6 @@ public class DeviceInfoVO  implements java.io.Serializable {
     }
 
     /**
-     * get 物模型类型
-     *
-     * @return
-     */
-    public String getThingType() {
-        return thingType;
-    }
-
-    /**
-     * set 物模型类型
-     *
-     * @param thingType
-     */
-    public void setThingType(String thingType) {
-        this.thingType = thingType;
-    }
-
-    /**
      * get 物类型ID
      *
      * @return
@@ -687,7 +664,7 @@ public class DeviceInfoVO  implements java.io.Serializable {
      *
      * @param globalProfiles
      */
-    public DeviceInfoVO globalProfiles(GlobalProfileVO globalProfiles) {
+    public DeviceInfoVO globalProfiles(List<GlobalProfileVO> globalProfiles) {
         this.globalProfiles = globalProfiles;
         return this;
     }
@@ -813,16 +790,6 @@ public class DeviceInfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set 物模型类型
-     *
-     * @param thingType
-     */
-    public DeviceInfoVO thingType(String thingType) {
-        this.thingType = thingType;
-        return this;
-    }
-
-    /**
      * set 物类型ID
      *
      * @param thingTypeCode
@@ -885,6 +852,18 @@ public class DeviceInfoVO  implements java.io.Serializable {
             this.deviceTagList = new ArrayList<>();
         }
         this.deviceTagList.add(deviceTagList);
+    }
+
+    /**
+     * add item to globalProfiles
+     *
+     * @param globalProfile
+     */
+    public void addGlobalProfile(GlobalProfileVO globalProfile) {
+        if (this.globalProfiles == null) {
+            this.globalProfiles = new ArrayList<>();
+        }
+        this.globalProfiles.add(globalProfile);
     }
 
 }

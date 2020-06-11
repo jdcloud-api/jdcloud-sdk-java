@@ -36,7 +36,7 @@ public class FunctionListRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 方法查询请求
+     * 方法查询请求对象
      * Required:true
      */
     @Required
@@ -58,7 +58,7 @@ public class FunctionListRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 方法查询请求
+     * get 方法查询请求对象
      *
      * @return
      */
@@ -67,7 +67,7 @@ public class FunctionListRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 方法查询请求
+     * set 方法查询请求对象
      *
      * @param functionCallPageBo
      */
@@ -113,7 +113,7 @@ public class FunctionListRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 方法查询请求
+     * set 方法查询请求对象
      *
      * @param functionCallPageBo
      */
