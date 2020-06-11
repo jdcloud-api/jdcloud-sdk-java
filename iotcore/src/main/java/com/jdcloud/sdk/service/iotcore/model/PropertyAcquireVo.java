@@ -27,114 +27,116 @@ package com.jdcloud.sdk.service.iotcore.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 设备方法
+ * 设备属性信息
  */
-public class DeviceFunctionVO  implements java.io.Serializable {
+public class PropertyAcquireVo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备标识Id
+     * 属性状态
      * Required:true
      */
     @Required
-    private String deviceId;
+    private Object state;
 
     /**
-     * 输入参数
-     */
-    private Object inParams;
-
-    /**
-     * 服务名称
+     * 元数据
      * Required:true
      */
     @Required
-    private String functionName;
+    private Object metaData;
+
+    /**
+     * 版本号
+     * Required:true
+     */
+    @Required
+    private Integer version;
 
 
     /**
-     * get 设备标识Id
+     * get 属性状态
      *
      * @return
      */
-    public String getDeviceId() {
-        return deviceId;
+    public Object getState() {
+        return state;
     }
 
     /**
-     * set 设备标识Id
+     * set 属性状态
      *
-     * @param deviceId
+     * @param state
      */
-    public void setDeviceId(String deviceId) {
-        this.deviceId = deviceId;
+    public void setState(Object state) {
+        this.state = state;
     }
 
     /**
-     * get 输入参数
-     *
-     * @return
-     */
-    public Object getInParams() {
-        return inParams;
-    }
-
-    /**
-     * set 输入参数
-     *
-     * @param inParams
-     */
-    public void setInParams(Object inParams) {
-        this.inParams = inParams;
-    }
-
-    /**
-     * get 服务名称
+     * get 元数据
      *
      * @return
      */
-    public String getFunctionName() {
-        return functionName;
+    public Object getMetaData() {
+        return metaData;
     }
 
     /**
-     * set 服务名称
+     * set 元数据
      *
-     * @param functionName
+     * @param metaData
      */
-    public void setFunctionName(String functionName) {
-        this.functionName = functionName;
+    public void setMetaData(Object metaData) {
+        this.metaData = metaData;
+    }
+
+    /**
+     * get 版本号
+     *
+     * @return
+     */
+    public Integer getVersion() {
+        return version;
+    }
+
+    /**
+     * set 版本号
+     *
+     * @param version
+     */
+    public void setVersion(Integer version) {
+        this.version = version;
     }
 
 
     /**
-     * set 设备标识Id
+     * set 属性状态
      *
-     * @param deviceId
+     * @param state
      */
-    public DeviceFunctionVO deviceId(String deviceId) {
-        this.deviceId = deviceId;
+    public PropertyAcquireVo state(Object state) {
+        this.state = state;
         return this;
     }
 
     /**
-     * set 输入参数
+     * set 元数据
      *
-     * @param inParams
+     * @param metaData
      */
-    public DeviceFunctionVO inParams(Object inParams) {
-        this.inParams = inParams;
+    public PropertyAcquireVo metaData(Object metaData) {
+        this.metaData = metaData;
         return this;
     }
 
     /**
-     * set 服务名称
+     * set 版本号
      *
-     * @param functionName
+     * @param version
      */
-    public DeviceFunctionVO functionName(String functionName) {
-        this.functionName = functionName;
+    public PropertyAcquireVo version(Integer version) {
+        this.version = version;
         return this;
     }
 

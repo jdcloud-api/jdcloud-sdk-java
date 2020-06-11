@@ -24,50 +24,16 @@
 
 package com.jdcloud.sdk.service.iotcore.model;
 
-import com.jdcloud.sdk.service.iotcore.model.DeviceInfoVO;
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 设备注册接口
+ * 查询属性接口
  */
-public class DeviceRegisterResult extends JdcloudResult implements java.io.Serializable {
+public class PropertyAcquireResponse extends JdcloudResponse<PropertyAcquireResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * deviceInfoVO
-     */
-    private DeviceInfoVO deviceInfoVO;
 
-
-    /**
-     * get deviceInfoVO
-     *
-     * @return
-     */
-    public DeviceInfoVO getDeviceInfoVO() {
-        return deviceInfoVO;
-    }
-
-    /**
-     * set deviceInfoVO
-     *
-     * @param deviceInfoVO
-     */
-    public void setDeviceInfoVO(DeviceInfoVO deviceInfoVO) {
-        this.deviceInfoVO = deviceInfoVO;
-    }
-
-
-    /**
-     * set deviceInfoVO
-     *
-     * @param deviceInfoVO
-     */
-    public DeviceRegisterResult deviceInfoVO(DeviceInfoVO deviceInfoVO) {
-        this.deviceInfoVO = deviceInfoVO;
-        return this;
-    }
 
 
 }

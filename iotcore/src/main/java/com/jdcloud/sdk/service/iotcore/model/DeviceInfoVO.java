@@ -73,7 +73,7 @@ public class DeviceInfoVO  implements java.io.Serializable {
     /**
      * globalProfiles
      */
-    private GlobalProfileVO globalProfiles;
+    private List<GlobalProfileVO> globalProfiles;
 
     /**
      * 最近一次上线时间
@@ -287,7 +287,7 @@ public class DeviceInfoVO  implements java.io.Serializable {
      *
      * @return
      */
-    public GlobalProfileVO getGlobalProfiles() {
+    public List<GlobalProfileVO> getGlobalProfiles() {
         return globalProfiles;
     }
 
@@ -296,7 +296,7 @@ public class DeviceInfoVO  implements java.io.Serializable {
      *
      * @param globalProfiles
      */
-    public void setGlobalProfiles(GlobalProfileVO globalProfiles) {
+    public void setGlobalProfiles(List<GlobalProfileVO> globalProfiles) {
         this.globalProfiles = globalProfiles;
     }
 
@@ -664,7 +664,7 @@ public class DeviceInfoVO  implements java.io.Serializable {
      *
      * @param globalProfiles
      */
-    public DeviceInfoVO globalProfiles(GlobalProfileVO globalProfiles) {
+    public DeviceInfoVO globalProfiles(List<GlobalProfileVO> globalProfiles) {
         this.globalProfiles = globalProfiles;
         return this;
     }
@@ -852,6 +852,18 @@ public class DeviceInfoVO  implements java.io.Serializable {
             this.deviceTagList = new ArrayList<>();
         }
         this.deviceTagList.add(deviceTagList);
+    }
+
+    /**
+     * add item to globalProfiles
+     *
+     * @param globalProfile
+     */
+    public void addGlobalProfile(GlobalProfileVO globalProfile) {
+        if (this.globalProfiles == null) {
+            this.globalProfiles = new ArrayList<>();
+        }
+        this.globalProfiles.add(globalProfile);
     }
 
 }

@@ -24,48 +24,48 @@
 
 package com.jdcloud.sdk.service.iotcore.model;
 
-import com.jdcloud.sdk.service.iotcore.model.DeviceInfoVO;
+import com.jdcloud.sdk.service.iotcore.model.PropertyAcquireVo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 设备注册接口
+ * 查询属性接口
  */
-public class DeviceRegisterResult extends JdcloudResult implements java.io.Serializable {
+public class PropertyAcquireResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * deviceInfoVO
+     * propertyAcquireVo
      */
-    private DeviceInfoVO deviceInfoVO;
+    private PropertyAcquireVo propertyAcquireVo;
 
 
     /**
-     * get deviceInfoVO
+     * get propertyAcquireVo
      *
      * @return
      */
-    public DeviceInfoVO getDeviceInfoVO() {
-        return deviceInfoVO;
+    public PropertyAcquireVo getPropertyAcquireVo() {
+        return propertyAcquireVo;
     }
 
     /**
-     * set deviceInfoVO
+     * set propertyAcquireVo
      *
-     * @param deviceInfoVO
+     * @param propertyAcquireVo
      */
-    public void setDeviceInfoVO(DeviceInfoVO deviceInfoVO) {
-        this.deviceInfoVO = deviceInfoVO;
+    public void setPropertyAcquireVo(PropertyAcquireVo propertyAcquireVo) {
+        this.propertyAcquireVo = propertyAcquireVo;
     }
 
 
     /**
-     * set deviceInfoVO
+     * set propertyAcquireVo
      *
-     * @param deviceInfoVO
+     * @param propertyAcquireVo
      */
-    public DeviceRegisterResult deviceInfoVO(DeviceInfoVO deviceInfoVO) {
-        this.deviceInfoVO = deviceInfoVO;
+    public PropertyAcquireResult propertyAcquireVo(PropertyAcquireVo propertyAcquireVo) {
+        this.propertyAcquireVo = propertyAcquireVo;
         return this;
     }
 

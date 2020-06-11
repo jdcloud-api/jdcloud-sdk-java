@@ -49,6 +49,9 @@ import com.jdcloud.sdk.service.iotcore.client.FunctionListExecutor;
 import com.jdcloud.sdk.service.iotcore.model.EventListRequest;
 import com.jdcloud.sdk.service.iotcore.model.EventListResponse;
 import com.jdcloud.sdk.service.iotcore.client.EventListExecutor;
+import com.jdcloud.sdk.service.iotcore.model.PropertyAcquireRequest;
+import com.jdcloud.sdk.service.iotcore.model.PropertyAcquireResponse;
+import com.jdcloud.sdk.service.iotcore.client.PropertyAcquireExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsRequest;
 import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicsResponse;
 import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicsExecutor;
@@ -91,6 +94,9 @@ import com.jdcloud.sdk.service.iotcore.client.CreateAdminProductExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DeviceQueryRequest;
 import com.jdcloud.sdk.service.iotcore.model.DeviceQueryResponse;
 import com.jdcloud.sdk.service.iotcore.client.DeviceQueryExecutor;
+import com.jdcloud.sdk.service.iotcore.model.GetPropertySnapshotRequest;
+import com.jdcloud.sdk.service.iotcore.model.GetPropertySnapshotResponse;
+import com.jdcloud.sdk.service.iotcore.client.GetPropertySnapshotExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DeviceRegisterRequest;
 import com.jdcloud.sdk.service.iotcore.model.DeviceRegisterResponse;
 import com.jdcloud.sdk.service.iotcore.client.DeviceRegisterExecutor;
@@ -283,6 +289,17 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
+     * 查询属性接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PropertyAcquireResponse propertyAcquire(PropertyAcquireRequest request) throws JdcloudSdkException {
+        return new PropertyAcquireExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看产品自定义Topic列表
      *
      * @param request
@@ -434,6 +451,17 @@ public class IotcoreClient extends JdcloudClient {
      */
     public DeviceQueryResponse deviceQuery(DeviceQueryRequest request) throws JdcloudSdkException {
         return new DeviceQueryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 属性获取接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetPropertySnapshotResponse getPropertySnapshot(GetPropertySnapshotRequest request) throws JdcloudSdkException {
+        return new GetPropertySnapshotExecutor().client(this).execute(request);
     }
 
     /**

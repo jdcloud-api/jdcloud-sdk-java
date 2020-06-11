@@ -25,22 +25,22 @@
 package com.jdcloud.sdk.service.iotcore.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.iotcore.model.FunctionCallPageBo;
+import com.jdcloud.sdk.service.iotcore.model.DeviceSnapshotRequestVO;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询方法调用列表信息
+ * 属性获取接口
  */
-public class FunctionListRequest extends JdcloudRequest implements java.io.Serializable {
+public class GetPropertySnapshotRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 方法查询请求对象
+     * 方法查询请求
      * Required:true
      */
     @Required
-    private FunctionCallPageBo functionCallPageBo;
+    private DeviceSnapshotRequestVO deviceSnapshotRequestVO;
 
     /**
      * 区域id
@@ -58,21 +58,21 @@ public class FunctionListRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 方法查询请求对象
+     * get 方法查询请求
      *
      * @return
      */
-    public FunctionCallPageBo getFunctionCallPageBo() {
-        return functionCallPageBo;
+    public DeviceSnapshotRequestVO getDeviceSnapshotRequestVO() {
+        return deviceSnapshotRequestVO;
     }
 
     /**
-     * set 方法查询请求对象
+     * set 方法查询请求
      *
-     * @param functionCallPageBo
+     * @param deviceSnapshotRequestVO
      */
-    public void setFunctionCallPageBo(FunctionCallPageBo functionCallPageBo) {
-        this.functionCallPageBo = functionCallPageBo;
+    public void setDeviceSnapshotRequestVO(DeviceSnapshotRequestVO deviceSnapshotRequestVO) {
+        this.deviceSnapshotRequestVO = deviceSnapshotRequestVO;
     }
 
     /**
@@ -113,12 +113,12 @@ public class FunctionListRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 方法查询请求对象
+     * set 方法查询请求
      *
-     * @param functionCallPageBo
+     * @param deviceSnapshotRequestVO
      */
-    public FunctionListRequest functionCallPageBo(FunctionCallPageBo functionCallPageBo) {
-        this.functionCallPageBo = functionCallPageBo;
+    public GetPropertySnapshotRequest deviceSnapshotRequestVO(DeviceSnapshotRequestVO deviceSnapshotRequestVO) {
+        this.deviceSnapshotRequestVO = deviceSnapshotRequestVO;
         return this;
     }
 
@@ -127,7 +127,7 @@ public class FunctionListRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param regionId
      */
-    public FunctionListRequest regionId(String regionId) {
+    public GetPropertySnapshotRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -137,7 +137,7 @@ public class FunctionListRequest extends JdcloudRequest implements java.io.Seria
      *
      * @param instanceId
      */
-    public FunctionListRequest instanceId(String instanceId) {
+    public GetPropertySnapshotRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
