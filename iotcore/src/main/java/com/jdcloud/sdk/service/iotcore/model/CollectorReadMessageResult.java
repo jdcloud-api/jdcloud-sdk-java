@@ -79,6 +79,52 @@ public class CollectorReadMessageResult extends JdcloudResult implements java.io
   &quot;40439&quot;:1,
   &quot;40440&quot;:1
 }
+如读取LR001-516-5A边缘数据采集器-水质酸碱度(PH)响应为
+{
+  &quot;40301&quot;: 0,
+  &quot;40302&quot;: 225,
+  &quot;40304&quot;: 28.071838,
+  &quot;40306&quot;: 12.9,
+  &quot;40308&quot;: 0,
+  &quot;40309&quot;: 37376,
+  &quot;40311&quot;: 2000,
+  &quot;40313&quot;: -2000,
+  &quot;40315&quot;: 60,
+  &quot;40317&quot;: 0,
+  &quot;40319&quot;: 0,
+  &quot;40321&quot;: 0,
+  &quot;40323&quot;: 0,
+  &quot;40324&quot;: 1,
+  &quot;40325&quot;: 4,
+  &quot;40326&quot;: 0,
+  &quot;40327&quot;: 256,
+  &quot;40329&quot;: -0.1984,
+  &quot;40331&quot;: 0,
+  &quot;40333&quot;: 1,
+  &quot;40335&quot;: 25,
+  &quot;40337&quot;: 0,
+  &quot;40338&quot;: 0,
+  &quot;40339&quot;: 2622
+}
+如读取LR001-516-5A水质监测采集器-水质电导率响应为
+{
+  &quot;40340&quot;: 0,
+  &quot;40342&quot;: 0,
+  &quot;40344&quot;: 29.816881,
+  &quot;40346&quot;: 0,
+  &quot;40348&quot;: 0,
+  &quot;40350&quot;: 10,
+  &quot;40352&quot;: 0.018,
+  &quot;40354&quot;: 25,
+  &quot;40356&quot;: 0,
+  &quot;40358&quot;: 38400,
+  &quot;40360&quot;: 2,
+  &quot;40362&quot;: 1663480.8,
+  &quot;40364&quot;: 1,
+  &quot;40366&quot;: 0,
+  &quot;40368&quot;: 50,
+  &quot;40370&quot;: 20
+}
 
      */
     private Object readData;
@@ -129,6 +175,52 @@ public class CollectorReadMessageResult extends JdcloudResult implements java.io
   &quot;40438&quot;:1,
   &quot;40439&quot;:1,
   &quot;40440&quot;:1
+}
+如读取LR001-516-5A边缘数据采集器-水质酸碱度(PH)响应为
+{
+  &quot;40301&quot;: 0,
+  &quot;40302&quot;: 225,
+  &quot;40304&quot;: 28.071838,
+  &quot;40306&quot;: 12.9,
+  &quot;40308&quot;: 0,
+  &quot;40309&quot;: 37376,
+  &quot;40311&quot;: 2000,
+  &quot;40313&quot;: -2000,
+  &quot;40315&quot;: 60,
+  &quot;40317&quot;: 0,
+  &quot;40319&quot;: 0,
+  &quot;40321&quot;: 0,
+  &quot;40323&quot;: 0,
+  &quot;40324&quot;: 1,
+  &quot;40325&quot;: 4,
+  &quot;40326&quot;: 0,
+  &quot;40327&quot;: 256,
+  &quot;40329&quot;: -0.1984,
+  &quot;40331&quot;: 0,
+  &quot;40333&quot;: 1,
+  &quot;40335&quot;: 25,
+  &quot;40337&quot;: 0,
+  &quot;40338&quot;: 0,
+  &quot;40339&quot;: 2622
+}
+如读取LR001-516-5A水质监测采集器-水质电导率响应为
+{
+  &quot;40340&quot;: 0,
+  &quot;40342&quot;: 0,
+  &quot;40344&quot;: 29.816881,
+  &quot;40346&quot;: 0,
+  &quot;40348&quot;: 0,
+  &quot;40350&quot;: 10,
+  &quot;40352&quot;: 0.018,
+  &quot;40354&quot;: 25,
+  &quot;40356&quot;: 0,
+  &quot;40358&quot;: 38400,
+  &quot;40360&quot;: 2,
+  &quot;40362&quot;: 1663480.8,
+  &quot;40364&quot;: 1,
+  &quot;40366&quot;: 0,
+  &quot;40368&quot;: 50,
+  &quot;40370&quot;: 20
 }
 
      *
@@ -184,6 +276,52 @@ public class CollectorReadMessageResult extends JdcloudResult implements java.io
   &quot;40439&quot;:1,
   &quot;40440&quot;:1
 }
+如读取LR001-516-5A边缘数据采集器-水质酸碱度(PH)响应为
+{
+  &quot;40301&quot;: 0,
+  &quot;40302&quot;: 225,
+  &quot;40304&quot;: 28.071838,
+  &quot;40306&quot;: 12.9,
+  &quot;40308&quot;: 0,
+  &quot;40309&quot;: 37376,
+  &quot;40311&quot;: 2000,
+  &quot;40313&quot;: -2000,
+  &quot;40315&quot;: 60,
+  &quot;40317&quot;: 0,
+  &quot;40319&quot;: 0,
+  &quot;40321&quot;: 0,
+  &quot;40323&quot;: 0,
+  &quot;40324&quot;: 1,
+  &quot;40325&quot;: 4,
+  &quot;40326&quot;: 0,
+  &quot;40327&quot;: 256,
+  &quot;40329&quot;: -0.1984,
+  &quot;40331&quot;: 0,
+  &quot;40333&quot;: 1,
+  &quot;40335&quot;: 25,
+  &quot;40337&quot;: 0,
+  &quot;40338&quot;: 0,
+  &quot;40339&quot;: 2622
+}
+如读取LR001-516-5A水质监测采集器-水质电导率响应为
+{
+  &quot;40340&quot;: 0,
+  &quot;40342&quot;: 0,
+  &quot;40344&quot;: 29.816881,
+  &quot;40346&quot;: 0,
+  &quot;40348&quot;: 0,
+  &quot;40350&quot;: 10,
+  &quot;40352&quot;: 0.018,
+  &quot;40354&quot;: 25,
+  &quot;40356&quot;: 0,
+  &quot;40358&quot;: 38400,
+  &quot;40360&quot;: 2,
+  &quot;40362&quot;: 1663480.8,
+  &quot;40364&quot;: 1,
+  &quot;40366&quot;: 0,
+  &quot;40368&quot;: 50,
+  &quot;40370&quot;: 20
+}
 
      *
      * @param readData
@@ -238,6 +376,52 @@ public class CollectorReadMessageResult extends JdcloudResult implements java.io
   &quot;40438&quot;:1,
   &quot;40439&quot;:1,
   &quot;40440&quot;:1
+}
+如读取LR001-516-5A边缘数据采集器-水质酸碱度(PH)响应为
+{
+  &quot;40301&quot;: 0,
+  &quot;40302&quot;: 225,
+  &quot;40304&quot;: 28.071838,
+  &quot;40306&quot;: 12.9,
+  &quot;40308&quot;: 0,
+  &quot;40309&quot;: 37376,
+  &quot;40311&quot;: 2000,
+  &quot;40313&quot;: -2000,
+  &quot;40315&quot;: 60,
+  &quot;40317&quot;: 0,
+  &quot;40319&quot;: 0,
+  &quot;40321&quot;: 0,
+  &quot;40323&quot;: 0,
+  &quot;40324&quot;: 1,
+  &quot;40325&quot;: 4,
+  &quot;40326&quot;: 0,
+  &quot;40327&quot;: 256,
+  &quot;40329&quot;: -0.1984,
+  &quot;40331&quot;: 0,
+  &quot;40333&quot;: 1,
+  &quot;40335&quot;: 25,
+  &quot;40337&quot;: 0,
+  &quot;40338&quot;: 0,
+  &quot;40339&quot;: 2622
+}
+如读取LR001-516-5A水质监测采集器-水质电导率响应为
+{
+  &quot;40340&quot;: 0,
+  &quot;40342&quot;: 0,
+  &quot;40344&quot;: 29.816881,
+  &quot;40346&quot;: 0,
+  &quot;40348&quot;: 0,
+  &quot;40350&quot;: 10,
+  &quot;40352&quot;: 0.018,
+  &quot;40354&quot;: 25,
+  &quot;40356&quot;: 0,
+  &quot;40358&quot;: 38400,
+  &quot;40360&quot;: 2,
+  &quot;40362&quot;: 1663480.8,
+  &quot;40364&quot;: 1,
+  &quot;40366&quot;: 0,
+  &quot;40368&quot;: 50,
+  &quot;40370&quot;: 20
 }
 
      *

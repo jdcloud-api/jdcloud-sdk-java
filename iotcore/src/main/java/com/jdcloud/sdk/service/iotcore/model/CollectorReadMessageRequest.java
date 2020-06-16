@@ -48,6 +48,8 @@ public class CollectorReadMessageRequest extends JdcloudRequest implements java.
 LR001-516-5B边缘数据采集器-传感器管理：sensor
 LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
 LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
+LR001-516-5A边缘数据采集器-水质酸碱度(PH)：waterQualityPh
+LR001-516-5A水质监测采集器-水质电导率：waterQualityElectroConductivity
 
      * Required:true
      */
@@ -94,6 +96,8 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
 LR001-516-5B边缘数据采集器-传感器管理：sensor
 LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
 LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
+LR001-516-5A边缘数据采集器-水质酸碱度(PH)：waterQualityPh
+LR001-516-5A水质监测采集器-水质电导率：waterQualityElectroConductivity
 
      *
      * @return
@@ -109,6 +113,8 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
 LR001-516-5B边缘数据采集器-传感器管理：sensor
 LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
 LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
+LR001-516-5A边缘数据采集器-水质酸碱度(PH)：waterQualityPh
+LR001-516-5A水质监测采集器-水质电导率：waterQualityElectroConductivity
 
      *
      * @param protocol
@@ -171,6 +177,8 @@ LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
 LR001-516-5B边缘数据采集器-传感器管理：sensor
 LR001-516-5B边缘数据采集器-采集器属性：collectorProperty
 LR001-516-5B边缘数据采集器-电梯属性：elevatorProperty
+LR001-516-5A边缘数据采集器-水质酸碱度(PH)：waterQualityPh
+LR001-516-5A水质监测采集器-水质电导率：waterQualityElectroConductivity
 
      *
      * @param protocol
