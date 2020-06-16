@@ -160,6 +160,9 @@ import com.jdcloud.sdk.service.iotcore.client.DescribeProductExecutor;
 import com.jdcloud.sdk.service.iotcore.model.UpdateDeviceRequest;
 import com.jdcloud.sdk.service.iotcore.model.UpdateDeviceResponse;
 import com.jdcloud.sdk.service.iotcore.client.UpdateDeviceExecutor;
+import com.jdcloud.sdk.service.iotcore.model.QueryAdminStatisticsRequest;
+import com.jdcloud.sdk.service.iotcore.model.QueryAdminStatisticsResponse;
+import com.jdcloud.sdk.service.iotcore.client.QueryAdminStatisticsExecutor;
 import com.jdcloud.sdk.service.iotcore.model.AddLooDeviceRequest;
 import com.jdcloud.sdk.service.iotcore.model.AddLooDeviceResponse;
 import com.jdcloud.sdk.service.iotcore.client.AddLooDeviceExecutor;
@@ -693,6 +696,17 @@ public class IotcoreClient extends JdcloudClient {
      */
     public UpdateDeviceResponse updateDevice(UpdateDeviceRequest request) throws JdcloudSdkException {
         return new UpdateDeviceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设备基本数据统计，包括设备数，激活数，在线数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryAdminStatisticsResponse queryAdminStatistics(QueryAdminStatisticsRequest request) throws JdcloudSdkException {
+        return new QueryAdminStatisticsExecutor().client(this).execute(request);
     }
 
     /**
