@@ -36,6 +36,13 @@ public class CreateApi  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 分组ID
+     * Required:true
+     */
+    @Required
+    private String apiGroupId;
+
+    /**
      * 名称
      * Required:true
      */
@@ -55,6 +62,13 @@ public class CreateApi  implements java.io.Serializable {
      */
     @Required
     private String path;
+
+    /**
+     * 匹配模式：&quot;absolute&quot;(绝对匹配); &quot;prefix&quot;（前缀匹配）;
+     * Required:true
+     */
+    @Required
+    private String matchType;
 
     /**
      * 描述
@@ -145,6 +159,34 @@ public class CreateApi  implements java.io.Serializable {
      */
     private String editableResBodyType;
 
+    /**
+     * 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+     */
+    private Integer reqBodyFormatType;
+
+    /**
+     * 返回提格式类型，1代表jsonschema，2代表swagger，默认为1
+     */
+    private Integer resBodyFormatType;
+
+
+    /**
+     * get 分组ID
+     *
+     * @return
+     */
+    public String getApiGroupId() {
+        return apiGroupId;
+    }
+
+    /**
+     * set 分组ID
+     *
+     * @param apiGroupId
+     */
+    public void setApiGroupId(String apiGroupId) {
+        this.apiGroupId = apiGroupId;
+    }
 
     /**
      * get 名称
@@ -198,6 +240,24 @@ public class CreateApi  implements java.io.Serializable {
      */
     public void setPath(String path) {
         this.path = path;
+    }
+
+    /**
+     * get 匹配模式：&quot;absolute&quot;(绝对匹配); &quot;prefix&quot;（前缀匹配）;
+     *
+     * @return
+     */
+    public String getMatchType() {
+        return matchType;
+    }
+
+    /**
+     * set 匹配模式：&quot;absolute&quot;(绝对匹配); &quot;prefix&quot;（前缀匹配）;
+     *
+     * @param matchType
+     */
+    public void setMatchType(String matchType) {
+        this.matchType = matchType;
     }
 
     /**
@@ -506,6 +566,52 @@ public class CreateApi  implements java.io.Serializable {
         this.editableResBodyType = editableResBodyType;
     }
 
+    /**
+     * get 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @return
+     */
+    public Integer getReqBodyFormatType() {
+        return reqBodyFormatType;
+    }
+
+    /**
+     * set 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @param reqBodyFormatType
+     */
+    public void setReqBodyFormatType(Integer reqBodyFormatType) {
+        this.reqBodyFormatType = reqBodyFormatType;
+    }
+
+    /**
+     * get 返回提格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @return
+     */
+    public Integer getResBodyFormatType() {
+        return resBodyFormatType;
+    }
+
+    /**
+     * set 返回提格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @param resBodyFormatType
+     */
+    public void setResBodyFormatType(Integer resBodyFormatType) {
+        this.resBodyFormatType = resBodyFormatType;
+    }
+
+
+    /**
+     * set 分组ID
+     *
+     * @param apiGroupId
+     */
+    public CreateApi apiGroupId(String apiGroupId) {
+        this.apiGroupId = apiGroupId;
+        return this;
+    }
 
     /**
      * set 名称
@@ -534,6 +640,16 @@ public class CreateApi  implements java.io.Serializable {
      */
     public CreateApi path(String path) {
         this.path = path;
+        return this;
+    }
+
+    /**
+     * set 匹配模式：&quot;absolute&quot;(绝对匹配); &quot;prefix&quot;（前缀匹配）;
+     *
+     * @param matchType
+     */
+    public CreateApi matchType(String matchType) {
+        this.matchType = matchType;
         return this;
     }
 
@@ -704,6 +820,26 @@ public class CreateApi  implements java.io.Serializable {
      */
     public CreateApi editableResBodyType(String editableResBodyType) {
         this.editableResBodyType = editableResBodyType;
+        return this;
+    }
+
+    /**
+     * set 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @param reqBodyFormatType
+     */
+    public CreateApi reqBodyFormatType(Integer reqBodyFormatType) {
+        this.reqBodyFormatType = reqBodyFormatType;
+        return this;
+    }
+
+    /**
+     * set 返回提格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @param resBodyFormatType
+     */
+    public CreateApi resBodyFormatType(Integer resBodyFormatType) {
+        this.resBodyFormatType = resBodyFormatType;
         return this;
     }
 

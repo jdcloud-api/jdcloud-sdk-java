@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * hufu-clps
- * 对接clps相关接口
+ * hufu-jnacl
+ * 加密相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,16 +24,49 @@
 
 package com.jdcloud.sdk.service.hufu.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 下游更新路由信息
+ * 加密
  */
-public class ModifyRouterByLowerResponse extends JdcloudResponse<ModifyRouterByLowerResult> implements java.io.Serializable {
+public class IsEncryptDataRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 密文
+     */
+    private String cipher;
 
+
+    /**
+     * get 密文
+     *
+     * @return
+     */
+    public String getCipher() {
+        return cipher;
+    }
+
+    /**
+     * set 密文
+     *
+     * @param cipher
+     */
+    public void setCipher(String cipher) {
+        this.cipher = cipher;
+    }
+
+
+    /**
+     * set 密文
+     *
+     * @param cipher
+     */
+    public IsEncryptDataRequest cipher(String cipher) {
+        this.cipher = cipher;
+        return this;
+    }
 
 
 }

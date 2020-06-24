@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * hufu-clps
- * 对接clps相关接口
+ * hufu-log
+ * 日志相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.hufu.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.hufu.model.ModifyRouterByLowerResponse;
+import com.jdcloud.sdk.service.hufu.model.QueryAccessLogResponse;
 
 /**
- * 下游更新路由信息
+ * 查询access日志
  */
-class ModifyRouterByLowerExecutor extends JdcloudExecutor {
+class QueryAccessLogExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "POST";
+        return "GET";
     }
 
     @Override
     public String url() {
-        return "/accesses/{accessId}:update";
+        return "/access";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return ModifyRouterByLowerResponse.class;
+        return QueryAccessLogResponse.class;
     }
 }

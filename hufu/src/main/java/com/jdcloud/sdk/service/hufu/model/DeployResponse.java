@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * hufu-api
- * 场景相关接口
+ * hufu-deploy
+ * 部署相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.hufu.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询api列表
+ * 发布版本
  */
-public class QueryApisResponse extends JdcloudResponse<QueryApisResult> implements java.io.Serializable {
+public class DeployResponse extends JdcloudResponse<DeployResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

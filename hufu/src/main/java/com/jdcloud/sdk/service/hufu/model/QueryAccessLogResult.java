@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * hufu-api
- * 场景相关接口
+ * hufu-log
+ * 日志相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,95 +26,95 @@ package com.jdcloud.sdk.service.hufu.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.hufu.model.Api;
+import com.jdcloud.sdk.service.hufu.model.AccessLog;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询api列表
+ * 查询access日志
  */
-public class QueryApisResult extends JdcloudResult implements java.io.Serializable {
+public class QueryAccessLogResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * apis
+     * data
      */
-    private List<Api> apis;
+    private List<AccessLog> data;
 
     /**
-     * 查询的数目
+     * total
      */
-    private Integer totalCount;
+    private Long total;
 
 
     /**
-     * get apis
+     * get data
      *
      * @return
      */
-    public List<Api> getApis() {
-        return apis;
+    public List<AccessLog> getData() {
+        return data;
     }
 
     /**
-     * set apis
+     * set data
      *
-     * @param apis
+     * @param data
      */
-    public void setApis(List<Api> apis) {
-        this.apis = apis;
+    public void setData(List<AccessLog> data) {
+        this.data = data;
     }
 
     /**
-     * get 查询的数目
+     * get total
      *
      * @return
      */
-    public Integer getTotalCount() {
-        return totalCount;
+    public Long getTotal() {
+        return total;
     }
 
     /**
-     * set 查询的数目
+     * set total
      *
-     * @param totalCount
+     * @param total
      */
-    public void setTotalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public void setTotal(Long total) {
+        this.total = total;
     }
 
 
     /**
-     * set apis
+     * set data
      *
-     * @param apis
+     * @param data
      */
-    public QueryApisResult apis(List<Api> apis) {
-        this.apis = apis;
+    public QueryAccessLogResult data(List<AccessLog> data) {
+        this.data = data;
         return this;
     }
 
     /**
-     * set 查询的数目
+     * set total
      *
-     * @param totalCount
+     * @param total
      */
-    public QueryApisResult totalCount(Integer totalCount) {
-        this.totalCount = totalCount;
+    public QueryAccessLogResult total(Long total) {
+        this.total = total;
         return this;
     }
 
 
     /**
-     * add item to apis
+     * add item to data
      *
-     * @param api
+     * @param data
      */
-    public void addApi(Api api) {
-        if (this.apis == null) {
-            this.apis = new ArrayList<>();
+    public void addData(AccessLog data) {
+        if (this.data == null) {
+            this.data = new ArrayList<>();
         }
-        this.apis.add(api);
+        this.data.add(data);
     }
 
 }
