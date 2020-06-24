@@ -73,6 +73,11 @@ public class TrafficSamplingData  implements java.io.Serializable {
     private Integer timestamp;
 
     /**
+     * 唯一ID标识
+     */
+    private String uniqueId;
+
+    /**
      * 运营商类型 移动:CM 联通:CU 电信:CT
      */
     private String operatorType;
@@ -223,6 +228,24 @@ public class TrafficSamplingData  implements java.io.Serializable {
     }
 
     /**
+     * get 唯一ID标识
+     *
+     * @return
+     */
+    public String getUniqueId() {
+        return uniqueId;
+    }
+
+    /**
+     * set 唯一ID标识
+     *
+     * @param uniqueId
+     */
+    public void setUniqueId(String uniqueId) {
+        this.uniqueId = uniqueId;
+    }
+
+    /**
      * get 运营商类型 移动:CM 联通:CU 电信:CT
      *
      * @return
@@ -318,6 +341,16 @@ public class TrafficSamplingData  implements java.io.Serializable {
      */
     public TrafficSamplingData timestamp(Integer timestamp) {
         this.timestamp = timestamp;
+        return this;
+    }
+
+    /**
+     * set 唯一ID标识
+     *
+     * @param uniqueId
+     */
+    public TrafficSamplingData uniqueId(String uniqueId) {
+        this.uniqueId = uniqueId;
         return this;
     }
 

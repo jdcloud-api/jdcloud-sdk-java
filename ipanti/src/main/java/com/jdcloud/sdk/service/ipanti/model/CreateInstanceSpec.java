@@ -64,16 +64,12 @@ public class CreateInstanceSpec  implements java.io.Serializable {
 
     /**
      * IP 数量
-     * Required:true
      */
-    @Required
     private Integer ipCount;
 
     /**
      * 可配的转发端口数量
-     * Required:true
      */
-    @Required
     private Integer portCount;
 
     /**
@@ -103,9 +99,9 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     private Integer bw;
 
     /**
-     * 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
+     * 购买时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      */
-    private Long timeSpan;
+    private Integer timeSpan;
 
     /**
      * 购买时长类型, 新购高防实例时必传&lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
@@ -317,20 +313,20 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
+     * get 购买时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @return
      */
-    public Long getTimeSpan() {
+    public Integer getTimeSpan() {
         return timeSpan;
     }
 
     /**
-     * set 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
+     * set 购买时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @param timeSpan
      */
-    public void setTimeSpan(Long timeSpan) {
+    public void setTimeSpan(Integer timeSpan) {
         this.timeSpan = timeSpan;
     }
 
@@ -482,11 +478,11 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买防护包时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
+     * set 购买时长, 新购高防实例时必传&lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @param timeSpan
      */
-    public CreateInstanceSpec timeSpan(Long timeSpan) {
+    public CreateInstanceSpec timeSpan(Integer timeSpan) {
         this.timeSpan = timeSpan;
         return this;
     }

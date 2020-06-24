@@ -87,6 +87,16 @@ public class CCProtectionRule  implements java.io.Serializable {
      */
     private Long blockTime;
 
+    /**
+     * 关联的自定义页面id
+     */
+    private String pageId;
+
+    /**
+     * 关联的自定义页面名称
+     */
+    private String pageName;
+
 
     /**
      * get CC 防护规则 ID
@@ -286,6 +296,42 @@ public class CCProtectionRule  implements java.io.Serializable {
         this.blockTime = blockTime;
     }
 
+    /**
+     * get 关联的自定义页面id
+     *
+     * @return
+     */
+    public String getPageId() {
+        return pageId;
+    }
+
+    /**
+     * set 关联的自定义页面id
+     *
+     * @param pageId
+     */
+    public void setPageId(String pageId) {
+        this.pageId = pageId;
+    }
+
+    /**
+     * get 关联的自定义页面名称
+     *
+     * @return
+     */
+    public String getPageName() {
+        return pageName;
+    }
+
+    /**
+     * set 关联的自定义页面名称
+     *
+     * @param pageName
+     */
+    public void setPageName(String pageName) {
+        this.pageName = pageName;
+    }
+
 
     /**
      * set CC 防护规则 ID
@@ -394,6 +440,26 @@ public class CCProtectionRule  implements java.io.Serializable {
      */
     public CCProtectionRule blockTime(Long blockTime) {
         this.blockTime = blockTime;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面id
+     *
+     * @param pageId
+     */
+    public CCProtectionRule pageId(String pageId) {
+        this.pageId = pageId;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面名称
+     *
+     * @param pageName
+     */
+    public CCProtectionRule pageName(String pageName) {
+        this.pageName = pageName;
         return this;
     }
 

@@ -35,12 +35,12 @@ public class InstanceAcl  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 四层黑名单引用的IP黑白名单库列表
+     * 黑名单引用的IP黑白名单库列表
      */
     private List<IpSet> blackListIds;
 
     /**
-     * 四层白名单引用的IP黑白名单库列表
+     * 白名单引用的IP黑白名单库列表
      */
     private List<IpSet> whiteListIds;
 
@@ -61,7 +61,7 @@ public class InstanceAcl  implements java.io.Serializable {
 
 
     /**
-     * get 四层黑名单引用的IP黑白名单库列表
+     * get 黑名单引用的IP黑白名单库列表
      *
      * @return
      */
@@ -70,7 +70,7 @@ public class InstanceAcl  implements java.io.Serializable {
     }
 
     /**
-     * set 四层黑名单引用的IP黑白名单库列表
+     * set 黑名单引用的IP黑白名单库列表
      *
      * @param blackListIds
      */
@@ -79,7 +79,7 @@ public class InstanceAcl  implements java.io.Serializable {
     }
 
     /**
-     * get 四层白名单引用的IP黑白名单库列表
+     * get 白名单引用的IP黑白名单库列表
      *
      * @return
      */
@@ -88,7 +88,7 @@ public class InstanceAcl  implements java.io.Serializable {
     }
 
     /**
-     * set 四层白名单引用的IP黑白名单库列表
+     * set 白名单引用的IP黑白名单库列表
      *
      * @param whiteListIds
      */
@@ -152,7 +152,7 @@ public class InstanceAcl  implements java.io.Serializable {
 
 
     /**
-     * set 四层黑名单引用的IP黑白名单库列表
+     * set 黑名单引用的IP黑白名单库列表
      *
      * @param blackListIds
      */
@@ -162,7 +162,7 @@ public class InstanceAcl  implements java.io.Serializable {
     }
 
     /**
-     * set 四层白名单引用的IP黑白名单库列表
+     * set 白名单引用的IP黑白名单库列表
      *
      * @param whiteListIds
      */
@@ -203,7 +203,7 @@ public class InstanceAcl  implements java.io.Serializable {
 
 
     /**
-     * add item to 四层黑名单引用的IP黑白名单库列表
+     * add item to 黑名单引用的IP黑白名单库列表
      *
      * @param blackListId
      */
@@ -215,7 +215,7 @@ public class InstanceAcl  implements java.io.Serializable {
     }
 
     /**
-     * add item to 四层白名单引用的IP黑白名单库列表
+     * add item to 白名单引用的IP黑白名单库列表
      *
      * @param whiteListId
      */

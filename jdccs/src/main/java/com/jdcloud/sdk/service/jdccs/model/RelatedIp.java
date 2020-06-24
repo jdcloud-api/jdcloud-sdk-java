@@ -38,7 +38,7 @@ public class RelatedIp  implements java.io.Serializable {
     private String cidrAddr;
 
     /**
-     * 线路类型 bgp:BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     * 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      */
     private String lineType;
 
@@ -62,7 +62,7 @@ public class RelatedIp  implements java.io.Serializable {
     }
 
     /**
-     * get 线路类型 bgp:BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class RelatedIp  implements java.io.Serializable {
     }
 
     /**
-     * set 线路类型 bgp:BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
      * @param lineType
      */
@@ -91,7 +91,7 @@ public class RelatedIp  implements java.io.Serializable {
     }
 
     /**
-     * set 线路类型 bgp:BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      *
      * @param lineType
      */

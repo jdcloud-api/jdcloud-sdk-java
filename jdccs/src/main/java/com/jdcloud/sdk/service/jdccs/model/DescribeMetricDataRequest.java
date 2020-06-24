@@ -56,7 +56,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private Integer endTime;
 
     /**
-     * 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，会根据时间范围是否超过2小时，设定时间间隔为1m或5m
+     * 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。1m时间间隔支持的最大时间范围为2小时
      */
     private String timeInterval;
 
@@ -140,7 +140,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，会根据时间范围是否超过2小时，设定时间间隔为1m或5m
+     * get 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。1m时间间隔支持的最大时间范围为2小时
      *
      * @return
      */
@@ -149,7 +149,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，会根据时间范围是否超过2小时，设定时间间隔为1m或5m
+     * set 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。1m时间间隔支持的最大时间范围为2小时
      *
      * @param timeInterval
      */
@@ -261,7 +261,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，会根据时间范围是否超过2小时，设定时间间隔为1m或5m
+     * set 时间间隔：分钟m、小时h、天d，如： 10分钟&#x3D;10m、1小时&#x3D;1h，3天&#x3D;3d；默认5m，最小支持5m，最大90d 目前带宽上、下行流量查询，时间间隔：1m、5m，默认5m。1m时间间隔支持的最大时间范围为2小时
      *
      * @param timeInterval
      */

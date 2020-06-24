@@ -53,6 +53,16 @@ public class Ip  implements java.io.Serializable {
     private String cidrAddr;
 
     /**
+     * IP数量
+     */
+    private String ipQuantity;
+
+    /**
+     * IP类型 IPV4/IPV6
+     */
+    private String ipType;
+
+    /**
      * 网络位地址
      */
     private String networkAddr;
@@ -66,6 +76,11 @@ public class Ip  implements java.io.Serializable {
      * 广播地址
      */
     private String broadcastAddr;
+
+    /**
+     * 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     */
+    private String lineType;
 
     /**
      * 状态 normal:正常 abnormal:异常
@@ -146,6 +161,42 @@ public class Ip  implements java.io.Serializable {
     }
 
     /**
+     * get IP数量
+     *
+     * @return
+     */
+    public String getIpQuantity() {
+        return ipQuantity;
+    }
+
+    /**
+     * set IP数量
+     *
+     * @param ipQuantity
+     */
+    public void setIpQuantity(String ipQuantity) {
+        this.ipQuantity = ipQuantity;
+    }
+
+    /**
+     * get IP类型 IPV4/IPV6
+     *
+     * @return
+     */
+    public String getIpType() {
+        return ipType;
+    }
+
+    /**
+     * set IP类型 IPV4/IPV6
+     *
+     * @param ipType
+     */
+    public void setIpType(String ipType) {
+        this.ipType = ipType;
+    }
+
+    /**
      * get 网络位地址
      *
      * @return
@@ -197,6 +248,24 @@ public class Ip  implements java.io.Serializable {
      */
     public void setBroadcastAddr(String broadcastAddr) {
         this.broadcastAddr = broadcastAddr;
+    }
+
+    /**
+     * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     *
+     * @return
+     */
+    public String getLineType() {
+        return lineType;
+    }
+
+    /**
+     * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     *
+     * @param lineType
+     */
+    public void setLineType(String lineType) {
+        this.lineType = lineType;
     }
 
     /**
@@ -259,6 +328,26 @@ public class Ip  implements java.io.Serializable {
     }
 
     /**
+     * set IP数量
+     *
+     * @param ipQuantity
+     */
+    public Ip ipQuantity(String ipQuantity) {
+        this.ipQuantity = ipQuantity;
+        return this;
+    }
+
+    /**
+     * set IP类型 IPV4/IPV6
+     *
+     * @param ipType
+     */
+    public Ip ipType(String ipType) {
+        this.ipType = ipType;
+        return this;
+    }
+
+    /**
      * set 网络位地址
      *
      * @param networkAddr
@@ -285,6 +374,16 @@ public class Ip  implements java.io.Serializable {
      */
     public Ip broadcastAddr(String broadcastAddr) {
         this.broadcastAddr = broadcastAddr;
+        return this;
+    }
+
+    /**
+     * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     *
+     * @param lineType
+     */
+    public Ip lineType(String lineType) {
+        this.lineType = lineType;
         return this;
     }
 

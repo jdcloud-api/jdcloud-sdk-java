@@ -74,6 +74,21 @@ public class AlarmConfigSpec  implements java.io.Serializable {
      */
     private List<String> errorCodeDomain;
 
+    /**
+     * 错误码列表
+     */
+    private List<Integer> errorCode;
+
+    /**
+     * 错误码触发告警比例
+     */
+    private Integer errorCodePercent;
+
+    /**
+     * 错误码触发告警次数
+     */
+    private Integer errorCodeCount;
+
 
     /**
      * get 黑洞告警邮件开关 0 关闭 1 开启
@@ -219,6 +234,60 @@ public class AlarmConfigSpec  implements java.io.Serializable {
         this.errorCodeDomain = errorCodeDomain;
     }
 
+    /**
+     * get 错误码列表
+     *
+     * @return
+     */
+    public List<Integer> getErrorCode() {
+        return errorCode;
+    }
+
+    /**
+     * set 错误码列表
+     *
+     * @param errorCode
+     */
+    public void setErrorCode(List<Integer> errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    /**
+     * get 错误码触发告警比例
+     *
+     * @return
+     */
+    public Integer getErrorCodePercent() {
+        return errorCodePercent;
+    }
+
+    /**
+     * set 错误码触发告警比例
+     *
+     * @param errorCodePercent
+     */
+    public void setErrorCodePercent(Integer errorCodePercent) {
+        this.errorCodePercent = errorCodePercent;
+    }
+
+    /**
+     * get 错误码触发告警次数
+     *
+     * @return
+     */
+    public Integer getErrorCodeCount() {
+        return errorCodeCount;
+    }
+
+    /**
+     * set 错误码触发告警次数
+     *
+     * @param errorCodeCount
+     */
+    public void setErrorCodeCount(Integer errorCodeCount) {
+        this.errorCodeCount = errorCodeCount;
+    }
+
 
     /**
      * set 黑洞告警邮件开关 0 关闭 1 开启
@@ -300,6 +369,36 @@ public class AlarmConfigSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 错误码列表
+     *
+     * @param errorCode
+     */
+    public AlarmConfigSpec errorCode(List<Integer> errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+
+    /**
+     * set 错误码触发告警比例
+     *
+     * @param errorCodePercent
+     */
+    public AlarmConfigSpec errorCodePercent(Integer errorCodePercent) {
+        this.errorCodePercent = errorCodePercent;
+        return this;
+    }
+
+    /**
+     * set 错误码触发告警次数
+     *
+     * @param errorCodeCount
+     */
+    public AlarmConfigSpec errorCodeCount(Integer errorCodeCount) {
+        this.errorCodeCount = errorCodeCount;
+        return this;
+    }
+
 
     /**
      * add item to 错误码告警域名列表
@@ -311,6 +410,18 @@ public class AlarmConfigSpec  implements java.io.Serializable {
             this.errorCodeDomain = new ArrayList<>();
         }
         this.errorCodeDomain.add(errorCodeDomain);
+    }
+
+    /**
+     * add item to 错误码列表
+     *
+     * @param errorCode
+     */
+    public void addErrorCode(Integer errorCode) {
+        if (this.errorCode == null) {
+            this.errorCode = new ArrayList<>();
+        }
+        this.errorCode.add(errorCode);
     }
 
 }

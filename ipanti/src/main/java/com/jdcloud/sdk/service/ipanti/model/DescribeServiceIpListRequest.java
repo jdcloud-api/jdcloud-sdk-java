@@ -25,28 +25,24 @@
 package com.jdcloud.sdk.service.ipanti.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.ipanti.model.CreateInstanceSpec;
-import com.jdcloud.sdk.service.ipanti.model.AutoRenewalSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 新购或升级高防实例
+ * 查询实例高防 IP 列表
  */
-public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeServiceIpListRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 新购或升级实例请求参数
-     * Required:true
+     * 页码, 默认为 1
      */
-    @Required
-    private CreateInstanceSpec createInstanceSpec;
+    private Integer pageNumber;
 
     /**
-     * 自动续费配置, 默认不开通, 仅新购实例时可设置
+     * 分页大小, 默认为 10, 取值范围[10, 100]
      */
-    private AutoRenewalSpec autoRenewalSpec;
+    private Integer pageSize;
 
     /**
      * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
@@ -55,41 +51,48 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     @Required
     private String regionId;
 
+    /**
+     * 实例 ID
+     * Required:true
+     */
+    @Required
+    private String instanceId;
+
 
     /**
-     * get 新购或升级实例请求参数
+     * get 页码, 默认为 1
      *
      * @return
      */
-    public CreateInstanceSpec getCreateInstanceSpec() {
-        return createInstanceSpec;
+    public Integer getPageNumber() {
+        return pageNumber;
     }
 
     /**
-     * set 新购或升级实例请求参数
+     * set 页码, 默认为 1
      *
-     * @param createInstanceSpec
+     * @param pageNumber
      */
-    public void setCreateInstanceSpec(CreateInstanceSpec createInstanceSpec) {
-        this.createInstanceSpec = createInstanceSpec;
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
     }
 
     /**
-     * get 自动续费配置, 默认不开通, 仅新购实例时可设置
+     * get 分页大小, 默认为 10, 取值范围[10, 100]
      *
      * @return
      */
-    public AutoRenewalSpec getAutoRenewalSpec() {
-        return autoRenewalSpec;
+    public Integer getPageSize() {
+        return pageSize;
     }
 
     /**
-     * set 自动续费配置, 默认不开通, 仅新购实例时可设置
+     * set 分页大小, 默认为 10, 取值范围[10, 100]
      *
-     * @param autoRenewalSpec
+     * @param pageSize
      */
-    public void setAutoRenewalSpec(AutoRenewalSpec autoRenewalSpec) {
-        this.autoRenewalSpec = autoRenewalSpec;
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
     /**
@@ -110,24 +113,42 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
     }
 
+    /**
+     * get 实例 ID
+     *
+     * @return
+     */
+    public String getInstanceId() {
+        return instanceId;
+    }
 
     /**
-     * set 新购或升级实例请求参数
+     * set 实例 ID
      *
-     * @param createInstanceSpec
+     * @param instanceId
      */
-    public CreateInstanceRequest createInstanceSpec(CreateInstanceSpec createInstanceSpec) {
-        this.createInstanceSpec = createInstanceSpec;
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+    }
+
+
+    /**
+     * set 页码, 默认为 1
+     *
+     * @param pageNumber
+     */
+    public DescribeServiceIpListRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
         return this;
     }
 
     /**
-     * set 自动续费配置, 默认不开通, 仅新购实例时可设置
+     * set 分页大小, 默认为 10, 取值范围[10, 100]
      *
-     * @param autoRenewalSpec
+     * @param pageSize
      */
-    public CreateInstanceRequest autoRenewalSpec(AutoRenewalSpec autoRenewalSpec) {
-        this.autoRenewalSpec = autoRenewalSpec;
+    public DescribeServiceIpListRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
 
@@ -136,8 +157,18 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param regionId
      */
-    public CreateInstanceRequest regionId(String regionId) {
+    public DescribeServiceIpListRequest regionId(String regionId) {
         this.regionId = regionId;
+        return this;
+    }
+
+    /**
+     * set 实例 ID
+     *
+     * @param instanceId
+     */
+    public DescribeServiceIpListRequest instanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
 

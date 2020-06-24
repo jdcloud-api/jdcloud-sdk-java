@@ -45,7 +45,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     private Integer pageSize;
 
     /**
-     * 查询类型名称, domain:源站域名, ip:源站 IP, port: 转发端口, originPort: 源站端口
+     * 查询类型名称, domain:源站域名, ip:源站 IP, port: 转发端口, originPort: 源站端口, serviceIp: 高防IP(仅支持BGP线路的实例)
      */
     private String searchType;
 
@@ -106,7 +106,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 查询类型名称, domain:源站域名, ip:源站 IP, port: 转发端口, originPort: 源站端口
+     * get 查询类型名称, domain:源站域名, ip:源站 IP, port: 转发端口, originPort: 源站端口, serviceIp: 高防IP(仅支持BGP线路的实例)
      *
      * @return
      */
@@ -115,7 +115,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 查询类型名称, domain:源站域名, ip:源站 IP, port: 转发端口, originPort: 源站端口
+     * set 查询类型名称, domain:源站域名, ip:源站 IP, port: 转发端口, originPort: 源站端口, serviceIp: 高防IP(仅支持BGP线路的实例)
      *
      * @param searchType
      */
@@ -199,7 +199,7 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 查询类型名称, domain:源站域名, ip:源站 IP, port: 转发端口, originPort: 源站端口
+     * set 查询类型名称, domain:源站域名, ip:源站 IP, port: 转发端口, originPort: 源站端口, serviceIp: 高防IP(仅支持BGP线路的实例)
      *
      * @param searchType
      */
