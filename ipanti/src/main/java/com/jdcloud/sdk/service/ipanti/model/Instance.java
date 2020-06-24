@@ -115,6 +115,11 @@ public class Instance  implements java.io.Serializable {
     private Integer webRuleCount;
 
     /**
+     * 防护调度规则数
+     */
+    private Integer dispatchRuleCount;
+
+    /**
      * 计费状态. &lt;br&gt;- PAID: 已支付&lt;br&gt;- ARREARS: 欠费&lt;br&gt;- EXPIRED: 过期
      */
     private String chargeStatus;
@@ -213,6 +218,16 @@ public class Instance  implements java.io.Serializable {
      * ccProtectMode为自定义模式时, 每个源IP对Host+URI的防护阈值
      */
     private Integer ipHostUrlQps;
+
+    /**
+     * 关联的自定义页面id
+     */
+    private String pageId;
+
+    /**
+     * 关联的自定义页面名称
+     */
+    private String pageName;
 
 
     /**
@@ -501,6 +516,24 @@ public class Instance  implements java.io.Serializable {
      */
     public void setWebRuleCount(Integer webRuleCount) {
         this.webRuleCount = webRuleCount;
+    }
+
+    /**
+     * get 防护调度规则数
+     *
+     * @return
+     */
+    public Integer getDispatchRuleCount() {
+        return dispatchRuleCount;
+    }
+
+    /**
+     * set 防护调度规则数
+     *
+     * @param dispatchRuleCount
+     */
+    public void setDispatchRuleCount(Integer dispatchRuleCount) {
+        this.dispatchRuleCount = dispatchRuleCount;
     }
 
     /**
@@ -863,6 +896,42 @@ public class Instance  implements java.io.Serializable {
         this.ipHostUrlQps = ipHostUrlQps;
     }
 
+    /**
+     * get 关联的自定义页面id
+     *
+     * @return
+     */
+    public String getPageId() {
+        return pageId;
+    }
+
+    /**
+     * set 关联的自定义页面id
+     *
+     * @param pageId
+     */
+    public void setPageId(String pageId) {
+        this.pageId = pageId;
+    }
+
+    /**
+     * get 关联的自定义页面名称
+     *
+     * @return
+     */
+    public String getPageName() {
+        return pageName;
+    }
+
+    /**
+     * set 关联的自定义页面名称
+     *
+     * @param pageName
+     */
+    public void setPageName(String pageName) {
+        this.pageName = pageName;
+    }
+
 
     /**
      * set 实例 ID
@@ -1021,6 +1090,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance webRuleCount(Integer webRuleCount) {
         this.webRuleCount = webRuleCount;
+        return this;
+    }
+
+    /**
+     * set 防护调度规则数
+     *
+     * @param dispatchRuleCount
+     */
+    public Instance dispatchRuleCount(Integer dispatchRuleCount) {
+        this.dispatchRuleCount = dispatchRuleCount;
         return this;
     }
 
@@ -1221,6 +1300,26 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance ipHostUrlQps(Integer ipHostUrlQps) {
         this.ipHostUrlQps = ipHostUrlQps;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面id
+     *
+     * @param pageId
+     */
+    public Instance pageId(String pageId) {
+        this.pageId = pageId;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面名称
+     *
+     * @param pageName
+     */
+    public Instance pageName(String pageName) {
+        this.pageName = pageName;
         return this;
     }
 

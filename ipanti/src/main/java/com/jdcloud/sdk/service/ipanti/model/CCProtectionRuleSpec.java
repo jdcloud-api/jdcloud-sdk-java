@@ -82,6 +82,11 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     @Required
     private Long blockTime;
 
+    /**
+     * 关联的自定义页面id
+     */
+    private String pageId;
+
 
     /**
      * get CC 防护规则名称, 不允许为空, 长度不超过 32 个字符, 支持中文, 大小写字母, 数字及字符&#39;-&#39;、&#39;/&#39;、&#39;.&#39;、&#39;_&#39;
@@ -209,6 +214,24 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
         this.blockTime = blockTime;
     }
 
+    /**
+     * get 关联的自定义页面id
+     *
+     * @return
+     */
+    public String getPageId() {
+        return pageId;
+    }
+
+    /**
+     * set 关联的自定义页面id
+     *
+     * @param pageId
+     */
+    public void setPageId(String pageId) {
+        this.pageId = pageId;
+    }
+
 
     /**
      * set CC 防护规则名称, 不允许为空, 长度不超过 32 个字符, 支持中文, 大小写字母, 数字及字符&#39;-&#39;、&#39;/&#39;、&#39;.&#39;、&#39;_&#39;
@@ -277,6 +300,16 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
      */
     public CCProtectionRuleSpec blockTime(Long blockTime) {
         this.blockTime = blockTime;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面id
+     *
+     * @param pageId
+     */
+    public CCProtectionRuleSpec pageId(String pageId) {
+        this.pageId = pageId;
         return this;
     }
 

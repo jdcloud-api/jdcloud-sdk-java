@@ -38,7 +38,7 @@ public class DDoSAttackLog  implements java.io.Serializable {
     private Double attackTraffic;
 
     /**
-     * 是否触发黑洞, 0否 1是
+     * 封禁状态,0:未封禁,1:封禁中,2:封禁结束
      */
     private Integer blackHole;
 
@@ -87,7 +87,7 @@ public class DDoSAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * get 是否触发黑洞, 0否 1是
+     * get 封禁状态,0:未封禁,1:封禁中,2:封禁结束
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class DDoSAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 是否触发黑洞, 0否 1是
+     * set 封禁状态,0:未封禁,1:封禁中,2:封禁结束
      *
      * @param blackHole
      */
@@ -206,7 +206,7 @@ public class DDoSAttackLog  implements java.io.Serializable {
     }
 
     /**
-     * set 是否触发黑洞, 0否 1是
+     * set 封禁状态,0:未封禁,1:封禁中,2:封禁结束
      *
      * @param blackHole
      */

@@ -208,6 +208,9 @@ import com.jdcloud.sdk.service.ipanti.client.DescribeBlackListRulesOfWebRuleExec
 import com.jdcloud.sdk.service.ipanti.model.EnableWhiteListRuleOfForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.EnableWhiteListRuleOfForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.EnableWhiteListRuleOfForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeServiceIpListRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeServiceIpListResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeServiceIpListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DisableWhiteListRuleOfWebRuleExecutor;
@@ -306,7 +309,7 @@ public class IpantiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "ipanti.jdcloud-api.com";
     public final static String ServiceName = "ipanti";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -997,6 +1000,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public EnableWhiteListRuleOfForwardRuleResponse enableWhiteListRuleOfForwardRule(EnableWhiteListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
         return new EnableWhiteListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询实例高防 IP 列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeServiceIpListResponse describeServiceIpList(DescribeServiceIpListRequest request) throws JdcloudSdkException {
+        return new DescribeServiceIpListExecutor().client(this).execute(request);
     }
 
     /**

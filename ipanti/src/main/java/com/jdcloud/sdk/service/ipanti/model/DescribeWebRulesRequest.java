@@ -45,7 +45,7 @@ public class DescribeWebRulesRequest extends JdcloudRequest implements java.io.S
     private Integer pageSize;
 
     /**
-     * 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名
+     * 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名, serviceIp: 高防IP(仅支持BGP线路的实例)
      */
     private String searchType;
 
@@ -106,7 +106,7 @@ public class DescribeWebRulesRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名
+     * get 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名, serviceIp: 高防IP(仅支持BGP线路的实例)
      *
      * @return
      */
@@ -115,7 +115,7 @@ public class DescribeWebRulesRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名
+     * set 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名, serviceIp: 高防IP(仅支持BGP线路的实例)
      *
      * @param searchType
      */
@@ -199,7 +199,7 @@ public class DescribeWebRulesRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名
+     * set 查询类型名称, domain:源站域名, ip:源站 IP, rawDomain: 域名, serviceIp: 高防IP(仅支持BGP线路的实例)
      *
      * @param searchType
      */
