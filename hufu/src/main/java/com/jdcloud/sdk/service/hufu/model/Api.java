@@ -60,6 +60,11 @@ public class Api  implements java.io.Serializable {
     private String path;
 
     /**
+     * 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
+     */
+    private String matchType;
+
+    /**
      * 后端类型，为空或null时前端显示未设置
      */
     private String backServiceType;
@@ -118,6 +123,21 @@ public class Api  implements java.io.Serializable {
      * 响应格式类型,当resBodyType等于3时,使用该响应格式类型
      */
     private String editableResBodyType;
+
+    /**
+     * waf状态，如：observe,deny,off
+     */
+    private String wafStatus;
+
+    /**
+     * 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+     */
+    private Integer reqBodyFormatType;
+
+    /**
+     * 返回体格式类型，1代表jsonschema，2代表swagger，默认为1
+     */
+    private Integer resBodyFormatType;
 
 
     /**
@@ -208,6 +228,24 @@ public class Api  implements java.io.Serializable {
      */
     public void setPath(String path) {
         this.path = path;
+    }
+
+    /**
+     * get 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
+     *
+     * @return
+     */
+    public String getMatchType() {
+        return matchType;
+    }
+
+    /**
+     * set 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
+     *
+     * @param matchType
+     */
+    public void setMatchType(String matchType) {
+        this.matchType = matchType;
     }
 
     /**
@@ -426,6 +464,60 @@ public class Api  implements java.io.Serializable {
         this.editableResBodyType = editableResBodyType;
     }
 
+    /**
+     * get waf状态，如：observe,deny,off
+     *
+     * @return
+     */
+    public String getWafStatus() {
+        return wafStatus;
+    }
+
+    /**
+     * set waf状态，如：observe,deny,off
+     *
+     * @param wafStatus
+     */
+    public void setWafStatus(String wafStatus) {
+        this.wafStatus = wafStatus;
+    }
+
+    /**
+     * get 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @return
+     */
+    public Integer getReqBodyFormatType() {
+        return reqBodyFormatType;
+    }
+
+    /**
+     * set 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @param reqBodyFormatType
+     */
+    public void setReqBodyFormatType(Integer reqBodyFormatType) {
+        this.reqBodyFormatType = reqBodyFormatType;
+    }
+
+    /**
+     * get 返回体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @return
+     */
+    public Integer getResBodyFormatType() {
+        return resBodyFormatType;
+    }
+
+    /**
+     * set 返回体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @param resBodyFormatType
+     */
+    public void setResBodyFormatType(Integer resBodyFormatType) {
+        this.resBodyFormatType = resBodyFormatType;
+    }
+
 
     /**
      * set apiId
@@ -474,6 +566,16 @@ public class Api  implements java.io.Serializable {
      */
     public Api path(String path) {
         this.path = path;
+        return this;
+    }
+
+    /**
+     * set 匹配模式：1.&quot;absolute&quot;(绝对匹配); 2.&quot;prefix&quot;（前缀匹配）;
+     *
+     * @param matchType
+     */
+    public Api matchType(String matchType) {
+        this.matchType = matchType;
         return this;
     }
 
@@ -594,6 +696,36 @@ public class Api  implements java.io.Serializable {
      */
     public Api editableResBodyType(String editableResBodyType) {
         this.editableResBodyType = editableResBodyType;
+        return this;
+    }
+
+    /**
+     * set waf状态，如：observe,deny,off
+     *
+     * @param wafStatus
+     */
+    public Api wafStatus(String wafStatus) {
+        this.wafStatus = wafStatus;
+        return this;
+    }
+
+    /**
+     * set 请求体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @param reqBodyFormatType
+     */
+    public Api reqBodyFormatType(Integer reqBodyFormatType) {
+        this.reqBodyFormatType = reqBodyFormatType;
+        return this;
+    }
+
+    /**
+     * set 返回体格式类型，1代表jsonschema，2代表swagger，默认为1
+     *
+     * @param resBodyFormatType
+     */
+    public Api resBodyFormatType(Integer resBodyFormatType) {
+        this.resBodyFormatType = resBodyFormatType;
         return this;
     }
 

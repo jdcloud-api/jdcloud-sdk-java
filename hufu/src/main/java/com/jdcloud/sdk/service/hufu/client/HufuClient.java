@@ -34,12 +34,18 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.hufu.model.EncryptRequest;
 import com.jdcloud.sdk.service.hufu.model.EncryptResponse;
 import com.jdcloud.sdk.service.hufu.client.EncryptExecutor;
-import com.jdcloud.sdk.service.hufu.model.ModifyRouterByLowerRequest;
-import com.jdcloud.sdk.service.hufu.model.ModifyRouterByLowerResponse;
-import com.jdcloud.sdk.service.hufu.client.ModifyRouterByLowerExecutor;
-import com.jdcloud.sdk.service.hufu.model.QueryApisRequest;
-import com.jdcloud.sdk.service.hufu.model.QueryApisResponse;
-import com.jdcloud.sdk.service.hufu.client.QueryApisExecutor;
+import com.jdcloud.sdk.service.hufu.model.DescribeDeploymentRequest;
+import com.jdcloud.sdk.service.hufu.model.DescribeDeploymentResponse;
+import com.jdcloud.sdk.service.hufu.client.DescribeDeploymentExecutor;
+import com.jdcloud.sdk.service.hufu.model.QueryAccessLogRequest;
+import com.jdcloud.sdk.service.hufu.model.QueryAccessLogResponse;
+import com.jdcloud.sdk.service.hufu.client.QueryAccessLogExecutor;
+import com.jdcloud.sdk.service.hufu.model.DeployRequest;
+import com.jdcloud.sdk.service.hufu.model.DeployResponse;
+import com.jdcloud.sdk.service.hufu.client.DeployExecutor;
+import com.jdcloud.sdk.service.hufu.model.IsEncryptDataRequest;
+import com.jdcloud.sdk.service.hufu.model.IsEncryptDataResponse;
+import com.jdcloud.sdk.service.hufu.client.IsEncryptDataExecutor;
 
 /**
  * hufuClient
@@ -48,7 +54,7 @@ public class HufuClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "hufu.jdcloud-api.com";
     public final static String ServiceName = "hufu";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -102,25 +108,47 @@ public class HufuClient extends JdcloudClient {
     }
 
     /**
-     * 下游更新路由信息
+     * 查询该版本的部署详情
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyRouterByLowerResponse modifyRouterByLower(ModifyRouterByLowerRequest request) throws JdcloudSdkException {
-        return new ModifyRouterByLowerExecutor().client(this).execute(request);
+    public DescribeDeploymentResponse describeDeployment(DescribeDeploymentRequest request) throws JdcloudSdkException {
+        return new DescribeDeploymentExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询api列表
+     * 查询access日志
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryApisResponse queryApis(QueryApisRequest request) throws JdcloudSdkException {
-        return new QueryApisExecutor().client(this).execute(request);
+    public QueryAccessLogResponse queryAccessLog(QueryAccessLogRequest request) throws JdcloudSdkException {
+        return new QueryAccessLogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 发布版本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeployResponse deploy(DeployRequest request) throws JdcloudSdkException {
+        return new DeployExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 加密
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public IsEncryptDataResponse isEncryptData(IsEncryptDataRequest request) throws JdcloudSdkException {
+        return new IsEncryptDataExecutor().client(this).execute(request);
     }
 
 
