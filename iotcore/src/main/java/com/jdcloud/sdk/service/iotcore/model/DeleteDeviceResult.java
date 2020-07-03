@@ -33,7 +33,40 @@ public class DeleteDeviceResult extends JdcloudResult implements java.io.Seriali
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 是否删除成功
+     */
+    private Boolean success;
 
+
+    /**
+     * get 是否删除成功
+     *
+     * @return
+     */
+    public Boolean getSuccess() {
+        return success;
+    }
+
+    /**
+     * set 是否删除成功
+     *
+     * @param success
+     */
+    public void setSuccess(Boolean success) {
+        this.success = success;
+    }
+
+
+    /**
+     * set 是否删除成功
+     *
+     * @param success
+     */
+    public DeleteDeviceResult success(Boolean success) {
+        this.success = success;
+        return this;
+    }
 
 
 }

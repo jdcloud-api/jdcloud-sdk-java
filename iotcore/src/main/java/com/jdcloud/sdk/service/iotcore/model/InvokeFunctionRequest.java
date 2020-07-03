@@ -36,7 +36,7 @@ public class InvokeFunctionRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备ID
+     * 设备方法
      * Required:true
      */
     @Required
@@ -58,7 +58,7 @@ public class InvokeFunctionRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 设备ID
+     * get 设备方法
      *
      * @return
      */
@@ -67,7 +67,7 @@ public class InvokeFunctionRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 设备ID
+     * set 设备方法
      *
      * @param deviceFunctionVO
      */
@@ -113,7 +113,7 @@ public class InvokeFunctionRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 设备ID
+     * set 设备方法
      *
      * @param deviceFunctionVO
      */

@@ -40,6 +40,16 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
     private String deviceName;
 
     /**
+     * 设备厂商，模糊匹配
+     */
+    private String manufacturer;
+
+    /**
+     * 设备型号，模糊匹配
+     */
+    private String model;
+
+    /**
      * 设备状态 0-未激活，1-激活离线，2-激活在线
      */
     private Integer status;
@@ -120,6 +130,42 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
      */
     public void setDeviceName(String deviceName) {
         this.deviceName = deviceName;
+    }
+
+    /**
+     * get 设备厂商，模糊匹配
+     *
+     * @return
+     */
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    /**
+     * set 设备厂商，模糊匹配
+     *
+     * @param manufacturer
+     */
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+    }
+
+    /**
+     * get 设备型号，模糊匹配
+     *
+     * @return
+     */
+    public String getModel() {
+        return model;
+    }
+
+    /**
+     * set 设备型号，模糊匹配
+     *
+     * @param model
+     */
+    public void setModel(String model) {
+        this.model = model;
     }
 
     /**
@@ -346,6 +392,26 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
      */
     public LoongrayQueryPageRequest deviceName(String deviceName) {
         this.deviceName = deviceName;
+        return this;
+    }
+
+    /**
+     * set 设备厂商，模糊匹配
+     *
+     * @param manufacturer
+     */
+    public LoongrayQueryPageRequest manufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
+        return this;
+    }
+
+    /**
+     * set 设备型号，模糊匹配
+     *
+     * @param model
+     */
+    public LoongrayQueryPageRequest model(String model) {
+        this.model = model;
         return this;
     }
 

@@ -67,6 +67,13 @@ public class CreateAdminProductRequest extends JdcloudRequest implements java.io
     private Object internalTags;
 
     /**
+     * 产品名下所有设备的采集器类型
+     * Required:true
+     */
+    @Required
+    private String collDeviceType;
+
+    /**
      * 地域ID
      * Required:true
      */
@@ -178,6 +185,24 @@ public class CreateAdminProductRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 产品名下所有设备的采集器类型
+     *
+     * @return
+     */
+    public String getCollDeviceType() {
+        return collDeviceType;
+    }
+
+    /**
+     * set 产品名下所有设备的采集器类型
+     *
+     * @param collDeviceType
+     */
+    public void setCollDeviceType(String collDeviceType) {
+        this.collDeviceType = collDeviceType;
+    }
+
+    /**
      * get 地域ID
      *
      * @return
@@ -264,6 +289,16 @@ public class CreateAdminProductRequest extends JdcloudRequest implements java.io
      */
     public CreateAdminProductRequest internalTags(Object internalTags) {
         this.internalTags = internalTags;
+        return this;
+    }
+
+    /**
+     * set 产品名下所有设备的采集器类型
+     *
+     * @param collDeviceType
+     */
+    public CreateAdminProductRequest collDeviceType(String collDeviceType) {
+        this.collDeviceType = collDeviceType;
         return this;
     }
 

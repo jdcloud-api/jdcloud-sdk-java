@@ -65,13 +65,6 @@ public class UpdateLooDeviceRequest extends JdcloudRequest implements java.io.Se
     private String deviceName;
 
     /**
-     * 设备类型
-     * Required:true
-     */
-    @Required
-    private String deviceType;
-
-    /**
      * 设备归属的实例ID
      * Required:true
      */
@@ -202,24 +195,6 @@ public class UpdateLooDeviceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 设备类型
-     *
-     * @return
-     */
-    public String getDeviceType() {
-        return deviceType;
-    }
-
-    /**
-     * set 设备类型
-     *
-     * @param deviceType
-     */
-    public void setDeviceType(String deviceType) {
-        this.deviceType = deviceType;
-    }
-
-    /**
      * get 设备归属的实例ID
      *
      * @return
@@ -331,16 +306,6 @@ public class UpdateLooDeviceRequest extends JdcloudRequest implements java.io.Se
      */
     public UpdateLooDeviceRequest deviceName(String deviceName) {
         this.deviceName = deviceName;
-        return this;
-    }
-
-    /**
-     * set 设备类型
-     *
-     * @param deviceType
-     */
-    public UpdateLooDeviceRequest deviceType(String deviceType) {
-        this.deviceType = deviceType;
         return this;
     }
 

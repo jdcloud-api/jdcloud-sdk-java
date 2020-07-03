@@ -41,16 +41,19 @@ public class DeviceFunctionVO  implements java.io.Serializable {
     private String deviceId;
 
     /**
-     * 输入参数
+     * 方法Key
+     */
+    private String functionKey;
+
+    /**
+     * 输入参数（Map&lt;String,Object&gt;类型）
      */
     private Object inParams;
 
     /**
-     * 服务名称
-     * Required:true
+     * 输出参数（Map&lt;String,Object&gt;类型）
      */
-    @Required
-    private String functionName;
+    private Object outParams;
 
 
     /**
@@ -72,7 +75,25 @@ public class DeviceFunctionVO  implements java.io.Serializable {
     }
 
     /**
-     * get 输入参数
+     * get 方法Key
+     *
+     * @return
+     */
+    public String getFunctionKey() {
+        return functionKey;
+    }
+
+    /**
+     * set 方法Key
+     *
+     * @param functionKey
+     */
+    public void setFunctionKey(String functionKey) {
+        this.functionKey = functionKey;
+    }
+
+    /**
+     * get 输入参数（Map&lt;String,Object&gt;类型）
      *
      * @return
      */
@@ -81,7 +102,7 @@ public class DeviceFunctionVO  implements java.io.Serializable {
     }
 
     /**
-     * set 输入参数
+     * set 输入参数（Map&lt;String,Object&gt;类型）
      *
      * @param inParams
      */
@@ -90,21 +111,21 @@ public class DeviceFunctionVO  implements java.io.Serializable {
     }
 
     /**
-     * get 服务名称
+     * get 输出参数（Map&lt;String,Object&gt;类型）
      *
      * @return
      */
-    public String getFunctionName() {
-        return functionName;
+    public Object getOutParams() {
+        return outParams;
     }
 
     /**
-     * set 服务名称
+     * set 输出参数（Map&lt;String,Object&gt;类型）
      *
-     * @param functionName
+     * @param outParams
      */
-    public void setFunctionName(String functionName) {
-        this.functionName = functionName;
+    public void setOutParams(Object outParams) {
+        this.outParams = outParams;
     }
 
 
@@ -119,7 +140,17 @@ public class DeviceFunctionVO  implements java.io.Serializable {
     }
 
     /**
-     * set 输入参数
+     * set 方法Key
+     *
+     * @param functionKey
+     */
+    public DeviceFunctionVO functionKey(String functionKey) {
+        this.functionKey = functionKey;
+        return this;
+    }
+
+    /**
+     * set 输入参数（Map&lt;String,Object&gt;类型）
      *
      * @param inParams
      */
@@ -129,12 +160,12 @@ public class DeviceFunctionVO  implements java.io.Serializable {
     }
 
     /**
-     * set 服务名称
+     * set 输出参数（Map&lt;String,Object&gt;类型）
      *
-     * @param functionName
+     * @param outParams
      */
-    public DeviceFunctionVO functionName(String functionName) {
-        this.functionName = functionName;
+    public DeviceFunctionVO outParams(Object outParams) {
+        this.outParams = outParams;
         return this;
     }
 

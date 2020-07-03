@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.iotcore.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 根据模型ID查看物模型完整信息
+ * 根据物类型Code查看物模型完整信息
  */
 public class DescribeThingModelResponse extends JdcloudResponse<DescribeThingModelResult> implements java.io.Serializable {
 

@@ -51,6 +51,11 @@ public class ThingTypeInfoVO  implements java.io.Serializable {
     private String createdTime;
 
     /**
+     * 更新时间
+     */
+    private String updateTime;
+
+    /**
      * 自定义档案信息
      */
     private List<CustomProfileVO> customProfiles;
@@ -89,13 +94,17 @@ public class ThingTypeInfoVO  implements java.io.Serializable {
 
     /**
      * 所属物类型Code
+     * Required:true
      */
+    @Required
     private String code;
 
     /**
-     * 更新时间
+     * 所属物类型名称
+     * Required:true
      */
-    private String updateTime;
+    @Required
+    private String name;
 
 
     /**
@@ -150,6 +159,24 @@ public class ThingTypeInfoVO  implements java.io.Serializable {
      */
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
+    }
+
+    /**
+     * get 更新时间
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 
     /**
@@ -297,21 +324,21 @@ public class ThingTypeInfoVO  implements java.io.Serializable {
     }
 
     /**
-     * get 更新时间
+     * get 所属物类型名称
      *
      * @return
      */
-    public String getUpdateTime() {
-        return updateTime;
+    public String getName() {
+        return name;
     }
 
     /**
-     * set 更新时间
+     * set 所属物类型名称
      *
-     * @param updateTime
+     * @param name
      */
-    public void setUpdateTime(String updateTime) {
-        this.updateTime = updateTime;
+    public void setName(String name) {
+        this.name = name;
     }
 
 
@@ -342,6 +369,16 @@ public class ThingTypeInfoVO  implements java.io.Serializable {
      */
     public ThingTypeInfoVO createdTime(String createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime
+     */
+    public ThingTypeInfoVO updateTime(String updateTime) {
+        this.updateTime = updateTime;
         return this;
     }
 
@@ -426,12 +463,12 @@ public class ThingTypeInfoVO  implements java.io.Serializable {
     }
 
     /**
-     * set 更新时间
+     * set 所属物类型名称
      *
-     * @param updateTime
+     * @param name
      */
-    public ThingTypeInfoVO updateTime(String updateTime) {
-        this.updateTime = updateTime;
+    public ThingTypeInfoVO name(String name) {
+        this.name = name;
         return this;
     }
 

@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.iotcore.model;
 
+import com.jdcloud.sdk.service.iotcore.model.DeviceFunctionVO;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -33,7 +34,139 @@ public class InvokeFunctionResult extends JdcloudResult implements java.io.Seria
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * code
+     */
+    private Integer code;
 
+    /**
+     * message
+     */
+    private String message;
+
+    /**
+     * success
+     */
+    private Boolean success;
+
+    /**
+     * returnValues
+     */
+    private DeviceFunctionVO returnValues;
+
+
+    /**
+     * get code
+     *
+     * @return
+     */
+    public Integer getCode() {
+        return code;
+    }
+
+    /**
+     * set code
+     *
+     * @param code
+     */
+    public void setCode(Integer code) {
+        this.code = code;
+    }
+
+    /**
+     * get message
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set message
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    /**
+     * get success
+     *
+     * @return
+     */
+    public Boolean getSuccess() {
+        return success;
+    }
+
+    /**
+     * set success
+     *
+     * @param success
+     */
+    public void setSuccess(Boolean success) {
+        this.success = success;
+    }
+
+    /**
+     * get returnValues
+     *
+     * @return
+     */
+    public DeviceFunctionVO getReturnValues() {
+        return returnValues;
+    }
+
+    /**
+     * set returnValues
+     *
+     * @param returnValues
+     */
+    public void setReturnValues(DeviceFunctionVO returnValues) {
+        this.returnValues = returnValues;
+    }
+
+
+    /**
+     * set code
+     *
+     * @param code
+     */
+    public InvokeFunctionResult code(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    /**
+     * set message
+     *
+     * @param message
+     */
+    public InvokeFunctionResult message(String message) {
+        this.message = message;
+        return this;
+    }
+
+    /**
+     * set success
+     *
+     * @param success
+     */
+    public InvokeFunctionResult success(Boolean success) {
+        this.success = success;
+        return this;
+    }
+
+    /**
+     * set returnValues
+     *
+     * @param returnValues
+     */
+    public InvokeFunctionResult returnValues(DeviceFunctionVO returnValues) {
+        this.returnValues = returnValues;
+        return this;
+    }
 
 
 }
