@@ -28,18 +28,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据模型ID查看物模型完整信息
+ * 根据物类型Code查看物模型完整信息
  */
 public class DescribeThingModelRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 物模型ID编号
+     * 物类型Code
      * Required:true
      */
     @Required
-    private String thingModelId;
+    private String thingTypeCode;
 
     /**
      * 版本号。如果为空，则返回最新版本
@@ -62,21 +62,21 @@ public class DescribeThingModelRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 物模型ID编号
+     * get 物类型Code
      *
      * @return
      */
-    public String getThingModelId() {
-        return thingModelId;
+    public String getThingTypeCode() {
+        return thingTypeCode;
     }
 
     /**
-     * set 物模型ID编号
+     * set 物类型Code
      *
-     * @param thingModelId
+     * @param thingTypeCode
      */
-    public void setThingModelId(String thingModelId) {
-        this.thingModelId = thingModelId;
+    public void setThingTypeCode(String thingTypeCode) {
+        this.thingTypeCode = thingTypeCode;
     }
 
     /**
@@ -135,12 +135,12 @@ public class DescribeThingModelRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 物模型ID编号
+     * set 物类型Code
      *
-     * @param thingModelId
+     * @param thingTypeCode
      */
-    public DescribeThingModelRequest thingModelId(String thingModelId) {
-        this.thingModelId = thingModelId;
+    public DescribeThingModelRequest thingTypeCode(String thingTypeCode) {
+        this.thingTypeCode = thingTypeCode;
         return this;
     }
 

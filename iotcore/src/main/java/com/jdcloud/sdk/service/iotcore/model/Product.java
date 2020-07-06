@@ -64,6 +64,11 @@ public class Product  implements java.io.Serializable {
      */
     private String templateName;
 
+    /**
+     * 产品的采集器类型
+     */
+    private String collDeviceType;
+
 
     /**
      * get 产品名称
@@ -177,6 +182,24 @@ public class Product  implements java.io.Serializable {
         this.templateName = templateName;
     }
 
+    /**
+     * get 产品的采集器类型
+     *
+     * @return
+     */
+    public String getCollDeviceType() {
+        return collDeviceType;
+    }
+
+    /**
+     * set 产品的采集器类型
+     *
+     * @param collDeviceType
+     */
+    public void setCollDeviceType(String collDeviceType) {
+        this.collDeviceType = collDeviceType;
+    }
+
 
     /**
      * set 产品名称
@@ -237,6 +260,16 @@ public class Product  implements java.io.Serializable {
      */
     public Product templateName(String templateName) {
         this.templateName = templateName;
+        return this;
+    }
+
+    /**
+     * set 产品的采集器类型
+     *
+     * @param collDeviceType
+     */
+    public Product collDeviceType(String collDeviceType) {
+        this.collDeviceType = collDeviceType;
         return this;
     }
 

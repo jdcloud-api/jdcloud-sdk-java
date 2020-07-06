@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.iotcore.model.ThingModelRespTO;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 根据模型ID查看物模型完整信息
+ * 根据物类型Code查看物模型完整信息
  */
 public class DescribeThingModelResult extends JdcloudResult implements java.io.Serializable {
 

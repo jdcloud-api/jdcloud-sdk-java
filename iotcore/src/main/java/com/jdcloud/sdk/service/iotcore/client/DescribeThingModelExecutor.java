@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.iotcore.model.DescribeThingModelResponse;
 
 /**
- * 根据模型ID查看物模型完整信息
+ * 根据物类型Code查看物模型完整信息
  */
 class DescribeThingModelExecutor extends JdcloudExecutor {
 
@@ -40,7 +40,7 @@ class DescribeThingModelExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/coreinstances/{instanceId}/thingModel:describeThingModel";
+        return "/regions/{regionId}/coreinstances/{instanceId}/thingModel:describe";
     }
 
     @Override
