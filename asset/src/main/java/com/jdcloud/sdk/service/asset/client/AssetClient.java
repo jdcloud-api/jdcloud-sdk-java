@@ -46,7 +46,7 @@ public class AssetClient extends JdcloudClient {
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
     public final static String ClientVersion = "1.2.3";
-    public final static String DefaultEndpoint = "asset.jcloud.com";
+    public final static String DefaultEndpoint = "asset.jdcloud-api.com";
     public final static String ServiceName = "asset";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
 
