@@ -73,6 +73,9 @@ import com.jdcloud.sdk.service.iotcore.client.UpdateThingShadowExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DeleteProductRequest;
 import com.jdcloud.sdk.service.iotcore.model.DeleteProductResponse;
 import com.jdcloud.sdk.service.iotcore.client.DeleteProductExecutor;
+import com.jdcloud.sdk.service.iotcore.model.GetDeviceGroupRequest;
+import com.jdcloud.sdk.service.iotcore.model.GetDeviceGroupResponse;
+import com.jdcloud.sdk.service.iotcore.client.GetDeviceGroupExecutor;
 import com.jdcloud.sdk.service.iotcore.model.ReadHoldingRegistersRequest;
 import com.jdcloud.sdk.service.iotcore.model.ReadHoldingRegistersResponse;
 import com.jdcloud.sdk.service.iotcore.client.ReadHoldingRegistersExecutor;
@@ -148,6 +151,9 @@ import com.jdcloud.sdk.service.iotcore.client.DescribeThingTypeExecutor;
 import com.jdcloud.sdk.service.iotcore.model.CreateProductTopicRequest;
 import com.jdcloud.sdk.service.iotcore.model.CreateProductTopicResponse;
 import com.jdcloud.sdk.service.iotcore.client.CreateProductTopicExecutor;
+import com.jdcloud.sdk.service.iotcore.model.GetDeviceGroupListRequest;
+import com.jdcloud.sdk.service.iotcore.model.GetDeviceGroupListResponse;
+import com.jdcloud.sdk.service.iotcore.client.GetDeviceGroupListExecutor;
 import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicRequest;
 import com.jdcloud.sdk.service.iotcore.model.DescribeProductTopicResponse;
 import com.jdcloud.sdk.service.iotcore.client.DescribeProductTopicExecutor;
@@ -178,6 +184,9 @@ import com.jdcloud.sdk.service.iotcore.client.DescribeProductWithAdminExecutor;
 import com.jdcloud.sdk.service.iotcore.model.ListProductAbilitiesRequest;
 import com.jdcloud.sdk.service.iotcore.model.ListProductAbilitiesResponse;
 import com.jdcloud.sdk.service.iotcore.client.ListProductAbilitiesExecutor;
+import com.jdcloud.sdk.service.iotcore.model.FindDeviceGroupLinkPageRequest;
+import com.jdcloud.sdk.service.iotcore.model.FindDeviceGroupLinkPageResponse;
+import com.jdcloud.sdk.service.iotcore.client.FindDeviceGroupLinkPageExecutor;
 import com.jdcloud.sdk.service.iotcore.model.QueryAdminStatisticsRequest;
 import com.jdcloud.sdk.service.iotcore.model.QueryAdminStatisticsResponse;
 import com.jdcloud.sdk.service.iotcore.client.QueryAdminStatisticsExecutor;
@@ -389,6 +398,17 @@ public class IotcoreClient extends JdcloudClient {
      */
     public DeleteProductResponse deleteProduct(DeleteProductRequest request) throws JdcloudSdkException {
         return new DeleteProductExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取分组列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDeviceGroupResponse getDeviceGroup(GetDeviceGroupRequest request) throws JdcloudSdkException {
+        return new GetDeviceGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -667,6 +687,17 @@ public class IotcoreClient extends JdcloudClient {
     }
 
     /**
+     * 获取组列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDeviceGroupListResponse getDeviceGroupList(GetDeviceGroupListRequest request) throws JdcloudSdkException {
+        return new GetDeviceGroupListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看产品自定义Topic
      *
      * @param request
@@ -774,6 +805,17 @@ public class IotcoreClient extends JdcloudClient {
      */
     public ListProductAbilitiesResponse listProductAbilities(ListProductAbilitiesRequest request) throws JdcloudSdkException {
         return new ListProductAbilitiesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取分组列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public FindDeviceGroupLinkPageResponse findDeviceGroupLinkPage(FindDeviceGroupLinkPageRequest request) throws JdcloudSdkException {
+        return new FindDeviceGroupLinkPageExecutor().client(this).execute(request);
     }
 
     /**

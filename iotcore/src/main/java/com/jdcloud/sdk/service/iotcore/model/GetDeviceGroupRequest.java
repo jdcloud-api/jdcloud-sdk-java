@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * LoongrayDeviceInfo
- * 朗讯device管理模块
+ * deviceGroup
+ * 设备分组模块
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -28,31 +28,36 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设备基本数据统计，包括设备数，激活数，在线数
+ * 获取分组列表
  */
-public class QueryAdminStatisticsRequest extends JdcloudRequest implements java.io.Serializable {
+public class GetDeviceGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 过滤条件，产品Key
+     * 组名称
      */
-    private String productKey;
+    private String groupName;
 
     /**
-     * 针对parentId下的子设备进行统计
-     */
-    private String parentId;
-
-    /**
-     * 采集器类型
-     */
-    private String deviceCollectorType;
-
-    /**
-     * 查询的用户信息
+     * 查询的用户组
      */
     private String queryUserPin;
+
+    /**
+     * 组标签
+     */
+    private String tag;
+
+    /**
+     * 当前页号
+     */
+    private Integer pageNumber;
+
+    /**
+     * 每页大小
+     */
+    private Integer pageSize;
 
     /**
      * 设备归属的实例ID
@@ -70,61 +75,25 @@ public class QueryAdminStatisticsRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 过滤条件，产品Key
+     * get 组名称
      *
      * @return
      */
-    public String getProductKey() {
-        return productKey;
+    public String getGroupName() {
+        return groupName;
     }
 
     /**
-     * set 过滤条件，产品Key
+     * set 组名称
      *
-     * @param productKey
+     * @param groupName
      */
-    public void setProductKey(String productKey) {
-        this.productKey = productKey;
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
     }
 
     /**
-     * get 针对parentId下的子设备进行统计
-     *
-     * @return
-     */
-    public String getParentId() {
-        return parentId;
-    }
-
-    /**
-     * set 针对parentId下的子设备进行统计
-     *
-     * @param parentId
-     */
-    public void setParentId(String parentId) {
-        this.parentId = parentId;
-    }
-
-    /**
-     * get 采集器类型
-     *
-     * @return
-     */
-    public String getDeviceCollectorType() {
-        return deviceCollectorType;
-    }
-
-    /**
-     * set 采集器类型
-     *
-     * @param deviceCollectorType
-     */
-    public void setDeviceCollectorType(String deviceCollectorType) {
-        this.deviceCollectorType = deviceCollectorType;
-    }
-
-    /**
-     * get 查询的用户信息
+     * get 查询的用户组
      *
      * @return
      */
@@ -133,12 +102,66 @@ public class QueryAdminStatisticsRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 查询的用户信息
+     * set 查询的用户组
      *
      * @param queryUserPin
      */
     public void setQueryUserPin(String queryUserPin) {
         this.queryUserPin = queryUserPin;
+    }
+
+    /**
+     * get 组标签
+     *
+     * @return
+     */
+    public String getTag() {
+        return tag;
+    }
+
+    /**
+     * set 组标签
+     *
+     * @param tag
+     */
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    /**
+     * get 当前页号
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 当前页号
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 每页大小
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页大小
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
     /**
@@ -179,42 +202,52 @@ public class QueryAdminStatisticsRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 过滤条件，产品Key
+     * set 组名称
      *
-     * @param productKey
+     * @param groupName
      */
-    public QueryAdminStatisticsRequest productKey(String productKey) {
-        this.productKey = productKey;
+    public GetDeviceGroupRequest groupName(String groupName) {
+        this.groupName = groupName;
         return this;
     }
 
     /**
-     * set 针对parentId下的子设备进行统计
-     *
-     * @param parentId
-     */
-    public QueryAdminStatisticsRequest parentId(String parentId) {
-        this.parentId = parentId;
-        return this;
-    }
-
-    /**
-     * set 采集器类型
-     *
-     * @param deviceCollectorType
-     */
-    public QueryAdminStatisticsRequest deviceCollectorType(String deviceCollectorType) {
-        this.deviceCollectorType = deviceCollectorType;
-        return this;
-    }
-
-    /**
-     * set 查询的用户信息
+     * set 查询的用户组
      *
      * @param queryUserPin
      */
-    public QueryAdminStatisticsRequest queryUserPin(String queryUserPin) {
+    public GetDeviceGroupRequest queryUserPin(String queryUserPin) {
         this.queryUserPin = queryUserPin;
+        return this;
+    }
+
+    /**
+     * set 组标签
+     *
+     * @param tag
+     */
+    public GetDeviceGroupRequest tag(String tag) {
+        this.tag = tag;
+        return this;
+    }
+
+    /**
+     * set 当前页号
+     *
+     * @param pageNumber
+     */
+    public GetDeviceGroupRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 每页大小
+     *
+     * @param pageSize
+     */
+    public GetDeviceGroupRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
 
@@ -223,7 +256,7 @@ public class QueryAdminStatisticsRequest extends JdcloudRequest implements java.
      *
      * @param instanceId
      */
-    public QueryAdminStatisticsRequest instanceId(String instanceId) {
+    public GetDeviceGroupRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -233,7 +266,7 @@ public class QueryAdminStatisticsRequest extends JdcloudRequest implements java.
      *
      * @param regionId
      */
-    public QueryAdminStatisticsRequest regionId(String regionId) {
+    public GetDeviceGroupRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

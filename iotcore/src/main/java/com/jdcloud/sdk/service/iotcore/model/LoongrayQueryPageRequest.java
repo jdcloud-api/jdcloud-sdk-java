@@ -100,6 +100,11 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
     private String deviceCollectorType;
 
     /**
+     * 查询的userPin
+     */
+    private String queryUserPin;
+
+    /**
      * 设备归属的实例ID
      * Required:true
      */
@@ -349,6 +354,24 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
     }
 
     /**
+     * get 查询的userPin
+     *
+     * @return
+     */
+    public String getQueryUserPin() {
+        return queryUserPin;
+    }
+
+    /**
+     * set 查询的userPin
+     *
+     * @param queryUserPin
+     */
+    public void setQueryUserPin(String queryUserPin) {
+        this.queryUserPin = queryUserPin;
+    }
+
+    /**
      * get 设备归属的实例ID
      *
      * @return
@@ -512,6 +535,16 @@ public class LoongrayQueryPageRequest extends JdcloudRequest implements java.io.
      */
     public LoongrayQueryPageRequest deviceCollectorType(String deviceCollectorType) {
         this.deviceCollectorType = deviceCollectorType;
+        return this;
+    }
+
+    /**
+     * set 查询的userPin
+     *
+     * @param queryUserPin
+     */
+    public LoongrayQueryPageRequest queryUserPin(String queryUserPin) {
+        this.queryUserPin = queryUserPin;
         return this;
     }
 
