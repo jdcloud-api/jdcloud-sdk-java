@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.SetIpBlackListResponse;
 
 /**
- * 设置ip黑名单
+ * 设置ip黑名白单
  */
 class SetIpBlackListExecutor extends JdcloudExecutor {
 

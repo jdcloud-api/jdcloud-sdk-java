@@ -102,6 +102,16 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     private String isShareOpen;
 
     /**
+     * gzip参数[on,off]
+     */
+    private String gzip;
+
+    /**
+     * gzipTypes
+     */
+    private String gzipTypes;
+
+    /**
      * cacheRules
      */
     private List<CacheRule> cacheRules;
@@ -342,6 +352,42 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     }
 
     /**
+     * get gzip参数[on,off]
+     *
+     * @return
+     */
+    public String getGzip() {
+        return gzip;
+    }
+
+    /**
+     * set gzip参数[on,off]
+     *
+     * @param gzip
+     */
+    public void setGzip(String gzip) {
+        this.gzip = gzip;
+    }
+
+    /**
+     * get gzipTypes
+     *
+     * @return
+     */
+    public String getGzipTypes() {
+        return gzipTypes;
+    }
+
+    /**
+     * set gzipTypes
+     *
+     * @param gzipTypes
+     */
+    public void setGzipTypes(String gzipTypes) {
+        this.gzipTypes = gzipTypes;
+    }
+
+    /**
      * get cacheRules
      *
      * @return
@@ -487,6 +533,26 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
      */
     public QueryDomainConfigResult isShareOpen(String isShareOpen) {
         this.isShareOpen = isShareOpen;
+        return this;
+    }
+
+    /**
+     * set gzip参数[on,off]
+     *
+     * @param gzip
+     */
+    public QueryDomainConfigResult gzip(String gzip) {
+        this.gzip = gzip;
+        return this;
+    }
+
+    /**
+     * set gzipTypes
+     *
+     * @param gzipTypes
+     */
+    public QueryDomainConfigResult gzipTypes(String gzipTypes) {
+        this.gzipTypes = gzipTypes;
         return this;
     }
 

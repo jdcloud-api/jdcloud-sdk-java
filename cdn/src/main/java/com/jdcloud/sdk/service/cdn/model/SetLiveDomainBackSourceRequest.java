@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 直播域名操作类接口
+ * 直播域名配置类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1

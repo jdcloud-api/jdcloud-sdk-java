@@ -46,7 +46,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     private String certName;
 
     /**
-     * 绑定域名
+     * 主域名
      */
     private String commonName;
 
@@ -66,19 +66,19 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     private String sslCertEndTime;
 
     /**
-     * 是否允许被删除,1允许,0不允许
-     */
-    private Integer deletable;
-
-    /**
      * 对私钥文件使用sha256算法计算的摘要信息
      */
     private String digest;
 
     /**
-     * 绑定的域名
+     * 备用域名
      */
     private List<String> relatedDomains;
+
+    /**
+     * 绑定的资源
+     */
+    private List<String> bindResources;
 
 
     /**
@@ -118,7 +118,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get 绑定域名
+     * get 主域名
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 绑定域名
+     * set 主域名
      *
      * @param commonName
      */
@@ -190,24 +190,6 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get 是否允许被删除,1允许,0不允许
-     *
-     * @return
-     */
-    public Integer getDeletable() {
-        return deletable;
-    }
-
-    /**
-     * set 是否允许被删除,1允许,0不允许
-     *
-     * @param deletable
-     */
-    public void setDeletable(Integer deletable) {
-        this.deletable = deletable;
-    }
-
-    /**
      * get 对私钥文件使用sha256算法计算的摘要信息
      *
      * @return
@@ -226,7 +208,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * get 绑定的域名
+     * get 备用域名
      *
      * @return
      */
@@ -235,12 +217,30 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 绑定的域名
+     * set 备用域名
      *
      * @param relatedDomains
      */
     public void setRelatedDomains(List<String> relatedDomains) {
         this.relatedDomains = relatedDomains;
+    }
+
+    /**
+     * get 绑定的资源
+     *
+     * @return
+     */
+    public List<String> getBindResources() {
+        return bindResources;
+    }
+
+    /**
+     * set 绑定的资源
+     *
+     * @param bindResources
+     */
+    public void setBindResources(List<String> bindResources) {
+        this.bindResources = bindResources;
     }
 
 
@@ -265,7 +265,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 绑定域名
+     * set 主域名
      *
      * @param commonName
      */
@@ -305,16 +305,6 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 是否允许被删除,1允许,0不允许
-     *
-     * @param deletable
-     */
-    public GetSslCertDetailResult deletable(Integer deletable) {
-        this.deletable = deletable;
-        return this;
-    }
-
-    /**
      * set 对私钥文件使用sha256算法计算的摘要信息
      *
      * @param digest
@@ -325,7 +315,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 绑定的域名
+     * set 备用域名
      *
      * @param relatedDomains
      */
@@ -334,9 +324,19 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+    /**
+     * set 绑定的资源
+     *
+     * @param bindResources
+     */
+    public GetSslCertDetailResult bindResources(List<String> bindResources) {
+        this.bindResources = bindResources;
+        return this;
+    }
+
 
     /**
-     * add item to 绑定的域名
+     * add item to 备用域名
      *
      * @param relatedDomain
      */
@@ -345,6 +345,18 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
             this.relatedDomains = new ArrayList<>();
         }
         this.relatedDomains.add(relatedDomain);
+    }
+
+    /**
+     * add item to 绑定的资源
+     *
+     * @param bindResource
+     */
+    public void addBindResource(String bindResource) {
+        if (this.bindResources == null) {
+            this.bindResources = new ArrayList<>();
+        }
+        this.bindResources.add(bindResource);
     }
 
 }

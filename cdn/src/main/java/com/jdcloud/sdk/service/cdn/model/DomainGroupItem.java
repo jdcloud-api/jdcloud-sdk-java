@@ -54,6 +54,11 @@ public class DomainGroupItem  implements java.io.Serializable {
      */
     private String domainGroupName;
 
+    /**
+     * 域名组id
+     */
+    private Long id;
+
 
     /**
      * get 域名组成员
@@ -127,6 +132,24 @@ public class DomainGroupItem  implements java.io.Serializable {
         this.domainGroupName = domainGroupName;
     }
 
+    /**
+     * get 域名组id
+     *
+     * @return
+     */
+    public Long getId() {
+        return id;
+    }
+
+    /**
+     * set 域名组id
+     *
+     * @param id
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 
     /**
      * set 域名组成员
@@ -165,6 +188,16 @@ public class DomainGroupItem  implements java.io.Serializable {
      */
     public DomainGroupItem domainGroupName(String domainGroupName) {
         this.domainGroupName = domainGroupName;
+        return this;
+    }
+
+    /**
+     * set 域名组id
+     *
+     * @param id
+     */
+    public DomainGroupItem id(Long id) {
+        this.id = id;
         return this;
     }
 

@@ -89,6 +89,11 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     private String scheme;
 
     /**
+     * cacheLevel
+     */
+    private String cacheLevel;
+
+    /**
      * 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
      */
     private String period;
@@ -293,6 +298,24 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
+     * get cacheLevel
+     *
+     * @return
+     */
+    public String getCacheLevel() {
+        return cacheLevel;
+    }
+
+    /**
+     * set cacheLevel
+     *
+     * @param cacheLevel
+     */
+    public void setCacheLevel(String cacheLevel) {
+        this.cacheLevel = cacheLevel;
+    }
+
+    /**
      * get 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
      *
      * @return
@@ -418,6 +441,16 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
      */
     public QueryLiveStatisticsDataRequest scheme(String scheme) {
         this.scheme = scheme;
+        return this;
+    }
+
+    /**
+     * set cacheLevel
+     *
+     * @param cacheLevel
+     */
+    public QueryLiveStatisticsDataRequest cacheLevel(String cacheLevel) {
+        this.cacheLevel = cacheLevel;
         return this;
     }
 

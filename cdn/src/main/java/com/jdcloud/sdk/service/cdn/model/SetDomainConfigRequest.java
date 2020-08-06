@@ -50,6 +50,21 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
     private String jumpType;
 
     /**
+     * dash鉴权相关配置
+     */
+    private String jcdnTimeAnti;
+
+    /**
+     * 回源鉴权相关配置
+     */
+    private String hdrCtrl;
+
+    /**
+     * 头条header配置
+     */
+    private String toutiaoHeader;
+
+    /**
      * 用户域名
      * Required:true
      */
@@ -112,6 +127,60 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * get dash鉴权相关配置
+     *
+     * @return
+     */
+    public String getJcdnTimeAnti() {
+        return jcdnTimeAnti;
+    }
+
+    /**
+     * set dash鉴权相关配置
+     *
+     * @param jcdnTimeAnti
+     */
+    public void setJcdnTimeAnti(String jcdnTimeAnti) {
+        this.jcdnTimeAnti = jcdnTimeAnti;
+    }
+
+    /**
+     * get 回源鉴权相关配置
+     *
+     * @return
+     */
+    public String getHdrCtrl() {
+        return hdrCtrl;
+    }
+
+    /**
+     * set 回源鉴权相关配置
+     *
+     * @param hdrCtrl
+     */
+    public void setHdrCtrl(String hdrCtrl) {
+        this.hdrCtrl = hdrCtrl;
+    }
+
+    /**
+     * get 头条header配置
+     *
+     * @return
+     */
+    public String getToutiaoHeader() {
+        return toutiaoHeader;
+    }
+
+    /**
+     * set 头条header配置
+     *
+     * @param toutiaoHeader
+     */
+    public void setToutiaoHeader(String toutiaoHeader) {
+        this.toutiaoHeader = toutiaoHeader;
+    }
+
+    /**
      * get 用户域名
      *
      * @return
@@ -157,6 +226,36 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
      */
     public SetDomainConfigRequest jumpType(String jumpType) {
         this.jumpType = jumpType;
+        return this;
+    }
+
+    /**
+     * set dash鉴权相关配置
+     *
+     * @param jcdnTimeAnti
+     */
+    public SetDomainConfigRequest jcdnTimeAnti(String jcdnTimeAnti) {
+        this.jcdnTimeAnti = jcdnTimeAnti;
+        return this;
+    }
+
+    /**
+     * set 回源鉴权相关配置
+     *
+     * @param hdrCtrl
+     */
+    public SetDomainConfigRequest hdrCtrl(String hdrCtrl) {
+        this.hdrCtrl = hdrCtrl;
+        return this;
+    }
+
+    /**
+     * set 头条header配置
+     *
+     * @param toutiaoHeader
+     */
+    public SetDomainConfigRequest toutiaoHeader(String toutiaoHeader) {
+        this.toutiaoHeader = toutiaoHeader;
         return this;
     }
 

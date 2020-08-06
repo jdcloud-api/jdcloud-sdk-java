@@ -98,6 +98,11 @@ public class QueryLiveStatisticsAreaDataGroupByRequest extends JdcloudRequest im
      */
     private String reqMethod;
 
+    /**
+     * cacheLevel
+     */
+    private String cacheLevel;
+
 
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -333,6 +338,24 @@ public class QueryLiveStatisticsAreaDataGroupByRequest extends JdcloudRequest im
         this.reqMethod = reqMethod;
     }
 
+    /**
+     * get cacheLevel
+     *
+     * @return
+     */
+    public String getCacheLevel() {
+        return cacheLevel;
+    }
+
+    /**
+     * set cacheLevel
+     *
+     * @param cacheLevel
+     */
+    public void setCacheLevel(String cacheLevel) {
+        this.cacheLevel = cacheLevel;
+    }
+
 
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -461,6 +484,16 @@ public class QueryLiveStatisticsAreaDataGroupByRequest extends JdcloudRequest im
      */
     public QueryLiveStatisticsAreaDataGroupByRequest reqMethod(String reqMethod) {
         this.reqMethod = reqMethod;
+        return this;
+    }
+
+    /**
+     * set cacheLevel
+     *
+     * @param cacheLevel
+     */
+    public QueryLiveStatisticsAreaDataGroupByRequest cacheLevel(String cacheLevel) {
+        this.cacheLevel = cacheLevel;
         return this;
     }
 

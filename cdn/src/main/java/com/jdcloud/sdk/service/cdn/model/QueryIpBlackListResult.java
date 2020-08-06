@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询ip黑名单
+ * 查询ip黑白名单
  */
 public class QueryIpBlackListResult extends JdcloudResult implements java.io.Serializable {
 
@@ -43,12 +43,17 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     /**
      * ips
      */
-    private List<Object> ips;
+    private List<String> ips;
 
     /**
      * 黑名单状态,on:开启,off:关闭
      */
     private String status;
+
+    /**
+     * whiteIps
+     */
+    private List<String> whiteIps;
 
 
     /**
@@ -74,7 +79,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
      *
      * @return
      */
-    public List<Object> getIps() {
+    public List<String> getIps() {
         return ips;
     }
 
@@ -83,7 +88,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
      *
      * @param ips
      */
-    public void setIps(List<Object> ips) {
+    public void setIps(List<String> ips) {
         this.ips = ips;
     }
 
@@ -105,6 +110,24 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
         this.status = status;
     }
 
+    /**
+     * get whiteIps
+     *
+     * @return
+     */
+    public List<String> getWhiteIps() {
+        return whiteIps;
+    }
+
+    /**
+     * set whiteIps
+     *
+     * @param whiteIps
+     */
+    public void setWhiteIps(List<String> whiteIps) {
+        this.whiteIps = whiteIps;
+    }
+
 
     /**
      * set 域名
@@ -121,7 +144,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
      *
      * @param ips
      */
-    public QueryIpBlackListResult ips(List<Object> ips) {
+    public QueryIpBlackListResult ips(List<String> ips) {
         this.ips = ips;
         return this;
     }
@@ -136,17 +159,39 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+    /**
+     * set whiteIps
+     *
+     * @param whiteIps
+     */
+    public QueryIpBlackListResult whiteIps(List<String> whiteIps) {
+        this.whiteIps = whiteIps;
+        return this;
+    }
+
 
     /**
      * add item to ips
      *
      * @param ip
      */
-    public void addIp(Object ip) {
+    public void addIp(String ip) {
         if (this.ips == null) {
             this.ips = new ArrayList<>();
         }
         this.ips.add(ip);
+    }
+
+    /**
+     * add item to whiteIps
+     *
+     * @param whiteIp
+     */
+    public void addWhiteIp(String whiteIp) {
+        if (this.whiteIps == null) {
+            this.whiteIps = new ArrayList<>();
+        }
+        this.whiteIps.add(whiteIp);
     }
 
 }

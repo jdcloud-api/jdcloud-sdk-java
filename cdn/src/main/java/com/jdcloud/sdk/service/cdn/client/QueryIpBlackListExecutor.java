@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.QueryIpBlackListResponse;
 
 /**
- * 查询ip黑名单
+ * 查询ip黑白名单
  */
 class QueryIpBlackListExecutor extends JdcloudExecutor {
 

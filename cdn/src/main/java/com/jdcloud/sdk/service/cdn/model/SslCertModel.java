@@ -45,7 +45,7 @@ public class SslCertModel  implements java.io.Serializable {
     private String certName;
 
     /**
-     * 绑定域名
+     * 主域名
      */
     private String commonName;
 
@@ -75,7 +75,12 @@ public class SslCertModel  implements java.io.Serializable {
     private String digest;
 
     /**
-     * 绑定的域名
+     * 证书别名
+     */
+    private String aliasName;
+
+    /**
+     * 备用域名
      */
     private List<String> relatedDomains;
 
@@ -117,7 +122,7 @@ public class SslCertModel  implements java.io.Serializable {
     }
 
     /**
-     * get 绑定域名
+     * get 主域名
      *
      * @return
      */
@@ -126,7 +131,7 @@ public class SslCertModel  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定域名
+     * set 主域名
      *
      * @param commonName
      */
@@ -225,7 +230,25 @@ public class SslCertModel  implements java.io.Serializable {
     }
 
     /**
-     * get 绑定的域名
+     * get 证书别名
+     *
+     * @return
+     */
+    public String getAliasName() {
+        return aliasName;
+    }
+
+    /**
+     * set 证书别名
+     *
+     * @param aliasName
+     */
+    public void setAliasName(String aliasName) {
+        this.aliasName = aliasName;
+    }
+
+    /**
+     * get 备用域名
      *
      * @return
      */
@@ -234,7 +257,7 @@ public class SslCertModel  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定的域名
+     * set 备用域名
      *
      * @param relatedDomains
      */
@@ -264,7 +287,7 @@ public class SslCertModel  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定域名
+     * set 主域名
      *
      * @param commonName
      */
@@ -324,7 +347,17 @@ public class SslCertModel  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定的域名
+     * set 证书别名
+     *
+     * @param aliasName
+     */
+    public SslCertModel aliasName(String aliasName) {
+        this.aliasName = aliasName;
+        return this;
+    }
+
+    /**
+     * set 备用域名
      *
      * @param relatedDomains
      */
@@ -335,7 +368,7 @@ public class SslCertModel  implements java.io.Serializable {
 
 
     /**
-     * add item to 绑定的域名
+     * add item to 备用域名
      *
      * @param relatedDomain
      */

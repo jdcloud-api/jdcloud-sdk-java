@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询ip黑名单
+ * 查询ip黑白名单
  */
 public class QueryIpBlackListRequest extends JdcloudRequest implements java.io.Serializable {
 
