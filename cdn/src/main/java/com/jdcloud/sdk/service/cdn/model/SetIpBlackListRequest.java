@@ -30,16 +30,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置ip黑名单
+ * 设置ip黑名白单
  */
 public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * ip黑名单,ips中url不能超过50条
+     * ip名单,ips中url不能超过50条
      */
     private List<String> ips;
+
+    /**
+     * ip黑白名单类型，black:黑名单,white:白名单
+     */
+    private String ipListType;
 
     /**
      * 用户域名
@@ -50,7 +55,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get ip黑名单,ips中url不能超过50条
+     * get ip名单,ips中url不能超过50条
      *
      * @return
      */
@@ -59,12 +64,30 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set ip黑名单,ips中url不能超过50条
+     * set ip名单,ips中url不能超过50条
      *
      * @param ips
      */
     public void setIps(List<String> ips) {
         this.ips = ips;
+    }
+
+    /**
+     * get ip黑白名单类型，black:黑名单,white:白名单
+     *
+     * @return
+     */
+    public String getIpListType() {
+        return ipListType;
+    }
+
+    /**
+     * set ip黑白名单类型，black:黑名单,white:白名单
+     *
+     * @param ipListType
+     */
+    public void setIpListType(String ipListType) {
+        this.ipListType = ipListType;
     }
 
     /**
@@ -87,12 +110,22 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set ip黑名单,ips中url不能超过50条
+     * set ip名单,ips中url不能超过50条
      *
      * @param ips
      */
     public SetIpBlackListRequest ips(List<String> ips) {
         this.ips = ips;
+        return this;
+    }
+
+    /**
+     * set ip黑白名单类型，black:黑名单,white:白名单
+     *
+     * @param ipListType
+     */
+    public SetIpBlackListRequest ipListType(String ipListType) {
+        this.ipListType = ipListType;
         return this;
     }
 
@@ -108,7 +141,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * add item to ip黑名单,ips中url不能超过50条
+     * add item to ip名单,ips中url不能超过50条
      *
      * @param ip
      */

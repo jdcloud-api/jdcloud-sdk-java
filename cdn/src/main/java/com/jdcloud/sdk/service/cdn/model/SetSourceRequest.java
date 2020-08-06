@@ -47,6 +47,11 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     private String backSourceType;
 
     /**
+     * 加速区域,必须是[mainland,nonMainland,all]中的一种,分别代表大陆,海外+中国港澳台,全球
+     */
+    private String accelerateRegion;
+
+    /**
      * ipSource
      */
     private List<IpSourceInfo> ipSource;
@@ -108,6 +113,24 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
      */
     public void setBackSourceType(String backSourceType) {
         this.backSourceType = backSourceType;
+    }
+
+    /**
+     * get 加速区域,必须是[mainland,nonMainland,all]中的一种,分别代表大陆,海外+中国港澳台,全球
+     *
+     * @return
+     */
+    public String getAccelerateRegion() {
+        return accelerateRegion;
+    }
+
+    /**
+     * set 加速区域,必须是[mainland,nonMainland,all]中的一种,分别代表大陆,海外+中国港澳台,全球
+     *
+     * @param accelerateRegion
+     */
+    public void setAccelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
     }
 
     /**
@@ -218,6 +241,16 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
      */
     public SetSourceRequest backSourceType(String backSourceType) {
         this.backSourceType = backSourceType;
+        return this;
+    }
+
+    /**
+     * set 加速区域,必须是[mainland,nonMainland,all]中的一种,分别代表大陆,海外+中国港澳台,全球
+     *
+     * @param accelerateRegion
+     */
+    public SetSourceRequest accelerateRegion(String accelerateRegion) {
+        this.accelerateRegion = accelerateRegion;
         return this;
     }
 

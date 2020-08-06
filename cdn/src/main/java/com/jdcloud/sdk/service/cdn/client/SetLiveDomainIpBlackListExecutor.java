@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 直播域名操作类接口
+ * 直播域名配置类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.SetLiveDomainIpBlackListResponse;
 
 /**
- * 设置直播域名ip黑名单
+ * 设置直播域名ip黑白名单
  */
 class SetLiveDomainIpBlackListExecutor extends JdcloudExecutor {
 

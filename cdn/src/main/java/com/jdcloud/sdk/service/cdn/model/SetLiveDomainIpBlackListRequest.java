@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 直播域名操作类接口
+ * 直播域名配置类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -30,16 +30,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置直播域名ip黑名单
+ * 设置直播域名ip黑白名单
  */
 public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * ips
+     * ip名单,ips中url不能超过50条
      */
     private List<String> ips;
+
+    /**
+     * ip黑白名单类型，black:黑名单,white:白名单
+     */
+    private String ipListType;
 
     /**
      * 用户域名
@@ -50,7 +55,7 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
 
 
     /**
-     * get ips
+     * get ip名单,ips中url不能超过50条
      *
      * @return
      */
@@ -59,12 +64,30 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set ips
+     * set ip名单,ips中url不能超过50条
      *
      * @param ips
      */
     public void setIps(List<String> ips) {
         this.ips = ips;
+    }
+
+    /**
+     * get ip黑白名单类型，black:黑名单,white:白名单
+     *
+     * @return
+     */
+    public String getIpListType() {
+        return ipListType;
+    }
+
+    /**
+     * set ip黑白名单类型，black:黑名单,white:白名单
+     *
+     * @param ipListType
+     */
+    public void setIpListType(String ipListType) {
+        this.ipListType = ipListType;
     }
 
     /**
@@ -87,12 +110,22 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
 
 
     /**
-     * set ips
+     * set ip名单,ips中url不能超过50条
      *
      * @param ips
      */
     public SetLiveDomainIpBlackListRequest ips(List<String> ips) {
         this.ips = ips;
+        return this;
+    }
+
+    /**
+     * set ip黑白名单类型，black:黑名单,white:白名单
+     *
+     * @param ipListType
+     */
+    public SetLiveDomainIpBlackListRequest ipListType(String ipListType) {
+        this.ipListType = ipListType;
         return this;
     }
 
@@ -108,7 +141,7 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
 
 
     /**
-     * add item to ips
+     * add item to ip名单,ips中url不能超过50条
      *
      * @param ip
      */

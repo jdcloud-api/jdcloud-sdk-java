@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 设置ip黑名单
+ * 设置ip黑名白单
  */
 public class SetIpBlackListResponse extends JdcloudResponse<SetIpBlackListResult> implements java.io.Serializable {
 
