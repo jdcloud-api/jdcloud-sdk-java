@@ -115,6 +115,9 @@ import com.jdcloud.sdk.service.cdn.client.SetExtraCacheTimeExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryMonitorRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryMonitorResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryMonitorExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryCdnUserQuotaRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryCdnUserQuotaResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryCdnUserQuotaExecutor;
 import com.jdcloud.sdk.service.cdn.model.CheckWhetherIpBelongToJCloudV2Request;
 import com.jdcloud.sdk.service.cdn.model.CheckWhetherIpBelongToJCloudV2Response;
 import com.jdcloud.sdk.service.cdn.client.CheckWhetherIpBelongToJCloudV2Executor;
@@ -921,6 +924,17 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryMonitorResponse queryMonitor(QueryMonitorRequest request) throws JdcloudSdkException {
         return new QueryMonitorExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询用户刷新预热封禁限额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryCdnUserQuotaResponse queryCdnUserQuota(QueryCdnUserQuotaRequest request) throws JdcloudSdkException {
+        return new QueryCdnUserQuotaExecutor().client(this).execute(request);
     }
 
     /**
