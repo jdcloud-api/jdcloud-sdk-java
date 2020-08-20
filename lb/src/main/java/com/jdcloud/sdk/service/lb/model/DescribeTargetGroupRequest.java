@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询TargetGroup详情
+ * 查询TargetGroup详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
  */
 public class DescribeTargetGroupRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -74,6 +74,11 @@ public class TargetGroup  implements java.io.Serializable {
      */
     private List<Target> targets;
 
+    /**
+     * 实例或IP
+     */
+    private String type;
+
 
     /**
      * get TargetGroup的Id
@@ -219,6 +224,24 @@ public class TargetGroup  implements java.io.Serializable {
         this.targets = targets;
     }
 
+    /**
+     * get 实例或IP
+     *
+     * @return
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * set 实例或IP
+     *
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
 
     /**
      * set TargetGroup的Id
@@ -297,6 +320,16 @@ public class TargetGroup  implements java.io.Serializable {
      */
     public TargetGroup targets(List<Target> targets) {
         this.targets = targets;
+        return this;
+    }
+
+    /**
+     * set 实例或IP
+     *
+     * @param type
+     */
+    public TargetGroup type(String type) {
+        this.type = type;
         return this;
     }
 

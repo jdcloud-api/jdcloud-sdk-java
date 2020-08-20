@@ -55,6 +55,11 @@ cabinetId - 机柜ID，精确匹配，支持多个
     private List<Filter> filters;
 
     /**
+     * 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
+     */
+    private String cabinetOpenStatus;
+
+    /**
      * IDC机房ID
      * Required:true
      */
@@ -121,6 +126,24 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
+     * get 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
+     *
+     * @return
+     */
+    public String getCabinetOpenStatus() {
+        return cabinetOpenStatus;
+    }
+
+    /**
+     * set 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
+     *
+     * @param cabinetOpenStatus
+     */
+    public void setCabinetOpenStatus(String cabinetOpenStatus) {
+        this.cabinetOpenStatus = cabinetOpenStatus;
+    }
+
+    /**
      * get IDC机房ID
      *
      * @return
@@ -168,6 +191,16 @@ cabinetId - 机柜ID，精确匹配，支持多个
      */
     public DescribeCabinetsRequest filters(List<Filter> filters) {
         this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
+     *
+     * @param cabinetOpenStatus
+     */
+    public DescribeCabinetsRequest cabinetOpenStatus(String cabinetOpenStatus) {
+        this.cabinetOpenStatus = cabinetOpenStatus;
         return this;
     }
 

@@ -39,14 +39,14 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     private String lbType;
 
     /**
-     * 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)
+     * 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
      * Required:true
      */
     @Required
     private String type;
 
     /**
-     * type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId
+     * type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId,type为extensionCertificate设置为listenerId
      */
     private String parentResourceId;
 
@@ -77,7 +77,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)
+     * get 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)
+     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
      *
      * @param type
      */
@@ -95,7 +95,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * get type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId
+     * get type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId,type为extensionCertificate设置为listenerId
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId
+     * set type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId,type为extensionCertificate设置为listenerId
      *
      * @param parentResourceId
      */
@@ -142,7 +142,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)
+     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
      *
      * @param type
      */
@@ -152,7 +152,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId
+     * set type为loadbalancer不设置, type为listener、backend、target_group、urlMap设置为loadbalancerId, type为target设置为targetGroupId, type为rules设置为urlMapId,type为extensionCertificate设置为listenerId
      *
      * @param parentResourceId
      */

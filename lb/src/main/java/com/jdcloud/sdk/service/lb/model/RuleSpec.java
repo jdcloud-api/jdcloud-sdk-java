@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.lb.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * ruleSpec
@@ -44,16 +43,19 @@ public class RuleSpec  implements java.io.Serializable {
     private String path;
 
     /**
-     * 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+     * 匹配转发规则后执行的动作，取值为Forward或Redirect。默认为Forward
      */
     private String action;
 
     /**
-     * 后端服务的Id
-     * Required:true
+     * 后端服务的Id。当action选择Forward时需配置本参数
      */
-    @Required
     private String backendId;
+
+    /**
+     * 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+     */
+    private RedirectActionSpec redirectActionSpec;
 
 
     /**
@@ -93,7 +95,7 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+     * get 匹配转发规则后执行的动作，取值为Forward或Redirect。默认为Forward
      *
      * @return
      */
@@ -102,7 +104,7 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+     * set 匹配转发规则后执行的动作，取值为Forward或Redirect。默认为Forward
      *
      * @param action
      */
@@ -111,7 +113,7 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 后端服务的Id
+     * get 后端服务的Id。当action选择Forward时需配置本参数
      *
      * @return
      */
@@ -120,12 +122,30 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 后端服务的Id
+     * set 后端服务的Id。当action选择Forward时需配置本参数
      *
      * @param backendId
      */
     public void setBackendId(String backendId) {
         this.backendId = backendId;
+    }
+
+    /**
+     * get 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+     *
+     * @return
+     */
+    public RedirectActionSpec getRedirectActionSpec() {
+        return redirectActionSpec;
+    }
+
+    /**
+     * set 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+     *
+     * @param redirectActionSpec
+     */
+    public void setRedirectActionSpec(RedirectActionSpec redirectActionSpec) {
+        this.redirectActionSpec = redirectActionSpec;
     }
 
 
@@ -150,7 +170,7 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+     * set 匹配转发规则后执行的动作，取值为Forward或Redirect。默认为Forward
      *
      * @param action
      */
@@ -160,12 +180,22 @@ public class RuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 后端服务的Id
+     * set 后端服务的Id。当action选择Forward时需配置本参数
      *
      * @param backendId
      */
     public RuleSpec backendId(String backendId) {
         this.backendId = backendId;
+        return this;
+    }
+
+    /**
+     * set 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+     *
+     * @param redirectActionSpec
+     */
+    public RuleSpec redirectActionSpec(RedirectActionSpec redirectActionSpec) {
+        this.redirectActionSpec = redirectActionSpec;
         return this;
     }
 

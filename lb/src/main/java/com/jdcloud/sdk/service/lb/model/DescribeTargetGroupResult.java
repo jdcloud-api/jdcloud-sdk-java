@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.lb.model.TargetGroup;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询TargetGroup详情
+ * 查询TargetGroup详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
  */
 public class DescribeTargetGroupResult extends JdcloudResult implements java.io.Serializable {
 

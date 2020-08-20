@@ -92,6 +92,31 @@ public class Ticket  implements java.io.Serializable {
      */
     private String idcName;
 
+    /**
+     * 通用服务工单申请数量
+     */
+    private Integer count;
+
+    /**
+     * 是否是商业化外部机房
+     */
+    private Boolean isExternalIdc;
+
+    /**
+     * 外部机房地址
+     */
+    private String externalIdcAddress;
+
+    /**
+     * 外部机房联系人
+     */
+    private String externalIdcContactPerson;
+
+    /**
+     * 外部机房联系电话
+     */
+    private String externalIdcContactPhone;
+
 
     /**
      * get 工单编号
@@ -309,6 +334,96 @@ public class Ticket  implements java.io.Serializable {
         this.idcName = idcName;
     }
 
+    /**
+     * get 通用服务工单申请数量
+     *
+     * @return
+     */
+    public Integer getCount() {
+        return count;
+    }
+
+    /**
+     * set 通用服务工单申请数量
+     *
+     * @param count
+     */
+    public void setCount(Integer count) {
+        this.count = count;
+    }
+
+    /**
+     * get 是否是商业化外部机房
+     *
+     * @return
+     */
+    public Boolean getIsExternalIdc() {
+        return isExternalIdc;
+    }
+
+    /**
+     * set 是否是商业化外部机房
+     *
+     * @param isExternalIdc
+     */
+    public void setIsExternalIdc(Boolean isExternalIdc) {
+        this.isExternalIdc = isExternalIdc;
+    }
+
+    /**
+     * get 外部机房地址
+     *
+     * @return
+     */
+    public String getExternalIdcAddress() {
+        return externalIdcAddress;
+    }
+
+    /**
+     * set 外部机房地址
+     *
+     * @param externalIdcAddress
+     */
+    public void setExternalIdcAddress(String externalIdcAddress) {
+        this.externalIdcAddress = externalIdcAddress;
+    }
+
+    /**
+     * get 外部机房联系人
+     *
+     * @return
+     */
+    public String getExternalIdcContactPerson() {
+        return externalIdcContactPerson;
+    }
+
+    /**
+     * set 外部机房联系人
+     *
+     * @param externalIdcContactPerson
+     */
+    public void setExternalIdcContactPerson(String externalIdcContactPerson) {
+        this.externalIdcContactPerson = externalIdcContactPerson;
+    }
+
+    /**
+     * get 外部机房联系电话
+     *
+     * @return
+     */
+    public String getExternalIdcContactPhone() {
+        return externalIdcContactPhone;
+    }
+
+    /**
+     * set 外部机房联系电话
+     *
+     * @param externalIdcContactPhone
+     */
+    public void setExternalIdcContactPhone(String externalIdcContactPhone) {
+        this.externalIdcContactPhone = externalIdcContactPhone;
+    }
+
 
     /**
      * set 工单编号
@@ -427,6 +542,56 @@ public class Ticket  implements java.io.Serializable {
      */
     public Ticket idcName(String idcName) {
         this.idcName = idcName;
+        return this;
+    }
+
+    /**
+     * set 通用服务工单申请数量
+     *
+     * @param count
+     */
+    public Ticket count(Integer count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
+     * set 是否是商业化外部机房
+     *
+     * @param isExternalIdc
+     */
+    public Ticket isExternalIdc(Boolean isExternalIdc) {
+        this.isExternalIdc = isExternalIdc;
+        return this;
+    }
+
+    /**
+     * set 外部机房地址
+     *
+     * @param externalIdcAddress
+     */
+    public Ticket externalIdcAddress(String externalIdcAddress) {
+        this.externalIdcAddress = externalIdcAddress;
+        return this;
+    }
+
+    /**
+     * set 外部机房联系人
+     *
+     * @param externalIdcContactPerson
+     */
+    public Ticket externalIdcContactPerson(String externalIdcContactPerson) {
+        this.externalIdcContactPerson = externalIdcContactPerson;
+        return this;
+    }
+
+    /**
+     * set 外部机房联系电话
+     *
+     * @param externalIdcContactPhone
+     */
+    public Ticket externalIdcContactPhone(String externalIdcContactPhone) {
+        this.externalIdcContactPhone = externalIdcContactPhone;
         return this;
     }
 

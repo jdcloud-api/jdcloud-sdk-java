@@ -90,7 +90,7 @@ public class Listener  implements java.io.Serializable {
     private Integer connectionIdleTimeSeconds;
 
     /**
-     * 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
      */
     private List<CertificateSpec> certificateSpecs;
 
@@ -103,6 +103,11 @@ public class Listener  implements java.io.Serializable {
      * Listener的创建时间
      */
     private String createdTime;
+
+    /**
+     * 【alb Https和Tls协议】Listener绑定的扩展证书列表
+     */
+    private List<ExtensionCertificateSpec> extensionCertificateSpecs;
 
 
     /**
@@ -304,7 +309,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * get 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * get 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
      *
      * @return
      */
@@ -313,7 +318,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
      *
      * @param certificateSpecs
      */
@@ -355,6 +360,24 @@ public class Listener  implements java.io.Serializable {
      */
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
+    }
+
+    /**
+     * get 【alb Https和Tls协议】Listener绑定的扩展证书列表
+     *
+     * @return
+     */
+    public List<ExtensionCertificateSpec> getExtensionCertificateSpecs() {
+        return extensionCertificateSpecs;
+    }
+
+    /**
+     * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
+     *
+     * @param extensionCertificateSpecs
+     */
+    public void setExtensionCertificateSpecs(List<ExtensionCertificateSpec> extensionCertificateSpecs) {
+        this.extensionCertificateSpecs = extensionCertificateSpecs;
     }
 
 
@@ -469,7 +492,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
      *
      * @param certificateSpecs
      */
@@ -498,9 +521,19 @@ public class Listener  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 【alb Https和Tls协议】Listener绑定的扩展证书列表
+     *
+     * @param extensionCertificateSpecs
+     */
+    public Listener extensionCertificateSpecs(List<ExtensionCertificateSpec> extensionCertificateSpecs) {
+        this.extensionCertificateSpecs = extensionCertificateSpecs;
+        return this;
+    }
+
 
     /**
-     * add item to 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * add item to 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
      *
      * @param certificateSpec
      */
@@ -509,6 +542,18 @@ public class Listener  implements java.io.Serializable {
             this.certificateSpecs = new ArrayList<>();
         }
         this.certificateSpecs.add(certificateSpec);
+    }
+
+    /**
+     * add item to 【alb Https和Tls协议】Listener绑定的扩展证书列表
+     *
+     * @param extensionCertificateSpec
+     */
+    public void addExtensionCertificateSpec(ExtensionCertificateSpec extensionCertificateSpec) {
+        if (this.extensionCertificateSpecs == null) {
+            this.extensionCertificateSpecs = new ArrayList<>();
+        }
+        this.extensionCertificateSpecs.add(extensionCertificateSpec);
     }
 
 }

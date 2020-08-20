@@ -63,12 +63,12 @@ public class HealthCheckSpec  implements java.io.Serializable {
     private Integer intervalSeconds;
 
     /**
-     * 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端服务器接收负载均衡流量的端口
+     * 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
      */
     private Integer port;
 
     /**
-     * 检查域名，仅支持HTTP协议
+     * 检查域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      */
     private String httpDomain;
 
@@ -78,7 +78,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     private String httpPath;
 
     /**
-     * 检查来自后端服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+     * 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
      */
     private List<String> httpCode;
 
@@ -174,7 +174,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端服务器接收负载均衡流量的端口
+     * get 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
      *
      * @return
      */
@@ -183,7 +183,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端服务器接收负载均衡流量的端口
+     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
      *
      * @param port
      */
@@ -192,7 +192,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 检查域名，仅支持HTTP协议
+     * get 检查域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @return
      */
@@ -201,7 +201,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 检查域名，仅支持HTTP协议
+     * set 检查域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @param httpDomain
      */
@@ -228,7 +228,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 检查来自后端服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+     * get 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
      *
      * @return
      */
@@ -237,7 +237,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 检查来自后端服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+     * set 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
      *
      * @param httpCode
      */
@@ -297,7 +297,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端服务器接收负载均衡流量的端口
+     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
      *
      * @param port
      */
@@ -307,7 +307,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 检查域名，仅支持HTTP协议
+     * set 检查域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @param httpDomain
      */
@@ -327,7 +327,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 检查来自后端服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+     * set 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
      *
      * @param httpCode
      */
@@ -338,7 +338,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 检查来自后端服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
+     * add item to 检查来自后端目标服务器的成功响应时，要使用的HTTP状态码。您可以指定单个数值（例如：&quot;200&quot;，取值范围200-499）、一段连续数值（例如：&quot;201-205&quot;，取值范围范围200-499，且前面的参数小于后面）和一类连续数值缩写（例如：&quot;3xx&quot;，等价于&quot;300-399&quot;，取值范围2xx、3xx和4xx）。多个数值之间通过&quot;,&quot;分割（例如：&quot;200,202-207,302,4xx&quot;）。目前仅支持2xx、3xx、4xx。仅支持HTTP协议，默认为[2xx、3xx]
      *
      * @param httpCode
      */

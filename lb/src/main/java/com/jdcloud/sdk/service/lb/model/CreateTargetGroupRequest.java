@@ -54,6 +54,11 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
     private String description;
 
     /**
+     * 类型，取值为instance或ip
+     */
+    private String type;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -116,6 +121,24 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
     }
 
     /**
+     * get 类型，取值为instance或ip
+     *
+     * @return
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * set 类型，取值为instance或ip
+     *
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -161,6 +184,16 @@ public class CreateTargetGroupRequest extends JdcloudRequest implements java.io.
      */
     public CreateTargetGroupRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 类型，取值为instance或ip
+     *
+     * @param type
+     */
+    public CreateTargetGroupRequest type(String type) {
+        this.type = type;
         return this;
     }
 

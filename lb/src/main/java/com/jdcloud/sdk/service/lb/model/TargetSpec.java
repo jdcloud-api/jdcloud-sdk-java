@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.lb.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * targetSpec
@@ -34,30 +33,33 @@ public class TargetSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Target所属实例的Id  &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例仅允许一个端口提供服务。
-     * Required:true
+     * Target所属实例的Id，只有type为vm或container时此项才需要
      */
-    @Required
     private String instanceId;
 
     /**
-     * Target所属的type，取值为vm或container，默认为vm。
+     * Target所属的type，取值为vm、container或ip，默认为vm。vm和container类型对应服务器组的instance类型，ip类型对应服务器组的ip类型。
      */
     private String type;
 
     /**
-     * Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+     * Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      */
     private Integer port;
 
     /**
-     * Target的权重，取值范围：1-100 ，默认为10。
+     * 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      */
     private Integer weight;
 
+    /**
+     * Target的ip地址。仅当type为ip时，此项必须配置。
+     */
+    private String ipAddress;
+
 
     /**
-     * get Target所属实例的Id  &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例仅允许一个端口提供服务。
+     * get Target所属实例的Id，只有type为vm或container时此项才需要
      *
      * @return
      */
@@ -66,7 +68,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属实例的Id  &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例仅允许一个端口提供服务。
+     * set Target所属实例的Id，只有type为vm或container时此项才需要
      *
      * @param instanceId
      */
@@ -75,7 +77,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * get Target所属的type，取值为vm或container，默认为vm。
+     * get Target所属的type，取值为vm、container或ip，默认为vm。vm和container类型对应服务器组的instance类型，ip类型对应服务器组的ip类型。
      *
      * @return
      */
@@ -84,7 +86,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属的type，取值为vm或container，默认为vm。
+     * set Target所属的type，取值为vm、container或ip，默认为vm。vm和container类型对应服务器组的instance类型，ip类型对应服务器组的ip类型。
      *
      * @param type
      */
@@ -93,7 +95,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+     * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @return
      */
@@ -102,7 +104,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @param port
      */
@@ -111,7 +113,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * get Target的权重，取值范围：1-100 ，默认为10。
+     * get 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
      * @return
      */
@@ -120,7 +122,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target的权重，取值范围：1-100 ，默认为10。
+     * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
      * @param weight
      */
@@ -128,9 +130,27 @@ public class TargetSpec  implements java.io.Serializable {
         this.weight = weight;
     }
 
+    /**
+     * get Target的ip地址。仅当type为ip时，此项必须配置。
+     *
+     * @return
+     */
+    public String getIpAddress() {
+        return ipAddress;
+    }
 
     /**
-     * set Target所属实例的Id  &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例仅允许一个端口提供服务。
+     * set Target的ip地址。仅当type为ip时，此项必须配置。
+     *
+     * @param ipAddress
+     */
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
+    }
+
+
+    /**
+     * set Target所属实例的Id，只有type为vm或container时此项才需要
      *
      * @param instanceId
      */
@@ -140,7 +160,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属的type，取值为vm或container，默认为vm。
+     * set Target所属的type，取值为vm、container或ip，默认为vm。vm和container类型对应服务器组的instance类型，ip类型对应服务器组的ip类型。
      *
      * @param type
      */
@@ -150,7 +170,7 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @param port
      */
@@ -160,12 +180,22 @@ public class TargetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target的权重，取值范围：1-100 ，默认为10。
+     * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
      * @param weight
      */
     public TargetSpec weight(Integer weight) {
         this.weight = weight;
+        return this;
+    }
+
+    /**
+     * set Target的ip地址。仅当type为ip时，此项必须配置。
+     *
+     * @param ipAddress
+     */
+    public TargetSpec ipAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
         return this;
     }
 

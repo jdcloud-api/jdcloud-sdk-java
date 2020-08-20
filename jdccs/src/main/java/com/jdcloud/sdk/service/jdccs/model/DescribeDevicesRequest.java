@@ -60,6 +60,11 @@ snNo - 设备SN号，精确匹配，支持多个
     private List<Filter> filters;
 
     /**
+     * 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+     */
+    private String deviceType;
+
+    /**
      * IDC机房ID
      * Required:true
      */
@@ -144,6 +149,24 @@ snNo - 设备SN号，精确匹配，支持多个
     }
 
     /**
+     * get 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+     *
+     * @return
+     */
+    public String getDeviceType() {
+        return deviceType;
+    }
+
+    /**
+     * set 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+     *
+     * @param deviceType
+     */
+    public void setDeviceType(String deviceType) {
+        this.deviceType = deviceType;
+    }
+
+    /**
      * get IDC机房ID
      *
      * @return
@@ -201,6 +224,16 @@ snNo - 设备SN号，精确匹配，支持多个
      */
     public DescribeDevicesRequest filters(List<Filter> filters) {
         this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+     *
+     * @param deviceType
+     */
+    public DescribeDevicesRequest deviceType(String deviceType) {
+        this.deviceType = deviceType;
         return this;
     }
 

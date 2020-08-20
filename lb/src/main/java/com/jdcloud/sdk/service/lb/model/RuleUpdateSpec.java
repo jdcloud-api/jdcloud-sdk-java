@@ -34,7 +34,7 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * rule Id
+     * rule资源Id
      * Required:true
      */
     @Required
@@ -51,18 +51,23 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     private String path;
 
     /**
-     * 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+     * 匹配转发规则后执行的动作，取值为Forward或Redirect
      */
     private String action;
 
     /**
-     * 后端服务的Id
+     * 后端服务的Id。当action选择Forward时需配置本参数
      */
     private String backendId;
 
+    /**
+     * 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+     */
+    private RedirectActionSpec redirectActionSpec;
+
 
     /**
-     * get rule Id
+     * get rule资源Id
      *
      * @return
      */
@@ -71,7 +76,7 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set rule Id
+     * set rule资源Id
      *
      * @param ruleId
      */
@@ -116,7 +121,7 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+     * get 匹配转发规则后执行的动作，取值为Forward或Redirect
      *
      * @return
      */
@@ -125,7 +130,7 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+     * set 匹配转发规则后执行的动作，取值为Forward或Redirect
      *
      * @param action
      */
@@ -134,7 +139,7 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 后端服务的Id
+     * get 后端服务的Id。当action选择Forward时需配置本参数
      *
      * @return
      */
@@ -143,7 +148,7 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 后端服务的Id
+     * set 后端服务的Id。当action选择Forward时需配置本参数
      *
      * @param backendId
      */
@@ -151,9 +156,27 @@ public class RuleUpdateSpec  implements java.io.Serializable {
         this.backendId = backendId;
     }
 
+    /**
+     * get 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+     *
+     * @return
+     */
+    public RedirectActionSpec getRedirectActionSpec() {
+        return redirectActionSpec;
+    }
 
     /**
-     * set rule Id
+     * set 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+     *
+     * @param redirectActionSpec
+     */
+    public void setRedirectActionSpec(RedirectActionSpec redirectActionSpec) {
+        this.redirectActionSpec = redirectActionSpec;
+    }
+
+
+    /**
+     * set rule资源Id
      *
      * @param ruleId
      */
@@ -183,7 +206,7 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配转发规则后执行的动作，取值为Forward或Redirect。现只支持Forward，表示转发到指定后端服务, 默认为Forward
+     * set 匹配转发规则后执行的动作，取值为Forward或Redirect
      *
      * @param action
      */
@@ -193,12 +216,22 @@ public class RuleUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 后端服务的Id
+     * set 后端服务的Id。当action选择Forward时需配置本参数
      *
      * @param backendId
      */
     public RuleUpdateSpec backendId(String backendId) {
         this.backendId = backendId;
+        return this;
+    }
+
+    /**
+     * set 重定向动作配置。当action选择Redirect时需配置本参数，且重定向配置参数protocol、port、host、path和query至少配置其一
+     *
+     * @param redirectActionSpec
+     */
+    public RuleUpdateSpec redirectActionSpec(RedirectActionSpec redirectActionSpec) {
+        this.redirectActionSpec = redirectActionSpec;
         return this;
     }
 

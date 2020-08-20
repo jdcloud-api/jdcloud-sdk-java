@@ -24,7 +24,7 @@
 
 package com.jdcloud.sdk.service.kms.model;
 
-import com.jdcloud.sdk.service.kms.model.SecretVersionItem;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,37 +35,173 @@ public class DescribeSecretVersionInfoResult extends JdcloudResult implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * secretVersionItem
+     * 版本标识
+     * Required:true
      */
-    private SecretVersionItem secretVersionItem;
+    @Required
+    private String secretVersion;
+
+    /**
+     * Secret当前状态: 0: 已启用、1: 已禁用
+     */
+    private Integer secretStatus;
+
+    /**
+     * Secret激活时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+     */
+    private String startTime;
+
+    /**
+     * 到期时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+     */
+    private String expireTime;
+
+    /**
+     * 密钥的内容
+     * Required:true
+     */
+    @Required
+    private String secretData;
 
 
     /**
-     * get secretVersionItem
+     * get 版本标识
      *
      * @return
      */
-    public SecretVersionItem getSecretVersionItem() {
-        return secretVersionItem;
+    public String getSecretVersion() {
+        return secretVersion;
     }
 
     /**
-     * set secretVersionItem
+     * set 版本标识
      *
-     * @param secretVersionItem
+     * @param secretVersion
      */
-    public void setSecretVersionItem(SecretVersionItem secretVersionItem) {
-        this.secretVersionItem = secretVersionItem;
+    public void setSecretVersion(String secretVersion) {
+        this.secretVersion = secretVersion;
+    }
+
+    /**
+     * get Secret当前状态: 0: 已启用、1: 已禁用
+     *
+     * @return
+     */
+    public Integer getSecretStatus() {
+        return secretStatus;
+    }
+
+    /**
+     * set Secret当前状态: 0: 已启用、1: 已禁用
+     *
+     * @param secretStatus
+     */
+    public void setSecretStatus(Integer secretStatus) {
+        this.secretStatus = secretStatus;
+    }
+
+    /**
+     * get Secret激活时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @return
+     */
+    public String getStartTime() {
+        return startTime;
+    }
+
+    /**
+     * set Secret激活时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param startTime
+     */
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * get 到期时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @return
+     */
+    public String getExpireTime() {
+        return expireTime;
+    }
+
+    /**
+     * set 到期时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param expireTime
+     */
+    public void setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+    }
+
+    /**
+     * get 密钥的内容
+     *
+     * @return
+     */
+    public String getSecretData() {
+        return secretData;
+    }
+
+    /**
+     * set 密钥的内容
+     *
+     * @param secretData
+     */
+    public void setSecretData(String secretData) {
+        this.secretData = secretData;
     }
 
 
     /**
-     * set secretVersionItem
+     * set 版本标识
      *
-     * @param secretVersionItem
+     * @param secretVersion
      */
-    public DescribeSecretVersionInfoResult secretVersionItem(SecretVersionItem secretVersionItem) {
-        this.secretVersionItem = secretVersionItem;
+    public DescribeSecretVersionInfoResult secretVersion(String secretVersion) {
+        this.secretVersion = secretVersion;
+        return this;
+    }
+
+    /**
+     * set Secret当前状态: 0: 已启用、1: 已禁用
+     *
+     * @param secretStatus
+     */
+    public DescribeSecretVersionInfoResult secretStatus(Integer secretStatus) {
+        this.secretStatus = secretStatus;
+        return this;
+    }
+
+    /**
+     * set Secret激活时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param startTime
+     */
+    public DescribeSecretVersionInfoResult startTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+
+    /**
+     * set 到期时间，采用ISO8601标准，格式为: YYYY-MM-DDTHH:mm:ssZ
+     *
+     * @param expireTime
+     */
+    public DescribeSecretVersionInfoResult expireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+
+    /**
+     * set 密钥的内容
+     *
+     * @param secretData
+     */
+    public DescribeSecretVersionInfoResult secretData(String secretData) {
+        this.secretData = secretData;
         return this;
     }
 
