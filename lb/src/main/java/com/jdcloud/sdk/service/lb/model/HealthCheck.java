@@ -65,7 +65,7 @@ public class HealthCheck  implements java.io.Serializable {
     private Integer port;
 
     /**
-     * 【Http协议】检查域名
+     * 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      */
     private String httpDomain;
 
@@ -189,7 +189,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * get 【Http协议】检查域名
+     * get 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @return
      */
@@ -198,7 +198,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * set 【Http协议】检查域名
+     * set 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @param httpDomain
      */
@@ -304,7 +304,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * set 【Http协议】检查域名
+     * set 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @param httpDomain
      */

@@ -34,15 +34,27 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.ossopenapi.model.GetSingleBucketCapacityRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.GetSingleBucketCapacityResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.GetSingleBucketCapacityExecutor;
+import com.jdcloud.sdk.service.ossopenapi.model.ListHistoricalReplicatTasksRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.ListHistoricalReplicatTasksResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.ListHistoricalReplicatTasksExecutor;
+import com.jdcloud.sdk.service.ossopenapi.model.GetHistoricalReplicatTaskRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.GetHistoricalReplicatTaskResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.GetHistoricalReplicatTaskExecutor;
+import com.jdcloud.sdk.service.ossopenapi.model.DeleteBackSourceConfigurationRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.DeleteBackSourceConfigurationResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.DeleteBackSourceConfigurationExecutor;
+import com.jdcloud.sdk.service.ossopenapi.model.AbortHistoricalReplicatTaskRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.AbortHistoricalReplicatTaskResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.AbortHistoricalReplicatTaskExecutor;
+import com.jdcloud.sdk.service.ossopenapi.model.CreateHistoricalReplicatTaskRequest;
+import com.jdcloud.sdk.service.ossopenapi.model.CreateHistoricalReplicatTaskResponse;
+import com.jdcloud.sdk.service.ossopenapi.client.CreateHistoricalReplicatTaskExecutor;
 import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.GetBackSourceConfigurationResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.GetBackSourceConfigurationExecutor;
 import com.jdcloud.sdk.service.ossopenapi.model.PutBackSourceConfigurationRequest;
 import com.jdcloud.sdk.service.ossopenapi.model.PutBackSourceConfigurationResponse;
 import com.jdcloud.sdk.service.ossopenapi.client.PutBackSourceConfigurationExecutor;
-import com.jdcloud.sdk.service.ossopenapi.model.DeleteBackSourceConfigurationRequest;
-import com.jdcloud.sdk.service.ossopenapi.model.DeleteBackSourceConfigurationResponse;
-import com.jdcloud.sdk.service.ossopenapi.client.DeleteBackSourceConfigurationExecutor;
 
 /**
  * ossopenapiClient
@@ -51,7 +63,7 @@ public class OssopenapiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "ossopenapi.jdcloud-api.com";
     public final static String ServiceName = "ossopenapi";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -105,6 +117,61 @@ public class OssopenapiClient extends JdcloudClient {
     }
 
     /**
+     * 根据bucket名称获取该bucket下的同步任务列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListHistoricalReplicatTasksResponse listHistoricalReplicatTasks(ListHistoricalReplicatTasksRequest request) throws JdcloudSdkException {
+        return new ListHistoricalReplicatTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据bucket名称获取该bucket下的同步任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetHistoricalReplicatTaskResponse getHistoricalReplicatTask(GetHistoricalReplicatTaskRequest request) throws JdcloudSdkException {
+        return new GetHistoricalReplicatTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除回源配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteBackSourceConfigurationResponse deleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) throws JdcloudSdkException {
+        return new DeleteBackSourceConfigurationExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止bucket名称获取该bucket下的同步任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AbortHistoricalReplicatTaskResponse abortHistoricalReplicatTask(AbortHistoricalReplicatTaskRequest request) throws JdcloudSdkException {
+        return new AbortHistoricalReplicatTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建历史同步任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateHistoricalReplicatTaskResponse createHistoricalReplicatTask(CreateHistoricalReplicatTaskRequest request) throws JdcloudSdkException {
+        return new CreateHistoricalReplicatTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取回源配置
      *
      * @param request
@@ -124,17 +191,6 @@ public class OssopenapiClient extends JdcloudClient {
      */
     public PutBackSourceConfigurationResponse putBackSourceConfiguration(PutBackSourceConfigurationRequest request) throws JdcloudSdkException {
         return new PutBackSourceConfigurationExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除回源配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteBackSourceConfigurationResponse deleteBackSourceConfiguration(DeleteBackSourceConfigurationRequest request) throws JdcloudSdkException {
-        return new DeleteBackSourceConfigurationExecutor().client(this).execute(request);
     }
 
 

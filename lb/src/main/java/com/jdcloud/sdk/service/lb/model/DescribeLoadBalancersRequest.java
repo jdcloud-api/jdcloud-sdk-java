@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.lb.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.lb.model.TagFilter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -55,6 +56,11 @@ vpcId - 负载均衡所在Vpc的Id，支持单个
 
      */
     private List<Filter> filters;
+
+    /**
+     * Tag筛选条件
+     */
+    private List<TagFilter> tags;
 
     /**
      * Region ID
@@ -127,6 +133,24 @@ vpcId - 负载均衡所在Vpc的Id，支持单个
     }
 
     /**
+     * get Tag筛选条件
+     *
+     * @return
+     */
+    public List<TagFilter> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public void setTags(List<TagFilter> tags) {
+        this.tags = tags;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -180,6 +204,16 @@ vpcId - 负载均衡所在Vpc的Id，支持单个
     }
 
     /**
+     * set Tag筛选条件
+     *
+     * @param tags
+     */
+    public DescribeLoadBalancersRequest tags(List<TagFilter> tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
      * set Region ID
      *
      * @param regionId
@@ -204,6 +238,18 @@ vpcId - 负载均衡所在Vpc的Id，支持单个
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to Tag筛选条件
+     *
+     * @param tag
+     */
+    public void addTag(TagFilter tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }

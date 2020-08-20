@@ -76,7 +76,7 @@ public class LoadBalancer  implements java.io.Serializable {
     private List<String> securityGroupIds;
 
     /**
-     * LoadBalancer的IP地址信息
+     * 描述LB的私有对象信息
      */
     private PrivateIpAddress privateIp;
 
@@ -84,6 +84,11 @@ public class LoadBalancer  implements java.io.Serializable {
      * 计费配置
      */
     private Charge charge;
+
+    /**
+     * tag信息
+     */
+    private List<Tag> tags;
 
     /**
      * LoadBalancer的描述信息
@@ -246,7 +251,7 @@ public class LoadBalancer  implements java.io.Serializable {
     }
 
     /**
-     * get LoadBalancer的IP地址信息
+     * get 描述LB的私有对象信息
      *
      * @return
      */
@@ -255,7 +260,7 @@ public class LoadBalancer  implements java.io.Serializable {
     }
 
     /**
-     * set LoadBalancer的IP地址信息
+     * set 描述LB的私有对象信息
      *
      * @param privateIp
      */
@@ -279,6 +284,24 @@ public class LoadBalancer  implements java.io.Serializable {
      */
     public void setCharge(Charge charge) {
         this.charge = charge;
+    }
+
+    /**
+     * get tag信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set tag信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
     }
 
     /**
@@ -417,7 +440,7 @@ public class LoadBalancer  implements java.io.Serializable {
     }
 
     /**
-     * set LoadBalancer的IP地址信息
+     * set 描述LB的私有对象信息
      *
      * @param privateIp
      */
@@ -433,6 +456,16 @@ public class LoadBalancer  implements java.io.Serializable {
      */
     public LoadBalancer charge(Charge charge) {
         this.charge = charge;
+        return this;
+    }
+
+    /**
+     * set tag信息
+     *
+     * @param tags
+     */
+    public LoadBalancer tags(List<Tag> tags) {
+        this.tags = tags;
         return this;
     }
 
@@ -489,6 +522,18 @@ public class LoadBalancer  implements java.io.Serializable {
             this.securityGroupIds = new ArrayList<>();
         }
         this.securityGroupIds.add(securityGroupId);
+    }
+
+    /**
+     * add item to tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }

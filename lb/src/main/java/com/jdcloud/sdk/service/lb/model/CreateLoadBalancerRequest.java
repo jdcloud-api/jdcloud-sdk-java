@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 import com.jdcloud.sdk.service.vpc.model.ElasticIpSpec;
+import com.jdcloud.sdk.service.lb.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -88,6 +89,11 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
      * 删除保护，取值为True(开启)或False(关闭)，默认为False
      */
     private Boolean deleteProtection;
+
+    /**
+     * 用户tag 信息
+     */
+    private List<Tag> userTags;
 
     /**
      * Region ID
@@ -260,6 +266,24 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 用户tag 信息
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户tag 信息
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -369,6 +393,16 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * set 用户tag 信息
+     *
+     * @param userTags
+     */
+    public CreateLoadBalancerRequest userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+    /**
      * set Region ID
      *
      * @param regionId
@@ -401,6 +435,18 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
             this.securityGroupIds = new ArrayList<>();
         }
         this.securityGroupIds.add(securityGroupId);
+    }
+
+    /**
+     * add item to 用户tag 信息
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 
 }

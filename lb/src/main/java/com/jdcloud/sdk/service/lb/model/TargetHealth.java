@@ -43,29 +43,34 @@ public class TargetHealth  implements java.io.Serializable {
     private String agId;
 
     /**
-     * Target所属实例的Id
+     * Target所属实例的Id（type为vm或container时显示）
      */
     private String instanceId;
 
     /**
-     * Target所属的type，取值为vm或者container,默认为vm
+     * Target所属的type，取值为vm、container或ip,默认为vm
      */
     private String type;
 
     /**
-     * Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同
+     * 健康检查的port
      */
     private Integer port;
 
     /**
-     * Target的权重，取值范围：1-100 ，默认为10。
+     * 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发
      */
     private Integer weight;
 
     /**
-     * Target的健康状态，取值为healthy、unhealthy
+     * 该Target的健康状态，取值为healthy、unhealthy
      */
     private String status;
+
+    /**
+     * Target的IP地址。当Target type为vm或container时，表示vm或container的私网IP；当Target type为ip时，表示注册Target时指定的IP地址
+     */
+    private String ipAddress;
 
 
     /**
@@ -105,7 +110,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * get Target所属实例的Id
+     * get Target所属实例的Id（type为vm或container时显示）
      *
      * @return
      */
@@ -114,7 +119,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属实例的Id
+     * set Target所属实例的Id（type为vm或container时显示）
      *
      * @param instanceId
      */
@@ -123,7 +128,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * get Target所属的type，取值为vm或者container,默认为vm
+     * get Target所属的type，取值为vm、container或ip,默认为vm
      *
      * @return
      */
@@ -132,7 +137,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属的type，取值为vm或者container,默认为vm
+     * set Target所属的type，取值为vm、container或ip,默认为vm
      *
      * @param type
      */
@@ -141,7 +146,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同
+     * get 健康检查的port
      *
      * @return
      */
@@ -150,7 +155,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同
+     * set 健康检查的port
      *
      * @param port
      */
@@ -159,7 +164,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * get Target的权重，取值范围：1-100 ，默认为10。
+     * get 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发
      *
      * @return
      */
@@ -168,7 +173,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target的权重，取值范围：1-100 ，默认为10。
+     * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发
      *
      * @param weight
      */
@@ -177,7 +182,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * get Target的健康状态，取值为healthy、unhealthy
+     * get 该Target的健康状态，取值为healthy、unhealthy
      *
      * @return
      */
@@ -186,12 +191,30 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target的健康状态，取值为healthy、unhealthy
+     * set 该Target的健康状态，取值为healthy、unhealthy
      *
      * @param status
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    /**
+     * get Target的IP地址。当Target type为vm或container时，表示vm或container的私网IP；当Target type为ip时，表示注册Target时指定的IP地址
+     *
+     * @return
+     */
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    /**
+     * set Target的IP地址。当Target type为vm或container时，表示vm或container的私网IP；当Target type为ip时，表示注册Target时指定的IP地址
+     *
+     * @param ipAddress
+     */
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
     }
 
 
@@ -216,7 +239,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属实例的Id
+     * set Target所属实例的Id（type为vm或container时显示）
      *
      * @param instanceId
      */
@@ -226,7 +249,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属的type，取值为vm或者container,默认为vm
+     * set Target所属的type，取值为vm、container或ip,默认为vm
      *
      * @param type
      */
@@ -236,7 +259,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同
+     * set 健康检查的port
      *
      * @param port
      */
@@ -246,7 +269,7 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target的权重，取值范围：1-100 ，默认为10。
+     * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发
      *
      * @param weight
      */
@@ -256,12 +279,22 @@ public class TargetHealth  implements java.io.Serializable {
     }
 
     /**
-     * set Target的健康状态，取值为healthy、unhealthy
+     * set 该Target的健康状态，取值为healthy、unhealthy
      *
      * @param status
      */
     public TargetHealth status(String status) {
         this.status = status;
+        return this;
+    }
+
+    /**
+     * set Target的IP地址。当Target type为vm或container时，表示vm或container的私网IP；当Target type为ip时，表示注册Target时指定的IP地址
+     *
+     * @param ipAddress
+     */
+    public TargetHealth ipAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
         return this;
     }
 

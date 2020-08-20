@@ -65,7 +65,13 @@ public class Bandwidth  implements java.io.Serializable {
     private String lineType;
 
     /**
-     * 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     * 计费方式
+fixedBandwidth:固定带宽
+95thPercentile:95峰值（IN，OUT统一计算95）
+merge95thPercentile:95峰值（多出口合并计费）
+95thPercentileSeparate:95峰值（IN，OUT分别计算95，取较大者）
+merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
+
      */
     private String chargeType;
 
@@ -194,7 +200,13 @@ public class Bandwidth  implements java.io.Serializable {
     }
 
     /**
-     * get 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     * get 计费方式
+fixedBandwidth:固定带宽
+95thPercentile:95峰值（IN，OUT统一计算95）
+merge95thPercentile:95峰值（多出口合并计费）
+95thPercentileSeparate:95峰值（IN，OUT分别计算95，取较大者）
+merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
+
      *
      * @return
      */
@@ -203,7 +215,13 @@ public class Bandwidth  implements java.io.Serializable {
     }
 
     /**
-     * set 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     * set 计费方式
+fixedBandwidth:固定带宽
+95thPercentile:95峰值（IN，OUT统一计算95）
+merge95thPercentile:95峰值（多出口合并计费）
+95thPercentileSeparate:95峰值（IN，OUT分别计算95，取较大者）
+merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
+
      *
      * @param chargeType
      */
@@ -327,7 +345,13 @@ public class Bandwidth  implements java.io.Serializable {
     }
 
     /**
-     * set 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     * set 计费方式
+fixedBandwidth:固定带宽
+95thPercentile:95峰值（IN，OUT统一计算95）
+merge95thPercentile:95峰值（多出口合并计费）
+95thPercentileSeparate:95峰值（IN，OUT分别计算95，取较大者）
+merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
+
      *
      * @param chargeType
      */

@@ -65,7 +65,13 @@ public class DescribeBandwidth  implements java.io.Serializable {
     private String lineType;
 
     /**
-     * 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     * 计费方式
+fixedBandwidth:固定带宽
+95thPercentile:95峰值（IN，OUT统一计算95）
+merge95thPercentile:95峰值（多出口合并计费）
+95thPercentileSeparate:95峰值（IN，OUT分别计算95，取较大者）
+merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
+
      */
     private String chargeType;
 
@@ -78,6 +84,11 @@ public class DescribeBandwidth  implements java.io.Serializable {
      * 关联的公网IP
      */
     private List<RelatedIp> relatedIp;
+
+    /**
+     * 交换机信息
+     */
+    private List<Switchboard> switchboard;
 
 
     /**
@@ -189,7 +200,13 @@ public class DescribeBandwidth  implements java.io.Serializable {
     }
 
     /**
-     * get 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     * get 计费方式
+fixedBandwidth:固定带宽
+95thPercentile:95峰值（IN，OUT统一计算95）
+merge95thPercentile:95峰值（多出口合并计费）
+95thPercentileSeparate:95峰值（IN，OUT分别计算95，取较大者）
+merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
+
      *
      * @return
      */
@@ -198,7 +215,13 @@ public class DescribeBandwidth  implements java.io.Serializable {
     }
 
     /**
-     * set 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     * set 计费方式
+fixedBandwidth:固定带宽
+95thPercentile:95峰值（IN，OUT统一计算95）
+merge95thPercentile:95峰值（多出口合并计费）
+95thPercentileSeparate:95峰值（IN，OUT分别计算95，取较大者）
+merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
+
      *
      * @param chargeType
      */
@@ -240,6 +263,24 @@ public class DescribeBandwidth  implements java.io.Serializable {
      */
     public void setRelatedIp(List<RelatedIp> relatedIp) {
         this.relatedIp = relatedIp;
+    }
+
+    /**
+     * get 交换机信息
+     *
+     * @return
+     */
+    public List<Switchboard> getSwitchboard() {
+        return switchboard;
+    }
+
+    /**
+     * set 交换机信息
+     *
+     * @param switchboard
+     */
+    public void setSwitchboard(List<Switchboard> switchboard) {
+        this.switchboard = switchboard;
     }
 
 
@@ -304,7 +345,13 @@ public class DescribeBandwidth  implements java.io.Serializable {
     }
 
     /**
-     * set 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     * set 计费方式
+fixedBandwidth:固定带宽
+95thPercentile:95峰值（IN，OUT统一计算95）
+merge95thPercentile:95峰值（多出口合并计费）
+95thPercentileSeparate:95峰值（IN，OUT分别计算95，取较大者）
+merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
+
      *
      * @param chargeType
      */
@@ -333,6 +380,16 @@ public class DescribeBandwidth  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 交换机信息
+     *
+     * @param switchboard
+     */
+    public DescribeBandwidth switchboard(List<Switchboard> switchboard) {
+        this.switchboard = switchboard;
+        return this;
+    }
+
 
     /**
      * add item to 关联的公网IP
@@ -344,6 +401,18 @@ public class DescribeBandwidth  implements java.io.Serializable {
             this.relatedIp = new ArrayList<>();
         }
         this.relatedIp.add(relatedIp);
+    }
+
+    /**
+     * add item to 交换机信息
+     *
+     * @param switchboard
+     */
+    public void addSwitchboard(Switchboard switchboard) {
+        if (this.switchboard == null) {
+            this.switchboard = new ArrayList<>();
+        }
+        this.switchboard.add(switchboard);
     }
 
 }

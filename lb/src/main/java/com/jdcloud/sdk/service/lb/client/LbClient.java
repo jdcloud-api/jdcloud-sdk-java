@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云负载均衡
+ * 负载均衡
  * 负载均衡相关API
  *
  * OpenAPI spec version: v1
@@ -61,6 +61,9 @@ import com.jdcloud.sdk.service.lb.client.DescribeTargetGroupExecutor;
 import com.jdcloud.sdk.service.lb.model.DeleteBackendRequest;
 import com.jdcloud.sdk.service.lb.model.DeleteBackendResponse;
 import com.jdcloud.sdk.service.lb.client.DeleteBackendExecutor;
+import com.jdcloud.sdk.service.lb.model.DeleteListenerCertificatesRequest;
+import com.jdcloud.sdk.service.lb.model.DeleteListenerCertificatesResponse;
+import com.jdcloud.sdk.service.lb.client.DeleteListenerCertificatesExecutor;
 import com.jdcloud.sdk.service.lb.model.AddRulesRequest;
 import com.jdcloud.sdk.service.lb.model.AddRulesResponse;
 import com.jdcloud.sdk.service.lb.client.AddRulesExecutor;
@@ -130,12 +133,18 @@ import com.jdcloud.sdk.service.lb.client.DeleteTargetGroupExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeTargetHealthRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeTargetHealthResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeTargetHealthExecutor;
+import com.jdcloud.sdk.service.lb.model.AddListenerCertificatesRequest;
+import com.jdcloud.sdk.service.lb.model.AddListenerCertificatesResponse;
+import com.jdcloud.sdk.service.lb.client.AddListenerCertificatesExecutor;
 import com.jdcloud.sdk.service.lb.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.lb.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.lb.client.DisassociateElasticIpExecutor;
 import com.jdcloud.sdk.service.lb.model.UpdateRulesRequest;
 import com.jdcloud.sdk.service.lb.model.UpdateRulesResponse;
 import com.jdcloud.sdk.service.lb.client.UpdateRulesExecutor;
+import com.jdcloud.sdk.service.lb.model.UpdateListenerCertificatesRequest;
+import com.jdcloud.sdk.service.lb.model.UpdateListenerCertificatesResponse;
+import com.jdcloud.sdk.service.lb.client.UpdateListenerCertificatesExecutor;
 import com.jdcloud.sdk.service.lb.model.DeleteListenerRequest;
 import com.jdcloud.sdk.service.lb.model.DeleteListenerResponse;
 import com.jdcloud.sdk.service.lb.client.DeleteListenerExecutor;
@@ -150,7 +159,7 @@ public class LbClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "lb.jdcloud-api.com";
     public final static String ServiceName = "lb";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -281,7 +290,7 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
-     * 查询TargetGroup详情
+     * 查询TargetGroup详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
      *
      * @param request
      * @return
@@ -300,6 +309,17 @@ public class LbClient extends JdcloudClient {
      */
     public DeleteBackendResponse deleteBackend(DeleteBackendRequest request) throws JdcloudSdkException {
         return new DeleteBackendExecutor().client(this).execute(request);
+    }
+
+    /**
+     * listener批量删除扩展证书
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteListenerCertificatesResponse deleteListenerCertificates(DeleteListenerCertificatesRequest request) throws JdcloudSdkException {
+        return new DeleteListenerCertificatesExecutor().client(this).execute(request);
     }
 
     /**
@@ -424,7 +444,7 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
-     * 查询虚拟服务器组列表详情
+     * 查询虚拟服务器组列表详情，返回target详情功能3个月后将会下线，建议用户直接使用describeTargets接口查询target详情
      *
      * @param request
      * @return
@@ -479,7 +499,7 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
-     * 从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除后，所有target将不会再接收来自loadbalancer新建连接的流量
+     * 从TargetGroup中移除一个或多个Target，失败则全部回滚。 成功移除的target将不会再接收来自loadbalancer新建连接的流量
      *
      * @param request
      * @return
@@ -556,6 +576,17 @@ public class LbClient extends JdcloudClient {
     }
 
     /**
+     * listener批量添加扩展证书
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddListenerCertificatesResponse addListenerCertificates(AddListenerCertificatesRequest request) throws JdcloudSdkException {
+        return new AddListenerCertificatesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 负载均衡解绑弹性公网IP
      *
      * @param request
@@ -575,6 +606,17 @@ public class LbClient extends JdcloudClient {
      */
     public UpdateRulesResponse updateRules(UpdateRulesRequest request) throws JdcloudSdkException {
         return new UpdateRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * listener批量修改扩展证书
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateListenerCertificatesResponse updateListenerCertificates(UpdateListenerCertificatesRequest request) throws JdcloudSdkException {
+        return new UpdateListenerCertificatesExecutor().client(this).execute(request);
     }
 
     /**

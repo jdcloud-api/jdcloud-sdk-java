@@ -42,6 +42,11 @@ public class Idc  implements java.io.Serializable {
      */
     private String idcName;
 
+    /**
+     * 是否是商业化外部机房
+     */
+    private Boolean isExternalIdc;
+
 
     /**
      * get 机房英文标识
@@ -79,6 +84,24 @@ public class Idc  implements java.io.Serializable {
         this.idcName = idcName;
     }
 
+    /**
+     * get 是否是商业化外部机房
+     *
+     * @return
+     */
+    public Boolean getIsExternalIdc() {
+        return isExternalIdc;
+    }
+
+    /**
+     * set 是否是商业化外部机房
+     *
+     * @param isExternalIdc
+     */
+    public void setIsExternalIdc(Boolean isExternalIdc) {
+        this.isExternalIdc = isExternalIdc;
+    }
+
 
     /**
      * set 机房英文标识
@@ -97,6 +120,16 @@ public class Idc  implements java.io.Serializable {
      */
     public Idc idcName(String idcName) {
         this.idcName = idcName;
+        return this;
+    }
+
+    /**
+     * set 是否是商业化外部机房
+     *
+     * @param isExternalIdc
+     */
+    public Idc isExternalIdc(Boolean isExternalIdc) {
+        this.isExternalIdc = isExternalIdc;
         return this;
     }
 

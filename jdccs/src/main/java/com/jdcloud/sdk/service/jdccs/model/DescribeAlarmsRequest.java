@@ -53,6 +53,11 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      */
     private String resourceId;
 
+    /**
+     * 规则状态 disabled:禁用 enabled:启用
+     */
+    private String status;
+
 
     /**
      * get 页码, 默认为1
@@ -126,6 +131,24 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         this.resourceId = resourceId;
     }
 
+    /**
+     * get 规则状态 disabled:禁用 enabled:启用
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 规则状态 disabled:禁用 enabled:启用
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 
     /**
      * set 页码, 默认为1
@@ -164,6 +187,16 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      */
     public DescribeAlarmsRequest resourceId(String resourceId) {
         this.resourceId = resourceId;
+        return this;
+    }
+
+    /**
+     * set 规则状态 disabled:禁用 enabled:启用
+     *
+     * @param status
+     */
+    public DescribeAlarmsRequest status(String status) {
+        this.status = status;
         return this;
     }
 

@@ -81,7 +81,7 @@ public class CreateListenerSpec  implements java.io.Serializable {
     private String action;
 
     /**
-     * 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      */
     private List<CertificateSpec> certificateSpecs;
 
@@ -223,7 +223,7 @@ public class CreateListenerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * get 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      *
      * @return
      */
@@ -232,7 +232,7 @@ public class CreateListenerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      *
      * @param certificateSpecs
      */
@@ -348,7 +348,7 @@ public class CreateListenerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      *
      * @param certificateSpecs
      */
@@ -379,7 +379,7 @@ public class CreateListenerSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * add item to 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      *
      * @param certificateSpec
      */

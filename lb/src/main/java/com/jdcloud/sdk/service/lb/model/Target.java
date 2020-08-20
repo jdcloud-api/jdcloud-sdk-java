@@ -43,29 +43,34 @@ public class Target  implements java.io.Serializable {
     private String targetGroupId;
 
     /**
-     * Target的类型，取值为vm或container, 默认为vm
+     * Target的类型，取值为vm、container或ip, 默认为vm
      */
     private String type;
 
     /**
-     * Target所属实例的Id
+     * Target所属实例（vm或container）的Id
      */
     private String instanceId;
 
     /**
-     * Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+     * Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      */
     private Integer port;
 
     /**
-     * Target的权重，取值范围：1-100 ，默认为10
+     * 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      */
     private Integer weight;
 
     /**
-     * Target的内网IP地址
+     * Target所属实例（vm或container）的内网IP地址
      */
     private String privateIpAddress;
+
+    /**
+     * Target的IP地址。当Target类型为vm或container时，表示vm或container的内网IP地址；当Target类型为ip时，表示注册Target时指定的IP地址
+     */
+    private String ipAddress;
 
 
     /**
@@ -105,7 +110,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * get Target的类型，取值为vm或container, 默认为vm
+     * get Target的类型，取值为vm、container或ip, 默认为vm
      *
      * @return
      */
@@ -114,7 +119,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target的类型，取值为vm或container, 默认为vm
+     * set Target的类型，取值为vm、container或ip, 默认为vm
      *
      * @param type
      */
@@ -123,7 +128,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * get Target所属实例的Id
+     * get Target所属实例（vm或container）的Id
      *
      * @return
      */
@@ -132,7 +137,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属实例的Id
+     * set Target所属实例（vm或container）的Id
      *
      * @param instanceId
      */
@@ -141,7 +146,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+     * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @return
      */
@@ -150,7 +155,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @param port
      */
@@ -159,7 +164,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * get Target的权重，取值范围：1-100 ，默认为10
+     * get 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
      * @return
      */
@@ -168,7 +173,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target的权重，取值范围：1-100 ，默认为10
+     * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
      * @param weight
      */
@@ -177,7 +182,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * get Target的内网IP地址
+     * get Target所属实例（vm或container）的内网IP地址
      *
      * @return
      */
@@ -186,12 +191,30 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target的内网IP地址
+     * set Target所属实例（vm或container）的内网IP地址
      *
      * @param privateIpAddress
      */
     public void setPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
+    }
+
+    /**
+     * get Target的IP地址。当Target类型为vm或container时，表示vm或container的内网IP地址；当Target类型为ip时，表示注册Target时指定的IP地址
+     *
+     * @return
+     */
+    public String getIpAddress() {
+        return ipAddress;
+    }
+
+    /**
+     * set Target的IP地址。当Target类型为vm或container时，表示vm或container的内网IP地址；当Target类型为ip时，表示注册Target时指定的IP地址
+     *
+     * @param ipAddress
+     */
+    public void setIpAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
     }
 
 
@@ -216,7 +239,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target的类型，取值为vm或container, 默认为vm
+     * set Target的类型，取值为vm、container或ip, 默认为vm
      *
      * @param type
      */
@@ -226,7 +249,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target所属实例的Id
+     * set Target所属实例（vm或container）的Id
      *
      * @param instanceId
      */
@@ -236,7 +259,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0
+     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同，默认为0。 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @param port
      */
@@ -246,7 +269,7 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target的权重，取值范围：1-100 ，默认为10
+     * set 该Target的权重，取值范围：0-100 ，默认为10。0表示不参与流量转发，仅alb支持权重为0的target
      *
      * @param weight
      */
@@ -256,12 +279,22 @@ public class Target  implements java.io.Serializable {
     }
 
     /**
-     * set Target的内网IP地址
+     * set Target所属实例（vm或container）的内网IP地址
      *
      * @param privateIpAddress
      */
     public Target privateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+
+    /**
+     * set Target的IP地址。当Target类型为vm或container时，表示vm或container的内网IP地址；当Target类型为ip时，表示注册Target时指定的IP地址
+     *
+     * @param ipAddress
+     */
+    public Target ipAddress(String ipAddress) {
+        this.ipAddress = ipAddress;
         return this;
     }
 

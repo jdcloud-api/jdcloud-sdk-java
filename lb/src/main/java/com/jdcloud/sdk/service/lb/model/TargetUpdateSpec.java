@@ -41,12 +41,12 @@ public class TargetUpdateSpec  implements java.io.Serializable {
     private String targetId;
 
     /**
-     * Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：同一TargetGroup下，同一实例仅允许一个端口提供服务
+     * Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      */
     private Integer port;
 
     /**
-     * Target的权重，取值范围：1-100
+     * Target的权重，取值范围：0-100。0表示不参与流量转发
      */
     private Integer weight;
 
@@ -70,7 +70,7 @@ public class TargetUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：同一TargetGroup下，同一实例仅允许一个端口提供服务
+     * get Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @return
      */
@@ -79,7 +79,7 @@ public class TargetUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：同一TargetGroup下，同一实例仅允许一个端口提供服务
+     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @param port
      */
@@ -88,7 +88,7 @@ public class TargetUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get Target的权重，取值范围：1-100
+     * get Target的权重，取值范围：0-100。0表示不参与流量转发
      *
      * @return
      */
@@ -97,7 +97,7 @@ public class TargetUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target的权重，取值范围：1-100
+     * set Target的权重，取值范围：0-100。0表示不参与流量转发
      *
      * @param weight
      */
@@ -117,7 +117,7 @@ public class TargetUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：同一TargetGroup下，同一实例仅允许一个端口提供服务
+     * set Target提供服务的端口，取值范围：0-65535，其中0表示与backend的端口相同 &lt;br&gt;【dnlb】使用限制：dnlb同一TargetGroup下，同一实例/ip仅允许一个端口提供服务
      *
      * @param port
      */
@@ -127,7 +127,7 @@ public class TargetUpdateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Target的权重，取值范围：1-100
+     * set Target的权重，取值范围：0-100。0表示不参与流量转发
      *
      * @param weight
      */

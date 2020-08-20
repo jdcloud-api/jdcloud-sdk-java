@@ -54,6 +54,11 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     private List<Filter> filters;
 
     /**
+     * 状态 normal:正常 abnormal:异常
+     */
+    private String status;
+
+    /**
      * IDC机房ID
      * Required:true
      */
@@ -118,6 +123,24 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
+     * get 状态 normal:正常 abnormal:异常
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 状态 normal:正常 abnormal:异常
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
      * get IDC机房ID
      *
      * @return
@@ -164,6 +187,16 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
      */
     public DescribeIpsRequest filters(List<Filter> filters) {
         this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set 状态 normal:正常 abnormal:异常
+     *
+     * @param status
+     */
+    public DescribeIpsRequest status(String status) {
+        this.status = status;
         return this;
     }
 

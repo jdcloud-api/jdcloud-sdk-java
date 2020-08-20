@@ -48,7 +48,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     private String status;
 
     /**
-     * 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      */
     private List<CertificateSpec> certificateSpecs;
 
@@ -124,7 +124,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * get 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      *
      * @return
      */
@@ -133,7 +133,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      *
      * @param certificateSpecs
      */
@@ -271,7 +271,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      *
      * @param certificateSpecs
      */
@@ -342,7 +342,7 @@ public class UpdateListenerRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * add item to 【alb Https和Tls协议】ssl server证书列表，现只支持一个证书
+     * add item to 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
      *
      * @param certificateSpec
      */

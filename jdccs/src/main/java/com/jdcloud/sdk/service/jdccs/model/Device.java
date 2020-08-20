@@ -48,6 +48,11 @@ public class Device  implements java.io.Serializable {
     private String deviceId;
 
     /**
+     * 设备编码
+     */
+    private String deviceNo;
+
+    /**
      * 设备SN号
      */
     private String snNo;
@@ -98,7 +103,7 @@ public class Device  implements java.io.Serializable {
     private String assetBelong;
 
     /**
-     * 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+     * 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifying:变更中
      */
     private String assetStatus;
 
@@ -175,6 +180,24 @@ public class Device  implements java.io.Serializable {
      */
     public void setDeviceId(String deviceId) {
         this.deviceId = deviceId;
+    }
+
+    /**
+     * get 设备编码
+     *
+     * @return
+     */
+    public String getDeviceNo() {
+        return deviceNo;
+    }
+
+    /**
+     * set 设备编码
+     *
+     * @param deviceNo
+     */
+    public void setDeviceNo(String deviceNo) {
+        this.deviceNo = deviceNo;
     }
 
     /**
@@ -358,7 +381,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * get 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+     * get 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifying:变更中
      *
      * @return
      */
@@ -367,7 +390,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifying:变更中
      *
      * @param assetStatus
      */
@@ -479,6 +502,16 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
+     * set 设备编码
+     *
+     * @param deviceNo
+     */
+    public Device deviceNo(String deviceNo) {
+        this.deviceNo = deviceNo;
+        return this;
+    }
+
+    /**
      * set 设备SN号
      *
      * @param snNo
@@ -579,7 +612,7 @@ public class Device  implements java.io.Serializable {
     }
 
     /**
-     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifying:变更中
      *
      * @param assetStatus
      */

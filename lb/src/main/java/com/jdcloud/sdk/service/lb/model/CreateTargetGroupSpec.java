@@ -52,6 +52,11 @@ public class CreateTargetGroupSpec  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * 类型，取值为instance或ip
+     */
+    private String type;
+
 
     /**
      * get 虚拟服务器组名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
@@ -107,6 +112,24 @@ public class CreateTargetGroupSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+    /**
+     * get 类型，取值为instance或ip
+     *
+     * @return
+     */
+    public String getType() {
+        return type;
+    }
+
+    /**
+     * set 类型，取值为instance或ip
+     *
+     * @param type
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
+
 
     /**
      * set 虚拟服务器组名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
@@ -135,6 +158,16 @@ public class CreateTargetGroupSpec  implements java.io.Serializable {
      */
     public CreateTargetGroupSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 类型，取值为instance或ip
+     *
+     * @param type
+     */
+    public CreateTargetGroupSpec type(String type) {
+        this.type = type;
         return this;
     }
 

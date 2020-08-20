@@ -88,6 +88,11 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
      */
     private Boolean deleteProtection;
 
+    /**
+     * 用户tag 信息
+     */
+    private List<Tag> userTags;
+
 
     /**
      * get LoadBalancer的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
@@ -251,6 +256,24 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
         this.deleteProtection = deleteProtection;
     }
 
+    /**
+     * get 用户tag 信息
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户tag 信息
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
 
     /**
      * set LoadBalancer的名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符
@@ -342,6 +365,16 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 用户tag 信息
+     *
+     * @param userTags
+     */
+    public CreateLoadBalancerSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
 
     /**
      * add item to 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
@@ -365,6 +398,18 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
             this.securityGroupIds = new ArrayList<>();
         }
         this.securityGroupIds.add(securityGroupId);
+    }
+
+    /**
+     * add item to 用户tag 信息
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 
 }

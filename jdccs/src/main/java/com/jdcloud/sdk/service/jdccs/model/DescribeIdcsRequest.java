@@ -43,6 +43,11 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
      */
     private Integer pageSize;
 
+    /**
+     * 是否强制包含外部机房 yes/no
+     */
+    private String includeExternalIdc;
+
 
     /**
      * get 页码, 默认为1
@@ -80,6 +85,24 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
         this.pageSize = pageSize;
     }
 
+    /**
+     * get 是否强制包含外部机房 yes/no
+     *
+     * @return
+     */
+    public String getIncludeExternalIdc() {
+        return includeExternalIdc;
+    }
+
+    /**
+     * set 是否强制包含外部机房 yes/no
+     *
+     * @param includeExternalIdc
+     */
+    public void setIncludeExternalIdc(String includeExternalIdc) {
+        this.includeExternalIdc = includeExternalIdc;
+    }
+
 
     /**
      * set 页码, 默认为1
@@ -98,6 +121,16 @@ public class DescribeIdcsRequest extends JdcloudRequest implements java.io.Seria
      */
     public DescribeIdcsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 是否强制包含外部机房 yes/no
+     *
+     * @param includeExternalIdc
+     */
+    public DescribeIdcsRequest includeExternalIdc(String includeExternalIdc) {
+        this.includeExternalIdc = includeExternalIdc;
         return this;
     }
 
