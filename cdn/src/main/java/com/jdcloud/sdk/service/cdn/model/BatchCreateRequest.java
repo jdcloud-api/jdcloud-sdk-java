@@ -115,6 +115,11 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
      */
     private String accelerateRegion;
 
+    /**
+     * tempInstId
+     */
+    private Long tempInstId;
+
 
     /**
      * get domains
@@ -404,6 +409,24 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.accelerateRegion = accelerateRegion;
     }
 
+    /**
+     * get tempInstId
+     *
+     * @return
+     */
+    public Long getTempInstId() {
+        return tempInstId;
+    }
+
+    /**
+     * set tempInstId
+     *
+     * @param tempInstId
+     */
+    public void setTempInstId(Long tempInstId) {
+        this.tempInstId = tempInstId;
+    }
+
 
     /**
      * set domains
@@ -562,6 +585,16 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
      */
     public BatchCreateRequest accelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
+        return this;
+    }
+
+    /**
+     * set tempInstId
+     *
+     * @param tempInstId
+     */
+    public BatchCreateRequest tempInstId(Long tempInstId) {
+        this.tempInstId = tempInstId;
         return this;
     }
 

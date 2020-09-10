@@ -31,21 +31,39 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.rms.model.QueryPackageRemainderRequest;
-import com.jdcloud.sdk.service.rms.model.QueryPackageRemainderResponse;
-import com.jdcloud.sdk.service.rms.client.QueryPackageRemainderExecutor;
+import com.jdcloud.sdk.service.rms.model.QueryCreditListRequest;
+import com.jdcloud.sdk.service.rms.model.QueryCreditListResponse;
+import com.jdcloud.sdk.service.rms.client.QueryCreditListExecutor;
 import com.jdcloud.sdk.service.rms.model.AddTemplateRequest;
 import com.jdcloud.sdk.service.rms.model.AddTemplateResponse;
 import com.jdcloud.sdk.service.rms.client.AddTemplateExecutor;
-import com.jdcloud.sdk.service.rms.model.SendBatchMsgRequest;
-import com.jdcloud.sdk.service.rms.model.SendBatchMsgResponse;
-import com.jdcloud.sdk.service.rms.client.SendBatchMsgExecutor;
-import com.jdcloud.sdk.service.rms.model.QueryTemplateByIdRequest;
-import com.jdcloud.sdk.service.rms.model.QueryTemplateByIdResponse;
-import com.jdcloud.sdk.service.rms.client.QueryTemplateByIdExecutor;
+import com.jdcloud.sdk.service.rms.model.DeleteTemplateRequest;
+import com.jdcloud.sdk.service.rms.model.DeleteTemplateResponse;
+import com.jdcloud.sdk.service.rms.client.DeleteTemplateExecutor;
 import com.jdcloud.sdk.service.rms.model.QueryTemplateListRequest;
 import com.jdcloud.sdk.service.rms.model.QueryTemplateListResponse;
 import com.jdcloud.sdk.service.rms.client.QueryTemplateListExecutor;
+import com.jdcloud.sdk.service.rms.model.QueryPackageRemainderRequest;
+import com.jdcloud.sdk.service.rms.model.QueryPackageRemainderResponse;
+import com.jdcloud.sdk.service.rms.client.QueryPackageRemainderExecutor;
+import com.jdcloud.sdk.service.rms.model.EditCreditRequest;
+import com.jdcloud.sdk.service.rms.model.EditCreditResponse;
+import com.jdcloud.sdk.service.rms.client.EditCreditExecutor;
+import com.jdcloud.sdk.service.rms.model.DeleteCreditRequest;
+import com.jdcloud.sdk.service.rms.model.DeleteCreditResponse;
+import com.jdcloud.sdk.service.rms.client.DeleteCreditExecutor;
+import com.jdcloud.sdk.service.rms.model.SendBatchMsgRequest;
+import com.jdcloud.sdk.service.rms.model.SendBatchMsgResponse;
+import com.jdcloud.sdk.service.rms.client.SendBatchMsgExecutor;
+import com.jdcloud.sdk.service.rms.model.EditTemplateRequest;
+import com.jdcloud.sdk.service.rms.model.EditTemplateResponse;
+import com.jdcloud.sdk.service.rms.client.EditTemplateExecutor;
+import com.jdcloud.sdk.service.rms.model.QueryTemplateByIdRequest;
+import com.jdcloud.sdk.service.rms.model.QueryTemplateByIdResponse;
+import com.jdcloud.sdk.service.rms.client.QueryTemplateByIdExecutor;
+import com.jdcloud.sdk.service.rms.model.AddCreditRequest;
+import com.jdcloud.sdk.service.rms.model.AddCreditResponse;
+import com.jdcloud.sdk.service.rms.client.AddCreditExecutor;
 import com.jdcloud.sdk.service.rms.model.QuerySendStatusRequest;
 import com.jdcloud.sdk.service.rms.model.QuerySendStatusResponse;
 import com.jdcloud.sdk.service.rms.client.QuerySendStatusExecutor;
@@ -57,7 +75,7 @@ public class RmsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "rms.jdcloud-api.com";
     public final static String ServiceName = "rms";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -100,14 +118,14 @@ public class RmsClient extends JdcloudClient {
 
 
     /**
-     * 套餐包余量，仅预付费用户使用
+     * 查询富媒体短信资质列表接口
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryPackageRemainderResponse queryPackageRemainder(QueryPackageRemainderRequest request) throws JdcloudSdkException {
-        return new QueryPackageRemainderExecutor().client(this).execute(request);
+    public QueryCreditListResponse queryCreditList(QueryCreditListRequest request) throws JdcloudSdkException {
+        return new QueryCreditListExecutor().client(this).execute(request);
     }
 
     /**
@@ -122,6 +140,61 @@ public class RmsClient extends JdcloudClient {
     }
 
     /**
+     * 删除富媒体短信内容接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteTemplateResponse deleteTemplate(DeleteTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询富媒体短信内容列表接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryTemplateListResponse queryTemplateList(QueryTemplateListRequest request) throws JdcloudSdkException {
+        return new QueryTemplateListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 套餐包余量，仅预付费用户使用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryPackageRemainderResponse queryPackageRemainder(QueryPackageRemainderRequest request) throws JdcloudSdkException {
+        return new QueryPackageRemainderExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改富媒体短信资质接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EditCreditResponse editCredit(EditCreditRequest request) throws JdcloudSdkException {
+        return new EditCreditExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除富媒体短信资质接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCreditResponse deleteCredit(DeleteCreditRequest request) throws JdcloudSdkException {
+        return new DeleteCreditExecutor().client(this).execute(request);
+    }
+
+    /**
      * 指定短信Id群发短信
      *
      * @param request
@@ -130,6 +203,17 @@ public class RmsClient extends JdcloudClient {
      */
     public SendBatchMsgResponse sendBatchMsg(SendBatchMsgRequest request) throws JdcloudSdkException {
         return new SendBatchMsgExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改富媒体短信内容接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EditTemplateResponse editTemplate(EditTemplateRequest request) throws JdcloudSdkException {
+        return new EditTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -144,14 +228,14 @@ public class RmsClient extends JdcloudClient {
     }
 
     /**
-     * 查询富媒体短信内容列表接口
+     * 增加富媒体短信资质接口
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public QueryTemplateListResponse queryTemplateList(QueryTemplateListRequest request) throws JdcloudSdkException {
-        return new QueryTemplateListExecutor().client(this).execute(request);
+    public AddCreditResponse addCredit(AddCreditRequest request) throws JdcloudSdkException {
+        return new AddCreditExecutor().client(this).execute(request);
     }
 
     /**

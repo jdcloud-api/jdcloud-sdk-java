@@ -48,6 +48,11 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
      */
     private String templateNameOrTitle;
 
+    /**
+     * 模板类型 pdf,word,pdf-auto(不传查所有类型)
+     */
+    private String templateType;
+
 
     /**
      * get 页码, 默认为1
@@ -103,6 +108,24 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
         this.templateNameOrTitle = templateNameOrTitle;
     }
 
+    /**
+     * get 模板类型 pdf,word,pdf-auto(不传查所有类型)
+     *
+     * @return
+     */
+    public String getTemplateType() {
+        return templateType;
+    }
+
+    /**
+     * set 模板类型 pdf,word,pdf-auto(不传查所有类型)
+     *
+     * @param templateType
+     */
+    public void setTemplateType(String templateType) {
+        this.templateType = templateType;
+    }
+
 
     /**
      * set 页码, 默认为1
@@ -131,6 +154,16 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
      */
     public DescribeTemplateListRequest templateNameOrTitle(String templateNameOrTitle) {
         this.templateNameOrTitle = templateNameOrTitle;
+        return this;
+    }
+
+    /**
+     * set 模板类型 pdf,word,pdf-auto(不传查所有类型)
+     *
+     * @param templateType
+     */
+    public DescribeTemplateListRequest templateType(String templateType) {
+        this.templateType = templateType;
         return this;
     }
 

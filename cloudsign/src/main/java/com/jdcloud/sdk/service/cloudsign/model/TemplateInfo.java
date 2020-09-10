@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * templateInfo
@@ -61,6 +63,16 @@ public class TemplateInfo  implements java.io.Serializable {
      * 合同模板文件摘要
      */
     private String templateDigest;
+
+    /**
+     * 合同模板文件类型 pdf,word,pdf-auto
+     */
+    private String templateType;
+
+    /**
+     * 填充信息
+     */
+    private List<PaddingInfo> paddingInfo;
 
     /**
      * 创建时间
@@ -177,6 +189,42 @@ public class TemplateInfo  implements java.io.Serializable {
     }
 
     /**
+     * get 合同模板文件类型 pdf,word,pdf-auto
+     *
+     * @return
+     */
+    public String getTemplateType() {
+        return templateType;
+    }
+
+    /**
+     * set 合同模板文件类型 pdf,word,pdf-auto
+     *
+     * @param templateType
+     */
+    public void setTemplateType(String templateType) {
+        this.templateType = templateType;
+    }
+
+    /**
+     * get 填充信息
+     *
+     * @return
+     */
+    public List<PaddingInfo> getPaddingInfo() {
+        return paddingInfo;
+    }
+
+    /**
+     * set 填充信息
+     *
+     * @param paddingInfo
+     */
+    public void setPaddingInfo(List<PaddingInfo> paddingInfo) {
+        this.paddingInfo = paddingInfo;
+    }
+
+    /**
      * get 创建时间
      *
      * @return
@@ -256,6 +304,26 @@ public class TemplateInfo  implements java.io.Serializable {
     }
 
     /**
+     * set 合同模板文件类型 pdf,word,pdf-auto
+     *
+     * @param templateType
+     */
+    public TemplateInfo templateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+
+    /**
+     * set 填充信息
+     *
+     * @param paddingInfo
+     */
+    public TemplateInfo paddingInfo(List<PaddingInfo> paddingInfo) {
+        this.paddingInfo = paddingInfo;
+        return this;
+    }
+
+    /**
      * set 创建时间
      *
      * @param createTime
@@ -265,5 +333,17 @@ public class TemplateInfo  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 填充信息
+     *
+     * @param paddingInfo
+     */
+    public void addPaddingInfo(PaddingInfo paddingInfo) {
+        if (this.paddingInfo == null) {
+            this.paddingInfo = new ArrayList<>();
+        }
+        this.paddingInfo.add(paddingInfo);
+    }
 
 }

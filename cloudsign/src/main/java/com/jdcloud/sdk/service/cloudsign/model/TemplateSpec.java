@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * templateSpec
@@ -46,6 +48,18 @@ public class TemplateSpec  implements java.io.Serializable {
      * 合同模板标题
      */
     private String templateTitle;
+
+    /**
+     * 模板类型 pdf,word (word为可编辑模板)
+     */
+    private String templateType;
+
+    /**
+     * 占位符关键字,templateType为word时必传
+在word文档中为双大括号里的内容, 比如{{单位名称}}
+
+     */
+    private List<String> holdingKeys;
 
 
     /**
@@ -102,6 +116,46 @@ public class TemplateSpec  implements java.io.Serializable {
         this.templateTitle = templateTitle;
     }
 
+    /**
+     * get 模板类型 pdf,word (word为可编辑模板)
+     *
+     * @return
+     */
+    public String getTemplateType() {
+        return templateType;
+    }
+
+    /**
+     * set 模板类型 pdf,word (word为可编辑模板)
+     *
+     * @param templateType
+     */
+    public void setTemplateType(String templateType) {
+        this.templateType = templateType;
+    }
+
+    /**
+     * get 占位符关键字,templateType为word时必传
+在word文档中为双大括号里的内容, 比如{{单位名称}}
+
+     *
+     * @return
+     */
+    public List<String> getHoldingKeys() {
+        return holdingKeys;
+    }
+
+    /**
+     * set 占位符关键字,templateType为word时必传
+在word文档中为双大括号里的内容, 比如{{单位名称}}
+
+     *
+     * @param holdingKeys
+     */
+    public void setHoldingKeys(List<String> holdingKeys) {
+        this.holdingKeys = holdingKeys;
+    }
+
 
     /**
      * set 合同模板文件（base64）
@@ -133,5 +187,41 @@ public class TemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 模板类型 pdf,word (word为可编辑模板)
+     *
+     * @param templateType
+     */
+    public TemplateSpec templateType(String templateType) {
+        this.templateType = templateType;
+        return this;
+    }
+
+    /**
+     * set 占位符关键字,templateType为word时必传
+在word文档中为双大括号里的内容, 比如{{单位名称}}
+
+     *
+     * @param holdingKeys
+     */
+    public TemplateSpec holdingKeys(List<String> holdingKeys) {
+        this.holdingKeys = holdingKeys;
+        return this;
+    }
+
+
+    /**
+     * add item to 占位符关键字,templateType为word时必传
+在word文档中为双大括号里的内容, 比如{{单位名称}}
+
+     *
+     * @param holdingKey
+     */
+    public void addHoldingKey(String holdingKey) {
+        if (this.holdingKeys == null) {
+            this.holdingKeys = new ArrayList<>();
+        }
+        this.holdingKeys.add(holdingKey);
+    }
 
 }

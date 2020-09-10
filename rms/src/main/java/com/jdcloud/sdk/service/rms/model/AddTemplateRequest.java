@@ -45,53 +45,32 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     private String appId;
 
     /**
-     * 签名类型 0:公司 1:app 2:网站 3:公众号 4:商标 5:政府机关
+     * 资质ID
      * Required:true
      */
     @Required
-    private String signType;
+    private String aptitudesId;
 
     /**
-     * 用途 0:自用 1:他用
-     * Required:true
-     */
-    @Required
-    private String purpose;
-
-    /**
-     * 资质证明类型 0:三证合一 1:企业营业执照 2:组织机构代码证书 3:社会信用代码证书
-     * Required:true
-     */
-    @Required
-    private String signCardType;
-
-    /**
-     * 资质证明图片必须是jpg图片的base64编码，只支持jpg图片
-     * Required:true
-     */
-    @Required
-    private String aptitudes;
-
-    /**
-     * 多媒体内容的标题
+     * 短信主题
      * Required:true
      */
     @Required
     private String title;
 
     /**
-     * 多媒体内容的描述
+     * 短信描述
      * Required:true
      */
     @Required
     private String description;
 
     /**
-     * 是否支持退订 0:不支持退订 1:支持退订
+     * 短信签名
      * Required:true
      */
     @Required
-    private String unsubscribe;
+    private String signContent;
 
     /**
      * 短信内容
@@ -127,79 +106,25 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 签名类型 0:公司 1:app 2:网站 3:公众号 4:商标 5:政府机关
+     * get 资质ID
      *
      * @return
      */
-    public String getSignType() {
-        return signType;
+    public String getAptitudesId() {
+        return aptitudesId;
     }
 
     /**
-     * set 签名类型 0:公司 1:app 2:网站 3:公众号 4:商标 5:政府机关
+     * set 资质ID
      *
-     * @param signType
+     * @param aptitudesId
      */
-    public void setSignType(String signType) {
-        this.signType = signType;
+    public void setAptitudesId(String aptitudesId) {
+        this.aptitudesId = aptitudesId;
     }
 
     /**
-     * get 用途 0:自用 1:他用
-     *
-     * @return
-     */
-    public String getPurpose() {
-        return purpose;
-    }
-
-    /**
-     * set 用途 0:自用 1:他用
-     *
-     * @param purpose
-     */
-    public void setPurpose(String purpose) {
-        this.purpose = purpose;
-    }
-
-    /**
-     * get 资质证明类型 0:三证合一 1:企业营业执照 2:组织机构代码证书 3:社会信用代码证书
-     *
-     * @return
-     */
-    public String getSignCardType() {
-        return signCardType;
-    }
-
-    /**
-     * set 资质证明类型 0:三证合一 1:企业营业执照 2:组织机构代码证书 3:社会信用代码证书
-     *
-     * @param signCardType
-     */
-    public void setSignCardType(String signCardType) {
-        this.signCardType = signCardType;
-    }
-
-    /**
-     * get 资质证明图片必须是jpg图片的base64编码，只支持jpg图片
-     *
-     * @return
-     */
-    public String getAptitudes() {
-        return aptitudes;
-    }
-
-    /**
-     * set 资质证明图片必须是jpg图片的base64编码，只支持jpg图片
-     *
-     * @param aptitudes
-     */
-    public void setAptitudes(String aptitudes) {
-        this.aptitudes = aptitudes;
-    }
-
-    /**
-     * get 多媒体内容的标题
+     * get 短信主题
      *
      * @return
      */
@@ -208,7 +133,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 多媒体内容的标题
+     * set 短信主题
      *
      * @param title
      */
@@ -217,7 +142,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 多媒体内容的描述
+     * get 短信描述
      *
      * @return
      */
@@ -226,7 +151,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 多媒体内容的描述
+     * set 短信描述
      *
      * @param description
      */
@@ -235,21 +160,21 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 是否支持退订 0:不支持退订 1:支持退订
+     * get 短信签名
      *
      * @return
      */
-    public String getUnsubscribe() {
-        return unsubscribe;
+    public String getSignContent() {
+        return signContent;
     }
 
     /**
-     * set 是否支持退订 0:不支持退订 1:支持退订
+     * set 短信签名
      *
-     * @param unsubscribe
+     * @param signContent
      */
-    public void setUnsubscribe(String unsubscribe) {
-        this.unsubscribe = unsubscribe;
+    public void setSignContent(String signContent) {
+        this.signContent = signContent;
     }
 
     /**
@@ -300,47 +225,17 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 签名类型 0:公司 1:app 2:网站 3:公众号 4:商标 5:政府机关
+     * set 资质ID
      *
-     * @param signType
+     * @param aptitudesId
      */
-    public AddTemplateRequest signType(String signType) {
-        this.signType = signType;
+    public AddTemplateRequest aptitudesId(String aptitudesId) {
+        this.aptitudesId = aptitudesId;
         return this;
     }
 
     /**
-     * set 用途 0:自用 1:他用
-     *
-     * @param purpose
-     */
-    public AddTemplateRequest purpose(String purpose) {
-        this.purpose = purpose;
-        return this;
-    }
-
-    /**
-     * set 资质证明类型 0:三证合一 1:企业营业执照 2:组织机构代码证书 3:社会信用代码证书
-     *
-     * @param signCardType
-     */
-    public AddTemplateRequest signCardType(String signCardType) {
-        this.signCardType = signCardType;
-        return this;
-    }
-
-    /**
-     * set 资质证明图片必须是jpg图片的base64编码，只支持jpg图片
-     *
-     * @param aptitudes
-     */
-    public AddTemplateRequest aptitudes(String aptitudes) {
-        this.aptitudes = aptitudes;
-        return this;
-    }
-
-    /**
-     * set 多媒体内容的标题
+     * set 短信主题
      *
      * @param title
      */
@@ -350,7 +245,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 多媒体内容的描述
+     * set 短信描述
      *
      * @param description
      */
@@ -360,12 +255,12 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 是否支持退订 0:不支持退订 1:支持退订
+     * set 短信签名
      *
-     * @param unsubscribe
+     * @param signContent
      */
-    public AddTemplateRequest unsubscribe(String unsubscribe) {
-        this.unsubscribe = unsubscribe;
+    public AddTemplateRequest signContent(String signContent) {
+        this.signContent = signContent;
         return this;
     }
 
