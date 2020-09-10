@@ -68,17 +68,17 @@ public class PerStamp  implements java.io.Serializable {
     private Integer page;
 
     /**
-     * 印章名称,必须和imageB64同时非空
+     * 印章名称
      */
     private String sealName;
 
     /**
-     * 印章图像base64(与stampId二选一)
+     * 印章图像base64(建议png格式,不传使用默认方形章)
      */
     private String imageB64;
 
     /**
-     * 印章ID(与imageB64二选一)
+     * 印章ID
      */
     private String stampId;
 
@@ -260,7 +260,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * get 印章名称,必须和imageB64同时非空
+     * get 印章名称
      *
      * @return
      */
@@ -269,7 +269,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 印章名称,必须和imageB64同时非空
+     * set 印章名称
      *
      * @param sealName
      */
@@ -278,7 +278,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * get 印章图像base64(与stampId二选一)
+     * get 印章图像base64(建议png格式,不传使用默认方形章)
      *
      * @return
      */
@@ -287,7 +287,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 印章图像base64(与stampId二选一)
+     * set 印章图像base64(建议png格式,不传使用默认方形章)
      *
      * @param imageB64
      */
@@ -296,7 +296,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * get 印章ID(与imageB64二选一)
+     * get 印章ID
      *
      * @return
      */
@@ -305,7 +305,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 印章ID(与imageB64二选一)
+     * set 印章ID
      *
      * @param stampId
      */
@@ -565,7 +565,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 印章名称,必须和imageB64同时非空
+     * set 印章名称
      *
      * @param sealName
      */
@@ -575,7 +575,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 印章图像base64(与stampId二选一)
+     * set 印章图像base64(建议png格式,不传使用默认方形章)
      *
      * @param imageB64
      */
@@ -585,7 +585,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 印章ID(与imageB64二选一)
+     * set 印章ID
      *
      * @param stampId
      */

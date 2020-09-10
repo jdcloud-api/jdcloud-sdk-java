@@ -112,6 +112,11 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     private String accelerateRegion;
 
     /**
+     * tempInstId
+     */
+    private Long tempInstId;
+
+    /**
      * 用户域名
      * Required:true
      */
@@ -390,6 +395,24 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
+     * get tempInstId
+     *
+     * @return
+     */
+    public Long getTempInstId() {
+        return tempInstId;
+    }
+
+    /**
+     * set tempInstId
+     *
+     * @param tempInstId
+     */
+    public void setTempInstId(Long tempInstId) {
+        this.tempInstId = tempInstId;
+    }
+
+    /**
      * get 用户域名
      *
      * @return
@@ -555,6 +578,16 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
      */
     public CreateDomainRequest accelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
+        return this;
+    }
+
+    /**
+     * set tempInstId
+     *
+     * @param tempInstId
+     */
+    public CreateDomainRequest tempInstId(Long tempInstId) {
+        this.tempInstId = tempInstId;
         return this;
     }
 

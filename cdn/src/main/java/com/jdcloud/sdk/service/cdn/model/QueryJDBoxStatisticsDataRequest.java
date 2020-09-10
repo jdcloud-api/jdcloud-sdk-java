@@ -34,17 +34,17 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+     * 查询起始时间,时间戳
      */
-    private String startTime;
+    private Long startTime;
 
     /**
-     * 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+     * 查询截止时间,时间戳
      */
-    private String endTime;
+    private Long endTime;
 
     /**
-     * 查询的字段，决定了查询结果中出现哪些字段，取值范围见&quot;统计字段说明&quot;。多个用逗号分隔。默认为空，表示查询带宽流量 pv
+     * 查询的字段，取值范围(avgbandwidth,pv,flow)。多个用逗号分隔。默认为空，表示查询带宽流量
      */
     private String fields;
 
@@ -59,14 +59,9 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     private String isp;
 
     /**
-     * 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
+     * 查询周期，当前取值范围：“oneMin,fiveMin”，分别表示1min，5min。默认为空，表示fiveMin
      */
     private String period;
-
-    /**
-     * 取值范围[area,isp,mac_addr,category]  按区域、运营商、设备、业务类型分组，默认为isp
-     */
-    private String groupBy;
 
     /**
      * 业务类型
@@ -78,45 +73,50 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
      */
     private String macAddr;
 
+    /**
+     * 插件pin
+     */
+    private String pluginPin;
+
 
     /**
-     * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+     * get 查询起始时间,时间戳
      *
      * @return
      */
-    public String getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
     /**
-     * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+     * set 查询起始时间,时间戳
      *
      * @param startTime
      */
-    public void setStartTime(String startTime) {
+    public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
 
     /**
-     * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+     * get 查询截止时间,时间戳
      *
      * @return
      */
-    public String getEndTime() {
+    public Long getEndTime() {
         return endTime;
     }
 
     /**
-     * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+     * set 查询截止时间,时间戳
      *
      * @param endTime
      */
-    public void setEndTime(String endTime) {
+    public void setEndTime(Long endTime) {
         this.endTime = endTime;
     }
 
     /**
-     * get 查询的字段，决定了查询结果中出现哪些字段，取值范围见&quot;统计字段说明&quot;。多个用逗号分隔。默认为空，表示查询带宽流量 pv
+     * get 查询的字段，取值范围(avgbandwidth,pv,flow)。多个用逗号分隔。默认为空，表示查询带宽流量
      *
      * @return
      */
@@ -125,7 +125,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 查询的字段，决定了查询结果中出现哪些字段，取值范围见&quot;统计字段说明&quot;。多个用逗号分隔。默认为空，表示查询带宽流量 pv
+     * set 查询的字段，取值范围(avgbandwidth,pv,flow)。多个用逗号分隔。默认为空，表示查询带宽流量
      *
      * @param fields
      */
@@ -170,7 +170,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
+     * get 查询周期，当前取值范围：“oneMin,fiveMin”，分别表示1min，5min。默认为空，表示fiveMin
      *
      * @return
      */
@@ -179,30 +179,12 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
+     * set 查询周期，当前取值范围：“oneMin,fiveMin”，分别表示1min，5min。默认为空，表示fiveMin
      *
      * @param period
      */
     public void setPeriod(String period) {
         this.period = period;
-    }
-
-    /**
-     * get 取值范围[area,isp,mac_addr,category]  按区域、运营商、设备、业务类型分组，默认为isp
-     *
-     * @return
-     */
-    public String getGroupBy() {
-        return groupBy;
-    }
-
-    /**
-     * set 取值范围[area,isp,mac_addr,category]  按区域、运营商、设备、业务类型分组，默认为isp
-     *
-     * @param groupBy
-     */
-    public void setGroupBy(String groupBy) {
-        this.groupBy = groupBy;
     }
 
     /**
@@ -241,29 +223,47 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.macAddr = macAddr;
     }
 
+    /**
+     * get 插件pin
+     *
+     * @return
+     */
+    public String getPluginPin() {
+        return pluginPin;
+    }
 
     /**
-     * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+     * set 插件pin
+     *
+     * @param pluginPin
+     */
+    public void setPluginPin(String pluginPin) {
+        this.pluginPin = pluginPin;
+    }
+
+
+    /**
+     * set 查询起始时间,时间戳
      *
      * @param startTime
      */
-    public QueryJDBoxStatisticsDataRequest startTime(String startTime) {
+    public QueryJDBoxStatisticsDataRequest startTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
 
     /**
-     * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
+     * set 查询截止时间,时间戳
      *
      * @param endTime
      */
-    public QueryJDBoxStatisticsDataRequest endTime(String endTime) {
+    public QueryJDBoxStatisticsDataRequest endTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
 
     /**
-     * set 查询的字段，决定了查询结果中出现哪些字段，取值范围见&quot;统计字段说明&quot;。多个用逗号分隔。默认为空，表示查询带宽流量 pv
+     * set 查询的字段，取值范围(avgbandwidth,pv,flow)。多个用逗号分隔。默认为空，表示查询带宽流量
      *
      * @param fields
      */
@@ -293,22 +293,12 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
+     * set 查询周期，当前取值范围：“oneMin,fiveMin”，分别表示1min，5min。默认为空，表示fiveMin
      *
      * @param period
      */
     public QueryJDBoxStatisticsDataRequest period(String period) {
         this.period = period;
-        return this;
-    }
-
-    /**
-     * set 取值范围[area,isp,mac_addr,category]  按区域、运营商、设备、业务类型分组，默认为isp
-     *
-     * @param groupBy
-     */
-    public QueryJDBoxStatisticsDataRequest groupBy(String groupBy) {
-        this.groupBy = groupBy;
         return this;
     }
 
@@ -329,6 +319,16 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
      */
     public QueryJDBoxStatisticsDataRequest macAddr(String macAddr) {
         this.macAddr = macAddr;
+        return this;
+    }
+
+    /**
+     * set 插件pin
+     *
+     * @param pluginPin
+     */
+    public QueryJDBoxStatisticsDataRequest pluginPin(String pluginPin) {
+        this.pluginPin = pluginPin;
         return this;
     }
 

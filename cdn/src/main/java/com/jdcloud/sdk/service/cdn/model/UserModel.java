@@ -40,7 +40,7 @@ public class UserModel  implements java.io.Serializable {
     /**
      * 计费类型
      */
-    private Integer typeList;
+    private String typeList;
 
     /**
      * 计费类型描述
@@ -67,6 +67,11 @@ public class UserModel  implements java.io.Serializable {
      */
     private String settlementMethodDesc;
 
+    /**
+     * 计费资源id
+     */
+    private String billSourceid;
+
 
     /**
      * get 用户pin
@@ -91,7 +96,7 @@ public class UserModel  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getTypeList() {
+    public String getTypeList() {
         return typeList;
     }
 
@@ -100,7 +105,7 @@ public class UserModel  implements java.io.Serializable {
      *
      * @param typeList
      */
-    public void setTypeList(Integer typeList) {
+    public void setTypeList(String typeList) {
         this.typeList = typeList;
     }
 
@@ -194,6 +199,24 @@ public class UserModel  implements java.io.Serializable {
         this.settlementMethodDesc = settlementMethodDesc;
     }
 
+    /**
+     * get 计费资源id
+     *
+     * @return
+     */
+    public String getBillSourceid() {
+        return billSourceid;
+    }
+
+    /**
+     * set 计费资源id
+     *
+     * @param billSourceid
+     */
+    public void setBillSourceid(String billSourceid) {
+        this.billSourceid = billSourceid;
+    }
+
 
     /**
      * set 用户pin
@@ -210,7 +233,7 @@ public class UserModel  implements java.io.Serializable {
      *
      * @param typeList
      */
-    public UserModel typeList(Integer typeList) {
+    public UserModel typeList(String typeList) {
         this.typeList = typeList;
         return this;
     }
@@ -262,6 +285,16 @@ public class UserModel  implements java.io.Serializable {
      */
     public UserModel settlementMethodDesc(String settlementMethodDesc) {
         this.settlementMethodDesc = settlementMethodDesc;
+        return this;
+    }
+
+    /**
+     * set 计费资源id
+     *
+     * @param billSourceid
+     */
+    public UserModel billSourceid(String billSourceid) {
+        this.billSourceid = billSourceid;
         return this;
     }
 

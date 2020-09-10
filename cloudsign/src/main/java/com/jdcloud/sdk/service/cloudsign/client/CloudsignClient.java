@@ -49,6 +49,9 @@ import com.jdcloud.sdk.service.cloudsign.client.UploadStampExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DownloadStampsRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DownloadStampsResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DownloadStampsExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.PaddingTemplateRequest;
+import com.jdcloud.sdk.service.cloudsign.model.PaddingTemplateResponse;
+import com.jdcloud.sdk.service.cloudsign.client.PaddingTemplateExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.SignContractRequest;
 import com.jdcloud.sdk.service.cloudsign.model.SignContractResponse;
 import com.jdcloud.sdk.service.cloudsign.client.SignContractExecutor;
@@ -90,7 +93,7 @@ public class CloudsignClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "cloudsign.jdcloud-api.com";
     public final static String ServiceName = "cloudsign";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -198,6 +201,17 @@ public class CloudsignClient extends JdcloudClient {
      */
     public DownloadStampsResponse downloadStamps(DownloadStampsRequest request) throws JdcloudSdkException {
         return new DownloadStampsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 填充合同模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PaddingTemplateResponse paddingTemplate(PaddingTemplateRequest request) throws JdcloudSdkException {
+        return new PaddingTemplateExecutor().client(this).execute(request);
     }
 
     /**

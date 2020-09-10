@@ -118,9 +118,6 @@ import com.jdcloud.sdk.service.cdn.client.QueryMonitorExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryCdnUserQuotaRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryCdnUserQuotaResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryCdnUserQuotaExecutor;
-import com.jdcloud.sdk.service.cdn.model.CheckWhetherIpBelongToJCloudV2Request;
-import com.jdcloud.sdk.service.cdn.model.CheckWhetherIpBelongToJCloudV2Response;
-import com.jdcloud.sdk.service.cdn.client.CheckWhetherIpBelongToJCloudV2Executor;
 import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainAppsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainAppsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryLiveDomainAppsExecutor;
@@ -295,6 +292,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryAttackTypeCountExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryUnForbiddenStatusRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryUnForbiddenStatusResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryUnForbiddenStatusExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetAuthConfigRequest;
+import com.jdcloud.sdk.service.cdn.model.SetAuthConfigResponse;
+import com.jdcloud.sdk.service.cdn.client.SetAuthConfigExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryIpBlackListRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryIpBlackListResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryIpBlackListExecutor;
@@ -418,6 +418,9 @@ import com.jdcloud.sdk.service.cdn.client.DeleteDomainExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourcePathRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourcePathResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryBackSourcePathExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetSourceAuthConfigRequest;
+import com.jdcloud.sdk.service.cdn.model.SetSourceAuthConfigResponse;
+import com.jdcloud.sdk.service.cdn.client.SetSourceAuthConfigExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryUserAgentRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryUserAgentResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryUserAgentExecutor;
@@ -935,17 +938,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryCdnUserQuotaResponse queryCdnUserQuota(QueryCdnUserQuotaRequest request) throws JdcloudSdkException {
         return new QueryCdnUserQuotaExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取所有上层节点的ip
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CheckWhetherIpBelongToJCloudV2Response checkWhetherIpBelongToJCloudV2(CheckWhetherIpBelongToJCloudV2Request request) throws JdcloudSdkException {
-        return new CheckWhetherIpBelongToJCloudV2Executor().client(this).execute(request);
     }
 
     /**
@@ -1587,6 +1579,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * dash鉴权设置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetAuthConfigResponse setAuthConfig(SetAuthConfigRequest request) throws JdcloudSdkException {
+        return new SetAuthConfigExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询ip黑白名单
      *
      * @param request
@@ -2035,6 +2038,17 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryBackSourcePathResponse queryBackSourcePath(QueryBackSourcePathRequest request) throws JdcloudSdkException {
         return new QueryBackSourcePathExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 回源鉴权设置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetSourceAuthConfigResponse setSourceAuthConfig(SetSourceAuthConfigRequest request) throws JdcloudSdkException {
+        return new SetSourceAuthConfigExecutor().client(this).execute(request);
     }
 
     /**
