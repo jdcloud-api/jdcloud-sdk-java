@@ -24,7 +24,7 @@
 
 package com.jdcloud.sdk.service.cloudauth.model;
 
-import com.jdcloud.sdk.service.cloudauth.model.AuthInfo;
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,37 +35,195 @@ public class PersonalAuthResult extends JdcloudResult implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * authInfo
+     * 认证结果true 成功, false 失败
      */
-    private AuthInfo authInfo;
+    private Boolean success;
+
+    /**
+     * 是否有异常 true 有异常, false 无异常
+     */
+    private Boolean hasException;
+
+    /**
+     * 认证结果状态码
+     * Required:true
+     */
+    @Required
+    private String code;
+
+    /**
+     * 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
+     * Required:true
+     */
+    @Required
+    private String message;
+
+    /**
+     * 1. 认证结果信息
+2. 查询结果信息
+
+     * Required:true
+     */
+    @Required
+    private String detail;
 
 
     /**
-     * get authInfo
+     * get 认证结果true 成功, false 失败
      *
      * @return
      */
-    public AuthInfo getAuthInfo() {
-        return authInfo;
+    public Boolean getSuccess() {
+        return success;
     }
 
     /**
-     * set authInfo
+     * set 认证结果true 成功, false 失败
      *
-     * @param authInfo
+     * @param success
      */
-    public void setAuthInfo(AuthInfo authInfo) {
-        this.authInfo = authInfo;
+    public void setSuccess(Boolean success) {
+        this.success = success;
+    }
+
+    /**
+     * get 是否有异常 true 有异常, false 无异常
+     *
+     * @return
+     */
+    public Boolean getHasException() {
+        return hasException;
+    }
+
+    /**
+     * set 是否有异常 true 有异常, false 无异常
+     *
+     * @param hasException
+     */
+    public void setHasException(Boolean hasException) {
+        this.hasException = hasException;
+    }
+
+    /**
+     * get 认证结果状态码
+     *
+     * @return
+     */
+    public String getCode() {
+        return code;
+    }
+
+    /**
+     * set 认证结果状态码
+     *
+     * @param code
+     */
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    /**
+     * get 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
+     *
+     * @return
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * set 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
+     *
+     * @param message
+     */
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    /**
+     * get 1. 认证结果信息
+2. 查询结果信息
+
+     *
+     * @return
+     */
+    public String getDetail() {
+        return detail;
+    }
+
+    /**
+     * set 1. 认证结果信息
+2. 查询结果信息
+
+     *
+     * @param detail
+     */
+    public void setDetail(String detail) {
+        this.detail = detail;
     }
 
 
     /**
-     * set authInfo
+     * set 认证结果true 成功, false 失败
      *
-     * @param authInfo
+     * @param success
      */
-    public PersonalAuthResult authInfo(AuthInfo authInfo) {
-        this.authInfo = authInfo;
+    public PersonalAuthResult success(Boolean success) {
+        this.success = success;
+        return this;
+    }
+
+    /**
+     * set 是否有异常 true 有异常, false 无异常
+     *
+     * @param hasException
+     */
+    public PersonalAuthResult hasException(Boolean hasException) {
+        this.hasException = hasException;
+        return this;
+    }
+
+    /**
+     * set 认证结果状态码
+     *
+     * @param code
+     */
+    public PersonalAuthResult code(String code) {
+        this.code = code;
+        return this;
+    }
+
+    /**
+     * set 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
+     *
+     * @param message
+     */
+    public PersonalAuthResult message(String message) {
+        this.message = message;
+        return this;
+    }
+
+    /**
+     * set 1. 认证结果信息
+2. 查询结果信息
+
+     *
+     * @param detail
+     */
+    public PersonalAuthResult detail(String detail) {
+        this.detail = detail;
         return this;
     }
 
