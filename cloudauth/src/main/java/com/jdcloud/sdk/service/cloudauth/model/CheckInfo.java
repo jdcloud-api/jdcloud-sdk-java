@@ -38,7 +38,7 @@ public class CheckInfo  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private Float paymentAmount;
+    private String paymentAmount;
 
     /**
      * 订单号
@@ -53,7 +53,7 @@ public class CheckInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Float getPaymentAmount() {
+    public String getPaymentAmount() {
         return paymentAmount;
     }
 
@@ -62,7 +62,7 @@ public class CheckInfo  implements java.io.Serializable {
      *
      * @param paymentAmount
      */
-    public void setPaymentAmount(Float paymentAmount) {
+    public void setPaymentAmount(String paymentAmount) {
         this.paymentAmount = paymentAmount;
     }
 
@@ -90,7 +90,7 @@ public class CheckInfo  implements java.io.Serializable {
      *
      * @param paymentAmount
      */
-    public CheckInfo paymentAmount(Float paymentAmount) {
+    public CheckInfo paymentAmount(String paymentAmount) {
         this.paymentAmount = paymentAmount;
         return this;
     }

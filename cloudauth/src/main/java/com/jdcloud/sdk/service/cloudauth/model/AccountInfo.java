@@ -41,11 +41,6 @@ public class AccountInfo  implements java.io.Serializable {
     private String orgName;
 
     /**
-     * 身份证号码
-     */
-    private String idCard;
-
-    /**
      * 银行卡号
      * Required:true
      */
@@ -98,24 +93,6 @@ public class AccountInfo  implements java.io.Serializable {
      */
     public void setOrgName(String orgName) {
         this.orgName = orgName;
-    }
-
-    /**
-     * get 身份证号码
-     *
-     * @return
-     */
-    public String getIdCard() {
-        return idCard;
-    }
-
-    /**
-     * set 身份证号码
-     *
-     * @param idCard
-     */
-    public void setIdCard(String idCard) {
-        this.idCard = idCard;
     }
 
     /**
@@ -234,16 +211,6 @@ public class AccountInfo  implements java.io.Serializable {
      */
     public AccountInfo orgName(String orgName) {
         this.orgName = orgName;
-        return this;
-    }
-
-    /**
-     * set 身份证号码
-     *
-     * @param idCard
-     */
-    public AccountInfo idCard(String idCard) {
-        this.idCard = idCard;
         return this;
     }
 

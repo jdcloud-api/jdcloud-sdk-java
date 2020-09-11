@@ -55,18 +55,23 @@ public class AuthInfo  implements java.io.Serializable {
     private String code;
 
     /**
-     * 认证结果
+     * 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
      * Required:true
      */
     @Required
     private String message;
 
     /**
-     * detail
+     * 1. 认证结果信息
+2. 查询结果信息
+
      * Required:true
      */
     @Required
-    private AuthDetail detail;
+    private String detail;
 
 
     /**
@@ -124,7 +129,10 @@ public class AuthInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 认证结果
+     * get 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
      *
      * @return
      */
@@ -133,7 +141,10 @@ public class AuthInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 认证结果
+     * set 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
      *
      * @param message
      */
@@ -142,20 +153,24 @@ public class AuthInfo  implements java.io.Serializable {
     }
 
     /**
-     * get detail
+     * get 1. 认证结果信息
+2. 查询结果信息
+
      *
      * @return
      */
-    public AuthDetail getDetail() {
+    public String getDetail() {
         return detail;
     }
 
     /**
-     * set detail
+     * set 1. 认证结果信息
+2. 查询结果信息
+
      *
      * @param detail
      */
-    public void setDetail(AuthDetail detail) {
+    public void setDetail(String detail) {
         this.detail = detail;
     }
 
@@ -191,7 +206,10 @@ public class AuthInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 认证结果
+     * set 1. 认证结果信息
+2. 查询结果信息
+3. 状态码信息
+
      *
      * @param message
      */
@@ -201,11 +219,13 @@ public class AuthInfo  implements java.io.Serializable {
     }
 
     /**
-     * set detail
+     * set 1. 认证结果信息
+2. 查询结果信息
+
      *
      * @param detail
      */
-    public AuthInfo detail(AuthDetail detail) {
+    public AuthInfo detail(String detail) {
         this.detail = detail;
         return this;
     }

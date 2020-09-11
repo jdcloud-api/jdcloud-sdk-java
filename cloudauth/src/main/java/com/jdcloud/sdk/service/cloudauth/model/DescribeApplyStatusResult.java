@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * 服务管理接口
- * 电子签章-服务管理接口
+ * 实名认证-服务管理接口
  *
  * OpenAPI spec version: v1
  * Contact: 
