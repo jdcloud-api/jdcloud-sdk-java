@@ -1,9 +1,12 @@
 # 更新历史
 
-API版本：2.1.2
+API版本：2.2.2
 
 | 发布时间   | 版本号 | 更新     | 说明                                                         |
 | ---------- | ------ | -------- | ------------------------------------------------------------ |
+| 2020-09-23 | 2.2.2  | 增加接口 |   内部接口调整   |
+| 2020-08-17 | 2.2.1  | 接口更新 | 内部接口调整     |
+| 2020-07-29 | 2.2.0  | 增加接口 | 新增接口describeClientList、describeClientIpDetail，内部接口调整     |
 | 2020-05-13 | 2.1.2  | 接口更新 | 更新describeSpecConfig接口返回结果     |
 | 2020-03-27 | 2.1.1  | 接口更新 | 更新describeSpecConfig接口返回结果     |
 | 2020-03-17 | 2.1.0  | 接口更新 | createCacheInstance、modifyCacheInstanceClass接口新增shardNumber参数；新增describeSpecConfig接口     |

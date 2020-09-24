@@ -40,7 +40,7 @@ public class ValListCfg  implements java.io.Serializable {
     /**
      * 规则更新时间，秒级时间戳, 0 表示历史数据无记录
      */
-    private String updateTime;
+    private Integer updateTime;
 
     /**
      * 0-使用中 1-禁用
@@ -86,7 +86,7 @@ public class ValListCfg  implements java.io.Serializable {
      *
      * @return
      */
-    public String getUpdateTime() {
+    public Integer getUpdateTime() {
         return updateTime;
     }
 
@@ -95,7 +95,7 @@ public class ValListCfg  implements java.io.Serializable {
      *
      * @param updateTime
      */
-    public void setUpdateTime(String updateTime) {
+    public void setUpdateTime(Integer updateTime) {
         this.updateTime = updateTime;
     }
 
@@ -187,7 +187,7 @@ public class ValListCfg  implements java.io.Serializable {
      *
      * @param updateTime
      */
-    public ValListCfg updateTime(String updateTime) {
+    public ValListCfg updateTime(Integer updateTime) {
         this.updateTime = updateTime;
         return this;
     }

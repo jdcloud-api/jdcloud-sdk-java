@@ -58,9 +58,15 @@ import com.jdcloud.sdk.service.vod.client.SetURLRuleExecutor;
 import com.jdcloud.sdk.service.vod.model.GetCategoryWithChildrenRequest;
 import com.jdcloud.sdk.service.vod.model.GetCategoryWithChildrenResponse;
 import com.jdcloud.sdk.service.vod.client.GetCategoryWithChildrenExecutor;
+import com.jdcloud.sdk.service.vod.model.GetTranscodeJobSummariesRequest;
+import com.jdcloud.sdk.service.vod.model.GetTranscodeJobSummariesResponse;
+import com.jdcloud.sdk.service.vod.client.GetTranscodeJobSummariesExecutor;
 import com.jdcloud.sdk.service.vod.model.ListTranscodeTemplatesRequest;
 import com.jdcloud.sdk.service.vod.model.ListTranscodeTemplatesResponse;
 import com.jdcloud.sdk.service.vod.client.ListTranscodeTemplatesExecutor;
+import com.jdcloud.sdk.service.vod.model.GetTranscodeSummariesRequest;
+import com.jdcloud.sdk.service.vod.model.GetTranscodeSummariesResponse;
+import com.jdcloud.sdk.service.vod.client.GetTranscodeSummariesExecutor;
 import com.jdcloud.sdk.service.vod.model.GetCategoryRequest;
 import com.jdcloud.sdk.service.vod.model.GetCategoryResponse;
 import com.jdcloud.sdk.service.vod.client.GetCategoryExecutor;
@@ -91,6 +97,9 @@ import com.jdcloud.sdk.service.vod.client.UpdateQualityDetectionTemplateExecutor
 import com.jdcloud.sdk.service.vod.model.GetDomainRequest;
 import com.jdcloud.sdk.service.vod.model.GetDomainResponse;
 import com.jdcloud.sdk.service.vod.client.GetDomainExecutor;
+import com.jdcloud.sdk.service.vod.model.ListSnapshotTemplatesRequest;
+import com.jdcloud.sdk.service.vod.model.ListSnapshotTemplatesResponse;
+import com.jdcloud.sdk.service.vod.client.ListSnapshotTemplatesExecutor;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.GetWatermarkExecutor;
@@ -124,6 +133,9 @@ import com.jdcloud.sdk.service.vod.client.DeleteHeaderExecutor;
 import com.jdcloud.sdk.service.vod.model.UpdateCategoryRequest;
 import com.jdcloud.sdk.service.vod.model.UpdateCategoryResponse;
 import com.jdcloud.sdk.service.vod.client.UpdateCategoryExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteSnapshotTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteSnapshotTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteSnapshotTemplateExecutor;
 import com.jdcloud.sdk.service.vod.model.SetRefererRuleRequest;
 import com.jdcloud.sdk.service.vod.model.SetRefererRuleResponse;
 import com.jdcloud.sdk.service.vod.client.SetRefererRuleExecutor;
@@ -166,15 +178,27 @@ import com.jdcloud.sdk.service.vod.client.GetVideoExecutor;
 import com.jdcloud.sdk.service.vod.model.ListVideosRequest;
 import com.jdcloud.sdk.service.vod.model.ListVideosResponse;
 import com.jdcloud.sdk.service.vod.client.ListVideosExecutor;
+import com.jdcloud.sdk.service.vod.model.GetSnapshotTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.GetSnapshotTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.GetSnapshotTemplateExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.CreateWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.CreateWatermarkExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteVideoRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteVideoResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteVideoExecutor;
+import com.jdcloud.sdk.service.vod.model.UpdateSnapshotTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.UpdateSnapshotTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.UpdateSnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.vod.model.GetTranscodeTaskSummariesRequest;
+import com.jdcloud.sdk.service.vod.model.GetTranscodeTaskSummariesResponse;
+import com.jdcloud.sdk.service.vod.client.GetTranscodeTaskSummariesExecutor;
 import com.jdcloud.sdk.service.vod.model.SubmitQualityDetectionJobRequest;
 import com.jdcloud.sdk.service.vod.model.SubmitQualityDetectionJobResponse;
 import com.jdcloud.sdk.service.vod.client.SubmitQualityDetectionJobExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateSnapshotTemplateRequest;
+import com.jdcloud.sdk.service.vod.model.CreateSnapshotTemplateResponse;
+import com.jdcloud.sdk.service.vod.client.CreateSnapshotTemplateExecutor;
 import com.jdcloud.sdk.service.vod.model.GetIPRuleRequest;
 import com.jdcloud.sdk.service.vod.model.GetIPRuleResponse;
 import com.jdcloud.sdk.service.vod.client.GetIPRuleExecutor;
@@ -207,7 +231,7 @@ public class VodClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "vod.jdcloud-api.com";
     public final static String ServiceName = "vod";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -349,6 +373,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 查询转码作业摘要
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTranscodeJobSummariesResponse getTranscodeJobSummaries(GetTranscodeJobSummariesRequest request) throws JdcloudSdkException {
+        return new GetTranscodeJobSummariesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询转码模板列表。
 允许通过条件过滤查询，支持的过滤字段如下：
   - source[eq] 按模板来源精确查询
@@ -361,6 +396,17 @@ public class VodClient extends JdcloudClient {
      */
     public ListTranscodeTemplatesResponse listTranscodeTemplates(ListTranscodeTemplatesRequest request) throws JdcloudSdkException {
         return new ListTranscodeTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频转码摘要
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTranscodeSummariesResponse getTranscodeSummaries(GetTranscodeSummariesRequest request) throws JdcloudSdkException {
+        return new GetTranscodeSummariesExecutor().client(this).execute(request);
     }
 
     /**
@@ -472,6 +518,20 @@ public class VodClient extends JdcloudClient {
      */
     public GetDomainResponse getDomain(GetDomainRequest request) throws JdcloudSdkException {
         return new GetDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询截图模板列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - templateType[eq] 按模板类型精确查询
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListSnapshotTemplatesResponse listSnapshotTemplates(ListSnapshotTemplatesRequest request) throws JdcloudSdkException {
+        return new ListSnapshotTemplatesExecutor().client(this).execute(request);
     }
 
     /**
@@ -593,6 +653,17 @@ public class VodClient extends JdcloudClient {
      */
     public UpdateCategoryResponse updateCategory(UpdateCategoryRequest request) throws JdcloudSdkException {
         return new UpdateCategoryExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSnapshotTemplateResponse deleteSnapshotTemplate(DeleteSnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new DeleteSnapshotTemplateExecutor().client(this).execute(request);
     }
 
     /**
@@ -758,6 +829,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 查询截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetSnapshotTemplateResponse getSnapshotTemplate(GetSnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new GetSnapshotTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 添加水印
      *
      * @param request
@@ -780,6 +862,28 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 修改截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateSnapshotTemplateResponse updateSnapshotTemplate(UpdateSnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new UpdateSnapshotTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询转码任务摘要
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTranscodeTaskSummariesResponse getTranscodeTaskSummaries(GetTranscodeTaskSummariesRequest request) throws JdcloudSdkException {
+        return new GetTranscodeTaskSummariesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 提交质检作业
      *
      * @param request
@@ -788,6 +892,17 @@ public class VodClient extends JdcloudClient {
      */
     public SubmitQualityDetectionJobResponse submitQualityDetectionJob(SubmitQualityDetectionJobRequest request) throws JdcloudSdkException {
         return new SubmitQualityDetectionJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建截图模板
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSnapshotTemplateResponse createSnapshotTemplate(CreateSnapshotTemplateRequest request) throws JdcloudSdkException {
+        return new CreateSnapshotTemplateExecutor().client(this).execute(request);
     }
 
     /**

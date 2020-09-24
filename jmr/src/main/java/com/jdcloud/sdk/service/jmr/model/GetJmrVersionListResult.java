@@ -29,63 +29,22 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 返回jmr版本列表
+ * 查询JMR的版本信息
  */
 public class GetJmrVersionListResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * status
-     */
-    private String status;
-
-    /**
-     * message
-     */
-    private String message;
-
-    /**
      * data
      */
     private List<String> data;
 
-
     /**
-     * get status
-     *
-     * @return
+     * status
      */
-    public String getStatus() {
-        return status;
-    }
+    private Boolean status;
 
-    /**
-     * set status
-     *
-     * @param status
-     */
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    /**
-     * get message
-     *
-     * @return
-     */
-    public String getMessage() {
-        return message;
-    }
-
-    /**
-     * set message
-     *
-     * @param message
-     */
-    public void setMessage(String message) {
-        this.message = message;
-    }
 
     /**
      * get data
@@ -105,26 +64,24 @@ public class GetJmrVersionListResult extends JdcloudResult implements java.io.Se
         this.data = data;
     }
 
+    /**
+     * get status
+     *
+     * @return
+     */
+    public Boolean getStatus() {
+        return status;
+    }
 
     /**
      * set status
      *
      * @param status
      */
-    public GetJmrVersionListResult status(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
-        return this;
     }
 
-    /**
-     * set message
-     *
-     * @param message
-     */
-    public GetJmrVersionListResult message(String message) {
-        this.message = message;
-        return this;
-    }
 
     /**
      * set data
@@ -133,6 +90,16 @@ public class GetJmrVersionListResult extends JdcloudResult implements java.io.Se
      */
     public GetJmrVersionListResult data(List<String> data) {
         this.data = data;
+        return this;
+    }
+
+    /**
+     * set status
+     *
+     * @param status
+     */
+    public GetJmrVersionListResult status(Boolean status) {
+        this.status = status;
         return this;
     }
 

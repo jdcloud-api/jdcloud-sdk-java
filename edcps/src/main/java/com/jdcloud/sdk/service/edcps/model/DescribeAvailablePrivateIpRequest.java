@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -35,6 +35,13 @@ public class DescribeAvailablePrivateIpRequest extends JdcloudRequest implements
     private static final long serialVersionUID = 1L;
 
     /**
+     * 主网口或者辅网口的子网id
+     * Required:true
+     */
+    @Required
+    private String subnetId;
+
+    /**
      * 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      * Required:true
      */
@@ -48,6 +55,24 @@ public class DescribeAvailablePrivateIpRequest extends JdcloudRequest implements
     @Required
     private String instanceId;
 
+
+    /**
+     * get 主网口或者辅网口的子网id
+     *
+     * @return
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
+
+    /**
+     * set 主网口或者辅网口的子网id
+     *
+     * @param subnetId
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
 
     /**
      * get 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
@@ -85,6 +110,16 @@ public class DescribeAvailablePrivateIpRequest extends JdcloudRequest implements
         this.instanceId = instanceId;
     }
 
+
+    /**
+     * set 主网口或者辅网口的子网id
+     *
+     * @param subnetId
+     */
+    public DescribeAvailablePrivateIpRequest subnetId(String subnetId) {
+        this.subnetId = subnetId;
+        return this;
+    }
 
     /**
      * set 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域

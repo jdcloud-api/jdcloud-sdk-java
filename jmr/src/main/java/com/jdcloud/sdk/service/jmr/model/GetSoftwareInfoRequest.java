@@ -28,16 +28,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取软件清单信息
+ * 获取对应版本的软件清单信息
  */
 public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * JMR软件版本号
-     */
-    private String ver;
 
     /**
      * 地域ID
@@ -46,24 +41,13 @@ public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Se
     @Required
     private String regionId;
 
-
     /**
-     * get JMR软件版本号
-     *
-     * @return
+     * JMR软件版本号
+     * Required:true
      */
-    public String getVer() {
-        return ver;
-    }
+    @Required
+    private String ver;
 
-    /**
-     * set JMR软件版本号
-     *
-     * @param ver
-     */
-    public void setVer(String ver) {
-        this.ver = ver;
-    }
 
     /**
      * get 地域ID
@@ -83,16 +67,24 @@ public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
     }
 
+    /**
+     * get JMR软件版本号
+     *
+     * @return
+     */
+    public String getVer() {
+        return ver;
+    }
 
     /**
      * set JMR软件版本号
      *
      * @param ver
      */
-    public GetSoftwareInfoRequest ver(String ver) {
+    public void setVer(String ver) {
         this.ver = ver;
-        return this;
     }
+
 
     /**
      * set 地域ID
@@ -101,6 +93,16 @@ public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Se
      */
     public GetSoftwareInfoRequest regionId(String regionId) {
         this.regionId = regionId;
+        return this;
+    }
+
+    /**
+     * set JMR软件版本号
+     *
+     * @param ver
+     */
+    public GetSoftwareInfoRequest ver(String ver) {
+        this.ver = ver;
         return this;
     }
 

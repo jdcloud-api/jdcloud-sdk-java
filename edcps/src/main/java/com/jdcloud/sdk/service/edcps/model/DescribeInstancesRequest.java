@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -80,14 +80,24 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String enableInternet;
 
     /**
-     * 内网ip
+     * 主网口内网ip
      */
     private String privateIp;
+
+    /**
+     * 辅网口内网ip
+     */
+    private String extensionPrivateIp;
 
     /**
      * 密钥对id
      */
     private String keypairId;
+
+    /**
+     * 网口模式 单网口:bond,双网口:dual
+     */
+    private String interfaceMode;
 
     /**
      * instanceId - 分布式云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
@@ -249,7 +259,7 @@ status - 分布式云物理服务器状态，参考分布式云物理服务器�
     }
 
     /**
-     * get 内网ip
+     * get 主网口内网ip
      *
      * @return
      */
@@ -258,12 +268,30 @@ status - 分布式云物理服务器状态，参考分布式云物理服务器�
     }
 
     /**
-     * set 内网ip
+     * set 主网口内网ip
      *
      * @param privateIp
      */
     public void setPrivateIp(String privateIp) {
         this.privateIp = privateIp;
+    }
+
+    /**
+     * get 辅网口内网ip
+     *
+     * @return
+     */
+    public String getExtensionPrivateIp() {
+        return extensionPrivateIp;
+    }
+
+    /**
+     * set 辅网口内网ip
+     *
+     * @param extensionPrivateIp
+     */
+    public void setExtensionPrivateIp(String extensionPrivateIp) {
+        this.extensionPrivateIp = extensionPrivateIp;
     }
 
     /**
@@ -282,6 +310,24 @@ status - 分布式云物理服务器状态，参考分布式云物理服务器�
      */
     public void setKeypairId(String keypairId) {
         this.keypairId = keypairId;
+    }
+
+    /**
+     * get 网口模式 单网口:bond,双网口:dual
+     *
+     * @return
+     */
+    public String getInterfaceMode() {
+        return interfaceMode;
+    }
+
+    /**
+     * set 网口模式 单网口:bond,双网口:dual
+     *
+     * @param interfaceMode
+     */
+    public void setInterfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
     }
 
     /**
@@ -406,12 +452,22 @@ status - 分布式云物理服务器状态，参考分布式云物理服务器�
     }
 
     /**
-     * set 内网ip
+     * set 主网口内网ip
      *
      * @param privateIp
      */
     public DescribeInstancesRequest privateIp(String privateIp) {
         this.privateIp = privateIp;
+        return this;
+    }
+
+    /**
+     * set 辅网口内网ip
+     *
+     * @param extensionPrivateIp
+     */
+    public DescribeInstancesRequest extensionPrivateIp(String extensionPrivateIp) {
+        this.extensionPrivateIp = extensionPrivateIp;
         return this;
     }
 
@@ -422,6 +478,16 @@ status - 分布式云物理服务器状态，参考分布式云物理服务器�
      */
     public DescribeInstancesRequest keypairId(String keypairId) {
         this.keypairId = keypairId;
+        return this;
+    }
+
+    /**
+     * set 网口模式 单网口:bond,双网口:dual
+     *
+     * @param interfaceMode
+     */
+    public DescribeInstancesRequest interfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
         return this;
     }
 

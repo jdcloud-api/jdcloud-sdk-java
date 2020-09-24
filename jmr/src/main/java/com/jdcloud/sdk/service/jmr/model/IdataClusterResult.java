@@ -24,38 +24,50 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
-import com.jdcloud.sdk.service.jmr.model.Idata;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询用户集群列表及相关服务的一些信息
+ * 查询用户指定clusterId对应的集群列表及相关服务的一些信息
  */
 public class IdataClusterResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
+     * 包括集群信息列表
+     */
+    private Object data;
+
+    /**
      * status
      */
-    private String status;
+    private Boolean status;
+
 
     /**
-     * message
+     * get 包括集群信息列表
+     *
+     * @return
      */
-    private String message;
+    public Object getData() {
+        return data;
+    }
 
     /**
-     * data
+     * set 包括集群信息列表
+     *
+     * @param data
      */
-    private Idata data;
-
+    public void setData(Object data) {
+        this.data = data;
+    }
 
     /**
      * get status
      *
      * @return
      */
-    public String getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
@@ -64,74 +76,28 @@ public class IdataClusterResult extends JdcloudResult implements java.io.Seriali
      *
      * @param status
      */
-    public void setStatus(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
-    /**
-     * get message
-     *
-     * @return
-     */
-    public String getMessage() {
-        return message;
-    }
 
     /**
-     * set message
-     *
-     * @param message
-     */
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    /**
-     * get data
-     *
-     * @return
-     */
-    public Idata getData() {
-        return data;
-    }
-
-    /**
-     * set data
+     * set 包括集群信息列表
      *
      * @param data
      */
-    public void setData(Idata data) {
+    public IdataClusterResult data(Object data) {
         this.data = data;
+        return this;
     }
-
 
     /**
      * set status
      *
      * @param status
      */
-    public IdataClusterResult status(String status) {
+    public IdataClusterResult status(Boolean status) {
         this.status = status;
-        return this;
-    }
-
-    /**
-     * set message
-     *
-     * @param message
-     */
-    public IdataClusterResult message(String message) {
-        this.message = message;
-        return this;
-    }
-
-    /**
-     * set data
-     *
-     * @param data
-     */
-    public IdataClusterResult data(Idata data) {
-        this.data = data;
         return this;
     }
 

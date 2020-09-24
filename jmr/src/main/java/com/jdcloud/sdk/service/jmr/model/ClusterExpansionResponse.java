@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 集群扩容
+ * 扩容集群
  */
 public class ClusterExpansionResponse extends JdcloudResponse<ClusterExpansionResult> implements java.io.Serializable {
 

@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.vod.model.Video;
 import com.jdcloud.sdk.service.vod.model.Audio;
 import com.jdcloud.sdk.service.vod.model.Encapsulation;
+import com.jdcloud.sdk.service.vod.model.OutFile;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -61,6 +62,11 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
      * 封装配置
      */
     private Encapsulation encapsulation;
+
+    /**
+     * 输出文件配置
+     */
+    private OutFile outFile;
 
     /**
      * 清晰度规格标记。取值范围：
@@ -190,6 +196,24 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
      */
     public void setEncapsulation(Encapsulation encapsulation) {
         this.encapsulation = encapsulation;
+    }
+
+    /**
+     * get 输出文件配置
+     *
+     * @return
+     */
+    public OutFile getOutFile() {
+        return outFile;
+    }
+
+    /**
+     * set 输出文件配置
+     *
+     * @param outFile
+     */
+    public void setOutFile(OutFile outFile) {
+        this.outFile = outFile;
     }
 
     /**
@@ -355,6 +379,16 @@ public class GetTranscodeTemplateResult extends JdcloudResult implements java.io
      */
     public GetTranscodeTemplateResult encapsulation(Encapsulation encapsulation) {
         this.encapsulation = encapsulation;
+        return this;
+    }
+
+    /**
+     * set 输出文件配置
+     *
+     * @param outFile
+     */
+    public GetTranscodeTemplateResult outFile(OutFile outFile) {
+        this.outFile = outFile;
         return this;
     }
 

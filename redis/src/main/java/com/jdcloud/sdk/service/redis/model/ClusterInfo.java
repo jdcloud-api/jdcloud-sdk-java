@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * clusterInfo对象
@@ -35,12 +37,12 @@ public class ClusterInfo  implements java.io.Serializable {
     /**
      * proxy列表
      */
-    private Proxy proxies;
+    private List<Proxy> proxies;
 
     /**
      * shard列表
      */
-    private Shard shards;
+    private List<Shard> shards;
 
 
     /**
@@ -48,7 +50,7 @@ public class ClusterInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Proxy getProxies() {
+    public List<Proxy> getProxies() {
         return proxies;
     }
 
@@ -57,7 +59,7 @@ public class ClusterInfo  implements java.io.Serializable {
      *
      * @param proxies
      */
-    public void setProxies(Proxy proxies) {
+    public void setProxies(List<Proxy> proxies) {
         this.proxies = proxies;
     }
 
@@ -66,7 +68,7 @@ public class ClusterInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Shard getShards() {
+    public List<Shard> getShards() {
         return shards;
     }
 
@@ -75,7 +77,7 @@ public class ClusterInfo  implements java.io.Serializable {
      *
      * @param shards
      */
-    public void setShards(Shard shards) {
+    public void setShards(List<Shard> shards) {
         this.shards = shards;
     }
 
@@ -85,7 +87,7 @@ public class ClusterInfo  implements java.io.Serializable {
      *
      * @param proxies
      */
-    public ClusterInfo proxies(Proxy proxies) {
+    public ClusterInfo proxies(List<Proxy> proxies) {
         this.proxies = proxies;
         return this;
     }
@@ -95,10 +97,34 @@ public class ClusterInfo  implements java.io.Serializable {
      *
      * @param shards
      */
-    public ClusterInfo shards(Shard shards) {
+    public ClusterInfo shards(List<Shard> shards) {
         this.shards = shards;
         return this;
     }
 
+
+    /**
+     * add item to proxy列表
+     *
+     * @param proxie
+     */
+    public void addProxie(Proxy proxie) {
+        if (this.proxies == null) {
+            this.proxies = new ArrayList<>();
+        }
+        this.proxies.add(proxie);
+    }
+
+    /**
+     * add item to shard列表
+     *
+     * @param shard
+     */
+    public void addShard(Shard shard) {
+        if (this.shards == null) {
+            this.shards = new ArrayList<>();
+        }
+        this.shards.add(shard);
+    }
 
 }

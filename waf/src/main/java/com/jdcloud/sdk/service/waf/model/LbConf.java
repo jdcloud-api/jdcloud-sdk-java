@@ -109,6 +109,16 @@ public class LbConf  implements java.io.Serializable {
      */
     private String maxBodySize;
 
+    /**
+     * 禁用被动健康检查，缺省为0-否
+     */
+    private Integer disableHealthCheck;
+
+    /**
+     * 连接超时时间，3-60s
+     */
+    private Integer proxyConnectTimeout;
+
 
     /**
      * get 使用协议，[&quot;http&quot;,&quot;https&quot;]
@@ -362,6 +372,42 @@ public class LbConf  implements java.io.Serializable {
         this.maxBodySize = maxBodySize;
     }
 
+    /**
+     * get 禁用被动健康检查，缺省为0-否
+     *
+     * @return
+     */
+    public Integer getDisableHealthCheck() {
+        return disableHealthCheck;
+    }
+
+    /**
+     * set 禁用被动健康检查，缺省为0-否
+     *
+     * @param disableHealthCheck
+     */
+    public void setDisableHealthCheck(Integer disableHealthCheck) {
+        this.disableHealthCheck = disableHealthCheck;
+    }
+
+    /**
+     * get 连接超时时间，3-60s
+     *
+     * @return
+     */
+    public Integer getProxyConnectTimeout() {
+        return proxyConnectTimeout;
+    }
+
+    /**
+     * set 连接超时时间，3-60s
+     *
+     * @param proxyConnectTimeout
+     */
+    public void setProxyConnectTimeout(Integer proxyConnectTimeout) {
+        this.proxyConnectTimeout = proxyConnectTimeout;
+    }
+
 
     /**
      * set 使用协议，[&quot;http&quot;,&quot;https&quot;]
@@ -500,6 +546,26 @@ public class LbConf  implements java.io.Serializable {
      */
     public LbConf maxBodySize(String maxBodySize) {
         this.maxBodySize = maxBodySize;
+        return this;
+    }
+
+    /**
+     * set 禁用被动健康检查，缺省为0-否
+     *
+     * @param disableHealthCheck
+     */
+    public LbConf disableHealthCheck(Integer disableHealthCheck) {
+        this.disableHealthCheck = disableHealthCheck;
+        return this;
+    }
+
+    /**
+     * set 连接超时时间，3-60s
+     *
+     * @param proxyConnectTimeout
+     */
+    public LbConf proxyConnectTimeout(Integer proxyConnectTimeout) {
+        this.proxyConnectTimeout = proxyConnectTimeout;
         return this;
     }
 

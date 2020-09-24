@@ -30,6 +30,7 @@ import com.jdcloud.sdk.service.jmr.model.ReleaseClusterResponse;
 
 /**
  * 释放集群
+
  */
 class ReleaseClusterExecutor extends JdcloudExecutor {
 
@@ -40,7 +41,7 @@ class ReleaseClusterExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/cluster/{id}:release";
+        return "/regions/{regionId}/clusters/{clusterId}:release";
     }
 
     @Override

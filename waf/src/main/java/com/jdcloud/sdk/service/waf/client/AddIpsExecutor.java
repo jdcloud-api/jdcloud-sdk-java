@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 网站防护类接口
- * 京东云WAF-OpenAPI网站防护类接口
+ * Domain-Protection
+ * Domain-Protection API
  *
  * OpenAPI spec version: v1
  * Contact: 

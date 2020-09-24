@@ -43,6 +43,9 @@ import com.jdcloud.sdk.service.redis.client.ResetCacheInstancePasswordExecutor;
 import com.jdcloud.sdk.service.redis.model.CreateCacheAnalysisRequest;
 import com.jdcloud.sdk.service.redis.model.CreateCacheAnalysisResponse;
 import com.jdcloud.sdk.service.redis.client.CreateCacheAnalysisExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeClientIpDetailRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeClientIpDetailResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeClientIpDetailExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeDownloadUrlRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeDownloadUrlResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeDownloadUrlExecutor;
@@ -97,6 +100,9 @@ import com.jdcloud.sdk.service.redis.client.RestoreInstanceExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeUserQuotaExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeClientListRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeClientListResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeClientListExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeClusterInfoRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeClusterInfoResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeClusterInfoExecutor;
@@ -120,7 +126,7 @@ public class RedisClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "redis.jdcloud-api.com";
     public final static String ServiceName = "redis";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -204,6 +210,17 @@ public class RedisClient extends JdcloudClient {
      */
     public CreateCacheAnalysisResponse createCacheAnalysis(CreateCacheAnalysisRequest request) throws JdcloudSdkException {
         return new CreateCacheAnalysisExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询指定客户端IP的连接详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeClientIpDetailResponse describeClientIpDetail(DescribeClientIpDetailRequest request) throws JdcloudSdkException {
+        return new DescribeClientIpDetailExecutor().client(this).execute(request);
     }
 
     /**
@@ -407,6 +424,17 @@ public class RedisClient extends JdcloudClient {
      */
     public DescribeUserQuotaResponse describeUserQuota(DescribeUserQuotaRequest request) throws JdcloudSdkException {
         return new DescribeUserQuotaExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询当前客户端IP列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeClientListResponse describeClientList(DescribeClientListRequest request) throws JdcloudSdkException {
+        return new DescribeClientListExecutor().client(this).execute(request);
     }
 
     /**

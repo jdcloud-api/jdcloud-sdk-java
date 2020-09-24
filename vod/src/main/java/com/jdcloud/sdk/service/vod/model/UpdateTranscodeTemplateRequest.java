@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.vod.model.Video;
 import com.jdcloud.sdk.service.vod.model.Audio;
 import com.jdcloud.sdk.service.vod.model.Encapsulation;
+import com.jdcloud.sdk.service.vod.model.OutFile;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -57,6 +58,11 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
      * 封装配置
      */
     private Encapsulation encapsulation;
+
+    /**
+     * 输出文件配置
+     */
+    private OutFile outFile;
 
     /**
      * 清晰度规格标记。取值范围：
@@ -157,6 +163,24 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
      */
     public void setEncapsulation(Encapsulation encapsulation) {
         this.encapsulation = encapsulation;
+    }
+
+    /**
+     * get 输出文件配置
+     *
+     * @return
+     */
+    public OutFile getOutFile() {
+        return outFile;
+    }
+
+    /**
+     * set 输出文件配置
+     *
+     * @param outFile
+     */
+    public void setOutFile(OutFile outFile) {
+        this.outFile = outFile;
     }
 
     /**
@@ -270,6 +294,16 @@ public class UpdateTranscodeTemplateRequest extends JdcloudRequest implements ja
      */
     public UpdateTranscodeTemplateRequest encapsulation(Encapsulation encapsulation) {
         this.encapsulation = encapsulation;
+        return this;
+    }
+
+    /**
+     * set 输出文件配置
+     *
+     * @param outFile
+     */
+    public UpdateTranscodeTemplateRequest outFile(OutFile outFile) {
+        this.outFile = outFile;
         return this;
     }
 

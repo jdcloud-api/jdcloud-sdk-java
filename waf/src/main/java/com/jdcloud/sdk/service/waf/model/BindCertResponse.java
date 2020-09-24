@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 证书类接口
- * 京东云WAF-OpenAPI证书类接口
+ * Cert
+ * Cert API
  *
  * OpenAPI spec version: v1
  * Contact: 

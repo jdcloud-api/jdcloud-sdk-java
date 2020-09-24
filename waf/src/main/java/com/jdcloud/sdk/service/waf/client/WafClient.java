@@ -49,9 +49,6 @@ import com.jdcloud.sdk.service.waf.client.SetBotStdRulesExecutor;
 import com.jdcloud.sdk.service.waf.model.AddDomainRequest;
 import com.jdcloud.sdk.service.waf.model.AddDomainResponse;
 import com.jdcloud.sdk.service.waf.client.AddDomainExecutor;
-import com.jdcloud.sdk.service.waf.model.DescribeIpDomainInfoRequest;
-import com.jdcloud.sdk.service.waf.model.DescribeIpDomainInfoResponse;
-import com.jdcloud.sdk.service.waf.client.DescribeIpDomainInfoExecutor;
 import com.jdcloud.sdk.service.waf.model.UpdateIpsRequest;
 import com.jdcloud.sdk.service.waf.model.UpdateIpsResponse;
 import com.jdcloud.sdk.service.waf.client.UpdateIpsExecutor;
@@ -115,6 +112,9 @@ import com.jdcloud.sdk.service.waf.client.ListIpsExecutor;
 import com.jdcloud.sdk.service.waf.model.DelRiskRuleRequest;
 import com.jdcloud.sdk.service.waf.model.DelRiskRuleResponse;
 import com.jdcloud.sdk.service.waf.client.DelRiskRuleExecutor;
+import com.jdcloud.sdk.service.waf.model.DescribeLbOutIpRequest;
+import com.jdcloud.sdk.service.waf.model.DescribeLbOutIpResponse;
+import com.jdcloud.sdk.service.waf.client.DescribeLbOutIpExecutor;
 import com.jdcloud.sdk.service.waf.model.GetBpsDataRequest;
 import com.jdcloud.sdk.service.waf.model.GetBpsDataResponse;
 import com.jdcloud.sdk.service.waf.client.GetBpsDataExecutor;
@@ -142,9 +142,6 @@ import com.jdcloud.sdk.service.waf.client.ListBotStdRulesExecutor;
 import com.jdcloud.sdk.service.waf.model.EnableRiskRequest;
 import com.jdcloud.sdk.service.waf.model.EnableRiskResponse;
 import com.jdcloud.sdk.service.waf.client.EnableRiskExecutor;
-import com.jdcloud.sdk.service.waf.model.IsWafVipRequest;
-import com.jdcloud.sdk.service.waf.model.IsWafVipResponse;
-import com.jdcloud.sdk.service.waf.client.IsWafVipExecutor;
 import com.jdcloud.sdk.service.waf.model.AntiModeWafRequest;
 import com.jdcloud.sdk.service.waf.model.AntiModeWafResponse;
 import com.jdcloud.sdk.service.waf.client.AntiModeWafExecutor;
@@ -289,17 +286,6 @@ public class WafClient extends JdcloudClient {
      */
     public AddDomainResponse addDomain(AddDomainRequest request) throws JdcloudSdkException {
         return new AddDomainExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取ip的域名信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeIpDomainInfoResponse describeIpDomainInfo(DescribeIpDomainInfoRequest request) throws JdcloudSdkException {
-        return new DescribeIpDomainInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -534,6 +520,17 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
+     * 获取回源ip段
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLbOutIpResponse describeLbOutIp(DescribeLbOutIpRequest request) throws JdcloudSdkException {
+        return new DescribeLbOutIpExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取网站在一定时间内的bps信息。
      *
      * @param request
@@ -630,17 +627,6 @@ public class WafClient extends JdcloudClient {
      */
     public EnableRiskResponse enableRisk(EnableRiskRequest request) throws JdcloudSdkException {
         return new EnableRiskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 判断IP是否为waf的vip
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public IsWafVipResponse isWafVip(IsWafVipRequest request) throws JdcloudSdkException {
-        return new IsWafVipExecutor().client(this).execute(request);
     }
 
     /**

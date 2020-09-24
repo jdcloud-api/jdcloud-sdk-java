@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListResponse;
 
 /**
- * 返回jmr版本列表
+ * 查询JMR的版本信息
  */
 class GetJmrVersionListExecutor extends JdcloudExecutor {
 

@@ -189,9 +189,74 @@ public class Instance  implements java.io.Serializable {
     private String keypairId;
 
     /**
+     * 网络接口模式，单网口:bond、双网口:dual
+     */
+    private String interfaceMode;
+
+    /**
+     * 辅网口私有网络ID
+     */
+    private String extensionVpcId;
+
+    /**
+     * 辅网口私有网络名称
+     */
+    private String extensionVpcName;
+
+    /**
+     * 辅网口子网ID
+     */
+    private String extensionSubnetId;
+
+    /**
+     * 辅网口子网名称
+     */
+    private String extensionSubnetName;
+
+    /**
+     * 辅网口手动分配的内网ip
+     */
+    private String extensionPrivateIp;
+
+    /**
+     * 辅网口是否启用外网
+     */
+    private String extensionEnableInternet;
+
+    /**
+     * 辅网口弹性公网ip id
+     */
+    private String extensionElasticIpId;
+
+    /**
+     * 辅网口公网ip
+     */
+    private String extensionPublicIp;
+
+    /**
+     * 辅网口外网带宽，单位Mbps
+     */
+    private Integer extensionBandwidth;
+
+    /**
+     * 辅网口额外上行带宽, 单位Mbps
+     */
+    private Integer extensionExtraUplinkBandwidth;
+
+    /**
      * agent状态
      */
     private String agentStatus;
+
+    /**
+     * 创建时间
+     */
+    private String createTime;
+
+    /**
+     * 更新时间
+     */
+    private String updateTime;
 
     /**
      * 计费信息
@@ -758,6 +823,204 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 网络接口模式，单网口:bond、双网口:dual
+     *
+     * @return
+     */
+    public String getInterfaceMode() {
+        return interfaceMode;
+    }
+
+    /**
+     * set 网络接口模式，单网口:bond、双网口:dual
+     *
+     * @param interfaceMode
+     */
+    public void setInterfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
+    }
+
+    /**
+     * get 辅网口私有网络ID
+     *
+     * @return
+     */
+    public String getExtensionVpcId() {
+        return extensionVpcId;
+    }
+
+    /**
+     * set 辅网口私有网络ID
+     *
+     * @param extensionVpcId
+     */
+    public void setExtensionVpcId(String extensionVpcId) {
+        this.extensionVpcId = extensionVpcId;
+    }
+
+    /**
+     * get 辅网口私有网络名称
+     *
+     * @return
+     */
+    public String getExtensionVpcName() {
+        return extensionVpcName;
+    }
+
+    /**
+     * set 辅网口私有网络名称
+     *
+     * @param extensionVpcName
+     */
+    public void setExtensionVpcName(String extensionVpcName) {
+        this.extensionVpcName = extensionVpcName;
+    }
+
+    /**
+     * get 辅网口子网ID
+     *
+     * @return
+     */
+    public String getExtensionSubnetId() {
+        return extensionSubnetId;
+    }
+
+    /**
+     * set 辅网口子网ID
+     *
+     * @param extensionSubnetId
+     */
+    public void setExtensionSubnetId(String extensionSubnetId) {
+        this.extensionSubnetId = extensionSubnetId;
+    }
+
+    /**
+     * get 辅网口子网名称
+     *
+     * @return
+     */
+    public String getExtensionSubnetName() {
+        return extensionSubnetName;
+    }
+
+    /**
+     * set 辅网口子网名称
+     *
+     * @param extensionSubnetName
+     */
+    public void setExtensionSubnetName(String extensionSubnetName) {
+        this.extensionSubnetName = extensionSubnetName;
+    }
+
+    /**
+     * get 辅网口手动分配的内网ip
+     *
+     * @return
+     */
+    public String getExtensionPrivateIp() {
+        return extensionPrivateIp;
+    }
+
+    /**
+     * set 辅网口手动分配的内网ip
+     *
+     * @param extensionPrivateIp
+     */
+    public void setExtensionPrivateIp(String extensionPrivateIp) {
+        this.extensionPrivateIp = extensionPrivateIp;
+    }
+
+    /**
+     * get 辅网口是否启用外网
+     *
+     * @return
+     */
+    public String getExtensionEnableInternet() {
+        return extensionEnableInternet;
+    }
+
+    /**
+     * set 辅网口是否启用外网
+     *
+     * @param extensionEnableInternet
+     */
+    public void setExtensionEnableInternet(String extensionEnableInternet) {
+        this.extensionEnableInternet = extensionEnableInternet;
+    }
+
+    /**
+     * get 辅网口弹性公网ip id
+     *
+     * @return
+     */
+    public String getExtensionElasticIpId() {
+        return extensionElasticIpId;
+    }
+
+    /**
+     * set 辅网口弹性公网ip id
+     *
+     * @param extensionElasticIpId
+     */
+    public void setExtensionElasticIpId(String extensionElasticIpId) {
+        this.extensionElasticIpId = extensionElasticIpId;
+    }
+
+    /**
+     * get 辅网口公网ip
+     *
+     * @return
+     */
+    public String getExtensionPublicIp() {
+        return extensionPublicIp;
+    }
+
+    /**
+     * set 辅网口公网ip
+     *
+     * @param extensionPublicIp
+     */
+    public void setExtensionPublicIp(String extensionPublicIp) {
+        this.extensionPublicIp = extensionPublicIp;
+    }
+
+    /**
+     * get 辅网口外网带宽，单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtensionBandwidth() {
+        return extensionBandwidth;
+    }
+
+    /**
+     * set 辅网口外网带宽，单位Mbps
+     *
+     * @param extensionBandwidth
+     */
+    public void setExtensionBandwidth(Integer extensionBandwidth) {
+        this.extensionBandwidth = extensionBandwidth;
+    }
+
+    /**
+     * get 辅网口额外上行带宽, 单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtensionExtraUplinkBandwidth() {
+        return extensionExtraUplinkBandwidth;
+    }
+
+    /**
+     * set 辅网口额外上行带宽, 单位Mbps
+     *
+     * @param extensionExtraUplinkBandwidth
+     */
+    public void setExtensionExtraUplinkBandwidth(Integer extensionExtraUplinkBandwidth) {
+        this.extensionExtraUplinkBandwidth = extensionExtraUplinkBandwidth;
+    }
+
+    /**
      * get agent状态
      *
      * @return
@@ -773,6 +1036,42 @@ public class Instance  implements java.io.Serializable {
      */
     public void setAgentStatus(String agentStatus) {
         this.agentStatus = agentStatus;
+    }
+
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * get 更新时间
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 
     /**
@@ -1105,12 +1404,142 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * set 网络接口模式，单网口:bond、双网口:dual
+     *
+     * @param interfaceMode
+     */
+    public Instance interfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
+        return this;
+    }
+
+    /**
+     * set 辅网口私有网络ID
+     *
+     * @param extensionVpcId
+     */
+    public Instance extensionVpcId(String extensionVpcId) {
+        this.extensionVpcId = extensionVpcId;
+        return this;
+    }
+
+    /**
+     * set 辅网口私有网络名称
+     *
+     * @param extensionVpcName
+     */
+    public Instance extensionVpcName(String extensionVpcName) {
+        this.extensionVpcName = extensionVpcName;
+        return this;
+    }
+
+    /**
+     * set 辅网口子网ID
+     *
+     * @param extensionSubnetId
+     */
+    public Instance extensionSubnetId(String extensionSubnetId) {
+        this.extensionSubnetId = extensionSubnetId;
+        return this;
+    }
+
+    /**
+     * set 辅网口子网名称
+     *
+     * @param extensionSubnetName
+     */
+    public Instance extensionSubnetName(String extensionSubnetName) {
+        this.extensionSubnetName = extensionSubnetName;
+        return this;
+    }
+
+    /**
+     * set 辅网口手动分配的内网ip
+     *
+     * @param extensionPrivateIp
+     */
+    public Instance extensionPrivateIp(String extensionPrivateIp) {
+        this.extensionPrivateIp = extensionPrivateIp;
+        return this;
+    }
+
+    /**
+     * set 辅网口是否启用外网
+     *
+     * @param extensionEnableInternet
+     */
+    public Instance extensionEnableInternet(String extensionEnableInternet) {
+        this.extensionEnableInternet = extensionEnableInternet;
+        return this;
+    }
+
+    /**
+     * set 辅网口弹性公网ip id
+     *
+     * @param extensionElasticIpId
+     */
+    public Instance extensionElasticIpId(String extensionElasticIpId) {
+        this.extensionElasticIpId = extensionElasticIpId;
+        return this;
+    }
+
+    /**
+     * set 辅网口公网ip
+     *
+     * @param extensionPublicIp
+     */
+    public Instance extensionPublicIp(String extensionPublicIp) {
+        this.extensionPublicIp = extensionPublicIp;
+        return this;
+    }
+
+    /**
+     * set 辅网口外网带宽，单位Mbps
+     *
+     * @param extensionBandwidth
+     */
+    public Instance extensionBandwidth(Integer extensionBandwidth) {
+        this.extensionBandwidth = extensionBandwidth;
+        return this;
+    }
+
+    /**
+     * set 辅网口额外上行带宽, 单位Mbps
+     *
+     * @param extensionExtraUplinkBandwidth
+     */
+    public Instance extensionExtraUplinkBandwidth(Integer extensionExtraUplinkBandwidth) {
+        this.extensionExtraUplinkBandwidth = extensionExtraUplinkBandwidth;
+        return this;
+    }
+
+    /**
      * set agent状态
      *
      * @param agentStatus
      */
     public Instance agentStatus(String agentStatus) {
         this.agentStatus = agentStatus;
+        return this;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public Instance createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime
+     */
+    public Instance updateTime(String updateTime) {
+        this.updateTime = updateTime;
         return this;
     }
 

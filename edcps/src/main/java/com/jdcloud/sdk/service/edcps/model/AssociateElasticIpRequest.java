@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -53,6 +53,11 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
      * 私有IP
      */
     private String targetIp;
+
+    /**
+     * 主网口或辅网口的子网ID，多网口实例必填
+     */
+    private String subnetId;
 
     /**
      * 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
@@ -128,6 +133,24 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 主网口或辅网口的子网ID，多网口实例必填
+     *
+     * @return
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
+
+    /**
+     * set 主网口或辅网口的子网ID，多网口实例必填
+     *
+     * @param subnetId
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
+
+    /**
      * get 地域ID，可调用接口（describeEdCPSRegions）获取分布式云物理服务器支持的地域
      *
      * @return
@@ -193,6 +216,16 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
      */
     public AssociateElasticIpRequest targetIp(String targetIp) {
         this.targetIp = targetIp;
+        return this;
+    }
+
+    /**
+     * set 主网口或辅网口的子网ID，多网口实例必填
+     *
+     * @param subnetId
+     */
+    public AssociateElasticIpRequest subnetId(String subnetId) {
+        this.subnetId = subnetId;
         return this;
     }
 

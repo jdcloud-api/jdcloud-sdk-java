@@ -85,6 +85,12 @@ import com.jdcloud.sdk.service.edcps.client.CreateInstancesExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeAvailablePrivateIpRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeAvailablePrivateIpResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeAvailablePrivateIpExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeBandwidthPackageStockRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeBandwidthPackageStockResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeBandwidthPackageStockExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeBandwidthPackageRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeBandwidthPackageResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeBandwidthPackageExecutor;
 import com.jdcloud.sdk.service.edcps.model.ResetPasswordRequest;
 import com.jdcloud.sdk.service.edcps.model.ResetPasswordResponse;
 import com.jdcloud.sdk.service.edcps.client.ResetPasswordExecutor;
@@ -94,12 +100,21 @@ import com.jdcloud.sdk.service.edcps.client.DescribeElasticIpExecutor;
 import com.jdcloud.sdk.service.edcps.model.DeleteKeypairsRequest;
 import com.jdcloud.sdk.service.edcps.model.DeleteKeypairsResponse;
 import com.jdcloud.sdk.service.edcps.client.DeleteKeypairsExecutor;
+import com.jdcloud.sdk.service.edcps.model.DescribeBandwidthPackagesRequest;
+import com.jdcloud.sdk.service.edcps.model.DescribeBandwidthPackagesResponse;
+import com.jdcloud.sdk.service.edcps.client.DescribeBandwidthPackagesExecutor;
 import com.jdcloud.sdk.service.edcps.model.StopInstanceRequest;
 import com.jdcloud.sdk.service.edcps.model.StopInstanceResponse;
 import com.jdcloud.sdk.service.edcps.client.StopInstanceExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeEdCPSRegionsRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeEdCPSRegionsResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeEdCPSRegionsExecutor;
+import com.jdcloud.sdk.service.edcps.model.ModifyBandwidthPackageBandwidthRequest;
+import com.jdcloud.sdk.service.edcps.model.ModifyBandwidthPackageBandwidthResponse;
+import com.jdcloud.sdk.service.edcps.client.ModifyBandwidthPackageBandwidthExecutor;
+import com.jdcloud.sdk.service.edcps.model.DeleteBandwidthPackageRequest;
+import com.jdcloud.sdk.service.edcps.model.DeleteBandwidthPackageResponse;
+import com.jdcloud.sdk.service.edcps.client.DeleteBandwidthPackageExecutor;
 import com.jdcloud.sdk.service.edcps.model.CreateKeypairsRequest;
 import com.jdcloud.sdk.service.edcps.model.CreateKeypairsResponse;
 import com.jdcloud.sdk.service.edcps.client.CreateKeypairsExecutor;
@@ -121,6 +136,9 @@ import com.jdcloud.sdk.service.edcps.client.ModifySubnetExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeInstanceStatusRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeInstanceStatusResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeInstanceStatusExecutor;
+import com.jdcloud.sdk.service.edcps.model.ModifyBandwidthPackageRequest;
+import com.jdcloud.sdk.service.edcps.model.ModifyBandwidthPackageResponse;
+import com.jdcloud.sdk.service.edcps.client.ModifyBandwidthPackageExecutor;
 import com.jdcloud.sdk.service.edcps.model.DeleteelasticIpRequest;
 import com.jdcloud.sdk.service.edcps.model.DeleteelasticIpResponse;
 import com.jdcloud.sdk.service.edcps.client.DeleteelasticIpExecutor;
@@ -133,6 +151,9 @@ import com.jdcloud.sdk.service.edcps.client.DescribeSubnetsExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeElasticIpStockRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeElasticIpStockResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeElasticIpStockExecutor;
+import com.jdcloud.sdk.service.edcps.model.RemoveBandwidthPackageIpRequest;
+import com.jdcloud.sdk.service.edcps.model.RemoveBandwidthPackageIpResponse;
+import com.jdcloud.sdk.service.edcps.client.RemoveBandwidthPackageIpExecutor;
 import com.jdcloud.sdk.service.edcps.model.ImportKeypairsRequest;
 import com.jdcloud.sdk.service.edcps.model.ImportKeypairsResponse;
 import com.jdcloud.sdk.service.edcps.client.ImportKeypairsExecutor;
@@ -145,6 +166,9 @@ import com.jdcloud.sdk.service.edcps.client.CreateSecondaryCidrExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeDeviceStockRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeDeviceStockResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeDeviceStockExecutor;
+import com.jdcloud.sdk.service.edcps.model.AddBandwidthPackageIpRequest;
+import com.jdcloud.sdk.service.edcps.model.AddBandwidthPackageIpResponse;
+import com.jdcloud.sdk.service.edcps.client.AddBandwidthPackageIpExecutor;
 import com.jdcloud.sdk.service.edcps.model.DescribeInstanceRequest;
 import com.jdcloud.sdk.service.edcps.model.DescribeInstanceResponse;
 import com.jdcloud.sdk.service.edcps.client.DescribeInstanceExecutor;
@@ -175,6 +199,9 @@ import com.jdcloud.sdk.service.edcps.client.DeleteSubnetExecutor;
 import com.jdcloud.sdk.service.edcps.model.ApplyElasticIpsRequest;
 import com.jdcloud.sdk.service.edcps.model.ApplyElasticIpsResponse;
 import com.jdcloud.sdk.service.edcps.client.ApplyElasticIpsExecutor;
+import com.jdcloud.sdk.service.edcps.model.ApplyBandwidthPackagesRequest;
+import com.jdcloud.sdk.service.edcps.model.ApplyBandwidthPackagesResponse;
+import com.jdcloud.sdk.service.edcps.client.ApplyBandwidthPackagesExecutor;
 import com.jdcloud.sdk.service.edcps.model.DeleteSecondaryCidrRequest;
 import com.jdcloud.sdk.service.edcps.model.DeleteSecondaryCidrResponse;
 import com.jdcloud.sdk.service.edcps.client.DeleteSecondaryCidrExecutor;
@@ -186,7 +213,7 @@ public class EdcpsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "edcps.jdcloud-api.com";
     public final static String ServiceName = "edcps";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -355,7 +382,7 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
-     * 查询链路类型列表
+     * 查询链路类型
      *
      * @param request
      * @return
@@ -450,6 +477,28 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询共享带宽库存
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBandwidthPackageStockResponse describeBandwidthPackageStock(DescribeBandwidthPackageStockRequest request) throws JdcloudSdkException {
+        return new DescribeBandwidthPackageStockExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询共享带宽详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBandwidthPackageResponse describeBandwidthPackage(DescribeBandwidthPackageRequest request) throws JdcloudSdkException {
+        return new DescribeBandwidthPackageExecutor().client(this).execute(request);
+    }
+
+    /**
      * 重置分布式云物理服务器密码
 
      *
@@ -484,6 +533,19 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询弹性公网IP列表&lt;br/&gt;
+支持分页查询，默认每页20条&lt;br/&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBandwidthPackagesResponse describeBandwidthPackages(DescribeBandwidthPackagesRequest request) throws JdcloudSdkException {
+        return new DescribeBandwidthPackagesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 对单台分布式云物理服务器执行关机操作，只能停止running状态的服务器 [MFA enabled]
      *
      * @param request
@@ -503,6 +565,30 @@ public class EdcpsClient extends JdcloudClient {
      */
     public DescribeEdCPSRegionsResponse describeEdCPSRegions(DescribeEdCPSRegionsRequest request) throws JdcloudSdkException {
         return new DescribeEdCPSRegionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改共享带宽的带宽
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyBandwidthPackageBandwidthResponse modifyBandwidthPackageBandwidth(ModifyBandwidthPackageBandwidthRequest request) throws JdcloudSdkException {
+        return new ModifyBandwidthPackageBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除共享带宽
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteBandwidthPackageResponse deleteBandwidthPackage(DeleteBandwidthPackageRequest request) throws JdcloudSdkException {
+        return new DeleteBandwidthPackageExecutor().client(this).execute(request);
     }
 
     /**
@@ -587,6 +673,18 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
+     * 修改共享带宽
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyBandwidthPackageResponse modifyBandwidthPackage(ModifyBandwidthPackageRequest request) throws JdcloudSdkException {
+        return new ModifyBandwidthPackageExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除弹性公网IP
 
      *
@@ -632,6 +730,18 @@ public class EdcpsClient extends JdcloudClient {
     }
 
     /**
+     * 移除共享带宽IP
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RemoveBandwidthPackageIpResponse removeBandwidthPackageIp(RemoveBandwidthPackageIpRequest request) throws JdcloudSdkException {
+        return new RemoveBandwidthPackageIpExecutor().client(this).execute(request);
+    }
+
+    /**
      * 导入密钥对
      *
      * @param request
@@ -673,6 +783,18 @@ public class EdcpsClient extends JdcloudClient {
      */
     public DescribeDeviceStockResponse describeDeviceStock(DescribeDeviceStockRequest request) throws JdcloudSdkException {
         return new DescribeDeviceStockExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加共享带宽IP
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddBandwidthPackageIpResponse addBandwidthPackageIp(AddBandwidthPackageIpRequest request) throws JdcloudSdkException {
+        return new AddBandwidthPackageIpExecutor().client(this).execute(request);
     }
 
     /**
@@ -787,6 +909,18 @@ public class EdcpsClient extends JdcloudClient {
      */
     public ApplyElasticIpsResponse applyElasticIps(ApplyElasticIpsRequest request) throws JdcloudSdkException {
         return new ApplyElasticIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 申请共享带宽
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ApplyBandwidthPackagesResponse applyBandwidthPackages(ApplyBandwidthPackagesRequest request) throws JdcloudSdkException {
+        return new ApplyBandwidthPackagesExecutor().client(this).execute(request);
     }
 
     /**

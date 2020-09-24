@@ -35,6 +35,11 @@ public class DomainInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 实例
+     */
+    private String wafInstanceId;
+
+    /**
      * 域名
      */
     private String domain;
@@ -59,6 +64,24 @@ public class DomainInfo  implements java.io.Serializable {
      */
     private Integer enable2Dos;
 
+
+    /**
+     * get 实例
+     *
+     * @return
+     */
+    public String getWafInstanceId() {
+        return wafInstanceId;
+    }
+
+    /**
+     * set 实例
+     *
+     * @param wafInstanceId
+     */
+    public void setWafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
+    }
 
     /**
      * get 域名
@@ -150,6 +173,16 @@ public class DomainInfo  implements java.io.Serializable {
         this.enable2Dos = enable2Dos;
     }
 
+
+    /**
+     * set 实例
+     *
+     * @param wafInstanceId
+     */
+    public DomainInfo wafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
+        return this;
+    }
 
     /**
      * set 域名

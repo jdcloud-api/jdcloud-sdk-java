@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 订单类接口
- * 京东云WAF-OpenAPI订单类接口
+ * Order
+ * Order API
  *
  * OpenAPI spec version: v1
  * Contact: 

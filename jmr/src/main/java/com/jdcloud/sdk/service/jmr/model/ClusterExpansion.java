@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * clusterExpansion
@@ -33,18 +34,22 @@ public class ClusterExpansion  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 集群Id
+     * 集群ID
+     * Required:true
      */
+    @Required
     private String clusterId;
 
     /**
-     * 扩容数量
+     * 扩容节点个数
+     * Required:true
      */
-    private Integer expansionNum;
+    @Required
+    private String expansionNum;
 
 
     /**
-     * get 集群Id
+     * get 集群ID
      *
      * @return
      */
@@ -53,7 +58,7 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 集群Id
+     * set 集群ID
      *
      * @param clusterId
      */
@@ -62,26 +67,26 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * get 扩容数量
+     * get 扩容节点个数
      *
      * @return
      */
-    public Integer getExpansionNum() {
+    public String getExpansionNum() {
         return expansionNum;
     }
 
     /**
-     * set 扩容数量
+     * set 扩容节点个数
      *
      * @param expansionNum
      */
-    public void setExpansionNum(Integer expansionNum) {
+    public void setExpansionNum(String expansionNum) {
         this.expansionNum = expansionNum;
     }
 
 
     /**
-     * set 集群Id
+     * set 集群ID
      *
      * @param clusterId
      */
@@ -91,11 +96,11 @@ public class ClusterExpansion  implements java.io.Serializable {
     }
 
     /**
-     * set 扩容数量
+     * set 扩容节点个数
      *
      * @param expansionNum
      */
-    public ClusterExpansion expansionNum(Integer expansionNum) {
+    public ClusterExpansion expansionNum(String expansionNum) {
         this.expansionNum = expansionNum;
         return this;
     }

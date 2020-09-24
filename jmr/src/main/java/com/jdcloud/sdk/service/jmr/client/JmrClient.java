@@ -31,189 +31,30 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.jmr.model.DeleteJobRequest;
-import com.jdcloud.sdk.service.jmr.model.DeleteJobResponse;
-import com.jdcloud.sdk.service.jmr.client.DeleteJobExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetAccessKeysRequest;
-import com.jdcloud.sdk.service.jmr.model.GetAccessKeysResponse;
-import com.jdcloud.sdk.service.jmr.client.GetAccessKeysExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetCronJobDetailRequest;
-import com.jdcloud.sdk.service.jmr.model.GetCronJobDetailResponse;
-import com.jdcloud.sdk.service.jmr.client.GetCronJobDetailExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetLastCronJobTaskRequest;
-import com.jdcloud.sdk.service.jmr.model.GetLastCronJobTaskResponse;
-import com.jdcloud.sdk.service.jmr.client.GetLastCronJobTaskExecutor;
-import com.jdcloud.sdk.service.jmr.model.CreateAndExcuteJobRequest;
-import com.jdcloud.sdk.service.jmr.model.CreateAndExcuteJobResponse;
-import com.jdcloud.sdk.service.jmr.client.CreateAndExcuteJobExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetHardwareStackRequest;
-import com.jdcloud.sdk.service.jmr.model.GetHardwareStackResponse;
-import com.jdcloud.sdk.service.jmr.client.GetHardwareStackExecutor;
-import com.jdcloud.sdk.service.jmr.model.QueryVpcsRequest;
-import com.jdcloud.sdk.service.jmr.model.QueryVpcsResponse;
-import com.jdcloud.sdk.service.jmr.client.QueryVpcsExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetJobTypeListRequest;
-import com.jdcloud.sdk.service.jmr.model.GetJobTypeListResponse;
-import com.jdcloud.sdk.service.jmr.client.GetJobTypeListExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetCronJobTaskListByJobIdRequest;
-import com.jdcloud.sdk.service.jmr.model.GetCronJobTaskListByJobIdResponse;
-import com.jdcloud.sdk.service.jmr.client.GetCronJobTaskListByJobIdExecutor;
-import com.jdcloud.sdk.service.jmr.model.ClusterExpansionRequest;
-import com.jdcloud.sdk.service.jmr.model.ClusterExpansionResponse;
-import com.jdcloud.sdk.service.jmr.client.ClusterExpansionExecutor;
-import com.jdcloud.sdk.service.jmr.model.DeleteCronJobRequest;
-import com.jdcloud.sdk.service.jmr.model.DeleteCronJobResponse;
-import com.jdcloud.sdk.service.jmr.client.DeleteCronJobExecutor;
-import com.jdcloud.sdk.service.jmr.model.DeleteHdfsFileRequest;
-import com.jdcloud.sdk.service.jmr.model.DeleteHdfsFileResponse;
-import com.jdcloud.sdk.service.jmr.client.DeleteHdfsFileExecutor;
-import com.jdcloud.sdk.service.jmr.model.ShowJobDetailsRequest;
-import com.jdcloud.sdk.service.jmr.model.ShowJobDetailsResponse;
-import com.jdcloud.sdk.service.jmr.client.ShowJobDetailsExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetClusterCronJobCountRequest;
-import com.jdcloud.sdk.service.jmr.model.GetClusterCronJobCountResponse;
-import com.jdcloud.sdk.service.jmr.client.GetClusterCronJobCountExecutor;
-import com.jdcloud.sdk.service.jmr.model.RunCronJobOnceRequest;
-import com.jdcloud.sdk.service.jmr.model.RunCronJobOnceResponse;
-import com.jdcloud.sdk.service.jmr.client.RunCronJobOnceExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetClusterDetailInfoRequest;
-import com.jdcloud.sdk.service.jmr.model.GetClusterDetailInfoResponse;
-import com.jdcloud.sdk.service.jmr.client.GetClusterDetailInfoExecutor;
-import com.jdcloud.sdk.service.jmr.model.CreateClusterInNewNetworkRequest;
-import com.jdcloud.sdk.service.jmr.model.CreateClusterInNewNetworkResponse;
-import com.jdcloud.sdk.service.jmr.client.CreateClusterInNewNetworkExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetFirstServerVncUrlRequest;
-import com.jdcloud.sdk.service.jmr.model.GetFirstServerVncUrlResponse;
-import com.jdcloud.sdk.service.jmr.client.GetFirstServerVncUrlExecutor;
-import com.jdcloud.sdk.service.jmr.model.ResumeCronJobRequest;
-import com.jdcloud.sdk.service.jmr.model.ResumeCronJobResponse;
-import com.jdcloud.sdk.service.jmr.client.ResumeCronJobExecutor;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListRequest;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListResponse;
 import com.jdcloud.sdk.service.jmr.client.GetJmrVersionListExecutor;
-import com.jdcloud.sdk.service.jmr.model.IsValidPlanNameRequest;
-import com.jdcloud.sdk.service.jmr.model.IsValidPlanNameResponse;
-import com.jdcloud.sdk.service.jmr.client.IsValidPlanNameExecutor;
-import com.jdcloud.sdk.service.jmr.model.QueryFloatingIpRequest;
-import com.jdcloud.sdk.service.jmr.model.QueryFloatingIpResponse;
-import com.jdcloud.sdk.service.jmr.client.QueryFloatingIpExecutor;
-import com.jdcloud.sdk.service.jmr.model.PauseCronJobRequest;
-import com.jdcloud.sdk.service.jmr.model.PauseCronJobResponse;
-import com.jdcloud.sdk.service.jmr.client.PauseCronJobExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetTaskListRequest;
-import com.jdcloud.sdk.service.jmr.model.GetTaskListResponse;
-import com.jdcloud.sdk.service.jmr.client.GetTaskListExecutor;
-import com.jdcloud.sdk.service.jmr.model.CalculateExpansionPriceRequest;
-import com.jdcloud.sdk.service.jmr.model.CalculateExpansionPriceResponse;
-import com.jdcloud.sdk.service.jmr.client.CalculateExpansionPriceExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetKeyRequest;
-import com.jdcloud.sdk.service.jmr.model.GetKeyResponse;
-import com.jdcloud.sdk.service.jmr.client.GetKeyExecutor;
-import com.jdcloud.sdk.service.jmr.model.CreateCronJobRequest;
-import com.jdcloud.sdk.service.jmr.model.CreateCronJobResponse;
-import com.jdcloud.sdk.service.jmr.client.CreateCronJobExecutor;
-import com.jdcloud.sdk.service.jmr.model.QueryExecutingJobListRequest;
-import com.jdcloud.sdk.service.jmr.model.QueryExecutingJobListResponse;
-import com.jdcloud.sdk.service.jmr.client.QueryExecutingJobListExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetJobListRequest;
-import com.jdcloud.sdk.service.jmr.model.GetJobListResponse;
-import com.jdcloud.sdk.service.jmr.client.GetJobListExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetWorkFlowTrackerListRequest;
-import com.jdcloud.sdk.service.jmr.model.GetWorkFlowTrackerListResponse;
-import com.jdcloud.sdk.service.jmr.client.GetWorkFlowTrackerListExecutor;
-import com.jdcloud.sdk.service.jmr.model.IsValidJobNameRequest;
-import com.jdcloud.sdk.service.jmr.model.IsValidJobNameResponse;
-import com.jdcloud.sdk.service.jmr.client.IsValidJobNameExecutor;
-import com.jdcloud.sdk.service.jmr.model.DeleteClusterRequest;
-import com.jdcloud.sdk.service.jmr.model.DeleteClusterResponse;
-import com.jdcloud.sdk.service.jmr.client.DeleteClusterExecutor;
-import com.jdcloud.sdk.service.jmr.model.ShowClusterDetailsRequest;
-import com.jdcloud.sdk.service.jmr.model.ShowClusterDetailsResponse;
-import com.jdcloud.sdk.service.jmr.client.ShowClusterDetailsExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetInstanceListRequest;
-import com.jdcloud.sdk.service.jmr.model.GetInstanceListResponse;
-import com.jdcloud.sdk.service.jmr.client.GetInstanceListExecutor;
-import com.jdcloud.sdk.service.jmr.model.IdataClusterRequest;
-import com.jdcloud.sdk.service.jmr.model.IdataClusterResponse;
-import com.jdcloud.sdk.service.jmr.client.IdataClusterExecutor;
-import com.jdcloud.sdk.service.jmr.model.ModifyJobRequest;
-import com.jdcloud.sdk.service.jmr.model.ModifyJobResponse;
-import com.jdcloud.sdk.service.jmr.client.ModifyJobExecutor;
-import com.jdcloud.sdk.service.jmr.model.QueryVpcSubnetsRequest;
-import com.jdcloud.sdk.service.jmr.model.QueryVpcSubnetsResponse;
-import com.jdcloud.sdk.service.jmr.client.QueryVpcSubnetsExecutor;
-import com.jdcloud.sdk.service.jmr.model.CalculateClusterPriceRequest;
-import com.jdcloud.sdk.service.jmr.model.CalculateClusterPriceResponse;
-import com.jdcloud.sdk.service.jmr.client.CalculateClusterPriceExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetSoftwareAndVersionInfoRequest;
-import com.jdcloud.sdk.service.jmr.model.GetSoftwareAndVersionInfoResponse;
-import com.jdcloud.sdk.service.jmr.client.GetSoftwareAndVersionInfoExecutor;
-import com.jdcloud.sdk.service.jmr.model.DeleteWorkFlowTrackerRequest;
-import com.jdcloud.sdk.service.jmr.model.DeleteWorkFlowTrackerResponse;
-import com.jdcloud.sdk.service.jmr.client.DeleteWorkFlowTrackerExecutor;
 import com.jdcloud.sdk.service.jmr.model.ReleaseClusterRequest;
 import com.jdcloud.sdk.service.jmr.model.ReleaseClusterResponse;
 import com.jdcloud.sdk.service.jmr.client.ReleaseClusterExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetPropertyValueRequest;
-import com.jdcloud.sdk.service.jmr.model.GetPropertyValueResponse;
-import com.jdcloud.sdk.service.jmr.client.GetPropertyValueExecutor;
-import com.jdcloud.sdk.service.jmr.model.ValidateUserRequest;
-import com.jdcloud.sdk.service.jmr.model.ValidateUserResponse;
-import com.jdcloud.sdk.service.jmr.client.ValidateUserExecutor;
-import com.jdcloud.sdk.service.jmr.model.DeleteWorkFlowRequest;
-import com.jdcloud.sdk.service.jmr.model.DeleteWorkFlowResponse;
-import com.jdcloud.sdk.service.jmr.client.DeleteWorkFlowExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetAvaliableNumRequest;
-import com.jdcloud.sdk.service.jmr.model.GetAvaliableNumResponse;
-import com.jdcloud.sdk.service.jmr.client.GetAvaliableNumExecutor;
-import com.jdcloud.sdk.service.jmr.model.RenewBillingOrderRequest;
-import com.jdcloud.sdk.service.jmr.model.RenewBillingOrderResponse;
-import com.jdcloud.sdk.service.jmr.client.RenewBillingOrderExecutor;
-import com.jdcloud.sdk.service.jmr.model.ValidateNameRequest;
-import com.jdcloud.sdk.service.jmr.model.ValidateNameResponse;
-import com.jdcloud.sdk.service.jmr.client.ValidateNameExecutor;
-import com.jdcloud.sdk.service.jmr.model.MonitorDetailsRequest;
-import com.jdcloud.sdk.service.jmr.model.MonitorDetailsResponse;
-import com.jdcloud.sdk.service.jmr.client.MonitorDetailsExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeClustersRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeClustersResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeClustersExecutor;
+import com.jdcloud.sdk.service.jmr.model.IdataClusterRequest;
+import com.jdcloud.sdk.service.jmr.model.IdataClusterResponse;
+import com.jdcloud.sdk.service.jmr.client.IdataClusterExecutor;
 import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoRequest;
 import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoResponse;
 import com.jdcloud.sdk.service.jmr.client.GetSoftwareInfoExecutor;
-import com.jdcloud.sdk.service.jmr.model.WfInstanceDetailRequest;
-import com.jdcloud.sdk.service.jmr.model.WfInstanceDetailResponse;
-import com.jdcloud.sdk.service.jmr.client.WfInstanceDetailExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetClusterJobCountRequest;
-import com.jdcloud.sdk.service.jmr.model.GetClusterJobCountResponse;
-import com.jdcloud.sdk.service.jmr.client.GetClusterJobCountExecutor;
-import com.jdcloud.sdk.service.jmr.model.QueryServerQuotaRequest;
-import com.jdcloud.sdk.service.jmr.model.QueryServerQuotaResponse;
-import com.jdcloud.sdk.service.jmr.client.QueryServerQuotaExecutor;
-import com.jdcloud.sdk.service.jmr.model.MonitorServiceListRequest;
-import com.jdcloud.sdk.service.jmr.model.MonitorServiceListResponse;
-import com.jdcloud.sdk.service.jmr.client.MonitorServiceListExecutor;
-import com.jdcloud.sdk.service.jmr.model.RunWorkFlowRequest;
-import com.jdcloud.sdk.service.jmr.model.RunWorkFlowResponse;
-import com.jdcloud.sdk.service.jmr.client.RunWorkFlowExecutor;
-import com.jdcloud.sdk.service.jmr.model.CreateJobRequest;
-import com.jdcloud.sdk.service.jmr.model.CreateJobResponse;
-import com.jdcloud.sdk.service.jmr.client.CreateJobExecutor;
-import com.jdcloud.sdk.service.jmr.model.SaveWorkFlowRequest;
-import com.jdcloud.sdk.service.jmr.model.SaveWorkFlowResponse;
-import com.jdcloud.sdk.service.jmr.client.SaveWorkFlowExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetWorkFlowListRequest;
-import com.jdcloud.sdk.service.jmr.model.GetWorkFlowListResponse;
-import com.jdcloud.sdk.service.jmr.client.GetWorkFlowListExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetCronJobTaskListRequest;
-import com.jdcloud.sdk.service.jmr.model.GetCronJobTaskListResponse;
-import com.jdcloud.sdk.service.jmr.client.GetCronJobTaskListExecutor;
-import com.jdcloud.sdk.service.jmr.model.GetCronJobListRequest;
-import com.jdcloud.sdk.service.jmr.model.GetCronJobListResponse;
-import com.jdcloud.sdk.service.jmr.client.GetCronJobListExecutor;
-import com.jdcloud.sdk.service.jmr.model.ModifyCronJobRequest;
-import com.jdcloud.sdk.service.jmr.model.ModifyCronJobResponse;
-import com.jdcloud.sdk.service.jmr.client.ModifyCronJobExecutor;
-import com.jdcloud.sdk.service.jmr.model.ExecuteJobRequest;
-import com.jdcloud.sdk.service.jmr.model.ExecuteJobResponse;
-import com.jdcloud.sdk.service.jmr.client.ExecuteJobExecutor;
+import com.jdcloud.sdk.service.jmr.model.ClusterExpansionRequest;
+import com.jdcloud.sdk.service.jmr.model.ClusterExpansionResponse;
+import com.jdcloud.sdk.service.jmr.client.ClusterExpansionExecutor;
+import com.jdcloud.sdk.service.jmr.model.CreateClusterRequest;
+import com.jdcloud.sdk.service.jmr.model.CreateClusterResponse;
+import com.jdcloud.sdk.service.jmr.client.CreateClusterExecutor;
+import com.jdcloud.sdk.service.jmr.model.DescribeClusterRequest;
+import com.jdcloud.sdk.service.jmr.model.DescribeClusterResponse;
+import com.jdcloud.sdk.service.jmr.client.DescribeClusterExecutor;
 
 /**
  * jmrClient
@@ -222,7 +63,7 @@ public class JmrClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.0.1";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "jmr.jdcloud-api.com";
     public final static String ServiceName = "jmr";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -265,216 +106,7 @@ public class JmrClient extends JdcloudClient {
 
 
     /**
-     * 删除作业
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteJobResponse deleteJob(DeleteJobRequest request) throws JdcloudSdkException {
-        return new DeleteJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据userpin获取accessKey和accessKeySecret
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetAccessKeysResponse getAccessKeys(GetAccessKeysRequest request) throws JdcloudSdkException {
-        return new GetAccessKeysExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取定时任务详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetCronJobDetailResponse getCronJobDetail(GetCronJobDetailRequest request) throws JdcloudSdkException {
-        return new GetCronJobDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取定时任务的某个作业的最后一次运行记录
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetLastCronJobTaskResponse getLastCronJobTask(GetLastCronJobTaskRequest request) throws JdcloudSdkException {
-        return new GetLastCronJobTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建作业并执行
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateAndExcuteJobResponse createAndExcuteJob(CreateAndExcuteJobRequest request) throws JdcloudSdkException {
-        return new CreateAndExcuteJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 硬件配置信息列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetHardwareStackResponse getHardwareStack(GetHardwareStackRequest request) throws JdcloudSdkException {
-        return new GetHardwareStackExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取vpc集合
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryVpcsResponse queryVpcs(QueryVpcsRequest request) throws JdcloudSdkException {
-        return new QueryVpcsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取作业类型列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetJobTypeListResponse getJobTypeList(GetJobTypeListRequest request) throws JdcloudSdkException {
-        return new GetJobTypeListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询某一执行计划的某一个job的运行记录
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetCronJobTaskListByJobIdResponse getCronJobTaskListByJobId(GetCronJobTaskListByJobIdRequest request) throws JdcloudSdkException {
-        return new GetCronJobTaskListByJobIdExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 集群扩容
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ClusterExpansionResponse clusterExpansion(ClusterExpansionRequest request) throws JdcloudSdkException {
-        return new ClusterExpansionExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除定时任务
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteCronJobResponse deleteCronJob(DeleteCronJobRequest request) throws JdcloudSdkException {
-        return new DeleteCronJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除集群的hdfs文件
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteHdfsFileResponse deleteHdfsFile(DeleteHdfsFileRequest request) throws JdcloudSdkException {
-        return new DeleteHdfsFileExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查看作业明细
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ShowJobDetailsResponse showJobDetails(ShowJobDetailsRequest request) throws JdcloudSdkException {
-        return new ShowJobDetailsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取集群的部署作业数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetClusterCronJobCountResponse getClusterCronJobCount(GetClusterCronJobCountRequest request) throws JdcloudSdkException {
-        return new GetClusterCronJobCountExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 立即执行
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RunCronJobOnceResponse runCronJobOnce(RunCronJobOnceRequest request) throws JdcloudSdkException {
-        return new RunCronJobOnceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 集群扩容时，显示集群details
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetClusterDetailInfoResponse getClusterDetailInfo(GetClusterDetailInfoRequest request) throws JdcloudSdkException {
-        return new GetClusterDetailInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建新集群
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateClusterInNewNetworkResponse createClusterInNewNetwork(CreateClusterInNewNetworkRequest request) throws JdcloudSdkException {
-        return new CreateClusterInNewNetworkExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 通过clusterId得到远程连接集群主节点的VNC URL
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetFirstServerVncUrlResponse getFirstServerVncUrl(GetFirstServerVncUrlRequest request) throws JdcloudSdkException {
-        return new GetFirstServerVncUrlExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 恢复定时任务
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ResumeCronJobResponse resumeCronJob(ResumeCronJobRequest request) throws JdcloudSdkException {
-        return new ResumeCronJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 返回jmr版本列表
+     * 查询JMR的版本信息
      *
      * @param request
      * @return
@@ -485,227 +117,8 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
-     * 校验执行计划名称是否可用
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public IsValidPlanNameResponse isValidPlanName(IsValidPlanNameRequest request) throws JdcloudSdkException {
-        return new IsValidPlanNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询集群随机码
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryFloatingIpResponse queryFloatingIp(QueryFloatingIpRequest request) throws JdcloudSdkException {
-        return new QueryFloatingIpExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 暂停定时任务
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PauseCronJobResponse pauseCronJob(PauseCronJobRequest request) throws JdcloudSdkException {
-        return new PauseCronJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取某一作业的运行记录
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetTaskListResponse getTaskList(GetTaskListRequest request) throws JdcloudSdkException {
-        return new GetTaskListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 计算集群扩容的价格
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CalculateExpansionPriceResponse calculateExpansionPrice(CalculateExpansionPriceRequest request) throws JdcloudSdkException {
-        return new CalculateExpansionPriceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取用户appKey和secretKey
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetKeyResponse getKey(GetKeyRequest request) throws JdcloudSdkException {
-        return new GetKeyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 新建或更新调度配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateCronJobResponse createCronJob(CreateCronJobRequest request) throws JdcloudSdkException {
-        return new CreateCronJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取计划中的任务(已经添加到quartz调度器的任务)
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryExecutingJobListResponse queryExecutingJobList(QueryExecutingJobListRequest request) throws JdcloudSdkException {
-        return new QueryExecutingJobListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取作业列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetJobListResponse getJobList(GetJobListRequest request) throws JdcloudSdkException {
-        return new GetJobListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取工作流运行记录列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetWorkFlowTrackerListResponse getWorkFlowTrackerList(GetWorkFlowTrackerListRequest request) throws JdcloudSdkException {
-        return new GetWorkFlowTrackerListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 校验作业名称是否有效
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public IsValidJobNameResponse isValidJobName(IsValidJobNameRequest request) throws JdcloudSdkException {
-        return new IsValidJobNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 逻辑删除
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteClusterResponse deleteCluster(DeleteClusterRequest request) throws JdcloudSdkException {
-        return new DeleteClusterExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询集群详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ShowClusterDetailsResponse showClusterDetails(ShowClusterDetailsRequest request) throws JdcloudSdkException {
-        return new ShowClusterDetailsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取主机规格列表(过滤掉低内存的规格, 低于4核全部去掉。)
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetInstanceListResponse getInstanceList(GetInstanceListRequest request) throws JdcloudSdkException {
-        return new GetInstanceListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用户集群列表及相关服务的一些信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public IdataClusterResponse idataCluster(IdataClusterRequest request) throws JdcloudSdkException {
-        return new IdataClusterExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改作业信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyJobResponse modifyJob(ModifyJobRequest request) throws JdcloudSdkException {
-        return new ModifyJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询VpcSubnet集合
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryVpcSubnetsResponse queryVpcSubnets(QueryVpcSubnetsRequest request) throws JdcloudSdkException {
-        return new QueryVpcSubnetsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 计算集群价格
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CalculateClusterPriceResponse calculateClusterPrice(CalculateClusterPriceRequest request) throws JdcloudSdkException {
-        return new CalculateClusterPriceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取软件清单信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetSoftwareAndVersionInfoResponse getSoftwareAndVersionInfo(GetSoftwareAndVersionInfoRequest request) throws JdcloudSdkException {
-        return new GetSoftwareAndVersionInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除运行记录
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteWorkFlowTrackerResponse deleteWorkFlowTracker(DeleteWorkFlowTrackerRequest request) throws JdcloudSdkException {
-        return new DeleteWorkFlowTrackerExecutor().client(this).execute(request);
-    }
-
-    /**
      * 释放集群
+
      *
      * @param request
      * @return
@@ -716,84 +129,29 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
-     * 软件配置信息列表
+     * 查询集群列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetPropertyValueResponse getPropertyValue(GetPropertyValueRequest request) throws JdcloudSdkException {
-        return new GetPropertyValueExecutor().client(this).execute(request);
+    public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws JdcloudSdkException {
+        return new DescribeClustersExecutor().client(this).execute(request);
     }
 
     /**
-     * 用户名校验
+     * 查询用户指定clusterId对应的集群列表及相关服务的一些信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ValidateUserResponse validateUser(ValidateUserRequest request) throws JdcloudSdkException {
-        return new ValidateUserExecutor().client(this).execute(request);
+    public IdataClusterResponse idataCluster(IdataClusterRequest request) throws JdcloudSdkException {
+        return new IdataClusterExecutor().client(this).execute(request);
     }
 
     /**
-     * 删除工作流
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteWorkFlowResponse deleteWorkFlow(DeleteWorkFlowRequest request) throws JdcloudSdkException {
-        return new DeleteWorkFlowExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取剩余可创建资源数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetAvaliableNumResponse getAvaliableNum(GetAvaliableNumRequest request) throws JdcloudSdkException {
-        return new GetAvaliableNumExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 续费
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RenewBillingOrderResponse renewBillingOrder(RenewBillingOrderRequest request) throws JdcloudSdkException {
-        return new RenewBillingOrderExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 验证输入的集群名称是否重复
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ValidateNameResponse validateName(ValidateNameRequest request) throws JdcloudSdkException {
-        return new ValidateNameExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 服务存活状态监控明细数据
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public MonitorDetailsResponse monitorDetails(MonitorDetailsRequest request) throws JdcloudSdkException {
-        return new MonitorDetailsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取软件清单信息
+     * 获取对应版本的软件清单信息
      *
      * @param request
      * @return
@@ -804,135 +162,37 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
-     * 查看工作流详情
+     * 扩容集群
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public WfInstanceDetailResponse wfInstanceDetail(WfInstanceDetailRequest request) throws JdcloudSdkException {
-        return new WfInstanceDetailExecutor().client(this).execute(request);
+    public ClusterExpansionResponse clusterExpansion(ClusterExpansionRequest request) throws JdcloudSdkException {
+        return new ClusterExpansionExecutor().client(this).execute(request);
     }
 
     /**
-     * 获取集群的作业数
+     * 创建集群
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GetClusterJobCountResponse getClusterJobCount(GetClusterJobCountRequest request) throws JdcloudSdkException {
-        return new GetClusterJobCountExecutor().client(this).execute(request);
+    public CreateClusterResponse createCluster(CreateClusterRequest request) throws JdcloudSdkException {
+        return new CreateClusterExecutor().client(this).execute(request);
     }
 
     /**
-     * 查询server的剩余配额
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryServerQuotaResponse queryServerQuota(QueryServerQuotaRequest request) throws JdcloudSdkException {
-        return new QueryServerQuotaExecutor().client(this).execute(request);
-    }
+     * 查询指定集群的详细信息
 
-    /**
-     * 当前监控的服务列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public MonitorServiceListResponse monitorServiceList(MonitorServiceListRequest request) throws JdcloudSdkException {
-        return new MonitorServiceListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 运行工作流
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RunWorkFlowResponse runWorkFlow(RunWorkFlowRequest request) throws JdcloudSdkException {
-        return new RunWorkFlowExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建作业
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateJobResponse createJob(CreateJobRequest request) throws JdcloudSdkException {
-        return new CreateJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 保存工作流
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SaveWorkFlowResponse saveWorkFlow(SaveWorkFlowRequest request) throws JdcloudSdkException {
-        return new SaveWorkFlowExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取工作流列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetWorkFlowListResponse getWorkFlowList(GetWorkFlowListRequest request) throws JdcloudSdkException {
-        return new GetWorkFlowListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取定时任务的运行记录
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetCronJobTaskListResponse getCronJobTaskList(GetCronJobTaskListRequest request) throws JdcloudSdkException {
-        return new GetCronJobTaskListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取执行计划列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetCronJobListResponse getCronJobList(GetCronJobListRequest request) throws JdcloudSdkException {
-        return new GetCronJobListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改执行计划
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyCronJobResponse modifyCronJob(ModifyCronJobRequest request) throws JdcloudSdkException {
-        return new ModifyCronJobExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 执行task
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ExecuteJobResponse executeJob(ExecuteJobRequest request) throws JdcloudSdkException {
-        return new ExecuteJobExecutor().client(this).execute(request);
+    public DescribeClusterResponse describeCluster(DescribeClusterRequest request) throws JdcloudSdkException {
+        return new DescribeClusterExecutor().client(this).execute(request);
     }
 
 

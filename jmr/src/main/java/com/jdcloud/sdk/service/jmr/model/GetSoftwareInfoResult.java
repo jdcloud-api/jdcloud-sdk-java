@@ -24,39 +24,50 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取软件清单信息
+ * 获取对应版本的软件清单信息
  */
 public class GetSoftwareInfoResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
+     * 对应的软件清单信息
+     */
+    private String data;
+
+    /**
      * status
      */
-    private String status;
+    private Boolean status;
+
 
     /**
-     * message
+     * get 对应的软件清单信息
+     *
+     * @return
      */
-    private String message;
+    public String getData() {
+        return data;
+    }
 
     /**
-     * data
+     * set 对应的软件清单信息
+     *
+     * @param data
      */
-    private List<String> data;
-
+    public void setData(String data) {
+        this.data = data;
+    }
 
     /**
      * get status
      *
      * @return
      */
-    public String getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
@@ -65,88 +76,30 @@ public class GetSoftwareInfoResult extends JdcloudResult implements java.io.Seri
      *
      * @param status
      */
-    public void setStatus(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
-    /**
-     * get message
-     *
-     * @return
-     */
-    public String getMessage() {
-        return message;
-    }
 
     /**
-     * set message
-     *
-     * @param message
-     */
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    /**
-     * get data
-     *
-     * @return
-     */
-    public List<String> getData() {
-        return data;
-    }
-
-    /**
-     * set data
+     * set 对应的软件清单信息
      *
      * @param data
      */
-    public void setData(List<String> data) {
+    public GetSoftwareInfoResult data(String data) {
         this.data = data;
+        return this;
     }
-
 
     /**
      * set status
      *
      * @param status
      */
-    public GetSoftwareInfoResult status(String status) {
+    public GetSoftwareInfoResult status(Boolean status) {
         this.status = status;
         return this;
     }
 
-    /**
-     * set message
-     *
-     * @param message
-     */
-    public GetSoftwareInfoResult message(String message) {
-        this.message = message;
-        return this;
-    }
-
-    /**
-     * set data
-     *
-     * @param data
-     */
-    public GetSoftwareInfoResult data(List<String> data) {
-        this.data = data;
-        return this;
-    }
-
-
-    /**
-     * add item to data
-     *
-     * @param data
-     */
-    public void addData(String data) {
-        if (this.data == null) {
-            this.data = new ArrayList<>();
-        }
-        this.data.add(data);
-    }
 
 }

@@ -84,14 +84,14 @@ public class ElasticIp  implements java.io.Serializable {
     private String createTime;
 
     /**
-     * 别名IP id
+     * 绑定的ip地址
      */
-    private String aliasIpId;
+    private String targetIp;
 
     /**
-     * 别名IP ip
+     * 共享带宽 id
      */
-    private String aliasIp;
+    private String bandwidthPackageId;
 
     /**
      * 计费信息
@@ -280,39 +280,39 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * get 别名IP id
+     * get 绑定的ip地址
      *
      * @return
      */
-    public String getAliasIpId() {
-        return aliasIpId;
+    public String getTargetIp() {
+        return targetIp;
     }
 
     /**
-     * set 别名IP id
+     * set 绑定的ip地址
      *
-     * @param aliasIpId
+     * @param targetIp
      */
-    public void setAliasIpId(String aliasIpId) {
-        this.aliasIpId = aliasIpId;
+    public void setTargetIp(String targetIp) {
+        this.targetIp = targetIp;
     }
 
     /**
-     * get 别名IP ip
+     * get 共享带宽 id
      *
      * @return
      */
-    public String getAliasIp() {
-        return aliasIp;
+    public String getBandwidthPackageId() {
+        return bandwidthPackageId;
     }
 
     /**
-     * set 别名IP ip
+     * set 共享带宽 id
      *
-     * @param aliasIp
+     * @param bandwidthPackageId
      */
-    public void setAliasIp(String aliasIp) {
-        this.aliasIp = aliasIp;
+    public void setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
     }
 
     /**
@@ -435,22 +435,22 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
-     * set 别名IP id
+     * set 绑定的ip地址
      *
-     * @param aliasIpId
+     * @param targetIp
      */
-    public ElasticIp aliasIpId(String aliasIpId) {
-        this.aliasIpId = aliasIpId;
+    public ElasticIp targetIp(String targetIp) {
+        this.targetIp = targetIp;
         return this;
     }
 
     /**
-     * set 别名IP ip
+     * set 共享带宽 id
      *
-     * @param aliasIp
+     * @param bandwidthPackageId
      */
-    public ElasticIp aliasIp(String aliasIp) {
-        this.aliasIp = aliasIp;
+    public ElasticIp bandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
 

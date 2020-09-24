@@ -62,7 +62,7 @@ public class AddDomain  implements java.io.Serializable {
     private List<String> sslProtocols;
 
     /**
-     * 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;
+     * 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;,&quot;weight_rr&quot;
      * Required:true
      */
     @Required
@@ -109,6 +109,16 @@ public class AddDomain  implements java.io.Serializable {
      * 请求头是否支持下划线，0-否，1-是。缺省为0
      */
     private Integer enableUnderscores;
+
+    /**
+     * 禁用被动健康检查，缺省为0-否
+     */
+    private Integer disableHealthCheck;
+
+    /**
+     * 连接超时时间，3-60s
+     */
+    private Integer proxyConnectTimeout;
 
 
     /**
@@ -184,7 +194,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;
+     * get 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;,&quot;weight_rr&quot;
      *
      * @return
      */
@@ -193,7 +203,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;
+     * set 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;,&quot;weight_rr&quot;
      *
      * @param lbType
      */
@@ -345,6 +355,42 @@ public class AddDomain  implements java.io.Serializable {
         this.enableUnderscores = enableUnderscores;
     }
 
+    /**
+     * get 禁用被动健康检查，缺省为0-否
+     *
+     * @return
+     */
+    public Integer getDisableHealthCheck() {
+        return disableHealthCheck;
+    }
+
+    /**
+     * set 禁用被动健康检查，缺省为0-否
+     *
+     * @param disableHealthCheck
+     */
+    public void setDisableHealthCheck(Integer disableHealthCheck) {
+        this.disableHealthCheck = disableHealthCheck;
+    }
+
+    /**
+     * get 连接超时时间，3-60s
+     *
+     * @return
+     */
+    public Integer getProxyConnectTimeout() {
+        return proxyConnectTimeout;
+    }
+
+    /**
+     * set 连接超时时间，3-60s
+     *
+     * @param proxyConnectTimeout
+     */
+    public void setProxyConnectTimeout(Integer proxyConnectTimeout) {
+        this.proxyConnectTimeout = proxyConnectTimeout;
+    }
+
 
     /**
      * set 实例id，代表要设置的WAF实例
@@ -387,7 +433,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;
+     * set 负载均衡算法，eg:&quot;rr&quot;，&quot;ip_hash&quot;,&quot;weight_rr&quot;
      *
      * @param lbType
      */
@@ -473,6 +519,26 @@ public class AddDomain  implements java.io.Serializable {
      */
     public AddDomain enableUnderscores(Integer enableUnderscores) {
         this.enableUnderscores = enableUnderscores;
+        return this;
+    }
+
+    /**
+     * set 禁用被动健康检查，缺省为0-否
+     *
+     * @param disableHealthCheck
+     */
+    public AddDomain disableHealthCheck(Integer disableHealthCheck) {
+        this.disableHealthCheck = disableHealthCheck;
+        return this;
+    }
+
+    /**
+     * set 连接超时时间，3-60s
+     *
+     * @param proxyConnectTimeout
+     */
+    public AddDomain proxyConnectTimeout(Integer proxyConnectTimeout) {
+        this.proxyConnectTimeout = proxyConnectTimeout;
         return this;
     }
 

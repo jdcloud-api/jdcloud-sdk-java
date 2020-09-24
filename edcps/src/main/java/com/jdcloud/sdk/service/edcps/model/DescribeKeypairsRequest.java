@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器密钥对操作相关的接口
  *
  * OpenAPI spec version: v1

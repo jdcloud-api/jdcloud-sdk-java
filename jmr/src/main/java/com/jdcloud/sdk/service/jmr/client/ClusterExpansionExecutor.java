@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jmr.model.ClusterExpansionResponse;
 
 /**
- * 集群扩容
+ * 扩容集群
  */
 class ClusterExpansionExecutor extends JdcloudExecutor {
 

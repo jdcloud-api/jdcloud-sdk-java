@@ -59,6 +59,11 @@ public class TranscodeTemplateObject  implements java.io.Serializable {
     private Encapsulation encapsulation;
 
     /**
+     * 输出文件配置
+     */
+    private OutFile outFile;
+
+    /**
      * 清晰度规格标记。取值范围：
   SD - 标清
   HD - 高清
@@ -186,6 +191,24 @@ public class TranscodeTemplateObject  implements java.io.Serializable {
      */
     public void setEncapsulation(Encapsulation encapsulation) {
         this.encapsulation = encapsulation;
+    }
+
+    /**
+     * get 输出文件配置
+     *
+     * @return
+     */
+    public OutFile getOutFile() {
+        return outFile;
+    }
+
+    /**
+     * set 输出文件配置
+     *
+     * @param outFile
+     */
+    public void setOutFile(OutFile outFile) {
+        this.outFile = outFile;
     }
 
     /**
@@ -351,6 +374,16 @@ public class TranscodeTemplateObject  implements java.io.Serializable {
      */
     public TranscodeTemplateObject encapsulation(Encapsulation encapsulation) {
         this.encapsulation = encapsulation;
+        return this;
+    }
+
+    /**
+     * set 输出文件配置
+     *
+     * @param outFile
+     */
+    public TranscodeTemplateObject outFile(OutFile outFile) {
+        this.outFile = outFile;
         return this;
     }
 
