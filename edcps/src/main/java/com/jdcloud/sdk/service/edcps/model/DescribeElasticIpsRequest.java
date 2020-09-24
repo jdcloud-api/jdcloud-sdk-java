@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器弹性公网IP操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -55,8 +55,29 @@ public class DescribeElasticIpsRequest extends JdcloudRequest implements java.io
     private String status;
 
     /**
+     * 弹性公网IP是否加入共享带宽，取值范围：yes、no
+     */
+    private String hasJoinBandwidthPackage;
+
+    /**
+     * 支付模式，取值为：prepaid_by_duration表示预付费，postpaid_by_duration表示按配置后付费
+     */
+    private String chargeMode;
+
+    /**
+     * 实例Id
+     */
+    private String instanceId;
+
+    /**
+     * 子网Id
+     */
+    private String subnetId;
+
+    /**
      * elasticIpId - 弹性公网IPID，精确匹配，支持多个&lt;br/&gt;
-elasticIp - 弹性公网IP，精确匹配，支持多个
+elasticIp - 弹性公网IP，精确匹配，支持多个&lt;br/&gt;
+bandwidthPackageId - 共享带宽ID，精确匹配，支持多个
 
      */
     private List<Filter> filters;
@@ -124,8 +145,81 @@ elasticIp - 弹性公网IP，精确匹配，支持多个
     }
 
     /**
+     * get 弹性公网IP是否加入共享带宽，取值范围：yes、no
+     *
+     * @return
+     */
+    public String getHasJoinBandwidthPackage() {
+        return hasJoinBandwidthPackage;
+    }
+
+    /**
+     * set 弹性公网IP是否加入共享带宽，取值范围：yes、no
+     *
+     * @param hasJoinBandwidthPackage
+     */
+    public void setHasJoinBandwidthPackage(String hasJoinBandwidthPackage) {
+        this.hasJoinBandwidthPackage = hasJoinBandwidthPackage;
+    }
+
+    /**
+     * get 支付模式，取值为：prepaid_by_duration表示预付费，postpaid_by_duration表示按配置后付费
+     *
+     * @return
+     */
+    public String getChargeMode() {
+        return chargeMode;
+    }
+
+    /**
+     * set 支付模式，取值为：prepaid_by_duration表示预付费，postpaid_by_duration表示按配置后付费
+     *
+     * @param chargeMode
+     */
+    public void setChargeMode(String chargeMode) {
+        this.chargeMode = chargeMode;
+    }
+
+    /**
+     * get 实例Id
+     *
+     * @return
+     */
+    public String getInstanceId() {
+        return instanceId;
+    }
+
+    /**
+     * set 实例Id
+     *
+     * @param instanceId
+     */
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+    }
+
+    /**
+     * get 子网Id
+     *
+     * @return
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
+
+    /**
+     * set 子网Id
+     *
+     * @param subnetId
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
+
+    /**
      * get elasticIpId - 弹性公网IPID，精确匹配，支持多个&lt;br/&gt;
-elasticIp - 弹性公网IP，精确匹配，支持多个
+elasticIp - 弹性公网IP，精确匹配，支持多个&lt;br/&gt;
+bandwidthPackageId - 共享带宽ID，精确匹配，支持多个
 
      *
      * @return
@@ -136,7 +230,8 @@ elasticIp - 弹性公网IP，精确匹配，支持多个
 
     /**
      * set elasticIpId - 弹性公网IPID，精确匹配，支持多个&lt;br/&gt;
-elasticIp - 弹性公网IP，精确匹配，支持多个
+elasticIp - 弹性公网IP，精确匹配，支持多个&lt;br/&gt;
+bandwidthPackageId - 共享带宽ID，精确匹配，支持多个
 
      *
      * @param filters
@@ -195,8 +290,49 @@ elasticIp - 弹性公网IP，精确匹配，支持多个
     }
 
     /**
+     * set 弹性公网IP是否加入共享带宽，取值范围：yes、no
+     *
+     * @param hasJoinBandwidthPackage
+     */
+    public DescribeElasticIpsRequest hasJoinBandwidthPackage(String hasJoinBandwidthPackage) {
+        this.hasJoinBandwidthPackage = hasJoinBandwidthPackage;
+        return this;
+    }
+
+    /**
+     * set 支付模式，取值为：prepaid_by_duration表示预付费，postpaid_by_duration表示按配置后付费
+     *
+     * @param chargeMode
+     */
+    public DescribeElasticIpsRequest chargeMode(String chargeMode) {
+        this.chargeMode = chargeMode;
+        return this;
+    }
+
+    /**
+     * set 实例Id
+     *
+     * @param instanceId
+     */
+    public DescribeElasticIpsRequest instanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 子网Id
+     *
+     * @param subnetId
+     */
+    public DescribeElasticIpsRequest subnetId(String subnetId) {
+        this.subnetId = subnetId;
+        return this;
+    }
+
+    /**
      * set elasticIpId - 弹性公网IPID，精确匹配，支持多个&lt;br/&gt;
-elasticIp - 弹性公网IP，精确匹配，支持多个
+elasticIp - 弹性公网IP，精确匹配，支持多个&lt;br/&gt;
+bandwidthPackageId - 共享带宽ID，精确匹配，支持多个
 
      *
      * @param filters
@@ -219,7 +355,8 @@ elasticIp - 弹性公网IP，精确匹配，支持多个
 
     /**
      * add item to elasticIpId - 弹性公网IPID，精确匹配，支持多个&lt;br/&gt;
-elasticIp - 弹性公网IP，精确匹配，支持多个
+elasticIp - 弹性公网IP，精确匹配，支持多个&lt;br/&gt;
+bandwidthPackageId - 共享带宽ID，精确匹配，支持多个
 
      *
      * @param filter

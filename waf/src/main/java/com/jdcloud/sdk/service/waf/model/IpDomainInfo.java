@@ -45,7 +45,7 @@ public class IpDomainInfo  implements java.io.Serializable {
     private Boolean isVip;
 
     /**
-     * 绑定的证书名称
+     * 域名信息
      */
     private List<DomainInfo> domainInfo;
 
@@ -87,7 +87,7 @@ public class IpDomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 绑定的证书名称
+     * get 域名信息
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class IpDomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定的证书名称
+     * set 域名信息
      *
      * @param domainInfo
      */
@@ -126,7 +126,7 @@ public class IpDomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定的证书名称
+     * set 域名信息
      *
      * @param domainInfo
      */
@@ -137,7 +137,7 @@ public class IpDomainInfo  implements java.io.Serializable {
 
 
     /**
-     * add item to 绑定的证书名称
+     * add item to 域名信息
      *
      * @param domainInfo
      */

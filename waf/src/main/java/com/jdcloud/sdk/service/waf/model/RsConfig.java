@@ -43,6 +43,11 @@ public class RsConfig  implements java.io.Serializable {
     private List<String> rsAddr;
 
     /**
+     * 回源地址权重，与rsAddr顺序对应
+     */
+    private List<Integer> weight;
+
+    /**
      * http回源端口
      */
     private List<String> httpRsPort;
@@ -74,6 +79,24 @@ public class RsConfig  implements java.io.Serializable {
      */
     public void setRsAddr(List<String> rsAddr) {
         this.rsAddr = rsAddr;
+    }
+
+    /**
+     * get 回源地址权重，与rsAddr顺序对应
+     *
+     * @return
+     */
+    public List<Integer> getWeight() {
+        return weight;
+    }
+
+    /**
+     * set 回源地址权重，与rsAddr顺序对应
+     *
+     * @param weight
+     */
+    public void setWeight(List<Integer> weight) {
+        this.weight = weight;
     }
 
     /**
@@ -142,6 +165,16 @@ public class RsConfig  implements java.io.Serializable {
     }
 
     /**
+     * set 回源地址权重，与rsAddr顺序对应
+     *
+     * @param weight
+     */
+    public RsConfig weight(List<Integer> weight) {
+        this.weight = weight;
+        return this;
+    }
+
+    /**
      * set http回源端口
      *
      * @param httpRsPort
@@ -182,6 +215,18 @@ public class RsConfig  implements java.io.Serializable {
             this.rsAddr = new ArrayList<>();
         }
         this.rsAddr.add(rsAddr);
+    }
+
+    /**
+     * add item to 回源地址权重，与rsAddr顺序对应
+     *
+     * @param weight
+     */
+    public void addWeight(Integer weight) {
+        if (this.weight == null) {
+            this.weight = new ArrayList<>();
+        }
+        this.weight.add(weight);
     }
 
     /**

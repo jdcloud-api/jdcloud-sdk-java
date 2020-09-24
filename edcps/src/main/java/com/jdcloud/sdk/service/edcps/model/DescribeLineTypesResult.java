@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 分布式云物理服务器
+ * Distributed-Cloud-Physical-Server
  * 分布式云物理服务器链路类型操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -24,64 +24,50 @@
 
 package com.jdcloud.sdk.service.edcps.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.service.edcps.model.LineType;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询链路类型列表
+ * 查询链路类型
  */
 public class DescribeLineTypesResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * lineTypes
+     * 链路类型信息
      */
-    private List<LineType> lineTypes;
+    private LineType lineType;
 
 
     /**
-     * get lineTypes
+     * get 链路类型信息
      *
      * @return
      */
-    public List<LineType> getLineTypes() {
-        return lineTypes;
+    public LineType getLineType() {
+        return lineType;
     }
 
     /**
-     * set lineTypes
-     *
-     * @param lineTypes
-     */
-    public void setLineTypes(List<LineType> lineTypes) {
-        this.lineTypes = lineTypes;
-    }
-
-
-    /**
-     * set lineTypes
-     *
-     * @param lineTypes
-     */
-    public DescribeLineTypesResult lineTypes(List<LineType> lineTypes) {
-        this.lineTypes = lineTypes;
-        return this;
-    }
-
-
-    /**
-     * add item to lineTypes
+     * set 链路类型信息
      *
      * @param lineType
      */
-    public void addLineType(LineType lineType) {
-        if (this.lineTypes == null) {
-            this.lineTypes = new ArrayList<>();
-        }
-        this.lineTypes.add(lineType);
+    public void setLineType(LineType lineType) {
+        this.lineType = lineType;
     }
+
+
+    /**
+     * set 链路类型信息
+     *
+     * @param lineType
+     */
+    public DescribeLineTypesResult lineType(LineType lineType) {
+        this.lineType = lineType;
+        return this;
+    }
+
 
 }

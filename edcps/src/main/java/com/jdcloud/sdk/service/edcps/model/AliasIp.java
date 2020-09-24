@@ -33,11 +33,6 @@ public class AliasIp  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例ID
-     */
-    private String instanceId;
-
-    /**
      * 地域
      */
     private String region;
@@ -46,6 +41,11 @@ public class AliasIp  implements java.io.Serializable {
      * 可用区
      */
     private String az;
+
+    /**
+     * 实例ID
+     */
+    private String instanceId;
 
     /**
      * 子网ID
@@ -67,24 +67,11 @@ public class AliasIp  implements java.io.Serializable {
      */
     private String cidr;
 
-
     /**
-     * get 实例ID
-     *
-     * @return
+     * 是否已绑弹性公网ip
      */
-    public String getInstanceId() {
-        return instanceId;
-    }
+    private Boolean isBondEip;
 
-    /**
-     * set 实例ID
-     *
-     * @param instanceId
-     */
-    public void setInstanceId(String instanceId) {
-        this.instanceId = instanceId;
-    }
 
     /**
      * get 地域
@@ -120,6 +107,24 @@ public class AliasIp  implements java.io.Serializable {
      */
     public void setAz(String az) {
         this.az = az;
+    }
+
+    /**
+     * get 实例ID
+     *
+     * @return
+     */
+    public String getInstanceId() {
+        return instanceId;
+    }
+
+    /**
+     * set 实例ID
+     *
+     * @param instanceId
+     */
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
     }
 
     /**
@@ -194,16 +199,24 @@ public class AliasIp  implements java.io.Serializable {
         this.cidr = cidr;
     }
 
+    /**
+     * get 是否已绑弹性公网ip
+     *
+     * @return
+     */
+    public Boolean getIsBondEip() {
+        return isBondEip;
+    }
 
     /**
-     * set 实例ID
+     * set 是否已绑弹性公网ip
      *
-     * @param instanceId
+     * @param isBondEip
      */
-    public AliasIp instanceId(String instanceId) {
-        this.instanceId = instanceId;
-        return this;
+    public void setIsBondEip(Boolean isBondEip) {
+        this.isBondEip = isBondEip;
     }
+
 
     /**
      * set 地域
@@ -222,6 +235,16 @@ public class AliasIp  implements java.io.Serializable {
      */
     public AliasIp az(String az) {
         this.az = az;
+        return this;
+    }
+
+    /**
+     * set 实例ID
+     *
+     * @param instanceId
+     */
+    public AliasIp instanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
 
@@ -262,6 +285,16 @@ public class AliasIp  implements java.io.Serializable {
      */
     public AliasIp cidr(String cidr) {
         this.cidr = cidr;
+        return this;
+    }
+
+    /**
+     * set 是否已绑弹性公网ip
+     *
+     * @param isBondEip
+     */
+    public AliasIp isBondEip(Boolean isBondEip) {
+        this.isBondEip = isBondEip;
         return this;
     }
 

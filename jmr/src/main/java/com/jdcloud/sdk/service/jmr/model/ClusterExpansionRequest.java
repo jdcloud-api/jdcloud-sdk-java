@@ -25,24 +25,28 @@
 package com.jdcloud.sdk.service.jmr.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.jmr.model.ClusterExpansion;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 集群扩容
+ * 扩容集群
  */
 public class ClusterExpansionRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要扩容的集群ID
+     * 描述集群配置
+     * Required:true
      */
-    private String clusterId;
+    @Required
+    private ClusterExpansion clusterSpec;
 
     /**
-     * 扩容的数量
+     * 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+
      */
-    private Integer expansionNum;
+    private String clientToken;
 
     /**
      * 地域ID
@@ -53,39 +57,41 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 需要扩容的集群ID
+     * get 描述集群配置
      *
      * @return
      */
-    public String getClusterId() {
-        return clusterId;
+    public ClusterExpansion getClusterSpec() {
+        return clusterSpec;
     }
 
     /**
-     * set 需要扩容的集群ID
+     * set 描述集群配置
      *
-     * @param clusterId
+     * @param clusterSpec
      */
-    public void setClusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public void setClusterSpec(ClusterExpansion clusterSpec) {
+        this.clusterSpec = clusterSpec;
     }
 
     /**
-     * get 扩容的数量
+     * get 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+
      *
      * @return
      */
-    public Integer getExpansionNum() {
-        return expansionNum;
+    public String getClientToken() {
+        return clientToken;
     }
 
     /**
-     * set 扩容的数量
+     * set 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+
      *
-     * @param expansionNum
+     * @param clientToken
      */
-    public void setExpansionNum(Integer expansionNum) {
-        this.expansionNum = expansionNum;
+    public void setClientToken(String clientToken) {
+        this.clientToken = clientToken;
     }
 
     /**
@@ -108,22 +114,23 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 需要扩容的集群ID
+     * set 描述集群配置
      *
-     * @param clusterId
+     * @param clusterSpec
      */
-    public ClusterExpansionRequest clusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public ClusterExpansionRequest clusterSpec(ClusterExpansion clusterSpec) {
+        this.clusterSpec = clusterSpec;
         return this;
     }
 
     /**
-     * set 扩容的数量
+     * set 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+
      *
-     * @param expansionNum
+     * @param clientToken
      */
-    public ClusterExpansionRequest expansionNum(Integer expansionNum) {
-        this.expansionNum = expansionNum;
+    public ClusterExpansionRequest clientToken(String clientToken) {
+        this.clientToken = clientToken;
         return this;
     }
 

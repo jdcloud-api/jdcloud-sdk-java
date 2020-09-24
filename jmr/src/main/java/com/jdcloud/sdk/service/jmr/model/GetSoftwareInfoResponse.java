@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取软件清单信息
+ * 获取对应版本的软件清单信息
  */
 public class GetSoftwareInfoResponse extends JdcloudResponse<GetSoftwareInfoResult> implements java.io.Serializable {
 

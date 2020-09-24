@@ -47,6 +47,11 @@ public class ElasticIpSpec  implements java.io.Serializable {
     private Integer extraUplinkBandwidth;
 
     /**
+     * 共享带宽ID, 选择加入共享带宽方式购买时必传
+     */
+    private String bandwidthPackageId;
+
+    /**
      * 购买数量
      * Required:true
      */
@@ -95,6 +100,24 @@ public class ElasticIpSpec  implements java.io.Serializable {
      */
     public void setExtraUplinkBandwidth(Integer extraUplinkBandwidth) {
         this.extraUplinkBandwidth = extraUplinkBandwidth;
+    }
+
+    /**
+     * get 共享带宽ID, 选择加入共享带宽方式购买时必传
+     *
+     * @return
+     */
+    public String getBandwidthPackageId() {
+        return bandwidthPackageId;
+    }
+
+    /**
+     * set 共享带宽ID, 选择加入共享带宽方式购买时必传
+     *
+     * @param bandwidthPackageId
+     */
+    public void setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
     }
 
     /**
@@ -151,6 +174,16 @@ public class ElasticIpSpec  implements java.io.Serializable {
      */
     public ElasticIpSpec extraUplinkBandwidth(Integer extraUplinkBandwidth) {
         this.extraUplinkBandwidth = extraUplinkBandwidth;
+        return this;
+    }
+
+    /**
+     * set 共享带宽ID, 选择加入共享带宽方式购买时必传
+     *
+     * @param bandwidthPackageId
+     */
+    public ElasticIpSpec bandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
 

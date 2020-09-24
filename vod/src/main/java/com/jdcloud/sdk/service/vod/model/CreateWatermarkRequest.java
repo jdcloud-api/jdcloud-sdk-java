@@ -79,6 +79,24 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
     private String sizeUnit;
 
     /**
+     * widthRef
+     */
+    private String widthRef;
+
+    /**
+     * 高度参考，仅当 siteUnit &#x3D; percent 时生效。
+取值说明：
+  w: 输出水印高度 &#x3D; height * 水印原图高度
+  v: 等同于 vh
+  vw: 输出水印高度 &#x3D; height * 输出视频宽度
+  vh: 输出水印高度 &#x3D; height * 输出视频高度
+  vls: 输出水印高度 &#x3D; height * 输出视频长边
+  vss: 输出水印高度 &#x3D; height * 输出视频短边
+
+     */
+    private String heightRef;
+
+    /**
      * 水印位置。取值范围：
   LT - 左上
   RT - 右上
@@ -230,6 +248,58 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
      */
     public void setSizeUnit(String sizeUnit) {
         this.sizeUnit = sizeUnit;
+    }
+
+    /**
+     * get widthRef
+     *
+     * @return
+     */
+    public String getWidthRef() {
+        return widthRef;
+    }
+
+    /**
+     * set widthRef
+     *
+     * @param widthRef
+     */
+    public void setWidthRef(String widthRef) {
+        this.widthRef = widthRef;
+    }
+
+    /**
+     * get 高度参考，仅当 siteUnit &#x3D; percent 时生效。
+取值说明：
+  w: 输出水印高度 &#x3D; height * 水印原图高度
+  v: 等同于 vh
+  vw: 输出水印高度 &#x3D; height * 输出视频宽度
+  vh: 输出水印高度 &#x3D; height * 输出视频高度
+  vls: 输出水印高度 &#x3D; height * 输出视频长边
+  vss: 输出水印高度 &#x3D; height * 输出视频短边
+
+     *
+     * @return
+     */
+    public String getHeightRef() {
+        return heightRef;
+    }
+
+    /**
+     * set 高度参考，仅当 siteUnit &#x3D; percent 时生效。
+取值说明：
+  w: 输出水印高度 &#x3D; height * 水印原图高度
+  v: 等同于 vh
+  vw: 输出水印高度 &#x3D; height * 输出视频宽度
+  vh: 输出水印高度 &#x3D; height * 输出视频高度
+  vls: 输出水印高度 &#x3D; height * 输出视频长边
+  vss: 输出水印高度 &#x3D; height * 输出视频短边
+
+     *
+     * @param heightRef
+     */
+    public void setHeightRef(String heightRef) {
+        this.heightRef = heightRef;
     }
 
     /**
@@ -393,6 +463,34 @@ public class CreateWatermarkRequest extends JdcloudRequest implements java.io.Se
      */
     public CreateWatermarkRequest sizeUnit(String sizeUnit) {
         this.sizeUnit = sizeUnit;
+        return this;
+    }
+
+    /**
+     * set widthRef
+     *
+     * @param widthRef
+     */
+    public CreateWatermarkRequest widthRef(String widthRef) {
+        this.widthRef = widthRef;
+        return this;
+    }
+
+    /**
+     * set 高度参考，仅当 siteUnit &#x3D; percent 时生效。
+取值说明：
+  w: 输出水印高度 &#x3D; height * 水印原图高度
+  v: 等同于 vh
+  vw: 输出水印高度 &#x3D; height * 输出视频宽度
+  vh: 输出水印高度 &#x3D; height * 输出视频高度
+  vls: 输出水印高度 &#x3D; height * 输出视频长边
+  vss: 输出水印高度 &#x3D; height * 输出视频短边
+
+     *
+     * @param heightRef
+     */
+    public CreateWatermarkRequest heightRef(String heightRef) {
+        this.heightRef = heightRef;
         return this;
     }
 

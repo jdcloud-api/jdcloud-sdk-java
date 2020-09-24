@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 返回jmr版本列表
+ * 查询JMR的版本信息
  */
 public class GetJmrVersionListRequest extends JdcloudRequest implements java.io.Serializable {
 

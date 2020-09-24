@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoResponse;
 
 /**
- * 获取软件清单信息
+ * 获取对应版本的软件清单信息
  */
 class GetSoftwareInfoExecutor extends JdcloudExecutor {
 

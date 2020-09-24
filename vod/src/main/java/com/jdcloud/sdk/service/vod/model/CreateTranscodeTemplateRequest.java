@@ -28,6 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.vod.model.Video;
 import com.jdcloud.sdk.service.vod.model.Audio;
 import com.jdcloud.sdk.service.vod.model.Encapsulation;
+import com.jdcloud.sdk.service.vod.model.OutFile;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -65,6 +66,11 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
      */
     @Required
     private Encapsulation encapsulation;
+
+    /**
+     * 输出文件配置
+     */
+    private OutFile outFile;
 
     /**
      * 清晰度规格标记。取值范围：
@@ -163,6 +169,24 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
     }
 
     /**
+     * get 输出文件配置
+     *
+     * @return
+     */
+    public OutFile getOutFile() {
+        return outFile;
+    }
+
+    /**
+     * set 输出文件配置
+     *
+     * @param outFile
+     */
+    public void setOutFile(OutFile outFile) {
+        this.outFile = outFile;
+    }
+
+    /**
      * get 清晰度规格标记。取值范围：
   SD - 标清
   HD - 高清
@@ -255,6 +279,16 @@ public class CreateTranscodeTemplateRequest extends JdcloudRequest implements ja
      */
     public CreateTranscodeTemplateRequest encapsulation(Encapsulation encapsulation) {
         this.encapsulation = encapsulation;
+        return this;
+    }
+
+    /**
+     * set 输出文件配置
+     *
+     * @param outFile
+     */
+    public CreateTranscodeTemplateRequest outFile(OutFile outFile) {
+        this.outFile = outFile;
         return this;
     }
 

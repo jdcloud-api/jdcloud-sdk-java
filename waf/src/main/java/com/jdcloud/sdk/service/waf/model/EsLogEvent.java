@@ -43,6 +43,11 @@ public class EsLogEvent  implements java.io.Serializable {
     private String remoteAddr;
 
     /**
+     * 客户端port
+     */
+    private String remotePort;
+
+    /**
      * 域名
      */
     private String domain;
@@ -92,6 +97,126 @@ public class EsLogEvent  implements java.io.Serializable {
      */
     private String upstreamErr;
 
+    /**
+     * 日志记录时间
+     */
+    private String timeLocal;
+
+    /**
+     * 本机域名
+     */
+    private String hostname;
+
+    /**
+     * 响应长度
+     */
+    private String bytesSent;
+
+    /**
+     * 请求长度
+     */
+    private String requestLength;
+
+    /**
+     * 客户端请求的域名
+     */
+    private String host;
+
+    /**
+     * jfe的server块监听IP
+     */
+    private String serverAddr;
+
+    /**
+     * jfe的server块监听port
+     */
+    private String serverPort;
+
+    /**
+     * 请求所连接的upstream名称
+     */
+    private String upstreamHttpName;
+
+    /**
+     * 请求所连接的upstream服务器IP
+     */
+    private String upstreamAddr;
+
+    /**
+     * 请求所连接的upstream服务器port
+     */
+    private String upstreamHttpPort;
+
+    /**
+     * 等待upstream建立连接的时间
+     */
+    private String upstreamConnectTime;
+
+    /**
+     * 接收upstream请求头的时间
+     */
+    private String upstreamHeaderTime;
+
+    /**
+     * 接收upstream响应头的时间
+     */
+    private String upstreamResponseTime;
+
+    /**
+     * 请求处理时间
+     */
+    private String requestTime;
+
+    /**
+     * 请求头的UA字段
+     */
+    private String httpUserAgent;
+
+    /**
+     * 攻击类型
+     */
+    private String antiReason;
+
+    /**
+     * 请求来源
+     */
+    private String httpReferer;
+
+    /**
+     * 请求协议
+     */
+    private String scheme;
+
+    /**
+     * uri
+     */
+    private String uri;
+
+    /**
+     * 断点续传响应分片位置
+     */
+    private String sentHttpContentRange;
+
+    /**
+     * 客户端IP
+     */
+    private String antiRemoteAddr;
+
+    /**
+     * 原响应码
+     */
+    private String antiStatus;
+
+    /**
+     * 命中规则请求原始请求报文
+     */
+    private String antiReqRaw;
+
+    /**
+     * 命中规则请求原始响应报文
+     */
+    private String antiRespRaw;
+
 
     /**
      * get 产生时间
@@ -127,6 +252,24 @@ public class EsLogEvent  implements java.io.Serializable {
      */
     public void setRemoteAddr(String remoteAddr) {
         this.remoteAddr = remoteAddr;
+    }
+
+    /**
+     * get 客户端port
+     *
+     * @return
+     */
+    public String getRemotePort() {
+        return remotePort;
+    }
+
+    /**
+     * set 客户端port
+     *
+     * @param remotePort
+     */
+    public void setRemotePort(String remotePort) {
+        this.remotePort = remotePort;
     }
 
     /**
@@ -309,6 +452,438 @@ public class EsLogEvent  implements java.io.Serializable {
         this.upstreamErr = upstreamErr;
     }
 
+    /**
+     * get 日志记录时间
+     *
+     * @return
+     */
+    public String getTimeLocal() {
+        return timeLocal;
+    }
+
+    /**
+     * set 日志记录时间
+     *
+     * @param timeLocal
+     */
+    public void setTimeLocal(String timeLocal) {
+        this.timeLocal = timeLocal;
+    }
+
+    /**
+     * get 本机域名
+     *
+     * @return
+     */
+    public String getHostname() {
+        return hostname;
+    }
+
+    /**
+     * set 本机域名
+     *
+     * @param hostname
+     */
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
+    }
+
+    /**
+     * get 响应长度
+     *
+     * @return
+     */
+    public String getBytesSent() {
+        return bytesSent;
+    }
+
+    /**
+     * set 响应长度
+     *
+     * @param bytesSent
+     */
+    public void setBytesSent(String bytesSent) {
+        this.bytesSent = bytesSent;
+    }
+
+    /**
+     * get 请求长度
+     *
+     * @return
+     */
+    public String getRequestLength() {
+        return requestLength;
+    }
+
+    /**
+     * set 请求长度
+     *
+     * @param requestLength
+     */
+    public void setRequestLength(String requestLength) {
+        this.requestLength = requestLength;
+    }
+
+    /**
+     * get 客户端请求的域名
+     *
+     * @return
+     */
+    public String getHost() {
+        return host;
+    }
+
+    /**
+     * set 客户端请求的域名
+     *
+     * @param host
+     */
+    public void setHost(String host) {
+        this.host = host;
+    }
+
+    /**
+     * get jfe的server块监听IP
+     *
+     * @return
+     */
+    public String getServerAddr() {
+        return serverAddr;
+    }
+
+    /**
+     * set jfe的server块监听IP
+     *
+     * @param serverAddr
+     */
+    public void setServerAddr(String serverAddr) {
+        this.serverAddr = serverAddr;
+    }
+
+    /**
+     * get jfe的server块监听port
+     *
+     * @return
+     */
+    public String getServerPort() {
+        return serverPort;
+    }
+
+    /**
+     * set jfe的server块监听port
+     *
+     * @param serverPort
+     */
+    public void setServerPort(String serverPort) {
+        this.serverPort = serverPort;
+    }
+
+    /**
+     * get 请求所连接的upstream名称
+     *
+     * @return
+     */
+    public String getUpstreamHttpName() {
+        return upstreamHttpName;
+    }
+
+    /**
+     * set 请求所连接的upstream名称
+     *
+     * @param upstreamHttpName
+     */
+    public void setUpstreamHttpName(String upstreamHttpName) {
+        this.upstreamHttpName = upstreamHttpName;
+    }
+
+    /**
+     * get 请求所连接的upstream服务器IP
+     *
+     * @return
+     */
+    public String getUpstreamAddr() {
+        return upstreamAddr;
+    }
+
+    /**
+     * set 请求所连接的upstream服务器IP
+     *
+     * @param upstreamAddr
+     */
+    public void setUpstreamAddr(String upstreamAddr) {
+        this.upstreamAddr = upstreamAddr;
+    }
+
+    /**
+     * get 请求所连接的upstream服务器port
+     *
+     * @return
+     */
+    public String getUpstreamHttpPort() {
+        return upstreamHttpPort;
+    }
+
+    /**
+     * set 请求所连接的upstream服务器port
+     *
+     * @param upstreamHttpPort
+     */
+    public void setUpstreamHttpPort(String upstreamHttpPort) {
+        this.upstreamHttpPort = upstreamHttpPort;
+    }
+
+    /**
+     * get 等待upstream建立连接的时间
+     *
+     * @return
+     */
+    public String getUpstreamConnectTime() {
+        return upstreamConnectTime;
+    }
+
+    /**
+     * set 等待upstream建立连接的时间
+     *
+     * @param upstreamConnectTime
+     */
+    public void setUpstreamConnectTime(String upstreamConnectTime) {
+        this.upstreamConnectTime = upstreamConnectTime;
+    }
+
+    /**
+     * get 接收upstream请求头的时间
+     *
+     * @return
+     */
+    public String getUpstreamHeaderTime() {
+        return upstreamHeaderTime;
+    }
+
+    /**
+     * set 接收upstream请求头的时间
+     *
+     * @param upstreamHeaderTime
+     */
+    public void setUpstreamHeaderTime(String upstreamHeaderTime) {
+        this.upstreamHeaderTime = upstreamHeaderTime;
+    }
+
+    /**
+     * get 接收upstream响应头的时间
+     *
+     * @return
+     */
+    public String getUpstreamResponseTime() {
+        return upstreamResponseTime;
+    }
+
+    /**
+     * set 接收upstream响应头的时间
+     *
+     * @param upstreamResponseTime
+     */
+    public void setUpstreamResponseTime(String upstreamResponseTime) {
+        this.upstreamResponseTime = upstreamResponseTime;
+    }
+
+    /**
+     * get 请求处理时间
+     *
+     * @return
+     */
+    public String getRequestTime() {
+        return requestTime;
+    }
+
+    /**
+     * set 请求处理时间
+     *
+     * @param requestTime
+     */
+    public void setRequestTime(String requestTime) {
+        this.requestTime = requestTime;
+    }
+
+    /**
+     * get 请求头的UA字段
+     *
+     * @return
+     */
+    public String getHttpUserAgent() {
+        return httpUserAgent;
+    }
+
+    /**
+     * set 请求头的UA字段
+     *
+     * @param httpUserAgent
+     */
+    public void setHttpUserAgent(String httpUserAgent) {
+        this.httpUserAgent = httpUserAgent;
+    }
+
+    /**
+     * get 攻击类型
+     *
+     * @return
+     */
+    public String getAntiReason() {
+        return antiReason;
+    }
+
+    /**
+     * set 攻击类型
+     *
+     * @param antiReason
+     */
+    public void setAntiReason(String antiReason) {
+        this.antiReason = antiReason;
+    }
+
+    /**
+     * get 请求来源
+     *
+     * @return
+     */
+    public String getHttpReferer() {
+        return httpReferer;
+    }
+
+    /**
+     * set 请求来源
+     *
+     * @param httpReferer
+     */
+    public void setHttpReferer(String httpReferer) {
+        this.httpReferer = httpReferer;
+    }
+
+    /**
+     * get 请求协议
+     *
+     * @return
+     */
+    public String getScheme() {
+        return scheme;
+    }
+
+    /**
+     * set 请求协议
+     *
+     * @param scheme
+     */
+    public void setScheme(String scheme) {
+        this.scheme = scheme;
+    }
+
+    /**
+     * get uri
+     *
+     * @return
+     */
+    public String getUri() {
+        return uri;
+    }
+
+    /**
+     * set uri
+     *
+     * @param uri
+     */
+    public void setUri(String uri) {
+        this.uri = uri;
+    }
+
+    /**
+     * get 断点续传响应分片位置
+     *
+     * @return
+     */
+    public String getSentHttpContentRange() {
+        return sentHttpContentRange;
+    }
+
+    /**
+     * set 断点续传响应分片位置
+     *
+     * @param sentHttpContentRange
+     */
+    public void setSentHttpContentRange(String sentHttpContentRange) {
+        this.sentHttpContentRange = sentHttpContentRange;
+    }
+
+    /**
+     * get 客户端IP
+     *
+     * @return
+     */
+    public String getAntiRemoteAddr() {
+        return antiRemoteAddr;
+    }
+
+    /**
+     * set 客户端IP
+     *
+     * @param antiRemoteAddr
+     */
+    public void setAntiRemoteAddr(String antiRemoteAddr) {
+        this.antiRemoteAddr = antiRemoteAddr;
+    }
+
+    /**
+     * get 原响应码
+     *
+     * @return
+     */
+    public String getAntiStatus() {
+        return antiStatus;
+    }
+
+    /**
+     * set 原响应码
+     *
+     * @param antiStatus
+     */
+    public void setAntiStatus(String antiStatus) {
+        this.antiStatus = antiStatus;
+    }
+
+    /**
+     * get 命中规则请求原始请求报文
+     *
+     * @return
+     */
+    public String getAntiReqRaw() {
+        return antiReqRaw;
+    }
+
+    /**
+     * set 命中规则请求原始请求报文
+     *
+     * @param antiReqRaw
+     */
+    public void setAntiReqRaw(String antiReqRaw) {
+        this.antiReqRaw = antiReqRaw;
+    }
+
+    /**
+     * get 命中规则请求原始响应报文
+     *
+     * @return
+     */
+    public String getAntiRespRaw() {
+        return antiRespRaw;
+    }
+
+    /**
+     * set 命中规则请求原始响应报文
+     *
+     * @param antiRespRaw
+     */
+    public void setAntiRespRaw(String antiRespRaw) {
+        this.antiRespRaw = antiRespRaw;
+    }
+
 
     /**
      * set 产生时间
@@ -327,6 +902,16 @@ public class EsLogEvent  implements java.io.Serializable {
      */
     public EsLogEvent remoteAddr(String remoteAddr) {
         this.remoteAddr = remoteAddr;
+        return this;
+    }
+
+    /**
+     * set 客户端port
+     *
+     * @param remotePort
+     */
+    public EsLogEvent remotePort(String remotePort) {
+        this.remotePort = remotePort;
         return this;
     }
 
@@ -427,6 +1012,246 @@ public class EsLogEvent  implements java.io.Serializable {
      */
     public EsLogEvent upstreamErr(String upstreamErr) {
         this.upstreamErr = upstreamErr;
+        return this;
+    }
+
+    /**
+     * set 日志记录时间
+     *
+     * @param timeLocal
+     */
+    public EsLogEvent timeLocal(String timeLocal) {
+        this.timeLocal = timeLocal;
+        return this;
+    }
+
+    /**
+     * set 本机域名
+     *
+     * @param hostname
+     */
+    public EsLogEvent hostname(String hostname) {
+        this.hostname = hostname;
+        return this;
+    }
+
+    /**
+     * set 响应长度
+     *
+     * @param bytesSent
+     */
+    public EsLogEvent bytesSent(String bytesSent) {
+        this.bytesSent = bytesSent;
+        return this;
+    }
+
+    /**
+     * set 请求长度
+     *
+     * @param requestLength
+     */
+    public EsLogEvent requestLength(String requestLength) {
+        this.requestLength = requestLength;
+        return this;
+    }
+
+    /**
+     * set 客户端请求的域名
+     *
+     * @param host
+     */
+    public EsLogEvent host(String host) {
+        this.host = host;
+        return this;
+    }
+
+    /**
+     * set jfe的server块监听IP
+     *
+     * @param serverAddr
+     */
+    public EsLogEvent serverAddr(String serverAddr) {
+        this.serverAddr = serverAddr;
+        return this;
+    }
+
+    /**
+     * set jfe的server块监听port
+     *
+     * @param serverPort
+     */
+    public EsLogEvent serverPort(String serverPort) {
+        this.serverPort = serverPort;
+        return this;
+    }
+
+    /**
+     * set 请求所连接的upstream名称
+     *
+     * @param upstreamHttpName
+     */
+    public EsLogEvent upstreamHttpName(String upstreamHttpName) {
+        this.upstreamHttpName = upstreamHttpName;
+        return this;
+    }
+
+    /**
+     * set 请求所连接的upstream服务器IP
+     *
+     * @param upstreamAddr
+     */
+    public EsLogEvent upstreamAddr(String upstreamAddr) {
+        this.upstreamAddr = upstreamAddr;
+        return this;
+    }
+
+    /**
+     * set 请求所连接的upstream服务器port
+     *
+     * @param upstreamHttpPort
+     */
+    public EsLogEvent upstreamHttpPort(String upstreamHttpPort) {
+        this.upstreamHttpPort = upstreamHttpPort;
+        return this;
+    }
+
+    /**
+     * set 等待upstream建立连接的时间
+     *
+     * @param upstreamConnectTime
+     */
+    public EsLogEvent upstreamConnectTime(String upstreamConnectTime) {
+        this.upstreamConnectTime = upstreamConnectTime;
+        return this;
+    }
+
+    /**
+     * set 接收upstream请求头的时间
+     *
+     * @param upstreamHeaderTime
+     */
+    public EsLogEvent upstreamHeaderTime(String upstreamHeaderTime) {
+        this.upstreamHeaderTime = upstreamHeaderTime;
+        return this;
+    }
+
+    /**
+     * set 接收upstream响应头的时间
+     *
+     * @param upstreamResponseTime
+     */
+    public EsLogEvent upstreamResponseTime(String upstreamResponseTime) {
+        this.upstreamResponseTime = upstreamResponseTime;
+        return this;
+    }
+
+    /**
+     * set 请求处理时间
+     *
+     * @param requestTime
+     */
+    public EsLogEvent requestTime(String requestTime) {
+        this.requestTime = requestTime;
+        return this;
+    }
+
+    /**
+     * set 请求头的UA字段
+     *
+     * @param httpUserAgent
+     */
+    public EsLogEvent httpUserAgent(String httpUserAgent) {
+        this.httpUserAgent = httpUserAgent;
+        return this;
+    }
+
+    /**
+     * set 攻击类型
+     *
+     * @param antiReason
+     */
+    public EsLogEvent antiReason(String antiReason) {
+        this.antiReason = antiReason;
+        return this;
+    }
+
+    /**
+     * set 请求来源
+     *
+     * @param httpReferer
+     */
+    public EsLogEvent httpReferer(String httpReferer) {
+        this.httpReferer = httpReferer;
+        return this;
+    }
+
+    /**
+     * set 请求协议
+     *
+     * @param scheme
+     */
+    public EsLogEvent scheme(String scheme) {
+        this.scheme = scheme;
+        return this;
+    }
+
+    /**
+     * set uri
+     *
+     * @param uri
+     */
+    public EsLogEvent uri(String uri) {
+        this.uri = uri;
+        return this;
+    }
+
+    /**
+     * set 断点续传响应分片位置
+     *
+     * @param sentHttpContentRange
+     */
+    public EsLogEvent sentHttpContentRange(String sentHttpContentRange) {
+        this.sentHttpContentRange = sentHttpContentRange;
+        return this;
+    }
+
+    /**
+     * set 客户端IP
+     *
+     * @param antiRemoteAddr
+     */
+    public EsLogEvent antiRemoteAddr(String antiRemoteAddr) {
+        this.antiRemoteAddr = antiRemoteAddr;
+        return this;
+    }
+
+    /**
+     * set 原响应码
+     *
+     * @param antiStatus
+     */
+    public EsLogEvent antiStatus(String antiStatus) {
+        this.antiStatus = antiStatus;
+        return this;
+    }
+
+    /**
+     * set 命中规则请求原始请求报文
+     *
+     * @param antiReqRaw
+     */
+    public EsLogEvent antiReqRaw(String antiReqRaw) {
+        this.antiReqRaw = antiReqRaw;
+        return this;
+    }
+
+    /**
+     * set 命中规则请求原始响应报文
+     *
+     * @param antiRespRaw
+     */
+    public EsLogEvent antiRespRaw(String antiRespRaw) {
+        this.antiRespRaw = antiRespRaw;
         return this;
     }
 

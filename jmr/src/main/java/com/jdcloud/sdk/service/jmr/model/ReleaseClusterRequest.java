@@ -29,6 +29,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 释放集群
+
  */
 public class ReleaseClusterRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,11 +43,11 @@ public class ReleaseClusterRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
     /**
-     * 集群ID；由八位字符组成
+     * 集群ID
      * Required:true
      */
     @Required
-    private String id;
+    private String clusterId;
 
 
     /**
@@ -68,21 +69,21 @@ public class ReleaseClusterRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 集群ID；由八位字符组成
+     * get 集群ID
      *
      * @return
      */
-    public String getId() {
-        return id;
+    public String getClusterId() {
+        return clusterId;
     }
 
     /**
-     * set 集群ID；由八位字符组成
+     * set 集群ID
      *
-     * @param id
+     * @param clusterId
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
     }
 
 
@@ -97,12 +98,12 @@ public class ReleaseClusterRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 集群ID；由八位字符组成
+     * set 集群ID
      *
-     * @param id
+     * @param clusterId
      */
-    public ReleaseClusterRequest id(String id) {
-        this.id = id;
+    public ReleaseClusterRequest clusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
 

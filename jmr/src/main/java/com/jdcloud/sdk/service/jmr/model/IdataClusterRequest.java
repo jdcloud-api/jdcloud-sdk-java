@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询用户集群列表及相关服务的一些信息
+ * 查询用户指定clusterId对应的集群列表及相关服务的一些信息
  */
 public class IdataClusterRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,11 +42,11 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     private String regionId;
 
     /**
-     * 集群ID；由八位字符组成
+     * 集群ID
      * Required:true
      */
     @Required
-    private String id;
+    private String clusterId;
 
 
     /**
@@ -68,21 +68,21 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 集群ID；由八位字符组成
+     * get 集群ID
      *
      * @return
      */
-    public String getId() {
-        return id;
+    public String getClusterId() {
+        return clusterId;
     }
 
     /**
-     * set 集群ID；由八位字符组成
+     * set 集群ID
      *
-     * @param id
+     * @param clusterId
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
     }
 
 
@@ -97,12 +97,12 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 集群ID；由八位字符组成
+     * set 集群ID
      *
-     * @param id
+     * @param clusterId
      */
-    public IdataClusterRequest id(String id) {
-        this.id = id;
+    public IdataClusterRequest clusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
 

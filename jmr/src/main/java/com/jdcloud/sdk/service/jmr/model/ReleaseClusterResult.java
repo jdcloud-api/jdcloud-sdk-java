@@ -28,76 +28,44 @@ import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
  * 释放集群
+
  */
 public class ReleaseClusterResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * status
+     * 是否开始释放集群
      */
-    private String status;
-
-    /**
-     * message
-     */
-    private String message;
+    private Boolean status;
 
 
     /**
-     * get status
+     * get 是否开始释放集群
      *
      * @return
      */
-    public String getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
     /**
-     * set status
+     * set 是否开始释放集群
      *
      * @param status
      */
-    public void setStatus(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
-    /**
-     * get message
-     *
-     * @return
-     */
-    public String getMessage() {
-        return message;
-    }
 
     /**
-     * set message
-     *
-     * @param message
-     */
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-
-    /**
-     * set status
+     * set 是否开始释放集群
      *
      * @param status
      */
-    public ReleaseClusterResult status(String status) {
+    public ReleaseClusterResult status(Boolean status) {
         this.status = status;
-        return this;
-    }
-
-    /**
-     * set message
-     *
-     * @param message
-     */
-    public ReleaseClusterResult message(String message) {
-        this.message = message;
         return this;
     }
 

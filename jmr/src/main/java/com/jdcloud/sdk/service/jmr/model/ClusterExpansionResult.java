@@ -27,77 +27,77 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 集群扩容
+ * 扩容集群
  */
 public class ClusterExpansionResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * status
+     * 是否开始创建集群
      */
-    private String status;
+    private Boolean status;
 
     /**
-     * message
+     * 集群ID
      */
-    private String message;
+    private String clusterId;
 
 
     /**
-     * get status
+     * get 是否开始创建集群
      *
      * @return
      */
-    public String getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
     /**
-     * set status
+     * set 是否开始创建集群
      *
      * @param status
      */
-    public void setStatus(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 
     /**
-     * get message
+     * get 集群ID
      *
      * @return
      */
-    public String getMessage() {
-        return message;
+    public String getClusterId() {
+        return clusterId;
     }
 
     /**
-     * set message
+     * set 集群ID
      *
-     * @param message
+     * @param clusterId
      */
-    public void setMessage(String message) {
-        this.message = message;
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
     }
 
 
     /**
-     * set status
+     * set 是否开始创建集群
      *
      * @param status
      */
-    public ClusterExpansionResult status(String status) {
+    public ClusterExpansionResult status(Boolean status) {
         this.status = status;
         return this;
     }
 
     /**
-     * set message
+     * set 集群ID
      *
-     * @param message
+     * @param clusterId
      */
-    public ClusterExpansionResult message(String message) {
-        this.message = message;
+    public ClusterExpansionResult clusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
 

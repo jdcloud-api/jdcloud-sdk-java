@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 报表日志类接口
- * 京东云WAF-OpenAPI报表日志类接口
+ * Data-Chart
+ * Data-Chart API
  *
  * OpenAPI spec version: v1
  * Contact: 

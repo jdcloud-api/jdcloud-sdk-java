@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 返回jmr版本列表
+ * 查询JMR的版本信息
  */
 public class GetJmrVersionListResponse extends JdcloudResponse<GetJmrVersionListResult> implements java.io.Serializable {
 

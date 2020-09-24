@@ -35,7 +35,7 @@ public class CreateImageUploadTaskRequest extends JdcloudRequest implements java
     private static final long serialVersionUID = 1L;
 
     /**
-     * HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
+     * HTTP 请求方法，上传支持 PUT 和 POST 方法，默认值为 PUT 。
      */
     private String httpMethod;
 
@@ -53,7 +53,7 @@ public class CreateImageUploadTaskRequest extends JdcloudRequest implements java
 
 
     /**
-     * get HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
+     * get HTTP 请求方法，上传支持 PUT 和 POST 方法，默认值为 PUT 。
      *
      * @return
      */
@@ -62,7 +62,7 @@ public class CreateImageUploadTaskRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
+     * set HTTP 请求方法，上传支持 PUT 和 POST 方法，默认值为 PUT 。
      *
      * @param httpMethod
      */
@@ -108,7 +108,7 @@ public class CreateImageUploadTaskRequest extends JdcloudRequest implements java
 
 
     /**
-     * set HTTP 请求方法，上传只支持 PUT 方法，默认值为 PUT
+     * set HTTP 请求方法，上传支持 PUT 和 POST 方法，默认值为 PUT 。
      *
      * @param httpMethod
      */

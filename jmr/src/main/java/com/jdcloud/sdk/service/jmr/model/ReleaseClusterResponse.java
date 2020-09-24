@@ -28,6 +28,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 释放集群
+
  */
 public class ReleaseClusterResponse extends JdcloudResponse<ReleaseClusterResult> implements java.io.Serializable {
 
