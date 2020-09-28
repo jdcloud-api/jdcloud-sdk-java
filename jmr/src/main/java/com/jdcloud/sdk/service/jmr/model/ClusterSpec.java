@@ -56,9 +56,7 @@ public class ClusterSpec  implements java.io.Serializable {
 
     /**
      * 集群计费类型，支持按配置和包年包月计费
-     * Required:true
      */
-    @Required
     private String payType;
 
     /**
@@ -67,16 +65,6 @@ public class ClusterSpec  implements java.io.Serializable {
      */
     @Required
     private Integer masterNodeCount;
-
-    /**
-     * Master节点CPU
-     */
-    private Integer masterCore;
-
-    /**
-     * Master节点内存(推荐至少8G内存，否则服务可能会部署失败)
-     */
-    private Integer masterMemory;
 
     /**
      * Master系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
@@ -94,9 +82,7 @@ public class ClusterSpec  implements java.io.Serializable {
 
     /**
      * Master系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
-     * Required:true
      */
-    @Required
     private Integer masterSystemDiskIops;
 
     /**
@@ -115,9 +101,7 @@ public class ClusterSpec  implements java.io.Serializable {
 
     /**
      * Master数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
-     * Required:true
      */
-    @Required
     private Integer masterDiskIops;
 
     /**
@@ -135,16 +119,6 @@ public class ClusterSpec  implements java.io.Serializable {
     private Integer slaveNodeCount;
 
     /**
-     * Slave节点CPU
-     */
-    private Integer slaveCore;
-
-    /**
-     * Slave节点内存(推荐至少4G内存，否则服务可能会部署失败)
-     */
-    private Integer slaveMemory;
-
-    /**
      * Slave系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
      * Required:true
      */
@@ -160,9 +134,7 @@ public class ClusterSpec  implements java.io.Serializable {
 
     /**
      * Slave系统硬盘iops，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
-     * Required:true
      */
-    @Required
     private Integer slaveSystemDiskIops;
 
     /**
@@ -181,9 +153,7 @@ public class ClusterSpec  implements java.io.Serializable {
 
     /**
      * Slave数据盘ipos，只有在硬盘类型是ssd.gp1,ssd.io1时，才需要有iops，200起步，步长为10
-     * Required:true
      */
-    @Required
     private Integer slaveDiskIops;
 
     /**
@@ -334,42 +304,6 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * get Master节点CPU
-     *
-     * @return
-     */
-    public Integer getMasterCore() {
-        return masterCore;
-    }
-
-    /**
-     * set Master节点CPU
-     *
-     * @param masterCore
-     */
-    public void setMasterCore(Integer masterCore) {
-        this.masterCore = masterCore;
-    }
-
-    /**
-     * get Master节点内存(推荐至少8G内存，否则服务可能会部署失败)
-     *
-     * @return
-     */
-    public Integer getMasterMemory() {
-        return masterMemory;
-    }
-
-    /**
-     * set Master节点内存(推荐至少8G内存，否则服务可能会部署失败)
-     *
-     * @param masterMemory
-     */
-    public void setMasterMemory(Integer masterMemory) {
-        this.masterMemory = masterMemory;
-    }
-
-    /**
      * get Master系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
      *
      * @return
@@ -511,42 +445,6 @@ public class ClusterSpec  implements java.io.Serializable {
      */
     public void setSlaveNodeCount(Integer slaveNodeCount) {
         this.slaveNodeCount = slaveNodeCount;
-    }
-
-    /**
-     * get Slave节点CPU
-     *
-     * @return
-     */
-    public Integer getSlaveCore() {
-        return slaveCore;
-    }
-
-    /**
-     * set Slave节点CPU
-     *
-     * @param slaveCore
-     */
-    public void setSlaveCore(Integer slaveCore) {
-        this.slaveCore = slaveCore;
-    }
-
-    /**
-     * get Slave节点内存(推荐至少4G内存，否则服务可能会部署失败)
-     *
-     * @return
-     */
-    public Integer getSlaveMemory() {
-        return slaveMemory;
-    }
-
-    /**
-     * set Slave节点内存(推荐至少4G内存，否则服务可能会部署失败)
-     *
-     * @param slaveMemory
-     */
-    public void setSlaveMemory(Integer slaveMemory) {
-        this.slaveMemory = slaveMemory;
     }
 
     /**
@@ -853,26 +751,6 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
     /**
-     * set Master节点CPU
-     *
-     * @param masterCore
-     */
-    public ClusterSpec masterCore(Integer masterCore) {
-        this.masterCore = masterCore;
-        return this;
-    }
-
-    /**
-     * set Master节点内存(推荐至少8G内存，否则服务可能会部署失败)
-     *
-     * @param masterMemory
-     */
-    public ClusterSpec masterMemory(Integer masterMemory) {
-        this.masterMemory = masterMemory;
-        return this;
-    }
-
-    /**
      * set Master系统硬盘类型：ssd.gp1,ssd.io1和hdd.std1
      *
      * @param masterSystemDiskType
@@ -949,26 +827,6 @@ public class ClusterSpec  implements java.io.Serializable {
      */
     public ClusterSpec slaveNodeCount(Integer slaveNodeCount) {
         this.slaveNodeCount = slaveNodeCount;
-        return this;
-    }
-
-    /**
-     * set Slave节点CPU
-     *
-     * @param slaveCore
-     */
-    public ClusterSpec slaveCore(Integer slaveCore) {
-        this.slaveCore = slaveCore;
-        return this;
-    }
-
-    /**
-     * set Slave节点内存(推荐至少4G内存，否则服务可能会部署失败)
-     *
-     * @param slaveMemory
-     */
-    public ClusterSpec slaveMemory(Integer slaveMemory) {
-        this.slaveMemory = slaveMemory;
         return this;
     }
 

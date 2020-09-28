@@ -29,7 +29,8 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jmr.model.DescribeClustersResponse;
 
 /**
- * 查询集群列表
+ * 查询用户集群的列表
+
  */
 class DescribeClustersExecutor extends JdcloudExecutor {
 
@@ -40,7 +41,7 @@ class DescribeClustersExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/cluster:create";
+        return "/regions/{regionId}/clusters";
     }
 
     @Override

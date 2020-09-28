@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询用户指定clusterId对应的集群列表及相关服务的一些信息
+ * 查询用户的集群列表及相关服务的一些信息
  */
 public class IdataClusterRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -42,11 +42,11 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     private String regionId;
 
     /**
-     * 集群ID
+     * 地域信息
      * Required:true
      */
     @Required
-    private String clusterId;
+    private String dataCenter;
 
 
     /**
@@ -68,21 +68,21 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 集群ID
+     * get 地域信息
      *
      * @return
      */
-    public String getClusterId() {
-        return clusterId;
+    public String getDataCenter() {
+        return dataCenter;
     }
 
     /**
-     * set 集群ID
+     * set 地域信息
      *
-     * @param clusterId
+     * @param dataCenter
      */
-    public void setClusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public void setDataCenter(String dataCenter) {
+        this.dataCenter = dataCenter;
     }
 
 
@@ -97,12 +97,12 @@ public class IdataClusterRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 集群ID
+     * set 地域信息
      *
-     * @param clusterId
+     * @param dataCenter
      */
-    public IdataClusterRequest clusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public IdataClusterRequest dataCenter(String dataCenter) {
+        this.dataCenter = dataCenter;
         return this;
     }
 

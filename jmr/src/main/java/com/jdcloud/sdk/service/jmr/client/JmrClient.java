@@ -34,12 +34,12 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListRequest;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListResponse;
 import com.jdcloud.sdk.service.jmr.client.GetJmrVersionListExecutor;
-import com.jdcloud.sdk.service.jmr.model.ReleaseClusterRequest;
-import com.jdcloud.sdk.service.jmr.model.ReleaseClusterResponse;
-import com.jdcloud.sdk.service.jmr.client.ReleaseClusterExecutor;
 import com.jdcloud.sdk.service.jmr.model.DescribeClustersRequest;
 import com.jdcloud.sdk.service.jmr.model.DescribeClustersResponse;
 import com.jdcloud.sdk.service.jmr.client.DescribeClustersExecutor;
+import com.jdcloud.sdk.service.jmr.model.ReleaseClusterRequest;
+import com.jdcloud.sdk.service.jmr.model.ReleaseClusterResponse;
+import com.jdcloud.sdk.service.jmr.client.ReleaseClusterExecutor;
 import com.jdcloud.sdk.service.jmr.model.IdataClusterRequest;
 import com.jdcloud.sdk.service.jmr.model.IdataClusterResponse;
 import com.jdcloud.sdk.service.jmr.client.IdataClusterExecutor;
@@ -117,6 +117,18 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
+     * 查询用户集群的列表
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws JdcloudSdkException {
+        return new DescribeClustersExecutor().client(this).execute(request);
+    }
+
+    /**
      * 释放集群
 
      *
@@ -129,18 +141,7 @@ public class JmrClient extends JdcloudClient {
     }
 
     /**
-     * 查询集群列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws JdcloudSdkException {
-        return new DescribeClustersExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用户指定clusterId对应的集群列表及相关服务的一些信息
+     * 查询用户的集群列表及相关服务的一些信息
      *
      * @param request
      * @return

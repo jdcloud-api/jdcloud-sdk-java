@@ -27,7 +27,8 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询集群列表
+ * 查询用户集群的列表
+
  */
 public class DescribeClustersResponse extends JdcloudResponse<DescribeClustersResult> implements java.io.Serializable {
 

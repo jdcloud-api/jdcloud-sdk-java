@@ -40,7 +40,7 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
-    private ClusterExpansion clusterSpec;
+    private ClusterExpansion clusterExpansion;
 
     /**
      * 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
@@ -61,17 +61,17 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public ClusterExpansion getClusterSpec() {
-        return clusterSpec;
+    public ClusterExpansion getClusterExpansion() {
+        return clusterExpansion;
     }
 
     /**
      * set 描述集群配置
      *
-     * @param clusterSpec
+     * @param clusterExpansion
      */
-    public void setClusterSpec(ClusterExpansion clusterSpec) {
-        this.clusterSpec = clusterSpec;
+    public void setClusterExpansion(ClusterExpansion clusterExpansion) {
+        this.clusterExpansion = clusterExpansion;
     }
 
     /**
@@ -116,10 +116,10 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
     /**
      * set 描述集群配置
      *
-     * @param clusterSpec
+     * @param clusterExpansion
      */
-    public ClusterExpansionRequest clusterSpec(ClusterExpansion clusterSpec) {
-        this.clusterSpec = clusterSpec;
+    public ClusterExpansionRequest clusterExpansion(ClusterExpansion clusterExpansion) {
+        this.clusterExpansion = clusterExpansion;
         return this;
     }
 

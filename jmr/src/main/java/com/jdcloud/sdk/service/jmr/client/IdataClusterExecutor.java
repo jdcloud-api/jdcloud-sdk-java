@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.jmr.model.IdataClusterResponse;
 
 /**
- * 查询用户指定clusterId对应的集群列表及相关服务的一些信息
+ * 查询用户的集群列表及相关服务的一些信息
  */
 class IdataClusterExecutor extends JdcloudExecutor {
 
