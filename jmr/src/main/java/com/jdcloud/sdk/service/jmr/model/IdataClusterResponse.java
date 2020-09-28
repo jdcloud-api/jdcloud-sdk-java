@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询用户指定clusterId对应的集群列表及相关服务的一些信息
+ * 查询用户的集群列表及相关服务的一些信息
  */
 public class IdataClusterResponse extends JdcloudResponse<IdataClusterResult> implements java.io.Serializable {
 

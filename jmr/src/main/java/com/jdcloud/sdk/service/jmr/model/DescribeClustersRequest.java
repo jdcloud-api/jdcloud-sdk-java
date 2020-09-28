@@ -28,19 +28,40 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询集群列表
+ * 查询用户集群的列表
+
  */
 public class DescribeClustersRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1
+     * 地域
      */
-    private Integer pageNumber;
+    private String dataCenter;
 
     /**
-     * 分页大小；默认为10；取值范围[10, 100]
+     * 集群状态，CREATING，RUNNING，RELEASED，FAILED等
+     */
+    private String status;
+
+    /**
+     * 集群名称
+     */
+    private String clusterName;
+
+    /**
+     * 排序，比如 id desc
+     */
+    private String orderBy;
+
+    /**
+     * 页数，默认为1
+     */
+    private Integer pageNum;
+
+    /**
+     * 每页数目，默认为10
      */
     private Integer pageSize;
 
@@ -53,25 +74,97 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 页码；默认为1
+     * get 地域
      *
      * @return
      */
-    public Integer getPageNumber() {
-        return pageNumber;
+    public String getDataCenter() {
+        return dataCenter;
     }
 
     /**
-     * set 页码；默认为1
+     * set 地域
      *
-     * @param pageNumber
+     * @param dataCenter
      */
-    public void setPageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public void setDataCenter(String dataCenter) {
+        this.dataCenter = dataCenter;
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[10, 100]
+     * get 集群状态，CREATING，RUNNING，RELEASED，FAILED等
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 集群状态，CREATING，RUNNING，RELEASED，FAILED等
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 集群名称
+     *
+     * @return
+     */
+    public String getClusterName() {
+        return clusterName;
+    }
+
+    /**
+     * set 集群名称
+     *
+     * @param clusterName
+     */
+    public void setClusterName(String clusterName) {
+        this.clusterName = clusterName;
+    }
+
+    /**
+     * get 排序，比如 id desc
+     *
+     * @return
+     */
+    public String getOrderBy() {
+        return orderBy;
+    }
+
+    /**
+     * set 排序，比如 id desc
+     *
+     * @param orderBy
+     */
+    public void setOrderBy(String orderBy) {
+        this.orderBy = orderBy;
+    }
+
+    /**
+     * get 页数，默认为1
+     *
+     * @return
+     */
+    public Integer getPageNum() {
+        return pageNum;
+    }
+
+    /**
+     * set 页数，默认为1
+     *
+     * @param pageNum
+     */
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+    }
+
+    /**
+     * get 每页数目，默认为10
      *
      * @return
      */
@@ -80,7 +173,7 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 每页数目，默认为10
      *
      * @param pageSize
      */
@@ -108,17 +201,57 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 页码；默认为1
+     * set 地域
      *
-     * @param pageNumber
+     * @param dataCenter
      */
-    public DescribeClustersRequest pageNumber(Integer pageNumber) {
-        this.pageNumber = pageNumber;
+    public DescribeClustersRequest dataCenter(String dataCenter) {
+        this.dataCenter = dataCenter;
         return this;
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[10, 100]
+     * set 集群状态，CREATING，RUNNING，RELEASED，FAILED等
+     *
+     * @param status
+     */
+    public DescribeClustersRequest status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 集群名称
+     *
+     * @param clusterName
+     */
+    public DescribeClustersRequest clusterName(String clusterName) {
+        this.clusterName = clusterName;
+        return this;
+    }
+
+    /**
+     * set 排序，比如 id desc
+     *
+     * @param orderBy
+     */
+    public DescribeClustersRequest orderBy(String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+
+    /**
+     * set 页数，默认为1
+     *
+     * @param pageNum
+     */
+    public DescribeClustersRequest pageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+
+    /**
+     * set 每页数目，默认为10
      *
      * @param pageSize
      */

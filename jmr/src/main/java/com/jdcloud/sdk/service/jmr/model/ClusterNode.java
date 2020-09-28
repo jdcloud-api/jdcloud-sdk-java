@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * clusterNode
@@ -35,249 +33,402 @@ public class ClusterNode  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 集群节点ID
+     * 节点ID
      */
-    private String clusterNodeId;
+    private String serverId;
 
     /**
-     * 集群节点主机名称
+     * 节点实例信息
      */
-    private String clusterNodeHostName;
+    private String instanceInfo;
 
     /**
-     * 集群节点内网IP
+     * 节点主机名称
      */
-    private String clusterNodeIntranetIp;
+    private String nodeName;
 
     /**
-     * 集群节点公网IP
+     * 节点系统盘类型
      */
-    private String clusterNodeConnectionIp;
+    private String nodeSystemDiskType;
 
     /**
-     * 集群节点类型
+     * 节点实例类型
      */
-    private String clusterNodeRole;
+    private String instanceType;
 
     /**
-     * 集群节点硬盘信息
+     * 节点运行状态
      */
-    private List<ClusterNodeDisk> clusterNodeDisk;
+    private String nodeStatus;
 
     /**
-     * 集群节点型号
+     * 节点数据盘类型
      */
-    private String clusterNodeModel;
+    private String nodeDiskType;
+
+    /**
+     * 节点类型，MASTER或者SLAVE
+     */
+    private String nodeType;
+
+    /**
+     * 节点外网IP
+     */
+    private String outerIp;
+
+    /**
+     * 节点内网IP
+     */
+    private String innerIp;
+
+    /**
+     * 节点系统盘大小(GB)
+     */
+    private String nodeSystemDiskVolume;
+
+    /**
+     * 节点数据盘大小(GB)
+     */
+    private String nodeDiskVolume;
 
 
     /**
-     * get 集群节点ID
+     * get 节点ID
      *
      * @return
      */
-    public String getClusterNodeId() {
-        return clusterNodeId;
+    public String getServerId() {
+        return serverId;
     }
 
     /**
-     * set 集群节点ID
+     * set 节点ID
      *
-     * @param clusterNodeId
+     * @param serverId
      */
-    public void setClusterNodeId(String clusterNodeId) {
-        this.clusterNodeId = clusterNodeId;
+    public void setServerId(String serverId) {
+        this.serverId = serverId;
     }
 
     /**
-     * get 集群节点主机名称
-     *
-     * @return
-     */
-    public String getClusterNodeHostName() {
-        return clusterNodeHostName;
-    }
-
-    /**
-     * set 集群节点主机名称
-     *
-     * @param clusterNodeHostName
-     */
-    public void setClusterNodeHostName(String clusterNodeHostName) {
-        this.clusterNodeHostName = clusterNodeHostName;
-    }
-
-    /**
-     * get 集群节点内网IP
+     * get 节点实例信息
      *
      * @return
      */
-    public String getClusterNodeIntranetIp() {
-        return clusterNodeIntranetIp;
+    public String getInstanceInfo() {
+        return instanceInfo;
     }
 
     /**
-     * set 集群节点内网IP
+     * set 节点实例信息
      *
-     * @param clusterNodeIntranetIp
+     * @param instanceInfo
      */
-    public void setClusterNodeIntranetIp(String clusterNodeIntranetIp) {
-        this.clusterNodeIntranetIp = clusterNodeIntranetIp;
+    public void setInstanceInfo(String instanceInfo) {
+        this.instanceInfo = instanceInfo;
     }
 
     /**
-     * get 集群节点公网IP
-     *
-     * @return
-     */
-    public String getClusterNodeConnectionIp() {
-        return clusterNodeConnectionIp;
-    }
-
-    /**
-     * set 集群节点公网IP
-     *
-     * @param clusterNodeConnectionIp
-     */
-    public void setClusterNodeConnectionIp(String clusterNodeConnectionIp) {
-        this.clusterNodeConnectionIp = clusterNodeConnectionIp;
-    }
-
-    /**
-     * get 集群节点类型
+     * get 节点主机名称
      *
      * @return
      */
-    public String getClusterNodeRole() {
-        return clusterNodeRole;
+    public String getNodeName() {
+        return nodeName;
     }
 
     /**
-     * set 集群节点类型
+     * set 节点主机名称
      *
-     * @param clusterNodeRole
+     * @param nodeName
      */
-    public void setClusterNodeRole(String clusterNodeRole) {
-        this.clusterNodeRole = clusterNodeRole;
+    public void setNodeName(String nodeName) {
+        this.nodeName = nodeName;
     }
 
     /**
-     * get 集群节点硬盘信息
-     *
-     * @return
-     */
-    public List<ClusterNodeDisk> getClusterNodeDisk() {
-        return clusterNodeDisk;
-    }
-
-    /**
-     * set 集群节点硬盘信息
-     *
-     * @param clusterNodeDisk
-     */
-    public void setClusterNodeDisk(List<ClusterNodeDisk> clusterNodeDisk) {
-        this.clusterNodeDisk = clusterNodeDisk;
-    }
-
-    /**
-     * get 集群节点型号
+     * get 节点系统盘类型
      *
      * @return
      */
-    public String getClusterNodeModel() {
-        return clusterNodeModel;
+    public String getNodeSystemDiskType() {
+        return nodeSystemDiskType;
     }
 
     /**
-     * set 集群节点型号
+     * set 节点系统盘类型
      *
-     * @param clusterNodeModel
+     * @param nodeSystemDiskType
      */
-    public void setClusterNodeModel(String clusterNodeModel) {
-        this.clusterNodeModel = clusterNodeModel;
+    public void setNodeSystemDiskType(String nodeSystemDiskType) {
+        this.nodeSystemDiskType = nodeSystemDiskType;
+    }
+
+    /**
+     * get 节点实例类型
+     *
+     * @return
+     */
+    public String getInstanceType() {
+        return instanceType;
+    }
+
+    /**
+     * set 节点实例类型
+     *
+     * @param instanceType
+     */
+    public void setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+    }
+
+    /**
+     * get 节点运行状态
+     *
+     * @return
+     */
+    public String getNodeStatus() {
+        return nodeStatus;
+    }
+
+    /**
+     * set 节点运行状态
+     *
+     * @param nodeStatus
+     */
+    public void setNodeStatus(String nodeStatus) {
+        this.nodeStatus = nodeStatus;
+    }
+
+    /**
+     * get 节点数据盘类型
+     *
+     * @return
+     */
+    public String getNodeDiskType() {
+        return nodeDiskType;
+    }
+
+    /**
+     * set 节点数据盘类型
+     *
+     * @param nodeDiskType
+     */
+    public void setNodeDiskType(String nodeDiskType) {
+        this.nodeDiskType = nodeDiskType;
+    }
+
+    /**
+     * get 节点类型，MASTER或者SLAVE
+     *
+     * @return
+     */
+    public String getNodeType() {
+        return nodeType;
+    }
+
+    /**
+     * set 节点类型，MASTER或者SLAVE
+     *
+     * @param nodeType
+     */
+    public void setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+    }
+
+    /**
+     * get 节点外网IP
+     *
+     * @return
+     */
+    public String getOuterIp() {
+        return outerIp;
+    }
+
+    /**
+     * set 节点外网IP
+     *
+     * @param outerIp
+     */
+    public void setOuterIp(String outerIp) {
+        this.outerIp = outerIp;
+    }
+
+    /**
+     * get 节点内网IP
+     *
+     * @return
+     */
+    public String getInnerIp() {
+        return innerIp;
+    }
+
+    /**
+     * set 节点内网IP
+     *
+     * @param innerIp
+     */
+    public void setInnerIp(String innerIp) {
+        this.innerIp = innerIp;
+    }
+
+    /**
+     * get 节点系统盘大小(GB)
+     *
+     * @return
+     */
+    public String getNodeSystemDiskVolume() {
+        return nodeSystemDiskVolume;
+    }
+
+    /**
+     * set 节点系统盘大小(GB)
+     *
+     * @param nodeSystemDiskVolume
+     */
+    public void setNodeSystemDiskVolume(String nodeSystemDiskVolume) {
+        this.nodeSystemDiskVolume = nodeSystemDiskVolume;
+    }
+
+    /**
+     * get 节点数据盘大小(GB)
+     *
+     * @return
+     */
+    public String getNodeDiskVolume() {
+        return nodeDiskVolume;
+    }
+
+    /**
+     * set 节点数据盘大小(GB)
+     *
+     * @param nodeDiskVolume
+     */
+    public void setNodeDiskVolume(String nodeDiskVolume) {
+        this.nodeDiskVolume = nodeDiskVolume;
     }
 
 
     /**
-     * set 集群节点ID
+     * set 节点ID
      *
-     * @param clusterNodeId
+     * @param serverId
      */
-    public ClusterNode clusterNodeId(String clusterNodeId) {
-        this.clusterNodeId = clusterNodeId;
+    public ClusterNode serverId(String serverId) {
+        this.serverId = serverId;
         return this;
     }
 
     /**
-     * set 集群节点主机名称
+     * set 节点实例信息
      *
-     * @param clusterNodeHostName
+     * @param instanceInfo
      */
-    public ClusterNode clusterNodeHostName(String clusterNodeHostName) {
-        this.clusterNodeHostName = clusterNodeHostName;
+    public ClusterNode instanceInfo(String instanceInfo) {
+        this.instanceInfo = instanceInfo;
         return this;
     }
 
     /**
-     * set 集群节点内网IP
+     * set 节点主机名称
      *
-     * @param clusterNodeIntranetIp
+     * @param nodeName
      */
-    public ClusterNode clusterNodeIntranetIp(String clusterNodeIntranetIp) {
-        this.clusterNodeIntranetIp = clusterNodeIntranetIp;
+    public ClusterNode nodeName(String nodeName) {
+        this.nodeName = nodeName;
         return this;
     }
 
     /**
-     * set 集群节点公网IP
+     * set 节点系统盘类型
      *
-     * @param clusterNodeConnectionIp
+     * @param nodeSystemDiskType
      */
-    public ClusterNode clusterNodeConnectionIp(String clusterNodeConnectionIp) {
-        this.clusterNodeConnectionIp = clusterNodeConnectionIp;
+    public ClusterNode nodeSystemDiskType(String nodeSystemDiskType) {
+        this.nodeSystemDiskType = nodeSystemDiskType;
         return this;
     }
 
     /**
-     * set 集群节点类型
+     * set 节点实例类型
      *
-     * @param clusterNodeRole
+     * @param instanceType
      */
-    public ClusterNode clusterNodeRole(String clusterNodeRole) {
-        this.clusterNodeRole = clusterNodeRole;
+    public ClusterNode instanceType(String instanceType) {
+        this.instanceType = instanceType;
         return this;
     }
 
     /**
-     * set 集群节点硬盘信息
+     * set 节点运行状态
      *
-     * @param clusterNodeDisk
+     * @param nodeStatus
      */
-    public ClusterNode clusterNodeDisk(List<ClusterNodeDisk> clusterNodeDisk) {
-        this.clusterNodeDisk = clusterNodeDisk;
+    public ClusterNode nodeStatus(String nodeStatus) {
+        this.nodeStatus = nodeStatus;
         return this;
     }
 
     /**
-     * set 集群节点型号
+     * set 节点数据盘类型
      *
-     * @param clusterNodeModel
+     * @param nodeDiskType
      */
-    public ClusterNode clusterNodeModel(String clusterNodeModel) {
-        this.clusterNodeModel = clusterNodeModel;
+    public ClusterNode nodeDiskType(String nodeDiskType) {
+        this.nodeDiskType = nodeDiskType;
         return this;
     }
 
+    /**
+     * set 节点类型，MASTER或者SLAVE
+     *
+     * @param nodeType
+     */
+    public ClusterNode nodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
 
     /**
-     * add item to 集群节点硬盘信息
+     * set 节点外网IP
      *
-     * @param clusterNodeDisk
+     * @param outerIp
      */
-    public void addClusterNodeDisk(ClusterNodeDisk clusterNodeDisk) {
-        if (this.clusterNodeDisk == null) {
-            this.clusterNodeDisk = new ArrayList<>();
-        }
-        this.clusterNodeDisk.add(clusterNodeDisk);
+    public ClusterNode outerIp(String outerIp) {
+        this.outerIp = outerIp;
+        return this;
     }
+
+    /**
+     * set 节点内网IP
+     *
+     * @param innerIp
+     */
+    public ClusterNode innerIp(String innerIp) {
+        this.innerIp = innerIp;
+        return this;
+    }
+
+    /**
+     * set 节点系统盘大小(GB)
+     *
+     * @param nodeSystemDiskVolume
+     */
+    public ClusterNode nodeSystemDiskVolume(String nodeSystemDiskVolume) {
+        this.nodeSystemDiskVolume = nodeSystemDiskVolume;
+        return this;
+    }
+
+    /**
+     * set 节点数据盘大小(GB)
+     *
+     * @param nodeDiskVolume
+     */
+    public ClusterNode nodeDiskVolume(String nodeDiskVolume) {
+        this.nodeDiskVolume = nodeDiskVolume;
+        return this;
+    }
+
 
 }

@@ -37,77 +37,77 @@ public class Cluster  implements java.io.Serializable {
     /**
      * 集群ID
      */
-    private String clusterId;
+    private String id;
 
     /**
      * 集群名称
      */
-    private String clusterName;
-
-    /**
-     * 集群创建时间
-     */
-    private String clusterCreateTime;
-
-    /**
-     * 集群是否为高可用
-     */
-    private Boolean clusterHa;
-
-    /**
-     * 集群状态
-     */
-    private String clusterStatus;
-
-    /**
-     * 集群版本
-     */
-    private String clusterVersion;
-
-    /**
-     * 集群服务
-     */
-    private List<String> clusterService;
+    private String name;
 
     /**
      * 集群所属地域
      */
-    private String clusterRegion;
+    private String region;
 
     /**
-     * 集群所属可用区
+     * VPC名称
      */
-    private String clusterAz;
-
-    /**
-     * 集群费用
-     */
-    private Double clusterPrice;
-
-    /**
-     * 集群计费类型
-     */
-    private String clusterPaymentType;
-
-    /**
-     * 集群是否关联对象存储
-     */
-    private Boolean clusterOss;
-
-    /**
-     * 集群私有网络名称
-     */
-    private String clusterVpc;
+    private String vpcName;
 
     /**
      * 集群子网名称
      */
-    private String clusterVpcSubnet;
+    private String vpcSubnetName;
 
     /**
-     * 集群公网网络带宽
+     * 集群状态
      */
-    private Integer clusterBandwidth;
+    private String status;
+
+    /**
+     * 集群版本
+     */
+    private String version;
+
+    /**
+     * 集群服务
+     */
+    private String software;
+
+    /**
+     * 集群创建时间
+     */
+    private String createTime;
+
+    /**
+     * 集群所属可用区
+     */
+    private Boolean haFlag;
+
+    /**
+     * 集群是否使用OSS
+     */
+    private Boolean ossFlag;
+
+    /**
+     * 集群费用
+     */
+    private Double payPrice;
+
+    /**
+     * 集群收费类型
+     */
+    private String payType;
+
+    /**
+     * 集群运行时间
+     */
+    private String duration;
+
+    /**
+     * 集群节点个数
+     */
+    private Integer nodeCount;
 
     /**
      * 集群节点信息
@@ -120,17 +120,17 @@ public class Cluster  implements java.io.Serializable {
      *
      * @return
      */
-    public String getClusterId() {
-        return clusterId;
+    public String getId() {
+        return id;
     }
 
     /**
      * set 集群ID
      *
-     * @param clusterId
+     * @param id
      */
-    public void setClusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public void setId(String id) {
+        this.id = id;
     }
 
     /**
@@ -138,107 +138,17 @@ public class Cluster  implements java.io.Serializable {
      *
      * @return
      */
-    public String getClusterName() {
-        return clusterName;
+    public String getName() {
+        return name;
     }
 
     /**
      * set 集群名称
      *
-     * @param clusterName
+     * @param name
      */
-    public void setClusterName(String clusterName) {
-        this.clusterName = clusterName;
-    }
-
-    /**
-     * get 集群创建时间
-     *
-     * @return
-     */
-    public String getClusterCreateTime() {
-        return clusterCreateTime;
-    }
-
-    /**
-     * set 集群创建时间
-     *
-     * @param clusterCreateTime
-     */
-    public void setClusterCreateTime(String clusterCreateTime) {
-        this.clusterCreateTime = clusterCreateTime;
-    }
-
-    /**
-     * get 集群是否为高可用
-     *
-     * @return
-     */
-    public Boolean getClusterHa() {
-        return clusterHa;
-    }
-
-    /**
-     * set 集群是否为高可用
-     *
-     * @param clusterHa
-     */
-    public void setClusterHa(Boolean clusterHa) {
-        this.clusterHa = clusterHa;
-    }
-
-    /**
-     * get 集群状态
-     *
-     * @return
-     */
-    public String getClusterStatus() {
-        return clusterStatus;
-    }
-
-    /**
-     * set 集群状态
-     *
-     * @param clusterStatus
-     */
-    public void setClusterStatus(String clusterStatus) {
-        this.clusterStatus = clusterStatus;
-    }
-
-    /**
-     * get 集群版本
-     *
-     * @return
-     */
-    public String getClusterVersion() {
-        return clusterVersion;
-    }
-
-    /**
-     * set 集群版本
-     *
-     * @param clusterVersion
-     */
-    public void setClusterVersion(String clusterVersion) {
-        this.clusterVersion = clusterVersion;
-    }
-
-    /**
-     * get 集群服务
-     *
-     * @return
-     */
-    public List<String> getClusterService() {
-        return clusterService;
-    }
-
-    /**
-     * set 集群服务
-     *
-     * @param clusterService
-     */
-    public void setClusterService(List<String> clusterService) {
-        this.clusterService = clusterService;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**
@@ -246,107 +156,35 @@ public class Cluster  implements java.io.Serializable {
      *
      * @return
      */
-    public String getClusterRegion() {
-        return clusterRegion;
+    public String getRegion() {
+        return region;
     }
 
     /**
      * set 集群所属地域
      *
-     * @param clusterRegion
+     * @param region
      */
-    public void setClusterRegion(String clusterRegion) {
-        this.clusterRegion = clusterRegion;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     /**
-     * get 集群所属可用区
+     * get VPC名称
      *
      * @return
      */
-    public String getClusterAz() {
-        return clusterAz;
+    public String getVpcName() {
+        return vpcName;
     }
 
     /**
-     * set 集群所属可用区
+     * set VPC名称
      *
-     * @param clusterAz
+     * @param vpcName
      */
-    public void setClusterAz(String clusterAz) {
-        this.clusterAz = clusterAz;
-    }
-
-    /**
-     * get 集群费用
-     *
-     * @return
-     */
-    public Double getClusterPrice() {
-        return clusterPrice;
-    }
-
-    /**
-     * set 集群费用
-     *
-     * @param clusterPrice
-     */
-    public void setClusterPrice(Double clusterPrice) {
-        this.clusterPrice = clusterPrice;
-    }
-
-    /**
-     * get 集群计费类型
-     *
-     * @return
-     */
-    public String getClusterPaymentType() {
-        return clusterPaymentType;
-    }
-
-    /**
-     * set 集群计费类型
-     *
-     * @param clusterPaymentType
-     */
-    public void setClusterPaymentType(String clusterPaymentType) {
-        this.clusterPaymentType = clusterPaymentType;
-    }
-
-    /**
-     * get 集群是否关联对象存储
-     *
-     * @return
-     */
-    public Boolean getClusterOss() {
-        return clusterOss;
-    }
-
-    /**
-     * set 集群是否关联对象存储
-     *
-     * @param clusterOss
-     */
-    public void setClusterOss(Boolean clusterOss) {
-        this.clusterOss = clusterOss;
-    }
-
-    /**
-     * get 集群私有网络名称
-     *
-     * @return
-     */
-    public String getClusterVpc() {
-        return clusterVpc;
-    }
-
-    /**
-     * set 集群私有网络名称
-     *
-     * @param clusterVpc
-     */
-    public void setClusterVpc(String clusterVpc) {
-        this.clusterVpc = clusterVpc;
+    public void setVpcName(String vpcName) {
+        this.vpcName = vpcName;
     }
 
     /**
@@ -354,35 +192,197 @@ public class Cluster  implements java.io.Serializable {
      *
      * @return
      */
-    public String getClusterVpcSubnet() {
-        return clusterVpcSubnet;
+    public String getVpcSubnetName() {
+        return vpcSubnetName;
     }
 
     /**
      * set 集群子网名称
      *
-     * @param clusterVpcSubnet
+     * @param vpcSubnetName
      */
-    public void setClusterVpcSubnet(String clusterVpcSubnet) {
-        this.clusterVpcSubnet = clusterVpcSubnet;
+    public void setVpcSubnetName(String vpcSubnetName) {
+        this.vpcSubnetName = vpcSubnetName;
     }
 
     /**
-     * get 集群公网网络带宽
+     * get 集群状态
      *
      * @return
      */
-    public Integer getClusterBandwidth() {
-        return clusterBandwidth;
+    public String getStatus() {
+        return status;
     }
 
     /**
-     * set 集群公网网络带宽
+     * set 集群状态
      *
-     * @param clusterBandwidth
+     * @param status
      */
-    public void setClusterBandwidth(Integer clusterBandwidth) {
-        this.clusterBandwidth = clusterBandwidth;
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 集群版本
+     *
+     * @return
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
+     * set 集群版本
+     *
+     * @param version
+     */
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    /**
+     * get 集群服务
+     *
+     * @return
+     */
+    public String getSoftware() {
+        return software;
+    }
+
+    /**
+     * set 集群服务
+     *
+     * @param software
+     */
+    public void setSoftware(String software) {
+        this.software = software;
+    }
+
+    /**
+     * get 集群创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 集群创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * get 集群所属可用区
+     *
+     * @return
+     */
+    public Boolean getHaFlag() {
+        return haFlag;
+    }
+
+    /**
+     * set 集群所属可用区
+     *
+     * @param haFlag
+     */
+    public void setHaFlag(Boolean haFlag) {
+        this.haFlag = haFlag;
+    }
+
+    /**
+     * get 集群是否使用OSS
+     *
+     * @return
+     */
+    public Boolean getOssFlag() {
+        return ossFlag;
+    }
+
+    /**
+     * set 集群是否使用OSS
+     *
+     * @param ossFlag
+     */
+    public void setOssFlag(Boolean ossFlag) {
+        this.ossFlag = ossFlag;
+    }
+
+    /**
+     * get 集群费用
+     *
+     * @return
+     */
+    public Double getPayPrice() {
+        return payPrice;
+    }
+
+    /**
+     * set 集群费用
+     *
+     * @param payPrice
+     */
+    public void setPayPrice(Double payPrice) {
+        this.payPrice = payPrice;
+    }
+
+    /**
+     * get 集群收费类型
+     *
+     * @return
+     */
+    public String getPayType() {
+        return payType;
+    }
+
+    /**
+     * set 集群收费类型
+     *
+     * @param payType
+     */
+    public void setPayType(String payType) {
+        this.payType = payType;
+    }
+
+    /**
+     * get 集群运行时间
+     *
+     * @return
+     */
+    public String getDuration() {
+        return duration;
+    }
+
+    /**
+     * set 集群运行时间
+     *
+     * @param duration
+     */
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    /**
+     * get 集群节点个数
+     *
+     * @return
+     */
+    public Integer getNodeCount() {
+        return nodeCount;
+    }
+
+    /**
+     * set 集群节点个数
+     *
+     * @param nodeCount
+     */
+    public void setNodeCount(Integer nodeCount) {
+        this.nodeCount = nodeCount;
     }
 
     /**
@@ -407,150 +407,150 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 集群ID
      *
-     * @param clusterId
+     * @param id
      */
-    public Cluster clusterId(String clusterId) {
-        this.clusterId = clusterId;
+    public Cluster id(String id) {
+        this.id = id;
         return this;
     }
 
     /**
      * set 集群名称
      *
-     * @param clusterName
+     * @param name
      */
-    public Cluster clusterName(String clusterName) {
-        this.clusterName = clusterName;
-        return this;
-    }
-
-    /**
-     * set 集群创建时间
-     *
-     * @param clusterCreateTime
-     */
-    public Cluster clusterCreateTime(String clusterCreateTime) {
-        this.clusterCreateTime = clusterCreateTime;
-        return this;
-    }
-
-    /**
-     * set 集群是否为高可用
-     *
-     * @param clusterHa
-     */
-    public Cluster clusterHa(Boolean clusterHa) {
-        this.clusterHa = clusterHa;
-        return this;
-    }
-
-    /**
-     * set 集群状态
-     *
-     * @param clusterStatus
-     */
-    public Cluster clusterStatus(String clusterStatus) {
-        this.clusterStatus = clusterStatus;
-        return this;
-    }
-
-    /**
-     * set 集群版本
-     *
-     * @param clusterVersion
-     */
-    public Cluster clusterVersion(String clusterVersion) {
-        this.clusterVersion = clusterVersion;
-        return this;
-    }
-
-    /**
-     * set 集群服务
-     *
-     * @param clusterService
-     */
-    public Cluster clusterService(List<String> clusterService) {
-        this.clusterService = clusterService;
+    public Cluster name(String name) {
+        this.name = name;
         return this;
     }
 
     /**
      * set 集群所属地域
      *
-     * @param clusterRegion
+     * @param region
      */
-    public Cluster clusterRegion(String clusterRegion) {
-        this.clusterRegion = clusterRegion;
+    public Cluster region(String region) {
+        this.region = region;
         return this;
     }
 
     /**
-     * set 集群所属可用区
+     * set VPC名称
      *
-     * @param clusterAz
+     * @param vpcName
      */
-    public Cluster clusterAz(String clusterAz) {
-        this.clusterAz = clusterAz;
-        return this;
-    }
-
-    /**
-     * set 集群费用
-     *
-     * @param clusterPrice
-     */
-    public Cluster clusterPrice(Double clusterPrice) {
-        this.clusterPrice = clusterPrice;
-        return this;
-    }
-
-    /**
-     * set 集群计费类型
-     *
-     * @param clusterPaymentType
-     */
-    public Cluster clusterPaymentType(String clusterPaymentType) {
-        this.clusterPaymentType = clusterPaymentType;
-        return this;
-    }
-
-    /**
-     * set 集群是否关联对象存储
-     *
-     * @param clusterOss
-     */
-    public Cluster clusterOss(Boolean clusterOss) {
-        this.clusterOss = clusterOss;
-        return this;
-    }
-
-    /**
-     * set 集群私有网络名称
-     *
-     * @param clusterVpc
-     */
-    public Cluster clusterVpc(String clusterVpc) {
-        this.clusterVpc = clusterVpc;
+    public Cluster vpcName(String vpcName) {
+        this.vpcName = vpcName;
         return this;
     }
 
     /**
      * set 集群子网名称
      *
-     * @param clusterVpcSubnet
+     * @param vpcSubnetName
      */
-    public Cluster clusterVpcSubnet(String clusterVpcSubnet) {
-        this.clusterVpcSubnet = clusterVpcSubnet;
+    public Cluster vpcSubnetName(String vpcSubnetName) {
+        this.vpcSubnetName = vpcSubnetName;
         return this;
     }
 
     /**
-     * set 集群公网网络带宽
+     * set 集群状态
      *
-     * @param clusterBandwidth
+     * @param status
      */
-    public Cluster clusterBandwidth(Integer clusterBandwidth) {
-        this.clusterBandwidth = clusterBandwidth;
+    public Cluster status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 集群版本
+     *
+     * @param version
+     */
+    public Cluster version(String version) {
+        this.version = version;
+        return this;
+    }
+
+    /**
+     * set 集群服务
+     *
+     * @param software
+     */
+    public Cluster software(String software) {
+        this.software = software;
+        return this;
+    }
+
+    /**
+     * set 集群创建时间
+     *
+     * @param createTime
+     */
+    public Cluster createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 集群所属可用区
+     *
+     * @param haFlag
+     */
+    public Cluster haFlag(Boolean haFlag) {
+        this.haFlag = haFlag;
+        return this;
+    }
+
+    /**
+     * set 集群是否使用OSS
+     *
+     * @param ossFlag
+     */
+    public Cluster ossFlag(Boolean ossFlag) {
+        this.ossFlag = ossFlag;
+        return this;
+    }
+
+    /**
+     * set 集群费用
+     *
+     * @param payPrice
+     */
+    public Cluster payPrice(Double payPrice) {
+        this.payPrice = payPrice;
+        return this;
+    }
+
+    /**
+     * set 集群收费类型
+     *
+     * @param payType
+     */
+    public Cluster payType(String payType) {
+        this.payType = payType;
+        return this;
+    }
+
+    /**
+     * set 集群运行时间
+     *
+     * @param duration
+     */
+    public Cluster duration(String duration) {
+        this.duration = duration;
+        return this;
+    }
+
+    /**
+     * set 集群节点个数
+     *
+     * @param nodeCount
+     */
+    public Cluster nodeCount(Integer nodeCount) {
+        this.nodeCount = nodeCount;
         return this;
     }
 
@@ -564,18 +564,6 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
-
-    /**
-     * add item to 集群服务
-     *
-     * @param clusterService
-     */
-    public void addClusterService(String clusterService) {
-        if (this.clusterService == null) {
-            this.clusterService = new ArrayList<>();
-        }
-        this.clusterService.add(clusterService);
-    }
 
     /**
      * add item to 集群节点信息

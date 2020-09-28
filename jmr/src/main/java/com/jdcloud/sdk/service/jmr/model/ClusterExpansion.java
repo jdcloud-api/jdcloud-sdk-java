@@ -47,6 +47,11 @@ public class ClusterExpansion  implements java.io.Serializable {
     @Required
     private String expansionNum;
 
+    /**
+     * 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+     */
+    private String nodeType;
+
 
     /**
      * get 集群ID
@@ -84,6 +89,24 @@ public class ClusterExpansion  implements java.io.Serializable {
         this.expansionNum = expansionNum;
     }
 
+    /**
+     * get 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+     *
+     * @return
+     */
+    public String getNodeType() {
+        return nodeType;
+    }
+
+    /**
+     * set 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+     *
+     * @param nodeType
+     */
+    public void setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+    }
+
 
     /**
      * set 集群ID
@@ -102,6 +125,16 @@ public class ClusterExpansion  implements java.io.Serializable {
      */
     public ClusterExpansion expansionNum(String expansionNum) {
         this.expansionNum = expansionNum;
+        return this;
+    }
+
+    /**
+     * set 扩容节点类型。 Task：计算节点，Core：存储和计算节点
+     *
+     * @param nodeType
+     */
+    public ClusterExpansion nodeType(String nodeType) {
+        this.nodeType = nodeType;
         return this;
     }
 

@@ -30,11 +30,17 @@ import com.jdcloud.sdk.service.jmr.model.Cluster;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询集群列表
+ * 查询用户集群的列表
+
  */
 public class DescribeClustersResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 集群总的数目
+     */
+    private Integer totalNum;
 
     /**
      * clusters
@@ -42,15 +48,28 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     private List<Cluster> clusters;
 
     /**
-     * totalCount
-     */
-    private Number totalCount;
-
-    /**
      * status
      */
     private Boolean status;
 
+
+    /**
+     * get 集群总的数目
+     *
+     * @return
+     */
+    public Integer getTotalNum() {
+        return totalNum;
+    }
+
+    /**
+     * set 集群总的数目
+     *
+     * @param totalNum
+     */
+    public void setTotalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+    }
 
     /**
      * get clusters
@@ -68,24 +87,6 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
      */
     public void setClusters(List<Cluster> clusters) {
         this.clusters = clusters;
-    }
-
-    /**
-     * get totalCount
-     *
-     * @return
-     */
-    public Number getTotalCount() {
-        return totalCount;
-    }
-
-    /**
-     * set totalCount
-     *
-     * @param totalCount
-     */
-    public void setTotalCount(Number totalCount) {
-        this.totalCount = totalCount;
     }
 
     /**
@@ -108,22 +109,22 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
 
 
     /**
+     * set 集群总的数目
+     *
+     * @param totalNum
+     */
+    public DescribeClustersResult totalNum(Integer totalNum) {
+        this.totalNum = totalNum;
+        return this;
+    }
+
+    /**
      * set clusters
      *
      * @param clusters
      */
     public DescribeClustersResult clusters(List<Cluster> clusters) {
         this.clusters = clusters;
-        return this;
-    }
-
-    /**
-     * set totalCount
-     *
-     * @param totalCount
-     */
-    public DescribeClustersResult totalCount(Number totalCount) {
-        this.totalCount = totalCount;
         return this;
     }
 
