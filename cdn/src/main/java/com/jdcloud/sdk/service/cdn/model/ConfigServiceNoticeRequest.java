@@ -70,6 +70,11 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
      */
     private List<String> noticePeriod;
 
+    /**
+     * 通知状态，取值[init,start,stop]
+     */
+    private String noticeStatus;
+
 
     /**
      * get id 修改操作必传
@@ -197,6 +202,24 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.noticePeriod = noticePeriod;
     }
 
+    /**
+     * get 通知状态，取值[init,start,stop]
+     *
+     * @return
+     */
+    public String getNoticeStatus() {
+        return noticeStatus;
+    }
+
+    /**
+     * set 通知状态，取值[init,start,stop]
+     *
+     * @param noticeStatus
+     */
+    public void setNoticeStatus(String noticeStatus) {
+        this.noticeStatus = noticeStatus;
+    }
+
 
     /**
      * set id 修改操作必传
@@ -265,6 +288,16 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
      */
     public ConfigServiceNoticeRequest noticePeriod(List<String> noticePeriod) {
         this.noticePeriod = noticePeriod;
+        return this;
+    }
+
+    /**
+     * set 通知状态，取值[init,start,stop]
+     *
+     * @param noticeStatus
+     */
+    public ConfigServiceNoticeRequest noticeStatus(String noticeStatus) {
+        this.noticeStatus = noticeStatus;
         return this;
     }
 

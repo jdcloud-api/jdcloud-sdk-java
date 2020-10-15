@@ -56,6 +56,11 @@ public class VideoResult extends JdcloudResult implements java.io.Serializable {
     private String taskId;
 
     /**
+     * 对应请求中的url
+     */
+    private String url;
+
+    /**
      * 返回结果。调用成功时（code&#x3D;200），返回结果中包含一个或多个元素。每个元素是个结构体，具体结构描述见VideoResultDetail
      */
     private List<VideoResultDetail> results;
@@ -139,6 +144,24 @@ public class VideoResult extends JdcloudResult implements java.io.Serializable {
     }
 
     /**
+     * get 对应请求中的url
+     *
+     * @return
+     */
+    public String getUrl() {
+        return url;
+    }
+
+    /**
+     * set 对应请求中的url
+     *
+     * @param url
+     */
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    /**
      * get 返回结果。调用成功时（code&#x3D;200），返回结果中包含一个或多个元素。每个元素是个结构体，具体结构描述见VideoResultDetail
      *
      * @return
@@ -212,6 +235,16 @@ public class VideoResult extends JdcloudResult implements java.io.Serializable {
      */
     public VideoResult taskId(String taskId) {
         this.taskId = taskId;
+        return this;
+    }
+
+    /**
+     * set 对应请求中的url
+     *
+     * @param url
+     */
+    public VideoResult url(String url) {
+        this.url = url;
         return this;
     }
 

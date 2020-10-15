@@ -75,6 +75,16 @@ public class OssScanCfg  implements java.io.Serializable {
     private ScanConf videoInfo;
 
     /**
+     * 文本配置
+     */
+    private ScanConf textInfo;
+
+    /**
+     * 音频配置
+     */
+    private ScanConf audioInfo;
+
+    /**
      * 视频截帧配置, 暂不支持配置
      */
     private FrameConf frameInfo;
@@ -240,6 +250,42 @@ public class OssScanCfg  implements java.io.Serializable {
     }
 
     /**
+     * get 文本配置
+     *
+     * @return
+     */
+    public ScanConf getTextInfo() {
+        return textInfo;
+    }
+
+    /**
+     * set 文本配置
+     *
+     * @param textInfo
+     */
+    public void setTextInfo(ScanConf textInfo) {
+        this.textInfo = textInfo;
+    }
+
+    /**
+     * get 音频配置
+     *
+     * @return
+     */
+    public ScanConf getAudioInfo() {
+        return audioInfo;
+    }
+
+    /**
+     * set 音频配置
+     *
+     * @param audioInfo
+     */
+    public void setAudioInfo(ScanConf audioInfo) {
+        this.audioInfo = audioInfo;
+    }
+
+    /**
      * get 视频截帧配置, 暂不支持配置
      *
      * @return
@@ -389,6 +435,26 @@ public class OssScanCfg  implements java.io.Serializable {
      */
     public OssScanCfg videoInfo(ScanConf videoInfo) {
         this.videoInfo = videoInfo;
+        return this;
+    }
+
+    /**
+     * set 文本配置
+     *
+     * @param textInfo
+     */
+    public OssScanCfg textInfo(ScanConf textInfo) {
+        this.textInfo = textInfo;
+        return this;
+    }
+
+    /**
+     * set 音频配置
+     *
+     * @param audioInfo
+     */
+    public OssScanCfg audioInfo(ScanConf audioInfo) {
+        this.audioInfo = audioInfo;
         return this;
     }
 

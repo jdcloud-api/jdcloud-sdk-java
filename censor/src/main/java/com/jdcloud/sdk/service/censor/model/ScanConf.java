@@ -43,7 +43,7 @@ public class ScanConf  implements java.io.Serializable {
     private Integer enable;
 
     /**
-     * 检测场景，porn-涉黄，terrorism-涉政暴恐，enable为1时必须
+     * 检测场景，audio-语音违规-视频支持，porn-涉黄-图片视频支持，terrorism-涉政暴恐-图片视频支持，antispam-反垃圾-文本语音支持，enable为1时必须
      */
     private List<String> scense;
 
@@ -53,9 +53,19 @@ public class ScanConf  implements java.io.Serializable {
     private Integer frozen;
 
     /**
-     * 自动冻结阈值，视频检测时阈值0表示不冻结，1表示违规冻结，不对阈值进行比较
+     * 自动冻结阈值
      */
     private FrozenThreshold threshold;
+
+    /**
+     * 检测类型，all-全部
+     */
+    private List<String> fileType;
+
+    /**
+     * 文件后缀，all-表示全部
+     */
+    private List<String> fileSuffix;
 
 
     /**
@@ -77,7 +87,7 @@ public class ScanConf  implements java.io.Serializable {
     }
 
     /**
-     * get 检测场景，porn-涉黄，terrorism-涉政暴恐，enable为1时必须
+     * get 检测场景，audio-语音违规-视频支持，porn-涉黄-图片视频支持，terrorism-涉政暴恐-图片视频支持，antispam-反垃圾-文本语音支持，enable为1时必须
      *
      * @return
      */
@@ -86,7 +96,7 @@ public class ScanConf  implements java.io.Serializable {
     }
 
     /**
-     * set 检测场景，porn-涉黄，terrorism-涉政暴恐，enable为1时必须
+     * set 检测场景，audio-语音违规-视频支持，porn-涉黄-图片视频支持，terrorism-涉政暴恐-图片视频支持，antispam-反垃圾-文本语音支持，enable为1时必须
      *
      * @param scense
      */
@@ -113,7 +123,7 @@ public class ScanConf  implements java.io.Serializable {
     }
 
     /**
-     * get 自动冻结阈值，视频检测时阈值0表示不冻结，1表示违规冻结，不对阈值进行比较
+     * get 自动冻结阈值
      *
      * @return
      */
@@ -122,12 +132,48 @@ public class ScanConf  implements java.io.Serializable {
     }
 
     /**
-     * set 自动冻结阈值，视频检测时阈值0表示不冻结，1表示违规冻结，不对阈值进行比较
+     * set 自动冻结阈值
      *
      * @param threshold
      */
     public void setThreshold(FrozenThreshold threshold) {
         this.threshold = threshold;
+    }
+
+    /**
+     * get 检测类型，all-全部
+     *
+     * @return
+     */
+    public List<String> getFileType() {
+        return fileType;
+    }
+
+    /**
+     * set 检测类型，all-全部
+     *
+     * @param fileType
+     */
+    public void setFileType(List<String> fileType) {
+        this.fileType = fileType;
+    }
+
+    /**
+     * get 文件后缀，all-表示全部
+     *
+     * @return
+     */
+    public List<String> getFileSuffix() {
+        return fileSuffix;
+    }
+
+    /**
+     * set 文件后缀，all-表示全部
+     *
+     * @param fileSuffix
+     */
+    public void setFileSuffix(List<String> fileSuffix) {
+        this.fileSuffix = fileSuffix;
     }
 
 
@@ -142,7 +188,7 @@ public class ScanConf  implements java.io.Serializable {
     }
 
     /**
-     * set 检测场景，porn-涉黄，terrorism-涉政暴恐，enable为1时必须
+     * set 检测场景，audio-语音违规-视频支持，porn-涉黄-图片视频支持，terrorism-涉政暴恐-图片视频支持，antispam-反垃圾-文本语音支持，enable为1时必须
      *
      * @param scense
      */
@@ -162,7 +208,7 @@ public class ScanConf  implements java.io.Serializable {
     }
 
     /**
-     * set 自动冻结阈值，视频检测时阈值0表示不冻结，1表示违规冻结，不对阈值进行比较
+     * set 自动冻结阈值
      *
      * @param threshold
      */
@@ -171,9 +217,29 @@ public class ScanConf  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 检测类型，all-全部
+     *
+     * @param fileType
+     */
+    public ScanConf fileType(List<String> fileType) {
+        this.fileType = fileType;
+        return this;
+    }
 
     /**
-     * add item to 检测场景，porn-涉黄，terrorism-涉政暴恐，enable为1时必须
+     * set 文件后缀，all-表示全部
+     *
+     * @param fileSuffix
+     */
+    public ScanConf fileSuffix(List<String> fileSuffix) {
+        this.fileSuffix = fileSuffix;
+        return this;
+    }
+
+
+    /**
+     * add item to 检测场景，audio-语音违规-视频支持，porn-涉黄-图片视频支持，terrorism-涉政暴恐-图片视频支持，antispam-反垃圾-文本语音支持，enable为1时必须
      *
      * @param scense
      */
@@ -182,6 +248,30 @@ public class ScanConf  implements java.io.Serializable {
             this.scense = new ArrayList<>();
         }
         this.scense.add(scense);
+    }
+
+    /**
+     * add item to 检测类型，all-全部
+     *
+     * @param fileType
+     */
+    public void addFileType(String fileType) {
+        if (this.fileType == null) {
+            this.fileType = new ArrayList<>();
+        }
+        this.fileType.add(fileType);
+    }
+
+    /**
+     * add item to 文件后缀，all-表示全部
+     *
+     * @param fileSuffix
+     */
+    public void addFileSuffix(String fileSuffix) {
+        if (this.fileSuffix == null) {
+            this.fileSuffix = new ArrayList<>();
+        }
+        this.fileSuffix.add(fileSuffix);
     }
 
 }

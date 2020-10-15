@@ -43,6 +43,11 @@ public class DataConsumeData  implements java.io.Serializable {
     private Integer porn;
 
     /**
+     * ad
+     */
+    private Integer ad;
+
+    /**
      * 涉政暴恐
      */
     private Integer politics_terrorism;
@@ -87,6 +92,24 @@ public class DataConsumeData  implements java.io.Serializable {
      */
     public void setPorn(Integer porn) {
         this.porn = porn;
+    }
+
+    /**
+     * get ad
+     *
+     * @return
+     */
+    public Integer getAd() {
+        return ad;
+    }
+
+    /**
+     * set ad
+     *
+     * @param ad
+     */
+    public void setAd(Integer ad) {
+        this.ad = ad;
     }
 
     /**
@@ -143,6 +166,16 @@ public class DataConsumeData  implements java.io.Serializable {
      */
     public DataConsumeData porn(Integer porn) {
         this.porn = porn;
+        return this;
+    }
+
+    /**
+     * set ad
+     *
+     * @param ad
+     */
+    public DataConsumeData ad(Integer ad) {
+        this.ad = ad;
         return this;
     }
 

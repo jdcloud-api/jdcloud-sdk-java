@@ -51,9 +51,14 @@ public class OssDataResult extends JdcloudResult implements java.io.Serializable
     private String dataId;
 
     /**
-     * 送审时间
+     * 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
      */
     private String time;
+
+    /**
+     * 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+     */
+    private String logTime;
 
     /**
      * 识别结果
@@ -146,7 +151,7 @@ public class OssDataResult extends JdcloudResult implements java.io.Serializable
     }
 
     /**
-     * get 送审时间
+     * get 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
      *
      * @return
      */
@@ -155,12 +160,30 @@ public class OssDataResult extends JdcloudResult implements java.io.Serializable
     }
 
     /**
-     * set 送审时间
+     * set 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
      *
      * @param time
      */
     public void setTime(String time) {
         this.time = time;
+    }
+
+    /**
+     * get 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+     *
+     * @return
+     */
+    public String getLogTime() {
+        return logTime;
+    }
+
+    /**
+     * set 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+     *
+     * @param logTime
+     */
+    public void setLogTime(String logTime) {
+        this.logTime = logTime;
     }
 
     /**
@@ -321,12 +344,22 @@ public class OssDataResult extends JdcloudResult implements java.io.Serializable
     }
 
     /**
-     * set 送审时间
+     * set 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
      *
      * @param time
      */
     public OssDataResult time(String time) {
         this.time = time;
+        return this;
+    }
+
+    /**
+     * set 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+     *
+     * @param logTime
+     */
+    public OssDataResult logTime(String logTime) {
+        this.logTime = logTime;
         return this;
     }
 

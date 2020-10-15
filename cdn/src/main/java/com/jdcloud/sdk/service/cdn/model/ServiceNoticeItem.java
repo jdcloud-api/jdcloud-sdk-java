@@ -69,6 +69,11 @@ public class ServiceNoticeItem  implements java.io.Serializable {
      */
     private List<String> noticePeriod;
 
+    /**
+     * 通知状态，取值[init,start,stop]
+     */
+    private String noticeStatus;
+
 
     /**
      * get 服务配置id
@@ -196,6 +201,24 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.noticePeriod = noticePeriod;
     }
 
+    /**
+     * get 通知状态，取值[init,start,stop]
+     *
+     * @return
+     */
+    public String getNoticeStatus() {
+        return noticeStatus;
+    }
+
+    /**
+     * set 通知状态，取值[init,start,stop]
+     *
+     * @param noticeStatus
+     */
+    public void setNoticeStatus(String noticeStatus) {
+        this.noticeStatus = noticeStatus;
+    }
+
 
     /**
      * set 服务配置id
@@ -264,6 +287,16 @@ public class ServiceNoticeItem  implements java.io.Serializable {
      */
     public ServiceNoticeItem noticePeriod(List<String> noticePeriod) {
         this.noticePeriod = noticePeriod;
+        return this;
+    }
+
+    /**
+     * set 通知状态，取值[init,start,stop]
+     *
+     * @param noticeStatus
+     */
+    public ServiceNoticeItem noticeStatus(String noticeStatus) {
+        this.noticeStatus = noticeStatus;
         return this;
     }
 

@@ -33,11 +33,6 @@ public class LogoData  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 识别出的logo类型，取值为TV （台标）
-     */
-    private String logoType;
-
-    /**
      * 识别出的logo名称
      */
     private String name;
@@ -62,24 +57,6 @@ public class LogoData  implements java.io.Serializable {
      */
     private Number h;
 
-
-    /**
-     * get 识别出的logo类型，取值为TV （台标）
-     *
-     * @return
-     */
-    public String getLogoType() {
-        return logoType;
-    }
-
-    /**
-     * set 识别出的logo类型，取值为TV （台标）
-     *
-     * @param logoType
-     */
-    public void setLogoType(String logoType) {
-        this.logoType = logoType;
-    }
 
     /**
      * get 识别出的logo名称
@@ -171,16 +148,6 @@ public class LogoData  implements java.io.Serializable {
         this.h = h;
     }
 
-
-    /**
-     * set 识别出的logo类型，取值为TV （台标）
-     *
-     * @param logoType
-     */
-    public LogoData logoType(String logoType) {
-        this.logoType = logoType;
-        return this;
-    }
 
     /**
      * set 识别出的logo名称

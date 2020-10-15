@@ -38,7 +38,9 @@ public class ModyfyAuditNetCardsRequest extends JdcloudRequest implements java.i
 
     /**
      * 网卡信息
+     * Required:true
      */
+    @Required
     private List<String> netCards;
 
     /**

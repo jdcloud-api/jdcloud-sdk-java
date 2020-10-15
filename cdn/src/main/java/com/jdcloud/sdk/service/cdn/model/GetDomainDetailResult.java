@@ -206,6 +206,11 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      */
     private String accelerateRegion;
 
+    /**
+     * txt记录
+     */
+    private String txt;
+
 
     /**
      * get null
@@ -819,6 +824,24 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
         this.accelerateRegion = accelerateRegion;
     }
 
+    /**
+     * get txt记录
+     *
+     * @return
+     */
+    public String getTxt() {
+        return txt;
+    }
+
+    /**
+     * set txt记录
+     *
+     * @param txt
+     */
+    public void setTxt(String txt) {
+        this.txt = txt;
+    }
+
 
     /**
      * set null
@@ -1157,6 +1180,16 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
      */
     public GetDomainDetailResult accelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
+        return this;
+    }
+
+    /**
+     * set txt记录
+     *
+     * @param txt
+     */
+    public GetDomainDetailResult txt(String txt) {
+        this.txt = txt;
         return this;
     }
 

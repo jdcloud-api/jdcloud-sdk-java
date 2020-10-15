@@ -604,7 +604,7 @@ filters: 按instanceId 查询，只支持eq，单个instanceId匹配
     }
 
     /**
-     * 添加一条IP白名单记录，仅支持IPv4地址
+     * 添加一条IP白名单记录
      *
      * @param request
      * @return

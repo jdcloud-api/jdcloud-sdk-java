@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加一条IP白名单记录，仅支持IPv4地址
+ * 添加一条IP白名单记录
  */
 public class AddIpWhiteItemRequest extends JdcloudRequest implements java.io.Serializable {
 

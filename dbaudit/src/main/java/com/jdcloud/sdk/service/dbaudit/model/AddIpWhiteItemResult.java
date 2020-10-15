@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dbaudit.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 添加一条IP白名单记录，仅支持IPv4地址
+ * 添加一条IP白名单记录
  */
 public class AddIpWhiteItemResult extends JdcloudResult implements java.io.Serializable {
 

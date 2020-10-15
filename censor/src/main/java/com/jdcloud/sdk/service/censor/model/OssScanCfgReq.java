@@ -90,6 +90,16 @@ public class OssScanCfgReq  implements java.io.Serializable {
      */
     private FrameConf frameInfo;
 
+    /**
+     * 文本配置
+     */
+    private ScanConf textInfo;
+
+    /**
+     * 音频配置
+     */
+    private ScanConf audioInfo;
+
 
     /**
      * get id标识,更新时传入，新增时传0
@@ -253,6 +263,42 @@ public class OssScanCfgReq  implements java.io.Serializable {
         this.frameInfo = frameInfo;
     }
 
+    /**
+     * get 文本配置
+     *
+     * @return
+     */
+    public ScanConf getTextInfo() {
+        return textInfo;
+    }
+
+    /**
+     * set 文本配置
+     *
+     * @param textInfo
+     */
+    public void setTextInfo(ScanConf textInfo) {
+        this.textInfo = textInfo;
+    }
+
+    /**
+     * get 音频配置
+     *
+     * @return
+     */
+    public ScanConf getAudioInfo() {
+        return audioInfo;
+    }
+
+    /**
+     * set 音频配置
+     *
+     * @param audioInfo
+     */
+    public void setAudioInfo(ScanConf audioInfo) {
+        this.audioInfo = audioInfo;
+    }
+
 
     /**
      * set id标识,更新时传入，新增时传0
@@ -341,6 +387,26 @@ public class OssScanCfgReq  implements java.io.Serializable {
      */
     public OssScanCfgReq frameInfo(FrameConf frameInfo) {
         this.frameInfo = frameInfo;
+        return this;
+    }
+
+    /**
+     * set 文本配置
+     *
+     * @param textInfo
+     */
+    public OssScanCfgReq textInfo(ScanConf textInfo) {
+        this.textInfo = textInfo;
+        return this;
+    }
+
+    /**
+     * set 音频配置
+     *
+     * @param audioInfo
+     */
+    public OssScanCfgReq audioInfo(ScanConf audioInfo) {
+        this.audioInfo = audioInfo;
         return this;
     }
 

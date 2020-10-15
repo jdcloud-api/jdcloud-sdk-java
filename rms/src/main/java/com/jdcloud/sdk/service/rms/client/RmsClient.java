@@ -34,15 +34,15 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.rms.model.QueryCreditListRequest;
 import com.jdcloud.sdk.service.rms.model.QueryCreditListResponse;
 import com.jdcloud.sdk.service.rms.client.QueryCreditListExecutor;
-import com.jdcloud.sdk.service.rms.model.AddTemplateRequest;
-import com.jdcloud.sdk.service.rms.model.AddTemplateResponse;
-import com.jdcloud.sdk.service.rms.client.AddTemplateExecutor;
 import com.jdcloud.sdk.service.rms.model.DeleteTemplateRequest;
 import com.jdcloud.sdk.service.rms.model.DeleteTemplateResponse;
 import com.jdcloud.sdk.service.rms.client.DeleteTemplateExecutor;
 import com.jdcloud.sdk.service.rms.model.QueryTemplateListRequest;
 import com.jdcloud.sdk.service.rms.model.QueryTemplateListResponse;
 import com.jdcloud.sdk.service.rms.client.QueryTemplateListExecutor;
+import com.jdcloud.sdk.service.rms.model.AddTemplateNewRequest;
+import com.jdcloud.sdk.service.rms.model.AddTemplateNewResponse;
+import com.jdcloud.sdk.service.rms.client.AddTemplateNewExecutor;
 import com.jdcloud.sdk.service.rms.model.QueryPackageRemainderRequest;
 import com.jdcloud.sdk.service.rms.model.QueryPackageRemainderResponse;
 import com.jdcloud.sdk.service.rms.client.QueryPackageRemainderExecutor;
@@ -129,17 +129,6 @@ public class RmsClient extends JdcloudClient {
     }
 
     /**
-     * 增加富媒体短信内容接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AddTemplateResponse addTemplate(AddTemplateRequest request) throws JdcloudSdkException {
-        return new AddTemplateExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除富媒体短信内容接口
      *
      * @param request
@@ -159,6 +148,17 @@ public class RmsClient extends JdcloudClient {
      */
     public QueryTemplateListResponse queryTemplateList(QueryTemplateListRequest request) throws JdcloudSdkException {
         return new QueryTemplateListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 增加富媒体短信内容接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddTemplateNewResponse addTemplateNew(AddTemplateNewRequest request) throws JdcloudSdkException {
+        return new AddTemplateNewExecutor().client(this).execute(request);
     }
 
     /**
