@@ -88,6 +88,9 @@ import com.jdcloud.sdk.service.cdn.client.UpdateWafWhiteRuleExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetDomainConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.SetDomainConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.SetDomainConfigExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetRefreshLimitRequest;
+import com.jdcloud.sdk.service.cdn.model.SetRefreshLimitResponse;
+import com.jdcloud.sdk.service.cdn.client.SetRefreshLimitExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetFollowRedirectRequest;
 import com.jdcloud.sdk.service.cdn.model.SetFollowRedirectResponse;
 import com.jdcloud.sdk.service.cdn.client.SetFollowRedirectExecutor;
@@ -382,6 +385,9 @@ import com.jdcloud.sdk.service.cdn.client.OperateShareCacheExecutor;
 import com.jdcloud.sdk.service.cdn.model.EnableWafWhiteRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.EnableWafWhiteRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.EnableWafWhiteRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryRefreshLimitRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryRefreshLimitResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryRefreshLimitExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryMixStatisticsWithAreaDataRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryMixStatisticsWithAreaDataResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryMixStatisticsWithAreaDataExecutor;
@@ -828,6 +834,17 @@ public class CdnClient extends JdcloudClient {
      */
     public SetDomainConfigResponse setDomainConfig(SetDomainConfigRequest request) throws JdcloudSdkException {
         return new SetDomainConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置用户刷新预热限额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetRefreshLimitResponse setRefreshLimit(SetRefreshLimitRequest request) throws JdcloudSdkException {
+        return new SetRefreshLimitExecutor().client(this).execute(request);
     }
 
     /**
@@ -1906,6 +1923,17 @@ public class CdnClient extends JdcloudClient {
      */
     public EnableWafWhiteRulesResponse enableWafWhiteRules(EnableWafWhiteRulesRequest request) throws JdcloudSdkException {
         return new EnableWafWhiteRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询用户刷新预热限额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryRefreshLimitResponse queryRefreshLimit(QueryRefreshLimitRequest request) throws JdcloudSdkException {
+        return new QueryRefreshLimitExecutor().client(this).execute(request);
     }
 
     /**

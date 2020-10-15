@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dbaudit.model.AddIpWhiteItemResponse;
 
 /**
- * 添加一条IP白名单记录，仅支持IPv4地址
+ * 添加一条IP白名单记录
  */
 class AddIpWhiteItemExecutor extends JdcloudExecutor {
 

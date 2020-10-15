@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.JdcloudResult;
 /**
  * 增加富媒体短信内容接口
  */
-public class AddTemplateResult extends JdcloudResult implements java.io.Serializable {
+public class AddTemplateNewResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -133,7 +133,7 @@ public class AddTemplateResult extends JdcloudResult implements java.io.Serializ
      *
      * @param data
      */
-    public AddTemplateResult data(RespTemplateData data) {
+    public AddTemplateNewResult data(RespTemplateData data) {
         this.data = data;
         return this;
     }
@@ -143,7 +143,7 @@ public class AddTemplateResult extends JdcloudResult implements java.io.Serializ
      *
      * @param status
      */
-    public AddTemplateResult status(Boolean status) {
+    public AddTemplateNewResult status(Boolean status) {
         this.status = status;
         return this;
     }
@@ -153,7 +153,7 @@ public class AddTemplateResult extends JdcloudResult implements java.io.Serializ
      *
      * @param code
      */
-    public AddTemplateResult code(String code) {
+    public AddTemplateNewResult code(String code) {
         this.code = code;
         return this;
     }
@@ -163,7 +163,7 @@ public class AddTemplateResult extends JdcloudResult implements java.io.Serializ
      *
      * @param message
      */
-    public AddTemplateResult message(String message) {
+    public AddTemplateNewResult message(String message) {
         this.message = message;
         return this;
     }

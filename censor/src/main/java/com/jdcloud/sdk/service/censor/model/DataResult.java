@@ -51,9 +51,14 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
     private String dataId;
 
     /**
-     * 送审时间，秒级时间戳
+     * 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
      */
-    private Integer time;
+    private String time;
+
+    /**
+     * 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+     */
+    private String logTime;
 
     /**
      * 识别结果
@@ -61,7 +66,7 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
     private String result;
 
     /**
-     * 详情,见blockDetail中描述
+     * 场景_结果 格式。
      */
     private List<String> details;
 
@@ -79,6 +84,21 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
      * 状态码
      */
     private String code;
+
+    /**
+     * 图片/音频/视频的url
+     */
+    private String url;
+
+    /**
+     * 视频截帧
+     */
+    private FrameCfg frame;
+
+    /**
+     * 人工审核结果，空表示没有审核
+     */
+    private String fbSuggestion;
 
 
     /**
@@ -136,21 +156,39 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
     }
 
     /**
-     * get 送审时间，秒级时间戳
+     * get 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
      *
      * @return
      */
-    public Integer getTime() {
+    public String getTime() {
         return time;
     }
 
     /**
-     * set 送审时间，秒级时间戳
+     * set 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
      *
      * @param time
      */
-    public void setTime(Integer time) {
+    public void setTime(String time) {
         this.time = time;
+    }
+
+    /**
+     * get 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+     *
+     * @return
+     */
+    public String getLogTime() {
+        return logTime;
+    }
+
+    /**
+     * set 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+     *
+     * @param logTime
+     */
+    public void setLogTime(String logTime) {
+        this.logTime = logTime;
     }
 
     /**
@@ -172,7 +210,7 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
     }
 
     /**
-     * get 详情,见blockDetail中描述
+     * get 场景_结果 格式。
      *
      * @return
      */
@@ -181,7 +219,7 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
     }
 
     /**
-     * set 详情,见blockDetail中描述
+     * set 场景_结果 格式。
      *
      * @param details
      */
@@ -243,6 +281,60 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
         this.code = code;
     }
 
+    /**
+     * get 图片/音频/视频的url
+     *
+     * @return
+     */
+    public String getUrl() {
+        return url;
+    }
+
+    /**
+     * set 图片/音频/视频的url
+     *
+     * @param url
+     */
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    /**
+     * get 视频截帧
+     *
+     * @return
+     */
+    public FrameCfg getFrame() {
+        return frame;
+    }
+
+    /**
+     * set 视频截帧
+     *
+     * @param frame
+     */
+    public void setFrame(FrameCfg frame) {
+        this.frame = frame;
+    }
+
+    /**
+     * get 人工审核结果，空表示没有审核
+     *
+     * @return
+     */
+    public String getFbSuggestion() {
+        return fbSuggestion;
+    }
+
+    /**
+     * set 人工审核结果，空表示没有审核
+     *
+     * @param fbSuggestion
+     */
+    public void setFbSuggestion(String fbSuggestion) {
+        this.fbSuggestion = fbSuggestion;
+    }
+
 
     /**
      * set 文本类型为检测内容，图片类型为图片短链
@@ -275,12 +367,22 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
     }
 
     /**
-     * set 送审时间，秒级时间戳
+     * set 送审时间 2019-12-18 16:02:19（北京时间UTC+8）
      *
      * @param time
      */
-    public DataResult time(Integer time) {
+    public DataResult time(String time) {
         this.time = time;
+        return this;
+    }
+
+    /**
+     * set 日志落盘时间 2019-12-18 16:02:19（北京时间UTC+8）
+     *
+     * @param logTime
+     */
+    public DataResult logTime(String logTime) {
+        this.logTime = logTime;
         return this;
     }
 
@@ -295,7 +397,7 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
     }
 
     /**
-     * set 详情,见blockDetail中描述
+     * set 场景_结果 格式。
      *
      * @param details
      */
@@ -334,9 +436,39 @@ public class DataResult extends JdcloudResult implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 图片/音频/视频的url
+     *
+     * @param url
+     */
+    public DataResult url(String url) {
+        this.url = url;
+        return this;
+    }
 
     /**
-     * add item to 详情,见blockDetail中描述
+     * set 视频截帧
+     *
+     * @param frame
+     */
+    public DataResult frame(FrameCfg frame) {
+        this.frame = frame;
+        return this;
+    }
+
+    /**
+     * set 人工审核结果，空表示没有审核
+     *
+     * @param fbSuggestion
+     */
+    public DataResult fbSuggestion(String fbSuggestion) {
+        this.fbSuggestion = fbSuggestion;
+        return this;
+    }
+
+
+    /**
+     * add item to 场景_结果 格式。
      *
      * @param detail
      */

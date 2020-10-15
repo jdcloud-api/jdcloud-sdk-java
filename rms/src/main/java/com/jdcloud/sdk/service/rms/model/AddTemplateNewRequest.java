@@ -33,7 +33,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 /**
  * 增加富媒体短信内容接口
  */
-public class AddTemplateRequest extends JdcloudRequest implements java.io.Serializable {
+public class AddTemplateNewRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -219,7 +219,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param appId
      */
-    public AddTemplateRequest appId(String appId) {
+    public AddTemplateNewRequest appId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -229,7 +229,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param aptitudesId
      */
-    public AddTemplateRequest aptitudesId(String aptitudesId) {
+    public AddTemplateNewRequest aptitudesId(String aptitudesId) {
         this.aptitudesId = aptitudesId;
         return this;
     }
@@ -239,7 +239,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param title
      */
-    public AddTemplateRequest title(String title) {
+    public AddTemplateNewRequest title(String title) {
         this.title = title;
         return this;
     }
@@ -249,7 +249,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param description
      */
-    public AddTemplateRequest description(String description) {
+    public AddTemplateNewRequest description(String description) {
         this.description = description;
         return this;
     }
@@ -259,7 +259,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param signContent
      */
-    public AddTemplateRequest signContent(String signContent) {
+    public AddTemplateNewRequest signContent(String signContent) {
         this.signContent = signContent;
         return this;
     }
@@ -269,7 +269,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param content
      */
-    public AddTemplateRequest content(List<TemplateContent> content) {
+    public AddTemplateNewRequest content(List<TemplateContent> content) {
         this.content = content;
         return this;
     }
@@ -279,7 +279,7 @@ public class AddTemplateRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param regionId
      */
-    public AddTemplateRequest regionId(String regionId) {
+    public AddTemplateNewRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }

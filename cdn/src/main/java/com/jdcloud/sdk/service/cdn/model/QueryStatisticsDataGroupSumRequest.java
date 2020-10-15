@@ -83,6 +83,11 @@ public class QueryStatisticsDataGroupSumRequest extends JdcloudRequest implement
      */
     private String groupBy;
 
+    /**
+     * true 代表查询境外数据，默认false查询境内数据
+     */
+    private Boolean abroad;
+
 
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -264,6 +269,24 @@ public class QueryStatisticsDataGroupSumRequest extends JdcloudRequest implement
         this.groupBy = groupBy;
     }
 
+    /**
+     * get true 代表查询境外数据，默认false查询境内数据
+     *
+     * @return
+     */
+    public Boolean getAbroad() {
+        return abroad;
+    }
+
+    /**
+     * set true 代表查询境外数据，默认false查询境内数据
+     *
+     * @param abroad
+     */
+    public void setAbroad(Boolean abroad) {
+        this.abroad = abroad;
+    }
+
 
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -362,6 +385,16 @@ public class QueryStatisticsDataGroupSumRequest extends JdcloudRequest implement
      */
     public QueryStatisticsDataGroupSumRequest groupBy(String groupBy) {
         this.groupBy = groupBy;
+        return this;
+    }
+
+    /**
+     * set true 代表查询境外数据，默认false查询境内数据
+     *
+     * @param abroad
+     */
+    public QueryStatisticsDataGroupSumRequest abroad(Boolean abroad) {
+        this.abroad = abroad;
         return this;
     }
 

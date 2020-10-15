@@ -52,6 +52,11 @@ public class TaskData  implements java.io.Serializable {
      */
     private String taskId;
 
+    /**
+     * 对应请求中的url
+     */
+    private String url;
+
 
     /**
      * get 错误码，和HTTP的status code一致
@@ -125,6 +130,24 @@ public class TaskData  implements java.io.Serializable {
         this.taskId = taskId;
     }
 
+    /**
+     * get 对应请求中的url
+     *
+     * @return
+     */
+    public String getUrl() {
+        return url;
+    }
+
+    /**
+     * set 对应请求中的url
+     *
+     * @param url
+     */
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
 
     /**
      * set 错误码，和HTTP的status code一致
@@ -163,6 +186,16 @@ public class TaskData  implements java.io.Serializable {
      */
     public TaskData taskId(String taskId) {
         this.taskId = taskId;
+        return this;
+    }
+
+    /**
+     * set 对应请求中的url
+     *
+     * @param url
+     */
+    public TaskData url(String url) {
+        this.url = url;
         return this;
     }
 

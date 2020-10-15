@@ -68,6 +68,11 @@ public class InstanceAbstract  implements java.io.Serializable {
     private String ipAddr;
 
     /**
+     * VPC内ipv6地址
+     */
+    private String ipv6Addr;
+
+    /**
      * 实例规格: basic:标准版 professional:企业版 enterprise:增强版 ultimate:旗舰版
      */
     private String insType;
@@ -232,6 +237,24 @@ public class InstanceAbstract  implements java.io.Serializable {
      */
     public void setIpAddr(String ipAddr) {
         this.ipAddr = ipAddr;
+    }
+
+    /**
+     * get VPC内ipv6地址
+     *
+     * @return
+     */
+    public String getIpv6Addr() {
+        return ipv6Addr;
+    }
+
+    /**
+     * set VPC内ipv6地址
+     *
+     * @param ipv6Addr
+     */
+    public void setIpv6Addr(String ipv6Addr) {
+        this.ipv6Addr = ipv6Addr;
     }
 
     /**
@@ -446,6 +469,16 @@ public class InstanceAbstract  implements java.io.Serializable {
      */
     public InstanceAbstract ipAddr(String ipAddr) {
         this.ipAddr = ipAddr;
+        return this;
+    }
+
+    /**
+     * set VPC内ipv6地址
+     *
+     * @param ipv6Addr
+     */
+    public InstanceAbstract ipv6Addr(String ipv6Addr) {
+        this.ipv6Addr = ipv6Addr;
         return this;
     }
 

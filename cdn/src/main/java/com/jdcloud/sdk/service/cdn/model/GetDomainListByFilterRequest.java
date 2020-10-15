@@ -37,7 +37,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     private static final long serialVersionUID = 1L;
 
     /**
-     * 根据关键字进行模糊匹配
+     * 根据关键字进行模糊匹配，域名或者回源信息
      */
     private String keyWord;
 
@@ -67,13 +67,18 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     private String accelerateRegion;
 
     /**
+     * 筛选依据（0：根据域名筛选，1：根据回源信息筛选），默认按照域名进行筛选
+     */
+    private Integer filterBy;
+
+    /**
      * 标签过滤条件
      */
     private List<TagFilter> tagFilters;
 
 
     /**
-     * get 根据关键字进行模糊匹配
+     * get 根据关键字进行模糊匹配，域名或者回源信息
      *
      * @return
      */
@@ -82,7 +87,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 根据关键字进行模糊匹配
+     * set 根据关键字进行模糊匹配，域名或者回源信息
      *
      * @param keyWord
      */
@@ -181,6 +186,24 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     }
 
     /**
+     * get 筛选依据（0：根据域名筛选，1：根据回源信息筛选），默认按照域名进行筛选
+     *
+     * @return
+     */
+    public Integer getFilterBy() {
+        return filterBy;
+    }
+
+    /**
+     * set 筛选依据（0：根据域名筛选，1：根据回源信息筛选），默认按照域名进行筛选
+     *
+     * @param filterBy
+     */
+    public void setFilterBy(Integer filterBy) {
+        this.filterBy = filterBy;
+    }
+
+    /**
      * get 标签过滤条件
      *
      * @return
@@ -200,7 +223,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
 
 
     /**
-     * set 根据关键字进行模糊匹配
+     * set 根据关键字进行模糊匹配，域名或者回源信息
      *
      * @param keyWord
      */
@@ -256,6 +279,16 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
      */
     public GetDomainListByFilterRequest accelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
+        return this;
+    }
+
+    /**
+     * set 筛选依据（0：根据域名筛选，1：根据回源信息筛选），默认按照域名进行筛选
+     *
+     * @param filterBy
+     */
+    public GetDomainListByFilterRequest filterBy(Integer filterBy) {
+        this.filterBy = filterBy;
         return this;
     }
 

@@ -42,6 +42,16 @@ public class VideoTask  implements java.io.Serializable {
      */
     private String url;
 
+    /**
+     * 视频截帧间隔，单位为秒，取值范围为1~60。默认值为1秒
+     */
+    private Integer interval;
+
+    /**
+     * 本视频截帧的张数上限，取值范围为5~3600，默认为200张，该参数仅在文件检测中生效(live&#x3D;false) 如果是视频流(live&#x3D;true)该参数无效。
+     */
+    private Integer maxFrames;
+
 
     /**
      * get 数据Id。需要保证在一次请求中所有的Id不重复
@@ -79,6 +89,42 @@ public class VideoTask  implements java.io.Serializable {
         this.url = url;
     }
 
+    /**
+     * get 视频截帧间隔，单位为秒，取值范围为1~60。默认值为1秒
+     *
+     * @return
+     */
+    public Integer getInterval() {
+        return interval;
+    }
+
+    /**
+     * set 视频截帧间隔，单位为秒，取值范围为1~60。默认值为1秒
+     *
+     * @param interval
+     */
+    public void setInterval(Integer interval) {
+        this.interval = interval;
+    }
+
+    /**
+     * get 本视频截帧的张数上限，取值范围为5~3600，默认为200张，该参数仅在文件检测中生效(live&#x3D;false) 如果是视频流(live&#x3D;true)该参数无效。
+     *
+     * @return
+     */
+    public Integer getMaxFrames() {
+        return maxFrames;
+    }
+
+    /**
+     * set 本视频截帧的张数上限，取值范围为5~3600，默认为200张，该参数仅在文件检测中生效(live&#x3D;false) 如果是视频流(live&#x3D;true)该参数无效。
+     *
+     * @param maxFrames
+     */
+    public void setMaxFrames(Integer maxFrames) {
+        this.maxFrames = maxFrames;
+    }
+
 
     /**
      * set 数据Id。需要保证在一次请求中所有的Id不重复
@@ -97,6 +143,26 @@ public class VideoTask  implements java.io.Serializable {
      */
     public VideoTask url(String url) {
         this.url = url;
+        return this;
+    }
+
+    /**
+     * set 视频截帧间隔，单位为秒，取值范围为1~60。默认值为1秒
+     *
+     * @param interval
+     */
+    public VideoTask interval(Integer interval) {
+        this.interval = interval;
+        return this;
+    }
+
+    /**
+     * set 本视频截帧的张数上限，取值范围为5~3600，默认为200张，该参数仅在文件检测中生效(live&#x3D;false) 如果是视频流(live&#x3D;true)该参数无效。
+     *
+     * @param maxFrames
+     */
+    public VideoTask maxFrames(Integer maxFrames) {
+        this.maxFrames = maxFrames;
         return this;
     }
 

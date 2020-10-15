@@ -31,15 +31,39 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.censor.model.AsyncImageScanRequest;
-import com.jdcloud.sdk.service.censor.model.AsyncImageScanResponse;
-import com.jdcloud.sdk.service.censor.client.AsyncImageScanExecutor;
+import com.jdcloud.sdk.service.censor.model.AudioResultsRequest;
+import com.jdcloud.sdk.service.censor.model.AudioResultsResponse;
+import com.jdcloud.sdk.service.censor.client.AudioResultsExecutor;
+import com.jdcloud.sdk.service.censor.model.DeleteLimitRequest;
+import com.jdcloud.sdk.service.censor.model.DeleteLimitResponse;
+import com.jdcloud.sdk.service.censor.client.DeleteLimitExecutor;
+import com.jdcloud.sdk.service.censor.model.InnerTextScanRequest;
+import com.jdcloud.sdk.service.censor.model.InnerTextScanResponse;
+import com.jdcloud.sdk.service.censor.client.InnerTextScanExecutor;
+import com.jdcloud.sdk.service.censor.model.AsyncAudioScanRequest;
+import com.jdcloud.sdk.service.censor.model.AsyncAudioScanResponse;
+import com.jdcloud.sdk.service.censor.client.AsyncAudioScanExecutor;
+import com.jdcloud.sdk.service.censor.model.VideoResultsRequest;
+import com.jdcloud.sdk.service.censor.model.VideoResultsResponse;
+import com.jdcloud.sdk.service.censor.client.VideoResultsExecutor;
 import com.jdcloud.sdk.service.censor.model.ImageResultsRequest;
 import com.jdcloud.sdk.service.censor.model.ImageResultsResponse;
 import com.jdcloud.sdk.service.censor.client.ImageResultsExecutor;
+import com.jdcloud.sdk.service.censor.model.DeleteCensorLibRequest;
+import com.jdcloud.sdk.service.censor.model.DeleteCensorLibResponse;
+import com.jdcloud.sdk.service.censor.client.DeleteCensorLibExecutor;
 import com.jdcloud.sdk.service.censor.model.TextScanRequest;
 import com.jdcloud.sdk.service.censor.model.TextScanResponse;
 import com.jdcloud.sdk.service.censor.client.TextScanExecutor;
+import com.jdcloud.sdk.service.censor.model.AsyncVideoScanRequest;
+import com.jdcloud.sdk.service.censor.model.AsyncVideoScanResponse;
+import com.jdcloud.sdk.service.censor.client.AsyncVideoScanExecutor;
+import com.jdcloud.sdk.service.censor.model.DeleteCensorLibItemsRequest;
+import com.jdcloud.sdk.service.censor.model.DeleteCensorLibItemsResponse;
+import com.jdcloud.sdk.service.censor.client.DeleteCensorLibItemsExecutor;
+import com.jdcloud.sdk.service.censor.model.AsyncImageScanRequest;
+import com.jdcloud.sdk.service.censor.model.AsyncImageScanResponse;
+import com.jdcloud.sdk.service.censor.client.AsyncImageScanExecutor;
 import com.jdcloud.sdk.service.censor.model.ImageScanRequest;
 import com.jdcloud.sdk.service.censor.model.ImageScanResponse;
 import com.jdcloud.sdk.service.censor.client.ImageScanExecutor;
@@ -51,7 +75,7 @@ public class CensorClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "censor.jdcloud-api.com";
     public final static String ServiceName = "censor";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -94,14 +118,58 @@ public class CensorClient extends JdcloudClient {
 
 
     /**
-     * 提交图片异步检测任务
+     * 查看音频异步检测结果
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public AsyncImageScanResponse asyncImageScan(AsyncImageScanRequest request) throws JdcloudSdkException {
-        return new AsyncImageScanExecutor().client(this).execute(request);
+    public AudioResultsResponse audioResults(AudioResultsRequest request) throws JdcloudSdkException {
+        return new AudioResultsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除限制参数配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLimitResponse deleteLimit(DeleteLimitRequest request) throws JdcloudSdkException {
+        return new DeleteLimitExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 文本同步检测-检测文本中是否包含违规信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public InnerTextScanResponse innerTextScan(InnerTextScanRequest request) throws JdcloudSdkException {
+        return new InnerTextScanExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 提交音频异步检测任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AsyncAudioScanResponse asyncAudioScan(AsyncAudioScanRequest request) throws JdcloudSdkException {
+        return new AsyncAudioScanExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看视频异步检测结果
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public VideoResultsResponse videoResults(VideoResultsRequest request) throws JdcloudSdkException {
+        return new VideoResultsExecutor().client(this).execute(request);
     }
 
     /**
@@ -116,6 +184,17 @@ public class CensorClient extends JdcloudClient {
     }
 
     /**
+     * 删除敏感库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCensorLibResponse deleteCensorLib(DeleteCensorLibRequest request) throws JdcloudSdkException {
+        return new DeleteCensorLibExecutor().client(this).execute(request);
+    }
+
+    /**
      * 文本同步检测-检测文本中是否包含违规信息
      *
      * @param request
@@ -124,6 +203,39 @@ public class CensorClient extends JdcloudClient {
      */
     public TextScanResponse textScan(TextScanRequest request) throws JdcloudSdkException {
         return new TextScanExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 提交视频异步检测任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AsyncVideoScanResponse asyncVideoScan(AsyncVideoScanRequest request) throws JdcloudSdkException {
+        return new AsyncVideoScanExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除敏感库Item
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCensorLibItemsResponse deleteCensorLibItems(DeleteCensorLibItemsRequest request) throws JdcloudSdkException {
+        return new DeleteCensorLibItemsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 提交图片异步检测任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AsyncImageScanResponse asyncImageScan(AsyncImageScanRequest request) throws JdcloudSdkException {
+        return new AsyncImageScanExecutor().client(this).execute(request);
     }
 
     /**

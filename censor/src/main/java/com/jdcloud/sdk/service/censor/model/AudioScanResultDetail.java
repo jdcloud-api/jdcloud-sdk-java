@@ -40,14 +40,19 @@ public class AudioScanResultDetail  implements java.io.Serializable {
     private Integer startTime;
 
     /**
-     * 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+     * 句子结束的时间，单位是秒。
      */
-    private String endTime;
+    private Integer endTime;
 
     /**
      * 语音转换成文本的结果。
      */
     private String text;
+
+    /**
+     * 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+     */
+    private String label;
 
     /**
      * 命中该风险的上下文信息。具体结构描述见hintWordsInfo
@@ -74,20 +79,20 @@ public class AudioScanResultDetail  implements java.io.Serializable {
     }
 
     /**
-     * get 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+     * get 句子结束的时间，单位是秒。
      *
      * @return
      */
-    public String getEndTime() {
+    public Integer getEndTime() {
         return endTime;
     }
 
     /**
-     * set 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+     * set 句子结束的时间，单位是秒。
      *
      * @param endTime
      */
-    public void setEndTime(String endTime) {
+    public void setEndTime(Integer endTime) {
         this.endTime = endTime;
     }
 
@@ -107,6 +112,24 @@ public class AudioScanResultDetail  implements java.io.Serializable {
      */
     public void setText(String text) {
         this.text = text;
+    }
+
+    /**
+     * get 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+     *
+     * @return
+     */
+    public String getLabel() {
+        return label;
+    }
+
+    /**
+     * set 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+     *
+     * @param label
+     */
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     /**
@@ -139,11 +162,11 @@ public class AudioScanResultDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+     * set 句子结束的时间，单位是秒。
      *
      * @param endTime
      */
-    public AudioScanResultDetail endTime(String endTime) {
+    public AudioScanResultDetail endTime(Integer endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -155,6 +178,16 @@ public class AudioScanResultDetail  implements java.io.Serializable {
      */
     public AudioScanResultDetail text(String text) {
         this.text = text;
+        return this;
+    }
+
+    /**
+     * set 该句语言的检测结果的分类，取值参见audioScenes与label参数说明。
+     *
+     * @param label
+     */
+    public AudioScanResultDetail label(String label) {
+        this.label = label;
         return this;
     }
 

@@ -53,6 +53,11 @@ public class VideoDetail  implements java.io.Serializable {
     private Integer terrorism_frame_count;
 
     /**
+     * 图文截帧数
+     */
+    private Integer ad_frame_count;
+
+    /**
      * 总截帧数
      */
     private Integer total_frame_count;
@@ -131,6 +136,24 @@ public class VideoDetail  implements java.io.Serializable {
     }
 
     /**
+     * get 图文截帧数
+     *
+     * @return
+     */
+    public Integer getAd_frame_count() {
+        return ad_frame_count;
+    }
+
+    /**
+     * set 图文截帧数
+     *
+     * @param ad_frame_count
+     */
+    public void setAd_frame_count(Integer ad_frame_count) {
+        this.ad_frame_count = ad_frame_count;
+    }
+
+    /**
      * get 总截帧数
      *
      * @return
@@ -186,6 +209,16 @@ public class VideoDetail  implements java.io.Serializable {
      */
     public VideoDetail terrorism_frame_count(Integer terrorism_frame_count) {
         this.terrorism_frame_count = terrorism_frame_count;
+        return this;
+    }
+
+    /**
+     * set 图文截帧数
+     *
+     * @param ad_frame_count
+     */
+    public VideoDetail ad_frame_count(Integer ad_frame_count) {
+        this.ad_frame_count = ad_frame_count;
         return this;
     }
 
