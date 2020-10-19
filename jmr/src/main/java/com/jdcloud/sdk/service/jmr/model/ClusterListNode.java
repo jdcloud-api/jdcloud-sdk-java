@@ -24,13 +24,11 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
- * cluster
+ * clusterListNode
  */
-public class Cluster  implements java.io.Serializable {
+public class ClusterListNode  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -52,7 +50,7 @@ public class Cluster  implements java.io.Serializable {
     /**
      * 集群ID
      */
-    private String clusterPrimaryId;
+    private Integer recordId;
 
     /**
      * 监控ID
@@ -65,29 +63,14 @@ public class Cluster  implements java.io.Serializable {
     private String status;
 
     /**
-     * 软件信息
+     * 错误信息
      */
-    private SoftwareStack softwareStack;
+    private String errorMessage;
 
     /**
      * 集群创建时间
      */
     private String createTime;
-
-    /**
-     * 集群是否高可用
-     */
-    private Boolean haFlag;
-
-    /**
-     * 集群是否使用OSS
-     */
-    private Boolean jssFlag;
-
-    /**
-     * 集群费用
-     */
-    private Double payPrice;
 
     /**
      * 集群收费类型
@@ -100,14 +83,9 @@ public class Cluster  implements java.io.Serializable {
     private String duration;
 
     /**
-     * 集群节点个数
+     * 公网Ip
      */
-    private Integer nodeCount;
-
-    /**
-     * 集群节点信息
-     */
-    private List<ClusterNode> hardware;
+    private String outerIp;
 
 
     /**
@@ -169,17 +147,17 @@ public class Cluster  implements java.io.Serializable {
      *
      * @return
      */
-    public String getClusterPrimaryId() {
-        return clusterPrimaryId;
+    public Integer getRecordId() {
+        return recordId;
     }
 
     /**
      * set 集群ID
      *
-     * @param clusterPrimaryId
+     * @param recordId
      */
-    public void setClusterPrimaryId(String clusterPrimaryId) {
-        this.clusterPrimaryId = clusterPrimaryId;
+    public void setRecordId(Integer recordId) {
+        this.recordId = recordId;
     }
 
     /**
@@ -219,21 +197,21 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * get 软件信息
+     * get 错误信息
      *
      * @return
      */
-    public SoftwareStack getSoftwareStack() {
-        return softwareStack;
+    public String getErrorMessage() {
+        return errorMessage;
     }
 
     /**
-     * set 软件信息
+     * set 错误信息
      *
-     * @param softwareStack
+     * @param errorMessage
      */
-    public void setSoftwareStack(SoftwareStack softwareStack) {
-        this.softwareStack = softwareStack;
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 
     /**
@@ -252,60 +230,6 @@ public class Cluster  implements java.io.Serializable {
      */
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
-    }
-
-    /**
-     * get 集群是否高可用
-     *
-     * @return
-     */
-    public Boolean getHaFlag() {
-        return haFlag;
-    }
-
-    /**
-     * set 集群是否高可用
-     *
-     * @param haFlag
-     */
-    public void setHaFlag(Boolean haFlag) {
-        this.haFlag = haFlag;
-    }
-
-    /**
-     * get 集群是否使用OSS
-     *
-     * @return
-     */
-    public Boolean getJssFlag() {
-        return jssFlag;
-    }
-
-    /**
-     * set 集群是否使用OSS
-     *
-     * @param jssFlag
-     */
-    public void setJssFlag(Boolean jssFlag) {
-        this.jssFlag = jssFlag;
-    }
-
-    /**
-     * get 集群费用
-     *
-     * @return
-     */
-    public Double getPayPrice() {
-        return payPrice;
-    }
-
-    /**
-     * set 集群费用
-     *
-     * @param payPrice
-     */
-    public void setPayPrice(Double payPrice) {
-        this.payPrice = payPrice;
     }
 
     /**
@@ -345,39 +269,21 @@ public class Cluster  implements java.io.Serializable {
     }
 
     /**
-     * get 集群节点个数
+     * get 公网Ip
      *
      * @return
      */
-    public Integer getNodeCount() {
-        return nodeCount;
+    public String getOuterIp() {
+        return outerIp;
     }
 
     /**
-     * set 集群节点个数
+     * set 公网Ip
      *
-     * @param nodeCount
+     * @param outerIp
      */
-    public void setNodeCount(Integer nodeCount) {
-        this.nodeCount = nodeCount;
-    }
-
-    /**
-     * get 集群节点信息
-     *
-     * @return
-     */
-    public List<ClusterNode> getHardware() {
-        return hardware;
-    }
-
-    /**
-     * set 集群节点信息
-     *
-     * @param hardware
-     */
-    public void setHardware(List<ClusterNode> hardware) {
-        this.hardware = hardware;
+    public void setOuterIp(String outerIp) {
+        this.outerIp = outerIp;
     }
 
 
@@ -386,7 +292,7 @@ public class Cluster  implements java.io.Serializable {
      *
      * @param id
      */
-    public Cluster id(String id) {
+    public ClusterListNode id(String id) {
         this.id = id;
         return this;
     }
@@ -396,7 +302,7 @@ public class Cluster  implements java.io.Serializable {
      *
      * @param name
      */
-    public Cluster name(String name) {
+    public ClusterListNode name(String name) {
         this.name = name;
         return this;
     }
@@ -406,7 +312,7 @@ public class Cluster  implements java.io.Serializable {
      *
      * @param dataCenter
      */
-    public Cluster dataCenter(String dataCenter) {
+    public ClusterListNode dataCenter(String dataCenter) {
         this.dataCenter = dataCenter;
         return this;
     }
@@ -414,10 +320,10 @@ public class Cluster  implements java.io.Serializable {
     /**
      * set 集群ID
      *
-     * @param clusterPrimaryId
+     * @param recordId
      */
-    public Cluster clusterPrimaryId(String clusterPrimaryId) {
-        this.clusterPrimaryId = clusterPrimaryId;
+    public ClusterListNode recordId(Integer recordId) {
+        this.recordId = recordId;
         return this;
     }
 
@@ -426,7 +332,7 @@ public class Cluster  implements java.io.Serializable {
      *
      * @param monitorResourceId
      */
-    public Cluster monitorResourceId(String monitorResourceId) {
+    public ClusterListNode monitorResourceId(String monitorResourceId) {
         this.monitorResourceId = monitorResourceId;
         return this;
     }
@@ -436,18 +342,18 @@ public class Cluster  implements java.io.Serializable {
      *
      * @param status
      */
-    public Cluster status(String status) {
+    public ClusterListNode status(String status) {
         this.status = status;
         return this;
     }
 
     /**
-     * set 软件信息
+     * set 错误信息
      *
-     * @param softwareStack
+     * @param errorMessage
      */
-    public Cluster softwareStack(SoftwareStack softwareStack) {
-        this.softwareStack = softwareStack;
+    public ClusterListNode errorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
 
@@ -456,38 +362,8 @@ public class Cluster  implements java.io.Serializable {
      *
      * @param createTime
      */
-    public Cluster createTime(String createTime) {
+    public ClusterListNode createTime(String createTime) {
         this.createTime = createTime;
-        return this;
-    }
-
-    /**
-     * set 集群是否高可用
-     *
-     * @param haFlag
-     */
-    public Cluster haFlag(Boolean haFlag) {
-        this.haFlag = haFlag;
-        return this;
-    }
-
-    /**
-     * set 集群是否使用OSS
-     *
-     * @param jssFlag
-     */
-    public Cluster jssFlag(Boolean jssFlag) {
-        this.jssFlag = jssFlag;
-        return this;
-    }
-
-    /**
-     * set 集群费用
-     *
-     * @param payPrice
-     */
-    public Cluster payPrice(Double payPrice) {
-        this.payPrice = payPrice;
         return this;
     }
 
@@ -496,7 +372,7 @@ public class Cluster  implements java.io.Serializable {
      *
      * @param payType
      */
-    public Cluster payType(String payType) {
+    public ClusterListNode payType(String payType) {
         this.payType = payType;
         return this;
     }
@@ -506,42 +382,20 @@ public class Cluster  implements java.io.Serializable {
      *
      * @param duration
      */
-    public Cluster duration(String duration) {
+    public ClusterListNode duration(String duration) {
         this.duration = duration;
         return this;
     }
 
     /**
-     * set 集群节点个数
+     * set 公网Ip
      *
-     * @param nodeCount
+     * @param outerIp
      */
-    public Cluster nodeCount(Integer nodeCount) {
-        this.nodeCount = nodeCount;
+    public ClusterListNode outerIp(String outerIp) {
+        this.outerIp = outerIp;
         return this;
     }
 
-    /**
-     * set 集群节点信息
-     *
-     * @param hardware
-     */
-    public Cluster hardware(List<ClusterNode> hardware) {
-        this.hardware = hardware;
-        return this;
-    }
-
-
-    /**
-     * add item to 集群节点信息
-     *
-     * @param hardware
-     */
-    public void addHardware(ClusterNode hardware) {
-        if (this.hardware == null) {
-            this.hardware = new ArrayList<>();
-        }
-        this.hardware.add(hardware);
-    }
 
 }
