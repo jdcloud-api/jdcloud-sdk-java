@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云主机
- * 与主机操作相关的接口
+ * SSH密钥对
+ * 关于SSH密钥对的相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,27 +26,26 @@ package com.jdcloud.sdk.service.vm.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.vm.model.DescribeBriefInstancesResponse;
+import com.jdcloud.sdk.service.vm.model.DetachKeypairResponse;
 
 /**
- * 批量查询云主机信息的轻量接口，不返回云盘、网络、计费、标签等信息。如果不需要关联资源属性，尽量选择使用该接口。&lt;br&gt;
-此接口支持分页查询，默认每页20条。
+ * 解绑ssh密钥对。
 
  */
-class DescribeBriefInstancesExecutor extends JdcloudExecutor {
+class DetachKeypairExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "GET";
+        return "POST";
     }
 
     @Override
     public String url() {
-        return "/regions/{regionId}/instances:describeBriefInstances";
+        return "/regions/{regionId}/keypairs/{keyName}:detach";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeBriefInstancesResponse.class;
+        return DetachKeypairResponse.class;
     }
 }

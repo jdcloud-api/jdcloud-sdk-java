@@ -26,77 +26,77 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * userdata
+ * policy
  */
-public class Userdata  implements java.io.Serializable {
+public class Policy  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 键，最大长度48字符
+     * 策略ID。
      */
-    private String key;
+    private String policyId;
 
     /**
-     * 值，最大长度21848字符
+     * 策略类型。
      */
-    private String value;
+    private String policyType;
 
 
     /**
-     * get 键，最大长度48字符
+     * get 策略ID。
      *
      * @return
      */
-    public String getKey() {
-        return key;
+    public String getPolicyId() {
+        return policyId;
     }
 
     /**
-     * set 键，最大长度48字符
+     * set 策略ID。
      *
-     * @param key
+     * @param policyId
      */
-    public void setKey(String key) {
-        this.key = key;
+    public void setPolicyId(String policyId) {
+        this.policyId = policyId;
     }
 
     /**
-     * get 值，最大长度21848字符
+     * get 策略类型。
      *
      * @return
      */
-    public String getValue() {
-        return value;
+    public String getPolicyType() {
+        return policyType;
     }
 
     /**
-     * set 值，最大长度21848字符
+     * set 策略类型。
      *
-     * @param value
+     * @param policyType
      */
-    public void setValue(String value) {
-        this.value = value;
+    public void setPolicyType(String policyType) {
+        this.policyType = policyType;
     }
 
 
     /**
-     * set 键，最大长度48字符
+     * set 策略ID。
      *
-     * @param key
+     * @param policyId
      */
-    public Userdata key(String key) {
-        this.key = key;
+    public Policy policyId(String policyId) {
+        this.policyId = policyId;
         return this;
     }
 
     /**
-     * set 值，最大长度21848字符
+     * set 策略类型。
      *
-     * @param value
+     * @param policyType
      */
-    public Userdata value(String value) {
-        this.value = value;
+    public Policy policyType(String policyType) {
+        this.policyType = policyType;
         return this;
     }
 

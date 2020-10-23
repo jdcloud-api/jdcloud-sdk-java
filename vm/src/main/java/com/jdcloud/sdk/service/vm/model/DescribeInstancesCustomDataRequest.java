@@ -31,11 +31,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量查询云主机的详细信息&lt;br&gt;
-此接口支持分页查询，默认每页20条。
-
+ * 批量查询云主机用户自定义元数据
  */
-public class DescribeInstancesRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeInstancesCustomDataRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -45,26 +43,18 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 分页大小；默认为10；取值范围[1, 10]
      */
     private Integer pageSize;
 
     /**
      * instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡内网主IP地址，模糊匹配，支持多个
-az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
-name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，精确匹配，支持多个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 subnetId - 子网ID，精确匹配，支持多个
-agId - 使用可用组id，支持单个
-faultDomain - 错误域，支持多个
-dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
-dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
-instanceType - 实例规格，精确匹配，支持多个
-elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成networkInterfaceId进行查询，所以与networkInterfaceId为或者的关系。
 
      */
     private List<Filter> filters;
@@ -96,7 +86,7 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会�
     }
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小；默认为10；取值范围[1, 10]
      *
      * @return
      */
@@ -105,7 +95,7 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会�
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；默认为10；取值范围[1, 10]
      *
      * @param pageSize
      */
@@ -116,19 +106,11 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会�
     /**
      * get instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡内网主IP地址，模糊匹配，支持多个
-az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
-name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，精确匹配，支持多个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 subnetId - 子网ID，精确匹配，支持多个
-agId - 使用可用组id，支持单个
-faultDomain - 错误域，支持多个
-dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
-dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
-instanceType - 实例规格，精确匹配，支持多个
-elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成networkInterfaceId进行查询，所以与networkInterfaceId为或者的关系。
 
      *
      * @return
@@ -140,19 +122,11 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会�
     /**
      * set instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡内网主IP地址，模糊匹配，支持多个
-az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
-name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，精确匹配，支持多个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 subnetId - 子网ID，精确匹配，支持多个
-agId - 使用可用组id，支持单个
-faultDomain - 错误域，支持多个
-dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
-dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
-instanceType - 实例规格，精确匹配，支持多个
-elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成networkInterfaceId进行查询，所以与networkInterfaceId为或者的关系。
 
      *
      * @param filters
@@ -185,17 +159,17 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会�
      *
      * @param pageNumber
      */
-    public DescribeInstancesRequest pageNumber(Integer pageNumber) {
+    public DescribeInstancesCustomDataRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；默认为10；取值范围[1, 10]
      *
      * @param pageSize
      */
-    public DescribeInstancesRequest pageSize(Integer pageSize) {
+    public DescribeInstancesCustomDataRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -203,24 +177,16 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会�
     /**
      * set instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡内网主IP地址，模糊匹配，支持多个
-az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
-name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，精确匹配，支持多个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 subnetId - 子网ID，精确匹配，支持多个
-agId - 使用可用组id，支持单个
-faultDomain - 错误域，支持多个
-dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
-dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
-instanceType - 实例规格，精确匹配，支持多个
-elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成networkInterfaceId进行查询，所以与networkInterfaceId为或者的关系。
 
      *
      * @param filters
      */
-    public DescribeInstancesRequest filters(List<Filter> filters) {
+    public DescribeInstancesCustomDataRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
@@ -230,7 +196,7 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会�
      *
      * @param regionId
      */
-    public DescribeInstancesRequest regionId(String regionId) {
+    public DescribeInstancesCustomDataRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -239,19 +205,11 @@ elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会�
     /**
      * add item to instanceId - 云主机ID，精确匹配，支持多个
 privateIpAddress - 主网卡内网主IP地址，模糊匹配，支持多个
-az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 云主机状态，精确匹配，支持多个，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
-name - 云主机名称，模糊匹配，支持单个
 imageId - 镜像ID，精确匹配，支持多个
 networkInterfaceId - 弹性网卡ID，精确匹配，支持多个
 subnetId - 子网ID，精确匹配，支持多个
-agId - 使用可用组id，支持单个
-faultDomain - 错误域，支持多个
-dedicatedHostId - 专有宿主机ID，精确匹配，支持多个
-dedicatedPoolId - 专有宿主机池ID，精确匹配，支持多个
-instanceType - 实例规格，精确匹配，支持多个
-elasticIpAddress - 公网IP地址，精确匹配，支持单个。该条件会将公网IP转换成networkInterfaceId进行查询，所以与networkInterfaceId为或者的关系。
 
      *
      * @param filter

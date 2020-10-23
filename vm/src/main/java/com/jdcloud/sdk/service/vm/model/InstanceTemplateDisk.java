@@ -48,6 +48,11 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     private String snapshotId;
 
     /**
+     * 策略ID
+     */
+    private String policyId;
+
+    /**
      * 是否加密，false:(默认)不加密；true:加密
      */
     private Boolean encrypt;
@@ -110,6 +115,24 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
      */
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+    }
+
+    /**
+     * get 策略ID
+     *
+     * @return
+     */
+    public String getPolicyId() {
+        return policyId;
+    }
+
+    /**
+     * set 策略ID
+     *
+     * @param policyId
+     */
+    public void setPolicyId(String policyId) {
+        this.policyId = policyId;
     }
 
     /**
@@ -176,6 +199,16 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
      */
     public InstanceTemplateDisk snapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+        return this;
+    }
+
+    /**
+     * set 策略ID
+     *
+     * @param policyId
+     */
+    public InstanceTemplateDisk policyId(String policyId) {
+        this.policyId = policyId;
         return this;
     }
 

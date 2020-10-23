@@ -60,6 +60,21 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     private List<String> keyNames;
 
     /**
+     * 用户自定义元数据信息，key-value 键值对数量不超过20。key、value不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     */
+    private List<Metadata> metadata;
+
+    /**
+     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     */
+    private List<Userdata> userdata;
+
+    /**
      * 主网卡主IP关联的弹性IP规格
      */
     private InstanceTemplateElasticIpSpec elasticIp;
@@ -73,9 +88,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 
     /**
      * 系统盘配置信息
-     * Required:true
      */
-    @Required
     private InstanceTemplateDiskAttachmentSpec systemDisk;
 
     /**
@@ -87,6 +100,21 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      * 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
      */
     private String chargeOnStopped;
+
+    /**
+     * 自动镜像策略ID。
+     */
+    private String autoImagePolicyId;
+
+    /**
+     * 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     */
+    private String passWordAuth;
+
+    /**
+     * 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     */
+    private String imageInherit;
 
 
     /**
@@ -159,6 +187,52 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
+    }
+
+    /**
+     * get 用户自定义元数据信息，key-value 键值对数量不超过20。key、value不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @return
+     */
+    public List<Metadata> getMetadata() {
+        return metadata;
+    }
+
+    /**
+     * set 用户自定义元数据信息，key-value 键值对数量不超过20。key、value不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public void setMetadata(List<Metadata> metadata) {
+        this.metadata = metadata;
+    }
+
+    /**
+     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @return
+     */
+    public List<Userdata> getUserdata() {
+        return userdata;
+    }
+
+    /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void setUserdata(List<Userdata> userdata) {
+        this.userdata = userdata;
     }
 
     /**
@@ -251,6 +325,60 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         this.chargeOnStopped = chargeOnStopped;
     }
 
+    /**
+     * get 自动镜像策略ID。
+     *
+     * @return
+     */
+    public String getAutoImagePolicyId() {
+        return autoImagePolicyId;
+    }
+
+    /**
+     * set 自动镜像策略ID。
+     *
+     * @param autoImagePolicyId
+     */
+    public void setAutoImagePolicyId(String autoImagePolicyId) {
+        this.autoImagePolicyId = autoImagePolicyId;
+    }
+
+    /**
+     * get 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     *
+     * @return
+     */
+    public String getPassWordAuth() {
+        return passWordAuth;
+    }
+
+    /**
+     * set 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     *
+     * @param passWordAuth
+     */
+    public void setPassWordAuth(String passWordAuth) {
+        this.passWordAuth = passWordAuth;
+    }
+
+    /**
+     * get 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @return
+     */
+    public String getImageInherit() {
+        return imageInherit;
+    }
+
+    /**
+     * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @param imageInherit
+     */
+    public void setImageInherit(String imageInherit) {
+        this.imageInherit = imageInherit;
+    }
+
 
     /**
      * set 实例规格，可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
@@ -289,6 +417,31 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      */
     public InstanceTemplateSpec keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
+        return this;
+    }
+
+    /**
+     * set 用户自定义元数据信息，key-value 键值对数量不超过20。key、value不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public InstanceTemplateSpec metadata(List<Metadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+    /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public InstanceTemplateSpec userdata(List<Userdata> userdata) {
+        this.userdata = userdata;
         return this;
     }
 
@@ -342,6 +495,36 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 自动镜像策略ID。
+     *
+     * @param autoImagePolicyId
+     */
+    public InstanceTemplateSpec autoImagePolicyId(String autoImagePolicyId) {
+        this.autoImagePolicyId = autoImagePolicyId;
+        return this;
+    }
+
+    /**
+     * set 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     *
+     * @param passWordAuth
+     */
+    public InstanceTemplateSpec passWordAuth(String passWordAuth) {
+        this.passWordAuth = passWordAuth;
+        return this;
+    }
+
+    /**
+     * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @param imageInherit
+     */
+    public InstanceTemplateSpec imageInherit(String imageInherit) {
+        this.imageInherit = imageInherit;
+        return this;
+    }
+
 
     /**
      * add item to 密钥对名称；当前只支持一个
@@ -353,6 +536,35 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
             this.keyNames = new ArrayList<>();
         }
         this.keyNames.add(keyName);
+    }
+
+    /**
+     * add item to 用户自定义元数据信息，key-value 键值对数量不超过20。key、value不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public void addMetadata(Metadata metadata) {
+        if (this.metadata == null) {
+            this.metadata = new ArrayList<>();
+        }
+        this.metadata.add(metadata);
+    }
+
+    /**
+     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void addUserdata(Userdata userdata) {
+        if (this.userdata == null) {
+            this.userdata = new ArrayList<>();
+        }
+        this.userdata.add(userdata);
     }
 
     /**

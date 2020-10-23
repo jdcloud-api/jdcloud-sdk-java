@@ -26,14 +26,12 @@ package com.jdcloud.sdk.service.vm.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.vm.model.DescribeBriefInstancesResponse;
+import com.jdcloud.sdk.service.vm.model.DescribeInstancesCustomDataResponse;
 
 /**
- * 批量查询云主机信息的轻量接口，不返回云盘、网络、计费、标签等信息。如果不需要关联资源属性，尽量选择使用该接口。&lt;br&gt;
-此接口支持分页查询，默认每页20条。
-
+ * 批量查询云主机用户自定义元数据
  */
-class DescribeBriefInstancesExecutor extends JdcloudExecutor {
+class DescribeInstancesCustomDataExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -42,11 +40,11 @@ class DescribeBriefInstancesExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/instances:describeBriefInstances";
+        return "/regions/{regionId}/instancesCustomData";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeBriefInstancesResponse.class;
+        return DescribeInstancesCustomDataResponse.class;
     }
 }

@@ -54,6 +54,11 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     private LocalDisk localDisk;
 
     /**
+     * 云硬盘配置
+     */
+    private LightCloudDiskInfo cloudDisk;
+
+    /**
      * 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
      */
     private String deviceName;
@@ -131,6 +136,24 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
+     * get 云硬盘配置
+     *
+     * @return
+     */
+    public LightCloudDiskInfo getCloudDisk() {
+        return cloudDisk;
+    }
+
+    /**
+     * set 云硬盘配置
+     *
+     * @param cloudDisk
+     */
+    public void setCloudDisk(LightCloudDiskInfo cloudDisk) {
+        this.cloudDisk = cloudDisk;
+    }
+
+    /**
      * get 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
      *
      * @return
@@ -200,6 +223,16 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
      */
     public BriefInstanceDiskAttachment localDisk(LocalDisk localDisk) {
         this.localDisk = localDisk;
+        return this;
+    }
+
+    /**
+     * set 云硬盘配置
+     *
+     * @param cloudDisk
+     */
+    public BriefInstanceDiskAttachment cloudDisk(LightCloudDiskInfo cloudDisk) {
+        this.cloudDisk = cloudDisk;
         return this;
     }
 

@@ -64,11 +64,22 @@ public class InstanceSpec  implements java.io.Serializable {
     private String imageId;
 
     /**
-     * 云主机名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
+批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+
      * Required:true
      */
     @Required
     private String name;
+
+    /**
+     * 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+
+     */
+    private String hostname;
 
     /**
      * 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
@@ -108,6 +119,13 @@ public class InstanceSpec  implements java.io.Serializable {
 
      */
     private ChargeSpec charge;
+
+    /**
+     * 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     */
+    private List<Metadata> metadata;
 
     /**
      * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
@@ -155,6 +173,21 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      * 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
      */
     private String chargeOnStopped;
+
+    /**
+     * 自动镜像策略ID。
+     */
+    private String autoImagePolicyId;
+
+    /**
+     * 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     */
+    private String passwordAuth;
+
+    /**
+     * 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     */
+    private String imageInherit;
 
 
     /**
@@ -248,7 +281,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 云主机名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
+批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+
      *
      * @return
      */
@@ -257,12 +292,40 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
+批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+
      *
      * @param name
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * get 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+
+     *
+     * @return
+     */
+    public String getHostname() {
+        return hostname;
+    }
+
+    /**
+     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+
+     *
+     * @param hostname
+     */
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
     }
 
     /**
@@ -397,6 +460,28 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      */
     public void setCharge(ChargeSpec charge) {
         this.charge = charge;
+    }
+
+    /**
+     * get 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @return
+     */
+    public List<Metadata> getMetadata() {
+        return metadata;
+    }
+
+    /**
+     * set 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public void setMetadata(List<Metadata> metadata) {
+        this.metadata = metadata;
     }
 
     /**
@@ -549,6 +634,60 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
         this.chargeOnStopped = chargeOnStopped;
     }
 
+    /**
+     * get 自动镜像策略ID。
+     *
+     * @return
+     */
+    public String getAutoImagePolicyId() {
+        return autoImagePolicyId;
+    }
+
+    /**
+     * set 自动镜像策略ID。
+     *
+     * @param autoImagePolicyId
+     */
+    public void setAutoImagePolicyId(String autoImagePolicyId) {
+        this.autoImagePolicyId = autoImagePolicyId;
+    }
+
+    /**
+     * get 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     *
+     * @return
+     */
+    public String getPasswordAuth() {
+        return passwordAuth;
+    }
+
+    /**
+     * set 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     *
+     * @param passwordAuth
+     */
+    public void setPasswordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+    }
+
+    /**
+     * get 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @return
+     */
+    public String getImageInherit() {
+        return imageInherit;
+    }
+
+    /**
+     * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @param imageInherit
+     */
+    public void setImageInherit(String imageInherit) {
+        this.imageInherit = imageInherit;
+    }
+
 
     /**
      * set 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
@@ -601,12 +740,28 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
+批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+
      *
      * @param name
      */
     public InstanceSpec name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+
+     *
+     * @param hostname
+     */
+    public InstanceSpec hostname(String hostname) {
+        this.hostname = hostname;
         return this;
     }
 
@@ -681,6 +836,18 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
      */
     public InstanceSpec charge(ChargeSpec charge) {
         this.charge = charge;
+        return this;
+    }
+
+    /**
+     * set 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public InstanceSpec metadata(List<Metadata> metadata) {
+        this.metadata = metadata;
         return this;
     }
 
@@ -766,6 +933,36 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
         return this;
     }
 
+    /**
+     * set 自动镜像策略ID。
+     *
+     * @param autoImagePolicyId
+     */
+    public InstanceSpec autoImagePolicyId(String autoImagePolicyId) {
+        this.autoImagePolicyId = autoImagePolicyId;
+        return this;
+    }
+
+    /**
+     * set 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     *
+     * @param passwordAuth
+     */
+    public InstanceSpec passwordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+        return this;
+    }
+
+    /**
+     * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @param imageInherit
+     */
+    public InstanceSpec imageInherit(String imageInherit) {
+        this.imageInherit = imageInherit;
+        return this;
+    }
+
 
     /**
      * add item to 密钥对名称，当前只支持传入一个。
@@ -789,6 +986,20 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
             this.dataDisks = new ArrayList<>();
         }
         this.dataDisks.add(dataDisk);
+    }
+
+    /**
+     * add item to 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public void addMetadata(Metadata metadata) {
+        if (this.metadata == null) {
+            this.metadata = new ArrayList<>();
+        }
+        this.metadata.add(metadata);
     }
 
     /**

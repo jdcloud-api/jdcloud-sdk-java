@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * userdata
+ * metadata
  */
-public class Userdata  implements java.io.Serializable {
+public class Metadata  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 键，最大长度48字符
+     * 键，最大长度256，支持全字符
      */
     private String key;
 
     /**
-     * 值，最大长度21848字符
+     * 值，最大长度16k，支持全字符
      */
     private String value;
 
 
     /**
-     * get 键，最大长度48字符
+     * get 键，最大长度256，支持全字符
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class Userdata  implements java.io.Serializable {
     }
 
     /**
-     * set 键，最大长度48字符
+     * set 键，最大长度256，支持全字符
      *
      * @param key
      */
@@ -62,7 +62,7 @@ public class Userdata  implements java.io.Serializable {
     }
 
     /**
-     * get 值，最大长度21848字符
+     * get 值，最大长度16k，支持全字符
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class Userdata  implements java.io.Serializable {
     }
 
     /**
-     * set 值，最大长度21848字符
+     * set 值，最大长度16k，支持全字符
      *
      * @param value
      */
@@ -81,21 +81,21 @@ public class Userdata  implements java.io.Serializable {
 
 
     /**
-     * set 键，最大长度48字符
+     * set 键，最大长度256，支持全字符
      *
      * @param key
      */
-    public Userdata key(String key) {
+    public Metadata key(String key) {
         this.key = key;
         return this;
     }
 
     /**
-     * set 值，最大长度21848字符
+     * set 值，最大长度16k，支持全字符
      *
      * @param value
      */
-    public Userdata value(String value) {
+    public Metadata value(String value) {
         this.value = value;
         return this;
     }

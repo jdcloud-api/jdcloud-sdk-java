@@ -39,7 +39,9 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * 需要取消的帐户
+     * Required:true
      */
+    @Required
     private List<String> pins;
 
     /**

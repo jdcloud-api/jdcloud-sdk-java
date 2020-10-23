@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * keypair
@@ -46,6 +48,11 @@ public class Keypair  implements java.io.Serializable {
      * 创建时间
      */
     private String createTime;
+
+    /**
+     * 绑定了此密钥的所有虚机id
+     */
+    private List<String> instanceIds;
 
 
     /**
@@ -102,6 +109,24 @@ public class Keypair  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+    /**
+     * get 绑定了此密钥的所有虚机id
+     *
+     * @return
+     */
+    public List<String> getInstanceIds() {
+        return instanceIds;
+    }
+
+    /**
+     * set 绑定了此密钥的所有虚机id
+     *
+     * @param instanceIds
+     */
+    public void setInstanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+    }
+
 
     /**
      * set 密钥对名称
@@ -133,5 +158,27 @@ public class Keypair  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 绑定了此密钥的所有虚机id
+     *
+     * @param instanceIds
+     */
+    public Keypair instanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+
+
+    /**
+     * add item to 绑定了此密钥的所有虚机id
+     *
+     * @param instanceId
+     */
+    public void addInstanceId(String instanceId) {
+        if (this.instanceIds == null) {
+            this.instanceIds = new ArrayList<>();
+        }
+        this.instanceIds.add(instanceId);
+    }
 
 }

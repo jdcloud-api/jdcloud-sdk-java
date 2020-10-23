@@ -34,12 +34,21 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.vm.model.DescribeImageMembersRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeImageMembersResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeImageMembersExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeInstancesCustomDataRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeInstancesCustomDataResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeInstancesCustomDataExecutor;
 import com.jdcloud.sdk.service.vm.model.CreateInstancesRequest;
 import com.jdcloud.sdk.service.vm.model.CreateInstancesResponse;
 import com.jdcloud.sdk.service.vm.client.CreateInstancesExecutor;
 import com.jdcloud.sdk.service.vm.model.ShareImageRequest;
 import com.jdcloud.sdk.service.vm.model.ShareImageResponse;
 import com.jdcloud.sdk.service.vm.client.ShareImageExecutor;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplatesCustomdataRequest;
+import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplatesCustomdataResponse;
+import com.jdcloud.sdk.service.vm.client.DescribeInstanceTemplatesCustomdataExecutor;
+import com.jdcloud.sdk.service.vm.model.AttachKeypairRequest;
+import com.jdcloud.sdk.service.vm.model.AttachKeypairResponse;
+import com.jdcloud.sdk.service.vm.client.AttachKeypairExecutor;
 import com.jdcloud.sdk.service.vm.model.ExportImageRequest;
 import com.jdcloud.sdk.service.vm.model.ExportImageResponse;
 import com.jdcloud.sdk.service.vm.client.ExportImageExecutor;
@@ -169,6 +178,9 @@ import com.jdcloud.sdk.service.vm.client.ImageTasksExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceStatusExecutor;
+import com.jdcloud.sdk.service.vm.model.DetachKeypairRequest;
+import com.jdcloud.sdk.service.vm.model.DetachKeypairResponse;
+import com.jdcloud.sdk.service.vm.client.DetachKeypairExecutor;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceRequest;
 import com.jdcloud.sdk.service.vm.model.DeleteInstanceResponse;
 import com.jdcloud.sdk.service.vm.client.DeleteInstanceExecutor;
@@ -192,7 +204,7 @@ public class VmClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "vm.jdcloud-api.com";
     public final static String ServiceName = "vm";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -244,6 +256,17 @@ public class VmClient extends JdcloudClient {
      */
     public DescribeImageMembersResponse describeImageMembers(DescribeImageMembersRequest request) throws JdcloudSdkException {
         return new DescribeImageMembersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量查询云主机用户自定义元数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstancesCustomDataResponse describeInstancesCustomData(DescribeInstancesCustomDataRequest request) throws JdcloudSdkException {
+        return new DescribeInstancesCustomDataExecutor().client(this).execute(request);
     }
 
     /**
@@ -319,6 +342,30 @@ public class VmClient extends JdcloudClient {
      */
     public ShareImageResponse shareImage(ShareImageRequest request) throws JdcloudSdkException {
         return new ShareImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询模板自定义元数据
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceTemplatesCustomdataResponse describeInstanceTemplatesCustomdata(DescribeInstanceTemplatesCustomdataRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceTemplatesCustomdataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 绑定ssh密钥对。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AttachKeypairResponse attachKeypair(AttachKeypairRequest request) throws JdcloudSdkException {
+        return new AttachKeypairExecutor().client(this).execute(request);
     }
 
     /**
@@ -873,6 +920,18 @@ vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小
      */
     public DescribeInstanceStatusResponse describeInstanceStatus(DescribeInstanceStatusRequest request) throws JdcloudSdkException {
         return new DescribeInstanceStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 解绑ssh密钥对。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DetachKeypairResponse detachKeypair(DetachKeypairRequest request) throws JdcloudSdkException {
+        return new DetachKeypairExecutor().client(this).execute(request);
     }
 
     /**

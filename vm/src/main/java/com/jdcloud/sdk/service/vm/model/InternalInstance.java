@@ -139,6 +139,11 @@ public class InternalInstance  implements java.io.Serializable {
      */
     private String hostIp;
 
+    /**
+     * 机架信息
+     */
+    private String rack;
+
 
     /**
      * get 云主机ID
@@ -518,6 +523,24 @@ public class InternalInstance  implements java.io.Serializable {
         this.hostIp = hostIp;
     }
 
+    /**
+     * get 机架信息
+     *
+     * @return
+     */
+    public String getRack() {
+        return rack;
+    }
+
+    /**
+     * set 机架信息
+     *
+     * @param rack
+     */
+    public void setRack(String rack) {
+        this.rack = rack;
+    }
+
 
     /**
      * set 云主机ID
@@ -726,6 +749,16 @@ public class InternalInstance  implements java.io.Serializable {
      */
     public InternalInstance hostIp(String hostIp) {
         this.hostIp = hostIp;
+        return this;
+    }
+
+    /**
+     * set 机架信息
+     *
+     * @param rack
+     */
+    public InternalInstance rack(String rack) {
+        this.rack = rack;
         return this;
     }
 
