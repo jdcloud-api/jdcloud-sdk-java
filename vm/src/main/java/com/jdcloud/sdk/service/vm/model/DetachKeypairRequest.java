@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 镜像
- * 关于主机镜像操作的相关接口
+ * SSH密钥对
+ * 关于SSH密钥对的相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,22 +24,25 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除一个私有镜像，只允许操作您的个人私有镜像。&lt;br&gt;
-若镜像已共享给其他用户，需先取消共享才可删除。
+ * 解绑ssh密钥对。
 
  */
-public class DeleteImageRequest extends JdcloudRequest implements java.io.Serializable {
+public class DetachKeypairRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 删除镜像是否删除关联的快照，默认为false；如果指定为true, 将会删除镜像关联的快照。
+     * 虚机Id
+     * Required:true
      */
-    private Boolean deleteSnapshot;
+    @Required
+    private List<String> instanceIds;
 
     /**
      * 地域ID
@@ -49,29 +52,29 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
     private String regionId;
 
     /**
-     * 镜像ID
+     * 密钥名称
      * Required:true
      */
     @Required
-    private String imageId;
+    private String keyName;
 
 
     /**
-     * get 删除镜像是否删除关联的快照，默认为false；如果指定为true, 将会删除镜像关联的快照。
+     * get 虚机Id
      *
      * @return
      */
-    public Boolean getDeleteSnapshot() {
-        return deleteSnapshot;
+    public List<String> getInstanceIds() {
+        return instanceIds;
     }
 
     /**
-     * set 删除镜像是否删除关联的快照，默认为false；如果指定为true, 将会删除镜像关联的快照。
+     * set 虚机Id
      *
-     * @param deleteSnapshot
+     * @param instanceIds
      */
-    public void setDeleteSnapshot(Boolean deleteSnapshot) {
-        this.deleteSnapshot = deleteSnapshot;
+    public void setInstanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
     }
 
     /**
@@ -93,31 +96,31 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 镜像ID
+     * get 密钥名称
      *
      * @return
      */
-    public String getImageId() {
-        return imageId;
+    public String getKeyName() {
+        return keyName;
     }
 
     /**
-     * set 镜像ID
+     * set 密钥名称
      *
-     * @param imageId
+     * @param keyName
      */
-    public void setImageId(String imageId) {
-        this.imageId = imageId;
+    public void setKeyName(String keyName) {
+        this.keyName = keyName;
     }
 
 
     /**
-     * set 删除镜像是否删除关联的快照，默认为false；如果指定为true, 将会删除镜像关联的快照。
+     * set 虚机Id
      *
-     * @param deleteSnapshot
+     * @param instanceIds
      */
-    public DeleteImageRequest deleteSnapshot(Boolean deleteSnapshot) {
-        this.deleteSnapshot = deleteSnapshot;
+    public DetachKeypairRequest instanceIds(List<String> instanceIds) {
+        this.instanceIds = instanceIds;
         return this;
     }
 
@@ -126,20 +129,32 @@ public class DeleteImageRequest extends JdcloudRequest implements java.io.Serial
      *
      * @param regionId
      */
-    public DeleteImageRequest regionId(String regionId) {
+    public DetachKeypairRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
     /**
-     * set 镜像ID
+     * set 密钥名称
      *
-     * @param imageId
+     * @param keyName
      */
-    public DeleteImageRequest imageId(String imageId) {
-        this.imageId = imageId;
+    public DetachKeypairRequest keyName(String keyName) {
+        this.keyName = keyName;
         return this;
     }
 
+
+    /**
+     * add item to 虚机Id
+     *
+     * @param instanceId
+     */
+    public void addInstanceId(String instanceId) {
+        if (this.instanceIds == null) {
+            this.instanceIds = new ArrayList<>();
+        }
+        this.instanceIds.add(instanceId);
+    }
 
 }

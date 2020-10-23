@@ -85,12 +85,42 @@ public class ClusterNode  implements java.io.Serializable {
     /**
      * 节点系统盘大小(GB)
      */
-    private String nodeSystemDiskVolume;
+    private Integer nodeSystemDiskVolume;
 
     /**
      * 节点数据盘大小(GB)
      */
-    private String nodeDiskVolume;
+    private Integer nodeDiskVolume;
+
+    /**
+     * 信息
+     */
+    private String msg;
+
+    /**
+     * 节点系统信息
+     */
+    private String nodeSystemInfo;
+
+    /**
+     * 节点硬盘类型
+     */
+    private String nodeDiskCategory;
+
+    /**
+     * 节点系统盘类型
+     */
+    private String nodeSystemDiskCategory;
+
+    /**
+     * 节点数量
+     */
+    private Integer nodeCoreNum;
+
+    /**
+     * 节点内存数量
+     */
+    private Integer nodeMemoryNum;
 
 
     /**
@@ -278,7 +308,7 @@ public class ClusterNode  implements java.io.Serializable {
      *
      * @return
      */
-    public String getNodeSystemDiskVolume() {
+    public Integer getNodeSystemDiskVolume() {
         return nodeSystemDiskVolume;
     }
 
@@ -287,7 +317,7 @@ public class ClusterNode  implements java.io.Serializable {
      *
      * @param nodeSystemDiskVolume
      */
-    public void setNodeSystemDiskVolume(String nodeSystemDiskVolume) {
+    public void setNodeSystemDiskVolume(Integer nodeSystemDiskVolume) {
         this.nodeSystemDiskVolume = nodeSystemDiskVolume;
     }
 
@@ -296,7 +326,7 @@ public class ClusterNode  implements java.io.Serializable {
      *
      * @return
      */
-    public String getNodeDiskVolume() {
+    public Integer getNodeDiskVolume() {
         return nodeDiskVolume;
     }
 
@@ -305,8 +335,116 @@ public class ClusterNode  implements java.io.Serializable {
      *
      * @param nodeDiskVolume
      */
-    public void setNodeDiskVolume(String nodeDiskVolume) {
+    public void setNodeDiskVolume(Integer nodeDiskVolume) {
         this.nodeDiskVolume = nodeDiskVolume;
+    }
+
+    /**
+     * get 信息
+     *
+     * @return
+     */
+    public String getMsg() {
+        return msg;
+    }
+
+    /**
+     * set 信息
+     *
+     * @param msg
+     */
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    /**
+     * get 节点系统信息
+     *
+     * @return
+     */
+    public String getNodeSystemInfo() {
+        return nodeSystemInfo;
+    }
+
+    /**
+     * set 节点系统信息
+     *
+     * @param nodeSystemInfo
+     */
+    public void setNodeSystemInfo(String nodeSystemInfo) {
+        this.nodeSystemInfo = nodeSystemInfo;
+    }
+
+    /**
+     * get 节点硬盘类型
+     *
+     * @return
+     */
+    public String getNodeDiskCategory() {
+        return nodeDiskCategory;
+    }
+
+    /**
+     * set 节点硬盘类型
+     *
+     * @param nodeDiskCategory
+     */
+    public void setNodeDiskCategory(String nodeDiskCategory) {
+        this.nodeDiskCategory = nodeDiskCategory;
+    }
+
+    /**
+     * get 节点系统盘类型
+     *
+     * @return
+     */
+    public String getNodeSystemDiskCategory() {
+        return nodeSystemDiskCategory;
+    }
+
+    /**
+     * set 节点系统盘类型
+     *
+     * @param nodeSystemDiskCategory
+     */
+    public void setNodeSystemDiskCategory(String nodeSystemDiskCategory) {
+        this.nodeSystemDiskCategory = nodeSystemDiskCategory;
+    }
+
+    /**
+     * get 节点数量
+     *
+     * @return
+     */
+    public Integer getNodeCoreNum() {
+        return nodeCoreNum;
+    }
+
+    /**
+     * set 节点数量
+     *
+     * @param nodeCoreNum
+     */
+    public void setNodeCoreNum(Integer nodeCoreNum) {
+        this.nodeCoreNum = nodeCoreNum;
+    }
+
+    /**
+     * get 节点内存数量
+     *
+     * @return
+     */
+    public Integer getNodeMemoryNum() {
+        return nodeMemoryNum;
+    }
+
+    /**
+     * set 节点内存数量
+     *
+     * @param nodeMemoryNum
+     */
+    public void setNodeMemoryNum(Integer nodeMemoryNum) {
+        this.nodeMemoryNum = nodeMemoryNum;
     }
 
 
@@ -415,7 +553,7 @@ public class ClusterNode  implements java.io.Serializable {
      *
      * @param nodeSystemDiskVolume
      */
-    public ClusterNode nodeSystemDiskVolume(String nodeSystemDiskVolume) {
+    public ClusterNode nodeSystemDiskVolume(Integer nodeSystemDiskVolume) {
         this.nodeSystemDiskVolume = nodeSystemDiskVolume;
         return this;
     }
@@ -425,8 +563,68 @@ public class ClusterNode  implements java.io.Serializable {
      *
      * @param nodeDiskVolume
      */
-    public ClusterNode nodeDiskVolume(String nodeDiskVolume) {
+    public ClusterNode nodeDiskVolume(Integer nodeDiskVolume) {
         this.nodeDiskVolume = nodeDiskVolume;
+        return this;
+    }
+
+    /**
+     * set 信息
+     *
+     * @param msg
+     */
+    public ClusterNode msg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+
+    /**
+     * set 节点系统信息
+     *
+     * @param nodeSystemInfo
+     */
+    public ClusterNode nodeSystemInfo(String nodeSystemInfo) {
+        this.nodeSystemInfo = nodeSystemInfo;
+        return this;
+    }
+
+    /**
+     * set 节点硬盘类型
+     *
+     * @param nodeDiskCategory
+     */
+    public ClusterNode nodeDiskCategory(String nodeDiskCategory) {
+        this.nodeDiskCategory = nodeDiskCategory;
+        return this;
+    }
+
+    /**
+     * set 节点系统盘类型
+     *
+     * @param nodeSystemDiskCategory
+     */
+    public ClusterNode nodeSystemDiskCategory(String nodeSystemDiskCategory) {
+        this.nodeSystemDiskCategory = nodeSystemDiskCategory;
+        return this;
+    }
+
+    /**
+     * set 节点数量
+     *
+     * @param nodeCoreNum
+     */
+    public ClusterNode nodeCoreNum(Integer nodeCoreNum) {
+        this.nodeCoreNum = nodeCoreNum;
+        return this;
+    }
+
+    /**
+     * set 节点内存数量
+     *
+     * @param nodeMemoryNum
+     */
+    public ClusterNode nodeMemoryNum(Integer nodeMemoryNum) {
+        this.nodeMemoryNum = nodeMemoryNum;
         return this;
     }
 

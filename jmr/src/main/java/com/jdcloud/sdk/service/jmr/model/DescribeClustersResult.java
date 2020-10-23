@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.jmr.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.jmr.model.Cluster;
+import com.jdcloud.sdk.service.jmr.model.ClusterListNode;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -45,7 +45,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     /**
      * clusters
      */
-    private List<Cluster> clusters;
+    private List<ClusterListNode> clusters;
 
     /**
      * status
@@ -76,7 +76,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
      *
      * @return
      */
-    public List<Cluster> getClusters() {
+    public List<ClusterListNode> getClusters() {
         return clusters;
     }
 
@@ -85,7 +85,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
      *
      * @param clusters
      */
-    public void setClusters(List<Cluster> clusters) {
+    public void setClusters(List<ClusterListNode> clusters) {
         this.clusters = clusters;
     }
 
@@ -123,7 +123,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
      *
      * @param clusters
      */
-    public DescribeClustersResult clusters(List<Cluster> clusters) {
+    public DescribeClustersResult clusters(List<ClusterListNode> clusters) {
         this.clusters = clusters;
         return this;
     }
@@ -144,7 +144,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
      *
      * @param cluster
      */
-    public void addCluster(Cluster cluster) {
+    public void addCluster(ClusterListNode cluster) {
         if (this.clusters == null) {
             this.clusters = new ArrayList<>();
         }

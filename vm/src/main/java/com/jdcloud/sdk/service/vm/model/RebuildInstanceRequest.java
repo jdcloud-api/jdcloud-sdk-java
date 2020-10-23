@@ -26,6 +26,8 @@ package com.jdcloud.sdk.service.vm.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.vm.model.Metadata;
+import com.jdcloud.sdk.service.vm.model.Userdata;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -43,9 +45,7 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
 
     /**
      * 云主机密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
-     * Required:true
      */
-    @Required
     private String password;
 
     /**
@@ -57,6 +57,31 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
      * 密钥对名称；当前只支持一个。仅Linux系统支持指定。
      */
     private List<String> keyNames;
+
+    /**
+     * 云主机hostname，若不指定hostname，则hostname默认使用云主机重置前的hostname
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+
+     */
+    private String hostname;
+
+    /**
+     * 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+若不指定metadata，则metadata默认使用云主机重置前的metadata。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     */
+    private List<Metadata> metadata;
+
+    /**
+     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+若不指定userdata，则userdata默认使用云主机重置前的userdata。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     */
+    private List<Userdata> userdata;
 
     /**
      * 地域ID
@@ -128,6 +153,80 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * get 云主机hostname，若不指定hostname，则hostname默认使用云主机重置前的hostname
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+
+     *
+     * @return
+     */
+    public String getHostname() {
+        return hostname;
+    }
+
+    /**
+     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机重置前的hostname
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+
+     *
+     * @param hostname
+     */
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
+    }
+
+    /**
+     * get 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+若不指定metadata，则metadata默认使用云主机重置前的metadata。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @return
+     */
+    public List<Metadata> getMetadata() {
+        return metadata;
+    }
+
+    /**
+     * set 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+若不指定metadata，则metadata默认使用云主机重置前的metadata。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public void setMetadata(List<Metadata> metadata) {
+        this.metadata = metadata;
+    }
+
+    /**
+     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+若不指定userdata，则userdata默认使用云主机重置前的userdata。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @return
+     */
+    public List<Userdata> getUserdata() {
+        return userdata;
+    }
+
+    /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+若不指定userdata，则userdata默认使用云主机重置前的userdata。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void setUserdata(List<Userdata> userdata) {
+        this.userdata = userdata;
+    }
+
+    /**
      * get 地域ID
      *
      * @return
@@ -195,6 +294,46 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机重置前的hostname
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+
+     *
+     * @param hostname
+     */
+    public RebuildInstanceRequest hostname(String hostname) {
+        this.hostname = hostname;
+        return this;
+    }
+
+    /**
+     * set 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+若不指定metadata，则metadata默认使用云主机重置前的metadata。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public RebuildInstanceRequest metadata(List<Metadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+    /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+若不指定userdata，则userdata默认使用云主机重置前的userdata。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public RebuildInstanceRequest userdata(List<Userdata> userdata) {
+        this.userdata = userdata;
+        return this;
+    }
+
+    /**
      * set 地域ID
      *
      * @param regionId
@@ -225,6 +364,37 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
             this.keyNames = new ArrayList<>();
         }
         this.keyNames.add(keyName);
+    }
+
+    /**
+     * add item to 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+若不指定metadata，则metadata默认使用云主机重置前的metadata。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
+     *
+     * @param metadata
+     */
+    public void addMetadata(Metadata metadata) {
+        if (this.metadata == null) {
+            this.metadata = new ArrayList<>();
+        }
+        this.metadata.add(metadata);
+    }
+
+    /**
+     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+若不指定userdata，则userdata默认使用云主机重置前的userdata。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void addUserdata(Userdata userdata) {
+        if (this.userdata == null) {
+            this.userdata = new ArrayList<>();
+        }
+        this.userdata.add(userdata);
     }
 
 }

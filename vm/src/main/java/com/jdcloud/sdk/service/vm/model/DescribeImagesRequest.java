@@ -65,6 +65,11 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private List<String> ids;
 
     /**
+     * 根据镜像名称模糊查找
+     */
+    private String imageName;
+
+    /**
      * 镜像支持的系统盘类型，[localDisk,cloudDisk]
      */
     private String rootDeviceType;
@@ -185,6 +190,24 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setIds(List<String> ids) {
         this.ids = ids;
+    }
+
+    /**
+     * get 根据镜像名称模糊查找
+     *
+     * @return
+     */
+    public String getImageName() {
+        return imageName;
+    }
+
+    /**
+     * set 根据镜像名称模糊查找
+     *
+     * @param imageName
+     */
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
     }
 
     /**
@@ -343,6 +366,16 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      */
     public DescribeImagesRequest ids(List<String> ids) {
         this.ids = ids;
+        return this;
+    }
+
+    /**
+     * set 根据镜像名称模糊查找
+     *
+     * @param imageName
+     */
+    public DescribeImagesRequest imageName(String imageName) {
+        this.imageName = imageName;
         return this;
     }
 

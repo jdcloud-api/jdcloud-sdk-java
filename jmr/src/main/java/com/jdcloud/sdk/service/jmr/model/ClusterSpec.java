@@ -212,6 +212,21 @@ public class ClusterSpec  implements java.io.Serializable {
     @Required
     private String az;
 
+    /**
+     * 是否创建公网IP
+     */
+    private Boolean createOuterIpFlag;
+
+    /**
+     * 是否创建安全组
+     */
+    private Boolean createSecurityGroupFlag;
+
+    /**
+     * 安全组ID
+     */
+    private String securityGroupId;
+
 
     /**
      * get 集群名称(不能少于6字符不能超过20字符，除下划线外不能包含特殊符号)
@@ -699,6 +714,60 @@ public class ClusterSpec  implements java.io.Serializable {
         this.az = az;
     }
 
+    /**
+     * get 是否创建公网IP
+     *
+     * @return
+     */
+    public Boolean getCreateOuterIpFlag() {
+        return createOuterIpFlag;
+    }
+
+    /**
+     * set 是否创建公网IP
+     *
+     * @param createOuterIpFlag
+     */
+    public void setCreateOuterIpFlag(Boolean createOuterIpFlag) {
+        this.createOuterIpFlag = createOuterIpFlag;
+    }
+
+    /**
+     * get 是否创建安全组
+     *
+     * @return
+     */
+    public Boolean getCreateSecurityGroupFlag() {
+        return createSecurityGroupFlag;
+    }
+
+    /**
+     * set 是否创建安全组
+     *
+     * @param createSecurityGroupFlag
+     */
+    public void setCreateSecurityGroupFlag(Boolean createSecurityGroupFlag) {
+        this.createSecurityGroupFlag = createSecurityGroupFlag;
+    }
+
+    /**
+     * get 安全组ID
+     *
+     * @return
+     */
+    public String getSecurityGroupId() {
+        return securityGroupId;
+    }
+
+    /**
+     * set 安全组ID
+     *
+     * @param securityGroupId
+     */
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+    }
+
 
     /**
      * set 集群名称(不能少于6字符不能超过20字符，除下划线外不能包含特殊符号)
@@ -967,6 +1036,36 @@ public class ClusterSpec  implements java.io.Serializable {
      */
     public ClusterSpec az(String az) {
         this.az = az;
+        return this;
+    }
+
+    /**
+     * set 是否创建公网IP
+     *
+     * @param createOuterIpFlag
+     */
+    public ClusterSpec createOuterIpFlag(Boolean createOuterIpFlag) {
+        this.createOuterIpFlag = createOuterIpFlag;
+        return this;
+    }
+
+    /**
+     * set 是否创建安全组
+     *
+     * @param createSecurityGroupFlag
+     */
+    public ClusterSpec createSecurityGroupFlag(Boolean createSecurityGroupFlag) {
+        this.createSecurityGroupFlag = createSecurityGroupFlag;
+        return this;
+    }
+
+    /**
+     * set 安全组ID
+     *
+     * @param securityGroupId
+     */
+    public ClusterSpec securityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
         return this;
     }
 

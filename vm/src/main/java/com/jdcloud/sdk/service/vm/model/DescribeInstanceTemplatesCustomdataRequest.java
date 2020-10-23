@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 镜像
- * 关于主机镜像操作的相关接口
+ * Instance-Template
+ * 与启动模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,24 +26,22 @@ package com.jdcloud.sdk.service.vm.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
-整机镜像目前不支持共享。
+ * 查询模板自定义元数据
 
  */
-public class ShareImageRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeInstanceTemplatesCustomdataRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要共享的帐户
-     * Required:true
+     * instanceTemplateId - 启动模板ID，精确匹配，支持多个，最多支持10个
      */
-    @Required
-    private List<String> pins;
+    private List<Filter> filters;
 
     /**
      * 地域ID
@@ -52,30 +50,23 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     @Required
     private String regionId;
 
-    /**
-     * 镜像ID
-     * Required:true
-     */
-    @Required
-    private String imageId;
-
 
     /**
-     * get 需要共享的帐户
+     * get instanceTemplateId - 启动模板ID，精确匹配，支持多个，最多支持10个
      *
      * @return
      */
-    public List<String> getPins() {
-        return pins;
+    public List<Filter> getFilters() {
+        return filters;
     }
 
     /**
-     * set 需要共享的帐户
+     * set instanceTemplateId - 启动模板ID，精确匹配，支持多个，最多支持10个
      *
-     * @param pins
+     * @param filters
      */
-    public void setPins(List<String> pins) {
-        this.pins = pins;
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -96,32 +87,14 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
     }
 
-    /**
-     * get 镜像ID
-     *
-     * @return
-     */
-    public String getImageId() {
-        return imageId;
-    }
 
     /**
-     * set 镜像ID
+     * set instanceTemplateId - 启动模板ID，精确匹配，支持多个，最多支持10个
      *
-     * @param imageId
+     * @param filters
      */
-    public void setImageId(String imageId) {
-        this.imageId = imageId;
-    }
-
-
-    /**
-     * set 需要共享的帐户
-     *
-     * @param pins
-     */
-    public ShareImageRequest pins(List<String> pins) {
-        this.pins = pins;
+    public DescribeInstanceTemplatesCustomdataRequest filters(List<Filter> filters) {
+        this.filters = filters;
         return this;
     }
 
@@ -130,32 +103,22 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @param regionId
      */
-    public ShareImageRequest regionId(String regionId) {
+    public DescribeInstanceTemplatesCustomdataRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
-    /**
-     * set 镜像ID
-     *
-     * @param imageId
-     */
-    public ShareImageRequest imageId(String imageId) {
-        this.imageId = imageId;
-        return this;
-    }
-
 
     /**
-     * add item to 需要共享的帐户
+     * add item to instanceTemplateId - 启动模板ID，精确匹配，支持多个，最多支持10个
      *
-     * @param pin
+     * @param filter
      */
-    public void addPin(String pin) {
-        if (this.pins == null) {
-            this.pins = new ArrayList<>();
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
         }
-        this.pins.add(pin);
+        this.filters.add(filter);
     }
 
 }

@@ -24,6 +24,10 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.vm.model.Metadata;
+import com.jdcloud.sdk.service.vm.model.Userdata;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -36,7 +40,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     private static final long serialVersionUID = 1L;
 
     /**
-     * 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、中划线（-）及点（.），不能以（.）作为首尾，长度为2~128个字符
      */
     private String name;
 
@@ -44,6 +48,30 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
      * 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
      */
     private String description;
+
+    /**
+     * 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+hostname修改后，重启云主机hostname生效
+
+     */
+    private String hostname;
+
+    /**
+     * 用户自定义元数据信息，key-value 键值对总数量不超过40，其中更新和新增键值对总数量不超过20对，删除的键值对总数量不超过20对。不区分大小写。
+如key已有认为是更新value；如key不存在认为是新增键值对；如key后面有连字符(-)，比如key-，则删除此key。
+
+     */
+    private List<Metadata> metadata;
+
+    /**
+     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     */
+    private List<Userdata> userdata;
 
     /**
      * 地域ID
@@ -61,7 +89,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、中划线（-）及点（.），不能以（.）作为首尾，长度为2~128个字符
      *
      * @return
      */
@@ -70,7 +98,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、中划线（-）及点（.），不能以（.）作为首尾，长度为2~128个字符
      *
      * @param name
      */
@@ -94,6 +122,78 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+hostname修改后，重启云主机hostname生效
+
+     *
+     * @return
+     */
+    public String getHostname() {
+        return hostname;
+    }
+
+    /**
+     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+hostname修改后，重启云主机hostname生效
+
+     *
+     * @param hostname
+     */
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
+    }
+
+    /**
+     * get 用户自定义元数据信息，key-value 键值对总数量不超过40，其中更新和新增键值对总数量不超过20对，删除的键值对总数量不超过20对。不区分大小写。
+如key已有认为是更新value；如key不存在认为是新增键值对；如key后面有连字符(-)，比如key-，则删除此key。
+
+     *
+     * @return
+     */
+    public List<Metadata> getMetadata() {
+        return metadata;
+    }
+
+    /**
+     * set 用户自定义元数据信息，key-value 键值对总数量不超过40，其中更新和新增键值对总数量不超过20对，删除的键值对总数量不超过20对。不区分大小写。
+如key已有认为是更新value；如key不存在认为是新增键值对；如key后面有连字符(-)，比如key-，则删除此key。
+
+     *
+     * @param metadata
+     */
+    public void setMetadata(List<Metadata> metadata) {
+        this.metadata = metadata;
+    }
+
+    /**
+     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @return
+     */
+    public List<Userdata> getUserdata() {
+        return userdata;
+    }
+
+    /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void setUserdata(List<Userdata> userdata) {
+        this.userdata = userdata;
     }
 
     /**
@@ -134,7 +234,7 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、中划线（-）及点（.），不能以（.）作为首尾，长度为2~128个字符
      *
      * @param name
      */
@@ -150,6 +250,45 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
      */
     public ModifyInstanceAttributeRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义
+Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+hostname修改后，重启云主机hostname生效
+
+     *
+     * @param hostname
+     */
+    public ModifyInstanceAttributeRequest hostname(String hostname) {
+        this.hostname = hostname;
+        return this;
+    }
+
+    /**
+     * set 用户自定义元数据信息，key-value 键值对总数量不超过40，其中更新和新增键值对总数量不超过20对，删除的键值对总数量不超过20对。不区分大小写。
+如key已有认为是更新value；如key不存在认为是新增键值对；如key后面有连字符(-)，比如key-，则删除此key。
+
+     *
+     * @param metadata
+     */
+    public ModifyInstanceAttributeRequest metadata(List<Metadata> metadata) {
+        this.metadata = metadata;
+        return this;
+    }
+
+    /**
+     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public ModifyInstanceAttributeRequest userdata(List<Userdata> userdata) {
+        this.userdata = userdata;
         return this;
     }
 
@@ -173,5 +312,34 @@ public class ModifyInstanceAttributeRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
+    /**
+     * add item to 用户自定义元数据信息，key-value 键值对总数量不超过40，其中更新和新增键值对总数量不超过20对，删除的键值对总数量不超过20对。不区分大小写。
+如key已有认为是更新value；如key不存在认为是新增键值对；如key后面有连字符(-)，比如key-，则删除此key。
+
+     *
+     * @param metadata
+     */
+    public void addMetadata(Metadata metadata) {
+        if (this.metadata == null) {
+            this.metadata = new ArrayList<>();
+        }
+        this.metadata.add(metadata);
+    }
+
+    /**
+     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
+launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
+launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+
+     *
+     * @param userdata
+     */
+    public void addUserdata(Userdata userdata) {
+        if (this.userdata == null) {
+            this.userdata = new ArrayList<>();
+        }
+        this.userdata.add(userdata);
+    }
 
 }

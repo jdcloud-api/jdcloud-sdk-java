@@ -47,6 +47,11 @@ public class Instance  implements java.io.Serializable {
     private String instanceName;
 
     /**
+     * 云主机hostname
+     */
+    private String hostname;
+
+    /**
      * 实例规格
      */
     private String instanceType;
@@ -151,6 +156,11 @@ public class Instance  implements java.io.Serializable {
      */
     private String chargeOnStopped;
 
+    /**
+     * 策略信息
+     */
+    private List<Policy> policies;
+
 
     /**
      * get 云主机ID
@@ -186,6 +196,24 @@ public class Instance  implements java.io.Serializable {
      */
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
+    }
+
+    /**
+     * get 云主机hostname
+     *
+     * @return
+     */
+    public String getHostname() {
+        return hostname;
+    }
+
+    /**
+     * set 云主机hostname
+     *
+     * @param hostname
+     */
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
     }
 
     /**
@@ -566,6 +594,24 @@ public class Instance  implements java.io.Serializable {
         this.chargeOnStopped = chargeOnStopped;
     }
 
+    /**
+     * get 策略信息
+     *
+     * @return
+     */
+    public List<Policy> getPolicies() {
+        return policies;
+    }
+
+    /**
+     * set 策略信息
+     *
+     * @param policies
+     */
+    public void setPolicies(List<Policy> policies) {
+        this.policies = policies;
+    }
+
 
     /**
      * set 云主机ID
@@ -584,6 +630,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance instanceName(String instanceName) {
         this.instanceName = instanceName;
+        return this;
+    }
+
+    /**
+     * set 云主机hostname
+     *
+     * @param hostname
+     */
+    public Instance hostname(String hostname) {
+        this.hostname = hostname;
         return this;
     }
 
@@ -797,6 +853,16 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 策略信息
+     *
+     * @param policies
+     */
+    public Instance policies(List<Policy> policies) {
+        this.policies = policies;
+        return this;
+    }
+
 
     /**
      * add item to 数据盘配置
@@ -844,6 +910,18 @@ public class Instance  implements java.io.Serializable {
             this.tags = new ArrayList<>();
         }
         this.tags.add(tag);
+    }
+
+    /**
+     * add item to 策略信息
+     *
+     * @param policie
+     */
+    public void addPolicie(Policy policie) {
+        if (this.policies == null) {
+            this.policies = new ArrayList<>();
+        }
+        this.policies.add(policie);
     }
 
 }

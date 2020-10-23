@@ -84,6 +84,21 @@ public class InstanceTemplateData  implements java.io.Serializable {
      */
     private String chargeOnStopped;
 
+    /**
+     * 自动镜像策略ID
+     */
+    private String autoImagePolicyId;
+
+    /**
+     * 是否使用密码
+     */
+    private String passwordAuth;
+
+    /**
+     * 是否继承镜像密码密钥
+     */
+    private String imageInherit;
+
 
     /**
      * get 实例规格
@@ -265,6 +280,60 @@ public class InstanceTemplateData  implements java.io.Serializable {
         this.chargeOnStopped = chargeOnStopped;
     }
 
+    /**
+     * get 自动镜像策略ID
+     *
+     * @return
+     */
+    public String getAutoImagePolicyId() {
+        return autoImagePolicyId;
+    }
+
+    /**
+     * set 自动镜像策略ID
+     *
+     * @param autoImagePolicyId
+     */
+    public void setAutoImagePolicyId(String autoImagePolicyId) {
+        this.autoImagePolicyId = autoImagePolicyId;
+    }
+
+    /**
+     * get 是否使用密码
+     *
+     * @return
+     */
+    public String getPasswordAuth() {
+        return passwordAuth;
+    }
+
+    /**
+     * set 是否使用密码
+     *
+     * @param passwordAuth
+     */
+    public void setPasswordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+    }
+
+    /**
+     * get 是否继承镜像密码密钥
+     *
+     * @return
+     */
+    public String getImageInherit() {
+        return imageInherit;
+    }
+
+    /**
+     * set 是否继承镜像密码密钥
+     *
+     * @param imageInherit
+     */
+    public void setImageInherit(String imageInherit) {
+        this.imageInherit = imageInherit;
+    }
+
 
     /**
      * set 实例规格
@@ -363,6 +432,36 @@ public class InstanceTemplateData  implements java.io.Serializable {
      */
     public InstanceTemplateData chargeOnStopped(String chargeOnStopped) {
         this.chargeOnStopped = chargeOnStopped;
+        return this;
+    }
+
+    /**
+     * set 自动镜像策略ID
+     *
+     * @param autoImagePolicyId
+     */
+    public InstanceTemplateData autoImagePolicyId(String autoImagePolicyId) {
+        this.autoImagePolicyId = autoImagePolicyId;
+        return this;
+    }
+
+    /**
+     * set 是否使用密码
+     *
+     * @param passwordAuth
+     */
+    public InstanceTemplateData passwordAuth(String passwordAuth) {
+        this.passwordAuth = passwordAuth;
+        return this;
+    }
+
+    /**
+     * set 是否继承镜像密码密钥
+     *
+     * @param imageInherit
+     */
+    public InstanceTemplateData imageInherit(String imageInherit) {
+        this.imageInherit = imageInherit;
         return this;
     }
 

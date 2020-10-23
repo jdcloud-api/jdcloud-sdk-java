@@ -48,6 +48,11 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
     private String snapshotId;
 
     /**
+     * 策略ID
+     */
+    private String policyId;
+
+    /**
      * 用于指定是否加密，false:(默认)不加密；true:加密，未指定快照时生效，只有打包创建2代主机的时候才允许创建加密数据盘。
      */
     private Boolean encrypt;
@@ -110,6 +115,24 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
      */
     public void setSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+    }
+
+    /**
+     * get 策略ID
+     *
+     * @return
+     */
+    public String getPolicyId() {
+        return policyId;
+    }
+
+    /**
+     * set 策略ID
+     *
+     * @param policyId
+     */
+    public void setPolicyId(String policyId) {
+        this.policyId = policyId;
     }
 
     /**
@@ -176,6 +199,16 @@ public class InstanceTemplateDiskSpec  implements java.io.Serializable {
      */
     public InstanceTemplateDiskSpec snapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+        return this;
+    }
+
+    /**
+     * set 策略ID
+     *
+     * @param policyId
+     */
+    public InstanceTemplateDiskSpec policyId(String policyId) {
+        this.policyId = policyId;
         return this;
     }
 
