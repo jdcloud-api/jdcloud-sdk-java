@@ -56,6 +56,11 @@ public class DBInstance  implements java.io.Serializable {
     private String instanceStorageType;
 
     /**
+     * 实例数据加密. false：不加密; true：加密
+     */
+    private Boolean storageEncrypted;
+
+    /**
      * 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      */
     private String engine;
@@ -145,6 +150,11 @@ public class DBInstance  implements java.io.Serializable {
      */
     private String sourceInstanceId;
 
+    /**
+     * 应用访问端口&lt;br&gt;- 仅支持MySQL
+     */
+    private String instancePort;
+
 
     /**
      * get 实例ID
@@ -216,6 +226,24 @@ public class DBInstance  implements java.io.Serializable {
      */
     public void setInstanceStorageType(String instanceStorageType) {
         this.instanceStorageType = instanceStorageType;
+    }
+
+    /**
+     * get 实例数据加密. false：不加密; true：加密
+     *
+     * @return
+     */
+    public Boolean getStorageEncrypted() {
+        return storageEncrypted;
+    }
+
+    /**
+     * set 实例数据加密. false：不加密; true：加密
+     *
+     * @param storageEncrypted
+     */
+    public void setStorageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
     }
 
     /**
@@ -542,6 +570,24 @@ public class DBInstance  implements java.io.Serializable {
         this.sourceInstanceId = sourceInstanceId;
     }
 
+    /**
+     * get 应用访问端口&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getInstancePort() {
+        return instancePort;
+    }
+
+    /**
+     * set 应用访问端口&lt;br&gt;- 仅支持MySQL
+     *
+     * @param instancePort
+     */
+    public void setInstancePort(String instancePort) {
+        this.instancePort = instancePort;
+    }
+
 
     /**
      * set 实例ID
@@ -580,6 +626,16 @@ public class DBInstance  implements java.io.Serializable {
      */
     public DBInstance instanceStorageType(String instanceStorageType) {
         this.instanceStorageType = instanceStorageType;
+        return this;
+    }
+
+    /**
+     * set 实例数据加密. false：不加密; true：加密
+     *
+     * @param storageEncrypted
+     */
+    public DBInstance storageEncrypted(Boolean storageEncrypted) {
+        this.storageEncrypted = storageEncrypted;
         return this;
     }
 
@@ -760,6 +816,16 @@ public class DBInstance  implements java.io.Serializable {
      */
     public DBInstance sourceInstanceId(String sourceInstanceId) {
         this.sourceInstanceId = sourceInstanceId;
+        return this;
+    }
+
+    /**
+     * set 应用访问端口&lt;br&gt;- 仅支持MySQL
+     *
+     * @param instancePort
+     */
+    public DBInstance instancePort(String instancePort) {
+        this.instancePort = instancePort;
         return this;
     }
 

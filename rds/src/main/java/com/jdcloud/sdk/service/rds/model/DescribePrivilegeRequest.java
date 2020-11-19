@@ -42,6 +42,11 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
     private String engine;
 
     /**
+     * RDS 实例ID，唯一标识一个RDS实例
+     */
+    private String instanceId;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -65,6 +70,24 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
      */
     public void setEngine(String engine) {
         this.engine = engine;
+    }
+
+    /**
+     * get RDS 实例ID，唯一标识一个RDS实例
+     *
+     * @return
+     */
+    public String getInstanceId() {
+        return instanceId;
+    }
+
+    /**
+     * set RDS 实例ID，唯一标识一个RDS实例
+     *
+     * @param instanceId
+     */
+    public void setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
     }
 
     /**
@@ -93,6 +116,16 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
      */
     public DescribePrivilegeRequest engine(String engine) {
         this.engine = engine;
+        return this;
+    }
+
+    /**
+     * set RDS 实例ID，唯一标识一个RDS实例
+     *
+     * @param instanceId
+     */
+    public DescribePrivilegeRequest instanceId(String instanceId) {
+        this.instanceId = instanceId;
         return this;
     }
 

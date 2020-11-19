@@ -69,7 +69,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     private Long singleIpLimit;
 
     /**
-     * 阻断类型, 1: 封禁, 2: 人机交互
+     * 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
      * Required:true
      */
     @Required
@@ -83,9 +83,14 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     private Long blockTime;
 
     /**
-     * 关联的自定义页面id
+     * 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
      */
     private String pageId;
+
+    /**
+     * 关联的自定义页面名称
+     */
+    private String pageName;
 
 
     /**
@@ -179,7 +184,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 阻断类型, 1: 封禁, 2: 人机交互
+     * get 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
      *
      * @return
      */
@@ -188,7 +193,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 阻断类型, 1: 封禁, 2: 人机交互
+     * set 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
      *
      * @param blockType
      */
@@ -215,7 +220,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 关联的自定义页面id
+     * get 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
      *
      * @return
      */
@@ -224,12 +229,30 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 关联的自定义页面id
+     * set 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
      *
      * @param pageId
      */
     public void setPageId(String pageId) {
         this.pageId = pageId;
+    }
+
+    /**
+     * get 关联的自定义页面名称
+     *
+     * @return
+     */
+    public String getPageName() {
+        return pageName;
+    }
+
+    /**
+     * set 关联的自定义页面名称
+     *
+     * @param pageName
+     */
+    public void setPageName(String pageName) {
+        this.pageName = pageName;
     }
 
 
@@ -284,7 +307,7 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 阻断类型, 1: 封禁, 2: 人机交互
+     * set 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
      *
      * @param blockType
      */
@@ -304,12 +327,22 @@ public class CCProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 关联的自定义页面id
+     * set 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
      *
      * @param pageId
      */
     public CCProtectionRuleSpec pageId(String pageId) {
         this.pageId = pageId;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面名称
+     *
+     * @param pageName
+     */
+    public CCProtectionRuleSpec pageName(String pageName) {
+        this.pageName = pageName;
         return this;
     }
 

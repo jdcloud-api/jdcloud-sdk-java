@@ -190,6 +190,36 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     private List<Tag> tags;
 
+    /**
+     * 对接的目录服务的相关信息&lt;br&gt;仅支SQL Server
+     */
+    private ADService activeDirectory;
+
+    /**
+     * 只读代理服务 ID
+     */
+    private String roInstanceProxyID;
+
+    /**
+     * 只读代理服务 名称
+     */
+    private String roInstanceProxyName;
+
+    /**
+     * 读写分离代理服务 ID
+     */
+    private String readWriteProxyId;
+
+    /**
+     * 实例关联的数据同步任务Id；未关联数据同步任务时返回空
+     */
+    private String syncTaskId;
+
+    /**
+     * 实例内网域名解析到的内网IP地址&lt;br&gt;仅支持MySQL, Percona, MariaDB
+     */
+    private String instanceVip;
+
 
     /**
      * get 实例ID
@@ -749,6 +779,114 @@ public class DBInstanceAttribute  implements java.io.Serializable {
         this.tags = tags;
     }
 
+    /**
+     * get 对接的目录服务的相关信息&lt;br&gt;仅支SQL Server
+     *
+     * @return
+     */
+    public ADService getActiveDirectory() {
+        return activeDirectory;
+    }
+
+    /**
+     * set 对接的目录服务的相关信息&lt;br&gt;仅支SQL Server
+     *
+     * @param activeDirectory
+     */
+    public void setActiveDirectory(ADService activeDirectory) {
+        this.activeDirectory = activeDirectory;
+    }
+
+    /**
+     * get 只读代理服务 ID
+     *
+     * @return
+     */
+    public String getRoInstanceProxyID() {
+        return roInstanceProxyID;
+    }
+
+    /**
+     * set 只读代理服务 ID
+     *
+     * @param roInstanceProxyID
+     */
+    public void setRoInstanceProxyID(String roInstanceProxyID) {
+        this.roInstanceProxyID = roInstanceProxyID;
+    }
+
+    /**
+     * get 只读代理服务 名称
+     *
+     * @return
+     */
+    public String getRoInstanceProxyName() {
+        return roInstanceProxyName;
+    }
+
+    /**
+     * set 只读代理服务 名称
+     *
+     * @param roInstanceProxyName
+     */
+    public void setRoInstanceProxyName(String roInstanceProxyName) {
+        this.roInstanceProxyName = roInstanceProxyName;
+    }
+
+    /**
+     * get 读写分离代理服务 ID
+     *
+     * @return
+     */
+    public String getReadWriteProxyId() {
+        return readWriteProxyId;
+    }
+
+    /**
+     * set 读写分离代理服务 ID
+     *
+     * @param readWriteProxyId
+     */
+    public void setReadWriteProxyId(String readWriteProxyId) {
+        this.readWriteProxyId = readWriteProxyId;
+    }
+
+    /**
+     * get 实例关联的数据同步任务Id；未关联数据同步任务时返回空
+     *
+     * @return
+     */
+    public String getSyncTaskId() {
+        return syncTaskId;
+    }
+
+    /**
+     * set 实例关联的数据同步任务Id；未关联数据同步任务时返回空
+     *
+     * @param syncTaskId
+     */
+    public void setSyncTaskId(String syncTaskId) {
+        this.syncTaskId = syncTaskId;
+    }
+
+    /**
+     * get 实例内网域名解析到的内网IP地址&lt;br&gt;仅支持MySQL, Percona, MariaDB
+     *
+     * @return
+     */
+    public String getInstanceVip() {
+        return instanceVip;
+    }
+
+    /**
+     * set 实例内网域名解析到的内网IP地址&lt;br&gt;仅支持MySQL, Percona, MariaDB
+     *
+     * @param instanceVip
+     */
+    public void setInstanceVip(String instanceVip) {
+        this.instanceVip = instanceVip;
+    }
+
 
     /**
      * set 实例ID
@@ -1057,6 +1195,66 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     public DBInstanceAttribute tags(List<Tag> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 对接的目录服务的相关信息&lt;br&gt;仅支SQL Server
+     *
+     * @param activeDirectory
+     */
+    public DBInstanceAttribute activeDirectory(ADService activeDirectory) {
+        this.activeDirectory = activeDirectory;
+        return this;
+    }
+
+    /**
+     * set 只读代理服务 ID
+     *
+     * @param roInstanceProxyID
+     */
+    public DBInstanceAttribute roInstanceProxyID(String roInstanceProxyID) {
+        this.roInstanceProxyID = roInstanceProxyID;
+        return this;
+    }
+
+    /**
+     * set 只读代理服务 名称
+     *
+     * @param roInstanceProxyName
+     */
+    public DBInstanceAttribute roInstanceProxyName(String roInstanceProxyName) {
+        this.roInstanceProxyName = roInstanceProxyName;
+        return this;
+    }
+
+    /**
+     * set 读写分离代理服务 ID
+     *
+     * @param readWriteProxyId
+     */
+    public DBInstanceAttribute readWriteProxyId(String readWriteProxyId) {
+        this.readWriteProxyId = readWriteProxyId;
+        return this;
+    }
+
+    /**
+     * set 实例关联的数据同步任务Id；未关联数据同步任务时返回空
+     *
+     * @param syncTaskId
+     */
+    public DBInstanceAttribute syncTaskId(String syncTaskId) {
+        this.syncTaskId = syncTaskId;
+        return this;
+    }
+
+    /**
+     * set 实例内网域名解析到的内网IP地址&lt;br&gt;仅支持MySQL, Percona, MariaDB
+     *
+     * @param instanceVip
+     */
+    public DBInstanceAttribute instanceVip(String instanceVip) {
+        this.instanceVip = instanceVip;
         return this;
     }
 

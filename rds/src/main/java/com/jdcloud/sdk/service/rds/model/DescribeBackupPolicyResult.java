@@ -44,6 +44,16 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     private Integer retentionPeriod;
 
     /**
+     * binlog本地保留周期，单位天，范围1-7，默认为1
+     */
+    private Integer binlogRetentionPeriod;
+
+    /**
+     * binlog本地占用空间上限，单位%，范围1-50，默认为10
+     */
+    private Integer binlogUsageLimit;
+
+    /**
      * 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt; - 仅支持 SQL Server
      */
     private Integer cycleMode;
@@ -52,6 +62,11 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
      * 是否备份binlog&lt;br&gt;true:表示备份&lt;br&gt;false:表示不备份&lt;br&gt; - **仅支持 MySQL，Percona，MariaDB
      */
     private String backupBinlog;
+
+    /**
+     * 是否开启增强备份模式&lt;br&gt;true:当前实例已开启增强备份模式&lt;br&gt;false或为空：表示当前实例未开启增强备份模式&lt;br&gt; - **仅支持 SQL Server
+     */
+    private String enhancedBackup;
 
 
     /**
@@ -91,6 +106,42 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
     /**
+     * get binlog本地保留周期，单位天，范围1-7，默认为1
+     *
+     * @return
+     */
+    public Integer getBinlogRetentionPeriod() {
+        return binlogRetentionPeriod;
+    }
+
+    /**
+     * set binlog本地保留周期，单位天，范围1-7，默认为1
+     *
+     * @param binlogRetentionPeriod
+     */
+    public void setBinlogRetentionPeriod(Integer binlogRetentionPeriod) {
+        this.binlogRetentionPeriod = binlogRetentionPeriod;
+    }
+
+    /**
+     * get binlog本地占用空间上限，单位%，范围1-50，默认为10
+     *
+     * @return
+     */
+    public Integer getBinlogUsageLimit() {
+        return binlogUsageLimit;
+    }
+
+    /**
+     * set binlog本地占用空间上限，单位%，范围1-50，默认为10
+     *
+     * @param binlogUsageLimit
+     */
+    public void setBinlogUsageLimit(Integer binlogUsageLimit) {
+        this.binlogUsageLimit = binlogUsageLimit;
+    }
+
+    /**
      * get 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt; - 仅支持 SQL Server
      *
      * @return
@@ -126,6 +177,24 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.backupBinlog = backupBinlog;
     }
 
+    /**
+     * get 是否开启增强备份模式&lt;br&gt;true:当前实例已开启增强备份模式&lt;br&gt;false或为空：表示当前实例未开启增强备份模式&lt;br&gt; - **仅支持 SQL Server
+     *
+     * @return
+     */
+    public String getEnhancedBackup() {
+        return enhancedBackup;
+    }
+
+    /**
+     * set 是否开启增强备份模式&lt;br&gt;true:当前实例已开启增强备份模式&lt;br&gt;false或为空：表示当前实例未开启增强备份模式&lt;br&gt; - **仅支持 SQL Server
+     *
+     * @param enhancedBackup
+     */
+    public void setEnhancedBackup(String enhancedBackup) {
+        this.enhancedBackup = enhancedBackup;
+    }
+
 
     /**
      * set 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。&lt;br&gt;例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不一定在这个时间范围中
@@ -148,6 +217,26 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
     /**
+     * set binlog本地保留周期，单位天，范围1-7，默认为1
+     *
+     * @param binlogRetentionPeriod
+     */
+    public DescribeBackupPolicyResult binlogRetentionPeriod(Integer binlogRetentionPeriod) {
+        this.binlogRetentionPeriod = binlogRetentionPeriod;
+        return this;
+    }
+
+    /**
+     * set binlog本地占用空间上限，单位%，范围1-50，默认为10
+     *
+     * @param binlogUsageLimit
+     */
+    public DescribeBackupPolicyResult binlogUsageLimit(Integer binlogUsageLimit) {
+        this.binlogUsageLimit = binlogUsageLimit;
+        return this;
+    }
+
+    /**
      * set 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt; - 仅支持 SQL Server
      *
      * @param cycleMode
@@ -164,6 +253,16 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
      */
     public DescribeBackupPolicyResult backupBinlog(String backupBinlog) {
         this.backupBinlog = backupBinlog;
+        return this;
+    }
+
+    /**
+     * set 是否开启增强备份模式&lt;br&gt;true:当前实例已开启增强备份模式&lt;br&gt;false或为空：表示当前实例未开启增强备份模式&lt;br&gt; - **仅支持 SQL Server
+     *
+     * @param enhancedBackup
+     */
+    public DescribeBackupPolicyResult enhancedBackup(String enhancedBackup) {
+        this.enhancedBackup = enhancedBackup;
         return this;
     }
 

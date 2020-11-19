@@ -34,10 +34,10 @@ public class OutFile  implements java.io.Serializable {
 
     /**
      * 输出文件路径。
-路径支持占位符 YEAR、MONTH、DAY、JOBID、TASKID、TEMPLATEID，但对于转码输出路径，必须以 /vod/product 为路径前缀。
+路径支持占位符 YEAR、MONTH、DAY、JOBID、TASKID、TEMPLATEID, VIDEOID，但对于转码输出路径，必须以 vod/product 为路径前缀。
 最终生成的转码输出文件，将会是此路径和一个随机文件名共同构成。
-若转码模板中该字段配置为：/vod/product/{YEAR}{MONTH}{DAY}/{JOBID}/{TEMPLATEID}/{TASKID}
-则最终生成的输出文件可能为：/vod/product/20200921/8238/2243310/2378041/6b91f559d51b4b62ac60b98c318e9ae9.mp4
+若转码模板中该字段配置为：vod/product/{YEAR}{MONTH}{DAY}/{JOBID}/{TEMPLATEID}/{TASKID}
+则最终生成的输出文件可能为：vod/product/20200921/8238/2243310/2378041/6b91f559d51b4b62ac60b98c318e9ae9.mp4
 
      */
     private String filePath;
@@ -45,10 +45,10 @@ public class OutFile  implements java.io.Serializable {
 
     /**
      * get 输出文件路径。
-路径支持占位符 YEAR、MONTH、DAY、JOBID、TASKID、TEMPLATEID，但对于转码输出路径，必须以 /vod/product 为路径前缀。
+路径支持占位符 YEAR、MONTH、DAY、JOBID、TASKID、TEMPLATEID, VIDEOID，但对于转码输出路径，必须以 vod/product 为路径前缀。
 最终生成的转码输出文件，将会是此路径和一个随机文件名共同构成。
-若转码模板中该字段配置为：/vod/product/{YEAR}{MONTH}{DAY}/{JOBID}/{TEMPLATEID}/{TASKID}
-则最终生成的输出文件可能为：/vod/product/20200921/8238/2243310/2378041/6b91f559d51b4b62ac60b98c318e9ae9.mp4
+若转码模板中该字段配置为：vod/product/{YEAR}{MONTH}{DAY}/{JOBID}/{TEMPLATEID}/{TASKID}
+则最终生成的输出文件可能为：vod/product/20200921/8238/2243310/2378041/6b91f559d51b4b62ac60b98c318e9ae9.mp4
 
      *
      * @return
@@ -59,10 +59,10 @@ public class OutFile  implements java.io.Serializable {
 
     /**
      * set 输出文件路径。
-路径支持占位符 YEAR、MONTH、DAY、JOBID、TASKID、TEMPLATEID，但对于转码输出路径，必须以 /vod/product 为路径前缀。
+路径支持占位符 YEAR、MONTH、DAY、JOBID、TASKID、TEMPLATEID, VIDEOID，但对于转码输出路径，必须以 vod/product 为路径前缀。
 最终生成的转码输出文件，将会是此路径和一个随机文件名共同构成。
-若转码模板中该字段配置为：/vod/product/{YEAR}{MONTH}{DAY}/{JOBID}/{TEMPLATEID}/{TASKID}
-则最终生成的输出文件可能为：/vod/product/20200921/8238/2243310/2378041/6b91f559d51b4b62ac60b98c318e9ae9.mp4
+若转码模板中该字段配置为：vod/product/{YEAR}{MONTH}{DAY}/{JOBID}/{TEMPLATEID}/{TASKID}
+则最终生成的输出文件可能为：vod/product/20200921/8238/2243310/2378041/6b91f559d51b4b62ac60b98c318e9ae9.mp4
 
      *
      * @param filePath
@@ -74,10 +74,10 @@ public class OutFile  implements java.io.Serializable {
 
     /**
      * set 输出文件路径。
-路径支持占位符 YEAR、MONTH、DAY、JOBID、TASKID、TEMPLATEID，但对于转码输出路径，必须以 /vod/product 为路径前缀。
+路径支持占位符 YEAR、MONTH、DAY、JOBID、TASKID、TEMPLATEID, VIDEOID，但对于转码输出路径，必须以 vod/product 为路径前缀。
 最终生成的转码输出文件，将会是此路径和一个随机文件名共同构成。
-若转码模板中该字段配置为：/vod/product/{YEAR}{MONTH}{DAY}/{JOBID}/{TEMPLATEID}/{TASKID}
-则最终生成的输出文件可能为：/vod/product/20200921/8238/2243310/2378041/6b91f559d51b4b62ac60b98c318e9ae9.mp4
+若转码模板中该字段配置为：vod/product/{YEAR}{MONTH}{DAY}/{JOBID}/{TEMPLATEID}/{TASKID}
+则最终生成的输出文件可能为：vod/product/20200921/8238/2243310/2378041/6b91f559d51b4b62ac60b98c318e9ae9.mp4
 
      *
      * @param filePath

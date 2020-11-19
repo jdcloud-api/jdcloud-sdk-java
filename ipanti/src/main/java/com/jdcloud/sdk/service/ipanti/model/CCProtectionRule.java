@@ -78,7 +78,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     private Long singleIpLimit;
 
     /**
-     * 阻断类型, 1: 封禁, 2: 人机交互
+     * 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
      */
     private Integer blockType;
 
@@ -88,7 +88,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     private Long blockTime;
 
     /**
-     * 关联的自定义页面id
+     * 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
      */
     private String pageId;
 
@@ -261,7 +261,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * get 阻断类型, 1: 封禁, 2: 人机交互
+     * get 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
      *
      * @return
      */
@@ -270,7 +270,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * set 阻断类型, 1: 封禁, 2: 人机交互
+     * set 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
      *
      * @param blockType
      */
@@ -297,7 +297,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * get 关联的自定义页面id
+     * get 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
      *
      * @return
      */
@@ -306,7 +306,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * set 关联的自定义页面id
+     * set 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
      *
      * @param pageId
      */
@@ -424,7 +424,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * set 阻断类型, 1: 封禁, 2: 人机交互
+     * set 阻断类型, 1: 封禁并返回自定义页面, 2: 人机交互
      *
      * @param blockType
      */
@@ -444,7 +444,7 @@ public class CCProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * set 关联的自定义页面id
+     * set 关联的自定义页面id, 阻断类型为封禁时有效, 为空时封禁并返回默认页面
      *
      * @param pageId
      */

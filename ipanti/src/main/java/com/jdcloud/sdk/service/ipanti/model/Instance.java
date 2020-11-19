@@ -229,6 +229,16 @@ public class Instance  implements java.io.Serializable {
      */
     private String pageName;
 
+    /**
+     * 是否开启自定义页面, 关闭时透传状态码.  &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
+     */
+    private Integer pageStatus;
+
+    /**
+     * 每条网站规则可配的http/https端口数
+     */
+    private Integer webRulePortLimit;
+
 
     /**
      * get 实例 ID
@@ -932,6 +942,42 @@ public class Instance  implements java.io.Serializable {
         this.pageName = pageName;
     }
 
+    /**
+     * get 是否开启自定义页面, 关闭时透传状态码.  &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
+     *
+     * @return
+     */
+    public Integer getPageStatus() {
+        return pageStatus;
+    }
+
+    /**
+     * set 是否开启自定义页面, 关闭时透传状态码.  &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
+     *
+     * @param pageStatus
+     */
+    public void setPageStatus(Integer pageStatus) {
+        this.pageStatus = pageStatus;
+    }
+
+    /**
+     * get 每条网站规则可配的http/https端口数
+     *
+     * @return
+     */
+    public Integer getWebRulePortLimit() {
+        return webRulePortLimit;
+    }
+
+    /**
+     * set 每条网站规则可配的http/https端口数
+     *
+     * @param webRulePortLimit
+     */
+    public void setWebRulePortLimit(Integer webRulePortLimit) {
+        this.webRulePortLimit = webRulePortLimit;
+    }
+
 
     /**
      * set 实例 ID
@@ -1320,6 +1366,26 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance pageName(String pageName) {
         this.pageName = pageName;
+        return this;
+    }
+
+    /**
+     * set 是否开启自定义页面, 关闭时透传状态码.  &lt;br&gt;- 0: 关闭&lt;br&gt;- 1: 开启
+     *
+     * @param pageStatus
+     */
+    public Instance pageStatus(Integer pageStatus) {
+        this.pageStatus = pageStatus;
+        return this;
+    }
+
+    /**
+     * set 每条网站规则可配的http/https端口数
+     *
+     * @param webRulePortLimit
+     */
+    public Instance webRulePortLimit(Integer webRulePortLimit) {
+        this.webRulePortLimit = webRulePortLimit;
         return this;
     }
 

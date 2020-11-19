@@ -65,14 +65,14 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
     private Integer pattern;
 
     /**
-     * 命中后处理动作. &lt;br&gt;- 0: 阻断&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
+     * 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
      * Required:true
      */
     @Required
     private Integer action;
 
     /**
-     * 命中后处理值, action 为 1 时传跳转路径
+     * 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
      */
     private String actionValue;
 
@@ -82,6 +82,11 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
      */
     @Required
     private Integer status;
+
+    /**
+     * 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+     */
+    private String pageId;
 
 
     /**
@@ -175,7 +180,7 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 命中后处理动作. &lt;br&gt;- 0: 阻断&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
+     * get 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
      *
      * @return
      */
@@ -184,7 +189,7 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理动作. &lt;br&gt;- 0: 阻断&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
+     * set 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
      *
      * @param action
      */
@@ -193,7 +198,7 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 命中后处理值, action 为 1 时传跳转路径
+     * get 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
      *
      * @return
      */
@@ -202,7 +207,7 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理值, action 为 1 时传跳转路径
+     * set 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
      *
      * @param actionValue
      */
@@ -226,6 +231,24 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
      */
     public void setStatus(Integer status) {
         this.status = status;
+    }
+
+    /**
+     * get 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+     *
+     * @return
+     */
+    public String getPageId() {
+        return pageId;
+    }
+
+    /**
+     * set 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+     *
+     * @param pageId
+     */
+    public void setPageId(String pageId) {
+        this.pageId = pageId;
     }
 
 
@@ -280,7 +303,7 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理动作. &lt;br&gt;- 0: 阻断&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
+     * set 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
      *
      * @param action
      */
@@ -290,7 +313,7 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理值, action 为 1 时传跳转路径
+     * set 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
      *
      * @param actionValue
      */
@@ -306,6 +329,16 @@ public class WebBlackListRuleSpec  implements java.io.Serializable {
      */
     public WebBlackListRuleSpec status(Integer status) {
         this.status = status;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+     *
+     * @param pageId
+     */
+    public WebBlackListRuleSpec pageId(String pageId) {
+        this.pageId = pageId;
         return this;
     }
 

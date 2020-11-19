@@ -174,6 +174,56 @@ public class WebRule  implements java.io.Serializable {
      */
     private List<GeoRsRoute> geoRsRoute;
 
+    /**
+     * 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+     */
+    private String enableKeepalive;
+
+    /**
+     * http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+     */
+    private String httpVersion;
+
+    /**
+     * SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     */
+    private List<String> sslProtocols;
+
+    /**
+     * 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     */
+    private String suiteLevel;
+
+    /**
+     * 是否允许在 response 中插入 JS, 0: 关闭, 1: 开启
+     */
+    private Integer jsFingerprintEnable;
+
+    /**
+     * JS 指纹生效范围, 0: 所有页面, 1: 已配置的自定义页面
+     */
+    private Integer jsFingerprintScope;
+
+    /**
+     * CC自定义规则总开关, 0: 关闭, 1: 开启
+     */
+    private Integer ccCustomStatus;
+
+    /**
+     * 健康检查开关, 0: 关闭, 1: 开启
+     */
+    private Integer enableHealthCheck;
+
+    /**
+     * 回源连接超时时长, 单位 秒
+     */
+    private Integer proxyConnectTimeout;
+
+    /**
+     * 请求头支持下划线, 0: 关闭, 1: 开启
+     */
+    private Integer enableUnderscores;
+
 
     /**
      * get 规则 Id
@@ -679,6 +729,186 @@ public class WebRule  implements java.io.Serializable {
         this.geoRsRoute = geoRsRoute;
     }
 
+    /**
+     * get 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+     *
+     * @return
+     */
+    public String getEnableKeepalive() {
+        return enableKeepalive;
+    }
+
+    /**
+     * set 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+     *
+     * @param enableKeepalive
+     */
+    public void setEnableKeepalive(String enableKeepalive) {
+        this.enableKeepalive = enableKeepalive;
+    }
+
+    /**
+     * get http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+     *
+     * @return
+     */
+    public String getHttpVersion() {
+        return httpVersion;
+    }
+
+    /**
+     * set http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+     *
+     * @param httpVersion
+     */
+    public void setHttpVersion(String httpVersion) {
+        this.httpVersion = httpVersion;
+    }
+
+    /**
+     * get SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     *
+     * @return
+     */
+    public List<String> getSslProtocols() {
+        return sslProtocols;
+    }
+
+    /**
+     * set SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     *
+     * @param sslProtocols
+     */
+    public void setSslProtocols(List<String> sslProtocols) {
+        this.sslProtocols = sslProtocols;
+    }
+
+    /**
+     * get 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     *
+     * @return
+     */
+    public String getSuiteLevel() {
+        return suiteLevel;
+    }
+
+    /**
+     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     *
+     * @param suiteLevel
+     */
+    public void setSuiteLevel(String suiteLevel) {
+        this.suiteLevel = suiteLevel;
+    }
+
+    /**
+     * get 是否允许在 response 中插入 JS, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getJsFingerprintEnable() {
+        return jsFingerprintEnable;
+    }
+
+    /**
+     * set 是否允许在 response 中插入 JS, 0: 关闭, 1: 开启
+     *
+     * @param jsFingerprintEnable
+     */
+    public void setJsFingerprintEnable(Integer jsFingerprintEnable) {
+        this.jsFingerprintEnable = jsFingerprintEnable;
+    }
+
+    /**
+     * get JS 指纹生效范围, 0: 所有页面, 1: 已配置的自定义页面
+     *
+     * @return
+     */
+    public Integer getJsFingerprintScope() {
+        return jsFingerprintScope;
+    }
+
+    /**
+     * set JS 指纹生效范围, 0: 所有页面, 1: 已配置的自定义页面
+     *
+     * @param jsFingerprintScope
+     */
+    public void setJsFingerprintScope(Integer jsFingerprintScope) {
+        this.jsFingerprintScope = jsFingerprintScope;
+    }
+
+    /**
+     * get CC自定义规则总开关, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getCcCustomStatus() {
+        return ccCustomStatus;
+    }
+
+    /**
+     * set CC自定义规则总开关, 0: 关闭, 1: 开启
+     *
+     * @param ccCustomStatus
+     */
+    public void setCcCustomStatus(Integer ccCustomStatus) {
+        this.ccCustomStatus = ccCustomStatus;
+    }
+
+    /**
+     * get 健康检查开关, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getEnableHealthCheck() {
+        return enableHealthCheck;
+    }
+
+    /**
+     * set 健康检查开关, 0: 关闭, 1: 开启
+     *
+     * @param enableHealthCheck
+     */
+    public void setEnableHealthCheck(Integer enableHealthCheck) {
+        this.enableHealthCheck = enableHealthCheck;
+    }
+
+    /**
+     * get 回源连接超时时长, 单位 秒
+     *
+     * @return
+     */
+    public Integer getProxyConnectTimeout() {
+        return proxyConnectTimeout;
+    }
+
+    /**
+     * set 回源连接超时时长, 单位 秒
+     *
+     * @param proxyConnectTimeout
+     */
+    public void setProxyConnectTimeout(Integer proxyConnectTimeout) {
+        this.proxyConnectTimeout = proxyConnectTimeout;
+    }
+
+    /**
+     * get 请求头支持下划线, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getEnableUnderscores() {
+        return enableUnderscores;
+    }
+
+    /**
+     * set 请求头支持下划线, 0: 关闭, 1: 开启
+     *
+     * @param enableUnderscores
+     */
+    public void setEnableUnderscores(Integer enableUnderscores) {
+        this.enableUnderscores = enableUnderscores;
+    }
+
 
     /**
      * set 规则 Id
@@ -960,6 +1190,106 @@ public class WebRule  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+     *
+     * @param enableKeepalive
+     */
+    public WebRule enableKeepalive(String enableKeepalive) {
+        this.enableKeepalive = enableKeepalive;
+        return this;
+    }
+
+    /**
+     * set http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+     *
+     * @param httpVersion
+     */
+    public WebRule httpVersion(String httpVersion) {
+        this.httpVersion = httpVersion;
+        return this;
+    }
+
+    /**
+     * set SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     *
+     * @param sslProtocols
+     */
+    public WebRule sslProtocols(List<String> sslProtocols) {
+        this.sslProtocols = sslProtocols;
+        return this;
+    }
+
+    /**
+     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     *
+     * @param suiteLevel
+     */
+    public WebRule suiteLevel(String suiteLevel) {
+        this.suiteLevel = suiteLevel;
+        return this;
+    }
+
+    /**
+     * set 是否允许在 response 中插入 JS, 0: 关闭, 1: 开启
+     *
+     * @param jsFingerprintEnable
+     */
+    public WebRule jsFingerprintEnable(Integer jsFingerprintEnable) {
+        this.jsFingerprintEnable = jsFingerprintEnable;
+        return this;
+    }
+
+    /**
+     * set JS 指纹生效范围, 0: 所有页面, 1: 已配置的自定义页面
+     *
+     * @param jsFingerprintScope
+     */
+    public WebRule jsFingerprintScope(Integer jsFingerprintScope) {
+        this.jsFingerprintScope = jsFingerprintScope;
+        return this;
+    }
+
+    /**
+     * set CC自定义规则总开关, 0: 关闭, 1: 开启
+     *
+     * @param ccCustomStatus
+     */
+    public WebRule ccCustomStatus(Integer ccCustomStatus) {
+        this.ccCustomStatus = ccCustomStatus;
+        return this;
+    }
+
+    /**
+     * set 健康检查开关, 0: 关闭, 1: 开启
+     *
+     * @param enableHealthCheck
+     */
+    public WebRule enableHealthCheck(Integer enableHealthCheck) {
+        this.enableHealthCheck = enableHealthCheck;
+        return this;
+    }
+
+    /**
+     * set 回源连接超时时长, 单位 秒
+     *
+     * @param proxyConnectTimeout
+     */
+    public WebRule proxyConnectTimeout(Integer proxyConnectTimeout) {
+        this.proxyConnectTimeout = proxyConnectTimeout;
+        return this;
+    }
+
+    /**
+     * set 请求头支持下划线, 0: 关闭, 1: 开启
+     *
+     * @param enableUnderscores
+     */
+    public WebRule enableUnderscores(Integer enableUnderscores) {
+        this.enableUnderscores = enableUnderscores;
+        return this;
+    }
+
 
     /**
      * add item to HTTP 协议的端口号, 如 80,81
@@ -1019,6 +1349,18 @@ public class WebRule  implements java.io.Serializable {
             this.geoRsRoute = new ArrayList<>();
         }
         this.geoRsRoute.add(geoRsRoute);
+    }
+
+    /**
+     * add item to SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     *
+     * @param sslProtocol
+     */
+    public void addSslProtocol(String sslProtocol) {
+        if (this.sslProtocols == null) {
+            this.sslProtocols = new ArrayList<>();
+        }
+        this.sslProtocols.add(sslProtocol);
     }
 
 }
