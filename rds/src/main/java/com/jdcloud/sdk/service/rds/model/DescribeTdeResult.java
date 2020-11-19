@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import com.jdcloud.sdk.service.rds.model.StatusDetail;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -34,13 +35,18 @@ public class DescribeTdeResult extends JdcloudResult implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
+     * 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending；已开启未生效时返回inProgress
      */
     private String status;
 
+    /**
+     * TDE加密已开启未生效时返回实例重启状态的详细进度；TDE加密已开启未生效或未开启时返回空;&lt;当实例类型为MySQL时有效&gt;
+     */
+    private StatusDetail statusDetail;
+
 
     /**
-     * get 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
+     * get 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending；已开启未生效时返回inProgress
      *
      * @return
      */
@@ -49,7 +55,7 @@ public class DescribeTdeResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
+     * set 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending；已开启未生效时返回inProgress
      *
      * @param status
      */
@@ -57,14 +63,42 @@ public class DescribeTdeResult extends JdcloudResult implements java.io.Serializ
         this.status = status;
     }
 
+    /**
+     * get TDE加密已开启未生效时返回实例重启状态的详细进度；TDE加密已开启未生效或未开启时返回空;&lt;当实例类型为MySQL时有效&gt;
+     *
+     * @return
+     */
+    public StatusDetail getStatusDetail() {
+        return statusDetail;
+    }
 
     /**
-     * set 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending
+     * set TDE加密已开启未生效时返回实例重启状态的详细进度；TDE加密已开启未生效或未开启时返回空;&lt;当实例类型为MySQL时有效&gt;
+     *
+     * @param statusDetail
+     */
+    public void setStatusDetail(StatusDetail statusDetail) {
+        this.statusDetail = statusDetail;
+    }
+
+
+    /**
+     * set 当前实例是否已经开启TDE功能，如已开启，返回true；如未开启，返回false；开启中，返回pending；已开启未生效时返回inProgress
      *
      * @param status
      */
     public DescribeTdeResult status(String status) {
         this.status = status;
+        return this;
+    }
+
+    /**
+     * set TDE加密已开启未生效时返回实例重启状态的详细进度；TDE加密已开启未生效或未开启时返回空;&lt;当实例类型为MySQL时有效&gt;
+     *
+     * @param statusDetail
+     */
+    public DescribeTdeResult statusDetail(StatusDetail statusDetail) {
+        this.statusDetail = statusDetail;
         return this;
     }
 

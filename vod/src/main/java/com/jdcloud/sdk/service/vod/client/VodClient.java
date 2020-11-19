@@ -166,6 +166,9 @@ import com.jdcloud.sdk.service.vod.client.ListWatermarksExecutor;
 import com.jdcloud.sdk.service.vod.model.GetHttpSslRequest;
 import com.jdcloud.sdk.service.vod.model.GetHttpSslResponse;
 import com.jdcloud.sdk.service.vod.client.GetHttpSslExecutor;
+import com.jdcloud.sdk.service.vod.model.GetVideoSourceInfoRequest;
+import com.jdcloud.sdk.service.vod.model.GetVideoSourceInfoResponse;
+import com.jdcloud.sdk.service.vod.client.GetVideoSourceInfoExecutor;
 import com.jdcloud.sdk.service.vod.model.SetHeaderRequest;
 import com.jdcloud.sdk.service.vod.model.SetHeaderResponse;
 import com.jdcloud.sdk.service.vod.client.SetHeaderExecutor;
@@ -776,6 +779,17 @@ public class VodClient extends JdcloudClient {
      */
     public GetHttpSslResponse getHttpSsl(GetHttpSslRequest request) throws JdcloudSdkException {
         return new GetHttpSslExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取视频源文件信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVideoSourceInfoResponse getVideoSourceInfo(GetVideoSourceInfoRequest request) throws JdcloudSdkException {
+        return new GetVideoSourceInfoExecutor().client(this).execute(request);
     }
 
     /**

@@ -59,6 +59,11 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     private Boolean storageEncrypted;
 
     /**
+     * 变配后的子网ID
+     */
+    private String subnetId;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -146,6 +151,24 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 变配后的子网ID
+     *
+     * @return
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
+
+    /**
+     * set 变配后的子网ID
+     *
+     * @param subnetId
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -219,6 +242,16 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
      */
     public ModifyInstanceSpecRequest storageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
+        return this;
+    }
+
+    /**
+     * set 变配后的子网ID
+     *
+     * @param subnetId
+     */
+    public ModifyInstanceSpecRequest subnetId(String subnetId) {
+        this.subnetId = subnetId;
         return this;
     }
 

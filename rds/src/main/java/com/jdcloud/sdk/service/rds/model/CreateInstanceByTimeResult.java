@@ -38,6 +38,11 @@ public class CreateInstanceByTimeResult extends JdcloudResult implements java.io
      */
     private String instanceId;
 
+    /**
+     * 生成的订单号
+     */
+    private String orderId;
+
 
     /**
      * get 新创建的实例ID
@@ -57,6 +62,24 @@ public class CreateInstanceByTimeResult extends JdcloudResult implements java.io
         this.instanceId = instanceId;
     }
 
+    /**
+     * get 生成的订单号
+     *
+     * @return
+     */
+    public String getOrderId() {
+        return orderId;
+    }
+
+    /**
+     * set 生成的订单号
+     *
+     * @param orderId
+     */
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
 
     /**
      * set 新创建的实例ID
@@ -65,6 +88,16 @@ public class CreateInstanceByTimeResult extends JdcloudResult implements java.io
      */
     public CreateInstanceByTimeResult instanceId(String instanceId) {
         this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 生成的订单号
+     *
+     * @param orderId
+     */
+    public CreateInstanceByTimeResult orderId(String orderId) {
+        this.orderId = orderId;
         return this;
     }
 

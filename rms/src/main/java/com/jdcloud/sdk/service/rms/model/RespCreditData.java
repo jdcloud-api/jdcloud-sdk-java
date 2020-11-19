@@ -35,7 +35,7 @@ public class RespCreditData  implements java.io.Serializable {
     /**
      * 资质ID
      */
-    private String creditId;
+    private String signId;
 
 
     /**
@@ -43,27 +43,27 @@ public class RespCreditData  implements java.io.Serializable {
      *
      * @return
      */
-    public String getCreditId() {
-        return creditId;
+    public String getSignId() {
+        return signId;
     }
 
     /**
      * set 资质ID
      *
-     * @param creditId
+     * @param signId
      */
-    public void setCreditId(String creditId) {
-        this.creditId = creditId;
+    public void setSignId(String signId) {
+        this.signId = signId;
     }
 
 
     /**
      * set 资质ID
      *
-     * @param creditId
+     * @param signId
      */
-    public RespCreditData creditId(String creditId) {
-        this.creditId = creditId;
+    public RespCreditData signId(String signId) {
+        this.signId = signId;
         return this;
     }
 

@@ -57,6 +57,11 @@ public class DBInstanceInternal  implements java.io.Serializable {
      */
     private String instanceStatus;
 
+    /**
+     * 实例的网络状态；0表示实例的网络处于中断状态，1表示实例的网络处于正常状态
+     */
+    private Integer accessibleStatus;
+
 
     /**
      * get 实例ID
@@ -148,6 +153,24 @@ public class DBInstanceInternal  implements java.io.Serializable {
         this.instanceStatus = instanceStatus;
     }
 
+    /**
+     * get 实例的网络状态；0表示实例的网络处于中断状态，1表示实例的网络处于正常状态
+     *
+     * @return
+     */
+    public Integer getAccessibleStatus() {
+        return accessibleStatus;
+    }
+
+    /**
+     * set 实例的网络状态；0表示实例的网络处于中断状态，1表示实例的网络处于正常状态
+     *
+     * @param accessibleStatus
+     */
+    public void setAccessibleStatus(Integer accessibleStatus) {
+        this.accessibleStatus = accessibleStatus;
+    }
+
 
     /**
      * set 实例ID
@@ -196,6 +219,16 @@ public class DBInstanceInternal  implements java.io.Serializable {
      */
     public DBInstanceInternal instanceStatus(String instanceStatus) {
         this.instanceStatus = instanceStatus;
+        return this;
+    }
+
+    /**
+     * set 实例的网络状态；0表示实例的网络处于中断状态，1表示实例的网络处于正常状态
+     *
+     * @param accessibleStatus
+     */
+    public DBInstanceInternal accessibleStatus(Integer accessibleStatus) {
+        this.accessibleStatus = accessibleStatus;
         return this;
     }
 

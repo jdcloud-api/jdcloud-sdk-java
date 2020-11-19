@@ -65,12 +65,12 @@ public class WebBlackListRule  implements java.io.Serializable {
     private Integer pattern;
 
     /**
-     * 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
+     * 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
      */
     private Integer action;
 
     /**
-     * 命中后处理值, action 为 2 时 actionValue 为跳转路径
+     * 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
      */
     private String actionValue;
 
@@ -83,6 +83,16 @@ public class WebBlackListRule  implements java.io.Serializable {
      * geo 黑名单地域列表, mode 不为 geo 或未设置时此字段为空
      */
     private List<Geo> geoList;
+
+    /**
+     * 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+     */
+    private String pageId;
+
+    /**
+     * 关联的自定义页面名称, 命中后处理动作为封禁并返回自定义页面时有效
+     */
+    private String pageName;
 
 
     /**
@@ -194,7 +204,7 @@ public class WebBlackListRule  implements java.io.Serializable {
     }
 
     /**
-     * get 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
+     * get 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
      *
      * @return
      */
@@ -203,7 +213,7 @@ public class WebBlackListRule  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
+     * set 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
      *
      * @param action
      */
@@ -212,7 +222,7 @@ public class WebBlackListRule  implements java.io.Serializable {
     }
 
     /**
-     * get 命中后处理值, action 为 2 时 actionValue 为跳转路径
+     * get 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
      *
      * @return
      */
@@ -221,7 +231,7 @@ public class WebBlackListRule  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理值, action 为 2 时 actionValue 为跳转路径
+     * set 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
      *
      * @param actionValue
      */
@@ -263,6 +273,42 @@ public class WebBlackListRule  implements java.io.Serializable {
      */
     public void setGeoList(List<Geo> geoList) {
         this.geoList = geoList;
+    }
+
+    /**
+     * get 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+     *
+     * @return
+     */
+    public String getPageId() {
+        return pageId;
+    }
+
+    /**
+     * set 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+     *
+     * @param pageId
+     */
+    public void setPageId(String pageId) {
+        this.pageId = pageId;
+    }
+
+    /**
+     * get 关联的自定义页面名称, 命中后处理动作为封禁并返回自定义页面时有效
+     *
+     * @return
+     */
+    public String getPageName() {
+        return pageName;
+    }
+
+    /**
+     * set 关联的自定义页面名称, 命中后处理动作为封禁并返回自定义页面时有效
+     *
+     * @param pageName
+     */
+    public void setPageName(String pageName) {
+        this.pageName = pageName;
     }
 
 
@@ -327,7 +373,7 @@ public class WebBlackListRule  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理动作. &lt;br&gt;- 0: 放行&lt;br&gt;- 1: CC 防护
+     * set 命中后处理动作. &lt;br&gt;- 0: 封禁并返回自定义页面&lt;br&gt;- 1: 跳转&lt;br&gt;- 2: 验证码
      *
      * @param action
      */
@@ -337,7 +383,7 @@ public class WebBlackListRule  implements java.io.Serializable {
     }
 
     /**
-     * set 命中后处理值, action 为 2 时 actionValue 为跳转路径
+     * set 命中后处理值, 命中后处理动作为跳转时有效, 表示跳转路径
      *
      * @param actionValue
      */
@@ -363,6 +409,26 @@ public class WebBlackListRule  implements java.io.Serializable {
      */
     public WebBlackListRule geoList(List<Geo> geoList) {
         this.geoList = geoList;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面id, 命中后处理动作为封禁并返回自定义页面时有效, 为空时表示默认页面
+     *
+     * @param pageId
+     */
+    public WebBlackListRule pageId(String pageId) {
+        this.pageId = pageId;
+        return this;
+    }
+
+    /**
+     * set 关联的自定义页面名称, 命中后处理动作为封禁并返回自定义页面时有效
+     *
+     * @param pageName
+     */
+    public WebBlackListRule pageName(String pageName) {
+        this.pageName = pageName;
         return this;
     }
 

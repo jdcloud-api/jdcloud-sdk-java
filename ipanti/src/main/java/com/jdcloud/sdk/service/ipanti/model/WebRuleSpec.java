@@ -55,12 +55,12 @@ public class WebRuleSpec  implements java.io.Serializable {
     private WebRuleProtocol protocol;
 
     /**
-     * HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口
      */
     private List<Integer> port;
 
     /**
-     * HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口
      */
     private List<Integer> httpsPort;
 
@@ -120,6 +120,41 @@ public class WebRuleSpec  implements java.io.Serializable {
      */
     private List<GeoRsRoute> geoRsRoute;
 
+    /**
+     * 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+     */
+    private String enableKeepalive;
+
+    /**
+     * http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+     */
+    private String httpVersion;
+
+    /**
+     * SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     */
+    private List<String> sslProtocols;
+
+    /**
+     * 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     */
+    private String suiteLevel;
+
+    /**
+     * 健康检查开关, 0: 关闭, 1: 开启
+     */
+    private Integer enableHealthCheck;
+
+    /**
+     * 回源连接超时时长, 单位 秒
+     */
+    private Integer proxyConnectTimeout;
+
+    /**
+     * 请求头支持下划线, 0: 关闭, 1: 开启
+     */
+    private Integer enableUnderscores;
+
 
     /**
      * get 高防 IP
@@ -176,7 +211,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * get HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口
      *
      * @return
      */
@@ -185,7 +220,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * set HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口
      *
      * @param port
      */
@@ -194,7 +229,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * get HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口
      *
      * @return
      */
@@ -203,7 +238,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * set HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口
      *
      * @param httpsPort
      */
@@ -391,6 +426,132 @@ public class WebRuleSpec  implements java.io.Serializable {
         this.geoRsRoute = geoRsRoute;
     }
 
+    /**
+     * get 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+     *
+     * @return
+     */
+    public String getEnableKeepalive() {
+        return enableKeepalive;
+    }
+
+    /**
+     * set 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+     *
+     * @param enableKeepalive
+     */
+    public void setEnableKeepalive(String enableKeepalive) {
+        this.enableKeepalive = enableKeepalive;
+    }
+
+    /**
+     * get http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+     *
+     * @return
+     */
+    public String getHttpVersion() {
+        return httpVersion;
+    }
+
+    /**
+     * set http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+     *
+     * @param httpVersion
+     */
+    public void setHttpVersion(String httpVersion) {
+        this.httpVersion = httpVersion;
+    }
+
+    /**
+     * get SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     *
+     * @return
+     */
+    public List<String> getSslProtocols() {
+        return sslProtocols;
+    }
+
+    /**
+     * set SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     *
+     * @param sslProtocols
+     */
+    public void setSslProtocols(List<String> sslProtocols) {
+        this.sslProtocols = sslProtocols;
+    }
+
+    /**
+     * get 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     *
+     * @return
+     */
+    public String getSuiteLevel() {
+        return suiteLevel;
+    }
+
+    /**
+     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     *
+     * @param suiteLevel
+     */
+    public void setSuiteLevel(String suiteLevel) {
+        this.suiteLevel = suiteLevel;
+    }
+
+    /**
+     * get 健康检查开关, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getEnableHealthCheck() {
+        return enableHealthCheck;
+    }
+
+    /**
+     * set 健康检查开关, 0: 关闭, 1: 开启
+     *
+     * @param enableHealthCheck
+     */
+    public void setEnableHealthCheck(Integer enableHealthCheck) {
+        this.enableHealthCheck = enableHealthCheck;
+    }
+
+    /**
+     * get 回源连接超时时长, 单位 秒
+     *
+     * @return
+     */
+    public Integer getProxyConnectTimeout() {
+        return proxyConnectTimeout;
+    }
+
+    /**
+     * set 回源连接超时时长, 单位 秒
+     *
+     * @param proxyConnectTimeout
+     */
+    public void setProxyConnectTimeout(Integer proxyConnectTimeout) {
+        this.proxyConnectTimeout = proxyConnectTimeout;
+    }
+
+    /**
+     * get 请求头支持下划线, 0: 关闭, 1: 开启
+     *
+     * @return
+     */
+    public Integer getEnableUnderscores() {
+        return enableUnderscores;
+    }
+
+    /**
+     * set 请求头支持下划线, 0: 关闭, 1: 开启
+     *
+     * @param enableUnderscores
+     */
+    public void setEnableUnderscores(Integer enableUnderscores) {
+        this.enableUnderscores = enableUnderscores;
+    }
+
 
     /**
      * set 高防 IP
@@ -423,7 +584,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * set HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口
      *
      * @param port
      */
@@ -433,7 +594,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * set HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口
      *
      * @param httpsPort
      */
@@ -542,9 +703,79 @@ public class WebRuleSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 是否开启回源长连接, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- on: 开启&lt;br&gt;- off: 关闭
+     *
+     * @param enableKeepalive
+     */
+    public WebRuleSpec enableKeepalive(String enableKeepalive) {
+        this.enableKeepalive = enableKeepalive;
+        return this;
+    }
 
     /**
-     * add item to HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口, 最多添加 5 个
+     * set http 版本, protocol 选项开启 https 时生效, 可取值 http1 或 http2
+     *
+     * @param httpVersion
+     */
+    public WebRuleSpec httpVersion(String httpVersion) {
+        this.httpVersion = httpVersion;
+        return this;
+    }
+
+    /**
+     * set SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     *
+     * @param sslProtocols
+     */
+    public WebRuleSpec sslProtocols(List<String> sslProtocols) {
+        this.sslProtocols = sslProtocols;
+        return this;
+    }
+
+    /**
+     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     *
+     * @param suiteLevel
+     */
+    public WebRuleSpec suiteLevel(String suiteLevel) {
+        this.suiteLevel = suiteLevel;
+        return this;
+    }
+
+    /**
+     * set 健康检查开关, 0: 关闭, 1: 开启
+     *
+     * @param enableHealthCheck
+     */
+    public WebRuleSpec enableHealthCheck(Integer enableHealthCheck) {
+        this.enableHealthCheck = enableHealthCheck;
+        return this;
+    }
+
+    /**
+     * set 回源连接超时时长, 单位 秒
+     *
+     * @param proxyConnectTimeout
+     */
+    public WebRuleSpec proxyConnectTimeout(Integer proxyConnectTimeout) {
+        this.proxyConnectTimeout = proxyConnectTimeout;
+        return this;
+    }
+
+    /**
+     * set 请求头支持下划线, 0: 关闭, 1: 开启
+     *
+     * @param enableUnderscores
+     */
+    public WebRuleSpec enableUnderscores(Integer enableUnderscores) {
+        this.enableUnderscores = enableUnderscores;
+        return this;
+    }
+
+
+    /**
+     * add item to HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口
      *
      * @param port
      */
@@ -556,7 +787,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口, 最多添加 5 个
+     * add item to HTTPS 协议的端口号, 如443, 8443; 如果 protocol.https 为 true, 至少配置一个端口
      *
      * @param httpsPort
      */
@@ -601,6 +832,18 @@ public class WebRuleSpec  implements java.io.Serializable {
             this.geoRsRoute = new ArrayList<>();
         }
         this.geoRsRoute.add(geoRsRoute);
+    }
+
+    /**
+     * add item to SSL协议类型, protocol 选项开启 https 时生效, 可取值SSLv2,SSLv3,TLSv1.0,TLSv1.1,TLSv1.2
+     *
+     * @param sslProtocol
+     */
+    public void addSslProtocol(String sslProtocol) {
+        if (this.sslProtocols == null) {
+            this.sslProtocols = new ArrayList<>();
+        }
+        this.sslProtocols.add(sslProtocol);
     }
 
 }

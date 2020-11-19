@@ -61,6 +61,12 @@ import com.jdcloud.sdk.service.rds.client.CreateAccountExecutor;
 import com.jdcloud.sdk.service.rds.model.GrantPrivilegeRequest;
 import com.jdcloud.sdk.service.rds.model.GrantPrivilegeResponse;
 import com.jdcloud.sdk.service.rds.client.GrantPrivilegeExecutor;
+import com.jdcloud.sdk.service.rds.model.DisableReadWriteProxyInternetAccessRequest;
+import com.jdcloud.sdk.service.rds.model.DisableReadWriteProxyInternetAccessResponse;
+import com.jdcloud.sdk.service.rds.client.DisableReadWriteProxyInternetAccessExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeReadWriteProxyAttributeRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeReadWriteProxyAttributeResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeReadWriteProxyAttributeExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeAzsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeAzsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeAzsExecutor;
@@ -91,6 +97,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeLatestRestoreTimeExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeErrorLogsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeErrorLogsExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeInstancesInternalRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeInstancesInternalResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeInstancesInternalExecutor;
 import com.jdcloud.sdk.service.rds.model.EnableTdeRequest;
 import com.jdcloud.sdk.service.rds.model.EnableTdeResponse;
 import com.jdcloud.sdk.service.rds.client.EnableTdeExecutor;
@@ -130,6 +139,9 @@ import com.jdcloud.sdk.service.rds.client.SetImportFileSharedExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeDatabasesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeDatabasesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeDatabasesExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeDisasterSyncAttributeRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeDisasterSyncAttributeResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeDisasterSyncAttributeExecutor;
 import com.jdcloud.sdk.service.rds.model.EnableSSLRequest;
 import com.jdcloud.sdk.service.rds.model.EnableSSLResponse;
 import com.jdcloud.sdk.service.rds.client.EnableSSLExecutor;
@@ -145,9 +157,15 @@ import com.jdcloud.sdk.service.rds.client.CreateAuditExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyInstanceNameRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyInstanceNameResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyInstanceNameExecutor;
+import com.jdcloud.sdk.service.rds.model.DeleteReadWriteProxyRequest;
+import com.jdcloud.sdk.service.rds.model.DeleteReadWriteProxyResponse;
+import com.jdcloud.sdk.service.rds.client.DeleteReadWriteProxyExecutor;
 import com.jdcloud.sdk.service.rds.model.EnableAuditRequest;
 import com.jdcloud.sdk.service.rds.model.EnableAuditResponse;
 import com.jdcloud.sdk.service.rds.client.EnableAuditExecutor;
+import com.jdcloud.sdk.service.rds.model.EnableReadWriteProxyInternetAccessRequest;
+import com.jdcloud.sdk.service.rds.model.EnableReadWriteProxyInternetAccessResponse;
+import com.jdcloud.sdk.service.rds.client.EnableReadWriteProxyInternetAccessExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateBackupRequest;
 import com.jdcloud.sdk.service.rds.model.CreateBackupResponse;
 import com.jdcloud.sdk.service.rds.client.CreateBackupExecutor;
@@ -169,12 +187,18 @@ import com.jdcloud.sdk.service.rds.client.GrantAccountPrivilegeExecutor;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromBackupRequest;
 import com.jdcloud.sdk.service.rds.model.RestoreDatabaseFromBackupResponse;
 import com.jdcloud.sdk.service.rds.client.RestoreDatabaseFromBackupExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateReadWriteProxyRequest;
+import com.jdcloud.sdk.service.rds.model.CreateReadWriteProxyResponse;
+import com.jdcloud.sdk.service.rds.client.CreateReadWriteProxyExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeWhiteListRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeWhiteListResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeWhiteListExecutor;
 import com.jdcloud.sdk.service.rds.model.FailoverInstanceRequest;
 import com.jdcloud.sdk.service.rds.model.FailoverInstanceResponse;
 import com.jdcloud.sdk.service.rds.client.FailoverInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.EnableEnhancedBackupRequest;
+import com.jdcloud.sdk.service.rds.model.EnableEnhancedBackupResponse;
+import com.jdcloud.sdk.service.rds.client.EnableEnhancedBackupExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeInterceptRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeInterceptResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeInterceptExecutor;
@@ -193,9 +217,15 @@ import com.jdcloud.sdk.service.rds.client.DescribeBinlogsExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteInstanceRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteInstanceResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteInstanceExecutor;
+import com.jdcloud.sdk.service.rds.model.ChangeToMasterRequest;
+import com.jdcloud.sdk.service.rds.model.ChangeToMasterResponse;
+import com.jdcloud.sdk.service.rds.client.ChangeToMasterExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateParameterGroupRequest;
 import com.jdcloud.sdk.service.rds.model.CreateParameterGroupResponse;
 import com.jdcloud.sdk.service.rds.client.CreateParameterGroupExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyAccountForOpsRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyAccountForOpsResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyAccountForOpsExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupsRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupsResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeBackupsExecutor;
@@ -226,6 +256,15 @@ import com.jdcloud.sdk.service.rds.client.DescribeTablesExecutor;
 import com.jdcloud.sdk.service.rds.model.RevokePrivilegeRequest;
 import com.jdcloud.sdk.service.rds.model.RevokePrivilegeResponse;
 import com.jdcloud.sdk.service.rds.client.RevokePrivilegeExecutor;
+import com.jdcloud.sdk.service.rds.model.DetachNetworkRequest;
+import com.jdcloud.sdk.service.rds.model.DetachNetworkResponse;
+import com.jdcloud.sdk.service.rds.client.DetachNetworkExecutor;
+import com.jdcloud.sdk.service.rds.model.CreateAccountForOpsRequest;
+import com.jdcloud.sdk.service.rds.model.CreateAccountForOpsResponse;
+import com.jdcloud.sdk.service.rds.client.CreateAccountForOpsExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyActiveDirectoryRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyActiveDirectoryResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyActiveDirectoryExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeAuditRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeAuditResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeAuditExecutor;
@@ -265,9 +304,15 @@ import com.jdcloud.sdk.service.rds.client.CreateSuperAccountExecutor;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordRequest;
 import com.jdcloud.sdk.service.rds.model.ResetPasswordResponse;
 import com.jdcloud.sdk.service.rds.client.ResetPasswordExecutor;
+import com.jdcloud.sdk.service.rds.model.DisableSSLRequest;
+import com.jdcloud.sdk.service.rds.model.DisableSSLResponse;
+import com.jdcloud.sdk.service.rds.client.DisableSSLExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyWhiteListResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyWhiteListExecutor;
+import com.jdcloud.sdk.service.rds.model.AttachNetworkRequest;
+import com.jdcloud.sdk.service.rds.model.AttachNetworkResponse;
+import com.jdcloud.sdk.service.rds.client.AttachNetworkExecutor;
 import com.jdcloud.sdk.service.rds.model.EnableInterceptRequest;
 import com.jdcloud.sdk.service.rds.model.EnableInterceptResponse;
 import com.jdcloud.sdk.service.rds.client.EnableInterceptExecutor;
@@ -277,6 +322,15 @@ import com.jdcloud.sdk.service.rds.client.RebootInstanceExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeSSLRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeSSLResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeSSLExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeReadWriteProxiesRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeReadWriteProxiesResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeReadWriteProxiesExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeAccountsForOpsRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeAccountsForOpsResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeAccountsForOpsExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeBackupChargeRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeBackupChargeResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeBackupChargeExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteParameterGroupRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteParameterGroupResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteParameterGroupExecutor;
@@ -298,6 +352,12 @@ import com.jdcloud.sdk.service.rds.client.DescribeBackupSynchronicitiesExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterGroupParametersRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeParameterGroupParametersResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeParameterGroupParametersExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeBackupSpaceRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeBackupSpaceResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeBackupSpaceExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyReadWriteProxyRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyReadWriteProxyResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyReadWriteProxyExecutor;
 import com.jdcloud.sdk.service.rds.model.DisableInternetAccessRequest;
 import com.jdcloud.sdk.service.rds.model.DisableInternetAccessResponse;
 import com.jdcloud.sdk.service.rds.client.DisableInternetAccessExecutor;
@@ -330,7 +390,7 @@ public class RdsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "rds.jdcloud-api.com";
     public final static String ServiceName = "rds";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -483,6 +543,28 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 关闭读写分离代理服务的外网访问功能。关闭后，用户无法通过 Internet 连接读写分离代理服务，但可以在京东云内网通过内网域名连接&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableReadWriteProxyInternetAccessResponse disableReadWriteProxyInternetAccess(DisableReadWriteProxyInternetAccessRequest request) throws JdcloudSdkException {
+        return new DisableReadWriteProxyInternetAccessExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看指定RDS读写分离代理详情&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeReadWriteProxyAttributeResponse describeReadWriteProxyAttribute(DescribeReadWriteProxyAttributeRequest request) throws JdcloudSdkException {
+        return new DescribeReadWriteProxyAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看指定地域下各种RDS数据库支持的可用区，不同类型的RDS支持的可用区不一样
      *
      * @param request
@@ -590,6 +672,17 @@ public class RdsClient extends JdcloudClient {
      */
     public DescribeErrorLogsResponse describeErrorLogs(DescribeErrorLogsRequest request) throws JdcloudSdkException {
         return new DescribeErrorLogsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取当前账号下所有 RDS 实例及 MySQL /PostgreSQL 只读实例的概要信息，不会返回计费相关信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstancesInternalResponse describeInstancesInternal(DescribeInstancesInternalRequest request) throws JdcloudSdkException {
+        return new DescribeInstancesInternalExecutor().client(this).execute(request);
     }
 
     /**
@@ -736,6 +829,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 查询MySQL实例的数据同步任务详情。&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDisasterSyncAttributeResponse describeDisasterSyncAttribute(DescribeDisasterSyncAttributeRequest request) throws JdcloudSdkException {
+        return new DescribeDisasterSyncAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 开启数据库的加密连接, 同时会重启数据库实例
      *
      * @param request
@@ -780,7 +884,7 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
-     * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
+     * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
      * @param request
      * @return
@@ -788,6 +892,17 @@ public class RdsClient extends JdcloudClient {
      */
     public ModifyInstanceNameResponse modifyInstanceName(ModifyInstanceNameRequest request) throws JdcloudSdkException {
         return new ModifyInstanceNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除RDS 实例的读写分离代理&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteReadWriteProxyResponse deleteReadWriteProxy(DeleteReadWriteProxyRequest request) throws JdcloudSdkException {
+        return new DeleteReadWriteProxyExecutor().client(this).execute(request);
     }
 
     /**
@@ -799,6 +914,17 @@ public class RdsClient extends JdcloudClient {
      */
     public EnableAuditResponse enableAudit(EnableAuditRequest request) throws JdcloudSdkException {
         return new EnableAuditExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启读写分离代理服务的外网访问功能。开启后，用户可以通过 internet 连接读写分离代理服务&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableReadWriteProxyInternetAccessResponse enableReadWriteProxyInternetAccess(EnableReadWriteProxyInternetAccessRequest request) throws JdcloudSdkException {
+        return new EnableReadWriteProxyInternetAccessExecutor().client(this).execute(request);
     }
 
     /**
@@ -879,6 +1005,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 创建数据库读写分离代理服务&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateReadWriteProxyResponse createReadWriteProxy(CreateReadWriteProxyRequest request) throws JdcloudSdkException {
+        return new CreateReadWriteProxyExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查看RDS实例当前白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
      *
      * @param request
@@ -898,6 +1035,17 @@ public class RdsClient extends JdcloudClient {
      */
     public FailoverInstanceResponse failoverInstance(FailoverInstanceRequest request) throws JdcloudSdkException {
         return new FailoverInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启增强备份模式，开启后，备份保留天数可大于7天。 免费备份额度外的备份将按照备份占用的空间收费。开启后，不支持关闭。&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableEnhancedBackupResponse enableEnhancedBackup(EnableEnhancedBackupRequest request) throws JdcloudSdkException {
+        return new EnableEnhancedBackupExecutor().client(this).execute(request);
     }
 
     /**
@@ -967,6 +1115,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 将RDS灾备实例提升为主实例，需要重启实例才能生效。可以结合主备切换的功能，轮流重启备机，降低对业务的影响&lt;br&gt;**注意：如果实例正在进行备份，那么重启主实例将会终止备份操作。**可以查看备份策略中的备份开始时间确认是否有备份正在运行。如果确实需要在实例备份时重启主实例，建议重启后，手工进行一次实例的全备。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ChangeToMasterResponse changeToMaster(ChangeToMasterRequest request) throws JdcloudSdkException {
+        return new ChangeToMasterExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建一个参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
@@ -975,6 +1134,17 @@ public class RdsClient extends JdcloudClient {
      */
     public CreateParameterGroupResponse createParameterGroup(CreateParameterGroupRequest request) throws JdcloudSdkException {
         return new CreateParameterGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改数据库临时运维账号属性。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyAccountForOpsResponse modifyAccountForOps(ModifyAccountForOpsRequest request) throws JdcloudSdkException {
+        return new ModifyAccountForOpsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1085,6 +1255,39 @@ public class RdsClient extends JdcloudClient {
      */
     public RevokePrivilegeResponse revokePrivilege(RevokePrivilegeRequest request) throws JdcloudSdkException {
         return new RevokePrivilegeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 当 RDS 实例欠费或者到期了，关闭RDS实例的网络访问功能。关闭后，用户无法通过域名访问RDS
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DetachNetworkResponse detachNetwork(DetachNetworkRequest request) throws JdcloudSdkException {
+        return new DetachNetworkExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据库临时运维账号。&lt;br&gt;如果在使用数据库过程中需要京东云提供技术支持,并且需要对您的实例进行操作，您可以把临时运维账号提供给技术支持人员。&lt;br&gt;临时运维账号默认授予全局Select、Process权限，且账号只能通过控制台或者OpenAPI进行创建、删除账号以及对账号授权等，用户不能通过SQL语句对账号进行相关操作。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAccountForOpsResponse createAccountForOps(CreateAccountForOpsRequest request) throws JdcloudSdkException {
+        return new CreateAccountForOpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改SQL Server对接的Active Directory 服务。支持SQL Server 2012 及2012以上以上的版本。&lt;br&gt;注意：修改目录服务后，需重启SQL Server实例才能生效
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyActiveDirectoryResponse modifyActiveDirectory(ModifyActiveDirectoryRequest request) throws JdcloudSdkException {
+        return new ModifyActiveDirectoryExecutor().client(this).execute(request);
     }
 
     /**
@@ -1231,6 +1434,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 关闭数据库的加密连接, 需要重启数据库实例才生效&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableSSLResponse disableSSL(DisableSSLRequest request) throws JdcloudSdkException {
+        return new DisableSSLExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
      *
      * @param request
@@ -1239,6 +1453,17 @@ public class RdsClient extends JdcloudClient {
      */
     public ModifyWhiteListResponse modifyWhiteList(ModifyWhiteListRequest request) throws JdcloudSdkException {
         return new ModifyWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 当 RDS 实例不欠费了或者续费了，开启RDS实例的网络访问功能。开启后，用户可以通过域名正常访问RDS
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AttachNetworkResponse attachNetwork(AttachNetworkRequest request) throws JdcloudSdkException {
+        return new AttachNetworkExecutor().client(this).execute(request);
     }
 
     /**
@@ -1272,6 +1497,39 @@ public class RdsClient extends JdcloudClient {
      */
     public DescribeSSLResponse describeSSL(DescribeSSLRequest request) throws JdcloudSdkException {
         return new DescribeSSLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看RDS读写分离代理列表&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeReadWriteProxiesResponse describeReadWriteProxies(DescribeReadWriteProxiesRequest request) throws JdcloudSdkException {
+        return new DescribeReadWriteProxiesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看某个RDS实例下的运维账号信息。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAccountsForOpsResponse describeAccountsForOps(DescribeAccountsForOpsRequest request) throws JdcloudSdkException {
+        return new DescribeAccountsForOpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询该用户pin关联的备份的计费信息。仅当该用户开启了增强备份后有效。如用户未开启增强备份，返回null&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackupChargeResponse describeBackupCharge(DescribeBackupChargeRequest request) throws JdcloudSdkException {
+        return new DescribeBackupChargeExecutor().client(this).execute(request);
     }
 
     /**
@@ -1349,6 +1607,28 @@ public class RdsClient extends JdcloudClient {
      */
     public DescribeParameterGroupParametersResponse describeParameterGroupParameters(DescribeParameterGroupParametersRequest request) throws JdcloudSdkException {
         return new DescribeParameterGroupParametersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 当实例开启增强备份模式后，查询实例备份的空间使用情况&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBackupSpaceResponse describeBackupSpace(DescribeBackupSpaceRequest request) throws JdcloudSdkException {
+        return new DescribeBackupSpaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改数据库读写分离代理服务配置&lt;br&gt;- 仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyReadWriteProxyResponse modifyReadWriteProxy(ModifyReadWriteProxyRequest request) throws JdcloudSdkException {
+        return new ModifyReadWriteProxyExecutor().client(this).execute(request);
     }
 
     /**

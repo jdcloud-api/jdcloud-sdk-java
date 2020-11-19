@@ -40,6 +40,26 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     private String startWindow;
 
     /**
+     * binlog本地保留周期，单位小时,范围1-168
+     */
+    private Integer binlogRetentionPeriod;
+
+    /**
+     * binlog本地占用空间上限，单位%，范围1-50
+     */
+    private Integer binlogUsageLimit;
+
+    /**
+     * 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     */
+    private Integer retentionPeriod;
+
+    /**
+     * 自动备份循环模式&lt;br&gt;1：表示每天都是全量备份&lt;br&gt;2：表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     */
+    private Integer cycleMode;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -70,6 +90,78 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
      */
     public void setStartWindow(String startWindow) {
         this.startWindow = startWindow;
+    }
+
+    /**
+     * get binlog本地保留周期，单位小时,范围1-168
+     *
+     * @return
+     */
+    public Integer getBinlogRetentionPeriod() {
+        return binlogRetentionPeriod;
+    }
+
+    /**
+     * set binlog本地保留周期，单位小时,范围1-168
+     *
+     * @param binlogRetentionPeriod
+     */
+    public void setBinlogRetentionPeriod(Integer binlogRetentionPeriod) {
+        this.binlogRetentionPeriod = binlogRetentionPeriod;
+    }
+
+    /**
+     * get binlog本地占用空间上限，单位%，范围1-50
+     *
+     * @return
+     */
+    public Integer getBinlogUsageLimit() {
+        return binlogUsageLimit;
+    }
+
+    /**
+     * set binlog本地占用空间上限，单位%，范围1-50
+     *
+     * @param binlogUsageLimit
+     */
+    public void setBinlogUsageLimit(Integer binlogUsageLimit) {
+        this.binlogUsageLimit = binlogUsageLimit;
+    }
+
+    /**
+     * get 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public Integer getRetentionPeriod() {
+        return retentionPeriod;
+    }
+
+    /**
+     * set 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param retentionPeriod
+     */
+    public void setRetentionPeriod(Integer retentionPeriod) {
+        this.retentionPeriod = retentionPeriod;
+    }
+
+    /**
+     * get 自动备份循环模式&lt;br&gt;1：表示每天都是全量备份&lt;br&gt;2：表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     *
+     * @return
+     */
+    public Integer getCycleMode() {
+        return cycleMode;
+    }
+
+    /**
+     * set 自动备份循环模式&lt;br&gt;1：表示每天都是全量备份&lt;br&gt;2：表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param cycleMode
+     */
+    public void setCycleMode(Integer cycleMode) {
+        this.cycleMode = cycleMode;
     }
 
     /**
@@ -116,6 +208,46 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
      */
     public ModifyBackupPolicyRequest startWindow(String startWindow) {
         this.startWindow = startWindow;
+        return this;
+    }
+
+    /**
+     * set binlog本地保留周期，单位小时,范围1-168
+     *
+     * @param binlogRetentionPeriod
+     */
+    public ModifyBackupPolicyRequest binlogRetentionPeriod(Integer binlogRetentionPeriod) {
+        this.binlogRetentionPeriod = binlogRetentionPeriod;
+        return this;
+    }
+
+    /**
+     * set binlog本地占用空间上限，单位%，范围1-50
+     *
+     * @param binlogUsageLimit
+     */
+    public ModifyBackupPolicyRequest binlogUsageLimit(Integer binlogUsageLimit) {
+        this.binlogUsageLimit = binlogUsageLimit;
+        return this;
+    }
+
+    /**
+     * set 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param retentionPeriod
+     */
+    public ModifyBackupPolicyRequest retentionPeriod(Integer retentionPeriod) {
+        this.retentionPeriod = retentionPeriod;
+        return this;
+    }
+
+    /**
+     * set 自动备份循环模式&lt;br&gt;1：表示每天都是全量备份&lt;br&gt;2：表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
+     *
+     * @param cycleMode
+     */
+    public ModifyBackupPolicyRequest cycleMode(Integer cycleMode) {
+        this.cycleMode = cycleMode;
         return this;
     }
 

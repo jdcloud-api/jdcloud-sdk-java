@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -62,6 +65,11 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
      * 每页显示的数据条数，默认为10，取值范围：10、20、30、50、100
      */
     private Integer pageSize;
+
+    /**
+     * 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+     */
+    private List<Sort> sorts;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -169,6 +177,24 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
+     * get 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+     *
+     * @return
+     */
+    public List<Sort> getSorts() {
+        return sorts;
+    }
+
+    /**
+     * set 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+     *
+     * @param sorts
+     */
+    public void setSorts(List<Sort> sorts) {
+        this.sorts = sorts;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -256,6 +282,16 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
+     * set 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+     *
+     * @param sorts
+     */
+    public DescribeSlowLogAttributesRequest sorts(List<Sort> sorts) {
+        this.sorts = sorts;
+        return this;
+    }
+
+    /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
@@ -275,5 +311,17 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
         return this;
     }
 
+
+    /**
+     * add item to 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
+     *
+     * @param sort
+     */
+    public void addSort(Sort sort) {
+        if (this.sorts == null) {
+            this.sorts = new ArrayList<>();
+        }
+        this.sorts.add(sort);
+    }
 
 }

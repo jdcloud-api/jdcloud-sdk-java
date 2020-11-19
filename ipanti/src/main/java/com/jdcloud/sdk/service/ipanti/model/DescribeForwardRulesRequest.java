@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.ipanti.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -53,6 +56,13 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
      * 查询类型值
      */
     private String searchValue;
+
+    /**
+     * 排序属性：
+port - 按转发端口排序，默认不排序,asc表示按转发端口升序，desc表示按转发端口降序
+
+     */
+    private List<Sort> sorts;
 
     /**
      * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
@@ -142,6 +152,28 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     }
 
     /**
+     * get 排序属性：
+port - 按转发端口排序，默认不排序,asc表示按转发端口升序，desc表示按转发端口降序
+
+     *
+     * @return
+     */
+    public List<Sort> getSorts() {
+        return sorts;
+    }
+
+    /**
+     * set 排序属性：
+port - 按转发端口排序，默认不排序,asc表示按转发端口升序，desc表示按转发端口降序
+
+     *
+     * @param sorts
+     */
+    public void setSorts(List<Sort> sorts) {
+        this.sorts = sorts;
+    }
+
+    /**
      * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
@@ -219,6 +251,18 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
     }
 
     /**
+     * set 排序属性：
+port - 按转发端口排序，默认不排序,asc表示按转发端口升序，desc表示按转发端口降序
+
+     *
+     * @param sorts
+     */
+    public DescribeForwardRulesRequest sorts(List<Sort> sorts) {
+        this.sorts = sorts;
+        return this;
+    }
+
+    /**
      * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
@@ -238,5 +282,19 @@ public class DescribeForwardRulesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
+    /**
+     * add item to 排序属性：
+port - 按转发端口排序，默认不排序,asc表示按转发端口升序，desc表示按转发端口降序
+
+     *
+     * @param sort
+     */
+    public void addSort(Sort sort) {
+        if (this.sorts == null) {
+            this.sorts = new ArrayList<>();
+        }
+        this.sorts.add(sort);
+    }
 
 }

@@ -93,6 +93,11 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     private Integer count;
 
     /**
+     * 只读代理服务的ID，缺省值为 “NULL”，表示不绑定代理服务
+     */
+    private String roInstanceProxy;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -288,6 +293,24 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get 只读代理服务的ID，缺省值为 “NULL”，表示不绑定代理服务
+     *
+     * @return
+     */
+    public String getRoInstanceProxy() {
+        return roInstanceProxy;
+    }
+
+    /**
+     * set 只读代理服务的ID，缺省值为 “NULL”，表示不绑定代理服务
+     *
+     * @param roInstanceProxy
+     */
+    public void setRoInstanceProxy(String roInstanceProxy) {
+        this.roInstanceProxy = roInstanceProxy;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -421,6 +444,16 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
      */
     public CreateROInstanceRequest count(Integer count) {
         this.count = count;
+        return this;
+    }
+
+    /**
+     * set 只读代理服务的ID，缺省值为 “NULL”，表示不绑定代理服务
+     *
+     * @param roInstanceProxy
+     */
+    public CreateROInstanceRequest roInstanceProxy(String roInstanceProxy) {
+        this.roInstanceProxy = roInstanceProxy;
         return this;
     }
 
