@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.jmr.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoResponse;
+import com.jdcloud.sdk.service.jmr.model.ClusterReductionResponse;
 
 /**
- * 获取对应版本的软件清单信息
+ * 缩容集群
  */
-class GetSoftwareInfoExecutor extends JdcloudExecutor {
+class ClusterReductionExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "GET";
+        return "POST";
     }
 
     @Override
     public String url() {
-        return "/regions/{regionId}/softwareInfo";
+        return "/regions/{regionId}/cluster:reduction";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return GetSoftwareInfoResponse.class;
+        return ClusterReductionResponse.class;
     }
 }

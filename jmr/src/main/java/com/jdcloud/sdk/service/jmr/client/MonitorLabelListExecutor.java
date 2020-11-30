@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.jmr.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.jmr.model.GetSoftwareInfoResponse;
+import com.jdcloud.sdk.service.jmr.model.MonitorLabelListResponse;
 
 /**
- * 获取对应版本的软件清单信息
+ * 查询JMR的监控模板信息
  */
-class GetSoftwareInfoExecutor extends JdcloudExecutor {
+class MonitorLabelListExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "GET";
+        return "POST";
     }
 
     @Override
     public String url() {
-        return "/regions/{regionId}/softwareInfo";
+        return "/regions/{regionId}/monitorLabelList/{clusterId}";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return GetSoftwareInfoResponse.class;
+        return MonitorLabelListResponse.class;
     }
 }

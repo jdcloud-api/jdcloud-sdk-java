@@ -24,23 +24,49 @@
 
 package com.jdcloud.sdk.service.jmr.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.jmr.model.MonitorLabelDetail;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 扩容集群
+ * 查询JMR的监控模板信息
  */
-public class ClusterExpansionResult extends JdcloudResult implements java.io.Serializable {
+public class MonitorLabelListResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 是否开始扩容集群
+     * data
+     */
+    private List<MonitorLabelDetail> data;
+
+    /**
+     * status
      */
     private Boolean status;
 
 
     /**
-     * get 是否开始扩容集群
+     * get data
+     *
+     * @return
+     */
+    public List<MonitorLabelDetail> getData() {
+        return data;
+    }
+
+    /**
+     * set data
+     *
+     * @param data
+     */
+    public void setData(List<MonitorLabelDetail> data) {
+        this.data = data;
+    }
+
+    /**
+     * get status
      *
      * @return
      */
@@ -49,7 +75,7 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 是否开始扩容集群
+     * set status
      *
      * @param status
      */
@@ -59,14 +85,36 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set 是否开始扩容集群
+     * set data
+     *
+     * @param data
+     */
+    public MonitorLabelListResult data(List<MonitorLabelDetail> data) {
+        this.data = data;
+        return this;
+    }
+
+    /**
+     * set status
      *
      * @param status
      */
-    public ClusterExpansionResult status(Boolean status) {
+    public MonitorLabelListResult status(Boolean status) {
         this.status = status;
         return this;
     }
 
+
+    /**
+     * add item to data
+     *
+     * @param data
+     */
+    public void addData(MonitorLabelDetail data) {
+        if (this.data == null) {
+            this.data = new ArrayList<>();
+        }
+        this.data.add(data);
+    }
 
 }

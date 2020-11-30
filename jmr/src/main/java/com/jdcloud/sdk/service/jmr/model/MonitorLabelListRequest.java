@@ -28,18 +28,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取对应版本的软件清单信息
+ * 查询JMR的监控模板信息
  */
-public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Serializable {
+public class MonitorLabelListRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * JMR软件版本号
-     * Required:true
-     */
-    @Required
-    private String version;
 
     /**
      * 地域ID
@@ -48,24 +41,13 @@ public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Se
     @Required
     private String regionId;
 
-
     /**
-     * get JMR软件版本号
-     *
-     * @return
+     * 集群ID
+     * Required:true
      */
-    public String getVersion() {
-        return version;
-    }
+    @Required
+    private String clusterId;
 
-    /**
-     * set JMR软件版本号
-     *
-     * @param version
-     */
-    public void setVersion(String version) {
-        this.version = version;
-    }
 
     /**
      * get 地域ID
@@ -85,24 +67,42 @@ public class GetSoftwareInfoRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
     }
 
+    /**
+     * get 集群ID
+     *
+     * @return
+     */
+    public String getClusterId() {
+        return clusterId;
+    }
 
     /**
-     * set JMR软件版本号
+     * set 集群ID
      *
-     * @param version
+     * @param clusterId
      */
-    public GetSoftwareInfoRequest version(String version) {
-        this.version = version;
-        return this;
+    public void setClusterId(String clusterId) {
+        this.clusterId = clusterId;
     }
+
 
     /**
      * set 地域ID
      *
      * @param regionId
      */
-    public GetSoftwareInfoRequest regionId(String regionId) {
+    public MonitorLabelListRequest regionId(String regionId) {
         this.regionId = regionId;
+        return this;
+    }
+
+    /**
+     * set 集群ID
+     *
+     * @param clusterId
+     */
+    public MonitorLabelListRequest clusterId(String clusterId) {
+        this.clusterId = clusterId;
         return this;
     }
 

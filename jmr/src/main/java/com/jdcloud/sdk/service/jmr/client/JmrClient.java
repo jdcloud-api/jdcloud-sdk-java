@@ -34,6 +34,12 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListRequest;
 import com.jdcloud.sdk.service.jmr.model.GetJmrVersionListResponse;
 import com.jdcloud.sdk.service.jmr.client.GetJmrVersionListExecutor;
+import com.jdcloud.sdk.service.jmr.model.MonitorLabelListRequest;
+import com.jdcloud.sdk.service.jmr.model.MonitorLabelListResponse;
+import com.jdcloud.sdk.service.jmr.client.MonitorLabelListExecutor;
+import com.jdcloud.sdk.service.jmr.model.ClusterReductionRequest;
+import com.jdcloud.sdk.service.jmr.model.ClusterReductionResponse;
+import com.jdcloud.sdk.service.jmr.client.ClusterReductionExecutor;
 import com.jdcloud.sdk.service.jmr.model.DescribeClustersRequest;
 import com.jdcloud.sdk.service.jmr.model.DescribeClustersResponse;
 import com.jdcloud.sdk.service.jmr.client.DescribeClustersExecutor;
@@ -114,6 +120,28 @@ public class JmrClient extends JdcloudClient {
      */
     public GetJmrVersionListResponse getJmrVersionList(GetJmrVersionListRequest request) throws JdcloudSdkException {
         return new GetJmrVersionListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询JMR的监控模板信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public MonitorLabelListResponse monitorLabelList(MonitorLabelListRequest request) throws JdcloudSdkException {
+        return new MonitorLabelListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 缩容集群
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ClusterReductionResponse clusterReduction(ClusterReductionRequest request) throws JdcloudSdkException {
+        return new ClusterReductionExecutor().client(this).execute(request);
     }
 
     /**
