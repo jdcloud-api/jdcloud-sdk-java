@@ -27,20 +27,20 @@ package com.jdcloud.sdk.service.jmr.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 扩容集群
+ * 缩容集群
  */
-public class ClusterExpansionResult extends JdcloudResult implements java.io.Serializable {
+public class ClusterReductionResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 是否开始扩容集群
+     * 是否开始缩容集群
      */
     private Boolean status;
 
 
     /**
-     * get 是否开始扩容集群
+     * get 是否开始缩容集群
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set 是否开始扩容集群
+     * set 是否开始缩容集群
      *
      * @param status
      */
@@ -59,11 +59,11 @@ public class ClusterExpansionResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set 是否开始扩容集群
+     * set 是否开始缩容集群
      *
      * @param status
      */
-    public ClusterExpansionResult status(Boolean status) {
+    public ClusterReductionResult status(Boolean status) {
         this.status = status;
         return this;
     }

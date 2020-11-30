@@ -25,22 +25,22 @@
 package com.jdcloud.sdk.service.jmr.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.jmr.model.ClusterExpansion;
+import com.jdcloud.sdk.service.jmr.model.ClusterReduction;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 扩容集群
+ * 缩容集群
  */
-public class ClusterExpansionRequest extends JdcloudRequest implements java.io.Serializable {
+public class ClusterReductionRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 描述集群扩容信息
+     * 描述集群缩容信息
      * Required:true
      */
     @Required
-    private ClusterExpansion clusterExpansion;
+    private ClusterReduction clusterReduction;
 
     /**
      * 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
@@ -57,21 +57,21 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 描述集群扩容信息
+     * get 描述集群缩容信息
      *
      * @return
      */
-    public ClusterExpansion getClusterExpansion() {
-        return clusterExpansion;
+    public ClusterReduction getClusterReduction() {
+        return clusterReduction;
     }
 
     /**
-     * set 描述集群扩容信息
+     * set 描述集群缩容信息
      *
-     * @param clusterExpansion
+     * @param clusterReduction
      */
-    public void setClusterExpansion(ClusterExpansion clusterExpansion) {
-        this.clusterExpansion = clusterExpansion;
+    public void setClusterReduction(ClusterReduction clusterReduction) {
+        this.clusterReduction = clusterReduction;
     }
 
     /**
@@ -114,12 +114,12 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 描述集群扩容信息
+     * set 描述集群缩容信息
      *
-     * @param clusterExpansion
+     * @param clusterReduction
      */
-    public ClusterExpansionRequest clusterExpansion(ClusterExpansion clusterExpansion) {
-        this.clusterExpansion = clusterExpansion;
+    public ClusterReductionRequest clusterReduction(ClusterReduction clusterReduction) {
+        this.clusterReduction = clusterReduction;
         return this;
     }
 
@@ -129,7 +129,7 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
      *
      * @param clientToken
      */
-    public ClusterExpansionRequest clientToken(String clientToken) {
+    public ClusterReductionRequest clientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -139,7 +139,7 @@ public class ClusterExpansionRequest extends JdcloudRequest implements java.io.S
      *
      * @param regionId
      */
-    public ClusterExpansionRequest regionId(String regionId) {
+    public ClusterReductionRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
