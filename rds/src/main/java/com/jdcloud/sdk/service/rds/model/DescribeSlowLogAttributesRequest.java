@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.common.model.Sort;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -70,6 +71,11 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
      * 慢日志明细的排序规则，不指定时按上报日志的时间戳降序返回所有的日志
      */
     private List<Sort> sorts;
+
+    /**
+     * filters
+     */
+    private List<Filter> filters;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -195,6 +201,24 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
+     * get filters
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set filters
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -292,6 +316,16 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
     }
 
     /**
+     * set filters
+     *
+     * @param filters
+     */
+    public DescribeSlowLogAttributesRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
@@ -322,6 +356,18 @@ public class DescribeSlowLogAttributesRequest extends JdcloudRequest implements 
             this.sorts = new ArrayList<>();
         }
         this.sorts.add(sort);
+    }
+
+    /**
+     * add item to filters
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
     }
 
 }

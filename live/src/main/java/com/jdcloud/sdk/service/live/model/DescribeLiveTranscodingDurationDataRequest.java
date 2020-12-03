@@ -35,6 +35,11 @@ public class DescribeLiveTranscodingDurationDataRequest extends JdcloudRequest i
     private static final long serialVersionUID = 1L;
 
     /**
+     * 播放域名
+     */
+    private String domainName;
+
+    /**
      * 码率档次，可以查询指定档次的转码时长，取值：
 - video_h264_4k_1
 - video_h264_2k_1
@@ -70,6 +75,24 @@ public class DescribeLiveTranscodingDurationDataRequest extends JdcloudRequest i
      */
     private String endTime;
 
+
+    /**
+     * get 播放域名
+     *
+     * @return
+     */
+    public String getDomainName() {
+        return domainName;
+    }
+
+    /**
+     * set 播放域名
+     *
+     * @param domainName
+     */
+    public void setDomainName(String domainName) {
+        this.domainName = domainName;
+    }
 
     /**
      * get 码率档次，可以查询指定档次的转码时长，取值：
@@ -171,6 +194,16 @@ public class DescribeLiveTranscodingDurationDataRequest extends JdcloudRequest i
         this.endTime = endTime;
     }
 
+
+    /**
+     * set 播放域名
+     *
+     * @param domainName
+     */
+    public DescribeLiveTranscodingDurationDataRequest domainName(String domainName) {
+        this.domainName = domainName;
+        return this;
+    }
 
     /**
      * set 码率档次，可以查询指定档次的转码时长，取值：

@@ -28,17 +28,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询地域/运营商分组统计数据
+ * 查询流分组统计数据(上行)
  */
-public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeLivePublishStatisticGroupByStreamRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
      * 播放域名
-     * Required:true
      */
-    @Required
     private String domainName;
 
     /**
@@ -62,12 +60,6 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
 
      */
     private String locationName;
-
-    /**
-     * 查询的流协议类型，取值范围：&quot;rtmp,hdl,hls&quot;，多个时以逗号分隔
-
-     */
-    private String protocolType;
 
     /**
      * 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
@@ -192,26 +184,6 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
     }
 
     /**
-     * get 查询的流协议类型，取值范围：&quot;rtmp,hdl,hls&quot;，多个时以逗号分隔
-
-     *
-     * @return
-     */
-    public String getProtocolType() {
-        return protocolType;
-    }
-
-    /**
-     * set 查询的流协议类型，取值范围：&quot;rtmp,hdl,hls&quot;，多个时以逗号分隔
-
-     *
-     * @param protocolType
-     */
-    public void setProtocolType(String protocolType) {
-        this.protocolType = protocolType;
-    }
-
-    /**
      * get 查询周期，当前取值范围：“oneMin,fiveMin,halfHour,hour,twoHour,sixHour,day,followTime”，分别表示1min，5min，半小时，1小时，2小时，6小时，1天，跟随时间。默认为空，表示fiveMin。当传入followTime时，表示按Endtime-StartTime的周期，只返回一个点
 
      *
@@ -291,7 +263,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
      *
      * @param domainName
      */
-    public DescribeLiveStatisticGroupByAreaIspRequest domainName(String domainName) {
+    public DescribeLivePublishStatisticGroupByStreamRequest domainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
@@ -301,7 +273,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
      *
      * @param appName
      */
-    public DescribeLiveStatisticGroupByAreaIspRequest appName(String appName) {
+    public DescribeLivePublishStatisticGroupByStreamRequest appName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -311,7 +283,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
      *
      * @param streamName
      */
-    public DescribeLiveStatisticGroupByAreaIspRequest streamName(String streamName) {
+    public DescribeLivePublishStatisticGroupByStreamRequest streamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
@@ -322,7 +294,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
      *
      * @param ispName
      */
-    public DescribeLiveStatisticGroupByAreaIspRequest ispName(String ispName) {
+    public DescribeLivePublishStatisticGroupByStreamRequest ispName(String ispName) {
         this.ispName = ispName;
         return this;
     }
@@ -333,19 +305,8 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
      *
      * @param locationName
      */
-    public DescribeLiveStatisticGroupByAreaIspRequest locationName(String locationName) {
+    public DescribeLivePublishStatisticGroupByStreamRequest locationName(String locationName) {
         this.locationName = locationName;
-        return this;
-    }
-
-    /**
-     * set 查询的流协议类型，取值范围：&quot;rtmp,hdl,hls&quot;，多个时以逗号分隔
-
-     *
-     * @param protocolType
-     */
-    public DescribeLiveStatisticGroupByAreaIspRequest protocolType(String protocolType) {
-        this.protocolType = protocolType;
         return this;
     }
 
@@ -355,7 +316,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
      *
      * @param period
      */
-    public DescribeLiveStatisticGroupByAreaIspRequest period(String period) {
+    public DescribeLivePublishStatisticGroupByStreamRequest period(String period) {
         this.period = period;
         return this;
     }
@@ -369,7 +330,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
      *
      * @param startTime
      */
-    public DescribeLiveStatisticGroupByAreaIspRequest startTime(String startTime) {
+    public DescribeLivePublishStatisticGroupByStreamRequest startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -384,7 +345,7 @@ public class DescribeLiveStatisticGroupByAreaIspRequest extends JdcloudRequest i
      *
      * @param endTime
      */
-    public DescribeLiveStatisticGroupByAreaIspRequest endTime(String endTime) {
+    public DescribeLivePublishStatisticGroupByStreamRequest endTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
