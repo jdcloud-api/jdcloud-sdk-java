@@ -75,6 +75,11 @@ public class Backup  implements java.io.Serializable {
     private String backupMode;
 
     /**
+     * 备份方法，支持物理备份和快照备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **仅支持 MySQL、MariaDB、Percona**
+     */
+    private String backupMethod;
+
+    /**
      * 备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      */
     private String backupUnit;
@@ -235,6 +240,24 @@ public class Backup  implements java.io.Serializable {
     }
 
     /**
+     * get 备份方法，支持物理备份和快照备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **仅支持 MySQL、MariaDB、Percona**
+     *
+     * @return
+     */
+    public String getBackupMethod() {
+        return backupMethod;
+    }
+
+    /**
+     * set 备份方法，支持物理备份和快照备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **仅支持 MySQL、MariaDB、Percona**
+     *
+     * @param backupMethod
+     */
+    public void setBackupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
+    }
+
+    /**
      * get 备份粒度，实例备份或者多库备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **SQL Server支持**&lt;br&gt;- **MySQL不支持**
      *
      * @return
@@ -366,6 +389,16 @@ public class Backup  implements java.io.Serializable {
      */
     public Backup backupMode(String backupMode) {
         this.backupMode = backupMode;
+        return this;
+    }
+
+    /**
+     * set 备份方法，支持物理备份和快照备份，请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)&lt;br&gt;- **仅支持 MySQL、MariaDB、Percona**
+     *
+     * @param backupMethod
+     */
+    public Backup backupMethod(String backupMethod) {
+        this.backupMethod = backupMethod;
         return this;
     }
 

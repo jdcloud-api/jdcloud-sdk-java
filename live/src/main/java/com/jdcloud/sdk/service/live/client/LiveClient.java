@@ -343,6 +343,9 @@ import com.jdcloud.sdk.service.live.client.InterruptLiveStreamExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveDomainRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveDomainResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveDomainExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveRecordingsRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveRecordingsResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveRecordingsExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamBandwidthRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamBandwidthResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveTranscodeStreamBandwidthExecutor;
@@ -355,6 +358,9 @@ import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamQualityDetect
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamNotifyConfigExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLivePublishStatisticGroupByStreamRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLivePublishStatisticGroupByStreamResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLivePublishStatisticGroupByStreamExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamSnapshotTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamSnapshotTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamSnapshotTemplatesExecutor;
@@ -384,7 +390,7 @@ public class LiveClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "live.jdcloud-api.com";
     public final static String ServiceName = "live";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -1704,6 +1710,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 删除录制文件
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveRecordingsResponse deleteLiveRecordings(DeleteLiveRecordingsRequest request) throws JdcloudSdkException {
+        return new DeleteLiveRecordingsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询转码流播放带宽
 - 查询1分钟粒度的数据时，时间跨度不超过7天，其他粒度时时间跨度不超过30天
 
@@ -1748,6 +1766,17 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveStreamNotifyConfigResponse describeLiveStreamNotifyConfig(DescribeLiveStreamNotifyConfigRequest request) throws JdcloudSdkException {
         return new DescribeLiveStreamNotifyConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询流分组统计数据(上行)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLivePublishStatisticGroupByStreamResponse describeLivePublishStatisticGroupByStream(DescribeLivePublishStatisticGroupByStreamRequest request) throws JdcloudSdkException {
+        return new DescribeLivePublishStatisticGroupByStreamExecutor().client(this).execute(request);
     }
 
     /**
