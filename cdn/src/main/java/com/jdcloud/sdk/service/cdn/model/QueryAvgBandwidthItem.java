@@ -33,12 +33,12 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * startTime
+     * 五分钟序列，202003021100 表示 从 2020-03-02 11:00 到 2020-03-02 11:05 这个时段
      */
     private String startTime;
 
     /**
-     * avgbandwidth
+     * 平均带宽kbps
      */
     private Double avgbandwidth;
 
@@ -49,7 +49,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
 
 
     /**
-     * get startTime
+     * get 五分钟序列，202003021100 表示 从 2020-03-02 11:00 到 2020-03-02 11:05 这个时段
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
     }
 
     /**
-     * set startTime
+     * set 五分钟序列，202003021100 表示 从 2020-03-02 11:00 到 2020-03-02 11:05 这个时段
      *
      * @param startTime
      */
@@ -67,7 +67,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
     }
 
     /**
-     * get avgbandwidth
+     * get 平均带宽kbps
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
     }
 
     /**
-     * set avgbandwidth
+     * set 平均带宽kbps
      *
      * @param avgbandwidth
      */
@@ -104,7 +104,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
 
 
     /**
-     * set startTime
+     * set 五分钟序列，202003021100 表示 从 2020-03-02 11:00 到 2020-03-02 11:05 这个时段
      *
      * @param startTime
      */
@@ -114,7 +114,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
     }
 
     /**
-     * set avgbandwidth
+     * set 平均带宽kbps
      *
      * @param avgbandwidth
      */

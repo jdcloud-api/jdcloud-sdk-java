@@ -73,6 +73,16 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
      */
     private Integer pageSize;
 
+    /**
+     * 查询的账号范围
+     */
+    private String accountType;
+
+    /**
+     * 查询的子账号，多个用逗号隔开
+     */
+    private String subUsers;
+
 
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -218,6 +228,42 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.pageSize = pageSize;
     }
 
+    /**
+     * get 查询的账号范围
+     *
+     * @return
+     */
+    public String getAccountType() {
+        return accountType;
+    }
+
+    /**
+     * set 查询的账号范围
+     *
+     * @param accountType
+     */
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    /**
+     * get 查询的子账号，多个用逗号隔开
+     *
+     * @return
+     */
+    public String getSubUsers() {
+        return subUsers;
+    }
+
+    /**
+     * set 查询的子账号，多个用逗号隔开
+     *
+     * @param subUsers
+     */
+    public void setSubUsers(String subUsers) {
+        this.subUsers = subUsers;
+    }
+
 
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -296,6 +342,26 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
      */
     public QueryRefreshTaskRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 查询的账号范围
+     *
+     * @param accountType
+     */
+    public QueryRefreshTaskRequest accountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+
+    /**
+     * set 查询的子账号，多个用逗号隔开
+     *
+     * @param subUsers
+     */
+    public QueryRefreshTaskRequest subUsers(String subUsers) {
+        this.subUsers = subUsers;
         return this;
     }
 
