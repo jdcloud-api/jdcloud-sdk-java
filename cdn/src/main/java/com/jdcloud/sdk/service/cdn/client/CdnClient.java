@@ -88,6 +88,9 @@ import com.jdcloud.sdk.service.cdn.client.UpdateWafWhiteRuleExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetDomainConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.SetDomainConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.SetDomainConfigExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryCustomizedDirBandWidthRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryCustomizedDirBandWidthResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryCustomizedDirBandWidthExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetRefreshLimitRequest;
 import com.jdcloud.sdk.service.cdn.model.SetRefreshLimitResponse;
 import com.jdcloud.sdk.service.cdn.client.SetRefreshLimitExecutor;
@@ -259,6 +262,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryLivePrefetchTaskExecutor;
 import com.jdcloud.sdk.service.cdn.model.CreateWafWhiteRuleRequest;
 import com.jdcloud.sdk.service.cdn.model.CreateWafWhiteRuleResponse;
 import com.jdcloud.sdk.service.cdn.client.CreateWafWhiteRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListV2Request;
+import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListV2Response;
+import com.jdcloud.sdk.service.cdn.client.QueryAreaIspListV2Executor;
 import com.jdcloud.sdk.service.cdn.model.QueryAvgBandwidthForPCdnRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryAvgBandwidthForPCdnResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryAvgBandwidthForPCdnExecutor;
@@ -424,6 +430,9 @@ import com.jdcloud.sdk.service.cdn.client.DeleteDomainExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourcePathRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourcePathResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryBackSourcePathExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryJBoxAvgBandwidthRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryJBoxAvgBandwidthResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryJBoxAvgBandwidthExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetSourceAuthConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.SetSourceAuthConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.SetSourceAuthConfigExecutor;
@@ -834,6 +843,17 @@ public class CdnClient extends JdcloudClient {
      */
     public SetDomainConfigResponse setDomainConfig(SetDomainConfigRequest request) throws JdcloudSdkException {
         return new SetDomainConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询定制的目录带宽，仅有部分用户支持该功能
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryCustomizedDirBandWidthResponse queryCustomizedDirBandWidth(QueryCustomizedDirBandWidthRequest request) throws JdcloudSdkException {
+        return new QueryCustomizedDirBandWidthExecutor().client(this).execute(request);
     }
 
     /**
@@ -1464,6 +1484,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 查找地域运营商列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryAreaIspListV2Response queryAreaIspListV2(QueryAreaIspListV2Request request) throws JdcloudSdkException {
+        return new QueryAreaIspListV2Executor().client(this).execute(request);
+    }
+
+    /**
      * 查询平均带宽
      *
      * @param request
@@ -2066,6 +2097,17 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryBackSourcePathResponse queryBackSourcePath(QueryBackSourcePathRequest request) throws JdcloudSdkException {
         return new QueryBackSourcePathExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询平均带宽
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryJBoxAvgBandwidthResponse queryJBoxAvgBandwidth(QueryJBoxAvgBandwidthRequest request) throws JdcloudSdkException {
+        return new QueryJBoxAvgBandwidthExecutor().client(this).execute(request);
     }
 
     /**
