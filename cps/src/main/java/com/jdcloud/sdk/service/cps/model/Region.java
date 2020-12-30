@@ -35,12 +35,12 @@ public class Region  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域代码, 如 cn-east-1
+     * 地域代码, 如 cn-north-1
      */
     private String region;
 
     /**
-     * 地域名称，如 华东一区
+     * 地域名称，如华北-北京
      */
     private String regionName;
 
@@ -51,7 +51,7 @@ public class Region  implements java.io.Serializable {
 
 
     /**
-     * get 地域代码, 如 cn-east-1
+     * get 地域代码, 如 cn-north-1
      *
      * @return
      */
@@ -60,7 +60,7 @@ public class Region  implements java.io.Serializable {
     }
 
     /**
-     * set 地域代码, 如 cn-east-1
+     * set 地域代码, 如 cn-north-1
      *
      * @param region
      */
@@ -69,7 +69,7 @@ public class Region  implements java.io.Serializable {
     }
 
     /**
-     * get 地域名称，如 华东一区
+     * get 地域名称，如华北-北京
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class Region  implements java.io.Serializable {
     }
 
     /**
-     * set 地域名称，如 华东一区
+     * set 地域名称，如华北-北京
      *
      * @param regionName
      */
@@ -106,7 +106,7 @@ public class Region  implements java.io.Serializable {
 
 
     /**
-     * set 地域代码, 如 cn-east-1
+     * set 地域代码, 如 cn-north-1
      *
      * @param region
      */
@@ -116,7 +116,7 @@ public class Region  implements java.io.Serializable {
     }
 
     /**
-     * set 地域名称，如 华东一区
+     * set 地域名称，如华北-北京
      *
      * @param regionName
      */

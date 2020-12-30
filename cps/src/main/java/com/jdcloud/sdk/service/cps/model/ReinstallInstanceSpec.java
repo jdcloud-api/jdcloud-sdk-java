@@ -70,9 +70,7 @@ public class ReinstallInstanceSpec  implements java.io.Serializable {
 
     /**
      * 数据盘RAID类型ID
-     * Required:true
      */
-    @Required
     private String dataRaidTypeId;
 
     /**

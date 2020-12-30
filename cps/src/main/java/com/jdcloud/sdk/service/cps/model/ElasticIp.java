@@ -74,6 +74,11 @@ public class ElasticIp  implements java.io.Serializable {
     private String instanceId;
 
     /**
+     * 绑定的ip地址
+     */
+    private String targetIp;
+
+    /**
      * 创建时间
      */
     private String createTime;
@@ -229,6 +234,24 @@ public class ElasticIp  implements java.io.Serializable {
     }
 
     /**
+     * get 绑定的ip地址
+     *
+     * @return
+     */
+    public String getTargetIp() {
+        return targetIp;
+    }
+
+    /**
+     * set 绑定的ip地址
+     *
+     * @param targetIp
+     */
+    public void setTargetIp(String targetIp) {
+        this.targetIp = targetIp;
+    }
+
+    /**
      * get 创建时间
      *
      * @return
@@ -342,6 +365,16 @@ public class ElasticIp  implements java.io.Serializable {
      */
     public ElasticIp instanceId(String instanceId) {
         this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set 绑定的ip地址
+     *
+     * @param targetIp
+     */
+    public ElasticIp targetIp(String targetIp) {
+        this.targetIp = targetIp;
         return this;
     }
 

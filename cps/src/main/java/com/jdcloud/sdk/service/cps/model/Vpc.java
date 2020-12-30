@@ -48,9 +48,19 @@ public class Vpc  implements java.io.Serializable {
     private String name;
 
     /**
-     * 私有网络CIDR
+     * 私有网络IPv4 CIDR
      */
     private String cidr;
+
+    /**
+     * 私有网络IPv6 CIDR
+     */
+    private String ipv6Cidr;
+
+    /**
+     * IPv6网关ID
+     */
+    private String ipv6GatewayId;
 
     /**
      * 描述
@@ -118,7 +128,7 @@ public class Vpc  implements java.io.Serializable {
     }
 
     /**
-     * get 私有网络CIDR
+     * get 私有网络IPv4 CIDR
      *
      * @return
      */
@@ -127,12 +137,48 @@ public class Vpc  implements java.io.Serializable {
     }
 
     /**
-     * set 私有网络CIDR
+     * set 私有网络IPv4 CIDR
      *
      * @param cidr
      */
     public void setCidr(String cidr) {
         this.cidr = cidr;
+    }
+
+    /**
+     * get 私有网络IPv6 CIDR
+     *
+     * @return
+     */
+    public String getIpv6Cidr() {
+        return ipv6Cidr;
+    }
+
+    /**
+     * set 私有网络IPv6 CIDR
+     *
+     * @param ipv6Cidr
+     */
+    public void setIpv6Cidr(String ipv6Cidr) {
+        this.ipv6Cidr = ipv6Cidr;
+    }
+
+    /**
+     * get IPv6网关ID
+     *
+     * @return
+     */
+    public String getIpv6GatewayId() {
+        return ipv6GatewayId;
+    }
+
+    /**
+     * set IPv6网关ID
+     *
+     * @param ipv6GatewayId
+     */
+    public void setIpv6GatewayId(String ipv6GatewayId) {
+        this.ipv6GatewayId = ipv6GatewayId;
     }
 
     /**
@@ -203,12 +249,32 @@ public class Vpc  implements java.io.Serializable {
     }
 
     /**
-     * set 私有网络CIDR
+     * set 私有网络IPv4 CIDR
      *
      * @param cidr
      */
     public Vpc cidr(String cidr) {
         this.cidr = cidr;
+        return this;
+    }
+
+    /**
+     * set 私有网络IPv6 CIDR
+     *
+     * @param ipv6Cidr
+     */
+    public Vpc ipv6Cidr(String ipv6Cidr) {
+        this.ipv6Cidr = ipv6Cidr;
+        return this;
+    }
+
+    /**
+     * set IPv6网关ID
+     *
+     * @param ipv6GatewayId
+     */
+    public Vpc ipv6GatewayId(String ipv6GatewayId) {
+        this.ipv6GatewayId = ipv6GatewayId;
         return this;
     }
 

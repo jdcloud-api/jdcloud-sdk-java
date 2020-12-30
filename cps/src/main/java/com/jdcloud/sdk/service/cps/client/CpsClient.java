@@ -64,6 +64,9 @@ import com.jdcloud.sdk.service.cps.client.DescribeKeypairExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceRaidsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceRaidsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeDeviceRaidsExecutor;
+import com.jdcloud.sdk.service.cps.model.ModifyIpv6GatewayRequest;
+import com.jdcloud.sdk.service.cps.model.ModifyIpv6GatewayResponse;
+import com.jdcloud.sdk.service.cps.client.ModifyIpv6GatewayExecutor;
 import com.jdcloud.sdk.service.cps.model.DisassociateElasticIpLBRequest;
 import com.jdcloud.sdk.service.cps.model.DisassociateElasticIpLBResponse;
 import com.jdcloud.sdk.service.cps.client.DisassociateElasticIpLBExecutor;
@@ -73,6 +76,12 @@ import com.jdcloud.sdk.service.cps.client.DescribeServerGroupsExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyVpcRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyVpcResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyVpcExecutor;
+import com.jdcloud.sdk.service.cps.model.ModifyIpv6AddressBandwidthRequest;
+import com.jdcloud.sdk.service.cps.model.ModifyIpv6AddressBandwidthResponse;
+import com.jdcloud.sdk.service.cps.client.ModifyIpv6AddressBandwidthExecutor;
+import com.jdcloud.sdk.service.cps.model.DeleteAliasIpRequest;
+import com.jdcloud.sdk.service.cps.model.DeleteAliasIpResponse;
+import com.jdcloud.sdk.service.cps.client.DeleteAliasIpExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceNameRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceNameResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceNameExecutor;
@@ -82,9 +91,15 @@ import com.jdcloud.sdk.service.cps.client.ModifySubnetExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeVpcsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeVpcsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeVpcsExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeIpv6GatewaysRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeIpv6GatewaysResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeIpv6GatewaysExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceRaidRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceRaidResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceRaidExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeIpv6AddressRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeIpv6AddressResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeIpv6AddressExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeListenersRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeListenersResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeListenersExecutor;
@@ -100,6 +115,9 @@ import com.jdcloud.sdk.service.cps.client.ModifyInstanceExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeKeypairsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeKeypairsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeKeypairsExecutor;
+import com.jdcloud.sdk.service.cps.model.AssignIpv6GatewayRequest;
+import com.jdcloud.sdk.service.cps.model.AssignIpv6GatewayResponse;
+import com.jdcloud.sdk.service.cps.client.AssignIpv6GatewayExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeDeviceTypesResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeDeviceTypesExecutor;
@@ -109,6 +127,12 @@ import com.jdcloud.sdk.service.cps.client.DisassociateElasticIpExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeElasticIpRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeElasticIpResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeElasticIpExecutor;
+import com.jdcloud.sdk.service.cps.model.DeleteSecondaryCidrRequest;
+import com.jdcloud.sdk.service.cps.model.DeleteSecondaryCidrResponse;
+import com.jdcloud.sdk.service.cps.client.DeleteSecondaryCidrExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeSecondaryCidrsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeSecondaryCidrsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeSecondaryCidrsExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyLoadBalancerRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyLoadBalancerResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyLoadBalancerExecutor;
@@ -127,6 +151,9 @@ import com.jdcloud.sdk.service.cps.client.DescribeInstanceExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyBandwidthRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyBandwidthResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyBandwidthExecutor;
+import com.jdcloud.sdk.service.cps.model.AssignIpv6AddressRequest;
+import com.jdcloud.sdk.service.cps.model.AssignIpv6AddressResponse;
+import com.jdcloud.sdk.service.cps.client.AssignIpv6AddressExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceMonitorInfoRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstanceMonitorInfoResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstanceMonitorInfoExecutor;
@@ -160,6 +187,9 @@ import com.jdcloud.sdk.service.cps.client.DeleteListenerExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateKeypairsRequest;
 import com.jdcloud.sdk.service.cps.model.CreateKeypairsResponse;
 import com.jdcloud.sdk.service.cps.client.CreateKeypairsExecutor;
+import com.jdcloud.sdk.service.cps.model.AssignIpv6AddressesBandwidthRequest;
+import com.jdcloud.sdk.service.cps.model.AssignIpv6AddressesBandwidthResponse;
+import com.jdcloud.sdk.service.cps.client.AssignIpv6AddressesBandwidthExecutor;
 import com.jdcloud.sdk.service.cps.model.RemoveServerRequest;
 import com.jdcloud.sdk.service.cps.model.RemoveServerResponse;
 import com.jdcloud.sdk.service.cps.client.RemoveServerExecutor;
@@ -178,12 +208,21 @@ import com.jdcloud.sdk.service.cps.client.DescribeLoadBalancersExecutor;
 import com.jdcloud.sdk.service.cps.model.StartInstanceRequest;
 import com.jdcloud.sdk.service.cps.model.StartInstanceResponse;
 import com.jdcloud.sdk.service.cps.client.StartInstanceExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeIpv6GatewayRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeIpv6GatewayResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeIpv6GatewayExecutor;
+import com.jdcloud.sdk.service.cps.model.AssignIpv6CidrRequest;
+import com.jdcloud.sdk.service.cps.model.AssignIpv6CidrResponse;
+import com.jdcloud.sdk.service.cps.client.AssignIpv6CidrExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeCPSLBRegionsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeCPSLBRegionsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeCPSLBRegionsExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeRouteTableRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeRouteTableResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeRouteTableExecutor;
+import com.jdcloud.sdk.service.cps.model.CreateAliasIpRequest;
+import com.jdcloud.sdk.service.cps.model.CreateAliasIpResponse;
+import com.jdcloud.sdk.service.cps.client.CreateAliasIpExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateSubnetRequest;
 import com.jdcloud.sdk.service.cps.model.CreateSubnetResponse;
 import com.jdcloud.sdk.service.cps.client.CreateSubnetExecutor;
@@ -196,9 +235,15 @@ import com.jdcloud.sdk.service.cps.client.DescribeLoadBalancerExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeElasticIpsRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeElasticIpsResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeElasticIpsExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeIpv6AddressesRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeIpv6AddressesResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeIpv6AddressesExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeOSRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeOSResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeOSExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeEventLogsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeEventLogsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeEventLogsExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeServerGroupRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeServerGroupResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeServerGroupExecutor;
@@ -208,18 +253,27 @@ import com.jdcloud.sdk.service.cps.client.CreateListenerExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyElasticIpBandwidthRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyElasticIpBandwidthResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyElasticIpBandwidthExecutor;
+import com.jdcloud.sdk.service.cps.model.CreateSecondaryCidrRequest;
+import com.jdcloud.sdk.service.cps.model.CreateSecondaryCidrResponse;
+import com.jdcloud.sdk.service.cps.client.CreateSecondaryCidrExecutor;
 import com.jdcloud.sdk.service.cps.model.ModifyServerRequest;
 import com.jdcloud.sdk.service.cps.model.ModifyServerResponse;
 import com.jdcloud.sdk.service.cps.client.ModifyServerExecutor;
 import com.jdcloud.sdk.service.cps.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.cps.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.cps.client.DescribeInstancesExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeAvailablePrivateIpRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeAvailablePrivateIpResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeAvailablePrivateIpExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateLoadBalancerRequest;
 import com.jdcloud.sdk.service.cps.model.CreateLoadBalancerResponse;
 import com.jdcloud.sdk.service.cps.client.CreateLoadBalancerExecutor;
 import com.jdcloud.sdk.service.cps.model.CreateVpcRequest;
 import com.jdcloud.sdk.service.cps.model.CreateVpcResponse;
 import com.jdcloud.sdk.service.cps.client.CreateVpcExecutor;
+import com.jdcloud.sdk.service.cps.model.DescribeAliasIpsRequest;
+import com.jdcloud.sdk.service.cps.model.DescribeAliasIpsResponse;
+import com.jdcloud.sdk.service.cps.client.DescribeAliasIpsExecutor;
 import com.jdcloud.sdk.service.cps.model.DeleteKeypairsRequest;
 import com.jdcloud.sdk.service.cps.model.DeleteKeypairsResponse;
 import com.jdcloud.sdk.service.cps.client.DeleteKeypairsExecutor;
@@ -240,7 +294,7 @@ public class CpsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "cps.jdcloud-api.com";
     public final static String ServiceName = "cps";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -407,6 +461,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 修改IPv6网关实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyIpv6GatewayResponse modifyIpv6Gateway(ModifyIpv6GatewayRequest request) throws JdcloudSdkException {
+        return new ModifyIpv6GatewayExecutor().client(this).execute(request);
+    }
+
+    /**
      * 解绑弹性公网IP
      *
      * @param request
@@ -438,6 +503,29 @@ public class CpsClient extends JdcloudClient {
      */
     public ModifyVpcResponse modifyVpc(ModifyVpcRequest request) throws JdcloudSdkException {
         return new ModifyVpcExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改IPv6公网带宽
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyIpv6AddressBandwidthResponse modifyIpv6AddressBandwidth(ModifyIpv6AddressBandwidthRequest request) throws JdcloudSdkException {
+        return new ModifyIpv6AddressBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除别名IP
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteAliasIpResponse deleteAliasIp(DeleteAliasIpRequest request) throws JdcloudSdkException {
+        return new DeleteAliasIpExecutor().client(this).execute(request);
     }
 
     /**
@@ -474,6 +562,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询IPv6网关实例列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpv6GatewaysResponse describeIpv6Gateways(DescribeIpv6GatewaysRequest request) throws JdcloudSdkException {
+        return new DescribeIpv6GatewaysExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询单个云物理服务器已安装的RAID信息，包括系统盘RAID信息和数据盘RAID信息
      *
      * @param request
@@ -482,6 +581,17 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeInstanceRaidResponse describeInstanceRaid(DescribeInstanceRaidRequest request) throws JdcloudSdkException {
         return new DescribeInstanceRaidExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询IPv6地址例详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpv6AddressResponse describeIpv6Address(DescribeIpv6AddressRequest request) throws JdcloudSdkException {
+        return new DescribeIpv6AddressExecutor().client(this).execute(request);
     }
 
     /**
@@ -540,6 +650,18 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 申请开通IPv6网关
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssignIpv6GatewayResponse assignIpv6Gateway(AssignIpv6GatewayRequest request) throws JdcloudSdkException {
+        return new AssignIpv6GatewayExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询云物理服务器实例类型
      *
      * @param request
@@ -571,6 +693,28 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeElasticIpResponse describeElasticIp(DescribeElasticIpRequest request) throws JdcloudSdkException {
         return new DescribeElasticIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除次要CIDR
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSecondaryCidrResponse deleteSecondaryCidr(DeleteSecondaryCidrRequest request) throws JdcloudSdkException {
+        return new DeleteSecondaryCidrExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询次要CIDR列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSecondaryCidrsResponse describeSecondaryCidrs(DescribeSecondaryCidrsRequest request) throws JdcloudSdkException {
+        return new DescribeSecondaryCidrsExecutor().client(this).execute(request);
     }
 
     /**
@@ -640,6 +784,17 @@ public class CpsClient extends JdcloudClient {
      */
     public ModifyBandwidthResponse modifyBandwidth(ModifyBandwidthRequest request) throws JdcloudSdkException {
         return new ModifyBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 申请IPv6地址
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssignIpv6AddressResponse assignIpv6Address(AssignIpv6AddressRequest request) throws JdcloudSdkException {
+        return new AssignIpv6AddressExecutor().client(this).execute(request);
     }
 
     /**
@@ -784,6 +939,18 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 申请IPv6地址带宽
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssignIpv6AddressesBandwidthResponse assignIpv6AddressesBandwidth(AssignIpv6AddressesBandwidthRequest request) throws JdcloudSdkException {
+        return new AssignIpv6AddressesBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
      * 移除后端服务器
      *
      * @param request
@@ -850,6 +1017,29 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询IPv6网关实例详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpv6GatewayResponse describeIpv6Gateway(DescribeIpv6GatewayRequest request) throws JdcloudSdkException {
+        return new DescribeIpv6GatewayExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 申请IPv6网段
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssignIpv6CidrResponse assignIpv6Cidr(AssignIpv6CidrRequest request) throws JdcloudSdkException {
+        return new AssignIpv6CidrExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询负载均衡地域列表
      *
      * @param request
@@ -869,6 +1059,17 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeRouteTableResponse describeRouteTable(DescribeRouteTableRequest request) throws JdcloudSdkException {
         return new DescribeRouteTableExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加别名IP
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateAliasIpResponse createAliasIp(CreateAliasIpRequest request) throws JdcloudSdkException {
+        return new CreateAliasIpExecutor().client(this).execute(request);
     }
 
     /**
@@ -918,6 +1119,19 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询IPv6地址列表&lt;br/&gt;
+支持分页查询，默认每页20条&lt;br/&gt;
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeIpv6AddressesResponse describeIpv6Addresses(DescribeIpv6AddressesRequest request) throws JdcloudSdkException {
+        return new DescribeIpv6AddressesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询云物理服务器支持的操作系统
      *
      * @param request
@@ -926,6 +1140,17 @@ public class CpsClient extends JdcloudClient {
      */
     public DescribeOSResponse describeOS(DescribeOSRequest request) throws JdcloudSdkException {
         return new DescribeOSExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询云物理服务器监控报警日志信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeEventLogsResponse describeEventLogs(DescribeEventLogsRequest request) throws JdcloudSdkException {
+        return new DescribeEventLogsExecutor().client(this).execute(request);
     }
 
     /**
@@ -963,6 +1188,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 添加次要CIDR
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSecondaryCidrResponse createSecondaryCidr(CreateSecondaryCidrRequest request) throws JdcloudSdkException {
+        return new CreateSecondaryCidrExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改后端服务器
      *
      * @param request
@@ -987,6 +1223,17 @@ public class CpsClient extends JdcloudClient {
     }
 
     /**
+     * 查询可用的私有IP列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAvailablePrivateIpResponse describeAvailablePrivateIp(DescribeAvailablePrivateIpRequest request) throws JdcloudSdkException {
+        return new DescribeAvailablePrivateIpExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建负载均衡实例
      *
      * @param request
@@ -1006,6 +1253,17 @@ public class CpsClient extends JdcloudClient {
      */
     public CreateVpcResponse createVpc(CreateVpcRequest request) throws JdcloudSdkException {
         return new CreateVpcExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询别名IP列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAliasIpsResponse describeAliasIps(DescribeAliasIpsRequest request) throws JdcloudSdkException {
+        return new DescribeAliasIpsExecutor().client(this).execute(request);
     }
 
     /**

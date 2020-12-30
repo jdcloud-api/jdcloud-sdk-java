@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -48,6 +48,16 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
      */
     @Required
     private String elasticIpId;
+
+    /**
+     * 私有IP
+     */
+    private String targetIp;
+
+    /**
+     * 主网口或辅网口的子网ID，多网口实例必填
+     */
+    private String subnetId;
 
     /**
      * 地域ID，可调用接口（describeRegiones）获取云物理服务器支持的地域
@@ -102,6 +112,42 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
      */
     public void setElasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
+    }
+
+    /**
+     * get 私有IP
+     *
+     * @return
+     */
+    public String getTargetIp() {
+        return targetIp;
+    }
+
+    /**
+     * set 私有IP
+     *
+     * @param targetIp
+     */
+    public void setTargetIp(String targetIp) {
+        this.targetIp = targetIp;
+    }
+
+    /**
+     * get 主网口或辅网口的子网ID，多网口实例必填
+     *
+     * @return
+     */
+    public String getSubnetId() {
+        return subnetId;
+    }
+
+    /**
+     * set 主网口或辅网口的子网ID，多网口实例必填
+     *
+     * @param subnetId
+     */
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
     }
 
     /**
@@ -160,6 +206,26 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
      */
     public AssociateElasticIpRequest elasticIpId(String elasticIpId) {
         this.elasticIpId = elasticIpId;
+        return this;
+    }
+
+    /**
+     * set 私有IP
+     *
+     * @param targetIp
+     */
+    public AssociateElasticIpRequest targetIp(String targetIp) {
+        this.targetIp = targetIp;
+        return this;
+    }
+
+    /**
+     * set 主网口或辅网口的子网ID，多网口实例必填
+     *
+     * @param subnetId
+     */
+    public AssociateElasticIpRequest subnetId(String subnetId) {
+        this.subnetId = subnetId;
         return this;
     }
 

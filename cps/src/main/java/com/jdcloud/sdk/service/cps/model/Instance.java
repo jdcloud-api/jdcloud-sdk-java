@@ -39,12 +39,12 @@ public class Instance  implements java.io.Serializable {
     private String instanceId;
 
     /**
-     * 区域代码, 如 cn-east-1
+     * 区域代码, 如 cn-north-1
      */
     private String region;
 
     /**
-     * 可用区, 如 cn-east-1a
+     * 可用区, 如 cn-north-1a
      */
     private String az;
 
@@ -124,12 +124,12 @@ public class Instance  implements java.io.Serializable {
     private String dataRaidTypeId;
 
     /**
-     * 数据盘RAID类型, 如 NORAID, RAID0, RAID1
+     * 数据盘RAID类型, 如 NORAID, RAID0, RAID1，RAID10
      */
     private String dataRaidType;
 
     /**
-     * 网络类型, 如 basic, vpc
+     * 网络类型：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      */
     private String networkType;
 
@@ -144,6 +144,21 @@ public class Instance  implements java.io.Serializable {
     private String vpcName;
 
     /**
+     * 私有网络IPv4 CIDR
+     */
+    private String vpcIpv4Cidr;
+
+    /**
+     * 私有网络IPv6 CIDR
+     */
+    private String vpcIpv6Cidr;
+
+    /**
+     * IPv6网关ID
+     */
+    private String ipv6GatewayId;
+
+    /**
      * 子网编号
      */
     private String subnetId;
@@ -152,6 +167,16 @@ public class Instance  implements java.io.Serializable {
      * 子网名称
      */
     private String subnetName;
+
+    /**
+     * 子网IPv4 CIDR
+     */
+    private String subnetIpv4Cidr;
+
+    /**
+     * 子网IPv6 CIDR
+     */
+    private String subnetIpv6Cidr;
 
     /**
      * 内网IP
@@ -174,9 +199,114 @@ public class Instance  implements java.io.Serializable {
     private String publicIp;
 
     /**
-     * 公网IPv6
+     * IPv6地址
      */
-    private String publicIpv6;
+    private String ipv6Address;
+
+    /**
+     * 公网IPv6地址ID
+     */
+    private String ipv6AddressId;
+
+    /**
+     * 公网IPv6带宽, 单位Mbps
+     */
+    private Integer ipv6AddressBandwidth;
+
+    /**
+     * 网络接口模式：bond（网口bond）、dual（双网口）
+     */
+    private String interfaceMode;
+
+    /**
+     * 辅网口私有网络ID
+     */
+    private String extensionVpcId;
+
+    /**
+     * 辅网口私有网络名称
+     */
+    private String extensionVpcName;
+
+    /**
+     * 辅网口私有网络IPv4 CIDR
+     */
+    private String extensionVpcIpv4Cidr;
+
+    /**
+     * 辅网口私有网络IPv6 CIDR
+     */
+    private String extensionVpcIpv6Cidr;
+
+    /**
+     * 辅网口子网ID
+     */
+    private String extensionSubnetId;
+
+    /**
+     * 辅网口子网名称
+     */
+    private String extensionSubnetName;
+
+    /**
+     * 辅网口子网IPv4 CIDR
+     */
+    private String extensionSubnetIpv4Cidr;
+
+    /**
+     * 辅网口子网IPv6 CIDR
+     */
+    private String extensionSubnetIpv6Cidr;
+
+    /**
+     * 辅网口手动分配的内网ip
+     */
+    private String extensionPrivateIp;
+
+    /**
+     * 辅网口是否启用外网
+     */
+    private String extensionEnableInternet;
+
+    /**
+     * 辅网口弹性公网ip id
+     */
+    private String extensionElasticIpId;
+
+    /**
+     * 辅网口公网ip
+     */
+    private String extensionPublicIp;
+
+    /**
+     * 辅网口外网带宽，单位Mbps
+     */
+    private Integer extensionBandwidth;
+
+    /**
+     * 辅网口是否启用IPv6, 如 yes/no
+     */
+    private String extensionEnableIpv6;
+
+    /**
+     * 辅网口IPv6地址
+     */
+    private String extensionIpv6Address;
+
+    /**
+     * 辅网口公网IPv6地址ID
+     */
+    private String extensionIpv6AddressId;
+
+    /**
+     * 辅网口IPv6公网带宽, 单位Mbps
+     */
+    private Integer extensionIpv6AddressBandwidth;
+
+    /**
+     * IPv6网关ID
+     */
+    private String extensionIpv6GatewayId;
 
     /**
      * 密钥对id
@@ -213,7 +343,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 区域代码, 如 cn-east-1
+     * get 区域代码, 如 cn-north-1
      *
      * @return
      */
@@ -222,7 +352,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 区域代码, 如 cn-east-1
+     * set 区域代码, 如 cn-north-1
      *
      * @param region
      */
@@ -231,7 +361,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 可用区, 如 cn-east-1a
+     * get 可用区, 如 cn-north-1a
      *
      * @return
      */
@@ -240,7 +370,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区, 如 cn-east-1a
+     * set 可用区, 如 cn-north-1a
      *
      * @param az
      */
@@ -519,7 +649,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘RAID类型, 如 NORAID, RAID0, RAID1
+     * get 数据盘RAID类型, 如 NORAID, RAID0, RAID1，RAID10
      *
      * @return
      */
@@ -528,7 +658,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘RAID类型, 如 NORAID, RAID0, RAID1
+     * set 数据盘RAID类型, 如 NORAID, RAID0, RAID1，RAID10
      *
      * @param dataRaidType
      */
@@ -537,7 +667,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 网络类型, 如 basic, vpc
+     * get 网络类型：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @return
      */
@@ -546,7 +676,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 网络类型, 如 basic, vpc
+     * set 网络类型：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @param networkType
      */
@@ -591,6 +721,60 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 私有网络IPv4 CIDR
+     *
+     * @return
+     */
+    public String getVpcIpv4Cidr() {
+        return vpcIpv4Cidr;
+    }
+
+    /**
+     * set 私有网络IPv4 CIDR
+     *
+     * @param vpcIpv4Cidr
+     */
+    public void setVpcIpv4Cidr(String vpcIpv4Cidr) {
+        this.vpcIpv4Cidr = vpcIpv4Cidr;
+    }
+
+    /**
+     * get 私有网络IPv6 CIDR
+     *
+     * @return
+     */
+    public String getVpcIpv6Cidr() {
+        return vpcIpv6Cidr;
+    }
+
+    /**
+     * set 私有网络IPv6 CIDR
+     *
+     * @param vpcIpv6Cidr
+     */
+    public void setVpcIpv6Cidr(String vpcIpv6Cidr) {
+        this.vpcIpv6Cidr = vpcIpv6Cidr;
+    }
+
+    /**
+     * get IPv6网关ID
+     *
+     * @return
+     */
+    public String getIpv6GatewayId() {
+        return ipv6GatewayId;
+    }
+
+    /**
+     * set IPv6网关ID
+     *
+     * @param ipv6GatewayId
+     */
+    public void setIpv6GatewayId(String ipv6GatewayId) {
+        this.ipv6GatewayId = ipv6GatewayId;
+    }
+
+    /**
      * get 子网编号
      *
      * @return
@@ -624,6 +808,42 @@ public class Instance  implements java.io.Serializable {
      */
     public void setSubnetName(String subnetName) {
         this.subnetName = subnetName;
+    }
+
+    /**
+     * get 子网IPv4 CIDR
+     *
+     * @return
+     */
+    public String getSubnetIpv4Cidr() {
+        return subnetIpv4Cidr;
+    }
+
+    /**
+     * set 子网IPv4 CIDR
+     *
+     * @param subnetIpv4Cidr
+     */
+    public void setSubnetIpv4Cidr(String subnetIpv4Cidr) {
+        this.subnetIpv4Cidr = subnetIpv4Cidr;
+    }
+
+    /**
+     * get 子网IPv6 CIDR
+     *
+     * @return
+     */
+    public String getSubnetIpv6Cidr() {
+        return subnetIpv6Cidr;
+    }
+
+    /**
+     * set 子网IPv6 CIDR
+     *
+     * @param subnetIpv6Cidr
+     */
+    public void setSubnetIpv6Cidr(String subnetIpv6Cidr) {
+        this.subnetIpv6Cidr = subnetIpv6Cidr;
     }
 
     /**
@@ -699,21 +919,399 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 公网IPv6
+     * get IPv6地址
      *
      * @return
      */
-    public String getPublicIpv6() {
-        return publicIpv6;
+    public String getIpv6Address() {
+        return ipv6Address;
     }
 
     /**
-     * set 公网IPv6
+     * set IPv6地址
      *
-     * @param publicIpv6
+     * @param ipv6Address
      */
-    public void setPublicIpv6(String publicIpv6) {
-        this.publicIpv6 = publicIpv6;
+    public void setIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+    }
+
+    /**
+     * get 公网IPv6地址ID
+     *
+     * @return
+     */
+    public String getIpv6AddressId() {
+        return ipv6AddressId;
+    }
+
+    /**
+     * set 公网IPv6地址ID
+     *
+     * @param ipv6AddressId
+     */
+    public void setIpv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+    }
+
+    /**
+     * get 公网IPv6带宽, 单位Mbps
+     *
+     * @return
+     */
+    public Integer getIpv6AddressBandwidth() {
+        return ipv6AddressBandwidth;
+    }
+
+    /**
+     * set 公网IPv6带宽, 单位Mbps
+     *
+     * @param ipv6AddressBandwidth
+     */
+    public void setIpv6AddressBandwidth(Integer ipv6AddressBandwidth) {
+        this.ipv6AddressBandwidth = ipv6AddressBandwidth;
+    }
+
+    /**
+     * get 网络接口模式：bond（网口bond）、dual（双网口）
+     *
+     * @return
+     */
+    public String getInterfaceMode() {
+        return interfaceMode;
+    }
+
+    /**
+     * set 网络接口模式：bond（网口bond）、dual（双网口）
+     *
+     * @param interfaceMode
+     */
+    public void setInterfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
+    }
+
+    /**
+     * get 辅网口私有网络ID
+     *
+     * @return
+     */
+    public String getExtensionVpcId() {
+        return extensionVpcId;
+    }
+
+    /**
+     * set 辅网口私有网络ID
+     *
+     * @param extensionVpcId
+     */
+    public void setExtensionVpcId(String extensionVpcId) {
+        this.extensionVpcId = extensionVpcId;
+    }
+
+    /**
+     * get 辅网口私有网络名称
+     *
+     * @return
+     */
+    public String getExtensionVpcName() {
+        return extensionVpcName;
+    }
+
+    /**
+     * set 辅网口私有网络名称
+     *
+     * @param extensionVpcName
+     */
+    public void setExtensionVpcName(String extensionVpcName) {
+        this.extensionVpcName = extensionVpcName;
+    }
+
+    /**
+     * get 辅网口私有网络IPv4 CIDR
+     *
+     * @return
+     */
+    public String getExtensionVpcIpv4Cidr() {
+        return extensionVpcIpv4Cidr;
+    }
+
+    /**
+     * set 辅网口私有网络IPv4 CIDR
+     *
+     * @param extensionVpcIpv4Cidr
+     */
+    public void setExtensionVpcIpv4Cidr(String extensionVpcIpv4Cidr) {
+        this.extensionVpcIpv4Cidr = extensionVpcIpv4Cidr;
+    }
+
+    /**
+     * get 辅网口私有网络IPv6 CIDR
+     *
+     * @return
+     */
+    public String getExtensionVpcIpv6Cidr() {
+        return extensionVpcIpv6Cidr;
+    }
+
+    /**
+     * set 辅网口私有网络IPv6 CIDR
+     *
+     * @param extensionVpcIpv6Cidr
+     */
+    public void setExtensionVpcIpv6Cidr(String extensionVpcIpv6Cidr) {
+        this.extensionVpcIpv6Cidr = extensionVpcIpv6Cidr;
+    }
+
+    /**
+     * get 辅网口子网ID
+     *
+     * @return
+     */
+    public String getExtensionSubnetId() {
+        return extensionSubnetId;
+    }
+
+    /**
+     * set 辅网口子网ID
+     *
+     * @param extensionSubnetId
+     */
+    public void setExtensionSubnetId(String extensionSubnetId) {
+        this.extensionSubnetId = extensionSubnetId;
+    }
+
+    /**
+     * get 辅网口子网名称
+     *
+     * @return
+     */
+    public String getExtensionSubnetName() {
+        return extensionSubnetName;
+    }
+
+    /**
+     * set 辅网口子网名称
+     *
+     * @param extensionSubnetName
+     */
+    public void setExtensionSubnetName(String extensionSubnetName) {
+        this.extensionSubnetName = extensionSubnetName;
+    }
+
+    /**
+     * get 辅网口子网IPv4 CIDR
+     *
+     * @return
+     */
+    public String getExtensionSubnetIpv4Cidr() {
+        return extensionSubnetIpv4Cidr;
+    }
+
+    /**
+     * set 辅网口子网IPv4 CIDR
+     *
+     * @param extensionSubnetIpv4Cidr
+     */
+    public void setExtensionSubnetIpv4Cidr(String extensionSubnetIpv4Cidr) {
+        this.extensionSubnetIpv4Cidr = extensionSubnetIpv4Cidr;
+    }
+
+    /**
+     * get 辅网口子网IPv6 CIDR
+     *
+     * @return
+     */
+    public String getExtensionSubnetIpv6Cidr() {
+        return extensionSubnetIpv6Cidr;
+    }
+
+    /**
+     * set 辅网口子网IPv6 CIDR
+     *
+     * @param extensionSubnetIpv6Cidr
+     */
+    public void setExtensionSubnetIpv6Cidr(String extensionSubnetIpv6Cidr) {
+        this.extensionSubnetIpv6Cidr = extensionSubnetIpv6Cidr;
+    }
+
+    /**
+     * get 辅网口手动分配的内网ip
+     *
+     * @return
+     */
+    public String getExtensionPrivateIp() {
+        return extensionPrivateIp;
+    }
+
+    /**
+     * set 辅网口手动分配的内网ip
+     *
+     * @param extensionPrivateIp
+     */
+    public void setExtensionPrivateIp(String extensionPrivateIp) {
+        this.extensionPrivateIp = extensionPrivateIp;
+    }
+
+    /**
+     * get 辅网口是否启用外网
+     *
+     * @return
+     */
+    public String getExtensionEnableInternet() {
+        return extensionEnableInternet;
+    }
+
+    /**
+     * set 辅网口是否启用外网
+     *
+     * @param extensionEnableInternet
+     */
+    public void setExtensionEnableInternet(String extensionEnableInternet) {
+        this.extensionEnableInternet = extensionEnableInternet;
+    }
+
+    /**
+     * get 辅网口弹性公网ip id
+     *
+     * @return
+     */
+    public String getExtensionElasticIpId() {
+        return extensionElasticIpId;
+    }
+
+    /**
+     * set 辅网口弹性公网ip id
+     *
+     * @param extensionElasticIpId
+     */
+    public void setExtensionElasticIpId(String extensionElasticIpId) {
+        this.extensionElasticIpId = extensionElasticIpId;
+    }
+
+    /**
+     * get 辅网口公网ip
+     *
+     * @return
+     */
+    public String getExtensionPublicIp() {
+        return extensionPublicIp;
+    }
+
+    /**
+     * set 辅网口公网ip
+     *
+     * @param extensionPublicIp
+     */
+    public void setExtensionPublicIp(String extensionPublicIp) {
+        this.extensionPublicIp = extensionPublicIp;
+    }
+
+    /**
+     * get 辅网口外网带宽，单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtensionBandwidth() {
+        return extensionBandwidth;
+    }
+
+    /**
+     * set 辅网口外网带宽，单位Mbps
+     *
+     * @param extensionBandwidth
+     */
+    public void setExtensionBandwidth(Integer extensionBandwidth) {
+        this.extensionBandwidth = extensionBandwidth;
+    }
+
+    /**
+     * get 辅网口是否启用IPv6, 如 yes/no
+     *
+     * @return
+     */
+    public String getExtensionEnableIpv6() {
+        return extensionEnableIpv6;
+    }
+
+    /**
+     * set 辅网口是否启用IPv6, 如 yes/no
+     *
+     * @param extensionEnableIpv6
+     */
+    public void setExtensionEnableIpv6(String extensionEnableIpv6) {
+        this.extensionEnableIpv6 = extensionEnableIpv6;
+    }
+
+    /**
+     * get 辅网口IPv6地址
+     *
+     * @return
+     */
+    public String getExtensionIpv6Address() {
+        return extensionIpv6Address;
+    }
+
+    /**
+     * set 辅网口IPv6地址
+     *
+     * @param extensionIpv6Address
+     */
+    public void setExtensionIpv6Address(String extensionIpv6Address) {
+        this.extensionIpv6Address = extensionIpv6Address;
+    }
+
+    /**
+     * get 辅网口公网IPv6地址ID
+     *
+     * @return
+     */
+    public String getExtensionIpv6AddressId() {
+        return extensionIpv6AddressId;
+    }
+
+    /**
+     * set 辅网口公网IPv6地址ID
+     *
+     * @param extensionIpv6AddressId
+     */
+    public void setExtensionIpv6AddressId(String extensionIpv6AddressId) {
+        this.extensionIpv6AddressId = extensionIpv6AddressId;
+    }
+
+    /**
+     * get 辅网口IPv6公网带宽, 单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtensionIpv6AddressBandwidth() {
+        return extensionIpv6AddressBandwidth;
+    }
+
+    /**
+     * set 辅网口IPv6公网带宽, 单位Mbps
+     *
+     * @param extensionIpv6AddressBandwidth
+     */
+    public void setExtensionIpv6AddressBandwidth(Integer extensionIpv6AddressBandwidth) {
+        this.extensionIpv6AddressBandwidth = extensionIpv6AddressBandwidth;
+    }
+
+    /**
+     * get IPv6网关ID
+     *
+     * @return
+     */
+    public String getExtensionIpv6GatewayId() {
+        return extensionIpv6GatewayId;
+    }
+
+    /**
+     * set IPv6网关ID
+     *
+     * @param extensionIpv6GatewayId
+     */
+    public void setExtensionIpv6GatewayId(String extensionIpv6GatewayId) {
+        this.extensionIpv6GatewayId = extensionIpv6GatewayId;
     }
 
     /**
@@ -782,7 +1380,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 区域代码, 如 cn-east-1
+     * set 区域代码, 如 cn-north-1
      *
      * @param region
      */
@@ -792,7 +1390,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区, 如 cn-east-1a
+     * set 可用区, 如 cn-north-1a
      *
      * @param az
      */
@@ -952,7 +1550,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘RAID类型, 如 NORAID, RAID0, RAID1
+     * set 数据盘RAID类型, 如 NORAID, RAID0, RAID1，RAID10
      *
      * @param dataRaidType
      */
@@ -962,7 +1560,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 网络类型, 如 basic, vpc
+     * set 网络类型：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @param networkType
      */
@@ -992,6 +1590,36 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * set 私有网络IPv4 CIDR
+     *
+     * @param vpcIpv4Cidr
+     */
+    public Instance vpcIpv4Cidr(String vpcIpv4Cidr) {
+        this.vpcIpv4Cidr = vpcIpv4Cidr;
+        return this;
+    }
+
+    /**
+     * set 私有网络IPv6 CIDR
+     *
+     * @param vpcIpv6Cidr
+     */
+    public Instance vpcIpv6Cidr(String vpcIpv6Cidr) {
+        this.vpcIpv6Cidr = vpcIpv6Cidr;
+        return this;
+    }
+
+    /**
+     * set IPv6网关ID
+     *
+     * @param ipv6GatewayId
+     */
+    public Instance ipv6GatewayId(String ipv6GatewayId) {
+        this.ipv6GatewayId = ipv6GatewayId;
+        return this;
+    }
+
+    /**
      * set 子网编号
      *
      * @param subnetId
@@ -1008,6 +1636,26 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance subnetName(String subnetName) {
         this.subnetName = subnetName;
+        return this;
+    }
+
+    /**
+     * set 子网IPv4 CIDR
+     *
+     * @param subnetIpv4Cidr
+     */
+    public Instance subnetIpv4Cidr(String subnetIpv4Cidr) {
+        this.subnetIpv4Cidr = subnetIpv4Cidr;
+        return this;
+    }
+
+    /**
+     * set 子网IPv6 CIDR
+     *
+     * @param subnetIpv6Cidr
+     */
+    public Instance subnetIpv6Cidr(String subnetIpv6Cidr) {
+        this.subnetIpv6Cidr = subnetIpv6Cidr;
         return this;
     }
 
@@ -1052,12 +1700,222 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 公网IPv6
+     * set IPv6地址
      *
-     * @param publicIpv6
+     * @param ipv6Address
      */
-    public Instance publicIpv6(String publicIpv6) {
-        this.publicIpv6 = publicIpv6;
+    public Instance ipv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+
+    /**
+     * set 公网IPv6地址ID
+     *
+     * @param ipv6AddressId
+     */
+    public Instance ipv6AddressId(String ipv6AddressId) {
+        this.ipv6AddressId = ipv6AddressId;
+        return this;
+    }
+
+    /**
+     * set 公网IPv6带宽, 单位Mbps
+     *
+     * @param ipv6AddressBandwidth
+     */
+    public Instance ipv6AddressBandwidth(Integer ipv6AddressBandwidth) {
+        this.ipv6AddressBandwidth = ipv6AddressBandwidth;
+        return this;
+    }
+
+    /**
+     * set 网络接口模式：bond（网口bond）、dual（双网口）
+     *
+     * @param interfaceMode
+     */
+    public Instance interfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
+        return this;
+    }
+
+    /**
+     * set 辅网口私有网络ID
+     *
+     * @param extensionVpcId
+     */
+    public Instance extensionVpcId(String extensionVpcId) {
+        this.extensionVpcId = extensionVpcId;
+        return this;
+    }
+
+    /**
+     * set 辅网口私有网络名称
+     *
+     * @param extensionVpcName
+     */
+    public Instance extensionVpcName(String extensionVpcName) {
+        this.extensionVpcName = extensionVpcName;
+        return this;
+    }
+
+    /**
+     * set 辅网口私有网络IPv4 CIDR
+     *
+     * @param extensionVpcIpv4Cidr
+     */
+    public Instance extensionVpcIpv4Cidr(String extensionVpcIpv4Cidr) {
+        this.extensionVpcIpv4Cidr = extensionVpcIpv4Cidr;
+        return this;
+    }
+
+    /**
+     * set 辅网口私有网络IPv6 CIDR
+     *
+     * @param extensionVpcIpv6Cidr
+     */
+    public Instance extensionVpcIpv6Cidr(String extensionVpcIpv6Cidr) {
+        this.extensionVpcIpv6Cidr = extensionVpcIpv6Cidr;
+        return this;
+    }
+
+    /**
+     * set 辅网口子网ID
+     *
+     * @param extensionSubnetId
+     */
+    public Instance extensionSubnetId(String extensionSubnetId) {
+        this.extensionSubnetId = extensionSubnetId;
+        return this;
+    }
+
+    /**
+     * set 辅网口子网名称
+     *
+     * @param extensionSubnetName
+     */
+    public Instance extensionSubnetName(String extensionSubnetName) {
+        this.extensionSubnetName = extensionSubnetName;
+        return this;
+    }
+
+    /**
+     * set 辅网口子网IPv4 CIDR
+     *
+     * @param extensionSubnetIpv4Cidr
+     */
+    public Instance extensionSubnetIpv4Cidr(String extensionSubnetIpv4Cidr) {
+        this.extensionSubnetIpv4Cidr = extensionSubnetIpv4Cidr;
+        return this;
+    }
+
+    /**
+     * set 辅网口子网IPv6 CIDR
+     *
+     * @param extensionSubnetIpv6Cidr
+     */
+    public Instance extensionSubnetIpv6Cidr(String extensionSubnetIpv6Cidr) {
+        this.extensionSubnetIpv6Cidr = extensionSubnetIpv6Cidr;
+        return this;
+    }
+
+    /**
+     * set 辅网口手动分配的内网ip
+     *
+     * @param extensionPrivateIp
+     */
+    public Instance extensionPrivateIp(String extensionPrivateIp) {
+        this.extensionPrivateIp = extensionPrivateIp;
+        return this;
+    }
+
+    /**
+     * set 辅网口是否启用外网
+     *
+     * @param extensionEnableInternet
+     */
+    public Instance extensionEnableInternet(String extensionEnableInternet) {
+        this.extensionEnableInternet = extensionEnableInternet;
+        return this;
+    }
+
+    /**
+     * set 辅网口弹性公网ip id
+     *
+     * @param extensionElasticIpId
+     */
+    public Instance extensionElasticIpId(String extensionElasticIpId) {
+        this.extensionElasticIpId = extensionElasticIpId;
+        return this;
+    }
+
+    /**
+     * set 辅网口公网ip
+     *
+     * @param extensionPublicIp
+     */
+    public Instance extensionPublicIp(String extensionPublicIp) {
+        this.extensionPublicIp = extensionPublicIp;
+        return this;
+    }
+
+    /**
+     * set 辅网口外网带宽，单位Mbps
+     *
+     * @param extensionBandwidth
+     */
+    public Instance extensionBandwidth(Integer extensionBandwidth) {
+        this.extensionBandwidth = extensionBandwidth;
+        return this;
+    }
+
+    /**
+     * set 辅网口是否启用IPv6, 如 yes/no
+     *
+     * @param extensionEnableIpv6
+     */
+    public Instance extensionEnableIpv6(String extensionEnableIpv6) {
+        this.extensionEnableIpv6 = extensionEnableIpv6;
+        return this;
+    }
+
+    /**
+     * set 辅网口IPv6地址
+     *
+     * @param extensionIpv6Address
+     */
+    public Instance extensionIpv6Address(String extensionIpv6Address) {
+        this.extensionIpv6Address = extensionIpv6Address;
+        return this;
+    }
+
+    /**
+     * set 辅网口公网IPv6地址ID
+     *
+     * @param extensionIpv6AddressId
+     */
+    public Instance extensionIpv6AddressId(String extensionIpv6AddressId) {
+        this.extensionIpv6AddressId = extensionIpv6AddressId;
+        return this;
+    }
+
+    /**
+     * set 辅网口IPv6公网带宽, 单位Mbps
+     *
+     * @param extensionIpv6AddressBandwidth
+     */
+    public Instance extensionIpv6AddressBandwidth(Integer extensionIpv6AddressBandwidth) {
+        this.extensionIpv6AddressBandwidth = extensionIpv6AddressBandwidth;
+        return this;
+    }
+
+    /**
+     * set IPv6网关ID
+     *
+     * @param extensionIpv6GatewayId
+     */
+    public Instance extensionIpv6GatewayId(String extensionIpv6GatewayId) {
+        this.extensionIpv6GatewayId = extensionIpv6GatewayId;
         return this;
     }
 
