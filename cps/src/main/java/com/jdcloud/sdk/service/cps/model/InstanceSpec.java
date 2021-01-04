@@ -24,8 +24,11 @@
 
 package com.jdcloud.sdk.service.cps.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
+import com.jdcloud.sdk.service.resourcetag.model.Tag;
 
 /**
  * instanceSpec
@@ -35,7 +38,7 @@ public class InstanceSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 可用区, 如 cn-east-1
+     * 可用区, 如 cn-north-1
      * Required:true
      */
     @Required
@@ -76,9 +79,7 @@ public class InstanceSpec  implements java.io.Serializable {
 
     /**
      * 数据盘RAID类型ID
-     * Required:true
      */
-    @Required
     private String dataRaidTypeId;
 
     /**
@@ -92,12 +93,22 @@ public class InstanceSpec  implements java.io.Serializable {
     private String enableInternet;
 
     /**
+     * 启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+     */
+    private String internetChargeMode;
+
+    /**
      * 是否启用IPv6，取值范围：yes、no
      */
     private String enableIpv6;
 
     /**
-     * 网络类型，取值范围：basic、vpc
+     * IPv6地址
+     */
+    private String ipv6Address;
+
+    /**
+     * 网络类型，取值范围：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      * Required:true
      */
     @Required
@@ -112,6 +123,11 @@ public class InstanceSpec  implements java.io.Serializable {
      * 内网IP
      */
     private String privateIp;
+
+    /**
+     * 内网添加的别名IP范围
+     */
+    private List<AliasIpInfo> aliasIps;
 
     /**
      * 外网链路类型, 目前只支持bgp
@@ -164,9 +180,64 @@ public class InstanceSpec  implements java.io.Serializable {
     @Required
     private ChargeSpec charge;
 
+    /**
+     * 网络接口模式，取值：bond（网口bond）、dual（双网口）
+     */
+    private String interfaceMode;
 
     /**
-     * get 可用区, 如 cn-east-1
+     * 辅网口是否启用IPv6，取值范围：yes、no
+     */
+    private String extensionEnableIpv6;
+
+    /**
+     * 辅网口IPv6地址
+     */
+    private String extensionIpv6Address;
+
+    /**
+     * 辅网口子网ID
+     */
+    private String extensionSubnetId;
+
+    /**
+     * 辅网口手动分配的内网ip
+     */
+    private String extensionPrivateIp;
+
+    /**
+     * 辅网口内网添加的别名IP范围
+     */
+    private List<AliasIpInfo> extensionAliasIps;
+
+    /**
+     * 辅网口是否启用外网，取值范围：yes、no
+     */
+    private String extensionEnableInternet;
+
+    /**
+     * 辅网口链路类型, 目前支持BGP
+     */
+    private String extensionLineType;
+
+    /**
+     * 辅网口外网带宽，范围[1,200] 单位Mbps
+     */
+    private Integer extensionBandwidth;
+
+    /**
+     * 辅网口启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+     */
+    private String extensionInternetChargeMode;
+
+    /**
+     * 标签
+     */
+    private List<Tag> resourceTags;
+
+
+    /**
+     * get 可用区, 如 cn-north-1
      *
      * @return
      */
@@ -175,7 +246,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区, 如 cn-east-1
+     * set 可用区, 如 cn-north-1
      *
      * @param az
      */
@@ -328,6 +399,24 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+     *
+     * @return
+     */
+    public String getInternetChargeMode() {
+        return internetChargeMode;
+    }
+
+    /**
+     * set 启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+     *
+     * @param internetChargeMode
+     */
+    public void setInternetChargeMode(String internetChargeMode) {
+        this.internetChargeMode = internetChargeMode;
+    }
+
+    /**
      * get 是否启用IPv6，取值范围：yes、no
      *
      * @return
@@ -346,7 +435,25 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 网络类型，取值范围：basic、vpc
+     * get IPv6地址
+     *
+     * @return
+     */
+    public String getIpv6Address() {
+        return ipv6Address;
+    }
+
+    /**
+     * set IPv6地址
+     *
+     * @param ipv6Address
+     */
+    public void setIpv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+    }
+
+    /**
+     * get 网络类型，取值范围：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @return
      */
@@ -355,7 +462,7 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 网络类型，取值范围：basic、vpc
+     * set 网络类型，取值范围：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @param networkType
      */
@@ -397,6 +504,24 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public void setPrivateIp(String privateIp) {
         this.privateIp = privateIp;
+    }
+
+    /**
+     * get 内网添加的别名IP范围
+     *
+     * @return
+     */
+    public List<AliasIpInfo> getAliasIps() {
+        return aliasIps;
+    }
+
+    /**
+     * set 内网添加的别名IP范围
+     *
+     * @param aliasIps
+     */
+    public void setAliasIps(List<AliasIpInfo> aliasIps) {
+        this.aliasIps = aliasIps;
     }
 
     /**
@@ -561,9 +686,207 @@ public class InstanceSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 网络接口模式，取值：bond（网口bond）、dual（双网口）
+     *
+     * @return
+     */
+    public String getInterfaceMode() {
+        return interfaceMode;
+    }
 
     /**
-     * set 可用区, 如 cn-east-1
+     * set 网络接口模式，取值：bond（网口bond）、dual（双网口）
+     *
+     * @param interfaceMode
+     */
+    public void setInterfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
+    }
+
+    /**
+     * get 辅网口是否启用IPv6，取值范围：yes、no
+     *
+     * @return
+     */
+    public String getExtensionEnableIpv6() {
+        return extensionEnableIpv6;
+    }
+
+    /**
+     * set 辅网口是否启用IPv6，取值范围：yes、no
+     *
+     * @param extensionEnableIpv6
+     */
+    public void setExtensionEnableIpv6(String extensionEnableIpv6) {
+        this.extensionEnableIpv6 = extensionEnableIpv6;
+    }
+
+    /**
+     * get 辅网口IPv6地址
+     *
+     * @return
+     */
+    public String getExtensionIpv6Address() {
+        return extensionIpv6Address;
+    }
+
+    /**
+     * set 辅网口IPv6地址
+     *
+     * @param extensionIpv6Address
+     */
+    public void setExtensionIpv6Address(String extensionIpv6Address) {
+        this.extensionIpv6Address = extensionIpv6Address;
+    }
+
+    /**
+     * get 辅网口子网ID
+     *
+     * @return
+     */
+    public String getExtensionSubnetId() {
+        return extensionSubnetId;
+    }
+
+    /**
+     * set 辅网口子网ID
+     *
+     * @param extensionSubnetId
+     */
+    public void setExtensionSubnetId(String extensionSubnetId) {
+        this.extensionSubnetId = extensionSubnetId;
+    }
+
+    /**
+     * get 辅网口手动分配的内网ip
+     *
+     * @return
+     */
+    public String getExtensionPrivateIp() {
+        return extensionPrivateIp;
+    }
+
+    /**
+     * set 辅网口手动分配的内网ip
+     *
+     * @param extensionPrivateIp
+     */
+    public void setExtensionPrivateIp(String extensionPrivateIp) {
+        this.extensionPrivateIp = extensionPrivateIp;
+    }
+
+    /**
+     * get 辅网口内网添加的别名IP范围
+     *
+     * @return
+     */
+    public List<AliasIpInfo> getExtensionAliasIps() {
+        return extensionAliasIps;
+    }
+
+    /**
+     * set 辅网口内网添加的别名IP范围
+     *
+     * @param extensionAliasIps
+     */
+    public void setExtensionAliasIps(List<AliasIpInfo> extensionAliasIps) {
+        this.extensionAliasIps = extensionAliasIps;
+    }
+
+    /**
+     * get 辅网口是否启用外网，取值范围：yes、no
+     *
+     * @return
+     */
+    public String getExtensionEnableInternet() {
+        return extensionEnableInternet;
+    }
+
+    /**
+     * set 辅网口是否启用外网，取值范围：yes、no
+     *
+     * @param extensionEnableInternet
+     */
+    public void setExtensionEnableInternet(String extensionEnableInternet) {
+        this.extensionEnableInternet = extensionEnableInternet;
+    }
+
+    /**
+     * get 辅网口链路类型, 目前支持BGP
+     *
+     * @return
+     */
+    public String getExtensionLineType() {
+        return extensionLineType;
+    }
+
+    /**
+     * set 辅网口链路类型, 目前支持BGP
+     *
+     * @param extensionLineType
+     */
+    public void setExtensionLineType(String extensionLineType) {
+        this.extensionLineType = extensionLineType;
+    }
+
+    /**
+     * get 辅网口外网带宽，范围[1,200] 单位Mbps
+     *
+     * @return
+     */
+    public Integer getExtensionBandwidth() {
+        return extensionBandwidth;
+    }
+
+    /**
+     * set 辅网口外网带宽，范围[1,200] 单位Mbps
+     *
+     * @param extensionBandwidth
+     */
+    public void setExtensionBandwidth(Integer extensionBandwidth) {
+        this.extensionBandwidth = extensionBandwidth;
+    }
+
+    /**
+     * get 辅网口启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+     *
+     * @return
+     */
+    public String getExtensionInternetChargeMode() {
+        return extensionInternetChargeMode;
+    }
+
+    /**
+     * set 辅网口启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+     *
+     * @param extensionInternetChargeMode
+     */
+    public void setExtensionInternetChargeMode(String extensionInternetChargeMode) {
+        this.extensionInternetChargeMode = extensionInternetChargeMode;
+    }
+
+    /**
+     * get 标签
+     *
+     * @return
+     */
+    public List<Tag> getResourceTags() {
+        return resourceTags;
+    }
+
+    /**
+     * set 标签
+     *
+     * @param resourceTags
+     */
+    public void setResourceTags(List<Tag> resourceTags) {
+        this.resourceTags = resourceTags;
+    }
+
+
+    /**
+     * set 可用区, 如 cn-north-1
      *
      * @param az
      */
@@ -653,6 +976,16 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * set 启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+     *
+     * @param internetChargeMode
+     */
+    public InstanceSpec internetChargeMode(String internetChargeMode) {
+        this.internetChargeMode = internetChargeMode;
+        return this;
+    }
+
+    /**
      * set 是否启用IPv6，取值范围：yes、no
      *
      * @param enableIpv6
@@ -663,7 +996,17 @@ public class InstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 网络类型，取值范围：basic、vpc
+     * set IPv6地址
+     *
+     * @param ipv6Address
+     */
+    public InstanceSpec ipv6Address(String ipv6Address) {
+        this.ipv6Address = ipv6Address;
+        return this;
+    }
+
+    /**
+     * set 网络类型，取值范围：basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @param networkType
      */
@@ -689,6 +1032,16 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public InstanceSpec privateIp(String privateIp) {
         this.privateIp = privateIp;
+        return this;
+    }
+
+    /**
+     * set 内网添加的别名IP范围
+     *
+     * @param aliasIps
+     */
+    public InstanceSpec aliasIps(List<AliasIpInfo> aliasIps) {
+        this.aliasIps = aliasIps;
         return this;
     }
 
@@ -782,5 +1135,151 @@ public class InstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 网络接口模式，取值：bond（网口bond）、dual（双网口）
+     *
+     * @param interfaceMode
+     */
+    public InstanceSpec interfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
+        return this;
+    }
+
+    /**
+     * set 辅网口是否启用IPv6，取值范围：yes、no
+     *
+     * @param extensionEnableIpv6
+     */
+    public InstanceSpec extensionEnableIpv6(String extensionEnableIpv6) {
+        this.extensionEnableIpv6 = extensionEnableIpv6;
+        return this;
+    }
+
+    /**
+     * set 辅网口IPv6地址
+     *
+     * @param extensionIpv6Address
+     */
+    public InstanceSpec extensionIpv6Address(String extensionIpv6Address) {
+        this.extensionIpv6Address = extensionIpv6Address;
+        return this;
+    }
+
+    /**
+     * set 辅网口子网ID
+     *
+     * @param extensionSubnetId
+     */
+    public InstanceSpec extensionSubnetId(String extensionSubnetId) {
+        this.extensionSubnetId = extensionSubnetId;
+        return this;
+    }
+
+    /**
+     * set 辅网口手动分配的内网ip
+     *
+     * @param extensionPrivateIp
+     */
+    public InstanceSpec extensionPrivateIp(String extensionPrivateIp) {
+        this.extensionPrivateIp = extensionPrivateIp;
+        return this;
+    }
+
+    /**
+     * set 辅网口内网添加的别名IP范围
+     *
+     * @param extensionAliasIps
+     */
+    public InstanceSpec extensionAliasIps(List<AliasIpInfo> extensionAliasIps) {
+        this.extensionAliasIps = extensionAliasIps;
+        return this;
+    }
+
+    /**
+     * set 辅网口是否启用外网，取值范围：yes、no
+     *
+     * @param extensionEnableInternet
+     */
+    public InstanceSpec extensionEnableInternet(String extensionEnableInternet) {
+        this.extensionEnableInternet = extensionEnableInternet;
+        return this;
+    }
+
+    /**
+     * set 辅网口链路类型, 目前支持BGP
+     *
+     * @param extensionLineType
+     */
+    public InstanceSpec extensionLineType(String extensionLineType) {
+        this.extensionLineType = extensionLineType;
+        return this;
+    }
+
+    /**
+     * set 辅网口外网带宽，范围[1,200] 单位Mbps
+     *
+     * @param extensionBandwidth
+     */
+    public InstanceSpec extensionBandwidth(Integer extensionBandwidth) {
+        this.extensionBandwidth = extensionBandwidth;
+        return this;
+    }
+
+    /**
+     * set 辅网口启用外网时弹性公网IP的计费模式，取值范围：prepaid_by_duration、postpaid_by_duration
+     *
+     * @param extensionInternetChargeMode
+     */
+    public InstanceSpec extensionInternetChargeMode(String extensionInternetChargeMode) {
+        this.extensionInternetChargeMode = extensionInternetChargeMode;
+        return this;
+    }
+
+    /**
+     * set 标签
+     *
+     * @param resourceTags
+     */
+    public InstanceSpec resourceTags(List<Tag> resourceTags) {
+        this.resourceTags = resourceTags;
+        return this;
+    }
+
+
+    /**
+     * add item to 内网添加的别名IP范围
+     *
+     * @param aliasIp
+     */
+    public void addAliasIp(AliasIpInfo aliasIp) {
+        if (this.aliasIps == null) {
+            this.aliasIps = new ArrayList<>();
+        }
+        this.aliasIps.add(aliasIp);
+    }
+
+    /**
+     * add item to 辅网口内网添加的别名IP范围
+     *
+     * @param extensionAliasIp
+     */
+    public void addExtensionAliasIp(AliasIpInfo extensionAliasIp) {
+        if (this.extensionAliasIps == null) {
+            this.extensionAliasIps = new ArrayList<>();
+        }
+        this.extensionAliasIps.add(extensionAliasIp);
+    }
+
+    /**
+     * add item to 标签
+     *
+     * @param resourceTag
+     */
+    public void addResourceTag(Tag resourceTag) {
+        if (this.resourceTags == null) {
+            this.resourceTags = new ArrayList<>();
+        }
+        this.resourceTags.add(resourceTag);
+    }
 
 }

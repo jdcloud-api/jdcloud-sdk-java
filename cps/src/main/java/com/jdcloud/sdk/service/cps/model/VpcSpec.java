@@ -48,6 +48,11 @@ public class VpcSpec  implements java.io.Serializable {
     private String name;
 
     /**
+     * 是否开通IPv6网关，取值范围：yes、no
+     */
+    private String enableIpv6;
+
+    /**
      * 描述
      * Required:true
      */
@@ -92,6 +97,24 @@ public class VpcSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 是否开通IPv6网关，取值范围：yes、no
+     *
+     * @return
+     */
+    public String getEnableIpv6() {
+        return enableIpv6;
+    }
+
+    /**
+     * set 是否开通IPv6网关，取值范围：yes、no
+     *
+     * @param enableIpv6
+     */
+    public void setEnableIpv6(String enableIpv6) {
+        this.enableIpv6 = enableIpv6;
+    }
+
+    /**
      * get 描述
      *
      * @return
@@ -127,6 +150,16 @@ public class VpcSpec  implements java.io.Serializable {
      */
     public VpcSpec name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 是否开通IPv6网关，取值范围：yes、no
+     *
+     * @param enableIpv6
+     */
+    public VpcSpec enableIpv6(String enableIpv6) {
+        this.enableIpv6 = enableIpv6;
         return this;
     }
 

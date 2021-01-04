@@ -33,12 +33,12 @@ public class Subnet  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域代码, 如cn-east-1
+     * 地域代码, 如cn-north-1
      */
     private String region;
 
     /**
-     * 可用区, 如cn-east-1a
+     * 可用区, 如cn-north-1c
      */
     private String az;
 
@@ -53,9 +53,14 @@ public class Subnet  implements java.io.Serializable {
     private String name;
 
     /**
-     * 子网CIDR
+     * 子网ipv4 CIDR
      */
     private String cidr;
+
+    /**
+     * 子网IPv6 CIDR
+     */
+    private String ipv6Cidr;
 
     /**
      * 私有网络Id
@@ -68,14 +73,49 @@ public class Subnet  implements java.io.Serializable {
     private String vpcName;
 
     /**
-     * 可用ip数量
+     * 私有网络IPv4 CIDR
+     */
+    private String vpcCidr;
+
+    /**
+     * 私有网络IPv6 CIDR
+     */
+    private String vpcIpv6Cidr;
+
+    /**
+     * 可用IPv4地址数量
      */
     private Integer availableIpCount;
 
     /**
-     * 总ip数量
+     * 总IPv4地址数量
      */
     private Integer totalIpCount;
+
+    /**
+     * 已用IPv6地址数量
+     */
+    private Integer usedIpv6IpCount;
+
+    /**
+     * 总IPv6地址数量
+     */
+    private String totalIpv6IpCount;
+
+    /**
+     * 子网次要CIDR名称
+     */
+    private String secondaryCidrName;
+
+    /**
+     * 子网次要CIDR
+     */
+    private String secondaryCidr;
+
+    /**
+     * 子网次要CIDR ID
+     */
+    private String secondaryCidrId;
 
     /**
      * 网络类型
@@ -94,7 +134,7 @@ public class Subnet  implements java.io.Serializable {
 
 
     /**
-     * get 地域代码, 如cn-east-1
+     * get 地域代码, 如cn-north-1
      *
      * @return
      */
@@ -103,7 +143,7 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 地域代码, 如cn-east-1
+     * set 地域代码, 如cn-north-1
      *
      * @param region
      */
@@ -112,7 +152,7 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * get 可用区, 如cn-east-1a
+     * get 可用区, 如cn-north-1c
      *
      * @return
      */
@@ -121,7 +161,7 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区, 如cn-east-1a
+     * set 可用区, 如cn-north-1c
      *
      * @param az
      */
@@ -166,7 +206,7 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * get 子网CIDR
+     * get 子网ipv4 CIDR
      *
      * @return
      */
@@ -175,12 +215,30 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 子网CIDR
+     * set 子网ipv4 CIDR
      *
      * @param cidr
      */
     public void setCidr(String cidr) {
         this.cidr = cidr;
+    }
+
+    /**
+     * get 子网IPv6 CIDR
+     *
+     * @return
+     */
+    public String getIpv6Cidr() {
+        return ipv6Cidr;
+    }
+
+    /**
+     * set 子网IPv6 CIDR
+     *
+     * @param ipv6Cidr
+     */
+    public void setIpv6Cidr(String ipv6Cidr) {
+        this.ipv6Cidr = ipv6Cidr;
     }
 
     /**
@@ -220,7 +278,43 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * get 可用ip数量
+     * get 私有网络IPv4 CIDR
+     *
+     * @return
+     */
+    public String getVpcCidr() {
+        return vpcCidr;
+    }
+
+    /**
+     * set 私有网络IPv4 CIDR
+     *
+     * @param vpcCidr
+     */
+    public void setVpcCidr(String vpcCidr) {
+        this.vpcCidr = vpcCidr;
+    }
+
+    /**
+     * get 私有网络IPv6 CIDR
+     *
+     * @return
+     */
+    public String getVpcIpv6Cidr() {
+        return vpcIpv6Cidr;
+    }
+
+    /**
+     * set 私有网络IPv6 CIDR
+     *
+     * @param vpcIpv6Cidr
+     */
+    public void setVpcIpv6Cidr(String vpcIpv6Cidr) {
+        this.vpcIpv6Cidr = vpcIpv6Cidr;
+    }
+
+    /**
+     * get 可用IPv4地址数量
      *
      * @return
      */
@@ -229,7 +323,7 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 可用ip数量
+     * set 可用IPv4地址数量
      *
      * @param availableIpCount
      */
@@ -238,7 +332,7 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * get 总ip数量
+     * get 总IPv4地址数量
      *
      * @return
      */
@@ -247,12 +341,102 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 总ip数量
+     * set 总IPv4地址数量
      *
      * @param totalIpCount
      */
     public void setTotalIpCount(Integer totalIpCount) {
         this.totalIpCount = totalIpCount;
+    }
+
+    /**
+     * get 已用IPv6地址数量
+     *
+     * @return
+     */
+    public Integer getUsedIpv6IpCount() {
+        return usedIpv6IpCount;
+    }
+
+    /**
+     * set 已用IPv6地址数量
+     *
+     * @param usedIpv6IpCount
+     */
+    public void setUsedIpv6IpCount(Integer usedIpv6IpCount) {
+        this.usedIpv6IpCount = usedIpv6IpCount;
+    }
+
+    /**
+     * get 总IPv6地址数量
+     *
+     * @return
+     */
+    public String getTotalIpv6IpCount() {
+        return totalIpv6IpCount;
+    }
+
+    /**
+     * set 总IPv6地址数量
+     *
+     * @param totalIpv6IpCount
+     */
+    public void setTotalIpv6IpCount(String totalIpv6IpCount) {
+        this.totalIpv6IpCount = totalIpv6IpCount;
+    }
+
+    /**
+     * get 子网次要CIDR名称
+     *
+     * @return
+     */
+    public String getSecondaryCidrName() {
+        return secondaryCidrName;
+    }
+
+    /**
+     * set 子网次要CIDR名称
+     *
+     * @param secondaryCidrName
+     */
+    public void setSecondaryCidrName(String secondaryCidrName) {
+        this.secondaryCidrName = secondaryCidrName;
+    }
+
+    /**
+     * get 子网次要CIDR
+     *
+     * @return
+     */
+    public String getSecondaryCidr() {
+        return secondaryCidr;
+    }
+
+    /**
+     * set 子网次要CIDR
+     *
+     * @param secondaryCidr
+     */
+    public void setSecondaryCidr(String secondaryCidr) {
+        this.secondaryCidr = secondaryCidr;
+    }
+
+    /**
+     * get 子网次要CIDR ID
+     *
+     * @return
+     */
+    public String getSecondaryCidrId() {
+        return secondaryCidrId;
+    }
+
+    /**
+     * set 子网次要CIDR ID
+     *
+     * @param secondaryCidrId
+     */
+    public void setSecondaryCidrId(String secondaryCidrId) {
+        this.secondaryCidrId = secondaryCidrId;
     }
 
     /**
@@ -311,7 +495,7 @@ public class Subnet  implements java.io.Serializable {
 
 
     /**
-     * set 地域代码, 如cn-east-1
+     * set 地域代码, 如cn-north-1
      *
      * @param region
      */
@@ -321,7 +505,7 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区, 如cn-east-1a
+     * set 可用区, 如cn-north-1c
      *
      * @param az
      */
@@ -351,12 +535,22 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 子网CIDR
+     * set 子网ipv4 CIDR
      *
      * @param cidr
      */
     public Subnet cidr(String cidr) {
         this.cidr = cidr;
+        return this;
+    }
+
+    /**
+     * set 子网IPv6 CIDR
+     *
+     * @param ipv6Cidr
+     */
+    public Subnet ipv6Cidr(String ipv6Cidr) {
+        this.ipv6Cidr = ipv6Cidr;
         return this;
     }
 
@@ -381,7 +575,27 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 可用ip数量
+     * set 私有网络IPv4 CIDR
+     *
+     * @param vpcCidr
+     */
+    public Subnet vpcCidr(String vpcCidr) {
+        this.vpcCidr = vpcCidr;
+        return this;
+    }
+
+    /**
+     * set 私有网络IPv6 CIDR
+     *
+     * @param vpcIpv6Cidr
+     */
+    public Subnet vpcIpv6Cidr(String vpcIpv6Cidr) {
+        this.vpcIpv6Cidr = vpcIpv6Cidr;
+        return this;
+    }
+
+    /**
+     * set 可用IPv4地址数量
      *
      * @param availableIpCount
      */
@@ -391,12 +605,62 @@ public class Subnet  implements java.io.Serializable {
     }
 
     /**
-     * set 总ip数量
+     * set 总IPv4地址数量
      *
      * @param totalIpCount
      */
     public Subnet totalIpCount(Integer totalIpCount) {
         this.totalIpCount = totalIpCount;
+        return this;
+    }
+
+    /**
+     * set 已用IPv6地址数量
+     *
+     * @param usedIpv6IpCount
+     */
+    public Subnet usedIpv6IpCount(Integer usedIpv6IpCount) {
+        this.usedIpv6IpCount = usedIpv6IpCount;
+        return this;
+    }
+
+    /**
+     * set 总IPv6地址数量
+     *
+     * @param totalIpv6IpCount
+     */
+    public Subnet totalIpv6IpCount(String totalIpv6IpCount) {
+        this.totalIpv6IpCount = totalIpv6IpCount;
+        return this;
+    }
+
+    /**
+     * set 子网次要CIDR名称
+     *
+     * @param secondaryCidrName
+     */
+    public Subnet secondaryCidrName(String secondaryCidrName) {
+        this.secondaryCidrName = secondaryCidrName;
+        return this;
+    }
+
+    /**
+     * set 子网次要CIDR
+     *
+     * @param secondaryCidr
+     */
+    public Subnet secondaryCidr(String secondaryCidr) {
+        this.secondaryCidr = secondaryCidr;
+        return this;
+    }
+
+    /**
+     * set 子网次要CIDR ID
+     *
+     * @param secondaryCidrId
+     */
+    public Subnet secondaryCidrId(String secondaryCidrId) {
+        this.secondaryCidrId = secondaryCidrId;
         return this;
     }
 

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理服务器地域操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -34,13 +34,13 @@ public class DescribeRegionesRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 网络类型basic/vpc, 默认basic
+     * 网络类型basic（基础网络）、vpc（私有网络）、retail（零售中台网络）, 默认basic
      */
     private String networkType;
 
 
     /**
-     * get 网络类型basic/vpc, 默认basic
+     * get 网络类型basic（基础网络）、vpc（私有网络）、retail（零售中台网络）, 默认basic
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class DescribeRegionesRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 网络类型basic/vpc, 默认basic
+     * set 网络类型basic（基础网络）、vpc（私有网络）、retail（零售中台网络）, 默认basic
      *
      * @param networkType
      */
@@ -59,7 +59,7 @@ public class DescribeRegionesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 网络类型basic/vpc, 默认basic
+     * set 网络类型basic（基础网络）、vpc（私有网络）、retail（零售中台网络）, 默认basic
      *
      * @param networkType
      */

@@ -48,11 +48,16 @@ public class SubnetSpec  implements java.io.Serializable {
     private String vpcId;
 
     /**
-     * 子网的网络范围
+     * 子网的IPv4网络范围
      * Required:true
      */
     @Required
     private String cidr;
+
+    /**
+     * 子网的IPv6网络范围
+     */
+    private String ipv6Cidr;
 
     /**
      * 名称
@@ -67,6 +72,16 @@ public class SubnetSpec  implements java.io.Serializable {
      */
     @Required
     private String description;
+
+    /**
+     * 子网的次要cidr
+     */
+    private String secondaryCidr;
+
+    /**
+     * 子网的次要cidr名称
+     */
+    private String secondaryCidrName;
 
 
     /**
@@ -106,7 +121,7 @@ public class SubnetSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 子网的网络范围
+     * get 子网的IPv4网络范围
      *
      * @return
      */
@@ -115,12 +130,30 @@ public class SubnetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 子网的网络范围
+     * set 子网的IPv4网络范围
      *
      * @param cidr
      */
     public void setCidr(String cidr) {
         this.cidr = cidr;
+    }
+
+    /**
+     * get 子网的IPv6网络范围
+     *
+     * @return
+     */
+    public String getIpv6Cidr() {
+        return ipv6Cidr;
+    }
+
+    /**
+     * set 子网的IPv6网络范围
+     *
+     * @param ipv6Cidr
+     */
+    public void setIpv6Cidr(String ipv6Cidr) {
+        this.ipv6Cidr = ipv6Cidr;
     }
 
     /**
@@ -159,6 +192,42 @@ public class SubnetSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+    /**
+     * get 子网的次要cidr
+     *
+     * @return
+     */
+    public String getSecondaryCidr() {
+        return secondaryCidr;
+    }
+
+    /**
+     * set 子网的次要cidr
+     *
+     * @param secondaryCidr
+     */
+    public void setSecondaryCidr(String secondaryCidr) {
+        this.secondaryCidr = secondaryCidr;
+    }
+
+    /**
+     * get 子网的次要cidr名称
+     *
+     * @return
+     */
+    public String getSecondaryCidrName() {
+        return secondaryCidrName;
+    }
+
+    /**
+     * set 子网的次要cidr名称
+     *
+     * @param secondaryCidrName
+     */
+    public void setSecondaryCidrName(String secondaryCidrName) {
+        this.secondaryCidrName = secondaryCidrName;
+    }
+
 
     /**
      * set 可用区, 如 cn-north-1a
@@ -181,12 +250,22 @@ public class SubnetSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 子网的网络范围
+     * set 子网的IPv4网络范围
      *
      * @param cidr
      */
     public SubnetSpec cidr(String cidr) {
         this.cidr = cidr;
+        return this;
+    }
+
+    /**
+     * set 子网的IPv6网络范围
+     *
+     * @param ipv6Cidr
+     */
+    public SubnetSpec ipv6Cidr(String ipv6Cidr) {
+        this.ipv6Cidr = ipv6Cidr;
         return this;
     }
 
@@ -207,6 +286,26 @@ public class SubnetSpec  implements java.io.Serializable {
      */
     public SubnetSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 子网的次要cidr
+     *
+     * @param secondaryCidr
+     */
+    public SubnetSpec secondaryCidr(String secondaryCidr) {
+        this.secondaryCidr = secondaryCidr;
+        return this;
+    }
+
+    /**
+     * set 子网的次要cidr名称
+     *
+     * @param secondaryCidrName
+     */
+    public SubnetSpec secondaryCidrName(String secondaryCidrName) {
+        this.secondaryCidrName = secondaryCidrName;
         return this;
     }
 

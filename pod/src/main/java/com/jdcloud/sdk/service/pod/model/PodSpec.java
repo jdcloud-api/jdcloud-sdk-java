@@ -121,6 +121,11 @@ public class PodSpec  implements java.io.Serializable {
     @Required
     private NetworkInterfaceAttachmentSpec primaryNetworkInterface;
 
+    /**
+     * 用户普通标签集合
+     */
+    private List<Tag> userTags;
+
 
     /**
      * get Pod名称，符合DNS-1123 subdomain规范；名称不可重复、不支持修改
@@ -392,6 +397,24 @@ public class PodSpec  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
+    /**
+     * get 用户普通标签集合
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户普通标签集合
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
 
     /**
      * set Pod名称，符合DNS-1123 subdomain规范；名称不可重复、不支持修改
@@ -543,6 +566,16 @@ public class PodSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 用户普通标签集合
+     *
+     * @param userTags
+     */
+    public PodSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
 
     /**
      * add item to 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
@@ -578,6 +611,18 @@ public class PodSpec  implements java.io.Serializable {
             this.containers = new ArrayList<>();
         }
         this.containers.add(container);
+    }
+
+    /**
+     * add item to 用户普通标签集合
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 
 }

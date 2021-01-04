@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理虚拟服务器组操作相关的接口
  *
  * OpenAPI spec version: v1

@@ -48,7 +48,7 @@ public class Raid  implements java.io.Serializable {
     private String raidTypeId;
 
     /**
-     * RAID类型, 如 NORAID, RAID0, RAID1
+     * RAID类型, 如 NORAID, RAID0, RAID1，RAID10
      */
     private String raidType;
 
@@ -118,7 +118,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * get RAID类型, 如 NORAID, RAID0, RAID1
+     * get RAID类型, 如 NORAID, RAID0, RAID1，RAID10
      *
      * @return
      */
@@ -127,7 +127,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * set RAID类型, 如 NORAID, RAID0, RAID1
+     * set RAID类型, 如 NORAID, RAID0, RAID1，RAID10
      *
      * @param raidType
      */
@@ -203,7 +203,7 @@ public class Raid  implements java.io.Serializable {
     }
 
     /**
-     * set RAID类型, 如 NORAID, RAID0, RAID1
+     * set RAID类型, 如 NORAID, RAID0, RAID1，RAID10
      *
      * @param raidType
      */

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -42,7 +42,7 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
     private String deviceType;
 
     /**
-     * 操作系统类型，取值范围：CentOS、Ubuntu
+     * 操作系统类型，取值范围：CentOS、Ubuntu、Windows
      */
     private String osType;
 
@@ -73,7 +73,7 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 操作系统类型，取值范围：CentOS、Ubuntu
+     * get 操作系统类型，取值范围：CentOS、Ubuntu、Windows
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 操作系统类型，取值范围：CentOS、Ubuntu
+     * set 操作系统类型，取值范围：CentOS、Ubuntu、Windows
      *
      * @param osType
      */
@@ -120,7 +120,7 @@ public class DescribeOSRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 操作系统类型，取值范围：CentOS、Ubuntu
+     * set 操作系统类型，取值范围：CentOS、Ubuntu、Windows
      *
      * @param osType
      */

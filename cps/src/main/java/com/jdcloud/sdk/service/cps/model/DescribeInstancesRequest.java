@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 云物理服务器
+ * Cloud-Physical-Server
  * 云物理服务器操作相关的接口
  *
  * OpenAPI spec version: v1
@@ -60,7 +60,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String name;
 
     /**
-     * 网络类型，精确匹配，支持basic，vpc
+     * 网络类型，精确匹配，支持basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      */
     private String networkType;
 
@@ -80,7 +80,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String keypairId;
 
     /**
-     * 是否启用外网, yes/no
+     * 是否启用外网, yes、no
      */
     private String enableInternet;
 
@@ -88,6 +88,11 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
      * 内网ip
      */
     private String privateIp;
+
+    /**
+     * 实例网卡类型：bond（网卡bond）、dual（双网卡）
+     */
+    private String interfaceMode;
 
     /**
      * instanceId - 云物理服务器ID，精确匹配，支持多个&lt;br/&gt;
@@ -177,7 +182,7 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
     }
 
     /**
-     * get 网络类型，精确匹配，支持basic，vpc
+     * get 网络类型，精确匹配，支持basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @return
      */
@@ -186,7 +191,7 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
     }
 
     /**
-     * set 网络类型，精确匹配，支持basic，vpc
+     * set 网络类型，精确匹配，支持basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @param networkType
      */
@@ -249,7 +254,7 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
     }
 
     /**
-     * get 是否启用外网, yes/no
+     * get 是否启用外网, yes、no
      *
      * @return
      */
@@ -258,7 +263,7 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
     }
 
     /**
-     * set 是否启用外网, yes/no
+     * set 是否启用外网, yes、no
      *
      * @param enableInternet
      */
@@ -282,6 +287,24 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
      */
     public void setPrivateIp(String privateIp) {
         this.privateIp = privateIp;
+    }
+
+    /**
+     * get 实例网卡类型：bond（网卡bond）、dual（双网卡）
+     *
+     * @return
+     */
+    public String getInterfaceMode() {
+        return interfaceMode;
+    }
+
+    /**
+     * set 实例网卡类型：bond（网卡bond）、dual（双网卡）
+     *
+     * @param interfaceMode
+     */
+    public void setInterfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
     }
 
     /**
@@ -366,7 +389,7 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
     }
 
     /**
-     * set 网络类型，精确匹配，支持basic，vpc
+     * set 网络类型，精确匹配，支持basic（基础网络）、vpc（私有网络）、retail（零售中台网络）
      *
      * @param networkType
      */
@@ -406,7 +429,7 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
     }
 
     /**
-     * set 是否启用外网, yes/no
+     * set 是否启用外网, yes、no
      *
      * @param enableInternet
      */
@@ -422,6 +445,16 @@ status - 云物理服务器状态，参考云物理服务器状态，精确匹�
      */
     public DescribeInstancesRequest privateIp(String privateIp) {
         this.privateIp = privateIp;
+        return this;
+    }
+
+    /**
+     * set 实例网卡类型：bond（网卡bond）、dual（双网卡）
+     *
+     * @param interfaceMode
+     */
+    public DescribeInstancesRequest interfaceMode(String interfaceMode) {
+        this.interfaceMode = interfaceMode;
         return this;
     }
 

@@ -50,6 +50,11 @@ public class RouteTable  implements java.io.Serializable {
     private String vpcId;
 
     /**
+     * 私有网络名称
+     */
+    private String vpcName;
+
+    /**
      * 名称
      */
     private String name;
@@ -117,6 +122,24 @@ public class RouteTable  implements java.io.Serializable {
      */
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
+    }
+
+    /**
+     * get 私有网络名称
+     *
+     * @return
+     */
+    public String getVpcName() {
+        return vpcName;
+    }
+
+    /**
+     * set 私有网络名称
+     *
+     * @param vpcName
+     */
+    public void setVpcName(String vpcName) {
+        this.vpcName = vpcName;
     }
 
     /**
@@ -201,6 +224,16 @@ public class RouteTable  implements java.io.Serializable {
      */
     public RouteTable vpcId(String vpcId) {
         this.vpcId = vpcId;
+        return this;
+    }
+
+    /**
+     * set 私有网络名称
+     *
+     * @param vpcName
+     */
+    public RouteTable vpcName(String vpcName) {
+        this.vpcName = vpcName;
         return this;
     }
 

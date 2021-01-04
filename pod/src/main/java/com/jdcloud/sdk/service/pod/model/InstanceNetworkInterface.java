@@ -79,6 +79,11 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
      */
     private List<NetworkInterfacePrivateIp> secondaryIps;
 
+    /**
+     * 网卡IPv6地址
+     */
+    private List<String> ipv6Addresses;
+
 
     /**
      * get 弹性网卡ID
@@ -242,6 +247,24 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         this.secondaryIps = secondaryIps;
     }
 
+    /**
+     * get 网卡IPv6地址
+     *
+     * @return
+     */
+    public List<String> getIpv6Addresses() {
+        return ipv6Addresses;
+    }
+
+    /**
+     * set 网卡IPv6地址
+     *
+     * @param ipv6Addresses
+     */
+    public void setIpv6Addresses(List<String> ipv6Addresses) {
+        this.ipv6Addresses = ipv6Addresses;
+    }
+
 
     /**
      * set 弹性网卡ID
@@ -333,6 +356,16 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 网卡IPv6地址
+     *
+     * @param ipv6Addresses
+     */
+    public InstanceNetworkInterface ipv6Addresses(List<String> ipv6Addresses) {
+        this.ipv6Addresses = ipv6Addresses;
+        return this;
+    }
+
 
     /**
      * add item to 安全组列表
@@ -356,6 +389,18 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
             this.secondaryIps = new ArrayList<>();
         }
         this.secondaryIps.add(secondaryIp);
+    }
+
+    /**
+     * add item to 网卡IPv6地址
+     *
+     * @param ipv6Addresse
+     */
+    public void addIpv6Addresse(String ipv6Addresse) {
+        if (this.ipv6Addresses == null) {
+            this.ipv6Addresses = new ArrayList<>();
+        }
+        this.ipv6Addresses.add(ipv6Addresse);
     }
 
 }
