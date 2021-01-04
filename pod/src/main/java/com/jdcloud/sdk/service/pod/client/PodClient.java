@@ -114,7 +114,7 @@ public class PodClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "pod.jdcloud-api.com";
     public final static String ServiceName = "pod";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;

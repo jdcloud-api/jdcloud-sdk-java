@@ -143,6 +143,11 @@ public class ContainerSpec  implements java.io.Serializable {
      */
     private ChargeSpec charge;
 
+    /**
+     * 用户普通标签集合
+     */
+    private List<Tag> userTags;
+
 
     /**
      * get 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
@@ -486,6 +491,24 @@ public class ContainerSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 用户普通标签集合
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户普通标签集合
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
 
     /**
      * set 实例类型；参考[文档](https://www.jdcloud.com/help/detail/1992/isCatalog/1)
@@ -677,6 +700,16 @@ public class ContainerSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 用户普通标签集合
+     *
+     * @param userTags
+     */
+    public ContainerSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
 
     /**
      * add item to 域名和IP映射的信息；&lt;/br&gt; 最大10个alias
@@ -736,6 +769,18 @@ public class ContainerSpec  implements java.io.Serializable {
             this.dataVolumes = new ArrayList<>();
         }
         this.dataVolumes.add(dataVolume);
+    }
+
+    /**
+     * add item to 用户普通标签集合
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
     }
 
 }

@@ -52,7 +52,7 @@ public class DescribePodsRequest extends JdcloudRequest implements java.io.Seria
 
     /**
      * podId - pod ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 phase - pod 状态，精确匹配，支持多个
@@ -113,7 +113,7 @@ subnetId - 镜像ID，精确匹配，支持多个
 
     /**
      * get podId - pod ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 phase - pod 状态，精确匹配，支持多个
@@ -129,7 +129,7 @@ subnetId - 镜像ID，精确匹配，支持多个
 
     /**
      * set podId - pod ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 phase - pod 状态，精确匹配，支持多个
@@ -202,7 +202,7 @@ subnetId - 镜像ID，精确匹配，支持多个
 
     /**
      * set podId - pod ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 phase - pod 状态，精确匹配，支持多个
@@ -240,7 +240,7 @@ subnetId - 镜像ID，精确匹配，支持多个
 
     /**
      * add item to podId - pod ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 phase - pod 状态，精确匹配，支持多个

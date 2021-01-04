@@ -52,13 +52,12 @@ public class DescribeContainersRequest extends JdcloudRequest implements java.io
 
     /**
      * containerId - 实例ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 容器状态，精确匹配，支持多个
 name - 容器名称，模糊匹配，支持单个
 subnetId - 子网ID，精确匹配，支持多个
-securityGroups - 安全组 id，精确匹配，支持多个
 
      */
     private List<Filter> filters;
@@ -114,13 +113,12 @@ securityGroups - 安全组 id，精确匹配，支持多个
 
     /**
      * get containerId - 实例ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 容器状态，精确匹配，支持多个
 name - 容器名称，模糊匹配，支持单个
 subnetId - 子网ID，精确匹配，支持多个
-securityGroups - 安全组 id，精确匹配，支持多个
 
      *
      * @return
@@ -131,13 +129,12 @@ securityGroups - 安全组 id，精确匹配，支持多个
 
     /**
      * set containerId - 实例ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 容器状态，精确匹配，支持多个
 name - 容器名称，模糊匹配，支持单个
 subnetId - 子网ID，精确匹配，支持多个
-securityGroups - 安全组 id，精确匹配，支持多个
 
      *
      * @param filters
@@ -205,13 +202,12 @@ securityGroups - 安全组 id，精确匹配，支持多个
 
     /**
      * set containerId - 实例ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 容器状态，精确匹配，支持多个
 name - 容器名称，模糊匹配，支持单个
 subnetId - 子网ID，精确匹配，支持多个
-securityGroups - 安全组 id，精确匹配，支持多个
 
      *
      * @param filters
@@ -244,13 +240,12 @@ securityGroups - 安全组 id，精确匹配，支持多个
 
     /**
      * add item to containerId - 实例ID，精确匹配，支持多个
-privateIpAddress - 主网卡IP地址，精确匹配，支持单个
+privateIpAddress - 主网卡IP地址，模糊匹配，支持单个
 az - 可用区，精确匹配，支持多个
 vpcId - 私有网络ID，精确匹配，支持多个
 status - 容器状态，精确匹配，支持多个
 name - 容器名称，模糊匹配，支持单个
 subnetId - 子网ID，精确匹配，支持多个
-securityGroups - 安全组 id，精确匹配，支持多个
 
      *
      * @param filter
