@@ -94,6 +94,9 @@ import com.jdcloud.sdk.service.live.client.AddCustomLiveStreamSnapshotTemplateEx
 import com.jdcloud.sdk.service.live.model.StartLiveDomainRequest;
 import com.jdcloud.sdk.service.live.model.StartLiveDomainResponse;
 import com.jdcloud.sdk.service.live.client.StartLiveDomainExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPublishInfoByPageRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPublishInfoByPageResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveStreamPublishInfoByPageExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamWatermarkTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamWatermarkTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamWatermarkTemplatesExecutor;
@@ -259,6 +262,9 @@ import com.jdcloud.sdk.service.live.client.SetLiveRestartAuthKeyExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamNumRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTranscodeStreamNumResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveTranscodeStreamNumExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPlayInfoByPageRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPlayInfoByPageResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveStreamPlayInfoByPageExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveDomainDetailRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveDomainDetailResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveDomainDetailExecutor;
@@ -690,6 +696,17 @@ public class LiveClient extends JdcloudClient {
      */
     public StartLiveDomainResponse startLiveDomain(StartLiveDomainRequest request) throws JdcloudSdkException {
         return new StartLiveDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询推流码率、帧率
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveStreamPublishInfoByPageResponse describeLiveStreamPublishInfoByPage(DescribeLiveStreamPublishInfoByPageRequest request) throws JdcloudSdkException {
+        return new DescribeLiveStreamPublishInfoByPageExecutor().client(this).execute(request);
     }
 
     /**
@@ -1360,6 +1377,17 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveTranscodeStreamNumResponse describeLiveTranscodeStreamNum(DescribeLiveTranscodeStreamNumRequest request) throws JdcloudSdkException {
         return new DescribeLiveTranscodeStreamNumExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询观看人数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveStreamPlayInfoByPageResponse describeLiveStreamPlayInfoByPage(DescribeLiveStreamPlayInfoByPageRequest request) throws JdcloudSdkException {
+        return new DescribeLiveStreamPlayInfoByPageExecutor().client(this).execute(request);
     }
 
     /**
