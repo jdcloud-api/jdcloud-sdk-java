@@ -28,16 +28,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询直播截图张数数据
+ * 查询观看人数
  */
-public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeLiveStreamPlayInfoByPageRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
      * 推流域名
+     * Required:true
      */
-    private String publishDomain;
+    @Required
+    private String domainName;
 
     /**
      * 应用名称
@@ -50,16 +52,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     private String streamName;
 
     /**
-     * 截图模式：1表示采样截图；2表示关键帧截图(默认为2)
-     */
-    private Integer shotMode;
-
-    /**
-     * 起始时间:
+     * 起始时间
 - UTC时间
-  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-  示例: 2018-10-21T10:00:00Z
-- 支持最大查询90天以内的数据
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
 
      * Required:true
      */
@@ -69,12 +65,24 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     /**
      * 结束时间:
 - UTC时间
-  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-  示例: 2018-10-21T10:00:00Z
-- 为空,默认当前时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 为空,默认为当前时间
 
      */
     private String endTime;
+
+    /**
+     * 页码，起始页码1
+
+     */
+    private Integer pageNumber;
+
+    /**
+     * 每页最大记录数，取值：[10,1000]，默认：100
+
+     */
+    private Integer pageSize;
 
 
     /**
@@ -82,17 +90,17 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
      *
      * @return
      */
-    public String getPublishDomain() {
-        return publishDomain;
+    public String getDomainName() {
+        return domainName;
     }
 
     /**
      * set 推流域名
      *
-     * @param publishDomain
+     * @param domainName
      */
-    public void setPublishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
+    public void setDomainName(String domainName) {
+        this.domainName = domainName;
     }
 
     /**
@@ -132,29 +140,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 截图模式：1表示采样截图；2表示关键帧截图(默认为2)
-     *
-     * @return
-     */
-    public Integer getShotMode() {
-        return shotMode;
-    }
-
-    /**
-     * set 截图模式：1表示采样截图；2表示关键帧截图(默认为2)
-     *
-     * @param shotMode
-     */
-    public void setShotMode(Integer shotMode) {
-        this.shotMode = shotMode;
-    }
-
-    /**
-     * get 起始时间:
+     * get 起始时间
 - UTC时间
-  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-  示例: 2018-10-21T10:00:00Z
-- 支持最大查询90天以内的数据
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
 
      *
      * @return
@@ -164,11 +153,10 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 起始时间:
+     * set 起始时间
 - UTC时间
-  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-  示例: 2018-10-21T10:00:00Z
-- 支持最大查询90天以内的数据
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
 
      *
      * @param startTime
@@ -180,9 +168,9 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     /**
      * get 结束时间:
 - UTC时间
-  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-  示例: 2018-10-21T10:00:00Z
-- 为空,默认当前时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 为空,默认为当前时间
 
      *
      * @return
@@ -194,9 +182,9 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     /**
      * set 结束时间:
 - UTC时间
-  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-  示例: 2018-10-21T10:00:00Z
-- 为空,默认当前时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 为空,默认为当前时间
 
      *
      * @param endTime
@@ -205,14 +193,54 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
         this.endTime = endTime;
     }
 
+    /**
+     * get 页码，起始页码1
+
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 页码，起始页码1
+
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 每页最大记录数，取值：[10,1000]，默认：100
+
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 每页最大记录数，取值：[10,1000]，默认：100
+
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
 
     /**
      * set 推流域名
      *
-     * @param publishDomain
+     * @param domainName
      */
-    public DescribeLiveSnapshotDataRequest publishDomain(String publishDomain) {
-        this.publishDomain = publishDomain;
+    public DescribeLiveStreamPlayInfoByPageRequest domainName(String domainName) {
+        this.domainName = domainName;
         return this;
     }
 
@@ -221,7 +249,7 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
      *
      * @param appName
      */
-    public DescribeLiveSnapshotDataRequest appName(String appName) {
+    public DescribeLiveStreamPlayInfoByPageRequest appName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -231,32 +259,21 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
      *
      * @param streamName
      */
-    public DescribeLiveSnapshotDataRequest streamName(String streamName) {
+    public DescribeLiveStreamPlayInfoByPageRequest streamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
 
     /**
-     * set 截图模式：1表示采样截图；2表示关键帧截图(默认为2)
-     *
-     * @param shotMode
-     */
-    public DescribeLiveSnapshotDataRequest shotMode(Integer shotMode) {
-        this.shotMode = shotMode;
-        return this;
-    }
-
-    /**
-     * set 起始时间:
+     * set 起始时间
 - UTC时间
-  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-  示例: 2018-10-21T10:00:00Z
-- 支持最大查询90天以内的数据
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
 
      *
      * @param startTime
      */
-    public DescribeLiveSnapshotDataRequest startTime(String startTime) {
+    public DescribeLiveStreamPlayInfoByPageRequest startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -264,15 +281,37 @@ public class DescribeLiveSnapshotDataRequest extends JdcloudRequest implements j
     /**
      * set 结束时间:
 - UTC时间
-  格式: yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
-  示例: 2018-10-21T10:00:00Z
-- 为空,默认当前时间
+  格式:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;
+  示例:2018-10-21T10:00:00Z
+- 为空,默认为当前时间
 
      *
      * @param endTime
      */
-    public DescribeLiveSnapshotDataRequest endTime(String endTime) {
+    public DescribeLiveStreamPlayInfoByPageRequest endTime(String endTime) {
         this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 页码，起始页码1
+
+     *
+     * @param pageNumber
+     */
+    public DescribeLiveStreamPlayInfoByPageRequest pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 每页最大记录数，取值：[10,1000]，默认：100
+
+     *
+     * @param pageSize
+     */
+    public DescribeLiveStreamPlayInfoByPageRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
 

@@ -26,9 +26,9 @@ package com.jdcloud.sdk.service.live.model;
 
 
 /**
- * liveStreamPublishInfo
+ * liveStreamPlayInfo
  */
-public class LiveStreamPublishInfo  implements java.io.Serializable {
+public class LiveStreamPlayInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -48,14 +48,9 @@ public class LiveStreamPublishInfo  implements java.io.Serializable {
     private String streamName;
 
     /**
-     * 码率
+     * 观看人数
      */
-    private Double bitrate;
-
-    /**
-     * 帧率
-     */
-    private Double framerate;
+    private Long playerCount;
 
 
     /**
@@ -113,39 +108,21 @@ public class LiveStreamPublishInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 码率
+     * get 观看人数
      *
      * @return
      */
-    public Double getBitrate() {
-        return bitrate;
+    public Long getPlayerCount() {
+        return playerCount;
     }
 
     /**
-     * set 码率
+     * set 观看人数
      *
-     * @param bitrate
+     * @param playerCount
      */
-    public void setBitrate(Double bitrate) {
-        this.bitrate = bitrate;
-    }
-
-    /**
-     * get 帧率
-     *
-     * @return
-     */
-    public Double getFramerate() {
-        return framerate;
-    }
-
-    /**
-     * set 帧率
-     *
-     * @param framerate
-     */
-    public void setFramerate(Double framerate) {
-        this.framerate = framerate;
+    public void setPlayerCount(Long playerCount) {
+        this.playerCount = playerCount;
     }
 
 
@@ -154,7 +131,7 @@ public class LiveStreamPublishInfo  implements java.io.Serializable {
      *
      * @param startTime
      */
-    public LiveStreamPublishInfo startTime(String startTime) {
+    public LiveStreamPlayInfo startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -164,7 +141,7 @@ public class LiveStreamPublishInfo  implements java.io.Serializable {
      *
      * @param appName
      */
-    public LiveStreamPublishInfo appName(String appName) {
+    public LiveStreamPlayInfo appName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -174,28 +151,18 @@ public class LiveStreamPublishInfo  implements java.io.Serializable {
      *
      * @param streamName
      */
-    public LiveStreamPublishInfo streamName(String streamName) {
+    public LiveStreamPlayInfo streamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
 
     /**
-     * set 码率
+     * set 观看人数
      *
-     * @param bitrate
+     * @param playerCount
      */
-    public LiveStreamPublishInfo bitrate(Double bitrate) {
-        this.bitrate = bitrate;
-        return this;
-    }
-
-    /**
-     * set 帧率
-     *
-     * @param framerate
-     */
-    public LiveStreamPublishInfo framerate(Double framerate) {
-        this.framerate = framerate;
+    public LiveStreamPlayInfo playerCount(Long playerCount) {
+        this.playerCount = playerCount;
         return this;
     }
 

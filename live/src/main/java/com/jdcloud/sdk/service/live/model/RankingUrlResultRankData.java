@@ -52,6 +52,7 @@ public class RankingUrlResultRankData  implements java.io.Serializable {
 
     /**
      * 流量，单位：Byte
+
      */
     private Long flow;
 
@@ -118,6 +119,7 @@ public class RankingUrlResultRankData  implements java.io.Serializable {
 
     /**
      * get 流量，单位：Byte
+
      *
      * @return
      */
@@ -127,6 +129,7 @@ public class RankingUrlResultRankData  implements java.io.Serializable {
 
     /**
      * set 流量，单位：Byte
+
      *
      * @param flow
      */
@@ -170,6 +173,7 @@ public class RankingUrlResultRankData  implements java.io.Serializable {
 
     /**
      * set 流量，单位：Byte
+
      *
      * @param flow
      */
