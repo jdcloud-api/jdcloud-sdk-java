@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.yunding.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.rds.model.DBInstance;
+import com.jdcloud.sdk.service.yunding.model.DBInstance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**

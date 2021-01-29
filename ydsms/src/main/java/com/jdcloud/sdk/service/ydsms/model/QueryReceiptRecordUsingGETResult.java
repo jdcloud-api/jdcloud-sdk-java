@@ -24,7 +24,9 @@
 
 package com.jdcloud.sdk.service.ydsms.model;
 
-import com.jdcloud.sdk.service.ydsms.model.QueryReceiptRecordRes;
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.ydsms.model.ReceiptRecord;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,39 +37,117 @@ public class QueryReceiptRecordUsingGETResult extends JdcloudResult implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * queryReceiptRecordRes
+     * pin
      */
-    private QueryReceiptRecordRes queryReceiptRecordRes;
+    private String pin;
+
+    /**
+     * 应用id
+     */
+    private String appId;
+
+    /**
+     * receiptRecords
+     */
+    private List<ReceiptRecord> receiptRecords;
 
 
     /**
-     * get queryReceiptRecordRes
+     * get pin
      *
      * @return
      */
-    public QueryReceiptRecordRes getQueryReceiptRecordRes() {
-        return queryReceiptRecordRes;
+    public String getPin() {
+        return pin;
     }
 
     /**
-     * set queryReceiptRecordRes
+     * set pin
      *
-     * @param queryReceiptRecordRes
+     * @param pin
      */
-    public void setQueryReceiptRecordRes(QueryReceiptRecordRes queryReceiptRecordRes) {
-        this.queryReceiptRecordRes = queryReceiptRecordRes;
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+    /**
+     * get 应用id
+     *
+     * @return
+     */
+    public String getAppId() {
+        return appId;
+    }
+
+    /**
+     * set 应用id
+     *
+     * @param appId
+     */
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    /**
+     * get receiptRecords
+     *
+     * @return
+     */
+    public List<ReceiptRecord> getReceiptRecords() {
+        return receiptRecords;
+    }
+
+    /**
+     * set receiptRecords
+     *
+     * @param receiptRecords
+     */
+    public void setReceiptRecords(List<ReceiptRecord> receiptRecords) {
+        this.receiptRecords = receiptRecords;
     }
 
 
     /**
-     * set queryReceiptRecordRes
+     * set pin
      *
-     * @param queryReceiptRecordRes
+     * @param pin
      */
-    public QueryReceiptRecordUsingGETResult queryReceiptRecordRes(QueryReceiptRecordRes queryReceiptRecordRes) {
-        this.queryReceiptRecordRes = queryReceiptRecordRes;
+    public QueryReceiptRecordUsingGETResult pin(String pin) {
+        this.pin = pin;
         return this;
     }
 
+    /**
+     * set 应用id
+     *
+     * @param appId
+     */
+    public QueryReceiptRecordUsingGETResult appId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+
+    /**
+     * set receiptRecords
+     *
+     * @param receiptRecords
+     */
+    public QueryReceiptRecordUsingGETResult receiptRecords(List<ReceiptRecord> receiptRecords) {
+        this.receiptRecords = receiptRecords;
+        return this;
+    }
+
+
+    /**
+     * add item to receiptRecords
+     *
+     * @param receiptRecord
+     */
+    public void addReceiptRecord(ReceiptRecord receiptRecord) {
+        if (this.receiptRecords == null) {
+            this.receiptRecords = new ArrayList<>();
+        }
+        this.receiptRecords.add(receiptRecord);
+    }
 
 }

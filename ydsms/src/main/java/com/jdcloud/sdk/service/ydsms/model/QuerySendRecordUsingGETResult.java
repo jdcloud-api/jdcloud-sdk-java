@@ -37,9 +37,9 @@ public class QuerySendRecordUsingGETResult extends JdcloudResult implements java
     private static final long serialVersionUID = 1L;
 
     /**
-     * smsApps
+     * sendRecords
      */
-    private List<SendRecord> smsApps;
+    private List<SendRecord> sendRecords;
 
     /**
      * totalCount
@@ -48,21 +48,21 @@ public class QuerySendRecordUsingGETResult extends JdcloudResult implements java
 
 
     /**
-     * get smsApps
+     * get sendRecords
      *
      * @return
      */
-    public List<SendRecord> getSmsApps() {
-        return smsApps;
+    public List<SendRecord> getSendRecords() {
+        return sendRecords;
     }
 
     /**
-     * set smsApps
+     * set sendRecords
      *
-     * @param smsApps
+     * @param sendRecords
      */
-    public void setSmsApps(List<SendRecord> smsApps) {
-        this.smsApps = smsApps;
+    public void setSendRecords(List<SendRecord> sendRecords) {
+        this.sendRecords = sendRecords;
     }
 
     /**
@@ -85,12 +85,12 @@ public class QuerySendRecordUsingGETResult extends JdcloudResult implements java
 
 
     /**
-     * set smsApps
+     * set sendRecords
      *
-     * @param smsApps
+     * @param sendRecords
      */
-    public QuerySendRecordUsingGETResult smsApps(List<SendRecord> smsApps) {
-        this.smsApps = smsApps;
+    public QuerySendRecordUsingGETResult sendRecords(List<SendRecord> sendRecords) {
+        this.sendRecords = sendRecords;
         return this;
     }
 
@@ -106,15 +106,15 @@ public class QuerySendRecordUsingGETResult extends JdcloudResult implements java
 
 
     /**
-     * add item to smsApps
+     * add item to sendRecords
      *
-     * @param smsApp
+     * @param sendRecord
      */
-    public void addSmsApp(SendRecord smsApp) {
-        if (this.smsApps == null) {
-            this.smsApps = new ArrayList<>();
+    public void addSendRecord(SendRecord sendRecord) {
+        if (this.sendRecords == null) {
+            this.sendRecords = new ArrayList<>();
         }
-        this.smsApps.add(smsApp);
+        this.sendRecords.add(sendRecord);
     }
 
 }

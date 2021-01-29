@@ -45,7 +45,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     private String appId;
 
     /**
-     * JRtc用户ID(创建者ID)
+     * 用户ID(创建者ID)
      */
     private Long peerId;
 
@@ -87,7 +87,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get JRtc用户ID(创建者ID)
+     * get 用户ID(创建者ID)
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set JRtc用户ID(创建者ID)
+     * set 用户ID(创建者ID)
      *
      * @param peerId
      */
@@ -126,7 +126,7 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set JRtc用户ID(创建者ID)
+     * set 用户ID(创建者ID)
      *
      * @param peerId
      */

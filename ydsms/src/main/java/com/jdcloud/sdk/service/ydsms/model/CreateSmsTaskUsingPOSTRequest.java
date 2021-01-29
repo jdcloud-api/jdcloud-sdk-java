@@ -72,6 +72,11 @@ public class CreateSmsTaskUsingPOSTRequest extends JdcloudRequest implements jav
     @Required
     private String templateId;
 
+    /**
+     * 任务类型，1：通道短信 2：营销短信
+     */
+    private Integer taskType;
+
 
     /**
      * get 应用id
@@ -181,6 +186,24 @@ public class CreateSmsTaskUsingPOSTRequest extends JdcloudRequest implements jav
         this.templateId = templateId;
     }
 
+    /**
+     * get 任务类型，1：通道短信 2：营销短信
+     *
+     * @return
+     */
+    public Integer getTaskType() {
+        return taskType;
+    }
+
+    /**
+     * set 任务类型，1：通道短信 2：营销短信
+     *
+     * @param taskType
+     */
+    public void setTaskType(Integer taskType) {
+        this.taskType = taskType;
+    }
+
 
     /**
      * set 应用id
@@ -239,6 +262,16 @@ public class CreateSmsTaskUsingPOSTRequest extends JdcloudRequest implements jav
      */
     public CreateSmsTaskUsingPOSTRequest templateId(String templateId) {
         this.templateId = templateId;
+        return this;
+    }
+
+    /**
+     * set 任务类型，1：通道短信 2：营销短信
+     *
+     * @param taskType
+     */
+    public CreateSmsTaskUsingPOSTRequest taskType(Integer taskType) {
+        this.taskType = taskType;
         return this;
     }
 

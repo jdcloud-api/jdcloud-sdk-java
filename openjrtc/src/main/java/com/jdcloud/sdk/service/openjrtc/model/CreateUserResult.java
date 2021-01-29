@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JRtcUser
- * JRtc用户管理
+ * 用户管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.openjrtc.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建JRtc用户
+ * 创建用户
 
  */
 public class CreateUserResult extends JdcloudResult implements java.io.Serializable {
@@ -35,7 +35,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
     private static final long serialVersionUID = 1L;
 
     /**
-     * JRtc用户ID
+     * 用户ID
      */
     private Long peerId;
 
@@ -51,7 +51,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
 
 
     /**
-     * get JRtc用户ID
+     * get 用户ID
      *
      * @return
      */
@@ -60,7 +60,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set JRtc用户ID
+     * set 用户ID
      *
      * @param peerId
      */
@@ -106,7 +106,7 @@ public class CreateUserResult extends JdcloudResult implements java.io.Serializa
 
 
     /**
-     * set JRtc用户ID
+     * set 用户ID
      *
      * @param peerId
      */

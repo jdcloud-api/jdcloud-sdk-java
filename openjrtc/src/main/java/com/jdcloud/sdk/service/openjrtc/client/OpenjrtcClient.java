@@ -31,12 +31,33 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.openjrtc.model.CreateRoomRequest;
-import com.jdcloud.sdk.service.openjrtc.model.CreateRoomResponse;
-import com.jdcloud.sdk.service.openjrtc.client.CreateRoomExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomsRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomsResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomsExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomInfoRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomInfoResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomInfoExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeAppKeyRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeAppKeyResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeAppKeyExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeAppRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeAppResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeAppExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomOnlineUserNumRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomOnlineUserNumResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomOnlineUserNumExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.UpdateRoomRequest;
+import com.jdcloud.sdk.service.openjrtc.model.UpdateRoomResponse;
+import com.jdcloud.sdk.service.openjrtc.client.UpdateRoomExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeAppsRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeAppsResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeAppsExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DeleteRoomRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DeleteRoomResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DeleteRoomExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.CreateRoomRequest;
+import com.jdcloud.sdk.service.openjrtc.model.CreateRoomResponse;
+import com.jdcloud.sdk.service.openjrtc.client.CreateRoomExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.CreateUserRequest;
 import com.jdcloud.sdk.service.openjrtc.model.CreateUserResponse;
 import com.jdcloud.sdk.service.openjrtc.client.CreateUserExecutor;
@@ -91,6 +112,104 @@ public class OpenjrtcClient extends JdcloudClient {
 
 
     /**
+     * 查询应用下的房间列表
+允许通过条件过滤查询，支持的过滤字段如下：
+           - appId[eq] 按应用ID查询
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRoomsResponse describeRooms(DescribeRoomsRequest request) throws JdcloudSdkException {
+        return new DescribeRoomsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取房间信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRoomInfoResponse describeRoomInfo(DescribeRoomInfoRequest request) throws JdcloudSdkException {
+        return new DescribeRoomInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询应用appKey
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAppKeyResponse describeAppKey(DescribeAppKeyRequest request) throws JdcloudSdkException {
+        return new DescribeAppKeyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询应用信息:
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAppResponse describeApp(DescribeAppRequest request) throws JdcloudSdkException {
+        return new DescribeAppExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询房间实时在线人数
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRoomOnlineUserNumResponse describeRoomOnlineUserNum(DescribeRoomOnlineUserNumRequest request) throws JdcloudSdkException {
+        return new DescribeRoomOnlineUserNumExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改房间
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateRoomResponse updateRoom(UpdateRoomRequest request) throws JdcloudSdkException {
+        return new UpdateRoomExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询用户应用列表信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAppsResponse describeApps(DescribeAppsRequest request) throws JdcloudSdkException {
+        return new DescribeAppsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除房间
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteRoomResponse deleteRoom(DeleteRoomRequest request) throws JdcloudSdkException {
+        return new DeleteRoomExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建房间
 
      *
@@ -103,19 +222,7 @@ public class OpenjrtcClient extends JdcloudClient {
     }
 
     /**
-     * 查询房间实时在线人数:
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeRoomOnlineUserNumResponse describeRoomOnlineUserNum(DescribeRoomOnlineUserNumRequest request) throws JdcloudSdkException {
-        return new DescribeRoomOnlineUserNumExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建JRtc用户
+     * 创建用户
 
      *
      * @param request

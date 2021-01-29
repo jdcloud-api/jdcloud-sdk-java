@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询 DDoS 攻击日志
+ * 查询 DDoS 攻击日志, 仅能查询非BGP实例的攻击记录, 同时查询BGP和非BGP实例请使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeDDoSIpAttackLogs&#39;&gt;describeDDoSIpAttackLogs&lt;/a&gt;
  */
 public class DescribeDDoSAttackLogsRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -37,9 +37,9 @@ public class QueryReplyRecordUsingGETResult extends JdcloudResult implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * smsApps
+     * replyRecords
      */
-    private List<ReplyRecord> smsApps;
+    private List<ReplyRecord> replyRecords;
 
     /**
      * totalCount
@@ -48,21 +48,21 @@ public class QueryReplyRecordUsingGETResult extends JdcloudResult implements jav
 
 
     /**
-     * get smsApps
+     * get replyRecords
      *
      * @return
      */
-    public List<ReplyRecord> getSmsApps() {
-        return smsApps;
+    public List<ReplyRecord> getReplyRecords() {
+        return replyRecords;
     }
 
     /**
-     * set smsApps
+     * set replyRecords
      *
-     * @param smsApps
+     * @param replyRecords
      */
-    public void setSmsApps(List<ReplyRecord> smsApps) {
-        this.smsApps = smsApps;
+    public void setReplyRecords(List<ReplyRecord> replyRecords) {
+        this.replyRecords = replyRecords;
     }
 
     /**
@@ -85,12 +85,12 @@ public class QueryReplyRecordUsingGETResult extends JdcloudResult implements jav
 
 
     /**
-     * set smsApps
+     * set replyRecords
      *
-     * @param smsApps
+     * @param replyRecords
      */
-    public QueryReplyRecordUsingGETResult smsApps(List<ReplyRecord> smsApps) {
-        this.smsApps = smsApps;
+    public QueryReplyRecordUsingGETResult replyRecords(List<ReplyRecord> replyRecords) {
+        this.replyRecords = replyRecords;
         return this;
     }
 
@@ -106,15 +106,15 @@ public class QueryReplyRecordUsingGETResult extends JdcloudResult implements jav
 
 
     /**
-     * add item to smsApps
+     * add item to replyRecords
      *
-     * @param smsApp
+     * @param replyRecord
      */
-    public void addSmsApp(ReplyRecord smsApp) {
-        if (this.smsApps == null) {
-            this.smsApps = new ArrayList<>();
+    public void addReplyRecord(ReplyRecord replyRecord) {
+        if (this.replyRecords == null) {
+            this.replyRecords = new ArrayList<>();
         }
-        this.smsApps.add(smsApp);
+        this.replyRecords.add(replyRecord);
     }
 
 }

@@ -43,6 +43,16 @@ public class SendRecord  implements java.io.Serializable {
     private String smsContent;
 
     /**
+     * 短信字数
+     */
+    private Integer contentLength;
+
+    /**
+     * 折成条数
+     */
+    private Integer chargeCount;
+
+    /**
      * 短信类型 短信类型，1 通道短信 2 官方短信
      */
     private Integer packageType;
@@ -92,6 +102,42 @@ public class SendRecord  implements java.io.Serializable {
      */
     public void setSmsContent(String smsContent) {
         this.smsContent = smsContent;
+    }
+
+    /**
+     * get 短信字数
+     *
+     * @return
+     */
+    public Integer getContentLength() {
+        return contentLength;
+    }
+
+    /**
+     * set 短信字数
+     *
+     * @param contentLength
+     */
+    public void setContentLength(Integer contentLength) {
+        this.contentLength = contentLength;
+    }
+
+    /**
+     * get 折成条数
+     *
+     * @return
+     */
+    public Integer getChargeCount() {
+        return chargeCount;
+    }
+
+    /**
+     * set 折成条数
+     *
+     * @param chargeCount
+     */
+    public void setChargeCount(Integer chargeCount) {
+        this.chargeCount = chargeCount;
     }
 
     /**
@@ -166,6 +212,26 @@ public class SendRecord  implements java.io.Serializable {
      */
     public SendRecord smsContent(String smsContent) {
         this.smsContent = smsContent;
+        return this;
+    }
+
+    /**
+     * set 短信字数
+     *
+     * @param contentLength
+     */
+    public SendRecord contentLength(Integer contentLength) {
+        this.contentLength = contentLength;
+        return this;
+    }
+
+    /**
+     * set 折成条数
+     *
+     * @param chargeCount
+     */
+    public SendRecord chargeCount(Integer chargeCount) {
+        this.chargeCount = chargeCount;
         return this;
     }
 

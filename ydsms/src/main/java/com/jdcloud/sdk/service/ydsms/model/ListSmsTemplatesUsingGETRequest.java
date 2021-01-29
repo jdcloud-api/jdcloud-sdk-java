@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询短信模板
+ * 查询短信模板列表
  */
 public class ListSmsTemplatesUsingGETRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -55,6 +55,11 @@ public class ListSmsTemplatesUsingGETRequest extends JdcloudRequest implements j
      * 状态，1申请中 2拒绝 3通过
      */
     private String status;
+
+    /**
+     * 要查询的模板类型，多个以 , 隔开(0 验证码短信,1 通知短信,2 推广短信)
+     */
+    private String templateTypes;
 
 
     /**
@@ -129,6 +134,24 @@ public class ListSmsTemplatesUsingGETRequest extends JdcloudRequest implements j
         this.status = status;
     }
 
+    /**
+     * get 要查询的模板类型，多个以 , 隔开(0 验证码短信,1 通知短信,2 推广短信)
+     *
+     * @return
+     */
+    public String getTemplateTypes() {
+        return templateTypes;
+    }
+
+    /**
+     * set 要查询的模板类型，多个以 , 隔开(0 验证码短信,1 通知短信,2 推广短信)
+     *
+     * @param templateTypes
+     */
+    public void setTemplateTypes(String templateTypes) {
+        this.templateTypes = templateTypes;
+    }
+
 
     /**
      * set 应用id
@@ -167,6 +190,16 @@ public class ListSmsTemplatesUsingGETRequest extends JdcloudRequest implements j
      */
     public ListSmsTemplatesUsingGETRequest status(String status) {
         this.status = status;
+        return this;
+    }
+
+    /**
+     * set 要查询的模板类型，多个以 , 隔开(0 验证码短信,1 通知短信,2 推广短信)
+     *
+     * @param templateTypes
+     */
+    public ListSmsTemplatesUsingGETRequest templateTypes(String templateTypes) {
+        this.templateTypes = templateTypes;
         return this;
     }
 

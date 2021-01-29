@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ydsms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询短信模板
+ * 查询短信模板列表
  */
 public class ListSmsTemplatesUsingGETResponse extends JdcloudResponse<ListSmsTemplatesUsingGETResult> implements java.io.Serializable {
 

@@ -24,7 +24,9 @@
 
 package com.jdcloud.sdk.service.ydsms.model;
 
-import com.jdcloud.sdk.service.ydsms.model.ListSmsSendOverviewVO;
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.ydsms.model.SendOverviewVO;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,39 +37,117 @@ public class ListSmsSendOverviewUsingGETResult extends JdcloudResult implements 
     private static final long serialVersionUID = 1L;
 
     /**
-     * listSmsSendOverviewVO
+     * pin
      */
-    private ListSmsSendOverviewVO listSmsSendOverviewVO;
+    private String pin;
+
+    /**
+     * 应用id
+     */
+    private String appId;
+
+    /**
+     * sendOverviewVOList
+     */
+    private List<SendOverviewVO> sendOverviewVOList;
 
 
     /**
-     * get listSmsSendOverviewVO
+     * get pin
      *
      * @return
      */
-    public ListSmsSendOverviewVO getListSmsSendOverviewVO() {
-        return listSmsSendOverviewVO;
+    public String getPin() {
+        return pin;
     }
 
     /**
-     * set listSmsSendOverviewVO
+     * set pin
      *
-     * @param listSmsSendOverviewVO
+     * @param pin
      */
-    public void setListSmsSendOverviewVO(ListSmsSendOverviewVO listSmsSendOverviewVO) {
-        this.listSmsSendOverviewVO = listSmsSendOverviewVO;
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
+
+    /**
+     * get 应用id
+     *
+     * @return
+     */
+    public String getAppId() {
+        return appId;
+    }
+
+    /**
+     * set 应用id
+     *
+     * @param appId
+     */
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    /**
+     * get sendOverviewVOList
+     *
+     * @return
+     */
+    public List<SendOverviewVO> getSendOverviewVOList() {
+        return sendOverviewVOList;
+    }
+
+    /**
+     * set sendOverviewVOList
+     *
+     * @param sendOverviewVOList
+     */
+    public void setSendOverviewVOList(List<SendOverviewVO> sendOverviewVOList) {
+        this.sendOverviewVOList = sendOverviewVOList;
     }
 
 
     /**
-     * set listSmsSendOverviewVO
+     * set pin
      *
-     * @param listSmsSendOverviewVO
+     * @param pin
      */
-    public ListSmsSendOverviewUsingGETResult listSmsSendOverviewVO(ListSmsSendOverviewVO listSmsSendOverviewVO) {
-        this.listSmsSendOverviewVO = listSmsSendOverviewVO;
+    public ListSmsSendOverviewUsingGETResult pin(String pin) {
+        this.pin = pin;
         return this;
     }
 
+    /**
+     * set 应用id
+     *
+     * @param appId
+     */
+    public ListSmsSendOverviewUsingGETResult appId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+
+    /**
+     * set sendOverviewVOList
+     *
+     * @param sendOverviewVOList
+     */
+    public ListSmsSendOverviewUsingGETResult sendOverviewVOList(List<SendOverviewVO> sendOverviewVOList) {
+        this.sendOverviewVOList = sendOverviewVOList;
+        return this;
+    }
+
+
+    /**
+     * add item to sendOverviewVOList
+     *
+     * @param sendOverviewVOList
+     */
+    public void addSendOverviewVOList(SendOverviewVO sendOverviewVOList) {
+        if (this.sendOverviewVOList == null) {
+            this.sendOverviewVOList = new ArrayList<>();
+        }
+        this.sendOverviewVOList.add(sendOverviewVOList);
+    }
 
 }

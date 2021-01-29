@@ -45,9 +45,7 @@ public class SendMessagesUsingPOSTRequest extends JdcloudRequest implements java
 
     /**
      * 短信模板变量对应的数据值
-     * Required:true
      */
-    @Required
     private List<String> params;
 
     /**

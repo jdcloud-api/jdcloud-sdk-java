@@ -37,6 +37,12 @@ import com.jdcloud.sdk.service.ipanti.client.ModifyEPBExecutor;
 import com.jdcloud.sdk.service.ipanti.model.CreateJsPagesOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.CreateJsPagesOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.CreateJsPagesOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DeleteCustomPageRequest;
+import com.jdcloud.sdk.service.ipanti.model.DeleteCustomPageResponse;
+import com.jdcloud.sdk.service.ipanti.client.DeleteCustomPageExecutor;
+import com.jdcloud.sdk.service.ipanti.model.RecoverInstanceAclRequest;
+import com.jdcloud.sdk.service.ipanti.model.RecoverInstanceAclResponse;
+import com.jdcloud.sdk.service.ipanti.client.RecoverInstanceAclExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyWebRuleExecutor;
@@ -85,6 +91,9 @@ import com.jdcloud.sdk.service.ipanti.client.DisableWebRuleCCObserverModeExecuto
 import com.jdcloud.sdk.service.ipanti.model.DescribeWebRulesRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWebRulesResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeWebRulesExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceCustomPageDefaultRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceCustomPageDefaultResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceCustomPageDefaultExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyBlackListRuleOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyBlackListRuleOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyBlackListRuleOfWebRuleExecutor;
@@ -94,6 +103,9 @@ import com.jdcloud.sdk.service.ipanti.client.EnableWebRuleWhiteListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeProtectionStatisticsRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeProtectionStatisticsResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeProtectionStatisticsExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeDDoSIpAttackLogsRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeDDoSIpAttackLogsResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeDDoSIpAttackLogsExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeJsPagesOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeJsPagesOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeJsPagesOfWebRuleExecutor;
@@ -115,15 +127,24 @@ import com.jdcloud.sdk.service.ipanti.client.SwitchForwardRuleProtectExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionRuleOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeCCProtectionRuleOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeCCProtectionRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceAclRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceAclResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceAclExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyWebRuleJsPageToAllRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyWebRuleJsPageToAllResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyWebRuleJsPageToAllExecutor;
 import com.jdcloud.sdk.service.ipanti.model.BindCertRequest;
 import com.jdcloud.sdk.service.ipanti.model.BindCertResponse;
 import com.jdcloud.sdk.service.ipanti.client.BindCertExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCcsIpListRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCcsIpListResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeCcsIpListExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRuleOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRuleOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeWhiteListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DisableInstanceCustomPageRequest;
+import com.jdcloud.sdk.service.ipanti.model.DisableInstanceCustomPageResponse;
+import com.jdcloud.sdk.service.ipanti.client.DisableInstanceCustomPageExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRuleOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRuleOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeBlackListRuleOfWebRuleExecutor;
@@ -136,6 +157,9 @@ import com.jdcloud.sdk.service.ipanti.client.DescribeDDoSAttackLogsExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleJsPageRequest;
 import com.jdcloud.sdk.service.ipanti.model.DisableWebRuleJsPageResponse;
 import com.jdcloud.sdk.service.ipanti.client.DisableWebRuleJsPageExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCustomPagesRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeCustomPagesResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeCustomPagesExecutor;
 import com.jdcloud.sdk.service.ipanti.model.EnableWhiteListRuleOfForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.EnableWhiteListRuleOfForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.EnableWhiteListRuleOfForwardRuleExecutor;
@@ -166,6 +190,9 @@ import com.jdcloud.sdk.service.ipanti.client.DisableWebRuleCCProtectionRuleExecu
 import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetUsageRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetUsageResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeIpSetUsageExecutor;
+import com.jdcloud.sdk.service.ipanti.model.CreateCustomPageRequest;
+import com.jdcloud.sdk.service.ipanti.model.CreateCustomPageResponse;
+import com.jdcloud.sdk.service.ipanti.client.CreateCustomPageExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DisableWhiteListRuleOfForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DisableWhiteListRuleOfForwardRuleExecutor;
@@ -223,6 +250,12 @@ import com.jdcloud.sdk.service.ipanti.client.ModifyWhiteListRuleOfWebRuleExecuto
 import com.jdcloud.sdk.service.ipanti.model.EnableBlackListRuleOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.EnableBlackListRuleOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.EnableBlackListRuleOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceCustomPageRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyInstanceCustomPageResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyInstanceCustomPageExecutor;
+import com.jdcloud.sdk.service.ipanti.model.EnableInstanceCustomPageRequest;
+import com.jdcloud.sdk.service.ipanti.model.EnableInstanceCustomPageResponse;
+import com.jdcloud.sdk.service.ipanti.client.EnableInstanceCustomPageExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeIpSetResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeIpSetExecutor;
@@ -295,6 +328,12 @@ import com.jdcloud.sdk.service.ipanti.client.EnableWebRuleCCProtectionRuleExecut
 import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRulesOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeBlackListRulesOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeBlackListRulesOfWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeConnStatGraphRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeConnStatGraphResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeConnStatGraphExecutor;
+import com.jdcloud.sdk.service.ipanti.model.ModifyCustomPageRequest;
+import com.jdcloud.sdk.service.ipanti.model.ModifyCustomPageResponse;
+import com.jdcloud.sdk.service.ipanti.client.ModifyCustomPageExecutor;
 import com.jdcloud.sdk.service.ipanti.model.CreateWebRulesRequest;
 import com.jdcloud.sdk.service.ipanti.model.CreateWebRulesResponse;
 import com.jdcloud.sdk.service.ipanti.client.CreateWebRulesExecutor;
@@ -322,6 +361,9 @@ import com.jdcloud.sdk.service.ipanti.client.ModifyCCProtectionConfigOfWebRuleEx
 import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleRSGeoAreasRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWebRuleRSGeoAreasResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeWebRuleRSGeoAreasExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeInstanceAclRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeInstanceAclResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeInstanceAclExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRulesOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DescribeWhiteListRulesOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DescribeWhiteListRulesOfWebRuleExecutor;
@@ -337,6 +379,9 @@ import com.jdcloud.sdk.service.ipanti.client.ModifyProtectionRuleOfForwardRuleEx
 import com.jdcloud.sdk.service.ipanti.model.DeleteWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DeleteWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DeleteWebRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeBusinessGraphRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeBusinessGraphResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeBusinessGraphExecutor;
 import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleCCObserverModeRequest;
 import com.jdcloud.sdk.service.ipanti.model.EnableWebRuleCCObserverModeResponse;
 import com.jdcloud.sdk.service.ipanti.client.EnableWebRuleCCObserverModeExecutor;
@@ -410,6 +455,28 @@ public class IpantiClient extends JdcloudClient {
      */
     public CreateJsPagesOfWebRuleResponse createJsPagesOfWebRule(CreateJsPagesOfWebRuleRequest request) throws JdcloudSdkException {
         return new CreateJsPagesOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除自定义页面, 使用中的不允许删除
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCustomPageResponse deleteCustomPage(DeleteCustomPageRequest request) throws JdcloudSdkException {
+        return new DeleteCustomPageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 实例全局访问控制配置可以恢复到上一次下发成功的配置时，调用此接口回滚到上一次下发成功的配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RecoverInstanceAclResponse recoverInstanceAcl(RecoverInstanceAclRequest request) throws JdcloudSdkException {
+        return new RecoverInstanceAclExecutor().client(this).execute(request);
     }
 
     /**
@@ -591,6 +658,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 修改实例页面错误状态码返回页面为为默认页面
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceCustomPageDefaultResponse modifyInstanceCustomPageDefault(ModifyInstanceCustomPageDefaultRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceCustomPageDefaultExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改网站类规则的黑名单规则
      *
      * @param request
@@ -621,6 +699,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DescribeProtectionStatisticsResponse describeProtectionStatistics(DescribeProtectionStatisticsRequest request) throws JdcloudSdkException {
         return new DescribeProtectionStatisticsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDDoSIpAttackLogsResponse describeDDoSIpAttackLogs(DescribeDDoSIpAttackLogsRequest request) throws JdcloudSdkException {
+        return new DescribeDDoSIpAttackLogsExecutor().client(this).execute(request);
     }
 
     /**
@@ -701,6 +790,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 修改实例全局访问控制配置，包括全局的IP黑白名单和geo拦截配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceAclResponse modifyInstanceAcl(ModifyInstanceAclRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceAclExecutor().client(this).execute(request);
+    }
+
+    /**
      * 插入JS指纹到所有页面, 需要打开网站类规则的JS指纹开关
      *
      * @param request
@@ -723,6 +823,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 查询用户可设置为网站类规则回源 IP 的京东云托管区公网 IP 资源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCcsIpListResponse describeCcsIpList(DescribeCcsIpListRequest request) throws JdcloudSdkException {
+        return new DescribeCcsIpListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询网站类规则的白名单规则
      *
      * @param request
@@ -731,6 +842,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DescribeWhiteListRuleOfWebRuleResponse describeWhiteListRuleOfWebRule(DescribeWhiteListRuleOfWebRuleRequest request) throws JdcloudSdkException {
         return new DescribeWhiteListRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭实例错误状态码返回页面, 透传错误状态码
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableInstanceCustomPageResponse disableInstanceCustomPage(DisableInstanceCustomPageRequest request) throws JdcloudSdkException {
+        return new DisableInstanceCustomPageExecutor().client(this).execute(request);
     }
 
     /**
@@ -756,7 +878,7 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 查询 DDoS 攻击日志
+     * 查询 DDoS 攻击日志, 仅能查询非BGP实例的攻击记录, 同时查询BGP和非BGP实例请使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeDDoSIpAttackLogs&#39;&gt;describeDDoSIpAttackLogs&lt;/a&gt;
      *
      * @param request
      * @return
@@ -775,6 +897,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DisableWebRuleJsPageResponse disableWebRuleJsPage(DisableWebRuleJsPageRequest request) throws JdcloudSdkException {
         return new DisableWebRuleJsPageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询自定义页面列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCustomPagesResponse describeCustomPages(DescribeCustomPagesRequest request) throws JdcloudSdkException {
+        return new DescribeCustomPagesExecutor().client(this).execute(request);
     }
 
     /**
@@ -885,6 +1018,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DescribeIpSetUsageResponse describeIpSetUsage(DescribeIpSetUsageRequest request) throws JdcloudSdkException {
         return new DescribeIpSetUsageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加自定义页面
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateCustomPageResponse createCustomPage(CreateCustomPageRequest request) throws JdcloudSdkException {
+        return new CreateCustomPageExecutor().client(this).execute(request);
     }
 
     /**
@@ -1094,6 +1238,28 @@ public class IpantiClient extends JdcloudClient {
      */
     public EnableBlackListRuleOfWebRuleResponse enableBlackListRuleOfWebRule(EnableBlackListRuleOfWebRuleRequest request) throws JdcloudSdkException {
         return new EnableBlackListRuleOfWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改实例错误状态码返回页面为自定义页面
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceCustomPageResponse modifyInstanceCustomPage(ModifyInstanceCustomPageRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceCustomPageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 开启实例错误状态码返回页面, 错误状态码返回默认页面或自定义页面
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableInstanceCustomPageResponse enableInstanceCustomPage(EnableInstanceCustomPageRequest request) throws JdcloudSdkException {
+        return new EnableInstanceCustomPageExecutor().client(this).execute(request);
     }
 
     /**
@@ -1361,6 +1527,28 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 新建与并发连接数统计报表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeConnStatGraphResponse describeConnStatGraph(DescribeConnStatGraphRequest request) throws JdcloudSdkException {
+        return new DescribeConnStatGraphExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改自定义页面
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyCustomPageResponse modifyCustomPage(ModifyCustomPageRequest request) throws JdcloudSdkException {
+        return new ModifyCustomPageExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量添加网站类规则
      *
      * @param request
@@ -1460,6 +1648,17 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
+     * 查询实例全局访问控制配置，包括全局的IP黑白名单和geo拦截配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceAclResponse describeInstanceAcl(DescribeInstanceAclRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceAclExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询网站类规则的白名单规则列表
      *
      * @param request
@@ -1512,6 +1711,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DeleteWebRuleResponse deleteWebRule(DeleteWebRuleRequest request) throws JdcloudSdkException {
         return new DeleteWebRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 业务流量报表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBusinessGraphResponse describeBusinessGraph(DescribeBusinessGraphRequest request) throws JdcloudSdkException {
+        return new DescribeBusinessGraphExecutor().client(this).execute(request);
     }
 
     /**

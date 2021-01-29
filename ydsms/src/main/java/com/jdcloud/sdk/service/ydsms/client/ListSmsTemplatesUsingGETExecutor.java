@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ydsms.model.ListSmsTemplatesUsingGETResponse;
 
 /**
- * 查询短信模板
+ * 查询短信模板列表
  */
 class ListSmsTemplatesUsingGETExecutor extends JdcloudExecutor {
 
