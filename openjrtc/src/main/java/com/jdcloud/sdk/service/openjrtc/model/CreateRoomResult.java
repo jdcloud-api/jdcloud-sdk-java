@@ -50,9 +50,19 @@ public class CreateRoomResult extends JdcloudResult implements java.io.Serializa
     private String appId;
 
     /**
-     * JRtc用户ID(创建者ID)
+     * 用户ID(创建者ID)
      */
     private Long peerId;
+
+    /**
+     * 创建时间
+     */
+    private String createTime;
+
+    /**
+     * 更新时间
+     */
+    private String updateTime;
 
 
     /**
@@ -110,7 +120,7 @@ public class CreateRoomResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * get JRtc用户ID(创建者ID)
+     * get 用户ID(创建者ID)
      *
      * @return
      */
@@ -119,12 +129,48 @@ public class CreateRoomResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set JRtc用户ID(创建者ID)
+     * set 用户ID(创建者ID)
      *
      * @param peerId
      */
     public void setPeerId(Long peerId) {
         this.peerId = peerId;
+    }
+
+    /**
+     * get 创建时间
+     *
+     * @return
+     */
+    public String getCreateTime() {
+        return createTime;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public void setCreateTime(String createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * get 更新时间
+     *
+     * @return
+     */
+    public String getUpdateTime() {
+        return updateTime;
+    }
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime
+     */
+    public void setUpdateTime(String updateTime) {
+        this.updateTime = updateTime;
     }
 
 
@@ -159,12 +205,32 @@ public class CreateRoomResult extends JdcloudResult implements java.io.Serializa
     }
 
     /**
-     * set JRtc用户ID(创建者ID)
+     * set 用户ID(创建者ID)
      *
      * @param peerId
      */
     public CreateRoomResult peerId(Long peerId) {
         this.peerId = peerId;
+        return this;
+    }
+
+    /**
+     * set 创建时间
+     *
+     * @param createTime
+     */
+    public CreateRoomResult createTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 更新时间
+     *
+     * @param updateTime
+     */
+    public CreateRoomResult updateTime(String updateTime) {
+        this.updateTime = updateTime;
         return this;
     }
 

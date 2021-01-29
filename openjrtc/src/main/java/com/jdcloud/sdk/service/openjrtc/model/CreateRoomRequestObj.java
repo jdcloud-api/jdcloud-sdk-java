@@ -43,7 +43,7 @@ public class CreateRoomRequestObj  implements java.io.Serializable {
     private String appId;
 
     /**
-     * JRtc用户ID(创建者ID)
+     * 用户ID(创建者ID)
      */
     private Long peerId;
 
@@ -85,7 +85,7 @@ public class CreateRoomRequestObj  implements java.io.Serializable {
     }
 
     /**
-     * get JRtc用户ID(创建者ID)
+     * get 用户ID(创建者ID)
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class CreateRoomRequestObj  implements java.io.Serializable {
     }
 
     /**
-     * set JRtc用户ID(创建者ID)
+     * set 用户ID(创建者ID)
      *
      * @param peerId
      */
@@ -124,7 +124,7 @@ public class CreateRoomRequestObj  implements java.io.Serializable {
     }
 
     /**
-     * set JRtc用户ID(创建者ID)
+     * set 用户ID(创建者ID)
      *
      * @param peerId
      */

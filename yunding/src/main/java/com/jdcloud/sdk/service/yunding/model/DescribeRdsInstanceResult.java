@@ -24,7 +24,7 @@
 
 package com.jdcloud.sdk.service.yunding.model;
 
-import com.jdcloud.sdk.service.rds.model.DBInstanceAttribute;
+import com.jdcloud.sdk.service.yunding.model.DBInstanceAttribute;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**

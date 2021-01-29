@@ -239,6 +239,11 @@ public class Instance  implements java.io.Serializable {
      */
     private Integer webRulePortLimit;
 
+    /**
+     * Tag信息
+     */
+    private List<Tag> tags;
+
 
     /**
      * get 实例 ID
@@ -978,6 +983,24 @@ public class Instance  implements java.io.Serializable {
         this.webRulePortLimit = webRulePortLimit;
     }
 
+    /**
+     * get Tag信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
 
     /**
      * set 实例 ID
@@ -1389,6 +1412,16 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public Instance tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
 
     /**
      * add item to IP 黑名单列表
@@ -1424,6 +1457,18 @@ public class Instance  implements java.io.Serializable {
             this.urlWhitelist = new ArrayList<>();
         }
         this.urlWhitelist.add(urlWhitelist);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }

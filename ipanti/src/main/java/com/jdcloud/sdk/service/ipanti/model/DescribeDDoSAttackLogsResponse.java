@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ipanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询 DDoS 攻击日志
+ * 查询 DDoS 攻击日志, 仅能查询非BGP实例的攻击记录, 同时查询BGP和非BGP实例请使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeDDoSIpAttackLogs&#39;&gt;describeDDoSIpAttackLogs&lt;/a&gt;
  */
 public class DescribeDDoSAttackLogsResponse extends JdcloudResponse<DescribeDDoSAttackLogsResult> implements java.io.Serializable {
 

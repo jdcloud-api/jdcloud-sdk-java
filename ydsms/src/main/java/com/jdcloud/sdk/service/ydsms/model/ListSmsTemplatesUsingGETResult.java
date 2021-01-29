@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.ydsms.model.SmsTemplateVO;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询短信模板
+ * 查询短信模板列表
  */
 public class ListSmsTemplatesUsingGETResult extends JdcloudResult implements java.io.Serializable {
 

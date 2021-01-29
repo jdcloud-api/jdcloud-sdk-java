@@ -51,7 +51,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     private Integer buyType;
 
     /**
-     * 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
+     * 链路类型. &lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      * Required:true
      */
     @Required
@@ -169,7 +169,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
+     * get 链路类型. &lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @return
      */
@@ -178,7 +178,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
+     * set 链路类型. &lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @param carrier
      */
@@ -398,7 +398,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 链路类型. &lt;br&gt;- 1: 电信&lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
+     * set 链路类型. &lt;br&gt;- 3: 电信、联通和移动&lt;br&gt;- 4: BGP 线路
      *
      * @param carrier
      */

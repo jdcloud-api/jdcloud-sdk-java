@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * JRtcUser
- * JRtc用户管理
+ * 用户管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.openjrtc.model;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建JRtc用户
+ * 创建用户
 
  */
 public class CreateUserRequest extends JdcloudRequest implements java.io.Serializable {

@@ -55,7 +55,7 @@ public class AppInfoObject  implements java.io.Serializable {
     private String billType;
 
     /**
-     * 创建时间
+     * 创建时间(UTC)
      */
     private String createTime;
 
@@ -137,7 +137,7 @@ public class AppInfoObject  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 创建时间(UTC)
      *
      * @return
      */
@@ -146,7 +146,7 @@ public class AppInfoObject  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 创建时间(UTC)
      *
      * @param createTime
      */
@@ -198,7 +198,7 @@ public class AppInfoObject  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 创建时间(UTC)
      *
      * @param createTime
      */

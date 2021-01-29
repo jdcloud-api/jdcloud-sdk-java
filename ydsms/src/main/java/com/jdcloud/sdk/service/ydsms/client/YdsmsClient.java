@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.ydsms.client.ListSmsPackagesUsingGETExecutor;
 import com.jdcloud.sdk.service.ydsms.model.OpenServiceUsingPOSTRequest;
 import com.jdcloud.sdk.service.ydsms.model.OpenServiceUsingPOSTResponse;
 import com.jdcloud.sdk.service.ydsms.client.OpenServiceUsingPOSTExecutor;
+import com.jdcloud.sdk.service.ydsms.model.ModifyStatusUsingGETRequest;
+import com.jdcloud.sdk.service.ydsms.model.ModifyStatusUsingGETResponse;
+import com.jdcloud.sdk.service.ydsms.client.ModifyStatusUsingGETExecutor;
 import com.jdcloud.sdk.service.ydsms.model.QuerySecretKeyUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.QuerySecretKeyUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.QuerySecretKeyUsingGETExecutor;
@@ -76,6 +79,9 @@ import com.jdcloud.sdk.service.ydsms.client.GetSmsPackageByIdUsingGETExecutor;
 import com.jdcloud.sdk.service.ydsms.model.CreateSmsSignUsingPOSTRequest;
 import com.jdcloud.sdk.service.ydsms.model.CreateSmsSignUsingPOSTResponse;
 import com.jdcloud.sdk.service.ydsms.client.CreateSmsSignUsingPOSTExecutor;
+import com.jdcloud.sdk.service.ydsms.model.ModifySmsTaskUsingPOSTRequest;
+import com.jdcloud.sdk.service.ydsms.model.ModifySmsTaskUsingPOSTResponse;
+import com.jdcloud.sdk.service.ydsms.client.ModifySmsTaskUsingPOSTExecutor;
 import com.jdcloud.sdk.service.ydsms.model.QueryReceiptRecordUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.QueryReceiptRecordUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.QueryReceiptRecordUsingGETExecutor;
@@ -106,9 +112,9 @@ import com.jdcloud.sdk.service.ydsms.client.CreateSmsTaskUsingPOSTExecutor;
 import com.jdcloud.sdk.service.ydsms.model.GetSmsTaskIdUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.GetSmsTaskIdUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.GetSmsTaskIdUsingGETExecutor;
-import com.jdcloud.sdk.service.ydsms.model.ModifyStatusUsingPOSTRequest;
-import com.jdcloud.sdk.service.ydsms.model.ModifyStatusUsingPOSTResponse;
-import com.jdcloud.sdk.service.ydsms.client.ModifyStatusUsingPOSTExecutor;
+import com.jdcloud.sdk.service.ydsms.model.GetSmsTaskContentUsingGETRequest;
+import com.jdcloud.sdk.service.ydsms.model.GetSmsTaskContentUsingGETResponse;
+import com.jdcloud.sdk.service.ydsms.client.GetSmsTaskContentUsingGETExecutor;
 import com.jdcloud.sdk.service.ydsms.model.TaskStartUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.TaskStartUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.TaskStartUsingGETExecutor;
@@ -127,6 +133,9 @@ import com.jdcloud.sdk.service.ydsms.client.SendMessagesUsingPOSTExecutor;
 import com.jdcloud.sdk.service.ydsms.model.ListSmsSignTypesUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.ListSmsSignTypesUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.ListSmsSignTypesUsingGETExecutor;
+import com.jdcloud.sdk.service.ydsms.model.TaskDeleteUsingDeleteRequest;
+import com.jdcloud.sdk.service.ydsms.model.TaskDeleteUsingDeleteResponse;
+import com.jdcloud.sdk.service.ydsms.client.TaskDeleteUsingDeleteExecutor;
 import com.jdcloud.sdk.service.ydsms.model.CreateSmsPackageUsingPOSTRequest;
 import com.jdcloud.sdk.service.ydsms.model.CreateSmsPackageUsingPOSTResponse;
 import com.jdcloud.sdk.service.ydsms.client.CreateSmsPackageUsingPOSTExecutor;
@@ -203,6 +212,17 @@ public class YdsmsClient extends JdcloudClient {
      */
     public OpenServiceUsingPOSTResponse openServiceUsingPOST(OpenServiceUsingPOSTRequest request) throws JdcloudSdkException {
         return new OpenServiceUsingPOSTExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改应用启停状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyStatusUsingGETResponse modifyStatusUsingGET(ModifyStatusUsingGETRequest request) throws JdcloudSdkException {
+        return new ModifyStatusUsingGETExecutor().client(this).execute(request);
     }
 
     /**
@@ -349,6 +369,17 @@ public class YdsmsClient extends JdcloudClient {
     }
 
     /**
+     * 编辑短信发送任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifySmsTaskUsingPOSTResponse modifySmsTaskUsingPOST(ModifySmsTaskUsingPOSTRequest request) throws JdcloudSdkException {
+        return new ModifySmsTaskUsingPOSTExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询短信回执记录
      *
      * @param request
@@ -459,14 +490,14 @@ public class YdsmsClient extends JdcloudClient {
     }
 
     /**
-     * 修改应用启停状态
+     * 获取短信任务中的短信内容及计费条数
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyStatusUsingPOSTResponse modifyStatusUsingPOST(ModifyStatusUsingPOSTRequest request) throws JdcloudSdkException {
-        return new ModifyStatusUsingPOSTExecutor().client(this).execute(request);
+    public GetSmsTaskContentUsingGETResponse getSmsTaskContentUsingGET(GetSmsTaskContentUsingGETRequest request) throws JdcloudSdkException {
+        return new GetSmsTaskContentUsingGETExecutor().client(this).execute(request);
     }
 
     /**
@@ -503,7 +534,7 @@ public class YdsmsClient extends JdcloudClient {
     }
 
     /**
-     * 查询短信模板
+     * 查询短信模板列表
      *
      * @param request
      * @return
@@ -533,6 +564,17 @@ public class YdsmsClient extends JdcloudClient {
      */
     public ListSmsSignTypesUsingGETResponse listSmsSignTypesUsingGET(ListSmsSignTypesUsingGETRequest request) throws JdcloudSdkException {
         return new ListSmsSignTypesUsingGETExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public TaskDeleteUsingDeleteResponse taskDeleteUsingDelete(TaskDeleteUsingDeleteRequest request) throws JdcloudSdkException {
+        return new TaskDeleteUsingDeleteExecutor().client(this).execute(request);
     }
 
     /**

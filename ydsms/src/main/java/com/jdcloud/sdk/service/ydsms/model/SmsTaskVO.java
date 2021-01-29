@@ -87,6 +87,11 @@ public class SmsTaskVO  implements java.io.Serializable {
      */
     private String templateId;
 
+    /**
+     * 发送号码数量
+     */
+    private Integer phoneCount;
+
 
     /**
      * get 应用id
@@ -286,6 +291,24 @@ public class SmsTaskVO  implements java.io.Serializable {
         this.templateId = templateId;
     }
 
+    /**
+     * get 发送号码数量
+     *
+     * @return
+     */
+    public Integer getPhoneCount() {
+        return phoneCount;
+    }
+
+    /**
+     * set 发送号码数量
+     *
+     * @param phoneCount
+     */
+    public void setPhoneCount(Integer phoneCount) {
+        this.phoneCount = phoneCount;
+    }
+
 
     /**
      * set 应用id
@@ -394,6 +417,16 @@ public class SmsTaskVO  implements java.io.Serializable {
      */
     public SmsTaskVO templateId(String templateId) {
         this.templateId = templateId;
+        return this;
+    }
+
+    /**
+     * set 发送号码数量
+     *
+     * @param phoneCount
+     */
+    public SmsTaskVO phoneCount(Integer phoneCount) {
+        this.phoneCount = phoneCount;
         return this;
     }
 

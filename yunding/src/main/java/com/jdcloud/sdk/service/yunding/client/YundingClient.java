@@ -52,15 +52,27 @@ import com.jdcloud.sdk.service.yunding.client.DescribeRdsAccountsExecutor;
 import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeRequest;
 import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeResponse;
 import com.jdcloud.sdk.service.yunding.client.GrantRdsPrivilegeExecutor;
+import com.jdcloud.sdk.service.yunding.model.PutProductMetricDataRequest;
+import com.jdcloud.sdk.service.yunding.model.PutProductMetricDataResponse;
+import com.jdcloud.sdk.service.yunding.client.PutProductMetricDataExecutor;
 import com.jdcloud.sdk.service.yunding.model.DeleteRdsDatabaseRequest;
 import com.jdcloud.sdk.service.yunding.model.DeleteRdsDatabaseResponse;
 import com.jdcloud.sdk.service.yunding.client.DeleteRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeTasksRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeTasksResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeTasksExecutor;
+import com.jdcloud.sdk.service.yunding.model.RevokePrivilegeRequest;
+import com.jdcloud.sdk.service.yunding.model.RevokePrivilegeResponse;
+import com.jdcloud.sdk.service.yunding.client.RevokePrivilegeExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsDatabasesRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsDatabasesResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsDatabasesExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsInstancesExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeInstanceInfoRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeInstanceInfoResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeInstanceInfoExecutor;
@@ -70,6 +82,9 @@ import com.jdcloud.sdk.service.yunding.client.CreateRdsAccountExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsWhiteListRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsWhiteListResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsWhiteListExecutor;
+import com.jdcloud.sdk.service.yunding.model.PutRequest;
+import com.jdcloud.sdk.service.yunding.model.PutResponse;
+import com.jdcloud.sdk.service.yunding.client.PutExecutor;
 import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsRequest;
 import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsResponse;
 import com.jdcloud.sdk.service.yunding.client.UnassignSecondaryIpsExecutor;
@@ -84,7 +99,7 @@ public class YundingClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "yunding.jdcloud-api.com";
     public final static String ServiceName = "yunding";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -205,6 +220,17 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
+     * 监控数据上报。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PutProductMetricDataResponse putProductMetricData(PutProductMetricDataRequest request) throws JdcloudSdkException {
+        return new PutProductMetricDataExecutor().client(this).execute(request);
+    }
+
+    /**
      * 从RDS实例中删除数据库。为便于管理和数据恢复，RDS对用户权限进行了控制，用户仅能通过控制台或本接口删除数据库 [MFA enabled]
      *
      * @param request
@@ -213,6 +239,28 @@ public class YundingClient extends JdcloudClient {
      */
     public DeleteRdsDatabaseResponse deleteRdsDatabase(DeleteRdsDatabaseRequest request) throws JdcloudSdkException {
         return new DeleteRdsDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 云拔测-可用性agent任务查询接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTasksResponse describeTasks(DescribeTasksRequest request) throws JdcloudSdkException {
+        return new DescribeTasksExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 取消该账号对某个数据库的所有权限。权限取消后，该账号将不能访问此数据库。取消账号对某个数据库的访问权限，不影响该账号对其他数据库的访问权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RevokePrivilegeResponse revokePrivilege(RevokePrivilegeRequest request) throws JdcloudSdkException {
+        return new RevokePrivilegeExecutor().client(this).execute(request);
     }
 
     /**
@@ -235,6 +283,17 @@ public class YundingClient extends JdcloudClient {
      */
     public DescribeRdsInstancesResponse describeRdsInstances(DescribeRdsInstancesRequest request) throws JdcloudSdkException {
         return new DescribeRdsInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询弹性网卡信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNetworkInterfaceResponse describeNetworkInterface(DescribeNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new DescribeNetworkInterfaceExecutor().client(this).execute(request);
     }
 
     /**
@@ -268,6 +327,17 @@ public class YundingClient extends JdcloudClient {
      */
     public DescribeRdsWhiteListResponse describeRdsWhiteList(DescribeRdsWhiteListRequest request) throws JdcloudSdkException {
         return new DescribeRdsWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 监控数据上报。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PutResponse put(PutRequest request) throws JdcloudSdkException {
+        return new PutExecutor().client(this).execute(request);
     }
 
     /**

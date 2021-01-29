@@ -33,7 +33,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * JRtc用户ID
+     * 用户ID
      */
     private Long peerId;
 
@@ -49,7 +49,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
 
 
     /**
-     * get JRtc用户ID
+     * get 用户ID
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
     }
 
     /**
-     * set JRtc用户ID
+     * set 用户ID
      *
      * @param peerId
      */
@@ -104,7 +104,7 @@ public class CreateUserResultObj  implements java.io.Serializable {
 
 
     /**
-     * set JRtc用户ID
+     * set 用户ID
      *
      * @param peerId
      */
