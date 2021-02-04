@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JrtcRoom
- * 房间号管理接口
+ * JrtcMessage
+ * 自定义信令消息
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,22 +28,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改房间
-
+ * 发送自定义信令给房间
  */
-public class UpdateRoomRequest extends JdcloudRequest implements java.io.Serializable {
+public class SendMessageToRoomRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 房间ID
+     * 事件名称
      */
-    private Long roomId;
+    private String eventName;
 
     /**
-     * 房间名称
+     * 自定义信令消息
      */
-    private String roomName;
+    private String message;
 
     /**
      * 应用ID
@@ -52,41 +51,48 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
     @Required
     private String appId;
 
+    /**
+     * 房间ID
+     * Required:true
+     */
+    @Required
+    private Long roomId;
+
 
     /**
-     * get 房间ID
+     * get 事件名称
      *
      * @return
      */
-    public Long getRoomId() {
-        return roomId;
+    public String getEventName() {
+        return eventName;
     }
 
     /**
-     * set 房间ID
+     * set 事件名称
      *
-     * @param roomId
+     * @param eventName
      */
-    public void setRoomId(Long roomId) {
-        this.roomId = roomId;
+    public void setEventName(String eventName) {
+        this.eventName = eventName;
     }
 
     /**
-     * get 房间名称
+     * get 自定义信令消息
      *
      * @return
      */
-    public String getRoomName() {
-        return roomName;
+    public String getMessage() {
+        return message;
     }
 
     /**
-     * set 房间名称
+     * set 自定义信令消息
      *
-     * @param roomName
+     * @param message
      */
-    public void setRoomName(String roomName) {
-        this.roomName = roomName;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     /**
@@ -107,24 +113,42 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.appId = appId;
     }
 
+    /**
+     * get 房间ID
+     *
+     * @return
+     */
+    public Long getRoomId() {
+        return roomId;
+    }
 
     /**
      * set 房间ID
      *
      * @param roomId
      */
-    public UpdateRoomRequest roomId(Long roomId) {
+    public void setRoomId(Long roomId) {
         this.roomId = roomId;
+    }
+
+
+    /**
+     * set 事件名称
+     *
+     * @param eventName
+     */
+    public SendMessageToRoomRequest eventName(String eventName) {
+        this.eventName = eventName;
         return this;
     }
 
     /**
-     * set 房间名称
+     * set 自定义信令消息
      *
-     * @param roomName
+     * @param message
      */
-    public UpdateRoomRequest roomName(String roomName) {
-        this.roomName = roomName;
+    public SendMessageToRoomRequest message(String message) {
+        this.message = message;
         return this;
     }
 
@@ -133,8 +157,18 @@ public class UpdateRoomRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @param appId
      */
-    public UpdateRoomRequest appId(String appId) {
+    public SendMessageToRoomRequest appId(String appId) {
         this.appId = appId;
+        return this;
+    }
+
+    /**
+     * set 房间ID
+     *
+     * @param roomId
+     */
+    public SendMessageToRoomRequest roomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
 

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JrtcRoom
- * 房间号管理接口
+ * JrtcMessage
+ * 自定义信令消息
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,13 +24,12 @@
 
 package com.jdcloud.sdk.service.openjrtc.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取房间信息
-
+ * 发送自定义信令给房间内的人员
  */
-public class DescribeRoomInfoResponse extends JdcloudResponse<DescribeRoomInfoResult> implements java.io.Serializable {
+public class SendMessageToUserResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

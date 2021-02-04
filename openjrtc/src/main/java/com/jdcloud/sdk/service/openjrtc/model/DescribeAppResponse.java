@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JRtcApp
+ * JrtcApp
  * 用户应用信息
  *
  * OpenAPI spec version: v1
