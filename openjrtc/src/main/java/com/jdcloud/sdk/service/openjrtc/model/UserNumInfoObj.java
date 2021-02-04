@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.openjrtc.model;
 
 
 /**
- * 应用信息
+ * 统计信息
  */
 public class UserNumInfoObj  implements java.io.Serializable {
 

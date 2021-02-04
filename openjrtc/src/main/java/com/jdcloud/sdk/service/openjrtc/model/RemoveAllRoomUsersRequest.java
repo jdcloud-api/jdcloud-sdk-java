@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JrtcRoom
- * 房间号管理接口
+ * JrtcRoomUser
+ * 房间人员管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,19 +28,12 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除房间
+ * 移除房间内所有人员
 
  */
-public class DeleteRoomRequest extends JdcloudRequest implements java.io.Serializable {
+public class RemoveAllRoomUsersRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 房间ID
-     * Required:true
-     */
-    @Required
-    private Long roomId;
 
     /**
      * 应用ID
@@ -49,24 +42,13 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
     @Required
     private String appId;
 
-
     /**
-     * get 房间ID
-     *
-     * @return
+     * 房间ID
+     * Required:true
      */
-    public Long getRoomId() {
-        return roomId;
-    }
+    @Required
+    private Long roomId;
 
-    /**
-     * set 房间ID
-     *
-     * @param roomId
-     */
-    public void setRoomId(Long roomId) {
-        this.roomId = roomId;
-    }
 
     /**
      * get 应用ID
@@ -86,24 +68,42 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.appId = appId;
     }
 
+    /**
+     * get 房间ID
+     *
+     * @return
+     */
+    public Long getRoomId() {
+        return roomId;
+    }
 
     /**
      * set 房间ID
      *
      * @param roomId
      */
-    public DeleteRoomRequest roomId(Long roomId) {
+    public void setRoomId(Long roomId) {
         this.roomId = roomId;
-        return this;
     }
+
 
     /**
      * set 应用ID
      *
      * @param appId
      */
-    public DeleteRoomRequest appId(String appId) {
+    public RemoveAllRoomUsersRequest appId(String appId) {
         this.appId = appId;
+        return this;
+    }
+
+    /**
+     * set 房间ID
+     *
+     * @param roomId
+     */
+    public RemoveAllRoomUsersRequest roomId(Long roomId) {
+        this.roomId = roomId;
         return this;
     }
 

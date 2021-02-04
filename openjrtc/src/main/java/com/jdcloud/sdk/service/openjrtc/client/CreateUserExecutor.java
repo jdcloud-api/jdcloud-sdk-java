@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JRtcUser
+ * JrtcUser
  * 用户管理
  *
  * OpenAPI spec version: v1

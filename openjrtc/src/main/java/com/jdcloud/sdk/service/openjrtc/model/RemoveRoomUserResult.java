@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JrtcRoom
- * 房间号管理接口
+ * JrtcRoomUser
+ * 房间人员管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,13 +24,13 @@
 
 package com.jdcloud.sdk.service.openjrtc.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取房间信息
+ * 移除房间内人员
 
  */
-public class DescribeRoomInfoResponse extends JdcloudResponse<DescribeRoomInfoResult> implements java.io.Serializable {
+public class RemoveRoomUserResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

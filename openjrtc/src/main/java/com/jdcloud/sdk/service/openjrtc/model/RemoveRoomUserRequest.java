@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * JrtcRoom
- * 房间号管理接口
+ * JrtcRoomUser
+ * 房间人员管理
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,23 +24,23 @@
 
 package com.jdcloud.sdk.service.openjrtc.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除房间
+ * 移除房间内人员
 
  */
-public class DeleteRoomRequest extends JdcloudRequest implements java.io.Serializable {
+public class RemoveRoomUserRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 房间ID
-     * Required:true
+     * peerId列表,最多支持20个peerId
      */
-    @Required
-    private Long roomId;
+    private List<Long> peerIds;
 
     /**
      * 应用ID
@@ -49,23 +49,30 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
     @Required
     private String appId;
 
+    /**
+     * 房间ID
+     * Required:true
+     */
+    @Required
+    private Long roomId;
+
 
     /**
-     * get 房间ID
+     * get peerId列表,最多支持20个peerId
      *
      * @return
      */
-    public Long getRoomId() {
-        return roomId;
+    public List<Long> getPeerIds() {
+        return peerIds;
     }
 
     /**
-     * set 房间ID
+     * set peerId列表,最多支持20个peerId
      *
-     * @param roomId
+     * @param peerIds
      */
-    public void setRoomId(Long roomId) {
-        this.roomId = roomId;
+    public void setPeerIds(List<Long> peerIds) {
+        this.peerIds = peerIds;
     }
 
     /**
@@ -86,14 +93,32 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
         this.appId = appId;
     }
 
+    /**
+     * get 房间ID
+     *
+     * @return
+     */
+    public Long getRoomId() {
+        return roomId;
+    }
 
     /**
      * set 房间ID
      *
      * @param roomId
      */
-    public DeleteRoomRequest roomId(Long roomId) {
+    public void setRoomId(Long roomId) {
         this.roomId = roomId;
+    }
+
+
+    /**
+     * set peerId列表,最多支持20个peerId
+     *
+     * @param peerIds
+     */
+    public RemoveRoomUserRequest peerIds(List<Long> peerIds) {
+        this.peerIds = peerIds;
         return this;
     }
 
@@ -102,10 +127,32 @@ public class DeleteRoomRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @param appId
      */
-    public DeleteRoomRequest appId(String appId) {
+    public RemoveRoomUserRequest appId(String appId) {
         this.appId = appId;
         return this;
     }
 
+    /**
+     * set 房间ID
+     *
+     * @param roomId
+     */
+    public RemoveRoomUserRequest roomId(Long roomId) {
+        this.roomId = roomId;
+        return this;
+    }
+
+
+    /**
+     * add item to peerId列表,最多支持20个peerId
+     *
+     * @param peerId
+     */
+    public void addPeerId(Long peerId) {
+        if (this.peerIds == null) {
+            this.peerIds = new ArrayList<>();
+        }
+        this.peerIds.add(peerId);
+    }
 
 }
