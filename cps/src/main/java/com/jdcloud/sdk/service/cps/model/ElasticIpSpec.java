@@ -24,8 +24,11 @@
 
 package com.jdcloud.sdk.service.cps.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
+import com.jdcloud.sdk.service.resourcetag.model.Tag;
 
 /**
  * elasticIpSpec
@@ -54,6 +57,11 @@ public class ElasticIpSpec  implements java.io.Serializable {
      */
     @Required
     private ChargeSpec charge;
+
+    /**
+     * 标签
+     */
+    private List<Tag> resourceTags;
 
 
     /**
@@ -110,6 +118,24 @@ public class ElasticIpSpec  implements java.io.Serializable {
         this.charge = charge;
     }
 
+    /**
+     * get 标签
+     *
+     * @return
+     */
+    public List<Tag> getResourceTags() {
+        return resourceTags;
+    }
+
+    /**
+     * set 标签
+     *
+     * @param resourceTags
+     */
+    public void setResourceTags(List<Tag> resourceTags) {
+        this.resourceTags = resourceTags;
+    }
+
 
     /**
      * set 带宽, 范围[1,200] 单位Mbps
@@ -141,5 +167,27 @@ public class ElasticIpSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 标签
+     *
+     * @param resourceTags
+     */
+    public ElasticIpSpec resourceTags(List<Tag> resourceTags) {
+        this.resourceTags = resourceTags;
+        return this;
+    }
+
+
+    /**
+     * add item to 标签
+     *
+     * @param resourceTag
+     */
+    public void addResourceTag(Tag resourceTag) {
+        if (this.resourceTags == null) {
+            this.resourceTags = new ArrayList<>();
+        }
+        this.resourceTags.add(resourceTag);
+    }
 
 }
