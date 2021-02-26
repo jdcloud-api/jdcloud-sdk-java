@@ -89,6 +89,16 @@ public class Instance  implements java.io.Serializable {
     private String imageType;
 
     /**
+     * 机柜信息
+     */
+    private String cabinet;
+
+    /**
+     * 带外管理IP
+     */
+    private String iloIp;
+
+    /**
      * 操作系统类型ID
      */
     private String osTypeId;
@@ -157,6 +167,16 @@ public class Instance  implements java.io.Serializable {
      * IPv6网关ID
      */
     private String ipv6GatewayId;
+
+    /**
+     * POD网络名称
+     */
+    private String podName;
+
+    /**
+     * POD机房地址描述
+     */
+    private String podRoom;
 
     /**
      * 子网编号
@@ -523,6 +543,42 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 机柜信息
+     *
+     * @return
+     */
+    public String getCabinet() {
+        return cabinet;
+    }
+
+    /**
+     * set 机柜信息
+     *
+     * @param cabinet
+     */
+    public void setCabinet(String cabinet) {
+        this.cabinet = cabinet;
+    }
+
+    /**
+     * get 带外管理IP
+     *
+     * @return
+     */
+    public String getIloIp() {
+        return iloIp;
+    }
+
+    /**
+     * set 带外管理IP
+     *
+     * @param iloIp
+     */
+    public void setIloIp(String iloIp) {
+        this.iloIp = iloIp;
+    }
+
+    /**
      * get 操作系统类型ID
      *
      * @return
@@ -772,6 +828,42 @@ public class Instance  implements java.io.Serializable {
      */
     public void setIpv6GatewayId(String ipv6GatewayId) {
         this.ipv6GatewayId = ipv6GatewayId;
+    }
+
+    /**
+     * get POD网络名称
+     *
+     * @return
+     */
+    public String getPodName() {
+        return podName;
+    }
+
+    /**
+     * set POD网络名称
+     *
+     * @param podName
+     */
+    public void setPodName(String podName) {
+        this.podName = podName;
+    }
+
+    /**
+     * get POD机房地址描述
+     *
+     * @return
+     */
+    public String getPodRoom() {
+        return podRoom;
+    }
+
+    /**
+     * set POD机房地址描述
+     *
+     * @param podRoom
+     */
+    public void setPodRoom(String podRoom) {
+        this.podRoom = podRoom;
     }
 
     /**
@@ -1480,6 +1572,26 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * set 机柜信息
+     *
+     * @param cabinet
+     */
+    public Instance cabinet(String cabinet) {
+        this.cabinet = cabinet;
+        return this;
+    }
+
+    /**
+     * set 带外管理IP
+     *
+     * @param iloIp
+     */
+    public Instance iloIp(String iloIp) {
+        this.iloIp = iloIp;
+        return this;
+    }
+
+    /**
      * set 操作系统类型ID
      *
      * @param osTypeId
@@ -1616,6 +1728,26 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance ipv6GatewayId(String ipv6GatewayId) {
         this.ipv6GatewayId = ipv6GatewayId;
+        return this;
+    }
+
+    /**
+     * set POD网络名称
+     *
+     * @param podName
+     */
+    public Instance podName(String podName) {
+        this.podName = podName;
+        return this;
+    }
+
+    /**
+     * set POD机房地址描述
+     *
+     * @param podRoom
+     */
+    public Instance podRoom(String podRoom) {
+        this.podRoom = podRoom;
         return this;
     }
 

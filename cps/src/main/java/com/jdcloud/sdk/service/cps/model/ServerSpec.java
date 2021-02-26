@@ -47,6 +47,21 @@ public class ServerSpec  implements java.io.Serializable {
      */
     private Integer weight;
 
+    /**
+     * 别名IP
+     */
+    private String aliasip;
+
+    /**
+     * 主网口或辅网口IP
+     */
+    private String rip;
+
+    /**
+     * bond0 单网卡-主网口| eth0 双网卡-主网口 | eth1 双网卡-辅网口
+     */
+    private String networkPort;
+
 
     /**
      * get 后端云物理服务器ID
@@ -102,6 +117,60 @@ public class ServerSpec  implements java.io.Serializable {
         this.weight = weight;
     }
 
+    /**
+     * get 别名IP
+     *
+     * @return
+     */
+    public String getAliasip() {
+        return aliasip;
+    }
+
+    /**
+     * set 别名IP
+     *
+     * @param aliasip
+     */
+    public void setAliasip(String aliasip) {
+        this.aliasip = aliasip;
+    }
+
+    /**
+     * get 主网口或辅网口IP
+     *
+     * @return
+     */
+    public String getRip() {
+        return rip;
+    }
+
+    /**
+     * set 主网口或辅网口IP
+     *
+     * @param rip
+     */
+    public void setRip(String rip) {
+        this.rip = rip;
+    }
+
+    /**
+     * get bond0 单网卡-主网口| eth0 双网卡-主网口 | eth1 双网卡-辅网口
+     *
+     * @return
+     */
+    public String getNetworkPort() {
+        return networkPort;
+    }
+
+    /**
+     * set bond0 单网卡-主网口| eth0 双网卡-主网口 | eth1 双网卡-辅网口
+     *
+     * @param networkPort
+     */
+    public void setNetworkPort(String networkPort) {
+        this.networkPort = networkPort;
+    }
+
 
     /**
      * set 后端云物理服务器ID
@@ -130,6 +199,36 @@ public class ServerSpec  implements java.io.Serializable {
      */
     public ServerSpec weight(Integer weight) {
         this.weight = weight;
+        return this;
+    }
+
+    /**
+     * set 别名IP
+     *
+     * @param aliasip
+     */
+    public ServerSpec aliasip(String aliasip) {
+        this.aliasip = aliasip;
+        return this;
+    }
+
+    /**
+     * set 主网口或辅网口IP
+     *
+     * @param rip
+     */
+    public ServerSpec rip(String rip) {
+        this.rip = rip;
+        return this;
+    }
+
+    /**
+     * set bond0 单网卡-主网口| eth0 双网卡-主网口 | eth1 双网卡-辅网口
+     *
+     * @param networkPort
+     */
+    public ServerSpec networkPort(String networkPort) {
+        this.networkPort = networkPort;
         return this;
     }
 

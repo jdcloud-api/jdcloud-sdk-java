@@ -82,6 +82,16 @@ public class Server  implements java.io.Serializable {
      */
     private String healthyStatus;
 
+    /**
+     * 别名IP
+     */
+    private String aliasip;
+
+    /**
+     * IP类型：别名IPv4 or 内网IPv4
+     */
+    private String iptype;
+
 
     /**
      * get 服务器ID
@@ -263,6 +273,42 @@ public class Server  implements java.io.Serializable {
         this.healthyStatus = healthyStatus;
     }
 
+    /**
+     * get 别名IP
+     *
+     * @return
+     */
+    public String getAliasip() {
+        return aliasip;
+    }
+
+    /**
+     * set 别名IP
+     *
+     * @param aliasip
+     */
+    public void setAliasip(String aliasip) {
+        this.aliasip = aliasip;
+    }
+
+    /**
+     * get IP类型：别名IPv4 or 内网IPv4
+     *
+     * @return
+     */
+    public String getIptype() {
+        return iptype;
+    }
+
+    /**
+     * set IP类型：别名IPv4 or 内网IPv4
+     *
+     * @param iptype
+     */
+    public void setIptype(String iptype) {
+        this.iptype = iptype;
+    }
+
 
     /**
      * set 服务器ID
@@ -361,6 +407,26 @@ public class Server  implements java.io.Serializable {
      */
     public Server healthyStatus(String healthyStatus) {
         this.healthyStatus = healthyStatus;
+        return this;
+    }
+
+    /**
+     * set 别名IP
+     *
+     * @param aliasip
+     */
+    public Server aliasip(String aliasip) {
+        this.aliasip = aliasip;
+        return this;
+    }
+
+    /**
+     * set IP类型：别名IPv4 or 内网IPv4
+     *
+     * @param iptype
+     */
+    public Server iptype(String iptype) {
+        this.iptype = iptype;
         return this;
     }
 

@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.cps.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -88,6 +90,36 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
      * 服务器组id
      */
     private String serverGroupId;
+
+    /**
+     * 会话保持超时时间，单位s
+     */
+    private Integer stickySessionTimeout;
+
+    /**
+     * 会话类型，植入Cookie or 重写Cookie
+     */
+    private String cookieType;
+
+    /**
+     * 检查路径
+     */
+    private String healthCheckUri;
+
+    /**
+     * 正常态码，要使用的Http状态码
+     */
+    private String healthCheckHttpCode;
+
+    /**
+     * 证书ID
+     */
+    private String certificateId;
+
+    /**
+     * 获取HTTP头字段：X-Forwarded-For、X-Forwarded-Proto、X- Forwarded-Port、X-Forwarded-LBIP
+     */
+    private List<String> headers;
 
     /**
      * 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
@@ -303,6 +335,114 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * get 会话保持超时时间，单位s
+     *
+     * @return
+     */
+    public Integer getStickySessionTimeout() {
+        return stickySessionTimeout;
+    }
+
+    /**
+     * set 会话保持超时时间，单位s
+     *
+     * @param stickySessionTimeout
+     */
+    public void setStickySessionTimeout(Integer stickySessionTimeout) {
+        this.stickySessionTimeout = stickySessionTimeout;
+    }
+
+    /**
+     * get 会话类型，植入Cookie or 重写Cookie
+     *
+     * @return
+     */
+    public String getCookieType() {
+        return cookieType;
+    }
+
+    /**
+     * set 会话类型，植入Cookie or 重写Cookie
+     *
+     * @param cookieType
+     */
+    public void setCookieType(String cookieType) {
+        this.cookieType = cookieType;
+    }
+
+    /**
+     * get 检查路径
+     *
+     * @return
+     */
+    public String getHealthCheckUri() {
+        return healthCheckUri;
+    }
+
+    /**
+     * set 检查路径
+     *
+     * @param healthCheckUri
+     */
+    public void setHealthCheckUri(String healthCheckUri) {
+        this.healthCheckUri = healthCheckUri;
+    }
+
+    /**
+     * get 正常态码，要使用的Http状态码
+     *
+     * @return
+     */
+    public String getHealthCheckHttpCode() {
+        return healthCheckHttpCode;
+    }
+
+    /**
+     * set 正常态码，要使用的Http状态码
+     *
+     * @param healthCheckHttpCode
+     */
+    public void setHealthCheckHttpCode(String healthCheckHttpCode) {
+        this.healthCheckHttpCode = healthCheckHttpCode;
+    }
+
+    /**
+     * get 证书ID
+     *
+     * @return
+     */
+    public String getCertificateId() {
+        return certificateId;
+    }
+
+    /**
+     * set 证书ID
+     *
+     * @param certificateId
+     */
+    public void setCertificateId(String certificateId) {
+        this.certificateId = certificateId;
+    }
+
+    /**
+     * get 获取HTTP头字段：X-Forwarded-For、X-Forwarded-Proto、X- Forwarded-Port、X-Forwarded-LBIP
+     *
+     * @return
+     */
+    public List<String> getHeaders() {
+        return headers;
+    }
+
+    /**
+     * set 获取HTTP头字段：X-Forwarded-For、X-Forwarded-Proto、X- Forwarded-Port、X-Forwarded-LBIP
+     *
+     * @param headers
+     */
+    public void setHeaders(List<String> headers) {
+        this.headers = headers;
+    }
+
+    /**
      * get 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      *
      * @return
@@ -450,6 +590,66 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * set 会话保持超时时间，单位s
+     *
+     * @param stickySessionTimeout
+     */
+    public ModifyListenerRequest stickySessionTimeout(Integer stickySessionTimeout) {
+        this.stickySessionTimeout = stickySessionTimeout;
+        return this;
+    }
+
+    /**
+     * set 会话类型，植入Cookie or 重写Cookie
+     *
+     * @param cookieType
+     */
+    public ModifyListenerRequest cookieType(String cookieType) {
+        this.cookieType = cookieType;
+        return this;
+    }
+
+    /**
+     * set 检查路径
+     *
+     * @param healthCheckUri
+     */
+    public ModifyListenerRequest healthCheckUri(String healthCheckUri) {
+        this.healthCheckUri = healthCheckUri;
+        return this;
+    }
+
+    /**
+     * set 正常态码，要使用的Http状态码
+     *
+     * @param healthCheckHttpCode
+     */
+    public ModifyListenerRequest healthCheckHttpCode(String healthCheckHttpCode) {
+        this.healthCheckHttpCode = healthCheckHttpCode;
+        return this;
+    }
+
+    /**
+     * set 证书ID
+     *
+     * @param certificateId
+     */
+    public ModifyListenerRequest certificateId(String certificateId) {
+        this.certificateId = certificateId;
+        return this;
+    }
+
+    /**
+     * set 获取HTTP头字段：X-Forwarded-For、X-Forwarded-Proto、X- Forwarded-Port、X-Forwarded-LBIP
+     *
+     * @param headers
+     */
+    public ModifyListenerRequest headers(List<String> headers) {
+        this.headers = headers;
+        return this;
+    }
+
+    /**
      * set 地域ID，可调用接口（describeCPSLBRegions）获取云物理服务器支持的地域
      *
      * @param regionId
@@ -469,5 +669,17 @@ public class ModifyListenerRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
+    /**
+     * add item to 获取HTTP头字段：X-Forwarded-For、X-Forwarded-Proto、X- Forwarded-Port、X-Forwarded-LBIP
+     *
+     * @param header
+     */
+    public void addHeader(String header) {
+        if (this.headers == null) {
+            this.headers = new ArrayList<>();
+        }
+        this.headers.add(header);
+    }
 
 }
