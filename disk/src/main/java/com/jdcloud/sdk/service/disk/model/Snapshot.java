@@ -80,9 +80,19 @@ public class Snapshot  implements java.io.Serializable {
     private String createTime;
 
     /**
-     * 共享信息
+     * 过期删除时间
+     */
+    private String expireTime;
+
+    /**
+     * 共享信息(已废弃，使用shareInfo)
      */
     private List<ShareInfo> sharInfo;
+
+    /**
+     * 共享信息
+     */
+    private List<ShareInfo> shareInfo;
 
     /**
      * 快照是否为加密盘的快照
@@ -253,7 +263,25 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * get 共享信息
+     * get 过期删除时间
+     *
+     * @return
+     */
+    public String getExpireTime() {
+        return expireTime;
+    }
+
+    /**
+     * set 过期删除时间
+     *
+     * @param expireTime
+     */
+    public void setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
+    }
+
+    /**
+     * get 共享信息(已废弃，使用shareInfo)
      *
      * @return
      */
@@ -262,12 +290,30 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 共享信息
+     * set 共享信息(已废弃，使用shareInfo)
      *
      * @param sharInfo
      */
     public void setSharInfo(List<ShareInfo> sharInfo) {
         this.sharInfo = sharInfo;
+    }
+
+    /**
+     * get 共享信息
+     *
+     * @return
+     */
+    public List<ShareInfo> getShareInfo() {
+        return shareInfo;
+    }
+
+    /**
+     * set 共享信息
+     *
+     * @param shareInfo
+     */
+    public void setShareInfo(List<ShareInfo> shareInfo) {
+        this.shareInfo = shareInfo;
     }
 
     /**
@@ -380,12 +426,32 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * set 共享信息
+     * set 过期删除时间
+     *
+     * @param expireTime
+     */
+    public Snapshot expireTime(String expireTime) {
+        this.expireTime = expireTime;
+        return this;
+    }
+
+    /**
+     * set 共享信息(已废弃，使用shareInfo)
      *
      * @param sharInfo
      */
     public Snapshot sharInfo(List<ShareInfo> sharInfo) {
         this.sharInfo = sharInfo;
+        return this;
+    }
+
+    /**
+     * set 共享信息
+     *
+     * @param shareInfo
+     */
+    public Snapshot shareInfo(List<ShareInfo> shareInfo) {
+        this.shareInfo = shareInfo;
         return this;
     }
 
@@ -413,7 +479,7 @@ public class Snapshot  implements java.io.Serializable {
     }
 
     /**
-     * add item to 共享信息
+     * add item to 共享信息(已废弃，使用shareInfo)
      *
      * @param sharInfo
      */
@@ -422,6 +488,18 @@ public class Snapshot  implements java.io.Serializable {
             this.sharInfo = new ArrayList<>();
         }
         this.sharInfo.add(sharInfo);
+    }
+
+    /**
+     * add item to 共享信息
+     *
+     * @param shareInfo
+     */
+    public void addShareInfo(ShareInfo shareInfo) {
+        if (this.shareInfo == null) {
+            this.shareInfo = new ArrayList<>();
+        }
+        this.shareInfo.add(shareInfo);
     }
 
 }

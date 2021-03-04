@@ -103,6 +103,9 @@ import com.jdcloud.sdk.service.vod.client.ListSnapshotTemplatesExecutor;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.GetWatermarkExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteGroupedTranscodeTemplatesRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteGroupedTranscodeTemplatesResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteGroupedTranscodeTemplatesExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteVideoStreamsRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteVideoStreamsResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteVideoStreamsExecutor;
@@ -112,6 +115,9 @@ import com.jdcloud.sdk.service.vod.client.BatchSubmitTranscodeJobsExecutor;
 import com.jdcloud.sdk.service.vod.model.SetIPRuleRequest;
 import com.jdcloud.sdk.service.vod.model.SetIPRuleResponse;
 import com.jdcloud.sdk.service.vod.client.SetIPRuleExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteTranscodeTemplateGroupRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteTranscodeTemplateGroupResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteTranscodeTemplateGroupExecutor;
 import com.jdcloud.sdk.service.vod.model.UpdateVideoRequest;
 import com.jdcloud.sdk.service.vod.model.UpdateVideoResponse;
 import com.jdcloud.sdk.service.vod.client.UpdateVideoExecutor;
@@ -130,6 +136,9 @@ import com.jdcloud.sdk.service.vod.client.GetVideoPlayInfoExecutor;
 import com.jdcloud.sdk.service.vod.model.DeleteHeaderRequest;
 import com.jdcloud.sdk.service.vod.model.DeleteHeaderResponse;
 import com.jdcloud.sdk.service.vod.client.DeleteHeaderExecutor;
+import com.jdcloud.sdk.service.vod.model.UpdateTranscodeTemplateGroupRequest;
+import com.jdcloud.sdk.service.vod.model.UpdateTranscodeTemplateGroupResponse;
+import com.jdcloud.sdk.service.vod.client.UpdateTranscodeTemplateGroupExecutor;
 import com.jdcloud.sdk.service.vod.model.UpdateCategoryRequest;
 import com.jdcloud.sdk.service.vod.model.UpdateCategoryResponse;
 import com.jdcloud.sdk.service.vod.client.UpdateCategoryExecutor;
@@ -175,6 +184,9 @@ import com.jdcloud.sdk.service.vod.client.SetHeaderExecutor;
 import com.jdcloud.sdk.service.vod.model.RefreshVideoUploadTaskRequest;
 import com.jdcloud.sdk.service.vod.model.RefreshVideoUploadTaskResponse;
 import com.jdcloud.sdk.service.vod.client.RefreshVideoUploadTaskExecutor;
+import com.jdcloud.sdk.service.vod.model.GetTranscodeTemplateGroupRequest;
+import com.jdcloud.sdk.service.vod.model.GetTranscodeTemplateGroupResponse;
+import com.jdcloud.sdk.service.vod.client.GetTranscodeTemplateGroupExecutor;
 import com.jdcloud.sdk.service.vod.model.GetVideoRequest;
 import com.jdcloud.sdk.service.vod.model.GetVideoResponse;
 import com.jdcloud.sdk.service.vod.client.GetVideoExecutor;
@@ -202,6 +214,9 @@ import com.jdcloud.sdk.service.vod.client.SubmitQualityDetectionJobExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateSnapshotTemplateRequest;
 import com.jdcloud.sdk.service.vod.model.CreateSnapshotTemplateResponse;
 import com.jdcloud.sdk.service.vod.client.CreateSnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateGroupRequest;
+import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateGroupResponse;
+import com.jdcloud.sdk.service.vod.client.CreateTranscodeTemplateGroupExecutor;
 import com.jdcloud.sdk.service.vod.model.GetIPRuleRequest;
 import com.jdcloud.sdk.service.vod.model.GetIPRuleResponse;
 import com.jdcloud.sdk.service.vod.client.GetIPRuleExecutor;
@@ -214,6 +229,9 @@ import com.jdcloud.sdk.service.vod.client.SetHttpSslExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.vod.client.CreateTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.vod.model.ListTranscodeTemplateGroupsRequest;
+import com.jdcloud.sdk.service.vod.model.ListTranscodeTemplateGroupsResponse;
+import com.jdcloud.sdk.service.vod.client.ListTranscodeTemplateGroupsExecutor;
 import com.jdcloud.sdk.service.vod.model.ListCategoriesRequest;
 import com.jdcloud.sdk.service.vod.model.ListCategoriesResponse;
 import com.jdcloud.sdk.service.vod.client.ListCategoriesExecutor;
@@ -549,6 +567,18 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 删除转码模板组中的模板。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteGroupedTranscodeTemplatesResponse deleteGroupedTranscodeTemplates(DeleteGroupedTranscodeTemplatesRequest request) throws JdcloudSdkException {
+        return new DeleteGroupedTranscodeTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除视频转码流
      *
      * @param request
@@ -579,6 +609,17 @@ public class VodClient extends JdcloudClient {
      */
     public SetIPRuleResponse setIPRule(SetIPRuleRequest request) throws JdcloudSdkException {
         return new SetIPRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除转码模板组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteTranscodeTemplateGroupResponse deleteTranscodeTemplateGroup(DeleteTranscodeTemplateGroupRequest request) throws JdcloudSdkException {
+        return new DeleteTranscodeTemplateGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -645,6 +686,17 @@ public class VodClient extends JdcloudClient {
      */
     public DeleteHeaderResponse deleteHeader(DeleteHeaderRequest request) throws JdcloudSdkException {
         return new DeleteHeaderExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改转码模板组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateTranscodeTemplateGroupResponse updateTranscodeTemplateGroup(UpdateTranscodeTemplateGroupRequest request) throws JdcloudSdkException {
+        return new UpdateTranscodeTemplateGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -815,6 +867,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 查询转码模板组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetTranscodeTemplateGroupResponse getTranscodeTemplateGroup(GetTranscodeTemplateGroupRequest request) throws JdcloudSdkException {
+        return new GetTranscodeTemplateGroupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询单个视频信息
      *
      * @param request
@@ -920,6 +983,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 创建转码模板组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateTranscodeTemplateGroupResponse createTranscodeTemplateGroup(CreateTranscodeTemplateGroupRequest request) throws JdcloudSdkException {
+        return new CreateTranscodeTemplateGroupExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询CDN域名IP黑名单规则配置
      *
      * @param request
@@ -961,6 +1035,18 @@ public class VodClient extends JdcloudClient {
      */
     public CreateTranscodeTemplateResponse createTranscodeTemplate(CreateTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new CreateTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询转码模板组列表。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListTranscodeTemplateGroupsResponse listTranscodeTemplateGroups(ListTranscodeTemplateGroupsRequest request) throws JdcloudSdkException {
+        return new ListTranscodeTemplateGroupsExecutor().client(this).execute(request);
     }
 
     /**

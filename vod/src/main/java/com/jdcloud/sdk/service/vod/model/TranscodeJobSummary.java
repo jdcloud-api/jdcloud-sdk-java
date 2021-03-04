@@ -45,9 +45,14 @@ public class TranscodeJobSummary  implements java.io.Serializable {
     private String videoId;
 
     /**
-     * 模板ID列表
+     * 模板ID列表。以转码模板列表方式提交的转码作业，包含此字段。
      */
     private List<Long> templateIds;
+
+    /**
+     * 模板组ID。以转码模板组方式提交的转码作业，包含此字段。
+     */
+    private String templateGroupId;
 
     /**
      * 创建时间
@@ -102,7 +107,7 @@ public class TranscodeJobSummary  implements java.io.Serializable {
     }
 
     /**
-     * get 模板ID列表
+     * get 模板ID列表。以转码模板列表方式提交的转码作业，包含此字段。
      *
      * @return
      */
@@ -111,12 +116,30 @@ public class TranscodeJobSummary  implements java.io.Serializable {
     }
 
     /**
-     * set 模板ID列表
+     * set 模板ID列表。以转码模板列表方式提交的转码作业，包含此字段。
      *
      * @param templateIds
      */
     public void setTemplateIds(List<Long> templateIds) {
         this.templateIds = templateIds;
+    }
+
+    /**
+     * get 模板组ID。以转码模板组方式提交的转码作业，包含此字段。
+     *
+     * @return
+     */
+    public String getTemplateGroupId() {
+        return templateGroupId;
+    }
+
+    /**
+     * set 模板组ID。以转码模板组方式提交的转码作业，包含此字段。
+     *
+     * @param templateGroupId
+     */
+    public void setTemplateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
     }
 
     /**
@@ -195,12 +218,22 @@ public class TranscodeJobSummary  implements java.io.Serializable {
     }
 
     /**
-     * set 模板ID列表
+     * set 模板ID列表。以转码模板列表方式提交的转码作业，包含此字段。
      *
      * @param templateIds
      */
     public TranscodeJobSummary templateIds(List<Long> templateIds) {
         this.templateIds = templateIds;
+        return this;
+    }
+
+    /**
+     * set 模板组ID。以转码模板组方式提交的转码作业，包含此字段。
+     *
+     * @param templateGroupId
+     */
+    public TranscodeJobSummary templateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
         return this;
     }
 
@@ -236,7 +269,7 @@ public class TranscodeJobSummary  implements java.io.Serializable {
 
 
     /**
-     * add item to 模板ID列表
+     * add item to 模板ID列表。以转码模板列表方式提交的转码作业，包含此字段。
      *
      * @param templateId
      */

@@ -40,6 +40,11 @@ public class SubmitTranscodeJobRequestObject  implements java.io.Serializable {
     private String videoId;
 
     /**
+     * 转码模板组ID。若此字段不为空，则以模板组方式提交作业，templateIds字段将被忽略。
+     */
+    private String templateGroupId;
+
+    /**
      * 转码模板ID列表
      */
     private List<Long> templateIds;
@@ -66,6 +71,24 @@ public class SubmitTranscodeJobRequestObject  implements java.io.Serializable {
      */
     public void setVideoId(String videoId) {
         this.videoId = videoId;
+    }
+
+    /**
+     * get 转码模板组ID。若此字段不为空，则以模板组方式提交作业，templateIds字段将被忽略。
+     *
+     * @return
+     */
+    public String getTemplateGroupId() {
+        return templateGroupId;
+    }
+
+    /**
+     * set 转码模板组ID。若此字段不为空，则以模板组方式提交作业，templateIds字段将被忽略。
+     *
+     * @param templateGroupId
+     */
+    public void setTemplateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
     }
 
     /**
@@ -112,6 +135,16 @@ public class SubmitTranscodeJobRequestObject  implements java.io.Serializable {
      */
     public SubmitTranscodeJobRequestObject videoId(String videoId) {
         this.videoId = videoId;
+        return this;
+    }
+
+    /**
+     * set 转码模板组ID。若此字段不为空，则以模板组方式提交作业，templateIds字段将被忽略。
+     *
+     * @param templateGroupId
+     */
+    public SubmitTranscodeJobRequestObject templateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
         return this;
     }
 

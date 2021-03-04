@@ -116,9 +116,14 @@ public class Disk  implements java.io.Serializable {
     private Charge charge;
 
     /**
-     * Tag信息
+     * null
      */
     private List<Tag> tags;
+
+    /**
+     * snapshotPolicies
+     */
+    private List<SnapshotPolicy> snapshotPolicies;
 
 
     /**
@@ -410,7 +415,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * get Tag信息
+     * get null
      *
      * @return
      */
@@ -419,12 +424,30 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set Tag信息
+     * set null
      *
      * @param tags
      */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
+    }
+
+    /**
+     * get snapshotPolicies
+     *
+     * @return
+     */
+    public List<SnapshotPolicy> getSnapshotPolicies() {
+        return snapshotPolicies;
+    }
+
+    /**
+     * set snapshotPolicies
+     *
+     * @param snapshotPolicies
+     */
+    public void setSnapshotPolicies(List<SnapshotPolicy> snapshotPolicies) {
+        this.snapshotPolicies = snapshotPolicies;
     }
 
 
@@ -589,12 +612,22 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * set Tag信息
+     * set null
      *
      * @param tags
      */
     public Disk tags(List<Tag> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set snapshotPolicies
+     *
+     * @param snapshotPolicies
+     */
+    public Disk snapshotPolicies(List<SnapshotPolicy> snapshotPolicies) {
+        this.snapshotPolicies = snapshotPolicies;
         return this;
     }
 
@@ -612,7 +645,7 @@ public class Disk  implements java.io.Serializable {
     }
 
     /**
-     * add item to Tag信息
+     * add item to null
      *
      * @param tag
      */
@@ -621,6 +654,18 @@ public class Disk  implements java.io.Serializable {
             this.tags = new ArrayList<>();
         }
         this.tags.add(tag);
+    }
+
+    /**
+     * add item to snapshotPolicies
+     *
+     * @param snapshotPolicie
+     */
+    public void addSnapshotPolicie(SnapshotPolicy snapshotPolicie) {
+        if (this.snapshotPolicies == null) {
+            this.snapshotPolicies = new ArrayList<>();
+        }
+        this.snapshotPolicies.add(snapshotPolicie);
     }
 
 }

@@ -45,9 +45,24 @@ public class SubmittedTranscodeTask  implements java.io.Serializable {
     private String videoId;
 
     /**
-     * 转码模板ID
+     * 打包类型。取值范围：None, HLSPackage
+     */
+    private String packageType;
+
+    /**
+     * 转码模板ID。非打包转码，包含此字段。
      */
     private Long templateId;
+
+    /**
+     * 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+     */
+    private String templateGroupId;
+
+    /**
+     * 模板ID列表。
+     */
+    private List<Long> templateIds;
 
     /**
      * 水印ID列表
@@ -92,7 +107,25 @@ public class SubmittedTranscodeTask  implements java.io.Serializable {
     }
 
     /**
-     * get 转码模板ID
+     * get 打包类型。取值范围：None, HLSPackage
+     *
+     * @return
+     */
+    public String getPackageType() {
+        return packageType;
+    }
+
+    /**
+     * set 打包类型。取值范围：None, HLSPackage
+     *
+     * @param packageType
+     */
+    public void setPackageType(String packageType) {
+        this.packageType = packageType;
+    }
+
+    /**
+     * get 转码模板ID。非打包转码，包含此字段。
      *
      * @return
      */
@@ -101,12 +134,48 @@ public class SubmittedTranscodeTask  implements java.io.Serializable {
     }
 
     /**
-     * set 转码模板ID
+     * set 转码模板ID。非打包转码，包含此字段。
      *
      * @param templateId
      */
     public void setTemplateId(Long templateId) {
         this.templateId = templateId;
+    }
+
+    /**
+     * get 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+     *
+     * @return
+     */
+    public String getTemplateGroupId() {
+        return templateGroupId;
+    }
+
+    /**
+     * set 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+     *
+     * @param templateGroupId
+     */
+    public void setTemplateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
+    }
+
+    /**
+     * get 模板ID列表。
+     *
+     * @return
+     */
+    public List<Long> getTemplateIds() {
+        return templateIds;
+    }
+
+    /**
+     * set 模板ID列表。
+     *
+     * @param templateIds
+     */
+    public void setTemplateIds(List<Long> templateIds) {
+        this.templateIds = templateIds;
     }
 
     /**
@@ -149,12 +218,42 @@ public class SubmittedTranscodeTask  implements java.io.Serializable {
     }
 
     /**
-     * set 转码模板ID
+     * set 打包类型。取值范围：None, HLSPackage
+     *
+     * @param packageType
+     */
+    public SubmittedTranscodeTask packageType(String packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+
+    /**
+     * set 转码模板ID。非打包转码，包含此字段。
      *
      * @param templateId
      */
     public SubmittedTranscodeTask templateId(Long templateId) {
         this.templateId = templateId;
+        return this;
+    }
+
+    /**
+     * set 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+     *
+     * @param templateGroupId
+     */
+    public SubmittedTranscodeTask templateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
+        return this;
+    }
+
+    /**
+     * set 模板ID列表。
+     *
+     * @param templateIds
+     */
+    public SubmittedTranscodeTask templateIds(List<Long> templateIds) {
+        this.templateIds = templateIds;
         return this;
     }
 
@@ -168,6 +267,18 @@ public class SubmittedTranscodeTask  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 模板ID列表。
+     *
+     * @param templateId
+     */
+    public void addTemplateId(Long templateId) {
+        if (this.templateIds == null) {
+            this.templateIds = new ArrayList<>();
+        }
+        this.templateIds.add(templateId);
+    }
 
     /**
      * add item to 水印ID列表

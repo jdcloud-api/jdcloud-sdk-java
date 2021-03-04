@@ -78,6 +78,11 @@ public class DiskSpec  implements java.io.Serializable {
     private String snapshotId;
 
     /**
+     * 策略ID
+     */
+    private String policyId;
+
+    /**
      * 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
      */
     private ChargeSpec charge;
@@ -220,6 +225,24 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 策略ID
+     *
+     * @return
+     */
+    public String getPolicyId() {
+        return policyId;
+    }
+
+    /**
+     * set 策略ID
+     *
+     * @param policyId
+     */
+    public void setPolicyId(String policyId) {
+        this.policyId = policyId;
+    }
+
+    /**
      * get 计费配置；如不指定，默认计费类型是后付费-按使用时常付费
      *
      * @return
@@ -341,6 +364,16 @@ public class DiskSpec  implements java.io.Serializable {
      */
     public DiskSpec snapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
+        return this;
+    }
+
+    /**
+     * set 策略ID
+     *
+     * @param policyId
+     */
+    public DiskSpec policyId(String policyId) {
+        this.policyId = policyId;
         return this;
     }
 

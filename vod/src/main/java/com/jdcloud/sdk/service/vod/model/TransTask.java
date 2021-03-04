@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 转码作业子任务
@@ -38,9 +40,24 @@ public class TransTask  implements java.io.Serializable {
     private Long taskId;
 
     /**
-     * 转码模板ID
+     * 打包类型。取值范围：None, HLSPackage
+     */
+    private String packageType;
+
+    /**
+     * 转码模板ID。非打包转码，包含此字段。
      */
     private Long templateId;
+
+    /**
+     * 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+     */
+    private String templateGroupId;
+
+    /**
+     * 模板ID列表。打包转码，包含一个模板组中的多个打包转码模板。
+     */
+    private List<Long> templateIds;
 
     /**
      * 封装格式
@@ -107,7 +124,25 @@ failed - 处理失败
     }
 
     /**
-     * get 转码模板ID
+     * get 打包类型。取值范围：None, HLSPackage
+     *
+     * @return
+     */
+    public String getPackageType() {
+        return packageType;
+    }
+
+    /**
+     * set 打包类型。取值范围：None, HLSPackage
+     *
+     * @param packageType
+     */
+    public void setPackageType(String packageType) {
+        this.packageType = packageType;
+    }
+
+    /**
+     * get 转码模板ID。非打包转码，包含此字段。
      *
      * @return
      */
@@ -116,12 +151,48 @@ failed - 处理失败
     }
 
     /**
-     * set 转码模板ID
+     * set 转码模板ID。非打包转码，包含此字段。
      *
      * @param templateId
      */
     public void setTemplateId(Long templateId) {
         this.templateId = templateId;
+    }
+
+    /**
+     * get 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+     *
+     * @return
+     */
+    public String getTemplateGroupId() {
+        return templateGroupId;
+    }
+
+    /**
+     * set 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+     *
+     * @param templateGroupId
+     */
+    public void setTemplateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
+    }
+
+    /**
+     * get 模板ID列表。打包转码，包含一个模板组中的多个打包转码模板。
+     *
+     * @return
+     */
+    public List<Long> getTemplateIds() {
+        return templateIds;
+    }
+
+    /**
+     * set 模板ID列表。打包转码，包含一个模板组中的多个打包转码模板。
+     *
+     * @param templateIds
+     */
+    public void setTemplateIds(List<Long> templateIds) {
+        this.templateIds = templateIds;
     }
 
     /**
@@ -290,12 +361,42 @@ failed - 处理失败
     }
 
     /**
-     * set 转码模板ID
+     * set 打包类型。取值范围：None, HLSPackage
+     *
+     * @param packageType
+     */
+    public TransTask packageType(String packageType) {
+        this.packageType = packageType;
+        return this;
+    }
+
+    /**
+     * set 转码模板ID。非打包转码，包含此字段。
      *
      * @param templateId
      */
     public TransTask templateId(Long templateId) {
         this.templateId = templateId;
+        return this;
+    }
+
+    /**
+     * set 转码模板组ID。若是以模板组方式提交作业，生成的转码任务中包含此字段。
+     *
+     * @param templateGroupId
+     */
+    public TransTask templateGroupId(String templateGroupId) {
+        this.templateGroupId = templateGroupId;
+        return this;
+    }
+
+    /**
+     * set 模板ID列表。打包转码，包含一个模板组中的多个打包转码模板。
+     *
+     * @param templateIds
+     */
+    public TransTask templateIds(List<Long> templateIds) {
+        this.templateIds = templateIds;
         return this;
     }
 
@@ -384,5 +485,17 @@ failed - 处理失败
         return this;
     }
 
+
+    /**
+     * add item to 模板ID列表。打包转码，包含一个模板组中的多个打包转码模板。
+     *
+     * @param templateId
+     */
+    public void addTemplateId(Long templateId) {
+        if (this.templateIds == null) {
+            this.templateIds = new ArrayList<>();
+        }
+        this.templateIds.add(templateId);
+    }
 
 }

@@ -40,9 +40,14 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
     private String name;
 
     /**
-     * 快照描述，name和description必须要指定一个
+     * 快照描述
      */
     private String description;
+
+    /**
+     * 快照过期时间，三者至少指定一个
+     */
+    private String expireTime;
 
     /**
      * 地域ID
@@ -78,7 +83,7 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 快照描述，name和description必须要指定一个
+     * get 快照描述
      *
      * @return
      */
@@ -87,12 +92,30 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 快照描述，name和description必须要指定一个
+     * set 快照描述
      *
      * @param description
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 快照过期时间，三者至少指定一个
+     *
+     * @return
+     */
+    public String getExpireTime() {
+        return expireTime;
+    }
+
+    /**
+     * set 快照过期时间，三者至少指定一个
+     *
+     * @param expireTime
+     */
+    public void setExpireTime(String expireTime) {
+        this.expireTime = expireTime;
     }
 
     /**
@@ -143,12 +166,22 @@ public class ModifySnapshotAttributeRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 快照描述，name和description必须要指定一个
+     * set 快照描述
      *
      * @param description
      */
     public ModifySnapshotAttributeRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 快照过期时间，三者至少指定一个
+     *
+     * @param expireTime
+     */
+    public ModifySnapshotAttributeRequest expireTime(String expireTime) {
+        this.expireTime = expireTime;
         return this;
     }
 
