@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.disk.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.disk.model.PolicyDiskRelationOpResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -44,6 +45,11 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
+     * policyRelations
+     */
+    private List<PolicyDiskRelationOpResult> policyRelations;
+
+    /**
      * diskIds
      */
     private List<String> diskIds;
@@ -53,6 +59,24 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
      */
     private String tagmsg;
 
+
+    /**
+     * get policyRelations
+     *
+     * @return
+     */
+    public List<PolicyDiskRelationOpResult> getPolicyRelations() {
+        return policyRelations;
+    }
+
+    /**
+     * set policyRelations
+     *
+     * @param policyRelations
+     */
+    public void setPolicyRelations(List<PolicyDiskRelationOpResult> policyRelations) {
+        this.policyRelations = policyRelations;
+    }
 
     /**
      * get diskIds
@@ -92,6 +116,16 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
+     * set policyRelations
+     *
+     * @param policyRelations
+     */
+    public CreateDisksResult policyRelations(List<PolicyDiskRelationOpResult> policyRelations) {
+        this.policyRelations = policyRelations;
+        return this;
+    }
+
+    /**
      * set diskIds
      *
      * @param diskIds
@@ -111,6 +145,18 @@ public class CreateDisksResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
+    /**
+     * add item to policyRelations
+     *
+     * @param policyRelation
+     */
+    public void addPolicyRelation(PolicyDiskRelationOpResult policyRelation) {
+        if (this.policyRelations == null) {
+            this.policyRelations = new ArrayList<>();
+        }
+        this.policyRelations.add(policyRelation);
+    }
 
     /**
      * add item to diskIds

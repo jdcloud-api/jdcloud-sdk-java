@@ -77,6 +77,11 @@ public class CreateLiveToVodTaskRequest extends JdcloudRequest implements java.i
     private List<String> tags;
 
     /**
+     * 转码模板组ID。若此字段不为空，则将以模板组方式提交转码作业，transcodeTemplateIds字段将被忽略。
+     */
+    private String transcodeTemplateGroupId;
+
+    /**
      * 转码模板ID集合
      */
     private List<Long> transcodeTemplateIds;
@@ -267,6 +272,24 @@ public class CreateLiveToVodTaskRequest extends JdcloudRequest implements java.i
      */
     public void setTags(List<String> tags) {
         this.tags = tags;
+    }
+
+    /**
+     * get 转码模板组ID。若此字段不为空，则将以模板组方式提交转码作业，transcodeTemplateIds字段将被忽略。
+     *
+     * @return
+     */
+    public String getTranscodeTemplateGroupId() {
+        return transcodeTemplateGroupId;
+    }
+
+    /**
+     * set 转码模板组ID。若此字段不为空，则将以模板组方式提交转码作业，transcodeTemplateIds字段将被忽略。
+     *
+     * @param transcodeTemplateGroupId
+     */
+    public void setTranscodeTemplateGroupId(String transcodeTemplateGroupId) {
+        this.transcodeTemplateGroupId = transcodeTemplateGroupId;
     }
 
     /**
@@ -521,6 +544,16 @@ public class CreateLiveToVodTaskRequest extends JdcloudRequest implements java.i
      */
     public CreateLiveToVodTaskRequest tags(List<String> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 转码模板组ID。若此字段不为空，则将以模板组方式提交转码作业，transcodeTemplateIds字段将被忽略。
+     *
+     * @param transcodeTemplateGroupId
+     */
+    public CreateLiveToVodTaskRequest transcodeTemplateGroupId(String transcodeTemplateGroupId) {
+        this.transcodeTemplateGroupId = transcodeTemplateGroupId;
         return this;
     }
 

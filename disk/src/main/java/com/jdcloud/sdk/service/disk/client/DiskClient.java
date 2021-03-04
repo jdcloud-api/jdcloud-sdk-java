@@ -31,21 +31,45 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapPolicesRequest;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapPolicesResponse;
+import com.jdcloud.sdk.service.disk.client.DescribeSnapPolicesExecutor;
 import com.jdcloud.sdk.service.disk.model.ModifySnapshotAttributeRequest;
 import com.jdcloud.sdk.service.disk.model.ModifySnapshotAttributeResponse;
 import com.jdcloud.sdk.service.disk.client.ModifySnapshotAttributeExecutor;
 import com.jdcloud.sdk.service.disk.model.DeleteSnapshotsRequest;
 import com.jdcloud.sdk.service.disk.model.DeleteSnapshotsResponse;
 import com.jdcloud.sdk.service.disk.client.DeleteSnapshotsExecutor;
+import com.jdcloud.sdk.service.disk.model.UpdateSnapshotPolicyRequest;
+import com.jdcloud.sdk.service.disk.model.UpdateSnapshotPolicyResponse;
+import com.jdcloud.sdk.service.disk.client.UpdateSnapshotPolicyExecutor;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapshotChainRequest;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapshotChainResponse;
+import com.jdcloud.sdk.service.disk.client.DescribeSnapshotChainExecutor;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapshotPolicyDiskRelationsRequest;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapshotPolicyDiskRelationsResponse;
+import com.jdcloud.sdk.service.disk.client.DescribeSnapshotPolicyDiskRelationsExecutor;
+import com.jdcloud.sdk.service.disk.model.DeleteSnapshotPolicyRequest;
+import com.jdcloud.sdk.service.disk.model.DeleteSnapshotPolicyResponse;
+import com.jdcloud.sdk.service.disk.client.DeleteSnapshotPolicyExecutor;
 import com.jdcloud.sdk.service.disk.model.DescribeDiskRequest;
 import com.jdcloud.sdk.service.disk.model.DescribeDiskResponse;
 import com.jdcloud.sdk.service.disk.client.DescribeDiskExecutor;
 import com.jdcloud.sdk.service.disk.model.ExtendDiskRequest;
 import com.jdcloud.sdk.service.disk.model.ExtendDiskResponse;
 import com.jdcloud.sdk.service.disk.client.ExtendDiskExecutor;
+import com.jdcloud.sdk.service.disk.model.DescribeVolumesIgnoreServiceCodeRequest;
+import com.jdcloud.sdk.service.disk.model.DescribeVolumesIgnoreServiceCodeResponse;
+import com.jdcloud.sdk.service.disk.client.DescribeVolumesIgnoreServiceCodeExecutor;
 import com.jdcloud.sdk.service.disk.model.ModifyDiskAttributeRequest;
 import com.jdcloud.sdk.service.disk.model.ModifyDiskAttributeResponse;
 import com.jdcloud.sdk.service.disk.client.ModifyDiskAttributeExecutor;
+import com.jdcloud.sdk.service.disk.model.ApplySnapshotPoliciesRequest;
+import com.jdcloud.sdk.service.disk.model.ApplySnapshotPoliciesResponse;
+import com.jdcloud.sdk.service.disk.client.ApplySnapshotPoliciesExecutor;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapshotsCapacityRequest;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapshotsCapacityResponse;
+import com.jdcloud.sdk.service.disk.client.DescribeSnapshotsCapacityExecutor;
 import com.jdcloud.sdk.service.disk.model.CreateDisksRequest;
 import com.jdcloud.sdk.service.disk.model.CreateDisksResponse;
 import com.jdcloud.sdk.service.disk.client.CreateDisksExecutor;
@@ -58,6 +82,12 @@ import com.jdcloud.sdk.service.disk.client.DescribeSnapshotsExecutor;
 import com.jdcloud.sdk.service.disk.model.RestoreDiskRequest;
 import com.jdcloud.sdk.service.disk.model.RestoreDiskResponse;
 import com.jdcloud.sdk.service.disk.client.RestoreDiskExecutor;
+import com.jdcloud.sdk.service.disk.model.CreateSnapshotPolicyRequest;
+import com.jdcloud.sdk.service.disk.model.CreateSnapshotPolicyResponse;
+import com.jdcloud.sdk.service.disk.client.CreateSnapshotPolicyExecutor;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapshotPoliciesRequest;
+import com.jdcloud.sdk.service.disk.model.DescribeSnapshotPoliciesResponse;
+import com.jdcloud.sdk.service.disk.client.DescribeSnapshotPoliciesExecutor;
 import com.jdcloud.sdk.service.disk.model.DescribeDisksRequest;
 import com.jdcloud.sdk.service.disk.model.DescribeDisksResponse;
 import com.jdcloud.sdk.service.disk.client.DescribeDisksExecutor;
@@ -70,6 +100,9 @@ import com.jdcloud.sdk.service.disk.client.CreateSnapshotExecutor;
 import com.jdcloud.sdk.service.disk.model.DescribeSnapshotRequest;
 import com.jdcloud.sdk.service.disk.model.DescribeSnapshotResponse;
 import com.jdcloud.sdk.service.disk.client.DescribeSnapshotExecutor;
+import com.jdcloud.sdk.service.disk.model.DescribeQuotaRequest;
+import com.jdcloud.sdk.service.disk.model.DescribeQuotaResponse;
+import com.jdcloud.sdk.service.disk.client.DescribeQuotaExecutor;
 
 /**
  * diskClient
@@ -78,7 +111,7 @@ public class DiskClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "disk.jdcloud-api.com";
     public final static String ServiceName = "disk";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -121,6 +154,17 @@ public class DiskClient extends JdcloudClient {
 
 
     /**
+     * 查询快照策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSnapPolicesResponse describeSnapPolices(DescribeSnapPolicesRequest request) throws JdcloudSdkException {
+        return new DescribeSnapPolicesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改快照的名字或描述信息
      *
      * @param request
@@ -143,6 +187,50 @@ public class DiskClient extends JdcloudClient {
      */
     public DeleteSnapshotsResponse deleteSnapshots(DeleteSnapshotsRequest request) throws JdcloudSdkException {
         return new DeleteSnapshotsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改快照策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateSnapshotPolicyResponse updateSnapshotPolicy(UpdateSnapshotPolicyRequest request) throws JdcloudSdkException {
+        return new UpdateSnapshotPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询快照链的快照个数和快照总容量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSnapshotChainResponse describeSnapshotChain(DescribeSnapshotChainRequest request) throws JdcloudSdkException {
+        return new DescribeSnapshotChainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询快照策略与磁盘绑定关系
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSnapshotPolicyDiskRelationsResponse describeSnapshotPolicyDiskRelations(DescribeSnapshotPolicyDiskRelationsRequest request) throws JdcloudSdkException {
+        return new DescribeSnapshotPolicyDiskRelationsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除快照策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteSnapshotPolicyResponse deleteSnapshotPolicy(DeleteSnapshotPolicyRequest request) throws JdcloudSdkException {
+        return new DeleteSnapshotPolicyExecutor().client(this).execute(request);
     }
 
     /**
@@ -170,6 +258,19 @@ public class DiskClient extends JdcloudClient {
     }
 
     /**
+     * -   查询您已经创建的云硬盘。
+-   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVolumesIgnoreServiceCodeResponse describeVolumesIgnoreServiceCode(DescribeVolumesIgnoreServiceCodeRequest request) throws JdcloudSdkException {
+        return new DescribeVolumesIgnoreServiceCodeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改云硬盘的名字或描述信息，名字或描述信息至少要指定一个。
      *
      * @param request
@@ -178,6 +279,28 @@ public class DiskClient extends JdcloudClient {
      */
     public ModifyDiskAttributeResponse modifyDiskAttribute(ModifyDiskAttributeRequest request) throws JdcloudSdkException {
         return new ModifyDiskAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 绑定/解绑快照策略与磁盘关系
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ApplySnapshotPoliciesResponse applySnapshotPolicies(ApplySnapshotPoliciesRequest request) throws JdcloudSdkException {
+        return new ApplySnapshotPoliciesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询快照容量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSnapshotsCapacityResponse describeSnapshotsCapacity(DescribeSnapshotsCapacityRequest request) throws JdcloudSdkException {
+        return new DescribeSnapshotsCapacityExecutor().client(this).execute(request);
     }
 
     /**
@@ -239,6 +362,28 @@ public class DiskClient extends JdcloudClient {
     }
 
     /**
+     * 创建快照策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSnapshotPolicyResponse createSnapshotPolicy(CreateSnapshotPolicyRequest request) throws JdcloudSdkException {
+        return new CreateSnapshotPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询快照策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSnapshotPoliciesResponse describeSnapshotPolicies(DescribeSnapshotPoliciesRequest request) throws JdcloudSdkException {
+        return new DescribeSnapshotPoliciesExecutor().client(this).execute(request);
+    }
+
+    /**
      * -   查询您已经创建的云硬盘。
 -   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
 
@@ -291,6 +436,17 @@ public class DiskClient extends JdcloudClient {
      */
     public DescribeSnapshotResponse describeSnapshot(DescribeSnapshotRequest request) throws JdcloudSdkException {
         return new DescribeSnapshotExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询云硬盘和快照资源的配额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQuotaResponse describeQuota(DescribeQuotaRequest request) throws JdcloudSdkException {
+        return new DescribeQuotaExecutor().client(this).execute(request);
     }
 
 

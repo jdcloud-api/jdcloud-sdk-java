@@ -82,6 +82,11 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
     private List<String> tags;
 
     /**
+     * 转码模板组ID
+     */
+    private String transcodeTemplateGroupId;
+
+    /**
      * 转码模板ID集合
      */
     private List<Long> transcodeTemplateIds;
@@ -246,6 +251,24 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
     }
 
     /**
+     * get 转码模板组ID
+     *
+     * @return
+     */
+    public String getTranscodeTemplateGroupId() {
+        return transcodeTemplateGroupId;
+    }
+
+    /**
+     * set 转码模板组ID
+     *
+     * @param transcodeTemplateGroupId
+     */
+    public void setTranscodeTemplateGroupId(String transcodeTemplateGroupId) {
+        this.transcodeTemplateGroupId = transcodeTemplateGroupId;
+    }
+
+    /**
      * get 转码模板ID集合
      *
      * @return
@@ -379,6 +402,16 @@ public class CreateVideoUploadTaskRequestObject  implements java.io.Serializable
      */
     public CreateVideoUploadTaskRequestObject tags(List<String> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 转码模板组ID
+     *
+     * @param transcodeTemplateGroupId
+     */
+    public CreateVideoUploadTaskRequestObject transcodeTemplateGroupId(String transcodeTemplateGroupId) {
+        this.transcodeTemplateGroupId = transcodeTemplateGroupId;
         return this;
     }
 
