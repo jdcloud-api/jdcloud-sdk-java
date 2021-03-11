@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>yunding</artifactId>
-  <version>2.0.3</version>
+  <version>2.0.4</version>
   <packaging>jar</packaging>
   <name>yunding</name>
   <url>http://www.jdcloud.com</url>
@@ -68,6 +68,11 @@
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
+      <artifactId>disk</artifactId>
+      <version>0.12.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jdcloud.sdk</groupId>
       <artifactId>charge</artifactId>
       <version>0.4.0</version>
     </dependency>
@@ -80,11 +85,6 @@
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>detection</artifactId>
       <version>2.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.jdcloud.sdk</groupId>
-      <artifactId>disk</artifactId>
-      <version>0.12.5</version>
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
