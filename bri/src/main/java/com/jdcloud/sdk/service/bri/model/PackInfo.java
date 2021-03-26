@@ -67,6 +67,21 @@ public class PackInfo  implements java.io.Serializable {
      */
     private String packId;
 
+    /**
+     * 是否需要爬虫ip
+     */
+    private Boolean needSpiderIp;
+
+    /**
+     * QPS上限
+     */
+    private Integer qpsLimit;
+
+    /**
+     * 注册，登录，营销场景的版本
+     */
+    private Integer version;
+
 
     /**
      * get 资源包类型
@@ -194,6 +209,60 @@ public class PackInfo  implements java.io.Serializable {
         this.packId = packId;
     }
 
+    /**
+     * get 是否需要爬虫ip
+     *
+     * @return
+     */
+    public Boolean getNeedSpiderIp() {
+        return needSpiderIp;
+    }
+
+    /**
+     * set 是否需要爬虫ip
+     *
+     * @param needSpiderIp
+     */
+    public void setNeedSpiderIp(Boolean needSpiderIp) {
+        this.needSpiderIp = needSpiderIp;
+    }
+
+    /**
+     * get QPS上限
+     *
+     * @return
+     */
+    public Integer getQpsLimit() {
+        return qpsLimit;
+    }
+
+    /**
+     * set QPS上限
+     *
+     * @param qpsLimit
+     */
+    public void setQpsLimit(Integer qpsLimit) {
+        this.qpsLimit = qpsLimit;
+    }
+
+    /**
+     * get 注册，登录，营销场景的版本
+     *
+     * @return
+     */
+    public Integer getVersion() {
+        return version;
+    }
+
+    /**
+     * set 注册，登录，营销场景的版本
+     *
+     * @param version
+     */
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
 
     /**
      * set 资源包类型
@@ -262,6 +331,36 @@ public class PackInfo  implements java.io.Serializable {
      */
     public PackInfo packId(String packId) {
         this.packId = packId;
+        return this;
+    }
+
+    /**
+     * set 是否需要爬虫ip
+     *
+     * @param needSpiderIp
+     */
+    public PackInfo needSpiderIp(Boolean needSpiderIp) {
+        this.needSpiderIp = needSpiderIp;
+        return this;
+    }
+
+    /**
+     * set QPS上限
+     *
+     * @param qpsLimit
+     */
+    public PackInfo qpsLimit(Integer qpsLimit) {
+        this.qpsLimit = qpsLimit;
+        return this;
+    }
+
+    /**
+     * set 注册，登录，营销场景的版本
+     *
+     * @param version
+     */
+    public PackInfo version(Integer version) {
+        this.version = version;
         return this;
     }
 

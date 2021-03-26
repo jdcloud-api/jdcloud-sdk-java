@@ -37,21 +37,18 @@ import com.jdcloud.sdk.service.yunding.client.DescribeRdsInstanceExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeYdRdsInstancesRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeYdRdsInstancesResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeYdRdsInstancesExecutor;
-import com.jdcloud.sdk.service.yunding.model.AssignSecondaryIpsRequest;
-import com.jdcloud.sdk.service.yunding.model.AssignSecondaryIpsResponse;
-import com.jdcloud.sdk.service.yunding.client.AssignSecondaryIpsExecutor;
-import com.jdcloud.sdk.service.yunding.model.ModifyRdsWhiteListRequest;
-import com.jdcloud.sdk.service.yunding.model.ModifyRdsWhiteListResponse;
-import com.jdcloud.sdk.service.yunding.client.ModifyRdsWhiteListExecutor;
-import com.jdcloud.sdk.service.yunding.model.CreateRdsDatabaseRequest;
-import com.jdcloud.sdk.service.yunding.model.CreateRdsDatabaseResponse;
-import com.jdcloud.sdk.service.yunding.client.CreateRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.yunding.model.DeleteSubnetRequest;
+import com.jdcloud.sdk.service.yunding.model.DeleteSubnetResponse;
+import com.jdcloud.sdk.service.yunding.client.DeleteSubnetExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeSubnetsRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeSubnetsResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeSubnetsExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsAccountsRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsAccountsResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsAccountsExecutor;
-import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeRequest;
-import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeResponse;
-import com.jdcloud.sdk.service.yunding.client.GrantRdsPrivilegeExecutor;
+import com.jdcloud.sdk.service.yunding.model.CreateSubnetRequest;
+import com.jdcloud.sdk.service.yunding.model.CreateSubnetResponse;
+import com.jdcloud.sdk.service.yunding.client.CreateSubnetExecutor;
 import com.jdcloud.sdk.service.yunding.model.PutProductMetricDataRequest;
 import com.jdcloud.sdk.service.yunding.model.PutProductMetricDataResponse;
 import com.jdcloud.sdk.service.yunding.client.PutProductMetricDataExecutor;
@@ -67,12 +64,42 @@ import com.jdcloud.sdk.service.yunding.client.RevokePrivilegeExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsDatabasesRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsDatabasesResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsDatabasesExecutor;
-import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesRequest;
-import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesResponse;
-import com.jdcloud.sdk.service.yunding.client.DescribeRdsInstancesExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.yunding.model.PutRequest;
+import com.jdcloud.sdk.service.yunding.model.PutResponse;
+import com.jdcloud.sdk.service.yunding.client.PutExecutor;
+import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsRequest;
+import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsResponse;
+import com.jdcloud.sdk.service.yunding.client.UnassignSecondaryIpsExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeNetworkInterfacesRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeNetworkInterfacesResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeNetworkInterfacesExecutor;
+import com.jdcloud.sdk.service.yunding.model.AssignSecondaryIpsRequest;
+import com.jdcloud.sdk.service.yunding.model.AssignSecondaryIpsResponse;
+import com.jdcloud.sdk.service.yunding.client.AssignSecondaryIpsExecutor;
+import com.jdcloud.sdk.service.yunding.model.ModifyRdsWhiteListRequest;
+import com.jdcloud.sdk.service.yunding.model.ModifyRdsWhiteListResponse;
+import com.jdcloud.sdk.service.yunding.client.ModifyRdsWhiteListExecutor;
+import com.jdcloud.sdk.service.yunding.model.CreateRdsDatabaseRequest;
+import com.jdcloud.sdk.service.yunding.model.CreateRdsDatabaseResponse;
+import com.jdcloud.sdk.service.yunding.client.CreateRdsDatabaseExecutor;
+import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeRequest;
+import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeResponse;
+import com.jdcloud.sdk.service.yunding.client.GrantRdsPrivilegeExecutor;
+import com.jdcloud.sdk.service.yunding.model.CreateNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.yunding.model.CreateNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.yunding.client.CreateNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeSubnetRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeSubnetResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeSubnetExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeRdsInstancesExecutor;
+import com.jdcloud.sdk.service.yunding.model.DeleteNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.yunding.model.DeleteNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.yunding.client.DeleteNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeInstanceInfoRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeInstanceInfoResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeInstanceInfoExecutor;
@@ -82,12 +109,6 @@ import com.jdcloud.sdk.service.yunding.client.CreateRdsAccountExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsWhiteListRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsWhiteListResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsWhiteListExecutor;
-import com.jdcloud.sdk.service.yunding.model.PutRequest;
-import com.jdcloud.sdk.service.yunding.model.PutResponse;
-import com.jdcloud.sdk.service.yunding.client.PutExecutor;
-import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsRequest;
-import com.jdcloud.sdk.service.yunding.model.UnassignSecondaryIpsResponse;
-import com.jdcloud.sdk.service.yunding.client.UnassignSecondaryIpsExecutor;
 import com.jdcloud.sdk.service.yunding.model.DeleteRdsAccountRequest;
 import com.jdcloud.sdk.service.yunding.model.DeleteRdsAccountResponse;
 import com.jdcloud.sdk.service.yunding.client.DeleteRdsAccountExecutor;
@@ -165,36 +186,25 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
-     * 给网卡分配secondaryIp接口
+     * 删除子网
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public AssignSecondaryIpsResponse assignSecondaryIps(AssignSecondaryIpsRequest request) throws JdcloudSdkException {
-        return new AssignSecondaryIpsExecutor().client(this).execute(request);
+    public DeleteSubnetResponse deleteSubnet(DeleteSubnetRequest request) throws JdcloudSdkException {
+        return new DeleteSubnetExecutor().client(this).execute(request);
     }
 
     /**
-     * 修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+     * 查询子网列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ModifyRdsWhiteListResponse modifyRdsWhiteList(ModifyRdsWhiteListRequest request) throws JdcloudSdkException {
-        return new ModifyRdsWhiteListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateRdsDatabaseResponse createRdsDatabase(CreateRdsDatabaseRequest request) throws JdcloudSdkException {
-        return new CreateRdsDatabaseExecutor().client(this).execute(request);
+    public DescribeSubnetsResponse describeSubnets(DescribeSubnetsRequest request) throws JdcloudSdkException {
+        return new DescribeSubnetsExecutor().client(this).execute(request);
     }
 
     /**
@@ -209,14 +219,14 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
-     * 授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+     * 创建子网
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public GrantRdsPrivilegeResponse grantRdsPrivilege(GrantRdsPrivilegeRequest request) throws JdcloudSdkException {
-        return new GrantRdsPrivilegeExecutor().client(this).execute(request);
+    public CreateSubnetResponse createSubnet(CreateSubnetRequest request) throws JdcloudSdkException {
+        return new CreateSubnetExecutor().client(this).execute(request);
     }
 
     /**
@@ -275,6 +285,116 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
+     * 查询弹性网卡信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNetworkInterfaceResponse describeNetworkInterface(DescribeNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new DescribeNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 监控数据上报。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PutResponse put(PutRequest request) throws JdcloudSdkException {
+        return new PutExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给网卡删除secondaryIp接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UnassignSecondaryIpsResponse unassignSecondaryIps(UnassignSecondaryIpsRequest request) throws JdcloudSdkException {
+        return new UnassignSecondaryIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询弹性网卡列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNetworkInterfacesResponse describeNetworkInterfaces(DescribeNetworkInterfacesRequest request) throws JdcloudSdkException {
+        return new DescribeNetworkInterfacesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 给网卡分配secondaryIp接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AssignSecondaryIpsResponse assignSecondaryIps(AssignSecondaryIpsRequest request) throws JdcloudSdkException {
+        return new AssignSecondaryIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改允许访问实例的IP白名单。白名单是允许访问当前实例的IP/IP段列表，缺省情况下，白名单对本VPC开放。如果用户开启了外网访问的功能，还需要对外网的IP配置白名单。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyRdsWhiteListResponse modifyRdsWhiteList(ModifyRdsWhiteListRequest request) throws JdcloudSdkException {
+        return new ModifyRdsWhiteListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建一个数据库。 为了实例的管理和数据恢复，RDS对用户权限进行了限制，用户仅能通过控制台或本接口创建数据库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRdsDatabaseResponse createRdsDatabase(CreateRdsDatabaseRequest request) throws JdcloudSdkException {
+        return new CreateRdsDatabaseExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 授予账号的数据库访问权限，即该账号对数据库拥有什么权限。一个账号可以对多个数据库具有访问权限。&lt;br&gt;为便于管理，RDS对权限进行了归类，目前提供以下两种权限&lt;br&gt;- ro：只读权限，用户只能读取数据库中的数据，不能进行创建、插入、删除、更改等操作。&lt;br&gt;- rw：读写权限，用户可以对数据库进行增删改查等操作
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GrantRdsPrivilegeResponse grantRdsPrivilege(GrantRdsPrivilegeRequest request) throws JdcloudSdkException {
+        return new GrantRdsPrivilegeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建网卡接口，只能创建辅助网卡
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateNetworkInterfaceResponse createNetworkInterface(CreateNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new CreateNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询子网信息详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSubnetResponse describeSubnet(DescribeSubnetRequest request) throws JdcloudSdkException {
+        return new DescribeSubnetExecutor().client(this).execute(request);
+    }
+
+    /**
      * 批量查询云数据库实例列表信息&lt;br&gt;此接口支持分页查询，默认每页20条。
      *
      * @param request
@@ -286,14 +406,14 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
-     * 查询弹性网卡信息详情
+     * 删除弹性网卡接口
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeNetworkInterfaceResponse describeNetworkInterface(DescribeNetworkInterfaceRequest request) throws JdcloudSdkException {
-        return new DescribeNetworkInterfaceExecutor().client(this).execute(request);
+    public DeleteNetworkInterfaceResponse deleteNetworkInterface(DeleteNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new DeleteNetworkInterfaceExecutor().client(this).execute(request);
     }
 
     /**
@@ -327,28 +447,6 @@ public class YundingClient extends JdcloudClient {
      */
     public DescribeRdsWhiteListResponse describeRdsWhiteList(DescribeRdsWhiteListRequest request) throws JdcloudSdkException {
         return new DescribeRdsWhiteListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 监控数据上报。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PutResponse put(PutRequest request) throws JdcloudSdkException {
-        return new PutExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 给网卡删除secondaryIp接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UnassignSecondaryIpsResponse unassignSecondaryIps(UnassignSecondaryIpsRequest request) throws JdcloudSdkException {
-        return new UnassignSecondaryIpsExecutor().client(this).execute(request);
     }
 
     /**
