@@ -46,14 +46,14 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      * Required:true
      */
     @Required
     private Integer start;
 
     /**
-     * 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      * Required:true
      */
     @Required
@@ -107,7 +107,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     }
 
     /**
-     * get 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * get 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     }
 
     /**
-     * set 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param start
      */
@@ -125,7 +125,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     }
 
     /**
-     * get 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * get 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     }
 
     /**
-     * set 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param end
      */
@@ -200,7 +200,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     }
 
     /**
-     * set 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param start
      */
@@ -210,7 +210,7 @@ public class ListEsLogDownloadReq  implements java.io.Serializable {
     }
 
     /**
-     * set 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param end
      */

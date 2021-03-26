@@ -157,6 +157,11 @@ public class DomainConfig  implements java.io.Serializable {
      */
     private EnableConf botConf;
 
+    /**
+     * risk配置
+     */
+    private RiskConf riskConf;
+
 
     /**
      * get 域名
@@ -608,6 +613,24 @@ public class DomainConfig  implements java.io.Serializable {
         this.botConf = botConf;
     }
 
+    /**
+     * get risk配置
+     *
+     * @return
+     */
+    public RiskConf getRiskConf() {
+        return riskConf;
+    }
+
+    /**
+     * set risk配置
+     *
+     * @param riskConf
+     */
+    public void setRiskConf(RiskConf riskConf) {
+        this.riskConf = riskConf;
+    }
+
 
     /**
      * set 域名
@@ -856,6 +879,16 @@ public class DomainConfig  implements java.io.Serializable {
      */
     public DomainConfig botConf(EnableConf botConf) {
         this.botConf = botConf;
+        return this;
+    }
+
+    /**
+     * set risk配置
+     *
+     * @param riskConf
+     */
+    public DomainConfig riskConf(RiskConf riskConf) {
+        this.riskConf = riskConf;
         return this;
     }
 

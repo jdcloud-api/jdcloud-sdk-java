@@ -55,6 +55,11 @@ public class SetIpReq  implements java.io.Serializable {
     private Integer iswhite;
 
     /**
+     * 0默认关闭，1默认打开
+     */
+    private Integer isEnable;
+
+    /**
      * ip配置
      * Required:true
      */
@@ -117,6 +122,24 @@ public class SetIpReq  implements java.io.Serializable {
     }
 
     /**
+     * get 0默认关闭，1默认打开
+     *
+     * @return
+     */
+    public Integer getIsEnable() {
+        return isEnable;
+    }
+
+    /**
+     * set 0默认关闭，1默认打开
+     *
+     * @param isEnable
+     */
+    public void setIsEnable(Integer isEnable) {
+        this.isEnable = isEnable;
+    }
+
+    /**
      * get ip配置
      *
      * @return
@@ -162,6 +185,16 @@ public class SetIpReq  implements java.io.Serializable {
      */
     public SetIpReq iswhite(Integer iswhite) {
         this.iswhite = iswhite;
+        return this;
+    }
+
+    /**
+     * set 0默认关闭，1默认打开
+     *
+     * @param isEnable
+     */
+    public SetIpReq isEnable(Integer isEnable) {
+        this.isEnable = isEnable;
         return this;
     }
 

@@ -43,6 +43,11 @@ public class AntiEvent  implements java.io.Serializable {
     private String csaInfo;
 
     /**
+     * 风险等级
+     */
+    private String riskLevel;
+
+    /**
      * 来源地区
      */
     private String area;
@@ -97,6 +102,16 @@ public class AntiEvent  implements java.io.Serializable {
      */
     private String wafInstanceId;
 
+    /**
+     * 状态码
+     */
+    private String antiStatus;
+
+    /**
+     * 状态标识
+     */
+    private String upstreamErr;
+
 
     /**
      * get 源ip
@@ -132,6 +147,24 @@ public class AntiEvent  implements java.io.Serializable {
      */
     public void setCsaInfo(String csaInfo) {
         this.csaInfo = csaInfo;
+    }
+
+    /**
+     * get 风险等级
+     *
+     * @return
+     */
+    public String getRiskLevel() {
+        return riskLevel;
+    }
+
+    /**
+     * set 风险等级
+     *
+     * @param riskLevel
+     */
+    public void setRiskLevel(String riskLevel) {
+        this.riskLevel = riskLevel;
     }
 
     /**
@@ -332,6 +365,42 @@ public class AntiEvent  implements java.io.Serializable {
         this.wafInstanceId = wafInstanceId;
     }
 
+    /**
+     * get 状态码
+     *
+     * @return
+     */
+    public String getAntiStatus() {
+        return antiStatus;
+    }
+
+    /**
+     * set 状态码
+     *
+     * @param antiStatus
+     */
+    public void setAntiStatus(String antiStatus) {
+        this.antiStatus = antiStatus;
+    }
+
+    /**
+     * get 状态标识
+     *
+     * @return
+     */
+    public String getUpstreamErr() {
+        return upstreamErr;
+    }
+
+    /**
+     * set 状态标识
+     *
+     * @param upstreamErr
+     */
+    public void setUpstreamErr(String upstreamErr) {
+        this.upstreamErr = upstreamErr;
+    }
+
 
     /**
      * set 源ip
@@ -350,6 +419,16 @@ public class AntiEvent  implements java.io.Serializable {
      */
     public AntiEvent csaInfo(String csaInfo) {
         this.csaInfo = csaInfo;
+        return this;
+    }
+
+    /**
+     * set 风险等级
+     *
+     * @param riskLevel
+     */
+    public AntiEvent riskLevel(String riskLevel) {
+        this.riskLevel = riskLevel;
         return this;
     }
 
@@ -460,6 +539,26 @@ public class AntiEvent  implements java.io.Serializable {
      */
     public AntiEvent wafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
+        return this;
+    }
+
+    /**
+     * set 状态码
+     *
+     * @param antiStatus
+     */
+    public AntiEvent antiStatus(String antiStatus) {
+        this.antiStatus = antiStatus;
+        return this;
+    }
+
+    /**
+     * set 状态标识
+     *
+     * @param upstreamErr
+     */
+    public AntiEvent upstreamErr(String upstreamErr) {
+        this.upstreamErr = upstreamErr;
         return this;
     }
 

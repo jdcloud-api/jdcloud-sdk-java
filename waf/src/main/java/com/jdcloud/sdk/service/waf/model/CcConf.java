@@ -57,6 +57,11 @@ public class CcConf  implements java.io.Serializable {
      */
     private Integer rulesCount;
 
+    /**
+     * 动作配置，默认为告警，支持1，2，3和5四种类型动作
+     */
+    private DenyActionCfg action;
+
 
     /**
      * get 是否使能 0表示否
@@ -148,6 +153,24 @@ public class CcConf  implements java.io.Serializable {
         this.rulesCount = rulesCount;
     }
 
+    /**
+     * get 动作配置，默认为告警，支持1，2，3和5四种类型动作
+     *
+     * @return
+     */
+    public DenyActionCfg getAction() {
+        return action;
+    }
+
+    /**
+     * set 动作配置，默认为告警，支持1，2，3和5四种类型动作
+     *
+     * @param action
+     */
+    public void setAction(DenyActionCfg action) {
+        this.action = action;
+    }
+
 
     /**
      * set 是否使能 0表示否
@@ -196,6 +219,16 @@ public class CcConf  implements java.io.Serializable {
      */
     public CcConf rulesCount(Integer rulesCount) {
         this.rulesCount = rulesCount;
+        return this;
+    }
+
+    /**
+     * set 动作配置，默认为告警，支持1，2，3和5四种类型动作
+     *
+     * @param action
+     */
+    public CcConf action(DenyActionCfg action) {
+        this.action = action;
         return this;
     }
 

@@ -47,7 +47,7 @@ public class AddDomain  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private String domain;
+    private List<String> domain;
 
     /**
      * 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
@@ -144,7 +144,7 @@ public class AddDomain  implements java.io.Serializable {
      *
      * @return
      */
-    public String getDomain() {
+    public List<String> getDomain() {
         return domain;
     }
 
@@ -153,7 +153,7 @@ public class AddDomain  implements java.io.Serializable {
      *
      * @param domain
      */
-    public void setDomain(String domain) {
+    public void setDomain(List<String> domain) {
         this.domain = domain;
     }
 
@@ -407,7 +407,7 @@ public class AddDomain  implements java.io.Serializable {
      *
      * @param domain
      */
-    public AddDomain domain(String domain) {
+    public AddDomain domain(List<String> domain) {
         this.domain = domain;
         return this;
     }
@@ -542,6 +542,18 @@ public class AddDomain  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 域名
+     *
+     * @param domain
+     */
+    public void addDomain(String domain) {
+        if (this.domain == null) {
+            this.domain = new ArrayList<>();
+        }
+        this.domain.add(domain);
+    }
 
     /**
      * add item to 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]

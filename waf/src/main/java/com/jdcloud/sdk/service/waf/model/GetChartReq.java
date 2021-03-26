@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -44,14 +46,14 @@ public class GetChartReq  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      * Required:true
      */
     @Required
     private Integer start;
 
     /**
-     * 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      * Required:true
      */
     @Required
@@ -76,6 +78,16 @@ public class GetChartReq  implements java.io.Serializable {
      * ua表示返回ua的饼图数据，仅getPieChart时有效。
      */
     private String pieItem;
+
+    /**
+     * 指定状态码，仅getStatusCodeInfo时有效
+     */
+    private List<String> statusCode;
+
+    /**
+     * true表示获取状态码统计图、占比图。
+     */
+    private Boolean isStaCode;
 
 
     /**
@@ -115,7 +127,7 @@ public class GetChartReq  implements java.io.Serializable {
     }
 
     /**
-     * get 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * get 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @return
      */
@@ -124,7 +136,7 @@ public class GetChartReq  implements java.io.Serializable {
     }
 
     /**
-     * set 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param start
      */
@@ -133,7 +145,7 @@ public class GetChartReq  implements java.io.Serializable {
     }
 
     /**
-     * get 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * get 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @return
      */
@@ -142,7 +154,7 @@ public class GetChartReq  implements java.io.Serializable {
     }
 
     /**
-     * set 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param end
      */
@@ -222,6 +234,42 @@ public class GetChartReq  implements java.io.Serializable {
         this.pieItem = pieItem;
     }
 
+    /**
+     * get 指定状态码，仅getStatusCodeInfo时有效
+     *
+     * @return
+     */
+    public List<String> getStatusCode() {
+        return statusCode;
+    }
+
+    /**
+     * set 指定状态码，仅getStatusCodeInfo时有效
+     *
+     * @param statusCode
+     */
+    public void setStatusCode(List<String> statusCode) {
+        this.statusCode = statusCode;
+    }
+
+    /**
+     * get true表示获取状态码统计图、占比图。
+     *
+     * @return
+     */
+    public Boolean getIsStaCode() {
+        return isStaCode;
+    }
+
+    /**
+     * set true表示获取状态码统计图、占比图。
+     *
+     * @param isStaCode
+     */
+    public void setIsStaCode(Boolean isStaCode) {
+        this.isStaCode = isStaCode;
+    }
+
 
     /**
      * set 实例id，代表要查询的WAF实例，为空时表示当前用户下的所有实例
@@ -244,7 +292,7 @@ public class GetChartReq  implements java.io.Serializable {
     }
 
     /**
-     * set 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param start
      */
@@ -254,7 +302,7 @@ public class GetChartReq  implements java.io.Serializable {
     }
 
     /**
-     * set 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param end
      */
@@ -303,5 +351,37 @@ public class GetChartReq  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 指定状态码，仅getStatusCodeInfo时有效
+     *
+     * @param statusCode
+     */
+    public GetChartReq statusCode(List<String> statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+
+    /**
+     * set true表示获取状态码统计图、占比图。
+     *
+     * @param isStaCode
+     */
+    public GetChartReq isStaCode(Boolean isStaCode) {
+        this.isStaCode = isStaCode;
+        return this;
+    }
+
+
+    /**
+     * add item to 指定状态码，仅getStatusCodeInfo时有效
+     *
+     * @param statusCode
+     */
+    public void addStatusCode(String statusCode) {
+        if (this.statusCode == null) {
+            this.statusCode = new ArrayList<>();
+        }
+        this.statusCode.add(statusCode);
+    }
 
 }

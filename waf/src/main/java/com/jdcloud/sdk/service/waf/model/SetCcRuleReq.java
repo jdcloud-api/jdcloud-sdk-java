@@ -99,6 +99,16 @@ public class SetCcRuleReq  implements java.io.Serializable {
      */
     private String redirection;
 
+    /**
+     * cc 统计维度，ip或cookie
+     */
+    private String dimension;
+
+    /**
+     * cookiename, 只有当 dimension 为 cookie 时才有效
+     */
+    private String dmvalue;
+
 
     /**
      * get WAF实例id
@@ -280,6 +290,42 @@ public class SetCcRuleReq  implements java.io.Serializable {
         this.redirection = redirection;
     }
 
+    /**
+     * get cc 统计维度，ip或cookie
+     *
+     * @return
+     */
+    public String getDimension() {
+        return dimension;
+    }
+
+    /**
+     * set cc 统计维度，ip或cookie
+     *
+     * @param dimension
+     */
+    public void setDimension(String dimension) {
+        this.dimension = dimension;
+    }
+
+    /**
+     * get cookiename, 只有当 dimension 为 cookie 时才有效
+     *
+     * @return
+     */
+    public String getDmvalue() {
+        return dmvalue;
+    }
+
+    /**
+     * set cookiename, 只有当 dimension 为 cookie 时才有效
+     *
+     * @param dmvalue
+     */
+    public void setDmvalue(String dmvalue) {
+        this.dmvalue = dmvalue;
+    }
+
 
     /**
      * set WAF实例id
@@ -378,6 +424,26 @@ public class SetCcRuleReq  implements java.io.Serializable {
      */
     public SetCcRuleReq redirection(String redirection) {
         this.redirection = redirection;
+        return this;
+    }
+
+    /**
+     * set cc 统计维度，ip或cookie
+     *
+     * @param dimension
+     */
+    public SetCcRuleReq dimension(String dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+
+    /**
+     * set cookiename, 只有当 dimension 为 cookie 时才有效
+     *
+     * @param dmvalue
+     */
+    public SetCcRuleReq dmvalue(String dmvalue) {
+        this.dmvalue = dmvalue;
         return this;
     }
 

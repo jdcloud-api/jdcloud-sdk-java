@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.waf.model.EnableRiskResponse;
 
 /**
- * 使能risk
+ * 使能数据风控
  */
 class EnableRiskExecutor extends JdcloudExecutor {
 

@@ -70,12 +70,12 @@ public class InstanceIdCfg  implements java.io.Serializable {
     /**
      * 创建时间
      */
-    private Integer startTime;
+    private String startTime;
 
     /**
      * 资源预计释放时间，仅过期且未释放时有效
      */
-    private Integer releaseingTime;
+    private String releaseingTime;
 
     /**
      * 资源的计费状态，1-服务中，2-过期停服，3-过期释放
@@ -219,7 +219,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
@@ -228,7 +228,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
      *
      * @param startTime
      */
-    public void setStartTime(Integer startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
@@ -237,7 +237,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getReleaseingTime() {
+    public String getReleaseingTime() {
         return releaseingTime;
     }
 
@@ -246,7 +246,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
      *
      * @param releaseingTime
      */
-    public void setReleaseingTime(Integer releaseingTime) {
+    public void setReleaseingTime(String releaseingTime) {
         this.releaseingTime = releaseingTime;
     }
 
@@ -362,7 +362,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
      *
      * @param startTime
      */
-    public InstanceIdCfg startTime(Integer startTime) {
+    public InstanceIdCfg startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -372,7 +372,7 @@ public class InstanceIdCfg  implements java.io.Serializable {
      *
      * @param releaseingTime
      */
-    public InstanceIdCfg releaseingTime(Integer releaseingTime) {
+    public InstanceIdCfg releaseingTime(String releaseingTime) {
         this.releaseingTime = releaseingTime;
         return this;
     }

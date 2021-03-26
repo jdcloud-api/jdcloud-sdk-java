@@ -25,7 +25,7 @@
 package com.jdcloud.sdk.service.waf.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.waf.model.ListRulesReq;
+import com.jdcloud.sdk.service.waf.model.ListRiskRulesReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -40,7 +40,7 @@ public class ListRiskRulesRequest extends JdcloudRequest implements java.io.Seri
      * Required:true
      */
     @Required
-    private ListRulesReq req;
+    private ListRiskRulesReq req;
 
     /**
      * 实例所属的地域ID
@@ -62,7 +62,7 @@ public class ListRiskRulesRequest extends JdcloudRequest implements java.io.Seri
      *
      * @return
      */
-    public ListRulesReq getReq() {
+    public ListRiskRulesReq getReq() {
         return req;
     }
 
@@ -71,7 +71,7 @@ public class ListRiskRulesRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param req
      */
-    public void setReq(ListRulesReq req) {
+    public void setReq(ListRiskRulesReq req) {
         this.req = req;
     }
 
@@ -117,7 +117,7 @@ public class ListRiskRulesRequest extends JdcloudRequest implements java.io.Seri
      *
      * @param req
      */
-    public ListRiskRulesRequest req(ListRulesReq req) {
+    public ListRiskRulesRequest req(ListRiskRulesReq req) {
         this.req = req;
         return this;
     }

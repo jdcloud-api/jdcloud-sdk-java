@@ -52,6 +52,16 @@ public class TopN  implements java.io.Serializable {
      */
     private TopValue ua_top10;
 
+    /**
+     * domain_anti_top10
+     */
+    private TopAntiValue domain_anti_top10;
+
+    /**
+     * url_anti_top10
+     */
+    private TopAntiValue url_anti_top10;
+
 
     /**
      * get addr_top10
@@ -125,6 +135,42 @@ public class TopN  implements java.io.Serializable {
         this.ua_top10 = ua_top10;
     }
 
+    /**
+     * get domain_anti_top10
+     *
+     * @return
+     */
+    public TopAntiValue getDomain_anti_top10() {
+        return domain_anti_top10;
+    }
+
+    /**
+     * set domain_anti_top10
+     *
+     * @param domain_anti_top10
+     */
+    public void setDomain_anti_top10(TopAntiValue domain_anti_top10) {
+        this.domain_anti_top10 = domain_anti_top10;
+    }
+
+    /**
+     * get url_anti_top10
+     *
+     * @return
+     */
+    public TopAntiValue getUrl_anti_top10() {
+        return url_anti_top10;
+    }
+
+    /**
+     * set url_anti_top10
+     *
+     * @param url_anti_top10
+     */
+    public void setUrl_anti_top10(TopAntiValue url_anti_top10) {
+        this.url_anti_top10 = url_anti_top10;
+    }
+
 
     /**
      * set addr_top10
@@ -163,6 +209,26 @@ public class TopN  implements java.io.Serializable {
      */
     public TopN ua_top10(TopValue ua_top10) {
         this.ua_top10 = ua_top10;
+        return this;
+    }
+
+    /**
+     * set domain_anti_top10
+     *
+     * @param domain_anti_top10
+     */
+    public TopN domain_anti_top10(TopAntiValue domain_anti_top10) {
+        this.domain_anti_top10 = domain_anti_top10;
+        return this;
+    }
+
+    /**
+     * set url_anti_top10
+     *
+     * @param url_anti_top10
+     */
+    public TopN url_anti_top10(TopAntiValue url_anti_top10) {
+        this.url_anti_top10 = url_anti_top10;
         return this;
     }
 

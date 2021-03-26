@@ -40,12 +40,12 @@ public class AntiStatus  implements java.io.Serializable {
     /**
      * cc防护
      */
-    private String cc;
+    private Integer cc;
 
     /**
      * waf防护
      */
-    private String waf;
+    private Integer waf;
 
 
     /**
@@ -71,7 +71,7 @@ public class AntiStatus  implements java.io.Serializable {
      *
      * @return
      */
-    public String getCc() {
+    public Integer getCc() {
         return cc;
     }
 
@@ -80,7 +80,7 @@ public class AntiStatus  implements java.io.Serializable {
      *
      * @param cc
      */
-    public void setCc(String cc) {
+    public void setCc(Integer cc) {
         this.cc = cc;
     }
 
@@ -89,7 +89,7 @@ public class AntiStatus  implements java.io.Serializable {
      *
      * @return
      */
-    public String getWaf() {
+    public Integer getWaf() {
         return waf;
     }
 
@@ -98,7 +98,7 @@ public class AntiStatus  implements java.io.Serializable {
      *
      * @param waf
      */
-    public void setWaf(String waf) {
+    public void setWaf(Integer waf) {
         this.waf = waf;
     }
 
@@ -118,7 +118,7 @@ public class AntiStatus  implements java.io.Serializable {
      *
      * @param cc
      */
-    public AntiStatus cc(String cc) {
+    public AntiStatus cc(Integer cc) {
         this.cc = cc;
         return this;
     }
@@ -128,7 +128,7 @@ public class AntiStatus  implements java.io.Serializable {
      *
      * @param waf
      */
-    public AntiStatus waf(String waf) {
+    public AntiStatus waf(Integer waf) {
         this.waf = waf;
         return this;
     }
