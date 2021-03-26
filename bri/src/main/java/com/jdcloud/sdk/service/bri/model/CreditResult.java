@@ -59,7 +59,7 @@ public class CreditResult extends JdcloudResult implements java.io.Serializable 
     private String content;
 
     /**
-     * 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备
+     * 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备，signup-注册，login-登录，marketing-营销
      */
     private String resourceType;
 
@@ -160,7 +160,7 @@ public class CreditResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * get 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备
+     * get 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备，signup-注册，login-登录，marketing-营销
      *
      * @return
      */
@@ -169,7 +169,7 @@ public class CreditResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备
+     * set 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备，signup-注册，login-登录，marketing-营销
      *
      * @param resourceType
      */
@@ -247,7 +247,7 @@ public class CreditResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备
+     * set 数据类型，ip-IP，phone-手机，addr-地址，card-身份，pin-账户，eid-设备，signup-注册，login-登录，marketing-营销
      *
      * @param resourceType
      */

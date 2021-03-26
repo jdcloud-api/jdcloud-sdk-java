@@ -68,6 +68,23 @@ public class GetPriceReq  implements java.io.Serializable {
     @Required
     private Integer packageType;
 
+    /**
+     * QPS上限(1-7) 1-100 2-300 3-500 4-1000 5-3000 6-5000 7-10000
+     * Required:true
+     */
+    @Required
+    private Integer qpsLimit;
+
+    /**
+     * 是否需要爬虫IP识别,当packageType为ip时必填  false-不购买  true-购买
+     */
+    private Boolean needSpiderIp;
+
+    /**
+     * 注册，登录，营销场景的版本号，当packageTpe为signup,login,marketing时必填   1-标准版  2-定制版
+     */
+    private Integer version;
+
 
     /**
      * get 地域信息
@@ -159,6 +176,60 @@ public class GetPriceReq  implements java.io.Serializable {
         this.packageType = packageType;
     }
 
+    /**
+     * get QPS上限(1-7) 1-100 2-300 3-500 4-1000 5-3000 6-5000 7-10000
+     *
+     * @return
+     */
+    public Integer getQpsLimit() {
+        return qpsLimit;
+    }
+
+    /**
+     * set QPS上限(1-7) 1-100 2-300 3-500 4-1000 5-3000 6-5000 7-10000
+     *
+     * @param qpsLimit
+     */
+    public void setQpsLimit(Integer qpsLimit) {
+        this.qpsLimit = qpsLimit;
+    }
+
+    /**
+     * get 是否需要爬虫IP识别,当packageType为ip时必填  false-不购买  true-购买
+     *
+     * @return
+     */
+    public Boolean getNeedSpiderIp() {
+        return needSpiderIp;
+    }
+
+    /**
+     * set 是否需要爬虫IP识别,当packageType为ip时必填  false-不购买  true-购买
+     *
+     * @param needSpiderIp
+     */
+    public void setNeedSpiderIp(Boolean needSpiderIp) {
+        this.needSpiderIp = needSpiderIp;
+    }
+
+    /**
+     * get 注册，登录，营销场景的版本号，当packageTpe为signup,login,marketing时必填   1-标准版  2-定制版
+     *
+     * @return
+     */
+    public Integer getVersion() {
+        return version;
+    }
+
+    /**
+     * set 注册，登录，营销场景的版本号，当packageTpe为signup,login,marketing时必填   1-标准版  2-定制版
+     *
+     * @param version
+     */
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
 
     /**
      * set 地域信息
@@ -207,6 +278,36 @@ public class GetPriceReq  implements java.io.Serializable {
      */
     public GetPriceReq packageType(Integer packageType) {
         this.packageType = packageType;
+        return this;
+    }
+
+    /**
+     * set QPS上限(1-7) 1-100 2-300 3-500 4-1000 5-3000 6-5000 7-10000
+     *
+     * @param qpsLimit
+     */
+    public GetPriceReq qpsLimit(Integer qpsLimit) {
+        this.qpsLimit = qpsLimit;
+        return this;
+    }
+
+    /**
+     * set 是否需要爬虫IP识别,当packageType为ip时必填  false-不购买  true-购买
+     *
+     * @param needSpiderIp
+     */
+    public GetPriceReq needSpiderIp(Boolean needSpiderIp) {
+        this.needSpiderIp = needSpiderIp;
+        return this;
+    }
+
+    /**
+     * set 注册，登录，营销场景的版本号，当packageTpe为signup,login,marketing时必填   1-标准版  2-定制版
+     *
+     * @param version
+     */
+    public GetPriceReq version(Integer version) {
+        this.version = version;
         return this;
     }
 
