@@ -47,6 +47,11 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     private Long pageSize;
 
     /**
+     * 数据所有者，1云监控控制台; 2云鼎。默认为1
+     */
+    private Long dataOwner;
+
+    /**
      * 产品线标识，同一个产品线下可能存在多个product，如(redis下有redis2.8cluster、redis4.0)
      */
     private String serviceCode;
@@ -124,6 +129,24 @@ alarmIds - 规则id，精确匹配，支持多个
      */
     public void setPageSize(Long pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get 数据所有者，1云监控控制台; 2云鼎。默认为1
+     *
+     * @return
+     */
+    public Long getDataOwner() {
+        return dataOwner;
+    }
+
+    /**
+     * set 数据所有者，1云监控控制台; 2云鼎。默认为1
+     *
+     * @param dataOwner
+     */
+    public void setDataOwner(Long dataOwner) {
+        this.dataOwner = dataOwner;
     }
 
     /**
@@ -294,6 +317,16 @@ alarmIds - 规则id，精确匹配，支持多个
      */
     public DescribeAlarmsRequest pageSize(Long pageSize) {
         this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 数据所有者，1云监控控制台; 2云鼎。默认为1
+     *
+     * @param dataOwner
+     */
+    public DescribeAlarmsRequest dataOwner(Long dataOwner) {
+        this.dataOwner = dataOwner;
         return this;
     }
 

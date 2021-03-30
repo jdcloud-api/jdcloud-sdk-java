@@ -52,21 +52,27 @@ import com.jdcloud.sdk.service.monitor.client.DescribeAlarmHistoryExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeAlarmExecutor;
-import com.jdcloud.sdk.service.monitor.model.DescribeOneDataPointRequest;
-import com.jdcloud.sdk.service.monitor.model.DescribeOneDataPointResponse;
-import com.jdcloud.sdk.service.monitor.client.DescribeOneDataPointExecutor;
 import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsRequest;
 import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsResponse;
 import com.jdcloud.sdk.service.monitor.client.DeleteAlarmsExecutor;
+import com.jdcloud.sdk.service.monitor.model.LastDownsampleRequest;
+import com.jdcloud.sdk.service.monitor.model.LastDownsampleResponse;
+import com.jdcloud.sdk.service.monitor.client.LastDownsampleExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeProductsForAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeProductsForAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeProductsForAlarmExecutor;
 import com.jdcloud.sdk.service.monitor.model.UpdateAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.UpdateAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.UpdateAlarmExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeCustomMetricDataRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeCustomMetricDataResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeCustomMetricDataExecutor;
 import com.jdcloud.sdk.service.monitor.model.EnableAlarmsRequest;
 import com.jdcloud.sdk.service.monitor.model.EnableAlarmsResponse;
 import com.jdcloud.sdk.service.monitor.client.EnableAlarmsExecutor;
+import com.jdcloud.sdk.service.monitor.model.DescribeTagValuesRequest;
+import com.jdcloud.sdk.service.monitor.model.DescribeTagValuesResponse;
+import com.jdcloud.sdk.service.monitor.client.DescribeTagValuesExecutor;
 import com.jdcloud.sdk.service.monitor.model.PutCustomMetricDataRequest;
 import com.jdcloud.sdk.service.monitor.model.PutCustomMetricDataResponse;
 import com.jdcloud.sdk.service.monitor.client.PutCustomMetricDataExecutor;
@@ -87,7 +93,7 @@ public class MonitorClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "monitor.jdcloud-api.com";
     public final static String ServiceName = "monitor";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -207,17 +213,6 @@ public class MonitorClient extends JdcloudClient {
     }
 
     /**
-     * 根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeOneDataPointResponse describeOneDataPoint(DescribeOneDataPointRequest request) throws JdcloudSdkException {
-        return new DescribeOneDataPointExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除规则
      *
      * @param request
@@ -226,6 +221,17 @@ public class MonitorClient extends JdcloudClient {
      */
     public DeleteAlarmsResponse deleteAlarms(DeleteAlarmsRequest request) throws JdcloudSdkException {
         return new DeleteAlarmsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public LastDownsampleResponse lastDownsample(LastDownsampleRequest request) throws JdcloudSdkException {
+        return new LastDownsampleExecutor().client(this).execute(request);
     }
 
     /**
@@ -251,6 +257,17 @@ public class MonitorClient extends JdcloudClient {
     }
 
     /**
+     * 通过指定维度查询自定义监控的数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCustomMetricDataResponse describeCustomMetricData(DescribeCustomMetricDataRequest request) throws JdcloudSdkException {
+        return new DescribeCustomMetricDataExecutor().client(this).execute(request);
+    }
+
+    /**
      * 启用、禁用规则
      *
      * @param request
@@ -259,6 +276,17 @@ public class MonitorClient extends JdcloudClient {
      */
     public EnableAlarmsResponse enableAlarms(EnableAlarmsRequest request) throws JdcloudSdkException {
         return new EnableAlarmsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询某资源下指定tag key的tag value
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTagValuesResponse describeTagValues(DescribeTagValuesRequest request) throws JdcloudSdkException {
+        return new DescribeTagValuesExecutor().client(this).execute(request);
     }
 
     /**

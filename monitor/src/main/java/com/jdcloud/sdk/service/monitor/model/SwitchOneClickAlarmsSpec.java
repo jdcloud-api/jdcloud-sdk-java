@@ -24,79 +24,84 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
- * dataPoint
+ * switchOneClickAlarmsSpec
  */
-public class DataPoint  implements java.io.Serializable {
+public class SwitchOneClickAlarmsSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 时间戳
+     * 产品线的serviceCode
+     * Required:true
      */
-    private Long timestamp;
+    @Required
+    private String serviceCode;
 
     /**
-     * 值
+     * 1启动、0关闭
+     * Required:true
      */
-    private Object value;
+    @Required
+    private Long state;
 
 
     /**
-     * get 时间戳
+     * get 产品线的serviceCode
      *
      * @return
      */
-    public Long getTimestamp() {
-        return timestamp;
+    public String getServiceCode() {
+        return serviceCode;
     }
 
     /**
-     * set 时间戳
+     * set 产品线的serviceCode
      *
-     * @param timestamp
+     * @param serviceCode
      */
-    public void setTimestamp(Long timestamp) {
-        this.timestamp = timestamp;
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
     }
 
     /**
-     * get 值
+     * get 1启动、0关闭
      *
      * @return
      */
-    public Object getValue() {
-        return value;
+    public Long getState() {
+        return state;
     }
 
     /**
-     * set 值
+     * set 1启动、0关闭
      *
-     * @param value
+     * @param state
      */
-    public void setValue(Object value) {
-        this.value = value;
+    public void setState(Long state) {
+        this.state = state;
     }
 
 
     /**
-     * set 时间戳
+     * set 产品线的serviceCode
      *
-     * @param timestamp
+     * @param serviceCode
      */
-    public DataPoint timestamp(Long timestamp) {
-        this.timestamp = timestamp;
+    public SwitchOneClickAlarmsSpec serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 
     /**
-     * set 值
+     * set 1启动、0关闭
      *
-     * @param value
+     * @param state
      */
-    public DataPoint value(Object value) {
-        this.value = value;
+    public SwitchOneClickAlarmsSpec state(Long state) {
+        this.state = state;
         return this;
     }
 

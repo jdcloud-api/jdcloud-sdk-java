@@ -28,10 +28,10 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.monitor.model.BaseContact;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.monitor.model.WebHookOption;
 import com.jdcloud.sdk.service.monitor.model.NoticeOption;
 import com.jdcloud.sdk.service.monitor.model.ResourceOption;
 import com.jdcloud.sdk.service.monitor.model.RuleOption;
-import com.jdcloud.sdk.service.monitor.model.WebHookOption;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -59,6 +59,11 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     private String clientToken;
 
     /**
+     * 数据所有者，1云监控控制台; 2云鼎。默认为1
+     */
+    private Long dataOwner;
+
+    /**
      * 资源维度，可用的维度请使用 describeProductsForAlarm接口查询
      */
     private String dimension;
@@ -67,6 +72,11 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
      * 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      */
     private Long enabled;
+
+    /**
+     * url回调设置数组
+     */
+    private List<WebHookOption> multiWebHook;
 
     /**
      * 通知策略
@@ -172,6 +182,24 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
+     * get 数据所有者，1云监控控制台; 2云鼎。默认为1
+     *
+     * @return
+     */
+    public Long getDataOwner() {
+        return dataOwner;
+    }
+
+    /**
+     * set 数据所有者，1云监控控制台; 2云鼎。默认为1
+     *
+     * @param dataOwner
+     */
+    public void setDataOwner(Long dataOwner) {
+        this.dataOwner = dataOwner;
+    }
+
+    /**
      * get 资源维度，可用的维度请使用 describeProductsForAlarm接口查询
      *
      * @return
@@ -205,6 +233,24 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
      */
     public void setEnabled(Long enabled) {
         this.enabled = enabled;
+    }
+
+    /**
+     * get url回调设置数组
+     *
+     * @return
+     */
+    public List<WebHookOption> getMultiWebHook() {
+        return multiWebHook;
+    }
+
+    /**
+     * set url回调设置数组
+     *
+     * @param multiWebHook
+     */
+    public void setMultiWebHook(List<WebHookOption> multiWebHook) {
+        this.multiWebHook = multiWebHook;
     }
 
     /**
@@ -383,6 +429,16 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
+     * set 数据所有者，1云监控控制台; 2云鼎。默认为1
+     *
+     * @param dataOwner
+     */
+    public CreateAlarmRequest dataOwner(Long dataOwner) {
+        this.dataOwner = dataOwner;
+        return this;
+    }
+
+    /**
      * set 资源维度，可用的维度请使用 describeProductsForAlarm接口查询
      *
      * @param dimension
@@ -399,6 +455,16 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
      */
     public CreateAlarmRequest enabled(Long enabled) {
         this.enabled = enabled;
+        return this;
+    }
+
+    /**
+     * set url回调设置数组
+     *
+     * @param multiWebHook
+     */
+    public CreateAlarmRequest multiWebHook(List<WebHookOption> multiWebHook) {
+        this.multiWebHook = multiWebHook;
         return this;
     }
 
@@ -493,6 +559,18 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
             this.baseContact = new ArrayList<>();
         }
         this.baseContact.add(baseContact);
+    }
+
+    /**
+     * add item to url回调设置数组
+     *
+     * @param multiWebHook
+     */
+    public void addMultiWebHook(WebHookOption multiWebHook) {
+        if (this.multiWebHook == null) {
+            this.multiWebHook = new ArrayList<>();
+        }
+        this.multiWebHook.add(multiWebHook);
     }
 
     /**

@@ -26,7 +26,6 @@ package com.jdcloud.sdk.service.monitor.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * deleteGrafanaDashboardsSpec
@@ -37,9 +36,7 @@ public class DeleteGrafanaDashboardsSpec  implements java.io.Serializable {
 
     /**
      * filters, name为dashboardUids， values为dashboardUid列表，精确匹配，支持多个
-     * Required:true
      */
-    @Required
     private List<Filter> filters;
 
 

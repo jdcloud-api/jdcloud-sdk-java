@@ -26,77 +26,77 @@ package com.jdcloud.sdk.service.monitor.model;
 
 
 /**
- * dataPoint
+ * subNodeKeys
  */
-public class DataPoint  implements java.io.Serializable {
+public class SubNodeKeys  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 时间戳
+     * 该key所在层级
      */
-    private Long timestamp;
+    private Long index;
 
     /**
-     * 值
+     * key
      */
-    private Object value;
+    private String key;
 
 
     /**
-     * get 时间戳
+     * get 该key所在层级
      *
      * @return
      */
-    public Long getTimestamp() {
-        return timestamp;
+    public Long getIndex() {
+        return index;
     }
 
     /**
-     * set 时间戳
+     * set 该key所在层级
      *
-     * @param timestamp
+     * @param index
      */
-    public void setTimestamp(Long timestamp) {
-        this.timestamp = timestamp;
+    public void setIndex(Long index) {
+        this.index = index;
     }
 
     /**
-     * get 值
+     * get key
      *
      * @return
      */
-    public Object getValue() {
-        return value;
+    public String getKey() {
+        return key;
     }
 
     /**
-     * set 值
+     * set key
      *
-     * @param value
+     * @param key
      */
-    public void setValue(Object value) {
-        this.value = value;
+    public void setKey(String key) {
+        this.key = key;
     }
 
 
     /**
-     * set 时间戳
+     * set 该key所在层级
      *
-     * @param timestamp
+     * @param index
      */
-    public DataPoint timestamp(Long timestamp) {
-        this.timestamp = timestamp;
+    public SubNodeKeys index(Long index) {
+        this.index = index;
         return this;
     }
 
     /**
-     * set 值
+     * set key
      *
-     * @param value
+     * @param key
      */
-    public DataPoint value(Object value) {
-        this.value = value;
+    public SubNodeKeys key(String key) {
+        this.key = key;
         return this;
     }
 

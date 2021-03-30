@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * handleTags
@@ -33,9 +35,14 @@ public class HandleTags  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * handleTagCode
+     * 操作类型 1 复制原数据点，复制过程中只拷贝对原数据中tag改名的tag 2 不进行复制
      */
     private Long handleTagCode;
+
+    /**
+     * handleTags
+     */
+    private List<DataTag> handleTags;
 
     /**
      * prefixMetric
@@ -44,7 +51,7 @@ public class HandleTags  implements java.io.Serializable {
 
 
     /**
-     * get handleTagCode
+     * get 操作类型 1 复制原数据点，复制过程中只拷贝对原数据中tag改名的tag 2 不进行复制
      *
      * @return
      */
@@ -53,12 +60,30 @@ public class HandleTags  implements java.io.Serializable {
     }
 
     /**
-     * set handleTagCode
+     * set 操作类型 1 复制原数据点，复制过程中只拷贝对原数据中tag改名的tag 2 不进行复制
      *
      * @param handleTagCode
      */
     public void setHandleTagCode(Long handleTagCode) {
         this.handleTagCode = handleTagCode;
+    }
+
+    /**
+     * get handleTags
+     *
+     * @return
+     */
+    public List<DataTag> getHandleTags() {
+        return handleTags;
+    }
+
+    /**
+     * set handleTags
+     *
+     * @param handleTags
+     */
+    public void setHandleTags(List<DataTag> handleTags) {
+        this.handleTags = handleTags;
     }
 
     /**
@@ -81,12 +106,22 @@ public class HandleTags  implements java.io.Serializable {
 
 
     /**
-     * set handleTagCode
+     * set 操作类型 1 复制原数据点，复制过程中只拷贝对原数据中tag改名的tag 2 不进行复制
      *
      * @param handleTagCode
      */
     public HandleTags handleTagCode(Long handleTagCode) {
         this.handleTagCode = handleTagCode;
+        return this;
+    }
+
+    /**
+     * set handleTags
+     *
+     * @param handleTags
+     */
+    public HandleTags handleTags(List<DataTag> handleTags) {
+        this.handleTags = handleTags;
         return this;
     }
 
@@ -100,5 +135,17 @@ public class HandleTags  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to handleTags
+     *
+     * @param handleTag
+     */
+    public void addHandleTag(DataTag handleTag) {
+        if (this.handleTags == null) {
+            this.handleTags = new ArrayList<>();
+        }
+        this.handleTags.add(handleTag);
+    }
 
 }

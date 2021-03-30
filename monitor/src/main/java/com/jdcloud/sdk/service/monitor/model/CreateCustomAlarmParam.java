@@ -48,6 +48,12 @@ public class CreateCustomAlarmParam  implements java.io.Serializable {
     private List<BaseContact> baseContact;
 
     /**
+     * 数据所有者，1云监控控制台; 2云鼎。默认为1
+in: query
+     */
+    private Long dataOwner;
+
+    /**
      * 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
      * Required:true
      */
@@ -58,6 +64,11 @@ public class CreateCustomAlarmParam  implements java.io.Serializable {
      * 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      */
     private Long enabled;
+
+    /**
+     * 回调数组
+     */
+    private List<WebHookOption> multiWebHook;
 
     /**
      * 命名空间
@@ -135,6 +146,26 @@ public class CreateCustomAlarmParam  implements java.io.Serializable {
     }
 
     /**
+     * get 数据所有者，1云监控控制台; 2云鼎。默认为1
+in: query
+     *
+     * @return
+     */
+    public Long getDataOwner() {
+        return dataOwner;
+    }
+
+    /**
+     * set 数据所有者，1云监控控制台; 2云鼎。默认为1
+in: query
+     *
+     * @param dataOwner
+     */
+    public void setDataOwner(Long dataOwner) {
+        this.dataOwner = dataOwner;
+    }
+
+    /**
      * get 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
      *
      * @return
@@ -168,6 +199,24 @@ public class CreateCustomAlarmParam  implements java.io.Serializable {
      */
     public void setEnabled(Long enabled) {
         this.enabled = enabled;
+    }
+
+    /**
+     * get 回调数组
+     *
+     * @return
+     */
+    public List<WebHookOption> getMultiWebHook() {
+        return multiWebHook;
+    }
+
+    /**
+     * set 回调数组
+     *
+     * @param multiWebHook
+     */
+    public void setMultiWebHook(List<WebHookOption> multiWebHook) {
+        this.multiWebHook = multiWebHook;
     }
 
     /**
@@ -300,6 +349,17 @@ public class CreateCustomAlarmParam  implements java.io.Serializable {
     }
 
     /**
+     * set 数据所有者，1云监控控制台; 2云鼎。默认为1
+in: query
+     *
+     * @param dataOwner
+     */
+    public CreateCustomAlarmParam dataOwner(Long dataOwner) {
+        this.dataOwner = dataOwner;
+        return this;
+    }
+
+    /**
      * set 资源维度，指定监控数据实例的维度标签,如resourceId&#x3D;id。(请确认资源的监控数据带有该标签，否则规则会报数据不足)，至少指定一个
      *
      * @param dimensions
@@ -316,6 +376,16 @@ public class CreateCustomAlarmParam  implements java.io.Serializable {
      */
     public CreateCustomAlarmParam enabled(Long enabled) {
         this.enabled = enabled;
+        return this;
+    }
+
+    /**
+     * set 回调数组
+     *
+     * @param multiWebHook
+     */
+    public CreateCustomAlarmParam multiWebHook(List<WebHookOption> multiWebHook) {
+        this.multiWebHook = multiWebHook;
         return this;
     }
 
@@ -402,6 +472,18 @@ public class CreateCustomAlarmParam  implements java.io.Serializable {
             this.dimensions = new ArrayList<>();
         }
         this.dimensions.add(dimension);
+    }
+
+    /**
+     * add item to 回调数组
+     *
+     * @param multiWebHook
+     */
+    public void addMultiWebHook(WebHookOption multiWebHook) {
+        if (this.multiWebHook == null) {
+            this.multiWebHook = new ArrayList<>();
+        }
+        this.multiWebHook.add(multiWebHook);
     }
 
     /**

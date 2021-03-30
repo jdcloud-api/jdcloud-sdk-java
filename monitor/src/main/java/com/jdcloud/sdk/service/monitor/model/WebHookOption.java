@@ -33,7 +33,7 @@ public class WebHookOption  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook
+     * 回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook。当前支持的变量:${resourceId},${resourceName},${ipAddress},${requestId},${metric},${currentValue},${times},${tags},${alertTime},${region},${threshold},${serviceCode},${asGroupId},${unhealthyInstance}
      */
     private String webHookContent;
 
@@ -54,7 +54,7 @@ public class WebHookOption  implements java.io.Serializable {
 
 
     /**
-     * get 回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook
+     * get 回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook。当前支持的变量:${resourceId},${resourceName},${ipAddress},${requestId},${metric},${currentValue},${times},${tags},${alertTime},${region},${threshold},${serviceCode},${asGroupId},${unhealthyInstance}
      *
      * @return
      */
@@ -63,7 +63,7 @@ public class WebHookOption  implements java.io.Serializable {
     }
 
     /**
-     * set 回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook
+     * set 回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook。当前支持的变量:${resourceId},${resourceName},${ipAddress},${requestId},${metric},${currentValue},${times},${tags},${alertTime},${region},${threshold},${serviceCode},${asGroupId},${unhealthyInstance}
      *
      * @param webHookContent
      */
@@ -127,7 +127,7 @@ public class WebHookOption  implements java.io.Serializable {
 
 
     /**
-     * set 回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook
+     * set 回调content 注：仅webHookUrl和webHookProtocol均不为空时，才会创建webHook。当前支持的变量:${resourceId},${resourceName},${ipAddress},${requestId},${metric},${currentValue},${times},${tags},${alertTime},${region},${threshold},${serviceCode},${asGroupId},${unhealthyInstance}
      *
      * @param webHookContent
      */
