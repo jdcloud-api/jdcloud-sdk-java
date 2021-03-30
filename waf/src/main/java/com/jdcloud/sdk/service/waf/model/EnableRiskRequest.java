@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.waf.model.EnableReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 使能risk
+ * 使能数据风控
  */
 public class EnableRiskRequest extends JdcloudRequest implements java.io.Serializable {
 

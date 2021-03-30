@@ -102,7 +102,7 @@ public class DomainMainConfig  implements java.io.Serializable {
     /**
      * 域名的地域信息，类型是map[string]regionVipInfo
      */
-    private RegionVipInfo region;
+    private DomainRegionInfo region;
 
 
     /**
@@ -344,7 +344,7 @@ public class DomainMainConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public RegionVipInfo getRegion() {
+    public DomainRegionInfo getRegion() {
         return region;
     }
 
@@ -353,7 +353,7 @@ public class DomainMainConfig  implements java.io.Serializable {
      *
      * @param region
      */
-    public void setRegion(RegionVipInfo region) {
+    public void setRegion(DomainRegionInfo region) {
         this.region = region;
     }
 
@@ -493,7 +493,7 @@ public class DomainMainConfig  implements java.io.Serializable {
      *
      * @param region
      */
-    public DomainMainConfig region(RegionVipInfo region) {
+    public DomainMainConfig region(DomainRegionInfo region) {
         this.region = region;
         return this;
     }

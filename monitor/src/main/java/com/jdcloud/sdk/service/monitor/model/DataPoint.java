@@ -33,18 +33,18 @@ public class DataPoint  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * timestamp
+     * 时间戳
      */
     private Long timestamp;
 
     /**
-     * value
+     * 值
      */
     private Object value;
 
 
     /**
-     * get timestamp
+     * get 时间戳
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class DataPoint  implements java.io.Serializable {
     }
 
     /**
-     * set timestamp
+     * set 时间戳
      *
      * @param timestamp
      */
@@ -62,7 +62,7 @@ public class DataPoint  implements java.io.Serializable {
     }
 
     /**
-     * get value
+     * get 值
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class DataPoint  implements java.io.Serializable {
     }
 
     /**
-     * set value
+     * set 值
      *
      * @param value
      */
@@ -81,7 +81,7 @@ public class DataPoint  implements java.io.Serializable {
 
 
     /**
-     * set timestamp
+     * set 时间戳
      *
      * @param timestamp
      */
@@ -91,7 +91,7 @@ public class DataPoint  implements java.io.Serializable {
     }
 
     /**
-     * set value
+     * set 值
      *
      * @param value
      */

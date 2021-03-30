@@ -27,11 +27,11 @@ package com.jdcloud.sdk.service.monitor.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.monitor.model.BaseContact;
+import com.jdcloud.sdk.service.monitor.model.WebHookOption;
 import com.jdcloud.sdk.service.monitor.model.NoticeOption;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.monitor.model.ResourceOption;
 import com.jdcloud.sdk.service.monitor.model.RuleOptionDetail;
-import com.jdcloud.sdk.service.monitor.model.WebHookOption;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -81,6 +81,11 @@ public class DescribeAlarmResult extends JdcloudResult implements java.io.Serial
      * 是否启用, 1表示启用规则，0表示禁用规则，默认为1
      */
     private Long enabled;
+
+    /**
+     * multiWebHook
+     */
+    private List<WebHookOption> multiWebHook;
 
     /**
      * noticeOption
@@ -281,6 +286,24 @@ public class DescribeAlarmResult extends JdcloudResult implements java.io.Serial
      */
     public void setEnabled(Long enabled) {
         this.enabled = enabled;
+    }
+
+    /**
+     * get multiWebHook
+     *
+     * @return
+     */
+    public List<WebHookOption> getMultiWebHook() {
+        return multiWebHook;
+    }
+
+    /**
+     * set multiWebHook
+     *
+     * @param multiWebHook
+     */
+    public void setMultiWebHook(List<WebHookOption> multiWebHook) {
+        this.multiWebHook = multiWebHook;
     }
 
     /**
@@ -546,6 +569,16 @@ public class DescribeAlarmResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
+     * set multiWebHook
+     *
+     * @param multiWebHook
+     */
+    public DescribeAlarmResult multiWebHook(List<WebHookOption> multiWebHook) {
+        this.multiWebHook = multiWebHook;
+        return this;
+    }
+
+    /**
      * set noticeOption
      *
      * @param noticeOption
@@ -668,6 +701,18 @@ public class DescribeAlarmResult extends JdcloudResult implements java.io.Serial
             this.baseContact = new ArrayList<>();
         }
         this.baseContact.add(baseContact);
+    }
+
+    /**
+     * add item to multiWebHook
+     *
+     * @param multiWebHook
+     */
+    public void addMultiWebHook(WebHookOption multiWebHook) {
+        if (this.multiWebHook == null) {
+            this.multiWebHook = new ArrayList<>();
+        }
+        this.multiWebHook.add(multiWebHook);
     }
 
     /**

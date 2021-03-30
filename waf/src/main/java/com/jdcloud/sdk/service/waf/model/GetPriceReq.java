@@ -87,6 +87,16 @@ public class GetPriceReq  implements java.io.Serializable {
     @Required
     private Integer extraBitsLimit;
 
+    /**
+     * 云鼎的appCode
+     */
+    private String appCode;
+
+    /**
+     * 云鼎的serviceCode
+     */
+    private String serviceCode;
+
 
     /**
      * get 地域信息
@@ -232,6 +242,42 @@ public class GetPriceReq  implements java.io.Serializable {
         this.extraBitsLimit = extraBitsLimit;
     }
 
+    /**
+     * get 云鼎的appCode
+     *
+     * @return
+     */
+    public String getAppCode() {
+        return appCode;
+    }
+
+    /**
+     * set 云鼎的appCode
+     *
+     * @param appCode
+     */
+    public void setAppCode(String appCode) {
+        this.appCode = appCode;
+    }
+
+    /**
+     * get 云鼎的serviceCode
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 云鼎的serviceCode
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
 
     /**
      * set 地域信息
@@ -310,6 +356,26 @@ public class GetPriceReq  implements java.io.Serializable {
      */
     public GetPriceReq extraBitsLimit(Integer extraBitsLimit) {
         this.extraBitsLimit = extraBitsLimit;
+        return this;
+    }
+
+    /**
+     * set 云鼎的appCode
+     *
+     * @param appCode
+     */
+    public GetPriceReq appCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+
+    /**
+     * set 云鼎的serviceCode
+     *
+     * @param serviceCode
+     */
+    public GetPriceReq serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 

@@ -51,6 +51,13 @@ public class CreateGrafanaDashboardSpec  implements java.io.Serializable {
     private Object params;
 
     /**
+     * templateUid
+     * Required:true
+     */
+    @Required
+    private String templateUid;
+
+    /**
      * Title
      * Required:true
      */
@@ -113,6 +120,24 @@ public class CreateGrafanaDashboardSpec  implements java.io.Serializable {
     }
 
     /**
+     * get templateUid
+     *
+     * @return
+     */
+    public String getTemplateUid() {
+        return templateUid;
+    }
+
+    /**
+     * set templateUid
+     *
+     * @param templateUid
+     */
+    public void setTemplateUid(String templateUid) {
+        this.templateUid = templateUid;
+    }
+
+    /**
      * get Title
      *
      * @return
@@ -158,6 +183,16 @@ public class CreateGrafanaDashboardSpec  implements java.io.Serializable {
      */
     public CreateGrafanaDashboardSpec params(Object params) {
         this.params = params;
+        return this;
+    }
+
+    /**
+     * set templateUid
+     *
+     * @param templateUid
+     */
+    public CreateGrafanaDashboardSpec templateUid(String templateUid) {
+        this.templateUid = templateUid;
         return this;
     }
 

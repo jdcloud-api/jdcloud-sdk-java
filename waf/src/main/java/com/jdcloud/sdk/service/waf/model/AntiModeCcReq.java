@@ -57,6 +57,11 @@ public class AntiModeCcReq  implements java.io.Serializable {
      */
     private Integer qps;
 
+    /**
+     * 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
+     */
+    private DenyActionCfg action;
+
 
     /**
      * get WAF实例id
@@ -130,6 +135,24 @@ public class AntiModeCcReq  implements java.io.Serializable {
         this.qps = qps;
     }
 
+    /**
+     * get 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
+     *
+     * @return
+     */
+    public DenyActionCfg getAction() {
+        return action;
+    }
+
+    /**
+     * set 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
+     *
+     * @param action
+     */
+    public void setAction(DenyActionCfg action) {
+        this.action = action;
+    }
+
 
     /**
      * set WAF实例id
@@ -168,6 +191,16 @@ public class AntiModeCcReq  implements java.io.Serializable {
      */
     public AntiModeCcReq qps(Integer qps) {
         this.qps = qps;
+        return this;
+    }
+
+    /**
+     * set 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
+     *
+     * @param action
+     */
+    public AntiModeCcReq action(DenyActionCfg action) {
+        this.action = action;
         return this;
     }
 

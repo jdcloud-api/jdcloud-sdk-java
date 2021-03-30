@@ -73,7 +73,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private Boolean groupBy;
 
     /**
-     * 是否求速率
+     * 是否求速率。仅对累积类型指标有意义
      */
     private Boolean rate;
 
@@ -236,7 +236,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 是否求速率
+     * get 是否求速率。仅对累积类型指标有意义
      *
      * @return
      */
@@ -245,7 +245,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 是否求速率
+     * set 是否求速率。仅对累积类型指标有意义
      *
      * @param rate
      */
@@ -415,7 +415,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 是否求速率
+     * set 是否求速率。仅对累积类型指标有意义
      *
      * @param rate
      */

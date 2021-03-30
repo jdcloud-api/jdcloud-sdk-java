@@ -55,14 +55,9 @@ public class DomainInfo  implements java.io.Serializable {
     private String dnsType;
 
     /**
-     * 备用cname
+     * cname
      */
-    private String backupCname;
-
-    /**
-     * 是否切清洗，0-否，1-是
-     */
-    private Integer enable2Dos;
+    private String cname;
 
 
     /**
@@ -138,39 +133,21 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 备用cname
+     * get cname
      *
      * @return
      */
-    public String getBackupCname() {
-        return backupCname;
+    public String getCname() {
+        return cname;
     }
 
     /**
-     * set 备用cname
+     * set cname
      *
-     * @param backupCname
+     * @param cname
      */
-    public void setBackupCname(String backupCname) {
-        this.backupCname = backupCname;
-    }
-
-    /**
-     * get 是否切清洗，0-否，1-是
-     *
-     * @return
-     */
-    public Integer getEnable2Dos() {
-        return enable2Dos;
-    }
-
-    /**
-     * set 是否切清洗，0-否，1-是
-     *
-     * @param enable2Dos
-     */
-    public void setEnable2Dos(Integer enable2Dos) {
-        this.enable2Dos = enable2Dos;
+    public void setCname(String cname) {
+        this.cname = cname;
     }
 
 
@@ -215,22 +192,12 @@ public class DomainInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 备用cname
+     * set cname
      *
-     * @param backupCname
+     * @param cname
      */
-    public DomainInfo backupCname(String backupCname) {
-        this.backupCname = backupCname;
-        return this;
-    }
-
-    /**
-     * set 是否切清洗，0-否，1-是
-     *
-     * @param enable2Dos
-     */
-    public DomainInfo enable2Dos(Integer enable2Dos) {
-        this.enable2Dos = enable2Dos;
+    public DomainInfo cname(String cname) {
+        this.cname = cname;
         return this;
     }
 

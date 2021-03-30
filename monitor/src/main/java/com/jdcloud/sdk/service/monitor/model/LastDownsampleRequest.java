@@ -33,7 +33,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 /**
  * 根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
  */
-public class DescribeOneDataPointRequest extends JdcloudRequest implements java.io.Serializable {
+public class LastDownsampleRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -85,6 +85,11 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      * 聚合方式：max avg min等,用于将维度内一个周期数据聚合为一个点的聚合方式,默认last
      */
     private String downAggrType;
+
+    /**
+     * 时间偏移，可传入30s、1m、1h、1d等数字+单位的形式(其中s秒，m分，h时，d天)，当业务侧数据上报存在延迟时，可以传入该参数，该参数会使查询的时间段整体向前偏移.偏移后的开始时间若早于30天前,则开始时间自动设置为30天前;若偏移后结束时间早于30天前，则无效
+     */
+    private String timeOffset;
 
     /**
      * 地域 Id
@@ -264,6 +269,24 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
     }
 
     /**
+     * get 时间偏移，可传入30s、1m、1h、1d等数字+单位的形式(其中s秒，m分，h时，d天)，当业务侧数据上报存在延迟时，可以传入该参数，该参数会使查询的时间段整体向前偏移.偏移后的开始时间若早于30天前,则开始时间自动设置为30天前;若偏移后结束时间早于30天前，则无效
+     *
+     * @return
+     */
+    public String getTimeOffset() {
+        return timeOffset;
+    }
+
+    /**
+     * set 时间偏移，可传入30s、1m、1h、1d等数字+单位的形式(其中s秒，m分，h时，d天)，当业务侧数据上报存在延迟时，可以传入该参数，该参数会使查询的时间段整体向前偏移.偏移后的开始时间若早于30天前,则开始时间自动设置为30天前;若偏移后结束时间早于30天前，则无效
+     *
+     * @param timeOffset
+     */
+    public void setTimeOffset(String timeOffset) {
+        this.timeOffset = timeOffset;
+    }
+
+    /**
      * get 地域 Id
      *
      * @return
@@ -305,7 +328,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param serviceCode
      */
-    public DescribeOneDataPointRequest serviceCode(String serviceCode) {
+    public LastDownsampleRequest serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
@@ -315,7 +338,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param dimension
      */
-    public DescribeOneDataPointRequest dimension(String dimension) {
+    public LastDownsampleRequest dimension(String dimension) {
         this.dimension = dimension;
         return this;
     }
@@ -325,7 +348,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param resourceId
      */
-    public DescribeOneDataPointRequest resourceId(String resourceId) {
+    public LastDownsampleRequest resourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
@@ -335,7 +358,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param tags
      */
-    public DescribeOneDataPointRequest tags(List<TagFilter> tags) {
+    public LastDownsampleRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
@@ -345,7 +368,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param startTime
      */
-    public DescribeOneDataPointRequest startTime(String startTime) {
+    public LastDownsampleRequest startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -355,7 +378,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param endTime
      */
-    public DescribeOneDataPointRequest endTime(String endTime) {
+    public LastDownsampleRequest endTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -365,7 +388,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param timeInterval
      */
-    public DescribeOneDataPointRequest timeInterval(String timeInterval) {
+    public LastDownsampleRequest timeInterval(String timeInterval) {
         this.timeInterval = timeInterval;
         return this;
     }
@@ -375,7 +398,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param aggrType
      */
-    public DescribeOneDataPointRequest aggrType(String aggrType) {
+    public LastDownsampleRequest aggrType(String aggrType) {
         this.aggrType = aggrType;
         return this;
     }
@@ -385,8 +408,18 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param downAggrType
      */
-    public DescribeOneDataPointRequest downAggrType(String downAggrType) {
+    public LastDownsampleRequest downAggrType(String downAggrType) {
         this.downAggrType = downAggrType;
+        return this;
+    }
+
+    /**
+     * set 时间偏移，可传入30s、1m、1h、1d等数字+单位的形式(其中s秒，m分，h时，d天)，当业务侧数据上报存在延迟时，可以传入该参数，该参数会使查询的时间段整体向前偏移.偏移后的开始时间若早于30天前,则开始时间自动设置为30天前;若偏移后结束时间早于30天前，则无效
+     *
+     * @param timeOffset
+     */
+    public LastDownsampleRequest timeOffset(String timeOffset) {
+        this.timeOffset = timeOffset;
         return this;
     }
 
@@ -395,7 +428,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param regionId
      */
-    public DescribeOneDataPointRequest regionId(String regionId) {
+    public LastDownsampleRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -405,7 +438,7 @@ public class DescribeOneDataPointRequest extends JdcloudRequest implements java.
      *
      * @param metric
      */
-    public DescribeOneDataPointRequest metric(String metric) {
+    public LastDownsampleRequest metric(String metric) {
         this.metric = metric;
         return this;
     }

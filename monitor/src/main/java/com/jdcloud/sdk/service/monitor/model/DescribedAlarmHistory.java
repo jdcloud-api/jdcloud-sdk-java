@@ -55,6 +55,11 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
     private Long durationTimes;
 
     /**
+     * 是否是一键告警 (1-一键告警  0-非一键告警)
+     */
+    private Long isOneClickAlarm;
+
+    /**
      * 告警持续时间，单位分钟
      */
     private Long noticeDurationTime;
@@ -200,6 +205,24 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
      */
     public void setDurationTimes(Long durationTimes) {
         this.durationTimes = durationTimes;
+    }
+
+    /**
+     * get 是否是一键告警 (1-一键告警  0-非一键告警)
+     *
+     * @return
+     */
+    public Long getIsOneClickAlarm() {
+        return isOneClickAlarm;
+    }
+
+    /**
+     * set 是否是一键告警 (1-一键告警  0-非一键告警)
+     *
+     * @param isOneClickAlarm
+     */
+    public void setIsOneClickAlarm(Long isOneClickAlarm) {
+        this.isOneClickAlarm = isOneClickAlarm;
     }
 
     /**
@@ -510,6 +533,16 @@ public class DescribedAlarmHistory  implements java.io.Serializable {
      */
     public DescribedAlarmHistory durationTimes(Long durationTimes) {
         this.durationTimes = durationTimes;
+        return this;
+    }
+
+    /**
+     * set 是否是一键告警 (1-一键告警  0-非一键告警)
+     *
+     * @param isOneClickAlarm
+     */
+    public DescribedAlarmHistory isOneClickAlarm(Long isOneClickAlarm) {
+        this.isOneClickAlarm = isOneClickAlarm;
         return this;
     }
 

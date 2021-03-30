@@ -217,6 +217,21 @@ public class EsLogEvent  implements java.io.Serializable {
      */
     private String antiRespRaw;
 
+    /**
+     * 来源地域信息
+     */
+    private String antiGeo;
+
+    /**
+     * 指纹ID
+     */
+    private String antiRiskFid;
+
+    /**
+     * 指纹采集详细信息
+     */
+    private String antiRiskRaw;
+
 
     /**
      * get 产生时间
@@ -884,6 +899,60 @@ public class EsLogEvent  implements java.io.Serializable {
         this.antiRespRaw = antiRespRaw;
     }
 
+    /**
+     * get 来源地域信息
+     *
+     * @return
+     */
+    public String getAntiGeo() {
+        return antiGeo;
+    }
+
+    /**
+     * set 来源地域信息
+     *
+     * @param antiGeo
+     */
+    public void setAntiGeo(String antiGeo) {
+        this.antiGeo = antiGeo;
+    }
+
+    /**
+     * get 指纹ID
+     *
+     * @return
+     */
+    public String getAntiRiskFid() {
+        return antiRiskFid;
+    }
+
+    /**
+     * set 指纹ID
+     *
+     * @param antiRiskFid
+     */
+    public void setAntiRiskFid(String antiRiskFid) {
+        this.antiRiskFid = antiRiskFid;
+    }
+
+    /**
+     * get 指纹采集详细信息
+     *
+     * @return
+     */
+    public String getAntiRiskRaw() {
+        return antiRiskRaw;
+    }
+
+    /**
+     * set 指纹采集详细信息
+     *
+     * @param antiRiskRaw
+     */
+    public void setAntiRiskRaw(String antiRiskRaw) {
+        this.antiRiskRaw = antiRiskRaw;
+    }
+
 
     /**
      * set 产生时间
@@ -1252,6 +1321,36 @@ public class EsLogEvent  implements java.io.Serializable {
      */
     public EsLogEvent antiRespRaw(String antiRespRaw) {
         this.antiRespRaw = antiRespRaw;
+        return this;
+    }
+
+    /**
+     * set 来源地域信息
+     *
+     * @param antiGeo
+     */
+    public EsLogEvent antiGeo(String antiGeo) {
+        this.antiGeo = antiGeo;
+        return this;
+    }
+
+    /**
+     * set 指纹ID
+     *
+     * @param antiRiskFid
+     */
+    public EsLogEvent antiRiskFid(String antiRiskFid) {
+        this.antiRiskFid = antiRiskFid;
+        return this;
+    }
+
+    /**
+     * set 指纹采集详细信息
+     *
+     * @param antiRiskRaw
+     */
+    public EsLogEvent antiRiskRaw(String antiRiskRaw) {
+        this.antiRiskRaw = antiRiskRaw;
         return this;
     }
 

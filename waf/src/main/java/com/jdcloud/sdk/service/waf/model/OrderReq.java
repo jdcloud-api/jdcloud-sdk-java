@@ -66,7 +66,7 @@ public class OrderReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private Integer startTime;
+    private Long startTime;
 
     /**
      * 实例id，除新建必传
@@ -105,6 +105,16 @@ public class OrderReq  implements java.io.Serializable {
      */
     @Required
     private Integer extraBitsLimit;
+
+    /**
+     * 云鼎的appCode
+     */
+    private String appCode;
+
+    /**
+     * 云鼎的serviceCode
+     */
+    private String serviceCode;
 
 
     /**
@@ -184,7 +194,7 @@ public class OrderReq  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getStartTime() {
+    public Long getStartTime() {
         return startTime;
     }
 
@@ -193,7 +203,7 @@ public class OrderReq  implements java.io.Serializable {
      *
      * @param startTime
      */
-    public void setStartTime(Integer startTime) {
+    public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
 
@@ -305,6 +315,42 @@ public class OrderReq  implements java.io.Serializable {
         this.extraBitsLimit = extraBitsLimit;
     }
 
+    /**
+     * get 云鼎的appCode
+     *
+     * @return
+     */
+    public String getAppCode() {
+        return appCode;
+    }
+
+    /**
+     * set 云鼎的appCode
+     *
+     * @param appCode
+     */
+    public void setAppCode(String appCode) {
+        this.appCode = appCode;
+    }
+
+    /**
+     * get 云鼎的serviceCode
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 云鼎的serviceCode
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
 
     /**
      * set 地域信息, hb_bgp, hn, hd_bgp 企业版支持两个，旗舰版支持3个，多个以 , 分隔
@@ -351,7 +397,7 @@ public class OrderReq  implements java.io.Serializable {
      *
      * @param startTime
      */
-    public OrderReq startTime(Integer startTime) {
+    public OrderReq startTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -413,6 +459,26 @@ public class OrderReq  implements java.io.Serializable {
      */
     public OrderReq extraBitsLimit(Integer extraBitsLimit) {
         this.extraBitsLimit = extraBitsLimit;
+        return this;
+    }
+
+    /**
+     * set 云鼎的appCode
+     *
+     * @param appCode
+     */
+    public OrderReq appCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+
+    /**
+     * set 云鼎的serviceCode
+     *
+     * @param serviceCode
+     */
+    public OrderReq serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 

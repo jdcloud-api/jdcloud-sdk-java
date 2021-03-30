@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.waf.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 使能risk
+ * 使能数据风控
  */
 public class EnableRiskResponse extends JdcloudResponse<EnableRiskResult> implements java.io.Serializable {
 

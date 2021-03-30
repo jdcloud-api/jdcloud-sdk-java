@@ -35,17 +35,17 @@ public class AttackInfo  implements java.io.Serializable {
     /**
      * 自定义规则防护
      */
-    private Integer aclAnti;
+    private Long aclAnti;
 
     /**
      * cc防护
      */
-    private String ccAnti;
+    private Long ccAnti;
 
     /**
      * web防护
      */
-    private String wafAnti;
+    private Long wafAnti;
 
 
     /**
@@ -53,7 +53,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getAclAnti() {
+    public Long getAclAnti() {
         return aclAnti;
     }
 
@@ -62,7 +62,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @param aclAnti
      */
-    public void setAclAnti(Integer aclAnti) {
+    public void setAclAnti(Long aclAnti) {
         this.aclAnti = aclAnti;
     }
 
@@ -71,7 +71,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public String getCcAnti() {
+    public Long getCcAnti() {
         return ccAnti;
     }
 
@@ -80,7 +80,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @param ccAnti
      */
-    public void setCcAnti(String ccAnti) {
+    public void setCcAnti(Long ccAnti) {
         this.ccAnti = ccAnti;
     }
 
@@ -89,7 +89,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public String getWafAnti() {
+    public Long getWafAnti() {
         return wafAnti;
     }
 
@@ -98,7 +98,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @param wafAnti
      */
-    public void setWafAnti(String wafAnti) {
+    public void setWafAnti(Long wafAnti) {
         this.wafAnti = wafAnti;
     }
 
@@ -108,7 +108,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @param aclAnti
      */
-    public AttackInfo aclAnti(Integer aclAnti) {
+    public AttackInfo aclAnti(Long aclAnti) {
         this.aclAnti = aclAnti;
         return this;
     }
@@ -118,7 +118,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @param ccAnti
      */
-    public AttackInfo ccAnti(String ccAnti) {
+    public AttackInfo ccAnti(Long ccAnti) {
         this.ccAnti = ccAnti;
         return this;
     }
@@ -128,7 +128,7 @@ public class AttackInfo  implements java.io.Serializable {
      *
      * @param wafAnti
      */
-    public AttackInfo wafAnti(String wafAnti) {
+    public AttackInfo wafAnti(Long wafAnti) {
         this.wafAnti = wafAnti;
         return this;
     }

@@ -35,7 +35,7 @@ public class RuleOptionDetail  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 规则触发条件,与模块参数同时指定时，优先使用rules
+     * 规则触发条件,与模板参数同时指定时，优先使用rules
      */
     private List<BasicRuleDetail> rules;
 
@@ -46,7 +46,7 @@ public class RuleOptionDetail  implements java.io.Serializable {
 
 
     /**
-     * get 规则触发条件,与模块参数同时指定时，优先使用rules
+     * get 规则触发条件,与模板参数同时指定时，优先使用rules
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class RuleOptionDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 规则触发条件,与模块参数同时指定时，优先使用rules
+     * set 规则触发条件,与模板参数同时指定时，优先使用rules
      *
      * @param rules
      */
@@ -83,7 +83,7 @@ public class RuleOptionDetail  implements java.io.Serializable {
 
 
     /**
-     * set 规则触发条件,与模块参数同时指定时，优先使用rules
+     * set 规则触发条件,与模板参数同时指定时，优先使用rules
      *
      * @param rules
      */
@@ -104,7 +104,7 @@ public class RuleOptionDetail  implements java.io.Serializable {
 
 
     /**
-     * add item to 规则触发条件,与模块参数同时指定时，优先使用rules
+     * add item to 规则触发条件,与模板参数同时指定时，优先使用rules
      *
      * @param rule
      */

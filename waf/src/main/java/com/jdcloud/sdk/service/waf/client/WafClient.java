@@ -31,15 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.waf.model.DelBotUsrRuleRequest;
-import com.jdcloud.sdk.service.waf.model.DelBotUsrRuleResponse;
-import com.jdcloud.sdk.service.waf.client.DelBotUsrRuleExecutor;
 import com.jdcloud.sdk.service.waf.model.ListWafFilterRequest;
 import com.jdcloud.sdk.service.waf.model.ListWafFilterResponse;
 import com.jdcloud.sdk.service.waf.client.ListWafFilterExecutor;
-import com.jdcloud.sdk.service.waf.model.AddIpsRequest;
-import com.jdcloud.sdk.service.waf.model.AddIpsResponse;
-import com.jdcloud.sdk.service.waf.client.AddIpsExecutor;
+import com.jdcloud.sdk.service.waf.model.ListRiskEventsRequest;
+import com.jdcloud.sdk.service.waf.model.ListRiskEventsResponse;
+import com.jdcloud.sdk.service.waf.client.ListRiskEventsExecutor;
 import com.jdcloud.sdk.service.waf.model.GetQpsDataRequest;
 import com.jdcloud.sdk.service.waf.model.GetQpsDataResponse;
 import com.jdcloud.sdk.service.waf.client.GetQpsDataExecutor;
@@ -49,30 +46,27 @@ import com.jdcloud.sdk.service.waf.client.SetBotStdRulesExecutor;
 import com.jdcloud.sdk.service.waf.model.AddDomainRequest;
 import com.jdcloud.sdk.service.waf.model.AddDomainResponse;
 import com.jdcloud.sdk.service.waf.client.AddDomainExecutor;
-import com.jdcloud.sdk.service.waf.model.UpdateIpsRequest;
-import com.jdcloud.sdk.service.waf.model.UpdateIpsResponse;
-import com.jdcloud.sdk.service.waf.client.UpdateIpsExecutor;
+import com.jdcloud.sdk.service.waf.model.DelRiskEventsRequest;
+import com.jdcloud.sdk.service.waf.model.DelRiskEventsResponse;
+import com.jdcloud.sdk.service.waf.client.DelRiskEventsExecutor;
 import com.jdcloud.sdk.service.waf.model.DeleteDomainRequest;
 import com.jdcloud.sdk.service.waf.model.DeleteDomainResponse;
 import com.jdcloud.sdk.service.waf.client.DeleteDomainExecutor;
-import com.jdcloud.sdk.service.waf.model.CreateInstanceRequest;
-import com.jdcloud.sdk.service.waf.model.CreateInstanceResponse;
-import com.jdcloud.sdk.service.waf.client.CreateInstanceExecutor;
-import com.jdcloud.sdk.service.waf.model.EnableBotRequest;
-import com.jdcloud.sdk.service.waf.model.EnableBotResponse;
-import com.jdcloud.sdk.service.waf.client.EnableBotExecutor;
+import com.jdcloud.sdk.service.waf.model.GetAntiEventRequest;
+import com.jdcloud.sdk.service.waf.model.GetAntiEventResponse;
+import com.jdcloud.sdk.service.waf.client.GetAntiEventExecutor;
 import com.jdcloud.sdk.service.waf.model.BindCertRequest;
 import com.jdcloud.sdk.service.waf.model.BindCertResponse;
 import com.jdcloud.sdk.service.waf.client.BindCertExecutor;
-import com.jdcloud.sdk.service.waf.model.UpdateDomainRequest;
-import com.jdcloud.sdk.service.waf.model.UpdateDomainResponse;
-import com.jdcloud.sdk.service.waf.client.UpdateDomainExecutor;
 import com.jdcloud.sdk.service.waf.model.ListMainCfgRequest;
 import com.jdcloud.sdk.service.waf.model.ListMainCfgResponse;
 import com.jdcloud.sdk.service.waf.client.ListMainCfgExecutor;
-import com.jdcloud.sdk.service.waf.model.ListDomainsRequest;
-import com.jdcloud.sdk.service.waf.model.ListDomainsResponse;
-import com.jdcloud.sdk.service.waf.client.ListDomainsExecutor;
+import com.jdcloud.sdk.service.waf.model.EnableBotThreatIpRequest;
+import com.jdcloud.sdk.service.waf.model.EnableBotThreatIpResponse;
+import com.jdcloud.sdk.service.waf.client.EnableBotThreatIpExecutor;
+import com.jdcloud.sdk.service.waf.model.SetBotThreatIpRuleRequest;
+import com.jdcloud.sdk.service.waf.model.SetBotThreatIpRuleResponse;
+import com.jdcloud.sdk.service.waf.client.SetBotThreatIpRuleExecutor;
 import com.jdcloud.sdk.service.waf.model.GetDomainAntiConfigRequest;
 import com.jdcloud.sdk.service.waf.model.GetDomainAntiConfigResponse;
 import com.jdcloud.sdk.service.waf.client.GetDomainAntiConfigExecutor;
@@ -82,9 +76,9 @@ import com.jdcloud.sdk.service.waf.client.AntiLevelWafExecutor;
 import com.jdcloud.sdk.service.waf.model.ListRiskJsRequest;
 import com.jdcloud.sdk.service.waf.model.ListRiskJsResponse;
 import com.jdcloud.sdk.service.waf.client.ListRiskJsExecutor;
-import com.jdcloud.sdk.service.waf.model.SetJsPageRequest;
-import com.jdcloud.sdk.service.waf.model.SetJsPageResponse;
-import com.jdcloud.sdk.service.waf.client.SetJsPageExecutor;
+import com.jdcloud.sdk.service.waf.model.DelRiskVarsRequest;
+import com.jdcloud.sdk.service.waf.model.DelRiskVarsResponse;
+import com.jdcloud.sdk.service.waf.client.DelRiskVarsExecutor;
 import com.jdcloud.sdk.service.waf.model.DescribeJsPagesRequest;
 import com.jdcloud.sdk.service.waf.model.DescribeJsPagesResponse;
 import com.jdcloud.sdk.service.waf.client.DescribeJsPagesExecutor;
@@ -106,6 +100,9 @@ import com.jdcloud.sdk.service.waf.client.SetWafRuleExecutor;
 import com.jdcloud.sdk.service.waf.model.EnableWafRequest;
 import com.jdcloud.sdk.service.waf.model.EnableWafResponse;
 import com.jdcloud.sdk.service.waf.client.EnableWafExecutor;
+import com.jdcloud.sdk.service.waf.model.DelRiskUsrListsRequest;
+import com.jdcloud.sdk.service.waf.model.DelRiskUsrListsResponse;
+import com.jdcloud.sdk.service.waf.client.DelRiskUsrListsExecutor;
 import com.jdcloud.sdk.service.waf.model.ListIpsRequest;
 import com.jdcloud.sdk.service.waf.model.ListIpsResponse;
 import com.jdcloud.sdk.service.waf.client.ListIpsExecutor;
@@ -115,39 +112,111 @@ import com.jdcloud.sdk.service.waf.client.DelRiskRuleExecutor;
 import com.jdcloud.sdk.service.waf.model.DescribeLbOutIpRequest;
 import com.jdcloud.sdk.service.waf.model.DescribeLbOutIpResponse;
 import com.jdcloud.sdk.service.waf.client.DescribeLbOutIpExecutor;
-import com.jdcloud.sdk.service.waf.model.GetBpsDataRequest;
-import com.jdcloud.sdk.service.waf.model.GetBpsDataResponse;
-import com.jdcloud.sdk.service.waf.client.GetBpsDataExecutor;
-import com.jdcloud.sdk.service.waf.model.DelWafRuleRequest;
-import com.jdcloud.sdk.service.waf.model.DelWafRuleResponse;
-import com.jdcloud.sdk.service.waf.client.DelWafRuleExecutor;
 import com.jdcloud.sdk.service.waf.model.GetAvailableCertForDomainRequest;
 import com.jdcloud.sdk.service.waf.model.GetAvailableCertForDomainResponse;
 import com.jdcloud.sdk.service.waf.client.GetAvailableCertForDomainExecutor;
-import com.jdcloud.sdk.service.waf.model.SetRiskRuleRequest;
-import com.jdcloud.sdk.service.waf.model.SetRiskRuleResponse;
-import com.jdcloud.sdk.service.waf.client.SetRiskRuleExecutor;
 import com.jdcloud.sdk.service.waf.model.DelJsPageRequest;
 import com.jdcloud.sdk.service.waf.model.DelJsPageResponse;
 import com.jdcloud.sdk.service.waf.client.DelJsPageExecutor;
-import com.jdcloud.sdk.service.waf.model.EnableUsrBotRequest;
-import com.jdcloud.sdk.service.waf.model.EnableUsrBotResponse;
-import com.jdcloud.sdk.service.waf.client.EnableUsrBotExecutor;
 import com.jdcloud.sdk.service.waf.model.ListWafRulesRequest;
 import com.jdcloud.sdk.service.waf.model.ListWafRulesResponse;
 import com.jdcloud.sdk.service.waf.client.ListWafRulesExecutor;
 import com.jdcloud.sdk.service.waf.model.ListBotStdRulesRequest;
 import com.jdcloud.sdk.service.waf.model.ListBotStdRulesResponse;
 import com.jdcloud.sdk.service.waf.client.ListBotStdRulesExecutor;
+import com.jdcloud.sdk.service.waf.model.EnableRiskAccountRequest;
+import com.jdcloud.sdk.service.waf.model.EnableRiskAccountResponse;
+import com.jdcloud.sdk.service.waf.client.EnableRiskAccountExecutor;
+import com.jdcloud.sdk.service.waf.model.SetRiskPolicyRequest;
+import com.jdcloud.sdk.service.waf.model.SetRiskPolicyResponse;
+import com.jdcloud.sdk.service.waf.client.SetRiskPolicyExecutor;
 import com.jdcloud.sdk.service.waf.model.EnableRiskRequest;
 import com.jdcloud.sdk.service.waf.model.EnableRiskResponse;
 import com.jdcloud.sdk.service.waf.client.EnableRiskExecutor;
-import com.jdcloud.sdk.service.waf.model.AntiModeWafRequest;
-import com.jdcloud.sdk.service.waf.model.AntiModeWafResponse;
-import com.jdcloud.sdk.service.waf.client.AntiModeWafExecutor;
 import com.jdcloud.sdk.service.waf.model.SetRiskJsRequest;
 import com.jdcloud.sdk.service.waf.model.SetRiskJsResponse;
 import com.jdcloud.sdk.service.waf.client.SetRiskJsExecutor;
+import com.jdcloud.sdk.service.waf.model.SetWafConditionRequest;
+import com.jdcloud.sdk.service.waf.model.SetWafConditionResponse;
+import com.jdcloud.sdk.service.waf.client.SetWafConditionExecutor;
+import com.jdcloud.sdk.service.waf.model.ListBotThreatIpRuleRequest;
+import com.jdcloud.sdk.service.waf.model.ListBotThreatIpRuleResponse;
+import com.jdcloud.sdk.service.waf.client.ListBotThreatIpRuleExecutor;
+import com.jdcloud.sdk.service.waf.model.UpdateBotUsrRuleRequest;
+import com.jdcloud.sdk.service.waf.model.UpdateBotUsrRuleResponse;
+import com.jdcloud.sdk.service.waf.client.UpdateBotUsrRuleExecutor;
+import com.jdcloud.sdk.service.waf.model.ListRiskUsrListsRequest;
+import com.jdcloud.sdk.service.waf.model.ListRiskUsrListsResponse;
+import com.jdcloud.sdk.service.waf.client.ListRiskUsrListsExecutor;
+import com.jdcloud.sdk.service.waf.model.DelBotUsrRuleRequest;
+import com.jdcloud.sdk.service.waf.model.DelBotUsrRuleResponse;
+import com.jdcloud.sdk.service.waf.client.DelBotUsrRuleExecutor;
+import com.jdcloud.sdk.service.waf.model.EnableRiskCtlRequest;
+import com.jdcloud.sdk.service.waf.model.EnableRiskCtlResponse;
+import com.jdcloud.sdk.service.waf.client.EnableRiskCtlExecutor;
+import com.jdcloud.sdk.service.waf.model.AddIpsRequest;
+import com.jdcloud.sdk.service.waf.model.AddIpsResponse;
+import com.jdcloud.sdk.service.waf.client.AddIpsExecutor;
+import com.jdcloud.sdk.service.waf.model.DelRiskPolicysRequest;
+import com.jdcloud.sdk.service.waf.model.DelRiskPolicysResponse;
+import com.jdcloud.sdk.service.waf.client.DelRiskPolicysExecutor;
+import com.jdcloud.sdk.service.waf.model.ListRiskConfDefaultRequest;
+import com.jdcloud.sdk.service.waf.model.ListRiskConfDefaultResponse;
+import com.jdcloud.sdk.service.waf.client.ListRiskConfDefaultExecutor;
+import com.jdcloud.sdk.service.waf.model.GetWafInstanceRequest;
+import com.jdcloud.sdk.service.waf.model.GetWafInstanceResponse;
+import com.jdcloud.sdk.service.waf.client.GetWafInstanceExecutor;
+import com.jdcloud.sdk.service.waf.model.UpdateIpsRequest;
+import com.jdcloud.sdk.service.waf.model.UpdateIpsResponse;
+import com.jdcloud.sdk.service.waf.client.UpdateIpsExecutor;
+import com.jdcloud.sdk.service.waf.model.CreateInstanceRequest;
+import com.jdcloud.sdk.service.waf.model.CreateInstanceResponse;
+import com.jdcloud.sdk.service.waf.client.CreateInstanceExecutor;
+import com.jdcloud.sdk.service.waf.model.EnableBotRequest;
+import com.jdcloud.sdk.service.waf.model.EnableBotResponse;
+import com.jdcloud.sdk.service.waf.client.EnableBotExecutor;
+import com.jdcloud.sdk.service.waf.model.UpdateDomainRequest;
+import com.jdcloud.sdk.service.waf.model.UpdateDomainResponse;
+import com.jdcloud.sdk.service.waf.client.UpdateDomainExecutor;
+import com.jdcloud.sdk.service.waf.model.ListDomainsRequest;
+import com.jdcloud.sdk.service.waf.model.ListDomainsResponse;
+import com.jdcloud.sdk.service.waf.client.ListDomainsExecutor;
+import com.jdcloud.sdk.service.waf.model.SetJsPageRequest;
+import com.jdcloud.sdk.service.waf.model.SetJsPageResponse;
+import com.jdcloud.sdk.service.waf.client.SetJsPageExecutor;
+import com.jdcloud.sdk.service.waf.model.ListRiskVarsRequest;
+import com.jdcloud.sdk.service.waf.model.ListRiskVarsResponse;
+import com.jdcloud.sdk.service.waf.client.ListRiskVarsExecutor;
+import com.jdcloud.sdk.service.waf.model.ListRiskPolicysRequest;
+import com.jdcloud.sdk.service.waf.model.ListRiskPolicysResponse;
+import com.jdcloud.sdk.service.waf.client.ListRiskPolicysExecutor;
+import com.jdcloud.sdk.service.waf.model.GetEsLogDetailRequest;
+import com.jdcloud.sdk.service.waf.model.GetEsLogDetailResponse;
+import com.jdcloud.sdk.service.waf.client.GetEsLogDetailExecutor;
+import com.jdcloud.sdk.service.waf.model.GetBpsDataRequest;
+import com.jdcloud.sdk.service.waf.model.GetBpsDataResponse;
+import com.jdcloud.sdk.service.waf.client.GetBpsDataExecutor;
+import com.jdcloud.sdk.service.waf.model.DelWafRuleRequest;
+import com.jdcloud.sdk.service.waf.model.DelWafRuleResponse;
+import com.jdcloud.sdk.service.waf.client.DelWafRuleExecutor;
+import com.jdcloud.sdk.service.waf.model.SetRiskRuleRequest;
+import com.jdcloud.sdk.service.waf.model.SetRiskRuleResponse;
+import com.jdcloud.sdk.service.waf.client.SetRiskRuleExecutor;
+import com.jdcloud.sdk.service.waf.model.SetRiskEventRequest;
+import com.jdcloud.sdk.service.waf.model.SetRiskEventResponse;
+import com.jdcloud.sdk.service.waf.client.SetRiskEventExecutor;
+import com.jdcloud.sdk.service.waf.model.EnableUsrBotRequest;
+import com.jdcloud.sdk.service.waf.model.EnableUsrBotResponse;
+import com.jdcloud.sdk.service.waf.client.EnableUsrBotExecutor;
+import com.jdcloud.sdk.service.waf.model.ListRiskEventVarsRequest;
+import com.jdcloud.sdk.service.waf.model.ListRiskEventVarsResponse;
+import com.jdcloud.sdk.service.waf.client.ListRiskEventVarsExecutor;
+import com.jdcloud.sdk.service.waf.model.AntiModeWafRequest;
+import com.jdcloud.sdk.service.waf.model.AntiModeWafResponse;
+import com.jdcloud.sdk.service.waf.client.AntiModeWafExecutor;
+import com.jdcloud.sdk.service.waf.model.SetRiskUsrListRequest;
+import com.jdcloud.sdk.service.waf.model.SetRiskUsrListResponse;
+import com.jdcloud.sdk.service.waf.client.SetRiskUsrListExecutor;
 import com.jdcloud.sdk.service.waf.model.ListRiskRulesRequest;
 import com.jdcloud.sdk.service.waf.model.ListRiskRulesResponse;
 import com.jdcloud.sdk.service.waf.client.ListRiskRulesExecutor;
@@ -160,18 +229,21 @@ import com.jdcloud.sdk.service.waf.client.DelWafConditionExecutor;
 import com.jdcloud.sdk.service.waf.model.AddBotUsrRuleRequest;
 import com.jdcloud.sdk.service.waf.model.AddBotUsrRuleResponse;
 import com.jdcloud.sdk.service.waf.client.AddBotUsrRuleExecutor;
-import com.jdcloud.sdk.service.waf.model.SetWafConditionRequest;
-import com.jdcloud.sdk.service.waf.model.SetWafConditionResponse;
-import com.jdcloud.sdk.service.waf.client.SetWafConditionExecutor;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionsRequest;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionsResponse;
 import com.jdcloud.sdk.service.waf.client.ListWafConditionsExecutor;
+import com.jdcloud.sdk.service.waf.model.SetRiskEventVarsRequest;
+import com.jdcloud.sdk.service.waf.model.SetRiskEventVarsResponse;
+import com.jdcloud.sdk.service.waf.client.SetRiskEventVarsExecutor;
+import com.jdcloud.sdk.service.waf.model.DelRiskEventVarsRequest;
+import com.jdcloud.sdk.service.waf.model.DelRiskEventVarsResponse;
+import com.jdcloud.sdk.service.waf.client.DelRiskEventVarsExecutor;
 import com.jdcloud.sdk.service.waf.model.DelIpsRequest;
 import com.jdcloud.sdk.service.waf.model.DelIpsResponse;
 import com.jdcloud.sdk.service.waf.client.DelIpsExecutor;
-import com.jdcloud.sdk.service.waf.model.UpdateBotUsrRuleRequest;
-import com.jdcloud.sdk.service.waf.model.UpdateBotUsrRuleResponse;
-import com.jdcloud.sdk.service.waf.client.UpdateBotUsrRuleExecutor;
+import com.jdcloud.sdk.service.waf.model.SetRiskVarRequest;
+import com.jdcloud.sdk.service.waf.model.SetRiskVarResponse;
+import com.jdcloud.sdk.service.waf.client.SetRiskVarExecutor;
 
 /**
  * wafClient
@@ -223,17 +295,6 @@ public class WafClient extends JdcloudClient {
 
 
     /**
-     * 删除网站自定义类型bot规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DelBotUsrRuleResponse delBotUsrRule(DelBotUsrRuleRequest request) throws JdcloudSdkException {
-        return new DelBotUsrRuleExecutor().client(this).execute(request);
-    }
-
-    /**
      * 获取网站waf自定义防护过滤器
      *
      * @param request
@@ -245,14 +306,14 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 设置网站黑白名单ip配置
+     * 获取网站业务风控事件信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public AddIpsResponse addIps(AddIpsRequest request) throws JdcloudSdkException {
-        return new AddIpsExecutor().client(this).execute(request);
+    public ListRiskEventsResponse listRiskEvents(ListRiskEventsRequest request) throws JdcloudSdkException {
+        return new ListRiskEventsExecutor().client(this).execute(request);
     }
 
     /**
@@ -289,14 +350,14 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 更新网站黑白名单ip配置
+     * 删除事件信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateIpsResponse updateIps(UpdateIpsRequest request) throws JdcloudSdkException {
-        return new UpdateIpsExecutor().client(this).execute(request);
+    public DelRiskEventsResponse delRiskEvents(DelRiskEventsRequest request) throws JdcloudSdkException {
+        return new DelRiskEventsExecutor().client(this).execute(request);
     }
 
     /**
@@ -311,25 +372,14 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 
+     * 获取网站在一定时间内的报表详情。
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws JdcloudSdkException {
-        return new CreateInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 激活bot
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EnableBotResponse enableBot(EnableBotRequest request) throws JdcloudSdkException {
-        return new EnableBotExecutor().client(this).execute(request);
+    public GetAntiEventResponse getAntiEvent(GetAntiEventRequest request) throws JdcloudSdkException {
+        return new GetAntiEventExecutor().client(this).execute(request);
     }
 
     /**
@@ -344,17 +394,6 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 更新网站
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateDomainResponse updateDomain(UpdateDomainRequest request) throws JdcloudSdkException {
-        return new UpdateDomainExecutor().client(this).execute(request);
-    }
-
-    /**
      * 获取网站
      *
      * @param request
@@ -366,14 +405,25 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 获取网站列表
+     * 激活bot 威胁情报库
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public ListDomainsResponse listDomains(ListDomainsRequest request) throws JdcloudSdkException {
-        return new ListDomainsExecutor().client(this).execute(request);
+    public EnableBotThreatIpResponse enableBotThreatIp(EnableBotThreatIpRequest request) throws JdcloudSdkException {
+        return new EnableBotThreatIpExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置网站bot威胁情报库规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetBotThreatIpRuleResponse setBotThreatIpRule(SetBotThreatIpRuleRequest request) throws JdcloudSdkException {
+        return new SetBotThreatIpRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -410,14 +460,14 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 设置js插入页面
+     * 删除风险控制变量
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetJsPageResponse setJsPage(SetJsPageRequest request) throws JdcloudSdkException {
-        return new SetJsPageExecutor().client(this).execute(request);
+    public DelRiskVarsResponse delRiskVars(DelRiskVarsRequest request) throws JdcloudSdkException {
+        return new DelRiskVarsExecutor().client(this).execute(request);
     }
 
     /**
@@ -498,6 +548,17 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
+     * 删除风险控制用户自定义名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DelRiskUsrListsResponse delRiskUsrLists(DelRiskUsrListsRequest request) throws JdcloudSdkException {
+        return new DelRiskUsrListsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取网站黑白名单ip配置
      *
      * @param request
@@ -531,28 +592,6 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 获取网站在一定时间内的bps信息。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetBpsDataResponse getBpsData(GetBpsDataRequest request) throws JdcloudSdkException {
-        return new GetBpsDataExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除waf自定义规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DelWafRuleResponse delWafRule(DelWafRuleRequest request) throws JdcloudSdkException {
-        return new DelWafRuleExecutor().client(this).execute(request);
-    }
-
-    /**
      * 获取域名可用证书列表
      *
      * @param request
@@ -564,17 +603,6 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 新增网站业务风控防护规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetRiskRuleResponse setRiskRule(SetRiskRuleRequest request) throws JdcloudSdkException {
-        return new SetRiskRuleExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除js页面
      *
      * @param request
@@ -583,17 +611,6 @@ public class WafClient extends JdcloudClient {
      */
     public DelJsPageResponse delJsPage(DelJsPageRequest request) throws JdcloudSdkException {
         return new DelJsPageExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 激活自定义bot
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EnableUsrBotResponse enableUsrBot(EnableUsrBotRequest request) throws JdcloudSdkException {
-        return new EnableUsrBotExecutor().client(this).execute(request);
     }
 
     /**
@@ -619,7 +636,29 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 使能risk
+     * 使能账号安全
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableRiskAccountResponse enableRiskAccount(EnableRiskAccountRequest request) throws JdcloudSdkException {
+        return new EnableRiskAccountExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新增风险控制策略信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetRiskPolicyResponse setRiskPolicy(SetRiskPolicyRequest request) throws JdcloudSdkException {
+        return new SetRiskPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 使能数据风控
      *
      * @param request
      * @return
@@ -627,6 +666,292 @@ public class WafClient extends JdcloudClient {
      */
     public EnableRiskResponse enableRisk(EnableRiskRequest request) throws JdcloudSdkException {
         return new EnableRiskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置网站业务风控js插入页面
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetRiskJsResponse setRiskJs(SetRiskJsRequest request) throws JdcloudSdkException {
+        return new SetRiskJsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置网站waf自定义防护条件
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetWafConditionResponse setWafCondition(SetWafConditionRequest request) throws JdcloudSdkException {
+        return new SetWafConditionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站bot威胁情报库
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListBotThreatIpRuleResponse listBotThreatIpRule(ListBotThreatIpRuleRequest request) throws JdcloudSdkException {
+        return new ListBotThreatIpRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新网站自定义类型bot规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateBotUsrRuleResponse updateBotUsrRule(UpdateBotUsrRuleRequest request) throws JdcloudSdkException {
+        return new UpdateBotUsrRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站业务风控用户自定义名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListRiskUsrListsResponse listRiskUsrLists(ListRiskUsrListsRequest request) throws JdcloudSdkException {
+        return new ListRiskUsrListsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除网站自定义类型bot规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DelBotUsrRuleResponse delBotUsrRule(DelBotUsrRuleRequest request) throws JdcloudSdkException {
+        return new DelBotUsrRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 使能数据风控风险控制功能
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableRiskCtlResponse enableRiskCtl(EnableRiskCtlRequest request) throws JdcloudSdkException {
+        return new EnableRiskCtlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置网站黑白名单ip配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddIpsResponse addIps(AddIpsRequest request) throws JdcloudSdkException {
+        return new AddIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除网站风险控制策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DelRiskPolicysResponse delRiskPolicys(DelRiskPolicysRequest request) throws JdcloudSdkException {
+        return new DelRiskPolicysExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取风险控制事件信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListRiskConfDefaultResponse listRiskConfDefault(ListRiskConfDefaultRequest request) throws JdcloudSdkException {
+        return new ListRiskConfDefaultExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取实例ID及相关信息列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetWafInstanceResponse getWafInstance(GetWafInstanceRequest request) throws JdcloudSdkException {
+        return new GetWafInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新网站黑白名单ip配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateIpsResponse updateIps(UpdateIpsRequest request) throws JdcloudSdkException {
+        return new UpdateIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateInstanceResponse createInstance(CreateInstanceRequest request) throws JdcloudSdkException {
+        return new CreateInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 激活bot
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableBotResponse enableBot(EnableBotRequest request) throws JdcloudSdkException {
+        return new EnableBotExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新网站
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateDomainResponse updateDomain(UpdateDomainRequest request) throws JdcloudSdkException {
+        return new UpdateDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListDomainsResponse listDomains(ListDomainsRequest request) throws JdcloudSdkException {
+        return new ListDomainsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置js插入页面
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetJsPageResponse setJsPage(SetJsPageRequest request) throws JdcloudSdkException {
+        return new SetJsPageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站业务风控变量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListRiskVarsResponse listRiskVars(ListRiskVarsRequest request) throws JdcloudSdkException {
+        return new ListRiskVarsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站业务风控策略
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListRiskPolicysResponse listRiskPolicys(ListRiskPolicysRequest request) throws JdcloudSdkException {
+        return new ListRiskPolicysExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站在一定时间内的日志详情。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetEsLogDetailResponse getEsLogDetail(GetEsLogDetailRequest request) throws JdcloudSdkException {
+        return new GetEsLogDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站在一定时间内的bps信息。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetBpsDataResponse getBpsData(GetBpsDataRequest request) throws JdcloudSdkException {
+        return new GetBpsDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除waf自定义规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DelWafRuleResponse delWafRule(DelWafRuleRequest request) throws JdcloudSdkException {
+        return new DelWafRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新增网站业务风控防护规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetRiskRuleResponse setRiskRule(SetRiskRuleRequest request) throws JdcloudSdkException {
+        return new SetRiskRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新增风险控制事件信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetRiskEventResponse setRiskEvent(SetRiskEventRequest request) throws JdcloudSdkException {
+        return new SetRiskEventExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 激活自定义bot
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableUsrBotResponse enableUsrBot(EnableUsrBotRequest request) throws JdcloudSdkException {
+        return new EnableUsrBotExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站业务风控事件详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListRiskEventVarsResponse listRiskEventVars(ListRiskEventVarsRequest request) throws JdcloudSdkException {
+        return new ListRiskEventVarsExecutor().client(this).execute(request);
     }
 
     /**
@@ -641,14 +966,14 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 设置网站业务风控js插入页面
+     * 新增风险控制用户自定义名单信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetRiskJsResponse setRiskJs(SetRiskJsRequest request) throws JdcloudSdkException {
-        return new SetRiskJsExecutor().client(this).execute(request);
+    public SetRiskUsrListResponse setRiskUsrList(SetRiskUsrListRequest request) throws JdcloudSdkException {
+        return new SetRiskUsrListExecutor().client(this).execute(request);
     }
 
     /**
@@ -696,17 +1021,6 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 设置网站waf自定义防护条件
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetWafConditionResponse setWafCondition(SetWafConditionRequest request) throws JdcloudSdkException {
-        return new SetWafConditionExecutor().client(this).execute(request);
-    }
-
-    /**
      * 获取网站waf自定义防护条件
      *
      * @param request
@@ -715,6 +1029,28 @@ public class WafClient extends JdcloudClient {
      */
     public ListWafConditionsResponse listWafConditions(ListWafConditionsRequest request) throws JdcloudSdkException {
         return new ListWafConditionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 新增风险控制事件详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetRiskEventVarsResponse setRiskEventVars(SetRiskEventVarsRequest request) throws JdcloudSdkException {
+        return new SetRiskEventVarsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除事件及所属的策略、变量信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DelRiskEventVarsResponse delRiskEventVars(DelRiskEventVarsRequest request) throws JdcloudSdkException {
+        return new DelRiskEventVarsExecutor().client(this).execute(request);
     }
 
     /**
@@ -729,14 +1065,14 @@ public class WafClient extends JdcloudClient {
     }
 
     /**
-     * 更新网站自定义类型bot规则
+     * 设置风险控制变量
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public UpdateBotUsrRuleResponse updateBotUsrRule(UpdateBotUsrRuleRequest request) throws JdcloudSdkException {
-        return new UpdateBotUsrRuleExecutor().client(this).execute(request);
+    public SetRiskVarResponse setRiskVar(SetRiskVarRequest request) throws JdcloudSdkException {
+        return new SetRiskVarExecutor().client(this).execute(request);
     }
 
 

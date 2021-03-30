@@ -34,6 +34,11 @@ public class Datasource  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * customHttpHeader
+     */
+    private Object customHttpHeader;
+
+    /**
      * 数据源名称
      * Required:true
      */
@@ -59,6 +64,24 @@ public class Datasource  implements java.io.Serializable {
     @Required
     private String url;
 
+
+    /**
+     * get customHttpHeader
+     *
+     * @return
+     */
+    public Object getCustomHttpHeader() {
+        return customHttpHeader;
+    }
+
+    /**
+     * set customHttpHeader
+     *
+     * @param customHttpHeader
+     */
+    public void setCustomHttpHeader(Object customHttpHeader) {
+        this.customHttpHeader = customHttpHeader;
+    }
 
     /**
      * get 数据源名称
@@ -132,6 +155,16 @@ public class Datasource  implements java.io.Serializable {
         this.url = url;
     }
 
+
+    /**
+     * set customHttpHeader
+     *
+     * @param customHttpHeader
+     */
+    public Datasource customHttpHeader(Object customHttpHeader) {
+        this.customHttpHeader = customHttpHeader;
+        return this;
+    }
 
     /**
      * set 数据源名称

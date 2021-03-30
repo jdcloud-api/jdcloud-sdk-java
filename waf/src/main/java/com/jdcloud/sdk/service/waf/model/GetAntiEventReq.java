@@ -56,14 +56,19 @@ public class GetAntiEventReq  implements java.io.Serializable {
     private String remoteAddr;
 
     /**
-     * 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * 状态码，检索字段
+     */
+    private String antiStatus;
+
+    /**
+     * 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      * Required:true
      */
     @Required
     private Integer start;
 
     /**
-     * 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      * Required:true
      */
     @Required
@@ -167,7 +172,25 @@ public class GetAntiEventReq  implements java.io.Serializable {
     }
 
     /**
-     * get 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * get 状态码，检索字段
+     *
+     * @return
+     */
+    public String getAntiStatus() {
+        return antiStatus;
+    }
+
+    /**
+     * set 状态码，检索字段
+     *
+     * @param antiStatus
+     */
+    public void setAntiStatus(String antiStatus) {
+        this.antiStatus = antiStatus;
+    }
+
+    /**
+     * get 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @return
      */
@@ -176,7 +199,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     }
 
     /**
-     * set 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param start
      */
@@ -185,7 +208,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     }
 
     /**
-     * get 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * get 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @return
      */
@@ -194,7 +217,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     }
 
     /**
-     * set 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param end
      */
@@ -316,7 +339,17 @@ public class GetAntiEventReq  implements java.io.Serializable {
     }
 
     /**
-     * set 开始时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 状态码，检索字段
+     *
+     * @param antiStatus
+     */
+    public GetAntiEventReq antiStatus(String antiStatus) {
+        this.antiStatus = antiStatus;
+        return this;
+    }
+
+    /**
+     * set 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param start
      */
@@ -326,7 +359,7 @@ public class GetAntiEventReq  implements java.io.Serializable {
     }
 
     /**
-     * set 结束时间戳，单位毫秒，时间间隔要求大于5分钟，小于30天。
+     * set 结束时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @param end
      */

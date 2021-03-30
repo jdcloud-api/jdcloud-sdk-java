@@ -24,64 +24,16 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
-import java.util.List;
-import java.util.ArrayList;
-import com.jdcloud.sdk.service.monitor.model.LastDownsampleRespItem;
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 根据不同的聚合方式将metric的数据聚合为一个点。downAggrType：last(最后一个点)、max(最大值)、min(最小值)、avg(平均值)。该接口返回值为上报metric的原始值，没有做单位转换。metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
  */
-public class DescribeOneDataPointResult extends JdcloudResult implements java.io.Serializable {
+public class LastDownsampleResponse extends JdcloudResponse<LastDownsampleResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * items
-     */
-    private List<LastDownsampleRespItem> items;
 
 
-    /**
-     * get items
-     *
-     * @return
-     */
-    public List<LastDownsampleRespItem> getItems() {
-        return items;
-    }
-
-    /**
-     * set items
-     *
-     * @param items
-     */
-    public void setItems(List<LastDownsampleRespItem> items) {
-        this.items = items;
-    }
-
-
-    /**
-     * set items
-     *
-     * @param items
-     */
-    public DescribeOneDataPointResult items(List<LastDownsampleRespItem> items) {
-        this.items = items;
-        return this;
-    }
-
-
-    /**
-     * add item to items
-     *
-     * @param item
-     */
-    public void addItem(LastDownsampleRespItem item) {
-        if (this.items == null) {
-            this.items = new ArrayList<>();
-        }
-        this.items.add(item);
-    }
 
 }

@@ -1,8 +1,19 @@
 # 更新历史 #
-API版本：2.0.2
+API版本：2.4.5
 
 |发布时间|版本号|更新|说明|
 |---|---|---|---|
+|2021-03-28|2.4.5|新增接口|新增describeCustomMetricData|
+|2020-12-28|2.4.4|修改接口|describeRawMetricData接口返回结果支持多序列|
+|2020-12-23|2.4.3|修改接口|describeRawMetricData接口改为post请求，修改接口参数|
+|2020-12-16|2.4.2|接口增加参数|describeRawMetricData接口增加tags、groupBy参数|
+|2020-11-20|2.4.1|新增接口|新增查询原始数据的接口|
+|2020-08-07|2.4.0|新增接口|新增dashboard改版相关接口|
+|2020-07-30|2.3.0|新增接口|新增testWebhook接口|
+|2020-06-29|2.2.0|新增接口|新增describeTagKeys和describeTagValues接口|
+|2020-04-15|2.1.1|修改接口|lastdwonsample接口增加timeOffset参数|
+|2020-03-26|2.1.0|新增接口|新增一键报警相关接口|
+|2020-03-12|2.0.3|修改接口|规则相关接口增加dataOwner参数|
 |2019-09-02|2.0.2|修改接口|修改describeMetrics接口参数|
 |2019-09-02|2.0.1|修改接口|概览页重构，describeAlarmHistory接口新增region参数|
 |2019-09-02|2.0.0|接口升级|规则、模板、资源监控查图相关

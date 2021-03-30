@@ -34,6 +34,11 @@ public class BasicDatasource  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * customHttpHeader
+     */
+    private Object customHttpHeader;
+
+    /**
      * opentsdbExtend
      */
     private OpentsdbExtend opentsdbExtend;
@@ -52,6 +57,24 @@ public class BasicDatasource  implements java.io.Serializable {
     @Required
     private String url;
 
+
+    /**
+     * get customHttpHeader
+     *
+     * @return
+     */
+    public Object getCustomHttpHeader() {
+        return customHttpHeader;
+    }
+
+    /**
+     * set customHttpHeader
+     *
+     * @param customHttpHeader
+     */
+    public void setCustomHttpHeader(Object customHttpHeader) {
+        this.customHttpHeader = customHttpHeader;
+    }
 
     /**
      * get opentsdbExtend
@@ -107,6 +130,16 @@ public class BasicDatasource  implements java.io.Serializable {
         this.url = url;
     }
 
+
+    /**
+     * set customHttpHeader
+     *
+     * @param customHttpHeader
+     */
+    public BasicDatasource customHttpHeader(Object customHttpHeader) {
+        this.customHttpHeader = customHttpHeader;
+        return this;
+    }
 
     /**
      * set opentsdbExtend

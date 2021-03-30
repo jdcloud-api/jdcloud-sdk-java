@@ -39,6 +39,7 @@ import com.jdcloud.sdk.service.waf.model.FilterHeaderConf;
 import com.jdcloud.sdk.service.waf.model.FilterSenseConf;
 import com.jdcloud.sdk.service.waf.model.StatusConf;
 import com.jdcloud.sdk.service.waf.model.UriRewriteConf;
+import com.jdcloud.sdk.service.waf.model.RiskConf;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -151,7 +152,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     /**
      * risk配置
      */
-    private EnableConf riskConf;
+    private RiskConf riskConf;
 
 
     /**
@@ -519,7 +520,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public EnableConf getRiskConf() {
+    public RiskConf getRiskConf() {
         return riskConf;
     }
 
@@ -528,7 +529,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      *
      * @param riskConf
      */
-    public void setRiskConf(EnableConf riskConf) {
+    public void setRiskConf(RiskConf riskConf) {
         this.riskConf = riskConf;
     }
 
@@ -738,7 +739,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      *
      * @param riskConf
      */
-    public GetDomainAntiConfigResult riskConf(EnableConf riskConf) {
+    public GetDomainAntiConfigResult riskConf(RiskConf riskConf) {
         this.riskConf = riskConf;
         return this;
     }

@@ -67,11 +67,39 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     private String uri;
 
     /**
-     * 动作 支持notice / verify@captcha
+     * 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
      * Required:true
      */
     @Required
     private String action;
+
+    /**
+     * 请求方法 支持 POST:1,GET:1,PUT:1
+     * Required:true
+     */
+    @Required
+    private String methods;
+
+    /**
+     * 场景 支持 account_login / account_register / data_risk_control
+     * Required:true
+     */
+    @Required
+    private String sceneRef;
+
+    /**
+     * 事件 支持 passwd:BODY.passwd,username:ARGS.username
+     * Required:true
+     */
+    @Required
+    private String event;
+
+    /**
+     * 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+     * Required:true
+     */
+    @Required
+    private String redirection;
 
 
     /**
@@ -165,7 +193,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get 动作 支持notice / verify@captcha
+     * get 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
      *
      * @return
      */
@@ -174,12 +202,84 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作 支持notice / verify@captcha
+     * set 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
      *
      * @param action
      */
     public void setAction(String action) {
         this.action = action;
+    }
+
+    /**
+     * get 请求方法 支持 POST:1,GET:1,PUT:1
+     *
+     * @return
+     */
+    public String getMethods() {
+        return methods;
+    }
+
+    /**
+     * set 请求方法 支持 POST:1,GET:1,PUT:1
+     *
+     * @param methods
+     */
+    public void setMethods(String methods) {
+        this.methods = methods;
+    }
+
+    /**
+     * get 场景 支持 account_login / account_register / data_risk_control
+     *
+     * @return
+     */
+    public String getSceneRef() {
+        return sceneRef;
+    }
+
+    /**
+     * set 场景 支持 account_login / account_register / data_risk_control
+     *
+     * @param sceneRef
+     */
+    public void setSceneRef(String sceneRef) {
+        this.sceneRef = sceneRef;
+    }
+
+    /**
+     * get 事件 支持 passwd:BODY.passwd,username:ARGS.username
+     *
+     * @return
+     */
+    public String getEvent() {
+        return event;
+    }
+
+    /**
+     * set 事件 支持 passwd:BODY.passwd,username:ARGS.username
+     *
+     * @param event
+     */
+    public void setEvent(String event) {
+        this.event = event;
+    }
+
+    /**
+     * get 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+     *
+     * @return
+     */
+    public String getRedirection() {
+        return redirection;
+    }
+
+    /**
+     * set 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+     *
+     * @param redirection
+     */
+    public void setRedirection(String redirection) {
+        this.redirection = redirection;
     }
 
 
@@ -234,12 +334,52 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作 支持notice / verify@captcha
+     * set 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
      *
      * @param action
      */
     public SetRiskRuleReq action(String action) {
         this.action = action;
+        return this;
+    }
+
+    /**
+     * set 请求方法 支持 POST:1,GET:1,PUT:1
+     *
+     * @param methods
+     */
+    public SetRiskRuleReq methods(String methods) {
+        this.methods = methods;
+        return this;
+    }
+
+    /**
+     * set 场景 支持 account_login / account_register / data_risk_control
+     *
+     * @param sceneRef
+     */
+    public SetRiskRuleReq sceneRef(String sceneRef) {
+        this.sceneRef = sceneRef;
+        return this;
+    }
+
+    /**
+     * set 事件 支持 passwd:BODY.passwd,username:ARGS.username
+     *
+     * @param event
+     */
+    public SetRiskRuleReq event(String event) {
+        this.event = event;
+        return this;
+    }
+
+    /**
+     * set 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+     *
+     * @param redirection
+     */
+    public SetRiskRuleReq redirection(String redirection) {
+        this.redirection = redirection;
         return this;
     }
 

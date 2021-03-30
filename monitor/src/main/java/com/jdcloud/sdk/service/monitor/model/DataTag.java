@@ -33,7 +33,8 @@ public class DataTag  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * operation
+     * 1 进数据点打tag，如果数据点存在该tag，予以覆盖，2进行数据点打tag，如果数据存在该tag，跳过不予处理，3 对于数据点中存在tag进行改名称，
+例如：{&quot;tagKey&quot;:&quot;resourceId&quot;,&quot;tagValue&quot;:&quot;nodeId&quot;,&quot;operation&quot;:3}，原数据点名称resourceId:&quot;ia-adx01&quot;改名成nodeId:&quot;ia-adx01&quot;
      */
     private Long operation;
 
@@ -49,7 +50,8 @@ public class DataTag  implements java.io.Serializable {
 
 
     /**
-     * get operation
+     * get 1 进数据点打tag，如果数据点存在该tag，予以覆盖，2进行数据点打tag，如果数据存在该tag，跳过不予处理，3 对于数据点中存在tag进行改名称，
+例如：{&quot;tagKey&quot;:&quot;resourceId&quot;,&quot;tagValue&quot;:&quot;nodeId&quot;,&quot;operation&quot;:3}，原数据点名称resourceId:&quot;ia-adx01&quot;改名成nodeId:&quot;ia-adx01&quot;
      *
      * @return
      */
@@ -58,7 +60,8 @@ public class DataTag  implements java.io.Serializable {
     }
 
     /**
-     * set operation
+     * set 1 进数据点打tag，如果数据点存在该tag，予以覆盖，2进行数据点打tag，如果数据存在该tag，跳过不予处理，3 对于数据点中存在tag进行改名称，
+例如：{&quot;tagKey&quot;:&quot;resourceId&quot;,&quot;tagValue&quot;:&quot;nodeId&quot;,&quot;operation&quot;:3}，原数据点名称resourceId:&quot;ia-adx01&quot;改名成nodeId:&quot;ia-adx01&quot;
      *
      * @param operation
      */
@@ -104,7 +107,8 @@ public class DataTag  implements java.io.Serializable {
 
 
     /**
-     * set operation
+     * set 1 进数据点打tag，如果数据点存在该tag，予以覆盖，2进行数据点打tag，如果数据存在该tag，跳过不予处理，3 对于数据点中存在tag进行改名称，
+例如：{&quot;tagKey&quot;:&quot;resourceId&quot;,&quot;tagValue&quot;:&quot;nodeId&quot;,&quot;operation&quot;:3}，原数据点名称resourceId:&quot;ia-adx01&quot;改名成nodeId:&quot;ia-adx01&quot;
      *
      * @param operation
      */
