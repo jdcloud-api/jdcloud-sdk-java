@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.jdccs.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -48,15 +49,35 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     private Integer pageSize;
 
     /**
+     * 是否查询全部，默认分页
+     */
+    private Integer all;
+
+    /**
+     * 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     */
+    private String lineType;
+
+    /**
+     * 状态 normal:正常 abnormal:异常
+     */
+    private String status;
+
+    /**
+     * IP地址段
+     */
+    private String cidrAddr;
+
+    /**
      * ipId - 公网IP实例ID，精确匹配，支持多个
 
      */
     private List<Filter> filters;
 
     /**
-     * 状态 normal:正常 abnormal:异常
+     * null
      */
-    private String status;
+    private List<Sort> sorts;
 
     /**
      * IDC机房ID
@@ -103,6 +124,78 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
+     * get 是否查询全部，默认分页
+     *
+     * @return
+     */
+    public Integer getAll() {
+        return all;
+    }
+
+    /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public void setAll(Integer all) {
+        this.all = all;
+    }
+
+    /**
+     * get 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     *
+     * @return
+     */
+    public String getLineType() {
+        return lineType;
+    }
+
+    /**
+     * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     *
+     * @param lineType
+     */
+    public void setLineType(String lineType) {
+        this.lineType = lineType;
+    }
+
+    /**
+     * get 状态 normal:正常 abnormal:异常
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 状态 normal:正常 abnormal:异常
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get IP地址段
+     *
+     * @return
+     */
+    public String getCidrAddr() {
+        return cidrAddr;
+    }
+
+    /**
+     * set IP地址段
+     *
+     * @param cidrAddr
+     */
+    public void setCidrAddr(String cidrAddr) {
+        this.cidrAddr = cidrAddr;
+    }
+
+    /**
      * get ipId - 公网IP实例ID，精确匹配，支持多个
 
      *
@@ -123,21 +216,21 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 状态 normal:正常 abnormal:异常
+     * get null
      *
      * @return
      */
-    public String getStatus() {
-        return status;
+    public List<Sort> getSorts() {
+        return sorts;
     }
 
     /**
-     * set 状态 normal:正常 abnormal:异常
+     * set null
      *
-     * @param status
+     * @param sorts
      */
-    public void setStatus(String status) {
-        this.status = status;
+    public void setSorts(List<Sort> sorts) {
+        this.sorts = sorts;
     }
 
     /**
@@ -180,6 +273,46 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public DescribeIpsRequest all(Integer all) {
+        this.all = all;
+        return this;
+    }
+
+    /**
+     * set 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
+     *
+     * @param lineType
+     */
+    public DescribeIpsRequest lineType(String lineType) {
+        this.lineType = lineType;
+        return this;
+    }
+
+    /**
+     * set 状态 normal:正常 abnormal:异常
+     *
+     * @param status
+     */
+    public DescribeIpsRequest status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set IP地址段
+     *
+     * @param cidrAddr
+     */
+    public DescribeIpsRequest cidrAddr(String cidrAddr) {
+        this.cidrAddr = cidrAddr;
+        return this;
+    }
+
+    /**
      * set ipId - 公网IP实例ID，精确匹配，支持多个
 
      *
@@ -191,12 +324,12 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 状态 normal:正常 abnormal:异常
+     * set null
      *
-     * @param status
+     * @param sorts
      */
-    public DescribeIpsRequest status(String status) {
-        this.status = status;
+    public DescribeIpsRequest sorts(List<Sort> sorts) {
+        this.sorts = sorts;
         return this;
     }
 
@@ -222,6 +355,18 @@ public class DescribeIpsRequest extends JdcloudRequest implements java.io.Serial
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to null
+     *
+     * @param sort
+     */
+    public void addSort(Sort sort) {
+        if (this.sorts == null) {
+            this.sorts = new ArrayList<>();
+        }
+        this.sorts.add(sort);
     }
 
 }

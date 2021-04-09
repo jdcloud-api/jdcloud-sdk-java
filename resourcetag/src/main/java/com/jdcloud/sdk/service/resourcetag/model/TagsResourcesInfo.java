@@ -55,7 +55,7 @@ public class TagsResourcesInfo  implements java.io.Serializable {
     /**
      * 标签绑定的数据库SQL Server资源个数
      */
-    private Long sqlServerResourceCount;
+    private Long sqlserverResourceCount;
 
     /**
      * 标签绑定的MongoDB资源个数
@@ -152,6 +152,126 @@ public class TagsResourcesInfo  implements java.io.Serializable {
      */
     private Long kubernetesNodegroupResourceCount;
 
+    /**
+     * 标签绑定的网关资源个数
+     */
+    private Long apigatewayResourceCount;
+
+    /**
+     * 标签绑定的对象存储资源个数
+     */
+    private Long storageResourceCount;
+
+    /**
+     * 标签绑定的云数据库InfluxDB资源个数
+     */
+    private Long tsdsResourceCount;
+
+    /**
+     * 标签绑定的云数据库Greenplum资源个数
+     */
+    private Long jdwResourceCount;
+
+    /**
+     * 标签绑定的DDos防护包资源个数
+     */
+    private Long antiproResourceCount;
+
+    /**
+     * 标签绑定的Dts数据传输产品资源个数
+     */
+    private Long dtsResourceCount;
+
+    /**
+     * 标签绑定的Cps云物理服务器资源个数
+     */
+    private Long cpsResourceCount;
+
+    /**
+     * 标签绑定的edcps资源个数
+     */
+    private Long edcpsResourceCount;
+
+    /**
+     * 标签绑定的sgw资源个数
+     */
+    private Long sgwResourceCount;
+
+    /**
+     * 标签绑定的waf资源个数
+     */
+    private Long wafResourceCount;
+
+    /**
+     * 标签绑定的kafka资源个数
+     */
+    private Long kafkaResourceCount;
+
+    /**
+     * 标签绑定的zk资源个数
+     */
+    private Long zkResourceCount;
+
+    /**
+     * 标签绑定的balance资源个数
+     */
+    private Long balanceResourceCount;
+
+    /**
+     * 标签绑定的nlb资源个数
+     */
+    private Long nlbResourceCount;
+
+    /**
+     * 标签绑定的dnlb资源个数
+     */
+    private Long dnlbResourceCount;
+
+    /**
+     * 标签绑定的threatscanner资源个数
+     */
+    private Long threatscannerResourceCount;
+
+    /**
+     * 标签绑定的jns资源个数
+     */
+    private Long jnsResourceCount;
+
+    /**
+     * 标签绑定的rabbitmq资源个数
+     */
+    private Long rabbitmqResourceCount;
+
+    /**
+     * 标签绑定的natgateway资源个数
+     */
+    private Long natgatewayResourceCount;
+
+    /**
+     * 标签绑定的clickhouse资源个数
+     */
+    private Long clickHouseResourceCount;
+
+    /**
+     * 标签绑定的tidb资源个数
+     */
+    private Long tidbResourceCount;
+
+    /**
+     * 标签绑定的dbs资源个数
+     */
+    private Long dbsResourceCount;
+
+    /**
+     * 标签绑定的jdccs资源个数
+     */
+    private Long jdccsResourceCount;
+
+    /**
+     * 标签绑定的edcs资源个数
+     */
+    private Long epcsResourceCount;
+
 
     /**
      * get 标签键
@@ -230,17 +350,17 @@ public class TagsResourcesInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Long getSqlServerResourceCount() {
-        return sqlServerResourceCount;
+    public Long getSqlserverResourceCount() {
+        return sqlserverResourceCount;
     }
 
     /**
      * set 标签绑定的数据库SQL Server资源个数
      *
-     * @param sqlServerResourceCount
+     * @param sqlserverResourceCount
      */
-    public void setSqlServerResourceCount(Long sqlServerResourceCount) {
-        this.sqlServerResourceCount = sqlServerResourceCount;
+    public void setSqlserverResourceCount(Long sqlserverResourceCount) {
+        this.sqlserverResourceCount = sqlserverResourceCount;
     }
 
     /**
@@ -585,6 +705,438 @@ public class TagsResourcesInfo  implements java.io.Serializable {
         this.kubernetesNodegroupResourceCount = kubernetesNodegroupResourceCount;
     }
 
+    /**
+     * get 标签绑定的网关资源个数
+     *
+     * @return
+     */
+    public Long getApigatewayResourceCount() {
+        return apigatewayResourceCount;
+    }
+
+    /**
+     * set 标签绑定的网关资源个数
+     *
+     * @param apigatewayResourceCount
+     */
+    public void setApigatewayResourceCount(Long apigatewayResourceCount) {
+        this.apigatewayResourceCount = apigatewayResourceCount;
+    }
+
+    /**
+     * get 标签绑定的对象存储资源个数
+     *
+     * @return
+     */
+    public Long getStorageResourceCount() {
+        return storageResourceCount;
+    }
+
+    /**
+     * set 标签绑定的对象存储资源个数
+     *
+     * @param storageResourceCount
+     */
+    public void setStorageResourceCount(Long storageResourceCount) {
+        this.storageResourceCount = storageResourceCount;
+    }
+
+    /**
+     * get 标签绑定的云数据库InfluxDB资源个数
+     *
+     * @return
+     */
+    public Long getTsdsResourceCount() {
+        return tsdsResourceCount;
+    }
+
+    /**
+     * set 标签绑定的云数据库InfluxDB资源个数
+     *
+     * @param tsdsResourceCount
+     */
+    public void setTsdsResourceCount(Long tsdsResourceCount) {
+        this.tsdsResourceCount = tsdsResourceCount;
+    }
+
+    /**
+     * get 标签绑定的云数据库Greenplum资源个数
+     *
+     * @return
+     */
+    public Long getJdwResourceCount() {
+        return jdwResourceCount;
+    }
+
+    /**
+     * set 标签绑定的云数据库Greenplum资源个数
+     *
+     * @param jdwResourceCount
+     */
+    public void setJdwResourceCount(Long jdwResourceCount) {
+        this.jdwResourceCount = jdwResourceCount;
+    }
+
+    /**
+     * get 标签绑定的DDos防护包资源个数
+     *
+     * @return
+     */
+    public Long getAntiproResourceCount() {
+        return antiproResourceCount;
+    }
+
+    /**
+     * set 标签绑定的DDos防护包资源个数
+     *
+     * @param antiproResourceCount
+     */
+    public void setAntiproResourceCount(Long antiproResourceCount) {
+        this.antiproResourceCount = antiproResourceCount;
+    }
+
+    /**
+     * get 标签绑定的Dts数据传输产品资源个数
+     *
+     * @return
+     */
+    public Long getDtsResourceCount() {
+        return dtsResourceCount;
+    }
+
+    /**
+     * set 标签绑定的Dts数据传输产品资源个数
+     *
+     * @param dtsResourceCount
+     */
+    public void setDtsResourceCount(Long dtsResourceCount) {
+        this.dtsResourceCount = dtsResourceCount;
+    }
+
+    /**
+     * get 标签绑定的Cps云物理服务器资源个数
+     *
+     * @return
+     */
+    public Long getCpsResourceCount() {
+        return cpsResourceCount;
+    }
+
+    /**
+     * set 标签绑定的Cps云物理服务器资源个数
+     *
+     * @param cpsResourceCount
+     */
+    public void setCpsResourceCount(Long cpsResourceCount) {
+        this.cpsResourceCount = cpsResourceCount;
+    }
+
+    /**
+     * get 标签绑定的edcps资源个数
+     *
+     * @return
+     */
+    public Long getEdcpsResourceCount() {
+        return edcpsResourceCount;
+    }
+
+    /**
+     * set 标签绑定的edcps资源个数
+     *
+     * @param edcpsResourceCount
+     */
+    public void setEdcpsResourceCount(Long edcpsResourceCount) {
+        this.edcpsResourceCount = edcpsResourceCount;
+    }
+
+    /**
+     * get 标签绑定的sgw资源个数
+     *
+     * @return
+     */
+    public Long getSgwResourceCount() {
+        return sgwResourceCount;
+    }
+
+    /**
+     * set 标签绑定的sgw资源个数
+     *
+     * @param sgwResourceCount
+     */
+    public void setSgwResourceCount(Long sgwResourceCount) {
+        this.sgwResourceCount = sgwResourceCount;
+    }
+
+    /**
+     * get 标签绑定的waf资源个数
+     *
+     * @return
+     */
+    public Long getWafResourceCount() {
+        return wafResourceCount;
+    }
+
+    /**
+     * set 标签绑定的waf资源个数
+     *
+     * @param wafResourceCount
+     */
+    public void setWafResourceCount(Long wafResourceCount) {
+        this.wafResourceCount = wafResourceCount;
+    }
+
+    /**
+     * get 标签绑定的kafka资源个数
+     *
+     * @return
+     */
+    public Long getKafkaResourceCount() {
+        return kafkaResourceCount;
+    }
+
+    /**
+     * set 标签绑定的kafka资源个数
+     *
+     * @param kafkaResourceCount
+     */
+    public void setKafkaResourceCount(Long kafkaResourceCount) {
+        this.kafkaResourceCount = kafkaResourceCount;
+    }
+
+    /**
+     * get 标签绑定的zk资源个数
+     *
+     * @return
+     */
+    public Long getZkResourceCount() {
+        return zkResourceCount;
+    }
+
+    /**
+     * set 标签绑定的zk资源个数
+     *
+     * @param zkResourceCount
+     */
+    public void setZkResourceCount(Long zkResourceCount) {
+        this.zkResourceCount = zkResourceCount;
+    }
+
+    /**
+     * get 标签绑定的balance资源个数
+     *
+     * @return
+     */
+    public Long getBalanceResourceCount() {
+        return balanceResourceCount;
+    }
+
+    /**
+     * set 标签绑定的balance资源个数
+     *
+     * @param balanceResourceCount
+     */
+    public void setBalanceResourceCount(Long balanceResourceCount) {
+        this.balanceResourceCount = balanceResourceCount;
+    }
+
+    /**
+     * get 标签绑定的nlb资源个数
+     *
+     * @return
+     */
+    public Long getNlbResourceCount() {
+        return nlbResourceCount;
+    }
+
+    /**
+     * set 标签绑定的nlb资源个数
+     *
+     * @param nlbResourceCount
+     */
+    public void setNlbResourceCount(Long nlbResourceCount) {
+        this.nlbResourceCount = nlbResourceCount;
+    }
+
+    /**
+     * get 标签绑定的dnlb资源个数
+     *
+     * @return
+     */
+    public Long getDnlbResourceCount() {
+        return dnlbResourceCount;
+    }
+
+    /**
+     * set 标签绑定的dnlb资源个数
+     *
+     * @param dnlbResourceCount
+     */
+    public void setDnlbResourceCount(Long dnlbResourceCount) {
+        this.dnlbResourceCount = dnlbResourceCount;
+    }
+
+    /**
+     * get 标签绑定的threatscanner资源个数
+     *
+     * @return
+     */
+    public Long getThreatscannerResourceCount() {
+        return threatscannerResourceCount;
+    }
+
+    /**
+     * set 标签绑定的threatscanner资源个数
+     *
+     * @param threatscannerResourceCount
+     */
+    public void setThreatscannerResourceCount(Long threatscannerResourceCount) {
+        this.threatscannerResourceCount = threatscannerResourceCount;
+    }
+
+    /**
+     * get 标签绑定的jns资源个数
+     *
+     * @return
+     */
+    public Long getJnsResourceCount() {
+        return jnsResourceCount;
+    }
+
+    /**
+     * set 标签绑定的jns资源个数
+     *
+     * @param jnsResourceCount
+     */
+    public void setJnsResourceCount(Long jnsResourceCount) {
+        this.jnsResourceCount = jnsResourceCount;
+    }
+
+    /**
+     * get 标签绑定的rabbitmq资源个数
+     *
+     * @return
+     */
+    public Long getRabbitmqResourceCount() {
+        return rabbitmqResourceCount;
+    }
+
+    /**
+     * set 标签绑定的rabbitmq资源个数
+     *
+     * @param rabbitmqResourceCount
+     */
+    public void setRabbitmqResourceCount(Long rabbitmqResourceCount) {
+        this.rabbitmqResourceCount = rabbitmqResourceCount;
+    }
+
+    /**
+     * get 标签绑定的natgateway资源个数
+     *
+     * @return
+     */
+    public Long getNatgatewayResourceCount() {
+        return natgatewayResourceCount;
+    }
+
+    /**
+     * set 标签绑定的natgateway资源个数
+     *
+     * @param natgatewayResourceCount
+     */
+    public void setNatgatewayResourceCount(Long natgatewayResourceCount) {
+        this.natgatewayResourceCount = natgatewayResourceCount;
+    }
+
+    /**
+     * get 标签绑定的clickhouse资源个数
+     *
+     * @return
+     */
+    public Long getClickHouseResourceCount() {
+        return clickHouseResourceCount;
+    }
+
+    /**
+     * set 标签绑定的clickhouse资源个数
+     *
+     * @param clickHouseResourceCount
+     */
+    public void setClickHouseResourceCount(Long clickHouseResourceCount) {
+        this.clickHouseResourceCount = clickHouseResourceCount;
+    }
+
+    /**
+     * get 标签绑定的tidb资源个数
+     *
+     * @return
+     */
+    public Long getTidbResourceCount() {
+        return tidbResourceCount;
+    }
+
+    /**
+     * set 标签绑定的tidb资源个数
+     *
+     * @param tidbResourceCount
+     */
+    public void setTidbResourceCount(Long tidbResourceCount) {
+        this.tidbResourceCount = tidbResourceCount;
+    }
+
+    /**
+     * get 标签绑定的dbs资源个数
+     *
+     * @return
+     */
+    public Long getDbsResourceCount() {
+        return dbsResourceCount;
+    }
+
+    /**
+     * set 标签绑定的dbs资源个数
+     *
+     * @param dbsResourceCount
+     */
+    public void setDbsResourceCount(Long dbsResourceCount) {
+        this.dbsResourceCount = dbsResourceCount;
+    }
+
+    /**
+     * get 标签绑定的jdccs资源个数
+     *
+     * @return
+     */
+    public Long getJdccsResourceCount() {
+        return jdccsResourceCount;
+    }
+
+    /**
+     * set 标签绑定的jdccs资源个数
+     *
+     * @param jdccsResourceCount
+     */
+    public void setJdccsResourceCount(Long jdccsResourceCount) {
+        this.jdccsResourceCount = jdccsResourceCount;
+    }
+
+    /**
+     * get 标签绑定的edcs资源个数
+     *
+     * @return
+     */
+    public Long getEpcsResourceCount() {
+        return epcsResourceCount;
+    }
+
+    /**
+     * set 标签绑定的edcs资源个数
+     *
+     * @param epcsResourceCount
+     */
+    public void setEpcsResourceCount(Long epcsResourceCount) {
+        this.epcsResourceCount = epcsResourceCount;
+    }
+
 
     /**
      * set 标签键
@@ -629,10 +1181,10 @@ public class TagsResourcesInfo  implements java.io.Serializable {
     /**
      * set 标签绑定的数据库SQL Server资源个数
      *
-     * @param sqlServerResourceCount
+     * @param sqlserverResourceCount
      */
-    public TagsResourcesInfo sqlServerResourceCount(Long sqlServerResourceCount) {
-        this.sqlServerResourceCount = sqlServerResourceCount;
+    public TagsResourcesInfo sqlserverResourceCount(Long sqlserverResourceCount) {
+        this.sqlserverResourceCount = sqlserverResourceCount;
         return this;
     }
 
@@ -823,6 +1375,246 @@ public class TagsResourcesInfo  implements java.io.Serializable {
      */
     public TagsResourcesInfo kubernetesNodegroupResourceCount(Long kubernetesNodegroupResourceCount) {
         this.kubernetesNodegroupResourceCount = kubernetesNodegroupResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的网关资源个数
+     *
+     * @param apigatewayResourceCount
+     */
+    public TagsResourcesInfo apigatewayResourceCount(Long apigatewayResourceCount) {
+        this.apigatewayResourceCount = apigatewayResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的对象存储资源个数
+     *
+     * @param storageResourceCount
+     */
+    public TagsResourcesInfo storageResourceCount(Long storageResourceCount) {
+        this.storageResourceCount = storageResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的云数据库InfluxDB资源个数
+     *
+     * @param tsdsResourceCount
+     */
+    public TagsResourcesInfo tsdsResourceCount(Long tsdsResourceCount) {
+        this.tsdsResourceCount = tsdsResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的云数据库Greenplum资源个数
+     *
+     * @param jdwResourceCount
+     */
+    public TagsResourcesInfo jdwResourceCount(Long jdwResourceCount) {
+        this.jdwResourceCount = jdwResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的DDos防护包资源个数
+     *
+     * @param antiproResourceCount
+     */
+    public TagsResourcesInfo antiproResourceCount(Long antiproResourceCount) {
+        this.antiproResourceCount = antiproResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的Dts数据传输产品资源个数
+     *
+     * @param dtsResourceCount
+     */
+    public TagsResourcesInfo dtsResourceCount(Long dtsResourceCount) {
+        this.dtsResourceCount = dtsResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的Cps云物理服务器资源个数
+     *
+     * @param cpsResourceCount
+     */
+    public TagsResourcesInfo cpsResourceCount(Long cpsResourceCount) {
+        this.cpsResourceCount = cpsResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的edcps资源个数
+     *
+     * @param edcpsResourceCount
+     */
+    public TagsResourcesInfo edcpsResourceCount(Long edcpsResourceCount) {
+        this.edcpsResourceCount = edcpsResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的sgw资源个数
+     *
+     * @param sgwResourceCount
+     */
+    public TagsResourcesInfo sgwResourceCount(Long sgwResourceCount) {
+        this.sgwResourceCount = sgwResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的waf资源个数
+     *
+     * @param wafResourceCount
+     */
+    public TagsResourcesInfo wafResourceCount(Long wafResourceCount) {
+        this.wafResourceCount = wafResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的kafka资源个数
+     *
+     * @param kafkaResourceCount
+     */
+    public TagsResourcesInfo kafkaResourceCount(Long kafkaResourceCount) {
+        this.kafkaResourceCount = kafkaResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的zk资源个数
+     *
+     * @param zkResourceCount
+     */
+    public TagsResourcesInfo zkResourceCount(Long zkResourceCount) {
+        this.zkResourceCount = zkResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的balance资源个数
+     *
+     * @param balanceResourceCount
+     */
+    public TagsResourcesInfo balanceResourceCount(Long balanceResourceCount) {
+        this.balanceResourceCount = balanceResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的nlb资源个数
+     *
+     * @param nlbResourceCount
+     */
+    public TagsResourcesInfo nlbResourceCount(Long nlbResourceCount) {
+        this.nlbResourceCount = nlbResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的dnlb资源个数
+     *
+     * @param dnlbResourceCount
+     */
+    public TagsResourcesInfo dnlbResourceCount(Long dnlbResourceCount) {
+        this.dnlbResourceCount = dnlbResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的threatscanner资源个数
+     *
+     * @param threatscannerResourceCount
+     */
+    public TagsResourcesInfo threatscannerResourceCount(Long threatscannerResourceCount) {
+        this.threatscannerResourceCount = threatscannerResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的jns资源个数
+     *
+     * @param jnsResourceCount
+     */
+    public TagsResourcesInfo jnsResourceCount(Long jnsResourceCount) {
+        this.jnsResourceCount = jnsResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的rabbitmq资源个数
+     *
+     * @param rabbitmqResourceCount
+     */
+    public TagsResourcesInfo rabbitmqResourceCount(Long rabbitmqResourceCount) {
+        this.rabbitmqResourceCount = rabbitmqResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的natgateway资源个数
+     *
+     * @param natgatewayResourceCount
+     */
+    public TagsResourcesInfo natgatewayResourceCount(Long natgatewayResourceCount) {
+        this.natgatewayResourceCount = natgatewayResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的clickhouse资源个数
+     *
+     * @param clickHouseResourceCount
+     */
+    public TagsResourcesInfo clickHouseResourceCount(Long clickHouseResourceCount) {
+        this.clickHouseResourceCount = clickHouseResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的tidb资源个数
+     *
+     * @param tidbResourceCount
+     */
+    public TagsResourcesInfo tidbResourceCount(Long tidbResourceCount) {
+        this.tidbResourceCount = tidbResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的dbs资源个数
+     *
+     * @param dbsResourceCount
+     */
+    public TagsResourcesInfo dbsResourceCount(Long dbsResourceCount) {
+        this.dbsResourceCount = dbsResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的jdccs资源个数
+     *
+     * @param jdccsResourceCount
+     */
+    public TagsResourcesInfo jdccsResourceCount(Long jdccsResourceCount) {
+        this.jdccsResourceCount = jdccsResourceCount;
+        return this;
+    }
+
+    /**
+     * set 标签绑定的edcs资源个数
+     *
+     * @param epcsResourceCount
+     */
+    public TagsResourcesInfo epcsResourceCount(Long epcsResourceCount) {
+        this.epcsResourceCount = epcsResourceCount;
         return this;
     }
 

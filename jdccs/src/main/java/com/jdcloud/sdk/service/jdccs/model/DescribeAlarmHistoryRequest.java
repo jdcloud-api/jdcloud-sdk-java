@@ -49,6 +49,11 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
     private String alarmId;
 
     /**
+     * 机房英文标识
+     */
+    private String idc;
+
+    /**
      * 查询时间范围的开始时间， UNIX时间戳
      */
     private Integer startTime;
@@ -111,6 +116,24 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
      */
     public void setAlarmId(String alarmId) {
         this.alarmId = alarmId;
+    }
+
+    /**
+     * get 机房英文标识
+     *
+     * @return
+     */
+    public String getIdc() {
+        return idc;
+    }
+
+    /**
+     * set 机房英文标识
+     *
+     * @param idc
+     */
+    public void setIdc(String idc) {
+        this.idc = idc;
     }
 
     /**
@@ -177,6 +200,16 @@ public class DescribeAlarmHistoryRequest extends JdcloudRequest implements java.
      */
     public DescribeAlarmHistoryRequest alarmId(String alarmId) {
         this.alarmId = alarmId;
+        return this;
+    }
+
+    /**
+     * set 机房英文标识
+     *
+     * @param idc
+     */
+    public DescribeAlarmHistoryRequest idc(String idc) {
+        this.idc = idc;
         return this;
     }
 

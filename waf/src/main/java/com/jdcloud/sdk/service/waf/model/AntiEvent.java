@@ -112,6 +112,16 @@ public class AntiEvent  implements java.io.Serializable {
      */
     private String upstreamErr;
 
+    /**
+     * 是否已加入白名单
+     */
+    private Integer skipExist;
+
+    /**
+     * 是否已加入黑名单
+     */
+    private Integer denyExist;
+
 
     /**
      * get 源ip
@@ -401,6 +411,42 @@ public class AntiEvent  implements java.io.Serializable {
         this.upstreamErr = upstreamErr;
     }
 
+    /**
+     * get 是否已加入白名单
+     *
+     * @return
+     */
+    public Integer getSkipExist() {
+        return skipExist;
+    }
+
+    /**
+     * set 是否已加入白名单
+     *
+     * @param skipExist
+     */
+    public void setSkipExist(Integer skipExist) {
+        this.skipExist = skipExist;
+    }
+
+    /**
+     * get 是否已加入黑名单
+     *
+     * @return
+     */
+    public Integer getDenyExist() {
+        return denyExist;
+    }
+
+    /**
+     * set 是否已加入黑名单
+     *
+     * @param denyExist
+     */
+    public void setDenyExist(Integer denyExist) {
+        this.denyExist = denyExist;
+    }
+
 
     /**
      * set 源ip
@@ -559,6 +605,26 @@ public class AntiEvent  implements java.io.Serializable {
      */
     public AntiEvent upstreamErr(String upstreamErr) {
         this.upstreamErr = upstreamErr;
+        return this;
+    }
+
+    /**
+     * set 是否已加入白名单
+     *
+     * @param skipExist
+     */
+    public AntiEvent skipExist(Integer skipExist) {
+        this.skipExist = skipExist;
+        return this;
+    }
+
+    /**
+     * set 是否已加入黑名单
+     *
+     * @param denyExist
+     */
+    public AntiEvent denyExist(Integer denyExist) {
+        this.denyExist = denyExist;
         return this;
     }
 

@@ -60,6 +60,11 @@ public class FrontResourceTagMapping  implements java.io.Serializable {
     private String resourceName;
 
     /**
+     * 资源详情url地址
+     */
+    private String detailUrl;
+
+    /**
      * 可用区
      */
     private String az;
@@ -156,6 +161,24 @@ public class FrontResourceTagMapping  implements java.io.Serializable {
     }
 
     /**
+     * get 资源详情url地址
+     *
+     * @return
+     */
+    public String getDetailUrl() {
+        return detailUrl;
+    }
+
+    /**
+     * set 资源详情url地址
+     *
+     * @param detailUrl
+     */
+    public void setDetailUrl(String detailUrl) {
+        this.detailUrl = detailUrl;
+    }
+
+    /**
      * get 可用区
      *
      * @return
@@ -221,6 +244,16 @@ public class FrontResourceTagMapping  implements java.io.Serializable {
      */
     public FrontResourceTagMapping resourceName(String resourceName) {
         this.resourceName = resourceName;
+        return this;
+    }
+
+    /**
+     * set 资源详情url地址
+     *
+     * @param detailUrl
+     */
+    public FrontResourceTagMapping detailUrl(String detailUrl) {
+        this.detailUrl = detailUrl;
         return this;
     }
 

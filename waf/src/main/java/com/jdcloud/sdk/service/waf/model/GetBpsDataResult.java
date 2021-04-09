@@ -39,7 +39,7 @@ public class GetBpsDataResult extends JdcloudResult implements java.io.Serializa
     /**
      * timeScope
      */
-    private List<Integer> timeScope;
+    private List<Long> timeScope;
 
     /**
      * bps数据
@@ -52,7 +52,7 @@ public class GetBpsDataResult extends JdcloudResult implements java.io.Serializa
      *
      * @return
      */
-    public List<Integer> getTimeScope() {
+    public List<Long> getTimeScope() {
         return timeScope;
     }
 
@@ -61,7 +61,7 @@ public class GetBpsDataResult extends JdcloudResult implements java.io.Serializa
      *
      * @param timeScope
      */
-    public void setTimeScope(List<Integer> timeScope) {
+    public void setTimeScope(List<Long> timeScope) {
         this.timeScope = timeScope;
     }
 
@@ -89,7 +89,7 @@ public class GetBpsDataResult extends JdcloudResult implements java.io.Serializa
      *
      * @param timeScope
      */
-    public GetBpsDataResult timeScope(List<Integer> timeScope) {
+    public GetBpsDataResult timeScope(List<Long> timeScope) {
         this.timeScope = timeScope;
         return this;
     }
@@ -110,7 +110,7 @@ public class GetBpsDataResult extends JdcloudResult implements java.io.Serializa
      *
      * @param timeScope
      */
-    public void addTimeScope(Integer timeScope) {
+    public void addTimeScope(Long timeScope) {
         if (this.timeScope == null) {
             this.timeScope = new ArrayList<>();
         }

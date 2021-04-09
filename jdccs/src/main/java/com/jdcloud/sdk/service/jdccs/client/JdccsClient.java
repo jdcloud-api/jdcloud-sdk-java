@@ -46,6 +46,9 @@ import com.jdcloud.sdk.service.jdccs.client.DescribeIdcsExecutor;
 import com.jdcloud.sdk.service.jdccs.model.SwitchAlarmRequest;
 import com.jdcloud.sdk.service.jdccs.model.SwitchAlarmResponse;
 import com.jdcloud.sdk.service.jdccs.client.SwitchAlarmExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeOpenDevicesDataRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeOpenDevicesDataResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeOpenDevicesDataExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeBandwidthResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeBandwidthExecutor;
@@ -55,6 +58,9 @@ import com.jdcloud.sdk.service.jdccs.client.CreateGeneralServicesTicketExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeCabinetsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeCabinetsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeCabinetsExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeOpenDevicesRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeOpenDevicesResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeOpenDevicesExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricDataRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricDataResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeMetricDataExecutor;
@@ -88,6 +94,9 @@ import com.jdcloud.sdk.service.jdccs.client.DescribeDevicesExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeIpsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeIpsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeIpsExecutor;
+import com.jdcloud.sdk.service.jdccs.model.UpdateAlarmRequest;
+import com.jdcloud.sdk.service.jdccs.model.UpdateAlarmResponse;
+import com.jdcloud.sdk.service.jdccs.client.UpdateAlarmExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeMetricsExecutor;
@@ -212,6 +221,17 @@ public class JdccsClient extends JdcloudClient {
     }
 
     /**
+     * 查询开放设备数据信息接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeOpenDevicesDataResponse describeOpenDevicesData(DescribeOpenDevicesDataRequest request) throws JdcloudSdkException {
+        return new DescribeOpenDevicesDataExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询带宽（出口）详情
      *
      * @param request
@@ -242,6 +262,17 @@ public class JdccsClient extends JdcloudClient {
      */
     public DescribeCabinetsResponse describeCabinets(DescribeCabinetsRequest request) throws JdcloudSdkException {
         return new DescribeCabinetsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询开放设备列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeOpenDevicesResponse describeOpenDevices(DescribeOpenDevicesRequest request) throws JdcloudSdkException {
+        return new DescribeOpenDevicesExecutor().client(this).execute(request);
     }
 
     /**
@@ -363,6 +394,17 @@ public class JdccsClient extends JdcloudClient {
      */
     public DescribeIpsResponse describeIps(DescribeIpsRequest request) throws JdcloudSdkException {
         return new DescribeIpsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改报警规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateAlarmResponse updateAlarm(UpdateAlarmRequest request) throws JdcloudSdkException {
+        return new UpdateAlarmExecutor().client(this).execute(request);
     }
 
     /**

@@ -115,9 +115,24 @@ public class Alarm  implements java.io.Serializable {
     private String status;
 
     /**
+     * 通知方式 all:全部 sms：短信 email:邮件
+     */
+    private String noticeMethod;
+
+    /**
      * 交换机信息
      */
     private List<Switchboard> switchboard;
+
+    /**
+     * 通知对象用户ID,若多个用逗号分隔
+     */
+    private String userId;
+
+    /**
+     * 通知对象组ID
+     */
+    private String groupId;
 
 
     /**
@@ -409,6 +424,24 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
+     * get 通知方式 all:全部 sms：短信 email:邮件
+     *
+     * @return
+     */
+    public String getNoticeMethod() {
+        return noticeMethod;
+    }
+
+    /**
+     * set 通知方式 all:全部 sms：短信 email:邮件
+     *
+     * @param noticeMethod
+     */
+    public void setNoticeMethod(String noticeMethod) {
+        this.noticeMethod = noticeMethod;
+    }
+
+    /**
      * get 交换机信息
      *
      * @return
@@ -424,6 +457,42 @@ public class Alarm  implements java.io.Serializable {
      */
     public void setSwitchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
+    }
+
+    /**
+     * get 通知对象用户ID,若多个用逗号分隔
+     *
+     * @return
+     */
+    public String getUserId() {
+        return userId;
+    }
+
+    /**
+     * set 通知对象用户ID,若多个用逗号分隔
+     *
+     * @param userId
+     */
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    /**
+     * get 通知对象组ID
+     *
+     * @return
+     */
+    public String getGroupId() {
+        return groupId;
+    }
+
+    /**
+     * set 通知对象组ID
+     *
+     * @param groupId
+     */
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
     }
 
 
@@ -588,12 +657,42 @@ public class Alarm  implements java.io.Serializable {
     }
 
     /**
+     * set 通知方式 all:全部 sms：短信 email:邮件
+     *
+     * @param noticeMethod
+     */
+    public Alarm noticeMethod(String noticeMethod) {
+        this.noticeMethod = noticeMethod;
+        return this;
+    }
+
+    /**
      * set 交换机信息
      *
      * @param switchboard
      */
     public Alarm switchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
+        return this;
+    }
+
+    /**
+     * set 通知对象用户ID,若多个用逗号分隔
+     *
+     * @param userId
+     */
+    public Alarm userId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+
+    /**
+     * set 通知对象组ID
+     *
+     * @param groupId
+     */
+    public Alarm groupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
 

@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.jdccs.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -48,21 +49,63 @@ public class DescribeDevicesRequest extends JdcloudRequest implements java.io.Se
     private Integer pageSize;
 
     /**
+     * 是否查询全部，默认分页
+     */
+    private Integer all;
+
+    /**
      * 机柜ID
      */
     private String cabinetId;
 
     /**
+     * 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+     */
+    private String deviceType;
+
+    /**
+     * 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+     */
+    private String assetStatus;
+
+    /**
+     * 资产归属 own:自备 lease:租赁
+     */
+    private String assetBelong;
+
+    /**
+     * 设备编码
+     */
+    private String deviceNo;
+
+    /**
+     * 设备SN号
+     */
+    private String snNo;
+
+    /**
+     * 机柜编码
+     */
+    private String cabinetNo;
+
+    /**
+     * 工单模板CODE
+     */
+    private String ticketTemplateCode;
+
+    /**
      * deviceId - 设备实例ID，精确匹配，支持多个
 snNo - 设备SN号，精确匹配，支持多个
+deviceNo - 设备编码，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
 
      */
     private List<Filter> filters;
 
     /**
-     * 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+     * deviceNo - 设备编码 cabinetNo - 机柜编码
      */
-    private String deviceType;
+    private List<Sort> sorts;
 
     /**
      * IDC机房ID
@@ -109,6 +152,24 @@ snNo - 设备SN号，精确匹配，支持多个
     }
 
     /**
+     * get 是否查询全部，默认分页
+     *
+     * @return
+     */
+    public Integer getAll() {
+        return all;
+    }
+
+    /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public void setAll(Integer all) {
+        this.all = all;
+    }
+
+    /**
      * get 机柜ID
      *
      * @return
@@ -127,28 +188,6 @@ snNo - 设备SN号，精确匹配，支持多个
     }
 
     /**
-     * get deviceId - 设备实例ID，精确匹配，支持多个
-snNo - 设备SN号，精确匹配，支持多个
-
-     *
-     * @return
-     */
-    public List<Filter> getFilters() {
-        return filters;
-    }
-
-    /**
-     * set deviceId - 设备实例ID，精确匹配，支持多个
-snNo - 设备SN号，精确匹配，支持多个
-
-     *
-     * @param filters
-     */
-    public void setFilters(List<Filter> filters) {
-        this.filters = filters;
-    }
-
-    /**
      * get 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
      *
      * @return
@@ -164,6 +203,158 @@ snNo - 设备SN号，精确匹配，支持多个
      */
     public void setDeviceType(String deviceType) {
         this.deviceType = deviceType;
+    }
+
+    /**
+     * get 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+     *
+     * @return
+     */
+    public String getAssetStatus() {
+        return assetStatus;
+    }
+
+    /**
+     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+     *
+     * @param assetStatus
+     */
+    public void setAssetStatus(String assetStatus) {
+        this.assetStatus = assetStatus;
+    }
+
+    /**
+     * get 资产归属 own:自备 lease:租赁
+     *
+     * @return
+     */
+    public String getAssetBelong() {
+        return assetBelong;
+    }
+
+    /**
+     * set 资产归属 own:自备 lease:租赁
+     *
+     * @param assetBelong
+     */
+    public void setAssetBelong(String assetBelong) {
+        this.assetBelong = assetBelong;
+    }
+
+    /**
+     * get 设备编码
+     *
+     * @return
+     */
+    public String getDeviceNo() {
+        return deviceNo;
+    }
+
+    /**
+     * set 设备编码
+     *
+     * @param deviceNo
+     */
+    public void setDeviceNo(String deviceNo) {
+        this.deviceNo = deviceNo;
+    }
+
+    /**
+     * get 设备SN号
+     *
+     * @return
+     */
+    public String getSnNo() {
+        return snNo;
+    }
+
+    /**
+     * set 设备SN号
+     *
+     * @param snNo
+     */
+    public void setSnNo(String snNo) {
+        this.snNo = snNo;
+    }
+
+    /**
+     * get 机柜编码
+     *
+     * @return
+     */
+    public String getCabinetNo() {
+        return cabinetNo;
+    }
+
+    /**
+     * set 机柜编码
+     *
+     * @param cabinetNo
+     */
+    public void setCabinetNo(String cabinetNo) {
+        this.cabinetNo = cabinetNo;
+    }
+
+    /**
+     * get 工单模板CODE
+     *
+     * @return
+     */
+    public String getTicketTemplateCode() {
+        return ticketTemplateCode;
+    }
+
+    /**
+     * set 工单模板CODE
+     *
+     * @param ticketTemplateCode
+     */
+    public void setTicketTemplateCode(String ticketTemplateCode) {
+        this.ticketTemplateCode = ticketTemplateCode;
+    }
+
+    /**
+     * get deviceId - 设备实例ID，精确匹配，支持多个
+snNo - 设备SN号，精确匹配，支持多个
+deviceNo - 设备编码，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set deviceId - 设备实例ID，精确匹配，支持多个
+snNo - 设备SN号，精确匹配，支持多个
+deviceNo - 设备编码，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+    /**
+     * get deviceNo - 设备编码 cabinetNo - 机柜编码
+     *
+     * @return
+     */
+    public List<Sort> getSorts() {
+        return sorts;
+    }
+
+    /**
+     * set deviceNo - 设备编码 cabinetNo - 机柜编码
+     *
+     * @param sorts
+     */
+    public void setSorts(List<Sort> sorts) {
+        this.sorts = sorts;
     }
 
     /**
@@ -206,6 +397,16 @@ snNo - 设备SN号，精确匹配，支持多个
     }
 
     /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public DescribeDevicesRequest all(Integer all) {
+        this.all = all;
+        return this;
+    }
+
+    /**
      * set 机柜ID
      *
      * @param cabinetId
@@ -216,8 +417,80 @@ snNo - 设备SN号，精确匹配，支持多个
     }
 
     /**
+     * set 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+     *
+     * @param deviceType
+     */
+    public DescribeDevicesRequest deviceType(String deviceType) {
+        this.deviceType = deviceType;
+        return this;
+    }
+
+    /**
+     * set 资产状态 launched:已上架 opened:已开通 canceling:退订中 operating:操作中 modifing:变更中
+     *
+     * @param assetStatus
+     */
+    public DescribeDevicesRequest assetStatus(String assetStatus) {
+        this.assetStatus = assetStatus;
+        return this;
+    }
+
+    /**
+     * set 资产归属 own:自备 lease:租赁
+     *
+     * @param assetBelong
+     */
+    public DescribeDevicesRequest assetBelong(String assetBelong) {
+        this.assetBelong = assetBelong;
+        return this;
+    }
+
+    /**
+     * set 设备编码
+     *
+     * @param deviceNo
+     */
+    public DescribeDevicesRequest deviceNo(String deviceNo) {
+        this.deviceNo = deviceNo;
+        return this;
+    }
+
+    /**
+     * set 设备SN号
+     *
+     * @param snNo
+     */
+    public DescribeDevicesRequest snNo(String snNo) {
+        this.snNo = snNo;
+        return this;
+    }
+
+    /**
+     * set 机柜编码
+     *
+     * @param cabinetNo
+     */
+    public DescribeDevicesRequest cabinetNo(String cabinetNo) {
+        this.cabinetNo = cabinetNo;
+        return this;
+    }
+
+    /**
+     * set 工单模板CODE
+     *
+     * @param ticketTemplateCode
+     */
+    public DescribeDevicesRequest ticketTemplateCode(String ticketTemplateCode) {
+        this.ticketTemplateCode = ticketTemplateCode;
+        return this;
+    }
+
+    /**
      * set deviceId - 设备实例ID，精确匹配，支持多个
 snNo - 设备SN号，精确匹配，支持多个
+deviceNo - 设备编码，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
 
      *
      * @param filters
@@ -228,12 +501,12 @@ snNo - 设备SN号，精确匹配，支持多个
     }
 
     /**
-     * set 设备类型 server:服务器 network:网络设备 storage:存储设备 other:其他设备
+     * set deviceNo - 设备编码 cabinetNo - 机柜编码
      *
-     * @param deviceType
+     * @param sorts
      */
-    public DescribeDevicesRequest deviceType(String deviceType) {
-        this.deviceType = deviceType;
+    public DescribeDevicesRequest sorts(List<Sort> sorts) {
+        this.sorts = sorts;
         return this;
     }
 
@@ -251,6 +524,8 @@ snNo - 设备SN号，精确匹配，支持多个
     /**
      * add item to deviceId - 设备实例ID，精确匹配，支持多个
 snNo - 设备SN号，精确匹配，支持多个
+deviceNo - 设备编码，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
 
      *
      * @param filter
@@ -260,6 +535,18 @@ snNo - 设备SN号，精确匹配，支持多个
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to deviceNo - 设备编码 cabinetNo - 机柜编码
+     *
+     * @param sort
+     */
+    public void addSort(Sort sort) {
+        if (this.sorts == null) {
+            this.sorts = new ArrayList<>();
+        }
+        this.sorts.add(sort);
     }
 
 }

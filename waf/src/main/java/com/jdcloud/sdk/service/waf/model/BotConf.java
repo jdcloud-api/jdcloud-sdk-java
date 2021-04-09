@@ -42,6 +42,11 @@ public class BotConf  implements java.io.Serializable {
      */
     private Integer enableUserDefine;
 
+    /**
+     * bot IDC开关。1-使能 0-禁止
+     */
+    private Integer enableThreatIp;
+
 
     /**
      * get 已知类型bot。1-使能 0-禁止
@@ -79,6 +84,24 @@ public class BotConf  implements java.io.Serializable {
         this.enableUserDefine = enableUserDefine;
     }
 
+    /**
+     * get bot IDC开关。1-使能 0-禁止
+     *
+     * @return
+     */
+    public Integer getEnableThreatIp() {
+        return enableThreatIp;
+    }
+
+    /**
+     * set bot IDC开关。1-使能 0-禁止
+     *
+     * @param enableThreatIp
+     */
+    public void setEnableThreatIp(Integer enableThreatIp) {
+        this.enableThreatIp = enableThreatIp;
+    }
+
 
     /**
      * set 已知类型bot。1-使能 0-禁止
@@ -97,6 +120,16 @@ public class BotConf  implements java.io.Serializable {
      */
     public BotConf enableUserDefine(Integer enableUserDefine) {
         this.enableUserDefine = enableUserDefine;
+        return this;
+    }
+
+    /**
+     * set bot IDC开关。1-使能 0-禁止
+     *
+     * @param enableThreatIp
+     */
+    public BotConf enableThreatIp(Integer enableThreatIp) {
+        this.enableThreatIp = enableThreatIp;
         return this;
     }
 

@@ -40,6 +40,7 @@ import com.jdcloud.sdk.service.waf.model.FilterSenseConf;
 import com.jdcloud.sdk.service.waf.model.StatusConf;
 import com.jdcloud.sdk.service.waf.model.UriRewriteConf;
 import com.jdcloud.sdk.service.waf.model.RiskConf;
+import com.jdcloud.sdk.service.waf.model.BotConf;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -153,6 +154,11 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      * risk配置
      */
     private RiskConf riskConf;
+
+    /**
+     * bot配置
+     */
+    private BotConf botConf;
 
 
     /**
@@ -533,6 +539,24 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
         this.riskConf = riskConf;
     }
 
+    /**
+     * get bot配置
+     *
+     * @return
+     */
+    public BotConf getBotConf() {
+        return botConf;
+    }
+
+    /**
+     * set bot配置
+     *
+     * @param botConf
+     */
+    public void setBotConf(BotConf botConf) {
+        this.botConf = botConf;
+    }
+
 
     /**
      * set 域名
@@ -741,6 +765,16 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      */
     public GetDomainAntiConfigResult riskConf(RiskConf riskConf) {
         this.riskConf = riskConf;
+        return this;
+    }
+
+    /**
+     * set bot配置
+     *
+     * @param botConf
+     */
+    public GetDomainAntiConfigResult botConf(BotConf botConf) {
+        this.botConf = botConf;
         return this;
     }
 

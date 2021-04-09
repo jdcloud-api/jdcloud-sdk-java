@@ -48,6 +48,11 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
     private Integer pageSize;
 
     /**
+     * 是否查询全部，默认分页
+     */
+    private Integer all;
+
+    /**
      * roomNo - 房间号，精确匹配，支持多个
 
      */
@@ -95,6 +100,24 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get 是否查询全部，默认分页
+     *
+     * @return
+     */
+    public Integer getAll() {
+        return all;
+    }
+
+    /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public void setAll(Integer all) {
+        this.all = all;
     }
 
     /**
@@ -153,6 +176,16 @@ public class DescribeRoomsRequest extends JdcloudRequest implements java.io.Seri
      */
     public DescribeRoomsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public DescribeRoomsRequest all(Integer all) {
+        this.all = all;
         return this;
     }
 

@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.jdccs.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -48,16 +49,43 @@ public class DescribeCabinetsRequest extends JdcloudRequest implements java.io.S
     private Integer pageSize;
 
     /**
-     * roomNo - 房间号，精确匹配，支持多个
-cabinetId - 机柜ID，精确匹配，支持多个
-
+     * 是否查询全部，默认分页
      */
-    private List<Filter> filters;
+    private Integer all;
+
+    /**
+     * 机柜类型 formal:正式机柜 reserved:预留机柜
+     */
+    private String cabinetType;
 
     /**
      * 机柜开通状态 disabled:未开通 enabling:开通中 enabled:已开通 disabling:关电中
      */
     private String cabinetOpenStatus;
+
+    /**
+     * 机柜编码
+     */
+    private String cabinetNo;
+
+    /**
+     * 机柜关电工单使用 yes
+     */
+    private String deviceMustBeEmpty;
+
+    /**
+     * roomNo - 房间号，精确匹配，支持多个
+cabinetId - 机柜ID，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
+cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
+
+     */
+    private List<Filter> filters;
+
+    /**
+     * cabinetNo - 机柜编码 roomNo - 房间号
+     */
+    private List<Sort> sorts;
 
     /**
      * IDC机房ID
@@ -104,25 +132,39 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * get roomNo - 房间号，精确匹配，支持多个
-cabinetId - 机柜ID，精确匹配，支持多个
-
+     * get 是否查询全部，默认分页
      *
      * @return
      */
-    public List<Filter> getFilters() {
-        return filters;
+    public Integer getAll() {
+        return all;
     }
 
     /**
-     * set roomNo - 房间号，精确匹配，支持多个
-cabinetId - 机柜ID，精确匹配，支持多个
-
+     * set 是否查询全部，默认分页
      *
-     * @param filters
+     * @param all
      */
-    public void setFilters(List<Filter> filters) {
-        this.filters = filters;
+    public void setAll(Integer all) {
+        this.all = all;
+    }
+
+    /**
+     * get 机柜类型 formal:正式机柜 reserved:预留机柜
+     *
+     * @return
+     */
+    public String getCabinetType() {
+        return cabinetType;
+    }
+
+    /**
+     * set 机柜类型 formal:正式机柜 reserved:预留机柜
+     *
+     * @param cabinetType
+     */
+    public void setCabinetType(String cabinetType) {
+        this.cabinetType = cabinetType;
     }
 
     /**
@@ -141,6 +183,86 @@ cabinetId - 机柜ID，精确匹配，支持多个
      */
     public void setCabinetOpenStatus(String cabinetOpenStatus) {
         this.cabinetOpenStatus = cabinetOpenStatus;
+    }
+
+    /**
+     * get 机柜编码
+     *
+     * @return
+     */
+    public String getCabinetNo() {
+        return cabinetNo;
+    }
+
+    /**
+     * set 机柜编码
+     *
+     * @param cabinetNo
+     */
+    public void setCabinetNo(String cabinetNo) {
+        this.cabinetNo = cabinetNo;
+    }
+
+    /**
+     * get 机柜关电工单使用 yes
+     *
+     * @return
+     */
+    public String getDeviceMustBeEmpty() {
+        return deviceMustBeEmpty;
+    }
+
+    /**
+     * set 机柜关电工单使用 yes
+     *
+     * @param deviceMustBeEmpty
+     */
+    public void setDeviceMustBeEmpty(String deviceMustBeEmpty) {
+        this.deviceMustBeEmpty = deviceMustBeEmpty;
+    }
+
+    /**
+     * get roomNo - 房间号，精确匹配，支持多个
+cabinetId - 机柜ID，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
+cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set roomNo - 房间号，精确匹配，支持多个
+cabinetId - 机柜ID，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
+cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+    /**
+     * get cabinetNo - 机柜编码 roomNo - 房间号
+     *
+     * @return
+     */
+    public List<Sort> getSorts() {
+        return sorts;
+    }
+
+    /**
+     * set cabinetNo - 机柜编码 roomNo - 房间号
+     *
+     * @param sorts
+     */
+    public void setSorts(List<Sort> sorts) {
+        this.sorts = sorts;
     }
 
     /**
@@ -183,14 +305,22 @@ cabinetId - 机柜ID，精确匹配，支持多个
     }
 
     /**
-     * set roomNo - 房间号，精确匹配，支持多个
-cabinetId - 机柜ID，精确匹配，支持多个
-
+     * set 是否查询全部，默认分页
      *
-     * @param filters
+     * @param all
      */
-    public DescribeCabinetsRequest filters(List<Filter> filters) {
-        this.filters = filters;
+    public DescribeCabinetsRequest all(Integer all) {
+        this.all = all;
+        return this;
+    }
+
+    /**
+     * set 机柜类型 formal:正式机柜 reserved:预留机柜
+     *
+     * @param cabinetType
+     */
+    public DescribeCabinetsRequest cabinetType(String cabinetType) {
+        this.cabinetType = cabinetType;
         return this;
     }
 
@@ -201,6 +331,50 @@ cabinetId - 机柜ID，精确匹配，支持多个
      */
     public DescribeCabinetsRequest cabinetOpenStatus(String cabinetOpenStatus) {
         this.cabinetOpenStatus = cabinetOpenStatus;
+        return this;
+    }
+
+    /**
+     * set 机柜编码
+     *
+     * @param cabinetNo
+     */
+    public DescribeCabinetsRequest cabinetNo(String cabinetNo) {
+        this.cabinetNo = cabinetNo;
+        return this;
+    }
+
+    /**
+     * set 机柜关电工单使用 yes
+     *
+     * @param deviceMustBeEmpty
+     */
+    public DescribeCabinetsRequest deviceMustBeEmpty(String deviceMustBeEmpty) {
+        this.deviceMustBeEmpty = deviceMustBeEmpty;
+        return this;
+    }
+
+    /**
+     * set roomNo - 房间号，精确匹配，支持多个
+cabinetId - 机柜ID，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
+cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public DescribeCabinetsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set cabinetNo - 机柜编码 roomNo - 房间号
+     *
+     * @param sorts
+     */
+    public DescribeCabinetsRequest sorts(List<Sort> sorts) {
+        this.sorts = sorts;
         return this;
     }
 
@@ -218,6 +392,8 @@ cabinetId - 机柜ID，精确匹配，支持多个
     /**
      * add item to roomNo - 房间号，精确匹配，支持多个
 cabinetId - 机柜ID，精确匹配，支持多个
+cabinetNo - 机柜编码，精确匹配，支持多个
+cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
 
      *
      * @param filter
@@ -227,6 +403,18 @@ cabinetId - 机柜ID，精确匹配，支持多个
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to cabinetNo - 机柜编码 roomNo - 房间号
+     *
+     * @param sort
+     */
+    public void addSort(Sort sort) {
+        if (this.sorts == null) {
+            this.sorts = new ArrayList<>();
+        }
+        this.sorts.add(sort);
     }
 
 }

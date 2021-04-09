@@ -143,6 +143,16 @@ public class AlarmHistory  implements java.io.Serializable {
     private String condition;
 
     /**
+     * 报警条件（英文）
+     */
+    private String conditionEn;
+
+    /**
+     * 通知对象
+     */
+    private Object sendInfo;
+
+    /**
      * 策略ID
      */
     private Integer strategyId;
@@ -545,6 +555,42 @@ public class AlarmHistory  implements java.io.Serializable {
     }
 
     /**
+     * get 报警条件（英文）
+     *
+     * @return
+     */
+    public String getConditionEn() {
+        return conditionEn;
+    }
+
+    /**
+     * set 报警条件（英文）
+     *
+     * @param conditionEn
+     */
+    public void setConditionEn(String conditionEn) {
+        this.conditionEn = conditionEn;
+    }
+
+    /**
+     * get 通知对象
+     *
+     * @return
+     */
+    public Object getSendInfo() {
+        return sendInfo;
+    }
+
+    /**
+     * set 通知对象
+     *
+     * @param sendInfo
+     */
+    public void setSendInfo(Object sendInfo) {
+        this.sendInfo = sendInfo;
+    }
+
+    /**
      * get 策略ID
      *
      * @return
@@ -780,6 +826,26 @@ public class AlarmHistory  implements java.io.Serializable {
      */
     public AlarmHistory condition(String condition) {
         this.condition = condition;
+        return this;
+    }
+
+    /**
+     * set 报警条件（英文）
+     *
+     * @param conditionEn
+     */
+    public AlarmHistory conditionEn(String conditionEn) {
+        this.conditionEn = conditionEn;
+        return this;
+    }
+
+    /**
+     * set 通知对象
+     *
+     * @param sendInfo
+     */
+    public AlarmHistory sendInfo(Object sendInfo) {
+        this.sendInfo = sendInfo;
         return this;
     }
 

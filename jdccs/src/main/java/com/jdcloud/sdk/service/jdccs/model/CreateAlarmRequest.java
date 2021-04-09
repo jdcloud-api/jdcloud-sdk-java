@@ -108,6 +108,11 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
      */
     private String userId;
 
+    /**
+     * 通知对象组ID
+     */
+    private String groupId;
+
 
     /**
      * get idc机房实例ID
@@ -379,6 +384,24 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
         this.userId = userId;
     }
 
+    /**
+     * get 通知对象组ID
+     *
+     * @return
+     */
+    public String getGroupId() {
+        return groupId;
+    }
+
+    /**
+     * set 通知对象组ID
+     *
+     * @param groupId
+     */
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
 
     /**
      * set idc机房实例ID
@@ -527,6 +550,16 @@ public class CreateAlarmRequest extends JdcloudRequest implements java.io.Serial
      */
     public CreateAlarmRequest userId(String userId) {
         this.userId = userId;
+        return this;
+    }
+
+    /**
+     * set 通知对象组ID
+     *
+     * @param groupId
+     */
+    public CreateAlarmRequest groupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
 

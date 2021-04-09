@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.jdccs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 报警规则
@@ -111,6 +113,21 @@ public class DescribeAlarm  implements java.io.Serializable {
      * 规则状态 disabled:禁用 enabled:启用
      */
     private String status;
+
+    /**
+     * 交换机信息
+     */
+    private List<Switchboard> switchboard;
+
+    /**
+     * 通知对象用户ID,若多个用逗号分隔
+     */
+    private String userId;
+
+    /**
+     * 通知对象组ID
+     */
+    private String groupId;
 
 
     /**
@@ -401,6 +418,60 @@ public class DescribeAlarm  implements java.io.Serializable {
         this.status = status;
     }
 
+    /**
+     * get 交换机信息
+     *
+     * @return
+     */
+    public List<Switchboard> getSwitchboard() {
+        return switchboard;
+    }
+
+    /**
+     * set 交换机信息
+     *
+     * @param switchboard
+     */
+    public void setSwitchboard(List<Switchboard> switchboard) {
+        this.switchboard = switchboard;
+    }
+
+    /**
+     * get 通知对象用户ID,若多个用逗号分隔
+     *
+     * @return
+     */
+    public String getUserId() {
+        return userId;
+    }
+
+    /**
+     * set 通知对象用户ID,若多个用逗号分隔
+     *
+     * @param userId
+     */
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    /**
+     * get 通知对象组ID
+     *
+     * @return
+     */
+    public String getGroupId() {
+        return groupId;
+    }
+
+    /**
+     * set 通知对象组ID
+     *
+     * @param groupId
+     */
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
 
     /**
      * set 规则实例ID
@@ -562,5 +633,47 @@ public class DescribeAlarm  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 交换机信息
+     *
+     * @param switchboard
+     */
+    public DescribeAlarm switchboard(List<Switchboard> switchboard) {
+        this.switchboard = switchboard;
+        return this;
+    }
+
+    /**
+     * set 通知对象用户ID,若多个用逗号分隔
+     *
+     * @param userId
+     */
+    public DescribeAlarm userId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+
+    /**
+     * set 通知对象组ID
+     *
+     * @param groupId
+     */
+    public DescribeAlarm groupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+
+
+    /**
+     * add item to 交换机信息
+     *
+     * @param switchboard
+     */
+    public void addSwitchboard(Switchboard switchboard) {
+        if (this.switchboard == null) {
+            this.switchboard = new ArrayList<>();
+        }
+        this.switchboard.add(switchboard);
+    }
 
 }
