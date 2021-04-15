@@ -107,6 +107,11 @@ public class CreateAlarmSpec  implements java.io.Serializable {
      */
     private String userId;
 
+    /**
+     * 通知对象组ID
+     */
+    private String groupId;
+
 
     /**
      * get idc机房实例ID
@@ -378,6 +383,24 @@ public class CreateAlarmSpec  implements java.io.Serializable {
         this.userId = userId;
     }
 
+    /**
+     * get 通知对象组ID
+     *
+     * @return
+     */
+    public String getGroupId() {
+        return groupId;
+    }
+
+    /**
+     * set 通知对象组ID
+     *
+     * @param groupId
+     */
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
+
 
     /**
      * set idc机房实例ID
@@ -526,6 +549,16 @@ public class CreateAlarmSpec  implements java.io.Serializable {
      */
     public CreateAlarmSpec userId(String userId) {
         this.userId = userId;
+        return this;
+    }
+
+    /**
+     * set 通知对象组ID
+     *
+     * @param groupId
+     */
+    public CreateAlarmSpec groupId(String groupId) {
+        this.groupId = groupId;
         return this;
     }
 

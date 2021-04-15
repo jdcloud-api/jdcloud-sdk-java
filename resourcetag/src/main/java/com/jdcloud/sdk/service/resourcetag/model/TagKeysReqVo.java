@@ -50,6 +50,13 @@ public class TagKeysReqVo  implements java.io.Serializable {
      */
     private List<TagFilter> tagFilters;
 
+    /**
+     * 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+     */
+    private Integer showTagStatus;
+
 
     /**
      * get 产品线名称列表
@@ -99,6 +106,28 @@ public class TagKeysReqVo  implements java.io.Serializable {
         this.tagFilters = tagFilters;
     }
 
+    /**
+     * get 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+     *
+     * @return
+     */
+    public Integer getShowTagStatus() {
+        return showTagStatus;
+    }
+
+    /**
+     * set 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+     *
+     * @param showTagStatus
+     */
+    public void setShowTagStatus(Integer showTagStatus) {
+        this.showTagStatus = showTagStatus;
+    }
+
 
     /**
      * set 产品线名称列表
@@ -123,6 +152,18 @@ public class TagKeysReqVo  implements java.io.Serializable {
      */
     public TagKeysReqVo tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
+        return this;
+    }
+
+    /**
+     * set 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+     *
+     * @param showTagStatus
+     */
+    public TagKeysReqVo showTagStatus(Integer showTagStatus) {
+        this.showTagStatus = showTagStatus;
         return this;
     }
 

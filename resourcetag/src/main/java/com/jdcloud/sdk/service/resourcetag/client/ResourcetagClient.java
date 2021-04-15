@@ -31,21 +31,27 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
-import com.jdcloud.sdk.service.resourcetag.model.DescribeResourcesRequest;
-import com.jdcloud.sdk.service.resourcetag.model.DescribeResourcesResponse;
-import com.jdcloud.sdk.service.resourcetag.client.DescribeResourcesExecutor;
-import com.jdcloud.sdk.service.resourcetag.model.DescribeTagsRequest;
-import com.jdcloud.sdk.service.resourcetag.model.DescribeTagsResponse;
-import com.jdcloud.sdk.service.resourcetag.client.DescribeTagsExecutor;
-import com.jdcloud.sdk.service.resourcetag.model.TagResourcesRequest;
-import com.jdcloud.sdk.service.resourcetag.model.TagResourcesResponse;
-import com.jdcloud.sdk.service.resourcetag.client.TagResourcesExecutor;
 import com.jdcloud.sdk.service.resourcetag.model.UnTagResourcesRequest;
 import com.jdcloud.sdk.service.resourcetag.model.UnTagResourcesResponse;
 import com.jdcloud.sdk.service.resourcetag.client.UnTagResourcesExecutor;
 import com.jdcloud.sdk.service.resourcetag.model.QueryResourceRequest;
 import com.jdcloud.sdk.service.resourcetag.model.QueryResourceResponse;
 import com.jdcloud.sdk.service.resourcetag.client.QueryResourceExecutor;
+import com.jdcloud.sdk.service.resourcetag.model.DescribeKeysRequest;
+import com.jdcloud.sdk.service.resourcetag.model.DescribeKeysResponse;
+import com.jdcloud.sdk.service.resourcetag.client.DescribeKeysExecutor;
+import com.jdcloud.sdk.service.resourcetag.model.DescribeResourcesRequest;
+import com.jdcloud.sdk.service.resourcetag.model.DescribeResourcesResponse;
+import com.jdcloud.sdk.service.resourcetag.client.DescribeResourcesExecutor;
+import com.jdcloud.sdk.service.resourcetag.model.DescribeValuesRequest;
+import com.jdcloud.sdk.service.resourcetag.model.DescribeValuesResponse;
+import com.jdcloud.sdk.service.resourcetag.client.DescribeValuesExecutor;
+import com.jdcloud.sdk.service.resourcetag.model.DescribeTagsRequest;
+import com.jdcloud.sdk.service.resourcetag.model.DescribeTagsResponse;
+import com.jdcloud.sdk.service.resourcetag.client.DescribeTagsExecutor;
+import com.jdcloud.sdk.service.resourcetag.model.TagResourcesRequest;
+import com.jdcloud.sdk.service.resourcetag.model.TagResourcesResponse;
+import com.jdcloud.sdk.service.resourcetag.client.TagResourcesExecutor;
 
 /**
  * resourcetagClient
@@ -54,7 +60,7 @@ public class ResourcetagClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.3";
     public final static String DefaultEndpoint = "resource-tag.jdcloud-api.com";
     public final static String ServiceName = "resourcetag";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -97,6 +103,43 @@ public class ResourcetagClient extends JdcloudClient {
 
 
     /**
+     * 资源标签解绑。&lt;br/&gt;
+注意cdn资源解绑标签时url中regionId必须指定为cn-all。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UnTagResourcesResponse unTagResources(UnTagResourcesRequest request) throws JdcloudSdkException {
+        return new UnTagResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据标签查找资源。 &lt;br/&gt;
+若要查找cdn产品线的资源则url中的regionId必须指定为cn-all。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryResourceResponse queryResource(QueryResourceRequest request) throws JdcloudSdkException {
+        return new QueryResourceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取标签键
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeKeysResponse describeKeys(DescribeKeysRequest request) throws JdcloudSdkException {
+        return new DescribeKeysExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获得资源与对应标签列表详情，不含资源名称和可用区。&lt;br/&gt;
 注意查询cdn的资源时url中regionId必须指定为cn-all。&lt;br/&gt;
 该接口目前不支持分页功能。
@@ -108,6 +151,17 @@ public class ResourcetagClient extends JdcloudClient {
      */
     public DescribeResourcesResponse describeResources(DescribeResourcesRequest request) throws JdcloudSdkException {
         return new DescribeResourcesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取标签值
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeValuesResponse describeValues(DescribeValuesRequest request) throws JdcloudSdkException {
+        return new DescribeValuesExecutor().client(this).execute(request);
     }
 
     /**
@@ -135,32 +189,6 @@ public class ResourcetagClient extends JdcloudClient {
      */
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws JdcloudSdkException {
         return new TagResourcesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 资源标签解绑。&lt;br/&gt;
-注意cdn资源解绑标签时url中regionId必须指定为cn-all。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UnTagResourcesResponse unTagResources(UnTagResourcesRequest request) throws JdcloudSdkException {
-        return new UnTagResourcesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 根据标签查找资源。 &lt;br/&gt;
-若要查找cdn产品线的资源则url中的regionId必须指定为cn-all。
-
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryResourceResponse queryResource(QueryResourceRequest request) throws JdcloudSdkException {
-        return new QueryResourceExecutor().client(this).execute(request);
     }
 
 

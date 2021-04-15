@@ -57,6 +57,31 @@ public class DeviceOverview  implements java.io.Serializable {
      */
     private Integer other;
 
+    /**
+     * 已开通
+     */
+    private Integer opened;
+
+    /**
+     * 已上架
+     */
+    private Integer launched;
+
+    /**
+     * 操作中
+     */
+    private Integer operating;
+
+    /**
+     * 变更中
+     */
+    private Integer modifying;
+
+    /**
+     * 退订中
+     */
+    private Integer canceling;
+
 
     /**
      * get 设备总数目
@@ -148,6 +173,96 @@ public class DeviceOverview  implements java.io.Serializable {
         this.other = other;
     }
 
+    /**
+     * get 已开通
+     *
+     * @return
+     */
+    public Integer getOpened() {
+        return opened;
+    }
+
+    /**
+     * set 已开通
+     *
+     * @param opened
+     */
+    public void setOpened(Integer opened) {
+        this.opened = opened;
+    }
+
+    /**
+     * get 已上架
+     *
+     * @return
+     */
+    public Integer getLaunched() {
+        return launched;
+    }
+
+    /**
+     * set 已上架
+     *
+     * @param launched
+     */
+    public void setLaunched(Integer launched) {
+        this.launched = launched;
+    }
+
+    /**
+     * get 操作中
+     *
+     * @return
+     */
+    public Integer getOperating() {
+        return operating;
+    }
+
+    /**
+     * set 操作中
+     *
+     * @param operating
+     */
+    public void setOperating(Integer operating) {
+        this.operating = operating;
+    }
+
+    /**
+     * get 变更中
+     *
+     * @return
+     */
+    public Integer getModifying() {
+        return modifying;
+    }
+
+    /**
+     * set 变更中
+     *
+     * @param modifying
+     */
+    public void setModifying(Integer modifying) {
+        this.modifying = modifying;
+    }
+
+    /**
+     * get 退订中
+     *
+     * @return
+     */
+    public Integer getCanceling() {
+        return canceling;
+    }
+
+    /**
+     * set 退订中
+     *
+     * @param canceling
+     */
+    public void setCanceling(Integer canceling) {
+        this.canceling = canceling;
+    }
+
 
     /**
      * set 设备总数目
@@ -196,6 +311,56 @@ public class DeviceOverview  implements java.io.Serializable {
      */
     public DeviceOverview other(Integer other) {
         this.other = other;
+        return this;
+    }
+
+    /**
+     * set 已开通
+     *
+     * @param opened
+     */
+    public DeviceOverview opened(Integer opened) {
+        this.opened = opened;
+        return this;
+    }
+
+    /**
+     * set 已上架
+     *
+     * @param launched
+     */
+    public DeviceOverview launched(Integer launched) {
+        this.launched = launched;
+        return this;
+    }
+
+    /**
+     * set 操作中
+     *
+     * @param operating
+     */
+    public DeviceOverview operating(Integer operating) {
+        this.operating = operating;
+        return this;
+    }
+
+    /**
+     * set 变更中
+     *
+     * @param modifying
+     */
+    public DeviceOverview modifying(Integer modifying) {
+        this.modifying = modifying;
+        return this;
+    }
+
+    /**
+     * set 退订中
+     *
+     * @param canceling
+     */
+    public DeviceOverview canceling(Integer canceling) {
+        this.canceling = canceling;
         return this;
     }
 

@@ -43,11 +43,16 @@ public class AddDomain  implements java.io.Serializable {
     private String wafInstanceId;
 
     /**
-     * 域名
+     * 域名，单个
      * Required:true
      */
     @Required
-    private List<String> domain;
+    private String domain;
+
+    /**
+     * 域名数组
+     */
+    private List<String> domains;
 
     /**
      * 使用协议，eg:[&quot;http&quot;,&quot;https&quot;]
@@ -140,21 +145,39 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 域名
+     * get 域名，单个
      *
      * @return
      */
-    public List<String> getDomain() {
+    public String getDomain() {
         return domain;
     }
 
     /**
-     * set 域名
+     * set 域名，单个
      *
      * @param domain
      */
-    public void setDomain(List<String> domain) {
+    public void setDomain(String domain) {
         this.domain = domain;
+    }
+
+    /**
+     * get 域名数组
+     *
+     * @return
+     */
+    public List<String> getDomains() {
+        return domains;
+    }
+
+    /**
+     * set 域名数组
+     *
+     * @param domains
+     */
+    public void setDomains(List<String> domains) {
+        this.domains = domains;
     }
 
     /**
@@ -403,12 +426,22 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 域名
+     * set 域名，单个
      *
      * @param domain
      */
-    public AddDomain domain(List<String> domain) {
+    public AddDomain domain(String domain) {
         this.domain = domain;
+        return this;
+    }
+
+    /**
+     * set 域名数组
+     *
+     * @param domains
+     */
+    public AddDomain domains(List<String> domains) {
+        this.domains = domains;
         return this;
     }
 
@@ -544,15 +577,15 @@ public class AddDomain  implements java.io.Serializable {
 
 
     /**
-     * add item to 域名
+     * add item to 域名数组
      *
      * @param domain
      */
     public void addDomain(String domain) {
-        if (this.domain == null) {
-            this.domain = new ArrayList<>();
+        if (this.domains == null) {
+            this.domains = new ArrayList<>();
         }
-        this.domain.add(domain);
+        this.domains.add(domain);
     }
 
     /**

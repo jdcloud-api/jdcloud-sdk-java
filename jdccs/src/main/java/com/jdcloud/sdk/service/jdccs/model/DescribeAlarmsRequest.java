@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.jdccs.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -44,6 +47,11 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     private Integer pageSize;
 
     /**
+     * 是否查询全部，默认分页
+     */
+    private Integer all;
+
+    /**
      * 资源类型 bandwidth:带宽
      */
     private String resourceType;
@@ -54,9 +62,20 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     private String resourceId;
 
     /**
+     * 机房英文标识
+     */
+    private String idc;
+
+    /**
      * 规则状态 disabled:禁用 enabled:启用
      */
     private String status;
+
+    /**
+     * alarmId - 规则实施ID，精确匹配，支持多个
+
+     */
+    private List<Filter> filters;
 
 
     /**
@@ -96,6 +115,24 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * get 是否查询全部，默认分页
+     *
+     * @return
+     */
+    public Integer getAll() {
+        return all;
+    }
+
+    /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public void setAll(Integer all) {
+        this.all = all;
+    }
+
+    /**
      * get 资源类型 bandwidth:带宽
      *
      * @return
@@ -132,6 +169,24 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * get 机房英文标识
+     *
+     * @return
+     */
+    public String getIdc() {
+        return idc;
+    }
+
+    /**
+     * set 机房英文标识
+     *
+     * @param idc
+     */
+    public void setIdc(String idc) {
+        this.idc = idc;
+    }
+
+    /**
      * get 规则状态 disabled:禁用 enabled:启用
      *
      * @return
@@ -147,6 +202,26 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    /**
+     * get alarmId - 规则实施ID，精确匹配，支持多个
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set alarmId - 规则实施ID，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
 
@@ -171,6 +246,16 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public DescribeAlarmsRequest all(Integer all) {
+        this.all = all;
+        return this;
+    }
+
+    /**
      * set 资源类型 bandwidth:带宽
      *
      * @param resourceType
@@ -191,6 +276,16 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * set 机房英文标识
+     *
+     * @param idc
+     */
+    public DescribeAlarmsRequest idc(String idc) {
+        this.idc = idc;
+        return this;
+    }
+
+    /**
      * set 规则状态 disabled:禁用 enabled:启用
      *
      * @param status
@@ -200,5 +295,29 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+    /**
+     * set alarmId - 规则实施ID，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public DescribeAlarmsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+
+    /**
+     * add item to alarmId - 规则实施ID，精确匹配，支持多个
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

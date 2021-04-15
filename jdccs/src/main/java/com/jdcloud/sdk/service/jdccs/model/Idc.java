@@ -47,6 +47,26 @@ public class Idc  implements java.io.Serializable {
      */
     private Boolean isExternalIdc;
 
+    /**
+     * 机房地址
+     */
+    private String address;
+
+    /**
+     * 机房主管
+     */
+    private String manager;
+
+    /**
+     * 机房主管电话
+     */
+    private String managerPhone;
+
+    /**
+     * 机房类别 1:租用 2:自建 3:合作 4:其他
+     */
+    private Integer category;
+
 
     /**
      * get 机房英文标识
@@ -102,6 +122,78 @@ public class Idc  implements java.io.Serializable {
         this.isExternalIdc = isExternalIdc;
     }
 
+    /**
+     * get 机房地址
+     *
+     * @return
+     */
+    public String getAddress() {
+        return address;
+    }
+
+    /**
+     * set 机房地址
+     *
+     * @param address
+     */
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    /**
+     * get 机房主管
+     *
+     * @return
+     */
+    public String getManager() {
+        return manager;
+    }
+
+    /**
+     * set 机房主管
+     *
+     * @param manager
+     */
+    public void setManager(String manager) {
+        this.manager = manager;
+    }
+
+    /**
+     * get 机房主管电话
+     *
+     * @return
+     */
+    public String getManagerPhone() {
+        return managerPhone;
+    }
+
+    /**
+     * set 机房主管电话
+     *
+     * @param managerPhone
+     */
+    public void setManagerPhone(String managerPhone) {
+        this.managerPhone = managerPhone;
+    }
+
+    /**
+     * get 机房类别 1:租用 2:自建 3:合作 4:其他
+     *
+     * @return
+     */
+    public Integer getCategory() {
+        return category;
+    }
+
+    /**
+     * set 机房类别 1:租用 2:自建 3:合作 4:其他
+     *
+     * @param category
+     */
+    public void setCategory(Integer category) {
+        this.category = category;
+    }
+
 
     /**
      * set 机房英文标识
@@ -130,6 +222,46 @@ public class Idc  implements java.io.Serializable {
      */
     public Idc isExternalIdc(Boolean isExternalIdc) {
         this.isExternalIdc = isExternalIdc;
+        return this;
+    }
+
+    /**
+     * set 机房地址
+     *
+     * @param address
+     */
+    public Idc address(String address) {
+        this.address = address;
+        return this;
+    }
+
+    /**
+     * set 机房主管
+     *
+     * @param manager
+     */
+    public Idc manager(String manager) {
+        this.manager = manager;
+        return this;
+    }
+
+    /**
+     * set 机房主管电话
+     *
+     * @param managerPhone
+     */
+    public Idc managerPhone(String managerPhone) {
+        this.managerPhone = managerPhone;
+        return this;
+    }
+
+    /**
+     * set 机房类别 1:租用 2:自建 3:合作 4:其他
+     *
+     * @param category
+     */
+    public Idc category(Integer category) {
+        this.category = category;
         return this;
     }
 

@@ -45,6 +45,16 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
     private Integer pageSize;
 
     /**
+     * 是否查询全部，默认分页
+     */
+    private Integer all;
+
+    /**
+     * 带宽（出口）名称
+     */
+    private String bandwidthName;
+
+    /**
      * IDC机房ID
      * Required:true
      */
@@ -89,6 +99,42 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
     }
 
     /**
+     * get 是否查询全部，默认分页
+     *
+     * @return
+     */
+    public Integer getAll() {
+        return all;
+    }
+
+    /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public void setAll(Integer all) {
+        this.all = all;
+    }
+
+    /**
+     * get 带宽（出口）名称
+     *
+     * @return
+     */
+    public String getBandwidthName() {
+        return bandwidthName;
+    }
+
+    /**
+     * set 带宽（出口）名称
+     *
+     * @param bandwidthName
+     */
+    public void setBandwidthName(String bandwidthName) {
+        this.bandwidthName = bandwidthName;
+    }
+
+    /**
      * get IDC机房ID
      *
      * @return
@@ -124,6 +170,26 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
      */
     public DescribeBandwidthTrafficsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public DescribeBandwidthTrafficsRequest all(Integer all) {
+        this.all = all;
+        return this;
+    }
+
+    /**
+     * set 带宽（出口）名称
+     *
+     * @param bandwidthName
+     */
+    public DescribeBandwidthTrafficsRequest bandwidthName(String bandwidthName) {
+        this.bandwidthName = bandwidthName;
         return this;
     }
 

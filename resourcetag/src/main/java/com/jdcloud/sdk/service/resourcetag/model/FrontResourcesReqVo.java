@@ -59,6 +59,14 @@ public class FrontResourcesReqVo  implements java.io.Serializable {
     private List<TagFilter> tagFilters;
 
     /**
+     * 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+
+     */
+    private Integer showTagStatus;
+
+    /**
      * 每页记录数大小, 默认为20条记录每页, 上限为500条记录每页
      */
     private Integer pageSize;
@@ -136,6 +144,30 @@ public class FrontResourcesReqVo  implements java.io.Serializable {
     }
 
     /**
+     * get 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+
+     *
+     * @return
+     */
+    public Integer getShowTagStatus() {
+        return showTagStatus;
+    }
+
+    /**
+     * set 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+
+     *
+     * @param showTagStatus
+     */
+    public void setShowTagStatus(Integer showTagStatus) {
+        this.showTagStatus = showTagStatus;
+    }
+
+    /**
      * get 每页记录数大小, 默认为20条记录每页, 上限为500条记录每页
      *
      * @return
@@ -205,6 +237,19 @@ public class FrontResourcesReqVo  implements java.io.Serializable {
      */
     public FrontResourcesReqVo tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
+        return this;
+    }
+
+    /**
+     * set 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+
+     *
+     * @param showTagStatus
+     */
+    public FrontResourcesReqVo showTagStatus(Integer showTagStatus) {
+        this.showTagStatus = showTagStatus;
         return this;
     }
 

@@ -50,7 +50,7 @@ public class DescribeBandwidth  implements java.io.Serializable {
     private String bandwidthId;
 
     /**
-     * 带宽名称
+     * 带宽（出口）名称
      */
     private String bandwidthName;
 
@@ -146,7 +146,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
     }
 
     /**
-     * get 带宽名称
+     * get 带宽（出口）名称
      *
      * @return
      */
@@ -155,7 +155,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
     }
 
     /**
-     * set 带宽名称
+     * set 带宽（出口）名称
      *
      * @param bandwidthName
      */
@@ -315,7 +315,7 @@ merge95thPercentileAvg:日95峰值月平均（多出口合并计费）
     }
 
     /**
-     * set 带宽名称
+     * set 带宽（出口）名称
      *
      * @param bandwidthName
      */

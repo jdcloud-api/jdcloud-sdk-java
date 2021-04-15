@@ -24,6 +24,10 @@
 
 package com.jdcloud.sdk.service.jdccs.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -44,9 +48,70 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     private Integer pageSize;
 
     /**
+     * 是否查询全部，默认分页
+     */
+    private Integer all;
+
+    /**
      * 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
      */
     private String type;
+
+    /**
+     * 工单类型
+     */
+    private String ticketTypeName;
+
+    /**
+     * 工单类型ID
+     */
+    private Integer ticketTypeId;
+
+    /**
+     * 工单状态 pendingReview:待审核 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
+     */
+    private String status;
+
+    /**
+     * 工单编号
+     */
+    private String ticketNo;
+
+    /**
+     * 工单名称
+     */
+    private String ticketTemplateName;
+
+    /**
+     * 描述
+     */
+    private String description;
+
+    /**
+     * 创建开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+     */
+    private String startTime;
+
+    /**
+     * 创建结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+     */
+    private String endTime;
+
+    /**
+     * 提交账号
+     */
+    private String submitAccount;
+
+    /**
+     * ticketNo - 工单编号，精确匹配，支持多个
+
+     */
+    private List<Filter> filters;
+
+    /**
+     * createdTime - 创建时间 closedTime - 关闭时间
+     */
+    private List<Sort> sorts;
 
 
     /**
@@ -86,6 +151,24 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * get 是否查询全部，默认分页
+     *
+     * @return
+     */
+    public Integer getAll() {
+        return all;
+    }
+
+    /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public void setAll(Integer all) {
+        this.all = all;
+    }
+
+    /**
      * get 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
      *
      * @return
@@ -101,6 +184,206 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
      */
     public void setType(String type) {
         this.type = type;
+    }
+
+    /**
+     * get 工单类型
+     *
+     * @return
+     */
+    public String getTicketTypeName() {
+        return ticketTypeName;
+    }
+
+    /**
+     * set 工单类型
+     *
+     * @param ticketTypeName
+     */
+    public void setTicketTypeName(String ticketTypeName) {
+        this.ticketTypeName = ticketTypeName;
+    }
+
+    /**
+     * get 工单类型ID
+     *
+     * @return
+     */
+    public Integer getTicketTypeId() {
+        return ticketTypeId;
+    }
+
+    /**
+     * set 工单类型ID
+     *
+     * @param ticketTypeId
+     */
+    public void setTicketTypeId(Integer ticketTypeId) {
+        this.ticketTypeId = ticketTypeId;
+    }
+
+    /**
+     * get 工单状态 pendingReview:待审核 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set 工单状态 pendingReview:待审核 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 工单编号
+     *
+     * @return
+     */
+    public String getTicketNo() {
+        return ticketNo;
+    }
+
+    /**
+     * set 工单编号
+     *
+     * @param ticketNo
+     */
+    public void setTicketNo(String ticketNo) {
+        this.ticketNo = ticketNo;
+    }
+
+    /**
+     * get 工单名称
+     *
+     * @return
+     */
+    public String getTicketTemplateName() {
+        return ticketTemplateName;
+    }
+
+    /**
+     * set 工单名称
+     *
+     * @param ticketTemplateName
+     */
+    public void setTicketTemplateName(String ticketTemplateName) {
+        this.ticketTemplateName = ticketTemplateName;
+    }
+
+    /**
+     * get 描述
+     *
+     * @return
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * set 描述
+     *
+     * @param description
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * get 创建开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+     *
+     * @return
+     */
+    public String getStartTime() {
+        return startTime;
+    }
+
+    /**
+     * set 创建开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+     *
+     * @param startTime
+     */
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    /**
+     * get 创建结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+     *
+     * @return
+     */
+    public String getEndTime() {
+        return endTime;
+    }
+
+    /**
+     * set 创建结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+     *
+     * @param endTime
+     */
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    /**
+     * get 提交账号
+     *
+     * @return
+     */
+    public String getSubmitAccount() {
+        return submitAccount;
+    }
+
+    /**
+     * set 提交账号
+     *
+     * @param submitAccount
+     */
+    public void setSubmitAccount(String submitAccount) {
+        this.submitAccount = submitAccount;
+    }
+
+    /**
+     * get ticketNo - 工单编号，精确匹配，支持多个
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set ticketNo - 工单编号，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+    /**
+     * get createdTime - 创建时间 closedTime - 关闭时间
+     *
+     * @return
+     */
+    public List<Sort> getSorts() {
+        return sorts;
+    }
+
+    /**
+     * set createdTime - 创建时间 closedTime - 关闭时间
+     *
+     * @param sorts
+     */
+    public void setSorts(List<Sort> sorts) {
+        this.sorts = sorts;
     }
 
 
@@ -125,6 +408,16 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * set 是否查询全部，默认分页
+     *
+     * @param all
+     */
+    public DescribeTicketsRequest all(Integer all) {
+        this.all = all;
+        return this;
+    }
+
+    /**
      * set 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
      *
      * @param type
@@ -134,5 +427,141 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+    /**
+     * set 工单类型
+     *
+     * @param ticketTypeName
+     */
+    public DescribeTicketsRequest ticketTypeName(String ticketTypeName) {
+        this.ticketTypeName = ticketTypeName;
+        return this;
+    }
+
+    /**
+     * set 工单类型ID
+     *
+     * @param ticketTypeId
+     */
+    public DescribeTicketsRequest ticketTypeId(Integer ticketTypeId) {
+        this.ticketTypeId = ticketTypeId;
+        return this;
+    }
+
+    /**
+     * set 工单状态 pendingReview:待审核 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
+     *
+     * @param status
+     */
+    public DescribeTicketsRequest status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 工单编号
+     *
+     * @param ticketNo
+     */
+    public DescribeTicketsRequest ticketNo(String ticketNo) {
+        this.ticketNo = ticketNo;
+        return this;
+    }
+
+    /**
+     * set 工单名称
+     *
+     * @param ticketTemplateName
+     */
+    public DescribeTicketsRequest ticketTemplateName(String ticketTemplateName) {
+        this.ticketTemplateName = ticketTemplateName;
+        return this;
+    }
+
+    /**
+     * set 描述
+     *
+     * @param description
+     */
+    public DescribeTicketsRequest description(String description) {
+        this.description = description;
+        return this;
+    }
+
+    /**
+     * set 创建开始时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+     *
+     * @param startTime
+     */
+    public DescribeTicketsRequest startTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+
+    /**
+     * set 创建结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
+     *
+     * @param endTime
+     */
+    public DescribeTicketsRequest endTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+
+    /**
+     * set 提交账号
+     *
+     * @param submitAccount
+     */
+    public DescribeTicketsRequest submitAccount(String submitAccount) {
+        this.submitAccount = submitAccount;
+        return this;
+    }
+
+    /**
+     * set ticketNo - 工单编号，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public DescribeTicketsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set createdTime - 创建时间 closedTime - 关闭时间
+     *
+     * @param sorts
+     */
+    public DescribeTicketsRequest sorts(List<Sort> sorts) {
+        this.sorts = sorts;
+        return this;
+    }
+
+
+    /**
+     * add item to ticketNo - 工单编号，精确匹配，支持多个
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
+
+    /**
+     * add item to createdTime - 创建时间 closedTime - 关闭时间
+     *
+     * @param sort
+     */
+    public void addSort(Sort sort) {
+        if (this.sorts == null) {
+            this.sorts = new ArrayList<>();
+        }
+        this.sorts.add(sort);
+    }
 
 }

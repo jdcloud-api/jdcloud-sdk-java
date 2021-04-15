@@ -97,6 +97,16 @@ public class DescribeCabinet  implements java.io.Serializable {
      */
     private String reserveEndTime;
 
+    /**
+     * 占用U数(U)
+     */
+    private Integer rackUOccupy;
+
+    /**
+     * 空闲U数(U)
+     */
+    private Integer rackUFree;
+
 
     /**
      * get 机房英文标识
@@ -332,6 +342,42 @@ public class DescribeCabinet  implements java.io.Serializable {
         this.reserveEndTime = reserveEndTime;
     }
 
+    /**
+     * get 占用U数(U)
+     *
+     * @return
+     */
+    public Integer getRackUOccupy() {
+        return rackUOccupy;
+    }
+
+    /**
+     * set 占用U数(U)
+     *
+     * @param rackUOccupy
+     */
+    public void setRackUOccupy(Integer rackUOccupy) {
+        this.rackUOccupy = rackUOccupy;
+    }
+
+    /**
+     * get 空闲U数(U)
+     *
+     * @return
+     */
+    public Integer getRackUFree() {
+        return rackUFree;
+    }
+
+    /**
+     * set 空闲U数(U)
+     *
+     * @param rackUFree
+     */
+    public void setRackUFree(Integer rackUFree) {
+        this.rackUFree = rackUFree;
+    }
+
 
     /**
      * set 机房英文标识
@@ -460,6 +506,26 @@ public class DescribeCabinet  implements java.io.Serializable {
      */
     public DescribeCabinet reserveEndTime(String reserveEndTime) {
         this.reserveEndTime = reserveEndTime;
+        return this;
+    }
+
+    /**
+     * set 占用U数(U)
+     *
+     * @param rackUOccupy
+     */
+    public DescribeCabinet rackUOccupy(Integer rackUOccupy) {
+        this.rackUOccupy = rackUOccupy;
+        return this;
+    }
+
+    /**
+     * set 空闲U数(U)
+     *
+     * @param rackUFree
+     */
+    public DescribeCabinet rackUFree(Integer rackUFree) {
+        this.rackUFree = rackUFree;
         return this;
     }
 

@@ -27,6 +27,7 @@ package com.jdcloud.sdk.service.jdccs.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -48,15 +49,40 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
     private Integer pageSize;
 
     /**
-     * bandwidthId - 带宽实例IID，精确匹配，支持多个
-
+     * 是否查询全部，默认分页
      */
-    private List<Filter> filters;
+    private Integer all;
 
     /**
      * 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      */
     private String lineType;
+
+    /**
+     * 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     */
+    private String chargeType;
+
+    /**
+     * 带宽（出口）名称
+     */
+    private String bandwidthName;
+
+    /**
+     * 关联的公网IP
+     */
+    private String relatedIp;
+
+    /**
+     * bandwidthId - 带宽实例ID，精确匹配，支持多个
+
+     */
+    private List<Filter> filters;
+
+    /**
+     * null
+     */
+    private List<Sort> sorts;
 
     /**
      * IDC机房ID
@@ -103,23 +129,21 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get bandwidthId - 带宽实例IID，精确匹配，支持多个
-
+     * get 是否查询全部，默认分页
      *
      * @return
      */
-    public List<Filter> getFilters() {
-        return filters;
+    public Integer getAll() {
+        return all;
     }
 
     /**
-     * set bandwidthId - 带宽实例IID，精确匹配，支持多个
-
+     * set 是否查询全部，默认分页
      *
-     * @param filters
+     * @param all
      */
-    public void setFilters(List<Filter> filters) {
-        this.filters = filters;
+    public void setAll(Integer all) {
+        this.all = all;
     }
 
     /**
@@ -138,6 +162,98 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
      */
     public void setLineType(String lineType) {
         this.lineType = lineType;
+    }
+
+    /**
+     * get 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     *
+     * @return
+     */
+    public String getChargeType() {
+        return chargeType;
+    }
+
+    /**
+     * set 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     *
+     * @param chargeType
+     */
+    public void setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+    }
+
+    /**
+     * get 带宽（出口）名称
+     *
+     * @return
+     */
+    public String getBandwidthName() {
+        return bandwidthName;
+    }
+
+    /**
+     * set 带宽（出口）名称
+     *
+     * @param bandwidthName
+     */
+    public void setBandwidthName(String bandwidthName) {
+        this.bandwidthName = bandwidthName;
+    }
+
+    /**
+     * get 关联的公网IP
+     *
+     * @return
+     */
+    public String getRelatedIp() {
+        return relatedIp;
+    }
+
+    /**
+     * set 关联的公网IP
+     *
+     * @param relatedIp
+     */
+    public void setRelatedIp(String relatedIp) {
+        this.relatedIp = relatedIp;
+    }
+
+    /**
+     * get bandwidthId - 带宽实例ID，精确匹配，支持多个
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set bandwidthId - 带宽实例ID，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
+    }
+
+    /**
+     * get null
+     *
+     * @return
+     */
+    public List<Sort> getSorts() {
+        return sorts;
+    }
+
+    /**
+     * set null
+     *
+     * @param sorts
+     */
+    public void setSorts(List<Sort> sorts) {
+        this.sorts = sorts;
     }
 
     /**
@@ -180,13 +296,12 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set bandwidthId - 带宽实例IID，精确匹配，支持多个
-
+     * set 是否查询全部，默认分页
      *
-     * @param filters
+     * @param all
      */
-    public DescribeBandwidthsRequest filters(List<Filter> filters) {
-        this.filters = filters;
+    public DescribeBandwidthsRequest all(Integer all) {
+        this.all = all;
         return this;
     }
 
@@ -197,6 +312,57 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
      */
     public DescribeBandwidthsRequest lineType(String lineType) {
         this.lineType = lineType;
+        return this;
+    }
+
+    /**
+     * set 计费方式 fixedBandwidth:固定带宽 95thPercentile:95峰值 merge95thPercentile:合并95峰值
+     *
+     * @param chargeType
+     */
+    public DescribeBandwidthsRequest chargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+
+    /**
+     * set 带宽（出口）名称
+     *
+     * @param bandwidthName
+     */
+    public DescribeBandwidthsRequest bandwidthName(String bandwidthName) {
+        this.bandwidthName = bandwidthName;
+        return this;
+    }
+
+    /**
+     * set 关联的公网IP
+     *
+     * @param relatedIp
+     */
+    public DescribeBandwidthsRequest relatedIp(String relatedIp) {
+        this.relatedIp = relatedIp;
+        return this;
+    }
+
+    /**
+     * set bandwidthId - 带宽实例ID，精确匹配，支持多个
+
+     *
+     * @param filters
+     */
+    public DescribeBandwidthsRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
+     * set null
+     *
+     * @param sorts
+     */
+    public DescribeBandwidthsRequest sorts(List<Sort> sorts) {
+        this.sorts = sorts;
         return this;
     }
 
@@ -212,7 +378,7 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * add item to bandwidthId - 带宽实例IID，精确匹配，支持多个
+     * add item to bandwidthId - 带宽实例ID，精确匹配，支持多个
 
      *
      * @param filter
@@ -222,6 +388,18 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to null
+     *
+     * @param sort
+     */
+    public void addSort(Sort sort) {
+        if (this.sorts == null) {
+            this.sorts = new ArrayList<>();
+        }
+        this.sorts.add(sort);
     }
 
 }

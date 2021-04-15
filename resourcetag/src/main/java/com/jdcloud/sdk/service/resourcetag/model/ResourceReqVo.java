@@ -56,6 +56,14 @@ public class ResourceReqVo  implements java.io.Serializable {
     private List<TagFilter> tagFilters;
 
     /**
+     * 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+
+     */
+    private Integer showTagStatus;
+
+    /**
      * 排序依据
      */
     private String orderCondition;
@@ -140,6 +148,30 @@ public class ResourceReqVo  implements java.io.Serializable {
      */
     public void setTagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
+    }
+
+    /**
+     * get 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+
+     *
+     * @return
+     */
+    public Integer getShowTagStatus() {
+        return showTagStatus;
+    }
+
+    /**
+     * set 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+
+     *
+     * @param showTagStatus
+     */
+    public void setShowTagStatus(Integer showTagStatus) {
+        this.showTagStatus = showTagStatus;
     }
 
     /**
@@ -248,6 +280,19 @@ public class ResourceReqVo  implements java.io.Serializable {
      */
     public ResourceReqVo tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
+        return this;
+    }
+
+    /**
+     * set 控制标签显示参数, 默认为0
+0: 只显示普通用户标签
+1: 显示系统标签和普通用户标签
+
+     *
+     * @param showTagStatus
+     */
+    public ResourceReqVo showTagStatus(Integer showTagStatus) {
+        this.showTagStatus = showTagStatus;
         return this;
     }
 
