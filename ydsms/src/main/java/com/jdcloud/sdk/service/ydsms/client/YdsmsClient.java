@@ -43,6 +43,9 @@ import com.jdcloud.sdk.service.ydsms.client.ModifyStatusUsingGETExecutor;
 import com.jdcloud.sdk.service.ydsms.model.QuerySecretKeyUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.QuerySecretKeyUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.QuerySecretKeyUsingGETExecutor;
+import com.jdcloud.sdk.service.ydsms.model.SendMessagesByPinUsingPOSTRequest;
+import com.jdcloud.sdk.service.ydsms.model.SendMessagesByPinUsingPOSTResponse;
+import com.jdcloud.sdk.service.ydsms.client.SendMessagesByPinUsingPOSTExecutor;
 import com.jdcloud.sdk.service.ydsms.model.QueryAmountUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.QueryAmountUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.QueryAmountUsingGETExecutor;
@@ -115,6 +118,9 @@ import com.jdcloud.sdk.service.ydsms.client.GetSmsTaskIdUsingGETExecutor;
 import com.jdcloud.sdk.service.ydsms.model.GetSmsTaskContentUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.GetSmsTaskContentUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.GetSmsTaskContentUsingGETExecutor;
+import com.jdcloud.sdk.service.ydsms.model.SendMessagesByOrderIdUsingPOSTRequest;
+import com.jdcloud.sdk.service.ydsms.model.SendMessagesByOrderIdUsingPOSTResponse;
+import com.jdcloud.sdk.service.ydsms.client.SendMessagesByOrderIdUsingPOSTExecutor;
 import com.jdcloud.sdk.service.ydsms.model.TaskStartUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.TaskStartUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.TaskStartUsingGETExecutor;
@@ -234,6 +240,17 @@ public class YdsmsClient extends JdcloudClient {
      */
     public QuerySecretKeyUsingGETResponse querySecretKeyUsingGET(QuerySecretKeyUsingGETRequest request) throws JdcloudSdkException {
         return new QuerySecretKeyUsingGETExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据pin发送短信
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SendMessagesByPinUsingPOSTResponse sendMessagesByPinUsingPOST(SendMessagesByPinUsingPOSTRequest request) throws JdcloudSdkException {
+        return new SendMessagesByPinUsingPOSTExecutor().client(this).execute(request);
     }
 
     /**
@@ -498,6 +515,17 @@ public class YdsmsClient extends JdcloudClient {
      */
     public GetSmsTaskContentUsingGETResponse getSmsTaskContentUsingGET(GetSmsTaskContentUsingGETRequest request) throws JdcloudSdkException {
         return new GetSmsTaskContentUsingGETExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据订单号发送短信
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SendMessagesByOrderIdUsingPOSTResponse sendMessagesByOrderIdUsingPOST(SendMessagesByOrderIdUsingPOSTRequest request) throws JdcloudSdkException {
+        return new SendMessagesByOrderIdUsingPOSTExecutor().client(this).execute(request);
     }
 
     /**
