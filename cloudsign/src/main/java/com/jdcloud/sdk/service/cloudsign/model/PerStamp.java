@@ -33,7 +33,12 @@ public class PerStamp  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 盖章类型（0 坐标 1 关键字）
+     * 最多盖章数目（默认10）
+     */
+    private Integer stampMax;
+
+    /**
+     * 盖章类型（0 坐标 1 关键字，默认为 1）
      */
     private Integer signPositionType;
 
@@ -63,7 +68,7 @@ public class PerStamp  implements java.io.Serializable {
     private Integer offsetY;
 
     /**
-     * 盖章页码（选择坐标盖章时需要）
+     * 盖章页码（选择坐标盖章时需要传入本参数）
      */
     private Integer page;
 
@@ -93,7 +98,7 @@ public class PerStamp  implements java.io.Serializable {
     private Boolean isDefault;
 
     /**
-     * 图片类型，只支持png格式
+     * 图片类型
      */
     private String imageType;
 
@@ -134,7 +139,25 @@ public class PerStamp  implements java.io.Serializable {
 
 
     /**
-     * get 盖章类型（0 坐标 1 关键字）
+     * get 最多盖章数目（默认10）
+     *
+     * @return
+     */
+    public Integer getStampMax() {
+        return stampMax;
+    }
+
+    /**
+     * set 最多盖章数目（默认10）
+     *
+     * @param stampMax
+     */
+    public void setStampMax(Integer stampMax) {
+        this.stampMax = stampMax;
+    }
+
+    /**
+     * get 盖章类型（0 坐标 1 关键字，默认为 1）
      *
      * @return
      */
@@ -143,7 +166,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 盖章类型（0 坐标 1 关键字）
+     * set 盖章类型（0 坐标 1 关键字，默认为 1）
      *
      * @param signPositionType
      */
@@ -242,7 +265,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * get 盖章页码（选择坐标盖章时需要）
+     * get 盖章页码（选择坐标盖章时需要传入本参数）
      *
      * @return
      */
@@ -251,7 +274,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 盖章页码（选择坐标盖章时需要）
+     * set 盖章页码（选择坐标盖章时需要传入本参数）
      *
      * @param page
      */
@@ -350,7 +373,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * get 图片类型，只支持png格式
+     * get 图片类型
      *
      * @return
      */
@@ -359,7 +382,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 图片类型，只支持png格式
+     * set 图片类型
      *
      * @param imageType
      */
@@ -495,7 +518,17 @@ public class PerStamp  implements java.io.Serializable {
 
 
     /**
-     * set 盖章类型（0 坐标 1 关键字）
+     * set 最多盖章数目（默认10）
+     *
+     * @param stampMax
+     */
+    public PerStamp stampMax(Integer stampMax) {
+        this.stampMax = stampMax;
+        return this;
+    }
+
+    /**
+     * set 盖章类型（0 坐标 1 关键字，默认为 1）
      *
      * @param signPositionType
      */
@@ -555,7 +588,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 盖章页码（选择坐标盖章时需要）
+     * set 盖章页码（选择坐标盖章时需要传入本参数）
      *
      * @param page
      */
@@ -615,7 +648,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 图片类型，只支持png格式
+     * set 图片类型
      *
      * @param imageType
      */
