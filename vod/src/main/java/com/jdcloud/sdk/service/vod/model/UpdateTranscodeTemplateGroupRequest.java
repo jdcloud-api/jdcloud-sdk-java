@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.vod.model.GroupedTranscodeTemplateData;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
@@ -43,7 +45,7 @@ public class UpdateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
     /**
      * templates
      */
-    private GroupedTranscodeTemplateData templates;
+    private List<GroupedTranscodeTemplateData> templates;
 
     /**
      * 模板组ID
@@ -76,7 +78,7 @@ public class UpdateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
      *
      * @return
      */
-    public GroupedTranscodeTemplateData getTemplates() {
+    public List<GroupedTranscodeTemplateData> getTemplates() {
         return templates;
     }
 
@@ -85,7 +87,7 @@ public class UpdateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
      *
      * @param templates
      */
-    public void setTemplates(GroupedTranscodeTemplateData templates) {
+    public void setTemplates(List<GroupedTranscodeTemplateData> templates) {
         this.templates = templates;
     }
 
@@ -123,7 +125,7 @@ public class UpdateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
      *
      * @param templates
      */
-    public UpdateTranscodeTemplateGroupRequest templates(GroupedTranscodeTemplateData templates) {
+    public UpdateTranscodeTemplateGroupRequest templates(List<GroupedTranscodeTemplateData> templates) {
         this.templates = templates;
         return this;
     }
@@ -138,5 +140,17 @@ public class UpdateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
         return this;
     }
 
+
+    /**
+     * add item to templates
+     *
+     * @param template
+     */
+    public void addTemplate(GroupedTranscodeTemplateData template) {
+        if (this.templates == null) {
+            this.templates = new ArrayList<>();
+        }
+        this.templates.add(template);
+    }
 
 }
