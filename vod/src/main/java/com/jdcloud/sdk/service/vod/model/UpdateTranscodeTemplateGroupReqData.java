@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 转码模板组信息
@@ -40,7 +42,7 @@ public class UpdateTranscodeTemplateGroupReqData  implements java.io.Serializabl
     /**
      * templates
      */
-    private GroupedTranscodeTemplateData templates;
+    private List<GroupedTranscodeTemplateData> templates;
 
 
     /**
@@ -66,7 +68,7 @@ public class UpdateTranscodeTemplateGroupReqData  implements java.io.Serializabl
      *
      * @return
      */
-    public GroupedTranscodeTemplateData getTemplates() {
+    public List<GroupedTranscodeTemplateData> getTemplates() {
         return templates;
     }
 
@@ -75,7 +77,7 @@ public class UpdateTranscodeTemplateGroupReqData  implements java.io.Serializabl
      *
      * @param templates
      */
-    public void setTemplates(GroupedTranscodeTemplateData templates) {
+    public void setTemplates(List<GroupedTranscodeTemplateData> templates) {
         this.templates = templates;
     }
 
@@ -95,10 +97,22 @@ public class UpdateTranscodeTemplateGroupReqData  implements java.io.Serializabl
      *
      * @param templates
      */
-    public UpdateTranscodeTemplateGroupReqData templates(GroupedTranscodeTemplateData templates) {
+    public UpdateTranscodeTemplateGroupReqData templates(List<GroupedTranscodeTemplateData> templates) {
         this.templates = templates;
         return this;
     }
 
+
+    /**
+     * add item to templates
+     *
+     * @param template
+     */
+    public void addTemplate(GroupedTranscodeTemplateData template) {
+        if (this.templates == null) {
+            this.templates = new ArrayList<>();
+        }
+        this.templates.add(template);
+    }
 
 }

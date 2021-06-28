@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.cloudsign.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.cloudsign.model.ContractInfo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -35,7 +38,85 @@ public class DownloadContractsResult extends JdcloudResult implements java.io.Se
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * contractList
+     */
+    private List<ContractInfo> contractList;
+
+    /**
+     * 合同数量
+     */
+    private Integer totalCount;
 
 
+    /**
+     * get contractList
+     *
+     * @return
+     */
+    public List<ContractInfo> getContractList() {
+        return contractList;
+    }
+
+    /**
+     * set contractList
+     *
+     * @param contractList
+     */
+    public void setContractList(List<ContractInfo> contractList) {
+        this.contractList = contractList;
+    }
+
+    /**
+     * get 合同数量
+     *
+     * @return
+     */
+    public Integer getTotalCount() {
+        return totalCount;
+    }
+
+    /**
+     * set 合同数量
+     *
+     * @param totalCount
+     */
+    public void setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+    }
+
+
+    /**
+     * set contractList
+     *
+     * @param contractList
+     */
+    public DownloadContractsResult contractList(List<ContractInfo> contractList) {
+        this.contractList = contractList;
+        return this;
+    }
+
+    /**
+     * set 合同数量
+     *
+     * @param totalCount
+     */
+    public DownloadContractsResult totalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+
+
+    /**
+     * add item to contractList
+     *
+     * @param contractList
+     */
+    public void addContractList(ContractInfo contractList) {
+        if (this.contractList == null) {
+            this.contractList = new ArrayList<>();
+        }
+        this.contractList.add(contractList);
+    }
 
 }

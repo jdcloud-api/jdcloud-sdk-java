@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.vod.model.GroupedTranscodeTemplateData;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -42,7 +44,7 @@ public class CreateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
     /**
      * templates
      */
-    private GroupedTranscodeTemplateData templates;
+    private List<GroupedTranscodeTemplateData> templates;
 
 
     /**
@@ -68,7 +70,7 @@ public class CreateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
      *
      * @return
      */
-    public GroupedTranscodeTemplateData getTemplates() {
+    public List<GroupedTranscodeTemplateData> getTemplates() {
         return templates;
     }
 
@@ -77,7 +79,7 @@ public class CreateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
      *
      * @param templates
      */
-    public void setTemplates(GroupedTranscodeTemplateData templates) {
+    public void setTemplates(List<GroupedTranscodeTemplateData> templates) {
         this.templates = templates;
     }
 
@@ -97,10 +99,22 @@ public class CreateTranscodeTemplateGroupRequest extends JdcloudRequest implemen
      *
      * @param templates
      */
-    public CreateTranscodeTemplateGroupRequest templates(GroupedTranscodeTemplateData templates) {
+    public CreateTranscodeTemplateGroupRequest templates(List<GroupedTranscodeTemplateData> templates) {
         this.templates = templates;
         return this;
     }
 
+
+    /**
+     * add item to templates
+     *
+     * @param template
+     */
+    public void addTemplate(GroupedTranscodeTemplateData template) {
+        if (this.templates == null) {
+            this.templates = new ArrayList<>();
+        }
+        this.templates.add(template);
+    }
 
 }

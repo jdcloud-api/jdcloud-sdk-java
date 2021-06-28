@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.vod.model.GroupedTranscodeTemplateData;
 import com.jdcloud.sdk.service.JdcloudResult;
 
@@ -47,7 +49,7 @@ public class UpdateTranscodeTemplateGroupResult extends JdcloudResult implements
     /**
      * templates
      */
-    private GroupedTranscodeTemplateData templates;
+    private List<GroupedTranscodeTemplateData> templates;
 
     /**
      * 创建时间
@@ -101,7 +103,7 @@ public class UpdateTranscodeTemplateGroupResult extends JdcloudResult implements
      *
      * @return
      */
-    public GroupedTranscodeTemplateData getTemplates() {
+    public List<GroupedTranscodeTemplateData> getTemplates() {
         return templates;
     }
 
@@ -110,7 +112,7 @@ public class UpdateTranscodeTemplateGroupResult extends JdcloudResult implements
      *
      * @param templates
      */
-    public void setTemplates(GroupedTranscodeTemplateData templates) {
+    public void setTemplates(List<GroupedTranscodeTemplateData> templates) {
         this.templates = templates;
     }
 
@@ -176,7 +178,7 @@ public class UpdateTranscodeTemplateGroupResult extends JdcloudResult implements
      *
      * @param templates
      */
-    public UpdateTranscodeTemplateGroupResult templates(GroupedTranscodeTemplateData templates) {
+    public UpdateTranscodeTemplateGroupResult templates(List<GroupedTranscodeTemplateData> templates) {
         this.templates = templates;
         return this;
     }
@@ -201,5 +203,17 @@ public class UpdateTranscodeTemplateGroupResult extends JdcloudResult implements
         return this;
     }
 
+
+    /**
+     * add item to templates
+     *
+     * @param template
+     */
+    public void addTemplate(GroupedTranscodeTemplateData template) {
+        if (this.templates == null) {
+            this.templates = new ArrayList<>();
+        }
+        this.templates.add(template);
+    }
 
 }

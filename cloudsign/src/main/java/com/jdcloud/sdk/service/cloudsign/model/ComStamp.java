@@ -33,7 +33,12 @@ public class ComStamp  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 盖章类型（0 坐标 1 关键字）
+     * 最多盖章数目（默认10）
+     */
+    private Integer stampMax;
+
+    /**
+     * 盖章类型（0 坐标 1 关键字 默认1 ）
      */
     private Integer signPositionType;
 
@@ -149,7 +154,25 @@ public class ComStamp  implements java.io.Serializable {
 
 
     /**
-     * get 盖章类型（0 坐标 1 关键字）
+     * get 最多盖章数目（默认10）
+     *
+     * @return
+     */
+    public Integer getStampMax() {
+        return stampMax;
+    }
+
+    /**
+     * set 最多盖章数目（默认10）
+     *
+     * @param stampMax
+     */
+    public void setStampMax(Integer stampMax) {
+        this.stampMax = stampMax;
+    }
+
+    /**
+     * get 盖章类型（0 坐标 1 关键字 默认1 ）
      *
      * @return
      */
@@ -158,7 +181,7 @@ public class ComStamp  implements java.io.Serializable {
     }
 
     /**
-     * set 盖章类型（0 坐标 1 关键字）
+     * set 盖章类型（0 坐标 1 关键字 默认1 ）
      *
      * @param signPositionType
      */
@@ -564,7 +587,17 @@ public class ComStamp  implements java.io.Serializable {
 
 
     /**
-     * set 盖章类型（0 坐标 1 关键字）
+     * set 最多盖章数目（默认10）
+     *
+     * @param stampMax
+     */
+    public ComStamp stampMax(Integer stampMax) {
+        this.stampMax = stampMax;
+        return this;
+    }
+
+    /**
+     * set 盖章类型（0 坐标 1 关键字 默认1 ）
      *
      * @param signPositionType
      */

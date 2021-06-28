@@ -44,7 +44,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     private Integer usedCapacity;
 
     /**
-     * 当前服务状态(0:正常 -1:停服)
+     * 当前服务状态(0 未开通 1 开通中 2 正常 3 停服)
      */
     private Integer status;
 
@@ -101,7 +101,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * get 当前服务状态(0:正常 -1:停服)
+     * get 当前服务状态(0 未开通 1 开通中 2 正常 3 停服)
      *
      * @return
      */
@@ -110,7 +110,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 当前服务状态(0:正常 -1:停服)
+     * set 当前服务状态(0 未开通 1 开通中 2 正常 3 停服)
      *
      * @param status
      */
@@ -194,7 +194,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 当前服务状态(0:正常 -1:停服)
+     * set 当前服务状态(0 未开通 1 开通中 2 正常 3 停服)
      *
      * @param status
      */
