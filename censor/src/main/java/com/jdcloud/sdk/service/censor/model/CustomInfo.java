@@ -63,7 +63,7 @@ public class CustomInfo  implements java.io.Serializable {
     private String scenes;
 
     /**
-     * white 白名单，black 黑名单，suspect 疑似名单
+     * pass 白名单，block 黑名单，review 疑似名单
      */
     private String suggestion;
 
@@ -192,7 +192,7 @@ public class CustomInfo  implements java.io.Serializable {
     }
 
     /**
-     * get white 白名单，black 黑名单，suspect 疑似名单
+     * get pass 白名单，block 黑名单，review 疑似名单
      *
      * @return
      */
@@ -201,7 +201,7 @@ public class CustomInfo  implements java.io.Serializable {
     }
 
     /**
-     * set white 白名单，black 黑名单，suspect 疑似名单
+     * set pass 白名单，block 黑名单，review 疑似名单
      *
      * @param suggestion
      */
@@ -325,7 +325,7 @@ public class CustomInfo  implements java.io.Serializable {
     }
 
     /**
-     * set white 白名单，black 黑名单，suspect 疑似名单
+     * set pass 白名单，block 黑名单，review 疑似名单
      *
      * @param suggestion
      */

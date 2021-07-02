@@ -70,6 +70,16 @@ public class WebsiteRiskLog  implements java.io.Serializable {
     private Integer riskLevel;
 
     /**
+     * 资源类型
+     */
+    private String resourceType;
+
+    /**
+     * 响应详情
+     */
+    private String response;
+
+    /**
      * 处理状态 0未处理 1已处理
      */
     private Integer status;
@@ -207,6 +217,42 @@ public class WebsiteRiskLog  implements java.io.Serializable {
     }
 
     /**
+     * get 资源类型
+     *
+     * @return
+     */
+    public String getResourceType() {
+        return resourceType;
+    }
+
+    /**
+     * set 资源类型
+     *
+     * @param resourceType
+     */
+    public void setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+    }
+
+    /**
+     * get 响应详情
+     *
+     * @return
+     */
+    public String getResponse() {
+        return response;
+    }
+
+    /**
+     * set 响应详情
+     *
+     * @param response
+     */
+    public void setResponse(String response) {
+        this.response = response;
+    }
+
+    /**
      * get 处理状态 0未处理 1已处理
      *
      * @return
@@ -310,6 +356,26 @@ public class WebsiteRiskLog  implements java.io.Serializable {
      */
     public WebsiteRiskLog riskLevel(Integer riskLevel) {
         this.riskLevel = riskLevel;
+        return this;
+    }
+
+    /**
+     * set 资源类型
+     *
+     * @param resourceType
+     */
+    public WebsiteRiskLog resourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+
+    /**
+     * set 响应详情
+     *
+     * @param response
+     */
+    public WebsiteRiskLog response(String response) {
+        this.response = response;
         return this;
     }
 
