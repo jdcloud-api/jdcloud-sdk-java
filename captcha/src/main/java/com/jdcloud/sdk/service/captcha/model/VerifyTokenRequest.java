@@ -54,6 +54,11 @@ public class VerifyTokenRequest extends JdcloudRequest implements java.io.Serial
     private Long sceneId;
 
     /**
+     * 密钥，从界面获取
+     */
+    private String secret;
+
+    /**
      * 客户端ip
      */
     private String ip;
@@ -64,12 +69,7 @@ public class VerifyTokenRequest extends JdcloudRequest implements java.io.Serial
     private String userAgent;
 
     /**
-     * 指纹，客户端sdk获取
-     */
-    private String fingerPrint;
-
-    /**
-     * 客户端类型, android, ios
+     * 客户端类型, 可选值: android, ios, pc, wxapp, m
      */
     private String clientType;
 
@@ -152,6 +152,24 @@ public class VerifyTokenRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
+     * get 密钥，从界面获取
+     *
+     * @return
+     */
+    public String getSecret() {
+        return secret;
+    }
+
+    /**
+     * set 密钥，从界面获取
+     *
+     * @param secret
+     */
+    public void setSecret(String secret) {
+        this.secret = secret;
+    }
+
+    /**
      * get 客户端ip
      *
      * @return
@@ -188,25 +206,7 @@ public class VerifyTokenRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 指纹，客户端sdk获取
-     *
-     * @return
-     */
-    public String getFingerPrint() {
-        return fingerPrint;
-    }
-
-    /**
-     * set 指纹，客户端sdk获取
-     *
-     * @param fingerPrint
-     */
-    public void setFingerPrint(String fingerPrint) {
-        this.fingerPrint = fingerPrint;
-    }
-
-    /**
-     * get 客户端类型, android, ios
+     * get 客户端类型, 可选值: android, ios, pc, wxapp, m
      *
      * @return
      */
@@ -215,7 +215,7 @@ public class VerifyTokenRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 客户端类型, android, ios
+     * set 客户端类型, 可选值: android, ios, pc, wxapp, m
      *
      * @param clientType
      */
@@ -283,6 +283,16 @@ public class VerifyTokenRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
+     * set 密钥，从界面获取
+     *
+     * @param secret
+     */
+    public VerifyTokenRequest secret(String secret) {
+        this.secret = secret;
+        return this;
+    }
+
+    /**
      * set 客户端ip
      *
      * @param ip
@@ -303,17 +313,7 @@ public class VerifyTokenRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 指纹，客户端sdk获取
-     *
-     * @param fingerPrint
-     */
-    public VerifyTokenRequest fingerPrint(String fingerPrint) {
-        this.fingerPrint = fingerPrint;
-        return this;
-    }
-
-    /**
-     * set 客户端类型, android, ios
+     * set 客户端类型, 可选值: android, ios, pc, wxapp, m
      *
      * @param clientType
      */
