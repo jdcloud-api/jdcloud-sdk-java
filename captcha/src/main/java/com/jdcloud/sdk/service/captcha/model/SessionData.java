@@ -49,11 +49,13 @@ public class SessionData  implements java.io.Serializable {
 
     /**
      * 密钥，从界面获取
+     * Required:true
      */
+    @Required
     private String secret;
 
     /**
-     * uuid，ios客户端传openudid, android客户端传androidid
+     * uuid，ios客户端传openudid, android客户端传androidid, pc和wxapp客户端可不传
      */
     private String uuid;
 
@@ -77,7 +79,7 @@ public class SessionData  implements java.io.Serializable {
     private String fingerPrint;
 
     /**
-     * 客户端类型, android, ios, pc, m
+     * 客户端类型, android, ios, pc, wxapp, m
      * Required:true
      */
     @Required
@@ -144,7 +146,7 @@ public class SessionData  implements java.io.Serializable {
     }
 
     /**
-     * get uuid，ios客户端传openudid, android客户端传androidid
+     * get uuid，ios客户端传openudid, android客户端传androidid, pc和wxapp客户端可不传
      *
      * @return
      */
@@ -153,7 +155,7 @@ public class SessionData  implements java.io.Serializable {
     }
 
     /**
-     * set uuid，ios客户端传openudid, android客户端传androidid
+     * set uuid，ios客户端传openudid, android客户端传androidid, pc和wxapp客户端可不传
      *
      * @param uuid
      */
@@ -216,7 +218,7 @@ public class SessionData  implements java.io.Serializable {
     }
 
     /**
-     * get 客户端类型, android, ios, pc, m
+     * get 客户端类型, android, ios, pc, wxapp, m
      *
      * @return
      */
@@ -225,7 +227,7 @@ public class SessionData  implements java.io.Serializable {
     }
 
     /**
-     * set 客户端类型, android, ios, pc, m
+     * set 客户端类型, android, ios, pc, wxapp, m
      *
      * @param clientType
      */
@@ -283,7 +285,7 @@ public class SessionData  implements java.io.Serializable {
     }
 
     /**
-     * set uuid，ios客户端传openudid, android客户端传androidid
+     * set uuid，ios客户端传openudid, android客户端传androidid, pc和wxapp客户端可不传
      *
      * @param uuid
      */
@@ -323,7 +325,7 @@ public class SessionData  implements java.io.Serializable {
     }
 
     /**
-     * set 客户端类型, android, ios, pc, m
+     * set 客户端类型, android, ios, pc, wxapp, m
      *
      * @param clientType
      */

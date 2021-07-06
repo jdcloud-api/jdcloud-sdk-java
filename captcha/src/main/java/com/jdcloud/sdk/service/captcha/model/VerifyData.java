@@ -56,7 +56,9 @@ public class VerifyData  implements java.io.Serializable {
 
     /**
      * 场景id
+     * Required:true
      */
+    @Required
     private Integer sceneId;
 
     /**
@@ -79,7 +81,7 @@ public class VerifyData  implements java.io.Serializable {
     private String userAgent;
 
     /**
-     * 客户端类型, android, ios, pc, m
+     * 客户端类型, android, ios, pc, wxapp
      */
     private String clientType;
 
@@ -216,7 +218,7 @@ public class VerifyData  implements java.io.Serializable {
     }
 
     /**
-     * get 客户端类型, android, ios, pc, m
+     * get 客户端类型, android, ios, pc, wxapp
      *
      * @return
      */
@@ -225,7 +227,7 @@ public class VerifyData  implements java.io.Serializable {
     }
 
     /**
-     * set 客户端类型, android, ios, pc, m
+     * set 客户端类型, android, ios, pc, wxapp
      *
      * @param clientType
      */
@@ -323,7 +325,7 @@ public class VerifyData  implements java.io.Serializable {
     }
 
     /**
-     * set 客户端类型, android, ios, pc, m
+     * set 客户端类型, android, ios, pc, wxapp
      *
      * @param clientType
      */

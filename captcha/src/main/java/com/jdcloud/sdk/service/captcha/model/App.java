@@ -46,7 +46,7 @@ public class App  implements java.io.Serializable {
     private String appName;
 
     /**
-     * 应用类型，可选值 app
+     * 应用类型，可选值 app, pc, wxapp, m
      * Required:true
      */
     @Required
@@ -127,7 +127,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * get 应用类型，可选值 app
+     * get 应用类型，可选值 app, pc, wxapp, m
      *
      * @return
      */
@@ -136,7 +136,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用类型，可选值 app
+     * set 应用类型，可选值 app, pc, wxapp, m
      *
      * @param appType
      */
@@ -292,7 +292,7 @@ public class App  implements java.io.Serializable {
     }
 
     /**
-     * set 应用类型，可选值 app
+     * set 应用类型，可选值 app, pc, wxapp, m
      *
      * @param appType
      */

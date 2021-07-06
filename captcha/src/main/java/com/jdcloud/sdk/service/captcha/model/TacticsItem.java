@@ -24,28 +24,13 @@
 
 package com.jdcloud.sdk.service.captcha.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * tactics
+ * tacticsItem
  */
-public class Tactics  implements java.io.Serializable {
+public class TacticsItem  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 场景id
-     * Required:true
-     */
-    @Required
-    private Long sceneId;
-
-    /**
-     * 所属应用id
-     * Required:true
-     */
-    @Required
-    private Long appId;
 
     /**
      * 策略类型：1 智能组合,2过载保护,3自有策略,4验证码策略
@@ -62,42 +47,6 @@ public class Tactics  implements java.io.Serializable {
      */
     private RiskConfig abandonRiskConfig;
 
-
-    /**
-     * get 场景id
-     *
-     * @return
-     */
-    public Long getSceneId() {
-        return sceneId;
-    }
-
-    /**
-     * set 场景id
-     *
-     * @param sceneId
-     */
-    public void setSceneId(Long sceneId) {
-        this.sceneId = sceneId;
-    }
-
-    /**
-     * get 所属应用id
-     *
-     * @return
-     */
-    public Long getAppId() {
-        return appId;
-    }
-
-    /**
-     * set 所属应用id
-     *
-     * @param appId
-     */
-    public void setAppId(Long appId) {
-        this.appId = appId;
-    }
 
     /**
      * get 策略类型：1 智能组合,2过载保护,3自有策略,4验证码策略
@@ -155,31 +104,11 @@ public class Tactics  implements java.io.Serializable {
 
 
     /**
-     * set 场景id
-     *
-     * @param sceneId
-     */
-    public Tactics sceneId(Long sceneId) {
-        this.sceneId = sceneId;
-        return this;
-    }
-
-    /**
-     * set 所属应用id
-     *
-     * @param appId
-     */
-    public Tactics appId(Long appId) {
-        this.appId = appId;
-        return this;
-    }
-
-    /**
      * set 策略类型：1 智能组合,2过载保护,3自有策略,4验证码策略
      *
      * @param tacticsType
      */
-    public Tactics tacticsType(Integer tacticsType) {
+    public TacticsItem tacticsType(Integer tacticsType) {
         this.tacticsType = tacticsType;
         return this;
     }
@@ -189,7 +118,7 @@ public class Tactics  implements java.io.Serializable {
      *
      * @param suspiciousRiskConfig
      */
-    public Tactics suspiciousRiskConfig(RiskConfig suspiciousRiskConfig) {
+    public TacticsItem suspiciousRiskConfig(RiskConfig suspiciousRiskConfig) {
         this.suspiciousRiskConfig = suspiciousRiskConfig;
         return this;
     }
@@ -199,7 +128,7 @@ public class Tactics  implements java.io.Serializable {
      *
      * @param abandonRiskConfig
      */
-    public Tactics abandonRiskConfig(RiskConfig abandonRiskConfig) {
+    public TacticsItem abandonRiskConfig(RiskConfig abandonRiskConfig) {
         this.abandonRiskConfig = abandonRiskConfig;
         return this;
     }

@@ -49,7 +49,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     private String secret;
 
     /**
-     * uuid，ios客户端传openudid, android客户端传androidid
+     * uuid，ios客户端传openudid, android客户端传androidid, m, pc, wxapp客户端此值为空即可
      */
     private String uuid;
 
@@ -64,12 +64,12 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     private String userAgent;
 
     /**
-     * 指纹，客户端sdk获取
+     * 指纹，ios和android客户端(clientType)从sdk获取, m, pc, wxapp客户端此值为空即可
      */
     private String fingerPrint;
 
     /**
-     * 客户端类型, android, ios
+     * 客户端类型, android, ios, pc, wxmapp, m
      */
     private String clientType;
 
@@ -134,7 +134,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get uuid，ios客户端传openudid, android客户端传androidid
+     * get uuid，ios客户端传openudid, android客户端传androidid, m, pc, wxapp客户端此值为空即可
      *
      * @return
      */
@@ -143,7 +143,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set uuid，ios客户端传openudid, android客户端传androidid
+     * set uuid，ios客户端传openudid, android客户端传androidid, m, pc, wxapp客户端此值为空即可
      *
      * @param uuid
      */
@@ -188,7 +188,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 指纹，客户端sdk获取
+     * get 指纹，ios和android客户端(clientType)从sdk获取, m, pc, wxapp客户端此值为空即可
      *
      * @return
      */
@@ -197,7 +197,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 指纹，客户端sdk获取
+     * set 指纹，ios和android客户端(clientType)从sdk获取, m, pc, wxapp客户端此值为空即可
      *
      * @param fingerPrint
      */
@@ -206,7 +206,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 客户端类型, android, ios
+     * get 客户端类型, android, ios, pc, wxmapp, m
      *
      * @return
      */
@@ -215,7 +215,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 客户端类型, android, ios
+     * set 客户端类型, android, ios, pc, wxmapp, m
      *
      * @param clientType
      */
@@ -273,7 +273,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set uuid，ios客户端传openudid, android客户端传androidid
+     * set uuid，ios客户端传openudid, android客户端传androidid, m, pc, wxapp客户端此值为空即可
      *
      * @param uuid
      */
@@ -303,7 +303,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 指纹，客户端sdk获取
+     * set 指纹，ios和android客户端(clientType)从sdk获取, m, pc, wxapp客户端此值为空即可
      *
      * @param fingerPrint
      */
@@ -313,7 +313,7 @@ public class GetSessionIdRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 客户端类型, android, ios
+     * set 客户端类型, android, ios, pc, wxmapp, m
      *
      * @param clientType
      */
