@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainTranslateRequest;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainTranslateResponse;
+import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainTranslateExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeDomainOnlineStreamRequest;
 import com.jdcloud.sdk.service.live.model.DescribeDomainOnlineStreamResponse;
 import com.jdcloud.sdk.service.live.client.DescribeDomainOnlineStreamExecutor;
@@ -49,6 +52,9 @@ import com.jdcloud.sdk.service.live.client.AddCustomLiveStreamQualityDetectionTe
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamNotifyConfigExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeTranslateBindingRequest;
+import com.jdcloud.sdk.service.live.model.DescribeTranslateBindingResponse;
+import com.jdcloud.sdk.service.live.client.DescribeTranslateBindingExecutor;
 import com.jdcloud.sdk.service.live.model.OpenLiveP2pRequest;
 import com.jdcloud.sdk.service.live.model.OpenLiveP2pResponse;
 import com.jdcloud.sdk.service.live.client.OpenLiveP2pExecutor;
@@ -91,12 +97,18 @@ import com.jdcloud.sdk.service.live.client.SetLiveStreamRecordNotifyConfigExecut
 import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamSnapshotTemplateRequest;
 import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamSnapshotTemplateResponse;
 import com.jdcloud.sdk.service.live.client.AddCustomLiveStreamSnapshotTemplateExecutor;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamTranslateRequest;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamTranslateResponse;
+import com.jdcloud.sdk.service.live.client.AddLiveStreamTranslateExecutor;
 import com.jdcloud.sdk.service.live.model.StartLiveDomainRequest;
 import com.jdcloud.sdk.service.live.model.StartLiveDomainResponse;
 import com.jdcloud.sdk.service.live.client.StartLiveDomainExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPublishInfoByPageRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPublishInfoByPageResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamPublishInfoByPageExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamTranslateRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamTranslateResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveStreamTranslateExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamWatermarkTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamWatermarkTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamWatermarkTemplatesExecutor;
@@ -157,6 +169,9 @@ import com.jdcloud.sdk.service.live.client.DescribeLiveStreamOnlineListExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamRecordNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamRecordNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamRecordNotifyConfigExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainTranslateRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainTranslateResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainTranslateExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainSnapshotRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainSnapshotResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainSnapshotExecutor;
@@ -169,6 +184,9 @@ import com.jdcloud.sdk.service.live.client.SetLiveStreamNotifyConfigExecutor;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamSnapshotNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamSnapshotNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.SetLiveStreamSnapshotNotifyConfigExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveDomainTranslateConfigRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveDomainTranslateConfigResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveDomainTranslateConfigExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainQualityDetectionRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainQualityDetectionResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainQualityDetectionExecutor;
@@ -229,6 +247,9 @@ import com.jdcloud.sdk.service.live.client.AddLiveRecordTaskExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainWatermarkRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainWatermarkResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainWatermarkExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeSystemLiveStreamTranslateTemplatesRequest;
+import com.jdcloud.sdk.service.live.model.DescribeSystemLiveStreamTranslateTemplatesResponse;
+import com.jdcloud.sdk.service.live.client.DescribeSystemLiveStreamTranslateTemplatesExecutor;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamQualityDetectionNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.SetLiveStreamQualityDetectionNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.SetLiveStreamQualityDetectionNotifyConfigExecutor;
@@ -301,6 +322,9 @@ import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainTranscodeExecut
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppQualityDetectionRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppQualityDetectionResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamAppQualityDetectionExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppTranslateRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveStreamAppTranslateResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveStreamAppTranslateExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainRecordRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamDomainRecordResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainRecordExecutor;
@@ -319,6 +343,9 @@ import com.jdcloud.sdk.service.live.client.DescribeLiveStreamPublishTrafficDataE
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPublishListRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPublishListResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamPublishListExecutor;
+import com.jdcloud.sdk.service.live.model.ResumeLiveStreamTranslateRequest;
+import com.jdcloud.sdk.service.live.model.ResumeLiveStreamTranslateResponse;
+import com.jdcloud.sdk.service.live.client.ResumeLiveStreamTranslateExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamAppRecordRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamAppRecordResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveStreamAppRecordExecutor;
@@ -349,6 +376,9 @@ import com.jdcloud.sdk.service.live.client.InterruptLiveStreamExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveDomainRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveDomainResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveDomainExecutor;
+import com.jdcloud.sdk.service.live.model.PauseLiveStreamTranslateRequest;
+import com.jdcloud.sdk.service.live.model.PauseLiveStreamTranslateResponse;
+import com.jdcloud.sdk.service.live.client.PauseLiveStreamTranslateExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveRecordingsRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveRecordingsResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveRecordingsExecutor;
@@ -364,6 +394,9 @@ import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamQualityDetect
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamNotifyConfigExecutor;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStreamTranslateConfigRequest;
+import com.jdcloud.sdk.service.live.model.DescribeLiveStreamTranslateConfigResponse;
+import com.jdcloud.sdk.service.live.client.DescribeLiveStreamTranslateConfigExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLivePublishStatisticGroupByStreamRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLivePublishStatisticGroupByStreamResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLivePublishStatisticGroupByStreamExecutor;
@@ -379,6 +412,9 @@ import com.jdcloud.sdk.service.live.client.DescribeLiveStreamTrafficDataExecutor
 import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.live.model.AddCustomLiveStreamTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.live.client.AddCustomLiveStreamTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamAppTranslateRequest;
+import com.jdcloud.sdk.service.live.model.AddLiveStreamAppTranslateResponse;
+import com.jdcloud.sdk.service.live.client.AddLiveStreamAppTranslateExecutor;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainTranscodeRequest;
 import com.jdcloud.sdk.service.live.model.AddLiveStreamDomainTranscodeResponse;
 import com.jdcloud.sdk.service.live.client.AddLiveStreamDomainTranscodeExecutor;
@@ -437,6 +473,21 @@ public class LiveClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 添加域名翻译配置
+- 添加域名级别的翻译模板配置
+- 一个域名最多可绑定一个翻译模板
+- 重新推流后生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddLiveStreamDomainTranslateResponse addLiveStreamDomainTranslate(AddLiveStreamDomainTranslateRequest request) throws JdcloudSdkException {
+        return new AddLiveStreamDomainTranslateExecutor().client(this).execute(request);
+    }
 
     /**
      * 查询在线流列表
@@ -509,6 +560,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DeleteLiveStreamNotifyConfigResponse deleteLiveStreamNotifyConfig(DeleteLiveStreamNotifyConfigRequest request) throws JdcloudSdkException {
         return new DeleteLiveStreamNotifyConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询翻译模板绑定
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTranslateBindingResponse describeTranslateBinding(DescribeTranslateBindingRequest request) throws JdcloudSdkException {
+        return new DescribeTranslateBindingExecutor().client(this).execute(request);
     }
 
     /**
@@ -686,6 +749,21 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 添加流翻译配置
+- 添加流级别的翻译模板配置
+- 一个流最多可绑定一个翻译模板
+- 重新推流后生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddLiveStreamTranslateResponse addLiveStreamTranslate(AddLiveStreamTranslateRequest request) throws JdcloudSdkException {
+        return new AddLiveStreamTranslateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 启动域名
 - 启用状态为 停用 的直播域名对(推流域名,播放域名)将DomainStatus变更为online
 
@@ -707,6 +785,19 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveStreamPublishInfoByPageResponse describeLiveStreamPublishInfoByPage(DescribeLiveStreamPublishInfoByPageRequest request) throws JdcloudSdkException {
         return new DescribeLiveStreamPublishInfoByPageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除流的翻译模板配置
+- 删除流级别翻译模板配置,重新推流后生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveStreamTranslateResponse deleteLiveStreamTranslate(DeleteLiveStreamTranslateRequest request) throws JdcloudSdkException {
+        return new DeleteLiveStreamTranslateExecutor().client(this).execute(request);
     }
 
     /**
@@ -949,6 +1040,19 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 删除域名的翻译模板配置
+- 删除域名级别翻译模板配置,重新推流后生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveStreamDomainTranslateResponse deleteLiveStreamDomainTranslate(DeleteLiveStreamDomainTranslateRequest request) throws JdcloudSdkException {
+        return new DeleteLiveStreamDomainTranslateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 添加域名截图配置
 - 添加域名级别的截图模板配置
 
@@ -993,6 +1097,18 @@ public class LiveClient extends JdcloudClient {
      */
     public SetLiveStreamSnapshotNotifyConfigResponse setLiveStreamSnapshotNotifyConfig(SetLiveStreamSnapshotNotifyConfigRequest request) throws JdcloudSdkException {
         return new SetLiveStreamSnapshotNotifyConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询域名下的翻译模板配置
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveDomainTranslateConfigResponse describeLiveDomainTranslateConfig(DescribeLiveDomainTranslateConfigRequest request) throws JdcloudSdkException {
+        return new DescribeLiveDomainTranslateConfigExecutor().client(this).execute(request);
     }
 
     /**
@@ -1247,6 +1363,18 @@ public class LiveClient extends JdcloudClient {
      */
     public AddLiveStreamDomainWatermarkResponse addLiveStreamDomainWatermark(AddLiveStreamDomainWatermarkRequest request) throws JdcloudSdkException {
         return new AddLiveStreamDomainWatermarkExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询系统默认翻译模板列表
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeSystemLiveStreamTranslateTemplatesResponse describeSystemLiveStreamTranslateTemplates(DescribeSystemLiveStreamTranslateTemplatesRequest request) throws JdcloudSdkException {
+        return new DescribeSystemLiveStreamTranslateTemplatesExecutor().client(this).execute(request);
     }
 
     /**
@@ -1541,6 +1669,19 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 删除应用的翻译模板配置
+- 删除应用级别的翻译模板配置,重新推流后生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveStreamAppTranslateResponse deleteLiveStreamAppTranslate(DeleteLiveStreamAppTranslateRequest request) throws JdcloudSdkException {
+        return new DeleteLiveStreamAppTranslateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除域名级别录制模板配置
 - 删除域名级别录制模板配置,重新推流后生效
 
@@ -1610,6 +1751,20 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveStreamPublishListResponse describeLiveStreamPublishList(DescribeLiveStreamPublishListRequest request) throws JdcloudSdkException {
         return new DescribeLiveStreamPublishListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 恢复指定流的翻译任务
+- 恢复添加实时翻译字幕到指定流
+- 指定的流需在线且配置了翻译模板，同时处于翻译暂停状态
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ResumeLiveStreamTranslateResponse resumeLiveStreamTranslate(ResumeLiveStreamTranslateRequest request) throws JdcloudSdkException {
+        return new ResumeLiveStreamTranslateExecutor().client(this).execute(request);
     }
 
     /**
@@ -1738,6 +1893,20 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 暂停指定流的翻译任务
+- 暂停添加实时翻译字幕到指定流
+- 指定的流需在线且配置了翻译模板
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PauseLiveStreamTranslateResponse pauseLiveStreamTranslate(PauseLiveStreamTranslateRequest request) throws JdcloudSdkException {
+        return new PauseLiveStreamTranslateExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除录制文件
 
      *
@@ -1794,6 +1963,21 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveStreamNotifyConfigResponse describeLiveStreamNotifyConfig(DescribeLiveStreamNotifyConfigRequest request) throws JdcloudSdkException {
         return new DescribeLiveStreamNotifyConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询翻译模板配置
+- 翻译模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效原则
+- 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
+- 该查询旨在查询域名、应用、流最终生效的翻译模板配置,并非各级的模板绑定情况
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLiveStreamTranslateConfigResponse describeLiveStreamTranslateConfig(DescribeLiveStreamTranslateConfigRequest request) throws JdcloudSdkException {
+        return new DescribeLiveStreamTranslateConfigExecutor().client(this).execute(request);
     }
 
     /**
@@ -1865,6 +2049,21 @@ public class LiveClient extends JdcloudClient {
      */
     public AddCustomLiveStreamTranscodeTemplateResponse addCustomLiveStreamTranscodeTemplate(AddCustomLiveStreamTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new AddCustomLiveStreamTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加应用翻译配置
+- 添加应用级别的翻译模板配置
+- 一个应用最多可绑定一个翻译模板
+- 重新推流后生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddLiveStreamAppTranslateResponse addLiveStreamAppTranslate(AddLiveStreamAppTranslateRequest request) throws JdcloudSdkException {
+        return new AddLiveStreamAppTranslateExecutor().client(this).execute(request);
     }
 
     /**
