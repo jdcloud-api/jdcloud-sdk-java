@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取所有上层节点的ip
+ * 获取所有上层节点的ip，仅支持中国境内上层节点IP地址查询
  */
 public class CheckWhetherIpBelongToJCloudRequest extends JdcloudRequest implements java.io.Serializable {
 

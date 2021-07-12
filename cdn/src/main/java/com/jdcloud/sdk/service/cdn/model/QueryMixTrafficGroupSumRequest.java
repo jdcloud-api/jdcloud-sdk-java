@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询统计数据并进行汇总加和
+ * 查询统计数据并进行汇总加和，仅可查询中国境内的相关信息
  */
 public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -54,12 +54,12 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     private String fields;
 
     /**
-     * area
+     * 查询的区域，如beijing,shanghai。多个用逗号分隔
      */
     private String area;
 
     /**
-     * isp
+     * 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      */
     private String isp;
 
@@ -69,9 +69,14 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     private String period;
 
     /**
-     * 分组依据,只能按域名分组
+     * 分组依据,只能按域名[domain]分组
      */
     private String groupBy;
+
+    /**
+     * 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     */
+    private String cacheType;
 
 
     /**
@@ -147,7 +152,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get area
+     * get 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @return
      */
@@ -156,7 +161,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -165,7 +170,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get isp
+     * get 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @return
      */
@@ -174,7 +179,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -201,7 +206,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 分组依据,只能按域名分组
+     * get 分组依据,只能按域名[domain]分组
      *
      * @return
      */
@@ -210,12 +215,30 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 分组依据,只能按域名分组
+     * set 分组依据,只能按域名[domain]分组
      *
      * @param groupBy
      */
     public void setGroupBy(String groupBy) {
         this.groupBy = groupBy;
+    }
+
+    /**
+     * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @return
+     */
+    public String getCacheType() {
+        return cacheType;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public void setCacheType(String cacheType) {
+        this.cacheType = cacheType;
     }
 
 
@@ -260,7 +283,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -270,7 +293,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -290,12 +313,22 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 分组依据,只能按域名分组
+     * set 分组依据,只能按域名[domain]分组
      *
      * @param groupBy
      */
     public QueryMixTrafficGroupSumRequest groupBy(String groupBy) {
         this.groupBy = groupBy;
+        return this;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public QueryMixTrafficGroupSumRequest cacheType(String cacheType) {
+        this.cacheType = cacheType;
         return this;
     }
 

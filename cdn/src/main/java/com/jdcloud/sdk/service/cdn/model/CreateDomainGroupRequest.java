@@ -36,7 +36,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 是否共享内存
+     * 是否共享内存，共享缓存仅对中国境内加速域名生效
      */
     private String shareCache;
 
@@ -57,7 +57,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 是否共享内存
+     * get 是否共享内存，共享缓存仅对中国境内加速域名生效
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 是否共享内存
+     * set 是否共享内存，共享缓存仅对中国境内加速域名生效
      *
      * @param shareCache
      */
@@ -130,7 +130,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 是否共享内存
+     * set 是否共享内存，共享缓存仅对中国境内加速域名生效
      *
      * @param shareCache
      */

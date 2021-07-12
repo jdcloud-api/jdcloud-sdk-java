@@ -42,7 +42,7 @@ public class SetReferRequest extends JdcloudRequest implements java.io.Serializa
     private String referType;
 
     /**
-     * 逗号隔开的域名列表，如果referList传空则为删除
+     * 逗号隔开的域名列表，如果referList传空则为删除，中国境内加速域名至多可配置400条，中国境外/全球加速域名至多可配置50条
      */
     private List<String> referList;
 
@@ -83,7 +83,7 @@ public class SetReferRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * get 逗号隔开的域名列表，如果referList传空则为删除
+     * get 逗号隔开的域名列表，如果referList传空则为删除，中国境内加速域名至多可配置400条，中国境外/全球加速域名至多可配置50条
      *
      * @return
      */
@@ -92,7 +92,7 @@ public class SetReferRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 逗号隔开的域名列表，如果referList传空则为删除
+     * set 逗号隔开的域名列表，如果referList传空则为删除，中国境内加速域名至多可配置400条，中国境外/全球加速域名至多可配置50条
      *
      * @param referList
      */
@@ -166,7 +166,7 @@ public class SetReferRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 逗号隔开的域名列表，如果referList传空则为删除
+     * set 逗号隔开的域名列表，如果referList传空则为删除，中国境内加速域名至多可配置400条，中国境外/全球加速域名至多可配置50条
      *
      * @param referList
      */
@@ -207,7 +207,7 @@ public class SetReferRequest extends JdcloudRequest implements java.io.Serializa
 
 
     /**
-     * add item to 逗号隔开的域名列表，如果referList传空则为删除
+     * add item to 逗号隔开的域名列表，如果referList传空则为删除，中国境内加速域名至多可配置400条，中国境外/全球加速域名至多可配置50条
      *
      * @param referList
      */

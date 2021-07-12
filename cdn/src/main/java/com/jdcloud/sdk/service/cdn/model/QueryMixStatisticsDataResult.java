@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.cdn.model.StatisticsDataItem;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询统计数据
+ * 查询统计数据，仅可查询中国境内的相关信息
  */
 public class QueryMixStatisticsDataResult extends JdcloudResult implements java.io.Serializable {
 

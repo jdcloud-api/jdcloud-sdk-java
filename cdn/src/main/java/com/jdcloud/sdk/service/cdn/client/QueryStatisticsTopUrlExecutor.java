@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.QueryStatisticsTopUrlResponse;
 
 /**
- * 查询TOP Url
+ * 查询TOP Url，仅可查询中国境内的相关信息
  */
 class QueryStatisticsTopUrlExecutor extends JdcloudExecutor {
 

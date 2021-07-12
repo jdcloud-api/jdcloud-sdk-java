@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.ConfigHttp2Response;
 
 /**
- * http2配置
+ * http2配置，中国境外/全球加速域名暂不支持该配置
  */
 class ConfigHttp2Executor extends JdcloudExecutor {
 

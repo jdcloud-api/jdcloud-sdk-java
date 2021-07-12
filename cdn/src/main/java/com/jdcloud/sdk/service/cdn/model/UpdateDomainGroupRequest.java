@@ -47,7 +47,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
     private String primaryDomain;
 
     /**
-     * 是否共享内存
+     * 是否共享内存，共享缓存仅对中国境内加速域名生效
      */
     private String shareCache;
 
@@ -101,7 +101,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 是否共享内存
+     * get 是否共享内存，共享缓存仅对中国境内加速域名生效
      *
      * @return
      */
@@ -110,7 +110,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 是否共享内存
+     * set 是否共享内存，共享缓存仅对中国境内加速域名生效
      *
      * @param shareCache
      */
@@ -176,7 +176,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 是否共享内存
+     * set 是否共享内存，共享缓存仅对中国境内加速域名生效
      *
      * @param shareCache
      */

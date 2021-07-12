@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询TOP Url
+ * 查询TOP Url，仅可查询中国境内的相关信息
  */
 public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,17 +49,17 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     private String domain;
 
     /**
-     * 待查询的子域名
+     * 待查询的子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      */
     private String subDomain;
 
     /**
-     * size
+     * 查询的topN的条数，取值范围：1-100，默认为20
      */
     private Integer size;
 
     /**
-     * 排序依据
+     * 排序依据,当前可选：pv,flow，bandwidth, 分别表示按pv、按流量、按带宽topN url，默认为&quot;pv&quot;
      */
     private String topBy;
 
@@ -119,7 +119,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 待查询的子域名
+     * get 待查询的子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @return
      */
@@ -128,7 +128,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 待查询的子域名
+     * set 待查询的子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @param subDomain
      */
@@ -137,7 +137,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get size
+     * get 查询的topN的条数，取值范围：1-100，默认为20
      *
      * @return
      */
@@ -146,7 +146,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set size
+     * set 查询的topN的条数，取值范围：1-100，默认为20
      *
      * @param size
      */
@@ -155,7 +155,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get 排序依据
+     * get 排序依据,当前可选：pv,flow，bandwidth, 分别表示按pv、按流量、按带宽topN url，默认为&quot;pv&quot;
      *
      * @return
      */
@@ -164,7 +164,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 排序依据
+     * set 排序依据,当前可选：pv,flow，bandwidth, 分别表示按pv、按流量、按带宽topN url，默认为&quot;pv&quot;
      *
      * @param topBy
      */
@@ -204,7 +204,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 待查询的子域名
+     * set 待查询的子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @param subDomain
      */
@@ -214,7 +214,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set size
+     * set 查询的topN的条数，取值范围：1-100，默认为20
      *
      * @param size
      */
@@ -224,7 +224,7 @@ public class QueryStatisticsTopUrlRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set 排序依据
+     * set 排序依据,当前可选：pv,flow，bandwidth, 分别表示按pv、按流量、按带宽topN url，默认为&quot;pv&quot;
      *
      * @param topBy
      */

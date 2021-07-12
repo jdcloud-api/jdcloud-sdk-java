@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询统计数据
+ * 查询统计数据，仅可查询中国境内的相关信息
  */
 public class QueryMixStatisticsDataRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -54,12 +54,12 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
     private String fields;
 
     /**
-     * area
+     * 查询的区域，如beijing,shanghai。多个用逗号分隔
      */
     private String area;
 
     /**
-     * isp
+     * 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      */
     private String isp;
 
@@ -72,6 +72,11 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
      * 查询协议，可选值:[http,https,all],传空默认返回全部协议汇总后的数据
      */
     private String scheme;
+
+    /**
+     * 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     */
+    private String cacheType;
 
 
     /**
@@ -147,7 +152,7 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get area
+     * get 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @return
      */
@@ -156,7 +161,7 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -165,7 +170,7 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get isp
+     * get 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @return
      */
@@ -174,7 +179,7 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -216,6 +221,24 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
      */
     public void setScheme(String scheme) {
         this.scheme = scheme;
+    }
+
+    /**
+     * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @return
+     */
+    public String getCacheType() {
+        return cacheType;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public void setCacheType(String cacheType) {
+        this.cacheType = cacheType;
     }
 
 
@@ -260,7 +283,7 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -270,7 +293,7 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -296,6 +319,16 @@ public class QueryMixStatisticsDataRequest extends JdcloudRequest implements jav
      */
     public QueryMixStatisticsDataRequest scheme(String scheme) {
         this.scheme = scheme;
+        return this;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public QueryMixStatisticsDataRequest cacheType(String cacheType) {
+        this.cacheType = cacheType;
         return this;
     }
 

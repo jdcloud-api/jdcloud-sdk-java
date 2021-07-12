@@ -373,6 +373,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryDomainConfigExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDirBandwidthRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDirBandwidthResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDirBandwidthExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetCacheRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.SetCacheRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.SetCacheRulesExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetVideoDraftRequest;
 import com.jdcloud.sdk.service.cdn.model.SetVideoDraftResponse;
 import com.jdcloud.sdk.service.cdn.client.SetVideoDraftExecutor;
@@ -415,6 +418,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryAreaIspListExecutor;
 import com.jdcloud.sdk.service.cdn.model.DeleteCCProtectRuleRequest;
 import com.jdcloud.sdk.service.cdn.model.DeleteCCProtectRuleResponse;
 import com.jdcloud.sdk.service.cdn.client.DeleteCCProtectRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryStreamInfoRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryStreamInfoResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryStreamInfoExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetWafBlackRuleSwitchRequest;
 import com.jdcloud.sdk.service.cdn.model.SetWafBlackRuleSwitchResponse;
 import com.jdcloud.sdk.service.cdn.client.SetWafBlackRuleSwitchExecutor;
@@ -517,6 +523,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryDdosGraphExecutor;
 import com.jdcloud.sdk.service.cdn.model.DeleteWafBlackRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.DeleteWafBlackRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.DeleteWafBlackRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataWithGroupRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataWithGroupResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryJDBoxStatisticsDataWithGroupExecutor;
 import com.jdcloud.sdk.service.cdn.model.UpdateWafBlackRuleRequest;
 import com.jdcloud.sdk.service.cdn.model.UpdateWafBlackRuleResponse;
 import com.jdcloud.sdk.service.cdn.client.UpdateWafBlackRuleExecutor;
@@ -769,7 +778,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询TOP Url
+     * 查询TOP Url，仅可查询中国境内的相关信息
      *
      * @param request
      * @return
@@ -1055,7 +1064,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询统计数据
+     * 查询统计数据，仅可查询中国境内的相关信息
      *
      * @param request
      * @return
@@ -1110,7 +1119,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * http2配置
+     * http2配置，中国境外/全球加速域名暂不支持该配置
      *
      * @param request
      * @return
@@ -1242,7 +1251,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 获取所有上层节点的ip
+     * 获取所有上层节点的ip，仅支持中国境内上层节点IP地址查询
      *
      * @param request
      * @return
@@ -1363,7 +1372,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询TOP IP
+     * 查询TOP IP，仅可查询中国境内的相关信息
      *
      * @param request
      * @return
@@ -1583,7 +1592,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询统计数据并进行汇总加和
+     * 查询统计数据并进行汇总加和，仅可查询中国境内的相关信息
      *
      * @param request
      * @return
@@ -1891,6 +1900,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 批量添加缓存规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetCacheRulesResponse setCacheRules(SetCacheRulesRequest request) throws JdcloudSdkException {
+        return new SetCacheRulesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置视频拖拽
      *
      * @param request
@@ -1968,7 +1988,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 分地区及运营商查询统计数据
+     * 分地区及运营商查询统计数据，仅可查询中国境内的相关信息
      *
      * @param request
      * @return
@@ -2042,6 +2062,17 @@ public class CdnClient extends JdcloudClient {
      */
     public DeleteCCProtectRuleResponse deleteCCProtectRule(DeleteCCProtectRuleRequest request) throws JdcloudSdkException {
         return new DeleteCCProtectRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页查询直播流数据接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryStreamInfoResponse queryStreamInfo(QueryStreamInfoRequest request) throws JdcloudSdkException {
+        return new QueryStreamInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -2353,7 +2384,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 创建刷新预热任务
+     * 创建刷新预热任务，
      *
      * @param request
      * @return
@@ -2416,6 +2447,17 @@ public class CdnClient extends JdcloudClient {
      */
     public DeleteWafBlackRulesResponse deleteWafBlackRules(DeleteWafBlackRulesRequest request) throws JdcloudSdkException {
         return new DeleteWafBlackRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 无线宝按group查询的统计接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryJDBoxStatisticsDataWithGroupResponse queryJDBoxStatisticsDataWithGroup(QueryJDBoxStatisticsDataWithGroupRequest request) throws JdcloudSdkException {
+        return new QueryJDBoxStatisticsDataWithGroupExecutor().client(this).execute(request);
     }
 
     /**

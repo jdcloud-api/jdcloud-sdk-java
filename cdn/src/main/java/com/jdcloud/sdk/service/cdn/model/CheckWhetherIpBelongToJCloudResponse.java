@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取所有上层节点的ip
+ * 获取所有上层节点的ip，仅支持中国境内上层节点IP地址查询
  */
 public class CheckWhetherIpBelongToJCloudResponse extends JdcloudResponse<CheckWhetherIpBelongToJCloudResult> implements java.io.Serializable {
 

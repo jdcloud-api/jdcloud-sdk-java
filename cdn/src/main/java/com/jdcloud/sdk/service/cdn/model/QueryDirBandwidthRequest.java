@@ -58,6 +58,11 @@ public class QueryDirBandwidthRequest extends JdcloudRequest implements java.io.
      */
     private String regions;
 
+    /**
+     * 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     */
+    private String cacheType;
+
 
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -149,6 +154,24 @@ public class QueryDirBandwidthRequest extends JdcloudRequest implements java.io.
         this.regions = regions;
     }
 
+    /**
+     * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @return
+     */
+    public String getCacheType() {
+        return cacheType;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public void setCacheType(String cacheType) {
+        this.cacheType = cacheType;
+    }
+
 
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -197,6 +220,16 @@ public class QueryDirBandwidthRequest extends JdcloudRequest implements java.io.
      */
     public QueryDirBandwidthRequest regions(String regions) {
         this.regions = regions;
+        return this;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public QueryDirBandwidthRequest cacheType(String cacheType) {
+        this.cacheType = cacheType;
         return this;
     }
 

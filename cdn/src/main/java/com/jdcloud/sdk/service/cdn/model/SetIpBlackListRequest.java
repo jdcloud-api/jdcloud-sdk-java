@@ -37,7 +37,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * ip名单,ips中url不能超过50条
+     * ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
      */
     private List<String> ips;
 
@@ -55,7 +55,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get ip名单,ips中url不能超过50条
+     * get ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set ip名单,ips中url不能超过50条
+     * set ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
      *
      * @param ips
      */
@@ -110,7 +110,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set ip名单,ips中url不能超过50条
+     * set ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
      *
      * @param ips
      */
@@ -141,7 +141,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * add item to ip名单,ips中url不能超过50条
+     * add item to ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
      *
      * @param ip
      */

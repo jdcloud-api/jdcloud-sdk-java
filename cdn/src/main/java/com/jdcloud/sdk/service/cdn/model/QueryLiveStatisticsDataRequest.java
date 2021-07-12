@@ -49,17 +49,17 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     private String domain;
 
     /**
-     * app名
+     * app名,查询的App名称，多个用逗号分隔。注意，传如多个AppName时，表示查询这些AppName的和值，即“或”的关系。默认为空，表示查询所有App
      */
     private String appName;
 
     /**
-     * 流名
+     * 流名,查询的流名称，多个用逗号分隔。注意，传如多个StreamName时，表示查询这些StreamName的和值，即“或”的关系。默认为空，表示查询所有Stream
      */
     private String streamName;
 
     /**
-     * 子域名
+     * 子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      */
     private String subDomain;
 
@@ -69,27 +69,27 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     private String fields;
 
     /**
-     * area
+     * 查询的区域，如beijing,shanghai。多个用逗号分隔
      */
     private String area;
 
     /**
-     * isp
+     * 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      */
     private String isp;
 
     /**
-     * reqMethod
+     * 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
      */
     private String reqMethod;
 
     /**
-     * 查询的流协议类型
+     * 查询的流协议类型,取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
      */
     private String scheme;
 
     /**
-     * cacheLevel
+     * cacheLevel,可选值：[L1,L2,L3]
      */
     private String cacheLevel;
 
@@ -97,6 +97,11 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
      * 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
      */
     private String period;
+
+    /**
+     * 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     */
+    private String cacheType;
 
 
     /**
@@ -154,7 +159,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get app名
+     * get app名,查询的App名称，多个用逗号分隔。注意，传如多个AppName时，表示查询这些AppName的和值，即“或”的关系。默认为空，表示查询所有App
      *
      * @return
      */
@@ -163,7 +168,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set app名
+     * set app名,查询的App名称，多个用逗号分隔。注意，传如多个AppName时，表示查询这些AppName的和值，即“或”的关系。默认为空，表示查询所有App
      *
      * @param appName
      */
@@ -172,7 +177,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 流名
+     * get 流名,查询的流名称，多个用逗号分隔。注意，传如多个StreamName时，表示查询这些StreamName的和值，即“或”的关系。默认为空，表示查询所有Stream
      *
      * @return
      */
@@ -181,7 +186,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 流名
+     * set 流名,查询的流名称，多个用逗号分隔。注意，传如多个StreamName时，表示查询这些StreamName的和值，即“或”的关系。默认为空，表示查询所有Stream
      *
      * @param streamName
      */
@@ -190,7 +195,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 子域名
+     * get 子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @return
      */
@@ -199,7 +204,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 子域名
+     * set 子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @param subDomain
      */
@@ -226,7 +231,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get area
+     * get 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @return
      */
@@ -235,7 +240,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -244,7 +249,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get isp
+     * get 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @return
      */
@@ -253,7 +258,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -262,7 +267,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get reqMethod
+     * get 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
      *
      * @return
      */
@@ -271,7 +276,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set reqMethod
+     * set 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
      *
      * @param reqMethod
      */
@@ -280,7 +285,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 查询的流协议类型
+     * get 查询的流协议类型,取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
      *
      * @return
      */
@@ -289,7 +294,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 查询的流协议类型
+     * set 查询的流协议类型,取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
      *
      * @param scheme
      */
@@ -298,7 +303,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get cacheLevel
+     * get cacheLevel,可选值：[L1,L2,L3]
      *
      * @return
      */
@@ -307,7 +312,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set cacheLevel
+     * set cacheLevel,可选值：[L1,L2,L3]
      *
      * @param cacheLevel
      */
@@ -331,6 +336,24 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
      */
     public void setPeriod(String period) {
         this.period = period;
+    }
+
+    /**
+     * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @return
+     */
+    public String getCacheType() {
+        return cacheType;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public void setCacheType(String cacheType) {
+        this.cacheType = cacheType;
     }
 
 
@@ -365,7 +388,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set app名
+     * set app名,查询的App名称，多个用逗号分隔。注意，传如多个AppName时，表示查询这些AppName的和值，即“或”的关系。默认为空，表示查询所有App
      *
      * @param appName
      */
@@ -375,7 +398,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 流名
+     * set 流名,查询的流名称，多个用逗号分隔。注意，传如多个StreamName时，表示查询这些StreamName的和值，即“或”的关系。默认为空，表示查询所有Stream
      *
      * @param streamName
      */
@@ -385,7 +408,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 子域名
+     * set 子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @param subDomain
      */
@@ -405,7 +428,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -415,7 +438,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -425,7 +448,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set reqMethod
+     * set 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
      *
      * @param reqMethod
      */
@@ -435,7 +458,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 查询的流协议类型
+     * set 查询的流协议类型,取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
      *
      * @param scheme
      */
@@ -445,7 +468,7 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set cacheLevel
+     * set cacheLevel,可选值：[L1,L2,L3]
      *
      * @param cacheLevel
      */
@@ -461,6 +484,16 @@ public class QueryLiveStatisticsDataRequest extends JdcloudRequest implements ja
      */
     public QueryLiveStatisticsDataRequest period(String period) {
         this.period = period;
+        return this;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public QueryLiveStatisticsDataRequest cacheType(String cacheType) {
+        this.cacheType = cacheType;
         return this;
     }
 

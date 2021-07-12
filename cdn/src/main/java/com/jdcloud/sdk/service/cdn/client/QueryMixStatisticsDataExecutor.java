@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.QueryMixStatisticsDataResponse;
 
 /**
- * 查询统计数据
+ * 查询统计数据，仅可查询中国境内的相关信息
  */
 class QueryMixStatisticsDataExecutor extends JdcloudExecutor {
 

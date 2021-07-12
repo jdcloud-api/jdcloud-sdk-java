@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * http2配置
+ * http2配置，中国境外/全球加速域名暂不支持该配置
  */
 public class ConfigHttp2Response extends JdcloudResponse<ConfigHttp2Result> implements java.io.Serializable {
 

@@ -43,6 +43,11 @@ public class CacheRule  implements java.io.Serializable {
     private Long ttl;
 
     /**
+     * configId
+     */
+    private Long configId;
+
+    /**
      * contents
      */
     private String contents;
@@ -97,6 +102,24 @@ public class CacheRule  implements java.io.Serializable {
      */
     public void setTtl(Long ttl) {
         this.ttl = ttl;
+    }
+
+    /**
+     * get configId
+     *
+     * @return
+     */
+    public Long getConfigId() {
+        return configId;
+    }
+
+    /**
+     * set configId
+     *
+     * @param configId
+     */
+    public void setConfigId(Long configId) {
+        this.configId = configId;
     }
 
     /**
@@ -189,6 +212,16 @@ public class CacheRule  implements java.io.Serializable {
      */
     public CacheRule ttl(Long ttl) {
         this.ttl = ttl;
+        return this;
+    }
+
+    /**
+     * set configId
+     *
+     * @param configId
+     */
+    public CacheRule configId(Long configId) {
+        this.configId = configId;
         return this;
     }
 

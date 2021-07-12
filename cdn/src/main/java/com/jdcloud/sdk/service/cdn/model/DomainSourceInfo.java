@@ -38,7 +38,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     private Integer priority;
 
     /**
-     * 回源host
+     * 自定义回源host，仅中国境内加速域名可配置
      */
     private String sourceHost;
 
@@ -67,7 +67,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 回源host
+     * get 自定义回源host，仅中国境内加速域名可配置
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 回源host
+     * set 自定义回源host，仅中国境内加速域名可配置
      *
      * @param sourceHost
      */
@@ -114,7 +114,7 @@ public class DomainSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 回源host
+     * set 自定义回源host，仅中国境内加速域名可配置
      *
      * @param sourceHost
      */
