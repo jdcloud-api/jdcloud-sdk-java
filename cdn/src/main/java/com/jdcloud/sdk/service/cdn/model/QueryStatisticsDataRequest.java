@@ -49,7 +49,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     private String domain;
 
     /**
-     * 待查询的子域名
+     * 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      */
     private String subDomain;
 
@@ -59,19 +59,19 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     private String fields;
 
     /**
-     * area
+     * 查询的区域，如beijing,shanghai。多个用逗号分隔
      */
     private String area;
 
     /**
-     * isp
+     * 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      */
     private String isp;
 
     /**
-     * origin
+     * 是否查询回源统计信息。取值为true和false，默认为false。注意，如果查询回源信息，Fields的取值当前只支持oribandwidth，oripv，oricodestat三个，其余Fields忽略。
      */
-    private String origin;
+    private Boolean origin;
 
     /**
      * 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
@@ -82,6 +82,11 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
      * true 代表查询境外数据，默认false查询境内数据
      */
     private Boolean abroad;
+
+    /**
+     * 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     */
+    private String cacheType;
 
 
     /**
@@ -139,7 +144,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get 待查询的子域名
+     * get 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @return
      */
@@ -148,7 +153,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 待查询的子域名
+     * set 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @param subDomain
      */
@@ -175,7 +180,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get area
+     * get 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @return
      */
@@ -184,7 +189,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -193,7 +198,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get isp
+     * get 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @return
      */
@@ -202,7 +207,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -211,20 +216,20 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get origin
+     * get 是否查询回源统计信息。取值为true和false，默认为false。注意，如果查询回源信息，Fields的取值当前只支持oribandwidth，oripv，oricodestat三个，其余Fields忽略。
      *
      * @return
      */
-    public String getOrigin() {
+    public Boolean getOrigin() {
         return origin;
     }
 
     /**
-     * set origin
+     * set 是否查询回源统计信息。取值为true和false，默认为false。注意，如果查询回源信息，Fields的取值当前只支持oribandwidth，oripv，oricodestat三个，其余Fields忽略。
      *
      * @param origin
      */
-    public void setOrigin(String origin) {
+    public void setOrigin(Boolean origin) {
         this.origin = origin;
     }
 
@@ -264,6 +269,24 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
         this.abroad = abroad;
     }
 
+    /**
+     * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @return
+     */
+    public String getCacheType() {
+        return cacheType;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public void setCacheType(String cacheType) {
+        this.cacheType = cacheType;
+    }
+
 
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -296,7 +319,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 待查询的子域名
+     * set 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @param subDomain
      */
@@ -316,7 +339,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -326,7 +349,7 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -336,11 +359,11 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set origin
+     * set 是否查询回源统计信息。取值为true和false，默认为false。注意，如果查询回源信息，Fields的取值当前只支持oribandwidth，oripv，oricodestat三个，其余Fields忽略。
      *
      * @param origin
      */
-    public QueryStatisticsDataRequest origin(String origin) {
+    public QueryStatisticsDataRequest origin(Boolean origin) {
         this.origin = origin;
         return this;
     }
@@ -362,6 +385,16 @@ public class QueryStatisticsDataRequest extends JdcloudRequest implements java.i
      */
     public QueryStatisticsDataRequest abroad(Boolean abroad) {
         this.abroad = abroad;
+        return this;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public QueryStatisticsDataRequest cacheType(String cacheType) {
+        this.cacheType = cacheType;
         return this;
     }
 

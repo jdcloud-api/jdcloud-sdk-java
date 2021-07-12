@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询TOP IP
+ * 查询TOP IP，仅可查询中国境内的相关信息
  */
 public class QueryStatisticsTopIpResponse extends JdcloudResponse<QueryStatisticsTopIpResult> implements java.io.Serializable {
 

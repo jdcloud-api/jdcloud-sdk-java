@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 统计查询类接口
+ * PCdn统计查询接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -26,39 +26,34 @@ package com.jdcloud.sdk.service.cdn.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.cdn.model.StatisticsWithAreaGroupDetail;
+import com.jdcloud.sdk.service.cdn.model.StatisticsDataItem;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 分地区及运营商查询统计数据，仅可查询中国境内的相关信息
+ * 无线宝按group查询的统计接口
  */
-public class QueryMixStatisticsWithAreaDataResult extends JdcloudResult implements java.io.Serializable {
+public class QueryJDBoxStatisticsDataWithGroupResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * startTime
+     * 2021/01/19 10:30，查询起始时间
      */
     private String startTime;
 
     /**
-     * endTime
+     * 2021/01/19 11:00，查询截止时间
      */
     private String endTime;
 
     /**
-     * domain
-     */
-    private String domain;
-
-    /**
      * statistics
      */
-    private List<StatisticsWithAreaGroupDetail> statistics;
+    private List<StatisticsDataItem> statistics;
 
 
     /**
-     * get startTime
+     * get 2021/01/19 10:30，查询起始时间
      *
      * @return
      */
@@ -67,7 +62,7 @@ public class QueryMixStatisticsWithAreaDataResult extends JdcloudResult implemen
     }
 
     /**
-     * set startTime
+     * set 2021/01/19 10:30，查询起始时间
      *
      * @param startTime
      */
@@ -76,7 +71,7 @@ public class QueryMixStatisticsWithAreaDataResult extends JdcloudResult implemen
     }
 
     /**
-     * get endTime
+     * get 2021/01/19 11:00，查询截止时间
      *
      * @return
      */
@@ -85,7 +80,7 @@ public class QueryMixStatisticsWithAreaDataResult extends JdcloudResult implemen
     }
 
     /**
-     * set endTime
+     * set 2021/01/19 11:00，查询截止时间
      *
      * @param endTime
      */
@@ -94,29 +89,11 @@ public class QueryMixStatisticsWithAreaDataResult extends JdcloudResult implemen
     }
 
     /**
-     * get domain
-     *
-     * @return
-     */
-    public String getDomain() {
-        return domain;
-    }
-
-    /**
-     * set domain
-     *
-     * @param domain
-     */
-    public void setDomain(String domain) {
-        this.domain = domain;
-    }
-
-    /**
      * get statistics
      *
      * @return
      */
-    public List<StatisticsWithAreaGroupDetail> getStatistics() {
+    public List<StatisticsDataItem> getStatistics() {
         return statistics;
     }
 
@@ -125,38 +102,28 @@ public class QueryMixStatisticsWithAreaDataResult extends JdcloudResult implemen
      *
      * @param statistics
      */
-    public void setStatistics(List<StatisticsWithAreaGroupDetail> statistics) {
+    public void setStatistics(List<StatisticsDataItem> statistics) {
         this.statistics = statistics;
     }
 
 
     /**
-     * set startTime
+     * set 2021/01/19 10:30，查询起始时间
      *
      * @param startTime
      */
-    public QueryMixStatisticsWithAreaDataResult startTime(String startTime) {
+    public QueryJDBoxStatisticsDataWithGroupResult startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
 
     /**
-     * set endTime
+     * set 2021/01/19 11:00，查询截止时间
      *
      * @param endTime
      */
-    public QueryMixStatisticsWithAreaDataResult endTime(String endTime) {
+    public QueryJDBoxStatisticsDataWithGroupResult endTime(String endTime) {
         this.endTime = endTime;
-        return this;
-    }
-
-    /**
-     * set domain
-     *
-     * @param domain
-     */
-    public QueryMixStatisticsWithAreaDataResult domain(String domain) {
-        this.domain = domain;
         return this;
     }
 
@@ -165,7 +132,7 @@ public class QueryMixStatisticsWithAreaDataResult extends JdcloudResult implemen
      *
      * @param statistics
      */
-    public QueryMixStatisticsWithAreaDataResult statistics(List<StatisticsWithAreaGroupDetail> statistics) {
+    public QueryJDBoxStatisticsDataWithGroupResult statistics(List<StatisticsDataItem> statistics) {
         this.statistics = statistics;
         return this;
     }
@@ -176,7 +143,7 @@ public class QueryMixStatisticsWithAreaDataResult extends JdcloudResult implemen
      *
      * @param statistic
      */
-    public void addStatistic(StatisticsWithAreaGroupDetail statistic) {
+    public void addStatistic(StatisticsDataItem statistic) {
         if (this.statistics == null) {
             this.statistics = new ArrayList<>();
         }

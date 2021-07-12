@@ -33,6 +33,11 @@ public class UserLogInfoModel  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * domain所归属pin
+     */
+    private String pin;
+
+    /**
      * 日志上传域名，如：www.a.com
      */
     private String domain;
@@ -72,6 +77,24 @@ public class UserLogInfoModel  implements java.io.Serializable {
      */
     private String endTime;
 
+
+    /**
+     * get domain所归属pin
+     *
+     * @return
+     */
+    public String getPin() {
+        return pin;
+    }
+
+    /**
+     * set domain所归属pin
+     *
+     * @param pin
+     */
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
 
     /**
      * get 日志上传域名，如：www.a.com
@@ -217,6 +240,16 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
+    /**
+     * set domain所归属pin
+     *
+     * @param pin
+     */
+    public UserLogInfoModel pin(String pin) {
+        this.pin = pin;
+        return this;
+    }
 
     /**
      * set 日志上传域名，如：www.a.com

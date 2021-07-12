@@ -24,16 +24,64 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.cdn.model.CacheVo;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * http2配置，中国境外/全球加速域名暂不支持该配置
+ * 批量添加缓存规则
  */
-public class ConfigHttp2Result extends JdcloudResult implements java.io.Serializable {
+public class SetCacheRulesResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * data
+     */
+    private List<CacheVo> data;
 
 
+    /**
+     * get data
+     *
+     * @return
+     */
+    public List<CacheVo> getData() {
+        return data;
+    }
+
+    /**
+     * set data
+     *
+     * @param data
+     */
+    public void setData(List<CacheVo> data) {
+        this.data = data;
+    }
+
+
+    /**
+     * set data
+     *
+     * @param data
+     */
+    public SetCacheRulesResult data(List<CacheVo> data) {
+        this.data = data;
+        return this;
+    }
+
+
+    /**
+     * add item to data
+     *
+     * @param data
+     */
+    public void addData(CacheVo data) {
+        if (this.data == null) {
+            this.data = new ArrayList<>();
+        }
+        this.data.add(data);
+    }
 
 }

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskResponse;
 
 /**
- * 创建刷新预热任务
+ * 创建刷新预热任务，
  */
 class CreateRefreshTaskExecutor extends JdcloudExecutor {
 

@@ -49,17 +49,17 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     private String domain;
 
     /**
-     * subDomain
+     * 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      */
     private String subDomain;
 
     /**
-     * app名
+     * 查询的App名称，多个用逗号分隔。
      */
     private String appName;
 
     /**
-     * 流名
+     * 查询的流名称，多个用逗号分隔。
      */
     private String streamName;
 
@@ -69,17 +69,17 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     private String fields;
 
     /**
-     * area
+     * 查询的区域，如beijing,shanghai。多个用逗号分隔
      */
     private String area;
 
     /**
-     * isp
+     * 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      */
     private String isp;
 
     /**
-     * 查询的流协议
+     * 查询的流协议，取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
      */
     private String scheme;
 
@@ -89,19 +89,24 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     private String period;
 
     /**
-     * 分组依据
+     * 分组依据，可选值：[appname,streamname,domain,area,isp,scheme]
      */
     private String groupBy;
 
     /**
-     * reqMethod
+     * 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
      */
     private String reqMethod;
 
     /**
-     * cacheLevel
+     * cacheLevel，可选值：[L1,L2,L3]
      */
     private String cacheLevel;
+
+    /**
+     * 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     */
+    private String cacheType;
 
 
     /**
@@ -159,7 +164,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get subDomain
+     * get 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @return
      */
@@ -168,7 +173,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set subDomain
+     * set 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @param subDomain
      */
@@ -177,7 +182,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get app名
+     * get 查询的App名称，多个用逗号分隔。
      *
      * @return
      */
@@ -186,7 +191,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set app名
+     * set 查询的App名称，多个用逗号分隔。
      *
      * @param appName
      */
@@ -195,7 +200,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 流名
+     * get 查询的流名称，多个用逗号分隔。
      *
      * @return
      */
@@ -204,7 +209,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 流名
+     * set 查询的流名称，多个用逗号分隔。
      *
      * @param streamName
      */
@@ -231,7 +236,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get area
+     * get 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @return
      */
@@ -240,7 +245,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -249,7 +254,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get isp
+     * get 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @return
      */
@@ -258,7 +263,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -267,7 +272,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 查询的流协议
+     * get 查询的流协议，取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
      *
      * @return
      */
@@ -276,7 +281,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 查询的流协议
+     * set 查询的流协议，取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
      *
      * @param scheme
      */
@@ -303,7 +308,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 分组依据
+     * get 分组依据，可选值：[appname,streamname,domain,area,isp,scheme]
      *
      * @return
      */
@@ -312,7 +317,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 分组依据
+     * set 分组依据，可选值：[appname,streamname,domain,area,isp,scheme]
      *
      * @param groupBy
      */
@@ -321,7 +326,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get reqMethod
+     * get 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
      *
      * @return
      */
@@ -330,7 +335,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set reqMethod
+     * set 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
      *
      * @param reqMethod
      */
@@ -339,7 +344,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get cacheLevel
+     * get cacheLevel，可选值：[L1,L2,L3]
      *
      * @return
      */
@@ -348,12 +353,30 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set cacheLevel
+     * set cacheLevel，可选值：[L1,L2,L3]
      *
      * @param cacheLevel
      */
     public void setCacheLevel(String cacheLevel) {
         this.cacheLevel = cacheLevel;
+    }
+
+    /**
+     * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @return
+     */
+    public String getCacheType() {
+        return cacheType;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public void setCacheType(String cacheType) {
+        this.cacheType = cacheType;
     }
 
 
@@ -388,7 +411,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set subDomain
+     * set 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
      * @param subDomain
      */
@@ -398,7 +421,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set app名
+     * set 查询的App名称，多个用逗号分隔。
      *
      * @param appName
      */
@@ -408,7 +431,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 流名
+     * set 查询的流名称，多个用逗号分隔。
      *
      * @param streamName
      */
@@ -428,7 +451,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set area
+     * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
      * @param area
      */
@@ -438,7 +461,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set isp
+     * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
      * @param isp
      */
@@ -448,7 +471,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 查询的流协议
+     * set 查询的流协议，取值范围：&quot;rtmp,hdl,hls&quot;，多个用逗号分隔，默认为空，表示查询所有协议。
      *
      * @param scheme
      */
@@ -468,7 +491,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 分组依据
+     * set 分组依据，可选值：[appname,streamname,domain,area,isp,scheme]
      *
      * @param groupBy
      */
@@ -478,7 +501,7 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set reqMethod
+     * set 当前取值范围(&quot;GET,HEAD,forward,forward-hls,ingest,play,publish,detour-ingest,Forward-Origin&quot;)
      *
      * @param reqMethod
      */
@@ -488,12 +511,22 @@ public class QueryLiveTrafficGroupSumRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set cacheLevel
+     * set cacheLevel，可选值：[L1,L2,L3]
      *
      * @param cacheLevel
      */
     public QueryLiveTrafficGroupSumRequest cacheLevel(String cacheLevel) {
         this.cacheLevel = cacheLevel;
+        return this;
+    }
+
+    /**
+     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
+     *
+     * @param cacheType
+     */
+    public QueryLiveTrafficGroupSumRequest cacheType(String cacheType) {
+        this.cacheType = cacheType;
         return this;
     }
 

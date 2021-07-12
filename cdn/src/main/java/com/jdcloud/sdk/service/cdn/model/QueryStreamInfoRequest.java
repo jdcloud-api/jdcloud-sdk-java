@@ -24,12 +24,13 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询目录基础统计数据，仅有部分用户支持该功能
+ * 分页查询直播流数据接口
  */
-public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.Serializable {
+public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -44,19 +45,31 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
     private String endTime;
 
     /**
-     * 需要查询的域名, 必须为用户pin下有权限的域名，该接口仅支持单域名查询
+     * app名
      */
+    private String appName;
+
+    /**
+     * 流名
+     */
+    private String streamName;
+
+    /**
+     * 页码，不传默认1
+     */
+    private Integer pageNum;
+
+    /**
+     * 页size,不传默认100,最大值1000
+     */
+    private Integer pageSize;
+
+    /**
+     * 用户域名
+     * Required:true
+     */
+    @Required
     private String domain;
-
-    /**
-     * 需要过滤的目录
-     */
-    private String dirs;
-
-    /**
-     * 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
-     */
-    private String cacheType;
 
 
     /**
@@ -96,7 +109,79 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 需要查询的域名, 必须为用户pin下有权限的域名，该接口仅支持单域名查询
+     * get app名
+     *
+     * @return
+     */
+    public String getAppName() {
+        return appName;
+    }
+
+    /**
+     * set app名
+     *
+     * @param appName
+     */
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    /**
+     * get 流名
+     *
+     * @return
+     */
+    public String getStreamName() {
+        return streamName;
+    }
+
+    /**
+     * set 流名
+     *
+     * @param streamName
+     */
+    public void setStreamName(String streamName) {
+        this.streamName = streamName;
+    }
+
+    /**
+     * get 页码，不传默认1
+     *
+     * @return
+     */
+    public Integer getPageNum() {
+        return pageNum;
+    }
+
+    /**
+     * set 页码，不传默认1
+     *
+     * @param pageNum
+     */
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+    }
+
+    /**
+     * get 页size,不传默认100,最大值1000
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 页size,不传默认100,最大值1000
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    /**
+     * get 用户域名
      *
      * @return
      */
@@ -105,48 +190,12 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 需要查询的域名, 必须为用户pin下有权限的域名，该接口仅支持单域名查询
+     * set 用户域名
      *
      * @param domain
      */
     public void setDomain(String domain) {
         this.domain = domain;
-    }
-
-    /**
-     * get 需要过滤的目录
-     *
-     * @return
-     */
-    public String getDirs() {
-        return dirs;
-    }
-
-    /**
-     * set 需要过滤的目录
-     *
-     * @param dirs
-     */
-    public void setDirs(String dirs) {
-        this.dirs = dirs;
-    }
-
-    /**
-     * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
-     *
-     * @return
-     */
-    public String getCacheType() {
-        return cacheType;
-    }
-
-    /**
-     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
-     *
-     * @param cacheType
-     */
-    public void setCacheType(String cacheType) {
-        this.cacheType = cacheType;
     }
 
 
@@ -155,7 +204,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
      *
      * @param startTime
      */
-    public QueryDirStatsDataRequest startTime(String startTime) {
+    public QueryStreamInfoRequest startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -165,38 +214,58 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
      *
      * @param endTime
      */
-    public QueryDirStatsDataRequest endTime(String endTime) {
+    public QueryStreamInfoRequest endTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
 
     /**
-     * set 需要查询的域名, 必须为用户pin下有权限的域名，该接口仅支持单域名查询
+     * set app名
+     *
+     * @param appName
+     */
+    public QueryStreamInfoRequest appName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+
+    /**
+     * set 流名
+     *
+     * @param streamName
+     */
+    public QueryStreamInfoRequest streamName(String streamName) {
+        this.streamName = streamName;
+        return this;
+    }
+
+    /**
+     * set 页码，不传默认1
+     *
+     * @param pageNum
+     */
+    public QueryStreamInfoRequest pageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+
+    /**
+     * set 页size,不传默认100,最大值1000
+     *
+     * @param pageSize
+     */
+    public QueryStreamInfoRequest pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 用户域名
      *
      * @param domain
      */
-    public QueryDirStatsDataRequest domain(String domain) {
+    public QueryStreamInfoRequest domain(String domain) {
         this.domain = domain;
-        return this;
-    }
-
-    /**
-     * set 需要过滤的目录
-     *
-     * @param dirs
-     */
-    public QueryDirStatsDataRequest dirs(String dirs) {
-        this.dirs = dirs;
-        return this;
-    }
-
-    /**
-     * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
-     *
-     * @param cacheType
-     */
-    public QueryDirStatsDataRequest cacheType(String cacheType) {
-        this.cacheType = cacheType;
         return this;
     }
 

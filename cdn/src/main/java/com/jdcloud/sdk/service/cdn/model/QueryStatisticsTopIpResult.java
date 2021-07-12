@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.cdn.model.StatisticsTopIpData;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询TOP IP
+ * 查询TOP IP，仅可查询中国境内的相关信息
  */
 public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io.Serializable {
 

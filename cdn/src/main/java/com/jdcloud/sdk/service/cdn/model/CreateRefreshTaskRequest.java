@@ -29,14 +29,14 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建刷新预热任务
+ * 创建刷新预热任务，
  */
 public class CreateRefreshTaskRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
+     * 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)，中国境外/全球加速域名暂不支持预热功能
      */
     private String taskType;
 
@@ -47,7 +47,7 @@ public class CreateRefreshTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
+     * get 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)，中国境外/全球加速域名暂不支持预热功能
      *
      * @return
      */
@@ -56,7 +56,7 @@ public class CreateRefreshTaskRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
+     * set 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)，中国境外/全球加速域名暂不支持预热功能
      *
      * @param taskType
      */
@@ -84,7 +84,7 @@ public class CreateRefreshTaskRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
+     * set 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)，中国境外/全球加速域名暂不支持预热功能
      *
      * @param taskType
      */

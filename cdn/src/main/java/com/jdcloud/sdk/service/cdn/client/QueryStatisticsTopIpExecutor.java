@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.QueryStatisticsTopIpResponse;
 
 /**
- * 查询TOP IP
+ * 查询TOP IP，仅可查询中国境内的相关信息
  */
 class QueryStatisticsTopIpExecutor extends JdcloudExecutor {
 

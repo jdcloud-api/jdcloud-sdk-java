@@ -37,12 +37,12 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * startTime
+     * 2020/07/30 10:30，查询起始时间
      */
     private String startTime;
 
     /**
-     * endTime
+     * 2020/07/30 11:00，查询截止时间
      */
     private String endTime;
 
@@ -53,7 +53,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
 
 
     /**
-     * get startTime
+     * get 2020/07/30 10:30，查询起始时间
      *
      * @return
      */
@@ -62,7 +62,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
     }
 
     /**
-     * set startTime
+     * set 2020/07/30 10:30，查询起始时间
      *
      * @param startTime
      */
@@ -71,7 +71,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
     }
 
     /**
-     * get endTime
+     * get 2020/07/30 11:00，查询截止时间
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
     }
 
     /**
-     * set endTime
+     * set 2020/07/30 11:00，查询截止时间
      *
      * @param endTime
      */
@@ -108,7 +108,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
 
 
     /**
-     * set startTime
+     * set 2020/07/30 10:30，查询起始时间
      *
      * @param startTime
      */
@@ -118,7 +118,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
     }
 
     /**
-     * set endTime
+     * set 2020/07/30 11:00，查询截止时间
      *
      * @param endTime
      */

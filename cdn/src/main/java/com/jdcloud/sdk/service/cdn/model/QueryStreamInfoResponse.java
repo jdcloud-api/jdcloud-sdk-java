@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询统计数据并进行汇总加和，仅可查询中国境内的相关信息
+ * 分页查询直播流数据接口
  */
-public class QueryMixTrafficGroupSumResponse extends JdcloudResponse<QueryMixTrafficGroupSumResult> implements java.io.Serializable {
+public class QueryStreamInfoResponse extends JdcloudResponse<QueryStreamInfoResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

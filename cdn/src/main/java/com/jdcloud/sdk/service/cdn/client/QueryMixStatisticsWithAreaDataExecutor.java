@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.QueryMixStatisticsWithAreaDataResponse;
 
 /**
- * 分地区及运营商查询统计数据
+ * 分地区及运营商查询统计数据，仅可查询中国境内的相关信息
  */
 class QueryMixStatisticsWithAreaDataExecutor extends JdcloudExecutor {
 

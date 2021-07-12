@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询统计数据
+ * 查询统计数据，仅可查询中国境内的相关信息
  */
 public class QueryMixStatisticsDataResponse extends JdcloudResponse<QueryMixStatisticsDataResult> implements java.io.Serializable {
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.cdn.model.QueryMixTrafficGroupSumResponse;
 
 /**
- * 查询统计数据并进行汇总加和
+ * 查询统计数据并进行汇总加和，仅可查询中国境内的相关信息
  */
 class QueryMixTrafficGroupSumExecutor extends JdcloudExecutor {
 

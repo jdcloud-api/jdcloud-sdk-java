@@ -24,20 +24,22 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * http2配置，中国境外/全球加速域名暂不支持该配置
+ * 批量添加缓存规则
  */
-public class ConfigHttp2Request extends JdcloudRequest implements java.io.Serializable {
+public class SetCacheRulesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * HTTP2功能开关，取值on/off
+     * cacheRules
      */
-    private String status;
+    private List<CacheRuleVo> cacheRules;
 
     /**
      * 用户域名
@@ -48,21 +50,21 @@ public class ConfigHttp2Request extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get HTTP2功能开关，取值on/off
+     * get cacheRules
      *
      * @return
      */
-    public String getStatus() {
-        return status;
+    public List<CacheRuleVo> getCacheRules() {
+        return cacheRules;
     }
 
     /**
-     * set HTTP2功能开关，取值on/off
+     * set cacheRules
      *
-     * @param status
+     * @param cacheRules
      */
-    public void setStatus(String status) {
-        this.status = status;
+    public void setCacheRules(List<CacheRuleVo> cacheRules) {
+        this.cacheRules = cacheRules;
     }
 
     /**
@@ -85,12 +87,12 @@ public class ConfigHttp2Request extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set HTTP2功能开关，取值on/off
+     * set cacheRules
      *
-     * @param status
+     * @param cacheRules
      */
-    public ConfigHttp2Request status(String status) {
-        this.status = status;
+    public SetCacheRulesRequest cacheRules(List<CacheRuleVo> cacheRules) {
+        this.cacheRules = cacheRules;
         return this;
     }
 
@@ -99,10 +101,22 @@ public class ConfigHttp2Request extends JdcloudRequest implements java.io.Serial
      *
      * @param domain
      */
-    public ConfigHttp2Request domain(String domain) {
+    public SetCacheRulesRequest domain(String domain) {
         this.domain = domain;
         return this;
     }
 
+
+    /**
+     * add item to cacheRules
+     *
+     * @param cacheRule
+     */
+    public void addCacheRule(CacheRuleVo cacheRule) {
+        if (this.cacheRules == null) {
+            this.cacheRules = new ArrayList<>();
+        }
+        this.cacheRules.add(cacheRule);
+    }
 
 }

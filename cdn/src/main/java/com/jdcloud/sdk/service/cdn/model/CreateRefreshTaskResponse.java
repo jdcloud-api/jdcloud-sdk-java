@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建刷新预热任务
+ * 创建刷新预热任务，
  */
 public class CreateRefreshTaskResponse extends JdcloudResponse<CreateRefreshTaskResult> implements java.io.Serializable {
 

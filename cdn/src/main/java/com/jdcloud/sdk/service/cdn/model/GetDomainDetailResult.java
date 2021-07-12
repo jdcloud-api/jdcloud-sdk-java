@@ -42,42 +42,42 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     private String allStatus;
 
     /**
-     * allowNoReferHeader
+     * 是否允许空refer访问
      */
     private String allowNoReferHeader;
 
     /**
-     * allowNullReferHeader
+     * null
      */
     private String allowNullReferHeader;
 
     /**
-     * dailyBandWidth
+     * 日带宽（单位Mbps）
      */
     private Integer dailyBandWidth;
 
     /**
-     * forbiddenType
+     * 封禁类型，取值：domain,url
      */
     private String forbiddenType;
 
     /**
-     * maxFileSize
+     * 最大单个文件大小（单位MB）
      */
     private Long maxFileSize;
 
     /**
-     * minFileSize
+     * 最小单个文件大小（单位MB）
      */
     private Long minFileSize;
 
     /**
-     * sumFileSize
+     * 总文件大小（单位MB）
      */
     private Long sumFileSize;
 
     /**
-     * avgFileSize
+     * 平均文件大小（单位MB）
      */
     private Long avgFileSize;
 
@@ -87,57 +87,57 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     private List<String> referList;
 
     /**
-     * referType
+     * refer类型，取值：block（黑名单），allow（白名单）
      */
     private String referType;
 
     /**
-     * domain
+     * 域名
      */
     private String domain;
 
     /**
-     * cname
+     * 为加速域名生成的一个CNAME域名，需要在域名解析服务商处将加速域名CNAME解析到该域名
      */
     private String cname;
 
     /**
-     * archiveNo
+     * 域名备案号
      */
     private String archiveNo;
 
     /**
-     * type
+     * 域名加速类型，web表示图片及小文件加速
      */
     private String type;
 
     /**
-     * created
+     * 创建时间
      */
     private String created;
 
     /**
-     * modified
+     * 最后修改时间
      */
     private String modified;
 
     /**
-     * status
+     * 加速域名运行状态 ，online 表示启用；offline表示停用；configuring表示配置中；configure_failed表示配置失败
      */
     private String status;
 
     /**
-     * auditStatus
+     * 域名审核状态，取值：0（未审核），1（审核通过），2（审核不通过）
      */
     private String auditStatus;
 
     /**
-     * source
+     * null
      */
     private BackSourceInfo source;
 
     /**
-     * sourceType
+     * 回源类型：取值 ips（IP列表），domain（域名）,oss（oss回源）
      */
     private String sourceType;
 
@@ -147,57 +147,57 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     private String defaultSourceHost;
 
     /**
-     * backSourceType
+     * 回源类型，只能为http（80端口回源）或者https（443端口回源），默认为http
      */
     private String backSourceType;
 
     /**
-     * httpType
+     * http类型，只能为http或者https，默认为http。当设为https时，需要调用“设置通讯协议”接口上传证书和私钥
      */
     private String httpType;
 
     /**
-     * certificate
+     * 用户证书，当Type为https时必须设置
      */
     private String certificate;
 
     /**
-     * rsaKey
+     * 证书私钥
      */
     private String rsaKey;
 
     /**
-     * jumpType
+     * 跳转类型，有三种类型：default、http、https
      */
     private String jumpType;
 
     /**
-     * certFrom
+     * 证书来源，取值：ssl,defalut
      */
     private String certFrom;
 
     /**
-     * sslCertId
+     * 证书id
      */
     private String sslCertId;
 
     /**
-     * certName
+     * 证书名称
      */
     private String certName;
 
     /**
-     * certType
+     * 证书类型
      */
     private String certType;
 
     /**
-     * sslCertStartTime
+     * 证书开始时间
      */
     private String sslCertStartTime;
 
     /**
-     * sslCertEndTime
+     * 证书结束时间
      */
     private String sslCertEndTime;
 
@@ -231,7 +231,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get allowNoReferHeader
+     * get 是否允许空refer访问
      *
      * @return
      */
@@ -240,7 +240,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set allowNoReferHeader
+     * set 是否允许空refer访问
      *
      * @param allowNoReferHeader
      */
@@ -249,7 +249,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get allowNullReferHeader
+     * get null
      *
      * @return
      */
@@ -258,7 +258,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set allowNullReferHeader
+     * set null
      *
      * @param allowNullReferHeader
      */
@@ -267,7 +267,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get dailyBandWidth
+     * get 日带宽（单位Mbps）
      *
      * @return
      */
@@ -276,7 +276,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set dailyBandWidth
+     * set 日带宽（单位Mbps）
      *
      * @param dailyBandWidth
      */
@@ -285,7 +285,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get forbiddenType
+     * get 封禁类型，取值：domain,url
      *
      * @return
      */
@@ -294,7 +294,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set forbiddenType
+     * set 封禁类型，取值：domain,url
      *
      * @param forbiddenType
      */
@@ -303,7 +303,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get maxFileSize
+     * get 最大单个文件大小（单位MB）
      *
      * @return
      */
@@ -312,7 +312,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set maxFileSize
+     * set 最大单个文件大小（单位MB）
      *
      * @param maxFileSize
      */
@@ -321,7 +321,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get minFileSize
+     * get 最小单个文件大小（单位MB）
      *
      * @return
      */
@@ -330,7 +330,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set minFileSize
+     * set 最小单个文件大小（单位MB）
      *
      * @param minFileSize
      */
@@ -339,7 +339,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get sumFileSize
+     * get 总文件大小（单位MB）
      *
      * @return
      */
@@ -348,7 +348,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sumFileSize
+     * set 总文件大小（单位MB）
      *
      * @param sumFileSize
      */
@@ -357,7 +357,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get avgFileSize
+     * get 平均文件大小（单位MB）
      *
      * @return
      */
@@ -366,7 +366,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set avgFileSize
+     * set 平均文件大小（单位MB）
      *
      * @param avgFileSize
      */
@@ -393,7 +393,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get referType
+     * get refer类型，取值：block（黑名单），allow（白名单）
      *
      * @return
      */
@@ -402,7 +402,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set referType
+     * set refer类型，取值：block（黑名单），allow（白名单）
      *
      * @param referType
      */
@@ -411,7 +411,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get domain
+     * get 域名
      *
      * @return
      */
@@ -420,7 +420,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set domain
+     * set 域名
      *
      * @param domain
      */
@@ -429,7 +429,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get cname
+     * get 为加速域名生成的一个CNAME域名，需要在域名解析服务商处将加速域名CNAME解析到该域名
      *
      * @return
      */
@@ -438,7 +438,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set cname
+     * set 为加速域名生成的一个CNAME域名，需要在域名解析服务商处将加速域名CNAME解析到该域名
      *
      * @param cname
      */
@@ -447,7 +447,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get archiveNo
+     * get 域名备案号
      *
      * @return
      */
@@ -456,7 +456,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set archiveNo
+     * set 域名备案号
      *
      * @param archiveNo
      */
@@ -465,7 +465,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get type
+     * get 域名加速类型，web表示图片及小文件加速
      *
      * @return
      */
@@ -474,7 +474,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set type
+     * set 域名加速类型，web表示图片及小文件加速
      *
      * @param type
      */
@@ -483,7 +483,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get created
+     * get 创建时间
      *
      * @return
      */
@@ -492,7 +492,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set created
+     * set 创建时间
      *
      * @param created
      */
@@ -501,7 +501,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get modified
+     * get 最后修改时间
      *
      * @return
      */
@@ -510,7 +510,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set modified
+     * set 最后修改时间
      *
      * @param modified
      */
@@ -519,7 +519,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get status
+     * get 加速域名运行状态 ，online 表示启用；offline表示停用；configuring表示配置中；configure_failed表示配置失败
      *
      * @return
      */
@@ -528,7 +528,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set status
+     * set 加速域名运行状态 ，online 表示启用；offline表示停用；configuring表示配置中；configure_failed表示配置失败
      *
      * @param status
      */
@@ -537,7 +537,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get auditStatus
+     * get 域名审核状态，取值：0（未审核），1（审核通过），2（审核不通过）
      *
      * @return
      */
@@ -546,7 +546,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set auditStatus
+     * set 域名审核状态，取值：0（未审核），1（审核通过），2（审核不通过）
      *
      * @param auditStatus
      */
@@ -555,7 +555,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get source
+     * get null
      *
      * @return
      */
@@ -564,7 +564,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set source
+     * set null
      *
      * @param source
      */
@@ -573,7 +573,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get sourceType
+     * get 回源类型：取值 ips（IP列表），domain（域名）,oss（oss回源）
      *
      * @return
      */
@@ -582,7 +582,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sourceType
+     * set 回源类型：取值 ips（IP列表），domain（域名）,oss（oss回源）
      *
      * @param sourceType
      */
@@ -609,7 +609,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get backSourceType
+     * get 回源类型，只能为http（80端口回源）或者https（443端口回源），默认为http
      *
      * @return
      */
@@ -618,7 +618,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set backSourceType
+     * set 回源类型，只能为http（80端口回源）或者https（443端口回源），默认为http
      *
      * @param backSourceType
      */
@@ -627,7 +627,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get httpType
+     * get http类型，只能为http或者https，默认为http。当设为https时，需要调用“设置通讯协议”接口上传证书和私钥
      *
      * @return
      */
@@ -636,7 +636,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set httpType
+     * set http类型，只能为http或者https，默认为http。当设为https时，需要调用“设置通讯协议”接口上传证书和私钥
      *
      * @param httpType
      */
@@ -645,7 +645,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get certificate
+     * get 用户证书，当Type为https时必须设置
      *
      * @return
      */
@@ -654,7 +654,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set certificate
+     * set 用户证书，当Type为https时必须设置
      *
      * @param certificate
      */
@@ -663,7 +663,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get rsaKey
+     * get 证书私钥
      *
      * @return
      */
@@ -672,7 +672,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set rsaKey
+     * set 证书私钥
      *
      * @param rsaKey
      */
@@ -681,7 +681,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get jumpType
+     * get 跳转类型，有三种类型：default、http、https
      *
      * @return
      */
@@ -690,7 +690,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set jumpType
+     * set 跳转类型，有三种类型：default、http、https
      *
      * @param jumpType
      */
@@ -699,7 +699,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get certFrom
+     * get 证书来源，取值：ssl,defalut
      *
      * @return
      */
@@ -708,7 +708,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set certFrom
+     * set 证书来源，取值：ssl,defalut
      *
      * @param certFrom
      */
@@ -717,7 +717,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get sslCertId
+     * get 证书id
      *
      * @return
      */
@@ -726,7 +726,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sslCertId
+     * set 证书id
      *
      * @param sslCertId
      */
@@ -735,7 +735,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get certName
+     * get 证书名称
      *
      * @return
      */
@@ -744,7 +744,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set certName
+     * set 证书名称
      *
      * @param certName
      */
@@ -753,7 +753,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get certType
+     * get 证书类型
      *
      * @return
      */
@@ -762,7 +762,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set certType
+     * set 证书类型
      *
      * @param certType
      */
@@ -771,7 +771,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get sslCertStartTime
+     * get 证书开始时间
      *
      * @return
      */
@@ -780,7 +780,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sslCertStartTime
+     * set 证书开始时间
      *
      * @param sslCertStartTime
      */
@@ -789,7 +789,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get sslCertEndTime
+     * get 证书结束时间
      *
      * @return
      */
@@ -798,7 +798,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sslCertEndTime
+     * set 证书结束时间
      *
      * @param sslCertEndTime
      */
@@ -854,7 +854,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set allowNoReferHeader
+     * set 是否允许空refer访问
      *
      * @param allowNoReferHeader
      */
@@ -864,7 +864,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set allowNullReferHeader
+     * set null
      *
      * @param allowNullReferHeader
      */
@@ -874,7 +874,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set dailyBandWidth
+     * set 日带宽（单位Mbps）
      *
      * @param dailyBandWidth
      */
@@ -884,7 +884,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set forbiddenType
+     * set 封禁类型，取值：domain,url
      *
      * @param forbiddenType
      */
@@ -894,7 +894,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set maxFileSize
+     * set 最大单个文件大小（单位MB）
      *
      * @param maxFileSize
      */
@@ -904,7 +904,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set minFileSize
+     * set 最小单个文件大小（单位MB）
      *
      * @param minFileSize
      */
@@ -914,7 +914,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sumFileSize
+     * set 总文件大小（单位MB）
      *
      * @param sumFileSize
      */
@@ -924,7 +924,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set avgFileSize
+     * set 平均文件大小（单位MB）
      *
      * @param avgFileSize
      */
@@ -944,7 +944,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set referType
+     * set refer类型，取值：block（黑名单），allow（白名单）
      *
      * @param referType
      */
@@ -954,7 +954,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set domain
+     * set 域名
      *
      * @param domain
      */
@@ -964,7 +964,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set cname
+     * set 为加速域名生成的一个CNAME域名，需要在域名解析服务商处将加速域名CNAME解析到该域名
      *
      * @param cname
      */
@@ -974,7 +974,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set archiveNo
+     * set 域名备案号
      *
      * @param archiveNo
      */
@@ -984,7 +984,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set type
+     * set 域名加速类型，web表示图片及小文件加速
      *
      * @param type
      */
@@ -994,7 +994,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set created
+     * set 创建时间
      *
      * @param created
      */
@@ -1004,7 +1004,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set modified
+     * set 最后修改时间
      *
      * @param modified
      */
@@ -1014,7 +1014,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set status
+     * set 加速域名运行状态 ，online 表示启用；offline表示停用；configuring表示配置中；configure_failed表示配置失败
      *
      * @param status
      */
@@ -1024,7 +1024,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set auditStatus
+     * set 域名审核状态，取值：0（未审核），1（审核通过），2（审核不通过）
      *
      * @param auditStatus
      */
@@ -1034,7 +1034,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set source
+     * set null
      *
      * @param source
      */
@@ -1044,7 +1044,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sourceType
+     * set 回源类型：取值 ips（IP列表），domain（域名）,oss（oss回源）
      *
      * @param sourceType
      */
@@ -1064,7 +1064,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set backSourceType
+     * set 回源类型，只能为http（80端口回源）或者https（443端口回源），默认为http
      *
      * @param backSourceType
      */
@@ -1074,7 +1074,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set httpType
+     * set http类型，只能为http或者https，默认为http。当设为https时，需要调用“设置通讯协议”接口上传证书和私钥
      *
      * @param httpType
      */
@@ -1084,7 +1084,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set certificate
+     * set 用户证书，当Type为https时必须设置
      *
      * @param certificate
      */
@@ -1094,7 +1094,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set rsaKey
+     * set 证书私钥
      *
      * @param rsaKey
      */
@@ -1104,7 +1104,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set jumpType
+     * set 跳转类型，有三种类型：default、http、https
      *
      * @param jumpType
      */
@@ -1114,7 +1114,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set certFrom
+     * set 证书来源，取值：ssl,defalut
      *
      * @param certFrom
      */
@@ -1124,7 +1124,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sslCertId
+     * set 证书id
      *
      * @param sslCertId
      */
@@ -1134,7 +1134,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set certName
+     * set 证书名称
      *
      * @param certName
      */
@@ -1144,7 +1144,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set certType
+     * set 证书类型
      *
      * @param certType
      */
@@ -1154,7 +1154,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sslCertStartTime
+     * set 证书开始时间
      *
      * @param sslCertStartTime
      */
@@ -1164,7 +1164,7 @@ public class GetDomainDetailResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set sslCertEndTime
+     * set 证书结束时间
      *
      * @param sslCertEndTime
      */

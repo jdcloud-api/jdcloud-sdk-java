@@ -35,23 +35,23 @@ public class BackSourceInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * ips
+     * ip回源配置，对应sourceType&#x3D;ips的取值
      */
     private List<IpSourceInfo> ips;
 
     /**
-     * domain
+     * 域名回源配置，对应sourceType&#x3D;domain的取值
      */
     private List<DomainSourceInfo> domain;
 
     /**
-     * ossSource
+     * oss回源配置，对应sourceType&#x3D;oss的取值
      */
     private String ossSource;
 
 
     /**
-     * get ips
+     * get ip回源配置，对应sourceType&#x3D;ips的取值
      *
      * @return
      */
@@ -60,7 +60,7 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set ips
+     * set ip回源配置，对应sourceType&#x3D;ips的取值
      *
      * @param ips
      */
@@ -69,7 +69,7 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get domain
+     * get 域名回源配置，对应sourceType&#x3D;domain的取值
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set domain
+     * set 域名回源配置，对应sourceType&#x3D;domain的取值
      *
      * @param domain
      */
@@ -87,7 +87,7 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * get ossSource
+     * get oss回源配置，对应sourceType&#x3D;oss的取值
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set ossSource
+     * set oss回源配置，对应sourceType&#x3D;oss的取值
      *
      * @param ossSource
      */
@@ -106,7 +106,7 @@ public class BackSourceInfo  implements java.io.Serializable {
 
 
     /**
-     * set ips
+     * set ip回源配置，对应sourceType&#x3D;ips的取值
      *
      * @param ips
      */
@@ -116,7 +116,7 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set domain
+     * set 域名回源配置，对应sourceType&#x3D;domain的取值
      *
      * @param domain
      */
@@ -126,7 +126,7 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * set ossSource
+     * set oss回源配置，对应sourceType&#x3D;oss的取值
      *
      * @param ossSource
      */
@@ -137,7 +137,7 @@ public class BackSourceInfo  implements java.io.Serializable {
 
 
     /**
-     * add item to ips
+     * add item to ip回源配置，对应sourceType&#x3D;ips的取值
      *
      * @param ip
      */
@@ -149,7 +149,7 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
     /**
-     * add item to domain
+     * add item to 域名回源配置，对应sourceType&#x3D;domain的取值
      *
      * @param domain
      */

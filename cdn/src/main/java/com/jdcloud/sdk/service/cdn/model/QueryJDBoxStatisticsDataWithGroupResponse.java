@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 统计查询类接口
+ * PCdn统计查询接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.cdn.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询统计数据并进行汇总加和，仅可查询中国境内的相关信息
+ * 无线宝按group查询的统计接口
  */
-public class QueryMixTrafficGroupSumResponse extends JdcloudResponse<QueryMixTrafficGroupSumResult> implements java.io.Serializable {
+public class QueryJDBoxStatisticsDataWithGroupResponse extends JdcloudResponse<QueryJDBoxStatisticsDataWithGroupResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
