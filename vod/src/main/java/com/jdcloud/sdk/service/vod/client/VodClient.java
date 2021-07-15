@@ -94,12 +94,24 @@ import com.jdcloud.sdk.service.vod.client.CreateImageUploadTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.UpdateQualityDetectionTemplateRequest;
 import com.jdcloud.sdk.service.vod.model.UpdateQualityDetectionTemplateResponse;
 import com.jdcloud.sdk.service.vod.client.UpdateQualityDetectionTemplateExecutor;
+import com.jdcloud.sdk.service.vod.model.SubmitVeditJobRequest;
+import com.jdcloud.sdk.service.vod.model.SubmitVeditJobResponse;
+import com.jdcloud.sdk.service.vod.client.SubmitVeditJobExecutor;
 import com.jdcloud.sdk.service.vod.model.GetDomainRequest;
 import com.jdcloud.sdk.service.vod.model.GetDomainResponse;
 import com.jdcloud.sdk.service.vod.client.GetDomainExecutor;
 import com.jdcloud.sdk.service.vod.model.ListSnapshotTemplatesRequest;
 import com.jdcloud.sdk.service.vod.model.ListSnapshotTemplatesResponse;
 import com.jdcloud.sdk.service.vod.client.ListSnapshotTemplatesExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateVeditProjectRequest;
+import com.jdcloud.sdk.service.vod.model.CreateVeditProjectResponse;
+import com.jdcloud.sdk.service.vod.client.CreateVeditProjectExecutor;
+import com.jdcloud.sdk.service.vod.model.CreateVeditJobRequest;
+import com.jdcloud.sdk.service.vod.model.CreateVeditJobResponse;
+import com.jdcloud.sdk.service.vod.client.CreateVeditJobExecutor;
+import com.jdcloud.sdk.service.vod.model.GetVeditProjectRequest;
+import com.jdcloud.sdk.service.vod.model.GetVeditProjectResponse;
+import com.jdcloud.sdk.service.vod.client.GetVeditProjectExecutor;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkRequest;
 import com.jdcloud.sdk.service.vod.model.GetWatermarkResponse;
 import com.jdcloud.sdk.service.vod.client.GetWatermarkExecutor;
@@ -175,6 +187,9 @@ import com.jdcloud.sdk.service.vod.client.ListWatermarksExecutor;
 import com.jdcloud.sdk.service.vod.model.GetHttpSslRequest;
 import com.jdcloud.sdk.service.vod.model.GetHttpSslResponse;
 import com.jdcloud.sdk.service.vod.client.GetHttpSslExecutor;
+import com.jdcloud.sdk.service.vod.model.DeleteVeditProjectRequest;
+import com.jdcloud.sdk.service.vod.model.DeleteVeditProjectResponse;
+import com.jdcloud.sdk.service.vod.client.DeleteVeditProjectExecutor;
 import com.jdcloud.sdk.service.vod.model.GetVideoSourceInfoRequest;
 import com.jdcloud.sdk.service.vod.model.GetVideoSourceInfoResponse;
 import com.jdcloud.sdk.service.vod.client.GetVideoSourceInfoExecutor;
@@ -187,6 +202,9 @@ import com.jdcloud.sdk.service.vod.client.RefreshVideoUploadTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.GetTranscodeTemplateGroupRequest;
 import com.jdcloud.sdk.service.vod.model.GetTranscodeTemplateGroupResponse;
 import com.jdcloud.sdk.service.vod.client.GetTranscodeTemplateGroupExecutor;
+import com.jdcloud.sdk.service.vod.model.ListVeditProjectsRequest;
+import com.jdcloud.sdk.service.vod.model.ListVeditProjectsResponse;
+import com.jdcloud.sdk.service.vod.client.ListVeditProjectsExecutor;
 import com.jdcloud.sdk.service.vod.model.GetVideoRequest;
 import com.jdcloud.sdk.service.vod.model.GetVideoResponse;
 import com.jdcloud.sdk.service.vod.client.GetVideoExecutor;
@@ -229,6 +247,9 @@ import com.jdcloud.sdk.service.vod.client.SetHttpSslExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.vod.client.CreateTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.vod.model.UpdateVeditProjectRequest;
+import com.jdcloud.sdk.service.vod.model.UpdateVeditProjectResponse;
+import com.jdcloud.sdk.service.vod.client.UpdateVeditProjectExecutor;
 import com.jdcloud.sdk.service.vod.model.ListTranscodeTemplateGroupsRequest;
 import com.jdcloud.sdk.service.vod.model.ListTranscodeTemplateGroupsResponse;
 import com.jdcloud.sdk.service.vod.client.ListTranscodeTemplateGroupsExecutor;
@@ -531,6 +552,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 提交视频剪辑作业
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SubmitVeditJobResponse submitVeditJob(SubmitVeditJobRequest request) throws JdcloudSdkException {
+        return new SubmitVeditJobExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询域名
      *
      * @param request
@@ -553,6 +585,40 @@ public class VodClient extends JdcloudClient {
      */
     public ListSnapshotTemplatesResponse listSnapshotTemplates(ListSnapshotTemplatesRequest request) throws JdcloudSdkException {
         return new ListSnapshotTemplatesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建视频剪辑工程
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVeditProjectResponse createVeditProject(CreateVeditProjectRequest request) throws JdcloudSdkException {
+        return new CreateVeditProjectExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建视频剪辑作业
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateVeditJobResponse createVeditJob(CreateVeditJobRequest request) throws JdcloudSdkException {
+        return new CreateVeditJobExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频剪辑工程详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetVeditProjectResponse getVeditProject(GetVeditProjectRequest request) throws JdcloudSdkException {
+        return new GetVeditProjectExecutor().client(this).execute(request);
     }
 
     /**
@@ -834,6 +900,17 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 删除视频剪辑工程
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteVeditProjectResponse deleteVeditProject(DeleteVeditProjectRequest request) throws JdcloudSdkException {
+        return new DeleteVeditProjectExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取视频源文件信息
      *
      * @param request
@@ -875,6 +952,20 @@ public class VodClient extends JdcloudClient {
      */
     public GetTranscodeTemplateGroupResponse getTranscodeTemplateGroup(GetTranscodeTemplateGroupRequest request) throws JdcloudSdkException {
         return new GetTranscodeTemplateGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询视频剪辑工程列表。
+允许通过条件过滤查询，支持的过滤字段如下：
+  - projectId[eq] 按照工程ID精确查询
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListVeditProjectsResponse listVeditProjects(ListVeditProjectsRequest request) throws JdcloudSdkException {
+        return new ListVeditProjectsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1035,6 +1126,17 @@ public class VodClient extends JdcloudClient {
      */
     public CreateTranscodeTemplateResponse createTranscodeTemplate(CreateTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new CreateTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改视频剪辑工程信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateVeditProjectResponse updateVeditProject(UpdateVeditProjectRequest request) throws JdcloudSdkException {
+        return new UpdateVeditProjectExecutor().client(this).execute(request);
     }
 
     /**
