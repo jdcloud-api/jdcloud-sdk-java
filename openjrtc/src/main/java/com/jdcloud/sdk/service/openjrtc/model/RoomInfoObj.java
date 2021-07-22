@@ -43,6 +43,11 @@ public class RoomInfoObj  implements java.io.Serializable {
     private String roomName;
 
     /**
+     * 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+     */
+    private Integer roomType;
+
+    /**
      * appId
      */
     private String appId;
@@ -97,6 +102,24 @@ public class RoomInfoObj  implements java.io.Serializable {
      */
     public void setRoomName(String roomName) {
         this.roomName = roomName;
+    }
+
+    /**
+     * get 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+     *
+     * @return
+     */
+    public Integer getRoomType() {
+        return roomType;
+    }
+
+    /**
+     * set 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+     *
+     * @param roomType
+     */
+    public void setRoomType(Integer roomType) {
+        this.roomType = roomType;
     }
 
     /**
@@ -189,6 +212,16 @@ public class RoomInfoObj  implements java.io.Serializable {
      */
     public RoomInfoObj roomName(String roomName) {
         this.roomName = roomName;
+        return this;
+    }
+
+    /**
+     * set 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+     *
+     * @param roomType
+     */
+    public RoomInfoObj roomType(Integer roomType) {
+        this.roomType = roomType;
         return this;
     }
 

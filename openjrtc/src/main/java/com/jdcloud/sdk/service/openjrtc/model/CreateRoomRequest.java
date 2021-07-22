@@ -45,6 +45,11 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     private String appId;
 
     /**
+     * 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+     */
+    private Integer roomType;
+
+    /**
      * 用户ID(创建者ID)
      */
     private Long peerId;
@@ -87,6 +92,24 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
+     * get 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+     *
+     * @return
+     */
+    public Integer getRoomType() {
+        return roomType;
+    }
+
+    /**
+     * set 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+     *
+     * @param roomType
+     */
+    public void setRoomType(Integer roomType) {
+        this.roomType = roomType;
+    }
+
+    /**
      * get 用户ID(创建者ID)
      *
      * @return
@@ -122,6 +145,16 @@ public class CreateRoomRequest extends JdcloudRequest implements java.io.Seriali
      */
     public CreateRoomRequest appId(String appId) {
         this.appId = appId;
+        return this;
+    }
+
+    /**
+     * set 房间类型 1-小房间(音频单流订阅) 2-大房间(音频固定订阅)
+     *
+     * @param roomType
+     */
+    public CreateRoomRequest roomType(Integer roomType) {
+        this.roomType = roomType;
         return this;
     }
 
