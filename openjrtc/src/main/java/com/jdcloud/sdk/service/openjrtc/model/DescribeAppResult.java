@@ -51,6 +51,11 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
     private String status;
 
     /**
+     * 应用默认创建的房间类型 1-小房间；2-大房间
+     */
+    private Integer roomType;
+
+    /**
      * 计费类型: Duration-按时长
 
      */
@@ -116,6 +121,24 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
      */
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    /**
+     * get 应用默认创建的房间类型 1-小房间；2-大房间
+     *
+     * @return
+     */
+    public Integer getRoomType() {
+        return roomType;
+    }
+
+    /**
+     * set 应用默认创建的房间类型 1-小房间；2-大房间
+     *
+     * @param roomType
+     */
+    public void setRoomType(Integer roomType) {
+        this.roomType = roomType;
     }
 
     /**
@@ -185,6 +208,16 @@ public class DescribeAppResult extends JdcloudResult implements java.io.Serializ
      */
     public DescribeAppResult status(String status) {
         this.status = status;
+        return this;
+    }
+
+    /**
+     * set 应用默认创建的房间类型 1-小房间；2-大房间
+     *
+     * @param roomType
+     */
+    public DescribeAppResult roomType(Integer roomType) {
+        this.roomType = roomType;
         return this;
     }
 

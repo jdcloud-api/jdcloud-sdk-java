@@ -46,13 +46,6 @@ public class Filter  implements java.io.Serializable {
      * 过滤器操作符,默认值为 eq
 enum:
   - eq
-  - lt
-  - le
-  - gt
-  - ge
-  - ne
-  - in
-  - like
 
      */
     private String operator;
@@ -87,13 +80,6 @@ enum:
      * get 过滤器操作符,默认值为 eq
 enum:
   - eq
-  - lt
-  - le
-  - gt
-  - ge
-  - ne
-  - in
-  - like
 
      *
      * @return
@@ -106,13 +92,6 @@ enum:
      * set 过滤器操作符,默认值为 eq
 enum:
   - eq
-  - lt
-  - le
-  - gt
-  - ge
-  - ne
-  - in
-  - like
 
      *
      * @param operator
@@ -154,13 +133,6 @@ enum:
      * set 过滤器操作符,默认值为 eq
 enum:
   - eq
-  - lt
-  - le
-  - gt
-  - ge
-  - ne
-  - in
-  - like
 
      *
      * @param operator

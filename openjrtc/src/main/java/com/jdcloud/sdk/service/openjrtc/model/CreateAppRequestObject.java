@@ -37,6 +37,11 @@ public class CreateAppRequestObject  implements java.io.Serializable {
      */
     private String appName;
 
+    /**
+     * 应用创建的默认房间类型 1-小房间；2-大房间
+     */
+    private Integer roomType;
+
 
     /**
      * get 应用名称
@@ -56,6 +61,24 @@ public class CreateAppRequestObject  implements java.io.Serializable {
         this.appName = appName;
     }
 
+    /**
+     * get 应用创建的默认房间类型 1-小房间；2-大房间
+     *
+     * @return
+     */
+    public Integer getRoomType() {
+        return roomType;
+    }
+
+    /**
+     * set 应用创建的默认房间类型 1-小房间；2-大房间
+     *
+     * @param roomType
+     */
+    public void setRoomType(Integer roomType) {
+        this.roomType = roomType;
+    }
+
 
     /**
      * set 应用名称
@@ -64,6 +87,16 @@ public class CreateAppRequestObject  implements java.io.Serializable {
      */
     public CreateAppRequestObject appName(String appName) {
         this.appName = appName;
+        return this;
+    }
+
+    /**
+     * set 应用创建的默认房间类型 1-小房间；2-大房间
+     *
+     * @param roomType
+     */
+    public CreateAppRequestObject roomType(Integer roomType) {
+        this.roomType = roomType;
         return this;
     }
 

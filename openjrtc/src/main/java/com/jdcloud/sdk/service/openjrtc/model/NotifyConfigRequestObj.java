@@ -24,81 +24,62 @@
 
 package com.jdcloud.sdk.service.openjrtc.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
- * sort
+ * 用户房间列表
  */
-public class Sort  implements java.io.Serializable {
+public class NotifyConfigRequestObj  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 排序属性名
+     * 回调配置
      */
-    private String name;
-
-    /**
-     * 排序方向
-     */
-    private String direction;
+    private List<NotifyConfigObj> content;
 
 
     /**
-     * get 排序属性名
+     * get 回调配置
      *
      * @return
      */
-    public String getName() {
-        return name;
+    public List<NotifyConfigObj> getContent() {
+        return content;
     }
 
     /**
-     * set 排序属性名
+     * set 回调配置
      *
-     * @param name
+     * @param content
      */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * get 排序方向
-     *
-     * @return
-     */
-    public String getDirection() {
-        return direction;
-    }
-
-    /**
-     * set 排序方向
-     *
-     * @param direction
-     */
-    public void setDirection(String direction) {
-        this.direction = direction;
+    public void setContent(List<NotifyConfigObj> content) {
+        this.content = content;
     }
 
 
     /**
-     * set 排序属性名
+     * set 回调配置
      *
-     * @param name
+     * @param content
      */
-    public Sort name(String name) {
-        this.name = name;
+    public NotifyConfigRequestObj content(List<NotifyConfigObj> content) {
+        this.content = content;
         return this;
     }
 
-    /**
-     * set 排序方向
-     *
-     * @param direction
-     */
-    public Sort direction(String direction) {
-        this.direction = direction;
-        return this;
-    }
 
+    /**
+     * add item to 回调配置
+     *
+     * @param content
+     */
+    public void addContent(NotifyConfigObj content) {
+        if (this.content == null) {
+            this.content = new ArrayList<>();
+        }
+        this.content.add(content);
+    }
 
 }
