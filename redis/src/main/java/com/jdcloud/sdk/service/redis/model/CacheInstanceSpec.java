@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -92,6 +94,16 @@ public class CacheInstanceSpec  implements java.io.Serializable {
      * 分片数，自定义分片规格集群版实例必须有，且大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
      */
     private Integer shardNumber;
+
+    /**
+     * 用户普通标签
+     */
+    private List<Tag> userTags;
+
+    /**
+     * 扩展配置
+     */
+    private ReqExtension extension;
 
 
     /**
@@ -274,6 +286,42 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.shardNumber = shardNumber;
     }
 
+    /**
+     * get 用户普通标签
+     *
+     * @return
+     */
+    public List<Tag> getUserTags() {
+        return userTags;
+    }
+
+    /**
+     * set 用户普通标签
+     *
+     * @param userTags
+     */
+    public void setUserTags(List<Tag> userTags) {
+        this.userTags = userTags;
+    }
+
+    /**
+     * get 扩展配置
+     *
+     * @return
+     */
+    public ReqExtension getExtension() {
+        return extension;
+    }
+
+    /**
+     * set 扩展配置
+     *
+     * @param extension
+     */
+    public void setExtension(ReqExtension extension) {
+        this.extension = extension;
+    }
+
 
     /**
      * set 缓存Redis实例所属的私有网络ID
@@ -375,5 +423,37 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 用户普通标签
+     *
+     * @param userTags
+     */
+    public CacheInstanceSpec userTags(List<Tag> userTags) {
+        this.userTags = userTags;
+        return this;
+    }
+
+    /**
+     * set 扩展配置
+     *
+     * @param extension
+     */
+    public CacheInstanceSpec extension(ReqExtension extension) {
+        this.extension = extension;
+        return this;
+    }
+
+
+    /**
+     * add item to 用户普通标签
+     *
+     * @param userTag
+     */
+    public void addUserTag(Tag userTag) {
+        if (this.userTags == null) {
+            this.userTags = new ArrayList<>();
+        }
+        this.userTags.add(userTag);
+    }
 
 }

@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.redis.model.ModifyBackupPolicyRequest;
 import com.jdcloud.sdk.service.redis.model.ModifyBackupPolicyResponse;
 import com.jdcloud.sdk.service.redis.client.ModifyBackupPolicyExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeTaskProgressListRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeTaskProgressListResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeTaskProgressListExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeIpWhiteListRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeIpWhiteListResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeIpWhiteListExecutor;
@@ -64,6 +67,9 @@ import com.jdcloud.sdk.service.redis.client.DescribeBackupsExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheAnalysisListRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheAnalysisListResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeCacheAnalysisListExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeAvailableRegionRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeAvailableRegionResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeAvailableRegionExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeAnalysisTimeRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeAnalysisTimeResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeAnalysisTimeExecutor;
@@ -100,6 +106,9 @@ import com.jdcloud.sdk.service.redis.client.RestoreInstanceExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeUserQuotaResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeUserQuotaExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeAvailableResourceRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeAvailableResourceResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeAvailableResourceExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeClientListRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeClientListResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeClientListExecutor;
@@ -177,6 +186,17 @@ public class RedisClient extends JdcloudClient {
      */
     public ModifyBackupPolicyResponse modifyBackupPolicy(ModifyBackupPolicyRequest request) throws JdcloudSdkException {
         return new ModifyBackupPolicyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询正在执行的任务进度列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeTaskProgressListResponse describeTaskProgressList(DescribeTaskProgressListRequest request) throws JdcloudSdkException {
+        return new DescribeTaskProgressListExecutor().client(this).execute(request);
     }
 
     /**
@@ -287,6 +307,17 @@ public class RedisClient extends JdcloudClient {
      */
     public DescribeCacheAnalysisListResponse describeCacheAnalysisList(DescribeCacheAnalysisListRequest request) throws JdcloudSdkException {
         return new DescribeCacheAnalysisListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询支持的地域列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAvailableRegionResponse describeAvailableRegion(DescribeAvailableRegionRequest request) throws JdcloudSdkException {
+        return new DescribeAvailableRegionExecutor().client(this).execute(request);
     }
 
     /**
@@ -424,6 +455,17 @@ public class RedisClient extends JdcloudClient {
      */
     public DescribeUserQuotaResponse describeUserQuota(DescribeUserQuotaRequest request) throws JdcloudSdkException {
         return new DescribeUserQuotaExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询支持的规格列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeAvailableResourceResponse describeAvailableResource(DescribeAvailableResourceRequest request) throws JdcloudSdkException {
+        return new DescribeAvailableResourceExecutor().client(this).execute(request);
     }
 
     /**

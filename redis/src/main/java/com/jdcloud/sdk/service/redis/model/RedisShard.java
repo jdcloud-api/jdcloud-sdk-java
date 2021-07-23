@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * 分片对象
+ * 分片信息
  */
 public class RedisShard  implements java.io.Serializable {
 
@@ -40,9 +40,9 @@ public class RedisShard  implements java.io.Serializable {
     private Node master;
 
     /**
-     * slave列表
+     * slave节点列表
      */
-    private List<Node> slave;
+    private List<Node> slaves;
 
 
     /**
@@ -64,21 +64,21 @@ public class RedisShard  implements java.io.Serializable {
     }
 
     /**
-     * get slave列表
+     * get slave节点列表
      *
      * @return
      */
-    public List<Node> getSlave() {
-        return slave;
+    public List<Node> getSlaves() {
+        return slaves;
     }
 
     /**
-     * set slave列表
+     * set slave节点列表
      *
-     * @param slave
+     * @param slaves
      */
-    public void setSlave(List<Node> slave) {
-        this.slave = slave;
+    public void setSlaves(List<Node> slaves) {
+        this.slaves = slaves;
     }
 
 
@@ -93,26 +93,26 @@ public class RedisShard  implements java.io.Serializable {
     }
 
     /**
-     * set slave列表
+     * set slave节点列表
      *
-     * @param slave
+     * @param slaves
      */
-    public RedisShard slave(List<Node> slave) {
-        this.slave = slave;
+    public RedisShard slaves(List<Node> slaves) {
+        this.slaves = slaves;
         return this;
     }
 
 
     /**
-     * add item to slave列表
+     * add item to slave节点列表
      *
      * @param slave
      */
     public void addSlave(Node slave) {
-        if (this.slave == null) {
-            this.slave = new ArrayList<>();
+        if (this.slaves == null) {
+            this.slaves = new ArrayList<>();
         }
-        this.slave.add(slave);
+        this.slaves.add(slave);
     }
 
 }

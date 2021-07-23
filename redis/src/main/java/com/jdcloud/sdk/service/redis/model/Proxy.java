@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * proxy对象
+ * 代理信息
  */
 public class Proxy  implements java.io.Serializable {
 

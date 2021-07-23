@@ -51,7 +51,7 @@ public class CacheInstance  implements java.io.Serializable {
     private String cacheInstanceClass;
 
     /**
-     * 实例的总内存（MB）
+     * 实例的总内存（MB），表示用户购买的可使用内存
      */
     private Integer cacheInstanceMemoryMB;
 
@@ -140,6 +140,11 @@ public class CacheInstance  implements java.io.Serializable {
      */
     private Integer memoryMBPerShard;
 
+    /**
+     * 扩展配置
+     */
+    private RespExtension extension;
+
 
     /**
      * get 实例ID
@@ -196,7 +201,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例的总内存（MB）
+     * get 实例的总内存（MB），表示用户购买的可使用内存
      *
      * @return
      */
@@ -205,7 +210,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例的总内存（MB）
+     * set 实例的总内存（MB），表示用户购买的可使用内存
      *
      * @param cacheInstanceMemoryMB
      */
@@ -519,6 +524,24 @@ public class CacheInstance  implements java.io.Serializable {
         this.memoryMBPerShard = memoryMBPerShard;
     }
 
+    /**
+     * get 扩展配置
+     *
+     * @return
+     */
+    public RespExtension getExtension() {
+        return extension;
+    }
+
+    /**
+     * set 扩展配置
+     *
+     * @param extension
+     */
+    public void setExtension(RespExtension extension) {
+        this.extension = extension;
+    }
+
 
     /**
      * set 实例ID
@@ -551,7 +574,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例的总内存（MB）
+     * set 实例的总内存（MB），表示用户购买的可使用内存
      *
      * @param cacheInstanceMemoryMB
      */
@@ -727,6 +750,16 @@ public class CacheInstance  implements java.io.Serializable {
      */
     public CacheInstance memoryMBPerShard(Integer memoryMBPerShard) {
         this.memoryMBPerShard = memoryMBPerShard;
+        return this;
+    }
+
+    /**
+     * set 扩展配置
+     *
+     * @param extension
+     */
+    public CacheInstance extension(RespExtension extension) {
+        this.extension = extension;
         return this;
     }
 

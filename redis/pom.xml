@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>redis</artifactId>
-  <version>2.2.2</version>
+  <version>2.5.0</version>
   <packaging>jar</packaging>
   <name>redis</name>
   <url>http://www.jdcloud.com</url>

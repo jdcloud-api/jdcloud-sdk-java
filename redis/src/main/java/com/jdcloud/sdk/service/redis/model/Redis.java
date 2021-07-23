@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 分片信息
+ * redis信息（包含shard、master、slave）
  */
-public class Shard  implements java.io.Serializable {
+public class Redis  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -65,7 +65,7 @@ public class Shard  implements java.io.Serializable {
      *
      * @param id
      */
-    public Shard id(String id) {
+    public Redis id(String id) {
         this.id = id;
         return this;
     }
