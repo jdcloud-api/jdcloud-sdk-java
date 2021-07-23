@@ -40,7 +40,7 @@ public class BillSummary  implements java.io.Serializable {
     private String pin;
 
     /**
-     * appCode
+     * 产品线代码
      */
     private String appCode;
 
@@ -50,7 +50,7 @@ public class BillSummary  implements java.io.Serializable {
     private String appCodeName;
 
     /**
-     * serviceCode
+     * 产品代码
      */
     private String serviceCode;
 
@@ -85,7 +85,7 @@ public class BillSummary  implements java.io.Serializable {
     private String region;
 
     /**
-     * 费用类型
+     * 费用类型,仅用于查询帐单明细接口。取值:[新购、续费、配置变更、退订、按量费用]
      */
     private String actionTypeName;
 
@@ -105,7 +105,7 @@ public class BillSummary  implements java.io.Serializable {
     private String endTime;
 
     /**
-     * 账单生成时间
+     * 账单生成时间,仅用于查询帐单明细接口
      */
     private String billTime;
 
@@ -169,7 +169,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * get appCode
+     * get 产品线代码
      *
      * @return
      */
@@ -178,7 +178,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * set appCode
+     * set 产品线代码
      *
      * @param appCode
      */
@@ -205,7 +205,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * get serviceCode
+     * get 产品代码
      *
      * @return
      */
@@ -214,7 +214,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * set serviceCode
+     * set 产品代码
      *
      * @param serviceCode
      */
@@ -331,7 +331,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * get 费用类型
+     * get 费用类型,仅用于查询帐单明细接口。取值:[新购、续费、配置变更、退订、按量费用]
      *
      * @return
      */
@@ -340,7 +340,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * set 费用类型
+     * set 费用类型,仅用于查询帐单明细接口。取值:[新购、续费、配置变更、退订、按量费用]
      *
      * @param actionTypeName
      */
@@ -403,7 +403,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * get 账单生成时间
+     * get 账单生成时间,仅用于查询帐单明细接口
      *
      * @return
      */
@@ -412,7 +412,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * set 账单生成时间
+     * set 账单生成时间,仅用于查询帐单明细接口
      *
      * @param billTime
      */
@@ -576,7 +576,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * set appCode
+     * set 产品线代码
      *
      * @param appCode
      */
@@ -596,7 +596,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * set serviceCode
+     * set 产品代码
      *
      * @param serviceCode
      */
@@ -666,7 +666,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * set 费用类型
+     * set 费用类型,仅用于查询帐单明细接口。取值:[新购、续费、配置变更、退订、按量费用]
      *
      * @param actionTypeName
      */
@@ -706,7 +706,7 @@ public class BillSummary  implements java.io.Serializable {
     }
 
     /**
-     * set 账单生成时间
+     * set 账单生成时间,仅用于查询帐单明细接口
      *
      * @param billTime
      */

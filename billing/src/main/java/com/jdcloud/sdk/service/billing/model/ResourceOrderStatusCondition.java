@@ -36,7 +36,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 站点信息 0:中国 1:国际
+     * 站点信息 0:中国 1:国际 10:专有云
      */
     private Integer site;
 
@@ -53,7 +53,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     private Integer status;
 
     /**
-     * 资源id列表
+     * 资源id列表(最多支持传入500个)
      * Required:true
      */
     @Required
@@ -71,7 +71,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
 
 
     /**
-     * get 站点信息 0:中国 1:国际
+     * get 站点信息 0:中国 1:国际 10:专有云
      *
      * @return
      */
@@ -80,7 +80,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     }
 
     /**
-     * set 站点信息 0:中国 1:国际
+     * set 站点信息 0:中国 1:国际 10:专有云
      *
      * @param site
      */
@@ -125,7 +125,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     }
 
     /**
-     * get 资源id列表
+     * get 资源id列表(最多支持传入500个)
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     }
 
     /**
-     * set 资源id列表
+     * set 资源id列表(最多支持传入500个)
      *
      * @param resourceIdList
      */
@@ -180,7 +180,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
 
 
     /**
-     * set 站点信息 0:中国 1:国际
+     * set 站点信息 0:中国 1:国际 10:专有云
      *
      * @param site
      */
@@ -210,7 +210,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     }
 
     /**
-     * set 资源id列表
+     * set 资源id列表(最多支持传入500个)
      *
      * @param resourceIdList
      */
@@ -241,7 +241,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
 
 
     /**
-     * add item to 资源id列表
+     * add item to 资源id列表(最多支持传入500个)
      *
      * @param resourceIdList
      */

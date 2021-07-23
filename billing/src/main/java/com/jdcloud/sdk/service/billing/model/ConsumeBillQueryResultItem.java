@@ -100,7 +100,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     private String billTime;
 
     /**
-     * 账单金额
+     * 账单金额/原价
      */
     private Number billFee;
 
@@ -405,7 +405,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     }
 
     /**
-     * get 账单金额
+     * get 账单金额/原价
      *
      * @return
      */
@@ -414,7 +414,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     }
 
     /**
-     * set 账单金额
+     * set 账单金额/原价
      *
      * @param billFee
      */
@@ -788,7 +788,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     }
 
     /**
-     * set 账单金额
+     * set 账单金额/原价
      *
      * @param billFee
      */

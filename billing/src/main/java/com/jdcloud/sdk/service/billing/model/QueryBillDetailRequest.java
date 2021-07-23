@@ -37,14 +37,14 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 计费开始时间
+     * 账期开始时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      * Required:true
      */
     @Required
     private String startTime;
 
     /**
-     * 计费结束时间
+     * 账期结束时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      * Required:true
      */
     @Required
@@ -66,22 +66,26 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     private Integer billingType;
 
     /**
-     * 资源单id列表
+     * 资源单id列表,最多支持传入500个
      */
     private List<String> resourceIds;
 
     /**
-     * 标签
+     * 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+示例:
+选择的标签为, 部门:广告部、部门:物流部、项目
+则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
+
      */
     private List<Object> tags;
 
     /**
-     * pageIndex
+     * pageIndex 分页,默认从1开始
      */
     private Integer pageIndex;
 
     /**
-     * pageSize
+     * pageSize 每页查询数据条数,最多支持1000条
      */
     private Integer pageSize;
 
@@ -94,7 +98,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 计费开始时间
+     * get 账期开始时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      *
      * @return
      */
@@ -103,7 +107,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 计费开始时间
+     * set 账期开始时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      *
      * @param startTime
      */
@@ -112,7 +116,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 计费结束时间
+     * get 账期结束时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      *
      * @return
      */
@@ -121,7 +125,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 计费结束时间
+     * set 账期结束时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      *
      * @param endTime
      */
@@ -184,7 +188,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 资源单id列表
+     * get 资源单id列表,最多支持传入500个
      *
      * @return
      */
@@ -193,7 +197,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 资源单id列表
+     * set 资源单id列表,最多支持传入500个
      *
      * @param resourceIds
      */
@@ -202,7 +206,11 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 标签
+     * get 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+示例:
+选择的标签为, 部门:广告部、部门:物流部、项目
+则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
+
      *
      * @return
      */
@@ -211,7 +219,11 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 标签
+     * set 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+示例:
+选择的标签为, 部门:广告部、部门:物流部、项目
+则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
+
      *
      * @param tags
      */
@@ -220,7 +232,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get pageIndex
+     * get pageIndex 分页,默认从1开始
      *
      * @return
      */
@@ -229,7 +241,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set pageIndex
+     * set pageIndex 分页,默认从1开始
      *
      * @param pageIndex
      */
@@ -238,7 +250,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get pageSize
+     * get pageSize 每页查询数据条数,最多支持1000条
      *
      * @return
      */
@@ -247,7 +259,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set pageSize
+     * set pageSize 每页查询数据条数,最多支持1000条
      *
      * @param pageSize
      */
@@ -275,7 +287,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 计费开始时间
+     * set 账期开始时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      *
      * @param startTime
      */
@@ -285,7 +297,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 计费结束时间
+     * set 账期结束时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      *
      * @param endTime
      */
@@ -325,7 +337,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 资源单id列表
+     * set 资源单id列表,最多支持传入500个
      *
      * @param resourceIds
      */
@@ -335,7 +347,11 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 标签
+     * set 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+示例:
+选择的标签为, 部门:广告部、部门:物流部、项目
+则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
+
      *
      * @param tags
      */
@@ -345,7 +361,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set pageIndex
+     * set pageIndex 分页,默认从1开始
      *
      * @param pageIndex
      */
@@ -355,7 +371,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set pageSize
+     * set pageSize 每页查询数据条数,最多支持1000条
      *
      * @param pageSize
      */
@@ -376,7 +392,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * add item to 资源单id列表
+     * add item to 资源单id列表,最多支持传入500个
      *
      * @param resourceId
      */
@@ -388,7 +404,11 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * add item to 标签
+     * add item to 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+示例:
+选择的标签为, 部门:广告部、部门:物流部、项目
+则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
+
      *
      * @param tag
      */

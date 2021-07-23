@@ -35,7 +35,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源id
+     * 资源id(新购时不传，升降配、续费必须传)
      */
     private String resourceId;
 
@@ -45,7 +45,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     private String appCode;
 
     /**
-     * 产品线
+     * 产品线(必传)
      */
     private String serviceCode;
 
@@ -55,22 +55,22 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     private Integer site;
 
     /**
-     * 地域
+     * 地域(新购、升降配必传)
      */
     private String region;
 
     /**
-     * 计费类型 1:按配置 2:按用量 3:包年包月
+     * 计费类型 1:按配置 2:按用量 3:包年包月(必传) 4:按次计费
      */
     private Integer billingType;
 
     /**
-     * 时长
+     * 时长(包年包月新购、续费必传)
      */
     private Integer timeSpan;
 
     /**
-     * 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年
+     * 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
      */
     private Integer timeUnit;
 
@@ -80,7 +80,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     private Integer networkOperator;
 
     /**
-     * 计算公式（配置细项）
+     * 计算公式（配置细项）(新购、升降配必传)
      */
     private List<Formula> formula;
 
@@ -121,7 +121,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
 
 
     /**
-     * get 资源id
+     * get 资源id(新购时不传，升降配、续费必须传)
      *
      * @return
      */
@@ -130,7 +130,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 资源id
+     * set 资源id(新购时不传，升降配、续费必须传)
      *
      * @param resourceId
      */
@@ -157,7 +157,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * get 产品线
+     * get 产品线(必传)
      *
      * @return
      */
@@ -166,7 +166,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 产品线
+     * set 产品线(必传)
      *
      * @param serviceCode
      */
@@ -193,7 +193,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * get 地域
+     * get 地域(新购、升降配必传)
      *
      * @return
      */
@@ -202,7 +202,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 地域
+     * set 地域(新购、升降配必传)
      *
      * @param region
      */
@@ -211,7 +211,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * get 计费类型 1:按配置 2:按用量 3:包年包月
+     * get 计费类型 1:按配置 2:按用量 3:包年包月(必传) 4:按次计费
      *
      * @return
      */
@@ -220,7 +220,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 计费类型 1:按配置 2:按用量 3:包年包月
+     * set 计费类型 1:按配置 2:按用量 3:包年包月(必传) 4:按次计费
      *
      * @param billingType
      */
@@ -229,7 +229,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * get 时长
+     * get 时长(包年包月新购、续费必传)
      *
      * @return
      */
@@ -238,7 +238,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 时长
+     * set 时长(包年包月新购、续费必传)
      *
      * @param timeSpan
      */
@@ -247,7 +247,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * get 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年
+     * get 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
      *
      * @return
      */
@@ -256,7 +256,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年
+     * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
      *
      * @param timeUnit
      */
@@ -283,7 +283,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * get 计算公式（配置细项）
+     * get 计算公式（配置细项）(新购、升降配必传)
      *
      * @return
      */
@@ -292,7 +292,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 计算公式（配置细项）
+     * set 计算公式（配置细项）(新购、升降配必传)
      *
      * @param formula
      */
@@ -428,7 +428,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
 
 
     /**
-     * set 资源id
+     * set 资源id(新购时不传，升降配、续费必须传)
      *
      * @param resourceId
      */
@@ -448,7 +448,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 产品线
+     * set 产品线(必传)
      *
      * @param serviceCode
      */
@@ -468,7 +468,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 地域
+     * set 地域(新购、升降配必传)
      *
      * @param region
      */
@@ -478,7 +478,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 计费类型 1:按配置 2:按用量 3:包年包月
+     * set 计费类型 1:按配置 2:按用量 3:包年包月(必传) 4:按次计费
      *
      * @param billingType
      */
@@ -488,7 +488,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 时长
+     * set 时长(包年包月新购、续费必传)
      *
      * @param timeSpan
      */
@@ -498,7 +498,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年
+     * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
      *
      * @param timeUnit
      */
@@ -518,7 +518,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
     /**
-     * set 计算公式（配置细项）
+     * set 计算公式（配置细项）(新购、升降配必传)
      *
      * @param formula
      */
@@ -599,7 +599,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
 
 
     /**
-     * add item to 计算公式（配置细项）
+     * add item to 计算公式（配置细项）(新购、升降配必传)
      *
      * @param formula
      */
