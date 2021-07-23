@@ -24,49 +24,46 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 分片信息
+ * reqExtension
  */
-public class Shard  implements java.io.Serializable {
+public class ReqExtension  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
-     * Required:true
+     * 外部访问方式，空表示关闭外部访问
      */
-    @Required
-    private String id;
+    private String exposeType;
 
 
     /**
-     * get id
+     * get 外部访问方式，空表示关闭外部访问
      *
      * @return
      */
-    public String getId() {
-        return id;
+    public String getExposeType() {
+        return exposeType;
     }
 
     /**
-     * set id
+     * set 外部访问方式，空表示关闭外部访问
      *
-     * @param id
+     * @param exposeType
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setExposeType(String exposeType) {
+        this.exposeType = exposeType;
     }
 
 
     /**
-     * set id
+     * set 外部访问方式，空表示关闭外部访问
      *
-     * @param id
+     * @param exposeType
      */
-    public Shard id(String id) {
-        this.id = id;
+    public ReqExtension exposeType(String exposeType) {
+        this.exposeType = exposeType;
         return this;
     }
 

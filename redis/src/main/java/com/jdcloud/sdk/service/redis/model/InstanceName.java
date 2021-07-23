@@ -48,6 +48,11 @@ public class InstanceName  implements java.io.Serializable {
     private String resourceName;
 
     /**
+     * 资源状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+     */
+    private String resourceStatus;
+
+    /**
      * service code（redis）
      * Required:true
      */
@@ -92,6 +97,24 @@ public class InstanceName  implements java.io.Serializable {
     }
 
     /**
+     * get 资源状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+     *
+     * @return
+     */
+    public String getResourceStatus() {
+        return resourceStatus;
+    }
+
+    /**
+     * set 资源状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+     *
+     * @param resourceStatus
+     */
+    public void setResourceStatus(String resourceStatus) {
+        this.resourceStatus = resourceStatus;
+    }
+
+    /**
      * get service code（redis）
      *
      * @return
@@ -127,6 +150,16 @@ public class InstanceName  implements java.io.Serializable {
      */
     public InstanceName resourceName(String resourceName) {
         this.resourceName = resourceName;
+        return this;
+    }
+
+    /**
+     * set 资源状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+     *
+     * @param resourceStatus
+     */
+    public InstanceName resourceStatus(String resourceStatus) {
+        this.resourceStatus = resourceStatus;
         return this;
     }
 

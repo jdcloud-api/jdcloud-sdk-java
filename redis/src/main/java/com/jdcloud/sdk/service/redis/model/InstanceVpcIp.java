@@ -28,43 +28,43 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * instanceVpcIp对象
+ * 集群信息
  */
 public class InstanceVpcIp  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * proxy列表
+     * 代理列表
      */
-    private List<Node> proxy;
+    private List<Node> proxies;
 
     /**
-     * 分片信息
+     * 分片列表
      */
     private List<RedisShard> shards;
 
 
     /**
-     * get proxy列表
+     * get 代理列表
      *
      * @return
      */
-    public List<Node> getProxy() {
-        return proxy;
+    public List<Node> getProxies() {
+        return proxies;
     }
 
     /**
-     * set proxy列表
+     * set 代理列表
      *
-     * @param proxy
+     * @param proxies
      */
-    public void setProxy(List<Node> proxy) {
-        this.proxy = proxy;
+    public void setProxies(List<Node> proxies) {
+        this.proxies = proxies;
     }
 
     /**
-     * get 分片信息
+     * get 分片列表
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class InstanceVpcIp  implements java.io.Serializable {
     }
 
     /**
-     * set 分片信息
+     * set 分片列表
      *
      * @param shards
      */
@@ -83,17 +83,17 @@ public class InstanceVpcIp  implements java.io.Serializable {
 
 
     /**
-     * set proxy列表
+     * set 代理列表
      *
-     * @param proxy
+     * @param proxies
      */
-    public InstanceVpcIp proxy(List<Node> proxy) {
-        this.proxy = proxy;
+    public InstanceVpcIp proxies(List<Node> proxies) {
+        this.proxies = proxies;
         return this;
     }
 
     /**
-     * set 分片信息
+     * set 分片列表
      *
      * @param shards
      */
@@ -104,19 +104,19 @@ public class InstanceVpcIp  implements java.io.Serializable {
 
 
     /**
-     * add item to proxy列表
+     * add item to 代理列表
      *
-     * @param proxy
+     * @param proxie
      */
-    public void addProxy(Node proxy) {
-        if (this.proxy == null) {
-            this.proxy = new ArrayList<>();
+    public void addProxie(Node proxie) {
+        if (this.proxies == null) {
+            this.proxies = new ArrayList<>();
         }
-        this.proxy.add(proxy);
+        this.proxies.add(proxie);
     }
 
     /**
-     * add item to 分片信息
+     * add item to 分片列表
      *
      * @param shard
      */

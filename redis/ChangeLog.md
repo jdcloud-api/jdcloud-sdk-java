@@ -1,9 +1,13 @@
 # 更新历史
 
-API版本：2.2.2
+API版本：2.5.0
 
 | 发布时间   | 版本号 | 更新     | 说明                                                         |
 | ---------- | ------ | -------- | ------------------------------------------------------------ |
+| 2020-03-25 | 2.5.0  | 接口更新 |   更新接口describeClusterInfo； 新增接口describeAvailableRegion、describeAvailableResource  |
+| 2021-03-02 | 2.4.0 | 新增接口 | 更新接口createCacheInstance、describeCacheInstance、describeCacheInstances，新增接口setExposeType，支持设置外部访问方式，新增接口describeExposeType，查询支持的外部访问方式列表 |
+| 2021-1-25 | 2.3.0  | 新增接口 |  新增describeTaskProgressList接口，查询实例的任务进度列表   |
+| 2020-12-14 | 2.2.3  | 接口更新 |   createCacheInstance 增加标签   |
 | 2020-09-23 | 2.2.2  | 增加接口 |   内部接口调整   |
 | 2020-08-17 | 2.2.1  | 接口更新 | 内部接口调整     |
 | 2020-07-29 | 2.2.0  | 增加接口 | 新增接口describeClientList、describeClientIpDetail，内部接口调整     |

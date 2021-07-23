@@ -26,110 +26,110 @@ package com.jdcloud.sdk.service.redis.model;
 
 
 /**
- * 节点信息
+ * 可用区信息
  */
-public class Node  implements java.io.Serializable {
+public class AzInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
+     * 逻辑可用区id
      */
-    private String id;
+    private String azId;
 
     /**
-     * ip
+     * 逻辑可用区名
      */
-    private String ip;
+    private String azName;
 
     /**
-     * port
+     * 是否售罄
      */
-    private Integer port;
+    private Boolean soldOut;
 
 
     /**
-     * get id
+     * get 逻辑可用区id
      *
      * @return
      */
-    public String getId() {
-        return id;
+    public String getAzId() {
+        return azId;
     }
 
     /**
-     * set id
+     * set 逻辑可用区id
      *
-     * @param id
+     * @param azId
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setAzId(String azId) {
+        this.azId = azId;
     }
 
     /**
-     * get ip
-     *
-     * @return
-     */
-    public String getIp() {
-        return ip;
-    }
-
-    /**
-     * set ip
-     *
-     * @param ip
-     */
-    public void setIp(String ip) {
-        this.ip = ip;
-    }
-
-    /**
-     * get port
+     * get 逻辑可用区名
      *
      * @return
      */
-    public Integer getPort() {
-        return port;
+    public String getAzName() {
+        return azName;
     }
 
     /**
-     * set port
+     * set 逻辑可用区名
      *
-     * @param port
+     * @param azName
      */
-    public void setPort(Integer port) {
-        this.port = port;
+    public void setAzName(String azName) {
+        this.azName = azName;
+    }
+
+    /**
+     * get 是否售罄
+     *
+     * @return
+     */
+    public Boolean getSoldOut() {
+        return soldOut;
+    }
+
+    /**
+     * set 是否售罄
+     *
+     * @param soldOut
+     */
+    public void setSoldOut(Boolean soldOut) {
+        this.soldOut = soldOut;
     }
 
 
     /**
-     * set id
+     * set 逻辑可用区id
      *
-     * @param id
+     * @param azId
      */
-    public Node id(String id) {
-        this.id = id;
+    public AzInfo azId(String azId) {
+        this.azId = azId;
         return this;
     }
 
     /**
-     * set ip
+     * set 逻辑可用区名
      *
-     * @param ip
+     * @param azName
      */
-    public Node ip(String ip) {
-        this.ip = ip;
+    public AzInfo azName(String azName) {
+        this.azName = azName;
         return this;
     }
 
     /**
-     * set port
+     * set 是否售罄
      *
-     * @param port
+     * @param soldOut
      */
-    public Node port(Integer port) {
-        this.port = port;
+    public AzInfo soldOut(Boolean soldOut) {
+        this.soldOut = soldOut;
         return this;
     }
 

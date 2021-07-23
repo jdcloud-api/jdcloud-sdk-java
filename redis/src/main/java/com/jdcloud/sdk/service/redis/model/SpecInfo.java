@@ -57,7 +57,7 @@ public class SpecInfo  implements java.io.Serializable {
     /**
      * 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
      */
-    private Integer maxConntion;
+    private Integer maxConnection;
 
     /**
      * 带宽（Mbps)，0表示自定义分片集群版规格，带宽由分片数变化
@@ -157,17 +157,17 @@ public class SpecInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getMaxConntion() {
-        return maxConntion;
+    public Integer getMaxConnection() {
+        return maxConnection;
     }
 
     /**
      * set 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
      *
-     * @param maxConntion
+     * @param maxConnection
      */
-    public void setMaxConntion(Integer maxConntion) {
-        this.maxConntion = maxConntion;
+    public void setMaxConnection(Integer maxConnection) {
+        this.maxConnection = maxConnection;
     }
 
     /**
@@ -286,10 +286,10 @@ public class SpecInfo  implements java.io.Serializable {
     /**
      * set 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
      *
-     * @param maxConntion
+     * @param maxConnection
      */
-    public SpecInfo maxConntion(Integer maxConntion) {
-        this.maxConntion = maxConntion;
+    public SpecInfo maxConnection(Integer maxConnection) {
+        this.maxConnection = maxConnection;
         return this;
     }
 

@@ -28,11 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询缓存分析任务详情，最多查询到30天前的数据
+ * 查询正在执行的任务进度列表
  */
-public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeTaskProgressListRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 任务类型：resize表示变配，目前只有变配可以查询进度
+     */
+    private String taskType;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -48,13 +53,24 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
     @Required
     private String cacheInstanceId;
 
-    /**
-     * 任务ID，即request ID
-     * Required:true
-     */
-    @Required
-    private String taskId;
 
+    /**
+     * get 任务类型：resize表示变配，目前只有变配可以查询进度
+     *
+     * @return
+     */
+    public String getTaskType() {
+        return taskType;
+    }
+
+    /**
+     * set 任务类型：resize表示变配，目前只有变配可以查询进度
+     *
+     * @param taskType
+     */
+    public void setTaskType(String taskType) {
+        this.taskType = taskType;
+    }
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -92,31 +108,23 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
         this.cacheInstanceId = cacheInstanceId;
     }
 
-    /**
-     * get 任务ID，即request ID
-     *
-     * @return
-     */
-    public String getTaskId() {
-        return taskId;
-    }
 
     /**
-     * set 任务ID，即request ID
+     * set 任务类型：resize表示变配，目前只有变配可以查询进度
      *
-     * @param taskId
+     * @param taskType
      */
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
+    public DescribeTaskProgressListRequest taskType(String taskType) {
+        this.taskType = taskType;
+        return this;
     }
-
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
-    public DescribeCacheAnalysisResultRequest regionId(String regionId) {
+    public DescribeTaskProgressListRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -126,18 +134,8 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
      *
      * @param cacheInstanceId
      */
-    public DescribeCacheAnalysisResultRequest cacheInstanceId(String cacheInstanceId) {
+    public DescribeTaskProgressListRequest cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
-        return this;
-    }
-
-    /**
-     * set 任务ID，即request ID
-     *
-     * @param taskId
-     */
-    public DescribeCacheAnalysisResultRequest taskId(String taskId) {
-        this.taskId = taskId;
         return this;
     }
 

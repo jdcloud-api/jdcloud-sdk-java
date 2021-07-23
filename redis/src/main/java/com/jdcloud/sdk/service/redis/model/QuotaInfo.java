@@ -24,49 +24,79 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 分片信息
+ * 配额信息
  */
-public class Shard  implements java.io.Serializable {
+public class QuotaInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * id
-     * Required:true
+     * 配额上限
      */
-    @Required
-    private String id;
+    private Integer max;
+
+    /**
+     * 已使用
+     */
+    private Integer used;
 
 
     /**
-     * get id
+     * get 配额上限
      *
      * @return
      */
-    public String getId() {
-        return id;
+    public Integer getMax() {
+        return max;
     }
 
     /**
-     * set id
+     * set 配额上限
      *
-     * @param id
+     * @param max
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setMax(Integer max) {
+        this.max = max;
+    }
+
+    /**
+     * get 已使用
+     *
+     * @return
+     */
+    public Integer getUsed() {
+        return used;
+    }
+
+    /**
+     * set 已使用
+     *
+     * @param used
+     */
+    public void setUsed(Integer used) {
+        this.used = used;
     }
 
 
     /**
-     * set id
+     * set 配额上限
      *
-     * @param id
+     * @param max
      */
-    public Shard id(String id) {
-        this.id = id;
+    public QuotaInfo max(Integer max) {
+        this.max = max;
+        return this;
+    }
+
+    /**
+     * set 已使用
+     *
+     * @param used
+     */
+    public QuotaInfo used(Integer used) {
+        this.used = used;
         return this;
     }
 

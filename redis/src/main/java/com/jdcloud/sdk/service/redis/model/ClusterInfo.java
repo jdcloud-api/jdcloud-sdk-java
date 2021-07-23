@@ -35,18 +35,23 @@ public class ClusterInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * proxy列表
+     * 代理列表
      */
     private List<Proxy> proxies;
 
     /**
-     * shard列表
+     * 分片列表
      */
     private List<Shard> shards;
 
+    /**
+     * redis列表
+     */
+    private List<Redis> redis;
+
 
     /**
-     * get proxy列表
+     * get 代理列表
      *
      * @return
      */
@@ -55,7 +60,7 @@ public class ClusterInfo  implements java.io.Serializable {
     }
 
     /**
-     * set proxy列表
+     * set 代理列表
      *
      * @param proxies
      */
@@ -64,7 +69,7 @@ public class ClusterInfo  implements java.io.Serializable {
     }
 
     /**
-     * get shard列表
+     * get 分片列表
      *
      * @return
      */
@@ -73,7 +78,7 @@ public class ClusterInfo  implements java.io.Serializable {
     }
 
     /**
-     * set shard列表
+     * set 分片列表
      *
      * @param shards
      */
@@ -81,9 +86,27 @@ public class ClusterInfo  implements java.io.Serializable {
         this.shards = shards;
     }
 
+    /**
+     * get redis列表
+     *
+     * @return
+     */
+    public List<Redis> getRedis() {
+        return redis;
+    }
 
     /**
-     * set proxy列表
+     * set redis列表
+     *
+     * @param redis
+     */
+    public void setRedis(List<Redis> redis) {
+        this.redis = redis;
+    }
+
+
+    /**
+     * set 代理列表
      *
      * @param proxies
      */
@@ -93,7 +116,7 @@ public class ClusterInfo  implements java.io.Serializable {
     }
 
     /**
-     * set shard列表
+     * set 分片列表
      *
      * @param shards
      */
@@ -102,9 +125,19 @@ public class ClusterInfo  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set redis列表
+     *
+     * @param redis
+     */
+    public ClusterInfo redis(List<Redis> redis) {
+        this.redis = redis;
+        return this;
+    }
+
 
     /**
-     * add item to proxy列表
+     * add item to 代理列表
      *
      * @param proxie
      */
@@ -116,7 +149,7 @@ public class ClusterInfo  implements java.io.Serializable {
     }
 
     /**
-     * add item to shard列表
+     * add item to 分片列表
      *
      * @param shard
      */
@@ -125,6 +158,18 @@ public class ClusterInfo  implements java.io.Serializable {
             this.shards = new ArrayList<>();
         }
         this.shards.add(shard);
+    }
+
+    /**
+     * add item to redis列表
+     *
+     * @param redi
+     */
+    public void addRedi(Redis redi) {
+        if (this.redis == null) {
+            this.redis = new ArrayList<>();
+        }
+        this.redis.add(redi);
     }
 
 }
