@@ -80,6 +80,16 @@ public class ConsumptionProduct  implements java.io.Serializable {
     private Number arrearFee;
 
     /**
+     * 原价
+     */
+    private Number billFee2;
+
+    /**
+     * 优惠金额
+     */
+    private Number discountFee;
+
+    /**
      * productDetails
      */
     private List<Consumption> productDetails;
@@ -258,6 +268,42 @@ public class ConsumptionProduct  implements java.io.Serializable {
     }
 
     /**
+     * get 原价
+     *
+     * @return
+     */
+    public Number getBillFee2() {
+        return billFee2;
+    }
+
+    /**
+     * set 原价
+     *
+     * @param billFee2
+     */
+    public void setBillFee2(Number billFee2) {
+        this.billFee2 = billFee2;
+    }
+
+    /**
+     * get 优惠金额
+     *
+     * @return
+     */
+    public Number getDiscountFee() {
+        return discountFee;
+    }
+
+    /**
+     * set 优惠金额
+     *
+     * @param discountFee
+     */
+    public void setDiscountFee(Number discountFee) {
+        this.discountFee = discountFee;
+    }
+
+    /**
      * get productDetails
      *
      * @return
@@ -399,6 +445,26 @@ public class ConsumptionProduct  implements java.io.Serializable {
      */
     public ConsumptionProduct arrearFee(Number arrearFee) {
         this.arrearFee = arrearFee;
+        return this;
+    }
+
+    /**
+     * set 原价
+     *
+     * @param billFee2
+     */
+    public ConsumptionProduct billFee2(Number billFee2) {
+        this.billFee2 = billFee2;
+        return this;
+    }
+
+    /**
+     * set 优惠金额
+     *
+     * @param discountFee
+     */
+    public ConsumptionProduct discountFee(Number discountFee) {
+        this.discountFee = discountFee;
         return this;
     }
 

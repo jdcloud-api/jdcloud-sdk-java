@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * resourceOrderQueryCondition
+ * pin、resourceId、resourceIdList 必传一个
  */
 public class ResourceOrderQueryCondition  implements java.io.Serializable {
 
@@ -40,12 +40,12 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     private Integer id;
 
     /**
-     * 用户pin
+     * 用户pin(pin、resourceId、resourceIdList 必传一个)
      */
     private String pin;
 
     /**
-     * 资源id
+     * 资源id(pin、resourceId、resourceIdList 必传一个)
      */
     private String resourceId;
 
@@ -75,7 +75,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     private Integer billingType;
 
     /**
-     * resourceIdList
+     * resourceIdList(pin、resourceId、resourceIdList 必传一个)
      */
     private List<String> resourceIdList;
 
@@ -219,7 +219,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * get 用户pin
+     * get 用户pin(pin、resourceId、resourceIdList 必传一个)
      *
      * @return
      */
@@ -228,7 +228,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * set 用户pin
+     * set 用户pin(pin、resourceId、resourceIdList 必传一个)
      *
      * @param pin
      */
@@ -237,7 +237,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * get 资源id
+     * get 资源id(pin、resourceId、resourceIdList 必传一个)
      *
      * @return
      */
@@ -246,7 +246,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * set 资源id
+     * set 资源id(pin、resourceId、resourceIdList 必传一个)
      *
      * @param resourceId
      */
@@ -345,7 +345,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * get resourceIdList
+     * get resourceIdList(pin、resourceId、resourceIdList 必传一个)
      *
      * @return
      */
@@ -354,7 +354,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * set resourceIdList
+     * set resourceIdList(pin、resourceId、resourceIdList 必传一个)
      *
      * @param resourceIdList
      */
@@ -806,7 +806,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * set 用户pin
+     * set 用户pin(pin、resourceId、resourceIdList 必传一个)
      *
      * @param pin
      */
@@ -816,7 +816,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * set 资源id
+     * set 资源id(pin、resourceId、resourceIdList 必传一个)
      *
      * @param resourceId
      */
@@ -876,7 +876,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * set resourceIdList
+     * set resourceIdList(pin、resourceId、resourceIdList 必传一个)
      *
      * @param resourceIdList
      */
@@ -1139,7 +1139,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
     /**
-     * add item to resourceIdList
+     * add item to resourceIdList(pin、resourceId、resourceIdList 必传一个)
      *
      * @param resourceIdList
      */

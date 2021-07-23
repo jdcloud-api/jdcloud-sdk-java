@@ -33,22 +33,22 @@ public class Pagination  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 当前页
+     * 当前页(默认:1)
      */
     private Integer currPageNo;
 
     /**
-     * 页数
+     * 总页数
      */
     private Integer numberPages;
 
     /**
-     * 每页记录数
+     * 总记录数
      */
     private Integer numberRecords;
 
     /**
-     * 页面大小
+     * 每页记录数(默认每页:10)
      */
     private Integer pageSize;
 
@@ -59,7 +59,7 @@ public class Pagination  implements java.io.Serializable {
 
 
     /**
-     * get 当前页
+     * get 当前页(默认:1)
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * set 当前页
+     * set 当前页(默认:1)
      *
      * @param currPageNo
      */
@@ -77,7 +77,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * get 页数
+     * get 总页数
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * set 页数
+     * set 总页数
      *
      * @param numberPages
      */
@@ -95,7 +95,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * get 每页记录数
+     * get 总记录数
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * set 每页记录数
+     * set 总记录数
      *
      * @param numberRecords
      */
@@ -113,7 +113,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * get 页面大小
+     * get 每页记录数(默认每页:10)
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * set 页面大小
+     * set 每页记录数(默认每页:10)
      *
      * @param pageSize
      */
@@ -150,7 +150,7 @@ public class Pagination  implements java.io.Serializable {
 
 
     /**
-     * set 当前页
+     * set 当前页(默认:1)
      *
      * @param currPageNo
      */
@@ -160,7 +160,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * set 页数
+     * set 总页数
      *
      * @param numberPages
      */
@@ -170,7 +170,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * set 每页记录数
+     * set 总记录数
      *
      * @param numberRecords
      */
@@ -180,7 +180,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
     /**
-     * set 页面大小
+     * set 每页记录数(默认每页:10)
      *
      * @param pageSize
      */

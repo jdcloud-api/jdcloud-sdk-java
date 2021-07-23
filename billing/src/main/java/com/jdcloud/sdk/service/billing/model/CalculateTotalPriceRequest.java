@@ -50,7 +50,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     private List<OrderPriceProtocol> orderList;
 
     /**
-     * 操作时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
      */
     private String operateTime;
 
@@ -75,6 +75,21 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
      * 临时升配时必传，3-临时升配
      */
     private Integer processType;
+
+    /**
+     * 续费方式 0：正常续费  1：续费至统一到期日，续费时必传
+     */
+    private Integer renewMode;
+
+    /**
+     * 续费统一到期日(1-28)，续费时必传
+     */
+    private Integer unifyExpireDay;
+
+    /**
+     * 计算总价规则 1：计算预付费资源总价（计费类型为包年包月、按次） ；不传计算所有资源总价
+     */
+    private Integer totalPriceRule;
 
     /**
      * regionId
@@ -121,7 +136,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * get 操作时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * get 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
      *
      * @return
      */
@@ -130,7 +145,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 操作时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
      *
      * @param operateTime
      */
@@ -211,6 +226,60 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     }
 
     /**
+     * get 续费方式 0：正常续费  1：续费至统一到期日，续费时必传
+     *
+     * @return
+     */
+    public Integer getRenewMode() {
+        return renewMode;
+    }
+
+    /**
+     * set 续费方式 0：正常续费  1：续费至统一到期日，续费时必传
+     *
+     * @param renewMode
+     */
+    public void setRenewMode(Integer renewMode) {
+        this.renewMode = renewMode;
+    }
+
+    /**
+     * get 续费统一到期日(1-28)，续费时必传
+     *
+     * @return
+     */
+    public Integer getUnifyExpireDay() {
+        return unifyExpireDay;
+    }
+
+    /**
+     * set 续费统一到期日(1-28)，续费时必传
+     *
+     * @param unifyExpireDay
+     */
+    public void setUnifyExpireDay(Integer unifyExpireDay) {
+        this.unifyExpireDay = unifyExpireDay;
+    }
+
+    /**
+     * get 计算总价规则 1：计算预付费资源总价（计费类型为包年包月、按次） ；不传计算所有资源总价
+     *
+     * @return
+     */
+    public Integer getTotalPriceRule() {
+        return totalPriceRule;
+    }
+
+    /**
+     * set 计算总价规则 1：计算预付费资源总价（计费类型为包年包月、按次） ；不传计算所有资源总价
+     *
+     * @param totalPriceRule
+     */
+    public void setTotalPriceRule(Integer totalPriceRule) {
+        this.totalPriceRule = totalPriceRule;
+    }
+
+    /**
      * get regionId
      *
      * @return
@@ -250,7 +319,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 操作时间，遵循ISO8601标准，使用UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ
+     * set 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
      *
      * @param operateTime
      */
@@ -296,6 +365,36 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
      */
     public CalculateTotalPriceRequest processType(Integer processType) {
         this.processType = processType;
+        return this;
+    }
+
+    /**
+     * set 续费方式 0：正常续费  1：续费至统一到期日，续费时必传
+     *
+     * @param renewMode
+     */
+    public CalculateTotalPriceRequest renewMode(Integer renewMode) {
+        this.renewMode = renewMode;
+        return this;
+    }
+
+    /**
+     * set 续费统一到期日(1-28)，续费时必传
+     *
+     * @param unifyExpireDay
+     */
+    public CalculateTotalPriceRequest unifyExpireDay(Integer unifyExpireDay) {
+        this.unifyExpireDay = unifyExpireDay;
+        return this;
+    }
+
+    /**
+     * set 计算总价规则 1：计算预付费资源总价（计费类型为包年包月、按次） ；不传计算所有资源总价
+     *
+     * @param totalPriceRule
+     */
+    public CalculateTotalPriceRequest totalPriceRule(Integer totalPriceRule) {
+        this.totalPriceRule = totalPriceRule;
         return this;
     }
 
