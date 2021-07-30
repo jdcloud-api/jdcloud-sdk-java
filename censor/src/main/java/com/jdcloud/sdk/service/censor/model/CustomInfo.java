@@ -68,6 +68,11 @@ public class CustomInfo  implements java.io.Serializable {
     private String suggestion;
 
     /**
+     * 机审策略，可以不填，为空时前端显示空即可
+     */
+    private String bizType;
+
+    /**
      * 状态 1启用，0禁用
      */
     private Integer status;
@@ -210,6 +215,24 @@ public class CustomInfo  implements java.io.Serializable {
     }
 
     /**
+     * get 机审策略，可以不填，为空时前端显示空即可
+     *
+     * @return
+     */
+    public String getBizType() {
+        return bizType;
+    }
+
+    /**
+     * set 机审策略，可以不填，为空时前端显示空即可
+     *
+     * @param bizType
+     */
+    public void setBizType(String bizType) {
+        this.bizType = bizType;
+    }
+
+    /**
      * get 状态 1启用，0禁用
      *
      * @return
@@ -331,6 +354,16 @@ public class CustomInfo  implements java.io.Serializable {
      */
     public CustomInfo suggestion(String suggestion) {
         this.suggestion = suggestion;
+        return this;
+    }
+
+    /**
+     * set 机审策略，可以不填，为空时前端显示空即可
+     *
+     * @param bizType
+     */
+    public CustomInfo bizType(String bizType) {
+        this.bizType = bizType;
         return this;
     }
 

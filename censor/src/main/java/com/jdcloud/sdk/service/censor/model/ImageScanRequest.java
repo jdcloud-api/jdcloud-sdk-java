@@ -36,6 +36,11 @@ public class ImageScanRequest extends JdcloudRequest implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
+     * 机审策略，eg: default
+     */
+    private String bizType;
+
+    /**
      * 指定检测场景
      */
     private List<String> scenes;
@@ -45,6 +50,24 @@ public class ImageScanRequest extends JdcloudRequest implements java.io.Serializ
      */
     private List<ImageTask> tasks;
 
+
+    /**
+     * get 机审策略，eg: default
+     *
+     * @return
+     */
+    public String getBizType() {
+        return bizType;
+    }
+
+    /**
+     * set 机审策略，eg: default
+     *
+     * @param bizType
+     */
+    public void setBizType(String bizType) {
+        this.bizType = bizType;
+    }
 
     /**
      * get 指定检测场景
@@ -82,6 +105,16 @@ public class ImageScanRequest extends JdcloudRequest implements java.io.Serializ
         this.tasks = tasks;
     }
 
+
+    /**
+     * set 机审策略，eg: default
+     *
+     * @param bizType
+     */
+    public ImageScanRequest bizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
 
     /**
      * set 指定检测场景

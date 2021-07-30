@@ -91,6 +91,11 @@ public class CustomReq  implements java.io.Serializable {
      */
     private String source;
 
+    /**
+     * 机审策略，可以不填，为空时前端显示空即可
+     */
+    private String bizType;
+
 
     /**
      * get 检测类型，api/oss/website,默认api
@@ -272,6 +277,24 @@ public class CustomReq  implements java.io.Serializable {
         this.source = source;
     }
 
+    /**
+     * get 机审策略，可以不填，为空时前端显示空即可
+     *
+     * @return
+     */
+    public String getBizType() {
+        return bizType;
+    }
+
+    /**
+     * set 机审策略，可以不填，为空时前端显示空即可
+     *
+     * @param bizType
+     */
+    public void setBizType(String bizType) {
+        this.bizType = bizType;
+    }
+
 
     /**
      * set 检测类型，api/oss/website,默认api
@@ -370,6 +393,16 @@ public class CustomReq  implements java.io.Serializable {
      */
     public CustomReq source(String source) {
         this.source = source;
+        return this;
+    }
+
+    /**
+     * set 机审策略，可以不填，为空时前端显示空即可
+     *
+     * @param bizType
+     */
+    public CustomReq bizType(String bizType) {
+        this.bizType = bizType;
         return this;
     }
 
