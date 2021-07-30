@@ -36,6 +36,11 @@ public class AsyncImageScanRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
+     * 机审策略，eg: default
+     */
+    private String bizType;
+
+    /**
      * 指定检测场景
      */
     private List<String> scenes;
@@ -55,6 +60,24 @@ public class AsyncImageScanRequest extends JdcloudRequest implements java.io.Ser
      */
     private String seed;
 
+
+    /**
+     * get 机审策略，eg: default
+     *
+     * @return
+     */
+    public String getBizType() {
+        return bizType;
+    }
+
+    /**
+     * set 机审策略，eg: default
+     *
+     * @param bizType
+     */
+    public void setBizType(String bizType) {
+        this.bizType = bizType;
+    }
 
     /**
      * get 指定检测场景
@@ -128,6 +151,16 @@ public class AsyncImageScanRequest extends JdcloudRequest implements java.io.Ser
         this.seed = seed;
     }
 
+
+    /**
+     * set 机审策略，eg: default
+     *
+     * @param bizType
+     */
+    public AsyncImageScanRequest bizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
 
     /**
      * set 指定检测场景

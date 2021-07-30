@@ -36,6 +36,11 @@ public class AsyncVideoScanRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
+     * 机审策略，eg: default
+     */
+    private String bizType;
+
+    /**
      * 是否直播。默认为false，表示为普通视频检测；若是直播检测，该值必须传入true。
      */
     private Boolean live;
@@ -65,6 +70,24 @@ public class AsyncVideoScanRequest extends JdcloudRequest implements java.io.Ser
      */
     private String seed;
 
+
+    /**
+     * get 机审策略，eg: default
+     *
+     * @return
+     */
+    public String getBizType() {
+        return bizType;
+    }
+
+    /**
+     * set 机审策略，eg: default
+     *
+     * @param bizType
+     */
+    public void setBizType(String bizType) {
+        this.bizType = bizType;
+    }
 
     /**
      * get 是否直播。默认为false，表示为普通视频检测；若是直播检测，该值必须传入true。
@@ -174,6 +197,16 @@ public class AsyncVideoScanRequest extends JdcloudRequest implements java.io.Ser
         this.seed = seed;
     }
 
+
+    /**
+     * set 机审策略，eg: default
+     *
+     * @param bizType
+     */
+    public AsyncVideoScanRequest bizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
 
     /**
      * set 是否直播。默认为false，表示为普通视频检测；若是直播检测，该值必须传入true。
