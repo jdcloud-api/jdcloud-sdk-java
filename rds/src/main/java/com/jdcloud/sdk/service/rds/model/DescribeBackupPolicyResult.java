@@ -54,6 +54,11 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     private Integer binlogUsageLimit;
 
     /**
+     * 空间保护是否开启，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     */
+    private String binlogSpaceProtection;
+
+    /**
      * 自动备份循环模式&lt;br&gt;1:表示每天都是全量备份&lt;br&gt;2:表示自动备份按照全量、增量、增量这样的方式进行，例如第1天是全量备份，第2、3天是增量备份；第4天又是全量备份，以此类推.&lt;br&gt; - 仅支持 SQL Server
      */
     private Integer cycleMode;
@@ -139,6 +144,24 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
      */
     public void setBinlogUsageLimit(Integer binlogUsageLimit) {
         this.binlogUsageLimit = binlogUsageLimit;
+    }
+
+    /**
+     * get 空间保护是否开启，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getBinlogSpaceProtection() {
+        return binlogSpaceProtection;
+    }
+
+    /**
+     * set 空间保护是否开启，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     *
+     * @param binlogSpaceProtection
+     */
+    public void setBinlogSpaceProtection(String binlogSpaceProtection) {
+        this.binlogSpaceProtection = binlogSpaceProtection;
     }
 
     /**
@@ -233,6 +256,16 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
      */
     public DescribeBackupPolicyResult binlogUsageLimit(Integer binlogUsageLimit) {
         this.binlogUsageLimit = binlogUsageLimit;
+        return this;
+    }
+
+    /**
+     * set 空间保护是否开启，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     *
+     * @param binlogSpaceProtection
+     */
+    public DescribeBackupPolicyResult binlogSpaceProtection(String binlogSpaceProtection) {
+        this.binlogSpaceProtection = binlogSpaceProtection;
         return this;
     }
 

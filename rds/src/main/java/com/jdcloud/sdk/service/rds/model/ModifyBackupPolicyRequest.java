@@ -50,6 +50,11 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     private Integer binlogUsageLimit;
 
     /**
+     * 设置空间保护，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     */
+    private String binlogSpaceProtection;
+
+    /**
      * 自动备份保留周期，单位天，范围7-730&lt;br&gt;当enhancedBackup为true时可修改&lt;br&gt;- 仅支持SQL Server
      */
     private Integer retentionPeriod;
@@ -126,6 +131,24 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
      */
     public void setBinlogUsageLimit(Integer binlogUsageLimit) {
         this.binlogUsageLimit = binlogUsageLimit;
+    }
+
+    /**
+     * get 设置空间保护，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getBinlogSpaceProtection() {
+        return binlogSpaceProtection;
+    }
+
+    /**
+     * set 设置空间保护，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     *
+     * @param binlogSpaceProtection
+     */
+    public void setBinlogSpaceProtection(String binlogSpaceProtection) {
+        this.binlogSpaceProtection = binlogSpaceProtection;
     }
 
     /**
@@ -228,6 +251,16 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
      */
     public ModifyBackupPolicyRequest binlogUsageLimit(Integer binlogUsageLimit) {
         this.binlogUsageLimit = binlogUsageLimit;
+        return this;
+    }
+
+    /**
+     * set 设置空间保护，开启：on，关闭：off &lt;br&gt;- 仅支持MySQL
+     *
+     * @param binlogSpaceProtection
+     */
+    public ModifyBackupPolicyRequest binlogSpaceProtection(String binlogSpaceProtection) {
+        this.binlogSpaceProtection = binlogSpaceProtection;
         return this;
     }
 

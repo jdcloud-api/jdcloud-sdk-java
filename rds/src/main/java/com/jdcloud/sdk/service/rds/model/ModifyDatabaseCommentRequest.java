@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 账号管理
- * API related to Relational Database Service
+ * 数据库管理
+ * 数据库管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,27 +24,22 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改数据库临时运维账号属性。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+ * 修改数据库备注，仅支持MySQL
  */
-public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.io.Serializable {
+public class ModifyDatabaseCommentRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 运维账号到期时间，UTC时间格式
+     * 数据库的备注信息，支持中午，ASCII字符，最大长度64
+     * Required:true
      */
-    private String expiredTime;
-
-    /**
-     * globalPrivileges
-     */
-    private List<String> globalPrivileges;
+    @Required
+    private String comment;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -60,41 +55,30 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
     @Required
     private String instanceId;
 
+    /**
+     * 库名称
+     * Required:true
+     */
+    @Required
+    private String dbName;
+
 
     /**
-     * get 运维账号到期时间，UTC时间格式
+     * get 数据库的备注信息，支持中午，ASCII字符，最大长度64
      *
      * @return
      */
-    public String getExpiredTime() {
-        return expiredTime;
+    public String getComment() {
+        return comment;
     }
 
     /**
-     * set 运维账号到期时间，UTC时间格式
+     * set 数据库的备注信息，支持中午，ASCII字符，最大长度64
      *
-     * @param expiredTime
+     * @param comment
      */
-    public void setExpiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
-    }
-
-    /**
-     * get globalPrivileges
-     *
-     * @return
-     */
-    public List<String> getGlobalPrivileges() {
-        return globalPrivileges;
-    }
-
-    /**
-     * set globalPrivileges
-     *
-     * @param globalPrivileges
-     */
-    public void setGlobalPrivileges(List<String> globalPrivileges) {
-        this.globalPrivileges = globalPrivileges;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 
     /**
@@ -133,24 +117,32 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
         this.instanceId = instanceId;
     }
 
-
     /**
-     * set 运维账号到期时间，UTC时间格式
+     * get 库名称
      *
-     * @param expiredTime
+     * @return
      */
-    public ModifyAccountForOpsRequest expiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
-        return this;
+    public String getDbName() {
+        return dbName;
     }
 
     /**
-     * set globalPrivileges
+     * set 库名称
      *
-     * @param globalPrivileges
+     * @param dbName
      */
-    public ModifyAccountForOpsRequest globalPrivileges(List<String> globalPrivileges) {
-        this.globalPrivileges = globalPrivileges;
+    public void setDbName(String dbName) {
+        this.dbName = dbName;
+    }
+
+
+    /**
+     * set 数据库的备注信息，支持中午，ASCII字符，最大长度64
+     *
+     * @param comment
+     */
+    public ModifyDatabaseCommentRequest comment(String comment) {
+        this.comment = comment;
         return this;
     }
 
@@ -159,7 +151,7 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
      *
      * @param regionId
      */
-    public ModifyAccountForOpsRequest regionId(String regionId) {
+    public ModifyDatabaseCommentRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -169,22 +161,20 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
      *
      * @param instanceId
      */
-    public ModifyAccountForOpsRequest instanceId(String instanceId) {
+    public ModifyDatabaseCommentRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
-
     /**
-     * add item to globalPrivileges
+     * set 库名称
      *
-     * @param globalPrivilege
+     * @param dbName
      */
-    public void addGlobalPrivilege(String globalPrivilege) {
-        if (this.globalPrivileges == null) {
-            this.globalPrivileges = new ArrayList<>();
-        }
-        this.globalPrivileges.add(globalPrivilege);
+    public ModifyDatabaseCommentRequest dbName(String dbName) {
+        this.dbName = dbName;
+        return this;
     }
+
 
 }

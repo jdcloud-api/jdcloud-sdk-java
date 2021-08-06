@@ -45,6 +45,11 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
     private Boolean rebootSlave;
 
     /**
+     * 是否强制重启 &lt;br&gt;- 仅支持MySQL
+     */
+    private Boolean force;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -93,6 +98,24 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setRebootSlave(Boolean rebootSlave) {
         this.rebootSlave = rebootSlave;
+    }
+
+    /**
+     * get 是否强制重启 &lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public Boolean getForce() {
+        return force;
+    }
+
+    /**
+     * set 是否强制重启 &lt;br&gt;- 仅支持MySQL
+     *
+     * @param force
+     */
+    public void setForce(Boolean force) {
+        this.force = force;
     }
 
     /**
@@ -149,6 +172,16 @@ public class RebootInstanceRequest extends JdcloudRequest implements java.io.Ser
      */
     public RebootInstanceRequest rebootSlave(Boolean rebootSlave) {
         this.rebootSlave = rebootSlave;
+        return this;
+    }
+
+    /**
+     * set 是否强制重启 &lt;br&gt;- 仅支持MySQL
+     *
+     * @param force
+     */
+    public RebootInstanceRequest force(Boolean force) {
+        this.force = force;
         return this;
     }
 

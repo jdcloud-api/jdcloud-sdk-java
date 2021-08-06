@@ -61,6 +61,11 @@ public class DBInstanceAttribute  implements java.io.Serializable {
     private String engineVersion;
 
     /**
+     * 实例引擎的小版本
+     */
+    private String minorVersion;
+
+    /**
      * 实例规格代码
      */
     private String instanceClass;
@@ -309,6 +314,24 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     public void setEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
+    }
+
+    /**
+     * get 实例引擎的小版本
+     *
+     * @return
+     */
+    public String getMinorVersion() {
+        return minorVersion;
+    }
+
+    /**
+     * set 实例引擎的小版本
+     *
+     * @param minorVersion
+     */
+    public void setMinorVersion(String minorVersion) {
+        this.minorVersion = minorVersion;
     }
 
     /**
@@ -935,6 +958,16 @@ public class DBInstanceAttribute  implements java.io.Serializable {
      */
     public DBInstanceAttribute engineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
+        return this;
+    }
+
+    /**
+     * set 实例引擎的小版本
+     *
+     * @param minorVersion
+     */
+    public DBInstanceAttribute minorVersion(String minorVersion) {
+        this.minorVersion = minorVersion;
         return this;
     }
 

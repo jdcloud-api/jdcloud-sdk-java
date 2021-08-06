@@ -38,6 +38,11 @@ public class SlowLogAttributes  implements java.io.Serializable {
     private String dbName;
 
     /**
+     * 数据库账号，表示该SQL是哪个数据库账号发起的
+     */
+    private String user;
+
+    /**
      * SQL语句
      */
     private String sql;
@@ -84,6 +89,24 @@ public class SlowLogAttributes  implements java.io.Serializable {
      */
     public void setDbName(String dbName) {
         this.dbName = dbName;
+    }
+
+    /**
+     * get 数据库账号，表示该SQL是哪个数据库账号发起的
+     *
+     * @return
+     */
+    public String getUser() {
+        return user;
+    }
+
+    /**
+     * set 数据库账号，表示该SQL是哪个数据库账号发起的
+     *
+     * @param user
+     */
+    public void setUser(String user) {
+        this.user = user;
     }
 
     /**
@@ -202,6 +225,16 @@ public class SlowLogAttributes  implements java.io.Serializable {
      */
     public SlowLogAttributes dbName(String dbName) {
         this.dbName = dbName;
+        return this;
+    }
+
+    /**
+     * set 数据库账号，表示该SQL是哪个数据库账号发起的
+     *
+     * @param user
+     */
+    public SlowLogAttributes user(String user) {
+        this.user = user;
         return this;
     }
 

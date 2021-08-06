@@ -122,6 +122,11 @@ public class DBInstanceSpec  implements java.io.Serializable {
      */
     private String instanceType;
 
+    /**
+     * 标签信息
+     */
+    private List<Tag> tagSpec;
+
 
     /**
      * get 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
@@ -375,6 +380,24 @@ public class DBInstanceSpec  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+    /**
+     * get 标签信息
+     *
+     * @return
+     */
+    public List<Tag> getTagSpec() {
+        return tagSpec;
+    }
+
+    /**
+     * set 标签信息
+     *
+     * @param tagSpec
+     */
+    public void setTagSpec(List<Tag> tagSpec) {
+        this.tagSpec = tagSpec;
+    }
+
 
     /**
      * set 实例名，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
@@ -516,6 +539,16 @@ public class DBInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 标签信息
+     *
+     * @param tagSpec
+     */
+    public DBInstanceSpec tagSpec(List<Tag> tagSpec) {
+        this.tagSpec = tagSpec;
+        return this;
+    }
+
 
     /**
      * add item to 可用区ID， 第一个ID必须为主实例所在的可用区。如两个可用区一样，也需输入两个azId
@@ -527,6 +560,18 @@ public class DBInstanceSpec  implements java.io.Serializable {
             this.azId = new ArrayList<>();
         }
         this.azId.add(azId);
+    }
+
+    /**
+     * add item to 标签信息
+     *
+     * @param tagSpec
+     */
+    public void addTagSpec(Tag tagSpec) {
+        if (this.tagSpec == null) {
+            this.tagSpec = new ArrayList<>();
+        }
+        this.tagSpec.add(tagSpec);
     }
 
 }
