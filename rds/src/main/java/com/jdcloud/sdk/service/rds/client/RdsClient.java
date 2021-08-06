@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.rds.model.DescribeAuditDownloadURLRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeAuditDownloadURLResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeAuditDownloadURLExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyDatabaseCommentRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyDatabaseCommentResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyDatabaseCommentExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeInterceptResultRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeInterceptResultResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeInterceptResultExecutor;
@@ -82,6 +85,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeInstanceAttributesExecutor;
 import com.jdcloud.sdk.service.rds.model.ModifyInstanceSpecRequest;
 import com.jdcloud.sdk.service.rds.model.ModifyInstanceSpecResponse;
 import com.jdcloud.sdk.service.rds.client.ModifyInstanceSpecExecutor;
+import com.jdcloud.sdk.service.rds.model.ModifyInstanceMaintainTimeRequest;
+import com.jdcloud.sdk.service.rds.model.ModifyInstanceMaintainTimeResponse;
+import com.jdcloud.sdk.service.rds.client.ModifyInstanceMaintainTimeExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteBackupSynchronicityRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteBackupSynchronicityResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteBackupSynchronicityExecutor;
@@ -130,6 +136,9 @@ import com.jdcloud.sdk.service.rds.client.DisableAuditExecutor;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseRequest;
 import com.jdcloud.sdk.service.rds.model.CreateDatabaseResponse;
 import com.jdcloud.sdk.service.rds.client.CreateDatabaseExecutor;
+import com.jdcloud.sdk.service.rds.model.SwitchForModifyingInstanceSpecRequest;
+import com.jdcloud.sdk.service.rds.model.SwitchForModifyingInstanceSpecResponse;
+import com.jdcloud.sdk.service.rds.client.SwitchForModifyingInstanceSpecExecutor;
 import com.jdcloud.sdk.service.rds.model.SetImportFileSharedRequest;
 import com.jdcloud.sdk.service.rds.model.SetImportFileSharedResponse;
 import com.jdcloud.sdk.service.rds.client.SetImportFileSharedExecutor;
@@ -139,6 +148,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeDatabasesExecutor;
 import com.jdcloud.sdk.service.rds.model.EnableSSLRequest;
 import com.jdcloud.sdk.service.rds.model.EnableSSLResponse;
 import com.jdcloud.sdk.service.rds.client.EnableSSLExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeUpgradeVersionsRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeUpgradeVersionsResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeUpgradeVersionsExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeIndexPerformanceRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeIndexPerformanceResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeIndexPerformanceExecutor;
@@ -316,6 +328,9 @@ import com.jdcloud.sdk.service.rds.client.DescribeAccountsForOpsExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupChargeRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupChargeResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeBackupChargeExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeInstanceMaintainTimeRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeInstanceMaintainTimeResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeInstanceMaintainTimeExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteParameterGroupRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteParameterGroupResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteParameterGroupExecutor;
@@ -331,6 +346,9 @@ import com.jdcloud.sdk.service.rds.client.RestoreDatabaseFromOSSExecutor;
 import com.jdcloud.sdk.service.rds.model.DeleteBackupRequest;
 import com.jdcloud.sdk.service.rds.model.DeleteBackupResponse;
 import com.jdcloud.sdk.service.rds.client.DeleteBackupExecutor;
+import com.jdcloud.sdk.service.rds.model.UpgradeEngineVersionRequest;
+import com.jdcloud.sdk.service.rds.model.UpgradeEngineVersionResponse;
+import com.jdcloud.sdk.service.rds.client.UpgradeEngineVersionExecutor;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupSynchronicitiesRequest;
 import com.jdcloud.sdk.service.rds.model.DescribeBackupSynchronicitiesResponse;
 import com.jdcloud.sdk.service.rds.client.DescribeBackupSynchronicitiesExecutor;
@@ -364,6 +382,9 @@ import com.jdcloud.sdk.service.rds.client.ModifyParameterGroupParametersExecutor
 import com.jdcloud.sdk.service.rds.model.CreateInstanceByTimeInCrossRegionRequest;
 import com.jdcloud.sdk.service.rds.model.CreateInstanceByTimeInCrossRegionResponse;
 import com.jdcloud.sdk.service.rds.client.CreateInstanceByTimeInCrossRegionExecutor;
+import com.jdcloud.sdk.service.rds.model.DescribeUpgradePlanRequest;
+import com.jdcloud.sdk.service.rds.model.DescribeUpgradePlanResponse;
+import com.jdcloud.sdk.service.rds.client.DescribeUpgradePlanExecutor;
 import com.jdcloud.sdk.service.rds.model.RestoreInstanceByTimeRequest;
 import com.jdcloud.sdk.service.rds.model.RestoreInstanceByTimeResponse;
 import com.jdcloud.sdk.service.rds.client.RestoreInstanceByTimeExecutor;
@@ -426,6 +447,17 @@ public class RdsClient extends JdcloudClient {
      */
     public DescribeAuditDownloadURLResponse describeAuditDownloadURL(DescribeAuditDownloadURLRequest request) throws JdcloudSdkException {
         return new DescribeAuditDownloadURLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改数据库备注，仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyDatabaseCommentResponse modifyDatabaseComment(ModifyDatabaseCommentRequest request) throws JdcloudSdkException {
+        return new ModifyDatabaseCommentExecutor().client(this).execute(request);
     }
 
     /**
@@ -605,6 +637,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 修改实例的可维护时间。实例可维护时间段一般设置为业务的低峰时间段。京东云会在您设置的可维护时间段内进行实例维护，保证对业务的影响降到最低。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstanceMaintainTimeResponse modifyInstanceMaintainTime(ModifyInstanceMaintainTimeRequest request) throws JdcloudSdkException {
+        return new ModifyInstanceMaintainTimeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除一个跨地域备份同步服务。
      *
      * @param request
@@ -781,6 +824,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 实例状态为变配待切换中，可执行，执行后，状态变为变配中
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SwitchForModifyingInstanceSpecResponse switchForModifyingInstanceSpec(SwitchForModifyingInstanceSpecRequest request) throws JdcloudSdkException {
+        return new SwitchForModifyingInstanceSpecExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置或取消上传文件是否共享给同一账号下的其他实例。缺省情况下，文件仅在上传的实例上可见并可导入，其他实例不可见不可导入。如果需要该文件在其他实例上也可导入，可将此文件设置为共享&lt;br&gt;- 仅支持SQL Server
      *
      * @param request
@@ -811,6 +865,17 @@ public class RdsClient extends JdcloudClient {
      */
     public EnableSSLResponse enableSSL(EnableSSLRequest request) throws JdcloudSdkException {
         return new EnableSSLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取当前数据库可升级到的版本，仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeUpgradeVersionsResponse describeUpgradeVersions(DescribeUpgradeVersionsRequest request) throws JdcloudSdkException {
+        return new DescribeUpgradeVersionsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1463,6 +1528,17 @@ public class RdsClient extends JdcloudClient {
     }
 
     /**
+     * 查询实例的可维护时间
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceMaintainTimeResponse describeInstanceMaintainTime(DescribeInstanceMaintainTimeRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceMaintainTimeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除参数组&lt;br&gt;- 仅支持MySQL，Percona，MariaDB，PostgreSQL
      *
      * @param request
@@ -1515,6 +1591,17 @@ public class RdsClient extends JdcloudClient {
      */
     public DeleteBackupResponse deleteBackup(DeleteBackupRequest request) throws JdcloudSdkException {
         return new DeleteBackupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 升级引擎版本，例如从5.7.21 升级到5.7.24，仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpgradeEngineVersionResponse upgradeEngineVersion(UpgradeEngineVersionRequest request) throws JdcloudSdkException {
+        return new UpgradeEngineVersionExecutor().client(this).execute(request);
     }
 
     /**
@@ -1636,6 +1723,17 @@ public class RdsClient extends JdcloudClient {
      */
     public CreateInstanceByTimeInCrossRegionResponse createInstanceByTimeInCrossRegion(CreateInstanceByTimeInCrossRegionRequest request) throws JdcloudSdkException {
         return new CreateInstanceByTimeInCrossRegionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询当前发起的数据库的升级计划，仅支持MySQL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeUpgradePlanResponse describeUpgradePlan(DescribeUpgradePlanRequest request) throws JdcloudSdkException {
+        return new DescribeUpgradePlanExecutor().client(this).execute(request);
     }
 
     /**

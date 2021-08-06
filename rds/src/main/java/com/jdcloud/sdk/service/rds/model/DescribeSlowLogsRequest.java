@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.common.model.Filter;
+import com.jdcloud.sdk.service.common.model.Sort;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -70,6 +71,11 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
      * filters
      */
     private List<Filter> filters;
+
+    /**
+     * 排序参数，支持rowsExaminedSum、rowsSentSum、lockTimeSum、executionCount、executionTimeSum
+     */
+    private List<Sort> sorts;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -195,6 +201,24 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get 排序参数，支持rowsExaminedSum、rowsSentSum、lockTimeSum、executionCount、executionTimeSum
+     *
+     * @return
+     */
+    public List<Sort> getSorts() {
+        return sorts;
+    }
+
+    /**
+     * set 排序参数，支持rowsExaminedSum、rowsSentSum、lockTimeSum、executionCount、executionTimeSum
+     *
+     * @param sorts
+     */
+    public void setSorts(List<Sort> sorts) {
+        this.sorts = sorts;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -292,6 +316,16 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * set 排序参数，支持rowsExaminedSum、rowsSentSum、lockTimeSum、executionCount、executionTimeSum
+     *
+     * @param sorts
+     */
+    public DescribeSlowLogsRequest sorts(List<Sort> sorts) {
+        this.sorts = sorts;
+        return this;
+    }
+
+    /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
@@ -322,6 +356,18 @@ public class DescribeSlowLogsRequest extends JdcloudRequest implements java.io.S
             this.filters = new ArrayList<>();
         }
         this.filters.add(filter);
+    }
+
+    /**
+     * add item to 排序参数，支持rowsExaminedSum、rowsSentSum、lockTimeSum、executionCount、executionTimeSum
+     *
+     * @param sort
+     */
+    public void addSort(Sort sort) {
+        if (this.sorts == null) {
+            this.sorts = new ArrayList<>();
+        }
+        this.sorts.add(sort);
     }
 
 }

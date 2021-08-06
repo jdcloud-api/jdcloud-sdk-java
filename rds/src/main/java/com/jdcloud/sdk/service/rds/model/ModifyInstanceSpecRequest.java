@@ -64,6 +64,16 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     private String subnetId;
 
     /**
+     * 生效时间，取值：&lt;br&gt;immediate：立即生效&lt;br&gt;maintainTime：在可维护时间段内生效。&lt;br&gt;postpone：延后生效。
+     */
+    private String effectiveTime;
+
+    /**
+     * 延后生效的时间，单位为分钟。effectiveTime为postpone时必传，取值1-1440分钟
+     */
+    private Integer postponeTime;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -169,6 +179,42 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 生效时间，取值：&lt;br&gt;immediate：立即生效&lt;br&gt;maintainTime：在可维护时间段内生效。&lt;br&gt;postpone：延后生效。
+     *
+     * @return
+     */
+    public String getEffectiveTime() {
+        return effectiveTime;
+    }
+
+    /**
+     * set 生效时间，取值：&lt;br&gt;immediate：立即生效&lt;br&gt;maintainTime：在可维护时间段内生效。&lt;br&gt;postpone：延后生效。
+     *
+     * @param effectiveTime
+     */
+    public void setEffectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+    }
+
+    /**
+     * get 延后生效的时间，单位为分钟。effectiveTime为postpone时必传，取值1-1440分钟
+     *
+     * @return
+     */
+    public Integer getPostponeTime() {
+        return postponeTime;
+    }
+
+    /**
+     * set 延后生效的时间，单位为分钟。effectiveTime为postpone时必传，取值1-1440分钟
+     *
+     * @param postponeTime
+     */
+    public void setPostponeTime(Integer postponeTime) {
+        this.postponeTime = postponeTime;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -252,6 +298,26 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
      */
     public ModifyInstanceSpecRequest subnetId(String subnetId) {
         this.subnetId = subnetId;
+        return this;
+    }
+
+    /**
+     * set 生效时间，取值：&lt;br&gt;immediate：立即生效&lt;br&gt;maintainTime：在可维护时间段内生效。&lt;br&gt;postpone：延后生效。
+     *
+     * @param effectiveTime
+     */
+    public ModifyInstanceSpecRequest effectiveTime(String effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+    }
+
+    /**
+     * set 延后生效的时间，单位为分钟。effectiveTime为postpone时必传，取值1-1440分钟
+     *
+     * @param postponeTime
+     */
+    public ModifyInstanceSpecRequest postponeTime(Integer postponeTime) {
+        this.postponeTime = postponeTime;
         return this;
     }
 

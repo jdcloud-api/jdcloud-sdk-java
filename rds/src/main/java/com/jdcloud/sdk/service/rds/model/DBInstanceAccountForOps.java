@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * dBInstanceAccountForOps
@@ -46,6 +48,11 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
      * 运维账号到期时间，UTC时间格式
      */
     private String expiredTime;
+
+    /**
+     * global权限
+     */
+    private List<String> globalPrivileges;
 
 
     /**
@@ -102,6 +109,24 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
         this.expiredTime = expiredTime;
     }
 
+    /**
+     * get global权限
+     *
+     * @return
+     */
+    public List<String> getGlobalPrivileges() {
+        return globalPrivileges;
+    }
+
+    /**
+     * set global权限
+     *
+     * @param globalPrivileges
+     */
+    public void setGlobalPrivileges(List<String> globalPrivileges) {
+        this.globalPrivileges = globalPrivileges;
+    }
+
 
     /**
      * set 运维账号的名称，默认为jcloud-ops-ro
@@ -133,5 +158,27 @@ public class DBInstanceAccountForOps  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set global权限
+     *
+     * @param globalPrivileges
+     */
+    public DBInstanceAccountForOps globalPrivileges(List<String> globalPrivileges) {
+        this.globalPrivileges = globalPrivileges;
+        return this;
+    }
+
+
+    /**
+     * add item to global权限
+     *
+     * @param globalPrivilege
+     */
+    public void addGlobalPrivilege(String globalPrivilege) {
+        if (this.globalPrivileges == null) {
+            this.globalPrivileges = new ArrayList<>();
+        }
+        this.globalPrivileges.add(globalPrivilege);
+    }
 
 }

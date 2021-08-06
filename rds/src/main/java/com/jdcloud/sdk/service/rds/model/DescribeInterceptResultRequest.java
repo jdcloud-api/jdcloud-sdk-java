@@ -24,6 +24,9 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.common.model.Filter;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -43,6 +46,13 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
      * 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍
      */
     private Integer pageSize;
+
+    /**
+     * 过滤参数，多个过滤参数之间的关系为“与”(and);
+支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
+
+     */
+    private List<Filter> filters;
 
     /**
      * Region ID
@@ -93,6 +103,28 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    /**
+     * get 过滤参数，多个过滤参数之间的关系为“与”(and);
+支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
+
+     *
+     * @return
+     */
+    public List<Filter> getFilters() {
+        return filters;
+    }
+
+    /**
+     * set 过滤参数，多个过滤参数之间的关系为“与”(and);
+支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
+
+     *
+     * @param filters
+     */
+    public void setFilters(List<Filter> filters) {
+        this.filters = filters;
     }
 
     /**
@@ -153,6 +185,18 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
     }
 
     /**
+     * set 过滤参数，多个过滤参数之间的关系为“与”(and);
+支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
+
+     *
+     * @param filters
+     */
+    public DescribeInterceptResultRequest filters(List<Filter> filters) {
+        this.filters = filters;
+        return this;
+    }
+
+    /**
      * set Region ID
      *
      * @param regionId
@@ -172,5 +216,19 @@ public class DescribeInterceptResultRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
+    /**
+     * add item to 过滤参数，多个过滤参数之间的关系为“与”(and);
+支持以下属性的过滤：account,database,keyword; 支持operator选项：eq,in; 仅支持 MySQL，Percona，MariaDB
+
+     *
+     * @param filter
+     */
+    public void addFilter(Filter filter) {
+        if (this.filters == null) {
+            this.filters = new ArrayList<>();
+        }
+        this.filters.add(filter);
+    }
 
 }

@@ -43,6 +43,11 @@ public class SmsTemplateVO  implements java.io.Serializable {
     private Integer applyStatus;
 
     /**
+     * 短信模板审核说明
+     */
+    private String auditorExplanation;
+
+    /**
      * 创建时间
      */
     private String createTime;
@@ -117,6 +122,24 @@ public class SmsTemplateVO  implements java.io.Serializable {
      */
     public void setApplyStatus(Integer applyStatus) {
         this.applyStatus = applyStatus;
+    }
+
+    /**
+     * get 短信模板审核说明
+     *
+     * @return
+     */
+    public String getAuditorExplanation() {
+        return auditorExplanation;
+    }
+
+    /**
+     * set 短信模板审核说明
+     *
+     * @param auditorExplanation
+     */
+    public void setAuditorExplanation(String auditorExplanation) {
+        this.auditorExplanation = auditorExplanation;
     }
 
     /**
@@ -281,6 +304,16 @@ public class SmsTemplateVO  implements java.io.Serializable {
      */
     public SmsTemplateVO applyStatus(Integer applyStatus) {
         this.applyStatus = applyStatus;
+        return this;
+    }
+
+    /**
+     * set 短信模板审核说明
+     *
+     * @param auditorExplanation
+     */
+    public SmsTemplateVO auditorExplanation(String auditorExplanation) {
+        this.auditorExplanation = auditorExplanation;
         return this;
     }
 

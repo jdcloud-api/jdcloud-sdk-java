@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 账号管理
- * API related to Relational Database Service
+ * 实例管理
+ * 实例管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,27 +24,27 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改数据库临时运维账号属性。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+ * 升级引擎版本，例如从5.7.21 升级到5.7.24，仅支持MySQL
  */
-public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.io.Serializable {
+public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 运维账号到期时间，UTC时间格式
+     * 计划开始升级的时间，1：立即开始升级，2：维护时间窗口升级，0：取消升级
+     * Required:true
      */
-    private String expiredTime;
+    @Required
+    private Integer upgradeSchedule;
 
     /**
-     * globalPrivileges
+     * 升级到的新版本，默认为当前实例可升级到的最新版本
      */
-    private List<String> globalPrivileges;
+    private String newVersion;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -62,39 +62,39 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 运维账号到期时间，UTC时间格式
+     * get 计划开始升级的时间，1：立即开始升级，2：维护时间窗口升级，0：取消升级
      *
      * @return
      */
-    public String getExpiredTime() {
-        return expiredTime;
+    public Integer getUpgradeSchedule() {
+        return upgradeSchedule;
     }
 
     /**
-     * set 运维账号到期时间，UTC时间格式
+     * set 计划开始升级的时间，1：立即开始升级，2：维护时间窗口升级，0：取消升级
      *
-     * @param expiredTime
+     * @param upgradeSchedule
      */
-    public void setExpiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
+    public void setUpgradeSchedule(Integer upgradeSchedule) {
+        this.upgradeSchedule = upgradeSchedule;
     }
 
     /**
-     * get globalPrivileges
+     * get 升级到的新版本，默认为当前实例可升级到的最新版本
      *
      * @return
      */
-    public List<String> getGlobalPrivileges() {
-        return globalPrivileges;
+    public String getNewVersion() {
+        return newVersion;
     }
 
     /**
-     * set globalPrivileges
+     * set 升级到的新版本，默认为当前实例可升级到的最新版本
      *
-     * @param globalPrivileges
+     * @param newVersion
      */
-    public void setGlobalPrivileges(List<String> globalPrivileges) {
-        this.globalPrivileges = globalPrivileges;
+    public void setNewVersion(String newVersion) {
+        this.newVersion = newVersion;
     }
 
     /**
@@ -135,22 +135,22 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 运维账号到期时间，UTC时间格式
+     * set 计划开始升级的时间，1：立即开始升级，2：维护时间窗口升级，0：取消升级
      *
-     * @param expiredTime
+     * @param upgradeSchedule
      */
-    public ModifyAccountForOpsRequest expiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
+    public UpgradeEngineVersionRequest upgradeSchedule(Integer upgradeSchedule) {
+        this.upgradeSchedule = upgradeSchedule;
         return this;
     }
 
     /**
-     * set globalPrivileges
+     * set 升级到的新版本，默认为当前实例可升级到的最新版本
      *
-     * @param globalPrivileges
+     * @param newVersion
      */
-    public ModifyAccountForOpsRequest globalPrivileges(List<String> globalPrivileges) {
-        this.globalPrivileges = globalPrivileges;
+    public UpgradeEngineVersionRequest newVersion(String newVersion) {
+        this.newVersion = newVersion;
         return this;
     }
 
@@ -159,7 +159,7 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
      *
      * @param regionId
      */
-    public ModifyAccountForOpsRequest regionId(String regionId) {
+    public UpgradeEngineVersionRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -169,22 +169,10 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
      *
      * @param instanceId
      */
-    public ModifyAccountForOpsRequest instanceId(String instanceId) {
+    public UpgradeEngineVersionRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
-
-    /**
-     * add item to globalPrivileges
-     *
-     * @param globalPrivilege
-     */
-    public void addGlobalPrivilege(String globalPrivilege) {
-        if (this.globalPrivileges == null) {
-            this.globalPrivileges = new ArrayList<>();
-        }
-        this.globalPrivileges.add(globalPrivilege);
-    }
 
 }

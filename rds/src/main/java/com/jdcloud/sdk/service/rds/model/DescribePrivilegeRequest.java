@@ -47,6 +47,11 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
     private String instanceId;
 
     /**
+     * true表示展示高权限，默认false
+     */
+    private Boolean allAdminPrivileges;
+
+    /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
@@ -91,6 +96,24 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
     }
 
     /**
+     * get true表示展示高权限，默认false
+     *
+     * @return
+     */
+    public Boolean getAllAdminPrivileges() {
+        return allAdminPrivileges;
+    }
+
+    /**
+     * set true表示展示高权限，默认false
+     *
+     * @param allAdminPrivileges
+     */
+    public void setAllAdminPrivileges(Boolean allAdminPrivileges) {
+        this.allAdminPrivileges = allAdminPrivileges;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -126,6 +149,16 @@ public class DescribePrivilegeRequest extends JdcloudRequest implements java.io.
      */
     public DescribePrivilegeRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
+        return this;
+    }
+
+    /**
+     * set true表示展示高权限，默认false
+     *
+     * @param allAdminPrivileges
+     */
+    public DescribePrivilegeRequest allAdminPrivileges(Boolean allAdminPrivileges) {
+        this.allAdminPrivileges = allAdminPrivileges;
         return this;
     }
 

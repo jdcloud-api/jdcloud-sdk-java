@@ -38,6 +38,11 @@ public class SlowLogDigest  implements java.io.Serializable {
     private String dbName;
 
     /**
+     * 数据库账号，表示该SQL是哪个数据库账号发起的
+     */
+    private String user;
+
+    /**
      * SQL语句
      */
     private String sql;
@@ -51,6 +56,26 @@ public class SlowLogDigest  implements java.io.Serializable {
      * SQL语句的执行次数
      */
     private Integer executionCount;
+
+    /**
+     * 执行总时间
+     */
+    private Float executionTimeSum;
+
+    /**
+     * 扫描总行数
+     */
+    private Integer rowsExaminedSum;
+
+    /**
+     * 返回总行数
+     */
+    private Integer rowsSentSum;
+
+    /**
+     * 锁定总时间
+     */
+    private Float lockTimeSum;
 
     /**
      * SQL语句执行的时长，单位秒
@@ -94,6 +119,24 @@ public class SlowLogDigest  implements java.io.Serializable {
      */
     public void setDbName(String dbName) {
         this.dbName = dbName;
+    }
+
+    /**
+     * get 数据库账号，表示该SQL是哪个数据库账号发起的
+     *
+     * @return
+     */
+    public String getUser() {
+        return user;
+    }
+
+    /**
+     * set 数据库账号，表示该SQL是哪个数据库账号发起的
+     *
+     * @param user
+     */
+    public void setUser(String user) {
+        this.user = user;
     }
 
     /**
@@ -148,6 +191,78 @@ public class SlowLogDigest  implements java.io.Serializable {
      */
     public void setExecutionCount(Integer executionCount) {
         this.executionCount = executionCount;
+    }
+
+    /**
+     * get 执行总时间
+     *
+     * @return
+     */
+    public Float getExecutionTimeSum() {
+        return executionTimeSum;
+    }
+
+    /**
+     * set 执行总时间
+     *
+     * @param executionTimeSum
+     */
+    public void setExecutionTimeSum(Float executionTimeSum) {
+        this.executionTimeSum = executionTimeSum;
+    }
+
+    /**
+     * get 扫描总行数
+     *
+     * @return
+     */
+    public Integer getRowsExaminedSum() {
+        return rowsExaminedSum;
+    }
+
+    /**
+     * set 扫描总行数
+     *
+     * @param rowsExaminedSum
+     */
+    public void setRowsExaminedSum(Integer rowsExaminedSum) {
+        this.rowsExaminedSum = rowsExaminedSum;
+    }
+
+    /**
+     * get 返回总行数
+     *
+     * @return
+     */
+    public Integer getRowsSentSum() {
+        return rowsSentSum;
+    }
+
+    /**
+     * set 返回总行数
+     *
+     * @param rowsSentSum
+     */
+    public void setRowsSentSum(Integer rowsSentSum) {
+        this.rowsSentSum = rowsSentSum;
+    }
+
+    /**
+     * get 锁定总时间
+     *
+     * @return
+     */
+    public Float getLockTimeSum() {
+        return lockTimeSum;
+    }
+
+    /**
+     * set 锁定总时间
+     *
+     * @param lockTimeSum
+     */
+    public void setLockTimeSum(Float lockTimeSum) {
+        this.lockTimeSum = lockTimeSum;
     }
 
     /**
@@ -252,6 +367,16 @@ public class SlowLogDigest  implements java.io.Serializable {
     }
 
     /**
+     * set 数据库账号，表示该SQL是哪个数据库账号发起的
+     *
+     * @param user
+     */
+    public SlowLogDigest user(String user) {
+        this.user = user;
+        return this;
+    }
+
+    /**
      * set SQL语句
      *
      * @param sql
@@ -278,6 +403,46 @@ public class SlowLogDigest  implements java.io.Serializable {
      */
     public SlowLogDigest executionCount(Integer executionCount) {
         this.executionCount = executionCount;
+        return this;
+    }
+
+    /**
+     * set 执行总时间
+     *
+     * @param executionTimeSum
+     */
+    public SlowLogDigest executionTimeSum(Float executionTimeSum) {
+        this.executionTimeSum = executionTimeSum;
+        return this;
+    }
+
+    /**
+     * set 扫描总行数
+     *
+     * @param rowsExaminedSum
+     */
+    public SlowLogDigest rowsExaminedSum(Integer rowsExaminedSum) {
+        this.rowsExaminedSum = rowsExaminedSum;
+        return this;
+    }
+
+    /**
+     * set 返回总行数
+     *
+     * @param rowsSentSum
+     */
+    public SlowLogDigest rowsSentSum(Integer rowsSentSum) {
+        this.rowsSentSum = rowsSentSum;
+        return this;
+    }
+
+    /**
+     * set 锁定总时间
+     *
+     * @param lockTimeSum
+     */
+    public SlowLogDigest lockTimeSum(Float lockTimeSum) {
+        this.lockTimeSum = lockTimeSum;
         return this;
     }
 

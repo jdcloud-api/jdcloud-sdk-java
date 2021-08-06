@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 账号管理
- * API related to Relational Database Service
+ * 实例管理
+ * 实例管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,21 +30,21 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改数据库临时运维账号属性。&lt;br&gt;- 仅支持 MySQL，Percona，MariaDB
+ * 修改实例的可维护时间。实例可维护时间段一般设置为业务的低峰时间段。京东云会在您设置的可维护时间段内进行实例维护，保证对业务的影响降到最低。
  */
-public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.io.Serializable {
+public class ModifyInstanceMaintainTimeRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 运维账号到期时间，UTC时间格式
+     * 实例的可维护时间段。格式：HH:mm-HH:mm，取值为一个小时整点
      */
-    private String expiredTime;
+    private String maintainTime;
 
     /**
-     * globalPrivileges
+     * 选择维护周期，可选择一周中的某一天或多天
      */
-    private List<String> globalPrivileges;
+    private List<String> maintainPeriod;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -62,39 +62,39 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 运维账号到期时间，UTC时间格式
+     * get 实例的可维护时间段。格式：HH:mm-HH:mm，取值为一个小时整点
      *
      * @return
      */
-    public String getExpiredTime() {
-        return expiredTime;
+    public String getMaintainTime() {
+        return maintainTime;
     }
 
     /**
-     * set 运维账号到期时间，UTC时间格式
+     * set 实例的可维护时间段。格式：HH:mm-HH:mm，取值为一个小时整点
      *
-     * @param expiredTime
+     * @param maintainTime
      */
-    public void setExpiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
+    public void setMaintainTime(String maintainTime) {
+        this.maintainTime = maintainTime;
     }
 
     /**
-     * get globalPrivileges
+     * get 选择维护周期，可选择一周中的某一天或多天
      *
      * @return
      */
-    public List<String> getGlobalPrivileges() {
-        return globalPrivileges;
+    public List<String> getMaintainPeriod() {
+        return maintainPeriod;
     }
 
     /**
-     * set globalPrivileges
+     * set 选择维护周期，可选择一周中的某一天或多天
      *
-     * @param globalPrivileges
+     * @param maintainPeriod
      */
-    public void setGlobalPrivileges(List<String> globalPrivileges) {
-        this.globalPrivileges = globalPrivileges;
+    public void setMaintainPeriod(List<String> maintainPeriod) {
+        this.maintainPeriod = maintainPeriod;
     }
 
     /**
@@ -135,22 +135,22 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 运维账号到期时间，UTC时间格式
+     * set 实例的可维护时间段。格式：HH:mm-HH:mm，取值为一个小时整点
      *
-     * @param expiredTime
+     * @param maintainTime
      */
-    public ModifyAccountForOpsRequest expiredTime(String expiredTime) {
-        this.expiredTime = expiredTime;
+    public ModifyInstanceMaintainTimeRequest maintainTime(String maintainTime) {
+        this.maintainTime = maintainTime;
         return this;
     }
 
     /**
-     * set globalPrivileges
+     * set 选择维护周期，可选择一周中的某一天或多天
      *
-     * @param globalPrivileges
+     * @param maintainPeriod
      */
-    public ModifyAccountForOpsRequest globalPrivileges(List<String> globalPrivileges) {
-        this.globalPrivileges = globalPrivileges;
+    public ModifyInstanceMaintainTimeRequest maintainPeriod(List<String> maintainPeriod) {
+        this.maintainPeriod = maintainPeriod;
         return this;
     }
 
@@ -159,7 +159,7 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
      *
      * @param regionId
      */
-    public ModifyAccountForOpsRequest regionId(String regionId) {
+    public ModifyInstanceMaintainTimeRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -169,22 +169,22 @@ public class ModifyAccountForOpsRequest extends JdcloudRequest implements java.i
      *
      * @param instanceId
      */
-    public ModifyAccountForOpsRequest instanceId(String instanceId) {
+    public ModifyInstanceMaintainTimeRequest instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
 
     /**
-     * add item to globalPrivileges
+     * add item to 选择维护周期，可选择一周中的某一天或多天
      *
-     * @param globalPrivilege
+     * @param maintainPeriod
      */
-    public void addGlobalPrivilege(String globalPrivilege) {
-        if (this.globalPrivileges == null) {
-            this.globalPrivileges = new ArrayList<>();
+    public void addMaintainPeriod(String maintainPeriod) {
+        if (this.maintainPeriod == null) {
+            this.maintainPeriod = new ArrayList<>();
         }
-        this.globalPrivileges.add(globalPrivilege);
+        this.maintainPeriod.add(maintainPeriod);
     }
 
 }

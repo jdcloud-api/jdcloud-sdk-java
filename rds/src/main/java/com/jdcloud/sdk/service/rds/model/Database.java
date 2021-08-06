@@ -55,6 +55,11 @@ public class Database  implements java.io.Serializable {
     private String createTime;
 
     /**
+     * 数据库备注&lt;br&gt;- 仅支持MySQL
+     */
+    private String comment;
+
+    /**
      * 该数据库相关账户权限列表
      */
     private List<DBAccessPrivilege> accessPrivilege;
@@ -133,6 +138,24 @@ public class Database  implements java.io.Serializable {
     }
 
     /**
+     * get 数据库备注&lt;br&gt;- 仅支持MySQL
+     *
+     * @return
+     */
+    public String getComment() {
+        return comment;
+    }
+
+    /**
+     * set 数据库备注&lt;br&gt;- 仅支持MySQL
+     *
+     * @param comment
+     */
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    /**
      * get 该数据库相关账户权限列表
      *
      * @return
@@ -188,6 +211,16 @@ public class Database  implements java.io.Serializable {
      */
     public Database createTime(String createTime) {
         this.createTime = createTime;
+        return this;
+    }
+
+    /**
+     * set 数据库备注&lt;br&gt;- 仅支持MySQL
+     *
+     * @param comment
+     */
+    public Database comment(String comment) {
+        this.comment = comment;
         return this;
     }
 

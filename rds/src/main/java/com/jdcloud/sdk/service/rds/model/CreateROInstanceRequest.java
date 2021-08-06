@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.rds.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.rds.model.Tag;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -96,6 +99,11 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
      * 只读代理服务的ID，缺省值为 “NULL”，表示不绑定代理服务
      */
     private String roInstanceProxy;
+
+    /**
+     * 标签信息
+     */
+    private List<Tag> tagSpec;
 
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -311,6 +319,24 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get 标签信息
+     *
+     * @return
+     */
+    public List<Tag> getTagSpec() {
+        return tagSpec;
+    }
+
+    /**
+     * set 标签信息
+     *
+     * @param tagSpec
+     */
+    public void setTagSpec(List<Tag> tagSpec) {
+        this.tagSpec = tagSpec;
+    }
+
+    /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @return
@@ -458,6 +484,16 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * set 标签信息
+     *
+     * @param tagSpec
+     */
+    public CreateROInstanceRequest tagSpec(List<Tag> tagSpec) {
+        this.tagSpec = tagSpec;
+        return this;
+    }
+
+    /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
      * @param regionId
@@ -477,5 +513,17 @@ public class CreateROInstanceRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
+    /**
+     * add item to 标签信息
+     *
+     * @param tagSpec
+     */
+    public void addTagSpec(Tag tagSpec) {
+        if (this.tagSpec == null) {
+            this.tagSpec = new ArrayList<>();
+        }
+        this.tagSpec.add(tagSpec);
+    }
 
 }
