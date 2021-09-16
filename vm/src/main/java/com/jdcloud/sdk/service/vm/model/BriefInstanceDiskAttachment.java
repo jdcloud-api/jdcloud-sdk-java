@@ -26,53 +26,57 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * briefInstanceDiskAttachment
+ * 云主机实例磁盘挂载点信息。
  */
 public class BriefInstanceDiskAttachment  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
-系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
-数据盘仅支持云硬盘(cloud)。
+     * 磁盘类型。
+**系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
+**数据盘**：取值为：&#x60;local&#x60; 本地数据盘 或 &#x60;cloud&#x60; 云盘数据盘。
 
      */
     private String diskCategory;
 
     /**
-     * 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
-如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
-如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+     * 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      */
     private Boolean autoDelete;
 
     /**
-     * 本地磁盘配置
+     * 本地磁盘配置，对应 &#x60;diskCategory&#x3D;local&#x60;。
      */
     private LocalDisk localDisk;
 
     /**
-     * 云硬盘配置
+     * 云硬盘配置，对应 &#x60;diskCategory&#x3D;cloud&#x60;。
      */
     private LightCloudDiskInfo cloudDisk;
 
     /**
-     * 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
+     * 磁盘逻辑挂载点。
+**系统盘**：默认为vda。
+**数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+
      */
     private String deviceName;
 
     /**
-     * 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+     * 磁盘挂载状态。
+取值范围：&#x60;attaching、detaching、attached、detached、error_attach、error_detach&#x60;。
      */
     private String status;
 
 
     /**
-     * get 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
-系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
-数据盘仅支持云硬盘(cloud)。
+     * get 磁盘类型。
+**系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
+**数据盘**：取值为：&#x60;local&#x60; 本地数据盘 或 &#x60;cloud&#x60; 云盘数据盘。
 
      *
      * @return
@@ -82,9 +86,9 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
-系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
-数据盘仅支持云硬盘(cloud)。
+     * set 磁盘类型。
+**系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
+**数据盘**：取值为：&#x60;local&#x60; 本地数据盘 或 &#x60;cloud&#x60; 云盘数据盘。
 
      *
      * @param diskCategory
@@ -94,9 +98,9 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
-如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
-如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+     * get 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      *
      * @return
@@ -106,9 +110,9 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
-如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
-如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+     * set 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      *
      * @param autoDelete
@@ -118,7 +122,7 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 本地磁盘配置
+     * get 本地磁盘配置，对应 &#x60;diskCategory&#x3D;local&#x60;。
      *
      * @return
      */
@@ -127,7 +131,7 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 本地磁盘配置
+     * set 本地磁盘配置，对应 &#x60;diskCategory&#x3D;local&#x60;。
      *
      * @param localDisk
      */
@@ -136,7 +140,7 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘配置
+     * get 云硬盘配置，对应 &#x60;diskCategory&#x3D;cloud&#x60;。
      *
      * @return
      */
@@ -145,7 +149,7 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘配置
+     * set 云硬盘配置，对应 &#x60;diskCategory&#x3D;cloud&#x60;。
      *
      * @param cloudDisk
      */
@@ -154,7 +158,10 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
+     * get 磁盘逻辑挂载点。
+**系统盘**：默认为vda。
+**数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+
      *
      * @return
      */
@@ -163,7 +170,10 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
+     * set 磁盘逻辑挂载点。
+**系统盘**：默认为vda。
+**数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+
      *
      * @param deviceName
      */
@@ -172,7 +182,8 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+     * get 磁盘挂载状态。
+取值范围：&#x60;attaching、detaching、attached、detached、error_attach、error_detach&#x60;。
      *
      * @return
      */
@@ -181,7 +192,8 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+     * set 磁盘挂载状态。
+取值范围：&#x60;attaching、detaching、attached、detached、error_attach、error_detach&#x60;。
      *
      * @param status
      */
@@ -191,9 +203,9 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
 
 
     /**
-     * set 磁盘分类，取值为本地盘(local)或者数据盘(cloud)。
-系统盘支持本地盘(local)或者云硬盘(cloud)。系统盘选择local类型，必须使用localDisk类型的镜像；同理系统盘选择cloud类型，必须使用cloudDisk类型的镜像。
-数据盘仅支持云硬盘(cloud)。
+     * set 磁盘类型。
+**系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
+**数据盘**：取值为：&#x60;local&#x60; 本地数据盘 或 &#x60;cloud&#x60; 云盘数据盘。
 
      *
      * @param diskCategory
@@ -204,9 +216,9 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 随云主机一起删除，删除主机时自动删除此磁盘，默认为true，本地盘(local)不能更改此值。
-如果云主机中的数据盘(cloud)是包年包月计费方式，此参数不生效。
-如果云主机中的数据盘(cloud)是共享型数据盘，此参数不生效。
+     * set 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;：不随实例删除。
 
      *
      * @param autoDelete
@@ -217,7 +229,7 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 本地磁盘配置
+     * set 本地磁盘配置，对应 &#x60;diskCategory&#x3D;local&#x60;。
      *
      * @param localDisk
      */
@@ -227,7 +239,7 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘配置
+     * set 云硬盘配置，对应 &#x60;diskCategory&#x3D;cloud&#x60;。
      *
      * @param cloudDisk
      */
@@ -237,7 +249,10 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘逻辑挂载点，取值范围：vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm
+     * set 磁盘逻辑挂载点。
+**系统盘**：默认为vda。
+**数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+
      *
      * @param deviceName
      */
@@ -247,7 +262,8 @@ public class BriefInstanceDiskAttachment  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘挂载状态，取值范围：attaching,detaching,attached,detached,error_attach,error_detach
+     * set 磁盘挂载状态。
+取值范围：&#x60;attaching、detaching、attached、detached、error_attach、error_detach&#x60;。
      *
      * @param status
      */

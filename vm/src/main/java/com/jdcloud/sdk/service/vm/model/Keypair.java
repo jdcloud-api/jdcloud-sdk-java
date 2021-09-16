@@ -28,35 +28,35 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * keypair
+ * 密钥信息。
  */
 public class Keypair  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 密钥对名称
+     * 密钥对名称。
      */
     private String keyName;
 
     /**
-     * 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      */
     private String keyFingerprint;
 
     /**
-     * 创建时间
+     * 密钥创建时间。
      */
     private String createTime;
 
     /**
-     * 绑定了此密钥的所有虚机id
+     * 绑定了此密钥的云主机ID列表。
      */
     private List<String> instanceIds;
 
 
     /**
-     * get 密钥对名称
+     * get 密钥对名称。
      *
      * @return
      */
@@ -65,7 +65,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称。
      *
      * @param keyName
      */
@@ -74,7 +74,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * get 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * get 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @return
      */
@@ -83,7 +83,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * set 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @param keyFingerprint
      */
@@ -92,7 +92,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 密钥创建时间。
      *
      * @return
      */
@@ -101,7 +101,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 密钥创建时间。
      *
      * @param createTime
      */
@@ -110,7 +110,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * get 绑定了此密钥的所有虚机id
+     * get 绑定了此密钥的云主机ID列表。
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定了此密钥的所有虚机id
+     * set 绑定了此密钥的云主机ID列表。
      *
      * @param instanceIds
      */
@@ -129,7 +129,7 @@ public class Keypair  implements java.io.Serializable {
 
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称。
      *
      * @param keyName
      */
@@ -139,7 +139,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * set 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @param keyFingerprint
      */
@@ -149,7 +149,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 密钥创建时间。
      *
      * @param createTime
      */
@@ -159,7 +159,7 @@ public class Keypair  implements java.io.Serializable {
     }
 
     /**
-     * set 绑定了此密钥的所有虚机id
+     * set 绑定了此密钥的云主机ID列表。
      *
      * @param instanceIds
      */
@@ -170,7 +170,7 @@ public class Keypair  implements java.io.Serializable {
 
 
     /**
-     * add item to 绑定了此密钥的所有虚机id
+     * add item to 绑定了此密钥的云主机ID列表。
      *
      * @param instanceId
      */

@@ -30,7 +30,11 @@ import com.jdcloud.sdk.service.vm.model.Quota;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
+ * 
+查询资源配额。
+
+## 接口说明
+- 调用该接口可查询 &#x60;云主机&#x60;、&#x60;镜像&#x60;、&#x60;密钥&#x60;、&#x60;实例模板&#x60;、&#x60;镜像共享&#x60; 的配额。
 
  */
 public class DescribeQuotasResult extends JdcloudResult implements java.io.Serializable {

@@ -27,7 +27,13 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+ * 
+修改镜像属性。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 只支持修改镜像名称或描述。
 
  */
 public class ModifyImageAttributeResponse extends JdcloudResponse<ModifyImageAttributeResult> implements java.io.Serializable {

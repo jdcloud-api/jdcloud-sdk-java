@@ -28,125 +28,128 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * internalInstance
+ * 云主机实例信息。
  */
 public class InternalInstance  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      */
     private String instanceId;
 
     /**
-     * 云主机名称
+     * 云主机名称。
      */
     private String instanceName;
 
     /**
-     * 实例规格
+     * 实例规格。
      */
     private String instanceType;
 
     /**
-     * 主网卡所属VPC的ID
+     * 主网卡所属VPC的ID。
      */
     private String vpcId;
 
     /**
-     * 主网卡所属子网的ID
+     * 主网卡所属子网的ID。
      */
     private String subnetId;
 
     /**
-     * 主网卡主IP地址
+     * 主网卡主内网IP地址。
      */
     private String privateIpAddress;
 
     /**
-     * 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+     * 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      */
     private String status;
 
     /**
-     * 云主机描述
+     * 云主机描述。
      */
     private String description;
 
     /**
-     * 镜像ID
+     * 云主机使用的镜像ID。
      */
     private String imageId;
 
     /**
-     * 系统盘配置
+     * 系统盘配置。
      */
     private BriefInstanceDiskAttachment systemDisk;
 
     /**
-     * 数据盘配置
+     * 数据盘配置列表。
      */
     private List<BriefInstanceDiskAttachment> dataDisks;
 
     /**
-     * 主网卡配置
+     * 主网卡主IP关联的弹性公网IP配置。
      */
     private BriefInstanceNetworkInterfaceAttachment primaryNetworkInterface;
 
     /**
-     * 辅助网卡配置
+     * 辅助网卡配置列表。
      */
     private List<BriefInstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
 
     /**
-     * 创建时间
+     * 云主机实例的创建时间。
      */
     private String launchTime;
 
     /**
-     * 云主机所在可用区
+     * 云主机所在可用区。
      */
     private String az;
 
     /**
-     * 密钥对名称
+     * 云主机使用的密钥对名称。
      */
     private List<String> keyNames;
 
     /**
-     * 高可用组中的错误域
+     * 高可用组中的错误域。
      */
     private String faultDomain;
 
     /**
-     * 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
+     * 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+&#x60;keepCharging&#x60;：关机后继续计费。
+&#x60;stopCharging&#x60;：关机后停止计费。
+
      */
     private String chargeOnStopped;
 
     /**
-     * 实例所属的专有宿主机池
+     * 云主机所属的专有宿主机池。
      */
     private String dedicatedPoolId;
 
     /**
-     * 专有宿主机ID
+     * 云主机所属的专有宿主机ID。
      */
     private String dedicatedHostId;
 
     /**
-     * 实例的物理机 IP
+     * 实例所在的物理机IP地址。
      */
     private String hostIp;
 
     /**
-     * 机架信息
+     * 实例所在机架信息。
      */
     private String rack;
 
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -155,7 +158,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -164,7 +167,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 云主机名称
+     * get 云主机名称。
      *
      * @return
      */
@@ -173,7 +176,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机名称
+     * set 云主机名称。
      *
      * @param instanceName
      */
@@ -182,7 +185,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格
+     * get 实例规格。
      *
      * @return
      */
@@ -191,7 +194,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格
+     * set 实例规格。
      *
      * @param instanceType
      */
@@ -200,7 +203,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡所属VPC的ID
+     * get 主网卡所属VPC的ID。
      *
      * @return
      */
@@ -209,7 +212,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡所属VPC的ID
+     * set 主网卡所属VPC的ID。
      *
      * @param vpcId
      */
@@ -218,7 +221,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡所属子网的ID
+     * get 主网卡所属子网的ID。
      *
      * @return
      */
@@ -227,7 +230,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡所属子网的ID
+     * set 主网卡所属子网的ID。
      *
      * @param subnetId
      */
@@ -236,7 +239,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡主IP地址
+     * get 主网卡主内网IP地址。
      *
      * @return
      */
@@ -245,7 +248,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡主IP地址
+     * set 主网卡主内网IP地址。
      *
      * @param privateIpAddress
      */
@@ -254,7 +257,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+     * get 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
      * @return
      */
@@ -263,7 +266,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+     * set 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
      * @param status
      */
@@ -272,7 +275,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 云主机描述
+     * get 云主机描述。
      *
      * @return
      */
@@ -281,7 +284,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机描述
+     * set 云主机描述。
      *
      * @param description
      */
@@ -290,7 +293,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像ID
+     * get 云主机使用的镜像ID。
      *
      * @return
      */
@@ -299,7 +302,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 云主机使用的镜像ID。
      *
      * @param imageId
      */
@@ -308,7 +311,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘配置
+     * get 系统盘配置。
      *
      * @return
      */
@@ -317,7 +320,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘配置
+     * set 系统盘配置。
      *
      * @param systemDisk
      */
@@ -326,7 +329,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘配置
+     * get 数据盘配置列表。
      *
      * @return
      */
@@ -335,7 +338,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘配置
+     * set 数据盘配置列表。
      *
      * @param dataDisks
      */
@@ -344,7 +347,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡配置
+     * get 主网卡主IP关联的弹性公网IP配置。
      *
      * @return
      */
@@ -353,7 +356,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡配置
+     * set 主网卡主IP关联的弹性公网IP配置。
      *
      * @param primaryNetworkInterface
      */
@@ -362,7 +365,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 辅助网卡配置
+     * get 辅助网卡配置列表。
      *
      * @return
      */
@@ -371,7 +374,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 辅助网卡配置
+     * set 辅助网卡配置列表。
      *
      * @param secondaryNetworkInterfaces
      */
@@ -380,7 +383,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 云主机实例的创建时间。
      *
      * @return
      */
@@ -389,7 +392,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 云主机实例的创建时间。
      *
      * @param launchTime
      */
@@ -398,7 +401,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 云主机所在可用区
+     * get 云主机所在可用区。
      *
      * @return
      */
@@ -407,7 +410,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机所在可用区
+     * set 云主机所在可用区。
      *
      * @param az
      */
@@ -416,7 +419,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 密钥对名称
+     * get 云主机使用的密钥对名称。
      *
      * @return
      */
@@ -425,7 +428,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称
+     * set 云主机使用的密钥对名称。
      *
      * @param keyNames
      */
@@ -434,7 +437,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 高可用组中的错误域
+     * get 高可用组中的错误域。
      *
      * @return
      */
@@ -443,7 +446,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 高可用组中的错误域
+     * set 高可用组中的错误域。
      *
      * @param faultDomain
      */
@@ -452,7 +455,10 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
+     * get 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+&#x60;keepCharging&#x60;：关机后继续计费。
+&#x60;stopCharging&#x60;：关机后停止计费。
+
      *
      * @return
      */
@@ -461,7 +467,10 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
+     * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+&#x60;keepCharging&#x60;：关机后继续计费。
+&#x60;stopCharging&#x60;：关机后停止计费。
+
      *
      * @param chargeOnStopped
      */
@@ -470,7 +479,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例所属的专有宿主机池
+     * get 云主机所属的专有宿主机池。
      *
      * @return
      */
@@ -479,7 +488,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例所属的专有宿主机池
+     * set 云主机所属的专有宿主机池。
      *
      * @param dedicatedPoolId
      */
@@ -488,7 +497,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 专有宿主机ID
+     * get 云主机所属的专有宿主机ID。
      *
      * @return
      */
@@ -497,7 +506,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 专有宿主机ID
+     * set 云主机所属的专有宿主机ID。
      *
      * @param dedicatedHostId
      */
@@ -506,7 +515,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例的物理机 IP
+     * get 实例所在的物理机IP地址。
      *
      * @return
      */
@@ -515,7 +524,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例的物理机 IP
+     * set 实例所在的物理机IP地址。
      *
      * @param hostIp
      */
@@ -524,7 +533,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 机架信息
+     * get 实例所在机架信息。
      *
      * @return
      */
@@ -533,7 +542,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 机架信息
+     * set 实例所在机架信息。
      *
      * @param rack
      */
@@ -543,7 +552,7 @@ public class InternalInstance  implements java.io.Serializable {
 
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -553,7 +562,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机名称
+     * set 云主机名称。
      *
      * @param instanceName
      */
@@ -563,7 +572,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格
+     * set 实例规格。
      *
      * @param instanceType
      */
@@ -573,7 +582,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡所属VPC的ID
+     * set 主网卡所属VPC的ID。
      *
      * @param vpcId
      */
@@ -583,7 +592,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡所属子网的ID
+     * set 主网卡所属子网的ID。
      *
      * @param subnetId
      */
@@ -593,7 +602,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡主IP地址
+     * set 主网卡主内网IP地址。
      *
      * @param privateIpAddress
      */
@@ -603,7 +612,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+     * set 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
      * @param status
      */
@@ -613,7 +622,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机描述
+     * set 云主机描述。
      *
      * @param description
      */
@@ -623,7 +632,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 云主机使用的镜像ID。
      *
      * @param imageId
      */
@@ -633,7 +642,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘配置
+     * set 系统盘配置。
      *
      * @param systemDisk
      */
@@ -643,7 +652,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘配置
+     * set 数据盘配置列表。
      *
      * @param dataDisks
      */
@@ -653,7 +662,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡配置
+     * set 主网卡主IP关联的弹性公网IP配置。
      *
      * @param primaryNetworkInterface
      */
@@ -663,7 +672,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 辅助网卡配置
+     * set 辅助网卡配置列表。
      *
      * @param secondaryNetworkInterfaces
      */
@@ -673,7 +682,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 云主机实例的创建时间。
      *
      * @param launchTime
      */
@@ -683,7 +692,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机所在可用区
+     * set 云主机所在可用区。
      *
      * @param az
      */
@@ -693,7 +702,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称
+     * set 云主机使用的密钥对名称。
      *
      * @param keyNames
      */
@@ -703,7 +712,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 高可用组中的错误域
+     * set 高可用组中的错误域。
      *
      * @param faultDomain
      */
@@ -713,7 +722,10 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。KeepCharging：关机后继续计费；StopCharging：关机后停止计费。
+     * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+&#x60;keepCharging&#x60;：关机后继续计费。
+&#x60;stopCharging&#x60;：关机后停止计费。
+
      *
      * @param chargeOnStopped
      */
@@ -723,7 +735,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例所属的专有宿主机池
+     * set 云主机所属的专有宿主机池。
      *
      * @param dedicatedPoolId
      */
@@ -733,7 +745,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 专有宿主机ID
+     * set 云主机所属的专有宿主机ID。
      *
      * @param dedicatedHostId
      */
@@ -743,7 +755,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例的物理机 IP
+     * set 实例所在的物理机IP地址。
      *
      * @param hostIp
      */
@@ -753,7 +765,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 机架信息
+     * set 实例所在机架信息。
      *
      * @param rack
      */
@@ -764,7 +776,7 @@ public class InternalInstance  implements java.io.Serializable {
 
 
     /**
-     * add item to 数据盘配置
+     * add item to 数据盘配置列表。
      *
      * @param dataDisk
      */
@@ -776,7 +788,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * add item to 辅助网卡配置
+     * add item to 辅助网卡配置列表。
      *
      * @param secondaryNetworkInterface
      */
@@ -788,7 +800,7 @@ public class InternalInstance  implements java.io.Serializable {
     }
 
     /**
-     * add item to 密钥对名称
+     * add item to 云主机使用的密钥对名称。
      *
      * @param keyName
      */

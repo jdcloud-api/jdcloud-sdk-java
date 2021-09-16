@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * metadata
+ * 自定义元数据信息，以 key-value 键值对表示。
  */
 public class Metadata  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 键，最大长度256，支持全字符
+     * key，字符长度不超过256，支持全字符。不能以连字符(-)结尾，否则此key不生效。
      */
     private String key;
 
     /**
-     * 值，最大长度16k，支持全字符
+     * value，字符长度不超过16KB，支持全字符。
      */
     private String value;
 
 
     /**
-     * get 键，最大长度256，支持全字符
+     * get key，字符长度不超过256，支持全字符。不能以连字符(-)结尾，否则此key不生效。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class Metadata  implements java.io.Serializable {
     }
 
     /**
-     * set 键，最大长度256，支持全字符
+     * set key，字符长度不超过256，支持全字符。不能以连字符(-)结尾，否则此key不生效。
      *
      * @param key
      */
@@ -62,7 +62,7 @@ public class Metadata  implements java.io.Serializable {
     }
 
     /**
-     * get 值，最大长度16k，支持全字符
+     * get value，字符长度不超过16KB，支持全字符。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class Metadata  implements java.io.Serializable {
     }
 
     /**
-     * set 值，最大长度16k，支持全字符
+     * set value，字符长度不超过16KB，支持全字符。
      *
      * @param value
      */
@@ -81,7 +81,7 @@ public class Metadata  implements java.io.Serializable {
 
 
     /**
-     * set 键，最大长度256，支持全字符
+     * set key，字符长度不超过256，支持全字符。不能以连字符(-)结尾，否则此key不生效。
      *
      * @param key
      */
@@ -91,7 +91,7 @@ public class Metadata  implements java.io.Serializable {
     }
 
     /**
-     * set 值，最大长度16k，支持全字符
+     * set value，字符长度不超过16KB，支持全字符。
      *
      * @param value
      */

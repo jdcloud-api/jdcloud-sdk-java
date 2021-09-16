@@ -27,7 +27,16 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改云主机部分信息，包括名称、描述。
+ * 
+修改一台云主机的属性。
+
+详细操作说明请参考帮助文档：
+[修改实例名称](https://docs.jdcloud.com/cn/virtual-machines/modify-instance-name)
+[自定义数据](https://docs.jdcloud.com/cn/virtual-machines/userdata)
+[实例元数据](https://docs.jdcloud.com/cn/virtual-machines/instance-metadata)
+
+## 接口说明
+- 支持修改实例的名称、描述、hostname、自定义数据、实例元数据。
 
  */
 public class ModifyInstanceAttributeResult extends JdcloudResult implements java.io.Serializable {

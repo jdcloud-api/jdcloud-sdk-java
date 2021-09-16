@@ -28,8 +28,15 @@ import com.jdcloud.sdk.service.vm.model.ImageConstraint;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询镜像的实例规格限制。&lt;br&gt;
-通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
+ * 
+查询单个镜像的实例规格限制。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 该接口与批量查询镜像的实例规格限制返回的信息一致。
+- 通过此接口可以查询镜像的实例规格限制信息。
+- 只有官方镜像、第三方镜像有实例规格的限制，用户的私有镜像没有此限制。
 
  */
 public class DescribeImageConstraintsResult extends JdcloudResult implements java.io.Serializable {
@@ -37,13 +44,13 @@ public class DescribeImageConstraintsResult extends JdcloudResult implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像限制
+     * 镜像限制信息。
      */
     private ImageConstraint imageConstraints;
 
 
     /**
-     * get 镜像限制
+     * get 镜像限制信息。
      *
      * @return
      */
@@ -52,7 +59,7 @@ public class DescribeImageConstraintsResult extends JdcloudResult implements jav
     }
 
     /**
-     * set 镜像限制
+     * set 镜像限制信息。
      *
      * @param imageConstraints
      */
@@ -62,7 +69,7 @@ public class DescribeImageConstraintsResult extends JdcloudResult implements jav
 
 
     /**
-     * set 镜像限制
+     * set 镜像限制信息。
      *
      * @param imageConstraints
      */

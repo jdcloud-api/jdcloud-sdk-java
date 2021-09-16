@@ -28,24 +28,26 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * image
+ * 云主机镜像详细信息。
  */
 public class Image  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      */
     private String imageId;
 
     /**
-     * 镜像名称
+     * 镜像名称。
      */
     private String name;
 
     /**
-     * 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
+     * 镜像的操作系统平台名称。
+取值范围：&#x60;Ubuntu、CentOS、Windows Server、Other Linux、Other Windows&#x60;。
+
      */
     private String platform;
 
@@ -55,93 +57,106 @@ public class Image  implements java.io.Serializable {
     private String osVersion;
 
     /**
-     * 镜像架构。取值：i386,x86_64
+     * 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
      */
     private String architecture;
 
     /**
-     * 镜像系统盘大小
+     * 镜像系统盘大小。
      */
     private Integer systemDiskSizeGB;
 
     /**
-     * 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
+     * 镜像来源，取值范围：
+&#x60;public&#x60;：官方镜像。
+&#x60;thirdparty&#x60;：镜像市场镜像。
+&#x60;private&#x60;：用户自己的私有镜像。
+&#x60;shared&#x60;：其他用户分享的镜像。
+&#x60;community&#x60;：社区镜像。
+
      */
     private String imageSource;
 
     /**
-     * 镜像的操作系统类型。取值：windows,linux
+     * 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
      */
     private String osType;
 
     /**
-     * &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+     * 镜像状态。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)。
      */
     private String status;
 
     /**
-     * 创建时间
+     * 镜像的创建时间。
      */
     private String createTime;
 
     /**
-     * 镜像文件实际大小
+     * 镜像文件的实际大小。
      */
     private Integer sizeMB;
 
     /**
-     * 镜像描述
+     * 镜像描述。
      */
     private String desc;
 
     /**
-     * 该镜像所有者的用户PIN
+     * 该镜像拥有者的用户PIN。
      */
     private String ownerPin;
 
     /**
-     * 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+     * 镜像的使用权限。取值范围：
+&#x60;all&#x60;：没有限制，所有人均可以使用。
+&#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+&#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+
      */
     private String launchPermission;
 
     /**
-     * 镜像系统盘配置
+     * 镜像系统盘配置。
      */
     private InstanceDiskAttachment systemDisk;
 
     /**
-     * 镜像数据盘映射信息
+     * 镜像数据盘配置列表。
      */
     private List<InstanceDiskAttachment> dataDisks;
 
     /**
-     * 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
+     * 创建云盘系统盘所使用的快照ID。系统盘类型为本地盘的镜像，此参数为空。
      */
     private String snapshotId;
 
     /**
-     * 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
+     * 镜像支持的系统盘类型。取值范围：
+&#x60;localDisk&#x60;：本地盘系统盘。
+&#x60;cloudDisk&#x60;：云盘系统盘。
+
      */
     private String rootDeviceType;
 
     /**
-     * 镜像复制和转换时的进度，仅显示数值，单位为百分比
+     * 镜像复制和转换时的进度，仅显示数值，单位为百分比。
      */
     private String progress;
 
     /**
-     * 该镜像的上下线状态
+     * 镜像的上下线状态。&#x60;offline&#x3D;true&#x60; 的镜像不再允许创建云主机。
      */
     private Boolean offline;
 
     /**
-     * 该镜像所属的产品线标识
+     * 已废弃。
      */
     private String serviceCode;
 
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -150,7 +165,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -159,7 +174,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像名称
+     * get 镜像名称。
      *
      * @return
      */
@@ -168,7 +183,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像名称
+     * set 镜像名称。
      *
      * @param name
      */
@@ -177,7 +192,9 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
+     * get 镜像的操作系统平台名称。
+取值范围：&#x60;Ubuntu、CentOS、Windows Server、Other Linux、Other Windows&#x60;。
+
      *
      * @return
      */
@@ -186,7 +203,9 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
+     * set 镜像的操作系统平台名称。
+取值范围：&#x60;Ubuntu、CentOS、Windows Server、Other Linux、Other Windows&#x60;。
+
      *
      * @param platform
      */
@@ -213,7 +232,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像架构。取值：i386,x86_64
+     * get 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
      *
      * @return
      */
@@ -222,7 +241,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像架构。取值：i386,x86_64
+     * set 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
      *
      * @param architecture
      */
@@ -231,7 +250,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像系统盘大小
+     * get 镜像系统盘大小。
      *
      * @return
      */
@@ -240,7 +259,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像系统盘大小
+     * set 镜像系统盘大小。
      *
      * @param systemDiskSizeGB
      */
@@ -249,7 +268,13 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
+     * get 镜像来源，取值范围：
+&#x60;public&#x60;：官方镜像。
+&#x60;thirdparty&#x60;：镜像市场镜像。
+&#x60;private&#x60;：用户自己的私有镜像。
+&#x60;shared&#x60;：其他用户分享的镜像。
+&#x60;community&#x60;：社区镜像。
+
      *
      * @return
      */
@@ -258,7 +283,13 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
+     * set 镜像来源，取值范围：
+&#x60;public&#x60;：官方镜像。
+&#x60;thirdparty&#x60;：镜像市场镜像。
+&#x60;private&#x60;：用户自己的私有镜像。
+&#x60;shared&#x60;：其他用户分享的镜像。
+&#x60;community&#x60;：社区镜像。
+
      *
      * @param imageSource
      */
@@ -267,7 +298,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像的操作系统类型。取值：windows,linux
+     * get 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
      *
      * @return
      */
@@ -276,7 +307,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像的操作系统类型。取值：windows,linux
+     * set 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
      *
      * @param osType
      */
@@ -285,7 +316,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+     * get 镜像状态。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)。
      *
      * @return
      */
@@ -294,7 +325,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+     * set 镜像状态。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)。
      *
      * @param status
      */
@@ -303,7 +334,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 镜像的创建时间。
      *
      * @return
      */
@@ -312,7 +343,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 镜像的创建时间。
      *
      * @param createTime
      */
@@ -321,7 +352,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像文件实际大小
+     * get 镜像文件的实际大小。
      *
      * @return
      */
@@ -330,7 +361,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像文件实际大小
+     * set 镜像文件的实际大小。
      *
      * @param sizeMB
      */
@@ -339,7 +370,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像描述
+     * get 镜像描述。
      *
      * @return
      */
@@ -348,7 +379,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像描述
+     * set 镜像描述。
      *
      * @param desc
      */
@@ -357,7 +388,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 该镜像所有者的用户PIN
+     * get 该镜像拥有者的用户PIN。
      *
      * @return
      */
@@ -366,7 +397,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 该镜像所有者的用户PIN
+     * set 该镜像拥有者的用户PIN。
      *
      * @param ownerPin
      */
@@ -375,7 +406,11 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+     * get 镜像的使用权限。取值范围：
+&#x60;all&#x60;：没有限制，所有人均可以使用。
+&#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+&#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+
      *
      * @return
      */
@@ -384,7 +419,11 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+     * set 镜像的使用权限。取值范围：
+&#x60;all&#x60;：没有限制，所有人均可以使用。
+&#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+&#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+
      *
      * @param launchPermission
      */
@@ -393,7 +432,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像系统盘配置
+     * get 镜像系统盘配置。
      *
      * @return
      */
@@ -402,7 +441,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像系统盘配置
+     * set 镜像系统盘配置。
      *
      * @param systemDisk
      */
@@ -411,7 +450,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像数据盘映射信息
+     * get 镜像数据盘配置列表。
      *
      * @return
      */
@@ -420,7 +459,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像数据盘映射信息
+     * set 镜像数据盘配置列表。
      *
      * @param dataDisks
      */
@@ -429,7 +468,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
+     * get 创建云盘系统盘所使用的快照ID。系统盘类型为本地盘的镜像，此参数为空。
      *
      * @return
      */
@@ -438,7 +477,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
+     * set 创建云盘系统盘所使用的快照ID。系统盘类型为本地盘的镜像，此参数为空。
      *
      * @param snapshotId
      */
@@ -447,7 +486,10 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
+     * get 镜像支持的系统盘类型。取值范围：
+&#x60;localDisk&#x60;：本地盘系统盘。
+&#x60;cloudDisk&#x60;：云盘系统盘。
+
      *
      * @return
      */
@@ -456,7 +498,10 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
+     * set 镜像支持的系统盘类型。取值范围：
+&#x60;localDisk&#x60;：本地盘系统盘。
+&#x60;cloudDisk&#x60;：云盘系统盘。
+
      *
      * @param rootDeviceType
      */
@@ -465,7 +510,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像复制和转换时的进度，仅显示数值，单位为百分比
+     * get 镜像复制和转换时的进度，仅显示数值，单位为百分比。
      *
      * @return
      */
@@ -474,7 +519,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像复制和转换时的进度，仅显示数值，单位为百分比
+     * set 镜像复制和转换时的进度，仅显示数值，单位为百分比。
      *
      * @param progress
      */
@@ -483,7 +528,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 该镜像的上下线状态
+     * get 镜像的上下线状态。&#x60;offline&#x3D;true&#x60; 的镜像不再允许创建云主机。
      *
      * @return
      */
@@ -492,7 +537,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 该镜像的上下线状态
+     * set 镜像的上下线状态。&#x60;offline&#x3D;true&#x60; 的镜像不再允许创建云主机。
      *
      * @param offline
      */
@@ -501,7 +546,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 该镜像所属的产品线标识
+     * get 已废弃。
      *
      * @return
      */
@@ -510,7 +555,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 该镜像所属的产品线标识
+     * set 已废弃。
      *
      * @param serviceCode
      */
@@ -520,7 +565,7 @@ public class Image  implements java.io.Serializable {
 
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -530,7 +575,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像名称
+     * set 镜像名称。
      *
      * @param name
      */
@@ -540,7 +585,9 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像的操作系统发行版。取值：Ubuntu,CentOS,Windows Server
+     * set 镜像的操作系统平台名称。
+取值范围：&#x60;Ubuntu、CentOS、Windows Server、Other Linux、Other Windows&#x60;。
+
      *
      * @param platform
      */
@@ -560,7 +607,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像架构。取值：i386,x86_64
+     * set 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
      *
      * @param architecture
      */
@@ -570,7 +617,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像系统盘大小
+     * set 镜像系统盘大小。
      *
      * @param systemDiskSizeGB
      */
@@ -580,7 +627,13 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像来源。取值：jcloud：官方镜像；marketplace：镜像市场镜像；self：用户自己的镜像；shared：其他用户分享的镜像
+     * set 镜像来源，取值范围：
+&#x60;public&#x60;：官方镜像。
+&#x60;thirdparty&#x60;：镜像市场镜像。
+&#x60;private&#x60;：用户自己的私有镜像。
+&#x60;shared&#x60;：其他用户分享的镜像。
+&#x60;community&#x60;：社区镜像。
+
      *
      * @param imageSource
      */
@@ -590,7 +643,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像的操作系统类型。取值：windows,linux
+     * set 镜像的操作系统类型。取值范围：&#x60;windows、linux&#x60;。
      *
      * @param osType
      */
@@ -600,7 +653,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+     * set 镜像状态。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)。
      *
      * @param status
      */
@@ -610,7 +663,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 镜像的创建时间。
      *
      * @param createTime
      */
@@ -620,7 +673,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像文件实际大小
+     * set 镜像文件的实际大小。
      *
      * @param sizeMB
      */
@@ -630,7 +683,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像描述
+     * set 镜像描述。
      *
      * @param desc
      */
@@ -640,7 +693,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 该镜像所有者的用户PIN
+     * set 该镜像拥有者的用户PIN。
      *
      * @param ownerPin
      */
@@ -650,7 +703,11 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像的使用权限，取值：all（所有人可用）， specifiedUsers（共享用户可用），ownerOnly（镜像所有者自己可用）
+     * set 镜像的使用权限。取值范围：
+&#x60;all&#x60;：没有限制，所有人均可以使用。
+&#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+&#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+
      *
      * @param launchPermission
      */
@@ -660,7 +717,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像系统盘配置
+     * set 镜像系统盘配置。
      *
      * @param systemDisk
      */
@@ -670,7 +727,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像数据盘映射信息
+     * set 镜像数据盘配置列表。
      *
      * @param dataDisks
      */
@@ -680,7 +737,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 创建云盘系统盘所使用的云硬盘快照ID。系统盘类型为本地盘的镜像，此参数为空。
+     * set 创建云盘系统盘所使用的快照ID。系统盘类型为本地盘的镜像，此参数为空。
      *
      * @param snapshotId
      */
@@ -690,7 +747,10 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像支持的系统盘类型。取值：localDisk：本地盘系统盘；cloudDisk：云盘系统盘。
+     * set 镜像支持的系统盘类型。取值范围：
+&#x60;localDisk&#x60;：本地盘系统盘。
+&#x60;cloudDisk&#x60;：云盘系统盘。
+
      *
      * @param rootDeviceType
      */
@@ -700,7 +760,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像复制和转换时的进度，仅显示数值，单位为百分比
+     * set 镜像复制和转换时的进度，仅显示数值，单位为百分比。
      *
      * @param progress
      */
@@ -710,7 +770,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 该镜像的上下线状态
+     * set 镜像的上下线状态。&#x60;offline&#x3D;true&#x60; 的镜像不再允许创建云主机。
      *
      * @param offline
      */
@@ -720,7 +780,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 该镜像所属的产品线标识
+     * set 已废弃。
      *
      * @param serviceCode
      */
@@ -731,7 +791,7 @@ public class Image  implements java.io.Serializable {
 
 
     /**
-     * add item to 镜像数据盘映射信息
+     * add item to 镜像数据盘配置列表。
      *
      * @param dataDisk
      */

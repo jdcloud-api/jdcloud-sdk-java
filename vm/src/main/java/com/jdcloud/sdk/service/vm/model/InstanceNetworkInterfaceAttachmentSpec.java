@@ -27,25 +27,38 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.vpc.model.NetworkInterfaceSpec;
 
 /**
- * instanceNetworkInterfaceAttachmentSpec
+ * 云主机实例弹性网卡挂载点配置信息。
  */
 public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 网卡设备Index，主网卡只能是1
+     * 网卡设备Index。创建实例时此参数无须指定且指定无效。
+对于主网卡默认Index为1，辅助网卡自动分配。
+
      */
     private Integer deviceIndex;
 
     /**
-     * 网卡接口规范
+     * 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
+     */
+    private Boolean autoDelete;
+
+    /**
+     * 网卡设备详细配置。
+
      */
     private NetworkInterfaceSpec networkInterface;
 
 
     /**
-     * get 网卡设备Index，主网卡只能是1
+     * get 网卡设备Index。创建实例时此参数无须指定且指定无效。
+对于主网卡默认Index为1，辅助网卡自动分配。
+
      *
      * @return
      */
@@ -54,7 +67,9 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     }
 
     /**
-     * set 网卡设备Index，主网卡只能是1
+     * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
+对于主网卡默认Index为1，辅助网卡自动分配。
+
      *
      * @param deviceIndex
      */
@@ -63,7 +78,32 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     }
 
     /**
-     * get 网卡接口规范
+     * get 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
+     *
+     * @return
+     */
+    public Boolean getAutoDelete() {
+        return autoDelete;
+    }
+
+    /**
+     * set 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
+     *
+     * @param autoDelete
+     */
+    public void setAutoDelete(Boolean autoDelete) {
+        this.autoDelete = autoDelete;
+    }
+
+    /**
+     * get 网卡设备详细配置。
+
      *
      * @return
      */
@@ -72,7 +112,8 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     }
 
     /**
-     * set 网卡接口规范
+     * set 网卡设备详细配置。
+
      *
      * @param networkInterface
      */
@@ -82,7 +123,9 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
 
 
     /**
-     * set 网卡设备Index，主网卡只能是1
+     * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
+对于主网卡默认Index为1，辅助网卡自动分配。
+
      *
      * @param deviceIndex
      */
@@ -92,7 +135,21 @@ public class InstanceNetworkInterfaceAttachmentSpec  implements java.io.Serializ
     }
 
     /**
-     * set 网卡接口规范
+     * set 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
+     *
+     * @param autoDelete
+     */
+    public InstanceNetworkInterfaceAttachmentSpec autoDelete(Boolean autoDelete) {
+        this.autoDelete = autoDelete;
+        return this;
+    }
+
+    /**
+     * set 网卡设备详细配置。
+
      *
      * @param networkInterface
      */

@@ -28,7 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除ssh密钥对。
+ * 
+删除密钥。
+
+详细操作说明请参考帮助文档：[删除密钥](https://docs.jdcloud.com/cn/virtual-machines/delete-keypair)
+
+## 接口说明
+- 密钥删除后，使用该密钥的实例仍可正常使用与之匹配的本地私钥登录，且密钥仍会显示在实例详情中。
+- 密钥删除后，与之关联的实例模板将变为不可用，并且与该实例模板关联的高可用组也会变为不可用。
 
  */
 public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,14 +43,14 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 密钥名称
+     * 密钥名称。
      * Required:true
      */
     @Required
@@ -51,7 +58,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -60,7 +67,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -69,7 +76,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 密钥名称
+     * get 密钥名称。
      *
      * @return
      */
@@ -78,7 +85,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥名称
+     * set 密钥名称。
      *
      * @param keyName
      */
@@ -88,7 +95,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -98,7 +105,7 @@ public class DeleteKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥名称
+     * set 密钥名称。
      *
      * @param keyName
      */

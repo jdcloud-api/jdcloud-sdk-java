@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,13 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除一个启动模板
+ * 
+删除单个实例模板。
+
+详细操作说明请参考帮助文档：[删除实例模板](https://docs.jdcloud.com/cn/virtual-machines/delete-instance-template)
+
+## 接口说明
+- 关联了高可用组的实例模板不可以删除。
 
  */
 public class DeleteInstanceTemplateResult extends JdcloudResult implements java.io.Serializable {

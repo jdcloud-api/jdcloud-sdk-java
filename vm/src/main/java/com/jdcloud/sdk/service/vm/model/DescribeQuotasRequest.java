@@ -31,7 +31,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询配额，支持的类型：云主机、镜像、密钥、模板、镜像共享。
+ * 
+查询资源配额。
+
+## 接口说明
+- 调用该接口可查询 &#x60;云主机&#x60;、&#x60;镜像&#x60;、&#x60;密钥&#x60;、&#x60;实例模板&#x60;、&#x60;镜像共享&#x60; 的配额。
 
  */
 public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Serializable {
@@ -39,18 +43,21 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
+     * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
 
      */
     private List<Filter> filters;
 
     /**
-     * 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+     * 私有镜像Id。
+查询镜像共享 &#x60;imageShare&#x60; 的配额时，此参数必传。
+
      */
     private String imageId;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -58,7 +65,8 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
+     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
 
      *
      * @return
@@ -68,7 +76,8 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
+     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
 
      *
      * @param filters
@@ -78,7 +87,9 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+     * get 私有镜像Id。
+查询镜像共享 &#x60;imageShare&#x60; 的配额时，此参数必传。
+
      *
      * @return
      */
@@ -87,7 +98,9 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+     * set 私有镜像Id。
+查询镜像共享 &#x60;imageShare&#x60; 的配额时，此参数必传。
+
      *
      * @param imageId
      */
@@ -96,7 +109,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -105,7 +118,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -115,7 +128,8 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
+     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
 
      *
      * @param filters
@@ -126,7 +140,9 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 私有镜像Id，查询镜像共享(imageShare)配额时，此参数必传
+     * set 私有镜像Id。
+查询镜像共享 &#x60;imageShare&#x60; 的配额时，此参数必传。
+
      *
      * @param imageId
      */
@@ -136,7 +152,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -147,7 +163,8 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * add item to resourceTypes - 资源类型，支持多个[instance，keypair，image，instanceTemplate，imageShare]
+     * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
 
      *
      * @param filter

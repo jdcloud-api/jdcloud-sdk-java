@@ -27,8 +27,16 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除一个私有镜像，只允许操作您的个人私有镜像。&lt;br&gt;
-若镜像已共享给其他用户，需先取消共享才可删除。
+ * 
+删除一个私有镜像。
+
+详细操作说明请参考帮助文档：[删除私有镜像](https://docs.jdcloud.com/cn/virtual-machines/delete-private-image)
+
+## 接口说明
+- 已共享的私有镜像在取消共享关系前不可以删除，如私有镜像已共享给其他用户，请取消共享后再进行删除。
+- 本地系统盘镜像在有基于其创建的云主机时，将无法删除。
+- 只能操作私有镜像。
+- 私有镜像没有正在处理中的任务时才可以删除。
 
  */
 public class DeleteImageResult extends JdcloudResult implements java.io.Serializable {

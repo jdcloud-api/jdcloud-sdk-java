@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * chargeEvent
+ * 云主机实例计费事件。
  */
 public class ChargeEvent  implements java.io.Serializable {
 

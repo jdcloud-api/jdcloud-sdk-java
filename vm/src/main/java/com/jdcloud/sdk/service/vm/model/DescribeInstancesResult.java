@@ -30,8 +30,17 @@ import com.jdcloud.sdk.service.vm.model.Instance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 批量查询云主机的详细信息&lt;br&gt;
-此接口支持分页查询，默认每页20条。
+ * 
+查询一台或多台云主机实例的详细信息。
+
+详细操作说明请参考帮助文档：[查找实例](https://docs.jdcloud.com/cn/virtual-machines/search-instance)
+
+## 接口说明
+- 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+- 如果使用子帐号查询，只会查询到该子帐号有权限的云主机实例。关于资源权限请参考 [IAM概述](https://docs.jdcloud.com/cn/iam/product-overview)。
+- 单次查询最大可查询100条云主机实例数据。
+- 尽量一次调用接口查询多条数据，不建议使用该批量查询接口一次查询一条数据，如果使用不当导致查询过于密集，可能导致网关触发限流。
+- 由于该接口为 &#x60;GET&#x60; 方式请求，最终参数会转换为 &#x60;URL&#x60; 上的参数，但是 &#x60;HTTP&#x60; 协议下的 &#x60;GET&#x60; 请求参数长度是有大小限制的，使用者需要注意参数超长的问题。
 
  */
 public class DescribeInstancesResult extends JdcloudResult implements java.io.Serializable {
@@ -44,7 +53,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     private List<Instance> instances;
 
     /**
-     * totalCount
+     * 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Number totalCount;
 
@@ -68,7 +77,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * get totalCount
+     * get 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
      * @return
      */
@@ -77,7 +86,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set totalCount
+     * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
      * @param totalCount
      */
@@ -97,7 +106,7 @@ public class DescribeInstancesResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set totalCount
+     * set 本次查询可匹配到的总记录数，使用者需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
      * @param totalCount
      */

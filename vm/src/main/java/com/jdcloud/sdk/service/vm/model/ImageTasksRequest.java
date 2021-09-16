@@ -30,7 +30,17 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询镜像导入导出任务详情
+ * 
+查询镜像任务详情。
+
+将京东云私有镜像导出至京东云以外环境。
+
+详细操作说明请参考帮助文档：
+[导入私有镜像](https://docs.jdcloud.com/cn/virtual-machines/import-private-image)
+[导出私有镜像](https://docs.jdcloud.com/cn/virtual-machines/export-private-image)
+
+## 接口说明
+- 调用该接口可查询镜像导入或导出的任务详情。
 
  */
 public class ImageTasksRequest extends JdcloudRequest implements java.io.Serializable {
@@ -38,19 +48,19 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 任务种类。可选值：ImportImage， ExportImage
+     * 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      * Required:true
      */
     @Required
     private String taskAction;
 
     /**
-     * 任务id
+     * 任务id列表。
      */
     private List<Integer> taskIds;
 
     /**
-     * 任务状态。可选值：pending,running,failed,finished
+     * 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      */
     private String taskStatus;
 
@@ -65,17 +75,17 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     private String endTime;
 
     /**
-     * 页码；默认为1
+     * 页码；默认为1。
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 分页大小；默认为10；取值范围[1, 10]。
      */
     private Integer pageSize;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -83,7 +93,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 任务种类。可选值：ImportImage， ExportImage
+     * get 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      *
      * @return
      */
@@ -92,7 +102,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 任务种类。可选值：ImportImage， ExportImage
+     * set 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      *
      * @param taskAction
      */
@@ -101,7 +111,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 任务id
+     * get 任务id列表。
      *
      * @return
      */
@@ -110,7 +120,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 任务id
+     * set 任务id列表。
      *
      * @param taskIds
      */
@@ -119,7 +129,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 任务状态。可选值：pending,running,failed,finished
+     * get 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      *
      * @return
      */
@@ -128,7 +138,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 任务状态。可选值：pending,running,failed,finished
+     * set 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      *
      * @param taskStatus
      */
@@ -173,7 +183,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 页码；默认为1
+     * get 页码；默认为1。
      *
      * @return
      */
@@ -182,7 +192,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1。
      *
      * @param pageNumber
      */
@@ -191,7 +201,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小；默认为10；取值范围[1, 10]。
      *
      * @return
      */
@@ -200,7 +210,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；默认为10；取值范围[1, 10]。
      *
      * @param pageSize
      */
@@ -209,7 +219,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -218,7 +228,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -228,7 +238,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 任务种类。可选值：ImportImage， ExportImage
+     * set 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      *
      * @param taskAction
      */
@@ -238,7 +248,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 任务id
+     * set 任务id列表。
      *
      * @param taskIds
      */
@@ -248,7 +258,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 任务状态。可选值：pending,running,failed,finished
+     * set 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      *
      * @param taskStatus
      */
@@ -278,7 +288,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1。
      *
      * @param pageNumber
      */
@@ -288,7 +298,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；默认为10；取值范围[1, 10]。
      *
      * @param pageSize
      */
@@ -298,7 +308,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -309,7 +319,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * add item to 任务id
+     * add item to 任务id列表。
      *
      * @param taskId
      */

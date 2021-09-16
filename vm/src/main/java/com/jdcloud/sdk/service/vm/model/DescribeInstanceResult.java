@@ -28,7 +28,14 @@ import com.jdcloud.sdk.service.vm.model.Instance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询一台云主机的详细信息
+ * 
+查询一台云主机实例的详细信息。
+
+详细操作说明请参考帮助文档：[查找实例](https://docs.jdcloud.com/cn/virtual-machines/search-instance)
+
+## 接口说明
+- 该接口与查询云主机列表返回的信息一致。
+- 只需要查询单个云主机实例详细信息的时候可以调用该接口。
 
  */
 public class DescribeInstanceResult extends JdcloudResult implements java.io.Serializable {
@@ -36,13 +43,13 @@ public class DescribeInstanceResult extends JdcloudResult implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * instance
+     * 响应结果。
      */
     private Instance instance;
 
 
     /**
-     * get instance
+     * get 响应结果。
      *
      * @return
      */
@@ -51,7 +58,7 @@ public class DescribeInstanceResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
-     * set instance
+     * set 响应结果。
      *
      * @param instance
      */
@@ -61,7 +68,7 @@ public class DescribeInstanceResult extends JdcloudResult implements java.io.Ser
 
 
     /**
-     * set instance
+     * set 响应结果。
      *
      * @param instance
      */

@@ -28,8 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改云主机密码，主机没有正在进行中的任务时才可操作。&lt;br&gt;
-修改密码后，需要重启云主机后生效。
+ * 
+修改云主机密码。
+
+详细操作说明请参考帮助文档：[重置密码](https://docs.jdcloud.com/cn/virtual-machines/reset-password)
+
+## 接口说明
+- 实例没有正在进行中的任务时才可操作。
+- 重置密码后，需要重启云主机后生效。
 
  */
 public class ModifyInstancePasswordRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,21 +43,25 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 实例密码。
+可用于SSH登录和VNC登录。
+长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：&#x60;\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，&#x60;。
+更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+
      * Required:true
      */
     @Required
     private String password;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -59,7 +69,11 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 实例密码。
+可用于SSH登录和VNC登录。
+长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：&#x60;\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，&#x60;。
+更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+
      *
      * @return
      */
@@ -68,7 +82,11 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 实例密码。
+可用于SSH登录和VNC登录。
+长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：&#x60;\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，&#x60;。
+更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+
      *
      * @param password
      */
@@ -77,7 +95,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -86,7 +104,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -95,7 +113,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -104,7 +122,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -114,7 +132,11 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 实例密码。
+可用于SSH登录和VNC登录。
+长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：&#x60;\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，&#x60;。
+更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+
      *
      * @param password
      */
@@ -124,7 +146,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -134,7 +156,7 @@ public class ModifyInstancePasswordRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */

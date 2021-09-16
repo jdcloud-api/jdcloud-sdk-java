@@ -30,7 +30,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 取消共享镜像，只允许操作您的个人私有镜像。
+ * 
+取消共享私有镜像。
+
+详细操作说明请参考帮助文档：[取消共享私有镜像](https://docs.jdcloud.com/cn/virtual-machines/cancel-share-image)
+
+## 接口说明
+- 只允许操作用户的私有镜像。
+- 原被共享用户将无法再使用该镜像创建云主机实例，同时使用该镜像创建的云主机实例也无法重置为原始系统状态。
 
  */
 public class UnShareImageRequest extends JdcloudRequest implements java.io.Serializable {
@@ -38,21 +45,21 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要取消的帐户
+     * 需要取消的京东云帐户列表。
      * Required:true
      */
     @Required
     private List<String> pins;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      * Required:true
      */
     @Required
@@ -60,7 +67,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 需要取消的帐户
+     * get 需要取消的京东云帐户列表。
      *
      * @return
      */
@@ -69,7 +76,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 需要取消的帐户
+     * set 需要取消的京东云帐户列表。
      *
      * @param pins
      */
@@ -78,7 +85,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -87,7 +94,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -96,7 +103,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -105,7 +112,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -115,7 +122,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 需要取消的帐户
+     * set 需要取消的京东云帐户列表。
      *
      * @param pins
      */
@@ -125,7 +132,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -135,7 +142,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -146,7 +153,7 @@ public class UnShareImageRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * add item to 需要取消的帐户
+     * add item to 需要取消的京东云帐户列表。
      *
      * @param pin
      */

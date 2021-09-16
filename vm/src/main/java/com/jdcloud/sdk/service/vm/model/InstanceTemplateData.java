@@ -28,80 +28,90 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * instanceTemplateData
+ * 实例模板详细配置。
  */
 public class InstanceTemplateData  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例规格
+     * 实例规格。
      */
     private String instanceType;
 
     /**
-     * 主网卡所属VPC的ID
+     * 主网卡所属VPC的ID。
      */
     private String vpcId;
 
     /**
-     * 镜像ID
+     * 云主机使用的镜像ID。
      */
     private String imageId;
 
     /**
-     * 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
+     * 实例模板中是否包含自定义密码。&#x60;true&#x60;：包含自定义密码，&#x60;false&#x60;：不包含自定义密码。
      */
     private Boolean includePassword;
 
     /**
-     * 系统盘信息
+     * 系统盘配置。
      */
     private InstanceTemplateDiskAttachment systemDisk;
 
     /**
-     * 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * 数据盘配置列表。
      */
     private List<InstanceTemplateDiskAttachment> dataDisks;
 
     /**
-     * 主网卡信息
+     * 主网卡配置。
      */
     private InstanceTemplateNetworkInterfaceAttachment primaryNetworkInterface;
 
     /**
-     * 主网卡主IP关联的弹性IP规格
+     * 主网卡主IP关联的弹性公网IP配置。
      */
     private InstanceTemplateElasticIp elasticIp;
 
     /**
-     * 密钥对名称；当前只支持一个
+     * 云主机使用的密钥对名称。
      */
     private List<String> keyNames;
 
     /**
-     * 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     * 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+&#x60;keepCharging&#x60;：关机后继续计费。
+&#x60;stopCharging&#x60;：关机后停止计费。
+
      */
     private String chargeOnStopped;
 
     /**
-     * 自动镜像策略ID
+     * 自动任务策略ID。
      */
     private String autoImagePolicyId;
 
     /**
-     * 是否使用密码
+     * 允许SSH密码登录。
+&#x60;yes&#x60;：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+
      */
     private String passwordAuth;
 
     /**
-     * 是否继承镜像密码密钥
+     * 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+&#x60;yes&#x60;：使用镜像登录凭证。
+&#x60;no&#x60;：不使用镜像登录凭证。
+仅使用私有或共享镜像时此参数有效。
      */
     private String imageInherit;
 
 
     /**
-     * get 实例规格
+     * get 实例规格。
      *
      * @return
      */
@@ -110,7 +120,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格
+     * set 实例规格。
      *
      * @param instanceType
      */
@@ -119,7 +129,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡所属VPC的ID
+     * get 主网卡所属VPC的ID。
      *
      * @return
      */
@@ -128,7 +138,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡所属VPC的ID
+     * set 主网卡所属VPC的ID。
      *
      * @param vpcId
      */
@@ -137,7 +147,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像ID
+     * get 云主机使用的镜像ID。
      *
      * @return
      */
@@ -146,7 +156,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 云主机使用的镜像ID。
      *
      * @param imageId
      */
@@ -155,7 +165,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
+     * get 实例模板中是否包含自定义密码。&#x60;true&#x60;：包含自定义密码，&#x60;false&#x60;：不包含自定义密码。
      *
      * @return
      */
@@ -164,7 +174,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
+     * set 实例模板中是否包含自定义密码。&#x60;true&#x60;：包含自定义密码，&#x60;false&#x60;：不包含自定义密码。
      *
      * @param includePassword
      */
@@ -173,7 +183,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘信息
+     * get 系统盘配置。
      *
      * @return
      */
@@ -182,7 +192,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘信息
+     * set 系统盘配置。
      *
      * @param systemDisk
      */
@@ -191,7 +201,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * get 数据盘配置列表。
      *
      * @return
      */
@@ -200,7 +210,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * set 数据盘配置列表。
      *
      * @param dataDisks
      */
@@ -209,7 +219,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡信息
+     * get 主网卡配置。
      *
      * @return
      */
@@ -218,7 +228,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡信息
+     * set 主网卡配置。
      *
      * @param primaryNetworkInterface
      */
@@ -227,7 +237,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡主IP关联的弹性IP规格
+     * get 主网卡主IP关联的弹性公网IP配置。
      *
      * @return
      */
@@ -236,7 +246,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡主IP关联的弹性IP规格
+     * set 主网卡主IP关联的弹性公网IP配置。
      *
      * @param elasticIp
      */
@@ -245,7 +255,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 密钥对名称；当前只支持一个
+     * get 云主机使用的密钥对名称。
      *
      * @return
      */
@@ -254,7 +264,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称；当前只支持一个
+     * set 云主机使用的密钥对名称。
      *
      * @param keyNames
      */
@@ -263,7 +273,10 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     * get 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+&#x60;keepCharging&#x60;：关机后继续计费。
+&#x60;stopCharging&#x60;：关机后停止计费。
+
      *
      * @return
      */
@@ -272,7 +285,10 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+&#x60;keepCharging&#x60;：关机后继续计费。
+&#x60;stopCharging&#x60;：关机后停止计费。
+
      *
      * @param chargeOnStopped
      */
@@ -281,7 +297,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 自动镜像策略ID
+     * get 自动任务策略ID。
      *
      * @return
      */
@@ -290,7 +306,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 自动镜像策略ID
+     * set 自动任务策略ID。
      *
      * @param autoImagePolicyId
      */
@@ -299,7 +315,11 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 是否使用密码
+     * get 允许SSH密码登录。
+&#x60;yes&#x60;：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+
      *
      * @return
      */
@@ -308,7 +328,11 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 是否使用密码
+     * set 允许SSH密码登录。
+&#x60;yes&#x60;：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+
      *
      * @param passwordAuth
      */
@@ -317,7 +341,10 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * get 是否继承镜像密码密钥
+     * get 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+&#x60;yes&#x60;：使用镜像登录凭证。
+&#x60;no&#x60;：不使用镜像登录凭证。
+仅使用私有或共享镜像时此参数有效。
      *
      * @return
      */
@@ -326,7 +353,10 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 是否继承镜像密码密钥
+     * set 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+&#x60;yes&#x60;：使用镜像登录凭证。
+&#x60;no&#x60;：不使用镜像登录凭证。
+仅使用私有或共享镜像时此参数有效。
      *
      * @param imageInherit
      */
@@ -336,7 +366,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
 
 
     /**
-     * set 实例规格
+     * set 实例规格。
      *
      * @param instanceType
      */
@@ -346,7 +376,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡所属VPC的ID
+     * set 主网卡所属VPC的ID。
      *
      * @param vpcId
      */
@@ -356,7 +386,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 云主机使用的镜像ID。
      *
      * @param imageId
      */
@@ -366,7 +396,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板中是否包含自定义密码，true：包含密码，false：不包含密码
+     * set 实例模板中是否包含自定义密码。&#x60;true&#x60;：包含自定义密码，&#x60;false&#x60;：不包含自定义密码。
      *
      * @param includePassword
      */
@@ -376,7 +406,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘信息
+     * set 系统盘配置。
      *
      * @param systemDisk
      */
@@ -386,7 +416,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * set 数据盘配置列表。
      *
      * @param dataDisks
      */
@@ -396,7 +426,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡信息
+     * set 主网卡配置。
      *
      * @param primaryNetworkInterface
      */
@@ -406,7 +436,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡主IP关联的弹性IP规格
+     * set 主网卡主IP关联的弹性公网IP配置。
      *
      * @param elasticIp
      */
@@ -416,7 +446,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称；当前只支持一个
+     * set 云主机使用的密钥对名称。
      *
      * @param keyNames
      */
@@ -426,7 +456,10 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 停机不计费的标志， keepCharging(默认)：关机后继续计费；stopCharging：关机后停止计费。
+     * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+&#x60;keepCharging&#x60;：关机后继续计费。
+&#x60;stopCharging&#x60;：关机后停止计费。
+
      *
      * @param chargeOnStopped
      */
@@ -436,7 +469,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 自动镜像策略ID
+     * set 自动任务策略ID。
      *
      * @param autoImagePolicyId
      */
@@ -446,7 +479,11 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 是否使用密码
+     * set 允许SSH密码登录。
+&#x60;yes&#x60;：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+
      *
      * @param passwordAuth
      */
@@ -456,7 +493,10 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * set 是否继承镜像密码密钥
+     * set 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+&#x60;yes&#x60;：使用镜像登录凭证。
+&#x60;no&#x60;：不使用镜像登录凭证。
+仅使用私有或共享镜像时此参数有效。
      *
      * @param imageInherit
      */
@@ -467,7 +507,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
 
 
     /**
-     * add item to 数据盘信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * add item to 数据盘配置列表。
      *
      * @param dataDisk
      */
@@ -479,7 +519,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
     }
 
     /**
-     * add item to 密钥对名称；当前只支持一个
+     * add item to 云主机使用的密钥对名称。
      *
      * @param keyName
      */

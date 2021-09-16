@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * 描述实例类型Gpu信息
+ * 云主机实例GPU信息。
  */
 public class Gpu  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * GPU型号
+     * GPU卡型号。
      */
     private String model;
 
     /**
-     * GPU数量
+     * GPU卡数量。
      */
     private Integer number;
 
 
     /**
-     * get GPU型号
+     * get GPU卡型号。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class Gpu  implements java.io.Serializable {
     }
 
     /**
-     * set GPU型号
+     * set GPU卡型号。
      *
      * @param model
      */
@@ -62,7 +62,7 @@ public class Gpu  implements java.io.Serializable {
     }
 
     /**
-     * get GPU数量
+     * get GPU卡数量。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class Gpu  implements java.io.Serializable {
     }
 
     /**
-     * set GPU数量
+     * set GPU卡数量。
      *
      * @param number
      */
@@ -81,7 +81,7 @@ public class Gpu  implements java.io.Serializable {
 
 
     /**
-     * set GPU型号
+     * set GPU卡型号。
      *
      * @param model
      */
@@ -91,7 +91,7 @@ public class Gpu  implements java.io.Serializable {
     }
 
     /**
-     * set GPU数量
+     * set GPU卡数量。
      *
      * @param number
      */

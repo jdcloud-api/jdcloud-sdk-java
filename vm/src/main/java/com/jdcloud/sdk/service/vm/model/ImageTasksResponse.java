@@ -27,7 +27,17 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询镜像导入导出任务详情
+ * 
+查询镜像任务详情。
+
+将京东云私有镜像导出至京东云以外环境。
+
+详细操作说明请参考帮助文档：
+[导入私有镜像](https://docs.jdcloud.com/cn/virtual-machines/import-private-image)
+[导出私有镜像](https://docs.jdcloud.com/cn/virtual-machines/export-private-image)
+
+## 接口说明
+- 调用该接口可查询镜像导入或导出的任务详情。
 
  */
 public class ImageTasksResponse extends JdcloudResponse<ImageTasksResult> implements java.io.Serializable {

@@ -27,8 +27,15 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
-若传入已存在的密钥名称，会返回错误。
+ * 
+导入密钥。
+
+与创建密钥不同的是，导入的密钥是由用户生成的。生成之后将公钥部分导入到京东云。
+
+详细操作说明请参考帮助文档：[创建密钥](https://docs.jdcloud.com/cn/virtual-machines/create-keypair)
+
+## 接口说明
+- 调用该接口导入由其他工具生成的密钥对的公钥部分。
 
  */
 public class ImportKeypairResult extends JdcloudResult implements java.io.Serializable {
@@ -36,18 +43,18 @@ public class ImportKeypairResult extends JdcloudResult implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 密钥对名称
+     * 密钥对名称。
      */
     private String keyName;
 
     /**
-     * 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      */
     private String keyFingerprint;
 
 
     /**
-     * get 密钥对名称
+     * get 密钥对名称。
      *
      * @return
      */
@@ -56,7 +63,7 @@ public class ImportKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称。
      *
      * @param keyName
      */
@@ -65,7 +72,7 @@ public class ImportKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * get 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * get 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @return
      */
@@ -74,7 +81,7 @@ public class ImportKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * set 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @param keyFingerprint
      */
@@ -84,7 +91,7 @@ public class ImportKeypairResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称。
      *
      * @param keyName
      */
@@ -94,7 +101,7 @@ public class ImportKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * set 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @param keyFingerprint
      */

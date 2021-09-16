@@ -28,7 +28,13 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改镜像信息，包括名称、描述；只允许操作您的个人私有镜像。
+ * 
+修改镜像属性。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 只支持修改镜像名称或描述。
 
  */
 public class ModifyImageAttributeRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,24 +42,24 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 镜像名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      */
     private String name;
 
     /**
-     * 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 镜像描述。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      */
     private String description;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      * Required:true
      */
     @Required
@@ -61,7 +67,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 镜像名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
      * @return
      */
@@ -70,7 +76,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 镜像名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
      * @param name
      */
@@ -79,7 +85,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 镜像描述。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
      * @return
      */
@@ -88,7 +94,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 镜像描述。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
      * @param description
      */
@@ -97,7 +103,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -106,7 +112,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -115,7 +121,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -124,7 +130,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -134,7 +140,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 镜像名称。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
      * @param name
      */
@@ -144,7 +150,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 镜像描述。参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      *
      * @param description
      */
@@ -154,7 +160,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -164,7 +170,7 @@ public class ModifyImageAttributeRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */

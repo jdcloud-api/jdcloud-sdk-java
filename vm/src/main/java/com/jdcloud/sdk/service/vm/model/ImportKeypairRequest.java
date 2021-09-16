@@ -28,8 +28,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 导入由其他工具生成的密钥对的公钥部分。&lt;br&gt;
-若传入已存在的密钥名称，会返回错误。
+ * 
+导入密钥。
+
+与创建密钥不同的是，导入的密钥是由用户生成的。生成之后将公钥部分导入到京东云。
+
+详细操作说明请参考帮助文档：[创建密钥](https://docs.jdcloud.com/cn/virtual-machines/create-keypair)
+
+## 接口说明
+- 调用该接口导入由其他工具生成的密钥对的公钥部分。
 
  */
 public class ImportKeypairRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,7 +44,8 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 密钥对名称，需要全局唯一。只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
+     * 密钥对名称，需要全局唯一。
+只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
 
      * Required:true
      */
@@ -45,14 +53,14 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     private String keyName;
 
     /**
-     * 密钥对的公钥部分
+     * 密钥对的公钥部分。
      * Required:true
      */
     @Required
     private String publicKey;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -60,7 +68,8 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 密钥对名称，需要全局唯一。只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
+     * get 密钥对名称，需要全局唯一。
+只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
 
      *
      * @return
@@ -70,7 +79,8 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥对名称，需要全局唯一。只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
+     * set 密钥对名称，需要全局唯一。
+只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
 
      *
      * @param keyName
@@ -80,7 +90,7 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 密钥对的公钥部分
+     * get 密钥对的公钥部分。
      *
      * @return
      */
@@ -89,7 +99,7 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥对的公钥部分
+     * set 密钥对的公钥部分。
      *
      * @param publicKey
      */
@@ -98,7 +108,7 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -107,7 +117,7 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -117,7 +127,8 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 密钥对名称，需要全局唯一。只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
+     * set 密钥对名称，需要全局唯一。
+只允许数字、大小写字母、下划线“_”及中划线“-”，不超过32个字符。
 
      *
      * @param keyName
@@ -128,7 +139,7 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥对的公钥部分
+     * set 密钥对的公钥部分。
      *
      * @param publicKey
      */
@@ -138,7 +149,7 @@ public class ImportKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */

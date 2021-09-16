@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * 描述实例绑定的安全组
+ * 实例绑定的安全组信息。
  */
 public class SecurityGroupSimple  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 安全组ID
+     * 安全组ID。
      */
     private String groupId;
 
     /**
-     * 安全组名称
+     * 安全组名称。
      */
     private String groupName;
 
 
     /**
-     * get 安全组ID
+     * get 安全组ID。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组ID
+     * set 安全组ID。
      *
      * @param groupId
      */
@@ -62,7 +62,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
     }
 
     /**
-     * get 安全组名称
+     * get 安全组名称。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组名称
+     * set 安全组名称。
      *
      * @param groupName
      */
@@ -81,7 +81,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
 
 
     /**
-     * set 安全组ID
+     * set 安全组ID。
      *
      * @param groupId
      */
@@ -91,7 +91,7 @@ public class SecurityGroupSimple  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组名称
+     * set 安全组名称。
      *
      * @param groupName
      */

@@ -27,8 +27,14 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
-不能修改主网卡。
+ * 
+修改云主机弹性网卡属性。
+
+详细操作说明请参考帮助文档：[配置弹性网卡删除属性](https://docs.jdcloud.com/cn/virtual-machines/configurate-eni-delete-attributes)
+
+## 接口说明
+- 当前只支持修改随云主机实例删除的属性。
+- 不支持修改主网卡。
 
  */
 public class ModifyInstanceNetworkAttributeResult extends JdcloudResult implements java.io.Serializable {

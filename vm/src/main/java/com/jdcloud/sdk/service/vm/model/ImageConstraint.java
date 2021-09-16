@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * imageConstraint
+ * 镜像对实例规格的约束信息。
  */
 public class ImageConstraint  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      */
     private String imageId;
 
     /**
-     * 使用镜像创建实例的规格限制
+     * 镜像对实例规格的约束信息。
      */
     private ImageInstanceTypeConstraint imageInstanceTypeConstraint;
 
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class ImageConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -62,7 +62,7 @@ public class ImageConstraint  implements java.io.Serializable {
     }
 
     /**
-     * get 使用镜像创建实例的规格限制
+     * get 镜像对实例规格的约束信息。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class ImageConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 使用镜像创建实例的规格限制
+     * set 镜像对实例规格的约束信息。
      *
      * @param imageInstanceTypeConstraint
      */
@@ -81,7 +81,7 @@ public class ImageConstraint  implements java.io.Serializable {
 
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -91,7 +91,7 @@ public class ImageConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 使用镜像创建实例的规格限制
+     * set 镜像对实例规格的约束信息。
      *
      * @param imageInstanceTypeConstraint
      */

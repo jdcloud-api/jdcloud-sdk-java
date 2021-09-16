@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * userdata
+ * 自定义脚本信息。
  */
 public class Userdata  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 键，最大长度48字符
+     * 脚本类型，当前仅支持输入 &#x60;launch-script&#x60;，即启动脚本。
      */
     private String key;
 
     /**
-     * 值，最大长度21848字符
+     * 脚本内容，须 &#x60;Base64&#x60; 编码，且编码前长度不能超过16KB。
      */
     private String value;
 
 
     /**
-     * get 键，最大长度48字符
+     * get 脚本类型，当前仅支持输入 &#x60;launch-script&#x60;，即启动脚本。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class Userdata  implements java.io.Serializable {
     }
 
     /**
-     * set 键，最大长度48字符
+     * set 脚本类型，当前仅支持输入 &#x60;launch-script&#x60;，即启动脚本。
      *
      * @param key
      */
@@ -62,7 +62,7 @@ public class Userdata  implements java.io.Serializable {
     }
 
     /**
-     * get 值，最大长度21848字符
+     * get 脚本内容，须 &#x60;Base64&#x60; 编码，且编码前长度不能超过16KB。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class Userdata  implements java.io.Serializable {
     }
 
     /**
-     * set 值，最大长度21848字符
+     * set 脚本内容，须 &#x60;Base64&#x60; 编码，且编码前长度不能超过16KB。
      *
      * @param value
      */
@@ -81,7 +81,7 @@ public class Userdata  implements java.io.Serializable {
 
 
     /**
-     * set 键，最大长度48字符
+     * set 脚本类型，当前仅支持输入 &#x60;launch-script&#x60;，即启动脚本。
      *
      * @param key
      */
@@ -91,7 +91,7 @@ public class Userdata  implements java.io.Serializable {
     }
 
     /**
-     * set 值，最大长度21848字符
+     * set 脚本内容，须 &#x60;Base64&#x60; 编码，且编码前长度不能超过16KB。
      *
      * @param value
      */

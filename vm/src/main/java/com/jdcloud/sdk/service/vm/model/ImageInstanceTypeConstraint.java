@@ -35,18 +35,24 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 限制类型。取值：excludes：不支持的实例类型；includes：支持的实例类型。
+     * 对实例规格的限制类型。取值范围：
+&#x60;excludes&#x60;：不支持的实例规格，当前只支持 excludes 一种数据。
+&#x60;includes&#x60;：支持的实例规格。
+
      */
     private String constraintsType;
 
     /**
-     * 实例规格列表
+     * 实例规格列表。
      */
     private List<String> instanceTypes;
 
 
     /**
-     * get 限制类型。取值：excludes：不支持的实例类型；includes：支持的实例类型。
+     * get 对实例规格的限制类型。取值范围：
+&#x60;excludes&#x60;：不支持的实例规格，当前只支持 excludes 一种数据。
+&#x60;includes&#x60;：支持的实例规格。
+
      *
      * @return
      */
@@ -55,7 +61,10 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 限制类型。取值：excludes：不支持的实例类型；includes：支持的实例类型。
+     * set 对实例规格的限制类型。取值范围：
+&#x60;excludes&#x60;：不支持的实例规格，当前只支持 excludes 一种数据。
+&#x60;includes&#x60;：支持的实例规格。
+
      *
      * @param constraintsType
      */
@@ -64,7 +73,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     }
 
     /**
-     * get 实例规格列表
+     * get 实例规格列表。
      *
      * @return
      */
@@ -73,7 +82,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格列表
+     * set 实例规格列表。
      *
      * @param instanceTypes
      */
@@ -83,7 +92,10 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
 
 
     /**
-     * set 限制类型。取值：excludes：不支持的实例类型；includes：支持的实例类型。
+     * set 对实例规格的限制类型。取值范围：
+&#x60;excludes&#x60;：不支持的实例规格，当前只支持 excludes 一种数据。
+&#x60;includes&#x60;：支持的实例规格。
+
      *
      * @param constraintsType
      */
@@ -93,7 +105,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
     }
 
     /**
-     * set 实例规格列表
+     * set 实例规格列表。
      *
      * @param instanceTypes
      */
@@ -104,7 +116,7 @@ public class ImageInstanceTypeConstraint  implements java.io.Serializable {
 
 
     /**
-     * add item to 实例规格列表
+     * add item to 实例规格列表。
      *
      * @param instanceType
      */

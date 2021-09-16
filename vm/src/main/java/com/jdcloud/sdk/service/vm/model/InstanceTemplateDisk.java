@@ -26,45 +26,49 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * instanceTemplateDisk
+ * 实例模板磁盘配置。
  */
 public class InstanceTemplateDisk  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云硬盘类型，取值为 ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
+     * 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      */
     private String diskType;
 
     /**
-     * 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
+     * 云硬盘大小。单位为 GiB。
+&#x60;ssd&#x60;：取值范围[20,1000]GB，步长为10GB。
+&#x60;premium-hdd&#x60;：取值范围[20,3000]GB，步长为10GB。
+&#x60;hdd.std1、ssd.gp1、ssd.io1&#x60;：取值范围[20-16000]GB，步长为10GB。
+
      */
     private Integer diskSizeGB;
 
     /**
-     * 创建云硬盘的快照ID
+     * 创建云硬盘的快照ID。
      */
     private String snapshotId;
 
     /**
-     * 策略ID
+     * 云盘快照策略ID。
      */
     private String policyId;
 
     /**
-     * 是否加密，false:(默认)不加密；true:加密
+     * 是否是加密云盘。&#x60;false&#x60;：（默认）不加密。&#x60;true&#x60;：加密。
      */
     private Boolean encrypt;
 
     /**
-     * 云硬盘的iops值
+     * 云硬盘的最大iops。
      */
     private Integer iops;
 
 
     /**
-     * get 云硬盘类型，取值为 ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
+     * get 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @return
      */
@@ -73,7 +77,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘类型，取值为 ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
+     * set 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @param diskType
      */
@@ -82,7 +86,11 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
+     * get 云硬盘大小。单位为 GiB。
+&#x60;ssd&#x60;：取值范围[20,1000]GB，步长为10GB。
+&#x60;premium-hdd&#x60;：取值范围[20,3000]GB，步长为10GB。
+&#x60;hdd.std1、ssd.gp1、ssd.io1&#x60;：取值范围[20-16000]GB，步长为10GB。
+
      *
      * @return
      */
@@ -91,7 +99,11 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
+     * set 云硬盘大小。单位为 GiB。
+&#x60;ssd&#x60;：取值范围[20,1000]GB，步长为10GB。
+&#x60;premium-hdd&#x60;：取值范围[20,3000]GB，步长为10GB。
+&#x60;hdd.std1、ssd.gp1、ssd.io1&#x60;：取值范围[20-16000]GB，步长为10GB。
+
      *
      * @param diskSizeGB
      */
@@ -100,7 +112,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 创建云硬盘的快照ID
+     * get 创建云硬盘的快照ID。
      *
      * @return
      */
@@ -109,7 +121,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 创建云硬盘的快照ID
+     * set 创建云硬盘的快照ID。
      *
      * @param snapshotId
      */
@@ -118,7 +130,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 策略ID
+     * get 云盘快照策略ID。
      *
      * @return
      */
@@ -127,7 +139,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 策略ID
+     * set 云盘快照策略ID。
      *
      * @param policyId
      */
@@ -136,7 +148,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 是否加密，false:(默认)不加密；true:加密
+     * get 是否是加密云盘。&#x60;false&#x60;：（默认）不加密。&#x60;true&#x60;：加密。
      *
      * @return
      */
@@ -145,7 +157,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 是否加密，false:(默认)不加密；true:加密
+     * set 是否是加密云盘。&#x60;false&#x60;：（默认）不加密。&#x60;true&#x60;：加密。
      *
      * @param encrypt
      */
@@ -154,7 +166,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘的iops值
+     * get 云硬盘的最大iops。
      *
      * @return
      */
@@ -163,7 +175,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘的iops值
+     * set 云硬盘的最大iops。
      *
      * @param iops
      */
@@ -173,7 +185,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
 
 
     /**
-     * set 云硬盘类型，取值为 ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
+     * set 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @param diskType
      */
@@ -183,7 +195,11 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘大小，单位为 GiB；ssd 类型取值范围[20,1000]GB，步长为10G，premium-hdd 类型取值范围[20,3000]GB，步长为10G，hdd.std1、ssd.gp1、ssd.io1 类型取值范围[20-16000]GB，步长为10GB
+     * set 云硬盘大小。单位为 GiB。
+&#x60;ssd&#x60;：取值范围[20,1000]GB，步长为10GB。
+&#x60;premium-hdd&#x60;：取值范围[20,3000]GB，步长为10GB。
+&#x60;hdd.std1、ssd.gp1、ssd.io1&#x60;：取值范围[20-16000]GB，步长为10GB。
+
      *
      * @param diskSizeGB
      */
@@ -193,7 +209,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 创建云硬盘的快照ID
+     * set 创建云硬盘的快照ID。
      *
      * @param snapshotId
      */
@@ -203,7 +219,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 策略ID
+     * set 云盘快照策略ID。
      *
      * @param policyId
      */
@@ -213,7 +229,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 是否加密，false:(默认)不加密；true:加密
+     * set 是否是加密云盘。&#x60;false&#x60;：（默认）不加密。&#x60;true&#x60;：加密。
      *
      * @param encrypt
      */
@@ -223,7 +239,7 @@ public class InstanceTemplateDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘的iops值
+     * set 云硬盘的最大iops。
      *
      * @param iops
      */

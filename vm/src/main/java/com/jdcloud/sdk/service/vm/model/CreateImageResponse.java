@@ -27,10 +27,19 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
-云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
-制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
-调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
+ * 
+为云主机制作私有镜像。
+
+详细操作说明请参考帮助文档：[基于实例创建私有镜像](https://docs.jdcloud.com/cn/virtual-machines/create-private-image)
+
+## 接口说明
+- 云主机实例没有正在进行中的任务时才可制作镜像。
+- 本地系统盘的实例，仅支持关机（已停止）状态下制作私有镜像。
+- 云盘系统盘的实例，支持开机(运行中)/关机（已停止）状态下制作私有镜像。
+- 调用接口后，需要等待镜像状态变为 &#x60;ready&#x60; 后，才能正常使用镜像。
+- 若当前实例系统盘为本地盘，则创建完成后的私有镜像为本地盘系统盘镜像；若当前实例系统盘为云硬盘，则创建完成后的私有镜像为云硬盘系统盘镜像。您可通过镜像类型转换 [convertImage](https://docs.jdcloud.com/Image/api/convertimage) 将本地盘系统盘镜像转换为云硬盘系统盘镜像后使用。
+- 默认情况下，制作的镜像中包括数据盘中的云硬盘（制作快照），但是不包含本地数据盘。
+- 如果需要变更打包镜像中的一些数据盘、或排除一些数据盘不需要制作快照，可通过 &#x60;dataDisks&#x60; 中的参数进行控制。
 
  */
 public class CreateImageResponse extends JdcloudResponse<CreateImageResult> implements java.io.Serializable {

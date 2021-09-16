@@ -26,50 +26,50 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * taskInfo
+ * 镜像导出导出任务详情。
  */
 public class TaskInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 任务id
+     * 任务ID。
      */
     private Integer taskId;
 
     /**
-     * 任务操作类型
+     * 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      */
     private String action;
 
     /**
-     * 任务状态，pending,running,failed,finished
+     * 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      */
     private String taskStatus;
 
     /**
-     * 任务进度，0-100
+     * 任务进度，0% - 100%。
      */
     private Integer progress;
 
     /**
-     * 额外信息
+     * 额外描述信息。
      */
     private String message;
 
     /**
-     * 任务创建时间
+     * 任务创建时间。
      */
     private String createdTime;
 
     /**
-     * 任务完成时间
+     * 任务完成时间。
      */
     private String finishedTime;
 
 
     /**
-     * get 任务id
+     * get 任务ID。
      *
      * @return
      */
@@ -78,7 +78,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务id
+     * set 任务ID。
      *
      * @param taskId
      */
@@ -87,7 +87,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 任务操作类型
+     * get 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      *
      * @return
      */
@@ -96,7 +96,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务操作类型
+     * set 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      *
      * @param action
      */
@@ -105,7 +105,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 任务状态，pending,running,failed,finished
+     * get 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      *
      * @return
      */
@@ -114,7 +114,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务状态，pending,running,failed,finished
+     * set 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      *
      * @param taskStatus
      */
@@ -123,7 +123,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 任务进度，0-100
+     * get 任务进度，0% - 100%。
      *
      * @return
      */
@@ -132,7 +132,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务进度，0-100
+     * set 任务进度，0% - 100%。
      *
      * @param progress
      */
@@ -141,7 +141,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 额外信息
+     * get 额外描述信息。
      *
      * @return
      */
@@ -150,7 +150,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 额外信息
+     * set 额外描述信息。
      *
      * @param message
      */
@@ -159,7 +159,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 任务创建时间
+     * get 任务创建时间。
      *
      * @return
      */
@@ -168,7 +168,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务创建时间
+     * set 任务创建时间。
      *
      * @param createdTime
      */
@@ -177,7 +177,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 任务完成时间
+     * get 任务完成时间。
      *
      * @return
      */
@@ -186,7 +186,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务完成时间
+     * set 任务完成时间。
      *
      * @param finishedTime
      */
@@ -196,7 +196,7 @@ public class TaskInfo  implements java.io.Serializable {
 
 
     /**
-     * set 任务id
+     * set 任务ID。
      *
      * @param taskId
      */
@@ -206,7 +206,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务操作类型
+     * set 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
      *
      * @param action
      */
@@ -216,7 +216,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务状态，pending,running,failed,finished
+     * set 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
      *
      * @param taskStatus
      */
@@ -226,7 +226,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务进度，0-100
+     * set 任务进度，0% - 100%。
      *
      * @param progress
      */
@@ -236,7 +236,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 额外信息
+     * set 额外描述信息。
      *
      * @param message
      */
@@ -246,7 +246,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务创建时间
+     * set 任务创建时间。
      *
      * @param createdTime
      */
@@ -256,7 +256,7 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 任务完成时间
+     * set 任务完成时间。
      *
      * @param finishedTime
      */

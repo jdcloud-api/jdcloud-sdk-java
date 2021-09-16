@@ -29,7 +29,14 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.DescribeImageResponse;
 
 /**
- * 查询镜像详情。
+ * 
+查询镜像详情。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 该接口与查询镜像信息列表返回的信息一致。
+- 只需要查询单个镜像信息的时候可以调用该接口。
 
  */
 class DescribeImageExecutor extends JdcloudExecutor {

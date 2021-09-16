@@ -26,13 +26,19 @@ package com.jdcloud.sdk.service.vm.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.vm.model.InstanceNetworkAttribute;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vm.model.InstanceNetworkAttribute;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改虚机弹性网卡属性，包括是否随云主机一起删除。&lt;br&gt;
-不能修改主网卡。
+ * 
+修改云主机弹性网卡属性。
+
+详细操作说明请参考帮助文档：[配置弹性网卡删除属性](https://docs.jdcloud.com/cn/virtual-machines/configurate-eni-delete-attributes)
+
+## 接口说明
+- 当前只支持修改随云主机实例删除的属性。
+- 不支持修改主网卡。
 
  */
 public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implements java.io.Serializable {
@@ -40,19 +46,21 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性网卡列表
+     * 弹性网卡列表。
+     * Required:true
      */
+    @Required
     private List<InstanceNetworkAttribute> networks;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -60,7 +68,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
 
 
     /**
-     * get 弹性网卡列表
+     * get 弹性网卡列表。
      *
      * @return
      */
@@ -69,7 +77,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     }
 
     /**
-     * set 弹性网卡列表
+     * set 弹性网卡列表。
      *
      * @param networks
      */
@@ -78,7 +86,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -87,7 +95,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -96,7 +104,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -105,7 +113,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -115,7 +123,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
 
 
     /**
-     * set 弹性网卡列表
+     * set 弹性网卡列表。
      *
      * @param networks
      */
@@ -125,7 +133,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -135,7 +143,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -146,7 +154,7 @@ public class ModifyInstanceNetworkAttributeRequest extends JdcloudRequest implem
 
 
     /**
-     * add item to 弹性网卡列表
+     * add item to 弹性网卡列表。
      *
      * @param network
      */

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,13 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.UpdateInstanceTemplateResponse;
 
 /**
- * 修改一个启动模板的信息，包括名称、描述
+ * 
+修改实例模板属性。
+
+详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+
+## 接口说明
+- 该接口只支持修改实例模板的名称或描述。
 
  */
 class UpdateInstanceTemplateExecutor extends JdcloudExecutor {

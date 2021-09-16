@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,7 +31,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询启动模板列表
+ * 
+查询实例模板列表。
+
+详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+
+## 接口说明
+- 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+- 单次查询最大可查询100条实例模板数据。
 
  */
 public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements java.io.Serializable {
@@ -39,24 +46,25 @@ public class DescribeInstanceTemplatesRequest extends JdcloudRequest implements 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1
+     * 页码；默认为1。
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      */
     private Integer pageSize;
 
     /**
-     * name - 启动模板名称，模糊匹配，支持多个
-instanceTemplateId - 启动模板ID，精确匹配，支持多个
+     * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
+&#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
      */
     private List<Filter> filters;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -64,7 +72,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
 
 
     /**
-     * get 页码；默认为1
+     * get 页码；默认为1。
      *
      * @return
      */
@@ -73,7 +81,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1。
      *
      * @param pageNumber
      */
@@ -82,7 +90,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @return
      */
@@ -91,7 +99,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @param pageSize
      */
@@ -100,8 +108,9 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * get name - 启动模板名称，模糊匹配，支持多个
-instanceTemplateId - 启动模板ID，精确匹配，支持多个
+     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
+&#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
      *
      * @return
@@ -111,8 +120,9 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * set name - 启动模板名称，模糊匹配，支持多个
-instanceTemplateId - 启动模板ID，精确匹配，支持多个
+     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
+&#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
      *
      * @param filters
@@ -122,7 +132,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -131,7 +141,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -141,7 +151,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
 
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1。
      *
      * @param pageNumber
      */
@@ -151,7 +161,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @param pageSize
      */
@@ -161,8 +171,9 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * set name - 启动模板名称，模糊匹配，支持多个
-instanceTemplateId - 启动模板ID，精确匹配，支持多个
+     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
+&#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
      *
      * @param filters
@@ -173,7 +184,7 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -184,8 +195,9 @@ instanceTemplateId - 启动模板ID，精确匹配，支持多个
 
 
     /**
-     * add item to name - 启动模板名称，模糊匹配，支持多个
-instanceTemplateId - 启动模板ID，精确匹配，支持多个
+     * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;name&#x60;: 实例模板名称，模糊匹配，支持多个
+&#x60;instanceTemplateId&#x60;: 实例模板ID，精确匹配，支持多个
 
      *
      * @param filter

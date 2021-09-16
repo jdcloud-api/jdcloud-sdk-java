@@ -30,8 +30,15 @@ import com.jdcloud.sdk.service.vm.model.CopyImage;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
+ * 
+镜像跨地域复制。
+
+详细操作说明请参考帮助文档：[镜像复制](https://docs.jdcloud.com/cn/virtual-machines/copy-image)
+
+## 接口说明
+- 调用该接口将私有镜像复制到其它地域下。
+- 只支持云盘系统盘的镜像。
+- 不支持带有加密快照的镜像。
 
  */
 public class CopyImagesResult extends JdcloudResult implements java.io.Serializable {

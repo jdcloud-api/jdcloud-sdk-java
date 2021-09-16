@@ -32,40 +32,50 @@ import com.jdcloud.sdk.service.charge.model.ChargeSpec;
 import com.jdcloud.sdk.service.disk.model.Tag;
 
 /**
- * instanceSpec
+ * 云主机配置信息。
  */
 public class InstanceSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
+     * 高可用组ID。指定此参数后，将默认使用高可用组关联的实例模板创建实例，实例模板中的参数不可覆盖替换。实例模板以外的参数（内网IPv4/Ipv6分配方式、名称、描述、标签）可指定。
+
      */
     private String agId;
 
     /**
-     * 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+     * 实例模板ID。指定此参数后，如实例模板中参数不另行指定将默认以模板配置创建实例，如指定则以指定值为准创建。
+指定 &#x60;agId&#x60; 时此参数无效。
+
      */
     private String instanceTemplateId;
 
     /**
-     * 云主机所属的可用区。
+     * 实例所属的可用区。
+如不指定 &#x60;agId&#x60; 以使用高可用组设置的可用区，此参数为必选。
+
      */
     private String az;
 
     /**
-     * 实例规格。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
+     * 实例规格。可通过 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口查询各地域及可用区下的规格售卖情况。
+如不指定 &#x60;agId&#x60; 或 &#x60;instanceTemplateId&#x60; 以使用实例模板中配置的规格，此参数为必选。
+
      */
     private String instanceType;
 
     /**
-     * 镜像ID。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+     * 镜像ID。可通过 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+如不指定 &#x60;agId&#x60; 或 &#x60;instanceTemplateId&#x60; 以使用实例模板中配置的镜像，此参数为必选。
+
      */
     private String imageId;
 
     /**
-     * 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
-批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+     * 实例名称。长度为2\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.），不能以（.）作为首尾。
+批量创建多台实例时，可在name中非首位位置以\[start_number]格式来设置有序name。start_number为起始序号，其位数代表编号字符位数，范围：\[0,9999]。
+例如：name设置为“instance-\[001]-ops”，则第一台主机name为“instance-001o-ps”，第二台主机name为“instance-002-ops”。详情参见[为实例设置有序名称及Hostname]()。
 
      * Required:true
      */
@@ -73,46 +83,54 @@ public class InstanceSpec  implements java.io.Serializable {
     private String name;
 
     /**
-     * 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
-Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
-Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
-批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+     * 实例hostname。若不指定hostname，则默认以实例名称 &#x60;name&#x60; 作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+批量创建多台实例时，可在hostname中非首位位置以\[start_number]格式来设置有序hostname。start_number为起始序号，其位数代表编号字符位数，范围：\[0,9999]。。例如：hostname设置为“instance-\[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。详情参见[为实例设置有序名称及Hostname]()。
+批量创建时若不指定序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
 
      */
     private String hostname;
 
     /**
-     * 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+
      */
     private String password;
 
     /**
-     * 密钥对名称，当前只支持传入一个。
+     * 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      */
     private List<String> keyNames;
 
     /**
-     * 主网卡主IP关联的弹性IP规格
+     * 主网卡主IP关联的弹性公网IP配置。
+
      */
     private ElasticIpSpec elasticIp;
 
     /**
-     * 主网卡配置信息
+     * 主网卡配置。
+
      */
     private InstanceNetworkInterfaceAttachmentSpec primaryNetworkInterface;
 
     /**
-     * 系统盘配置信息
+     * 系统盘配置。
+
      */
     private InstanceDiskAttachmentSpec systemDisk;
 
     /**
-     * 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+
      */
     private List<InstanceDiskAttachmentSpec> dataDisks;
 
     /**
-     * 计费配置
+     * 计费配置。
 云主机不支持按用量方式计费，默认为按配置计费。
 打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
 打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
@@ -121,77 +139,95 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     private ChargeSpec charge;
 
     /**
-     * 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+     * 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      */
     private List<Metadata> metadata;
 
     /**
-     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      */
     private List<Userdata> userdata;
 
     /**
-     * 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 实例描述。256字符以内。
+
      */
     private String description;
 
     /**
-     * 不使用模板中的密码。
-仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+     * 使用实例模板创建实例时，如模板中已设置密码，期望不使用该密码而由系统自动生成时，可通过此参数（&#x60;true&#x60;）实现。
+可选值：
+&#x60;true&#x60;：不使用实例模板中配置的密码。
+&#x60;false&#x60;：使用实例模板中配置的密码。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;password&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      */
     private Boolean noPassword;
 
     /**
-     * 不使用模板中的密钥。
-仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+     * 使用实例模板创建实例时，如模板中已设置密钥，期望不使用该密钥仅使用密码作为登录凭证时，可通过此参数（&#x60;true&#x60;）实现。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;keyNames&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      */
     private Boolean noKeyNames;
 
     /**
-     * 不使用模板中的弹性公网IP。
-仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     * 使用实例模板创建实例时，如模板中已设置弹性公网IP，期望不绑定弹性公网IP时，可通过此参数（&#x60;true&#x60;）实现。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;elasticIp&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      */
     private Boolean noElasticIp;
 
     /**
-     * 用户普通标签集合
+     * 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
      */
     private List<Tag> userTags;
 
     /**
-     * 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+可选值：
+&#x60;keepCharging&#x60;（默认值）：停机后保持计费，不释放资源。
+&#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。
+
      */
     private String chargeOnStopped;
 
     /**
-     * 自动镜像策略ID。
+     * 自动任务策略ID。
+
      */
     private String autoImagePolicyId;
 
     /**
-     * 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     * 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+
      */
     private String passwordAuth;
 
     /**
-     * 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     * 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+可选值：
+&#x60;yes&#x60;：使用镜像登录凭证。
+&#x60;no&#x60;（默认值）：不使用镜像登录凭证。
+仅使用私有或共享镜像时此参数有效。
+
      */
     private String imageInherit;
 
 
     /**
-     * get 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
+     * get 高可用组ID。指定此参数后，将默认使用高可用组关联的实例模板创建实例，实例模板中的参数不可覆盖替换。实例模板以外的参数（内网IPv4/Ipv6分配方式、名称、描述、标签）可指定。
+
      *
      * @return
      */
@@ -200,7 +236,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
+     * set 高可用组ID。指定此参数后，将默认使用高可用组关联的实例模板创建实例，实例模板中的参数不可覆盖替换。实例模板以外的参数（内网IPv4/Ipv6分配方式、名称、描述、标签）可指定。
+
      *
      * @param agId
      */
@@ -209,7 +246,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+     * get 实例模板ID。指定此参数后，如实例模板中参数不另行指定将默认以模板配置创建实例，如指定则以指定值为准创建。
+指定 &#x60;agId&#x60; 时此参数无效。
+
      *
      * @return
      */
@@ -218,7 +257,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+     * set 实例模板ID。指定此参数后，如实例模板中参数不另行指定将默认以模板配置创建实例，如指定则以指定值为准创建。
+指定 &#x60;agId&#x60; 时此参数无效。
+
      *
      * @param instanceTemplateId
      */
@@ -227,7 +268,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 云主机所属的可用区。
+     * get 实例所属的可用区。
+如不指定 &#x60;agId&#x60; 以使用高可用组设置的可用区，此参数为必选。
+
      *
      * @return
      */
@@ -236,7 +279,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机所属的可用区。
+     * set 实例所属的可用区。
+如不指定 &#x60;agId&#x60; 以使用高可用组设置的可用区，此参数为必选。
+
      *
      * @param az
      */
@@ -245,7 +290,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 实例规格。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
+     * get 实例规格。可通过 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口查询各地域及可用区下的规格售卖情况。
+如不指定 &#x60;agId&#x60; 或 &#x60;instanceTemplateId&#x60; 以使用实例模板中配置的规格，此参数为必选。
+
      *
      * @return
      */
@@ -254,7 +301,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 实例规格。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
+     * set 实例规格。可通过 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口查询各地域及可用区下的规格售卖情况。
+如不指定 &#x60;agId&#x60; 或 &#x60;instanceTemplateId&#x60; 以使用实例模板中配置的规格，此参数为必选。
+
      *
      * @param instanceType
      */
@@ -263,7 +312,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 镜像ID。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+     * get 镜像ID。可通过 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+如不指定 &#x60;agId&#x60; 或 &#x60;instanceTemplateId&#x60; 以使用实例模板中配置的镜像，此参数为必选。
+
      *
      * @return
      */
@@ -272,7 +323,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 镜像ID。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+     * set 镜像ID。可通过 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+如不指定 &#x60;agId&#x60; 或 &#x60;instanceTemplateId&#x60; 以使用实例模板中配置的镜像，此参数为必选。
+
      *
      * @param imageId
      */
@@ -281,8 +334,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
-批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+     * get 实例名称。长度为2\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.），不能以（.）作为首尾。
+批量创建多台实例时，可在name中非首位位置以\[start_number]格式来设置有序name。start_number为起始序号，其位数代表编号字符位数，范围：\[0,9999]。
+例如：name设置为“instance-\[001]-ops”，则第一台主机name为“instance-001o-ps”，第二台主机name为“instance-002-ops”。详情参见[为实例设置有序名称及Hostname]()。
 
      *
      * @return
@@ -292,8 +346,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
-批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+     * set 实例名称。长度为2\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.），不能以（.）作为首尾。
+批量创建多台实例时，可在name中非首位位置以\[start_number]格式来设置有序name。start_number为起始序号，其位数代表编号字符位数，范围：\[0,9999]。
+例如：name设置为“instance-\[001]-ops”，则第一台主机name为“instance-001o-ps”，第二台主机name为“instance-002-ops”。详情参见[为实例设置有序名称及Hostname]()。
 
      *
      * @param name
@@ -303,10 +358,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
-Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
-Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
-批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+     * get 实例hostname。若不指定hostname，则默认以实例名称 &#x60;name&#x60; 作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+批量创建多台实例时，可在hostname中非首位位置以\[start_number]格式来设置有序hostname。start_number为起始序号，其位数代表编号字符位数，范围：\[0,9999]。。例如：hostname设置为“instance-\[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。详情参见[为实例设置有序名称及Hostname]()。
+批量创建时若不指定序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
 
      *
      * @return
@@ -316,10 +372,11 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
-Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
-Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
-批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+     * set 实例hostname。若不指定hostname，则默认以实例名称 &#x60;name&#x60; 作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+批量创建多台实例时，可在hostname中非首位位置以\[start_number]格式来设置有序hostname。start_number为起始序号，其位数代表编号字符位数，范围：\[0,9999]。。例如：hostname设置为“instance-\[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。详情参见[为实例设置有序名称及Hostname]()。
+批量创建时若不指定序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
 
      *
      * @param hostname
@@ -329,7 +386,9 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+
      *
      * @return
      */
@@ -338,7 +397,9 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+
      *
      * @param password
      */
@@ -347,7 +408,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 密钥对名称，当前只支持传入一个。
+     * get 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      *
      * @return
      */
@@ -356,7 +418,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 密钥对名称，当前只支持传入一个。
+     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      *
      * @param keyNames
      */
@@ -365,7 +428,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 主网卡主IP关联的弹性IP规格
+     * get 主网卡主IP关联的弹性公网IP配置。
+
      *
      * @return
      */
@@ -374,7 +438,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 主网卡主IP关联的弹性IP规格
+     * set 主网卡主IP关联的弹性公网IP配置。
+
      *
      * @param elasticIp
      */
@@ -383,7 +448,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 主网卡配置信息
+     * get 主网卡配置。
+
      *
      * @return
      */
@@ -392,7 +458,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 主网卡配置信息
+     * set 主网卡配置。
+
      *
      * @param primaryNetworkInterface
      */
@@ -401,7 +468,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 系统盘配置信息
+     * get 系统盘配置。
+
      *
      * @return
      */
@@ -410,7 +478,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 系统盘配置信息
+     * set 系统盘配置。
+
      *
      * @param systemDisk
      */
@@ -419,7 +488,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * get 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+
      *
      * @return
      */
@@ -428,7 +498,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+
      *
      * @param dataDisks
      */
@@ -437,7 +508,7 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 计费配置
+     * get 计费配置。
 云主机不支持按用量方式计费，默认为按配置计费。
 打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
 打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
@@ -450,7 +521,7 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 计费配置
+     * set 计费配置。
 云主机不支持按用量方式计费，默认为按配置计费。
 打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
 打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
@@ -463,7 +534,7 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+     * get 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      *
@@ -474,7 +545,7 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+     * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      *
@@ -485,9 +556,9 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * get 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      *
      * @return
@@ -497,9 +568,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * set 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      *
      * @param userdata
@@ -509,7 +580,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 实例描述。256字符以内。
+
      *
      * @return
      */
@@ -518,7 +590,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 实例描述。256字符以内。
+
      *
      * @param description
      */
@@ -527,9 +600,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 不使用模板中的密码。
-仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+     * get 使用实例模板创建实例时，如模板中已设置密码，期望不使用该密码而由系统自动生成时，可通过此参数（&#x60;true&#x60;）实现。
+可选值：
+&#x60;true&#x60;：不使用实例模板中配置的密码。
+&#x60;false&#x60;：使用实例模板中配置的密码。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;password&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @return
@@ -539,9 +614,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 不使用模板中的密码。
-仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+     * set 使用实例模板创建实例时，如模板中已设置密码，期望不使用该密码而由系统自动生成时，可通过此参数（&#x60;true&#x60;）实现。
+可选值：
+&#x60;true&#x60;：不使用实例模板中配置的密码。
+&#x60;false&#x60;：使用实例模板中配置的密码。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;password&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @param noPassword
@@ -551,9 +628,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 不使用模板中的密钥。
-仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+     * get 使用实例模板创建实例时，如模板中已设置密钥，期望不使用该密钥仅使用密码作为登录凭证时，可通过此参数（&#x60;true&#x60;）实现。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;keyNames&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @return
@@ -563,9 +639,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 不使用模板中的密钥。
-仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+     * set 使用实例模板创建实例时，如模板中已设置密钥，期望不使用该密钥仅使用密码作为登录凭证时，可通过此参数（&#x60;true&#x60;）实现。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;keyNames&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @param noKeyNames
@@ -575,9 +650,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 不使用模板中的弹性公网IP。
-仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     * get 使用实例模板创建实例时，如模板中已设置弹性公网IP，期望不绑定弹性公网IP时，可通过此参数（&#x60;true&#x60;）实现。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;elasticIp&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @return
@@ -587,9 +661,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 不使用模板中的弹性公网IP。
-仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     * set 使用实例模板创建实例时，如模板中已设置弹性公网IP，期望不绑定弹性公网IP时，可通过此参数（&#x60;true&#x60;）实现。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;elasticIp&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @param noElasticIp
@@ -599,7 +672,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 用户普通标签集合
+     * get 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
      *
      * @return
      */
@@ -608,7 +682,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 用户普通标签集合
+     * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
      *
      * @param userTags
      */
@@ -617,7 +692,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * get 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+可选值：
+&#x60;keepCharging&#x60;（默认值）：停机后保持计费，不释放资源。
+&#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。
+
      *
      * @return
      */
@@ -626,7 +705,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+可选值：
+&#x60;keepCharging&#x60;（默认值）：停机后保持计费，不释放资源。
+&#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。
+
      *
      * @param chargeOnStopped
      */
@@ -635,7 +718,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 自动镜像策略ID。
+     * get 自动任务策略ID。
+
      *
      * @return
      */
@@ -644,7 +728,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 自动镜像策略ID。
+     * set 自动任务策略ID。
+
      *
      * @param autoImagePolicyId
      */
@@ -653,7 +738,12 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     * get 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+
      *
      * @return
      */
@@ -662,7 +752,12 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     * set 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+
      *
      * @param passwordAuth
      */
@@ -671,7 +766,12 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     * get 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+可选值：
+&#x60;yes&#x60;：使用镜像登录凭证。
+&#x60;no&#x60;（默认值）：不使用镜像登录凭证。
+仅使用私有或共享镜像时此参数有效。
+
      *
      * @return
      */
@@ -680,7 +780,12 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     * set 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+可选值：
+&#x60;yes&#x60;：使用镜像登录凭证。
+&#x60;no&#x60;（默认值）：不使用镜像登录凭证。
+仅使用私有或共享镜像时此参数有效。
+
      *
      * @param imageInherit
      */
@@ -690,7 +795,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
 
 
     /**
-     * set 高可用组Id。指定了此参数后，只能通过高可用组关联的实例模板创建虚机，并且实例模板中的参数不可覆盖替换。实例模板以外的参数还可以指定。
+     * set 高可用组ID。指定此参数后，将默认使用高可用组关联的实例模板创建实例，实例模板中的参数不可覆盖替换。实例模板以外的参数（内网IPv4/Ipv6分配方式、名称、描述、标签）可指定。
+
      *
      * @param agId
      */
@@ -700,7 +806,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 实例模板id，如果没有使用高可用组，那么对于实例模板中没有的信息，需要使用创建虚机的参数进行补充，或者选择覆盖启动模板中的参数。
+     * set 实例模板ID。指定此参数后，如实例模板中参数不另行指定将默认以模板配置创建实例，如指定则以指定值为准创建。
+指定 &#x60;agId&#x60; 时此参数无效。
+
      *
      * @param instanceTemplateId
      */
@@ -710,7 +818,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机所属的可用区。
+     * set 实例所属的可用区。
+如不指定 &#x60;agId&#x60; 以使用高可用组设置的可用区，此参数为必选。
+
      *
      * @param az
      */
@@ -720,7 +830,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 实例规格。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
+     * set 实例规格。可通过 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口查询各地域及可用区下的规格售卖情况。
+如不指定 &#x60;agId&#x60; 或 &#x60;instanceTemplateId&#x60; 以使用实例模板中配置的规格，此参数为必选。
+
      *
      * @param instanceType
      */
@@ -730,7 +842,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 镜像ID。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+     * set 镜像ID。可通过 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+如不指定 &#x60;agId&#x60; 或 &#x60;instanceTemplateId&#x60; 以使用实例模板中配置的镜像，此参数为必选。
+
      *
      * @param imageId
      */
@@ -740,8 +854,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机名称，不为空且只允许中文、数字、大小写字母、英文下划线（_）、连字符（-）及点（.），不能以（.）作为首尾，长度为2~128个字符。
-批量创建多台云主机时，可在name中非首位位置以[start_number]格式来设置有序name。start_number为起始序号，取值范围[0,9999]。例如：name设置为“instance-[000]-ops”，则第一台主机name为“instance-000-ops”，第二台主机name为“instance-001-ops”。再如：name设置为“instance-[0]-ops”，则第一台主机name为“instance-0-ops”，第二台主机name为“instance-1-ops”。
+     * set 实例名称。长度为2\~128个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.），不能以（.）作为首尾。
+批量创建多台实例时，可在name中非首位位置以\[start_number]格式来设置有序name。start_number为起始序号，其位数代表编号字符位数，范围：\[0,9999]。
+例如：name设置为“instance-\[001]-ops”，则第一台主机name为“instance-001o-ps”，第二台主机name为“instance-002-ops”。详情参见[为实例设置有序名称及Hostname]()。
 
      *
      * @param name
@@ -752,10 +867,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机名称name，但是会以RFC 952和RFC 1123命名规范做一定转义。
-Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
-Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
-批量创建多台云主机时，可在hostname中非首位位置以[start_number]格式来设置有序hostname。start_number为起始序号，取值范围[0,9999]。例如：hostname设置为“instance-[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。再如：hostname设置为“instance-[0]-ops”，则第一台主机hostname为“instance-0-ops”，第二台主机hostname为“instance-1-ops”。批量创建时若不指定起始序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
+     * set 实例hostname。若不指定hostname，则默认以实例名称 &#x60;name&#x60; 作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+批量创建多台实例时，可在hostname中非首位位置以\[start_number]格式来设置有序hostname。start_number为起始序号，其位数代表编号字符位数，范围：\[0,9999]。。例如：hostname设置为“instance-\[000]-ops”，则第一台主机hostname为“instance-000-ops”，第二台主机hostname为“instance-001-ops”。详情参见[为实例设置有序名称及Hostname]()。
+批量创建时若不指定序号，则会默认追加从1开始的数字，例如批量创建两台虚拟机，且指定hostname是test，则hostname默认是test1，test2。
 
      *
      * @param hostname
@@ -766,7 +882,9 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 实例密码。可用于SSH登录和VNC登录。长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+如指定密钥且 &#x60;passwordAuth&#x60; 设置为 &#x60;true&#x60; ，则密码不会生成注入，否则即使不指定密码系统也将默认自动生成随机密码，并以短信和邮件通知。
+
      *
      * @param password
      */
@@ -776,7 +894,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 密钥对名称，当前只支持传入一个。
+     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      *
      * @param keyNames
      */
@@ -786,7 +905,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 主网卡主IP关联的弹性IP规格
+     * set 主网卡主IP关联的弹性公网IP配置。
+
      *
      * @param elasticIp
      */
@@ -796,7 +916,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 主网卡配置信息
+     * set 主网卡配置。
+
      *
      * @param primaryNetworkInterface
      */
@@ -806,7 +927,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 系统盘配置信息
+     * set 系统盘配置。
+
      *
      * @param systemDisk
      */
@@ -816,7 +938,8 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+
      *
      * @param dataDisks
      */
@@ -826,7 +949,7 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 计费配置
+     * set 计费配置。
 云主机不支持按用量方式计费，默认为按配置计费。
 打包创建数据盘的情况下，数据盘的计费方式只能与云主机保持一致。
 打包创建弹性公网IP的情况下，若公网IP的计费方式没有指定为按用量计费，那么公网IP计费方式只能与云主机保持一致。
@@ -840,7 +963,7 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+     * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      *
@@ -852,9 +975,9 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * set 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      *
      * @param userdata
@@ -865,7 +988,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 主机描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 实例描述。256字符以内。
+
      *
      * @param description
      */
@@ -875,9 +999,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 不使用模板中的密码。
-仅当不使用Ag，并且使用了模板，并且password参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了password参数时，此参数无效，以新指定的为准。
+     * set 使用实例模板创建实例时，如模板中已设置密码，期望不使用该密码而由系统自动生成时，可通过此参数（&#x60;true&#x60;）实现。
+可选值：
+&#x60;true&#x60;：不使用实例模板中配置的密码。
+&#x60;false&#x60;：使用实例模板中配置的密码。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;password&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @param noPassword
@@ -888,9 +1014,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 不使用模板中的密钥。
-仅当不使用Ag，并且使用了模板，并且keynames参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了keynames参数时，此参数无效，以新指定的为准。
+     * set 使用实例模板创建实例时，如模板中已设置密钥，期望不使用该密钥仅使用密码作为登录凭证时，可通过此参数（&#x60;true&#x60;）实现。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;keyNames&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @param noKeyNames
@@ -901,9 +1026,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 不使用模板中的弹性公网IP。
-仅当不使用Ag，并且使用了模板，并且elasticIp参数为空时，此参数(值为true)生效。
-若使用模板创建虚机时，又指定了elasticIp参数时，此参数无效，以新指定的为准。
+     * set 使用实例模板创建实例时，如模板中已设置弹性公网IP，期望不绑定弹性公网IP时，可通过此参数（&#x60;true&#x60;）实现。
+仅在未指定 &#x60;agId&#x60; 且指定 &#x60;instanceTemplateId&#x60;，且 &#x60;elasticIp&#x60; 为空时，此参数(&#x60;true&#x60;)生效。
 
      *
      * @param noElasticIp
@@ -914,7 +1038,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 用户普通标签集合
+     * set 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
      *
      * @param userTags
      */
@@ -924,7 +1049,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 关机模式，只支持云盘做系统盘的按配置计费云主机。keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * set 停机不计费模式。该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+可选值：
+&#x60;keepCharging&#x60;（默认值）：停机后保持计费，不释放资源。
+&#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。
+
      *
      * @param chargeOnStopped
      */
@@ -934,7 +1063,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 自动镜像策略ID。
+     * set 自动任务策略ID。
+
      *
      * @param autoImagePolicyId
      */
@@ -944,7 +1074,12 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 当存在密钥时，是否同时使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;yes&quot;
+     * set 允许SSH密码登录。
+可选值：
+&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
+仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
+
      *
      * @param passwordAuth
      */
@@ -954,7 +1089,12 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     * set 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
+可选值：
+&#x60;yes&#x60;：使用镜像登录凭证。
+&#x60;no&#x60;（默认值）：不使用镜像登录凭证。
+仅使用私有或共享镜像时此参数有效。
+
      *
      * @param imageInherit
      */
@@ -965,7 +1105,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
 
 
     /**
-     * add item to 密钥对名称，当前只支持传入一个。
+     * add item to 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      *
      * @param keyName
      */
@@ -977,7 +1118,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * add item to 数据盘配置信息，本地盘(local类型)做系统盘的云主机可挂载8块数据盘，云硬盘(cloud类型)做系统盘的云主机可挂载7块数据盘。
+     * add item to 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+
      *
      * @param dataDisk
      */
@@ -989,7 +1131,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * add item to 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
+     * add item to 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      *
@@ -1003,9 +1145,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式，编码前数据不能大于16KB。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * add item to 自定义脚本。目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      *
      * @param userdata
@@ -1018,7 +1160,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * add item to 用户普通标签集合
+     * add item to 自定义实例标签。以key-value键值对形式指定，最多支持10个标签。key不能以 &quot;jrn:&quot; 或“jdc-”开头，仅支持中文、大/小写英文、数字及如下符号：&#x60;\_.,:\/&#x3D;+-@&#x60;。
+
      *
      * @param userTag
      */

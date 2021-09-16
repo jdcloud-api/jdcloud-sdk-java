@@ -31,10 +31,19 @@ import com.jdcloud.sdk.service.vm.model.InstanceDiskAttachmentSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 为云主机创建私有镜像。云主机状态必须为&lt;b&gt;stopped&lt;/b&gt;。&lt;br&gt;
-云主机没有正在进行中的任务才可制作镜像。&lt;br&gt;
-制作镜像以备份系统盘为基础，在此之上可选择全部或部分挂载数据盘制作整机镜像（如不做任何更改将默认制作整机镜像），制作镜像过程会为所挂载云硬盘创建快照并与镜像关联。&lt;br&gt;
-调用接口后，需要等待镜像状态变为&lt;b&gt;ready&lt;/b&gt;后，才能正常使用镜像。
+ * 
+为云主机制作私有镜像。
+
+详细操作说明请参考帮助文档：[基于实例创建私有镜像](https://docs.jdcloud.com/cn/virtual-machines/create-private-image)
+
+## 接口说明
+- 云主机实例没有正在进行中的任务时才可制作镜像。
+- 本地系统盘的实例，仅支持关机（已停止）状态下制作私有镜像。
+- 云盘系统盘的实例，支持开机(运行中)/关机（已停止）状态下制作私有镜像。
+- 调用接口后，需要等待镜像状态变为 &#x60;ready&#x60; 后，才能正常使用镜像。
+- 若当前实例系统盘为本地盘，则创建完成后的私有镜像为本地盘系统盘镜像；若当前实例系统盘为云硬盘，则创建完成后的私有镜像为云硬盘系统盘镜像。您可通过镜像类型转换 [convertImage](https://docs.jdcloud.com/Image/api/convertimage) 将本地盘系统盘镜像转换为云硬盘系统盘镜像后使用。
+- 默认情况下，制作的镜像中包括数据盘中的云硬盘（制作快照），但是不包含本地数据盘。
+- 如果需要变更打包镜像中的一些数据盘、或排除一些数据盘不需要制作快照，可通过 &#x60;dataDisks&#x60; 中的参数进行控制。
 
  */
 public class CreateImageRequest extends JdcloudRequest implements java.io.Serializable {
@@ -42,31 +51,38 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 镜像名称，长度为2\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+
      * Required:true
      */
     @Required
     private String name;
 
     /**
-     * 镜像描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 镜像描述。256字符以内。
+
      */
     private String description;
 
     /**
-     * 数据盘列表，可以在实例已挂载数据盘的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。
+     * 数据盘列表。
+在不指定该参数的情况下，制作镜像的过程中会将该实例中的所有云盘数据盘制作快照，并与系统盘一起，制作成打包镜像。
+如果不希望将实例中的某个云盘数据盘制作快照，可使用 &#x60;noDevice&#x60; 的方式排除，例如：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60; 就不会将 &#x60;vdb&#x60; 制作快照。
+如果希望在打包镜像中插入一块新盘，该盘不在实例中，可通过指定新的 &#x60;deviceName&#x60; 的方式实现，例如：&#x60;deviceName&#x3D;vdx&#x60; 将会在打包镜像中插入一块盘符为 &#x60;vdx&#x60; 的新盘，支持新盘使用或不使用快照都可以。
+如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
+
      */
     private List<InstanceDiskAttachmentSpec> dataDisks;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -74,7 +90,8 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 镜像名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 镜像名称，长度为2\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+
      *
      * @return
      */
@@ -83,7 +100,8 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 镜像名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 镜像名称，长度为2\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+
      *
      * @param name
      */
@@ -92,7 +110,8 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 镜像描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 镜像描述。256字符以内。
+
      *
      * @return
      */
@@ -101,7 +120,8 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 镜像描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 镜像描述。256字符以内。
+
      *
      * @param description
      */
@@ -110,7 +130,12 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 数据盘列表，可以在实例已挂载数据盘的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。
+     * get 数据盘列表。
+在不指定该参数的情况下，制作镜像的过程中会将该实例中的所有云盘数据盘制作快照，并与系统盘一起，制作成打包镜像。
+如果不希望将实例中的某个云盘数据盘制作快照，可使用 &#x60;noDevice&#x60; 的方式排除，例如：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60; 就不会将 &#x60;vdb&#x60; 制作快照。
+如果希望在打包镜像中插入一块新盘，该盘不在实例中，可通过指定新的 &#x60;deviceName&#x60; 的方式实现，例如：&#x60;deviceName&#x3D;vdx&#x60; 将会在打包镜像中插入一块盘符为 &#x60;vdx&#x60; 的新盘，支持新盘使用或不使用快照都可以。
+如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
+
      *
      * @return
      */
@@ -119,7 +144,12 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 数据盘列表，可以在实例已挂载数据盘的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。
+     * set 数据盘列表。
+在不指定该参数的情况下，制作镜像的过程中会将该实例中的所有云盘数据盘制作快照，并与系统盘一起，制作成打包镜像。
+如果不希望将实例中的某个云盘数据盘制作快照，可使用 &#x60;noDevice&#x60; 的方式排除，例如：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60; 就不会将 &#x60;vdb&#x60; 制作快照。
+如果希望在打包镜像中插入一块新盘，该盘不在实例中，可通过指定新的 &#x60;deviceName&#x60; 的方式实现，例如：&#x60;deviceName&#x3D;vdx&#x60; 将会在打包镜像中插入一块盘符为 &#x60;vdx&#x60; 的新盘，支持新盘使用或不使用快照都可以。
+如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
+
      *
      * @param dataDisks
      */
@@ -128,7 +158,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -137,7 +167,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -146,7 +176,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -155,7 +185,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -165,7 +195,8 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 镜像名称，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 镜像名称，长度为2\~32个字符，只允许中文、数字、大小写字母、英文下划线（\_）、连字符（-）及点（.）。
+
      *
      * @param name
      */
@@ -175,7 +206,8 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 镜像描述，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 镜像描述。256字符以内。
+
      *
      * @param description
      */
@@ -185,7 +217,12 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 数据盘列表，可以在实例已挂载数据盘的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。
+     * set 数据盘列表。
+在不指定该参数的情况下，制作镜像的过程中会将该实例中的所有云盘数据盘制作快照，并与系统盘一起，制作成打包镜像。
+如果不希望将实例中的某个云盘数据盘制作快照，可使用 &#x60;noDevice&#x60; 的方式排除，例如：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60; 就不会将 &#x60;vdb&#x60; 制作快照。
+如果希望在打包镜像中插入一块新盘，该盘不在实例中，可通过指定新的 &#x60;deviceName&#x60; 的方式实现，例如：&#x60;deviceName&#x3D;vdx&#x60; 将会在打包镜像中插入一块盘符为 &#x60;vdx&#x60; 的新盘，支持新盘使用或不使用快照都可以。
+如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
+
      *
      * @param dataDisks
      */
@@ -195,7 +232,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -205,7 +242,7 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -216,7 +253,12 @@ public class CreateImageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * add item to 数据盘列表，可以在实例已挂载数据盘的基础上，额外增加新的快照、空盘、或排除云主机中的数据盘。
+     * add item to 数据盘列表。
+在不指定该参数的情况下，制作镜像的过程中会将该实例中的所有云盘数据盘制作快照，并与系统盘一起，制作成打包镜像。
+如果不希望将实例中的某个云盘数据盘制作快照，可使用 &#x60;noDevice&#x60; 的方式排除，例如：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60; 就不会将 &#x60;vdb&#x60; 制作快照。
+如果希望在打包镜像中插入一块新盘，该盘不在实例中，可通过指定新的 &#x60;deviceName&#x60; 的方式实现，例如：&#x60;deviceName&#x3D;vdx&#x60; 将会在打包镜像中插入一块盘符为 &#x60;vdx&#x60; 的新盘，支持新盘使用或不使用快照都可以。
+如果使用 &#x60;deviceName&#x60; 指定了与实例中相同的盘符，那么实例中对应的云盘数据盘也不会制作快照，并使用新指定的参数进行替换。
+
      *
      * @param dataDisk
      */

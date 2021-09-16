@@ -27,7 +27,15 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 停止单个云主机，只能停止&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可停止
+ * 
+停止云主机实例。
+
+详细操作说明请参考帮助文档：[停止实例](https://docs.jdcloud.com/cn/virtual-machines/stop-instance)
+
+## 接口说明
+- 实例状态必须为运行 &#x60;running&#x60; 状态，同时实例没有正在进行中的任务时才可停止。
+- 如果云主机实例属性 &#x60;chargeOnStopped&#x60; 的值为 &#x60;stopCharging&#x60;，实例关机之后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。需要使用者注意的是，实例一旦释放自身资源，再次启动时有可能因为库存资源不足而导致无法启动。
+- &#x60;chargeOnStopped&#x60; 该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
 
  */
 public class StopInstanceResult extends JdcloudResult implements java.io.Serializable {

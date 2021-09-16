@@ -29,7 +29,14 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.AttachKeypairResponse;
 
 /**
- * 绑定ssh密钥对。
+ * 
+为云主机实例绑定密钥。
+
+详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+
+## 接口说明
+- 只支持为 linux 云主机实例绑定密钥。
+- 每台云主机实例只支持绑定一个密钥。如果云主机绑定的密钥被删除了，那么该云主机还可以再次绑定密钥。
 
  */
 class AttachKeypairExecutor extends JdcloudExecutor {

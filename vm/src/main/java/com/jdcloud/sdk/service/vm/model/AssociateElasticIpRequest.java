@@ -28,8 +28,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 为云主机主网卡的主内网IP绑定弹性公网IP。&lt;br&gt;
-一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。&lt;br&gt;
+ * 
+为云主机绑定弹性公网IP。
+
+详细操作说明请参考帮助文档：[绑定弹性公网IP](https://docs.jdcloud.com/cn/virtual-machines/associate-elastic-ip)
+
+## 接口说明
+- 该接口只支持在实例的主网卡的主内网IP上绑定弹性公网IP。
+- 一台云主机的主网卡的主内网IP只能绑定一个弹性公网IP，若已绑定弹性公网IP，操作绑定会返回错误。
+- 弹性公网IP所在的可用区需要与云主机的可用区保持一致，或者弹性公网IP是全可用区类型的，才允许绑定操作。
 
  */
 public class AssociateElasticIpRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,21 +44,21 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性公网IP的ID
+     * 弹性公网IP的ID。
      * Required:true
      */
     @Required
     private String elasticIpId;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -59,7 +66,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 弹性公网IP的ID
+     * get 弹性公网IP的ID。
      *
      * @return
      */
@@ -68,7 +75,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 弹性公网IP的ID
+     * set 弹性公网IP的ID。
      *
      * @param elasticIpId
      */
@@ -77,7 +84,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -86,7 +93,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -95,7 +102,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -104,7 +111,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -114,7 +121,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 弹性公网IP的ID
+     * set 弹性公网IP的ID。
      *
      * @param elasticIpId
      */
@@ -124,7 +131,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -134,7 +141,7 @@ public class AssociateElasticIpRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */

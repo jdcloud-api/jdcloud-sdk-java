@@ -28,7 +28,13 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询镜像共享帐户列表，只允许操作您的个人私有镜像。
+ * 
+查询私有镜像共享给哪些京东云帐户。
+
+详细操作说明请参考帮助文档：[共享私有镜像](https://docs.jdcloud.com/cn/virtual-machines/share-image)
+
+## 接口说明
+- 只允许查询用户的私有镜像。
 
  */
 public class DescribeImageMembersRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,14 +42,14 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      * Required:true
      */
     @Required
@@ -51,7 +57,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
 
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -60,7 +66,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -69,7 +75,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -78,7 +84,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -88,7 +94,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
 
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -98,7 +104,7 @@ public class DescribeImageMembersRequest extends JdcloudRequest implements java.
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */

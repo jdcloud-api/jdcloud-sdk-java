@@ -27,7 +27,14 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 云主机缷载云硬盘，云主机和云硬盘没有正在进行中的任务时才可缷载。&lt;br&gt;
+ * 
+为一台云主机缷载云硬盘
+
+详细操作说明请参考帮助文档：[缷载云硬盘](https://docs.jdcloud.com/cn/virtual-machines/detach-cloud-disk)
+
+## 接口说明
+- 云主机和云硬盘都没有正在进行中的的任务时才可以操作。
+- 云主机状态必须是 &#x60;running&#x60; 或 &#x60;stopped&#x60; 状态。操作系统盘时必须先停止实例。
 
  */
 public class DetachDiskResponse extends JdcloudResponse<DetachDiskResult> implements java.io.Serializable {

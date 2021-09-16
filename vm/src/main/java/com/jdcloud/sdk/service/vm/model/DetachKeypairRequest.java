@@ -30,7 +30,13 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 解绑ssh密钥对。
+ * 
+为云主机实例解绑密钥。
+
+详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+
+## 接口说明
+- 调用该接口解绑云主机实例中的密钥。
 
  */
 public class DetachKeypairRequest extends JdcloudRequest implements java.io.Serializable {
@@ -38,21 +44,21 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 虚机Id
+     * 要解绑的云主机实例ID列表。
      * Required:true
      */
     @Required
     private List<String> instanceIds;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 密钥名称
+     * 密钥名称。
      * Required:true
      */
     @Required
@@ -60,7 +66,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 虚机Id
+     * get 要解绑的云主机实例ID列表。
      *
      * @return
      */
@@ -69,7 +75,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 虚机Id
+     * set 要解绑的云主机实例ID列表。
      *
      * @param instanceIds
      */
@@ -78,7 +84,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -87,7 +93,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -96,7 +102,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 密钥名称
+     * get 密钥名称。
      *
      * @return
      */
@@ -105,7 +111,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥名称
+     * set 密钥名称。
      *
      * @param keyName
      */
@@ -115,7 +121,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 虚机Id
+     * set 要解绑的云主机实例ID列表。
      *
      * @param instanceIds
      */
@@ -125,7 +131,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -135,7 +141,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥名称
+     * set 密钥名称。
      *
      * @param keyName
      */
@@ -146,7 +152,7 @@ public class DetachKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * add item to 虚机Id
+     * add item to 要解绑的云主机实例ID列表。
      *
      * @param instanceId
      */
