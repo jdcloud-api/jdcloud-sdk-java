@@ -28,8 +28,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询镜像的实例规格限制。&lt;br&gt;
-通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
+ * 
+查询单个镜像的实例规格限制。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 该接口与批量查询镜像的实例规格限制返回的信息一致。
+- 通过此接口可以查询镜像的实例规格限制信息。
+- 只有官方镜像、第三方镜像有实例规格的限制，用户的私有镜像没有此限制。
 
  */
 public class DescribeImageConstraintsRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,14 +44,14 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      * Required:true
      */
     @Required
@@ -52,7 +59,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -61,7 +68,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -70,7 +77,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -79,7 +86,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -89,7 +96,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -99,7 +106,7 @@ public class DescribeImageConstraintsRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */

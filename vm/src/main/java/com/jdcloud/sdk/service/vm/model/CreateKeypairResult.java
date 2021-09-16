@@ -27,8 +27,15 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建ssh密钥对。公钥部分存储在京东云，并返回未加密的 PEM 编码的 PKCS#8 格式私钥，您只有一次机会保存您的私钥。请妥善保管。&lt;br&gt;
-若传入已存在的密钥名称，会返回错误。
+ * 
+创建密钥。
+
+公钥和私钥都由京东云生成，公钥保存在京东云，私钥返回给用户，由用户保存。
+
+详细操作说明请参考帮助文档：[创建密钥](https://docs.jdcloud.com/cn/virtual-machines/create-keypair)
+
+## 接口说明
+- 调用该接口创建密钥后，公钥部分存储在京东云，并返回未加密的 &#x60;PEM&#x60; 编码的 &#x60;PKCS#8&#x60; 格式私钥，您只有一次机会保存您的私钥。请妥善保管。
 
  */
 public class CreateKeypairResult extends JdcloudResult implements java.io.Serializable {
@@ -36,23 +43,23 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 密钥对名称
+     * 密钥对名称。
      */
     private String keyName;
 
     /**
-     * 密钥对的私钥部分，PEM PKCS#8 格式。
+     * 密钥对的私钥部分，&#x60;PEM PKCS#8&#x60; 格式。
      */
     private String privateKey;
 
     /**
-     * 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      */
     private String keyFingerprint;
 
 
     /**
-     * get 密钥对名称
+     * get 密钥对名称。
      *
      * @return
      */
@@ -61,7 +68,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称。
      *
      * @param keyName
      */
@@ -70,7 +77,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * get 密钥对的私钥部分，PEM PKCS#8 格式。
+     * get 密钥对的私钥部分，&#x60;PEM PKCS#8&#x60; 格式。
      *
      * @return
      */
@@ -79,7 +86,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 密钥对的私钥部分，PEM PKCS#8 格式。
+     * set 密钥对的私钥部分，&#x60;PEM PKCS#8&#x60; 格式。
      *
      * @param privateKey
      */
@@ -88,7 +95,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * get 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * get 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @return
      */
@@ -97,7 +104,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * set 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @param keyFingerprint
      */
@@ -107,7 +114,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
 
 
     /**
-     * set 密钥对名称
+     * set 密钥对名称。
      *
      * @param keyName
      */
@@ -117,7 +124,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 密钥对的私钥部分，PEM PKCS#8 格式。
+     * set 密钥对的私钥部分，&#x60;PEM PKCS#8&#x60; 格式。
      *
      * @param privateKey
      */
@@ -127,7 +134,7 @@ public class CreateKeypairResult extends JdcloudResult implements java.io.Serial
     }
 
     /**
-     * set 密钥对的指纹，根据 RFC4716 定义的公钥指纹格式，采用 MD5 信息摘要算法。
+     * set 密钥对的指纹，根据 &#x60;RFC4716&#x60; 定义的公钥指纹格式，采用 &#x60;MD5&#x60; 信息摘要算法。
      *
      * @param keyFingerprint
      */

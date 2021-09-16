@@ -30,7 +30,17 @@ import com.jdcloud.sdk.service.vm.model.InstancePrivateIpAddress;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 批量查询云主机内网IP地址，查询的是主网卡内网主IP地址。
+ * 
+查询一台或多台云主机实例的主网卡内网主IP地址。
+
+弹性网卡说明请参考帮助文档：[弹性网卡](https://docs.jdcloud.com/cn/virtual-machines/attach-eni)
+
+## 接口说明
+- 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+- 单次查询最大可查询100条云主机实例数据。
+- 尽量一次调用接口查询多条数据，不建议使用该批量查询接口一次查询一条数据，如果使用不当导致查询过于密集，可能导致网关触发限流。
+- 由于该接口为 &#x60;GET&#x60; 方式请求，最终参数会转换为 &#x60;URL&#x60; 上的参数，但是 &#x60;HTTP&#x60; 协议下的 &#x60;GET&#x60; 请求参数长度是有大小限制的，使用者需要注意参数超长的问题。
+
  */
 public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implements java.io.Serializable {
 
@@ -42,7 +52,7 @@ public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implem
     private List<InstancePrivateIpAddress> instancePrivateIpAddress;
 
     /**
-     * totalCount
+     * 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      */
     private Number totalCount;
 
@@ -66,7 +76,7 @@ public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implem
     }
 
     /**
-     * get totalCount
+     * get 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
      * @return
      */
@@ -75,7 +85,7 @@ public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implem
     }
 
     /**
-     * set totalCount
+     * set 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
      * @param totalCount
      */
@@ -95,7 +105,7 @@ public class DescribeInstancePrivateIpAddressResult extends JdcloudResult implem
     }
 
     /**
-     * set totalCount
+     * set 本次查询可匹配到的总记录数，用户需要结合 &#x60;pageNumber&#x60; 和 &#x60;pageSize&#x60; 计算是否可以继续分页。
      *
      * @param totalCount
      */

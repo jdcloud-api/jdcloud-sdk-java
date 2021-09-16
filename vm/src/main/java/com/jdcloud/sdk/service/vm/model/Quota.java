@@ -26,30 +26,42 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * quota
+ * 配额信息。
  */
 public class Quota  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型[instance，keypair，image，instanceTemplate]
+     * 资源类型。支持范围：
+&#x60;instance&#x60;：云主机。
+&#x60;keypair&#x60;：密钥。
+&#x60;image&#x60;：镜像。
+&#x60;instanceTemplate&#x60;：实例模板。
+&#x60;imageShare&#x60;：共享镜像。
+
      */
     private String resourceType;
 
     /**
-     * 配额上限
+     * 配额上限。
      */
     private Integer limit;
 
     /**
-     * 已用配额
+     * 已用配额。
      */
     private Integer used;
 
 
     /**
-     * get 资源类型[instance，keypair，image，instanceTemplate]
+     * get 资源类型。支持范围：
+&#x60;instance&#x60;：云主机。
+&#x60;keypair&#x60;：密钥。
+&#x60;image&#x60;：镜像。
+&#x60;instanceTemplate&#x60;：实例模板。
+&#x60;imageShare&#x60;：共享镜像。
+
      *
      * @return
      */
@@ -58,7 +70,13 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型[instance，keypair，image，instanceTemplate]
+     * set 资源类型。支持范围：
+&#x60;instance&#x60;：云主机。
+&#x60;keypair&#x60;：密钥。
+&#x60;image&#x60;：镜像。
+&#x60;instanceTemplate&#x60;：实例模板。
+&#x60;imageShare&#x60;：共享镜像。
+
      *
      * @param resourceType
      */
@@ -67,7 +85,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * get 配额上限
+     * get 配额上限。
      *
      * @return
      */
@@ -76,7 +94,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 配额上限
+     * set 配额上限。
      *
      * @param limit
      */
@@ -85,7 +103,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * get 已用配额
+     * get 已用配额。
      *
      * @return
      */
@@ -94,7 +112,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 已用配额
+     * set 已用配额。
      *
      * @param used
      */
@@ -104,7 +122,13 @@ public class Quota  implements java.io.Serializable {
 
 
     /**
-     * set 资源类型[instance，keypair，image，instanceTemplate]
+     * set 资源类型。支持范围：
+&#x60;instance&#x60;：云主机。
+&#x60;keypair&#x60;：密钥。
+&#x60;image&#x60;：镜像。
+&#x60;instanceTemplate&#x60;：实例模板。
+&#x60;imageShare&#x60;：共享镜像。
+
      *
      * @param resourceType
      */
@@ -114,7 +138,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 配额上限
+     * set 配额上限。
      *
      * @param limit
      */
@@ -124,7 +148,7 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 已用配额
+     * set 已用配额。
      *
      * @param used
      */

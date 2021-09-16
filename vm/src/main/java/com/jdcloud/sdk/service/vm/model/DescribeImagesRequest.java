@@ -30,9 +30,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询镜像信息列表。&lt;br&gt;
-通过此接口可以查询到京东云官方镜像、第三方镜像、私有镜像、或其他用户共享给您的镜像。&lt;br&gt;
-此接口支持分页查询，默认每页20条。
+ * 
+查询镜像信息列表。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 通过此接口可以查询到京东云官方镜像、第三方镜像、镜像市场、私有镜像、或其他用户共享给您的镜像。
+- 请求参数即过滤条件，每个条件之间的关系为逻辑与（AND）的关系。
+- 如果使用子帐号查询，只会查询到该子帐号有权限的镜像。关于资源权限请参考 [IAM概述](https://docs.jdcloud.com/cn/iam/product-overview)。
+- 单次查询最大可查询100条镜像信息。
+- 尽量一次调用接口查询多条数据，不建议使用该批量查询接口一次查询一条数据，如果使用不当导致查询过于密集，可能导致网关触发限流。
+- 由于该接口为 &#x60;GET&#x60; 方式请求，最终参数会转换为 &#x60;URL&#x60; 上的参数，但是 &#x60;HTTP&#x60; 协议下的 &#x60;GET&#x60; 请求参数长度是有大小限制的，使用者需要注意参数超长的问题。
 
  */
 public class DescribeImagesRequest extends JdcloudRequest implements java.io.Serializable {
@@ -40,62 +49,78 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
+     * 镜像来源，如果没有指定 &#x60;ids&#x60; 参数，此参数必传。取值范围：
+&#x60;public&#x60;：官方镜像。
+&#x60;thirdparty&#x60;：镜像市场镜像。
+&#x60;private&#x60;：用户自己的私有镜像。
+&#x60;shared&#x60;：其他用户分享的镜像。
+&#x60;community&#x60;：社区镜像。
+
      */
     private String imageSource;
 
     /**
-     * 产品线标识，非必传，不传的时候返回全部产品线镜像
-     */
-    private String serviceCode;
+     * 查询已经下线的镜像时使用。
+只有查询 &#x60;官方镜像&#x60; 或者 &#x60;镜像市场镜像&#x60; 时，此参数才有意义，其它情况下此参数无效。
+指定 &#x60;ids&#x60; 查询时，此参数无效。
 
-    /**
-     * 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
      */
     private Boolean offline;
 
     /**
-     * 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
+     * 根据镜像的操作系统发行版查询。
+取值范围：&#x60;Ubuntu、CentOS、Windows Server&#x60;。
+
      */
     private String platform;
 
     /**
-     * 镜像ID列表，如果指定了此参数，其它参数可为空
+     * 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
+
      */
     private List<String> ids;
 
     /**
-     * 根据镜像名称模糊查找
+     * 根据镜像名称模糊查询。
      */
     private String imageName;
 
     /**
-     * 镜像支持的系统盘类型，[localDisk,cloudDisk]
+     * 根据镜像支持的系统盘类型查询。支持范围：&#x60;localDisk&#x60; 本地系统盘镜像；&#x60;cloudDisk&#x60; 云盘系统盘镜像。
      */
     private String rootDeviceType;
 
     /**
-     * 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+     * 根据镜像的使用权限查询，可选参数，仅当 &#x60;imageSource&#x60; 为 &#x60;private&#x60; 时有效。取值范围：
+&#x60;all&#x60;：没有限制，所有人均可以使用。
+&#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+&#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+
      */
     private String launchPermission;
 
     /**
-     * &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+     * 根据镜像状态查询。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)
      */
     private String status;
 
     /**
-     * 页码；默认为1
+     * 已废弃。
+     */
+    private String serviceCode;
+
+    /**
+     * 页码；默认为1。
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      */
     private Integer pageSize;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -103,7 +128,13 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
+     * get 镜像来源，如果没有指定 &#x60;ids&#x60; 参数，此参数必传。取值范围：
+&#x60;public&#x60;：官方镜像。
+&#x60;thirdparty&#x60;：镜像市场镜像。
+&#x60;private&#x60;：用户自己的私有镜像。
+&#x60;shared&#x60;：其他用户分享的镜像。
+&#x60;community&#x60;：社区镜像。
+
      *
      * @return
      */
@@ -112,7 +143,13 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
+     * set 镜像来源，如果没有指定 &#x60;ids&#x60; 参数，此参数必传。取值范围：
+&#x60;public&#x60;：官方镜像。
+&#x60;thirdparty&#x60;：镜像市场镜像。
+&#x60;private&#x60;：用户自己的私有镜像。
+&#x60;shared&#x60;：其他用户分享的镜像。
+&#x60;community&#x60;：社区镜像。
+
      *
      * @param imageSource
      */
@@ -121,25 +158,10 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 产品线标识，非必传，不传的时候返回全部产品线镜像
-     *
-     * @return
-     */
-    public String getServiceCode() {
-        return serviceCode;
-    }
+     * get 查询已经下线的镜像时使用。
+只有查询 &#x60;官方镜像&#x60; 或者 &#x60;镜像市场镜像&#x60; 时，此参数才有意义，其它情况下此参数无效。
+指定 &#x60;ids&#x60; 查询时，此参数无效。
 
-    /**
-     * set 产品线标识，非必传，不传的时候返回全部产品线镜像
-     *
-     * @param serviceCode
-     */
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-    }
-
-    /**
-     * get 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
      *
      * @return
      */
@@ -148,7 +170,10 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
+     * set 查询已经下线的镜像时使用。
+只有查询 &#x60;官方镜像&#x60; 或者 &#x60;镜像市场镜像&#x60; 时，此参数才有意义，其它情况下此参数无效。
+指定 &#x60;ids&#x60; 查询时，此参数无效。
+
      *
      * @param offline
      */
@@ -157,7 +182,9 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
+     * get 根据镜像的操作系统发行版查询。
+取值范围：&#x60;Ubuntu、CentOS、Windows Server&#x60;。
+
      *
      * @return
      */
@@ -166,7 +193,9 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
+     * set 根据镜像的操作系统发行版查询。
+取值范围：&#x60;Ubuntu、CentOS、Windows Server&#x60;。
+
      *
      * @param platform
      */
@@ -175,7 +204,8 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 镜像ID列表，如果指定了此参数，其它参数可为空
+     * get 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
+
      *
      * @return
      */
@@ -184,7 +214,8 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像ID列表，如果指定了此参数，其它参数可为空
+     * set 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
+
      *
      * @param ids
      */
@@ -193,7 +224,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 根据镜像名称模糊查找
+     * get 根据镜像名称模糊查询。
      *
      * @return
      */
@@ -202,7 +233,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 根据镜像名称模糊查找
+     * set 根据镜像名称模糊查询。
      *
      * @param imageName
      */
@@ -211,7 +242,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 镜像支持的系统盘类型，[localDisk,cloudDisk]
+     * get 根据镜像支持的系统盘类型查询。支持范围：&#x60;localDisk&#x60; 本地系统盘镜像；&#x60;cloudDisk&#x60; 云盘系统盘镜像。
      *
      * @return
      */
@@ -220,7 +251,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像支持的系统盘类型，[localDisk,cloudDisk]
+     * set 根据镜像支持的系统盘类型查询。支持范围：&#x60;localDisk&#x60; 本地系统盘镜像；&#x60;cloudDisk&#x60; 云盘系统盘镜像。
      *
      * @param rootDeviceType
      */
@@ -229,7 +260,11 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+     * get 根据镜像的使用权限查询，可选参数，仅当 &#x60;imageSource&#x60; 为 &#x60;private&#x60; 时有效。取值范围：
+&#x60;all&#x60;：没有限制，所有人均可以使用。
+&#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+&#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+
      *
      * @return
      */
@@ -238,7 +273,11 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+     * set 根据镜像的使用权限查询，可选参数，仅当 &#x60;imageSource&#x60; 为 &#x60;private&#x60; 时有效。取值范围：
+&#x60;all&#x60;：没有限制，所有人均可以使用。
+&#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+&#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+
      *
      * @param launchPermission
      */
@@ -247,7 +286,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+     * get 根据镜像状态查询。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)
      *
      * @return
      */
@@ -256,7 +295,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+     * set 根据镜像状态查询。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)
      *
      * @param status
      */
@@ -265,7 +304,25 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 页码；默认为1
+     * get 已废弃。
+     *
+     * @return
+     */
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    /**
+     * set 已废弃。
+     *
+     * @param serviceCode
+     */
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    /**
+     * get 页码；默认为1。
      *
      * @return
      */
@@ -274,7 +331,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1。
      *
      * @param pageNumber
      */
@@ -283,7 +340,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @return
      */
@@ -292,7 +349,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @param pageSize
      */
@@ -301,7 +358,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -310,7 +367,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -320,7 +377,13 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 镜像来源，如果没有指定ids参数，此参数必传；取值范围：public、shared、thirdparty、private、community
+     * set 镜像来源，如果没有指定 &#x60;ids&#x60; 参数，此参数必传。取值范围：
+&#x60;public&#x60;：官方镜像。
+&#x60;thirdparty&#x60;：镜像市场镜像。
+&#x60;private&#x60;：用户自己的私有镜像。
+&#x60;shared&#x60;：其他用户分享的镜像。
+&#x60;community&#x60;：社区镜像。
+
      *
      * @param imageSource
      */
@@ -330,17 +393,10 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 产品线标识，非必传，不传的时候返回全部产品线镜像
-     *
-     * @param serviceCode
-     */
-    public DescribeImagesRequest serviceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-        return this;
-    }
+     * set 查询已经下线的镜像时使用。
+只有查询 &#x60;官方镜像&#x60; 或者 &#x60;镜像市场镜像&#x60; 时，此参数才有意义，其它情况下此参数无效。
+指定 &#x60;ids&#x60; 查询时，此参数无效。
 
-    /**
-     * set 是否下线，默认值为false；imageSource为public或者thirdparty时，此参数才有意义，其它情况下此参数无效；指定镜像ID查询时，此参数无效
      *
      * @param offline
      */
@@ -350,7 +406,9 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 操作系统平台，取值范围：Windows Server、CentOS、Ubuntu
+     * set 根据镜像的操作系统发行版查询。
+取值范围：&#x60;Ubuntu、CentOS、Windows Server&#x60;。
+
      *
      * @param platform
      */
@@ -360,7 +418,8 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像ID列表，如果指定了此参数，其它参数可为空
+     * set 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
+
      *
      * @param ids
      */
@@ -370,7 +429,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 根据镜像名称模糊查找
+     * set 根据镜像名称模糊查询。
      *
      * @param imageName
      */
@@ -380,7 +439,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像支持的系统盘类型，[localDisk,cloudDisk]
+     * set 根据镜像支持的系统盘类型查询。支持范围：&#x60;localDisk&#x60; 本地系统盘镜像；&#x60;cloudDisk&#x60; 云盘系统盘镜像。
      *
      * @param rootDeviceType
      */
@@ -390,7 +449,11 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像的使用权限[all, specifiedUsers，ownerOnly]，可选参数，仅当imageSource取值private时有效
+     * set 根据镜像的使用权限查询，可选参数，仅当 &#x60;imageSource&#x60; 为 &#x60;private&#x60; 时有效。取值范围：
+&#x60;all&#x60;：没有限制，所有人均可以使用。
+&#x60;specifiedUsers&#x60;：只有共享用户可以使用。
+&#x60;ownerOnly&#x60;：镜像拥有者自己可以使用。
+
      *
      * @param launchPermission
      */
@@ -400,7 +463,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/image_status&quot;&gt;参考镜像状态&lt;/a&gt;
+     * set 根据镜像状态查询。参考 [镜像状态](https://docs.jdcloud.com/virtual-machines/api/image_status)
      *
      * @param status
      */
@@ -410,7 +473,17 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 页码；默认为1
+     * set 已废弃。
+     *
+     * @param serviceCode
+     */
+    public DescribeImagesRequest serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set 页码；默认为1。
      *
      * @param pageNumber
      */
@@ -420,7 +493,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @param pageSize
      */
@@ -430,7 +503,7 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -441,7 +514,8 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * add item to 镜像ID列表，如果指定了此参数，其它参数可为空
+     * add item to 指定镜像ID查询，如果指定了此参数，其它参数可以不传。
+
      *
      * @param id
      */

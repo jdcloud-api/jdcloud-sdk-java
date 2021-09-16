@@ -29,7 +29,17 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceStatusResponse;
 
 /**
- * 批量查询云主机状态
+ * 
+查询一台或多台云主机实例的状态。
+
+云主机实例的状态说明请参考帮助文档：[云主机状态](https://docs.jdcloud.com/cn/virtual-machines/api/vm_status)
+
+## 接口说明
+- 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+- 单次查询最大可查询100条云主机状态。
+- 尽量一次调用接口查询多条数据，不建议使用该批量查询接口一次查询一条数据，如果使用不当导致查询过于密集，可能导致网关触发限流。
+- 由于该接口为 &#x60;GET&#x60; 方式请求，最终参数会转换为 &#x60;URL&#x60; 上的参数，但是 &#x60;HTTP&#x60; 协议下的 &#x60;GET&#x60; 请求参数长度是有大小限制的，使用者需要注意参数超长的问题。
+
  */
 class DescribeInstanceStatusExecutor extends JdcloudExecutor {
 

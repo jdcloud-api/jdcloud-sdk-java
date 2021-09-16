@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * instancePrivateIpAddress
+ * 云主机弹性网卡内网主IP地址。
  */
 public class InstancePrivateIpAddress  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      */
     private String instanceId;
 
     /**
-     * 主网卡内网主IP地址
+     * 内网主IP地址。
      */
     private String privateIpAddress;
 
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -62,7 +62,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡内网主IP地址
+     * get 内网主IP地址。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡内网主IP地址
+     * set 内网主IP地址。
      *
      * @param privateIpAddress
      */
@@ -81,7 +81,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
 
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -91,7 +91,7 @@ public class InstancePrivateIpAddress  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡内网主IP地址
+     * set 内网主IP地址。
      *
      * @param privateIpAddress
      */

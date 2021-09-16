@@ -28,7 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询镜像详情。
+ * 
+查询镜像详情。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 该接口与查询镜像信息列表返回的信息一致。
+- 只需要查询单个镜像信息的时候可以调用该接口。
 
  */
 public class DescribeImageRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,14 +43,14 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      * Required:true
      */
     @Required
@@ -51,7 +58,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -60,7 +67,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -69,7 +76,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -78,7 +85,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -88,7 +95,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -98,7 +105,7 @@ public class DescribeImageRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */

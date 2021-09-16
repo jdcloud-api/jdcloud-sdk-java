@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * ag
+ * 高可用组信息。
  */
 public class Ag  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 高可用组名称
+     * 高可用组名称。
      */
     private String name;
 
     /**
-     * 高可用组id
+     * 高可用组ID。
      */
     private String id;
 
 
     /**
-     * get 高可用组名称
+     * get 高可用组名称。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class Ag  implements java.io.Serializable {
     }
 
     /**
-     * set 高可用组名称
+     * set 高可用组名称。
      *
      * @param name
      */
@@ -62,7 +62,7 @@ public class Ag  implements java.io.Serializable {
     }
 
     /**
-     * get 高可用组id
+     * get 高可用组ID。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class Ag  implements java.io.Serializable {
     }
 
     /**
-     * set 高可用组id
+     * set 高可用组ID。
      *
      * @param id
      */
@@ -81,7 +81,7 @@ public class Ag  implements java.io.Serializable {
 
 
     /**
-     * set 高可用组名称
+     * set 高可用组名称。
      *
      * @param name
      */
@@ -91,7 +91,7 @@ public class Ag  implements java.io.Serializable {
     }
 
     /**
-     * set 高可用组id
+     * set 高可用组ID。
      *
      * @param id
      */

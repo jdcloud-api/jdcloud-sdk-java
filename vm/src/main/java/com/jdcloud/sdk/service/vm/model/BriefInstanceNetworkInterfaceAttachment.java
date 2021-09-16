@@ -26,25 +26,29 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * briefInstanceNetworkInterfaceAttachment
+ * 云主机实例网卡挂载点信息。
  */
 public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设备Index
+     * 网卡设备Index。创建实例时此参数无须指定且指定无效。
+对于主网卡默认Index为1，辅助网卡自动分配。
+
      */
     private Integer deviceIndex;
 
     /**
-     * 指明删除实例时是否删除网卡，默认true；当前只能是true
+     * 是否随实例关联删除。
      */
     private Boolean autoDelete;
 
 
     /**
-     * get 设备Index
+     * get 网卡设备Index。创建实例时此参数无须指定且指定无效。
+对于主网卡默认Index为1，辅助网卡自动分配。
+
      *
      * @return
      */
@@ -53,7 +57,9 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
     }
 
     /**
-     * set 设备Index
+     * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
+对于主网卡默认Index为1，辅助网卡自动分配。
+
      *
      * @param deviceIndex
      */
@@ -62,7 +68,7 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
     }
 
     /**
-     * get 指明删除实例时是否删除网卡，默认true；当前只能是true
+     * get 是否随实例关联删除。
      *
      * @return
      */
@@ -71,7 +77,7 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
     }
 
     /**
-     * set 指明删除实例时是否删除网卡，默认true；当前只能是true
+     * set 是否随实例关联删除。
      *
      * @param autoDelete
      */
@@ -81,7 +87,9 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
 
 
     /**
-     * set 设备Index
+     * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
+对于主网卡默认Index为1，辅助网卡自动分配。
+
      *
      * @param deviceIndex
      */
@@ -91,7 +99,7 @@ public class BriefInstanceNetworkInterfaceAttachment  implements java.io.Seriali
     }
 
     /**
-     * set 指明删除实例时是否删除网卡，默认true；当前只能是true
+     * set 是否随实例关联删除。
      *
      * @param autoDelete
      */

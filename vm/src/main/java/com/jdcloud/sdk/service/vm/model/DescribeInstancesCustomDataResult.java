@@ -30,7 +30,15 @@ import com.jdcloud.sdk.service.vm.model.CustomData;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 批量查询云主机用户自定义元数据
+ * 
+批量查询云主机用户自定义元数据。
+
+详细操作说明请参考帮助文档：[自定义元数据](https://docs.jdcloud.com/cn/virtual-machines/userdata)
+
+## 接口说明
+- 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+- 单次查询最大可查询10台云主机实例自定义元数据。
+
  */
 public class DescribeInstancesCustomDataResult extends JdcloudResult implements java.io.Serializable {
 
@@ -42,7 +50,7 @@ public class DescribeInstancesCustomDataResult extends JdcloudResult implements 
     private List<CustomData> customData;
 
     /**
-     * totalCount
+     * 本次查询可匹配到的总记录数，使用者需要结合&#x60;pageNumber&#x60;和&#x60;pageSize&#x60;计算是否可以继续分页。
      */
     private Number totalCount;
 
@@ -66,7 +74,7 @@ public class DescribeInstancesCustomDataResult extends JdcloudResult implements 
     }
 
     /**
-     * get totalCount
+     * get 本次查询可匹配到的总记录数，使用者需要结合&#x60;pageNumber&#x60;和&#x60;pageSize&#x60;计算是否可以继续分页。
      *
      * @return
      */
@@ -75,7 +83,7 @@ public class DescribeInstancesCustomDataResult extends JdcloudResult implements 
     }
 
     /**
-     * set totalCount
+     * set 本次查询可匹配到的总记录数，使用者需要结合&#x60;pageNumber&#x60;和&#x60;pageSize&#x60;计算是否可以继续分页。
      *
      * @param totalCount
      */
@@ -95,7 +103,7 @@ public class DescribeInstancesCustomDataResult extends JdcloudResult implements 
     }
 
     /**
-     * set totalCount
+     * set 本次查询可匹配到的总记录数，使用者需要结合&#x60;pageNumber&#x60;和&#x60;pageSize&#x60;计算是否可以继续分页。
      *
      * @param totalCount
      */

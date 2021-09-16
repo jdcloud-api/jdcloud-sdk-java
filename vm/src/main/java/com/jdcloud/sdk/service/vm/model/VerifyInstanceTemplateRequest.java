@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,13 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 校验启动模板的有效性
+ * 
+校验实例模板的有效性。
+
+详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+
+## 接口说明
+- 调用该接口可以校验实例模板是否有效，例如某些关联资源可能已经被删除了，此刻实例模板可能已经失效了。
 
  */
 public class VerifyInstanceTemplateRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,14 +42,14 @@ public class VerifyInstanceTemplateRequest extends JdcloudRequest implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 启动模板ID
+     * 实例模板ID。
      * Required:true
      */
     @Required
@@ -51,7 +57,7 @@ public class VerifyInstanceTemplateRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -60,7 +66,7 @@ public class VerifyInstanceTemplateRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -69,7 +75,7 @@ public class VerifyInstanceTemplateRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 启动模板ID
+     * get 实例模板ID。
      *
      * @return
      */
@@ -78,7 +84,7 @@ public class VerifyInstanceTemplateRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 启动模板ID
+     * set 实例模板ID。
      *
      * @param instanceTemplateId
      */
@@ -88,7 +94,7 @@ public class VerifyInstanceTemplateRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -98,7 +104,7 @@ public class VerifyInstanceTemplateRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 启动模板ID
+     * set 实例模板ID。
      *
      * @param instanceTemplateId
      */

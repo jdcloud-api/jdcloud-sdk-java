@@ -27,9 +27,14 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 云主机缷载一块弹性网卡。&lt;br&gt;
-云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
-不能缷载主网卡。
+ * 
+为云主机解绑弹性网卡。
+
+详细操作说明请参考帮助文档：[解绑弹性网卡](https://docs.jdcloud.com/cn/virtual-machines/detach-eni)
+
+## 接口说明
+- 实例状态必须为 &#x60;running&#x60; 或 &#x60;stopped&#x60; 状态，同时实例没有正在进行中的任务时才可以操作。
+- 实例中的主网卡是不可以解绑和绑定的，解绑弹性网卡只支持解绑辅助网卡。
 
  */
 public class DetachNetworkInterfaceResult extends JdcloudResult implements java.io.Serializable {

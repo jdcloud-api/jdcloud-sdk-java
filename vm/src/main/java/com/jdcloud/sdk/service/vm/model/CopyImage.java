@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * copyImage
+ * 跨区复制镜像的映射关系。
  */
 public class CopyImage  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 复制后的目标镜像ID
+     * 跨区复制产生的目标镜像ID。
      */
     private String destinationImageId;
 
     /**
-     * 源镜像ID
+     * 源镜像ID。
      */
     private String sourceImageId;
 
 
     /**
-     * get 复制后的目标镜像ID
+     * get 跨区复制产生的目标镜像ID。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class CopyImage  implements java.io.Serializable {
     }
 
     /**
-     * set 复制后的目标镜像ID
+     * set 跨区复制产生的目标镜像ID。
      *
      * @param destinationImageId
      */
@@ -62,7 +62,7 @@ public class CopyImage  implements java.io.Serializable {
     }
 
     /**
-     * get 源镜像ID
+     * get 源镜像ID。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class CopyImage  implements java.io.Serializable {
     }
 
     /**
-     * set 源镜像ID
+     * set 源镜像ID。
      *
      * @param sourceImageId
      */
@@ -81,7 +81,7 @@ public class CopyImage  implements java.io.Serializable {
 
 
     /**
-     * set 复制后的目标镜像ID
+     * set 跨区复制产生的目标镜像ID。
      *
      * @param destinationImageId
      */
@@ -91,7 +91,7 @@ public class CopyImage  implements java.io.Serializable {
     }
 
     /**
-     * set 源镜像ID
+     * set 源镜像ID。
      *
      * @param sourceImageId
      */

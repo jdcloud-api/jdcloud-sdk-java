@@ -26,30 +26,30 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * instanceTypeState
+ * 实例规格售卖状态信息。
  */
 public class InstanceTypeState  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 可用区
+     * 可用区。
      */
     private String az;
 
     /**
-     * 可售卖情况，true:可售卖、false:已售罄不可用
+     * 售卖状态，&#x60;true&#x60;：可售卖、&#x60;false&#x60;：已售罄不可用。
      */
     private Boolean inStock;
 
     /**
-     * 可用库存数量，预留字段，敬请期待。
+     * 可用库存数量，目前该字段为预留阶段，敬请期待。
      */
     private Integer availableCount;
 
 
     /**
-     * get 可用区
+     * get 可用区。
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区
+     * set 可用区。
      *
      * @param az
      */
@@ -67,7 +67,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * get 可售卖情况，true:可售卖、false:已售罄不可用
+     * get 售卖状态，&#x60;true&#x60;：可售卖、&#x60;false&#x60;：已售罄不可用。
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * set 可售卖情况，true:可售卖、false:已售罄不可用
+     * set 售卖状态，&#x60;true&#x60;：可售卖、&#x60;false&#x60;：已售罄不可用。
      *
      * @param inStock
      */
@@ -85,7 +85,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * get 可用库存数量，预留字段，敬请期待。
+     * get 可用库存数量，目前该字段为预留阶段，敬请期待。
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * set 可用库存数量，预留字段，敬请期待。
+     * set 可用库存数量，目前该字段为预留阶段，敬请期待。
      *
      * @param availableCount
      */
@@ -104,7 +104,7 @@ public class InstanceTypeState  implements java.io.Serializable {
 
 
     /**
-     * set 可用区
+     * set 可用区。
      *
      * @param az
      */
@@ -114,7 +114,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * set 可售卖情况，true:可售卖、false:已售罄不可用
+     * set 售卖状态，&#x60;true&#x60;：可售卖、&#x60;false&#x60;：已售罄不可用。
      *
      * @param inStock
      */
@@ -124,7 +124,7 @@ public class InstanceTypeState  implements java.io.Serializable {
     }
 
     /**
-     * set 可用库存数量，预留字段，敬请期待。
+     * set 可用库存数量，目前该字段为预留阶段，敬请期待。
      *
      * @param availableCount
      */

@@ -28,7 +28,13 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 撤销社区镜像，只允许操作您的个人私有镜像。
+ * 
+撤销社区镜像。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 只允许撤销用户的私有镜像。
 
  */
 public class UnReleaseImageRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,14 +42,14 @@ public class UnReleaseImageRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      * Required:true
      */
     @Required
@@ -51,7 +57,7 @@ public class UnReleaseImageRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -60,7 +66,7 @@ public class UnReleaseImageRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -69,7 +75,7 @@ public class UnReleaseImageRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -78,7 +84,7 @@ public class UnReleaseImageRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -88,7 +94,7 @@ public class UnReleaseImageRequest extends JdcloudRequest implements java.io.Ser
 
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -98,7 +104,7 @@ public class UnReleaseImageRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */

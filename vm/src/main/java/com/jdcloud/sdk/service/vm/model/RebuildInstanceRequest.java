@@ -32,11 +32,20 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 云主机使用指定镜像重置云主机系统&lt;br&gt;
-云主机的状态必须为&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-若不指定镜像ID，默认使用当前主机的原镜像重置系统。&lt;br&gt;
-云主机系统盘类型必须与待更换镜像支持的系统盘类型保持一致，若当前云主机系统盘为local类型，则更换镜像的系统盘类型必须为loaclDisk类型；同理，若当前云主机系统盘为cloud类型，则更换镜像的系统盘类型必须为cloudDisk类型。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。&lt;br&gt;
-指定的镜像必须能够支持当前主机的实例规格(instanceType)，否则会返回错误。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像支持的系统盘类型信息。
+ * 
+重置云主机系统。
+
+需要注意的是，重装系统会导致系统盘的内容全部丢失，数据盘的数据不受影响（但需要重新识别）。因此，在需要保留系统运行数据的情况下，强烈建议您在重置系统前制作私有镜像，之后重置时选择该私有镜像即可实现保留系统运行数据。
+
+详细操作说明请参考帮助文档：[重置系统](https://docs.jdcloud.com/cn/virtual-machines/rebuild-instance)
+
+## 接口说明
+- 云主机的状态必须为 &#x60;stopped&#x60; 状态。
+- 若实例基于私有镜像创建，而私有镜像已被删除，则无法使用原镜像重置系统，即无法恢复至刚创建时的系统状态，建议保留被实例引用的私有镜像。
+- 重置系统需要重新指定密码，对于 &#x60;Linux&#x60; 系统您还可以重新指定 &#x60;SSH密钥&#x60;。
+- 对于云盘作系统盘的实例，当前系统盘大小不能超过目标镜像对应系统盘快照的容量。
+- 云主机系统盘类型必须与待更换镜像支持的系统盘类型保持一致，若当前云主机系统盘为 &#x60;local&#x60; 类型，则更换镜像的系统盘类型必须为 &#x60;loaclDisk&#x60; 类型；同理，若当前云主机系统盘为 &#x60;cloud&#x60; 类型，则更换镜像的系统盘类型必须为 &#x60;cloudDisk&#x60; 类型。可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+- 指定的镜像必须能够支持当前主机的实例规格 &#x60;instanceType&#x60;，否则会返回错误。可查询 [DescribeImageConstraints](docs.jdcloud.com/virtual-machines/api/describeimageconstraints) 接口获得指定镜像支持的系统盘类型信息。
 
  */
 public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Serializable {
@@ -44,54 +53,63 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云主机密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * 实例密码。
+可用于SSH登录和VNC登录。
+长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：&#x60;\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，&#x60;。
+更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+
      */
     private String password;
 
     /**
-     * 镜像ID。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+     * 镜像ID。
+若不指定镜像ID，默认使用当前主机的原镜像重置系统。
+可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+
      */
     private String imageId;
 
     /**
-     * 密钥对名称；当前只支持一个。仅Linux系统支持指定。
+     * 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      */
     private List<String> keyNames;
 
     /**
-     * 云主机hostname，若不指定hostname，则hostname默认使用云主机重置前的hostname
-Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
-Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+     * 实例hostname。
+若不指定hostname，则默认以实例名称&#x60;name&#x60;作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
 
      */
     private String hostname;
 
     /**
-     * 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
-若不指定metadata，则metadata默认使用云主机重置前的metadata。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+     * 用户自定义元数据。
+以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
+注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
      */
     private List<Metadata> metadata;
 
     /**
-     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
-若不指定userdata，则userdata默认使用云主机重置前的userdata。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
+**linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      */
     private List<Userdata> userdata;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -99,7 +117,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
 
 
     /**
-     * get 云主机密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * get 实例密码。
+可用于SSH登录和VNC登录。
+长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：&#x60;\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，&#x60;。
+更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+
      *
      * @return
      */
@@ -108,7 +130,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 实例密码。
+可用于SSH登录和VNC登录。
+长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：&#x60;\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，&#x60;。
+更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+
      *
      * @param password
      */
@@ -117,7 +143,10 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 镜像ID。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+     * get 镜像ID。
+若不指定镜像ID，默认使用当前主机的原镜像重置系统。
+可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+
      *
      * @return
      */
@@ -126,7 +155,10 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 镜像ID。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+     * set 镜像ID。
+若不指定镜像ID，默认使用当前主机的原镜像重置系统。
+可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+
      *
      * @param imageId
      */
@@ -135,7 +167,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 密钥对名称；当前只支持一个。仅Linux系统支持指定。
+     * get 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      *
      * @return
      */
@@ -144,7 +177,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 密钥对名称；当前只支持一个。仅Linux系统支持指定。
+     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      *
      * @param keyNames
      */
@@ -153,9 +187,10 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 云主机hostname，若不指定hostname，则hostname默认使用云主机重置前的hostname
-Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
-Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+     * get 实例hostname。
+若不指定hostname，则默认以实例名称&#x60;name&#x60;作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
 
      *
      * @return
@@ -165,9 +200,10 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机重置前的hostname
-Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
-Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+     * set 实例hostname。
+若不指定hostname，则默认以实例名称&#x60;name&#x60;作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
 
      *
      * @param hostname
@@ -177,9 +213,9 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
-若不指定metadata，则metadata默认使用云主机重置前的metadata。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+     * get 用户自定义元数据。
+以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
+注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
      *
      * @return
@@ -189,9 +225,9 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
-若不指定metadata，则metadata默认使用云主机重置前的metadata。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+     * set 用户自定义元数据。
+以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
+注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
      *
      * @param metadata
@@ -201,10 +237,10 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
-若不指定userdata，则userdata默认使用云主机重置前的userdata。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * get 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
+**linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      *
      * @return
@@ -214,10 +250,10 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
-若不指定userdata，则userdata默认使用云主机重置前的userdata。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * set 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
+**linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      *
      * @param userdata
@@ -227,7 +263,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -236,7 +272,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -245,7 +281,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -254,7 +290,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -264,7 +300,11 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
 
 
     /**
-     * set 云主机密码，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;。
+     * set 实例密码。
+可用于SSH登录和VNC登录。
+长度为8\~30个字符，必须同时包含大、小写英文字母、数字和特殊符号中的三类字符。特殊符号包括：&#x60;\(\)\&#x60;~!@#$%^&amp;\*\_-+&#x3D;\|{}\[ ]:&quot;;&#39;&lt;&gt;,.?/，&#x60;。
+更多密码输入要求请参见 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
+
      *
      * @param password
      */
@@ -274,7 +314,10 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 镜像ID。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
+     * set 镜像ID。
+若不指定镜像ID，默认使用当前主机的原镜像重置系统。
+可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
+
      *
      * @param imageId
      */
@@ -284,7 +327,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 密钥对名称；当前只支持一个。仅Linux系统支持指定。
+     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      *
      * @param keyNames
      */
@@ -294,9 +338,10 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机hostname，若不指定hostname，则hostname默认使用云主机重置前的hostname
-Windows Server系统：长度为2-15个字符，允许大小写字母、数字或连字符（-）。不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
-Linux系统：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
+     * set 实例hostname。
+若不指定hostname，则默认以实例名称&#x60;name&#x60;作为hostname，但是会以RFC 952和RFC 1123命名规范做一定转义。
+**Windows系统**：长度为2\~15个字符，允许大小写字母、数字或连字符（-），不能以连字符（-）开头或结尾，不能连续使用连字符（-），也不能全部使用数字。不支持点号（.）。
+**Linux系统**：长度为2-64个字符，允许支持多个点号，点之间为一段，每段允许使用大小写字母、数字或连字符（-），但不能连续使用点号（.）或连字符（-），不能以点号（.）或连字符（-）开头或结尾。
 
      *
      * @param hostname
@@ -307,9 +352,9 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
-若不指定metadata，则metadata默认使用云主机重置前的metadata。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+     * set 用户自定义元数据。
+以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
+注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
      *
      * @param metadata
@@ -320,10 +365,10 @@ Linux系统：长度为2-64个字符，允许支持多个点号，点之间为�
     }
 
     /**
-     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
-若不指定userdata，则userdata默认使用云主机重置前的userdata。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * set 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
+**linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      *
      * @param userdata
@@ -334,7 +379,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -344,7 +389,7 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -355,7 +400,8 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
 
 
     /**
-     * add item to 密钥对名称；当前只支持一个。仅Linux系统支持指定。
+     * add item to 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+
      *
      * @param keyName
      */
@@ -367,9 +413,9 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * add item to 用户自定义元数据信息，key-value键值对总数量不超过40对，其中有效键值对数量不超过20，无效键值对数量不超过20对。不区分大小写。
-若不指定metadata，则metadata默认使用云主机重置前的metadata。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+     * add item to 用户自定义元数据。
+以 &#x60;key-value&#x60; 键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且 &#x60;key&#x60; 不超过256字符，&#x60;value&#x60; 不超过16KB，不区分大小写。
+注意：&#x60;key&#x60; 不要以连字符(-)结尾，否则此 &#x60;key&#x60; 不生效。
 
      *
      * @param metadata
@@ -382,10 +428,10 @@ launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;
     }
 
     /**
-     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。value为base64格式。
-若不指定userdata，则userdata默认使用云主机重置前的userdata。
-launch-script：linux系统支持bash和python，编码前须分别以 #!/bin/bash 和 #!/usr/bin/env python 作为内容首行;
-launch-script：windows系统支持bat和powershell，编码前须分别以 &lt;cmd&gt;&lt;/cmd&gt; 和 &lt;powershell&gt;&lt;/powershell&gt; 作为内容首、尾行。
+     * add item to 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须Base64编码且编码前数据长度不能超过16KB。
+**linux系统**：支持bash和python，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
 
      *
      * @param userdata

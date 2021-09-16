@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * 描述实例的本地磁盘
+ * 实例的本地磁盘信息。
  */
 public class LocalDisk  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
+     * 磁盘类型，取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      */
     private String diskType;
 
     /**
-     * 磁盘大小
+     * 磁盘大小。
      */
     private Integer diskSizeGB;
 
 
     /**
-     * get 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
+     * get 磁盘类型，取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class LocalDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
+     * set 磁盘类型，取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @param diskType
      */
@@ -62,7 +62,7 @@ public class LocalDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 磁盘大小
+     * get 磁盘大小。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class LocalDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘大小
+     * set 磁盘大小。
      *
      * @param diskSizeGB
      */
@@ -81,7 +81,7 @@ public class LocalDisk  implements java.io.Serializable {
 
 
     /**
-     * set 磁盘类型，取值范围{ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1}
+     * set 磁盘类型，取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @param diskType
      */
@@ -91,7 +91,7 @@ public class LocalDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 磁盘大小
+     * set 磁盘大小。
      *
      * @param diskSizeGB
      */

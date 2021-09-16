@@ -28,45 +28,45 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * instanceTemplate
+ * 实例模板信息。
  */
 public class InstanceTemplate  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 启动模板ID
+     * 实例模板ID
      */
     private String id;
 
     /**
-     * 启动模板名称
+     * 实例模板名称。
      */
     private String name;
 
     /**
-     * 启动模板描述
+     * 实例模板描述。
      */
     private String description;
 
     /**
-     * 启动模板的数据
+     * 实例模板详细配置。
      */
     private InstanceTemplateData instanceTemplateData;
 
     /**
-     * 关联的高可用组(ag)信息
+     * 关联的高可用组(ag)信息。
      */
     private List<Ag> ags;
 
     /**
-     * 创建时间
+     * 实例模板创建时间。
      */
     private String createdTime;
 
 
     /**
-     * get 启动模板ID
+     * get 实例模板ID
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板ID
+     * set 实例模板ID
      *
      * @param id
      */
@@ -84,7 +84,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 启动模板名称
+     * get 实例模板名称。
      *
      * @return
      */
@@ -93,7 +93,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板名称
+     * set 实例模板名称。
      *
      * @param name
      */
@@ -102,7 +102,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 启动模板描述
+     * get 实例模板描述。
      *
      * @return
      */
@@ -111,7 +111,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板描述
+     * set 实例模板描述。
      *
      * @param description
      */
@@ -120,7 +120,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 启动模板的数据
+     * get 实例模板详细配置。
      *
      * @return
      */
@@ -129,7 +129,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板的数据
+     * set 实例模板详细配置。
      *
      * @param instanceTemplateData
      */
@@ -138,7 +138,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 关联的高可用组(ag)信息
+     * get 关联的高可用组(ag)信息。
      *
      * @return
      */
@@ -147,7 +147,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 关联的高可用组(ag)信息
+     * set 关联的高可用组(ag)信息。
      *
      * @param ags
      */
@@ -156,7 +156,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * get 创建时间
+     * get 实例模板创建时间。
      *
      * @return
      */
@@ -165,7 +165,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 实例模板创建时间。
      *
      * @param createdTime
      */
@@ -175,7 +175,7 @@ public class InstanceTemplate  implements java.io.Serializable {
 
 
     /**
-     * set 启动模板ID
+     * set 实例模板ID
      *
      * @param id
      */
@@ -185,7 +185,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板名称
+     * set 实例模板名称。
      *
      * @param name
      */
@@ -195,7 +195,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板描述
+     * set 实例模板描述。
      *
      * @param description
      */
@@ -205,7 +205,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 启动模板的数据
+     * set 实例模板详细配置。
      *
      * @param instanceTemplateData
      */
@@ -215,7 +215,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 关联的高可用组(ag)信息
+     * set 关联的高可用组(ag)信息。
      *
      * @param ags
      */
@@ -225,7 +225,7 @@ public class InstanceTemplate  implements java.io.Serializable {
     }
 
     /**
-     * set 创建时间
+     * set 实例模板创建时间。
      *
      * @param createdTime
      */
@@ -236,7 +236,7 @@ public class InstanceTemplate  implements java.io.Serializable {
 
 
     /**
-     * add item to 关联的高可用组(ag)信息
+     * add item to 关联的高可用组(ag)信息。
      *
      * @param ag
      */

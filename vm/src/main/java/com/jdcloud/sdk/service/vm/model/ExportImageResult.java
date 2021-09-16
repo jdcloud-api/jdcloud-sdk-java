@@ -27,7 +27,19 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 导出镜像，将京东云私有镜像导出至京东云以外环境
+ * 
+导出私有镜像。
+
+将京东云私有镜像导出至京东云以外环境。
+
+详细操作说明请参考帮助文档：[导出私有镜像](https://docs.jdcloud.com/cn/virtual-machines/export-private-image)
+
+## 接口说明
+- 调用此接口将私有镜像导出到京东云对象存储空间中。
+- 仅支持系统盘镜像导出，即使镜像有关联的数据盘快照，也仅会导出系统盘镜像文件。
+- 导出的镜像文件格式为QCOW2。
+- &#x60;Windows Server&#x60; 操作系统的镜像不支持导出（若镜像来源为导入镜像，则无此限制）。
+- 镜像必须为 &#x60;云硬盘系统盘&#x60; 镜像，如您的镜像是 &#x60;本地盘系统盘&#x60; 镜像，可以通过镜像类型转换功能转换为云盘系统盘镜像后再导出。
 
  */
 public class ExportImageResult extends JdcloudResult implements java.io.Serializable {
@@ -35,13 +47,13 @@ public class ExportImageResult extends JdcloudResult implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 导出任务id
+     * 导出任务id。
      */
     private Integer exportTaskId;
 
 
     /**
-     * get 导出任务id
+     * get 导出任务id。
      *
      * @return
      */
@@ -50,7 +62,7 @@ public class ExportImageResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 导出任务id
+     * set 导出任务id。
      *
      * @param exportTaskId
      */
@@ -60,7 +72,7 @@ public class ExportImageResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * set 导出任务id
+     * set 导出任务id。
      *
      * @param exportTaskId
      */

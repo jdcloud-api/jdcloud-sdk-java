@@ -30,8 +30,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 共享镜像，只允许操作您的个人私有镜像，单个镜像最多可共享给20个京东云帐户。&lt;br&gt;
-整机镜像目前不支持共享。
+ * 
+共享私有镜像。
+
+详细操作说明请参考帮助文档：[共享私有镜像](https://docs.jdcloud.com/cn/virtual-machines/share-image)
+
+## 接口说明
+- 只允许共享用户的私有镜像。
+- 单个镜像最多可以共享给20个京东云帐户、不可以共享给自己。
+- 带有加密快照的打包镜像无法共享。
 
  */
 public class ShareImageRequest extends JdcloudRequest implements java.io.Serializable {
@@ -39,21 +46,21 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 需要共享的帐户
+     * 共享的目标京东云帐户列表。
      * Required:true
      */
     @Required
     private List<String> pins;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 镜像ID
+     * 镜像ID。
      * Required:true
      */
     @Required
@@ -61,7 +68,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 需要共享的帐户
+     * get 共享的目标京东云帐户列表。
      *
      * @return
      */
@@ -70,7 +77,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 需要共享的帐户
+     * set 共享的目标京东云帐户列表。
      *
      * @param pins
      */
@@ -79,7 +86,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -88,7 +95,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -97,7 +104,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 镜像ID
+     * get 镜像ID。
      *
      * @return
      */
@@ -106,7 +113,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -116,7 +123,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 需要共享的帐户
+     * set 共享的目标京东云帐户列表。
      *
      * @param pins
      */
@@ -126,7 +133,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -136,7 +143,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 镜像ID
+     * set 镜像ID。
      *
      * @param imageId
      */
@@ -147,7 +154,7 @@ public class ShareImageRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * add item to 需要共享的帐户
+     * add item to 共享的目标京东云帐户列表。
      *
      * @param pin
      */

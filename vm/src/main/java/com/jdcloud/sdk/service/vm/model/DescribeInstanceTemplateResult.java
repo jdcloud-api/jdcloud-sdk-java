@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * Instance-Template
- * 与启动模板相关的接口
+ * 与实例模板相关的接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,14 @@ import com.jdcloud.sdk.service.vm.model.InstanceTemplate;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询启动模板详情
+ * 
+查询实例模板详情。
+
+详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
+
+## 接口说明
+- 该接口与查询实例模板列表返回的信息一致。
+- 只需要查询单个实例模板详细信息的时候可以调用该接口。
 
  */
 public class DescribeInstanceTemplateResult extends JdcloudResult implements java.io.Serializable {
@@ -36,13 +43,13 @@ public class DescribeInstanceTemplateResult extends JdcloudResult implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * instanceTemplate
+     * 响应结果。
      */
     private InstanceTemplate instanceTemplate;
 
 
     /**
-     * get instanceTemplate
+     * get 响应结果。
      *
      * @return
      */
@@ -51,7 +58,7 @@ public class DescribeInstanceTemplateResult extends JdcloudResult implements jav
     }
 
     /**
-     * set instanceTemplate
+     * set 响应结果。
      *
      * @param instanceTemplate
      */
@@ -61,7 +68,7 @@ public class DescribeInstanceTemplateResult extends JdcloudResult implements jav
 
 
     /**
-     * set instanceTemplate
+     * set 响应结果。
      *
      * @param instanceTemplate
      */

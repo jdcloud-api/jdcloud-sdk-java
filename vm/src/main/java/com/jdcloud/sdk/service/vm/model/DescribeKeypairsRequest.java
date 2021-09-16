@@ -31,8 +31,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量查询密钥对。&lt;br&gt;
-此接口支持分页查询，默认每页20条。
+ * 
+批量查询密钥对。
+
+详细操作说明请参考帮助文档：[密钥概述](https://docs.jdcloud.com/cn/virtual-machines/keypair-overview)
+
+## 接口说明
+- 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+- 单次查询最大可查询100条密钥数据。
 
  */
 public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.Serializable {
@@ -40,23 +46,24 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 页码；默认为1
+     * 页码；默认为1。
      */
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为20；取值范围[10, 100]
+     * 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      */
     private Integer pageSize;
 
     /**
-     * keyNames - 密钥对名称，精确匹配，支持多个
+     * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;keyNames&#x60;: 密钥对名称，精确匹配，支持多个
 
      */
     private List<Filter> filters;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -64,7 +71,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 页码；默认为1
+     * get 页码；默认为1。
      *
      * @return
      */
@@ -73,7 +80,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1。
      *
      * @param pageNumber
      */
@@ -82,7 +89,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 分页大小；默认为20；取值范围[10, 100]
+     * get 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @return
      */
@@ -91,7 +98,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @param pageSize
      */
@@ -100,7 +107,8 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get keyNames - 密钥对名称，精确匹配，支持多个
+     * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;keyNames&#x60;: 密钥对名称，精确匹配，支持多个
 
      *
      * @return
@@ -110,7 +118,8 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set keyNames - 密钥对名称，精确匹配，支持多个
+     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;keyNames&#x60;: 密钥对名称，精确匹配，支持多个
 
      *
      * @param filters
@@ -120,7 +129,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -129,7 +138,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -139,7 +148,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 页码；默认为1
+     * set 页码；默认为1。
      *
      * @param pageNumber
      */
@@ -149,7 +158,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 分页大小；默认为20；取值范围[10, 100]
+     * set 分页大小；&lt;br&gt;默认为20；取值范围[10, 100]。
      *
      * @param pageSize
      */
@@ -159,7 +168,8 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set keyNames - 密钥对名称，精确匹配，支持多个
+     * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;keyNames&#x60;: 密钥对名称，精确匹配，支持多个
 
      *
      * @param filters
@@ -170,7 +180,7 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -181,7 +191,8 @@ public class DescribeKeypairsRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * add item to keyNames - 密钥对名称，精确匹配，支持多个
+     * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
+&#x60;keyNames&#x60;: 密钥对名称，精确匹配，支持多个
 
      *
      * @param filter

@@ -27,8 +27,16 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取云主机vnc，用于连接管理云主机。&lt;br&gt;
-vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小时内没有使用，vnc地址自动失效，再次使用需要重新获取。
+ * 
+获取云主机vnc地址。
+
+详细操作说明请参考帮助文档：[连接实例](https://docs.jdcloud.com/cn/virtual-machines/connect-to-instance)
+
+## 接口说明
+- 实例仅 &#x60;running&#x60; 状态时才可获取到 &#x60;vnc&#x60; 地址。
+- 调用该接口可获取云主机 &#x60;vnc&#x60; 地址，用于远程连接管理云主机。
+- &#x60;vnc&#x60; 地址的有效期为1个小时，调用接口获取vnc地址后如果1个小时内没有使用，&#x60;vnc&#x60; 地址将自动失效，再次使用需要重新获取。
+- 裸金属实例目前不支持通过 &#x60;vnc&#x60; 登录。
 
  */
 public class DescribeInstanceVncUrlResult extends JdcloudResult implements java.io.Serializable {
@@ -36,13 +44,13 @@ public class DescribeInstanceVncUrlResult extends JdcloudResult implements java.
     private static final long serialVersionUID = 1L;
 
     /**
-     * vncUrl
+     * 远程vnc地址。
      */
     private String vncUrl;
 
 
     /**
-     * get vncUrl
+     * get 远程vnc地址。
      *
      * @return
      */
@@ -51,7 +59,7 @@ public class DescribeInstanceVncUrlResult extends JdcloudResult implements java.
     }
 
     /**
-     * set vncUrl
+     * set 远程vnc地址。
      *
      * @param vncUrl
      */
@@ -61,7 +69,7 @@ public class DescribeInstanceVncUrlResult extends JdcloudResult implements java.
 
 
     /**
-     * set vncUrl
+     * set 远程vnc地址。
      *
      * @param vncUrl
      */

@@ -30,8 +30,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 镜像跨区复制，将私有镜像复制到其它地域下，只允许操作您的个人私有镜像。&lt;br&gt;
-只支持rootDeviceType为cloudDisk的云硬盘系统盘镜像操作。
+ * 
+镜像跨地域复制。
+
+详细操作说明请参考帮助文档：[镜像复制](https://docs.jdcloud.com/cn/virtual-machines/copy-image)
+
+## 接口说明
+- 调用该接口将私有镜像复制到其它地域下。
+- 只支持云盘系统盘的镜像。
+- 不支持带有加密快照的镜像。
 
  */
 public class CopyImagesRequest extends JdcloudRequest implements java.io.Serializable {
@@ -39,21 +46,21 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 源镜像ID
+     * 要复制的私有镜像ID列表，最多支持10个。
      * Required:true
      */
     @Required
     private List<String> sourceImageIds;
 
     /**
-     * 目标区域
+     * 目标地域。
      * Required:true
      */
     @Required
     private String destinationRegion;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -61,7 +68,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 源镜像ID
+     * get 要复制的私有镜像ID列表，最多支持10个。
      *
      * @return
      */
@@ -70,7 +77,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 源镜像ID
+     * set 要复制的私有镜像ID列表，最多支持10个。
      *
      * @param sourceImageIds
      */
@@ -79,7 +86,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 目标区域
+     * get 目标地域。
      *
      * @return
      */
@@ -88,7 +95,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 目标区域
+     * set 目标地域。
      *
      * @param destinationRegion
      */
@@ -97,7 +104,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -106,7 +113,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -116,7 +123,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 源镜像ID
+     * set 要复制的私有镜像ID列表，最多支持10个。
      *
      * @param sourceImageIds
      */
@@ -126,7 +133,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 目标区域
+     * set 目标地域。
      *
      * @param destinationRegion
      */
@@ -136,7 +143,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -147,7 +154,7 @@ public class CopyImagesRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * add item to 源镜像ID
+     * add item to 要复制的私有镜像ID列表，最多支持10个。
      *
      * @param sourceImageId
      */

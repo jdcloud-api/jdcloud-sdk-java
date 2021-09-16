@@ -28,7 +28,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 停止单个云主机，只能停止&lt;b&gt;running&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可停止
+ * 
+停止云主机实例。
+
+详细操作说明请参考帮助文档：[停止实例](https://docs.jdcloud.com/cn/virtual-machines/stop-instance)
+
+## 接口说明
+- 实例状态必须为运行 &#x60;running&#x60; 状态，同时实例没有正在进行中的任务时才可停止。
+- 如果云主机实例属性 &#x60;chargeOnStopped&#x60; 的值为 &#x60;stopCharging&#x60;，实例关机之后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。需要使用者注意的是，实例一旦释放自身资源，再次启动时有可能因为库存资源不足而导致无法启动。
+- &#x60;chargeOnStopped&#x60; 该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
 
  */
 public class StopInstanceRequest extends JdcloudRequest implements java.io.Serializable {
@@ -36,19 +44,25 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     private static final long serialVersionUID = 1L;
 
     /**
-     * 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * 停机不计费模式。
+该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+可选值：
+&#x60;keepCharging&#x60;：停机后保持计费，不释放资源。
+&#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。默认值为空。
+
      */
     private String chargeOnStopped;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -56,7 +70,13 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * get 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * get 停机不计费模式。
+该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+可选值：
+&#x60;keepCharging&#x60;：停机后保持计费，不释放资源。
+&#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。默认值为空。
+
      *
      * @return
      */
@@ -65,7 +85,13 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * set 停机不计费模式。
+该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+可选值：
+&#x60;keepCharging&#x60;：停机后保持计费，不释放资源。
+&#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。默认值为空。
+
      *
      * @param chargeOnStopped
      */
@@ -74,7 +100,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -83,7 +109,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -92,7 +118,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -101,7 +127,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -111,7 +137,13 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
-     * set 关机模式，只支持云盘做系统盘的按配置计费云主机keepCharging：关机后继续计费；stopCharging：关机后停止计费。
+     * set 停机不计费模式。
+该参数仅对按配置计费且系统盘为云硬盘的实例生效，并且不是专有宿主机中的实例。
+配置停机不计费且停机后，实例部分将停止计费，且释放实例自身包含的资源（CPU/内存/GPU/本地数据盘）。
+可选值：
+&#x60;keepCharging&#x60;：停机后保持计费，不释放资源。
+&#x60;stopCharging&#x60;：停机后停止计费，释放实例资源。默认值为空。
+
      *
      * @param chargeOnStopped
      */
@@ -121,7 +153,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -131,7 +163,7 @@ public class StopInstanceRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */

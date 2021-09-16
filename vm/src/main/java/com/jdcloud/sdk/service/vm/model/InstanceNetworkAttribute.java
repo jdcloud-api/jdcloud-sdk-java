@@ -26,25 +26,27 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * instanceNetworkAttribute
+ * 云主机网卡属性信息。
  */
 public class InstanceNetworkAttribute  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性网卡ID
+     * 弹性网卡ID。
      */
     private String networkInterfaceId;
 
     /**
-     * 随主机自动删除，默认为False
+     * 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
      */
     private Boolean autoDelete;
 
 
     /**
-     * get 弹性网卡ID
+     * get 弹性网卡ID。
      *
      * @return
      */
@@ -53,7 +55,7 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性网卡ID
+     * set 弹性网卡ID。
      *
      * @param networkInterfaceId
      */
@@ -62,7 +64,9 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
     }
 
     /**
-     * get 随主机自动删除，默认为False
+     * get 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
      *
      * @return
      */
@@ -71,7 +75,9 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 随主机自动删除，默认为False
+     * set 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
      *
      * @param autoDelete
      */
@@ -81,7 +87,7 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
 
 
     /**
-     * set 弹性网卡ID
+     * set 弹性网卡ID。
      *
      * @param networkInterfaceId
      */
@@ -91,7 +97,9 @@ public class InstanceNetworkAttribute  implements java.io.Serializable {
     }
 
     /**
-     * set 随主机自动删除，默认为False
+     * set 是否随实例一起删除。
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
      *
      * @param autoDelete
      */

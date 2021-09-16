@@ -27,7 +27,13 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 云主机解绑弹性公网IP，解绑的是主网卡、内网主IP对应的弹性公网IP。
+ * 
+为云主机解绑弹性公网IP。
+
+详细操作说明请参考帮助文档：[解绑弹性公网IP](https://docs.jdcloud.com/cn/virtual-machines/disassociate-elastic-ip)
+
+## 接口说明
+- 该接口只支持解绑实例的主网卡的主内网IP上的弹性公网IP。
 
  */
 public class DisassociateElasticIpResponse extends JdcloudResponse<DisassociateElasticIpResult> implements java.io.Serializable {

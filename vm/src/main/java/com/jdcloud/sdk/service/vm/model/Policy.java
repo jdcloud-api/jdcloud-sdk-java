@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * policy
+ * 自动任务策略信息。
  */
 public class Policy  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 策略ID。
+     * 自动任务策略ID。
      */
     private String policyId;
 
     /**
-     * 策略类型。
+     * 自动任务策略类型，当前只支持 &#x60;AutoImage&#x60; 自动备份镜像。
      */
     private String policyType;
 
 
     /**
-     * get 策略ID。
+     * get 自动任务策略ID。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * set 策略ID。
+     * set 自动任务策略ID。
      *
      * @param policyId
      */
@@ -62,7 +62,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * get 策略类型。
+     * get 自动任务策略类型，当前只支持 &#x60;AutoImage&#x60; 自动备份镜像。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * set 策略类型。
+     * set 自动任务策略类型，当前只支持 &#x60;AutoImage&#x60; 自动备份镜像。
      *
      * @param policyType
      */
@@ -81,7 +81,7 @@ public class Policy  implements java.io.Serializable {
 
 
     /**
-     * set 策略ID。
+     * set 自动任务策略ID。
      *
      * @param policyId
      */
@@ -91,7 +91,7 @@ public class Policy  implements java.io.Serializable {
     }
 
     /**
-     * set 策略类型。
+     * set 自动任务策略类型，当前只支持 &#x60;AutoImage&#x60; 自动备份镜像。
      *
      * @param policyType
      */

@@ -28,8 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 启动单个云主机，只能启动&lt;b&gt;stopped&lt;/b&gt;状态的云主机，云主机没有正在进行中的任务才可启动。&lt;br&gt;
-只能启动正常计费状态的云主机，若已欠费停服或到期停服则不支持启动。
+ * 
+启动云主机实例。
+
+详细操作说明请参考帮助文档：[启动实例](https://docs.jdcloud.com/cn/virtual-machines/start-instance)
+
+## 接口说明
+- 实例状态必须为停止 &#x60;stopped&#x60; 状态，同时实例没有正在进行中的任务时才可以启动。
+- 如果实例为停机不计费模式，启动时有可能因为库存资源不足而导致无法启动。
+- 如果云主机实例已欠费或已到期，则无法启动。
+- 如果实例系统盘是云硬盘，启动之前请确保系统盘处于正常挂载状态。
 
  */
 public class StartInstanceRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,14 +45,14 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -52,7 +60,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -61,7 +69,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -70,7 +78,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -79,7 +87,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -89,7 +97,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -99,7 +107,7 @@ public class StartInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */

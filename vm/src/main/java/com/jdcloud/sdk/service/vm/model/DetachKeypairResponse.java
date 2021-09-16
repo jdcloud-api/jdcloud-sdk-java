@@ -27,7 +27,13 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 解绑ssh密钥对。
+ * 
+为云主机实例解绑密钥。
+
+详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+
+## 接口说明
+- 调用该接口解绑云主机实例中的密钥。
 
  */
 public class DetachKeypairResponse extends JdcloudResponse<DetachKeypairResult> implements java.io.Serializable {

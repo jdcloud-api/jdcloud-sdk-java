@@ -27,7 +27,14 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 导入镜像，将外部镜像导入到京东云中
+ * 
+导入私有镜像。
+
+详细操作说明请参考帮助文档：[导入私有镜像](https://docs.jdcloud.com/cn/virtual-machines/import-private-image)
+
+## 接口说明
+- 当前仅支持导入系统盘镜像。
+- 导入后的镜像将以 &#x60;云硬盘系统盘镜像&#x60; 格式作为私有镜像使用，同时会自动生成一个与导入镜像关联的快照。
 
  */
 public class ImportImageResult extends JdcloudResult implements java.io.Serializable {
@@ -35,18 +42,18 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像id
+     * 镜像id。
      */
     private String imageId;
 
     /**
-     * 导入任务id
+     * 导入任务id。
      */
     private Integer importTaskId;
 
 
     /**
-     * get 镜像id
+     * get 镜像id。
      *
      * @return
      */
@@ -55,7 +62,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 镜像id
+     * set 镜像id。
      *
      * @param imageId
      */
@@ -64,7 +71,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * get 导入任务id
+     * get 导入任务id。
      *
      * @return
      */
@@ -73,7 +80,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 导入任务id
+     * set 导入任务id。
      *
      * @param importTaskId
      */
@@ -83,7 +90,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
 
 
     /**
-     * set 镜像id
+     * set 镜像id。
      *
      * @param imageId
      */
@@ -93,7 +100,7 @@ public class ImportImageResult extends JdcloudResult implements java.io.Serializ
     }
 
     /**
-     * set 导入任务id
+     * set 导入任务id。
      *
      * @param importTaskId
      */

@@ -29,32 +29,37 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * instanceTemplateNetworkInterface
+ * 实例模板弹性网卡设备详细配置。
  */
 public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 子网ID
+     * 子网ID。
      * Required:true
      */
     @Required
     private String subnetId;
 
     /**
-     * 安全组ID列表
+     * 安全组ID列表。
      */
     private List<String> securityGroups;
 
     /**
-     * PortSecurity，取值为0或者1，默认为1
+     * PortSecurity，源和目标IP地址校验，取值为0或者1。
      */
     private Integer sanityCheck;
 
+    /**
+     * 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+     */
+    private Integer ipv6AddressCount;
+
 
     /**
-     * get 子网ID
+     * get 子网ID。
      *
      * @return
      */
@@ -63,7 +68,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 子网ID
+     * set 子网ID。
      *
      * @param subnetId
      */
@@ -72,7 +77,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 安全组ID列表
+     * get 安全组ID列表。
      *
      * @return
      */
@@ -81,7 +86,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组ID列表
+     * set 安全组ID列表。
      *
      * @param securityGroups
      */
@@ -90,7 +95,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get PortSecurity，取值为0或者1，默认为1
+     * get PortSecurity，源和目标IP地址校验，取值为0或者1。
      *
      * @return
      */
@@ -99,7 +104,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set PortSecurity，取值为0或者1，默认为1
+     * set PortSecurity，源和目标IP地址校验，取值为0或者1。
      *
      * @param sanityCheck
      */
@@ -107,9 +112,27 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
         this.sanityCheck = sanityCheck;
     }
 
+    /**
+     * get 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+     *
+     * @return
+     */
+    public Integer getIpv6AddressCount() {
+        return ipv6AddressCount;
+    }
 
     /**
-     * set 子网ID
+     * set 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+     *
+     * @param ipv6AddressCount
+     */
+    public void setIpv6AddressCount(Integer ipv6AddressCount) {
+        this.ipv6AddressCount = ipv6AddressCount;
+    }
+
+
+    /**
+     * set 子网ID。
      *
      * @param subnetId
      */
@@ -119,7 +142,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 安全组ID列表
+     * set 安全组ID列表。
      *
      * @param securityGroups
      */
@@ -129,7 +152,7 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set PortSecurity，取值为0或者1，默认为1
+     * set PortSecurity，源和目标IP地址校验，取值为0或者1。
      *
      * @param sanityCheck
      */
@@ -138,9 +161,19 @@ public class InstanceTemplateNetworkInterface  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+     *
+     * @param ipv6AddressCount
+     */
+    public InstanceTemplateNetworkInterface ipv6AddressCount(Integer ipv6AddressCount) {
+        this.ipv6AddressCount = ipv6AddressCount;
+        return this;
+    }
+
 
     /**
-     * add item to 安全组ID列表
+     * add item to 安全组ID列表。
      *
      * @param securityGroup
      */

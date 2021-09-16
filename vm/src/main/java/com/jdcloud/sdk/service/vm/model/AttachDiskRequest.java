@@ -28,9 +28,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 为一台云主机挂载一块云硬盘，云主机和云硬盘没有正在进行中的的任务时才可挂载。&lt;br&gt;
-云主机状态必须是&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态。&lt;br&gt;
-本地盘(local类型)做系统盘的云主机可挂载8块云硬盘，云硬盘(cloud类型)做系统盘的云主机可挂载除系统盘外7块云硬盘。
+ * 
+为一台云主机挂载云硬盘。
+
+详细操作说明请参考帮助文档：[挂载云硬盘](https://docs.jdcloud.com/cn/virtual-machines/attach-cloud-disk)
+
+## 接口说明
+- 云主机和云硬盘都没有正在进行中的的任务时才可以操作。
+- 云主机状态必须是 &#x60;running&#x60; 或 &#x60;stopped&#x60; 状态。操作系统盘时必须先停止实例。
+- 实例挂载云硬盘的数量，不能超过实例规格的限制。可查询  [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes)  接口获得指定规格可挂载云硬盘的数量上限。
+- 云硬盘作为系统盘时，容量不能小于40GB，并且不能超过500GB。
+- 待挂载的云硬盘与云主机实例必须在同一个可用区下。
+- 共享型云硬盘最多可挂载16个云主机实例，并且只能用作数据盘，不能用于系统盘。非共享型云盘最多只能挂载一个云主机实例。
 
  */
 public class AttachDiskRequest extends JdcloudRequest implements java.io.Serializable {
@@ -38,31 +47,38 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云硬盘ID
+     * 云硬盘ID。
      * Required:true
      */
     @Required
     private String diskId;
 
     /**
-     * 设备名[vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm]，挂载系统盘时必传，且需传vda
+     * 磁盘逻辑挂载点。
+**系统盘**：必须指定并且只能是vda。
+**数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+
      */
     private String deviceName;
 
     /**
-     * 随云主机删除自动删除此云硬盘，默认为False。仅按配置计费云硬盘支持修改此参数，包年包月云硬盘不可修改。
+     * 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+可选值：
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
      */
     private Boolean autoDelete;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -70,7 +86,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * get 云硬盘ID
+     * get 云硬盘ID。
      *
      * @return
      */
@@ -79,7 +95,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 云硬盘ID
+     * set 云硬盘ID。
      *
      * @param diskId
      */
@@ -88,7 +104,10 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 设备名[vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm]，挂载系统盘时必传，且需传vda
+     * get 磁盘逻辑挂载点。
+**系统盘**：必须指定并且只能是vda。
+**数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+
      *
      * @return
      */
@@ -97,7 +116,10 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 设备名[vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm]，挂载系统盘时必传，且需传vda
+     * set 磁盘逻辑挂载点。
+**系统盘**：必须指定并且只能是vda。
+**数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+
      *
      * @param deviceName
      */
@@ -106,7 +128,11 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 随云主机删除自动删除此云硬盘，默认为False。仅按配置计费云硬盘支持修改此参数，包年包月云硬盘不可修改。
+     * get 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+可选值：
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
      *
      * @return
      */
@@ -115,7 +141,11 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 随云主机删除自动删除此云硬盘，默认为False。仅按配置计费云硬盘支持修改此参数，包年包月云硬盘不可修改。
+     * set 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+可选值：
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
      *
      * @param autoDelete
      */
@@ -124,7 +154,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -133,7 +163,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -142,7 +172,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -151,7 +181,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -161,7 +191,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
 
 
     /**
-     * set 云硬盘ID
+     * set 云硬盘ID。
      *
      * @param diskId
      */
@@ -171,7 +201,10 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 设备名[vda,vdb,vdc,vdd,vde,vdf,vdg,vdh,vdi,vmj,vdk,vdl,vdm]，挂载系统盘时必传，且需传vda
+     * set 磁盘逻辑挂载点。
+**系统盘**：必须指定并且只能是vda。
+**数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
+
      *
      * @param deviceName
      */
@@ -181,7 +214,11 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 随云主机删除自动删除此云硬盘，默认为False。仅按配置计费云硬盘支持修改此参数，包年包月云硬盘不可修改。
+     * set 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
+可选值：
+&#x60;true&#x60;：随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
+
      *
      * @param autoDelete
      */
@@ -191,7 +228,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -201,7 +238,7 @@ public class AttachDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */

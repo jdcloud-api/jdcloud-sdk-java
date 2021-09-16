@@ -28,30 +28,37 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * customData
+ * 用户自定义元数据。
  */
 public class CustomData  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      */
     private String instanceId;
 
     /**
-     * 用户自定义元数据信息 key-value对，key、value不区分大小写
+     * 用户自定义元数据。
+以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
      */
     private List<Metadata> metadata;
 
     /**
-     * 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。vaule以base64编码返回
+     * 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
+
      */
     private List<Userdata> userdata;
 
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -60,7 +67,7 @@ public class CustomData  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -69,7 +76,10 @@ public class CustomData  implements java.io.Serializable {
     }
 
     /**
-     * get 用户自定义元数据信息 key-value对，key、value不区分大小写
+     * get 用户自定义元数据。
+以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
      *
      * @return
      */
@@ -78,7 +88,10 @@ public class CustomData  implements java.io.Serializable {
     }
 
     /**
-     * set 用户自定义元数据信息 key-value对，key、value不区分大小写
+     * set 用户自定义元数据。
+以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
      *
      * @param metadata
      */
@@ -87,7 +100,11 @@ public class CustomData  implements java.io.Serializable {
     }
 
     /**
-     * get 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。vaule以base64编码返回
+     * get 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
+
      *
      * @return
      */
@@ -96,7 +113,11 @@ public class CustomData  implements java.io.Serializable {
     }
 
     /**
-     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。vaule以base64编码返回
+     * set 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
+
      *
      * @param userdata
      */
@@ -106,7 +127,7 @@ public class CustomData  implements java.io.Serializable {
 
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -116,7 +137,10 @@ public class CustomData  implements java.io.Serializable {
     }
 
     /**
-     * set 用户自定义元数据信息 key-value对，key、value不区分大小写
+     * set 用户自定义元数据。
+以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
      *
      * @param metadata
      */
@@ -126,7 +150,11 @@ public class CustomData  implements java.io.Serializable {
     }
 
     /**
-     * set 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。vaule以base64编码返回
+     * set 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
+
      *
      * @param userdata
      */
@@ -137,7 +165,10 @@ public class CustomData  implements java.io.Serializable {
 
 
     /**
-     * add item to 用户自定义元数据信息 key-value对，key、value不区分大小写
+     * add item to 用户自定义元数据。
+以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+注意：key不要以连字符(-)结尾，否则此key不生效。
+
      *
      * @param metadata
      */
@@ -149,7 +180,11 @@ public class CustomData  implements java.io.Serializable {
     }
 
     /**
-     * add item to 元数据信息，目前只支持传入一个key为&quot;launch-script&quot;，表示首次启动脚本。vaule以base64编码返回
+     * add item to 自定义脚本。
+目前仅支持启动脚本，即 &#x60;launch-script&#x60;，须 &#x60;base64&#x60; 编码且编码前数据长度不能超过16KB。
+**linux系统**：支持 &#x60;bash&#x60; 和 &#x60;python&#x60;，编码前须分别以 &#x60;#!/bin/bash&#x60; 和 &#x60;#!/usr/bin/env python&#x60; 作为内容首行。
+**Windows系统**：支持 &#x60;bat&#x60; 和 &#x60;powershell&#x60;，编码前须分别以 &#x60;&lt;cmd&gt;&lt;/cmd&gt;和&lt;powershell&gt;&lt;/powershell&gt;&#x60; 作为内容首、尾行。
+
      *
      * @param userdata
      */

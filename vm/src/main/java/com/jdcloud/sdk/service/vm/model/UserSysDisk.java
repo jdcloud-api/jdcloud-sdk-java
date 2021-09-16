@@ -26,40 +26,40 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * userSysDisk
+ * 用户任意容量特殊本地盘配置信息。
  */
 public class UserSysDisk  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 用户pin
+     * 用户pin。
      */
     private String pin;
 
     /**
-     * 地域
+     * 地域。
      */
     private String region;
 
     /**
-     * 系统类型
+     * 系统类型。支持范围：&#x60;linux、windows&#x60;。
      */
     private String systemType;
 
     /**
-     * 默认本地盘系统盘大小
+     * 默认本地盘系统盘大小，单位GB。
      */
     private Integer systemDiskSize;
 
     /**
-     * 逗号分隔的规格列表，*代表所有。
+     * 逗号分隔的规格列表，&#x60;*&#x60; 代表所有。
      */
     private String flavors;
 
 
     /**
-     * get 用户pin
+     * get 用户pin。
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 用户pin
+     * set 用户pin。
      *
      * @param pin
      */
@@ -77,7 +77,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 地域
+     * get 地域。
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 地域
+     * set 地域。
      *
      * @param region
      */
@@ -95,7 +95,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 系统类型
+     * get 系统类型。支持范围：&#x60;linux、windows&#x60;。
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 系统类型
+     * set 系统类型。支持范围：&#x60;linux、windows&#x60;。
      *
      * @param systemType
      */
@@ -113,7 +113,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 默认本地盘系统盘大小
+     * get 默认本地盘系统盘大小，单位GB。
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 默认本地盘系统盘大小
+     * set 默认本地盘系统盘大小，单位GB。
      *
      * @param systemDiskSize
      */
@@ -131,7 +131,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * get 逗号分隔的规格列表，*代表所有。
+     * get 逗号分隔的规格列表，&#x60;*&#x60; 代表所有。
      *
      * @return
      */
@@ -140,7 +140,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 逗号分隔的规格列表，*代表所有。
+     * set 逗号分隔的规格列表，&#x60;*&#x60; 代表所有。
      *
      * @param flavors
      */
@@ -150,7 +150,7 @@ public class UserSysDisk  implements java.io.Serializable {
 
 
     /**
-     * set 用户pin
+     * set 用户pin。
      *
      * @param pin
      */
@@ -160,7 +160,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 地域
+     * set 地域。
      *
      * @param region
      */
@@ -170,7 +170,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 系统类型
+     * set 系统类型。支持范围：&#x60;linux、windows&#x60;。
      *
      * @param systemType
      */
@@ -180,7 +180,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 默认本地盘系统盘大小
+     * set 默认本地盘系统盘大小，单位GB。
      *
      * @param systemDiskSize
      */
@@ -190,7 +190,7 @@ public class UserSysDisk  implements java.io.Serializable {
     }
 
     /**
-     * set 逗号分隔的规格列表，*代表所有。
+     * set 逗号分隔的规格列表，&#x60;*&#x60; 代表所有。
      *
      * @param flavors
      */

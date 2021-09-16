@@ -28,8 +28,16 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取云主机vnc，用于连接管理云主机。&lt;br&gt;
-vnc地址的有效期为1个小时，调用接口获取vnc地址后如果1个小时内没有使用，vnc地址自动失效，再次使用需要重新获取。
+ * 
+获取云主机vnc地址。
+
+详细操作说明请参考帮助文档：[连接实例](https://docs.jdcloud.com/cn/virtual-machines/connect-to-instance)
+
+## 接口说明
+- 实例仅 &#x60;running&#x60; 状态时才可获取到 &#x60;vnc&#x60; 地址。
+- 调用该接口可获取云主机 &#x60;vnc&#x60; 地址，用于远程连接管理云主机。
+- &#x60;vnc&#x60; 地址的有效期为1个小时，调用接口获取vnc地址后如果1个小时内没有使用，&#x60;vnc&#x60; 地址将自动失效，再次使用需要重新获取。
+- 裸金属实例目前不支持通过 &#x60;vnc&#x60; 登录。
 
  */
 public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements java.io.Serializable {
@@ -37,14 +45,14 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -52,7 +60,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
 
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -61,7 +69,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -70,7 +78,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -79,7 +87,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -89,7 +97,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
 
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -99,7 +107,7 @@ public class DescribeInstanceVncUrlRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */

@@ -26,30 +26,30 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * 云硬盘信息详情
+ * 云硬盘信息。
  */
 public class LightCloudDiskInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云硬盘ID
+     * 云硬盘ID。
      */
     private String diskId;
 
     /**
-     * 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
+     * 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      */
     private String diskType;
 
     /**
-     * 云硬盘大小，单位为 GiB
+     * 云硬盘大小，单位为 GiB。
      */
     private Integer diskSizeGB;
 
 
     /**
-     * get 云硬盘ID
+     * get 云硬盘ID。
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘ID
+     * set 云硬盘ID。
      *
      * @param diskId
      */
@@ -67,7 +67,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
+     * get 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
+     * set 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @param diskType
      */
@@ -85,7 +85,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘大小，单位为 GiB
+     * get 云硬盘大小，单位为 GiB。
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘大小，单位为 GiB
+     * set 云硬盘大小，单位为 GiB。
      *
      * @param diskSizeGB
      */
@@ -104,7 +104,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
 
 
     /**
-     * set 云硬盘ID
+     * set 云硬盘ID。
      *
      * @param diskId
      */
@@ -114,7 +114,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘类型，取值为 ssd,premium-hdd,ssd.gp1,ssd.io1,hdd.std1
+     * set 云硬盘类型。取值范围：&#x60;ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1&#x60;。
      *
      * @param diskType
      */
@@ -124,7 +124,7 @@ public class LightCloudDiskInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘大小，单位为 GiB
+     * set 云硬盘大小，单位为 GiB。
      *
      * @param diskSizeGB
      */

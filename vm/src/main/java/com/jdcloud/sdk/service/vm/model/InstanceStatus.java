@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * instanceStatus
+ * 云主机实例状态。
  */
 public class InstanceStatus  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      */
     private String instanceId;
 
     /**
-     * &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+     * 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      */
     private String status;
 
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class InstanceStatus  implements java.io.Serializable {
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -62,7 +62,7 @@ public class InstanceStatus  implements java.io.Serializable {
     }
 
     /**
-     * get &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+     * get 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class InstanceStatus  implements java.io.Serializable {
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+     * set 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
      * @param status
      */
@@ -81,7 +81,7 @@ public class InstanceStatus  implements java.io.Serializable {
 
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -91,7 +91,7 @@ public class InstanceStatus  implements java.io.Serializable {
     }
 
     /**
-     * set &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
+     * set 云主机状态，参考 [云主机状态](https://docs.jdcloud.com/virtual-machines/api/vm_status)。
      *
      * @param status
      */

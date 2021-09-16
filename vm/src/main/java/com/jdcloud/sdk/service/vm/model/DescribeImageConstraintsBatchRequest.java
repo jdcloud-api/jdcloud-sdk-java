@@ -30,8 +30,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量查询镜像的实例规格限制。&lt;br&gt;
-通过此接口可以查看镜像不支持的实例规格。只有官方镜像、第三方镜像有实例规格的限制，个人的私有镜像没有此限制。
+ * 
+批量查询镜像的实例规格限制。
+
+详细操作说明请参考帮助文档：[镜像概述](https://docs.jdcloud.com/cn/virtual-machines/image-overview)
+
+## 接口说明
+- 通过此接口可以查询镜像的实例规格限制信息。
+- 只有官方镜像、第三方镜像有实例规格的限制，用户的私有镜像没有此限制。
 
  */
 public class DescribeImageConstraintsBatchRequest extends JdcloudRequest implements java.io.Serializable {
@@ -39,12 +45,12 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像ID列表
+     * 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
      */
     private List<String> ids;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -52,7 +58,7 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
 
 
     /**
-     * get 镜像ID列表
+     * get 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
      *
      * @return
      */
@@ -61,7 +67,7 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 镜像ID列表
+     * set 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
      *
      * @param ids
      */
@@ -70,7 +76,7 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -79,7 +85,7 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -89,7 +95,7 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
 
 
     /**
-     * set 镜像ID列表
+     * set 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
      *
      * @param ids
      */
@@ -99,7 +105,7 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -110,7 +116,7 @@ public class DescribeImageConstraintsBatchRequest extends JdcloudRequest impleme
 
 
     /**
-     * add item to 镜像ID列表
+     * add item to 要查询的镜像ID列表，只支持官方镜像和第三方镜像。
      *
      * @param id
      */

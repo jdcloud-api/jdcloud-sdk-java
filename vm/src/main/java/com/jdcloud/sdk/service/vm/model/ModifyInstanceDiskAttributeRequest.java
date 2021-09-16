@@ -31,8 +31,15 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改云主机挂载的数据盘属性，包括是否随主机删除。&lt;br&gt;
-仅按配置计费云硬盘支持设置随实例删除属性;包年包月计费云硬盘该属性不生效,实例删除时云硬盘将保留。&lt;br&gt;
+ * 
+修改一台云主机中的云硬盘属性。
+
+详细操作说明请参考帮助文档：[配置云硬盘删除属性](https://docs.jdcloud.com/cn/virtual-machines/configurate-delete-attributes)
+
+## 接口说明
+- 该接口当前只能修改实例中的云硬盘随实例删除属性。
+- 仅按配置计费、并且非共享型的云硬盘支持修改。
+- 包年包月计费的云硬盘该属性不生效，实例删除时云硬盘将保留。
 
  */
 public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implements java.io.Serializable {
@@ -40,19 +47,19 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     private static final long serialVersionUID = 1L;
 
     /**
-     * 云硬盘列表
+     * 云硬盘列表。
      */
     private List<InstanceDiskAttribute> dataDisks;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 云主机ID
+     * 云主机ID。
      * Required:true
      */
     @Required
@@ -60,7 +67,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
 
 
     /**
-     * get 云硬盘列表
+     * get 云硬盘列表。
      *
      * @return
      */
@@ -69,7 +76,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     }
 
     /**
-     * set 云硬盘列表
+     * set 云硬盘列表。
      *
      * @param dataDisks
      */
@@ -78,7 +85,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -87,7 +94,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -96,7 +103,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     }
 
     /**
-     * get 云主机ID
+     * get 云主机ID。
      *
      * @return
      */
@@ -105,7 +112,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -115,7 +122,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
 
 
     /**
-     * set 云硬盘列表
+     * set 云硬盘列表。
      *
      * @param dataDisks
      */
@@ -125,7 +132,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -135,7 +142,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
     }
 
     /**
-     * set 云主机ID
+     * set 云主机ID。
      *
      * @param instanceId
      */
@@ -146,7 +153,7 @@ public class ModifyInstanceDiskAttributeRequest extends JdcloudRequest implement
 
 
     /**
-     * add item to 云硬盘列表
+     * add item to 云硬盘列表。
      *
      * @param dataDisk
      */

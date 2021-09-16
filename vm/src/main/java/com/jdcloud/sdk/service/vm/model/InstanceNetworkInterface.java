@@ -29,29 +29,29 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.vpc.model.NetworkInterfacePrivateIp;
 
 /**
- * instanceNetworkInterface
+ * 云主机弹性网卡设备详细配置。
  */
 public class InstanceNetworkInterface  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性网卡ID
+     * 弹性网卡ID。
      */
     private String networkInterfaceId;
 
     /**
-     * 以太网地址
+     * 弹性网卡MAC地址。
      */
     private String macAddress;
 
     /**
-     * 虚拟网络ID
+     * 弹性网卡所属VPC的ID。
      */
     private String vpcId;
 
     /**
-     * 子网ID
+     * 子网ID。
      */
     private String subnetId;
 
@@ -61,23 +61,23 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     private List<SecurityGroupSimple> securityGroups;
 
     /**
-     * 源和目标IP地址校验，取值为0或者1
+     * PortSecurity，源和目标IP地址校验，取值为0或者1。
      */
     private Integer sanityCheck;
 
     /**
-     * 网卡主IP
+     * 网卡主IP配置。
      */
     private NetworkInterfacePrivateIp primaryIp;
 
     /**
-     * 网卡辅IP
+     * 网卡辅IP地址列表。
      */
     private List<NetworkInterfacePrivateIp> secondaryIps;
 
 
     /**
-     * get 弹性网卡ID
+     * get 弹性网卡ID。
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性网卡ID
+     * set 弹性网卡ID。
      *
      * @param networkInterfaceId
      */
@@ -95,7 +95,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 以太网地址
+     * get 弹性网卡MAC地址。
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 以太网地址
+     * set 弹性网卡MAC地址。
      *
      * @param macAddress
      */
@@ -113,7 +113,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 虚拟网络ID
+     * get 弹性网卡所属VPC的ID。
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 虚拟网络ID
+     * set 弹性网卡所属VPC的ID。
      *
      * @param vpcId
      */
@@ -131,7 +131,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 子网ID
+     * get 子网ID。
      *
      * @return
      */
@@ -140,7 +140,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 子网ID
+     * set 子网ID。
      *
      * @param subnetId
      */
@@ -167,7 +167,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 源和目标IP地址校验，取值为0或者1
+     * get PortSecurity，源和目标IP地址校验，取值为0或者1。
      *
      * @return
      */
@@ -176,7 +176,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 源和目标IP地址校验，取值为0或者1
+     * set PortSecurity，源和目标IP地址校验，取值为0或者1。
      *
      * @param sanityCheck
      */
@@ -185,7 +185,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 网卡主IP
+     * get 网卡主IP配置。
      *
      * @return
      */
@@ -194,7 +194,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 网卡主IP
+     * set 网卡主IP配置。
      *
      * @param primaryIp
      */
@@ -203,7 +203,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 网卡辅IP
+     * get 网卡辅IP地址列表。
      *
      * @return
      */
@@ -212,7 +212,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 网卡辅IP
+     * set 网卡辅IP地址列表。
      *
      * @param secondaryIps
      */
@@ -222,7 +222,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
 
 
     /**
-     * set 弹性网卡ID
+     * set 弹性网卡ID。
      *
      * @param networkInterfaceId
      */
@@ -232,7 +232,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 以太网地址
+     * set 弹性网卡MAC地址。
      *
      * @param macAddress
      */
@@ -242,7 +242,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 虚拟网络ID
+     * set 弹性网卡所属VPC的ID。
      *
      * @param vpcId
      */
@@ -252,7 +252,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 子网ID
+     * set 子网ID。
      *
      * @param subnetId
      */
@@ -272,7 +272,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 源和目标IP地址校验，取值为0或者1
+     * set PortSecurity，源和目标IP地址校验，取值为0或者1。
      *
      * @param sanityCheck
      */
@@ -282,7 +282,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 网卡主IP
+     * set 网卡主IP配置。
      *
      * @param primaryIp
      */
@@ -292,7 +292,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 网卡辅IP
+     * set 网卡辅IP地址列表。
      *
      * @param secondaryIps
      */
@@ -315,7 +315,7 @@ public class InstanceNetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * add item to 网卡辅IP
+     * add item to 网卡辅IP地址列表。
      *
      * @param secondaryIp
      */

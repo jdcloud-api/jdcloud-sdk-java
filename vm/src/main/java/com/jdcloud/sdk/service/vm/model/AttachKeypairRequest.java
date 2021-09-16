@@ -30,7 +30,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 绑定ssh密钥对。
+ * 
+为云主机实例绑定密钥。
+
+详细操作说明请参考帮助文档：[绑定密钥](https://docs.jdcloud.com/cn/virtual-machines/bind-keypair)
+
+## 接口说明
+- 只支持为 linux 云主机实例绑定密钥。
+- 每台云主机实例只支持绑定一个密钥。如果云主机绑定的密钥被删除了，那么该云主机还可以再次绑定密钥。
 
  */
 public class AttachKeypairRequest extends JdcloudRequest implements java.io.Serializable {
@@ -38,14 +45,16 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 虚机Id
+     * 要绑定的云主机Id列表。
      * Required:true
      */
     @Required
     private List<String> instanceIds;
 
     /**
-     * 密码授权，绑定密钥后，根据此参数决定是否使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用
+     * 绑定密钥后，根据此参数决定是否允许使用密码登录。可选范围：
+&#x60;yes&#x60;：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
 
      * Required:true
      */
@@ -53,14 +62,14 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     private String passWordAuth;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
     private String regionId;
 
     /**
-     * 密钥名称
+     * 密钥名称。
      * Required:true
      */
     @Required
@@ -68,7 +77,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 虚机Id
+     * get 要绑定的云主机Id列表。
      *
      * @return
      */
@@ -77,7 +86,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 虚机Id
+     * set 要绑定的云主机Id列表。
      *
      * @param instanceIds
      */
@@ -86,7 +95,9 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 密码授权，绑定密钥后，根据此参数决定是否使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用
+     * get 绑定密钥后，根据此参数决定是否允许使用密码登录。可选范围：
+&#x60;yes&#x60;：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
 
      *
      * @return
@@ -96,7 +107,9 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密码授权，绑定密钥后，根据此参数决定是否使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用
+     * set 绑定密钥后，根据此参数决定是否允许使用密码登录。可选范围：
+&#x60;yes&#x60;：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
 
      *
      * @param passWordAuth
@@ -106,7 +119,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -115,7 +128,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -124,7 +137,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 密钥名称
+     * get 密钥名称。
      *
      * @return
      */
@@ -133,7 +146,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥名称
+     * set 密钥名称。
      *
      * @param keyName
      */
@@ -143,7 +156,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 虚机Id
+     * set 要绑定的云主机Id列表。
      *
      * @param instanceIds
      */
@@ -153,7 +166,9 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密码授权，绑定密钥后，根据此参数决定是否使用密码登录，&quot;yes&quot;为使用，&quot;no&quot;为不使用
+     * set 绑定密钥后，根据此参数决定是否允许使用密码登录。可选范围：
+&#x60;yes&#x60;：允许SSH密码登录。
+&#x60;no&#x60;：禁止SSH密码登录。
 
      *
      * @param passWordAuth
@@ -164,7 +179,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -174,7 +189,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 密钥名称
+     * set 密钥名称。
      *
      * @param keyName
      */
@@ -185,7 +200,7 @@ public class AttachKeypairRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * add item to 虚机Id
+     * add item to 要绑定的云主机Id列表。
      *
      * @param instanceId
      */

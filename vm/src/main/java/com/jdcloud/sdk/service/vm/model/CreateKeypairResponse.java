@@ -27,8 +27,15 @@ package com.jdcloud.sdk.service.vm.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建ssh密钥对。公钥部分存储在京东云，并返回未加密的 PEM 编码的 PKCS#8 格式私钥，您只有一次机会保存您的私钥。请妥善保管。&lt;br&gt;
-若传入已存在的密钥名称，会返回错误。
+ * 
+创建密钥。
+
+公钥和私钥都由京东云生成，公钥保存在京东云，私钥返回给用户，由用户保存。
+
+详细操作说明请参考帮助文档：[创建密钥](https://docs.jdcloud.com/cn/virtual-machines/create-keypair)
+
+## 接口说明
+- 调用该接口创建密钥后，公钥部分存储在京东云，并返回未加密的 &#x60;PEM&#x60; 编码的 &#x60;PKCS#8&#x60; 格式私钥，您只有一次机会保存您的私钥。请妥善保管。
 
  */
 public class CreateKeypairResponse extends JdcloudResponse<CreateKeypairResult> implements java.io.Serializable {

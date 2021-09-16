@@ -29,57 +29,26 @@ import com.jdcloud.sdk.service.vm.model.InstanceSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建一台或多台指定配置的云主机，创建模式分为三种：1.普通方式、2.使用高可用组、3.使用启动模板。三种方式创建云主机时参数的必传与非必传是不同的，具体请参考&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/create_vm_sample&quot;&gt;参数详细说明&lt;/a&gt;&lt;br&gt;
-- 创建云主机需要通过实名认证
-- 实例规格
-    - 可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定地域或可用区的规格信息。
-    - 不能使用已下线、或已售馨的规格ID
-- 镜像
-    - Windows Server所有镜像CPU不可选超过64核CPU。
-    - 可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimages&quot;&gt;DescribeImages&lt;/a&gt;接口获得指定地域的镜像信息。
-    - 选择的镜像必须支持选择的实例规格。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeimageconstraints&quot;&gt;DescribeImageConstraints&lt;/a&gt;接口获得指定镜像的实例规格限制信息。&lt;br&gt;
-- 网络配置
-    - 指定主网卡配置信息
-        - 必须指定subnetId
-        - 可以指定elasticIp规格来约束创建的弹性IP，带宽取值范围[1-200]Mbps，步进1Mbps
-        - 可以指定主网卡的内网主IP(primaryIpAddress)，此时maxCount只能为1
-        - 安全组securityGroup需与子网Subnet在同一个私有网络VPC内
-        - 一台云主机创建时必须至少指定一个安全组，至多指定5个安全组，如果没有指定安全组，默认使用默认安全组
-        - 主网卡deviceIndex设置为1
-- 存储
-    - 系统盘
-        - 磁盘分类，系统盘支持local或cloud
-        - 磁盘大小
-            - local：不能指定大小，默认为40GB
-            - cloud：取值范围: 40-500GB，并且不能小于镜像的最小系统盘大小，如果没有指定，默认以镜像中的系统盘大小为准
-        - 自动删除
-            - 如果是local类型，默认自动删除，不可修改
-            - 如果是cloud类型的按配置计费的云硬盘，默认为True，可修改
-            - 如果是cloud类型的包年包月的云硬盘，默认为False，不可修改
-    - 数据盘
-        - 磁盘分类，数据盘仅支持cloud
-        - 云硬盘类型可以选择ssd、premium-hdd、hdd.std1、ssd.gp1、ssd.io1
-        - 磁盘大小
-            - premium-hdd：范围[20,3000]GB，步长为10G
-            - ssd：范围[20,1000]GB，步长为10G
-            - hdd.std1、ssd.gp1、ssd.io1: 范围[20-16000]GB，步长为10GB
-        - 自动删除
-            - 默认自动删除，如果是包年包月的云硬盘，此参数不生效
-        - 可以从快照创建磁盘
-    - iops
-        - 仅当云盘类型为ssd.io1时，可指定iops值，范围为【200， min（32000，size * 50 ）】，步长为10，若不指定则按此公式计算默认值
-    - local类型系统的云主机可以挂载8块云硬盘
-    - cloud类型系统的云主机可以挂载7块云硬盘
-- 计费
-    - 弹性IP的计费模式，如果选择按用量类型可以单独设置，其它计费模式都以主机为准
-    - 云硬盘的计费模式以主机为准
-- 其他
-    - 创建完成后，主机状态为running
-    - 仅Linux系统云主机可以指定密钥
-    - maxCount为最大努力，不保证一定能达到maxCount
-    - 虚机的az会覆盖磁盘的az属性
-- 密码
-    - &lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/general_parameters&quot;&gt;参考公共参数规范&lt;/a&gt;
+ * 
+创建一台或多台指定配置的云主机实例。
+
+实例有三种创建方式，不同方式下传参详见下方的请求[参数说明](createInstance#requestparameters)，也可参考请求[示例](createInstance#examples)。
+
+1、自定义创建：按配置要求逐一指定参数创建；
+2、使用实例模板创建：[实例模板](https://docs.jdcloud.com/virtual-machines/instance-template-overview)是实例配置信息的预配置，通过实例模板可快速创建实例，省去逐一配置参数的步骤。指定实例模板创建时，如不额外指定模板包含的参数将以模板为准创建实例，模板中未包含的参数，如可用区、内网IPv4地址、名称等仍需指定；
+3、基于高可用组创建：[高可用组](https://docs.jdcloud.com/availability-group/product-overview)是一种高可用部署解决方案，提供了组内实例在数据中心内横跨多个故障域均衡部署的机制。高可用组须搭配实例模板使用，基于高可用组创建的实例将在其指定的可用区内以实例模板配置按一定分散机制创建实例。此创建方式下，实例创建参数除内网IPv4地址、名称等外均以实例模板为准且不支持再次指定。
+
+详细操作说明请参考帮助文档：[创建实例](https://docs.jdcloud.com/cn/virtual-machines/create-instance)
+
+## 接口说明
+- 创建实例前，请参考 [创建前准备](https://docs.jdcloud.com/virtual-machines/account-preparation-linux) 完成实名认证、支付方式确认、计费类型选择等准备工作。
+- 创建实例的配置说明和选择指导，请参考 [配置项说明](https://docs.jdcloud.com/cn/virtual-machines/select-configuration-linux)。
+- 各地域下实例及关联资源（云硬盘、弹性公网IP）的可创建数量受配额限制，创建前请通过 [DescribeQuotas](https://docs.jdcloud.com/cn/virtual-machines/api/describequotas?content&#x3D;API) 确认配额，如须提升请[提交工单](https://ticket.jdcloud.com/applyorder/submit)或联系京东云客服。
+- 不同地域及可用区下售卖的实例规格有差异，可通过 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes?content&#x3D;API) 查询在售规格及规格详细信息。
+- 通过本接口创建包年包月实例时将自动从账户扣款（代金券优先），如需使用第三方支付方式请通过控制台创建。
+- 单次请求最多支持创建 &#x60;100&#x60; 台实例。
+- 本接口为异步接口，请求下发成功后会返回RequestId和实例ID，此时实例处于 &#x60;Pending&#x60;（创建中）状态。如创建成功则实例自动变为 &#x60;Running&#x60;（运行中）状态；如创建失败则短暂处于 &#x60;Error&#x60;（错误）状态，随后将自动删除（创建失败的实例不会收费且会自动释放占用的配额）。实例状态可以通过 [describeInstanceStatus](https://docs.jdcloud.com/virtual-machines/api/describeinstancestatus?content&#x3D;API) 接口查询。
+- 批量创建多台实例时系统将尽可能完成目标创建数量，但受底层资源、配额等因素影响，可能存在部分成功部分失败的情况，还请关注最终完成数量，如有失败情况请尝试重新申请或联系客服。
 
  */
 public class CreateInstancesRequest extends JdcloudRequest implements java.io.Serializable {
@@ -87,7 +56,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
-     * 描述云主机配置
+     * 实例配置。
 
      * Required:true
      */
@@ -95,19 +64,21 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     private InstanceSpec instanceSpec;
 
     /**
-     * 购买云主机的数量；取值范围：[1,100]，默认为1。
+     * 创建实例的数量，不能超过用户配额。
+取值范围：[1,100]；默认值：1。
+如果在弹性网卡中指定了内网IP地址，那么单次创建 &#x60;maxCount&#x60; 只能是 1。
 
      */
     private Integer maxCount;
 
     /**
-     * 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+     * 用于保证请求的幂等性。由客户端生成，并确保不同请求中该参数唯一，长度不能超过64个字符。
 
      */
     private String clientToken;
 
     /**
-     * 地域ID
+     * 地域ID。
      * Required:true
      */
     @Required
@@ -115,7 +86,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * get 描述云主机配置
+     * get 实例配置。
 
      *
      * @return
@@ -125,7 +96,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 描述云主机配置
+     * set 实例配置。
 
      *
      * @param instanceSpec
@@ -135,7 +106,9 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 购买云主机的数量；取值范围：[1,100]，默认为1。
+     * get 创建实例的数量，不能超过用户配额。
+取值范围：[1,100]；默认值：1。
+如果在弹性网卡中指定了内网IP地址，那么单次创建 &#x60;maxCount&#x60; 只能是 1。
 
      *
      * @return
@@ -145,7 +118,9 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 购买云主机的数量；取值范围：[1,100]，默认为1。
+     * set 创建实例的数量，不能超过用户配额。
+取值范围：[1,100]；默认值：1。
+如果在弹性网卡中指定了内网IP地址，那么单次创建 &#x60;maxCount&#x60; 只能是 1。
 
      *
      * @param maxCount
@@ -155,7 +130,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+     * get 用于保证请求的幂等性。由客户端生成，并确保不同请求中该参数唯一，长度不能超过64个字符。
 
      *
      * @return
@@ -165,7 +140,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+     * set 用于保证请求的幂等性。由客户端生成，并确保不同请求中该参数唯一，长度不能超过64个字符。
 
      *
      * @param clientToken
@@ -175,7 +150,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 地域ID
+     * get 地域ID。
      *
      * @return
      */
@@ -184,7 +159,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */
@@ -194,7 +169,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
 
 
     /**
-     * set 描述云主机配置
+     * set 实例配置。
 
      *
      * @param instanceSpec
@@ -205,7 +180,9 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 购买云主机的数量；取值范围：[1,100]，默认为1。
+     * set 创建实例的数量，不能超过用户配额。
+取值范围：[1,100]；默认值：1。
+如果在弹性网卡中指定了内网IP地址，那么单次创建 &#x60;maxCount&#x60; 只能是 1。
 
      *
      * @param maxCount
@@ -216,7 +193,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 用于保证请求的幂等性。由客户端生成，长度不能超过64个字符。
+     * set 用于保证请求的幂等性。由客户端生成，并确保不同请求中该参数唯一，长度不能超过64个字符。
 
      *
      * @param clientToken
@@ -227,7 +204,7 @@ public class CreateInstancesRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 地域ID
+     * set 地域ID。
      *
      * @param regionId
      */

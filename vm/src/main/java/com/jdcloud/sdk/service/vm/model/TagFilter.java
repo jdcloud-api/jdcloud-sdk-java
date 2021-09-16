@@ -28,25 +28,25 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * tagFilter
+ * 自定义标签过滤器。
  */
 public class TagFilter  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * Tag键
+     * 标签key。
      */
     private String key;
 
     /**
-     * Tag值
+     * 标签value。
      */
     private List<String> values;
 
 
     /**
-     * get Tag键
+     * get 标签key。
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class TagFilter  implements java.io.Serializable {
     }
 
     /**
-     * set Tag键
+     * set 标签key。
      *
      * @param key
      */
@@ -64,7 +64,7 @@ public class TagFilter  implements java.io.Serializable {
     }
 
     /**
-     * get Tag值
+     * get 标签value。
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class TagFilter  implements java.io.Serializable {
     }
 
     /**
-     * set Tag值
+     * set 标签value。
      *
      * @param values
      */
@@ -83,7 +83,7 @@ public class TagFilter  implements java.io.Serializable {
 
 
     /**
-     * set Tag键
+     * set 标签key。
      *
      * @param key
      */
@@ -93,7 +93,7 @@ public class TagFilter  implements java.io.Serializable {
     }
 
     /**
-     * set Tag值
+     * set 标签value。
      *
      * @param values
      */
@@ -104,7 +104,7 @@ public class TagFilter  implements java.io.Serializable {
 
 
     /**
-     * add item to Tag值
+     * add item to 标签value。
      *
      * @param value
      */
