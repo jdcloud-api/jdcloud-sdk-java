@@ -33,6 +33,11 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * edgeType
+     */
+    private Integer edgeType;
+
+    /**
      * headerType
      */
     private String headerType;
@@ -52,6 +57,24 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
      */
     private String headerOp;
 
+
+    /**
+     * get edgeType
+     *
+     * @return
+     */
+    public Integer getEdgeType() {
+        return edgeType;
+    }
+
+    /**
+     * set edgeType
+     *
+     * @param edgeType
+     */
+    public void setEdgeType(Integer edgeType) {
+        this.edgeType = edgeType;
+    }
 
     /**
      * get headerType
@@ -125,6 +148,16 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
         this.headerOp = headerOp;
     }
 
+
+    /**
+     * set edgeType
+     *
+     * @param edgeType
+     */
+    public QueryHttpHeaderResp edgeType(Integer edgeType) {
+        this.edgeType = edgeType;
+        return this;
+    }
 
     /**
      * set headerType

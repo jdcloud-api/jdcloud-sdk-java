@@ -35,6 +35,11 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
+     * 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+     */
+    private Integer edgeType;
+
+    /**
      * header类型[resp,req],resp：配置响应头，req：配置请求头
      */
     private String headerType;
@@ -56,6 +61,24 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
     @Required
     private String domain;
 
+
+    /**
+     * get 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+     *
+     * @return
+     */
+    public Integer getEdgeType() {
+        return edgeType;
+    }
+
+    /**
+     * set 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+     *
+     * @param edgeType
+     */
+    public void setEdgeType(Integer edgeType) {
+        this.edgeType = edgeType;
+    }
 
     /**
      * get header类型[resp,req],resp：配置响应头，req：配置请求头
@@ -129,6 +152,16 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
         this.domain = domain;
     }
 
+
+    /**
+     * set 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+     *
+     * @param edgeType
+     */
+    public SetHttpHeaderRequest edgeType(Integer edgeType) {
+        this.edgeType = edgeType;
+        return this;
+    }
 
     /**
      * set header类型[resp,req],resp：配置响应头，req：配置请求头
