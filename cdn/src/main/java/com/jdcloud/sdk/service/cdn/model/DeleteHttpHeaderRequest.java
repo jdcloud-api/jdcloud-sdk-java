@@ -35,6 +35,11 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
+     * 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+     */
+    private Integer edgeType;
+
+    /**
      * header类型[resp,req]
      */
     private String headerType;
@@ -51,6 +56,24 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
     @Required
     private String domain;
 
+
+    /**
+     * get 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+     *
+     * @return
+     */
+    public Integer getEdgeType() {
+        return edgeType;
+    }
+
+    /**
+     * set 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+     *
+     * @param edgeType
+     */
+    public void setEdgeType(Integer edgeType) {
+        this.edgeType = edgeType;
+    }
 
     /**
      * get header类型[resp,req]
@@ -106,6 +129,16 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
         this.domain = domain;
     }
 
+
+    /**
+     * set 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
+     *
+     * @param edgeType
+     */
+    public DeleteHttpHeaderRequest edgeType(Integer edgeType) {
+        this.edgeType = edgeType;
+        return this;
+    }
 
     /**
      * set header类型[resp,req]

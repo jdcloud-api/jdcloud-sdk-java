@@ -35,12 +35,35 @@ public class QueryHttpHeaderRequest extends JdcloudRequest implements java.io.Se
     private static final long serialVersionUID = 1L;
 
     /**
+     * header生效节点，0边缘，1回源，2两者都
+     */
+    private Integer edgeType;
+
+    /**
      * 用户域名
      * Required:true
      */
     @Required
     private String domain;
 
+
+    /**
+     * get header生效节点，0边缘，1回源，2两者都
+     *
+     * @return
+     */
+    public Integer getEdgeType() {
+        return edgeType;
+    }
+
+    /**
+     * set header生效节点，0边缘，1回源，2两者都
+     *
+     * @param edgeType
+     */
+    public void setEdgeType(Integer edgeType) {
+        this.edgeType = edgeType;
+    }
 
     /**
      * get 用户域名
@@ -60,6 +83,16 @@ public class QueryHttpHeaderRequest extends JdcloudRequest implements java.io.Se
         this.domain = domain;
     }
 
+
+    /**
+     * set header生效节点，0边缘，1回源，2两者都
+     *
+     * @param edgeType
+     */
+    public QueryHttpHeaderRequest edgeType(Integer edgeType) {
+        this.edgeType = edgeType;
+        return this;
+    }
 
     /**
      * set 用户域名
