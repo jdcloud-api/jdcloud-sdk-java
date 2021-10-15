@@ -42,30 +42,22 @@ public class PersonalUser  implements java.io.Serializable {
 
     /**
      * 身份证号码
-     * Required:true
      */
-    @Required
     private String idCard;
 
     /**
      * 银行卡号
-     * Required:true
      */
-    @Required
     private String bankcard;
 
     /**
      * 手机号
-     * Required:true
      */
-    @Required
     private String mobile;
 
     /**
      * 人像图片
-     * Required:true
      */
-    @Required
     private String imgBase64;
 
 
