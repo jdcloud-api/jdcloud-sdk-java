@@ -42,9 +42,7 @@ public class KeyCfg  implements java.io.Serializable {
 
     /**
      * 对称密钥的轮换配置；非对称密钥的操作，不支持该配置
-     * Required:true
      */
-    @Required
     private KeyRotateCfg keyRotateCfg;
 
 

@@ -82,18 +82,12 @@ import com.jdcloud.sdk.service.kms.client.DescribeSecretVersionListExecutor;
 import com.jdcloud.sdk.service.kms.model.ValidateRequest;
 import com.jdcloud.sdk.service.kms.model.ValidateResponse;
 import com.jdcloud.sdk.service.kms.client.ValidateExecutor;
-import com.jdcloud.sdk.service.kms.model.ExportSecretRequest;
-import com.jdcloud.sdk.service.kms.model.ExportSecretResponse;
-import com.jdcloud.sdk.service.kms.client.ExportSecretExecutor;
 import com.jdcloud.sdk.service.kms.model.DeleteSecretVersionRequest;
 import com.jdcloud.sdk.service.kms.model.DeleteSecretVersionResponse;
 import com.jdcloud.sdk.service.kms.client.DeleteSecretVersionExecutor;
 import com.jdcloud.sdk.service.kms.model.DescribeKeyRequest;
 import com.jdcloud.sdk.service.kms.model.DescribeKeyResponse;
 import com.jdcloud.sdk.service.kms.client.DescribeKeyExecutor;
-import com.jdcloud.sdk.service.kms.model.ImportSecretRequest;
-import com.jdcloud.sdk.service.kms.model.ImportSecretResponse;
-import com.jdcloud.sdk.service.kms.client.ImportSecretExecutor;
 import com.jdcloud.sdk.service.kms.model.ScheduleKeyDeletionRequest;
 import com.jdcloud.sdk.service.kms.model.ScheduleKeyDeletionResponse;
 import com.jdcloud.sdk.service.kms.client.ScheduleKeyDeletionExecutor;
@@ -144,7 +138,7 @@ public class KmsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.4";
     public final static String DefaultEndpoint = "kms.jdcloud-api.com";
     public final static String ServiceName = "kms";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -376,17 +370,6 @@ public class KmsClient extends JdcloudClient {
     }
 
     /**
-     * 导出机密
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ExportSecretResponse exportSecret(ExportSecretRequest request) throws JdcloudSdkException {
-        return new ExportSecretExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除指定版本机密
      *
      * @param request
@@ -406,17 +389,6 @@ public class KmsClient extends JdcloudClient {
      */
     public DescribeKeyResponse describeKey(DescribeKeyRequest request) throws JdcloudSdkException {
         return new DescribeKeyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 导入机密
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ImportSecretResponse importSecret(ImportSecretRequest request) throws JdcloudSdkException {
-        return new ImportSecretExecutor().client(this).execute(request);
     }
 
     /**
