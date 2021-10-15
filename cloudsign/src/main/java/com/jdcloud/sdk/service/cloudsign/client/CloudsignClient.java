@@ -93,7 +93,7 @@ public class CloudsignClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.4";
     public final static String DefaultEndpoint = "cloudsign.jdcloud-api.com";
     public final static String ServiceName = "cloudsign";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
