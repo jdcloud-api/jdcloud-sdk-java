@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vm.model;
 
+import com.jdcloud.sdk.service.vm.model.UpdateInstanceTemplateSpec;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -34,7 +35,8 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 详细操作说明请参考帮助文档：[实例模板](https://docs.jdcloud.com/cn/virtual-machines/instance-template-overview)
 
 ## 接口说明
-- 该接口只支持修改实例模板的名称或描述。
+- 名称、描述、实例模板配置信息至少要传一项。
+- 参数时，对应的参数不做更改。
 
  */
 public class UpdateInstanceTemplateRequest extends JdcloudRequest implements java.io.Serializable {
@@ -43,15 +45,18 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
 
     /**
      * 实例模板的名称，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
-     * Required:true
      */
-    @Required
     private String name;
 
     /**
      * 实例模板的描述，参考 [公共参数规范](https://docs.jdcloud.com/virtual-machines/api/general_parameters)。
      */
     private String description;
+
+    /**
+     * 实例模板配置信息。
+     */
+    private UpdateInstanceTemplateSpec instanceTemplateData;
 
     /**
      * 地域ID。
@@ -102,6 +107,24 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 实例模板配置信息。
+     *
+     * @return
+     */
+    public UpdateInstanceTemplateSpec getInstanceTemplateData() {
+        return instanceTemplateData;
+    }
+
+    /**
+     * set 实例模板配置信息。
+     *
+     * @param instanceTemplateData
+     */
+    public void setInstanceTemplateData(UpdateInstanceTemplateSpec instanceTemplateData) {
+        this.instanceTemplateData = instanceTemplateData;
     }
 
     /**
@@ -158,6 +181,16 @@ public class UpdateInstanceTemplateRequest extends JdcloudRequest implements jav
      */
     public UpdateInstanceTemplateRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 实例模板配置信息。
+     *
+     * @param instanceTemplateData
+     */
+    public UpdateInstanceTemplateRequest instanceTemplateData(UpdateInstanceTemplateSpec instanceTemplateData) {
+        this.instanceTemplateData = instanceTemplateData;
         return this;
     }
 

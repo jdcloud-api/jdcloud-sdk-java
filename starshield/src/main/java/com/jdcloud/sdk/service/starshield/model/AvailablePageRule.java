@@ -35,18 +35,18 @@ public class AvailablePageRule  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * setting name
+     * 设置名称
      */
     private String id;
 
     /**
-     * type of the values
+     * 值的类型
      */
     private List<String> properties;
 
 
     /**
-     * get setting name
+     * get 设置名称
      *
      * @return
      */
@@ -55,7 +55,7 @@ public class AvailablePageRule  implements java.io.Serializable {
     }
 
     /**
-     * set setting name
+     * set 设置名称
      *
      * @param id
      */
@@ -64,7 +64,7 @@ public class AvailablePageRule  implements java.io.Serializable {
     }
 
     /**
-     * get type of the values
+     * get 值的类型
      *
      * @return
      */
@@ -73,7 +73,7 @@ public class AvailablePageRule  implements java.io.Serializable {
     }
 
     /**
-     * set type of the values
+     * set 值的类型
      *
      * @param properties
      */
@@ -83,7 +83,7 @@ public class AvailablePageRule  implements java.io.Serializable {
 
 
     /**
-     * set setting name
+     * set 设置名称
      *
      * @param id
      */
@@ -93,7 +93,7 @@ public class AvailablePageRule  implements java.io.Serializable {
     }
 
     /**
-     * set type of the values
+     * set 值的类型
      *
      * @param properties
      */
@@ -104,7 +104,7 @@ public class AvailablePageRule  implements java.io.Serializable {
 
 
     /**
-     * add item to type of the values
+     * add item to 值的类型
      *
      * @param propertie
      */

@@ -38,7 +38,7 @@ public class DnsRecord  implements java.io.Serializable {
     private Meta meta;
 
     /**
-     * Whether this record can be modified/deleted (true means it&#39;s managed by JDC StarShield)
+     * 此记录是否可以被修改/删除（true意味着它由星盾管理）。
      */
     private Boolean locked;
 
@@ -48,62 +48,62 @@ public class DnsRecord  implements java.io.Serializable {
     private Data data;
 
     /**
-     * DNS record name
+     * DNS记录名称
      */
     private String name;
 
     /**
-     * Time to live for DNS record. Value of 1 is &#39;automatic&#39;
+     * DNS记录的生存时间。值为1是 &quot;自动&quot;。
      */
     private Number ttl;
 
     /**
-     * Zone identifier tag
+     * 域标识符标签
      */
     private String zone_id;
 
     /**
-     * When the record was last modified
+     * 记录最近修改时间
      */
     private String modified_on;
 
     /**
-     * When the record was created
+     * 创建记录时间
      */
     private String created_on;
 
     /**
-     * Whether the record can be proxied by JDC StarShield or not
+     * 记录是否由星盾代理
      */
     private Boolean proxiable;
 
     /**
-     * A valid IPv4 address
+     * 有效的IPv4地址
      */
     private String content;
 
     /**
-     * Record type
+     * 记录类型
      */
     private String ty_pe;
 
     /**
-     * DNS record identifier tag
+     * DNS记录标识符标签
      */
     private String id;
 
     /**
-     * Whether the record is receiving the performance and security benefits of JDC StarShield
+     * 是否利用星盾的性能和安全优势
      */
     private Boolean proxied;
 
     /**
-     * The domain of the record
+     * 记录的域名
      */
     private String zone_name;
 
     /**
-     * Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+     * 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      */
     private Number priority;
 
@@ -127,7 +127,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get Whether this record can be modified/deleted (true means it&#39;s managed by JDC StarShield)
+     * get 此记录是否可以被修改/删除（true意味着它由星盾管理）。
      *
      * @return
      */
@@ -136,7 +136,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Whether this record can be modified/deleted (true means it&#39;s managed by JDC StarShield)
+     * set 此记录是否可以被修改/删除（true意味着它由星盾管理）。
      *
      * @param locked
      */
@@ -163,7 +163,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get DNS record name
+     * get DNS记录名称
      *
      * @return
      */
@@ -172,7 +172,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set DNS record name
+     * set DNS记录名称
      *
      * @param name
      */
@@ -181,7 +181,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get Time to live for DNS record. Value of 1 is &#39;automatic&#39;
+     * get DNS记录的生存时间。值为1是 &quot;自动&quot;。
      *
      * @return
      */
@@ -190,7 +190,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Time to live for DNS record. Value of 1 is &#39;automatic&#39;
+     * set DNS记录的生存时间。值为1是 &quot;自动&quot;。
      *
      * @param ttl
      */
@@ -199,7 +199,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get Zone identifier tag
+     * get 域标识符标签
      *
      * @return
      */
@@ -208,7 +208,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Zone identifier tag
+     * set 域标识符标签
      *
      * @param zone_id
      */
@@ -217,7 +217,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get When the record was last modified
+     * get 记录最近修改时间
      *
      * @return
      */
@@ -226,7 +226,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set When the record was last modified
+     * set 记录最近修改时间
      *
      * @param modified_on
      */
@@ -235,7 +235,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get When the record was created
+     * get 创建记录时间
      *
      * @return
      */
@@ -244,7 +244,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set When the record was created
+     * set 创建记录时间
      *
      * @param created_on
      */
@@ -253,7 +253,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get Whether the record can be proxied by JDC StarShield or not
+     * get 记录是否由星盾代理
      *
      * @return
      */
@@ -262,7 +262,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Whether the record can be proxied by JDC StarShield or not
+     * set 记录是否由星盾代理
      *
      * @param proxiable
      */
@@ -271,7 +271,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get A valid IPv4 address
+     * get 有效的IPv4地址
      *
      * @return
      */
@@ -280,7 +280,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set A valid IPv4 address
+     * set 有效的IPv4地址
      *
      * @param content
      */
@@ -289,7 +289,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get Record type
+     * get 记录类型
      *
      * @return
      */
@@ -298,7 +298,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Record type
+     * set 记录类型
      *
      * @param ty_pe
      */
@@ -307,7 +307,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get DNS record identifier tag
+     * get DNS记录标识符标签
      *
      * @return
      */
@@ -316,7 +316,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set DNS record identifier tag
+     * set DNS记录标识符标签
      *
      * @param id
      */
@@ -325,7 +325,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get Whether the record is receiving the performance and security benefits of JDC StarShield
+     * get 是否利用星盾的性能和安全优势
      *
      * @return
      */
@@ -334,7 +334,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Whether the record is receiving the performance and security benefits of JDC StarShield
+     * set 是否利用星盾的性能和安全优势
      *
      * @param proxied
      */
@@ -343,7 +343,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get The domain of the record
+     * get 记录的域名
      *
      * @return
      */
@@ -352,7 +352,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set The domain of the record
+     * set 记录的域名
      *
      * @param zone_name
      */
@@ -361,7 +361,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * get Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+     * get 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      *
      * @return
      */
@@ -370,7 +370,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+     * set 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      *
      * @param priority
      */
@@ -390,7 +390,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Whether this record can be modified/deleted (true means it&#39;s managed by JDC StarShield)
+     * set 此记录是否可以被修改/删除（true意味着它由星盾管理）。
      *
      * @param locked
      */
@@ -410,7 +410,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set DNS record name
+     * set DNS记录名称
      *
      * @param name
      */
@@ -420,7 +420,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Time to live for DNS record. Value of 1 is &#39;automatic&#39;
+     * set DNS记录的生存时间。值为1是 &quot;自动&quot;。
      *
      * @param ttl
      */
@@ -430,7 +430,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Zone identifier tag
+     * set 域标识符标签
      *
      * @param zone_id
      */
@@ -440,7 +440,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set When the record was last modified
+     * set 记录最近修改时间
      *
      * @param modified_on
      */
@@ -450,7 +450,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set When the record was created
+     * set 创建记录时间
      *
      * @param created_on
      */
@@ -460,7 +460,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Whether the record can be proxied by JDC StarShield or not
+     * set 记录是否由星盾代理
      *
      * @param proxiable
      */
@@ -470,7 +470,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set A valid IPv4 address
+     * set 有效的IPv4地址
      *
      * @param content
      */
@@ -480,7 +480,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Record type
+     * set 记录类型
      *
      * @param ty_pe
      */
@@ -490,7 +490,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set DNS record identifier tag
+     * set DNS记录标识符标签
      *
      * @param id
      */
@@ -500,7 +500,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Whether the record is receiving the performance and security benefits of JDC StarShield
+     * set 是否利用星盾的性能和安全优势
      *
      * @param proxied
      */
@@ -510,7 +510,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set The domain of the record
+     * set 记录的域名
      *
      * @param zone_name
      */
@@ -520,7 +520,7 @@ public class DnsRecord  implements java.io.Serializable {
     }
 
     /**
-     * set Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+     * set 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      *
      * @param priority
      */

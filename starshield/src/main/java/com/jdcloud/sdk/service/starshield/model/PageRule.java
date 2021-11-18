@@ -35,48 +35,47 @@ public class PageRule  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * API item identifier tag
+     * API条目标识符标签
      */
     private String id;
 
     /**
-     * Targets to evaluate on a request
+     * 对请求进行评估的目标
      */
     private List<Target> targets;
 
     /**
-     * The set of actions to perform if the targets of this rule match the request. Actions can redirect the url to another url or override settings (but not both)
-
+     * 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
      */
     private List<Action> actions;
 
     /**
-     * A number that indicates the preference for a page rule over another.
-In the case where you may have a catch-all page rule (e.g., #1.. &#39;/images/&#39;)
-but want a rule that is more specific to take precedence (e.g., #2.. &#39;/images/special/&#39;),
-you&#39;ll want to specify a higher priority on the latter (#2) so it will override the first.
+     * 一个数字，表示一个页面规则优先于另一个页面规则。
+如果您可能有一个全面页面规则（例如#1 &#39;/images/&#39;）
+但是想要更具体的规则优先（例如#2 &#39;/images/special/），
+您需要在后者（#2）上指定更高的优先级，以便它将覆盖第一个优先级。
 
      */
     private Integer priority;
 
     /**
-     * Status of the page rule
+     * 页面规则的状态
      */
     private String status;
 
     /**
-     * When the page rule was last modified
+     * 上次修改页面规则的时间
      */
     private String modified_on;
 
     /**
-     * When the page rule was created
+     * 创建页面规则时间
      */
     private String created_on;
 
 
     /**
-     * get API item identifier tag
+     * get API条目标识符标签
      *
      * @return
      */
@@ -85,7 +84,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set API item identifier tag
+     * set API条目标识符标签
      *
      * @param id
      */
@@ -94,7 +93,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * get Targets to evaluate on a request
+     * get 对请求进行评估的目标
      *
      * @return
      */
@@ -103,7 +102,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set Targets to evaluate on a request
+     * set 对请求进行评估的目标
      *
      * @param targets
      */
@@ -112,8 +111,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * get The set of actions to perform if the targets of this rule match the request. Actions can redirect the url to another url or override settings (but not both)
-
+     * get 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
      *
      * @return
      */
@@ -122,8 +120,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set The set of actions to perform if the targets of this rule match the request. Actions can redirect the url to another url or override settings (but not both)
-
+     * set 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
      *
      * @param actions
      */
@@ -132,10 +129,10 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * get A number that indicates the preference for a page rule over another.
-In the case where you may have a catch-all page rule (e.g., #1.. &#39;/images/&#39;)
-but want a rule that is more specific to take precedence (e.g., #2.. &#39;/images/special/&#39;),
-you&#39;ll want to specify a higher priority on the latter (#2) so it will override the first.
+     * get 一个数字，表示一个页面规则优先于另一个页面规则。
+如果您可能有一个全面页面规则（例如#1 &#39;/images/&#39;）
+但是想要更具体的规则优先（例如#2 &#39;/images/special/），
+您需要在后者（#2）上指定更高的优先级，以便它将覆盖第一个优先级。
 
      *
      * @return
@@ -145,10 +142,10 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set A number that indicates the preference for a page rule over another.
-In the case where you may have a catch-all page rule (e.g., #1.. &#39;/images/&#39;)
-but want a rule that is more specific to take precedence (e.g., #2.. &#39;/images/special/&#39;),
-you&#39;ll want to specify a higher priority on the latter (#2) so it will override the first.
+     * set 一个数字，表示一个页面规则优先于另一个页面规则。
+如果您可能有一个全面页面规则（例如#1 &#39;/images/&#39;）
+但是想要更具体的规则优先（例如#2 &#39;/images/special/），
+您需要在后者（#2）上指定更高的优先级，以便它将覆盖第一个优先级。
 
      *
      * @param priority
@@ -158,7 +155,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * get Status of the page rule
+     * get 页面规则的状态
      *
      * @return
      */
@@ -167,7 +164,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set Status of the page rule
+     * set 页面规则的状态
      *
      * @param status
      */
@@ -176,7 +173,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * get When the page rule was last modified
+     * get 上次修改页面规则的时间
      *
      * @return
      */
@@ -185,7 +182,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set When the page rule was last modified
+     * set 上次修改页面规则的时间
      *
      * @param modified_on
      */
@@ -194,7 +191,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * get When the page rule was created
+     * get 创建页面规则时间
      *
      * @return
      */
@@ -203,7 +200,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set When the page rule was created
+     * set 创建页面规则时间
      *
      * @param created_on
      */
@@ -213,7 +210,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
 
 
     /**
-     * set API item identifier tag
+     * set API条目标识符标签
      *
      * @param id
      */
@@ -223,7 +220,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set Targets to evaluate on a request
+     * set 对请求进行评估的目标
      *
      * @param targets
      */
@@ -233,8 +230,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set The set of actions to perform if the targets of this rule match the request. Actions can redirect the url to another url or override settings (but not both)
-
+     * set 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
      *
      * @param actions
      */
@@ -244,10 +240,10 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set A number that indicates the preference for a page rule over another.
-In the case where you may have a catch-all page rule (e.g., #1.. &#39;/images/&#39;)
-but want a rule that is more specific to take precedence (e.g., #2.. &#39;/images/special/&#39;),
-you&#39;ll want to specify a higher priority on the latter (#2) so it will override the first.
+     * set 一个数字，表示一个页面规则优先于另一个页面规则。
+如果您可能有一个全面页面规则（例如#1 &#39;/images/&#39;）
+但是想要更具体的规则优先（例如#2 &#39;/images/special/），
+您需要在后者（#2）上指定更高的优先级，以便它将覆盖第一个优先级。
 
      *
      * @param priority
@@ -258,7 +254,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set Status of the page rule
+     * set 页面规则的状态
      *
      * @param status
      */
@@ -268,7 +264,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set When the page rule was last modified
+     * set 上次修改页面规则的时间
      *
      * @param modified_on
      */
@@ -278,7 +274,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * set When the page rule was created
+     * set 创建页面规则时间
      *
      * @param created_on
      */
@@ -289,7 +285,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
 
 
     /**
-     * add item to Targets to evaluate on a request
+     * add item to 对请求进行评估的目标
      *
      * @param target
      */
@@ -301,8 +297,7 @@ you&#39;ll want to specify a higher priority on the latter (#2) so it will overr
     }
 
     /**
-     * add item to The set of actions to perform if the targets of this rule match the request. Actions can redirect the url to another url or override settings (but not both)
-
+     * add item to 如果此规则的目标与请求相匹配，要执行的一系列行动。行动可以将网址重定向到另一个网址或覆盖设置（但不能同时进行）。
      *
      * @param action
      */

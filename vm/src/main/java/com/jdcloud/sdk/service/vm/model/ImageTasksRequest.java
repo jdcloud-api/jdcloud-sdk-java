@@ -49,9 +49,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
 
     /**
      * 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
-     * Required:true
      */
-    @Required
     private String taskAction;
 
     /**
@@ -80,7 +78,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     private Integer pageNumber;
 
     /**
-     * 分页大小；默认为10；取值范围[1, 10]。
+     * 分页大小；取值范围[10, 100]。
      */
     private Integer pageSize;
 
@@ -201,7 +199,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 分页大小；默认为10；取值范围[1, 10]。
+     * get 分页大小；取值范围[10, 100]。
      *
      * @return
      */
@@ -210,7 +208,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[1, 10]。
+     * set 分页大小；取值范围[10, 100]。
      *
      * @param pageSize
      */
@@ -298,7 +296,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 分页大小；默认为10；取值范围[1, 10]。
+     * set 分页大小；取值范围[10, 100]。
      *
      * @param pageSize
      */

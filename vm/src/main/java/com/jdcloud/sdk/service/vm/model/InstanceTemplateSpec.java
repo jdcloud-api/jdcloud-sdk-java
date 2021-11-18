@@ -62,7 +62,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     private List<String> keyNames;
 
     /**
-     * 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+     * 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      */
@@ -113,9 +113,8 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     private String autoImagePolicyId;
 
     /**
-     * 允许SSH密码登录。
-可选值：
-&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+     * 是否允许SSH密码登录。
+&#x60;yes&#x60;：允许SSH密码登录。
 &#x60;no&#x60;：禁止SSH密码登录。
 仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
@@ -123,11 +122,10 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     private String passWordAuth;
 
     /**
-     * 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
-可选值：
+     * 是否使用镜像中的登录凭证，不再指定密码或密钥。
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
-仅使用私有或共享镜像时此参数有效。
+仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
      */
     private String imageInherit;
 
@@ -209,7 +207,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+     * get 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      *
@@ -220,7 +218,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+     * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      *
@@ -371,9 +369,8 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 允许SSH密码登录。
-可选值：
-&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+     * get 是否允许SSH密码登录。
+&#x60;yes&#x60;：允许SSH密码登录。
 &#x60;no&#x60;：禁止SSH密码登录。
 仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
@@ -385,9 +382,8 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 允许SSH密码登录。
-可选值：
-&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+     * set 是否允许SSH密码登录。
+&#x60;yes&#x60;：允许SSH密码登录。
 &#x60;no&#x60;：禁止SSH密码登录。
 仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
@@ -399,11 +395,10 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
-可选值：
+     * get 是否使用镜像中的登录凭证，不再指定密码或密钥。
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
-仅使用私有或共享镜像时此参数有效。
+仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
      *
      * @return
      */
@@ -412,11 +407,10 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
-可选值：
+     * set 是否使用镜像中的登录凭证，不再指定密码或密钥。
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
-仅使用私有或共享镜像时此参数有效。
+仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
      *
      * @param imageInherit
      */
@@ -468,7 +462,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+     * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      *
@@ -557,9 +551,8 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 允许SSH密码登录。
-可选值：
-&#x60;yes&#x60;（默认值）：允许SSH密码登录。
+     * set 是否允许SSH密码登录。
+&#x60;yes&#x60;：允许SSH密码登录。
 &#x60;no&#x60;：禁止SSH密码登录。
 仅在指定密钥时此参数有效，指定此参数后密码即使输入也将被忽略，同时会在系统内禁用SSH密码登录。
 
@@ -572,11 +565,10 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 使用镜像中的登录凭证，无须再指定密码或密钥（指定无效）。
-可选值：
+     * set 是否使用镜像中的登录凭证，不再指定密码或密钥。
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
-仅使用私有或共享镜像时此参数有效。
+仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
      *
      * @param imageInherit
      */
@@ -599,7 +591,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持40对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
+     * add item to 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
 注意：key不要以连字符(-)结尾，否则此key不生效。
 
      *

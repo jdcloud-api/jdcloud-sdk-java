@@ -35,7 +35,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
 
     /**
      * 网卡设备Index。创建实例时此参数无须指定且指定无效。
-对于主网卡默认Index为1，辅助网卡自动分配。
+对于主网卡默认Index为1。
 
      */
     private Integer deviceIndex;
@@ -43,7 +43,8 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     /**
      * 是否随实例一起删除。
 &#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;false&#x60;：不随实例删除。
+主网卡此属性默认为&#x60;true&#x60;
 
      */
     private Boolean autoDelete;
@@ -58,7 +59,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
 
     /**
      * get 网卡设备Index。创建实例时此参数无须指定且指定无效。
-对于主网卡默认Index为1，辅助网卡自动分配。
+对于主网卡默认Index为1。
 
      *
      * @return
@@ -69,7 +70,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
 
     /**
      * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
-对于主网卡默认Index为1，辅助网卡自动分配。
+对于主网卡默认Index为1。
 
      *
      * @param deviceIndex
@@ -81,7 +82,8 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     /**
      * get 是否随实例一起删除。
 &#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;false&#x60;：不随实例删除。
+主网卡此属性默认为&#x60;true&#x60;
 
      *
      * @return
@@ -93,7 +95,8 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     /**
      * set 是否随实例一起删除。
 &#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;false&#x60;：不随实例删除。
+主网卡此属性默认为&#x60;true&#x60;
 
      *
      * @param autoDelete
@@ -123,7 +126,7 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
 
     /**
      * set 网卡设备Index。创建实例时此参数无须指定且指定无效。
-对于主网卡默认Index为1，辅助网卡自动分配。
+对于主网卡默认Index为1。
 
      *
      * @param deviceIndex
@@ -136,7 +139,8 @@ public class InstanceTemplateNetworkInterfaceAttachmentSpec  implements java.io.
     /**
      * set 是否随实例一起删除。
 &#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;（默认值）：不随实例删除。
+&#x60;false&#x60;：不随实例删除。
+主网卡此属性默认为&#x60;true&#x60;
 
      *
      * @param autoDelete

@@ -40,19 +40,17 @@ public class FirewallRule  implements java.io.Serializable {
     private List<String> products;
 
     /**
-     * The priority of the rule to allow control of processing order.
-A lower number indicates high priority. If not provided, any rules with a priority will be sequenced before those without.
-
+     * 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
      */
     private Number priority;
 
     /**
-     * Whether this firewall rule is currently paused.
+     * 此防火墙规则当前是否已暂停。
      */
     private Boolean paused;
 
     /**
-     * Short reference tag to quickly select related rules.
+     * 短引用标记，用于快速选择相关规则。
      */
     private String ref;
 
@@ -62,7 +60,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     private Action_parameters action_parameters;
 
     /**
-     * The action to apply to a matched request. Note that action &quot;log&quot; is only available for enterprise customers.
+     * 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
      */
     private String action;
 
@@ -72,12 +70,12 @@ A lower number indicates high priority. If not provided, any rules with a priori
     private Filter filter;
 
     /**
-     * Firewall Rule identifier
+     * 防火墙规则标识符
      */
     private String id;
 
     /**
-     * A description of the rule to help identify it.
+     * 对规则的描述，以帮助识别它。
      */
     private String description;
 
@@ -101,9 +99,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * get The priority of the rule to allow control of processing order.
-A lower number indicates high priority. If not provided, any rules with a priority will be sequenced before those without.
-
+     * get 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
      *
      * @return
      */
@@ -112,9 +108,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set The priority of the rule to allow control of processing order.
-A lower number indicates high priority. If not provided, any rules with a priority will be sequenced before those without.
-
+     * set 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
      *
      * @param priority
      */
@@ -123,7 +117,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * get Whether this firewall rule is currently paused.
+     * get 此防火墙规则当前是否已暂停。
      *
      * @return
      */
@@ -132,7 +126,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set Whether this firewall rule is currently paused.
+     * set 此防火墙规则当前是否已暂停。
      *
      * @param paused
      */
@@ -141,7 +135,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * get Short reference tag to quickly select related rules.
+     * get 短引用标记，用于快速选择相关规则。
      *
      * @return
      */
@@ -150,7 +144,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set Short reference tag to quickly select related rules.
+     * set 短引用标记，用于快速选择相关规则。
      *
      * @param ref
      */
@@ -177,7 +171,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * get The action to apply to a matched request. Note that action &quot;log&quot; is only available for enterprise customers.
+     * get 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
      *
      * @return
      */
@@ -186,7 +180,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set The action to apply to a matched request. Note that action &quot;log&quot; is only available for enterprise customers.
+     * set 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
      *
      * @param action
      */
@@ -213,7 +207,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * get Firewall Rule identifier
+     * get 防火墙规则标识符
      *
      * @return
      */
@@ -222,7 +216,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set Firewall Rule identifier
+     * set 防火墙规则标识符
      *
      * @param id
      */
@@ -231,7 +225,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * get A description of the rule to help identify it.
+     * get 对规则的描述，以帮助识别它。
      *
      * @return
      */
@@ -240,7 +234,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set A description of the rule to help identify it.
+     * set 对规则的描述，以帮助识别它。
      *
      * @param description
      */
@@ -260,9 +254,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set The priority of the rule to allow control of processing order.
-A lower number indicates high priority. If not provided, any rules with a priority will be sequenced before those without.
-
+     * set 规则的优先级，允许控制处理顺序。一个较小的数字表示高优先级。如果不提供，任何有优先权的规则将在没有优先权的规则之前排序。
      *
      * @param priority
      */
@@ -272,7 +264,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set Whether this firewall rule is currently paused.
+     * set 此防火墙规则当前是否已暂停。
      *
      * @param paused
      */
@@ -282,7 +274,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set Short reference tag to quickly select related rules.
+     * set 短引用标记，用于快速选择相关规则。
      *
      * @param ref
      */
@@ -302,7 +294,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set The action to apply to a matched request. Note that action &quot;log&quot; is only available for enterprise customers.
+     * set 应用于匹配请求的行动。注意，行动 &quot;log &quot;只适用于企业客户。
      *
      * @param action
      */
@@ -322,7 +314,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set Firewall Rule identifier
+     * set 防火墙规则标识符
      *
      * @param id
      */
@@ -332,7 +324,7 @@ A lower number indicates high priority. If not provided, any rules with a priori
     }
 
     /**
-     * set A description of the rule to help identify it.
+     * set 对规则的描述，以帮助识别它。
      *
      * @param description
      */

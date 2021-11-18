@@ -33,33 +33,33 @@ public class Filter  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Filter identifier
+     * 筛选器标识符
      */
     private String id;
 
     /**
-     * The filter expression to be used
+     * 要使用的筛选器表达式
      */
     private String expression;
 
     /**
-     * Whether this filter is currently paused
+     * 此筛选器当前是否已暂停
      */
     private Boolean paused;
 
     /**
-     * A note that you can use to describe the purpose of the filter
+     * 可用于描述过滤器用途的注释
      */
     private String description;
 
     /**
-     * Short reference tag to quickly select related rules.
+     * 短引用标记，用于快速选择相关规则。
      */
     private String ref;
 
 
     /**
-     * get Filter identifier
+     * get 筛选器标识符
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set Filter identifier
+     * set 筛选器标识符
      *
      * @param id
      */
@@ -77,7 +77,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * get The filter expression to be used
+     * get 要使用的筛选器表达式
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set The filter expression to be used
+     * set 要使用的筛选器表达式
      *
      * @param expression
      */
@@ -95,7 +95,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * get Whether this filter is currently paused
+     * get 此筛选器当前是否已暂停
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set Whether this filter is currently paused
+     * set 此筛选器当前是否已暂停
      *
      * @param paused
      */
@@ -113,7 +113,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * get A note that you can use to describe the purpose of the filter
+     * get 可用于描述过滤器用途的注释
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set A note that you can use to describe the purpose of the filter
+     * set 可用于描述过滤器用途的注释
      *
      * @param description
      */
@@ -131,7 +131,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * get Short reference tag to quickly select related rules.
+     * get 短引用标记，用于快速选择相关规则。
      *
      * @return
      */
@@ -140,7 +140,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set Short reference tag to quickly select related rules.
+     * set 短引用标记，用于快速选择相关规则。
      *
      * @param ref
      */
@@ -150,7 +150,7 @@ public class Filter  implements java.io.Serializable {
 
 
     /**
-     * set Filter identifier
+     * set 筛选器标识符
      *
      * @param id
      */
@@ -160,7 +160,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set The filter expression to be used
+     * set 要使用的筛选器表达式
      *
      * @param expression
      */
@@ -170,7 +170,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set Whether this filter is currently paused
+     * set 此筛选器当前是否已暂停
      *
      * @param paused
      */
@@ -180,7 +180,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set A note that you can use to describe the purpose of the filter
+     * set 可用于描述过滤器用途的注释
      *
      * @param description
      */
@@ -190,7 +190,7 @@ public class Filter  implements java.io.Serializable {
     }
 
     /**
-     * set Short reference tag to quickly select related rules.
+     * set 短引用标记，用于快速选择相关规则。
      *
      * @param ref
      */

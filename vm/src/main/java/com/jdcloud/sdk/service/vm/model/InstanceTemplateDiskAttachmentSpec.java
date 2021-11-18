@@ -34,8 +34,8 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
 
     /**
      * 磁盘类型。
-**系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
-**数据盘**：取值为：&#x60;cloud&#x60; 云盘数据盘。
+**系统盘**：此参数无须指定，其类型取决于镜像类型。
+**数据盘**：数据盘仅支持云硬盘&#x60;cloud&#x60;。
 
      */
     private String diskCategory;
@@ -43,31 +43,28 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     /**
      * 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
 &#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;：不随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
 
      */
     private Boolean autoDelete;
 
     /**
-     * 云硬盘配置。
+     * 磁盘详细配置。此参数仅针对云硬盘，本地系统盘无须指定且指定无效。
      */
     private InstanceTemplateDiskSpec cloudDiskSpec;
 
     /**
      * 磁盘逻辑挂载点。
-**系统盘**：默认为vda。
+**系统盘**：此参数无须指定且指定无效，默认为vda。
 **数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
 
      */
     private String deviceName;
 
     /**
-     * 排除设备，使用此参数noDevice配合deviceName一起使用。
-创建镜像的场景下：使用此参数可以排除云主机实例中的云硬盘不参与制作快照。
+     * 排除设备，使用此参数 &#x60;noDevice&#x60; 配合 &#x60;deviceName&#x60; 一起使用。
 创建实例模板的场景下：使用此参数可以排除镜像中的数据盘。
-创建云主机的场景下：使用此参数可以排除实例模板、或镜像中的数据盘。
-示例：如果镜像中除系统盘还包含一块或多块数据盘，期望仅使用镜像中的部分磁盘，可通过此参数忽略部分磁盘配置。此参数须配合 &#x60;deviceName&#x60; 一起使用。
-例：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60;，则表示在使用镜像创建实例时，忽略数据盘vdb配置，不创建磁盘。
+示例：如果镜像中除系统盘还包含一块或多块数据盘，期望仅使用镜像中的部分磁盘，配置&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60;，则表示在使用实例模板创建实例时，忽略镜像中数据盘vdb配置，不创建磁盘。
 
      */
     private Boolean noDevice;
@@ -75,8 +72,8 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
 
     /**
      * get 磁盘类型。
-**系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
-**数据盘**：取值为：&#x60;cloud&#x60; 云盘数据盘。
+**系统盘**：此参数无须指定，其类型取决于镜像类型。
+**数据盘**：数据盘仅支持云硬盘&#x60;cloud&#x60;。
 
      *
      * @return
@@ -87,8 +84,8 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
 
     /**
      * set 磁盘类型。
-**系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
-**数据盘**：取值为：&#x60;cloud&#x60; 云盘数据盘。
+**系统盘**：此参数无须指定，其类型取决于镜像类型。
+**数据盘**：数据盘仅支持云硬盘&#x60;cloud&#x60;。
 
      *
      * @param diskCategory
@@ -100,7 +97,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     /**
      * get 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
 &#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;：不随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
 
      *
      * @return
@@ -112,7 +109,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     /**
      * set 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
 &#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;：不随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
 
      *
      * @param autoDelete
@@ -122,7 +119,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * get 云硬盘配置。
+     * get 磁盘详细配置。此参数仅针对云硬盘，本地系统盘无须指定且指定无效。
      *
      * @return
      */
@@ -131,7 +128,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * set 云硬盘配置。
+     * set 磁盘详细配置。此参数仅针对云硬盘，本地系统盘无须指定且指定无效。
      *
      * @param cloudDiskSpec
      */
@@ -141,7 +138,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
 
     /**
      * get 磁盘逻辑挂载点。
-**系统盘**：默认为vda。
+**系统盘**：此参数无须指定且指定无效，默认为vda。
 **数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
 
      *
@@ -153,7 +150,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
 
     /**
      * set 磁盘逻辑挂载点。
-**系统盘**：默认为vda。
+**系统盘**：此参数无须指定且指定无效，默认为vda。
 **数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
 
      *
@@ -164,12 +161,9 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * get 排除设备，使用此参数noDevice配合deviceName一起使用。
-创建镜像的场景下：使用此参数可以排除云主机实例中的云硬盘不参与制作快照。
+     * get 排除设备，使用此参数 &#x60;noDevice&#x60; 配合 &#x60;deviceName&#x60; 一起使用。
 创建实例模板的场景下：使用此参数可以排除镜像中的数据盘。
-创建云主机的场景下：使用此参数可以排除实例模板、或镜像中的数据盘。
-示例：如果镜像中除系统盘还包含一块或多块数据盘，期望仅使用镜像中的部分磁盘，可通过此参数忽略部分磁盘配置。此参数须配合 &#x60;deviceName&#x60; 一起使用。
-例：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60;，则表示在使用镜像创建实例时，忽略数据盘vdb配置，不创建磁盘。
+示例：如果镜像中除系统盘还包含一块或多块数据盘，期望仅使用镜像中的部分磁盘，配置&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60;，则表示在使用实例模板创建实例时，忽略镜像中数据盘vdb配置，不创建磁盘。
 
      *
      * @return
@@ -179,12 +173,9 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * set 排除设备，使用此参数noDevice配合deviceName一起使用。
-创建镜像的场景下：使用此参数可以排除云主机实例中的云硬盘不参与制作快照。
+     * set 排除设备，使用此参数 &#x60;noDevice&#x60; 配合 &#x60;deviceName&#x60; 一起使用。
 创建实例模板的场景下：使用此参数可以排除镜像中的数据盘。
-创建云主机的场景下：使用此参数可以排除实例模板、或镜像中的数据盘。
-示例：如果镜像中除系统盘还包含一块或多块数据盘，期望仅使用镜像中的部分磁盘，可通过此参数忽略部分磁盘配置。此参数须配合 &#x60;deviceName&#x60; 一起使用。
-例：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60;，则表示在使用镜像创建实例时，忽略数据盘vdb配置，不创建磁盘。
+示例：如果镜像中除系统盘还包含一块或多块数据盘，期望仅使用镜像中的部分磁盘，配置&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60;，则表示在使用实例模板创建实例时，忽略镜像中数据盘vdb配置，不创建磁盘。
 
      *
      * @param noDevice
@@ -196,8 +187,8 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
 
     /**
      * set 磁盘类型。
-**系统盘**：取值为：&#x60;local&#x60; 本地系统盘 或 &#x60;cloud&#x60; 云盘系统盘。
-**数据盘**：取值为：&#x60;cloud&#x60; 云盘数据盘。
+**系统盘**：此参数无须指定，其类型取决于镜像类型。
+**数据盘**：数据盘仅支持云硬盘&#x60;cloud&#x60;。
 
      *
      * @param diskCategory
@@ -210,7 +201,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     /**
      * set 是否随实例一起删除，即删除实例时是否自动删除此磁盘。此参数仅对按配置计费的非多点挂载云硬盘生效。
 &#x60;true&#x60;：随实例删除。
-&#x60;false&#x60;：不随实例删除。
+&#x60;false&#x60;（默认值）：不随实例删除。
 
      *
      * @param autoDelete
@@ -221,7 +212,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * set 云硬盘配置。
+     * set 磁盘详细配置。此参数仅针对云硬盘，本地系统盘无须指定且指定无效。
      *
      * @param cloudDiskSpec
      */
@@ -232,7 +223,7 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
 
     /**
      * set 磁盘逻辑挂载点。
-**系统盘**：默认为vda。
+**系统盘**：此参数无须指定且指定无效，默认为vda。
 **数据盘**：取值范围：&#x60;[vdb~vdbm]&#x60;。
 
      *
@@ -244,12 +235,9 @@ public class InstanceTemplateDiskAttachmentSpec  implements java.io.Serializable
     }
 
     /**
-     * set 排除设备，使用此参数noDevice配合deviceName一起使用。
-创建镜像的场景下：使用此参数可以排除云主机实例中的云硬盘不参与制作快照。
+     * set 排除设备，使用此参数 &#x60;noDevice&#x60; 配合 &#x60;deviceName&#x60; 一起使用。
 创建实例模板的场景下：使用此参数可以排除镜像中的数据盘。
-创建云主机的场景下：使用此参数可以排除实例模板、或镜像中的数据盘。
-示例：如果镜像中除系统盘还包含一块或多块数据盘，期望仅使用镜像中的部分磁盘，可通过此参数忽略部分磁盘配置。此参数须配合 &#x60;deviceName&#x60; 一起使用。
-例：&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60;，则表示在使用镜像创建实例时，忽略数据盘vdb配置，不创建磁盘。
+示例：如果镜像中除系统盘还包含一块或多块数据盘，期望仅使用镜像中的部分磁盘，配置&#x60;deviceName&#x3D;vdb&#x60;、&#x60;noDevice&#x3D;true&#x60;，则表示在使用实例模板创建实例时，忽略镜像中数据盘vdb配置，不创建磁盘。
 
      *
      * @param noDevice

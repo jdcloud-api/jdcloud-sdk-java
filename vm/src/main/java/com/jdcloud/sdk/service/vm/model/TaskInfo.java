@@ -26,7 +26,7 @@ package com.jdcloud.sdk.service.vm.model;
 
 
 /**
- * 镜像导出导出任务详情。
+ * 镜像导入导出任务详情。
  */
 public class TaskInfo  implements java.io.Serializable {
 
@@ -53,6 +53,11 @@ public class TaskInfo  implements java.io.Serializable {
     private Integer progress;
 
     /**
+     * 任务失败的原因。
+     */
+    private String errorInfo;
+
+    /**
      * 额外描述信息。
      */
     private String message;
@@ -66,6 +71,31 @@ public class TaskInfo  implements java.io.Serializable {
      * 任务完成时间。
      */
     private String finishedTime;
+
+    /**
+     * 镜像ID。
+     */
+    private String imageId;
+
+    /**
+     * 导出镜像时有效，表示目标OSS存储地址。
+     */
+    private String ossUrl;
+
+    /**
+     * 导出镜像时有效，表示生成的ossObject名称。
+     */
+    private String ossObject;
+
+    /**
+     * 导入镜像时有效，表示用户指定的镜像名称。
+     */
+    private String imageName;
+
+    /**
+     * 导入镜像时有效，源OSS外链地址。
+     */
+    private String imageUrl;
 
 
     /**
@@ -141,6 +171,24 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
+     * get 任务失败的原因。
+     *
+     * @return
+     */
+    public String getErrorInfo() {
+        return errorInfo;
+    }
+
+    /**
+     * set 任务失败的原因。
+     *
+     * @param errorInfo
+     */
+    public void setErrorInfo(String errorInfo) {
+        this.errorInfo = errorInfo;
+    }
+
+    /**
      * get 额外描述信息。
      *
      * @return
@@ -194,6 +242,96 @@ public class TaskInfo  implements java.io.Serializable {
         this.finishedTime = finishedTime;
     }
 
+    /**
+     * get 镜像ID。
+     *
+     * @return
+     */
+    public String getImageId() {
+        return imageId;
+    }
+
+    /**
+     * set 镜像ID。
+     *
+     * @param imageId
+     */
+    public void setImageId(String imageId) {
+        this.imageId = imageId;
+    }
+
+    /**
+     * get 导出镜像时有效，表示目标OSS存储地址。
+     *
+     * @return
+     */
+    public String getOssUrl() {
+        return ossUrl;
+    }
+
+    /**
+     * set 导出镜像时有效，表示目标OSS存储地址。
+     *
+     * @param ossUrl
+     */
+    public void setOssUrl(String ossUrl) {
+        this.ossUrl = ossUrl;
+    }
+
+    /**
+     * get 导出镜像时有效，表示生成的ossObject名称。
+     *
+     * @return
+     */
+    public String getOssObject() {
+        return ossObject;
+    }
+
+    /**
+     * set 导出镜像时有效，表示生成的ossObject名称。
+     *
+     * @param ossObject
+     */
+    public void setOssObject(String ossObject) {
+        this.ossObject = ossObject;
+    }
+
+    /**
+     * get 导入镜像时有效，表示用户指定的镜像名称。
+     *
+     * @return
+     */
+    public String getImageName() {
+        return imageName;
+    }
+
+    /**
+     * set 导入镜像时有效，表示用户指定的镜像名称。
+     *
+     * @param imageName
+     */
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    /**
+     * get 导入镜像时有效，源OSS外链地址。
+     *
+     * @return
+     */
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    /**
+     * set 导入镜像时有效，源OSS外链地址。
+     *
+     * @param imageUrl
+     */
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
 
     /**
      * set 任务ID。
@@ -236,6 +374,16 @@ public class TaskInfo  implements java.io.Serializable {
     }
 
     /**
+     * set 任务失败的原因。
+     *
+     * @param errorInfo
+     */
+    public TaskInfo errorInfo(String errorInfo) {
+        this.errorInfo = errorInfo;
+        return this;
+    }
+
+    /**
      * set 额外描述信息。
      *
      * @param message
@@ -262,6 +410,56 @@ public class TaskInfo  implements java.io.Serializable {
      */
     public TaskInfo finishedTime(String finishedTime) {
         this.finishedTime = finishedTime;
+        return this;
+    }
+
+    /**
+     * set 镜像ID。
+     *
+     * @param imageId
+     */
+    public TaskInfo imageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+
+    /**
+     * set 导出镜像时有效，表示目标OSS存储地址。
+     *
+     * @param ossUrl
+     */
+    public TaskInfo ossUrl(String ossUrl) {
+        this.ossUrl = ossUrl;
+        return this;
+    }
+
+    /**
+     * set 导出镜像时有效，表示生成的ossObject名称。
+     *
+     * @param ossObject
+     */
+    public TaskInfo ossObject(String ossObject) {
+        this.ossObject = ossObject;
+        return this;
+    }
+
+    /**
+     * set 导入镜像时有效，表示用户指定的镜像名称。
+     *
+     * @param imageName
+     */
+    public TaskInfo imageName(String imageName) {
+        this.imageName = imageName;
+        return this;
+    }
+
+    /**
+     * set 导入镜像时有效，源OSS外链地址。
+     *
+     * @param imageUrl
+     */
+    public TaskInfo imageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
         return this;
     }
 

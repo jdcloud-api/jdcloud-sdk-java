@@ -35,48 +35,48 @@ public class CustomPage  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The name of the Custom Page type
+     * 自定义页面类型的名称
      */
     private String id;
 
     /**
-     * When the Custom Page was created
+     * 创建自定义页面时间
      */
     private String created_on;
 
     /**
-     * When the Custom Page was last modified
+     * 上次修改自定义页面的时间
      */
     private String modified_on;
 
     /**
-     * A URL that is associated with the Custom Page.
+     * 与自定义页面关联的URL。
      */
     private String url;
 
     /**
-     * The Custom Page state
+     * 自定义页面状态
      */
     private String state;
 
     /**
-     * String tokens that must be present in your customized HTML page
+     * 自定义HTML页面中必须存在的字符串标记
      */
     private List<String> required_tokens;
 
     /**
-     * The &#39;target&#39; needed as part of the query string when previewing the Custom Page
+     * 预览自定义页面时，需要将“target”作为查询字符串的一部分
      */
     private String preview_target;
 
     /**
-     * A short description of the Custom Page.
+     * 自定义页面的简短描述。
      */
     private String description;
 
 
     /**
-     * get The name of the Custom Page type
+     * get 自定义页面类型的名称
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set The name of the Custom Page type
+     * set 自定义页面类型的名称
      *
      * @param id
      */
@@ -94,7 +94,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * get When the Custom Page was created
+     * get 创建自定义页面时间
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set When the Custom Page was created
+     * set 创建自定义页面时间
      *
      * @param created_on
      */
@@ -112,7 +112,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * get When the Custom Page was last modified
+     * get 上次修改自定义页面的时间
      *
      * @return
      */
@@ -121,7 +121,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set When the Custom Page was last modified
+     * set 上次修改自定义页面的时间
      *
      * @param modified_on
      */
@@ -130,7 +130,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * get A URL that is associated with the Custom Page.
+     * get 与自定义页面关联的URL。
      *
      * @return
      */
@@ -139,7 +139,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set A URL that is associated with the Custom Page.
+     * set 与自定义页面关联的URL。
      *
      * @param url
      */
@@ -148,7 +148,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * get The Custom Page state
+     * get 自定义页面状态
      *
      * @return
      */
@@ -157,7 +157,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set The Custom Page state
+     * set 自定义页面状态
      *
      * @param state
      */
@@ -166,7 +166,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * get String tokens that must be present in your customized HTML page
+     * get 自定义HTML页面中必须存在的字符串标记
      *
      * @return
      */
@@ -175,7 +175,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set String tokens that must be present in your customized HTML page
+     * set 自定义HTML页面中必须存在的字符串标记
      *
      * @param required_tokens
      */
@@ -184,7 +184,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * get The &#39;target&#39; needed as part of the query string when previewing the Custom Page
+     * get 预览自定义页面时，需要将“target”作为查询字符串的一部分
      *
      * @return
      */
@@ -193,7 +193,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set The &#39;target&#39; needed as part of the query string when previewing the Custom Page
+     * set 预览自定义页面时，需要将“target”作为查询字符串的一部分
      *
      * @param preview_target
      */
@@ -202,7 +202,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * get A short description of the Custom Page.
+     * get 自定义页面的简短描述。
      *
      * @return
      */
@@ -211,7 +211,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set A short description of the Custom Page.
+     * set 自定义页面的简短描述。
      *
      * @param description
      */
@@ -221,7 +221,7 @@ public class CustomPage  implements java.io.Serializable {
 
 
     /**
-     * set The name of the Custom Page type
+     * set 自定义页面类型的名称
      *
      * @param id
      */
@@ -231,7 +231,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set When the Custom Page was created
+     * set 创建自定义页面时间
      *
      * @param created_on
      */
@@ -241,7 +241,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set When the Custom Page was last modified
+     * set 上次修改自定义页面的时间
      *
      * @param modified_on
      */
@@ -251,7 +251,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set A URL that is associated with the Custom Page.
+     * set 与自定义页面关联的URL。
      *
      * @param url
      */
@@ -261,7 +261,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set The Custom Page state
+     * set 自定义页面状态
      *
      * @param state
      */
@@ -271,7 +271,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set String tokens that must be present in your customized HTML page
+     * set 自定义HTML页面中必须存在的字符串标记
      *
      * @param required_tokens
      */
@@ -281,7 +281,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set The &#39;target&#39; needed as part of the query string when previewing the Custom Page
+     * set 预览自定义页面时，需要将“target”作为查询字符串的一部分
      *
      * @param preview_target
      */
@@ -291,7 +291,7 @@ public class CustomPage  implements java.io.Serializable {
     }
 
     /**
-     * set A short description of the Custom Page.
+     * set 自定义页面的简短描述。
      *
      * @param description
      */
@@ -302,7 +302,7 @@ public class CustomPage  implements java.io.Serializable {
 
 
     /**
-     * add item to String tokens that must be present in your customized HTML page
+     * add item to 自定义HTML页面中必须存在的字符串标记
      *
      * @param required_token
      */
