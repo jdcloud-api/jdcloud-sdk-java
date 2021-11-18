@@ -154,6 +154,11 @@ public class Image  implements java.io.Serializable {
      */
     private String serviceCode;
 
+    /**
+     * 是否来自导入镜像。
+     */
+    private Boolean imported;
+
 
     /**
      * get 镜像ID。
@@ -563,6 +568,24 @@ public class Image  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+    /**
+     * get 是否来自导入镜像。
+     *
+     * @return
+     */
+    public Boolean getImported() {
+        return imported;
+    }
+
+    /**
+     * set 是否来自导入镜像。
+     *
+     * @param imported
+     */
+    public void setImported(Boolean imported) {
+        this.imported = imported;
+    }
+
 
     /**
      * set 镜像ID。
@@ -786,6 +809,16 @@ public class Image  implements java.io.Serializable {
      */
     public Image serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set 是否来自导入镜像。
+     *
+     * @param imported
+     */
+    public Image imported(Boolean imported) {
+        this.imported = imported;
         return this;
     }
 

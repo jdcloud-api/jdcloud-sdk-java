@@ -48,12 +48,12 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     private List<String> securityGroups;
 
     /**
-     * PortSecurity，源和目标IP地址校验，取值为0或者1。
+     * 参数已弃用，指定无效。
      */
     private Integer sanityCheck;
 
     /**
-     * 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+     * 自动分配的ipv6地址数量，取值范围[0,1]，默认为0。
      */
     private Integer ipv6AddressCount;
 
@@ -95,7 +95,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     }
 
     /**
-     * get PortSecurity，源和目标IP地址校验，取值为0或者1。
+     * get 参数已弃用，指定无效。
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     }
 
     /**
-     * set PortSecurity，源和目标IP地址校验，取值为0或者1。
+     * set 参数已弃用，指定无效。
      *
      * @param sanityCheck
      */
@@ -113,7 +113,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     }
 
     /**
-     * get 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+     * get 自动分配的ipv6地址数量，取值范围[0,1]，默认为0。
      *
      * @return
      */
@@ -122,7 +122,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     }
 
     /**
-     * set 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+     * set 自动分配的ipv6地址数量，取值范围[0,1]，默认为0。
      *
      * @param ipv6AddressCount
      */
@@ -152,7 +152,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     }
 
     /**
-     * set PortSecurity，源和目标IP地址校验，取值为0或者1。
+     * set 参数已弃用，指定无效。
      *
      * @param sanityCheck
      */
@@ -162,7 +162,7 @@ public class InstanceTemplateNetworkInterfaceSpec  implements java.io.Serializab
     }
 
     /**
-     * set 自动分配的ipv6地址数量，取值范围[0,1]，默认为0
+     * set 自动分配的ipv6地址数量，取值范围[0,1]，默认为0。
      *
      * @param ipv6AddressCount
      */

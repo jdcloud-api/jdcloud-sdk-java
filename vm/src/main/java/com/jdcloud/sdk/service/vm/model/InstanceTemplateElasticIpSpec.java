@@ -34,19 +34,25 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 弹性公网IP的限速（单位：MB）。
+     * 弹性公网IP的带宽上限，单位：Mbps。
+取值范围为：&#x60;[1-200]&#x60;。
+
      * Required:true
      */
     @Required
     private Integer bandwidthMbps;
 
     /**
-     * IP服务商，取值范围：&#x60;BGP、nonBGP&#x60;。
+     * 弹性公网IP线路。中心可用区目前仅提供&#x60;BGP&#x60;类型IP。
+
      */
     private String provider;
 
     /**
-     * 计费类型，支持按带宽计费 &#x60;bandwith&#x60;，按流量计费 &#x60;flow&#x60;。
+     * 弹性公网IP计费模式。可选值：
+&#x60;bandwith&#x60;：按带宽计费。
+&#x60;flow&#x60;：按流量计费。
+若指定&#x60;chargeSpec&#x3D;bandwith&#x60;则弹性公网IP计费类型同实例（包年包月或按配置）。边缘可用区目前仅支持&#x60;flow&#x60;计费模式。
      * Required:true
      */
     @Required
@@ -54,7 +60,9 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
 
 
     /**
-     * get 弹性公网IP的限速（单位：MB）。
+     * get 弹性公网IP的带宽上限，单位：Mbps。
+取值范围为：&#x60;[1-200]&#x60;。
+
      *
      * @return
      */
@@ -63,7 +71,9 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 弹性公网IP的限速（单位：MB）。
+     * set 弹性公网IP的带宽上限，单位：Mbps。
+取值范围为：&#x60;[1-200]&#x60;。
+
      *
      * @param bandwidthMbps
      */
@@ -72,7 +82,8 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * get IP服务商，取值范围：&#x60;BGP、nonBGP&#x60;。
+     * get 弹性公网IP线路。中心可用区目前仅提供&#x60;BGP&#x60;类型IP。
+
      *
      * @return
      */
@@ -81,7 +92,8 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值范围：&#x60;BGP、nonBGP&#x60;。
+     * set 弹性公网IP线路。中心可用区目前仅提供&#x60;BGP&#x60;类型IP。
+
      *
      * @param provider
      */
@@ -90,7 +102,10 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 计费类型，支持按带宽计费 &#x60;bandwith&#x60;，按流量计费 &#x60;flow&#x60;。
+     * get 弹性公网IP计费模式。可选值：
+&#x60;bandwith&#x60;：按带宽计费。
+&#x60;flow&#x60;：按流量计费。
+若指定&#x60;chargeSpec&#x3D;bandwith&#x60;则弹性公网IP计费类型同实例（包年包月或按配置）。边缘可用区目前仅支持&#x60;flow&#x60;计费模式。
      *
      * @return
      */
@@ -99,7 +114,10 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费类型，支持按带宽计费 &#x60;bandwith&#x60;，按流量计费 &#x60;flow&#x60;。
+     * set 弹性公网IP计费模式。可选值：
+&#x60;bandwith&#x60;：按带宽计费。
+&#x60;flow&#x60;：按流量计费。
+若指定&#x60;chargeSpec&#x3D;bandwith&#x60;则弹性公网IP计费类型同实例（包年包月或按配置）。边缘可用区目前仅支持&#x60;flow&#x60;计费模式。
      *
      * @param chargeMode
      */
@@ -109,7 +127,9 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
 
 
     /**
-     * set 弹性公网IP的限速（单位：MB）。
+     * set 弹性公网IP的带宽上限，单位：Mbps。
+取值范围为：&#x60;[1-200]&#x60;。
+
      *
      * @param bandwidthMbps
      */
@@ -119,7 +139,8 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set IP服务商，取值范围：&#x60;BGP、nonBGP&#x60;。
+     * set 弹性公网IP线路。中心可用区目前仅提供&#x60;BGP&#x60;类型IP。
+
      *
      * @param provider
      */
@@ -129,7 +150,10 @@ public class InstanceTemplateElasticIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费类型，支持按带宽计费 &#x60;bandwith&#x60;，按流量计费 &#x60;flow&#x60;。
+     * set 弹性公网IP计费模式。可选值：
+&#x60;bandwith&#x60;：按带宽计费。
+&#x60;flow&#x60;：按流量计费。
+若指定&#x60;chargeSpec&#x3D;bandwith&#x60;则弹性公网IP计费类型同实例（包年包月或按配置）。边缘可用区目前仅支持&#x60;flow&#x60;计费模式。
      *
      * @param chargeMode
      */

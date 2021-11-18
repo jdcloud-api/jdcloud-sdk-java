@@ -26,27 +26,22 @@ package com.jdcloud.sdk.service.vm.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 实例模板配置详细信息。
  */
-public class InstanceTemplateSpec  implements java.io.Serializable {
+public class UpdateInstanceTemplateSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
      * 实例规格，可查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得指定地域或可用区的规格信息。
-     * Required:true
      */
-    @Required
     private String instanceType;
 
     /**
      * 镜像ID，可查询 [DescribeImages](https://docs.jdcloud.com/virtual-machines/api/describeimages) 接口获得指定地域的镜像信息。
-     * Required:true
      */
-    @Required
     private String imageId;
 
     /**
@@ -57,13 +52,13 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     private String password;
 
     /**
-     * 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+     * 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。如指定了该参数则覆盖原有参数。
      */
     private List<String> keyNames;
 
     /**
      * 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+注意：key以连字符(-)结尾，表示要删除该key。
 
      */
     private List<Metadata> metadata;
@@ -77,24 +72,22 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     private List<Userdata> userdata;
 
     /**
-     * 主网卡主IP关联的弹性公网IP配置。
+     * 主网卡主IP关联的弹性公网IP配置。如指定了该参数则覆盖原有参数。
      */
     private InstanceTemplateElasticIpSpec elasticIp;
 
     /**
-     * 主网卡配置。
-     * Required:true
+     * 主网卡配置。如指定了该参数则覆盖原有参数。
      */
-    @Required
     private InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface;
 
     /**
-     * 系统盘配置。
+     * 系统盘配置。如指定了该参数则覆盖原有参数。
      */
     private InstanceTemplateDiskAttachmentSpec systemDisk;
 
     /**
-     * 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+     * 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。如指定了该参数则覆盖原有参数。
      */
     private List<InstanceTemplateDiskAttachmentSpec> dataDisks;
 
@@ -126,8 +119,19 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
+
      */
     private String imageInherit;
+
+    /**
+     * 传 &#x60;true&#x60; 则会清空实例模板配置的密码。
+     */
+    private Boolean noPassword;
+
+    /**
+     * 传 &#x60;true&#x60; 则会清空实例模板配置的公网IP。
+     */
+    private Boolean noElasticIp;
 
 
     /**
@@ -189,7 +193,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+     * get 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。如指定了该参数则覆盖原有参数。
      *
      * @return
      */
@@ -198,7 +202,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。如指定了该参数则覆盖原有参数。
      *
      * @param keyNames
      */
@@ -208,7 +212,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 
     /**
      * get 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+注意：key以连字符(-)结尾，表示要删除该key。
 
      *
      * @return
@@ -219,7 +223,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 
     /**
      * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+注意：key以连字符(-)结尾，表示要删除该key。
 
      *
      * @param metadata
@@ -253,7 +257,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡主IP关联的弹性公网IP配置。
+     * get 主网卡主IP关联的弹性公网IP配置。如指定了该参数则覆盖原有参数。
      *
      * @return
      */
@@ -262,7 +266,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡主IP关联的弹性公网IP配置。
+     * set 主网卡主IP关联的弹性公网IP配置。如指定了该参数则覆盖原有参数。
      *
      * @param elasticIp
      */
@@ -271,7 +275,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 主网卡配置。
+     * get 主网卡配置。如指定了该参数则覆盖原有参数。
      *
      * @return
      */
@@ -280,7 +284,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 主网卡配置。
+     * set 主网卡配置。如指定了该参数则覆盖原有参数。
      *
      * @param primaryNetworkInterface
      */
@@ -289,7 +293,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 系统盘配置。
+     * get 系统盘配置。如指定了该参数则覆盖原有参数。
      *
      * @return
      */
@@ -298,7 +302,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 系统盘配置。
+     * set 系统盘配置。如指定了该参数则覆盖原有参数。
      *
      * @param systemDisk
      */
@@ -307,7 +311,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+     * get 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。如指定了该参数则覆盖原有参数。
      *
      * @return
      */
@@ -316,7 +320,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+     * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。如指定了该参数则覆盖原有参数。
      *
      * @param dataDisks
      */
@@ -399,6 +403,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
+
      *
      * @return
      */
@@ -411,11 +416,48 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
+
      *
      * @param imageInherit
      */
     public void setImageInherit(String imageInherit) {
         this.imageInherit = imageInherit;
+    }
+
+    /**
+     * get 传 &#x60;true&#x60; 则会清空实例模板配置的密码。
+     *
+     * @return
+     */
+    public Boolean getNoPassword() {
+        return noPassword;
+    }
+
+    /**
+     * set 传 &#x60;true&#x60; 则会清空实例模板配置的密码。
+     *
+     * @param noPassword
+     */
+    public void setNoPassword(Boolean noPassword) {
+        this.noPassword = noPassword;
+    }
+
+    /**
+     * get 传 &#x60;true&#x60; 则会清空实例模板配置的公网IP。
+     *
+     * @return
+     */
+    public Boolean getNoElasticIp() {
+        return noElasticIp;
+    }
+
+    /**
+     * set 传 &#x60;true&#x60; 则会清空实例模板配置的公网IP。
+     *
+     * @param noElasticIp
+     */
+    public void setNoElasticIp(Boolean noElasticIp) {
+        this.noElasticIp = noElasticIp;
     }
 
 
@@ -424,7 +466,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      *
      * @param instanceType
      */
-    public InstanceTemplateSpec instanceType(String instanceType) {
+    public UpdateInstanceTemplateSpec instanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -434,7 +476,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      *
      * @param imageId
      */
-    public InstanceTemplateSpec imageId(String imageId) {
+    public UpdateInstanceTemplateSpec imageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
@@ -446,29 +488,29 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      *
      * @param password
      */
-    public InstanceTemplateSpec password(String password) {
+    public UpdateInstanceTemplateSpec password(String password) {
         this.password = password;
         return this;
     }
 
     /**
-     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+     * set 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。如指定了该参数则覆盖原有参数。
      *
      * @param keyNames
      */
-    public InstanceTemplateSpec keyNames(List<String> keyNames) {
+    public UpdateInstanceTemplateSpec keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
 
     /**
      * set 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+注意：key以连字符(-)结尾，表示要删除该key。
 
      *
      * @param metadata
      */
-    public InstanceTemplateSpec metadata(List<Metadata> metadata) {
+    public UpdateInstanceTemplateSpec metadata(List<Metadata> metadata) {
         this.metadata = metadata;
         return this;
     }
@@ -481,47 +523,47 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      *
      * @param userdata
      */
-    public InstanceTemplateSpec userdata(List<Userdata> userdata) {
+    public UpdateInstanceTemplateSpec userdata(List<Userdata> userdata) {
         this.userdata = userdata;
         return this;
     }
 
     /**
-     * set 主网卡主IP关联的弹性公网IP配置。
+     * set 主网卡主IP关联的弹性公网IP配置。如指定了该参数则覆盖原有参数。
      *
      * @param elasticIp
      */
-    public InstanceTemplateSpec elasticIp(InstanceTemplateElasticIpSpec elasticIp) {
+    public UpdateInstanceTemplateSpec elasticIp(InstanceTemplateElasticIpSpec elasticIp) {
         this.elasticIp = elasticIp;
         return this;
     }
 
     /**
-     * set 主网卡配置。
+     * set 主网卡配置。如指定了该参数则覆盖原有参数。
      *
      * @param primaryNetworkInterface
      */
-    public InstanceTemplateSpec primaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
+    public UpdateInstanceTemplateSpec primaryNetworkInterface(InstanceTemplateNetworkInterfaceAttachmentSpec primaryNetworkInterface) {
         this.primaryNetworkInterface = primaryNetworkInterface;
         return this;
     }
 
     /**
-     * set 系统盘配置。
+     * set 系统盘配置。如指定了该参数则覆盖原有参数。
      *
      * @param systemDisk
      */
-    public InstanceTemplateSpec systemDisk(InstanceTemplateDiskAttachmentSpec systemDisk) {
+    public UpdateInstanceTemplateSpec systemDisk(InstanceTemplateDiskAttachmentSpec systemDisk) {
         this.systemDisk = systemDisk;
         return this;
     }
 
     /**
-     * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+     * set 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。如指定了该参数则覆盖原有参数。
      *
      * @param dataDisks
      */
-    public InstanceTemplateSpec dataDisks(List<InstanceTemplateDiskAttachmentSpec> dataDisks) {
+    public UpdateInstanceTemplateSpec dataDisks(List<InstanceTemplateDiskAttachmentSpec> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
@@ -535,7 +577,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      *
      * @param chargeOnStopped
      */
-    public InstanceTemplateSpec chargeOnStopped(String chargeOnStopped) {
+    public UpdateInstanceTemplateSpec chargeOnStopped(String chargeOnStopped) {
         this.chargeOnStopped = chargeOnStopped;
         return this;
     }
@@ -545,7 +587,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      *
      * @param autoImagePolicyId
      */
-    public InstanceTemplateSpec autoImagePolicyId(String autoImagePolicyId) {
+    public UpdateInstanceTemplateSpec autoImagePolicyId(String autoImagePolicyId) {
         this.autoImagePolicyId = autoImagePolicyId;
         return this;
     }
@@ -559,7 +601,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
      *
      * @param passWordAuth
      */
-    public InstanceTemplateSpec passWordAuth(String passWordAuth) {
+    public UpdateInstanceTemplateSpec passWordAuth(String passWordAuth) {
         this.passWordAuth = passWordAuth;
         return this;
     }
@@ -569,17 +611,38 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
+
      *
      * @param imageInherit
      */
-    public InstanceTemplateSpec imageInherit(String imageInherit) {
+    public UpdateInstanceTemplateSpec imageInherit(String imageInherit) {
         this.imageInherit = imageInherit;
+        return this;
+    }
+
+    /**
+     * set 传 &#x60;true&#x60; 则会清空实例模板配置的密码。
+     *
+     * @param noPassword
+     */
+    public UpdateInstanceTemplateSpec noPassword(Boolean noPassword) {
+        this.noPassword = noPassword;
+        return this;
+    }
+
+    /**
+     * set 传 &#x60;true&#x60; 则会清空实例模板配置的公网IP。
+     *
+     * @param noElasticIp
+     */
+    public UpdateInstanceTemplateSpec noElasticIp(Boolean noElasticIp) {
+        this.noElasticIp = noElasticIp;
         return this;
     }
 
 
     /**
-     * add item to 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。
+     * add item to 密钥对名称。仅Linux系统下该参数生效，当前仅支持输入单个密钥。如指定了该参数则覆盖原有参数。
      *
      * @param keyName
      */
@@ -592,7 +655,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 
     /**
      * add item to 用户自定义元数据。以key-value键值对形式指定，可在实例系统内通过元数据服务查询获取。最多支持20对键值对，且key不超过256字符，value不超过16KB，不区分大小写。
-注意：key不要以连字符(-)结尾，否则此key不生效。
+注意：key以连字符(-)结尾，表示要删除该key。
 
      *
      * @param metadata
@@ -620,7 +683,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
     }
 
     /**
-     * add item to 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。
+     * add item to 数据盘配置。单实例最多可挂载云硬盘（系统盘+数据盘）的数量受实例规格的限制。如指定了该参数则覆盖原有参数。
      *
      * @param dataDisk
      */

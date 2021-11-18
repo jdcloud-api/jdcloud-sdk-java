@@ -110,6 +110,11 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     private String serviceCode;
 
     /**
+     * CPU架构。支持范围：&#x60;x86_64&#x60;、&#x60;aarch64&#x60;。
+     */
+    private String architecture;
+
+    /**
      * 页码；默认为1。
      */
     private Integer pageNumber;
@@ -322,6 +327,24 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * get CPU架构。支持范围：&#x60;x86_64&#x60;、&#x60;aarch64&#x60;。
+     *
+     * @return
+     */
+    public String getArchitecture() {
+        return architecture;
+    }
+
+    /**
+     * set CPU架构。支持范围：&#x60;x86_64&#x60;、&#x60;aarch64&#x60;。
+     *
+     * @param architecture
+     */
+    public void setArchitecture(String architecture) {
+        this.architecture = architecture;
+    }
+
+    /**
      * get 页码；默认为1。
      *
      * @return
@@ -479,6 +502,16 @@ public class DescribeImagesRequest extends JdcloudRequest implements java.io.Ser
      */
     public DescribeImagesRequest serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set CPU架构。支持范围：&#x60;x86_64&#x60;、&#x60;aarch64&#x60;。
+     *
+     * @param architecture
+     */
+    public DescribeImagesRequest architecture(String architecture) {
+        this.architecture = architecture;
         return this;
     }
 
