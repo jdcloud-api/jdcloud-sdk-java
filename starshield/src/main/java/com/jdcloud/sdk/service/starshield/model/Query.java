@@ -33,13 +33,13 @@ public class Query  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * The literal uri query string to be rewritten.
+     * 要重写的字面URI查询字符串。
      */
     private String value;
 
 
     /**
-     * get The literal uri query string to be rewritten.
+     * get 要重写的字面URI查询字符串。
      *
      * @return
      */
@@ -48,7 +48,7 @@ public class Query  implements java.io.Serializable {
     }
 
     /**
-     * set The literal uri query string to be rewritten.
+     * set 要重写的字面URI查询字符串。
      *
      * @param value
      */
@@ -58,7 +58,7 @@ public class Query  implements java.io.Serializable {
 
 
     /**
-     * set The literal uri query string to be rewritten.
+     * set 要重写的字面URI查询字符串。
      *
      * @param value
      */

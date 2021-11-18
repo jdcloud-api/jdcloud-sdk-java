@@ -58,6 +58,9 @@ import com.jdcloud.sdk.service.starshield.client.GetMinifySettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeEnableQueryStringSortSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeEnableQueryStringSortSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeEnableQueryStringSortSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.GetBrowserCheckSettingRequest;
+import com.jdcloud.sdk.service.starshield.model.GetBrowserCheckSettingResponse;
+import com.jdcloud.sdk.service.starshield.client.GetBrowserCheckSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ListCertificatePacksRequest;
 import com.jdcloud.sdk.service.starshield.model.ListCertificatePacksResponse;
 import com.jdcloud.sdk.service.starshield.client.ListCertificatePacksExecutor;
@@ -70,6 +73,9 @@ import com.jdcloud.sdk.service.starshield.client.DeleteZoneExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetPrefetchPreloadSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetPrefetchPreloadSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetPrefetchPreloadSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.CreateFiltersRequest;
+import com.jdcloud.sdk.service.starshield.model.CreateFiltersResponse;
+import com.jdcloud.sdk.service.starshield.client.CreateFiltersExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetImageResizingSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetImageResizingSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetImageResizingSettingExecutor;
@@ -82,6 +88,9 @@ import com.jdcloud.sdk.service.starshield.client.ChangeCacheLevelSettingExecutor
 import com.jdcloud.sdk.service.starshield.model.GetAlwaysOnlineSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetAlwaysOnlineSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetAlwaysOnlineSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.UpdateIndividualFilterRequest;
+import com.jdcloud.sdk.service.starshield.model.UpdateIndividualFilterResponse;
+import com.jdcloud.sdk.service.starshield.client.UpdateIndividualFilterExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeOpportunisticEncryptionSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeOpportunisticEncryptionSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeOpportunisticEncryptionSettingExecutor;
@@ -130,27 +139,45 @@ import com.jdcloud.sdk.service.starshield.client.GetAutomaticHTTPSRewritesSettin
 import com.jdcloud.sdk.service.starshield.model.GetAdvancedDDOSSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetAdvancedDDOSSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetAdvancedDDOSSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.CreateFlowPackRequest;
+import com.jdcloud.sdk.service.starshield.model.CreateFlowPackResponse;
+import com.jdcloud.sdk.service.starshield.client.CreateFlowPackExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetZoneEnableTLS1_3SettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetZoneEnableTLS1_3SettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetZoneEnableTLS1_3SettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.DescribeBotStatusRequest;
+import com.jdcloud.sdk.service.starshield.model.DescribeBotStatusResponse;
+import com.jdcloud.sdk.service.starshield.client.DescribeBotStatusExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeMaxUploadSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeMaxUploadSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeMaxUploadSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetMinimumTLSVersionSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetMinimumTLSVersionSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetMinimumTLSVersionSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.GetAllZoneSettingsRequest;
+import com.jdcloud.sdk.service.starshield.model.GetAllZoneSettingsResponse;
+import com.jdcloud.sdk.service.starshield.client.GetAllZoneSettingsExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetTLSClientAuthSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetTLSClientAuthSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetTLSClientAuthSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeHTTP2EdgePrioritizationSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeHTTP2EdgePrioritizationSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeHTTP2EdgePrioritizationSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.ListOfFirewallRulesRequest;
+import com.jdcloud.sdk.service.starshield.model.ListOfFirewallRulesResponse;
+import com.jdcloud.sdk.service.starshield.client.ListOfFirewallRulesExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetOpportunisticEncryptionSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetOpportunisticEncryptionSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetOpportunisticEncryptionSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeMinimumTLSVersionSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeMinimumTLSVersionSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeMinimumTLSVersionSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.UpdateCustomPageURLRequest;
+import com.jdcloud.sdk.service.starshield.model.UpdateCustomPageURLResponse;
+import com.jdcloud.sdk.service.starshield.client.UpdateCustomPageURLExecutor;
+import com.jdcloud.sdk.service.starshield.model.ListPageRulesRequest;
+import com.jdcloud.sdk.service.starshield.model.ListPageRulesResponse;
+import com.jdcloud.sdk.service.starshield.client.ListPageRulesExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeHTTP2SettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeHTTP2SettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeHTTP2SettingExecutor;
@@ -160,15 +187,24 @@ import com.jdcloud.sdk.service.starshield.client.ChangeAlwaysOnlineSettingExecut
 import com.jdcloud.sdk.service.starshield.model.ChangeIPv6SettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeIPv6SettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeIPv6SettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.CreateZoneRequest;
+import com.jdcloud.sdk.service.starshield.model.CreateZoneResponse;
+import com.jdcloud.sdk.service.starshield.client.CreateZoneExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetSecurityLevelSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetSecurityLevelSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetSecurityLevelSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.ListAvailablePageRuleSettingRequest;
+import com.jdcloud.sdk.service.starshield.model.ListAvailablePageRuleSettingResponse;
+import com.jdcloud.sdk.service.starshield.client.ListAvailablePageRuleSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeRocketLoaderSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeRocketLoaderSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeRocketLoaderSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetPseudoIPv4SettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetPseudoIPv4SettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetPseudoIPv4SettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.ListAvailableCustomPagesRequest;
+import com.jdcloud.sdk.service.starshield.model.ListAvailableCustomPagesResponse;
+import com.jdcloud.sdk.service.starshield.client.ListAvailableCustomPagesExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeWebSocketsSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeWebSocketsSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeWebSocketsSettingExecutor;
@@ -181,6 +217,9 @@ import com.jdcloud.sdk.service.starshield.client.GetEnableErrorPagesOnSettingExe
 import com.jdcloud.sdk.service.starshield.model.ChangeSecurityLevelSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeSecurityLevelSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeSecurityLevelSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.CreateSSLConfigurationRequest;
+import com.jdcloud.sdk.service.starshield.model.CreateSSLConfigurationResponse;
+import com.jdcloud.sdk.service.starshield.client.CreateSSLConfigurationExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetSecurityHeaderHSTSSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetSecurityHeaderHSTSSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetSecurityHeaderHSTSSettingExecutor;
@@ -202,18 +241,27 @@ import com.jdcloud.sdk.service.starshield.client.GetEnableQueryStringSortSetting
 import com.jdcloud.sdk.service.starshield.model.GetIPv6SettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetIPv6SettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetIPv6SettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.OrderAdvancedCertificateManagerCertificatePackRequest;
+import com.jdcloud.sdk.service.starshield.model.OrderAdvancedCertificateManagerCertificatePackResponse;
+import com.jdcloud.sdk.service.starshield.client.OrderAdvancedCertificateManagerCertificatePackExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeMirageSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeMirageSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeMirageSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.DeleteAdvancedCertificateManagerCertificatePackRequest;
 import com.jdcloud.sdk.service.starshield.model.DeleteAdvancedCertificateManagerCertificatePackResponse;
 import com.jdcloud.sdk.service.starshield.client.DeleteAdvancedCertificateManagerCertificatePackExecutor;
+import com.jdcloud.sdk.service.starshield.model.EditUniversalSSLSettingsRequest;
+import com.jdcloud.sdk.service.starshield.model.EditUniversalSSLSettingsResponse;
+import com.jdcloud.sdk.service.starshield.client.EditUniversalSSLSettingsExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetSSLSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetSSLSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetSSLSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetRocketLoaderSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetRocketLoaderSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetRocketLoaderSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.DeletePageRuleRequest;
+import com.jdcloud.sdk.service.starshield.model.DeletePageRuleResponse;
+import com.jdcloud.sdk.service.starshield.client.DeletePageRuleExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeBrotliSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeBrotliSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeBrotliSettingExecutor;
@@ -226,12 +274,18 @@ import com.jdcloud.sdk.service.starshield.client.ChangePrivacyPassSettingExecuto
 import com.jdcloud.sdk.service.starshield.model.GetPrivacyPassSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetPrivacyPassSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetPrivacyPassSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.CreateFirewallRulesRequest;
+import com.jdcloud.sdk.service.starshield.model.CreateFirewallRulesResponse;
+import com.jdcloud.sdk.service.starshield.client.CreateFirewallRulesExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeTLS1_3SettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeTLS1_3SettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeTLS1_3SettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeAutomaticHTTPSRewritesSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeAutomaticHTTPSRewritesSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeAutomaticHTTPSRewritesSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.DeleteIndividualFirewallRulesRequest;
+import com.jdcloud.sdk.service.starshield.model.DeleteIndividualFirewallRulesResponse;
+import com.jdcloud.sdk.service.starshield.client.DeleteIndividualFirewallRulesExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetServerSideExcludeSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetServerSideExcludeSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetServerSideExcludeSettingExecutor;
@@ -244,9 +298,15 @@ import com.jdcloud.sdk.service.starshield.client.GetAlwaysUseHTTPSSettingExecuto
 import com.jdcloud.sdk.service.starshield.model.DescribePackageRequest;
 import com.jdcloud.sdk.service.starshield.model.DescribePackageResponse;
 import com.jdcloud.sdk.service.starshield.client.DescribePackageExecutor;
+import com.jdcloud.sdk.service.starshield.model.CreatePageRuleRequest;
+import com.jdcloud.sdk.service.starshield.model.CreatePageRuleResponse;
+import com.jdcloud.sdk.service.starshield.client.CreatePageRuleExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeSSLSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeSSLSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeSSLSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.ListDNSRecordsRequest;
+import com.jdcloud.sdk.service.starshield.model.ListDNSRecordsResponse;
+import com.jdcloud.sdk.service.starshield.client.ListDNSRecordsExecutor;
 import com.jdcloud.sdk.service.starshield.model.DescribeInstancesRequest;
 import com.jdcloud.sdk.service.starshield.model.DescribeInstancesResponse;
 import com.jdcloud.sdk.service.starshield.client.DescribeInstancesExecutor;
@@ -256,15 +316,24 @@ import com.jdcloud.sdk.service.starshield.client.GetHTTP2SettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetChallengeTTLSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetChallengeTTLSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetChallengeTTLSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.OpenFirewallBotRequest;
+import com.jdcloud.sdk.service.starshield.model.OpenFirewallBotResponse;
+import com.jdcloud.sdk.service.starshield.client.OpenFirewallBotExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetIPGeolocationSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetIPGeolocationSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetIPGeolocationSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.UpdateDNSRecordRequest;
+import com.jdcloud.sdk.service.starshield.model.UpdateDNSRecordResponse;
+import com.jdcloud.sdk.service.starshield.client.UpdateDNSRecordExecutor;
 import com.jdcloud.sdk.service.starshield.model.Get0_RTTSessionResumptionSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.Get0_RTTSessionResumptionSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.Get0_RTTSessionResumptionSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeServerSideExcludeSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeServerSideExcludeSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeServerSideExcludeSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.EditFirewallPackageRequest;
+import com.jdcloud.sdk.service.starshield.model.EditFirewallPackageResponse;
+import com.jdcloud.sdk.service.starshield.client.EditFirewallPackageExecutor;
 import com.jdcloud.sdk.service.starshield.model.PurgeFilesByCache_TagsAndHostOrPrefixRequest;
 import com.jdcloud.sdk.service.starshield.model.PurgeFilesByCache_TagsAndHostOrPrefixResponse;
 import com.jdcloud.sdk.service.starshield.client.PurgeFilesByCache_TagsAndHostOrPrefixExecutor;
@@ -280,6 +349,9 @@ import com.jdcloud.sdk.service.starshield.client.ChangeHTTP3SettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeBrowserCheckSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeBrowserCheckSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeBrowserCheckSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.DeleteDNSRecordRequest;
+import com.jdcloud.sdk.service.starshield.model.DeleteDNSRecordResponse;
+import com.jdcloud.sdk.service.starshield.client.DeleteDNSRecordExecutor;
 import com.jdcloud.sdk.service.starshield.model.DescribePackagesRequest;
 import com.jdcloud.sdk.service.starshield.model.DescribePackagesResponse;
 import com.jdcloud.sdk.service.starshield.client.DescribePackagesExecutor;
@@ -298,12 +370,21 @@ import com.jdcloud.sdk.service.starshield.client.ChangePolishSettingExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeEmailObfuscationSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeEmailObfuscationSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeEmailObfuscationSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.UpdateIndividualFirewallRuleRequest;
+import com.jdcloud.sdk.service.starshield.model.UpdateIndividualFirewallRuleResponse;
+import com.jdcloud.sdk.service.starshield.client.UpdateIndividualFirewallRuleExecutor;
 import com.jdcloud.sdk.service.starshield.model.FirewallPackageDetailsRequest;
 import com.jdcloud.sdk.service.starshield.model.FirewallPackageDetailsResponse;
 import com.jdcloud.sdk.service.starshield.client.FirewallPackageDetailsExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetMirageSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetMirageSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetMirageSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.UpdatePageRuleRequest;
+import com.jdcloud.sdk.service.starshield.model.UpdatePageRuleResponse;
+import com.jdcloud.sdk.service.starshield.client.UpdatePageRuleExecutor;
+import com.jdcloud.sdk.service.starshield.model.EditRuleGroupRequest;
+import com.jdcloud.sdk.service.starshield.model.EditRuleGroupResponse;
+import com.jdcloud.sdk.service.starshield.client.EditRuleGroupExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetCiphersSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetCiphersSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetCiphersSettingExecutor;
@@ -334,6 +415,9 @@ import com.jdcloud.sdk.service.starshield.client.ListRulesExecutor;
 import com.jdcloud.sdk.service.starshield.model.ListRuleGroupsRequest;
 import com.jdcloud.sdk.service.starshield.model.ListRuleGroupsResponse;
 import com.jdcloud.sdk.service.starshield.client.ListRuleGroupsExecutor;
+import com.jdcloud.sdk.service.starshield.model.CreateDNSRecordRequest;
+import com.jdcloud.sdk.service.starshield.model.CreateDNSRecordResponse;
+import com.jdcloud.sdk.service.starshield.client.CreateDNSRecordExecutor;
 import com.jdcloud.sdk.service.starshield.model.GetHTTP3SettingRequest;
 import com.jdcloud.sdk.service.starshield.model.GetHTTP3SettingResponse;
 import com.jdcloud.sdk.service.starshield.client.GetHTTP3SettingExecutor;
@@ -500,6 +584,18 @@ Basic+JPEG（有损），进一步减少JPEG文件的大小，以加快图像加
     }
 
     /**
+     * 浏览器完整性检查与不良行为检查类似，寻找最常被垃圾邮件发送者滥用的常见HTTP头，并拒绝他们访问您的页面。它还会对没有用户代理或非标准用户代理（也是滥用机器人、爬虫或访客常用的）的访客提出挑战质询。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetBrowserCheckSettingResponse getBrowserCheckSetting(GetBrowserCheckSettingRequest request) throws JdcloudSdkException {
+        return new GetBrowserCheckSettingExecutor().client(this).execute(request);
+    }
+
+    /**
      * 对于给定域，列出所有激活的证书包
      *
      * @param request
@@ -542,6 +638,17 @@ Basic+JPEG（有损），进一步减少JPEG文件的大小，以加快图像加
      */
     public GetPrefetchPreloadSettingResponse getPrefetchPreloadSetting(GetPrefetchPreloadSettingRequest request) throws JdcloudSdkException {
         return new GetPrefetchPreloadSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建新过滤器
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateFiltersResponse createFilters(CreateFiltersRequest request) throws JdcloudSdkException {
+        return new CreateFiltersExecutor().client(this).execute(request);
     }
 
     /**
@@ -592,6 +699,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
      */
     public GetAlwaysOnlineSettingResponse getAlwaysOnlineSetting(GetAlwaysOnlineSettingRequest request) throws JdcloudSdkException {
         return new GetAlwaysOnlineSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新一个现有的筛选器。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateIndividualFilterResponse updateIndividualFilter(UpdateIndividualFilterRequest request) throws JdcloudSdkException {
+        return new UpdateIndividualFilterExecutor().client(this).execute(request);
     }
 
     /**
@@ -784,6 +902,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
     }
 
     /**
+     * 购买流量包
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateFlowPackResponse createFlowPack(CreateFlowPackRequest request) throws JdcloudSdkException {
+        return new CreateFlowPackExecutor().client(this).execute(request);
+    }
+
+    /**
      * 为该域启用加密TLS 1.3功能。
      *
      * @param request
@@ -792,6 +921,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
      */
     public GetZoneEnableTLS1_3SettingResponse getZoneEnableTLS1_3Setting(GetZoneEnableTLS1_3SettingRequest request) throws JdcloudSdkException {
         return new GetZoneEnableTLS1_3SettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询Bot开启状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBotStatusResponse describeBotStatus(DescribeBotStatusRequest request) throws JdcloudSdkException {
+        return new DescribeBotStatusExecutor().client(this).execute(request);
     }
 
     /**
@@ -814,6 +954,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
      */
     public GetMinimumTLSVersionSettingResponse getMinimumTLSVersionSetting(GetMinimumTLSVersionSettingRequest request) throws JdcloudSdkException {
         return new GetMinimumTLSVersionSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 域的相关配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetAllZoneSettingsResponse getAllZoneSettings(GetAllZoneSettingsRequest request) throws JdcloudSdkException {
+        return new GetAllZoneSettingsExecutor().client(this).execute(request);
     }
 
     /**
@@ -840,6 +991,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
     }
 
     /**
+     * 列出当前定义的所有防火墙规则。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListOfFirewallRulesResponse listOfFirewallRules(ListOfFirewallRulesRequest request) throws JdcloudSdkException {
+        return new ListOfFirewallRulesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取当前域随机加密设置
      *
      * @param request
@@ -859,6 +1021,28 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
      */
     public ChangeMinimumTLSVersionSettingResponse changeMinimumTLSVersionSetting(ChangeMinimumTLSVersionSettingRequest request) throws JdcloudSdkException {
         return new ChangeMinimumTLSVersionSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新自定义页面URL
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCustomPageURLResponse updateCustomPageURL(UpdateCustomPageURLRequest request) throws JdcloudSdkException {
+        return new UpdateCustomPageURLExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListPageRulesResponse listPageRules(ListPageRulesRequest request) throws JdcloudSdkException {
+        return new ListPageRulesExecutor().client(this).execute(request);
     }
 
     /**
@@ -895,6 +1079,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
     }
 
     /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateZoneResponse createZone(CreateZoneRequest request) throws JdcloudSdkException {
+        return new CreateZoneExecutor().client(this).execute(request);
+    }
+
+    /**
      * 为你的网站选择适当的安全配置文件，这将自动调整每个安全设置。如果你选择定制一个单独的安全设置，该配置文件将成为自定义。
 
      *
@@ -904,6 +1099,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
      */
     public GetSecurityLevelSettingResponse getSecurityLevelSetting(GetSecurityLevelSettingRequest request) throws JdcloudSdkException {
         return new GetSecurityLevelSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListAvailablePageRuleSettingResponse listAvailablePageRuleSetting(ListAvailablePageRuleSettingRequest request) throws JdcloudSdkException {
+        return new ListAvailablePageRuleSettingExecutor().client(this).execute(request);
     }
 
     /**
@@ -929,6 +1135,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
      */
     public GetPseudoIPv4SettingResponse getPseudoIPv4Setting(GetPseudoIPv4SettingRequest request) throws JdcloudSdkException {
         return new GetPseudoIPv4SettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 域可以使用的可用自定义页面列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListAvailableCustomPagesResponse listAvailableCustomPages(ListAvailableCustomPagesRequest request) throws JdcloudSdkException {
+        return new ListAvailableCustomPagesExecutor().client(this).execute(request);
     }
 
     /**
@@ -977,6 +1194,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
      */
     public ChangeSecurityLevelSettingResponse changeSecurityLevelSetting(ChangeSecurityLevelSettingRequest request) throws JdcloudSdkException {
         return new ChangeSecurityLevelSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 上载域的新SSL证书
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateSSLConfigurationResponse createSSLConfiguration(CreateSSLConfigurationRequest request) throws JdcloudSdkException {
+        return new CreateSSLConfigurationExecutor().client(this).execute(request);
     }
 
     /**
@@ -1058,6 +1286,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
     }
 
     /**
+     * 对于一个特定域，订购一个高级证书包
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OrderAdvancedCertificateManagerCertificatePackResponse orderAdvancedCertificateManagerCertificatePack(OrderAdvancedCertificateManagerCertificatePackRequest request) throws JdcloudSdkException {
+        return new OrderAdvancedCertificateManagerCertificatePackExecutor().client(this).execute(request);
+    }
+
+    /**
      * 自动优化移动设备上网站访问者的图像加载
      *
      * @param request
@@ -1077,6 +1316,17 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
      */
     public DeleteAdvancedCertificateManagerCertificatePackResponse deleteAdvancedCertificateManagerCertificatePack(DeleteAdvancedCertificateManagerCertificatePackRequest request) throws JdcloudSdkException {
         return new DeleteAdvancedCertificateManagerCertificatePackExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修补域的通用SSL设置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EditUniversalSSLSettingsResponse editUniversalSSLSettings(EditUniversalSSLSettingsRequest request) throws JdcloudSdkException {
+        return new EditUniversalSSLSettingsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1109,6 +1359,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
      */
     public GetRocketLoaderSettingResponse getRocketLoaderSetting(GetRocketLoaderSettingRequest request) throws JdcloudSdkException {
         return new GetRocketLoaderSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeletePageRuleResponse deletePageRule(DeletePageRuleRequest request) throws JdcloudSdkException {
+        return new DeletePageRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -1158,6 +1419,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
     }
 
     /**
+     * 创建新的防火墙规则。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateFirewallRulesResponse createFirewallRules(CreateFirewallRulesRequest request) throws JdcloudSdkException {
+        return new CreateFirewallRulesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 为该域启用加密TLS 1.3功能。
      *
      * @param request
@@ -1177,6 +1449,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
      */
     public ChangeAutomaticHTTPSRewritesSettingResponse changeAutomaticHTTPSRewritesSetting(ChangeAutomaticHTTPSRewritesSettingRequest request) throws JdcloudSdkException {
         return new ChangeAutomaticHTTPSRewritesSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除现有防火墙规则。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteIndividualFirewallRulesResponse deleteIndividualFirewallRules(DeleteIndividualFirewallRulesRequest request) throws JdcloudSdkException {
+        return new DeleteIndividualFirewallRulesExecutor().client(this).execute(request);
     }
 
     /**
@@ -1230,6 +1513,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
     }
 
     /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreatePageRuleResponse createPageRule(CreatePageRuleRequest request) throws JdcloudSdkException {
+        return new CreatePageRuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * SSL对访问者的连接进行加密，并保护信用卡号码和其他进出网站的个人数据。
 SSL最多需要5分钟才能完全激活。需要在星盾激活你的根域或www域。
 Off，访客和星盾之间没有SSL，星盾和你的Web服务器之间也没有SSL（所有HTTP流量）。
@@ -1245,6 +1539,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
      */
     public ChangeSSLSettingResponse changeSSLSetting(ChangeSSLSettingRequest request) throws JdcloudSdkException {
         return new ChangeSSLSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 列出、搜索、排序和筛选域的DNS记录。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListDNSRecordsResponse listDNSRecords(ListDNSRecordsRequest request) throws JdcloudSdkException {
+        return new ListDNSRecordsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1282,6 +1587,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
     }
 
     /**
+     * 开启BOT
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OpenFirewallBotResponse openFirewallBot(OpenFirewallBotRequest request) throws JdcloudSdkException {
+        return new OpenFirewallBotExecutor().client(this).execute(request);
+    }
+
+    /**
      * 启用IP地理定位，让星盾对您网站的访问者进行地理定位，并将国家代码传递给您。
      *
      * @param request
@@ -1290,6 +1606,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
      */
     public GetIPGeolocationSettingResponse getIPGeolocationSetting(GetIPGeolocationSettingRequest request) throws JdcloudSdkException {
         return new GetIPGeolocationSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateDNSRecordResponse updateDNSRecord(UpdateDNSRecordRequest request) throws JdcloudSdkException {
+        return new UpdateDNSRecordExecutor().client(this).execute(request);
     }
 
     /**
@@ -1317,6 +1644,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
      */
     public ChangeServerSideExcludeSettingResponse changeServerSideExcludeSetting(ChangeServerSideExcludeSettingRequest request) throws JdcloudSdkException {
         return new ChangeServerSideExcludeSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更改异常检测类型WAF规则包的灵敏度和操作
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EditFirewallPackageResponse editFirewallPackage(EditFirewallPackageRequest request) throws JdcloudSdkException {
+        return new EditFirewallPackageExecutor().client(this).execute(request);
     }
 
     /**
@@ -1376,6 +1714,17 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
      */
     public ChangeBrowserCheckSettingResponse changeBrowserCheckSetting(ChangeBrowserCheckSettingRequest request) throws JdcloudSdkException {
         return new ChangeBrowserCheckSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteDNSRecordResponse deleteDNSRecord(DeleteDNSRecordRequest request) throws JdcloudSdkException {
+        return new DeleteDNSRecordExecutor().client(this).execute(request);
     }
 
     /**
@@ -1450,6 +1799,17 @@ Basic+JPEG（有损），进一步减少JPEG文件的大小，以加快图像加
     }
 
     /**
+     * 更新一个单独的现有防火墙规则。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateIndividualFirewallRuleResponse updateIndividualFirewallRule(UpdateIndividualFirewallRuleRequest request) throws JdcloudSdkException {
+        return new UpdateIndividualFirewallRuleExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取有关单个防火墙包的信息
      *
      * @param request
@@ -1469,6 +1829,28 @@ Basic+JPEG（有损），进一步减少JPEG文件的大小，以加快图像加
      */
     public GetMirageSettingResponse getMirageSetting(GetMirageSettingRequest request) throws JdcloudSdkException {
         return new GetMirageSettingExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 替换页面规则。最终规则将与此请求传递的数据完全匹配。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdatePageRuleResponse updatePageRule(UpdatePageRuleRequest request) throws JdcloudSdkException {
+        return new UpdatePageRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新规则组的状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EditRuleGroupResponse editRuleGroup(EditRuleGroupRequest request) throws JdcloudSdkException {
+        return new EditRuleGroupExecutor().client(this).execute(request);
     }
 
     /**
@@ -1586,6 +1968,17 @@ Basic+JPEG（有损），进一步减少JPEG文件的大小，以加快图像加
      */
     public ListRuleGroupsResponse listRuleGroups(ListRuleGroupsRequest request) throws JdcloudSdkException {
         return new ListRuleGroupsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建DNS记录
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateDNSRecordResponse createDNSRecord(CreateDNSRecordRequest request) throws JdcloudSdkException {
+        return new CreateDNSRecordExecutor().client(this).execute(request);
     }
 
     /**

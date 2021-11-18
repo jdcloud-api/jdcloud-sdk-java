@@ -33,18 +33,18 @@ public class Meta  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Will exist if JDC StarShield automatically added this DNS record during initial setup.
+     * 如果星盾在初始设置期间自动添加了此 DNS 记录，则会存在。
      */
     private Boolean auto_added;
 
     /**
-     * Where the record originated from
+     * 记录来自哪里
      */
     private String source;
 
 
     /**
-     * get Will exist if JDC StarShield automatically added this DNS record during initial setup.
+     * get 如果星盾在初始设置期间自动添加了此 DNS 记录，则会存在。
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class Meta  implements java.io.Serializable {
     }
 
     /**
-     * set Will exist if JDC StarShield automatically added this DNS record during initial setup.
+     * set 如果星盾在初始设置期间自动添加了此 DNS 记录，则会存在。
      *
      * @param auto_added
      */
@@ -62,7 +62,7 @@ public class Meta  implements java.io.Serializable {
     }
 
     /**
-     * get Where the record originated from
+     * get 记录来自哪里
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class Meta  implements java.io.Serializable {
     }
 
     /**
-     * set Where the record originated from
+     * set 记录来自哪里
      *
      * @param source
      */
@@ -81,7 +81,7 @@ public class Meta  implements java.io.Serializable {
 
 
     /**
-     * set Will exist if JDC StarShield automatically added this DNS record during initial setup.
+     * set 如果星盾在初始设置期间自动添加了此 DNS 记录，则会存在。
      *
      * @param auto_added
      */
@@ -91,7 +91,7 @@ public class Meta  implements java.io.Serializable {
     }
 
     /**
-     * set Where the record originated from
+     * set 记录来自哪里
      *
      * @param source
      */

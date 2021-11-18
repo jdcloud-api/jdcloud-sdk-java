@@ -33,102 +33,102 @@ public class Data  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * Size of location in meters
+     * 位置的大小（米）
      */
     private Number size;
 
     /**
-     * Altitude of location in meters
+     * 位置高度（米）
      */
     private Number altitude;
 
     /**
-     * Degrees of longitude
+     * 经度
      */
     private Number long_degrees;
 
     /**
-     * Degrees of latitude
+     * 纬度
      */
     private Number lat_degrees;
 
     /**
-     * Horizontal precision of location
+     * 水平定位精度
      */
     private Number precision_horz;
 
     /**
-     * Vertical precision of location
+     * 垂直定位精度
      */
     private Number precision_vert;
 
     /**
-     * Longitude direction
+     * 经度方向
      */
     private String long_direction;
 
     /**
-     * Minutes of longitude
+     * 经度分
      */
     private Number long_minutes;
 
     /**
-     * Seconds of longitude
+     * 经度秒
      */
     private Number long_seconds;
 
     /**
-     * Latitude direction
+     * 纬度方向
      */
     private String lat_direction;
 
     /**
-     * Minutes of latitude
+     * 纬度分
      */
     private Number lat_minutes;
 
     /**
-     * Seconds of latitude
+     * 纬度秒
      */
     private Number lat_seconds;
 
     /**
-     * A service type, prefixed with an underscore
+     * 以下划线为前缀的服务类型
      */
     private String service;
 
     /**
-     * A valid protocol
+     * 有效的协议
      */
     private String proto;
 
     /**
-     * A valid hostname
+     * 有效的主机名
      */
     private String name;
 
     /**
-     * Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+     * 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      */
     private Number priority;
 
     /**
-     * The record weight
+     * 记录的权重
      */
     private Number weight;
 
     /**
-     * The port of the service
+     * 服务的端口
      */
     private Number port;
 
     /**
-     * A valid hostname
+     * 有效的主机名
      */
     private String target;
 
     /**
-     * Type
+     * 类型
      */
     private Number ty_pe;
 
@@ -143,7 +143,7 @@ public class Data  implements java.io.Serializable {
     private Number algorithm;
 
     /**
-     * Certificate
+     * 证书
      */
     private String certificate;
 
@@ -153,22 +153,22 @@ public class Data  implements java.io.Serializable {
     private Number flags;
 
     /**
-     * Protocol
+     * 协议
      */
     private Number protocol;
 
     /**
-     * Public Key
+     * 公钥
      */
     private String public_key;
 
     /**
-     * Digest Type
+     * 摘要类型
      */
     private Number digest_type;
 
     /**
-     * Digest
+     * 摘要
      */
     private String digest;
 
@@ -208,18 +208,18 @@ public class Data  implements java.io.Serializable {
     private Number matching_type;
 
     /**
-     * fingerprint
+     * 指纹
      */
     private String fingerprint;
 
     /**
-     * The record content
+     * 记录内容
      */
     private String content;
 
 
     /**
-     * get Size of location in meters
+     * get 位置的大小（米）
      *
      * @return
      */
@@ -228,7 +228,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Size of location in meters
+     * set 位置的大小（米）
      *
      * @param size
      */
@@ -237,7 +237,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Altitude of location in meters
+     * get 位置高度（米）
      *
      * @return
      */
@@ -246,7 +246,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Altitude of location in meters
+     * set 位置高度（米）
      *
      * @param altitude
      */
@@ -255,7 +255,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Degrees of longitude
+     * get 经度
      *
      * @return
      */
@@ -264,7 +264,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Degrees of longitude
+     * set 经度
      *
      * @param long_degrees
      */
@@ -273,7 +273,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Degrees of latitude
+     * get 纬度
      *
      * @return
      */
@@ -282,7 +282,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Degrees of latitude
+     * set 纬度
      *
      * @param lat_degrees
      */
@@ -291,7 +291,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Horizontal precision of location
+     * get 水平定位精度
      *
      * @return
      */
@@ -300,7 +300,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Horizontal precision of location
+     * set 水平定位精度
      *
      * @param precision_horz
      */
@@ -309,7 +309,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Vertical precision of location
+     * get 垂直定位精度
      *
      * @return
      */
@@ -318,7 +318,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Vertical precision of location
+     * set 垂直定位精度
      *
      * @param precision_vert
      */
@@ -327,7 +327,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Longitude direction
+     * get 经度方向
      *
      * @return
      */
@@ -336,7 +336,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Longitude direction
+     * set 经度方向
      *
      * @param long_direction
      */
@@ -345,7 +345,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Minutes of longitude
+     * get 经度分
      *
      * @return
      */
@@ -354,7 +354,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Minutes of longitude
+     * set 经度分
      *
      * @param long_minutes
      */
@@ -363,7 +363,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Seconds of longitude
+     * get 经度秒
      *
      * @return
      */
@@ -372,7 +372,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Seconds of longitude
+     * set 经度秒
      *
      * @param long_seconds
      */
@@ -381,7 +381,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Latitude direction
+     * get 纬度方向
      *
      * @return
      */
@@ -390,7 +390,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Latitude direction
+     * set 纬度方向
      *
      * @param lat_direction
      */
@@ -399,7 +399,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Minutes of latitude
+     * get 纬度分
      *
      * @return
      */
@@ -408,7 +408,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Minutes of latitude
+     * set 纬度分
      *
      * @param lat_minutes
      */
@@ -417,7 +417,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Seconds of latitude
+     * get 纬度秒
      *
      * @return
      */
@@ -426,7 +426,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Seconds of latitude
+     * set 纬度秒
      *
      * @param lat_seconds
      */
@@ -435,7 +435,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get A service type, prefixed with an underscore
+     * get 以下划线为前缀的服务类型
      *
      * @return
      */
@@ -444,7 +444,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set A service type, prefixed with an underscore
+     * set 以下划线为前缀的服务类型
      *
      * @param service
      */
@@ -453,7 +453,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get A valid protocol
+     * get 有效的协议
      *
      * @return
      */
@@ -462,7 +462,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set A valid protocol
+     * set 有效的协议
      *
      * @param proto
      */
@@ -471,7 +471,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get A valid hostname
+     * get 有效的主机名
      *
      * @return
      */
@@ -480,7 +480,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set A valid hostname
+     * set 有效的主机名
      *
      * @param name
      */
@@ -489,7 +489,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+     * get 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      *
      * @return
      */
@@ -498,7 +498,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+     * set 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      *
      * @param priority
      */
@@ -507,7 +507,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get The record weight
+     * get 记录的权重
      *
      * @return
      */
@@ -516,7 +516,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set The record weight
+     * set 记录的权重
      *
      * @param weight
      */
@@ -525,7 +525,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get The port of the service
+     * get 服务的端口
      *
      * @return
      */
@@ -534,7 +534,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set The port of the service
+     * set 服务的端口
      *
      * @param port
      */
@@ -543,7 +543,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get A valid hostname
+     * get 有效的主机名
      *
      * @return
      */
@@ -552,7 +552,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set A valid hostname
+     * set 有效的主机名
      *
      * @param target
      */
@@ -561,7 +561,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Type
+     * get 类型
      *
      * @return
      */
@@ -570,7 +570,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Type
+     * set 类型
      *
      * @param ty_pe
      */
@@ -615,7 +615,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Certificate
+     * get 证书
      *
      * @return
      */
@@ -624,7 +624,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Certificate
+     * set 证书
      *
      * @param certificate
      */
@@ -651,7 +651,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Protocol
+     * get 协议
      *
      * @return
      */
@@ -660,7 +660,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Protocol
+     * set 协议
      *
      * @param protocol
      */
@@ -669,7 +669,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Public Key
+     * get 公钥
      *
      * @return
      */
@@ -678,7 +678,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Public Key
+     * set 公钥
      *
      * @param public_key
      */
@@ -687,7 +687,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Digest Type
+     * get 摘要类型
      *
      * @return
      */
@@ -696,7 +696,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Digest Type
+     * set 摘要类型
      *
      * @param digest_type
      */
@@ -705,7 +705,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get Digest
+     * get 摘要
      *
      * @return
      */
@@ -714,7 +714,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Digest
+     * set 摘要
      *
      * @param digest
      */
@@ -849,7 +849,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get fingerprint
+     * get 指纹
      *
      * @return
      */
@@ -858,7 +858,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set fingerprint
+     * set 指纹
      *
      * @param fingerprint
      */
@@ -867,7 +867,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * get The record content
+     * get 记录内容
      *
      * @return
      */
@@ -876,7 +876,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set The record content
+     * set 记录内容
      *
      * @param content
      */
@@ -886,7 +886,7 @@ public class Data  implements java.io.Serializable {
 
 
     /**
-     * set Size of location in meters
+     * set 位置的大小（米）
      *
      * @param size
      */
@@ -896,7 +896,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Altitude of location in meters
+     * set 位置高度（米）
      *
      * @param altitude
      */
@@ -906,7 +906,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Degrees of longitude
+     * set 经度
      *
      * @param long_degrees
      */
@@ -916,7 +916,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Degrees of latitude
+     * set 纬度
      *
      * @param lat_degrees
      */
@@ -926,7 +926,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Horizontal precision of location
+     * set 水平定位精度
      *
      * @param precision_horz
      */
@@ -936,7 +936,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Vertical precision of location
+     * set 垂直定位精度
      *
      * @param precision_vert
      */
@@ -946,7 +946,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Longitude direction
+     * set 经度方向
      *
      * @param long_direction
      */
@@ -956,7 +956,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Minutes of longitude
+     * set 经度分
      *
      * @param long_minutes
      */
@@ -966,7 +966,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Seconds of longitude
+     * set 经度秒
      *
      * @param long_seconds
      */
@@ -976,7 +976,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Latitude direction
+     * set 纬度方向
      *
      * @param lat_direction
      */
@@ -986,7 +986,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Minutes of latitude
+     * set 纬度分
      *
      * @param lat_minutes
      */
@@ -996,7 +996,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Seconds of latitude
+     * set 纬度秒
      *
      * @param lat_seconds
      */
@@ -1006,7 +1006,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set A service type, prefixed with an underscore
+     * set 以下划线为前缀的服务类型
      *
      * @param service
      */
@@ -1016,7 +1016,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set A valid protocol
+     * set 有效的协议
      *
      * @param proto
      */
@@ -1026,7 +1026,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set A valid hostname
+     * set 有效的主机名
      *
      * @param name
      */
@@ -1036,7 +1036,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Used with some records like MX and SRV to determine priority. If you do not supply a priority for an MX record, a default value of 0 will be set
+     * set 与一些记录如MX和SRV一起使用，以确定优先级。如果你没有为MX记录提供一个优先级，默认值为0将被设置。
      *
      * @param priority
      */
@@ -1046,7 +1046,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set The record weight
+     * set 记录的权重
      *
      * @param weight
      */
@@ -1056,7 +1056,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set The port of the service
+     * set 服务的端口
      *
      * @param port
      */
@@ -1066,7 +1066,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set A valid hostname
+     * set 有效的主机名
      *
      * @param target
      */
@@ -1076,7 +1076,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Type
+     * set 类型
      *
      * @param ty_pe
      */
@@ -1106,7 +1106,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Certificate
+     * set 证书
      *
      * @param certificate
      */
@@ -1126,7 +1126,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Protocol
+     * set 协议
      *
      * @param protocol
      */
@@ -1136,7 +1136,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Public Key
+     * set 公钥
      *
      * @param public_key
      */
@@ -1146,7 +1146,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Digest Type
+     * set 摘要类型
      *
      * @param digest_type
      */
@@ -1156,7 +1156,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set Digest
+     * set 摘要
      *
      * @param digest
      */
@@ -1236,7 +1236,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set fingerprint
+     * set 指纹
      *
      * @param fingerprint
      */
@@ -1246,7 +1246,7 @@ public class Data  implements java.io.Serializable {
     }
 
     /**
-     * set The record content
+     * set 记录内容
      *
      * @param content
      */

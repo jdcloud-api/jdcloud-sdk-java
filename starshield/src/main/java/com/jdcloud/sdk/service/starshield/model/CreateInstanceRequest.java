@@ -36,11 +36,25 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * 计费模式（CONFIG、FLOW、MONTHLY、ONCE）
+CONFIG 按配置
+FLOW 按用量
+MONTHLY 包年包月
+ONCE 一次性
+
      */
     private String chargeMode;
 
     /**
-     * 套餐类型（FREE、BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_BASIC、SMB_BUSINESS）
+     * 套餐类型（BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_EXPERIENCE、SMB_BASIC、SMB_BUSINESS）
+BASIC 包年包月 基础版
+PROFESSIONAL 包年包月 专业版
+ENTERPRISE 包年包月 企业版
+ULTIMATE 包年包月 旗舰版
+--------------------------
+SMB_EXPERIENCE 按流量 体验版
+SMB_BASIC 按流量 基础版
+SMB_BUSINESS 按流量 商业版
+
      */
     private String packType;
 
@@ -89,6 +103,11 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * get 计费模式（CONFIG、FLOW、MONTHLY、ONCE）
+CONFIG 按配置
+FLOW 按用量
+MONTHLY 包年包月
+ONCE 一次性
+
      *
      * @return
      */
@@ -98,6 +117,11 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * set 计费模式（CONFIG、FLOW、MONTHLY、ONCE）
+CONFIG 按配置
+FLOW 按用量
+MONTHLY 包年包月
+ONCE 一次性
+
      *
      * @param chargeMode
      */
@@ -106,7 +130,16 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 套餐类型（FREE、BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_BASIC、SMB_BUSINESS）
+     * get 套餐类型（BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_EXPERIENCE、SMB_BASIC、SMB_BUSINESS）
+BASIC 包年包月 基础版
+PROFESSIONAL 包年包月 专业版
+ENTERPRISE 包年包月 企业版
+ULTIMATE 包年包月 旗舰版
+--------------------------
+SMB_EXPERIENCE 按流量 体验版
+SMB_BASIC 按流量 基础版
+SMB_BUSINESS 按流量 商业版
+
      *
      * @return
      */
@@ -115,7 +148,16 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 套餐类型（FREE、BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_BASIC、SMB_BUSINESS）
+     * set 套餐类型（BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_EXPERIENCE、SMB_BASIC、SMB_BUSINESS）
+BASIC 包年包月 基础版
+PROFESSIONAL 包年包月 专业版
+ENTERPRISE 包年包月 企业版
+ULTIMATE 包年包月 旗舰版
+--------------------------
+SMB_EXPERIENCE 按流量 体验版
+SMB_BASIC 按流量 基础版
+SMB_BUSINESS 按流量 商业版
+
      *
      * @param packType
      */
@@ -270,6 +312,11 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * set 计费模式（CONFIG、FLOW、MONTHLY、ONCE）
+CONFIG 按配置
+FLOW 按用量
+MONTHLY 包年包月
+ONCE 一次性
+
      *
      * @param chargeMode
      */
@@ -279,7 +326,16 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 套餐类型（FREE、BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_BASIC、SMB_BUSINESS）
+     * set 套餐类型（BASIC、PROFESSIONAL、ENTERPRISE、ULTIMATE、SMB_EXPERIENCE、SMB_BASIC、SMB_BUSINESS）
+BASIC 包年包月 基础版
+PROFESSIONAL 包年包月 专业版
+ENTERPRISE 包年包月 企业版
+ULTIMATE 包年包月 旗舰版
+--------------------------
+SMB_EXPERIENCE 按流量 体验版
+SMB_BASIC 按流量 基础版
+SMB_BUSINESS 按流量 商业版
+
      *
      * @param packType
      */
