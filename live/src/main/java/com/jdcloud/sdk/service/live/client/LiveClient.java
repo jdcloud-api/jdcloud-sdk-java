@@ -82,6 +82,9 @@ import com.jdcloud.sdk.service.live.client.DeleteLiveStreamAppWatermarkExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveRestartAuthKeyRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveRestartAuthKeyResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveRestartAuthKeyExecutor;
+import com.jdcloud.sdk.service.live.model.QueryLiveForwardTaskRequest;
+import com.jdcloud.sdk.service.live.model.QueryLiveForwardTaskResponse;
+import com.jdcloud.sdk.service.live.client.QueryLiveForwardTaskExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPlayerRankingDataRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamPlayerRankingDataResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamPlayerRankingDataExecutor;
@@ -118,6 +121,9 @@ import com.jdcloud.sdk.service.live.client.AddLiveStreamAppTranscodeExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamSnapshotNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DeleteLiveStreamSnapshotNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DeleteLiveStreamSnapshotNotifyConfigExecutor;
+import com.jdcloud.sdk.service.live.model.StopLiveForwardTaskRequest;
+import com.jdcloud.sdk.service.live.model.StopLiveForwardTaskResponse;
+import com.jdcloud.sdk.service.live.client.StopLiveForwardTaskExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTimeshiftConfigsRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveTimeshiftConfigsResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveTimeshiftConfigsExecutor;
@@ -151,6 +157,9 @@ import com.jdcloud.sdk.service.live.client.DescribeSnapshotBindingExecutor;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.live.model.DeleteCustomLiveStreamTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.live.client.DeleteCustomLiveStreamTranscodeTemplateExecutor;
+import com.jdcloud.sdk.service.live.model.DeleteLiveForwardTaskRequest;
+import com.jdcloud.sdk.service.live.model.DeleteLiveForwardTaskResponse;
+import com.jdcloud.sdk.service.live.client.DeleteLiveForwardTaskExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeCustomLiveStreamTranscodeTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeCustomLiveStreamTranscodeTemplatesExecutor;
@@ -331,6 +340,9 @@ import com.jdcloud.sdk.service.live.client.DeleteLiveStreamDomainRecordExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLivePublishStreamNumRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLivePublishStreamNumResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLivePublishStreamNumExecutor;
+import com.jdcloud.sdk.service.live.model.UpdateLiveForwardTaskRequest;
+import com.jdcloud.sdk.service.live.model.UpdateLiveForwardTaskResponse;
+import com.jdcloud.sdk.service.live.client.UpdateLiveForwardTaskExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeSystemLiveStreamTranscodeTemplatesRequest;
 import com.jdcloud.sdk.service.live.model.DescribeSystemLiveStreamTranscodeTemplatesResponse;
 import com.jdcloud.sdk.service.live.client.DescribeSystemLiveStreamTranscodeTemplatesExecutor;
@@ -358,6 +370,9 @@ import com.jdcloud.sdk.service.live.client.DescribeLiveStatisticGroupByAreaIspEx
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamSnapshotNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamSnapshotNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamSnapshotNotifyConfigExecutor;
+import com.jdcloud.sdk.service.live.model.StartLiveForwardTaskRequest;
+import com.jdcloud.sdk.service.live.model.StartLiveForwardTaskResponse;
+import com.jdcloud.sdk.service.live.client.StartLiveForwardTaskExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamTranscodeConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamTranscodeConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamTranscodeConfigExecutor;
@@ -367,6 +382,9 @@ import com.jdcloud.sdk.service.live.client.SetLivePlayAuthKeyExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveAppRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveAppResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveAppExecutor;
+import com.jdcloud.sdk.service.live.model.CreateLiveForwardTaskRequest;
+import com.jdcloud.sdk.service.live.model.CreateLiveForwardTaskResponse;
+import com.jdcloud.sdk.service.live.client.CreateLiveForwardTaskExecutor;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamQualityDetectionNotifyConfigRequest;
 import com.jdcloud.sdk.service.live.model.DescribeLiveStreamQualityDetectionNotifyConfigResponse;
 import com.jdcloud.sdk.service.live.client.DescribeLiveStreamQualityDetectionNotifyConfigExecutor;
@@ -432,7 +450,7 @@ public class LiveClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.4";
     public final static String DefaultEndpoint = "live.jdcloud-api.com";
     public final static String ServiceName = "live";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -692,6 +710,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 查询直播拉流转推任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryLiveForwardTaskResponse queryLiveForwardTask(QueryLiveForwardTaskRequest request) throws JdcloudSdkException {
+        return new QueryLiveForwardTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询直播流播放人数排行
      *
      * @param request
@@ -838,6 +868,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 停止直播拉流转推任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopLiveForwardTaskResponse stopLiveForwardTask(StopLiveForwardTaskRequest request) throws JdcloudSdkException {
+        return new StopLiveForwardTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询时移配置
      *
      * @param request
@@ -966,6 +1008,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DeleteCustomLiveStreamTranscodeTemplateResponse deleteCustomLiveStreamTranscodeTemplate(DeleteCustomLiveStreamTranscodeTemplateRequest request) throws JdcloudSdkException {
         return new DeleteCustomLiveStreamTranscodeTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除直播拉流转推任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteLiveForwardTaskResponse deleteLiveForwardTask(DeleteLiveForwardTaskRequest request) throws JdcloudSdkException {
+        return new DeleteLiveForwardTaskExecutor().client(this).execute(request);
     }
 
     /**
@@ -1706,6 +1760,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 更新直播拉流转推任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateLiveForwardTaskResponse updateLiveForwardTask(UpdateLiveForwardTaskRequest request) throws JdcloudSdkException {
+        return new UpdateLiveForwardTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询系统默认转码模板列表
 
      *
@@ -1817,6 +1883,18 @@ public class LiveClient extends JdcloudClient {
     }
 
     /**
+     * 开始直播拉流转推任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartLiveForwardTaskResponse startLiveForwardTask(StartLiveForwardTaskRequest request) throws JdcloudSdkException {
+        return new StartLiveForwardTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询转码模板配置
 - 转码模板配置按照 域名,应用,流 3级配置添加,以最小的粒度配置生效原则
 - 域名、应用、流 依次粒度递减 即: 域名&gt;应用&gt;流
@@ -1851,6 +1929,18 @@ public class LiveClient extends JdcloudClient {
      */
     public DescribeLiveAppResponse describeLiveApp(DescribeLiveAppRequest request) throws JdcloudSdkException {
         return new DescribeLiveAppExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建直播拉流转推任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateLiveForwardTaskResponse createLiveForwardTask(CreateLiveForwardTaskRequest request) throws JdcloudSdkException {
+        return new CreateLiveForwardTaskExecutor().client(this).execute(request);
     }
 
     /**
