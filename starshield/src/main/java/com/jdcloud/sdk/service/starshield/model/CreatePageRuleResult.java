@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.starshield.model.PageRule;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * createPageRuleResult
+ * 创建页面规则
  */
 public class CreatePageRuleResult extends JdcloudResult implements java.io.Serializable {
 

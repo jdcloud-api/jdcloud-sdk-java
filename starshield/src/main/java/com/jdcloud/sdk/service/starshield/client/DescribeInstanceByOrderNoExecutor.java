@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone
- * A Zone is a domain name along with its subdomains and other identities
+ * instance
+ * 实例管理模块
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,25 +26,25 @@ package com.jdcloud.sdk.service.starshield.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.starshield.model.CreateZoneResponse;
+import com.jdcloud.sdk.service.starshield.model.DescribeInstanceByOrderNoResponse;
 
 /**
- * 创建域
+ * 根据订单号查询套餐实例详情
  */
-class CreateZoneExecutor extends JdcloudExecutor {
+class DescribeInstanceByOrderNoExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "POST";
+        return "GET";
     }
 
     @Override
     public String url() {
-        return "/zones";
+        return "/regions/{regionId}/instance/{orderNumber}/describeInstance";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return CreateZoneResponse.class;
+        return DescribeInstanceByOrderNoResponse.class;
     }
 }

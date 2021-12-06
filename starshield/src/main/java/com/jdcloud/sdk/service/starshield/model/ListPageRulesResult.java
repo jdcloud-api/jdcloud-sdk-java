@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.starshield.model.PageRule;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * listPageRulesResult
+ * 获取页面规则列表
  */
 public class ListPageRulesResult extends JdcloudResult implements java.io.Serializable {
 

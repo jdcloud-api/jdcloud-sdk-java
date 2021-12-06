@@ -63,6 +63,11 @@ public class DescribeInstancesRes  implements java.io.Serializable {
     private Integer trafficExpansion;
 
     /**
+     * 已使用流量（单位：Byte）
+     */
+    private Number flowUsedCnt;
+
+    /**
      * 剩余流量(单位：Gb)
      */
     private Double flowRemain;
@@ -199,6 +204,24 @@ public class DescribeInstancesRes  implements java.io.Serializable {
      */
     public void setTrafficExpansion(Integer trafficExpansion) {
         this.trafficExpansion = trafficExpansion;
+    }
+
+    /**
+     * get 已使用流量（单位：Byte）
+     *
+     * @return
+     */
+    public Number getFlowUsedCnt() {
+        return flowUsedCnt;
+    }
+
+    /**
+     * set 已使用流量（单位：Byte）
+     *
+     * @param flowUsedCnt
+     */
+    public void setFlowUsedCnt(Number flowUsedCnt) {
+        this.flowUsedCnt = flowUsedCnt;
     }
 
     /**
@@ -367,6 +390,16 @@ public class DescribeInstancesRes  implements java.io.Serializable {
      */
     public DescribeInstancesRes trafficExpansion(Integer trafficExpansion) {
         this.trafficExpansion = trafficExpansion;
+        return this;
+    }
+
+    /**
+     * set 已使用流量（单位：Byte）
+     *
+     * @param flowUsedCnt
+     */
+    public DescribeInstancesRes flowUsedCnt(Number flowUsedCnt) {
+        this.flowUsedCnt = flowUsedCnt;
         return this;
     }
 

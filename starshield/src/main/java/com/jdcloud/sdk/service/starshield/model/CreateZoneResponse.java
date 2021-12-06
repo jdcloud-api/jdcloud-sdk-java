@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.starshield.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * createZoneResponse
+ * 创建域
  */
 public class CreateZoneResponse extends JdcloudResponse<CreateZoneResult> implements java.io.Serializable {
 

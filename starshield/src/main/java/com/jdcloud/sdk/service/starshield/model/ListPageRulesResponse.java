@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.starshield.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * listPageRulesResponse
+ * 获取页面规则列表
  */
 public class ListPageRulesResponse extends JdcloudResponse<ListPageRulesResult> implements java.io.Serializable {
 

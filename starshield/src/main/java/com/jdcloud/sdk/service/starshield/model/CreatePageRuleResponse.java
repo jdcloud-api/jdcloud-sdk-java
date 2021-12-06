@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.starshield.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * createPageRuleResponse
+ * 创建页面规则
  */
 public class CreatePageRuleResponse extends JdcloudResponse<CreatePageRuleResult> implements java.io.Serializable {
 
