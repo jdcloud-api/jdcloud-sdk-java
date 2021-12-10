@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Zone
- * A Zone is a domain name along with its subdomains and other identities
+ * instance
+ * 实例管理模块
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,50 +24,16 @@
 
 package com.jdcloud.sdk.service.starshield.model;
 
-import com.jdcloud.sdk.service.starshield.model.Zone;
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建域
+ * 根据订单号查询套餐实例详情
  */
-public class CreateZoneResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeInstanceByOrderNoResponse extends JdcloudResponse<DescribeInstanceByOrderNoResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * data
-     */
-    private Zone data;
 
-
-    /**
-     * get data
-     *
-     * @return
-     */
-    public Zone getData() {
-        return data;
-    }
-
-    /**
-     * set data
-     *
-     * @param data
-     */
-    public void setData(Zone data) {
-        this.data = data;
-    }
-
-
-    /**
-     * set data
-     *
-     * @param data
-     */
-    public CreateZoneResult data(Zone data) {
-        this.data = data;
-        return this;
-    }
 
 
 }

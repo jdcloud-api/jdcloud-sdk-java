@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.starshield.model.DeletePageRuleResponse;
 
 /**
- * deletePageRule
+ * 删除页面规则
  */
 class DeletePageRuleExecutor extends JdcloudExecutor {
 

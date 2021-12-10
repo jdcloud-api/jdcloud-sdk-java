@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * createPageRuleRequest
+ * 创建页面规则
  */
 public class CreatePageRuleRequest extends JdcloudRequest implements java.io.Serializable {
 

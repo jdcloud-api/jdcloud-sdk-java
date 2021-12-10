@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.starshield.model.ListPageRulesResponse;
 
 /**
- * listPageRules
+ * 获取页面规则列表
  */
 class ListPageRulesExecutor extends JdcloudExecutor {
 

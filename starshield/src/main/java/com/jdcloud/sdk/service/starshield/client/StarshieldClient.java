@@ -82,6 +82,9 @@ import com.jdcloud.sdk.service.starshield.client.GetImageResizingSettingExecutor
 import com.jdcloud.sdk.service.starshield.model.ChangeDevelopmentModeSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeDevelopmentModeSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeDevelopmentModeSettingExecutor;
+import com.jdcloud.sdk.service.starshield.model.DescribeInstanceByOrderNoRequest;
+import com.jdcloud.sdk.service.starshield.model.DescribeInstanceByOrderNoResponse;
+import com.jdcloud.sdk.service.starshield.client.DescribeInstanceByOrderNoExecutor;
 import com.jdcloud.sdk.service.starshield.model.ChangeCacheLevelSettingRequest;
 import com.jdcloud.sdk.service.starshield.model.ChangeCacheLevelSettingResponse;
 import com.jdcloud.sdk.service.starshield.client.ChangeCacheLevelSettingExecutor;
@@ -676,6 +679,17 @@ Basic+JPEG（有损），进一步减少JPEG文件的大小，以加快图像加
     }
 
     /**
+     * 根据订单号查询套餐实例详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceByOrderNoResponse describeInstanceByOrderNo(DescribeInstanceByOrderNoRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceByOrderNoExecutor().client(this).execute(request);
+    }
+
+    /**
      * 缓存级别的功能是基于设置的级别。
 basic设置将缓存大多数静态资源（即css、图片和JavaScript）。
 simplified设置将在提供缓存的资源时忽略查询字符串。
@@ -1035,7 +1049,7 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
     }
 
     /**
-     * 
+     * 获取页面规则列表
      *
      * @param request
      * @return
@@ -1079,7 +1093,7 @@ aggressive设置将缓存所有的静态资源，包括有查询字符串的资�
     }
 
     /**
-     * 
+     * 创建域
      *
      * @param request
      * @return
@@ -1362,7 +1376,7 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
     }
 
     /**
-     * 
+     * 删除页面规则
      *
      * @param request
      * @return
@@ -1513,7 +1527,7 @@ Full (Strict), 访客和星盾之间的 SSL -- 访客在您的网站上看到 HT
     }
 
     /**
-     * 
+     * 创建页面规则
      *
      * @param request
      * @return

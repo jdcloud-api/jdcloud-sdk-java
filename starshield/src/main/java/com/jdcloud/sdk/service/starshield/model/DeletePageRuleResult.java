@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.starshield.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * deletePageRuleResult
+ * 删除页面规则
  */
 public class DeletePageRuleResult extends JdcloudResult implements java.io.Serializable {
 

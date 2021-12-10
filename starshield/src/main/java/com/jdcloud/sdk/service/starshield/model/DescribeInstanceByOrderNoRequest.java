@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Page Rules for a Zone
- * A rule describing target patterns for requests and actions to perform on matching requests
+ * instance
+ * 实例管理模块
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,81 +28,81 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除页面规则
+ * 根据订单号查询套餐实例详情
  */
-public class DeletePageRuleRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeInstanceByOrderNoRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * zone_identifier
+     * 地域ID
      * Required:true
      */
     @Required
-    private String zone_identifier;
+    private String regionId;
 
     /**
-     * identifier
+     * orderNumber
      * Required:true
      */
     @Required
-    private String identifier;
+    private String orderNumber;
 
 
     /**
-     * get zone_identifier
+     * get 地域ID
      *
      * @return
      */
-    public String getZone_identifier() {
-        return zone_identifier;
+    public String getRegionId() {
+        return regionId;
     }
 
     /**
-     * set zone_identifier
+     * set 地域ID
      *
-     * @param zone_identifier
+     * @param regionId
      */
-    public void setZone_identifier(String zone_identifier) {
-        this.zone_identifier = zone_identifier;
+    public void setRegionId(String regionId) {
+        this.regionId = regionId;
     }
 
     /**
-     * get identifier
+     * get orderNumber
      *
      * @return
      */
-    public String getIdentifier() {
-        return identifier;
+    public String getOrderNumber() {
+        return orderNumber;
     }
 
     /**
-     * set identifier
+     * set orderNumber
      *
-     * @param identifier
+     * @param orderNumber
      */
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
 
     /**
-     * set zone_identifier
+     * set 地域ID
      *
-     * @param zone_identifier
+     * @param regionId
      */
-    public DeletePageRuleRequest zone_identifier(String zone_identifier) {
-        this.zone_identifier = zone_identifier;
+    public DescribeInstanceByOrderNoRequest regionId(String regionId) {
+        this.regionId = regionId;
         return this;
     }
 
     /**
-     * set identifier
+     * set orderNumber
      *
-     * @param identifier
+     * @param orderNumber
      */
-    public DeletePageRuleRequest identifier(String identifier) {
-        this.identifier = identifier;
+    public DescribeInstanceByOrderNoRequest orderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
         return this;
     }
 

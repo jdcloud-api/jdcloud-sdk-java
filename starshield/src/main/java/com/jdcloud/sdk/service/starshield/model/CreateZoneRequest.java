@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.starshield.model.Account;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * createZoneRequest
+ * 创建域
  */
 public class CreateZoneRequest extends JdcloudRequest implements java.io.Serializable {
 

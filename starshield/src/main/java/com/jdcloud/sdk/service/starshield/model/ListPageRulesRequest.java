@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * listPageRulesRequest
+ * 获取页面规则列表
  */
 public class ListPageRulesRequest extends JdcloudRequest implements java.io.Serializable {
 
