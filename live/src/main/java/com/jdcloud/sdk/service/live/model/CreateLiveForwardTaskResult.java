@@ -34,7 +34,40 @@ public class CreateLiveForwardTaskResult extends JdcloudResult implements java.i
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 任务ID
+     */
+    private String taskId;
 
+
+    /**
+     * get 任务ID
+     *
+     * @return
+     */
+    public String getTaskId() {
+        return taskId;
+    }
+
+    /**
+     * set 任务ID
+     *
+     * @param taskId
+     */
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+
+    /**
+     * set 任务ID
+     *
+     * @param taskId
+     */
+    public CreateLiveForwardTaskResult taskId(String taskId) {
+        this.taskId = taskId;
+        return this;
+    }
 
 
 }
