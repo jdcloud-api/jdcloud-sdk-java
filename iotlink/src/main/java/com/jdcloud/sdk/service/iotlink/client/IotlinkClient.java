@@ -34,15 +34,12 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.iotlink.model.OnOffStatusRequest;
 import com.jdcloud.sdk.service.iotlink.model.OnOffStatusResponse;
 import com.jdcloud.sdk.service.iotlink.client.OnOffStatusExecutor;
-import com.jdcloud.sdk.service.iotlink.model.OpenIotCardRequest;
-import com.jdcloud.sdk.service.iotlink.model.OpenIotCardResponse;
-import com.jdcloud.sdk.service.iotlink.client.OpenIotCardExecutor;
+import com.jdcloud.sdk.service.iotlink.model.LifeStatusByIMSIRequest;
+import com.jdcloud.sdk.service.iotlink.model.LifeStatusByIMSIResponse;
+import com.jdcloud.sdk.service.iotlink.client.LifeStatusByIMSIExecutor;
 import com.jdcloud.sdk.service.iotlink.model.CloseIotCardRequest;
 import com.jdcloud.sdk.service.iotlink.model.CloseIotCardResponse;
 import com.jdcloud.sdk.service.iotlink.client.CloseIotCardExecutor;
-import com.jdcloud.sdk.service.iotlink.model.SearchRequest;
-import com.jdcloud.sdk.service.iotlink.model.SearchResponse;
-import com.jdcloud.sdk.service.iotlink.client.SearchExecutor;
 import com.jdcloud.sdk.service.iotlink.model.OperateRequest;
 import com.jdcloud.sdk.service.iotlink.model.OperateResponse;
 import com.jdcloud.sdk.service.iotlink.client.OperateExecutor;
@@ -55,12 +52,27 @@ import com.jdcloud.sdk.service.iotlink.client.CloseIotFlowExecutor;
 import com.jdcloud.sdk.service.iotlink.model.GprsStatusRequest;
 import com.jdcloud.sdk.service.iotlink.model.GprsStatusResponse;
 import com.jdcloud.sdk.service.iotlink.client.GprsStatusExecutor;
+import com.jdcloud.sdk.service.iotlink.model.GprsStatusByIMSIRequest;
+import com.jdcloud.sdk.service.iotlink.model.GprsStatusByIMSIResponse;
+import com.jdcloud.sdk.service.iotlink.client.GprsStatusByIMSIExecutor;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotFlowRequest;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotFlowResponse;
 import com.jdcloud.sdk.service.iotlink.client.OpenIotFlowExecutor;
+import com.jdcloud.sdk.service.iotlink.model.OnOffStatusByIMSIRequest;
+import com.jdcloud.sdk.service.iotlink.model.OnOffStatusByIMSIResponse;
+import com.jdcloud.sdk.service.iotlink.client.OnOffStatusByIMSIExecutor;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoRequest;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoResponse;
 import com.jdcloud.sdk.service.iotlink.client.GprsRealtimeInfoExecutor;
+import com.jdcloud.sdk.service.iotlink.model.OpenIotCardRequest;
+import com.jdcloud.sdk.service.iotlink.model.OpenIotCardResponse;
+import com.jdcloud.sdk.service.iotlink.client.OpenIotCardExecutor;
+import com.jdcloud.sdk.service.iotlink.model.SearchRequest;
+import com.jdcloud.sdk.service.iotlink.model.SearchResponse;
+import com.jdcloud.sdk.service.iotlink.client.SearchExecutor;
+import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoByIMSIRequest;
+import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoByIMSIResponse;
+import com.jdcloud.sdk.service.iotlink.client.GprsRealtimeInfoByIMSIExecutor;
 
 /**
  * iotlinkClient
@@ -69,7 +81,7 @@ public class IotlinkClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.0";
+    public final static String ClientVersion = "1.2.4";
     public final static String DefaultEndpoint = "iotlink.jdcloud-api.com";
     public final static String ServiceName = "iotlink";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -123,14 +135,14 @@ public class IotlinkClient extends JdcloudClient {
     }
 
     /**
-     * 物联网卡开机操作
+     * 根据物联网卡imsi查询该卡的生命周期信息
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public OpenIotCardResponse openIotCard(OpenIotCardRequest request) throws JdcloudSdkException {
-        return new OpenIotCardExecutor().client(this).execute(request);
+    public LifeStatusByIMSIResponse lifeStatusByIMSI(LifeStatusByIMSIRequest request) throws JdcloudSdkException {
+        return new LifeStatusByIMSIExecutor().client(this).execute(request);
     }
 
     /**
@@ -142,17 +154,6 @@ public class IotlinkClient extends JdcloudClient {
      */
     public CloseIotCardResponse closeIotCard(CloseIotCardRequest request) throws JdcloudSdkException {
         return new CloseIotCardExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 物联网卡查询通用操作
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SearchResponse search(SearchRequest request) throws JdcloudSdkException {
-        return new SearchExecutor().client(this).execute(request);
     }
 
     /**
@@ -200,6 +201,17 @@ public class IotlinkClient extends JdcloudClient {
     }
 
     /**
+     * 根据物联网卡IMSI查询该卡的GPRS状态信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GprsStatusByIMSIResponse gprsStatusByIMSI(GprsStatusByIMSIRequest request) throws JdcloudSdkException {
+        return new GprsStatusByIMSIExecutor().client(this).execute(request);
+    }
+
+    /**
      * 物联网卡开启流量操作
      *
      * @param request
@@ -211,6 +223,17 @@ public class IotlinkClient extends JdcloudClient {
     }
 
     /**
+     * 根据物联网卡imsi查询该卡的开关机状态信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OnOffStatusByIMSIResponse onOffStatusByIMSI(OnOffStatusByIMSIRequest request) throws JdcloudSdkException {
+        return new OnOffStatusByIMSIExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据物联网卡iccid查询该卡的当月套餐内的GPRS实时使用量
      *
      * @param request
@@ -219,6 +242,39 @@ public class IotlinkClient extends JdcloudClient {
      */
     public GprsRealtimeInfoResponse gprsRealtimeInfo(GprsRealtimeInfoRequest request) throws JdcloudSdkException {
         return new GprsRealtimeInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡开机操作
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OpenIotCardResponse openIotCard(OpenIotCardRequest request) throws JdcloudSdkException {
+        return new OpenIotCardExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡查询通用操作
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SearchResponse search(SearchRequest request) throws JdcloudSdkException {
+        return new SearchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡imsi查询该卡的当月套餐内的GPRS实时使用量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GprsRealtimeInfoByIMSIResponse gprsRealtimeInfoByIMSI(GprsRealtimeInfoByIMSIRequest request) throws JdcloudSdkException {
+        return new GprsRealtimeInfoByIMSIExecutor().client(this).execute(request);
     }
 
 
