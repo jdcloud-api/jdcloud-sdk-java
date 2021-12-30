@@ -38,7 +38,7 @@ public class OrderItem  implements java.io.Serializable {
     private String name;
 
     /**
-     * 0:升序 1:降序，必填
+     * 0:升序 1:降序，默认不排序
      */
     private Integer direction;
 
@@ -62,7 +62,7 @@ public class OrderItem  implements java.io.Serializable {
     }
 
     /**
-     * get 0:升序 1:降序，必填
+     * get 0:升序 1:降序，默认不排序
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class OrderItem  implements java.io.Serializable {
     }
 
     /**
-     * set 0:升序 1:降序，必填
+     * set 0:升序 1:降序，默认不排序
      *
      * @param direction
      */
@@ -91,7 +91,7 @@ public class OrderItem  implements java.io.Serializable {
     }
 
     /**
-     * set 0:升序 1:降序，必填
+     * set 0:升序 1:降序，默认不排序
      *
      * @param direction
      */

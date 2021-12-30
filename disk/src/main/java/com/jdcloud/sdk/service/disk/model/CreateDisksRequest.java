@@ -61,7 +61,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     private Integer maxCount;
 
     /**
-     * 用户标签
+     * 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
      */
     private List<Tag> userTags;
 
@@ -117,7 +117,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * get 用户标签
+     * get 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
      *
      * @return
      */
@@ -126,7 +126,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 用户标签
+     * set 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
      *
      * @param userTags
      */
@@ -192,7 +192,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 用户标签
+     * set 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
      *
      * @param userTags
      */
@@ -223,7 +223,7 @@ public class CreateDisksRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * add item to 用户标签
+     * add item to 用户标签,默认为空;tag标签的限制：每个资源最多允许绑定 10 个不同的标签，同一资源每个标签“键”上只能存在1个标签“值”；标签键/值只支持中文、数字、大小写字母、空格及特殊符号_.:/&#x3D;+-@;当无tags时,reps结果返回中tagmsg为空
      *
      * @param userTag
      */

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 快照策略相关接口
- * 云硬盘相关接口，快照策略的创建，更新，删除，查询，绑定/解绑磁盘等接口。
+ * 售罄相关接口
+ * 查询售罄情况
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,49 +26,47 @@ package com.jdcloud.sdk.service.disk.model;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.jdcloud.sdk.service.disk.model.SnapshotPolicy;
+import com.jdcloud.sdk.service.disk.model.Soldout;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * -   查询您已经创建的快照策略。
--   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
-
+ * 查询云硬盘售罄情况列表
  */
-public class DescribeSnapPolicesResult extends JdcloudResult implements java.io.Serializable {
+public class DescribeSoldoutResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * policies
+     * soldout
      */
-    private List<SnapshotPolicy> policies;
+    private List<Soldout> soldout;
 
     /**
-     * 查询的快照策略数目
+     * 查询的可用区售罄情况数目
      */
     private Integer totalCount;
 
 
     /**
-     * get policies
+     * get soldout
      *
      * @return
      */
-    public List<SnapshotPolicy> getPolicies() {
-        return policies;
+    public List<Soldout> getSoldout() {
+        return soldout;
     }
 
     /**
-     * set policies
+     * set soldout
      *
-     * @param policies
+     * @param soldout
      */
-    public void setPolicies(List<SnapshotPolicy> policies) {
-        this.policies = policies;
+    public void setSoldout(List<Soldout> soldout) {
+        this.soldout = soldout;
     }
 
     /**
-     * get 查询的快照策略数目
+     * get 查询的可用区售罄情况数目
      *
      * @return
      */
@@ -77,7 +75,7 @@ public class DescribeSnapPolicesResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 查询的快照策略数目
+     * set 查询的可用区售罄情况数目
      *
      * @param totalCount
      */
@@ -87,36 +85,36 @@ public class DescribeSnapPolicesResult extends JdcloudResult implements java.io.
 
 
     /**
-     * set policies
+     * set soldout
      *
-     * @param policies
+     * @param soldout
      */
-    public DescribeSnapPolicesResult policies(List<SnapshotPolicy> policies) {
-        this.policies = policies;
+    public DescribeSoldoutResult soldout(List<Soldout> soldout) {
+        this.soldout = soldout;
         return this;
     }
 
     /**
-     * set 查询的快照策略数目
+     * set 查询的可用区售罄情况数目
      *
      * @param totalCount
      */
-    public DescribeSnapPolicesResult totalCount(Integer totalCount) {
+    public DescribeSoldoutResult totalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
 
 
     /**
-     * add item to policies
+     * add item to soldout
      *
-     * @param policie
+     * @param soldout
      */
-    public void addPolicie(SnapshotPolicy policie) {
-        if (this.policies == null) {
-            this.policies = new ArrayList<>();
+    public void addSoldout(Soldout soldout) {
+        if (this.soldout == null) {
+            this.soldout = new ArrayList<>();
         }
-        this.policies.add(policie);
+        this.soldout.add(soldout);
     }
 
 }

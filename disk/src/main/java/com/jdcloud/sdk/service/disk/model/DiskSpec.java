@@ -49,7 +49,7 @@ public class DiskSpec  implements java.io.Serializable {
     private String name;
 
     /**
-     * 云硬盘描述
+     * 云硬盘描述,默认为空
      */
     private String description;
 
@@ -68,17 +68,17 @@ public class DiskSpec  implements java.io.Serializable {
     private Integer diskSizeGB;
 
     /**
-     * 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     * 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.默认值为容量30，最大值为容量50
      */
     private Integer iops;
 
     /**
-     * 用于创建云硬盘的快照ID
+     * 用于创建云硬盘的快照ID，默认为空
      */
     private String snapshotId;
 
     /**
-     * 策略ID
+     * 策略ID,默认为空;当策略Id为空时,reps结果返回中policyRelations为空
      */
     private String policyId;
 
@@ -135,7 +135,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘描述
+     * get 云硬盘描述,默认为空
      *
      * @return
      */
@@ -144,7 +144,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘描述
+     * set 云硬盘描述,默认为空
      *
      * @param description
      */
@@ -189,7 +189,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     * get 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.默认值为容量30，最大值为容量50
      *
      * @return
      */
@@ -198,7 +198,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     * set 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.默认值为容量30，最大值为容量50
      *
      * @param iops
      */
@@ -207,7 +207,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 用于创建云硬盘的快照ID
+     * get 用于创建云硬盘的快照ID，默认为空
      *
      * @return
      */
@@ -216,7 +216,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 用于创建云硬盘的快照ID
+     * set 用于创建云硬盘的快照ID，默认为空
      *
      * @param snapshotId
      */
@@ -225,7 +225,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 策略ID
+     * get 策略ID,默认为空;当策略Id为空时,reps结果返回中policyRelations为空
      *
      * @return
      */
@@ -234,7 +234,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 策略ID
+     * set 策略ID,默认为空;当策略Id为空时,reps结果返回中policyRelations为空
      *
      * @param policyId
      */
@@ -318,7 +318,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘描述
+     * set 云硬盘描述,默认为空
      *
      * @param description
      */
@@ -348,7 +348,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.
+     * set 云硬盘IOPS的大小，当且仅当云盘类型是ssd.io1型的云盘有效，步长是10.默认值为容量30，最大值为容量50
      *
      * @param iops
      */
@@ -358,7 +358,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 用于创建云硬盘的快照ID
+     * set 用于创建云硬盘的快照ID，默认为空
      *
      * @param snapshotId
      */
@@ -368,7 +368,7 @@ public class DiskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 策略ID
+     * set 策略ID,默认为空;当策略Id为空时,reps结果返回中policyRelations为空
      *
      * @param policyId
      */

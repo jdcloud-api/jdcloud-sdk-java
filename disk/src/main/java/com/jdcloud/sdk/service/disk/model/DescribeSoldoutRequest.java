@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 快照策略相关接口
- * 云硬盘相关接口，快照策略的创建，更新，删除，查询，绑定/解绑磁盘等接口。
+ * 售罄相关接口
+ * 查询售罄情况
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,18 +24,52 @@
 
 package com.jdcloud.sdk.service.disk.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * -   查询您已经创建的快照策略。
--   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
-
+ * 查询云硬盘售罄情况列表
  */
-public class DescribeSnapPolicesResponse extends JdcloudResponse<DescribeSnapPolicesResult> implements java.io.Serializable {
+public class DescribeSoldoutRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 地域ID
+     * Required:true
+     */
+    @Required
+    private String regionId;
 
+
+    /**
+     * get 地域ID
+     *
+     * @return
+     */
+    public String getRegionId() {
+        return regionId;
+    }
+
+    /**
+     * set 地域ID
+     *
+     * @param regionId
+     */
+    public void setRegionId(String regionId) {
+        this.regionId = regionId;
+    }
+
+
+    /**
+     * set 地域ID
+     *
+     * @param regionId
+     */
+    public DescribeSoldoutRequest regionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
 
 
 }

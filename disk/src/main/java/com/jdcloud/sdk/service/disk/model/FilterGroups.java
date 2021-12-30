@@ -36,13 +36,19 @@ public class FilterGroups  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * filters
+     * policyId - 策略Id,精确匹配，支持多个
+status - 策略状态，精确匹配，支持多个
+name - 策略名称，模糊匹配，支持单个
+
      */
     private List<Filter> filters;
 
 
     /**
-     * get filters
+     * get policyId - 策略Id,精确匹配，支持多个
+status - 策略状态，精确匹配，支持多个
+name - 策略名称，模糊匹配，支持单个
+
      *
      * @return
      */
@@ -51,7 +57,10 @@ public class FilterGroups  implements java.io.Serializable {
     }
 
     /**
-     * set filters
+     * set policyId - 策略Id,精确匹配，支持多个
+status - 策略状态，精确匹配，支持多个
+name - 策略名称，模糊匹配，支持单个
+
      *
      * @param filters
      */
@@ -61,7 +70,10 @@ public class FilterGroups  implements java.io.Serializable {
 
 
     /**
-     * set filters
+     * set policyId - 策略Id,精确匹配，支持多个
+status - 策略状态，精确匹配，支持多个
+name - 策略名称，模糊匹配，支持单个
+
      *
      * @param filters
      */
@@ -72,7 +84,10 @@ public class FilterGroups  implements java.io.Serializable {
 
 
     /**
-     * add item to filters
+     * add item to policyId - 策略Id,精确匹配，支持多个
+status - 策略状态，精确匹配，支持多个
+name - 策略名称，模糊匹配，支持单个
+
      *
      * @param filter
      */
