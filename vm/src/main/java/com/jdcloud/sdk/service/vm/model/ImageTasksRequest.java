@@ -55,7 +55,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * 任务id列表。
      */
-    private List<Integer> taskIds;
+    private List<String> taskIds;
 
     /**
      * 任务状态。支持范围：&#x60;pending、running、failed、finished&#x60;。
@@ -113,7 +113,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @return
      */
-    public List<Integer> getTaskIds() {
+    public List<String> getTaskIds() {
         return taskIds;
     }
 
@@ -122,7 +122,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @param taskIds
      */
-    public void setTaskIds(List<Integer> taskIds) {
+    public void setTaskIds(List<String> taskIds) {
         this.taskIds = taskIds;
     }
 
@@ -250,7 +250,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @param taskIds
      */
-    public ImageTasksRequest taskIds(List<Integer> taskIds) {
+    public ImageTasksRequest taskIds(List<String> taskIds) {
         this.taskIds = taskIds;
         return this;
     }
@@ -321,7 +321,7 @@ public class ImageTasksRequest extends JdcloudRequest implements java.io.Seriali
      *
      * @param taskId
      */
-    public void addTaskId(Integer taskId) {
+    public void addTaskId(String taskId) {
         if (this.taskIds == null) {
             this.taskIds = new ArrayList<>();
         }

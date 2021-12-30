@@ -49,7 +49,7 @@ public class ExportImageResult extends JdcloudResult implements java.io.Serializ
     /**
      * 导出任务id。
      */
-    private Integer exportTaskId;
+    private String taskId;
 
 
     /**
@@ -57,27 +57,27 @@ public class ExportImageResult extends JdcloudResult implements java.io.Serializ
      *
      * @return
      */
-    public Integer getExportTaskId() {
-        return exportTaskId;
+    public String getTaskId() {
+        return taskId;
     }
 
     /**
      * set 导出任务id。
      *
-     * @param exportTaskId
+     * @param taskId
      */
-    public void setExportTaskId(Integer exportTaskId) {
-        this.exportTaskId = exportTaskId;
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
 
     /**
      * set 导出任务id。
      *
-     * @param exportTaskId
+     * @param taskId
      */
-    public ExportImageResult exportTaskId(Integer exportTaskId) {
-        this.exportTaskId = exportTaskId;
+    public ExportImageResult taskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
 

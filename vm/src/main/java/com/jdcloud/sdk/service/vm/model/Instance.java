@@ -174,6 +174,11 @@ public class Instance  implements java.io.Serializable {
      */
     private String dedicatedHostId;
 
+    /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
 
     /**
      * get 云主机ID。
@@ -667,6 +672,24 @@ public class Instance  implements java.io.Serializable {
         this.dedicatedHostId = dedicatedHostId;
     }
 
+    /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 
     /**
      * set 云主机ID。
@@ -938,6 +961,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance dedicatedHostId(String dedicatedHostId) {
         this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public Instance resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 

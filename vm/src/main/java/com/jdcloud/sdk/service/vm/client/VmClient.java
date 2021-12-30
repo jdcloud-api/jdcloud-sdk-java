@@ -43,6 +43,9 @@ import com.jdcloud.sdk.service.vm.client.CreateInstancesExecutor;
 import com.jdcloud.sdk.service.vm.model.ShareImageRequest;
 import com.jdcloud.sdk.service.vm.model.ShareImageResponse;
 import com.jdcloud.sdk.service.vm.client.ShareImageExecutor;
+import com.jdcloud.sdk.service.vm.model.ModifyInstancePlacementRequest;
+import com.jdcloud.sdk.service.vm.model.ModifyInstancePlacementResponse;
+import com.jdcloud.sdk.service.vm.client.ModifyInstancePlacementExecutor;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplatesCustomdataRequest;
 import com.jdcloud.sdk.service.vm.model.DescribeInstanceTemplatesCustomdataResponse;
 import com.jdcloud.sdk.service.vm.client.DescribeInstanceTemplatesCustomdataExecutor;
@@ -335,6 +338,33 @@ public class VmClient extends JdcloudClient {
      */
     public ShareImageResponse shareImage(ShareImageRequest request) throws JdcloudSdkException {
         return new ShareImageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+存量主机加入高可用组。
+
+存量主机加入高可用组，或者主机从一个高可用组移动到另一个高可用组
+
+详细操作说明请参考帮助文档：[存量主机加入高可用组](https://docs.jdcloud.com/cn/virtual-machines/rebuild-instance)
+
+## 接口说明
+- 不支持专属宿主机上的实例调整高可用组。
+- 除GPU、vGPU（以P开头）外的一代机暂不支持调整高可用组。
+- 与该高可用组关联实例模板的VPC不同的不支持调整高可用组。
+- 与该高可用组可用区不匹配的实例不支持调整高可用组。
+- 本地系统盘机型不支持强制均衡。
+- 仅支持实例状态为已停止的实例强制均衡调整高可用组。
+- 若不强制均衡，仅支持实例状态为运行中或已停止的实例调整高可用组。
+- 若强制均衡，带本地数据盘的实例需确认清除本地盘数据。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyInstancePlacementResponse modifyInstancePlacement(ModifyInstancePlacementRequest request) throws JdcloudSdkException {
+        return new ModifyInstancePlacementExecutor().client(this).execute(request);
     }
 
     /**
@@ -681,7 +711,7 @@ public class VmClient extends JdcloudClient {
 查询资源配额。
 
 ## 接口说明
-- 调用该接口可查询 &#x60;云主机&#x60;、&#x60;镜像&#x60;、&#x60;密钥&#x60;、&#x60;实例模板&#x60;、&#x60;镜像共享&#x60; 的配额。
+- 调用该接口可查询 &#x60;云主机&#x60;、&#x60;云主机的CPU&#x60;、&#x60;云主机的内存&#x60;、&#x60;云主机的本地盘&#x60;、&#x60;镜像&#x60;、&#x60;密钥&#x60;、&#x60;实例模板&#x60;、&#x60;镜像共享&#x60; 的配额。
 
      *
      * @param request
