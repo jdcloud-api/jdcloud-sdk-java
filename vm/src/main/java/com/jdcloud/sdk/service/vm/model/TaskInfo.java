@@ -35,7 +35,7 @@ public class TaskInfo  implements java.io.Serializable {
     /**
      * 任务ID。
      */
-    private Integer taskId;
+    private String taskId;
 
     /**
      * 任务操作类型。支持范围：&#x60;ImportImage、ExportImage&#x60;。
@@ -103,7 +103,7 @@ public class TaskInfo  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getTaskId() {
+    public String getTaskId() {
         return taskId;
     }
 
@@ -112,7 +112,7 @@ public class TaskInfo  implements java.io.Serializable {
      *
      * @param taskId
      */
-    public void setTaskId(Integer taskId) {
+    public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
 
@@ -338,7 +338,7 @@ public class TaskInfo  implements java.io.Serializable {
      *
      * @param taskId
      */
-    public TaskInfo taskId(Integer taskId) {
+    public TaskInfo taskId(String taskId) {
         this.taskId = taskId;
         return this;
     }

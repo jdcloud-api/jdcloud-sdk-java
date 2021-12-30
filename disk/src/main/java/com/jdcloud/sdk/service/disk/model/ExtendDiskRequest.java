@@ -44,7 +44,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     private Integer diskSizeGB;
 
     /**
-     * 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10.
+     * 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10; 默认iops为云硬盘原有iops值
      */
     private Integer iops;
 
@@ -82,7 +82,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * get 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10.
+     * get 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10; 默认iops为云硬盘原有iops值
      *
      * @return
      */
@@ -91,7 +91,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10.
+     * set 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10; 默认iops为云硬盘原有iops值
      *
      * @param iops
      */
@@ -147,7 +147,7 @@ public class ExtendDiskRequest extends JdcloudRequest implements java.io.Seriali
     }
 
     /**
-     * set 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10.
+     * set 修改ssd.io1型云硬盘的iops数量，当且仅当ssd.io1型的云盘类型有效，步长是10; 默认iops为云硬盘原有iops值
      *
      * @param iops
      */

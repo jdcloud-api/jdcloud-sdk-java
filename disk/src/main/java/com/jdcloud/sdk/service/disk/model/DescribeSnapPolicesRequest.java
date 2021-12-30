@@ -32,7 +32,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询快照策略
+ * -   查询您已经创建的快照策略。
+-   filters多个过滤条件之间是逻辑与(AND)，每个条件内部的多个取值是逻辑或(OR)
+
  */
 public class DescribeSnapPolicesRequest extends JdcloudRequest implements java.io.Serializable {
 

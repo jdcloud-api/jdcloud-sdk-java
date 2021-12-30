@@ -45,12 +45,12 @@ public class ContactInfo  implements java.io.Serializable {
     private Integer email;
 
     /**
-     * 联系人id
+     * 联系人id,默认为空
      */
     private List<Integer> personIds;
 
     /**
-     * 联系组id
+     * 联系组id,默认为空
      */
     private List<Integer> groupIds;
 
@@ -92,7 +92,7 @@ public class ContactInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 联系人id
+     * get 联系人id,默认为空
      *
      * @return
      */
@@ -101,7 +101,7 @@ public class ContactInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 联系人id
+     * set 联系人id,默认为空
      *
      * @param personIds
      */
@@ -110,7 +110,7 @@ public class ContactInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 联系组id
+     * get 联系组id,默认为空
      *
      * @return
      */
@@ -119,7 +119,7 @@ public class ContactInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 联系组id
+     * set 联系组id,默认为空
      *
      * @param groupIds
      */
@@ -149,7 +149,7 @@ public class ContactInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 联系人id
+     * set 联系人id,默认为空
      *
      * @param personIds
      */
@@ -159,7 +159,7 @@ public class ContactInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 联系组id
+     * set 联系组id,默认为空
      *
      * @param groupIds
      */
@@ -170,7 +170,7 @@ public class ContactInfo  implements java.io.Serializable {
 
 
     /**
-     * add item to 联系人id
+     * add item to 联系人id,默认为空
      *
      * @param personId
      */
@@ -182,7 +182,7 @@ public class ContactInfo  implements java.io.Serializable {
     }
 
     /**
-     * add item to 联系组id
+     * add item to 联系组id,默认为空
      *
      * @param groupId
      */

@@ -38,12 +38,12 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * 策略名称
+     * 策略名称,默认为空
      */
     private String name;
 
     /**
-     * 策略ID
+     * 策略ID,默认为空
      */
     private List<String> policyId;
 
@@ -76,7 +76,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 策略名称
+     * get 策略名称,默认为空
      *
      * @return
      */
@@ -85,7 +85,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 策略名称
+     * set 策略名称,默认为空
      *
      * @param name
      */
@@ -94,7 +94,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     }
 
     /**
-     * get 策略ID
+     * get 策略ID,默认为空
      *
      * @return
      */
@@ -103,7 +103,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 策略ID
+     * set 策略ID,默认为空
      *
      * @param policyId
      */
@@ -203,7 +203,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 策略名称
+     * set 策略名称,默认为空
      *
      * @param name
      */
@@ -213,7 +213,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 策略ID
+     * set 策略ID,默认为空
      *
      * @param policyId
      */
@@ -274,7 +274,7 @@ public class DescribeSnapshotPoliciesRequest extends JdcloudRequest implements j
 
 
     /**
-     * add item to 策略ID
+     * add item to 策略ID,默认为空
      *
      * @param policyId
      */

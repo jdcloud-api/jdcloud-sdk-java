@@ -41,7 +41,7 @@ public class SnapshotSpec  implements java.io.Serializable {
     private String name;
 
     /**
-     * 快照描述
+     * 快照描述,默认为空
      */
     private String description;
 
@@ -72,7 +72,7 @@ public class SnapshotSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 快照描述
+     * get 快照描述,默认为空
      *
      * @return
      */
@@ -81,7 +81,7 @@ public class SnapshotSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 快照描述
+     * set 快照描述,默认为空
      *
      * @param description
      */
@@ -119,7 +119,7 @@ public class SnapshotSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 快照描述
+     * set 快照描述,默认为空
      *
      * @param description
      */

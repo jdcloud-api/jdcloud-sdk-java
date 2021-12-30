@@ -224,6 +224,11 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     private String imageInherit;
 
+    /**
+     * 资源组ID
+     */
+    private String resourceGroupId;
+
 
     /**
      * get 高可用组ID。指定此参数后，将默认使用高可用组关联的实例模板创建实例，实例模板中的参数不可覆盖替换。实例模板以外的参数（内网IPv4/Ipv6分配方式、名称、描述、标签）可指定。
@@ -793,6 +798,24 @@ public class InstanceSpec  implements java.io.Serializable {
         this.imageInherit = imageInherit;
     }
 
+    /**
+     * get 资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 
     /**
      * set 高可用组ID。指定此参数后，将默认使用高可用组关联的实例模板创建实例，实例模板中的参数不可覆盖替换。实例模板以外的参数（内网IPv4/Ipv6分配方式、名称、描述、标签）可指定。
@@ -1100,6 +1123,16 @@ public class InstanceSpec  implements java.io.Serializable {
      */
     public InstanceSpec imageInherit(String imageInherit) {
         this.imageInherit = imageInherit;
+        return this;
+    }
+
+    /**
+     * set 资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public InstanceSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
