@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.waf.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * createInstanceResult
+ * 创建waf实例
  */
 public class CreateInstanceResult extends JdcloudResult implements java.io.Serializable {
 
@@ -37,6 +37,11 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
      * buyId
      */
     private String buyId;
+
+    /**
+     * wafInstanceId
+     */
+    private String wafInstanceId;
 
 
     /**
@@ -57,6 +62,24 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
         this.buyId = buyId;
     }
 
+    /**
+     * get wafInstanceId
+     *
+     * @return
+     */
+    public String getWafInstanceId() {
+        return wafInstanceId;
+    }
+
+    /**
+     * set wafInstanceId
+     *
+     * @param wafInstanceId
+     */
+    public void setWafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
+    }
+
 
     /**
      * set buyId
@@ -65,6 +88,16 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
      */
     public CreateInstanceResult buyId(String buyId) {
         this.buyId = buyId;
+        return this;
+    }
+
+    /**
+     * set wafInstanceId
+     *
+     * @param wafInstanceId
+     */
+    public CreateInstanceResult wafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
         return this;
     }
 

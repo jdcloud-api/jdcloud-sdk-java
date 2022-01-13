@@ -43,7 +43,7 @@ public class LbConf  implements java.io.Serializable {
     private List<String> protocols;
 
     /**
-     * ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      */
     private List<String> sslProtocols;
 
@@ -80,6 +80,16 @@ public class LbConf  implements java.io.Serializable {
     private Integer httpsCertUpdateStatus;
 
     /**
+     * 国密https证书状态,非配置项。-10为未绑定，0为已绑定
+     */
+    private Integer gmHttpsCertUpdateStatus;
+
+    /**
+     * 是否支持国密证书
+     */
+    private Integer gmCertSupport;
+
+    /**
      * 协议状态,非配置项。0为正常，-10为不正常
      */
     private Integer httpStatus;
@@ -95,9 +105,14 @@ public class LbConf  implements java.io.Serializable {
     private Integer enableKeepalive;
 
     /**
-     * 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+     * 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
      */
     private Integer suiteLevel;
+
+    /**
+     * 自定义加密套件
+     */
+    private List<String> userSuiteLevel;
 
     /**
      * 请求头是否支持下划线，1-是，0-否
@@ -139,7 +154,7 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
-     * get ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * get ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      *
      * @return
      */
@@ -148,7 +163,7 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
-     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      *
      * @param sslProtocols
      */
@@ -265,6 +280,42 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
+     * get 国密https证书状态,非配置项。-10为未绑定，0为已绑定
+     *
+     * @return
+     */
+    public Integer getGmHttpsCertUpdateStatus() {
+        return gmHttpsCertUpdateStatus;
+    }
+
+    /**
+     * set 国密https证书状态,非配置项。-10为未绑定，0为已绑定
+     *
+     * @param gmHttpsCertUpdateStatus
+     */
+    public void setGmHttpsCertUpdateStatus(Integer gmHttpsCertUpdateStatus) {
+        this.gmHttpsCertUpdateStatus = gmHttpsCertUpdateStatus;
+    }
+
+    /**
+     * get 是否支持国密证书
+     *
+     * @return
+     */
+    public Integer getGmCertSupport() {
+        return gmCertSupport;
+    }
+
+    /**
+     * set 是否支持国密证书
+     *
+     * @param gmCertSupport
+     */
+    public void setGmCertSupport(Integer gmCertSupport) {
+        this.gmCertSupport = gmCertSupport;
+    }
+
+    /**
      * get 协议状态,非配置项。0为正常，-10为不正常
      *
      * @return
@@ -319,7 +370,7 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
-     * get 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+     * get 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
      *
      * @return
      */
@@ -328,12 +379,30 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
-     * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+     * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
      *
      * @param suiteLevel
      */
     public void setSuiteLevel(Integer suiteLevel) {
         this.suiteLevel = suiteLevel;
+    }
+
+    /**
+     * get 自定义加密套件
+     *
+     * @return
+     */
+    public List<String> getUserSuiteLevel() {
+        return userSuiteLevel;
+    }
+
+    /**
+     * set 自定义加密套件
+     *
+     * @param userSuiteLevel
+     */
+    public void setUserSuiteLevel(List<String> userSuiteLevel) {
+        this.userSuiteLevel = userSuiteLevel;
     }
 
     /**
@@ -420,7 +489,7 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
-     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      *
      * @param sslProtocols
      */
@@ -490,6 +559,26 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
+     * set 国密https证书状态,非配置项。-10为未绑定，0为已绑定
+     *
+     * @param gmHttpsCertUpdateStatus
+     */
+    public LbConf gmHttpsCertUpdateStatus(Integer gmHttpsCertUpdateStatus) {
+        this.gmHttpsCertUpdateStatus = gmHttpsCertUpdateStatus;
+        return this;
+    }
+
+    /**
+     * set 是否支持国密证书
+     *
+     * @param gmCertSupport
+     */
+    public LbConf gmCertSupport(Integer gmCertSupport) {
+        this.gmCertSupport = gmCertSupport;
+        return this;
+    }
+
+    /**
      * set 协议状态,非配置项。0为正常，-10为不正常
      *
      * @param httpStatus
@@ -520,12 +609,22 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
-     * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+     * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
      *
      * @param suiteLevel
      */
     public LbConf suiteLevel(Integer suiteLevel) {
         this.suiteLevel = suiteLevel;
+        return this;
+    }
+
+    /**
+     * set 自定义加密套件
+     *
+     * @param userSuiteLevel
+     */
+    public LbConf userSuiteLevel(List<String> userSuiteLevel) {
+        this.userSuiteLevel = userSuiteLevel;
         return this;
     }
 
@@ -583,7 +682,7 @@ public class LbConf  implements java.io.Serializable {
     }
 
     /**
-     * add item to ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * add item to ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      *
      * @param sslProtocol
      */
@@ -592,6 +691,18 @@ public class LbConf  implements java.io.Serializable {
             this.sslProtocols = new ArrayList<>();
         }
         this.sslProtocols.add(sslProtocol);
+    }
+
+    /**
+     * add item to 自定义加密套件
+     *
+     * @param userSuiteLevel
+     */
+    public void addUserSuiteLevel(String userSuiteLevel) {
+        if (this.userSuiteLevel == null) {
+            this.userSuiteLevel = new ArrayList<>();
+        }
+        this.userSuiteLevel.add(userSuiteLevel);
     }
 
 }

@@ -26,10 +26,12 @@ package com.jdcloud.sdk.service.antipro.model;
 
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.antipro.model.CreateInstanceSpec;
+import com.jdcloud.sdk.service.antipro.model.AutoRenewalSpec;
+import com.jdcloud.sdk.service.antipro.model.ExtraOperationSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海
+ * 创建防护包实例
  */
 public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -43,7 +45,17 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     private CreateInstanceSpec createInstanceSpec;
 
     /**
-     * 地域编码
+     * 自动续费配置, 默认不开通
+     */
+    private AutoRenewalSpec autoRenewalSpec;
+
+    /**
+     * 提交订单附加操作
+     */
+    private ExtraOperationSpec extraOperationSpec;
+
+    /**
+     * 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      * Required:true
      */
     @Required
@@ -69,7 +81,43 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 地域编码
+     * get 自动续费配置, 默认不开通
+     *
+     * @return
+     */
+    public AutoRenewalSpec getAutoRenewalSpec() {
+        return autoRenewalSpec;
+    }
+
+    /**
+     * set 自动续费配置, 默认不开通
+     *
+     * @param autoRenewalSpec
+     */
+    public void setAutoRenewalSpec(AutoRenewalSpec autoRenewalSpec) {
+        this.autoRenewalSpec = autoRenewalSpec;
+    }
+
+    /**
+     * get 提交订单附加操作
+     *
+     * @return
+     */
+    public ExtraOperationSpec getExtraOperationSpec() {
+        return extraOperationSpec;
+    }
+
+    /**
+     * set 提交订单附加操作
+     *
+     * @param extraOperationSpec
+     */
+    public void setExtraOperationSpec(ExtraOperationSpec extraOperationSpec) {
+        this.extraOperationSpec = extraOperationSpec;
+    }
+
+    /**
+     * get 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @return
      */
@@ -78,7 +126,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */
@@ -98,7 +146,27 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域编码
+     * set 自动续费配置, 默认不开通
+     *
+     * @param autoRenewalSpec
+     */
+    public CreateInstanceRequest autoRenewalSpec(AutoRenewalSpec autoRenewalSpec) {
+        this.autoRenewalSpec = autoRenewalSpec;
+        return this;
+    }
+
+    /**
+     * set 提交订单附加操作
+     *
+     * @param extraOperationSpec
+     */
+    public CreateInstanceRequest extraOperationSpec(ExtraOperationSpec extraOperationSpec) {
+        this.extraOperationSpec = extraOperationSpec;
+        return this;
+    }
+
+    /**
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */

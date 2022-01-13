@@ -50,7 +50,7 @@ public class Instance  implements java.io.Serializable {
     private String region;
 
     /**
-     * 套餐类型, 1: 独享 IP, 2: 共享 IP
+     * 套餐类型. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      */
     private Integer type;
 
@@ -58,6 +58,11 @@ public class Instance  implements java.io.Serializable {
      * 可防护 IP 个数
      */
     private Integer ipCount;
+
+    /**
+     * 可添加的访问控制规则数量
+     */
+    private Integer aclLimit;
 
     /**
      * 保底带宽, 单位 Gbps
@@ -93,6 +98,11 @@ public class Instance  implements java.io.Serializable {
      * 资源 Id
      */
     private String resourceId;
+
+    /**
+     * Tag信息
+     */
+    private List<Tag> tags;
 
 
     /**
@@ -150,7 +160,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * get 套餐类型, 1: 独享 IP, 2: 共享 IP
+     * get 套餐类型. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @return
      */
@@ -159,7 +169,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型, 1: 独享 IP, 2: 共享 IP
+     * set 套餐类型. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @param type
      */
@@ -183,6 +193,24 @@ public class Instance  implements java.io.Serializable {
      */
     public void setIpCount(Integer ipCount) {
         this.ipCount = ipCount;
+    }
+
+    /**
+     * get 可添加的访问控制规则数量
+     *
+     * @return
+     */
+    public Integer getAclLimit() {
+        return aclLimit;
+    }
+
+    /**
+     * set 可添加的访问控制规则数量
+     *
+     * @param aclLimit
+     */
+    public void setAclLimit(Integer aclLimit) {
+        this.aclLimit = aclLimit;
     }
 
     /**
@@ -311,6 +339,24 @@ public class Instance  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+    /**
+     * get Tag信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
 
     /**
      * set 防护包实例 Id
@@ -343,7 +389,7 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型, 1: 独享 IP, 2: 共享 IP
+     * set 套餐类型. &lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @param type
      */
@@ -359,6 +405,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance ipCount(Integer ipCount) {
         this.ipCount = ipCount;
+        return this;
+    }
+
+    /**
+     * set 可添加的访问控制规则数量
+     *
+     * @param aclLimit
+     */
+    public Instance aclLimit(Integer aclLimit) {
+        this.aclLimit = aclLimit;
         return this;
     }
 
@@ -432,6 +488,16 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public Instance tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
 
     /**
      * add item to 防护对象
@@ -443,6 +509,18 @@ public class Instance  implements java.io.Serializable {
             this.protectedObjects = new ArrayList<>();
         }
         this.protectedObjects.add(protectedObject);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }

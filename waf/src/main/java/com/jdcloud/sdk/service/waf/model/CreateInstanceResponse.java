@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.waf.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * createInstanceResponse
+ * 创建waf实例
  */
 public class CreateInstanceResponse extends JdcloudResponse<CreateInstanceResult> implements java.io.Serializable {
 

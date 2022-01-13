@@ -75,10 +75,13 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
 
     /**
      * 策略规则, 格式：[&quot;13311112222&quot;,&quot;13211112222&quot;]
-     * Required:true
      */
-    @Required
     private String rules;
+
+    /**
+     * 自定义名单上传文件内容,base64编码
+     */
+    private String bz64File;
 
 
     /**
@@ -207,6 +210,24 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
         this.rules = rules;
     }
 
+    /**
+     * get 自定义名单上传文件内容,base64编码
+     *
+     * @return
+     */
+    public String getBz64File() {
+        return bz64File;
+    }
+
+    /**
+     * set 自定义名单上传文件内容,base64编码
+     *
+     * @param bz64File
+     */
+    public void setBz64File(String bz64File) {
+        this.bz64File = bz64File;
+    }
+
 
     /**
      * set 规则id,新增时传0
@@ -275,6 +296,16 @@ public class SetRiskUsrListReq  implements java.io.Serializable {
      */
     public SetRiskUsrListReq rules(String rules) {
         this.rules = rules;
+        return this;
+    }
+
+    /**
+     * set 自定义名单上传文件内容,base64编码
+     *
+     * @param bz64File
+     */
+    public SetRiskUsrListReq bz64File(String bz64File) {
+        this.bz64File = bz64File;
         return this;
     }
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.waf.model.CreateInstanceResponse;
 
 /**
- * createInstance
+ * 创建waf实例
  */
 class CreateInstanceExecutor extends JdcloudExecutor {
 

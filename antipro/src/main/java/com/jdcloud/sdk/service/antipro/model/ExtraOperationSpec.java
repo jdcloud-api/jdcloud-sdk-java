@@ -34,20 +34,20 @@ public class ExtraOperationSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 操作类型 1: 购买成功后自动导入 ip, 需要传 ip
+     * 操作类型. - 1: 购买成功后自动导入 ip, 需要传 ip
      * Required:true
      */
     @Required
     private Integer operationType;
 
     /**
-     * 支持弹性公网 ip 和云物理机公网 ip
+     * 支持弹性公网 IP, 云物理机公网 IP, Web应用防护墙IP, 托管区IP
      */
     private String ip;
 
 
     /**
-     * get 操作类型 1: 购买成功后自动导入 ip, 需要传 ip
+     * get 操作类型. - 1: 购买成功后自动导入 ip, 需要传 ip
      *
      * @return
      */
@@ -56,7 +56,7 @@ public class ExtraOperationSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 操作类型 1: 购买成功后自动导入 ip, 需要传 ip
+     * set 操作类型. - 1: 购买成功后自动导入 ip, 需要传 ip
      *
      * @param operationType
      */
@@ -65,7 +65,7 @@ public class ExtraOperationSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 支持弹性公网 ip 和云物理机公网 ip
+     * get 支持弹性公网 IP, 云物理机公网 IP, Web应用防护墙IP, 托管区IP
      *
      * @return
      */
@@ -74,7 +74,7 @@ public class ExtraOperationSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 支持弹性公网 ip 和云物理机公网 ip
+     * set 支持弹性公网 IP, 云物理机公网 IP, Web应用防护墙IP, 托管区IP
      *
      * @param ip
      */
@@ -84,7 +84,7 @@ public class ExtraOperationSpec  implements java.io.Serializable {
 
 
     /**
-     * set 操作类型 1: 购买成功后自动导入 ip, 需要传 ip
+     * set 操作类型. - 1: 购买成功后自动导入 ip, 需要传 ip
      *
      * @param operationType
      */
@@ -94,7 +94,7 @@ public class ExtraOperationSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 支持弹性公网 ip 和云物理机公网 ip
+     * set 支持弹性公网 IP, 云物理机公网 IP, Web应用防护墙IP, 托管区IP
      *
      * @param ip
      */

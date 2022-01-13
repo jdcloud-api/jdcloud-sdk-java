@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.antipro.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海
+ * 创建防护包实例
  */
 public class CreateInstanceResult extends JdcloudResult implements java.io.Serializable {
 

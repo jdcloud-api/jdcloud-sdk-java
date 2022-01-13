@@ -47,6 +47,11 @@ public class GetAvailableCertReq  implements java.io.Serializable {
     @Required
     private String domain;
 
+    /**
+     * 是否国密
+     */
+    private Integer isGm;
+
 
     /**
      * get 实例id，代表要查询的WAF实例
@@ -84,6 +89,24 @@ public class GetAvailableCertReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
+    /**
+     * get 是否国密
+     *
+     * @return
+     */
+    public Integer getIsGm() {
+        return isGm;
+    }
+
+    /**
+     * set 是否国密
+     *
+     * @param isGm
+     */
+    public void setIsGm(Integer isGm) {
+        this.isGm = isGm;
+    }
+
 
     /**
      * set 实例id，代表要查询的WAF实例
@@ -102,6 +125,16 @@ public class GetAvailableCertReq  implements java.io.Serializable {
      */
     public GetAvailableCertReq domain(String domain) {
         this.domain = domain;
+        return this;
+    }
+
+    /**
+     * set 是否国密
+     *
+     * @param isGm
+     */
+    public GetAvailableCertReq isGm(Integer isGm) {
+        this.isGm = isGm;
         return this;
     }
 

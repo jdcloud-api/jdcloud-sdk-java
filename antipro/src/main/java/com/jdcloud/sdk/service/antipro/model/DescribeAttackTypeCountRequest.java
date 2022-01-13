@@ -30,11 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询各类型攻击次数, 参数 ip 优先级大于 instanceId
-  - 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录的各类型攻击次数
-  - 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录的各类型攻击次数
-  - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录的各类型攻击次数
-
+ * 查询各类型攻击次数, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录的各类型攻击次数&lt;br&gt;- 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录的各类型攻击次数&lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录的各类型攻击次数
  */
 public class DescribeAttackTypeCountRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -60,9 +56,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     private String instanceId;
 
     /**
-     * DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      */
     private List<String> ip;
 
@@ -122,9 +116,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * get DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      *
      * @return
      */
@@ -133,9 +125,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * set DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      *
      * @param ip
      */
@@ -175,9 +165,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * set DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      *
      * @param ip
      */
@@ -188,9 +176,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
 
 
     /**
-     * add item to DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * add item to DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      *
      * @param ip
      */

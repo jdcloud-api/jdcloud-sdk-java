@@ -58,7 +58,7 @@ public class FilterCfg  implements java.io.Serializable {
     private String reqValue;
 
     /**
-     * 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,按先后顺序，多个时用 , 分隔
+     * 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,&quot;hexDecode&quot;,&quot;sqlTrim&quot;按先后顺序，多个时用 , 分隔
      */
     private String decodeFunc;
 
@@ -159,7 +159,7 @@ public class FilterCfg  implements java.io.Serializable {
     }
 
     /**
-     * get 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,按先后顺序，多个时用 , 分隔
+     * get 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,&quot;hexDecode&quot;,&quot;sqlTrim&quot;按先后顺序，多个时用 , 分隔
      *
      * @return
      */
@@ -168,7 +168,7 @@ public class FilterCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,按先后顺序，多个时用 , 分隔
+     * set 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,&quot;hexDecode&quot;,&quot;sqlTrim&quot;按先后顺序，多个时用 , 分隔
      *
      * @param decodeFunc
      */
@@ -246,7 +246,7 @@ public class FilterCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,按先后顺序，多个时用 , 分隔
+     * set 仅type为str regex SQLi XSS时可非空，取值&quot;&quot;,&quot;lowercase&quot;,&quot;trim&quot;,&quot;base64Decode&quot;,&quot;urlDecode&quot;,&quot;htmlDecode&quot;,&quot;hexDecode&quot;,&quot;sqlTrim&quot;按先后顺序，多个时用 , 分隔
      *
      * @param decodeFunc
      */

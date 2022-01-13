@@ -72,7 +72,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     private String request_method;
 
     /**
-     * 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
+     * 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden OR status&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
      */
     private String action;
 
@@ -254,7 +254,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
+     * get 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden OR status&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
      *
      * @return
      */
@@ -263,7 +263,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
+     * set 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden OR status&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
      *
      * @param action
      */
@@ -487,7 +487,7 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
+     * set 动作，检索字段，支持类型：&quot;&quot;(为空时，默认查询全部动作类型)，&quot;-&quot;(放行)，&quot;notice&quot;(观察)，&quot;forbidden OR status&quot;(拦截)，&quot;redirect&quot;(浏览器跳转)，&quot;verify&quot;(人机交互)
      *
      * @param action
      */

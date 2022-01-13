@@ -116,6 +116,11 @@ public class OrderReq  implements java.io.Serializable {
      */
     private String serviceCode;
 
+    /**
+     * 购物车活动参数
+     */
+    private String buyScenario;
+
 
     /**
      * get 地域信息, hb_bgp, hn, hd_bgp 企业版支持两个，旗舰版支持3个，多个以 , 分隔
@@ -351,6 +356,24 @@ public class OrderReq  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+    /**
+     * get 购物车活动参数
+     *
+     * @return
+     */
+    public String getBuyScenario() {
+        return buyScenario;
+    }
+
+    /**
+     * set 购物车活动参数
+     *
+     * @param buyScenario
+     */
+    public void setBuyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
+    }
+
 
     /**
      * set 地域信息, hb_bgp, hn, hd_bgp 企业版支持两个，旗舰版支持3个，多个以 , 分隔
@@ -479,6 +502,16 @@ public class OrderReq  implements java.io.Serializable {
      */
     public OrderReq serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
+        return this;
+    }
+
+    /**
+     * set 购物车活动参数
+     *
+     * @param buyScenario
+     */
+    public OrderReq buyScenario(String buyScenario) {
+        this.buyScenario = buyScenario;
         return this;
     }
 

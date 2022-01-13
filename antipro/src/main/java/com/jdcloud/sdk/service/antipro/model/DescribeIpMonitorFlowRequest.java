@@ -51,9 +51,7 @@ public class DescribeIpMonitorFlowRequest extends JdcloudRequest implements java
     private String endTime;
 
     /**
-     * DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      * Required:true
      */
     @Required
@@ -97,9 +95,7 @@ public class DescribeIpMonitorFlowRequest extends JdcloudRequest implements java
     }
 
     /**
-     * get DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * get DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      *
      * @return
      */
@@ -108,9 +104,7 @@ public class DescribeIpMonitorFlowRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * set DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      *
      * @param ip
      */
@@ -140,9 +134,7 @@ public class DescribeIpMonitorFlowRequest extends JdcloudRequest implements java
     }
 
     /**
-     * set DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * set DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      *
      * @param ip
      */
@@ -153,9 +145,7 @@ public class DescribeIpMonitorFlowRequest extends JdcloudRequest implements java
 
 
     /**
-     * add item to DDoS 防护包已防护的公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&quot;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
-
+     * add item to DDoS 防护包已防护的公网 IP. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeprotectediplist&#39;&gt;describeProtectedIpList&lt;/a&gt; 接口查询 DDoS 防护包已防护的公网 IP
      *
      * @param ip
      */

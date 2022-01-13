@@ -36,9 +36,14 @@ public class WebRuleSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 高防 IP
+     * 高防 IP, serviceIps 为空时生效
      */
     private String serviceIp;
+
+    /**
+     * 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     */
+    private List<String> serviceIps;
 
     /**
      * 子域名
@@ -136,9 +141,14 @@ public class WebRuleSpec  implements java.io.Serializable {
     private List<String> sslProtocols;
 
     /**
-     * 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     * 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
      */
     private String suiteLevel;
+
+    /**
+     * 自定义加密套件等级, suiteLevel 为 custom 是有效
+     */
+    private List<String> userSuiteLevel;
 
     /**
      * 健康检查开关, 0: 关闭, 1: 开启
@@ -157,7 +167,7 @@ public class WebRuleSpec  implements java.io.Serializable {
 
 
     /**
-     * get 高防 IP
+     * get 高防 IP, serviceIps 为空时生效
      *
      * @return
      */
@@ -166,12 +176,30 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 高防 IP
+     * set 高防 IP, serviceIps 为空时生效
      *
      * @param serviceIp
      */
     public void setServiceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+    }
+
+    /**
+     * get 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     *
+     * @return
+     */
+    public List<String> getServiceIps() {
+        return serviceIps;
+    }
+
+    /**
+     * set 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     *
+     * @param serviceIps
+     */
+    public void setServiceIps(List<String> serviceIps) {
+        this.serviceIps = serviceIps;
     }
 
     /**
@@ -481,7 +509,7 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     * get 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
      *
      * @return
      */
@@ -490,12 +518,30 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
      *
      * @param suiteLevel
      */
     public void setSuiteLevel(String suiteLevel) {
         this.suiteLevel = suiteLevel;
+    }
+
+    /**
+     * get 自定义加密套件等级, suiteLevel 为 custom 是有效
+     *
+     * @return
+     */
+    public List<String> getUserSuiteLevel() {
+        return userSuiteLevel;
+    }
+
+    /**
+     * set 自定义加密套件等级, suiteLevel 为 custom 是有效
+     *
+     * @param userSuiteLevel
+     */
+    public void setUserSuiteLevel(List<String> userSuiteLevel) {
+        this.userSuiteLevel = userSuiteLevel;
     }
 
     /**
@@ -554,12 +600,22 @@ public class WebRuleSpec  implements java.io.Serializable {
 
 
     /**
-     * set 高防 IP
+     * set 高防 IP, serviceIps 为空时生效
      *
      * @param serviceIp
      */
     public WebRuleSpec serviceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+        return this;
+    }
+
+    /**
+     * set 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     *
+     * @param serviceIps
+     */
+    public WebRuleSpec serviceIps(List<String> serviceIps) {
+        this.serviceIps = serviceIps;
         return this;
     }
 
@@ -734,12 +790,22 @@ public class WebRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
      *
      * @param suiteLevel
      */
     public WebRuleSpec suiteLevel(String suiteLevel) {
         this.suiteLevel = suiteLevel;
+        return this;
+    }
+
+    /**
+     * set 自定义加密套件等级, suiteLevel 为 custom 是有效
+     *
+     * @param userSuiteLevel
+     */
+    public WebRuleSpec userSuiteLevel(List<String> userSuiteLevel) {
+        this.userSuiteLevel = userSuiteLevel;
         return this;
     }
 
@@ -773,6 +839,18 @@ public class WebRuleSpec  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     *
+     * @param serviceIp
+     */
+    public void addServiceIp(String serviceIp) {
+        if (this.serviceIps == null) {
+            this.serviceIps = new ArrayList<>();
+        }
+        this.serviceIps.add(serviceIp);
+    }
 
     /**
      * add item to HTTP 协议的端口号, 如80, 81; 如果 protocol.http 为 true, 至少配置一个端口
@@ -844,6 +922,18 @@ public class WebRuleSpec  implements java.io.Serializable {
             this.sslProtocols = new ArrayList<>();
         }
         this.sslProtocols.add(sslProtocol);
+    }
+
+    /**
+     * add item to 自定义加密套件等级, suiteLevel 为 custom 是有效
+     *
+     * @param userSuiteLevel
+     */
+    public void addUserSuiteLevel(String userSuiteLevel) {
+        if (this.userSuiteLevel == null) {
+            this.userSuiteLevel = new ArrayList<>();
+        }
+        this.userSuiteLevel.add(userSuiteLevel);
     }
 
 }

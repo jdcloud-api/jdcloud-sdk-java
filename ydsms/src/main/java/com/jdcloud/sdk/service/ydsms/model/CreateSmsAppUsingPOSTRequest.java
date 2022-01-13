@@ -43,9 +43,7 @@ public class CreateSmsAppUsingPOSTRequest extends JdcloudRequest implements java
 
     /**
      * 云鼎应用id
-     * Required:true
      */
-    @Required
     private String appId;
 
     /**
@@ -54,6 +52,16 @@ public class CreateSmsAppUsingPOSTRequest extends JdcloudRequest implements java
      */
     @Required
     private String appName;
+
+    /**
+     * accessKeyId
+     */
+    private String accessKeyId;
+
+    /**
+     * accessKeySecret
+     */
+    private String accessKeySecret;
 
 
     /**
@@ -110,6 +118,42 @@ public class CreateSmsAppUsingPOSTRequest extends JdcloudRequest implements java
         this.appName = appName;
     }
 
+    /**
+     * get accessKeyId
+     *
+     * @return
+     */
+    public String getAccessKeyId() {
+        return accessKeyId;
+    }
+
+    /**
+     * set accessKeyId
+     *
+     * @param accessKeyId
+     */
+    public void setAccessKeyId(String accessKeyId) {
+        this.accessKeyId = accessKeyId;
+    }
+
+    /**
+     * get accessKeySecret
+     *
+     * @return
+     */
+    public String getAccessKeySecret() {
+        return accessKeySecret;
+    }
+
+    /**
+     * set accessKeySecret
+     *
+     * @param accessKeySecret
+     */
+    public void setAccessKeySecret(String accessKeySecret) {
+        this.accessKeySecret = accessKeySecret;
+    }
+
 
     /**
      * set 应用描述
@@ -138,6 +182,26 @@ public class CreateSmsAppUsingPOSTRequest extends JdcloudRequest implements java
      */
     public CreateSmsAppUsingPOSTRequest appName(String appName) {
         this.appName = appName;
+        return this;
+    }
+
+    /**
+     * set accessKeyId
+     *
+     * @param accessKeyId
+     */
+    public CreateSmsAppUsingPOSTRequest accessKeyId(String accessKeyId) {
+        this.accessKeyId = accessKeyId;
+        return this;
+    }
+
+    /**
+     * set accessKeySecret
+     *
+     * @param accessKeySecret
+     */
+    public CreateSmsAppUsingPOSTRequest accessKeySecret(String accessKeySecret) {
+        this.accessKeySecret = accessKeySecret;
         return this;
     }
 

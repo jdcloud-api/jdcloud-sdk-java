@@ -31,6 +31,11 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
  * 查询各类型攻击次数
+参数 serviceIp 优先级大于 instanceId.
+- 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+- 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+- serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+
  */
 public class DescribeAttackTypeCountRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -52,6 +57,11 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
      * 高防实例 ID
      */
     private List<String> instanceId;
+
+    /**
+     * 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     */
+    private List<String> serviceIp;
 
     /**
      * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
@@ -116,6 +126,24 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
+     * get 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     *
+     * @return
+     */
+    public List<String> getServiceIp() {
+        return serviceIp;
+    }
+
+    /**
+     * set 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     *
+     * @param serviceIp
+     */
+    public void setServiceIp(List<String> serviceIp) {
+        this.serviceIp = serviceIp;
+    }
+
+    /**
      * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
@@ -165,6 +193,16 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
+     * set 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     *
+     * @param serviceIp
+     */
+    public DescribeAttackTypeCountRequest serviceIp(List<String> serviceIp) {
+        this.serviceIp = serviceIp;
+        return this;
+    }
+
+    /**
      * set 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @param regionId
@@ -185,6 +223,18 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
             this.instanceId = new ArrayList<>();
         }
         this.instanceId.add(instanceId);
+    }
+
+    /**
+     * add item to 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     *
+     * @param serviceIp
+     */
+    public void addServiceIp(String serviceIp) {
+        if (this.serviceIp == null) {
+            this.serviceIp = new ArrayList<>();
+        }
+        this.serviceIp.add(serviceIp);
     }
 
 }

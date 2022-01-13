@@ -113,12 +113,12 @@ public class AntiEvent  implements java.io.Serializable {
     private String upstreamErr;
 
     /**
-     * 是否已加入白名单
+     * 是否已加入白名单，0表示否
      */
     private Integer skipExist;
 
     /**
-     * 是否已加入黑名单
+     * 是否已加入黑名单，0表示否
      */
     private Integer denyExist;
 
@@ -412,7 +412,7 @@ public class AntiEvent  implements java.io.Serializable {
     }
 
     /**
-     * get 是否已加入白名单
+     * get 是否已加入白名单，0表示否
      *
      * @return
      */
@@ -421,7 +421,7 @@ public class AntiEvent  implements java.io.Serializable {
     }
 
     /**
-     * set 是否已加入白名单
+     * set 是否已加入白名单，0表示否
      *
      * @param skipExist
      */
@@ -430,7 +430,7 @@ public class AntiEvent  implements java.io.Serializable {
     }
 
     /**
-     * get 是否已加入黑名单
+     * get 是否已加入黑名单，0表示否
      *
      * @return
      */
@@ -439,7 +439,7 @@ public class AntiEvent  implements java.io.Serializable {
     }
 
     /**
-     * set 是否已加入黑名单
+     * set 是否已加入黑名单，0表示否
      *
      * @param denyExist
      */
@@ -609,7 +609,7 @@ public class AntiEvent  implements java.io.Serializable {
     }
 
     /**
-     * set 是否已加入白名单
+     * set 是否已加入白名单，0表示否
      *
      * @param skipExist
      */
@@ -619,7 +619,7 @@ public class AntiEvent  implements java.io.Serializable {
     }
 
     /**
-     * set 是否已加入黑名单
+     * set 是否已加入黑名单，0表示否
      *
      * @param denyExist
      */

@@ -43,9 +43,14 @@ public class WafConf  implements java.io.Serializable {
     private Integer wafMode;
 
     /**
-     * 0表示宽松，1表示正常，2表示严格
+     * 0表示宽松，1表示正常，2表示严格, 3表示自定义
      */
     private Integer wafLevel;
+
+    /**
+     * 自定义规则集Id
+     */
+    private Long usrPolicy;
 
     /**
      * 自定义页面名称
@@ -90,7 +95,7 @@ public class WafConf  implements java.io.Serializable {
     }
 
     /**
-     * get 0表示宽松，1表示正常，2表示严格
+     * get 0表示宽松，1表示正常，2表示严格, 3表示自定义
      *
      * @return
      */
@@ -99,12 +104,30 @@ public class WafConf  implements java.io.Serializable {
     }
 
     /**
-     * set 0表示宽松，1表示正常，2表示严格
+     * set 0表示宽松，1表示正常，2表示严格, 3表示自定义
      *
      * @param wafLevel
      */
     public void setWafLevel(Integer wafLevel) {
         this.wafLevel = wafLevel;
+    }
+
+    /**
+     * get 自定义规则集Id
+     *
+     * @return
+     */
+    public Long getUsrPolicy() {
+        return usrPolicy;
+    }
+
+    /**
+     * set 自定义规则集Id
+     *
+     * @param usrPolicy
+     */
+    public void setUsrPolicy(Long usrPolicy) {
+        this.usrPolicy = usrPolicy;
     }
 
     /**
@@ -147,12 +170,22 @@ public class WafConf  implements java.io.Serializable {
     }
 
     /**
-     * set 0表示宽松，1表示正常，2表示严格
+     * set 0表示宽松，1表示正常，2表示严格, 3表示自定义
      *
      * @param wafLevel
      */
     public WafConf wafLevel(Integer wafLevel) {
         this.wafLevel = wafLevel;
+        return this;
+    }
+
+    /**
+     * set 自定义规则集Id
+     *
+     * @param usrPolicy
+     */
+    public WafConf usrPolicy(Long usrPolicy) {
+        this.usrPolicy = usrPolicy;
         return this;
     }
 

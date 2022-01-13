@@ -62,7 +62,7 @@ public class AddDomain  implements java.io.Serializable {
     private List<String> protocols;
 
     /**
-     * ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      */
     private List<String> sslProtocols;
 
@@ -96,6 +96,11 @@ public class AddDomain  implements java.io.Serializable {
     private Integer rsOnlySupportHttp;
 
     /**
+     * 是否支持国密证书
+     */
+    private Integer gmCertSupport;
+
+    /**
      * Waf侧支持http版本，不传时默认值为http1.1,传&quot;http2&quot;为http2
      */
     private String httpVersion;
@@ -106,9 +111,14 @@ public class AddDomain  implements java.io.Serializable {
     private Integer enableKeepalive;
 
     /**
-     * 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+     * 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
      */
     private Integer suiteLevel;
+
+    /**
+     * 自定义加密套件
+     */
+    private List<String> userSuiteLevel;
 
     /**
      * 请求头是否支持下划线，0-否，1-是。缺省为0
@@ -199,7 +209,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * get ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * get ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      *
      * @return
      */
@@ -208,7 +218,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      *
      * @param sslProtocols
      */
@@ -307,6 +317,24 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
+     * get 是否支持国密证书
+     *
+     * @return
+     */
+    public Integer getGmCertSupport() {
+        return gmCertSupport;
+    }
+
+    /**
+     * set 是否支持国密证书
+     *
+     * @param gmCertSupport
+     */
+    public void setGmCertSupport(Integer gmCertSupport) {
+        this.gmCertSupport = gmCertSupport;
+    }
+
+    /**
      * get Waf侧支持http版本，不传时默认值为http1.1,传&quot;http2&quot;为http2
      *
      * @return
@@ -343,7 +371,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * get 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+     * get 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
      *
      * @return
      */
@@ -352,12 +380,30 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+     * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
      *
      * @param suiteLevel
      */
     public void setSuiteLevel(Integer suiteLevel) {
         this.suiteLevel = suiteLevel;
+    }
+
+    /**
+     * get 自定义加密套件
+     *
+     * @return
+     */
+    public List<String> getUserSuiteLevel() {
+        return userSuiteLevel;
+    }
+
+    /**
+     * set 自定义加密套件
+     *
+     * @param userSuiteLevel
+     */
+    public void setUserSuiteLevel(List<String> userSuiteLevel) {
+        this.userSuiteLevel = userSuiteLevel;
     }
 
     /**
@@ -456,7 +502,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * set ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      *
      * @param sslProtocols
      */
@@ -516,6 +562,16 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
+     * set 是否支持国密证书
+     *
+     * @param gmCertSupport
+     */
+    public AddDomain gmCertSupport(Integer gmCertSupport) {
+        this.gmCertSupport = gmCertSupport;
+        return this;
+    }
+
+    /**
      * set Waf侧支持http版本，不传时默认值为http1.1,传&quot;http2&quot;为http2
      *
      * @param httpVersion
@@ -536,12 +592,22 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级
+     * set 加密套件等级，0表示默认为中级，1表示高级，2表示低级, 3表示自定义
      *
      * @param suiteLevel
      */
     public AddDomain suiteLevel(Integer suiteLevel) {
         this.suiteLevel = suiteLevel;
+        return this;
+    }
+
+    /**
+     * set 自定义加密套件
+     *
+     * @param userSuiteLevel
+     */
+    public AddDomain userSuiteLevel(List<String> userSuiteLevel) {
+        this.userSuiteLevel = userSuiteLevel;
         return this;
     }
 
@@ -601,7 +667,7 @@ public class AddDomain  implements java.io.Serializable {
     }
 
     /**
-     * add item to ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;]
+     * add item to ssl协议，eg:[&quot;TLSv1&quot;,&quot;TLSv1.1&quot;,&quot;TLSv1.2&quot;,&quot;SSLv2&quot;,&quot;SSLv3&quot;,&quot;TLSv1.3&quot;]
      *
      * @param sslProtocol
      */
@@ -610,6 +676,18 @@ public class AddDomain  implements java.io.Serializable {
             this.sslProtocols = new ArrayList<>();
         }
         this.sslProtocols.add(sslProtocol);
+    }
+
+    /**
+     * add item to 自定义加密套件
+     *
+     * @param userSuiteLevel
+     */
+    public void addUserSuiteLevel(String userSuiteLevel) {
+        if (this.userSuiteLevel == null) {
+            this.userSuiteLevel = new ArrayList<>();
+        }
+        this.userSuiteLevel.add(userSuiteLevel);
     }
 
 }

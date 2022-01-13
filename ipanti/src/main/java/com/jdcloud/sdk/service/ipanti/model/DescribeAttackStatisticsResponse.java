@@ -28,6 +28,12 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
  * 查询攻击次数及流量峰值
+参数 serviceIp 优先级大于 instanceId.
+- 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+- 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+- serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
+
  */
 public class DescribeAttackStatisticsResponse extends JdcloudResponse<DescribeAttackStatisticsResult> implements java.io.Serializable {
 

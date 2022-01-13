@@ -39,7 +39,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     private Integer code;
 
     /**
-     * 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+     * 新购或升级成功时为计费资源ID, 创建实例失败时给出具体原因
      */
     private String message;
 
@@ -63,7 +63,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * get 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+     * get 新购或升级成功时为计费资源ID, 创建实例失败时给出具体原因
      *
      * @return
      */
@@ -72,7 +72,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+     * set 新购或升级成功时为计费资源ID, 创建实例失败时给出具体原因
      *
      * @param message
      */
@@ -92,7 +92,7 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
     }
 
     /**
-     * set 新购或升级成功时为 订单 id, 创建实例失败时给出具体原因
+     * set 新购或升级成功时为计费资源ID, 创建实例失败时给出具体原因
      *
      * @param message
      */

@@ -50,7 +50,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     private String name;
 
     /**
-     * 地域编码
+     * 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      * Required:true
      */
     @Required
@@ -112,7 +112,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * get 地域编码
+     * get 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @return
      */
@@ -121,7 +121,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */
@@ -161,7 +161,7 @@ public class DescribeInstancesRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */

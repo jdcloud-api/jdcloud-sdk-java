@@ -104,6 +104,11 @@ public class UsrBotRules  implements java.io.Serializable {
      */
     private String unit;
 
+    /**
+     * 持续时间, 单位分钟，范围[1-24*60]
+     */
+    private Integer blockTime;
+
 
     /**
      * get 规则id
@@ -357,6 +362,24 @@ public class UsrBotRules  implements java.io.Serializable {
         this.unit = unit;
     }
 
+    /**
+     * get 持续时间, 单位分钟，范围[1-24*60]
+     *
+     * @return
+     */
+    public Integer getBlockTime() {
+        return blockTime;
+    }
+
+    /**
+     * set 持续时间, 单位分钟，范围[1-24*60]
+     *
+     * @param blockTime
+     */
+    public void setBlockTime(Integer blockTime) {
+        this.blockTime = blockTime;
+    }
+
 
     /**
      * set 规则id
@@ -495,6 +518,16 @@ public class UsrBotRules  implements java.io.Serializable {
      */
     public UsrBotRules unit(String unit) {
         this.unit = unit;
+        return this;
+    }
+
+    /**
+     * set 持续时间, 单位分钟，范围[1-24*60]
+     *
+     * @param blockTime
+     */
+    public UsrBotRules blockTime(Integer blockTime) {
+        this.blockTime = blockTime;
         return this;
     }
 

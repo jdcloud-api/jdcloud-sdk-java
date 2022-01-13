@@ -98,6 +98,11 @@ public class GetAntiEventReq  implements java.io.Serializable {
      */
     private String sortDesc;
 
+    /**
+     * false表示查询，true表示导出
+     */
+    private Boolean isExport;
+
 
     /**
      * get 实例id，代表要查询的WAF实例，为空时表示当前用户下的所有实例
@@ -297,6 +302,24 @@ public class GetAntiEventReq  implements java.io.Serializable {
         this.sortDesc = sortDesc;
     }
 
+    /**
+     * get false表示查询，true表示导出
+     *
+     * @return
+     */
+    public Boolean getIsExport() {
+        return isExport;
+    }
+
+    /**
+     * set false表示查询，true表示导出
+     *
+     * @param isExport
+     */
+    public void setIsExport(Boolean isExport) {
+        this.isExport = isExport;
+    }
+
 
     /**
      * set 实例id，代表要查询的WAF实例，为空时表示当前用户下的所有实例
@@ -405,6 +428,16 @@ public class GetAntiEventReq  implements java.io.Serializable {
      */
     public GetAntiEventReq sortDesc(String sortDesc) {
         this.sortDesc = sortDesc;
+        return this;
+    }
+
+    /**
+     * set false表示查询，true表示导出
+     *
+     * @param isExport
+     */
+    public GetAntiEventReq isExport(Boolean isExport) {
+        this.isExport = isExport;
         return this;
     }
 

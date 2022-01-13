@@ -60,9 +60,14 @@ public class ForwardRule  implements java.io.Serializable {
     private String originType;
 
     /**
-     * 高防 IP
+     * 该规则使用中的高防 IP
      */
     private String serviceIp;
+
+    /**
+     * 已配置的高防 IP 列表
+     */
+    private ServiceIpConfig serviceIpConfig;
 
     /**
      * 端口号
@@ -191,7 +196,7 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * get 高防 IP
+     * get 该规则使用中的高防 IP
      *
      * @return
      */
@@ -200,12 +205,30 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 高防 IP
+     * set 该规则使用中的高防 IP
      *
      * @param serviceIp
      */
     public void setServiceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+    }
+
+    /**
+     * get 已配置的高防 IP 列表
+     *
+     * @return
+     */
+    public ServiceIpConfig getServiceIpConfig() {
+        return serviceIpConfig;
+    }
+
+    /**
+     * set 已配置的高防 IP 列表
+     *
+     * @param serviceIpConfig
+     */
+    public void setServiceIpConfig(ServiceIpConfig serviceIpConfig) {
+        this.serviceIpConfig = serviceIpConfig;
     }
 
     /**
@@ -386,12 +409,22 @@ public class ForwardRule  implements java.io.Serializable {
     }
 
     /**
-     * set 高防 IP
+     * set 该规则使用中的高防 IP
      *
      * @param serviceIp
      */
     public ForwardRule serviceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+        return this;
+    }
+
+    /**
+     * set 已配置的高防 IP 列表
+     *
+     * @param serviceIpConfig
+     */
+    public ForwardRule serviceIpConfig(ServiceIpConfig serviceIpConfig) {
+        this.serviceIpConfig = serviceIpConfig;
         return this;
     }
 

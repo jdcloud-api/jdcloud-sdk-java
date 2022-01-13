@@ -39,7 +39,7 @@ public class ValCfg  implements java.io.Serializable {
     private Integer id;
 
     /**
-     * 0-5 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5
+     * 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
      */
     private Integer matchOp;
 
@@ -77,7 +77,7 @@ public class ValCfg  implements java.io.Serializable {
     }
 
     /**
-     * get 0-5 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5
+     * get 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class ValCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 0-5 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5
+     * set 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
      *
      * @param matchOp
      */
@@ -142,7 +142,7 @@ public class ValCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 0-5 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5
+     * set 0-5 7-8 完全匹配0  前缀匹配1 包含2 正则3 大于4 后缀5 不等于7 不包含8
      *
      * @param matchOp
      */

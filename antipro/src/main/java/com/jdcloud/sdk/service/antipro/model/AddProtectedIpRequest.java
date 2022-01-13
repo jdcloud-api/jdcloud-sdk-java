@@ -29,12 +29,7 @@ import com.jdcloud.sdk.service.antipro.model.ProtectedIpSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 添加防护包防护 IP.
-- 防护包仅能防护防护包实例所在区域的公网 IP, 且该公网 IP 未被其他防护包防护, 如果已经被其他防护包防护, 请先调用删除防护包防护 IP 接口删除防护 IP
-- 防护包可添加的防护 IP 个数小于等于防护包的可防护 IP 数量减去已防护的 IP 数量
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeelasticipresources&quot;&gt;describeElasticIpResources&lt;/a&gt; 接口查询防护包可防护的弹性公网 IP
-- 使用 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describecpsipresources&quot;&gt;describeCpsIpResources&lt;/a&gt; 接口查询防护包可防护的云物理服务器公网 IP
-
+ * 添加防护包防护 IP. &lt;br&gt;- 防护包仅能防护防护包实例所在区域的公网 IP, 且该公网 IP 未被其他防护包防护, 如果已经被其他防护包防护, 请先调用删除防护包防护 IP 接口删除防护 IP&lt;br&gt;- 防护包可添加的防护 IP 个数小于等于防护包的可防护 IP 数量减去已防护的 IP 数量&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeelasticipresources&#39;&gt;describeElasticIpResources&lt;/a&gt; 接口查询防护包可防护的弹性公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describecpsipresources&#39;&gt;describeCpsIpResources&lt;/a&gt; 接口查询防护包可防护的云物理服务器公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describewafipresources&#39;&gt;describeWafIpResources&lt;/a&gt; 接口查询防护包可防护的Web应用防火墙公网 IP&lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describeccsipresources&#39;&gt;describeCcsIpResources&lt;/a&gt; 接口查询防护包可防护的托管区公网 IP
  */
 public class AddProtectedIpRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -48,7 +43,7 @@ public class AddProtectedIpRequest extends JdcloudRequest implements java.io.Ser
     private ProtectedIpSpec protectedIpSpec;
 
     /**
-     * 地域编码
+     * 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      * Required:true
      */
     @Required
@@ -81,7 +76,7 @@ public class AddProtectedIpRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * get 地域编码
+     * get 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @return
      */
@@ -90,7 +85,7 @@ public class AddProtectedIpRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */
@@ -128,7 +123,7 @@ public class AddProtectedIpRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */

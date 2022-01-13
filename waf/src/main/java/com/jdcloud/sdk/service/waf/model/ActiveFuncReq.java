@@ -50,6 +50,11 @@ public class ActiveFuncReq  implements java.io.Serializable {
      */
     private Integer enable;
 
+    /**
+     * 是否国密
+     */
+    private Integer isGm;
+
 
     /**
      * get 实例id，代表要设置的WAF实例
@@ -105,6 +110,24 @@ public class ActiveFuncReq  implements java.io.Serializable {
         this.enable = enable;
     }
 
+    /**
+     * get 是否国密
+     *
+     * @return
+     */
+    public Integer getIsGm() {
+        return isGm;
+    }
+
+    /**
+     * set 是否国密
+     *
+     * @param isGm
+     */
+    public void setIsGm(Integer isGm) {
+        this.isGm = isGm;
+    }
+
 
     /**
      * set 实例id，代表要设置的WAF实例
@@ -133,6 +156,16 @@ public class ActiveFuncReq  implements java.io.Serializable {
      */
     public ActiveFuncReq enable(Integer enable) {
         this.enable = enable;
+        return this;
+    }
+
+    /**
+     * set 是否国密
+     *
+     * @param isGm
+     */
+    public ActiveFuncReq isGm(Integer isGm) {
+        this.isGm = isGm;
         return this;
     }
 

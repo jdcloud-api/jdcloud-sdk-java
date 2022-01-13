@@ -35,7 +35,7 @@ public class ProtectedObject  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器
+     * 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器公网 IP, waf: Web应用防护墙 IP, ccs: 托管区公网 IP
      */
     private String type;
 
@@ -51,7 +51,7 @@ public class ProtectedObject  implements java.io.Serializable {
 
 
     /**
-     * get 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器
+     * get 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器公网 IP, waf: Web应用防护墙 IP, ccs: 托管区公网 IP
      *
      * @return
      */
@@ -60,7 +60,7 @@ public class ProtectedObject  implements java.io.Serializable {
     }
 
     /**
-     * set 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器
+     * set 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器公网 IP, waf: Web应用防护墙 IP, ccs: 托管区公网 IP
      *
      * @param type
      */
@@ -106,7 +106,7 @@ public class ProtectedObject  implements java.io.Serializable {
 
 
     /**
-     * set 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器
+     * set 防护对象类型: eip: 弹性公网 IP, cps: 云物理服务器公网 IP, waf: Web应用防护墙 IP, ccs: 托管区公网 IP
      *
      * @param type
      */

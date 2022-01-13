@@ -55,6 +55,13 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     private String name;
 
     /**
+     * 0 网页防篡改 1 网站防篡改
+     * Required:true
+     */
+    @Required
+    private Integer website;
+
+    /**
      * url
      * Required:true
      */
@@ -117,6 +124,24 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     }
 
     /**
+     * get 0 网页防篡改 1 网站防篡改
+     *
+     * @return
+     */
+    public Integer getWebsite() {
+        return website;
+    }
+
+    /**
+     * set 0 网页防篡改 1 网站防篡改
+     *
+     * @param website
+     */
+    public void setWebsite(Integer website) {
+        this.website = website;
+    }
+
+    /**
      * get url
      *
      * @return
@@ -162,6 +187,16 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
      */
     public SetWebcacheUrlReq name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 0 网页防篡改 1 网站防篡改
+     *
+     * @param website
+     */
+    public SetWebcacheUrlReq website(Integer website) {
+        this.website = website;
         return this;
     }
 

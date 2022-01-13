@@ -40,7 +40,7 @@ public class DescribeProtectionRuleRequest extends JdcloudRequest implements jav
     private String ip;
 
     /**
-     * 地域编码
+     * 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      * Required:true
      */
     @Required
@@ -73,7 +73,7 @@ public class DescribeProtectionRuleRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 地域编码
+     * get 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class DescribeProtectionRuleRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */
@@ -120,7 +120,7 @@ public class DescribeProtectionRuleRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */

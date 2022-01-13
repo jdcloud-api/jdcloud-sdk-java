@@ -33,13 +33,18 @@ public class ServiceIp  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 高防 IP
+     * 高防IP
      */
     private String serviceIp;
 
+    /**
+     * 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
+     */
+    private String securityStatus;
+
 
     /**
-     * get 高防 IP
+     * get 高防IP
      *
      * @return
      */
@@ -48,7 +53,7 @@ public class ServiceIp  implements java.io.Serializable {
     }
 
     /**
-     * set 高防 IP
+     * set 高防IP
      *
      * @param serviceIp
      */
@@ -56,14 +61,42 @@ public class ServiceIp  implements java.io.Serializable {
         this.serviceIp = serviceIp;
     }
 
+    /**
+     * get 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
+     *
+     * @return
+     */
+    public String getSecurityStatus() {
+        return securityStatus;
+    }
 
     /**
-     * set 高防 IP
+     * set 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
+     *
+     * @param securityStatus
+     */
+    public void setSecurityStatus(String securityStatus) {
+        this.securityStatus = securityStatus;
+    }
+
+
+    /**
+     * set 高防IP
      *
      * @param serviceIp
      */
     public ServiceIp serviceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+        return this;
+    }
+
+    /**
+     * set 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
+     *
+     * @param securityStatus
+     */
+    public ServiceIp securityStatus(String securityStatus) {
+        this.securityStatus = securityStatus;
         return this;
     }
 

@@ -88,7 +88,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     private Integer blockType;
 
     /**
-     * block 持续时间，单位为分钟 [1~9999999]
+     * block 持续时间，单位为分钟 [1~24*60]
      * Required:true
      */
     @Required
@@ -255,7 +255,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get block 持续时间，单位为分钟 [1~9999999]
+     * get block 持续时间，单位为分钟 [1~24*60]
      *
      * @return
      */
@@ -264,7 +264,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set block 持续时间，单位为分钟 [1~9999999]
+     * set block 持续时间，单位为分钟 [1~24*60]
      *
      * @param blockTime
      */
@@ -408,7 +408,7 @@ public class SetCcRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set block 持续时间，单位为分钟 [1~9999999]
+     * set block 持续时间，单位为分钟 [1~24*60]
      *
      * @param blockTime
      */

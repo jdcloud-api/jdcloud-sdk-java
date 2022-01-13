@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.waf.model.OrderReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * createInstanceRequest
+ * 创建waf实例
  */
 public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 

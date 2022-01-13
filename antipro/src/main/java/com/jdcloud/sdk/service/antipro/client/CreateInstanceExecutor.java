@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.antipro.model.CreateInstanceResponse;
 
 /**
- * 创建防护包实例, 当前支持区域: 华北-北京, 华东-宿迁, 华东-上海
+ * 创建防护包实例
  */
 class CreateInstanceExecutor extends JdcloudExecutor {
 
