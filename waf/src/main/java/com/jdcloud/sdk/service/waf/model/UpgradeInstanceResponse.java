@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.waf.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 创建waf实例
+ * 升配订单
  */
-public class CreateInstanceResponse extends JdcloudResponse<CreateInstanceResult> implements java.io.Serializable {
+public class UpgradeInstanceResponse extends JdcloudResponse<UpgradeInstanceResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

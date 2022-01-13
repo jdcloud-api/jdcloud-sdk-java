@@ -29,9 +29,9 @@ import com.jdcloud.sdk.service.waf.model.OrderReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建waf实例
+ * 升配订单
  */
-public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
+public class UpgradeInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -48,6 +48,13 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
      */
     @Required
     private String regionId;
+
+    /**
+     * 实例Id
+     * Required:true
+     */
+    @Required
+    private String wafInstanceId;
 
 
     /**
@@ -86,13 +93,31 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
     }
 
+    /**
+     * get 实例Id
+     *
+     * @return
+     */
+    public String getWafInstanceId() {
+        return wafInstanceId;
+    }
+
+    /**
+     * set 实例Id
+     *
+     * @param wafInstanceId
+     */
+    public void setWafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
+    }
+
 
     /**
      * set 请求
      *
      * @param req
      */
-    public CreateInstanceRequest req(OrderReq req) {
+    public UpgradeInstanceRequest req(OrderReq req) {
         this.req = req;
         return this;
     }
@@ -102,8 +127,18 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param regionId
      */
-    public CreateInstanceRequest regionId(String regionId) {
+    public UpgradeInstanceRequest regionId(String regionId) {
         this.regionId = regionId;
+        return this;
+    }
+
+    /**
+     * set 实例Id
+     *
+     * @param wafInstanceId
+     */
+    public UpgradeInstanceRequest wafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
         return this;
     }
 

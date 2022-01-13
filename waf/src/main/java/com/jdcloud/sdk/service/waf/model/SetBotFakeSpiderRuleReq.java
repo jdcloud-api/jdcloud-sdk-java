@@ -27,18 +27,11 @@ package com.jdcloud.sdk.service.waf.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * setWebcacheUrlReq
+ * setBotFakeSpiderRuleReq
  */
-public class SetWebcacheUrlReq  implements java.io.Serializable {
+public class SetBotFakeSpiderRuleReq  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * WAF实例id
-     * Required:true
-     */
-    @Required
-    private String wafInstanceId;
 
     /**
      * 域名
@@ -48,44 +41,22 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 名称
+     * 要设置的bot伪造蜘蛛类型，list列表中的值
      * Required:true
      */
     @Required
     private String name;
 
     /**
-     * 0 网页防篡改 1 网站防篡改
-     * Required:true
+     * 动作配置，默认为告警，仅支持1和5 op
      */
-    @Required
-    private Integer website;
+    private DenyActionCfg action;
 
     /**
-     * url
-     * Required:true
+     * 1-启用 0-禁用
      */
-    @Required
-    private String url;
+    private Integer enable;
 
-
-    /**
-     * get WAF实例id
-     *
-     * @return
-     */
-    public String getWafInstanceId() {
-        return wafInstanceId;
-    }
-
-    /**
-     * set WAF实例id
-     *
-     * @param wafInstanceId
-     */
-    public void setWafInstanceId(String wafInstanceId) {
-        this.wafInstanceId = wafInstanceId;
-    }
 
     /**
      * get 域名
@@ -106,7 +77,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     }
 
     /**
-     * get 名称
+     * get 要设置的bot伪造蜘蛛类型，list列表中的值
      *
      * @return
      */
@@ -115,7 +86,7 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     }
 
     /**
-     * set 名称
+     * set 要设置的bot伪造蜘蛛类型，list列表中的值
      *
      * @param name
      */
@@ -124,89 +95,79 @@ public class SetWebcacheUrlReq  implements java.io.Serializable {
     }
 
     /**
-     * get 0 网页防篡改 1 网站防篡改
+     * get 动作配置，默认为告警，仅支持1和5 op
      *
      * @return
      */
-    public Integer getWebsite() {
-        return website;
+    public DenyActionCfg getAction() {
+        return action;
     }
 
     /**
-     * set 0 网页防篡改 1 网站防篡改
+     * set 动作配置，默认为告警，仅支持1和5 op
      *
-     * @param website
+     * @param action
      */
-    public void setWebsite(Integer website) {
-        this.website = website;
+    public void setAction(DenyActionCfg action) {
+        this.action = action;
     }
 
     /**
-     * get url
+     * get 1-启用 0-禁用
      *
      * @return
      */
-    public String getUrl() {
-        return url;
+    public Integer getEnable() {
+        return enable;
     }
 
     /**
-     * set url
+     * set 1-启用 0-禁用
      *
-     * @param url
+     * @param enable
      */
-    public void setUrl(String url) {
-        this.url = url;
+    public void setEnable(Integer enable) {
+        this.enable = enable;
     }
 
-
-    /**
-     * set WAF实例id
-     *
-     * @param wafInstanceId
-     */
-    public SetWebcacheUrlReq wafInstanceId(String wafInstanceId) {
-        this.wafInstanceId = wafInstanceId;
-        return this;
-    }
 
     /**
      * set 域名
      *
      * @param domain
      */
-    public SetWebcacheUrlReq domain(String domain) {
+    public SetBotFakeSpiderRuleReq domain(String domain) {
         this.domain = domain;
         return this;
     }
 
     /**
-     * set 名称
+     * set 要设置的bot伪造蜘蛛类型，list列表中的值
      *
      * @param name
      */
-    public SetWebcacheUrlReq name(String name) {
+    public SetBotFakeSpiderRuleReq name(String name) {
         this.name = name;
         return this;
     }
 
     /**
-     * set 0 网页防篡改 1 网站防篡改
+     * set 动作配置，默认为告警，仅支持1和5 op
      *
-     * @param website
+     * @param action
      */
-    public SetWebcacheUrlReq website(Integer website) {
-        this.website = website;
+    public SetBotFakeSpiderRuleReq action(DenyActionCfg action) {
+        this.action = action;
         return this;
     }
 
     /**
-     * set url
+     * set 1-启用 0-禁用
      *
-     * @param url
+     * @param enable
      */
-    public SetWebcacheUrlReq url(String url) {
-        this.url = url;
+    public SetBotFakeSpiderRuleReq enable(Integer enable) {
+        this.enable = enable;
         return this;
     }
 

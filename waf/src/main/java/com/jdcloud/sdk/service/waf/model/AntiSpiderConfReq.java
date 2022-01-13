@@ -27,18 +27,16 @@ package com.jdcloud.sdk.service.waf.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * setDomainRegionReq
+ * antiSpiderConfReq
  */
-public class SetDomainRegionReq  implements java.io.Serializable {
+public class AntiSpiderConfReq  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域，多个以逗号分隔
-     * Required:true
+     * WAF实例id
      */
-    @Required
-    private String region;
+    private String wafInstanceId;
 
     /**
      * 域名
@@ -48,27 +46,27 @@ public class SetDomainRegionReq  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 是否国密
+     * action配置, 只支持 1，2，5 atOp
      */
-    private Integer isGm;
+    private DenyActionCfg action;
 
 
     /**
-     * get 地域，多个以逗号分隔
+     * get WAF实例id
      *
      * @return
      */
-    public String getRegion() {
-        return region;
+    public String getWafInstanceId() {
+        return wafInstanceId;
     }
 
     /**
-     * set 地域，多个以逗号分隔
+     * set WAF实例id
      *
-     * @param region
+     * @param wafInstanceId
      */
-    public void setRegion(String region) {
-        this.region = region;
+    public void setWafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
     }
 
     /**
@@ -90,31 +88,31 @@ public class SetDomainRegionReq  implements java.io.Serializable {
     }
 
     /**
-     * get 是否国密
+     * get action配置, 只支持 1，2，5 atOp
      *
      * @return
      */
-    public Integer getIsGm() {
-        return isGm;
+    public DenyActionCfg getAction() {
+        return action;
     }
 
     /**
-     * set 是否国密
+     * set action配置, 只支持 1，2，5 atOp
      *
-     * @param isGm
+     * @param action
      */
-    public void setIsGm(Integer isGm) {
-        this.isGm = isGm;
+    public void setAction(DenyActionCfg action) {
+        this.action = action;
     }
 
 
     /**
-     * set 地域，多个以逗号分隔
+     * set WAF实例id
      *
-     * @param region
+     * @param wafInstanceId
      */
-    public SetDomainRegionReq region(String region) {
-        this.region = region;
+    public AntiSpiderConfReq wafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
         return this;
     }
 
@@ -123,18 +121,18 @@ public class SetDomainRegionReq  implements java.io.Serializable {
      *
      * @param domain
      */
-    public SetDomainRegionReq domain(String domain) {
+    public AntiSpiderConfReq domain(String domain) {
         this.domain = domain;
         return this;
     }
 
     /**
-     * set 是否国密
+     * set action配置, 只支持 1，2，5 atOp
      *
-     * @param isGm
+     * @param action
      */
-    public SetDomainRegionReq isGm(Integer isGm) {
-        this.isGm = isGm;
+    public AntiSpiderConfReq action(DenyActionCfg action) {
+        this.action = action;
         return this;
     }
 

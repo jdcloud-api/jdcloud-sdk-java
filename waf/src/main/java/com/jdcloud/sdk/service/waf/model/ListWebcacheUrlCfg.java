@@ -48,6 +48,11 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
     private String name;
 
     /**
+     * 0 网页防篡改 1 网站防篡改
+     */
+    private Integer website;
+
+    /**
      * 是否使能，0表示否
      */
     private Integer enable;
@@ -115,6 +120,24 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * get 0 网页防篡改 1 网站防篡改
+     *
+     * @return
+     */
+    public Integer getWebsite() {
+        return website;
+    }
+
+    /**
+     * set 0 网页防篡改 1 网站防篡改
+     *
+     * @param website
+     */
+    public void setWebsite(Integer website) {
+        this.website = website;
     }
 
     /**
@@ -199,6 +222,16 @@ public class ListWebcacheUrlCfg  implements java.io.Serializable {
      */
     public ListWebcacheUrlCfg name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 0 网页防篡改 1 网站防篡改
+     *
+     * @param website
+     */
+    public ListWebcacheUrlCfg website(Integer website) {
+        this.website = website;
         return this;
     }
 

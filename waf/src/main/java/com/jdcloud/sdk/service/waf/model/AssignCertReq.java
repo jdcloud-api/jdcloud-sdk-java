@@ -54,6 +54,11 @@ public class AssignCertReq  implements java.io.Serializable {
     @Required
     private String certId;
 
+    /**
+     * 是否国密
+     */
+    private Integer isGm;
+
 
     /**
      * get 实例id，代表要查询的WAF实例
@@ -109,6 +114,24 @@ public class AssignCertReq  implements java.io.Serializable {
         this.certId = certId;
     }
 
+    /**
+     * get 是否国密
+     *
+     * @return
+     */
+    public Integer getIsGm() {
+        return isGm;
+    }
+
+    /**
+     * set 是否国密
+     *
+     * @param isGm
+     */
+    public void setIsGm(Integer isGm) {
+        this.isGm = isGm;
+    }
+
 
     /**
      * set 实例id，代表要查询的WAF实例
@@ -137,6 +160,16 @@ public class AssignCertReq  implements java.io.Serializable {
      */
     public AssignCertReq certId(String certId) {
         this.certId = certId;
+        return this;
+    }
+
+    /**
+     * set 是否国密
+     *
+     * @param isGm
+     */
+    public AssignCertReq isGm(Integer isGm) {
+        this.isGm = isGm;
         return this;
     }
 

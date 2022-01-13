@@ -24,86 +24,80 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
-import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.waf.model.OrderReq;
-import com.jdcloud.sdk.service.JdcloudRequest;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建waf实例
+ * 升配订单
  */
-public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
+public class UpgradeInstanceResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 请求
-     * Required:true
+     * 订单编号
      */
-    @Required
-    private OrderReq req;
+    private String buyId;
 
     /**
-     * 实例所属的地域ID
-     * Required:true
+     * wafInstancdId
      */
-    @Required
-    private String regionId;
+    private String wafInstanceId;
 
 
     /**
-     * get 请求
+     * get 订单编号
      *
      * @return
      */
-    public OrderReq getReq() {
-        return req;
+    public String getBuyId() {
+        return buyId;
     }
 
     /**
-     * set 请求
+     * set 订单编号
      *
-     * @param req
+     * @param buyId
      */
-    public void setReq(OrderReq req) {
-        this.req = req;
+    public void setBuyId(String buyId) {
+        this.buyId = buyId;
     }
 
     /**
-     * get 实例所属的地域ID
+     * get wafInstancdId
      *
      * @return
      */
-    public String getRegionId() {
-        return regionId;
+    public String getWafInstanceId() {
+        return wafInstanceId;
     }
 
     /**
-     * set 实例所属的地域ID
+     * set wafInstancdId
      *
-     * @param regionId
+     * @param wafInstanceId
      */
-    public void setRegionId(String regionId) {
-        this.regionId = regionId;
+    public void setWafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
     }
 
 
     /**
-     * set 请求
+     * set 订单编号
      *
-     * @param req
+     * @param buyId
      */
-    public CreateInstanceRequest req(OrderReq req) {
-        this.req = req;
+    public UpgradeInstanceResult buyId(String buyId) {
+        this.buyId = buyId;
         return this;
     }
 
     /**
-     * set 实例所属的地域ID
+     * set wafInstancdId
      *
-     * @param regionId
+     * @param wafInstanceId
      */
-    public CreateInstanceRequest regionId(String regionId) {
-        this.regionId = regionId;
+    public UpgradeInstanceResult wafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
         return this;
     }
 

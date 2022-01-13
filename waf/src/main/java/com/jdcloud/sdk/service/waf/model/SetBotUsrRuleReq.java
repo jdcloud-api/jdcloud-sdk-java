@@ -83,7 +83,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     private DenyActionCfg action;
 
     /**
-     * 规则类型，general-通用规则，advanced-高级规则，缺省为general
+     * 规则类型，general-通用规则，advanced-高级规则，evaluate-智能规则 缺省为general
      */
     private String ruleType;
 
@@ -116,6 +116,11 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
      * 统计维度
      */
     private String unit;
+
+    /**
+     * 持续时间, 单位分钟，范围[1-24*60]
+     */
+    private Integer blockTime;
 
 
     /**
@@ -245,7 +250,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get 规则类型，general-通用规则，advanced-高级规则，缺省为general
+     * get 规则类型，general-通用规则，advanced-高级规则，evaluate-智能规则 缺省为general
      *
      * @return
      */
@@ -254,7 +259,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 规则类型，general-通用规则，advanced-高级规则，缺省为general
+     * set 规则类型，general-通用规则，advanced-高级规则，evaluate-智能规则 缺省为general
      *
      * @param ruleType
      */
@@ -370,6 +375,24 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
         this.unit = unit;
     }
 
+    /**
+     * get 持续时间, 单位分钟，范围[1-24*60]
+     *
+     * @return
+     */
+    public Integer getBlockTime() {
+        return blockTime;
+    }
+
+    /**
+     * set 持续时间, 单位分钟，范围[1-24*60]
+     *
+     * @param blockTime
+     */
+    public void setBlockTime(Integer blockTime) {
+        this.blockTime = blockTime;
+    }
+
 
     /**
      * set 规则id，新增时为0或不传
@@ -442,7 +465,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 规则类型，general-通用规则，advanced-高级规则，缺省为general
+     * set 规则类型，general-通用规则，advanced-高级规则，evaluate-智能规则 缺省为general
      *
      * @param ruleType
      */
@@ -508,6 +531,16 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
      */
     public SetBotUsrRuleReq unit(String unit) {
         this.unit = unit;
+        return this;
+    }
+
+    /**
+     * set 持续时间, 单位分钟，范围[1-24*60]
+     *
+     * @param blockTime
+     */
+    public SetBotUsrRuleReq blockTime(Integer blockTime) {
+        this.blockTime = blockTime;
         return this;
     }
 

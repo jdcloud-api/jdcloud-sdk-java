@@ -66,6 +66,11 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     private Integer rate;
 
     /**
+     * 限速burst大小
+     */
+    private Integer burst;
+
+    /**
      * forbidden redirect，缺省为forbidden
      */
     private String matchAction;
@@ -185,6 +190,24 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     }
 
     /**
+     * get 限速burst大小
+     *
+     * @return
+     */
+    public Integer getBurst() {
+        return burst;
+    }
+
+    /**
+     * set 限速burst大小
+     *
+     * @param burst
+     */
+    public void setBurst(Integer burst) {
+        this.burst = burst;
+    }
+
+    /**
      * get forbidden redirect，缺省为forbidden
      *
      * @return
@@ -278,6 +301,16 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
      */
     public RateLimitRuleCfg rate(Integer rate) {
         this.rate = rate;
+        return this;
+    }
+
+    /**
+     * set 限速burst大小
+     *
+     * @param burst
+     */
+    public RateLimitRuleCfg burst(Integer burst) {
+        this.burst = burst;
         return this;
     }
 

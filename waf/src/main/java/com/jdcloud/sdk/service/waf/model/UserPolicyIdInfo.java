@@ -24,37 +24,27 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * getAvailableCertReq
+ * userPolicyIdInfo
  */
-public class GetAvailableCertReq  implements java.io.Serializable {
+public class UserPolicyIdInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例id，代表要查询的WAF实例
-     * Required:true
+     * WAF实例id
      */
-    @Required
     private String wafInstanceId;
 
     /**
-     * 域名
-     * Required:true
+     * 自定义规则组id
      */
-    @Required
-    private String domain;
-
-    /**
-     * 是否国密
-     */
-    private Integer isGm;
+    private Long id;
 
 
     /**
-     * get 实例id，代表要查询的WAF实例
+     * get WAF实例id
      *
      * @return
      */
@@ -63,7 +53,7 @@ public class GetAvailableCertReq  implements java.io.Serializable {
     }
 
     /**
-     * set 实例id，代表要查询的WAF实例
+     * set WAF实例id
      *
      * @param wafInstanceId
      */
@@ -72,69 +62,41 @@ public class GetAvailableCertReq  implements java.io.Serializable {
     }
 
     /**
-     * get 域名
+     * get 自定义规则组id
      *
      * @return
      */
-    public String getDomain() {
-        return domain;
+    public Long getId() {
+        return id;
     }
 
     /**
-     * set 域名
+     * set 自定义规则组id
      *
-     * @param domain
+     * @param id
      */
-    public void setDomain(String domain) {
-        this.domain = domain;
-    }
-
-    /**
-     * get 是否国密
-     *
-     * @return
-     */
-    public Integer getIsGm() {
-        return isGm;
-    }
-
-    /**
-     * set 是否国密
-     *
-     * @param isGm
-     */
-    public void setIsGm(Integer isGm) {
-        this.isGm = isGm;
+    public void setId(Long id) {
+        this.id = id;
     }
 
 
     /**
-     * set 实例id，代表要查询的WAF实例
+     * set WAF实例id
      *
      * @param wafInstanceId
      */
-    public GetAvailableCertReq wafInstanceId(String wafInstanceId) {
+    public UserPolicyIdInfo wafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
 
     /**
-     * set 域名
+     * set 自定义规则组id
      *
-     * @param domain
+     * @param id
      */
-    public GetAvailableCertReq domain(String domain) {
-        this.domain = domain;
-        return this;
-    }
-
-    /**
-     * set 是否国密
-     *
-     * @param isGm
-     */
-    public GetAvailableCertReq isGm(Integer isGm) {
-        this.isGm = isGm;
+    public UserPolicyIdInfo id(Long id) {
+        this.id = id;
         return this;
     }
 

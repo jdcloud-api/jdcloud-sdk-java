@@ -27,18 +27,11 @@ package com.jdcloud.sdk.service.waf.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * setDomainRegionReq
+ * listBotFakeSpiderRuleReq
  */
-public class SetDomainRegionReq  implements java.io.Serializable {
+public class ListBotFakeSpiderRuleReq  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 地域，多个以逗号分隔
-     * Required:true
-     */
-    @Required
-    private String region;
 
     /**
      * 域名
@@ -48,28 +41,15 @@ public class SetDomainRegionReq  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 是否国密
+     * 页面大小，默认20
      */
-    private Integer isGm;
-
-
-    /**
-     * get 地域，多个以逗号分隔
-     *
-     * @return
-     */
-    public String getRegion() {
-        return region;
-    }
+    private Integer pageSize;
 
     /**
-     * set 地域，多个以逗号分隔
-     *
-     * @param region
+     * 页码，默认1
      */
-    public void setRegion(String region) {
-        this.region = region;
-    }
+    private Integer pageIndex;
+
 
     /**
      * get 域名
@@ -90,51 +70,69 @@ public class SetDomainRegionReq  implements java.io.Serializable {
     }
 
     /**
-     * get 是否国密
+     * get 页面大小，默认20
      *
      * @return
      */
-    public Integer getIsGm() {
-        return isGm;
+    public Integer getPageSize() {
+        return pageSize;
     }
 
     /**
-     * set 是否国密
+     * set 页面大小，默认20
      *
-     * @param isGm
+     * @param pageSize
      */
-    public void setIsGm(Integer isGm) {
-        this.isGm = isGm;
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
-
 
     /**
-     * set 地域，多个以逗号分隔
+     * get 页码，默认1
      *
-     * @param region
+     * @return
      */
-    public SetDomainRegionReq region(String region) {
-        this.region = region;
-        return this;
+    public Integer getPageIndex() {
+        return pageIndex;
     }
+
+    /**
+     * set 页码，默认1
+     *
+     * @param pageIndex
+     */
+    public void setPageIndex(Integer pageIndex) {
+        this.pageIndex = pageIndex;
+    }
+
 
     /**
      * set 域名
      *
      * @param domain
      */
-    public SetDomainRegionReq domain(String domain) {
+    public ListBotFakeSpiderRuleReq domain(String domain) {
         this.domain = domain;
         return this;
     }
 
     /**
-     * set 是否国密
+     * set 页面大小，默认20
      *
-     * @param isGm
+     * @param pageSize
      */
-    public SetDomainRegionReq isGm(Integer isGm) {
-        this.isGm = isGm;
+    public ListBotFakeSpiderRuleReq pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set 页码，默认1
+     *
+     * @param pageIndex
+     */
+    public ListBotFakeSpiderRuleReq pageIndex(Integer pageIndex) {
+        this.pageIndex = pageIndex;
         return this;
     }
 

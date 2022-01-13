@@ -24,37 +24,34 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
-import com.jdcloud.sdk.annotation.Required;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
- * getAvailableCertReq
+ * setUserPolicyDomainsReq
  */
-public class GetAvailableCertReq  implements java.io.Serializable {
+public class SetUserPolicyDomainsReq  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例id，代表要查询的WAF实例
-     * Required:true
+     * WAF实例id
      */
-    @Required
     private String wafInstanceId;
 
     /**
-     * 域名
-     * Required:true
+     * 自定义规则组id
      */
-    @Required
-    private String domain;
+    private Long id;
 
     /**
-     * 是否国密
+     * domains
      */
-    private Integer isGm;
+    private List<DomainActive> domains;
 
 
     /**
-     * get 实例id，代表要查询的WAF实例
+     * get WAF实例id
      *
      * @return
      */
@@ -63,7 +60,7 @@ public class GetAvailableCertReq  implements java.io.Serializable {
     }
 
     /**
-     * set 实例id，代表要查询的WAF实例
+     * set WAF实例id
      *
      * @param wafInstanceId
      */
@@ -72,71 +69,83 @@ public class GetAvailableCertReq  implements java.io.Serializable {
     }
 
     /**
-     * get 域名
+     * get 自定义规则组id
      *
      * @return
      */
-    public String getDomain() {
-        return domain;
+    public Long getId() {
+        return id;
     }
 
     /**
-     * set 域名
+     * set 自定义规则组id
      *
-     * @param domain
+     * @param id
      */
-    public void setDomain(String domain) {
-        this.domain = domain;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     /**
-     * get 是否国密
+     * get domains
      *
      * @return
      */
-    public Integer getIsGm() {
-        return isGm;
+    public List<DomainActive> getDomains() {
+        return domains;
     }
 
     /**
-     * set 是否国密
+     * set domains
      *
-     * @param isGm
+     * @param domains
      */
-    public void setIsGm(Integer isGm) {
-        this.isGm = isGm;
+    public void setDomains(List<DomainActive> domains) {
+        this.domains = domains;
     }
 
 
     /**
-     * set 实例id，代表要查询的WAF实例
+     * set WAF实例id
      *
      * @param wafInstanceId
      */
-    public GetAvailableCertReq wafInstanceId(String wafInstanceId) {
+    public SetUserPolicyDomainsReq wafInstanceId(String wafInstanceId) {
         this.wafInstanceId = wafInstanceId;
         return this;
     }
 
     /**
-     * set 域名
+     * set 自定义规则组id
      *
-     * @param domain
+     * @param id
      */
-    public GetAvailableCertReq domain(String domain) {
-        this.domain = domain;
+    public SetUserPolicyDomainsReq id(Long id) {
+        this.id = id;
         return this;
     }
 
     /**
-     * set 是否国密
+     * set domains
      *
-     * @param isGm
+     * @param domains
      */
-    public GetAvailableCertReq isGm(Integer isGm) {
-        this.isGm = isGm;
+    public SetUserPolicyDomainsReq domains(List<DomainActive> domains) {
+        this.domains = domains;
         return this;
     }
 
+
+    /**
+     * add item to domains
+     *
+     * @param domain
+     */
+    public void addDomain(DomainActive domain) {
+        if (this.domains == null) {
+            this.domains = new ArrayList<>();
+        }
+        this.domains.add(domain);
+    }
 
 }

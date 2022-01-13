@@ -70,6 +70,21 @@ public class DomainMainConfig  implements java.io.Serializable {
     private Integer httpStatus;
 
     /**
+     * https证书绑定状态
+     */
+    private Integer httpsCertUpdateStatus;
+
+    /**
+     * 国密https证书绑定状态
+     */
+    private Integer gmHttpsCertUpdateStatus;
+
+    /**
+     * 是否支持国密证书
+     */
+    private Integer gmCertSupport;
+
+    /**
      * 防护状态，0：关闭 1：开启
      */
     private AntiStatus antiStatus;
@@ -229,6 +244,60 @@ public class DomainMainConfig  implements java.io.Serializable {
      */
     public void setHttpStatus(Integer httpStatus) {
         this.httpStatus = httpStatus;
+    }
+
+    /**
+     * get https证书绑定状态
+     *
+     * @return
+     */
+    public Integer getHttpsCertUpdateStatus() {
+        return httpsCertUpdateStatus;
+    }
+
+    /**
+     * set https证书绑定状态
+     *
+     * @param httpsCertUpdateStatus
+     */
+    public void setHttpsCertUpdateStatus(Integer httpsCertUpdateStatus) {
+        this.httpsCertUpdateStatus = httpsCertUpdateStatus;
+    }
+
+    /**
+     * get 国密https证书绑定状态
+     *
+     * @return
+     */
+    public Integer getGmHttpsCertUpdateStatus() {
+        return gmHttpsCertUpdateStatus;
+    }
+
+    /**
+     * set 国密https证书绑定状态
+     *
+     * @param gmHttpsCertUpdateStatus
+     */
+    public void setGmHttpsCertUpdateStatus(Integer gmHttpsCertUpdateStatus) {
+        this.gmHttpsCertUpdateStatus = gmHttpsCertUpdateStatus;
+    }
+
+    /**
+     * get 是否支持国密证书
+     *
+     * @return
+     */
+    public Integer getGmCertSupport() {
+        return gmCertSupport;
+    }
+
+    /**
+     * set 是否支持国密证书
+     *
+     * @param gmCertSupport
+     */
+    public void setGmCertSupport(Integer gmCertSupport) {
+        this.gmCertSupport = gmCertSupport;
     }
 
     /**
@@ -425,6 +494,36 @@ public class DomainMainConfig  implements java.io.Serializable {
      */
     public DomainMainConfig httpStatus(Integer httpStatus) {
         this.httpStatus = httpStatus;
+        return this;
+    }
+
+    /**
+     * set https证书绑定状态
+     *
+     * @param httpsCertUpdateStatus
+     */
+    public DomainMainConfig httpsCertUpdateStatus(Integer httpsCertUpdateStatus) {
+        this.httpsCertUpdateStatus = httpsCertUpdateStatus;
+        return this;
+    }
+
+    /**
+     * set 国密https证书绑定状态
+     *
+     * @param gmHttpsCertUpdateStatus
+     */
+    public DomainMainConfig gmHttpsCertUpdateStatus(Integer gmHttpsCertUpdateStatus) {
+        this.gmHttpsCertUpdateStatus = gmHttpsCertUpdateStatus;
+        return this;
+    }
+
+    /**
+     * set 是否支持国密证书
+     *
+     * @param gmCertSupport
+     */
+    public DomainMainConfig gmCertSupport(Integer gmCertSupport) {
+        this.gmCertSupport = gmCertSupport;
         return this;
     }
 

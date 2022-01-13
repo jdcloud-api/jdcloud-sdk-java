@@ -34,7 +34,7 @@ public class BotMatchItem  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)
+     * 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)。 ruleType为evaluate时，对uri,cookie进行配置
      * Required:true
      */
     @Required
@@ -56,7 +56,7 @@ public class BotMatchItem  implements java.io.Serializable {
 
 
     /**
-     * get 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)
+     * get 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)。 ruleType为evaluate时，对uri,cookie进行配置
      *
      * @return
      */
@@ -65,7 +65,7 @@ public class BotMatchItem  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)
+     * set 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)。 ruleType为evaluate时，对uri,cookie进行配置
      *
      * @param field
      */
@@ -111,7 +111,7 @@ public class BotMatchItem  implements java.io.Serializable {
 
 
     /**
-     * set 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)
+     * set 匹配字段，ruleType为general时，可为ip,uri,user_agent,referer,cookie,Wday(格式:21,6 ;取值范围[0-6]]),Hour(格式:6,0 ;取值范围[0-23]) uri只能设置一个。ruleType为advanced时，可为fingerExist(是否存在),fingerValid(合法性)。 ruleType为evaluate时，对uri,cookie进行配置
      *
      * @param field
      */

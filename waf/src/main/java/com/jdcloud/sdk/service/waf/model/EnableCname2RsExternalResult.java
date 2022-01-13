@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Order
- * Order API
+ * Domain
+ * Domain API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,12 +24,12 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建waf实例
+ * cname解析到回源
  */
-public class CreateInstanceResponse extends JdcloudResponse<CreateInstanceResult> implements java.io.Serializable {
+public class EnableCname2RsExternalResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

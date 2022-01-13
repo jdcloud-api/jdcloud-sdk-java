@@ -24,51 +24,41 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
- * setDomainRegionReq
+ * domainActive
  */
-public class SetDomainRegionReq  implements java.io.Serializable {
+public class DomainActive  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域，多个以逗号分隔
-     * Required:true
+     * 0-未选择，1-选择
      */
-    @Required
-    private String region;
+    private Integer active;
 
     /**
      * 域名
-     * Required:true
      */
-    @Required
     private String domain;
 
-    /**
-     * 是否国密
-     */
-    private Integer isGm;
-
 
     /**
-     * get 地域，多个以逗号分隔
+     * get 0-未选择，1-选择
      *
      * @return
      */
-    public String getRegion() {
-        return region;
+    public Integer getActive() {
+        return active;
     }
 
     /**
-     * set 地域，多个以逗号分隔
+     * set 0-未选择，1-选择
      *
-     * @param region
+     * @param active
      */
-    public void setRegion(String region) {
-        this.region = region;
+    public void setActive(Integer active) {
+        this.active = active;
     }
 
     /**
@@ -89,32 +79,14 @@ public class SetDomainRegionReq  implements java.io.Serializable {
         this.domain = domain;
     }
 
-    /**
-     * get 是否国密
-     *
-     * @return
-     */
-    public Integer getIsGm() {
-        return isGm;
-    }
 
     /**
-     * set 是否国密
+     * set 0-未选择，1-选择
      *
-     * @param isGm
+     * @param active
      */
-    public void setIsGm(Integer isGm) {
-        this.isGm = isGm;
-    }
-
-
-    /**
-     * set 地域，多个以逗号分隔
-     *
-     * @param region
-     */
-    public SetDomainRegionReq region(String region) {
-        this.region = region;
+    public DomainActive active(Integer active) {
+        this.active = active;
         return this;
     }
 
@@ -123,18 +95,8 @@ public class SetDomainRegionReq  implements java.io.Serializable {
      *
      * @param domain
      */
-    public SetDomainRegionReq domain(String domain) {
+    public DomainActive domain(String domain) {
         this.domain = domain;
-        return this;
-    }
-
-    /**
-     * set 是否国密
-     *
-     * @param isGm
-     */
-    public SetDomainRegionReq isGm(Integer isGm) {
-        this.isGm = isGm;
         return this;
     }
 

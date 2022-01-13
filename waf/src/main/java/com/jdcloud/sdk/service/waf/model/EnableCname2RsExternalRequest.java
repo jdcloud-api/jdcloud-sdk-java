@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Order
- * Order API
+ * Domain
+ * Domain API
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -25,13 +25,13 @@
 package com.jdcloud.sdk.service.waf.model;
 
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.waf.model.OrderReq;
+import com.jdcloud.sdk.service.waf.model.ActiveFuncReq;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建waf实例
+ * cname解析到回源
  */
-public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
+public class EnableCname2RsExternalRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -40,7 +40,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
      * Required:true
      */
     @Required
-    private OrderReq req;
+    private ActiveFuncReq req;
 
     /**
      * 实例所属的地域ID
@@ -49,13 +49,20 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     @Required
     private String regionId;
 
+    /**
+     * 实例Id
+     * Required:true
+     */
+    @Required
+    private String wafInstanceId;
+
 
     /**
      * get 请求
      *
      * @return
      */
-    public OrderReq getReq() {
+    public ActiveFuncReq getReq() {
         return req;
     }
 
@@ -64,7 +71,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param req
      */
-    public void setReq(OrderReq req) {
+    public void setReq(ActiveFuncReq req) {
         this.req = req;
     }
 
@@ -86,13 +93,31 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
     }
 
+    /**
+     * get 实例Id
+     *
+     * @return
+     */
+    public String getWafInstanceId() {
+        return wafInstanceId;
+    }
+
+    /**
+     * set 实例Id
+     *
+     * @param wafInstanceId
+     */
+    public void setWafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
+    }
+
 
     /**
      * set 请求
      *
      * @param req
      */
-    public CreateInstanceRequest req(OrderReq req) {
+    public EnableCname2RsExternalRequest req(ActiveFuncReq req) {
         this.req = req;
         return this;
     }
@@ -102,8 +127,18 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
      *
      * @param regionId
      */
-    public CreateInstanceRequest regionId(String regionId) {
+    public EnableCname2RsExternalRequest regionId(String regionId) {
         this.regionId = regionId;
+        return this;
+    }
+
+    /**
+     * set 实例Id
+     *
+     * @param wafInstanceId
+     */
+    public EnableCname2RsExternalRequest wafInstanceId(String wafInstanceId) {
+        this.wafInstanceId = wafInstanceId;
         return this;
     }
 
