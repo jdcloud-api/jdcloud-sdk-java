@@ -26,9 +26,9 @@ package com.jdcloud.sdk.service.baseanti.model;
 
 
 /**
- * ipResource
+ * jDTIpResource
  */
-public class IpResource  implements java.io.Serializable {
+public class JDTIpResource  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -38,17 +38,8 @@ public class IpResource  implements java.io.Serializable {
     private String region;
 
     /**
-     * 公网 IP 类型或绑定资源类型. 
-&lt;br&gt;- 0: 未知类型
-&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)
-&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)
-&lt;br&gt;- 11: 云主机
-&lt;br&gt;- 12: 负载均衡
-&lt;br&gt;- 13: 原生容器实例
-&lt;br&gt;- 14: 原生容器 Pod
-&lt;br&gt;- 2: 云物理服务器公网 IP
-&lt;br&gt;- 3: Web应用防火墙公网 IP
-&lt;br&gt;- 4: 托管区公网 IP&quot;
+     * 公网 IP 类型
+&lt;br&gt;- 7: 京东科技公网 IP&quot;
 
      */
     private Integer resourceType;
@@ -118,17 +109,8 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * get 公网 IP 类型或绑定资源类型. 
-&lt;br&gt;- 0: 未知类型
-&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)
-&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)
-&lt;br&gt;- 11: 云主机
-&lt;br&gt;- 12: 负载均衡
-&lt;br&gt;- 13: 原生容器实例
-&lt;br&gt;- 14: 原生容器 Pod
-&lt;br&gt;- 2: 云物理服务器公网 IP
-&lt;br&gt;- 3: Web应用防火墙公网 IP
-&lt;br&gt;- 4: 托管区公网 IP&quot;
+     * get 公网 IP 类型
+&lt;br&gt;- 7: 京东科技公网 IP&quot;
 
      *
      * @return
@@ -138,17 +120,8 @@ public class IpResource  implements java.io.Serializable {
     }
 
     /**
-     * set 公网 IP 类型或绑定资源类型. 
-&lt;br&gt;- 0: 未知类型
-&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)
-&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)
-&lt;br&gt;- 11: 云主机
-&lt;br&gt;- 12: 负载均衡
-&lt;br&gt;- 13: 原生容器实例
-&lt;br&gt;- 14: 原生容器 Pod
-&lt;br&gt;- 2: 云物理服务器公网 IP
-&lt;br&gt;- 3: Web应用防火墙公网 IP
-&lt;br&gt;- 4: 托管区公网 IP&quot;
+     * set 公网 IP 类型
+&lt;br&gt;- 7: 京东科技公网 IP&quot;
 
      *
      * @param resourceType
@@ -325,28 +298,19 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param region
      */
-    public IpResource region(String region) {
+    public JDTIpResource region(String region) {
         this.region = region;
         return this;
     }
 
     /**
-     * set 公网 IP 类型或绑定资源类型. 
-&lt;br&gt;- 0: 未知类型
-&lt;br&gt;- 1: 弹性公网 IP(IP 为弹性公网 IP, 绑定资源类型未知)
-&lt;br&gt;- 10: 弹性公网 IP(IP 为弹性公网 IP, 但未绑定资源)
-&lt;br&gt;- 11: 云主机
-&lt;br&gt;- 12: 负载均衡
-&lt;br&gt;- 13: 原生容器实例
-&lt;br&gt;- 14: 原生容器 Pod
-&lt;br&gt;- 2: 云物理服务器公网 IP
-&lt;br&gt;- 3: Web应用防火墙公网 IP
-&lt;br&gt;- 4: 托管区公网 IP&quot;
+     * set 公网 IP 类型
+&lt;br&gt;- 7: 京东科技公网 IP&quot;
 
      *
      * @param resourceType
      */
-    public IpResource resourceType(Integer resourceType) {
+    public JDTIpResource resourceType(Integer resourceType) {
         this.resourceType = resourceType;
         return this;
     }
@@ -356,7 +320,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param ip
      */
-    public IpResource ip(String ip) {
+    public JDTIpResource ip(String ip) {
         this.ip = ip;
         return this;
     }
@@ -366,7 +330,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param bandwidth
      */
-    public IpResource bandwidth(Long bandwidth) {
+    public JDTIpResource bandwidth(Long bandwidth) {
         this.bandwidth = bandwidth;
         return this;
     }
@@ -376,7 +340,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param cleanThresholdBps
      */
-    public IpResource cleanThresholdBps(Long cleanThresholdBps) {
+    public JDTIpResource cleanThresholdBps(Long cleanThresholdBps) {
         this.cleanThresholdBps = cleanThresholdBps;
         return this;
     }
@@ -386,7 +350,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param cleanThresholdPps
      */
-    public IpResource cleanThresholdPps(Long cleanThresholdPps) {
+    public JDTIpResource cleanThresholdPps(Long cleanThresholdPps) {
         this.cleanThresholdPps = cleanThresholdPps;
         return this;
     }
@@ -396,7 +360,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param blackHoleThreshold
      */
-    public IpResource blackHoleThreshold(Long blackHoleThreshold) {
+    public JDTIpResource blackHoleThreshold(Long blackHoleThreshold) {
         this.blackHoleThreshold = blackHoleThreshold;
         return this;
     }
@@ -406,7 +370,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param instanceId
      */
-    public IpResource instanceId(String instanceId) {
+    public JDTIpResource instanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -416,7 +380,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param instanceName
      */
-    public IpResource instanceName(String instanceName) {
+    public JDTIpResource instanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
@@ -426,7 +390,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param instanceType
      */
-    public IpResource instanceType(Integer instanceType) {
+    public JDTIpResource instanceType(Integer instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -436,7 +400,7 @@ public class IpResource  implements java.io.Serializable {
      *
      * @param safeStatus
      */
-    public IpResource safeStatus(Integer safeStatus) {
+    public JDTIpResource safeStatus(Integer safeStatus) {
         this.safeStatus = safeStatus;
         return this;
     }

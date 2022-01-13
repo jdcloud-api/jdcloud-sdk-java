@@ -46,6 +46,11 @@ public class DescribeElasticIpResourcesRequest extends JdcloudRequest implements
     private Integer pageSize;
 
     /**
+     * IP 模糊匹配
+     */
+    private String ip;
+
+    /**
      * 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
      * Required:true
      */
@@ -90,6 +95,24 @@ public class DescribeElasticIpResourcesRequest extends JdcloudRequest implements
     }
 
     /**
+     * get IP 模糊匹配
+     *
+     * @return
+     */
+    public String getIp() {
+        return ip;
+    }
+
+    /**
+     * set IP 模糊匹配
+     *
+     * @param ip
+     */
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    /**
      * get 地域编码. 基础防护已支持华北-北京, 华东-宿迁, 华东-上海, 华南-广州
      *
      * @return
@@ -125,6 +148,16 @@ public class DescribeElasticIpResourcesRequest extends JdcloudRequest implements
      */
     public DescribeElasticIpResourcesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
+    }
+
+    /**
+     * set IP 模糊匹配
+     *
+     * @param ip
+     */
+    public DescribeElasticIpResourcesRequest ip(String ip) {
+        this.ip = ip;
         return this;
     }
 

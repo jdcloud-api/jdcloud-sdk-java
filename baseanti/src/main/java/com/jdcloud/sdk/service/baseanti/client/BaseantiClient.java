@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.baseanti.model.DescribeWafIpResourcesRequest;
+import com.jdcloud.sdk.service.baseanti.model.DescribeWafIpResourcesResponse;
+import com.jdcloud.sdk.service.baseanti.client.DescribeWafIpResourcesExecutor;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpSafetyInfoRequest;
 import com.jdcloud.sdk.service.baseanti.model.DescribeIpSafetyInfoResponse;
 import com.jdcloud.sdk.service.baseanti.client.DescribeIpSafetyInfoExecutor;
@@ -84,7 +87,7 @@ public class BaseantiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.4";
     public final static String DefaultEndpoint = "baseanti.jdcloud-api.com";
     public final static String ServiceName = "baseanti";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -125,6 +128,17 @@ public class BaseantiClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 查询基础防护已防护的Web应用防火墙 IP 的安全信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeWafIpResourcesResponse describeWafIpResources(DescribeWafIpResourcesRequest request) throws JdcloudSdkException {
+        return new DescribeWafIpResourcesExecutor().client(this).execute(request);
+    }
 
     /**
      * 查询基础防护已防护公网 IP 安全信息, 支持 ipv4 和 ipv6

@@ -28,10 +28,9 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询基础防护已防护的云物理服务器公网 IP 的安全信息. 包括云物理服务器的公网 IP 和弹性公网 IP.
-
+ * 查询基础防护已防护的Web应用防火墙 IP 的安全信息
  */
-public class DescribeCpsIpResourcesRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeWafIpResourcesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -136,7 +135,7 @@ public class DescribeCpsIpResourcesRequest extends JdcloudRequest implements jav
      *
      * @param pageNumber
      */
-    public DescribeCpsIpResourcesRequest pageNumber(Integer pageNumber) {
+    public DescribeWafIpResourcesRequest pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -146,7 +145,7 @@ public class DescribeCpsIpResourcesRequest extends JdcloudRequest implements jav
      *
      * @param pageSize
      */
-    public DescribeCpsIpResourcesRequest pageSize(Integer pageSize) {
+    public DescribeWafIpResourcesRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -156,7 +155,7 @@ public class DescribeCpsIpResourcesRequest extends JdcloudRequest implements jav
      *
      * @param ip
      */
-    public DescribeCpsIpResourcesRequest ip(String ip) {
+    public DescribeWafIpResourcesRequest ip(String ip) {
         this.ip = ip;
         return this;
     }
@@ -166,7 +165,7 @@ public class DescribeCpsIpResourcesRequest extends JdcloudRequest implements jav
      *
      * @param regionId
      */
-    public DescribeCpsIpResourcesRequest regionId(String regionId) {
+    public DescribeWafIpResourcesRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
