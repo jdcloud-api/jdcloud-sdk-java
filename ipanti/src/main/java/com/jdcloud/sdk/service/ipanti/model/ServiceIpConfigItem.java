@@ -26,9 +26,9 @@ package com.jdcloud.sdk.service.ipanti.model;
 
 
 /**
- * serviceIp
+ * serviceIpConfigItem
  */
-public class ServiceIp  implements java.io.Serializable {
+public class ServiceIpConfigItem  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -41,6 +41,11 @@ public class ServiceIp  implements java.io.Serializable {
      * 安全状态. &lt;br&gt;- SAFE: 安全&lt;br&gt;- CLEANING: 清洗中&lt;br&gt;- BLOCKING: 封禁中
      */
     private String securityStatus;
+
+    /**
+     * 使用状态, 1: 使用中, 0: 备用候选
+     */
+    private Integer useStatus;
 
 
     /**
@@ -79,13 +84,31 @@ public class ServiceIp  implements java.io.Serializable {
         this.securityStatus = securityStatus;
     }
 
+    /**
+     * get 使用状态, 1: 使用中, 0: 备用候选
+     *
+     * @return
+     */
+    public Integer getUseStatus() {
+        return useStatus;
+    }
+
+    /**
+     * set 使用状态, 1: 使用中, 0: 备用候选
+     *
+     * @param useStatus
+     */
+    public void setUseStatus(Integer useStatus) {
+        this.useStatus = useStatus;
+    }
+
 
     /**
      * set 高防IP
      *
      * @param serviceIp
      */
-    public ServiceIp serviceIp(String serviceIp) {
+    public ServiceIpConfigItem serviceIp(String serviceIp) {
         this.serviceIp = serviceIp;
         return this;
     }
@@ -95,8 +118,18 @@ public class ServiceIp  implements java.io.Serializable {
      *
      * @param securityStatus
      */
-    public ServiceIp securityStatus(String securityStatus) {
+    public ServiceIpConfigItem securityStatus(String securityStatus) {
         this.securityStatus = securityStatus;
+        return this;
+    }
+
+    /**
+     * set 使用状态, 1: 使用中, 0: 备用候选
+     *
+     * @param useStatus
+     */
+    public ServiceIpConfigItem useStatus(Integer useStatus) {
+        this.useStatus = useStatus;
         return this;
     }
 

@@ -43,9 +43,14 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     private String protocol;
 
     /**
-     * 高防 IP
+     * 高防 IP, serviceIps 为空时生效
      */
     private String serviceIp;
+
+    /**
+     * 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     */
+    private List<String> serviceIps;
 
     /**
      * 端口号, 取值范围[1, 65535]
@@ -110,7 +115,7 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 高防 IP
+     * get 高防 IP, serviceIps 为空时生效
      *
      * @return
      */
@@ -119,12 +124,30 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 高防 IP
+     * set 高防 IP, serviceIps 为空时生效
      *
      * @param serviceIp
      */
     public void setServiceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+    }
+
+    /**
+     * get 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     *
+     * @return
+     */
+    public List<String> getServiceIps() {
+        return serviceIps;
+    }
+
+    /**
+     * set 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     *
+     * @param serviceIps
+     */
+    public void setServiceIps(List<String> serviceIps) {
+        this.serviceIps = serviceIps;
     }
 
     /**
@@ -265,12 +288,22 @@ public class ForwardRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 高防 IP
+     * set 高防 IP, serviceIps 为空时生效
      *
      * @param serviceIp
      */
     public ForwardRuleSpec serviceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+        return this;
+    }
+
+    /**
+     * set 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     *
+     * @param serviceIps
+     */
+    public ForwardRuleSpec serviceIps(List<String> serviceIps) {
+        this.serviceIps = serviceIps;
         return this;
     }
 
@@ -344,6 +377,18 @@ public class ForwardRuleSpec  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 高防 IP 列表, 不为空时忽略 serviceIp, 传多个时后台会在高防IP封禁后随机切换其他未封禁的IP
+     *
+     * @param serviceIp
+     */
+    public void addServiceIp(String serviceIp) {
+        if (this.serviceIps == null) {
+            this.serviceIps = new ArrayList<>();
+        }
+        this.serviceIps.add(serviceIp);
+    }
 
     /**
      * add item to originAddr

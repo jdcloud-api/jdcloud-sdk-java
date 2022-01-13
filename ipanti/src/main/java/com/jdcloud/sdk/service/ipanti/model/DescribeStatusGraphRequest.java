@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Anti DDoS Pro Attack Log APIs
- * Anti DDoS Pro Attack Log APIs
+ * Anti DDoS Pro Flow APIs
+ * Anti DDoS Pro Flow APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,19 +30,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询各类型攻击次数
-参数 serviceIp 优先级大于 instanceId.
-- 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
-- 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
-- serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
-
+ * 高防返回客户端状态码报表
  */
-public class DescribeAttackTypeCountRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeStatusGraphRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * 开始时间, 只能查询最近 7 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      * Required:true
      */
     @Required
@@ -54,14 +49,14 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     private String endTime;
 
     /**
-     * 高防实例 ID
+     * 高防实例 Id 列表
      */
     private List<String> instanceId;
 
     /**
-     * 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     * 规则域名列表
      */
-    private List<String> serviceIp;
+    private List<String> subDomain;
 
     /**
      * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
@@ -72,7 +67,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
 
 
     /**
-     * get 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * get 开始时间, 只能查询最近 7 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @return
      */
@@ -81,7 +76,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 开始时间, 只能查询最近 7 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param startTime
      */
@@ -108,7 +103,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 高防实例 ID
+     * get 高防实例 Id 列表
      *
      * @return
      */
@@ -117,7 +112,7 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * set 高防实例 ID
+     * set 高防实例 Id 列表
      *
      * @param instanceId
      */
@@ -126,21 +121,21 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * get 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     * get 规则域名列表
      *
      * @return
      */
-    public List<String> getServiceIp() {
-        return serviceIp;
+    public List<String> getSubDomain() {
+        return subDomain;
     }
 
     /**
-     * set 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     * set 规则域名列表
      *
-     * @param serviceIp
+     * @param subDomain
      */
-    public void setServiceIp(List<String> serviceIp) {
-        this.serviceIp = serviceIp;
+    public void setSubDomain(List<String> subDomain) {
+        this.subDomain = subDomain;
     }
 
     /**
@@ -163,11 +158,11 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
 
 
     /**
-     * set 开始时间, 只能查询最近 90 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
+     * set 开始时间, 只能查询最近 7 天以内的数据, UTC 时间, 格式: yyyy-MM-dd&#39;T&#39;HH:mm:ssZ
      *
      * @param startTime
      */
-    public DescribeAttackTypeCountRequest startTime(String startTime) {
+    public DescribeStatusGraphRequest startTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -177,28 +172,28 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
      *
      * @param endTime
      */
-    public DescribeAttackTypeCountRequest endTime(String endTime) {
+    public DescribeStatusGraphRequest endTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
 
     /**
-     * set 高防实例 ID
+     * set 高防实例 Id 列表
      *
      * @param instanceId
      */
-    public DescribeAttackTypeCountRequest instanceId(List<String> instanceId) {
+    public DescribeStatusGraphRequest instanceId(List<String> instanceId) {
         this.instanceId = instanceId;
         return this;
     }
 
     /**
-     * set 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     * set 规则域名列表
      *
-     * @param serviceIp
+     * @param subDomain
      */
-    public DescribeAttackTypeCountRequest serviceIp(List<String> serviceIp) {
-        this.serviceIp = serviceIp;
+    public DescribeStatusGraphRequest subDomain(List<String> subDomain) {
+        this.subDomain = subDomain;
         return this;
     }
 
@@ -207,14 +202,14 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
      *
      * @param regionId
      */
-    public DescribeAttackTypeCountRequest regionId(String regionId) {
+    public DescribeStatusGraphRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
 
 
     /**
-     * add item to 高防实例 ID
+     * add item to 高防实例 Id 列表
      *
      * @param instanceId
      */
@@ -226,15 +221,15 @@ public class DescribeAttackTypeCountRequest extends JdcloudRequest implements ja
     }
 
     /**
-     * add item to 高防IP列表. &lt;br&gt;- 使用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/describeServiceIpList&#39;&gt;describeServiceIpList&lt;/a&gt; 接口查询实例的高防 IP
+     * add item to 规则域名列表
      *
-     * @param serviceIp
+     * @param subDomain
      */
-    public void addServiceIp(String serviceIp) {
-        if (this.serviceIp == null) {
-            this.serviceIp = new ArrayList<>();
+    public void addSubDomain(String subDomain) {
+        if (this.subDomain == null) {
+            this.subDomain = new ArrayList<>();
         }
-        this.serviceIp.add(serviceIp);
+        this.subDomain.add(subDomain);
     }
 
 }

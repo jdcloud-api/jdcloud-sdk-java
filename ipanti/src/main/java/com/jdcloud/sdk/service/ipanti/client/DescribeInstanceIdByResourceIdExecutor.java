@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Anti DDoS Pro Flow APIs
- * Anti DDoS Pro Flow APIs
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,17 +26,12 @@ package com.jdcloud.sdk.service.ipanti.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.ipanti.model.DescribeConnStatGraphResponse;
+import com.jdcloud.sdk.service.ipanti.model.DescribeInstanceIdByResourceIdResponse;
 
 /**
- * 新建与并发连接数统计报表        
-参数 serviceIp 优先级大于 instanceId.
-- 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
-- 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
-- serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
-
+ * 根据高防计费资源ID查询对应的实例Id, 调用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/createInstance&#39;&gt;createInstance&lt;/a&gt; 接口成功后，跟据message字段返回的计费资源Id查询对应的高防实例ID, 需要高防实例实际创建成功以后才可查询得到
  */
-class DescribeConnStatGraphExecutor extends JdcloudExecutor {
+class DescribeInstanceIdByResourceIdExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -45,11 +40,11 @@ class DescribeConnStatGraphExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/charts:connStatGraph";
+        return "/regions/{regionId}/describeInstanceIdByResourceId";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeConnStatGraphResponse.class;
+        return DescribeInstanceIdByResourceIdResponse.class;
     }
 }

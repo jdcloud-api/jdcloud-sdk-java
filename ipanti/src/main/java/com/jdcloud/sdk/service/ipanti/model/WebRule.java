@@ -60,9 +60,14 @@ public class WebRule  implements java.io.Serializable {
     private Integer cnameStatus;
 
     /**
-     * 高防 IP
+     * 该规则使用中的高防 IP
      */
     private String serviceIp;
+
+    /**
+     * 已配置的高防 IP 列表
+     */
+    private ServiceIpConfig serviceIpConfig;
 
     /**
      * protocol
@@ -120,24 +125,29 @@ public class WebRule  implements java.io.Serializable {
     private Integer httpCertStatus;
 
     /**
-     * 证书 Id
+     * 证书 Id, (废弃, 绑定证书信息通过 certs 字段查看)
      */
     private String certId;
 
     /**
-     * 证书名称
+     * 证书名称, (废弃, 绑定证书信息通过 certs 字段查看)
      */
     private String certName;
 
     /**
-     * 证书内容
+     * 证书内容, (废弃, 绑定证书信息通过 certs 字段查看)
      */
     private String httpsCertContent;
 
     /**
-     * 证书私钥
+     * 证书私钥, (废弃, 绑定证书信息通过 certs 字段查看)
      */
     private String httpsRsaKey;
+
+    /**
+     * 网站规则绑定证书信息
+     */
+    private List<Cert> bindCerts;
 
     /**
      * 是否开启 HTTPS 强制跳转, 当 protocol 为 HTTP_HTTPS 时可以配置该属性&lt;br&gt;- 0: 不强跳&lt;br&gt;- 1: 开启强跳
@@ -190,9 +200,14 @@ public class WebRule  implements java.io.Serializable {
     private List<String> sslProtocols;
 
     /**
-     * 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     * 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
      */
     private String suiteLevel;
+
+    /**
+     * 自定义加密套件等级, suiteLevel 为 custom 是有效
+     */
+    private List<String> userSuiteLevel;
 
     /**
      * 是否允许在 response 中插入 JS, 0: 关闭, 1: 开启
@@ -316,7 +331,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 高防 IP
+     * get 该规则使用中的高防 IP
      *
      * @return
      */
@@ -325,12 +340,30 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 高防 IP
+     * set 该规则使用中的高防 IP
      *
      * @param serviceIp
      */
     public void setServiceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+    }
+
+    /**
+     * get 已配置的高防 IP 列表
+     *
+     * @return
+     */
+    public ServiceIpConfig getServiceIpConfig() {
+        return serviceIpConfig;
+    }
+
+    /**
+     * set 已配置的高防 IP 列表
+     *
+     * @param serviceIpConfig
+     */
+    public void setServiceIpConfig(ServiceIpConfig serviceIpConfig) {
+        this.serviceIpConfig = serviceIpConfig;
     }
 
     /**
@@ -532,7 +565,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 证书 Id
+     * get 证书 Id, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @return
      */
@@ -541,7 +574,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书 Id
+     * set 证书 Id, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @param certId
      */
@@ -550,7 +583,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 证书名称
+     * get 证书名称, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @return
      */
@@ -559,7 +592,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书名称
+     * set 证书名称, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @param certName
      */
@@ -568,7 +601,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 证书内容
+     * get 证书内容, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @return
      */
@@ -577,7 +610,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书内容
+     * set 证书内容, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @param httpsCertContent
      */
@@ -586,7 +619,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 证书私钥
+     * get 证书私钥, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @return
      */
@@ -595,12 +628,30 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书私钥
+     * set 证书私钥, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @param httpsRsaKey
      */
     public void setHttpsRsaKey(String httpsRsaKey) {
         this.httpsRsaKey = httpsRsaKey;
+    }
+
+    /**
+     * get 网站规则绑定证书信息
+     *
+     * @return
+     */
+    public List<Cert> getBindCerts() {
+        return bindCerts;
+    }
+
+    /**
+     * set 网站规则绑定证书信息
+     *
+     * @param bindCerts
+     */
+    public void setBindCerts(List<Cert> bindCerts) {
+        this.bindCerts = bindCerts;
     }
 
     /**
@@ -784,7 +835,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * get 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     * get 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
      *
      * @return
      */
@@ -793,12 +844,30 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
      *
      * @param suiteLevel
      */
     public void setSuiteLevel(String suiteLevel) {
         this.suiteLevel = suiteLevel;
+    }
+
+    /**
+     * get 自定义加密套件等级, suiteLevel 为 custom 是有效
+     *
+     * @return
+     */
+    public List<String> getUserSuiteLevel() {
+        return userSuiteLevel;
+    }
+
+    /**
+     * set 自定义加密套件等级, suiteLevel 为 custom 是有效
+     *
+     * @param userSuiteLevel
+     */
+    public void setUserSuiteLevel(List<String> userSuiteLevel) {
+        this.userSuiteLevel = userSuiteLevel;
     }
 
     /**
@@ -961,12 +1030,22 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 高防 IP
+     * set 该规则使用中的高防 IP
      *
      * @param serviceIp
      */
     public WebRule serviceIp(String serviceIp) {
         this.serviceIp = serviceIp;
+        return this;
+    }
+
+    /**
+     * set 已配置的高防 IP 列表
+     *
+     * @param serviceIpConfig
+     */
+    public WebRule serviceIpConfig(ServiceIpConfig serviceIpConfig) {
+        this.serviceIpConfig = serviceIpConfig;
         return this;
     }
 
@@ -1081,7 +1160,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书 Id
+     * set 证书 Id, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @param certId
      */
@@ -1091,7 +1170,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书名称
+     * set 证书名称, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @param certName
      */
@@ -1101,7 +1180,7 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书内容
+     * set 证书内容, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @param httpsCertContent
      */
@@ -1111,12 +1190,22 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 证书私钥
+     * set 证书私钥, (废弃, 绑定证书信息通过 certs 字段查看)
      *
      * @param httpsRsaKey
      */
     public WebRule httpsRsaKey(String httpsRsaKey) {
         this.httpsRsaKey = httpsRsaKey;
+        return this;
+    }
+
+    /**
+     * set 网站规则绑定证书信息
+     *
+     * @param bindCerts
+     */
+    public WebRule bindCerts(List<Cert> bindCerts) {
+        this.bindCerts = bindCerts;
         return this;
     }
 
@@ -1221,12 +1310,22 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
-     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级
+     * set 加密套件等级, protocol 选项开启 https 时生效, 可取值&lt;br&gt;- low: 低级&lt;br&gt;- middle: 中级&lt;br&gt;- high：高级&lt;br&gt;- custom：自定义
      *
      * @param suiteLevel
      */
     public WebRule suiteLevel(String suiteLevel) {
         this.suiteLevel = suiteLevel;
+        return this;
+    }
+
+    /**
+     * set 自定义加密套件等级, suiteLevel 为 custom 是有效
+     *
+     * @param userSuiteLevel
+     */
+    public WebRule userSuiteLevel(List<String> userSuiteLevel) {
+        this.userSuiteLevel = userSuiteLevel;
         return this;
     }
 
@@ -1340,6 +1439,18 @@ public class WebRule  implements java.io.Serializable {
     }
 
     /**
+     * add item to 网站规则绑定证书信息
+     *
+     * @param bindCert
+     */
+    public void addBindCert(Cert bindCert) {
+        if (this.bindCerts == null) {
+            this.bindCerts = new ArrayList<>();
+        }
+        this.bindCerts.add(bindCert);
+    }
+
+    /**
      * add item to 按区域分流回源配置
      *
      * @param geoRsRoute
@@ -1361,6 +1472,18 @@ public class WebRule  implements java.io.Serializable {
             this.sslProtocols = new ArrayList<>();
         }
         this.sslProtocols.add(sslProtocol);
+    }
+
+    /**
+     * add item to 自定义加密套件等级, suiteLevel 为 custom 是有效
+     *
+     * @param userSuiteLevel
+     */
+    public void addUserSuiteLevel(String userSuiteLevel) {
+        if (this.userSuiteLevel == null) {
+            this.userSuiteLevel = new ArrayList<>();
+        }
+        this.userSuiteLevel.add(userSuiteLevel);
     }
 
 }

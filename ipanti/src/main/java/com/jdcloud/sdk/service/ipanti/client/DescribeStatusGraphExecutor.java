@@ -26,17 +26,12 @@ package com.jdcloud.sdk.service.ipanti.client;
 
 import com.jdcloud.sdk.client.JdcloudExecutor;
 import com.jdcloud.sdk.service.JdcloudResponse;
-import com.jdcloud.sdk.service.ipanti.model.DescribeConnStatGraphResponse;
+import com.jdcloud.sdk.service.ipanti.model.DescribeStatusGraphResponse;
 
 /**
- * 新建与并发连接数统计报表        
-参数 serviceIp 优先级大于 instanceId.
-- 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
-- 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
-- serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
-
+ * 高防返回客户端状态码报表
  */
-class DescribeConnStatGraphExecutor extends JdcloudExecutor {
+class DescribeStatusGraphExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
@@ -45,11 +40,11 @@ class DescribeConnStatGraphExecutor extends JdcloudExecutor {
 
     @Override
     public String url() {
-        return "/regions/{regionId}/charts:connStatGraph";
+        return "/regions/{regionId}/charts:statusGraph";
     }
 
     @Override
     public Class<? extends JdcloudResponse> returnType() {
-        return DescribeConnStatGraphResponse.class;
+        return DescribeStatusGraphResponse.class;
     }
 }

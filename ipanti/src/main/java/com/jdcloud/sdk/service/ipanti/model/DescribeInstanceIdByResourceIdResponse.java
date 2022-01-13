@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Anti DDoS Pro Attack Log APIs
- * Anti DDoS Pro Attack Log APIs
+ * Anti DDos Pro Instance APIs
+ * Anti DDos Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,15 +27,9 @@ package com.jdcloud.sdk.service.ipanti.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询攻击次数及流量峰值
-参数 serviceIp 优先级大于 instanceId.
-- 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
-- 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
-- serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
-CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
-
+ * 根据高防计费资源ID查询对应的实例Id, 调用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/createInstance&#39;&gt;createInstance&lt;/a&gt; 接口成功后，跟据message字段返回的计费资源Id查询对应的高防实例ID, 需要高防实例实际创建成功以后才可查询得到
  */
-public class DescribeAttackStatisticsResponse extends JdcloudResponse<DescribeAttackStatisticsResult> implements java.io.Serializable {
+public class DescribeInstanceIdByResourceIdResponse extends JdcloudResponse<DescribeInstanceIdByResourceIdResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.ipanti.model.DescribeStatusGraphRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeStatusGraphResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeStatusGraphExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyEPBRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyEPBResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyEPBExecutor;
@@ -379,6 +382,9 @@ import com.jdcloud.sdk.service.ipanti.client.CreateDispatchRuleExecutor;
 import com.jdcloud.sdk.service.ipanti.model.DisableBlackListRuleOfForwardRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.DisableBlackListRuleOfForwardRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.DisableBlackListRuleOfForwardRuleExecutor;
+import com.jdcloud.sdk.service.ipanti.model.DescribeInstanceIdByResourceIdRequest;
+import com.jdcloud.sdk.service.ipanti.model.DescribeInstanceIdByResourceIdResponse;
+import com.jdcloud.sdk.service.ipanti.client.DescribeInstanceIdByResourceIdExecutor;
 import com.jdcloud.sdk.service.ipanti.model.ModifyCCProtectionConfigOfWebRuleRequest;
 import com.jdcloud.sdk.service.ipanti.model.ModifyCCProtectionConfigOfWebRuleResponse;
 import com.jdcloud.sdk.service.ipanti.client.ModifyCCProtectionConfigOfWebRuleExecutor;
@@ -420,7 +426,7 @@ public class IpantiClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.4";
     public final static String DefaultEndpoint = "ipanti.jdcloud-api.com";
     public final static String ServiceName = "ipanti";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -461,6 +467,17 @@ public class IpantiClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 高防返回客户端状态码报表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeStatusGraphResponse describeStatusGraph(DescribeStatusGraphRequest request) throws JdcloudSdkException {
+        return new DescribeStatusGraphExecutor().client(this).execute(request);
+    }
 
     /**
      * 更新实例弹性防护带宽
@@ -741,6 +758,11 @@ public class IpantiClient extends JdcloudClient {
 
     /**
      * 查询高防IP的 DDoS 攻击日志, 仅BGP实例返回的是IP级别的攻击记录, 非BGP实例返回的仍是实例级别的攻击记录(serviceIp 字段为空)
+参数 serviceIp 优先级大于 instanceId.
+- 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录.
+- 未指定 serviceIp 时, 查询 instanceId 指定实例相关攻击记录.
+- serviceIp 和 instanceId 均未指定时, 查询用户所有攻击记录
+
      *
      * @param request
      * @return
@@ -906,6 +928,12 @@ public class IpantiClient extends JdcloudClient {
 
     /**
      * 查询攻击次数及流量峰值
+参数 serviceIp 优先级大于 instanceId.
+- 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+- 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+- serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+CC攻击为实例级别, 查询类型 type 为 cc 时, 参数 serviceIp 无效
+
      *
      * @param request
      * @return
@@ -1401,6 +1429,11 @@ public class IpantiClient extends JdcloudClient {
 
     /**
      * 查询各类型攻击次数
+参数 serviceIp 优先级大于 instanceId.
+- 指定 serviceIp 参数时, 忽略 instanceId 参数, 统计 ip 相关攻击
+- 未指定 serviceIp 时, 统计 instanceId 指定实例相关攻击
+- serviceIp 和 instanceId 均未指定时, 统计用户所有攻击记录
+
      *
      * @param request
      * @return
@@ -1631,7 +1664,12 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 新建与并发连接数统计报表
+     * 新建与并发连接数统计报表        
+参数 serviceIp 优先级大于 instanceId.
+- 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+- 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+- serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+
      *
      * @param request
      * @return
@@ -1709,6 +1747,11 @@ public class IpantiClient extends JdcloudClient {
 
     /**
      * DDos 防护流量报表
+参数 serviceIp 优先级大于 instanceId.
+- 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+- 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+- serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+
      *
      * @param request
      * @return
@@ -1738,6 +1781,17 @@ public class IpantiClient extends JdcloudClient {
      */
     public DisableBlackListRuleOfForwardRuleResponse disableBlackListRuleOfForwardRule(DisableBlackListRuleOfForwardRuleRequest request) throws JdcloudSdkException {
         return new DisableBlackListRuleOfForwardRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据高防计费资源ID查询对应的实例Id, 调用 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-pro/api/createInstance&#39;&gt;createInstance&lt;/a&gt; 接口成功后，跟据message字段返回的计费资源Id查询对应的高防实例ID, 需要高防实例实际创建成功以后才可查询得到
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeInstanceIdByResourceIdResponse describeInstanceIdByResourceId(DescribeInstanceIdByResourceIdRequest request) throws JdcloudSdkException {
+        return new DescribeInstanceIdByResourceIdExecutor().client(this).execute(request);
     }
 
     /**
@@ -1840,7 +1894,12 @@ public class IpantiClient extends JdcloudClient {
     }
 
     /**
-     * 业务流量报表
+     * 业务流量报表        
+参数 serviceIp 优先级大于 instanceId.
+- 指定 serviceIp 参数时, 忽略 instanceId 参数, 查询 ip 相关报表
+- 未指定 serviceIp 时, 查询 instanceId 指定实例相关报表
+- serviceIp 和 instanceId 均未指定时, 查询用户所有实例报表
+
      *
      * @param request
      * @return
