@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.ydsms.client.OpenServiceUsingPOSTExecutor;
 import com.jdcloud.sdk.service.ydsms.model.ModifyStatusUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.ModifyStatusUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.ModifyStatusUsingGETExecutor;
+import com.jdcloud.sdk.service.ydsms.model.SendMessagesByEncPinUsingPOSTRequest;
+import com.jdcloud.sdk.service.ydsms.model.SendMessagesByEncPinUsingPOSTResponse;
+import com.jdcloud.sdk.service.ydsms.client.SendMessagesByEncPinUsingPOSTExecutor;
 import com.jdcloud.sdk.service.ydsms.model.QuerySecretKeyUsingGETRequest;
 import com.jdcloud.sdk.service.ydsms.model.QuerySecretKeyUsingGETResponse;
 import com.jdcloud.sdk.service.ydsms.client.QuerySecretKeyUsingGETExecutor;
@@ -156,7 +159,7 @@ public class YdsmsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.4";
     public final static String DefaultEndpoint = "ydsms.jdcloud-api.com";
     public final static String ServiceName = "ydsms";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -229,6 +232,17 @@ public class YdsmsClient extends JdcloudClient {
      */
     public ModifyStatusUsingGETResponse modifyStatusUsingGET(ModifyStatusUsingGETRequest request) throws JdcloudSdkException {
         return new ModifyStatusUsingGETExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据加密pin发送短信
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SendMessagesByEncPinUsingPOSTResponse sendMessagesByEncPinUsingPOST(SendMessagesByEncPinUsingPOSTRequest request) throws JdcloudSdkException {
+        return new SendMessagesByEncPinUsingPOSTExecutor().client(this).execute(request);
     }
 
     /**
