@@ -41,11 +41,18 @@ public class ProtectedObjectsSpec  implements java.io.Serializable {
     private Boolean eip;
 
     /**
-     * 是否防护云物理服务器
+     * 是否防护云物理服务器公网 IP
      * Required:true
      */
     @Required
     private Boolean cps;
+
+    /**
+     * 是否防护托管区公网 IP
+     * Required:true
+     */
+    @Required
+    private Boolean ccs;
 
 
     /**
@@ -67,7 +74,7 @@ public class ProtectedObjectsSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否防护云物理服务器
+     * get 是否防护云物理服务器公网 IP
      *
      * @return
      */
@@ -76,12 +83,30 @@ public class ProtectedObjectsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否防护云物理服务器
+     * set 是否防护云物理服务器公网 IP
      *
      * @param cps
      */
     public void setCps(Boolean cps) {
         this.cps = cps;
+    }
+
+    /**
+     * get 是否防护托管区公网 IP
+     *
+     * @return
+     */
+    public Boolean getCcs() {
+        return ccs;
+    }
+
+    /**
+     * set 是否防护托管区公网 IP
+     *
+     * @param ccs
+     */
+    public void setCcs(Boolean ccs) {
+        this.ccs = ccs;
     }
 
 
@@ -96,12 +121,22 @@ public class ProtectedObjectsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否防护云物理服务器
+     * set 是否防护云物理服务器公网 IP
      *
      * @param cps
      */
     public ProtectedObjectsSpec cps(Boolean cps) {
         this.cps = cps;
+        return this;
+    }
+
+    /**
+     * set 是否防护托管区公网 IP
+     *
+     * @param ccs
+     */
+    public ProtectedObjectsSpec ccs(Boolean ccs) {
+        this.ccs = ccs;
         return this;
     }
 

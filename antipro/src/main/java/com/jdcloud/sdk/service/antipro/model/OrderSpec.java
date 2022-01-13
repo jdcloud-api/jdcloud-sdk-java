@@ -34,7 +34,7 @@ public class OrderSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 操作类型 1: 新购防护包, 3: 升级防护包
+     * 操作类型.&lt;br&gt;- 1: 新购防护包&lt;br&gt;- 3: 升级防护包
      * Required:true
      */
     @Required
@@ -46,14 +46,12 @@ public class OrderSpec  implements java.io.Serializable {
     private String id;
 
     /**
-     * 防护包实例名称, 新购防护包时必传
-长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-
+     * 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
      */
     private String name;
 
     /**
-     * 套餐类型, 1: 独享 IP, 2: 共享 IP
+     * 套餐类型.&lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      * Required:true
      */
     @Required
@@ -71,28 +69,22 @@ public class OrderSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private Integer bp;
+    private Integer bpGbps;
 
     /**
      * 弹性带宽: 0, 10, 20, 单位: Gbps
      * Required:true
      */
     @Required
-    private Integer ep;
+    private Integer epGbps;
 
     /**
-     * 购买防护包时长, 新购防护包时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      */
     private Integer timeSpan;
 
     /**
-     * 购买时长类型, 新购防护包时必传
-- 3: 月
-- 4: 年
-
+     * 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      */
     private Integer timeUnit;
 
@@ -105,7 +97,7 @@ public class OrderSpec  implements java.io.Serializable {
 
 
     /**
-     * get 操作类型 1: 新购防护包, 3: 升级防护包
+     * get 操作类型.&lt;br&gt;- 1: 新购防护包&lt;br&gt;- 3: 升级防护包
      *
      * @return
      */
@@ -114,7 +106,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 操作类型 1: 新购防护包, 3: 升级防护包
+     * set 操作类型.&lt;br&gt;- 1: 新购防护包&lt;br&gt;- 3: 升级防护包
      *
      * @param buyType
      */
@@ -141,9 +133,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 防护包实例名称, 新购防护包时必传
-长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-
+     * get 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
      *
      * @return
      */
@@ -152,9 +142,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 防护包实例名称, 新购防护包时必传
-长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-
+     * set 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
      *
      * @param name
      */
@@ -163,7 +151,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 套餐类型, 1: 独享 IP, 2: 共享 IP
+     * get 套餐类型.&lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @return
      */
@@ -172,7 +160,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型, 1: 独享 IP, 2: 共享 IP
+     * set 套餐类型.&lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @param pkgType
      */
@@ -203,17 +191,17 @@ public class OrderSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getBp() {
-        return bp;
+    public Integer getBpGbps() {
+        return bpGbps;
     }
 
     /**
      * set 保底带宽: 10, 20, 30, 50, 单位: Gbps
      *
-     * @param bp
+     * @param bpGbps
      */
-    public void setBp(Integer bp) {
-        this.bp = bp;
+    public void setBpGbps(Integer bpGbps) {
+        this.bpGbps = bpGbps;
     }
 
     /**
@@ -221,24 +209,21 @@ public class OrderSpec  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getEp() {
-        return ep;
+    public Integer getEpGbps() {
+        return epGbps;
     }
 
     /**
      * set 弹性带宽: 0, 10, 20, 单位: Gbps
      *
-     * @param ep
+     * @param epGbps
      */
-    public void setEp(Integer ep) {
-        this.ep = ep;
+    public void setEpGbps(Integer epGbps) {
+        this.epGbps = epGbps;
     }
 
     /**
-     * get 购买防护包时长, 新购防护包时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * get 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @return
      */
@@ -247,10 +232,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买防护包时长, 新购防护包时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * set 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @param timeSpan
      */
@@ -259,10 +241,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 购买时长类型, 新购防护包时必传
-- 3: 月
-- 4: 年
-
+     * get 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @return
      */
@@ -271,10 +250,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买时长类型, 新购防护包时必传
-- 3: 月
-- 4: 年
-
+     * set 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @param timeUnit
      */
@@ -302,7 +278,7 @@ public class OrderSpec  implements java.io.Serializable {
 
 
     /**
-     * set 操作类型 1: 新购防护包, 3: 升级防护包
+     * set 操作类型.&lt;br&gt;- 1: 新购防护包&lt;br&gt;- 3: 升级防护包
      *
      * @param buyType
      */
@@ -322,9 +298,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 防护包实例名称, 新购防护包时必传
-长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-
+     * set 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
      *
      * @param name
      */
@@ -334,7 +308,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型, 1: 独享 IP, 2: 共享 IP
+     * set 套餐类型.&lt;br&gt;- 1: 独享 IP&lt;br&gt;- 2: 共享 IP
      *
      * @param pkgType
      */
@@ -356,28 +330,25 @@ public class OrderSpec  implements java.io.Serializable {
     /**
      * set 保底带宽: 10, 20, 30, 50, 单位: Gbps
      *
-     * @param bp
+     * @param bpGbps
      */
-    public OrderSpec bp(Integer bp) {
-        this.bp = bp;
+    public OrderSpec bpGbps(Integer bpGbps) {
+        this.bpGbps = bpGbps;
         return this;
     }
 
     /**
      * set 弹性带宽: 0, 10, 20, 单位: Gbps
      *
-     * @param ep
+     * @param epGbps
      */
-    public OrderSpec ep(Integer ep) {
-        this.ep = ep;
+    public OrderSpec epGbps(Integer epGbps) {
+        this.epGbps = epGbps;
         return this;
     }
 
     /**
-     * set 购买防护包时长, 新购防护包时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * set 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @param timeSpan
      */
@@ -387,10 +358,7 @@ public class OrderSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买时长类型, 新购防护包时必传
-- 3: 月
-- 4: 年
-
+     * set 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @param timeUnit
      */

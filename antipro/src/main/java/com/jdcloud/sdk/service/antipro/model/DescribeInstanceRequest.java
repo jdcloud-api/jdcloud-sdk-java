@@ -35,7 +35,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 地域编码
+     * 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      * Required:true
      */
     @Required
@@ -50,7 +50,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 地域编码
+     * get 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */
@@ -87,7 +87,7 @@ public class DescribeInstanceRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 地域编码
+     * set 地域 Id, DDoS 防护包目前支持华北-北京, 华东-宿迁, 华东-上海
      *
      * @param regionId
      */

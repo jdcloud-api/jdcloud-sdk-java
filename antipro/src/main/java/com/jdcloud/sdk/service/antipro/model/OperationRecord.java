@@ -43,7 +43,7 @@ public class OperationRecord  implements java.io.Serializable {
     private String name;
 
     /**
-     * 操作类型:  1：套餐变更, 2：防护规则变更, 3：防护对象变更, 4：IP 地址变更, 5：防护包名称变更
+     * 操作类型.&lt;br&gt;- 1: 套餐变更&lt;br&gt;- 2: 防护规则变更&lt;br&gt;- 3: 防护对象变更&lt;br&gt;- 4: IP 地址变更&lt;br&gt;- 5: 防护包名称变更&lt;br&gt;- 6: IP地址库变更&lt;br&gt;- 7: 端口库变更&lt;br&gt;- 8: 访问控制规则变更
      */
     private Integer action;
 
@@ -95,7 +95,7 @@ public class OperationRecord  implements java.io.Serializable {
     }
 
     /**
-     * get 操作类型:  1：套餐变更, 2：防护规则变更, 3：防护对象变更, 4：IP 地址变更, 5：防护包名称变更
+     * get 操作类型.&lt;br&gt;- 1: 套餐变更&lt;br&gt;- 2: 防护规则变更&lt;br&gt;- 3: 防护对象变更&lt;br&gt;- 4: IP 地址变更&lt;br&gt;- 5: 防护包名称变更&lt;br&gt;- 6: IP地址库变更&lt;br&gt;- 7: 端口库变更&lt;br&gt;- 8: 访问控制规则变更
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class OperationRecord  implements java.io.Serializable {
     }
 
     /**
-     * set 操作类型:  1：套餐变更, 2：防护规则变更, 3：防护对象变更, 4：IP 地址变更, 5：防护包名称变更
+     * set 操作类型.&lt;br&gt;- 1: 套餐变更&lt;br&gt;- 2: 防护规则变更&lt;br&gt;- 3: 防护对象变更&lt;br&gt;- 4: IP 地址变更&lt;br&gt;- 5: 防护包名称变更&lt;br&gt;- 6: IP地址库变更&lt;br&gt;- 7: 端口库变更&lt;br&gt;- 8: 访问控制规则变更
      *
      * @param action
      */
@@ -170,7 +170,7 @@ public class OperationRecord  implements java.io.Serializable {
     }
 
     /**
-     * set 操作类型:  1：套餐变更, 2：防护规则变更, 3：防护对象变更, 4：IP 地址变更, 5：防护包名称变更
+     * set 操作类型.&lt;br&gt;- 1: 套餐变更&lt;br&gt;- 2: 防护规则变更&lt;br&gt;- 3: 防护对象变更&lt;br&gt;- 4: IP 地址变更&lt;br&gt;- 5: 防护包名称变更&lt;br&gt;- 6: IP地址库变更&lt;br&gt;- 7: 端口库变更&lt;br&gt;- 8: 访问控制规则变更
      *
      * @param action
      */

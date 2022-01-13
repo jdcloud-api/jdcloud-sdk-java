@@ -35,7 +35,7 @@ public class ProtectionRule  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 防护规则类型: 0: 默认防护包规则, 1: IP 自定义规则
+     * 防护规则类型. &lt;br&gt;- 0: 默认防护包规则&lt;br&gt;- 1: IP 自定义规则
      */
     private Integer type;
 
@@ -101,7 +101,7 @@ public class ProtectionRule  implements java.io.Serializable {
 
 
     /**
-     * get 防护规则类型: 0: 默认防护包规则, 1: IP 自定义规则
+     * get 防护规则类型. &lt;br&gt;- 0: 默认防护包规则&lt;br&gt;- 1: IP 自定义规则
      *
      * @return
      */
@@ -110,7 +110,7 @@ public class ProtectionRule  implements java.io.Serializable {
     }
 
     /**
-     * set 防护规则类型: 0: 默认防护包规则, 1: IP 自定义规则
+     * set 防护规则类型. &lt;br&gt;- 0: 默认防护包规则&lt;br&gt;- 1: IP 自定义规则
      *
      * @param type
      */
@@ -336,7 +336,7 @@ public class ProtectionRule  implements java.io.Serializable {
 
 
     /**
-     * set 防护规则类型: 0: 默认防护包规则, 1: IP 自定义规则
+     * set 防护规则类型. &lt;br&gt;- 0: 默认防护包规则&lt;br&gt;- 1: IP 自定义规则
      *
      * @param type
      */

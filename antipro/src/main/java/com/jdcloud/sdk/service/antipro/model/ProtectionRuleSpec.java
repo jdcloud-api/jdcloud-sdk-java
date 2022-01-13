@@ -90,8 +90,7 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
     private Long datagramRangeMax;
 
     /**
-     * geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-
+     * geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&#39;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      */
     private List<String> geoBlackList;
 
@@ -305,8 +304,7 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * get geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-
+     * get geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&#39;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      *
      * @return
      */
@@ -315,8 +313,7 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-
+     * set geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&#39;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      *
      * @param geoBlackList
      */
@@ -472,8 +469,7 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
     }
 
     /**
-     * set geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-
+     * set geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&#39;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      *
      * @param geoBlackList
      */
@@ -504,8 +500,7 @@ public class ProtectionRuleSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&quot;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&quot;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
-
+     * add item to geo 拦截地域编码列表. 查询 &lt;a href&#x3D;&#39;http://docs.jdcloud.com/anti-ddos-protection-package/api/describegeoareas&#39;&gt;describeGeoAreas&lt;/a&gt; 接口获取可设置的地域编码列表
      *
      * @param geoBlackList
      */

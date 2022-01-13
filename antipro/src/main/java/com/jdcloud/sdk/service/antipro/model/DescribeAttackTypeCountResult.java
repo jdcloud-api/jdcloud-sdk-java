@@ -30,11 +30,7 @@ import com.jdcloud.sdk.service.antipro.model.AttackTypeCount;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询各类型攻击次数, 参数 ip 优先级大于 instanceId
-  - 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录的各类型攻击次数
-  - 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录的各类型攻击次数
-  - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录的各类型攻击次数
-
+ * 查询各类型攻击次数, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录的各类型攻击次数&lt;br&gt;- 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录的各类型攻击次数&lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录的各类型攻击次数
  */
 public class DescribeAttackTypeCountResult extends JdcloudResult implements java.io.Serializable {
 

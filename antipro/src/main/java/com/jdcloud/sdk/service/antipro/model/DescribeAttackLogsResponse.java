@@ -27,11 +27,7 @@ package com.jdcloud.sdk.service.antipro.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询攻击记录, 参数 ip 优先级大于 instanceId
-  - 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录
-  - 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录
-  - ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录
-
+ * 查询攻击记录, 参数 ip 优先级大于 instanceId. &lt;br&gt;- 指定 ip 参数时, 忽略 instanceId 参数, 查询 ip 相关攻击记录. &lt;br&gt;- 未指定 ip 时, 查询 instanceId 指定实例相关攻击记录. &lt;br&gt;- ip 和 instanceId 均未指定时, 查询用户所有公网 IP 攻击记录
  */
 public class DescribeAttackLogsResponse extends JdcloudResponse<DescribeAttackLogsResult> implements java.io.Serializable {
 

@@ -34,9 +34,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 防护包实例名称, 新购防护包时必传
-长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-
+     * 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
      * Required:true
      */
     @Required
@@ -64,19 +62,14 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     private Integer epGbps;
 
     /**
-     * 购买防护包时长, 新购防护包时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      * Required:true
      */
     @Required
     private Integer timeSpan;
 
     /**
-     * 购买时长类型, 新购防护包时必传
-- 3: 月
-- 4: 年
+     * 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      * Required:true
      */
     @Required
@@ -84,9 +77,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * get 防护包实例名称, 新购防护包时必传
-长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-
+     * get 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
      *
      * @return
      */
@@ -95,9 +86,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 防护包实例名称, 新购防护包时必传
-长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-
+     * set 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
      *
      * @param name
      */
@@ -160,10 +149,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 购买防护包时长, 新购防护包时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * get 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @return
      */
@@ -172,10 +158,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买防护包时长, 新购防护包时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * set 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @param timeSpan
      */
@@ -184,9 +167,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 购买时长类型, 新购防护包时必传
-- 3: 月
-- 4: 年
+     * get 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @return
      */
@@ -195,9 +176,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买时长类型, 新购防护包时必传
-- 3: 月
-- 4: 年
+     * set 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @param timeUnit
      */
@@ -207,9 +186,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
 
 
     /**
-     * set 防护包实例名称, 新购防护包时必传
-长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
-
+     * set 防护包实例名称, 新购防护包时必传. 长度限制为 1-80 个字符, 只允许包含中文, 字母, 数字, -, ., /, _
      *
      * @param name
      */
@@ -249,10 +226,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买防护包时长, 新购防护包时必传
-- timeUnit 为 3 时, 可取值 1-9
-- timeUnit 为 4 时, 可取值 1-3
-
+     * set 购买防护包时长, 新购防护包时必传. &lt;br&gt;- timeUnit 为 3 时, 可取值 1-9&lt;br&gt;- timeUnit 为 4 时, 可取值 1-3
      *
      * @param timeSpan
      */
@@ -262,9 +236,7 @@ public class CreateInstanceSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 购买时长类型, 新购防护包时必传
-- 3: 月
-- 4: 年
+     * set 购买时长类型, 新购防护包时必传. &lt;br&gt;- 3: 月&lt;br&gt;- 4: 年
      *
      * @param timeUnit
      */
