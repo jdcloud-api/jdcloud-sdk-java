@@ -49,40 +49,7 @@ public class ModifyInstancePlacementResult extends JdcloudResult implements java
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 当前实例状态，可能为balancing或者操作前主机的状态
-     */
-    private String status;
 
-
-    /**
-     * get 当前实例状态，可能为balancing或者操作前主机的状态
-     *
-     * @return
-     */
-    public String getStatus() {
-        return status;
-    }
-
-    /**
-     * set 当前实例状态，可能为balancing或者操作前主机的状态
-     *
-     * @param status
-     */
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-
-    /**
-     * set 当前实例状态，可能为balancing或者操作前主机的状态
-     *
-     * @param status
-     */
-    public ModifyInstancePlacementResult status(String status) {
-        this.status = status;
-        return this;
-    }
 
 
 }

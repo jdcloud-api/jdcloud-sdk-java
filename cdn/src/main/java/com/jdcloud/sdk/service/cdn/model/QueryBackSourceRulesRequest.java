@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * IP资源查询相关接口
+ * 域名操作类接口
  * Openapi For JCLOUD cdn
  *
  * OpenAPI spec version: v1
@@ -24,16 +24,52 @@
 
 package com.jdcloud.sdk.service.cdn.model;
 
-import com.jdcloud.sdk.service.JdcloudResponse;
+import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询IP归属，适用于查询边缘节点，仅支持中国境内IP地址查询
+ * 查询回源改写批量配置
  */
-public class CheckWhetherIpBelongToJCloudResponse extends JdcloudResponse<CheckWhetherIpBelongToJCloudResult> implements java.io.Serializable {
+public class QueryBackSourceRulesRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 用户域名
+     * Required:true
+     */
+    @Required
+    private String domain;
 
+
+    /**
+     * get 用户域名
+     *
+     * @return
+     */
+    public String getDomain() {
+        return domain;
+    }
+
+    /**
+     * set 用户域名
+     *
+     * @param domain
+     */
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+
+    /**
+     * set 用户域名
+     *
+     * @param domain
+     */
+    public QueryBackSourceRulesRequest domain(String domain) {
+        this.domain = domain;
+        return this;
+    }
 
 
 }

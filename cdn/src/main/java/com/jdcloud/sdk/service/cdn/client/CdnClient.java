@@ -178,6 +178,9 @@ import com.jdcloud.sdk.service.cdn.client.QuerywafBlackRulesExecutor;
 import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenStreamRequest;
 import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenStreamResponse;
 import com.jdcloud.sdk.service.cdn.client.DeleteForbiddenStreamExecutor;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.ConfigBackSourceRulesExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetWafWhiteRuleSwitchRequest;
 import com.jdcloud.sdk.service.cdn.model.SetWafWhiteRuleSwitchResponse;
 import com.jdcloud.sdk.service.cdn.client.SetWafWhiteRuleSwitchExecutor;
@@ -523,6 +526,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryDdosGraphExecutor;
 import com.jdcloud.sdk.service.cdn.model.DeleteWafBlackRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.DeleteWafBlackRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.DeleteWafBlackRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryBackSourceRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryBackSourceRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryBackSourceRulesExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataWithGroupRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataWithGroupResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryJDBoxStatisticsDataWithGroupExecutor;
@@ -603,7 +609,7 @@ public class CdnClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.4";
+    public final static String ClientVersion = "1.2.7";
     public final static String DefaultEndpoint = "cdn.jdcloud-api.com";
     public final static String ServiceName = "cdn";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -1185,6 +1191,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 回源改写批量配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ConfigBackSourceRulesResponse configBackSourceRules(ConfigBackSourceRulesRequest request) throws JdcloudSdkException {
+        return new ConfigBackSourceRulesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置WAF白名单开关
      *
      * @param request
@@ -1251,7 +1268,7 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 获取所有上层节点的ip，仅支持中国境内上层节点IP地址查询
+     * 查询IP归属，适用于查询边缘节点，仅支持中国境内IP地址查询
      *
      * @param request
      * @return
@@ -2447,6 +2464,17 @@ public class CdnClient extends JdcloudClient {
      */
     public DeleteWafBlackRulesResponse deleteWafBlackRules(DeleteWafBlackRulesRequest request) throws JdcloudSdkException {
         return new DeleteWafBlackRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询回源改写批量配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryBackSourceRulesResponse queryBackSourceRules(QueryBackSourceRulesRequest request) throws JdcloudSdkException {
+        return new QueryBackSourceRulesExecutor().client(this).execute(request);
     }
 
     /**
