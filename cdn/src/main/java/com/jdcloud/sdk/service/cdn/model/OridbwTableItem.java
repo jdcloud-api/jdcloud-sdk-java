@@ -38,9 +38,9 @@ public class OridbwTableItem  implements java.io.Serializable {
     private String groupByname;
 
     /**
-     * domainTyep
+     * domainType
      */
-    private String domainTyep;
+    private String domainType;
 
     /**
      * oriflowPercent
@@ -107,21 +107,21 @@ public class OridbwTableItem  implements java.io.Serializable {
     }
 
     /**
-     * get domainTyep
+     * get domainType
      *
      * @return
      */
-    public String getDomainTyep() {
-        return domainTyep;
+    public String getDomainType() {
+        return domainType;
     }
 
     /**
-     * set domainTyep
+     * set domainType
      *
-     * @param domainTyep
+     * @param domainType
      */
-    public void setDomainTyep(String domainTyep) {
-        this.domainTyep = domainTyep;
+    public void setDomainType(String domainType) {
+        this.domainType = domainType;
     }
 
     /**
@@ -298,12 +298,12 @@ public class OridbwTableItem  implements java.io.Serializable {
     }
 
     /**
-     * set domainTyep
+     * set domainType
      *
-     * @param domainTyep
+     * @param domainType
      */
-    public OridbwTableItem domainTyep(String domainTyep) {
-        this.domainTyep = domainTyep;
+    public OridbwTableItem domainType(String domainType) {
+        this.domainType = domainType;
         return this;
     }
 
