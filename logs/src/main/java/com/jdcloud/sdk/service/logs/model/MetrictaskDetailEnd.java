@@ -38,9 +38,9 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     private String aggregate;
 
     /**
-     * cretedTime
+     * createdTime
      */
-    private String cretedTime;
+    private String createdTime;
 
     /**
      * 开启自定义单位
@@ -88,6 +88,16 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     private String name;
 
     /**
+     * 配置方式:枚举值 visual，sql；分别代表可视化配置及sql配置方式
+     */
+    private String settingType;
+
+    /**
+     * sqlSpec
+     */
+    private MetricTaskSqlSpec sqlSpec;
+
+    /**
      * 单位
      */
     private String unit;
@@ -117,21 +127,21 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     }
 
     /**
-     * get cretedTime
+     * get createdTime
      *
      * @return
      */
-    public String getCretedTime() {
-        return cretedTime;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
     /**
-     * set cretedTime
+     * set createdTime
      *
-     * @param cretedTime
+     * @param createdTime
      */
-    public void setCretedTime(String cretedTime) {
-        this.cretedTime = cretedTime;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
     /**
@@ -297,6 +307,42 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     }
 
     /**
+     * get 配置方式:枚举值 visual，sql；分别代表可视化配置及sql配置方式
+     *
+     * @return
+     */
+    public String getSettingType() {
+        return settingType;
+    }
+
+    /**
+     * set 配置方式:枚举值 visual，sql；分别代表可视化配置及sql配置方式
+     *
+     * @param settingType
+     */
+    public void setSettingType(String settingType) {
+        this.settingType = settingType;
+    }
+
+    /**
+     * get sqlSpec
+     *
+     * @return
+     */
+    public MetricTaskSqlSpec getSqlSpec() {
+        return sqlSpec;
+    }
+
+    /**
+     * set sqlSpec
+     *
+     * @param sqlSpec
+     */
+    public void setSqlSpec(MetricTaskSqlSpec sqlSpec) {
+        this.sqlSpec = sqlSpec;
+    }
+
+    /**
      * get 单位
      *
      * @return
@@ -344,12 +390,12 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
     }
 
     /**
-     * set cretedTime
+     * set createdTime
      *
-     * @param cretedTime
+     * @param createdTime
      */
-    public MetrictaskDetailEnd cretedTime(String cretedTime) {
-        this.cretedTime = cretedTime;
+    public MetrictaskDetailEnd createdTime(String createdTime) {
+        this.createdTime = createdTime;
         return this;
     }
 
@@ -440,6 +486,26 @@ public class MetrictaskDetailEnd  implements java.io.Serializable {
      */
     public MetrictaskDetailEnd name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 配置方式:枚举值 visual，sql；分别代表可视化配置及sql配置方式
+     *
+     * @param settingType
+     */
+    public MetrictaskDetailEnd settingType(String settingType) {
+        this.settingType = settingType;
+        return this;
+    }
+
+    /**
+     * set sqlSpec
+     *
+     * @param sqlSpec
+     */
+    public MetrictaskDetailEnd sqlSpec(MetricTaskSqlSpec sqlSpec) {
+        this.sqlSpec = sqlSpec;
         return this;
     }
 

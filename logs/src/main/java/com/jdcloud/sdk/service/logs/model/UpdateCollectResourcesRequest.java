@@ -45,7 +45,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
     private String action;
 
     /**
-     * 采集实例列表（系统日志存在上限限制20）
+     * 采集实例列表（系统日志存在上限限制）
      */
     private List<Resource> resources;
 
@@ -83,7 +83,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * get 采集实例列表（系统日志存在上限限制20）
+     * get 采集实例列表（系统日志存在上限限制）
      *
      * @return
      */
@@ -92,7 +92,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 采集实例列表（系统日志存在上限限制20）
+     * set 采集实例列表（系统日志存在上限限制）
      *
      * @param resources
      */
@@ -148,7 +148,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 采集实例列表（系统日志存在上限限制20）
+     * set 采集实例列表（系统日志存在上限限制）
      *
      * @param resources
      */
@@ -179,7 +179,7 @@ public class UpdateCollectResourcesRequest extends JdcloudRequest implements jav
 
 
     /**
-     * add item to 采集实例列表（系统日志存在上限限制20）
+     * add item to 采集实例列表（系统日志存在上限限制）
      *
      * @param resource
      */

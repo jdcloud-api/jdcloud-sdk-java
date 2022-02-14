@@ -36,10 +36,8 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 聚合函数,支持 count sum max min avg
-     * Required:true
+     * 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
      */
-    @Required
     private String aggregate;
 
     /**
@@ -50,10 +48,8 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     private List<String> content;
 
     /**
-     * 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）
-     * Required:true
+     * 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
      */
-    @Required
     private String dataField;
 
     /**
@@ -62,22 +58,33 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     private String filterContent;
 
     /**
-     * 是否打开过滤
-     * Required:true
+     * 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      */
-    @Required
     private String filterOpen;
 
     /**
-     * 过滤类型，只能是fulltext和 advance
-     * Required:true
+     * 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      */
-    @Required
     private String filterType;
+
+    /**
+     * 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
+     */
+    private String metric;
+
+    /**
+     * 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
+     */
+    private String settingType;
+
+    /**
+     * sqlSpec
+     */
+    private MetricTaskSqlSpec sqlSpec;
 
 
     /**
-     * get 聚合函数,支持 count sum max min avg
+     * get 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @return
      */
@@ -86,7 +93,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 聚合函数,支持 count sum max min avg
+     * set 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param aggregate
      */
@@ -113,7 +120,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）
+     * get 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @return
      */
@@ -122,7 +129,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）
+     * set 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param dataField
      */
@@ -149,7 +156,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否打开过滤
+     * get 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @return
      */
@@ -158,7 +165,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否打开过滤
+     * set 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param filterOpen
      */
@@ -167,7 +174,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 过滤类型，只能是fulltext和 advance
+     * get 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @return
      */
@@ -176,7 +183,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 过滤类型，只能是fulltext和 advance
+     * set 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param filterType
      */
@@ -184,9 +191,63 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
         this.filterType = filterType;
     }
 
+    /**
+     * get 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @return
+     */
+    public String getMetric() {
+        return metric;
+    }
 
     /**
-     * set 聚合函数,支持 count sum max min avg
+     * set 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @param metric
+     */
+    public void setMetric(String metric) {
+        this.metric = metric;
+    }
+
+    /**
+     * get 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
+     *
+     * @return
+     */
+    public String getSettingType() {
+        return settingType;
+    }
+
+    /**
+     * set 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
+     *
+     * @param settingType
+     */
+    public void setSettingType(String settingType) {
+        this.settingType = settingType;
+    }
+
+    /**
+     * get sqlSpec
+     *
+     * @return
+     */
+    public MetricTaskSqlSpec getSqlSpec() {
+        return sqlSpec;
+    }
+
+    /**
+     * set sqlSpec
+     *
+     * @param sqlSpec
+     */
+    public void setSqlSpec(MetricTaskSqlSpec sqlSpec) {
+        this.sqlSpec = sqlSpec;
+    }
+
+
+    /**
+     * set 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param aggregate
      */
@@ -206,7 +267,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）
+     * set 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param dataField
      */
@@ -226,7 +287,7 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否打开过滤
+     * set 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param filterOpen
      */
@@ -236,12 +297,42 @@ public class TestMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 过滤类型，只能是fulltext和 advance
+     * set 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param filterType
      */
     public TestMetricTaskSpec filterType(String filterType) {
         this.filterType = filterType;
+        return this;
+    }
+
+    /**
+     * set 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @param metric
+     */
+    public TestMetricTaskSpec metric(String metric) {
+        this.metric = metric;
+        return this;
+    }
+
+    /**
+     * set 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
+     *
+     * @param settingType
+     */
+    public TestMetricTaskSpec settingType(String settingType) {
+        this.settingType = settingType;
+        return this;
+    }
+
+    /**
+     * set sqlSpec
+     *
+     * @param sqlSpec
+     */
+    public TestMetricTaskSpec sqlSpec(MetricTaskSqlSpec sqlSpec) {
+        this.sqlSpec = sqlSpec;
         return this;
     }
 

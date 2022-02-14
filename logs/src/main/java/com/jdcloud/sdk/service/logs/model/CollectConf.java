@@ -50,6 +50,11 @@ public class CollectConf  implements java.io.Serializable {
     private List<String> filters;
 
     /**
+     * logsetUID 日志集UID
+     */
+    private String logsetUID;
+
+    /**
      * logtopicUID 日志主题UID
      */
     private String logtopicUID;
@@ -58,11 +63,6 @@ public class CollectConf  implements java.io.Serializable {
      * 采集文件路径，支持通配
      */
     private String path;
-
-    /**
-     * 用户 PIN
-     */
-    private String pin;
 
 
     /**
@@ -120,6 +120,24 @@ public class CollectConf  implements java.io.Serializable {
     }
 
     /**
+     * get logsetUID 日志集UID
+     *
+     * @return
+     */
+    public String getLogsetUID() {
+        return logsetUID;
+    }
+
+    /**
+     * set logsetUID 日志集UID
+     *
+     * @param logsetUID
+     */
+    public void setLogsetUID(String logsetUID) {
+        this.logsetUID = logsetUID;
+    }
+
+    /**
      * get logtopicUID 日志主题UID
      *
      * @return
@@ -155,24 +173,6 @@ public class CollectConf  implements java.io.Serializable {
         this.path = path;
     }
 
-    /**
-     * get 用户 PIN
-     *
-     * @return
-     */
-    public String getPin() {
-        return pin;
-    }
-
-    /**
-     * set 用户 PIN
-     *
-     * @param pin
-     */
-    public void setPin(String pin) {
-        this.pin = pin;
-    }
-
 
     /**
      * set collectTemplateUID
@@ -205,6 +205,16 @@ public class CollectConf  implements java.io.Serializable {
     }
 
     /**
+     * set logsetUID 日志集UID
+     *
+     * @param logsetUID
+     */
+    public CollectConf logsetUID(String logsetUID) {
+        this.logsetUID = logsetUID;
+        return this;
+    }
+
+    /**
      * set logtopicUID 日志主题UID
      *
      * @param logtopicUID
@@ -221,16 +231,6 @@ public class CollectConf  implements java.io.Serializable {
      */
     public CollectConf path(String path) {
         this.path = path;
-        return this;
-    }
-
-    /**
-     * set 用户 PIN
-     *
-     * @param pin
-     */
-    public CollectConf pin(String pin) {
-        this.pin = pin;
         return this;
     }
 

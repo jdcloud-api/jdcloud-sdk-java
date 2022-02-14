@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志搜索接口
+ * 日志扫描接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.logs.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.service.logs.model.SearchFields;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,6 +40,11 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
      * 结果条目 map[string]interface{} key包含:content,id,anchor
      */
     private List<Object> data;
+
+    /**
+     * searchFields
+     */
+    private SearchFields searchFields;
 
     /**
      * 总数
@@ -62,6 +68,24 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
      */
     public void setData(List<Object> data) {
         this.data = data;
+    }
+
+    /**
+     * get searchFields
+     *
+     * @return
+     */
+    public SearchFields getSearchFields() {
+        return searchFields;
+    }
+
+    /**
+     * set searchFields
+     *
+     * @param searchFields
+     */
+    public void setSearchFields(SearchFields searchFields) {
+        this.searchFields = searchFields;
     }
 
     /**
@@ -90,6 +114,16 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
      */
     public SearchResult data(List<Object> data) {
         this.data = data;
+        return this;
+    }
+
+    /**
+     * set searchFields
+     *
+     * @param searchFields
+     */
+    public SearchResult searchFields(SearchFields searchFields) {
+        this.searchFields = searchFields;
         return this;
     }
 
