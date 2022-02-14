@@ -50,6 +50,11 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
     private String name;
 
     /**
+     * 日志主题采集的日志类型
+     */
+    private String appName;
+
+    /**
      * 地域 Id
      * Required:true
      */
@@ -119,6 +124,24 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
     }
 
     /**
+     * get 日志主题采集的日志类型
+     *
+     * @return
+     */
+    public String getAppName() {
+        return appName;
+    }
+
+    /**
+     * set 日志主题采集的日志类型
+     *
+     * @param appName
+     */
+    public void setAppName(String appName) {
+        this.appName = appName;
+    }
+
+    /**
      * get 地域 Id
      *
      * @return
@@ -182,6 +205,16 @@ public class DescribeLogtopicsRequest extends JdcloudRequest implements java.io.
      */
     public DescribeLogtopicsRequest name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 日志主题采集的日志类型
+     *
+     * @param appName
+     */
+    public DescribeLogtopicsRequest appName(String appName) {
+        this.appName = appName;
         return this;
     }
 

@@ -54,6 +54,11 @@ public class CollectTempalteEnd  implements java.io.Serializable {
      */
     private String logPath;
 
+    /**
+     * 首行正则
+     */
+    private String regexpStr;
+
 
     /**
      * get 过滤器是否启用
@@ -127,6 +132,24 @@ public class CollectTempalteEnd  implements java.io.Serializable {
         this.logPath = logPath;
     }
 
+    /**
+     * get 首行正则
+     *
+     * @return
+     */
+    public String getRegexpStr() {
+        return regexpStr;
+    }
+
+    /**
+     * set 首行正则
+     *
+     * @param regexpStr
+     */
+    public void setRegexpStr(String regexpStr) {
+        this.regexpStr = regexpStr;
+    }
+
 
     /**
      * set 过滤器是否启用
@@ -165,6 +188,16 @@ public class CollectTempalteEnd  implements java.io.Serializable {
      */
     public CollectTempalteEnd logPath(String logPath) {
         this.logPath = logPath;
+        return this;
+    }
+
+    /**
+     * set 首行正则
+     *
+     * @param regexpStr
+     */
+    public CollectTempalteEnd regexpStr(String regexpStr) {
+        this.regexpStr = regexpStr;
         return this;
     }
 

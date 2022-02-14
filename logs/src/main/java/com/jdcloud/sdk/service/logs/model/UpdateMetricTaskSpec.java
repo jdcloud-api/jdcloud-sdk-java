@@ -34,6 +34,11 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
+     */
+    private String aggregate;
+
+    /**
      * 自定义单位
      * Required:true
      */
@@ -41,23 +46,29 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     private String customUnit;
 
     /**
+     * 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
+     */
+    private String dataField;
+
+    /**
      * 过滤语法，可以为空
      */
     private String filterContent;
 
     /**
-     * 是否打开过滤
-     * Required:true
+     * 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      */
-    @Required
     private String filterOpen;
 
     /**
-     * 过滤类型，只能是fulltext和 advance
-     * Required:true
+     * 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      */
-    @Required
     private String filterType;
+
+    /**
+     * 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
+     */
+    private String metric;
 
     /**
      * 监控任务名称,同一日志主题下唯一，支持中文 大小写英文字母 下划线 中划线 数字，且不超过32
@@ -67,12 +78,40 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     private String name;
 
     /**
+     * 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
+     */
+    private String settingType;
+
+    /**
+     * sqlSpec
+     */
+    private MetricTaskSqlSpec sqlSpec;
+
+    /**
      * 单位
      * Required:true
      */
     @Required
     private String unit;
 
+
+    /**
+     * get 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @return
+     */
+    public String getAggregate() {
+        return aggregate;
+    }
+
+    /**
+     * set 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @param aggregate
+     */
+    public void setAggregate(String aggregate) {
+        this.aggregate = aggregate;
+    }
 
     /**
      * get 自定义单位
@@ -90,6 +129,24 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
      */
     public void setCustomUnit(String customUnit) {
         this.customUnit = customUnit;
+    }
+
+    /**
+     * get 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @return
+     */
+    public String getDataField() {
+        return dataField;
+    }
+
+    /**
+     * set 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @param dataField
+     */
+    public void setDataField(String dataField) {
+        this.dataField = dataField;
     }
 
     /**
@@ -111,7 +168,7 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否打开过滤
+     * get 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @return
      */
@@ -120,7 +177,7 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否打开过滤
+     * set 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param filterOpen
      */
@@ -129,7 +186,7 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 过滤类型，只能是fulltext和 advance
+     * get 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @return
      */
@@ -138,12 +195,30 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 过滤类型，只能是fulltext和 advance
+     * set 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param filterType
      */
     public void setFilterType(String filterType) {
         this.filterType = filterType;
+    }
+
+    /**
+     * get 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @return
+     */
+    public String getMetric() {
+        return metric;
+    }
+
+    /**
+     * set 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @param metric
+     */
+    public void setMetric(String metric) {
+        this.metric = metric;
     }
 
     /**
@@ -162,6 +237,42 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * get 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
+     *
+     * @return
+     */
+    public String getSettingType() {
+        return settingType;
+    }
+
+    /**
+     * set 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
+     *
+     * @param settingType
+     */
+    public void setSettingType(String settingType) {
+        this.settingType = settingType;
+    }
+
+    /**
+     * get sqlSpec
+     *
+     * @return
+     */
+    public MetricTaskSqlSpec getSqlSpec() {
+        return sqlSpec;
+    }
+
+    /**
+     * set sqlSpec
+     *
+     * @param sqlSpec
+     */
+    public void setSqlSpec(MetricTaskSqlSpec sqlSpec) {
+        this.sqlSpec = sqlSpec;
     }
 
     /**
@@ -184,12 +295,32 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
 
 
     /**
+     * set 聚合函数,支持 count sum max min avg; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @param aggregate
+     */
+    public UpdateMetricTaskSpec aggregate(String aggregate) {
+        this.aggregate = aggregate;
+        return this;
+    }
+
+    /**
      * set 自定义单位
      *
      * @param customUnit
      */
     public UpdateMetricTaskSpec customUnit(String customUnit) {
         this.customUnit = customUnit;
+        return this;
+    }
+
+    /**
+     * set 查询字段,支持 英文字母 数字 下划线 中划线 点（中文日志原文和各产品线的key）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @param dataField
+     */
+    public UpdateMetricTaskSpec dataField(String dataField) {
+        this.dataField = dataField;
         return this;
     }
 
@@ -204,7 +335,7 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否打开过滤
+     * set 是否打开过滤; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param filterOpen
      */
@@ -214,12 +345,22 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 过滤类型，只能是fulltext和 advance
+     * set 过滤类型，只能是fulltext和 advance; 配置方式(SettingType) 为 空或visual 时，必填；
      *
      * @param filterType
      */
     public UpdateMetricTaskSpec filterType(String filterType) {
         this.filterType = filterType;
+        return this;
+    }
+
+    /**
+     * set 监控项 , 支持大小写英文字母 下划线 数字 点，且不超过255byte（不支持中划线）; 配置方式(SettingType) 为 空或visual 时，必填；
+     *
+     * @param metric
+     */
+    public UpdateMetricTaskSpec metric(String metric) {
+        this.metric = metric;
         return this;
     }
 
@@ -230,6 +371,26 @@ public class UpdateMetricTaskSpec  implements java.io.Serializable {
      */
     public UpdateMetricTaskSpec name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 配置方式: 可选参数；枚举值 visual，sql；分别代表可视化配置及sql配置方式，传空表示可视化配置；
+     *
+     * @param settingType
+     */
+    public UpdateMetricTaskSpec settingType(String settingType) {
+        this.settingType = settingType;
+        return this;
+    }
+
+    /**
+     * set sqlSpec
+     *
+     * @param sqlSpec
+     */
+    public UpdateMetricTaskSpec sqlSpec(MetricTaskSqlSpec sqlSpec) {
+        this.sqlSpec = sqlSpec;
         return this;
     }
 

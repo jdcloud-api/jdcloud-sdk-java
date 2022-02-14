@@ -44,6 +44,11 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
     private String appCode;
 
     /**
+     * 日志主题采集的日志类型
+     */
+    private String appName;
+
+    /**
      * 采集配置UID
      */
     private String collectInfoUID;
@@ -72,6 +77,11 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
      * 日志主题名称
      */
     private String name;
+
+    /**
+     * 预处理模式
+     */
+    private String prePattern;
 
     /**
      * 地域信息
@@ -113,6 +123,24 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
      */
     public void setAppCode(String appCode) {
         this.appCode = appCode;
+    }
+
+    /**
+     * get 日志主题采集的日志类型
+     *
+     * @return
+     */
+    public String getAppName() {
+        return appName;
+    }
+
+    /**
+     * set 日志主题采集的日志类型
+     *
+     * @param appName
+     */
+    public void setAppName(String appName) {
+        this.appName = appName;
     }
 
     /**
@@ -224,6 +252,24 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
     }
 
     /**
+     * get 预处理模式
+     *
+     * @return
+     */
+    public String getPrePattern() {
+        return prePattern;
+    }
+
+    /**
+     * set 预处理模式
+     *
+     * @param prePattern
+     */
+    public void setPrePattern(String prePattern) {
+        this.prePattern = prePattern;
+    }
+
+    /**
      * get 地域信息
      *
      * @return
@@ -259,6 +305,16 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
      */
     public DescribeLogtopicResult appCode(String appCode) {
         this.appCode = appCode;
+        return this;
+    }
+
+    /**
+     * set 日志主题采集的日志类型
+     *
+     * @param appName
+     */
+    public DescribeLogtopicResult appName(String appName) {
+        this.appName = appName;
         return this;
     }
 
@@ -319,6 +375,16 @@ public class DescribeLogtopicResult extends JdcloudResult implements java.io.Ser
      */
     public DescribeLogtopicResult name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 预处理模式
+     *
+     * @param prePattern
+     */
+    public DescribeLogtopicResult prePattern(String prePattern) {
+        this.prePattern = prePattern;
         return this;
     }
 

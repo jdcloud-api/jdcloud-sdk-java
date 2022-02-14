@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * LogSearch APIs
- * 日志搜索接口
+ * 日志扫描接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -55,12 +55,12 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     private Boolean caseSensitive;
 
     /**
-     * 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+     * 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      */
     private String startTime;
 
     /**
-     * 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+     * 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      */
     private String endTime;
 
@@ -161,7 +161,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * get 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+     * get 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
      * @return
      */
@@ -170,7 +170,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+     * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
      * @param startTime
      */
@@ -179,7 +179,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * get 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+     * get 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
      * @return
      */
@@ -188,7 +188,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+     * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
      * @param endTime
      */
@@ -354,7 +354,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+     * set 开始时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
      * @param startTime
      */
@@ -364,7 +364,7 @@ public class SearchRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
     /**
-     * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800” 当action !&#x3D; preview时，必填
+     * set 结束时间。格式 “YYYY-MM-DDThh:mm:ssTZD”, 比如 “2018-11-09T15:34:46+0800”.当action !&#x3D; preview时，必填
      *
      * @param endTime
      */

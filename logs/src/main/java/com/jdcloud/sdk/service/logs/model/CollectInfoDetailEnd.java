@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * collectInfoDetailEnd
@@ -38,7 +40,12 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     private String uID;
 
     /**
-     * 日志来源，只能是 custom
+     * 高可用组资源multi
+     */
+    private List<AgResourceEnd> agResource;
+
+    /**
+     * 日志来源
      */
     private String appCode;
 
@@ -51,6 +58,26 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
      * enabled
      */
     private Long enabled;
+
+    /**
+     * 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     */
+    private String logCustomTarget;
+
+    /**
+     * 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
+     */
+    private Object logCustomTargetConf;
+
+    /**
+     * 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
+     */
+    private Boolean logtopicEnabled;
+
+    /**
+     * 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
+     */
+    private Long resourceMode;
 
     /**
      * 采集实例类型, 只能是 all/part
@@ -66,6 +93,11 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
      * 产品线
      */
     private String serviceCode;
+
+    /**
+     * tagResource
+     */
+    private TagResourceEnd tagResource;
 
     /**
      * 日志类型名称
@@ -97,7 +129,25 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     }
 
     /**
-     * get 日志来源，只能是 custom
+     * get 高可用组资源multi
+     *
+     * @return
+     */
+    public List<AgResourceEnd> getAgResource() {
+        return agResource;
+    }
+
+    /**
+     * set 高可用组资源multi
+     *
+     * @param agResource
+     */
+    public void setAgResource(List<AgResourceEnd> agResource) {
+        this.agResource = agResource;
+    }
+
+    /**
+     * get 日志来源
      *
      * @return
      */
@@ -106,7 +156,7 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     }
 
     /**
-     * set 日志来源，只能是 custom
+     * set 日志来源
      *
      * @param appCode
      */
@@ -148,6 +198,78 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
      */
     public void setEnabled(Long enabled) {
         this.enabled = enabled;
+    }
+
+    /**
+     * get 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     *
+     * @return
+     */
+    public String getLogCustomTarget() {
+        return logCustomTarget;
+    }
+
+    /**
+     * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     *
+     * @param logCustomTarget
+     */
+    public void setLogCustomTarget(String logCustomTarget) {
+        this.logCustomTarget = logCustomTarget;
+    }
+
+    /**
+     * get 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
+     *
+     * @return
+     */
+    public Object getLogCustomTargetConf() {
+        return logCustomTargetConf;
+    }
+
+    /**
+     * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
+     *
+     * @param logCustomTargetConf
+     */
+    public void setLogCustomTargetConf(Object logCustomTargetConf) {
+        this.logCustomTargetConf = logCustomTargetConf;
+    }
+
+    /**
+     * get 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
+     *
+     * @return
+     */
+    public Boolean getLogtopicEnabled() {
+        return logtopicEnabled;
+    }
+
+    /**
+     * set 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
+     *
+     * @param logtopicEnabled
+     */
+    public void setLogtopicEnabled(Boolean logtopicEnabled) {
+        this.logtopicEnabled = logtopicEnabled;
+    }
+
+    /**
+     * get 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
+     *
+     * @return
+     */
+    public Long getResourceMode() {
+        return resourceMode;
+    }
+
+    /**
+     * set 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
+     *
+     * @param resourceMode
+     */
+    public void setResourceMode(Long resourceMode) {
+        this.resourceMode = resourceMode;
     }
 
     /**
@@ -205,6 +327,24 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     }
 
     /**
+     * get tagResource
+     *
+     * @return
+     */
+    public TagResourceEnd getTagResource() {
+        return tagResource;
+    }
+
+    /**
+     * set tagResource
+     *
+     * @param tagResource
+     */
+    public void setTagResource(TagResourceEnd tagResource) {
+        this.tagResource = tagResource;
+    }
+
+    /**
      * get 日志类型名称
      *
      * @return
@@ -252,7 +392,17 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     }
 
     /**
-     * set 日志来源，只能是 custom
+     * set 高可用组资源multi
+     *
+     * @param agResource
+     */
+    public CollectInfoDetailEnd agResource(List<AgResourceEnd> agResource) {
+        this.agResource = agResource;
+        return this;
+    }
+
+    /**
+     * set 日志来源
      *
      * @param appCode
      */
@@ -278,6 +428,46 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
      */
     public CollectInfoDetailEnd enabled(Long enabled) {
         this.enabled = enabled;
+        return this;
+    }
+
+    /**
+     * set 自定义日志转发目的地, 只支持业务应用日志。支持类型：&quot;kafka&quot;，&quot;es&quot;
+     *
+     * @param logCustomTarget
+     */
+    public CollectInfoDetailEnd logCustomTarget(String logCustomTarget) {
+        this.logCustomTarget = logCustomTarget;
+        return this;
+    }
+
+    /**
+     * set 自定义日志转发目的地配置，KV 结构，具体配置参考 LogCustomTargetKafkaConf 和 LogCustomTargetEsConf
+     *
+     * @param logCustomTargetConf
+     */
+    public CollectInfoDetailEnd logCustomTargetConf(Object logCustomTargetConf) {
+        this.logCustomTargetConf = logCustomTargetConf;
+        return this;
+    }
+
+    /**
+     * set 目的地是否是日志服务logtopic，只支持业务应用日志。默认是
+     *
+     * @param logtopicEnabled
+     */
+    public CollectInfoDetailEnd logtopicEnabled(Boolean logtopicEnabled) {
+        this.logtopicEnabled = logtopicEnabled;
+        return this;
+    }
+
+    /**
+     * set 采集资源时选择的模式，1.正常的选择实例模式（默认模式）；2.选择标签tag模式 3.选择高可用组ag模式
+     *
+     * @param resourceMode
+     */
+    public CollectInfoDetailEnd resourceMode(Long resourceMode) {
+        this.resourceMode = resourceMode;
         return this;
     }
 
@@ -312,6 +502,16 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
     }
 
     /**
+     * set tagResource
+     *
+     * @param tagResource
+     */
+    public CollectInfoDetailEnd tagResource(TagResourceEnd tagResource) {
+        this.tagResource = tagResource;
+        return this;
+    }
+
+    /**
      * set 日志类型名称
      *
      * @param templateName
@@ -331,5 +531,17 @@ public class CollectInfoDetailEnd  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 高可用组资源multi
+     *
+     * @param agResource
+     */
+    public void addAgResource(AgResourceEnd agResource) {
+        if (this.agResource == null) {
+            this.agResource = new ArrayList<>();
+        }
+        this.agResource.add(agResource);
+    }
 
 }

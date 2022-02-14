@@ -43,6 +43,16 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     private String uID;
 
     /**
+     * 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
+     */
+    private String appCode;
+
+    /**
+     * 日志主题采集的日志类型
+     */
+    private String appName;
+
+    /**
      * 采集配置UID
      */
     private String collectInfoUID;
@@ -76,6 +86,11 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
      * 日志主题名称
      */
     private String name;
+
+    /**
+     * 预处理模式
+     */
+    private String prePattern;
 
     /**
      * 地域信息
@@ -117,6 +132,42 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
      */
     public void setUID(String uID) {
         this.uID = uID;
+    }
+
+    /**
+     * get 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
+     *
+     * @return
+     */
+    public String getAppCode() {
+        return appCode;
+    }
+
+    /**
+     * set 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
+     *
+     * @param appCode
+     */
+    public void setAppCode(String appCode) {
+        this.appCode = appCode;
+    }
+
+    /**
+     * get 日志主题采集的日志类型
+     *
+     * @return
+     */
+    public String getAppName() {
+        return appName;
+    }
+
+    /**
+     * set 日志主题采集的日志类型
+     *
+     * @param appName
+     */
+    public void setAppName(String appName) {
+        this.appName = appName;
     }
 
     /**
@@ -246,6 +297,24 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
     }
 
     /**
+     * get 预处理模式
+     *
+     * @return
+     */
+    public String getPrePattern() {
+        return prePattern;
+    }
+
+    /**
+     * set 预处理模式
+     *
+     * @param prePattern
+     */
+    public void setPrePattern(String prePattern) {
+        this.prePattern = prePattern;
+    }
+
+    /**
      * get 地域信息
      *
      * @return
@@ -281,6 +350,26 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
      */
     public LogtopicDetailEnd uID(String uID) {
         this.uID = uID;
+        return this;
+    }
+
+    /**
+     * set 日志来源,只在查询单个日志主题并且创建了采集配置时返回值
+     *
+     * @param appCode
+     */
+    public LogtopicDetailEnd appCode(String appCode) {
+        this.appCode = appCode;
+        return this;
+    }
+
+    /**
+     * set 日志主题采集的日志类型
+     *
+     * @param appName
+     */
+    public LogtopicDetailEnd appName(String appName) {
+        this.appName = appName;
         return this;
     }
 
@@ -351,6 +440,16 @@ public class LogtopicDetailEnd  implements java.io.Serializable {
      */
     public LogtopicDetailEnd name(String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     * set 预处理模式
+     *
+     * @param prePattern
+     */
+    public LogtopicDetailEnd prePattern(String prePattern) {
+        this.prePattern = prePattern;
         return this;
     }
 
