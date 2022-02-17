@@ -26,9 +26,9 @@ package com.jdcloud.sdk.service.openjrtc.model;
 
 
 /**
- * 统计信息
+ * 通讯时长
  */
-public class UserNumInfoObj  implements java.io.Serializable {
+public class CallDuration  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -38,19 +38,14 @@ public class UserNumInfoObj  implements java.io.Serializable {
     private String appId;
 
     /**
-     * 房间ID
+     * 时间戳-毫秒
      */
-    private Long roomId;
+    private Long date;
 
     /**
-     * 房间在线人数
+     * 时长-second
      */
-    private Integer number;
-
-    /**
-     * 创建时间UTC
-     */
-    private String createTime;
+    private Long duration;
 
 
     /**
@@ -72,57 +67,39 @@ public class UserNumInfoObj  implements java.io.Serializable {
     }
 
     /**
-     * get 房间ID
+     * get 时间戳-毫秒
      *
      * @return
      */
-    public Long getRoomId() {
-        return roomId;
+    public Long getDate() {
+        return date;
     }
 
     /**
-     * set 房间ID
+     * set 时间戳-毫秒
      *
-     * @param roomId
+     * @param date
      */
-    public void setRoomId(Long roomId) {
-        this.roomId = roomId;
+    public void setDate(Long date) {
+        this.date = date;
     }
 
     /**
-     * get 房间在线人数
-     *
-     * @return
-     */
-    public Integer getNumber() {
-        return number;
-    }
-
-    /**
-     * set 房间在线人数
-     *
-     * @param number
-     */
-    public void setNumber(Integer number) {
-        this.number = number;
-    }
-
-    /**
-     * get 创建时间UTC
+     * get 时长-second
      *
      * @return
      */
-    public String getCreateTime() {
-        return createTime;
+    public Long getDuration() {
+        return duration;
     }
 
     /**
-     * set 创建时间UTC
+     * set 时长-second
      *
-     * @param createTime
+     * @param duration
      */
-    public void setCreateTime(String createTime) {
-        this.createTime = createTime;
+    public void setDuration(Long duration) {
+        this.duration = duration;
     }
 
 
@@ -131,38 +108,28 @@ public class UserNumInfoObj  implements java.io.Serializable {
      *
      * @param appId
      */
-    public UserNumInfoObj appId(String appId) {
+    public CallDuration appId(String appId) {
         this.appId = appId;
         return this;
     }
 
     /**
-     * set 房间ID
+     * set 时间戳-毫秒
      *
-     * @param roomId
+     * @param date
      */
-    public UserNumInfoObj roomId(Long roomId) {
-        this.roomId = roomId;
+    public CallDuration date(Long date) {
+        this.date = date;
         return this;
     }
 
     /**
-     * set 房间在线人数
+     * set 时长-second
      *
-     * @param number
+     * @param duration
      */
-    public UserNumInfoObj number(Integer number) {
-        this.number = number;
-        return this;
-    }
-
-    /**
-     * set 创建时间UTC
-     *
-     * @param createTime
-     */
-    public UserNumInfoObj createTime(String createTime) {
-        this.createTime = createTime;
+    public CallDuration duration(Long duration) {
+        this.duration = duration;
         return this;
     }
 

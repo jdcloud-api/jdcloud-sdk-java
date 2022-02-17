@@ -30,7 +30,7 @@ import java.util.ArrayList;
 /**
  * 房间在线人数列表
  */
-public class RoomUserNumInfos  implements java.io.Serializable {
+public class RoomUserRecordInfo  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -57,7 +57,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
     /**
      * 分页内容
      */
-    private List<UserNumInfo> content;
+    private List<RoomUserRecord> content;
 
 
     /**
@@ -137,7 +137,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
      *
      * @return
      */
-    public List<UserNumInfo> getContent() {
+    public List<RoomUserRecord> getContent() {
         return content;
     }
 
@@ -146,7 +146,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
      *
      * @param content
      */
-    public void setContent(List<UserNumInfo> content) {
+    public void setContent(List<RoomUserRecord> content) {
         this.content = content;
     }
 
@@ -156,7 +156,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
      *
      * @param pageNumber
      */
-    public RoomUserNumInfos pageNumber(Integer pageNumber) {
+    public RoomUserRecordInfo pageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -166,7 +166,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
      *
      * @param pageSize
      */
-    public RoomUserNumInfos pageSize(Integer pageSize) {
+    public RoomUserRecordInfo pageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -176,7 +176,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
      *
      * @param totalElements
      */
-    public RoomUserNumInfos totalElements(Integer totalElements) {
+    public RoomUserRecordInfo totalElements(Integer totalElements) {
         this.totalElements = totalElements;
         return this;
     }
@@ -186,7 +186,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
      *
      * @param totalPages
      */
-    public RoomUserNumInfos totalPages(Integer totalPages) {
+    public RoomUserRecordInfo totalPages(Integer totalPages) {
         this.totalPages = totalPages;
         return this;
     }
@@ -196,7 +196,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
      *
      * @param content
      */
-    public RoomUserNumInfos content(List<UserNumInfo> content) {
+    public RoomUserRecordInfo content(List<RoomUserRecord> content) {
         this.content = content;
         return this;
     }
@@ -207,7 +207,7 @@ public class RoomUserNumInfos  implements java.io.Serializable {
      *
      * @param content
      */
-    public void addContent(UserNumInfo content) {
+    public void addContent(RoomUserRecord content) {
         if (this.content == null) {
             this.content = new ArrayList<>();
         }
