@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomsExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomUsersRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomUsersResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomUsersExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.StartMcuTranscodeRequest;
+import com.jdcloud.sdk.service.openjrtc.model.StartMcuTranscodeResponse;
+import com.jdcloud.sdk.service.openjrtc.client.StartMcuTranscodeExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomUsersNumRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomUsersNumResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomUsersNumExecutor;
@@ -49,6 +52,9 @@ import com.jdcloud.sdk.service.openjrtc.client.DescribeRegisterUserExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.UpdateUserRoomRequest;
 import com.jdcloud.sdk.service.openjrtc.model.UpdateUserRoomResponse;
 import com.jdcloud.sdk.service.openjrtc.client.UpdateUserRoomExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.AddRecordRuleRequest;
+import com.jdcloud.sdk.service.openjrtc.model.AddRecordRuleResponse;
+import com.jdcloud.sdk.service.openjrtc.client.AddRecordRuleExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRoomsRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRoomsResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeUserRoomsExecutor;
@@ -70,6 +76,9 @@ import com.jdcloud.sdk.service.openjrtc.client.RegisterUserRoomExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.RegisterUserRequest;
 import com.jdcloud.sdk.service.openjrtc.model.RegisterUserResponse;
 import com.jdcloud.sdk.service.openjrtc.client.RegisterUserExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.CloseRoomUserStreamRequest;
+import com.jdcloud.sdk.service.openjrtc.model.CloseRoomUserStreamResponse;
+import com.jdcloud.sdk.service.openjrtc.client.CloseRoomUserStreamExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.SendMessageToRoomRequest;
 import com.jdcloud.sdk.service.openjrtc.model.SendMessageToRoomResponse;
 import com.jdcloud.sdk.service.openjrtc.client.SendMessageToRoomExecutor;
@@ -79,6 +88,9 @@ import com.jdcloud.sdk.service.openjrtc.client.DescribeUserByPeerExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomOnlineUserNumRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomOnlineUserNumResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomOnlineUserNumExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.StopMcuTranscodeRequest;
+import com.jdcloud.sdk.service.openjrtc.model.StopMcuTranscodeResponse;
+import com.jdcloud.sdk.service.openjrtc.client.StopMcuTranscodeExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.PostMessageToUserRequest;
 import com.jdcloud.sdk.service.openjrtc.model.PostMessageToUserResponse;
 import com.jdcloud.sdk.service.openjrtc.client.PostMessageToUserExecutor;
@@ -103,6 +115,9 @@ import com.jdcloud.sdk.service.openjrtc.client.RemoveRoomUserExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.RemoveUserByUserRoomIdRequest;
 import com.jdcloud.sdk.service.openjrtc.model.RemoveUserByUserRoomIdResponse;
 import com.jdcloud.sdk.service.openjrtc.client.RemoveUserByUserRoomIdExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.AddPushStreamRuleRequest;
+import com.jdcloud.sdk.service.openjrtc.model.AddPushStreamRuleResponse;
+import com.jdcloud.sdk.service.openjrtc.client.AddPushStreamRuleExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomInfoRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomInfoResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomInfoExecutor;
@@ -126,7 +141,7 @@ public class OpenjrtcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.7";
     public final static String DefaultEndpoint = "openjrtc.jdcloud-api.com";
     public final static String ServiceName = "openjrtc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -199,6 +214,18 @@ public class OpenjrtcClient extends JdcloudClient {
     }
 
     /**
+     * 下发混流任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartMcuTranscodeResponse startMcuTranscode(StartMcuTranscodeRequest request) throws JdcloudSdkException {
+        return new StartMcuTranscodeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 统计房间内人数
 
      *
@@ -244,6 +271,18 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public UpdateUserRoomResponse updateUserRoom(UpdateUserRoomRequest request) throws JdcloudSdkException {
         return new UpdateUserRoomExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加录制规则
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddRecordRuleResponse addRecordRule(AddRecordRuleRequest request) throws JdcloudSdkException {
+        return new AddRecordRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -333,6 +372,18 @@ public class OpenjrtcClient extends JdcloudClient {
     }
 
     /**
+     * 关闭房间内的指定流
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CloseRoomUserStreamResponse closeRoomUserStream(CloseRoomUserStreamRequest request) throws JdcloudSdkException {
+        return new CloseRoomUserStreamExecutor().client(this).execute(request);
+    }
+
+    /**
      * 发送自定义信令给房间
      *
      * @param request
@@ -365,6 +416,18 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public DescribeRoomOnlineUserNumResponse describeRoomOnlineUserNum(DescribeRoomOnlineUserNumRequest request) throws JdcloudSdkException {
         return new DescribeRoomOnlineUserNumExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 中止混流任务
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopMcuTranscodeResponse stopMcuTranscode(StopMcuTranscodeRequest request) throws JdcloudSdkException {
+        return new StopMcuTranscodeExecutor().client(this).execute(request);
     }
 
     /**
@@ -462,6 +525,18 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public RemoveUserByUserRoomIdResponse removeUserByUserRoomId(RemoveUserByUserRoomIdRequest request) throws JdcloudSdkException {
         return new RemoveUserByUserRoomIdExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加推流规则
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddPushStreamRuleResponse addPushStreamRule(AddPushStreamRuleRequest request) throws JdcloudSdkException {
+        return new AddPushStreamRuleExecutor().client(this).execute(request);
     }
 
     /**
