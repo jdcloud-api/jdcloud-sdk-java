@@ -59,10 +59,8 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     private String type;
 
     /**
-     * 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
-     * Required:true
+     * 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
      */
-    @Required
     private List<String> azs;
 
     /**
@@ -76,6 +74,11 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     private ElasticIpSpec elasticIp;
 
     /**
+     * 指定LoadBalancer的VIP(内网IPv4地址)，需要属于指定的子网并且未被占用
+     */
+    private String privateIpAddress;
+
+    /**
      * 【alb】 安全组 ID列表
      */
     private List<String> securityGroupIds;
@@ -84,6 +87,11 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
      * LoadBalancer的描述信息,允许输入UTF-8编码下的全部字符，不超过256字符
      */
     private String description;
+
+    /**
+     * 是否绑定域名，包括外网和内网，缺省为False(关闭)
+     */
+    private Boolean domainEnable;
 
     /**
      * 删除保护，取值为True(开启)或False(关闭)，默认为False
@@ -158,7 +166,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * get 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
      *
      * @return
      */
@@ -167,7 +175,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
      *
      * @param azs
      */
@@ -212,6 +220,24 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 指定LoadBalancer的VIP(内网IPv4地址)，需要属于指定的子网并且未被占用
+     *
+     * @return
+     */
+    public String getPrivateIpAddress() {
+        return privateIpAddress;
+    }
+
+    /**
+     * set 指定LoadBalancer的VIP(内网IPv4地址)，需要属于指定的子网并且未被占用
+     *
+     * @param privateIpAddress
+     */
+    public void setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+    }
+
+    /**
      * get 【alb】 安全组 ID列表
      *
      * @return
@@ -245,6 +271,24 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 是否绑定域名，包括外网和内网，缺省为False(关闭)
+     *
+     * @return
+     */
+    public Boolean getDomainEnable() {
+        return domainEnable;
+    }
+
+    /**
+     * set 是否绑定域名，包括外网和内网，缺省为False(关闭)
+     *
+     * @param domainEnable
+     */
+    public void setDomainEnable(Boolean domainEnable) {
+        this.domainEnable = domainEnable;
     }
 
     /**
@@ -333,7 +377,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
      *
      * @param azs
      */
@@ -363,6 +407,16 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * set 指定LoadBalancer的VIP(内网IPv4地址)，需要属于指定的子网并且未被占用
+     *
+     * @param privateIpAddress
+     */
+    public CreateLoadBalancerRequest privateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+
+    /**
      * set 【alb】 安全组 ID列表
      *
      * @param securityGroupIds
@@ -379,6 +433,16 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
      */
     public CreateLoadBalancerRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 是否绑定域名，包括外网和内网，缺省为False(关闭)
+     *
+     * @param domainEnable
+     */
+    public CreateLoadBalancerRequest domainEnable(Boolean domainEnable) {
+        this.domainEnable = domainEnable;
         return this;
     }
 
@@ -414,7 +478,7 @@ public class CreateLoadBalancerRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * add item to 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * add item to 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
      *
      * @param az
      */

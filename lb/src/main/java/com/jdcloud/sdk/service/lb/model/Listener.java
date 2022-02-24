@@ -60,9 +60,19 @@ public class Listener  implements java.io.Serializable {
     private String loadBalancerType;
 
     /**
-     * 监听协议, 取值为Tcp, Tls, Http, Https &lt;br&gt;【alb】支持Http, Https，Tcp和Tls &lt;br&gt;【nlb】支持Tcp  &lt;br&gt;【dnlb】支持Tcp
+     * 监听协议, 取值为Tcp, Tls, Http, Https, Udp &lt;br&gt;【alb】支持Http, Https, Tcp, Tls和Udp &lt;br&gt;【nlb】支持Tcp, Udp  &lt;br&gt;【dnlb】支持Tcp, Udp
      */
     private String protocol;
+
+    /**
+     * 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)
+     */
+    private Boolean hstsEnable;
+
+    /**
+     * 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]
+     */
+    private Integer hstsMaxAge;
 
     /**
      * 监听端口，取值范围为[1, 65535]
@@ -85,12 +95,12 @@ public class Listener  implements java.io.Serializable {
     private String urlMapId;
 
     /**
-     * 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
+     * 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Udp协议）默认为：300s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
      */
     private Integer connectionIdleTimeSeconds;
 
     /**
-     * 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
+     * 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      */
     private List<CertificateSpec> certificateSpecs;
 
@@ -201,7 +211,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * get 监听协议, 取值为Tcp, Tls, Http, Https &lt;br&gt;【alb】支持Http, Https，Tcp和Tls &lt;br&gt;【nlb】支持Tcp  &lt;br&gt;【dnlb】支持Tcp
+     * get 监听协议, 取值为Tcp, Tls, Http, Https, Udp &lt;br&gt;【alb】支持Http, Https, Tcp, Tls和Udp &lt;br&gt;【nlb】支持Tcp, Udp  &lt;br&gt;【dnlb】支持Tcp, Udp
      *
      * @return
      */
@@ -210,12 +220,48 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 监听协议, 取值为Tcp, Tls, Http, Https &lt;br&gt;【alb】支持Http, Https，Tcp和Tls &lt;br&gt;【nlb】支持Tcp  &lt;br&gt;【dnlb】支持Tcp
+     * set 监听协议, 取值为Tcp, Tls, Http, Https, Udp &lt;br&gt;【alb】支持Http, Https, Tcp, Tls和Udp &lt;br&gt;【nlb】支持Tcp, Udp  &lt;br&gt;【dnlb】支持Tcp, Udp
      *
      * @param protocol
      */
     public void setProtocol(String protocol) {
         this.protocol = protocol;
+    }
+
+    /**
+     * get 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)
+     *
+     * @return
+     */
+    public Boolean getHstsEnable() {
+        return hstsEnable;
+    }
+
+    /**
+     * set 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)
+     *
+     * @param hstsEnable
+     */
+    public void setHstsEnable(Boolean hstsEnable) {
+        this.hstsEnable = hstsEnable;
+    }
+
+    /**
+     * get 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]
+     *
+     * @return
+     */
+    public Integer getHstsMaxAge() {
+        return hstsMaxAge;
+    }
+
+    /**
+     * set 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]
+     *
+     * @param hstsMaxAge
+     */
+    public void setHstsMaxAge(Integer hstsMaxAge) {
+        this.hstsMaxAge = hstsMaxAge;
     }
 
     /**
@@ -291,7 +337,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * get 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
+     * get 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Udp协议）默认为：300s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
      *
      * @return
      */
@@ -300,7 +346,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
+     * set 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Udp协议）默认为：300s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
      *
      * @param connectionIdleTimeSeconds
      */
@@ -309,7 +355,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * get 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
+     * get 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @return
      */
@@ -318,7 +364,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @param certificateSpecs
      */
@@ -432,12 +478,32 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 监听协议, 取值为Tcp, Tls, Http, Https &lt;br&gt;【alb】支持Http, Https，Tcp和Tls &lt;br&gt;【nlb】支持Tcp  &lt;br&gt;【dnlb】支持Tcp
+     * set 监听协议, 取值为Tcp, Tls, Http, Https, Udp &lt;br&gt;【alb】支持Http, Https, Tcp, Tls和Udp &lt;br&gt;【nlb】支持Tcp, Udp  &lt;br&gt;【dnlb】支持Tcp, Udp
      *
      * @param protocol
      */
     public Listener protocol(String protocol) {
         this.protocol = protocol;
+        return this;
+    }
+
+    /**
+     * set 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)
+     *
+     * @param hstsEnable
+     */
+    public Listener hstsEnable(Boolean hstsEnable) {
+        this.hstsEnable = hstsEnable;
+        return this;
+    }
+
+    /**
+     * set 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]
+     *
+     * @param hstsMaxAge
+     */
+    public Listener hstsMaxAge(Integer hstsMaxAge) {
+        this.hstsMaxAge = hstsMaxAge;
         return this;
     }
 
@@ -482,7 +548,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
+     * set 【alb、nlb】空闲连接超时时间, 范围为[1,86400]。 &lt;br&gt;（Tcp和Tls协议）默认为：1800s &lt;br&gt;（Udp协议）默认为：300s &lt;br&gt;（Http和Https协议）默认为：60s &lt;br&gt;【dnlb】不支持
      *
      * @param connectionIdleTimeSeconds
      */
@@ -492,7 +558,7 @@ public class Listener  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @param certificateSpecs
      */
@@ -533,7 +599,7 @@ public class Listener  implements java.io.Serializable {
 
 
     /**
-     * add item to 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个
+     * add item to 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @param certificateSpec
      */

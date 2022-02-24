@@ -60,7 +60,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     private List<String> agIds;
 
     /**
-     * 【alb Tcp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
+     * 【alb Tcp、Udp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
      */
     private Boolean proxyProtocol;
 
@@ -108,6 +108,11 @@ public class UpdateBackendSpec  implements java.io.Serializable {
      * 【alb Http协议】获取负载均衡的vip, 取值为False(不获取)或True(获取)
      */
     private Boolean httpForwardedVip;
+
+    /**
+     * 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取)
+     */
+    private Boolean httpForwardedClientPort;
 
     /**
      * 【alb,dnlb】关闭健康检查，取值为false(不关闭)或true(关闭)
@@ -206,7 +211,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 【alb Tcp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
+     * get 【alb Tcp、Udp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
      *
      * @return
      */
@@ -215,7 +220,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Tcp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
+     * set 【alb Tcp、Udp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
      *
      * @param proxyProtocol
      */
@@ -386,6 +391,24 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取)
+     *
+     * @return
+     */
+    public Boolean getHttpForwardedClientPort() {
+        return httpForwardedClientPort;
+    }
+
+    /**
+     * set 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取)
+     *
+     * @param httpForwardedClientPort
+     */
+    public void setHttpForwardedClientPort(Boolean httpForwardedClientPort) {
+        this.httpForwardedClientPort = httpForwardedClientPort;
+    }
+
+    /**
      * get 【alb,dnlb】关闭健康检查，取值为false(不关闭)或true(关闭)
      *
      * @return
@@ -455,7 +478,7 @@ public class UpdateBackendSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Tcp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
+     * set 【alb Tcp、Udp协议】是否启用Proxy ProtocolV1协议获取真实源ip, 取值为false(不开启)或者true(开启), 默认为false
      *
      * @param proxyProtocol
      */
@@ -551,6 +574,16 @@ public class UpdateBackendSpec  implements java.io.Serializable {
      */
     public UpdateBackendSpec httpForwardedVip(Boolean httpForwardedVip) {
         this.httpForwardedVip = httpForwardedVip;
+        return this;
+    }
+
+    /**
+     * set 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取)
+     *
+     * @param httpForwardedClientPort
+     */
+    public UpdateBackendSpec httpForwardedClientPort(Boolean httpForwardedClientPort) {
+        this.httpForwardedClientPort = httpForwardedClientPort;
         return this;
     }
 

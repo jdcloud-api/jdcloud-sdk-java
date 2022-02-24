@@ -45,7 +45,17 @@ public class UpdateListenerSpec  implements java.io.Serializable {
     private String status;
 
     /**
-     * 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
+     * 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为不改变原值
+     */
+    private Boolean hstsEnable;
+
+    /**
+     * 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为不改变原值
+     */
+    private Integer hstsMaxAge;
+
+    /**
+     * 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      */
     private List<CertificateSpec> certificateSpecs;
 
@@ -107,7 +117,43 @@ public class UpdateListenerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
+     * get 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为不改变原值
+     *
+     * @return
+     */
+    public Boolean getHstsEnable() {
+        return hstsEnable;
+    }
+
+    /**
+     * set 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为不改变原值
+     *
+     * @param hstsEnable
+     */
+    public void setHstsEnable(Boolean hstsEnable) {
+        this.hstsEnable = hstsEnable;
+    }
+
+    /**
+     * get 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为不改变原值
+     *
+     * @return
+     */
+    public Integer getHstsMaxAge() {
+        return hstsMaxAge;
+    }
+
+    /**
+     * set 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为不改变原值
+     *
+     * @param hstsMaxAge
+     */
+    public void setHstsMaxAge(Integer hstsMaxAge) {
+        this.hstsMaxAge = hstsMaxAge;
+    }
+
+    /**
+     * get 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @return
      */
@@ -116,7 +162,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @param certificateSpecs
      */
@@ -218,7 +264,27 @@ public class UpdateListenerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
+     * set 【alb使用https时支持】是否开启HSTS，True(开启)， False(关闭)，缺省为不改变原值
+     *
+     * @param hstsEnable
+     */
+    public UpdateListenerSpec hstsEnable(Boolean hstsEnable) {
+        this.hstsEnable = hstsEnable;
+        return this;
+    }
+
+    /**
+     * set 【alb使用https时支持】HSTS过期时间(秒)，取值范围为[1, 94608000(3年)]，缺省为不改变原值
+     *
+     * @param hstsMaxAge
+     */
+    public UpdateListenerSpec hstsMaxAge(Integer hstsMaxAge) {
+        this.hstsMaxAge = hstsMaxAge;
+        return this;
+    }
+
+    /**
+     * set 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @param certificateSpecs
      */
@@ -269,7 +335,7 @@ public class UpdateListenerSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 【alb Https和Tls协议】Listener绑定的默认证书，只支持一个证书
+     * add item to 【alb Https和Tls协议】Listener绑定的默认证书，最多支持两个，两个证书的加密算法需要不同
      *
      * @param certificateSpec
      */
