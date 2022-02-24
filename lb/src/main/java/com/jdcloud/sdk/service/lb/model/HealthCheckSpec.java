@@ -36,7 +36,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp &lt;br&gt;【dnlb】取值为Tcp
+     * 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp, Icmp(仅支持alb/nlb的Udp的Backend) &lt;br&gt;【dnlb】取值为Tcp, Icmp(仅支持dnlb的Udp的Backend)
      * Required:true
      */
     @Required
@@ -63,7 +63,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     private Integer intervalSeconds;
 
     /**
-     * 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
+     * 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp类型不支持配置端口
      */
     private Integer port;
 
@@ -84,7 +84,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
 
 
     /**
-     * get 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp &lt;br&gt;【dnlb】取值为Tcp
+     * get 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp, Icmp(仅支持alb/nlb的Udp的Backend) &lt;br&gt;【dnlb】取值为Tcp, Icmp(仅支持dnlb的Udp的Backend)
      *
      * @return
      */
@@ -93,7 +93,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp &lt;br&gt;【dnlb】取值为Tcp
+     * set 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp, Icmp(仅支持alb/nlb的Udp的Backend) &lt;br&gt;【dnlb】取值为Tcp, Icmp(仅支持dnlb的Udp的Backend)
      *
      * @param protocol
      */
@@ -174,7 +174,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
+     * get 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp类型不支持配置端口
      *
      * @return
      */
@@ -183,7 +183,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
+     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp类型不支持配置端口
      *
      * @param port
      */
@@ -247,7 +247,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
 
 
     /**
-     * set 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp &lt;br&gt;【dnlb】取值为Tcp
+     * set 健康检查协议 &lt;br&gt;【alb、nlb】取值为Http, Tcp, Icmp(仅支持alb/nlb的Udp的Backend) &lt;br&gt;【dnlb】取值为Tcp, Icmp(仅支持dnlb的Udp的Backend)
      *
      * @param protocol
      */
@@ -297,7 +297,7 @@ public class HealthCheckSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口
+     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp类型不支持配置端口
      *
      * @param port
      */

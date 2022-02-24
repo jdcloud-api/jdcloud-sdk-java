@@ -48,9 +48,19 @@ public class UpdateLoadBalancerSpec  implements java.io.Serializable {
     private String description;
 
     /**
+     * 是否绑定域名，包括外网和内网，缺省为不改变原值
+     */
+    private Boolean domainEnable;
+
+    /**
      * 删除保护，取值为True(开启)或False(关闭)，默认为False
      */
     private Boolean deleteProtection;
+
+    /**
+     * 变更loadBalancer的vip地址，新地址只允许是loadBalancer本子网中的空闲ip地址，缺省为不改变原值
+     */
+    private String privateIpAddress;
 
 
     /**
@@ -108,6 +118,24 @@ public class UpdateLoadBalancerSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 是否绑定域名，包括外网和内网，缺省为不改变原值
+     *
+     * @return
+     */
+    public Boolean getDomainEnable() {
+        return domainEnable;
+    }
+
+    /**
+     * set 是否绑定域名，包括外网和内网，缺省为不改变原值
+     *
+     * @param domainEnable
+     */
+    public void setDomainEnable(Boolean domainEnable) {
+        this.domainEnable = domainEnable;
+    }
+
+    /**
      * get 删除保护，取值为True(开启)或False(关闭)，默认为False
      *
      * @return
@@ -123,6 +151,24 @@ public class UpdateLoadBalancerSpec  implements java.io.Serializable {
      */
     public void setDeleteProtection(Boolean deleteProtection) {
         this.deleteProtection = deleteProtection;
+    }
+
+    /**
+     * get 变更loadBalancer的vip地址，新地址只允许是loadBalancer本子网中的空闲ip地址，缺省为不改变原值
+     *
+     * @return
+     */
+    public String getPrivateIpAddress() {
+        return privateIpAddress;
+    }
+
+    /**
+     * set 变更loadBalancer的vip地址，新地址只允许是loadBalancer本子网中的空闲ip地址，缺省为不改变原值
+     *
+     * @param privateIpAddress
+     */
+    public void setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
     }
 
 
@@ -157,12 +203,32 @@ public class UpdateLoadBalancerSpec  implements java.io.Serializable {
     }
 
     /**
+     * set 是否绑定域名，包括外网和内网，缺省为不改变原值
+     *
+     * @param domainEnable
+     */
+    public UpdateLoadBalancerSpec domainEnable(Boolean domainEnable) {
+        this.domainEnable = domainEnable;
+        return this;
+    }
+
+    /**
      * set 删除保护，取值为True(开启)或False(关闭)，默认为False
      *
      * @param deleteProtection
      */
     public UpdateLoadBalancerSpec deleteProtection(Boolean deleteProtection) {
         this.deleteProtection = deleteProtection;
+        return this;
+    }
+
+    /**
+     * set 变更loadBalancer的vip地址，新地址只允许是loadBalancer本子网中的空闲ip地址，缺省为不改变原值
+     *
+     * @param privateIpAddress
+     */
+    public UpdateLoadBalancerSpec privateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
         return this;
     }
 

@@ -52,7 +52,7 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     private String loadBalancerId;
 
     /**
-     * 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp &lt;br&gt;【nlb】取值范围：Tcp &lt;br&gt;【dnlb】取值范围：Tcp
+     * 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp、Udp &lt;br&gt;【nlb】取值范围：Tcp、Udp &lt;br&gt;【dnlb】取值范围：Tcp、Udp
      * Required:true
      */
     @Required
@@ -88,7 +88,7 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     private List<String> agIds;
 
     /**
-     * 【alb Tcp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
+     * 【alb Tcp、Udp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
      */
     private Boolean proxyProtocol;
 
@@ -138,6 +138,11 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     private Boolean httpForwardedVip;
 
     /**
+     * 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取), 默认为False
+     */
+    private Boolean httpForwardedClientPort;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -182,7 +187,7 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp &lt;br&gt;【nlb】取值范围：Tcp &lt;br&gt;【dnlb】取值范围：Tcp
+     * get 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp、Udp &lt;br&gt;【nlb】取值范围：Tcp、Udp &lt;br&gt;【dnlb】取值范围：Tcp、Udp
      *
      * @return
      */
@@ -191,7 +196,7 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp &lt;br&gt;【nlb】取值范围：Tcp &lt;br&gt;【dnlb】取值范围：Tcp
+     * set 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp、Udp &lt;br&gt;【nlb】取值范围：Tcp、Udp &lt;br&gt;【dnlb】取值范围：Tcp、Udp
      *
      * @param protocol
      */
@@ -290,7 +295,7 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get 【alb Tcp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
+     * get 【alb Tcp、Udp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
      *
      * @return
      */
@@ -299,7 +304,7 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 【alb Tcp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
+     * set 【alb Tcp、Udp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
      *
      * @param proxyProtocol
      */
@@ -470,6 +475,24 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
+     * get 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取), 默认为False
+     *
+     * @return
+     */
+    public Boolean getHttpForwardedClientPort() {
+        return httpForwardedClientPort;
+    }
+
+    /**
+     * set 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取), 默认为False
+     *
+     * @param httpForwardedClientPort
+     */
+    public void setHttpForwardedClientPort(Boolean httpForwardedClientPort) {
+        this.httpForwardedClientPort = httpForwardedClientPort;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -509,7 +532,7 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp &lt;br&gt;【nlb】取值范围：Tcp &lt;br&gt;【dnlb】取值范围：Tcp
+     * set 后端服务的协议 &lt;br&gt;【alb】取值范围：Http、Tcp、Udp &lt;br&gt;【nlb】取值范围：Tcp、Udp &lt;br&gt;【dnlb】取值范围：Tcp、Udp
      *
      * @param protocol
      */
@@ -569,7 +592,7 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 【alb Tcp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
+     * set 【alb Tcp、Udp协议】获取真实ip, 取值为False(不获取)或者True(获取,支持Proxy Protocol v1版本)，默认为False
      *
      * @param proxyProtocol
      */
@@ -665,6 +688,16 @@ public class CreateBackendRequest extends JdcloudRequest implements java.io.Seri
      */
     public CreateBackendRequest httpForwardedVip(Boolean httpForwardedVip) {
         this.httpForwardedVip = httpForwardedVip;
+        return this;
+    }
+
+    /**
+     * set 【alb Http协议】获取请求端使用的端口, 取值为False(不获取)或True(获取), 默认为False
+     *
+     * @param httpForwardedClientPort
+     */
+    public CreateBackendRequest httpForwardedClientPort(Boolean httpForwardedClientPort) {
+        this.httpForwardedClientPort = httpForwardedClientPort;
         return this;
     }
 

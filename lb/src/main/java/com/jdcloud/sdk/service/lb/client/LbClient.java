@@ -31,6 +31,12 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.lb.model.ExportLoadBalancersRequest;
+import com.jdcloud.sdk.service.lb.model.ExportLoadBalancersResponse;
+import com.jdcloud.sdk.service.lb.client.ExportLoadBalancersExecutor;
+import com.jdcloud.sdk.service.lb.model.DescribeLoadBalancersExportTasksRequest;
+import com.jdcloud.sdk.service.lb.model.DescribeLoadBalancersExportTasksResponse;
+import com.jdcloud.sdk.service.lb.client.DescribeLoadBalancersExportTasksExecutor;
 import com.jdcloud.sdk.service.lb.model.DescribeListenersRequest;
 import com.jdcloud.sdk.service.lb.model.DescribeListenersResponse;
 import com.jdcloud.sdk.service.lb.client.DescribeListenersExecutor;
@@ -159,7 +165,7 @@ public class LbClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.7";
     public final static String DefaultEndpoint = "lb.jdcloud-api.com";
     public final static String ServiceName = "lb";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -200,6 +206,28 @@ public class LbClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 创建负载均衡列表导出任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExportLoadBalancersResponse exportLoadBalancers(ExportLoadBalancersRequest request) throws JdcloudSdkException {
+        return new ExportLoadBalancersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询负载均衡导出任务列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeLoadBalancersExportTasksResponse describeLoadBalancersExportTasks(DescribeLoadBalancersExportTasksRequest request) throws JdcloudSdkException {
+        return new DescribeLoadBalancersExportTasksExecutor().client(this).execute(request);
+    }
 
     /**
      * 查询监听器列表
