@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.waf.client.ListWafFilterExecutor;
 import com.jdcloud.sdk.service.waf.model.GetQpsDataRequest;
 import com.jdcloud.sdk.service.waf.model.GetQpsDataResponse;
 import com.jdcloud.sdk.service.waf.client.GetQpsDataExecutor;
+import com.jdcloud.sdk.service.waf.model.GetStatusCodeInfoRequest;
+import com.jdcloud.sdk.service.waf.model.GetStatusCodeInfoResponse;
+import com.jdcloud.sdk.service.waf.client.GetStatusCodeInfoExecutor;
 import com.jdcloud.sdk.service.waf.model.AddDomainRequest;
 import com.jdcloud.sdk.service.waf.model.AddDomainResponse;
 import com.jdcloud.sdk.service.waf.client.AddDomainExecutor;
@@ -124,6 +127,9 @@ import com.jdcloud.sdk.service.waf.client.SetWafConditionExecutor;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionsRequest;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionsResponse;
 import com.jdcloud.sdk.service.waf.client.ListWafConditionsExecutor;
+import com.jdcloud.sdk.service.waf.model.GetMainAntiInfoNewRequest;
+import com.jdcloud.sdk.service.waf.model.GetMainAntiInfoNewResponse;
+import com.jdcloud.sdk.service.waf.client.GetMainAntiInfoNewExecutor;
 
 /**
  * wafClient
@@ -132,7 +138,7 @@ public class WafClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.4";
+    public final static String ClientVersion = "1.2.7";
     public final static String DefaultEndpoint = "waf.jdcloud-api.com";
     public final static String ServiceName = "waf";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -194,6 +200,17 @@ public class WafClient extends JdcloudClient {
      */
     public GetQpsDataResponse getQpsData(GetQpsDataRequest request) throws JdcloudSdkException {
         return new GetQpsDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站在一定时间内的状态码报表信息。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetStatusCodeInfoResponse getStatusCodeInfo(GetStatusCodeInfoRequest request) throws JdcloudSdkException {
+        return new GetStatusCodeInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -513,6 +530,17 @@ public class WafClient extends JdcloudClient {
      */
     public ListWafConditionsResponse listWafConditions(ListWafConditionsRequest request) throws JdcloudSdkException {
         return new ListWafConditionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取网站在一定时间内主要的防护信息,新接口，无url响应时间分布。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetMainAntiInfoNewResponse getMainAntiInfoNew(GetMainAntiInfoNewRequest request) throws JdcloudSdkException {
+        return new GetMainAntiInfoNewExecutor().client(this).execute(request);
     }
 
 
