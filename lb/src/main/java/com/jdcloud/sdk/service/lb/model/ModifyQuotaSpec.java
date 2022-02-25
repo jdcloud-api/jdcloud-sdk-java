@@ -39,7 +39,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     private String lbType;
 
     /**
-     * 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
+     * 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
      * Required:true
      */
     @Required
@@ -77,7 +77,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
+     * get 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
      *
      * @return
      */
@@ -86,7 +86,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
+     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
      *
      * @param type
      */
@@ -142,7 +142,7 @@ public class ModifyQuotaSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate
+     * set 资源类型，取值范围：loadbalancer、listener、target_group、target、backend、urlMap(仅alb支持)、rules(仅alb支持)、extensionCertificate(仅alb支持)
      *
      * @param type
      */

@@ -96,21 +96,6 @@ public class LoadBalancer  implements java.io.Serializable {
     private String description;
 
     /**
-     * 是否绑定域名，包括外网和内网，取值为True(开启)或False(关闭)
-     */
-    private Boolean domainEnable;
-
-    /**
-     * 内网域名，域名绑定开启时为空，表示还没有正常绑定
-     */
-    private String internalDomain;
-
-    /**
-     * 外网域名，域名绑定开启时为空，表示还没有正常绑定
-     */
-    private String internetDomain;
-
-    /**
      * 删除保护，取值为True(开启)或False(关闭)
      */
     private Boolean deleteProtection;
@@ -121,7 +106,7 @@ public class LoadBalancer  implements java.io.Serializable {
     private String createdTime;
 
     /**
-     * lb所在位置类型，取值：standard(标准负载均衡)，edge(边缘负载均衡)
+     * 负载均衡所在可用区类型，取值包括：standard(标准可用区)、edge(边缘可用区)
      */
     private String azType;
 
@@ -343,60 +328,6 @@ public class LoadBalancer  implements java.io.Serializable {
     }
 
     /**
-     * get 是否绑定域名，包括外网和内网，取值为True(开启)或False(关闭)
-     *
-     * @return
-     */
-    public Boolean getDomainEnable() {
-        return domainEnable;
-    }
-
-    /**
-     * set 是否绑定域名，包括外网和内网，取值为True(开启)或False(关闭)
-     *
-     * @param domainEnable
-     */
-    public void setDomainEnable(Boolean domainEnable) {
-        this.domainEnable = domainEnable;
-    }
-
-    /**
-     * get 内网域名，域名绑定开启时为空，表示还没有正常绑定
-     *
-     * @return
-     */
-    public String getInternalDomain() {
-        return internalDomain;
-    }
-
-    /**
-     * set 内网域名，域名绑定开启时为空，表示还没有正常绑定
-     *
-     * @param internalDomain
-     */
-    public void setInternalDomain(String internalDomain) {
-        this.internalDomain = internalDomain;
-    }
-
-    /**
-     * get 外网域名，域名绑定开启时为空，表示还没有正常绑定
-     *
-     * @return
-     */
-    public String getInternetDomain() {
-        return internetDomain;
-    }
-
-    /**
-     * set 外网域名，域名绑定开启时为空，表示还没有正常绑定
-     *
-     * @param internetDomain
-     */
-    public void setInternetDomain(String internetDomain) {
-        this.internetDomain = internetDomain;
-    }
-
-    /**
      * get 删除保护，取值为True(开启)或False(关闭)
      *
      * @return
@@ -433,7 +364,7 @@ public class LoadBalancer  implements java.io.Serializable {
     }
 
     /**
-     * get lb所在位置类型，取值：standard(标准负载均衡)，edge(边缘负载均衡)
+     * get 负载均衡所在可用区类型，取值包括：standard(标准可用区)、edge(边缘可用区)
      *
      * @return
      */
@@ -442,7 +373,7 @@ public class LoadBalancer  implements java.io.Serializable {
     }
 
     /**
-     * set lb所在位置类型，取值：standard(标准负载均衡)，edge(边缘负载均衡)
+     * set 负载均衡所在可用区类型，取值包括：standard(标准可用区)、edge(边缘可用区)
      *
      * @param azType
      */
@@ -572,36 +503,6 @@ public class LoadBalancer  implements java.io.Serializable {
     }
 
     /**
-     * set 是否绑定域名，包括外网和内网，取值为True(开启)或False(关闭)
-     *
-     * @param domainEnable
-     */
-    public LoadBalancer domainEnable(Boolean domainEnable) {
-        this.domainEnable = domainEnable;
-        return this;
-    }
-
-    /**
-     * set 内网域名，域名绑定开启时为空，表示还没有正常绑定
-     *
-     * @param internalDomain
-     */
-    public LoadBalancer internalDomain(String internalDomain) {
-        this.internalDomain = internalDomain;
-        return this;
-    }
-
-    /**
-     * set 外网域名，域名绑定开启时为空，表示还没有正常绑定
-     *
-     * @param internetDomain
-     */
-    public LoadBalancer internetDomain(String internetDomain) {
-        this.internetDomain = internetDomain;
-        return this;
-    }
-
-    /**
      * set 删除保护，取值为True(开启)或False(关闭)
      *
      * @param deleteProtection
@@ -622,7 +523,7 @@ public class LoadBalancer  implements java.io.Serializable {
     }
 
     /**
-     * set lb所在位置类型，取值：standard(标准负载均衡)，edge(边缘负载均衡)
+     * set 负载均衡所在可用区类型，取值包括：standard(标准可用区)、edge(边缘可用区)
      *
      * @param azType
      */

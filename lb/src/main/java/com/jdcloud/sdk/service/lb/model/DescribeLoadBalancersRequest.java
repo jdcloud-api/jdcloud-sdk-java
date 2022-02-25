@@ -53,8 +53,8 @@ public class DescribeLoadBalancersRequest extends JdcloudRequest implements java
 loadBalancerIds - 负载均衡ID列表，支持多个
 loadBalancerNames - 负载均衡名称列表，支持多个
 vpcId - 负载均衡所在Vpc的Id，支持单个
-azType - 负载均衡az类型，取值：all(全部类型)，standard(标准负载均衡)，edge(边缘负载均衡)，支持单个
-azs - 可用区，支持多个
+azType - 负载均衡所在可用区类型，取值包括：all(全部可用区)、standard(标准可用区)、edge(边缘可用区)。默认standard ，支持单个
+azs - 边缘可用区，支持多个
 
      */
     private List<Filter> filters;
@@ -113,8 +113,8 @@ azs - 可用区，支持多个
 loadBalancerIds - 负载均衡ID列表，支持多个
 loadBalancerNames - 负载均衡名称列表，支持多个
 vpcId - 负载均衡所在Vpc的Id，支持单个
-azType - 负载均衡az类型，取值：all(全部类型)，standard(标准负载均衡)，edge(边缘负载均衡)，支持单个
-azs - 可用区，支持多个
+azType - 负载均衡所在可用区类型，取值包括：all(全部可用区)、standard(标准可用区)、edge(边缘可用区)。默认standard ，支持单个
+azs - 边缘可用区，支持多个
 
      *
      * @return
@@ -128,8 +128,8 @@ azs - 可用区，支持多个
 loadBalancerIds - 负载均衡ID列表，支持多个
 loadBalancerNames - 负载均衡名称列表，支持多个
 vpcId - 负载均衡所在Vpc的Id，支持单个
-azType - 负载均衡az类型，取值：all(全部类型)，standard(标准负载均衡)，edge(边缘负载均衡)，支持单个
-azs - 可用区，支持多个
+azType - 负载均衡所在可用区类型，取值包括：all(全部可用区)、standard(标准可用区)、edge(边缘可用区)。默认standard ，支持单个
+azs - 边缘可用区，支持多个
 
      *
      * @param filters
@@ -200,8 +200,8 @@ azs - 可用区，支持多个
 loadBalancerIds - 负载均衡ID列表，支持多个
 loadBalancerNames - 负载均衡名称列表，支持多个
 vpcId - 负载均衡所在Vpc的Id，支持单个
-azType - 负载均衡az类型，取值：all(全部类型)，standard(标准负载均衡)，edge(边缘负载均衡)，支持单个
-azs - 可用区，支持多个
+azType - 负载均衡所在可用区类型，取值包括：all(全部可用区)、standard(标准可用区)、edge(边缘可用区)。默认standard ，支持单个
+azs - 边缘可用区，支持多个
 
      *
      * @param filters
@@ -237,8 +237,8 @@ azs - 可用区，支持多个
 loadBalancerIds - 负载均衡ID列表，支持多个
 loadBalancerNames - 负载均衡名称列表，支持多个
 vpcId - 负载均衡所在Vpc的Id，支持单个
-azType - 负载均衡az类型，取值：all(全部类型)，standard(标准负载均衡)，edge(边缘负载均衡)，支持单个
-azs - 可用区，支持多个
+azType - 负载均衡所在可用区类型，取值包括：all(全部可用区)、standard(标准可用区)、edge(边缘可用区)。默认standard ，支持单个
+azs - 边缘可用区，支持多个
 
      *
      * @param filter
