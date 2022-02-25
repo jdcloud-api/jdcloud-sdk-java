@@ -57,7 +57,7 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
     private String type;
 
     /**
-     * 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
      */
     private List<String> azs;
 
@@ -85,11 +85,6 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
      * LoadBalancer的描述信息,允许输入UTF-8编码下的全部字符，不超过256字符
      */
     private String description;
-
-    /**
-     * 是否绑定域名，包括外网和内网，缺省为False(关闭)
-     */
-    private Boolean domainEnable;
 
     /**
      * 删除保护，取值为True(开启)或False(关闭)，默认为False
@@ -157,7 +152,7 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * get 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
      *
      * @return
      */
@@ -166,7 +161,7 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
      *
      * @param azs
      */
@@ -265,24 +260,6 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 是否绑定域名，包括外网和内网，缺省为False(关闭)
-     *
-     * @return
-     */
-    public Boolean getDomainEnable() {
-        return domainEnable;
-    }
-
-    /**
-     * set 是否绑定域名，包括外网和内网，缺省为False(关闭)
-     *
-     * @param domainEnable
-     */
-    public void setDomainEnable(Boolean domainEnable) {
-        this.domainEnable = domainEnable;
-    }
-
-    /**
      * get 删除保护，取值为True(开启)或False(关闭)，默认为False
      *
      * @return
@@ -350,7 +327,7 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * set 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
      *
      * @param azs
      */
@@ -410,16 +387,6 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 是否绑定域名，包括外网和内网，缺省为False(关闭)
-     *
-     * @param domainEnable
-     */
-    public CreateLoadBalancerSpec domainEnable(Boolean domainEnable) {
-        this.domainEnable = domainEnable;
-        return this;
-    }
-
-    /**
      * set 删除保护，取值为True(开启)或False(关闭)，默认为False
      *
      * @param deleteProtection
@@ -441,7 +408,7 @@ public class CreateLoadBalancerSpec  implements java.io.Serializable {
 
 
     /**
-     * add item to 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】全可用区可用，不必传该参数
+     * add item to 【alb，nlb】LoadBalancer所属availability Zone列表,对于alb,nlb是必选参数，可用区个数不能超过2个 &lt;br&gt;【dnlb】中心可用区，dnlb不需要传该参数，全可用区可用；边缘可用区，仅支持传入单可用区
      *
      * @param az
      */

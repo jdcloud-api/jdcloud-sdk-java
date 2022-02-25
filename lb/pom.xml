@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>lb</artifactId>
-  <version>0.5.6</version>
+  <version>0.5.7</version>
   <packaging>jar</packaging>
   <name>lb</name>
   <url>http://www.jdcloud.com</url>

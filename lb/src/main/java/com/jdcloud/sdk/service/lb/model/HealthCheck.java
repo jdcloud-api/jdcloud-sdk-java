@@ -60,17 +60,17 @@ public class HealthCheck  implements java.io.Serializable {
     private Integer intervalSeconds;
 
     /**
-     * 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp不支持端口
+     * 健康检查的目标端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp不支持端口
      */
     private Integer port;
 
     /**
-     * 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
+     * 健康检查的目标域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      */
     private String httpDomain;
 
     /**
-     * 【Http协议】检查路径, 健康检查的目标路径，必须以&quot;/&quot;开头，允许输入具体的文件路径，默认为根目录
+     * 健康检查的目标路径，仅支持HTTP协议。必须以&quot;/&quot;开头，支持大小写字母、数字、汉字和英文字符-/.%?#&amp;_;~!()*[]@^:&#39;,+&#x3D;&lt;&gt;{}。%后仅支持输入URL编码后字符，且不超过1000个字符
      */
     private String httpPath;
 
@@ -171,7 +171,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * get 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp不支持端口
+     * get 健康检查的目标端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp不支持端口
      *
      * @return
      */
@@ -180,7 +180,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp不支持端口
+     * set 健康检查的目标端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp不支持端口
      *
      * @param port
      */
@@ -189,7 +189,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * get 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
+     * get 健康检查的目标域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @return
      */
@@ -198,7 +198,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * set 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
+     * set 健康检查的目标域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @param httpDomain
      */
@@ -207,7 +207,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * get 【Http协议】检查路径, 健康检查的目标路径，必须以&quot;/&quot;开头，允许输入具体的文件路径，默认为根目录
+     * get 健康检查的目标路径，仅支持HTTP协议。必须以&quot;/&quot;开头，支持大小写字母、数字、汉字和英文字符-/.%?#&amp;_;~!()*[]@^:&#39;,+&#x3D;&lt;&gt;{}。%后仅支持输入URL编码后字符，且不超过1000个字符
      *
      * @return
      */
@@ -216,7 +216,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * set 【Http协议】检查路径, 健康检查的目标路径，必须以&quot;/&quot;开头，允许输入具体的文件路径，默认为根目录
+     * set 健康检查的目标路径，仅支持HTTP协议。必须以&quot;/&quot;开头，支持大小写字母、数字、汉字和英文字符-/.%?#&amp;_;~!()*[]@^:&#39;,+&#x3D;&lt;&gt;{}。%后仅支持输入URL编码后字符，且不超过1000个字符
      *
      * @param httpPath
      */
@@ -294,7 +294,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * set 检查端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp不支持端口
+     * set 健康检查的目标端口, 取值范围为[0,65535], 默认为0，默认端口为每个后端实例接收负载均衡流量的端口，Icmp不支持端口
      *
      * @param port
      */
@@ -304,7 +304,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * set 【Http协议】检查域名，支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
+     * set 健康检查的目标域名，仅支持HTTP协议。支持输入域名和IP地址。如果输入域名，仅支持大小写字母、数字、英文中划线&quot;-&quot;和点&quot;.&quot;，不区分大小写，且不超过255个字符。默认为空，表示健康检查不携带域名
      *
      * @param httpDomain
      */
@@ -314,7 +314,7 @@ public class HealthCheck  implements java.io.Serializable {
     }
 
     /**
-     * set 【Http协议】检查路径, 健康检查的目标路径，必须以&quot;/&quot;开头，允许输入具体的文件路径，默认为根目录
+     * set 健康检查的目标路径，仅支持HTTP协议。必须以&quot;/&quot;开头，支持大小写字母、数字、汉字和英文字符-/.%?#&amp;_;~!()*[]@^:&#39;,+&#x3D;&lt;&gt;{}。%后仅支持输入URL编码后字符，且不超过1000个字符
      *
      * @param httpPath
      */
