@@ -6,6 +6,9 @@ import com.google.api.client.http.apache.ApacheHttpTransport;
 import com.jdcloud.sdk.auth.CredentialsProvider;
 import com.jdcloud.sdk.http.HttpRequestConfig;
 import org.apache.http.HttpHost;
+import org.apache.http.conn.params.ConnManagerPNames;
+import org.apache.http.conn.params.ConnPerRouteBean;
+import org.apache.http.conn.params.ConnRouteParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 
@@ -13,6 +16,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+
 
 /**
  * Openapi的客户端封装
@@ -29,7 +33,7 @@ public abstract class JdcloudClient {
 
     private boolean retryQuest = true;
 
-    private final static Feature[] FEATURES = { Feature.AutoCloseSource, Feature.UseBigDecimal,
+    private final static Feature[] FEATURES = {Feature.AutoCloseSource, Feature.UseBigDecimal,
             Feature.AllowUnQuotedFieldNames, Feature.AllowSingleQuotes, Feature.AllowArbitraryCommas,
             Feature.AllowArbitraryCommas, Feature.SortFeidFastMatch, Feature.IgnoreNotMatch, Feature.DisableSpecialKeyDetect};
 
@@ -38,14 +42,38 @@ public abstract class JdcloudClient {
      */
     void init() {
         final HttpRequestConfig httpRequestConfig = getHttpRequestConfig();
-        if(httpRequestConfig != null && httpRequestConfig.getProxyHost() != null) {
-            HttpHost proxy = new HttpHost(httpRequestConfig.getProxyHost(), httpRequestConfig.getProxyPort(), httpRequestConfig.getProxyProtocol().toString());
-            boolean staleConnectionCheck = getHttpConnectionParams().getBooleanParameter(HttpConnectionParams.STALE_CONNECTION_CHECK, false);
-            boolean tcpNodelay = getHttpConnectionParams().getBooleanParameter(HttpConnectionParams.TCP_NODELAY, false);
-            this.httpTransport = new ApacheHttpTransport.Builder().setProxy(proxy).build();
-            getHttpConnectionParams().setBooleanParameter(HttpConnectionParams.STALE_CONNECTION_CHECK, staleConnectionCheck);
-            getHttpConnectionParams().setBooleanParameter(HttpConnectionParams.TCP_NODELAY, tcpNodelay);
+        ApacheHttpTransport.Builder transportBuilder = new ApacheHttpTransport.Builder();
+        HttpParams basicHttpParams = transportBuilder.getHttpParams();
+        if (httpRequestConfig.getMaxTotal()>20){
+            basicHttpParams.setIntParameter(ConnManagerPNames.MAX_TOTAL_CONNECTIONS,httpRequestConfig.getMaxTotal());
         }
+        if ( httpRequestConfig.getMaxConnPerRoute()>0 ) {
+            ConnPerRouteBean connPerRoute = new ConnPerRouteBean();
+            connPerRoute.setDefaultMaxPerRoute( httpRequestConfig.getMaxConnPerRoute());
+            basicHttpParams.setParameter(ConnManagerPNames.MAX_CONNECTIONS_PER_ROUTE,connPerRoute);
+        }
+        if (httpRequestConfig.getProxyHost() != null) {
+            HttpHost proxy = new HttpHost(httpRequestConfig.getProxyHost(), httpRequestConfig.getProxyPort(), httpRequestConfig.getProxyProtocol().toString());
+            ConnRouteParams.setDefaultProxy(basicHttpParams, proxy);
+        }
+        if (httpRequestConfig.getSocketTimeout()>0){
+            basicHttpParams.setParameter(HttpConnectionParams.SO_TIMEOUT, httpRequestConfig.getSocketTimeout());
+        }
+
+        if (httpRequestConfig.getValidateAfterInactivity() > 0) {
+            basicHttpParams.setParameter(HttpConnectionParams.STALE_CONNECTION_CHECK, true);
+        }
+        if (httpRequestConfig.getConnectionTimeout() > 0) {
+            basicHttpParams.setParameter(HttpConnectionParams.CONNECTION_TIMEOUT, httpRequestConfig.getConnectionTimeout());
+        }
+        if (httpRequestConfig.getTcpNoDelay()){
+            basicHttpParams.setParameter(HttpConnectionParams.TCP_NODELAY,httpRequestConfig.getTcpNoDelay());
+        }
+        if( httpRequestConfig.getProxyHost() != null) {
+            HttpHost proxy = new HttpHost(httpRequestConfig.getProxyHost(), httpRequestConfig.getProxyPort(), httpRequestConfig.getProxyProtocol().toString());
+            transportBuilder.setProxy(proxy);
+        }
+        this.httpTransport = transportBuilder.build();
         this.httpRequestFactory = this.httpTransport.createRequestFactory(
                 new HttpRequestInitializer() {
                     @Override
@@ -61,6 +89,7 @@ public abstract class JdcloudClient {
                     }
                 });
     }
+
 
     public HttpParams getHttpConnectionParams() {
         return ((ApacheHttpTransport)this.httpTransport).getHttpClient().getParams();

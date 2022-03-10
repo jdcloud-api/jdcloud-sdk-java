@@ -7,25 +7,26 @@ import com.jdcloud.sdk.auth.sign.SignatureComposer;
 import com.jdcloud.sdk.http.SdkHttpMethod;
 import com.jdcloud.sdk.JdcloudSdkException;
 import com.jdcloud.sdk.model.SignRequest;
+import com.jdcloud.sdk.service.Exclude;
 import com.jdcloud.sdk.service.JdcloudHttpResponse;
 import com.jdcloud.sdk.service.JdcloudRequest;
 import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.utils.Base64Utils;
 import com.jdcloud.sdk.utils.BinaryUtils;
+import com.jdcloud.sdk.utils.SdkHttpUtils;
 import com.jdcloud.sdk.utils.StringUtils;
+import org.apache.http.Header;
 import org.apache.http.NoHttpResponseException;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.impl.client.BasicCookieStore;
+import org.apache.http.impl.cookie.DefaultCookieSpec; 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import org.slf4j.LoggerFactory; 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.Field;
 import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -122,8 +123,9 @@ public abstract class JdcloudExecutor {
             if (jdcloudClient.httpRequestFactory == null) {
                 jdcloudClient.init();
             }
-            HttpRequest httpRequest = jdcloudClient.buildRequest(method(), new GenericUrl(host.toString() + path.toString() + params.toString()), bodyContent);
-
+            //do path encode for the final request
+            String requestPath =  SdkHttpUtils.urlEncode(path.toString(), true);
+            HttpRequest httpRequest = jdcloudClient.buildRequest(method(), new GenericUrl(host.toString() + requestPath + params.toString()), bodyContent);
             // 设置Headers
             httpRequest.getHeaders().setUserAgent(jdcloudClient.getUserAgent());
             httpRequest.getHeaders().setContentType(JdcloudClient.JSON);
@@ -136,6 +138,7 @@ public abstract class JdcloudExecutor {
             logger.debug("Authorization: {}", httpRequest.getHeaders().getAuthorization());
 
             int times = 1;
+            this.setCookie(request.getCookies(),httpRequest.getHeaders());
             while (times < RETRY_MAX_TIMES && jdcloudClient.isRetryQuest()) {
                 try {
                     httpResponse = httpRequest.execute();
@@ -191,7 +194,9 @@ public abstract class JdcloudExecutor {
         StringBuffer url = new StringBuffer();
         while (matcher.find()) {
             String fieldName = matcher.group(1);
-            matcher.appendReplacement(url, getRequestValue(fieldName, request));
+            //matcher.appendReplacement(url, getRequestValue(fieldName, request));
+            String replaceValue = Matcher.quoteReplacement(getRequestValue(fieldName, request));
+            matcher.appendReplacement(url, replaceValue);
         }
         matcher.appendTail(url);
         return url.toString();
@@ -205,20 +210,20 @@ public abstract class JdcloudExecutor {
      */
     private void checkRequest(Object request) {
         Field[] array = request.getClass().getDeclaredFields();
-            try {
-                for(Field field: array) {
-                    if (field.isAnnotationPresent(Required.class)) {
-                        field.setAccessible(true);
-                        Object value = field.get(request);
-                        if (value == null) {
-                            logger.info("字段{}不能为null", field.getName());
-                            throw new JdcloudSdkException("字段" + field.getName() + "不能为null");
-                        }
+        try {
+            for(Field field: array) {
+                if (field.isAnnotationPresent(Required.class)) {
+                    field.setAccessible(true);
+                    Object value = field.get(request);
+                    if (value == null) {
+                        logger.info("字段{}不能为null", field.getName());
+                        throw new JdcloudSdkException("字段" + field.getName() + "不能为null");
                     }
                 }
-            } catch (IllegalArgumentException | IllegalAccessException e) {
-                throw new JdcloudSdkException(e);
             }
+        } catch (IllegalArgumentException | IllegalAccessException e) {
+            throw new JdcloudSdkException(e);
+        }
     }
 
     /**
@@ -304,7 +309,8 @@ public abstract class JdcloudExecutor {
             if (value == null) {
                 throw new JdcloudSdkException("field " + fieldName + " not set.");
             }
-            return String.valueOf(value);
+            String strValue = String.valueOf(value);
+            return  strValue.replace("/","%2F");
         }catch (Exception e) {
             throw new JdcloudSdkException("can not get value of request field '" + fieldName + "'.", e);
         }
@@ -417,9 +423,34 @@ public abstract class JdcloudExecutor {
                 || SdkHttpMethod.GET.name().equalsIgnoreCase(method())
                 || SdkHttpMethod.HEAD.name().equalsIgnoreCase(method())) {
             return null;
-        }
-        Gson gson = new GsonBuilder().setDateFormat(dateFormat).create();
+        } 
+        ExclusionStrategy strategy = new ExclusionStrategy() {
+            @Override
+            public boolean shouldSkipClass(Class<?> clazz) {
+                return false;
+            }
+        
+            @Override
+            public boolean shouldSkipField(FieldAttributes field) {
+                return field.getAnnotation(Exclude.class) != null;
+            }
+        };
+        Gson gson = new GsonBuilder().setDateFormat(dateFormat).setExclusionStrategies(strategy).create();
         return gson.toJson(request);
+    }
+
+    private void setCookie(Set<Cookie> cookies, HttpHeaders headers){
+        if (cookies.size()>0){
+            BasicCookieStore cookieStore = new BasicCookieStore();
+            for (Cookie cookie:cookies){
+                cookieStore.addCookie(cookie);
+            }
+            DefaultCookieSpec spec = new DefaultCookieSpec();
+            List<Header> cookieHeaders = spec.formatCookies(cookieStore.getCookies());
+            for (Header header: cookieHeaders) {
+                headers.set(header.getName(),header.getValue());
+            }
+        }
     }
 
     private void setCustomHeader(HttpHeaders headers) {
@@ -438,5 +469,6 @@ public abstract class JdcloudExecutor {
             headers.put(key, value);
         }
     }
+
 
 }
