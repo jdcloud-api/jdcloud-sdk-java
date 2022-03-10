@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.vpc.model.ElasticIpSpec;
 import com.jdcloud.sdk.service.charge.model.ChargeSpec;
-import com.jdcloud.sdk.service.disk.model.Tag;
 
 /**
  * 云主机配置信息。

@@ -33,8 +33,6 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 
 存量主机加入高可用组，或者主机从一个高可用组移动到另一个高可用组
 
-详细操作说明请参考帮助文档：[存量主机加入高可用组](https://docs.jdcloud.com/cn/virtual-machines/rebuild-instance)
-
 ## 接口说明
 - 不支持专属宿主机上的实例调整高可用组。
 - 除GPU、vGPU（以P开头）外的一代机暂不支持调整高可用组。

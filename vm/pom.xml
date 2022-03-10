@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>vm</artifactId>
-  <version>1.4.1</version>
+  <version>1.4.2</version>
   <packaging>jar</packaging>
   <name>vm</name>
   <url>http://www.jdcloud.com</url>
@@ -49,17 +49,7 @@
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>core</artifactId>
-      <version>1.2.7</version>
-    </dependency>
-    <dependency>
-      <groupId>com.jdcloud.sdk</groupId>
-      <artifactId>vpc</artifactId>
-      <version>0.9.2</version>
-    </dependency>
-    <dependency>
-      <groupId>com.jdcloud.sdk</groupId>
-      <artifactId>common</artifactId>
-      <version>0.4.1</version>
+      <version>1.2.8</version>
     </dependency>
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
@@ -70,6 +60,16 @@
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>charge</artifactId>
       <version>0.4.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jdcloud.sdk</groupId>
+      <artifactId>vpc</artifactId>
+      <version>0.9.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jdcloud.sdk</groupId>
+      <artifactId>common</artifactId>
+      <version>0.4.1</version>
     </dependency>
   </dependencies>
 

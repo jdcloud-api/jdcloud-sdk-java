@@ -27,7 +27,6 @@ package com.jdcloud.sdk.service.vm.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.service.charge.model.Charge;
-import com.jdcloud.sdk.service.disk.model.Tag;
 
 /**
  * 云主机实例信息。
