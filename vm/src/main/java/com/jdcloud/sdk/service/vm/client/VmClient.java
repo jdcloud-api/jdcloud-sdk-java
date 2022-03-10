@@ -210,7 +210,7 @@ public class VmClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.7";
+    public final static String ClientVersion = "1.2.8";
     public final static String DefaultEndpoint = "vm.jdcloud-api.com";
     public final static String ServiceName = "vm";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -345,8 +345,6 @@ public class VmClient extends JdcloudClient {
 存量主机加入高可用组。
 
 存量主机加入高可用组，或者主机从一个高可用组移动到另一个高可用组
-
-详细操作说明请参考帮助文档：[存量主机加入高可用组](https://docs.jdcloud.com/cn/virtual-machines/rebuild-instance)
 
 ## 接口说明
 - 不支持专属宿主机上的实例调整高可用组。
