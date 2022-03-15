@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.monitor.client.DescribeMetricDataExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeServicesRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeServicesResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeServicesExecutor;
+import com.jdcloud.sdk.service.monitor.model.PutProductMetricDataRequest;
+import com.jdcloud.sdk.service.monitor.model.PutProductMetricDataResponse;
+import com.jdcloud.sdk.service.monitor.client.PutProductMetricDataExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeMetricsForAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeMetricsForAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeMetricsForAlarmExecutor;
@@ -52,6 +55,9 @@ import com.jdcloud.sdk.service.monitor.client.DescribeAlarmHistoryExecutor;
 import com.jdcloud.sdk.service.monitor.model.DescribeAlarmRequest;
 import com.jdcloud.sdk.service.monitor.model.DescribeAlarmResponse;
 import com.jdcloud.sdk.service.monitor.client.DescribeAlarmExecutor;
+import com.jdcloud.sdk.service.monitor.model.PutRequest;
+import com.jdcloud.sdk.service.monitor.model.PutResponse;
+import com.jdcloud.sdk.service.monitor.client.PutExecutor;
 import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsRequest;
 import com.jdcloud.sdk.service.monitor.model.DeleteAlarmsResponse;
 import com.jdcloud.sdk.service.monitor.client.DeleteAlarmsExecutor;
@@ -93,7 +99,7 @@ public class MonitorClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.8";
     public final static String DefaultEndpoint = "monitor.jdcloud-api.com";
     public final static String ServiceName = "monitor";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -147,7 +153,11 @@ public class MonitorClient extends JdcloudClient {
     }
 
     /**
-     * 查看某资源单个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;，可以使用接口&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;：查询产品线可用的metric列表。
+     * 查看某资源单个监控项数据.
+metric介绍: &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+可以使用接口:&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;:查询产品线可用的metric列表。
+查询起止时间统一向下对齐10s, 举例:开始时间为 08:45:45 会对齐到08:45:40
+
      *
      * @param request
      * @return
@@ -166,6 +176,17 @@ public class MonitorClient extends JdcloudClient {
      */
     public DescribeServicesResponse describeServices(DescribeServicesRequest request) throws JdcloudSdkException {
         return new DescribeServicesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 监控数据上报。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PutProductMetricDataResponse putProductMetricData(PutProductMetricDataRequest request) throws JdcloudSdkException {
+        return new PutProductMetricDataExecutor().client(this).execute(request);
     }
 
     /**
@@ -210,6 +231,17 @@ public class MonitorClient extends JdcloudClient {
      */
     public DescribeAlarmResponse describeAlarm(DescribeAlarmRequest request) throws JdcloudSdkException {
         return new DescribeAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 监控数据上报。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public PutResponse put(PutRequest request) throws JdcloudSdkException {
+        return new PutExecutor().client(this).execute(request);
     }
 
     /**

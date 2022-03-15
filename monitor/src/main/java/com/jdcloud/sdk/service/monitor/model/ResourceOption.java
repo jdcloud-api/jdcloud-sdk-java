@@ -44,6 +44,16 @@ public class ResourceOption  implements java.io.Serializable {
      */
     private TagsOption tagsOption;
 
+    /**
+     * 指定资源组设置报警规则
+     */
+    private List<String> resourceGroups;
+
+    /**
+     * 资源筛选的类型,1:指定具体资源 2:标签筛选 3:资源组筛选
+     */
+    private Long resourceFilterType;
+
 
     /**
      * get 指定具体资源ID设置报警规则，每次最多100个。优先resourceItems生效
@@ -81,6 +91,42 @@ public class ResourceOption  implements java.io.Serializable {
         this.tagsOption = tagsOption;
     }
 
+    /**
+     * get 指定资源组设置报警规则
+     *
+     * @return
+     */
+    public List<String> getResourceGroups() {
+        return resourceGroups;
+    }
+
+    /**
+     * set 指定资源组设置报警规则
+     *
+     * @param resourceGroups
+     */
+    public void setResourceGroups(List<String> resourceGroups) {
+        this.resourceGroups = resourceGroups;
+    }
+
+    /**
+     * get 资源筛选的类型,1:指定具体资源 2:标签筛选 3:资源组筛选
+     *
+     * @return
+     */
+    public Long getResourceFilterType() {
+        return resourceFilterType;
+    }
+
+    /**
+     * set 资源筛选的类型,1:指定具体资源 2:标签筛选 3:资源组筛选
+     *
+     * @param resourceFilterType
+     */
+    public void setResourceFilterType(Long resourceFilterType) {
+        this.resourceFilterType = resourceFilterType;
+    }
+
 
     /**
      * set 指定具体资源ID设置报警规则，每次最多100个。优先resourceItems生效
@@ -102,6 +148,26 @@ public class ResourceOption  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 指定资源组设置报警规则
+     *
+     * @param resourceGroups
+     */
+    public ResourceOption resourceGroups(List<String> resourceGroups) {
+        this.resourceGroups = resourceGroups;
+        return this;
+    }
+
+    /**
+     * set 资源筛选的类型,1:指定具体资源 2:标签筛选 3:资源组筛选
+     *
+     * @param resourceFilterType
+     */
+    public ResourceOption resourceFilterType(Long resourceFilterType) {
+        this.resourceFilterType = resourceFilterType;
+        return this;
+    }
+
 
     /**
      * add item to 指定具体资源ID设置报警规则，每次最多100个。优先resourceItems生效
@@ -113,6 +179,18 @@ public class ResourceOption  implements java.io.Serializable {
             this.resourceItems = new ArrayList<>();
         }
         this.resourceItems.add(resourceItem);
+    }
+
+    /**
+     * add item to 指定资源组设置报警规则
+     *
+     * @param resourceGroup
+     */
+    public void addResourceGroup(String resourceGroup) {
+        if (this.resourceGroups == null) {
+            this.resourceGroups = new ArrayList<>();
+        }
+        this.resourceGroups.add(resourceGroup);
     }
 
 }

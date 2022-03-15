@@ -28,9 +28,9 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * chart
+ * metricGroup
  */
-public class Chart  implements java.io.Serializable {
+public class MetricGroup  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -50,39 +50,49 @@ public class Chart  implements java.io.Serializable {
     private String groupCode;
 
     /**
-     * chartNameCH
+     * groupNameCH
      */
-    private String chartNameCH;
+    private String groupNameCH;
 
     /**
-     * chartNameEN
+     * groupNameEN
      */
-    private String chartNameEN;
+    private String groupNameEN;
 
     /**
-     * chartUnitCH
+     * webCode
      */
-    private String chartUnitCH;
+    private String webCode;
 
     /**
-     * chartUnitEN
+     * mainTag
      */
-    private String chartUnitEN;
+    private String mainTag;
 
     /**
-     * chartIndex
+     * tags
      */
-    private Integer chartIndex;
+    private String tags;
 
     /**
-     * metrics
+     * parent
      */
-    private String metrics;
+    private Integer parent;
 
     /**
-     * metricIds
+     * hasChildren
      */
-    private List<Integer> metricIds;
+    private Boolean hasChildren;
+
+    /**
+     * deletable
+     */
+    private Boolean deletable;
+
+    /**
+     * 业务线代码
+     */
+    private List<String> serviceCodes;
 
     /**
      * 排序字段
@@ -160,129 +170,165 @@ public class Chart  implements java.io.Serializable {
     }
 
     /**
-     * get chartNameCH
+     * get groupNameCH
      *
      * @return
      */
-    public String getChartNameCH() {
-        return chartNameCH;
+    public String getGroupNameCH() {
+        return groupNameCH;
     }
 
     /**
-     * set chartNameCH
+     * set groupNameCH
      *
-     * @param chartNameCH
+     * @param groupNameCH
      */
-    public void setChartNameCH(String chartNameCH) {
-        this.chartNameCH = chartNameCH;
+    public void setGroupNameCH(String groupNameCH) {
+        this.groupNameCH = groupNameCH;
     }
 
     /**
-     * get chartNameEN
-     *
-     * @return
-     */
-    public String getChartNameEN() {
-        return chartNameEN;
-    }
-
-    /**
-     * set chartNameEN
-     *
-     * @param chartNameEN
-     */
-    public void setChartNameEN(String chartNameEN) {
-        this.chartNameEN = chartNameEN;
-    }
-
-    /**
-     * get chartUnitCH
+     * get groupNameEN
      *
      * @return
      */
-    public String getChartUnitCH() {
-        return chartUnitCH;
+    public String getGroupNameEN() {
+        return groupNameEN;
     }
 
     /**
-     * set chartUnitCH
+     * set groupNameEN
      *
-     * @param chartUnitCH
+     * @param groupNameEN
      */
-    public void setChartUnitCH(String chartUnitCH) {
-        this.chartUnitCH = chartUnitCH;
+    public void setGroupNameEN(String groupNameEN) {
+        this.groupNameEN = groupNameEN;
     }
 
     /**
-     * get chartUnitEN
-     *
-     * @return
-     */
-    public String getChartUnitEN() {
-        return chartUnitEN;
-    }
-
-    /**
-     * set chartUnitEN
-     *
-     * @param chartUnitEN
-     */
-    public void setChartUnitEN(String chartUnitEN) {
-        this.chartUnitEN = chartUnitEN;
-    }
-
-    /**
-     * get chartIndex
+     * get webCode
      *
      * @return
      */
-    public Integer getChartIndex() {
-        return chartIndex;
+    public String getWebCode() {
+        return webCode;
     }
 
     /**
-     * set chartIndex
+     * set webCode
      *
-     * @param chartIndex
+     * @param webCode
      */
-    public void setChartIndex(Integer chartIndex) {
-        this.chartIndex = chartIndex;
+    public void setWebCode(String webCode) {
+        this.webCode = webCode;
     }
 
     /**
-     * get metrics
-     *
-     * @return
-     */
-    public String getMetrics() {
-        return metrics;
-    }
-
-    /**
-     * set metrics
-     *
-     * @param metrics
-     */
-    public void setMetrics(String metrics) {
-        this.metrics = metrics;
-    }
-
-    /**
-     * get metricIds
+     * get mainTag
      *
      * @return
      */
-    public List<Integer> getMetricIds() {
-        return metricIds;
+    public String getMainTag() {
+        return mainTag;
     }
 
     /**
-     * set metricIds
+     * set mainTag
      *
-     * @param metricIds
+     * @param mainTag
      */
-    public void setMetricIds(List<Integer> metricIds) {
-        this.metricIds = metricIds;
+    public void setMainTag(String mainTag) {
+        this.mainTag = mainTag;
+    }
+
+    /**
+     * get tags
+     *
+     * @return
+     */
+    public String getTags() {
+        return tags;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * get parent
+     *
+     * @return
+     */
+    public Integer getParent() {
+        return parent;
+    }
+
+    /**
+     * set parent
+     *
+     * @param parent
+     */
+    public void setParent(Integer parent) {
+        this.parent = parent;
+    }
+
+    /**
+     * get hasChildren
+     *
+     * @return
+     */
+    public Boolean getHasChildren() {
+        return hasChildren;
+    }
+
+    /**
+     * set hasChildren
+     *
+     * @param hasChildren
+     */
+    public void setHasChildren(Boolean hasChildren) {
+        this.hasChildren = hasChildren;
+    }
+
+    /**
+     * get deletable
+     *
+     * @return
+     */
+    public Boolean getDeletable() {
+        return deletable;
+    }
+
+    /**
+     * set deletable
+     *
+     * @param deletable
+     */
+    public void setDeletable(Boolean deletable) {
+        this.deletable = deletable;
+    }
+
+    /**
+     * get 业务线代码
+     *
+     * @return
+     */
+    public List<String> getServiceCodes() {
+        return serviceCodes;
+    }
+
+    /**
+     * set 业务线代码
+     *
+     * @param serviceCodes
+     */
+    public void setServiceCodes(List<String> serviceCodes) {
+        this.serviceCodes = serviceCodes;
     }
 
     /**
@@ -363,7 +409,7 @@ public class Chart  implements java.io.Serializable {
      *
      * @param id
      */
-    public Chart id(Integer id) {
+    public MetricGroup id(Integer id) {
         this.id = id;
         return this;
     }
@@ -373,7 +419,7 @@ public class Chart  implements java.io.Serializable {
      *
      * @param serviceCode
      */
-    public Chart serviceCode(String serviceCode) {
+    public MetricGroup serviceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
@@ -383,78 +429,98 @@ public class Chart  implements java.io.Serializable {
      *
      * @param groupCode
      */
-    public Chart groupCode(String groupCode) {
+    public MetricGroup groupCode(String groupCode) {
         this.groupCode = groupCode;
         return this;
     }
 
     /**
-     * set chartNameCH
+     * set groupNameCH
      *
-     * @param chartNameCH
+     * @param groupNameCH
      */
-    public Chart chartNameCH(String chartNameCH) {
-        this.chartNameCH = chartNameCH;
+    public MetricGroup groupNameCH(String groupNameCH) {
+        this.groupNameCH = groupNameCH;
         return this;
     }
 
     /**
-     * set chartNameEN
+     * set groupNameEN
      *
-     * @param chartNameEN
+     * @param groupNameEN
      */
-    public Chart chartNameEN(String chartNameEN) {
-        this.chartNameEN = chartNameEN;
+    public MetricGroup groupNameEN(String groupNameEN) {
+        this.groupNameEN = groupNameEN;
         return this;
     }
 
     /**
-     * set chartUnitCH
+     * set webCode
      *
-     * @param chartUnitCH
+     * @param webCode
      */
-    public Chart chartUnitCH(String chartUnitCH) {
-        this.chartUnitCH = chartUnitCH;
+    public MetricGroup webCode(String webCode) {
+        this.webCode = webCode;
         return this;
     }
 
     /**
-     * set chartUnitEN
+     * set mainTag
      *
-     * @param chartUnitEN
+     * @param mainTag
      */
-    public Chart chartUnitEN(String chartUnitEN) {
-        this.chartUnitEN = chartUnitEN;
+    public MetricGroup mainTag(String mainTag) {
+        this.mainTag = mainTag;
         return this;
     }
 
     /**
-     * set chartIndex
+     * set tags
      *
-     * @param chartIndex
+     * @param tags
      */
-    public Chart chartIndex(Integer chartIndex) {
-        this.chartIndex = chartIndex;
+    public MetricGroup tags(String tags) {
+        this.tags = tags;
         return this;
     }
 
     /**
-     * set metrics
+     * set parent
      *
-     * @param metrics
+     * @param parent
      */
-    public Chart metrics(String metrics) {
-        this.metrics = metrics;
+    public MetricGroup parent(Integer parent) {
+        this.parent = parent;
         return this;
     }
 
     /**
-     * set metricIds
+     * set hasChildren
      *
-     * @param metricIds
+     * @param hasChildren
      */
-    public Chart metricIds(List<Integer> metricIds) {
-        this.metricIds = metricIds;
+    public MetricGroup hasChildren(Boolean hasChildren) {
+        this.hasChildren = hasChildren;
+        return this;
+    }
+
+    /**
+     * set deletable
+     *
+     * @param deletable
+     */
+    public MetricGroup deletable(Boolean deletable) {
+        this.deletable = deletable;
+        return this;
+    }
+
+    /**
+     * set 业务线代码
+     *
+     * @param serviceCodes
+     */
+    public MetricGroup serviceCodes(List<String> serviceCodes) {
+        this.serviceCodes = serviceCodes;
         return this;
     }
 
@@ -463,7 +529,7 @@ public class Chart  implements java.io.Serializable {
      *
      * @param column
      */
-    public Chart column(String column) {
+    public MetricGroup column(String column) {
         this.column = column;
         return this;
     }
@@ -473,7 +539,7 @@ public class Chart  implements java.io.Serializable {
      *
      * @param dir
      */
-    public Chart dir(String dir) {
+    public MetricGroup dir(String dir) {
         this.dir = dir;
         return this;
     }
@@ -483,7 +549,7 @@ public class Chart  implements java.io.Serializable {
      *
      * @param number
      */
-    public Chart number(Integer number) {
+    public MetricGroup number(Integer number) {
         this.number = number;
         return this;
     }
@@ -493,22 +559,22 @@ public class Chart  implements java.io.Serializable {
      *
      * @param size
      */
-    public Chart size(Integer size) {
+    public MetricGroup size(Integer size) {
         this.size = size;
         return this;
     }
 
 
     /**
-     * add item to metricIds
+     * add item to 业务线代码
      *
-     * @param metricId
+     * @param serviceCode
      */
-    public void addMetricId(Integer metricId) {
-        if (this.metricIds == null) {
-            this.metricIds = new ArrayList<>();
+    public void addServiceCode(String serviceCode) {
+        if (this.serviceCodes == null) {
+            this.serviceCodes = new ArrayList<>();
         }
-        this.metricIds.add(metricId);
+        this.serviceCodes.add(serviceCode);
     }
 
 }

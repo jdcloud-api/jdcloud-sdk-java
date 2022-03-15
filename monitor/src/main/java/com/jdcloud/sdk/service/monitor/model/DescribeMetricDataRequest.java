@@ -31,7 +31,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看某资源单个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;，可以使用接口&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;：查询产品线可用的metric列表。
+ * 查看某资源单个监控项数据.
+metric介绍: &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+可以使用接口:&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;:查询产品线可用的metric列表。
+查询起止时间统一向下对齐10s, 举例:开始时间为 08:45:45 会对齐到08:45:40
+
  */
 public class DescribeMetricDataRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,16 +53,25 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
     /**
      * 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+开始时间不得晚于当前时间,开始时间不得早于 30 天前
+
      */
     private String startTime;
 
     /**
-     * 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+     * 查询时间范围的结束时间, UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+默认为当前时间,结束时间不得晚于当前时间. 如果晚于, 会被默认设成当前时间, 结束时间不得早于 30 天前.
+
      */
     private String endTime;
 
     /**
      * 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+如果指定了 startTime 和 endTime,可以不用设置. 默认的,三个参数都不设置查询 1h 内数据.
+timeInterval 默认值 1h
+endTime 默认值, 当前时间
+startTime 默认值,  endTime - timeInterval
+
      */
     private String timeInterval;
 
@@ -73,7 +86,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     private Boolean groupBy;
 
     /**
-     * 是否求速率。仅对累积类型指标有意义
+     * 是否求速率。仅对累积类型指标有意义, 默认 false
      */
     private Boolean rate;
 
@@ -147,6 +160,8 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
     /**
      * get 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+开始时间不得晚于当前时间,开始时间不得早于 30 天前
+
      *
      * @return
      */
@@ -156,6 +171,8 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
     /**
      * set 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+开始时间不得晚于当前时间,开始时间不得早于 30 天前
+
      *
      * @param startTime
      */
@@ -164,7 +181,9 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+     * get 查询时间范围的结束时间, UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+默认为当前时间,结束时间不得晚于当前时间. 如果晚于, 会被默认设成当前时间, 结束时间不得早于 30 天前.
+
      *
      * @return
      */
@@ -173,7 +192,9 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+     * set 查询时间范围的结束时间, UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+默认为当前时间,结束时间不得晚于当前时间. 如果晚于, 会被默认设成当前时间, 结束时间不得早于 30 天前.
+
      *
      * @param endTime
      */
@@ -183,6 +204,11 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
     /**
      * get 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+如果指定了 startTime 和 endTime,可以不用设置. 默认的,三个参数都不设置查询 1h 内数据.
+timeInterval 默认值 1h
+endTime 默认值, 当前时间
+startTime 默认值,  endTime - timeInterval
+
      *
      * @return
      */
@@ -192,6 +218,11 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
     /**
      * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+如果指定了 startTime 和 endTime,可以不用设置. 默认的,三个参数都不设置查询 1h 内数据.
+timeInterval 默认值 1h
+endTime 默认值, 当前时间
+startTime 默认值,  endTime - timeInterval
+
      *
      * @param timeInterval
      */
@@ -236,7 +267,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * get 是否求速率。仅对累积类型指标有意义
+     * get 是否求速率。仅对累积类型指标有意义, 默认 false
      *
      * @return
      */
@@ -245,7 +276,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 是否求速率。仅对累积类型指标有意义
+     * set 是否求速率。仅对累积类型指标有意义, 默认 false
      *
      * @param rate
      */
@@ -366,6 +397,8 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
     /**
      * set 查询时间范围的开始时间， UTC时间，格式：2016-12-11T00:00:00+0800（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+开始时间不得晚于当前时间,开始时间不得早于 30 天前
+
      *
      * @param startTime
      */
@@ -375,7 +408,9 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 查询时间范围的结束时间， UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+     * set 查询时间范围的结束时间, UTC时间，格式：2016-12-11T00:00:00+0800（为空时，将由startTime与timeInterval计算得出）（注意在url中+要转译为%2B故url中为2016-12-11T00:00:00%2B0800）
+默认为当前时间,结束时间不得晚于当前时间. 如果晚于, 会被默认设成当前时间, 结束时间不得早于 30 天前.
+
      *
      * @param endTime
      */
@@ -386,6 +421,11 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
 
     /**
      * set 时间间隔：1h，6h，12h，1d，3d，7d，14d，固定时间间隔，timeInterval默认为1h，当前时间往 前1h
+如果指定了 startTime 和 endTime,可以不用设置. 默认的,三个参数都不设置查询 1h 内数据.
+timeInterval 默认值 1h
+endTime 默认值, 当前时间
+startTime 默认值,  endTime - timeInterval
+
      *
      * @param timeInterval
      */
@@ -415,7 +455,7 @@ public class DescribeMetricDataRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 是否求速率。仅对累积类型指标有意义
+     * set 是否求速率。仅对累积类型指标有意义, 默认 false
      *
      * @param rate
      */
