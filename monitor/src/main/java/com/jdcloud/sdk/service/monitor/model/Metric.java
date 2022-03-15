@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.monitor.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * metric
@@ -33,171 +35,1152 @@ public class Metric  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * aggregator
+     * 自增id
      */
-    private String aggregator;
+    private Integer id;
 
     /**
-     * calculateUnit
+     * serviceCode
      */
-    private String calculateUnit;
+    private String serviceCode;
 
     /**
-     * metric
+     * metricIndex
      */
-    private String metric;
+    private Integer metricIndex;
 
     /**
-     * metricName
+     * metricID
      */
-    private String metricName;
+    private String metricID;
 
     /**
-     * period
+     * metricNameCH
      */
-    private String period;
+    private String metricNameCH;
+
+    /**
+     * metricNameEN
+     */
+    private String metricNameEN;
+
+    /**
+     * valueType
+     */
+    private String valueType;
+
+    /**
+     * downsampleAgg
+     */
+    private String downsampleAgg;
+
+    /**
+     * groupAgg
+     */
+    private String groupAgg;
+
+    /**
+     * isRate
+     */
+    private Integer isRate;
+
+    /**
+     * isSumRate
+     */
+    private Integer isSumRate;
+
+    /**
+     * defaultDownsample
+     */
+    private String defaultDownsample;
+
+    /**
+     * upUnit
+     */
+    private String upUnit;
+
+    /**
+     * monitorUnitCH
+     */
+    private String monitorUnitCH;
+
+    /**
+     * monitorUnitEN
+     */
+    private String monitorUnitEN;
+
+    /**
+     * alarmUnitCH
+     */
+    private String alarmUnitCH;
+
+    /**
+     * alarmUnitEN
+     */
+    private String alarmUnitEN;
+
+    /**
+     * unitConvertFrom
+     */
+    private Integer unitConvertFrom;
+
+    /**
+     * unitConvertTo
+     */
+    private Integer unitConvertTo;
+
+    /**
+     * isShow
+     */
+    private Integer isShow;
+
+    /**
+     * isEnable
+     */
+    private Integer isEnable;
+
+    /**
+     * defaultTagName
+     */
+    private String defaultTagName;
+
+    /**
+     * defaultTagValue
+     */
+    private String defaultTagValue;
+
+    /**
+     * tags
+     */
+    private String tags;
+
+    /**
+     * isAlarm
+     */
+    private Integer isAlarm;
+
+    /**
+     * newNet
+     */
+    private Integer newNet;
+
+    /**
+     * timeInterval
+     */
+    private Integer timeInterval;
+
+    /**
+     * 业务线代码
+     */
+    private List<String> serviceCodes;
+
+    /**
+     * 分组id
+     */
+    private List<Integer> groupIds;
+
+    /**
+     * 分组信息
+     */
+    private String groupCodes;
+
+    /**
+     * 排序字段
+     */
+    private String column;
+
+    /**
+     * 排序方式
+     */
+    private String dir;
+
+    /**
+     * 页码
+     */
+    private Integer number;
+
+    /**
+     * 查询条数
+     */
+    private Integer size;
 
 
     /**
-     * get aggregator
+     * get 自增id
      *
      * @return
      */
-    public String getAggregator() {
-        return aggregator;
+    public Integer getId() {
+        return id;
     }
 
     /**
-     * set aggregator
+     * set 自增id
      *
-     * @param aggregator
+     * @param id
      */
-    public void setAggregator(String aggregator) {
-        this.aggregator = aggregator;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     /**
-     * get calculateUnit
-     *
-     * @return
-     */
-    public String getCalculateUnit() {
-        return calculateUnit;
-    }
-
-    /**
-     * set calculateUnit
-     *
-     * @param calculateUnit
-     */
-    public void setCalculateUnit(String calculateUnit) {
-        this.calculateUnit = calculateUnit;
-    }
-
-    /**
-     * get metric
+     * get serviceCode
      *
      * @return
      */
-    public String getMetric() {
-        return metric;
+    public String getServiceCode() {
+        return serviceCode;
     }
 
     /**
-     * set metric
+     * set serviceCode
      *
-     * @param metric
+     * @param serviceCode
      */
-    public void setMetric(String metric) {
-        this.metric = metric;
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
     }
 
     /**
-     * get metricName
-     *
-     * @return
-     */
-    public String getMetricName() {
-        return metricName;
-    }
-
-    /**
-     * set metricName
-     *
-     * @param metricName
-     */
-    public void setMetricName(String metricName) {
-        this.metricName = metricName;
-    }
-
-    /**
-     * get period
+     * get metricIndex
      *
      * @return
      */
-    public String getPeriod() {
-        return period;
+    public Integer getMetricIndex() {
+        return metricIndex;
     }
 
     /**
-     * set period
+     * set metricIndex
      *
-     * @param period
+     * @param metricIndex
      */
-    public void setPeriod(String period) {
-        this.period = period;
+    public void setMetricIndex(Integer metricIndex) {
+        this.metricIndex = metricIndex;
+    }
+
+    /**
+     * get metricID
+     *
+     * @return
+     */
+    public String getMetricID() {
+        return metricID;
+    }
+
+    /**
+     * set metricID
+     *
+     * @param metricID
+     */
+    public void setMetricID(String metricID) {
+        this.metricID = metricID;
+    }
+
+    /**
+     * get metricNameCH
+     *
+     * @return
+     */
+    public String getMetricNameCH() {
+        return metricNameCH;
+    }
+
+    /**
+     * set metricNameCH
+     *
+     * @param metricNameCH
+     */
+    public void setMetricNameCH(String metricNameCH) {
+        this.metricNameCH = metricNameCH;
+    }
+
+    /**
+     * get metricNameEN
+     *
+     * @return
+     */
+    public String getMetricNameEN() {
+        return metricNameEN;
+    }
+
+    /**
+     * set metricNameEN
+     *
+     * @param metricNameEN
+     */
+    public void setMetricNameEN(String metricNameEN) {
+        this.metricNameEN = metricNameEN;
+    }
+
+    /**
+     * get valueType
+     *
+     * @return
+     */
+    public String getValueType() {
+        return valueType;
+    }
+
+    /**
+     * set valueType
+     *
+     * @param valueType
+     */
+    public void setValueType(String valueType) {
+        this.valueType = valueType;
+    }
+
+    /**
+     * get downsampleAgg
+     *
+     * @return
+     */
+    public String getDownsampleAgg() {
+        return downsampleAgg;
+    }
+
+    /**
+     * set downsampleAgg
+     *
+     * @param downsampleAgg
+     */
+    public void setDownsampleAgg(String downsampleAgg) {
+        this.downsampleAgg = downsampleAgg;
+    }
+
+    /**
+     * get groupAgg
+     *
+     * @return
+     */
+    public String getGroupAgg() {
+        return groupAgg;
+    }
+
+    /**
+     * set groupAgg
+     *
+     * @param groupAgg
+     */
+    public void setGroupAgg(String groupAgg) {
+        this.groupAgg = groupAgg;
+    }
+
+    /**
+     * get isRate
+     *
+     * @return
+     */
+    public Integer getIsRate() {
+        return isRate;
+    }
+
+    /**
+     * set isRate
+     *
+     * @param isRate
+     */
+    public void setIsRate(Integer isRate) {
+        this.isRate = isRate;
+    }
+
+    /**
+     * get isSumRate
+     *
+     * @return
+     */
+    public Integer getIsSumRate() {
+        return isSumRate;
+    }
+
+    /**
+     * set isSumRate
+     *
+     * @param isSumRate
+     */
+    public void setIsSumRate(Integer isSumRate) {
+        this.isSumRate = isSumRate;
+    }
+
+    /**
+     * get defaultDownsample
+     *
+     * @return
+     */
+    public String getDefaultDownsample() {
+        return defaultDownsample;
+    }
+
+    /**
+     * set defaultDownsample
+     *
+     * @param defaultDownsample
+     */
+    public void setDefaultDownsample(String defaultDownsample) {
+        this.defaultDownsample = defaultDownsample;
+    }
+
+    /**
+     * get upUnit
+     *
+     * @return
+     */
+    public String getUpUnit() {
+        return upUnit;
+    }
+
+    /**
+     * set upUnit
+     *
+     * @param upUnit
+     */
+    public void setUpUnit(String upUnit) {
+        this.upUnit = upUnit;
+    }
+
+    /**
+     * get monitorUnitCH
+     *
+     * @return
+     */
+    public String getMonitorUnitCH() {
+        return monitorUnitCH;
+    }
+
+    /**
+     * set monitorUnitCH
+     *
+     * @param monitorUnitCH
+     */
+    public void setMonitorUnitCH(String monitorUnitCH) {
+        this.monitorUnitCH = monitorUnitCH;
+    }
+
+    /**
+     * get monitorUnitEN
+     *
+     * @return
+     */
+    public String getMonitorUnitEN() {
+        return monitorUnitEN;
+    }
+
+    /**
+     * set monitorUnitEN
+     *
+     * @param monitorUnitEN
+     */
+    public void setMonitorUnitEN(String monitorUnitEN) {
+        this.monitorUnitEN = monitorUnitEN;
+    }
+
+    /**
+     * get alarmUnitCH
+     *
+     * @return
+     */
+    public String getAlarmUnitCH() {
+        return alarmUnitCH;
+    }
+
+    /**
+     * set alarmUnitCH
+     *
+     * @param alarmUnitCH
+     */
+    public void setAlarmUnitCH(String alarmUnitCH) {
+        this.alarmUnitCH = alarmUnitCH;
+    }
+
+    /**
+     * get alarmUnitEN
+     *
+     * @return
+     */
+    public String getAlarmUnitEN() {
+        return alarmUnitEN;
+    }
+
+    /**
+     * set alarmUnitEN
+     *
+     * @param alarmUnitEN
+     */
+    public void setAlarmUnitEN(String alarmUnitEN) {
+        this.alarmUnitEN = alarmUnitEN;
+    }
+
+    /**
+     * get unitConvertFrom
+     *
+     * @return
+     */
+    public Integer getUnitConvertFrom() {
+        return unitConvertFrom;
+    }
+
+    /**
+     * set unitConvertFrom
+     *
+     * @param unitConvertFrom
+     */
+    public void setUnitConvertFrom(Integer unitConvertFrom) {
+        this.unitConvertFrom = unitConvertFrom;
+    }
+
+    /**
+     * get unitConvertTo
+     *
+     * @return
+     */
+    public Integer getUnitConvertTo() {
+        return unitConvertTo;
+    }
+
+    /**
+     * set unitConvertTo
+     *
+     * @param unitConvertTo
+     */
+    public void setUnitConvertTo(Integer unitConvertTo) {
+        this.unitConvertTo = unitConvertTo;
+    }
+
+    /**
+     * get isShow
+     *
+     * @return
+     */
+    public Integer getIsShow() {
+        return isShow;
+    }
+
+    /**
+     * set isShow
+     *
+     * @param isShow
+     */
+    public void setIsShow(Integer isShow) {
+        this.isShow = isShow;
+    }
+
+    /**
+     * get isEnable
+     *
+     * @return
+     */
+    public Integer getIsEnable() {
+        return isEnable;
+    }
+
+    /**
+     * set isEnable
+     *
+     * @param isEnable
+     */
+    public void setIsEnable(Integer isEnable) {
+        this.isEnable = isEnable;
+    }
+
+    /**
+     * get defaultTagName
+     *
+     * @return
+     */
+    public String getDefaultTagName() {
+        return defaultTagName;
+    }
+
+    /**
+     * set defaultTagName
+     *
+     * @param defaultTagName
+     */
+    public void setDefaultTagName(String defaultTagName) {
+        this.defaultTagName = defaultTagName;
+    }
+
+    /**
+     * get defaultTagValue
+     *
+     * @return
+     */
+    public String getDefaultTagValue() {
+        return defaultTagValue;
+    }
+
+    /**
+     * set defaultTagValue
+     *
+     * @param defaultTagValue
+     */
+    public void setDefaultTagValue(String defaultTagValue) {
+        this.defaultTagValue = defaultTagValue;
+    }
+
+    /**
+     * get tags
+     *
+     * @return
+     */
+    public String getTags() {
+        return tags;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public void setTags(String tags) {
+        this.tags = tags;
+    }
+
+    /**
+     * get isAlarm
+     *
+     * @return
+     */
+    public Integer getIsAlarm() {
+        return isAlarm;
+    }
+
+    /**
+     * set isAlarm
+     *
+     * @param isAlarm
+     */
+    public void setIsAlarm(Integer isAlarm) {
+        this.isAlarm = isAlarm;
+    }
+
+    /**
+     * get newNet
+     *
+     * @return
+     */
+    public Integer getNewNet() {
+        return newNet;
+    }
+
+    /**
+     * set newNet
+     *
+     * @param newNet
+     */
+    public void setNewNet(Integer newNet) {
+        this.newNet = newNet;
+    }
+
+    /**
+     * get timeInterval
+     *
+     * @return
+     */
+    public Integer getTimeInterval() {
+        return timeInterval;
+    }
+
+    /**
+     * set timeInterval
+     *
+     * @param timeInterval
+     */
+    public void setTimeInterval(Integer timeInterval) {
+        this.timeInterval = timeInterval;
+    }
+
+    /**
+     * get 业务线代码
+     *
+     * @return
+     */
+    public List<String> getServiceCodes() {
+        return serviceCodes;
+    }
+
+    /**
+     * set 业务线代码
+     *
+     * @param serviceCodes
+     */
+    public void setServiceCodes(List<String> serviceCodes) {
+        this.serviceCodes = serviceCodes;
+    }
+
+    /**
+     * get 分组id
+     *
+     * @return
+     */
+    public List<Integer> getGroupIds() {
+        return groupIds;
+    }
+
+    /**
+     * set 分组id
+     *
+     * @param groupIds
+     */
+    public void setGroupIds(List<Integer> groupIds) {
+        this.groupIds = groupIds;
+    }
+
+    /**
+     * get 分组信息
+     *
+     * @return
+     */
+    public String getGroupCodes() {
+        return groupCodes;
+    }
+
+    /**
+     * set 分组信息
+     *
+     * @param groupCodes
+     */
+    public void setGroupCodes(String groupCodes) {
+        this.groupCodes = groupCodes;
+    }
+
+    /**
+     * get 排序字段
+     *
+     * @return
+     */
+    public String getColumn() {
+        return column;
+    }
+
+    /**
+     * set 排序字段
+     *
+     * @param column
+     */
+    public void setColumn(String column) {
+        this.column = column;
+    }
+
+    /**
+     * get 排序方式
+     *
+     * @return
+     */
+    public String getDir() {
+        return dir;
+    }
+
+    /**
+     * set 排序方式
+     *
+     * @param dir
+     */
+    public void setDir(String dir) {
+        this.dir = dir;
+    }
+
+    /**
+     * get 页码
+     *
+     * @return
+     */
+    public Integer getNumber() {
+        return number;
+    }
+
+    /**
+     * set 页码
+     *
+     * @param number
+     */
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
+
+    /**
+     * get 查询条数
+     *
+     * @return
+     */
+    public Integer getSize() {
+        return size;
+    }
+
+    /**
+     * set 查询条数
+     *
+     * @param size
+     */
+    public void setSize(Integer size) {
+        this.size = size;
     }
 
 
     /**
-     * set aggregator
+     * set 自增id
      *
-     * @param aggregator
+     * @param id
      */
-    public Metric aggregator(String aggregator) {
-        this.aggregator = aggregator;
+    public Metric id(Integer id) {
+        this.id = id;
         return this;
     }
 
     /**
-     * set calculateUnit
+     * set serviceCode
      *
-     * @param calculateUnit
+     * @param serviceCode
      */
-    public Metric calculateUnit(String calculateUnit) {
-        this.calculateUnit = calculateUnit;
+    public Metric serviceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
         return this;
     }
 
     /**
-     * set metric
+     * set metricIndex
      *
-     * @param metric
+     * @param metricIndex
      */
-    public Metric metric(String metric) {
-        this.metric = metric;
+    public Metric metricIndex(Integer metricIndex) {
+        this.metricIndex = metricIndex;
         return this;
     }
 
     /**
-     * set metricName
+     * set metricID
      *
-     * @param metricName
+     * @param metricID
      */
-    public Metric metricName(String metricName) {
-        this.metricName = metricName;
+    public Metric metricID(String metricID) {
+        this.metricID = metricID;
         return this;
     }
 
     /**
-     * set period
+     * set metricNameCH
      *
-     * @param period
+     * @param metricNameCH
      */
-    public Metric period(String period) {
-        this.period = period;
+    public Metric metricNameCH(String metricNameCH) {
+        this.metricNameCH = metricNameCH;
         return this;
     }
 
+    /**
+     * set metricNameEN
+     *
+     * @param metricNameEN
+     */
+    public Metric metricNameEN(String metricNameEN) {
+        this.metricNameEN = metricNameEN;
+        return this;
+    }
+
+    /**
+     * set valueType
+     *
+     * @param valueType
+     */
+    public Metric valueType(String valueType) {
+        this.valueType = valueType;
+        return this;
+    }
+
+    /**
+     * set downsampleAgg
+     *
+     * @param downsampleAgg
+     */
+    public Metric downsampleAgg(String downsampleAgg) {
+        this.downsampleAgg = downsampleAgg;
+        return this;
+    }
+
+    /**
+     * set groupAgg
+     *
+     * @param groupAgg
+     */
+    public Metric groupAgg(String groupAgg) {
+        this.groupAgg = groupAgg;
+        return this;
+    }
+
+    /**
+     * set isRate
+     *
+     * @param isRate
+     */
+    public Metric isRate(Integer isRate) {
+        this.isRate = isRate;
+        return this;
+    }
+
+    /**
+     * set isSumRate
+     *
+     * @param isSumRate
+     */
+    public Metric isSumRate(Integer isSumRate) {
+        this.isSumRate = isSumRate;
+        return this;
+    }
+
+    /**
+     * set defaultDownsample
+     *
+     * @param defaultDownsample
+     */
+    public Metric defaultDownsample(String defaultDownsample) {
+        this.defaultDownsample = defaultDownsample;
+        return this;
+    }
+
+    /**
+     * set upUnit
+     *
+     * @param upUnit
+     */
+    public Metric upUnit(String upUnit) {
+        this.upUnit = upUnit;
+        return this;
+    }
+
+    /**
+     * set monitorUnitCH
+     *
+     * @param monitorUnitCH
+     */
+    public Metric monitorUnitCH(String monitorUnitCH) {
+        this.monitorUnitCH = monitorUnitCH;
+        return this;
+    }
+
+    /**
+     * set monitorUnitEN
+     *
+     * @param monitorUnitEN
+     */
+    public Metric monitorUnitEN(String monitorUnitEN) {
+        this.monitorUnitEN = monitorUnitEN;
+        return this;
+    }
+
+    /**
+     * set alarmUnitCH
+     *
+     * @param alarmUnitCH
+     */
+    public Metric alarmUnitCH(String alarmUnitCH) {
+        this.alarmUnitCH = alarmUnitCH;
+        return this;
+    }
+
+    /**
+     * set alarmUnitEN
+     *
+     * @param alarmUnitEN
+     */
+    public Metric alarmUnitEN(String alarmUnitEN) {
+        this.alarmUnitEN = alarmUnitEN;
+        return this;
+    }
+
+    /**
+     * set unitConvertFrom
+     *
+     * @param unitConvertFrom
+     */
+    public Metric unitConvertFrom(Integer unitConvertFrom) {
+        this.unitConvertFrom = unitConvertFrom;
+        return this;
+    }
+
+    /**
+     * set unitConvertTo
+     *
+     * @param unitConvertTo
+     */
+    public Metric unitConvertTo(Integer unitConvertTo) {
+        this.unitConvertTo = unitConvertTo;
+        return this;
+    }
+
+    /**
+     * set isShow
+     *
+     * @param isShow
+     */
+    public Metric isShow(Integer isShow) {
+        this.isShow = isShow;
+        return this;
+    }
+
+    /**
+     * set isEnable
+     *
+     * @param isEnable
+     */
+    public Metric isEnable(Integer isEnable) {
+        this.isEnable = isEnable;
+        return this;
+    }
+
+    /**
+     * set defaultTagName
+     *
+     * @param defaultTagName
+     */
+    public Metric defaultTagName(String defaultTagName) {
+        this.defaultTagName = defaultTagName;
+        return this;
+    }
+
+    /**
+     * set defaultTagValue
+     *
+     * @param defaultTagValue
+     */
+    public Metric defaultTagValue(String defaultTagValue) {
+        this.defaultTagValue = defaultTagValue;
+        return this;
+    }
+
+    /**
+     * set tags
+     *
+     * @param tags
+     */
+    public Metric tags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set isAlarm
+     *
+     * @param isAlarm
+     */
+    public Metric isAlarm(Integer isAlarm) {
+        this.isAlarm = isAlarm;
+        return this;
+    }
+
+    /**
+     * set newNet
+     *
+     * @param newNet
+     */
+    public Metric newNet(Integer newNet) {
+        this.newNet = newNet;
+        return this;
+    }
+
+    /**
+     * set timeInterval
+     *
+     * @param timeInterval
+     */
+    public Metric timeInterval(Integer timeInterval) {
+        this.timeInterval = timeInterval;
+        return this;
+    }
+
+    /**
+     * set 业务线代码
+     *
+     * @param serviceCodes
+     */
+    public Metric serviceCodes(List<String> serviceCodes) {
+        this.serviceCodes = serviceCodes;
+        return this;
+    }
+
+    /**
+     * set 分组id
+     *
+     * @param groupIds
+     */
+    public Metric groupIds(List<Integer> groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+
+    /**
+     * set 分组信息
+     *
+     * @param groupCodes
+     */
+    public Metric groupCodes(String groupCodes) {
+        this.groupCodes = groupCodes;
+        return this;
+    }
+
+    /**
+     * set 排序字段
+     *
+     * @param column
+     */
+    public Metric column(String column) {
+        this.column = column;
+        return this;
+    }
+
+    /**
+     * set 排序方式
+     *
+     * @param dir
+     */
+    public Metric dir(String dir) {
+        this.dir = dir;
+        return this;
+    }
+
+    /**
+     * set 页码
+     *
+     * @param number
+     */
+    public Metric number(Integer number) {
+        this.number = number;
+        return this;
+    }
+
+    /**
+     * set 查询条数
+     *
+     * @param size
+     */
+    public Metric size(Integer size) {
+        this.size = size;
+        return this;
+    }
+
+
+    /**
+     * add item to 业务线代码
+     *
+     * @param serviceCode
+     */
+    public void addServiceCode(String serviceCode) {
+        if (this.serviceCodes == null) {
+            this.serviceCodes = new ArrayList<>();
+        }
+        this.serviceCodes.add(serviceCode);
+    }
+
+    /**
+     * add item to 分组id
+     *
+     * @param groupId
+     */
+    public void addGroupId(Integer groupId) {
+        if (this.groupIds == null) {
+            this.groupIds = new ArrayList<>();
+        }
+        this.groupIds.add(groupId);
+    }
 
 }

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 监控项相关接口
- * 监控项相关接口，提供可用监控项列表查询和监控数据查询等功能
+ * Put APIs
+ * 监控数据上报接口
  *
  * OpenAPI spec version: v2
  * Contact: 
@@ -27,13 +27,9 @@ package com.jdcloud.sdk.service.monitor.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看某资源单个监控项数据.
-metric介绍: &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
-可以使用接口:&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;:查询产品线可用的metric列表。
-查询起止时间统一向下对齐10s, 举例:开始时间为 08:45:45 会对齐到08:45:40
-
+ * 监控数据上报。
  */
-public class DescribeMetricDataResponse extends JdcloudResponse<DescribeMetricDataResult> implements java.io.Serializable {
+public class PutProductMetricDataResponse extends JdcloudResponse<PutProductMetricDataResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

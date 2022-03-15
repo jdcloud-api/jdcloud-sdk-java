@@ -30,7 +30,11 @@ import com.jdcloud.sdk.service.monitor.model.MetricData;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看某资源单个监控项数据，metric介绍：&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;，可以使用接口&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;：查询产品线可用的metric列表。
+ * 查看某资源单个监控项数据.
+metric介绍: &lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;Metrics&lt;/a&gt;
+可以使用接口:&lt;a href&#x3D;&quot;https://docs.jdcloud.com/cn/monitoring/metrics&quot;&gt;describeMetrics&lt;/a&gt;:查询产品线可用的metric列表。
+查询起止时间统一向下对齐10s, 举例:开始时间为 08:45:45 会对齐到08:45:40
+
  */
 public class DescribeMetricDataResult extends JdcloudResult implements java.io.Serializable {
 
