@@ -37,6 +37,9 @@ import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomsExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomUsersRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomUsersResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomUsersExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.StartAsrTaskRequest;
+import com.jdcloud.sdk.service.openjrtc.model.StartAsrTaskResponse;
+import com.jdcloud.sdk.service.openjrtc.client.StartAsrTaskExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.StartMcuTranscodeRequest;
 import com.jdcloud.sdk.service.openjrtc.model.StartMcuTranscodeResponse;
 import com.jdcloud.sdk.service.openjrtc.client.StartMcuTranscodeExecutor;
@@ -55,6 +58,12 @@ import com.jdcloud.sdk.service.openjrtc.client.UpdateUserRoomExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.AddRecordRuleRequest;
 import com.jdcloud.sdk.service.openjrtc.model.AddRecordRuleResponse;
 import com.jdcloud.sdk.service.openjrtc.client.AddRecordRuleExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.StopAsrTaskRequest;
+import com.jdcloud.sdk.service.openjrtc.model.StopAsrTaskResponse;
+import com.jdcloud.sdk.service.openjrtc.client.StopAsrTaskExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRecordByRoomRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRecordByRoomResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeUserRecordByRoomExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRoomsRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRoomsResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeUserRoomsExecutor;
@@ -73,6 +82,9 @@ import com.jdcloud.sdk.service.openjrtc.client.CreateTokenExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.RegisterUserRoomRequest;
 import com.jdcloud.sdk.service.openjrtc.model.RegisterUserRoomResponse;
 import com.jdcloud.sdk.service.openjrtc.client.RegisterUserRoomExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeCallDurationByCodeRateRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeCallDurationByCodeRateResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeCallDurationByCodeRateExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.RegisterUserRequest;
 import com.jdcloud.sdk.service.openjrtc.model.RegisterUserResponse;
 import com.jdcloud.sdk.service.openjrtc.client.RegisterUserExecutor;
@@ -118,6 +130,9 @@ import com.jdcloud.sdk.service.openjrtc.client.RemoveUserByUserRoomIdExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.AddPushStreamRuleRequest;
 import com.jdcloud.sdk.service.openjrtc.model.AddPushStreamRuleResponse;
 import com.jdcloud.sdk.service.openjrtc.client.AddPushStreamRuleExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeOnlineUserNumRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeOnlineUserNumResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeOnlineUserNumExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomInfoRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomInfoResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomInfoExecutor;
@@ -130,9 +145,15 @@ import com.jdcloud.sdk.service.openjrtc.client.RemoveAllRoomUsersExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRoomRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRoomResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeUserRoomExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeDailyCallDurationRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeDailyCallDurationResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeDailyCallDurationExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.CreateUserRequest;
 import com.jdcloud.sdk.service.openjrtc.model.CreateUserResponse;
 import com.jdcloud.sdk.service.openjrtc.client.CreateUserExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeP2pStreamBitRateRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeP2pStreamBitRateResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeP2pStreamBitRateExecutor;
 
 /**
  * openjrtcClient
@@ -214,6 +235,18 @@ public class OpenjrtcClient extends JdcloudClient {
     }
 
     /**
+     * 开启语音识别功能
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartAsrTaskResponse startAsrTask(StartAsrTaskRequest request) throws JdcloudSdkException {
+        return new StartAsrTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 下发混流任务
 
      *
@@ -283,6 +316,36 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public AddRecordRuleResponse addRecordRule(AddRecordRuleRequest request) throws JdcloudSdkException {
         return new AddRecordRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭语音识别功能
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopAsrTaskResponse stopAsrTask(StopAsrTaskRequest request) throws JdcloudSdkException {
+        return new StopAsrTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询房间用户记录,最大支持查询7天的数据
+允许通过条件过滤查询，支持的过滤字段如下：
+           - appId[eq] 按应用ID精确查询 (必填)
+           - startTime[eq] 开始时间 UTC格式 (必填)
+           - endTime[eq] 截止时间 UTC格式 (必填)
+           - userRoomId[eq] 按房间ID精确查询(必填)
+           - userId[eq] 按用户ID精确查询
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeUserRecordByRoomResponse describeUserRecordByRoom(DescribeUserRecordByRoomRequest request) throws JdcloudSdkException {
+        return new DescribeUserRecordByRoomExecutor().client(this).execute(request);
     }
 
     /**
@@ -357,6 +420,18 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public RegisterUserRoomResponse registerUserRoom(RegisterUserRoomRequest request) throws JdcloudSdkException {
         return new RegisterUserRoomExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取历史音频、区分视频码率通讯时长
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeCallDurationByCodeRateResponse describeCallDurationByCodeRate(DescribeCallDurationByCodeRateRequest request) throws JdcloudSdkException {
+        return new DescribeCallDurationByCodeRateExecutor().client(this).execute(request);
     }
 
     /**
@@ -540,6 +615,23 @@ public class OpenjrtcClient extends JdcloudClient {
     }
 
     /**
+     * 查询房间人数，通讯时长，最大支持查询7天的数据
+允许通过条件过滤查询，支持的过滤字段如下：
+           - appId[eq] 按应用ID精确查询(必填)
+           - userRoomId[eq] 按房间ID精确查询(必填)
+           - startTime[eq] 开始时间 UTC格式(必填)
+           - endTime[eq] 截止时间 UTC格式 (必填)
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeOnlineUserNumResponse describeOnlineUserNum(DescribeOnlineUserNumRequest request) throws JdcloudSdkException {
+        return new DescribeOnlineUserNumExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取房间信息
 
      *
@@ -588,6 +680,18 @@ public class OpenjrtcClient extends JdcloudClient {
     }
 
     /**
+     * 获取近7天通讯时长
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeDailyCallDurationResponse describeDailyCallDuration(DescribeDailyCallDurationRequest request) throws JdcloudSdkException {
+        return new DescribeDailyCallDurationExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建用户
 
      *
@@ -597,6 +701,18 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public CreateUserResponse createUser(CreateUserRequest request) throws JdcloudSdkException {
         return new CreateUserExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询用户端到端推流码率
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeP2pStreamBitRateResponse describeP2pStreamBitRate(DescribeP2pStreamBitRateRequest request) throws JdcloudSdkException {
+        return new DescribeP2pStreamBitRateExecutor().client(this).execute(request);
     }
 
 
