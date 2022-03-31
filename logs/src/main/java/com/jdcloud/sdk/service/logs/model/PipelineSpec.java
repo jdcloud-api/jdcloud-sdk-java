@@ -24,19 +24,29 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
-import java.util.List;
-import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * validateParserSpec
+ * pipelineSpec
  */
-public class ValidateParserSpec  implements java.io.Serializable {
+public class PipelineSpec  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 解析类型。oneline - 单行，split - 分割， json - json， regexp - regexp
+     * 字段名称
+     * Required:true
+     */
+    @Required
+    private String field;
+
+    /**
+     * 字段类型。 system, custom。 不填写默认为custom
+     */
+    private String fieldType;
+
+    /**
+     * 解析类型。目前仅支持 regexp。
      * Required:true
      */
     @Required
@@ -52,14 +62,45 @@ public class ValidateParserSpec  implements java.io.Serializable {
      */
     private String parserSample;
 
+
     /**
-     * 预处理任务列表。按照数组的顺序执行。
+     * get 字段名称
+     *
+     * @return
      */
-    private List<PipelineSpec> pipelines;
-
+    public String getField() {
+        return field;
+    }
 
     /**
-     * get 解析类型。oneline - 单行，split - 分割， json - json， regexp - regexp
+     * set 字段名称
+     *
+     * @param field
+     */
+    public void setField(String field) {
+        this.field = field;
+    }
+
+    /**
+     * get 字段类型。 system, custom。 不填写默认为custom
+     *
+     * @return
+     */
+    public String getFieldType() {
+        return fieldType;
+    }
+
+    /**
+     * set 字段类型。 system, custom。 不填写默认为custom
+     *
+     * @param fieldType
+     */
+    public void setFieldType(String fieldType) {
+        this.fieldType = fieldType;
+    }
+
+    /**
+     * get 解析类型。目前仅支持 regexp。
      *
      * @return
      */
@@ -68,7 +109,7 @@ public class ValidateParserSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 解析类型。oneline - 单行，split - 分割， json - json， regexp - regexp
+     * set 解析类型。目前仅支持 regexp。
      *
      * @param parserMode
      */
@@ -112,31 +153,33 @@ public class ValidateParserSpec  implements java.io.Serializable {
         this.parserSample = parserSample;
     }
 
+
     /**
-     * get 预处理任务列表。按照数组的顺序执行。
+     * set 字段名称
      *
-     * @return
+     * @param field
      */
-    public List<PipelineSpec> getPipelines() {
-        return pipelines;
+    public PipelineSpec field(String field) {
+        this.field = field;
+        return this;
     }
 
     /**
-     * set 预处理任务列表。按照数组的顺序执行。
+     * set 字段类型。 system, custom。 不填写默认为custom
      *
-     * @param pipelines
+     * @param fieldType
      */
-    public void setPipelines(List<PipelineSpec> pipelines) {
-        this.pipelines = pipelines;
+    public PipelineSpec fieldType(String fieldType) {
+        this.fieldType = fieldType;
+        return this;
     }
 
-
     /**
-     * set 解析类型。oneline - 单行，split - 分割， json - json， regexp - regexp
+     * set 解析类型。目前仅支持 regexp。
      *
      * @param parserMode
      */
-    public ValidateParserSpec parserMode(String parserMode) {
+    public PipelineSpec parserMode(String parserMode) {
         this.parserMode = parserMode;
         return this;
     }
@@ -146,7 +189,7 @@ public class ValidateParserSpec  implements java.io.Serializable {
      *
      * @param parserPattern
      */
-    public ValidateParserSpec parserPattern(String parserPattern) {
+    public PipelineSpec parserPattern(String parserPattern) {
         this.parserPattern = parserPattern;
         return this;
     }
@@ -156,32 +199,10 @@ public class ValidateParserSpec  implements java.io.Serializable {
      *
      * @param parserSample
      */
-    public ValidateParserSpec parserSample(String parserSample) {
+    public PipelineSpec parserSample(String parserSample) {
         this.parserSample = parserSample;
         return this;
     }
 
-    /**
-     * set 预处理任务列表。按照数组的顺序执行。
-     *
-     * @param pipelines
-     */
-    public ValidateParserSpec pipelines(List<PipelineSpec> pipelines) {
-        this.pipelines = pipelines;
-        return this;
-    }
-
-
-    /**
-     * add item to 预处理任务列表。按照数组的顺序执行。
-     *
-     * @param pipeline
-     */
-    public void addPipeline(PipelineSpec pipeline) {
-        if (this.pipelines == null) {
-            this.pipelines = new ArrayList<>();
-        }
-        this.pipelines.add(pipeline);
-    }
 
 }

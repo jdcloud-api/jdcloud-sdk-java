@@ -52,9 +52,6 @@ import com.jdcloud.sdk.service.logs.client.UpdateParserExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeMetricTaskRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeMetricTaskResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeMetricTaskExecutor;
-import com.jdcloud.sdk.service.logs.model.PutRequest;
-import com.jdcloud.sdk.service.logs.model.PutResponse;
-import com.jdcloud.sdk.service.logs.client.PutExecutor;
 import com.jdcloud.sdk.service.logs.model.CreateSubscribeRequest;
 import com.jdcloud.sdk.service.logs.model.CreateSubscribeResponse;
 import com.jdcloud.sdk.service.logs.client.CreateSubscribeExecutor;
@@ -70,9 +67,6 @@ import com.jdcloud.sdk.service.logs.client.TestMetricTaskExecutor;
 import com.jdcloud.sdk.service.logs.model.DescribeLogsetRequest;
 import com.jdcloud.sdk.service.logs.model.DescribeLogsetResponse;
 import com.jdcloud.sdk.service.logs.client.DescribeLogsetExecutor;
-import com.jdcloud.sdk.service.logs.model.PushRequest;
-import com.jdcloud.sdk.service.logs.model.PushResponse;
-import com.jdcloud.sdk.service.logs.client.PushExecutor;
 import com.jdcloud.sdk.service.logs.model.UpdateSubscribeRequest;
 import com.jdcloud.sdk.service.logs.model.UpdateSubscribeResponse;
 import com.jdcloud.sdk.service.logs.client.UpdateSubscribeExecutor;
@@ -85,6 +79,9 @@ import com.jdcloud.sdk.service.logs.client.DeleteLogtopicExecutor;
 import com.jdcloud.sdk.service.logs.model.CreateMetricTaskRequest;
 import com.jdcloud.sdk.service.logs.model.CreateMetricTaskResponse;
 import com.jdcloud.sdk.service.logs.client.CreateMetricTaskExecutor;
+import com.jdcloud.sdk.service.logs.model.HistogramsRequest;
+import com.jdcloud.sdk.service.logs.model.HistogramsResponse;
+import com.jdcloud.sdk.service.logs.client.HistogramsExecutor;
 import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoRequest;
 import com.jdcloud.sdk.service.logs.model.UpdateCollectInfoResponse;
 import com.jdcloud.sdk.service.logs.client.UpdateCollectInfoExecutor;
@@ -135,8 +132,8 @@ public class LogsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.7";
-    public final static String DefaultEndpoint = "logs.jcloud.com";
+    public final static String ClientVersion = "1.2.8";
+    public final static String DefaultEndpoint = "logs.jdcloud-api.com";
     public final static String ServiceName = "logs";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
 
@@ -255,17 +252,6 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 自定义日志上报。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PutResponse put(PutRequest request) throws JdcloudSdkException {
-        return new PutExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建日志消费
      *
      * @param request
@@ -321,17 +307,6 @@ public class LogsClient extends JdcloudClient {
     }
 
     /**
-     * 自定义日志上报。
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public PushResponse push(PushRequest request) throws JdcloudSdkException {
-        return new PushExecutor().client(this).execute(request);
-    }
-
-    /**
      * 更新日志消费
      *
      * @param request
@@ -373,6 +348,17 @@ public class LogsClient extends JdcloudClient {
      */
     public CreateMetricTaskResponse createMetricTask(CreateMetricTaskRequest request) throws JdcloudSdkException {
         return new CreateMetricTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 日志检索结果直方图
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public HistogramsResponse histograms(HistogramsRequest request) throws JdcloudSdkException {
+        return new HistogramsExecutor().client(this).execute(request);
     }
 
     /**

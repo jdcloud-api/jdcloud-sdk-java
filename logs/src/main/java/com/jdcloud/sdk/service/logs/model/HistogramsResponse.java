@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Put APIs
- * 自定义日志上报
+ * LogSearch APIs
+ * 日志扫描接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,12 +24,12 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
-import com.jdcloud.sdk.service.JdcloudResult;
+import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 自定义日志上报。
+ * 日志检索结果直方图
  */
-public class PutResult extends JdcloudResult implements java.io.Serializable {
+public class HistogramsResponse extends JdcloudResponse<HistogramsResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

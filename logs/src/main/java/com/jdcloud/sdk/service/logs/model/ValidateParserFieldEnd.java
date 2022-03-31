@@ -33,6 +33,11 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+     * fieldType
+     */
+    private String fieldType;
+
+    /**
      * fieldValue
      */
     private String fieldValue;
@@ -47,6 +52,24 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
      */
     private String name;
 
+
+    /**
+     * get fieldType
+     *
+     * @return
+     */
+    public String getFieldType() {
+        return fieldType;
+    }
+
+    /**
+     * set fieldType
+     *
+     * @param fieldType
+     */
+    public void setFieldType(String fieldType) {
+        this.fieldType = fieldType;
+    }
 
     /**
      * get fieldValue
@@ -102,6 +125,16 @@ public class ValidateParserFieldEnd  implements java.io.Serializable {
         this.name = name;
     }
 
+
+    /**
+     * set fieldType
+     *
+     * @param fieldType
+     */
+    public ValidateParserFieldEnd fieldType(String fieldType) {
+        this.fieldType = fieldType;
+        return this;
+    }
 
     /**
      * set fieldValue

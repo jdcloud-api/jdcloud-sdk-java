@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.logs.model.ParserField;
+import com.jdcloud.sdk.service.logs.model.PipelineSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -60,6 +61,11 @@ public class UpdateParserRequest extends JdcloudRequest implements java.io.Seria
      * 日志样例
      */
     private String parserSample;
+
+    /**
+     * 预处理任务列表。按照数组的顺序执行。
+     */
+    private List<PipelineSpec> pipelines;
 
     /**
      * 地域 Id
@@ -149,6 +155,24 @@ public class UpdateParserRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
+     * get 预处理任务列表。按照数组的顺序执行。
+     *
+     * @return
+     */
+    public List<PipelineSpec> getPipelines() {
+        return pipelines;
+    }
+
+    /**
+     * set 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipelines
+     */
+    public void setPipelines(List<PipelineSpec> pipelines) {
+        this.pipelines = pipelines;
+    }
+
+    /**
      * get 地域 Id
      *
      * @return
@@ -226,6 +250,16 @@ public class UpdateParserRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
+     * set 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipelines
+     */
+    public UpdateParserRequest pipelines(List<PipelineSpec> pipelines) {
+        this.pipelines = pipelines;
+        return this;
+    }
+
+    /**
      * set 地域 Id
      *
      * @param regionId
@@ -256,6 +290,18 @@ public class UpdateParserRequest extends JdcloudRequest implements java.io.Seria
             this.parserFields = new ArrayList<>();
         }
         this.parserFields.add(parserField);
+    }
+
+    /**
+     * add item to 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipeline
+     */
+    public void addPipeline(PipelineSpec pipeline) {
+        if (this.pipelines == null) {
+            this.pipelines = new ArrayList<>();
+        }
+        this.pipelines.add(pipeline);
     }
 
 }
