@@ -24,7 +24,10 @@
 
 package com.jdcloud.sdk.service.logs.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.logs.model.PipelineSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -50,6 +53,11 @@ public class ValidateParserRequest extends JdcloudRequest implements java.io.Ser
      * 日志样例
      */
     private String parserSample;
+
+    /**
+     * 预处理任务列表。按照数组的顺序执行。
+     */
+    private List<PipelineSpec> pipelines;
 
 
     /**
@@ -106,6 +114,24 @@ public class ValidateParserRequest extends JdcloudRequest implements java.io.Ser
         this.parserSample = parserSample;
     }
 
+    /**
+     * get 预处理任务列表。按照数组的顺序执行。
+     *
+     * @return
+     */
+    public List<PipelineSpec> getPipelines() {
+        return pipelines;
+    }
+
+    /**
+     * set 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipelines
+     */
+    public void setPipelines(List<PipelineSpec> pipelines) {
+        this.pipelines = pipelines;
+    }
+
 
     /**
      * set 解析类型。oneline - 单行，split - 分割， json - json， regexp - regexp
@@ -137,5 +163,27 @@ public class ValidateParserRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+    /**
+     * set 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipelines
+     */
+    public ValidateParserRequest pipelines(List<PipelineSpec> pipelines) {
+        this.pipelines = pipelines;
+        return this;
+    }
+
+
+    /**
+     * add item to 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipeline
+     */
+    public void addPipeline(PipelineSpec pipeline) {
+        if (this.pipelines == null) {
+            this.pipelines = new ArrayList<>();
+        }
+        this.pipelines.add(pipeline);
+    }
 
 }

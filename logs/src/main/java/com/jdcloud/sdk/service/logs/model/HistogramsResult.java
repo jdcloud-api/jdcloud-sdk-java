@@ -30,11 +30,16 @@ import com.jdcloud.sdk.service.logs.model.SearchFields;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 扫描日志
+ * 日志检索结果直方图
  */
-public class GetLogsResult extends JdcloudResult implements java.io.Serializable {
+public class HistogramsResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    /**
+     * 结果条数
+     */
+    private Long count;
 
     /**
      * data
@@ -42,25 +47,38 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
     private List<Object> data;
 
     /**
+     * 任务进度
+     */
+    private String progress;
+
+    /**
      * searchFields
      */
     private SearchFields searchFields;
-
-    /**
-     * 任务ID
-     */
-    private String taskID;
-
-    /**
-     * 任务状态, 为Complete 时，表示结束
-     */
-    private String taskStatus;
 
     /**
      * 总数
      */
     private Long total;
 
+
+    /**
+     * get 结果条数
+     *
+     * @return
+     */
+    public Long getCount() {
+        return count;
+    }
+
+    /**
+     * set 结果条数
+     *
+     * @param count
+     */
+    public void setCount(Long count) {
+        this.count = count;
+    }
 
     /**
      * get data
@@ -81,6 +99,24 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
     }
 
     /**
+     * get 任务进度
+     *
+     * @return
+     */
+    public String getProgress() {
+        return progress;
+    }
+
+    /**
+     * set 任务进度
+     *
+     * @param progress
+     */
+    public void setProgress(String progress) {
+        this.progress = progress;
+    }
+
+    /**
      * get searchFields
      *
      * @return
@@ -96,42 +132,6 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
      */
     public void setSearchFields(SearchFields searchFields) {
         this.searchFields = searchFields;
-    }
-
-    /**
-     * get 任务ID
-     *
-     * @return
-     */
-    public String getTaskID() {
-        return taskID;
-    }
-
-    /**
-     * set 任务ID
-     *
-     * @param taskID
-     */
-    public void setTaskID(String taskID) {
-        this.taskID = taskID;
-    }
-
-    /**
-     * get 任务状态, 为Complete 时，表示结束
-     *
-     * @return
-     */
-    public String getTaskStatus() {
-        return taskStatus;
-    }
-
-    /**
-     * set 任务状态, 为Complete 时，表示结束
-     *
-     * @param taskStatus
-     */
-    public void setTaskStatus(String taskStatus) {
-        this.taskStatus = taskStatus;
     }
 
     /**
@@ -154,12 +154,32 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
 
 
     /**
+     * set 结果条数
+     *
+     * @param count
+     */
+    public HistogramsResult count(Long count) {
+        this.count = count;
+        return this;
+    }
+
+    /**
      * set data
      *
      * @param data
      */
-    public GetLogsResult data(List<Object> data) {
+    public HistogramsResult data(List<Object> data) {
         this.data = data;
+        return this;
+    }
+
+    /**
+     * set 任务进度
+     *
+     * @param progress
+     */
+    public HistogramsResult progress(String progress) {
+        this.progress = progress;
         return this;
     }
 
@@ -168,28 +188,8 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
      *
      * @param searchFields
      */
-    public GetLogsResult searchFields(SearchFields searchFields) {
+    public HistogramsResult searchFields(SearchFields searchFields) {
         this.searchFields = searchFields;
-        return this;
-    }
-
-    /**
-     * set 任务ID
-     *
-     * @param taskID
-     */
-    public GetLogsResult taskID(String taskID) {
-        this.taskID = taskID;
-        return this;
-    }
-
-    /**
-     * set 任务状态, 为Complete 时，表示结束
-     *
-     * @param taskStatus
-     */
-    public GetLogsResult taskStatus(String taskStatus) {
-        this.taskStatus = taskStatus;
         return this;
     }
 
@@ -198,7 +198,7 @@ public class GetLogsResult extends JdcloudResult implements java.io.Serializable
      *
      * @param total
      */
-    public GetLogsResult total(Long total) {
+    public HistogramsResult total(Long total) {
         this.total = total;
         return this;
     }

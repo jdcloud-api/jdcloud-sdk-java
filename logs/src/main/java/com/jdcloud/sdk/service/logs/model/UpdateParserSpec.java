@@ -59,6 +59,11 @@ public class UpdateParserSpec  implements java.io.Serializable {
      */
     private String parserSample;
 
+    /**
+     * 预处理任务列表。按照数组的顺序执行。
+     */
+    private List<PipelineSpec> pipelines;
+
 
     /**
      * get parserFields
@@ -132,6 +137,24 @@ public class UpdateParserSpec  implements java.io.Serializable {
         this.parserSample = parserSample;
     }
 
+    /**
+     * get 预处理任务列表。按照数组的顺序执行。
+     *
+     * @return
+     */
+    public List<PipelineSpec> getPipelines() {
+        return pipelines;
+    }
+
+    /**
+     * set 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipelines
+     */
+    public void setPipelines(List<PipelineSpec> pipelines) {
+        this.pipelines = pipelines;
+    }
+
 
     /**
      * set parserFields
@@ -173,6 +196,16 @@ public class UpdateParserSpec  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipelines
+     */
+    public UpdateParserSpec pipelines(List<PipelineSpec> pipelines) {
+        this.pipelines = pipelines;
+        return this;
+    }
+
 
     /**
      * add item to parserFields
@@ -184,6 +217,18 @@ public class UpdateParserSpec  implements java.io.Serializable {
             this.parserFields = new ArrayList<>();
         }
         this.parserFields.add(parserField);
+    }
+
+    /**
+     * add item to 预处理任务列表。按照数组的顺序执行。
+     *
+     * @param pipeline
+     */
+    public void addPipeline(PipelineSpec pipeline) {
+        if (this.pipelines == null) {
+            this.pipelines = new ArrayList<>();
+        }
+        this.pipelines.add(pipeline);
     }
 
 }

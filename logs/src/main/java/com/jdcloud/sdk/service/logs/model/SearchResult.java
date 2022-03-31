@@ -37,7 +37,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 结果条目 map[string]interface{} key包含:content,id,anchor
+     * data
      */
     private List<Object> data;
 
@@ -53,7 +53,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
 
 
     /**
-     * get 结果条目 map[string]interface{} key包含:content,id,anchor
+     * get data
      *
      * @return
      */
@@ -62,7 +62,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     }
 
     /**
-     * set 结果条目 map[string]interface{} key包含:content,id,anchor
+     * set data
      *
      * @param data
      */
@@ -108,7 +108,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
 
 
     /**
-     * set 结果条目 map[string]interface{} key包含:content,id,anchor
+     * set data
      *
      * @param data
      */
@@ -139,7 +139,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
 
 
     /**
-     * add item to 结果条目 map[string]interface{} key包含:content,id,anchor
+     * add item to data
      *
      * @param data
      */
