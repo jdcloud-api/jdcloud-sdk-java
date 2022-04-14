@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vpc.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改弹性网卡接口
+ * 修改弹性网卡信息
  */
 public class ModifyNetworkInterfaceResponse extends JdcloudResponse<ModifyNetworkInterfaceResult> implements java.io.Serializable {
 

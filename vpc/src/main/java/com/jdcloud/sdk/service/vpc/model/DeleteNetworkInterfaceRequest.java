@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除弹性网卡接口
+ * 删除弹性网卡
  */
 public class DeleteNetworkInterfaceRequest extends JdcloudRequest implements java.io.Serializable {
 

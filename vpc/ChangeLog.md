@@ -1,8 +1,15 @@
 # 更新历史 #
-API版本：0.9.2
+API版本：1.0.0
 
 |发布时间|版本号|更新|说明|
 |---|---|---|---|
+|2022-04-14|1.0.1|扩展支持|* 修改共享带宽包，对外发布|
+|2022-02-10|1.0.0|扩展支持|* 支持ip接入资源组；支持共享带宽包接入tag和资源组|
+|2021-05-17|1.0.0|增加新接口|* 支持根据私有唯一ip修改natgw子网acl|
+|2021-03-30|1.0.0|增加新接口|* 支持共享带宽包|
+|2020-11-10|0.9.5|增加新接口|* 对接dns,提供接口给dns支持dns针对vpcId解析|
+|2020-08-05|0.9.4|增加新接口|* 对接统一选购,支持port绑定cidr|
+|2020-04-19|0.9.3|增加新接口|* 增加DescribeSpecialIpPool|
 |2020-04-13|0.9.2|扩展支持|* 支持边缘计算|
 |2019-11-04|0.9.1|增加新接口|* 增加SetEipTag<br>* 增加GetStatus|
 |2019-09-12|0.9.0|增加新接口|* 增加AddRoutePropagation<br>* 增加ModifyRoutePropagation<br>* 增加RemoveRoutePropagation<br>* 修改AddRouteTableRules，增加description属性<br>* 修改ModifyRouteTableRules，增加description属性<br>* 修改DescribeRouteTable/DescribeRouteTables返回信息增加路由传播列表（routePropagations）、路由信息增加路由类型、description属性<br>* 查询和修改配额接口支持传播路由|

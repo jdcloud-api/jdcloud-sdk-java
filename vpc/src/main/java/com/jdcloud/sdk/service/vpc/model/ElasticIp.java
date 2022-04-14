@@ -100,6 +100,21 @@ public class ElasticIp  implements java.io.Serializable {
      */
     private String ipType;
 
+    /**
+     * 加入的共享带宽包ID，如果没有加入共享带宽包该值为空
+     */
+    private String bandwidthPackageId;
+
+    /**
+     * IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）
+     */
+    private String status;
+
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
 
     /**
      * get 弹性公网IP的Id
@@ -335,6 +350,60 @@ public class ElasticIp  implements java.io.Serializable {
         this.ipType = ipType;
     }
 
+    /**
+     * get 加入的共享带宽包ID，如果没有加入共享带宽包该值为空
+     *
+     * @return
+     */
+    public String getBandwidthPackageId() {
+        return bandwidthPackageId;
+    }
+
+    /**
+     * set 加入的共享带宽包ID，如果没有加入共享带宽包该值为空
+     *
+     * @param bandwidthPackageId
+     */
+    public void setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+    }
+
+    /**
+     * get IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）
+     *
+     * @return
+     */
+    public String getStatus() {
+        return status;
+    }
+
+    /**
+     * set IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）
+     *
+     * @param status
+     */
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
 
     /**
      * set 弹性公网IP的Id
@@ -463,6 +532,36 @@ public class ElasticIp  implements java.io.Serializable {
      */
     public ElasticIp ipType(String ipType) {
         this.ipType = ipType;
+        return this;
+    }
+
+    /**
+     * set 加入的共享带宽包ID，如果没有加入共享带宽包该值为空
+     *
+     * @param bandwidthPackageId
+     */
+    public ElasticIp bandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+
+    /**
+     * set IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）
+     *
+     * @param status
+     */
+    public ElasticIp status(String status) {
+        this.status = status;
+        return this;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public ElasticIp resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 

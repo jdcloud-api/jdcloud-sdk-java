@@ -68,6 +68,16 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
     private String ipType;
 
     /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
+    /**
+     * 预检标识，默认false，dryRun为true时只作检查，不做变更
+     */
+    private Boolean dryRun;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -166,6 +176,42 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+    /**
+     * get 预检标识，默认false，dryRun为true时只作检查，不做变更
+     *
+     * @return
+     */
+    public Boolean getDryRun() {
+        return dryRun;
+    }
+
+    /**
+     * set 预检标识，默认false，dryRun为true时只作检查，不做变更
+     *
+     * @param dryRun
+     */
+    public void setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -231,6 +277,26 @@ public class CreateElasticIpsRequest extends JdcloudRequest implements java.io.S
      */
     public CreateElasticIpsRequest ipType(String ipType) {
         this.ipType = ipType;
+        return this;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public CreateElasticIpsRequest resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+    /**
+     * set 预检标识，默认false，dryRun为true时只作检查，不做变更
+     *
+     * @param dryRun
+     */
+    public CreateElasticIpsRequest dryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
 

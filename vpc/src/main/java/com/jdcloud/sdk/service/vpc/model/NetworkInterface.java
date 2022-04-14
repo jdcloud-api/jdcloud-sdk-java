@@ -45,7 +45,12 @@ public class NetworkInterface  implements java.io.Serializable {
     private String networkInterfaceId;
 
     /**
-     * 可用区名称，该参数无效，不建议使用
+     * 网卡所在az类型，取值：standard(标准Az)，edge(边缘Az)
+     */
+    private String azType;
+
+    /**
+     * 网卡所在Az, 标准为&quot;&quot;， 边缘为边缘az
      */
     private String az;
 
@@ -88,6 +93,11 @@ public class NetworkInterface  implements java.io.Serializable {
      * 网卡附属IP列表
      */
     private List<NetworkInterfacePrivateIp> secondaryIps;
+
+    /**
+     * 网卡附属IP网段
+     */
+    private List<String> secondaryCidrs;
 
     /**
      * 关联实例类型，取值范围：vm
@@ -167,7 +177,25 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * get 可用区名称，该参数无效，不建议使用
+     * get 网卡所在az类型，取值：standard(标准Az)，edge(边缘Az)
+     *
+     * @return
+     */
+    public String getAzType() {
+        return azType;
+    }
+
+    /**
+     * set 网卡所在az类型，取值：standard(标准Az)，edge(边缘Az)
+     *
+     * @param azType
+     */
+    public void setAzType(String azType) {
+        this.azType = azType;
+    }
+
+    /**
+     * get 网卡所在Az, 标准为&quot;&quot;， 边缘为边缘az
      *
      * @return
      */
@@ -176,7 +204,7 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区名称，该参数无效，不建议使用
+     * set 网卡所在Az, 标准为&quot;&quot;， 边缘为边缘az
      *
      * @param az
      */
@@ -326,6 +354,24 @@ public class NetworkInterface  implements java.io.Serializable {
      */
     public void setSecondaryIps(List<NetworkInterfacePrivateIp> secondaryIps) {
         this.secondaryIps = secondaryIps;
+    }
+
+    /**
+     * get 网卡附属IP网段
+     *
+     * @return
+     */
+    public List<String> getSecondaryCidrs() {
+        return secondaryCidrs;
+    }
+
+    /**
+     * set 网卡附属IP网段
+     *
+     * @param secondaryCidrs
+     */
+    public void setSecondaryCidrs(List<String> secondaryCidrs) {
+        this.secondaryCidrs = secondaryCidrs;
     }
 
     /**
@@ -494,7 +540,17 @@ public class NetworkInterface  implements java.io.Serializable {
     }
 
     /**
-     * set 可用区名称，该参数无效，不建议使用
+     * set 网卡所在az类型，取值：standard(标准Az)，edge(边缘Az)
+     *
+     * @param azType
+     */
+    public NetworkInterface azType(String azType) {
+        this.azType = azType;
+        return this;
+    }
+
+    /**
+     * set 网卡所在Az, 标准为&quot;&quot;， 边缘为边缘az
      *
      * @param az
      */
@@ -580,6 +636,16 @@ public class NetworkInterface  implements java.io.Serializable {
      */
     public NetworkInterface secondaryIps(List<NetworkInterfacePrivateIp> secondaryIps) {
         this.secondaryIps = secondaryIps;
+        return this;
+    }
+
+    /**
+     * set 网卡附属IP网段
+     *
+     * @param secondaryCidrs
+     */
+    public NetworkInterface secondaryCidrs(List<String> secondaryCidrs) {
+        this.secondaryCidrs = secondaryCidrs;
         return this;
     }
 
@@ -686,6 +752,18 @@ public class NetworkInterface  implements java.io.Serializable {
             this.secondaryIps = new ArrayList<>();
         }
         this.secondaryIps.add(secondaryIp);
+    }
+
+    /**
+     * add item to 网卡附属IP网段
+     *
+     * @param secondaryCidr
+     */
+    public void addSecondaryCidr(String secondaryCidr) {
+        if (this.secondaryCidrs == null) {
+            this.secondaryCidrs = new ArrayList<>();
+        }
+        this.secondaryCidrs.add(secondaryCidr);
     }
 
 }

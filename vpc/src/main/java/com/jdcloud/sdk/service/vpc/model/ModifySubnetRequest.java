@@ -45,6 +45,11 @@ public class ModifySubnetRequest extends JdcloudRequest implements java.io.Seria
     private String description;
 
     /**
+     * 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     */
+    private Integer ipMaskLen;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -93,6 +98,24 @@ public class ModifySubnetRequest extends JdcloudRequest implements java.io.Seria
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @return
+     */
+    public Integer getIpMaskLen() {
+        return ipMaskLen;
+    }
+
+    /**
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @param ipMaskLen
+     */
+    public void setIpMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
     }
 
     /**
@@ -149,6 +172,16 @@ public class ModifySubnetRequest extends JdcloudRequest implements java.io.Seria
      */
     public ModifySubnetRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @param ipMaskLen
+     */
+    public ModifySubnetRequest ipMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
         return this;
     }
 

@@ -64,6 +64,16 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
      */
     private String ipType;
 
+    /**
+     * 资源所属资源组ID
+     */
+    private String resourceGroupId;
+
+    /**
+     * 预检标识，默认false，dryRun为true时只作检查，不做变更
+     */
+    private Boolean dryRun;
+
 
     /**
      * get 购买弹性ip数量；取值范围：[1,100]
@@ -155,6 +165,42 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
         this.ipType = ipType;
     }
 
+    /**
+     * get 资源所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+    /**
+     * get 预检标识，默认false，dryRun为true时只作检查，不做变更
+     *
+     * @return
+     */
+    public Boolean getDryRun() {
+        return dryRun;
+    }
+
+    /**
+     * set 预检标识，默认false，dryRun为true时只作检查，不做变更
+     *
+     * @param dryRun
+     */
+    public void setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+    }
+
 
     /**
      * set 购买弹性ip数量；取值范围：[1,100]
@@ -203,6 +249,26 @@ public class CreateElasticIpSpec  implements java.io.Serializable {
      */
     public CreateElasticIpSpec ipType(String ipType) {
         this.ipType = ipType;
+        return this;
+    }
+
+    /**
+     * set 资源所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public CreateElasticIpSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+    /**
+     * set 预检标识，默认false，dryRun为true时只作检查，不做变更
+     *
+     * @param dryRun
+     */
+    public CreateElasticIpSpec dryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
         return this;
     }
 

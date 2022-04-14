@@ -60,7 +60,7 @@ public class RouteTableRule  implements java.io.Serializable {
     /**
      * 路由类型，propagated:传播、static:静态
      */
-    private String routeType;
+    private String origin;
 
     /**
      * 路由描述，允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -163,17 +163,17 @@ public class RouteTableRule  implements java.io.Serializable {
      *
      * @return
      */
-    public String getRouteType() {
-        return routeType;
+    public String getOrigin() {
+        return origin;
     }
 
     /**
      * set 路由类型，propagated:传播、static:静态
      *
-     * @param routeType
+     * @param origin
      */
-    public void setRouteType(String routeType) {
-        this.routeType = routeType;
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
 
     /**
@@ -248,10 +248,10 @@ public class RouteTableRule  implements java.io.Serializable {
     /**
      * set 路由类型，propagated:传播、static:静态
      *
-     * @param routeType
+     * @param origin
      */
-    public RouteTableRule routeType(String routeType) {
-        this.routeType = routeType;
+    public RouteTableRule origin(String origin) {
+        this.origin = origin;
         return this;
     }
 

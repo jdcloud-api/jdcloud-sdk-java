@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vpc.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 给网卡删除secondaryIp接口
+ * 给网卡删除secondaryIp
  */
 public class UnassignSecondaryIpsResult extends JdcloudResult implements java.io.Serializable {
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vpc.model.AssignSecondaryIpsResponse;
 
 /**
- * 给网卡分配secondaryIp接口
+ * 给网卡分配secondaryIp
  */
 class AssignSecondaryIpsExecutor extends JdcloudExecutor {
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vpc.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除弹性公网IP
+ * 删除弹性公网IP，已加入共享带宽包的公网IP不能删除，需要先从共享带宽包移出
  */
 public class DeleteElasticIpResult extends JdcloudResult implements java.io.Serializable {
 

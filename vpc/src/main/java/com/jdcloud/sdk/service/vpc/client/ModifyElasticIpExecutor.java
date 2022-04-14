@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vpc.model.ModifyElasticIpResponse;
 
 /**
- * 修改弹性公网IP
+ * 修改弹性公网IP，当弹性公网IP加入共享带宽包后，此公网IP限速需要调用共享带宽包的接口（修改共享带宽包内公网IP带宽上限）
  */
 class ModifyElasticIpExecutor extends JdcloudExecutor {
 

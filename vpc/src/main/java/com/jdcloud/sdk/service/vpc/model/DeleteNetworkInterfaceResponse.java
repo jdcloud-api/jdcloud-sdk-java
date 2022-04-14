@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vpc.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除弹性网卡接口
+ * 删除弹性网卡
  */
 public class DeleteNetworkInterfaceResponse extends JdcloudResponse<DeleteNetworkInterfaceResult> implements java.io.Serializable {
 

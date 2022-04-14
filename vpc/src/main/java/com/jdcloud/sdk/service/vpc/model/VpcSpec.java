@@ -50,6 +50,16 @@ public class VpcSpec  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     */
+    private String azType;
+
+    /**
+     * VPC可用区，边缘VPC必须指定可用区
+     */
+    private String az;
+
 
     /**
      * get 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -105,6 +115,42 @@ public class VpcSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+    /**
+     * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @return
+     */
+    public String getAzType() {
+        return azType;
+    }
+
+    /**
+     * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @param azType
+     */
+    public void setAzType(String azType) {
+        this.azType = azType;
+    }
+
+    /**
+     * get VPC可用区，边缘VPC必须指定可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set VPC可用区，边缘VPC必须指定可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
 
     /**
      * set 私有网络名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -133,6 +179,26 @@ public class VpcSpec  implements java.io.Serializable {
      */
     public VpcSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @param azType
+     */
+    public VpcSpec azType(String azType) {
+        this.azType = azType;
+        return this;
+    }
+
+    /**
+     * set VPC可用区，边缘VPC必须指定可用区
+     *
+     * @param az
+     */
+    public VpcSpec az(String az) {
+        this.az = az;
         return this;
     }
 

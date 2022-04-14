@@ -39,6 +39,11 @@ public class UnassignSecondaryIpsSpec  implements java.io.Serializable {
      */
     private List<String> secondaryIps;
 
+    /**
+     * 指定删除的secondaryIp网段
+     */
+    private List<String> secondaryCidrs;
+
 
     /**
      * get 指定删除的secondaryIp地址
@@ -58,6 +63,24 @@ public class UnassignSecondaryIpsSpec  implements java.io.Serializable {
         this.secondaryIps = secondaryIps;
     }
 
+    /**
+     * get 指定删除的secondaryIp网段
+     *
+     * @return
+     */
+    public List<String> getSecondaryCidrs() {
+        return secondaryCidrs;
+    }
+
+    /**
+     * set 指定删除的secondaryIp网段
+     *
+     * @param secondaryCidrs
+     */
+    public void setSecondaryCidrs(List<String> secondaryCidrs) {
+        this.secondaryCidrs = secondaryCidrs;
+    }
+
 
     /**
      * set 指定删除的secondaryIp地址
@@ -66,6 +89,16 @@ public class UnassignSecondaryIpsSpec  implements java.io.Serializable {
      */
     public UnassignSecondaryIpsSpec secondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
+        return this;
+    }
+
+    /**
+     * set 指定删除的secondaryIp网段
+     *
+     * @param secondaryCidrs
+     */
+    public UnassignSecondaryIpsSpec secondaryCidrs(List<String> secondaryCidrs) {
+        this.secondaryCidrs = secondaryCidrs;
         return this;
     }
 
@@ -80,6 +113,18 @@ public class UnassignSecondaryIpsSpec  implements java.io.Serializable {
             this.secondaryIps = new ArrayList<>();
         }
         this.secondaryIps.add(secondaryIp);
+    }
+
+    /**
+     * add item to 指定删除的secondaryIp网段
+     *
+     * @param secondaryCidr
+     */
+    public void addSecondaryCidr(String secondaryCidr) {
+        if (this.secondaryCidrs == null) {
+            this.secondaryCidrs = new ArrayList<>();
+        }
+        this.secondaryCidrs.add(secondaryCidr);
     }
 
 }

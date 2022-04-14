@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询Vpc信息详情
+ * 查询虚拟网络信息详情
  */
 public class DescribeVpcRequest extends JdcloudRequest implements java.io.Serializable {
 

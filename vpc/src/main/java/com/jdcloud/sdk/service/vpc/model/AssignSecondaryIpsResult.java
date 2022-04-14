@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vpc.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 给网卡分配secondaryIp接口
+ * 给网卡分配secondaryIp
  */
 public class AssignSecondaryIpsResult extends JdcloudResult implements java.io.Serializable {
 

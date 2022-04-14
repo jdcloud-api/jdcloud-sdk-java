@@ -48,9 +48,9 @@ public class DescribeNetworkAclsRequest extends JdcloudRequest implements java.i
     private Integer pageSize;
 
     /**
-     * networkAclIds - 弹性网卡ID列表，支持多个
-networkAclNames - 弹性网卡名称列表，支持多个
-vpcId - 弹性网卡所属vpc Id，支持单个
+     * networkAclIds - networkAcl ID列表，支持多个
+networkAclNames - networkAcl名称列表，支持多个
+vpcId - networkAcl所属vpc Id，支持单个
 
      */
     private List<Filter> filters;
@@ -100,9 +100,9 @@ vpcId - 弹性网卡所属vpc Id，支持单个
     }
 
     /**
-     * get networkAclIds - 弹性网卡ID列表，支持多个
-networkAclNames - 弹性网卡名称列表，支持多个
-vpcId - 弹性网卡所属vpc Id，支持单个
+     * get networkAclIds - networkAcl ID列表，支持多个
+networkAclNames - networkAcl名称列表，支持多个
+vpcId - networkAcl所属vpc Id，支持单个
 
      *
      * @return
@@ -112,9 +112,9 @@ vpcId - 弹性网卡所属vpc Id，支持单个
     }
 
     /**
-     * set networkAclIds - 弹性网卡ID列表，支持多个
-networkAclNames - 弹性网卡名称列表，支持多个
-vpcId - 弹性网卡所属vpc Id，支持单个
+     * set networkAclIds - networkAcl ID列表，支持多个
+networkAclNames - networkAcl名称列表，支持多个
+vpcId - networkAcl所属vpc Id，支持单个
 
      *
      * @param filters
@@ -163,9 +163,9 @@ vpcId - 弹性网卡所属vpc Id，支持单个
     }
 
     /**
-     * set networkAclIds - 弹性网卡ID列表，支持多个
-networkAclNames - 弹性网卡名称列表，支持多个
-vpcId - 弹性网卡所属vpc Id，支持单个
+     * set networkAclIds - networkAcl ID列表，支持多个
+networkAclNames - networkAcl名称列表，支持多个
+vpcId - networkAcl所属vpc Id，支持单个
 
      *
      * @param filters
@@ -187,9 +187,9 @@ vpcId - 弹性网卡所属vpc Id，支持单个
 
 
     /**
-     * add item to networkAclIds - 弹性网卡ID列表，支持多个
-networkAclNames - 弹性网卡名称列表，支持多个
-vpcId - 弹性网卡所属vpc Id，支持单个
+     * add item to networkAclIds - networkAcl ID列表，支持多个
+networkAclNames - networkAcl名称列表，支持多个
+vpcId - networkAcl所属vpc Id，支持单个
 
      *
      * @param filter

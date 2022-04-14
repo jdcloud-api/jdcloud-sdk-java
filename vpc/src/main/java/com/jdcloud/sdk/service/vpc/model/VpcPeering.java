@@ -58,6 +58,16 @@ public class VpcPeering  implements java.io.Serializable {
     private VpcPeeringVpcInfo vpcInfo;
 
     /**
+     * VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     */
+    private String azType;
+
+    /**
+     * VPC可用区，边缘VPC非空，标准VPC为&quot;&quot;
+     */
+    private String az;
+
+    /**
      * 对端的Vpc信息
      */
     private VpcPeeringVpcInfo remoteVpcInfo;
@@ -159,6 +169,42 @@ public class VpcPeering  implements java.io.Serializable {
     }
 
     /**
+     * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @return
+     */
+    public String getAzType() {
+        return azType;
+    }
+
+    /**
+     * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @param azType
+     */
+    public void setAzType(String azType) {
+        this.azType = azType;
+    }
+
+    /**
+     * get VPC可用区，边缘VPC非空，标准VPC为&quot;&quot;
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set VPC可用区，边缘VPC非空，标准VPC为&quot;&quot;
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
+    /**
      * get 对端的Vpc信息
      *
      * @return
@@ -242,6 +288,26 @@ public class VpcPeering  implements java.io.Serializable {
      */
     public VpcPeering vpcInfo(VpcPeeringVpcInfo vpcInfo) {
         this.vpcInfo = vpcInfo;
+        return this;
+    }
+
+    /**
+     * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @param azType
+     */
+    public VpcPeering azType(String azType) {
+        this.azType = azType;
+        return this;
+    }
+
+    /**
+     * set VPC可用区，边缘VPC非空，标准VPC为&quot;&quot;
+     *
+     * @param az
+     */
+    public VpcPeering az(String az) {
+        this.az = az;
         return this;
     }
 

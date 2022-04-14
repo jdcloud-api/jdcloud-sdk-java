@@ -74,6 +74,16 @@ public class Vpc  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     */
+    private String azType;
+
+    /**
+     * VPC可用区, 标准VPC为&quot;&quot;， 边缘VPC为边缘az
+     */
+    private String az;
+
 
     /**
      * get Vpc的Id
@@ -219,6 +229,42 @@ public class Vpc  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+    /**
+     * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @return
+     */
+    public String getAzType() {
+        return azType;
+    }
+
+    /**
+     * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @param azType
+     */
+    public void setAzType(String azType) {
+        this.azType = azType;
+    }
+
+    /**
+     * get VPC可用区, 标准VPC为&quot;&quot;， 边缘VPC为边缘az
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set VPC可用区, 标准VPC为&quot;&quot;， 边缘VPC为边缘az
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
 
     /**
      * set Vpc的Id
@@ -297,6 +343,26 @@ public class Vpc  implements java.io.Serializable {
      */
     public Vpc createdTime(String createdTime) {
         this.createdTime = createdTime;
+        return this;
+    }
+
+    /**
+     * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @param azType
+     */
+    public Vpc azType(String azType) {
+        this.azType = azType;
+        return this;
+    }
+
+    /**
+     * set VPC可用区, 标准VPC为&quot;&quot;， 边缘VPC为边缘az
+     *
+     * @param az
+     */
+    public Vpc az(String az) {
+        this.az = az;
         return this;
     }
 
