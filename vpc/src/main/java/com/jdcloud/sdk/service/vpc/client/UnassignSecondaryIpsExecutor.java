@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vpc.model.UnassignSecondaryIpsResponse;
 
 /**
- * 给网卡删除secondaryIp接口
+ * 给网卡删除secondaryIp
  */
 class UnassignSecondaryIpsExecutor extends JdcloudExecutor {
 

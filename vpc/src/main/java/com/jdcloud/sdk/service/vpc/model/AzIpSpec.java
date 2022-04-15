@@ -47,14 +47,14 @@ public class AzIpSpec  implements java.io.Serializable {
     private String az;
 
     /**
-     * 公网IP的限速（单位：Mbps），取值范围为[1-1000]
+     * NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      * Required:true
      */
     @Required
     private Integer bandwidthMbps;
 
     /**
-     * 计费配置,仅支持按配置，默认按配置
+     * 计费配置,支持按配置、按用量，默认按配置
      */
     private ChargeSpec ipCharge;
 
@@ -96,7 +96,7 @@ public class AzIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 公网IP的限速（单位：Mbps），取值范围为[1-1000]
+     * get NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
      * @return
      */
@@ -105,7 +105,7 @@ public class AzIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 公网IP的限速（单位：Mbps），取值范围为[1-1000]
+     * set NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
      * @param bandwidthMbps
      */
@@ -114,7 +114,7 @@ public class AzIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 计费配置,仅支持按配置，默认按配置
+     * get 计费配置,支持按配置、按用量，默认按配置
      *
      * @return
      */
@@ -123,7 +123,7 @@ public class AzIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费配置,仅支持按配置，默认按配置
+     * set 计费配置,支持按配置、按用量，默认按配置
      *
      * @param ipCharge
      */
@@ -153,7 +153,7 @@ public class AzIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 公网IP的限速（单位：Mbps），取值范围为[1-1000]
+     * set NAT网关公网IP的限速（单位：Mbps）。计费类型为按配置时，取值范围为[1-1000]；计费类型为按流量时，取值范围为[1-200]
      *
      * @param bandwidthMbps
      */
@@ -163,7 +163,7 @@ public class AzIpSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 计费配置,仅支持按配置，默认按配置
+     * set 计费配置,支持按配置、按用量，默认按配置
      *
      * @param ipCharge
      */

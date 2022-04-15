@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcResponse;
 
 /**
- * 查询Vpc信息详情
+ * 查询虚拟网络信息详情
  */
 class DescribeVpcExecutor extends JdcloudExecutor {
 

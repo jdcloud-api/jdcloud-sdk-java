@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vpc.model.ModifyNetworkInterfaceResponse;
 
 /**
- * 修改弹性网卡接口
+ * 修改弹性网卡信息
  */
 class ModifyNetworkInterfaceExecutor extends JdcloudExecutor {
 

@@ -66,14 +66,9 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     private String description;
 
     /**
-     * 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     * 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      */
-    private String subnetType;
-
-    /**
-     * 子网可用区，边缘子网必须指定可用区
-     */
-    private String az;
+    private Integer ipMaskLen;
 
     /**
      * Region ID
@@ -174,39 +169,21 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * get 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     * get 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      *
      * @return
      */
-    public String getSubnetType() {
-        return subnetType;
+    public Integer getIpMaskLen() {
+        return ipMaskLen;
     }
 
     /**
-     * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      *
-     * @param subnetType
+     * @param ipMaskLen
      */
-    public void setSubnetType(String subnetType) {
-        this.subnetType = subnetType;
-    }
-
-    /**
-     * get 子网可用区，边缘子网必须指定可用区
-     *
-     * @return
-     */
-    public String getAz() {
-        return az;
-    }
-
-    /**
-     * set 子网可用区，边缘子网必须指定可用区
-     *
-     * @param az
-     */
-    public void setAz(String az) {
-        this.az = az;
+    public void setIpMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
     }
 
     /**
@@ -279,22 +256,12 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
     /**
-     * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      *
-     * @param subnetType
+     * @param ipMaskLen
      */
-    public CreateSubnetRequest subnetType(String subnetType) {
-        this.subnetType = subnetType;
-        return this;
-    }
-
-    /**
-     * set 子网可用区，边缘子网必须指定可用区
-     *
-     * @param az
-     */
-    public CreateSubnetRequest az(String az) {
-        this.az = az;
+    public CreateSubnetRequest ipMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
         return this;
     }
 

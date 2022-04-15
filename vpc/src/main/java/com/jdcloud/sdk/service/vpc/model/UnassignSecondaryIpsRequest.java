@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 给网卡删除secondaryIp接口
+ * 给网卡删除secondaryIp
  */
 public class UnassignSecondaryIpsRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -40,6 +40,11 @@ public class UnassignSecondaryIpsRequest extends JdcloudRequest implements java.
      * 指定删除的secondaryIp地址
      */
     private List<String> secondaryIps;
+
+    /**
+     * 指定删除的secondaryIp网段
+     */
+    private List<String> secondaryCidrs;
 
     /**
      * Region ID
@@ -72,6 +77,24 @@ public class UnassignSecondaryIpsRequest extends JdcloudRequest implements java.
      */
     public void setSecondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
+    }
+
+    /**
+     * get 指定删除的secondaryIp网段
+     *
+     * @return
+     */
+    public List<String> getSecondaryCidrs() {
+        return secondaryCidrs;
+    }
+
+    /**
+     * set 指定删除的secondaryIp网段
+     *
+     * @param secondaryCidrs
+     */
+    public void setSecondaryCidrs(List<String> secondaryCidrs) {
+        this.secondaryCidrs = secondaryCidrs;
     }
 
     /**
@@ -122,6 +145,16 @@ public class UnassignSecondaryIpsRequest extends JdcloudRequest implements java.
     }
 
     /**
+     * set 指定删除的secondaryIp网段
+     *
+     * @param secondaryCidrs
+     */
+    public UnassignSecondaryIpsRequest secondaryCidrs(List<String> secondaryCidrs) {
+        this.secondaryCidrs = secondaryCidrs;
+        return this;
+    }
+
+    /**
      * set Region ID
      *
      * @param regionId
@@ -152,6 +185,18 @@ public class UnassignSecondaryIpsRequest extends JdcloudRequest implements java.
             this.secondaryIps = new ArrayList<>();
         }
         this.secondaryIps.add(secondaryIp);
+    }
+
+    /**
+     * add item to 指定删除的secondaryIp网段
+     *
+     * @param secondaryCidr
+     */
+    public void addSecondaryCidr(String secondaryCidr) {
+        if (this.secondaryCidrs == null) {
+            this.secondaryCidrs = new ArrayList<>();
+        }
+        this.secondaryCidrs.add(secondaryCidr);
     }
 
 }

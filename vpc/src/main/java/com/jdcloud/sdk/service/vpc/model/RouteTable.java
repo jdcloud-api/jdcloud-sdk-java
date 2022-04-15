@@ -75,6 +75,16 @@ public class RouteTable  implements java.io.Serializable {
     private List<String> subnetIds;
 
     /**
+     * 路由表az类型，取值：standard(标准路由表)，edge(边缘路由表)
+     */
+    private String azType;
+
+    /**
+     * 路由表可用区
+     */
+    private String az;
+
+    /**
      * 路由表创建时间
      */
     private String createdTime;
@@ -225,6 +235,42 @@ public class RouteTable  implements java.io.Serializable {
     }
 
     /**
+     * get 路由表az类型，取值：standard(标准路由表)，edge(边缘路由表)
+     *
+     * @return
+     */
+    public String getAzType() {
+        return azType;
+    }
+
+    /**
+     * set 路由表az类型，取值：standard(标准路由表)，edge(边缘路由表)
+     *
+     * @param azType
+     */
+    public void setAzType(String azType) {
+        this.azType = azType;
+    }
+
+    /**
+     * get 路由表可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 路由表可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
+    /**
      * get 路由表创建时间
      *
      * @return
@@ -320,6 +366,26 @@ public class RouteTable  implements java.io.Serializable {
      */
     public RouteTable subnetIds(List<String> subnetIds) {
         this.subnetIds = subnetIds;
+        return this;
+    }
+
+    /**
+     * set 路由表az类型，取值：standard(标准路由表)，edge(边缘路由表)
+     *
+     * @param azType
+     */
+    public RouteTable azType(String azType) {
+        this.azType = azType;
+        return this;
+    }
+
+    /**
+     * set 路由表可用区
+     *
+     * @param az
+     */
+    public RouteTable az(String az) {
+        this.az = az;
         return this;
     }
 

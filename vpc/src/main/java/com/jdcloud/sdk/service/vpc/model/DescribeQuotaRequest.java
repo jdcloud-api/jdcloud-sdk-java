@@ -35,14 +35,14 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule
+     * 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、bwpByUsage、bandwidthPackageIp、natGateway
      * Required:true
      */
     @Required
     private String type;
 
     /**
-     * type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为staticRoute、propagatedRoute设置为routeTableId, type为securityGroupRule为securityGroupId
+     * type为vpc、elastic_ip、network_interface、bwpByUsage、natGateway不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为staticRoute、propagatedRoute设置为routeTableId, type为securityGroupRule为securityGroupId, type为network_interface_cidr设置为networkInterfaceId，type为bandwidthPackageIp设置为bandwidthPackageId
      */
     private String parentResourceId;
 
@@ -55,7 +55,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule
+     * get 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、bwpByUsage、bandwidthPackageIp、natGateway
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、bwpByUsage、bandwidthPackageIp、natGateway
      *
      * @param type
      */
@@ -73,7 +73,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * get type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为staticRoute、propagatedRoute设置为routeTableId, type为securityGroupRule为securityGroupId
+     * get type为vpc、elastic_ip、network_interface、bwpByUsage、natGateway不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为staticRoute、propagatedRoute设置为routeTableId, type为securityGroupRule为securityGroupId, type为network_interface_cidr设置为networkInterfaceId，type为bandwidthPackageIp设置为bandwidthPackageId
      *
      * @return
      */
@@ -82,7 +82,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为staticRoute、propagatedRoute设置为routeTableId, type为securityGroupRule为securityGroupId
+     * set type为vpc、elastic_ip、network_interface、bwpByUsage、natGateway不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为staticRoute、propagatedRoute设置为routeTableId, type为securityGroupRule为securityGroupId, type为network_interface_cidr设置为networkInterfaceId，type为bandwidthPackageIp设置为bandwidthPackageId
      *
      * @param parentResourceId
      */
@@ -110,7 +110,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule
+     * set 资源类型，取值范围：vpc、elastic_ip、subnet、security_group、vpcpeering、network_interface（配额只统计辅助网卡）、acl、aclRule、routeTable、staticRoute、propagatedRoute、securityGroupRule、network_interface_cidr、bwpByUsage、bandwidthPackageIp、natGateway
      *
      * @param type
      */
@@ -120,7 +120,7 @@ public class DescribeQuotaRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set type为vpc、elastic_ip、network_interface不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为staticRoute、propagatedRoute设置为routeTableId, type为securityGroupRule为securityGroupId
+     * set type为vpc、elastic_ip、network_interface、bwpByUsage、natGateway不设置, type为subnet、security_group、vpcpeering、acl、routeTable设置为vpcId, type为aclRule设置为aclId, type为staticRoute、propagatedRoute设置为routeTableId, type为securityGroupRule为securityGroupId, type为network_interface_cidr设置为networkInterfaceId，type为bandwidthPackageIp设置为bandwidthPackageId
      *
      * @param parentResourceId
      */

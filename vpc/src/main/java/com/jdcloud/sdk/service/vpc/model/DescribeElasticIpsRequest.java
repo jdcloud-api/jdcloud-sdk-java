@@ -54,6 +54,8 @@ elasticIpAddress - eip的IP地址，支持单个
 chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
 azs - eip可用区，支持多个
+bandwidthPackageId - 共享带宽包ID，支持单个
+status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
      */
     private List<Filter> filters;
@@ -62,6 +64,11 @@ azs - eip可用区，支持多个
      * Tag筛选条件
      */
     private List<TagFilter> tags;
+
+    /**
+     * 资源组筛选条件
+     */
+    private List<String> resourceGroupIds;
 
     /**
      * Region ID
@@ -113,6 +120,8 @@ elasticIpAddress - eip的IP地址，支持单个
 chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
 azs - eip可用区，支持多个
+bandwidthPackageId - 共享带宽包ID，支持单个
+status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
      *
      * @return
@@ -127,6 +136,8 @@ elasticIpAddress - eip的IP地址，支持单个
 chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
 azs - eip可用区，支持多个
+bandwidthPackageId - 共享带宽包ID，支持单个
+status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
      *
      * @param filters
@@ -151,6 +162,24 @@ azs - eip可用区，支持多个
      */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
+    }
+
+    /**
+     * get 资源组筛选条件
+     *
+     * @return
+     */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+     * set 资源组筛选条件
+     *
+     * @param resourceGroupIds
+     */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
     }
 
     /**
@@ -198,6 +227,8 @@ elasticIpAddress - eip的IP地址，支持单个
 chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
 azs - eip可用区，支持多个
+bandwidthPackageId - 共享带宽包ID，支持单个
+status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
      *
      * @param filters
@@ -218,6 +249,16 @@ azs - eip可用区，支持多个
     }
 
     /**
+     * set 资源组筛选条件
+     *
+     * @param resourceGroupIds
+     */
+    public DescribeElasticIpsRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
+    /**
      * set Region ID
      *
      * @param regionId
@@ -234,6 +275,8 @@ elasticIpAddress - eip的IP地址，支持单个
 chargeStatus	- eip的费用支付状态,normal(正常状态) or overdue(预付费已到期) or arrear(欠费状态)，支持单个
 ipType - eip类型，取值：all(所有类型)、standard(标准弹性IP)、edge(边缘弹性IP)，默认standard，支持单个
 azs - eip可用区，支持多个
+bandwidthPackageId - 共享带宽包ID，支持单个
+status - IP是否被绑定，取值：ASSOCIATED（被绑定）、NOT_ASSOCIATED（未被绑定）、ALL（全部）。支持单个
 
      *
      * @param filter
@@ -255,6 +298,18 @@ azs - eip可用区，支持多个
             this.tags = new ArrayList<>();
         }
         this.tags.add(tag);
+    }
+
+    /**
+     * add item to 资源组筛选条件
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
     }
 
 }

@@ -50,6 +50,8 @@ public class DescribeVpcsRequest extends JdcloudRequest implements java.io.Seria
     /**
      * vpcIds - vpc ID列表，支持多个
 vpcNames - vpc名称列表,支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      */
     private List<Filter> filters;
@@ -101,6 +103,8 @@ vpcNames - vpc名称列表,支持多个
     /**
      * get vpcIds - vpc ID列表，支持多个
 vpcNames - vpc名称列表,支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      *
      * @return
@@ -112,6 +116,8 @@ vpcNames - vpc名称列表,支持多个
     /**
      * set vpcIds - vpc ID列表，支持多个
 vpcNames - vpc名称列表,支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      *
      * @param filters
@@ -162,6 +168,8 @@ vpcNames - vpc名称列表,支持多个
     /**
      * set vpcIds - vpc ID列表，支持多个
 vpcNames - vpc名称列表,支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      *
      * @param filters
@@ -185,6 +193,8 @@ vpcNames - vpc名称列表,支持多个
     /**
      * add item to vpcIds - vpc ID列表，支持多个
 vpcNames - vpc名称列表,支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - 可用区，支持多个
 
      *
      * @param filter

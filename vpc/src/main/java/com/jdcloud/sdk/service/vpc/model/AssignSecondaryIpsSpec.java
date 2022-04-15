@@ -35,7 +35,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      */
     private Boolean force;
 
@@ -49,9 +49,19 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
      */
     private Number secondaryIpCount;
 
+    /**
+     * 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     */
+    private Integer secondaryIpMaskLen;
 
     /**
-     * get secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     */
+    private String secondaryIpAddress;
+
+
+    /**
+     * get secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @return
      */
@@ -60,7 +70,7 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
     }
 
     /**
-     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @param force
      */
@@ -104,9 +114,45 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
         this.secondaryIpCount = secondaryIpCount;
     }
 
+    /**
+     * get 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @return
+     */
+    public Integer getSecondaryIpMaskLen() {
+        return secondaryIpMaskLen;
+    }
 
     /**
-     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @param secondaryIpMaskLen
+     */
+    public void setSecondaryIpMaskLen(Integer secondaryIpMaskLen) {
+        this.secondaryIpMaskLen = secondaryIpMaskLen;
+    }
+
+    /**
+     * get 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @return
+     */
+    public String getSecondaryIpAddress() {
+        return secondaryIpAddress;
+    }
+
+    /**
+     * set 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @param secondaryIpAddress
+     */
+    public void setSecondaryIpAddress(String secondaryIpAddress) {
+        this.secondaryIpAddress = secondaryIpAddress;
+    }
+
+
+    /**
+     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @param force
      */
@@ -132,6 +178,26 @@ public class AssignSecondaryIpsSpec  implements java.io.Serializable {
      */
     public AssignSecondaryIpsSpec secondaryIpCount(Number secondaryIpCount) {
         this.secondaryIpCount = secondaryIpCount;
+        return this;
+    }
+
+    /**
+     * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @param secondaryIpMaskLen
+     */
+    public AssignSecondaryIpsSpec secondaryIpMaskLen(Integer secondaryIpMaskLen) {
+        this.secondaryIpMaskLen = secondaryIpMaskLen;
+        return this;
+    }
+
+    /**
+     * set 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @param secondaryIpAddress
+     */
+    public AssignSecondaryIpsSpec secondaryIpAddress(String secondaryIpAddress) {
+        this.secondaryIpAddress = secondaryIpAddress;
         return this;
     }
 

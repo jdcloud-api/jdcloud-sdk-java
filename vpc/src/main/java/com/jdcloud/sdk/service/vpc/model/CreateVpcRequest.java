@@ -52,6 +52,16 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     private String description;
 
     /**
+     * VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     */
+    private String azType;
+
+    /**
+     * VPC可用区，边缘VPC必须指定可用区
+     */
+    private String az;
+
+    /**
      * Region ID
      * Required:true
      */
@@ -114,6 +124,42 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
     }
 
     /**
+     * get VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @return
+     */
+    public String getAzType() {
+        return azType;
+    }
+
+    /**
+     * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @param azType
+     */
+    public void setAzType(String azType) {
+        this.azType = azType;
+    }
+
+    /**
+     * get VPC可用区，边缘VPC必须指定可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set VPC可用区，边缘VPC必须指定可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -159,6 +205,26 @@ public class CreateVpcRequest extends JdcloudRequest implements java.io.Serializ
      */
     public CreateVpcRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set VPC az类型，取值：standard(标准VPC)，edge(边缘VPC)
+     *
+     * @param azType
+     */
+    public CreateVpcRequest azType(String azType) {
+        this.azType = azType;
+        return this;
+    }
+
+    /**
+     * set VPC可用区，边缘VPC必须指定可用区
+     *
+     * @param az
+     */
+    public CreateVpcRequest az(String az) {
+        this.az = az;
         return this;
     }
 

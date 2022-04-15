@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除弹性公网IP
+ * 删除弹性公网IP，已加入共享带宽包的公网IP不能删除，需要先从共享带宽包移出
  */
 public class DeleteElasticIpRequest extends JdcloudRequest implements java.io.Serializable {
 

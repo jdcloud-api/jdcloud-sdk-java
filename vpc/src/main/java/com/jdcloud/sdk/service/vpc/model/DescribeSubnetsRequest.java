@@ -55,6 +55,7 @@ aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
 subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
 azs - 可用区，支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准可用区子网)，edge(边缘可用区子网)，默认standard ，支持单个
 
      */
     private List<Filter> filters;
@@ -111,6 +112,7 @@ aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
 subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
 azs - 可用区，支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准可用区子网)，edge(边缘可用区子网)，默认standard ，支持单个
 
      *
      * @return
@@ -127,6 +129,7 @@ aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
 subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
 azs - 可用区，支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准可用区子网)，edge(边缘可用区子网)，默认standard ，支持单个
 
      *
      * @param filters
@@ -182,6 +185,7 @@ aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
 subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
 azs - 可用区，支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准可用区子网)，edge(边缘可用区子网)，默认standard ，支持单个
 
      *
      * @param filters
@@ -210,6 +214,7 @@ aclId - 子网关联acl Id，支持单个
 vpcId - 子网所属VPC Id，支持单个
 subnetType - 子网类型，取值：all(全部类型)，standard(标准子网)，edge(边缘子网)，默认standard ，支持单个
 azs - 可用区，支持多个
+azType - VPC az类型，取值：all(全部类型)，standard(标准可用区子网)，edge(边缘可用区子网)，默认standard ，支持单个
 
      *
      * @param filter

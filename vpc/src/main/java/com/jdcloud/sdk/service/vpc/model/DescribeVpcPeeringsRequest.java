@@ -52,6 +52,8 @@ public class DescribeVpcPeeringsRequest extends JdcloudRequest implements java.i
 vpcPeeringNames - vpcPeering名称列表，支持多个
 vpcId	- vpcPeering本端Vpc Id，支持单个
 remoteVpcId - vpcPeering对端Vpc Id，支持单个
+azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - vpcPeering本端VPC可用区，支持多个
 
      */
     private List<Filter> filters;
@@ -105,6 +107,8 @@ remoteVpcId - vpcPeering对端Vpc Id，支持单个
 vpcPeeringNames - vpcPeering名称列表，支持多个
 vpcId	- vpcPeering本端Vpc Id，支持单个
 remoteVpcId - vpcPeering对端Vpc Id，支持单个
+azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - vpcPeering本端VPC可用区，支持多个
 
      *
      * @return
@@ -118,6 +122,8 @@ remoteVpcId - vpcPeering对端Vpc Id，支持单个
 vpcPeeringNames - vpcPeering名称列表，支持多个
 vpcId	- vpcPeering本端Vpc Id，支持单个
 remoteVpcId - vpcPeering对端Vpc Id，支持单个
+azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - vpcPeering本端VPC可用区，支持多个
 
      *
      * @param filters
@@ -170,6 +176,8 @@ remoteVpcId - vpcPeering对端Vpc Id，支持单个
 vpcPeeringNames - vpcPeering名称列表，支持多个
 vpcId	- vpcPeering本端Vpc Id，支持单个
 remoteVpcId - vpcPeering对端Vpc Id，支持单个
+azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - vpcPeering本端VPC可用区，支持多个
 
      *
      * @param filters
@@ -195,6 +203,8 @@ remoteVpcId - vpcPeering对端Vpc Id，支持单个
 vpcPeeringNames - vpcPeering名称列表，支持多个
 vpcId	- vpcPeering本端Vpc Id，支持单个
 remoteVpcId - vpcPeering对端Vpc Id，支持单个
+azType - vpcPeering本端VPC az类型，取值：all(全部类型)，standard(标准VPC)，edge(边缘VPC)，默认standard ，支持单个
+azs - vpcPeering本端VPC可用区，支持多个
 
      *
      * @param filter

@@ -58,6 +58,11 @@ public class Subnet  implements java.io.Serializable {
     private Number availableIpCount;
 
     /**
+     * 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     */
+    private Integer ipMaskLen;
+
+    /**
      * 子网描述信息
      */
     private String description;
@@ -186,6 +191,24 @@ public class Subnet  implements java.io.Serializable {
      */
     public void setAvailableIpCount(Number availableIpCount) {
         this.availableIpCount = availableIpCount;
+    }
+
+    /**
+     * get 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @return
+     */
+    public Integer getIpMaskLen() {
+        return ipMaskLen;
+    }
+
+    /**
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @param ipMaskLen
+     */
+    public void setIpMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
     }
 
     /**
@@ -380,6 +403,16 @@ public class Subnet  implements java.io.Serializable {
      */
     public Subnet availableIpCount(Number availableIpCount) {
         this.availableIpCount = availableIpCount;
+        return this;
+    }
+
+    /**
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @param ipMaskLen
+     */
+    public Subnet ipMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
         return this;
     }
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.vpc.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询Vpc信息详情
+ * 查询虚拟网络信息详情
  */
 public class DescribeVpcResponse extends JdcloudResponse<DescribeVpcResult> implements java.io.Serializable {
 

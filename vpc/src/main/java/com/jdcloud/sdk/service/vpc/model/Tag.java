@@ -24,7 +24,6 @@
 
 package com.jdcloud.sdk.service.vpc.model;
 
-import com.jdcloud.sdk.annotation.Required;
 
 /**
  * tag
@@ -35,16 +34,12 @@ public class Tag  implements java.io.Serializable {
 
     /**
      * Tag键
-     * Required:true
      */
-    @Required
     private String key;
 
     /**
      * Tag值
-     * Required:true
      */
-    @Required
     private String value;
 
 

@@ -37,6 +37,12 @@ import com.jdcloud.sdk.service.vpc.client.DeleteElasticIpExecutor;
 import com.jdcloud.sdk.service.vpc.model.ModifyVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.ModifyVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.ModifyVpcPeeringExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeBandwidthPackageRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeBandwidthPackageResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeBandwidthPackageExecutor;
+import com.jdcloud.sdk.service.vpc.model.CreateBandwidthPackageRequest;
+import com.jdcloud.sdk.service.vpc.model.CreateBandwidthPackageResponse;
+import com.jdcloud.sdk.service.vpc.client.CreateBandwidthPackageExecutor;
 import com.jdcloud.sdk.service.vpc.model.ModifyElasticIpRequest;
 import com.jdcloud.sdk.service.vpc.model.ModifyElasticIpResponse;
 import com.jdcloud.sdk.service.vpc.client.ModifyElasticIpExecutor;
@@ -52,6 +58,9 @@ import com.jdcloud.sdk.service.vpc.client.DeleteSubnetExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeSubnetsRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeSubnetsResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeSubnetsExecutor;
+import com.jdcloud.sdk.service.vpc.model.RemoveBandwidthPackageIPRequest;
+import com.jdcloud.sdk.service.vpc.model.RemoveBandwidthPackageIPResponse;
+import com.jdcloud.sdk.service.vpc.client.RemoveBandwidthPackageIPExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfacesRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkInterfacesResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeNetworkInterfacesExecutor;
@@ -85,12 +94,18 @@ import com.jdcloud.sdk.service.vpc.client.DeleteVpcExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringsRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcPeeringsResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeVpcPeeringsExecutor;
+import com.jdcloud.sdk.service.vpc.model.ModifyBandwidthPackageRequest;
+import com.jdcloud.sdk.service.vpc.model.ModifyBandwidthPackageResponse;
+import com.jdcloud.sdk.service.vpc.client.ModifyBandwidthPackageExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkAclsRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkAclsResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeNetworkAclsExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeSubnetRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeSubnetResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeSubnetExecutor;
+import com.jdcloud.sdk.service.vpc.model.DeleteBandwidthPackageRequest;
+import com.jdcloud.sdk.service.vpc.model.DeleteBandwidthPackageResponse;
+import com.jdcloud.sdk.service.vpc.client.DeleteBandwidthPackageExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkSecurityGroupRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeNetworkSecurityGroupResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeNetworkSecurityGroupExecutor;
@@ -100,6 +115,9 @@ import com.jdcloud.sdk.service.vpc.client.DescribeNetworkSecurityGroupsExecutor;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcRequest;
 import com.jdcloud.sdk.service.vpc.model.DescribeVpcResponse;
 import com.jdcloud.sdk.service.vpc.client.DescribeVpcExecutor;
+import com.jdcloud.sdk.service.vpc.model.AddBandwidthPackageIPRequest;
+import com.jdcloud.sdk.service.vpc.model.AddBandwidthPackageIPResponse;
+import com.jdcloud.sdk.service.vpc.client.AddBandwidthPackageIPExecutor;
 import com.jdcloud.sdk.service.vpc.model.DisassociateNetworkAclRequest;
 import com.jdcloud.sdk.service.vpc.model.DisassociateNetworkAclResponse;
 import com.jdcloud.sdk.service.vpc.client.DisassociateNetworkAclExecutor;
@@ -160,6 +178,12 @@ import com.jdcloud.sdk.service.vpc.client.DisassociateElasticIpExecutor;
 import com.jdcloud.sdk.service.vpc.model.DeleteVpcPeeringRequest;
 import com.jdcloud.sdk.service.vpc.model.DeleteVpcPeeringResponse;
 import com.jdcloud.sdk.service.vpc.client.DeleteVpcPeeringExecutor;
+import com.jdcloud.sdk.service.vpc.model.ModifyBandwidthPackageIpBandwidthRequest;
+import com.jdcloud.sdk.service.vpc.model.ModifyBandwidthPackageIpBandwidthResponse;
+import com.jdcloud.sdk.service.vpc.client.ModifyBandwidthPackageIpBandwidthExecutor;
+import com.jdcloud.sdk.service.vpc.model.DescribeBandwidthPackagesRequest;
+import com.jdcloud.sdk.service.vpc.model.DescribeBandwidthPackagesResponse;
+import com.jdcloud.sdk.service.vpc.client.DescribeBandwidthPackagesExecutor;
 import com.jdcloud.sdk.service.vpc.model.CreateNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.vpc.model.CreateNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.vpc.client.CreateNetworkInterfaceExecutor;
@@ -216,7 +240,7 @@ public class VpcClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.8";
     public final static String DefaultEndpoint = "vpc.jdcloud-api.com";
     public final static String ServiceName = "vpc";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -259,7 +283,7 @@ public class VpcClient extends JdcloudClient {
 
 
     /**
-     * 删除弹性公网IP
+     * 删除弹性公网IP，已加入共享带宽包的公网IP不能删除，需要先从共享带宽包移出
      *
      * @param request
      * @return
@@ -281,7 +305,48 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 修改弹性公网IP
+     * 
+共享带宽包资源信息详情
+
+## 接口说明
+
+- 该接口与查询共享带宽包列表返回的信息一致。
+
+- 只需要查询单个共享带宽包详细信息的时候可以调用该接口。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBandwidthPackageResponse describeBandwidthPackage(DescribeBandwidthPackageRequest request) throws JdcloudSdkException {
+        return new DescribeBandwidthPackageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 指定地域创建共享带宽包实例。
+
+## 接口说明
+
+- 需要接口完成实名认证、支付方式确认、计费类型选择等准备工作。
+
+- 各地域下包年包月和按配置计费的共享带宽包不受配额限制，按用量计费的共享带宽包可创建数量受配额限制，创建前请通过 [DescribeQuotas](https://docs.jdcloud.com/cn/shared-bandwidth-package/api/describequotas?content&#x3D;API) 确认配额，如须提升请[提交工单](https://ticket.jdcloud.com/applyorder/submit)或联系京东云客服。
+
+- 通过本接口创建包年包月资源时将自动从账户扣款（代金券优先），如需使用第三方支付方式请通过控制台创建。
+
+- 按用量计费模式需提工单申请使用权限，默认支持增强95消峰计费。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateBandwidthPackageResponse createBandwidthPackage(CreateBandwidthPackageRequest request) throws JdcloudSdkException {
+        return new CreateBandwidthPackageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改弹性公网IP，当弹性公网IP加入共享带宽包后，此公网IP限速需要调用共享带宽包的接口（修改共享带宽包内公网IP带宽上限）
      *
      * @param request
      * @return
@@ -333,6 +398,25 @@ public class VpcClient extends JdcloudClient {
      */
     public DescribeSubnetsResponse describeSubnets(DescribeSubnetsRequest request) throws JdcloudSdkException {
         return new DescribeSubnetsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+从共享带宽包内移除公网IP
+
+## 接口说明
+
+-  弹性公网IP从共享带宽包中移除后，恢复原有的计费模式和带宽上限。
+
+-  共享带宽包是否计费与共享带宽包中有无弹性公网IP无关，如共享带宽包中无弹性公网IP资源时请及时删除资源，避免产生额外费用
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RemoveBandwidthPackageIPResponse removeBandwidthPackageIP(RemoveBandwidthPackageIPRequest request) throws JdcloudSdkException {
+        return new RemoveBandwidthPackageIPExecutor().client(this).execute(request);
     }
 
     /**
@@ -457,6 +541,25 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 
+修改共享带宽包信息，包括带宽上限及共享带宽包名称、描述信息。
+
+## 接口说明
+
+- 如共享带宽包中的弹性公网 IP 有单独限速。共享带宽包的带宽上限值不能低于其包含任一弹性公网IP的带宽上限值。
+
+- 欠费或到期的共享带宽包资源不支持修改带宽上限。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyBandwidthPackageResponse modifyBandwidthPackage(ModifyBandwidthPackageRequest request) throws JdcloudSdkException {
+        return new ModifyBandwidthPackageExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询Acl列表
      *
      * @param request
@@ -476,6 +579,22 @@ public class VpcClient extends JdcloudClient {
      */
     public DescribeSubnetResponse describeSubnet(DescribeSubnetRequest request) throws JdcloudSdkException {
         return new DescribeSubnetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除共享带宽包
+
+## 接口说明
+
+- 当共享带宽包内有公网IP存在时、包年包月类型的共享带宽包未到期时、按用量计费的共享带宽包使用时长未满一个完整的自然月时均不支持删除共享带宽包
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteBandwidthPackageResponse deleteBandwidthPackage(DeleteBandwidthPackageRequest request) throws JdcloudSdkException {
+        return new DeleteBandwidthPackageExecutor().client(this).execute(request);
     }
 
     /**
@@ -501,7 +620,7 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 查询Vpc信息详情
+     * 查询虚拟网络信息详情
      *
      * @param request
      * @return
@@ -509,6 +628,35 @@ public class VpcClient extends JdcloudClient {
      */
     public DescribeVpcResponse describeVpc(DescribeVpcRequest request) throws JdcloudSdkException {
         return new DescribeVpcExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+向共享带宽包内增加公网IP
+
+## 接口说明 
+
+- 确保已有至少一个共享带宽包资源。
+
+- 添加弹性公网IP前，需确保弹性公网IP所在地域与共享带宽包地域和线路相同，弹性公网IP的计费模式为按配置或按用量计费，且未加入其他的共享带宽包资源。
+
+- 已欠费的、包年包月的公网IP不能加入共享带宽包。
+
+- 一个公网IP同时只能加入一个共享带宽包。
+
+- 共享带宽包中可添加的弹性公网IP受配额限制，添加前请通过 [DescribeQuotas](https://docs.jdcloud.com/cn/shared-bandwidth-package/api/describequotas?content&#x3D;API) 确认配额，如须提升请[提交工单](https://ticket.jdcloud.com/applyorder/submit)或联系京东云客服。
+
+- 弹性公网IP加入共享带宽包后，弹性公网 IP 会原有的计费和带宽上限暂时失效，已共享带宽包进行计费，带宽上限默认为共享带宽包的带宽上限，可通过[modifyBandwidthPackageIpBandwidth](https://docs.jdcloud.com/cn/shared-bandwidth-package/api/modifybandwidthpackageIpbandwidth)进行修改。
+
+- 共享带宽包欠费或到期停服后不支持添加弹性公网IP。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AddBandwidthPackageIPResponse addBandwidthPackageIP(AddBandwidthPackageIPRequest request) throws JdcloudSdkException {
+        return new AddBandwidthPackageIPExecutor().client(this).execute(request);
     }
 
     /**
@@ -633,7 +781,7 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 给网卡分配secondaryIp接口
+     * 给网卡分配secondaryIp
      *
      * @param request
      * @return
@@ -655,7 +803,7 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 修改弹性网卡接口
+     * 修改弹性网卡信息
      *
      * @param request
      * @return
@@ -732,6 +880,48 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
+     * 
+修改共享带宽包内弹性公网 IP 的带宽上限。
+
+## 接口说明
+
+- 共享带宽包中弹性公网IP的带宽上限不能高于共享带宽包的带宽上限。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyBandwidthPackageIpBandwidthResponse modifyBandwidthPackageIpBandwidth(ModifyBandwidthPackageIpBandwidthRequest request) throws JdcloudSdkException {
+        return new ModifyBandwidthPackageIpBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 
+查询共享带宽包列表
+
+## 接口说明
+
+- 使用 &#x60;filters&#x60; 过滤器进行条件筛选，每个 &#x60;filter&#x60; 之间的关系为逻辑与（AND）的关系。
+
+- 如果使用子帐号查询，只会查询到该子帐号有权限的云主机实例。关于资源权限请参考 [IAM概述](https://docs.jdcloud.com/cn/iam/product-overview)。
+
+- 单次查询最大可查询100条共享带宽包数据。
+
+- 尽量一次调用接口查询多条数据，不建议使用该批量查询接口一次查询一条数据，如果使用不当导致查询过于密集，可能导致网关触发限流。
+
+- 由于该接口为 &#x60;GET&#x60; 方式请求，最终参数会转换为 &#x60;URL&#x60; 上的参数，但是 &#x60;HTTP&#x60; 协议下的 &#x60;GET&#x60; 请求参数长度是有大小限制的，使用者需要注意参数超长的问题。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBandwidthPackagesResponse describeBandwidthPackages(DescribeBandwidthPackagesRequest request) throws JdcloudSdkException {
+        return new DescribeBandwidthPackagesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建网卡接口，只能创建辅助网卡
      *
      * @param request
@@ -787,7 +977,7 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 给网卡删除secondaryIp接口
+     * 给网卡删除secondaryIp
      *
      * @param request
      * @return
@@ -875,7 +1065,7 @@ public class VpcClient extends JdcloudClient {
     }
 
     /**
-     * 删除弹性网卡接口
+     * 删除弹性网卡
      *
      * @param request
      * @return

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.vpc.model.DeleteNetworkInterfaceResponse;
 
 /**
- * 删除弹性网卡接口
+ * 删除弹性网卡
  */
 class DeleteNetworkInterfaceExecutor extends JdcloudExecutor {
 

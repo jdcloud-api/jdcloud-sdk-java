@@ -30,14 +30,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 给网卡分配secondaryIp接口
+ * 给网卡分配secondaryIp
  */
 public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      */
     private Boolean force;
 
@@ -50,6 +50,16 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
      * 指定自动分配的secondaryIp个数
      */
     private Number secondaryIpCount;
+
+    /**
+     * 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     */
+    private Integer secondaryIpMaskLen;
+
+    /**
+     * 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     */
+    private String secondaryIpAddress;
 
     /**
      * Region ID
@@ -67,7 +77,7 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * get secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @return
      */
@@ -76,7 +86,7 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @param force
      */
@@ -121,6 +131,42 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
     }
 
     /**
+     * get 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @return
+     */
+    public Integer getSecondaryIpMaskLen() {
+        return secondaryIpMaskLen;
+    }
+
+    /**
+     * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @param secondaryIpMaskLen
+     */
+    public void setSecondaryIpMaskLen(Integer secondaryIpMaskLen) {
+        this.secondaryIpMaskLen = secondaryIpMaskLen;
+    }
+
+    /**
+     * get 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @return
+     */
+    public String getSecondaryIpAddress() {
+        return secondaryIpAddress;
+    }
+
+    /**
+     * set 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @param secondaryIpAddress
+     */
+    public void setSecondaryIpAddress(String secondaryIpAddress) {
+        this.secondaryIpAddress = secondaryIpAddress;
+    }
+
+    /**
      * get Region ID
      *
      * @return
@@ -158,7 +204,7 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @param force
      */
@@ -184,6 +230,26 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
      */
     public AssignSecondaryIpsRequest secondaryIpCount(Number secondaryIpCount) {
         this.secondaryIpCount = secondaryIpCount;
+        return this;
+    }
+
+    /**
+     * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @param secondaryIpMaskLen
+     */
+    public AssignSecondaryIpsRequest secondaryIpMaskLen(Integer secondaryIpMaskLen) {
+        this.secondaryIpMaskLen = secondaryIpMaskLen;
+        return this;
+    }
+
+    /**
+     * set 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @param secondaryIpAddress
+     */
+    public AssignSecondaryIpsRequest secondaryIpAddress(String secondaryIpAddress) {
+        this.secondaryIpAddress = secondaryIpAddress;
         return this;
     }
 

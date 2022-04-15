@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改弹性网卡接口
+ * 修改弹性网卡信息
  */
 public class ModifyNetworkInterfaceRequest extends JdcloudRequest implements java.io.Serializable {
 

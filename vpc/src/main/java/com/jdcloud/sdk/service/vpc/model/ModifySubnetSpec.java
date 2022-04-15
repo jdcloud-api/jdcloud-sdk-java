@@ -42,6 +42,11 @@ public class ModifySubnetSpec  implements java.io.Serializable {
      */
     private String description;
 
+    /**
+     * 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     */
+    private Integer ipMaskLen;
+
 
     /**
      * get 子网名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -79,6 +84,24 @@ public class ModifySubnetSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+    /**
+     * get 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @return
+     */
+    public Integer getIpMaskLen() {
+        return ipMaskLen;
+    }
+
+    /**
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @param ipMaskLen
+     */
+    public void setIpMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
+    }
+
 
     /**
      * set 子网名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -97,6 +120,16 @@ public class ModifySubnetSpec  implements java.io.Serializable {
      */
     public ModifySubnetSpec description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
+     *
+     * @param ipMaskLen
+     */
+    public ModifySubnetSpec ipMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
         return this;
     }
 

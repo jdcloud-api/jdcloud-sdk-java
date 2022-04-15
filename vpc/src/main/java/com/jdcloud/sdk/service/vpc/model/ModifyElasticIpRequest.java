@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改弹性公网IP
+ * 修改弹性公网IP，当弹性公网IP加入共享带宽包后，此公网IP限速需要调用共享带宽包的接口（修改共享带宽包内公网IP带宽上限）
  */
 public class ModifyElasticIpRequest extends JdcloudRequest implements java.io.Serializable {
 

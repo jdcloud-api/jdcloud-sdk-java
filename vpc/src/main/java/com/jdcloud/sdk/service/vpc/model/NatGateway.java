@@ -90,6 +90,11 @@ public class NatGateway  implements java.io.Serializable {
      */
     private String createdTime;
 
+    /**
+     * Tag信息
+     */
+    private List<Tag> tags;
+
 
     /**
      * get NAT网关ID
@@ -289,6 +294,24 @@ public class NatGateway  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+    /**
+     * get Tag信息
+     *
+     * @return
+     */
+    public List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public void setTags(List<Tag> tags) {
+        this.tags = tags;
+    }
+
 
     /**
      * set NAT网关ID
@@ -400,6 +423,16 @@ public class NatGateway  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set Tag信息
+     *
+     * @param tags
+     */
+    public NatGateway tags(List<Tag> tags) {
+        this.tags = tags;
+        return this;
+    }
+
 
     /**
      * add item to NAT网关可用区属性
@@ -423,6 +456,18 @@ public class NatGateway  implements java.io.Serializable {
             this.azIp = new ArrayList<>();
         }
         this.azIp.add(azIp);
+    }
+
+    /**
+     * add item to Tag信息
+     *
+     * @param tag
+     */
+    public void addTag(Tag tag) {
+        if (this.tags == null) {
+            this.tags = new ArrayList<>();
+        }
+        this.tags.add(tag);
     }
 
 }
