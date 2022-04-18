@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>cdn</artifactId>
-  <version>0.10.29</version>
+  <version>0.10.31</version>
   <packaging>jar</packaging>
   <name>cdn</name>
   <url>http://www.jdcloud.com</url>
@@ -49,7 +49,7 @@
     <dependency>
       <groupId>com.jdcloud.sdk</groupId>
       <artifactId>core</artifactId>
-      <version>1.2.7</version>
+      <version>1.2.8</version>
     </dependency>
   </dependencies>
 

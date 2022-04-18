@@ -193,6 +193,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryStatisticsDataGroupSumExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainAllConfigClassifyRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainAllConfigClassifyResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainAllConfigClassifyExecutor;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceOssRequest;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceOssResponse;
+import com.jdcloud.sdk.service.cdn.client.ConfigBackSourceOssExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryBandRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryBandResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryBandExecutor;
@@ -250,6 +253,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryHttpHeaderExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryWafRegionsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryWafRegionsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryWafRegionsExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryBackSourceOssRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryBackSourceOssResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryBackSourceOssExecutor;
 import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskForCallbackV2Request;
 import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskForCallbackV2Response;
 import com.jdcloud.sdk.service.cdn.client.CreateRefreshTaskForCallbackV2Executor;
@@ -609,7 +615,7 @@ public class CdnClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.7";
+    public final static String ClientVersion = "1.2.8";
     public final static String DefaultEndpoint = "cdn.jdcloud-api.com";
     public final static String ServiceName = "cdn";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -1246,6 +1252,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 设置回源OSS鉴权
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ConfigBackSourceOssResponse configBackSourceOss(ConfigBackSourceOssRequest request) throws JdcloudSdkException {
+        return new ConfigBackSourceOssExecutor().client(this).execute(request);
+    }
+
+    /**
      * 带宽查询接口
      *
      * @param request
@@ -1452,6 +1469,17 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryWafRegionsResponse queryWafRegions(QueryWafRegionsRequest request) throws JdcloudSdkException {
         return new QueryWafRegionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询回源OSS鉴权配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryBackSourceOssResponse queryBackSourceOss(QueryBackSourceOssRequest request) throws JdcloudSdkException {
+        return new QueryBackSourceOssExecutor().client(this).execute(request);
     }
 
     /**
