@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomUsersExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.StartAsrTaskRequest;
 import com.jdcloud.sdk.service.openjrtc.model.StartAsrTaskResponse;
 import com.jdcloud.sdk.service.openjrtc.client.StartAsrTaskExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamInfosByUserIdRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamInfosByUserIdResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeStreamInfosByUserIdExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.StartMcuTranscodeRequest;
 import com.jdcloud.sdk.service.openjrtc.model.StartMcuTranscodeResponse;
 import com.jdcloud.sdk.service.openjrtc.client.StartMcuTranscodeExecutor;
@@ -103,9 +106,15 @@ import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomOnlineUserNumExecutor
 import com.jdcloud.sdk.service.openjrtc.model.StopMcuTranscodeRequest;
 import com.jdcloud.sdk.service.openjrtc.model.StopMcuTranscodeResponse;
 import com.jdcloud.sdk.service.openjrtc.client.StopMcuTranscodeExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamInfoByStreamIdRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamInfoByStreamIdResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeStreamInfoByStreamIdExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.PostMessageToUserRequest;
 import com.jdcloud.sdk.service.openjrtc.model.PostMessageToUserResponse;
 import com.jdcloud.sdk.service.openjrtc.client.PostMessageToUserExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamInfosByUserRoomIdRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamInfosByUserRoomIdResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeStreamInfosByUserRoomIdExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeAppsRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeAppsResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeAppsExecutor;
@@ -124,6 +133,9 @@ import com.jdcloud.sdk.service.openjrtc.client.RemoveAllUsersByUserRoomIdExecuto
 import com.jdcloud.sdk.service.openjrtc.model.RemoveRoomUserRequest;
 import com.jdcloud.sdk.service.openjrtc.model.RemoveRoomUserResponse;
 import com.jdcloud.sdk.service.openjrtc.client.RemoveRoomUserExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamRecordsByStreamIdRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamRecordsByStreamIdResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeStreamRecordsByStreamIdExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.RemoveUserByUserRoomIdRequest;
 import com.jdcloud.sdk.service.openjrtc.model.RemoveUserByUserRoomIdResponse;
 import com.jdcloud.sdk.service.openjrtc.client.RemoveUserByUserRoomIdExecutor;
@@ -145,6 +157,9 @@ import com.jdcloud.sdk.service.openjrtc.client.RemoveAllRoomUsersExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRoomRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeUserRoomResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeUserRoomExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamRecordsByUserIdRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamRecordsByUserIdResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeStreamRecordsByUserIdExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeDailyCallDurationRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeDailyCallDurationResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeDailyCallDurationExecutor;
@@ -244,6 +259,18 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public StartAsrTaskResponse startAsrTask(StartAsrTaskRequest request) throws JdcloudSdkException {
         return new StartAsrTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询指定用户在房间内的推流信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeStreamInfosByUserIdResponse describeStreamInfosByUserId(DescribeStreamInfosByUserIdRequest request) throws JdcloudSdkException {
+        return new DescribeStreamInfosByUserIdExecutor().client(this).execute(request);
     }
 
     /**
@@ -506,6 +533,18 @@ public class OpenjrtcClient extends JdcloudClient {
     }
 
     /**
+     * 根据流ID查询推流信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeStreamInfoByStreamIdResponse describeStreamInfoByStreamId(DescribeStreamInfoByStreamIdRequest request) throws JdcloudSdkException {
+        return new DescribeStreamInfoByStreamIdExecutor().client(this).execute(request);
+    }
+
+    /**
      * 发送自定义信令给房间内的人员
      *
      * @param request
@@ -514,6 +553,23 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public PostMessageToUserResponse postMessageToUser(PostMessageToUserRequest request) throws JdcloudSdkException {
         return new PostMessageToUserExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询房间内推流信息列表
+允许通过条件过滤查询，支持的过滤字段如下：
+           - status[eq] 在线状态 1-在线 2-离线
+           - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+           - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
+           - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeStreamInfosByUserRoomIdResponse describeStreamInfosByUserRoomId(DescribeStreamInfosByUserRoomIdRequest request) throws JdcloudSdkException {
+        return new DescribeStreamInfosByUserRoomIdExecutor().client(this).execute(request);
     }
 
     /**
@@ -588,6 +644,21 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public RemoveRoomUserResponse removeRoomUser(RemoveRoomUserRequest request) throws JdcloudSdkException {
         return new RemoveRoomUserExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据流ID查询推流历史记录
+允许通过条件过滤查询，支持的过滤字段如下：
+           - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
+           - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeStreamRecordsByStreamIdResponse describeStreamRecordsByStreamId(DescribeStreamRecordsByStreamIdRequest request) throws JdcloudSdkException {
+        return new DescribeStreamRecordsByStreamIdExecutor().client(this).execute(request);
     }
 
     /**
@@ -677,6 +748,22 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public DescribeUserRoomResponse describeUserRoom(DescribeUserRoomRequest request) throws JdcloudSdkException {
         return new DescribeUserRoomExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询指定用户在房间内的推流历史记录
+允许通过条件过滤查询，支持的过滤字段如下：
+           - kind[eq] 在线状态 1-音频流 2-视频流 100-数据流
+           - startTime[eq] 用户推流开始时间-UTC时间  startTime,endTime同时指定时生效
+           - endTime[eq]   用户推流结束时间-UTC时间  startTime,endTime同时指定时生效
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeStreamRecordsByUserIdResponse describeStreamRecordsByUserId(DescribeStreamRecordsByUserIdRequest request) throws JdcloudSdkException {
+        return new DescribeStreamRecordsByUserIdExecutor().client(this).execute(request);
     }
 
     /**
