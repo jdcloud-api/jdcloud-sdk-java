@@ -43,7 +43,7 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     private Long date;
 
     /**
-     * 音频时长
+     * 音频通讯时长-second
      */
     private Long audio;
 
@@ -100,7 +100,7 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     }
 
     /**
-     * get 音频时长
+     * get 音频通讯时长-second
      *
      * @return
      */
@@ -109,7 +109,7 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     }
 
     /**
-     * set 音频时长
+     * set 音频通讯时长-second
      *
      * @param audio
      */
@@ -193,7 +193,7 @@ public class CallDurationByCodeRate  implements java.io.Serializable {
     }
 
     /**
-     * set 音频时长
+     * set 音频通讯时长-second
      *
      * @param audio
      */
