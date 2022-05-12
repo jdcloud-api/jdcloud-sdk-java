@@ -48,6 +48,11 @@ public class CreateRoomRequestObj  implements java.io.Serializable {
     private Integer roomType;
 
     /**
+     * 会议类型 0-即时会议 1-预约会议
+     */
+    private Integer meetingType;
+
+    /**
      * 用户ID(创建者ID)
      */
     private Long peerId;
@@ -108,6 +113,24 @@ public class CreateRoomRequestObj  implements java.io.Serializable {
     }
 
     /**
+     * get 会议类型 0-即时会议 1-预约会议
+     *
+     * @return
+     */
+    public Integer getMeetingType() {
+        return meetingType;
+    }
+
+    /**
+     * set 会议类型 0-即时会议 1-预约会议
+     *
+     * @param meetingType
+     */
+    public void setMeetingType(Integer meetingType) {
+        this.meetingType = meetingType;
+    }
+
+    /**
      * get 用户ID(创建者ID)
      *
      * @return
@@ -153,6 +176,16 @@ public class CreateRoomRequestObj  implements java.io.Serializable {
      */
     public CreateRoomRequestObj roomType(Integer roomType) {
         this.roomType = roomType;
+        return this;
+    }
+
+    /**
+     * set 会议类型 0-即时会议 1-预约会议
+     *
+     * @param meetingType
+     */
+    public CreateRoomRequestObj meetingType(Integer meetingType) {
+        this.meetingType = meetingType;
         return this;
     }
 
