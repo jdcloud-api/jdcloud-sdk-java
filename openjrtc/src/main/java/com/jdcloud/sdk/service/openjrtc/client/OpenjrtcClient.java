@@ -106,6 +106,9 @@ import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomOnlineUserNumExecutor
 import com.jdcloud.sdk.service.openjrtc.model.StopMcuTranscodeRequest;
 import com.jdcloud.sdk.service.openjrtc.model.StopMcuTranscodeResponse;
 import com.jdcloud.sdk.service.openjrtc.client.StopMcuTranscodeExecutor;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomUserRequest;
+import com.jdcloud.sdk.service.openjrtc.model.DescribeRoomUserResponse;
+import com.jdcloud.sdk.service.openjrtc.client.DescribeRoomUserExecutor;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamInfoByStreamIdRequest;
 import com.jdcloud.sdk.service.openjrtc.model.DescribeStreamInfoByStreamIdResponse;
 import com.jdcloud.sdk.service.openjrtc.client.DescribeStreamInfoByStreamIdExecutor;
@@ -530,6 +533,18 @@ public class OpenjrtcClient extends JdcloudClient {
      */
     public StopMcuTranscodeResponse stopMcuTranscode(StopMcuTranscodeRequest request) throws JdcloudSdkException {
         return new StopMcuTranscodeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询房间内的人员信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRoomUserResponse describeRoomUser(DescribeRoomUserRequest request) throws JdcloudSdkException {
+        return new DescribeRoomUserExecutor().client(this).execute(request);
     }
 
     /**
