@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Anti DDos Pro Dispatch Rule
- * Anti DDos Pro Dispatch Rule Configuration APIs
+ * Anti DDoS Pro Dispatch Rule
+ * Anti DDoS Pro Dispatch Rule Configuration APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
