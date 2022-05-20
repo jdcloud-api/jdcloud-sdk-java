@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Anti DDos Pro Instance APIs
- * Anti DDos Pro Instance APIs
+ * Anti DDoS Pro Instance APIs
+ * Anti DDoS Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -47,6 +47,11 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
      * 自动续费配置, 默认不开通, 仅新购实例时可设置
      */
     private AutoRenewalSpec autoRenewalSpec;
+
+    /**
+     * 自动支付标识
+     */
+    private Boolean autoPay;
 
     /**
      * 区域 ID, 高防不区分区域, 传 cn-north-1 即可
@@ -93,6 +98,24 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * get 自动支付标识
+     *
+     * @return
+     */
+    public Boolean getAutoPay() {
+        return autoPay;
+    }
+
+    /**
+     * set 自动支付标识
+     *
+     * @param autoPay
+     */
+    public void setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+    }
+
+    /**
      * get 区域 ID, 高防不区分区域, 传 cn-north-1 即可
      *
      * @return
@@ -128,6 +151,16 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
      */
     public CreateInstanceRequest autoRenewalSpec(AutoRenewalSpec autoRenewalSpec) {
         this.autoRenewalSpec = autoRenewalSpec;
+        return this;
+    }
+
+    /**
+     * set 自动支付标识
+     *
+     * @param autoPay
+     */
+    public CreateInstanceRequest autoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
         return this;
     }
 

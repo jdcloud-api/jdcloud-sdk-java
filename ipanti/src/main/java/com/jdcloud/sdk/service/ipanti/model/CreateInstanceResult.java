@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Anti DDos Pro Instance APIs
- * Anti DDos Pro Instance APIs
+ * Anti DDoS Pro Instance APIs
+ * Anti DDoS Pro Instance APIs
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -42,6 +42,11 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
      * 新购或升级成功时为计费资源ID, 创建实例失败时给出具体原因
      */
     private String message;
+
+    /**
+     * 新购或升级实例成功, 且设置了自动支付时, 为订单号。否则为空
+     */
+    private String orderNumber;
 
 
     /**
@@ -80,6 +85,24 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
         this.message = message;
     }
 
+    /**
+     * get 新购或升级实例成功, 且设置了自动支付时, 为订单号。否则为空
+     *
+     * @return
+     */
+    public String getOrderNumber() {
+        return orderNumber;
+    }
+
+    /**
+     * set 新购或升级实例成功, 且设置了自动支付时, 为订单号。否则为空
+     *
+     * @param orderNumber
+     */
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
+    }
+
 
     /**
      * set 0: 新购或升级实例失败, 1: 新购或升级实例成功
@@ -98,6 +121,16 @@ public class CreateInstanceResult extends JdcloudResult implements java.io.Seria
      */
     public CreateInstanceResult message(String message) {
         this.message = message;
+        return this;
+    }
+
+    /**
+     * set 新购或升级实例成功, 且设置了自动支付时, 为订单号。否则为空
+     *
+     * @param orderNumber
+     */
+    public CreateInstanceResult orderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
         return this;
     }
 
