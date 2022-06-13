@@ -56,7 +56,7 @@ public class CacheInstance  implements java.io.Serializable {
     private Integer cacheInstanceMemoryMB;
 
     /**
-     * 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+     * 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中，upgrading表示升级中
      */
     private String cacheInstanceStatus;
 
@@ -116,7 +116,7 @@ public class CacheInstance  implements java.io.Serializable {
     private String redisVersion;
 
     /**
-     * 实例类型：master-slave表示主从版，cluster表示集群版
+     * 实例类型：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      */
     private String cacheInstanceType;
 
@@ -129,6 +129,11 @@ public class CacheInstance  implements java.io.Serializable {
      * 标签信息
      */
     private List<Tag> tags;
+
+    /**
+     * 实例所属资源组ID
+     */
+    private String resourceGroupId;
 
     /**
      * 实例分片数，标准版固定为1，自定义分片集群版实例分片数由用户创建时选择，其他实例为固定分片数
@@ -144,6 +149,41 @@ public class CacheInstance  implements java.io.Serializable {
      * 扩展配置
      */
     private RespExtension extension;
+
+    /**
+     * 实例其他访问域名列表
+     */
+    private List<InstanceDomain> otherDomains;
+
+    /**
+     * 从节点aof开关
+     */
+    private String slaveAppendonly;
+
+    /**
+     * db数量
+     */
+    private String databaseNum;
+
+    /**
+     * 淘汰策略
+     */
+    private String maxmemoryPolicy;
+
+    /**
+     * 副本数，含主副本
+     */
+    private Integer replicaNumber;
+
+    /**
+     * 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
+     */
+    private Integer enableSmartProxy;
+
+    /**
+     * cpu架构类型:arm64、amd64
+     */
+    private String cpuArchType;
 
 
     /**
@@ -219,7 +259,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+     * get 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中，upgrading表示升级中
      *
      * @return
      */
@@ -228,7 +268,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+     * set 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中，upgrading表示升级中
      *
      * @param cacheInstanceStatus
      */
@@ -435,7 +475,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * get 实例类型：master-slave表示主从版，cluster表示集群版
+     * get 实例类型：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      *
      * @return
      */
@@ -444,7 +484,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型：master-slave表示主从版，cluster表示集群版
+     * set 实例类型：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      *
      * @param cacheInstanceType
      */
@@ -486,6 +526,24 @@ public class CacheInstance  implements java.io.Serializable {
      */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
+    }
+
+    /**
+     * get 实例所属资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 实例所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
     }
 
     /**
@@ -542,6 +600,132 @@ public class CacheInstance  implements java.io.Serializable {
         this.extension = extension;
     }
 
+    /**
+     * get 实例其他访问域名列表
+     *
+     * @return
+     */
+    public List<InstanceDomain> getOtherDomains() {
+        return otherDomains;
+    }
+
+    /**
+     * set 实例其他访问域名列表
+     *
+     * @param otherDomains
+     */
+    public void setOtherDomains(List<InstanceDomain> otherDomains) {
+        this.otherDomains = otherDomains;
+    }
+
+    /**
+     * get 从节点aof开关
+     *
+     * @return
+     */
+    public String getSlaveAppendonly() {
+        return slaveAppendonly;
+    }
+
+    /**
+     * set 从节点aof开关
+     *
+     * @param slaveAppendonly
+     */
+    public void setSlaveAppendonly(String slaveAppendonly) {
+        this.slaveAppendonly = slaveAppendonly;
+    }
+
+    /**
+     * get db数量
+     *
+     * @return
+     */
+    public String getDatabaseNum() {
+        return databaseNum;
+    }
+
+    /**
+     * set db数量
+     *
+     * @param databaseNum
+     */
+    public void setDatabaseNum(String databaseNum) {
+        this.databaseNum = databaseNum;
+    }
+
+    /**
+     * get 淘汰策略
+     *
+     * @return
+     */
+    public String getMaxmemoryPolicy() {
+        return maxmemoryPolicy;
+    }
+
+    /**
+     * set 淘汰策略
+     *
+     * @param maxmemoryPolicy
+     */
+    public void setMaxmemoryPolicy(String maxmemoryPolicy) {
+        this.maxmemoryPolicy = maxmemoryPolicy;
+    }
+
+    /**
+     * get 副本数，含主副本
+     *
+     * @return
+     */
+    public Integer getReplicaNumber() {
+        return replicaNumber;
+    }
+
+    /**
+     * set 副本数，含主副本
+     *
+     * @param replicaNumber
+     */
+    public void setReplicaNumber(Integer replicaNumber) {
+        this.replicaNumber = replicaNumber;
+    }
+
+    /**
+     * get 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
+     *
+     * @return
+     */
+    public Integer getEnableSmartProxy() {
+        return enableSmartProxy;
+    }
+
+    /**
+     * set 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
+     *
+     * @param enableSmartProxy
+     */
+    public void setEnableSmartProxy(Integer enableSmartProxy) {
+        this.enableSmartProxy = enableSmartProxy;
+    }
+
+    /**
+     * get cpu架构类型:arm64、amd64
+     *
+     * @return
+     */
+    public String getCpuArchType() {
+        return cpuArchType;
+    }
+
+    /**
+     * set cpu架构类型:arm64、amd64
+     *
+     * @param cpuArchType
+     */
+    public void setCpuArchType(String cpuArchType) {
+        this.cpuArchType = cpuArchType;
+    }
+
 
     /**
      * set 实例ID
@@ -584,7 +768,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
+     * set 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中，upgrading表示升级中
      *
      * @param cacheInstanceStatus
      */
@@ -704,7 +888,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 实例类型：master-slave表示主从版，cluster表示集群版
+     * set 实例类型：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      *
      * @param cacheInstanceType
      */
@@ -730,6 +914,16 @@ public class CacheInstance  implements java.io.Serializable {
      */
     public CacheInstance tags(List<Tag> tags) {
         this.tags = tags;
+        return this;
+    }
+
+    /**
+     * set 实例所属资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public CacheInstance resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
         return this;
     }
 
@@ -763,6 +957,76 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 实例其他访问域名列表
+     *
+     * @param otherDomains
+     */
+    public CacheInstance otherDomains(List<InstanceDomain> otherDomains) {
+        this.otherDomains = otherDomains;
+        return this;
+    }
+
+    /**
+     * set 从节点aof开关
+     *
+     * @param slaveAppendonly
+     */
+    public CacheInstance slaveAppendonly(String slaveAppendonly) {
+        this.slaveAppendonly = slaveAppendonly;
+        return this;
+    }
+
+    /**
+     * set db数量
+     *
+     * @param databaseNum
+     */
+    public CacheInstance databaseNum(String databaseNum) {
+        this.databaseNum = databaseNum;
+        return this;
+    }
+
+    /**
+     * set 淘汰策略
+     *
+     * @param maxmemoryPolicy
+     */
+    public CacheInstance maxmemoryPolicy(String maxmemoryPolicy) {
+        this.maxmemoryPolicy = maxmemoryPolicy;
+        return this;
+    }
+
+    /**
+     * set 副本数，含主副本
+     *
+     * @param replicaNumber
+     */
+    public CacheInstance replicaNumber(Integer replicaNumber) {
+        this.replicaNumber = replicaNumber;
+        return this;
+    }
+
+    /**
+     * set 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
+     *
+     * @param enableSmartProxy
+     */
+    public CacheInstance enableSmartProxy(Integer enableSmartProxy) {
+        this.enableSmartProxy = enableSmartProxy;
+        return this;
+    }
+
+    /**
+     * set cpu架构类型:arm64、amd64
+     *
+     * @param cpuArchType
+     */
+    public CacheInstance cpuArchType(String cpuArchType) {
+        this.cpuArchType = cpuArchType;
+        return this;
+    }
+
 
     /**
      * add item to 标签信息
@@ -774,6 +1038,18 @@ public class CacheInstance  implements java.io.Serializable {
             this.tags = new ArrayList<>();
         }
         this.tags.add(tag);
+    }
+
+    /**
+     * add item to 实例其他访问域名列表
+     *
+     * @param otherDomain
+     */
+    public void addOtherDomain(InstanceDomain otherDomain) {
+        if (this.otherDomains == null) {
+            this.otherDomains = new ArrayList<>();
+        }
+        this.otherDomains.add(otherDomain);
     }
 
 }

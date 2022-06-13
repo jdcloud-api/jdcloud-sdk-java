@@ -60,6 +60,11 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
     private String shardId;
 
     /**
+     * 分片地址
+     */
+    private String shardAddr;
+
+    /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
@@ -165,6 +170,24 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * get 分片地址
+     *
+     * @return
+     */
+    public String getShardAddr() {
+        return shardAddr;
+    }
+
+    /**
+     * set 分片地址
+     *
+     * @param shardAddr
+     */
+    public void setShardAddr(String shardAddr) {
+        this.shardAddr = shardAddr;
+    }
+
+    /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @return
@@ -248,6 +271,16 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
      */
     public DescribeSlowLogRequest shardId(String shardId) {
         this.shardId = shardId;
+        return this;
+    }
+
+    /**
+     * set 分片地址
+     *
+     * @param shardAddr
+     */
+    public DescribeSlowLogRequest shardAddr(String shardAddr) {
+        this.shardAddr = shardAddr;
         return this;
     }
 

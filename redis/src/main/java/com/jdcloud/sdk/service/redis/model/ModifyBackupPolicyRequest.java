@@ -35,7 +35,12 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
+     * 是否开启自动备份，true表示开启，false表示关闭
+     */
+    private Boolean autoBackup;
+
+    /**
+     * 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      * Required:true
      */
     @Required
@@ -64,7 +69,25 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
+     * get 是否开启自动备份，true表示开启，false表示关闭
+     *
+     * @return
+     */
+    public Boolean getAutoBackup() {
+        return autoBackup;
+    }
+
+    /**
+     * set 是否开启自动备份，true表示开启，false表示关闭
+     *
+     * @param autoBackup
+     */
+    public void setAutoBackup(Boolean autoBackup) {
+        this.autoBackup = autoBackup;
+    }
+
+    /**
+     * get 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
      * @return
      */
@@ -73,7 +96,7 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
+     * set 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
      * @param backupTime
      */
@@ -137,7 +160,17 @@ public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点,&#39;-&#39;表示关闭自动备份
+     * set 是否开启自动备份，true表示开启，false表示关闭
+     *
+     * @param autoBackup
+     */
+    public ModifyBackupPolicyRequest autoBackup(Boolean autoBackup) {
+        this.autoBackup = autoBackup;
+        return this;
+    }
+
+    /**
+     * set 设置自动备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
      * @param backupTime
      */

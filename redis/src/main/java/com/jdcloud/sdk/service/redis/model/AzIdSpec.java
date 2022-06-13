@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -34,14 +36,24 @@ public class AzIdSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 缓存Redis主实例所在的可用区ID
+     * AZ指定方式，SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     */
+    private String azSpecifyType;
+
+    /**
+     * 为集群指定的AZ范围，按集群指定AZ时生效
+     */
+    private List<String> azsForCluster;
+
+    /**
+     * 缓存Redis主实例所在的可用区ID，按副本组指定AZ时生效
      * Required:true
      */
     @Required
     private String master;
 
     /**
-     * 缓存Redis从实例所在的可用区ID
+     * 缓存Redis从实例所在的可用区ID，按副本组指定AZ时生效
      * Required:true
      */
     @Required
@@ -49,7 +61,43 @@ public class AzIdSpec  implements java.io.Serializable {
 
 
     /**
-     * get 缓存Redis主实例所在的可用区ID
+     * get AZ指定方式，SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     *
+     * @return
+     */
+    public String getAzSpecifyType() {
+        return azSpecifyType;
+    }
+
+    /**
+     * set AZ指定方式，SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     *
+     * @param azSpecifyType
+     */
+    public void setAzSpecifyType(String azSpecifyType) {
+        this.azSpecifyType = azSpecifyType;
+    }
+
+    /**
+     * get 为集群指定的AZ范围，按集群指定AZ时生效
+     *
+     * @return
+     */
+    public List<String> getAzsForCluster() {
+        return azsForCluster;
+    }
+
+    /**
+     * set 为集群指定的AZ范围，按集群指定AZ时生效
+     *
+     * @param azsForCluster
+     */
+    public void setAzsForCluster(List<String> azsForCluster) {
+        this.azsForCluster = azsForCluster;
+    }
+
+    /**
+     * get 缓存Redis主实例所在的可用区ID，按副本组指定AZ时生效
      *
      * @return
      */
@@ -58,7 +106,7 @@ public class AzIdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis主实例所在的可用区ID
+     * set 缓存Redis主实例所在的可用区ID，按副本组指定AZ时生效
      *
      * @param master
      */
@@ -67,7 +115,7 @@ public class AzIdSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 缓存Redis从实例所在的可用区ID
+     * get 缓存Redis从实例所在的可用区ID，按副本组指定AZ时生效
      *
      * @return
      */
@@ -76,7 +124,7 @@ public class AzIdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis从实例所在的可用区ID
+     * set 缓存Redis从实例所在的可用区ID，按副本组指定AZ时生效
      *
      * @param slave
      */
@@ -86,7 +134,27 @@ public class AzIdSpec  implements java.io.Serializable {
 
 
     /**
-     * set 缓存Redis主实例所在的可用区ID
+     * set AZ指定方式，SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     *
+     * @param azSpecifyType
+     */
+    public AzIdSpec azSpecifyType(String azSpecifyType) {
+        this.azSpecifyType = azSpecifyType;
+        return this;
+    }
+
+    /**
+     * set 为集群指定的AZ范围，按集群指定AZ时生效
+     *
+     * @param azsForCluster
+     */
+    public AzIdSpec azsForCluster(List<String> azsForCluster) {
+        this.azsForCluster = azsForCluster;
+        return this;
+    }
+
+    /**
+     * set 缓存Redis主实例所在的可用区ID，按副本组指定AZ时生效
      *
      * @param master
      */
@@ -96,7 +164,7 @@ public class AzIdSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存Redis从实例所在的可用区ID
+     * set 缓存Redis从实例所在的可用区ID，按副本组指定AZ时生效
      *
      * @param slave
      */
@@ -105,5 +173,17 @@ public class AzIdSpec  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 为集群指定的AZ范围，按集群指定AZ时生效
+     *
+     * @param azsForCluster
+     */
+    public void addAzsForCluster(String azsForCluster) {
+        if (this.azsForCluster == null) {
+            this.azsForCluster = new ArrayList<>();
+        }
+        this.azsForCluster.add(azsForCluster);
+    }
 
 }
