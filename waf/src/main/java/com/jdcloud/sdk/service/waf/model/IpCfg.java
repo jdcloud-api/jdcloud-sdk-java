@@ -46,11 +46,16 @@ public class IpCfg  implements java.io.Serializable {
     private String val;
 
     /**
-     * action配置
+     * 动作配置,旗舰版全部支持,其它套餐不支持观察
      * Required:true
      */
     @Required
     private AtCfg atCfg;
+
+    /**
+     * 备注
+     */
+    private String tag;
 
 
     /**
@@ -90,7 +95,7 @@ public class IpCfg  implements java.io.Serializable {
     }
 
     /**
-     * get action配置
+     * get 动作配置,旗舰版全部支持,其它套餐不支持观察
      *
      * @return
      */
@@ -99,12 +104,30 @@ public class IpCfg  implements java.io.Serializable {
     }
 
     /**
-     * set action配置
+     * set 动作配置,旗舰版全部支持,其它套餐不支持观察
      *
      * @param atCfg
      */
     public void setAtCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
+    }
+
+    /**
+     * get 备注
+     *
+     * @return
+     */
+    public String getTag() {
+        return tag;
+    }
+
+    /**
+     * set 备注
+     *
+     * @param tag
+     */
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
 
@@ -129,12 +152,22 @@ public class IpCfg  implements java.io.Serializable {
     }
 
     /**
-     * set action配置
+     * set 动作配置,旗舰版全部支持,其它套餐不支持观察
      *
      * @param atCfg
      */
     public IpCfg atCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
+        return this;
+    }
+
+    /**
+     * set 备注
+     *
+     * @param tag
+     */
+    public IpCfg tag(String tag) {
+        this.tag = tag;
         return this;
     }
 

@@ -48,7 +48,7 @@ public class SetBotFakeSpiderRuleReq  implements java.io.Serializable {
     private String name;
 
     /**
-     * 动作配置，默认为告警，仅支持1和5 op
+     * 动作配置
      */
     private DenyActionCfg action;
 
@@ -95,7 +95,7 @@ public class SetBotFakeSpiderRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get 动作配置，默认为告警，仅支持1和5 op
+     * get 动作配置
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class SetBotFakeSpiderRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警，仅支持1和5 op
+     * set 动作配置
      *
      * @param action
      */
@@ -152,7 +152,7 @@ public class SetBotFakeSpiderRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警，仅支持1和5 op
+     * set 动作配置
      *
      * @param action
      */

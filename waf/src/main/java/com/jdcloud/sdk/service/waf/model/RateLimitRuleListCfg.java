@@ -78,7 +78,7 @@ public class RateLimitRuleListCfg  implements java.io.Serializable {
     private Integer burst;
 
     /**
-     * forbidden redirect
+     * 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      */
     private String matchAction;
 
@@ -251,7 +251,7 @@ public class RateLimitRuleListCfg  implements java.io.Serializable {
     }
 
     /**
-     * get forbidden redirect
+     * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @return
      */
@@ -260,7 +260,7 @@ public class RateLimitRuleListCfg  implements java.io.Serializable {
     }
 
     /**
-     * set forbidden redirect
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param matchAction
      */
@@ -378,7 +378,7 @@ public class RateLimitRuleListCfg  implements java.io.Serializable {
     }
 
     /**
-     * set forbidden redirect
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param matchAction
      */

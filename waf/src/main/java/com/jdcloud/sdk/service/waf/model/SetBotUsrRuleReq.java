@@ -76,7 +76,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     private List<BotMatchItem> matchItems;
 
     /**
-     * 动作配置，默认为告警,仅支持1和4和5三种动作
+     * 动作配置
      * Required:true
      */
     @Required
@@ -232,7 +232,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get 动作配置，默认为告警,仅支持1和4和5三种动作
+     * get 动作配置
      *
      * @return
      */
@@ -241,7 +241,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警,仅支持1和4和5三种动作
+     * set 动作配置
      *
      * @param action
      */
@@ -455,7 +455,7 @@ public class SetBotUsrRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警,仅支持1和4和5三种动作
+     * set 动作配置
      *
      * @param action
      */

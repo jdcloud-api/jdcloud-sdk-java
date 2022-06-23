@@ -26,9 +26,9 @@ package com.jdcloud.sdk.service.waf.model;
 
 
 /**
- * ipbanConf
+ * ipbanUsrConf
  */
-public class IpbanConf  implements java.io.Serializable {
+public class IpbanUsrConf  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -38,9 +38,19 @@ public class IpbanConf  implements java.io.Serializable {
     private Integer enable;
 
     /**
-     * 防护模式
+     * 封禁时间，秒
      */
-    private Integer ipbanMode;
+    private Integer ipbanTime;
+
+    /**
+     * 检测时间，秒
+     */
+    private Integer detectTime;
+
+    /**
+     * 封禁阈值
+     */
+    private Integer threshold;
 
     /**
      * 动作配置
@@ -67,21 +77,57 @@ public class IpbanConf  implements java.io.Serializable {
     }
 
     /**
-     * get 防护模式
+     * get 封禁时间，秒
      *
      * @return
      */
-    public Integer getIpbanMode() {
-        return ipbanMode;
+    public Integer getIpbanTime() {
+        return ipbanTime;
     }
 
     /**
-     * set 防护模式
+     * set 封禁时间，秒
      *
-     * @param ipbanMode
+     * @param ipbanTime
      */
-    public void setIpbanMode(Integer ipbanMode) {
-        this.ipbanMode = ipbanMode;
+    public void setIpbanTime(Integer ipbanTime) {
+        this.ipbanTime = ipbanTime;
+    }
+
+    /**
+     * get 检测时间，秒
+     *
+     * @return
+     */
+    public Integer getDetectTime() {
+        return detectTime;
+    }
+
+    /**
+     * set 检测时间，秒
+     *
+     * @param detectTime
+     */
+    public void setDetectTime(Integer detectTime) {
+        this.detectTime = detectTime;
+    }
+
+    /**
+     * get 封禁阈值
+     *
+     * @return
+     */
+    public Integer getThreshold() {
+        return threshold;
+    }
+
+    /**
+     * set 封禁阈值
+     *
+     * @param threshold
+     */
+    public void setThreshold(Integer threshold) {
+        this.threshold = threshold;
     }
 
     /**
@@ -108,18 +154,38 @@ public class IpbanConf  implements java.io.Serializable {
      *
      * @param enable
      */
-    public IpbanConf enable(Integer enable) {
+    public IpbanUsrConf enable(Integer enable) {
         this.enable = enable;
         return this;
     }
 
     /**
-     * set 防护模式
+     * set 封禁时间，秒
      *
-     * @param ipbanMode
+     * @param ipbanTime
      */
-    public IpbanConf ipbanMode(Integer ipbanMode) {
-        this.ipbanMode = ipbanMode;
+    public IpbanUsrConf ipbanTime(Integer ipbanTime) {
+        this.ipbanTime = ipbanTime;
+        return this;
+    }
+
+    /**
+     * set 检测时间，秒
+     *
+     * @param detectTime
+     */
+    public IpbanUsrConf detectTime(Integer detectTime) {
+        this.detectTime = detectTime;
+        return this;
+    }
+
+    /**
+     * set 封禁阈值
+     *
+     * @param threshold
+     */
+    public IpbanUsrConf threshold(Integer threshold) {
+        this.threshold = threshold;
         return this;
     }
 
@@ -128,7 +194,7 @@ public class IpbanConf  implements java.io.Serializable {
      *
      * @param action
      */
-    public IpbanConf action(DenyActionCfg action) {
+    public IpbanUsrConf action(DenyActionCfg action) {
         this.action = action;
         return this;
     }

@@ -67,7 +67,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     private String uri;
 
     /**
-     * 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
+     * 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice 旗舰版全部支持,高级版不支持人机识别
      * Required:true
      */
     @Required
@@ -95,7 +95,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     private String event;
 
     /**
-     * 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+     * 跳转地址，action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      * Required:true
      */
     @Required
@@ -193,7 +193,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
+     * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice 旗舰版全部支持,高级版不支持人机识别
      *
      * @return
      */
@@ -202,7 +202,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice 旗舰版全部支持,高级版不支持人机识别
      *
      * @param action
      */
@@ -265,7 +265,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+     * get 跳转地址，action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @return
      */
@@ -274,7 +274,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+     * set 跳转地址，action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @param redirection
      */
@@ -334,7 +334,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice 旗舰版全部支持,高级版不支持人机识别
      *
      * @param action
      */
@@ -374,7 +374,7 @@ public class SetRiskRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 跳转地址，Action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
+     * set 跳转地址，action为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @param redirection
      */

@@ -95,7 +95,7 @@ public class SetRiskPolicyReq  implements java.io.Serializable {
     private RiskPolicyRuleCfg rules;
 
     /**
-     * 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
+     * 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      * Required:true
      */
     @Required
@@ -270,7 +270,7 @@ public class SetRiskPolicyReq  implements java.io.Serializable {
     }
 
     /**
-     * get 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
+     * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @return
      */
@@ -279,7 +279,7 @@ public class SetRiskPolicyReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param action
      */
@@ -397,7 +397,7 @@ public class SetRiskPolicyReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作 支持 verify@captcha / verify@jscookie / forbidden / notice / redirect
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param action
      */

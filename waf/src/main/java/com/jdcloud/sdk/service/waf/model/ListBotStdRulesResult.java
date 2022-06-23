@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.waf.model.StdBotRules;
 import com.jdcloud.sdk.service.JdcloudResult;
 
@@ -50,9 +52,9 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
     private Integer totalCount;
 
     /**
-     * 已知类型bot规则
+     * list
      */
-    private StdBotRules list;
+    private List<StdBotRules> list;
 
 
     /**
@@ -110,20 +112,20 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * get 已知类型bot规则
+     * get list
      *
      * @return
      */
-    public StdBotRules getList() {
+    public List<StdBotRules> getList() {
         return list;
     }
 
     /**
-     * set 已知类型bot规则
+     * set list
      *
      * @param list
      */
-    public void setList(StdBotRules list) {
+    public void setList(List<StdBotRules> list) {
         this.list = list;
     }
 
@@ -159,14 +161,26 @@ public class ListBotStdRulesResult extends JdcloudResult implements java.io.Seri
     }
 
     /**
-     * set 已知类型bot规则
+     * set list
      *
      * @param list
      */
-    public ListBotStdRulesResult list(StdBotRules list) {
+    public ListBotStdRulesResult list(List<StdBotRules> list) {
         this.list = list;
         return this;
     }
 
+
+    /**
+     * add item to list
+     *
+     * @param list
+     */
+    public void addList(StdBotRules list) {
+        if (this.list == null) {
+            this.list = new ArrayList<>();
+        }
+        this.list.add(list);
+    }
 
 }

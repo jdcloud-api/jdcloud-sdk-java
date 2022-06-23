@@ -57,7 +57,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
     /**
      * 变量信息
      */
-    private RiskVarCfg vars;
+    private List<RiskVarCfg> vars;
 
     /**
      * 策略信息
@@ -142,7 +142,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
      *
      * @return
      */
-    public RiskVarCfg getVars() {
+    public List<RiskVarCfg> getVars() {
         return vars;
     }
 
@@ -151,7 +151,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
      *
      * @param vars
      */
-    public void setVars(RiskVarCfg vars) {
+    public void setVars(List<RiskVarCfg> vars) {
         this.vars = vars;
     }
 
@@ -219,7 +219,7 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
      *
      * @param vars
      */
-    public RiskEventVarsCfg vars(RiskVarCfg vars) {
+    public RiskEventVarsCfg vars(List<RiskVarCfg> vars) {
         this.vars = vars;
         return this;
     }
@@ -234,6 +234,18 @@ public class RiskEventVarsCfg  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 变量信息
+     *
+     * @param var
+     */
+    public void addVar(RiskVarCfg var) {
+        if (this.vars == null) {
+            this.vars = new ArrayList<>();
+        }
+        this.vars.add(var);
+    }
 
     /**
      * add item to 策略信息

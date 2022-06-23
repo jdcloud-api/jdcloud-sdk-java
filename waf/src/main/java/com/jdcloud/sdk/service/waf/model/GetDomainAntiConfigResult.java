@@ -25,12 +25,14 @@
 package com.jdcloud.sdk.service.waf.model;
 
 import com.jdcloud.sdk.service.waf.model.AclConf;
-import com.jdcloud.sdk.service.waf.model.EnableConf;
+import com.jdcloud.sdk.service.waf.model.SpiderConf;
 import com.jdcloud.sdk.service.waf.model.CcConf;
 import com.jdcloud.sdk.service.waf.model.DenyConf;
 import com.jdcloud.sdk.service.waf.model.IntSemConf;
 import com.jdcloud.sdk.service.waf.model.IpbanConf;
+import com.jdcloud.sdk.service.waf.model.IpbanUsrConf;
 import com.jdcloud.sdk.service.waf.model.RatelimitConf;
+import com.jdcloud.sdk.service.waf.model.EnableConf;
 import com.jdcloud.sdk.service.waf.model.UserDefPageConf;
 import com.jdcloud.sdk.service.waf.model.WafConf;
 import com.jdcloud.sdk.service.waf.model.WebUserdefConf;
@@ -68,7 +70,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
     /**
      * 网站防爬虫防护配置
      */
-    private EnableConf antispiderConf;
+    private SpiderConf antispiderConf;
 
     /**
      * 网站cc防护配置
@@ -89,6 +91,11 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      * 网站恶意ip防护配置
      */
     private IpbanConf ipbanConf;
+
+    /**
+     * 网站恶意ip自定义防护配置
+     */
+    private IpbanUsrConf ipbanUsrConf;
 
     /**
      * 网站限速规则防护配置
@@ -220,7 +227,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      *
      * @return
      */
-    public EnableConf getAntispiderConf() {
+    public SpiderConf getAntispiderConf() {
         return antispiderConf;
     }
 
@@ -229,7 +236,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      *
      * @param antispiderConf
      */
-    public void setAntispiderConf(EnableConf antispiderConf) {
+    public void setAntispiderConf(SpiderConf antispiderConf) {
         this.antispiderConf = antispiderConf;
     }
 
@@ -303,6 +310,24 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      */
     public void setIpbanConf(IpbanConf ipbanConf) {
         this.ipbanConf = ipbanConf;
+    }
+
+    /**
+     * get 网站恶意ip自定义防护配置
+     *
+     * @return
+     */
+    public IpbanUsrConf getIpbanUsrConf() {
+        return ipbanUsrConf;
+    }
+
+    /**
+     * set 网站恶意ip自定义防护配置
+     *
+     * @param ipbanUsrConf
+     */
+    public void setIpbanUsrConf(IpbanUsrConf ipbanUsrConf) {
+        this.ipbanUsrConf = ipbanUsrConf;
     }
 
     /**
@@ -593,7 +618,7 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      *
      * @param antispiderConf
      */
-    public GetDomainAntiConfigResult antispiderConf(EnableConf antispiderConf) {
+    public GetDomainAntiConfigResult antispiderConf(SpiderConf antispiderConf) {
         this.antispiderConf = antispiderConf;
         return this;
     }
@@ -635,6 +660,16 @@ public class GetDomainAntiConfigResult extends JdcloudResult implements java.io.
      */
     public GetDomainAntiConfigResult ipbanConf(IpbanConf ipbanConf) {
         this.ipbanConf = ipbanConf;
+        return this;
+    }
+
+    /**
+     * set 网站恶意ip自定义防护配置
+     *
+     * @param ipbanUsrConf
+     */
+    public GetDomainAntiConfigResult ipbanUsrConf(IpbanUsrConf ipbanUsrConf) {
+        this.ipbanUsrConf = ipbanUsrConf;
         return this;
     }
 

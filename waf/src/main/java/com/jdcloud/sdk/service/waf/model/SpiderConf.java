@@ -26,9 +26,9 @@ package com.jdcloud.sdk.service.waf.model;
 
 
 /**
- * ipbanConf
+ * spiderConf
  */
-public class IpbanConf  implements java.io.Serializable {
+public class SpiderConf  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -40,10 +40,10 @@ public class IpbanConf  implements java.io.Serializable {
     /**
      * 防护模式
      */
-    private Integer ipbanMode;
+    private Integer spiderMode;
 
     /**
-     * 动作配置
+     * 动作配置，默认为告警，支持1，2，5四种类型动作
      */
     private DenyActionCfg action;
 
@@ -71,21 +71,21 @@ public class IpbanConf  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getIpbanMode() {
-        return ipbanMode;
+    public Integer getSpiderMode() {
+        return spiderMode;
     }
 
     /**
      * set 防护模式
      *
-     * @param ipbanMode
+     * @param spiderMode
      */
-    public void setIpbanMode(Integer ipbanMode) {
-        this.ipbanMode = ipbanMode;
+    public void setSpiderMode(Integer spiderMode) {
+        this.spiderMode = spiderMode;
     }
 
     /**
-     * get 动作配置
+     * get 动作配置，默认为告警，支持1，2，5四种类型动作
      *
      * @return
      */
@@ -94,7 +94,7 @@ public class IpbanConf  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置
+     * set 动作配置，默认为告警，支持1，2，5四种类型动作
      *
      * @param action
      */
@@ -108,7 +108,7 @@ public class IpbanConf  implements java.io.Serializable {
      *
      * @param enable
      */
-    public IpbanConf enable(Integer enable) {
+    public SpiderConf enable(Integer enable) {
         this.enable = enable;
         return this;
     }
@@ -116,19 +116,19 @@ public class IpbanConf  implements java.io.Serializable {
     /**
      * set 防护模式
      *
-     * @param ipbanMode
+     * @param spiderMode
      */
-    public IpbanConf ipbanMode(Integer ipbanMode) {
-        this.ipbanMode = ipbanMode;
+    public SpiderConf spiderMode(Integer spiderMode) {
+        this.spiderMode = spiderMode;
         return this;
     }
 
     /**
-     * set 动作配置
+     * set 动作配置，默认为告警，支持1，2，5四种类型动作
      *
      * @param action
      */
-    public IpbanConf action(DenyActionCfg action) {
+    public SpiderConf action(DenyActionCfg action) {
         this.action = action;
         return this;
     }

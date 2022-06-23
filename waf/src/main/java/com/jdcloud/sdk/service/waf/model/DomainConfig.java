@@ -78,6 +78,11 @@ public class DomainConfig  implements java.io.Serializable {
     private IpbanConf ipbanConf;
 
     /**
+     * 网站恶意ip自定义防护配置
+     */
+    private IpbanConf ipbanUsrConf;
+
+    /**
      * 网站过去两天攻击情况
      */
     private LastAttackReport lastAttackReport;
@@ -85,7 +90,7 @@ public class DomainConfig  implements java.io.Serializable {
     /**
      * 网站防爬虫防护配置
      */
-    private EnableConf antispiderConf;
+    private SpiderConf antispiderConf;
 
     /**
      * 网站防篡改防护配置
@@ -326,6 +331,24 @@ public class DomainConfig  implements java.io.Serializable {
     }
 
     /**
+     * get 网站恶意ip自定义防护配置
+     *
+     * @return
+     */
+    public IpbanConf getIpbanUsrConf() {
+        return ipbanUsrConf;
+    }
+
+    /**
+     * set 网站恶意ip自定义防护配置
+     *
+     * @param ipbanUsrConf
+     */
+    public void setIpbanUsrConf(IpbanConf ipbanUsrConf) {
+        this.ipbanUsrConf = ipbanUsrConf;
+    }
+
+    /**
      * get 网站过去两天攻击情况
      *
      * @return
@@ -348,7 +371,7 @@ public class DomainConfig  implements java.io.Serializable {
      *
      * @return
      */
-    public EnableConf getAntispiderConf() {
+    public SpiderConf getAntispiderConf() {
         return antispiderConf;
     }
 
@@ -357,7 +380,7 @@ public class DomainConfig  implements java.io.Serializable {
      *
      * @param antispiderConf
      */
-    public void setAntispiderConf(EnableConf antispiderConf) {
+    public void setAntispiderConf(SpiderConf antispiderConf) {
         this.antispiderConf = antispiderConf;
     }
 
@@ -723,6 +746,16 @@ public class DomainConfig  implements java.io.Serializable {
     }
 
     /**
+     * set 网站恶意ip自定义防护配置
+     *
+     * @param ipbanUsrConf
+     */
+    public DomainConfig ipbanUsrConf(IpbanConf ipbanUsrConf) {
+        this.ipbanUsrConf = ipbanUsrConf;
+        return this;
+    }
+
+    /**
      * set 网站过去两天攻击情况
      *
      * @param lastAttackReport
@@ -737,7 +770,7 @@ public class DomainConfig  implements java.io.Serializable {
      *
      * @param antispiderConf
      */
-    public DomainConfig antispiderConf(EnableConf antispiderConf) {
+    public DomainConfig antispiderConf(SpiderConf antispiderConf) {
         this.antispiderConf = antispiderConf;
         return this;
     }

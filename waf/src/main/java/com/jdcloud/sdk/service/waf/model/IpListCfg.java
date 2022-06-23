@@ -57,6 +57,11 @@ public class IpListCfg  implements java.io.Serializable {
      */
     private AtCfg atCfg;
 
+    /**
+     * 备注
+     */
+    private String tag;
+
 
     /**
      * get 序号id
@@ -148,6 +153,24 @@ public class IpListCfg  implements java.io.Serializable {
         this.atCfg = atCfg;
     }
 
+    /**
+     * get 备注
+     *
+     * @return
+     */
+    public String getTag() {
+        return tag;
+    }
+
+    /**
+     * set 备注
+     *
+     * @param tag
+     */
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
 
     /**
      * set 序号id
@@ -196,6 +219,16 @@ public class IpListCfg  implements java.io.Serializable {
      */
     public IpListCfg atCfg(AtCfg atCfg) {
         this.atCfg = atCfg;
+        return this;
+    }
+
+    /**
+     * set 备注
+     *
+     * @param tag
+     */
+    public IpListCfg tag(String tag) {
+        this.tag = tag;
         return this;
     }
 

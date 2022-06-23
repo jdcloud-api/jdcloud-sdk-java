@@ -46,7 +46,7 @@ public class GeoCfg  implements java.io.Serializable {
     private String val;
 
     /**
-     * action配置
+     * 动作配置,旗舰版全部支持,其它套餐不支持观察
      * Required:true
      */
     @Required
@@ -90,7 +90,7 @@ public class GeoCfg  implements java.io.Serializable {
     }
 
     /**
-     * get action配置
+     * get 动作配置,旗舰版全部支持,其它套餐不支持观察
      *
      * @return
      */
@@ -99,7 +99,7 @@ public class GeoCfg  implements java.io.Serializable {
     }
 
     /**
-     * set action配置
+     * set 动作配置,旗舰版全部支持,其它套餐不支持观察
      *
      * @param atCfg
      */
@@ -129,7 +129,7 @@ public class GeoCfg  implements java.io.Serializable {
     }
 
     /**
-     * set action配置
+     * set 动作配置,旗舰版全部支持,其它套餐不支持观察
      *
      * @param atCfg
      */

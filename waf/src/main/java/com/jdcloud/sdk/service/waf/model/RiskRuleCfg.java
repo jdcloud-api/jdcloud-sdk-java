@@ -58,7 +58,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     private String uri;
 
     /**
-     * 动作 支持notice / verify@captcha
+     * 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      */
     private String action;
 
@@ -184,7 +184,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * get 动作 支持notice / verify@captcha
+     * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @return
      */
@@ -193,7 +193,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 动作 支持notice / verify@captcha
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param action
      */
@@ -361,7 +361,7 @@ public class RiskRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 动作 支持notice / verify@captcha
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param action
      */
