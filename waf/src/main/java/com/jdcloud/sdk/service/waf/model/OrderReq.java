@@ -74,7 +74,7 @@ public class OrderReq  implements java.io.Serializable {
     private String wafInstanceId;
 
     /**
-     * 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版
+     * 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
      * Required:true
      */
     @Required
@@ -120,6 +120,11 @@ public class OrderReq  implements java.io.Serializable {
      * 购物车活动参数
      */
     private String buyScenario;
+
+    /**
+     * true表示支持autoPay
+     */
+    private Boolean needPay;
 
 
     /**
@@ -231,7 +236,7 @@ public class OrderReq  implements java.io.Serializable {
     }
 
     /**
-     * get 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版
+     * get 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
      *
      * @return
      */
@@ -240,7 +245,7 @@ public class OrderReq  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版
+     * set 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
      *
      * @param packageType
      */
@@ -374,6 +379,24 @@ public class OrderReq  implements java.io.Serializable {
         this.buyScenario = buyScenario;
     }
 
+    /**
+     * get true表示支持autoPay
+     *
+     * @return
+     */
+    public Boolean getNeedPay() {
+        return needPay;
+    }
+
+    /**
+     * set true表示支持autoPay
+     *
+     * @param needPay
+     */
+    public void setNeedPay(Boolean needPay) {
+        this.needPay = needPay;
+    }
+
 
     /**
      * set 地域信息, hb_bgp, hn, hd_bgp 企业版支持两个，旗舰版支持3个，多个以 , 分隔
@@ -436,7 +459,7 @@ public class OrderReq  implements java.io.Serializable {
     }
 
     /**
-     * set 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版
+     * set 套餐类型 1:高级版, 2:企业版 3:旗舰版 4:基础版(仅支持新用户)
      *
      * @param packageType
      */
@@ -512,6 +535,16 @@ public class OrderReq  implements java.io.Serializable {
      */
     public OrderReq buyScenario(String buyScenario) {
         this.buyScenario = buyScenario;
+        return this;
+    }
+
+    /**
+     * set true表示支持autoPay
+     *
+     * @param needPay
+     */
+    public OrderReq needPay(Boolean needPay) {
+        this.needPay = needPay;
         return this;
     }
 

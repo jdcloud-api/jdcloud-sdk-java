@@ -92,6 +92,11 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     private String logId;
 
     /**
+     * 请求Id，检索字段
+     */
+    private String request_id;
+
+    /**
      * 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      * Required:true
      */
@@ -326,6 +331,24 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
     }
 
     /**
+     * get 请求Id，检索字段
+     *
+     * @return
+     */
+    public String getRequest_id() {
+        return request_id;
+    }
+
+    /**
+     * set 请求Id，检索字段
+     *
+     * @param request_id
+     */
+    public void setRequest_id(String request_id) {
+        this.request_id = request_id;
+    }
+
+    /**
      * get 开始时间戳，单位秒，时间间隔要求大于5分钟，小于30天。
      *
      * @return
@@ -523,6 +546,16 @@ public class GetEsLogDetailRequest extends JdcloudRequest implements java.io.Ser
      */
     public GetEsLogDetailRequest logId(String logId) {
         this.logId = logId;
+        return this;
+    }
+
+    /**
+     * set 请求Id，检索字段
+     *
+     * @param request_id
+     */
+    public GetEsLogDetailRequest request_id(String request_id) {
+        this.request_id = request_id;
         return this;
     }
 

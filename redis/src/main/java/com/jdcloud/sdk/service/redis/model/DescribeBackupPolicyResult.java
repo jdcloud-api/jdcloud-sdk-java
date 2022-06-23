@@ -34,6 +34,11 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
+     * 是否开启自动备份，true表示开启，false表示关闭
+     */
+    private Boolean autoBackup;
+
+    /**
      * 备份周期，包括：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，多个用逗号分隔
      */
     private String backupPeriod;
@@ -48,6 +53,24 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
      */
     private String nextBackupTime;
 
+
+    /**
+     * get 是否开启自动备份，true表示开启，false表示关闭
+     *
+     * @return
+     */
+    public Boolean getAutoBackup() {
+        return autoBackup;
+    }
+
+    /**
+     * set 是否开启自动备份，true表示开启，false表示关闭
+     *
+     * @param autoBackup
+     */
+    public void setAutoBackup(Boolean autoBackup) {
+        this.autoBackup = autoBackup;
+    }
 
     /**
      * get 备份周期，包括：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，多个用逗号分隔
@@ -103,6 +126,16 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.nextBackupTime = nextBackupTime;
     }
 
+
+    /**
+     * set 是否开启自动备份，true表示开启，false表示关闭
+     *
+     * @param autoBackup
+     */
+    public DescribeBackupPolicyResult autoBackup(Boolean autoBackup) {
+        this.autoBackup = autoBackup;
+        return this;
+    }
 
     /**
      * set 备份周期，包括：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，多个用逗号分隔

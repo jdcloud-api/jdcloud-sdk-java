@@ -46,7 +46,12 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
     private String domain;
 
     /**
-     * action配置, 只支持 1，2，5 atOp
+     * 防护模式 1宽松模式，2正常模式，3严格模式
+     */
+    private Integer spiderMode;
+
+    /**
+     * 动作配置
      */
     private DenyActionCfg action;
 
@@ -88,7 +93,25 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
     }
 
     /**
-     * get action配置, 只支持 1，2，5 atOp
+     * get 防护模式 1宽松模式，2正常模式，3严格模式
+     *
+     * @return
+     */
+    public Integer getSpiderMode() {
+        return spiderMode;
+    }
+
+    /**
+     * set 防护模式 1宽松模式，2正常模式，3严格模式
+     *
+     * @param spiderMode
+     */
+    public void setSpiderMode(Integer spiderMode) {
+        this.spiderMode = spiderMode;
+    }
+
+    /**
+     * get 动作配置
      *
      * @return
      */
@@ -97,7 +120,7 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
     }
 
     /**
-     * set action配置, 只支持 1，2，5 atOp
+     * set 动作配置
      *
      * @param action
      */
@@ -127,7 +150,17 @@ public class AntiSpiderConfReq  implements java.io.Serializable {
     }
 
     /**
-     * set action配置, 只支持 1，2，5 atOp
+     * set 防护模式 1宽松模式，2正常模式，3严格模式
+     *
+     * @param spiderMode
+     */
+    public AntiSpiderConfReq spiderMode(Integer spiderMode) {
+        this.spiderMode = spiderMode;
+        return this;
+    }
+
+    /**
+     * set 动作配置
      *
      * @param action
      */

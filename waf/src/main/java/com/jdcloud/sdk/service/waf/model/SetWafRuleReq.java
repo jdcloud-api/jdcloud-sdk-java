@@ -64,7 +64,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
     private String ruleName;
 
     /**
-     * 匹配动作, forbidden redirect verify@jscookie verify@captcha notice
+     * 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      * Required:true
      */
     @Required
@@ -158,7 +158,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get 匹配动作, forbidden redirect verify@jscookie verify@captcha notice
+     * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @return
      */
@@ -167,7 +167,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配动作, forbidden redirect verify@jscookie verify@captcha notice
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param matchAction
      */
@@ -253,7 +253,7 @@ public class SetWafRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配动作, forbidden redirect verify@jscookie verify@captcha notice
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param matchAction
      */

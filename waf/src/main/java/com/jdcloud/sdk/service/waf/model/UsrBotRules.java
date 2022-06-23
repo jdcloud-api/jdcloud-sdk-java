@@ -60,7 +60,7 @@ public class UsrBotRules  implements java.io.Serializable {
     private List<BotMatchItem> matchItems;
 
     /**
-     * 动作配置，默认为告警
+     * 动作配置
      */
     private DenyActionCfg action;
 
@@ -201,7 +201,7 @@ public class UsrBotRules  implements java.io.Serializable {
     }
 
     /**
-     * get 动作配置，默认为告警
+     * get 动作配置
      *
      * @return
      */
@@ -210,7 +210,7 @@ public class UsrBotRules  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警
+     * set 动作配置
      *
      * @param action
      */
@@ -432,7 +432,7 @@ public class UsrBotRules  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警
+     * set 动作配置
      *
      * @param action
      */

@@ -48,18 +48,17 @@ public class AntiModeCcReq  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 0表示正常，1表示攻击紧急，2全局模式 3单ip模式
+     * 防护模式 1宽松模式，2正常模式 3严格模式
+     * Required:true
      */
+    @Required
     private Integer ccMode;
 
     /**
-     * cc qps配置，ccMode 为0/1时， 该字段传0， 表示不可配；  ccMode为2/3时，qps限制[1-20000]
+     * 动作配置
+     * Required:true
      */
-    private Integer qps;
-
-    /**
-     * 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
-     */
+    @Required
     private DenyActionCfg action;
 
 
@@ -100,7 +99,7 @@ public class AntiModeCcReq  implements java.io.Serializable {
     }
 
     /**
-     * get 0表示正常，1表示攻击紧急，2全局模式 3单ip模式
+     * get 防护模式 1宽松模式，2正常模式 3严格模式
      *
      * @return
      */
@@ -109,7 +108,7 @@ public class AntiModeCcReq  implements java.io.Serializable {
     }
 
     /**
-     * set 0表示正常，1表示攻击紧急，2全局模式 3单ip模式
+     * set 防护模式 1宽松模式，2正常模式 3严格模式
      *
      * @param ccMode
      */
@@ -118,25 +117,7 @@ public class AntiModeCcReq  implements java.io.Serializable {
     }
 
     /**
-     * get cc qps配置，ccMode 为0/1时， 该字段传0， 表示不可配；  ccMode为2/3时，qps限制[1-20000]
-     *
-     * @return
-     */
-    public Integer getQps() {
-        return qps;
-    }
-
-    /**
-     * set cc qps配置，ccMode 为0/1时， 该字段传0， 表示不可配；  ccMode为2/3时，qps限制[1-20000]
-     *
-     * @param qps
-     */
-    public void setQps(Integer qps) {
-        this.qps = qps;
-    }
-
-    /**
-     * get 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
+     * get 动作配置
      *
      * @return
      */
@@ -145,7 +126,7 @@ public class AntiModeCcReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
+     * set 动作配置
      *
      * @param action
      */
@@ -175,7 +156,7 @@ public class AntiModeCcReq  implements java.io.Serializable {
     }
 
     /**
-     * set 0表示正常，1表示攻击紧急，2全局模式 3单ip模式
+     * set 防护模式 1宽松模式，2正常模式 3严格模式
      *
      * @param ccMode
      */
@@ -185,17 +166,7 @@ public class AntiModeCcReq  implements java.io.Serializable {
     }
 
     /**
-     * set cc qps配置，ccMode 为0/1时， 该字段传0， 表示不可配；  ccMode为2/3时，qps限制[1-20000]
-     *
-     * @param qps
-     */
-    public AntiModeCcReq qps(Integer qps) {
-        this.qps = qps;
-        return this;
-    }
-
-    /**
-     * set 动作配置，默认为告警，支持1，2，3, 5, 7五种类型动作
+     * set 动作配置
      *
      * @param action
      */

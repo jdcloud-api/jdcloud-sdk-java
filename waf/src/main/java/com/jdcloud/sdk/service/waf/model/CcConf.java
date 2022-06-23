@@ -38,14 +38,9 @@ public class CcConf  implements java.io.Serializable {
     private Integer enable;
 
     /**
-     * 0表示正常，1表示攻击紧急
+     * 防护模式
      */
     private Integer ccMode;
-
-    /**
-     * qps配置
-     */
-    private Integer qps;
 
     /**
      * 是否支持自定义cc，0表示否
@@ -82,7 +77,7 @@ public class CcConf  implements java.io.Serializable {
     }
 
     /**
-     * get 0表示正常，1表示攻击紧急
+     * get 防护模式
      *
      * @return
      */
@@ -91,30 +86,12 @@ public class CcConf  implements java.io.Serializable {
     }
 
     /**
-     * set 0表示正常，1表示攻击紧急
+     * set 防护模式
      *
      * @param ccMode
      */
     public void setCcMode(Integer ccMode) {
         this.ccMode = ccMode;
-    }
-
-    /**
-     * get qps配置
-     *
-     * @return
-     */
-    public Integer getQps() {
-        return qps;
-    }
-
-    /**
-     * set qps配置
-     *
-     * @param qps
-     */
-    public void setQps(Integer qps) {
-        this.qps = qps;
     }
 
     /**
@@ -183,22 +160,12 @@ public class CcConf  implements java.io.Serializable {
     }
 
     /**
-     * set 0表示正常，1表示攻击紧急
+     * set 防护模式
      *
      * @param ccMode
      */
     public CcConf ccMode(Integer ccMode) {
         this.ccMode = ccMode;
-        return this;
-    }
-
-    /**
-     * set qps配置
-     *
-     * @param qps
-     */
-    public CcConf qps(Integer qps) {
-        this.qps = qps;
         return this;
     }
 

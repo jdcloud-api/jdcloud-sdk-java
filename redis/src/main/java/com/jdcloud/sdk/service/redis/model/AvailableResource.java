@@ -35,7 +35,7 @@ public class AvailableResource  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 架构类型，目前支持：master-slave（标准版）、cluster（基于代理的集群版）
+     * 架构类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      */
     private String architectureType;
 
@@ -55,13 +55,43 @@ public class AvailableResource  implements java.io.Serializable {
     private Boolean soldOut;
 
     /**
+     * 支持的最大副本数
+     */
+    private Integer supportedMaxReplicas;
+
+    /**
+     * 支持的最小副本数
+     */
+    private Integer supportedMinReplicas;
+
+    /**
+     * 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     */
+    private List<String> supportedAzSpecifyType;
+
+    /**
+     * 按集群指定AZ时，需要指定的最小AZ个数
+     */
+    private Integer minAzLimitForCluster;
+
+    /**
+     * 支持的外部访问方式：NodePort、LoadBalancer
+     */
+    private List<String> supportedExposeType;
+
+    /**
+     * 是否支持SmartProxy
+     */
+    private Boolean supportSmartProxy;
+
+    /**
      * 引擎版本列表
      */
     private List<AvailableEngineVersion> availableEngineVersions;
 
 
     /**
-     * get 架构类型，目前支持：master-slave（标准版）、cluster（基于代理的集群版）
+     * get 架构类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      *
      * @return
      */
@@ -70,7 +100,7 @@ public class AvailableResource  implements java.io.Serializable {
     }
 
     /**
-     * set 架构类型，目前支持：master-slave（标准版）、cluster（基于代理的集群版）
+     * set 架构类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      *
      * @param architectureType
      */
@@ -133,6 +163,114 @@ public class AvailableResource  implements java.io.Serializable {
     }
 
     /**
+     * get 支持的最大副本数
+     *
+     * @return
+     */
+    public Integer getSupportedMaxReplicas() {
+        return supportedMaxReplicas;
+    }
+
+    /**
+     * set 支持的最大副本数
+     *
+     * @param supportedMaxReplicas
+     */
+    public void setSupportedMaxReplicas(Integer supportedMaxReplicas) {
+        this.supportedMaxReplicas = supportedMaxReplicas;
+    }
+
+    /**
+     * get 支持的最小副本数
+     *
+     * @return
+     */
+    public Integer getSupportedMinReplicas() {
+        return supportedMinReplicas;
+    }
+
+    /**
+     * set 支持的最小副本数
+     *
+     * @param supportedMinReplicas
+     */
+    public void setSupportedMinReplicas(Integer supportedMinReplicas) {
+        this.supportedMinReplicas = supportedMinReplicas;
+    }
+
+    /**
+     * get 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     *
+     * @return
+     */
+    public List<String> getSupportedAzSpecifyType() {
+        return supportedAzSpecifyType;
+    }
+
+    /**
+     * set 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     *
+     * @param supportedAzSpecifyType
+     */
+    public void setSupportedAzSpecifyType(List<String> supportedAzSpecifyType) {
+        this.supportedAzSpecifyType = supportedAzSpecifyType;
+    }
+
+    /**
+     * get 按集群指定AZ时，需要指定的最小AZ个数
+     *
+     * @return
+     */
+    public Integer getMinAzLimitForCluster() {
+        return minAzLimitForCluster;
+    }
+
+    /**
+     * set 按集群指定AZ时，需要指定的最小AZ个数
+     *
+     * @param minAzLimitForCluster
+     */
+    public void setMinAzLimitForCluster(Integer minAzLimitForCluster) {
+        this.minAzLimitForCluster = minAzLimitForCluster;
+    }
+
+    /**
+     * get 支持的外部访问方式：NodePort、LoadBalancer
+     *
+     * @return
+     */
+    public List<String> getSupportedExposeType() {
+        return supportedExposeType;
+    }
+
+    /**
+     * set 支持的外部访问方式：NodePort、LoadBalancer
+     *
+     * @param supportedExposeType
+     */
+    public void setSupportedExposeType(List<String> supportedExposeType) {
+        this.supportedExposeType = supportedExposeType;
+    }
+
+    /**
+     * get 是否支持SmartProxy
+     *
+     * @return
+     */
+    public Boolean getSupportSmartProxy() {
+        return supportSmartProxy;
+    }
+
+    /**
+     * set 是否支持SmartProxy
+     *
+     * @param supportSmartProxy
+     */
+    public void setSupportSmartProxy(Boolean supportSmartProxy) {
+        this.supportSmartProxy = supportSmartProxy;
+    }
+
+    /**
      * get 引擎版本列表
      *
      * @return
@@ -152,7 +290,7 @@ public class AvailableResource  implements java.io.Serializable {
 
 
     /**
-     * set 架构类型，目前支持：master-slave（标准版）、cluster（基于代理的集群版）
+     * set 架构类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      *
      * @param architectureType
      */
@@ -192,6 +330,66 @@ public class AvailableResource  implements java.io.Serializable {
     }
 
     /**
+     * set 支持的最大副本数
+     *
+     * @param supportedMaxReplicas
+     */
+    public AvailableResource supportedMaxReplicas(Integer supportedMaxReplicas) {
+        this.supportedMaxReplicas = supportedMaxReplicas;
+        return this;
+    }
+
+    /**
+     * set 支持的最小副本数
+     *
+     * @param supportedMinReplicas
+     */
+    public AvailableResource supportedMinReplicas(Integer supportedMinReplicas) {
+        this.supportedMinReplicas = supportedMinReplicas;
+        return this;
+    }
+
+    /**
+     * set 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     *
+     * @param supportedAzSpecifyType
+     */
+    public AvailableResource supportedAzSpecifyType(List<String> supportedAzSpecifyType) {
+        this.supportedAzSpecifyType = supportedAzSpecifyType;
+        return this;
+    }
+
+    /**
+     * set 按集群指定AZ时，需要指定的最小AZ个数
+     *
+     * @param minAzLimitForCluster
+     */
+    public AvailableResource minAzLimitForCluster(Integer minAzLimitForCluster) {
+        this.minAzLimitForCluster = minAzLimitForCluster;
+        return this;
+    }
+
+    /**
+     * set 支持的外部访问方式：NodePort、LoadBalancer
+     *
+     * @param supportedExposeType
+     */
+    public AvailableResource supportedExposeType(List<String> supportedExposeType) {
+        this.supportedExposeType = supportedExposeType;
+        return this;
+    }
+
+    /**
+     * set 是否支持SmartProxy
+     *
+     * @param supportSmartProxy
+     */
+    public AvailableResource supportSmartProxy(Boolean supportSmartProxy) {
+        this.supportSmartProxy = supportSmartProxy;
+        return this;
+    }
+
+    /**
      * set 引擎版本列表
      *
      * @param availableEngineVersions
@@ -201,6 +399,30 @@ public class AvailableResource  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * add item to 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+     *
+     * @param supportedAzSpecifyType
+     */
+    public void addSupportedAzSpecifyType(String supportedAzSpecifyType) {
+        if (this.supportedAzSpecifyType == null) {
+            this.supportedAzSpecifyType = new ArrayList<>();
+        }
+        this.supportedAzSpecifyType.add(supportedAzSpecifyType);
+    }
+
+    /**
+     * add item to 支持的外部访问方式：NodePort、LoadBalancer
+     *
+     * @param supportedExposeType
+     */
+    public void addSupportedExposeType(String supportedExposeType) {
+        if (this.supportedExposeType == null) {
+            this.supportedExposeType = new ArrayList<>();
+        }
+        this.supportedExposeType.add(supportedExposeType);
+    }
 
     /**
      * add item to 引擎版本列表

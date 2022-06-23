@@ -48,7 +48,7 @@ public class SetBotStdRuleReq  implements java.io.Serializable {
     private String botType;
 
     /**
-     * 动作配置，默认为告警，仅支持1和4和5三种类型动作
+     * 动作配置
      */
     private DenyActionCfg action;
 
@@ -95,7 +95,7 @@ public class SetBotStdRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * get 动作配置，默认为告警，仅支持1和4和5三种类型动作
+     * get 动作配置
      *
      * @return
      */
@@ -104,7 +104,7 @@ public class SetBotStdRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警，仅支持1和4和5三种类型动作
+     * set 动作配置
      *
      * @param action
      */
@@ -152,7 +152,7 @@ public class SetBotStdRuleReq  implements java.io.Serializable {
     }
 
     /**
-     * set 动作配置，默认为告警，仅支持1和4和5三种类型动作
+     * set 动作配置
      *
      * @param action
      */

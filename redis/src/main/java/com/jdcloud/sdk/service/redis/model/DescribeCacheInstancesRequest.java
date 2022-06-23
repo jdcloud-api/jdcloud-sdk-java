@@ -74,6 +74,11 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
     private List<TagFilter> tagFilters;
 
     /**
+     * resourceGroupIds
+     */
+    private List<String> resourceGroupIds;
+
+    /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
@@ -190,6 +195,24 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
     }
 
     /**
+     * get resourceGroupIds
+     *
+     * @return
+     */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+     * set resourceGroupIds
+     *
+     * @param resourceGroupIds
+     */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+    }
+
+    /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @return
@@ -268,6 +291,16 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
     }
 
     /**
+     * set resourceGroupIds
+     *
+     * @param resourceGroupIds
+     */
+    public DescribeCacheInstancesRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
+    /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
@@ -321,6 +354,18 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
             this.tagFilters = new ArrayList<>();
         }
         this.tagFilters.add(tagFilter);
+    }
+
+    /**
+     * add item to resourceGroupIds
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
     }
 
 }

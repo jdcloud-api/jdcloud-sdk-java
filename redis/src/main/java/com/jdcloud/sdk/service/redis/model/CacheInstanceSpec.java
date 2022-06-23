@@ -101,9 +101,54 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     private List<Tag> userTags;
 
     /**
+     * 缓存Redis实例所属的资源组ID
+     */
+    private String resourceGroupId;
+
+    /**
+     * db数量，默认为16，参数范围为16~256
+     */
+    private Integer dbNum;
+
+    /**
+     * slave节点是否开启持久化
+     */
+    private String slaveAppendonly;
+
+    /**
+     * 内存淘汰策略
+     */
+    private String maxmemoryPolicy;
+
+    /**
+     * 缓存Redis实例类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
+     */
+    private String cacheInstanceType;
+
+    /**
+     * 副本数，含主副本
+     */
+    private Integer replicaNumber;
+
+    /**
+     * 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
+     */
+    private Integer enableSmartProxy;
+
+    /**
+     * 缓存Redis实例访问端口
+     */
+    private Integer port;
+
+    /**
      * 扩展配置
      */
     private ReqExtension extension;
+
+    /**
+     * cpu架构类型:arm64、amd64
+     */
+    private String cpuArchType;
 
 
     /**
@@ -305,6 +350,150 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * get 缓存Redis实例所属的资源组ID
+     *
+     * @return
+     */
+    public String getResourceGroupId() {
+        return resourceGroupId;
+    }
+
+    /**
+     * set 缓存Redis实例所属的资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public void setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+    }
+
+    /**
+     * get db数量，默认为16，参数范围为16~256
+     *
+     * @return
+     */
+    public Integer getDbNum() {
+        return dbNum;
+    }
+
+    /**
+     * set db数量，默认为16，参数范围为16~256
+     *
+     * @param dbNum
+     */
+    public void setDbNum(Integer dbNum) {
+        this.dbNum = dbNum;
+    }
+
+    /**
+     * get slave节点是否开启持久化
+     *
+     * @return
+     */
+    public String getSlaveAppendonly() {
+        return slaveAppendonly;
+    }
+
+    /**
+     * set slave节点是否开启持久化
+     *
+     * @param slaveAppendonly
+     */
+    public void setSlaveAppendonly(String slaveAppendonly) {
+        this.slaveAppendonly = slaveAppendonly;
+    }
+
+    /**
+     * get 内存淘汰策略
+     *
+     * @return
+     */
+    public String getMaxmemoryPolicy() {
+        return maxmemoryPolicy;
+    }
+
+    /**
+     * set 内存淘汰策略
+     *
+     * @param maxmemoryPolicy
+     */
+    public void setMaxmemoryPolicy(String maxmemoryPolicy) {
+        this.maxmemoryPolicy = maxmemoryPolicy;
+    }
+
+    /**
+     * get 缓存Redis实例类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
+     *
+     * @return
+     */
+    public String getCacheInstanceType() {
+        return cacheInstanceType;
+    }
+
+    /**
+     * set 缓存Redis实例类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
+     *
+     * @param cacheInstanceType
+     */
+    public void setCacheInstanceType(String cacheInstanceType) {
+        this.cacheInstanceType = cacheInstanceType;
+    }
+
+    /**
+     * get 副本数，含主副本
+     *
+     * @return
+     */
+    public Integer getReplicaNumber() {
+        return replicaNumber;
+    }
+
+    /**
+     * set 副本数，含主副本
+     *
+     * @param replicaNumber
+     */
+    public void setReplicaNumber(Integer replicaNumber) {
+        this.replicaNumber = replicaNumber;
+    }
+
+    /**
+     * get 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
+     *
+     * @return
+     */
+    public Integer getEnableSmartProxy() {
+        return enableSmartProxy;
+    }
+
+    /**
+     * set 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
+     *
+     * @param enableSmartProxy
+     */
+    public void setEnableSmartProxy(Integer enableSmartProxy) {
+        this.enableSmartProxy = enableSmartProxy;
+    }
+
+    /**
+     * get 缓存Redis实例访问端口
+     *
+     * @return
+     */
+    public Integer getPort() {
+        return port;
+    }
+
+    /**
+     * set 缓存Redis实例访问端口
+     *
+     * @param port
+     */
+    public void setPort(Integer port) {
+        this.port = port;
+    }
+
+    /**
      * get 扩展配置
      *
      * @return
@@ -320,6 +509,24 @@ public class CacheInstanceSpec  implements java.io.Serializable {
      */
     public void setExtension(ReqExtension extension) {
         this.extension = extension;
+    }
+
+    /**
+     * get cpu架构类型:arm64、amd64
+     *
+     * @return
+     */
+    public String getCpuArchType() {
+        return cpuArchType;
+    }
+
+    /**
+     * set cpu架构类型:arm64、amd64
+     *
+     * @param cpuArchType
+     */
+    public void setCpuArchType(String cpuArchType) {
+        this.cpuArchType = cpuArchType;
     }
 
 
@@ -434,12 +641,102 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
     /**
+     * set 缓存Redis实例所属的资源组ID
+     *
+     * @param resourceGroupId
+     */
+    public CacheInstanceSpec resourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+
+    /**
+     * set db数量，默认为16，参数范围为16~256
+     *
+     * @param dbNum
+     */
+    public CacheInstanceSpec dbNum(Integer dbNum) {
+        this.dbNum = dbNum;
+        return this;
+    }
+
+    /**
+     * set slave节点是否开启持久化
+     *
+     * @param slaveAppendonly
+     */
+    public CacheInstanceSpec slaveAppendonly(String slaveAppendonly) {
+        this.slaveAppendonly = slaveAppendonly;
+        return this;
+    }
+
+    /**
+     * set 内存淘汰策略
+     *
+     * @param maxmemoryPolicy
+     */
+    public CacheInstanceSpec maxmemoryPolicy(String maxmemoryPolicy) {
+        this.maxmemoryPolicy = maxmemoryPolicy;
+        return this;
+    }
+
+    /**
+     * set 缓存Redis实例类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
+     *
+     * @param cacheInstanceType
+     */
+    public CacheInstanceSpec cacheInstanceType(String cacheInstanceType) {
+        this.cacheInstanceType = cacheInstanceType;
+        return this;
+    }
+
+    /**
+     * set 副本数，含主副本
+     *
+     * @param replicaNumber
+     */
+    public CacheInstanceSpec replicaNumber(Integer replicaNumber) {
+        this.replicaNumber = replicaNumber;
+        return this;
+    }
+
+    /**
+     * set 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
+     *
+     * @param enableSmartProxy
+     */
+    public CacheInstanceSpec enableSmartProxy(Integer enableSmartProxy) {
+        this.enableSmartProxy = enableSmartProxy;
+        return this;
+    }
+
+    /**
+     * set 缓存Redis实例访问端口
+     *
+     * @param port
+     */
+    public CacheInstanceSpec port(Integer port) {
+        this.port = port;
+        return this;
+    }
+
+    /**
      * set 扩展配置
      *
      * @param extension
      */
     public CacheInstanceSpec extension(ReqExtension extension) {
         this.extension = extension;
+        return this;
+    }
+
+    /**
+     * set cpu架构类型:arm64、amd64
+     *
+     * @param cpuArchType
+     */
+    public CacheInstanceSpec cpuArchType(String cpuArchType) {
+        this.cpuArchType = cpuArchType;
         return this;
     }
 

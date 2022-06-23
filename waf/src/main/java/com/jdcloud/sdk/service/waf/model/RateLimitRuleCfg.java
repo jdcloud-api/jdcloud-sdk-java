@@ -71,12 +71,12 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     private Integer burst;
 
     /**
-     * forbidden redirect，缺省为forbidden
+     * 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      */
     private String matchAction;
 
     /**
-     * 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称，缺省为default
+     * 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      */
     private String redirection;
 
@@ -208,7 +208,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * get forbidden redirect，缺省为forbidden
+     * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @return
      */
@@ -217,7 +217,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set forbidden redirect，缺省为forbidden
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param matchAction
      */
@@ -226,7 +226,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * get 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称，缺省为default
+     * get 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @return
      */
@@ -235,7 +235,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称，缺省为default
+     * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @param redirection
      */
@@ -315,7 +315,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set forbidden redirect，缺省为forbidden
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param matchAction
      */
@@ -325,7 +325,7 @@ public class RateLimitRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称，缺省为default
+     * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @param redirection
      */

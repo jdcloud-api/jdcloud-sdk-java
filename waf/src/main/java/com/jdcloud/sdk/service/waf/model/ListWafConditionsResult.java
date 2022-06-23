@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.waf.model.ListWafConditionCfg;
 import com.jdcloud.sdk.service.JdcloudResult;
 
@@ -50,9 +52,9 @@ public class ListWafConditionsResult extends JdcloudResult implements java.io.Se
     private Integer totalCount;
 
     /**
-     * 网站waf自定义防护条件配置
+     * list
      */
-    private ListWafConditionCfg list;
+    private List<ListWafConditionCfg> list;
 
 
     /**
@@ -110,20 +112,20 @@ public class ListWafConditionsResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * get 网站waf自定义防护条件配置
+     * get list
      *
      * @return
      */
-    public ListWafConditionCfg getList() {
+    public List<ListWafConditionCfg> getList() {
         return list;
     }
 
     /**
-     * set 网站waf自定义防护条件配置
+     * set list
      *
      * @param list
      */
-    public void setList(ListWafConditionCfg list) {
+    public void setList(List<ListWafConditionCfg> list) {
         this.list = list;
     }
 
@@ -159,14 +161,26 @@ public class ListWafConditionsResult extends JdcloudResult implements java.io.Se
     }
 
     /**
-     * set 网站waf自定义防护条件配置
+     * set list
      *
      * @param list
      */
-    public ListWafConditionsResult list(ListWafConditionCfg list) {
+    public ListWafConditionsResult list(List<ListWafConditionCfg> list) {
         this.list = list;
         return this;
     }
 
+
+    /**
+     * add item to list
+     *
+     * @param list
+     */
+    public void addList(ListWafConditionCfg list) {
+        if (this.list == null) {
+            this.list = new ArrayList<>();
+        }
+        this.list.add(list);
+    }
 
 }

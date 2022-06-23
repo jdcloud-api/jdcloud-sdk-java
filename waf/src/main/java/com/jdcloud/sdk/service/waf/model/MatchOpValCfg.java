@@ -45,7 +45,7 @@ public class MatchOpValCfg  implements java.io.Serializable {
      * Required:true
      */
     @Required
-    private Integer val;
+    private String val;
 
 
     /**
@@ -71,7 +71,7 @@ public class MatchOpValCfg  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getVal() {
+    public String getVal() {
         return val;
     }
 
@@ -80,7 +80,7 @@ public class MatchOpValCfg  implements java.io.Serializable {
      *
      * @param val
      */
-    public void setVal(Integer val) {
+    public void setVal(String val) {
         this.val = val;
     }
 
@@ -100,7 +100,7 @@ public class MatchOpValCfg  implements java.io.Serializable {
      *
      * @param val
      */
-    public MatchOpValCfg val(Integer val) {
+    public MatchOpValCfg val(String val) {
         this.val = val;
         return this;
     }

@@ -31,21 +31,39 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.dms.model.StartFlowRequest;
+import com.jdcloud.sdk.service.dms.model.StartFlowResponse;
+import com.jdcloud.sdk.service.dms.client.StartFlowExecutor;
 import com.jdcloud.sdk.service.dms.model.QueryInstanceRequest;
 import com.jdcloud.sdk.service.dms.model.QueryInstanceResponse;
 import com.jdcloud.sdk.service.dms.client.QueryInstanceExecutor;
 import com.jdcloud.sdk.service.dms.model.ConsoleSqlRequest;
 import com.jdcloud.sdk.service.dms.model.ConsoleSqlResponse;
 import com.jdcloud.sdk.service.dms.client.ConsoleSqlExecutor;
+import com.jdcloud.sdk.service.dms.model.ViewInfoRequest;
+import com.jdcloud.sdk.service.dms.model.ViewInfoResponse;
+import com.jdcloud.sdk.service.dms.client.ViewInfoExecutor;
+import com.jdcloud.sdk.service.dms.model.ExeProgramRequest;
+import com.jdcloud.sdk.service.dms.model.ExeProgramResponse;
+import com.jdcloud.sdk.service.dms.client.ExeProgramExecutor;
 import com.jdcloud.sdk.service.dms.model.OpenTableRequest;
 import com.jdcloud.sdk.service.dms.model.OpenTableResponse;
 import com.jdcloud.sdk.service.dms.client.OpenTableExecutor;
 import com.jdcloud.sdk.service.dms.model.FormatSqlRequest;
 import com.jdcloud.sdk.service.dms.model.FormatSqlResponse;
 import com.jdcloud.sdk.service.dms.client.FormatSqlExecutor;
+import com.jdcloud.sdk.service.dms.model.GeneralCreateViewRequest;
+import com.jdcloud.sdk.service.dms.model.GeneralCreateViewResponse;
+import com.jdcloud.sdk.service.dms.client.GeneralCreateViewExecutor;
 import com.jdcloud.sdk.service.dms.model.TableInfoRequest;
 import com.jdcloud.sdk.service.dms.model.TableInfoResponse;
 import com.jdcloud.sdk.service.dms.client.TableInfoExecutor;
+import com.jdcloud.sdk.service.dms.model.CreateImportFileTaskRequest;
+import com.jdcloud.sdk.service.dms.model.CreateImportFileTaskResponse;
+import com.jdcloud.sdk.service.dms.client.CreateImportFileTaskExecutor;
+import com.jdcloud.sdk.service.dms.model.CreateExportFlowRequest;
+import com.jdcloud.sdk.service.dms.model.CreateExportFlowResponse;
+import com.jdcloud.sdk.service.dms.client.CreateExportFlowExecutor;
 import com.jdcloud.sdk.service.dms.model.ImportDdlDmlRequest;
 import com.jdcloud.sdk.service.dms.model.ImportDdlDmlResponse;
 import com.jdcloud.sdk.service.dms.client.ImportDdlDmlExecutor;
@@ -64,6 +82,9 @@ import com.jdcloud.sdk.service.dms.client.LogoutExecutor;
 import com.jdcloud.sdk.service.dms.model.ExportDataRequest;
 import com.jdcloud.sdk.service.dms.model.ExportDataResponse;
 import com.jdcloud.sdk.service.dms.client.ExportDataExecutor;
+import com.jdcloud.sdk.service.dms.model.GeneralDropViewRequest;
+import com.jdcloud.sdk.service.dms.model.GeneralDropViewResponse;
+import com.jdcloud.sdk.service.dms.client.GeneralDropViewExecutor;
 import com.jdcloud.sdk.service.dms.model.HistorySqlRequest;
 import com.jdcloud.sdk.service.dms.model.HistorySqlResponse;
 import com.jdcloud.sdk.service.dms.client.HistorySqlExecutor;
@@ -76,6 +97,9 @@ import com.jdcloud.sdk.service.dms.client.ConsoleExplainExecutor;
 import com.jdcloud.sdk.service.dms.model.SqlTableInfoRequest;
 import com.jdcloud.sdk.service.dms.model.SqlTableInfoResponse;
 import com.jdcloud.sdk.service.dms.client.SqlTableInfoExecutor;
+import com.jdcloud.sdk.service.dms.model.CreateDataFlowRequest;
+import com.jdcloud.sdk.service.dms.model.CreateDataFlowResponse;
+import com.jdcloud.sdk.service.dms.client.CreateDataFlowExecutor;
 import com.jdcloud.sdk.service.dms.model.DeletePersonalSqlRequest;
 import com.jdcloud.sdk.service.dms.model.DeletePersonalSqlResponse;
 import com.jdcloud.sdk.service.dms.client.DeletePersonalSqlExecutor;
@@ -88,6 +112,9 @@ import com.jdcloud.sdk.service.dms.client.LoginExecutor;
 import com.jdcloud.sdk.service.dms.model.DownloadExportFileRequest;
 import com.jdcloud.sdk.service.dms.model.DownloadExportFileResponse;
 import com.jdcloud.sdk.service.dms.client.DownloadExportFileExecutor;
+import com.jdcloud.sdk.service.dms.model.UploadImportFileTaskRequest;
+import com.jdcloud.sdk.service.dms.model.UploadImportFileTaskResponse;
+import com.jdcloud.sdk.service.dms.client.UploadImportFileTaskExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterTableSqlRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterTableSqlResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralAlterTableSqlExecutor;
@@ -112,12 +139,21 @@ import com.jdcloud.sdk.service.dms.client.GetExportIdExecutor;
 import com.jdcloud.sdk.service.dms.model.QueryPersonalSqlsRequest;
 import com.jdcloud.sdk.service.dms.model.QueryPersonalSqlsResponse;
 import com.jdcloud.sdk.service.dms.client.QueryPersonalSqlsExecutor;
+import com.jdcloud.sdk.service.dms.model.ProgramListRequest;
+import com.jdcloud.sdk.service.dms.model.ProgramListResponse;
+import com.jdcloud.sdk.service.dms.client.ProgramListExecutor;
 import com.jdcloud.sdk.service.dms.model.GetCreateTableBatchSqlRequest;
 import com.jdcloud.sdk.service.dms.model.GetCreateTableBatchSqlResponse;
 import com.jdcloud.sdk.service.dms.client.GetCreateTableBatchSqlExecutor;
 import com.jdcloud.sdk.service.dms.model.GetDmsDomainRequest;
 import com.jdcloud.sdk.service.dms.model.GetDmsDomainResponse;
 import com.jdcloud.sdk.service.dms.client.GetDmsDomainExecutor;
+import com.jdcloud.sdk.service.dms.model.GeneralAlterViewRequest;
+import com.jdcloud.sdk.service.dms.model.GeneralAlterViewResponse;
+import com.jdcloud.sdk.service.dms.client.GeneralAlterViewExecutor;
+import com.jdcloud.sdk.service.dms.model.CreateStructureFlowRequest;
+import com.jdcloud.sdk.service.dms.model.CreateStructureFlowResponse;
+import com.jdcloud.sdk.service.dms.client.CreateStructureFlowExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateTableSqlRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateTableSqlResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralCreateTableSqlExecutor;
@@ -129,7 +165,7 @@ public class DmsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.7";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "dms.jdcloud-api.com";
     public final static String ServiceName = "dms";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -172,6 +208,17 @@ public class DmsClient extends JdcloudClient {
 
 
     /**
+     * 任务执行
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartFlowResponse startFlow(StartFlowRequest request) throws JdcloudSdkException {
+        return new StartFlowExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询用户实例
      *
      * @param request
@@ -191,6 +238,28 @@ public class DmsClient extends JdcloudClient {
      */
     public ConsoleSqlResponse consoleSql(ConsoleSqlRequest request) throws JdcloudSdkException {
         return new ConsoleSqlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取视图详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ViewInfoResponse viewInfo(ViewInfoRequest request) throws JdcloudSdkException {
+        return new ViewInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 执行编程对象sql
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExeProgramResponse exeProgram(ExeProgramRequest request) throws JdcloudSdkException {
+        return new ExeProgramExecutor().client(this).execute(request);
     }
 
     /**
@@ -216,6 +285,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 生产创建视图SQL语句
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GeneralCreateViewResponse generalCreateView(GeneralCreateViewRequest request) throws JdcloudSdkException {
+        return new GeneralCreateViewExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取表元数据
      *
      * @param request
@@ -224,6 +304,28 @@ public class DmsClient extends JdcloudClient {
      */
     public TableInfoResponse tableInfo(TableInfoRequest request) throws JdcloudSdkException {
         return new TableInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建导入文件任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateImportFileTaskResponse createImportFileTask(CreateImportFileTaskRequest request) throws JdcloudSdkException {
+        return new CreateImportFileTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建数据导出工单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateExportFlowResponse createExportFlow(CreateExportFlowRequest request) throws JdcloudSdkException {
+        return new CreateExportFlowExecutor().client(this).execute(request);
     }
 
     /**
@@ -293,6 +395,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 生成删除视图sql语句
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GeneralDropViewResponse generalDropView(GeneralDropViewRequest request) throws JdcloudSdkException {
+        return new GeneralDropViewExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取当前实例用户查询sql历史
      *
      * @param request
@@ -337,6 +450,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 创建数据变更工单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateDataFlowResponse createDataFlow(CreateDataFlowRequest request) throws JdcloudSdkException {
+        return new CreateDataFlowExecutor().client(this).execute(request);
+    }
+
+    /**
      * 删除收藏sql
      *
      * @param request
@@ -378,6 +502,17 @@ public class DmsClient extends JdcloudClient {
      */
     public DownloadExportFileResponse downloadExportFile(DownloadExportFileRequest request) throws JdcloudSdkException {
         return new DownloadExportFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 上传文件
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UploadImportFileTaskResponse uploadImportFileTask(UploadImportFileTaskRequest request) throws JdcloudSdkException {
+        return new UploadImportFileTaskExecutor().client(this).execute(request);
     }
 
     /**
@@ -469,6 +604,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 获取视图列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ProgramListResponse programList(ProgramListRequest request) throws JdcloudSdkException {
+        return new ProgramListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取批量建表sql
      *
      * @param request
@@ -488,6 +634,28 @@ public class DmsClient extends JdcloudClient {
      */
     public GetDmsDomainResponse getDmsDomain(GetDmsDomainRequest request) throws JdcloudSdkException {
         return new GetDmsDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 生成修改视图sql语句
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GeneralAlterViewResponse generalAlterView(GeneralAlterViewRequest request) throws JdcloudSdkException {
+        return new GeneralAlterViewExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建结构变更工单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateStructureFlowResponse createStructureFlow(CreateStructureFlowRequest request) throws JdcloudSdkException {
+        return new CreateStructureFlowExecutor().client(this).execute(request);
     }
 
     /**

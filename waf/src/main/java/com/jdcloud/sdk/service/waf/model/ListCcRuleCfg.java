@@ -88,7 +88,7 @@ public class ListCcRuleCfg  implements java.io.Serializable {
     private Integer disable;
 
     /**
-     * blockType 为3 时，为自定义页面名称，缺省为default
+     * 跳转地址，blockType为1时必须为当前实例下的域名的url，为2时为自定义页面名称
      */
     private String redirection;
 
@@ -302,7 +302,7 @@ public class ListCcRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * get blockType 为3 时，为自定义页面名称，缺省为default
+     * get 跳转地址，blockType为1时必须为当前实例下的域名的url，为2时为自定义页面名称
      *
      * @return
      */
@@ -311,7 +311,7 @@ public class ListCcRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set blockType 为3 时，为自定义页面名称，缺省为default
+     * set 跳转地址，blockType为1时必须为当前实例下的域名的url，为2时为自定义页面名称
      *
      * @param redirection
      */
@@ -467,7 +467,7 @@ public class ListCcRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set blockType 为3 时，为自定义页面名称，缺省为default
+     * set 跳转地址，blockType为1时必须为当前实例下的域名的url，为2时为自定义页面名称
      *
      * @param redirection
      */

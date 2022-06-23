@@ -32,73 +32,7 @@ public class RespExtension  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 外部访问方式，空表示关闭外部访问
-     */
-    private String exposeType;
 
-    /**
-     * 外部访问域名
-     */
-    private String exposeDomain;
-
-
-    /**
-     * get 外部访问方式，空表示关闭外部访问
-     *
-     * @return
-     */
-    public String getExposeType() {
-        return exposeType;
-    }
-
-    /**
-     * set 外部访问方式，空表示关闭外部访问
-     *
-     * @param exposeType
-     */
-    public void setExposeType(String exposeType) {
-        this.exposeType = exposeType;
-    }
-
-    /**
-     * get 外部访问域名
-     *
-     * @return
-     */
-    public String getExposeDomain() {
-        return exposeDomain;
-    }
-
-    /**
-     * set 外部访问域名
-     *
-     * @param exposeDomain
-     */
-    public void setExposeDomain(String exposeDomain) {
-        this.exposeDomain = exposeDomain;
-    }
-
-
-    /**
-     * set 外部访问方式，空表示关闭外部访问
-     *
-     * @param exposeType
-     */
-    public RespExtension exposeType(String exposeType) {
-        this.exposeType = exposeType;
-        return this;
-    }
-
-    /**
-     * set 外部访问域名
-     *
-     * @param exposeDomain
-     */
-    public RespExtension exposeDomain(String exposeDomain) {
-        this.exposeDomain = exposeDomain;
-        return this;
-    }
 
 
 }

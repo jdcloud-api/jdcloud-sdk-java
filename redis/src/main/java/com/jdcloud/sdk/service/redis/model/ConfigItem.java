@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -72,6 +74,36 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
      */
     @Required
     private String configValue;
+
+    /**
+     * 参数默认值
+     */
+    private String configDefaultValue;
+
+    /**
+     * 参数值类型，目前有int、string、outputBuffer、byteArray这四种
+     */
+    private String configValueType;
+
+    /**
+     * 参数值的最小值，在configValueType为int时有效
+     */
+    private Integer configValueMin;
+
+    /**
+     * 参数值的最大值，在configValueType为int时有效
+     */
+    private Integer configValueMax;
+
+    /**
+     * 参数值的可选值，在configValueType为string或byteArray时有效
+     */
+    private List<String> configValueOptional;
+
+    /**
+     * configValueType为outputBuffer时的参数值规则
+     */
+    private String configValueOutputBuffer;
 
 
     /**
@@ -162,6 +194,114 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         this.configValue = configValue;
     }
 
+    /**
+     * get 参数默认值
+     *
+     * @return
+     */
+    public String getConfigDefaultValue() {
+        return configDefaultValue;
+    }
+
+    /**
+     * set 参数默认值
+     *
+     * @param configDefaultValue
+     */
+    public void setConfigDefaultValue(String configDefaultValue) {
+        this.configDefaultValue = configDefaultValue;
+    }
+
+    /**
+     * get 参数值类型，目前有int、string、outputBuffer、byteArray这四种
+     *
+     * @return
+     */
+    public String getConfigValueType() {
+        return configValueType;
+    }
+
+    /**
+     * set 参数值类型，目前有int、string、outputBuffer、byteArray这四种
+     *
+     * @param configValueType
+     */
+    public void setConfigValueType(String configValueType) {
+        this.configValueType = configValueType;
+    }
+
+    /**
+     * get 参数值的最小值，在configValueType为int时有效
+     *
+     * @return
+     */
+    public Integer getConfigValueMin() {
+        return configValueMin;
+    }
+
+    /**
+     * set 参数值的最小值，在configValueType为int时有效
+     *
+     * @param configValueMin
+     */
+    public void setConfigValueMin(Integer configValueMin) {
+        this.configValueMin = configValueMin;
+    }
+
+    /**
+     * get 参数值的最大值，在configValueType为int时有效
+     *
+     * @return
+     */
+    public Integer getConfigValueMax() {
+        return configValueMax;
+    }
+
+    /**
+     * set 参数值的最大值，在configValueType为int时有效
+     *
+     * @param configValueMax
+     */
+    public void setConfigValueMax(Integer configValueMax) {
+        this.configValueMax = configValueMax;
+    }
+
+    /**
+     * get 参数值的可选值，在configValueType为string或byteArray时有效
+     *
+     * @return
+     */
+    public List<String> getConfigValueOptional() {
+        return configValueOptional;
+    }
+
+    /**
+     * set 参数值的可选值，在configValueType为string或byteArray时有效
+     *
+     * @param configValueOptional
+     */
+    public void setConfigValueOptional(List<String> configValueOptional) {
+        this.configValueOptional = configValueOptional;
+    }
+
+    /**
+     * get configValueType为outputBuffer时的参数值规则
+     *
+     * @return
+     */
+    public String getConfigValueOutputBuffer() {
+        return configValueOutputBuffer;
+    }
+
+    /**
+     * set configValueType为outputBuffer时的参数值规则
+     *
+     * @param configValueOutputBuffer
+     */
+    public void setConfigValueOutputBuffer(String configValueOutputBuffer) {
+        this.configValueOutputBuffer = configValueOutputBuffer;
+    }
+
 
     /**
      * set configName目前只支持以下参数：
@@ -209,5 +349,77 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         return this;
     }
 
+    /**
+     * set 参数默认值
+     *
+     * @param configDefaultValue
+     */
+    public ConfigItem configDefaultValue(String configDefaultValue) {
+        this.configDefaultValue = configDefaultValue;
+        return this;
+    }
+
+    /**
+     * set 参数值类型，目前有int、string、outputBuffer、byteArray这四种
+     *
+     * @param configValueType
+     */
+    public ConfigItem configValueType(String configValueType) {
+        this.configValueType = configValueType;
+        return this;
+    }
+
+    /**
+     * set 参数值的最小值，在configValueType为int时有效
+     *
+     * @param configValueMin
+     */
+    public ConfigItem configValueMin(Integer configValueMin) {
+        this.configValueMin = configValueMin;
+        return this;
+    }
+
+    /**
+     * set 参数值的最大值，在configValueType为int时有效
+     *
+     * @param configValueMax
+     */
+    public ConfigItem configValueMax(Integer configValueMax) {
+        this.configValueMax = configValueMax;
+        return this;
+    }
+
+    /**
+     * set 参数值的可选值，在configValueType为string或byteArray时有效
+     *
+     * @param configValueOptional
+     */
+    public ConfigItem configValueOptional(List<String> configValueOptional) {
+        this.configValueOptional = configValueOptional;
+        return this;
+    }
+
+    /**
+     * set configValueType为outputBuffer时的参数值规则
+     *
+     * @param configValueOutputBuffer
+     */
+    public ConfigItem configValueOutputBuffer(String configValueOutputBuffer) {
+        this.configValueOutputBuffer = configValueOutputBuffer;
+        return this;
+    }
+
+
+    /**
+     * add item to 参数值的可选值，在configValueType为string或byteArray时有效
+     *
+     * @param configValueOptional
+     */
+    public void addConfigValueOptional(String configValueOptional) {
+        if (this.configValueOptional == null) {
+            this.configValueOptional = new ArrayList<>();
+        }
+        this.configValueOptional.add(configValueOptional);
+    }
 
 }

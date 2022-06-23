@@ -32,40 +32,7 @@ public class ReqExtension  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 外部访问方式，空表示关闭外部访问
-     */
-    private String exposeType;
 
-
-    /**
-     * get 外部访问方式，空表示关闭外部访问
-     *
-     * @return
-     */
-    public String getExposeType() {
-        return exposeType;
-    }
-
-    /**
-     * set 外部访问方式，空表示关闭外部访问
-     *
-     * @param exposeType
-     */
-    public void setExposeType(String exposeType) {
-        this.exposeType = exposeType;
-    }
-
-
-    /**
-     * set 外部访问方式，空表示关闭外部访问
-     *
-     * @param exposeType
-     */
-    public ReqExtension exposeType(String exposeType) {
-        this.exposeType = exposeType;
-        return this;
-    }
 
 
 }

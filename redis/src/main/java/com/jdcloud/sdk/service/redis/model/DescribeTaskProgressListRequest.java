@@ -35,7 +35,7 @@ public class DescribeTaskProgressListRequest extends JdcloudRequest implements j
     private static final long serialVersionUID = 1L;
 
     /**
-     * 任务类型：resize表示变配，目前只有变配可以查询进度
+     * 任务类型：resize表示变配，upgrade表示升级
      */
     private String taskType;
 
@@ -55,7 +55,7 @@ public class DescribeTaskProgressListRequest extends JdcloudRequest implements j
 
 
     /**
-     * get 任务类型：resize表示变配，目前只有变配可以查询进度
+     * get 任务类型：resize表示变配，upgrade表示升级
      *
      * @return
      */
@@ -64,7 +64,7 @@ public class DescribeTaskProgressListRequest extends JdcloudRequest implements j
     }
 
     /**
-     * set 任务类型：resize表示变配，目前只有变配可以查询进度
+     * set 任务类型：resize表示变配，upgrade表示升级
      *
      * @param taskType
      */
@@ -110,7 +110,7 @@ public class DescribeTaskProgressListRequest extends JdcloudRequest implements j
 
 
     /**
-     * set 任务类型：resize表示变配，目前只有变配可以查询进度
+     * set 任务类型：resize表示变配，upgrade表示升级
      *
      * @param taskType
      */

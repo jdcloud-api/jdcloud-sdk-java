@@ -50,9 +50,9 @@ public class AvailableEngineVersion  implements java.io.Serializable {
     private Boolean soldOut;
 
     /**
-     * 售卖内存规格列表
+     * 售卖CPU架构列表
      */
-    private List<AvailableMemorySpec> availableMemorySpecs;
+    private List<AvailableCPUArch> availableCPUArchs;
 
 
     /**
@@ -110,21 +110,21 @@ public class AvailableEngineVersion  implements java.io.Serializable {
     }
 
     /**
-     * get 售卖内存规格列表
+     * get 售卖CPU架构列表
      *
      * @return
      */
-    public List<AvailableMemorySpec> getAvailableMemorySpecs() {
-        return availableMemorySpecs;
+    public List<AvailableCPUArch> getAvailableCPUArchs() {
+        return availableCPUArchs;
     }
 
     /**
-     * set 售卖内存规格列表
+     * set 售卖CPU架构列表
      *
-     * @param availableMemorySpecs
+     * @param availableCPUArchs
      */
-    public void setAvailableMemorySpecs(List<AvailableMemorySpec> availableMemorySpecs) {
-        this.availableMemorySpecs = availableMemorySpecs;
+    public void setAvailableCPUArchs(List<AvailableCPUArch> availableCPUArchs) {
+        this.availableCPUArchs = availableCPUArchs;
     }
 
 
@@ -159,26 +159,26 @@ public class AvailableEngineVersion  implements java.io.Serializable {
     }
 
     /**
-     * set 售卖内存规格列表
+     * set 售卖CPU架构列表
      *
-     * @param availableMemorySpecs
+     * @param availableCPUArchs
      */
-    public AvailableEngineVersion availableMemorySpecs(List<AvailableMemorySpec> availableMemorySpecs) {
-        this.availableMemorySpecs = availableMemorySpecs;
+    public AvailableEngineVersion availableCPUArchs(List<AvailableCPUArch> availableCPUArchs) {
+        this.availableCPUArchs = availableCPUArchs;
         return this;
     }
 
 
     /**
-     * add item to 售卖内存规格列表
+     * add item to 售卖CPU架构列表
      *
-     * @param availableMemorySpec
+     * @param availableCPUArch
      */
-    public void addAvailableMemorySpec(AvailableMemorySpec availableMemorySpec) {
-        if (this.availableMemorySpecs == null) {
-            this.availableMemorySpecs = new ArrayList<>();
+    public void addAvailableCPUArch(AvailableCPUArch availableCPUArch) {
+        if (this.availableCPUArchs == null) {
+            this.availableCPUArchs = new ArrayList<>();
         }
-        this.availableMemorySpecs.add(availableMemorySpec);
+        this.availableCPUArchs.add(availableCPUArch);
     }
 
 }

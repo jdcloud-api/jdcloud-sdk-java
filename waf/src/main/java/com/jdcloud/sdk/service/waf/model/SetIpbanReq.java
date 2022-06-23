@@ -48,25 +48,18 @@ public class SetIpbanReq  implements java.io.Serializable {
     private String domain;
 
     /**
-     * 检测时间 单位秒， 限制[60-600]
+     * 防护模式 1宽松模式，2正常模式，3严格模式
      * Required:true
      */
     @Required
-    private Integer detectTime;
+    private Integer ipbanMode;
 
     /**
-     * 封禁阈值，限制[1-20000]
+     * 动作配置
      * Required:true
      */
     @Required
-    private Integer threshold;
-
-    /**
-     * 封禁时间，限制[1-86400]
-     * Required:true
-     */
-    @Required
-    private Integer banTime;
+    private DenyActionCfg action;
 
 
     /**
@@ -106,57 +99,39 @@ public class SetIpbanReq  implements java.io.Serializable {
     }
 
     /**
-     * get 检测时间 单位秒， 限制[60-600]
+     * get 防护模式 1宽松模式，2正常模式，3严格模式
      *
      * @return
      */
-    public Integer getDetectTime() {
-        return detectTime;
+    public Integer getIpbanMode() {
+        return ipbanMode;
     }
 
     /**
-     * set 检测时间 单位秒， 限制[60-600]
+     * set 防护模式 1宽松模式，2正常模式，3严格模式
      *
-     * @param detectTime
+     * @param ipbanMode
      */
-    public void setDetectTime(Integer detectTime) {
-        this.detectTime = detectTime;
+    public void setIpbanMode(Integer ipbanMode) {
+        this.ipbanMode = ipbanMode;
     }
 
     /**
-     * get 封禁阈值，限制[1-20000]
-     *
-     * @return
-     */
-    public Integer getThreshold() {
-        return threshold;
-    }
-
-    /**
-     * set 封禁阈值，限制[1-20000]
-     *
-     * @param threshold
-     */
-    public void setThreshold(Integer threshold) {
-        this.threshold = threshold;
-    }
-
-    /**
-     * get 封禁时间，限制[1-86400]
+     * get 动作配置
      *
      * @return
      */
-    public Integer getBanTime() {
-        return banTime;
+    public DenyActionCfg getAction() {
+        return action;
     }
 
     /**
-     * set 封禁时间，限制[1-86400]
+     * set 动作配置
      *
-     * @param banTime
+     * @param action
      */
-    public void setBanTime(Integer banTime) {
-        this.banTime = banTime;
+    public void setAction(DenyActionCfg action) {
+        this.action = action;
     }
 
 
@@ -181,32 +156,22 @@ public class SetIpbanReq  implements java.io.Serializable {
     }
 
     /**
-     * set 检测时间 单位秒， 限制[60-600]
+     * set 防护模式 1宽松模式，2正常模式，3严格模式
      *
-     * @param detectTime
+     * @param ipbanMode
      */
-    public SetIpbanReq detectTime(Integer detectTime) {
-        this.detectTime = detectTime;
+    public SetIpbanReq ipbanMode(Integer ipbanMode) {
+        this.ipbanMode = ipbanMode;
         return this;
     }
 
     /**
-     * set 封禁阈值，限制[1-20000]
+     * set 动作配置
      *
-     * @param threshold
+     * @param action
      */
-    public SetIpbanReq threshold(Integer threshold) {
-        this.threshold = threshold;
-        return this;
-    }
-
-    /**
-     * set 封禁时间，限制[1-86400]
-     *
-     * @param banTime
-     */
-    public SetIpbanReq banTime(Integer banTime) {
-        this.banTime = banTime;
+    public SetIpbanReq action(DenyActionCfg action) {
+        this.action = action;
         return this;
     }
 

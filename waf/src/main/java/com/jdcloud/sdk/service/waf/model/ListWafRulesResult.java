@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.waf.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.service.waf.model.ListWafRuleCfg;
 import com.jdcloud.sdk.service.JdcloudResult;
 
@@ -50,9 +52,9 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
     private Integer totalCount;
 
     /**
-     * 网站waf自定义规则
+     * list
      */
-    private ListWafRuleCfg data;
+    private List<ListWafRuleCfg> list;
 
 
     /**
@@ -110,21 +112,21 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * get 网站waf自定义规则
+     * get list
      *
      * @return
      */
-    public ListWafRuleCfg getData() {
-        return data;
+    public List<ListWafRuleCfg> getList() {
+        return list;
     }
 
     /**
-     * set 网站waf自定义规则
+     * set list
      *
-     * @param data
+     * @param list
      */
-    public void setData(ListWafRuleCfg data) {
-        this.data = data;
+    public void setList(List<ListWafRuleCfg> list) {
+        this.list = list;
     }
 
 
@@ -159,14 +161,26 @@ public class ListWafRulesResult extends JdcloudResult implements java.io.Seriali
     }
 
     /**
-     * set 网站waf自定义规则
+     * set list
      *
-     * @param data
+     * @param list
      */
-    public ListWafRulesResult data(ListWafRuleCfg data) {
-        this.data = data;
+    public ListWafRulesResult list(List<ListWafRuleCfg> list) {
+        this.list = list;
         return this;
     }
 
+
+    /**
+     * add item to list
+     *
+     * @param list
+     */
+    public void addList(ListWafRuleCfg list) {
+        if (this.list == null) {
+            this.list = new ArrayList<>();
+        }
+        this.list.add(list);
+    }
 
 }

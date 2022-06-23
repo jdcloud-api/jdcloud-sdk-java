@@ -37,10 +37,33 @@ public class DescribeInstanceConfigResult extends JdcloudResult implements java.
     private static final long serialVersionUID = 1L;
 
     /**
+     * unSupportConfigs
+     */
+    private List<String> unSupportConfigs;
+
+    /**
      * instanceConfig
      */
     private List<ConfigItem> instanceConfig;
 
+
+    /**
+     * get unSupportConfigs
+     *
+     * @return
+     */
+    public List<String> getUnSupportConfigs() {
+        return unSupportConfigs;
+    }
+
+    /**
+     * set unSupportConfigs
+     *
+     * @param unSupportConfigs
+     */
+    public void setUnSupportConfigs(List<String> unSupportConfigs) {
+        this.unSupportConfigs = unSupportConfigs;
+    }
 
     /**
      * get instanceConfig
@@ -62,6 +85,16 @@ public class DescribeInstanceConfigResult extends JdcloudResult implements java.
 
 
     /**
+     * set unSupportConfigs
+     *
+     * @param unSupportConfigs
+     */
+    public DescribeInstanceConfigResult unSupportConfigs(List<String> unSupportConfigs) {
+        this.unSupportConfigs = unSupportConfigs;
+        return this;
+    }
+
+    /**
      * set instanceConfig
      *
      * @param instanceConfig
@@ -71,6 +104,18 @@ public class DescribeInstanceConfigResult extends JdcloudResult implements java.
         return this;
     }
 
+
+    /**
+     * add item to unSupportConfigs
+     *
+     * @param unSupportConfig
+     */
+    public void addUnSupportConfig(String unSupportConfig) {
+        if (this.unSupportConfigs == null) {
+            this.unSupportConfigs = new ArrayList<>();
+        }
+        this.unSupportConfigs.add(unSupportConfig);
+    }
 
     /**
      * add item to instanceConfig

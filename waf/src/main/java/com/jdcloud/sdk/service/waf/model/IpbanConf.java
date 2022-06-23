@@ -38,19 +38,14 @@ public class IpbanConf  implements java.io.Serializable {
     private Integer enable;
 
     /**
-     * 封禁时间，秒
+     * 防护模式
      */
-    private Integer banTime;
+    private Integer ipbanMode;
 
     /**
-     * 检测时间，秒
+     * 动作配置
      */
-    private Integer detectTime;
-
-    /**
-     * 封禁阈值
-     */
-    private Integer threshold;
+    private DenyActionCfg action;
 
 
     /**
@@ -72,57 +67,39 @@ public class IpbanConf  implements java.io.Serializable {
     }
 
     /**
-     * get 封禁时间，秒
+     * get 防护模式
      *
      * @return
      */
-    public Integer getBanTime() {
-        return banTime;
+    public Integer getIpbanMode() {
+        return ipbanMode;
     }
 
     /**
-     * set 封禁时间，秒
+     * set 防护模式
      *
-     * @param banTime
+     * @param ipbanMode
      */
-    public void setBanTime(Integer banTime) {
-        this.banTime = banTime;
+    public void setIpbanMode(Integer ipbanMode) {
+        this.ipbanMode = ipbanMode;
     }
 
     /**
-     * get 检测时间，秒
-     *
-     * @return
-     */
-    public Integer getDetectTime() {
-        return detectTime;
-    }
-
-    /**
-     * set 检测时间，秒
-     *
-     * @param detectTime
-     */
-    public void setDetectTime(Integer detectTime) {
-        this.detectTime = detectTime;
-    }
-
-    /**
-     * get 封禁阈值
+     * get 动作配置
      *
      * @return
      */
-    public Integer getThreshold() {
-        return threshold;
+    public DenyActionCfg getAction() {
+        return action;
     }
 
     /**
-     * set 封禁阈值
+     * set 动作配置
      *
-     * @param threshold
+     * @param action
      */
-    public void setThreshold(Integer threshold) {
-        this.threshold = threshold;
+    public void setAction(DenyActionCfg action) {
+        this.action = action;
     }
 
 
@@ -137,32 +114,22 @@ public class IpbanConf  implements java.io.Serializable {
     }
 
     /**
-     * set 封禁时间，秒
+     * set 防护模式
      *
-     * @param banTime
+     * @param ipbanMode
      */
-    public IpbanConf banTime(Integer banTime) {
-        this.banTime = banTime;
+    public IpbanConf ipbanMode(Integer ipbanMode) {
+        this.ipbanMode = ipbanMode;
         return this;
     }
 
     /**
-     * set 检测时间，秒
+     * set 动作配置
      *
-     * @param detectTime
+     * @param action
      */
-    public IpbanConf detectTime(Integer detectTime) {
-        this.detectTime = detectTime;
-        return this;
-    }
-
-    /**
-     * set 封禁阈值
-     *
-     * @param threshold
-     */
-    public IpbanConf threshold(Integer threshold) {
-        this.threshold = threshold;
+    public IpbanConf action(DenyActionCfg action) {
+        this.action = action;
         return this;
     }
 

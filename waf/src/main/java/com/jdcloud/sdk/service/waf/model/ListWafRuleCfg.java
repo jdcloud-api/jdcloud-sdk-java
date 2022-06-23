@@ -45,12 +45,12 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     private Integer id;
 
     /**
-     * 匹配动作
+     * 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      */
     private String matchAction;
 
     /**
-     * 重定向连接
+     * 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      */
     private String redirection;
 
@@ -107,7 +107,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * get 匹配动作
+     * get 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @return
      */
@@ -116,7 +116,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配动作
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param matchAction
      */
@@ -125,7 +125,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * get 重定向连接
+     * get 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @return
      */
@@ -134,7 +134,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 重定向连接
+     * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @param redirection
      */
@@ -218,7 +218,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 匹配动作
+     * set 匹配动作, 拦截:forbidden,redirect 人机识别:verify@jscookie,verify@captcha,verify@rdtcookie 观察:notice
      *
      * @param matchAction
      */
@@ -228,7 +228,7 @@ public class ListWafRuleCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 重定向连接
+     * set 跳转地址，matchAction为redirect时必须为当前实例下的域名的url，forbidden时为自定义页面名称
      *
      * @param redirection
      */

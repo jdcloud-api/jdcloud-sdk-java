@@ -34,14 +34,14 @@ public class DenyActionCfg  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 黑名单匹配动作类型 1-4 分别表示forbidden@1 redirect@2 verify@captcha3 verify@jscookie4 5-告警(自定义bot增加)，6-302cookie(自定义bot增加), 7-cc动态防护
+     * 黑名单匹配动作类型 观察 5:notice 人机识别 3:verify@captcha, 4:verify@jscookie, 6:verify@rdtcookie 拦截 1:forbidden@, 2:redirect@ 动态防护 7:cc动态防护(仅cc安全防护支持)
      * Required:true
      */
     @Required
     private Integer atOp;
 
     /**
-     * 黑名单匹配动作内容 当atOp为3/4/7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
+     * 黑名单匹配动作内容 当atOp为3-7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
      * Required:true
      */
     @Required
@@ -49,7 +49,7 @@ public class DenyActionCfg  implements java.io.Serializable {
 
 
     /**
-     * get 黑名单匹配动作类型 1-4 分别表示forbidden@1 redirect@2 verify@captcha3 verify@jscookie4 5-告警(自定义bot增加)，6-302cookie(自定义bot增加), 7-cc动态防护
+     * get 黑名单匹配动作类型 观察 5:notice 人机识别 3:verify@captcha, 4:verify@jscookie, 6:verify@rdtcookie 拦截 1:forbidden@, 2:redirect@ 动态防护 7:cc动态防护(仅cc安全防护支持)
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class DenyActionCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 黑名单匹配动作类型 1-4 分别表示forbidden@1 redirect@2 verify@captcha3 verify@jscookie4 5-告警(自定义bot增加)，6-302cookie(自定义bot增加), 7-cc动态防护
+     * set 黑名单匹配动作类型 观察 5:notice 人机识别 3:verify@captcha, 4:verify@jscookie, 6:verify@rdtcookie 拦截 1:forbidden@, 2:redirect@ 动态防护 7:cc动态防护(仅cc安全防护支持)
      *
      * @param atOp
      */
@@ -67,7 +67,7 @@ public class DenyActionCfg  implements java.io.Serializable {
     }
 
     /**
-     * get 黑名单匹配动作内容 当atOp为3/4/7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
+     * get 黑名单匹配动作内容 当atOp为3-7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class DenyActionCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 黑名单匹配动作内容 当atOp为3/4/7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
+     * set 黑名单匹配动作内容 当atOp为3-7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
      *
      * @param atVal
      */
@@ -86,7 +86,7 @@ public class DenyActionCfg  implements java.io.Serializable {
 
 
     /**
-     * set 黑名单匹配动作类型 1-4 分别表示forbidden@1 redirect@2 verify@captcha3 verify@jscookie4 5-告警(自定义bot增加)，6-302cookie(自定义bot增加), 7-cc动态防护
+     * set 黑名单匹配动作类型 观察 5:notice 人机识别 3:verify@captcha, 4:verify@jscookie, 6:verify@rdtcookie 拦截 1:forbidden@, 2:redirect@ 动态防护 7:cc动态防护(仅cc安全防护支持)
      *
      * @param atOp
      */
@@ -96,7 +96,7 @@ public class DenyActionCfg  implements java.io.Serializable {
     }
 
     /**
-     * set 黑名单匹配动作内容 当atOp为3/4/7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
+     * set 黑名单匹配动作内容 当atOp为3-7时，atVal为空，atOp&#x3D;1时，atVal为自定义页面,atOp&#x3D;2时，atVal为跳转url。
      *
      * @param atVal
      */
