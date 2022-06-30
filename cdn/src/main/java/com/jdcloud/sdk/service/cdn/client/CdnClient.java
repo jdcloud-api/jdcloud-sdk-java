@@ -49,51 +49,30 @@ import com.jdcloud.sdk.service.cdn.client.QueryDomainGroupDetailExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainTempProKeysRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainTempProKeysResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainTempProKeysExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryWafBlackRuleSwitchRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryWafBlackRuleSwitchResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryWafBlackRuleSwitchExecutor;
 import com.jdcloud.sdk.service.cdn.model.DeleteHttpHeaderRequest;
 import com.jdcloud.sdk.service.cdn.model.DeleteHttpHeaderResponse;
 import com.jdcloud.sdk.service.cdn.client.DeleteHttpHeaderExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetCustomErrorPageRequest;
-import com.jdcloud.sdk.service.cdn.model.SetCustomErrorPageResponse;
-import com.jdcloud.sdk.service.cdn.client.SetCustomErrorPageExecutor;
-import com.jdcloud.sdk.service.cdn.model.DisableWafBlackRulesRequest;
-import com.jdcloud.sdk.service.cdn.model.DisableWafBlackRulesResponse;
-import com.jdcloud.sdk.service.cdn.client.DisableWafBlackRulesExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryWebProtectSettingsRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryWebProtectSettingsResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryWebProtectSettingsExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryGeoAreasRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryGeoAreasResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryGeoAreasExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryStatisticsTopUrlRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryStatisticsTopUrlResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryStatisticsTopUrlExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainConfigStatusRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainConfigStatusResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainConfigStatusExecutor;
-import com.jdcloud.sdk.service.cdn.model.GetAllUpperNodeIpListRequest;
-import com.jdcloud.sdk.service.cdn.model.GetAllUpperNodeIpListResponse;
-import com.jdcloud.sdk.service.cdn.client.GetAllUpperNodeIpListExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryLiveStatisticsAreaDataGroupByRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryLiveStatisticsAreaDataGroupByResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryLiveStatisticsAreaDataGroupByExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetIpBlackListRequest;
 import com.jdcloud.sdk.service.cdn.model.SetIpBlackListResponse;
 import com.jdcloud.sdk.service.cdn.client.SetIpBlackListExecutor;
 import com.jdcloud.sdk.service.cdn.model.UpdateWafWhiteRuleRequest;
 import com.jdcloud.sdk.service.cdn.model.UpdateWafWhiteRuleResponse;
 import com.jdcloud.sdk.service.cdn.client.UpdateWafWhiteRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.SpeedLimitRequest;
+import com.jdcloud.sdk.service.cdn.model.SpeedLimitResponse;
+import com.jdcloud.sdk.service.cdn.client.SpeedLimitExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetDomainConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.SetDomainConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.SetDomainConfigExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryCustomizedDirBandWidthRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryCustomizedDirBandWidthResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryCustomizedDirBandWidthExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetRefreshLimitRequest;
-import com.jdcloud.sdk.service.cdn.model.SetRefreshLimitResponse;
-import com.jdcloud.sdk.service.cdn.client.SetRefreshLimitExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetFollowRedirectRequest;
 import com.jdcloud.sdk.service.cdn.model.SetFollowRedirectResponse;
 import com.jdcloud.sdk.service.cdn.client.SetFollowRedirectExecutor;
@@ -103,30 +82,15 @@ import com.jdcloud.sdk.service.cdn.client.StartDomainExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryBandWithAreaRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryBandWithAreaResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryBandWithAreaExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetAccesskeyConfigRequest;
-import com.jdcloud.sdk.service.cdn.model.SetAccesskeyConfigResponse;
-import com.jdcloud.sdk.service.cdn.client.SetAccesskeyConfigExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetRangeRequest;
 import com.jdcloud.sdk.service.cdn.model.SetRangeResponse;
 import com.jdcloud.sdk.service.cdn.client.SetRangeExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetLiveDomainIpBlackListRequest;
-import com.jdcloud.sdk.service.cdn.model.SetLiveDomainIpBlackListResponse;
-import com.jdcloud.sdk.service.cdn.client.SetLiveDomainIpBlackListExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetCCProtectSwitchRequest;
-import com.jdcloud.sdk.service.cdn.model.SetCCProtectSwitchResponse;
-import com.jdcloud.sdk.service.cdn.client.SetCCProtectSwitchExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetExtraCacheTimeRequest;
 import com.jdcloud.sdk.service.cdn.model.SetExtraCacheTimeResponse;
 import com.jdcloud.sdk.service.cdn.client.SetExtraCacheTimeExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryMonitorRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryMonitorResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryMonitorExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryCdnUserQuotaRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryCdnUserQuotaResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryCdnUserQuotaExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainAppsRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainAppsResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryLiveDomainAppsExecutor;
 import com.jdcloud.sdk.service.cdn.model.DisableWafWhiteRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.DisableWafWhiteRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.DisableWafWhiteRulesExecutor;
@@ -151,12 +115,6 @@ import com.jdcloud.sdk.service.cdn.client.QueryMixStatisticsDataExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryRefreshTaskRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryRefreshTaskResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryRefreshTaskExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryHttp2Request;
-import com.jdcloud.sdk.service.cdn.model.QueryHttp2Response;
-import com.jdcloud.sdk.service.cdn.client.QueryHttp2Executor;
-import com.jdcloud.sdk.service.cdn.model.GetDomainDetailRequest;
-import com.jdcloud.sdk.service.cdn.model.GetDomainDetailResponse;
-import com.jdcloud.sdk.service.cdn.client.GetDomainDetailExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetNetProtectionRulesSwitchRequest;
 import com.jdcloud.sdk.service.cdn.model.SetNetProtectionRulesSwitchResponse;
 import com.jdcloud.sdk.service.cdn.client.SetNetProtectionRulesSwitchExecutor;
@@ -166,39 +124,18 @@ import com.jdcloud.sdk.service.cdn.client.ConfigHttp2Executor;
 import com.jdcloud.sdk.service.cdn.model.SearchAttackLogRequest;
 import com.jdcloud.sdk.service.cdn.model.SearchAttackLogResponse;
 import com.jdcloud.sdk.service.cdn.client.SearchAttackLogExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupByAreaRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupByAreaResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryStatisticsDataGroupByAreaExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetLiveDomainAccessKeyRequest;
 import com.jdcloud.sdk.service.cdn.model.SetLiveDomainAccessKeyResponse;
 import com.jdcloud.sdk.service.cdn.client.SetLiveDomainAccessKeyExecutor;
-import com.jdcloud.sdk.service.cdn.model.QuerywafBlackRulesRequest;
-import com.jdcloud.sdk.service.cdn.model.QuerywafBlackRulesResponse;
-import com.jdcloud.sdk.service.cdn.client.QuerywafBlackRulesExecutor;
-import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenStreamRequest;
-import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenStreamResponse;
-import com.jdcloud.sdk.service.cdn.client.DeleteForbiddenStreamExecutor;
-import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceRulesRequest;
-import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceRulesResponse;
-import com.jdcloud.sdk.service.cdn.client.ConfigBackSourceRulesExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetWafWhiteRuleSwitchRequest;
 import com.jdcloud.sdk.service.cdn.model.SetWafWhiteRuleSwitchResponse;
 import com.jdcloud.sdk.service.cdn.client.SetWafWhiteRuleSwitchExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryRefreshTaskByIdsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryRefreshTaskByIdsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryRefreshTaskByIdsExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupSumRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupSumResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryStatisticsDataGroupSumExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryDomainAllConfigClassifyRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryDomainAllConfigClassifyResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryDomainAllConfigClassifyExecutor;
 import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceOssRequest;
 import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceOssResponse;
 import com.jdcloud.sdk.service.cdn.client.ConfigBackSourceOssExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryBandRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryBandResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryBandExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetHttpHeaderRequest;
 import com.jdcloud.sdk.service.cdn.model.SetHttpHeaderResponse;
 import com.jdcloud.sdk.service.cdn.client.SetHttpHeaderExecutor;
@@ -208,57 +145,24 @@ import com.jdcloud.sdk.service.cdn.client.CheckWhetherIpBelongToJCloudExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryPurgeTaskRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryPurgeTaskResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryPurgeTaskExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetGzipRequest;
-import com.jdcloud.sdk.service.cdn.model.SetGzipResponse;
-import com.jdcloud.sdk.service.cdn.client.SetGzipExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryLiveStatisticsDataRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryLiveStatisticsDataResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryLiveStatisticsDataExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryDomainsLogRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryDomainsLogResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryDomainsLogExecutor;
 import com.jdcloud.sdk.service.cdn.model.EnableCCProtectRuleRequest;
 import com.jdcloud.sdk.service.cdn.model.EnableCCProtectRuleResponse;
 import com.jdcloud.sdk.service.cdn.client.EnableCCProtectRuleExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetReferRequest;
-import com.jdcloud.sdk.service.cdn.model.SetReferResponse;
-import com.jdcloud.sdk.service.cdn.client.SetReferExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainDetailRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainDetailResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryLiveDomainDetailExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryIpBlackSettingStatusRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryIpBlackSettingStatusResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryIpBlackSettingStatusExecutor;
-import com.jdcloud.sdk.service.cdn.model.ModifyDomainTempInstRequest;
-import com.jdcloud.sdk.service.cdn.model.ModifyDomainTempInstResponse;
-import com.jdcloud.sdk.service.cdn.client.ModifyDomainTempInstExecutor;
-import com.jdcloud.sdk.service.cdn.model.CreateLiveDomainPrefecthTaskRequest;
-import com.jdcloud.sdk.service.cdn.model.CreateLiveDomainPrefecthTaskResponse;
-import com.jdcloud.sdk.service.cdn.client.CreateLiveDomainPrefecthTaskExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryStatisticsTopIpRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryStatisticsTopIpResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryStatisticsTopIpExecutor;
-import com.jdcloud.sdk.service.cdn.model.WafQueryAttackDetailsRequest;
-import com.jdcloud.sdk.service.cdn.model.WafQueryAttackDetailsResponse;
-import com.jdcloud.sdk.service.cdn.client.WafQueryAttackDetailsExecutor;
-import com.jdcloud.sdk.service.cdn.model.StopMonitorRequest;
-import com.jdcloud.sdk.service.cdn.model.StopMonitorResponse;
-import com.jdcloud.sdk.service.cdn.client.StopMonitorExecutor;
 import com.jdcloud.sdk.service.cdn.model.DelDomainTempInstanceRequest;
 import com.jdcloud.sdk.service.cdn.model.DelDomainTempInstanceResponse;
 import com.jdcloud.sdk.service.cdn.client.DelDomainTempInstanceExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryHttpHeaderRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryHttpHeaderResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryHttpHeaderExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryWafRegionsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryWafRegionsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryWafRegionsExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourceOssRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourceOssResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryBackSourceOssExecutor;
-import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskForCallbackV2Request;
-import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskForCallbackV2Response;
-import com.jdcloud.sdk.service.cdn.client.CreateRefreshTaskForCallbackV2Executor;
 import com.jdcloud.sdk.service.cdn.model.QueryWafWhiteRuleSwitchRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryWafWhiteRuleSwitchResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryWafWhiteRuleSwitchExecutor;
@@ -268,12 +172,6 @@ import com.jdcloud.sdk.service.cdn.client.CreateCCProtectRuleExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryLivePrefetchTaskRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryLivePrefetchTaskResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryLivePrefetchTaskExecutor;
-import com.jdcloud.sdk.service.cdn.model.CreateWafWhiteRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.CreateWafWhiteRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.CreateWafWhiteRuleExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListV2Request;
-import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListV2Response;
-import com.jdcloud.sdk.service.cdn.client.QueryAreaIspListV2Executor;
 import com.jdcloud.sdk.service.cdn.model.QueryAvgBandwidthForPCdnRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryAvgBandwidthForPCdnResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryAvgBandwidthForPCdnExecutor;
@@ -286,9 +184,6 @@ import com.jdcloud.sdk.service.cdn.client.QueryCustomErrorPageExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainLogRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainLogResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainLogExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetHttpTypeRequest;
-import com.jdcloud.sdk.service.cdn.model.SetHttpTypeResponse;
-import com.jdcloud.sdk.service.cdn.client.SetHttpTypeExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainIpBlackWhiteListRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainIpBlackWhiteListResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryLiveDomainIpBlackWhiteListExecutor;
@@ -304,12 +199,285 @@ import com.jdcloud.sdk.service.cdn.client.QueryMixTrafficGroupSumExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryOssBucketsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryOssBucketsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryOssBucketsExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryAttackTypeCountRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryAttackTypeCountResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryAttackTypeCountExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryUnForbiddenStatusRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryUnForbiddenStatusResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryUnForbiddenStatusExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetIgnoreQueryStringRequest;
+import com.jdcloud.sdk.service.cdn.model.SetIgnoreQueryStringResponse;
+import com.jdcloud.sdk.service.cdn.client.SetIgnoreQueryStringExecutor;
+import com.jdcloud.sdk.service.cdn.model.UpdatePrefetchTaskRequest;
+import com.jdcloud.sdk.service.cdn.model.UpdatePrefetchTaskResponse;
+import com.jdcloud.sdk.service.cdn.client.UpdatePrefetchTaskExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetLiveDomainBackSourceRequest;
+import com.jdcloud.sdk.service.cdn.model.SetLiveDomainBackSourceResponse;
+import com.jdcloud.sdk.service.cdn.client.SetLiveDomainBackSourceExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetFollowSourceProtocolRequest;
+import com.jdcloud.sdk.service.cdn.model.SetFollowSourceProtocolResponse;
+import com.jdcloud.sdk.service.cdn.client.SetFollowSourceProtocolExecutor;
+import com.jdcloud.sdk.service.cdn.model.GetSslCertListRequest;
+import com.jdcloud.sdk.service.cdn.model.GetSslCertListResponse;
+import com.jdcloud.sdk.service.cdn.client.GetSslCertListExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryUrlRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryUrlRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryUrlRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.CreateDomainRequest;
+import com.jdcloud.sdk.service.cdn.model.CreateDomainResponse;
+import com.jdcloud.sdk.service.cdn.client.CreateDomainExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryDirBandwidthRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryDirBandwidthResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryDirBandwidthExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetCacheRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.SetCacheRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.SetCacheRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetVideoDraftRequest;
+import com.jdcloud.sdk.service.cdn.model.SetVideoDraftResponse;
+import com.jdcloud.sdk.service.cdn.client.SetVideoDraftExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryCCProtectSwitchRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryCCProtectSwitchResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryCCProtectSwitchExecutor;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourcePathRequest;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourcePathResponse;
+import com.jdcloud.sdk.service.cdn.client.ConfigBackSourcePathExecutor;
+import com.jdcloud.sdk.service.cdn.model.OperateShareCacheRequest;
+import com.jdcloud.sdk.service.cdn.model.OperateShareCacheResponse;
+import com.jdcloud.sdk.service.cdn.client.OperateShareCacheExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryMixStatisticsWithAreaDataRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryMixStatisticsWithAreaDataResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryMixStatisticsWithAreaDataExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetWebProtectSwitchRequest;
+import com.jdcloud.sdk.service.cdn.model.SetWebProtectSwitchResponse;
+import com.jdcloud.sdk.service.cdn.client.SetWebProtectSwitchExecutor;
+import com.jdcloud.sdk.service.cdn.model.ConfigUrlRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.ConfigUrlRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.ConfigUrlRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryAreaIspListExecutor;
+import com.jdcloud.sdk.service.cdn.model.DeleteCCProtectRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.DeleteCCProtectRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.DeleteCCProtectRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryStreamInfoRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryStreamInfoResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryStreamInfoExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetWafBlackRuleSwitchRequest;
+import com.jdcloud.sdk.service.cdn.model.SetWafBlackRuleSwitchResponse;
+import com.jdcloud.sdk.service.cdn.client.SetWafBlackRuleSwitchExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetMonitorRequest;
+import com.jdcloud.sdk.service.cdn.model.SetMonitorResponse;
+import com.jdcloud.sdk.service.cdn.client.SetMonitorExecutor;
+import com.jdcloud.sdk.service.cdn.model.DeleteDomainRequest;
+import com.jdcloud.sdk.service.cdn.model.DeleteDomainResponse;
+import com.jdcloud.sdk.service.cdn.client.DeleteDomainExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryBackSourcePathRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryBackSourcePathResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryBackSourcePathExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryJBoxAvgBandwidthRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryJBoxAvgBandwidthResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryJBoxAvgBandwidthExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryUserAgentRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryUserAgentResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryUserAgentExecutor;
+import com.jdcloud.sdk.service.cdn.model.DeleteCacheRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.DeleteCacheRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.DeleteCacheRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryPrefetchTaskRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryPrefetchTaskResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryPrefetchTaskExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryJDBoxStatisticsDataExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryForbiddenInfoListRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryForbiddenInfoListResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryForbiddenInfoListExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryFollowSourceProtocolRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryFollowSourceProtocolResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryFollowSourceProtocolExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstListRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstListResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryDomainTempInstListExecutor;
+import com.jdcloud.sdk.service.cdn.model.UpdateDomainGroupRequest;
+import com.jdcloud.sdk.service.cdn.model.UpdateDomainGroupResponse;
+import com.jdcloud.sdk.service.cdn.client.UpdateDomainGroupExecutor;
+import com.jdcloud.sdk.service.cdn.model.BatCreatePrefetchTaskRequest;
+import com.jdcloud.sdk.service.cdn.model.BatCreatePrefetchTaskResponse;
+import com.jdcloud.sdk.service.cdn.client.BatCreatePrefetchTaskExecutor;
+import com.jdcloud.sdk.service.cdn.model.StopDomainRequest;
+import com.jdcloud.sdk.service.cdn.model.StopDomainResponse;
+import com.jdcloud.sdk.service.cdn.client.StopDomainExecutor;
+import com.jdcloud.sdk.service.cdn.model.ConfigServiceNoticeRequest;
+import com.jdcloud.sdk.service.cdn.model.ConfigServiceNoticeResponse;
+import com.jdcloud.sdk.service.cdn.client.ConfigServiceNoticeExecutor;
+import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskRequest;
+import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskResponse;
+import com.jdcloud.sdk.service.cdn.client.CreateRefreshTaskExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryNetProtectionRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryNetProtectionRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryNetProtectionRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryDdosGraphRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryDdosGraphResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryDdosGraphExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataWithGroupRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataWithGroupResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryJDBoxStatisticsDataWithGroupExecutor;
+import com.jdcloud.sdk.service.cdn.model.UpdateWafBlackRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.UpdateWafBlackRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.UpdateWafBlackRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.EnableWafBlackRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.EnableWafBlackRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.EnableWafBlackRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryAccesskeyConfigRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryAccesskeyConfigResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryAccesskeyConfigExecutor;
+import com.jdcloud.sdk.service.cdn.model.DisableCCProtectRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.DisableCCProtectRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.DisableCCProtectRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.ExecuteDomainCopyRequest;
+import com.jdcloud.sdk.service.cdn.model.ExecuteDomainCopyResponse;
+import com.jdcloud.sdk.service.cdn.client.ExecuteDomainCopyExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryLiveTrafficGroupSumRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryLiveTrafficGroupSumResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryLiveTrafficGroupSumExecutor;
+import com.jdcloud.sdk.service.cdn.model.DeleteWafWhiteRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.DeleteWafWhiteRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.DeleteWafWhiteRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetFilterArgsRequest;
+import com.jdcloud.sdk.service.cdn.model.SetFilterArgsResponse;
+import com.jdcloud.sdk.service.cdn.client.SetFilterArgsExecutor;
+import com.jdcloud.sdk.service.cdn.model.CreateForbiddenInfoRequest;
+import com.jdcloud.sdk.service.cdn.model.CreateForbiddenInfoResponse;
+import com.jdcloud.sdk.service.cdn.client.CreateForbiddenInfoExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryOnlineBillingTypeRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryOnlineBillingTypeResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryOnlineBillingTypeExecutor;
+import com.jdcloud.sdk.service.cdn.model.BatchSetExtraCacheTimeRequest;
+import com.jdcloud.sdk.service.cdn.model.BatchSetExtraCacheTimeResponse;
+import com.jdcloud.sdk.service.cdn.client.BatchSetExtraCacheTimeExecutor;
+import com.jdcloud.sdk.service.cdn.model.UpdateCacheRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.UpdateCacheRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.UpdateCacheRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetWafSwitchRequest;
+import com.jdcloud.sdk.service.cdn.model.SetWafSwitchResponse;
+import com.jdcloud.sdk.service.cdn.client.SetWafSwitchExecutor;
+import com.jdcloud.sdk.service.cdn.model.UploadCertRequest;
+import com.jdcloud.sdk.service.cdn.model.UploadCertResponse;
+import com.jdcloud.sdk.service.cdn.client.UploadCertExecutor;
+import com.jdcloud.sdk.service.cdn.model.CreateCacheRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.CreateCacheRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.CreateCacheRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetSourceRequest;
+import com.jdcloud.sdk.service.cdn.model.SetSourceResponse;
+import com.jdcloud.sdk.service.cdn.client.SetSourceExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryWafBlackRuleSwitchRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryWafBlackRuleSwitchResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryWafBlackRuleSwitchExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetCustomErrorPageRequest;
+import com.jdcloud.sdk.service.cdn.model.SetCustomErrorPageResponse;
+import com.jdcloud.sdk.service.cdn.client.SetCustomErrorPageExecutor;
+import com.jdcloud.sdk.service.cdn.model.DisableWafBlackRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.DisableWafBlackRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.DisableWafBlackRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryWebProtectSettingsRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryWebProtectSettingsResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryWebProtectSettingsExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryStatisticsTopUrlRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryStatisticsTopUrlResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryStatisticsTopUrlExecutor;
+import com.jdcloud.sdk.service.cdn.model.GetAllUpperNodeIpListRequest;
+import com.jdcloud.sdk.service.cdn.model.GetAllUpperNodeIpListResponse;
+import com.jdcloud.sdk.service.cdn.client.GetAllUpperNodeIpListExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryLiveStatisticsAreaDataGroupByRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryLiveStatisticsAreaDataGroupByResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryLiveStatisticsAreaDataGroupByExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetRefreshLimitRequest;
+import com.jdcloud.sdk.service.cdn.model.SetRefreshLimitResponse;
+import com.jdcloud.sdk.service.cdn.client.SetRefreshLimitExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetAccesskeyConfigRequest;
+import com.jdcloud.sdk.service.cdn.model.SetAccesskeyConfigResponse;
+import com.jdcloud.sdk.service.cdn.client.SetAccesskeyConfigExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetLiveDomainIpBlackListRequest;
+import com.jdcloud.sdk.service.cdn.model.SetLiveDomainIpBlackListResponse;
+import com.jdcloud.sdk.service.cdn.client.SetLiveDomainIpBlackListExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetCCProtectSwitchRequest;
+import com.jdcloud.sdk.service.cdn.model.SetCCProtectSwitchResponse;
+import com.jdcloud.sdk.service.cdn.client.SetCCProtectSwitchExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryCdnUserQuotaRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryCdnUserQuotaResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryCdnUserQuotaExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainAppsRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainAppsResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryLiveDomainAppsExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryHttp2Request;
+import com.jdcloud.sdk.service.cdn.model.QueryHttp2Response;
+import com.jdcloud.sdk.service.cdn.client.QueryHttp2Executor;
+import com.jdcloud.sdk.service.cdn.model.GetDomainDetailRequest;
+import com.jdcloud.sdk.service.cdn.model.GetDomainDetailResponse;
+import com.jdcloud.sdk.service.cdn.client.GetDomainDetailExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupByAreaRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupByAreaResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryStatisticsDataGroupByAreaExecutor;
+import com.jdcloud.sdk.service.cdn.model.QuerywafBlackRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.QuerywafBlackRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.QuerywafBlackRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenStreamRequest;
+import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenStreamResponse;
+import com.jdcloud.sdk.service.cdn.client.DeleteForbiddenStreamExecutor;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceRulesRequest;
+import com.jdcloud.sdk.service.cdn.model.ConfigBackSourceRulesResponse;
+import com.jdcloud.sdk.service.cdn.client.ConfigBackSourceRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupSumRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataGroupSumResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryStatisticsDataGroupSumExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainAllConfigClassifyRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainAllConfigClassifyResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryDomainAllConfigClassifyExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryBandRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryBandResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryBandExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetGzipRequest;
+import com.jdcloud.sdk.service.cdn.model.SetGzipResponse;
+import com.jdcloud.sdk.service.cdn.client.SetGzipExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainsLogRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainsLogResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryDomainsLogExecutor;
+import com.jdcloud.sdk.service.cdn.model.SetReferRequest;
+import com.jdcloud.sdk.service.cdn.model.SetReferResponse;
+import com.jdcloud.sdk.service.cdn.client.SetReferExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainDetailRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainDetailResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryLiveDomainDetailExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryIpBlackSettingStatusRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryIpBlackSettingStatusResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryIpBlackSettingStatusExecutor;
+import com.jdcloud.sdk.service.cdn.model.ModifyDomainTempInstRequest;
+import com.jdcloud.sdk.service.cdn.model.ModifyDomainTempInstResponse;
+import com.jdcloud.sdk.service.cdn.client.ModifyDomainTempInstExecutor;
+import com.jdcloud.sdk.service.cdn.model.CreateLiveDomainPrefecthTaskRequest;
+import com.jdcloud.sdk.service.cdn.model.CreateLiveDomainPrefecthTaskResponse;
+import com.jdcloud.sdk.service.cdn.client.CreateLiveDomainPrefecthTaskExecutor;
+import com.jdcloud.sdk.service.cdn.model.WafQueryAttackDetailsRequest;
+import com.jdcloud.sdk.service.cdn.model.WafQueryAttackDetailsResponse;
+import com.jdcloud.sdk.service.cdn.client.WafQueryAttackDetailsExecutor;
+import com.jdcloud.sdk.service.cdn.model.StopMonitorRequest;
+import com.jdcloud.sdk.service.cdn.model.StopMonitorResponse;
+import com.jdcloud.sdk.service.cdn.client.StopMonitorExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryHttpHeaderRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryHttpHeaderResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryHttpHeaderExecutor;
+import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskForCallbackV2Request;
+import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskForCallbackV2Response;
+import com.jdcloud.sdk.service.cdn.client.CreateRefreshTaskForCallbackV2Executor;
+import com.jdcloud.sdk.service.cdn.model.CreateWafWhiteRuleRequest;
+import com.jdcloud.sdk.service.cdn.model.CreateWafWhiteRuleResponse;
+import com.jdcloud.sdk.service.cdn.client.CreateWafWhiteRuleExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListV2Request;
+import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListV2Response;
+import com.jdcloud.sdk.service.cdn.client.QueryAreaIspListV2Executor;
+import com.jdcloud.sdk.service.cdn.model.SetHttpTypeRequest;
+import com.jdcloud.sdk.service.cdn.model.SetHttpTypeResponse;
+import com.jdcloud.sdk.service.cdn.client.SetHttpTypeExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryAttackTypeCountRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryAttackTypeCountResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryAttackTypeCountExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetAuthConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.SetAuthConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.SetAuthConfigExecutor;
@@ -340,36 +508,15 @@ import com.jdcloud.sdk.service.cdn.client.GetDomainListExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetLiveDomainReferRequest;
 import com.jdcloud.sdk.service.cdn.model.SetLiveDomainReferResponse;
 import com.jdcloud.sdk.service.cdn.client.SetLiveDomainReferExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetIgnoreQueryStringRequest;
-import com.jdcloud.sdk.service.cdn.model.SetIgnoreQueryStringResponse;
-import com.jdcloud.sdk.service.cdn.client.SetIgnoreQueryStringExecutor;
 import com.jdcloud.sdk.service.cdn.model.BatchDeleteDomainGroupRequest;
 import com.jdcloud.sdk.service.cdn.model.BatchDeleteDomainGroupResponse;
 import com.jdcloud.sdk.service.cdn.client.BatchDeleteDomainGroupExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetUserAgentConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.SetUserAgentConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.SetUserAgentConfigExecutor;
-import com.jdcloud.sdk.service.cdn.model.UpdatePrefetchTaskRequest;
-import com.jdcloud.sdk.service.cdn.model.UpdatePrefetchTaskResponse;
-import com.jdcloud.sdk.service.cdn.client.UpdatePrefetchTaskExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetNetProtectionRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.SetNetProtectionRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.SetNetProtectionRulesExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetLiveDomainBackSourceRequest;
-import com.jdcloud.sdk.service.cdn.model.SetLiveDomainBackSourceResponse;
-import com.jdcloud.sdk.service.cdn.client.SetLiveDomainBackSourceExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetFollowSourceProtocolRequest;
-import com.jdcloud.sdk.service.cdn.model.SetFollowSourceProtocolResponse;
-import com.jdcloud.sdk.service.cdn.client.SetFollowSourceProtocolExecutor;
-import com.jdcloud.sdk.service.cdn.model.GetSslCertListRequest;
-import com.jdcloud.sdk.service.cdn.model.GetSslCertListResponse;
-import com.jdcloud.sdk.service.cdn.client.GetSslCertListExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryUrlRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryUrlRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryUrlRuleExecutor;
-import com.jdcloud.sdk.service.cdn.model.CreateDomainRequest;
-import com.jdcloud.sdk.service.cdn.model.CreateDomainResponse;
-import com.jdcloud.sdk.service.cdn.client.CreateDomainExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainTempInstExecutor;
@@ -379,81 +526,27 @@ import com.jdcloud.sdk.service.cdn.client.QueryServiceIpExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainConfigExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryDirBandwidthRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryDirBandwidthResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryDirBandwidthExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetCacheRulesRequest;
-import com.jdcloud.sdk.service.cdn.model.SetCacheRulesResponse;
-import com.jdcloud.sdk.service.cdn.client.SetCacheRulesExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetVideoDraftRequest;
-import com.jdcloud.sdk.service.cdn.model.SetVideoDraftResponse;
-import com.jdcloud.sdk.service.cdn.client.SetVideoDraftExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryCCProtectSwitchRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryCCProtectSwitchResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryCCProtectSwitchExecutor;
-import com.jdcloud.sdk.service.cdn.model.ConfigBackSourcePathRequest;
-import com.jdcloud.sdk.service.cdn.model.ConfigBackSourcePathResponse;
-import com.jdcloud.sdk.service.cdn.client.ConfigBackSourcePathExecutor;
 import com.jdcloud.sdk.service.cdn.model.UpdateWebProtectSettingsRequest;
 import com.jdcloud.sdk.service.cdn.model.UpdateWebProtectSettingsResponse;
 import com.jdcloud.sdk.service.cdn.client.UpdateWebProtectSettingsExecutor;
-import com.jdcloud.sdk.service.cdn.model.OperateShareCacheRequest;
-import com.jdcloud.sdk.service.cdn.model.OperateShareCacheResponse;
-import com.jdcloud.sdk.service.cdn.client.OperateShareCacheExecutor;
 import com.jdcloud.sdk.service.cdn.model.EnableWafWhiteRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.EnableWafWhiteRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.EnableWafWhiteRulesExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryRefreshLimitRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryRefreshLimitResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryRefreshLimitExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryMixStatisticsWithAreaDataRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryMixStatisticsWithAreaDataResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryMixStatisticsWithAreaDataExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetWebProtectSwitchRequest;
-import com.jdcloud.sdk.service.cdn.model.SetWebProtectSwitchResponse;
-import com.jdcloud.sdk.service.cdn.client.SetWebProtectSwitchExecutor;
 import com.jdcloud.sdk.service.cdn.model.OperateLiveDomainIpBlackListRequest;
 import com.jdcloud.sdk.service.cdn.model.OperateLiveDomainIpBlackListResponse;
 import com.jdcloud.sdk.service.cdn.client.OperateLiveDomainIpBlackListExecutor;
-import com.jdcloud.sdk.service.cdn.model.ConfigUrlRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.ConfigUrlRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.ConfigUrlRuleExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryStatisticsDataResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryStatisticsDataExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryAreaIspListResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryAreaIspListExecutor;
-import com.jdcloud.sdk.service.cdn.model.DeleteCCProtectRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.DeleteCCProtectRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.DeleteCCProtectRuleExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryStreamInfoRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryStreamInfoResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryStreamInfoExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetWafBlackRuleSwitchRequest;
-import com.jdcloud.sdk.service.cdn.model.SetWafBlackRuleSwitchResponse;
-import com.jdcloud.sdk.service.cdn.client.SetWafBlackRuleSwitchExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDefaultHttpHeaderKeyRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDefaultHttpHeaderKeyResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDefaultHttpHeaderKeyExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetMonitorRequest;
-import com.jdcloud.sdk.service.cdn.model.SetMonitorResponse;
-import com.jdcloud.sdk.service.cdn.client.SetMonitorExecutor;
-import com.jdcloud.sdk.service.cdn.model.DeleteDomainRequest;
-import com.jdcloud.sdk.service.cdn.model.DeleteDomainResponse;
-import com.jdcloud.sdk.service.cdn.client.DeleteDomainExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryBackSourcePathRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryBackSourcePathResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryBackSourcePathExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryJBoxAvgBandwidthRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryJBoxAvgBandwidthResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryJBoxAvgBandwidthExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetSourceAuthConfigRequest;
 import com.jdcloud.sdk.service.cdn.model.SetSourceAuthConfigResponse;
 import com.jdcloud.sdk.service.cdn.client.SetSourceAuthConfigExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryUserAgentRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryUserAgentResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryUserAgentExecutor;
 import com.jdcloud.sdk.service.cdn.model.GetDomainListByFilterRequest;
 import com.jdcloud.sdk.service.cdn.model.GetDomainListByFilterResponse;
 import com.jdcloud.sdk.service.cdn.client.GetDomainListByFilterExecutor;
@@ -466,9 +559,6 @@ import com.jdcloud.sdk.service.cdn.client.QueryFollowRedirectExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryPushDomainORAppOrStreamRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryPushDomainORAppOrStreamResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryPushDomainORAppOrStreamExecutor;
-import com.jdcloud.sdk.service.cdn.model.DeleteCacheRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.DeleteCacheRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.DeleteCacheRuleExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryNetProtectionRulesSwitchRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryNetProtectionRulesSwitchResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryNetProtectionRulesSwitchExecutor;
@@ -478,135 +568,48 @@ import com.jdcloud.sdk.service.cdn.client.QueryDomainGroupListExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainsNotInGroupRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainsNotInGroupResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainsNotInGroupExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryPrefetchTaskRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryPrefetchTaskResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryPrefetchTaskExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryJDBoxStatisticsDataExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryForbiddenInfoListRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryForbiddenInfoListResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryForbiddenInfoListExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryFollowSourceProtocolRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryFollowSourceProtocolResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryFollowSourceProtocolExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstListRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstListResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryDomainTempInstListExecutor;
-import com.jdcloud.sdk.service.cdn.model.UpdateDomainGroupRequest;
-import com.jdcloud.sdk.service.cdn.model.UpdateDomainGroupResponse;
-import com.jdcloud.sdk.service.cdn.client.UpdateDomainGroupExecutor;
-import com.jdcloud.sdk.service.cdn.model.BatCreatePrefetchTaskRequest;
-import com.jdcloud.sdk.service.cdn.model.BatCreatePrefetchTaskResponse;
-import com.jdcloud.sdk.service.cdn.client.BatCreatePrefetchTaskExecutor;
 import com.jdcloud.sdk.service.cdn.model.GetSslCertDetailRequest;
 import com.jdcloud.sdk.service.cdn.model.GetSslCertDetailResponse;
 import com.jdcloud.sdk.service.cdn.client.GetSslCertDetailExecutor;
-import com.jdcloud.sdk.service.cdn.model.StopDomainRequest;
-import com.jdcloud.sdk.service.cdn.model.StopDomainResponse;
-import com.jdcloud.sdk.service.cdn.client.StopDomainExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryWafSwitchRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryWafSwitchResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryWafSwitchExecutor;
 import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenInfoRequest;
 import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenInfoResponse;
 import com.jdcloud.sdk.service.cdn.client.DeleteForbiddenInfoExecutor;
-import com.jdcloud.sdk.service.cdn.model.ConfigServiceNoticeRequest;
-import com.jdcloud.sdk.service.cdn.model.ConfigServiceNoticeResponse;
-import com.jdcloud.sdk.service.cdn.client.ConfigServiceNoticeExecutor;
-import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskRequest;
-import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskResponse;
-import com.jdcloud.sdk.service.cdn.client.CreateRefreshTaskExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryNetProtectionRulesRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryNetProtectionRulesResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryNetProtectionRulesExecutor;
 import com.jdcloud.sdk.service.cdn.model.PreviewCertificateRequest;
 import com.jdcloud.sdk.service.cdn.model.PreviewCertificateResponse;
 import com.jdcloud.sdk.service.cdn.client.PreviewCertificateExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourceRuleRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourceRuleResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryBackSourceRuleExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryDdosGraphRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryDdosGraphResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryDdosGraphExecutor;
 import com.jdcloud.sdk.service.cdn.model.DeleteWafBlackRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.DeleteWafBlackRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.DeleteWafBlackRulesExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourceRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryBackSourceRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryBackSourceRulesExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataWithGroupRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryJDBoxStatisticsDataWithGroupResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryJDBoxStatisticsDataWithGroupExecutor;
-import com.jdcloud.sdk.service.cdn.model.UpdateWafBlackRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.UpdateWafBlackRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.UpdateWafBlackRuleExecutor;
-import com.jdcloud.sdk.service.cdn.model.EnableWafBlackRulesRequest;
-import com.jdcloud.sdk.service.cdn.model.EnableWafBlackRulesResponse;
-import com.jdcloud.sdk.service.cdn.client.EnableWafBlackRulesExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryAccesskeyConfigRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryAccesskeyConfigResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryAccesskeyConfigExecutor;
-import com.jdcloud.sdk.service.cdn.model.DisableCCProtectRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.DisableCCProtectRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.DisableCCProtectRuleExecutor;
 import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskForCallbackRequest;
 import com.jdcloud.sdk.service.cdn.model.CreateRefreshTaskForCallbackResponse;
 import com.jdcloud.sdk.service.cdn.client.CreateRefreshTaskForCallbackExecutor;
-import com.jdcloud.sdk.service.cdn.model.ExecuteDomainCopyRequest;
-import com.jdcloud.sdk.service.cdn.model.ExecuteDomainCopyResponse;
-import com.jdcloud.sdk.service.cdn.client.ExecuteDomainCopyExecutor;
 import com.jdcloud.sdk.service.cdn.model.OperatePurgeTaskRequest;
 import com.jdcloud.sdk.service.cdn.model.OperatePurgeTaskResponse;
 import com.jdcloud.sdk.service.cdn.client.OperatePurgeTaskExecutor;
 import com.jdcloud.sdk.service.cdn.model.BatchCreateRequest;
 import com.jdcloud.sdk.service.cdn.model.BatchCreateResponse;
 import com.jdcloud.sdk.service.cdn.client.BatchCreateExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryLiveTrafficGroupSumRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryLiveTrafficGroupSumResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryLiveTrafficGroupSumExecutor;
-import com.jdcloud.sdk.service.cdn.model.DeleteWafWhiteRulesRequest;
-import com.jdcloud.sdk.service.cdn.model.DeleteWafWhiteRulesResponse;
-import com.jdcloud.sdk.service.cdn.client.DeleteWafWhiteRulesExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetFilterArgsRequest;
-import com.jdcloud.sdk.service.cdn.model.SetFilterArgsResponse;
-import com.jdcloud.sdk.service.cdn.client.SetFilterArgsExecutor;
 import com.jdcloud.sdk.service.cdn.model.UpdateCCProtectRuleRequest;
 import com.jdcloud.sdk.service.cdn.model.UpdateCCProtectRuleResponse;
 import com.jdcloud.sdk.service.cdn.client.UpdateCCProtectRuleExecutor;
-import com.jdcloud.sdk.service.cdn.model.CreateForbiddenInfoRequest;
-import com.jdcloud.sdk.service.cdn.model.CreateForbiddenInfoResponse;
-import com.jdcloud.sdk.service.cdn.client.CreateForbiddenInfoExecutor;
-import com.jdcloud.sdk.service.cdn.model.QueryOnlineBillingTypeRequest;
-import com.jdcloud.sdk.service.cdn.model.QueryOnlineBillingTypeResponse;
-import com.jdcloud.sdk.service.cdn.client.QueryOnlineBillingTypeExecutor;
-import com.jdcloud.sdk.service.cdn.model.BatchSetExtraCacheTimeRequest;
-import com.jdcloud.sdk.service.cdn.model.BatchSetExtraCacheTimeResponse;
-import com.jdcloud.sdk.service.cdn.client.BatchSetExtraCacheTimeExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryRefreshTaskByIdRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryRefreshTaskByIdResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryRefreshTaskByIdExecutor;
-import com.jdcloud.sdk.service.cdn.model.UpdateCacheRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.UpdateCacheRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.UpdateCacheRuleExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetWafSwitchRequest;
-import com.jdcloud.sdk.service.cdn.model.SetWafSwitchResponse;
-import com.jdcloud.sdk.service.cdn.client.SetWafSwitchExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryFilterArgsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryFilterArgsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryFilterArgsExecutor;
-import com.jdcloud.sdk.service.cdn.model.UploadCertRequest;
-import com.jdcloud.sdk.service.cdn.model.UploadCertResponse;
-import com.jdcloud.sdk.service.cdn.client.UploadCertExecutor;
-import com.jdcloud.sdk.service.cdn.model.CreateCacheRuleRequest;
-import com.jdcloud.sdk.service.cdn.model.CreateCacheRuleResponse;
-import com.jdcloud.sdk.service.cdn.client.CreateCacheRuleExecutor;
 import com.jdcloud.sdk.service.cdn.model.BatchCreateLiveDomainRequest;
 import com.jdcloud.sdk.service.cdn.model.BatchCreateLiveDomainResponse;
 import com.jdcloud.sdk.service.cdn.client.BatchCreateLiveDomainExecutor;
-import com.jdcloud.sdk.service.cdn.model.SetSourceRequest;
-import com.jdcloud.sdk.service.cdn.model.SetSourceResponse;
-import com.jdcloud.sdk.service.cdn.client.SetSourceExecutor;
 
 /**
  * cdnClient
@@ -615,7 +618,7 @@ public class CdnClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.8";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "cdn.jdcloud-api.com";
     public final static String ServiceName = "cdn";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -724,17 +727,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询WAF黑名单开关
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryWafBlackRuleSwitchResponse queryWafBlackRuleSwitch(QueryWafBlackRuleSwitchRequest request) throws JdcloudSdkException {
-        return new QueryWafBlackRuleSwitchExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除httpHeader
      *
      * @param request
@@ -743,39 +735,6 @@ public class CdnClient extends JdcloudClient {
      */
     public DeleteHttpHeaderResponse deleteHttpHeader(DeleteHttpHeaderRequest request) throws JdcloudSdkException {
         return new DeleteHttpHeaderExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置自定义错误页面信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetCustomErrorPageResponse setCustomErrorPage(SetCustomErrorPageRequest request) throws JdcloudSdkException {
-        return new SetCustomErrorPageExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 禁用WAF黑名单
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DisableWafBlackRulesResponse disableWafBlackRules(DisableWafBlackRulesRequest request) throws JdcloudSdkException {
-        return new DisableWafBlackRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询web防护开关
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryWebProtectSettingsResponse queryWebProtectSettings(QueryWebProtectSettingsRequest request) throws JdcloudSdkException {
-        return new QueryWebProtectSettingsExecutor().client(this).execute(request);
     }
 
     /**
@@ -790,17 +749,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询TOP Url，仅可查询中国境内的相关信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryStatisticsTopUrlResponse queryStatisticsTopUrl(QueryStatisticsTopUrlRequest request) throws JdcloudSdkException {
-        return new QueryStatisticsTopUrlExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询域名配置状态
      *
      * @param request
@@ -809,28 +757,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryDomainConfigStatusResponse queryDomainConfigStatus(QueryDomainConfigStatusRequest request) throws JdcloudSdkException {
         return new QueryDomainConfigStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 获取所有上层节点的ip
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetAllUpperNodeIpListResponse getAllUpperNodeIpList(GetAllUpperNodeIpListRequest request) throws JdcloudSdkException {
-        return new GetAllUpperNodeIpListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 分地区及运营商查询统计数据
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryLiveStatisticsAreaDataGroupByResponse queryLiveStatisticsAreaDataGroupBy(QueryLiveStatisticsAreaDataGroupByRequest request) throws JdcloudSdkException {
-        return new QueryLiveStatisticsAreaDataGroupByExecutor().client(this).execute(request);
     }
 
     /**
@@ -856,6 +782,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 域名限速
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SpeedLimitResponse speedLimit(SpeedLimitRequest request) throws JdcloudSdkException {
+        return new SpeedLimitExecutor().client(this).execute(request);
+    }
+
+    /**
      * 更新域名配置
      *
      * @param request
@@ -875,17 +812,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryCustomizedDirBandWidthResponse queryCustomizedDirBandWidth(QueryCustomizedDirBandWidthRequest request) throws JdcloudSdkException {
         return new QueryCustomizedDirBandWidthExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置用户刷新预热限额
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetRefreshLimitResponse setRefreshLimit(SetRefreshLimitRequest request) throws JdcloudSdkException {
-        return new SetRefreshLimitExecutor().client(this).execute(request);
     }
 
     /**
@@ -922,17 +848,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 设置url鉴权
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetAccesskeyConfigResponse setAccesskeyConfig(SetAccesskeyConfigRequest request) throws JdcloudSdkException {
-        return new SetAccesskeyConfigExecutor().client(this).execute(request);
-    }
-
-    /**
      * 设置range参数
      *
      * @param request
@@ -941,28 +856,6 @@ public class CdnClient extends JdcloudClient {
      */
     public SetRangeResponse setRange(SetRangeRequest request) throws JdcloudSdkException {
         return new SetRangeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置直播域名ip黑白名单
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetLiveDomainIpBlackListResponse setLiveDomainIpBlackList(SetLiveDomainIpBlackListRequest request) throws JdcloudSdkException {
-        return new SetLiveDomainIpBlackListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置CC 防护开关
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetCCProtectSwitchResponse setCCProtectSwitch(SetCCProtectSwitchRequest request) throws JdcloudSdkException {
-        return new SetCCProtectSwitchExecutor().client(this).execute(request);
     }
 
     /**
@@ -985,28 +878,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryMonitorResponse queryMonitor(QueryMonitorRequest request) throws JdcloudSdkException {
         return new QueryMonitorExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询用户刷新预热封禁限额
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryCdnUserQuotaResponse queryCdnUserQuota(QueryCdnUserQuotaRequest request) throws JdcloudSdkException {
-        return new QueryCdnUserQuotaExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询直播域名app列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryLiveDomainAppsResponse queryLiveDomainApps(QueryLiveDomainAppsRequest request) throws JdcloudSdkException {
-        return new QueryLiveDomainAppsExecutor().client(this).execute(request);
     }
 
     /**
@@ -1098,28 +969,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询http2配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryHttp2Response queryHttp2(QueryHttp2Request request) throws JdcloudSdkException {
-        return new QueryHttp2Executor().client(this).execute(request);
-    }
-
-    /**
-     * 查询加速域名详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetDomainDetailResponse getDomainDetail(GetDomainDetailRequest request) throws JdcloudSdkException {
-        return new GetDomainDetailExecutor().client(this).execute(request);
-    }
-
-    /**
      * 设置网络防护层规则总开关
      *
      * @param request
@@ -1153,17 +1002,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 分地区及运营商查询统计数据
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryStatisticsDataGroupByAreaResponse queryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) throws JdcloudSdkException {
-        return new QueryStatisticsDataGroupByAreaExecutor().client(this).execute(request);
-    }
-
-    /**
      * 设置URL鉴权
      *
      * @param request
@@ -1172,39 +1010,6 @@ public class CdnClient extends JdcloudClient {
      */
     public SetLiveDomainAccessKeyResponse setLiveDomainAccessKey(SetLiveDomainAccessKeyRequest request) throws JdcloudSdkException {
         return new SetLiveDomainAccessKeyExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询WAF黑名单规则列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QuerywafBlackRulesResponse querywafBlackRules(QuerywafBlackRulesRequest request) throws JdcloudSdkException {
-        return new QuerywafBlackRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除禁播流
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteForbiddenStreamResponse deleteForbiddenStream(DeleteForbiddenStreamRequest request) throws JdcloudSdkException {
-        return new DeleteForbiddenStreamExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 回源改写批量配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ConfigBackSourceRulesResponse configBackSourceRules(ConfigBackSourceRulesRequest request) throws JdcloudSdkException {
-        return new ConfigBackSourceRulesExecutor().client(this).execute(request);
     }
 
     /**
@@ -1230,28 +1035,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询统计数据并进行汇总加和
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryStatisticsDataGroupSumResponse queryStatisticsDataGroupSum(QueryStatisticsDataGroupSumRequest request) throws JdcloudSdkException {
-        return new QueryStatisticsDataGroupSumExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询域名的全部分类配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryDomainAllConfigClassifyResponse queryDomainAllConfigClassify(QueryDomainAllConfigClassifyRequest request) throws JdcloudSdkException {
-        return new QueryDomainAllConfigClassifyExecutor().client(this).execute(request);
-    }
-
-    /**
      * 设置回源OSS鉴权
      *
      * @param request
@@ -1260,17 +1043,6 @@ public class CdnClient extends JdcloudClient {
      */
     public ConfigBackSourceOssResponse configBackSourceOss(ConfigBackSourceOssRequest request) throws JdcloudSdkException {
         return new ConfigBackSourceOssExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 带宽查询接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryBandResponse queryBand(QueryBandRequest request) throws JdcloudSdkException {
-        return new QueryBandExecutor().client(this).execute(request);
     }
 
     /**
@@ -1307,17 +1079,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 设置gzip
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetGzipResponse setGzip(SetGzipRequest request) throws JdcloudSdkException {
-        return new SetGzipExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询统计数据
      *
      * @param request
@@ -1326,17 +1087,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryLiveStatisticsDataResponse queryLiveStatisticsData(QueryLiveStatisticsDataRequest request) throws JdcloudSdkException {
         return new QueryLiveStatisticsDataExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 批量域名查询日志
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryDomainsLogResponse queryDomainsLog(QueryDomainsLogRequest request) throws JdcloudSdkException {
-        return new QueryDomainsLogExecutor().client(this).execute(request);
     }
 
     /**
@@ -1351,61 +1101,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 设置域名refer
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetReferResponse setRefer(SetReferRequest request) throws JdcloudSdkException {
-        return new SetReferExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询直播域名详情v1
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryLiveDomainDetailResponse queryLiveDomainDetail(QueryLiveDomainDetailRequest request) throws JdcloudSdkException {
-        return new QueryLiveDomainDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询waf ip黑名单配置状态
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryIpBlackSettingStatusResponse queryIpBlackSettingStatus(QueryIpBlackSettingStatusRequest request) throws JdcloudSdkException {
-        return new QueryIpBlackSettingStatusExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建修改模板实例
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ModifyDomainTempInstResponse modifyDomainTempInst(ModifyDomainTempInstRequest request) throws JdcloudSdkException {
-        return new ModifyDomainTempInstExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建直播预热任务
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateLiveDomainPrefecthTaskResponse createLiveDomainPrefecthTask(CreateLiveDomainPrefecthTaskRequest request) throws JdcloudSdkException {
-        return new CreateLiveDomainPrefecthTaskExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询TOP IP，仅可查询中国境内的相关信息
      *
      * @param request
@@ -1417,28 +1112,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询攻击记录详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public WafQueryAttackDetailsResponse wafQueryAttackDetails(WafQueryAttackDetailsRequest request) throws JdcloudSdkException {
-        return new WafQueryAttackDetailsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 停止源站监控
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StopMonitorResponse stopMonitor(StopMonitorRequest request) throws JdcloudSdkException {
-        return new StopMonitorExecutor().client(this).execute(request);
-    }
-
-    /**
      * 删除修改模板实例
      *
      * @param request
@@ -1447,17 +1120,6 @@ public class CdnClient extends JdcloudClient {
      */
     public DelDomainTempInstanceResponse delDomainTempInstance(DelDomainTempInstanceRequest request) throws JdcloudSdkException {
         return new DelDomainTempInstanceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询http header头
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryHttpHeaderResponse queryHttpHeader(QueryHttpHeaderRequest request) throws JdcloudSdkException {
-        return new QueryHttpHeaderExecutor().client(this).execute(request);
     }
 
     /**
@@ -1480,17 +1142,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryBackSourceOssResponse queryBackSourceOss(QueryBackSourceOssRequest request) throws JdcloudSdkException {
         return new QueryBackSourceOssExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建刷新预热回调任务
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateRefreshTaskForCallbackV2Response createRefreshTaskForCallbackV2(CreateRefreshTaskForCallbackV2Request request) throws JdcloudSdkException {
-        return new CreateRefreshTaskForCallbackV2Executor().client(this).execute(request);
     }
 
     /**
@@ -1524,28 +1175,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryLivePrefetchTaskResponse queryLivePrefetchTask(QueryLivePrefetchTaskRequest request) throws JdcloudSdkException {
         return new QueryLivePrefetchTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 新增一条白名单规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateWafWhiteRuleResponse createWafWhiteRule(CreateWafWhiteRuleRequest request) throws JdcloudSdkException {
-        return new CreateWafWhiteRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查找地域运营商列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryAreaIspListV2Response queryAreaIspListV2(QueryAreaIspListV2Request request) throws JdcloudSdkException {
-        return new QueryAreaIspListV2Executor().client(this).execute(request);
     }
 
     /**
@@ -1590,17 +1219,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryDomainLogResponse queryDomainLog(QueryDomainLogRequest request) throws JdcloudSdkException {
         return new QueryDomainLogExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置http协议
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetHttpTypeResponse setHttpType(SetHttpTypeRequest request) throws JdcloudSdkException {
-        return new SetHttpTypeExecutor().client(this).execute(request);
     }
 
     /**
@@ -1659,17 +1277,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 攻击类型统计接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryAttackTypeCountResponse queryAttackTypeCount(QueryAttackTypeCountRequest request) throws JdcloudSdkException {
-        return new QueryAttackTypeCountExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询解封状态
      *
      * @param request
@@ -1678,6 +1285,1018 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryUnForbiddenStatusResponse queryUnForbiddenStatus(QueryUnForbiddenStatusRequest request) throws JdcloudSdkException {
         return new QueryUnForbiddenStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置忽略参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetIgnoreQueryStringResponse setIgnoreQueryString(SetIgnoreQueryStringRequest request) throws JdcloudSdkException {
+        return new SetIgnoreQueryStringExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新预热任务接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdatePrefetchTaskResponse updatePrefetchTask(UpdatePrefetchTaskRequest request) throws JdcloudSdkException {
+        return new UpdatePrefetchTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置直播域名回源信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetLiveDomainBackSourceResponse setLiveDomainBackSource(SetLiveDomainBackSourceRequest request) throws JdcloudSdkException {
+        return new SetLiveDomainBackSourceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置协议跟随回源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetFollowSourceProtocolResponse setFollowSourceProtocol(SetFollowSourceProtocolRequest request) throws JdcloudSdkException {
+        return new SetFollowSourceProtocolExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看证书列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetSslCertListResponse getSslCertList(GetSslCertListRequest request) throws JdcloudSdkException {
+        return new GetSslCertListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询Url改写配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryUrlRuleResponse queryUrlRule(QueryUrlRuleRequest request) throws JdcloudSdkException {
+        return new QueryUrlRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建点播加速域名
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateDomainResponse createDomain(CreateDomainRequest request) throws JdcloudSdkException {
+        return new CreateDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询目录带宽，仅有部分用户支持该功能
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDirBandwidthResponse queryDirBandwidth(QueryDirBandwidthRequest request) throws JdcloudSdkException {
+        return new QueryDirBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量添加缓存规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetCacheRulesResponse setCacheRules(SetCacheRulesRequest request) throws JdcloudSdkException {
+        return new SetCacheRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置视频拖拽
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetVideoDraftResponse setVideoDraft(SetVideoDraftRequest request) throws JdcloudSdkException {
+        return new SetVideoDraftExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询CC 防护开关
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryCCProtectSwitchResponse queryCCProtectSwitch(QueryCCProtectSwitchRequest request) throws JdcloudSdkException {
+        return new QueryCCProtectSwitchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 多path回源配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ConfigBackSourcePathResponse configBackSourcePath(ConfigBackSourcePathRequest request) throws JdcloudSdkException {
+        return new ConfigBackSourcePathExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 泛域名共享缓存
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OperateShareCacheResponse operateShareCache(OperateShareCacheRequest request) throws JdcloudSdkException {
+        return new OperateShareCacheExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分地区及运营商查询统计数据，仅可查询中国境内的相关信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryMixStatisticsWithAreaDataResponse queryMixStatisticsWithAreaData(QueryMixStatisticsWithAreaDataRequest request) throws JdcloudSdkException {
+        return new QueryMixStatisticsWithAreaDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置web防护开关
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetWebProtectSwitchResponse setWebProtectSwitch(SetWebProtectSwitchRequest request) throws JdcloudSdkException {
+        return new SetWebProtectSwitchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * URL改写配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ConfigUrlRuleResponse configUrlRule(ConfigUrlRuleRequest request) throws JdcloudSdkException {
+        return new ConfigUrlRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查找地域运营商列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryAreaIspListResponse queryAreaIspList(QueryAreaIspListRequest request) throws JdcloudSdkException {
+        return new QueryAreaIspListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除ccProtectRule
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCCProtectRuleResponse deleteCCProtectRule(DeleteCCProtectRuleRequest request) throws JdcloudSdkException {
+        return new DeleteCCProtectRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分页查询直播流数据接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryStreamInfoResponse queryStreamInfo(QueryStreamInfoRequest request) throws JdcloudSdkException {
+        return new QueryStreamInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置WAF黑名单开关
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetWafBlackRuleSwitchResponse setWafBlackRuleSwitch(SetWafBlackRuleSwitchRequest request) throws JdcloudSdkException {
+        return new SetWafBlackRuleSwitchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置源站监控信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetMonitorResponse setMonitor(SetMonitorRequest request) throws JdcloudSdkException {
+        return new SetMonitorExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除加速域名
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteDomainResponse deleteDomain(DeleteDomainRequest request) throws JdcloudSdkException {
+        return new DeleteDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询回源path
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryBackSourcePathResponse queryBackSourcePath(QueryBackSourcePathRequest request) throws JdcloudSdkException {
+        return new QueryBackSourcePathExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询平均带宽
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryJBoxAvgBandwidthResponse queryJBoxAvgBandwidth(QueryJBoxAvgBandwidthRequest request) throws JdcloudSdkException {
+        return new QueryJBoxAvgBandwidthExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置userAgent信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryUserAgentResponse queryUserAgent(QueryUserAgentRequest request) throws JdcloudSdkException {
+        return new QueryUserAgentExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除缓存规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteCacheRuleResponse deleteCacheRule(DeleteCacheRuleRequest request) throws JdcloudSdkException {
+        return new DeleteCacheRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询预热任务接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryPrefetchTaskResponse queryPrefetchTask(QueryPrefetchTaskRequest request) throws JdcloudSdkException {
+        return new QueryPrefetchTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 无线宝按条件查询的统计接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryJDBoxStatisticsDataResponse queryJDBoxStatisticsData(QueryJDBoxStatisticsDataRequest request) throws JdcloudSdkException {
+        return new QueryJDBoxStatisticsDataExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询封禁信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryForbiddenInfoListResponse queryForbiddenInfoList(QueryForbiddenInfoListRequest request) throws JdcloudSdkException {
+        return new QueryForbiddenInfoListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询协议跟随回源
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryFollowSourceProtocolResponse queryFollowSourceProtocol(QueryFollowSourceProtocolRequest request) throws JdcloudSdkException {
+        return new QueryFollowSourceProtocolExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询模板实例列表接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDomainTempInstListResponse queryDomainTempInstList(QueryDomainTempInstListRequest request) throws JdcloudSdkException {
+        return new QueryDomainTempInstListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新域名组
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateDomainGroupResponse updateDomainGroup(UpdateDomainGroupRequest request) throws JdcloudSdkException {
+        return new UpdateDomainGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建预热任务接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BatCreatePrefetchTaskResponse batCreatePrefetchTask(BatCreatePrefetchTaskRequest request) throws JdcloudSdkException {
+        return new BatCreatePrefetchTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止加速域名
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopDomainResponse stopDomain(StopDomainRequest request) throws JdcloudSdkException {
+        return new StopDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 配置服务通知接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ConfigServiceNoticeResponse configServiceNotice(ConfigServiceNoticeRequest request) throws JdcloudSdkException {
+        return new ConfigServiceNoticeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建刷新预热任务，
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRefreshTaskResponse createRefreshTask(CreateRefreshTaskRequest request) throws JdcloudSdkException {
+        return new CreateRefreshTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询网络防护层规则接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryNetProtectionRulesResponse queryNetProtectionRules(QueryNetProtectionRulesRequest request) throws JdcloudSdkException {
+        return new QueryNetProtectionRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * DDOS攻击报表接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDdosGraphResponse queryDdosGraph(QueryDdosGraphRequest request) throws JdcloudSdkException {
+        return new QueryDdosGraphExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 无线宝按group查询的统计接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryJDBoxStatisticsDataWithGroupResponse queryJDBoxStatisticsDataWithGroup(QueryJDBoxStatisticsDataWithGroupRequest request) throws JdcloudSdkException {
+        return new QueryJDBoxStatisticsDataWithGroupExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改指定的黑名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateWafBlackRuleResponse updateWafBlackRule(UpdateWafBlackRuleRequest request) throws JdcloudSdkException {
+        return new UpdateWafBlackRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 启用WAF黑名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableWafBlackRulesResponse enableWafBlackRules(EnableWafBlackRulesRequest request) throws JdcloudSdkException {
+        return new EnableWafBlackRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询url鉴权
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryAccesskeyConfigResponse queryAccesskeyConfig(QueryAccesskeyConfigRequest request) throws JdcloudSdkException {
+        return new QueryAccesskeyConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 禁用CC防护规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableCCProtectRuleResponse disableCCProtectRule(DisableCCProtectRuleRequest request) throws JdcloudSdkException {
+        return new DisableCCProtectRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 域名一键复制配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ExecuteDomainCopyResponse executeDomainCopy(ExecuteDomainCopyRequest request) throws JdcloudSdkException {
+        return new ExecuteDomainCopyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询统计数据并进行汇总加和
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryLiveTrafficGroupSumResponse queryLiveTrafficGroupSum(QueryLiveTrafficGroupSumRequest request) throws JdcloudSdkException {
+        return new QueryLiveTrafficGroupSumExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除WAF白名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteWafWhiteRulesResponse deleteWafWhiteRules(DeleteWafWhiteRulesRequest request) throws JdcloudSdkException {
+        return new DeleteWafWhiteRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置过滤参数
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetFilterArgsResponse setFilterArgs(SetFilterArgsRequest request) throws JdcloudSdkException {
+        return new SetFilterArgsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置封禁
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateForbiddenInfoResponse createForbiddenInfo(CreateForbiddenInfoRequest request) throws JdcloudSdkException {
+        return new CreateForbiddenInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置线上计费方式
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryOnlineBillingTypeResponse queryOnlineBillingType(QueryOnlineBillingTypeRequest request) throws JdcloudSdkException {
+        return new QueryOnlineBillingTypeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量设置异常码缓存时间
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BatchSetExtraCacheTimeResponse batchSetExtraCacheTime(BatchSetExtraCacheTimeRequest request) throws JdcloudSdkException {
+        return new BatchSetExtraCacheTimeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改缓存规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateCacheRuleResponse updateCacheRule(UpdateCacheRuleRequest request) throws JdcloudSdkException {
+        return new UpdateCacheRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置WAF总开关
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetWafSwitchResponse setWafSwitch(SetWafSwitchRequest request) throws JdcloudSdkException {
+        return new SetWafSwitchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 上传证书
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UploadCertResponse uploadCert(UploadCertRequest request) throws JdcloudSdkException {
+        return new UploadCertExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 添加缓存规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateCacheRuleResponse createCacheRule(CreateCacheRuleRequest request) throws JdcloudSdkException {
+        return new CreateCacheRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置源站信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetSourceResponse setSource(SetSourceRequest request) throws JdcloudSdkException {
+        return new SetSourceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询WAF黑名单开关
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryWafBlackRuleSwitchResponse queryWafBlackRuleSwitch(QueryWafBlackRuleSwitchRequest request) throws JdcloudSdkException {
+        return new QueryWafBlackRuleSwitchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置自定义错误页面信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetCustomErrorPageResponse setCustomErrorPage(SetCustomErrorPageRequest request) throws JdcloudSdkException {
+        return new SetCustomErrorPageExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 禁用WAF黑名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DisableWafBlackRulesResponse disableWafBlackRules(DisableWafBlackRulesRequest request) throws JdcloudSdkException {
+        return new DisableWafBlackRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询web防护开关
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryWebProtectSettingsResponse queryWebProtectSettings(QueryWebProtectSettingsRequest request) throws JdcloudSdkException {
+        return new QueryWebProtectSettingsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询TOP Url，仅可查询中国境内的相关信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryStatisticsTopUrlResponse queryStatisticsTopUrl(QueryStatisticsTopUrlRequest request) throws JdcloudSdkException {
+        return new QueryStatisticsTopUrlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取所有上层节点的ip
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetAllUpperNodeIpListResponse getAllUpperNodeIpList(GetAllUpperNodeIpListRequest request) throws JdcloudSdkException {
+        return new GetAllUpperNodeIpListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分地区及运营商查询统计数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryLiveStatisticsAreaDataGroupByResponse queryLiveStatisticsAreaDataGroupBy(QueryLiveStatisticsAreaDataGroupByRequest request) throws JdcloudSdkException {
+        return new QueryLiveStatisticsAreaDataGroupByExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置用户刷新预热限额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetRefreshLimitResponse setRefreshLimit(SetRefreshLimitRequest request) throws JdcloudSdkException {
+        return new SetRefreshLimitExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置url鉴权
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetAccesskeyConfigResponse setAccesskeyConfig(SetAccesskeyConfigRequest request) throws JdcloudSdkException {
+        return new SetAccesskeyConfigExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置直播域名ip黑白名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetLiveDomainIpBlackListResponse setLiveDomainIpBlackList(SetLiveDomainIpBlackListRequest request) throws JdcloudSdkException {
+        return new SetLiveDomainIpBlackListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置CC 防护开关
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetCCProtectSwitchResponse setCCProtectSwitch(SetCCProtectSwitchRequest request) throws JdcloudSdkException {
+        return new SetCCProtectSwitchExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询用户刷新预热封禁限额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryCdnUserQuotaResponse queryCdnUserQuota(QueryCdnUserQuotaRequest request) throws JdcloudSdkException {
+        return new QueryCdnUserQuotaExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询直播域名app列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryLiveDomainAppsResponse queryLiveDomainApps(QueryLiveDomainAppsRequest request) throws JdcloudSdkException {
+        return new QueryLiveDomainAppsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询http2配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryHttp2Response queryHttp2(QueryHttp2Request request) throws JdcloudSdkException {
+        return new QueryHttp2Executor().client(this).execute(request);
+    }
+
+    /**
+     * 查询加速域名详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDomainDetailResponse getDomainDetail(GetDomainDetailRequest request) throws JdcloudSdkException {
+        return new GetDomainDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 分地区及运营商查询统计数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryStatisticsDataGroupByAreaResponse queryStatisticsDataGroupByArea(QueryStatisticsDataGroupByAreaRequest request) throws JdcloudSdkException {
+        return new QueryStatisticsDataGroupByAreaExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询WAF黑名单规则列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QuerywafBlackRulesResponse querywafBlackRules(QuerywafBlackRulesRequest request) throws JdcloudSdkException {
+        return new QuerywafBlackRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除禁播流
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteForbiddenStreamResponse deleteForbiddenStream(DeleteForbiddenStreamRequest request) throws JdcloudSdkException {
+        return new DeleteForbiddenStreamExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 回源改写批量配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ConfigBackSourceRulesResponse configBackSourceRules(ConfigBackSourceRulesRequest request) throws JdcloudSdkException {
+        return new ConfigBackSourceRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询统计数据并进行汇总加和
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryStatisticsDataGroupSumResponse queryStatisticsDataGroupSum(QueryStatisticsDataGroupSumRequest request) throws JdcloudSdkException {
+        return new QueryStatisticsDataGroupSumExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询域名的全部分类配置
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDomainAllConfigClassifyResponse queryDomainAllConfigClassify(QueryDomainAllConfigClassifyRequest request) throws JdcloudSdkException {
+        return new QueryDomainAllConfigClassifyExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 带宽查询接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryBandResponse queryBand(QueryBandRequest request) throws JdcloudSdkException {
+        return new QueryBandExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置gzip
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetGzipResponse setGzip(SetGzipRequest request) throws JdcloudSdkException {
+        return new SetGzipExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量域名查询日志
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDomainsLogResponse queryDomainsLog(QueryDomainsLogRequest request) throws JdcloudSdkException {
+        return new QueryDomainsLogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置域名refer
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetReferResponse setRefer(SetReferRequest request) throws JdcloudSdkException {
+        return new SetReferExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询直播域名详情v1
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryLiveDomainDetailResponse queryLiveDomainDetail(QueryLiveDomainDetailRequest request) throws JdcloudSdkException {
+        return new QueryLiveDomainDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询waf ip黑名单配置状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryIpBlackSettingStatusResponse queryIpBlackSettingStatus(QueryIpBlackSettingStatusRequest request) throws JdcloudSdkException {
+        return new QueryIpBlackSettingStatusExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建修改模板实例
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyDomainTempInstResponse modifyDomainTempInst(ModifyDomainTempInstRequest request) throws JdcloudSdkException {
+        return new ModifyDomainTempInstExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建直播预热任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateLiveDomainPrefecthTaskResponse createLiveDomainPrefecthTask(CreateLiveDomainPrefecthTaskRequest request) throws JdcloudSdkException {
+        return new CreateLiveDomainPrefecthTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询攻击记录详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public WafQueryAttackDetailsResponse wafQueryAttackDetails(WafQueryAttackDetailsRequest request) throws JdcloudSdkException {
+        return new WafQueryAttackDetailsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 停止源站监控
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StopMonitorResponse stopMonitor(StopMonitorRequest request) throws JdcloudSdkException {
+        return new StopMonitorExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询http header头
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryHttpHeaderResponse queryHttpHeader(QueryHttpHeaderRequest request) throws JdcloudSdkException {
+        return new QueryHttpHeaderExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建刷新预热回调任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateRefreshTaskForCallbackV2Response createRefreshTaskForCallbackV2(CreateRefreshTaskForCallbackV2Request request) throws JdcloudSdkException {
+        return new CreateRefreshTaskForCallbackV2Executor().client(this).execute(request);
+    }
+
+    /**
+     * 新增一条白名单规则
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateWafWhiteRuleResponse createWafWhiteRule(CreateWafWhiteRuleRequest request) throws JdcloudSdkException {
+        return new CreateWafWhiteRuleExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查找地域运营商列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryAreaIspListV2Response queryAreaIspListV2(QueryAreaIspListV2Request request) throws JdcloudSdkException {
+        return new QueryAreaIspListV2Executor().client(this).execute(request);
+    }
+
+    /**
+     * 设置http协议
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetHttpTypeResponse setHttpType(SetHttpTypeRequest request) throws JdcloudSdkException {
+        return new SetHttpTypeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 攻击类型统计接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryAttackTypeCountResponse queryAttackTypeCount(QueryAttackTypeCountRequest request) throws JdcloudSdkException {
+        return new QueryAttackTypeCountExecutor().client(this).execute(request);
     }
 
     /**
@@ -1791,17 +2410,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 设置忽略参数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetIgnoreQueryStringResponse setIgnoreQueryString(SetIgnoreQueryStringRequest request) throws JdcloudSdkException {
-        return new SetIgnoreQueryStringExecutor().client(this).execute(request);
-    }
-
-    /**
      * 批量删除域名组
      *
      * @param request
@@ -1824,17 +2432,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 更新预热任务接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdatePrefetchTaskResponse updatePrefetchTask(UpdatePrefetchTaskRequest request) throws JdcloudSdkException {
-        return new UpdatePrefetchTaskExecutor().client(this).execute(request);
-    }
-
-    /**
      * 设置网络防护层规则
      *
      * @param request
@@ -1843,61 +2440,6 @@ public class CdnClient extends JdcloudClient {
      */
     public SetNetProtectionRulesResponse setNetProtectionRules(SetNetProtectionRulesRequest request) throws JdcloudSdkException {
         return new SetNetProtectionRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置直播域名回源信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetLiveDomainBackSourceResponse setLiveDomainBackSource(SetLiveDomainBackSourceRequest request) throws JdcloudSdkException {
-        return new SetLiveDomainBackSourceExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置协议跟随回源
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetFollowSourceProtocolResponse setFollowSourceProtocol(SetFollowSourceProtocolRequest request) throws JdcloudSdkException {
-        return new SetFollowSourceProtocolExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查看证书列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public GetSslCertListResponse getSslCertList(GetSslCertListRequest request) throws JdcloudSdkException {
-        return new GetSslCertListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询Url改写配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryUrlRuleResponse queryUrlRule(QueryUrlRuleRequest request) throws JdcloudSdkException {
-        return new QueryUrlRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建点播加速域名
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateDomainResponse createDomain(CreateDomainRequest request) throws JdcloudSdkException {
-        return new CreateDomainExecutor().client(this).execute(request);
     }
 
     /**
@@ -1934,61 +2476,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询目录带宽，仅有部分用户支持该功能
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryDirBandwidthResponse queryDirBandwidth(QueryDirBandwidthRequest request) throws JdcloudSdkException {
-        return new QueryDirBandwidthExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 批量添加缓存规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetCacheRulesResponse setCacheRules(SetCacheRulesRequest request) throws JdcloudSdkException {
-        return new SetCacheRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置视频拖拽
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetVideoDraftResponse setVideoDraft(SetVideoDraftRequest request) throws JdcloudSdkException {
-        return new SetVideoDraftExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询CC 防护开关
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryCCProtectSwitchResponse queryCCProtectSwitch(QueryCCProtectSwitchRequest request) throws JdcloudSdkException {
-        return new QueryCCProtectSwitchExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 多path回源配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ConfigBackSourcePathResponse configBackSourcePath(ConfigBackSourcePathRequest request) throws JdcloudSdkException {
-        return new ConfigBackSourcePathExecutor().client(this).execute(request);
-    }
-
-    /**
      * 设置web防护开关
      *
      * @param request
@@ -1997,17 +2484,6 @@ public class CdnClient extends JdcloudClient {
      */
     public UpdateWebProtectSettingsResponse updateWebProtectSettings(UpdateWebProtectSettingsRequest request) throws JdcloudSdkException {
         return new UpdateWebProtectSettingsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 泛域名共享缓存
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public OperateShareCacheResponse operateShareCache(OperateShareCacheRequest request) throws JdcloudSdkException {
-        return new OperateShareCacheExecutor().client(this).execute(request);
     }
 
     /**
@@ -2033,28 +2509,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 分地区及运营商查询统计数据，仅可查询中国境内的相关信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryMixStatisticsWithAreaDataResponse queryMixStatisticsWithAreaData(QueryMixStatisticsWithAreaDataRequest request) throws JdcloudSdkException {
-        return new QueryMixStatisticsWithAreaDataExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置web防护开关
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetWebProtectSwitchResponse setWebProtectSwitch(SetWebProtectSwitchRequest request) throws JdcloudSdkException {
-        return new SetWebProtectSwitchExecutor().client(this).execute(request);
-    }
-
-    /**
      * 开启或关闭ip黑名单
      *
      * @param request
@@ -2063,17 +2517,6 @@ public class CdnClient extends JdcloudClient {
      */
     public OperateLiveDomainIpBlackListResponse operateLiveDomainIpBlackList(OperateLiveDomainIpBlackListRequest request) throws JdcloudSdkException {
         return new OperateLiveDomainIpBlackListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * URL改写配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ConfigUrlRuleResponse configUrlRule(ConfigUrlRuleRequest request) throws JdcloudSdkException {
-        return new ConfigUrlRuleExecutor().client(this).execute(request);
     }
 
     /**
@@ -2088,50 +2531,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查找地域运营商列表
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryAreaIspListResponse queryAreaIspList(QueryAreaIspListRequest request) throws JdcloudSdkException {
-        return new QueryAreaIspListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除ccProtectRule
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteCCProtectRuleResponse deleteCCProtectRule(DeleteCCProtectRuleRequest request) throws JdcloudSdkException {
-        return new DeleteCCProtectRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 分页查询直播流数据接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryStreamInfoResponse queryStreamInfo(QueryStreamInfoRequest request) throws JdcloudSdkException {
-        return new QueryStreamInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置WAF黑名单开关
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetWafBlackRuleSwitchResponse setWafBlackRuleSwitch(SetWafBlackRuleSwitchRequest request) throws JdcloudSdkException {
-        return new SetWafBlackRuleSwitchExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询默认http header头部参数列表
      *
      * @param request
@@ -2143,50 +2542,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 设置源站监控信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetMonitorResponse setMonitor(SetMonitorRequest request) throws JdcloudSdkException {
-        return new SetMonitorExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除加速域名
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteDomainResponse deleteDomain(DeleteDomainRequest request) throws JdcloudSdkException {
-        return new DeleteDomainExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询回源path
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryBackSourcePathResponse queryBackSourcePath(QueryBackSourcePathRequest request) throws JdcloudSdkException {
-        return new QueryBackSourcePathExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询平均带宽
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryJBoxAvgBandwidthResponse queryJBoxAvgBandwidth(QueryJBoxAvgBandwidthRequest request) throws JdcloudSdkException {
-        return new QueryJBoxAvgBandwidthExecutor().client(this).execute(request);
-    }
-
-    /**
      * 回源鉴权设置
      *
      * @param request
@@ -2195,17 +2550,6 @@ public class CdnClient extends JdcloudClient {
      */
     public SetSourceAuthConfigResponse setSourceAuthConfig(SetSourceAuthConfigRequest request) throws JdcloudSdkException {
         return new SetSourceAuthConfigExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置userAgent信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryUserAgentResponse queryUserAgent(QueryUserAgentRequest request) throws JdcloudSdkException {
-        return new QueryUserAgentExecutor().client(this).execute(request);
     }
 
     /**
@@ -2253,17 +2597,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 删除缓存规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteCacheRuleResponse deleteCacheRule(DeleteCacheRuleRequest request) throws JdcloudSdkException {
-        return new DeleteCacheRuleExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询网络防护层规则
      *
      * @param request
@@ -2297,83 +2630,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询预热任务接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryPrefetchTaskResponse queryPrefetchTask(QueryPrefetchTaskRequest request) throws JdcloudSdkException {
-        return new QueryPrefetchTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 无线宝按条件查询的统计接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryJDBoxStatisticsDataResponse queryJDBoxStatisticsData(QueryJDBoxStatisticsDataRequest request) throws JdcloudSdkException {
-        return new QueryJDBoxStatisticsDataExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询封禁信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryForbiddenInfoListResponse queryForbiddenInfoList(QueryForbiddenInfoListRequest request) throws JdcloudSdkException {
-        return new QueryForbiddenInfoListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询协议跟随回源
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryFollowSourceProtocolResponse queryFollowSourceProtocol(QueryFollowSourceProtocolRequest request) throws JdcloudSdkException {
-        return new QueryFollowSourceProtocolExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询模板实例列表接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryDomainTempInstListResponse queryDomainTempInstList(QueryDomainTempInstListRequest request) throws JdcloudSdkException {
-        return new QueryDomainTempInstListExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 更新域名组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateDomainGroupResponse updateDomainGroup(UpdateDomainGroupRequest request) throws JdcloudSdkException {
-        return new UpdateDomainGroupExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建预热任务接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public BatCreatePrefetchTaskResponse batCreatePrefetchTask(BatCreatePrefetchTaskRequest request) throws JdcloudSdkException {
-        return new BatCreatePrefetchTaskExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查看证书详情
      *
      * @param request
@@ -2382,17 +2638,6 @@ public class CdnClient extends JdcloudClient {
      */
     public GetSslCertDetailResponse getSslCertDetail(GetSslCertDetailRequest request) throws JdcloudSdkException {
         return new GetSslCertDetailExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 停止加速域名
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public StopDomainResponse stopDomain(StopDomainRequest request) throws JdcloudSdkException {
-        return new StopDomainExecutor().client(this).execute(request);
     }
 
     /**
@@ -2418,39 +2663,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 配置服务通知接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ConfigServiceNoticeResponse configServiceNotice(ConfigServiceNoticeRequest request) throws JdcloudSdkException {
-        return new ConfigServiceNoticeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 创建刷新预热任务，
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateRefreshTaskResponse createRefreshTask(CreateRefreshTaskRequest request) throws JdcloudSdkException {
-        return new CreateRefreshTaskExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询网络防护层规则接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryNetProtectionRulesResponse queryNetProtectionRules(QueryNetProtectionRulesRequest request) throws JdcloudSdkException {
-        return new QueryNetProtectionRulesExecutor().client(this).execute(request);
-    }
-
-    /**
      * 预览证书
      *
      * @param request
@@ -2470,17 +2682,6 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryBackSourceRuleResponse queryBackSourceRule(QueryBackSourceRuleRequest request) throws JdcloudSdkException {
         return new QueryBackSourceRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * DDOS攻击报表接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryDdosGraphResponse queryDdosGraph(QueryDdosGraphRequest request) throws JdcloudSdkException {
-        return new QueryDdosGraphExecutor().client(this).execute(request);
     }
 
     /**
@@ -2506,61 +2707,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 无线宝按group查询的统计接口
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryJDBoxStatisticsDataWithGroupResponse queryJDBoxStatisticsDataWithGroup(QueryJDBoxStatisticsDataWithGroupRequest request) throws JdcloudSdkException {
-        return new QueryJDBoxStatisticsDataWithGroupExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 修改指定的黑名单规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateWafBlackRuleResponse updateWafBlackRule(UpdateWafBlackRuleRequest request) throws JdcloudSdkException {
-        return new UpdateWafBlackRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 启用WAF黑名单
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public EnableWafBlackRulesResponse enableWafBlackRules(EnableWafBlackRulesRequest request) throws JdcloudSdkException {
-        return new EnableWafBlackRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询url鉴权
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryAccesskeyConfigResponse queryAccesskeyConfig(QueryAccesskeyConfigRequest request) throws JdcloudSdkException {
-        return new QueryAccesskeyConfigExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 禁用CC防护规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DisableCCProtectRuleResponse disableCCProtectRule(DisableCCProtectRuleRequest request) throws JdcloudSdkException {
-        return new DisableCCProtectRuleExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建刷新预热回调任务
      *
      * @param request
@@ -2569,17 +2715,6 @@ public class CdnClient extends JdcloudClient {
      */
     public CreateRefreshTaskForCallbackResponse createRefreshTaskForCallback(CreateRefreshTaskForCallbackRequest request) throws JdcloudSdkException {
         return new CreateRefreshTaskForCallbackExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 域名一键复制配置
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public ExecuteDomainCopyResponse executeDomainCopy(ExecuteDomainCopyRequest request) throws JdcloudSdkException {
-        return new ExecuteDomainCopyExecutor().client(this).execute(request);
     }
 
     /**
@@ -2605,39 +2740,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 查询统计数据并进行汇总加和
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryLiveTrafficGroupSumResponse queryLiveTrafficGroupSum(QueryLiveTrafficGroupSumRequest request) throws JdcloudSdkException {
-        return new QueryLiveTrafficGroupSumExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 删除WAF白名单
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DeleteWafWhiteRulesResponse deleteWafWhiteRules(DeleteWafWhiteRulesRequest request) throws JdcloudSdkException {
-        return new DeleteWafWhiteRulesExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置过滤参数
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetFilterArgsResponse setFilterArgs(SetFilterArgsRequest request) throws JdcloudSdkException {
-        return new SetFilterArgsExecutor().client(this).execute(request);
-    }
-
-    /**
      * 修改CC防护规则
      *
      * @param request
@@ -2646,39 +2748,6 @@ public class CdnClient extends JdcloudClient {
      */
     public UpdateCCProtectRuleResponse updateCCProtectRule(UpdateCCProtectRuleRequest request) throws JdcloudSdkException {
         return new UpdateCCProtectRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置封禁
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateForbiddenInfoResponse createForbiddenInfo(CreateForbiddenInfoRequest request) throws JdcloudSdkException {
-        return new CreateForbiddenInfoExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置线上计费方式
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public QueryOnlineBillingTypeResponse queryOnlineBillingType(QueryOnlineBillingTypeRequest request) throws JdcloudSdkException {
-        return new QueryOnlineBillingTypeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 批量设置异常码缓存时间
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public BatchSetExtraCacheTimeResponse batchSetExtraCacheTime(BatchSetExtraCacheTimeRequest request) throws JdcloudSdkException {
-        return new BatchSetExtraCacheTimeExecutor().client(this).execute(request);
     }
 
     /**
@@ -2693,28 +2762,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 修改缓存规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpdateCacheRuleResponse updateCacheRule(UpdateCacheRuleRequest request) throws JdcloudSdkException {
-        return new UpdateCacheRuleExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置WAF总开关
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetWafSwitchResponse setWafSwitch(SetWafSwitchRequest request) throws JdcloudSdkException {
-        return new SetWafSwitchExecutor().client(this).execute(request);
-    }
-
-    /**
      * 查询保留参数信息
      *
      * @param request
@@ -2726,28 +2773,6 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
-     * 上传证书
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UploadCertResponse uploadCert(UploadCertRequest request) throws JdcloudSdkException {
-        return new UploadCertExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 添加缓存规则
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public CreateCacheRuleResponse createCacheRule(CreateCacheRuleRequest request) throws JdcloudSdkException {
-        return new CreateCacheRuleExecutor().client(this).execute(request);
-    }
-
-    /**
      * 创建直播域名
      *
      * @param request
@@ -2756,17 +2781,6 @@ public class CdnClient extends JdcloudClient {
      */
     public BatchCreateLiveDomainResponse batchCreateLiveDomain(BatchCreateLiveDomainRequest request) throws JdcloudSdkException {
         return new BatchCreateLiveDomainExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置源站信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetSourceResponse setSource(SetSourceRequest request) throws JdcloudSdkException {
-        return new SetSourceExecutor().client(this).execute(request);
     }
 
 
