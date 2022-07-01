@@ -39,7 +39,7 @@ public class DeleteSnapshotTemplateRequest extends JdcloudRequest implements jav
      * Required:true
      */
     @Required
-    private Long templateId;
+    private String templateId;
 
 
     /**
@@ -47,7 +47,7 @@ public class DeleteSnapshotTemplateRequest extends JdcloudRequest implements jav
      *
      * @return
      */
-    public Long getTemplateId() {
+    public String getTemplateId() {
         return templateId;
     }
 
@@ -56,7 +56,7 @@ public class DeleteSnapshotTemplateRequest extends JdcloudRequest implements jav
      *
      * @param templateId
      */
-    public void setTemplateId(Long templateId) {
+    public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
 
@@ -66,7 +66,7 @@ public class DeleteSnapshotTemplateRequest extends JdcloudRequest implements jav
      *
      * @param templateId
      */
-    public DeleteSnapshotTemplateRequest templateId(Long templateId) {
+    public DeleteSnapshotTemplateRequest templateId(String templateId) {
         this.templateId = templateId;
         return this;
     }

@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 视频剪辑时间线配置
@@ -35,13 +36,15 @@ public class Timeline  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的重叠部分将被忽略
+     * 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的内容将会叠加在排在前媒体轨上的画面内容之上。 多个轨道的层叠顺序与数组元素顺序一致，如：数组的第一个元素图层的最底层，第二个元素的图层在其之上，以此类推。
+     * Required:true
      */
+    @Required
     private List<MediaTrack> trackList;
 
 
     /**
-     * get 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的重叠部分将被忽略
+     * get 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的内容将会叠加在排在前媒体轨上的画面内容之上。 多个轨道的层叠顺序与数组元素顺序一致，如：数组的第一个元素图层的最底层，第二个元素的图层在其之上，以此类推。
      *
      * @return
      */
@@ -50,7 +53,7 @@ public class Timeline  implements java.io.Serializable {
     }
 
     /**
-     * set 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的重叠部分将被忽略
+     * set 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的内容将会叠加在排在前媒体轨上的画面内容之上。 多个轨道的层叠顺序与数组元素顺序一致，如：数组的第一个元素图层的最底层，第二个元素的图层在其之上，以此类推。
      *
      * @param trackList
      */
@@ -60,7 +63,7 @@ public class Timeline  implements java.io.Serializable {
 
 
     /**
-     * set 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的重叠部分将被忽略
+     * set 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的内容将会叠加在排在前媒体轨上的画面内容之上。 多个轨道的层叠顺序与数组元素顺序一致，如：数组的第一个元素图层的最底层，第二个元素的图层在其之上，以此类推。
      *
      * @param trackList
      */
@@ -71,7 +74,7 @@ public class Timeline  implements java.io.Serializable {
 
 
     /**
-     * add item to 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的重叠部分将被忽略
+     * add item to 媒体轨列表，有序，若有重合时间段，则排在后面的媒体轨上的内容将会叠加在排在前媒体轨上的画面内容之上。 多个轨道的层叠顺序与数组元素顺序一致，如：数组的第一个元素图层的最底层，第二个元素的图层在其之上，以此类推。
      *
      * @param trackList
      */

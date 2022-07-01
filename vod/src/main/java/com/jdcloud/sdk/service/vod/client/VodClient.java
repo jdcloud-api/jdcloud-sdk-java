@@ -100,6 +100,9 @@ import com.jdcloud.sdk.service.vod.client.SubmitVeditJobExecutor;
 import com.jdcloud.sdk.service.vod.model.GetDomainRequest;
 import com.jdcloud.sdk.service.vod.model.GetDomainResponse;
 import com.jdcloud.sdk.service.vod.client.GetDomainExecutor;
+import com.jdcloud.sdk.service.vod.model.ListSnapshotTasksRequest;
+import com.jdcloud.sdk.service.vod.model.ListSnapshotTasksResponse;
+import com.jdcloud.sdk.service.vod.client.ListSnapshotTasksExecutor;
 import com.jdcloud.sdk.service.vod.model.ListSnapshotTemplatesRequest;
 import com.jdcloud.sdk.service.vod.model.ListSnapshotTemplatesResponse;
 import com.jdcloud.sdk.service.vod.client.ListSnapshotTemplatesExecutor;
@@ -241,9 +244,15 @@ import com.jdcloud.sdk.service.vod.client.GetIPRuleExecutor;
 import com.jdcloud.sdk.service.vod.model.EnableDomainRequest;
 import com.jdcloud.sdk.service.vod.model.EnableDomainResponse;
 import com.jdcloud.sdk.service.vod.client.EnableDomainExecutor;
+import com.jdcloud.sdk.service.vod.model.SubmitSnapshotTaskRequest;
+import com.jdcloud.sdk.service.vod.model.SubmitSnapshotTaskResponse;
+import com.jdcloud.sdk.service.vod.client.SubmitSnapshotTaskExecutor;
 import com.jdcloud.sdk.service.vod.model.SetHttpSslRequest;
 import com.jdcloud.sdk.service.vod.model.SetHttpSslResponse;
 import com.jdcloud.sdk.service.vod.client.SetHttpSslExecutor;
+import com.jdcloud.sdk.service.vod.model.ListAllCategoriesRequest;
+import com.jdcloud.sdk.service.vod.model.ListAllCategoriesResponse;
+import com.jdcloud.sdk.service.vod.client.ListAllCategoriesExecutor;
 import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateRequest;
 import com.jdcloud.sdk.service.vod.model.CreateTranscodeTemplateResponse;
 import com.jdcloud.sdk.service.vod.client.CreateTranscodeTemplateExecutor;
@@ -273,7 +282,7 @@ public class VodClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "vod.jdcloud-api.com";
     public final static String ServiceName = "vod";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -574,9 +583,27 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 查询视频截图任务列表
+支持过滤查询：
+  - createTime,ge 最早任务创建时间
+  - createTime,le 最晚任务创建时间
+  - status,in 任务状态IN查询
+  - taskId,eq 任务ID精确查询
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListSnapshotTasksResponse listSnapshotTasks(ListSnapshotTasksRequest request) throws JdcloudSdkException {
+        return new ListSnapshotTasksExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询截图模板列表。
 允许通过条件过滤查询，支持的过滤字段如下：
-  - templateType[eq] 按模板类型精确查询
+  - snapshotType[eq] 按模板类型精确查询
+  - templateId[eq] 按模板ID精确查询
 
      *
      * @param request
@@ -1107,6 +1134,18 @@ public class VodClient extends JdcloudClient {
     }
 
     /**
+     * 提交截图作业
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SubmitSnapshotTaskResponse submitSnapshotTask(SubmitSnapshotTaskRequest request) throws JdcloudSdkException {
+        return new SubmitSnapshotTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置CDN域名SSL配置
      *
      * @param request
@@ -1115,6 +1154,17 @@ public class VodClient extends JdcloudClient {
      */
     public SetHttpSslResponse setHttpSsl(SetHttpSslRequest request) throws JdcloudSdkException {
         return new SetHttpSslExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询所有分类
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ListAllCategoriesResponse listAllCategories(ListAllCategoriesRequest request) throws JdcloudSdkException {
+        return new ListAllCategoriesExecutor().client(this).execute(request);
     }
 
     /**

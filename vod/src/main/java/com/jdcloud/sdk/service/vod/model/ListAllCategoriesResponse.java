@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Vedit Project
- * 视频剪辑工程管理相关接口
+ * Category
+ * 分类管理相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,9 +27,9 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改视频剪辑工程信息
+ * 查询所有分类
  */
-public class UpdateVeditProjectResponse extends JdcloudResponse<UpdateVeditProjectResult> implements java.io.Serializable {
+public class ListAllCategoriesResponse extends JdcloudResponse<ListAllCategoriesResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

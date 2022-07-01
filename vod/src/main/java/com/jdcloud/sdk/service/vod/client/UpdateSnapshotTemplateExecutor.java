@@ -35,7 +35,7 @@ class UpdateSnapshotTemplateExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "PATCH";
+        return "PUT";
     }
 
     @Override
