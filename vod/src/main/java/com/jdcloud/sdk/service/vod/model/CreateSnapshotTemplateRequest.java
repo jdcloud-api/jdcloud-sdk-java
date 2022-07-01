@@ -25,6 +25,8 @@
 package com.jdcloud.sdk.service.vod.model;
 
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.vod.model.ImageSampleConfig;
+import com.jdcloud.sdk.service.vod.model.ImageSpriteConfig;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -35,7 +37,7 @@ public class CreateSnapshotTemplateRequest extends JdcloudRequest implements jav
     private static final long serialVersionUID = 1L;
 
     /**
-     * 模板名称
+     * 模板标题。长度不超过 128 个字节。UTF-8 编码。
      * Required:true
      */
     @Required
@@ -46,24 +48,22 @@ public class CreateSnapshotTemplateRequest extends JdcloudRequest implements jav
   sample - 采样截图模板
   sprite - 雪碧图模板
 
-     * Required:true
      */
-    @Required
-    private String templateType;
+    private String snapshotType;
 
     /**
-     * 模板配置，JSON格式的字符串
-若 templateType 取值 sample，则JSON字符串须符合 SnapshotTemplateSampleConfigInfo 格式
-若 templateType 取值 sprite，则JSON字符串须符合 SnapshotTemplateSpriteConfigInfo 格式
-
-     * Required:true
+     * 采样截图模板配置
      */
-    @Required
-    private String templateConfig;
+    private ImageSampleConfig imageSampleConfig;
+
+    /**
+     * 雪碧图模板配置
+     */
+    private ImageSpriteConfig imageSpriteConfig;
 
 
     /**
-     * get 模板名称
+     * get 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @return
      */
@@ -72,7 +72,7 @@ public class CreateSnapshotTemplateRequest extends JdcloudRequest implements jav
     }
 
     /**
-     * set 模板名称
+     * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @param templateName
      */
@@ -88,8 +88,8 @@ public class CreateSnapshotTemplateRequest extends JdcloudRequest implements jav
      *
      * @return
      */
-    public String getTemplateType() {
-        return templateType;
+    public String getSnapshotType() {
+        return snapshotType;
     }
 
     /**
@@ -98,39 +98,51 @@ public class CreateSnapshotTemplateRequest extends JdcloudRequest implements jav
   sprite - 雪碧图模板
 
      *
-     * @param templateType
+     * @param snapshotType
      */
-    public void setTemplateType(String templateType) {
-        this.templateType = templateType;
+    public void setSnapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
     }
 
     /**
-     * get 模板配置，JSON格式的字符串
-若 templateType 取值 sample，则JSON字符串须符合 SnapshotTemplateSampleConfigInfo 格式
-若 templateType 取值 sprite，则JSON字符串须符合 SnapshotTemplateSpriteConfigInfo 格式
-
+     * get 采样截图模板配置
      *
      * @return
      */
-    public String getTemplateConfig() {
-        return templateConfig;
+    public ImageSampleConfig getImageSampleConfig() {
+        return imageSampleConfig;
     }
 
     /**
-     * set 模板配置，JSON格式的字符串
-若 templateType 取值 sample，则JSON字符串须符合 SnapshotTemplateSampleConfigInfo 格式
-若 templateType 取值 sprite，则JSON字符串须符合 SnapshotTemplateSpriteConfigInfo 格式
-
+     * set 采样截图模板配置
      *
-     * @param templateConfig
+     * @param imageSampleConfig
      */
-    public void setTemplateConfig(String templateConfig) {
-        this.templateConfig = templateConfig;
+    public void setImageSampleConfig(ImageSampleConfig imageSampleConfig) {
+        this.imageSampleConfig = imageSampleConfig;
+    }
+
+    /**
+     * get 雪碧图模板配置
+     *
+     * @return
+     */
+    public ImageSpriteConfig getImageSpriteConfig() {
+        return imageSpriteConfig;
+    }
+
+    /**
+     * set 雪碧图模板配置
+     *
+     * @param imageSpriteConfig
+     */
+    public void setImageSpriteConfig(ImageSpriteConfig imageSpriteConfig) {
+        this.imageSpriteConfig = imageSpriteConfig;
     }
 
 
     /**
-     * set 模板名称
+     * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @param templateName
      */
@@ -145,23 +157,30 @@ public class CreateSnapshotTemplateRequest extends JdcloudRequest implements jav
   sprite - 雪碧图模板
 
      *
-     * @param templateType
+     * @param snapshotType
      */
-    public CreateSnapshotTemplateRequest templateType(String templateType) {
-        this.templateType = templateType;
+    public CreateSnapshotTemplateRequest snapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
         return this;
     }
 
     /**
-     * set 模板配置，JSON格式的字符串
-若 templateType 取值 sample，则JSON字符串须符合 SnapshotTemplateSampleConfigInfo 格式
-若 templateType 取值 sprite，则JSON字符串须符合 SnapshotTemplateSpriteConfigInfo 格式
-
+     * set 采样截图模板配置
      *
-     * @param templateConfig
+     * @param imageSampleConfig
      */
-    public CreateSnapshotTemplateRequest templateConfig(String templateConfig) {
-        this.templateConfig = templateConfig;
+    public CreateSnapshotTemplateRequest imageSampleConfig(ImageSampleConfig imageSampleConfig) {
+        this.imageSampleConfig = imageSampleConfig;
+        return this;
+    }
+
+    /**
+     * set 雪碧图模板配置
+     *
+     * @param imageSpriteConfig
+     */
+    public CreateSnapshotTemplateRequest imageSpriteConfig(ImageSpriteConfig imageSpriteConfig) {
+        this.imageSpriteConfig = imageSpriteConfig;
         return this;
     }
 

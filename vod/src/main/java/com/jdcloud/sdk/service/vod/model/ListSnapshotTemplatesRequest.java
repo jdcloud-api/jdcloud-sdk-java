@@ -32,7 +32,8 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 /**
  * 查询截图模板列表。
 允许通过条件过滤查询，支持的过滤字段如下：
-  - templateType[eq] 按模板类型精确查询
+  - snapshotType[eq] 按模板类型精确查询
+  - templateId[eq] 按模板ID精确查询
 
  */
 public class ListSnapshotTemplatesRequest extends JdcloudRequest implements java.io.Serializable {

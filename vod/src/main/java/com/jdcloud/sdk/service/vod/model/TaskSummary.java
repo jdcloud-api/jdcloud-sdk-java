@@ -26,21 +26,16 @@ package com.jdcloud.sdk.service.vod.model;
 
 
 /**
- * 截图模板信息
+ * 任务列表结果信息
  */
-public class SnapshotTemplateInfo  implements java.io.Serializable {
+public class TaskSummary  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 模板ID
+     * 任务ID
      */
-    private String templateId;
-
-    /**
-     * 模板标题。长度不超过 128 个字节。UTF-8 编码。
-     */
-    private String templateName;
+    private String taskId;
 
     /**
      * 模板类型。取值范围：
@@ -51,14 +46,24 @@ public class SnapshotTemplateInfo  implements java.io.Serializable {
     private String snapshotType;
 
     /**
-     * 采样截图模板配置
+     * 任务状态。
+- submitted
+- processing
+- succeeded
+- failed
+
      */
-    private ImageSampleConfig imageSampleConfig;
+    private String status;
 
     /**
-     * 雪碧图模板配置
+     * 错误码
      */
-    private ImageSpriteConfig imageSpriteConfig;
+    private String errorCode;
+
+    /**
+     * 错误信息
+     */
+    private String errorMessage;
 
     /**
      * 创建时间
@@ -72,39 +77,21 @@ public class SnapshotTemplateInfo  implements java.io.Serializable {
 
 
     /**
-     * get 模板ID
+     * get 任务ID
      *
      * @return
      */
-    public String getTemplateId() {
-        return templateId;
+    public String getTaskId() {
+        return taskId;
     }
 
     /**
-     * set 模板ID
+     * set 任务ID
      *
-     * @param templateId
+     * @param taskId
      */
-    public void setTemplateId(String templateId) {
-        this.templateId = templateId;
-    }
-
-    /**
-     * get 模板标题。长度不超过 128 个字节。UTF-8 编码。
-     *
-     * @return
-     */
-    public String getTemplateName() {
-        return templateName;
-    }
-
-    /**
-     * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
-     *
-     * @param templateName
-     */
-    public void setTemplateName(String templateName) {
-        this.templateName = templateName;
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
     /**
@@ -132,39 +119,67 @@ public class SnapshotTemplateInfo  implements java.io.Serializable {
     }
 
     /**
-     * get 采样截图模板配置
+     * get 任务状态。
+- submitted
+- processing
+- succeeded
+- failed
+
      *
      * @return
      */
-    public ImageSampleConfig getImageSampleConfig() {
-        return imageSampleConfig;
+    public String getStatus() {
+        return status;
     }
 
     /**
-     * set 采样截图模板配置
+     * set 任务状态。
+- submitted
+- processing
+- succeeded
+- failed
+
      *
-     * @param imageSampleConfig
+     * @param status
      */
-    public void setImageSampleConfig(ImageSampleConfig imageSampleConfig) {
-        this.imageSampleConfig = imageSampleConfig;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     /**
-     * get 雪碧图模板配置
+     * get 错误码
      *
      * @return
      */
-    public ImageSpriteConfig getImageSpriteConfig() {
-        return imageSpriteConfig;
+    public String getErrorCode() {
+        return errorCode;
     }
 
     /**
-     * set 雪碧图模板配置
+     * set 错误码
      *
-     * @param imageSpriteConfig
+     * @param errorCode
      */
-    public void setImageSpriteConfig(ImageSpriteConfig imageSpriteConfig) {
-        this.imageSpriteConfig = imageSpriteConfig;
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
+
+    /**
+     * get 错误信息
+     *
+     * @return
+     */
+    public String getErrorMessage() {
+        return errorMessage;
+    }
+
+    /**
+     * set 错误信息
+     *
+     * @param errorMessage
+     */
+    public void setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
     }
 
     /**
@@ -205,22 +220,12 @@ public class SnapshotTemplateInfo  implements java.io.Serializable {
 
 
     /**
-     * set 模板ID
+     * set 任务ID
      *
-     * @param templateId
+     * @param taskId
      */
-    public SnapshotTemplateInfo templateId(String templateId) {
-        this.templateId = templateId;
-        return this;
-    }
-
-    /**
-     * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
-     *
-     * @param templateName
-     */
-    public SnapshotTemplateInfo templateName(String templateName) {
-        this.templateName = templateName;
+    public TaskSummary taskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
 
@@ -232,28 +237,43 @@ public class SnapshotTemplateInfo  implements java.io.Serializable {
      *
      * @param snapshotType
      */
-    public SnapshotTemplateInfo snapshotType(String snapshotType) {
+    public TaskSummary snapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
     }
 
     /**
-     * set 采样截图模板配置
+     * set 任务状态。
+- submitted
+- processing
+- succeeded
+- failed
+
      *
-     * @param imageSampleConfig
+     * @param status
      */
-    public SnapshotTemplateInfo imageSampleConfig(ImageSampleConfig imageSampleConfig) {
-        this.imageSampleConfig = imageSampleConfig;
+    public TaskSummary status(String status) {
+        this.status = status;
         return this;
     }
 
     /**
-     * set 雪碧图模板配置
+     * set 错误码
      *
-     * @param imageSpriteConfig
+     * @param errorCode
      */
-    public SnapshotTemplateInfo imageSpriteConfig(ImageSpriteConfig imageSpriteConfig) {
-        this.imageSpriteConfig = imageSpriteConfig;
+    public TaskSummary errorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+
+    /**
+     * set 错误信息
+     *
+     * @param errorMessage
+     */
+    public TaskSummary errorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
         return this;
     }
 
@@ -262,7 +282,7 @@ public class SnapshotTemplateInfo  implements java.io.Serializable {
      *
      * @param createTime
      */
-    public SnapshotTemplateInfo createTime(String createTime) {
+    public TaskSummary createTime(String createTime) {
         this.createTime = createTime;
         return this;
     }
@@ -272,7 +292,7 @@ public class SnapshotTemplateInfo  implements java.io.Serializable {
      *
      * @param updateTime
      */
-    public SnapshotTemplateInfo updateTime(String updateTime) {
+    public TaskSummary updateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }

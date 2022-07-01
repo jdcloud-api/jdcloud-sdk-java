@@ -33,18 +33,31 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 模板名称
+     * 模板标题。长度不超过 128 个字节。UTF-8 编码。
      */
     private String templateName;
 
     /**
-     * 模板配置，JSON格式的字符串
+     * 模板类型。取值范围：
+  sample - 采样截图模板
+  sprite - 雪碧图模板
+
      */
-    private String templateConfig;
+    private String snapshotType;
+
+    /**
+     * 采样截图模板配置
+     */
+    private ImageSampleConfig imageSampleConfig;
+
+    /**
+     * 雪碧图模板配置
+     */
+    private ImageSpriteConfig imageSpriteConfig;
 
 
     /**
-     * get 模板名称
+     * get 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @return
      */
@@ -53,7 +66,7 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
     }
 
     /**
-     * set 模板名称
+     * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @param templateName
      */
@@ -62,26 +75,68 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
     }
 
     /**
-     * get 模板配置，JSON格式的字符串
+     * get 模板类型。取值范围：
+  sample - 采样截图模板
+  sprite - 雪碧图模板
+
      *
      * @return
      */
-    public String getTemplateConfig() {
-        return templateConfig;
+    public String getSnapshotType() {
+        return snapshotType;
     }
 
     /**
-     * set 模板配置，JSON格式的字符串
+     * set 模板类型。取值范围：
+  sample - 采样截图模板
+  sprite - 雪碧图模板
+
      *
-     * @param templateConfig
+     * @param snapshotType
      */
-    public void setTemplateConfig(String templateConfig) {
-        this.templateConfig = templateConfig;
+    public void setSnapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
+    }
+
+    /**
+     * get 采样截图模板配置
+     *
+     * @return
+     */
+    public ImageSampleConfig getImageSampleConfig() {
+        return imageSampleConfig;
+    }
+
+    /**
+     * set 采样截图模板配置
+     *
+     * @param imageSampleConfig
+     */
+    public void setImageSampleConfig(ImageSampleConfig imageSampleConfig) {
+        this.imageSampleConfig = imageSampleConfig;
+    }
+
+    /**
+     * get 雪碧图模板配置
+     *
+     * @return
+     */
+    public ImageSpriteConfig getImageSpriteConfig() {
+        return imageSpriteConfig;
+    }
+
+    /**
+     * set 雪碧图模板配置
+     *
+     * @param imageSpriteConfig
+     */
+    public void setImageSpriteConfig(ImageSpriteConfig imageSpriteConfig) {
+        this.imageSpriteConfig = imageSpriteConfig;
     }
 
 
     /**
-     * set 模板名称
+     * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @param templateName
      */
@@ -91,12 +146,35 @@ public class UpdateSnapshotTemplateRequestInfo  implements java.io.Serializable 
     }
 
     /**
-     * set 模板配置，JSON格式的字符串
+     * set 模板类型。取值范围：
+  sample - 采样截图模板
+  sprite - 雪碧图模板
+
      *
-     * @param templateConfig
+     * @param snapshotType
      */
-    public UpdateSnapshotTemplateRequestInfo templateConfig(String templateConfig) {
-        this.templateConfig = templateConfig;
+    public UpdateSnapshotTemplateRequestInfo snapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
+        return this;
+    }
+
+    /**
+     * set 采样截图模板配置
+     *
+     * @param imageSampleConfig
+     */
+    public UpdateSnapshotTemplateRequestInfo imageSampleConfig(ImageSampleConfig imageSampleConfig) {
+        this.imageSampleConfig = imageSampleConfig;
+        return this;
+    }
+
+    /**
+     * set 雪碧图模板配置
+     *
+     * @param imageSpriteConfig
+     */
+    public UpdateSnapshotTemplateRequestInfo imageSpriteConfig(ImageSpriteConfig imageSpriteConfig) {
+        this.imageSpriteConfig = imageSpriteConfig;
         return this;
     }
 

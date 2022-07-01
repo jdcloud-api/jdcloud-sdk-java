@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Vedit Project
- * 视频剪辑工程管理相关接口
+ * Snapshot
+ * 视频截图任务相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,9 +27,10 @@ package com.jdcloud.sdk.service.vod.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改视频剪辑工程信息
+ * 提交截图作业
+
  */
-public class UpdateVeditProjectResponse extends JdcloudResponse<UpdateVeditProjectResult> implements java.io.Serializable {
+public class SubmitSnapshotTaskResponse extends JdcloudResponse<SubmitSnapshotTaskResult> implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 

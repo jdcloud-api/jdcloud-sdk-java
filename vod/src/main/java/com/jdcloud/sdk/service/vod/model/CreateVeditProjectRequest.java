@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Vedit Project Management
+ * Vedit Project
  * 视频剪辑工程管理相关接口
  *
  * OpenAPI spec version: v1
@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.vod.model.Timeline;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -36,7 +37,9 @@ public class CreateVeditProjectRequest extends JdcloudRequest implements java.io
 
     /**
      * 工程名称
+     * Required:true
      */
+    @Required
     private String projectName;
 
     /**
@@ -46,7 +49,9 @@ public class CreateVeditProjectRequest extends JdcloudRequest implements java.io
 
     /**
      * 时间线信息
+     * Required:true
      */
+    @Required
     private Timeline timeline;
 
 

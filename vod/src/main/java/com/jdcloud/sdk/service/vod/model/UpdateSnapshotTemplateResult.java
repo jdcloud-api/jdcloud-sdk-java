@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.service.vod.model.ImageSampleConfig;
+import com.jdcloud.sdk.service.vod.model.ImageSpriteConfig;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
@@ -39,7 +41,7 @@ public class UpdateSnapshotTemplateResult extends JdcloudResult implements java.
     private String templateId;
 
     /**
-     * 模板名称
+     * 模板标题。长度不超过 128 个字节。UTF-8 编码。
      */
     private String templateName;
 
@@ -49,12 +51,17 @@ public class UpdateSnapshotTemplateResult extends JdcloudResult implements java.
   sprite - 雪碧图模板
 
      */
-    private String templateType;
+    private String snapshotType;
 
     /**
-     * 模板配置，JSON格式的字符串
+     * 采样截图模板配置
      */
-    private String templateConfig;
+    private ImageSampleConfig imageSampleConfig;
+
+    /**
+     * 雪碧图模板配置
+     */
+    private ImageSpriteConfig imageSpriteConfig;
 
     /**
      * 创建时间
@@ -86,7 +93,7 @@ public class UpdateSnapshotTemplateResult extends JdcloudResult implements java.
     }
 
     /**
-     * get 模板名称
+     * get 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @return
      */
@@ -95,7 +102,7 @@ public class UpdateSnapshotTemplateResult extends JdcloudResult implements java.
     }
 
     /**
-     * set 模板名称
+     * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @param templateName
      */
@@ -111,8 +118,8 @@ public class UpdateSnapshotTemplateResult extends JdcloudResult implements java.
      *
      * @return
      */
-    public String getTemplateType() {
-        return templateType;
+    public String getSnapshotType() {
+        return snapshotType;
     }
 
     /**
@@ -121,28 +128,46 @@ public class UpdateSnapshotTemplateResult extends JdcloudResult implements java.
   sprite - 雪碧图模板
 
      *
-     * @param templateType
+     * @param snapshotType
      */
-    public void setTemplateType(String templateType) {
-        this.templateType = templateType;
+    public void setSnapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
     }
 
     /**
-     * get 模板配置，JSON格式的字符串
+     * get 采样截图模板配置
      *
      * @return
      */
-    public String getTemplateConfig() {
-        return templateConfig;
+    public ImageSampleConfig getImageSampleConfig() {
+        return imageSampleConfig;
     }
 
     /**
-     * set 模板配置，JSON格式的字符串
+     * set 采样截图模板配置
      *
-     * @param templateConfig
+     * @param imageSampleConfig
      */
-    public void setTemplateConfig(String templateConfig) {
-        this.templateConfig = templateConfig;
+    public void setImageSampleConfig(ImageSampleConfig imageSampleConfig) {
+        this.imageSampleConfig = imageSampleConfig;
+    }
+
+    /**
+     * get 雪碧图模板配置
+     *
+     * @return
+     */
+    public ImageSpriteConfig getImageSpriteConfig() {
+        return imageSpriteConfig;
+    }
+
+    /**
+     * set 雪碧图模板配置
+     *
+     * @param imageSpriteConfig
+     */
+    public void setImageSpriteConfig(ImageSpriteConfig imageSpriteConfig) {
+        this.imageSpriteConfig = imageSpriteConfig;
     }
 
     /**
@@ -193,7 +218,7 @@ public class UpdateSnapshotTemplateResult extends JdcloudResult implements java.
     }
 
     /**
-     * set 模板名称
+     * set 模板标题。长度不超过 128 个字节。UTF-8 编码。
      *
      * @param templateName
      */
@@ -208,20 +233,30 @@ public class UpdateSnapshotTemplateResult extends JdcloudResult implements java.
   sprite - 雪碧图模板
 
      *
-     * @param templateType
+     * @param snapshotType
      */
-    public UpdateSnapshotTemplateResult templateType(String templateType) {
-        this.templateType = templateType;
+    public UpdateSnapshotTemplateResult snapshotType(String snapshotType) {
+        this.snapshotType = snapshotType;
         return this;
     }
 
     /**
-     * set 模板配置，JSON格式的字符串
+     * set 采样截图模板配置
      *
-     * @param templateConfig
+     * @param imageSampleConfig
      */
-    public UpdateSnapshotTemplateResult templateConfig(String templateConfig) {
-        this.templateConfig = templateConfig;
+    public UpdateSnapshotTemplateResult imageSampleConfig(ImageSampleConfig imageSampleConfig) {
+        this.imageSampleConfig = imageSampleConfig;
+        return this;
+    }
+
+    /**
+     * set 雪碧图模板配置
+     *
+     * @param imageSpriteConfig
+     */
+    public UpdateSnapshotTemplateResult imageSpriteConfig(ImageSpriteConfig imageSpriteConfig) {
+        this.imageSpriteConfig = imageSpriteConfig;
         return this;
     }
 

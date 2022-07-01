@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Vedit Project Management
+ * Vedit Project
  * 视频剪辑工程管理相关接口
  *
  * OpenAPI spec version: v1

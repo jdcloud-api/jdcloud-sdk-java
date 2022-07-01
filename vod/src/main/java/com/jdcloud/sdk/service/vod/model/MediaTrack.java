@@ -26,6 +26,7 @@ package com.jdcloud.sdk.service.vod.model;
 
 import java.util.List;
 import java.util.ArrayList;
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 视频剪辑媒体轨信息
@@ -35,18 +36,34 @@ public class MediaTrack  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 轨类型。当前只支持 video
+     * 轨类型。目前只支持的有：video，audio，text
+- video：视频轨
+- audio：音频轨
+- text：文字轨
+* 视频轨为空时，音频轨必须非空。
+* 音频轨为空时，视频轨必须非空
+
+     * Required:true
      */
+    @Required
     private String trackType;
 
     /**
-     * clips
+     * 视频剪辑素材片段。一个Timeline中的所有MediaClip，总共不能超过20个。
+     * Required:true
      */
+    @Required
     private List<MediaClip> clips;
 
 
     /**
-     * get 轨类型。当前只支持 video
+     * get 轨类型。目前只支持的有：video，audio，text
+- video：视频轨
+- audio：音频轨
+- text：文字轨
+* 视频轨为空时，音频轨必须非空。
+* 音频轨为空时，视频轨必须非空
+
      *
      * @return
      */
@@ -55,7 +72,13 @@ public class MediaTrack  implements java.io.Serializable {
     }
 
     /**
-     * set 轨类型。当前只支持 video
+     * set 轨类型。目前只支持的有：video，audio，text
+- video：视频轨
+- audio：音频轨
+- text：文字轨
+* 视频轨为空时，音频轨必须非空。
+* 音频轨为空时，视频轨必须非空
+
      *
      * @param trackType
      */
@@ -64,7 +87,7 @@ public class MediaTrack  implements java.io.Serializable {
     }
 
     /**
-     * get clips
+     * get 视频剪辑素材片段。一个Timeline中的所有MediaClip，总共不能超过20个。
      *
      * @return
      */
@@ -73,7 +96,7 @@ public class MediaTrack  implements java.io.Serializable {
     }
 
     /**
-     * set clips
+     * set 视频剪辑素材片段。一个Timeline中的所有MediaClip，总共不能超过20个。
      *
      * @param clips
      */
@@ -83,7 +106,13 @@ public class MediaTrack  implements java.io.Serializable {
 
 
     /**
-     * set 轨类型。当前只支持 video
+     * set 轨类型。目前只支持的有：video，audio，text
+- video：视频轨
+- audio：音频轨
+- text：文字轨
+* 视频轨为空时，音频轨必须非空。
+* 音频轨为空时，视频轨必须非空
+
      *
      * @param trackType
      */
@@ -93,7 +122,7 @@ public class MediaTrack  implements java.io.Serializable {
     }
 
     /**
-     * set clips
+     * set 视频剪辑素材片段。一个Timeline中的所有MediaClip，总共不能超过20个。
      *
      * @param clips
      */
@@ -104,7 +133,7 @@ public class MediaTrack  implements java.io.Serializable {
 
 
     /**
-     * add item to clips
+     * add item to 视频剪辑素材片段。一个Timeline中的所有MediaClip，总共不能超过20个。
      *
      * @param clip
      */

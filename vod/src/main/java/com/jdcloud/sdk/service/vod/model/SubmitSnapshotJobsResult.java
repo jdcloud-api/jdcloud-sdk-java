@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Vedit Project
- * 视频剪辑工程管理相关接口
+ * Snapshot
+ * 视频截图任务相关接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -24,52 +24,63 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
-import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.JdcloudRequest;
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除视频剪辑工程
+ * 提交截图任务请求结果
  */
-public class DeleteVeditProjectRequest extends JdcloudRequest implements java.io.Serializable {
+public class SubmitSnapshotJobsResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 视频剪辑工程ID
-     * Required:true
+     * 任务信息
      */
-    @Required
-    private Long projectId;
+    private List<SnapshotJobSummary> jobs;
 
 
     /**
-     * get 视频剪辑工程ID
+     * get 任务信息
      *
      * @return
      */
-    public Long getProjectId() {
-        return projectId;
+    public List<SnapshotJobSummary> getJobs() {
+        return jobs;
     }
 
     /**
-     * set 视频剪辑工程ID
+     * set 任务信息
      *
-     * @param projectId
+     * @param jobs
      */
-    public void setProjectId(Long projectId) {
-        this.projectId = projectId;
+    public void setJobs(List<SnapshotJobSummary> jobs) {
+        this.jobs = jobs;
     }
 
 
     /**
-     * set 视频剪辑工程ID
+     * set 任务信息
      *
-     * @param projectId
+     * @param jobs
      */
-    public DeleteVeditProjectRequest projectId(Long projectId) {
-        this.projectId = projectId;
+    public SubmitSnapshotJobsResult jobs(List<SnapshotJobSummary> jobs) {
+        this.jobs = jobs;
         return this;
     }
 
+
+    /**
+     * add item to 任务信息
+     *
+     * @param job
+     */
+    public void addJob(SnapshotJobSummary job) {
+        if (this.jobs == null) {
+            this.jobs = new ArrayList<>();
+        }
+        this.jobs.add(job);
+    }
 
 }

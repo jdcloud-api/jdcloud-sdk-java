@@ -24,6 +24,7 @@
 
 package com.jdcloud.sdk.service.vod.model;
 
+import com.jdcloud.sdk.annotation.Required;
 
 /**
  * 视频剪辑工程创建请求数据
@@ -34,7 +35,9 @@ public class VeditProjectCreateReqData  implements java.io.Serializable {
 
     /**
      * 工程名称
+     * Required:true
      */
+    @Required
     private String projectName;
 
     /**
@@ -44,7 +47,9 @@ public class VeditProjectCreateReqData  implements java.io.Serializable {
 
     /**
      * 时间线信息
+     * Required:true
      */
+    @Required
     private Timeline timeline;
 
 

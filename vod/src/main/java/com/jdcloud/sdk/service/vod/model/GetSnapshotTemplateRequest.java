@@ -39,7 +39,7 @@ public class GetSnapshotTemplateRequest extends JdcloudRequest implements java.i
      * Required:true
      */
     @Required
-    private Long templateId;
+    private String templateId;
 
 
     /**
@@ -47,7 +47,7 @@ public class GetSnapshotTemplateRequest extends JdcloudRequest implements java.i
      *
      * @return
      */
-    public Long getTemplateId() {
+    public String getTemplateId() {
         return templateId;
     }
 
@@ -56,7 +56,7 @@ public class GetSnapshotTemplateRequest extends JdcloudRequest implements java.i
      *
      * @param templateId
      */
-    public void setTemplateId(Long templateId) {
+    public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
 
@@ -66,7 +66,7 @@ public class GetSnapshotTemplateRequest extends JdcloudRequest implements java.i
      *
      * @param templateId
      */
-    public GetSnapshotTemplateRequest templateId(Long templateId) {
+    public GetSnapshotTemplateRequest templateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
