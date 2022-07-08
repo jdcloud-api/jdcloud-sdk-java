@@ -1,10 +1,11 @@
 # 更新历史
 
-API版本：2.6.16
+API版本：2.6.17
 
 | 发布时间   | 版本号 | 更新     | 说明                                                                                                                                                                                                    |
 | ---------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2022-05-31 | 2.6.16 | 新增接口 | 新增接口describeNodeList，更新接口executeCommand |
+| 2022-07-06 | 2.6.17  | 新增接口 | 新增接口bigKey、bigKeyDetail、bigKeyAutoAnalysisTime、stopCacheAnalysis、cacheAnalysisThreshold |
+| 2022-05-31 | 2.6.16  | 新增接口 | 新增接口describeNodeList，更新接口executeCommand |
 | 2022-05-23 | 2.6.15  | 接口更新 | 更新接口createCacheInstance、describeCacheInstance、describeCacheInstances、describeAvailableResource    |
 | 2022-05-20 | 2.6.14  | 新增接口 | 新增接口filteredClientPerfData    |
 | 2022-05-17 | 2.6.13  | 接口更新 | 更新接口describeInstanceConfig        |
