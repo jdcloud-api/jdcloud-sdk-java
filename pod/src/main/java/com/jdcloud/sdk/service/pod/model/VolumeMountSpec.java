@@ -52,6 +52,11 @@ public class VolumeMountSpec  implements java.io.Serializable {
      */
     private Boolean readOnly;
 
+    /**
+     * configFile挂载子目录 新增
+     */
+    private String subPath;
+
 
     /**
      * get 要挂载的云盘，必须使用pod volumeSpec.name。
@@ -107,6 +112,24 @@ public class VolumeMountSpec  implements java.io.Serializable {
         this.readOnly = readOnly;
     }
 
+    /**
+     * get configFile挂载子目录 新增
+     *
+     * @return
+     */
+    public String getSubPath() {
+        return subPath;
+    }
+
+    /**
+     * set configFile挂载子目录 新增
+     *
+     * @param subPath
+     */
+    public void setSubPath(String subPath) {
+        this.subPath = subPath;
+    }
+
 
     /**
      * set 要挂载的云盘，必须使用pod volumeSpec.name。
@@ -135,6 +158,16 @@ public class VolumeMountSpec  implements java.io.Serializable {
      */
     public VolumeMountSpec readOnly(Boolean readOnly) {
         this.readOnly = readOnly;
+        return this;
+    }
+
+    /**
+     * set configFile挂载子目录 新增
+     *
+     * @param subPath
+     */
+    public VolumeMountSpec subPath(String subPath) {
+        this.subPath = subPath;
         return this;
     }
 

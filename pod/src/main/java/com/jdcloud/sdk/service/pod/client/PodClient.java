@@ -49,6 +49,9 @@ import com.jdcloud.sdk.service.pod.client.DescribeSecretExecutor;
 import com.jdcloud.sdk.service.pod.model.DisassociateElasticIpRequest;
 import com.jdcloud.sdk.service.pod.model.DisassociateElasticIpResponse;
 import com.jdcloud.sdk.service.pod.client.DisassociateElasticIpExecutor;
+import com.jdcloud.sdk.service.pod.model.CreateConfigFileRequest;
+import com.jdcloud.sdk.service.pod.model.CreateConfigFileResponse;
+import com.jdcloud.sdk.service.pod.client.CreateConfigFileExecutor;
 import com.jdcloud.sdk.service.pod.model.ResizeTTYRequest;
 import com.jdcloud.sdk.service.pod.model.ResizeTTYResponse;
 import com.jdcloud.sdk.service.pod.client.ResizeTTYExecutor;
@@ -73,6 +76,12 @@ import com.jdcloud.sdk.service.pod.client.CreatePodsExecutor;
 import com.jdcloud.sdk.service.pod.model.CheckPodNameRequest;
 import com.jdcloud.sdk.service.pod.model.CheckPodNameResponse;
 import com.jdcloud.sdk.service.pod.client.CheckPodNameExecutor;
+import com.jdcloud.sdk.service.pod.model.DeleteConfigFileRequest;
+import com.jdcloud.sdk.service.pod.model.DeleteConfigFileResponse;
+import com.jdcloud.sdk.service.pod.client.DeleteConfigFileExecutor;
+import com.jdcloud.sdk.service.pod.model.UpdateConfigFileRequest;
+import com.jdcloud.sdk.service.pod.model.UpdateConfigFileResponse;
+import com.jdcloud.sdk.service.pod.client.UpdateConfigFileExecutor;
 import com.jdcloud.sdk.service.pod.model.GetContainerLogsRequest;
 import com.jdcloud.sdk.service.pod.model.GetContainerLogsResponse;
 import com.jdcloud.sdk.service.pod.client.GetContainerLogsExecutor;
@@ -82,6 +91,9 @@ import com.jdcloud.sdk.service.pod.client.DescribeInstanceTypesExecutor;
 import com.jdcloud.sdk.service.pod.model.ModifyPodAttributeRequest;
 import com.jdcloud.sdk.service.pod.model.ModifyPodAttributeResponse;
 import com.jdcloud.sdk.service.pod.client.ModifyPodAttributeExecutor;
+import com.jdcloud.sdk.service.pod.model.DescribeConfigFileRequest;
+import com.jdcloud.sdk.service.pod.model.DescribeConfigFileResponse;
+import com.jdcloud.sdk.service.pod.client.DescribeConfigFileExecutor;
 import com.jdcloud.sdk.service.pod.model.DeletePodRequest;
 import com.jdcloud.sdk.service.pod.model.DeletePodResponse;
 import com.jdcloud.sdk.service.pod.client.DeletePodExecutor;
@@ -114,7 +126,7 @@ public class PodClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "pod.jdcloud-api.com";
     public final static String ServiceName = "pod";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -229,6 +241,18 @@ public class PodClient extends JdcloudClient {
     }
 
     /**
+     * 创建一个 configFile，存放文件内容（键值对）。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateConfigFileResponse createConfigFile(CreateConfigFileRequest request) throws JdcloudSdkException {
+        return new CreateConfigFileExecutor().client(this).execute(request);
+    }
+
+    /**
      * 设置TTY大小
      *
      * @param request
@@ -302,6 +326,11 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
     /**
      * 创建一台或多台 pod
 - 创建pod需要通过实名认证
+- 可用区
+    - Pod所属的可用区
+    - 创建Pod，需要使用中心可用区的相关资源：
+        - 具有中心可用区属性的子网
+        - 公网IP服务商
 - hostname规范
     - 支持两种方式：以标签方式书写或以完整主机名方式书写
     - 标签规范
@@ -324,6 +353,7 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
 - 存储
     - volume分为container system disk和pod data volume，container system disk的挂载目录是/，data volume的挂载目录可以随意指定
     - container system disk
+        - 支持cloud和local
         - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
             - 所有类型：范围[20,100]GB，步长为10G
@@ -331,14 +361,20 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
             - 默认自动删除
         - 可以选择已存在的云硬盘
     - data volume
-        - 当前只能选择cloud类别
-        - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
-        - 磁盘大小
-            - 所有类型：范围[20,2000]GB，步长为10G
-        - 自动删除
-            - 默认自动删除
-        - 可以选择已存在的云硬盘
-        - 可以从快照创建磁盘
+        -cloudDisk
+          - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
+          - 磁盘大小
+              - 所有类型：范围[20,2000]GB，步长为10G
+          - 自动删除
+              - 默认自动删除
+          - 可以选择已存在的云硬盘
+          - 可以从快照创建磁盘
+        -CFS
+          - 从zbs去获取数据，挂载到当前的volume
+        -configFile
+          - 提前创建好configFile相关数据，然后挂载到volume
+
+
 - pod 容器日志
     - default：默认在本地分配10MB的存储空间，自动rotate
 - DNS-1123 label规范
@@ -370,6 +406,30 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
      */
     public CheckPodNameResponse checkPodName(CheckPodNameRequest request) throws JdcloudSdkException {
         return new CheckPodNameExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除单个 configFile
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteConfigFileResponse deleteConfigFile(DeleteConfigFileRequest request) throws JdcloudSdkException {
+        return new DeleteConfigFileExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新configFile信息
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateConfigFileResponse updateConfigFile(UpdateConfigFileRequest request) throws JdcloudSdkException {
+        return new UpdateConfigFileExecutor().client(this).execute(request);
     }
 
     /**
@@ -406,6 +466,18 @@ pod 实例或其绑定的云盘已欠费时，容器将无法正常启动。&lt;
      */
     public ModifyPodAttributeResponse modifyPodAttribute(ModifyPodAttributeRequest request) throws JdcloudSdkException {
         return new ModifyPodAttributeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单个 configFile 详情
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeConfigFileResponse describeConfigFile(DescribeConfigFileRequest request) throws JdcloudSdkException {
+        return new DescribeConfigFileExecutor().client(this).execute(request);
     }
 
     /**

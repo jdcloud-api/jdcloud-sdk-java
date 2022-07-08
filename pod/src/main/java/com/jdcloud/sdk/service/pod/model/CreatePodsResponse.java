@@ -29,6 +29,11 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 /**
  * 创建一台或多台 pod
 - 创建pod需要通过实名认证
+- 可用区
+    - Pod所属的可用区
+    - 创建Pod，需要使用中心可用区的相关资源：
+        - 具有中心可用区属性的子网
+        - 公网IP服务商
 - hostname规范
     - 支持两种方式：以标签方式书写或以完整主机名方式书写
     - 标签规范
@@ -51,6 +56,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 - 存储
     - volume分为container system disk和pod data volume，container system disk的挂载目录是/，data volume的挂载目录可以随意指定
     - container system disk
+        - 支持cloud和local
         - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
         - 磁盘大小
             - 所有类型：范围[20,100]GB，步长为10G
@@ -58,14 +64,20 @@ import com.jdcloud.sdk.service.JdcloudResponse;
             - 默认自动删除
         - 可以选择已存在的云硬盘
     - data volume
-        - 当前只能选择cloud类别
-        - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
-        - 磁盘大小
-            - 所有类型：范围[20,2000]GB，步长为10G
-        - 自动删除
-            - 默认自动删除
-        - 可以选择已存在的云硬盘
-        - 可以从快照创建磁盘
+        -cloudDisk
+          - 云硬盘类型可以选择hdd.std1、ssd.gp1、ssd.io1
+          - 磁盘大小
+              - 所有类型：范围[20,2000]GB，步长为10G
+          - 自动删除
+              - 默认自动删除
+          - 可以选择已存在的云硬盘
+          - 可以从快照创建磁盘
+        -CFS
+          - 从zbs去获取数据，挂载到当前的volume
+        -configFile
+          - 提前创建好configFile相关数据，然后挂载到volume
+
+
 - pod 容器日志
     - default：默认在本地分配10MB的存储空间，自动rotate
 - DNS-1123 label规范
