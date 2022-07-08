@@ -61,6 +61,11 @@ public class Pod  implements java.io.Serializable {
     private String hostname;
 
     /**
+     * 高可用组
+     */
+    private AvailablityGroup ag;
+
+    /**
      * pod 所需的计算资源规格
      */
     private String instanceType;
@@ -234,6 +239,24 @@ public class Pod  implements java.io.Serializable {
      */
     public void setHostname(String hostname) {
         this.hostname = hostname;
+    }
+
+    /**
+     * get 高可用组
+     *
+     * @return
+     */
+    public AvailablityGroup getAg() {
+        return ag;
+    }
+
+    /**
+     * set 高可用组
+     *
+     * @param ag
+     */
+    public void setAg(AvailablityGroup ag) {
+        this.ag = ag;
     }
 
     /**
@@ -590,6 +613,16 @@ public class Pod  implements java.io.Serializable {
      */
     public Pod hostname(String hostname) {
         this.hostname = hostname;
+        return this;
+    }
+
+    /**
+     * set 高可用组
+     *
+     * @param ag
+     */
+    public Pod ag(AvailablityGroup ag) {
+        this.ag = ag;
         return this;
     }
 

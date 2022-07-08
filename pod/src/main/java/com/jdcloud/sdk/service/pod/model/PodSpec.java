@@ -71,7 +71,7 @@ public class PodSpec  implements java.io.Serializable {
     private String instanceType;
 
     /**
-     * 容器所属可用区
+     * Pod所属可用区，指定agId时非必传&lt;br&gt; Pod、已有云盘的az必须相同，且包含在AG中
      * Required:true
      */
     @Required
@@ -236,7 +236,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * get 容器所属可用区
+     * get Pod所属可用区，指定agId时非必传&lt;br&gt; Pod、已有云盘的az必须相同，且包含在AG中
      *
      * @return
      */
@@ -245,7 +245,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器所属可用区
+     * set Pod所属可用区，指定agId时非必传&lt;br&gt; Pod、已有云盘的az必须相同，且包含在AG中
      *
      * @param az
      */
@@ -477,7 +477,7 @@ public class PodSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 容器所属可用区
+     * set Pod所属可用区，指定agId时非必传&lt;br&gt; Pod、已有云盘的az必须相同，且包含在AG中
      *
      * @param az
      */
