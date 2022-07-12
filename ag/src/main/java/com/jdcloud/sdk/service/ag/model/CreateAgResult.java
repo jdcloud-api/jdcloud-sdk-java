@@ -34,13 +34,13 @@ public class CreateAgResult extends JdcloudResult implements java.io.Serializabl
     private static final long serialVersionUID = 1L;
 
     /**
-     * 创建成功的高可用组 id
+     * 创建成功的高可用组 ID
      */
     private String agId;
 
 
     /**
-     * get 创建成功的高可用组 id
+     * get 创建成功的高可用组 ID
      *
      * @return
      */
@@ -49,7 +49,7 @@ public class CreateAgResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 创建成功的高可用组 id
+     * set 创建成功的高可用组 ID
      *
      * @param agId
      */
@@ -59,7 +59,7 @@ public class CreateAgResult extends JdcloudResult implements java.io.Serializabl
 
 
     /**
-     * set 创建成功的高可用组 id
+     * set 创建成功的高可用组 ID
      *
      * @param agId
      */

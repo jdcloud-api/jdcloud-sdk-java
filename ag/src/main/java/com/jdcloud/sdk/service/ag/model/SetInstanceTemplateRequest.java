@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改高可用组的实例模板
+ * 修改高可用组的实例模板&lt;br&gt;- 对于更换实例模板来说，如果已经关联负载均衡，则VPC不可以更改。&lt;br&gt;- 自定义配置型不可更改实例模板。
  */
 public class SetInstanceTemplateRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 实例模板 id
+     * 实例模板 ID
      * Required:true
      */
     @Required
@@ -57,7 +57,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 实例模板 id
+     * get 实例模板 ID
      *
      * @return
      */
@@ -66,7 +66,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 实例模板 id
+     * set 实例模板 ID
      *
      * @param instanceTemplateId
      */
@@ -112,7 +112,7 @@ public class SetInstanceTemplateRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 实例模板 id
+     * set 实例模板 ID
      *
      * @param instanceTemplateId
      */

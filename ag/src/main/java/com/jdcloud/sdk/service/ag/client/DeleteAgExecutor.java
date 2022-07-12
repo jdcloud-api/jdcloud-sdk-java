@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ag.model.DeleteAgResponse;
 
 /**
- * 根据 id 删除高可用组，需确保 AG 中云主机实例已全部删除
+ * 根据 ID 删除高可用组，需确保 AG 中云主机实例已全部删除
  */
 class DeleteAgExecutor extends JdcloudExecutor {
 

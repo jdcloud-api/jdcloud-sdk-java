@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据 id 删除高可用组，需确保 AG 中云主机实例已全部删除
+ * 根据 ID 删除高可用组，需确保 AG 中云主机实例已全部删除
  */
 public class DeleteAgRequest extends JdcloudRequest implements java.io.Serializable {
 

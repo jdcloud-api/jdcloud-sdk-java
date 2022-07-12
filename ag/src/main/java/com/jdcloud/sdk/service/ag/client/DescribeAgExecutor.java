@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ag.model.DescribeAgResponse;
 
 /**
- * 根据 id 查询高可用组详情
+ * 根据 ID 查询高可用组详情
  */
 class DescribeAgExecutor extends JdcloudExecutor {
 

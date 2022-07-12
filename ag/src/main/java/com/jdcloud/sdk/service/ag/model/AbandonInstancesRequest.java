@@ -37,7 +37,7 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 准备剔除出高可用组的实例 id
+     * 准备剔除出高可用组的实例 ID
      * Required:true
      */
     @Required
@@ -59,7 +59,7 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 准备剔除出高可用组的实例 id
+     * get 准备剔除出高可用组的实例 ID
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 准备剔除出高可用组的实例 id
+     * set 准备剔除出高可用组的实例 ID
      *
      * @param instanceIds
      */
@@ -114,7 +114,7 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 准备剔除出高可用组的实例 id
+     * set 准备剔除出高可用组的实例 ID
      *
      * @param instanceIds
      */
@@ -145,7 +145,7 @@ public class AbandonInstancesRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * add item to 准备剔除出高可用组的实例 id
+     * add item to 准备剔除出高可用组的实例 ID
      *
      * @param instanceId
      */

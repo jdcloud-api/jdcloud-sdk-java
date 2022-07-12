@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.ag.model.AvailabilityGroup;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 根据 id 查询高可用组详情
+ * 根据 ID 查询高可用组详情
  */
 public class DescribeAgResult extends JdcloudResult implements java.io.Serializable {
 

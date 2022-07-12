@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据 id 查询高可用组详情
+ * 根据 ID 查询高可用组详情
  */
 public class DescribeAgRequest extends JdcloudRequest implements java.io.Serializable {
 
