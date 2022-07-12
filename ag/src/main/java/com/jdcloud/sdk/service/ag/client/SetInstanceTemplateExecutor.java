@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.ag.model.SetInstanceTemplateResponse;
 
 /**
- * 修改高可用组的实例模板
+ * 修改高可用组的实例模板&lt;br&gt;- 对于更换实例模板来说，如果已经关联负载均衡，则VPC不可以更改。&lt;br&gt;- 自定义配置型不可更改实例模板。
  */
 class SetInstanceTemplateExecutor extends JdcloudExecutor {
 

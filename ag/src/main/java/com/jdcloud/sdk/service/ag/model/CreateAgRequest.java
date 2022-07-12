@@ -51,12 +51,12 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     private String agName;
 
     /**
-     * 高可用组类型，支持vm
+     * 高可用组资源类型，支持vm
      */
     private String agType;
 
     /**
-     * 实例模板的Id
+     * 实例模板的ID
      * Required:true
      */
     @Required
@@ -66,6 +66,11 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
      * 描述，长度不超过 256 字符
      */
     private String description;
+
+    /**
+     * 高可用组配置类型，支持strict(关联模板型)、loose(自定义配置型)
+     */
+    private String configurationType;
 
     /**
      * 地域
@@ -112,7 +117,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * get 高可用组类型，支持vm
+     * get 高可用组资源类型，支持vm
      *
      * @return
      */
@@ -121,7 +126,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 高可用组类型，支持vm
+     * set 高可用组资源类型，支持vm
      *
      * @param agType
      */
@@ -130,7 +135,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * get 实例模板的Id
+     * get 实例模板的ID
      *
      * @return
      */
@@ -139,7 +144,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 实例模板的Id
+     * set 实例模板的ID
      *
      * @param instanceTemplateId
      */
@@ -163,6 +168,24 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
      */
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    /**
+     * get 高可用组配置类型，支持strict(关联模板型)、loose(自定义配置型)
+     *
+     * @return
+     */
+    public String getConfigurationType() {
+        return configurationType;
+    }
+
+    /**
+     * set 高可用组配置类型，支持strict(关联模板型)、loose(自定义配置型)
+     *
+     * @param configurationType
+     */
+    public void setConfigurationType(String configurationType) {
+        this.configurationType = configurationType;
     }
 
     /**
@@ -205,7 +228,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 高可用组类型，支持vm
+     * set 高可用组资源类型，支持vm
      *
      * @param agType
      */
@@ -215,7 +238,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
-     * set 实例模板的Id
+     * set 实例模板的ID
      *
      * @param instanceTemplateId
      */
@@ -231,6 +254,16 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
      */
     public CreateAgRequest description(String description) {
         this.description = description;
+        return this;
+    }
+
+    /**
+     * set 高可用组配置类型，支持strict(关联模板型)、loose(自定义配置型)
+     *
+     * @param configurationType
+     */
+    public CreateAgRequest configurationType(String configurationType) {
+        this.configurationType = configurationType;
         return this;
     }
 

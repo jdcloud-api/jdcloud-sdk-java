@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ag.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 根据 id 删除高可用组，需确保 AG 中云主机实例已全部删除
+ * 根据 ID 删除高可用组，需确保 AG 中云主机实例已全部删除
  */
 public class DeleteAgResponse extends JdcloudResponse<DeleteAgResult> implements java.io.Serializable {
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.ag.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 根据 id 查询高可用组详情
+ * 根据 ID 查询高可用组详情
  */
 public class DescribeAgResponse extends JdcloudResponse<DescribeAgResult> implements java.io.Serializable {
 

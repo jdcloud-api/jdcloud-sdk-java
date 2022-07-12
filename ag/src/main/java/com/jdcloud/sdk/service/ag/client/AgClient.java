@@ -63,7 +63,7 @@ public class AgClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.1.1";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "ag.jdcloud-api.com";
     public final static String ServiceName = "ag";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -117,7 +117,7 @@ public class AgClient extends JdcloudClient {
     }
 
     /**
-     * 根据 id 删除高可用组，需确保 AG 中云主机实例已全部删除
+     * 根据 ID 删除高可用组，需确保 AG 中云主机实例已全部删除
      *
      * @param request
      * @return
@@ -128,7 +128,7 @@ public class AgClient extends JdcloudClient {
     }
 
     /**
-     * 修改高可用组的实例模板
+     * 修改高可用组的实例模板&lt;br&gt;- 对于更换实例模板来说，如果已经关联负载均衡，则VPC不可以更改。&lt;br&gt;- 自定义配置型不可更改实例模板。
      *
      * @param request
      * @return
@@ -172,7 +172,7 @@ public class AgClient extends JdcloudClient {
     }
 
     /**
-     * 根据 id 查询高可用组详情
+     * 根据 ID 查询高可用组详情
      *
      * @param request
      * @return

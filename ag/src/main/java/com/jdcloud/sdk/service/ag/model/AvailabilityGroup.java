@@ -28,29 +28,29 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * 可用组详情
+ * 高可用组详情
  */
 public class AvailabilityGroup  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 可用组id
+     * 高可用组ID
      */
     private String id;
 
     /**
-     * 可用组name
+     * 高可用组名称
      */
     private String name;
 
     /**
-     * 描述，length:0-256
+     * 描述
      */
     private String description;
 
     /**
-     * 实例模板的Id
+     * 实例模板的ID
      */
     private String instanceTemplateId;
 
@@ -60,7 +60,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     private List<String> azs;
 
     /**
-     * 可用组类型，支持vm
+     * 高可用组资源类型
      */
     private String agType;
 
@@ -70,7 +70,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     private String createTime;
 
     /**
-     * 可用组中实例的数量
+     * 高可用组中实例的数量
      */
     private Number count;
 
@@ -79,9 +79,14 @@ public class AvailabilityGroup  implements java.io.Serializable {
      */
     private Boolean autoScaling;
 
+    /**
+     * 高可用组配置类型
+     */
+    private String configurationType;
+
 
     /**
-     * get 可用组id
+     * get 高可用组ID
      *
      * @return
      */
@@ -90,7 +95,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组id
+     * set 高可用组ID
      *
      * @param id
      */
@@ -99,7 +104,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 可用组name
+     * get 高可用组名称
      *
      * @return
      */
@@ -108,7 +113,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组name
+     * set 高可用组名称
      *
      * @param name
      */
@@ -117,7 +122,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 描述，length:0-256
+     * get 描述
      *
      * @return
      */
@@ -126,7 +131,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 描述，length:0-256
+     * set 描述
      *
      * @param description
      */
@@ -135,7 +140,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 实例模板的Id
+     * get 实例模板的ID
      *
      * @return
      */
@@ -144,7 +149,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 实例模板的Id
+     * set 实例模板的ID
      *
      * @param instanceTemplateId
      */
@@ -171,7 +176,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 可用组类型，支持vm
+     * get 高可用组资源类型
      *
      * @return
      */
@@ -180,7 +185,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组类型，支持vm
+     * set 高可用组资源类型
      *
      * @param agType
      */
@@ -207,7 +212,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * get 可用组中实例的数量
+     * get 高可用组中实例的数量
      *
      * @return
      */
@@ -216,7 +221,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组中实例的数量
+     * set 高可用组中实例的数量
      *
      * @param count
      */
@@ -242,9 +247,27 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.autoScaling = autoScaling;
     }
 
+    /**
+     * get 高可用组配置类型
+     *
+     * @return
+     */
+    public String getConfigurationType() {
+        return configurationType;
+    }
 
     /**
-     * set 可用组id
+     * set 高可用组配置类型
+     *
+     * @param configurationType
+     */
+    public void setConfigurationType(String configurationType) {
+        this.configurationType = configurationType;
+    }
+
+
+    /**
+     * set 高可用组ID
      *
      * @param id
      */
@@ -254,7 +277,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组name
+     * set 高可用组名称
      *
      * @param name
      */
@@ -264,7 +287,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 描述，length:0-256
+     * set 描述
      *
      * @param description
      */
@@ -274,7 +297,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 实例模板的Id
+     * set 实例模板的ID
      *
      * @param instanceTemplateId
      */
@@ -294,7 +317,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组类型，支持vm
+     * set 高可用组资源类型
      *
      * @param agType
      */
@@ -314,7 +337,7 @@ public class AvailabilityGroup  implements java.io.Serializable {
     }
 
     /**
-     * set 可用组中实例的数量
+     * set 高可用组中实例的数量
      *
      * @param count
      */
@@ -330,6 +353,16 @@ public class AvailabilityGroup  implements java.io.Serializable {
      */
     public AvailabilityGroup autoScaling(Boolean autoScaling) {
         this.autoScaling = autoScaling;
+        return this;
+    }
+
+    /**
+     * set 高可用组配置类型
+     *
+     * @param configurationType
+     */
+    public AvailabilityGroup configurationType(String configurationType) {
+        this.configurationType = configurationType;
         return this;
     }
 
