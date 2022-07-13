@@ -73,6 +73,12 @@ import com.jdcloud.sdk.service.iotlink.client.SearchExecutor;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoByIMSIRequest;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoByIMSIResponse;
 import com.jdcloud.sdk.service.iotlink.client.GprsRealtimeInfoByIMSIExecutor;
+import com.jdcloud.sdk.service.iotlink.model.RealNameQueryIotRequest;
+import com.jdcloud.sdk.service.iotlink.model.RealNameQueryIotResponse;
+import com.jdcloud.sdk.service.iotlink.client.RealNameQueryIotExecutor;
+import com.jdcloud.sdk.service.iotlink.model.CardInfoRequest;
+import com.jdcloud.sdk.service.iotlink.model.CardInfoResponse;
+import com.jdcloud.sdk.service.iotlink.client.CardInfoExecutor;
 
 /**
  * iotlinkClient
@@ -81,7 +87,7 @@ public class IotlinkClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.4";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "iotlink.jdcloud-api.com";
     public final static String ServiceName = "iotlink";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -275,6 +281,28 @@ public class IotlinkClient extends JdcloudClient {
      */
     public GprsRealtimeInfoByIMSIResponse gprsRealtimeInfoByIMSI(GprsRealtimeInfoByIMSIRequest request) throws JdcloudSdkException {
         return new GprsRealtimeInfoByIMSIExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡iccid查询该卡的实名认证信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RealNameQueryIotResponse realNameQueryIot(RealNameQueryIotRequest request) throws JdcloudSdkException {
+        return new RealNameQueryIotExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 根据物联网卡iccid查询该卡的基本信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CardInfoResponse cardInfo(CardInfoRequest request) throws JdcloudSdkException {
+        return new CardInfoExecutor().client(this).execute(request);
     }
 
 
