@@ -57,9 +57,7 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
 
     /**
      * 实例模板的ID
-     * Required:true
      */
-    @Required
     private String instanceTemplateId;
 
     /**

@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>ag</artifactId>
-  <version>0.5.0</version>
+  <version>0.6.0</version>
   <packaging>jar</packaging>
   <name>ag</name>
   <url>http://www.jdcloud.com</url>
