@@ -47,6 +47,16 @@ public class VolumeSpec  implements java.io.Serializable {
     @Required
     private JDCloudVolumeSourceSpec jdcloudDisk;
 
+    /**
+     * 提供给Pod的CFS.
+     */
+    private CFSVolumeSourceSpec cfs;
+
+    /**
+     * 提供给Pod的ConfigFile.
+     */
+    private ConfigFileVolumeSourceSpec configFile;
+
 
     /**
      * get volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
@@ -84,6 +94,42 @@ public class VolumeSpec  implements java.io.Serializable {
         this.jdcloudDisk = jdcloudDisk;
     }
 
+    /**
+     * get 提供给Pod的CFS.
+     *
+     * @return
+     */
+    public CFSVolumeSourceSpec getCfs() {
+        return cfs;
+    }
+
+    /**
+     * set 提供给Pod的CFS.
+     *
+     * @param cfs
+     */
+    public void setCfs(CFSVolumeSourceSpec cfs) {
+        this.cfs = cfs;
+    }
+
+    /**
+     * get 提供给Pod的ConfigFile.
+     *
+     * @return
+     */
+    public ConfigFileVolumeSourceSpec getConfigFile() {
+        return configFile;
+    }
+
+    /**
+     * set 提供给Pod的ConfigFile.
+     *
+     * @param configFile
+     */
+    public void setConfigFile(ConfigFileVolumeSourceSpec configFile) {
+        this.configFile = configFile;
+    }
+
 
     /**
      * set volume名字，符合DNS-1123 label规范，在一个Pod内唯一。
@@ -102,6 +148,26 @@ public class VolumeSpec  implements java.io.Serializable {
      */
     public VolumeSpec jdcloudDisk(JDCloudVolumeSourceSpec jdcloudDisk) {
         this.jdcloudDisk = jdcloudDisk;
+        return this;
+    }
+
+    /**
+     * set 提供给Pod的CFS.
+     *
+     * @param cfs
+     */
+    public VolumeSpec cfs(CFSVolumeSourceSpec cfs) {
+        this.cfs = cfs;
+        return this;
+    }
+
+    /**
+     * set 提供给Pod的ConfigFile.
+     *
+     * @param configFile
+     */
+    public VolumeSpec configFile(ConfigFileVolumeSourceSpec configFile) {
+        this.configFile = configFile;
         return this;
     }
 
