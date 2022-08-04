@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 镜像仓库认证信息
- * 关于镜像仓库认证信息的相关接口
+ * ConfigFile
+ * ConfigFile
  *
  * OpenAPI spec version: v1
  * Contact: 

@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 /**
- * 镜像仓库认证信息
+ * configFile
  */
 public class ConfigFile  implements java.io.Serializable {
 

@@ -27,21 +27,21 @@ package com.jdcloud.sdk.service.pod.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * configFile 的数据
+ * configFile数据，个数不超过32个
  */
 public class FileToPath  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * configFile 键
+     * 键名称，不能重复，最大长度不超过128（字母、数字、-、_和.）
      * Required:true
      */
     @Required
     private String key;
 
     /**
-     * configFile 值
+     * 内容（base64） 每个value长度上限为32KB，整个data的长度不能超过1M;
      * Required:true
      */
     @Required
@@ -49,7 +49,7 @@ public class FileToPath  implements java.io.Serializable {
 
 
     /**
-     * get configFile 键
+     * get 键名称，不能重复，最大长度不超过128（字母、数字、-、_和.）
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class FileToPath  implements java.io.Serializable {
     }
 
     /**
-     * set configFile 键
+     * set 键名称，不能重复，最大长度不超过128（字母、数字、-、_和.）
      *
      * @param key
      */
@@ -67,7 +67,7 @@ public class FileToPath  implements java.io.Serializable {
     }
 
     /**
-     * get configFile 值
+     * get 内容（base64） 每个value长度上限为32KB，整个data的长度不能超过1M;
      *
      * @return
      */
@@ -76,7 +76,7 @@ public class FileToPath  implements java.io.Serializable {
     }
 
     /**
-     * set configFile 值
+     * set 内容（base64） 每个value长度上限为32KB，整个data的长度不能超过1M;
      *
      * @param value
      */
@@ -86,7 +86,7 @@ public class FileToPath  implements java.io.Serializable {
 
 
     /**
-     * set configFile 键
+     * set 键名称，不能重复，最大长度不超过128（字母、数字、-、_和.）
      *
      * @param key
      */
@@ -96,7 +96,7 @@ public class FileToPath  implements java.io.Serializable {
     }
 
     /**
-     * set configFile 值
+     * set 内容（base64） 每个value长度上限为32KB，整个data的长度不能超过1M;
      *
      * @param value
      */

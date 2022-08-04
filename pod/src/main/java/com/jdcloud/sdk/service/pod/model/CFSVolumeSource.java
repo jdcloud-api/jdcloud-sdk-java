@@ -33,18 +33,18 @@ public class CFSVolumeSource  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 共享目录id
+     * 挂载目标 ID
      */
     private String mountTargetId;
 
     /**
-     * 子目录
+     * 云文件系统所在容器内的目录
      */
     private String path;
 
 
     /**
-     * get 共享目录id
+     * get 挂载目标 ID
      *
      * @return
      */
@@ -53,7 +53,7 @@ public class CFSVolumeSource  implements java.io.Serializable {
     }
 
     /**
-     * set 共享目录id
+     * set 挂载目标 ID
      *
      * @param mountTargetId
      */
@@ -62,7 +62,7 @@ public class CFSVolumeSource  implements java.io.Serializable {
     }
 
     /**
-     * get 子目录
+     * get 云文件系统所在容器内的目录
      *
      * @return
      */
@@ -71,7 +71,7 @@ public class CFSVolumeSource  implements java.io.Serializable {
     }
 
     /**
-     * set 子目录
+     * set 云文件系统所在容器内的目录
      *
      * @param path
      */
@@ -81,7 +81,7 @@ public class CFSVolumeSource  implements java.io.Serializable {
 
 
     /**
-     * set 共享目录id
+     * set 挂载目标 ID
      *
      * @param mountTargetId
      */
@@ -91,7 +91,7 @@ public class CFSVolumeSource  implements java.io.Serializable {
     }
 
     /**
-     * set 子目录
+     * set 云文件系统所在容器内的目录
      *
      * @param path
      */

@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 镜像仓库认证信息
- * 关于镜像仓库认证信息的相关接口
+ * ConfigFile
+ * ConfigFile
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -39,7 +39,8 @@ public class CreateConfigFileRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * configFile名字，不能重复
+     * ConfigFile 的名字，名称不能重复
+长度不超过63（命名字母小写，数字和-）
 
      * Required:true
      */
@@ -47,8 +48,7 @@ public class CreateConfigFileRequest extends JdcloudRequest implements java.io.S
     private String name;
 
     /**
-     * key 的有效字符包括字母、数字、-、_和.; &lt;br&gt;
-value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br&gt;
+     * configFile数据，个数不超过32个
 
      * Required:true
      */
@@ -64,7 +64,8 @@ value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br
 
 
     /**
-     * get configFile名字，不能重复
+     * get ConfigFile 的名字，名称不能重复
+长度不超过63（命名字母小写，数字和-）
 
      *
      * @return
@@ -74,7 +75,8 @@ value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br
     }
 
     /**
-     * set configFile名字，不能重复
+     * set ConfigFile 的名字，名称不能重复
+长度不超过63（命名字母小写，数字和-）
 
      *
      * @param name
@@ -84,8 +86,7 @@ value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br
     }
 
     /**
-     * get key 的有效字符包括字母、数字、-、_和.; &lt;br&gt;
-value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br&gt;
+     * get configFile数据，个数不超过32个
 
      *
      * @return
@@ -95,8 +96,7 @@ value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br
     }
 
     /**
-     * set key 的有效字符包括字母、数字、-、_和.; &lt;br&gt;
-value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br&gt;
+     * set configFile数据，个数不超过32个
 
      *
      * @param data
@@ -125,7 +125,8 @@ value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br
 
 
     /**
-     * set configFile名字，不能重复
+     * set ConfigFile 的名字，名称不能重复
+长度不超过63（命名字母小写，数字和-）
 
      *
      * @param name
@@ -136,8 +137,7 @@ value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br
     }
 
     /**
-     * set key 的有效字符包括字母、数字、-、_和.; &lt;br&gt;
-value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br&gt;
+     * set configFile数据，个数不超过32个
 
      *
      * @param data
@@ -159,8 +159,7 @@ value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br
 
 
     /**
-     * add item to key 的有效字符包括字母、数字、-、_和.; &lt;br&gt;
-value 每个value长度上限为32KB，整个data的长度不能超过1M; &lt;br&gt;
+     * add item to configFile数据，个数不超过32个
 
      *
      * @param data
