@@ -174,6 +174,11 @@ public class Instance  implements java.io.Serializable {
     private String dedicatedHostId;
 
     /**
+     * 突发型实例参数信息
+     */
+    private BurstInfo burstInfo;
+
+    /**
      * 资源组ID
      */
     private String resourceGroupId;
@@ -672,6 +677,24 @@ public class Instance  implements java.io.Serializable {
     }
 
     /**
+     * get 突发型实例参数信息
+     *
+     * @return
+     */
+    public BurstInfo getBurstInfo() {
+        return burstInfo;
+    }
+
+    /**
+     * set 突发型实例参数信息
+     *
+     * @param burstInfo
+     */
+    public void setBurstInfo(BurstInfo burstInfo) {
+        this.burstInfo = burstInfo;
+    }
+
+    /**
      * get 资源组ID
      *
      * @return
@@ -960,6 +983,16 @@ public class Instance  implements java.io.Serializable {
      */
     public Instance dedicatedHostId(String dedicatedHostId) {
         this.dedicatedHostId = dedicatedHostId;
+        return this;
+    }
+
+    /**
+     * set 突发型实例参数信息
+     *
+     * @param burstInfo
+     */
+    public Instance burstInfo(BurstInfo burstInfo) {
+        this.burstInfo = burstInfo;
         return this;
     }
 

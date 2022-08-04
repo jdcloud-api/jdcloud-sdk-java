@@ -24,8 +24,6 @@
 
 package com.jdcloud.sdk.service.jdccs.model;
 
-import java.util.List;
-import java.util.ArrayList;
 
 /**
  * 工单
@@ -63,41 +61,6 @@ public class Ticket  implements java.io.Serializable {
      * 描述
      */
     private String description;
-
-    /**
-     * 当前任务节点
-     */
-    private String currentTaskNodeId;
-
-    /**
-     * 工单类型ID
-     */
-    private Integer ticketTypeId;
-
-    /**
-     * 工单模板ID
-     */
-    private Integer ticketTemplateId;
-
-    /**
-     * 主账号pin
-     */
-    private String ownerPin;
-
-    /**
-     * 子用户pin
-     */
-    private String subUserPin;
-
-    /**
-     * 提交账号
-     */
-    private String submitAccount;
-
-    /**
-     * 用户操作
-     */
-    private List<Integer> userOperation;
 
     /**
      * 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
@@ -261,132 +224,6 @@ public class Ticket  implements java.io.Serializable {
      */
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    /**
-     * get 当前任务节点
-     *
-     * @return
-     */
-    public String getCurrentTaskNodeId() {
-        return currentTaskNodeId;
-    }
-
-    /**
-     * set 当前任务节点
-     *
-     * @param currentTaskNodeId
-     */
-    public void setCurrentTaskNodeId(String currentTaskNodeId) {
-        this.currentTaskNodeId = currentTaskNodeId;
-    }
-
-    /**
-     * get 工单类型ID
-     *
-     * @return
-     */
-    public Integer getTicketTypeId() {
-        return ticketTypeId;
-    }
-
-    /**
-     * set 工单类型ID
-     *
-     * @param ticketTypeId
-     */
-    public void setTicketTypeId(Integer ticketTypeId) {
-        this.ticketTypeId = ticketTypeId;
-    }
-
-    /**
-     * get 工单模板ID
-     *
-     * @return
-     */
-    public Integer getTicketTemplateId() {
-        return ticketTemplateId;
-    }
-
-    /**
-     * set 工单模板ID
-     *
-     * @param ticketTemplateId
-     */
-    public void setTicketTemplateId(Integer ticketTemplateId) {
-        this.ticketTemplateId = ticketTemplateId;
-    }
-
-    /**
-     * get 主账号pin
-     *
-     * @return
-     */
-    public String getOwnerPin() {
-        return ownerPin;
-    }
-
-    /**
-     * set 主账号pin
-     *
-     * @param ownerPin
-     */
-    public void setOwnerPin(String ownerPin) {
-        this.ownerPin = ownerPin;
-    }
-
-    /**
-     * get 子用户pin
-     *
-     * @return
-     */
-    public String getSubUserPin() {
-        return subUserPin;
-    }
-
-    /**
-     * set 子用户pin
-     *
-     * @param subUserPin
-     */
-    public void setSubUserPin(String subUserPin) {
-        this.subUserPin = subUserPin;
-    }
-
-    /**
-     * get 提交账号
-     *
-     * @return
-     */
-    public String getSubmitAccount() {
-        return submitAccount;
-    }
-
-    /**
-     * set 提交账号
-     *
-     * @param submitAccount
-     */
-    public void setSubmitAccount(String submitAccount) {
-        this.submitAccount = submitAccount;
-    }
-
-    /**
-     * get 用户操作
-     *
-     * @return
-     */
-    public List<Integer> getUserOperation() {
-        return userOperation;
-    }
-
-    /**
-     * set 用户操作
-     *
-     * @param userOperation
-     */
-    public void setUserOperation(List<Integer> userOperation) {
-        this.userOperation = userOperation;
     }
 
     /**
@@ -649,76 +486,6 @@ public class Ticket  implements java.io.Serializable {
     }
 
     /**
-     * set 当前任务节点
-     *
-     * @param currentTaskNodeId
-     */
-    public Ticket currentTaskNodeId(String currentTaskNodeId) {
-        this.currentTaskNodeId = currentTaskNodeId;
-        return this;
-    }
-
-    /**
-     * set 工单类型ID
-     *
-     * @param ticketTypeId
-     */
-    public Ticket ticketTypeId(Integer ticketTypeId) {
-        this.ticketTypeId = ticketTypeId;
-        return this;
-    }
-
-    /**
-     * set 工单模板ID
-     *
-     * @param ticketTemplateId
-     */
-    public Ticket ticketTemplateId(Integer ticketTemplateId) {
-        this.ticketTemplateId = ticketTemplateId;
-        return this;
-    }
-
-    /**
-     * set 主账号pin
-     *
-     * @param ownerPin
-     */
-    public Ticket ownerPin(String ownerPin) {
-        this.ownerPin = ownerPin;
-        return this;
-    }
-
-    /**
-     * set 子用户pin
-     *
-     * @param subUserPin
-     */
-    public Ticket subUserPin(String subUserPin) {
-        this.subUserPin = subUserPin;
-        return this;
-    }
-
-    /**
-     * set 提交账号
-     *
-     * @param submitAccount
-     */
-    public Ticket submitAccount(String submitAccount) {
-        this.submitAccount = submitAccount;
-        return this;
-    }
-
-    /**
-     * set 用户操作
-     *
-     * @param userOperation
-     */
-    public Ticket userOperation(List<Integer> userOperation) {
-        this.userOperation = userOperation;
-        return this;
-    }
-
-    /**
      * set 创建时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      *
      * @param createdTime
@@ -828,17 +595,5 @@ public class Ticket  implements java.io.Serializable {
         return this;
     }
 
-
-    /**
-     * add item to 用户操作
-     *
-     * @param userOperation
-     */
-    public void addUserOperation(Integer userOperation) {
-        if (this.userOperation == null) {
-            this.userOperation = new ArrayList<>();
-        }
-        this.userOperation.add(userOperation);
-    }
 
 }

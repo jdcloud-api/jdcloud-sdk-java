@@ -106,8 +106,14 @@ public class InstanceTemplateData  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。
+
      */
     private String imageInherit;
+
+    /**
+     * 突发型实例参数信息
+     */
+    private InstanceTemplateBurstInfo burstInfo;
 
 
     /**
@@ -345,6 +351,7 @@ public class InstanceTemplateData  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。
+
      *
      * @return
      */
@@ -357,11 +364,30 @@ public class InstanceTemplateData  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。
+
      *
      * @param imageInherit
      */
     public void setImageInherit(String imageInherit) {
         this.imageInherit = imageInherit;
+    }
+
+    /**
+     * get 突发型实例参数信息
+     *
+     * @return
+     */
+    public InstanceTemplateBurstInfo getBurstInfo() {
+        return burstInfo;
+    }
+
+    /**
+     * set 突发型实例参数信息
+     *
+     * @param burstInfo
+     */
+    public void setBurstInfo(InstanceTemplateBurstInfo burstInfo) {
+        this.burstInfo = burstInfo;
     }
 
 
@@ -497,11 +523,22 @@ public class InstanceTemplateData  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。
+
      *
      * @param imageInherit
      */
     public InstanceTemplateData imageInherit(String imageInherit) {
         this.imageInherit = imageInherit;
+        return this;
+    }
+
+    /**
+     * set 突发型实例参数信息
+     *
+     * @param burstInfo
+     */
+    public InstanceTemplateData burstInfo(InstanceTemplateBurstInfo burstInfo) {
+        this.burstInfo = burstInfo;
         return this;
     }
 

@@ -45,11 +45,6 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
     private Integer pageSize;
 
     /**
-     * 是否查询全部，默认分页
-     */
-    private Integer all;
-
-    /**
      * 带宽（出口）名称
      */
     private String bandwidthName;
@@ -96,24 +91,6 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
-    }
-
-    /**
-     * get 是否查询全部，默认分页
-     *
-     * @return
-     */
-    public Integer getAll() {
-        return all;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public void setAll(Integer all) {
-        this.all = all;
     }
 
     /**
@@ -170,16 +147,6 @@ public class DescribeBandwidthTrafficsRequest extends JdcloudRequest implements 
      */
     public DescribeBandwidthTrafficsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
-        return this;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public DescribeBandwidthTrafficsRequest all(Integer all) {
-        this.all = all;
         return this;
     }
 

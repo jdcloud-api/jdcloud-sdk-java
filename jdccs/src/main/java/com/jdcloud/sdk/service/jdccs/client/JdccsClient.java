@@ -34,6 +34,9 @@ import com.jdcloud.sdk.http.HttpRequestConfig;
 import com.jdcloud.sdk.service.jdccs.model.CreateAlarmRequest;
 import com.jdcloud.sdk.service.jdccs.model.CreateAlarmResponse;
 import com.jdcloud.sdk.service.jdccs.client.CreateAlarmExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeRangetimeCabinetCurrentRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeRangetimeCabinetCurrentResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeRangetimeCabinetCurrentExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeTicketsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeTicketsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeTicketsExecutor;
@@ -97,6 +100,9 @@ import com.jdcloud.sdk.service.jdccs.client.DescribeIpsExecutor;
 import com.jdcloud.sdk.service.jdccs.model.UpdateAlarmRequest;
 import com.jdcloud.sdk.service.jdccs.model.UpdateAlarmResponse;
 import com.jdcloud.sdk.service.jdccs.client.UpdateAlarmExecutor;
+import com.jdcloud.sdk.service.jdccs.model.DescribeRealtimeCabinetCurrentRequest;
+import com.jdcloud.sdk.service.jdccs.model.DescribeRealtimeCabinetCurrentResponse;
+import com.jdcloud.sdk.service.jdccs.client.DescribeRealtimeCabinetCurrentExecutor;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricsRequest;
 import com.jdcloud.sdk.service.jdccs.model.DescribeMetricsResponse;
 import com.jdcloud.sdk.service.jdccs.client.DescribeMetricsExecutor;
@@ -123,7 +129,7 @@ public class JdccsClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "jdccs.jdcloud-api.com";
     public final static String ServiceName = "jdccs";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -174,6 +180,17 @@ public class JdccsClient extends JdcloudClient {
      */
     public CreateAlarmResponse createAlarm(CreateAlarmRequest request) throws JdcloudSdkException {
         return new CreateAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 按照时间段查询单个机柜AB路电流
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRangetimeCabinetCurrentResponse describeRangetimeCabinetCurrent(DescribeRangetimeCabinetCurrentRequest request) throws JdcloudSdkException {
+        return new DescribeRangetimeCabinetCurrentExecutor().client(this).execute(request);
     }
 
     /**
@@ -405,6 +422,17 @@ public class JdccsClient extends JdcloudClient {
      */
     public UpdateAlarmResponse updateAlarm(UpdateAlarmRequest request) throws JdcloudSdkException {
         return new UpdateAlarmExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询多个机柜AB路实时电流
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeRealtimeCabinetCurrentResponse describeRealtimeCabinetCurrent(DescribeRealtimeCabinetCurrentRequest request) throws JdcloudSdkException {
+        return new DescribeRealtimeCabinetCurrentExecutor().client(this).execute(request);
     }
 
     /**

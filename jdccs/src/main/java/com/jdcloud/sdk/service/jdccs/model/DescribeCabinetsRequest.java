@@ -49,11 +49,6 @@ public class DescribeCabinetsRequest extends JdcloudRequest implements java.io.S
     private Integer pageSize;
 
     /**
-     * 是否查询全部，默认分页
-     */
-    private Integer all;
-
-    /**
      * 机柜类型 formal:正式机柜 reserved:预留机柜
      */
     private String cabinetType;
@@ -67,11 +62,6 @@ public class DescribeCabinetsRequest extends JdcloudRequest implements java.io.S
      * 机柜编码
      */
     private String cabinetNo;
-
-    /**
-     * 机柜关电工单使用 yes
-     */
-    private String deviceMustBeEmpty;
 
     /**
      * roomNo - 房间号，精确匹配，支持多个
@@ -132,24 +122,6 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
     }
 
     /**
-     * get 是否查询全部，默认分页
-     *
-     * @return
-     */
-    public Integer getAll() {
-        return all;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public void setAll(Integer all) {
-        this.all = all;
-    }
-
-    /**
      * get 机柜类型 formal:正式机柜 reserved:预留机柜
      *
      * @return
@@ -201,24 +173,6 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
      */
     public void setCabinetNo(String cabinetNo) {
         this.cabinetNo = cabinetNo;
-    }
-
-    /**
-     * get 机柜关电工单使用 yes
-     *
-     * @return
-     */
-    public String getDeviceMustBeEmpty() {
-        return deviceMustBeEmpty;
-    }
-
-    /**
-     * set 机柜关电工单使用 yes
-     *
-     * @param deviceMustBeEmpty
-     */
-    public void setDeviceMustBeEmpty(String deviceMustBeEmpty) {
-        this.deviceMustBeEmpty = deviceMustBeEmpty;
     }
 
     /**
@@ -305,16 +259,6 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
     }
 
     /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public DescribeCabinetsRequest all(Integer all) {
-        this.all = all;
-        return this;
-    }
-
-    /**
      * set 机柜类型 formal:正式机柜 reserved:预留机柜
      *
      * @param cabinetType
@@ -341,16 +285,6 @@ cabinetOpenStatus - 机柜开通状态，精确匹配，支持多个
      */
     public DescribeCabinetsRequest cabinetNo(String cabinetNo) {
         this.cabinetNo = cabinetNo;
-        return this;
-    }
-
-    /**
-     * set 机柜关电工单使用 yes
-     *
-     * @param deviceMustBeEmpty
-     */
-    public DescribeCabinetsRequest deviceMustBeEmpty(String deviceMustBeEmpty) {
-        this.deviceMustBeEmpty = deviceMustBeEmpty;
         return this;
     }
 

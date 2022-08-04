@@ -102,6 +102,19 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     private List<Userdata> userdata;
 
     /**
+     * 密码授权，若存在密匙，则根据此参数决定是否使用密码，若没有密匙，此参数无效，会强制使用密码。
+若不使用密码，且密匙对解绑后，用户需重置密码，方可使用密码登录。
+此参数在windows系统中必须为yes。
+
+     */
+    private String passWordAuth;
+
+    /**
+     * 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     */
+    private String imageInherit;
+
+    /**
      * 地域ID。
      * Required:true
      */
@@ -263,6 +276,48 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
+     * get 密码授权，若存在密匙，则根据此参数决定是否使用密码，若没有密匙，此参数无效，会强制使用密码。
+若不使用密码，且密匙对解绑后，用户需重置密码，方可使用密码登录。
+此参数在windows系统中必须为yes。
+
+     *
+     * @return
+     */
+    public String getPassWordAuth() {
+        return passWordAuth;
+    }
+
+    /**
+     * set 密码授权，若存在密匙，则根据此参数决定是否使用密码，若没有密匙，此参数无效，会强制使用密码。
+若不使用密码，且密匙对解绑后，用户需重置密码，方可使用密码登录。
+此参数在windows系统中必须为yes。
+
+     *
+     * @param passWordAuth
+     */
+    public void setPassWordAuth(String passWordAuth) {
+        this.passWordAuth = passWordAuth;
+    }
+
+    /**
+     * get 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @return
+     */
+    public String getImageInherit() {
+        return imageInherit;
+    }
+
+    /**
+     * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @param imageInherit
+     */
+    public void setImageInherit(String imageInherit) {
+        this.imageInherit = imageInherit;
+    }
+
+    /**
      * get 地域ID。
      *
      * @return
@@ -375,6 +430,29 @@ public class RebuildInstanceRequest extends JdcloudRequest implements java.io.Se
      */
     public RebuildInstanceRequest userdata(List<Userdata> userdata) {
         this.userdata = userdata;
+        return this;
+    }
+
+    /**
+     * set 密码授权，若存在密匙，则根据此参数决定是否使用密码，若没有密匙，此参数无效，会强制使用密码。
+若不使用密码，且密匙对解绑后，用户需重置密码，方可使用密码登录。
+此参数在windows系统中必须为yes。
+
+     *
+     * @param passWordAuth
+     */
+    public RebuildInstanceRequest passWordAuth(String passWordAuth) {
+        this.passWordAuth = passWordAuth;
+        return this;
+    }
+
+    /**
+     * set 继承镜像中的登录验证方式，&quot;yes&quot;为使用，&quot;no&quot;为不使用，&quot;&quot;默认为&quot;no&quot;
+     *
+     * @param imageInherit
+     */
+    public RebuildInstanceRequest imageInherit(String imageInherit) {
+        this.imageInherit = imageInherit;
         return this;
     }
 
