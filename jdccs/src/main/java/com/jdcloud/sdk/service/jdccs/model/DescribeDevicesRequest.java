@@ -49,11 +49,6 @@ public class DescribeDevicesRequest extends JdcloudRequest implements java.io.Se
     private Integer pageSize;
 
     /**
-     * 是否查询全部，默认分页
-     */
-    private Integer all;
-
-    /**
      * 机柜ID
      */
     private String cabinetId;
@@ -82,16 +77,6 @@ public class DescribeDevicesRequest extends JdcloudRequest implements java.io.Se
      * 设备SN号
      */
     private String snNo;
-
-    /**
-     * 机柜编码
-     */
-    private String cabinetNo;
-
-    /**
-     * 工单模板CODE
-     */
-    private String ticketTemplateCode;
 
     /**
      * deviceId - 设备实例ID，精确匹配，支持多个
@@ -149,24 +134,6 @@ cabinetNo - 机柜编码，精确匹配，支持多个
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
-    }
-
-    /**
-     * get 是否查询全部，默认分页
-     *
-     * @return
-     */
-    public Integer getAll() {
-        return all;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public void setAll(Integer all) {
-        this.all = all;
     }
 
     /**
@@ -278,42 +245,6 @@ cabinetNo - 机柜编码，精确匹配，支持多个
     }
 
     /**
-     * get 机柜编码
-     *
-     * @return
-     */
-    public String getCabinetNo() {
-        return cabinetNo;
-    }
-
-    /**
-     * set 机柜编码
-     *
-     * @param cabinetNo
-     */
-    public void setCabinetNo(String cabinetNo) {
-        this.cabinetNo = cabinetNo;
-    }
-
-    /**
-     * get 工单模板CODE
-     *
-     * @return
-     */
-    public String getTicketTemplateCode() {
-        return ticketTemplateCode;
-    }
-
-    /**
-     * set 工单模板CODE
-     *
-     * @param ticketTemplateCode
-     */
-    public void setTicketTemplateCode(String ticketTemplateCode) {
-        this.ticketTemplateCode = ticketTemplateCode;
-    }
-
-    /**
      * get deviceId - 设备实例ID，精确匹配，支持多个
 snNo - 设备SN号，精确匹配，支持多个
 deviceNo - 设备编码，精确匹配，支持多个
@@ -397,16 +328,6 @@ cabinetNo - 机柜编码，精确匹配，支持多个
     }
 
     /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public DescribeDevicesRequest all(Integer all) {
-        this.all = all;
-        return this;
-    }
-
-    /**
      * set 机柜ID
      *
      * @param cabinetId
@@ -463,26 +384,6 @@ cabinetNo - 机柜编码，精确匹配，支持多个
      */
     public DescribeDevicesRequest snNo(String snNo) {
         this.snNo = snNo;
-        return this;
-    }
-
-    /**
-     * set 机柜编码
-     *
-     * @param cabinetNo
-     */
-    public DescribeDevicesRequest cabinetNo(String cabinetNo) {
-        this.cabinetNo = cabinetNo;
-        return this;
-    }
-
-    /**
-     * set 工单模板CODE
-     *
-     * @param ticketTemplateCode
-     */
-    public DescribeDevicesRequest ticketTemplateCode(String ticketTemplateCode) {
-        this.ticketTemplateCode = ticketTemplateCode;
         return this;
     }
 

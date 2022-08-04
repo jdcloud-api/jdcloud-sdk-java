@@ -119,16 +119,6 @@ public class DescribeAlarm  implements java.io.Serializable {
      */
     private List<Switchboard> switchboard;
 
-    /**
-     * 通知对象用户ID,若多个用逗号分隔
-     */
-    private String userId;
-
-    /**
-     * 通知对象组ID
-     */
-    private String groupId;
-
 
     /**
      * get 规则实例ID
@@ -436,42 +426,6 @@ public class DescribeAlarm  implements java.io.Serializable {
         this.switchboard = switchboard;
     }
 
-    /**
-     * get 通知对象用户ID,若多个用逗号分隔
-     *
-     * @return
-     */
-    public String getUserId() {
-        return userId;
-    }
-
-    /**
-     * set 通知对象用户ID,若多个用逗号分隔
-     *
-     * @param userId
-     */
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    /**
-     * get 通知对象组ID
-     *
-     * @return
-     */
-    public String getGroupId() {
-        return groupId;
-    }
-
-    /**
-     * set 通知对象组ID
-     *
-     * @param groupId
-     */
-    public void setGroupId(String groupId) {
-        this.groupId = groupId;
-    }
-
 
     /**
      * set 规则实例ID
@@ -640,26 +594,6 @@ public class DescribeAlarm  implements java.io.Serializable {
      */
     public DescribeAlarm switchboard(List<Switchboard> switchboard) {
         this.switchboard = switchboard;
-        return this;
-    }
-
-    /**
-     * set 通知对象用户ID,若多个用逗号分隔
-     *
-     * @param userId
-     */
-    public DescribeAlarm userId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-
-    /**
-     * set 通知对象组ID
-     *
-     * @param groupId
-     */
-    public DescribeAlarm groupId(String groupId) {
-        this.groupId = groupId;
         return this;
     }
 

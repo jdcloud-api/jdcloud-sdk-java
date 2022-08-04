@@ -49,11 +49,6 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
     private Integer pageSize;
 
     /**
-     * 是否查询全部，默认分页
-     */
-    private Integer all;
-
-    /**
      * 线路类型 dynamicBGP:动态BGP thirdLineBGP:三线BGP telecom:电信单线 unicom:联通单线 mobile:移动单线
      */
     private String lineType;
@@ -126,24 +121,6 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
-    }
-
-    /**
-     * get 是否查询全部，默认分页
-     *
-     * @return
-     */
-    public Integer getAll() {
-        return all;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public void setAll(Integer all) {
-        this.all = all;
     }
 
     /**
@@ -292,16 +269,6 @@ public class DescribeBandwidthsRequest extends JdcloudRequest implements java.io
      */
     public DescribeBandwidthsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
-        return this;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public DescribeBandwidthsRequest all(Integer all) {
-        this.all = all;
         return this;
     }
 

@@ -47,11 +47,6 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
     private Integer pageSize;
 
     /**
-     * 是否查询全部，默认分页
-     */
-    private Integer all;
-
-    /**
      * 资源类型 bandwidth:带宽
      */
     private String resourceType;
@@ -112,24 +107,6 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      */
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
-    }
-
-    /**
-     * get 是否查询全部，默认分页
-     *
-     * @return
-     */
-    public Integer getAll() {
-        return all;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public void setAll(Integer all) {
-        this.all = all;
     }
 
     /**
@@ -242,16 +219,6 @@ public class DescribeAlarmsRequest extends JdcloudRequest implements java.io.Ser
      */
     public DescribeAlarmsRequest pageSize(Integer pageSize) {
         this.pageSize = pageSize;
-        return this;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public DescribeAlarmsRequest all(Integer all) {
-        this.all = all;
         return this;
     }
 

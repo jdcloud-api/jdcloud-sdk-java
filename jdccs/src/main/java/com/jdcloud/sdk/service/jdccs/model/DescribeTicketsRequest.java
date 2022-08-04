@@ -48,11 +48,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     private Integer pageSize;
 
     /**
-     * 是否查询全部，默认分页
-     */
-    private Integer all;
-
-    /**
      * 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
      */
     private String type;
@@ -61,11 +56,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
      * 工单类型
      */
     private String ticketTypeName;
-
-    /**
-     * 工单类型ID
-     */
-    private Integer ticketTypeId;
 
     /**
      * 工单状态 pendingReview:待审核 revoked:已撤销 processing:处理中 pendingVerification:待核验 pendingClose:待关单 rejected:已拒绝 completed:已完成 cancelled:已取消 draft:草稿中
@@ -96,11 +86,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
      * 创建结束时间，遵循ISO8601标准，使用UTC时间，格式为：yyyy-MM-ddTHH:mm:ssZ
      */
     private String endTime;
-
-    /**
-     * 提交账号
-     */
-    private String submitAccount;
 
     /**
      * ticketNo - 工单编号，精确匹配，支持多个
@@ -151,24 +136,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 是否查询全部，默认分页
-     *
-     * @return
-     */
-    public Integer getAll() {
-        return all;
-    }
-
-    /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public void setAll(Integer all) {
-        this.all = all;
-    }
-
-    /**
      * get 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
      *
      * @return
@@ -202,24 +169,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
      */
     public void setTicketTypeName(String ticketTypeName) {
         this.ticketTypeName = ticketTypeName;
-    }
-
-    /**
-     * get 工单类型ID
-     *
-     * @return
-     */
-    public Integer getTicketTypeId() {
-        return ticketTypeId;
-    }
-
-    /**
-     * set 工单类型ID
-     *
-     * @param ticketTypeId
-     */
-    public void setTicketTypeId(Integer ticketTypeId) {
-        this.ticketTypeId = ticketTypeId;
     }
 
     /**
@@ -331,24 +280,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * get 提交账号
-     *
-     * @return
-     */
-    public String getSubmitAccount() {
-        return submitAccount;
-    }
-
-    /**
-     * set 提交账号
-     *
-     * @param submitAccount
-     */
-    public void setSubmitAccount(String submitAccount) {
-        this.submitAccount = submitAccount;
-    }
-
-    /**
      * get ticketNo - 工单编号，精确匹配，支持多个
 
      *
@@ -408,16 +339,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
     }
 
     /**
-     * set 是否查询全部，默认分页
-     *
-     * @param all
-     */
-    public DescribeTicketsRequest all(Integer all) {
-        this.all = all;
-        return this;
-    }
-
-    /**
      * set 工单TAB类型 pendingProcess:待我处理 pendingReview:待审核 processing:处理中 all:全部(默认)
      *
      * @param type
@@ -434,16 +355,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
      */
     public DescribeTicketsRequest ticketTypeName(String ticketTypeName) {
         this.ticketTypeName = ticketTypeName;
-        return this;
-    }
-
-    /**
-     * set 工单类型ID
-     *
-     * @param ticketTypeId
-     */
-    public DescribeTicketsRequest ticketTypeId(Integer ticketTypeId) {
-        this.ticketTypeId = ticketTypeId;
         return this;
     }
 
@@ -504,16 +415,6 @@ public class DescribeTicketsRequest extends JdcloudRequest implements java.io.Se
      */
     public DescribeTicketsRequest endTime(String endTime) {
         this.endTime = endTime;
-        return this;
-    }
-
-    /**
-     * set 提交账号
-     *
-     * @param submitAccount
-     */
-    public DescribeTicketsRequest submitAccount(String submitAccount) {
-        this.submitAccount = submitAccount;
         return this;
     }
 
