@@ -126,8 +126,14 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
+
      */
     private String imageInherit;
+
+    /**
+     * 突发型实例参数配置
+     */
+    private InstanceTemplateBurstSpec burstSpec;
 
 
     /**
@@ -399,6 +405,7 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
+
      *
      * @return
      */
@@ -411,11 +418,30 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
+
      *
      * @param imageInherit
      */
     public void setImageInherit(String imageInherit) {
         this.imageInherit = imageInherit;
+    }
+
+    /**
+     * get 突发型实例参数配置
+     *
+     * @return
+     */
+    public InstanceTemplateBurstSpec getBurstSpec() {
+        return burstSpec;
+    }
+
+    /**
+     * set 突发型实例参数配置
+     *
+     * @param burstSpec
+     */
+    public void setBurstSpec(InstanceTemplateBurstSpec burstSpec) {
+        this.burstSpec = burstSpec;
     }
 
 
@@ -569,11 +595,22 @@ public class InstanceTemplateSpec  implements java.io.Serializable {
 &#x60;yes&#x60;：使用镜像登录凭证。
 &#x60;no&#x60;（默认值）：不使用镜像登录凭证。
 仅使用私有或共享镜像时此参数有效。若指定&#x60;imageInherit&#x3D;yes&#x60;则指定的密码或密钥将无效。
+
      *
      * @param imageInherit
      */
     public InstanceTemplateSpec imageInherit(String imageInherit) {
         this.imageInherit = imageInherit;
+        return this;
+    }
+
+    /**
+     * set 突发型实例参数配置
+     *
+     * @param burstSpec
+     */
+    public InstanceTemplateSpec burstSpec(InstanceTemplateBurstSpec burstSpec) {
+        this.burstSpec = burstSpec;
         return this;
     }
 

@@ -56,6 +56,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
      * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
+&#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
      */
     private List<Filter> filters;
@@ -90,6 +91,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
      * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
+&#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
      *
      * @return
@@ -102,6 +104,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
      * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
+&#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
      *
      * @param filters
@@ -143,6 +146,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
      * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
+&#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
      *
      * @param filters
@@ -167,6 +171,7 @@ public class DescribeInstanceTypesRequest extends JdcloudRequest implements java
      * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
 &#x60;instanceTypes&#x60;: 实例规格，精确匹配，支持多个
 &#x60;az&#x60;: 可用区，精确匹配，支持多个
+&#x60;architecture&#x60;: CPU架构，精确匹配，支持单个，可选范围:x86_64或arm64
 
      *
      * @param filter

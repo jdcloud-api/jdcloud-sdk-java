@@ -43,7 +43,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     private static final long serialVersionUID = 1L;
 
     /**
-     * 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
+     * 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      * Required:true
      */
     @Required
@@ -122,7 +122,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * get 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
+     * get 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
      * @return
      */
@@ -131,7 +131,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
     }
 
     /**
-     * set 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
+     * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
      * @param architecture
      */
@@ -343,7 +343,7 @@ public class ImportImageRequest extends JdcloudRequest implements java.io.Serial
 
 
     /**
-     * set 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
+     * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
      * @param architecture
      */

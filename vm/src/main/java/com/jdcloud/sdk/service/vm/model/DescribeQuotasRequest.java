@@ -35,7 +35,7 @@ import com.jdcloud.sdk.service.JdcloudRequest;
 查询资源配额。
 
 ## 接口说明
-- 调用该接口可查询 &#x60;云主机&#x60;、&#x60;镜像&#x60;、&#x60;密钥&#x60;、&#x60;实例模板&#x60;、&#x60;镜像共享&#x60; 的配额。
+- 调用该接口可查询 &#x60;云主机&#x60;、&#x60;云主机的CPU&#x60;、&#x60;云主机的内存&#x60;、&#x60;云主机的本地盘&#x60;、&#x60;镜像&#x60;、&#x60;密钥&#x60;、&#x60;实例模板&#x60;、&#x60;镜像共享&#x60; 的配额。
 
  */
 public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Serializable {
@@ -44,7 +44,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
      */
     private List<Filter> filters;
@@ -66,7 +66,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * get &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
      *
      * @return
@@ -77,7 +77,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
      *
      * @param filters
@@ -129,7 +129,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * set &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
      *
      * @param filters
@@ -164,7 +164,7 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
 
     /**
      * add item to &lt;b&gt;filters 中支持使用以下关键字进行过滤&lt;/b&gt;
-&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、keypair、image、instanceTemplate、imageShare&#x60;
+&#x60;resourceTypes&#x60;: 资源类型，支持多个，可选范围：&#x60;instance、instance_cpu、instance_memory、instance_local_disk、keypair、image、instanceTemplate、imageShare&#x60;
 
      *
      * @param filter

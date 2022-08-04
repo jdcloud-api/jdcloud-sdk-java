@@ -50,6 +50,11 @@ public class InstanceType  implements java.io.Serializable {
     private Integer cpu;
 
     /**
+     * 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
+     */
+    private String architecture;
+
+    /**
      * 内存大小。
      */
     private Integer memoryMB;
@@ -88,6 +93,11 @@ public class InstanceType  implements java.io.Serializable {
      * 实例规格代数。
      */
     private Integer generation;
+
+    /**
+     * 突发型规格信息
+     */
+    private InstanceTypeBurstInfo burstInfo;
 
 
     /**
@@ -142,6 +152,24 @@ public class InstanceType  implements java.io.Serializable {
      */
     public void setCpu(Integer cpu) {
         this.cpu = cpu;
+    }
+
+    /**
+     * get 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
+     *
+     * @return
+     */
+    public String getArchitecture() {
+        return architecture;
+    }
+
+    /**
+     * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
+     *
+     * @param architecture
+     */
+    public void setArchitecture(String architecture) {
+        this.architecture = architecture;
     }
 
     /**
@@ -288,6 +316,24 @@ public class InstanceType  implements java.io.Serializable {
         this.generation = generation;
     }
 
+    /**
+     * get 突发型规格信息
+     *
+     * @return
+     */
+    public InstanceTypeBurstInfo getBurstInfo() {
+        return burstInfo;
+    }
+
+    /**
+     * set 突发型规格信息
+     *
+     * @param burstInfo
+     */
+    public void setBurstInfo(InstanceTypeBurstInfo burstInfo) {
+        this.burstInfo = burstInfo;
+    }
+
 
     /**
      * set 实例规格族。
@@ -316,6 +362,16 @@ public class InstanceType  implements java.io.Serializable {
      */
     public InstanceType cpu(Integer cpu) {
         this.cpu = cpu;
+        return this;
+    }
+
+    /**
+     * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
+     *
+     * @param architecture
+     */
+    public InstanceType architecture(String architecture) {
+        this.architecture = architecture;
         return this;
     }
 
@@ -396,6 +452,16 @@ public class InstanceType  implements java.io.Serializable {
      */
     public InstanceType generation(Integer generation) {
         this.generation = generation;
+        return this;
+    }
+
+    /**
+     * set 突发型规格信息
+     *
+     * @param burstInfo
+     */
+    public InstanceType burstInfo(InstanceTypeBurstInfo burstInfo) {
+        this.burstInfo = burstInfo;
         return this;
     }
 

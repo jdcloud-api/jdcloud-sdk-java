@@ -133,6 +133,11 @@ public class UpdateInstanceTemplateSpec  implements java.io.Serializable {
      */
     private Boolean noElasticIp;
 
+    /**
+     * 突发型实例参数配置。传入 &#x60;null&#x60; 表示忽略，否则以新传入的为准。如指定了该参数则覆盖原有参数。
+     */
+    private InstanceTemplateBurstSpec burstSpec;
+
 
     /**
      * get 实例规格，可查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得指定地域或可用区的规格信息。
@@ -460,6 +465,24 @@ public class UpdateInstanceTemplateSpec  implements java.io.Serializable {
         this.noElasticIp = noElasticIp;
     }
 
+    /**
+     * get 突发型实例参数配置。传入 &#x60;null&#x60; 表示忽略，否则以新传入的为准。如指定了该参数则覆盖原有参数。
+     *
+     * @return
+     */
+    public InstanceTemplateBurstSpec getBurstSpec() {
+        return burstSpec;
+    }
+
+    /**
+     * set 突发型实例参数配置。传入 &#x60;null&#x60; 表示忽略，否则以新传入的为准。如指定了该参数则覆盖原有参数。
+     *
+     * @param burstSpec
+     */
+    public void setBurstSpec(InstanceTemplateBurstSpec burstSpec) {
+        this.burstSpec = burstSpec;
+    }
+
 
     /**
      * set 实例规格，可查询 [DescribeInstanceTypes](https://docs.jdcloud.com/virtual-machines/api/describeinstancetypes) 接口获得指定地域或可用区的规格信息。
@@ -637,6 +660,16 @@ public class UpdateInstanceTemplateSpec  implements java.io.Serializable {
      */
     public UpdateInstanceTemplateSpec noElasticIp(Boolean noElasticIp) {
         this.noElasticIp = noElasticIp;
+        return this;
+    }
+
+    /**
+     * set 突发型实例参数配置。传入 &#x60;null&#x60; 表示忽略，否则以新传入的为准。如指定了该参数则覆盖原有参数。
+     *
+     * @param burstSpec
+     */
+    public UpdateInstanceTemplateSpec burstSpec(InstanceTemplateBurstSpec burstSpec) {
+        this.burstSpec = burstSpec;
         return this;
     }
 

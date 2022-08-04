@@ -35,6 +35,9 @@ public class Quota  implements java.io.Serializable {
     /**
      * 资源类型。支持范围：
 &#x60;instance&#x60;：云主机。
+&#x60;instance_cpu&#x60;：云主机的CPU。
+&#x60;instance_memory&#x60;：云主机的内存。
+&#x60;instance_local_disk&#x60;：云主机的本地盘。
 &#x60;keypair&#x60;：密钥。
 &#x60;image&#x60;：镜像。
 &#x60;instanceTemplate&#x60;：实例模板。
@@ -57,6 +60,9 @@ public class Quota  implements java.io.Serializable {
     /**
      * get 资源类型。支持范围：
 &#x60;instance&#x60;：云主机。
+&#x60;instance_cpu&#x60;：云主机的CPU。
+&#x60;instance_memory&#x60;：云主机的内存。
+&#x60;instance_local_disk&#x60;：云主机的本地盘。
 &#x60;keypair&#x60;：密钥。
 &#x60;image&#x60;：镜像。
 &#x60;instanceTemplate&#x60;：实例模板。
@@ -72,6 +78,9 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 资源类型。支持范围：
 &#x60;instance&#x60;：云主机。
+&#x60;instance_cpu&#x60;：云主机的CPU。
+&#x60;instance_memory&#x60;：云主机的内存。
+&#x60;instance_local_disk&#x60;：云主机的本地盘。
 &#x60;keypair&#x60;：密钥。
 &#x60;image&#x60;：镜像。
 &#x60;instanceTemplate&#x60;：实例模板。
@@ -124,6 +133,9 @@ public class Quota  implements java.io.Serializable {
     /**
      * set 资源类型。支持范围：
 &#x60;instance&#x60;：云主机。
+&#x60;instance_cpu&#x60;：云主机的CPU。
+&#x60;instance_memory&#x60;：云主机的内存。
+&#x60;instance_local_disk&#x60;：云主机的本地盘。
 &#x60;keypair&#x60;：密钥。
 &#x60;image&#x60;：镜像。
 &#x60;instanceTemplate&#x60;：实例模板。

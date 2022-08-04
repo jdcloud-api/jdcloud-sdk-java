@@ -57,7 +57,7 @@ public class Image  implements java.io.Serializable {
     private String osVersion;
 
     /**
-     * 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
+     * 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      */
     private String architecture;
 
@@ -237,7 +237,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * get 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
+     * get 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
      * @return
      */
@@ -246,7 +246,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
+     * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
      * @param architecture
      */
@@ -630,7 +630,7 @@ public class Image  implements java.io.Serializable {
     }
 
     /**
-     * set 镜像架构。取值范围：&#x60;x86_64、i386&#x60;。
+     * set 镜像架构。取值范围：&#x60;x86_64、arm64&#x60;。
      *
      * @param architecture
      */
