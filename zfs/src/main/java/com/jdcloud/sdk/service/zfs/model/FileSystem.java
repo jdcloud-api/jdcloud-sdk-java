@@ -70,6 +70,11 @@ public class FileSystem  implements java.io.Serializable {
     private String fileSystemType;
 
     /**
+     * 文件系统所属的可用区
+     */
+    private String az;
+
+    /**
      * 创建时间
      */
     private String createTime;
@@ -212,6 +217,24 @@ public class FileSystem  implements java.io.Serializable {
     }
 
     /**
+     * get 文件系统所属的可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 文件系统所属的可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
+    /**
      * get 创建时间
      *
      * @return
@@ -333,6 +356,16 @@ public class FileSystem  implements java.io.Serializable {
      */
     public FileSystem fileSystemType(String fileSystemType) {
         this.fileSystemType = fileSystemType;
+        return this;
+    }
+
+    /**
+     * set 文件系统所属的可用区
+     *
+     * @param az
+     */
+    public FileSystem az(String az) {
+        this.az = az;
         return this;
     }
 
