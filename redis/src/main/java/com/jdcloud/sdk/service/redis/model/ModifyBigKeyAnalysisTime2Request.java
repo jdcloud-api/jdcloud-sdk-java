@@ -28,18 +28,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询大key分析任务列表
+ * 设置大key自动缓存分析时间
  */
-public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io.Serializable {
+public class ModifyBigKeyAnalysisTime2Request extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * -表示关闭，否则为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      * Required:true
      */
     @Required
-    private String date;
+    private String analysisTime;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -57,21 +57,21 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * get -表示关闭，否则为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
      * @return
      */
-    public String getDate() {
-        return date;
+    public String getAnalysisTime() {
+        return analysisTime;
     }
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * set -表示关闭，否则为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
-     * @param date
+     * @param analysisTime
      */
-    public void setDate(String date) {
-        this.date = date;
+    public void setAnalysisTime(String analysisTime) {
+        this.analysisTime = analysisTime;
     }
 
     /**
@@ -112,12 +112,12 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * set -表示关闭，否则为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
-     * @param date
+     * @param analysisTime
      */
-    public DescribeBigKeyListRequest date(String date) {
-        this.date = date;
+    public ModifyBigKeyAnalysisTime2Request analysisTime(String analysisTime) {
+        this.analysisTime = analysisTime;
         return this;
     }
 
@@ -126,7 +126,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param regionId
      */
-    public DescribeBigKeyListRequest regionId(String regionId) {
+    public ModifyBigKeyAnalysisTime2Request regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -136,7 +136,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param cacheInstanceId
      */
-    public DescribeBigKeyListRequest cacheInstanceId(String cacheInstanceId) {
+    public ModifyBigKeyAnalysisTime2Request cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }

@@ -24,22 +24,25 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
+import com.jdcloud.sdk.service.redis.model.ModifyAccount;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询大key分析任务列表
+ * 批量修改账号信息
  */
-public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io.Serializable {
+public class ModifyAccountsRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * 要修改的账号列表
      * Required:true
      */
     @Required
-    private String date;
+    private List<ModifyAccount> accounts;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -57,21 +60,21 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * get 要修改的账号列表
      *
      * @return
      */
-    public String getDate() {
-        return date;
+    public List<ModifyAccount> getAccounts() {
+        return accounts;
     }
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * set 要修改的账号列表
      *
-     * @param date
+     * @param accounts
      */
-    public void setDate(String date) {
-        this.date = date;
+    public void setAccounts(List<ModifyAccount> accounts) {
+        this.accounts = accounts;
     }
 
     /**
@@ -112,12 +115,12 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * set 要修改的账号列表
      *
-     * @param date
+     * @param accounts
      */
-    public DescribeBigKeyListRequest date(String date) {
-        this.date = date;
+    public ModifyAccountsRequest accounts(List<ModifyAccount> accounts) {
+        this.accounts = accounts;
         return this;
     }
 
@@ -126,7 +129,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param regionId
      */
-    public DescribeBigKeyListRequest regionId(String regionId) {
+    public ModifyAccountsRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -136,10 +139,22 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param cacheInstanceId
      */
-    public DescribeBigKeyListRequest cacheInstanceId(String cacheInstanceId) {
+    public ModifyAccountsRequest cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
 
+
+    /**
+     * add item to 要修改的账号列表
+     *
+     * @param account
+     */
+    public void addAccount(ModifyAccount account) {
+        if (this.accounts == null) {
+            this.accounts = new ArrayList<>();
+        }
+        this.accounts.add(account);
+    }
 
 }

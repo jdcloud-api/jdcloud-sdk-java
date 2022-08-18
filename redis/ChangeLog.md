@@ -1,9 +1,14 @@
 # 更新历史
 
-API版本：2.6.17
+API版本：2.6.22
 
 | 发布时间   | 版本号 | 更新     | 说明                                                                                                                                                                                                    |
 | ---------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2022-08-16 | 2.6.22  | 新增接口 | 新增接口modifyAccounts |
+| 2022-08-15 | 2.6.21  | 新增接口 | 新增接口checkInstances |
+| 2022-08-05 | 2.6.20  | 新增接口 | 新增接口createBigKeyAnalysis2、describeBigKeyList2、describeBigKeyDetail2、modifyBigKeyAnalysisTime2、describeBigKeyAnalysisTime2、modifyAnalysisThreshold2、describeAnalysisThreshold2、describeHotKeyResult2、describeHotKeyDetail2 |
+| 2022-08-01 | 2.6.19  | 新增接口 | 新增接口describeAvailableResource2 |
+| 2022-07-20 | 2.6.18  | 新增接口 | 更新接口modifyAnalysisThreshold、describeBigKeyList |
 | 2022-07-06 | 2.6.17  | 新增接口 | 新增接口bigKey、bigKeyDetail、bigKeyAutoAnalysisTime、stopCacheAnalysis、cacheAnalysisThreshold |
 | 2022-05-31 | 2.6.16  | 新增接口 | 新增接口describeNodeList，更新接口executeCommand |
 | 2022-05-23 | 2.6.15  | 接口更新 | 更新接口createCacheInstance、describeCacheInstance、describeCacheInstances、describeAvailableResource    |

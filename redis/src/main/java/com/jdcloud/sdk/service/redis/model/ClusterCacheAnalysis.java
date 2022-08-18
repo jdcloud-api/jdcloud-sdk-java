@@ -29,12 +29,12 @@ import com.jdcloud.sdk.annotation.Required;
 /**
  * 缓存Redis实例的一个缓存分析任务
  */
-public class CacheAnalysis  implements java.io.Serializable {
+public class ClusterCacheAnalysis  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 缓存分析的时间,rfc3339格式
+     * 缓存分析的开始时间,rfc3339格式
      * Required:true
      */
     @Required
@@ -48,13 +48,29 @@ public class CacheAnalysis  implements java.io.Serializable {
     private String taskId;
 
     /**
-     * 缓存分析任务状态, running, success, error, 只有sucess状态，才能根据taskId查询到结果
+     * 缓存分析的分析时长
+     * Required:true
      */
+    @Required
+    private String analysisDuration;
+
+    /**
+     * 缓存分析的结果下载地址
+     * Required:true
+     */
+    @Required
+    private String downloadUrl;
+
+    /**
+     * 缓存分析任务状态, running, success, error, 只有sucess状态，才能根据taskId查询到结果
+     * Required:true
+     */
+    @Required
     private String status;
 
 
     /**
-     * get 缓存分析的时间,rfc3339格式
+     * get 缓存分析的开始时间,rfc3339格式
      *
      * @return
      */
@@ -63,7 +79,7 @@ public class CacheAnalysis  implements java.io.Serializable {
     }
 
     /**
-     * set 缓存分析的时间,rfc3339格式
+     * set 缓存分析的开始时间,rfc3339格式
      *
      * @param analysisTime
      */
@@ -90,6 +106,42 @@ public class CacheAnalysis  implements java.io.Serializable {
     }
 
     /**
+     * get 缓存分析的分析时长
+     *
+     * @return
+     */
+    public String getAnalysisDuration() {
+        return analysisDuration;
+    }
+
+    /**
+     * set 缓存分析的分析时长
+     *
+     * @param analysisDuration
+     */
+    public void setAnalysisDuration(String analysisDuration) {
+        this.analysisDuration = analysisDuration;
+    }
+
+    /**
+     * get 缓存分析的结果下载地址
+     *
+     * @return
+     */
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    /**
+     * set 缓存分析的结果下载地址
+     *
+     * @param downloadUrl
+     */
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
+    }
+
+    /**
      * get 缓存分析任务状态, running, success, error, 只有sucess状态，才能根据taskId查询到结果
      *
      * @return
@@ -109,11 +161,11 @@ public class CacheAnalysis  implements java.io.Serializable {
 
 
     /**
-     * set 缓存分析的时间,rfc3339格式
+     * set 缓存分析的开始时间,rfc3339格式
      *
      * @param analysisTime
      */
-    public CacheAnalysis analysisTime(String analysisTime) {
+    public ClusterCacheAnalysis analysisTime(String analysisTime) {
         this.analysisTime = analysisTime;
         return this;
     }
@@ -123,8 +175,28 @@ public class CacheAnalysis  implements java.io.Serializable {
      *
      * @param taskId
      */
-    public CacheAnalysis taskId(String taskId) {
+    public ClusterCacheAnalysis taskId(String taskId) {
         this.taskId = taskId;
+        return this;
+    }
+
+    /**
+     * set 缓存分析的分析时长
+     *
+     * @param analysisDuration
+     */
+    public ClusterCacheAnalysis analysisDuration(String analysisDuration) {
+        this.analysisDuration = analysisDuration;
+        return this;
+    }
+
+    /**
+     * set 缓存分析的结果下载地址
+     *
+     * @param downloadUrl
+     */
+    public ClusterCacheAnalysis downloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
         return this;
     }
 
@@ -133,7 +205,7 @@ public class CacheAnalysis  implements java.io.Serializable {
      *
      * @param status
      */
-    public CacheAnalysis status(String status) {
+    public ClusterCacheAnalysis status(String status) {
         this.status = status;
         return this;
     }

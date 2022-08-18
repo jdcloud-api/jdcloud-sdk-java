@@ -28,18 +28,11 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询大key分析任务列表
+ * 查询缓存分析阈值
  */
-public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeAnalysisThreshold2Request extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
-     * Required:true
-     */
-    @Required
-    private String date;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -55,24 +48,6 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
     @Required
     private String cacheInstanceId;
 
-
-    /**
-     * get 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
-     *
-     * @return
-     */
-    public String getDate() {
-        return date;
-    }
-
-    /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
-     *
-     * @param date
-     */
-    public void setDate(String date) {
-        this.date = date;
-    }
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -112,21 +87,11 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
-     *
-     * @param date
-     */
-    public DescribeBigKeyListRequest date(String date) {
-        this.date = date;
-        return this;
-    }
-
-    /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @param regionId
      */
-    public DescribeBigKeyListRequest regionId(String regionId) {
+    public DescribeAnalysisThreshold2Request regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -136,7 +101,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param cacheInstanceId
      */
-    public DescribeBigKeyListRequest cacheInstanceId(String cacheInstanceId) {
+    public DescribeAnalysisThreshold2Request cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }

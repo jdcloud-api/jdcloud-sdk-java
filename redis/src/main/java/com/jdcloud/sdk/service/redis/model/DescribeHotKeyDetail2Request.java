@@ -28,18 +28,28 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询大key分析任务列表
+ * 查询热key分析详情
  */
-public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeHotKeyDetail2Request extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * 节点id
      * Required:true
      */
     @Required
-    private String date;
+    private String nodeId;
+
+    /**
+     * 页码；默认为1
+     */
+    private Integer pageNumber;
+
+    /**
+     * 分页大小；默认为10；取值范围[10, 100]
+     */
+    private Integer pageSize;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -57,21 +67,57 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * get 节点id
      *
      * @return
      */
-    public String getDate() {
-        return date;
+    public String getNodeId() {
+        return nodeId;
     }
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * set 节点id
      *
-     * @param date
+     * @param nodeId
      */
-    public void setDate(String date) {
-        this.date = date;
+    public void setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+    }
+
+    /**
+     * get 页码；默认为1
+     *
+     * @return
+     */
+    public Integer getPageNumber() {
+        return pageNumber;
+    }
+
+    /**
+     * set 页码；默认为1
+     *
+     * @param pageNumber
+     */
+    public void setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+    }
+
+    /**
+     * get 分页大小；默认为10；取值范围[10, 100]
+     *
+     * @return
+     */
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    /**
+     * set 分页大小；默认为10；取值范围[10, 100]
+     *
+     * @param pageSize
+     */
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
     /**
@@ -112,12 +158,32 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * set 节点id
      *
-     * @param date
+     * @param nodeId
      */
-    public DescribeBigKeyListRequest date(String date) {
-        this.date = date;
+    public DescribeHotKeyDetail2Request nodeId(String nodeId) {
+        this.nodeId = nodeId;
+        return this;
+    }
+
+    /**
+     * set 页码；默认为1
+     *
+     * @param pageNumber
+     */
+    public DescribeHotKeyDetail2Request pageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+
+    /**
+     * set 分页大小；默认为10；取值范围[10, 100]
+     *
+     * @param pageSize
+     */
+    public DescribeHotKeyDetail2Request pageSize(Integer pageSize) {
+        this.pageSize = pageSize;
         return this;
     }
 
@@ -126,7 +192,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param regionId
      */
-    public DescribeBigKeyListRequest regionId(String regionId) {
+    public DescribeHotKeyDetail2Request regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -136,7 +202,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param cacheInstanceId
      */
-    public DescribeBigKeyListRequest cacheInstanceId(String cacheInstanceId) {
+    public DescribeHotKeyDetail2Request cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }

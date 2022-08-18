@@ -28,18 +28,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询大key分析任务列表
+ * 查询大key分析详情
  */
-public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeBigKeyDetail2Request extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * 任务id
      * Required:true
      */
     @Required
-    private String date;
+    private String taskId;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -57,21 +57,21 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * get 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * get 任务id
      *
      * @return
      */
-    public String getDate() {
-        return date;
+    public String getTaskId() {
+        return taskId;
     }
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * set 任务id
      *
-     * @param date
+     * @param taskId
      */
-    public void setDate(String date) {
-        this.date = date;
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
     }
 
     /**
@@ -112,12 +112,12 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
 
 
     /**
-     * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
+     * set 任务id
      *
-     * @param date
+     * @param taskId
      */
-    public DescribeBigKeyListRequest date(String date) {
-        this.date = date;
+    public DescribeBigKeyDetail2Request taskId(String taskId) {
+        this.taskId = taskId;
         return this;
     }
 
@@ -126,7 +126,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param regionId
      */
-    public DescribeBigKeyListRequest regionId(String regionId) {
+    public DescribeBigKeyDetail2Request regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -136,7 +136,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
      *
      * @param cacheInstanceId
      */
-    public DescribeBigKeyListRequest cacheInstanceId(String cacheInstanceId) {
+    public DescribeBigKeyDetail2Request cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
