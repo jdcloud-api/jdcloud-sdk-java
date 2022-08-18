@@ -52,6 +52,7 @@ public class DescribeAgsRequest extends JdcloudRequest implements java.io.Serial
 agId - ag id，精确匹配
 instanceTemplateId - 实例模板id，精确匹配
 vpcId - vpc id，精确匹配
+placementType - placement type，放置策略
 
      */
     private List<Filter> filters;
@@ -105,6 +106,7 @@ vpcId - vpc id，精确匹配
 agId - ag id，精确匹配
 instanceTemplateId - 实例模板id，精确匹配
 vpcId - vpc id，精确匹配
+placementType - placement type，放置策略
 
      *
      * @return
@@ -118,6 +120,7 @@ vpcId - vpc id，精确匹配
 agId - ag id，精确匹配
 instanceTemplateId - 实例模板id，精确匹配
 vpcId - vpc id，精确匹配
+placementType - placement type，放置策略
 
      *
      * @param filters
@@ -170,6 +173,7 @@ vpcId - vpc id，精确匹配
 agId - ag id，精确匹配
 instanceTemplateId - 实例模板id，精确匹配
 vpcId - vpc id，精确匹配
+placementType - placement type，放置策略
 
      *
      * @param filters
@@ -195,6 +199,7 @@ vpcId - vpc id，精确匹配
 agId - ag id，精确匹配
 instanceTemplateId - 实例模板id，精确匹配
 vpcId - vpc id，精确匹配
+placementType - placement type，放置策略
 
      *
      * @param filter

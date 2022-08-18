@@ -71,6 +71,11 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     private String configurationType;
 
     /**
+     * 高可用资源放置类型，支持fd、switch、host
+     */
+    private String placementType;
+
+    /**
      * 地域
      * Required:true
      */
@@ -187,6 +192,24 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
     }
 
     /**
+     * get 高可用资源放置类型，支持fd、switch、host
+     *
+     * @return
+     */
+    public String getPlacementType() {
+        return placementType;
+    }
+
+    /**
+     * set 高可用资源放置类型，支持fd、switch、host
+     *
+     * @param placementType
+     */
+    public void setPlacementType(String placementType) {
+        this.placementType = placementType;
+    }
+
+    /**
      * get 地域
      *
      * @return
@@ -262,6 +285,16 @@ public class CreateAgRequest extends JdcloudRequest implements java.io.Serializa
      */
     public CreateAgRequest configurationType(String configurationType) {
         this.configurationType = configurationType;
+        return this;
+    }
+
+    /**
+     * set 高可用资源放置类型，支持fd、switch、host
+     *
+     * @param placementType
+     */
+    public CreateAgRequest placementType(String placementType) {
+        this.placementType = placementType;
         return this;
     }
 

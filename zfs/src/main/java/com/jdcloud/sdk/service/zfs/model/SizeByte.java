@@ -40,7 +40,7 @@ public class SizeByte  implements java.io.Serializable {
     /**
      * 文件系统使用量，单位为:Byte
      */
-    private Integer value;
+    private Long value;
 
 
     /**
@@ -66,7 +66,7 @@ public class SizeByte  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getValue() {
+    public Long getValue() {
         return value;
     }
 
@@ -75,7 +75,7 @@ public class SizeByte  implements java.io.Serializable {
      *
      * @param value
      */
-    public void setValue(Integer value) {
+    public void setValue(Long value) {
         this.value = value;
     }
 
@@ -95,7 +95,7 @@ public class SizeByte  implements java.io.Serializable {
      *
      * @param value
      */
-    public SizeByte value(Integer value) {
+    public SizeByte value(Long value) {
         this.value = value;
         return this;
     }

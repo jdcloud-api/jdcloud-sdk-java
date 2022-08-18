@@ -84,6 +84,16 @@ public class AvailabilityGroup  implements java.io.Serializable {
      */
     private String configurationType;
 
+    /**
+     * 高可用组放置类型
+     */
+    private String placementType;
+
+    /**
+     * 高可用组中实例数量的限制。
+     */
+    private List<InstancesQuota> instancesQuotas;
+
 
     /**
      * get 高可用组ID
@@ -265,6 +275,42 @@ public class AvailabilityGroup  implements java.io.Serializable {
         this.configurationType = configurationType;
     }
 
+    /**
+     * get 高可用组放置类型
+     *
+     * @return
+     */
+    public String getPlacementType() {
+        return placementType;
+    }
+
+    /**
+     * set 高可用组放置类型
+     *
+     * @param placementType
+     */
+    public void setPlacementType(String placementType) {
+        this.placementType = placementType;
+    }
+
+    /**
+     * get 高可用组中实例数量的限制。
+     *
+     * @return
+     */
+    public List<InstancesQuota> getInstancesQuotas() {
+        return instancesQuotas;
+    }
+
+    /**
+     * set 高可用组中实例数量的限制。
+     *
+     * @param instancesQuotas
+     */
+    public void setInstancesQuotas(List<InstancesQuota> instancesQuotas) {
+        this.instancesQuotas = instancesQuotas;
+    }
+
 
     /**
      * set 高可用组ID
@@ -366,6 +412,26 @@ public class AvailabilityGroup  implements java.io.Serializable {
         return this;
     }
 
+    /**
+     * set 高可用组放置类型
+     *
+     * @param placementType
+     */
+    public AvailabilityGroup placementType(String placementType) {
+        this.placementType = placementType;
+        return this;
+    }
+
+    /**
+     * set 高可用组中实例数量的限制。
+     *
+     * @param instancesQuotas
+     */
+    public AvailabilityGroup instancesQuotas(List<InstancesQuota> instancesQuotas) {
+        this.instancesQuotas = instancesQuotas;
+        return this;
+    }
+
 
     /**
      * add item to 可用区域
@@ -377,6 +443,18 @@ public class AvailabilityGroup  implements java.io.Serializable {
             this.azs = new ArrayList<>();
         }
         this.azs.add(az);
+    }
+
+    /**
+     * add item to 高可用组中实例数量的限制。
+     *
+     * @param instancesQuota
+     */
+    public void addInstancesQuota(InstancesQuota instancesQuota) {
+        if (this.instancesQuotas == null) {
+            this.instancesQuotas = new ArrayList<>();
+        }
+        this.instancesQuotas.add(instancesQuota);
     }
 
 }

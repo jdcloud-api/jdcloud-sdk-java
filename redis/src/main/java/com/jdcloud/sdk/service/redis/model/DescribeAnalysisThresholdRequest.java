@@ -35,13 +35,6 @@ public class DescribeAnalysisThresholdRequest extends JdcloudRequest implements 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 任务id
-     * Required:true
-     */
-    @Required
-    private String taskId;
-
-    /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
@@ -55,24 +48,6 @@ public class DescribeAnalysisThresholdRequest extends JdcloudRequest implements 
     @Required
     private String cacheInstanceId;
 
-
-    /**
-     * get 任务id
-     *
-     * @return
-     */
-    public String getTaskId() {
-        return taskId;
-    }
-
-    /**
-     * set 任务id
-     *
-     * @param taskId
-     */
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
-    }
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -110,16 +85,6 @@ public class DescribeAnalysisThresholdRequest extends JdcloudRequest implements 
         this.cacheInstanceId = cacheInstanceId;
     }
 
-
-    /**
-     * set 任务id
-     *
-     * @param taskId
-     */
-    public DescribeAnalysisThresholdRequest taskId(String taskId) {
-        this.taskId = taskId;
-        return this;
-    }
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2

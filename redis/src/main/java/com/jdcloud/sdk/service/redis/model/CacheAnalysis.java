@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.redis.model;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
- * 缓存Redis实例的一个备份文件对象
+ * 缓存Redis实例的一个缓存分析任务
  */
 public class CacheAnalysis  implements java.io.Serializable {
 

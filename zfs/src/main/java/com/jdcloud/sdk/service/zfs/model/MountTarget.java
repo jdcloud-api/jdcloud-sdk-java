@@ -63,6 +63,11 @@ public class MountTarget  implements java.io.Serializable {
     private String vpcId;
 
     /**
+     * 安全组ID
+     */
+    private String securityGroupId;
+
+    /**
      * 创建时间
      */
     private String createTime;
@@ -182,6 +187,24 @@ public class MountTarget  implements java.io.Serializable {
     }
 
     /**
+     * get 安全组ID
+     *
+     * @return
+     */
+    public String getSecurityGroupId() {
+        return securityGroupId;
+    }
+
+    /**
+     * set 安全组ID
+     *
+     * @param securityGroupId
+     */
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+    }
+
+    /**
      * get 创建时间
      *
      * @return
@@ -275,6 +298,16 @@ public class MountTarget  implements java.io.Serializable {
      */
     public MountTarget vpcId(String vpcId) {
         this.vpcId = vpcId;
+        return this;
+    }
+
+    /**
+     * set 安全组ID
+     *
+     * @param securityGroupId
+     */
+    public MountTarget securityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
         return this;
     }
 

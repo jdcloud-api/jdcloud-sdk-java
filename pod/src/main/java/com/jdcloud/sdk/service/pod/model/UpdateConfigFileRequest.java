@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.pod.model;
 import java.util.List;
 import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
-import com.jdcloud.sdk.service.pod.model.FileToPath;
+import com.jdcloud.sdk.service.pod.model.ConfigFileData;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -52,7 +52,7 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
      * Required:true
      */
     @Required
-    private List<FileToPath> data;
+    private List<ConfigFileData> data;
 
     /**
      * Region ID
@@ -88,7 +88,7 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
      *
      * @return
      */
-    public List<FileToPath> getData() {
+    public List<ConfigFileData> getData() {
         return data;
     }
 
@@ -98,7 +98,7 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
      *
      * @param data
      */
-    public void setData(List<FileToPath> data) {
+    public void setData(List<ConfigFileData> data) {
         this.data = data;
     }
 
@@ -138,7 +138,7 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
      *
      * @param data
      */
-    public UpdateConfigFileRequest data(List<FileToPath> data) {
+    public UpdateConfigFileRequest data(List<ConfigFileData> data) {
         this.data = data;
         return this;
     }
@@ -160,7 +160,7 @@ public class UpdateConfigFileRequest extends JdcloudRequest implements java.io.S
      *
      * @param data
      */
-    public void addData(FileToPath data) {
+    public void addData(ConfigFileData data) {
         if (this.data == null) {
             this.data = new ArrayList<>();
         }
