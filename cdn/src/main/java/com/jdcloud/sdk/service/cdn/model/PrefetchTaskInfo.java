@@ -93,6 +93,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
     private String zone;
 
 
+
     /**
      * get url
      *
@@ -110,6 +111,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 地区
@@ -129,6 +131,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 运营商
      *
@@ -146,6 +149,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get 下发的目标副本数
@@ -165,6 +169,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.copyNum = copyNum;
     }
 
+
     /**
      * get 成功预热的副本数
      *
@@ -182,6 +187,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
     public void setSuccessNum(Integer successNum) {
         this.successNum = successNum;
     }
+
 
     /**
      * get 文件大小
@@ -201,6 +207,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.fileSize = fileSize;
     }
 
+
     /**
      * get 1代表控制台下发的任务,2代表热度计算下发的预热任务
      *
@@ -218,6 +225,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
     public void setTaskType(String taskType) {
         this.taskType = taskType;
     }
+
 
     /**
      * get 1:active，2:表示purge中暂时停止预热
@@ -237,6 +245,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 失败预热的原因
      *
@@ -254,6 +263,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
     public void setErrInfo(String errInfo) {
         this.errInfo = errInfo;
     }
+
 
     /**
      * get 热度计算下发任务的过期时间
@@ -273,6 +283,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.expireAt = expireAt;
     }
 
+
     /**
      * get 文件id
      *
@@ -290,6 +301,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
     public void setFileId(String fileId) {
         this.fileId = fileId;
     }
+
 
     /**
      * get 地理位置
@@ -310,6 +322,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set url
      *
@@ -319,6 +332,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set 地区
@@ -330,6 +344,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 运营商
      *
@@ -339,6 +354,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set 下发的目标副本数
@@ -350,6 +366,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 成功预热的副本数
      *
@@ -359,6 +376,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.successNum = successNum;
         return this;
     }
+
 
     /**
      * set 文件大小
@@ -370,6 +388,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1代表控制台下发的任务,2代表热度计算下发的预热任务
      *
@@ -379,6 +398,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.taskType = taskType;
         return this;
     }
+
 
     /**
      * set 1:active，2:表示purge中暂时停止预热
@@ -390,6 +410,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 失败预热的原因
      *
@@ -399,6 +420,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.errInfo = errInfo;
         return this;
     }
+
 
     /**
      * set 热度计算下发任务的过期时间
@@ -410,6 +432,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 文件id
      *
@@ -419,6 +442,7 @@ public class PrefetchTaskInfo  implements java.io.Serializable {
         this.fileId = fileId;
         return this;
     }
+
 
     /**
      * set 地理位置

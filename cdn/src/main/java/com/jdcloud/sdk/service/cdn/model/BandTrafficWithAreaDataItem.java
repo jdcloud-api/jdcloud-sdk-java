@@ -42,6 +42,7 @@ public class BandTrafficWithAreaDataItem  implements java.io.Serializable {
     /**
      * data
      */
+    
     private List<DomainBandAreaTrafficDataItem> data;
 
 
@@ -63,23 +64,25 @@ public class BandTrafficWithAreaDataItem  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<DomainBandAreaTrafficDataItem> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<DomainBandAreaTrafficDataItem> data) {
         this.data = data;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class BandTrafficWithAreaDataItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public BandTrafficWithAreaDataItem data(List<DomainBandAreaTrafficDataItem> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class BandTrafficWithAreaDataItem  implements java.io.Serializable {
         }
         this.data.add(data);
     }
-
 }

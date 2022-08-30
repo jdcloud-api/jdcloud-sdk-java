@@ -48,6 +48,7 @@ public class ListDomainTempItem  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get instId
      *
@@ -66,6 +67,7 @@ public class ListDomainTempItem  implements java.io.Serializable {
         this.instId = instId;
     }
 
+
     /**
      * get instName
      *
@@ -83,6 +85,7 @@ public class ListDomainTempItem  implements java.io.Serializable {
     public void setInstName(String instName) {
         this.instName = instName;
     }
+
 
     /**
      * get createTime
@@ -103,6 +106,7 @@ public class ListDomainTempItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set instId
      *
@@ -113,6 +117,7 @@ public class ListDomainTempItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set instName
      *
@@ -122,6 +127,7 @@ public class ListDomainTempItem  implements java.io.Serializable {
         this.instName = instName;
         return this;
     }
+
 
     /**
      * set createTime

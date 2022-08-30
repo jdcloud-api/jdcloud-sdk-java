@@ -49,6 +49,7 @@ public class QueryAccesskeyConfigResult extends JdcloudResult implements java.io
     private Integer accesskeyKeep;
 
 
+
     /**
      * get 鉴权类型，0表示无鉴权，1表示参数鉴权，2表示路径鉴权
      *
@@ -67,6 +68,7 @@ public class QueryAccesskeyConfigResult extends JdcloudResult implements java.io
         this.accesskeyType = accesskeyType;
     }
 
+
     /**
      * get 密码，长度为8到32
      *
@@ -84,6 +86,7 @@ public class QueryAccesskeyConfigResult extends JdcloudResult implements java.io
     public void setAccesskeyKey(String accesskeyKey) {
         this.accesskeyKey = accesskeyKey;
     }
+
 
     /**
      * get 是否是回源鉴权 0表示是 1表示否
@@ -104,6 +107,7 @@ public class QueryAccesskeyConfigResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 鉴权类型，0表示无鉴权，1表示参数鉴权，2表示路径鉴权
      *
@@ -114,6 +118,7 @@ public class QueryAccesskeyConfigResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 密码，长度为8到32
      *
@@ -123,6 +128,7 @@ public class QueryAccesskeyConfigResult extends JdcloudResult implements java.io
         this.accesskeyKey = accesskeyKey;
         return this;
     }
+
 
     /**
      * set 是否是回源鉴权 0表示是 1表示否

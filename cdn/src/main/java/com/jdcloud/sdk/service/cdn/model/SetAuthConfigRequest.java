@@ -77,6 +77,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
     private String domain;
 
 
+
     /**
      * get 是否开启鉴权[on,off]
      *
@@ -94,6 +95,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
     public void setEnableUrlAuth(String enableUrlAuth) {
         this.enableUrlAuth = enableUrlAuth;
     }
+
 
     /**
      * get 鉴权key
@@ -113,6 +115,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         this.authKey = authKey;
     }
 
+
     /**
      * get 鉴权时间戳过期时间，默认为0
      *
@@ -130,6 +133,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
     public void setAge(Integer age) {
         this.age = age;
     }
+
 
     /**
      * get 鉴权参数加密算法，默认为md5且只支持md5
@@ -149,6 +153,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         this.encAlgorithm = encAlgorithm;
     }
 
+
     /**
      * get 时间戳格式[hex,dec]
      *
@@ -166,6 +171,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
     public void setTimeFormat(String timeFormat) {
         this.timeFormat = timeFormat;
     }
+
 
     /**
      * get 加密算法版本[dash,dashv2,video],默认dashv2
@@ -185,6 +191,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         this.uriType = uriType;
     }
 
+
     /**
      * get 鉴权key生成顺序
      *
@@ -202,6 +209,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
     public void setRule(String rule) {
         this.rule = rule;
     }
+
 
     /**
      * get 用户域名
@@ -222,6 +230,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 是否开启鉴权[on,off]
      *
@@ -231,6 +240,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         this.enableUrlAuth = enableUrlAuth;
         return this;
     }
+
 
     /**
      * set 鉴权key
@@ -242,6 +252,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 鉴权时间戳过期时间，默认为0
      *
@@ -251,6 +262,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         this.age = age;
         return this;
     }
+
 
     /**
      * set 鉴权参数加密算法，默认为md5且只支持md5
@@ -262,6 +274,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 时间戳格式[hex,dec]
      *
@@ -271,6 +284,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         this.timeFormat = timeFormat;
         return this;
     }
+
 
     /**
      * set 加密算法版本[dash,dashv2,video],默认dashv2
@@ -282,6 +296,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 鉴权key生成顺序
      *
@@ -291,6 +306,7 @@ public class SetAuthConfigRequest extends JdcloudRequest implements java.io.Seri
         this.rule = rule;
         return this;
     }
+
 
     /**
      * set 用户域名

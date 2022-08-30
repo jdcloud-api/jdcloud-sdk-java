@@ -43,6 +43,7 @@ public class WafRegionsModel  implements java.io.Serializable {
     private String label;
 
 
+
     /**
      * get 省份英文名
      *
@@ -60,6 +61,7 @@ public class WafRegionsModel  implements java.io.Serializable {
     public void setValue(String value) {
         this.value = value;
     }
+
 
     /**
      * get 省份中文名
@@ -80,6 +82,7 @@ public class WafRegionsModel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 省份英文名
      *
@@ -89,6 +92,7 @@ public class WafRegionsModel  implements java.io.Serializable {
         this.value = value;
         return this;
     }
+
 
     /**
      * set 省份中文名

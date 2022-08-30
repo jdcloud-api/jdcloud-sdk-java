@@ -43,6 +43,7 @@ public class SpecifiedDomainConfig  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 属性名
      *
@@ -60,6 +61,7 @@ public class SpecifiedDomainConfig  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 属性值
@@ -80,6 +82,7 @@ public class SpecifiedDomainConfig  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 属性名
      *
@@ -89,6 +92,7 @@ public class SpecifiedDomainConfig  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 属性值

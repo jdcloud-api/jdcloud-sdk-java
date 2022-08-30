@@ -44,6 +44,7 @@ public class QueryDirBandwidthResult extends JdcloudResult implements java.io.Se
     /**
      * datas
      */
+    
     private List<DirBandwidthItem> datas;
 
 
@@ -65,23 +66,25 @@ public class QueryDirBandwidthResult extends JdcloudResult implements java.io.Se
         this.domain = domain;
     }
 
+
     /**
-     * get datas
-     *
-     * @return
-     */
+    * get datas
+    *
+    * @return
+    */
     public List<DirBandwidthItem> getDatas() {
         return datas;
     }
 
     /**
-     * set datas
-     *
-     * @param datas
-     */
+    * set datas
+    *
+    * @param datas
+    */
     public void setDatas(List<DirBandwidthItem> datas) {
         this.datas = datas;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryDirBandwidthResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
-     * set datas
-     *
-     * @param datas
-     */
+    * set datas
+    *
+    * @param datas
+    */
     public QueryDirBandwidthResult datas(List<DirBandwidthItem> datas) {
         this.datas = datas;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryDirBandwidthResult extends JdcloudResult implements java.io.Se
         }
         this.datas.add(data);
     }
-
 }

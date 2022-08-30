@@ -39,31 +39,33 @@ public class GetSslCertListResult extends JdcloudResult implements java.io.Seria
     /**
      * certList
      */
+    
     private List<SslCertModel> certList;
-
     /**
      * 总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get certList
-     *
-     * @return
-     */
+    * get certList
+    *
+    * @return
+    */
     public List<SslCertModel> getCertList() {
         return certList;
     }
 
     /**
-     * set certList
-     *
-     * @param certList
-     */
+    * set certList
+    *
+    * @param certList
+    */
     public void setCertList(List<SslCertModel> certList) {
         this.certList = certList;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class GetSslCertListResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
-     * set certList
-     *
-     * @param certList
-     */
+    * set certList
+    *
+    * @param certList
+    */
     public GetSslCertListResult certList(List<SslCertModel> certList) {
         this.certList = certList;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class GetSslCertListResult extends JdcloudResult implements java.io.Seria
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class GetSslCertListResult extends JdcloudResult implements java.io.Seria
         }
         this.certList.add(certList);
     }
-
 }

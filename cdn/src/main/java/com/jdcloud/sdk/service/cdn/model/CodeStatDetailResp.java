@@ -42,6 +42,7 @@ public class CodeStatDetailResp  implements java.io.Serializable {
     /**
      * details
      */
+    
     private List<CodeDetailItem> details;
 
 
@@ -63,23 +64,25 @@ public class CodeStatDetailResp  implements java.io.Serializable {
         this.codeMap = codeMap;
     }
 
+
     /**
-     * get details
-     *
-     * @return
-     */
+    * get details
+    *
+    * @return
+    */
     public List<CodeDetailItem> getDetails() {
         return details;
     }
 
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public void setDetails(List<CodeDetailItem> details) {
         this.details = details;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class CodeStatDetailResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public CodeStatDetailResp details(List<CodeDetailItem> details) {
         this.details = details;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class CodeStatDetailResp  implements java.io.Serializable {
         }
         this.details.add(detail);
     }
-
 }

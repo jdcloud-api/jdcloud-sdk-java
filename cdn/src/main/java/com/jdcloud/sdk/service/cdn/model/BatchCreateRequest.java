@@ -38,8 +38,8 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     /**
      * domains
      */
+    
     private List<String> domains;
-
     /**
      * 回源类型只能是[ips,domain,oss]中的一种
      */
@@ -98,13 +98,13 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     /**
      * ipSource
      */
+    
     private List<IpSourceInfo> ipSource;
-
     /**
      * domainSource
      */
+    
     private List<DomainSourceInfo> domainSource;
-
     /**
      * ossSource
      */
@@ -121,23 +121,25 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     private Long tempInstId;
 
 
+
     /**
-     * get domains
-     *
-     * @return
-     */
+    * get domains
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
     /**
      * get 回源类型只能是[ips,domain,oss]中的一种
@@ -157,6 +159,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.sourceType = sourceType;
     }
 
+
     /**
      * get 点播域名的类型只能是[vod,download,web]中的一种
      *
@@ -174,6 +177,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     public void setCdnType(String cdnType) {
         this.cdnType = cdnType;
     }
+
 
     /**
      * get 回源方式,只能是[https,http]中的一种,默认http
@@ -193,6 +197,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.backSourceType = backSourceType;
     }
 
+
     /**
      * get 日带宽(Mbps)
      *
@@ -210,6 +215,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     public void setDailyBandWidth(Long dailyBandWidth) {
         this.dailyBandWidth = dailyBandWidth;
     }
+
 
     /**
      * get 服务质量,只能是[good,general]中的一种,默认为good
@@ -229,6 +235,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.quaility = quaility;
     }
 
+
     /**
      * get maxFileSize
      *
@@ -246,6 +253,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     public void setMaxFileSize(Long maxFileSize) {
         this.maxFileSize = maxFileSize;
     }
+
 
     /**
      * get minFileSize
@@ -265,6 +273,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.minFileSize = minFileSize;
     }
 
+
     /**
      * get sumFileSize
      *
@@ -282,6 +291,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     public void setSumFileSize(Long sumFileSize) {
         this.sumFileSize = sumFileSize;
     }
+
 
     /**
      * get avgFileSize
@@ -301,6 +311,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.avgFileSize = avgFileSize;
     }
 
+
     /**
      * get defaultSourceHost
      *
@@ -318,6 +329,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     public void setDefaultSourceHost(String defaultSourceHost) {
         this.defaultSourceHost = defaultSourceHost;
     }
+
 
     /**
      * get httpType
@@ -337,41 +349,44 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.httpType = httpType;
     }
 
+
     /**
-     * get ipSource
-     *
-     * @return
-     */
+    * get ipSource
+    *
+    * @return
+    */
     public List<IpSourceInfo> getIpSource() {
         return ipSource;
     }
 
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public void setIpSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
     }
 
+
     /**
-     * get domainSource
-     *
-     * @return
-     */
+    * get domainSource
+    *
+    * @return
+    */
     public List<DomainSourceInfo> getDomainSource() {
         return domainSource;
     }
 
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public void setDomainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
     }
+
 
     /**
      * get ossSource
@@ -391,6 +406,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.ossSource = ossSource;
     }
 
+
     /**
      * get 加速区域 (mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
      *
@@ -408,6 +424,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     public void setAccelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
     }
+
 
     /**
      * get tempInstId
@@ -428,15 +445,17 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public BatchCreateRequest domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
     /**
      * set 回源类型只能是[ips,domain,oss]中的一种
@@ -448,6 +467,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 点播域名的类型只能是[vod,download,web]中的一种
      *
@@ -457,6 +477,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.cdnType = cdnType;
         return this;
     }
+
 
     /**
      * set 回源方式,只能是[https,http]中的一种,默认http
@@ -468,6 +489,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 日带宽(Mbps)
      *
@@ -477,6 +499,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.dailyBandWidth = dailyBandWidth;
         return this;
     }
+
 
     /**
      * set 服务质量,只能是[good,general]中的一种,默认为good
@@ -488,6 +511,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set maxFileSize
      *
@@ -497,6 +521,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.maxFileSize = maxFileSize;
         return this;
     }
+
 
     /**
      * set minFileSize
@@ -508,6 +533,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set sumFileSize
      *
@@ -517,6 +543,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.sumFileSize = sumFileSize;
         return this;
     }
+
 
     /**
      * set avgFileSize
@@ -528,6 +555,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set defaultSourceHost
      *
@@ -537,6 +565,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.defaultSourceHost = defaultSourceHost;
         return this;
     }
+
 
     /**
      * set httpType
@@ -548,25 +577,28 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public BatchCreateRequest ipSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
         return this;
     }
 
+
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public BatchCreateRequest domainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
         return this;
     }
+
 
     /**
      * set ossSource
@@ -578,6 +610,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 加速区域 (mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
      *
@@ -588,6 +621,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set tempInstId
      *
@@ -597,6 +631,7 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         this.tempInstId = tempInstId;
         return this;
     }
+
 
 
     /**
@@ -634,5 +669,4 @@ public class BatchCreateRequest extends JdcloudRequest implements java.io.Serial
         }
         this.domainSource.add(domainSource);
     }
-
 }

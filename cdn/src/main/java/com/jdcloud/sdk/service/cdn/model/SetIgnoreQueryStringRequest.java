@@ -47,6 +47,7 @@ public class SetIgnoreQueryStringRequest extends JdcloudRequest implements java.
     private String domain;
 
 
+
     /**
      * get 开关取值[on,off]
      *
@@ -64,6 +65,7 @@ public class SetIgnoreQueryStringRequest extends JdcloudRequest implements java.
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class SetIgnoreQueryStringRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 开关取值[on,off]
      *
@@ -93,6 +96,7 @@ public class SetIgnoreQueryStringRequest extends JdcloudRequest implements java.
         this.status = status;
         return this;
     }
+
 
     /**
      * set 用户域名

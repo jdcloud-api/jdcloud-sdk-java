@@ -38,31 +38,33 @@ public class QueryLiveDomainAppsResult extends JdcloudResult implements java.io.
     /**
      * apps
      */
+    
     private List<String> apps;
-
     /**
      * 域名
      */
     private String domain;
 
 
+
     /**
-     * get apps
-     *
-     * @return
-     */
+    * get apps
+    *
+    * @return
+    */
     public List<String> getApps() {
         return apps;
     }
 
     /**
-     * set apps
-     *
-     * @param apps
-     */
+    * set apps
+    *
+    * @param apps
+    */
     public void setApps(List<String> apps) {
         this.apps = apps;
     }
+
 
     /**
      * get 域名
@@ -83,15 +85,17 @@ public class QueryLiveDomainAppsResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
-     * set apps
-     *
-     * @param apps
-     */
+    * set apps
+    *
+    * @param apps
+    */
     public QueryLiveDomainAppsResult apps(List<String> apps) {
         this.apps = apps;
         return this;
     }
+
 
     /**
      * set 域名
@@ -102,6 +106,7 @@ public class QueryLiveDomainAppsResult extends JdcloudResult implements java.io.
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class QueryLiveDomainAppsResult extends JdcloudResult implements java.io.
         }
         this.apps.add(app);
     }
-
 }

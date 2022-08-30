@@ -42,6 +42,7 @@ public class QueryIpBlackSettingStatusRequest extends JdcloudRequest implements 
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class QueryIpBlackSettingStatusRequest extends JdcloudRequest implements 
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

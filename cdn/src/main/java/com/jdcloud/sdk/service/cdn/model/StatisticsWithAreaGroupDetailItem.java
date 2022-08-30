@@ -42,6 +42,7 @@ public class StatisticsWithAreaGroupDetailItem  implements java.io.Serializable 
     /**
      * ispStat
      */
+    
     private List<Object> ispStat;
 
 
@@ -63,23 +64,25 @@ public class StatisticsWithAreaGroupDetailItem  implements java.io.Serializable 
         this.area = area;
     }
 
+
     /**
-     * get ispStat
-     *
-     * @return
-     */
+    * get ispStat
+    *
+    * @return
+    */
     public List<Object> getIspStat() {
         return ispStat;
     }
 
     /**
-     * set ispStat
-     *
-     * @param ispStat
-     */
+    * set ispStat
+    *
+    * @param ispStat
+    */
     public void setIspStat(List<Object> ispStat) {
         this.ispStat = ispStat;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class StatisticsWithAreaGroupDetailItem  implements java.io.Serializable 
         return this;
     }
 
+
     /**
-     * set ispStat
-     *
-     * @param ispStat
-     */
+    * set ispStat
+    *
+    * @param ispStat
+    */
     public StatisticsWithAreaGroupDetailItem ispStat(List<Object> ispStat) {
         this.ispStat = ispStat;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class StatisticsWithAreaGroupDetailItem  implements java.io.Serializable 
         }
         this.ispStat.add(ispStat);
     }
-
 }

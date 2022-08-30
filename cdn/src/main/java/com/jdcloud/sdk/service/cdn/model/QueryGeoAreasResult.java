@@ -39,37 +39,40 @@ public class QueryGeoAreasResult extends JdcloudResult implements java.io.Serial
     /**
      * geoBlack
      */
+    
     private List<GeoArea> geoBlack;
 
 
     /**
-     * get geoBlack
-     *
-     * @return
-     */
+    * get geoBlack
+    *
+    * @return
+    */
     public List<GeoArea> getGeoBlack() {
         return geoBlack;
     }
 
     /**
-     * set geoBlack
-     *
-     * @param geoBlack
-     */
+    * set geoBlack
+    *
+    * @param geoBlack
+    */
     public void setGeoBlack(List<GeoArea> geoBlack) {
         this.geoBlack = geoBlack;
     }
 
 
+
     /**
-     * set geoBlack
-     *
-     * @param geoBlack
-     */
+    * set geoBlack
+    *
+    * @param geoBlack
+    */
     public QueryGeoAreasResult geoBlack(List<GeoArea> geoBlack) {
         this.geoBlack = geoBlack;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryGeoAreasResult extends JdcloudResult implements java.io.Serial
         }
         this.geoBlack.add(geoBlack);
     }
-
 }

@@ -68,12 +68,13 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
     /**
      * 通知周期,取值[daily,weekly,monthly].
      */
+    
     private List<String> noticePeriod;
-
     /**
      * 通知状态，取值[init,start,stop]
      */
     private String noticeStatus;
+
 
 
     /**
@@ -94,6 +95,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.id = id;
     }
 
+
     /**
      * get 通知类型,取值[reportForm],reportForm:报表.
      *
@@ -111,6 +113,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
     public void setNoticeType(String noticeType) {
         this.noticeType = noticeType;
     }
+
 
     /**
      * get 通知方式,取值[mail],mail:邮件.
@@ -130,6 +133,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.noticeWay = noticeWay;
     }
 
+
     /**
      * get 通知接收人,多个用逗号隔开.
      *
@@ -147,6 +151,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
     public void setNoticeTo(String noticeTo) {
         this.noticeTo = noticeTo;
     }
+
 
     /**
      * get 通知抄送人,多个用逗号隔开.
@@ -166,6 +171,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.noticeCC = noticeCC;
     }
 
+
     /**
      * get 通知正文.
      *
@@ -184,23 +190,25 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.noticeContent = noticeContent;
     }
 
+
     /**
-     * get 通知周期,取值[daily,weekly,monthly].
-     *
-     * @return
-     */
+    * get 通知周期,取值[daily,weekly,monthly].
+    *
+    * @return
+    */
     public List<String> getNoticePeriod() {
         return noticePeriod;
     }
 
     /**
-     * set 通知周期,取值[daily,weekly,monthly].
-     *
-     * @param noticePeriod
-     */
+    * set 通知周期,取值[daily,weekly,monthly].
+    *
+    * @param noticePeriod
+    */
     public void setNoticePeriod(List<String> noticePeriod) {
         this.noticePeriod = noticePeriod;
     }
+
 
     /**
      * get 通知状态，取值[init,start,stop]
@@ -221,6 +229,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set id 修改操作必传
      *
@@ -230,6 +239,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.id = id;
         return this;
     }
+
 
     /**
      * set 通知类型,取值[reportForm],reportForm:报表.
@@ -241,6 +251,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 通知方式,取值[mail],mail:邮件.
      *
@@ -250,6 +261,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.noticeWay = noticeWay;
         return this;
     }
+
 
     /**
      * set 通知接收人,多个用逗号隔开.
@@ -261,6 +273,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 通知抄送人,多个用逗号隔开.
      *
@@ -270,6 +283,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.noticeCC = noticeCC;
         return this;
     }
+
 
     /**
      * set 通知正文.
@@ -281,15 +295,17 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
-     * set 通知周期,取值[daily,weekly,monthly].
-     *
-     * @param noticePeriod
-     */
+    * set 通知周期,取值[daily,weekly,monthly].
+    *
+    * @param noticePeriod
+    */
     public ConfigServiceNoticeRequest noticePeriod(List<String> noticePeriod) {
         this.noticePeriod = noticePeriod;
         return this;
     }
+
 
     /**
      * set 通知状态，取值[init,start,stop]
@@ -300,6 +316,7 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         this.noticeStatus = noticeStatus;
         return this;
     }
+
 
 
     /**
@@ -313,5 +330,4 @@ public class ConfigServiceNoticeRequest extends JdcloudRequest implements java.i
         }
         this.noticePeriod.add(noticePeriod);
     }
-
 }

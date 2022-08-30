@@ -78,6 +78,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
     private Long topTimeStamp;
 
 
+
     /**
      * get area
      *
@@ -95,6 +96,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
     public void setArea(String area) {
         this.area = area;
     }
+
 
     /**
      * get isp
@@ -114,6 +116,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         this.isp = isp;
     }
 
+
     /**
      * get name
      *
@@ -131,6 +134,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get flowPercent
@@ -150,6 +154,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         this.flowPercent = flowPercent;
     }
 
+
     /**
      * get pvPercent
      *
@@ -167,6 +172,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
     public void setPvPercent(String pvPercent) {
         this.pvPercent = pvPercent;
     }
+
 
     /**
      * get avgbandwidth
@@ -186,6 +192,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
     }
 
+
     /**
      * get flow
      *
@@ -204,6 +211,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         this.flow = flow;
     }
 
+
     /**
      * get pv
      *
@@ -221,6 +229,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
     public void setPv(Long pv) {
         this.pv = pv;
     }
+
 
     /**
      * get topTimeStamp
@@ -241,6 +250,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set area
      *
@@ -250,6 +260,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         this.area = area;
         return this;
     }
+
 
     /**
      * set isp
@@ -261,6 +272,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set name
      *
@@ -270,6 +282,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set flowPercent
@@ -281,6 +294,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pvPercent
      *
@@ -290,6 +304,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         this.pvPercent = pvPercent;
         return this;
     }
+
 
     /**
      * set avgbandwidth
@@ -301,6 +316,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -311,6 +327,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pv
      *
@@ -320,6 +337,7 @@ public class AreaIspbdwItem  implements java.io.Serializable {
         this.pv = pv;
         return this;
     }
+
 
     /**
      * set topTimeStamp

@@ -78,6 +78,7 @@ public class DomainLog  implements java.io.Serializable {
     private String lastModified;
 
 
+
     /**
      * get 下载链接
      *
@@ -95,6 +96,7 @@ public class DomainLog  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get md5值
@@ -114,6 +116,7 @@ public class DomainLog  implements java.io.Serializable {
         this.md5 = md5;
     }
 
+
     /**
      * get 文件名
      *
@@ -131,6 +134,7 @@ public class DomainLog  implements java.io.Serializable {
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
+
 
     /**
      * get 日志格式
@@ -150,6 +154,7 @@ public class DomainLog  implements java.io.Serializable {
         this.logType = logType;
     }
 
+
     /**
      * get 日志粒度
      *
@@ -167,6 +172,7 @@ public class DomainLog  implements java.io.Serializable {
     public void setInterval(String interval) {
         this.interval = interval;
     }
+
 
     /**
      * get 文件大小
@@ -186,6 +192,7 @@ public class DomainLog  implements java.io.Serializable {
         this.size = size;
     }
 
+
     /**
      * get 日志开始时间，UTC时间
      *
@@ -204,6 +211,7 @@ public class DomainLog  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 日志结束时间，UTC时间
      *
@@ -221,6 +229,7 @@ public class DomainLog  implements java.io.Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 日志修改时间，UTC时间
@@ -241,6 +250,7 @@ public class DomainLog  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 下载链接
      *
@@ -250,6 +260,7 @@ public class DomainLog  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set md5值
@@ -261,6 +272,7 @@ public class DomainLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 文件名
      *
@@ -270,6 +282,7 @@ public class DomainLog  implements java.io.Serializable {
         this.fileName = fileName;
         return this;
     }
+
 
     /**
      * set 日志格式
@@ -281,6 +294,7 @@ public class DomainLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志粒度
      *
@@ -290,6 +304,7 @@ public class DomainLog  implements java.io.Serializable {
         this.interval = interval;
         return this;
     }
+
 
     /**
      * set 文件大小
@@ -301,6 +316,7 @@ public class DomainLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志开始时间，UTC时间
      *
@@ -311,6 +327,7 @@ public class DomainLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志结束时间，UTC时间
      *
@@ -320,6 +337,7 @@ public class DomainLog  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 日志修改时间，UTC时间

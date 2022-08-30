@@ -64,6 +64,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
     private Integer size;
 
 
+
     /**
      * get 指定查询开始时间(格式:201906011000)，返回数据包含该时间点。
      *
@@ -81,6 +82,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
     public void setStarttime(String starttime) {
         this.starttime = starttime;
     }
+
 
     /**
      * get 指定查询结束时间(格式:201906011100)，返回数据不包含该时间点
@@ -100,6 +102,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
         this.stoptime = stoptime;
     }
 
+
     /**
      * get 按照设备ID查询设备带宽。
      *
@@ -118,6 +121,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
         this.clientid = clientid;
     }
 
+
     /**
      * get 用于支持分页查询，默认为1，表示第几页。
      *
@@ -135,6 +139,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
     public void setPage(Integer page) {
         this.page = page;
     }
+
 
     /**
      * get 用于支持分页查询，表示每页返回多少条数据，默认每页返回10条数据，size必须是10的整数倍，并且最大值是100。
@@ -155,6 +160,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 指定查询开始时间(格式:201906011000)，返回数据包含该时间点。
      *
@@ -164,6 +170,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
         this.starttime = starttime;
         return this;
     }
+
 
     /**
      * set 指定查询结束时间(格式:201906011100)，返回数据不包含该时间点
@@ -175,6 +182,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 按照设备ID查询设备带宽。
      *
@@ -185,6 +193,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 用于支持分页查询，默认为1，表示第几页。
      *
@@ -194,6 +203,7 @@ public class QueryAvgBandwidthForPCdnRequest extends JdcloudRequest implements j
         this.page = page;
         return this;
     }
+
 
     /**
      * set 用于支持分页查询，表示每页返回多少条数据，默认每页返回10条数据，size必须是10的整数倍，并且最大值是100。

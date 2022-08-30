@@ -72,6 +72,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
     private String domain;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -89,6 +90,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -108,6 +110,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         this.endTime = endTime;
     }
 
+
     /**
      * get 时间间隔，取值(hour，day，fiveMin)，不传默认小时。
      *
@@ -125,6 +128,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
     public void setInterval(String interval) {
         this.interval = interval;
     }
+
 
     /**
      * get 日志类型，取值(log，zip,gz)，不传默认gz。
@@ -144,6 +148,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         this.logType = logType;
     }
 
+
     /**
      * get 页面大小，默认值10
      *
@@ -162,6 +167,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 分页页数，默认值1
      *
@@ -179,6 +185,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 用户域名
@@ -199,6 +206,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -208,6 +216,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -219,6 +228,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 时间间隔，取值(hour，day，fiveMin)，不传默认小时。
      *
@@ -228,6 +238,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         this.interval = interval;
         return this;
     }
+
 
     /**
      * set 日志类型，取值(log，zip,gz)，不传默认gz。
@@ -239,6 +250,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 页面大小，默认值10
      *
@@ -249,6 +261,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 分页页数，默认值1
      *
@@ -258,6 +271,7 @@ public class QueryDomainLogRequest extends JdcloudRequest implements java.io.Ser
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 用户域名

@@ -41,37 +41,40 @@ public class BatchDeleteDomainGroupRequest extends JdcloudRequest implements jav
      * Required:true
      */
     @Required
+    
     private List<Long> ids;
 
 
     /**
-     * get ids
-     *
-     * @return
-     */
+    * get ids
+    *
+    * @return
+    */
     public List<Long> getIds() {
         return ids;
     }
 
     /**
-     * set ids
-     *
-     * @param ids
-     */
+    * set ids
+    *
+    * @param ids
+    */
     public void setIds(List<Long> ids) {
         this.ids = ids;
     }
 
 
+
     /**
-     * set ids
-     *
-     * @param ids
-     */
+    * set ids
+    *
+    * @param ids
+    */
     public BatchDeleteDomainGroupRequest ids(List<Long> ids) {
         this.ids = ids;
         return this;
     }
+
 
 
     /**
@@ -85,5 +88,4 @@ public class BatchDeleteDomainGroupRequest extends JdcloudRequest implements jav
         }
         this.ids.add(id);
     }
-
 }

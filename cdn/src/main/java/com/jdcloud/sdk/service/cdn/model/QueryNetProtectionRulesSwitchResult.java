@@ -39,6 +39,7 @@ public class QueryNetProtectionRulesSwitchResult extends JdcloudResult implement
     private String switchStatus;
 
 
+
     /**
      * get on:开启,off:关闭
      *
@@ -56,6 +57,7 @@ public class QueryNetProtectionRulesSwitchResult extends JdcloudResult implement
     public void setSwitchStatus(String switchStatus) {
         this.switchStatus = switchStatus;
     }
+
 
 
     /**

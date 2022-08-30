@@ -88,6 +88,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
     private Long updateBy;
 
 
+
     /**
      * get 封禁类型
      *
@@ -105,6 +106,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
     public void setForbiddenType(String forbiddenType) {
         this.forbiddenType = forbiddenType;
     }
+
 
     /**
      * get 封禁域名
@@ -124,6 +126,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.forbiddenDomain = forbiddenDomain;
     }
 
+
     /**
      * get 封禁url
      *
@@ -141,6 +144,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
     public void setForbiddenUrl(String forbiddenUrl) {
         this.forbiddenUrl = forbiddenUrl;
     }
+
 
     /**
      * get 封禁原因
@@ -160,6 +164,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.reason = reason;
     }
 
+
     /**
      * get 封禁人
      *
@@ -177,6 +182,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
     public void setForbiddenPreson(String forbiddenPreson) {
         this.forbiddenPreson = forbiddenPreson;
     }
+
 
     /**
      * get y或n
@@ -196,6 +202,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.linkOther = linkOther;
     }
 
+
     /**
      * get 用于封禁前缀识别的URL，应为单个特殊字符，如：~
      *
@@ -213,6 +220,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
     public void setToken(String token) {
         this.token = token;
     }
+
 
     /**
      * get 封禁id
@@ -232,6 +240,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 创建时间
      *
@@ -250,6 +259,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 更新时间
      *
@@ -267,6 +277,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 修改人id
@@ -287,6 +298,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 封禁类型
      *
@@ -296,6 +308,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.forbiddenType = forbiddenType;
         return this;
     }
+
 
     /**
      * set 封禁域名
@@ -307,6 +320,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 封禁url
      *
@@ -316,6 +330,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.forbiddenUrl = forbiddenUrl;
         return this;
     }
+
 
     /**
      * set 封禁原因
@@ -327,6 +342,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 封禁人
      *
@@ -336,6 +352,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.forbiddenPreson = forbiddenPreson;
         return this;
     }
+
 
     /**
      * set y或n
@@ -347,6 +364,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用于封禁前缀识别的URL，应为单个特殊字符，如：~
      *
@@ -356,6 +374,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.token = token;
         return this;
     }
+
 
     /**
      * set 封禁id
@@ -367,6 +386,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -377,6 +397,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 更新时间
      *
@@ -386,6 +407,7 @@ public class ForbiddenInfo  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 修改人id

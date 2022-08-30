@@ -42,6 +42,7 @@ public class QueryDomainConfigStatusRequest extends JdcloudRequest implements ja
     private String taskId;
 
 
+
     /**
      * get 任务ID
      *
@@ -59,6 +60,7 @@ public class QueryDomainConfigStatusRequest extends JdcloudRequest implements ja
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
 
     /**

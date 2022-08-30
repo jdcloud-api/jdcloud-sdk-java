@@ -54,6 +54,7 @@ public class QueryDomainTempInstResult extends JdcloudResult implements java.io.
     private Object instProInfoMap;
 
 
+
     /**
      * get 模板实例名称
      *
@@ -71,6 +72,7 @@ public class QueryDomainTempInstResult extends JdcloudResult implements java.io.
     public void setInstName(String instName) {
         this.instName = instName;
     }
+
 
     /**
      * get 创建时间utc格式
@@ -90,6 +92,7 @@ public class QueryDomainTempInstResult extends JdcloudResult implements java.io.
         this.createTime = createTime;
     }
 
+
     /**
      * get 创建时间utc格式
      *
@@ -107,6 +110,7 @@ public class QueryDomainTempInstResult extends JdcloudResult implements java.io.
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get 查询结果,类型为Map&lt;String,Map&lt;String,Object&gt;&gt;
@@ -127,6 +131,7 @@ public class QueryDomainTempInstResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 模板实例名称
      *
@@ -136,6 +141,7 @@ public class QueryDomainTempInstResult extends JdcloudResult implements java.io.
         this.instName = instName;
         return this;
     }
+
 
     /**
      * set 创建时间utc格式
@@ -147,6 +153,7 @@ public class QueryDomainTempInstResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 创建时间utc格式
      *
@@ -156,6 +163,7 @@ public class QueryDomainTempInstResult extends JdcloudResult implements java.io.
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set 查询结果,类型为Map&lt;String,Map&lt;String,Object&gt;&gt;

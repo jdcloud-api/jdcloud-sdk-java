@@ -42,6 +42,7 @@ public class QueryUrlRuleRequest extends JdcloudRequest implements java.io.Seria
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class QueryUrlRuleRequest extends JdcloudRequest implements java.io.Seria
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

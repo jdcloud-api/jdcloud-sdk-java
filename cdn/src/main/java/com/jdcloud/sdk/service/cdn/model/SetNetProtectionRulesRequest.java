@@ -68,16 +68,17 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
     /**
      * 地域黑名单（GEO IP拦截）
      */
+    
     private List<String> geoBlack;
-
     /**
      * ip 黑名单
      */
+    
     private List<String> ipBlack;
-
     /**
      * ip 白名单
      */
+    
     private List<String> ipWhite;
 
 
@@ -99,6 +100,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         this.srcNewConnLimitEnable = srcNewConnLimitEnable;
     }
 
+
     /**
      * get 目的新建连接，取值on,off，其中on开启，off关闭
      *
@@ -116,6 +118,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
     public void setDstNewConnLimitEnable(String dstNewConnLimitEnable) {
         this.dstNewConnLimitEnable = dstNewConnLimitEnable;
     }
+
 
     /**
      * get 报文最小长度（包最小长度）,取值：1-1500
@@ -135,6 +138,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         this.datagramRangeMin = datagramRangeMin;
     }
 
+
     /**
      * get 报文最大长度（包最大长度）,取值：1-1500
      *
@@ -152,6 +156,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
     public void setDatagramRangeMax(Long datagramRangeMax) {
         this.datagramRangeMax = datagramRangeMax;
     }
+
 
     /**
      * get 目的新建连接限速值，取值：0-4294967295
@@ -171,6 +176,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         this.dstNewConnLimitValue = dstNewConnLimitValue;
     }
 
+
     /**
      * get 源新建连接限速值，取值：0-4294967295
      *
@@ -189,59 +195,63 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         this.srcNewConnLimitValue = srcNewConnLimitValue;
     }
 
+
     /**
-     * get 地域黑名单（GEO IP拦截）
-     *
-     * @return
-     */
+    * get 地域黑名单（GEO IP拦截）
+    *
+    * @return
+    */
     public List<String> getGeoBlack() {
         return geoBlack;
     }
 
     /**
-     * set 地域黑名单（GEO IP拦截）
-     *
-     * @param geoBlack
-     */
+    * set 地域黑名单（GEO IP拦截）
+    *
+    * @param geoBlack
+    */
     public void setGeoBlack(List<String> geoBlack) {
         this.geoBlack = geoBlack;
     }
 
+
     /**
-     * get ip 黑名单
-     *
-     * @return
-     */
+    * get ip 黑名单
+    *
+    * @return
+    */
     public List<String> getIpBlack() {
         return ipBlack;
     }
 
     /**
-     * set ip 黑名单
-     *
-     * @param ipBlack
-     */
+    * set ip 黑名单
+    *
+    * @param ipBlack
+    */
     public void setIpBlack(List<String> ipBlack) {
         this.ipBlack = ipBlack;
     }
 
+
     /**
-     * get ip 白名单
-     *
-     * @return
-     */
+    * get ip 白名单
+    *
+    * @return
+    */
     public List<String> getIpWhite() {
         return ipWhite;
     }
 
     /**
-     * set ip 白名单
-     *
-     * @param ipWhite
-     */
+    * set ip 白名单
+    *
+    * @param ipWhite
+    */
     public void setIpWhite(List<String> ipWhite) {
         this.ipWhite = ipWhite;
     }
+
 
 
     /**
@@ -254,6 +264,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 目的新建连接，取值on,off，其中on开启，off关闭
      *
@@ -263,6 +274,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         this.dstNewConnLimitEnable = dstNewConnLimitEnable;
         return this;
     }
+
 
     /**
      * set 报文最小长度（包最小长度）,取值：1-1500
@@ -274,6 +286,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 报文最大长度（包最大长度）,取值：1-1500
      *
@@ -283,6 +296,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         this.datagramRangeMax = datagramRangeMax;
         return this;
     }
+
 
     /**
      * set 目的新建连接限速值，取值：0-4294967295
@@ -294,6 +308,7 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 源新建连接限速值，取值：0-4294967295
      *
@@ -304,35 +319,39 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
-     * set 地域黑名单（GEO IP拦截）
-     *
-     * @param geoBlack
-     */
+    * set 地域黑名单（GEO IP拦截）
+    *
+    * @param geoBlack
+    */
     public SetNetProtectionRulesRequest geoBlack(List<String> geoBlack) {
         this.geoBlack = geoBlack;
         return this;
     }
 
+
     /**
-     * set ip 黑名单
-     *
-     * @param ipBlack
-     */
+    * set ip 黑名单
+    *
+    * @param ipBlack
+    */
     public SetNetProtectionRulesRequest ipBlack(List<String> ipBlack) {
         this.ipBlack = ipBlack;
         return this;
     }
 
+
     /**
-     * set ip 白名单
-     *
-     * @param ipWhite
-     */
+    * set ip 白名单
+    *
+    * @param ipWhite
+    */
     public SetNetProtectionRulesRequest ipWhite(List<String> ipWhite) {
         this.ipWhite = ipWhite;
         return this;
     }
+
 
 
     /**
@@ -370,5 +389,4 @@ public class SetNetProtectionRulesRequest extends JdcloudRequest implements java
         }
         this.ipWhite.add(ipWhite);
     }
-
 }

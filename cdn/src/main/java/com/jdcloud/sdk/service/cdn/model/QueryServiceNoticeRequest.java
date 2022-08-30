@@ -44,6 +44,7 @@ public class QueryServiceNoticeRequest extends JdcloudRequest implements java.io
     private String noticeWay;
 
 
+
     /**
      * get 通知类型,取值[reportForm],reportForm:报表.
      *
@@ -61,6 +62,7 @@ public class QueryServiceNoticeRequest extends JdcloudRequest implements java.io
     public void setNoticeType(String noticeType) {
         this.noticeType = noticeType;
     }
+
 
     /**
      * get 通知方式,取值[mail],mail:邮件.
@@ -81,6 +83,7 @@ public class QueryServiceNoticeRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 通知类型,取值[reportForm],reportForm:报表.
      *
@@ -90,6 +93,7 @@ public class QueryServiceNoticeRequest extends JdcloudRequest implements java.io
         this.noticeType = noticeType;
         return this;
     }
+
 
     /**
      * set 通知方式,取值[mail],mail:邮件.

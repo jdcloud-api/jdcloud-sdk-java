@@ -47,6 +47,7 @@ public class GeoArea  implements java.io.Serializable {
     /**
      * children
      */
+    
     private List<GeoArea> children;
 
 
@@ -68,6 +69,7 @@ public class GeoArea  implements java.io.Serializable {
         this.label = label;
     }
 
+
     /**
      * get value
      *
@@ -86,23 +88,25 @@ public class GeoArea  implements java.io.Serializable {
         this.value = value;
     }
 
+
     /**
-     * get children
-     *
-     * @return
-     */
+    * get children
+    *
+    * @return
+    */
     public List<GeoArea> getChildren() {
         return children;
     }
 
     /**
-     * set children
-     *
-     * @param children
-     */
+    * set children
+    *
+    * @param children
+    */
     public void setChildren(List<GeoArea> children) {
         this.children = children;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class GeoArea  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set value
      *
@@ -125,15 +130,17 @@ public class GeoArea  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set children
-     *
-     * @param children
-     */
+    * set children
+    *
+    * @param children
+    */
     public GeoArea children(List<GeoArea> children) {
         this.children = children;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class GeoArea  implements java.io.Serializable {
         }
         this.children.add(children);
     }
-
 }

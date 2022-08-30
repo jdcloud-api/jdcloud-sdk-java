@@ -39,37 +39,40 @@ public class QueryLivePrefetchTaskResult extends JdcloudResult implements java.i
     /**
      * result
      */
+    
     private List<QueryLivePrefetchItem> result;
 
 
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<QueryLivePrefetchItem> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<QueryLivePrefetchItem> result) {
         this.result = result;
     }
 
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public QueryLivePrefetchTaskResult result(List<QueryLivePrefetchItem> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryLivePrefetchTaskResult extends JdcloudResult implements java.i
         }
         this.result.add(result);
     }
-
 }

@@ -39,8 +39,8 @@ public class EnableWafBlackRulesRequest extends JdcloudRequest implements java.i
     /**
      * ids
      */
+    
     private List<String> ids;
-
     /**
      * ruleType
      */
@@ -54,23 +54,25 @@ public class EnableWafBlackRulesRequest extends JdcloudRequest implements java.i
     private String domain;
 
 
+
     /**
-     * get ids
-     *
-     * @return
-     */
+    * get ids
+    *
+    * @return
+    */
     public List<String> getIds() {
         return ids;
     }
 
     /**
-     * set ids
-     *
-     * @param ids
-     */
+    * set ids
+    *
+    * @param ids
+    */
     public void setIds(List<String> ids) {
         this.ids = ids;
     }
+
 
     /**
      * get ruleType
@@ -89,6 +91,7 @@ public class EnableWafBlackRulesRequest extends JdcloudRequest implements java.i
     public void setRuleType(String ruleType) {
         this.ruleType = ruleType;
     }
+
 
     /**
      * get 用户域名
@@ -109,15 +112,17 @@ public class EnableWafBlackRulesRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
-     * set ids
-     *
-     * @param ids
-     */
+    * set ids
+    *
+    * @param ids
+    */
     public EnableWafBlackRulesRequest ids(List<String> ids) {
         this.ids = ids;
         return this;
     }
+
 
     /**
      * set ruleType
@@ -129,6 +134,7 @@ public class EnableWafBlackRulesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -138,6 +144,7 @@ public class EnableWafBlackRulesRequest extends JdcloudRequest implements java.i
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -151,5 +158,4 @@ public class EnableWafBlackRulesRequest extends JdcloudRequest implements java.i
         }
         this.ids.add(id);
     }
-
 }

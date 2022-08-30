@@ -47,11 +47,12 @@ public class BandData  implements java.io.Serializable {
     /**
      * 日峰值(MB)
      */
+    
     private List<DailyPeakItem> dailyPeaks;
-
     /**
      * 5分钟详情
      */
+    
     private List<FiveMinItem> details;
 
 
@@ -73,6 +74,7 @@ public class BandData  implements java.io.Serializable {
         this.monthly95 = monthly95;
     }
 
+
     /**
      * get 月峰值(MB)
      *
@@ -91,41 +93,44 @@ public class BandData  implements java.io.Serializable {
         this.monthlyPeak = monthlyPeak;
     }
 
+
     /**
-     * get 日峰值(MB)
-     *
-     * @return
-     */
+    * get 日峰值(MB)
+    *
+    * @return
+    */
     public List<DailyPeakItem> getDailyPeaks() {
         return dailyPeaks;
     }
 
     /**
-     * set 日峰值(MB)
-     *
-     * @param dailyPeaks
-     */
+    * set 日峰值(MB)
+    *
+    * @param dailyPeaks
+    */
     public void setDailyPeaks(List<DailyPeakItem> dailyPeaks) {
         this.dailyPeaks = dailyPeaks;
     }
 
+
     /**
-     * get 5分钟详情
-     *
-     * @return
-     */
+    * get 5分钟详情
+    *
+    * @return
+    */
     public List<FiveMinItem> getDetails() {
         return details;
     }
 
     /**
-     * set 5分钟详情
-     *
-     * @param details
-     */
+    * set 5分钟详情
+    *
+    * @param details
+    */
     public void setDetails(List<FiveMinItem> details) {
         this.details = details;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class BandData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 月峰值(MB)
      *
@@ -148,25 +154,28 @@ public class BandData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 日峰值(MB)
-     *
-     * @param dailyPeaks
-     */
+    * set 日峰值(MB)
+    *
+    * @param dailyPeaks
+    */
     public BandData dailyPeaks(List<DailyPeakItem> dailyPeaks) {
         this.dailyPeaks = dailyPeaks;
         return this;
     }
 
+
     /**
-     * set 5分钟详情
-     *
-     * @param details
-     */
+    * set 5分钟详情
+    *
+    * @param details
+    */
     public BandData details(List<FiveMinItem> details) {
         this.details = details;
         return this;
     }
+
 
 
     /**
@@ -192,5 +201,4 @@ public class BandData  implements java.io.Serializable {
         }
         this.details.add(detail);
     }
-
 }

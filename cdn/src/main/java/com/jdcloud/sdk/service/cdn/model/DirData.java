@@ -47,6 +47,7 @@ public class DirData  implements java.io.Serializable {
     /**
      * regions
      */
+    
     private List<DirRegionData> regions;
 
 
@@ -68,6 +69,7 @@ public class DirData  implements java.io.Serializable {
         this.dir = dir;
     }
 
+
     /**
      * get 汇总后的目录带宽
      *
@@ -86,23 +88,25 @@ public class DirData  implements java.io.Serializable {
         this.bandwidth = bandwidth;
     }
 
+
     /**
-     * get regions
-     *
-     * @return
-     */
+    * get regions
+    *
+    * @return
+    */
     public List<DirRegionData> getRegions() {
         return regions;
     }
 
     /**
-     * set regions
-     *
-     * @param regions
-     */
+    * set regions
+    *
+    * @param regions
+    */
     public void setRegions(List<DirRegionData> regions) {
         this.regions = regions;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class DirData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 汇总后的目录带宽
      *
@@ -125,15 +130,17 @@ public class DirData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set regions
-     *
-     * @param regions
-     */
+    * set regions
+    *
+    * @param regions
+    */
     public DirData regions(List<DirRegionData> regions) {
         this.regions = regions;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class DirData  implements java.io.Serializable {
         }
         this.regions.add(region);
     }
-
 }

@@ -39,37 +39,40 @@ public class SetCacheRulesResult extends JdcloudResult implements java.io.Serial
     /**
      * data
      */
+    
     private List<CacheVo> data;
 
 
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<CacheVo> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<CacheVo> data) {
         this.data = data;
     }
 
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public SetCacheRulesResult data(List<CacheVo> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class SetCacheRulesResult extends JdcloudResult implements java.io.Serial
         }
         this.data.add(data);
     }
-
 }

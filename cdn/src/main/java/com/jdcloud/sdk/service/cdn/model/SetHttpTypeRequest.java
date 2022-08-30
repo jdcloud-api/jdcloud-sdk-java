@@ -82,6 +82,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
     private String domain;
 
 
+
     /**
      * get http类型,只能为http或者https,默认为http.当设为https时,需要调用“设置通讯协议”接口上传证书和私钥
      *
@@ -99,6 +100,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
     public void setHttpType(String httpType) {
         this.httpType = httpType;
     }
+
 
     /**
      * get 用户证书,当Type为https时必须设置
@@ -118,6 +120,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         this.certificate = certificate;
     }
 
+
     /**
      * get 证书私钥
      *
@@ -135,6 +138,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
     public void setRsaKey(String rsaKey) {
         this.rsaKey = rsaKey;
     }
+
 
     /**
      * get 有三种类型：default、http、https
@@ -154,6 +158,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         this.jumpType = jumpType;
     }
 
+
     /**
      * get 证书来源有两种类型：default,ssl
      *
@@ -171,6 +176,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
     public void setCertFrom(String certFrom) {
         this.certFrom = certFrom;
     }
+
 
     /**
      * get ssl证书id
@@ -190,6 +196,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         this.sslCertId = sslCertId;
     }
 
+
     /**
      * get 是否同步到ssl,boolean值，取值true或者false
      *
@@ -208,6 +215,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         this.syncToSsl = syncToSsl;
     }
 
+
     /**
      * get syncToSsl是true时，certName是必填项
      *
@@ -225,6 +233,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
     public void setCertName(String certName) {
         this.certName = certName;
     }
+
 
     /**
      * get 用户域名
@@ -245,6 +254,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set http类型,只能为http或者https,默认为http.当设为https时,需要调用“设置通讯协议”接口上传证书和私钥
      *
@@ -254,6 +264,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         this.httpType = httpType;
         return this;
     }
+
 
     /**
      * set 用户证书,当Type为https时必须设置
@@ -265,6 +276,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 证书私钥
      *
@@ -274,6 +286,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         this.rsaKey = rsaKey;
         return this;
     }
+
 
     /**
      * set 有三种类型：default、http、https
@@ -285,6 +298,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 证书来源有两种类型：default,ssl
      *
@@ -294,6 +308,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         this.certFrom = certFrom;
         return this;
     }
+
 
     /**
      * set ssl证书id
@@ -305,6 +320,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 是否同步到ssl,boolean值，取值true或者false
      *
@@ -315,6 +331,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set syncToSsl是true时，certName是必填项
      *
@@ -324,6 +341,7 @@ public class SetHttpTypeRequest extends JdcloudRequest implements java.io.Serial
         this.certName = certName;
         return this;
     }
+
 
     /**
      * set 用户域名

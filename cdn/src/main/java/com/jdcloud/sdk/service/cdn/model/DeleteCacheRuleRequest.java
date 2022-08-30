@@ -47,6 +47,7 @@ public class DeleteCacheRuleRequest extends JdcloudRequest implements java.io.Se
     private String domain;
 
 
+
     /**
      * get 缓存规则配置ID
      *
@@ -64,6 +65,7 @@ public class DeleteCacheRuleRequest extends JdcloudRequest implements java.io.Se
     public void setConfigId(Long configId) {
         this.configId = configId;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class DeleteCacheRuleRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 缓存规则配置ID
      *
@@ -93,6 +96,7 @@ public class DeleteCacheRuleRequest extends JdcloudRequest implements java.io.Se
         this.configId = configId;
         return this;
     }
+
 
     /**
      * set 用户域名

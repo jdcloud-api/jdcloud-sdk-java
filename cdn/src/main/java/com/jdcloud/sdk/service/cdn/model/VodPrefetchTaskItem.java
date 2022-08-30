@@ -53,6 +53,7 @@ public class VodPrefetchTaskItem  implements java.io.Serializable {
     private Integer copyNum;
 
 
+
     /**
      * get url
      *
@@ -70,6 +71,7 @@ public class VodPrefetchTaskItem  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
@@ -89,6 +91,7 @@ public class VodPrefetchTaskItem  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 运营商[ct uni cm]中的一个,分别代表电信 联通 移动
      *
@@ -106,6 +109,7 @@ public class VodPrefetchTaskItem  implements java.io.Serializable {
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get 副本数
@@ -126,6 +130,7 @@ public class VodPrefetchTaskItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set url
      *
@@ -135,6 +140,7 @@ public class VodPrefetchTaskItem  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
@@ -146,6 +152,7 @@ public class VodPrefetchTaskItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 运营商[ct uni cm]中的一个,分别代表电信 联通 移动
      *
@@ -155,6 +162,7 @@ public class VodPrefetchTaskItem  implements java.io.Serializable {
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set 副本数

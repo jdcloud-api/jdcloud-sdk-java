@@ -72,6 +72,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
     private String domain;
 
 
+
     /**
      * get on/off，若为on则以下必传参数不可为空[accessKey,secretKey,bucket,domain2],若为off则以下参数均不能有值[accessKey,secretKey,bucket,suffix,domain2]
      *
@@ -89,6 +90,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get status 为on时必填
@@ -108,6 +110,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         this.accessKey = accessKey;
     }
 
+
     /**
      * get status 为on时必填
      *
@@ -125,6 +128,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
     public void setSecretKey(String secretKey) {
         this.secretKey = secretKey;
     }
+
 
     /**
      * get oss桶名,status 为on时必填
@@ -144,6 +148,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         this.bucket = bucket;
     }
 
+
     /**
      * get oss后缀,status 为on时选填
      *
@@ -162,6 +167,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         this.suffix = suffix;
     }
 
+
     /**
      * get status 为on时必填
      *
@@ -179,6 +185,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
     public void setDomain2(String domain2) {
         this.domain2 = domain2;
     }
+
 
     /**
      * get 用户域名
@@ -199,6 +206,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set on/off，若为on则以下必传参数不可为空[accessKey,secretKey,bucket,domain2],若为off则以下参数均不能有值[accessKey,secretKey,bucket,suffix,domain2]
      *
@@ -208,6 +216,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         this.status = status;
         return this;
     }
+
 
     /**
      * set status 为on时必填
@@ -219,6 +228,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set status 为on时必填
      *
@@ -228,6 +238,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         this.secretKey = secretKey;
         return this;
     }
+
 
     /**
      * set oss桶名,status 为on时必填
@@ -239,6 +250,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set oss后缀,status 为on时选填
      *
@@ -249,6 +261,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set status 为on时必填
      *
@@ -258,6 +271,7 @@ public class ConfigBackSourceOssRequest extends JdcloudRequest implements java.i
         this.domain2 = domain2;
         return this;
     }
+
 
     /**
      * set 用户域名

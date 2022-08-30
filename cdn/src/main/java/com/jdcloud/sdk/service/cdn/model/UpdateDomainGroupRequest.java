@@ -39,8 +39,8 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
     /**
      * 域名组内域名，包含主域名
      */
+    
     private List<String> domains;
-
     /**
      * 主域名,开启共享缓存时必传
      */
@@ -64,23 +64,25 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
     private Long id;
 
 
+
     /**
-     * get 域名组内域名，包含主域名
-     *
-     * @return
-     */
+    * get 域名组内域名，包含主域名
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set 域名组内域名，包含主域名
-     *
-     * @param domains
-     */
+    * set 域名组内域名，包含主域名
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
     /**
      * get 主域名,开启共享缓存时必传
@@ -100,6 +102,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
         this.primaryDomain = primaryDomain;
     }
 
+
     /**
      * get 是否共享内存，共享缓存仅对中国境内加速域名生效
      *
@@ -118,6 +121,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
         this.shareCache = shareCache;
     }
 
+
     /**
      * get domainGroupName
      *
@@ -135,6 +139,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
     public void setDomainGroupName(String domainGroupName) {
         this.domainGroupName = domainGroupName;
     }
+
 
     /**
      * get 域名组id
@@ -155,15 +160,17 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
-     * set 域名组内域名，包含主域名
-     *
-     * @param domains
-     */
+    * set 域名组内域名，包含主域名
+    *
+    * @param domains
+    */
     public UpdateDomainGroupRequest domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
     /**
      * set 主域名,开启共享缓存时必传
@@ -175,6 +182,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 是否共享内存，共享缓存仅对中国境内加速域名生效
      *
@@ -184,6 +192,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
         this.shareCache = shareCache;
         return this;
     }
+
 
     /**
      * set domainGroupName
@@ -195,6 +204,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 域名组id
      *
@@ -204,6 +214,7 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
         this.id = id;
         return this;
     }
+
 
 
     /**
@@ -217,5 +228,4 @@ public class UpdateDomainGroupRequest extends JdcloudRequest implements java.io.
         }
         this.domains.add(domain);
     }
-
 }

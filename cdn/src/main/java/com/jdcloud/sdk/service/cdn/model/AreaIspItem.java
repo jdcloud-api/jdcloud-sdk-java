@@ -43,6 +43,7 @@ public class AreaIspItem  implements java.io.Serializable {
     private String code;
 
 
+
     /**
      * get description
      *
@@ -60,6 +61,7 @@ public class AreaIspItem  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get code
@@ -80,6 +82,7 @@ public class AreaIspItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set description
      *
@@ -89,6 +92,7 @@ public class AreaIspItem  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set code

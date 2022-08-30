@@ -52,12 +52,13 @@ public class TOSAuthInfo  implements java.io.Serializable {
     /**
      * authHeaders
      */
+    
     private List<HdrCtrl> authHeaders;
-
     /**
      * 单位s，默认 900
      */
     private String expireTime;
+
 
 
     /**
@@ -78,6 +79,7 @@ public class TOSAuthInfo  implements java.io.Serializable {
         this.accessKey = accessKey;
     }
 
+
     /**
      * get 密钥的加密密钥
      *
@@ -95,6 +97,7 @@ public class TOSAuthInfo  implements java.io.Serializable {
     public void setSecretKey(String secretKey) {
         this.secretKey = secretKey;
     }
+
 
     /**
      * get 版本[v1,v2]
@@ -114,23 +117,25 @@ public class TOSAuthInfo  implements java.io.Serializable {
         this.authVersion = authVersion;
     }
 
+
     /**
-     * get authHeaders
-     *
-     * @return
-     */
+    * get authHeaders
+    *
+    * @return
+    */
     public List<HdrCtrl> getAuthHeaders() {
         return authHeaders;
     }
 
     /**
-     * set authHeaders
-     *
-     * @param authHeaders
-     */
+    * set authHeaders
+    *
+    * @param authHeaders
+    */
     public void setAuthHeaders(List<HdrCtrl> authHeaders) {
         this.authHeaders = authHeaders;
     }
+
 
     /**
      * get 单位s，默认 900
@@ -151,6 +156,7 @@ public class TOSAuthInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 密钥
      *
@@ -160,6 +166,7 @@ public class TOSAuthInfo  implements java.io.Serializable {
         this.accessKey = accessKey;
         return this;
     }
+
 
     /**
      * set 密钥的加密密钥
@@ -171,6 +178,7 @@ public class TOSAuthInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 版本[v1,v2]
      *
@@ -181,15 +189,17 @@ public class TOSAuthInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set authHeaders
-     *
-     * @param authHeaders
-     */
+    * set authHeaders
+    *
+    * @param authHeaders
+    */
     public TOSAuthInfo authHeaders(List<HdrCtrl> authHeaders) {
         this.authHeaders = authHeaders;
         return this;
     }
+
 
     /**
      * set 单位s，默认 900
@@ -200,6 +210,7 @@ public class TOSAuthInfo  implements java.io.Serializable {
         this.expireTime = expireTime;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class TOSAuthInfo  implements java.io.Serializable {
         }
         this.authHeaders.add(authHeader);
     }
-
 }

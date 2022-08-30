@@ -42,6 +42,7 @@ public class StopDomainRequest extends JdcloudRequest implements java.io.Seriali
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class StopDomainRequest extends JdcloudRequest implements java.io.Seriali
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

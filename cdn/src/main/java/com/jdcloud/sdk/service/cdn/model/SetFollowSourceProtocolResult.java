@@ -39,6 +39,7 @@ public class SetFollowSourceProtocolResult extends JdcloudResult implements java
     private String taskId;
 
 
+
     /**
      * get 任务id
      *
@@ -56,6 +57,7 @@ public class SetFollowSourceProtocolResult extends JdcloudResult implements java
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
 
     /**

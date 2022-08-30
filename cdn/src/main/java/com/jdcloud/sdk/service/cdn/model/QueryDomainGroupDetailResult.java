@@ -38,8 +38,8 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
     /**
      * domains
      */
+    
     private List<String> domains;
-
     /**
      * 主域名
      */
@@ -56,23 +56,25 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
     private String domainGroupName;
 
 
+
     /**
-     * get domains
-     *
-     * @return
-     */
+    * get domains
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
     /**
      * get 主域名
@@ -92,6 +94,7 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
         this.primaryDomain = primaryDomain;
     }
 
+
     /**
      * get 是否共享缓存
      *
@@ -109,6 +112,7 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
     public void setShareCache(String shareCache) {
         this.shareCache = shareCache;
     }
+
 
     /**
      * get 域名组名称
@@ -129,15 +133,17 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public QueryDomainGroupDetailResult domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
     /**
      * set 主域名
@@ -149,6 +155,7 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
         return this;
     }
 
+
     /**
      * set 是否共享缓存
      *
@@ -159,6 +166,7 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
         return this;
     }
 
+
     /**
      * set 域名组名称
      *
@@ -168,6 +176,7 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
         this.domainGroupName = domainGroupName;
         return this;
     }
+
 
 
     /**
@@ -181,5 +190,4 @@ public class QueryDomainGroupDetailResult extends JdcloudResult implements java.
         }
         this.domains.add(domain);
     }
-
 }

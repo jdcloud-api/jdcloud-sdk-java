@@ -49,6 +49,7 @@ public class QueryBackSourceRuleResult extends JdcloudResult implements java.io.
     private String afterRegex;
 
 
+
     /**
      * get 加速域名
      *
@@ -67,6 +68,7 @@ public class QueryBackSourceRuleResult extends JdcloudResult implements java.io.
         this.domain = domain;
     }
 
+
     /**
      * get 回源改写之前的正则表达式
      *
@@ -84,6 +86,7 @@ public class QueryBackSourceRuleResult extends JdcloudResult implements java.io.
     public void setBeforeRegex(String beforeRegex) {
         this.beforeRegex = beforeRegex;
     }
+
 
     /**
      * get 回源改写之后的正则表达式
@@ -104,6 +107,7 @@ public class QueryBackSourceRuleResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 加速域名
      *
@@ -114,6 +118,7 @@ public class QueryBackSourceRuleResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 回源改写之前的正则表达式
      *
@@ -123,6 +128,7 @@ public class QueryBackSourceRuleResult extends JdcloudResult implements java.io.
         this.beforeRegex = beforeRegex;
         return this;
     }
+
 
     /**
      * set 回源改写之后的正则表达式

@@ -54,14 +54,15 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
     /**
      * 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot;自由组合，空表示跳过后续所有阶段
      */
+    
     private List<String> actions;
-
     /**
      * 用户域名
      * Required:true
      */
     @Required
     private String domain;
+
 
 
     /**
@@ -82,6 +83,7 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
         this.ruleType = ruleType;
     }
 
+
     /**
      * get 匹配模式,uri类型有效，0&#x3D;完全匹配  1&#x3D;前缀匹配 2&#x3D;包含 3&#x3D;正则 4&#x3D;大于 5&#x3D;后缀
      *
@@ -99,6 +101,7 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
     public void setMatchOp(Integer matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get 匹配值
@@ -118,23 +121,25 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
         this.val = val;
     }
 
+
     /**
-     * get 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot;自由组合，空表示跳过后续所有阶段
-     *
-     * @return
-     */
+    * get 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot;自由组合，空表示跳过后续所有阶段
+    *
+    * @return
+    */
     public List<String> getActions() {
         return actions;
     }
 
     /**
-     * set 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot;自由组合，空表示跳过后续所有阶段
-     *
-     * @param actions
-     */
+    * set 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot;自由组合，空表示跳过后续所有阶段
+    *
+    * @param actions
+    */
     public void setActions(List<String> actions) {
         this.actions = actions;
     }
+
 
     /**
      * get 用户域名
@@ -155,6 +160,7 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 白名单类型， uri ip geo
      *
@@ -164,6 +170,7 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
         this.ruleType = ruleType;
         return this;
     }
+
 
     /**
      * set 匹配模式,uri类型有效，0&#x3D;完全匹配  1&#x3D;前缀匹配 2&#x3D;包含 3&#x3D;正则 4&#x3D;大于 5&#x3D;后缀
@@ -175,6 +182,7 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 匹配值
      *
@@ -185,15 +193,17 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot;自由组合，空表示跳过后续所有阶段
-     *
-     * @param actions
-     */
+    * set 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot;自由组合，空表示跳过后续所有阶段
+    *
+    * @param actions
+    */
     public CreateWafWhiteRuleRequest actions(List<String> actions) {
         this.actions = actions;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -204,6 +214,7 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -217,5 +228,4 @@ public class CreateWafWhiteRuleRequest extends JdcloudRequest implements java.io
         }
         this.actions.add(action);
     }
-
 }

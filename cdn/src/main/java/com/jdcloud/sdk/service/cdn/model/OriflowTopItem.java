@@ -58,6 +58,7 @@ public class OriflowTopItem  implements java.io.Serializable {
     private String flowPercent;
 
 
+
     /**
      * get name
      *
@@ -75,6 +76,7 @@ public class OriflowTopItem  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get oriflow
@@ -94,6 +96,7 @@ public class OriflowTopItem  implements java.io.Serializable {
         this.oriflow = oriflow;
     }
 
+
     /**
      * get hitflow
      *
@@ -112,6 +115,7 @@ public class OriflowTopItem  implements java.io.Serializable {
         this.hitflow = hitflow;
     }
 
+
     /**
      * get flow
      *
@@ -129,6 +133,7 @@ public class OriflowTopItem  implements java.io.Serializable {
     public void setFlow(Double flow) {
         this.flow = flow;
     }
+
 
     /**
      * get flowPercent
@@ -149,6 +154,7 @@ public class OriflowTopItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set name
      *
@@ -158,6 +164,7 @@ public class OriflowTopItem  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set oriflow
@@ -169,6 +176,7 @@ public class OriflowTopItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set hitflow
      *
@@ -179,6 +187,7 @@ public class OriflowTopItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -188,6 +197,7 @@ public class OriflowTopItem  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set flowPercent

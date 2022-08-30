@@ -39,334 +39,355 @@ public class QueryAreaIspListV2Result extends JdcloudResult implements java.io.S
     /**
      * mainLand
      */
+    
     private List<AreaIspItem> mainLand;
-
     /**
      * overseas
      */
+    
     private List<AreaIspItem> overseas;
-
     /**
      * isp
      */
+    
     private List<AreaIspItem> isp;
-
     /**
      * africa
      */
+    
     private List<AreaIspItem> africa;
-
     /**
      * oceania
      */
+    
     private List<AreaIspItem> oceania;
-
     /**
      * southAmerica
      */
+    
     private List<AreaIspItem> southAmerica;
-
     /**
      * northAmerica
      */
+    
     private List<AreaIspItem> northAmerica;
-
     /**
      * asia
      */
+    
     private List<AreaIspItem> asia;
-
     /**
      * europe
      */
+    
     private List<AreaIspItem> europe;
-
     /**
      * midEast
      */
+    
     private List<AreaIspItem> midEast;
 
 
     /**
-     * get mainLand
-     *
-     * @return
-     */
+    * get mainLand
+    *
+    * @return
+    */
     public List<AreaIspItem> getMainLand() {
         return mainLand;
     }
 
     /**
-     * set mainLand
-     *
-     * @param mainLand
-     */
+    * set mainLand
+    *
+    * @param mainLand
+    */
     public void setMainLand(List<AreaIspItem> mainLand) {
         this.mainLand = mainLand;
     }
 
+
     /**
-     * get overseas
-     *
-     * @return
-     */
+    * get overseas
+    *
+    * @return
+    */
     public List<AreaIspItem> getOverseas() {
         return overseas;
     }
 
     /**
-     * set overseas
-     *
-     * @param overseas
-     */
+    * set overseas
+    *
+    * @param overseas
+    */
     public void setOverseas(List<AreaIspItem> overseas) {
         this.overseas = overseas;
     }
 
+
     /**
-     * get isp
-     *
-     * @return
-     */
+    * get isp
+    *
+    * @return
+    */
     public List<AreaIspItem> getIsp() {
         return isp;
     }
 
     /**
-     * set isp
-     *
-     * @param isp
-     */
+    * set isp
+    *
+    * @param isp
+    */
     public void setIsp(List<AreaIspItem> isp) {
         this.isp = isp;
     }
 
+
     /**
-     * get africa
-     *
-     * @return
-     */
+    * get africa
+    *
+    * @return
+    */
     public List<AreaIspItem> getAfrica() {
         return africa;
     }
 
     /**
-     * set africa
-     *
-     * @param africa
-     */
+    * set africa
+    *
+    * @param africa
+    */
     public void setAfrica(List<AreaIspItem> africa) {
         this.africa = africa;
     }
 
+
     /**
-     * get oceania
-     *
-     * @return
-     */
+    * get oceania
+    *
+    * @return
+    */
     public List<AreaIspItem> getOceania() {
         return oceania;
     }
 
     /**
-     * set oceania
-     *
-     * @param oceania
-     */
+    * set oceania
+    *
+    * @param oceania
+    */
     public void setOceania(List<AreaIspItem> oceania) {
         this.oceania = oceania;
     }
 
+
     /**
-     * get southAmerica
-     *
-     * @return
-     */
+    * get southAmerica
+    *
+    * @return
+    */
     public List<AreaIspItem> getSouthAmerica() {
         return southAmerica;
     }
 
     /**
-     * set southAmerica
-     *
-     * @param southAmerica
-     */
+    * set southAmerica
+    *
+    * @param southAmerica
+    */
     public void setSouthAmerica(List<AreaIspItem> southAmerica) {
         this.southAmerica = southAmerica;
     }
 
+
     /**
-     * get northAmerica
-     *
-     * @return
-     */
+    * get northAmerica
+    *
+    * @return
+    */
     public List<AreaIspItem> getNorthAmerica() {
         return northAmerica;
     }
 
     /**
-     * set northAmerica
-     *
-     * @param northAmerica
-     */
+    * set northAmerica
+    *
+    * @param northAmerica
+    */
     public void setNorthAmerica(List<AreaIspItem> northAmerica) {
         this.northAmerica = northAmerica;
     }
 
+
     /**
-     * get asia
-     *
-     * @return
-     */
+    * get asia
+    *
+    * @return
+    */
     public List<AreaIspItem> getAsia() {
         return asia;
     }
 
     /**
-     * set asia
-     *
-     * @param asia
-     */
+    * set asia
+    *
+    * @param asia
+    */
     public void setAsia(List<AreaIspItem> asia) {
         this.asia = asia;
     }
 
+
     /**
-     * get europe
-     *
-     * @return
-     */
+    * get europe
+    *
+    * @return
+    */
     public List<AreaIspItem> getEurope() {
         return europe;
     }
 
     /**
-     * set europe
-     *
-     * @param europe
-     */
+    * set europe
+    *
+    * @param europe
+    */
     public void setEurope(List<AreaIspItem> europe) {
         this.europe = europe;
     }
 
+
     /**
-     * get midEast
-     *
-     * @return
-     */
+    * get midEast
+    *
+    * @return
+    */
     public List<AreaIspItem> getMidEast() {
         return midEast;
     }
 
     /**
-     * set midEast
-     *
-     * @param midEast
-     */
+    * set midEast
+    *
+    * @param midEast
+    */
     public void setMidEast(List<AreaIspItem> midEast) {
         this.midEast = midEast;
     }
 
 
+
     /**
-     * set mainLand
-     *
-     * @param mainLand
-     */
+    * set mainLand
+    *
+    * @param mainLand
+    */
     public QueryAreaIspListV2Result mainLand(List<AreaIspItem> mainLand) {
         this.mainLand = mainLand;
         return this;
     }
 
+
     /**
-     * set overseas
-     *
-     * @param overseas
-     */
+    * set overseas
+    *
+    * @param overseas
+    */
     public QueryAreaIspListV2Result overseas(List<AreaIspItem> overseas) {
         this.overseas = overseas;
         return this;
     }
 
+
     /**
-     * set isp
-     *
-     * @param isp
-     */
+    * set isp
+    *
+    * @param isp
+    */
     public QueryAreaIspListV2Result isp(List<AreaIspItem> isp) {
         this.isp = isp;
         return this;
     }
 
+
     /**
-     * set africa
-     *
-     * @param africa
-     */
+    * set africa
+    *
+    * @param africa
+    */
     public QueryAreaIspListV2Result africa(List<AreaIspItem> africa) {
         this.africa = africa;
         return this;
     }
 
+
     /**
-     * set oceania
-     *
-     * @param oceania
-     */
+    * set oceania
+    *
+    * @param oceania
+    */
     public QueryAreaIspListV2Result oceania(List<AreaIspItem> oceania) {
         this.oceania = oceania;
         return this;
     }
 
+
     /**
-     * set southAmerica
-     *
-     * @param southAmerica
-     */
+    * set southAmerica
+    *
+    * @param southAmerica
+    */
     public QueryAreaIspListV2Result southAmerica(List<AreaIspItem> southAmerica) {
         this.southAmerica = southAmerica;
         return this;
     }
 
+
     /**
-     * set northAmerica
-     *
-     * @param northAmerica
-     */
+    * set northAmerica
+    *
+    * @param northAmerica
+    */
     public QueryAreaIspListV2Result northAmerica(List<AreaIspItem> northAmerica) {
         this.northAmerica = northAmerica;
         return this;
     }
 
+
     /**
-     * set asia
-     *
-     * @param asia
-     */
+    * set asia
+    *
+    * @param asia
+    */
     public QueryAreaIspListV2Result asia(List<AreaIspItem> asia) {
         this.asia = asia;
         return this;
     }
 
+
     /**
-     * set europe
-     *
-     * @param europe
-     */
+    * set europe
+    *
+    * @param europe
+    */
     public QueryAreaIspListV2Result europe(List<AreaIspItem> europe) {
         this.europe = europe;
         return this;
     }
 
+
     /**
-     * set midEast
-     *
-     * @param midEast
-     */
+    * set midEast
+    *
+    * @param midEast
+    */
     public QueryAreaIspListV2Result midEast(List<AreaIspItem> midEast) {
         this.midEast = midEast;
         return this;
     }
+
 
 
     /**
@@ -488,5 +509,4 @@ public class QueryAreaIspListV2Result extends JdcloudResult implements java.io.S
         }
         this.midEast.add(midEast);
     }
-
 }

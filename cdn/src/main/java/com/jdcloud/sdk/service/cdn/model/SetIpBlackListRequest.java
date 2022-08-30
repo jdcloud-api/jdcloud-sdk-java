@@ -39,8 +39,8 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
     /**
      * ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
      */
+    
     private List<String> ips;
-
     /**
      * ip黑白名单类型，black:黑名单,white:白名单
      */
@@ -54,23 +54,25 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
     private String domain;
 
 
+
     /**
-     * get ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
-     *
-     * @return
-     */
+    * get ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
+    *
+    * @return
+    */
     public List<String> getIps() {
         return ips;
     }
 
     /**
-     * set ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
-     *
-     * @param ips
-     */
+    * set ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
+    *
+    * @param ips
+    */
     public void setIps(List<String> ips) {
         this.ips = ips;
     }
+
 
     /**
      * get ip黑白名单类型，black:黑名单,white:白名单
@@ -89,6 +91,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
     public void setIpListType(String ipListType) {
         this.ipListType = ipListType;
     }
+
 
     /**
      * get 用户域名
@@ -109,15 +112,17 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
-     * set ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
-     *
-     * @param ips
-     */
+    * set ip名单,ips中url不能超过50条，中国境外/全球加速域名暂不支持传IP段
+    *
+    * @param ips
+    */
     public SetIpBlackListRequest ips(List<String> ips) {
         this.ips = ips;
         return this;
     }
+
 
     /**
      * set ip黑白名单类型，black:黑名单,white:白名单
@@ -129,6 +134,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -138,6 +144,7 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -151,5 +158,4 @@ public class SetIpBlackListRequest extends JdcloudRequest implements java.io.Ser
         }
         this.ips.add(ip);
     }
-
 }

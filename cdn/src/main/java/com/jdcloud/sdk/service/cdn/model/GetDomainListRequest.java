@@ -64,6 +64,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     private String accelerateRegion;
 
 
+
     /**
      * get 根据关键字进行模糊匹配
      *
@@ -81,6 +82,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     public void setKeyWord(String keyWord) {
         this.keyWord = keyWord;
     }
+
 
     /**
      * get pageNumber,默认值1
@@ -100,6 +102,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get pageSize,最大值50,默认值20
      *
@@ -117,6 +120,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 根据域名状态查询, 可选值[offline, online, configuring, auditing, audit_reject]
@@ -136,6 +140,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
         this.status = status;
     }
 
+
     /**
      * get 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      *
@@ -153,6 +158,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     public void setType(String type) {
         this.type = type;
     }
+
 
     /**
      * get 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
@@ -173,6 +179,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 根据关键字进行模糊匹配
      *
@@ -182,6 +189,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
         this.keyWord = keyWord;
         return this;
     }
+
 
     /**
      * set pageNumber,默认值1
@@ -193,6 +201,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set pageSize,最大值50,默认值20
      *
@@ -202,6 +211,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 根据域名状态查询, 可选值[offline, online, configuring, auditing, audit_reject]
@@ -213,6 +223,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
      *
@@ -222,6 +233,7 @@ public class GetDomainListRequest extends JdcloudRequest implements java.io.Seri
         this.type = type;
         return this;
     }
+
 
     /**
      * set 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球

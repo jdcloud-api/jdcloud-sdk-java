@@ -52,6 +52,7 @@ public class ConfigUrlRuleRequest extends JdcloudRequest implements java.io.Seri
     private String domain;
 
 
+
     /**
      * get url改写之前的正则表达式
      *
@@ -70,6 +71,7 @@ public class ConfigUrlRuleRequest extends JdcloudRequest implements java.io.Seri
         this.beforeRegex = beforeRegex;
     }
 
+
     /**
      * get url改写之后的正则表达式
      *
@@ -87,6 +89,7 @@ public class ConfigUrlRuleRequest extends JdcloudRequest implements java.io.Seri
     public void setAfterRegex(String afterRegex) {
         this.afterRegex = afterRegex;
     }
+
 
     /**
      * get 用户域名
@@ -107,6 +110,7 @@ public class ConfigUrlRuleRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set url改写之前的正则表达式
      *
@@ -117,6 +121,7 @@ public class ConfigUrlRuleRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set url改写之后的正则表达式
      *
@@ -126,6 +131,7 @@ public class ConfigUrlRuleRequest extends JdcloudRequest implements java.io.Seri
         this.afterRegex = afterRegex;
         return this;
     }
+
 
     /**
      * set 用户域名

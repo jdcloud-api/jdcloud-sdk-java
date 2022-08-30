@@ -43,6 +43,7 @@ public class ExtraCacheTime  implements java.io.Serializable {
     private Long cacheTime;
 
 
+
     /**
      * get http状态码
      *
@@ -60,6 +61,7 @@ public class ExtraCacheTime  implements java.io.Serializable {
     public void setHttpCode(String httpCode) {
         this.httpCode = httpCode;
     }
+
 
     /**
      * get 缓存时间
@@ -80,6 +82,7 @@ public class ExtraCacheTime  implements java.io.Serializable {
     }
 
 
+
     /**
      * set http状态码
      *
@@ -89,6 +92,7 @@ public class ExtraCacheTime  implements java.io.Serializable {
         this.httpCode = httpCode;
         return this;
     }
+
 
     /**
      * set 缓存时间

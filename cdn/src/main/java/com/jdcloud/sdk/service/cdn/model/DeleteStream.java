@@ -48,6 +48,7 @@ public class DeleteStream  implements java.io.Serializable {
     private String publishIp;
 
 
+
     /**
      * get 禁播流
      *
@@ -66,6 +67,7 @@ public class DeleteStream  implements java.io.Serializable {
         this.stream = stream;
     }
 
+
     /**
      * get 封禁推流的app
      *
@@ -83,6 +85,7 @@ public class DeleteStream  implements java.io.Serializable {
     public void setApp(String app) {
         this.app = app;
     }
+
 
     /**
      * get publishIp
@@ -103,6 +106,7 @@ public class DeleteStream  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 禁播流
      *
@@ -113,6 +117,7 @@ public class DeleteStream  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 封禁推流的app
      *
@@ -122,6 +127,7 @@ public class DeleteStream  implements java.io.Serializable {
         this.app = app;
         return this;
     }
+
 
     /**
      * set publishIp

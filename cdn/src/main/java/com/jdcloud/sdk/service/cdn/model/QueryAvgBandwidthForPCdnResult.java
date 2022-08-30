@@ -45,6 +45,7 @@ public class QueryAvgBandwidthForPCdnResult extends JdcloudResult implements jav
     /**
      * data
      */
+    
     private List<QueryAvgBandwidthGroup> data;
 
 
@@ -66,23 +67,25 @@ public class QueryAvgBandwidthForPCdnResult extends JdcloudResult implements jav
         this.page = page;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<QueryAvgBandwidthGroup> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<QueryAvgBandwidthGroup> data) {
         this.data = data;
     }
+
 
 
     /**
@@ -95,15 +98,17 @@ public class QueryAvgBandwidthForPCdnResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public QueryAvgBandwidthForPCdnResult data(List<QueryAvgBandwidthGroup> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class QueryAvgBandwidthForPCdnResult extends JdcloudResult implements jav
         }
         this.data.add(data);
     }
-
 }

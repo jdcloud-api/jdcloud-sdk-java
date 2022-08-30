@@ -69,6 +69,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
     private String token;
 
 
+
     /**
      * get 封禁类型，domain 域名封禁,url url封禁
      *
@@ -86,6 +87,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
     public void setForbiddenType(String forbiddenType) {
         this.forbiddenType = forbiddenType;
     }
+
 
     /**
      * get 封禁域名
@@ -105,6 +107,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         this.forbiddenDomain = forbiddenDomain;
     }
 
+
     /**
      * get 封禁url,多个以;隔开
      *
@@ -122,6 +125,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
     public void setForbiddenUrl(String forbiddenUrl) {
         this.forbiddenUrl = forbiddenUrl;
     }
+
 
     /**
      * get 封禁原因
@@ -141,6 +145,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         this.reason = reason;
     }
 
+
     /**
      * get y,n y表示是，n表示否
      *
@@ -159,6 +164,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         this.linkOther = linkOther;
     }
 
+
     /**
      * get 是否同步操作共享缓存域名,0:仅操作本域名,1:同步操作共享缓存域名,默认为0
      *
@@ -176,6 +182,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
     public void setShareCacheDomainFlag(String shareCacheDomainFlag) {
         this.shareCacheDomainFlag = shareCacheDomainFlag;
     }
+
 
     /**
      * get 用于封禁前缀识别的URL,应为单个特殊字符，如：~
@@ -196,6 +203,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 封禁类型，domain 域名封禁,url url封禁
      *
@@ -205,6 +213,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         this.forbiddenType = forbiddenType;
         return this;
     }
+
 
     /**
      * set 封禁域名
@@ -216,6 +225,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 封禁url,多个以;隔开
      *
@@ -225,6 +235,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         this.forbiddenUrl = forbiddenUrl;
         return this;
     }
+
 
     /**
      * set 封禁原因
@@ -236,6 +247,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set y,n y表示是，n表示否
      *
@@ -246,6 +258,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 是否同步操作共享缓存域名,0:仅操作本域名,1:同步操作共享缓存域名,默认为0
      *
@@ -255,6 +268,7 @@ public class CreateForbiddenInfoRequest extends JdcloudRequest implements java.i
         this.shareCacheDomainFlag = shareCacheDomainFlag;
         return this;
     }
+
 
     /**
      * set 用于封禁前缀识别的URL,应为单个特殊字符，如：~

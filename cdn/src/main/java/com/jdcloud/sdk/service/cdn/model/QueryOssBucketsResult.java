@@ -43,6 +43,7 @@ public class QueryOssBucketsResult extends JdcloudResult implements java.io.Seri
     /**
      * ossBuckets
      */
+    
     private List<Object> ossBuckets;
 
 
@@ -64,23 +65,25 @@ public class QueryOssBucketsResult extends JdcloudResult implements java.io.Seri
         this.total = total;
     }
 
+
     /**
-     * get ossBuckets
-     *
-     * @return
-     */
+    * get ossBuckets
+    *
+    * @return
+    */
     public List<Object> getOssBuckets() {
         return ossBuckets;
     }
 
     /**
-     * set ossBuckets
-     *
-     * @param ossBuckets
-     */
+    * set ossBuckets
+    *
+    * @param ossBuckets
+    */
     public void setOssBuckets(List<Object> ossBuckets) {
         this.ossBuckets = ossBuckets;
     }
+
 
 
     /**
@@ -93,15 +96,17 @@ public class QueryOssBucketsResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set ossBuckets
-     *
-     * @param ossBuckets
-     */
+    * set ossBuckets
+    *
+    * @param ossBuckets
+    */
     public QueryOssBucketsResult ossBuckets(List<Object> ossBuckets) {
         this.ossBuckets = ossBuckets;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class QueryOssBucketsResult extends JdcloudResult implements java.io.Seri
         }
         this.ossBuckets.add(ossBucket);
     }
-
 }

@@ -68,6 +68,7 @@ public class CacheRule  implements java.io.Serializable {
     private String cacheType;
 
 
+
     /**
      * get weight
      *
@@ -85,6 +86,7 @@ public class CacheRule  implements java.io.Serializable {
     public void setWeight(Integer weight) {
         this.weight = weight;
     }
+
 
     /**
      * get ttl
@@ -104,6 +106,7 @@ public class CacheRule  implements java.io.Serializable {
         this.ttl = ttl;
     }
 
+
     /**
      * get configId
      *
@@ -121,6 +124,7 @@ public class CacheRule  implements java.io.Serializable {
     public void setConfigId(Long configId) {
         this.configId = configId;
     }
+
 
     /**
      * get contents
@@ -140,6 +144,7 @@ public class CacheRule  implements java.io.Serializable {
         this.contents = contents;
     }
 
+
     /**
      * get createTime
      *
@@ -158,6 +163,7 @@ public class CacheRule  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get updateTime
      *
@@ -175,6 +181,7 @@ public class CacheRule  implements java.io.Serializable {
     public void setUpdateTime(String updateTime) {
         this.updateTime = updateTime;
     }
+
 
     /**
      * get cacheType
@@ -195,6 +202,7 @@ public class CacheRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set weight
      *
@@ -204,6 +212,7 @@ public class CacheRule  implements java.io.Serializable {
         this.weight = weight;
         return this;
     }
+
 
     /**
      * set ttl
@@ -215,6 +224,7 @@ public class CacheRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set configId
      *
@@ -224,6 +234,7 @@ public class CacheRule  implements java.io.Serializable {
         this.configId = configId;
         return this;
     }
+
 
     /**
      * set contents
@@ -235,6 +246,7 @@ public class CacheRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set createTime
      *
@@ -245,6 +257,7 @@ public class CacheRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set updateTime
      *
@@ -254,6 +267,7 @@ public class CacheRule  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
     /**
      * set cacheType

@@ -78,6 +78,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
     private String endTime;
 
 
+
     /**
      * get domain所归属pin
      *
@@ -95,6 +96,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 日志上传域名，如：www.a.com
@@ -114,6 +116,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 日志上传全路径，如：cdnuserlog/www.a.com/20190412/2019041200-01.gz
      *
@@ -131,6 +134,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
     public void setLogFileFullPath(String logFileFullPath) {
         this.logFileFullPath = logFileFullPath;
     }
+
 
     /**
      * get 日志粒度：fiveMin(五分钟粒度),hour(一小时粒度),day(一天粒度)
@@ -150,6 +154,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.interval = interval;
     }
 
+
     /**
      * get 日志类型：gz,log,zip
      *
@@ -167,6 +172,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
     public void setLogType(String logType) {
         this.logType = logType;
     }
+
 
     /**
      * get 日志大小，单位：Byte（字节）
@@ -186,6 +192,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.logSize = logSize;
     }
 
+
     /**
      * get MD5值
      *
@@ -204,6 +211,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.logMD5 = logMD5;
     }
 
+
     /**
      * get 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
      *
@@ -221,6 +229,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05
@@ -241,6 +250,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set domain所归属pin
      *
@@ -250,6 +260,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 日志上传域名，如：www.a.com
@@ -261,6 +272,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志上传全路径，如：cdnuserlog/www.a.com/20190412/2019041200-01.gz
      *
@@ -270,6 +282,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.logFileFullPath = logFileFullPath;
         return this;
     }
+
 
     /**
      * set 日志粒度：fiveMin(五分钟粒度),hour(一小时粒度),day(一天粒度)
@@ -281,6 +294,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志类型：gz,log,zip
      *
@@ -290,6 +304,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.logType = logType;
         return this;
     }
+
 
     /**
      * set 日志大小，单位：Byte（字节）
@@ -301,6 +316,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set MD5值
      *
@@ -311,6 +327,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
      *
@@ -320,6 +337,7 @@ public class UserLogInfoModel  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05

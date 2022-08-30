@@ -63,6 +63,7 @@ public class DomainlogModel  implements java.io.Serializable {
     private String md5;
 
 
+
     /**
      * get 日志下载url地址
      *
@@ -80,6 +81,7 @@ public class DomainlogModel  implements java.io.Serializable {
     public void setLogUrl(String logUrl) {
         this.logUrl = logUrl;
     }
+
 
     /**
      * get 日志大小，单位：Byte（字节）
@@ -99,6 +101,7 @@ public class DomainlogModel  implements java.io.Serializable {
         this.logSize = logSize;
     }
 
+
     /**
      * get 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
      *
@@ -116,6 +119,7 @@ public class DomainlogModel  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05
@@ -135,6 +139,7 @@ public class DomainlogModel  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 日志修改时间，UTC时间
      *
@@ -152,6 +157,7 @@ public class DomainlogModel  implements java.io.Serializable {
     public void setLastModified(String lastModified) {
         this.lastModified = lastModified;
     }
+
 
     /**
      * get MD5值
@@ -172,6 +178,7 @@ public class DomainlogModel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 日志下载url地址
      *
@@ -181,6 +188,7 @@ public class DomainlogModel  implements java.io.Serializable {
         this.logUrl = logUrl;
         return this;
     }
+
 
     /**
      * set 日志大小，单位：Byte（字节）
@@ -192,6 +200,7 @@ public class DomainlogModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志开始时间，格式：yyyy-MM-dd HH:ss，如：2019-04-12 00:00
      *
@@ -201,6 +210,7 @@ public class DomainlogModel  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 日志结束时间，格式：yyyy-MM-dd HH:ss 如：2019-04-12 00:05
@@ -212,6 +222,7 @@ public class DomainlogModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 日志修改时间，UTC时间
      *
@@ -221,6 +232,7 @@ public class DomainlogModel  implements java.io.Serializable {
         this.lastModified = lastModified;
         return this;
     }
+
 
     /**
      * set MD5值

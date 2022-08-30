@@ -38,70 +38,75 @@ public class QueryDefaultHttpHeaderKeyResult extends JdcloudResult implements ja
     /**
      * reqDefaultHttpHeaderKey
      */
+    
     private List<String> reqDefaultHttpHeaderKey;
-
     /**
      * respDefaultHttpHeaderKey
      */
+    
     private List<String> respDefaultHttpHeaderKey;
 
 
     /**
-     * get reqDefaultHttpHeaderKey
-     *
-     * @return
-     */
+    * get reqDefaultHttpHeaderKey
+    *
+    * @return
+    */
     public List<String> getReqDefaultHttpHeaderKey() {
         return reqDefaultHttpHeaderKey;
     }
 
     /**
-     * set reqDefaultHttpHeaderKey
-     *
-     * @param reqDefaultHttpHeaderKey
-     */
+    * set reqDefaultHttpHeaderKey
+    *
+    * @param reqDefaultHttpHeaderKey
+    */
     public void setReqDefaultHttpHeaderKey(List<String> reqDefaultHttpHeaderKey) {
         this.reqDefaultHttpHeaderKey = reqDefaultHttpHeaderKey;
     }
 
+
     /**
-     * get respDefaultHttpHeaderKey
-     *
-     * @return
-     */
+    * get respDefaultHttpHeaderKey
+    *
+    * @return
+    */
     public List<String> getRespDefaultHttpHeaderKey() {
         return respDefaultHttpHeaderKey;
     }
 
     /**
-     * set respDefaultHttpHeaderKey
-     *
-     * @param respDefaultHttpHeaderKey
-     */
+    * set respDefaultHttpHeaderKey
+    *
+    * @param respDefaultHttpHeaderKey
+    */
     public void setRespDefaultHttpHeaderKey(List<String> respDefaultHttpHeaderKey) {
         this.respDefaultHttpHeaderKey = respDefaultHttpHeaderKey;
     }
 
 
+
     /**
-     * set reqDefaultHttpHeaderKey
-     *
-     * @param reqDefaultHttpHeaderKey
-     */
+    * set reqDefaultHttpHeaderKey
+    *
+    * @param reqDefaultHttpHeaderKey
+    */
     public QueryDefaultHttpHeaderKeyResult reqDefaultHttpHeaderKey(List<String> reqDefaultHttpHeaderKey) {
         this.reqDefaultHttpHeaderKey = reqDefaultHttpHeaderKey;
         return this;
     }
 
+
     /**
-     * set respDefaultHttpHeaderKey
-     *
-     * @param respDefaultHttpHeaderKey
-     */
+    * set respDefaultHttpHeaderKey
+    *
+    * @param respDefaultHttpHeaderKey
+    */
     public QueryDefaultHttpHeaderKeyResult respDefaultHttpHeaderKey(List<String> respDefaultHttpHeaderKey) {
         this.respDefaultHttpHeaderKey = respDefaultHttpHeaderKey;
         return this;
     }
+
 
 
     /**
@@ -127,5 +132,4 @@ public class QueryDefaultHttpHeaderKeyResult extends JdcloudResult implements ja
         }
         this.respDefaultHttpHeaderKey.add(respDefaultHttpHeaderKey);
     }
-
 }

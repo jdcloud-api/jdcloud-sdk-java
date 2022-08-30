@@ -39,37 +39,40 @@ public class ExecuteDomainCopyResult extends JdcloudResult implements java.io.Se
     /**
      * errorResult
      */
+    
     private List<ErrorEntity> errorResult;
 
 
     /**
-     * get errorResult
-     *
-     * @return
-     */
+    * get errorResult
+    *
+    * @return
+    */
     public List<ErrorEntity> getErrorResult() {
         return errorResult;
     }
 
     /**
-     * set errorResult
-     *
-     * @param errorResult
-     */
+    * set errorResult
+    *
+    * @param errorResult
+    */
     public void setErrorResult(List<ErrorEntity> errorResult) {
         this.errorResult = errorResult;
     }
 
 
+
     /**
-     * set errorResult
-     *
-     * @param errorResult
-     */
+    * set errorResult
+    *
+    * @param errorResult
+    */
     public ExecuteDomainCopyResult errorResult(List<ErrorEntity> errorResult) {
         this.errorResult = errorResult;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ExecuteDomainCopyResult extends JdcloudResult implements java.io.Se
         }
         this.errorResult.add(errorResult);
     }
-
 }

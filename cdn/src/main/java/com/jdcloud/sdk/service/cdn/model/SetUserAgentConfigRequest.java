@@ -44,14 +44,15 @@ public class SetUserAgentConfigRequest extends JdcloudRequest implements java.io
     /**
      * UA列表,如果userAgentList为空,则为全部删除
      */
+    
     private List<String> userAgentList;
-
     /**
      * 用户域名
      * Required:true
      */
     @Required
     private String domain;
+
 
 
     /**
@@ -72,23 +73,25 @@ public class SetUserAgentConfigRequest extends JdcloudRequest implements java.io
         this.userAgentType = userAgentType;
     }
 
+
     /**
-     * get UA列表,如果userAgentList为空,则为全部删除
-     *
-     * @return
-     */
+    * get UA列表,如果userAgentList为空,则为全部删除
+    *
+    * @return
+    */
     public List<String> getUserAgentList() {
         return userAgentList;
     }
 
     /**
-     * set UA列表,如果userAgentList为空,则为全部删除
-     *
-     * @param userAgentList
-     */
+    * set UA列表,如果userAgentList为空,则为全部删除
+    *
+    * @param userAgentList
+    */
     public void setUserAgentList(List<String> userAgentList) {
         this.userAgentList = userAgentList;
     }
+
 
     /**
      * get 用户域名
@@ -109,6 +112,7 @@ public class SetUserAgentConfigRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block
      *
@@ -119,15 +123,17 @@ public class SetUserAgentConfigRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set UA列表,如果userAgentList为空,则为全部删除
-     *
-     * @param userAgentList
-     */
+    * set UA列表,如果userAgentList为空,则为全部删除
+    *
+    * @param userAgentList
+    */
     public SetUserAgentConfigRequest userAgentList(List<String> userAgentList) {
         this.userAgentList = userAgentList;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -138,6 +144,7 @@ public class SetUserAgentConfigRequest extends JdcloudRequest implements java.io
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -151,5 +158,4 @@ public class SetUserAgentConfigRequest extends JdcloudRequest implements java.io
         }
         this.userAgentList.add(userAgentList);
     }
-
 }

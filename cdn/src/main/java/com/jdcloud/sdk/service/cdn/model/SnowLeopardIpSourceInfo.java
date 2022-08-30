@@ -53,6 +53,7 @@ public class SnowLeopardIpSourceInfo  implements java.io.Serializable {
     private String isp;
 
 
+
     /**
      * get 1：主；2：备
      *
@@ -70,6 +71,7 @@ public class SnowLeopardIpSourceInfo  implements java.io.Serializable {
     public void setMaster(Integer master) {
         this.master = master;
     }
+
 
     /**
      * get 回源IP
@@ -89,6 +91,7 @@ public class SnowLeopardIpSourceInfo  implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get 占比
      *
@@ -106,6 +109,7 @@ public class SnowLeopardIpSourceInfo  implements java.io.Serializable {
     public void setRatio(Double ratio) {
         this.ratio = ratio;
     }
+
 
     /**
      * get 运营商
@@ -126,6 +130,7 @@ public class SnowLeopardIpSourceInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 1：主；2：备
      *
@@ -135,6 +140,7 @@ public class SnowLeopardIpSourceInfo  implements java.io.Serializable {
         this.master = master;
         return this;
     }
+
 
     /**
      * set 回源IP
@@ -146,6 +152,7 @@ public class SnowLeopardIpSourceInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 占比
      *
@@ -155,6 +162,7 @@ public class SnowLeopardIpSourceInfo  implements java.io.Serializable {
         this.ratio = ratio;
         return this;
     }
+
 
     /**
      * set 运营商

@@ -44,6 +44,7 @@ public class QueryHttp2Result extends JdcloudResult implements java.io.Serializa
     private String status;
 
 
+
     /**
      * get 加速域名
      *
@@ -61,6 +62,7 @@ public class QueryHttp2Result extends JdcloudResult implements java.io.Serializa
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get HTTP2功能开关，取值on/off
@@ -81,6 +83,7 @@ public class QueryHttp2Result extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
      * set 加速域名
      *
@@ -90,6 +93,7 @@ public class QueryHttp2Result extends JdcloudResult implements java.io.Serializa
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set HTTP2功能开关，取值on/off

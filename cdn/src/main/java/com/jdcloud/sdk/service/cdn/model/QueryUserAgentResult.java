@@ -48,12 +48,13 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     /**
      * userAgentList
      */
+    
     private List<String> userAgentList;
-
     /**
      * 是否允许空userAgent访问,默认为“on”
      */
     private String allowNoUserAgentHeader;
+
 
 
     /**
@@ -74,6 +75,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
         this.domain = domain;
     }
 
+
     /**
      * get userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block
      *
@@ -92,23 +94,25 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
         this.userAgentType = userAgentType;
     }
 
+
     /**
-     * get userAgentList
-     *
-     * @return
-     */
+    * get userAgentList
+    *
+    * @return
+    */
     public List<String> getUserAgentList() {
         return userAgentList;
     }
 
     /**
-     * set userAgentList
-     *
-     * @param userAgentList
-     */
+    * set userAgentList
+    *
+    * @param userAgentList
+    */
     public void setUserAgentList(List<String> userAgentList) {
         this.userAgentList = userAgentList;
     }
+
 
     /**
      * get 是否允许空userAgent访问,默认为“on”
@@ -129,6 +133,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
     }
 
 
+
     /**
      * set domain
      *
@@ -138,6 +143,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set userAgent类型,取值：block（黑名单）,allow（白名单）,默认为block
@@ -149,15 +155,17 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set userAgentList
-     *
-     * @param userAgentList
-     */
+    * set userAgentList
+    *
+    * @param userAgentList
+    */
     public QueryUserAgentResult userAgentList(List<String> userAgentList) {
         this.userAgentList = userAgentList;
         return this;
     }
+
 
     /**
      * set 是否允许空userAgent访问,默认为“on”
@@ -168,6 +176,7 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
         this.allowNoUserAgentHeader = allowNoUserAgentHeader;
         return this;
     }
+
 
 
     /**
@@ -181,5 +190,4 @@ public class QueryUserAgentResult extends JdcloudResult implements java.io.Seria
         }
         this.userAgentList.add(userAgentList);
     }
-
 }

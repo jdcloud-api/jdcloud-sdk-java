@@ -57,13 +57,13 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
     /**
      * pushEdgeNodeIps
      */
+    
     private List<String> pushEdgeNodeIps;
-
     /**
      * anchorIps
      */
+    
     private List<String> anchorIps;
-
     /**
      * flvBandWidth
      */
@@ -85,6 +85,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
     private Long hlsPlayerCount;
 
 
+
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -102,6 +103,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -121,6 +123,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get avgupspeed
      *
@@ -138,6 +141,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
     public void setAvgupspeed(Long avgupspeed) {
         this.avgupspeed = avgupspeed;
     }
+
 
     /**
      * get avgupframerate
@@ -157,41 +161,44 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         this.avgupframerate = avgupframerate;
     }
 
+
     /**
-     * get pushEdgeNodeIps
-     *
-     * @return
-     */
+    * get pushEdgeNodeIps
+    *
+    * @return
+    */
     public List<String> getPushEdgeNodeIps() {
         return pushEdgeNodeIps;
     }
 
     /**
-     * set pushEdgeNodeIps
-     *
-     * @param pushEdgeNodeIps
-     */
+    * set pushEdgeNodeIps
+    *
+    * @param pushEdgeNodeIps
+    */
     public void setPushEdgeNodeIps(List<String> pushEdgeNodeIps) {
         this.pushEdgeNodeIps = pushEdgeNodeIps;
     }
 
+
     /**
-     * get anchorIps
-     *
-     * @return
-     */
+    * get anchorIps
+    *
+    * @return
+    */
     public List<String> getAnchorIps() {
         return anchorIps;
     }
 
     /**
-     * set anchorIps
-     *
-     * @param anchorIps
-     */
+    * set anchorIps
+    *
+    * @param anchorIps
+    */
     public void setAnchorIps(List<String> anchorIps) {
         this.anchorIps = anchorIps;
     }
+
 
     /**
      * get flvBandWidth
@@ -211,6 +218,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         this.flvBandWidth = flvBandWidth;
     }
 
+
     /**
      * get flvPlayerCount
      *
@@ -229,6 +237,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         this.flvPlayerCount = flvPlayerCount;
     }
 
+
     /**
      * get hlsBandWidth
      *
@@ -246,6 +255,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
     public void setHlsBandWidth(Long hlsBandWidth) {
         this.hlsBandWidth = hlsBandWidth;
     }
+
 
     /**
      * get hlsPlayerCount
@@ -266,6 +276,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -275,6 +286,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -286,6 +298,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set avgupspeed
      *
@@ -295,6 +308,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         this.avgupspeed = avgupspeed;
         return this;
     }
+
 
     /**
      * set avgupframerate
@@ -306,25 +320,28 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set pushEdgeNodeIps
-     *
-     * @param pushEdgeNodeIps
-     */
+    * set pushEdgeNodeIps
+    *
+    * @param pushEdgeNodeIps
+    */
     public StreamHistoryInfoForYY pushEdgeNodeIps(List<String> pushEdgeNodeIps) {
         this.pushEdgeNodeIps = pushEdgeNodeIps;
         return this;
     }
 
+
     /**
-     * set anchorIps
-     *
-     * @param anchorIps
-     */
+    * set anchorIps
+    *
+    * @param anchorIps
+    */
     public StreamHistoryInfoForYY anchorIps(List<String> anchorIps) {
         this.anchorIps = anchorIps;
         return this;
     }
+
 
     /**
      * set flvBandWidth
@@ -336,6 +353,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flvPlayerCount
      *
@@ -345,6 +363,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         this.flvPlayerCount = flvPlayerCount;
         return this;
     }
+
 
     /**
      * set hlsBandWidth
@@ -356,6 +375,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set hlsPlayerCount
      *
@@ -365,6 +385,7 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         this.hlsPlayerCount = hlsPlayerCount;
         return this;
     }
+
 
 
     /**
@@ -390,5 +411,4 @@ public class StreamHistoryInfoForYY  implements java.io.Serializable {
         }
         this.anchorIps.add(anchorIp);
     }
-
 }

@@ -48,6 +48,7 @@ public class UrlItemV2  implements java.io.Serializable {
     private String callbackUrl;
 
 
+
     /**
      * get 任务url
      *
@@ -66,6 +67,7 @@ public class UrlItemV2  implements java.io.Serializable {
         this.url = url;
     }
 
+
     /**
      * get 回报任务的id
      *
@@ -83,6 +85,7 @@ public class UrlItemV2  implements java.io.Serializable {
     public void setUrlId(String urlId) {
         this.urlId = urlId;
     }
+
 
     /**
      * get 回报的地址
@@ -103,6 +106,7 @@ public class UrlItemV2  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 任务url
      *
@@ -113,6 +117,7 @@ public class UrlItemV2  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回报任务的id
      *
@@ -122,6 +127,7 @@ public class UrlItemV2  implements java.io.Serializable {
         this.urlId = urlId;
         return this;
     }
+
 
     /**
      * set 回报的地址

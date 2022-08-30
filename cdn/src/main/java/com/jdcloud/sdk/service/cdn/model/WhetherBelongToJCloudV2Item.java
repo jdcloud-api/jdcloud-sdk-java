@@ -68,6 +68,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
     private String from;
 
 
+
     /**
      * get ip
      *
@@ -85,6 +86,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get belongToJCloud
@@ -104,6 +106,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         this.belongToJCloud = belongToJCloud;
     }
 
+
     /**
      * get country
      *
@@ -121,6 +124,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
     public void setCountry(String country) {
         this.country = country;
     }
+
 
     /**
      * get province
@@ -140,6 +144,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         this.province = province;
     }
 
+
     /**
      * get city
      *
@@ -158,6 +163,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         this.city = city;
     }
 
+
     /**
      * get isp
      *
@@ -175,6 +181,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get from
@@ -195,6 +202,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ip
      *
@@ -204,6 +212,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set belongToJCloud
@@ -215,6 +224,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set country
      *
@@ -224,6 +234,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         this.country = country;
         return this;
     }
+
 
     /**
      * set province
@@ -235,6 +246,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set city
      *
@@ -245,6 +257,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set isp
      *
@@ -254,6 +267,7 @@ public class WhetherBelongToJCloudV2Item  implements java.io.Serializable {
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set from

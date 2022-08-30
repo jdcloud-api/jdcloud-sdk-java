@@ -69,6 +69,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
     private Integer pageSize;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -86,6 +87,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -105,6 +107,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         this.endTime = endTime;
     }
 
+
     /**
      * get 需要查询的域名, 必须为用户pin下有权限的域名
      *
@@ -122,6 +125,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 排序字段
@@ -141,6 +145,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         this.sortField = sortField;
     }
 
+
     /**
      * get 排序规则：desc，asc
      *
@@ -159,6 +164,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         this.sortRule = sortRule;
     }
 
+
     /**
      * get 页码，从1开始
      *
@@ -176,6 +182,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 页大小，默认20
@@ -196,6 +203,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -205,6 +213,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -216,6 +225,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 需要查询的域名, 必须为用户pin下有权限的域名
      *
@@ -225,6 +235,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 排序字段
@@ -236,6 +247,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 排序规则：desc，asc
      *
@@ -246,6 +258,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 页码，从1开始
      *
@@ -255,6 +268,7 @@ public class WafQueryAttackDetailsRequest extends JdcloudRequest implements java
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 页大小，默认20

@@ -54,6 +54,7 @@ public class QueryDomainLogResult extends JdcloudResult implements java.io.Seria
     /**
      * urls
      */
+    
     private List<DomainLog> urls;
 
 
@@ -75,6 +76,7 @@ public class QueryDomainLogResult extends JdcloudResult implements java.io.Seria
         this.total = total;
     }
 
+
     /**
      * get 页面大小
      *
@@ -92,6 +94,7 @@ public class QueryDomainLogResult extends JdcloudResult implements java.io.Seria
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 页面页数
@@ -111,23 +114,25 @@ public class QueryDomainLogResult extends JdcloudResult implements java.io.Seria
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get urls
-     *
-     * @return
-     */
+    * get urls
+    *
+    * @return
+    */
     public List<DomainLog> getUrls() {
         return urls;
     }
 
     /**
-     * set urls
-     *
-     * @param urls
-     */
+    * set urls
+    *
+    * @param urls
+    */
     public void setUrls(List<DomainLog> urls) {
         this.urls = urls;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryDomainLogResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 页面大小
      *
@@ -149,6 +155,7 @@ public class QueryDomainLogResult extends JdcloudResult implements java.io.Seria
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 页面页数
@@ -160,15 +167,17 @@ public class QueryDomainLogResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set urls
-     *
-     * @param urls
-     */
+    * set urls
+    *
+    * @param urls
+    */
     public QueryDomainLogResult urls(List<DomainLog> urls) {
         this.urls = urls;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryDomainLogResult extends JdcloudResult implements java.io.Seria
         }
         this.urls.add(url);
     }
-
 }

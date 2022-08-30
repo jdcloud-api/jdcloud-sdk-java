@@ -44,14 +44,15 @@ public class ConfigBackSourceRulesRequest extends JdcloudRequest implements java
     /**
      * rules
      */
+    
     private List<BackSourceRule> rules;
-
     /**
      * 用户域名
      * Required:true
      */
     @Required
     private String domain;
+
 
 
     /**
@@ -72,23 +73,25 @@ public class ConfigBackSourceRulesRequest extends JdcloudRequest implements java
         this.status = status;
     }
 
+
     /**
-     * get rules
-     *
-     * @return
-     */
+    * get rules
+    *
+    * @return
+    */
     public List<BackSourceRule> getRules() {
         return rules;
     }
 
     /**
-     * set rules
-     *
-     * @param rules
-     */
+    * set rules
+    *
+    * @param rules
+    */
     public void setRules(List<BackSourceRule> rules) {
         this.rules = rules;
     }
+
 
     /**
      * get 用户域名
@@ -109,6 +112,7 @@ public class ConfigBackSourceRulesRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set on/off，若为off则数组需为空，若为on则数组不可为空
      *
@@ -119,15 +123,17 @@ public class ConfigBackSourceRulesRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
-     * set rules
-     *
-     * @param rules
-     */
+    * set rules
+    *
+    * @param rules
+    */
     public ConfigBackSourceRulesRequest rules(List<BackSourceRule> rules) {
         this.rules = rules;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -138,6 +144,7 @@ public class ConfigBackSourceRulesRequest extends JdcloudRequest implements java
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -151,5 +158,4 @@ public class ConfigBackSourceRulesRequest extends JdcloudRequest implements java
         }
         this.rules.add(rule);
     }
-
 }

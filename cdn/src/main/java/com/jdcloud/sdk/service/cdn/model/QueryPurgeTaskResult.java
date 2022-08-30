@@ -59,6 +59,7 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
     /**
      * taskList
      */
+    
     private List<PurgeTaskInfo> taskList;
 
 
@@ -80,6 +81,7 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
         this.totalNumber = totalNumber;
     }
 
+
     /**
      * get totalPage
      *
@@ -97,6 +99,7 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
     public void setTotalPage(Integer totalPage) {
         this.totalPage = totalPage;
     }
+
 
     /**
      * get pageNumber
@@ -116,6 +119,7 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get pageSize
      *
@@ -134,23 +138,25 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get taskList
-     *
-     * @return
-     */
+    * get taskList
+    *
+    * @return
+    */
     public List<PurgeTaskInfo> getTaskList() {
         return taskList;
     }
 
     /**
-     * set taskList
-     *
-     * @param taskList
-     */
+    * set taskList
+    *
+    * @param taskList
+    */
     public void setTaskList(List<PurgeTaskInfo> taskList) {
         this.taskList = taskList;
     }
+
 
 
     /**
@@ -163,6 +169,7 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
      * set totalPage
      *
@@ -172,6 +179,7 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
         this.totalPage = totalPage;
         return this;
     }
+
 
     /**
      * set pageNumber
@@ -183,6 +191,7 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
      * set pageSize
      *
@@ -193,15 +202,17 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set taskList
-     *
-     * @param taskList
-     */
+    * set taskList
+    *
+    * @param taskList
+    */
     public QueryPurgeTaskResult taskList(List<PurgeTaskInfo> taskList) {
         this.taskList = taskList;
         return this;
     }
+
 
 
     /**
@@ -215,5 +226,4 @@ public class QueryPurgeTaskResult extends JdcloudResult implements java.io.Seria
         }
         this.taskList.add(taskList);
     }
-
 }

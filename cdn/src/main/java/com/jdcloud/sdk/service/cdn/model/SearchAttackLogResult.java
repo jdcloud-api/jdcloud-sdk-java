@@ -44,8 +44,8 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
     /**
      * dataList
      */
+    
     private List<AttackLogRecord> dataList;
-
     /**
      * 总记录数
      */
@@ -55,6 +55,7 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
      * 总页数
      */
     private Integer totalPage;
+
 
 
     /**
@@ -75,23 +76,25 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
         this.currentCount = currentCount;
     }
 
+
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<AttackLogRecord> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<AttackLogRecord> dataList) {
         this.dataList = dataList;
     }
+
 
     /**
      * get 总记录数
@@ -110,6 +113,7 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
     public void setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
     }
+
 
     /**
      * get 总页数
@@ -130,6 +134,7 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 记录数
      *
@@ -140,15 +145,17 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public SearchAttackLogResult dataList(List<AttackLogRecord> dataList) {
         this.dataList = dataList;
         return this;
     }
+
 
     /**
      * set 总记录数
@@ -160,6 +167,7 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 总页数
      *
@@ -169,6 +177,7 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
         this.totalPage = totalPage;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class SearchAttackLogResult extends JdcloudResult implements java.io.Seri
         }
         this.dataList.add(dataList);
     }
-
 }

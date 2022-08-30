@@ -53,6 +53,7 @@ public class FlowItem  implements java.io.Serializable {
     private Long pv;
 
 
+
     /**
      * get 时间点，2020-12-08 00:00
      *
@@ -70,6 +71,7 @@ public class FlowItem  implements java.io.Serializable {
     public void setTime(String time) {
         this.time = time;
     }
+
 
     /**
      * get 目录流量(Byte)
@@ -89,6 +91,7 @@ public class FlowItem  implements java.io.Serializable {
         this.flow = flow;
     }
 
+
     /**
      * get 目录
      *
@@ -106,6 +109,7 @@ public class FlowItem  implements java.io.Serializable {
     public void setDir(String dir) {
         this.dir = dir;
     }
+
 
     /**
      * get 目录访问次数
@@ -126,6 +130,7 @@ public class FlowItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 时间点，2020-12-08 00:00
      *
@@ -135,6 +140,7 @@ public class FlowItem  implements java.io.Serializable {
         this.time = time;
         return this;
     }
+
 
     /**
      * set 目录流量(Byte)
@@ -146,6 +152,7 @@ public class FlowItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目录
      *
@@ -155,6 +162,7 @@ public class FlowItem  implements java.io.Serializable {
         this.dir = dir;
         return this;
     }
+
 
     /**
      * set 目录访问次数

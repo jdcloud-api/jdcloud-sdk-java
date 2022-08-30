@@ -54,6 +54,7 @@ public class QueryStatisticsTopUrlResult extends JdcloudResult implements java.i
     /**
      * urlData
      */
+    
     private List<StatisticsTopUrlData> urlData;
 
 
@@ -75,6 +76,7 @@ public class QueryStatisticsTopUrlResult extends JdcloudResult implements java.i
         this.startTime = startTime;
     }
 
+
     /**
      * get endTime
      *
@@ -92,6 +94,7 @@ public class QueryStatisticsTopUrlResult extends JdcloudResult implements java.i
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get domain
@@ -111,23 +114,25 @@ public class QueryStatisticsTopUrlResult extends JdcloudResult implements java.i
         this.domain = domain;
     }
 
+
     /**
-     * get urlData
-     *
-     * @return
-     */
+    * get urlData
+    *
+    * @return
+    */
     public List<StatisticsTopUrlData> getUrlData() {
         return urlData;
     }
 
     /**
-     * set urlData
-     *
-     * @param urlData
-     */
+    * set urlData
+    *
+    * @param urlData
+    */
     public void setUrlData(List<StatisticsTopUrlData> urlData) {
         this.urlData = urlData;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryStatisticsTopUrlResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set endTime
      *
@@ -149,6 +155,7 @@ public class QueryStatisticsTopUrlResult extends JdcloudResult implements java.i
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set domain
@@ -160,15 +167,17 @@ public class QueryStatisticsTopUrlResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set urlData
-     *
-     * @param urlData
-     */
+    * set urlData
+    *
+    * @param urlData
+    */
     public QueryStatisticsTopUrlResult urlData(List<StatisticsTopUrlData> urlData) {
         this.urlData = urlData;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryStatisticsTopUrlResult extends JdcloudResult implements java.i
         }
         this.urlData.add(urlData);
     }
-
 }

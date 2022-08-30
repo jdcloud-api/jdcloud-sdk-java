@@ -47,6 +47,7 @@ public class OperateIpBlackListRequest extends JdcloudRequest implements java.io
     private String domain;
 
 
+
     /**
      * get ip黑名单状态取值[on,off]
      *
@@ -64,6 +65,7 @@ public class OperateIpBlackListRequest extends JdcloudRequest implements java.io
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class OperateIpBlackListRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set ip黑名单状态取值[on,off]
      *
@@ -93,6 +96,7 @@ public class OperateIpBlackListRequest extends JdcloudRequest implements java.io
         this.status = status;
         return this;
     }
+
 
     /**
      * set 用户域名

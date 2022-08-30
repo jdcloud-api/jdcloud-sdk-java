@@ -67,6 +67,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
     private String domain;
 
 
+
     /**
      * get 黑名单类型， uri ip geo
      *
@@ -84,6 +85,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
     public void setRuleType(String ruleType) {
         this.ruleType = ruleType;
     }
+
 
     /**
      * get 匹配模式,uri类型有效，0&#x3D;完全匹配  1&#x3D;前缀匹配 2&#x3D;包含 3&#x3D;正则 4&#x3D;大于 5&#x3D;后缀
@@ -103,6 +105,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
         this.matchOp = matchOp;
     }
 
+
     /**
      * get 匹配值
      *
@@ -120,6 +123,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get 1：forbidden，493封禁并返回自定义页面 2：redirect，302跳转 3： verify@captcha 4： verify@jscookie
@@ -139,6 +143,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
         this.atOp = atOp;
     }
 
+
     /**
      * get action为1时为自定义页面名称,空值或缺省值default为默认页面，2时为跳转url，其他时无效
      *
@@ -156,6 +161,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
     public void setAtVal(String atVal) {
         this.atVal = atVal;
     }
+
 
     /**
      * get 用户域名
@@ -176,6 +182,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 黑名单类型， uri ip geo
      *
@@ -185,6 +192,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
         this.ruleType = ruleType;
         return this;
     }
+
 
     /**
      * set 匹配模式,uri类型有效，0&#x3D;完全匹配  1&#x3D;前缀匹配 2&#x3D;包含 3&#x3D;正则 4&#x3D;大于 5&#x3D;后缀
@@ -196,6 +204,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 匹配值
      *
@@ -205,6 +214,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
         this.val = val;
         return this;
     }
+
 
     /**
      * set 1：forbidden，493封禁并返回自定义页面 2：redirect，302跳转 3： verify@captcha 4： verify@jscookie
@@ -216,6 +226,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set action为1时为自定义页面名称,空值或缺省值default为默认页面，2时为跳转url，其他时无效
      *
@@ -225,6 +236,7 @@ public class CreateWafBlackRuleRequest extends JdcloudRequest implements java.io
         this.atVal = atVal;
         return this;
     }
+
 
     /**
      * set 用户域名

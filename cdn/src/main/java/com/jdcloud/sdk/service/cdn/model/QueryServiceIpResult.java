@@ -39,37 +39,40 @@ public class QueryServiceIpResult extends JdcloudResult implements java.io.Seria
     /**
      * domainSchedResultItemList
      */
+    
     private List<DomainSchedResultItem> domainSchedResultItemList;
 
 
     /**
-     * get domainSchedResultItemList
-     *
-     * @return
-     */
+    * get domainSchedResultItemList
+    *
+    * @return
+    */
     public List<DomainSchedResultItem> getDomainSchedResultItemList() {
         return domainSchedResultItemList;
     }
 
     /**
-     * set domainSchedResultItemList
-     *
-     * @param domainSchedResultItemList
-     */
+    * set domainSchedResultItemList
+    *
+    * @param domainSchedResultItemList
+    */
     public void setDomainSchedResultItemList(List<DomainSchedResultItem> domainSchedResultItemList) {
         this.domainSchedResultItemList = domainSchedResultItemList;
     }
 
 
+
     /**
-     * set domainSchedResultItemList
-     *
-     * @param domainSchedResultItemList
-     */
+    * set domainSchedResultItemList
+    *
+    * @param domainSchedResultItemList
+    */
     public QueryServiceIpResult domainSchedResultItemList(List<DomainSchedResultItem> domainSchedResultItemList) {
         this.domainSchedResultItemList = domainSchedResultItemList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryServiceIpResult extends JdcloudResult implements java.io.Seria
         }
         this.domainSchedResultItemList.add(domainSchedResultItemList);
     }
-
 }

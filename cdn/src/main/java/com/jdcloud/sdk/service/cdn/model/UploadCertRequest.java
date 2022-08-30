@@ -61,6 +61,7 @@ public class UploadCertRequest extends JdcloudRequest implements java.io.Seriali
     private String aliasName;
 
 
+
     /**
      * get 证书名称
      *
@@ -78,6 +79,7 @@ public class UploadCertRequest extends JdcloudRequest implements java.io.Seriali
     public void setCertName(String certName) {
         this.certName = certName;
     }
+
 
     /**
      * get 私钥
@@ -97,6 +99,7 @@ public class UploadCertRequest extends JdcloudRequest implements java.io.Seriali
         this.keyFile = keyFile;
     }
 
+
     /**
      * get 证书
      *
@@ -114,6 +117,7 @@ public class UploadCertRequest extends JdcloudRequest implements java.io.Seriali
     public void setCertFile(String certFile) {
         this.certFile = certFile;
     }
+
 
     /**
      * get 证书别名
@@ -134,6 +138,7 @@ public class UploadCertRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 证书名称
      *
@@ -143,6 +148,7 @@ public class UploadCertRequest extends JdcloudRequest implements java.io.Seriali
         this.certName = certName;
         return this;
     }
+
 
     /**
      * set 私钥
@@ -154,6 +160,7 @@ public class UploadCertRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 证书
      *
@@ -163,6 +170,7 @@ public class UploadCertRequest extends JdcloudRequest implements java.io.Seriali
         this.certFile = certFile;
         return this;
     }
+
 
     /**
      * set 证书别名

@@ -39,6 +39,7 @@ public class SetDomainConfigResult extends JdcloudResult implements java.io.Seri
     private String taskId;
 
 
+
     /**
      * get 任务taskId
      *
@@ -56,6 +57,7 @@ public class SetDomainConfigResult extends JdcloudResult implements java.io.Seri
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
 
     /**

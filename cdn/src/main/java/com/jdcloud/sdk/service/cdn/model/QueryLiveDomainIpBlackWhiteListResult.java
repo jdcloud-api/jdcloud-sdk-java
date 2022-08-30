@@ -43,11 +43,12 @@ public class QueryLiveDomainIpBlackWhiteListResult extends JdcloudResult impleme
     /**
      * blackIps
      */
+    
     private List<String> blackIps;
-
     /**
      * whiteIps
      */
+    
     private List<String> whiteIps;
 
 
@@ -69,41 +70,44 @@ public class QueryLiveDomainIpBlackWhiteListResult extends JdcloudResult impleme
         this.domain = domain;
     }
 
+
     /**
-     * get blackIps
-     *
-     * @return
-     */
+    * get blackIps
+    *
+    * @return
+    */
     public List<String> getBlackIps() {
         return blackIps;
     }
 
     /**
-     * set blackIps
-     *
-     * @param blackIps
-     */
+    * set blackIps
+    *
+    * @param blackIps
+    */
     public void setBlackIps(List<String> blackIps) {
         this.blackIps = blackIps;
     }
 
+
     /**
-     * get whiteIps
-     *
-     * @return
-     */
+    * get whiteIps
+    *
+    * @return
+    */
     public List<String> getWhiteIps() {
         return whiteIps;
     }
 
     /**
-     * set whiteIps
-     *
-     * @param whiteIps
-     */
+    * set whiteIps
+    *
+    * @param whiteIps
+    */
     public void setWhiteIps(List<String> whiteIps) {
         this.whiteIps = whiteIps;
     }
+
 
 
     /**
@@ -116,25 +120,28 @@ public class QueryLiveDomainIpBlackWhiteListResult extends JdcloudResult impleme
         return this;
     }
 
+
     /**
-     * set blackIps
-     *
-     * @param blackIps
-     */
+    * set blackIps
+    *
+    * @param blackIps
+    */
     public QueryLiveDomainIpBlackWhiteListResult blackIps(List<String> blackIps) {
         this.blackIps = blackIps;
         return this;
     }
 
+
     /**
-     * set whiteIps
-     *
-     * @param whiteIps
-     */
+    * set whiteIps
+    *
+    * @param whiteIps
+    */
     public QueryLiveDomainIpBlackWhiteListResult whiteIps(List<String> whiteIps) {
         this.whiteIps = whiteIps;
         return this;
     }
+
 
 
     /**
@@ -160,5 +167,4 @@ public class QueryLiveDomainIpBlackWhiteListResult extends JdcloudResult impleme
         }
         this.whiteIps.add(whiteIp);
     }
-
 }

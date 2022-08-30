@@ -58,6 +58,7 @@ public class OripvTopItem  implements java.io.Serializable {
     private String oripvPercent;
 
 
+
     /**
      * get name
      *
@@ -75,6 +76,7 @@ public class OripvTopItem  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get hitpv
@@ -94,6 +96,7 @@ public class OripvTopItem  implements java.io.Serializable {
         this.hitpv = hitpv;
     }
 
+
     /**
      * get pv
      *
@@ -112,6 +115,7 @@ public class OripvTopItem  implements java.io.Serializable {
         this.pv = pv;
     }
 
+
     /**
      * get oripv
      *
@@ -129,6 +133,7 @@ public class OripvTopItem  implements java.io.Serializable {
     public void setOripv(Long oripv) {
         this.oripv = oripv;
     }
+
 
     /**
      * get oripvPercent
@@ -149,6 +154,7 @@ public class OripvTopItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set name
      *
@@ -158,6 +164,7 @@ public class OripvTopItem  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set hitpv
@@ -169,6 +176,7 @@ public class OripvTopItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pv
      *
@@ -179,6 +187,7 @@ public class OripvTopItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set oripv
      *
@@ -188,6 +197,7 @@ public class OripvTopItem  implements java.io.Serializable {
         this.oripv = oripv;
         return this;
     }
+
 
     /**
      * set oripvPercent

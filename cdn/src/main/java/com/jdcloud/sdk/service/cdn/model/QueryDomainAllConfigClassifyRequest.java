@@ -42,6 +42,7 @@ public class QueryDomainAllConfigClassifyRequest extends JdcloudRequest implemen
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class QueryDomainAllConfigClassifyRequest extends JdcloudRequest implemen
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

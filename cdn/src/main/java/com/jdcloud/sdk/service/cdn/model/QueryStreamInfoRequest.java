@@ -72,6 +72,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
     private String domain;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -89,6 +90,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -108,6 +110,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         this.endTime = endTime;
     }
 
+
     /**
      * get app名
      *
@@ -125,6 +128,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
     public void setAppName(String appName) {
         this.appName = appName;
     }
+
 
     /**
      * get 流名
@@ -144,6 +148,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         this.streamName = streamName;
     }
 
+
     /**
      * get 页码，不传默认1
      *
@@ -162,6 +167,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         this.pageNum = pageNum;
     }
 
+
     /**
      * get 页size,不传默认100,最大值1000
      *
@@ -179,6 +185,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 用户域名
@@ -199,6 +206,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -208,6 +216,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -219,6 +228,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set app名
      *
@@ -228,6 +238,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         this.appName = appName;
         return this;
     }
+
 
     /**
      * set 流名
@@ -239,6 +250,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 页码，不传默认1
      *
@@ -249,6 +261,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 页size,不传默认100,最大值1000
      *
@@ -258,6 +271,7 @@ public class QueryStreamInfoRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 用户域名

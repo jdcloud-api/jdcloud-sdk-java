@@ -42,6 +42,7 @@ public class ErrorEntity  implements java.io.Serializable {
     /**
      * 配置出错的原因
      */
+    
     private List<String> msg;
 
 
@@ -63,23 +64,25 @@ public class ErrorEntity  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get 配置出错的原因
-     *
-     * @return
-     */
+    * get 配置出错的原因
+    *
+    * @return
+    */
     public List<String> getMsg() {
         return msg;
     }
 
     /**
-     * set 配置出错的原因
-     *
-     * @param msg
-     */
+    * set 配置出错的原因
+    *
+    * @param msg
+    */
     public void setMsg(List<String> msg) {
         this.msg = msg;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class ErrorEntity  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 配置出错的原因
-     *
-     * @param msg
-     */
+    * set 配置出错的原因
+    *
+    * @param msg
+    */
     public ErrorEntity msg(List<String> msg) {
         this.msg = msg;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class ErrorEntity  implements java.io.Serializable {
         }
         this.msg.add(msg);
     }
-
 }

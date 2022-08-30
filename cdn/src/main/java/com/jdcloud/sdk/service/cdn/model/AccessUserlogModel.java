@@ -42,6 +42,7 @@ public class AccessUserlogModel  implements java.io.Serializable {
     /**
      * 日志对象
      */
+    
     private List<DomainlogModel> urls;
 
 
@@ -63,23 +64,25 @@ public class AccessUserlogModel  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get 日志对象
-     *
-     * @return
-     */
+    * get 日志对象
+    *
+    * @return
+    */
     public List<DomainlogModel> getUrls() {
         return urls;
     }
 
     /**
-     * set 日志对象
-     *
-     * @param urls
-     */
+    * set 日志对象
+    *
+    * @param urls
+    */
     public void setUrls(List<DomainlogModel> urls) {
         this.urls = urls;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class AccessUserlogModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 日志对象
-     *
-     * @param urls
-     */
+    * set 日志对象
+    *
+    * @param urls
+    */
     public AccessUserlogModel urls(List<DomainlogModel> urls) {
         this.urls = urls;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class AccessUserlogModel  implements java.io.Serializable {
         }
         this.urls.add(url);
     }
-
 }

@@ -39,8 +39,8 @@ public class DisableCCProtectRuleRequest extends JdcloudRequest implements java.
     /**
      * ids
      */
+    
     private List<String> ids;
-
     /**
      * 用户域名
      * Required:true
@@ -49,23 +49,25 @@ public class DisableCCProtectRuleRequest extends JdcloudRequest implements java.
     private String domain;
 
 
+
     /**
-     * get ids
-     *
-     * @return
-     */
+    * get ids
+    *
+    * @return
+    */
     public List<String> getIds() {
         return ids;
     }
 
     /**
-     * set ids
-     *
-     * @param ids
-     */
+    * set ids
+    *
+    * @param ids
+    */
     public void setIds(List<String> ids) {
         this.ids = ids;
     }
+
 
     /**
      * get 用户域名
@@ -86,15 +88,17 @@ public class DisableCCProtectRuleRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
-     * set ids
-     *
-     * @param ids
-     */
+    * set ids
+    *
+    * @param ids
+    */
     public DisableCCProtectRuleRequest ids(List<String> ids) {
         this.ids = ids;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -105,6 +109,7 @@ public class DisableCCProtectRuleRequest extends JdcloudRequest implements java.
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DisableCCProtectRuleRequest extends JdcloudRequest implements java.
         }
         this.ids.add(id);
     }
-
 }

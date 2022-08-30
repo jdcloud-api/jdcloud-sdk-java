@@ -59,6 +59,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
     private String cacheType;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -76,6 +77,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -95,6 +97,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
         this.endTime = endTime;
     }
 
+
     /**
      * get 需要查询的域名, 必须为用户pin下有权限的域名，该接口仅支持单域名查询
      *
@@ -113,6 +116,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
         this.domain = domain;
     }
 
+
     /**
      * get 需要过滤的目录
      *
@@ -130,6 +134,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
     public void setDirs(String dirs) {
         this.dirs = dirs;
     }
+
 
     /**
      * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
@@ -150,6 +155,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -159,6 +165,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -170,6 +177,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 需要查询的域名, 必须为用户pin下有权限的域名，该接口仅支持单域名查询
      *
@@ -180,6 +188,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 需要过滤的目录
      *
@@ -189,6 +198,7 @@ public class QueryDirStatsDataRequest extends JdcloudRequest implements java.io.
         this.dirs = dirs;
         return this;
     }
+
 
     /**
      * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间

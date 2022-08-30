@@ -44,6 +44,7 @@ public class QueryBackSourcePathResult extends JdcloudResult implements java.io.
     /**
      * 配置信息
      */
+    
     private List<ConfigBackSourcePathItems> configs;
 
 
@@ -65,23 +66,25 @@ public class QueryBackSourcePathResult extends JdcloudResult implements java.io.
         this.domain = domain;
     }
 
+
     /**
-     * get 配置信息
-     *
-     * @return
-     */
+    * get 配置信息
+    *
+    * @return
+    */
     public List<ConfigBackSourcePathItems> getConfigs() {
         return configs;
     }
 
     /**
-     * set 配置信息
-     *
-     * @param configs
-     */
+    * set 配置信息
+    *
+    * @param configs
+    */
     public void setConfigs(List<ConfigBackSourcePathItems> configs) {
         this.configs = configs;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryBackSourcePathResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set 配置信息
-     *
-     * @param configs
-     */
+    * set 配置信息
+    *
+    * @param configs
+    */
     public QueryBackSourcePathResult configs(List<ConfigBackSourcePathItems> configs) {
         this.configs = configs;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryBackSourcePathResult extends JdcloudResult implements java.io.
         }
         this.configs.add(config);
     }
-
 }

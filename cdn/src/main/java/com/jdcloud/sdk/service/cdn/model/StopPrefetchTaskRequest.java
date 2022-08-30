@@ -38,8 +38,8 @@ public class StopPrefetchTaskRequest extends JdcloudRequest implements java.io.S
     /**
      * 待停止预热的url
      */
+    
     private List<String> urls;
-
     /**
      * 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
      */
@@ -51,23 +51,25 @@ public class StopPrefetchTaskRequest extends JdcloudRequest implements java.io.S
     private String isp;
 
 
+
     /**
-     * get 待停止预热的url
-     *
-     * @return
-     */
+    * get 待停止预热的url
+    *
+    * @return
+    */
     public List<String> getUrls() {
         return urls;
     }
 
     /**
-     * set 待停止预热的url
-     *
-     * @param urls
-     */
+    * set 待停止预热的url
+    *
+    * @param urls
+    */
     public void setUrls(List<String> urls) {
         this.urls = urls;
     }
+
 
     /**
      * get 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
@@ -86,6 +88,7 @@ public class StopPrefetchTaskRequest extends JdcloudRequest implements java.io.S
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 运营商[ct uni cm]中的一个,分别代表电信 联通 移动
@@ -106,15 +109,17 @@ public class StopPrefetchTaskRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
-     * set 待停止预热的url
-     *
-     * @param urls
-     */
+    * set 待停止预热的url
+    *
+    * @param urls
+    */
     public StopPrefetchTaskRequest urls(List<String> urls) {
         this.urls = urls;
         return this;
     }
+
 
     /**
      * set 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
@@ -126,6 +131,7 @@ public class StopPrefetchTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 运营商[ct uni cm]中的一个,分别代表电信 联通 移动
      *
@@ -135,6 +141,7 @@ public class StopPrefetchTaskRequest extends JdcloudRequest implements java.io.S
         this.isp = isp;
         return this;
     }
+
 
 
     /**
@@ -148,5 +155,4 @@ public class StopPrefetchTaskRequest extends JdcloudRequest implements java.io.S
         }
         this.urls.add(url);
     }
-
 }

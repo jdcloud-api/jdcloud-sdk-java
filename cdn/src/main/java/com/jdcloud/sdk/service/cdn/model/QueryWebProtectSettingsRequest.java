@@ -42,6 +42,7 @@ public class QueryWebProtectSettingsRequest extends JdcloudRequest implements ja
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class QueryWebProtectSettingsRequest extends JdcloudRequest implements ja
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

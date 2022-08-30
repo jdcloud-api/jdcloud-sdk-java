@@ -42,6 +42,7 @@ public class StatisticsTopUrlData  implements java.io.Serializable {
     /**
      * urls
      */
+    
     private List<StatisticsTopUrlItem> urls;
 
 
@@ -63,23 +64,25 @@ public class StatisticsTopUrlData  implements java.io.Serializable {
         this.count = count;
     }
 
+
     /**
-     * get urls
-     *
-     * @return
-     */
+    * get urls
+    *
+    * @return
+    */
     public List<StatisticsTopUrlItem> getUrls() {
         return urls;
     }
 
     /**
-     * set urls
-     *
-     * @param urls
-     */
+    * set urls
+    *
+    * @param urls
+    */
     public void setUrls(List<StatisticsTopUrlItem> urls) {
         this.urls = urls;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class StatisticsTopUrlData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set urls
-     *
-     * @param urls
-     */
+    * set urls
+    *
+    * @param urls
+    */
     public StatisticsTopUrlData urls(List<StatisticsTopUrlItem> urls) {
         this.urls = urls;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class StatisticsTopUrlData  implements java.io.Serializable {
         }
         this.urls.add(url);
     }
-
 }

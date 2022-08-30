@@ -54,6 +54,7 @@ public class GetDomainListResult extends JdcloudResult implements java.io.Serial
     /**
      * domains
      */
+    
     private List<ListDomainItem> domains;
 
 
@@ -75,6 +76,7 @@ public class GetDomainListResult extends JdcloudResult implements java.io.Serial
         this.totalCount = totalCount;
     }
 
+
     /**
      * get pageSize
      *
@@ -92,6 +94,7 @@ public class GetDomainListResult extends JdcloudResult implements java.io.Serial
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get pageNumber
@@ -111,23 +114,25 @@ public class GetDomainListResult extends JdcloudResult implements java.io.Serial
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get domains
-     *
-     * @return
-     */
+    * get domains
+    *
+    * @return
+    */
     public List<ListDomainItem> getDomains() {
         return domains;
     }
 
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public void setDomains(List<ListDomainItem> domains) {
         this.domains = domains;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class GetDomainListResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
      * set pageSize
      *
@@ -149,6 +155,7 @@ public class GetDomainListResult extends JdcloudResult implements java.io.Serial
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set pageNumber
@@ -160,15 +167,17 @@ public class GetDomainListResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public GetDomainListResult domains(List<ListDomainItem> domains) {
         this.domains = domains;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class GetDomainListResult extends JdcloudResult implements java.io.Serial
         }
         this.domains.add(domain);
     }
-
 }

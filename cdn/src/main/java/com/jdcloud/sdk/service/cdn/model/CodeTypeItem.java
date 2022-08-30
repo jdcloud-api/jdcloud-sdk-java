@@ -57,6 +57,7 @@ public class CodeTypeItem  implements java.io.Serializable {
     /**
      * details
      */
+    
     private List<CodeTypeDetailItem> details;
 
 
@@ -78,6 +79,7 @@ public class CodeTypeItem  implements java.io.Serializable {
         this.code = code;
     }
 
+
     /**
      * get count
      *
@@ -95,6 +97,7 @@ public class CodeTypeItem  implements java.io.Serializable {
     public void setCount(Long count) {
         this.count = count;
     }
+
 
     /**
      * get rank
@@ -114,6 +117,7 @@ public class CodeTypeItem  implements java.io.Serializable {
         this.rank = rank;
     }
 
+
     /**
      * get percent
      *
@@ -132,23 +136,25 @@ public class CodeTypeItem  implements java.io.Serializable {
         this.percent = percent;
     }
 
+
     /**
-     * get details
-     *
-     * @return
-     */
+    * get details
+    *
+    * @return
+    */
     public List<CodeTypeDetailItem> getDetails() {
         return details;
     }
 
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public void setDetails(List<CodeTypeDetailItem> details) {
         this.details = details;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class CodeTypeItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set count
      *
@@ -170,6 +177,7 @@ public class CodeTypeItem  implements java.io.Serializable {
         this.count = count;
         return this;
     }
+
 
     /**
      * set rank
@@ -181,6 +189,7 @@ public class CodeTypeItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set percent
      *
@@ -191,15 +200,17 @@ public class CodeTypeItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public CodeTypeItem details(List<CodeTypeDetailItem> details) {
         this.details = details;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class CodeTypeItem  implements java.io.Serializable {
         }
         this.details.add(detail);
     }
-
 }

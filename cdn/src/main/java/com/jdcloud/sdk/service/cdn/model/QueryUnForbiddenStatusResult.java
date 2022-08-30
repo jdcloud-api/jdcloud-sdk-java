@@ -44,6 +44,7 @@ public class QueryUnForbiddenStatusResult extends JdcloudResult implements java.
     /**
      * tasks
      */
+    
     private List<UnForbiddenTaskItem> tasks;
 
 
@@ -65,23 +66,25 @@ public class QueryUnForbiddenStatusResult extends JdcloudResult implements java.
         this.total = total;
     }
 
+
     /**
-     * get tasks
-     *
-     * @return
-     */
+    * get tasks
+    *
+    * @return
+    */
     public List<UnForbiddenTaskItem> getTasks() {
         return tasks;
     }
 
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public void setTasks(List<UnForbiddenTaskItem> tasks) {
         this.tasks = tasks;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryUnForbiddenStatusResult extends JdcloudResult implements java.
         return this;
     }
 
+
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public QueryUnForbiddenStatusResult tasks(List<UnForbiddenTaskItem> tasks) {
         this.tasks = tasks;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryUnForbiddenStatusResult extends JdcloudResult implements java.
         }
         this.tasks.add(task);
     }
-
 }

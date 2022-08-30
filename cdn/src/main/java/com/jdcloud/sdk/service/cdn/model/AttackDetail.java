@@ -78,6 +78,7 @@ public class AttackDetail  implements java.io.Serializable {
     private String action;
 
 
+
     /**
      * get 请求id
      *
@@ -95,6 +96,7 @@ public class AttackDetail  implements java.io.Serializable {
     public void setRequestId(String requestId) {
         this.requestId = requestId;
     }
+
 
     /**
      * get 攻击来源ip
@@ -114,6 +116,7 @@ public class AttackDetail  implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get 攻击来源地域
      *
@@ -131,6 +134,7 @@ public class AttackDetail  implements java.io.Serializable {
     public void setArea(String area) {
         this.area = area;
     }
+
 
     /**
      * get 攻击流量(MB)
@@ -150,6 +154,7 @@ public class AttackDetail  implements java.io.Serializable {
         this.flow = flow;
     }
 
+
     /**
      * get 攻击时间
      *
@@ -167,6 +172,7 @@ public class AttackDetail  implements java.io.Serializable {
     public void setTimeUtc(String timeUtc) {
         this.timeUtc = timeUtc;
     }
+
 
     /**
      * get 攻击方法（post，get等）
@@ -186,6 +192,7 @@ public class AttackDetail  implements java.io.Serializable {
         this.method = method;
     }
 
+
     /**
      * get 攻击url
      *
@@ -204,6 +211,7 @@ public class AttackDetail  implements java.io.Serializable {
         this.url = url;
     }
 
+
     /**
      * get 攻击类型
      *
@@ -221,6 +229,7 @@ public class AttackDetail  implements java.io.Serializable {
     public void setAttackType(String attackType) {
         this.attackType = attackType;
     }
+
 
     /**
      * get 针对该攻击做出的动作
@@ -241,6 +250,7 @@ public class AttackDetail  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 请求id
      *
@@ -250,6 +260,7 @@ public class AttackDetail  implements java.io.Serializable {
         this.requestId = requestId;
         return this;
     }
+
 
     /**
      * set 攻击来源ip
@@ -261,6 +272,7 @@ public class AttackDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击来源地域
      *
@@ -270,6 +282,7 @@ public class AttackDetail  implements java.io.Serializable {
         this.area = area;
         return this;
     }
+
 
     /**
      * set 攻击流量(MB)
@@ -281,6 +294,7 @@ public class AttackDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击时间
      *
@@ -290,6 +304,7 @@ public class AttackDetail  implements java.io.Serializable {
         this.timeUtc = timeUtc;
         return this;
     }
+
 
     /**
      * set 攻击方法（post，get等）
@@ -301,6 +316,7 @@ public class AttackDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击url
      *
@@ -311,6 +327,7 @@ public class AttackDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击类型
      *
@@ -320,6 +337,7 @@ public class AttackDetail  implements java.io.Serializable {
         this.attackType = attackType;
         return this;
     }
+
 
     /**
      * set 针对该攻击做出的动作

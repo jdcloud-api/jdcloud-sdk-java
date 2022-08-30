@@ -38,37 +38,40 @@ public class QueryServiceIpRequest extends JdcloudRequest implements java.io.Ser
     /**
      * domainList
      */
+    
     private List<String> domainList;
 
 
     /**
-     * get domainList
-     *
-     * @return
-     */
+    * get domainList
+    *
+    * @return
+    */
     public List<String> getDomainList() {
         return domainList;
     }
 
     /**
-     * set domainList
-     *
-     * @param domainList
-     */
+    * set domainList
+    *
+    * @param domainList
+    */
     public void setDomainList(List<String> domainList) {
         this.domainList = domainList;
     }
 
 
+
     /**
-     * set domainList
-     *
-     * @param domainList
-     */
+    * set domainList
+    *
+    * @param domainList
+    */
     public QueryServiceIpRequest domainList(List<String> domainList) {
         this.domainList = domainList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class QueryServiceIpRequest extends JdcloudRequest implements java.io.Ser
         }
         this.domainList.add(domainList);
     }
-
 }

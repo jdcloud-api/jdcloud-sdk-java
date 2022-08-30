@@ -39,6 +39,7 @@ public class SetSourceAuthConfigResult extends JdcloudResult implements java.io.
     private String taskId;
 
 
+
     /**
      * get 任务的id
      *
@@ -56,6 +57,7 @@ public class SetSourceAuthConfigResult extends JdcloudResult implements java.io.
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
 
     /**

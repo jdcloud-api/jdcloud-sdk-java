@@ -42,6 +42,7 @@ public class QueryRefreshTaskByIdRequest extends JdcloudRequest implements java.
     private String taskId;
 
 
+
     /**
      * get 域名组id
      *
@@ -59,6 +60,7 @@ public class QueryRefreshTaskByIdRequest extends JdcloudRequest implements java.
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
 
     /**

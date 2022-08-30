@@ -42,6 +42,7 @@ public class DomainsLog  implements java.io.Serializable {
     /**
      * domainLogs
      */
+    
     private List<DomainLog> domainLogs;
 
 
@@ -63,23 +64,25 @@ public class DomainsLog  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get domainLogs
-     *
-     * @return
-     */
+    * get domainLogs
+    *
+    * @return
+    */
     public List<DomainLog> getDomainLogs() {
         return domainLogs;
     }
 
     /**
-     * set domainLogs
-     *
-     * @param domainLogs
-     */
+    * set domainLogs
+    *
+    * @param domainLogs
+    */
     public void setDomainLogs(List<DomainLog> domainLogs) {
         this.domainLogs = domainLogs;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class DomainsLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set domainLogs
-     *
-     * @param domainLogs
-     */
+    * set domainLogs
+    *
+    * @param domainLogs
+    */
     public DomainsLog domainLogs(List<DomainLog> domainLogs) {
         this.domainLogs = domainLogs;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class DomainsLog  implements java.io.Serializable {
         }
         this.domainLogs.add(domainLog);
     }
-
 }

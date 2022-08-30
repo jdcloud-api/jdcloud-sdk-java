@@ -42,6 +42,7 @@ public class QueryDeviceStatusForPCdnRequest extends JdcloudRequest implements j
     private String macAddr;
 
 
+
     /**
      * get 查询dev的mac地址（如DCD87C047117）
      *
@@ -59,6 +60,7 @@ public class QueryDeviceStatusForPCdnRequest extends JdcloudRequest implements j
     public void setMacAddr(String macAddr) {
         this.macAddr = macAddr;
     }
+
 
 
     /**

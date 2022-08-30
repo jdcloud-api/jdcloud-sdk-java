@@ -38,37 +38,40 @@ public class QueryDomainsNotInGroupResult extends JdcloudResult implements java.
     /**
      * domains
      */
+    
     private List<String> domains;
 
 
     /**
-     * get domains
-     *
-     * @return
-     */
+    * get domains
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
 
 
+
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public QueryDomainsNotInGroupResult domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class QueryDomainsNotInGroupResult extends JdcloudResult implements java.
         }
         this.domains.add(domain);
     }
-
 }

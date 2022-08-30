@@ -64,6 +64,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
     private String period;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -81,6 +82,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -100,6 +102,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
         this.endTime = endTime;
     }
 
+
     /**
      * get 需要查询的域名, 必须为用户pin下有权限的域名
      *
@@ -117,6 +120,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 地域
@@ -136,6 +140,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
         this.area = area;
     }
 
+
     /**
      * get 运营商
      *
@@ -153,6 +158,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get 查询周期
@@ -173,6 +179,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -182,6 +189,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -193,6 +201,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 需要查询的域名, 必须为用户pin下有权限的域名
      *
@@ -202,6 +211,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 地域
@@ -213,6 +223,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 运营商
      *
@@ -222,6 +233,7 @@ public class QueryBandWithAreaRequest extends JdcloudRequest implements java.io.
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set 查询周期

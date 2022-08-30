@@ -58,6 +58,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
     private String headerOp;
 
 
+
     /**
      * get edgeType
      *
@@ -75,6 +76,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
     public void setEdgeType(Integer edgeType) {
         this.edgeType = edgeType;
     }
+
 
     /**
      * get headerType
@@ -94,6 +96,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
         this.headerType = headerType;
     }
 
+
     /**
      * get headerName
      *
@@ -112,6 +115,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
         this.headerName = headerName;
     }
 
+
     /**
      * get headerValue
      *
@@ -129,6 +133,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
     public void setHeaderValue(String headerValue) {
         this.headerValue = headerValue;
     }
+
 
     /**
      * get headerOp
@@ -149,6 +154,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set edgeType
      *
@@ -158,6 +164,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
         this.edgeType = edgeType;
         return this;
     }
+
 
     /**
      * set headerType
@@ -169,6 +176,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set headerName
      *
@@ -179,6 +187,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set headerValue
      *
@@ -188,6 +197,7 @@ public class QueryHttpHeaderResp  implements java.io.Serializable {
         this.headerValue = headerValue;
         return this;
     }
+
 
     /**
      * set headerOp

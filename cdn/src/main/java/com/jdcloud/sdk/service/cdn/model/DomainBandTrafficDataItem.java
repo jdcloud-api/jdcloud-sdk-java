@@ -58,6 +58,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
     private Long pv;
 
 
+
     /**
      * get 开始时间戳
      *
@@ -75,6 +76,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
     public void setStartTimeStamp(String startTimeStamp) {
         this.startTimeStamp = startTimeStamp;
     }
+
 
     /**
      * get 开始时间戳
@@ -94,6 +96,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
         this.endTimeStamp = endTimeStamp;
     }
 
+
     /**
      * get 带宽单位Mbps
      *
@@ -112,6 +115,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
     }
 
+
     /**
      * get 流量单位MB
      *
@@ -129,6 +133,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
     public void setFlow(Double flow) {
         this.flow = flow;
     }
+
 
     /**
      * get 请求量
@@ -149,6 +154,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 开始时间戳
      *
@@ -158,6 +164,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
         this.startTimeStamp = startTimeStamp;
         return this;
     }
+
 
     /**
      * set 开始时间戳
@@ -169,6 +176,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 带宽单位Mbps
      *
@@ -179,6 +187,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 流量单位MB
      *
@@ -188,6 +197,7 @@ public class DomainBandTrafficDataItem  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set 请求量

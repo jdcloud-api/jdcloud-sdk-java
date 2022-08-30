@@ -54,19 +54,20 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
     /**
      * domainSource
      */
+    
     private List<DomainSourceInfo> domainSource;
-
     /**
      * ipSource
      */
+    
     private List<IpSourceInfo> ipSource;
-
     /**
      * 用户域名
      * Required:true
      */
     @Required
     private String domain;
+
 
 
     /**
@@ -87,6 +88,7 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
         this.sourceType = sourceType;
     }
 
+
     /**
      * get backSourceType
      *
@@ -104,6 +106,7 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
     public void setBackSourceType(String backSourceType) {
         this.backSourceType = backSourceType;
     }
+
 
     /**
      * get 默认回源host
@@ -123,41 +126,44 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
         this.defaultSourceHost = defaultSourceHost;
     }
 
+
     /**
-     * get domainSource
-     *
-     * @return
-     */
+    * get domainSource
+    *
+    * @return
+    */
     public List<DomainSourceInfo> getDomainSource() {
         return domainSource;
     }
 
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public void setDomainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
     }
 
+
     /**
-     * get ipSource
-     *
-     * @return
-     */
+    * get ipSource
+    *
+    * @return
+    */
     public List<IpSourceInfo> getIpSource() {
         return ipSource;
     }
 
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public void setIpSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
     }
+
 
     /**
      * get 用户域名
@@ -178,6 +184,7 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 回源类型只能为[ips,domain]中的一种
      *
@@ -187,6 +194,7 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
         this.sourceType = sourceType;
         return this;
     }
+
 
     /**
      * set backSourceType
@@ -198,6 +206,7 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 默认回源host
      *
@@ -208,25 +217,28 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public SetLiveDomainBackSourceRequest domainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
         return this;
     }
 
+
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public SetLiveDomainBackSourceRequest ipSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -237,6 +249,7 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -262,5 +275,4 @@ public class SetLiveDomainBackSourceRequest extends JdcloudRequest implements ja
         }
         this.ipSource.add(ipSource);
     }
-
 }

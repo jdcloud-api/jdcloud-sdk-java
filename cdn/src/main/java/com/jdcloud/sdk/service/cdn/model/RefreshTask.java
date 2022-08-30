@@ -77,6 +77,7 @@ public class RefreshTask  implements java.io.Serializable {
     /**
      * 详细的任务
      */
+    
     private List<UrlTask> urlTasks;
 
 
@@ -98,6 +99,7 @@ public class RefreshTask  implements java.io.Serializable {
         this.createDate = createDate;
     }
 
+
     /**
      * get 任务失败率
      *
@@ -115,6 +117,7 @@ public class RefreshTask  implements java.io.Serializable {
     public void setFailed(Float failed) {
         this.failed = failed;
     }
+
 
     /**
      * get 任务成功率
@@ -134,6 +137,7 @@ public class RefreshTask  implements java.io.Serializable {
         this.success = success;
     }
 
+
     /**
      * get 刷新预热的任务id
      *
@@ -151,6 +155,7 @@ public class RefreshTask  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 数据库表id
@@ -170,6 +175,7 @@ public class RefreshTask  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 重试状态(unretry:不重试,retry:重试)
      *
@@ -187,6 +193,7 @@ public class RefreshTask  implements java.io.Serializable {
     public void setRetryStatus(String retryStatus) {
         this.retryStatus = retryStatus;
     }
+
 
     /**
      * get 任务状态(running:执行中,success:成功,failed:失败)
@@ -206,6 +213,7 @@ public class RefreshTask  implements java.io.Serializable {
         this.taskStatus = taskStatus;
     }
 
+
     /**
      * get 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
      *
@@ -224,23 +232,25 @@ public class RefreshTask  implements java.io.Serializable {
         this.taskType = taskType;
     }
 
+
     /**
-     * get 详细的任务
-     *
-     * @return
-     */
+    * get 详细的任务
+    *
+    * @return
+    */
     public List<UrlTask> getUrlTasks() {
         return urlTasks;
     }
 
     /**
-     * set 详细的任务
-     *
-     * @param urlTasks
-     */
+    * set 详细的任务
+    *
+    * @param urlTasks
+    */
     public void setUrlTasks(List<UrlTask> urlTasks) {
         this.urlTasks = urlTasks;
     }
+
 
 
     /**
@@ -253,6 +263,7 @@ public class RefreshTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务失败率
      *
@@ -262,6 +273,7 @@ public class RefreshTask  implements java.io.Serializable {
         this.failed = failed;
         return this;
     }
+
 
     /**
      * set 任务成功率
@@ -273,6 +285,7 @@ public class RefreshTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 刷新预热的任务id
      *
@@ -282,6 +295,7 @@ public class RefreshTask  implements java.io.Serializable {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 数据库表id
@@ -293,6 +307,7 @@ public class RefreshTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 重试状态(unretry:不重试,retry:重试)
      *
@@ -302,6 +317,7 @@ public class RefreshTask  implements java.io.Serializable {
         this.retryStatus = retryStatus;
         return this;
     }
+
 
     /**
      * set 任务状态(running:执行中,success:成功,failed:失败)
@@ -313,6 +329,7 @@ public class RefreshTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
      *
@@ -323,15 +340,17 @@ public class RefreshTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 详细的任务
-     *
-     * @param urlTasks
-     */
+    * set 详细的任务
+    *
+    * @param urlTasks
+    */
     public RefreshTask urlTasks(List<UrlTask> urlTasks) {
         this.urlTasks = urlTasks;
         return this;
     }
+
 
 
     /**
@@ -345,5 +364,4 @@ public class RefreshTask  implements java.io.Serializable {
         }
         this.urlTasks.add(urlTask);
     }
-
 }

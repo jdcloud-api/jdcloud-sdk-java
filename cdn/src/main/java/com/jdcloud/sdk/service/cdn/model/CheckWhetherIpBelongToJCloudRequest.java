@@ -38,37 +38,40 @@ public class CheckWhetherIpBelongToJCloudRequest extends JdcloudRequest implemen
     /**
      * ips
      */
+    
     private List<String> ips;
 
 
     /**
-     * get ips
-     *
-     * @return
-     */
+    * get ips
+    *
+    * @return
+    */
     public List<String> getIps() {
         return ips;
     }
 
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public void setIps(List<String> ips) {
         this.ips = ips;
     }
 
 
+
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public CheckWhetherIpBelongToJCloudRequest ips(List<String> ips) {
         this.ips = ips;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class CheckWhetherIpBelongToJCloudRequest extends JdcloudRequest implemen
         }
         this.ips.add(ip);
     }
-
 }

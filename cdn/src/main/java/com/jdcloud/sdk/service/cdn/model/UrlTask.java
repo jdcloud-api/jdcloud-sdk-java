@@ -48,6 +48,7 @@ public class UrlTask  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
      *
@@ -66,6 +67,7 @@ public class UrlTask  implements java.io.Serializable {
         this.taskType = taskType;
     }
 
+
     /**
      * get 刷新预热的url
      *
@@ -83,6 +85,7 @@ public class UrlTask  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 任务状态(running:执行中,success:成功,failed:失败)
@@ -103,6 +106,7 @@ public class UrlTask  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 刷新预热类型,(url:url刷新,dir:目录刷新,prefetch:预热)
      *
@@ -113,6 +117,7 @@ public class UrlTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 刷新预热的url
      *
@@ -122,6 +127,7 @@ public class UrlTask  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set 任务状态(running:执行中,success:成功,failed:失败)

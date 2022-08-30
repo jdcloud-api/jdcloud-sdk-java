@@ -58,6 +58,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 域名
      *
@@ -75,6 +76,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get url
@@ -94,6 +96,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
         this.url = url;
     }
 
+
     /**
      * get 状态
      *
@@ -112,6 +115,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 状态描述
      *
@@ -129,6 +133,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
     public void setStatusDesc(String statusDesc) {
         this.statusDesc = statusDesc;
     }
+
 
     /**
      * get 创建时间
@@ -149,6 +154,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 域名
      *
@@ -158,6 +164,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set url
@@ -169,6 +176,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态
      *
@@ -179,6 +187,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态描述
      *
@@ -188,6 +197,7 @@ public class UnForbiddenTaskItem  implements java.io.Serializable {
         this.statusDesc = statusDesc;
         return this;
     }
+
 
     /**
      * set 创建时间

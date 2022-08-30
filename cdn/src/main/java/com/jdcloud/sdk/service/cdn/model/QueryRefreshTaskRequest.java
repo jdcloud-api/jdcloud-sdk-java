@@ -84,6 +84,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
     private String subUsers;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -101,6 +102,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -120,6 +122,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.endTime = endTime;
     }
 
+
     /**
      * get url或者目录的模糊查询关键字
      *
@@ -137,6 +140,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
     public void setKeyword(String keyword) {
         this.keyword = keyword;
     }
+
 
     /**
      * get 任务id
@@ -156,6 +160,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.taskId = taskId;
     }
 
+
     /**
      * get null
      *
@@ -173,6 +178,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
     public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
     }
+
 
     /**
      * get null
@@ -192,6 +198,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.taskType = taskType;
     }
 
+
     /**
      * get 分页页数,默认值1
      *
@@ -209,6 +216,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页页面大小,默认值50
@@ -228,6 +236,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 查询的账号范围
      *
@@ -245,6 +254,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
     public void setAccountType(String accountType) {
         this.accountType = accountType;
     }
+
 
     /**
      * get 查询的子账号，多个用逗号隔开
@@ -265,6 +275,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -274,6 +285,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -285,6 +297,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set url或者目录的模糊查询关键字
      *
@@ -294,6 +307,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.keyword = keyword;
         return this;
     }
+
 
     /**
      * set 任务id
@@ -305,6 +319,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set null
      *
@@ -314,6 +329,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.taskStatus = taskStatus;
         return this;
     }
+
 
     /**
      * set null
@@ -325,6 +341,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 分页页数,默认值1
      *
@@ -334,6 +351,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页页面大小,默认值50
@@ -345,6 +363,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 查询的账号范围
      *
@@ -354,6 +373,7 @@ public class QueryRefreshTaskRequest extends JdcloudRequest implements java.io.S
         this.accountType = accountType;
         return this;
     }
+
 
     /**
      * set 查询的子账号，多个用逗号隔开

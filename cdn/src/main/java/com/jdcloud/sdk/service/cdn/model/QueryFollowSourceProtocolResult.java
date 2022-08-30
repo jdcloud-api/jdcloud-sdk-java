@@ -44,6 +44,7 @@ public class QueryFollowSourceProtocolResult extends JdcloudResult implements ja
     private String followProtocolStatus;
 
 
+
     /**
      * get domain
      *
@@ -61,6 +62,7 @@ public class QueryFollowSourceProtocolResult extends JdcloudResult implements ja
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get followProtocolStatus
@@ -81,6 +83,7 @@ public class QueryFollowSourceProtocolResult extends JdcloudResult implements ja
     }
 
 
+
     /**
      * set domain
      *
@@ -90,6 +93,7 @@ public class QueryFollowSourceProtocolResult extends JdcloudResult implements ja
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set followProtocolStatus

@@ -64,6 +64,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
     private String domain;
 
 
+
     /**
      * get url
      *
@@ -81,6 +82,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 查询状态 1:进行中 2:已完成
@@ -100,6 +102,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
         this.status = status;
     }
 
+
     /**
      * get 同url,系统内部url对应id（url和file_id同时存在时以url为准）
      *
@@ -117,6 +120,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
     public void setFileId(String fileId) {
         this.fileId = fileId;
     }
+
 
     /**
      * get 页码数,最小为1
@@ -136,6 +140,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页大小,默认10
      *
@@ -153,6 +158,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 域名
@@ -173,6 +179,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set url
      *
@@ -182,6 +189,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
         this.url = url;
         return this;
     }
+
 
     /**
      * set 查询状态 1:进行中 2:已完成
@@ -193,6 +201,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 同url,系统内部url对应id（url和file_id同时存在时以url为准）
      *
@@ -202,6 +211,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
         this.fileId = fileId;
         return this;
     }
+
 
     /**
      * set 页码数,最小为1
@@ -213,6 +223,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 每页大小,默认10
      *
@@ -222,6 +233,7 @@ public class QueryPurgeTaskRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 域名

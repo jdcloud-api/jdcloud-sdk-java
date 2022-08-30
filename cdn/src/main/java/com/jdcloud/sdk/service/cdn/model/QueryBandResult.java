@@ -39,37 +39,40 @@ public class QueryBandResult extends JdcloudResult implements java.io.Serializab
     /**
      * resultList
      */
+    
     private List<BandTrafficDataItem> resultList;
 
 
     /**
-     * get resultList
-     *
-     * @return
-     */
+    * get resultList
+    *
+    * @return
+    */
     public List<BandTrafficDataItem> getResultList() {
         return resultList;
     }
 
     /**
-     * set resultList
-     *
-     * @param resultList
-     */
+    * set resultList
+    *
+    * @param resultList
+    */
     public void setResultList(List<BandTrafficDataItem> resultList) {
         this.resultList = resultList;
     }
 
 
+
     /**
-     * set resultList
-     *
-     * @param resultList
-     */
+    * set resultList
+    *
+    * @param resultList
+    */
     public QueryBandResult resultList(List<BandTrafficDataItem> resultList) {
         this.resultList = resultList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryBandResult extends JdcloudResult implements java.io.Serializab
         }
         this.resultList.add(resultList);
     }
-
 }

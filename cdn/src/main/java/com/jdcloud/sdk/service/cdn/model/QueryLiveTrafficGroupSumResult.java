@@ -54,6 +54,7 @@ public class QueryLiveTrafficGroupSumResult extends JdcloudResult implements jav
     /**
      * statistics
      */
+    
     private List<StatisticsGroupSumDataItem> statistics;
 
 
@@ -75,6 +76,7 @@ public class QueryLiveTrafficGroupSumResult extends JdcloudResult implements jav
         this.startTime = startTime;
     }
 
+
     /**
      * get endTime
      *
@@ -92,6 +94,7 @@ public class QueryLiveTrafficGroupSumResult extends JdcloudResult implements jav
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get domain
@@ -111,23 +114,25 @@ public class QueryLiveTrafficGroupSumResult extends JdcloudResult implements jav
         this.domain = domain;
     }
 
+
     /**
-     * get statistics
-     *
-     * @return
-     */
+    * get statistics
+    *
+    * @return
+    */
     public List<StatisticsGroupSumDataItem> getStatistics() {
         return statistics;
     }
 
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public void setStatistics(List<StatisticsGroupSumDataItem> statistics) {
         this.statistics = statistics;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryLiveTrafficGroupSumResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set endTime
      *
@@ -149,6 +155,7 @@ public class QueryLiveTrafficGroupSumResult extends JdcloudResult implements jav
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set domain
@@ -160,15 +167,17 @@ public class QueryLiveTrafficGroupSumResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public QueryLiveTrafficGroupSumResult statistics(List<StatisticsGroupSumDataItem> statistics) {
         this.statistics = statistics;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryLiveTrafficGroupSumResult extends JdcloudResult implements jav
         }
         this.statistics.add(statistic);
     }
-
 }

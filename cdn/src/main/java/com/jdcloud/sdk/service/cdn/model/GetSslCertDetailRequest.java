@@ -42,6 +42,7 @@ public class GetSslCertDetailRequest extends JdcloudRequest implements java.io.S
     private String sslCertId;
 
 
+
     /**
      * get 证书 Id
      *
@@ -59,6 +60,7 @@ public class GetSslCertDetailRequest extends JdcloudRequest implements java.io.S
     public void setSslCertId(String sslCertId) {
         this.sslCertId = sslCertId;
     }
+
 
 
     /**

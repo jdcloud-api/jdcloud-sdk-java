@@ -57,6 +57,7 @@ public class QueryCCProtectRulesRequest extends JdcloudRequest implements java.i
     private String domain;
 
 
+
     /**
      * get ruleId, defalut empty
      *
@@ -74,6 +75,7 @@ public class QueryCCProtectRulesRequest extends JdcloudRequest implements java.i
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get page size , default 0 to query all
@@ -93,6 +95,7 @@ public class QueryCCProtectRulesRequest extends JdcloudRequest implements java.i
         this.pageSize = pageSize;
     }
 
+
     /**
      * get page index , default 0 to query all
      *
@@ -110,6 +113,7 @@ public class QueryCCProtectRulesRequest extends JdcloudRequest implements java.i
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 用户域名
@@ -130,6 +134,7 @@ public class QueryCCProtectRulesRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set ruleId, defalut empty
      *
@@ -139,6 +144,7 @@ public class QueryCCProtectRulesRequest extends JdcloudRequest implements java.i
         this.id = id;
         return this;
     }
+
 
     /**
      * set page size , default 0 to query all
@@ -150,6 +156,7 @@ public class QueryCCProtectRulesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set page index , default 0 to query all
      *
@@ -159,6 +166,7 @@ public class QueryCCProtectRulesRequest extends JdcloudRequest implements java.i
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 用户域名

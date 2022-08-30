@@ -59,6 +59,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
     private String domainGroupName;
 
 
+
     /**
      * get 根据是否共享内存筛选
      *
@@ -76,6 +77,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
     public void setShareCache(String shareCache) {
         this.shareCache = shareCache;
     }
+
 
     /**
      * get pageNumber
@@ -95,6 +97,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get pageSize
      *
@@ -113,6 +116,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 根据主域名模糊查询
      *
@@ -130,6 +134,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
     public void setPrimaryDomain(String primaryDomain) {
         this.primaryDomain = primaryDomain;
     }
+
 
     /**
      * get 根据域名组模糊查询
@@ -150,6 +155,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 根据是否共享内存筛选
      *
@@ -159,6 +165,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
         this.shareCache = shareCache;
         return this;
     }
+
 
     /**
      * set pageNumber
@@ -170,6 +177,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set pageSize
      *
@@ -180,6 +188,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 根据主域名模糊查询
      *
@@ -189,6 +198,7 @@ public class QueryDomainGroupListRequest extends JdcloudRequest implements java.
         this.primaryDomain = primaryDomain;
         return this;
     }
+
 
     /**
      * set 根据域名组模糊查询

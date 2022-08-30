@@ -39,37 +39,40 @@ public class QueryAttackTypeCountResult extends JdcloudResult implements java.io
     /**
      * attackTypeCounts
      */
+    
     private List<AttackTypeCount> attackTypeCounts;
 
 
     /**
-     * get attackTypeCounts
-     *
-     * @return
-     */
+    * get attackTypeCounts
+    *
+    * @return
+    */
     public List<AttackTypeCount> getAttackTypeCounts() {
         return attackTypeCounts;
     }
 
     /**
-     * set attackTypeCounts
-     *
-     * @param attackTypeCounts
-     */
+    * set attackTypeCounts
+    *
+    * @param attackTypeCounts
+    */
     public void setAttackTypeCounts(List<AttackTypeCount> attackTypeCounts) {
         this.attackTypeCounts = attackTypeCounts;
     }
 
 
+
     /**
-     * set attackTypeCounts
-     *
-     * @param attackTypeCounts
-     */
+    * set attackTypeCounts
+    *
+    * @param attackTypeCounts
+    */
     public QueryAttackTypeCountResult attackTypeCounts(List<AttackTypeCount> attackTypeCounts) {
         this.attackTypeCounts = attackTypeCounts;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryAttackTypeCountResult extends JdcloudResult implements java.io
         }
         this.attackTypeCounts.add(attackTypeCount);
     }
-
 }

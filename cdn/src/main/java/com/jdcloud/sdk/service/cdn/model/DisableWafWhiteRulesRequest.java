@@ -39,8 +39,8 @@ public class DisableWafWhiteRulesRequest extends JdcloudRequest implements java.
     /**
      * ids
      */
+    
     private List<String> ids;
-
     /**
      * ruleType
      */
@@ -54,23 +54,25 @@ public class DisableWafWhiteRulesRequest extends JdcloudRequest implements java.
     private String domain;
 
 
+
     /**
-     * get ids
-     *
-     * @return
-     */
+    * get ids
+    *
+    * @return
+    */
     public List<String> getIds() {
         return ids;
     }
 
     /**
-     * set ids
-     *
-     * @param ids
-     */
+    * set ids
+    *
+    * @param ids
+    */
     public void setIds(List<String> ids) {
         this.ids = ids;
     }
+
 
     /**
      * get ruleType
@@ -89,6 +91,7 @@ public class DisableWafWhiteRulesRequest extends JdcloudRequest implements java.
     public void setRuleType(String ruleType) {
         this.ruleType = ruleType;
     }
+
 
     /**
      * get 用户域名
@@ -109,15 +112,17 @@ public class DisableWafWhiteRulesRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
-     * set ids
-     *
-     * @param ids
-     */
+    * set ids
+    *
+    * @param ids
+    */
     public DisableWafWhiteRulesRequest ids(List<String> ids) {
         this.ids = ids;
         return this;
     }
+
 
     /**
      * set ruleType
@@ -129,6 +134,7 @@ public class DisableWafWhiteRulesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -138,6 +144,7 @@ public class DisableWafWhiteRulesRequest extends JdcloudRequest implements java.
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -151,5 +158,4 @@ public class DisableWafWhiteRulesRequest extends JdcloudRequest implements java.
         }
         this.ids.add(id);
     }
-
 }

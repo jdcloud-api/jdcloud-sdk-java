@@ -43,6 +43,7 @@ public class ErrorPageConfigs  implements java.io.Serializable {
     private String url;
 
 
+
     /**
      * get 状态码：可选值[403,404,414,429,500,501,502,503,504]
      *
@@ -60,6 +61,7 @@ public class ErrorPageConfigs  implements java.io.Serializable {
     public void setErrorCode(String errorCode) {
         this.errorCode = errorCode;
     }
+
 
     /**
      * get url
@@ -80,6 +82,7 @@ public class ErrorPageConfigs  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 状态码：可选值[403,404,414,429,500,501,502,503,504]
      *
@@ -89,6 +92,7 @@ public class ErrorPageConfigs  implements java.io.Serializable {
         this.errorCode = errorCode;
         return this;
     }
+
 
     /**
      * set url

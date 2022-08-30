@@ -47,6 +47,7 @@ public class SetRangeRequest extends JdcloudRequest implements java.io.Serializa
     private String domain;
 
 
+
     /**
      * get 开关取值[on,off]
      *
@@ -64,6 +65,7 @@ public class SetRangeRequest extends JdcloudRequest implements java.io.Serializa
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class SetRangeRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
+
     /**
      * set 开关取值[on,off]
      *
@@ -93,6 +96,7 @@ public class SetRangeRequest extends JdcloudRequest implements java.io.Serializa
         this.status = status;
         return this;
     }
+
 
     /**
      * set 用户域名

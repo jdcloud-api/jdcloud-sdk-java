@@ -44,6 +44,7 @@ public class QueryExtraCacheTimeResult extends JdcloudResult implements java.io.
     /**
      * extraCacheTimes
      */
+    
     private List<ExtraCacheTime> extraCacheTimes;
 
 
@@ -65,23 +66,25 @@ public class QueryExtraCacheTimeResult extends JdcloudResult implements java.io.
         this.domain = domain;
     }
 
+
     /**
-     * get extraCacheTimes
-     *
-     * @return
-     */
+    * get extraCacheTimes
+    *
+    * @return
+    */
     public List<ExtraCacheTime> getExtraCacheTimes() {
         return extraCacheTimes;
     }
 
     /**
-     * set extraCacheTimes
-     *
-     * @param extraCacheTimes
-     */
+    * set extraCacheTimes
+    *
+    * @param extraCacheTimes
+    */
     public void setExtraCacheTimes(List<ExtraCacheTime> extraCacheTimes) {
         this.extraCacheTimes = extraCacheTimes;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryExtraCacheTimeResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set extraCacheTimes
-     *
-     * @param extraCacheTimes
-     */
+    * set extraCacheTimes
+    *
+    * @param extraCacheTimes
+    */
     public QueryExtraCacheTimeResult extraCacheTimes(List<ExtraCacheTime> extraCacheTimes) {
         this.extraCacheTimes = extraCacheTimes;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryExtraCacheTimeResult extends JdcloudResult implements java.io.
         }
         this.extraCacheTimes.add(extraCacheTime);
     }
-
 }

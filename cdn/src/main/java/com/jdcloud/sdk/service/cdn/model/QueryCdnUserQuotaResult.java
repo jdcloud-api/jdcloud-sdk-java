@@ -114,6 +114,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     private Integer remainUserDomainQuota;
 
 
+
     /**
      * get 总的目录刷新上限
      *
@@ -131,6 +132,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setDirAllCount(Integer dirAllCount) {
         this.dirAllCount = dirAllCount;
     }
+
 
     /**
      * get 已使用的目录刷新个数
@@ -150,6 +152,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.dirUsedCount = dirUsedCount;
     }
 
+
     /**
      * get 剩余可用的目录刷新个数
      *
@@ -167,6 +170,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setDirRemainedCount(Integer dirRemainedCount) {
         this.dirRemainedCount = dirRemainedCount;
     }
+
 
     /**
      * get 剩余可封禁的URL个数
@@ -186,6 +190,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.forbiddenUrlRemainedCount = forbiddenUrlRemainedCount;
     }
 
+
     /**
      * get 已封禁的URL个数
      *
@@ -203,6 +208,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setForbiddenUrlUsedCount(Integer forbiddenUrlUsedCount) {
         this.forbiddenUrlUsedCount = forbiddenUrlUsedCount;
     }
+
 
     /**
      * get 总的封禁URL上限
@@ -222,6 +228,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.forbiddenUrlAllCount = forbiddenUrlAllCount;
     }
 
+
     /**
      * get 已封禁的域名个数，即用户账号下对违法内容封禁的域名
      *
@@ -239,6 +246,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setHasForbiddenDomainCount(Integer hasForbiddenDomainCount) {
         this.hasForbiddenDomainCount = hasForbiddenDomainCount;
     }
+
 
     /**
      * get 剩余可用的预热URL个数
@@ -258,6 +266,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.prefetchRemainedCount = prefetchRemainedCount;
     }
 
+
     /**
      * get 总的预热URL上限
      *
@@ -275,6 +284,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setPrefetchAllCount(Integer prefetchAllCount) {
         this.prefetchAllCount = prefetchAllCount;
     }
+
 
     /**
      * get 已使用的预热URL个数
@@ -294,6 +304,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.prefetchUsedCount = prefetchUsedCount;
     }
 
+
     /**
      * get 总的刷新URL上限
      *
@@ -311,6 +322,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setRefreshAllCount(Integer refreshAllCount) {
         this.refreshAllCount = refreshAllCount;
     }
+
 
     /**
      * get 剩余可用的刷新URL个数
@@ -330,6 +342,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.refreshRemainedCount = refreshRemainedCount;
     }
 
+
     /**
      * get 已使用的刷新URL个数
      *
@@ -347,6 +360,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setRefreshUsedCount(Integer refreshUsedCount) {
         this.refreshUsedCount = refreshUsedCount;
     }
+
 
     /**
      * get 总的用户域名数上限; 即针对账号下可添加域名的总个数
@@ -366,6 +380,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.totalUserDomainQuota = totalUserDomainQuota;
     }
 
+
     /**
      * get 已使用的用户域名个数；即账号下已经添加的域名个数，包括停用域名、封禁域名等
      *
@@ -383,6 +398,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setUsedUserDomainQuota(Integer usedUserDomainQuota) {
         this.usedUserDomainQuota = usedUserDomainQuota;
     }
+
 
     /**
      * get 剩余可配置的用户域名个数
@@ -403,6 +419,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
      * set 总的目录刷新上限
      *
@@ -412,6 +429,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.dirAllCount = dirAllCount;
         return this;
     }
+
 
     /**
      * set 已使用的目录刷新个数
@@ -423,6 +441,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 剩余可用的目录刷新个数
      *
@@ -432,6 +451,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.dirRemainedCount = dirRemainedCount;
         return this;
     }
+
 
     /**
      * set 剩余可封禁的URL个数
@@ -443,6 +463,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 已封禁的URL个数
      *
@@ -452,6 +473,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.forbiddenUrlUsedCount = forbiddenUrlUsedCount;
         return this;
     }
+
 
     /**
      * set 总的封禁URL上限
@@ -463,6 +485,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 已封禁的域名个数，即用户账号下对违法内容封禁的域名
      *
@@ -472,6 +495,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.hasForbiddenDomainCount = hasForbiddenDomainCount;
         return this;
     }
+
 
     /**
      * set 剩余可用的预热URL个数
@@ -483,6 +507,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 总的预热URL上限
      *
@@ -492,6 +517,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.prefetchAllCount = prefetchAllCount;
         return this;
     }
+
 
     /**
      * set 已使用的预热URL个数
@@ -503,6 +529,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 总的刷新URL上限
      *
@@ -512,6 +539,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.refreshAllCount = refreshAllCount;
         return this;
     }
+
 
     /**
      * set 剩余可用的刷新URL个数
@@ -523,6 +551,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 已使用的刷新URL个数
      *
@@ -532,6 +561,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.refreshUsedCount = refreshUsedCount;
         return this;
     }
+
 
     /**
      * set 总的用户域名数上限; 即针对账号下可添加域名的总个数
@@ -543,6 +573,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 已使用的用户域名个数；即账号下已经添加的域名个数，包括停用域名、封禁域名等
      *
@@ -552,6 +583,7 @@ public class QueryCdnUserQuotaResult extends JdcloudResult implements java.io.Se
         this.usedUserDomainQuota = usedUserDomainQuota;
         return this;
     }
+
 
     /**
      * set 剩余可配置的用户域名个数

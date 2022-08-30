@@ -39,37 +39,40 @@ public class QueryRefreshTaskByIdsResult extends JdcloudResult implements java.i
     /**
      * tasks
      */
+    
     private List<RefreshTask> tasks;
 
 
     /**
-     * get tasks
-     *
-     * @return
-     */
+    * get tasks
+    *
+    * @return
+    */
     public List<RefreshTask> getTasks() {
         return tasks;
     }
 
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public void setTasks(List<RefreshTask> tasks) {
         this.tasks = tasks;
     }
 
 
+
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public QueryRefreshTaskByIdsResult tasks(List<RefreshTask> tasks) {
         this.tasks = tasks;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryRefreshTaskByIdsResult extends JdcloudResult implements java.i
         }
         this.tasks.add(task);
     }
-
 }

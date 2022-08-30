@@ -44,6 +44,7 @@ public class QueryRefreshTaskResult extends JdcloudResult implements java.io.Ser
     /**
      * tasks
      */
+    
     private List<RefreshTask> tasks;
 
 
@@ -65,23 +66,25 @@ public class QueryRefreshTaskResult extends JdcloudResult implements java.io.Ser
         this.total = total;
     }
 
+
     /**
-     * get tasks
-     *
-     * @return
-     */
+    * get tasks
+    *
+    * @return
+    */
     public List<RefreshTask> getTasks() {
         return tasks;
     }
 
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public void setTasks(List<RefreshTask> tasks) {
         this.tasks = tasks;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryRefreshTaskResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public QueryRefreshTaskResult tasks(List<RefreshTask> tasks) {
         this.tasks = tasks;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryRefreshTaskResult extends JdcloudResult implements java.io.Ser
         }
         this.tasks.add(task);
     }
-
 }

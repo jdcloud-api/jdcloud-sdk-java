@@ -47,13 +47,13 @@ public class SetSourceBody  implements java.io.Serializable {
     /**
      * ipSource
      */
+    
     private List<IpSourceInfo> ipSource;
-
     /**
      * domainSource
      */
+    
     private List<DomainSourceInfo> domainSource;
-
     /**
      * ossSource
      */
@@ -63,6 +63,7 @@ public class SetSourceBody  implements java.io.Serializable {
      * defaultSourceHost
      */
     private String defaultSourceHost;
+
 
 
     /**
@@ -83,6 +84,7 @@ public class SetSourceBody  implements java.io.Serializable {
         this.sourceType = sourceType;
     }
 
+
     /**
      * get 回源类型，目前只能为rtmp
      *
@@ -101,41 +103,44 @@ public class SetSourceBody  implements java.io.Serializable {
         this.backSourceType = backSourceType;
     }
 
+
     /**
-     * get ipSource
-     *
-     * @return
-     */
+    * get ipSource
+    *
+    * @return
+    */
     public List<IpSourceInfo> getIpSource() {
         return ipSource;
     }
 
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public void setIpSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
     }
 
+
     /**
-     * get domainSource
-     *
-     * @return
-     */
+    * get domainSource
+    *
+    * @return
+    */
     public List<DomainSourceInfo> getDomainSource() {
         return domainSource;
     }
 
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public void setDomainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
     }
+
 
     /**
      * get ossSource
@@ -154,6 +159,7 @@ public class SetSourceBody  implements java.io.Serializable {
     public void setOssSource(String ossSource) {
         this.ossSource = ossSource;
     }
+
 
     /**
      * get defaultSourceHost
@@ -174,6 +180,7 @@ public class SetSourceBody  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 回源类型只能是[ips,domain,oss]中的一种
      *
@@ -183,6 +190,7 @@ public class SetSourceBody  implements java.io.Serializable {
         this.sourceType = sourceType;
         return this;
     }
+
 
     /**
      * set 回源类型，目前只能为rtmp
@@ -194,25 +202,28 @@ public class SetSourceBody  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public SetSourceBody ipSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
         return this;
     }
 
+
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public SetSourceBody domainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
         return this;
     }
+
 
     /**
      * set ossSource
@@ -224,6 +235,7 @@ public class SetSourceBody  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set defaultSourceHost
      *
@@ -233,6 +245,7 @@ public class SetSourceBody  implements java.io.Serializable {
         this.defaultSourceHost = defaultSourceHost;
         return this;
     }
+
 
 
     /**
@@ -258,5 +271,4 @@ public class SetSourceBody  implements java.io.Serializable {
         }
         this.domainSource.add(domainSource);
     }
-
 }

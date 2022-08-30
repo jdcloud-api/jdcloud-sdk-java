@@ -39,70 +39,75 @@ public class QueryWafRegionsResult extends JdcloudResult implements java.io.Seri
     /**
      * china
      */
+    
     private List<WafRegionsModel> china;
-
     /**
      * foreign
      */
+    
     private List<WafRegionsModel> foreign;
 
 
     /**
-     * get china
-     *
-     * @return
-     */
+    * get china
+    *
+    * @return
+    */
     public List<WafRegionsModel> getChina() {
         return china;
     }
 
     /**
-     * set china
-     *
-     * @param china
-     */
+    * set china
+    *
+    * @param china
+    */
     public void setChina(List<WafRegionsModel> china) {
         this.china = china;
     }
 
+
     /**
-     * get foreign
-     *
-     * @return
-     */
+    * get foreign
+    *
+    * @return
+    */
     public List<WafRegionsModel> getForeign() {
         return foreign;
     }
 
     /**
-     * set foreign
-     *
-     * @param foreign
-     */
+    * set foreign
+    *
+    * @param foreign
+    */
     public void setForeign(List<WafRegionsModel> foreign) {
         this.foreign = foreign;
     }
 
 
+
     /**
-     * set china
-     *
-     * @param china
-     */
+    * set china
+    *
+    * @param china
+    */
     public QueryWafRegionsResult china(List<WafRegionsModel> china) {
         this.china = china;
         return this;
     }
 
+
     /**
-     * set foreign
-     *
-     * @param foreign
-     */
+    * set foreign
+    *
+    * @param foreign
+    */
     public QueryWafRegionsResult foreign(List<WafRegionsModel> foreign) {
         this.foreign = foreign;
         return this;
     }
+
 
 
     /**
@@ -128,5 +133,4 @@ public class QueryWafRegionsResult extends JdcloudResult implements java.io.Seri
         }
         this.foreign.add(foreign);
     }
-
 }

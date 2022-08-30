@@ -39,37 +39,40 @@ public class QueryServiceNoticeResult extends JdcloudResult implements java.io.S
     /**
      * notices
      */
+    
     private List<ServiceNoticeItem> notices;
 
 
     /**
-     * get notices
-     *
-     * @return
-     */
+    * get notices
+    *
+    * @return
+    */
     public List<ServiceNoticeItem> getNotices() {
         return notices;
     }
 
     /**
-     * set notices
-     *
-     * @param notices
-     */
+    * set notices
+    *
+    * @param notices
+    */
     public void setNotices(List<ServiceNoticeItem> notices) {
         this.notices = notices;
     }
 
 
+
     /**
-     * set notices
-     *
-     * @param notices
-     */
+    * set notices
+    *
+    * @param notices
+    */
     public QueryServiceNoticeResult notices(List<ServiceNoticeItem> notices) {
         this.notices = notices;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryServiceNoticeResult extends JdcloudResult implements java.io.S
         }
         this.notices.add(notice);
     }
-
 }

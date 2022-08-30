@@ -47,6 +47,7 @@ public class StatisticsWithAreaGroupDetail  implements java.io.Serializable {
     /**
      * null
      */
+    
     private List<StatisticsWithAreaGroupDetailItem> data;
 
 
@@ -68,6 +69,7 @@ public class StatisticsWithAreaGroupDetail  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -86,23 +88,25 @@ public class StatisticsWithAreaGroupDetail  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
-     * get null
-     *
-     * @return
-     */
+    * get null
+    *
+    * @return
+    */
     public List<StatisticsWithAreaGroupDetailItem> getData() {
         return data;
     }
 
     /**
-     * set null
-     *
-     * @param data
-     */
+    * set null
+    *
+    * @param data
+    */
     public void setData(List<StatisticsWithAreaGroupDetailItem> data) {
         this.data = data;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class StatisticsWithAreaGroupDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -125,15 +130,17 @@ public class StatisticsWithAreaGroupDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set null
-     *
-     * @param data
-     */
+    * set null
+    *
+    * @param data
+    */
     public StatisticsWithAreaGroupDetail data(List<StatisticsWithAreaGroupDetailItem> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class StatisticsWithAreaGroupDetail  implements java.io.Serializable {
         }
         this.data.add(data);
     }
-
 }

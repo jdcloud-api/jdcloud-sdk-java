@@ -39,37 +39,40 @@ public class QueryDomainAllConfigClassifyResult extends JdcloudResult implements
     /**
      * configItems
      */
+    
     private List<ConfigItem> configItems;
 
 
     /**
-     * get configItems
-     *
-     * @return
-     */
+    * get configItems
+    *
+    * @return
+    */
     public List<ConfigItem> getConfigItems() {
         return configItems;
     }
 
     /**
-     * set configItems
-     *
-     * @param configItems
-     */
+    * set configItems
+    *
+    * @param configItems
+    */
     public void setConfigItems(List<ConfigItem> configItems) {
         this.configItems = configItems;
     }
 
 
+
     /**
-     * set configItems
-     *
-     * @param configItems
-     */
+    * set configItems
+    *
+    * @param configItems
+    */
     public QueryDomainAllConfigClassifyResult configItems(List<ConfigItem> configItems) {
         this.configItems = configItems;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryDomainAllConfigClassifyResult extends JdcloudResult implements
         }
         this.configItems.add(configItem);
     }
-
 }

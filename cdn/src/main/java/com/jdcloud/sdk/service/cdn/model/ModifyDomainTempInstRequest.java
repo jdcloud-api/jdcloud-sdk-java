@@ -54,6 +54,7 @@ public class ModifyDomainTempInstRequest extends JdcloudRequest implements java.
     private Object instProInfoMap;
 
 
+
     /**
      * get 模板id，预留字段
      *
@@ -71,6 +72,7 @@ public class ModifyDomainTempInstRequest extends JdcloudRequest implements java.
     public void setTempId(Long tempId) {
         this.tempId = tempId;
     }
+
 
     /**
      * get 模板实例id，修改时必传
@@ -90,6 +92,7 @@ public class ModifyDomainTempInstRequest extends JdcloudRequest implements java.
         this.instId = instId;
     }
 
+
     /**
      * get 模板实例名称
      *
@@ -107,6 +110,7 @@ public class ModifyDomainTempInstRequest extends JdcloudRequest implements java.
     public void setInstName(String instName) {
         this.instName = instName;
     }
+
 
     /**
      * get 查询结果,类型为Map&lt;String,Map&lt;String,Object&gt;&gt;
@@ -127,6 +131,7 @@ public class ModifyDomainTempInstRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 模板id，预留字段
      *
@@ -136,6 +141,7 @@ public class ModifyDomainTempInstRequest extends JdcloudRequest implements java.
         this.tempId = tempId;
         return this;
     }
+
 
     /**
      * set 模板实例id，修改时必传
@@ -147,6 +153,7 @@ public class ModifyDomainTempInstRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 模板实例名称
      *
@@ -156,6 +163,7 @@ public class ModifyDomainTempInstRequest extends JdcloudRequest implements java.
         this.instName = instName;
         return this;
     }
+
 
     /**
      * set 查询结果,类型为Map&lt;String,Map&lt;String,Object&gt;&gt;

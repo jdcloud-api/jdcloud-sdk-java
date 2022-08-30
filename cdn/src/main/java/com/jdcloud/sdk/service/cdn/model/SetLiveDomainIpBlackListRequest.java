@@ -39,8 +39,8 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
     /**
      * ip名单,ips中url不能超过50条
      */
+    
     private List<String> ips;
-
     /**
      * ip黑白名单类型，black:黑名单,white:白名单
      */
@@ -54,23 +54,25 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
     private String domain;
 
 
+
     /**
-     * get ip名单,ips中url不能超过50条
-     *
-     * @return
-     */
+    * get ip名单,ips中url不能超过50条
+    *
+    * @return
+    */
     public List<String> getIps() {
         return ips;
     }
 
     /**
-     * set ip名单,ips中url不能超过50条
-     *
-     * @param ips
-     */
+    * set ip名单,ips中url不能超过50条
+    *
+    * @param ips
+    */
     public void setIps(List<String> ips) {
         this.ips = ips;
     }
+
 
     /**
      * get ip黑白名单类型，black:黑名单,white:白名单
@@ -89,6 +91,7 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
     public void setIpListType(String ipListType) {
         this.ipListType = ipListType;
     }
+
 
     /**
      * get 用户域名
@@ -109,15 +112,17 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
-     * set ip名单,ips中url不能超过50条
-     *
-     * @param ips
-     */
+    * set ip名单,ips中url不能超过50条
+    *
+    * @param ips
+    */
     public SetLiveDomainIpBlackListRequest ips(List<String> ips) {
         this.ips = ips;
         return this;
     }
+
 
     /**
      * set ip黑白名单类型，black:黑名单,white:白名单
@@ -129,6 +134,7 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -138,6 +144,7 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -151,5 +158,4 @@ public class SetLiveDomainIpBlackListRequest extends JdcloudRequest implements j
         }
         this.ips.add(ip);
     }
-
 }

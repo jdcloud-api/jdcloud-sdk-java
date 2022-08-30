@@ -44,8 +44,8 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
     /**
      * 逗号隔开的域名列表，如果referList传空则为删除
      */
+    
     private List<String> referList;
-
     /**
      * 是否允许空refer访问，默认为“on”
      */
@@ -62,6 +62,7 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
      */
     @Required
     private String domain;
+
 
 
     /**
@@ -82,23 +83,25 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
         this.referType = referType;
     }
 
+
     /**
-     * get 逗号隔开的域名列表，如果referList传空则为删除
-     *
-     * @return
-     */
+    * get 逗号隔开的域名列表，如果referList传空则为删除
+    *
+    * @return
+    */
     public List<String> getReferList() {
         return referList;
     }
 
     /**
-     * set 逗号隔开的域名列表，如果referList传空则为删除
-     *
-     * @param referList
-     */
+    * set 逗号隔开的域名列表，如果referList传空则为删除
+    *
+    * @param referList
+    */
     public void setReferList(List<String> referList) {
         this.referList = referList;
     }
+
 
     /**
      * get 是否允许空refer访问，默认为“on”
@@ -118,6 +121,7 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
         this.allowNoReferHeader = allowNoReferHeader;
     }
 
+
     /**
      * get 是否允许无ua访问，默认为“on”
      *
@@ -135,6 +139,7 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
     public void setAllowNullReferHeader(String allowNullReferHeader) {
         this.allowNullReferHeader = allowNullReferHeader;
     }
+
 
     /**
      * get 用户域名
@@ -155,6 +160,7 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set refer类型，取值：block（黑名单），allow（白名单）默认为block
      *
@@ -165,15 +171,17 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set 逗号隔开的域名列表，如果referList传空则为删除
-     *
-     * @param referList
-     */
+    * set 逗号隔开的域名列表，如果referList传空则为删除
+    *
+    * @param referList
+    */
     public SetLiveDomainReferRequest referList(List<String> referList) {
         this.referList = referList;
         return this;
     }
+
 
     /**
      * set 是否允许空refer访问，默认为“on”
@@ -185,6 +193,7 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 是否允许无ua访问，默认为“on”
      *
@@ -195,6 +204,7 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -204,6 +214,7 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -217,5 +228,4 @@ public class SetLiveDomainReferRequest extends JdcloudRequest implements java.io
         }
         this.referList.add(referList);
     }
-
 }

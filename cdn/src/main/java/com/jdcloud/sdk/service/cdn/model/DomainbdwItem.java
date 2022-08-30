@@ -63,6 +63,7 @@ public class DomainbdwItem  implements java.io.Serializable {
     private Double avgbandwidth;
 
 
+
     /**
      * get domain
      *
@@ -80,6 +81,7 @@ public class DomainbdwItem  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get domainType
@@ -99,6 +101,7 @@ public class DomainbdwItem  implements java.io.Serializable {
         this.domainType = domainType;
     }
 
+
     /**
      * get topTimeStamp
      *
@@ -116,6 +119,7 @@ public class DomainbdwItem  implements java.io.Serializable {
     public void setTopTimeStamp(Long topTimeStamp) {
         this.topTimeStamp = topTimeStamp;
     }
+
 
     /**
      * get pv
@@ -135,6 +139,7 @@ public class DomainbdwItem  implements java.io.Serializable {
         this.pv = pv;
     }
 
+
     /**
      * get flow
      *
@@ -152,6 +157,7 @@ public class DomainbdwItem  implements java.io.Serializable {
     public void setFlow(Double flow) {
         this.flow = flow;
     }
+
 
     /**
      * get avgbandwidth
@@ -172,6 +178,7 @@ public class DomainbdwItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set domain
      *
@@ -181,6 +188,7 @@ public class DomainbdwItem  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set domainType
@@ -192,6 +200,7 @@ public class DomainbdwItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set topTimeStamp
      *
@@ -201,6 +210,7 @@ public class DomainbdwItem  implements java.io.Serializable {
         this.topTimeStamp = topTimeStamp;
         return this;
     }
+
 
     /**
      * set pv
@@ -212,6 +222,7 @@ public class DomainbdwItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -221,6 +232,7 @@ public class DomainbdwItem  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set avgbandwidth

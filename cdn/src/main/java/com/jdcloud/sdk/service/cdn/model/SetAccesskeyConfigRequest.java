@@ -57,6 +57,7 @@ public class SetAccesskeyConfigRequest extends JdcloudRequest implements java.io
     private String domain;
 
 
+
     /**
      * get 鉴权类型，0表示无鉴权，1表示参数鉴权，2表示路径鉴权
      *
@@ -74,6 +75,7 @@ public class SetAccesskeyConfigRequest extends JdcloudRequest implements java.io
     public void setAccesskeyType(Integer accesskeyType) {
         this.accesskeyType = accesskeyType;
     }
+
 
     /**
      * get 密码，长度为8到32
@@ -93,6 +95,7 @@ public class SetAccesskeyConfigRequest extends JdcloudRequest implements java.io
         this.accesskeyKey = accesskeyKey;
     }
 
+
     /**
      * get 是否是回源鉴权 0表示是 1表示否
      *
@@ -110,6 +113,7 @@ public class SetAccesskeyConfigRequest extends JdcloudRequest implements java.io
     public void setAccesskeyKeep(Integer accesskeyKeep) {
         this.accesskeyKeep = accesskeyKeep;
     }
+
 
     /**
      * get 用户域名
@@ -130,6 +134,7 @@ public class SetAccesskeyConfigRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 鉴权类型，0表示无鉴权，1表示参数鉴权，2表示路径鉴权
      *
@@ -139,6 +144,7 @@ public class SetAccesskeyConfigRequest extends JdcloudRequest implements java.io
         this.accesskeyType = accesskeyType;
         return this;
     }
+
 
     /**
      * set 密码，长度为8到32
@@ -150,6 +156,7 @@ public class SetAccesskeyConfigRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 是否是回源鉴权 0表示是 1表示否
      *
@@ -159,6 +166,7 @@ public class SetAccesskeyConfigRequest extends JdcloudRequest implements java.io
         this.accesskeyKeep = accesskeyKeep;
         return this;
     }
+
 
     /**
      * set 用户域名

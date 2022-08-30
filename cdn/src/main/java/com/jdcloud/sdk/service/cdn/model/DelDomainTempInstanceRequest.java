@@ -42,6 +42,7 @@ public class DelDomainTempInstanceRequest extends JdcloudRequest implements java
     private Long instId;
 
 
+
     /**
      * get 模板实例id
      *
@@ -59,6 +60,7 @@ public class DelDomainTempInstanceRequest extends JdcloudRequest implements java
     public void setInstId(Long instId) {
         this.instId = instId;
     }
+
 
 
     /**

@@ -63,6 +63,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
     private Long playerCount;
 
 
+
     /**
      * get 流起始时间
      *
@@ -80,6 +81,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get app名
@@ -99,6 +101,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
         this.appName = appName;
     }
 
+
     /**
      * get 流名
      *
@@ -116,6 +119,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
     public void setStreamName(String streamName) {
         this.streamName = streamName;
     }
+
 
     /**
      * get 上行码率
@@ -135,6 +139,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
         this.avgupSpeed = avgupSpeed;
     }
 
+
     /**
      * get 上行帧率
      *
@@ -152,6 +157,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
     public void setAvgupframerate(Double avgupframerate) {
         this.avgupframerate = avgupframerate;
     }
+
 
     /**
      * get 观看人数
@@ -172,6 +178,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 流起始时间
      *
@@ -181,6 +188,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set app名
@@ -192,6 +200,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 流名
      *
@@ -201,6 +210,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
         this.streamName = streamName;
         return this;
     }
+
 
     /**
      * set 上行码率
@@ -212,6 +222,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 上行帧率
      *
@@ -221,6 +232,7 @@ public class StatisticsLiveStreamInfo  implements java.io.Serializable {
         this.avgupframerate = avgupframerate;
         return this;
     }
+
 
     /**
      * set 观看人数

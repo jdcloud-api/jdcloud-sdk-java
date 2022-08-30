@@ -38,8 +38,8 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
     /**
      * 子账号，只有传值才会设置子账号，其余不传或传空是设置主账号
      */
+    
     private List<String> subUsers;
-
     /**
      * 刷新个数，如果是首次设置，不传默认是2000；已经设置，再次设置是更新，不传表示不进行更新
      */
@@ -56,23 +56,25 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
     private Long dirCount;
 
 
+
     /**
-     * get 子账号，只有传值才会设置子账号，其余不传或传空是设置主账号
-     *
-     * @return
-     */
+    * get 子账号，只有传值才会设置子账号，其余不传或传空是设置主账号
+    *
+    * @return
+    */
     public List<String> getSubUsers() {
         return subUsers;
     }
 
     /**
-     * set 子账号，只有传值才会设置子账号，其余不传或传空是设置主账号
-     *
-     * @param subUsers
-     */
+    * set 子账号，只有传值才会设置子账号，其余不传或传空是设置主账号
+    *
+    * @param subUsers
+    */
     public void setSubUsers(List<String> subUsers) {
         this.subUsers = subUsers;
     }
+
 
     /**
      * get 刷新个数，如果是首次设置，不传默认是2000；已经设置，再次设置是更新，不传表示不进行更新
@@ -92,6 +94,7 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
         this.refreshCount = refreshCount;
     }
 
+
     /**
      * get 刷新个数，如果是首次设置，不传默认是2000；已经设置，再次设置是更新，不传表示不进行更新
      *
@@ -109,6 +112,7 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
     public void setPrefetchCount(Long prefetchCount) {
         this.prefetchCount = prefetchCount;
     }
+
 
     /**
      * get 刷新个数，如果是首次设置，不传默认是50；已经设置，再次设置是更新，不传表示不进行更新
@@ -129,15 +133,17 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
-     * set 子账号，只有传值才会设置子账号，其余不传或传空是设置主账号
-     *
-     * @param subUsers
-     */
+    * set 子账号，只有传值才会设置子账号，其余不传或传空是设置主账号
+    *
+    * @param subUsers
+    */
     public SetRefreshLimitRequest subUsers(List<String> subUsers) {
         this.subUsers = subUsers;
         return this;
     }
+
 
     /**
      * set 刷新个数，如果是首次设置，不传默认是2000；已经设置，再次设置是更新，不传表示不进行更新
@@ -149,6 +155,7 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 刷新个数，如果是首次设置，不传默认是2000；已经设置，再次设置是更新，不传表示不进行更新
      *
@@ -159,6 +166,7 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 刷新个数，如果是首次设置，不传默认是50；已经设置，再次设置是更新，不传表示不进行更新
      *
@@ -168,6 +176,7 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
         this.dirCount = dirCount;
         return this;
     }
+
 
 
     /**
@@ -181,5 +190,4 @@ public class SetRefreshLimitRequest extends JdcloudRequest implements java.io.Se
         }
         this.subUsers.add(subUser);
     }
-
 }

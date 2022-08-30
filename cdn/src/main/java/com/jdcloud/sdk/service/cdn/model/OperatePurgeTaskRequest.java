@@ -38,31 +38,33 @@ public class OperatePurgeTaskRequest extends JdcloudRequest implements java.io.S
     /**
      * 待刷新的url
      */
+    
     private List<String> urls;
-
     /**
      * 操作类型:add代表创建刷新任务,stop代表停止刷新任务
      */
     private String optType;
 
 
+
     /**
-     * get 待刷新的url
-     *
-     * @return
-     */
+    * get 待刷新的url
+    *
+    * @return
+    */
     public List<String> getUrls() {
         return urls;
     }
 
     /**
-     * set 待刷新的url
-     *
-     * @param urls
-     */
+    * set 待刷新的url
+    *
+    * @param urls
+    */
     public void setUrls(List<String> urls) {
         this.urls = urls;
     }
+
 
     /**
      * get 操作类型:add代表创建刷新任务,stop代表停止刷新任务
@@ -83,15 +85,17 @@ public class OperatePurgeTaskRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
-     * set 待刷新的url
-     *
-     * @param urls
-     */
+    * set 待刷新的url
+    *
+    * @param urls
+    */
     public OperatePurgeTaskRequest urls(List<String> urls) {
         this.urls = urls;
         return this;
     }
+
 
     /**
      * set 操作类型:add代表创建刷新任务,stop代表停止刷新任务
@@ -102,6 +106,7 @@ public class OperatePurgeTaskRequest extends JdcloudRequest implements java.io.S
         this.optType = optType;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class OperatePurgeTaskRequest extends JdcloudRequest implements java.io.S
         }
         this.urls.add(url);
     }
-
 }

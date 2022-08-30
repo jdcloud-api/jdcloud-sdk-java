@@ -39,6 +39,7 @@ public class SetHttpTypeResult extends JdcloudResult implements java.io.Serializ
     private String taskId;
 
 
+
     /**
      * get 任务taskId
      *
@@ -56,6 +57,7 @@ public class SetHttpTypeResult extends JdcloudResult implements java.io.Serializ
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
 
     /**

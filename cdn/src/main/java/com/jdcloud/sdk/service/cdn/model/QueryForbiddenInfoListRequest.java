@@ -54,6 +54,7 @@ public class QueryForbiddenInfoListRequest extends JdcloudRequest implements jav
     private Integer pageSize;
 
 
+
     /**
      * get 封禁域名,模糊查询
      *
@@ -71,6 +72,7 @@ public class QueryForbiddenInfoListRequest extends JdcloudRequest implements jav
     public void setQueryDomain(String queryDomain) {
         this.queryDomain = queryDomain;
     }
+
 
     /**
      * get 封禁url,精确查询
@@ -90,6 +92,7 @@ public class QueryForbiddenInfoListRequest extends JdcloudRequest implements jav
         this.forbiddenUrl = forbiddenUrl;
     }
 
+
     /**
      * get 页码数
      *
@@ -107,6 +110,7 @@ public class QueryForbiddenInfoListRequest extends JdcloudRequest implements jav
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 每页size
@@ -127,6 +131,7 @@ public class QueryForbiddenInfoListRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 封禁域名,模糊查询
      *
@@ -136,6 +141,7 @@ public class QueryForbiddenInfoListRequest extends JdcloudRequest implements jav
         this.queryDomain = queryDomain;
         return this;
     }
+
 
     /**
      * set 封禁url,精确查询
@@ -147,6 +153,7 @@ public class QueryForbiddenInfoListRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 页码数
      *
@@ -156,6 +163,7 @@ public class QueryForbiddenInfoListRequest extends JdcloudRequest implements jav
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页size

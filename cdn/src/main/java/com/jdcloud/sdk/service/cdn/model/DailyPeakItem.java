@@ -43,6 +43,7 @@ public class DailyPeakItem  implements java.io.Serializable {
     private String time;
 
 
+
     /**
      * get 峰值(MB)
      *
@@ -60,6 +61,7 @@ public class DailyPeakItem  implements java.io.Serializable {
     public void setDailyPeak(Long dailyPeak) {
         this.dailyPeak = dailyPeak;
     }
+
 
     /**
      * get 日期
@@ -80,6 +82,7 @@ public class DailyPeakItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 峰值(MB)
      *
@@ -89,6 +92,7 @@ public class DailyPeakItem  implements java.io.Serializable {
         this.dailyPeak = dailyPeak;
         return this;
     }
+
 
     /**
      * set 日期

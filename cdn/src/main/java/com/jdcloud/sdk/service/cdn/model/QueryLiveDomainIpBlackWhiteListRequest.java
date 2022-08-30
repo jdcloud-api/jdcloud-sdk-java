@@ -42,6 +42,7 @@ public class QueryLiveDomainIpBlackWhiteListRequest extends JdcloudRequest imple
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class QueryLiveDomainIpBlackWhiteListRequest extends JdcloudRequest imple
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

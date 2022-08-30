@@ -40,6 +40,7 @@ public class QueryRefreshTaskByIdResult extends JdcloudResult implements java.io
     private RefreshTask task;
 
 
+
     /**
      * get task
      *
@@ -57,6 +58,7 @@ public class QueryRefreshTaskByIdResult extends JdcloudResult implements java.io
     public void setTask(RefreshTask task) {
         this.task = task;
     }
+
 
 
     /**

@@ -87,6 +87,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
     /**
      * tags
      */
+    
     private List<Tag> tags;
 
 
@@ -108,6 +109,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.cname = cname;
     }
 
+
     /**
      * get description
      *
@@ -125,6 +127,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get domain
@@ -144,6 +147,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get created
      *
@@ -161,6 +165,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
     public void setCreated(String created) {
         this.created = created;
     }
+
 
     /**
      * get modified
@@ -180,6 +185,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.modified = modified;
     }
 
+
     /**
      * get status
      *
@@ -197,6 +203,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get wafStatus
@@ -216,6 +223,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.wafStatus = wafStatus;
     }
 
+
     /**
      * get type
      *
@@ -233,6 +241,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
     public void setType(String type) {
         this.type = type;
     }
+
 
     /**
      * get auditStatus
@@ -252,6 +261,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.auditStatus = auditStatus;
     }
 
+
     /**
      * get accelerateRegion
      *
@@ -270,23 +280,25 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.accelerateRegion = accelerateRegion;
     }
 
+
     /**
-     * get tags
-     *
-     * @return
-     */
+    * get tags
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set tags
-     *
-     * @param tags
-     */
+    * set tags
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
 
     /**
@@ -299,6 +311,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set description
      *
@@ -308,6 +321,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set domain
@@ -319,6 +333,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set created
      *
@@ -328,6 +343,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.created = created;
         return this;
     }
+
 
     /**
      * set modified
@@ -339,6 +355,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set status
      *
@@ -348,6 +365,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set wafStatus
@@ -359,6 +377,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set type
      *
@@ -368,6 +387,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         this.type = type;
         return this;
     }
+
 
     /**
      * set auditStatus
@@ -379,6 +399,7 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set accelerateRegion
      *
@@ -389,15 +410,17 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set tags
-     *
-     * @param tags
-     */
+    * set tags
+    *
+    * @param tags
+    */
     public ListDomainItemByFilter tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
 
     /**
@@ -411,5 +434,4 @@ public class ListDomainItemByFilter  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

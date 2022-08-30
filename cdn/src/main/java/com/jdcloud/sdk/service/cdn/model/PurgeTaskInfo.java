@@ -73,6 +73,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
     private Long expireAt;
 
 
+
     /**
      * get url
      *
@@ -90,6 +91,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 文件id
@@ -109,6 +111,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         this.fileId = fileId;
     }
 
+
     /**
      * get 原来总共的副本数
      *
@@ -126,6 +129,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
     public void setOriginNum(Integer originNum) {
         this.originNum = originNum;
     }
+
 
     /**
      * get 刷新后剩余的副本数
@@ -145,6 +149,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         this.remainNum = remainNum;
     }
 
+
     /**
      * get 剩余
      *
@@ -162,6 +167,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
     public void setCurUnfinished(String curUnfinished) {
         this.curUnfinished = curUnfinished;
     }
+
 
     /**
      * get 1:active，2:表示purge中暂时停止预热
@@ -181,6 +187,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 失败预热的原因
      *
@@ -198,6 +205,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
     public void setErrInfo(String errInfo) {
         this.errInfo = errInfo;
     }
+
 
     /**
      * get 热度计算下发任务的过期时间
@@ -218,6 +226,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set url
      *
@@ -227,6 +236,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set 文件id
@@ -238,6 +248,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 原来总共的副本数
      *
@@ -247,6 +258,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         this.originNum = originNum;
         return this;
     }
+
 
     /**
      * set 刷新后剩余的副本数
@@ -258,6 +270,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 剩余
      *
@@ -267,6 +280,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         this.curUnfinished = curUnfinished;
         return this;
     }
+
 
     /**
      * set 1:active，2:表示purge中暂时停止预热
@@ -278,6 +292,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 失败预热的原因
      *
@@ -287,6 +302,7 @@ public class PurgeTaskInfo  implements java.io.Serializable {
         this.errInfo = errInfo;
         return this;
     }
+
 
     /**
      * set 热度计算下发任务的过期时间

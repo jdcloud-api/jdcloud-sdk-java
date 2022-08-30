@@ -49,6 +49,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
     /**
      * statistics
      */
+    
     private List<StatisticsDataItem> statistics;
 
 
@@ -70,6 +71,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
         this.startTime = startTime;
     }
 
+
     /**
      * get 2020/07/30 11:00，查询截止时间
      *
@@ -88,23 +90,25 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
         this.endTime = endTime;
     }
 
+
     /**
-     * get statistics
-     *
-     * @return
-     */
+    * get statistics
+    *
+    * @return
+    */
     public List<StatisticsDataItem> getStatistics() {
         return statistics;
     }
 
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public void setStatistics(List<StatisticsDataItem> statistics) {
         this.statistics = statistics;
     }
+
 
 
     /**
@@ -117,6 +121,7 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 2020/07/30 11:00，查询截止时间
      *
@@ -127,15 +132,17 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public QueryJDBoxStatisticsDataResult statistics(List<StatisticsDataItem> statistics) {
         this.statistics = statistics;
         return this;
     }
+
 
 
     /**
@@ -149,5 +156,4 @@ public class QueryJDBoxStatisticsDataResult extends JdcloudResult implements jav
         }
         this.statistics.add(statistic);
     }
-
 }

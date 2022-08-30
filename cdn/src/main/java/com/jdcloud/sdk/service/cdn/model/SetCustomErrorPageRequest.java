@@ -39,8 +39,8 @@ public class SetCustomErrorPageRequest extends JdcloudRequest implements java.io
     /**
      * 自定义错误页面配置
      */
+    
     private List<ErrorPageConfigs> errorPageConfigs;
-
     /**
      * 用户域名
      * Required:true
@@ -49,23 +49,25 @@ public class SetCustomErrorPageRequest extends JdcloudRequest implements java.io
     private String domain;
 
 
+
     /**
-     * get 自定义错误页面配置
-     *
-     * @return
-     */
+    * get 自定义错误页面配置
+    *
+    * @return
+    */
     public List<ErrorPageConfigs> getErrorPageConfigs() {
         return errorPageConfigs;
     }
 
     /**
-     * set 自定义错误页面配置
-     *
-     * @param errorPageConfigs
-     */
+    * set 自定义错误页面配置
+    *
+    * @param errorPageConfigs
+    */
     public void setErrorPageConfigs(List<ErrorPageConfigs> errorPageConfigs) {
         this.errorPageConfigs = errorPageConfigs;
     }
+
 
     /**
      * get 用户域名
@@ -86,15 +88,17 @@ public class SetCustomErrorPageRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
-     * set 自定义错误页面配置
-     *
-     * @param errorPageConfigs
-     */
+    * set 自定义错误页面配置
+    *
+    * @param errorPageConfigs
+    */
     public SetCustomErrorPageRequest errorPageConfigs(List<ErrorPageConfigs> errorPageConfigs) {
         this.errorPageConfigs = errorPageConfigs;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -105,6 +109,7 @@ public class SetCustomErrorPageRequest extends JdcloudRequest implements java.io
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class SetCustomErrorPageRequest extends JdcloudRequest implements java.io
         }
         this.errorPageConfigs.add(errorPageConfig);
     }
-
 }

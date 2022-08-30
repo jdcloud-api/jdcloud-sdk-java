@@ -73,11 +73,12 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     /**
      * 备用域名
      */
+    
     private List<String> relatedDomains;
-
     /**
      * 绑定的资源
      */
+    
     private List<String> bindResources;
 
 
@@ -99,6 +100,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         this.sslCertId = sslCertId;
     }
 
+
     /**
      * get 证书名称
      *
@@ -116,6 +118,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     public void setCertName(String certName) {
         this.certName = certName;
     }
+
 
     /**
      * get 主域名
@@ -135,6 +138,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         this.commonName = commonName;
     }
 
+
     /**
      * get 证书类型
      *
@@ -152,6 +156,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     public void setCertType(String certType) {
         this.certType = certType;
     }
+
 
     /**
      * get 开始时间
@@ -171,6 +176,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         this.sslCertStartTime = sslCertStartTime;
     }
 
+
     /**
      * get 结束时间
      *
@@ -188,6 +194,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
     public void setSslCertEndTime(String sslCertEndTime) {
         this.sslCertEndTime = sslCertEndTime;
     }
+
 
     /**
      * get 对私钥文件使用sha256算法计算的摘要信息
@@ -207,41 +214,44 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         this.digest = digest;
     }
 
+
     /**
-     * get 备用域名
-     *
-     * @return
-     */
+    * get 备用域名
+    *
+    * @return
+    */
     public List<String> getRelatedDomains() {
         return relatedDomains;
     }
 
     /**
-     * set 备用域名
-     *
-     * @param relatedDomains
-     */
+    * set 备用域名
+    *
+    * @param relatedDomains
+    */
     public void setRelatedDomains(List<String> relatedDomains) {
         this.relatedDomains = relatedDomains;
     }
 
+
     /**
-     * get 绑定的资源
-     *
-     * @return
-     */
+    * get 绑定的资源
+    *
+    * @return
+    */
     public List<String> getBindResources() {
         return bindResources;
     }
 
     /**
-     * set 绑定的资源
-     *
-     * @param bindResources
-     */
+    * set 绑定的资源
+    *
+    * @param bindResources
+    */
     public void setBindResources(List<String> bindResources) {
         this.bindResources = bindResources;
     }
+
 
 
     /**
@@ -254,6 +264,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 证书名称
      *
@@ -263,6 +274,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         this.certName = certName;
         return this;
     }
+
 
     /**
      * set 主域名
@@ -274,6 +286,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 证书类型
      *
@@ -283,6 +296,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         this.certType = certType;
         return this;
     }
+
 
     /**
      * set 开始时间
@@ -294,6 +308,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 结束时间
      *
@@ -303,6 +318,7 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         this.sslCertEndTime = sslCertEndTime;
         return this;
     }
+
 
     /**
      * set 对私钥文件使用sha256算法计算的摘要信息
@@ -314,25 +330,28 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set 备用域名
-     *
-     * @param relatedDomains
-     */
+    * set 备用域名
+    *
+    * @param relatedDomains
+    */
     public GetSslCertDetailResult relatedDomains(List<String> relatedDomains) {
         this.relatedDomains = relatedDomains;
         return this;
     }
 
+
     /**
-     * set 绑定的资源
-     *
-     * @param bindResources
-     */
+    * set 绑定的资源
+    *
+    * @param bindResources
+    */
     public GetSslCertDetailResult bindResources(List<String> bindResources) {
         this.bindResources = bindResources;
         return this;
     }
+
 
 
     /**
@@ -358,5 +377,4 @@ public class GetSslCertDetailResult extends JdcloudResult implements java.io.Ser
         }
         this.bindResources.add(bindResource);
     }
-
 }
