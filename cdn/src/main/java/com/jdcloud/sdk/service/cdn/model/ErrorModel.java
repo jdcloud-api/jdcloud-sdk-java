@@ -43,6 +43,7 @@ public class ErrorModel  implements java.io.Serializable {
     private String msg;
 
 
+
     /**
      * get 迁移失败的域名
      *
@@ -60,6 +61,7 @@ public class ErrorModel  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 迁移失败的原因
@@ -80,6 +82,7 @@ public class ErrorModel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 迁移失败的域名
      *
@@ -89,6 +92,7 @@ public class ErrorModel  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 迁移失败的原因

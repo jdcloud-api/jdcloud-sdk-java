@@ -44,6 +44,7 @@ public class QueryForbiddenInfoListResult extends JdcloudResult implements java.
     /**
      * list
      */
+    
     private List<ForbiddenInfo> list;
 
 
@@ -65,23 +66,25 @@ public class QueryForbiddenInfoListResult extends JdcloudResult implements java.
         this.total = total;
     }
 
+
     /**
-     * get list
-     *
-     * @return
-     */
+    * get list
+    *
+    * @return
+    */
     public List<ForbiddenInfo> getList() {
         return list;
     }
 
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public void setList(List<ForbiddenInfo> list) {
         this.list = list;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryForbiddenInfoListResult extends JdcloudResult implements java.
         return this;
     }
 
+
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public QueryForbiddenInfoListResult list(List<ForbiddenInfo> list) {
         this.list = list;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryForbiddenInfoListResult extends JdcloudResult implements java.
         }
         this.list.add(list);
     }
-
 }

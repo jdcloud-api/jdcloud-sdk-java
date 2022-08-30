@@ -48,6 +48,7 @@ public class HitRatioDiagramItem  implements java.io.Serializable {
     private Long timeStamp;
 
 
+
     /**
      * get flowRatio
      *
@@ -66,6 +67,7 @@ public class HitRatioDiagramItem  implements java.io.Serializable {
         this.flowRatio = flowRatio;
     }
 
+
     /**
      * get reqRatio
      *
@@ -83,6 +85,7 @@ public class HitRatioDiagramItem  implements java.io.Serializable {
     public void setReqRatio(Double reqRatio) {
         this.reqRatio = reqRatio;
     }
+
 
     /**
      * get timeStamp
@@ -103,6 +106,7 @@ public class HitRatioDiagramItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set flowRatio
      *
@@ -113,6 +117,7 @@ public class HitRatioDiagramItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set reqRatio
      *
@@ -122,6 +127,7 @@ public class HitRatioDiagramItem  implements java.io.Serializable {
         this.reqRatio = reqRatio;
         return this;
     }
+
 
     /**
      * set timeStamp

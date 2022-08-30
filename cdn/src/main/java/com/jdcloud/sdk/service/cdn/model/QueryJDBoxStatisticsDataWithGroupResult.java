@@ -49,6 +49,7 @@ public class QueryJDBoxStatisticsDataWithGroupResult extends JdcloudResult imple
     /**
      * statistics
      */
+    
     private List<StatisticsDataItem> statistics;
 
 
@@ -70,6 +71,7 @@ public class QueryJDBoxStatisticsDataWithGroupResult extends JdcloudResult imple
         this.startTime = startTime;
     }
 
+
     /**
      * get 2021/01/19 11:00，查询截止时间
      *
@@ -88,23 +90,25 @@ public class QueryJDBoxStatisticsDataWithGroupResult extends JdcloudResult imple
         this.endTime = endTime;
     }
 
+
     /**
-     * get statistics
-     *
-     * @return
-     */
+    * get statistics
+    *
+    * @return
+    */
     public List<StatisticsDataItem> getStatistics() {
         return statistics;
     }
 
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public void setStatistics(List<StatisticsDataItem> statistics) {
         this.statistics = statistics;
     }
+
 
 
     /**
@@ -117,6 +121,7 @@ public class QueryJDBoxStatisticsDataWithGroupResult extends JdcloudResult imple
         return this;
     }
 
+
     /**
      * set 2021/01/19 11:00，查询截止时间
      *
@@ -127,15 +132,17 @@ public class QueryJDBoxStatisticsDataWithGroupResult extends JdcloudResult imple
         return this;
     }
 
+
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public QueryJDBoxStatisticsDataWithGroupResult statistics(List<StatisticsDataItem> statistics) {
         this.statistics = statistics;
         return this;
     }
+
 
 
     /**
@@ -149,5 +156,4 @@ public class QueryJDBoxStatisticsDataWithGroupResult extends JdcloudResult imple
         }
         this.statistics.add(statistic);
     }
-
 }

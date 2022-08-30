@@ -54,6 +54,7 @@ public class UpdatePrefetchTaskRequest extends JdcloudRequest implements java.io
     private Integer copyNum;
 
 
+
     /**
      * get url
      *
@@ -71,6 +72,7 @@ public class UpdatePrefetchTaskRequest extends JdcloudRequest implements java.io
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
@@ -90,6 +92,7 @@ public class UpdatePrefetchTaskRequest extends JdcloudRequest implements java.io
         this.region = region;
     }
 
+
     /**
      * get 运营商[ct uni cm]中的一个,分别代表电信 联通 移动
      *
@@ -107,6 +110,7 @@ public class UpdatePrefetchTaskRequest extends JdcloudRequest implements java.io
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get 副本数,介于1-1000之间
@@ -127,6 +131,7 @@ public class UpdatePrefetchTaskRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set url
      *
@@ -136,6 +141,7 @@ public class UpdatePrefetchTaskRequest extends JdcloudRequest implements java.io
         this.url = url;
         return this;
     }
+
 
     /**
      * set 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
@@ -147,6 +153,7 @@ public class UpdatePrefetchTaskRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 运营商[ct uni cm]中的一个,分别代表电信 联通 移动
      *
@@ -156,6 +163,7 @@ public class UpdatePrefetchTaskRequest extends JdcloudRequest implements java.io
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set 副本数,介于1-1000之间

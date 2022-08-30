@@ -108,6 +108,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     private Double serviceUnavailable;
 
 
+
     /**
      * get timeStamp
      *
@@ -125,6 +126,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     public void setTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
     }
+
 
     /**
      * get ok
@@ -144,6 +146,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.ok = ok;
     }
 
+
     /**
      * get badGateway
      *
@@ -161,6 +164,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     public void setBadGateway(Double badGateway) {
         this.badGateway = badGateway;
     }
+
 
     /**
      * get badRequest
@@ -180,6 +184,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.badRequest = badRequest;
     }
 
+
     /**
      * get forbidden
      *
@@ -197,6 +202,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     public void setForbidden(Double forbidden) {
         this.forbidden = forbidden;
     }
+
 
     /**
      * get found
@@ -216,6 +222,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.found = found;
     }
 
+
     /**
      * get gatewayTimeout
      *
@@ -233,6 +240,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     public void setGatewayTimeout(Double gatewayTimeout) {
         this.gatewayTimeout = gatewayTimeout;
     }
+
 
     /**
      * get internalServerError
@@ -252,6 +260,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.internalServerError = internalServerError;
     }
 
+
     /**
      * get movedPermanently
      *
@@ -269,6 +278,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     public void setMovedPermanently(Double movedPermanently) {
         this.movedPermanently = movedPermanently;
     }
+
 
     /**
      * get notFound
@@ -288,6 +298,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.notFound = notFound;
     }
 
+
     /**
      * get notModified
      *
@@ -305,6 +316,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     public void setNotModified(Double notModified) {
         this.notModified = notModified;
     }
+
 
     /**
      * get partialContent
@@ -324,6 +336,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.partialContent = partialContent;
     }
 
+
     /**
      * get requestedRangeNotSuitable
      *
@@ -342,6 +355,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.requestedRangeNotSuitable = requestedRangeNotSuitable;
     }
 
+
     /**
      * get other
      *
@@ -359,6 +373,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     public void setOther(Double other) {
         this.other = other;
     }
+
 
     /**
      * get serviceUnavailable
@@ -379,6 +394,7 @@ public class CodeDetailItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set timeStamp
      *
@@ -388,6 +404,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.timeStamp = timeStamp;
         return this;
     }
+
 
     /**
      * set ok
@@ -399,6 +416,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set badGateway
      *
@@ -408,6 +426,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.badGateway = badGateway;
         return this;
     }
+
 
     /**
      * set badRequest
@@ -419,6 +438,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set forbidden
      *
@@ -428,6 +448,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.forbidden = forbidden;
         return this;
     }
+
 
     /**
      * set found
@@ -439,6 +460,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set gatewayTimeout
      *
@@ -448,6 +470,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.gatewayTimeout = gatewayTimeout;
         return this;
     }
+
 
     /**
      * set internalServerError
@@ -459,6 +482,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set movedPermanently
      *
@@ -468,6 +492,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.movedPermanently = movedPermanently;
         return this;
     }
+
 
     /**
      * set notFound
@@ -479,6 +504,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set notModified
      *
@@ -488,6 +514,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.notModified = notModified;
         return this;
     }
+
 
     /**
      * set partialContent
@@ -499,6 +526,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set requestedRangeNotSuitable
      *
@@ -509,6 +537,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set other
      *
@@ -518,6 +547,7 @@ public class CodeDetailItem  implements java.io.Serializable {
         this.other = other;
         return this;
     }
+
 
     /**
      * set serviceUnavailable

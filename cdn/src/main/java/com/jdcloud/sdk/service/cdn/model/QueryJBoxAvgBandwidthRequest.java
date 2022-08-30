@@ -71,6 +71,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
     private Integer size;
 
 
+
     /**
      * get 指定查询开始时间(格式:201906011000)，返回数据包含该时间点。
      *
@@ -88,6 +89,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
     public void setStarttime(String starttime) {
         this.starttime = starttime;
     }
+
 
     /**
      * get 指定查询结束时间(格式:201906011100)，返回数据不包含该时间点
@@ -107,6 +109,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
         this.stoptime = stoptime;
     }
 
+
     /**
      * get 插件pin,多个用,隔开
      *
@@ -124,6 +127,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
     public void setPluginPin(String pluginPin) {
         this.pluginPin = pluginPin;
     }
+
 
     /**
      * get 按照设备ID查询设备带宽,即macaddr,多个用,隔开
@@ -143,6 +147,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
         this.clientid = clientid;
     }
 
+
     /**
      * get 用于支持分页查询，默认为1，表示第几页。
      *
@@ -160,6 +165,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
     public void setPage(Integer page) {
         this.page = page;
     }
+
 
     /**
      * get 用于支持分页查询，表示每页返回多少条数据，默认每页返回10条数据，size必须是10的整数倍，并且最大值是100。
@@ -180,6 +186,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 指定查询开始时间(格式:201906011000)，返回数据包含该时间点。
      *
@@ -189,6 +196,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
         this.starttime = starttime;
         return this;
     }
+
 
     /**
      * set 指定查询结束时间(格式:201906011100)，返回数据不包含该时间点
@@ -200,6 +208,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 插件pin,多个用,隔开
      *
@@ -209,6 +218,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
         this.pluginPin = pluginPin;
         return this;
     }
+
 
     /**
      * set 按照设备ID查询设备带宽,即macaddr,多个用,隔开
@@ -220,6 +230,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 用于支持分页查询，默认为1，表示第几页。
      *
@@ -229,6 +240,7 @@ public class QueryJBoxAvgBandwidthRequest extends JdcloudRequest implements java
         this.page = page;
         return this;
     }
+
 
     /**
      * set 用于支持分页查询，表示每页返回多少条数据，默认每页返回10条数据，size必须是10的整数倍，并且最大值是100。

@@ -49,6 +49,7 @@ public class WafQueryPvRequest extends JdcloudRequest implements java.io.Seriali
     private String domain;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -67,6 +68,7 @@ public class WafQueryPvRequest extends JdcloudRequest implements java.io.Seriali
         this.startTime = startTime;
     }
 
+
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -84,6 +86,7 @@ public class WafQueryPvRequest extends JdcloudRequest implements java.io.Seriali
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 需要查询的域名, 必须为用户pin下有权限的域名
@@ -104,6 +107,7 @@ public class WafQueryPvRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -114,6 +118,7 @@ public class WafQueryPvRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -123,6 +128,7 @@ public class WafQueryPvRequest extends JdcloudRequest implements java.io.Seriali
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 需要查询的域名, 必须为用户pin下有权限的域名

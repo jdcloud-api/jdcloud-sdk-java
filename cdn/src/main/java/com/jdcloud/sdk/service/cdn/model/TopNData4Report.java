@@ -43,6 +43,7 @@ public class TopNData4Report  implements java.io.Serializable {
     private Double topValue;
 
 
+
     /**
      * get topKey
      *
@@ -60,6 +61,7 @@ public class TopNData4Report  implements java.io.Serializable {
     public void setTopKey(String topKey) {
         this.topKey = topKey;
     }
+
 
     /**
      * get topValue
@@ -80,6 +82,7 @@ public class TopNData4Report  implements java.io.Serializable {
     }
 
 
+
     /**
      * set topKey
      *
@@ -89,6 +92,7 @@ public class TopNData4Report  implements java.io.Serializable {
         this.topKey = topKey;
         return this;
     }
+
 
     /**
      * set topValue

@@ -42,8 +42,8 @@ public class AttackLogRecord  implements java.io.Serializable {
     /**
      * 攻击类型
      */
+    
     private List<String> attackType;
-
     /**
      * 黑洞封禁 0-&gt;未封禁 1-&gt;封禁
      */
@@ -70,6 +70,7 @@ public class AttackLogRecord  implements java.io.Serializable {
     private String unit;
 
 
+
     /**
      * get 攻击峰值
      *
@@ -88,23 +89,25 @@ public class AttackLogRecord  implements java.io.Serializable {
         this.attackTraffic = attackTraffic;
     }
 
+
     /**
-     * get 攻击类型
-     *
-     * @return
-     */
+    * get 攻击类型
+    *
+    * @return
+    */
     public List<String> getAttackType() {
         return attackType;
     }
 
     /**
-     * set 攻击类型
-     *
-     * @param attackType
-     */
+    * set 攻击类型
+    *
+    * @param attackType
+    */
     public void setAttackType(List<String> attackType) {
         this.attackType = attackType;
     }
+
 
     /**
      * get 黑洞封禁 0-&gt;未封禁 1-&gt;封禁
@@ -124,6 +127,7 @@ public class AttackLogRecord  implements java.io.Serializable {
         this.blackHole = blackHole;
     }
 
+
     /**
      * get 攻击结束时间 utc时间
      *
@@ -141,6 +145,7 @@ public class AttackLogRecord  implements java.io.Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 用户pin
@@ -160,6 +165,7 @@ public class AttackLogRecord  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 攻击开始时间 utc时间
      *
@@ -177,6 +183,7 @@ public class AttackLogRecord  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 攻击峰值单位 流量单位
@@ -197,6 +204,7 @@ public class AttackLogRecord  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 攻击峰值
      *
@@ -207,15 +215,17 @@ public class AttackLogRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 攻击类型
-     *
-     * @param attackType
-     */
+    * set 攻击类型
+    *
+    * @param attackType
+    */
     public AttackLogRecord attackType(List<String> attackType) {
         this.attackType = attackType;
         return this;
     }
+
 
     /**
      * set 黑洞封禁 0-&gt;未封禁 1-&gt;封禁
@@ -227,6 +237,7 @@ public class AttackLogRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击结束时间 utc时间
      *
@@ -236,6 +247,7 @@ public class AttackLogRecord  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -247,6 +259,7 @@ public class AttackLogRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击开始时间 utc时间
      *
@@ -257,6 +270,7 @@ public class AttackLogRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 攻击峰值单位 流量单位
      *
@@ -266,6 +280,7 @@ public class AttackLogRecord  implements java.io.Serializable {
         this.unit = unit;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class AttackLogRecord  implements java.io.Serializable {
         }
         this.attackType.add(attackType);
     }
-
 }

@@ -39,6 +39,7 @@ public class QueryWafWhiteRuleSwitchResult extends JdcloudResult implements java
     private String switchStatus;
 
 
+
     /**
      * get 开关状态, on:开启,off:关闭
      *
@@ -56,6 +57,7 @@ public class QueryWafWhiteRuleSwitchResult extends JdcloudResult implements java
     public void setSwitchStatus(String switchStatus) {
         this.switchStatus = switchStatus;
     }
+
 
 
     /**

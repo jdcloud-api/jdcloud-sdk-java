@@ -47,6 +47,7 @@ public class SetVideoDraftRequest extends JdcloudRequest implements java.io.Seri
     private String domain;
 
 
+
     /**
      * get 开关取值[on,off]
      *
@@ -64,6 +65,7 @@ public class SetVideoDraftRequest extends JdcloudRequest implements java.io.Seri
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class SetVideoDraftRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 开关取值[on,off]
      *
@@ -93,6 +96,7 @@ public class SetVideoDraftRequest extends JdcloudRequest implements java.io.Seri
         this.status = status;
         return this;
     }
+
 
     /**
      * set 用户域名

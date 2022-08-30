@@ -64,6 +64,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
     private String sortRule;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2019-08-16T06:00:00Z
      *
@@ -81,6 +82,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2019-08-16T07:00:00Z
@@ -100,6 +102,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
         this.endTime = endTime;
     }
 
+
     /**
      * get 页码
      *
@@ -117,6 +120,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页条数
@@ -136,6 +140,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 排序字段，默认传avgbandwidth
      *
@@ -153,6 +158,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
     public void setSortField(String sortField) {
         this.sortField = sortField;
     }
+
 
     /**
      * get 排序规则，默认是降序排序，传值asc或者desc
@@ -173,6 +179,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2019-08-16T06:00:00Z
      *
@@ -182,6 +189,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2019-08-16T07:00:00Z
@@ -193,6 +201,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 页码
      *
@@ -202,6 +211,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页条数
@@ -213,6 +223,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 排序字段，默认传avgbandwidth
      *
@@ -222,6 +233,7 @@ public class SearchAttackLogRequest extends JdcloudRequest implements java.io.Se
         this.sortField = sortField;
         return this;
     }
+
 
     /**
      * set 排序规则，默认是降序排序，传值asc或者desc

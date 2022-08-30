@@ -53,6 +53,7 @@ public class ProtectData  implements java.io.Serializable {
     private String timeUtc;
 
 
+
     /**
      * get 防护后流量序
      *
@@ -70,6 +71,7 @@ public class ProtectData  implements java.io.Serializable {
     public void setPostProtect(Float postProtect) {
         this.postProtect = postProtect;
     }
+
 
     /**
      * get 防护前流量序
@@ -89,6 +91,7 @@ public class ProtectData  implements java.io.Serializable {
         this.preProtect = preProtect;
     }
 
+
     /**
      * get 时间戳,到秒
      *
@@ -106,6 +109,7 @@ public class ProtectData  implements java.io.Serializable {
     public void setTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
     }
+
 
     /**
      * get UTC时间
@@ -126,6 +130,7 @@ public class ProtectData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 防护后流量序
      *
@@ -135,6 +140,7 @@ public class ProtectData  implements java.io.Serializable {
         this.postProtect = postProtect;
         return this;
     }
+
 
     /**
      * set 防护前流量序
@@ -146,6 +152,7 @@ public class ProtectData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时间戳,到秒
      *
@@ -155,6 +162,7 @@ public class ProtectData  implements java.io.Serializable {
         this.timeStamp = timeStamp;
         return this;
     }
+
 
     /**
      * set UTC时间

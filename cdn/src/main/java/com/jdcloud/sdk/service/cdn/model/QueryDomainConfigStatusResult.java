@@ -39,6 +39,7 @@ public class QueryDomainConfigStatusResult extends JdcloudResult implements java
     private String taskStatus;
 
 
+
     /**
      * get 任务状态,[success:成功,failed:失败,configuring:配置中]
      *
@@ -56,6 +57,7 @@ public class QueryDomainConfigStatusResult extends JdcloudResult implements java
     public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
     }
+
 
 
     /**

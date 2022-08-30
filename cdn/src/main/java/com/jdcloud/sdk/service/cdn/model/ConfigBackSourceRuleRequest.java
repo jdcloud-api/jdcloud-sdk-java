@@ -52,6 +52,7 @@ public class ConfigBackSourceRuleRequest extends JdcloudRequest implements java.
     private String domain;
 
 
+
     /**
      * get 回源改写之前的正则表达式
      *
@@ -70,6 +71,7 @@ public class ConfigBackSourceRuleRequest extends JdcloudRequest implements java.
         this.beforeRegex = beforeRegex;
     }
 
+
     /**
      * get 回源改写之后的正则表达式
      *
@@ -87,6 +89,7 @@ public class ConfigBackSourceRuleRequest extends JdcloudRequest implements java.
     public void setAfterRegex(String afterRegex) {
         this.afterRegex = afterRegex;
     }
+
 
     /**
      * get 用户域名
@@ -107,6 +110,7 @@ public class ConfigBackSourceRuleRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 回源改写之前的正则表达式
      *
@@ -117,6 +121,7 @@ public class ConfigBackSourceRuleRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 回源改写之后的正则表达式
      *
@@ -126,6 +131,7 @@ public class ConfigBackSourceRuleRequest extends JdcloudRequest implements java.
         this.afterRegex = afterRegex;
         return this;
     }
+
 
     /**
      * set 用户域名

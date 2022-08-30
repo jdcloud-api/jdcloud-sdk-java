@@ -39,37 +39,40 @@ public class WafQueryPvForAreaAndIpResult extends JdcloudResult implements java.
     /**
      * areaDatas
      */
+    
     private List<AreaData> areaDatas;
 
 
     /**
-     * get areaDatas
-     *
-     * @return
-     */
+    * get areaDatas
+    *
+    * @return
+    */
     public List<AreaData> getAreaDatas() {
         return areaDatas;
     }
 
     /**
-     * set areaDatas
-     *
-     * @param areaDatas
-     */
+    * set areaDatas
+    *
+    * @param areaDatas
+    */
     public void setAreaDatas(List<AreaData> areaDatas) {
         this.areaDatas = areaDatas;
     }
 
 
+
     /**
-     * set areaDatas
-     *
-     * @param areaDatas
-     */
+    * set areaDatas
+    *
+    * @param areaDatas
+    */
     public WafQueryPvForAreaAndIpResult areaDatas(List<AreaData> areaDatas) {
         this.areaDatas = areaDatas;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class WafQueryPvForAreaAndIpResult extends JdcloudResult implements java.
         }
         this.areaDatas.add(areaData);
     }
-
 }

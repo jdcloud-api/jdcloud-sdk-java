@@ -63,6 +63,7 @@ public class HitrationTableItem  implements java.io.Serializable {
     private String hitRatio;
 
 
+
     /**
      * get domain
      *
@@ -80,6 +81,7 @@ public class HitrationTableItem  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get domainType
@@ -99,6 +101,7 @@ public class HitrationTableItem  implements java.io.Serializable {
         this.domainType = domainType;
     }
 
+
     /**
      * get pv
      *
@@ -116,6 +119,7 @@ public class HitrationTableItem  implements java.io.Serializable {
     public void setPv(Long pv) {
         this.pv = pv;
     }
+
 
     /**
      * get hitPv
@@ -135,6 +139,7 @@ public class HitrationTableItem  implements java.io.Serializable {
         this.hitPv = hitPv;
     }
 
+
     /**
      * get oriPV
      *
@@ -152,6 +157,7 @@ public class HitrationTableItem  implements java.io.Serializable {
     public void setOriPV(Long oriPV) {
         this.oriPV = oriPV;
     }
+
 
     /**
      * get hitRatio
@@ -172,6 +178,7 @@ public class HitrationTableItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set domain
      *
@@ -181,6 +188,7 @@ public class HitrationTableItem  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set domainType
@@ -192,6 +200,7 @@ public class HitrationTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pv
      *
@@ -201,6 +210,7 @@ public class HitrationTableItem  implements java.io.Serializable {
         this.pv = pv;
         return this;
     }
+
 
     /**
      * set hitPv
@@ -212,6 +222,7 @@ public class HitrationTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set oriPV
      *
@@ -221,6 +232,7 @@ public class HitrationTableItem  implements java.io.Serializable {
         this.oriPV = oriPV;
         return this;
     }
+
 
     /**
      * set hitRatio

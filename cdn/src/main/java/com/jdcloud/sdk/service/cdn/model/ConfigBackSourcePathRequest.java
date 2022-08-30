@@ -39,8 +39,8 @@ public class ConfigBackSourcePathRequest extends JdcloudRequest implements java.
     /**
      * configs
      */
+    
     private List<ConfigBackSourcePathItems> configs;
-
     /**
      * 用户域名
      * Required:true
@@ -49,23 +49,25 @@ public class ConfigBackSourcePathRequest extends JdcloudRequest implements java.
     private String domain;
 
 
+
     /**
-     * get configs
-     *
-     * @return
-     */
+    * get configs
+    *
+    * @return
+    */
     public List<ConfigBackSourcePathItems> getConfigs() {
         return configs;
     }
 
     /**
-     * set configs
-     *
-     * @param configs
-     */
+    * set configs
+    *
+    * @param configs
+    */
     public void setConfigs(List<ConfigBackSourcePathItems> configs) {
         this.configs = configs;
     }
+
 
     /**
      * get 用户域名
@@ -86,15 +88,17 @@ public class ConfigBackSourcePathRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
-     * set configs
-     *
-     * @param configs
-     */
+    * set configs
+    *
+    * @param configs
+    */
     public ConfigBackSourcePathRequest configs(List<ConfigBackSourcePathItems> configs) {
         this.configs = configs;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -105,6 +109,7 @@ public class ConfigBackSourcePathRequest extends JdcloudRequest implements java.
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class ConfigBackSourcePathRequest extends JdcloudRequest implements java.
         }
         this.configs.add(config);
     }
-
 }

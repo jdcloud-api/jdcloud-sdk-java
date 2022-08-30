@@ -38,37 +38,40 @@ public class BatCreatePrefetchTaskRequest extends JdcloudRequest implements java
     /**
      * tasks
      */
+    
     private List<VodPrefetchTaskItem> tasks;
 
 
     /**
-     * get tasks
-     *
-     * @return
-     */
+    * get tasks
+    *
+    * @return
+    */
     public List<VodPrefetchTaskItem> getTasks() {
         return tasks;
     }
 
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public void setTasks(List<VodPrefetchTaskItem> tasks) {
         this.tasks = tasks;
     }
 
 
+
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public BatCreatePrefetchTaskRequest tasks(List<VodPrefetchTaskItem> tasks) {
         this.tasks = tasks;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class BatCreatePrefetchTaskRequest extends JdcloudRequest implements java
         }
         this.tasks.add(task);
     }
-
 }

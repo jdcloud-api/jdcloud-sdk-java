@@ -39,6 +39,7 @@ public class SetMonitorResult extends JdcloudResult implements java.io.Serializa
     private Long monitorId;
 
 
+
     /**
      * get monitorId
      *
@@ -56,6 +57,7 @@ public class SetMonitorResult extends JdcloudResult implements java.io.Serializa
     public void setMonitorId(Long monitorId) {
         this.monitorId = monitorId;
     }
+
 
 
     /**

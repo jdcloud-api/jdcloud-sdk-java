@@ -48,6 +48,7 @@ public class ConfigBackSourcePathItems  implements java.io.Serializable {
     private String urlHost;
 
 
+
     /**
      * get 回源路径
      *
@@ -66,6 +67,7 @@ public class ConfigBackSourcePathItems  implements java.io.Serializable {
         this.path = path;
     }
 
+
     /**
      * get 回源host
      *
@@ -83,6 +85,7 @@ public class ConfigBackSourcePathItems  implements java.io.Serializable {
     public void setOrigHost(String origHost) {
         this.origHost = origHost;
     }
+
 
     /**
      * get url回源host
@@ -103,6 +106,7 @@ public class ConfigBackSourcePathItems  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 回源路径
      *
@@ -113,6 +117,7 @@ public class ConfigBackSourcePathItems  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回源host
      *
@@ -122,6 +127,7 @@ public class ConfigBackSourcePathItems  implements java.io.Serializable {
         this.origHost = origHost;
         return this;
     }
+
 
     /**
      * set url回源host

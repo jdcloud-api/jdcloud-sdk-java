@@ -39,37 +39,40 @@ public class CheckWhetherIpBelongToJCloudResult extends JdcloudResult implements
     /**
      * ipList
      */
+    
     private List<CheckWhetherIpBelongToJCloudItem> ipList;
 
 
     /**
-     * get ipList
-     *
-     * @return
-     */
+    * get ipList
+    *
+    * @return
+    */
     public List<CheckWhetherIpBelongToJCloudItem> getIpList() {
         return ipList;
     }
 
     /**
-     * set ipList
-     *
-     * @param ipList
-     */
+    * set ipList
+    *
+    * @param ipList
+    */
     public void setIpList(List<CheckWhetherIpBelongToJCloudItem> ipList) {
         this.ipList = ipList;
     }
 
 
+
     /**
-     * set ipList
-     *
-     * @param ipList
-     */
+    * set ipList
+    *
+    * @param ipList
+    */
     public CheckWhetherIpBelongToJCloudResult ipList(List<CheckWhetherIpBelongToJCloudItem> ipList) {
         this.ipList = ipList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class CheckWhetherIpBelongToJCloudResult extends JdcloudResult implements
         }
         this.ipList.add(ipList);
     }
-
 }

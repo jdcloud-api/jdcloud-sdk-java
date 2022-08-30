@@ -88,6 +88,7 @@ public class OridbwTableItem  implements java.io.Serializable {
     private Double oriflow;
 
 
+
     /**
      * get groupByname
      *
@@ -105,6 +106,7 @@ public class OridbwTableItem  implements java.io.Serializable {
     public void setGroupByname(String groupByname) {
         this.groupByname = groupByname;
     }
+
 
     /**
      * get domainType
@@ -124,6 +126,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.domainType = domainType;
     }
 
+
     /**
      * get oriflowPercent
      *
@@ -141,6 +144,7 @@ public class OridbwTableItem  implements java.io.Serializable {
     public void setOriflowPercent(String oriflowPercent) {
         this.oriflowPercent = oriflowPercent;
     }
+
 
     /**
      * get oripvPercent
@@ -160,6 +164,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.oripvPercent = oripvPercent;
     }
 
+
     /**
      * get avgbandwidth
      *
@@ -177,6 +182,7 @@ public class OridbwTableItem  implements java.io.Serializable {
     public void setAvgbandwidth(Double avgbandwidth) {
         this.avgbandwidth = avgbandwidth;
     }
+
 
     /**
      * get avgoribandwidth
@@ -196,6 +202,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.avgoribandwidth = avgoribandwidth;
     }
 
+
     /**
      * get oriTopTimeStamp
      *
@@ -213,6 +220,7 @@ public class OridbwTableItem  implements java.io.Serializable {
     public void setOriTopTimeStamp(Long oriTopTimeStamp) {
         this.oriTopTimeStamp = oriTopTimeStamp;
     }
+
 
     /**
      * get pv
@@ -232,6 +240,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.pv = pv;
     }
 
+
     /**
      * get oripv
      *
@@ -250,6 +259,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.oripv = oripv;
     }
 
+
     /**
      * get flow
      *
@@ -267,6 +277,7 @@ public class OridbwTableItem  implements java.io.Serializable {
     public void setFlow(Double flow) {
         this.flow = flow;
     }
+
 
     /**
      * get oriflow
@@ -287,6 +298,7 @@ public class OridbwTableItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set groupByname
      *
@@ -296,6 +308,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.groupByname = groupByname;
         return this;
     }
+
 
     /**
      * set domainType
@@ -307,6 +320,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set oriflowPercent
      *
@@ -316,6 +330,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.oriflowPercent = oriflowPercent;
         return this;
     }
+
 
     /**
      * set oripvPercent
@@ -327,6 +342,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set avgbandwidth
      *
@@ -336,6 +352,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
         return this;
     }
+
 
     /**
      * set avgoribandwidth
@@ -347,6 +364,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set oriTopTimeStamp
      *
@@ -356,6 +374,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.oriTopTimeStamp = oriTopTimeStamp;
         return this;
     }
+
 
     /**
      * set pv
@@ -367,6 +386,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set oripv
      *
@@ -377,6 +397,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -386,6 +407,7 @@ public class OridbwTableItem  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set oriflow

@@ -38,37 +38,40 @@ public class QueryLivePrefetchTaskRequest extends JdcloudRequest implements java
     /**
      * 预热的URL
      */
+    
     private List<String> urlList;
 
 
     /**
-     * get 预热的URL
-     *
-     * @return
-     */
+    * get 预热的URL
+    *
+    * @return
+    */
     public List<String> getUrlList() {
         return urlList;
     }
 
     /**
-     * set 预热的URL
-     *
-     * @param urlList
-     */
+    * set 预热的URL
+    *
+    * @param urlList
+    */
     public void setUrlList(List<String> urlList) {
         this.urlList = urlList;
     }
 
 
+
     /**
-     * set 预热的URL
-     *
-     * @param urlList
-     */
+    * set 预热的URL
+    *
+    * @param urlList
+    */
     public QueryLivePrefetchTaskRequest urlList(List<String> urlList) {
         this.urlList = urlList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class QueryLivePrefetchTaskRequest extends JdcloudRequest implements java
         }
         this.urlList.add(urlList);
     }
-
 }

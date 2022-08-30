@@ -49,6 +49,7 @@ public class GetSslCertListRequest extends JdcloudRequest implements java.io.Ser
     private String domain;
 
 
+
     /**
      * get 第几页，从1开始计数
      *
@@ -67,6 +68,7 @@ public class GetSslCertListRequest extends JdcloudRequest implements java.io.Ser
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页显示的数目
      *
@@ -84,6 +86,7 @@ public class GetSslCertListRequest extends JdcloudRequest implements java.io.Ser
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 域名，支持按照域名检索证书
@@ -104,6 +107,7 @@ public class GetSslCertListRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 第几页，从1开始计数
      *
@@ -114,6 +118,7 @@ public class GetSslCertListRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 每页显示的数目
      *
@@ -123,6 +128,7 @@ public class GetSslCertListRequest extends JdcloudRequest implements java.io.Ser
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 域名，支持按照域名检索证书

@@ -59,6 +59,7 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
     /**
      * taskList
      */
+    
     private List<PrefetchTaskInfo> taskList;
 
 
@@ -80,6 +81,7 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
         this.totalNumber = totalNumber;
     }
 
+
     /**
      * get totalPage
      *
@@ -97,6 +99,7 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
     public void setTotalPage(Integer totalPage) {
         this.totalPage = totalPage;
     }
+
 
     /**
      * get pageNumber
@@ -116,6 +119,7 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get pageSize
      *
@@ -134,23 +138,25 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get taskList
-     *
-     * @return
-     */
+    * get taskList
+    *
+    * @return
+    */
     public List<PrefetchTaskInfo> getTaskList() {
         return taskList;
     }
 
     /**
-     * set taskList
-     *
-     * @param taskList
-     */
+    * set taskList
+    *
+    * @param taskList
+    */
     public void setTaskList(List<PrefetchTaskInfo> taskList) {
         this.taskList = taskList;
     }
+
 
 
     /**
@@ -163,6 +169,7 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set totalPage
      *
@@ -172,6 +179,7 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
         this.totalPage = totalPage;
         return this;
     }
+
 
     /**
      * set pageNumber
@@ -183,6 +191,7 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set pageSize
      *
@@ -193,15 +202,17 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
-     * set taskList
-     *
-     * @param taskList
-     */
+    * set taskList
+    *
+    * @param taskList
+    */
     public QueryPrefetchTaskResult taskList(List<PrefetchTaskInfo> taskList) {
         this.taskList = taskList;
         return this;
     }
+
 
 
     /**
@@ -215,5 +226,4 @@ public class QueryPrefetchTaskResult extends JdcloudResult implements java.io.Se
         }
         this.taskList.add(taskList);
     }
-
 }

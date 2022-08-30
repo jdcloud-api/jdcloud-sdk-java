@@ -42,6 +42,7 @@ public class QueryDomainTempInstRequest extends JdcloudRequest implements java.i
     private Long instId;
 
 
+
     /**
      * get 模板实例id
      *
@@ -59,6 +60,7 @@ public class QueryDomainTempInstRequest extends JdcloudRequest implements java.i
     public void setInstId(Long instId) {
         this.instId = instId;
     }
+
 
 
     /**

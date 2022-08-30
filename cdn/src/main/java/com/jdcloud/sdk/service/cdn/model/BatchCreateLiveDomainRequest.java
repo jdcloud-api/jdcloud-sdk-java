@@ -73,17 +73,18 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
     /**
      * ipSource
      */
+    
     private List<IpSourceInfo> ipSource;
-
     /**
      * domainSource
      */
+    
     private List<DomainSourceInfo> domainSource;
-
     /**
      * 加速区域(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
      */
     private String accelerateRegion;
+
 
 
     /**
@@ -104,6 +105,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         this.playDomain = playDomain;
     }
 
+
     /**
      * get 创建推流域名时，必传推流域名
      *
@@ -121,6 +123,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
     public void setPublishDomain(String publishDomain) {
         this.publishDomain = publishDomain;
     }
+
 
     /**
      * get 回源类型只能是[ips,domain]中的一种
@@ -140,6 +143,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         this.sourceType = sourceType;
     }
 
+
     /**
      * get backHttpType
      *
@@ -157,6 +161,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
     public void setBackHttpType(String backHttpType) {
         this.backHttpType = backHttpType;
     }
+
 
     /**
      * get 默认回源host
@@ -176,6 +181,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         this.defaultSourceHost = defaultSourceHost;
     }
 
+
     /**
      * get 站点类型pull(拉流)push(推流)
      *
@@ -193,6 +199,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
     public void setSiteType(String siteType) {
         this.siteType = siteType;
     }
+
 
     /**
      * get 回源类型，目前只能为rtmp
@@ -212,41 +219,44 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         this.backSourceType = backSourceType;
     }
 
+
     /**
-     * get ipSource
-     *
-     * @return
-     */
+    * get ipSource
+    *
+    * @return
+    */
     public List<IpSourceInfo> getIpSource() {
         return ipSource;
     }
 
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public void setIpSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
     }
 
+
     /**
-     * get domainSource
-     *
-     * @return
-     */
+    * get domainSource
+    *
+    * @return
+    */
     public List<DomainSourceInfo> getDomainSource() {
         return domainSource;
     }
 
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public void setDomainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
     }
+
 
     /**
      * get 加速区域(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
@@ -267,6 +277,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 播放域名
      *
@@ -276,6 +287,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         this.playDomain = playDomain;
         return this;
     }
+
 
     /**
      * set 创建推流域名时，必传推流域名
@@ -287,6 +299,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 回源类型只能是[ips,domain]中的一种
      *
@@ -296,6 +309,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         this.sourceType = sourceType;
         return this;
     }
+
 
     /**
      * set backHttpType
@@ -307,6 +321,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 默认回源host
      *
@@ -316,6 +331,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         this.defaultSourceHost = defaultSourceHost;
         return this;
     }
+
 
     /**
      * set 站点类型pull(拉流)push(推流)
@@ -327,6 +343,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 回源类型，目前只能为rtmp
      *
@@ -337,25 +354,28 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public BatchCreateLiveDomainRequest ipSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
         return this;
     }
 
+
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public BatchCreateLiveDomainRequest domainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
         return this;
     }
+
 
     /**
      * set 加速区域(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
@@ -366,6 +386,7 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         this.accelerateRegion = accelerateRegion;
         return this;
     }
+
 
 
     /**
@@ -391,5 +412,4 @@ public class BatchCreateLiveDomainRequest extends JdcloudRequest implements java
         }
         this.domainSource.add(domainSource);
     }
-
 }

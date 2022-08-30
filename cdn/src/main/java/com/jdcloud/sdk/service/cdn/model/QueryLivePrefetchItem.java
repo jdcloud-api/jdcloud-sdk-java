@@ -48,6 +48,7 @@ public class QueryLivePrefetchItem  implements java.io.Serializable {
     private String message;
 
 
+
     /**
      * get stream
      *
@@ -66,6 +67,7 @@ public class QueryLivePrefetchItem  implements java.io.Serializable {
         this.stream = stream;
     }
 
+
     /**
      * get code
      *
@@ -83,6 +85,7 @@ public class QueryLivePrefetchItem  implements java.io.Serializable {
     public void setCode(Integer code) {
         this.code = code;
     }
+
 
     /**
      * get message
@@ -103,6 +106,7 @@ public class QueryLivePrefetchItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set stream
      *
@@ -113,6 +117,7 @@ public class QueryLivePrefetchItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set code
      *
@@ -122,6 +127,7 @@ public class QueryLivePrefetchItem  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set message

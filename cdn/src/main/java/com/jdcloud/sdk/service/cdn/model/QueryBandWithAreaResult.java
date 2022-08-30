@@ -39,37 +39,40 @@ public class QueryBandWithAreaResult extends JdcloudResult implements java.io.Se
     /**
      * resultList
      */
+    
     private List<BandTrafficWithAreaDataItem> resultList;
 
 
     /**
-     * get resultList
-     *
-     * @return
-     */
+    * get resultList
+    *
+    * @return
+    */
     public List<BandTrafficWithAreaDataItem> getResultList() {
         return resultList;
     }
 
     /**
-     * set resultList
-     *
-     * @param resultList
-     */
+    * set resultList
+    *
+    * @param resultList
+    */
     public void setResultList(List<BandTrafficWithAreaDataItem> resultList) {
         this.resultList = resultList;
     }
 
 
+
     /**
-     * set resultList
-     *
-     * @param resultList
-     */
+    * set resultList
+    *
+    * @param resultList
+    */
     public QueryBandWithAreaResult resultList(List<BandTrafficWithAreaDataItem> resultList) {
         this.resultList = resultList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryBandWithAreaResult extends JdcloudResult implements java.io.Se
         }
         this.resultList.add(resultList);
     }
-
 }

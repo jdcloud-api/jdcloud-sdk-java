@@ -53,6 +53,7 @@ public class CodeTypeDetailItem  implements java.io.Serializable {
     private String percent;
 
 
+
     /**
      * get code
      *
@@ -70,6 +71,7 @@ public class CodeTypeDetailItem  implements java.io.Serializable {
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get count
@@ -89,6 +91,7 @@ public class CodeTypeDetailItem  implements java.io.Serializable {
         this.count = count;
     }
 
+
     /**
      * get rank
      *
@@ -106,6 +109,7 @@ public class CodeTypeDetailItem  implements java.io.Serializable {
     public void setRank(Integer rank) {
         this.rank = rank;
     }
+
 
     /**
      * get percent
@@ -126,6 +130,7 @@ public class CodeTypeDetailItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set code
      *
@@ -135,6 +140,7 @@ public class CodeTypeDetailItem  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set count
@@ -146,6 +152,7 @@ public class CodeTypeDetailItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set rank
      *
@@ -155,6 +162,7 @@ public class CodeTypeDetailItem  implements java.io.Serializable {
         this.rank = rank;
         return this;
     }
+
 
     /**
      * set percent

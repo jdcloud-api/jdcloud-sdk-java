@@ -37,8 +37,8 @@ public class DomainGroupItem  implements java.io.Serializable {
     /**
      * 域名组成员
      */
+    
     private List<String> domains;
-
     /**
      * 主域名
      */
@@ -60,23 +60,25 @@ public class DomainGroupItem  implements java.io.Serializable {
     private Long id;
 
 
+
     /**
-     * get 域名组成员
-     *
-     * @return
-     */
+    * get 域名组成员
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set 域名组成员
-     *
-     * @param domains
-     */
+    * set 域名组成员
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
     /**
      * get 主域名
@@ -96,6 +98,7 @@ public class DomainGroupItem  implements java.io.Serializable {
         this.primaryDomain = primaryDomain;
     }
 
+
     /**
      * get 是否共享缓存
      *
@@ -114,6 +117,7 @@ public class DomainGroupItem  implements java.io.Serializable {
         this.shareCache = shareCache;
     }
 
+
     /**
      * get 域名组名称
      *
@@ -131,6 +135,7 @@ public class DomainGroupItem  implements java.io.Serializable {
     public void setDomainGroupName(String domainGroupName) {
         this.domainGroupName = domainGroupName;
     }
+
 
     /**
      * get 域名组id
@@ -151,15 +156,17 @@ public class DomainGroupItem  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 域名组成员
-     *
-     * @param domains
-     */
+    * set 域名组成员
+    *
+    * @param domains
+    */
     public DomainGroupItem domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
     /**
      * set 主域名
@@ -171,6 +178,7 @@ public class DomainGroupItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否共享缓存
      *
@@ -180,6 +188,7 @@ public class DomainGroupItem  implements java.io.Serializable {
         this.shareCache = shareCache;
         return this;
     }
+
 
     /**
      * set 域名组名称
@@ -191,6 +200,7 @@ public class DomainGroupItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 域名组id
      *
@@ -200,6 +210,7 @@ public class DomainGroupItem  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class DomainGroupItem  implements java.io.Serializable {
         }
         this.domains.add(domain);
     }
-
 }

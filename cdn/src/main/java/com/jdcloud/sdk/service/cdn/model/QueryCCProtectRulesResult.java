@@ -39,37 +39,40 @@ public class QueryCCProtectRulesResult extends JdcloudResult implements java.io.
     /**
      * rules
      */
+    
     private List<WafCCProtectRuleModel> rules;
 
 
     /**
-     * get rules
-     *
-     * @return
-     */
+    * get rules
+    *
+    * @return
+    */
     public List<WafCCProtectRuleModel> getRules() {
         return rules;
     }
 
     /**
-     * set rules
-     *
-     * @param rules
-     */
+    * set rules
+    *
+    * @param rules
+    */
     public void setRules(List<WafCCProtectRuleModel> rules) {
         this.rules = rules;
     }
 
 
+
     /**
-     * set rules
-     *
-     * @param rules
-     */
+    * set rules
+    *
+    * @param rules
+    */
     public QueryCCProtectRulesResult rules(List<WafCCProtectRuleModel> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryCCProtectRulesResult extends JdcloudResult implements java.io.
         }
         this.rules.add(rule);
     }
-
 }

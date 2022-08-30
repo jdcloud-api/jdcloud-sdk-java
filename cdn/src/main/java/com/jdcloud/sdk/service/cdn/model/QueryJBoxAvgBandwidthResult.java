@@ -45,6 +45,7 @@ public class QueryJBoxAvgBandwidthResult extends JdcloudResult implements java.i
     /**
      * data
      */
+    
     private List<QueryAvgBandwidthGroup> data;
 
 
@@ -66,23 +67,25 @@ public class QueryJBoxAvgBandwidthResult extends JdcloudResult implements java.i
         this.page = page;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<QueryAvgBandwidthGroup> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<QueryAvgBandwidthGroup> data) {
         this.data = data;
     }
+
 
 
     /**
@@ -95,15 +98,17 @@ public class QueryJBoxAvgBandwidthResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public QueryJBoxAvgBandwidthResult data(List<QueryAvgBandwidthGroup> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class QueryJBoxAvgBandwidthResult extends JdcloudResult implements java.i
         }
         this.data.add(data);
     }
-
 }

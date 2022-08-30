@@ -64,6 +64,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
     private String domain;
 
 
+
     /**
      * get ruleType, valid values [ip, geo, uri]
      *
@@ -81,6 +82,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
     public void setRuleType(String ruleType) {
         this.ruleType = ruleType;
     }
+
 
     /**
      * get ruleId, defalut empty
@@ -100,6 +102,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
         this.id = id;
     }
 
+
     /**
      * get page size , default 0 to query all
      *
@@ -118,6 +121,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
         this.pageSize = pageSize;
     }
 
+
     /**
      * get page index , default 0 to query all
      *
@@ -135,6 +139,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 用户域名
@@ -155,6 +160,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set ruleType, valid values [ip, geo, uri]
      *
@@ -164,6 +170,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
         this.ruleType = ruleType;
         return this;
     }
+
 
     /**
      * set ruleId, defalut empty
@@ -175,6 +182,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set page size , default 0 to query all
      *
@@ -185,6 +193,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set page index , default 0 to query all
      *
@@ -194,6 +203,7 @@ public class QuerywafBlackRulesRequest extends JdcloudRequest implements java.io
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 用户域名

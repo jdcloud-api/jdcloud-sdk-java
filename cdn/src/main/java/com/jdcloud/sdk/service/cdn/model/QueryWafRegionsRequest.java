@@ -42,6 +42,7 @@ public class QueryWafRegionsRequest extends JdcloudRequest implements java.io.Se
     private String skipType;
 
 
+
     /**
      * get skipType, valid values [skip, deny]
      *
@@ -59,6 +60,7 @@ public class QueryWafRegionsRequest extends JdcloudRequest implements java.io.Se
     public void setSkipType(String skipType) {
         this.skipType = skipType;
     }
+
 
 
     /**

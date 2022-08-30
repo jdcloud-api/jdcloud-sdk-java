@@ -47,6 +47,7 @@ public class DirBandwidthItem  implements java.io.Serializable {
     /**
      * dirs
      */
+    
     private List<DirData> dirs;
 
 
@@ -68,6 +69,7 @@ public class DirBandwidthItem  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -86,23 +88,25 @@ public class DirBandwidthItem  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
-     * get dirs
-     *
-     * @return
-     */
+    * get dirs
+    *
+    * @return
+    */
     public List<DirData> getDirs() {
         return dirs;
     }
 
     /**
-     * set dirs
-     *
-     * @param dirs
-     */
+    * set dirs
+    *
+    * @param dirs
+    */
     public void setDirs(List<DirData> dirs) {
         this.dirs = dirs;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class DirBandwidthItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -125,15 +130,17 @@ public class DirBandwidthItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set dirs
-     *
-     * @param dirs
-     */
+    * set dirs
+    *
+    * @param dirs
+    */
     public DirBandwidthItem dirs(List<DirData> dirs) {
         this.dirs = dirs;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class DirBandwidthItem  implements java.io.Serializable {
         }
         this.dirs.add(dir);
     }
-
 }

@@ -48,6 +48,7 @@ public class StatisticsGroupSumDataItem  implements java.io.Serializable {
     private Object data;
 
 
+
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -66,6 +67,7 @@ public class StatisticsGroupSumDataItem  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -83,6 +85,7 @@ public class StatisticsGroupSumDataItem  implements java.io.Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 查询结果,类型为HashMap&lt;String, Object&gt;
@@ -103,6 +106,7 @@ public class StatisticsGroupSumDataItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -113,6 +117,7 @@ public class StatisticsGroupSumDataItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -122,6 +127,7 @@ public class StatisticsGroupSumDataItem  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 查询结果,类型为HashMap&lt;String, Object&gt;

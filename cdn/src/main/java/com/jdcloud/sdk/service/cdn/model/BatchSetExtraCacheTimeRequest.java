@@ -47,6 +47,7 @@ public class BatchSetExtraCacheTimeRequest extends JdcloudRequest implements jav
     private String domain;
 
 
+
     /**
      * get 状态码和过期时间，多个用英文分号分隔,如404:3;500:10;异常状态码 [&quot;4xx&quot;,&quot;400&quot;, &quot;401&quot;,  &quot;402&quot;, &quot;404&quot;, &quot;405&quot;, &quot;406&quot;, &quot;407&quot;, &quot;408&quot;, &quot;409&quot;, &quot;410&quot;, &quot;411&quot;, &quot;412&quot;, &quot;413&quot;, &quot;414&quot;, &quot;415&quot;, &quot;416&quot;, &quot;417&quot;,  &quot;5xx&quot;,&quot;500&quot;, &quot;501&quot;, &quot;502&quot;, &quot;503&quot;, &quot;504&quot;, &quot;505&quot;]中的其中一个,缓存时间(单位:秒)
      *
@@ -64,6 +65,7 @@ public class BatchSetExtraCacheTimeRequest extends JdcloudRequest implements jav
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class BatchSetExtraCacheTimeRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 状态码和过期时间，多个用英文分号分隔,如404:3;500:10;异常状态码 [&quot;4xx&quot;,&quot;400&quot;, &quot;401&quot;,  &quot;402&quot;, &quot;404&quot;, &quot;405&quot;, &quot;406&quot;, &quot;407&quot;, &quot;408&quot;, &quot;409&quot;, &quot;410&quot;, &quot;411&quot;, &quot;412&quot;, &quot;413&quot;, &quot;414&quot;, &quot;415&quot;, &quot;416&quot;, &quot;417&quot;,  &quot;5xx&quot;,&quot;500&quot;, &quot;501&quot;, &quot;502&quot;, &quot;503&quot;, &quot;504&quot;, &quot;505&quot;]中的其中一个,缓存时间(单位:秒)
      *
@@ -93,6 +96,7 @@ public class BatchSetExtraCacheTimeRequest extends JdcloudRequest implements jav
         this.content = content;
         return this;
     }
+
 
     /**
      * set 用户域名

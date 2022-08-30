@@ -57,6 +57,7 @@ public class OverviewTrafficItem  implements java.io.Serializable {
     /**
      * details
      */
+    
     private List<OverviewTrafficDetailItem> details;
 
 
@@ -78,6 +79,7 @@ public class OverviewTrafficItem  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
     }
 
+
     /**
      * get flow
      *
@@ -95,6 +97,7 @@ public class OverviewTrafficItem  implements java.io.Serializable {
     public void setFlow(Long flow) {
         this.flow = flow;
     }
+
 
     /**
      * get pv
@@ -114,6 +117,7 @@ public class OverviewTrafficItem  implements java.io.Serializable {
         this.pv = pv;
     }
 
+
     /**
      * get maxavgbandwidthtime
      *
@@ -132,23 +136,25 @@ public class OverviewTrafficItem  implements java.io.Serializable {
         this.maxavgbandwidthtime = maxavgbandwidthtime;
     }
 
+
     /**
-     * get details
-     *
-     * @return
-     */
+    * get details
+    *
+    * @return
+    */
     public List<OverviewTrafficDetailItem> getDetails() {
         return details;
     }
 
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public void setDetails(List<OverviewTrafficDetailItem> details) {
         this.details = details;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class OverviewTrafficItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -170,6 +177,7 @@ public class OverviewTrafficItem  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set pv
@@ -181,6 +189,7 @@ public class OverviewTrafficItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set maxavgbandwidthtime
      *
@@ -191,15 +200,17 @@ public class OverviewTrafficItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public OverviewTrafficItem details(List<OverviewTrafficDetailItem> details) {
         this.details = details;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class OverviewTrafficItem  implements java.io.Serializable {
         }
         this.details.add(detail);
     }
-
 }

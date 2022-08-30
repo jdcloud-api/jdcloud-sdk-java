@@ -93,6 +93,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     private Long audioCodecId;
 
 
+
     /**
      * get app
      *
@@ -110,6 +111,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     public void setApp(String app) {
         this.app = app;
     }
+
 
     /**
      * get stream
@@ -129,6 +131,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.stream = stream;
     }
 
+
     /**
      * get clientIp
      *
@@ -146,6 +149,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     public void setClientIp(String clientIp) {
         this.clientIp = clientIp;
     }
+
 
     /**
      * get serverIp
@@ -165,6 +169,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.serverIp = serverIp;
     }
 
+
     /**
      * get frameRate
      *
@@ -182,6 +187,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     public void setFrameRate(Double frameRate) {
         this.frameRate = frameRate;
     }
+
 
     /**
      * get frameLossRate
@@ -201,6 +207,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.frameLossRate = frameLossRate;
     }
 
+
     /**
      * get lastActive
      *
@@ -218,6 +225,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     public void setLastActive(Long lastActive) {
         this.lastActive = lastActive;
     }
+
 
     /**
      * get realFps
@@ -237,6 +245,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.realFps = realFps;
     }
 
+
     /**
      * get uploadSpeed
      *
@@ -254,6 +263,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     public void setUploadSpeed(Long uploadSpeed) {
         this.uploadSpeed = uploadSpeed;
     }
+
 
     /**
      * get videoCodecId
@@ -273,6 +283,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.videoCodecId = videoCodecId;
     }
 
+
     /**
      * get videoDataRate
      *
@@ -290,6 +301,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     public void setVideoDataRate(Long videoDataRate) {
         this.videoDataRate = videoDataRate;
     }
+
 
     /**
      * get audioCodecId
@@ -310,6 +322,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set app
      *
@@ -319,6 +332,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.app = app;
         return this;
     }
+
 
     /**
      * set stream
@@ -330,6 +344,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set clientIp
      *
@@ -339,6 +354,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.clientIp = clientIp;
         return this;
     }
+
 
     /**
      * set serverIp
@@ -350,6 +366,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set frameRate
      *
@@ -359,6 +376,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.frameRate = frameRate;
         return this;
     }
+
 
     /**
      * set frameLossRate
@@ -370,6 +388,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set lastActive
      *
@@ -379,6 +398,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.lastActive = lastActive;
         return this;
     }
+
 
     /**
      * set realFps
@@ -390,6 +410,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set uploadSpeed
      *
@@ -399,6 +420,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.uploadSpeed = uploadSpeed;
         return this;
     }
+
 
     /**
      * set videoCodecId
@@ -410,6 +432,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set videoDataRate
      *
@@ -419,6 +442,7 @@ public class OnlineStreamInfo  implements java.io.Serializable {
         this.videoDataRate = videoDataRate;
         return this;
     }
+
 
     /**
      * set audioCodecId

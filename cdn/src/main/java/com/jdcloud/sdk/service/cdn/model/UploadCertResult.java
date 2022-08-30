@@ -44,6 +44,7 @@ public class UploadCertResult extends JdcloudResult implements java.io.Serializa
     private String digest;
 
 
+
     /**
      * get certId
      *
@@ -61,6 +62,7 @@ public class UploadCertResult extends JdcloudResult implements java.io.Serializa
     public void setCertId(String certId) {
         this.certId = certId;
     }
+
 
     /**
      * get 对私钥文件使用sha256算法计算的摘要信息
@@ -81,6 +83,7 @@ public class UploadCertResult extends JdcloudResult implements java.io.Serializa
     }
 
 
+
     /**
      * set certId
      *
@@ -90,6 +93,7 @@ public class UploadCertResult extends JdcloudResult implements java.io.Serializa
         this.certId = certId;
         return this;
     }
+
 
     /**
      * set 对私钥文件使用sha256算法计算的摘要信息

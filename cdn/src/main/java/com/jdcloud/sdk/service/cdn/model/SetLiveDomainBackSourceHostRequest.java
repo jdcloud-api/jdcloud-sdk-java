@@ -47,6 +47,7 @@ public class SetLiveDomainBackSourceHostRequest extends JdcloudRequest implement
     private String domain;
 
 
+
     /**
      * get 默认回源host
      *
@@ -64,6 +65,7 @@ public class SetLiveDomainBackSourceHostRequest extends JdcloudRequest implement
     public void setSourceHost(String sourceHost) {
         this.sourceHost = sourceHost;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class SetLiveDomainBackSourceHostRequest extends JdcloudRequest implement
     }
 
 
+
     /**
      * set 默认回源host
      *
@@ -93,6 +96,7 @@ public class SetLiveDomainBackSourceHostRequest extends JdcloudRequest implement
         this.sourceHost = sourceHost;
         return this;
     }
+
 
     /**
      * set 用户域名

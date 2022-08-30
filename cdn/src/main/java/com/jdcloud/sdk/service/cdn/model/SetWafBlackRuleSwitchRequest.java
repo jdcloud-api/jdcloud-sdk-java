@@ -47,6 +47,7 @@ public class SetWafBlackRuleSwitchRequest extends JdcloudRequest implements java
     private String domain;
 
 
+
     /**
      * get 开关状态, on:开启,off:关闭
      *
@@ -64,6 +65,7 @@ public class SetWafBlackRuleSwitchRequest extends JdcloudRequest implements java
     public void setSwitchStatus(String switchStatus) {
         this.switchStatus = switchStatus;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class SetWafBlackRuleSwitchRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 开关状态, on:开启,off:关闭
      *
@@ -93,6 +96,7 @@ public class SetWafBlackRuleSwitchRequest extends JdcloudRequest implements java
         this.switchStatus = switchStatus;
         return this;
     }
+
 
     /**
      * set 用户域名

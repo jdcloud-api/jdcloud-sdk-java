@@ -48,6 +48,7 @@ public class StreamRankingForYY  implements java.io.Serializable {
     private Long playerCount;
 
 
+
     /**
      * get streamName
      *
@@ -66,6 +67,7 @@ public class StreamRankingForYY  implements java.io.Serializable {
         this.streamName = streamName;
     }
 
+
     /**
      * get ranking
      *
@@ -83,6 +85,7 @@ public class StreamRankingForYY  implements java.io.Serializable {
     public void setRanking(Integer ranking) {
         this.ranking = ranking;
     }
+
 
     /**
      * get playerCount
@@ -103,6 +106,7 @@ public class StreamRankingForYY  implements java.io.Serializable {
     }
 
 
+
     /**
      * set streamName
      *
@@ -113,6 +117,7 @@ public class StreamRankingForYY  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set ranking
      *
@@ -122,6 +127,7 @@ public class StreamRankingForYY  implements java.io.Serializable {
         this.ranking = ranking;
         return this;
     }
+
 
     /**
      * set playerCount

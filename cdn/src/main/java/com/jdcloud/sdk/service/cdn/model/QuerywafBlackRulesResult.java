@@ -39,37 +39,40 @@ public class QuerywafBlackRulesResult extends JdcloudResult implements java.io.S
     /**
      * rules
      */
+    
     private List<WafBlackRuleModel> rules;
 
 
     /**
-     * get rules
-     *
-     * @return
-     */
+    * get rules
+    *
+    * @return
+    */
     public List<WafBlackRuleModel> getRules() {
         return rules;
     }
 
     /**
-     * set rules
-     *
-     * @param rules
-     */
+    * set rules
+    *
+    * @param rules
+    */
     public void setRules(List<WafBlackRuleModel> rules) {
         this.rules = rules;
     }
 
 
+
     /**
-     * set rules
-     *
-     * @param rules
-     */
+    * set rules
+    *
+    * @param rules
+    */
     public QuerywafBlackRulesResult rules(List<WafBlackRuleModel> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QuerywafBlackRulesResult extends JdcloudResult implements java.io.S
         }
         this.rules.add(rule);
     }
-
 }

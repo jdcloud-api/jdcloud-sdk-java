@@ -43,6 +43,7 @@ public class CreateRefreshTaskForCallbackV2Request extends JdcloudRequest implem
     /**
      * urlItems
      */
+    
     private List<UrlItemV2> urlItems;
 
 
@@ -64,23 +65,25 @@ public class CreateRefreshTaskForCallbackV2Request extends JdcloudRequest implem
         this.taskType = taskType;
     }
 
+
     /**
-     * get urlItems
-     *
-     * @return
-     */
+    * get urlItems
+    *
+    * @return
+    */
     public List<UrlItemV2> getUrlItems() {
         return urlItems;
     }
 
     /**
-     * set urlItems
-     *
-     * @param urlItems
-     */
+    * set urlItems
+    *
+    * @param urlItems
+    */
     public void setUrlItems(List<UrlItemV2> urlItems) {
         this.urlItems = urlItems;
     }
+
 
 
     /**
@@ -93,15 +96,17 @@ public class CreateRefreshTaskForCallbackV2Request extends JdcloudRequest implem
         return this;
     }
 
+
     /**
-     * set urlItems
-     *
-     * @param urlItems
-     */
+    * set urlItems
+    *
+    * @param urlItems
+    */
     public CreateRefreshTaskForCallbackV2Request urlItems(List<UrlItemV2> urlItems) {
         this.urlItems = urlItems;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class CreateRefreshTaskForCallbackV2Request extends JdcloudRequest implem
         }
         this.urlItems.add(urlItem);
     }
-
 }

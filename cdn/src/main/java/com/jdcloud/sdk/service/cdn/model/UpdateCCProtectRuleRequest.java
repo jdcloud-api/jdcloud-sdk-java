@@ -74,6 +74,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
     private String id;
 
 
+
     /**
      * get null
      *
@@ -91,6 +92,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
     public void setUri(String uri) {
         this.uri = uri;
     }
+
 
     /**
      * get null
@@ -110,6 +112,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.detectPeriod = detectPeriod;
     }
 
+
     /**
      * get null
      *
@@ -127,6 +130,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
     public void setSingleIpLimit(Integer singleIpLimit) {
         this.singleIpLimit = singleIpLimit;
     }
+
 
     /**
      * get null
@@ -146,6 +150,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.blockType = blockType;
     }
 
+
     /**
      * get null
      *
@@ -164,6 +169,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.blockTime = blockTime;
     }
 
+
     /**
      * get 用户域名
      *
@@ -181,6 +187,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 需要修改的规则ID
@@ -201,6 +208,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set null
      *
@@ -210,6 +218,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.uri = uri;
         return this;
     }
+
 
     /**
      * set null
@@ -221,6 +230,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set null
      *
@@ -230,6 +240,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.singleIpLimit = singleIpLimit;
         return this;
     }
+
 
     /**
      * set null
@@ -241,6 +252,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set null
      *
@@ -251,6 +263,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -260,6 +273,7 @@ public class UpdateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 需要修改的规则ID

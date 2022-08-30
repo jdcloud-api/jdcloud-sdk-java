@@ -38,37 +38,40 @@ public class GetAllUpperNodeIpListResult extends JdcloudResult implements java.i
     /**
      * ipList
      */
+    
     private List<String> ipList;
 
 
     /**
-     * get ipList
-     *
-     * @return
-     */
+    * get ipList
+    *
+    * @return
+    */
     public List<String> getIpList() {
         return ipList;
     }
 
     /**
-     * set ipList
-     *
-     * @param ipList
-     */
+    * set ipList
+    *
+    * @param ipList
+    */
     public void setIpList(List<String> ipList) {
         this.ipList = ipList;
     }
 
 
+
     /**
-     * set ipList
-     *
-     * @param ipList
-     */
+    * set ipList
+    *
+    * @param ipList
+    */
     public GetAllUpperNodeIpListResult ipList(List<String> ipList) {
         this.ipList = ipList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class GetAllUpperNodeIpListResult extends JdcloudResult implements java.i
         }
         this.ipList.add(ipList);
     }
-
 }

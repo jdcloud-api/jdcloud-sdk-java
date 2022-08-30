@@ -67,12 +67,13 @@ public class ServiceNoticeItem  implements java.io.Serializable {
     /**
      * 通知周期,取值[daily,weekly,monthly].
      */
+    
     private List<String> noticePeriod;
-
     /**
      * 通知状态，取值[init,start,stop]
      */
     private String noticeStatus;
+
 
 
     /**
@@ -93,6 +94,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 通知类型,取值[reportForm],reportForm:报表.
      *
@@ -110,6 +112,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
     public void setNoticeType(String noticeType) {
         this.noticeType = noticeType;
     }
+
 
     /**
      * get 通知方式,取值[mail],mail:邮件.
@@ -129,6 +132,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.noticeWay = noticeWay;
     }
 
+
     /**
      * get 通知接收人,多个用逗号隔开.
      *
@@ -146,6 +150,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
     public void setNoticeTo(String noticeTo) {
         this.noticeTo = noticeTo;
     }
+
 
     /**
      * get 通知抄送人,多个用逗号隔开.
@@ -165,6 +170,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.noticeCC = noticeCC;
     }
 
+
     /**
      * get 通知正文.
      *
@@ -183,23 +189,25 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.noticeContent = noticeContent;
     }
 
+
     /**
-     * get 通知周期,取值[daily,weekly,monthly].
-     *
-     * @return
-     */
+    * get 通知周期,取值[daily,weekly,monthly].
+    *
+    * @return
+    */
     public List<String> getNoticePeriod() {
         return noticePeriod;
     }
 
     /**
-     * set 通知周期,取值[daily,weekly,monthly].
-     *
-     * @param noticePeriod
-     */
+    * set 通知周期,取值[daily,weekly,monthly].
+    *
+    * @param noticePeriod
+    */
     public void setNoticePeriod(List<String> noticePeriod) {
         this.noticePeriod = noticePeriod;
     }
+
 
     /**
      * get 通知状态，取值[init,start,stop]
@@ -220,6 +228,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 服务配置id
      *
@@ -229,6 +238,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 通知类型,取值[reportForm],reportForm:报表.
@@ -240,6 +250,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 通知方式,取值[mail],mail:邮件.
      *
@@ -249,6 +260,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.noticeWay = noticeWay;
         return this;
     }
+
 
     /**
      * set 通知接收人,多个用逗号隔开.
@@ -260,6 +272,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 通知抄送人,多个用逗号隔开.
      *
@@ -269,6 +282,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.noticeCC = noticeCC;
         return this;
     }
+
 
     /**
      * set 通知正文.
@@ -280,15 +294,17 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 通知周期,取值[daily,weekly,monthly].
-     *
-     * @param noticePeriod
-     */
+    * set 通知周期,取值[daily,weekly,monthly].
+    *
+    * @param noticePeriod
+    */
     public ServiceNoticeItem noticePeriod(List<String> noticePeriod) {
         this.noticePeriod = noticePeriod;
         return this;
     }
+
 
     /**
      * set 通知状态，取值[init,start,stop]
@@ -299,6 +315,7 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         this.noticeStatus = noticeStatus;
         return this;
     }
+
 
 
     /**
@@ -312,5 +329,4 @@ public class ServiceNoticeItem  implements java.io.Serializable {
         }
         this.noticePeriod.add(noticePeriod);
     }
-
 }

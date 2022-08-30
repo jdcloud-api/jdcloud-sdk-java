@@ -74,6 +74,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
     /**
      * subUserQuota
      */
+    
     private List<SubUserRefreshLimit> subUserQuota;
 
 
@@ -95,6 +96,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         this.user = user;
     }
 
+
     /**
      * get 主账号刷新个数
      *
@@ -112,6 +114,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
     public void setRefreshCount(Long refreshCount) {
         this.refreshCount = refreshCount;
     }
+
 
     /**
      * get 主账号目录个数
@@ -131,6 +134,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         this.dirCount = dirCount;
     }
 
+
     /**
      * get 主账号预热个数
      *
@@ -148,6 +152,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
     public void setPrefetchCount(Long prefetchCount) {
         this.prefetchCount = prefetchCount;
     }
+
 
     /**
      * get 默认为1
@@ -167,6 +172,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 默认为10，最大100
      *
@@ -184,6 +190,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 默认为10，最大100
@@ -203,23 +210,25 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         this.total = total;
     }
 
+
     /**
-     * get subUserQuota
-     *
-     * @return
-     */
+    * get subUserQuota
+    *
+    * @return
+    */
     public List<SubUserRefreshLimit> getSubUserQuota() {
         return subUserQuota;
     }
 
     /**
-     * set subUserQuota
-     *
-     * @param subUserQuota
-     */
+    * set subUserQuota
+    *
+    * @param subUserQuota
+    */
     public void setSubUserQuota(List<SubUserRefreshLimit> subUserQuota) {
         this.subUserQuota = subUserQuota;
     }
+
 
 
     /**
@@ -232,6 +241,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 主账号刷新个数
      *
@@ -241,6 +251,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         this.refreshCount = refreshCount;
         return this;
     }
+
 
     /**
      * set 主账号目录个数
@@ -252,6 +263,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 主账号预热个数
      *
@@ -261,6 +273,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         this.prefetchCount = prefetchCount;
         return this;
     }
+
 
     /**
      * set 默认为1
@@ -272,6 +285,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 默认为10，最大100
      *
@@ -281,6 +295,7 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 默认为10，最大100
@@ -292,15 +307,17 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
-     * set subUserQuota
-     *
-     * @param subUserQuota
-     */
+    * set subUserQuota
+    *
+    * @param subUserQuota
+    */
     public QueryRefreshLimitResult subUserQuota(List<SubUserRefreshLimit> subUserQuota) {
         this.subUserQuota = subUserQuota;
         return this;
     }
+
 
 
     /**
@@ -314,5 +331,4 @@ public class QueryRefreshLimitResult extends JdcloudResult implements java.io.Se
         }
         this.subUserQuota.add(subUserQuota);
     }
-
 }

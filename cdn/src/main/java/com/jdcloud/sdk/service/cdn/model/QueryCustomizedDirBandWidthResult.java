@@ -44,6 +44,7 @@ public class QueryCustomizedDirBandWidthResult extends JdcloudResult implements 
     /**
      * data
      */
+    
     private List<FlowItem> data;
 
 
@@ -65,23 +66,25 @@ public class QueryCustomizedDirBandWidthResult extends JdcloudResult implements 
         this.domain = domain;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<FlowItem> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<FlowItem> data) {
         this.data = data;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryCustomizedDirBandWidthResult extends JdcloudResult implements 
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public QueryCustomizedDirBandWidthResult data(List<FlowItem> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryCustomizedDirBandWidthResult extends JdcloudResult implements 
         }
         this.data.add(data);
     }
-
 }

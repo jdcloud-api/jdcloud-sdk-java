@@ -53,6 +53,7 @@ public class OSSAuthInfo  implements java.io.Serializable {
     private String objectName;
 
 
+
     /**
      * get 密钥
      *
@@ -70,6 +71,7 @@ public class OSSAuthInfo  implements java.io.Serializable {
     public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
+
 
     /**
      * get 密钥的加密密钥
@@ -89,6 +91,7 @@ public class OSSAuthInfo  implements java.io.Serializable {
         this.secretKey = secretKey;
     }
 
+
     /**
      * get 默认为/tt-video
      *
@@ -106,6 +109,7 @@ public class OSSAuthInfo  implements java.io.Serializable {
     public void setBucketName(String bucketName) {
         this.bucketName = bucketName;
     }
+
 
     /**
      * get objectName
@@ -126,6 +130,7 @@ public class OSSAuthInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 密钥
      *
@@ -135,6 +140,7 @@ public class OSSAuthInfo  implements java.io.Serializable {
         this.accessKey = accessKey;
         return this;
     }
+
 
     /**
      * set 密钥的加密密钥
@@ -146,6 +152,7 @@ public class OSSAuthInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 默认为/tt-video
      *
@@ -155,6 +162,7 @@ public class OSSAuthInfo  implements java.io.Serializable {
         this.bucketName = bucketName;
         return this;
     }
+
 
     /**
      * set objectName

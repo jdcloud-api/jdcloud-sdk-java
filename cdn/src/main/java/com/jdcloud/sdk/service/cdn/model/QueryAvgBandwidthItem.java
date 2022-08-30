@@ -48,6 +48,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
     private String isp;
 
 
+
     /**
      * get 五分钟序列，202003021100 表示 从 2020-03-02 11:00 到 2020-03-02 11:05 这个时段
      *
@@ -66,6 +67,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 平均带宽kbps
      *
@@ -83,6 +85,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
     public void setAvgbandwidth(Double avgbandwidth) {
         this.avgbandwidth = avgbandwidth;
     }
+
 
     /**
      * get isp
@@ -103,6 +106,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 五分钟序列，202003021100 表示 从 2020-03-02 11:00 到 2020-03-02 11:05 这个时段
      *
@@ -113,6 +117,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 平均带宽kbps
      *
@@ -122,6 +127,7 @@ public class QueryAvgBandwidthItem  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
         return this;
     }
+
 
     /**
      * set isp

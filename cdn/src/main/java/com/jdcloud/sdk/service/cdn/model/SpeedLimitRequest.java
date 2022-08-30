@@ -47,6 +47,7 @@ public class SpeedLimitRequest extends JdcloudRequest implements java.io.Seriali
     private String domain;
 
 
+
     /**
      * get 限速值,单位为KB/s,取值范围[1,20480]
      *
@@ -64,6 +65,7 @@ public class SpeedLimitRequest extends JdcloudRequest implements java.io.Seriali
     public void setLimitRate(Integer limitRate) {
         this.limitRate = limitRate;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class SpeedLimitRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 限速值,单位为KB/s,取值范围[1,20480]
      *
@@ -93,6 +96,7 @@ public class SpeedLimitRequest extends JdcloudRequest implements java.io.Seriali
         this.limitRate = limitRate;
         return this;
     }
+
 
     /**
      * set 用户域名

@@ -43,6 +43,7 @@ public class SimpleGroupItem  implements java.io.Serializable {
     private Long id;
 
 
+
     /**
      * get name
      *
@@ -60,6 +61,7 @@ public class SimpleGroupItem  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get id
@@ -80,6 +82,7 @@ public class SimpleGroupItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set name
      *
@@ -89,6 +92,7 @@ public class SimpleGroupItem  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set id

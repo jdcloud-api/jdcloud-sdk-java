@@ -74,6 +74,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     /**
      * 标签过滤条件
      */
+    
     private List<TagFilter> tagFilters;
 
 
@@ -95,6 +96,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         this.keyWord = keyWord;
     }
 
+
     /**
      * get pageNumber,默认值为1
      *
@@ -112,6 +114,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get pageSize,默认值为20,最大值为50
@@ -131,6 +134,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 根据域名状态查询, 可选值[offline, online, configuring, auditing, audit_reject]
      *
@@ -148,6 +152,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
@@ -167,6 +172,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         this.type = type;
     }
 
+
     /**
      * get 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
      *
@@ -184,6 +190,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
     public void setAccelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
     }
+
 
     /**
      * get 筛选依据（0：根据域名筛选，1：根据回源信息筛选），默认按照域名进行筛选
@@ -203,23 +210,25 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         this.filterBy = filterBy;
     }
 
+
     /**
-     * get 标签过滤条件
-     *
-     * @return
-     */
+    * get 标签过滤条件
+    *
+    * @return
+    */
     public List<TagFilter> getTagFilters() {
         return tagFilters;
     }
 
     /**
-     * set 标签过滤条件
-     *
-     * @param tagFilters
-     */
+    * set 标签过滤条件
+    *
+    * @param tagFilters
+    */
     public void setTagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
     }
+
 
 
     /**
@@ -232,6 +241,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set pageNumber,默认值为1
      *
@@ -241,6 +251,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set pageSize,默认值为20,最大值为50
@@ -252,6 +263,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 根据域名状态查询, 可选值[offline, online, configuring, auditing, audit_reject]
      *
@@ -261,6 +273,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         this.status = status;
         return this;
     }
+
 
     /**
      * set 域名类型，(web:静态小文件，download:大文件加速，vod:视频加速，live:直播加速),不传查所有
@@ -272,6 +285,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 加速区域，(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球),不传为全球
      *
@@ -281,6 +295,7 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         this.accelerateRegion = accelerateRegion;
         return this;
     }
+
 
     /**
      * set 筛选依据（0：根据域名筛选，1：根据回源信息筛选），默认按照域名进行筛选
@@ -292,15 +307,17 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
-     * set 标签过滤条件
-     *
-     * @param tagFilters
-     */
+    * set 标签过滤条件
+    *
+    * @param tagFilters
+    */
     public GetDomainListByFilterRequest tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
+
 
 
     /**
@@ -314,5 +331,4 @@ public class GetDomainListByFilterRequest extends JdcloudRequest implements java
         }
         this.tagFilters.add(tagFilter);
     }
-
 }

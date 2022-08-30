@@ -52,6 +52,7 @@ public class SetFilterArgsRequest extends JdcloudRequest implements java.io.Seri
     private String domain;
 
 
+
     /**
      * get 保留参数，多个用;隔开
      *
@@ -70,6 +71,7 @@ public class SetFilterArgsRequest extends JdcloudRequest implements java.io.Seri
         this.retainArgs = retainArgs;
     }
 
+
     /**
      * get 忽略参数开关，取值：on or off
      *
@@ -87,6 +89,7 @@ public class SetFilterArgsRequest extends JdcloudRequest implements java.io.Seri
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 用户域名
@@ -107,6 +110,7 @@ public class SetFilterArgsRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 保留参数，多个用;隔开
      *
@@ -117,6 +121,7 @@ public class SetFilterArgsRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 忽略参数开关，取值：on or off
      *
@@ -126,6 +131,7 @@ public class SetFilterArgsRequest extends JdcloudRequest implements java.io.Seri
         this.status = status;
         return this;
     }
+
 
     /**
      * set 用户域名

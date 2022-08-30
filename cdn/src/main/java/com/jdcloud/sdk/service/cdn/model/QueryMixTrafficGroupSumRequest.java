@@ -78,6 +78,12 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
      */
     private String cacheType;
 
+    /**
+     * 查询IP类型，可选值:[,ipv4,ipv6],默认查询all
+     */
+    private String ipType;
+
+
 
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -97,6 +103,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         this.startTime = startTime;
     }
 
+
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -114,6 +121,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 需要查询的域名, 必须为用户pin下有权限的域名
@@ -133,6 +141,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         this.domain = domain;
     }
 
+
     /**
      * get 需要查询的字段
      *
@@ -150,6 +159,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     public void setFields(String fields) {
         this.fields = fields;
     }
+
 
     /**
      * get 查询的区域，如beijing,shanghai。多个用逗号分隔
@@ -169,6 +179,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         this.area = area;
     }
 
+
     /**
      * get 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
@@ -186,6 +197,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
@@ -205,6 +217,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         this.period = period;
     }
 
+
     /**
      * get 分组依据,只能按域名[domain]分组
      *
@@ -222,6 +235,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
     public void setGroupBy(String groupBy) {
         this.groupBy = groupBy;
     }
+
 
     /**
      * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
@@ -243,6 +257,26 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
 
 
     /**
+     * get 查询IP类型，可选值:[,ipv4,ipv6],默认查询all
+     *
+     * @return
+     */
+    public String getIpType() {
+        return ipType;
+    }
+
+    /**
+     * set 查询IP类型，可选值:[,ipv4,ipv6],默认查询all
+     *
+     * @param ipType
+     */
+    public void setIpType(String ipType) {
+        this.ipType = ipType;
+    }
+
+
+
+    /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
      * @param startTime
@@ -251,6 +285,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -262,6 +297,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 需要查询的域名, 必须为用户pin下有权限的域名
      *
@@ -271,6 +307,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 需要查询的字段
@@ -282,6 +319,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
@@ -291,6 +329,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         this.area = area;
         return this;
     }
+
 
     /**
      * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
@@ -302,6 +341,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
      *
@@ -311,6 +351,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         this.period = period;
         return this;
     }
+
 
     /**
      * set 分组依据,只能按域名[domain]分组
@@ -322,6 +363,7 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
      *
@@ -329,6 +371,17 @@ public class QueryMixTrafficGroupSumRequest extends JdcloudRequest implements ja
      */
     public QueryMixTrafficGroupSumRequest cacheType(String cacheType) {
         this.cacheType = cacheType;
+        return this;
+    }
+
+
+    /**
+     * set 查询IP类型，可选值:[,ipv4,ipv6],默认查询all
+     *
+     * @param ipType
+     */
+    public QueryMixTrafficGroupSumRequest ipType(String ipType) {
+        this.ipType = ipType;
         return this;
     }
 

@@ -62,12 +62,13 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
     /**
      * 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot; &quot;ratelimit&quot; 自由组合，空表示跳过后续所有阶段
      */
+    
     private List<String> actions;
-
     /**
      * 白名单的修改时间,UTC时间
      */
     private String updateTime;
+
 
 
     /**
@@ -88,6 +89,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 匹配模式,uri类型有效，0&#x3D;完全匹配  1&#x3D;前缀匹配 2&#x3D;包含 3&#x3D;正则 4&#x3D;大于 5&#x3D;后缀
      *
@@ -105,6 +107,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
     public void setMatchOp(Integer matchOp) {
         this.matchOp = matchOp;
     }
+
 
     /**
      * get 匹配值
@@ -124,6 +127,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         this.val = val;
     }
 
+
     /**
      * get 匹配值的中文名
      *
@@ -141,6 +145,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
     public void setValZh(String valZh) {
         this.valZh = valZh;
     }
+
 
     /**
      * get 是否启用, true为启用,false为未启用
@@ -160,23 +165,25 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
-     * get 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot; &quot;ratelimit&quot; 自由组合，空表示跳过后续所有阶段
-     *
-     * @return
-     */
+    * get 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot; &quot;ratelimit&quot; 自由组合，空表示跳过后续所有阶段
+    *
+    * @return
+    */
     public List<String> getActions() {
         return actions;
     }
 
     /**
-     * set 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot; &quot;ratelimit&quot; 自由组合，空表示跳过后续所有阶段
-     *
-     * @param actions
-     */
+    * set 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot; &quot;ratelimit&quot; 自由组合，空表示跳过后续所有阶段
+    *
+    * @param actions
+    */
     public void setActions(List<String> actions) {
         this.actions = actions;
     }
+
 
     /**
      * get 白名单的修改时间,UTC时间
@@ -197,6 +204,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 白名单规则id
      *
@@ -206,6 +214,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 匹配模式,uri类型有效，0&#x3D;完全匹配  1&#x3D;前缀匹配 2&#x3D;包含 3&#x3D;正则 4&#x3D;大于 5&#x3D;后缀
@@ -217,6 +226,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配值
      *
@@ -226,6 +236,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         this.val = val;
         return this;
     }
+
 
     /**
      * set 匹配值的中文名
@@ -237,6 +248,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否启用, true为启用,false为未启用
      *
@@ -247,15 +259,17 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot; &quot;ratelimit&quot; 自由组合，空表示跳过后续所有阶段
-     *
-     * @param actions
-     */
+    * set 后续处理 &quot;waf&quot; &quot;cc&quot; &quot;deny&quot; &quot;ratelimit&quot; 自由组合，空表示跳过后续所有阶段
+    *
+    * @param actions
+    */
     public WafWhiteRuleModel actions(List<String> actions) {
         this.actions = actions;
         return this;
     }
+
 
     /**
      * set 白名单的修改时间,UTC时间
@@ -266,6 +280,7 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         this.updateTime = updateTime;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class WafWhiteRuleModel  implements java.io.Serializable {
         }
         this.actions.add(action);
     }
-
 }

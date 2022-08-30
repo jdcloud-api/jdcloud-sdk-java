@@ -47,6 +47,7 @@ public class PreviewCertificateRequest extends JdcloudRequest implements java.io
     private String domain;
 
 
+
     /**
      * get content
      *
@@ -64,6 +65,7 @@ public class PreviewCertificateRequest extends JdcloudRequest implements java.io
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class PreviewCertificateRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set content
      *
@@ -93,6 +96,7 @@ public class PreviewCertificateRequest extends JdcloudRequest implements java.io
         this.content = content;
         return this;
     }
+
 
     /**
      * set 用户域名

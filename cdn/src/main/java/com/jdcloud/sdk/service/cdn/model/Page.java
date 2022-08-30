@@ -48,6 +48,7 @@ public class Page  implements java.io.Serializable {
     private Integer size;
 
 
+
     /**
      * get total
      *
@@ -66,6 +67,7 @@ public class Page  implements java.io.Serializable {
         this.total = total;
     }
 
+
     /**
      * get page
      *
@@ -83,6 +85,7 @@ public class Page  implements java.io.Serializable {
     public void setPage(Integer page) {
         this.page = page;
     }
+
 
     /**
      * get size
@@ -103,6 +106,7 @@ public class Page  implements java.io.Serializable {
     }
 
 
+
     /**
      * set total
      *
@@ -113,6 +117,7 @@ public class Page  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set page
      *
@@ -122,6 +127,7 @@ public class Page  implements java.io.Serializable {
         this.page = page;
         return this;
     }
+
 
     /**
      * set size

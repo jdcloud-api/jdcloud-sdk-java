@@ -53,6 +53,7 @@ public class OverviewTrafficTotal  implements java.io.Serializable {
     private Long topTimeStamp;
 
 
+
     /**
      * get avgbandwidth
      *
@@ -70,6 +71,7 @@ public class OverviewTrafficTotal  implements java.io.Serializable {
     public void setAvgbandwidth(Double avgbandwidth) {
         this.avgbandwidth = avgbandwidth;
     }
+
 
     /**
      * get flow
@@ -89,6 +91,7 @@ public class OverviewTrafficTotal  implements java.io.Serializable {
         this.flow = flow;
     }
 
+
     /**
      * get pv
      *
@@ -106,6 +109,7 @@ public class OverviewTrafficTotal  implements java.io.Serializable {
     public void setPv(Long pv) {
         this.pv = pv;
     }
+
 
     /**
      * get topTimeStamp
@@ -126,6 +130,7 @@ public class OverviewTrafficTotal  implements java.io.Serializable {
     }
 
 
+
     /**
      * set avgbandwidth
      *
@@ -135,6 +140,7 @@ public class OverviewTrafficTotal  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
         return this;
     }
+
 
     /**
      * set flow
@@ -146,6 +152,7 @@ public class OverviewTrafficTotal  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pv
      *
@@ -155,6 +162,7 @@ public class OverviewTrafficTotal  implements java.io.Serializable {
         this.pv = pv;
         return this;
     }
+
 
     /**
      * set topTimeStamp

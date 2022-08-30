@@ -98,6 +98,12 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
      */
     private String cacheType;
 
+    /**
+     * 查询IP类型，可选值:[,ipv4,ipv6],默认查询all
+     */
+    private String ipType;
+
+
 
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -117,6 +123,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.startTime = startTime;
     }
 
+
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -134,6 +141,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 需要查询的域名, 必须为用户pin下有权限的域名
@@ -153,6 +161,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.domain = domain;
     }
 
+
     /**
      * get 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
      *
@@ -170,6 +179,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
     public void setSubDomain(String subDomain) {
         this.subDomain = subDomain;
     }
+
 
     /**
      * get 需要查询的字段
@@ -189,6 +199,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.fields = fields;
     }
 
+
     /**
      * get 查询的区域，如beijing,shanghai。多个用逗号分隔
      *
@@ -206,6 +217,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
     public void setArea(String area) {
         this.area = area;
     }
+
 
     /**
      * get 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
@@ -225,6 +237,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.isp = isp;
     }
 
+
     /**
      * get 是否查询回源统计信息。取值为true和false，默认为false。注意，如果查询回源信息，Fields的取值当前只支持oribandwidth，oripv，oricodestat三个，其余Fields忽略
      *
@@ -242,6 +255,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
     public void setOrigin(Boolean origin) {
         this.origin = origin;
     }
+
 
     /**
      * get 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
@@ -261,6 +275,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.period = period;
     }
 
+
     /**
      * get 分组依据,可选值：[terminal,sdtfrom],如果为空，则只按area/isp进行group
      *
@@ -278,6 +293,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
     public void setGroupBy(String groupBy) {
         this.groupBy = groupBy;
     }
+
 
     /**
      * get 查询协议，可选值:[http,https,all],传空默认返回全部协议汇总后的数据
@@ -297,6 +313,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.scheme = scheme;
     }
 
+
     /**
      * get true 代表查询境外数据，默认false查询境内数据
      *
@@ -314,6 +331,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
     public void setAbroad(Boolean abroad) {
         this.abroad = abroad;
     }
+
 
     /**
      * get 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
@@ -335,6 +353,26 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
 
 
     /**
+     * get 查询IP类型，可选值:[,ipv4,ipv6],默认查询all
+     *
+     * @return
+     */
+    public String getIpType() {
+        return ipType;
+    }
+
+    /**
+     * set 查询IP类型，可选值:[,ipv4,ipv6],默认查询all
+     *
+     * @param ipType
+     */
+    public void setIpType(String ipType) {
+        this.ipType = ipType;
+    }
+
+
+
+    /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
      * @param startTime
@@ -343,6 +381,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -354,6 +393,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 需要查询的域名, 必须为用户pin下有权限的域名
      *
@@ -363,6 +403,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
@@ -374,6 +415,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 需要查询的字段
      *
@@ -383,6 +425,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.fields = fields;
         return this;
     }
+
 
     /**
      * set 查询的区域，如beijing,shanghai。多个用逗号分隔
@@ -394,6 +437,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 查询的运营商，cmcc,cnc,ct，表示移动、联通、电信。多个用逗号分隔
      *
@@ -403,6 +447,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set 是否查询回源统计信息。取值为true和false，默认为false。注意，如果查询回源信息，Fields的取值当前只支持oribandwidth，oripv，oricodestat三个，其余Fields忽略
@@ -414,6 +459,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 时间粒度，可选值:[oneMin,fiveMin,followTime],followTime只会返回一个汇总后的数据
      *
@@ -423,6 +469,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.period = period;
         return this;
     }
+
 
     /**
      * set 分组依据,可选值：[terminal,sdtfrom],如果为空，则只按area/isp进行group
@@ -434,6 +481,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 查询协议，可选值:[http,https,all],传空默认返回全部协议汇总后的数据
      *
@@ -443,6 +491,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         this.scheme = scheme;
         return this;
     }
+
 
     /**
      * set true 代表查询境外数据，默认false查询境内数据
@@ -454,6 +503,7 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
         return this;
     }
 
+
     /**
      * set 查询节点层级，可选值:[all,edge,mid],默认查询all,edge边缘 mid中间
      *
@@ -461,6 +511,17 @@ public class QueryStatisticsDataGroupByAreaRequest extends JdcloudRequest implem
      */
     public QueryStatisticsDataGroupByAreaRequest cacheType(String cacheType) {
         this.cacheType = cacheType;
+        return this;
+    }
+
+
+    /**
+     * set 查询IP类型，可选值:[,ipv4,ipv6],默认查询all
+     *
+     * @param ipType
+     */
+    public QueryStatisticsDataGroupByAreaRequest ipType(String ipType) {
+        this.ipType = ipType;
         return this;
     }
 

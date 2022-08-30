@@ -79,6 +79,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     private String pluginPin;
 
 
+
     /**
      * get 查询起始时间,时间戳
      *
@@ -96,6 +97,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     public void setStartTime(Long startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,时间戳
@@ -115,6 +117,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.endTime = endTime;
     }
 
+
     /**
      * get 查询的字段，取值范围(avgbandwidth,pv,flow)。多个用逗号分隔。默认为空，表示查询带宽流量
      *
@@ -132,6 +135,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     public void setFields(String fields) {
         this.fields = fields;
     }
+
 
     /**
      * get area
@@ -151,6 +155,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.area = area;
     }
 
+
     /**
      * get isp
      *
@@ -168,6 +173,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get 查询周期，当前取值范围：“oneMin,fiveMin”，分别表示1min，5min。默认为空，表示fiveMin
@@ -187,6 +193,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.period = period;
     }
 
+
     /**
      * get 业务类型
      *
@@ -205,6 +212,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.category = category;
     }
 
+
     /**
      * get 设备id
      *
@@ -222,6 +230,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     public void setMacAddr(String macAddr) {
         this.macAddr = macAddr;
     }
+
 
     /**
      * get 插件pin
@@ -242,6 +251,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 查询起始时间,时间戳
      *
@@ -251,6 +261,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,时间戳
@@ -262,6 +273,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 查询的字段，取值范围(avgbandwidth,pv,flow)。多个用逗号分隔。默认为空，表示查询带宽流量
      *
@@ -271,6 +283,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.fields = fields;
         return this;
     }
+
 
     /**
      * set area
@@ -282,6 +295,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set isp
      *
@@ -291,6 +305,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set 查询周期，当前取值范围：“oneMin,fiveMin”，分别表示1min，5min。默认为空，表示fiveMin
@@ -302,6 +317,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 业务类型
      *
@@ -312,6 +328,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 设备id
      *
@@ -321,6 +338,7 @@ public class QueryJDBoxStatisticsDataRequest extends JdcloudRequest implements j
         this.macAddr = macAddr;
         return this;
     }
+
 
     /**
      * set 插件pin

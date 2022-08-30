@@ -83,6 +83,7 @@ public class ListDomainItem  implements java.io.Serializable {
     private String accelerateRegion;
 
 
+
     /**
      * get cname
      *
@@ -100,6 +101,7 @@ public class ListDomainItem  implements java.io.Serializable {
     public void setCname(String cname) {
         this.cname = cname;
     }
+
 
     /**
      * get description
@@ -119,6 +121,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get domain
      *
@@ -136,6 +139,7 @@ public class ListDomainItem  implements java.io.Serializable {
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get created
@@ -155,6 +159,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.created = created;
     }
 
+
     /**
      * get modified
      *
@@ -172,6 +177,7 @@ public class ListDomainItem  implements java.io.Serializable {
     public void setModified(String modified) {
         this.modified = modified;
     }
+
 
     /**
      * get status
@@ -191,6 +197,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get wafStatus
      *
@@ -208,6 +215,7 @@ public class ListDomainItem  implements java.io.Serializable {
     public void setWafStatus(String wafStatus) {
         this.wafStatus = wafStatus;
     }
+
 
     /**
      * get type
@@ -227,6 +235,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.type = type;
     }
 
+
     /**
      * get auditStatus
      *
@@ -244,6 +253,7 @@ public class ListDomainItem  implements java.io.Serializable {
     public void setAuditStatus(String auditStatus) {
         this.auditStatus = auditStatus;
     }
+
 
     /**
      * get accelerateRegion
@@ -264,6 +274,7 @@ public class ListDomainItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set cname
      *
@@ -273,6 +284,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.cname = cname;
         return this;
     }
+
 
     /**
      * set description
@@ -284,6 +296,7 @@ public class ListDomainItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set domain
      *
@@ -293,6 +306,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set created
@@ -304,6 +318,7 @@ public class ListDomainItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set modified
      *
@@ -313,6 +328,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.modified = modified;
         return this;
     }
+
 
     /**
      * set status
@@ -324,6 +340,7 @@ public class ListDomainItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set wafStatus
      *
@@ -333,6 +350,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.wafStatus = wafStatus;
         return this;
     }
+
 
     /**
      * set type
@@ -344,6 +362,7 @@ public class ListDomainItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set auditStatus
      *
@@ -353,6 +372,7 @@ public class ListDomainItem  implements java.io.Serializable {
         this.auditStatus = auditStatus;
         return this;
     }
+
 
     /**
      * set accelerateRegion

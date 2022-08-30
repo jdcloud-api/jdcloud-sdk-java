@@ -44,6 +44,7 @@ public class WafQueryAttackDetailsResult extends JdcloudResult implements java.i
     /**
      * attackDetails
      */
+    
     private List<AttackDetail> attackDetails;
 
 
@@ -65,23 +66,25 @@ public class WafQueryAttackDetailsResult extends JdcloudResult implements java.i
         this.total = total;
     }
 
+
     /**
-     * get attackDetails
-     *
-     * @return
-     */
+    * get attackDetails
+    *
+    * @return
+    */
     public List<AttackDetail> getAttackDetails() {
         return attackDetails;
     }
 
     /**
-     * set attackDetails
-     *
-     * @param attackDetails
-     */
+    * set attackDetails
+    *
+    * @param attackDetails
+    */
     public void setAttackDetails(List<AttackDetail> attackDetails) {
         this.attackDetails = attackDetails;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class WafQueryAttackDetailsResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set attackDetails
-     *
-     * @param attackDetails
-     */
+    * set attackDetails
+    *
+    * @param attackDetails
+    */
     public WafQueryAttackDetailsResult attackDetails(List<AttackDetail> attackDetails) {
         this.attackDetails = attackDetails;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class WafQueryAttackDetailsResult extends JdcloudResult implements java.i
         }
         this.attackDetails.add(attackDetail);
     }
-
 }

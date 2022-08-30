@@ -47,6 +47,7 @@ public class ConfigHttp2Request extends JdcloudRequest implements java.io.Serial
     private String domain;
 
 
+
     /**
      * get HTTP2功能开关，取值on/off
      *
@@ -64,6 +65,7 @@ public class ConfigHttp2Request extends JdcloudRequest implements java.io.Serial
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class ConfigHttp2Request extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set HTTP2功能开关，取值on/off
      *
@@ -93,6 +96,7 @@ public class ConfigHttp2Request extends JdcloudRequest implements java.io.Serial
         this.status = status;
         return this;
     }
+
 
     /**
      * set 用户域名

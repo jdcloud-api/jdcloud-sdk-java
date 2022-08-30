@@ -42,6 +42,7 @@ public class QueryIpBlackListRequest extends JdcloudRequest implements java.io.S
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class QueryIpBlackListRequest extends JdcloudRequest implements java.io.S
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

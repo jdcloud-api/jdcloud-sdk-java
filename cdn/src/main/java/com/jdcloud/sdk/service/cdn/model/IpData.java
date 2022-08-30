@@ -43,6 +43,7 @@ public class IpData  implements java.io.Serializable {
     private Integer pv;
 
 
+
     /**
      * get ip地址
      *
@@ -60,6 +61,7 @@ public class IpData  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 该ip的全部攻击pv
@@ -80,6 +82,7 @@ public class IpData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ip地址
      *
@@ -89,6 +92,7 @@ public class IpData  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 该ip的全部攻击pv

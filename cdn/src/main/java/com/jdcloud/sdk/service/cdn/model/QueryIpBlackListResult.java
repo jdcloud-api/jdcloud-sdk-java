@@ -43,8 +43,8 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     /**
      * ips
      */
+    
     private List<String> ips;
-
     /**
      * 黑名单状态,on:开启,off:关闭
      */
@@ -53,6 +53,7 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
     /**
      * whiteIps
      */
+    
     private List<String> whiteIps;
 
 
@@ -74,23 +75,25 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
         this.domain = domain;
     }
 
+
     /**
-     * get ips
-     *
-     * @return
-     */
+    * get ips
+    *
+    * @return
+    */
     public List<String> getIps() {
         return ips;
     }
 
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public void setIps(List<String> ips) {
         this.ips = ips;
     }
+
 
     /**
      * get 黑名单状态,on:开启,off:关闭
@@ -110,23 +113,25 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
         this.status = status;
     }
 
+
     /**
-     * get whiteIps
-     *
-     * @return
-     */
+    * get whiteIps
+    *
+    * @return
+    */
     public List<String> getWhiteIps() {
         return whiteIps;
     }
 
     /**
-     * set whiteIps
-     *
-     * @param whiteIps
-     */
+    * set whiteIps
+    *
+    * @param whiteIps
+    */
     public void setWhiteIps(List<String> whiteIps) {
         this.whiteIps = whiteIps;
     }
+
 
 
     /**
@@ -139,15 +144,17 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public QueryIpBlackListResult ips(List<String> ips) {
         this.ips = ips;
         return this;
     }
+
 
     /**
      * set 黑名单状态,on:开启,off:关闭
@@ -159,15 +166,17 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set whiteIps
-     *
-     * @param whiteIps
-     */
+    * set whiteIps
+    *
+    * @param whiteIps
+    */
     public QueryIpBlackListResult whiteIps(List<String> whiteIps) {
         this.whiteIps = whiteIps;
         return this;
     }
+
 
 
     /**
@@ -193,5 +202,4 @@ public class QueryIpBlackListResult extends JdcloudResult implements java.io.Ser
         }
         this.whiteIps.add(whiteIp);
     }
-
 }

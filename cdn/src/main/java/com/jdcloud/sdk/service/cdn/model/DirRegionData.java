@@ -43,6 +43,7 @@ public class DirRegionData  implements java.io.Serializable {
     private Long bandwidth;
 
 
+
     /**
      * get 地区名称
      *
@@ -60,6 +61,7 @@ public class DirRegionData  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 各地区的目录带宽
@@ -80,6 +82,7 @@ public class DirRegionData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 地区名称
      *
@@ -89,6 +92,7 @@ public class DirRegionData  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 各地区的目录带宽

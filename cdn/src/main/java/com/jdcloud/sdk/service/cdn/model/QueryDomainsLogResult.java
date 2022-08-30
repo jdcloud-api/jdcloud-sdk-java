@@ -39,37 +39,40 @@ public class QueryDomainsLogResult extends JdcloudResult implements java.io.Seri
     /**
      * logs
      */
+    
     private List<DomainsLog> logs;
 
 
     /**
-     * get logs
-     *
-     * @return
-     */
+    * get logs
+    *
+    * @return
+    */
     public List<DomainsLog> getLogs() {
         return logs;
     }
 
     /**
-     * set logs
-     *
-     * @param logs
-     */
+    * set logs
+    *
+    * @param logs
+    */
     public void setLogs(List<DomainsLog> logs) {
         this.logs = logs;
     }
 
 
+
     /**
-     * set logs
-     *
-     * @param logs
-     */
+    * set logs
+    *
+    * @param logs
+    */
     public QueryDomainsLogResult logs(List<DomainsLog> logs) {
         this.logs = logs;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class QueryDomainsLogResult extends JdcloudResult implements java.io.Seri
         }
         this.logs.add(log);
     }
-
 }

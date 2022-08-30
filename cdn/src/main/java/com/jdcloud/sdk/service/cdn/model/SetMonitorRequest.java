@@ -57,6 +57,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     private String domain;
 
 
+
     /**
      * get 探测周期，取值1和5，单位为分钟
      *
@@ -74,6 +75,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     public void setCycle(Integer cycle) {
         this.cycle = cycle;
     }
+
 
     /**
      * get 探测路径
@@ -93,6 +95,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
         this.monitorPath = monitorPath;
     }
 
+
     /**
      * get http请求头
      *
@@ -110,6 +113,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     public void setHttpRequestHeader(Object httpRequestHeader) {
         this.httpRequestHeader = httpRequestHeader;
     }
+
 
     /**
      * get 用户域名
@@ -130,6 +134,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 探测周期，取值1和5，单位为分钟
      *
@@ -139,6 +144,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
         this.cycle = cycle;
         return this;
     }
+
 
     /**
      * set 探测路径
@@ -150,6 +156,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set http请求头
      *
@@ -159,6 +166,7 @@ public class SetMonitorRequest extends JdcloudRequest implements java.io.Seriali
         this.httpRequestHeader = httpRequestHeader;
         return this;
     }
+
 
     /**
      * set 用户域名

@@ -44,6 +44,7 @@ public class QueryDirStatsDataResult extends JdcloudResult implements java.io.Se
     /**
      * datas
      */
+    
     private List<DirStatsItem> datas;
 
 
@@ -65,23 +66,25 @@ public class QueryDirStatsDataResult extends JdcloudResult implements java.io.Se
         this.domain = domain;
     }
 
+
     /**
-     * get datas
-     *
-     * @return
-     */
+    * get datas
+    *
+    * @return
+    */
     public List<DirStatsItem> getDatas() {
         return datas;
     }
 
     /**
-     * set datas
-     *
-     * @param datas
-     */
+    * set datas
+    *
+    * @param datas
+    */
     public void setDatas(List<DirStatsItem> datas) {
         this.datas = datas;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryDirStatsDataResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
-     * set datas
-     *
-     * @param datas
-     */
+    * set datas
+    *
+    * @param datas
+    */
     public QueryDirStatsDataResult datas(List<DirStatsItem> datas) {
         this.datas = datas;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryDirStatsDataResult extends JdcloudResult implements java.io.Se
         }
         this.datas.add(data);
     }
-
 }

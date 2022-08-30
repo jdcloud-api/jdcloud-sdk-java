@@ -47,6 +47,7 @@ public class SetAccelerateRegionRequest extends JdcloudRequest implements java.i
     private String domain;
 
 
+
     /**
      * get 加速区域,取值[mainland,nonMainland,all]
      *
@@ -64,6 +65,7 @@ public class SetAccelerateRegionRequest extends JdcloudRequest implements java.i
     public void setAccelerateRegion(String accelerateRegion) {
         this.accelerateRegion = accelerateRegion;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class SetAccelerateRegionRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 加速区域,取值[mainland,nonMainland,all]
      *
@@ -93,6 +96,7 @@ public class SetAccelerateRegionRequest extends JdcloudRequest implements java.i
         this.accelerateRegion = accelerateRegion;
         return this;
     }
+
 
     /**
      * set 用户域名

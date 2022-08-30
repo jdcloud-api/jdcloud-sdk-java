@@ -53,6 +53,7 @@ public class CacheRuleVo  implements java.io.Serializable {
     private Integer cacheType;
 
 
+
     /**
      * get 此条配置的权重值, 取值范围为1-10,1最大
      *
@@ -70,6 +71,7 @@ public class CacheRuleVo  implements java.io.Serializable {
     public void setWeight(Integer weight) {
         this.weight = weight;
     }
+
 
     /**
      * get 缓存时间,单位秒
@@ -89,6 +91,7 @@ public class CacheRuleVo  implements java.io.Serializable {
         this.ttl = ttl;
     }
 
+
     /**
      * get 规则内容。其他类型只能以/或者.开头，如/a/b或.jpg
      *
@@ -106,6 +109,7 @@ public class CacheRuleVo  implements java.io.Serializable {
     public void setContent(String content) {
         this.content = content;
     }
+
 
     /**
      * get 缓存方式：0、不缓存，1自定义
@@ -126,6 +130,7 @@ public class CacheRuleVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 此条配置的权重值, 取值范围为1-10,1最大
      *
@@ -135,6 +140,7 @@ public class CacheRuleVo  implements java.io.Serializable {
         this.weight = weight;
         return this;
     }
+
 
     /**
      * set 缓存时间,单位秒
@@ -146,6 +152,7 @@ public class CacheRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则内容。其他类型只能以/或者.开头，如/a/b或.jpg
      *
@@ -155,6 +162,7 @@ public class CacheRuleVo  implements java.io.Serializable {
         this.content = content;
         return this;
     }
+
 
     /**
      * set 缓存方式：0、不缓存，1自定义

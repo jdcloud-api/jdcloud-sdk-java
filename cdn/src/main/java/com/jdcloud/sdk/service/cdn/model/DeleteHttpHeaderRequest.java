@@ -57,6 +57,7 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
     private String domain;
 
 
+
     /**
      * get 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
      *
@@ -74,6 +75,7 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
     public void setEdgeType(Integer edgeType) {
         this.edgeType = edgeType;
     }
+
 
     /**
      * get header类型[resp,req]
@@ -93,6 +95,7 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
         this.headerType = headerType;
     }
 
+
     /**
      * get header名
      *
@@ -110,6 +113,7 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
     public void setHeaderName(String headerName) {
         this.headerName = headerName;
     }
+
 
     /**
      * get 用户域名
@@ -130,6 +134,7 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
      *
@@ -139,6 +144,7 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
         this.edgeType = edgeType;
         return this;
     }
+
 
     /**
      * set header类型[resp,req]
@@ -150,6 +156,7 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set header名
      *
@@ -159,6 +166,7 @@ public class DeleteHttpHeaderRequest extends JdcloudRequest implements java.io.S
         this.headerName = headerName;
         return this;
     }
+
 
     /**
      * set 用户域名

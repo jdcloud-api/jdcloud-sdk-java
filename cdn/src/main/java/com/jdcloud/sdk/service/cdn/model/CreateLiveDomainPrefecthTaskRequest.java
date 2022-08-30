@@ -38,8 +38,8 @@ public class CreateLiveDomainPrefecthTaskRequest extends JdcloudRequest implemen
     /**
      * 预热的URL
      */
+    
     private List<String> urlList;
-
     /**
      * 预热时长
      */
@@ -51,23 +51,25 @@ public class CreateLiveDomainPrefecthTaskRequest extends JdcloudRequest implemen
     private String action;
 
 
+
     /**
-     * get 预热的URL
-     *
-     * @return
-     */
+    * get 预热的URL
+    *
+    * @return
+    */
     public List<String> getUrlList() {
         return urlList;
     }
 
     /**
-     * set 预热的URL
-     *
-     * @param urlList
-     */
+    * set 预热的URL
+    *
+    * @param urlList
+    */
     public void setUrlList(List<String> urlList) {
         this.urlList = urlList;
     }
+
 
     /**
      * get 预热时长
@@ -86,6 +88,7 @@ public class CreateLiveDomainPrefecthTaskRequest extends JdcloudRequest implemen
     public void setPrefetchTime(Integer prefetchTime) {
         this.prefetchTime = prefetchTime;
     }
+
 
     /**
      * get 操作类型只能是[start,stop]中的一种
@@ -106,15 +109,17 @@ public class CreateLiveDomainPrefecthTaskRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
-     * set 预热的URL
-     *
-     * @param urlList
-     */
+    * set 预热的URL
+    *
+    * @param urlList
+    */
     public CreateLiveDomainPrefecthTaskRequest urlList(List<String> urlList) {
         this.urlList = urlList;
         return this;
     }
+
 
     /**
      * set 预热时长
@@ -126,6 +131,7 @@ public class CreateLiveDomainPrefecthTaskRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set 操作类型只能是[start,stop]中的一种
      *
@@ -135,6 +141,7 @@ public class CreateLiveDomainPrefecthTaskRequest extends JdcloudRequest implemen
         this.action = action;
         return this;
     }
+
 
 
     /**
@@ -148,5 +155,4 @@ public class CreateLiveDomainPrefecthTaskRequest extends JdcloudRequest implemen
         }
         this.urlList.add(urlList);
     }
-
 }

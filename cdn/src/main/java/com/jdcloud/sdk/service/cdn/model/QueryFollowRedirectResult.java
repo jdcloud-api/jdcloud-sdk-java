@@ -44,6 +44,7 @@ public class QueryFollowRedirectResult extends JdcloudResult implements java.io.
     private String followRedirect;
 
 
+
     /**
      * get domain
      *
@@ -61,6 +62,7 @@ public class QueryFollowRedirectResult extends JdcloudResult implements java.io.
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get followRedirect
@@ -81,6 +83,7 @@ public class QueryFollowRedirectResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set domain
      *
@@ -90,6 +93,7 @@ public class QueryFollowRedirectResult extends JdcloudResult implements java.io.
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set followRedirect

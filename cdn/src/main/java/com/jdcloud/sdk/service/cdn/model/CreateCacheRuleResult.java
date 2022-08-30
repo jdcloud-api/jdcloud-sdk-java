@@ -39,6 +39,7 @@ public class CreateCacheRuleResult extends JdcloudResult implements java.io.Seri
     private Long configId;
 
 
+
     /**
      * get 缓存规则配置ID
      *
@@ -56,6 +57,7 @@ public class CreateCacheRuleResult extends JdcloudResult implements java.io.Seri
     public void setConfigId(Long configId) {
         this.configId = configId;
     }
+
 
 
     /**

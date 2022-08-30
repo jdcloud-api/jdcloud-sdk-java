@@ -49,6 +49,7 @@ public class QueryWebProtectSettingsResult extends JdcloudResult implements java
     private String redirection;
 
 
+
     /**
      * get 0：拦截模式 (阻断forbidden 493跳到自定义页面) ，1-检测模式(观察notice)
      *
@@ -67,6 +68,7 @@ public class QueryWebProtectSettingsResult extends JdcloudResult implements java
         this.wafMode = wafMode;
     }
 
+
     /**
      * get 规则策略等级 0为宽松, 1为正常, 2为严格
      *
@@ -84,6 +86,7 @@ public class QueryWebProtectSettingsResult extends JdcloudResult implements java
     public void setWafLevel(Integer wafLevel) {
         this.wafLevel = wafLevel;
     }
+
 
     /**
      * get 拦截模式跳转的自定义页面名称, 缺省或default返回默认页面
@@ -104,6 +107,7 @@ public class QueryWebProtectSettingsResult extends JdcloudResult implements java
     }
 
 
+
     /**
      * set 0：拦截模式 (阻断forbidden 493跳到自定义页面) ，1-检测模式(观察notice)
      *
@@ -114,6 +118,7 @@ public class QueryWebProtectSettingsResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
      * set 规则策略等级 0为宽松, 1为正常, 2为严格
      *
@@ -123,6 +128,7 @@ public class QueryWebProtectSettingsResult extends JdcloudResult implements java
         this.wafLevel = wafLevel;
         return this;
     }
+
 
     /**
      * set 拦截模式跳转的自定义页面名称, 缺省或default返回默认页面

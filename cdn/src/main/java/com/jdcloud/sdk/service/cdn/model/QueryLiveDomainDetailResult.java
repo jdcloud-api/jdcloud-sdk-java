@@ -155,23 +155,23 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     /**
      * flvUrls
      */
+    
     private List<String> flvUrls;
-
     /**
      * hlsUrls
      */
+    
     private List<String> hlsUrls;
-
     /**
      * rtmpUrls
      */
+    
     private List<String> rtmpUrls;
-
     /**
      * protocolConverts
      */
+    
     private List<ProtocolConvert> protocolConverts;
-
     /**
      * https证书
      */
@@ -225,13 +225,13 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     /**
      * allowApps
      */
+    
     private List<String> allowApps;
-
     /**
      * ips
      */
+    
     private List<String> ips;
-
     /**
      * 是否开启ip黑名单
      */
@@ -255,8 +255,8 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     /**
      * referList
      */
+    
     private List<String> referList;
-
     /**
      * 允许无refer
      */
@@ -318,6 +318,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     private String accelerateRegion;
 
 
+
     /**
      * get 域名类型
      *
@@ -335,6 +336,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setDomainType(String domainType) {
         this.domainType = domainType;
     }
+
 
     /**
      * get 播放域名
@@ -354,6 +356,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.playDomain = playDomain;
     }
 
+
     /**
      * get 推流域名
      *
@@ -371,6 +374,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setPublishDomain(String publishDomain) {
         this.publishDomain = publishDomain;
     }
+
 
     /**
      * get 回源域名
@@ -390,6 +394,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.originDomain = originDomain;
     }
 
+
     /**
      * get 创建时间
      *
@@ -407,6 +412,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get cname
@@ -426,6 +432,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.cname = cname;
     }
 
+
     /**
      * get 站点类型推流push，拉流pull
      *
@@ -443,6 +450,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setSiteType(String siteType) {
         this.siteType = siteType;
     }
+
 
     /**
      * get 域名状态
@@ -462,6 +470,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.status = status;
     }
 
+
     /**
      * get 回源信息
      *
@@ -479,6 +488,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setSource(BackSourceInfo source) {
         this.source = source;
     }
+
 
     /**
      * get 域名回源类型
@@ -498,6 +508,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.sourceType = sourceType;
     }
 
+
     /**
      * get 回源类型目前只能未rtmp
      *
@@ -515,6 +526,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setBackSourceType(String backSourceType) {
         this.backSourceType = backSourceType;
     }
+
 
     /**
      * get 视频格式 H.264
@@ -534,6 +546,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.videoType = videoType;
     }
 
+
     /**
      * get 音频格式AAC
      *
@@ -551,6 +564,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setAudioType(String audioType) {
         this.audioType = audioType;
     }
+
 
     /**
      * get 域名类型
@@ -570,6 +584,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.type = type;
     }
 
+
     /**
      * get 默认回源host
      *
@@ -587,6 +602,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setDefaultSourceHost(String defaultSourceHost) {
         this.defaultSourceHost = defaultSourceHost;
     }
+
 
     /**
      * get 备案号
@@ -606,6 +622,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.archiveNo = archiveNo;
     }
 
+
     /**
      * get rtmpDomain
      *
@@ -623,6 +640,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setRtmpDomain(String rtmpDomain) {
         this.rtmpDomain = rtmpDomain;
     }
+
 
     /**
      * get rtmpCname
@@ -642,6 +660,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.rtmpCname = rtmpCname;
     }
 
+
     /**
      * get hdlDomain
      *
@@ -659,6 +678,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setHdlDomain(String hdlDomain) {
         this.hdlDomain = hdlDomain;
     }
+
 
     /**
      * get hdlCname
@@ -678,6 +698,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.hdlCname = hdlCname;
     }
 
+
     /**
      * get hlsDomain
      *
@@ -695,6 +716,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setHlsDomain(String hlsDomain) {
         this.hlsDomain = hlsDomain;
     }
+
 
     /**
      * get hlsCname
@@ -714,6 +736,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.hlsCname = hlsCname;
     }
 
+
     /**
      * get forwardCustomVhost
      *
@@ -732,77 +755,82 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.forwardCustomVhost = forwardCustomVhost;
     }
 
+
     /**
-     * get flvUrls
-     *
-     * @return
-     */
+    * get flvUrls
+    *
+    * @return
+    */
     public List<String> getFlvUrls() {
         return flvUrls;
     }
 
     /**
-     * set flvUrls
-     *
-     * @param flvUrls
-     */
+    * set flvUrls
+    *
+    * @param flvUrls
+    */
     public void setFlvUrls(List<String> flvUrls) {
         this.flvUrls = flvUrls;
     }
 
+
     /**
-     * get hlsUrls
-     *
-     * @return
-     */
+    * get hlsUrls
+    *
+    * @return
+    */
     public List<String> getHlsUrls() {
         return hlsUrls;
     }
 
     /**
-     * set hlsUrls
-     *
-     * @param hlsUrls
-     */
+    * set hlsUrls
+    *
+    * @param hlsUrls
+    */
     public void setHlsUrls(List<String> hlsUrls) {
         this.hlsUrls = hlsUrls;
     }
 
+
     /**
-     * get rtmpUrls
-     *
-     * @return
-     */
+    * get rtmpUrls
+    *
+    * @return
+    */
     public List<String> getRtmpUrls() {
         return rtmpUrls;
     }
 
     /**
-     * set rtmpUrls
-     *
-     * @param rtmpUrls
-     */
+    * set rtmpUrls
+    *
+    * @param rtmpUrls
+    */
     public void setRtmpUrls(List<String> rtmpUrls) {
         this.rtmpUrls = rtmpUrls;
     }
 
+
     /**
-     * get protocolConverts
-     *
-     * @return
-     */
+    * get protocolConverts
+    *
+    * @return
+    */
     public List<ProtocolConvert> getProtocolConverts() {
         return protocolConverts;
     }
 
     /**
-     * set protocolConverts
-     *
-     * @param protocolConverts
-     */
+    * set protocolConverts
+    *
+    * @param protocolConverts
+    */
     public void setProtocolConverts(List<ProtocolConvert> protocolConverts) {
         this.protocolConverts = protocolConverts;
     }
+
 
     /**
      * get https证书
@@ -822,6 +850,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.certificate = certificate;
     }
 
+
     /**
      * get https私钥
      *
@@ -839,6 +868,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setRsaKey(String rsaKey) {
         this.rsaKey = rsaKey;
     }
+
 
     /**
      * get url鉴权开关
@@ -858,6 +888,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.accesskeyType = accesskeyType;
     }
 
+
     /**
      * get url鉴权key
      *
@@ -875,6 +906,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setAccesskeyKey(String accesskeyKey) {
         this.accesskeyKey = accesskeyKey;
     }
+
 
     /**
      * get playAuthLifeTime
@@ -894,6 +926,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.playAuthLifeTime = playAuthLifeTime;
     }
 
+
     /**
      * get authLifeTime
      *
@@ -911,6 +944,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setAuthLifeTime(Integer authLifeTime) {
         this.authLifeTime = authLifeTime;
     }
+
 
     /**
      * get 转推鉴权开关
@@ -930,6 +964,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.forwardAccessKeyType = forwardAccessKeyType;
     }
 
+
     /**
      * get 转推鉴权key
      *
@@ -947,6 +982,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setForwardPrivateKey(String forwardPrivateKey) {
         this.forwardPrivateKey = forwardPrivateKey;
     }
+
 
     /**
      * get 回源鉴权开关
@@ -966,6 +1002,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.originAccessKeyType = originAccessKeyType;
     }
 
+
     /**
      * get 回源鉴权key
      *
@@ -984,41 +1021,44 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.originPrivateKey = originPrivateKey;
     }
 
+
     /**
-     * get allowApps
-     *
-     * @return
-     */
+    * get allowApps
+    *
+    * @return
+    */
     public List<String> getAllowApps() {
         return allowApps;
     }
 
     /**
-     * set allowApps
-     *
-     * @param allowApps
-     */
+    * set allowApps
+    *
+    * @param allowApps
+    */
     public void setAllowApps(List<String> allowApps) {
         this.allowApps = allowApps;
     }
 
+
     /**
-     * get ips
-     *
-     * @return
-     */
+    * get ips
+    *
+    * @return
+    */
     public List<String> getIps() {
         return ips;
     }
 
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public void setIps(List<String> ips) {
         this.ips = ips;
     }
+
 
     /**
      * get 是否开启ip黑名单
@@ -1038,6 +1078,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.blackIpsEnable = blackIpsEnable;
     }
 
+
     /**
      * get 外部关联id
      *
@@ -1055,6 +1096,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setExternId(String externId) {
         this.externId = externId;
     }
+
 
     /**
      * get ignoreQueryString
@@ -1074,6 +1116,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.ignoreQueryString = ignoreQueryString;
     }
 
+
     /**
      * get referType
      *
@@ -1092,23 +1135,25 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.referType = referType;
     }
 
+
     /**
-     * get referList
-     *
-     * @return
-     */
+    * get referList
+    *
+    * @return
+    */
     public List<String> getReferList() {
         return referList;
     }
 
     /**
-     * set referList
-     *
-     * @param referList
-     */
+    * set referList
+    *
+    * @param referList
+    */
     public void setReferList(List<String> referList) {
         this.referList = referList;
     }
+
 
     /**
      * get 允许无refer
@@ -1128,6 +1173,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.allowNoReferHeader = allowNoReferHeader;
     }
 
+
     /**
      * get 允许空refer
      *
@@ -1145,6 +1191,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setAllowNullReferHeader(String allowNullReferHeader) {
         this.allowNullReferHeader = allowNullReferHeader;
     }
+
 
     /**
      * get 推流中断超时时间(单位秒)
@@ -1164,6 +1211,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.publishNormalTimeout = publishNormalTimeout;
     }
 
+
     /**
      * get 推断流通知Url
      *
@@ -1181,6 +1229,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setNotifyCustomUrl(String notifyCustomUrl) {
         this.notifyCustomUrl = notifyCustomUrl;
     }
+
 
     /**
      * get 推断流通知key
@@ -1200,6 +1249,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.notifyCustomAuthKey = notifyCustomAuthKey;
     }
 
+
     /**
      * get 证书来源有两种类型：default,ssl
      *
@@ -1217,6 +1267,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setCertFrom(String certFrom) {
         this.certFrom = certFrom;
     }
+
 
     /**
      * get ssl证书id
@@ -1236,6 +1287,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.sslCertId = sslCertId;
     }
 
+
     /**
      * get 证书名称
      *
@@ -1253,6 +1305,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setCertName(String certName) {
         this.certName = certName;
     }
+
 
     /**
      * get 证书类型
@@ -1272,6 +1325,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.certType = certType;
     }
 
+
     /**
      * get sslCertStartTime
      *
@@ -1290,6 +1344,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.sslCertStartTime = sslCertStartTime;
     }
 
+
     /**
      * get sslCertEndTime
      *
@@ -1307,6 +1362,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     public void setSslCertEndTime(String sslCertEndTime) {
         this.sslCertEndTime = sslCertEndTime;
     }
+
 
     /**
      * get accelerateRegion
@@ -1327,6 +1383,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
     }
 
 
+
     /**
      * set 域名类型
      *
@@ -1336,6 +1393,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.domainType = domainType;
         return this;
     }
+
 
     /**
      * set 播放域名
@@ -1347,6 +1405,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 推流域名
      *
@@ -1356,6 +1415,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.publishDomain = publishDomain;
         return this;
     }
+
 
     /**
      * set 回源域名
@@ -1367,6 +1427,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -1376,6 +1437,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set cname
@@ -1387,6 +1449,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 站点类型推流push，拉流pull
      *
@@ -1396,6 +1459,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.siteType = siteType;
         return this;
     }
+
 
     /**
      * set 域名状态
@@ -1407,6 +1471,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 回源信息
      *
@@ -1416,6 +1481,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.source = source;
         return this;
     }
+
 
     /**
      * set 域名回源类型
@@ -1427,6 +1493,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 回源类型目前只能未rtmp
      *
@@ -1436,6 +1503,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.backSourceType = backSourceType;
         return this;
     }
+
 
     /**
      * set 视频格式 H.264
@@ -1447,6 +1515,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 音频格式AAC
      *
@@ -1456,6 +1525,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.audioType = audioType;
         return this;
     }
+
 
     /**
      * set 域名类型
@@ -1467,6 +1537,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 默认回源host
      *
@@ -1476,6 +1547,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.defaultSourceHost = defaultSourceHost;
         return this;
     }
+
 
     /**
      * set 备案号
@@ -1487,6 +1559,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set rtmpDomain
      *
@@ -1496,6 +1569,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.rtmpDomain = rtmpDomain;
         return this;
     }
+
 
     /**
      * set rtmpCname
@@ -1507,6 +1581,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set hdlDomain
      *
@@ -1516,6 +1591,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.hdlDomain = hdlDomain;
         return this;
     }
+
 
     /**
      * set hdlCname
@@ -1527,6 +1603,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set hlsDomain
      *
@@ -1536,6 +1613,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.hlsDomain = hlsDomain;
         return this;
     }
+
 
     /**
      * set hlsCname
@@ -1547,6 +1625,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set forwardCustomVhost
      *
@@ -1557,45 +1636,50 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set flvUrls
-     *
-     * @param flvUrls
-     */
+    * set flvUrls
+    *
+    * @param flvUrls
+    */
     public QueryLiveDomainDetailResult flvUrls(List<String> flvUrls) {
         this.flvUrls = flvUrls;
         return this;
     }
 
+
     /**
-     * set hlsUrls
-     *
-     * @param hlsUrls
-     */
+    * set hlsUrls
+    *
+    * @param hlsUrls
+    */
     public QueryLiveDomainDetailResult hlsUrls(List<String> hlsUrls) {
         this.hlsUrls = hlsUrls;
         return this;
     }
 
+
     /**
-     * set rtmpUrls
-     *
-     * @param rtmpUrls
-     */
+    * set rtmpUrls
+    *
+    * @param rtmpUrls
+    */
     public QueryLiveDomainDetailResult rtmpUrls(List<String> rtmpUrls) {
         this.rtmpUrls = rtmpUrls;
         return this;
     }
 
+
     /**
-     * set protocolConverts
-     *
-     * @param protocolConverts
-     */
+    * set protocolConverts
+    *
+    * @param protocolConverts
+    */
     public QueryLiveDomainDetailResult protocolConverts(List<ProtocolConvert> protocolConverts) {
         this.protocolConverts = protocolConverts;
         return this;
     }
+
 
     /**
      * set https证书
@@ -1607,6 +1691,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set https私钥
      *
@@ -1616,6 +1701,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.rsaKey = rsaKey;
         return this;
     }
+
 
     /**
      * set url鉴权开关
@@ -1627,6 +1713,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set url鉴权key
      *
@@ -1636,6 +1723,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.accesskeyKey = accesskeyKey;
         return this;
     }
+
 
     /**
      * set playAuthLifeTime
@@ -1647,6 +1735,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set authLifeTime
      *
@@ -1656,6 +1745,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.authLifeTime = authLifeTime;
         return this;
     }
+
 
     /**
      * set 转推鉴权开关
@@ -1667,6 +1757,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 转推鉴权key
      *
@@ -1676,6 +1767,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.forwardPrivateKey = forwardPrivateKey;
         return this;
     }
+
 
     /**
      * set 回源鉴权开关
@@ -1687,6 +1779,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 回源鉴权key
      *
@@ -1697,25 +1790,28 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set allowApps
-     *
-     * @param allowApps
-     */
+    * set allowApps
+    *
+    * @param allowApps
+    */
     public QueryLiveDomainDetailResult allowApps(List<String> allowApps) {
         this.allowApps = allowApps;
         return this;
     }
 
+
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public QueryLiveDomainDetailResult ips(List<String> ips) {
         this.ips = ips;
         return this;
     }
+
 
     /**
      * set 是否开启ip黑名单
@@ -1727,6 +1823,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 外部关联id
      *
@@ -1736,6 +1833,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.externId = externId;
         return this;
     }
+
 
     /**
      * set ignoreQueryString
@@ -1747,6 +1845,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set referType
      *
@@ -1757,15 +1856,17 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set referList
-     *
-     * @param referList
-     */
+    * set referList
+    *
+    * @param referList
+    */
     public QueryLiveDomainDetailResult referList(List<String> referList) {
         this.referList = referList;
         return this;
     }
+
 
     /**
      * set 允许无refer
@@ -1777,6 +1878,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 允许空refer
      *
@@ -1786,6 +1888,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.allowNullReferHeader = allowNullReferHeader;
         return this;
     }
+
 
     /**
      * set 推流中断超时时间(单位秒)
@@ -1797,6 +1900,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 推断流通知Url
      *
@@ -1806,6 +1910,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.notifyCustomUrl = notifyCustomUrl;
         return this;
     }
+
 
     /**
      * set 推断流通知key
@@ -1817,6 +1922,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 证书来源有两种类型：default,ssl
      *
@@ -1826,6 +1932,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.certFrom = certFrom;
         return this;
     }
+
 
     /**
      * set ssl证书id
@@ -1837,6 +1944,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 证书名称
      *
@@ -1846,6 +1954,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.certName = certName;
         return this;
     }
+
 
     /**
      * set 证书类型
@@ -1857,6 +1966,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set sslCertStartTime
      *
@@ -1866,6 +1976,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.sslCertStartTime = sslCertStartTime;
         return this;
     }
+
 
     /**
      * set sslCertEndTime
@@ -1877,6 +1988,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set accelerateRegion
      *
@@ -1886,6 +1998,7 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         this.accelerateRegion = accelerateRegion;
         return this;
     }
+
 
 
     /**
@@ -1971,5 +2084,4 @@ public class QueryLiveDomainDetailResult extends JdcloudResult implements java.i
         }
         this.referList.add(referList);
     }
-
 }

@@ -58,6 +58,7 @@ public class ConfigItem  implements java.io.Serializable {
     private Object configItemDetails;
 
 
+
     /**
      * get 配置项类型
      *
@@ -75,6 +76,7 @@ public class ConfigItem  implements java.io.Serializable {
     public void setConfigItemType(String configItemType) {
         this.configItemType = configItemType;
     }
+
 
     /**
      * get 配置项名称
@@ -94,6 +96,7 @@ public class ConfigItem  implements java.io.Serializable {
         this.configItemName = configItemName;
     }
 
+
     /**
      * get 配置状态
      *
@@ -112,6 +115,7 @@ public class ConfigItem  implements java.io.Serializable {
         this.configStatus = configStatus;
     }
 
+
     /**
      * get 配置状态名
      *
@@ -129,6 +133,7 @@ public class ConfigItem  implements java.io.Serializable {
     public void setConfigStatusName(String configStatusName) {
         this.configStatusName = configStatusName;
     }
+
 
     /**
      * get 配置项细节,类型为Map&lt;String,Object&gt;
@@ -149,6 +154,7 @@ public class ConfigItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 配置项类型
      *
@@ -158,6 +164,7 @@ public class ConfigItem  implements java.io.Serializable {
         this.configItemType = configItemType;
         return this;
     }
+
 
     /**
      * set 配置项名称
@@ -169,6 +176,7 @@ public class ConfigItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 配置状态
      *
@@ -179,6 +187,7 @@ public class ConfigItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 配置状态名
      *
@@ -188,6 +197,7 @@ public class ConfigItem  implements java.io.Serializable {
         this.configStatusName = configStatusName;
         return this;
     }
+
 
     /**
      * set 配置项细节,类型为Map&lt;String,Object&gt;

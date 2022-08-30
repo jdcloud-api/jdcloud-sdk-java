@@ -37,54 +37,57 @@ public class BackSourceInfo  implements java.io.Serializable {
     /**
      * ip回源配置，对应sourceType&#x3D;ips的取值
      */
+    
     private List<IpSourceInfo> ips;
-
     /**
      * 域名回源配置，对应sourceType&#x3D;domain的取值
      */
+    
     private List<DomainSourceInfo> domain;
-
     /**
      * oss回源配置，对应sourceType&#x3D;oss的取值
      */
     private String ossSource;
 
 
+
     /**
-     * get ip回源配置，对应sourceType&#x3D;ips的取值
-     *
-     * @return
-     */
+    * get ip回源配置，对应sourceType&#x3D;ips的取值
+    *
+    * @return
+    */
     public List<IpSourceInfo> getIps() {
         return ips;
     }
 
     /**
-     * set ip回源配置，对应sourceType&#x3D;ips的取值
-     *
-     * @param ips
-     */
+    * set ip回源配置，对应sourceType&#x3D;ips的取值
+    *
+    * @param ips
+    */
     public void setIps(List<IpSourceInfo> ips) {
         this.ips = ips;
     }
 
+
     /**
-     * get 域名回源配置，对应sourceType&#x3D;domain的取值
-     *
-     * @return
-     */
+    * get 域名回源配置，对应sourceType&#x3D;domain的取值
+    *
+    * @return
+    */
     public List<DomainSourceInfo> getDomain() {
         return domain;
     }
 
     /**
-     * set 域名回源配置，对应sourceType&#x3D;domain的取值
-     *
-     * @param domain
-     */
+    * set 域名回源配置，对应sourceType&#x3D;domain的取值
+    *
+    * @param domain
+    */
     public void setDomain(List<DomainSourceInfo> domain) {
         this.domain = domain;
     }
+
 
     /**
      * get oss回源配置，对应sourceType&#x3D;oss的取值
@@ -105,25 +108,28 @@ public class BackSourceInfo  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set ip回源配置，对应sourceType&#x3D;ips的取值
-     *
-     * @param ips
-     */
+    * set ip回源配置，对应sourceType&#x3D;ips的取值
+    *
+    * @param ips
+    */
     public BackSourceInfo ips(List<IpSourceInfo> ips) {
         this.ips = ips;
         return this;
     }
 
+
     /**
-     * set 域名回源配置，对应sourceType&#x3D;domain的取值
-     *
-     * @param domain
-     */
+    * set 域名回源配置，对应sourceType&#x3D;domain的取值
+    *
+    * @param domain
+    */
     public BackSourceInfo domain(List<DomainSourceInfo> domain) {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set oss回源配置，对应sourceType&#x3D;oss的取值
@@ -134,6 +140,7 @@ public class BackSourceInfo  implements java.io.Serializable {
         this.ossSource = ossSource;
         return this;
     }
+
 
 
     /**
@@ -159,5 +166,4 @@ public class BackSourceInfo  implements java.io.Serializable {
         }
         this.domain.add(domain);
     }
-
 }

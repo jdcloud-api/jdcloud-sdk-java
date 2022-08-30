@@ -58,6 +58,7 @@ public class TotalDetalItem  implements java.io.Serializable {
     private Long timeStamp;
 
 
+
     /**
      * get data
      *
@@ -75,6 +76,7 @@ public class TotalDetalItem  implements java.io.Serializable {
     public void setData(Object data) {
         this.data = data;
     }
+
 
     /**
      * get oriData
@@ -94,6 +96,7 @@ public class TotalDetalItem  implements java.io.Serializable {
         this.oriData = oriData;
     }
 
+
     /**
      * get httpdata
      *
@@ -112,6 +115,7 @@ public class TotalDetalItem  implements java.io.Serializable {
         this.httpdata = httpdata;
     }
 
+
     /**
      * get httpsData
      *
@@ -129,6 +133,7 @@ public class TotalDetalItem  implements java.io.Serializable {
     public void setHttpsData(Object httpsData) {
         this.httpsData = httpsData;
     }
+
 
     /**
      * get timeStamp
@@ -149,6 +154,7 @@ public class TotalDetalItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set data
      *
@@ -158,6 +164,7 @@ public class TotalDetalItem  implements java.io.Serializable {
         this.data = data;
         return this;
     }
+
 
     /**
      * set oriData
@@ -169,6 +176,7 @@ public class TotalDetalItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set httpdata
      *
@@ -179,6 +187,7 @@ public class TotalDetalItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set httpsData
      *
@@ -188,6 +197,7 @@ public class TotalDetalItem  implements java.io.Serializable {
         this.httpsData = httpsData;
         return this;
     }
+
 
     /**
      * set timeStamp

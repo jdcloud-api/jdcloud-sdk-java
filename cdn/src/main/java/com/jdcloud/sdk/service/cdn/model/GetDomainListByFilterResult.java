@@ -54,6 +54,7 @@ public class GetDomainListByFilterResult extends JdcloudResult implements java.i
     /**
      * domains
      */
+    
     private List<ListDomainItemByFilter> domains;
 
 
@@ -75,6 +76,7 @@ public class GetDomainListByFilterResult extends JdcloudResult implements java.i
         this.totalCount = totalCount;
     }
 
+
     /**
      * get pageSize
      *
@@ -92,6 +94,7 @@ public class GetDomainListByFilterResult extends JdcloudResult implements java.i
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get pageNumber
@@ -111,23 +114,25 @@ public class GetDomainListByFilterResult extends JdcloudResult implements java.i
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get domains
-     *
-     * @return
-     */
+    * get domains
+    *
+    * @return
+    */
     public List<ListDomainItemByFilter> getDomains() {
         return domains;
     }
 
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public void setDomains(List<ListDomainItemByFilter> domains) {
         this.domains = domains;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class GetDomainListByFilterResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set pageSize
      *
@@ -149,6 +155,7 @@ public class GetDomainListByFilterResult extends JdcloudResult implements java.i
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set pageNumber
@@ -160,15 +167,17 @@ public class GetDomainListByFilterResult extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public GetDomainListByFilterResult domains(List<ListDomainItemByFilter> domains) {
         this.domains = domains;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class GetDomainListByFilterResult extends JdcloudResult implements java.i
         }
         this.domains.add(domain);
     }
-
 }

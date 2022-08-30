@@ -44,6 +44,7 @@ public class CreateRefreshTaskResult extends JdcloudResult implements java.io.Se
     private String taskId;
 
 
+
     /**
      * get 失败任务的个数
      *
@@ -61,6 +62,7 @@ public class CreateRefreshTaskResult extends JdcloudResult implements java.io.Se
     public void setErrorCount(Integer errorCount) {
         this.errorCount = errorCount;
     }
+
 
     /**
      * get 任务的id
@@ -81,6 +83,7 @@ public class CreateRefreshTaskResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
      * set 失败任务的个数
      *
@@ -90,6 +93,7 @@ public class CreateRefreshTaskResult extends JdcloudResult implements java.io.Se
         this.errorCount = errorCount;
         return this;
     }
+
 
     /**
      * set 任务的id

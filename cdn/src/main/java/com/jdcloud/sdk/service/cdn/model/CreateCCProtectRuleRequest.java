@@ -67,6 +67,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
     private String domain;
 
 
+
     /**
      * get null
      *
@@ -84,6 +85,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
     public void setUri(String uri) {
         this.uri = uri;
     }
+
 
     /**
      * get null
@@ -103,6 +105,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.detectPeriod = detectPeriod;
     }
 
+
     /**
      * get null
      *
@@ -120,6 +123,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
     public void setSingleIpLimit(Integer singleIpLimit) {
         this.singleIpLimit = singleIpLimit;
     }
+
 
     /**
      * get null
@@ -139,6 +143,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.blockType = blockType;
     }
 
+
     /**
      * get null
      *
@@ -156,6 +161,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
     public void setBlockTime(Integer blockTime) {
         this.blockTime = blockTime;
     }
+
 
     /**
      * get 用户域名
@@ -176,6 +182,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set null
      *
@@ -185,6 +192,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.uri = uri;
         return this;
     }
+
 
     /**
      * set null
@@ -196,6 +204,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set null
      *
@@ -205,6 +214,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.singleIpLimit = singleIpLimit;
         return this;
     }
+
 
     /**
      * set null
@@ -216,6 +226,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set null
      *
@@ -225,6 +236,7 @@ public class CreateCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.blockTime = blockTime;
         return this;
     }
+
 
     /**
      * set 用户域名

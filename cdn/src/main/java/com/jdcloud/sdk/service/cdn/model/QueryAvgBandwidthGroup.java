@@ -42,6 +42,7 @@ public class QueryAvgBandwidthGroup  implements java.io.Serializable {
     /**
      * data
      */
+    
     private List<QueryAvgBandwidthItem> data;
 
 
@@ -63,23 +64,25 @@ public class QueryAvgBandwidthGroup  implements java.io.Serializable {
         this.clientid = clientid;
     }
 
+
     /**
-     * get data
-     *
-     * @return
-     */
+    * get data
+    *
+    * @return
+    */
     public List<QueryAvgBandwidthItem> getData() {
         return data;
     }
 
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public void setData(List<QueryAvgBandwidthItem> data) {
         this.data = data;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class QueryAvgBandwidthGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set data
-     *
-     * @param data
-     */
+    * set data
+    *
+    * @param data
+    */
     public QueryAvgBandwidthGroup data(List<QueryAvgBandwidthItem> data) {
         this.data = data;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class QueryAvgBandwidthGroup  implements java.io.Serializable {
         }
         this.data.add(data);
     }
-
 }

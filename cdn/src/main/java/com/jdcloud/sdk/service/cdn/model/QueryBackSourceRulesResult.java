@@ -49,6 +49,7 @@ public class QueryBackSourceRulesResult extends JdcloudResult implements java.io
     /**
      * 配置信息
      */
+    
     private List<BackSourceRule> rules;
 
 
@@ -70,6 +71,7 @@ public class QueryBackSourceRulesResult extends JdcloudResult implements java.io
         this.domain = domain;
     }
 
+
     /**
      * get on/off
      *
@@ -88,23 +90,25 @@ public class QueryBackSourceRulesResult extends JdcloudResult implements java.io
         this.status = status;
     }
 
+
     /**
-     * get 配置信息
-     *
-     * @return
-     */
+    * get 配置信息
+    *
+    * @return
+    */
     public List<BackSourceRule> getRules() {
         return rules;
     }
 
     /**
-     * set 配置信息
-     *
-     * @param rules
-     */
+    * set 配置信息
+    *
+    * @param rules
+    */
     public void setRules(List<BackSourceRule> rules) {
         this.rules = rules;
     }
+
 
 
     /**
@@ -117,6 +121,7 @@ public class QueryBackSourceRulesResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set on/off
      *
@@ -127,15 +132,17 @@ public class QueryBackSourceRulesResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set 配置信息
-     *
-     * @param rules
-     */
+    * set 配置信息
+    *
+    * @param rules
+    */
     public QueryBackSourceRulesResult rules(List<BackSourceRule> rules) {
         this.rules = rules;
         return this;
     }
+
 
 
     /**
@@ -149,5 +156,4 @@ public class QueryBackSourceRulesResult extends JdcloudResult implements java.io
         }
         this.rules.add(rule);
     }
-
 }

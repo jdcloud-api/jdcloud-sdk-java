@@ -47,6 +47,7 @@ public class SetWebProtectSwitchRequest extends JdcloudRequest implements java.i
     private String domain;
 
 
+
     /**
      * get 开关状态, on:开启,off:关闭
      *
@@ -64,6 +65,7 @@ public class SetWebProtectSwitchRequest extends JdcloudRequest implements java.i
     public void setSwitchStatus(String switchStatus) {
         this.switchStatus = switchStatus;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class SetWebProtectSwitchRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 开关状态, on:开启,off:关闭
      *
@@ -93,6 +96,7 @@ public class SetWebProtectSwitchRequest extends JdcloudRequest implements java.i
         this.switchStatus = switchStatus;
         return this;
     }
+
 
     /**
      * set 用户域名

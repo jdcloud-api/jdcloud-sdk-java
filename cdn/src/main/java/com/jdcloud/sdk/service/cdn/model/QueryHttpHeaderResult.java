@@ -44,6 +44,7 @@ public class QueryHttpHeaderResult extends JdcloudResult implements java.io.Seri
     /**
      * headers
      */
+    
     private List<QueryHttpHeaderResp> headers;
 
 
@@ -65,23 +66,25 @@ public class QueryHttpHeaderResult extends JdcloudResult implements java.io.Seri
         this.domain = domain;
     }
 
+
     /**
-     * get headers
-     *
-     * @return
-     */
+    * get headers
+    *
+    * @return
+    */
     public List<QueryHttpHeaderResp> getHeaders() {
         return headers;
     }
 
     /**
-     * set headers
-     *
-     * @param headers
-     */
+    * set headers
+    *
+    * @param headers
+    */
     public void setHeaders(List<QueryHttpHeaderResp> headers) {
         this.headers = headers;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryHttpHeaderResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set headers
-     *
-     * @param headers
-     */
+    * set headers
+    *
+    * @param headers
+    */
     public QueryHttpHeaderResult headers(List<QueryHttpHeaderResp> headers) {
         this.headers = headers;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryHttpHeaderResult extends JdcloudResult implements java.io.Seri
         }
         this.headers.add(header);
     }
-
 }

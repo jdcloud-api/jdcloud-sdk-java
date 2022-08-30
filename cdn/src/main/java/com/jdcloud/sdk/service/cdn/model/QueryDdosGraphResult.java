@@ -39,70 +39,75 @@ public class QueryDdosGraphResult extends JdcloudResult implements java.io.Seria
     /**
      * dataList
      */
+    
     private List<ProtectData> dataList;
-
     /**
      * unit
      */
+    
     private List<String> unit;
 
 
     /**
-     * get dataList
-     *
-     * @return
-     */
+    * get dataList
+    *
+    * @return
+    */
     public List<ProtectData> getDataList() {
         return dataList;
     }
 
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public void setDataList(List<ProtectData> dataList) {
         this.dataList = dataList;
     }
 
+
     /**
-     * get unit
-     *
-     * @return
-     */
+    * get unit
+    *
+    * @return
+    */
     public List<String> getUnit() {
         return unit;
     }
 
     /**
-     * set unit
-     *
-     * @param unit
-     */
+    * set unit
+    *
+    * @param unit
+    */
     public void setUnit(List<String> unit) {
         this.unit = unit;
     }
 
 
+
     /**
-     * set dataList
-     *
-     * @param dataList
-     */
+    * set dataList
+    *
+    * @param dataList
+    */
     public QueryDdosGraphResult dataList(List<ProtectData> dataList) {
         this.dataList = dataList;
         return this;
     }
 
+
     /**
-     * set unit
-     *
-     * @param unit
-     */
+    * set unit
+    *
+    * @param unit
+    */
     public QueryDdosGraphResult unit(List<String> unit) {
         this.unit = unit;
         return this;
     }
+
 
 
     /**
@@ -128,5 +133,4 @@ public class QueryDdosGraphResult extends JdcloudResult implements java.io.Seria
         }
         this.unit.add(unit);
     }
-
 }

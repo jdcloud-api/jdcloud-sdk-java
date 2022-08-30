@@ -39,6 +39,7 @@ public class QueryWafSwitchResult extends JdcloudResult implements java.io.Seria
     private String switchStatus;
 
 
+
     /**
      * get 开关状态, on:开启,off:关闭
      *
@@ -56,6 +57,7 @@ public class QueryWafSwitchResult extends JdcloudResult implements java.io.Seria
     public void setSwitchStatus(String switchStatus) {
         this.switchStatus = switchStatus;
     }
+
 
 
     /**

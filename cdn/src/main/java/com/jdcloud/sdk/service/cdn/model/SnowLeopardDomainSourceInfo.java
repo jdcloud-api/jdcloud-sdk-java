@@ -48,6 +48,7 @@ public class SnowLeopardDomainSourceInfo  implements java.io.Serializable {
     private String domain;
 
 
+
     /**
      * get 优先级（1-10）
      *
@@ -66,6 +67,7 @@ public class SnowLeopardDomainSourceInfo  implements java.io.Serializable {
         this.priority = priority;
     }
 
+
     /**
      * get 回源host
      *
@@ -83,6 +85,7 @@ public class SnowLeopardDomainSourceInfo  implements java.io.Serializable {
     public void setSourceHost(String sourceHost) {
         this.sourceHost = sourceHost;
     }
+
 
     /**
      * get 回源域名
@@ -103,6 +106,7 @@ public class SnowLeopardDomainSourceInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 优先级（1-10）
      *
@@ -113,6 +117,7 @@ public class SnowLeopardDomainSourceInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回源host
      *
@@ -122,6 +127,7 @@ public class SnowLeopardDomainSourceInfo  implements java.io.Serializable {
         this.sourceHost = sourceHost;
         return this;
     }
+
 
     /**
      * set 回源域名

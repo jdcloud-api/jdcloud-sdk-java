@@ -54,6 +54,7 @@ public class QueryDomainTempInstListResult extends JdcloudResult implements java
     /**
      * instList
      */
+    
     private List<ListDomainTempItem> instList;
 
 
@@ -75,6 +76,7 @@ public class QueryDomainTempInstListResult extends JdcloudResult implements java
         this.totalCount = totalCount;
     }
 
+
     /**
      * get pageSize
      *
@@ -92,6 +94,7 @@ public class QueryDomainTempInstListResult extends JdcloudResult implements java
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get pageNumber
@@ -111,23 +114,25 @@ public class QueryDomainTempInstListResult extends JdcloudResult implements java
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get instList
-     *
-     * @return
-     */
+    * get instList
+    *
+    * @return
+    */
     public List<ListDomainTempItem> getInstList() {
         return instList;
     }
 
     /**
-     * set instList
-     *
-     * @param instList
-     */
+    * set instList
+    *
+    * @param instList
+    */
     public void setInstList(List<ListDomainTempItem> instList) {
         this.instList = instList;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryDomainTempInstListResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
      * set pageSize
      *
@@ -149,6 +155,7 @@ public class QueryDomainTempInstListResult extends JdcloudResult implements java
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set pageNumber
@@ -160,15 +167,17 @@ public class QueryDomainTempInstListResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
-     * set instList
-     *
-     * @param instList
-     */
+    * set instList
+    *
+    * @param instList
+    */
     public QueryDomainTempInstListResult instList(List<ListDomainTempItem> instList) {
         this.instList = instList;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryDomainTempInstListResult extends JdcloudResult implements java
         }
         this.instList.add(instList);
     }
-
 }

@@ -54,6 +54,7 @@ public class QueryLiveStatisticsDataResult extends JdcloudResult implements java
     /**
      * statistics
      */
+    
     private List<StatisticsDataItem> statistics;
 
 
@@ -75,6 +76,7 @@ public class QueryLiveStatisticsDataResult extends JdcloudResult implements java
         this.startTime = startTime;
     }
 
+
     /**
      * get endTime
      *
@@ -92,6 +94,7 @@ public class QueryLiveStatisticsDataResult extends JdcloudResult implements java
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get domain
@@ -111,23 +114,25 @@ public class QueryLiveStatisticsDataResult extends JdcloudResult implements java
         this.domain = domain;
     }
 
+
     /**
-     * get statistics
-     *
-     * @return
-     */
+    * get statistics
+    *
+    * @return
+    */
     public List<StatisticsDataItem> getStatistics() {
         return statistics;
     }
 
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public void setStatistics(List<StatisticsDataItem> statistics) {
         this.statistics = statistics;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryLiveStatisticsDataResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
      * set endTime
      *
@@ -149,6 +155,7 @@ public class QueryLiveStatisticsDataResult extends JdcloudResult implements java
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set domain
@@ -160,15 +167,17 @@ public class QueryLiveStatisticsDataResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public QueryLiveStatisticsDataResult statistics(List<StatisticsDataItem> statistics) {
         this.statistics = statistics;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryLiveStatisticsDataResult extends JdcloudResult implements java
         }
         this.statistics.add(statistic);
     }
-
 }

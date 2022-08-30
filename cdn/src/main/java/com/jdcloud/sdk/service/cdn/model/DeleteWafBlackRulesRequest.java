@@ -56,6 +56,7 @@ public class DeleteWafBlackRulesRequest extends JdcloudRequest implements java.i
     private String ids;
 
 
+
     /**
      * get ruleType
      *
@@ -74,6 +75,7 @@ public class DeleteWafBlackRulesRequest extends JdcloudRequest implements java.i
         this.ruleType = ruleType;
     }
 
+
     /**
      * get 用户域名
      *
@@ -91,6 +93,7 @@ public class DeleteWafBlackRulesRequest extends JdcloudRequest implements java.i
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get ids
@@ -111,6 +114,7 @@ public class DeleteWafBlackRulesRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set ruleType
      *
@@ -121,6 +125,7 @@ public class DeleteWafBlackRulesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -130,6 +135,7 @@ public class DeleteWafBlackRulesRequest extends JdcloudRequest implements java.i
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set ids

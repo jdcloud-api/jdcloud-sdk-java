@@ -57,6 +57,7 @@ public class TopNRespItem  implements java.io.Serializable {
     /**
      * details
      */
+    
     private List<TopNRespItemDetail> details;
 
 
@@ -78,6 +79,7 @@ public class TopNRespItem  implements java.io.Serializable {
         this.topKey = topKey;
     }
 
+
     /**
      * get topValue
      *
@@ -95,6 +97,7 @@ public class TopNRespItem  implements java.io.Serializable {
     public void setTopValue(Object topValue) {
         this.topValue = topValue;
     }
+
 
     /**
      * get topDataValue
@@ -114,6 +117,7 @@ public class TopNRespItem  implements java.io.Serializable {
         this.topDataValue = topDataValue;
     }
 
+
     /**
      * get topDataPercent
      *
@@ -132,23 +136,25 @@ public class TopNRespItem  implements java.io.Serializable {
         this.topDataPercent = topDataPercent;
     }
 
+
     /**
-     * get details
-     *
-     * @return
-     */
+    * get details
+    *
+    * @return
+    */
     public List<TopNRespItemDetail> getDetails() {
         return details;
     }
 
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public void setDetails(List<TopNRespItemDetail> details) {
         this.details = details;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class TopNRespItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set topValue
      *
@@ -170,6 +177,7 @@ public class TopNRespItem  implements java.io.Serializable {
         this.topValue = topValue;
         return this;
     }
+
 
     /**
      * set topDataValue
@@ -181,6 +189,7 @@ public class TopNRespItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set topDataPercent
      *
@@ -191,15 +200,17 @@ public class TopNRespItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public TopNRespItem details(List<TopNRespItemDetail> details) {
         this.details = details;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class TopNRespItem  implements java.io.Serializable {
         }
         this.details.add(detail);
     }
-
 }

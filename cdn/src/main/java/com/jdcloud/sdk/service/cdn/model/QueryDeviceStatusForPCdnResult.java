@@ -99,6 +99,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
     private String report;
 
 
+
     /**
      * get mac地址
      *
@@ -116,6 +117,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
     public void setMacAddress(String macAddress) {
         this.macAddress = macAddress;
     }
+
 
     /**
      * get 活跃链接数量
@@ -135,6 +137,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.activeConnNum = activeConnNum;
     }
 
+
     /**
      * get 启动时间
      *
@@ -152,6 +155,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
     public void setStartupTime(String startupTime) {
         this.startupTime = startupTime;
     }
+
 
     /**
      * get 指定缓存剩余空间，单位GB，float64，保留小数点后两位
@@ -171,6 +175,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.cacheFree = cacheFree;
     }
 
+
     /**
      * get 设备磁盘剩余空间，单位GB，float64，保留小数点后两位
      *
@@ -188,6 +193,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
     public void setDiskFree(String diskFree) {
         this.diskFree = diskFree;
     }
+
 
     /**
      * get cpu idle百分比，float64，保留小数点后两位
@@ -207,6 +213,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.cpuIdle = cpuIdle;
     }
 
+
     /**
      * get nginx对外访问端口
      *
@@ -224,6 +231,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
     public void setPort(Integer port) {
         this.port = port;
     }
+
 
     /**
      * get 内存剩余百分比， float64，保留小数点后两位
@@ -243,6 +251,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.memFreePercent = memFreePercent;
     }
 
+
     /**
      * get 内容管理中为设备分配的设备id
      *
@@ -260,6 +269,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
     public void setDevId(String devId) {
         this.devId = devId;
     }
+
 
     /**
      * get 设备外网地址
@@ -279,6 +289,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.remoteIp = remoteIp;
     }
 
+
     /**
      * get 设备所属区域，如huadong、huanan
      *
@@ -297,6 +308,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.region = region;
     }
 
+
     /**
      * get 设备所属运营商，如ct、uni、cm
      *
@@ -314,6 +326,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get 设备最近心跳上报
@@ -334,6 +347,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
     }
 
 
+
     /**
      * set mac地址
      *
@@ -343,6 +357,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.macAddress = macAddress;
         return this;
     }
+
 
     /**
      * set 活跃链接数量
@@ -354,6 +369,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 启动时间
      *
@@ -363,6 +379,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.startupTime = startupTime;
         return this;
     }
+
 
     /**
      * set 指定缓存剩余空间，单位GB，float64，保留小数点后两位
@@ -374,6 +391,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 设备磁盘剩余空间，单位GB，float64，保留小数点后两位
      *
@@ -383,6 +401,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.diskFree = diskFree;
         return this;
     }
+
 
     /**
      * set cpu idle百分比，float64，保留小数点后两位
@@ -394,6 +413,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set nginx对外访问端口
      *
@@ -403,6 +423,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.port = port;
         return this;
     }
+
 
     /**
      * set 内存剩余百分比， float64，保留小数点后两位
@@ -414,6 +435,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 内容管理中为设备分配的设备id
      *
@@ -423,6 +445,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.devId = devId;
         return this;
     }
+
 
     /**
      * set 设备外网地址
@@ -434,6 +457,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 设备所属区域，如huadong、huanan
      *
@@ -444,6 +468,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         return this;
     }
 
+
     /**
      * set 设备所属运营商，如ct、uni、cm
      *
@@ -453,6 +478,7 @@ public class QueryDeviceStatusForPCdnResult extends JdcloudResult implements jav
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set 设备最近心跳上报

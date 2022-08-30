@@ -39,6 +39,7 @@ public class SetNetProtectionRulesSwitchRequest extends JdcloudRequest implement
     private String switchStatus;
 
 
+
     /**
      * get on,off
      *
@@ -56,6 +57,7 @@ public class SetNetProtectionRulesSwitchRequest extends JdcloudRequest implement
     public void setSwitchStatus(String switchStatus) {
         this.switchStatus = switchStatus;
     }
+
 
 
     /**

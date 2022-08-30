@@ -47,11 +47,12 @@ public class AreaData  implements java.io.Serializable {
     /**
      * 该省份省会的经纬度
      */
+    
     private List<String> location;
-
     /**
      * 分ip的pv统计结果
      */
+    
     private List<IpData> ipDatas;
 
 
@@ -73,6 +74,7 @@ public class AreaData  implements java.io.Serializable {
         this.area = area;
     }
 
+
     /**
      * get 该省份的全部攻击pv
      *
@@ -91,41 +93,44 @@ public class AreaData  implements java.io.Serializable {
         this.totalPv = totalPv;
     }
 
+
     /**
-     * get 该省份省会的经纬度
-     *
-     * @return
-     */
+    * get 该省份省会的经纬度
+    *
+    * @return
+    */
     public List<String> getLocation() {
         return location;
     }
 
     /**
-     * set 该省份省会的经纬度
-     *
-     * @param location
-     */
+    * set 该省份省会的经纬度
+    *
+    * @param location
+    */
     public void setLocation(List<String> location) {
         this.location = location;
     }
 
+
     /**
-     * get 分ip的pv统计结果
-     *
-     * @return
-     */
+    * get 分ip的pv统计结果
+    *
+    * @return
+    */
     public List<IpData> getIpDatas() {
         return ipDatas;
     }
 
     /**
-     * set 分ip的pv统计结果
-     *
-     * @param ipDatas
-     */
+    * set 分ip的pv统计结果
+    *
+    * @param ipDatas
+    */
     public void setIpDatas(List<IpData> ipDatas) {
         this.ipDatas = ipDatas;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class AreaData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该省份的全部攻击pv
      *
@@ -148,25 +154,28 @@ public class AreaData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 该省份省会的经纬度
-     *
-     * @param location
-     */
+    * set 该省份省会的经纬度
+    *
+    * @param location
+    */
     public AreaData location(List<String> location) {
         this.location = location;
         return this;
     }
 
+
     /**
-     * set 分ip的pv统计结果
-     *
-     * @param ipDatas
-     */
+    * set 分ip的pv统计结果
+    *
+    * @param ipDatas
+    */
     public AreaData ipDatas(List<IpData> ipDatas) {
         this.ipDatas = ipDatas;
         return this;
     }
+
 
 
     /**
@@ -192,5 +201,4 @@ public class AreaData  implements java.io.Serializable {
         }
         this.ipDatas.add(ipData);
     }
-
 }

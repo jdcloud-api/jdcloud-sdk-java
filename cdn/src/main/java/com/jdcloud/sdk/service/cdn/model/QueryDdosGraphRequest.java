@@ -44,6 +44,7 @@ public class QueryDdosGraphRequest extends JdcloudRequest implements java.io.Ser
     private String endTime;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2019-08-16T06:00:00Z
      *
@@ -61,6 +62,7 @@ public class QueryDdosGraphRequest extends JdcloudRequest implements java.io.Ser
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2019-08-16T07:00:00Z
@@ -81,6 +83,7 @@ public class QueryDdosGraphRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2019-08-16T06:00:00Z
      *
@@ -90,6 +93,7 @@ public class QueryDdosGraphRequest extends JdcloudRequest implements java.io.Ser
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2019-08-16T07:00:00Z

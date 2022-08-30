@@ -43,6 +43,7 @@ public class ProtocolConvert  implements java.io.Serializable {
     private String targetProtocol;
 
 
+
     /**
      * get 源协议,目前只能为rtmp
      *
@@ -60,6 +61,7 @@ public class ProtocolConvert  implements java.io.Serializable {
     public void setSourceProtocol(String sourceProtocol) {
         this.sourceProtocol = sourceProtocol;
     }
+
 
     /**
      * get 目标协议
@@ -80,6 +82,7 @@ public class ProtocolConvert  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 源协议,目前只能为rtmp
      *
@@ -89,6 +92,7 @@ public class ProtocolConvert  implements java.io.Serializable {
         this.sourceProtocol = sourceProtocol;
         return this;
     }
+
 
     /**
      * set 目标协议

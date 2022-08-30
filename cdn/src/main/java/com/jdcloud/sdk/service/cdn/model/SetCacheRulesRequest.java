@@ -39,8 +39,8 @@ public class SetCacheRulesRequest extends JdcloudRequest implements java.io.Seri
     /**
      * cacheRules
      */
+    
     private List<CacheRuleVo> cacheRules;
-
     /**
      * 用户域名
      * Required:true
@@ -49,23 +49,25 @@ public class SetCacheRulesRequest extends JdcloudRequest implements java.io.Seri
     private String domain;
 
 
+
     /**
-     * get cacheRules
-     *
-     * @return
-     */
+    * get cacheRules
+    *
+    * @return
+    */
     public List<CacheRuleVo> getCacheRules() {
         return cacheRules;
     }
 
     /**
-     * set cacheRules
-     *
-     * @param cacheRules
-     */
+    * set cacheRules
+    *
+    * @param cacheRules
+    */
     public void setCacheRules(List<CacheRuleVo> cacheRules) {
         this.cacheRules = cacheRules;
     }
+
 
     /**
      * get 用户域名
@@ -86,15 +88,17 @@ public class SetCacheRulesRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
-     * set cacheRules
-     *
-     * @param cacheRules
-     */
+    * set cacheRules
+    *
+    * @param cacheRules
+    */
     public SetCacheRulesRequest cacheRules(List<CacheRuleVo> cacheRules) {
         this.cacheRules = cacheRules;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -105,6 +109,7 @@ public class SetCacheRulesRequest extends JdcloudRequest implements java.io.Seri
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class SetCacheRulesRequest extends JdcloudRequest implements java.io.Seri
         }
         this.cacheRules.add(cacheRule);
     }
-
 }

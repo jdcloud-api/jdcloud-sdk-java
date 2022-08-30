@@ -38,8 +38,8 @@ public class QueryRefreshLimitRequest extends JdcloudRequest implements java.io.
     /**
      * 子账号，传哪些子账号就查哪些的，不传或传空默认返回所有子账号的额度
      */
+    
     private List<String> subUsers;
-
     /**
      * 默认为1
      */
@@ -51,23 +51,25 @@ public class QueryRefreshLimitRequest extends JdcloudRequest implements java.io.
     private Integer pageSize;
 
 
+
     /**
-     * get 子账号，传哪些子账号就查哪些的，不传或传空默认返回所有子账号的额度
-     *
-     * @return
-     */
+    * get 子账号，传哪些子账号就查哪些的，不传或传空默认返回所有子账号的额度
+    *
+    * @return
+    */
     public List<String> getSubUsers() {
         return subUsers;
     }
 
     /**
-     * set 子账号，传哪些子账号就查哪些的，不传或传空默认返回所有子账号的额度
-     *
-     * @param subUsers
-     */
+    * set 子账号，传哪些子账号就查哪些的，不传或传空默认返回所有子账号的额度
+    *
+    * @param subUsers
+    */
     public void setSubUsers(List<String> subUsers) {
         this.subUsers = subUsers;
     }
+
 
     /**
      * get 默认为1
@@ -86,6 +88,7 @@ public class QueryRefreshLimitRequest extends JdcloudRequest implements java.io.
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 默认为10，最大100
@@ -106,15 +109,17 @@ public class QueryRefreshLimitRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
-     * set 子账号，传哪些子账号就查哪些的，不传或传空默认返回所有子账号的额度
-     *
-     * @param subUsers
-     */
+    * set 子账号，传哪些子账号就查哪些的，不传或传空默认返回所有子账号的额度
+    *
+    * @param subUsers
+    */
     public QueryRefreshLimitRequest subUsers(List<String> subUsers) {
         this.subUsers = subUsers;
         return this;
     }
+
 
     /**
      * set 默认为1
@@ -126,6 +131,7 @@ public class QueryRefreshLimitRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 默认为10，最大100
      *
@@ -135,6 +141,7 @@ public class QueryRefreshLimitRequest extends JdcloudRequest implements java.io.
         this.pageSize = pageSize;
         return this;
     }
+
 
 
     /**
@@ -148,5 +155,4 @@ public class QueryRefreshLimitRequest extends JdcloudRequest implements java.io.
         }
         this.subUsers.add(subUser);
     }
-
 }

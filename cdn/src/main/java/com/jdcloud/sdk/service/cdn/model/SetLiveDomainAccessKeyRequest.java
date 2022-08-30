@@ -57,6 +57,7 @@ public class SetLiveDomainAccessKeyRequest extends JdcloudRequest implements jav
     private String domain;
 
 
+
     /**
      * get url鉴权开启1关闭0
      *
@@ -74,6 +75,7 @@ public class SetLiveDomainAccessKeyRequest extends JdcloudRequest implements jav
     public void setAccesskeyType(Integer accesskeyType) {
         this.accesskeyType = accesskeyType;
     }
+
 
     /**
      * get url鉴权开启时必传
@@ -93,6 +95,7 @@ public class SetLiveDomainAccessKeyRequest extends JdcloudRequest implements jav
         this.accesskeyKey = accesskeyKey;
     }
 
+
     /**
      * get 开启时默认值为300s,关闭时为0
      *
@@ -110,6 +113,7 @@ public class SetLiveDomainAccessKeyRequest extends JdcloudRequest implements jav
     public void setAuthLifeTime(Integer authLifeTime) {
         this.authLifeTime = authLifeTime;
     }
+
 
     /**
      * get 用户域名
@@ -130,6 +134,7 @@ public class SetLiveDomainAccessKeyRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set url鉴权开启1关闭0
      *
@@ -139,6 +144,7 @@ public class SetLiveDomainAccessKeyRequest extends JdcloudRequest implements jav
         this.accesskeyType = accesskeyType;
         return this;
     }
+
 
     /**
      * set url鉴权开启时必传
@@ -150,6 +156,7 @@ public class SetLiveDomainAccessKeyRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 开启时默认值为300s,关闭时为0
      *
@@ -159,6 +166,7 @@ public class SetLiveDomainAccessKeyRequest extends JdcloudRequest implements jav
         this.authLifeTime = authLifeTime;
         return this;
     }
+
 
     /**
      * set 用户域名

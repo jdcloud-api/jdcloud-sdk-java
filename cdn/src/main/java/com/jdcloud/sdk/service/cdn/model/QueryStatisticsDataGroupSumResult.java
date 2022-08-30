@@ -54,6 +54,7 @@ public class QueryStatisticsDataGroupSumResult extends JdcloudResult implements 
     /**
      * statistics
      */
+    
     private List<StatisticsGroupSumDataItem> statistics;
 
 
@@ -75,6 +76,7 @@ public class QueryStatisticsDataGroupSumResult extends JdcloudResult implements 
         this.startTime = startTime;
     }
 
+
     /**
      * get endTime
      *
@@ -92,6 +94,7 @@ public class QueryStatisticsDataGroupSumResult extends JdcloudResult implements 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get domain
@@ -111,23 +114,25 @@ public class QueryStatisticsDataGroupSumResult extends JdcloudResult implements 
         this.domain = domain;
     }
 
+
     /**
-     * get statistics
-     *
-     * @return
-     */
+    * get statistics
+    *
+    * @return
+    */
     public List<StatisticsGroupSumDataItem> getStatistics() {
         return statistics;
     }
 
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public void setStatistics(List<StatisticsGroupSumDataItem> statistics) {
         this.statistics = statistics;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryStatisticsDataGroupSumResult extends JdcloudResult implements 
         return this;
     }
 
+
     /**
      * set endTime
      *
@@ -149,6 +155,7 @@ public class QueryStatisticsDataGroupSumResult extends JdcloudResult implements 
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set domain
@@ -160,15 +167,17 @@ public class QueryStatisticsDataGroupSumResult extends JdcloudResult implements 
         return this;
     }
 
+
     /**
-     * set statistics
-     *
-     * @param statistics
-     */
+    * set statistics
+    *
+    * @param statistics
+    */
     public QueryStatisticsDataGroupSumResult statistics(List<StatisticsGroupSumDataItem> statistics) {
         this.statistics = statistics;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryStatisticsDataGroupSumResult extends JdcloudResult implements 
         }
         this.statistics.add(statistic);
     }
-
 }

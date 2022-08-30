@@ -58,6 +58,7 @@ public class StreamTableItem  implements java.io.Serializable {
     private String streamName;
 
 
+
     /**
      * get topTimeStamp
      *
@@ -75,6 +76,7 @@ public class StreamTableItem  implements java.io.Serializable {
     public void setTopTimeStamp(Long topTimeStamp) {
         this.topTimeStamp = topTimeStamp;
     }
+
 
     /**
      * get avgbandwidth
@@ -94,6 +96,7 @@ public class StreamTableItem  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
     }
 
+
     /**
      * get flow
      *
@@ -112,6 +115,7 @@ public class StreamTableItem  implements java.io.Serializable {
         this.flow = flow;
     }
 
+
     /**
      * get pv
      *
@@ -129,6 +133,7 @@ public class StreamTableItem  implements java.io.Serializable {
     public void setPv(Long pv) {
         this.pv = pv;
     }
+
 
     /**
      * get streamName
@@ -149,6 +154,7 @@ public class StreamTableItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set topTimeStamp
      *
@@ -158,6 +164,7 @@ public class StreamTableItem  implements java.io.Serializable {
         this.topTimeStamp = topTimeStamp;
         return this;
     }
+
 
     /**
      * set avgbandwidth
@@ -169,6 +176,7 @@ public class StreamTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -179,6 +187,7 @@ public class StreamTableItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pv
      *
@@ -188,6 +197,7 @@ public class StreamTableItem  implements java.io.Serializable {
         this.pv = pv;
         return this;
     }
+
 
     /**
      * set streamName

@@ -53,6 +53,7 @@ public class DirDataV2  implements java.io.Serializable {
     private Long pv;
 
 
+
     /**
      * get 目录名称
      *
@@ -70,6 +71,7 @@ public class DirDataV2  implements java.io.Serializable {
     public void setDir(String dir) {
         this.dir = dir;
     }
+
 
     /**
      * get 目录带宽
@@ -89,6 +91,7 @@ public class DirDataV2  implements java.io.Serializable {
         this.bandwidth = bandwidth;
     }
 
+
     /**
      * get 目录流量
      *
@@ -106,6 +109,7 @@ public class DirDataV2  implements java.io.Serializable {
     public void setFlow(Long flow) {
         this.flow = flow;
     }
+
 
     /**
      * get 目录pv
@@ -126,6 +130,7 @@ public class DirDataV2  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 目录名称
      *
@@ -135,6 +140,7 @@ public class DirDataV2  implements java.io.Serializable {
         this.dir = dir;
         return this;
     }
+
 
     /**
      * set 目录带宽
@@ -146,6 +152,7 @@ public class DirDataV2  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目录流量
      *
@@ -155,6 +162,7 @@ public class DirDataV2  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set 目录pv

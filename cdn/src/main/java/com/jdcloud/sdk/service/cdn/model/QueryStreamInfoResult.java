@@ -54,6 +54,7 @@ public class QueryStreamInfoResult extends JdcloudResult implements java.io.Seri
     /**
      * streamInfoList
      */
+    
     private List<StatisticsLiveStreamInfo> streamInfoList;
 
 
@@ -75,6 +76,7 @@ public class QueryStreamInfoResult extends JdcloudResult implements java.io.Seri
         this.total = total;
     }
 
+
     /**
      * get pageNum
      *
@@ -92,6 +94,7 @@ public class QueryStreamInfoResult extends JdcloudResult implements java.io.Seri
     public void setPageNum(Integer pageNum) {
         this.pageNum = pageNum;
     }
+
 
     /**
      * get pageSize
@@ -111,23 +114,25 @@ public class QueryStreamInfoResult extends JdcloudResult implements java.io.Seri
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get streamInfoList
-     *
-     * @return
-     */
+    * get streamInfoList
+    *
+    * @return
+    */
     public List<StatisticsLiveStreamInfo> getStreamInfoList() {
         return streamInfoList;
     }
 
     /**
-     * set streamInfoList
-     *
-     * @param streamInfoList
-     */
+    * set streamInfoList
+    *
+    * @param streamInfoList
+    */
     public void setStreamInfoList(List<StatisticsLiveStreamInfo> streamInfoList) {
         this.streamInfoList = streamInfoList;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryStreamInfoResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
      * set pageNum
      *
@@ -149,6 +155,7 @@ public class QueryStreamInfoResult extends JdcloudResult implements java.io.Seri
         this.pageNum = pageNum;
         return this;
     }
+
 
     /**
      * set pageSize
@@ -160,15 +167,17 @@ public class QueryStreamInfoResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set streamInfoList
-     *
-     * @param streamInfoList
-     */
+    * set streamInfoList
+    *
+    * @param streamInfoList
+    */
     public QueryStreamInfoResult streamInfoList(List<StatisticsLiveStreamInfo> streamInfoList) {
         this.streamInfoList = streamInfoList;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryStreamInfoResult extends JdcloudResult implements java.io.Seri
         }
         this.streamInfoList.add(streamInfoList);
     }
-
 }

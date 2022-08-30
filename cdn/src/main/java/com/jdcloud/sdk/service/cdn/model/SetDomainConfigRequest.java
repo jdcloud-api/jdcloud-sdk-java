@@ -72,6 +72,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
     private String domain;
 
 
+
     /**
      * get http类型,只能为http或者https
      *
@@ -89,6 +90,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
     public void setHttpType(String httpType) {
         this.httpType = httpType;
     }
+
 
     /**
      * get 回源类型
@@ -108,6 +110,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         this.backSourceType = backSourceType;
     }
 
+
     /**
      * get 有三种类型：default、http、https
      *
@@ -125,6 +128,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
     public void setJumpType(String jumpType) {
         this.jumpType = jumpType;
     }
+
 
     /**
      * get dash鉴权相关配置
@@ -144,6 +148,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         this.jcdnTimeAnti = jcdnTimeAnti;
     }
 
+
     /**
      * get 回源鉴权相关配置
      *
@@ -162,6 +167,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         this.hdrCtrl = hdrCtrl;
     }
 
+
     /**
      * get 头条header配置
      *
@@ -179,6 +185,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
     public void setToutiaoHeader(String toutiaoHeader) {
         this.toutiaoHeader = toutiaoHeader;
     }
+
 
     /**
      * get 用户域名
@@ -199,6 +206,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set http类型,只能为http或者https
      *
@@ -208,6 +216,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         this.httpType = httpType;
         return this;
     }
+
 
     /**
      * set 回源类型
@@ -219,6 +228,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 有三种类型：default、http、https
      *
@@ -228,6 +238,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         this.jumpType = jumpType;
         return this;
     }
+
 
     /**
      * set dash鉴权相关配置
@@ -239,6 +250,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 回源鉴权相关配置
      *
@@ -249,6 +261,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 头条header配置
      *
@@ -258,6 +271,7 @@ public class SetDomainConfigRequest extends JdcloudRequest implements java.io.Se
         this.toutiaoHeader = toutiaoHeader;
         return this;
     }
+
 
     /**
      * set 用户域名

@@ -57,6 +57,7 @@ public class UpdateWebProtectSettingsRequest extends JdcloudRequest implements j
     private String domain;
 
 
+
     /**
      * get 0：拦截模式 (阻断forbidden 493跳到自定义页面) ，1-检测模式(观察notice)
      *
@@ -74,6 +75,7 @@ public class UpdateWebProtectSettingsRequest extends JdcloudRequest implements j
     public void setWafMode(String wafMode) {
         this.wafMode = wafMode;
     }
+
 
     /**
      * get 规则策略等级 0为宽松, 1为正常, 2为严格
@@ -93,6 +95,7 @@ public class UpdateWebProtectSettingsRequest extends JdcloudRequest implements j
         this.wafLevel = wafLevel;
     }
 
+
     /**
      * get 拦截模式跳转的自定义页面名称, 缺省或default返回默认页面
      *
@@ -110,6 +113,7 @@ public class UpdateWebProtectSettingsRequest extends JdcloudRequest implements j
     public void setRedirection(String redirection) {
         this.redirection = redirection;
     }
+
 
     /**
      * get 用户域名
@@ -130,6 +134,7 @@ public class UpdateWebProtectSettingsRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 0：拦截模式 (阻断forbidden 493跳到自定义页面) ，1-检测模式(观察notice)
      *
@@ -139,6 +144,7 @@ public class UpdateWebProtectSettingsRequest extends JdcloudRequest implements j
         this.wafMode = wafMode;
         return this;
     }
+
 
     /**
      * set 规则策略等级 0为宽松, 1为正常, 2为严格
@@ -150,6 +156,7 @@ public class UpdateWebProtectSettingsRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 拦截模式跳转的自定义页面名称, 缺省或default返回默认页面
      *
@@ -159,6 +166,7 @@ public class UpdateWebProtectSettingsRequest extends JdcloudRequest implements j
         this.redirection = redirection;
         return this;
     }
+
 
     /**
      * set 用户域名

@@ -42,6 +42,7 @@ public class StatisticsTopIpData  implements java.io.Serializable {
     /**
      * ips
      */
+    
     private List<StatisticsTopIpItem> ips;
 
 
@@ -63,23 +64,25 @@ public class StatisticsTopIpData  implements java.io.Serializable {
         this.count = count;
     }
 
+
     /**
-     * get ips
-     *
-     * @return
-     */
+    * get ips
+    *
+    * @return
+    */
     public List<StatisticsTopIpItem> getIps() {
         return ips;
     }
 
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public void setIps(List<StatisticsTopIpItem> ips) {
         this.ips = ips;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class StatisticsTopIpData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public StatisticsTopIpData ips(List<StatisticsTopIpItem> ips) {
         this.ips = ips;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class StatisticsTopIpData  implements java.io.Serializable {
         }
         this.ips.add(ip);
     }
-
 }

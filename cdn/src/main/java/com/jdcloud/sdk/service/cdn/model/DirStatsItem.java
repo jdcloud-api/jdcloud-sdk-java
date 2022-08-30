@@ -47,6 +47,7 @@ public class DirStatsItem  implements java.io.Serializable {
     /**
      * dirDatas
      */
+    
     private List<DirDataV2> dirDatas;
 
 
@@ -68,6 +69,7 @@ public class DirStatsItem  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -86,23 +88,25 @@ public class DirStatsItem  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
-     * get dirDatas
-     *
-     * @return
-     */
+    * get dirDatas
+    *
+    * @return
+    */
     public List<DirDataV2> getDirDatas() {
         return dirDatas;
     }
 
     /**
-     * set dirDatas
-     *
-     * @param dirDatas
-     */
+    * set dirDatas
+    *
+    * @param dirDatas
+    */
     public void setDirDatas(List<DirDataV2> dirDatas) {
         this.dirDatas = dirDatas;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class DirStatsItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -125,15 +130,17 @@ public class DirStatsItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set dirDatas
-     *
-     * @param dirDatas
-     */
+    * set dirDatas
+    *
+    * @param dirDatas
+    */
     public DirStatsItem dirDatas(List<DirDataV2> dirDatas) {
         this.dirDatas = dirDatas;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class DirStatsItem  implements java.io.Serializable {
         }
         this.dirDatas.add(dirData);
     }
-
 }

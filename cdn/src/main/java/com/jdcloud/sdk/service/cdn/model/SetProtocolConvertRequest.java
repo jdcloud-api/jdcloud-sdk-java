@@ -69,14 +69,15 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
     /**
      * protocolConverts
      */
+    
     private List<ProtocolConvert> protocolConverts;
-
     /**
      * 用户域名
      * Required:true
      */
     @Required
     private String domain;
+
 
 
     /**
@@ -97,6 +98,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         this.certificate = certificate;
     }
 
+
     /**
      * get https私钥，转https格式时必传
      *
@@ -114,6 +116,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
     public void setRsaKey(String rsaKey) {
         this.rsaKey = rsaKey;
     }
+
 
     /**
      * get 证书来源有两种类型：default,ssl
@@ -133,6 +136,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         this.certFrom = certFrom;
     }
 
+
     /**
      * get ssl证书id
      *
@@ -150,6 +154,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
     public void setSslCertId(String sslCertId) {
         this.sslCertId = sslCertId;
     }
+
 
     /**
      * get 是否同步到ssl,boolean值，取值true或者false
@@ -169,6 +174,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         this.syncToSsl = syncToSsl;
     }
 
+
     /**
      * get syncToSsl是true时，certName是必填项
      *
@@ -187,23 +193,25 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         this.certName = certName;
     }
 
+
     /**
-     * get protocolConverts
-     *
-     * @return
-     */
+    * get protocolConverts
+    *
+    * @return
+    */
     public List<ProtocolConvert> getProtocolConverts() {
         return protocolConverts;
     }
 
     /**
-     * set protocolConverts
-     *
-     * @param protocolConverts
-     */
+    * set protocolConverts
+    *
+    * @param protocolConverts
+    */
     public void setProtocolConverts(List<ProtocolConvert> protocolConverts) {
         this.protocolConverts = protocolConverts;
     }
+
 
     /**
      * get 用户域名
@@ -224,6 +232,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set https证书,转https格式时必传
      *
@@ -233,6 +242,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         this.certificate = certificate;
         return this;
     }
+
 
     /**
      * set https私钥，转https格式时必传
@@ -244,6 +254,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 证书来源有两种类型：default,ssl
      *
@@ -253,6 +264,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         this.certFrom = certFrom;
         return this;
     }
+
 
     /**
      * set ssl证书id
@@ -264,6 +276,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 是否同步到ssl,boolean值，取值true或者false
      *
@@ -273,6 +286,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         this.syncToSsl = syncToSsl;
         return this;
     }
+
 
     /**
      * set syncToSsl是true时，certName是必填项
@@ -284,15 +298,17 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set protocolConverts
-     *
-     * @param protocolConverts
-     */
+    * set protocolConverts
+    *
+    * @param protocolConverts
+    */
     public SetProtocolConvertRequest protocolConverts(List<ProtocolConvert> protocolConverts) {
         this.protocolConverts = protocolConverts;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -303,6 +319,7 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -316,5 +333,4 @@ public class SetProtocolConvertRequest extends JdcloudRequest implements java.io
         }
         this.protocolConverts.add(protocolConvert);
     }
-
 }

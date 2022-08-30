@@ -43,6 +43,7 @@ public class CreateRefreshTaskRequest extends JdcloudRequest implements java.io.
     /**
      * urls
      */
+    
     private List<String> urls;
 
 
@@ -64,23 +65,25 @@ public class CreateRefreshTaskRequest extends JdcloudRequest implements java.io.
         this.taskType = taskType;
     }
 
+
     /**
-     * get urls
-     *
-     * @return
-     */
+    * get urls
+    *
+    * @return
+    */
     public List<String> getUrls() {
         return urls;
     }
 
     /**
-     * set urls
-     *
-     * @param urls
-     */
+    * set urls
+    *
+    * @param urls
+    */
     public void setUrls(List<String> urls) {
         this.urls = urls;
     }
+
 
 
     /**
@@ -93,15 +96,17 @@ public class CreateRefreshTaskRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
-     * set urls
-     *
-     * @param urls
-     */
+    * set urls
+    *
+    * @param urls
+    */
     public CreateRefreshTaskRequest urls(List<String> urls) {
         this.urls = urls;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class CreateRefreshTaskRequest extends JdcloudRequest implements java.io.
         }
         this.urls.add(url);
     }
-
 }

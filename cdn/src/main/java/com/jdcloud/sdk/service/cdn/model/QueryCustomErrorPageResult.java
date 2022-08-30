@@ -49,6 +49,7 @@ public class QueryCustomErrorPageResult extends JdcloudResult implements java.io
     /**
      * customErrorPageInfos
      */
+    
     private List<ErrorPageConfigs> customErrorPageInfos;
 
 
@@ -70,6 +71,7 @@ public class QueryCustomErrorPageResult extends JdcloudResult implements java.io
         this.domain = domain;
     }
 
+
     /**
      * get 自定义错误页面开关(on:开启 off：关闭)
      *
@@ -88,23 +90,25 @@ public class QueryCustomErrorPageResult extends JdcloudResult implements java.io
         this.enable = enable;
     }
 
+
     /**
-     * get customErrorPageInfos
-     *
-     * @return
-     */
+    * get customErrorPageInfos
+    *
+    * @return
+    */
     public List<ErrorPageConfigs> getCustomErrorPageInfos() {
         return customErrorPageInfos;
     }
 
     /**
-     * set customErrorPageInfos
-     *
-     * @param customErrorPageInfos
-     */
+    * set customErrorPageInfos
+    *
+    * @param customErrorPageInfos
+    */
     public void setCustomErrorPageInfos(List<ErrorPageConfigs> customErrorPageInfos) {
         this.customErrorPageInfos = customErrorPageInfos;
     }
+
 
 
     /**
@@ -117,6 +121,7 @@ public class QueryCustomErrorPageResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 自定义错误页面开关(on:开启 off：关闭)
      *
@@ -127,15 +132,17 @@ public class QueryCustomErrorPageResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set customErrorPageInfos
-     *
-     * @param customErrorPageInfos
-     */
+    * set customErrorPageInfos
+    *
+    * @param customErrorPageInfos
+    */
     public QueryCustomErrorPageResult customErrorPageInfos(List<ErrorPageConfigs> customErrorPageInfos) {
         this.customErrorPageInfos = customErrorPageInfos;
         return this;
     }
+
 
 
     /**
@@ -149,5 +156,4 @@ public class QueryCustomErrorPageResult extends JdcloudResult implements java.io
         }
         this.customErrorPageInfos.add(customErrorPageInfo);
     }
-
 }

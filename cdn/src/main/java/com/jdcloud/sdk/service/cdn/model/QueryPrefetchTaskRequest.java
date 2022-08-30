@@ -79,6 +79,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
     private String domain;
 
 
+
     /**
      * get url
      *
@@ -96,6 +97,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
@@ -115,6 +117,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         this.region = region;
     }
 
+
     /**
      * get 运营商[ct uni cm]中的一个,分别代表电信 联通 移动
      *
@@ -132,6 +135,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
     public void setIsp(String isp) {
         this.isp = isp;
     }
+
 
     /**
      * get 查询状态 1:active维护预热中，2:表示purge中暂时停止预热
@@ -151,6 +155,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         this.status = status;
     }
 
+
     /**
      * get 同url，系统内部url对应id（url和file_id同时存在时以url为准）
      *
@@ -168,6 +173,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
     public void setFileId(String fileId) {
         this.fileId = fileId;
     }
+
 
     /**
      * get 页码数,最小为1
@@ -187,6 +193,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页大小,默认10
      *
@@ -205,6 +212,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 1:代表控制台下发的预热任务2:代表热度计算下发的预热任务3:代表控制台、热度计算共同下发的任务
      *
@@ -222,6 +230,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
     public void setTaskType(Integer taskType) {
         this.taskType = taskType;
     }
+
 
     /**
      * get 域名
@@ -242,6 +251,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set url
      *
@@ -251,6 +261,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         this.url = url;
         return this;
     }
+
 
     /**
      * set 地区[huabei huadong dongbei huazhong huanan xinan xibei gangaotai]中的一个
@@ -262,6 +273,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 运营商[ct uni cm]中的一个,分别代表电信 联通 移动
      *
@@ -271,6 +283,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         this.isp = isp;
         return this;
     }
+
 
     /**
      * set 查询状态 1:active维护预热中，2:表示purge中暂时停止预热
@@ -282,6 +295,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 同url，系统内部url对应id（url和file_id同时存在时以url为准）
      *
@@ -291,6 +305,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         this.fileId = fileId;
         return this;
     }
+
 
     /**
      * set 页码数,最小为1
@@ -302,6 +317,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 每页大小,默认10
      *
@@ -312,6 +328,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 1:代表控制台下发的预热任务2:代表热度计算下发的预热任务3:代表控制台、热度计算共同下发的任务
      *
@@ -321,6 +338,7 @@ public class QueryPrefetchTaskRequest extends JdcloudRequest implements java.io.
         this.taskType = taskType;
         return this;
     }
+
 
     /**
      * set 域名

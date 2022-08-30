@@ -43,6 +43,7 @@ public class AttackTypeCount  implements java.io.Serializable {
     private String attackType;
 
 
+
     /**
      * get attackCount
      *
@@ -60,6 +61,7 @@ public class AttackTypeCount  implements java.io.Serializable {
     public void setAttackCount(Long attackCount) {
         this.attackCount = attackCount;
     }
+
 
     /**
      * get attackType
@@ -80,6 +82,7 @@ public class AttackTypeCount  implements java.io.Serializable {
     }
 
 
+
     /**
      * set attackCount
      *
@@ -89,6 +92,7 @@ public class AttackTypeCount  implements java.io.Serializable {
         this.attackCount = attackCount;
         return this;
     }
+
 
     /**
      * set attackType

@@ -94,13 +94,13 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     /**
      * ipSource
      */
+    
     private List<IpSourceInfo> ipSource;
-
     /**
      * domainSource
      */
+    
     private List<DomainSourceInfo> domainSource;
-
     /**
      * ossSource
      */
@@ -124,6 +124,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     private String domain;
 
 
+
     /**
      * get 回源类型只能是[ips,domain,oss]中的一种
      *
@@ -141,6 +142,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     public void setSourceType(String sourceType) {
         this.sourceType = sourceType;
     }
+
 
     /**
      * get 点播域名的类型只能是[vod,download,web]中的一种
@@ -160,6 +162,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.cdnType = cdnType;
     }
 
+
     /**
      * get 回源方式,只能是[https,http]中的一种,默认http
      *
@@ -177,6 +180,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     public void setBackSourceType(String backSourceType) {
         this.backSourceType = backSourceType;
     }
+
 
     /**
      * get 日带宽(Mbps)
@@ -196,6 +200,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.dailyBandWidth = dailyBandWidth;
     }
 
+
     /**
      * get 服务质量,只能是[good,general]中的一种,默认为good
      *
@@ -213,6 +218,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     public void setQuaility(String quaility) {
         this.quaility = quaility;
     }
+
 
     /**
      * get maxFileSize
@@ -232,6 +238,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.maxFileSize = maxFileSize;
     }
 
+
     /**
      * get minFileSize
      *
@@ -249,6 +256,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     public void setMinFileSize(Long minFileSize) {
         this.minFileSize = minFileSize;
     }
+
 
     /**
      * get sumFileSize
@@ -268,6 +276,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.sumFileSize = sumFileSize;
     }
 
+
     /**
      * get avgFileSize
      *
@@ -285,6 +294,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     public void setAvgFileSize(Long avgFileSize) {
         this.avgFileSize = avgFileSize;
     }
+
 
     /**
      * get defaultSourceHost
@@ -304,6 +314,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.defaultSourceHost = defaultSourceHost;
     }
 
+
     /**
      * get httpType
      *
@@ -322,41 +333,44 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.httpType = httpType;
     }
 
+
     /**
-     * get ipSource
-     *
-     * @return
-     */
+    * get ipSource
+    *
+    * @return
+    */
     public List<IpSourceInfo> getIpSource() {
         return ipSource;
     }
 
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public void setIpSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
     }
 
+
     /**
-     * get domainSource
-     *
-     * @return
-     */
+    * get domainSource
+    *
+    * @return
+    */
     public List<DomainSourceInfo> getDomainSource() {
         return domainSource;
     }
 
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public void setDomainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
     }
+
 
     /**
      * get ossSource
@@ -376,6 +390,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.ossSource = ossSource;
     }
 
+
     /**
      * get 加速区域:(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
      *
@@ -394,6 +409,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.accelerateRegion = accelerateRegion;
     }
 
+
     /**
      * get tempInstId
      *
@@ -411,6 +427,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     public void setTempInstId(Long tempInstId) {
         this.tempInstId = tempInstId;
     }
+
 
     /**
      * get 用户域名
@@ -431,6 +448,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 回源类型只能是[ips,domain,oss]中的一种
      *
@@ -440,6 +458,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.sourceType = sourceType;
         return this;
     }
+
 
     /**
      * set 点播域名的类型只能是[vod,download,web]中的一种
@@ -451,6 +470,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 回源方式,只能是[https,http]中的一种,默认http
      *
@@ -460,6 +480,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.backSourceType = backSourceType;
         return this;
     }
+
 
     /**
      * set 日带宽(Mbps)
@@ -471,6 +492,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 服务质量,只能是[good,general]中的一种,默认为good
      *
@@ -480,6 +502,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.quaility = quaility;
         return this;
     }
+
 
     /**
      * set maxFileSize
@@ -491,6 +514,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set minFileSize
      *
@@ -500,6 +524,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.minFileSize = minFileSize;
         return this;
     }
+
 
     /**
      * set sumFileSize
@@ -511,6 +536,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set avgFileSize
      *
@@ -520,6 +546,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.avgFileSize = avgFileSize;
         return this;
     }
+
 
     /**
      * set defaultSourceHost
@@ -531,6 +558,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set httpType
      *
@@ -541,25 +569,28 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public CreateDomainRequest ipSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
         return this;
     }
 
+
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public CreateDomainRequest domainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
         return this;
     }
+
 
     /**
      * set ossSource
@@ -571,6 +602,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 加速区域:(mainLand:中国大陆，nonMainLand:海外加港澳台，all:全球)默认为中国大陆
      *
@@ -580,6 +612,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.accelerateRegion = accelerateRegion;
         return this;
     }
+
 
     /**
      * set tempInstId
@@ -591,6 +624,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -600,6 +634,7 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -625,5 +660,4 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
         }
         this.domainSource.add(domainSource);
     }
-
 }

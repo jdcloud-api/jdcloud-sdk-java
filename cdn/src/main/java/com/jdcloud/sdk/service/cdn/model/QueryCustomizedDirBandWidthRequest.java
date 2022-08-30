@@ -54,6 +54,7 @@ public class QueryCustomizedDirBandWidthRequest extends JdcloudRequest implement
     private String dir;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2020-12-07T16:00:00Z
      *
@@ -71,6 +72,7 @@ public class QueryCustomizedDirBandWidthRequest extends JdcloudRequest implement
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2020-12-07T16:20:00Z，开始时间和结束时间跨度 不能超过4个小时
@@ -90,6 +92,7 @@ public class QueryCustomizedDirBandWidthRequest extends JdcloudRequest implement
         this.endTime = endTime;
     }
 
+
     /**
      * get 需要查询的域名, 必须为用户pin下有权限的域名，该接口仅支持单域名查询
      *
@@ -107,6 +110,7 @@ public class QueryCustomizedDirBandWidthRequest extends JdcloudRequest implement
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 需要过滤的目录，以正斜线(/)开头，不填表示查询所有目录。查询目录同时需要以正斜线(/)结尾。 如:/path1/path2/path3/
@@ -127,6 +131,7 @@ public class QueryCustomizedDirBandWidthRequest extends JdcloudRequest implement
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2020-12-07T16:00:00Z
      *
@@ -136,6 +141,7 @@ public class QueryCustomizedDirBandWidthRequest extends JdcloudRequest implement
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2020-12-07T16:20:00Z，开始时间和结束时间跨度 不能超过4个小时
@@ -147,6 +153,7 @@ public class QueryCustomizedDirBandWidthRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set 需要查询的域名, 必须为用户pin下有权限的域名，该接口仅支持单域名查询
      *
@@ -156,6 +163,7 @@ public class QueryCustomizedDirBandWidthRequest extends JdcloudRequest implement
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 需要过滤的目录，以正斜线(/)开头，不填表示查询所有目录。查询目录同时需要以正斜线(/)结尾。 如:/path1/path2/path3/

@@ -42,6 +42,7 @@ public class QueryBackSourceOssRequest extends JdcloudRequest implements java.io
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class QueryBackSourceOssRequest extends JdcloudRequest implements java.io
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

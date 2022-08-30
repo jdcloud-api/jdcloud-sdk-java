@@ -54,6 +54,7 @@ public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io
     /**
      * ipData
      */
+    
     private List<StatisticsTopIpData> ipData;
 
 
@@ -75,6 +76,7 @@ public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io
         this.startTime = startTime;
     }
 
+
     /**
      * get endTime
      *
@@ -92,6 +94,7 @@ public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get domain
@@ -111,23 +114,25 @@ public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io
         this.domain = domain;
     }
 
+
     /**
-     * get ipData
-     *
-     * @return
-     */
+    * get ipData
+    *
+    * @return
+    */
     public List<StatisticsTopIpData> getIpData() {
         return ipData;
     }
 
     /**
-     * set ipData
-     *
-     * @param ipData
-     */
+    * set ipData
+    *
+    * @param ipData
+    */
     public void setIpData(List<StatisticsTopIpData> ipData) {
         this.ipData = ipData;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set endTime
      *
@@ -149,6 +155,7 @@ public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set domain
@@ -160,15 +167,17 @@ public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set ipData
-     *
-     * @param ipData
-     */
+    * set ipData
+    *
+    * @param ipData
+    */
     public QueryStatisticsTopIpResult ipData(List<StatisticsTopIpData> ipData) {
         this.ipData = ipData;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryStatisticsTopIpResult extends JdcloudResult implements java.io
         }
         this.ipData.add(ipData);
     }
-
 }

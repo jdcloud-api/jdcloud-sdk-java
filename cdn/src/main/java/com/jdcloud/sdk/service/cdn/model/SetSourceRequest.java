@@ -54,13 +54,13 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * ipSource
      */
+    
     private List<IpSourceInfo> ipSource;
-
     /**
      * domainSource
      */
+    
     private List<DomainSourceInfo> domainSource;
-
     /**
      * oss回源域名
      */
@@ -77,6 +77,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
      */
     @Required
     private String domain;
+
 
 
     /**
@@ -97,6 +98,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         this.sourceType = sourceType;
     }
 
+
     /**
      * get 回源方式,只能是[https,http]中的一种,默认http
      *
@@ -114,6 +116,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     public void setBackSourceType(String backSourceType) {
         this.backSourceType = backSourceType;
     }
+
 
     /**
      * get 加速区域,必须是[mainland,nonMainland,all]中的一种,分别代表大陆,海外+中国港澳台,全球
@@ -133,41 +136,44 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         this.accelerateRegion = accelerateRegion;
     }
 
+
     /**
-     * get ipSource
-     *
-     * @return
-     */
+    * get ipSource
+    *
+    * @return
+    */
     public List<IpSourceInfo> getIpSource() {
         return ipSource;
     }
 
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public void setIpSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
     }
 
+
     /**
-     * get domainSource
-     *
-     * @return
-     */
+    * get domainSource
+    *
+    * @return
+    */
     public List<DomainSourceInfo> getDomainSource() {
         return domainSource;
     }
 
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public void setDomainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
     }
+
 
     /**
      * get oss回源域名
@@ -187,6 +193,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         this.ossSource = ossSource;
     }
 
+
     /**
      * get 默认回源host
      *
@@ -204,6 +211,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     public void setDefaultSourceHost(String defaultSourceHost) {
         this.defaultSourceHost = defaultSourceHost;
     }
+
 
     /**
      * get 用户域名
@@ -224,6 +232,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 回源类型只能是[ips,domain,oss]中的一种
      *
@@ -233,6 +242,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         this.sourceType = sourceType;
         return this;
     }
+
 
     /**
      * set 回源方式,只能是[https,http]中的一种,默认http
@@ -244,6 +254,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 加速区域,必须是[mainland,nonMainland,all]中的一种,分别代表大陆,海外+中国港澳台,全球
      *
@@ -254,25 +265,28 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
-     * set ipSource
-     *
-     * @param ipSource
-     */
+    * set ipSource
+    *
+    * @param ipSource
+    */
     public SetSourceRequest ipSource(List<IpSourceInfo> ipSource) {
         this.ipSource = ipSource;
         return this;
     }
 
+
     /**
-     * set domainSource
-     *
-     * @param domainSource
-     */
+    * set domainSource
+    *
+    * @param domainSource
+    */
     public SetSourceRequest domainSource(List<DomainSourceInfo> domainSource) {
         this.domainSource = domainSource;
         return this;
     }
+
 
     /**
      * set oss回源域名
@@ -284,6 +298,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 默认回源host
      *
@@ -294,6 +309,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 用户域名
      *
@@ -303,6 +319,7 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -328,5 +345,4 @@ public class SetSourceRequest extends JdcloudRequest implements java.io.Serializ
         }
         this.domainSource.add(domainSource);
     }
-
 }

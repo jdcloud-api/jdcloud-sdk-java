@@ -38,8 +38,8 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
     /**
      * domains
      */
+    
     private List<String> domains;
-
     /**
      * 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      */
@@ -61,23 +61,25 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
     private String logType;
 
 
+
     /**
-     * get domains
-     *
-     * @return
-     */
+    * get domains
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -97,6 +99,7 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
         this.startTime = startTime;
     }
 
+
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -115,6 +118,7 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
         this.endTime = endTime;
     }
 
+
     /**
      * get 时间间隔，取值(hour，day，fiveMin)，不传默认小时。
      *
@@ -132,6 +136,7 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
     public void setInterval(String interval) {
         this.interval = interval;
     }
+
 
     /**
      * get 日志类型，取值(log，zip,gz)，不传默认gz。
@@ -152,15 +157,17 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
-     * set domains
-     *
-     * @param domains
-     */
+    * set domains
+    *
+    * @param domains
+    */
     public QueryDomainsLogRequest domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -172,6 +179,7 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -181,6 +189,7 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 时间间隔，取值(hour，day，fiveMin)，不传默认小时。
@@ -192,6 +201,7 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 日志类型，取值(log，zip,gz)，不传默认gz。
      *
@@ -201,6 +211,7 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
         this.logType = logType;
         return this;
     }
+
 
 
     /**
@@ -214,5 +225,4 @@ public class QueryDomainsLogRequest extends JdcloudRequest implements java.io.Se
         }
         this.domains.add(domain);
     }
-
 }

@@ -64,6 +64,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
     private String topBy;
 
 
+
     /**
      * get 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -81,6 +82,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -100,6 +102,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
         this.endTime = endTime;
     }
 
+
     /**
      * get 需要查询的域名, 必须为用户pin下有权限的域名
      *
@@ -117,6 +120,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 待查询的子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
@@ -136,6 +140,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
         this.subDomain = subDomain;
     }
 
+
     /**
      * get 查询的topN的条数，取值范围：1-100，默认为20
      *
@@ -153,6 +158,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
     public void setSize(Integer size) {
         this.size = size;
     }
+
 
     /**
      * get 排序依据,当前可选：pv,flow, 分别表示按pv、按流量topN ip，默认为&quot;pv&quot;
@@ -173,6 +179,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 查询起始时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -182,6 +189,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 查询截止时间,UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
@@ -193,6 +201,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 需要查询的域名, 必须为用户pin下有权限的域名
      *
@@ -202,6 +211,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 待查询的子域名,查询泛域名时，指定的子域名列表，多个用逗号分隔。非泛域名时，传入空即可
@@ -213,6 +223,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 查询的topN的条数，取值范围：1-100，默认为20
      *
@@ -222,6 +233,7 @@ public class QueryStatisticsTopIpRequest extends JdcloudRequest implements java.
         this.size = size;
         return this;
     }
+
 
     /**
      * set 排序依据,当前可选：pv,flow, 分别表示按pv、按流量topN ip，默认为&quot;pv&quot;

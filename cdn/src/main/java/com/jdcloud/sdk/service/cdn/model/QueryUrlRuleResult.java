@@ -49,6 +49,7 @@ public class QueryUrlRuleResult extends JdcloudResult implements java.io.Seriali
     private String afterRegex;
 
 
+
     /**
      * get 加速域名
      *
@@ -67,6 +68,7 @@ public class QueryUrlRuleResult extends JdcloudResult implements java.io.Seriali
         this.domain = domain;
     }
 
+
     /**
      * get url改写之前的正则表达式
      *
@@ -84,6 +86,7 @@ public class QueryUrlRuleResult extends JdcloudResult implements java.io.Seriali
     public void setBeforeRegex(String beforeRegex) {
         this.beforeRegex = beforeRegex;
     }
+
 
     /**
      * get url改写之后的正则表达式
@@ -104,6 +107,7 @@ public class QueryUrlRuleResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set 加速域名
      *
@@ -114,6 +118,7 @@ public class QueryUrlRuleResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set url改写之前的正则表达式
      *
@@ -123,6 +128,7 @@ public class QueryUrlRuleResult extends JdcloudResult implements java.io.Seriali
         this.beforeRegex = beforeRegex;
         return this;
     }
+
 
     /**
      * set url改写之后的正则表达式

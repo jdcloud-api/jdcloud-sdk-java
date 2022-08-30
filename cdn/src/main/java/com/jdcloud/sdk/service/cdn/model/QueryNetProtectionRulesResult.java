@@ -74,16 +74,17 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
     /**
      * geoBlack
      */
+    
     private List<GeoArea> geoBlack;
-
     /**
      * ipBlack
      */
+    
     private List<String> ipBlack;
-
     /**
      * ipWhite
      */
+    
     private List<String> ipWhite;
 
 
@@ -105,6 +106,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         this.switchStatus = switchStatus;
     }
 
+
     /**
      * get 源新建连接限速，取值on,off，其中on开启，off关闭
      *
@@ -122,6 +124,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
     public void setSrcNewConnLimitEnable(String srcNewConnLimitEnable) {
         this.srcNewConnLimitEnable = srcNewConnLimitEnable;
     }
+
 
     /**
      * get 目的新建连接，取值on,off，其中on开启，off关闭
@@ -141,6 +144,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         this.dstNewConnLimitEnable = dstNewConnLimitEnable;
     }
 
+
     /**
      * get 报文最小长度（包最小长度）,取值：1-1500
      *
@@ -158,6 +162,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
     public void setDatagramRangeMin(Long datagramRangeMin) {
         this.datagramRangeMin = datagramRangeMin;
     }
+
 
     /**
      * get 报文最大长度（包最大长度）,取值：1-1500
@@ -177,6 +182,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         this.datagramRangeMax = datagramRangeMax;
     }
 
+
     /**
      * get 源新建连接限速值，取值：0-4294967295
      *
@@ -194,6 +200,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
     public void setSrcNewConnLimitValue(Long srcNewConnLimitValue) {
         this.srcNewConnLimitValue = srcNewConnLimitValue;
     }
+
 
     /**
      * get 目的新建连接限速值，取值：0-4294967295
@@ -213,59 +220,63 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         this.dstNewConnLimitValue = dstNewConnLimitValue;
     }
 
+
     /**
-     * get geoBlack
-     *
-     * @return
-     */
+    * get geoBlack
+    *
+    * @return
+    */
     public List<GeoArea> getGeoBlack() {
         return geoBlack;
     }
 
     /**
-     * set geoBlack
-     *
-     * @param geoBlack
-     */
+    * set geoBlack
+    *
+    * @param geoBlack
+    */
     public void setGeoBlack(List<GeoArea> geoBlack) {
         this.geoBlack = geoBlack;
     }
 
+
     /**
-     * get ipBlack
-     *
-     * @return
-     */
+    * get ipBlack
+    *
+    * @return
+    */
     public List<String> getIpBlack() {
         return ipBlack;
     }
 
     /**
-     * set ipBlack
-     *
-     * @param ipBlack
-     */
+    * set ipBlack
+    *
+    * @param ipBlack
+    */
     public void setIpBlack(List<String> ipBlack) {
         this.ipBlack = ipBlack;
     }
 
+
     /**
-     * get ipWhite
-     *
-     * @return
-     */
+    * get ipWhite
+    *
+    * @return
+    */
     public List<String> getIpWhite() {
         return ipWhite;
     }
 
     /**
-     * set ipWhite
-     *
-     * @param ipWhite
-     */
+    * set ipWhite
+    *
+    * @param ipWhite
+    */
     public void setIpWhite(List<String> ipWhite) {
         this.ipWhite = ipWhite;
     }
+
 
 
     /**
@@ -278,6 +289,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
      * set 源新建连接限速，取值on,off，其中on开启，off关闭
      *
@@ -287,6 +299,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         this.srcNewConnLimitEnable = srcNewConnLimitEnable;
         return this;
     }
+
 
     /**
      * set 目的新建连接，取值on,off，其中on开启，off关闭
@@ -298,6 +311,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
      * set 报文最小长度（包最小长度）,取值：1-1500
      *
@@ -307,6 +321,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         this.datagramRangeMin = datagramRangeMin;
         return this;
     }
+
 
     /**
      * set 报文最大长度（包最大长度）,取值：1-1500
@@ -318,6 +333,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
      * set 源新建连接限速值，取值：0-4294967295
      *
@@ -327,6 +343,7 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         this.srcNewConnLimitValue = srcNewConnLimitValue;
         return this;
     }
+
 
     /**
      * set 目的新建连接限速值，取值：0-4294967295
@@ -338,35 +355,39 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
-     * set geoBlack
-     *
-     * @param geoBlack
-     */
+    * set geoBlack
+    *
+    * @param geoBlack
+    */
     public QueryNetProtectionRulesResult geoBlack(List<GeoArea> geoBlack) {
         this.geoBlack = geoBlack;
         return this;
     }
 
+
     /**
-     * set ipBlack
-     *
-     * @param ipBlack
-     */
+    * set ipBlack
+    *
+    * @param ipBlack
+    */
     public QueryNetProtectionRulesResult ipBlack(List<String> ipBlack) {
         this.ipBlack = ipBlack;
         return this;
     }
 
+
     /**
-     * set ipWhite
-     *
-     * @param ipWhite
-     */
+    * set ipWhite
+    *
+    * @param ipWhite
+    */
     public QueryNetProtectionRulesResult ipWhite(List<String> ipWhite) {
         this.ipWhite = ipWhite;
         return this;
     }
+
 
 
     /**
@@ -404,5 +425,4 @@ public class QueryNetProtectionRulesResult extends JdcloudResult implements java
         }
         this.ipWhite.add(ipWhite);
     }
-
 }

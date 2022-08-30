@@ -44,6 +44,7 @@ public class QueryOnlineBillingTypeResult extends JdcloudResult implements java.
     private Integer vip;
 
 
+
     /**
      * get 计费方式,取值[0,1],0:日流量计费,1:日峰值带宽计费.
      *
@@ -61,6 +62,7 @@ public class QueryOnlineBillingTypeResult extends JdcloudResult implements java.
     public void setAllType(Integer allType) {
         this.allType = allType;
     }
+
 
     /**
      * get vip(1:vip客户,0:普通客户)
@@ -81,6 +83,7 @@ public class QueryOnlineBillingTypeResult extends JdcloudResult implements java.
     }
 
 
+
     /**
      * set 计费方式,取值[0,1],0:日流量计费,1:日峰值带宽计费.
      *
@@ -90,6 +93,7 @@ public class QueryOnlineBillingTypeResult extends JdcloudResult implements java.
         this.allType = allType;
         return this;
     }
+
 
     /**
      * set vip(1:vip客户,0:普通客户)

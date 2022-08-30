@@ -68,6 +68,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
     private String isp;
 
 
+
     /**
      * get 开始时间戳
      *
@@ -85,6 +86,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
     public void setStartTimeStamp(String startTimeStamp) {
         this.startTimeStamp = startTimeStamp;
     }
+
 
     /**
      * get 开始时间戳
@@ -104,6 +106,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         this.endTimeStamp = endTimeStamp;
     }
 
+
     /**
      * get 带宽单位Mbps
      *
@@ -121,6 +124,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
     public void setAvgbandwidth(Double avgbandwidth) {
         this.avgbandwidth = avgbandwidth;
     }
+
 
     /**
      * get 流量单位MB
@@ -140,6 +144,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         this.flow = flow;
     }
 
+
     /**
      * get 请求量
      *
@@ -158,6 +163,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         this.pv = pv;
     }
 
+
     /**
      * get 地域
      *
@@ -175,6 +181,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
     public void setArea(String area) {
         this.area = area;
     }
+
 
     /**
      * get 运营商
@@ -195,6 +202,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 开始时间戳
      *
@@ -204,6 +212,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         this.startTimeStamp = startTimeStamp;
         return this;
     }
+
 
     /**
      * set 开始时间戳
@@ -215,6 +224,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 带宽单位Mbps
      *
@@ -224,6 +234,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
         return this;
     }
+
 
     /**
      * set 流量单位MB
@@ -235,6 +246,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 请求量
      *
@@ -245,6 +257,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域
      *
@@ -254,6 +267,7 @@ public class DomainBandAreaTrafficDataItem  implements java.io.Serializable {
         this.area = area;
         return this;
     }
+
 
     /**
      * set 运营商

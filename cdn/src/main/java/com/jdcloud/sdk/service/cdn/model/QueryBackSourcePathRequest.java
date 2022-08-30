@@ -42,6 +42,7 @@ public class QueryBackSourcePathRequest extends JdcloudRequest implements java.i
     private String domain;
 
 
+
     /**
      * get 用户域名
      *
@@ -59,6 +60,7 @@ public class QueryBackSourcePathRequest extends JdcloudRequest implements java.i
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
 
     /**

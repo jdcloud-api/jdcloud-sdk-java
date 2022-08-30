@@ -38,37 +38,40 @@ public class QueryPushDomainORAppOrStreamResult extends JdcloudResult implements
     /**
      * streams
      */
+    
     private List<String> streams;
 
 
     /**
-     * get streams
-     *
-     * @return
-     */
+    * get streams
+    *
+    * @return
+    */
     public List<String> getStreams() {
         return streams;
     }
 
     /**
-     * set streams
-     *
-     * @param streams
-     */
+    * set streams
+    *
+    * @param streams
+    */
     public void setStreams(List<String> streams) {
         this.streams = streams;
     }
 
 
+
     /**
-     * set streams
-     *
-     * @param streams
-     */
+    * set streams
+    *
+    * @param streams
+    */
     public QueryPushDomainORAppOrStreamResult streams(List<String> streams) {
         this.streams = streams;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class QueryPushDomainORAppOrStreamResult extends JdcloudResult implements
         }
         this.streams.add(stream);
     }
-
 }

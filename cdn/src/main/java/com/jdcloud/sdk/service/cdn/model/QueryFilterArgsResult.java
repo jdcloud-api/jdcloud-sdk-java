@@ -43,12 +43,13 @@ public class QueryFilterArgsResult extends JdcloudResult implements java.io.Seri
     /**
      * retainArgs
      */
+    
     private List<String> retainArgs;
-
     /**
      * 忽略参数开关
      */
     private String ignoreQueryString;
+
 
 
     /**
@@ -69,23 +70,25 @@ public class QueryFilterArgsResult extends JdcloudResult implements java.io.Seri
         this.domain = domain;
     }
 
+
     /**
-     * get retainArgs
-     *
-     * @return
-     */
+    * get retainArgs
+    *
+    * @return
+    */
     public List<String> getRetainArgs() {
         return retainArgs;
     }
 
     /**
-     * set retainArgs
-     *
-     * @param retainArgs
-     */
+    * set retainArgs
+    *
+    * @param retainArgs
+    */
     public void setRetainArgs(List<String> retainArgs) {
         this.retainArgs = retainArgs;
     }
+
 
     /**
      * get 忽略参数开关
@@ -106,6 +109,7 @@ public class QueryFilterArgsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
      * set 域名
      *
@@ -116,15 +120,17 @@ public class QueryFilterArgsResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set retainArgs
-     *
-     * @param retainArgs
-     */
+    * set retainArgs
+    *
+    * @param retainArgs
+    */
     public QueryFilterArgsResult retainArgs(List<String> retainArgs) {
         this.retainArgs = retainArgs;
         return this;
     }
+
 
     /**
      * set 忽略参数开关
@@ -135,6 +141,7 @@ public class QueryFilterArgsResult extends JdcloudResult implements java.io.Seri
         this.ignoreQueryString = ignoreQueryString;
         return this;
     }
+
 
 
     /**
@@ -148,5 +155,4 @@ public class QueryFilterArgsResult extends JdcloudResult implements java.io.Seri
         }
         this.retainArgs.add(retainArg);
     }
-
 }

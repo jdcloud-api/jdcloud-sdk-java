@@ -43,6 +43,7 @@ public class FiveMinItem  implements java.io.Serializable {
     private String time;
 
 
+
     /**
      * get 月峰值(MB)
      *
@@ -60,6 +61,7 @@ public class FiveMinItem  implements java.io.Serializable {
     public void setData(Long data) {
         this.data = data;
     }
+
 
     /**
      * get 时间
@@ -80,6 +82,7 @@ public class FiveMinItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 月峰值(MB)
      *
@@ -89,6 +92,7 @@ public class FiveMinItem  implements java.io.Serializable {
         this.data = data;
         return this;
     }
+
 
     /**
      * set 时间

@@ -47,6 +47,7 @@ public class OperateLiveDomainIpBlackListRequest extends JdcloudRequest implemen
     private String domain;
 
 
+
     /**
      * get blackIpsEnable
      *
@@ -64,6 +65,7 @@ public class OperateLiveDomainIpBlackListRequest extends JdcloudRequest implemen
     public void setBlackIpsEnable(String blackIpsEnable) {
         this.blackIpsEnable = blackIpsEnable;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class OperateLiveDomainIpBlackListRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set blackIpsEnable
      *
@@ -93,6 +96,7 @@ public class OperateLiveDomainIpBlackListRequest extends JdcloudRequest implemen
         this.blackIpsEnable = blackIpsEnable;
         return this;
     }
+
 
     /**
      * set 用户域名

@@ -367,6 +367,9 @@ import com.jdcloud.sdk.service.cdn.client.CreateCacheRuleExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetSourceRequest;
 import com.jdcloud.sdk.service.cdn.model.SetSourceResponse;
 import com.jdcloud.sdk.service.cdn.client.SetSourceExecutor;
+import com.jdcloud.sdk.service.cdn.model.BatchIpBlackListRequest;
+import com.jdcloud.sdk.service.cdn.model.BatchIpBlackListResponse;
+import com.jdcloud.sdk.service.cdn.client.BatchIpBlackListExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryWafBlackRuleSwitchRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryWafBlackRuleSwitchResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryWafBlackRuleSwitchExecutor;
@@ -610,6 +613,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryFilterArgsExecutor;
 import com.jdcloud.sdk.service.cdn.model.BatchCreateLiveDomainRequest;
 import com.jdcloud.sdk.service.cdn.model.BatchCreateLiveDomainResponse;
 import com.jdcloud.sdk.service.cdn.client.BatchCreateLiveDomainExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryPinCanIPTypeRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryPinCanIPTypeResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryPinCanIPTypeExecutor;
 
 /**
  * cdnClient
@@ -1893,6 +1899,17 @@ public class CdnClient extends JdcloudClient {
     }
 
     /**
+     * 批量添加域名ip黑名单
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public BatchIpBlackListResponse batchIpBlackList(BatchIpBlackListRequest request) throws JdcloudSdkException {
+        return new BatchIpBlackListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询WAF黑名单开关
      *
      * @param request
@@ -2781,6 +2798,17 @@ public class CdnClient extends JdcloudClient {
      */
     public BatchCreateLiveDomainResponse batchCreateLiveDomain(BatchCreateLiveDomainRequest request) throws JdcloudSdkException {
         return new BatchCreateLiveDomainExecutor().client(this).execute(request);
+    }
+
+    /**
+     * null
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryPinCanIPTypeResponse queryPinCanIPType(QueryPinCanIPTypeRequest request) throws JdcloudSdkException {
+        return new QueryPinCanIPTypeExecutor().client(this).execute(request);
     }
 
 

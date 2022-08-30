@@ -88,6 +88,7 @@ public class AvgspeedItem  implements java.io.Serializable {
     private Double hitRatio;
 
 
+
     /**
      * get area
      *
@@ -105,6 +106,7 @@ public class AvgspeedItem  implements java.io.Serializable {
     public void setArea(String area) {
         this.area = area;
     }
+
 
     /**
      * get avgspeed
@@ -124,6 +126,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.avgspeed = avgspeed;
     }
 
+
     /**
      * get avgspeedUnit
      *
@@ -141,6 +144,7 @@ public class AvgspeedItem  implements java.io.Serializable {
     public void setAvgspeedUnit(String avgspeedUnit) {
         this.avgspeedUnit = avgspeedUnit;
     }
+
 
     /**
      * get firstpkgtime
@@ -160,6 +164,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.firstpkgtime = firstpkgtime;
     }
 
+
     /**
      * get firstpkgtimeUnit
      *
@@ -177,6 +182,7 @@ public class AvgspeedItem  implements java.io.Serializable {
     public void setFirstpkgtimeUnit(String firstpkgtimeUnit) {
         this.firstpkgtimeUnit = firstpkgtimeUnit;
     }
+
 
     /**
      * get errorRatio
@@ -196,6 +202,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.errorRatio = errorRatio;
     }
 
+
     /**
      * get flow
      *
@@ -213,6 +220,7 @@ public class AvgspeedItem  implements java.io.Serializable {
     public void setFlow(Double flow) {
         this.flow = flow;
     }
+
 
     /**
      * get flowUnit
@@ -232,6 +240,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.flowUnit = flowUnit;
     }
 
+
     /**
      * get flowPercent
      *
@@ -250,6 +259,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.flowPercent = flowPercent;
     }
 
+
     /**
      * get pv
      *
@@ -267,6 +277,7 @@ public class AvgspeedItem  implements java.io.Serializable {
     public void setPv(Long pv) {
         this.pv = pv;
     }
+
 
     /**
      * get hitRatio
@@ -287,6 +298,7 @@ public class AvgspeedItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set area
      *
@@ -296,6 +308,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.area = area;
         return this;
     }
+
 
     /**
      * set avgspeed
@@ -307,6 +320,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set avgspeedUnit
      *
@@ -316,6 +330,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.avgspeedUnit = avgspeedUnit;
         return this;
     }
+
 
     /**
      * set firstpkgtime
@@ -327,6 +342,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set firstpkgtimeUnit
      *
@@ -336,6 +352,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.firstpkgtimeUnit = firstpkgtimeUnit;
         return this;
     }
+
 
     /**
      * set errorRatio
@@ -347,6 +364,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -356,6 +374,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set flowUnit
@@ -367,6 +386,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flowPercent
      *
@@ -377,6 +397,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pv
      *
@@ -386,6 +407,7 @@ public class AvgspeedItem  implements java.io.Serializable {
         this.pv = pv;
         return this;
     }
+
 
     /**
      * set hitRatio

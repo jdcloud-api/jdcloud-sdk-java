@@ -53,6 +53,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
     /**
      * 域名组内域名包含主域名
      */
+    
     private List<String> domains;
 
 
@@ -74,6 +75,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
         this.shareCache = shareCache;
     }
 
+
     /**
      * get 主域名,开启共享缓存时必传
      *
@@ -91,6 +93,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
     public void setPrimaryDomain(String primaryDomain) {
         this.primaryDomain = primaryDomain;
     }
+
 
     /**
      * get 域名组名称
@@ -110,23 +113,25 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
         this.domainGroupName = domainGroupName;
     }
 
+
     /**
-     * get 域名组内域名包含主域名
-     *
-     * @return
-     */
+    * get 域名组内域名包含主域名
+    *
+    * @return
+    */
     public List<String> getDomains() {
         return domains;
     }
 
     /**
-     * set 域名组内域名包含主域名
-     *
-     * @param domains
-     */
+    * set 域名组内域名包含主域名
+    *
+    * @param domains
+    */
     public void setDomains(List<String> domains) {
         this.domains = domains;
     }
+
 
 
     /**
@@ -139,6 +144,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 主域名,开启共享缓存时必传
      *
@@ -148,6 +154,7 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
         this.primaryDomain = primaryDomain;
         return this;
     }
+
 
     /**
      * set 域名组名称
@@ -159,15 +166,17 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
-     * set 域名组内域名包含主域名
-     *
-     * @param domains
-     */
+    * set 域名组内域名包含主域名
+    *
+    * @param domains
+    */
     public CreateDomainGroupRequest domains(List<String> domains) {
         this.domains = domains;
         return this;
     }
+
 
 
     /**
@@ -181,5 +190,4 @@ public class CreateDomainGroupRequest extends JdcloudRequest implements java.io.
         }
         this.domains.add(domain);
     }
-
 }

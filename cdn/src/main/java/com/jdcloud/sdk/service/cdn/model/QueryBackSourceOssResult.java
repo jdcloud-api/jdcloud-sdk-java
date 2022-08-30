@@ -54,6 +54,7 @@ public class QueryBackSourceOssResult extends JdcloudResult implements java.io.S
     private String domain2;
 
 
+
     /**
      * get on/off
      *
@@ -71,6 +72,7 @@ public class QueryBackSourceOssResult extends JdcloudResult implements java.io.S
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get oss桶名
@@ -90,6 +92,7 @@ public class QueryBackSourceOssResult extends JdcloudResult implements java.io.S
         this.bucket = bucket;
     }
 
+
     /**
      * get oss后缀
      *
@@ -107,6 +110,7 @@ public class QueryBackSourceOssResult extends JdcloudResult implements java.io.S
     public void setSuffix(String suffix) {
         this.suffix = suffix;
     }
+
 
     /**
      * get domain2
@@ -127,6 +131,7 @@ public class QueryBackSourceOssResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
      * set on/off
      *
@@ -136,6 +141,7 @@ public class QueryBackSourceOssResult extends JdcloudResult implements java.io.S
         this.status = status;
         return this;
     }
+
 
     /**
      * set oss桶名
@@ -147,6 +153,7 @@ public class QueryBackSourceOssResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set oss后缀
      *
@@ -156,6 +163,7 @@ public class QueryBackSourceOssResult extends JdcloudResult implements java.io.S
         this.suffix = suffix;
         return this;
     }
+
 
     /**
      * set domain2

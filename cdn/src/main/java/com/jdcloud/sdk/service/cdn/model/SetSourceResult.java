@@ -39,6 +39,7 @@ public class SetSourceResult extends JdcloudResult implements java.io.Serializab
     private String taskId;
 
 
+
     /**
      * get 任务id
      *
@@ -56,6 +57,7 @@ public class SetSourceResult extends JdcloudResult implements java.io.Serializab
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
 
     /**

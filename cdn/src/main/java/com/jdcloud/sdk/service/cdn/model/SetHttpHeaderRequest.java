@@ -62,6 +62,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
     private String domain;
 
 
+
     /**
      * get 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
      *
@@ -79,6 +80,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
     public void setEdgeType(Integer edgeType) {
         this.edgeType = edgeType;
     }
+
 
     /**
      * get header类型[resp,req],resp：配置响应头，req：配置请求头
@@ -98,6 +100,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
         this.headerType = headerType;
     }
 
+
     /**
      * get header名，例如：Content-Disposition，可自定义，长度不能超过256个字符，不能包含中文字符，不能包含$和_，不支持设置如下头名：[&quot;Content-Length&quot;,&quot;Date&quot;,&quot;Host&quot;,&quot;Content-Encoding&quot;,&quot;If-Modified-Since&quot;,&quot;If-Range&quot;,&quot;Content-Type&quot;,&quot;Transfer-Encoding&quot;,&quot;Cache-Control&quot;,&quot;Last-Modified&quot;,&quot;Connection&quot;, &quot;Content-Range&quot;,&quot;ETag&quot;,&quot;Age&quot;,&quot;Authentication-Info&quot;,&quot;Proxy-Authenticate&quot;,&quot;Retry-After&quot;,&quot;Set-Cookie&quot;,&quot;Vary&quot;,&quot;Content-Location&quot;,&quot;Meter&quot;,&quot;Allow&quot;,&quot;Error&quot;,&quot;X-Trace&quot;, &quot;Proxy-Connection&quot;]
      *
@@ -116,6 +119,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
         this.headerName = headerName;
     }
 
+
     /**
      * get header值，不能包含($,_,#)，不能超过256个字符
      *
@@ -133,6 +137,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
     public void setHeaderValue(String headerValue) {
         this.headerValue = headerValue;
     }
+
 
     /**
      * get 用户域名
@@ -153,6 +158,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 0表示header在边缘生效，1表示header回源生效，2表示在边缘和回源都生效，该字段不传时默认header在边缘和回源都生效
      *
@@ -162,6 +168,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
         this.edgeType = edgeType;
         return this;
     }
+
 
     /**
      * set header类型[resp,req],resp：配置响应头，req：配置请求头
@@ -173,6 +180,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set header名，例如：Content-Disposition，可自定义，长度不能超过256个字符，不能包含中文字符，不能包含$和_，不支持设置如下头名：[&quot;Content-Length&quot;,&quot;Date&quot;,&quot;Host&quot;,&quot;Content-Encoding&quot;,&quot;If-Modified-Since&quot;,&quot;If-Range&quot;,&quot;Content-Type&quot;,&quot;Transfer-Encoding&quot;,&quot;Cache-Control&quot;,&quot;Last-Modified&quot;,&quot;Connection&quot;, &quot;Content-Range&quot;,&quot;ETag&quot;,&quot;Age&quot;,&quot;Authentication-Info&quot;,&quot;Proxy-Authenticate&quot;,&quot;Retry-After&quot;,&quot;Set-Cookie&quot;,&quot;Vary&quot;,&quot;Content-Location&quot;,&quot;Meter&quot;,&quot;Allow&quot;,&quot;Error&quot;,&quot;X-Trace&quot;, &quot;Proxy-Connection&quot;]
      *
@@ -183,6 +191,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set header值，不能包含($,_,#)，不能超过256个字符
      *
@@ -192,6 +201,7 @@ public class SetHttpHeaderRequest extends JdcloudRequest implements java.io.Seri
         this.headerValue = headerValue;
         return this;
     }
+
 
     /**
      * set 用户域名

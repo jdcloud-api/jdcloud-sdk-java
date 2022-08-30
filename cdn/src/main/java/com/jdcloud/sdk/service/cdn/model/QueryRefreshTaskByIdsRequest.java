@@ -38,31 +38,33 @@ public class QueryRefreshTaskByIdsRequest extends JdcloudRequest implements java
     /**
      * 查询的任务taskIds列表,最多能查10条
      */
+    
     private List<String> taskIds;
-
     /**
      * url的模糊查询关键字
      */
     private String keyword;
 
 
+
     /**
-     * get 查询的任务taskIds列表,最多能查10条
-     *
-     * @return
-     */
+    * get 查询的任务taskIds列表,最多能查10条
+    *
+    * @return
+    */
     public List<String> getTaskIds() {
         return taskIds;
     }
 
     /**
-     * set 查询的任务taskIds列表,最多能查10条
-     *
-     * @param taskIds
-     */
+    * set 查询的任务taskIds列表,最多能查10条
+    *
+    * @param taskIds
+    */
     public void setTaskIds(List<String> taskIds) {
         this.taskIds = taskIds;
     }
+
 
     /**
      * get url的模糊查询关键字
@@ -83,15 +85,17 @@ public class QueryRefreshTaskByIdsRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
-     * set 查询的任务taskIds列表,最多能查10条
-     *
-     * @param taskIds
-     */
+    * set 查询的任务taskIds列表,最多能查10条
+    *
+    * @param taskIds
+    */
     public QueryRefreshTaskByIdsRequest taskIds(List<String> taskIds) {
         this.taskIds = taskIds;
         return this;
     }
+
 
     /**
      * set url的模糊查询关键字
@@ -102,6 +106,7 @@ public class QueryRefreshTaskByIdsRequest extends JdcloudRequest implements java
         this.keyword = keyword;
         return this;
     }
+
 
 
     /**
@@ -115,5 +120,4 @@ public class QueryRefreshTaskByIdsRequest extends JdcloudRequest implements java
         }
         this.taskIds.add(taskId);
     }
-
 }

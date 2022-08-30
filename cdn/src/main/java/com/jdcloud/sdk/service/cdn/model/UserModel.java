@@ -73,6 +73,7 @@ public class UserModel  implements java.io.Serializable {
     private String billSourceid;
 
 
+
     /**
      * get 用户pin
      *
@@ -90,6 +91,7 @@ public class UserModel  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 计费类型
@@ -109,6 +111,7 @@ public class UserModel  implements java.io.Serializable {
         this.typeList = typeList;
     }
 
+
     /**
      * get 计费类型描述
      *
@@ -126,6 +129,7 @@ public class UserModel  implements java.io.Serializable {
     public void setTypeDescList(String typeDescList) {
         this.typeDescList = typeDescList;
     }
+
 
     /**
      * get 用户状态
@@ -145,6 +149,7 @@ public class UserModel  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 用户状态描述
      *
@@ -162,6 +167,7 @@ public class UserModel  implements java.io.Serializable {
     public void setStatusDesc(String statusDesc) {
         this.statusDesc = statusDesc;
     }
+
 
     /**
      * get 结算方式
@@ -181,6 +187,7 @@ public class UserModel  implements java.io.Serializable {
         this.settlementMethod = settlementMethod;
     }
 
+
     /**
      * get 结算方式描述
      *
@@ -198,6 +205,7 @@ public class UserModel  implements java.io.Serializable {
     public void setSettlementMethodDesc(String settlementMethodDesc) {
         this.settlementMethodDesc = settlementMethodDesc;
     }
+
 
     /**
      * get 计费资源id
@@ -218,6 +226,7 @@ public class UserModel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -227,6 +236,7 @@ public class UserModel  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 计费类型
@@ -238,6 +248,7 @@ public class UserModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型描述
      *
@@ -247,6 +258,7 @@ public class UserModel  implements java.io.Serializable {
         this.typeDescList = typeDescList;
         return this;
     }
+
 
     /**
      * set 用户状态
@@ -258,6 +270,7 @@ public class UserModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户状态描述
      *
@@ -267,6 +280,7 @@ public class UserModel  implements java.io.Serializable {
         this.statusDesc = statusDesc;
         return this;
     }
+
 
     /**
      * set 结算方式
@@ -278,6 +292,7 @@ public class UserModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结算方式描述
      *
@@ -287,6 +302,7 @@ public class UserModel  implements java.io.Serializable {
         this.settlementMethodDesc = settlementMethodDesc;
         return this;
     }
+
 
     /**
      * set 计费资源id

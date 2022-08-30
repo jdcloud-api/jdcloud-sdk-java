@@ -43,6 +43,7 @@ public class OverviewTrafficDetailItem  implements java.io.Serializable {
     private String timeStamp;
 
 
+
     /**
      * get data
      *
@@ -60,6 +61,7 @@ public class OverviewTrafficDetailItem  implements java.io.Serializable {
     public void setData(Long data) {
         this.data = data;
     }
+
 
     /**
      * get timeStamp
@@ -80,6 +82,7 @@ public class OverviewTrafficDetailItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set data
      *
@@ -89,6 +92,7 @@ public class OverviewTrafficDetailItem  implements java.io.Serializable {
         this.data = data;
         return this;
     }
+
 
     /**
      * set timeStamp

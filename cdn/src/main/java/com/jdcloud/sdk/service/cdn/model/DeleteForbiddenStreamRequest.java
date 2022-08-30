@@ -39,8 +39,8 @@ public class DeleteForbiddenStreamRequest extends JdcloudRequest implements java
     /**
      * 要删除的禁播流
      */
+    
     private List<DeleteStream> deleteStreams;
-
     /**
      * 用户域名
      * Required:true
@@ -49,23 +49,25 @@ public class DeleteForbiddenStreamRequest extends JdcloudRequest implements java
     private String domain;
 
 
+
     /**
-     * get 要删除的禁播流
-     *
-     * @return
-     */
+    * get 要删除的禁播流
+    *
+    * @return
+    */
     public List<DeleteStream> getDeleteStreams() {
         return deleteStreams;
     }
 
     /**
-     * set 要删除的禁播流
-     *
-     * @param deleteStreams
-     */
+    * set 要删除的禁播流
+    *
+    * @param deleteStreams
+    */
     public void setDeleteStreams(List<DeleteStream> deleteStreams) {
         this.deleteStreams = deleteStreams;
     }
+
 
     /**
      * get 用户域名
@@ -86,15 +88,17 @@ public class DeleteForbiddenStreamRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
-     * set 要删除的禁播流
-     *
-     * @param deleteStreams
-     */
+    * set 要删除的禁播流
+    *
+    * @param deleteStreams
+    */
     public DeleteForbiddenStreamRequest deleteStreams(List<DeleteStream> deleteStreams) {
         this.deleteStreams = deleteStreams;
         return this;
     }
+
 
     /**
      * set 用户域名
@@ -105,6 +109,7 @@ public class DeleteForbiddenStreamRequest extends JdcloudRequest implements java
         this.domain = domain;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DeleteForbiddenStreamRequest extends JdcloudRequest implements java
         }
         this.deleteStreams.add(deleteStream);
     }
-
 }

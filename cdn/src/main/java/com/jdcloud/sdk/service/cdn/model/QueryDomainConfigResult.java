@@ -114,6 +114,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     /**
      * cacheRules
      */
+    
     private List<CacheRule> cacheRules;
 
 
@@ -135,6 +136,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.ignoreQueryString = ignoreQueryString;
     }
 
+
     /**
      * get range参数[on,off]
      *
@@ -152,6 +154,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     public void setRange(String range) {
         this.range = range;
     }
+
 
     /**
      * get httpType参数[on,off]
@@ -171,6 +174,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.httpType = httpType;
     }
 
+
     /**
      * get https证书
      *
@@ -188,6 +192,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     public void setHttpsCertificate(String httpsCertificate) {
         this.httpsCertificate = httpsCertificate;
     }
+
 
     /**
      * get rsa秘钥
@@ -207,6 +212,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.httpsRsaKey = httpsRsaKey;
     }
 
+
     /**
      * get 跳转类型[default,http,https]
      *
@@ -224,6 +230,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     public void setHttpsJumpType(String httpsJumpType) {
         this.httpsJumpType = httpsJumpType;
     }
+
 
     /**
      * get 是否支持视频拖拽[on,off]
@@ -243,6 +250,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.videoDraft = videoDraft;
     }
 
+
     /**
      * get group
      *
@@ -260,6 +268,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     public void setGroupName(String groupName) {
         this.groupName = groupName;
     }
+
 
     /**
      * get shareId
@@ -279,6 +288,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.shareId = shareId;
     }
 
+
     /**
      * get shareName
      *
@@ -296,6 +306,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     public void setShareName(String shareName) {
         this.shareName = shareName;
     }
+
 
     /**
      * get jcdnTimeAnti
@@ -315,6 +326,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.jcdnTimeAnti = jcdnTimeAnti;
     }
 
+
     /**
      * get shareCache
      *
@@ -332,6 +344,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     public void setShareCache(String shareCache) {
         this.shareCache = shareCache;
     }
+
 
     /**
      * get isShareOpen
@@ -351,6 +364,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.isShareOpen = isShareOpen;
     }
 
+
     /**
      * get gzip参数[on,off]
      *
@@ -368,6 +382,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
     public void setGzip(String gzip) {
         this.gzip = gzip;
     }
+
 
     /**
      * get gzipTypes
@@ -387,23 +402,25 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.gzipTypes = gzipTypes;
     }
 
+
     /**
-     * get cacheRules
-     *
-     * @return
-     */
+    * get cacheRules
+    *
+    * @return
+    */
     public List<CacheRule> getCacheRules() {
         return cacheRules;
     }
 
     /**
-     * set cacheRules
-     *
-     * @param cacheRules
-     */
+    * set cacheRules
+    *
+    * @param cacheRules
+    */
     public void setCacheRules(List<CacheRule> cacheRules) {
         this.cacheRules = cacheRules;
     }
+
 
 
     /**
@@ -416,6 +433,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set range参数[on,off]
      *
@@ -425,6 +443,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.range = range;
         return this;
     }
+
 
     /**
      * set httpType参数[on,off]
@@ -436,6 +455,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set https证书
      *
@@ -445,6 +465,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.httpsCertificate = httpsCertificate;
         return this;
     }
+
 
     /**
      * set rsa秘钥
@@ -456,6 +477,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 跳转类型[default,http,https]
      *
@@ -465,6 +487,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.httpsJumpType = httpsJumpType;
         return this;
     }
+
 
     /**
      * set 是否支持视频拖拽[on,off]
@@ -476,6 +499,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set group
      *
@@ -485,6 +509,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.groupName = groupName;
         return this;
     }
+
 
     /**
      * set shareId
@@ -496,6 +521,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set shareName
      *
@@ -505,6 +531,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.shareName = shareName;
         return this;
     }
+
 
     /**
      * set jcdnTimeAnti
@@ -516,6 +543,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set shareCache
      *
@@ -525,6 +553,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.shareCache = shareCache;
         return this;
     }
+
 
     /**
      * set isShareOpen
@@ -536,6 +565,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set gzip参数[on,off]
      *
@@ -545,6 +575,7 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         this.gzip = gzip;
         return this;
     }
+
 
     /**
      * set gzipTypes
@@ -556,15 +587,17 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
-     * set cacheRules
-     *
-     * @param cacheRules
-     */
+    * set cacheRules
+    *
+    * @param cacheRules
+    */
     public QueryDomainConfigResult cacheRules(List<CacheRule> cacheRules) {
         this.cacheRules = cacheRules;
         return this;
     }
+
 
 
     /**
@@ -578,5 +611,4 @@ public class QueryDomainConfigResult extends JdcloudResult implements java.io.Se
         }
         this.cacheRules.add(cacheRule);
     }
-
 }

@@ -49,6 +49,7 @@ public class DeleteCCProtectRuleRequest extends JdcloudRequest implements java.i
     private String ids;
 
 
+
     /**
      * get 用户域名
      *
@@ -66,6 +67,7 @@ public class DeleteCCProtectRuleRequest extends JdcloudRequest implements java.i
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get ids
@@ -86,6 +88,7 @@ public class DeleteCCProtectRuleRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 用户域名
      *
@@ -95,6 +98,7 @@ public class DeleteCCProtectRuleRequest extends JdcloudRequest implements java.i
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set ids

@@ -57,6 +57,7 @@ public class QueryPushDomainORAppOrStreamRequest extends JdcloudRequest implemen
     private String domain;
 
 
+
     /**
      * get app名，传appName查询流名列表
      *
@@ -74,6 +75,7 @@ public class QueryPushDomainORAppOrStreamRequest extends JdcloudRequest implemen
     public void setApp(String app) {
         this.app = app;
     }
+
 
     /**
      * get 流名模糊查询
@@ -93,6 +95,7 @@ public class QueryPushDomainORAppOrStreamRequest extends JdcloudRequest implemen
         this.stream = stream;
     }
 
+
     /**
      * get 指定app/流名列表大小，默认50
      *
@@ -110,6 +113,7 @@ public class QueryPushDomainORAppOrStreamRequest extends JdcloudRequest implemen
     public void setLimit(Long limit) {
         this.limit = limit;
     }
+
 
     /**
      * get 用户域名
@@ -130,6 +134,7 @@ public class QueryPushDomainORAppOrStreamRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set app名，传appName查询流名列表
      *
@@ -139,6 +144,7 @@ public class QueryPushDomainORAppOrStreamRequest extends JdcloudRequest implemen
         this.app = app;
         return this;
     }
+
 
     /**
      * set 流名模糊查询
@@ -150,6 +156,7 @@ public class QueryPushDomainORAppOrStreamRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set 指定app/流名列表大小，默认50
      *
@@ -159,6 +166,7 @@ public class QueryPushDomainORAppOrStreamRequest extends JdcloudRequest implemen
         this.limit = limit;
         return this;
     }
+
 
     /**
      * set 用户域名

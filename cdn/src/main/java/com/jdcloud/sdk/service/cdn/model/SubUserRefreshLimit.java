@@ -53,6 +53,7 @@ public class SubUserRefreshLimit  implements java.io.Serializable {
     private Long prefetchCount;
 
 
+
     /**
      * get 子账号名
      *
@@ -70,6 +71,7 @@ public class SubUserRefreshLimit  implements java.io.Serializable {
     public void setUser(String user) {
         this.user = user;
     }
+
 
     /**
      * get 子账号刷新个数
@@ -89,6 +91,7 @@ public class SubUserRefreshLimit  implements java.io.Serializable {
         this.refreshCount = refreshCount;
     }
 
+
     /**
      * get 子账号目录个数
      *
@@ -106,6 +109,7 @@ public class SubUserRefreshLimit  implements java.io.Serializable {
     public void setDirCount(Long dirCount) {
         this.dirCount = dirCount;
     }
+
 
     /**
      * get 子账号预热个数
@@ -126,6 +130,7 @@ public class SubUserRefreshLimit  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 子账号名
      *
@@ -135,6 +140,7 @@ public class SubUserRefreshLimit  implements java.io.Serializable {
         this.user = user;
         return this;
     }
+
 
     /**
      * set 子账号刷新个数
@@ -146,6 +152,7 @@ public class SubUserRefreshLimit  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子账号目录个数
      *
@@ -155,6 +162,7 @@ public class SubUserRefreshLimit  implements java.io.Serializable {
         this.dirCount = dirCount;
         return this;
     }
+
 
     /**
      * set 子账号预热个数

@@ -53,6 +53,7 @@ public class BackSourceRule  implements java.io.Serializable {
     private Integer priority;
 
 
+
     /**
      * get 匹配方式,取值：全站(all)与url(url)
      *
@@ -70,6 +71,7 @@ public class BackSourceRule  implements java.io.Serializable {
     public void setMatchMode(String matchMode) {
         this.matchMode = matchMode;
     }
+
 
     /**
      * get 待改写回源URL,1、选择全站时该项不允许填写，匹配方式为全站时为“^/(.\*)”，选择URL路径时需以/开头;2、若为(/.\*)即与全站等效,请选择全站:all匹配方式；3、\*与\*、\*与.\*不能连续；4、URL匹配方式：仅支持 “-”、“\”、“/”、“.”、字母、数字、通配符\*。
@@ -89,6 +91,7 @@ public class BackSourceRule  implements java.io.Serializable {
         this.before = before;
     }
 
+
     /**
      * get 目标回源URL,URL匹配方式：仅支持“-”、“\”、“/”、“.”、字母、数字、$。
      *
@@ -106,6 +109,7 @@ public class BackSourceRule  implements java.io.Serializable {
     public void setAfter(String after) {
         this.after = after;
     }
+
 
     /**
      * get 优先级，1-50,不可重复
@@ -126,6 +130,7 @@ public class BackSourceRule  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 匹配方式,取值：全站(all)与url(url)
      *
@@ -135,6 +140,7 @@ public class BackSourceRule  implements java.io.Serializable {
         this.matchMode = matchMode;
         return this;
     }
+
 
     /**
      * set 待改写回源URL,1、选择全站时该项不允许填写，匹配方式为全站时为“^/(.\*)”，选择URL路径时需以/开头;2、若为(/.\*)即与全站等效,请选择全站:all匹配方式；3、\*与\*、\*与.\*不能连续；4、URL匹配方式：仅支持 “-”、“\”、“/”、“.”、字母、数字、通配符\*。
@@ -146,6 +152,7 @@ public class BackSourceRule  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目标回源URL,URL匹配方式：仅支持“-”、“\”、“/”、“.”、字母、数字、$。
      *
@@ -155,6 +162,7 @@ public class BackSourceRule  implements java.io.Serializable {
         this.after = after;
         return this;
     }
+
 
     /**
      * set 优先级，1-50,不可重复

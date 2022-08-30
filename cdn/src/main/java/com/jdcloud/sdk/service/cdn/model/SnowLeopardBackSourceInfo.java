@@ -37,54 +37,57 @@ public class SnowLeopardBackSourceInfo  implements java.io.Serializable {
     /**
      * ips
      */
+    
     private List<SnowLeopardIpSourceInfo> ips;
-
     /**
      * domain
      */
+    
     private List<SnowLeopardDomainSourceInfo> domain;
-
     /**
      * ossSource
      */
     private String ossSource;
 
 
+
     /**
-     * get ips
-     *
-     * @return
-     */
+    * get ips
+    *
+    * @return
+    */
     public List<SnowLeopardIpSourceInfo> getIps() {
         return ips;
     }
 
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public void setIps(List<SnowLeopardIpSourceInfo> ips) {
         this.ips = ips;
     }
 
+
     /**
-     * get domain
-     *
-     * @return
-     */
+    * get domain
+    *
+    * @return
+    */
     public List<SnowLeopardDomainSourceInfo> getDomain() {
         return domain;
     }
 
     /**
-     * set domain
-     *
-     * @param domain
-     */
+    * set domain
+    *
+    * @param domain
+    */
     public void setDomain(List<SnowLeopardDomainSourceInfo> domain) {
         this.domain = domain;
     }
+
 
     /**
      * get ossSource
@@ -105,25 +108,28 @@ public class SnowLeopardBackSourceInfo  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public SnowLeopardBackSourceInfo ips(List<SnowLeopardIpSourceInfo> ips) {
         this.ips = ips;
         return this;
     }
 
+
     /**
-     * set domain
-     *
-     * @param domain
-     */
+    * set domain
+    *
+    * @param domain
+    */
     public SnowLeopardBackSourceInfo domain(List<SnowLeopardDomainSourceInfo> domain) {
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set ossSource
@@ -134,6 +140,7 @@ public class SnowLeopardBackSourceInfo  implements java.io.Serializable {
         this.ossSource = ossSource;
         return this;
     }
+
 
 
     /**
@@ -159,5 +166,4 @@ public class SnowLeopardBackSourceInfo  implements java.io.Serializable {
         }
         this.domain.add(domain);
     }
-
 }

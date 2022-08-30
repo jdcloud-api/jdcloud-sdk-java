@@ -39,6 +39,7 @@ public class SetOnlineBillingTypeRequest extends JdcloudRequest implements java.
     private Integer allType;
 
 
+
     /**
      * get 计费方式,取值[0,1],0:日流量计费,1:日峰值带宽计费.
      *
@@ -56,6 +57,7 @@ public class SetOnlineBillingTypeRequest extends JdcloudRequest implements java.
     public void setAllType(Integer allType) {
         this.allType = allType;
     }
+
 
 
     /**

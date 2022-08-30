@@ -42,6 +42,7 @@ public class QueryDomainGroupDetailRequest extends JdcloudRequest implements jav
     private Long id;
 
 
+
     /**
      * get 域名组id
      *
@@ -59,6 +60,7 @@ public class QueryDomainGroupDetailRequest extends JdcloudRequest implements jav
     public void setId(Long id) {
         this.id = id;
     }
+
 
 
     /**

@@ -47,6 +47,7 @@ public class DeleteExtraCacheTimeRequest extends JdcloudRequest implements java.
     private String domain;
 
 
+
     /**
      * get 异常状态码 [&quot;4xx&quot;,&quot;400&quot;, &quot;401&quot;,  &quot;402&quot;, &quot;404&quot;, &quot;405&quot;, &quot;406&quot;, &quot;407&quot;, &quot;408&quot;, &quot;409&quot;, &quot;410&quot;, &quot;411&quot;, &quot;412&quot;, &quot;413&quot;, &quot;414&quot;, &quot;415&quot;, &quot;416&quot;, &quot;417&quot;,  &quot;5xx&quot;,&quot;500&quot;, &quot;501&quot;, &quot;502&quot;, &quot;503&quot;, &quot;504&quot;, &quot;505&quot;]中的其中一个
      *
@@ -64,6 +65,7 @@ public class DeleteExtraCacheTimeRequest extends JdcloudRequest implements java.
     public void setHttpCode(String httpCode) {
         this.httpCode = httpCode;
     }
+
 
     /**
      * get 用户域名
@@ -84,6 +86,7 @@ public class DeleteExtraCacheTimeRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 异常状态码 [&quot;4xx&quot;,&quot;400&quot;, &quot;401&quot;,  &quot;402&quot;, &quot;404&quot;, &quot;405&quot;, &quot;406&quot;, &quot;407&quot;, &quot;408&quot;, &quot;409&quot;, &quot;410&quot;, &quot;411&quot;, &quot;412&quot;, &quot;413&quot;, &quot;414&quot;, &quot;415&quot;, &quot;416&quot;, &quot;417&quot;,  &quot;5xx&quot;,&quot;500&quot;, &quot;501&quot;, &quot;502&quot;, &quot;503&quot;, &quot;504&quot;, &quot;505&quot;]中的其中一个
      *
@@ -93,6 +96,7 @@ public class DeleteExtraCacheTimeRequest extends JdcloudRequest implements java.
         this.httpCode = httpCode;
         return this;
     }
+
 
     /**
      * set 用户域名

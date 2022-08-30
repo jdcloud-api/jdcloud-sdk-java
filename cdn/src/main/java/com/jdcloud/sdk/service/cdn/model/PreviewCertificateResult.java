@@ -64,6 +64,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
     private String sigHashAlgName;
 
 
+
     /**
      * get sigAlgName
      *
@@ -81,6 +82,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
     public void setSigAlgName(String sigAlgName) {
         this.sigAlgName = sigAlgName;
     }
+
 
     /**
      * get issuer
@@ -100,6 +102,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
         this.issuer = issuer;
     }
 
+
     /**
      * get startDate
      *
@@ -117,6 +120,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
     public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
+
 
     /**
      * get endDate
@@ -136,6 +140,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
         this.endDate = endDate;
     }
 
+
     /**
      * get user
      *
@@ -153,6 +158,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
     public void setUser(String user) {
         this.user = user;
     }
+
 
     /**
      * get sigHashAlgName
@@ -173,6 +179,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
      * set sigAlgName
      *
@@ -182,6 +189,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
         this.sigAlgName = sigAlgName;
         return this;
     }
+
 
     /**
      * set issuer
@@ -193,6 +201,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set startDate
      *
@@ -202,6 +211,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
         this.startDate = startDate;
         return this;
     }
+
 
     /**
      * set endDate
@@ -213,6 +223,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
         return this;
     }
 
+
     /**
      * set user
      *
@@ -222,6 +233,7 @@ public class PreviewCertificateResult extends JdcloudResult implements java.io.S
         this.user = user;
         return this;
     }
+
 
     /**
      * set sigHashAlgName

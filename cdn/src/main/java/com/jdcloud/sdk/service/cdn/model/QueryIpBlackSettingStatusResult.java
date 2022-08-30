@@ -39,6 +39,7 @@ public class QueryIpBlackSettingStatusResult extends JdcloudResult implements ja
     private Boolean settingStatus;
 
 
+
     /**
      * get true or false, true:scdn的黑名单为打开状态，并至少存在一条ruleType&#x3D;ip的黑名单规则且为启用状态
      *
@@ -56,6 +57,7 @@ public class QueryIpBlackSettingStatusResult extends JdcloudResult implements ja
     public void setSettingStatus(Boolean settingStatus) {
         this.settingStatus = settingStatus;
     }
+
 
 
     /**

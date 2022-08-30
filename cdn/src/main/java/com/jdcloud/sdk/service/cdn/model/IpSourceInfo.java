@@ -48,6 +48,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     private Double ratio;
 
 
+
     /**
      * get 1：主；2：备
      *
@@ -66,6 +67,7 @@ public class IpSourceInfo  implements java.io.Serializable {
         this.master = master;
     }
 
+
     /**
      * get 回源IP
      *
@@ -83,6 +85,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 占比
@@ -103,6 +106,7 @@ public class IpSourceInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 1：主；2：备
      *
@@ -113,6 +117,7 @@ public class IpSourceInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 回源IP
      *
@@ -122,6 +127,7 @@ public class IpSourceInfo  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 占比

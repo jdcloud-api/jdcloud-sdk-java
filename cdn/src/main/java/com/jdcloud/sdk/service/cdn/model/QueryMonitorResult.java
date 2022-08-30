@@ -54,6 +54,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     private Object httpRequestHeader;
 
 
+
     /**
      * get 域名
      *
@@ -71,6 +72,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 探测周期，单位分钟
@@ -90,6 +92,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
         this.cycle = cycle;
     }
 
+
     /**
      * get 探测路径
      *
@@ -107,6 +110,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     public void setMonitorPath(String monitorPath) {
         this.monitorPath = monitorPath;
     }
+
 
     /**
      * get 查询结果,类型为HashMap&lt;String, Object&gt;
@@ -127,6 +131,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set 域名
      *
@@ -136,6 +141,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 探测周期，单位分钟
@@ -147,6 +153,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 探测路径
      *
@@ -156,6 +163,7 @@ public class QueryMonitorResult extends JdcloudResult implements java.io.Seriali
         this.monitorPath = monitorPath;
         return this;
     }
+
 
     /**
      * set 查询结果,类型为HashMap&lt;String, Object&gt;

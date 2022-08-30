@@ -53,6 +53,7 @@ public class OriDiagramItem  implements java.io.Serializable {
     private Long timeStamp;
 
 
+
     /**
      * get oriRatio
      *
@@ -70,6 +71,7 @@ public class OriDiagramItem  implements java.io.Serializable {
     public void setOriRatio(String oriRatio) {
         this.oriRatio = oriRatio;
     }
+
 
     /**
      * get avgbandwidth
@@ -89,6 +91,7 @@ public class OriDiagramItem  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
     }
 
+
     /**
      * get avgoribandwidth
      *
@@ -106,6 +109,7 @@ public class OriDiagramItem  implements java.io.Serializable {
     public void setAvgoribandwidth(Double avgoribandwidth) {
         this.avgoribandwidth = avgoribandwidth;
     }
+
 
     /**
      * get timeStamp
@@ -126,6 +130,7 @@ public class OriDiagramItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set oriRatio
      *
@@ -135,6 +140,7 @@ public class OriDiagramItem  implements java.io.Serializable {
         this.oriRatio = oriRatio;
         return this;
     }
+
 
     /**
      * set avgbandwidth
@@ -146,6 +152,7 @@ public class OriDiagramItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set avgoribandwidth
      *
@@ -155,6 +162,7 @@ public class OriDiagramItem  implements java.io.Serializable {
         this.avgoribandwidth = avgoribandwidth;
         return this;
     }
+
 
     /**
      * set timeStamp

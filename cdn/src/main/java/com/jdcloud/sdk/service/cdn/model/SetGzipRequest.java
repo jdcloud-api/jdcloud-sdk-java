@@ -52,6 +52,7 @@ public class SetGzipRequest extends JdcloudRequest implements java.io.Serializab
     private String domain;
 
 
+
     /**
      * get 开关取值[on,off]
      *
@@ -70,6 +71,7 @@ public class SetGzipRequest extends JdcloudRequest implements java.io.Serializab
         this.status = status;
     }
 
+
     /**
      * get gzip类型,如application/x-javascript,application/xml
      *
@@ -87,6 +89,7 @@ public class SetGzipRequest extends JdcloudRequest implements java.io.Serializab
     public void setGzipTypes(String gzipTypes) {
         this.gzipTypes = gzipTypes;
     }
+
 
     /**
      * get 用户域名
@@ -107,6 +110,7 @@ public class SetGzipRequest extends JdcloudRequest implements java.io.Serializab
     }
 
 
+
     /**
      * set 开关取值[on,off]
      *
@@ -117,6 +121,7 @@ public class SetGzipRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set gzip类型,如application/x-javascript,application/xml
      *
@@ -126,6 +131,7 @@ public class SetGzipRequest extends JdcloudRequest implements java.io.Serializab
         this.gzipTypes = gzipTypes;
         return this;
     }
+
 
     /**
      * set 用户域名

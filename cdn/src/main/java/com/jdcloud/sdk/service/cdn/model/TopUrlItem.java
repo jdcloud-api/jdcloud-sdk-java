@@ -88,6 +88,7 @@ public class TopUrlItem  implements java.io.Serializable {
     private String uvPercent;
 
 
+
     /**
      * get url
      *
@@ -105,6 +106,7 @@ public class TopUrlItem  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get rank
@@ -124,6 +126,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.rank = rank;
     }
 
+
     /**
      * get flow
      *
@@ -141,6 +144,7 @@ public class TopUrlItem  implements java.io.Serializable {
     public void setFlow(Double flow) {
         this.flow = flow;
     }
+
 
     /**
      * get flowUnit
@@ -160,6 +164,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.flowUnit = flowUnit;
     }
 
+
     /**
      * get flowPercent
      *
@@ -177,6 +182,7 @@ public class TopUrlItem  implements java.io.Serializable {
     public void setFlowPercent(String flowPercent) {
         this.flowPercent = flowPercent;
     }
+
 
     /**
      * get pv
@@ -196,6 +202,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.pv = pv;
     }
 
+
     /**
      * get pvUnit
      *
@@ -213,6 +220,7 @@ public class TopUrlItem  implements java.io.Serializable {
     public void setPvUnit(String pvUnit) {
         this.pvUnit = pvUnit;
     }
+
 
     /**
      * get pvPercent
@@ -232,6 +240,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.pvPercent = pvPercent;
     }
 
+
     /**
      * get uv
      *
@@ -250,6 +259,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.uv = uv;
     }
 
+
     /**
      * get uvUnit
      *
@@ -267,6 +277,7 @@ public class TopUrlItem  implements java.io.Serializable {
     public void setUvUnit(String uvUnit) {
         this.uvUnit = uvUnit;
     }
+
 
     /**
      * get uvPercent
@@ -287,6 +298,7 @@ public class TopUrlItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set url
      *
@@ -296,6 +308,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set rank
@@ -307,6 +320,7 @@ public class TopUrlItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -316,6 +330,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set flowUnit
@@ -327,6 +342,7 @@ public class TopUrlItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flowPercent
      *
@@ -336,6 +352,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.flowPercent = flowPercent;
         return this;
     }
+
 
     /**
      * set pv
@@ -347,6 +364,7 @@ public class TopUrlItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pvUnit
      *
@@ -356,6 +374,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.pvUnit = pvUnit;
         return this;
     }
+
 
     /**
      * set pvPercent
@@ -367,6 +386,7 @@ public class TopUrlItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set uv
      *
@@ -377,6 +397,7 @@ public class TopUrlItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set uvUnit
      *
@@ -386,6 +407,7 @@ public class TopUrlItem  implements java.io.Serializable {
         this.uvUnit = uvUnit;
         return this;
     }
+
 
     /**
      * set uvPercent

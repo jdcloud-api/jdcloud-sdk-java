@@ -98,6 +98,7 @@ public class CommonTrafficData  implements java.io.Serializable {
     private String oriPvPercent;
 
 
+
     /**
      * get avgbandwidth
      *
@@ -115,6 +116,7 @@ public class CommonTrafficData  implements java.io.Serializable {
     public void setAvgbandwidth(Double avgbandwidth) {
         this.avgbandwidth = avgbandwidth;
     }
+
 
     /**
      * get bandUnit
@@ -134,6 +136,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.bandUnit = bandUnit;
     }
 
+
     /**
      * get flow
      *
@@ -151,6 +154,7 @@ public class CommonTrafficData  implements java.io.Serializable {
     public void setFlow(Double flow) {
         this.flow = flow;
     }
+
 
     /**
      * get flowUnit
@@ -170,6 +174,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.flowUnit = flowUnit;
     }
 
+
     /**
      * get oriflow
      *
@@ -187,6 +192,7 @@ public class CommonTrafficData  implements java.io.Serializable {
     public void setOriflow(Double oriflow) {
         this.oriflow = oriflow;
     }
+
 
     /**
      * get oriflowUnit
@@ -206,6 +212,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.oriflowUnit = oriflowUnit;
     }
 
+
     /**
      * get pv
      *
@@ -223,6 +230,7 @@ public class CommonTrafficData  implements java.io.Serializable {
     public void setPv(Double pv) {
         this.pv = pv;
     }
+
 
     /**
      * get pvUnit
@@ -242,6 +250,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.pvUnit = pvUnit;
     }
 
+
     /**
      * get oripv
      *
@@ -259,6 +268,7 @@ public class CommonTrafficData  implements java.io.Serializable {
     public void setOripv(Double oripv) {
         this.oripv = oripv;
     }
+
 
     /**
      * get oripvUnit
@@ -278,6 +288,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.oripvUnit = oripvUnit;
     }
 
+
     /**
      * get topTimeStamp
      *
@@ -296,6 +307,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.topTimeStamp = topTimeStamp;
     }
 
+
     /**
      * get oriFlowPercent
      *
@@ -313,6 +325,7 @@ public class CommonTrafficData  implements java.io.Serializable {
     public void setOriFlowPercent(String oriFlowPercent) {
         this.oriFlowPercent = oriFlowPercent;
     }
+
 
     /**
      * get oriPvPercent
@@ -333,6 +346,7 @@ public class CommonTrafficData  implements java.io.Serializable {
     }
 
 
+
     /**
      * set avgbandwidth
      *
@@ -342,6 +356,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.avgbandwidth = avgbandwidth;
         return this;
     }
+
 
     /**
      * set bandUnit
@@ -353,6 +368,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set flow
      *
@@ -362,6 +378,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.flow = flow;
         return this;
     }
+
 
     /**
      * set flowUnit
@@ -373,6 +390,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set oriflow
      *
@@ -382,6 +400,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.oriflow = oriflow;
         return this;
     }
+
 
     /**
      * set oriflowUnit
@@ -393,6 +412,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set pv
      *
@@ -402,6 +422,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.pv = pv;
         return this;
     }
+
 
     /**
      * set pvUnit
@@ -413,6 +434,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set oripv
      *
@@ -422,6 +444,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.oripv = oripv;
         return this;
     }
+
 
     /**
      * set oripvUnit
@@ -433,6 +456,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set topTimeStamp
      *
@@ -443,6 +467,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set oriFlowPercent
      *
@@ -452,6 +477,7 @@ public class CommonTrafficData  implements java.io.Serializable {
         this.oriFlowPercent = oriFlowPercent;
         return this;
     }
+
 
     /**
      * set oriPvPercent

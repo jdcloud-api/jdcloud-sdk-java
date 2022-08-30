@@ -52,6 +52,7 @@ public class StatisticsData  implements java.io.Serializable {
     /**
      * dataItemList
      */
+    
     private List<StatisticsDataItem> dataItemList;
 
 
@@ -73,6 +74,7 @@ public class StatisticsData  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -90,6 +92,7 @@ public class StatisticsData  implements java.io.Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get domain
@@ -109,23 +112,25 @@ public class StatisticsData  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get dataItemList
-     *
-     * @return
-     */
+    * get dataItemList
+    *
+    * @return
+    */
     public List<StatisticsDataItem> getDataItemList() {
         return dataItemList;
     }
 
     /**
-     * set dataItemList
-     *
-     * @param dataItemList
-     */
+    * set dataItemList
+    *
+    * @param dataItemList
+    */
     public void setDataItemList(List<StatisticsDataItem> dataItemList) {
         this.dataItemList = dataItemList;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class StatisticsData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -147,6 +153,7 @@ public class StatisticsData  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set domain
@@ -158,15 +165,17 @@ public class StatisticsData  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set dataItemList
-     *
-     * @param dataItemList
-     */
+    * set dataItemList
+    *
+    * @param dataItemList
+    */
     public StatisticsData dataItemList(List<StatisticsDataItem> dataItemList) {
         this.dataItemList = dataItemList;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class StatisticsData  implements java.io.Serializable {
         }
         this.dataItemList.add(dataItemList);
     }
-
 }

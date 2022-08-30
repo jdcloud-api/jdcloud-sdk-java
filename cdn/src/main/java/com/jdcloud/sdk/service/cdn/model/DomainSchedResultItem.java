@@ -42,6 +42,7 @@ public class DomainSchedResultItem  implements java.io.Serializable {
     /**
      * ipList
      */
+    
     private List<String> ipList;
 
 
@@ -63,23 +64,25 @@ public class DomainSchedResultItem  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
-     * get ipList
-     *
-     * @return
-     */
+    * get ipList
+    *
+    * @return
+    */
     public List<String> getIpList() {
         return ipList;
     }
 
     /**
-     * set ipList
-     *
-     * @param ipList
-     */
+    * set ipList
+    *
+    * @param ipList
+    */
     public void setIpList(List<String> ipList) {
         this.ipList = ipList;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class DomainSchedResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set ipList
-     *
-     * @param ipList
-     */
+    * set ipList
+    *
+    * @param ipList
+    */
     public DomainSchedResultItem ipList(List<String> ipList) {
         this.ipList = ipList;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class DomainSchedResultItem  implements java.io.Serializable {
         }
         this.ipList.add(ipList);
     }
-
 }

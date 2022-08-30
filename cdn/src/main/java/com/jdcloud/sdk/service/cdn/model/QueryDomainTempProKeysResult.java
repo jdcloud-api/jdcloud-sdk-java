@@ -39,6 +39,7 @@ public class QueryDomainTempProKeysResult extends JdcloudResult implements java.
     private Object proKeyMap;
 
 
+
     /**
      * get 查询结果,类型为HashMap&lt;String, List&lt;String&gt;&gt;
      *
@@ -56,6 +57,7 @@ public class QueryDomainTempProKeysResult extends JdcloudResult implements java.
     public void setProKeyMap(Object proKeyMap) {
         this.proKeyMap = proKeyMap;
     }
+
 
 
     /**

@@ -63,6 +63,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
     private String isp;
 
 
+
     /**
      * get ip
      *
@@ -80,6 +81,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get belongToJCloud
@@ -99,6 +101,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
         this.belongToJCloud = belongToJCloud;
     }
 
+
     /**
      * get country
      *
@@ -116,6 +119,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
     public void setCountry(String country) {
         this.country = country;
     }
+
 
     /**
      * get province
@@ -135,6 +139,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
         this.province = province;
     }
 
+
     /**
      * get city
      *
@@ -152,6 +157,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
     public void setCity(String city) {
         this.city = city;
     }
+
 
     /**
      * get isp
@@ -172,6 +178,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ip
      *
@@ -181,6 +188,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set belongToJCloud
@@ -192,6 +200,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set country
      *
@@ -201,6 +210,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
         this.country = country;
         return this;
     }
+
 
     /**
      * set province
@@ -212,6 +222,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set city
      *
@@ -221,6 +232,7 @@ public class CheckWhetherIpBelongToJCloudItem  implements java.io.Serializable {
         this.city = city;
         return this;
     }
+
 
     /**
      * set isp

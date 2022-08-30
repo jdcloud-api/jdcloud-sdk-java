@@ -69,6 +69,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
     private String domain;
 
 
+
     /**
      * get 是否开启鉴权[on,off]
      *
@@ -86,6 +87,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
     public void setEnable(String enable) {
         this.enable = enable;
     }
+
 
     /**
      * get 回源为主/备[master,slave]
@@ -105,6 +107,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
         this.originRole = originRole;
     }
 
+
     /**
      * get 鉴权类型[oss,aws,tos],aws暂不支持
      *
@@ -122,6 +125,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
     public void setAuthType(String authType) {
         this.authType = authType;
     }
+
 
     /**
      * get tos类型鉴权参数,authType为tos是不能为空
@@ -141,6 +145,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
         this.tosAuthInfo = tosAuthInfo;
     }
 
+
     /**
      * get oss类型鉴权参数,authType为oss是不能为空
      *
@@ -158,6 +163,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
     public void setOssAuthInfo(OSSAuthInfo ossAuthInfo) {
         this.ossAuthInfo = ossAuthInfo;
     }
+
 
     /**
      * get 用户域名
@@ -178,6 +184,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 是否开启鉴权[on,off]
      *
@@ -187,6 +194,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
         this.enable = enable;
         return this;
     }
+
 
     /**
      * set 回源为主/备[master,slave]
@@ -198,6 +206,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 鉴权类型[oss,aws,tos],aws暂不支持
      *
@@ -207,6 +216,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
         this.authType = authType;
         return this;
     }
+
 
     /**
      * set tos类型鉴权参数,authType为tos是不能为空
@@ -218,6 +228,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set oss类型鉴权参数,authType为oss是不能为空
      *
@@ -227,6 +238,7 @@ public class SetSourceAuthConfigRequest extends JdcloudRequest implements java.i
         this.ossAuthInfo = ossAuthInfo;
         return this;
     }
+
 
     /**
      * set 用户域名

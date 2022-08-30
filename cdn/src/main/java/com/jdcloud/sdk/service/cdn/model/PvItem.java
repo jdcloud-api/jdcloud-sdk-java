@@ -48,6 +48,7 @@ public class PvItem  implements java.io.Serializable {
     private Integer attackPv;
 
 
+
     /**
      * get UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -66,6 +67,7 @@ public class PvItem  implements java.io.Serializable {
         this.timeUtc = timeUtc;
     }
 
+
     /**
      * get 总请求量
      *
@@ -83,6 +85,7 @@ public class PvItem  implements java.io.Serializable {
     public void setTotalPv(Integer totalPv) {
         this.totalPv = totalPv;
     }
+
 
     /**
      * get 攻击请求量
@@ -103,6 +106,7 @@ public class PvItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set UTC时间，格式为:yyyy-MM-dd&#39;T&#39;HH:mm:ss&#39;Z&#39;，示例:2018-10-21T10:00:00Z
      *
@@ -113,6 +117,7 @@ public class PvItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总请求量
      *
@@ -122,6 +127,7 @@ public class PvItem  implements java.io.Serializable {
         this.totalPv = totalPv;
         return this;
     }
+
 
     /**
      * set 攻击请求量

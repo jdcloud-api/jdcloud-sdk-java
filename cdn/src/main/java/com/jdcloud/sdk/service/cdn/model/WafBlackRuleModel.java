@@ -68,6 +68,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get 黑名单规则id
      *
@@ -85,6 +86,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 匹配模式,uri类型有效，0&#x3D;完全匹配  1&#x3D;前缀匹配 2&#x3D;包含 3&#x3D;正则 4&#x3D;大于 5&#x3D;后缀
@@ -104,6 +106,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         this.matchOp = matchOp;
     }
 
+
     /**
      * get 匹配值
      *
@@ -121,6 +124,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
     public void setVal(String val) {
         this.val = val;
     }
+
 
     /**
      * get 匹配值的中文名
@@ -140,6 +144,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         this.valZh = valZh;
     }
 
+
     /**
      * get 是否启用, true为启用,false为未启用
      *
@@ -158,6 +163,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
      * get null
      *
@@ -175,6 +181,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
     public void setAction(Object action) {
         this.action = action;
     }
+
 
     /**
      * get 黑名单的修改时间,UTC时间
@@ -195,6 +202,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 黑名单规则id
      *
@@ -204,6 +212,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 匹配模式,uri类型有效，0&#x3D;完全匹配  1&#x3D;前缀匹配 2&#x3D;包含 3&#x3D;正则 4&#x3D;大于 5&#x3D;后缀
@@ -215,6 +224,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 匹配值
      *
@@ -224,6 +234,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         this.val = val;
         return this;
     }
+
 
     /**
      * set 匹配值的中文名
@@ -235,6 +246,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否启用, true为启用,false为未启用
      *
@@ -245,6 +257,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set null
      *
@@ -254,6 +267,7 @@ public class WafBlackRuleModel  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
     /**
      * set 黑名单的修改时间,UTC时间

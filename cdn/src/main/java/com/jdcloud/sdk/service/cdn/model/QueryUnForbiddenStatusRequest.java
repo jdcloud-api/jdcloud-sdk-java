@@ -59,6 +59,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
     private Integer pageSize;
 
 
+
     /**
      * get 根据域名进行匹配
      *
@@ -76,6 +77,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
     public void setDomain(String domain) {
         this.domain = domain;
     }
+
 
     /**
      * get 根据url进行匹配
@@ -95,6 +97,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
         this.url = url;
     }
 
+
     /**
      * get 解封的任务id
      *
@@ -113,6 +116,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
         this.taskId = taskId;
     }
 
+
     /**
      * get pageNumber,默认值1
      *
@@ -130,6 +134,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get pageSize,最大值50,默认值10
@@ -150,6 +155,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 根据域名进行匹配
      *
@@ -159,6 +165,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
         this.domain = domain;
         return this;
     }
+
 
     /**
      * set 根据url进行匹配
@@ -170,6 +177,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set 解封的任务id
      *
@@ -180,6 +188,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
         return this;
     }
 
+
     /**
      * set pageNumber,默认值1
      *
@@ -189,6 +198,7 @@ public class QueryUnForbiddenStatusRequest extends JdcloudRequest implements jav
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set pageSize,最大值50,默认值10

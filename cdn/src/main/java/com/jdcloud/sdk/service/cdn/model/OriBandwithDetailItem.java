@@ -43,6 +43,7 @@ public class OriBandwithDetailItem  implements java.io.Serializable {
     private Double avgoribandwidth;
 
 
+
     /**
      * get timeStamp
      *
@@ -60,6 +61,7 @@ public class OriBandwithDetailItem  implements java.io.Serializable {
     public void setTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
     }
+
 
     /**
      * get avgoribandwidth
@@ -80,6 +82,7 @@ public class OriBandwithDetailItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set timeStamp
      *
@@ -89,6 +92,7 @@ public class OriBandwithDetailItem  implements java.io.Serializable {
         this.timeStamp = timeStamp;
         return this;
     }
+
 
     /**
      * set avgoribandwidth

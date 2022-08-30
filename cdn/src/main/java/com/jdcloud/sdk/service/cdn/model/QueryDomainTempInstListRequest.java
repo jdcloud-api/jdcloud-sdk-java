@@ -49,6 +49,7 @@ public class QueryDomainTempInstListRequest extends JdcloudRequest implements ja
     private Integer pageSize;
 
 
+
     /**
      * get 根据关键字进行模糊匹配
      *
@@ -67,6 +68,7 @@ public class QueryDomainTempInstListRequest extends JdcloudRequest implements ja
         this.instName = instName;
     }
 
+
     /**
      * get pageNumber,默认值1
      *
@@ -84,6 +86,7 @@ public class QueryDomainTempInstListRequest extends JdcloudRequest implements ja
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get pageSize,最大值50,默认值20
@@ -104,6 +107,7 @@ public class QueryDomainTempInstListRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 根据关键字进行模糊匹配
      *
@@ -114,6 +118,7 @@ public class QueryDomainTempInstListRequest extends JdcloudRequest implements ja
         return this;
     }
 
+
     /**
      * set pageNumber,默认值1
      *
@@ -123,6 +128,7 @@ public class QueryDomainTempInstListRequest extends JdcloudRequest implements ja
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set pageSize,最大值50,默认值20

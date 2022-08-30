@@ -47,16 +47,17 @@ public class RelatedDomains  implements java.io.Serializable {
     /**
      * 该相关域名的rtmp格式
      */
+    
     private List<String> rtmpUrls;
-
     /**
      * 该相关域名的flv格式
      */
+    
     private List<String> flvUrls;
-
     /**
      * 该相关域名的hls格式
      */
+    
     private List<String> hlsUrls;
 
 
@@ -78,6 +79,7 @@ public class RelatedDomains  implements java.io.Serializable {
         this.domainName = domainName;
     }
 
+
     /**
      * get （关联域名类型）publish或play
      *
@@ -96,59 +98,63 @@ public class RelatedDomains  implements java.io.Serializable {
         this.domainType = domainType;
     }
 
+
     /**
-     * get 该相关域名的rtmp格式
-     *
-     * @return
-     */
+    * get 该相关域名的rtmp格式
+    *
+    * @return
+    */
     public List<String> getRtmpUrls() {
         return rtmpUrls;
     }
 
     /**
-     * set 该相关域名的rtmp格式
-     *
-     * @param rtmpUrls
-     */
+    * set 该相关域名的rtmp格式
+    *
+    * @param rtmpUrls
+    */
     public void setRtmpUrls(List<String> rtmpUrls) {
         this.rtmpUrls = rtmpUrls;
     }
 
+
     /**
-     * get 该相关域名的flv格式
-     *
-     * @return
-     */
+    * get 该相关域名的flv格式
+    *
+    * @return
+    */
     public List<String> getFlvUrls() {
         return flvUrls;
     }
 
     /**
-     * set 该相关域名的flv格式
-     *
-     * @param flvUrls
-     */
+    * set 该相关域名的flv格式
+    *
+    * @param flvUrls
+    */
     public void setFlvUrls(List<String> flvUrls) {
         this.flvUrls = flvUrls;
     }
 
+
     /**
-     * get 该相关域名的hls格式
-     *
-     * @return
-     */
+    * get 该相关域名的hls格式
+    *
+    * @return
+    */
     public List<String> getHlsUrls() {
         return hlsUrls;
     }
 
     /**
-     * set 该相关域名的hls格式
-     *
-     * @param hlsUrls
-     */
+    * set 该相关域名的hls格式
+    *
+    * @param hlsUrls
+    */
     public void setHlsUrls(List<String> hlsUrls) {
         this.hlsUrls = hlsUrls;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class RelatedDomains  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set （关联域名类型）publish或play
      *
@@ -171,35 +178,39 @@ public class RelatedDomains  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 该相关域名的rtmp格式
-     *
-     * @param rtmpUrls
-     */
+    * set 该相关域名的rtmp格式
+    *
+    * @param rtmpUrls
+    */
     public RelatedDomains rtmpUrls(List<String> rtmpUrls) {
         this.rtmpUrls = rtmpUrls;
         return this;
     }
 
+
     /**
-     * set 该相关域名的flv格式
-     *
-     * @param flvUrls
-     */
+    * set 该相关域名的flv格式
+    *
+    * @param flvUrls
+    */
     public RelatedDomains flvUrls(List<String> flvUrls) {
         this.flvUrls = flvUrls;
         return this;
     }
 
+
     /**
-     * set 该相关域名的hls格式
-     *
-     * @param hlsUrls
-     */
+    * set 该相关域名的hls格式
+    *
+    * @param hlsUrls
+    */
     public RelatedDomains hlsUrls(List<String> hlsUrls) {
         this.hlsUrls = hlsUrls;
         return this;
     }
+
 
 
     /**
@@ -237,5 +248,4 @@ public class RelatedDomains  implements java.io.Serializable {
         }
         this.hlsUrls.add(hlsUrl);
     }
-
 }

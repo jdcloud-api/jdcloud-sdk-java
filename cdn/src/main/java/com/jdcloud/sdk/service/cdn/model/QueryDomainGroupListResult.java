@@ -54,6 +54,7 @@ public class QueryDomainGroupListResult extends JdcloudResult implements java.io
     /**
      * domainGroups
      */
+    
     private List<DomainGroupItem> domainGroups;
 
 
@@ -75,6 +76,7 @@ public class QueryDomainGroupListResult extends JdcloudResult implements java.io
         this.totalCount = totalCount;
     }
 
+
     /**
      * get pageSize
      *
@@ -92,6 +94,7 @@ public class QueryDomainGroupListResult extends JdcloudResult implements java.io
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get pageNumber
@@ -111,23 +114,25 @@ public class QueryDomainGroupListResult extends JdcloudResult implements java.io
         this.pageNumber = pageNumber;
     }
 
+
     /**
-     * get domainGroups
-     *
-     * @return
-     */
+    * get domainGroups
+    *
+    * @return
+    */
     public List<DomainGroupItem> getDomainGroups() {
         return domainGroups;
     }
 
     /**
-     * set domainGroups
-     *
-     * @param domainGroups
-     */
+    * set domainGroups
+    *
+    * @param domainGroups
+    */
     public void setDomainGroups(List<DomainGroupItem> domainGroups) {
         this.domainGroups = domainGroups;
     }
+
 
 
     /**
@@ -140,6 +145,7 @@ public class QueryDomainGroupListResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set pageSize
      *
@@ -149,6 +155,7 @@ public class QueryDomainGroupListResult extends JdcloudResult implements java.io
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set pageNumber
@@ -160,15 +167,17 @@ public class QueryDomainGroupListResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set domainGroups
-     *
-     * @param domainGroups
-     */
+    * set domainGroups
+    *
+    * @param domainGroups
+    */
     public QueryDomainGroupListResult domainGroups(List<DomainGroupItem> domainGroups) {
         this.domainGroups = domainGroups;
         return this;
     }
+
 
 
     /**
@@ -182,5 +191,4 @@ public class QueryDomainGroupListResult extends JdcloudResult implements java.io
         }
         this.domainGroups.add(domainGroup);
     }
-
 }

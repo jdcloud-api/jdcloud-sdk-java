@@ -68,6 +68,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     private Long duration;
 
 
+
     /**
      * get app
      *
@@ -85,6 +86,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     public void setApp(String app) {
         this.app = app;
     }
+
 
     /**
      * get stream
@@ -104,6 +106,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         this.stream = stream;
     }
 
+
     /**
      * get clientIp
      *
@@ -121,6 +124,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     public void setClientIp(String clientIp) {
         this.clientIp = clientIp;
     }
+
 
     /**
      * get nodeIp
@@ -140,6 +144,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         this.nodeIp = nodeIp;
     }
 
+
     /**
      * get 任务创建时间,UTC时间
      *
@@ -158,6 +163,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 任务创建时间,UTC时间
      *
@@ -175,6 +181,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get duration
@@ -195,6 +202,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set app
      *
@@ -204,6 +212,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         this.app = app;
         return this;
     }
+
 
     /**
      * set stream
@@ -215,6 +224,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set clientIp
      *
@@ -224,6 +234,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         this.clientIp = clientIp;
         return this;
     }
+
 
     /**
      * set nodeIp
@@ -235,6 +246,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务创建时间,UTC时间
      *
@@ -245,6 +257,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务创建时间,UTC时间
      *
@@ -254,6 +267,7 @@ public class PushStreamInfoItem  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set duration

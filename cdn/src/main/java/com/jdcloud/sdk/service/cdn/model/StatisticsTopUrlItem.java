@@ -53,6 +53,7 @@ public class StatisticsTopUrlItem  implements java.io.Serializable {
     private Object fullValue;
 
 
+
     /**
      * get url
      *
@@ -70,6 +71,7 @@ public class StatisticsTopUrlItem  implements java.io.Serializable {
     public void setUrl(String url) {
         this.url = url;
     }
+
 
     /**
      * get rank
@@ -89,6 +91,7 @@ public class StatisticsTopUrlItem  implements java.io.Serializable {
         this.rank = rank;
     }
 
+
     /**
      * get value
      *
@@ -106,6 +109,7 @@ public class StatisticsTopUrlItem  implements java.io.Serializable {
     public void setValue(Integer value) {
         this.value = value;
     }
+
 
     /**
      * get 查询结果,类型为HashMap&lt;String, Object&gt;
@@ -126,6 +130,7 @@ public class StatisticsTopUrlItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set url
      *
@@ -135,6 +140,7 @@ public class StatisticsTopUrlItem  implements java.io.Serializable {
         this.url = url;
         return this;
     }
+
 
     /**
      * set rank
@@ -146,6 +152,7 @@ public class StatisticsTopUrlItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set value
      *
@@ -155,6 +162,7 @@ public class StatisticsTopUrlItem  implements java.io.Serializable {
         this.value = value;
         return this;
     }
+
 
     /**
      * set 查询结果,类型为HashMap&lt;String, Object&gt;
