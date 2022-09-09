@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.CreateStructureFlowResponse;
 
 /**
- * 创建结构变更工单
+ * 创建结构变更工单，支持Stardb
  */
 class CreateStructureFlowExecutor extends JdcloudExecutor {
 

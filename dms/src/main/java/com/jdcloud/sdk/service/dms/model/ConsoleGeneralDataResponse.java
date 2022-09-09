@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 生成数据
+ * 生成数据，支持Mysql，Stardb
  */
 public class ConsoleGeneralDataResponse extends JdcloudResponse<ConsoleGeneralDataResult> implements java.io.Serializable {
 

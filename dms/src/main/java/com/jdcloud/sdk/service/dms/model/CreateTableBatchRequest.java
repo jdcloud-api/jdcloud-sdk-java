@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 批量建表
+ * 批量建表，支持Stardb
  */
 public class CreateTableBatchRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,14 +49,15 @@ public class CreateTableBatchRequest extends JdcloudRequest implements java.io.S
     /**
      * 查询结果。
      */
+    
     private List<CreateTableInfo> createTableInfos;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -77,6 +78,7 @@ public class CreateTableBatchRequest extends JdcloudRequest implements java.io.S
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 数据库名称
      *
@@ -95,23 +97,25 @@ public class CreateTableBatchRequest extends JdcloudRequest implements java.io.S
         this.dbName = dbName;
     }
 
+
     /**
-     * get 查询结果。
-     *
-     * @return
-     */
+    * get 查询结果。
+    *
+    * @return
+    */
     public List<CreateTableInfo> getCreateTableInfos() {
         return createTableInfos;
     }
 
     /**
-     * set 查询结果。
-     *
-     * @param createTableInfos
-     */
+    * set 查询结果。
+    *
+    * @param createTableInfos
+    */
     public void setCreateTableInfos(List<CreateTableInfo> createTableInfos) {
         this.createTableInfos = createTableInfos;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -132,6 +136,7 @@ public class CreateTableBatchRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -141,6 +146,7 @@ public class CreateTableBatchRequest extends JdcloudRequest implements java.io.S
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称
@@ -152,15 +158,17 @@ public class CreateTableBatchRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
-     * set 查询结果。
-     *
-     * @param createTableInfos
-     */
+    * set 查询结果。
+    *
+    * @param createTableInfos
+    */
     public CreateTableBatchRequest createTableInfos(List<CreateTableInfo> createTableInfos) {
         this.createTableInfos = createTableInfos;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -171,6 +179,7 @@ public class CreateTableBatchRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -184,5 +193,4 @@ public class CreateTableBatchRequest extends JdcloudRequest implements java.io.S
         }
         this.createTableInfos.add(createTableInfo);
     }
-
 }

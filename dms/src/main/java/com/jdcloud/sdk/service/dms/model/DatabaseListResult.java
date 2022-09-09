@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取数据库实例的库列表
+ * 获取数据库实例的库列表，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class DatabaseListResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,37 +38,40 @@ public class DatabaseListResult extends JdcloudResult implements java.io.Seriali
     /**
      * 数据库名称
      */
+    
     private List<String> databaseNames;
 
 
     /**
-     * get 数据库名称
-     *
-     * @return
-     */
+    * get 数据库名称
+    *
+    * @return
+    */
     public List<String> getDatabaseNames() {
         return databaseNames;
     }
 
     /**
-     * set 数据库名称
-     *
-     * @param databaseNames
-     */
+    * set 数据库名称
+    *
+    * @param databaseNames
+    */
     public void setDatabaseNames(List<String> databaseNames) {
         this.databaseNames = databaseNames;
     }
 
 
+
     /**
-     * set 数据库名称
-     *
-     * @param databaseNames
-     */
+    * set 数据库名称
+    *
+    * @param databaseNames
+    */
     public DatabaseListResult databaseNames(List<String> databaseNames) {
         this.databaseNames = databaseNames;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class DatabaseListResult extends JdcloudResult implements java.io.Seriali
         }
         this.databaseNames.add(databaseName);
     }
-
 }

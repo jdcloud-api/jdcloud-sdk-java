@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * sql格式化
+ * sql格式化，支持Mysql，Stardb
  */
 public class FormatSqlResponse extends JdcloudResponse<FormatSqlResult> implements java.io.Serializable {
 

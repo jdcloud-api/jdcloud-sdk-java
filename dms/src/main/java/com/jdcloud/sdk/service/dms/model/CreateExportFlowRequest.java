@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -29,7 +29,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据导出工单
+ * 创建数据导出工单，支持Stardb
  */
 public class CreateExportFlowRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -108,6 +108,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 数据库id
      *
@@ -125,6 +126,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称
@@ -144,6 +146,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.dbName = dbName;
     }
 
+
     /**
      * get 执行方式，AUTO(&quot;AUTO&quot;, 0), BY_CREATOR(&quot;BY_CREATOR&quot;, 1)
      *
@@ -161,6 +164,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     public void setTaskPlanTypeEnum(String taskPlanTypeEnum) {
         this.taskPlanTypeEnum = taskPlanTypeEnum;
     }
+
 
     /**
      * get DBA审批方式，AUTO(&quot;AUTO&quot;, 0), MANUAL(&quot;MANUAL&quot;, 1)
@@ -180,6 +184,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.dbaApproveTypeEnum = dbaApproveTypeEnum;
     }
 
+
     /**
      * get 申请原因
      *
@@ -197,6 +202,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     public void setMemo(String memo) {
         this.memo = memo;
     }
+
 
     /**
      * get 导出类型， RESULT_SET(&quot;RESULT_SET&quot;, 0), DB(&quot;DB&quot;, 1)
@@ -216,6 +222,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.exportTypeEnum = exportTypeEnum;
     }
 
+
     /**
      * get 导出格式，CSV(&quot;CSV&quot;, 0), SQL(&quot;SQL&quot;, 1)
      *
@@ -233,6 +240,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     public void setExportFileTypeEnum(String exportFileTypeEnum) {
         this.exportFileTypeEnum = exportFileTypeEnum;
     }
+
 
     /**
      * get 影响行数，导出类型为结果集导出时，必填
@@ -252,6 +260,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.rowsNum = rowsNum;
     }
 
+
     /**
      * get 是否跳过检验，导出类型为结果集导出时，必填
      *
@@ -269,6 +278,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     public void setIgnoreError(Boolean ignoreError) {
         this.ignoreError = ignoreError;
     }
+
 
     /**
      * get 跳过检验原因，ignoreError为true时，必填
@@ -288,6 +298,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.ignoreReason = ignoreReason;
     }
 
+
     /**
      * get 导出SQL文本，导出类型为结果集导出时，必填
      *
@@ -305,6 +316,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     public void setExportSqlText(String exportSqlText) {
         this.exportSqlText = exportSqlText;
     }
+
 
     /**
      * get 导出表及过滤条件，为空时导出全部表。导出类型为数据库导出时，必填
@@ -324,6 +336,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.tableFilters = tableFilters;
     }
 
+
     /**
      * get 导出内容，DATA(&quot;DATA&quot;, 0), STRUCT(&quot;STRUCT&quot;, 1), STRUCT_DATA(&quot;STRUCT_DATA&quot;, 2)，导出类型为数据库导出时，必填
      *
@@ -341,6 +354,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     public void setExportContentTypeEnum(String exportContentTypeEnum) {
         this.exportContentTypeEnum = exportContentTypeEnum;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -361,6 +375,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 数据库id
      *
@@ -370,6 +385,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称
@@ -381,6 +397,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 执行方式，AUTO(&quot;AUTO&quot;, 0), BY_CREATOR(&quot;BY_CREATOR&quot;, 1)
      *
@@ -390,6 +407,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.taskPlanTypeEnum = taskPlanTypeEnum;
         return this;
     }
+
 
     /**
      * set DBA审批方式，AUTO(&quot;AUTO&quot;, 0), MANUAL(&quot;MANUAL&quot;, 1)
@@ -401,6 +419,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 申请原因
      *
@@ -410,6 +429,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.memo = memo;
         return this;
     }
+
 
     /**
      * set 导出类型， RESULT_SET(&quot;RESULT_SET&quot;, 0), DB(&quot;DB&quot;, 1)
@@ -421,6 +441,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 导出格式，CSV(&quot;CSV&quot;, 0), SQL(&quot;SQL&quot;, 1)
      *
@@ -430,6 +451,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.exportFileTypeEnum = exportFileTypeEnum;
         return this;
     }
+
 
     /**
      * set 影响行数，导出类型为结果集导出时，必填
@@ -441,6 +463,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 是否跳过检验，导出类型为结果集导出时，必填
      *
@@ -450,6 +473,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.ignoreError = ignoreError;
         return this;
     }
+
 
     /**
      * set 跳过检验原因，ignoreError为true时，必填
@@ -461,6 +485,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 导出SQL文本，导出类型为结果集导出时，必填
      *
@@ -470,6 +495,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.exportSqlText = exportSqlText;
         return this;
     }
+
 
     /**
      * set 导出表及过滤条件，为空时导出全部表。导出类型为数据库导出时，必填
@@ -481,6 +507,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 导出内容，DATA(&quot;DATA&quot;, 0), STRUCT(&quot;STRUCT&quot;, 1), STRUCT_DATA(&quot;STRUCT_DATA&quot;, 2)，导出类型为数据库导出时，必填
      *
@@ -490,6 +517,7 @@ public class CreateExportFlowRequest extends JdcloudRequest implements java.io.S
         this.exportContentTypeEnum = exportContentTypeEnum;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

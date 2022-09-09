@@ -32,7 +32,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 生成建表语句sql
+ * 生成建表语句sql，支持Mysql，Stardb
  */
 public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -61,13 +61,13 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
     /**
      * 列信息。
      */
+    
     private List<ColumnInfo> columnInfos;
-
     /**
      * 索引信息。
      */
+    
     private List<IndexInfo> indexInfos;
-
     /**
      * 分表信息，stardb数据源中使用。
      */
@@ -79,6 +79,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -99,6 +100,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 数据库名
      *
@@ -116,6 +118,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 表名
@@ -135,6 +138,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         this.tableName = tableName;
     }
 
+
     /**
      * get 表元信息。
      *
@@ -153,41 +157,44 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         this.metaTableInfo = metaTableInfo;
     }
 
+
     /**
-     * get 列信息。
-     *
-     * @return
-     */
+    * get 列信息。
+    *
+    * @return
+    */
     public List<ColumnInfo> getColumnInfos() {
         return columnInfos;
     }
 
     /**
-     * set 列信息。
-     *
-     * @param columnInfos
-     */
+    * set 列信息。
+    *
+    * @param columnInfos
+    */
     public void setColumnInfos(List<ColumnInfo> columnInfos) {
         this.columnInfos = columnInfos;
     }
 
+
     /**
-     * get 索引信息。
-     *
-     * @return
-     */
+    * get 索引信息。
+    *
+    * @return
+    */
     public List<IndexInfo> getIndexInfos() {
         return indexInfos;
     }
 
     /**
-     * set 索引信息。
-     *
-     * @param indexInfos
-     */
+    * set 索引信息。
+    *
+    * @param indexInfos
+    */
     public void setIndexInfos(List<IndexInfo> indexInfos) {
         this.indexInfos = indexInfos;
     }
+
 
     /**
      * get 分表信息，stardb数据源中使用。
@@ -206,6 +213,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
     public void setExtraTableInfo(ExtraTableInfo extraTableInfo) {
         this.extraTableInfo = extraTableInfo;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -226,6 +234,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -235,6 +244,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名
@@ -246,6 +256,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 表名
      *
@@ -255,6 +266,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         this.tableName = tableName;
         return this;
     }
+
 
     /**
      * set 表元信息。
@@ -266,25 +278,28 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
-     * set 列信息。
-     *
-     * @param columnInfos
-     */
+    * set 列信息。
+    *
+    * @param columnInfos
+    */
     public GeneralCreateTableSqlRequest columnInfos(List<ColumnInfo> columnInfos) {
         this.columnInfos = columnInfos;
         return this;
     }
 
+
     /**
-     * set 索引信息。
-     *
-     * @param indexInfos
-     */
+    * set 索引信息。
+    *
+    * @param indexInfos
+    */
     public GeneralCreateTableSqlRequest indexInfos(List<IndexInfo> indexInfos) {
         this.indexInfos = indexInfos;
         return this;
     }
+
 
     /**
      * set 分表信息，stardb数据源中使用。
@@ -296,6 +311,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -305,6 +321,7 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -330,5 +347,4 @@ public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java
         }
         this.indexInfos.add(indexInfo);
     }
-
 }

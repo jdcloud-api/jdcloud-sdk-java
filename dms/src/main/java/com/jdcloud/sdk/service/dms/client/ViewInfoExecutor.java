@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.ViewInfoResponse;
 
 /**
- * 获取视图详情
+ * 获取视图详情，支持Mysql
  */
 class ViewInfoExecutor extends JdcloudExecutor {
 

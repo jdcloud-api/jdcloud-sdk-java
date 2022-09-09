@@ -57,17 +57,18 @@ public class DmsTableStruct  implements java.io.Serializable {
     /**
      * 表中全部列信息。
      */
+    
     private List<ColumnInfo> columnInfos;
-
     /**
      * 表中全部索引信息。
      */
+    
     private List<IndexInfo> indexInfos;
-
     /**
      * 广播表，分表额外信息。
      */
     private ExtraTableInfo extraTableInfo;
+
 
 
     /**
@@ -88,6 +89,7 @@ public class DmsTableStruct  implements java.io.Serializable {
         this.tableName = tableName;
     }
 
+
     /**
      * get 主键。
      *
@@ -105,6 +107,7 @@ public class DmsTableStruct  implements java.io.Serializable {
     public void setPrimaryIndex(String primaryIndex) {
         this.primaryIndex = primaryIndex;
     }
+
 
     /**
      * get 建表sql
@@ -124,6 +127,7 @@ public class DmsTableStruct  implements java.io.Serializable {
         this.sql = sql;
     }
 
+
     /**
      * get metaTableInfo
      *
@@ -142,41 +146,44 @@ public class DmsTableStruct  implements java.io.Serializable {
         this.metaTableInfo = metaTableInfo;
     }
 
+
     /**
-     * get 表中全部列信息。
-     *
-     * @return
-     */
+    * get 表中全部列信息。
+    *
+    * @return
+    */
     public List<ColumnInfo> getColumnInfos() {
         return columnInfos;
     }
 
     /**
-     * set 表中全部列信息。
-     *
-     * @param columnInfos
-     */
+    * set 表中全部列信息。
+    *
+    * @param columnInfos
+    */
     public void setColumnInfos(List<ColumnInfo> columnInfos) {
         this.columnInfos = columnInfos;
     }
 
+
     /**
-     * get 表中全部索引信息。
-     *
-     * @return
-     */
+    * get 表中全部索引信息。
+    *
+    * @return
+    */
     public List<IndexInfo> getIndexInfos() {
         return indexInfos;
     }
 
     /**
-     * set 表中全部索引信息。
-     *
-     * @param indexInfos
-     */
+    * set 表中全部索引信息。
+    *
+    * @param indexInfos
+    */
     public void setIndexInfos(List<IndexInfo> indexInfos) {
         this.indexInfos = indexInfos;
     }
+
 
     /**
      * get 广播表，分表额外信息。
@@ -197,6 +204,7 @@ public class DmsTableStruct  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 表名。
      *
@@ -206,6 +214,7 @@ public class DmsTableStruct  implements java.io.Serializable {
         this.tableName = tableName;
         return this;
     }
+
 
     /**
      * set 主键。
@@ -217,6 +226,7 @@ public class DmsTableStruct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 建表sql
      *
@@ -226,6 +236,7 @@ public class DmsTableStruct  implements java.io.Serializable {
         this.sql = sql;
         return this;
     }
+
 
     /**
      * set metaTableInfo
@@ -237,25 +248,28 @@ public class DmsTableStruct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 表中全部列信息。
-     *
-     * @param columnInfos
-     */
+    * set 表中全部列信息。
+    *
+    * @param columnInfos
+    */
     public DmsTableStruct columnInfos(List<ColumnInfo> columnInfos) {
         this.columnInfos = columnInfos;
         return this;
     }
 
+
     /**
-     * set 表中全部索引信息。
-     *
-     * @param indexInfos
-     */
+    * set 表中全部索引信息。
+    *
+    * @param indexInfos
+    */
     public DmsTableStruct indexInfos(List<IndexInfo> indexInfos) {
         this.indexInfos = indexInfos;
         return this;
     }
+
 
     /**
      * set 广播表，分表额外信息。
@@ -266,6 +280,7 @@ public class DmsTableStruct  implements java.io.Serializable {
         this.extraTableInfo = extraTableInfo;
         return this;
     }
+
 
 
     /**
@@ -291,5 +306,4 @@ public class DmsTableStruct  implements java.io.Serializable {
         }
         this.indexInfos.add(indexInfo);
     }
-
 }

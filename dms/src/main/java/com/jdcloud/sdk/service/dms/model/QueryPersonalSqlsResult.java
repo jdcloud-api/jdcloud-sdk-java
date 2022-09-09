@@ -44,6 +44,7 @@ public class QueryPersonalSqlsResult extends JdcloudResult implements java.io.Se
     /**
      * personalSqls
      */
+    
     private List<PersonalSql> personalSqls;
 
 
@@ -65,23 +66,25 @@ public class QueryPersonalSqlsResult extends JdcloudResult implements java.io.Se
         this.count = count;
     }
 
+
     /**
-     * get personalSqls
-     *
-     * @return
-     */
+    * get personalSqls
+    *
+    * @return
+    */
     public List<PersonalSql> getPersonalSqls() {
         return personalSqls;
     }
 
     /**
-     * set personalSqls
-     *
-     * @param personalSqls
-     */
+    * set personalSqls
+    *
+    * @param personalSqls
+    */
     public void setPersonalSqls(List<PersonalSql> personalSqls) {
         this.personalSqls = personalSqls;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class QueryPersonalSqlsResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
-     * set personalSqls
-     *
-     * @param personalSqls
-     */
+    * set personalSqls
+    *
+    * @param personalSqls
+    */
     public QueryPersonalSqlsResult personalSqls(List<PersonalSql> personalSqls) {
         this.personalSqls = personalSqls;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class QueryPersonalSqlsResult extends JdcloudResult implements java.io.Se
         }
         this.personalSqls.add(personalSql);
     }
-
 }

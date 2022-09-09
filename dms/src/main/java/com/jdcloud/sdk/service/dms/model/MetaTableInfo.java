@@ -48,6 +48,7 @@ public class MetaTableInfo  implements java.io.Serializable {
     private String tableCharset;
 
 
+
     /**
      * get 表名。
      *
@@ -66,6 +67,7 @@ public class MetaTableInfo  implements java.io.Serializable {
         this.tableName = tableName;
     }
 
+
     /**
      * get 表注释。
      *
@@ -83,6 +85,7 @@ public class MetaTableInfo  implements java.io.Serializable {
     public void setTableComment(String tableComment) {
         this.tableComment = tableComment;
     }
+
 
     /**
      * get 表字符编码。
@@ -103,6 +106,7 @@ public class MetaTableInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 表名。
      *
@@ -113,6 +117,7 @@ public class MetaTableInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 表注释。
      *
@@ -122,6 +127,7 @@ public class MetaTableInfo  implements java.io.Serializable {
         this.tableComment = tableComment;
         return this;
     }
+
 
     /**
      * set 表字符编码。

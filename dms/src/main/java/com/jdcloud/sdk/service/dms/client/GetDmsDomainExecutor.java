@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.GetDmsDomainResponse;
 
 /**
- * 获取Dms域名
+ * 获取Dms域名，仅供前端使用
  */
 class GetDmsDomainExecutor extends JdcloudExecutor {
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.ExeProgramResponse;
 
 /**
- * 执行编程对象sql
+ * 执行编程对象sql，支持Mysql
  */
 class ExeProgramExecutor extends JdcloudExecutor {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.dms.model.UploadImportFileResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 上传文件
+ * 上传文件，支持Stardb，只支持前端页面使用
  */
 public class UploadImportFileTaskResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,6 +38,7 @@ public class UploadImportFileTaskResult extends JdcloudResult implements java.io
      * uploadImportFileResult
      */
     private UploadImportFileResult uploadImportFileResult;
+
 
 
     /**
@@ -57,6 +58,7 @@ public class UploadImportFileTaskResult extends JdcloudResult implements java.io
     public void setUploadImportFileResult(UploadImportFileResult uploadImportFileResult) {
         this.uploadImportFileResult = uploadImportFileResult;
     }
+
 
 
     /**

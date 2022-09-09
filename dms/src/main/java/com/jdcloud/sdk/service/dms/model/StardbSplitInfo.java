@@ -47,8 +47,8 @@ public class StardbSplitInfo  implements java.io.Serializable {
     /**
      * 切分列名称，第一项为切分表的列（必需），第二项为切分库的列（非必需)
      */
+    
     private List<String> columnNames;
-
     /**
      * 起始时间，切分方式为时间时必需，格式为20220125
      */
@@ -58,6 +58,7 @@ public class StardbSplitInfo  implements java.io.Serializable {
      * 结束时间，切分方式为时间时必需，格式为20220125
      */
     private String splitDateEnd;
+
 
 
     /**
@@ -78,6 +79,7 @@ public class StardbSplitInfo  implements java.io.Serializable {
         this.splitType = splitType;
     }
 
+
     /**
      * get 切分表数量,表切分方式为哈希取模时必需
      *
@@ -96,23 +98,25 @@ public class StardbSplitInfo  implements java.io.Serializable {
         this.tableSplitCount = tableSplitCount;
     }
 
+
     /**
-     * get 切分列名称，第一项为切分表的列（必需），第二项为切分库的列（非必需)
-     *
-     * @return
-     */
+    * get 切分列名称，第一项为切分表的列（必需），第二项为切分库的列（非必需)
+    *
+    * @return
+    */
     public List<String> getColumnNames() {
         return columnNames;
     }
 
     /**
-     * set 切分列名称，第一项为切分表的列（必需），第二项为切分库的列（非必需)
-     *
-     * @param columnNames
-     */
+    * set 切分列名称，第一项为切分表的列（必需），第二项为切分库的列（非必需)
+    *
+    * @param columnNames
+    */
     public void setColumnNames(List<String> columnNames) {
         this.columnNames = columnNames;
     }
+
 
     /**
      * get 起始时间，切分方式为时间时必需，格式为20220125
@@ -131,6 +135,7 @@ public class StardbSplitInfo  implements java.io.Serializable {
     public void setSplitDateBegin(String splitDateBegin) {
         this.splitDateBegin = splitDateBegin;
     }
+
 
     /**
      * get 结束时间，切分方式为时间时必需，格式为20220125
@@ -151,6 +156,7 @@ public class StardbSplitInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 切分方式，&quot;MODULO：取模, &quot;HASH&quot;：哈希, &quot;DB_TABLE&quot;：分库分表, &quot;YYYYMMDD&quot;,&quot;YYYYMM&quot;,&quot;MM&quot;,&quot;MMDD&quot;
      *
@@ -160,6 +166,7 @@ public class StardbSplitInfo  implements java.io.Serializable {
         this.splitType = splitType;
         return this;
     }
+
 
     /**
      * set 切分表数量,表切分方式为哈希取模时必需
@@ -171,15 +178,17 @@ public class StardbSplitInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 切分列名称，第一项为切分表的列（必需），第二项为切分库的列（非必需)
-     *
-     * @param columnNames
-     */
+    * set 切分列名称，第一项为切分表的列（必需），第二项为切分库的列（非必需)
+    *
+    * @param columnNames
+    */
     public StardbSplitInfo columnNames(List<String> columnNames) {
         this.columnNames = columnNames;
         return this;
     }
+
 
     /**
      * set 起始时间，切分方式为时间时必需，格式为20220125
@@ -191,6 +200,7 @@ public class StardbSplitInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结束时间，切分方式为时间时必需，格式为20220125
      *
@@ -200,6 +210,7 @@ public class StardbSplitInfo  implements java.io.Serializable {
         this.splitDateEnd = splitDateEnd;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class StardbSplitInfo  implements java.io.Serializable {
         }
         this.columnNames.add(columnName);
     }
-
 }

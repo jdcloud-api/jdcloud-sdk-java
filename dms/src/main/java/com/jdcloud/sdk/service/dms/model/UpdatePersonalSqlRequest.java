@@ -57,6 +57,7 @@ public class UpdatePersonalSqlRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 主键id
      *
@@ -74,6 +75,7 @@ public class UpdatePersonalSqlRequest extends JdcloudRequest implements java.io.
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get sql备注
@@ -93,6 +95,7 @@ public class UpdatePersonalSqlRequest extends JdcloudRequest implements java.io.
         this.hint = hint;
     }
 
+
     /**
      * get sql内容
      *
@@ -110,6 +113,7 @@ public class UpdatePersonalSqlRequest extends JdcloudRequest implements java.io.
     public void setSqlStr(String sqlStr) {
         this.sqlStr = sqlStr;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -130,6 +134,7 @@ public class UpdatePersonalSqlRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 主键id
      *
@@ -139,6 +144,7 @@ public class UpdatePersonalSqlRequest extends JdcloudRequest implements java.io.
         this.id = id;
         return this;
     }
+
 
     /**
      * set sql备注
@@ -150,6 +156,7 @@ public class UpdatePersonalSqlRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set sql内容
      *
@@ -159,6 +166,7 @@ public class UpdatePersonalSqlRequest extends JdcloudRequest implements java.io.
         this.sqlStr = sqlStr;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

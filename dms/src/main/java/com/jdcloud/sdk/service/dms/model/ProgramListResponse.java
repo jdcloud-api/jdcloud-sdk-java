@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取视图列表
+ * 获取视图列表，支持Mysql
  */
 public class ProgramListResponse extends JdcloudResponse<ProgramListResult> implements java.io.Serializable {
 

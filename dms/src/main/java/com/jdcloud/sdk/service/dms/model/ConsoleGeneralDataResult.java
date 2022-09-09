@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.dms.model.DmsSqlsResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 生成数据
+ * 生成数据，支持Mysql，Stardb
  */
 public class ConsoleGeneralDataResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,6 +38,7 @@ public class ConsoleGeneralDataResult extends JdcloudResult implements java.io.S
      * dmsSqlsResult
      */
     private DmsSqlsResult dmsSqlsResult;
+
 
 
     /**
@@ -57,6 +58,7 @@ public class ConsoleGeneralDataResult extends JdcloudResult implements java.io.S
     public void setDmsSqlsResult(DmsSqlsResult dmsSqlsResult) {
         this.dmsSqlsResult = dmsSqlsResult;
     }
+
 
 
     /**

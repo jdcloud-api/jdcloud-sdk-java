@@ -58,6 +58,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
     private String split_key;
 
 
+
     /**
      * get 表名。
      *
@@ -75,6 +76,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
     public void setTable_name(String table_name) {
         this.table_name = table_name;
     }
+
 
     /**
      * get 字符编码。
@@ -94,6 +96,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
         this.charset = charset;
     }
 
+
     /**
      * get 表注释。
      *
@@ -112,6 +115,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
         this.table_comment = table_comment;
     }
 
+
     /**
      * get 表类型，未使用。
      *
@@ -129,6 +133,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
     public void setTable_type(String table_type) {
         this.table_type = table_type;
     }
+
 
     /**
      * get 切分键，未使用。
@@ -149,6 +154,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 表名。
      *
@@ -158,6 +164,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
         this.table_name = table_name;
         return this;
     }
+
 
     /**
      * set 字符编码。
@@ -169,6 +176,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 表注释。
      *
@@ -179,6 +187,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 表类型，未使用。
      *
@@ -188,6 +197,7 @@ public class DbcmTableInfo  implements java.io.Serializable {
         this.table_type = table_type;
         return this;
     }
+
 
     /**
      * set 切分键，未使用。

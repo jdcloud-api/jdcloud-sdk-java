@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取视图列表
+ * 获取视图列表，支持Mysql
  */
 public class ProgramListRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -57,6 +57,7 @@ public class ProgramListRequest extends JdcloudRequest implements java.io.Serial
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -74,6 +75,7 @@ public class ProgramListRequest extends JdcloudRequest implements java.io.Serial
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称。
@@ -93,6 +95,7 @@ public class ProgramListRequest extends JdcloudRequest implements java.io.Serial
         this.dbName = dbName;
     }
 
+
     /**
      * get 过滤条件。
      *
@@ -110,6 +113,7 @@ public class ProgramListRequest extends JdcloudRequest implements java.io.Serial
     public void setFilter(String filter) {
         this.filter = filter;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -130,6 +134,7 @@ public class ProgramListRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -139,6 +144,7 @@ public class ProgramListRequest extends JdcloudRequest implements java.io.Serial
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称。
@@ -150,6 +156,7 @@ public class ProgramListRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 过滤条件。
      *
@@ -159,6 +166,7 @@ public class ProgramListRequest extends JdcloudRequest implements java.io.Serial
         this.filter = filter;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取数据库中的表列表
+ * 获取数据库中的表列表，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class TableListResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,37 +38,40 @@ public class TableListResult extends JdcloudResult implements java.io.Serializab
     /**
      * 表名称
      */
+    
     private List<String> tableNames;
 
 
     /**
-     * get 表名称
-     *
-     * @return
-     */
+    * get 表名称
+    *
+    * @return
+    */
     public List<String> getTableNames() {
         return tableNames;
     }
 
     /**
-     * set 表名称
-     *
-     * @param tableNames
-     */
+    * set 表名称
+    *
+    * @param tableNames
+    */
     public void setTableNames(List<String> tableNames) {
         this.tableNames = tableNames;
     }
 
 
+
     /**
-     * set 表名称
-     *
-     * @param tableNames
-     */
+    * set 表名称
+    *
+    * @param tableNames
+    */
     public TableListResult tableNames(List<String> tableNames) {
         this.tableNames = tableNames;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class TableListResult extends JdcloudResult implements java.io.Serializab
         }
         this.tableNames.add(tableName);
     }
-
 }

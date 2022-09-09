@@ -44,6 +44,7 @@ public class HistoryImportDataResult extends JdcloudResult implements java.io.Se
     /**
      * historySqls
      */
+    
     private List<HistorySql> historySqls;
 
 
@@ -65,23 +66,25 @@ public class HistoryImportDataResult extends JdcloudResult implements java.io.Se
         this.count = count;
     }
 
+
     /**
-     * get historySqls
-     *
-     * @return
-     */
+    * get historySqls
+    *
+    * @return
+    */
     public List<HistorySql> getHistorySqls() {
         return historySqls;
     }
 
     /**
-     * set historySqls
-     *
-     * @param historySqls
-     */
+    * set historySqls
+    *
+    * @param historySqls
+    */
     public void setHistorySqls(List<HistorySql> historySqls) {
         this.historySqls = historySqls;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class HistoryImportDataResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
-     * set historySqls
-     *
-     * @param historySqls
-     */
+    * set historySqls
+    *
+    * @param historySqls
+    */
     public HistoryImportDataResult historySqls(List<HistorySql> historySqls) {
         this.historySqls = historySqls;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class HistoryImportDataResult extends JdcloudResult implements java.io.Se
         }
         this.historySqls.add(historySql);
     }
-
 }

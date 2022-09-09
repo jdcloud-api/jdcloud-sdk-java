@@ -53,6 +53,7 @@ public class Parameter  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 参数名称。
      *
@@ -70,6 +71,7 @@ public class Parameter  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 列类型，TINYINT(&quot;TINYINT&quot;, 0), SMALLINT(&quot;SMALLINT&quot;, 1), MEDIUMINT(&quot;MEDIUMINT&quot;, 2), INT(&quot;INT&quot;, 3), BIGINT(&quot;BIGINT&quot;, 4), INTEGER(&quot;INTEGER&quot;, 5), FLOAT(&quot;FLOAT&quot;, 6), DOUBLE(&quot;DOUBLE&quot;, 7), REAL(&quot;REAL&quot;, 8), DECIMAL(&quot;DECIMAL&quot;, 9), CHAR(&quot;CHAR&quot;, 10), VARCHAR(&quot;VARCHAR&quot;, 11), TINYTEXT(&quot;TINYTEXT&quot;, 12), TEXT(&quot;TEXT&quot;, 13), MEDIUMTEXT(&quot;MEDIUMTEXT&quot;, 14), LONGTEXT(&quot;LONGTEXT&quot;, 15), DATE(&quot;DATE&quot;, 16), DATETIME(&quot;DATETIME&quot;, 17), TIMESTAMP(&quot;TIMESTAMP&quot;, 18), TIME(&quot;TIME&quot;, 19), YEAR(&quot;YEAR&quot;, 19), BINARY(&quot;BINARY&quot;, 20), VARBINARY(&quot;VARBINARY&quot;, 21), TINYBLOB(&quot;TINYBLOB&quot;, 22), BLOB(&quot;BLOB&quot;, 23), MEDIUMBLOB(&quot;MEDIUMBLOB&quot;, 24), LONGBLOB(&quot;LONGBLOB&quot;, 25);
@@ -89,6 +91,7 @@ public class Parameter  implements java.io.Serializable {
         this.columnTypeEnum = columnTypeEnum;
     }
 
+
     /**
      * get 参数模式，IN(&quot;IN&quot;, 0), OUT(&quot;OUT&quot;, 1), INOUT(&quot;INOUT&quot;, 2);
      *
@@ -106,6 +109,7 @@ public class Parameter  implements java.io.Serializable {
     public void setParameterModeEnum(String parameterModeEnum) {
         this.parameterModeEnum = parameterModeEnum;
     }
+
 
     /**
      * get 函数调用时传入值;
@@ -126,6 +130,7 @@ public class Parameter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 参数名称。
      *
@@ -135,6 +140,7 @@ public class Parameter  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 列类型，TINYINT(&quot;TINYINT&quot;, 0), SMALLINT(&quot;SMALLINT&quot;, 1), MEDIUMINT(&quot;MEDIUMINT&quot;, 2), INT(&quot;INT&quot;, 3), BIGINT(&quot;BIGINT&quot;, 4), INTEGER(&quot;INTEGER&quot;, 5), FLOAT(&quot;FLOAT&quot;, 6), DOUBLE(&quot;DOUBLE&quot;, 7), REAL(&quot;REAL&quot;, 8), DECIMAL(&quot;DECIMAL&quot;, 9), CHAR(&quot;CHAR&quot;, 10), VARCHAR(&quot;VARCHAR&quot;, 11), TINYTEXT(&quot;TINYTEXT&quot;, 12), TEXT(&quot;TEXT&quot;, 13), MEDIUMTEXT(&quot;MEDIUMTEXT&quot;, 14), LONGTEXT(&quot;LONGTEXT&quot;, 15), DATE(&quot;DATE&quot;, 16), DATETIME(&quot;DATETIME&quot;, 17), TIMESTAMP(&quot;TIMESTAMP&quot;, 18), TIME(&quot;TIME&quot;, 19), YEAR(&quot;YEAR&quot;, 19), BINARY(&quot;BINARY&quot;, 20), VARBINARY(&quot;VARBINARY&quot;, 21), TINYBLOB(&quot;TINYBLOB&quot;, 22), BLOB(&quot;BLOB&quot;, 23), MEDIUMBLOB(&quot;MEDIUMBLOB&quot;, 24), LONGBLOB(&quot;LONGBLOB&quot;, 25);
@@ -146,6 +152,7 @@ public class Parameter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数模式，IN(&quot;IN&quot;, 0), OUT(&quot;OUT&quot;, 1), INOUT(&quot;INOUT&quot;, 2);
      *
@@ -155,6 +162,7 @@ public class Parameter  implements java.io.Serializable {
         this.parameterModeEnum = parameterModeEnum;
         return this;
     }
+
 
     /**
      * set 函数调用时传入值;

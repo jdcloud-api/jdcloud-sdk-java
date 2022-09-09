@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.dms.model.DmsTableStruct;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取sql中建表语句，表中列信息
+ * 获取sql中建表语句，表中列信息，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class SqlTableInfoResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,37 +39,40 @@ public class SqlTableInfoResult extends JdcloudResult implements java.io.Seriali
     /**
      * dmsTableStructs
      */
+    
     private List<DmsTableStruct> dmsTableStructs;
 
 
     /**
-     * get dmsTableStructs
-     *
-     * @return
-     */
+    * get dmsTableStructs
+    *
+    * @return
+    */
     public List<DmsTableStruct> getDmsTableStructs() {
         return dmsTableStructs;
     }
 
     /**
-     * set dmsTableStructs
-     *
-     * @param dmsTableStructs
-     */
+    * set dmsTableStructs
+    *
+    * @param dmsTableStructs
+    */
     public void setDmsTableStructs(List<DmsTableStruct> dmsTableStructs) {
         this.dmsTableStructs = dmsTableStructs;
     }
 
 
+
     /**
-     * set dmsTableStructs
-     *
-     * @param dmsTableStructs
-     */
+    * set dmsTableStructs
+    *
+    * @param dmsTableStructs
+    */
     public SqlTableInfoResult dmsTableStructs(List<DmsTableStruct> dmsTableStructs) {
         this.dmsTableStructs = dmsTableStructs;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class SqlTableInfoResult extends JdcloudResult implements java.io.Seriali
         }
         this.dmsTableStructs.add(dmsTableStruct);
     }
-
 }

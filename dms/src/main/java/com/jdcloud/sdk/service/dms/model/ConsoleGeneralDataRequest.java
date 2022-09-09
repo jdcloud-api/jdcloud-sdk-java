@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 生成数据
+ * 生成数据，支持Mysql，Stardb
  */
 public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -62,6 +62,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -79,6 +80,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称
@@ -98,6 +100,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
         this.dbName = dbName;
     }
 
+
     /**
      * get 表名。
      *
@@ -116,6 +119,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
         this.tableName = tableName;
     }
 
+
     /**
      * get 生成数据行数。
      *
@@ -133,6 +137,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
     public void setCount(Integer count) {
         this.count = count;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -153,6 +158,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -162,6 +168,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称
@@ -173,6 +180,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 表名。
      *
@@ -183,6 +191,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 生成数据行数。
      *
@@ -192,6 +201,7 @@ public class ConsoleGeneralDataRequest extends JdcloudRequest implements java.io
         this.count = count;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

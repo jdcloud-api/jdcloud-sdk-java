@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 任务执行
+ * 任务执行，支持Stardb
  */
 public class StartFlowRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -45,6 +45,7 @@ public class StartFlowRequest extends JdcloudRequest implements java.io.Serializ
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -65,6 +66,7 @@ public class StartFlowRequest extends JdcloudRequest implements java.io.Serializ
         this.flowOrderUniqId = flowOrderUniqId;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -84,6 +86,7 @@ public class StartFlowRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 流程id
      *
@@ -93,6 +96,7 @@ public class StartFlowRequest extends JdcloudRequest implements java.io.Serializ
         this.flowOrderUniqId = flowOrderUniqId;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

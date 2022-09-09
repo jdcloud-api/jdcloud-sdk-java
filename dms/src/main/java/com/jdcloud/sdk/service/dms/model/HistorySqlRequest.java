@@ -57,6 +57,7 @@ public class HistorySqlRequest extends JdcloudRequest implements java.io.Seriali
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -74,6 +75,7 @@ public class HistorySqlRequest extends JdcloudRequest implements java.io.Seriali
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 显示数据的页码，取值范围：[1,∞)。pageNumber为Null时，返回所有数据页码；超过总页数时，无数据。
@@ -93,6 +95,7 @@ public class HistorySqlRequest extends JdcloudRequest implements java.io.Seriali
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页显示的数据条数，用于查询列表的接口。
      *
@@ -110,6 +113,7 @@ public class HistorySqlRequest extends JdcloudRequest implements java.io.Seriali
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -130,6 +134,7 @@ public class HistorySqlRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -139,6 +144,7 @@ public class HistorySqlRequest extends JdcloudRequest implements java.io.Seriali
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 显示数据的页码，取值范围：[1,∞)。pageNumber为Null时，返回所有数据页码；超过总页数时，无数据。
@@ -150,6 +156,7 @@ public class HistorySqlRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 每页显示的数据条数，用于查询列表的接口。
      *
@@ -159,6 +166,7 @@ public class HistorySqlRequest extends JdcloudRequest implements java.io.Seriali
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

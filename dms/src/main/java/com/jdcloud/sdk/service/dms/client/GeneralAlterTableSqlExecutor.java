@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterTableSqlResponse;
 
 /**
- * 生成修改表结构语句sql
+ * 生成修改表结构语句sql，支持Mysql，Stardb
  */
 class GeneralAlterTableSqlExecutor extends JdcloudExecutor {
 

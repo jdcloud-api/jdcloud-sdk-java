@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.dms.model.DmsSql;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 生产创建视图SQL语句
+ * 生产创建视图SQL语句，支持Mysql
  */
 public class GeneralCreateViewResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,37 +39,40 @@ public class GeneralCreateViewResult extends JdcloudResult implements java.io.Se
     /**
      * dmsSqls
      */
+    
     private List<DmsSql> dmsSqls;
 
 
     /**
-     * get dmsSqls
-     *
-     * @return
-     */
+    * get dmsSqls
+    *
+    * @return
+    */
     public List<DmsSql> getDmsSqls() {
         return dmsSqls;
     }
 
     /**
-     * set dmsSqls
-     *
-     * @param dmsSqls
-     */
+    * set dmsSqls
+    *
+    * @param dmsSqls
+    */
     public void setDmsSqls(List<DmsSql> dmsSqls) {
         this.dmsSqls = dmsSqls;
     }
 
 
+
     /**
-     * set dmsSqls
-     *
-     * @param dmsSqls
-     */
+    * set dmsSqls
+    *
+    * @param dmsSqls
+    */
     public GeneralCreateViewResult dmsSqls(List<DmsSql> dmsSqls) {
         this.dmsSqls = dmsSqls;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class GeneralCreateViewResult extends JdcloudResult implements java.io.Se
         }
         this.dmsSqls.add(dmsSql);
     }
-
 }

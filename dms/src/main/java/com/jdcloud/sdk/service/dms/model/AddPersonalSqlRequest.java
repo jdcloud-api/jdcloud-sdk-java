@@ -57,6 +57,7 @@ public class AddPersonalSqlRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -74,6 +75,7 @@ public class AddPersonalSqlRequest extends JdcloudRequest implements java.io.Ser
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 收藏的sql语句。
@@ -93,6 +95,7 @@ public class AddPersonalSqlRequest extends JdcloudRequest implements java.io.Ser
         this.sqlStr = sqlStr;
     }
 
+
     /**
      * get 备注。
      *
@@ -110,6 +113,7 @@ public class AddPersonalSqlRequest extends JdcloudRequest implements java.io.Ser
     public void setHint(String hint) {
         this.hint = hint;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -130,6 +134,7 @@ public class AddPersonalSqlRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -139,6 +144,7 @@ public class AddPersonalSqlRequest extends JdcloudRequest implements java.io.Ser
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 收藏的sql语句。
@@ -150,6 +156,7 @@ public class AddPersonalSqlRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 备注。
      *
@@ -159,6 +166,7 @@ public class AddPersonalSqlRequest extends JdcloudRequest implements java.io.Ser
         this.hint = hint;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

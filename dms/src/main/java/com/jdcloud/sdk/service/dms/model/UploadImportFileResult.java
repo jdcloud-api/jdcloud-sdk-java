@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -44,6 +44,7 @@ public class UploadImportFileResult extends JdcloudResult implements java.io.Ser
     private DmsSubFileImport currentChunkInfo;
 
 
+
     /**
      * get 是否全部上传完成
      *
@@ -61,6 +62,7 @@ public class UploadImportFileResult extends JdcloudResult implements java.io.Ser
     public void setFinish(Boolean finish) {
         this.finish = finish;
     }
+
 
     /**
      * get 当前分片信息。
@@ -81,6 +83,7 @@ public class UploadImportFileResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 是否全部上传完成
      *
@@ -90,6 +93,7 @@ public class UploadImportFileResult extends JdcloudResult implements java.io.Ser
         this.finish = finish;
         return this;
     }
+
 
     /**
      * set 当前分片信息。

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.ConsoleSqlResponse;
 
 /**
- * 执行sql语句
+ * 执行sql语句，支持Mysql，Stardb，Tidb，ClickHouse
  */
 class ConsoleSqlExecutor extends JdcloudExecutor {
 

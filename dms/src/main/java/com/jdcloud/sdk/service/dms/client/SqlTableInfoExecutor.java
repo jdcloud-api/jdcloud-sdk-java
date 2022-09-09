@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.SqlTableInfoResponse;
 
 /**
- * 获取sql中建表语句，表中列信息
+ * 获取sql中建表语句，表中列信息，支持Mysql，Stardb，Tidb，ClickHouse
  */
 class SqlTableInfoExecutor extends JdcloudExecutor {
 

@@ -58,8 +58,8 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
     /**
      * QUERY类型sql查询结果
      */
+    
     private List<Object> queryResult;
-
     /**
      * SYNCDMLDDL，COMMAND类型SQL查询结果。
      */
@@ -86,6 +86,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
     private Integer affectCount;
 
 
+
     /**
      * get sql类型，SYNCDMLDDL，同步执行ddl，dml语句；ASYNCDMLDDL，异步执行ddl，dml语句，未支持；QUERY，执行查询类sql语句，如select；COMMAND，如show等命令，未支持。
      *
@@ -103,6 +104,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
     public void setSqlType(String sqlType) {
         this.sqlType = sqlType;
     }
+
 
     /**
      * get 执行sql语句。
@@ -122,6 +124,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         this.sql = sql;
     }
 
+
     /**
      * get 执行是否成功。
      *
@@ -139,6 +142,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
     public void setRetCode(Integer retCode) {
         this.retCode = retCode;
     }
+
 
     /**
      * get 执行消息。
@@ -158,23 +162,25 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         this.message = message;
     }
 
+
     /**
-     * get QUERY类型sql查询结果
-     *
-     * @return
-     */
+    * get QUERY类型sql查询结果
+    *
+    * @return
+    */
     public List<Object> getQueryResult() {
         return queryResult;
     }
 
     /**
-     * set QUERY类型sql查询结果
-     *
-     * @param queryResult
-     */
+    * set QUERY类型sql查询结果
+    *
+    * @param queryResult
+    */
     public void setQueryResult(List<Object> queryResult) {
         this.queryResult = queryResult;
     }
+
 
     /**
      * get SYNCDMLDDL，COMMAND类型SQL查询结果。
@@ -194,6 +200,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         this.result = result;
     }
 
+
     /**
      * get 总执行sql条数。
      *
@@ -211,6 +218,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
     public void setTotal(Integer total) {
         this.total = total;
     }
+
 
     /**
      * get 当前结果是第几条sql。
@@ -230,6 +238,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         this.index = index;
     }
 
+
     /**
      * get 执行时长，单位ms。
      *
@@ -247,6 +256,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
     public void setTime(Integer time) {
         this.time = time;
     }
+
 
     /**
      * get 查询到sql条数或影响行数。
@@ -267,6 +277,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
     }
 
 
+
     /**
      * set sql类型，SYNCDMLDDL，同步执行ddl，dml语句；ASYNCDMLDDL，异步执行ddl，dml语句，未支持；QUERY，执行查询类sql语句，如select；COMMAND，如show等命令，未支持。
      *
@@ -276,6 +287,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         this.sqlType = sqlType;
         return this;
     }
+
 
     /**
      * set 执行sql语句。
@@ -287,6 +299,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         return this;
     }
 
+
     /**
      * set 执行是否成功。
      *
@@ -296,6 +309,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         this.retCode = retCode;
         return this;
     }
+
 
     /**
      * set 执行消息。
@@ -307,15 +321,17 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         return this;
     }
 
+
     /**
-     * set QUERY类型sql查询结果
-     *
-     * @param queryResult
-     */
+    * set QUERY类型sql查询结果
+    *
+    * @param queryResult
+    */
     public DmsSqlResult queryResult(List<Object> queryResult) {
         this.queryResult = queryResult;
         return this;
     }
+
 
     /**
      * set SYNCDMLDDL，COMMAND类型SQL查询结果。
@@ -327,6 +343,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         return this;
     }
 
+
     /**
      * set 总执行sql条数。
      *
@@ -336,6 +353,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         this.total = total;
         return this;
     }
+
 
     /**
      * set 当前结果是第几条sql。
@@ -347,6 +365,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         return this;
     }
 
+
     /**
      * set 执行时长，单位ms。
      *
@@ -357,6 +376,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         return this;
     }
 
+
     /**
      * set 查询到sql条数或影响行数。
      *
@@ -366,6 +386,7 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         this.affectCount = affectCount;
         return this;
     }
+
 
 
     /**
@@ -379,5 +400,4 @@ public class DmsSqlResult extends JdcloudResult implements java.io.Serializable 
         }
         this.queryResult.add(queryResult);
     }
-
 }

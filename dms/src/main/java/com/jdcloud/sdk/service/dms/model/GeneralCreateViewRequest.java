@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 生产创建视图SQL语句
+ * 生产创建视图SQL语句，支持Mysql
  */
 public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -82,6 +82,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 数据源id。
      *
@@ -99,6 +100,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称。
@@ -118,6 +120,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         this.dbName = dbName;
     }
 
+
     /**
      * get 视图名称。
      *
@@ -135,6 +138,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
     public void setViewName(String viewName) {
         this.viewName = viewName;
     }
+
 
     /**
      * get 视图算法，DEFAULT(&quot;DEFAULT&quot;, 1),UNDEFINED(&quot;UNDEFINED&quot;, 2), MERGE(&quot;MERGE&quot;, 3), TEMPTABLE(&quot;TEMPTABLE&quot;, 4);
@@ -154,6 +158,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         this.viewAlgorithm = viewAlgorithm;
     }
 
+
     /**
      * get 定义者。
      *
@@ -171,6 +176,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
     public void setDefiner(String definer) {
         this.definer = definer;
     }
+
 
     /**
      * get 安全性，DEFAULT(&quot;DEFAULT&quot;, 1),DEFINER(&quot;DEFINER&quot;, 2), INVOKER(&quot;INVOKER&quot;, 3);
@@ -190,6 +196,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         this.viewSecurity = viewSecurity;
     }
 
+
     /**
      * get 检查选项，DEFAULT(&quot;DEFAULT&quot;, 1),LOCAL(&quot;LOCAL&quot;, 2), CASCADED(&quot;CASCADED&quot;, 3);;
      *
@@ -208,6 +215,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         this.viewCheckOption = viewCheckOption;
     }
 
+
     /**
      * get 视图定义。
      *
@@ -225,6 +233,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
     public void setDefinitionSql(String definitionSql) {
         this.definitionSql = definitionSql;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -245,6 +254,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 数据源id。
      *
@@ -254,6 +264,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称。
@@ -265,6 +276,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 视图名称。
      *
@@ -274,6 +286,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         this.viewName = viewName;
         return this;
     }
+
 
     /**
      * set 视图算法，DEFAULT(&quot;DEFAULT&quot;, 1),UNDEFINED(&quot;UNDEFINED&quot;, 2), MERGE(&quot;MERGE&quot;, 3), TEMPTABLE(&quot;TEMPTABLE&quot;, 4);
@@ -285,6 +298,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 定义者。
      *
@@ -294,6 +308,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         this.definer = definer;
         return this;
     }
+
 
     /**
      * set 安全性，DEFAULT(&quot;DEFAULT&quot;, 1),DEFINER(&quot;DEFINER&quot;, 2), INVOKER(&quot;INVOKER&quot;, 3);
@@ -305,6 +320,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 检查选项，DEFAULT(&quot;DEFAULT&quot;, 1),LOCAL(&quot;LOCAL&quot;, 2), CASCADED(&quot;CASCADED&quot;, 3);;
      *
@@ -315,6 +331,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 视图定义。
      *
@@ -324,6 +341,7 @@ public class GeneralCreateViewRequest extends JdcloudRequest implements java.io.
         this.definitionSql = definitionSql;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

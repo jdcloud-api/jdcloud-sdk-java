@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 生成建表语句sql
+ * 生成建表语句sql，支持Mysql，Stardb
  */
 public class GeneralCreateTableSqlResponse extends JdcloudResponse<GeneralCreateTableSqlResult> implements java.io.Serializable {
 

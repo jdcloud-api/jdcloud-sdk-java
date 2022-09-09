@@ -68,6 +68,7 @@ public class DmsHistorySql  implements java.io.Serializable {
     private String database;
 
 
+
     /**
      * get 执行sql内容。
      *
@@ -85,6 +86,7 @@ public class DmsHistorySql  implements java.io.Serializable {
     public void setSql(String sql) {
         this.sql = sql;
     }
+
 
     /**
      * get 执行用户。
@@ -104,6 +106,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         this.user = user;
     }
 
+
     /**
      * get 执行状态
      *
@@ -121,6 +124,7 @@ public class DmsHistorySql  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 创建时间，格式为：YYYY-MM-DD HH:mm:ss。
@@ -140,6 +144,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 执行花费时间，单位ms。
      *
@@ -158,6 +163,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         this.spendTime = spendTime;
     }
 
+
     /**
      * get 执行消息。
      *
@@ -175,6 +181,7 @@ public class DmsHistorySql  implements java.io.Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 数据库名称。
@@ -195,6 +202,7 @@ public class DmsHistorySql  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 执行sql内容。
      *
@@ -204,6 +212,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         this.sql = sql;
         return this;
     }
+
 
     /**
      * set 执行用户。
@@ -215,6 +224,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行状态
      *
@@ -224,6 +234,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 创建时间，格式为：YYYY-MM-DD HH:mm:ss。
@@ -235,6 +246,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行花费时间，单位ms。
      *
@@ -245,6 +257,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行消息。
      *
@@ -254,6 +267,7 @@ public class DmsHistorySql  implements java.io.Serializable {
         this.message = message;
         return this;
     }
+
 
     /**
      * set 数据库名称。

@@ -98,6 +98,7 @@ public class HistorySql  implements java.io.Serializable {
     private String sqlType;
 
 
+
     /**
      * get 主键id。
      *
@@ -115,6 +116,7 @@ public class HistorySql  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 数据源id。
@@ -134,6 +136,7 @@ public class HistorySql  implements java.io.Serializable {
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 执行sql内容。
      *
@@ -151,6 +154,7 @@ public class HistorySql  implements java.io.Serializable {
     public void setSqlStr(String sqlStr) {
         this.sqlStr = sqlStr;
     }
+
 
     /**
      * get 执行用户。
@@ -170,6 +174,7 @@ public class HistorySql  implements java.io.Serializable {
         this.user = user;
     }
 
+
     /**
      * get 数据状态。0：有效，1：无效
      *
@@ -187,6 +192,7 @@ public class HistorySql  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 创建时间，格式为：YYYY-MM-DD HH:mm:ss。
@@ -206,6 +212,7 @@ public class HistorySql  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 执行花费时间。
      *
@@ -223,6 +230,7 @@ public class HistorySql  implements java.io.Serializable {
     public void setSpendTime(Integer spendTime) {
         this.spendTime = spendTime;
     }
+
 
     /**
      * get 执行消息。
@@ -242,6 +250,7 @@ public class HistorySql  implements java.io.Serializable {
         this.message = message;
     }
 
+
     /**
      * get dms执行地址。
      *
@@ -259,6 +268,7 @@ public class HistorySql  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 数据库名称。
@@ -278,6 +288,7 @@ public class HistorySql  implements java.io.Serializable {
         this.dbName = dbName;
     }
 
+
     /**
      * get 执行结束时间，格式为：YYYY-MM-DD HH:mm:ss。
      *
@@ -296,6 +307,7 @@ public class HistorySql  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 执行结果，SUCCESS：成功，FAILED失败。
      *
@@ -313,6 +325,7 @@ public class HistorySql  implements java.io.Serializable {
     public void setExeStatus(String exeStatus) {
         this.exeStatus = exeStatus;
     }
+
 
     /**
      * get sql类型, CREATE(&quot;CREATE&quot;, 0), ALTER_DATA(&quot;ALTER_DATA&quot;, 1), ALTER_STRUCT(&quot;ALTER_STRUCT&quot;, 2), DROP(&quot;DROP&quot;, 4), CONSOLE(&quot;CONSOLE&quot;, 5), BATCH_CREATE(&quot;BATCH_CREATE&quot;, 6), IMPORT_DATA(&quot;IMPORT_DATA&quot;, 7), EXPORT_STRUCT_DATA(&quot;EXPORT_STRUCT_DATA&quot;, 8);
@@ -333,6 +346,7 @@ public class HistorySql  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 主键id。
      *
@@ -342,6 +356,7 @@ public class HistorySql  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 数据源id。
@@ -353,6 +368,7 @@ public class HistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行sql内容。
      *
@@ -362,6 +378,7 @@ public class HistorySql  implements java.io.Serializable {
         this.sqlStr = sqlStr;
         return this;
     }
+
 
     /**
      * set 执行用户。
@@ -373,6 +390,7 @@ public class HistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据状态。0：有效，1：无效
      *
@@ -382,6 +400,7 @@ public class HistorySql  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 创建时间，格式为：YYYY-MM-DD HH:mm:ss。
@@ -393,6 +412,7 @@ public class HistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行花费时间。
      *
@@ -402,6 +422,7 @@ public class HistorySql  implements java.io.Serializable {
         this.spendTime = spendTime;
         return this;
     }
+
 
     /**
      * set 执行消息。
@@ -413,6 +434,7 @@ public class HistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set dms执行地址。
      *
@@ -422,6 +444,7 @@ public class HistorySql  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 数据库名称。
@@ -433,6 +456,7 @@ public class HistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行结束时间，格式为：YYYY-MM-DD HH:mm:ss。
      *
@@ -443,6 +467,7 @@ public class HistorySql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行结果，SUCCESS：成功，FAILED失败。
      *
@@ -452,6 +477,7 @@ public class HistorySql  implements java.io.Serializable {
         this.exeStatus = exeStatus;
         return this;
     }
+
 
     /**
      * set sql类型, CREATE(&quot;CREATE&quot;, 0), ALTER_DATA(&quot;ALTER_DATA&quot;, 1), ALTER_STRUCT(&quot;ALTER_STRUCT&quot;, 2), DROP(&quot;DROP&quot;, 4), CONSOLE(&quot;CONSOLE&quot;, 5), BATCH_CREATE(&quot;BATCH_CREATE&quot;, 6), IMPORT_DATA(&quot;IMPORT_DATA&quot;, 7), EXPORT_STRUCT_DATA(&quot;EXPORT_STRUCT_DATA&quot;, 8);

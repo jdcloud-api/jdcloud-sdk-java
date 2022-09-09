@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 生成删除视图sql语句
+ * 生成删除视图sql语句，支持Mysql
  */
 public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -57,6 +57,7 @@ public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -74,6 +75,7 @@ public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Se
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称。
@@ -93,6 +95,7 @@ public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Se
         this.dbName = dbName;
     }
 
+
     /**
      * get 视图名称。
      *
@@ -110,6 +113,7 @@ public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Se
     public void setViewName(String viewName) {
         this.viewName = viewName;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -130,6 +134,7 @@ public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -139,6 +144,7 @@ public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Se
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称。
@@ -150,6 +156,7 @@ public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 视图名称。
      *
@@ -159,6 +166,7 @@ public class GeneralDropViewRequest extends JdcloudRequest implements java.io.Se
         this.viewName = viewName;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

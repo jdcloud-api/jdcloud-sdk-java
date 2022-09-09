@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据变更工单
+ * 创建数据变更工单，支持Stardb
  */
 public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -87,6 +87,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get 数据库id
      *
@@ -104,6 +105,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称
@@ -123,6 +125,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.dbName = dbName;
     }
 
+
     /**
      * get 执行方式，AUTO(&quot;AUTO&quot;, 0), BY_CREATOR(&quot;BY_CREATOR&quot;, 1)
      *
@@ -140,6 +143,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
     public void setTaskPlanTypeEnum(String taskPlanTypeEnum) {
         this.taskPlanTypeEnum = taskPlanTypeEnum;
     }
+
 
     /**
      * get DBA审批方式，AUTO(&quot;AUTO&quot;, 0), MANUAL(&quot;MANUAL&quot;, 1)
@@ -159,6 +163,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.dbaApproveTypeEnum = dbaApproveTypeEnum;
     }
 
+
     /**
      * get 申请原因
      *
@@ -176,6 +181,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
     public void setMemo(String memo) {
         this.memo = memo;
     }
+
 
     /**
      * get SQL文本，变更SQL选择文本时，必填
@@ -195,6 +201,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.sqlText = sqlText;
     }
 
+
     /**
      * get SQL附件导入任务Id
      *
@@ -212,6 +219,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
     public void setSqlFileTaskId(String sqlFileTaskId) {
         this.sqlFileTaskId = sqlFileTaskId;
     }
+
 
     /**
      * get 回滚SQL文本，选填
@@ -231,6 +239,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.rollbackSqlText = rollbackSqlText;
     }
 
+
     /**
      * get 回滚SQL附件导入任务Id
      *
@@ -248,6 +257,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
     public void setRollbackFileTaskId(String rollbackFileTaskId) {
         this.rollbackFileTaskId = rollbackFileTaskId;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -268,6 +278,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 数据库id
      *
@@ -277,6 +288,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称
@@ -288,6 +300,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 执行方式，AUTO(&quot;AUTO&quot;, 0), BY_CREATOR(&quot;BY_CREATOR&quot;, 1)
      *
@@ -297,6 +310,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.taskPlanTypeEnum = taskPlanTypeEnum;
         return this;
     }
+
 
     /**
      * set DBA审批方式，AUTO(&quot;AUTO&quot;, 0), MANUAL(&quot;MANUAL&quot;, 1)
@@ -308,6 +322,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 申请原因
      *
@@ -317,6 +332,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.memo = memo;
         return this;
     }
+
 
     /**
      * set SQL文本，变更SQL选择文本时，必填
@@ -328,6 +344,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set SQL附件导入任务Id
      *
@@ -337,6 +354,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.sqlFileTaskId = sqlFileTaskId;
         return this;
     }
+
 
     /**
      * set 回滚SQL文本，选填
@@ -348,6 +366,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 回滚SQL附件导入任务Id
      *
@@ -357,6 +376,7 @@ public class CreateDataFlowRequest extends JdcloudRequest implements java.io.Ser
         this.rollbackFileTaskId = rollbackFileTaskId;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

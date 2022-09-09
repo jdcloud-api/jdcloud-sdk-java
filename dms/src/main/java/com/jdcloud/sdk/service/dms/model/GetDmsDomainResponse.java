@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取Dms域名
+ * 获取Dms域名，仅供前端使用
  */
 public class GetDmsDomainResponse extends JdcloudResponse<GetDmsDomainResult> implements java.io.Serializable {
 

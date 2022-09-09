@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取Dms域名
+ * 获取Dms域名，仅供前端使用
  */
 public class GetDmsDomainRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -40,6 +40,7 @@ public class GetDmsDomainRequest extends JdcloudRequest implements java.io.Seria
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -59,6 +60,7 @@ public class GetDmsDomainRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
 
     /**

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取数据库中的表列表
+ * 获取数据库中的表列表，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class TableListResponse extends JdcloudResponse<TableListResult> implements java.io.Serializable {
 

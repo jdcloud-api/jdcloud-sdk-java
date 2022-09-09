@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.CreateTableBatchResponse;
 
 /**
- * 批量建表
+ * 批量建表，支持Stardb
  */
 class CreateTableBatchExecutor extends JdcloudExecutor {
 

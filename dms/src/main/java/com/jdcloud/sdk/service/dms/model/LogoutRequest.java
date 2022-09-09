@@ -47,6 +47,7 @@ public class LogoutRequest extends JdcloudRequest implements java.io.Serializabl
     private String regionId;
 
 
+
     /**
      * get 数据源id。
      *
@@ -64,6 +65,7 @@ public class LogoutRequest extends JdcloudRequest implements java.io.Serializabl
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -84,6 +86,7 @@ public class LogoutRequest extends JdcloudRequest implements java.io.Serializabl
     }
 
 
+
     /**
      * set 数据源id。
      *
@@ -93,6 +96,7 @@ public class LogoutRequest extends JdcloudRequest implements java.io.Serializabl
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

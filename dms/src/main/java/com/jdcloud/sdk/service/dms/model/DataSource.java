@@ -83,7 +83,7 @@ public class DataSource  implements java.io.Serializable {
     private String cdsCluster;
 
     /**
-     * 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13),STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15);。
+     * 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13),STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);
      */
     private Integer dbType;
 
@@ -188,6 +188,7 @@ public class DataSource  implements java.io.Serializable {
     private String extra;
 
 
+
     /**
      * get 主键id。
      *
@@ -205,6 +206,7 @@ public class DataSource  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 数据库ip地址。
@@ -224,6 +226,7 @@ public class DataSource  implements java.io.Serializable {
         this.ip = ip;
     }
 
+
     /**
      * get 数据库端口。
      *
@@ -241,6 +244,7 @@ public class DataSource  implements java.io.Serializable {
     public void setPort(Integer port) {
         this.port = port;
     }
+
 
     /**
      * get dbName，数据库名称，RDS或DRDS实例时为空。
@@ -260,6 +264,7 @@ public class DataSource  implements java.io.Serializable {
         this.dbName = dbName;
     }
 
+
     /**
      * get 修改用户。
      *
@@ -277,6 +282,7 @@ public class DataSource  implements java.io.Serializable {
     public void setModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
     }
+
 
     /**
      * get 0为有效，1为无效。
@@ -296,6 +302,7 @@ public class DataSource  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 数据库用户名。
      *
@@ -313,6 +320,7 @@ public class DataSource  implements java.io.Serializable {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
 
     /**
      * get 数据库密码。
@@ -332,6 +340,7 @@ public class DataSource  implements java.io.Serializable {
         this.passwd = passwd;
     }
 
+
     /**
      * get 数据库加密密码。
      *
@@ -349,6 +358,7 @@ public class DataSource  implements java.io.Serializable {
     public void setPasswdEcrypt(String passwdEcrypt) {
         this.passwdEcrypt = passwdEcrypt;
     }
+
 
     /**
      * get Cds集群名称。
@@ -368,8 +378,9 @@ public class DataSource  implements java.io.Serializable {
         this.cdsCluster = cdsCluster;
     }
 
+
     /**
-     * get 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13),STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15);。
+     * get 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13),STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);
      *
      * @return
      */
@@ -378,13 +389,14 @@ public class DataSource  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13),STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15);。
+     * set 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13),STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);
      *
      * @param dbType
      */
     public void setDbType(Integer dbType) {
         this.dbType = dbType;
     }
+
 
     /**
      * get 创建时间。
@@ -404,6 +416,7 @@ public class DataSource  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 环境类型，已废弃。
      *
@@ -421,6 +434,7 @@ public class DataSource  implements java.io.Serializable {
     public void setEnvironmentType(Integer environmentType) {
         this.environmentType = environmentType;
     }
+
 
     /**
      * get 已废弃。
@@ -440,6 +454,7 @@ public class DataSource  implements java.io.Serializable {
         this.dbTypeName = dbTypeName;
     }
 
+
     /**
      * get 已废弃。
      *
@@ -457,6 +472,7 @@ public class DataSource  implements java.io.Serializable {
     public void setSensitivity(String sensitivity) {
         this.sensitivity = sensitivity;
     }
+
 
     /**
      * get 已废弃。
@@ -476,6 +492,7 @@ public class DataSource  implements java.io.Serializable {
         this.userType = userType;
     }
 
+
     /**
      * get mongo权限类型。
      *
@@ -493,6 +510,7 @@ public class DataSource  implements java.io.Serializable {
     public void setMongoAuth(String mongoAuth) {
         this.mongoAuth = mongoAuth;
     }
+
 
     /**
      * get 数据库中文名备注，已废弃。
@@ -512,6 +530,7 @@ public class DataSource  implements java.io.Serializable {
         this.schemaCname = schemaCname;
     }
 
+
     /**
      * get 数据库所属部门，已废弃。
      *
@@ -529,6 +548,7 @@ public class DataSource  implements java.io.Serializable {
     public void setSchemaDepartment(String schemaDepartment) {
         this.schemaDepartment = schemaDepartment;
     }
+
 
     /**
      * get 数据库维护dba，已废弃。
@@ -548,6 +568,7 @@ public class DataSource  implements java.io.Serializable {
         this.schemaDba = schemaDba;
     }
 
+
     /**
      * get 数据库owner，已废弃。
      *
@@ -565,6 +586,7 @@ public class DataSource  implements java.io.Serializable {
     public void setSchemaOwner(String schemaOwner) {
         this.schemaOwner = schemaOwner;
     }
+
 
     /**
      * get 已废弃。
@@ -584,6 +606,7 @@ public class DataSource  implements java.io.Serializable {
         this.isStandard = isStandard;
     }
 
+
     /**
      * get 已废弃。
      *
@@ -601,6 +624,7 @@ public class DataSource  implements java.io.Serializable {
     public void setColdict(String coldict) {
         this.coldict = coldict;
     }
+
 
     /**
      * get 数据库版本，已废弃。
@@ -620,6 +644,7 @@ public class DataSource  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
      * get 数据库环境，已废弃。
      *
@@ -637,6 +662,7 @@ public class DataSource  implements java.io.Serializable {
     public void setSchemaEnvironment(String schemaEnvironment) {
         this.schemaEnvironment = schemaEnvironment;
     }
+
 
     /**
      * get 已废弃。
@@ -656,6 +682,7 @@ public class DataSource  implements java.io.Serializable {
         this.query = query;
     }
 
+
     /**
      * get 数据库所属区域。
      *
@@ -673,6 +700,7 @@ public class DataSource  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 地址模式：CLASSIC(&quot;CLASSIC&quot;, 0), RDS(&quot;RDS&quot;, 1), ECS(&quot;ECS&quot;, 2), VPC(&quot;VPC&quot;, 3);。
@@ -692,6 +720,7 @@ public class DataSource  implements java.io.Serializable {
         this.addrMode = addrMode;
     }
 
+
     /**
      * get 原生地址，RDS，DRDS为实例id。
      *
@@ -710,6 +739,7 @@ public class DataSource  implements java.io.Serializable {
         this.addrOrigin = addrOrigin;
     }
 
+
     /**
      * get 保留字段。
      *
@@ -727,6 +757,7 @@ public class DataSource  implements java.io.Serializable {
     public void setAddrKey(String addrKey) {
         this.addrKey = addrKey;
     }
+
 
     /**
      * get 保留字段。
@@ -747,6 +778,7 @@ public class DataSource  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 主键id。
      *
@@ -756,6 +788,7 @@ public class DataSource  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 数据库ip地址。
@@ -767,6 +800,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库端口。
      *
@@ -776,6 +810,7 @@ public class DataSource  implements java.io.Serializable {
         this.port = port;
         return this;
     }
+
 
     /**
      * set dbName，数据库名称，RDS或DRDS实例时为空。
@@ -787,6 +822,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 修改用户。
      *
@@ -796,6 +832,7 @@ public class DataSource  implements java.io.Serializable {
         this.modifiedBy = modifiedBy;
         return this;
     }
+
 
     /**
      * set 0为有效，1为无效。
@@ -807,6 +844,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库用户名。
      *
@@ -816,6 +854,7 @@ public class DataSource  implements java.io.Serializable {
         this.userName = userName;
         return this;
     }
+
 
     /**
      * set 数据库密码。
@@ -827,6 +866,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库加密密码。
      *
@@ -836,6 +876,7 @@ public class DataSource  implements java.io.Serializable {
         this.passwdEcrypt = passwdEcrypt;
         return this;
     }
+
 
     /**
      * set Cds集群名称。
@@ -847,8 +888,9 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13),STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15);。
+     * set 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13),STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);
      *
      * @param dbType
      */
@@ -856,6 +898,7 @@ public class DataSource  implements java.io.Serializable {
         this.dbType = dbType;
         return this;
     }
+
 
     /**
      * set 创建时间。
@@ -867,6 +910,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 环境类型，已废弃。
      *
@@ -876,6 +920,7 @@ public class DataSource  implements java.io.Serializable {
         this.environmentType = environmentType;
         return this;
     }
+
 
     /**
      * set 已废弃。
@@ -887,6 +932,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 已废弃。
      *
@@ -896,6 +942,7 @@ public class DataSource  implements java.io.Serializable {
         this.sensitivity = sensitivity;
         return this;
     }
+
 
     /**
      * set 已废弃。
@@ -907,6 +954,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set mongo权限类型。
      *
@@ -916,6 +964,7 @@ public class DataSource  implements java.io.Serializable {
         this.mongoAuth = mongoAuth;
         return this;
     }
+
 
     /**
      * set 数据库中文名备注，已废弃。
@@ -927,6 +976,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库所属部门，已废弃。
      *
@@ -936,6 +986,7 @@ public class DataSource  implements java.io.Serializable {
         this.schemaDepartment = schemaDepartment;
         return this;
     }
+
 
     /**
      * set 数据库维护dba，已废弃。
@@ -947,6 +998,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库owner，已废弃。
      *
@@ -956,6 +1008,7 @@ public class DataSource  implements java.io.Serializable {
         this.schemaOwner = schemaOwner;
         return this;
     }
+
 
     /**
      * set 已废弃。
@@ -967,6 +1020,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 已废弃。
      *
@@ -976,6 +1030,7 @@ public class DataSource  implements java.io.Serializable {
         this.coldict = coldict;
         return this;
     }
+
 
     /**
      * set 数据库版本，已废弃。
@@ -987,6 +1042,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库环境，已废弃。
      *
@@ -996,6 +1052,7 @@ public class DataSource  implements java.io.Serializable {
         this.schemaEnvironment = schemaEnvironment;
         return this;
     }
+
 
     /**
      * set 已废弃。
@@ -1007,6 +1064,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库所属区域。
      *
@@ -1016,6 +1074,7 @@ public class DataSource  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 地址模式：CLASSIC(&quot;CLASSIC&quot;, 0), RDS(&quot;RDS&quot;, 1), ECS(&quot;ECS&quot;, 2), VPC(&quot;VPC&quot;, 3);。
@@ -1027,6 +1086,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 原生地址，RDS，DRDS为实例id。
      *
@@ -1037,6 +1097,7 @@ public class DataSource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 保留字段。
      *
@@ -1046,6 +1107,7 @@ public class DataSource  implements java.io.Serializable {
         this.addrKey = addrKey;
         return this;
     }
+
 
     /**
      * set 保留字段。

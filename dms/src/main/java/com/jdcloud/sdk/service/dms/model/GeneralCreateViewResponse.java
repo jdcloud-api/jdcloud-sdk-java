@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 生产创建视图SQL语句
+ * 生产创建视图SQL语句，支持Mysql
  */
 public class GeneralCreateViewResponse extends JdcloudResponse<GeneralCreateViewResult> implements java.io.Serializable {
 

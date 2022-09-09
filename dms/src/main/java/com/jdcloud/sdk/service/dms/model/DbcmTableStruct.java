@@ -37,8 +37,8 @@ public class DbcmTableStruct  implements java.io.Serializable {
     /**
      * 表中全部列信息。
      */
+    
     private List<DbcmColumn> table_column;
-
     /**
      * 主键列名。
      */
@@ -57,26 +57,28 @@ public class DbcmTableStruct  implements java.io.Serializable {
     /**
      * 列表中元素为列信息，类型hashmap，key名称有index_column，index_name，index_type，old_index_name；索引类型有NORMAL，UNIQUE
      */
+    
     private List<Object> comm_index;
 
 
     /**
-     * get 表中全部列信息。
-     *
-     * @return
-     */
+    * get 表中全部列信息。
+    *
+    * @return
+    */
     public List<DbcmColumn> getTable_column() {
         return table_column;
     }
 
     /**
-     * set 表中全部列信息。
-     *
-     * @param table_column
-     */
+    * set 表中全部列信息。
+    *
+    * @param table_column
+    */
     public void setTable_column(List<DbcmColumn> table_column) {
         this.table_column = table_column;
     }
+
 
     /**
      * get 主键列名。
@@ -96,6 +98,7 @@ public class DbcmTableStruct  implements java.io.Serializable {
         this.primary_index = primary_index;
     }
 
+
     /**
      * get table_info
      *
@@ -113,6 +116,7 @@ public class DbcmTableStruct  implements java.io.Serializable {
     public void setTable_info(DbcmTableInfo table_info) {
         this.table_info = table_info;
     }
+
 
     /**
      * get 建表语句。
@@ -132,34 +136,37 @@ public class DbcmTableStruct  implements java.io.Serializable {
         this.ddl = ddl;
     }
 
+
     /**
-     * get 列表中元素为列信息，类型hashmap，key名称有index_column，index_name，index_type，old_index_name；索引类型有NORMAL，UNIQUE
-     *
-     * @return
-     */
+    * get 列表中元素为列信息，类型hashmap，key名称有index_column，index_name，index_type，old_index_name；索引类型有NORMAL，UNIQUE
+    *
+    * @return
+    */
     public List<Object> getComm_index() {
         return comm_index;
     }
 
     /**
-     * set 列表中元素为列信息，类型hashmap，key名称有index_column，index_name，index_type，old_index_name；索引类型有NORMAL，UNIQUE
-     *
-     * @param comm_index
-     */
+    * set 列表中元素为列信息，类型hashmap，key名称有index_column，index_name，index_type，old_index_name；索引类型有NORMAL，UNIQUE
+    *
+    * @param comm_index
+    */
     public void setComm_index(List<Object> comm_index) {
         this.comm_index = comm_index;
     }
 
 
+
     /**
-     * set 表中全部列信息。
-     *
-     * @param table_column
-     */
+    * set 表中全部列信息。
+    *
+    * @param table_column
+    */
     public DbcmTableStruct table_column(List<DbcmColumn> table_column) {
         this.table_column = table_column;
         return this;
     }
+
 
     /**
      * set 主键列名。
@@ -171,6 +178,7 @@ public class DbcmTableStruct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set table_info
      *
@@ -180,6 +188,7 @@ public class DbcmTableStruct  implements java.io.Serializable {
         this.table_info = table_info;
         return this;
     }
+
 
     /**
      * set 建表语句。
@@ -191,15 +200,17 @@ public class DbcmTableStruct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 列表中元素为列信息，类型hashmap，key名称有index_column，index_name，index_type，old_index_name；索引类型有NORMAL，UNIQUE
-     *
-     * @param comm_index
-     */
+    * set 列表中元素为列信息，类型hashmap，key名称有index_column，index_name，index_type，old_index_name；索引类型有NORMAL，UNIQUE
+    *
+    * @param comm_index
+    */
     public DbcmTableStruct comm_index(List<Object> comm_index) {
         this.comm_index = comm_index;
         return this;
     }
+
 
 
     /**
@@ -225,5 +236,4 @@ public class DbcmTableStruct  implements java.io.Serializable {
         }
         this.comm_index.add(comm_index);
     }
-
 }

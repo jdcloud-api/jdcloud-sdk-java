@@ -43,6 +43,7 @@ public class ExtraTableInfo  implements java.io.Serializable {
     private StardbSplitInfo stardbSplitInfo;
 
 
+
     /**
      * get ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表。
      *
@@ -60,6 +61,7 @@ public class ExtraTableInfo  implements java.io.Serializable {
     public void setTableTypeEnum(String tableTypeEnum) {
         this.tableTypeEnum = tableTypeEnum;
     }
+
 
     /**
      * get tableTypeEnum为切分表时的切分信息内容。
@@ -80,6 +82,7 @@ public class ExtraTableInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表。
      *
@@ -89,6 +92,7 @@ public class ExtraTableInfo  implements java.io.Serializable {
         this.tableTypeEnum = tableTypeEnum;
         return this;
     }
+
 
     /**
      * set tableTypeEnum为切分表时的切分信息内容。

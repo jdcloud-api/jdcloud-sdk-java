@@ -43,6 +43,7 @@ public class CreateTableInfo  implements java.io.Serializable {
     private ExtraTableInfo extraTableInfo;
 
 
+
     /**
      * get sql语句。
      *
@@ -60,6 +61,7 @@ public class CreateTableInfo  implements java.io.Serializable {
     public void setSql(String sql) {
         this.sql = sql;
     }
+
 
     /**
      * get 创建广播表，分表额外信息。
@@ -80,6 +82,7 @@ public class CreateTableInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set sql语句。
      *
@@ -89,6 +92,7 @@ public class CreateTableInfo  implements java.io.Serializable {
         this.sql = sql;
         return this;
     }
+
 
     /**
      * set 创建广播表，分表额外信息。

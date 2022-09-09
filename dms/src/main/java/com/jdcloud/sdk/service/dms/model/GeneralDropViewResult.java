@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.dms.model.DmsSql;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 生成删除视图sql语句
+ * 生成删除视图sql语句，支持Mysql
  */
 public class GeneralDropViewResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,37 +39,40 @@ public class GeneralDropViewResult extends JdcloudResult implements java.io.Seri
     /**
      * dmsSqls
      */
+    
     private List<DmsSql> dmsSqls;
 
 
     /**
-     * get dmsSqls
-     *
-     * @return
-     */
+    * get dmsSqls
+    *
+    * @return
+    */
     public List<DmsSql> getDmsSqls() {
         return dmsSqls;
     }
 
     /**
-     * set dmsSqls
-     *
-     * @param dmsSqls
-     */
+    * set dmsSqls
+    *
+    * @param dmsSqls
+    */
     public void setDmsSqls(List<DmsSql> dmsSqls) {
         this.dmsSqls = dmsSqls;
     }
 
 
+
     /**
-     * set dmsSqls
-     *
-     * @param dmsSqls
-     */
+    * set dmsSqls
+    *
+    * @param dmsSqls
+    */
     public GeneralDropViewResult dmsSqls(List<DmsSql> dmsSqls) {
         this.dmsSqls = dmsSqls;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class GeneralDropViewResult extends JdcloudResult implements java.io.Seri
         }
         this.dmsSqls.add(dmsSql);
     }
-
 }

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 执行计划
+ * 执行计划，支持Mysql，Stardb
  */
 public class ConsoleExplainResponse extends JdcloudResponse<ConsoleExplainResult> implements java.io.Serializable {
 

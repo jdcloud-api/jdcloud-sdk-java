@@ -43,6 +43,7 @@ public class DmsSql  implements java.io.Serializable {
     private String sqlTypeEnum;
 
 
+
     /**
      * get SQL语句。
      *
@@ -60,6 +61,7 @@ public class DmsSql  implements java.io.Serializable {
     public void setSql(String sql) {
         this.sql = sql;
     }
+
 
     /**
      * get SQL类型：CREATE_VIEW，DROP_VIEW， ALTER_VIEW，CREATE_PROCEDURE，DROP_PROCEDURE， ALTER_PROCEDURE，CREATE_FUNCTION，DROP_FUNCTION， ALTER_FUNCTION，CREATE_TRIGGER，ALTER_TRIGGER，DROP_TRIGGER，CREATE_EVENT，ALTER_EVENT，DROP_EVENT。
@@ -80,6 +82,7 @@ public class DmsSql  implements java.io.Serializable {
     }
 
 
+
     /**
      * set SQL语句。
      *
@@ -89,6 +92,7 @@ public class DmsSql  implements java.io.Serializable {
         this.sql = sql;
         return this;
     }
+
 
     /**
      * set SQL类型：CREATE_VIEW，DROP_VIEW， ALTER_VIEW，CREATE_PROCEDURE，DROP_PROCEDURE， ALTER_PROCEDURE，CREATE_FUNCTION，DROP_FUNCTION， ALTER_FUNCTION，CREATE_TRIGGER，ALTER_TRIGGER，DROP_TRIGGER，CREATE_EVENT，ALTER_EVENT，DROP_EVENT。

@@ -33,7 +33,7 @@ public class DmsInstance  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15);。
+     * 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);。
      */
     private Integer dbType;
 
@@ -48,8 +48,9 @@ public class DmsInstance  implements java.io.Serializable {
     private Object instanceInfo;
 
 
+
     /**
-     * get 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15);。
+     * get 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);。
      *
      * @return
      */
@@ -58,13 +59,14 @@ public class DmsInstance  implements java.io.Serializable {
     }
 
     /**
-     * set 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15);。
+     * set 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);。
      *
      * @param dbType
      */
     public void setDbType(Integer dbType) {
         this.dbType = dbType;
     }
+
 
     /**
      * get 数据源详情。
@@ -83,6 +85,7 @@ public class DmsInstance  implements java.io.Serializable {
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
     }
+
 
     /**
      * get 从RDS，DRDS获取的数据源详情。
@@ -103,8 +106,9 @@ public class DmsInstance  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15);。
+     * set 数据库类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);。
      *
      * @param dbType
      */
@@ -112,6 +116,7 @@ public class DmsInstance  implements java.io.Serializable {
         this.dbType = dbType;
         return this;
     }
+
 
     /**
      * set 数据源详情。
@@ -122,6 +127,7 @@ public class DmsInstance  implements java.io.Serializable {
         this.dataSource = dataSource;
         return this;
     }
+
 
     /**
      * set 从RDS，DRDS获取的数据源详情。

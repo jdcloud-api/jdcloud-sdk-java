@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取视图详情
+ * 获取视图详情，支持Mysql
  */
 public class ViewInfoResult extends JdcloudResult implements java.io.Serializable {
 
@@ -69,6 +69,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
     private String definitionSql;
 
 
+
     /**
      * get 数据库名称。
      *
@@ -86,6 +87,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 视图名称。
@@ -105,6 +107,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         this.viewName = viewName;
     }
 
+
     /**
      * get 定义者。
      *
@@ -122,6 +125,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
     public void setDefiner(String definer) {
         this.definer = definer;
     }
+
 
     /**
      * get 算法。
@@ -141,6 +145,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         this.viewAlgorithm = viewAlgorithm;
     }
 
+
     /**
      * get 检查选项。
      *
@@ -159,6 +164,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         this.viewCheckOption = viewCheckOption;
     }
 
+
     /**
      * get 安全性。
      *
@@ -176,6 +182,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
     public void setViewSecurity(String viewSecurity) {
         this.viewSecurity = viewSecurity;
     }
+
 
     /**
      * get 视图定义。
@@ -196,6 +203,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
     }
 
 
+
     /**
      * set 数据库名称。
      *
@@ -205,6 +213,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 视图名称。
@@ -216,6 +225,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set 定义者。
      *
@@ -225,6 +235,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         this.definer = definer;
         return this;
     }
+
 
     /**
      * set 算法。
@@ -236,6 +247,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set 检查选项。
      *
@@ -246,6 +258,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         return this;
     }
 
+
     /**
      * set 安全性。
      *
@@ -255,6 +268,7 @@ public class ViewInfoResult extends JdcloudResult implements java.io.Serializabl
         this.viewSecurity = viewSecurity;
         return this;
     }
+
 
     /**
      * set 视图定义。

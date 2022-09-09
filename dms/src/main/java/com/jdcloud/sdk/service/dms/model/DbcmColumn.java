@@ -83,6 +83,7 @@ public class DbcmColumn  implements java.io.Serializable {
     private String column_comments;
 
 
+
     /**
      * get 原始列表。
      *
@@ -100,6 +101,7 @@ public class DbcmColumn  implements java.io.Serializable {
     public void setOld_column_name(String old_column_name) {
         this.old_column_name = old_column_name;
     }
+
 
     /**
      * get 列名。
@@ -119,6 +121,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.column_name = column_name;
     }
 
+
     /**
      * get 列类型。
      *
@@ -136,6 +139,7 @@ public class DbcmColumn  implements java.io.Serializable {
     public void setColumn_type(String column_type) {
         this.column_type = column_type;
     }
+
 
     /**
      * get 列长度。
@@ -155,6 +159,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.column_length = column_length;
     }
 
+
     /**
      * get 小数点后长度。
      *
@@ -172,6 +177,7 @@ public class DbcmColumn  implements java.io.Serializable {
     public void setColumn_point(String column_point) {
         this.column_point = column_point;
     }
+
 
     /**
      * get 是否可以为空。
@@ -191,6 +197,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.is_null = is_null;
     }
 
+
     /**
      * get 列默认值。
      *
@@ -208,6 +215,7 @@ public class DbcmColumn  implements java.io.Serializable {
     public void setColumn_value(String column_value) {
         this.column_value = column_value;
     }
+
 
     /**
      * get 是否自增。
@@ -227,6 +235,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.auto_incre = auto_incre;
     }
 
+
     /**
      * get 是否为主键。
      *
@@ -244,6 +253,7 @@ public class DbcmColumn  implements java.io.Serializable {
     public void setPk_index(Boolean pk_index) {
         this.pk_index = pk_index;
     }
+
 
     /**
      * get 列注释。
@@ -264,6 +274,7 @@ public class DbcmColumn  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 原始列表。
      *
@@ -273,6 +284,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.old_column_name = old_column_name;
         return this;
     }
+
 
     /**
      * set 列名。
@@ -284,6 +296,7 @@ public class DbcmColumn  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 列类型。
      *
@@ -293,6 +306,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.column_type = column_type;
         return this;
     }
+
 
     /**
      * set 列长度。
@@ -304,6 +318,7 @@ public class DbcmColumn  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 小数点后长度。
      *
@@ -313,6 +328,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.column_point = column_point;
         return this;
     }
+
 
     /**
      * set 是否可以为空。
@@ -324,6 +340,7 @@ public class DbcmColumn  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 列默认值。
      *
@@ -333,6 +350,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.column_value = column_value;
         return this;
     }
+
 
     /**
      * set 是否自增。
@@ -344,6 +362,7 @@ public class DbcmColumn  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否为主键。
      *
@@ -353,6 +372,7 @@ public class DbcmColumn  implements java.io.Serializable {
         this.pk_index = pk_index;
         return this;
     }
+
 
     /**
      * set 列注释。

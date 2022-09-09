@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.TableListResponse;
 
 /**
- * 获取数据库中的表列表
+ * 获取数据库中的表列表，支持Mysql，Stardb，Tidb，ClickHouse
  */
 class TableListExecutor extends JdcloudExecutor {
 

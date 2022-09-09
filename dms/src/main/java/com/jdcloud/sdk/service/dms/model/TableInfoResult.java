@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.dms.model.DmsTableStruct;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取表元数据
+ * 获取表元数据，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class TableInfoResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,6 +38,7 @@ public class TableInfoResult extends JdcloudResult implements java.io.Serializab
      * dmsTableStruct
      */
     private DmsTableStruct dmsTableStruct;
+
 
 
     /**
@@ -57,6 +58,7 @@ public class TableInfoResult extends JdcloudResult implements java.io.Serializab
     public void setDmsTableStruct(DmsTableStruct dmsTableStruct) {
         this.dmsTableStruct = dmsTableStruct;
     }
+
 
 
     /**
