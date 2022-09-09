@@ -63,6 +63,7 @@ public class TiDBNode  implements java.io.Serializable {
     private Float diskUsage;
 
 
+
     /**
      * get 节点ID
      *
@@ -80,6 +81,7 @@ public class TiDBNode  implements java.io.Serializable {
     public void setNodeId(String nodeId) {
         this.nodeId = nodeId;
     }
+
 
     /**
      * get 节点类型，支持,tidb,tikv,pd,tiflash,monitor
@@ -99,6 +101,7 @@ public class TiDBNode  implements java.io.Serializable {
         this.nodeType = nodeType;
     }
 
+
     /**
      * get 节点状态
      *
@@ -116,6 +119,7 @@ public class TiDBNode  implements java.io.Serializable {
     public void setNodeStatus(String nodeStatus) {
         this.nodeStatus = nodeStatus;
     }
+
 
     /**
      * get CPU 使用百分比，例如0.832表示CPU使用率为83.2%
@@ -135,6 +139,7 @@ public class TiDBNode  implements java.io.Serializable {
         this.cpuUtil = cpuUtil;
     }
 
+
     /**
      * get 内存使用百分比，例如0.832表示内存使用率为83.2%
      *
@@ -152,6 +157,7 @@ public class TiDBNode  implements java.io.Serializable {
     public void setMemeryUtil(Float memeryUtil) {
         this.memeryUtil = memeryUtil;
     }
+
 
     /**
      * get 存储使用百分比，例如0.832表示存储使用率为83.2%
@@ -172,6 +178,7 @@ public class TiDBNode  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 节点ID
      *
@@ -181,6 +188,7 @@ public class TiDBNode  implements java.io.Serializable {
         this.nodeId = nodeId;
         return this;
     }
+
 
     /**
      * set 节点类型，支持,tidb,tikv,pd,tiflash,monitor
@@ -192,6 +200,7 @@ public class TiDBNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点状态
      *
@@ -201,6 +210,7 @@ public class TiDBNode  implements java.io.Serializable {
         this.nodeStatus = nodeStatus;
         return this;
     }
+
 
     /**
      * set CPU 使用百分比，例如0.832表示CPU使用率为83.2%
@@ -212,6 +222,7 @@ public class TiDBNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存使用百分比，例如0.832表示内存使用率为83.2%
      *
@@ -221,6 +232,7 @@ public class TiDBNode  implements java.io.Serializable {
         this.memeryUtil = memeryUtil;
         return this;
     }
+
 
     /**
      * set 存储使用百分比，例如0.832表示存储使用率为83.2%

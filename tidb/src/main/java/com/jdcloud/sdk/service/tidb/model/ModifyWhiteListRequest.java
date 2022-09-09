@@ -63,6 +63,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
     private String instanceId;
 
 
+
     /**
      * get IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
      *
@@ -80,6 +81,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
     public void setIps(String ips) {
         this.ips = ips;
     }
+
 
     /**
      * get 白名单分组名
@@ -99,6 +101,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
         this.name = name;
     }
 
+
     /**
      * get 地域代码
      *
@@ -116,6 +119,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -136,6 +140,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
      *
@@ -145,6 +150,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
         this.ips = ips;
         return this;
     }
+
 
     /**
      * set 白名单分组名
@@ -156,6 +162,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 地域代码
      *
@@ -165,6 +172,7 @@ public class ModifyWhiteListRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

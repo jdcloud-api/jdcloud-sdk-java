@@ -59,6 +59,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     private String regionId;
 
 
+
     /**
      * get 实例ID，唯一标识一个实例
      *
@@ -76,6 +77,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
@@ -95,6 +97,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍。
      *
@@ -112,6 +115,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 地域代码
@@ -132,6 +136,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 实例ID，唯一标识一个实例
      *
@@ -141,6 +146,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页。
@@ -152,6 +158,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 每页显示的数据条数，默认为10，取值范围：[10,100]，且为10的整数倍。
      *
@@ -161,6 +168,7 @@ public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 地域代码

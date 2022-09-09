@@ -65,6 +65,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     private NodeFlavor ticdcFlavors;
 
 
+
     /**
      * get tidbFlavors
      *
@@ -82,6 +83,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     public void setTidbFlavors(NodeFlavor tidbFlavors) {
         this.tidbFlavors = tidbFlavors;
     }
+
 
     /**
      * get tikvFlavors
@@ -101,6 +103,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
         this.tikvFlavors = tikvFlavors;
     }
 
+
     /**
      * get pdFlavors
      *
@@ -118,6 +121,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     public void setPdFlavors(NodeFlavor pdFlavors) {
         this.pdFlavors = pdFlavors;
     }
+
 
     /**
      * get monitorFlavors
@@ -137,6 +141,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
         this.monitorFlavors = monitorFlavors;
     }
 
+
     /**
      * get tiflashFlavors
      *
@@ -154,6 +159,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     public void setTiflashFlavors(NodeFlavor tiflashFlavors) {
         this.tiflashFlavors = tiflashFlavors;
     }
+
 
     /**
      * get ticdcFlavors
@@ -174,6 +180,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
     }
 
 
+
     /**
      * set tidbFlavors
      *
@@ -183,6 +190,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
         this.tidbFlavors = tidbFlavors;
         return this;
     }
+
 
     /**
      * set tikvFlavors
@@ -194,6 +202,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
      * set pdFlavors
      *
@@ -203,6 +212,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
         this.pdFlavors = pdFlavors;
         return this;
     }
+
 
     /**
      * set monitorFlavors
@@ -214,6 +224,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
         return this;
     }
 
+
     /**
      * set tiflashFlavors
      *
@@ -223,6 +234,7 @@ public class DescribeInstanceClassesResult extends JdcloudResult implements java
         this.tiflashFlavors = tiflashFlavors;
         return this;
     }
+
 
     /**
      * set ticdcFlavors

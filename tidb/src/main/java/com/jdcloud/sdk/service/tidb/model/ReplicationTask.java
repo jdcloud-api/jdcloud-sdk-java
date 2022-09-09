@@ -43,6 +43,11 @@ public class ReplicationTask  implements java.io.Serializable {
     private String targetType;
 
     /**
+     * 复制的对象，格式为&quot;库名.表名”，支持?* 通配符，例如 db1.* 、 db2.tab? ，*.* 表示复制整个实例
+     */
+    private String replicationObjects;
+
+    /**
      * 目标实例IP
      */
     private String targetIP;
@@ -93,6 +98,7 @@ public class ReplicationTask  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 复制任务ID
      *
@@ -110,6 +116,7 @@ public class ReplicationTask  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 目标实例类型
@@ -129,6 +136,26 @@ public class ReplicationTask  implements java.io.Serializable {
         this.targetType = targetType;
     }
 
+
+    /**
+     * get 复制的对象，格式为&quot;库名.表名”，支持?* 通配符，例如 db1.* 、 db2.tab? ，*.* 表示复制整个实例
+     *
+     * @return
+     */
+    public String getReplicationObjects() {
+        return replicationObjects;
+    }
+
+    /**
+     * set 复制的对象，格式为&quot;库名.表名”，支持?* 通配符，例如 db1.* 、 db2.tab? ，*.* 表示复制整个实例
+     *
+     * @param replicationObjects
+     */
+    public void setReplicationObjects(String replicationObjects) {
+        this.replicationObjects = replicationObjects;
+    }
+
+
     /**
      * get 目标实例IP
      *
@@ -146,6 +173,7 @@ public class ReplicationTask  implements java.io.Serializable {
     public void setTargetIP(String targetIP) {
         this.targetIP = targetIP;
     }
+
 
     /**
      * get 目标实例端口
@@ -165,6 +193,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.targetPort = targetPort;
     }
 
+
     /**
      * get 目标类型为TiDB或MySQL时，连接目标实例的用户名
      *
@@ -182,6 +211,7 @@ public class ReplicationTask  implements java.io.Serializable {
     public void setTargetUser(String targetUser) {
         this.targetUser = targetUser;
     }
+
 
     /**
      * get Kafka的Topic
@@ -201,6 +231,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.kafkaTopic = kafkaTopic;
     }
 
+
     /**
      * get Kafka的版本
      *
@@ -218,6 +249,7 @@ public class ReplicationTask  implements java.io.Serializable {
     public void setKafkaVersion(String kafkaVersion) {
         this.kafkaVersion = kafkaVersion;
     }
+
 
     /**
      * get 目标实例备注说明
@@ -237,6 +269,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.targetComment = targetComment;
     }
 
+
     /**
      * get 任务状态
      *
@@ -254,6 +287,7 @@ public class ReplicationTask  implements java.io.Serializable {
     public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
     }
+
 
     /**
      * get 复制的起始时间
@@ -273,6 +307,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get Checkpoint时间
      *
@@ -290,6 +325,7 @@ public class ReplicationTask  implements java.io.Serializable {
     public void setCheckpointTime(String checkpointTime) {
         this.checkpointTime = checkpointTime;
     }
+
 
     /**
      * get 任务创建时间
@@ -310,6 +346,7 @@ public class ReplicationTask  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 复制任务ID
      *
@@ -319,6 +356,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 目标实例类型
@@ -330,6 +368,18 @@ public class ReplicationTask  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 复制的对象，格式为&quot;库名.表名”，支持?* 通配符，例如 db1.* 、 db2.tab? ，*.* 表示复制整个实例
+     *
+     * @param replicationObjects
+     */
+    public ReplicationTask replicationObjects(String replicationObjects) {
+        this.replicationObjects = replicationObjects;
+        return this;
+    }
+
+
     /**
      * set 目标实例IP
      *
@@ -339,6 +389,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.targetIP = targetIP;
         return this;
     }
+
 
     /**
      * set 目标实例端口
@@ -350,6 +401,7 @@ public class ReplicationTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目标类型为TiDB或MySQL时，连接目标实例的用户名
      *
@@ -359,6 +411,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.targetUser = targetUser;
         return this;
     }
+
 
     /**
      * set Kafka的Topic
@@ -370,6 +423,7 @@ public class ReplicationTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Kafka的版本
      *
@@ -379,6 +433,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.kafkaVersion = kafkaVersion;
         return this;
     }
+
 
     /**
      * set 目标实例备注说明
@@ -390,6 +445,7 @@ public class ReplicationTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务状态
      *
@@ -399,6 +455,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.taskStatus = taskStatus;
         return this;
     }
+
 
     /**
      * set 复制的起始时间
@@ -410,6 +467,7 @@ public class ReplicationTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Checkpoint时间
      *
@@ -419,6 +477,7 @@ public class ReplicationTask  implements java.io.Serializable {
         this.checkpointTime = checkpointTime;
         return this;
     }
+
 
     /**
      * set 任务创建时间

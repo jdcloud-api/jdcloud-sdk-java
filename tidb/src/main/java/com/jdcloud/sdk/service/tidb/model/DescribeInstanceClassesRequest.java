@@ -49,6 +49,7 @@ public class DescribeInstanceClassesRequest extends JdcloudRequest implements ja
     private String regionId;
 
 
+
     /**
      * get 存储类型,目前只支持本地SSD;
      *
@@ -66,6 +67,7 @@ public class DescribeInstanceClassesRequest extends JdcloudRequest implements ja
     public void setStorageType(String storageType) {
         this.storageType = storageType;
     }
+
 
     /**
      * get 地域代码
@@ -86,6 +88,7 @@ public class DescribeInstanceClassesRequest extends JdcloudRequest implements ja
     }
 
 
+
     /**
      * set 存储类型,目前只支持本地SSD;
      *
@@ -95,6 +98,7 @@ public class DescribeInstanceClassesRequest extends JdcloudRequest implements ja
         this.storageType = storageType;
         return this;
     }
+
 
     /**
      * set 地域代码

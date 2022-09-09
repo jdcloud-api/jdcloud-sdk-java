@@ -47,6 +47,7 @@ public class Az  implements java.io.Serializable {
     /**
      * orderableStorageTypes
      */
+    
     private List<Disk> orderableStorageTypes;
 
 
@@ -68,6 +69,7 @@ public class Az  implements java.io.Serializable {
         this.azId = azId;
     }
 
+
     /**
      * get 1正常0售罄
      *
@@ -86,23 +88,25 @@ public class Az  implements java.io.Serializable {
         this.azStatus = azStatus;
     }
 
+
     /**
-     * get orderableStorageTypes
-     *
-     * @return
-     */
+    * get orderableStorageTypes
+    *
+    * @return
+    */
     public List<Disk> getOrderableStorageTypes() {
         return orderableStorageTypes;
     }
 
     /**
-     * set orderableStorageTypes
-     *
-     * @param orderableStorageTypes
-     */
+    * set orderableStorageTypes
+    *
+    * @param orderableStorageTypes
+    */
     public void setOrderableStorageTypes(List<Disk> orderableStorageTypes) {
         this.orderableStorageTypes = orderableStorageTypes;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class Az  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1正常0售罄
      *
@@ -125,15 +130,17 @@ public class Az  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set orderableStorageTypes
-     *
-     * @param orderableStorageTypes
-     */
+    * set orderableStorageTypes
+    *
+    * @param orderableStorageTypes
+    */
     public Az orderableStorageTypes(List<Disk> orderableStorageTypes) {
         this.orderableStorageTypes = orderableStorageTypes;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class Az  implements java.io.Serializable {
         }
         this.orderableStorageTypes.add(orderableStorageType);
     }
-
 }

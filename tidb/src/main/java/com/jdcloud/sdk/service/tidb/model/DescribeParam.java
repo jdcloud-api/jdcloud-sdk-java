@@ -63,6 +63,7 @@ public class DescribeParam  implements java.io.Serializable {
     private Boolean needRestart;
 
 
+
     /**
      * get 参数名称
      *
@@ -80,6 +81,7 @@ public class DescribeParam  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 参数的描述
@@ -99,6 +101,7 @@ public class DescribeParam  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 参数的节点类型，包括TiKV,TiDB,PD,TiFlash
      *
@@ -116,6 +119,7 @@ public class DescribeParam  implements java.io.Serializable {
     public void setNodeType(String nodeType) {
         this.nodeType = nodeType;
     }
+
 
     /**
      * get 参数的默认数值
@@ -135,6 +139,7 @@ public class DescribeParam  implements java.io.Serializable {
         this.defaultValue = defaultValue;
     }
 
+
     /**
      * get 参数的当前值
      *
@@ -152,6 +157,7 @@ public class DescribeParam  implements java.io.Serializable {
     public void setCurrentValue(String currentValue) {
         this.currentValue = currentValue;
     }
+
 
     /**
      * get 参数修改是否需要重启生效，大小写敏感 -true:参数需要重启才能生效 -false:参数无需重启生效
@@ -172,6 +178,7 @@ public class DescribeParam  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 参数名称
      *
@@ -181,6 +188,7 @@ public class DescribeParam  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 参数的描述
@@ -192,6 +200,7 @@ public class DescribeParam  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数的节点类型，包括TiKV,TiDB,PD,TiFlash
      *
@@ -201,6 +210,7 @@ public class DescribeParam  implements java.io.Serializable {
         this.nodeType = nodeType;
         return this;
     }
+
 
     /**
      * set 参数的默认数值
@@ -212,6 +222,7 @@ public class DescribeParam  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参数的当前值
      *
@@ -221,6 +232,7 @@ public class DescribeParam  implements java.io.Serializable {
         this.currentValue = currentValue;
         return this;
     }
+
 
     /**
      * set 参数修改是否需要重启生效，大小写敏感 -true:参数需要重启才能生效 -false:参数无需重启生效

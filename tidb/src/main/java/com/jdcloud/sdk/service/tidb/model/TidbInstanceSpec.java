@@ -91,8 +91,8 @@ public class TidbInstanceSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> azId;
-
     /**
      * VPC的ID
      * Required:true
@@ -117,6 +117,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     /**
      * 标签信息
      */
+    
     private List<Tag> tagSpec;
 
 
@@ -138,6 +139,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.instanceName = instanceName;
     }
 
+
     /**
      * get TiDB引擎版本
      *
@@ -155,6 +157,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     public void setEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
     }
+
 
     /**
      * get TiDB节点规格和数目
@@ -174,6 +177,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.tidbNodeSpec = tidbNodeSpec;
     }
 
+
     /**
      * get TiKV节点规格和数目
      *
@@ -191,6 +195,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     public void setTikvNodeSpec(NodeSpec tikvNodeSpec) {
         this.tikvNodeSpec = tikvNodeSpec;
     }
+
 
     /**
      * get PD节点规格和数目
@@ -210,6 +215,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.pdNodeSpec = pdNodeSpec;
     }
 
+
     /**
      * get Monitor节点规格，只能有1个Monitor节点
      *
@@ -227,6 +233,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     public void setMonitorNodeSpec(NodeSpec monitorNodeSpec) {
         this.monitorNodeSpec = monitorNodeSpec;
     }
+
 
     /**
      * get TiFlash节点规格和数目
@@ -246,6 +253,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.tiflashNodeSpec = tiflashNodeSpec;
     }
 
+
     /**
      * get Ticdc节点规格和数目
      *
@@ -264,23 +272,25 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.ticdcNodeSpec = ticdcNodeSpec;
     }
 
+
     /**
-     * get 可用区ID，目前仅支持单可用区部署
-     *
-     * @return
-     */
+    * get 可用区ID，目前仅支持单可用区部署
+    *
+    * @return
+    */
     public List<String> getAzId() {
         return azId;
     }
 
     /**
-     * set 可用区ID，目前仅支持单可用区部署
-     *
-     * @param azId
-     */
+    * set 可用区ID，目前仅支持单可用区部署
+    *
+    * @param azId
+    */
     public void setAzId(List<String> azId) {
         this.azId = azId;
     }
+
 
     /**
      * get VPC的ID
@@ -300,6 +310,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网ID
      *
@@ -317,6 +328,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 计费规格，包括计费类型，计费周期等
@@ -336,23 +348,25 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.chargeSpec = chargeSpec;
     }
 
+
     /**
-     * get 标签信息
-     *
-     * @return
-     */
+    * get 标签信息
+    *
+    * @return
+    */
     public List<Tag> getTagSpec() {
         return tagSpec;
     }
 
     /**
-     * set 标签信息
-     *
-     * @param tagSpec
-     */
+    * set 标签信息
+    *
+    * @param tagSpec
+    */
     public void setTagSpec(List<Tag> tagSpec) {
         this.tagSpec = tagSpec;
     }
+
 
 
     /**
@@ -365,6 +379,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TiDB引擎版本
      *
@@ -374,6 +389,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.engineVersion = engineVersion;
         return this;
     }
+
 
     /**
      * set TiDB节点规格和数目
@@ -385,6 +401,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TiKV节点规格和数目
      *
@@ -394,6 +411,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.tikvNodeSpec = tikvNodeSpec;
         return this;
     }
+
 
     /**
      * set PD节点规格和数目
@@ -405,6 +423,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Monitor节点规格，只能有1个Monitor节点
      *
@@ -414,6 +433,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.monitorNodeSpec = monitorNodeSpec;
         return this;
     }
+
 
     /**
      * set TiFlash节点规格和数目
@@ -425,6 +445,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Ticdc节点规格和数目
      *
@@ -435,15 +456,17 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区ID，目前仅支持单可用区部署
-     *
-     * @param azId
-     */
+    * set 可用区ID，目前仅支持单可用区部署
+    *
+    * @param azId
+    */
     public TidbInstanceSpec azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
+
 
     /**
      * set VPC的ID
@@ -455,6 +478,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网ID
      *
@@ -464,6 +488,7 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 计费规格，包括计费类型，计费周期等
@@ -475,15 +500,17 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 标签信息
-     *
-     * @param tagSpec
-     */
+    * set 标签信息
+    *
+    * @param tagSpec
+    */
     public TidbInstanceSpec tagSpec(List<Tag> tagSpec) {
         this.tagSpec = tagSpec;
         return this;
     }
+
 
 
     /**
@@ -509,5 +536,4 @@ public class TidbInstanceSpec  implements java.io.Serializable {
         }
         this.tagSpec.add(tagSpec);
     }
-
 }

@@ -49,6 +49,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     private String status;
 
 
+
     /**
      * get 升级后的新版本
      *
@@ -67,6 +68,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
         this.newVersion = newVersion;
     }
 
+
     /**
      * get 计划开始升级的时间
      *
@@ -84,6 +86,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     public void setUpgradeTime(String upgradeTime) {
         this.upgradeTime = upgradeTime;
     }
+
 
     /**
      * get 任务状态 - 未开始 - 进行中 - 失败
@@ -104,6 +107,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 升级后的新版本
      *
@@ -114,6 +118,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 计划开始升级的时间
      *
@@ -123,6 +128,7 @@ public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.
         this.upgradeTime = upgradeTime;
         return this;
     }
+
 
     /**
      * set 任务状态 - 未开始 - 进行中 - 失败

@@ -56,6 +56,7 @@ public class VerifyFilefromOSSRequest extends JdcloudRequest implements java.io.
     private String instanceId;
 
 
+
     /**
      * get 要校验的文件bucket及路径,例如Bucket为db_bak,文件路径为test_server/db1/20181013.bak,则ossLink为db_bak/test_server/db1/20181013.bak
      *
@@ -74,6 +75,7 @@ public class VerifyFilefromOSSRequest extends JdcloudRequest implements java.io.
         this.ossLink = ossLink;
     }
 
+
     /**
      * get 地域代码
      *
@@ -91,6 +93,7 @@ public class VerifyFilefromOSSRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -111,6 +114,7 @@ public class VerifyFilefromOSSRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 要校验的文件bucket及路径,例如Bucket为db_bak,文件路径为test_server/db1/20181013.bak,则ossLink为db_bak/test_server/db1/20181013.bak
      *
@@ -121,6 +125,7 @@ public class VerifyFilefromOSSRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 地域代码
      *
@@ -130,6 +135,7 @@ public class VerifyFilefromOSSRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

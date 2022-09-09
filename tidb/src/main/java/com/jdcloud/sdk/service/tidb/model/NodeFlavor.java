@@ -47,6 +47,7 @@ public class NodeFlavor  implements java.io.Serializable {
     /**
      * flavors
      */
+    
     private List<Flavor> flavors;
 
 
@@ -68,6 +69,7 @@ public class NodeFlavor  implements java.io.Serializable {
         this.maxNum = maxNum;
     }
 
+
     /**
      * get 允许的最小节点数
      *
@@ -86,23 +88,25 @@ public class NodeFlavor  implements java.io.Serializable {
         this.minNum = minNum;
     }
 
+
     /**
-     * get flavors
-     *
-     * @return
-     */
+    * get flavors
+    *
+    * @return
+    */
     public List<Flavor> getFlavors() {
         return flavors;
     }
 
     /**
-     * set flavors
-     *
-     * @param flavors
-     */
+    * set flavors
+    *
+    * @param flavors
+    */
     public void setFlavors(List<Flavor> flavors) {
         this.flavors = flavors;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class NodeFlavor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 允许的最小节点数
      *
@@ -125,15 +130,17 @@ public class NodeFlavor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set flavors
-     *
-     * @param flavors
-     */
+    * set flavors
+    *
+    * @param flavors
+    */
     public NodeFlavor flavors(List<Flavor> flavors) {
         this.flavors = flavors;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class NodeFlavor  implements java.io.Serializable {
         }
         this.flavors.add(flavor);
     }
-
 }

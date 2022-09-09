@@ -49,6 +49,7 @@ public class DescribeWhiteListRequest extends JdcloudRequest implements java.io.
     private String instanceId;
 
 
+
     /**
      * get 地域代码
      *
@@ -66,6 +67,7 @@ public class DescribeWhiteListRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -86,6 +88,7 @@ public class DescribeWhiteListRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 地域代码
      *
@@ -95,6 +98,7 @@ public class DescribeWhiteListRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

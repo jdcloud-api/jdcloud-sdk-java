@@ -56,6 +56,7 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
     private String instanceId;
 
 
+
     /**
      * get 白名单分组名
      *
@@ -74,6 +75,7 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
         this.name = name;
     }
 
+
     /**
      * get 地域代码
      *
@@ -91,6 +93,7 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -111,6 +114,7 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 白名单分组名
      *
@@ -121,6 +125,7 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 地域代码
      *
@@ -130,6 +135,7 @@ public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

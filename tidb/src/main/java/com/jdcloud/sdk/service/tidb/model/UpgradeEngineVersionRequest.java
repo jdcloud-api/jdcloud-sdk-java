@@ -59,6 +59,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
     private String instanceId;
 
 
+
     /**
      * get 升级后的版本号
      *
@@ -76,6 +77,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
     public void setVersion(String version) {
         this.version = version;
     }
+
 
     /**
      * get 版本升级的时间点,时间格式yyyy-mm-dd hh:mm:ss。不传或者传入空表示取消升级
@@ -95,6 +97,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
         this.timing = timing;
     }
 
+
     /**
      * get 地域代码
      *
@@ -112,6 +115,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -132,6 +136,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 升级后的版本号
      *
@@ -141,6 +146,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
         this.version = version;
         return this;
     }
+
 
     /**
      * set 版本升级的时间点,时间格式yyyy-mm-dd hh:mm:ss。不传或者传入空表示取消升级
@@ -152,6 +158,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域代码
      *
@@ -161,6 +168,7 @@ public class UpgradeEngineVersionRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

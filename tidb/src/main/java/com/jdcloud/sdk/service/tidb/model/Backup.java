@@ -78,6 +78,7 @@ public class Backup  implements java.io.Serializable {
     private Long backupSizeByte;
 
 
+
     /**
      * get 备份ID
      *
@@ -95,6 +96,7 @@ public class Backup  implements java.io.Serializable {
     public void setBackupId(String backupId) {
         this.backupId = backupId;
     }
+
 
     /**
      * get 备份名称，最长支持64个英文字符或等长的中文字符
@@ -114,6 +116,7 @@ public class Backup  implements java.io.Serializable {
         this.backupName = backupName;
     }
 
+
     /**
      * get 备份所属实例ID
      *
@@ -131,6 +134,7 @@ public class Backup  implements java.io.Serializable {
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 备份状态
@@ -150,6 +154,7 @@ public class Backup  implements java.io.Serializable {
         this.backupStatus = backupStatus;
     }
 
+
     /**
      * get 备份开始时间
      *
@@ -167,6 +172,7 @@ public class Backup  implements java.io.Serializable {
     public void setBackupStartTime(String backupStartTime) {
         this.backupStartTime = backupStartTime;
     }
+
 
     /**
      * get 备份结束时间
@@ -186,6 +192,7 @@ public class Backup  implements java.io.Serializable {
         this.backupEndTime = backupEndTime;
     }
 
+
     /**
      * get 备份类型
      *
@@ -204,6 +211,7 @@ public class Backup  implements java.io.Serializable {
         this.backupType = backupType;
     }
 
+
     /**
      * get 备份模式
      *
@@ -221,6 +229,7 @@ public class Backup  implements java.io.Serializable {
     public void setBackupMode(String backupMode) {
         this.backupMode = backupMode;
     }
+
 
     /**
      * get 整个备份集大小，单位：Byte
@@ -241,6 +250,7 @@ public class Backup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 备份ID
      *
@@ -250,6 +260,7 @@ public class Backup  implements java.io.Serializable {
         this.backupId = backupId;
         return this;
     }
+
 
     /**
      * set 备份名称，最长支持64个英文字符或等长的中文字符
@@ -261,6 +272,7 @@ public class Backup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备份所属实例ID
      *
@@ -270,6 +282,7 @@ public class Backup  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 备份状态
@@ -281,6 +294,7 @@ public class Backup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备份开始时间
      *
@@ -290,6 +304,7 @@ public class Backup  implements java.io.Serializable {
         this.backupStartTime = backupStartTime;
         return this;
     }
+
 
     /**
      * set 备份结束时间
@@ -301,6 +316,7 @@ public class Backup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备份类型
      *
@@ -311,6 +327,7 @@ public class Backup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备份模式
      *
@@ -320,6 +337,7 @@ public class Backup  implements java.io.Serializable {
         this.backupMode = backupMode;
         return this;
     }
+
 
     /**
      * set 整个备份集大小，单位：Byte

@@ -52,6 +52,7 @@ public class Flavor  implements java.io.Serializable {
     /**
      * 该规格支持的存储空间，单位GB
      */
+    
     private List<Integer> storageGB;
 
 
@@ -73,6 +74,7 @@ public class Flavor  implements java.io.Serializable {
         this.instanceClass = instanceClass;
     }
 
+
     /**
      * get cpu核数
      *
@@ -90,6 +92,7 @@ public class Flavor  implements java.io.Serializable {
     public void setCpu(Integer cpu) {
         this.cpu = cpu;
     }
+
 
     /**
      * get 内存大小，单位GB
@@ -109,23 +112,25 @@ public class Flavor  implements java.io.Serializable {
         this.memoryGB = memoryGB;
     }
 
+
     /**
-     * get 该规格支持的存储空间，单位GB
-     *
-     * @return
-     */
+    * get 该规格支持的存储空间，单位GB
+    *
+    * @return
+    */
     public List<Integer> getStorageGB() {
         return storageGB;
     }
 
     /**
-     * set 该规格支持的存储空间，单位GB
-     *
-     * @param storageGB
-     */
+    * set 该规格支持的存储空间，单位GB
+    *
+    * @param storageGB
+    */
     public void setStorageGB(List<Integer> storageGB) {
         this.storageGB = storageGB;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class Flavor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cpu核数
      *
@@ -147,6 +153,7 @@ public class Flavor  implements java.io.Serializable {
         this.cpu = cpu;
         return this;
     }
+
 
     /**
      * set 内存大小，单位GB
@@ -158,15 +165,17 @@ public class Flavor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 该规格支持的存储空间，单位GB
-     *
-     * @param storageGB
-     */
+    * set 该规格支持的存储空间，单位GB
+    *
+    * @param storageGB
+    */
     public Flavor storageGB(List<Integer> storageGB) {
         this.storageGB = storageGB;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class Flavor  implements java.io.Serializable {
         }
         this.storageGB.add(storageGB);
     }
-
 }

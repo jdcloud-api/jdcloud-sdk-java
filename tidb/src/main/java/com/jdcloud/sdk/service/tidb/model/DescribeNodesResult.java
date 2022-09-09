@@ -39,31 +39,33 @@ public class DescribeNodesResult extends JdcloudResult implements java.io.Serial
     /**
      * nodes
      */
+    
     private List<TiDBNode> nodes;
-
     /**
      * 总记录数
      */
     private Number totalCount;
 
 
+
     /**
-     * get nodes
-     *
-     * @return
-     */
+    * get nodes
+    *
+    * @return
+    */
     public List<TiDBNode> getNodes() {
         return nodes;
     }
 
     /**
-     * set nodes
-     *
-     * @param nodes
-     */
+    * set nodes
+    *
+    * @param nodes
+    */
     public void setNodes(List<TiDBNode> nodes) {
         this.nodes = nodes;
     }
+
 
     /**
      * get 总记录数
@@ -84,15 +86,17 @@ public class DescribeNodesResult extends JdcloudResult implements java.io.Serial
     }
 
 
+
     /**
-     * set nodes
-     *
-     * @param nodes
-     */
+    * set nodes
+    *
+    * @param nodes
+    */
     public DescribeNodesResult nodes(List<TiDBNode> nodes) {
         this.nodes = nodes;
         return this;
     }
+
 
     /**
      * set 总记录数
@@ -103,6 +107,7 @@ public class DescribeNodesResult extends JdcloudResult implements java.io.Serial
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeNodesResult extends JdcloudResult implements java.io.Serial
         }
         this.nodes.add(node);
     }
-
 }

@@ -80,6 +80,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     private String instanceId;
 
 
+
     /**
      * get 调整后的tikv节点数
      *
@@ -97,6 +98,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     public void setTikvNodeNum(Integer tikvNodeNum) {
         this.tikvNodeNum = tikvNodeNum;
     }
+
 
     /**
      * get 调整后的pd节点数
@@ -116,6 +118,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.pdNodeNum = pdNodeNum;
     }
 
+
     /**
      * get TiDB节点规格和数目
      *
@@ -133,6 +136,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     public void setTidbNodeSpec(NodeSpec tidbNodeSpec) {
         this.tidbNodeSpec = tidbNodeSpec;
     }
+
 
     /**
      * get TiFlash节点规格和数目
@@ -152,6 +156,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.tiflashNodeSpec = tiflashNodeSpec;
     }
 
+
     /**
      * get Ticdc节点规格和数目
      *
@@ -169,6 +174,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     public void setTicdcNodeSpec(NodeSpec ticdcNodeSpec) {
         this.ticdcNodeSpec = ticdcNodeSpec;
     }
+
 
     /**
      * get Monitor节点规格和数目
@@ -188,6 +194,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.monitorNodeSpec = monitorNodeSpec;
     }
 
+
     /**
      * get 地域代码
      *
@@ -205,6 +212,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -225,6 +233,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 调整后的tikv节点数
      *
@@ -234,6 +243,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.tikvNodeNum = tikvNodeNum;
         return this;
     }
+
 
     /**
      * set 调整后的pd节点数
@@ -245,6 +255,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set TiDB节点规格和数目
      *
@@ -254,6 +265,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.tidbNodeSpec = tidbNodeSpec;
         return this;
     }
+
 
     /**
      * set TiFlash节点规格和数目
@@ -265,6 +277,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set Ticdc节点规格和数目
      *
@@ -274,6 +287,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.ticdcNodeSpec = ticdcNodeSpec;
         return this;
     }
+
 
     /**
      * set Monitor节点规格和数目
@@ -285,6 +299,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 地域代码
      *
@@ -294,6 +309,7 @@ public class ModifyInstanceSpecRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

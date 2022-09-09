@@ -42,8 +42,8 @@ public class ReplicationSpec  implements java.io.Serializable {
     /**
      * 要复制的对象列表
      */
+    
     private List<String> replicationObjects;
-
     /**
      * 目标实例类型
      */
@@ -90,6 +90,7 @@ public class ReplicationSpec  implements java.io.Serializable {
     private String kafkaProtocol;
 
 
+
     /**
      * get 复制的起始时间戳
      *
@@ -108,23 +109,25 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.startTS = startTS;
     }
 
+
     /**
-     * get 要复制的对象列表
-     *
-     * @return
-     */
+    * get 要复制的对象列表
+    *
+    * @return
+    */
     public List<String> getReplicationObjects() {
         return replicationObjects;
     }
 
     /**
-     * set 要复制的对象列表
-     *
-     * @param replicationObjects
-     */
+    * set 要复制的对象列表
+    *
+    * @param replicationObjects
+    */
     public void setReplicationObjects(List<String> replicationObjects) {
         this.replicationObjects = replicationObjects;
     }
+
 
     /**
      * get 目标实例类型
@@ -144,6 +147,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.targetType = targetType;
     }
 
+
     /**
      * get 目标实例IP
      *
@@ -161,6 +165,7 @@ public class ReplicationSpec  implements java.io.Serializable {
     public void setTargetIP(String targetIP) {
         this.targetIP = targetIP;
     }
+
 
     /**
      * get 目标实例端口
@@ -180,6 +185,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.targetPort = targetPort;
     }
 
+
     /**
      * get 目标实例备注说明
      *
@@ -197,6 +203,7 @@ public class ReplicationSpec  implements java.io.Serializable {
     public void setTargetComment(String targetComment) {
         this.targetComment = targetComment;
     }
+
 
     /**
      * get 目标类型为TiDB或MySQL时，连接目标实例的用户名
@@ -216,6 +223,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.targetUser = targetUser;
     }
 
+
     /**
      * get 目标类型为TiDB或MySQL时，连接目标实例的密码
      *
@@ -233,6 +241,7 @@ public class ReplicationSpec  implements java.io.Serializable {
     public void setTargetPassword(String targetPassword) {
         this.targetPassword = targetPassword;
     }
+
 
     /**
      * get Kafka的Topic
@@ -252,6 +261,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.kafkaTopic = kafkaTopic;
     }
 
+
     /**
      * get Kafka的版本
      *
@@ -269,6 +279,7 @@ public class ReplicationSpec  implements java.io.Serializable {
     public void setKafkaVersion(String kafkaVersion) {
         this.kafkaVersion = kafkaVersion;
     }
+
 
     /**
      * get 消息的格式
@@ -289,6 +300,7 @@ public class ReplicationSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 复制的起始时间戳
      *
@@ -299,15 +311,17 @@ public class ReplicationSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 要复制的对象列表
-     *
-     * @param replicationObjects
-     */
+    * set 要复制的对象列表
+    *
+    * @param replicationObjects
+    */
     public ReplicationSpec replicationObjects(List<String> replicationObjects) {
         this.replicationObjects = replicationObjects;
         return this;
     }
+
 
     /**
      * set 目标实例类型
@@ -319,6 +333,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目标实例IP
      *
@@ -328,6 +343,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.targetIP = targetIP;
         return this;
     }
+
 
     /**
      * set 目标实例端口
@@ -339,6 +355,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目标实例备注说明
      *
@@ -348,6 +365,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.targetComment = targetComment;
         return this;
     }
+
 
     /**
      * set 目标类型为TiDB或MySQL时，连接目标实例的用户名
@@ -359,6 +377,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 目标类型为TiDB或MySQL时，连接目标实例的密码
      *
@@ -368,6 +387,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.targetPassword = targetPassword;
         return this;
     }
+
 
     /**
      * set Kafka的Topic
@@ -379,6 +399,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Kafka的版本
      *
@@ -389,6 +410,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 消息的格式
      *
@@ -398,6 +420,7 @@ public class ReplicationSpec  implements java.io.Serializable {
         this.kafkaProtocol = kafkaProtocol;
         return this;
     }
+
 
 
     /**
@@ -411,5 +434,4 @@ public class ReplicationSpec  implements java.io.Serializable {
         }
         this.replicationObjects.add(replicationObject);
     }
-
 }

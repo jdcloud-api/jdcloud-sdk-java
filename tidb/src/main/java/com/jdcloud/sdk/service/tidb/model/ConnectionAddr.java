@@ -58,6 +58,7 @@ public class ConnectionAddr  implements java.io.Serializable {
     private String port;
 
 
+
     /**
      * get 连接信息的类型，目前支持以下类型：
 - database: 通常数据访问，读写等
@@ -86,6 +87,7 @@ public class ConnectionAddr  implements java.io.Serializable {
         this.addrType = addrType;
     }
 
+
     /**
      * get 公网地址，域名或IP
      *
@@ -104,6 +106,7 @@ public class ConnectionAddr  implements java.io.Serializable {
         this.internetAddr = internetAddr;
     }
 
+
     /**
      * get VPC内网地址，域名或IP
      *
@@ -121,6 +124,7 @@ public class ConnectionAddr  implements java.io.Serializable {
     public void setIntranetAddr(String intranetAddr) {
         this.intranetAddr = intranetAddr;
     }
+
 
     /**
      * get 端口
@@ -141,6 +145,7 @@ public class ConnectionAddr  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 连接信息的类型，目前支持以下类型：
 - database: 通常数据访问，读写等
@@ -156,6 +161,7 @@ public class ConnectionAddr  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 公网地址，域名或IP
      *
@@ -166,6 +172,7 @@ public class ConnectionAddr  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set VPC内网地址，域名或IP
      *
@@ -175,6 +182,7 @@ public class ConnectionAddr  implements java.io.Serializable {
         this.intranetAddr = intranetAddr;
         return this;
     }
+
 
     /**
      * set 端口

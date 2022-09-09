@@ -49,6 +49,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     private String instanceId;
 
 
+
     /**
      * get 地域代码
      *
@@ -66,6 +67,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -86,6 +88,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 地域代码
      *
@@ -95,6 +98,7 @@ public class DescribeAccountsRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

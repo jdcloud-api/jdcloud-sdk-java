@@ -50,6 +50,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get 新建实例规格
      *
@@ -67,6 +68,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     public void setInstanceSpec(TidbInstanceSpec instanceSpec) {
         this.instanceSpec = instanceSpec;
     }
+
 
     /**
      * get 地域代码
@@ -87,6 +89,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 新建实例规格
      *
@@ -96,6 +99,7 @@ public class CreateInstanceRequest extends JdcloudRequest implements java.io.Ser
         this.instanceSpec = instanceSpec;
         return this;
     }
+
 
     /**
      * set 地域代码
