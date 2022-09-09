@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.ProgramListResponse;
 
 /**
- * 获取视图列表
+ * 获取视图列表，支持Mysql
  */
 class ProgramListExecutor extends JdcloudExecutor {
 

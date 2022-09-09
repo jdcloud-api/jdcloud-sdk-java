@@ -44,6 +44,7 @@ public class HistorySqlResult extends JdcloudResult implements java.io.Serializa
     /**
      * historySqls
      */
+    
     private List<DmsHistorySql> historySqls;
 
 
@@ -65,23 +66,25 @@ public class HistorySqlResult extends JdcloudResult implements java.io.Serializa
         this.count = count;
     }
 
+
     /**
-     * get historySqls
-     *
-     * @return
-     */
+    * get historySqls
+    *
+    * @return
+    */
     public List<DmsHistorySql> getHistorySqls() {
         return historySqls;
     }
 
     /**
-     * set historySqls
-     *
-     * @param historySqls
-     */
+    * set historySqls
+    *
+    * @param historySqls
+    */
     public void setHistorySqls(List<DmsHistorySql> historySqls) {
         this.historySqls = historySqls;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class HistorySqlResult extends JdcloudResult implements java.io.Serializa
         return this;
     }
 
+
     /**
-     * set historySqls
-     *
-     * @param historySqls
-     */
+    * set historySqls
+    *
+    * @param historySqls
+    */
     public HistorySqlResult historySqls(List<DmsHistorySql> historySqls) {
         this.historySqls = historySqls;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class HistorySqlResult extends JdcloudResult implements java.io.Serializa
         }
         this.historySqls.add(historySql);
     }
-
 }

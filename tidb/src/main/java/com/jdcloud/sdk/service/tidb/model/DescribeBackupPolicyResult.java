@@ -65,6 +65,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     private Boolean autoIncBackup;
 
 
+
     /**
      * get 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。
 例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不保证在这个时间范围中完成
@@ -87,6 +88,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.startWindow = startWindow;
     }
 
+
     /**
      * get 自动备份保留周期，单位天,缺省为7天，范围7-730
      *
@@ -104,6 +106,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     public void setRetentionPeriod(Integer retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
     }
+
 
     /**
      * get 自动备份的周期，多个取值用英文逗号分隔，支持以下参数，不区分大小写：
@@ -141,6 +144,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.backupPeriod = backupPeriod;
     }
 
+
     /**
      * get 是否开启自动增量备份
      *
@@ -160,6 +164,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 自动备份开始时间窗口，范围00:00-23:59，时间范围差不得小于30分钟。
 例如：00:00-01:00，表示0点到1点开始进行数据库自动备份，备份完成时间则跟实例大小有关，不保证在这个时间范围中完成
@@ -172,6 +177,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 自动备份保留周期，单位天,缺省为7天，范围7-730
      *
@@ -181,6 +187,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.retentionPeriod = retentionPeriod;
         return this;
     }
+
 
     /**
      * set 自动备份的周期，多个取值用英文逗号分隔，支持以下参数，不区分大小写：
@@ -200,6 +207,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.backupPeriod = backupPeriod;
         return this;
     }
+
 
     /**
      * set 是否开启自动增量备份

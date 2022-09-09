@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * sql格式化
+ * sql格式化，支持Mysql，Stardb
  */
 public class FormatSqlRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -52,6 +52,7 @@ public class FormatSqlRequest extends JdcloudRequest implements java.io.Serializ
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -70,6 +71,7 @@ public class FormatSqlRequest extends JdcloudRequest implements java.io.Serializ
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 需要格式化的sql
      *
@@ -87,6 +89,7 @@ public class FormatSqlRequest extends JdcloudRequest implements java.io.Serializ
     public void setSqlStr(String sqlStr) {
         this.sqlStr = sqlStr;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -107,6 +110,7 @@ public class FormatSqlRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -117,6 +121,7 @@ public class FormatSqlRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 需要格式化的sql
      *
@@ -126,6 +131,7 @@ public class FormatSqlRequest extends JdcloudRequest implements java.io.Serializ
         this.sqlStr = sqlStr;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

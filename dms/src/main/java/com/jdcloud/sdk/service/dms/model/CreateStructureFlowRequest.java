@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建结构变更工单
+ * 创建结构变更工单，支持Stardb
  */
 public class CreateStructureFlowRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -77,6 +77,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
     private String regionId;
 
 
+
     /**
      * get 数据库id
      *
@@ -94,6 +95,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称
@@ -113,6 +115,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         this.dbName = dbName;
     }
 
+
     /**
      * get 执行方式，AUTO(&quot;AUTO&quot;, 0), BY_CREATOR(&quot;BY_CREATOR&quot;, 1)
      *
@@ -130,6 +133,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
     public void setTaskPlanTypeEnum(String taskPlanTypeEnum) {
         this.taskPlanTypeEnum = taskPlanTypeEnum;
     }
+
 
     /**
      * get DBA审批方式，AUTO(&quot;AUTO&quot;, 0), MANUAL(&quot;MANUAL&quot;, 1)
@@ -149,6 +153,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         this.dbaApproveTypeEnum = dbaApproveTypeEnum;
     }
 
+
     /**
      * get 申请原因
      *
@@ -166,6 +171,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
     public void setMemo(String memo) {
         this.memo = memo;
     }
+
 
     /**
      * get SQL文本，变更SQL选择文本时，必填
@@ -185,6 +191,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         this.sqlText = sqlText;
     }
 
+
     /**
      * get SQL附件导入任务Id
      *
@@ -202,6 +209,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
     public void setSqlFileTaskId(String sqlFileTaskId) {
         this.sqlFileTaskId = sqlFileTaskId;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -222,6 +230,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 数据库id
      *
@@ -231,6 +240,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称
@@ -242,6 +252,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 执行方式，AUTO(&quot;AUTO&quot;, 0), BY_CREATOR(&quot;BY_CREATOR&quot;, 1)
      *
@@ -251,6 +262,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         this.taskPlanTypeEnum = taskPlanTypeEnum;
         return this;
     }
+
 
     /**
      * set DBA审批方式，AUTO(&quot;AUTO&quot;, 0), MANUAL(&quot;MANUAL&quot;, 1)
@@ -262,6 +274,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 申请原因
      *
@@ -271,6 +284,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         this.memo = memo;
         return this;
     }
+
 
     /**
      * set SQL文本，变更SQL选择文本时，必填
@@ -282,6 +296,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set SQL附件导入任务Id
      *
@@ -291,6 +306,7 @@ public class CreateStructureFlowRequest extends JdcloudRequest implements java.i
         this.sqlFileTaskId = sqlFileTaskId;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

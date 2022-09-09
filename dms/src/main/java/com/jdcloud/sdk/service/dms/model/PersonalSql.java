@@ -73,6 +73,7 @@ public class PersonalSql  implements java.io.Serializable {
     private String hint;
 
 
+
     /**
      * get 主键id。
      *
@@ -90,6 +91,7 @@ public class PersonalSql  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 数据源id。
@@ -109,6 +111,7 @@ public class PersonalSql  implements java.io.Serializable {
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 执行sql内容。
      *
@@ -126,6 +129,7 @@ public class PersonalSql  implements java.io.Serializable {
     public void setSqlStr(String sqlStr) {
         this.sqlStr = sqlStr;
     }
+
 
     /**
      * get 修改用户。
@@ -145,6 +149,7 @@ public class PersonalSql  implements java.io.Serializable {
         this.modifiedBy = modifiedBy;
     }
 
+
     /**
      * get 数据状态。
      *
@@ -162,6 +167,7 @@ public class PersonalSql  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 创建时间，格式为：YYYY-MM-DD HH:mm:ss。
@@ -181,6 +187,7 @@ public class PersonalSql  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 收藏消息用户。
      *
@@ -198,6 +205,7 @@ public class PersonalSql  implements java.io.Serializable {
     public void setUser(String user) {
         this.user = user;
     }
+
 
     /**
      * get Sql备注。
@@ -218,6 +226,7 @@ public class PersonalSql  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 主键id。
      *
@@ -227,6 +236,7 @@ public class PersonalSql  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 数据源id。
@@ -238,6 +248,7 @@ public class PersonalSql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行sql内容。
      *
@@ -247,6 +258,7 @@ public class PersonalSql  implements java.io.Serializable {
         this.sqlStr = sqlStr;
         return this;
     }
+
 
     /**
      * set 修改用户。
@@ -258,6 +270,7 @@ public class PersonalSql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据状态。
      *
@@ -267,6 +280,7 @@ public class PersonalSql  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 创建时间，格式为：YYYY-MM-DD HH:mm:ss。
@@ -278,6 +292,7 @@ public class PersonalSql  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 收藏消息用户。
      *
@@ -287,6 +302,7 @@ public class PersonalSql  implements java.io.Serializable {
         this.user = user;
         return this;
     }
+
 
     /**
      * set Sql备注。

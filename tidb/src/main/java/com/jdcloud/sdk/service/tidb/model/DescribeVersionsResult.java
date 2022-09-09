@@ -38,37 +38,40 @@ public class DescribeVersionsResult extends JdcloudResult implements java.io.Ser
     /**
      * versions
      */
+    
     private List<String> versions;
 
 
     /**
-     * get versions
-     *
-     * @return
-     */
+    * get versions
+    *
+    * @return
+    */
     public List<String> getVersions() {
         return versions;
     }
 
     /**
-     * set versions
-     *
-     * @param versions
-     */
+    * set versions
+    *
+    * @param versions
+    */
     public void setVersions(List<String> versions) {
         this.versions = versions;
     }
 
 
+
     /**
-     * set versions
-     *
-     * @param versions
-     */
+    * set versions
+    *
+    * @param versions
+    */
     public DescribeVersionsResult versions(List<String> versions) {
         this.versions = versions;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class DescribeVersionsResult extends JdcloudResult implements java.io.Ser
         }
         this.versions.add(version);
     }
-
 }

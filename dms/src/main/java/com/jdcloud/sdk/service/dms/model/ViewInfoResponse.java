@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取视图详情
+ * 获取视图详情，支持Mysql
  */
 public class ViewInfoResponse extends JdcloudResponse<ViewInfoResult> implements java.io.Serializable {
 

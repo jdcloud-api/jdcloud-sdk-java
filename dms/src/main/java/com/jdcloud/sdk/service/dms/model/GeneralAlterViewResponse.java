@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 生成修改视图sql语句
+ * 生成修改视图sql语句，支持Mysql
  */
 public class GeneralAlterViewResponse extends JdcloudResponse<GeneralAlterViewResult> implements java.io.Serializable {
 

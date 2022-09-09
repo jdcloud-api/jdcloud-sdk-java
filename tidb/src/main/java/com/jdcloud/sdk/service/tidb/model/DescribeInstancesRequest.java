@@ -56,19 +56,25 @@ instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 资源标签
      */
+    
     private List<TagFilter> tagFilters;
-
+    /**
+     * 资源组id
+     */
+    
+    private List<String> resourceGroupIds;
     /**
      * 地域代码
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -89,6 +95,7 @@ instanceStatus, 支持operator选项：eq,ne
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
      *
@@ -107,51 +114,73 @@ instanceStatus, 支持operator选项：eq,ne
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq,ne
 instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq,ne
 instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get 资源标签
-     *
-     * @return
-     */
+    * get 资源标签
+    *
+    * @return
+    */
     public List<TagFilter> getTagFilters() {
         return tagFilters;
     }
 
     /**
-     * set 资源标签
-     *
-     * @param tagFilters
-     */
+    * set 资源标签
+    *
+    * @param tagFilters
+    */
     public void setTagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
     }
+
+
+    /**
+    * get 资源组id
+    *
+    * @return
+    */
+    public List<String> getResourceGroupIds() {
+        return resourceGroupIds;
+    }
+
+    /**
+    * set 资源组id
+    *
+    * @param resourceGroupIds
+    */
+    public void setResourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+    }
+
 
     /**
      * get 地域代码
@@ -172,6 +201,7 @@ instanceStatus, 支持operator选项：eq,ne
     }
 
 
+
     /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      *
@@ -181,6 +211,7 @@ instanceStatus, 支持operator选项：eq,ne
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
@@ -192,30 +223,44 @@ instanceStatus, 支持operator选项：eq,ne
         return this;
     }
 
+
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq,ne
 instanceName, 支持operator选项：eq,ne,like
 instanceStatus, 支持operator选项：eq,ne
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeInstancesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set 资源标签
-     *
-     * @param tagFilters
-     */
+    * set 资源标签
+    *
+    * @param tagFilters
+    */
     public DescribeInstancesRequest tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
+
+
+    /**
+    * set 资源组id
+    *
+    * @param resourceGroupIds
+    */
+    public DescribeInstancesRequest resourceGroupIds(List<String> resourceGroupIds) {
+        this.resourceGroupIds = resourceGroupIds;
+        return this;
+    }
+
 
     /**
      * set 地域代码
@@ -226,6 +271,7 @@ instanceStatus, 支持operator选项：eq,ne
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -257,4 +303,15 @@ instanceStatus, 支持operator选项：eq,ne
         this.tagFilters.add(tagFilter);
     }
 
+    /**
+     * add item to 资源组id
+     *
+     * @param resourceGroupId
+     */
+    public void addResourceGroupId(String resourceGroupId) {
+        if (this.resourceGroupIds == null) {
+            this.resourceGroupIds = new ArrayList<>();
+        }
+        this.resourceGroupIds.add(resourceGroupId);
+    }
 }

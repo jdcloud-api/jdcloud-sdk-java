@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.GeneralDropViewResponse;
 
 /**
- * 生成删除视图sql语句
+ * 生成删除视图sql语句，支持Mysql
  */
 class GeneralDropViewExecutor extends JdcloudExecutor {
 

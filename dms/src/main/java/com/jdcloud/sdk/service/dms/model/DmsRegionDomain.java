@@ -38,6 +38,7 @@ public class DmsRegionDomain  implements java.io.Serializable {
     private Object domains;
 
 
+
     /**
      * get 区域对应域名。
      *
@@ -55,6 +56,7 @@ public class DmsRegionDomain  implements java.io.Serializable {
     public void setDomains(Object domains) {
         this.domains = domains;
     }
+
 
 
     /**

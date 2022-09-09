@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建导入文件任务
+ * 创建导入文件任务，支持Stardb
  */
 public class CreateImportFileTaskRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -62,6 +62,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
     private String regionId;
 
 
+
     /**
      * get 文件名称
      *
@@ -79,6 +80,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
     public void setFilename(String filename) {
         this.filename = filename;
     }
+
 
     /**
      * get 文件总大小
@@ -98,6 +100,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
         this.totalSize = totalSize;
     }
 
+
     /**
      * get 文件分片大小
      *
@@ -116,6 +119,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
         this.chunkSize = chunkSize;
     }
 
+
     /**
      * get 文件分片数
      *
@@ -133,6 +137,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
     public void setTotalChunks(Integer totalChunks) {
         this.totalChunks = totalChunks;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -153,6 +158,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 文件名称
      *
@@ -162,6 +168,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
         this.filename = filename;
         return this;
     }
+
 
     /**
      * set 文件总大小
@@ -173,6 +180,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 文件分片大小
      *
@@ -183,6 +191,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 文件分片数
      *
@@ -192,6 +201,7 @@ public class CreateImportFileTaskRequest extends JdcloudRequest implements java.
         this.totalChunks = totalChunks;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

@@ -47,6 +47,7 @@ public class Disk  implements java.io.Serializable {
     /**
      * orderableinstanceClasses
      */
+    
     private List<Flavor> orderableinstanceClasses;
 
 
@@ -68,6 +69,7 @@ public class Disk  implements java.io.Serializable {
         this.storageType = storageType;
     }
 
+
     /**
      * get 1正常0售罄
      *
@@ -86,23 +88,25 @@ public class Disk  implements java.io.Serializable {
         this.storageTypeStatus = storageTypeStatus;
     }
 
+
     /**
-     * get orderableinstanceClasses
-     *
-     * @return
-     */
+    * get orderableinstanceClasses
+    *
+    * @return
+    */
     public List<Flavor> getOrderableinstanceClasses() {
         return orderableinstanceClasses;
     }
 
     /**
-     * set orderableinstanceClasses
-     *
-     * @param orderableinstanceClasses
-     */
+    * set orderableinstanceClasses
+    *
+    * @param orderableinstanceClasses
+    */
     public void setOrderableinstanceClasses(List<Flavor> orderableinstanceClasses) {
         this.orderableinstanceClasses = orderableinstanceClasses;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1正常0售罄
      *
@@ -125,15 +130,17 @@ public class Disk  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set orderableinstanceClasses
-     *
-     * @param orderableinstanceClasses
-     */
+    * set orderableinstanceClasses
+    *
+    * @param orderableinstanceClasses
+    */
     public Disk orderableinstanceClasses(List<Flavor> orderableinstanceClasses) {
         this.orderableinstanceClasses = orderableinstanceClasses;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class Disk  implements java.io.Serializable {
         }
         this.orderableinstanceClasses.add(orderableinstanceClasse);
     }
-
 }

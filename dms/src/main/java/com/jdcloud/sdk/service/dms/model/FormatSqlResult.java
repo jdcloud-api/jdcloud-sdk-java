@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * sql格式化
+ * sql格式化，支持Mysql，Stardb
  */
 public class FormatSqlResult extends JdcloudResult implements java.io.Serializable {
 
@@ -37,6 +37,7 @@ public class FormatSqlResult extends JdcloudResult implements java.io.Serializab
      * 格式化后的SQL
      */
     private String strResult;
+
 
 
     /**
@@ -56,6 +57,7 @@ public class FormatSqlResult extends JdcloudResult implements java.io.Serializab
     public void setStrResult(String strResult) {
         this.strResult = strResult;
     }
+
 
 
     /**

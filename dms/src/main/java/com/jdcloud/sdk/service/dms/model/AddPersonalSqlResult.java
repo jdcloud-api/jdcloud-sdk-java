@@ -39,6 +39,7 @@ public class AddPersonalSqlResult extends JdcloudResult implements java.io.Seria
     private String strResult;
 
 
+
     /**
      * get 返回消息
      *
@@ -56,6 +57,7 @@ public class AddPersonalSqlResult extends JdcloudResult implements java.io.Seria
     public void setStrResult(String strResult) {
         this.strResult = strResult;
     }
+
 
 
     /**

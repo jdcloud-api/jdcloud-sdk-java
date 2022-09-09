@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取sql中建表语句，表中列信息
+ * 获取sql中建表语句，表中列信息，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class SqlTableInfoResponse extends JdcloudResponse<SqlTableInfoResult> implements java.io.Serializable {
 

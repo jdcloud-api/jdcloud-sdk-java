@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取批量建表sql
+ * 获取批量建表sql，仅供前端使用，支持Stardb
  */
 public class GetCreateTableBatchSqlResponse extends JdcloudResponse<GetCreateTableBatchSqlResult> implements java.io.Serializable {
 

@@ -38,37 +38,40 @@ public class FilterGroup  implements java.io.Serializable {
     /**
      * filters
      */
+    
     private List<Filter> filters;
 
 
     /**
-     * get filters
-     *
-     * @return
-     */
+    * get filters
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set filters
-     *
-     * @param filters
-     */
+    * set filters
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
 
+
     /**
-     * set filters
-     *
-     * @param filters
-     */
+    * set filters
+    *
+    * @param filters
+    */
     public FilterGroup filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class FilterGroup  implements java.io.Serializable {
         }
         this.filters.add(filter);
     }
-
 }

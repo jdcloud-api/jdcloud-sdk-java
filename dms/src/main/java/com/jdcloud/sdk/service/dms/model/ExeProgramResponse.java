@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 执行编程对象sql
+ * 执行编程对象sql，支持Mysql
  */
 public class ExeProgramResponse extends JdcloudResponse<ExeProgramResult> implements java.io.Serializable {
 

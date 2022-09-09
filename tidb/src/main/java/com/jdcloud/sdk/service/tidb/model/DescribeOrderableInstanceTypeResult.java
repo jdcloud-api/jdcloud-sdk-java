@@ -44,6 +44,7 @@ public class DescribeOrderableInstanceTypeResult extends JdcloudResult implement
     /**
      * orderableAZs
      */
+    
     private List<Az> orderableAZs;
 
 
@@ -65,23 +66,25 @@ public class DescribeOrderableInstanceTypeResult extends JdcloudResult implement
         this.engineStatus = engineStatus;
     }
 
+
     /**
-     * get orderableAZs
-     *
-     * @return
-     */
+    * get orderableAZs
+    *
+    * @return
+    */
     public List<Az> getOrderableAZs() {
         return orderableAZs;
     }
 
     /**
-     * set orderableAZs
-     *
-     * @param orderableAZs
-     */
+    * set orderableAZs
+    *
+    * @param orderableAZs
+    */
     public void setOrderableAZs(List<Az> orderableAZs) {
         this.orderableAZs = orderableAZs;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribeOrderableInstanceTypeResult extends JdcloudResult implement
         return this;
     }
 
+
     /**
-     * set orderableAZs
-     *
-     * @param orderableAZs
-     */
+    * set orderableAZs
+    *
+    * @param orderableAZs
+    */
     public DescribeOrderableInstanceTypeResult orderableAZs(List<Az> orderableAZs) {
         this.orderableAZs = orderableAZs;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeOrderableInstanceTypeResult extends JdcloudResult implement
         }
         this.orderableAZs.add(orderableAZ);
     }
-
 }

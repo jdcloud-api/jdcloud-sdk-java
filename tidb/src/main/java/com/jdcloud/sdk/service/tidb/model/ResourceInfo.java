@@ -43,6 +43,7 @@ public class ResourceInfo  implements java.io.Serializable {
     private String resourceName;
 
 
+
     /**
      * get 实例id
      *
@@ -60,6 +61,7 @@ public class ResourceInfo  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 实例名称
@@ -80,6 +82,7 @@ public class ResourceInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例id
      *
@@ -89,6 +92,7 @@ public class ResourceInfo  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 实例名称

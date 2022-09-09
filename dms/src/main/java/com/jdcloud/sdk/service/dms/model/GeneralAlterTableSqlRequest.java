@@ -31,7 +31,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 生成修改表结构语句sql
+ * 生成修改表结构语句sql，支持Mysql，Stardb
  */
 public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -60,19 +60,20 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
     /**
      * 列信息。
      */
+    
     private List<ColumnInfo> columnInfos;
-
     /**
      * 索引信息。
      */
+    
     private List<IndexInfo> indexInfos;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -93,6 +94,7 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 数据库名
      *
@@ -110,6 +112,7 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 表名
@@ -129,6 +132,7 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         this.tableName = tableName;
     }
 
+
     /**
      * get 表元信息。
      *
@@ -147,41 +151,44 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         this.metaTableInfo = metaTableInfo;
     }
 
+
     /**
-     * get 列信息。
-     *
-     * @return
-     */
+    * get 列信息。
+    *
+    * @return
+    */
     public List<ColumnInfo> getColumnInfos() {
         return columnInfos;
     }
 
     /**
-     * set 列信息。
-     *
-     * @param columnInfos
-     */
+    * set 列信息。
+    *
+    * @param columnInfos
+    */
     public void setColumnInfos(List<ColumnInfo> columnInfos) {
         this.columnInfos = columnInfos;
     }
 
+
     /**
-     * get 索引信息。
-     *
-     * @return
-     */
+    * get 索引信息。
+    *
+    * @return
+    */
     public List<IndexInfo> getIndexInfos() {
         return indexInfos;
     }
 
     /**
-     * set 索引信息。
-     *
-     * @param indexInfos
-     */
+    * set 索引信息。
+    *
+    * @param indexInfos
+    */
     public void setIndexInfos(List<IndexInfo> indexInfos) {
         this.indexInfos = indexInfos;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -202,6 +209,7 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 数据源Id
      *
@@ -211,6 +219,7 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名
@@ -222,6 +231,7 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 表名
      *
@@ -231,6 +241,7 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         this.tableName = tableName;
         return this;
     }
+
 
     /**
      * set 表元信息。
@@ -242,25 +253,28 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
-     * set 列信息。
-     *
-     * @param columnInfos
-     */
+    * set 列信息。
+    *
+    * @param columnInfos
+    */
     public GeneralAlterTableSqlRequest columnInfos(List<ColumnInfo> columnInfos) {
         this.columnInfos = columnInfos;
         return this;
     }
 
+
     /**
-     * set 索引信息。
-     *
-     * @param indexInfos
-     */
+    * set 索引信息。
+    *
+    * @param indexInfos
+    */
     public GeneralAlterTableSqlRequest indexInfos(List<IndexInfo> indexInfos) {
         this.indexInfos = indexInfos;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -271,6 +285,7 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -296,5 +311,4 @@ public class GeneralAlterTableSqlRequest extends JdcloudRequest implements java.
         }
         this.indexInfos.add(indexInfo);
     }
-
 }

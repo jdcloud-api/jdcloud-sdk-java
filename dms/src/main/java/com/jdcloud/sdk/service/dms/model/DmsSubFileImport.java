@@ -68,6 +68,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
     private String finishDate;
 
 
+
     /**
      * get id
      *
@@ -85,6 +86,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get parentId
@@ -104,6 +106,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         this.parentId = parentId;
     }
 
+
     /**
      * get 分片号
      *
@@ -121,6 +124,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
     public void setFileIndex(Integer fileIndex) {
         this.fileIndex = fileIndex;
     }
+
 
     /**
      * get 上传状态
@@ -140,6 +144,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         this.uploadStatus = uploadStatus;
     }
 
+
     /**
      * get MD5
      *
@@ -158,6 +163,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         this.chkSumMd5 = chkSumMd5;
     }
 
+
     /**
      * get 开始时间
      *
@@ -175,6 +181,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
     public void setBeginDate(String beginDate) {
         this.beginDate = beginDate;
     }
+
 
     /**
      * get 完成时间
@@ -195,6 +202,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -204,6 +212,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set parentId
@@ -215,6 +224,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 分片号
      *
@@ -224,6 +234,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         this.fileIndex = fileIndex;
         return this;
     }
+
 
     /**
      * set 上传状态
@@ -235,6 +246,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set MD5
      *
@@ -245,6 +257,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -254,6 +267,7 @@ public class DmsSubFileImport  implements java.io.Serializable {
         this.beginDate = beginDate;
         return this;
     }
+
 
     /**
      * set 完成时间

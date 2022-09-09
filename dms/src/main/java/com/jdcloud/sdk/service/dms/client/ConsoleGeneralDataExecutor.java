@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.ConsoleGeneralDataResponse;
 
 /**
- * 生成数据
+ * 生成数据，支持Mysql，Stardb
  */
 class ConsoleGeneralDataExecutor extends JdcloudExecutor {
 

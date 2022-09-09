@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 生成建表语句sql
+ * 生成建表语句sql，支持Mysql，Stardb
  */
 public class GeneralCreateTableSqlResult extends JdcloudResult implements java.io.Serializable {
 
@@ -37,6 +37,7 @@ public class GeneralCreateTableSqlResult extends JdcloudResult implements java.i
      * 生成sql
      */
     private String strResult;
+
 
 
     /**
@@ -56,6 +57,7 @@ public class GeneralCreateTableSqlResult extends JdcloudResult implements java.i
     public void setStrResult(String strResult) {
         this.strResult = strResult;
     }
+
 
 
     /**

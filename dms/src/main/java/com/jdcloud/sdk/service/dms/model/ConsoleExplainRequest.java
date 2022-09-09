@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 执行计划
+ * 执行计划，支持Mysql，Stardb
  */
 public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -57,6 +57,7 @@ public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -74,6 +75,7 @@ public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Ser
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称
@@ -93,6 +95,7 @@ public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Ser
         this.dbName = dbName;
     }
 
+
     /**
      * get sql语句。
      *
@@ -110,6 +113,7 @@ public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Ser
     public void setSqls(String sqls) {
         this.sqls = sqls;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -130,6 +134,7 @@ public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -139,6 +144,7 @@ public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Ser
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称
@@ -150,6 +156,7 @@ public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set sql语句。
      *
@@ -159,6 +166,7 @@ public class ConsoleExplainRequest extends JdcloudRequest implements java.io.Ser
         this.sqls = sqls;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

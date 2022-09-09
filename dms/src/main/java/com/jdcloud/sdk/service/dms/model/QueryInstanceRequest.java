@@ -77,6 +77,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
     private String regionId;
 
 
+
     /**
      * get 查询分类方式：LOGIN_STATUS，DB_TYPE。
      *
@@ -94,6 +95,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
     public void setInstanceQueryTypeEnum(String instanceQueryTypeEnum) {
         this.instanceQueryTypeEnum = instanceQueryTypeEnum;
     }
+
 
     /**
      * get 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)。
@@ -113,6 +115,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         this.instanceStatus = instanceStatus;
     }
 
+
     /**
      * get 数据库类型：MYSQL_INS，DRDS_INS
      *
@@ -130,6 +133,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
     public void setDbInfoEnum(String dbInfoEnum) {
         this.dbInfoEnum = dbInfoEnum;
     }
+
 
     /**
      * get 显示数据的页码，取值范围：[1,∞)。pageNumber为Null时，返回所有数据页码；超过总页数时，无数据。
@@ -149,6 +153,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页显示的数据条数，用于查询列表的接口。
      *
@@ -166,6 +171,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 实例Id。
@@ -185,6 +191,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         this.uniqId = uniqId;
     }
 
+
     /**
      * get 打开数据库名称。
      *
@@ -202,6 +209,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -222,6 +230,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 查询分类方式：LOGIN_STATUS，DB_TYPE。
      *
@@ -231,6 +240,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         this.instanceQueryTypeEnum = instanceQueryTypeEnum;
         return this;
     }
+
 
     /**
      * set 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)。
@@ -242,6 +252,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 数据库类型：MYSQL_INS，DRDS_INS
      *
@@ -251,6 +262,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         this.dbInfoEnum = dbInfoEnum;
         return this;
     }
+
 
     /**
      * set 显示数据的页码，取值范围：[1,∞)。pageNumber为Null时，返回所有数据页码；超过总页数时，无数据。
@@ -262,6 +274,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 每页显示的数据条数，用于查询列表的接口。
      *
@@ -271,6 +284,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 实例Id。
@@ -282,6 +296,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 打开数据库名称。
      *
@@ -291,6 +306,7 @@ public class QueryInstanceRequest extends JdcloudRequest implements java.io.Seri
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

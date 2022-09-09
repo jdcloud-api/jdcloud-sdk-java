@@ -49,6 +49,7 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
     private String createTime;
 
 
+
     /**
      * get 账号名称
      *
@@ -67,6 +68,7 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
         this.accountName = accountName;
     }
 
+
     /**
      * get 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;)
      *
@@ -84,6 +86,7 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
     public void setAccountStatus(String accountStatus) {
         this.accountStatus = accountStatus;
     }
+
 
     /**
      * get 创建时间，格式为：YYYY-MM-DD HH:mm:ss
@@ -104,6 +107,7 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 账号名称
      *
@@ -114,6 +118,7 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 账号状态(&quot;BUILDING&quot;,&quot;RUNNING&quot;,&quot;RESETING&quot;)
      *
@@ -123,6 +128,7 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
         this.accountStatus = accountStatus;
         return this;
     }
+
 
     /**
      * set 创建时间，格式为：YYYY-MM-DD HH:mm:ss

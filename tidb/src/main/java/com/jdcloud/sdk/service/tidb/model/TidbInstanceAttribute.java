@@ -113,8 +113,8 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     /**
      * 可用区ID，目前仅支持单可用区
      */
+    
     private List<String> azId;
-
     /**
      * VPC的ID
      */
@@ -203,6 +203,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     /**
      * 标签信息
      */
+    
     private List<Tag> tags;
 
 
@@ -224,6 +225,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 实例名称
      *
@@ -241,6 +243,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 实例引擎版本
@@ -260,6 +263,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.engineVersion = engineVersion;
     }
 
+
     /**
      * get 实例引擎版本的详细版本号
      *
@@ -277,6 +281,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
     }
+
 
     /**
      * get 集群中节点的总数
@@ -296,6 +301,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.totalNodeNum = totalNodeNum;
     }
 
+
     /**
      * get TiDB节点规格和数目
      *
@@ -313,6 +319,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setTidbNodeSpec(NodeSpec tidbNodeSpec) {
         this.tidbNodeSpec = tidbNodeSpec;
     }
+
 
     /**
      * get TiKV节点规格和数目
@@ -332,6 +339,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.tikvNodeSpec = tikvNodeSpec;
     }
 
+
     /**
      * get PD节点规格和数目
      *
@@ -349,6 +357,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setPdNodeSpec(NodeSpec pdNodeSpec) {
         this.pdNodeSpec = pdNodeSpec;
     }
+
 
     /**
      * get Monitor节点规格，只能有1个Monitor节点
@@ -368,6 +377,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.monitorNodeSpec = monitorNodeSpec;
     }
 
+
     /**
      * get TiFlash节点规格和数目
      *
@@ -385,6 +395,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setTiflashNodeSpec(NodeSpec tiflashNodeSpec) {
         this.tiflashNodeSpec = tiflashNodeSpec;
     }
+
 
     /**
      * get Ticdc节点规格和数目
@@ -404,6 +415,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.ticdcNodeSpec = ticdcNodeSpec;
     }
 
+
     /**
      * get 整个集群总的CPU核数
      *
@@ -421,6 +433,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setTotalCPU(Integer totalCPU) {
         this.totalCPU = totalCPU;
     }
+
 
     /**
      * get 整个集群总的内存大小，单位GB
@@ -440,6 +453,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.totalMemoryGB = totalMemoryGB;
     }
 
+
     /**
      * get 整个集群总的存储空间大小，单位GB
      *
@@ -457,6 +471,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setTotalStorageGB(Integer totalStorageGB) {
         this.totalStorageGB = totalStorageGB;
     }
+
 
     /**
      * get 地域ID
@@ -476,23 +491,25 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.regionId = regionId;
     }
 
+
     /**
-     * get 可用区ID，目前仅支持单可用区
-     *
-     * @return
-     */
+    * get 可用区ID，目前仅支持单可用区
+    *
+    * @return
+    */
     public List<String> getAzId() {
         return azId;
     }
 
     /**
-     * set 可用区ID，目前仅支持单可用区
-     *
-     * @param azId
-     */
+    * set 可用区ID，目前仅支持单可用区
+    *
+    * @param azId
+    */
     public void setAzId(List<String> azId) {
         this.azId = azId;
     }
+
 
     /**
      * get VPC的ID
@@ -512,6 +529,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网的ID
      *
@@ -529,6 +547,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get TiDB内网域名
@@ -548,6 +567,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.internalDomainName = internalDomainName;
     }
 
+
     /**
      * get TiDB公网域名
      *
@@ -565,6 +585,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setPublicDomainName(String publicDomainName) {
         this.publicDomainName = publicDomainName;
     }
+
 
     /**
      * get TiDB监控的内网域名
@@ -584,6 +605,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.monitorInternalDomainName = monitorInternalDomainName;
     }
 
+
     /**
      * get TiDB监控的公网域名
      *
@@ -601,6 +623,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setMonitorPublicDomainName(String monitorPublicDomainName) {
         this.monitorPublicDomainName = monitorPublicDomainName;
     }
+
 
     /**
      * get PD的内网域名
@@ -620,6 +643,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.pdInternalDomainName = pdInternalDomainName;
     }
 
+
     /**
      * get PD的公网域名
      *
@@ -637,6 +661,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setPdPublicDomainName(String pdPublicDomainName) {
         this.pdPublicDomainName = pdPublicDomainName;
     }
+
 
     /**
      * get DMS的内网域名
@@ -656,6 +681,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.dmsInternalDomainName = dmsInternalDomainName;
     }
 
+
     /**
      * get DMS的公网域名
      *
@@ -673,6 +699,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setDmsPublicDomainName(String dmsPublicDomainName) {
         this.dmsPublicDomainName = dmsPublicDomainName;
     }
+
 
     /**
      * get 应用访问端口
@@ -692,6 +719,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.instancePort = instancePort;
     }
 
+
     /**
      * get TiDB监控的端口
      *
@@ -709,6 +737,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setMonitorPort(String monitorPort) {
         this.monitorPort = monitorPort;
     }
+
 
     /**
      * get PD的端口
@@ -728,6 +757,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.pdPort = pdPort;
     }
 
+
     /**
      * get DMS的端口
      *
@@ -745,6 +775,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setDmsPort(String dmsPort) {
         this.dmsPort = dmsPort;
     }
+
 
     /**
      * get 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -764,6 +795,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.instanceStatus = instanceStatus;
     }
 
+
     /**
      * get 实例创建时间, UTC 时间格式
      *
@@ -781,6 +813,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 计费配置
@@ -800,23 +833,25 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
-     * get 标签信息
-     *
-     * @return
-     */
+    * get 标签信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set 标签信息
-     *
-     * @param tags
-     */
+    * set 标签信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
 
     /**
@@ -829,6 +864,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例名称
      *
@@ -838,6 +874,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.instanceName = instanceName;
         return this;
     }
+
 
     /**
      * set 实例引擎版本
@@ -849,6 +886,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例引擎版本的详细版本号
      *
@@ -858,6 +896,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.minorVersion = minorVersion;
         return this;
     }
+
 
     /**
      * set 集群中节点的总数
@@ -869,6 +908,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TiDB节点规格和数目
      *
@@ -878,6 +918,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.tidbNodeSpec = tidbNodeSpec;
         return this;
     }
+
 
     /**
      * set TiKV节点规格和数目
@@ -889,6 +930,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set PD节点规格和数目
      *
@@ -898,6 +940,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.pdNodeSpec = pdNodeSpec;
         return this;
     }
+
 
     /**
      * set Monitor节点规格，只能有1个Monitor节点
@@ -909,6 +952,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TiFlash节点规格和数目
      *
@@ -918,6 +962,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.tiflashNodeSpec = tiflashNodeSpec;
         return this;
     }
+
 
     /**
      * set Ticdc节点规格和数目
@@ -929,6 +974,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 整个集群总的CPU核数
      *
@@ -938,6 +984,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.totalCPU = totalCPU;
         return this;
     }
+
 
     /**
      * set 整个集群总的内存大小，单位GB
@@ -949,6 +996,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 整个集群总的存储空间大小，单位GB
      *
@@ -958,6 +1006,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.totalStorageGB = totalStorageGB;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -969,15 +1018,17 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区ID，目前仅支持单可用区
-     *
-     * @param azId
-     */
+    * set 可用区ID，目前仅支持单可用区
+    *
+    * @param azId
+    */
     public TidbInstanceAttribute azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
+
 
     /**
      * set VPC的ID
@@ -989,6 +1040,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网的ID
      *
@@ -998,6 +1050,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set TiDB内网域名
@@ -1009,6 +1062,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TiDB公网域名
      *
@@ -1018,6 +1072,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.publicDomainName = publicDomainName;
         return this;
     }
+
 
     /**
      * set TiDB监控的内网域名
@@ -1029,6 +1084,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TiDB监控的公网域名
      *
@@ -1038,6 +1094,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.monitorPublicDomainName = monitorPublicDomainName;
         return this;
     }
+
 
     /**
      * set PD的内网域名
@@ -1049,6 +1106,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set PD的公网域名
      *
@@ -1058,6 +1116,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.pdPublicDomainName = pdPublicDomainName;
         return this;
     }
+
 
     /**
      * set DMS的内网域名
@@ -1069,6 +1128,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set DMS的公网域名
      *
@@ -1078,6 +1138,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.dmsPublicDomainName = dmsPublicDomainName;
         return this;
     }
+
 
     /**
      * set 应用访问端口
@@ -1089,6 +1150,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set TiDB监控的端口
      *
@@ -1098,6 +1160,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.monitorPort = monitorPort;
         return this;
     }
+
 
     /**
      * set PD的端口
@@ -1109,6 +1172,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set DMS的端口
      *
@@ -1118,6 +1182,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.dmsPort = dmsPort;
         return this;
     }
+
 
     /**
      * set 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -1129,6 +1194,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例创建时间, UTC 时间格式
      *
@@ -1138,6 +1204,7 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 计费配置
@@ -1149,15 +1216,17 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 标签信息
-     *
-     * @param tags
-     */
+    * set 标签信息
+    *
+    * @param tags
+    */
     public TidbInstanceAttribute tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
 
     /**
@@ -1183,5 +1252,4 @@ public class TidbInstanceAttribute  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

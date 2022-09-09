@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取数据库中的表列表
+ * 获取数据库中的表列表，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class TableListRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -52,6 +52,7 @@ public class TableListRequest extends JdcloudRequest implements java.io.Serializ
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -70,6 +71,7 @@ public class TableListRequest extends JdcloudRequest implements java.io.Serializ
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 数据库名称
      *
@@ -87,6 +89,7 @@ public class TableListRequest extends JdcloudRequest implements java.io.Serializ
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -107,6 +110,7 @@ public class TableListRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -117,6 +121,7 @@ public class TableListRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 数据库名称
      *
@@ -126,6 +131,7 @@ public class TableListRequest extends JdcloudRequest implements java.io.Serializ
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

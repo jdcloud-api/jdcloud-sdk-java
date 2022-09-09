@@ -54,15 +54,15 @@ memeryUtil - 内存使用率
 diskUsage - 磁盘使用率
 
      */
+    
     private List<Sort> sorts;
-
     /**
      * nodeType, 支持operator选项：eq,ne
 nodeStatus, 支持operator选项：eq ne
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域代码
      * Required:true
@@ -76,6 +76,7 @@ nodeStatus, 支持operator选项：eq ne
      */
     @Required
     private String instanceId;
+
 
 
     /**
@@ -96,6 +97,7 @@ nodeStatus, 支持operator选项：eq ne
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页显示的数据条数，默认为50，取值范围：[50,100]，用于查询列表的接口
      *
@@ -114,51 +116,54 @@ nodeStatus, 支持operator选项：eq ne
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get cpuUtil - CPU使用率
+    * get cpuUtil - CPU使用率
 memeryUtil - 内存使用率
 diskUsage - 磁盘使用率
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Sort> getSorts() {
         return sorts;
     }
 
     /**
-     * set cpuUtil - CPU使用率
+    * set cpuUtil - CPU使用率
 memeryUtil - 内存使用率
 diskUsage - 磁盘使用率
 
-     *
-     * @param sorts
-     */
+    *
+    * @param sorts
+    */
     public void setSorts(List<Sort> sorts) {
         this.sorts = sorts;
     }
 
+
     /**
-     * get nodeType, 支持operator选项：eq,ne
+    * get nodeType, 支持operator选项：eq,ne
 nodeStatus, 支持operator选项：eq ne
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set nodeType, 支持operator选项：eq,ne
+    * set nodeType, 支持operator选项：eq,ne
 nodeStatus, 支持operator选项：eq ne
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域代码
@@ -177,6 +182,7 @@ nodeStatus, 支持operator选项：eq ne
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -197,6 +203,7 @@ nodeStatus, 支持operator选项：eq ne
     }
 
 
+
     /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      *
@@ -206,6 +213,7 @@ nodeStatus, 支持operator选项：eq ne
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为50，取值范围：[50,100]，用于查询列表的接口
@@ -217,30 +225,33 @@ nodeStatus, 支持operator选项：eq ne
         return this;
     }
 
+
     /**
-     * set cpuUtil - CPU使用率
+    * set cpuUtil - CPU使用率
 memeryUtil - 内存使用率
 diskUsage - 磁盘使用率
 
-     *
-     * @param sorts
-     */
+    *
+    * @param sorts
+    */
     public DescribeNodesRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
         return this;
     }
 
+
     /**
-     * set nodeType, 支持operator选项：eq,ne
+    * set nodeType, 支持operator选项：eq,ne
 nodeStatus, 支持operator选项：eq ne
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeNodesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域代码
@@ -252,6 +263,7 @@ nodeStatus, 支持operator选项：eq ne
         return this;
     }
 
+
     /**
      * set 实例ID
      *
@@ -261,6 +273,7 @@ nodeStatus, 支持operator选项：eq ne
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -291,5 +304,4 @@ nodeStatus, 支持operator选项：eq ne
         }
         this.filters.add(filter);
     }
-
 }

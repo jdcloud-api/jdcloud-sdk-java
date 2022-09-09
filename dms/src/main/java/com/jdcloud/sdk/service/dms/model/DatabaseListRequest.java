@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取数据库实例的库列表
+ * 获取数据库实例的库列表，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class DatabaseListRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -45,6 +45,7 @@ public class DatabaseListRequest extends JdcloudRequest implements java.io.Seria
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -65,6 +66,7 @@ public class DatabaseListRequest extends JdcloudRequest implements java.io.Seria
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -84,6 +86,7 @@ public class DatabaseListRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -93,6 +96,7 @@ public class DatabaseListRequest extends JdcloudRequest implements java.io.Seria
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

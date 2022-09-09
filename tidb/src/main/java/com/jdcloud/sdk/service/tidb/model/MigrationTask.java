@@ -68,6 +68,7 @@ public class MigrationTask  implements java.io.Serializable {
     private String fileName;
 
 
+
     /**
      * get 迁移任务ID
      *
@@ -85,6 +86,7 @@ public class MigrationTask  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 迁移任务类型，大小写不敏感，FULL_IMPORT:全量数据导入
@@ -104,6 +106,7 @@ public class MigrationTask  implements java.io.Serializable {
         this.migrationType = migrationType;
     }
 
+
     /**
      * get 任务状态
      *
@@ -121,6 +124,7 @@ public class MigrationTask  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
+
 
     /**
      * get 任务开始时间
@@ -140,6 +144,7 @@ public class MigrationTask  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 任务结束时间
      *
@@ -158,6 +163,7 @@ public class MigrationTask  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 任务持续时间，单位分钟
      *
@@ -175,6 +181,7 @@ public class MigrationTask  implements java.io.Serializable {
     public void setDuration(Integer duration) {
         this.duration = duration;
     }
+
 
     /**
      * get 迁移的数据文件名，包含bucket的全路径，例如dbbak/my_erp/erp.tar.gz
@@ -195,6 +202,7 @@ public class MigrationTask  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 迁移任务ID
      *
@@ -204,6 +212,7 @@ public class MigrationTask  implements java.io.Serializable {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 迁移任务类型，大小写不敏感，FULL_IMPORT:全量数据导入
@@ -215,6 +224,7 @@ public class MigrationTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务状态
      *
@@ -224,6 +234,7 @@ public class MigrationTask  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 任务开始时间
@@ -235,6 +246,7 @@ public class MigrationTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务结束时间
      *
@@ -245,6 +257,7 @@ public class MigrationTask  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务持续时间，单位分钟
      *
@@ -254,6 +267,7 @@ public class MigrationTask  implements java.io.Serializable {
         this.duration = duration;
         return this;
     }
+
 
     /**
      * set 迁移的数据文件名，包含bucket的全路径，例如dbbak/my_erp/erp.tar.gz

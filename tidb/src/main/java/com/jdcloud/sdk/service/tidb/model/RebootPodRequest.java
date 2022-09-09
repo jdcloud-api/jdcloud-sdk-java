@@ -41,8 +41,8 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
      * Required:true
      */
     @Required
+    
     private List<String> nodeType;
-
     /**
      * 地域代码
      * Required:true
@@ -58,23 +58,25 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
     private String instanceId;
 
 
+
     /**
-     * get 重启指定类型的pod,支持Tikv,TiDB,PD,TiFlash
-     *
-     * @return
-     */
+    * get 重启指定类型的pod,支持Tikv,TiDB,PD,TiFlash
+    *
+    * @return
+    */
     public List<String> getNodeType() {
         return nodeType;
     }
 
     /**
-     * set 重启指定类型的pod,支持Tikv,TiDB,PD,TiFlash
-     *
-     * @param nodeType
-     */
+    * set 重启指定类型的pod,支持Tikv,TiDB,PD,TiFlash
+    *
+    * @param nodeType
+    */
     public void setNodeType(List<String> nodeType) {
         this.nodeType = nodeType;
     }
+
 
     /**
      * get 地域代码
@@ -93,6 +95,7 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -113,15 +116,17 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
-     * set 重启指定类型的pod,支持Tikv,TiDB,PD,TiFlash
-     *
-     * @param nodeType
-     */
+    * set 重启指定类型的pod,支持Tikv,TiDB,PD,TiFlash
+    *
+    * @param nodeType
+    */
     public RebootPodRequest nodeType(List<String> nodeType) {
         this.nodeType = nodeType;
         return this;
     }
+
 
     /**
      * set 地域代码
@@ -133,6 +138,7 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 实例ID
      *
@@ -142,6 +148,7 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
         this.instanceId = instanceId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class RebootPodRequest extends JdcloudRequest implements java.io.Serializ
         }
         this.nodeType.add(nodeType);
     }
-
 }

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.ConsoleExplainResponse;
 
 /**
- * 执行计划
+ * 执行计划，支持Mysql，Stardb
  */
 class ConsoleExplainExecutor extends JdcloudExecutor {
 

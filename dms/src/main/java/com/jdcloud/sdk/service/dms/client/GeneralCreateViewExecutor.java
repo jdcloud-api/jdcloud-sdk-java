@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateViewResponse;
 
 /**
- * 生产创建视图SQL语句
+ * 生产创建视图SQL语句，支持Mysql
  */
 class GeneralCreateViewExecutor extends JdcloudExecutor {
 

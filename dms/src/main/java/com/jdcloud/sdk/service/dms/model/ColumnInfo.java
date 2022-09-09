@@ -88,6 +88,7 @@ public class ColumnInfo  implements java.io.Serializable {
     private Boolean isPrimaryKey;
 
 
+
     /**
      * get 列名。
      *
@@ -105,6 +106,7 @@ public class ColumnInfo  implements java.io.Serializable {
     public void setColumnName(String columnName) {
         this.columnName = columnName;
     }
+
 
     /**
      * get 新列名，修改表结构时使用。
@@ -124,6 +126,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.newColumnName = newColumnName;
     }
 
+
     /**
      * get 列类型。
      *
@@ -141,6 +144,7 @@ public class ColumnInfo  implements java.io.Serializable {
     public void setDataType(String dataType) {
         this.dataType = dataType;
     }
+
 
     /**
      * get 列类型, 返回int(3), varchar(64)等。
@@ -160,6 +164,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.columnType = columnType;
     }
 
+
     /**
      * get 列长度。
      *
@@ -177,6 +182,7 @@ public class ColumnInfo  implements java.io.Serializable {
     public void setColumnLength(Integer columnLength) {
         this.columnLength = columnLength;
     }
+
 
     /**
      * get 浮点数小数点后位数。
@@ -196,6 +202,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.columnScale = columnScale;
     }
 
+
     /**
      * get 是否为空。
      *
@@ -213,6 +220,7 @@ public class ColumnInfo  implements java.io.Serializable {
     public void setIsNull(Boolean isNull) {
         this.isNull = isNull;
     }
+
 
     /**
      * get 默认值。
@@ -232,6 +240,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.defaultValue = defaultValue;
     }
 
+
     /**
      * get 列注释。
      *
@@ -250,6 +259,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.columnComment = columnComment;
     }
 
+
     /**
      * get 是否自增。
      *
@@ -267,6 +277,7 @@ public class ColumnInfo  implements java.io.Serializable {
     public void setIsAutoIncrease(Boolean isAutoIncrease) {
         this.isAutoIncrease = isAutoIncrease;
     }
+
 
     /**
      * get 是否为主键。
@@ -287,6 +298,7 @@ public class ColumnInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 列名。
      *
@@ -296,6 +308,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.columnName = columnName;
         return this;
     }
+
 
     /**
      * set 新列名，修改表结构时使用。
@@ -307,6 +320,7 @@ public class ColumnInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 列类型。
      *
@@ -316,6 +330,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.dataType = dataType;
         return this;
     }
+
 
     /**
      * set 列类型, 返回int(3), varchar(64)等。
@@ -327,6 +342,7 @@ public class ColumnInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 列长度。
      *
@@ -336,6 +352,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.columnLength = columnLength;
         return this;
     }
+
 
     /**
      * set 浮点数小数点后位数。
@@ -347,6 +364,7 @@ public class ColumnInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否为空。
      *
@@ -356,6 +374,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.isNull = isNull;
         return this;
     }
+
 
     /**
      * set 默认值。
@@ -367,6 +386,7 @@ public class ColumnInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 列注释。
      *
@@ -377,6 +397,7 @@ public class ColumnInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否自增。
      *
@@ -386,6 +407,7 @@ public class ColumnInfo  implements java.io.Serializable {
         this.isAutoIncrease = isAutoIncrease;
         return this;
     }
+
 
     /**
      * set 是否为主键。

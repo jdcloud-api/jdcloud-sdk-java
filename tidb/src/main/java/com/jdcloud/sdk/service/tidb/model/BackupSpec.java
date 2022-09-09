@@ -41,6 +41,7 @@ public class BackupSpec  implements java.io.Serializable {
     private String backupName;
 
 
+
     /**
      * get 备份名称最长支持64个英文字符或等长的中文字符
      *
@@ -58,6 +59,7 @@ public class BackupSpec  implements java.io.Serializable {
     public void setBackupName(String backupName) {
         this.backupName = backupName;
     }
+
 
 
     /**

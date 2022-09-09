@@ -39,31 +39,33 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     /**
      * backups
      */
+    
     private List<Backup> backups;
-
     /**
      * 总记录数
      */
     private Integer totalCount;
 
 
+
     /**
-     * get backups
-     *
-     * @return
-     */
+    * get backups
+    *
+    * @return
+    */
     public List<Backup> getBackups() {
         return backups;
     }
 
     /**
-     * set backups
-     *
-     * @param backups
-     */
+    * set backups
+    *
+    * @param backups
+    */
     public void setBackups(List<Backup> backups) {
         this.backups = backups;
     }
+
 
     /**
      * get 总记录数
@@ -84,15 +86,17 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set backups
-     *
-     * @param backups
-     */
+    * set backups
+    *
+    * @param backups
+    */
     public DescribeBackupsResult backups(List<Backup> backups) {
         this.backups = backups;
         return this;
     }
+
 
     /**
      * set 总记录数
@@ -103,6 +107,7 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeBackupsResult extends JdcloudResult implements java.io.Seri
         }
         this.backups.add(backup);
     }
-
 }

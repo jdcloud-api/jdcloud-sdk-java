@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.dms.model.DmsSqlsResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 批量建表
+ * 批量建表，支持Stardb
  */
 public class CreateTableBatchResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,6 +38,7 @@ public class CreateTableBatchResult extends JdcloudResult implements java.io.Ser
      * dmsSqlsResult
      */
     private DmsSqlsResult dmsSqlsResult;
+
 
 
     /**
@@ -57,6 +58,7 @@ public class CreateTableBatchResult extends JdcloudResult implements java.io.Ser
     public void setDmsSqlsResult(DmsSqlsResult dmsSqlsResult) {
         this.dmsSqlsResult = dmsSqlsResult;
     }
+
 
 
     /**

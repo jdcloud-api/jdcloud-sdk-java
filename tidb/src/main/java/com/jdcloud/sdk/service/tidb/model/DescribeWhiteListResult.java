@@ -39,37 +39,40 @@ public class DescribeWhiteListResult extends JdcloudResult implements java.io.Se
     /**
      * whiteLists
      */
+    
     private List<WhiteList> whiteLists;
 
 
     /**
-     * get whiteLists
-     *
-     * @return
-     */
+    * get whiteLists
+    *
+    * @return
+    */
     public List<WhiteList> getWhiteLists() {
         return whiteLists;
     }
 
     /**
-     * set whiteLists
-     *
-     * @param whiteLists
-     */
+    * set whiteLists
+    *
+    * @param whiteLists
+    */
     public void setWhiteLists(List<WhiteList> whiteLists) {
         this.whiteLists = whiteLists;
     }
 
 
+
     /**
-     * set whiteLists
-     *
-     * @param whiteLists
-     */
+    * set whiteLists
+    *
+    * @param whiteLists
+    */
     public DescribeWhiteListResult whiteLists(List<WhiteList> whiteLists) {
         this.whiteLists = whiteLists;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeWhiteListResult extends JdcloudResult implements java.io.Se
         }
         this.whiteLists.add(whiteList);
     }
-
 }

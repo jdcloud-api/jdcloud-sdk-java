@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取表元数据
+ * 获取表元数据，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class TableInfoRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -57,6 +57,7 @@ public class TableInfoRequest extends JdcloudRequest implements java.io.Serializ
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -74,6 +75,7 @@ public class TableInfoRequest extends JdcloudRequest implements java.io.Serializ
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 库名。
@@ -93,6 +95,7 @@ public class TableInfoRequest extends JdcloudRequest implements java.io.Serializ
         this.dbName = dbName;
     }
 
+
     /**
      * get 表名。
      *
@@ -110,6 +113,7 @@ public class TableInfoRequest extends JdcloudRequest implements java.io.Serializ
     public void setTableName(String tableName) {
         this.tableName = tableName;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -130,6 +134,7 @@ public class TableInfoRequest extends JdcloudRequest implements java.io.Serializ
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -139,6 +144,7 @@ public class TableInfoRequest extends JdcloudRequest implements java.io.Serializ
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 库名。
@@ -150,6 +156,7 @@ public class TableInfoRequest extends JdcloudRequest implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 表名。
      *
@@ -159,6 +166,7 @@ public class TableInfoRequest extends JdcloudRequest implements java.io.Serializ
         this.tableName = tableName;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

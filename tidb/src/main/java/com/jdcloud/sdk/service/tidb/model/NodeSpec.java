@@ -79,6 +79,7 @@ public class NodeSpec  implements java.io.Serializable {
     private Integer storageGB;
 
 
+
     /**
      * get 节点类型：tidb、tikv、pd、monitor
      *
@@ -96,6 +97,7 @@ public class NodeSpec  implements java.io.Serializable {
     public void setNodeType(String nodeType) {
         this.nodeType = nodeType;
     }
+
 
     /**
      * get 节点数
@@ -115,6 +117,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.nodeNum = nodeNum;
     }
 
+
     /**
      * get 节点的规格代码
      *
@@ -132,6 +135,7 @@ public class NodeSpec  implements java.io.Serializable {
     public void setNodeClass(String nodeClass) {
         this.nodeClass = nodeClass;
     }
+
 
     /**
      * get cpu核数
@@ -151,6 +155,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.cpu = cpu;
     }
 
+
     /**
      * get 内存大小，单位GB
      *
@@ -169,6 +174,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.memoryGB = memoryGB;
     }
 
+
     /**
      * get 存储类型
      *
@@ -186,6 +192,7 @@ public class NodeSpec  implements java.io.Serializable {
     public void setStorageType(String storageType) {
         this.storageType = storageType;
     }
+
 
     /**
      * get 存储空间，单位GB
@@ -206,6 +213,7 @@ public class NodeSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 节点类型：tidb、tikv、pd、monitor
      *
@@ -215,6 +223,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.nodeType = nodeType;
         return this;
     }
+
 
     /**
      * set 节点数
@@ -226,6 +235,7 @@ public class NodeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点的规格代码
      *
@@ -235,6 +245,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.nodeClass = nodeClass;
         return this;
     }
+
 
     /**
      * set cpu核数
@@ -246,6 +257,7 @@ public class NodeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存大小，单位GB
      *
@@ -256,6 +268,7 @@ public class NodeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 存储类型
      *
@@ -265,6 +278,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.storageType = storageType;
         return this;
     }
+
 
     /**
      * set 存储空间，单位GB

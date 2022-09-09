@@ -83,8 +83,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * 可用区ID，目前仅支持单可用区
      */
+    
     private List<String> azId;
-
     /**
      * VPC的ID
      */
@@ -113,6 +113,7 @@ public class Instance  implements java.io.Serializable {
     /**
      * 标签信息
      */
+    
     private List<Tag> tags;
 
 
@@ -134,6 +135,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 实例名称
      *
@@ -151,6 +153,7 @@ public class Instance  implements java.io.Serializable {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 实例引擎版本
@@ -170,6 +173,7 @@ public class Instance  implements java.io.Serializable {
         this.engineVersion = engineVersion;
     }
 
+
     /**
      * get 实例引擎版本的详细版本号
      *
@@ -187,6 +191,7 @@ public class Instance  implements java.io.Serializable {
     public void setMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
     }
+
 
     /**
      * get 集群中节点的总数
@@ -206,6 +211,7 @@ public class Instance  implements java.io.Serializable {
         this.totalNodeNum = totalNodeNum;
     }
 
+
     /**
      * get 整个集群总的CPU核数
      *
@@ -223,6 +229,7 @@ public class Instance  implements java.io.Serializable {
     public void setTotalCPU(Integer totalCPU) {
         this.totalCPU = totalCPU;
     }
+
 
     /**
      * get 整个集群总的内存大小，单位GB
@@ -242,6 +249,7 @@ public class Instance  implements java.io.Serializable {
         this.totalMemoryGB = totalMemoryGB;
     }
 
+
     /**
      * get 整个集群总的存储空间大小，单位GB
      *
@@ -259,6 +267,7 @@ public class Instance  implements java.io.Serializable {
     public void setTotalStorageGB(Integer totalStorageGB) {
         this.totalStorageGB = totalStorageGB;
     }
+
 
     /**
      * get 地域ID
@@ -278,23 +287,25 @@ public class Instance  implements java.io.Serializable {
         this.regionId = regionId;
     }
 
+
     /**
-     * get 可用区ID，目前仅支持单可用区
-     *
-     * @return
-     */
+    * get 可用区ID，目前仅支持单可用区
+    *
+    * @return
+    */
     public List<String> getAzId() {
         return azId;
     }
 
     /**
-     * set 可用区ID，目前仅支持单可用区
-     *
-     * @param azId
-     */
+    * set 可用区ID，目前仅支持单可用区
+    *
+    * @param azId
+    */
     public void setAzId(List<String> azId) {
         this.azId = azId;
     }
+
 
     /**
      * get VPC的ID
@@ -314,6 +325,7 @@ public class Instance  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网的ID
      *
@@ -331,6 +343,7 @@ public class Instance  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -350,6 +363,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceStatus = instanceStatus;
     }
 
+
     /**
      * get 实例创建时间, UTC 时间格式
      *
@@ -367,6 +381,7 @@ public class Instance  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 计费配置
@@ -386,23 +401,25 @@ public class Instance  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
-     * get 标签信息
-     *
-     * @return
-     */
+    * get 标签信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set 标签信息
-     *
-     * @param tags
-     */
+    * set 标签信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
 
     /**
@@ -415,6 +432,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例名称
      *
@@ -424,6 +442,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceName = instanceName;
         return this;
     }
+
 
     /**
      * set 实例引擎版本
@@ -435,6 +454,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例引擎版本的详细版本号
      *
@@ -444,6 +464,7 @@ public class Instance  implements java.io.Serializable {
         this.minorVersion = minorVersion;
         return this;
     }
+
 
     /**
      * set 集群中节点的总数
@@ -455,6 +476,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 整个集群总的CPU核数
      *
@@ -464,6 +486,7 @@ public class Instance  implements java.io.Serializable {
         this.totalCPU = totalCPU;
         return this;
     }
+
 
     /**
      * set 整个集群总的内存大小，单位GB
@@ -475,6 +498,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 整个集群总的存储空间大小，单位GB
      *
@@ -484,6 +508,7 @@ public class Instance  implements java.io.Serializable {
         this.totalStorageGB = totalStorageGB;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -495,15 +520,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区ID，目前仅支持单可用区
-     *
-     * @param azId
-     */
+    * set 可用区ID，目前仅支持单可用区
+    *
+    * @param azId
+    */
     public Instance azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
+
 
     /**
      * set VPC的ID
@@ -515,6 +542,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网的ID
      *
@@ -524,6 +552,7 @@ public class Instance  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -535,6 +564,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例创建时间, UTC 时间格式
      *
@@ -544,6 +574,7 @@ public class Instance  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 计费配置
@@ -555,15 +586,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 标签信息
-     *
-     * @param tags
-     */
+    * set 标签信息
+    *
+    * @param tags
+    */
     public Instance tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
 
     /**
@@ -589,5 +622,4 @@ public class Instance  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

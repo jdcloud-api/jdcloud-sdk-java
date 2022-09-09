@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterViewResponse;
 
 /**
- * 生成修改视图sql语句
+ * 生成修改视图sql语句，支持Mysql
  */
 class GeneralAlterViewExecutor extends JdcloudExecutor {
 

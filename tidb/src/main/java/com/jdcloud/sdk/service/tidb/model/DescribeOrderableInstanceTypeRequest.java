@@ -42,6 +42,7 @@ public class DescribeOrderableInstanceTypeRequest extends JdcloudRequest impleme
     private String regionId;
 
 
+
     /**
      * get 地域代码
      *
@@ -59,6 +60,7 @@ public class DescribeOrderableInstanceTypeRequest extends JdcloudRequest impleme
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
 
     /**

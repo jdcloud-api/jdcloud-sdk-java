@@ -38,37 +38,40 @@ public class DmsSqlsResult extends JdcloudResult implements java.io.Serializable
     /**
      * 多条sql查询结果。
      */
+    
     private List<DmsSqlResult> dmsSqlResults;
 
 
     /**
-     * get 多条sql查询结果。
-     *
-     * @return
-     */
+    * get 多条sql查询结果。
+    *
+    * @return
+    */
     public List<DmsSqlResult> getDmsSqlResults() {
         return dmsSqlResults;
     }
 
     /**
-     * set 多条sql查询结果。
-     *
-     * @param dmsSqlResults
-     */
+    * set 多条sql查询结果。
+    *
+    * @param dmsSqlResults
+    */
     public void setDmsSqlResults(List<DmsSqlResult> dmsSqlResults) {
         this.dmsSqlResults = dmsSqlResults;
     }
 
 
+
     /**
-     * set 多条sql查询结果。
-     *
-     * @param dmsSqlResults
-     */
+    * set 多条sql查询结果。
+    *
+    * @param dmsSqlResults
+    */
     public DmsSqlsResult dmsSqlResults(List<DmsSqlResult> dmsSqlResults) {
         this.dmsSqlResults = dmsSqlResults;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class DmsSqlsResult extends JdcloudResult implements java.io.Serializable
         }
         this.dmsSqlResults.add(dmsSqlResult);
     }
-
 }

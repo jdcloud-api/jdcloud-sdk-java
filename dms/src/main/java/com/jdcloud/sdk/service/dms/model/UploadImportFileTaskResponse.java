@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 上传文件
+ * 上传文件，支持Stardb，只支持前端页面使用
  */
 public class UploadImportFileTaskResponse extends JdcloudResponse<UploadImportFileTaskResult> implements java.io.Serializable {
 

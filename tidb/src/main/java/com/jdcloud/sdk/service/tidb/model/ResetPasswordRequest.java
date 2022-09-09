@@ -63,6 +63,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     private String accountName;
 
 
+
     /**
      * get 新密码
      *
@@ -80,6 +81,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     public void setAccountPassword(String accountPassword) {
         this.accountPassword = accountPassword;
     }
+
 
     /**
      * get 地域代码
@@ -99,6 +101,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
     }
 
+
     /**
      * get 实例ID
      *
@@ -116,6 +119,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 账号名，在同一个实例中账号名不能重复
@@ -136,6 +140,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 新密码
      *
@@ -145,6 +150,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
         this.accountPassword = accountPassword;
         return this;
     }
+
 
     /**
      * set 地域代码
@@ -156,6 +162,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 实例ID
      *
@@ -165,6 +172,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 账号名，在同一个实例中账号名不能重复

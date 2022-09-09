@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建数据导出工单
+ * 创建数据导出工单，支持Stardb
  */
 public class CreateExportFlowResult extends JdcloudResult implements java.io.Serializable {
 
@@ -37,6 +37,7 @@ public class CreateExportFlowResult extends JdcloudResult implements java.io.Ser
      * 工单id
      */
     private String flowId;
+
 
 
     /**
@@ -56,6 +57,7 @@ public class CreateExportFlowResult extends JdcloudResult implements java.io.Ser
     public void setFlowId(String flowId) {
         this.flowId = flowId;
     }
+
 
 
     /**

@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取视图列表
+ * 获取视图列表，支持Mysql
  */
 public class ProgramListResult extends JdcloudResult implements java.io.Serializable {
 
@@ -38,169 +38,180 @@ public class ProgramListResult extends JdcloudResult implements java.io.Serializ
     /**
      * 视图名称
      */
+    
     private List<String> viewNames;
-
     /**
      * 存储过程名称
      */
+    
     private List<String> procedureNames;
-
     /**
      * 函数名称
      */
+    
     private List<String> functionNames;
-
     /**
      * 触发器名称
      */
+    
     private List<String> triggerNames;
-
     /**
      * 事件名称
      */
+    
     private List<String> eventNames;
 
 
     /**
-     * get 视图名称
-     *
-     * @return
-     */
+    * get 视图名称
+    *
+    * @return
+    */
     public List<String> getViewNames() {
         return viewNames;
     }
 
     /**
-     * set 视图名称
-     *
-     * @param viewNames
-     */
+    * set 视图名称
+    *
+    * @param viewNames
+    */
     public void setViewNames(List<String> viewNames) {
         this.viewNames = viewNames;
     }
 
+
     /**
-     * get 存储过程名称
-     *
-     * @return
-     */
+    * get 存储过程名称
+    *
+    * @return
+    */
     public List<String> getProcedureNames() {
         return procedureNames;
     }
 
     /**
-     * set 存储过程名称
-     *
-     * @param procedureNames
-     */
+    * set 存储过程名称
+    *
+    * @param procedureNames
+    */
     public void setProcedureNames(List<String> procedureNames) {
         this.procedureNames = procedureNames;
     }
 
+
     /**
-     * get 函数名称
-     *
-     * @return
-     */
+    * get 函数名称
+    *
+    * @return
+    */
     public List<String> getFunctionNames() {
         return functionNames;
     }
 
     /**
-     * set 函数名称
-     *
-     * @param functionNames
-     */
+    * set 函数名称
+    *
+    * @param functionNames
+    */
     public void setFunctionNames(List<String> functionNames) {
         this.functionNames = functionNames;
     }
 
+
     /**
-     * get 触发器名称
-     *
-     * @return
-     */
+    * get 触发器名称
+    *
+    * @return
+    */
     public List<String> getTriggerNames() {
         return triggerNames;
     }
 
     /**
-     * set 触发器名称
-     *
-     * @param triggerNames
-     */
+    * set 触发器名称
+    *
+    * @param triggerNames
+    */
     public void setTriggerNames(List<String> triggerNames) {
         this.triggerNames = triggerNames;
     }
 
+
     /**
-     * get 事件名称
-     *
-     * @return
-     */
+    * get 事件名称
+    *
+    * @return
+    */
     public List<String> getEventNames() {
         return eventNames;
     }
 
     /**
-     * set 事件名称
-     *
-     * @param eventNames
-     */
+    * set 事件名称
+    *
+    * @param eventNames
+    */
     public void setEventNames(List<String> eventNames) {
         this.eventNames = eventNames;
     }
 
 
+
     /**
-     * set 视图名称
-     *
-     * @param viewNames
-     */
+    * set 视图名称
+    *
+    * @param viewNames
+    */
     public ProgramListResult viewNames(List<String> viewNames) {
         this.viewNames = viewNames;
         return this;
     }
 
+
     /**
-     * set 存储过程名称
-     *
-     * @param procedureNames
-     */
+    * set 存储过程名称
+    *
+    * @param procedureNames
+    */
     public ProgramListResult procedureNames(List<String> procedureNames) {
         this.procedureNames = procedureNames;
         return this;
     }
 
+
     /**
-     * set 函数名称
-     *
-     * @param functionNames
-     */
+    * set 函数名称
+    *
+    * @param functionNames
+    */
     public ProgramListResult functionNames(List<String> functionNames) {
         this.functionNames = functionNames;
         return this;
     }
 
+
     /**
-     * set 触发器名称
-     *
-     * @param triggerNames
-     */
+    * set 触发器名称
+    *
+    * @param triggerNames
+    */
     public ProgramListResult triggerNames(List<String> triggerNames) {
         this.triggerNames = triggerNames;
         return this;
     }
 
+
     /**
-     * set 事件名称
-     *
-     * @param eventNames
-     */
+    * set 事件名称
+    *
+    * @param eventNames
+    */
     public ProgramListResult eventNames(List<String> eventNames) {
         this.eventNames = eventNames;
         return this;
     }
+
 
 
     /**
@@ -262,5 +273,4 @@ public class ProgramListResult extends JdcloudResult implements java.io.Serializ
         }
         this.eventNames.add(eventName);
     }
-
 }

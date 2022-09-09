@@ -39,37 +39,40 @@ public class DescribeDataMigrationResult extends JdcloudResult implements java.i
     /**
      * migrationTasks
      */
+    
     private List<MigrationTask> migrationTasks;
 
 
     /**
-     * get migrationTasks
-     *
-     * @return
-     */
+    * get migrationTasks
+    *
+    * @return
+    */
     public List<MigrationTask> getMigrationTasks() {
         return migrationTasks;
     }
 
     /**
-     * set migrationTasks
-     *
-     * @param migrationTasks
-     */
+    * set migrationTasks
+    *
+    * @param migrationTasks
+    */
     public void setMigrationTasks(List<MigrationTask> migrationTasks) {
         this.migrationTasks = migrationTasks;
     }
 
 
+
     /**
-     * set migrationTasks
-     *
-     * @param migrationTasks
-     */
+    * set migrationTasks
+    *
+    * @param migrationTasks
+    */
     public DescribeDataMigrationResult migrationTasks(List<MigrationTask> migrationTasks) {
         this.migrationTasks = migrationTasks;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeDataMigrationResult extends JdcloudResult implements java.i
         }
         this.migrationTasks.add(migrationTask);
     }
-
 }

@@ -44,26 +44,27 @@ public class QueryInstanceResult extends JdcloudResult implements java.io.Serial
     /**
      * loginedInstance
      */
+    
     private List<DmsInstance> loginedInstance;
-
     /**
      * unloginedInstance
      */
+    
     private List<DmsInstance> unloginedInstance;
-
     /**
      * noNeedLoginInstance
      */
+    
     private List<DmsInstance> noNeedLoginInstance;
-
     /**
      * rdsIntance
      */
+    
     private List<DmsInstance> rdsIntance;
-
     /**
      * drdsIntance
      */
+    
     private List<DmsInstance> drdsIntance;
 
 
@@ -85,95 +86,101 @@ public class QueryInstanceResult extends JdcloudResult implements java.io.Serial
         this.instanceQueryTypeEnum = instanceQueryTypeEnum;
     }
 
+
     /**
-     * get loginedInstance
-     *
-     * @return
-     */
+    * get loginedInstance
+    *
+    * @return
+    */
     public List<DmsInstance> getLoginedInstance() {
         return loginedInstance;
     }
 
     /**
-     * set loginedInstance
-     *
-     * @param loginedInstance
-     */
+    * set loginedInstance
+    *
+    * @param loginedInstance
+    */
     public void setLoginedInstance(List<DmsInstance> loginedInstance) {
         this.loginedInstance = loginedInstance;
     }
 
+
     /**
-     * get unloginedInstance
-     *
-     * @return
-     */
+    * get unloginedInstance
+    *
+    * @return
+    */
     public List<DmsInstance> getUnloginedInstance() {
         return unloginedInstance;
     }
 
     /**
-     * set unloginedInstance
-     *
-     * @param unloginedInstance
-     */
+    * set unloginedInstance
+    *
+    * @param unloginedInstance
+    */
     public void setUnloginedInstance(List<DmsInstance> unloginedInstance) {
         this.unloginedInstance = unloginedInstance;
     }
 
+
     /**
-     * get noNeedLoginInstance
-     *
-     * @return
-     */
+    * get noNeedLoginInstance
+    *
+    * @return
+    */
     public List<DmsInstance> getNoNeedLoginInstance() {
         return noNeedLoginInstance;
     }
 
     /**
-     * set noNeedLoginInstance
-     *
-     * @param noNeedLoginInstance
-     */
+    * set noNeedLoginInstance
+    *
+    * @param noNeedLoginInstance
+    */
     public void setNoNeedLoginInstance(List<DmsInstance> noNeedLoginInstance) {
         this.noNeedLoginInstance = noNeedLoginInstance;
     }
 
+
     /**
-     * get rdsIntance
-     *
-     * @return
-     */
+    * get rdsIntance
+    *
+    * @return
+    */
     public List<DmsInstance> getRdsIntance() {
         return rdsIntance;
     }
 
     /**
-     * set rdsIntance
-     *
-     * @param rdsIntance
-     */
+    * set rdsIntance
+    *
+    * @param rdsIntance
+    */
     public void setRdsIntance(List<DmsInstance> rdsIntance) {
         this.rdsIntance = rdsIntance;
     }
 
+
     /**
-     * get drdsIntance
-     *
-     * @return
-     */
+    * get drdsIntance
+    *
+    * @return
+    */
     public List<DmsInstance> getDrdsIntance() {
         return drdsIntance;
     }
 
     /**
-     * set drdsIntance
-     *
-     * @param drdsIntance
-     */
+    * set drdsIntance
+    *
+    * @param drdsIntance
+    */
     public void setDrdsIntance(List<DmsInstance> drdsIntance) {
         this.drdsIntance = drdsIntance;
     }
+
 
 
     /**
@@ -186,55 +193,61 @@ public class QueryInstanceResult extends JdcloudResult implements java.io.Serial
         return this;
     }
 
+
     /**
-     * set loginedInstance
-     *
-     * @param loginedInstance
-     */
+    * set loginedInstance
+    *
+    * @param loginedInstance
+    */
     public QueryInstanceResult loginedInstance(List<DmsInstance> loginedInstance) {
         this.loginedInstance = loginedInstance;
         return this;
     }
 
+
     /**
-     * set unloginedInstance
-     *
-     * @param unloginedInstance
-     */
+    * set unloginedInstance
+    *
+    * @param unloginedInstance
+    */
     public QueryInstanceResult unloginedInstance(List<DmsInstance> unloginedInstance) {
         this.unloginedInstance = unloginedInstance;
         return this;
     }
 
+
     /**
-     * set noNeedLoginInstance
-     *
-     * @param noNeedLoginInstance
-     */
+    * set noNeedLoginInstance
+    *
+    * @param noNeedLoginInstance
+    */
     public QueryInstanceResult noNeedLoginInstance(List<DmsInstance> noNeedLoginInstance) {
         this.noNeedLoginInstance = noNeedLoginInstance;
         return this;
     }
 
+
     /**
-     * set rdsIntance
-     *
-     * @param rdsIntance
-     */
+    * set rdsIntance
+    *
+    * @param rdsIntance
+    */
     public QueryInstanceResult rdsIntance(List<DmsInstance> rdsIntance) {
         this.rdsIntance = rdsIntance;
         return this;
     }
 
+
     /**
-     * set drdsIntance
-     *
-     * @param drdsIntance
-     */
+    * set drdsIntance
+    *
+    * @param drdsIntance
+    */
     public QueryInstanceResult drdsIntance(List<DmsInstance> drdsIntance) {
         this.drdsIntance = drdsIntance;
         return this;
     }
+
 
 
     /**
@@ -296,5 +309,4 @@ public class QueryInstanceResult extends JdcloudResult implements java.io.Serial
         }
         this.drdsIntance.add(drdsIntance);
     }
-
 }

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.DatabaseListResponse;
 
 /**
- * 获取数据库实例的库列表
+ * 获取数据库实例的库列表，支持Mysql，Stardb，Tidb，ClickHouse
  */
 class DatabaseListExecutor extends JdcloudExecutor {
 

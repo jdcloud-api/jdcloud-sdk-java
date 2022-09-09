@@ -40,6 +40,7 @@ public class DescribeInstanceAttributesResult extends JdcloudResult implements j
     private TidbInstanceAttribute tidbInstanceAttributes;
 
 
+
     /**
      * get tidbInstanceAttributes
      *
@@ -57,6 +58,7 @@ public class DescribeInstanceAttributesResult extends JdcloudResult implements j
     public void setTidbInstanceAttributes(TidbInstanceAttribute tidbInstanceAttributes) {
         this.tidbInstanceAttributes = tidbInstanceAttributes;
     }
+
 
 
     /**

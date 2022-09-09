@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 生成删除视图sql语句
+ * 生成删除视图sql语句，支持Mysql
  */
 public class GeneralDropViewResponse extends JdcloudResponse<GeneralDropViewResult> implements java.io.Serializable {
 

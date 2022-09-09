@@ -43,6 +43,7 @@ public class TableFilter  implements java.io.Serializable {
     private String filter;
 
 
+
     /**
      * get 表名。
      *
@@ -60,6 +61,7 @@ public class TableFilter  implements java.io.Serializable {
     public void setTableName(String tableName) {
         this.tableName = tableName;
     }
+
 
     /**
      * get 查询条件。
@@ -80,6 +82,7 @@ public class TableFilter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 表名。
      *
@@ -89,6 +92,7 @@ public class TableFilter  implements java.io.Serializable {
         this.tableName = tableName;
         return this;
     }
+
 
     /**
      * set 查询条件。

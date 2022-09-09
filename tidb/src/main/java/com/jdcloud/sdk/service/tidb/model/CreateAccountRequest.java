@@ -63,6 +63,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     private String instanceId;
 
 
+
     /**
      * get 账号名，在同一个实例中，账号名不能重复
      *
@@ -80,6 +81,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
 
     /**
      * get 密码
@@ -99,6 +101,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
         this.accountPassword = accountPassword;
     }
 
+
     /**
      * get 地域代码
      *
@@ -116,6 +119,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -136,6 +140,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 账号名，在同一个实例中，账号名不能重复
      *
@@ -145,6 +150,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
         this.accountName = accountName;
         return this;
     }
+
 
     /**
      * set 密码
@@ -156,6 +162,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 地域代码
      *
@@ -165,6 +172,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID

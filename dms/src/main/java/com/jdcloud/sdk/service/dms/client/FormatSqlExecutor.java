@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.FormatSqlResponse;
 
 /**
- * sql格式化
+ * sql格式化，支持Mysql，Stardb
  */
 class FormatSqlExecutor extends JdcloudExecutor {
 

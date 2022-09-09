@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取Dms域名
+ * 获取Dms域名，仅供前端使用
  */
 public class GetDmsDomainResult extends JdcloudResult implements java.io.Serializable {
 
@@ -37,6 +37,7 @@ public class GetDmsDomainResult extends JdcloudResult implements java.io.Seriali
      * 区域到域名映射，例{&quot;cn-north-1&quot;:&quot;http://10.222.49.154:8080&quot;, &quot;cn-east-1&quot;:&quot;http://10.222.49.154:8080&quot;}。
      */
     private Object domains;
+
 
 
     /**
@@ -56,6 +57,7 @@ public class GetDmsDomainResult extends JdcloudResult implements java.io.Seriali
     public void setDomains(Object domains) {
         this.domains = domains;
     }
+
 
 
     /**

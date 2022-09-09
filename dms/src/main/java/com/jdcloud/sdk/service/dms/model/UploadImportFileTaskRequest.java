@@ -14,7 +14,7 @@
  * limitations under the License.
  *
  * DmsTask
- * 工单管理
+ * 工单管理，支持Stardb工单系统
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 上传文件
+ * 上传文件，支持Stardb，只支持前端页面使用
  */
 public class UploadImportFileTaskRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -54,14 +54,15 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
     /**
      * 分片文件
      */
+    
     private List<Integer> file;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -82,6 +83,7 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
         this.taskId = taskId;
     }
 
+
     /**
      * get 上传文件分片号
      *
@@ -99,6 +101,7 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
     public void setChunkNumber(Integer chunkNumber) {
         this.chunkNumber = chunkNumber;
     }
+
 
     /**
      * get 分片文件MD5
@@ -118,23 +121,25 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
         this.identifier = identifier;
     }
 
+
     /**
-     * get 分片文件
-     *
-     * @return
-     */
+    * get 分片文件
+    *
+    * @return
+    */
     public List<Integer> getFile() {
         return file;
     }
 
     /**
-     * set 分片文件
-     *
-     * @param file
-     */
+    * set 分片文件
+    *
+    * @param file
+    */
     public void setFile(List<Integer> file) {
         this.file = file;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -155,6 +160,7 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 上传文件任务id
      *
@@ -164,6 +170,7 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 上传文件分片号
@@ -175,6 +182,7 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 分片文件MD5
      *
@@ -185,15 +193,17 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
-     * set 分片文件
-     *
-     * @param file
-     */
+    * set 分片文件
+    *
+    * @param file
+    */
     public UploadImportFileTaskRequest file(List<Integer> file) {
         this.file = file;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -204,6 +214,7 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -217,5 +228,4 @@ public class UploadImportFileTaskRequest extends JdcloudRequest implements java.
         }
         this.file.add(file);
     }
-
 }

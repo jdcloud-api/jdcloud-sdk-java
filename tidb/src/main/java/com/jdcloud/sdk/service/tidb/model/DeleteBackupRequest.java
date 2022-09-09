@@ -49,6 +49,7 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
     private String backupId;
 
 
+
     /**
      * get 地域代码
      *
@@ -66,6 +67,7 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 备份ID
@@ -86,6 +88,7 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 地域代码
      *
@@ -95,6 +98,7 @@ public class DeleteBackupRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 备份ID

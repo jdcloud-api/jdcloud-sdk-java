@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 执行编程对象sql
+ * 执行编程对象sql，支持Mysql
  */
 public class ExeProgramRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -49,14 +49,15 @@ public class ExeProgramRequest extends JdcloudRequest implements java.io.Seriali
     /**
      * SQL列表。
      */
+    
     private List<DmsSql> dmsSqls;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -77,6 +78,7 @@ public class ExeProgramRequest extends JdcloudRequest implements java.io.Seriali
         this.dataSourceId = dataSourceId;
     }
 
+
     /**
      * get 数据库名称。
      *
@@ -95,23 +97,25 @@ public class ExeProgramRequest extends JdcloudRequest implements java.io.Seriali
         this.dbName = dbName;
     }
 
+
     /**
-     * get SQL列表。
-     *
-     * @return
-     */
+    * get SQL列表。
+    *
+    * @return
+    */
     public List<DmsSql> getDmsSqls() {
         return dmsSqls;
     }
 
     /**
-     * set SQL列表。
-     *
-     * @param dmsSqls
-     */
+    * set SQL列表。
+    *
+    * @param dmsSqls
+    */
     public void setDmsSqls(List<DmsSql> dmsSqls) {
         this.dmsSqls = dmsSqls;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -132,6 +136,7 @@ public class ExeProgramRequest extends JdcloudRequest implements java.io.Seriali
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -141,6 +146,7 @@ public class ExeProgramRequest extends JdcloudRequest implements java.io.Seriali
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称。
@@ -152,15 +158,17 @@ public class ExeProgramRequest extends JdcloudRequest implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set SQL列表。
-     *
-     * @param dmsSqls
-     */
+    * set SQL列表。
+    *
+    * @param dmsSqls
+    */
     public ExeProgramRequest dmsSqls(List<DmsSql> dmsSqls) {
         this.dmsSqls = dmsSqls;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -171,6 +179,7 @@ public class ExeProgramRequest extends JdcloudRequest implements java.io.Seriali
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -184,5 +193,4 @@ public class ExeProgramRequest extends JdcloudRequest implements java.io.Seriali
         }
         this.dmsSqls.add(dmsSql);
     }
-
 }

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.dms.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 执行sql语句
+ * 执行sql语句，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class ConsoleSqlResponse extends JdcloudResponse<ConsoleSqlResult> implements java.io.Serializable {
 

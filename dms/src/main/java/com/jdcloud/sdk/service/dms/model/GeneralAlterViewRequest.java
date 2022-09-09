@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 生成修改视图sql语句
+ * 生成修改视图sql语句，支持Mysql
  */
 public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -87,6 +87,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 数据源id
      *
@@ -104,6 +105,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
     public void setDataSourceId(Integer dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 数据库名称。
@@ -123,6 +125,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.dbName = dbName;
     }
 
+
     /**
      * get 视图名称。
      *
@@ -140,6 +143,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
     public void setViewName(String viewName) {
         this.viewName = viewName;
     }
+
 
     /**
      * get 原始视图名称。
@@ -159,6 +163,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.originViewName = originViewName;
     }
 
+
     /**
      * get 视图算法，DEFAULT(&quot;DEFAULT&quot;, 1),UNDEFINED(&quot;UNDEFINED&quot;, 2), MERGE(&quot;MERGE&quot;, 3), TEMPTABLE(&quot;TEMPTABLE&quot;, 4);
      *
@@ -176,6 +181,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
     public void setViewAlgorithm(String viewAlgorithm) {
         this.viewAlgorithm = viewAlgorithm;
     }
+
 
     /**
      * get 定义者。
@@ -195,6 +201,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.definer = definer;
     }
 
+
     /**
      * get 安全性，DEFAULT(&quot;DEFAULT&quot;, 1),DEFINER(&quot;DEFINER&quot;, 2), INVOKER(&quot;INVOKER&quot;, 3);
      *
@@ -212,6 +219,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
     public void setViewSecurity(String viewSecurity) {
         this.viewSecurity = viewSecurity;
     }
+
 
     /**
      * get 检查选项，DEFAULT(&quot;DEFAULT&quot;, 1),LOCAL(&quot;LOCAL&quot;, 2), CASCADED(&quot;CASCADED&quot;, 3);;
@@ -231,6 +239,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.viewCheckOption = viewCheckOption;
     }
 
+
     /**
      * get 视图定义。
      *
@@ -248,6 +257,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
     public void setDefinitionSql(String definitionSql) {
         this.definitionSql = definitionSql;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -268,6 +278,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 数据源id
      *
@@ -277,6 +288,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.dataSourceId = dataSourceId;
         return this;
     }
+
 
     /**
      * set 数据库名称。
@@ -288,6 +300,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 视图名称。
      *
@@ -297,6 +310,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.viewName = viewName;
         return this;
     }
+
 
     /**
      * set 原始视图名称。
@@ -308,6 +322,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 视图算法，DEFAULT(&quot;DEFAULT&quot;, 1),UNDEFINED(&quot;UNDEFINED&quot;, 2), MERGE(&quot;MERGE&quot;, 3), TEMPTABLE(&quot;TEMPTABLE&quot;, 4);
      *
@@ -317,6 +332,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.viewAlgorithm = viewAlgorithm;
         return this;
     }
+
 
     /**
      * set 定义者。
@@ -328,6 +344,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 安全性，DEFAULT(&quot;DEFAULT&quot;, 1),DEFINER(&quot;DEFINER&quot;, 2), INVOKER(&quot;INVOKER&quot;, 3);
      *
@@ -337,6 +354,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.viewSecurity = viewSecurity;
         return this;
     }
+
 
     /**
      * set 检查选项，DEFAULT(&quot;DEFAULT&quot;, 1),LOCAL(&quot;LOCAL&quot;, 2), CASCADED(&quot;CASCADED&quot;, 3);;
@@ -348,6 +366,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 视图定义。
      *
@@ -357,6 +376,7 @@ public class GeneralAlterViewRequest extends JdcloudRequest implements java.io.S
         this.definitionSql = definitionSql;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

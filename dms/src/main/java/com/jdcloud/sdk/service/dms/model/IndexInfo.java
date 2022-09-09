@@ -47,6 +47,7 @@ public class IndexInfo  implements java.io.Serializable {
     /**
      * 列名称。
      */
+    
     private List<String> columnNames;
 
 
@@ -68,6 +69,7 @@ public class IndexInfo  implements java.io.Serializable {
         this.indexName = indexName;
     }
 
+
     /**
      * get 列类型，普通索引：NORMAL，唯一索引：UNIQUE。
      *
@@ -86,23 +88,25 @@ public class IndexInfo  implements java.io.Serializable {
         this.indexType = indexType;
     }
 
+
     /**
-     * get 列名称。
-     *
-     * @return
-     */
+    * get 列名称。
+    *
+    * @return
+    */
     public List<String> getColumnNames() {
         return columnNames;
     }
 
     /**
-     * set 列名称。
-     *
-     * @param columnNames
-     */
+    * set 列名称。
+    *
+    * @param columnNames
+    */
     public void setColumnNames(List<String> columnNames) {
         this.columnNames = columnNames;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class IndexInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 列类型，普通索引：NORMAL，唯一索引：UNIQUE。
      *
@@ -125,15 +130,17 @@ public class IndexInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 列名称。
-     *
-     * @param columnNames
-     */
+    * set 列名称。
+    *
+    * @param columnNames
+    */
     public IndexInfo columnNames(List<String> columnNames) {
         this.columnNames = columnNames;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class IndexInfo  implements java.io.Serializable {
         }
         this.columnNames.add(columnName);
     }
-
 }

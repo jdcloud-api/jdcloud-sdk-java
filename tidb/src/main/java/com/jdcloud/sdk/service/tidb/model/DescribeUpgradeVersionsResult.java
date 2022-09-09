@@ -38,37 +38,40 @@ public class DescribeUpgradeVersionsResult extends JdcloudResult implements java
     /**
      * versions
      */
+    
     private List<String> versions;
 
 
     /**
-     * get versions
-     *
-     * @return
-     */
+    * get versions
+    *
+    * @return
+    */
     public List<String> getVersions() {
         return versions;
     }
 
     /**
-     * set versions
-     *
-     * @param versions
-     */
+    * set versions
+    *
+    * @param versions
+    */
     public void setVersions(List<String> versions) {
         this.versions = versions;
     }
 
 
+
     /**
-     * set versions
-     *
-     * @param versions
-     */
+    * set versions
+    *
+    * @param versions
+    */
     public DescribeUpgradeVersionsResult versions(List<String> versions) {
         this.versions = versions;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class DescribeUpgradeVersionsResult extends JdcloudResult implements java
         }
         this.versions.add(version);
     }
-
 }

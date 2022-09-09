@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.dms.model.DmsSqlResult;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 执行sql语句
+ * 执行sql语句，支持Mysql，Stardb，Tidb，ClickHouse
  */
 public class ConsoleSqlResult extends JdcloudResult implements java.io.Serializable {
 
@@ -39,37 +39,40 @@ public class ConsoleSqlResult extends JdcloudResult implements java.io.Serializa
     /**
      * dmsSqlResults
      */
+    
     private List<DmsSqlResult> dmsSqlResults;
 
 
     /**
-     * get dmsSqlResults
-     *
-     * @return
-     */
+    * get dmsSqlResults
+    *
+    * @return
+    */
     public List<DmsSqlResult> getDmsSqlResults() {
         return dmsSqlResults;
     }
 
     /**
-     * set dmsSqlResults
-     *
-     * @param dmsSqlResults
-     */
+    * set dmsSqlResults
+    *
+    * @param dmsSqlResults
+    */
     public void setDmsSqlResults(List<DmsSqlResult> dmsSqlResults) {
         this.dmsSqlResults = dmsSqlResults;
     }
 
 
+
     /**
-     * set dmsSqlResults
-     *
-     * @param dmsSqlResults
-     */
+    * set dmsSqlResults
+    *
+    * @param dmsSqlResults
+    */
     public ConsoleSqlResult dmsSqlResults(List<DmsSqlResult> dmsSqlResults) {
         this.dmsSqlResults = dmsSqlResults;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class ConsoleSqlResult extends JdcloudResult implements java.io.Serializa
         }
         this.dmsSqlResults.add(dmsSqlResult);
     }
-
 }

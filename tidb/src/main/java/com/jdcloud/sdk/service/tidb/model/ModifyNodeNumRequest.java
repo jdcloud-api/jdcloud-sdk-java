@@ -75,6 +75,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     private String instanceId;
 
 
+
     /**
      * get 调整后的tidb节点数
      *
@@ -92,6 +93,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     public void setTidbNodeNum(Integer tidbNodeNum) {
         this.tidbNodeNum = tidbNodeNum;
     }
+
 
     /**
      * get 调整后的tikv节点数
@@ -111,6 +113,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         this.tikvNodeNum = tikvNodeNum;
     }
 
+
     /**
      * get 调整后的pd节点数
      *
@@ -128,6 +131,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     public void setPdNodeNum(Integer pdNodeNum) {
         this.pdNodeNum = pdNodeNum;
     }
+
 
     /**
      * get TiFlash节点规格和数目
@@ -147,6 +151,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         this.tiflashNodeSpec = tiflashNodeSpec;
     }
 
+
     /**
      * get Ticdc节点规格和数目
      *
@@ -165,6 +170,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         this.ticdcNodeSpec = ticdcNodeSpec;
     }
 
+
     /**
      * get 地域代码
      *
@@ -182,6 +188,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 实例ID
@@ -202,6 +209,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 调整后的tidb节点数
      *
@@ -211,6 +219,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         this.tidbNodeNum = tidbNodeNum;
         return this;
     }
+
 
     /**
      * set 调整后的tikv节点数
@@ -222,6 +231,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 调整后的pd节点数
      *
@@ -231,6 +241,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         this.pdNodeNum = pdNodeNum;
         return this;
     }
+
 
     /**
      * set TiFlash节点规格和数目
@@ -242,6 +253,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set Ticdc节点规格和数目
      *
@@ -252,6 +264,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 地域代码
      *
@@ -261,6 +274,7 @@ public class ModifyNodeNumRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 实例ID
