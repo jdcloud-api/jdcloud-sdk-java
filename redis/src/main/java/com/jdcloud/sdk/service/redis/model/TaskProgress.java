@@ -63,6 +63,7 @@ public class TaskProgress  implements java.io.Serializable {
     private String startTime;
 
 
+
     /**
      * get 任务类型：resize表示变配，同一时刻只能有一个变配任务
      *
@@ -80,6 +81,7 @@ public class TaskProgress  implements java.io.Serializable {
     public void setTaskType(String taskType) {
         this.taskType = taskType;
     }
+
 
     /**
      * get 任务id
@@ -99,6 +101,7 @@ public class TaskProgress  implements java.io.Serializable {
         this.taskId = taskId;
     }
 
+
     /**
      * get 任务状态：init表示初始化，running表示运行中，success表示成功，fail表示失败
      *
@@ -116,6 +119,7 @@ public class TaskProgress  implements java.io.Serializable {
     public void setTaskStatus(String taskStatus) {
         this.taskStatus = taskStatus;
     }
+
 
     /**
      * get 任务执行百分比
@@ -135,6 +139,7 @@ public class TaskProgress  implements java.io.Serializable {
         this.progressPercent = progressPercent;
     }
 
+
     /**
      * get 执行时长（单位：秒）
      *
@@ -152,6 +157,7 @@ public class TaskProgress  implements java.io.Serializable {
     public void setElapsedTimeSecond(Integer elapsedTimeSecond) {
         this.elapsedTimeSecond = elapsedTimeSecond;
     }
+
 
     /**
      * get 启动时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
@@ -172,6 +178,7 @@ public class TaskProgress  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 任务类型：resize表示变配，同一时刻只能有一个变配任务
      *
@@ -181,6 +188,7 @@ public class TaskProgress  implements java.io.Serializable {
         this.taskType = taskType;
         return this;
     }
+
 
     /**
      * set 任务id
@@ -192,6 +200,7 @@ public class TaskProgress  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务状态：init表示初始化，running表示运行中，success表示成功，fail表示失败
      *
@@ -201,6 +210,7 @@ public class TaskProgress  implements java.io.Serializable {
         this.taskStatus = taskStatus;
         return this;
     }
+
 
     /**
      * set 任务执行百分比
@@ -212,6 +222,7 @@ public class TaskProgress  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 执行时长（单位：秒）
      *
@@ -221,6 +232,7 @@ public class TaskProgress  implements java.io.Serializable {
         this.elapsedTimeSecond = elapsedTimeSecond;
         return this;
     }
+
 
     /**
      * set 启动时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）

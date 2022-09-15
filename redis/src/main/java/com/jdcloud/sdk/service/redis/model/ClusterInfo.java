@@ -37,103 +37,110 @@ public class ClusterInfo  implements java.io.Serializable {
     /**
      * 代理列表
      */
+    
     private List<Proxy> proxies;
-
     /**
      * 分片列表
      */
+    
     private List<Shard> shards;
-
     /**
      * redis列表
      */
+    
     private List<Redis> redis;
 
 
     /**
-     * get 代理列表
-     *
-     * @return
-     */
+    * get 代理列表
+    *
+    * @return
+    */
     public List<Proxy> getProxies() {
         return proxies;
     }
 
     /**
-     * set 代理列表
-     *
-     * @param proxies
-     */
+    * set 代理列表
+    *
+    * @param proxies
+    */
     public void setProxies(List<Proxy> proxies) {
         this.proxies = proxies;
     }
 
+
     /**
-     * get 分片列表
-     *
-     * @return
-     */
+    * get 分片列表
+    *
+    * @return
+    */
     public List<Shard> getShards() {
         return shards;
     }
 
     /**
-     * set 分片列表
-     *
-     * @param shards
-     */
+    * set 分片列表
+    *
+    * @param shards
+    */
     public void setShards(List<Shard> shards) {
         this.shards = shards;
     }
 
+
     /**
-     * get redis列表
-     *
-     * @return
-     */
+    * get redis列表
+    *
+    * @return
+    */
     public List<Redis> getRedis() {
         return redis;
     }
 
     /**
-     * set redis列表
-     *
-     * @param redis
-     */
+    * set redis列表
+    *
+    * @param redis
+    */
     public void setRedis(List<Redis> redis) {
         this.redis = redis;
     }
 
 
+
     /**
-     * set 代理列表
-     *
-     * @param proxies
-     */
+    * set 代理列表
+    *
+    * @param proxies
+    */
     public ClusterInfo proxies(List<Proxy> proxies) {
         this.proxies = proxies;
         return this;
     }
 
+
     /**
-     * set 分片列表
-     *
-     * @param shards
-     */
+    * set 分片列表
+    *
+    * @param shards
+    */
     public ClusterInfo shards(List<Shard> shards) {
         this.shards = shards;
         return this;
     }
 
+
     /**
-     * set redis列表
-     *
-     * @param redis
-     */
+    * set redis列表
+    *
+    * @param redis
+    */
     public ClusterInfo redis(List<Redis> redis) {
         this.redis = redis;
         return this;
     }
+
 
 
     /**
@@ -171,5 +178,4 @@ public class ClusterInfo  implements java.io.Serializable {
         }
         this.redis.add(redi);
     }
-
 }

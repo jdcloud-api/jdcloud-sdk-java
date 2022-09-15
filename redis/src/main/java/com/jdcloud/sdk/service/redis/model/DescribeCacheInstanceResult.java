@@ -40,6 +40,7 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
     private CacheInstance cacheInstance;
 
 
+
     /**
      * get 实例的详细信息
      *
@@ -57,6 +58,7 @@ public class DescribeCacheInstanceResult extends JdcloudResult implements java.i
     public void setCacheInstance(CacheInstance cacheInstance) {
         this.cacheInstance = cacheInstance;
     }
+
 
 
     /**

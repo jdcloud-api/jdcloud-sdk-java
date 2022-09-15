@@ -53,6 +53,7 @@ public class CacheAnalysis  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 缓存分析的时间,rfc3339格式
      *
@@ -71,6 +72,7 @@ public class CacheAnalysis  implements java.io.Serializable {
         this.analysisTime = analysisTime;
     }
 
+
     /**
      * get 缓存分析的任务ID
      *
@@ -88,6 +90,7 @@ public class CacheAnalysis  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 缓存分析任务状态, running, success, error, 只有sucess状态，才能根据taskId查询到结果
@@ -108,6 +111,7 @@ public class CacheAnalysis  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 缓存分析的时间,rfc3339格式
      *
@@ -118,6 +122,7 @@ public class CacheAnalysis  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 缓存分析的任务ID
      *
@@ -127,6 +132,7 @@ public class CacheAnalysis  implements java.io.Serializable {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 缓存分析任务状态, running, success, error, 只有sucess状态，才能根据taskId查询到结果

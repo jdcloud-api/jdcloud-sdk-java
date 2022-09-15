@@ -69,6 +69,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 缓存分析的开始时间,rfc3339格式
      *
@@ -86,6 +87,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
     public void setAnalysisTime(String analysisTime) {
         this.analysisTime = analysisTime;
     }
+
 
     /**
      * get 缓存分析的任务ID
@@ -105,6 +107,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
         this.taskId = taskId;
     }
 
+
     /**
      * get 缓存分析的分析时长
      *
@@ -123,6 +126,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
         this.analysisDuration = analysisDuration;
     }
 
+
     /**
      * get 缓存分析的结果下载地址
      *
@@ -140,6 +144,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
     public void setDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
     }
+
 
     /**
      * get 缓存分析任务状态, running, success, error, 只有sucess状态，才能根据taskId查询到结果
@@ -160,6 +165,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 缓存分析的开始时间,rfc3339格式
      *
@@ -169,6 +175,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
         this.analysisTime = analysisTime;
         return this;
     }
+
 
     /**
      * set 缓存分析的任务ID
@@ -180,6 +187,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 缓存分析的分析时长
      *
@@ -190,6 +198,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 缓存分析的结果下载地址
      *
@@ -199,6 +208,7 @@ public class ClusterCacheAnalysis  implements java.io.Serializable {
         this.downloadUrl = downloadUrl;
         return this;
     }
+
 
     /**
      * set 缓存分析任务状态, running, success, error, 只有sucess状态，才能根据taskId查询到结果

@@ -59,6 +59,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     private String cacheInstanceId;
 
 
+
     /**
      * get 实例的名称，名称只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
@@ -76,6 +77,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     public void setCacheInstanceName(String cacheInstanceName) {
         this.cacheInstanceName = cacheInstanceName;
     }
+
 
     /**
      * get 实例的描述，不能超过256个字符
@@ -95,6 +97,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
         this.cacheInstanceDescription = cacheInstanceDescription;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -112,6 +115,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -132,6 +136,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
     }
 
 
+
     /**
      * set 实例的名称，名称只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
@@ -141,6 +146,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
         this.cacheInstanceName = cacheInstanceName;
         return this;
     }
+
 
     /**
      * set 实例的描述，不能超过256个字符
@@ -152,6 +158,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -161,6 +168,7 @@ public class ModifyCacheInstanceAttributeRequest extends JdcloudRequest implemen
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识

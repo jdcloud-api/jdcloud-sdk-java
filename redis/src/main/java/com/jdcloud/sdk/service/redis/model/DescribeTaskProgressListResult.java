@@ -39,37 +39,40 @@ public class DescribeTaskProgressListResult extends JdcloudResult implements jav
     /**
      * taskProgresses
      */
+    
     private List<TaskProgress> taskProgresses;
 
 
     /**
-     * get taskProgresses
-     *
-     * @return
-     */
+    * get taskProgresses
+    *
+    * @return
+    */
     public List<TaskProgress> getTaskProgresses() {
         return taskProgresses;
     }
 
     /**
-     * set taskProgresses
-     *
-     * @param taskProgresses
-     */
+    * set taskProgresses
+    *
+    * @param taskProgresses
+    */
     public void setTaskProgresses(List<TaskProgress> taskProgresses) {
         this.taskProgresses = taskProgresses;
     }
 
 
+
     /**
-     * set taskProgresses
-     *
-     * @param taskProgresses
-     */
+    * set taskProgresses
+    *
+    * @param taskProgresses
+    */
     public DescribeTaskProgressListResult taskProgresses(List<TaskProgress> taskProgresses) {
         this.taskProgresses = taskProgresses;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeTaskProgressListResult extends JdcloudResult implements jav
         }
         this.taskProgresses.add(taskProgresse);
     }
-
 }

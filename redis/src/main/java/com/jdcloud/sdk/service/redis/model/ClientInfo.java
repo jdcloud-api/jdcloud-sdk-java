@@ -63,6 +63,7 @@ public class ClientInfo  implements java.io.Serializable {
     private String startTime;
 
 
+
     /**
      * get 实例名称
      *
@@ -80,6 +81,7 @@ public class ClientInfo  implements java.io.Serializable {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 客户端版本号
@@ -99,6 +101,7 @@ public class ClientInfo  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
      * get 客户端ip
      *
@@ -116,6 +119,7 @@ public class ClientInfo  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get 进程pid/tid/随机数
@@ -135,6 +139,7 @@ public class ClientInfo  implements java.io.Serializable {
         this.pid = pid;
     }
 
+
     /**
      * get UUID
      *
@@ -152,6 +157,7 @@ public class ClientInfo  implements java.io.Serializable {
     public void setUuid(String uuid) {
         this.uuid = uuid;
     }
+
 
     /**
      * get 客户端启动时间
@@ -172,6 +178,7 @@ public class ClientInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例名称
      *
@@ -181,6 +188,7 @@ public class ClientInfo  implements java.io.Serializable {
         this.instanceName = instanceName;
         return this;
     }
+
 
     /**
      * set 客户端版本号
@@ -192,6 +200,7 @@ public class ClientInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 客户端ip
      *
@@ -201,6 +210,7 @@ public class ClientInfo  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set 进程pid/tid/随机数
@@ -212,6 +222,7 @@ public class ClientInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set UUID
      *
@@ -221,6 +232,7 @@ public class ClientInfo  implements java.io.Serializable {
         this.uuid = uuid;
         return this;
     }
+
 
     /**
      * set 客户端启动时间

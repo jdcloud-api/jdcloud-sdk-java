@@ -107,11 +107,12 @@ public class InternalInstance  implements java.io.Serializable {
     /**
      * 实例内部节点ip列表
      */
+    
     private List<String> ips;
-
     /**
      * 实例内部节点所在宿主机ip列表
      */
+    
     private List<String> hostIps;
 
 
@@ -133,6 +134,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get region
      *
@@ -150,6 +152,7 @@ public class InternalInstance  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 实例ID
@@ -169,6 +172,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 实例名称
      *
@@ -186,6 +190,7 @@ public class InternalInstance  implements java.io.Serializable {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 实例类型：master-slave表示主从版，cluster表示集群版
@@ -205,6 +210,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
      *
@@ -222,6 +228,7 @@ public class InternalInstance  implements java.io.Serializable {
     public void setInstanceStatus(String instanceStatus) {
         this.instanceStatus = instanceStatus;
     }
+
 
     /**
      * get 实例版本：包括2.8、4.0
@@ -241,6 +248,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.instanceVersion = instanceVersion;
     }
 
+
     /**
      * get 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
@@ -258,6 +266,7 @@ public class InternalInstance  implements java.io.Serializable {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+
 
     /**
      * get 所属VPC ID
@@ -277,6 +286,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 所属子网ID
      *
@@ -294,6 +304,7 @@ public class InternalInstance  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 访问域名
@@ -313,6 +324,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.connectionDomain = connectionDomain;
     }
 
+
     /**
      * get 访问端口
      *
@@ -330,6 +342,7 @@ public class InternalInstance  implements java.io.Serializable {
     public void setConnectionPort(Integer connectionPort) {
         this.connectionPort = connectionPort;
     }
+
 
     /**
      * get 连接redis实例时，是否需要密码认证，false表示无密码
@@ -349,6 +362,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.auth = auth;
     }
 
+
     /**
      * get 前端app ip
      *
@@ -367,41 +381,44 @@ public class InternalInstance  implements java.io.Serializable {
         this.frontAppIp = frontAppIp;
     }
 
+
     /**
-     * get 实例内部节点ip列表
-     *
-     * @return
-     */
+    * get 实例内部节点ip列表
+    *
+    * @return
+    */
     public List<String> getIps() {
         return ips;
     }
 
     /**
-     * set 实例内部节点ip列表
-     *
-     * @param ips
-     */
+    * set 实例内部节点ip列表
+    *
+    * @param ips
+    */
     public void setIps(List<String> ips) {
         this.ips = ips;
     }
 
+
     /**
-     * get 实例内部节点所在宿主机ip列表
-     *
-     * @return
-     */
+    * get 实例内部节点所在宿主机ip列表
+    *
+    * @return
+    */
     public List<String> getHostIps() {
         return hostIps;
     }
 
     /**
-     * set 实例内部节点所在宿主机ip列表
-     *
-     * @param hostIps
-     */
+    * set 实例内部节点所在宿主机ip列表
+    *
+    * @param hostIps
+    */
     public void setHostIps(List<String> hostIps) {
         this.hostIps = hostIps;
     }
+
 
 
     /**
@@ -414,6 +431,7 @@ public class InternalInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set region
      *
@@ -423,6 +441,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 实例ID
@@ -434,6 +453,7 @@ public class InternalInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例名称
      *
@@ -443,6 +463,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.instanceName = instanceName;
         return this;
     }
+
 
     /**
      * set 实例类型：master-slave表示主从版，cluster表示集群版
@@ -454,6 +475,7 @@ public class InternalInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
      *
@@ -463,6 +485,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.instanceStatus = instanceStatus;
         return this;
     }
+
 
     /**
      * set 实例版本：包括2.8、4.0
@@ -474,6 +497,7 @@ public class InternalInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
@@ -483,6 +507,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
     /**
      * set 所属VPC ID
@@ -494,6 +519,7 @@ public class InternalInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 所属子网ID
      *
@@ -503,6 +529,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 访问域名
@@ -514,6 +541,7 @@ public class InternalInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 访问端口
      *
@@ -523,6 +551,7 @@ public class InternalInstance  implements java.io.Serializable {
         this.connectionPort = connectionPort;
         return this;
     }
+
 
     /**
      * set 连接redis实例时，是否需要密码认证，false表示无密码
@@ -534,6 +563,7 @@ public class InternalInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 前端app ip
      *
@@ -544,25 +574,28 @@ public class InternalInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例内部节点ip列表
-     *
-     * @param ips
-     */
+    * set 实例内部节点ip列表
+    *
+    * @param ips
+    */
     public InternalInstance ips(List<String> ips) {
         this.ips = ips;
         return this;
     }
 
+
     /**
-     * set 实例内部节点所在宿主机ip列表
-     *
-     * @param hostIps
-     */
+    * set 实例内部节点所在宿主机ip列表
+    *
+    * @param hostIps
+    */
     public InternalInstance hostIps(List<String> hostIps) {
         this.hostIps = hostIps;
         return this;
     }
+
 
 
     /**
@@ -588,5 +621,4 @@ public class InternalInstance  implements java.io.Serializable {
         }
         this.hostIps.add(hostIp);
     }
-
 }

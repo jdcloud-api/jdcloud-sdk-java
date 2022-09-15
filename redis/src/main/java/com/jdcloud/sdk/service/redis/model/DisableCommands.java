@@ -48,6 +48,7 @@ public class DisableCommands  implements java.io.Serializable {
     private String commandName;
 
 
+
     /**
      * get 命令是否禁用
      *
@@ -65,6 +66,7 @@ public class DisableCommands  implements java.io.Serializable {
     public void setIsDisable(Boolean isDisable) {
         this.isDisable = isDisable;
     }
+
 
     /**
      * get 命令名称
@@ -85,6 +87,7 @@ public class DisableCommands  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 命令是否禁用
      *
@@ -94,6 +97,7 @@ public class DisableCommands  implements java.io.Serializable {
         this.isDisable = isDisable;
         return this;
     }
+
 
     /**
      * set 命令名称

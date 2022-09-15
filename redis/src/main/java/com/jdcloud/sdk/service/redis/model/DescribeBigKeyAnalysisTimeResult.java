@@ -39,6 +39,7 @@ public class DescribeBigKeyAnalysisTimeResult extends JdcloudResult implements j
     private String time;
 
 
+
     /**
      * get -表示为关闭，HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
@@ -56,6 +57,7 @@ public class DescribeBigKeyAnalysisTimeResult extends JdcloudResult implements j
     public void setTime(String time) {
         this.time = time;
     }
+
 
 
     /**

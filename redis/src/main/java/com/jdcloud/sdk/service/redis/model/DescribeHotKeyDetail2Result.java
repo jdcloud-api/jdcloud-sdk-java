@@ -39,31 +39,33 @@ public class DescribeHotKeyDetail2Result extends JdcloudResult implements java.i
     /**
      * hotHeys
      */
+    
     private List<RedisHotKey> hotHeys;
-
     /**
      * 热key总数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get hotHeys
-     *
-     * @return
-     */
+    * get hotHeys
+    *
+    * @return
+    */
     public List<RedisHotKey> getHotHeys() {
         return hotHeys;
     }
 
     /**
-     * set hotHeys
-     *
-     * @param hotHeys
-     */
+    * set hotHeys
+    *
+    * @param hotHeys
+    */
     public void setHotHeys(List<RedisHotKey> hotHeys) {
         this.hotHeys = hotHeys;
     }
+
 
     /**
      * get 热key总数量
@@ -84,15 +86,17 @@ public class DescribeHotKeyDetail2Result extends JdcloudResult implements java.i
     }
 
 
+
     /**
-     * set hotHeys
-     *
-     * @param hotHeys
-     */
+    * set hotHeys
+    *
+    * @param hotHeys
+    */
     public DescribeHotKeyDetail2Result hotHeys(List<RedisHotKey> hotHeys) {
         this.hotHeys = hotHeys;
         return this;
     }
+
 
     /**
      * set 热key总数量
@@ -103,6 +107,7 @@ public class DescribeHotKeyDetail2Result extends JdcloudResult implements java.i
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeHotKeyDetail2Result extends JdcloudResult implements java.i
         }
         this.hotHeys.add(hotHey);
     }
-
 }

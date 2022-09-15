@@ -48,6 +48,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     private Integer visible;
 
 
+
     /**
      * get 物理az
      *
@@ -66,6 +67,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
      * get 是否售罄(0未售罄，1售罄)
      *
@@ -83,6 +85,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     public void setCanSale(Integer canSale) {
         this.canSale = canSale;
     }
+
 
     /**
      * get 是否可见(1可见，0不可见)
@@ -103,6 +106,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 物理az
      *
@@ -113,6 +117,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否售罄(0未售罄，1售罄)
      *
@@ -122,6 +127,7 @@ public class AzSaleStatusVo  implements java.io.Serializable {
         this.canSale = canSale;
         return this;
     }
+
 
     /**
      * set 是否可见(1可见，0不可见)

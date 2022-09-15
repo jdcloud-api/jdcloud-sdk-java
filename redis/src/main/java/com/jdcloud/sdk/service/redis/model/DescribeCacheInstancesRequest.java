@@ -59,31 +59,32 @@ instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluste
 chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 排序属性：
 createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
      */
+    
     private List<Sort> sorts;
-
     /**
      * 标签的过滤条件
      */
+    
     private List<TagFilter> tagFilters;
-
     /**
      * resourceGroupIds
      */
+    
     private List<String> resourceGroupIds;
-
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -104,6 +105,7 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小：取值范围[10, 100]，默认为10
      *
@@ -122,8 +124,9 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 过滤属性：
+    * get 过滤属性：
 cacheInstanceId - 实例Id，精确匹配，可选择多个
 cacheInstanceName - 实例名称，模糊匹配
 cacheInstanceStatus - 实例状态，精确匹配，可选择多个(running：运行中，error：错误，creating：创建中，changing：变配中，configuring：参数修改中，restoring：备份恢复中，deleting：删除中)
@@ -131,15 +134,15 @@ redisVersion - redis引擎版本，精确匹配，可选择2.8和4.0
 instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluster表示集群版）
 chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤属性：
+    * set 过滤属性：
 cacheInstanceId - 实例Id，精确匹配，可选择多个
 cacheInstanceName - 实例名称，模糊匹配
 cacheInstanceStatus - 实例状态，精确匹配，可选择多个(running：运行中，error：错误，creating：创建中，changing：变配中，configuring：参数修改中，restoring：备份恢复中，deleting：删除中)
@@ -147,70 +150,74 @@ redisVersion - redis引擎版本，精确匹配，可选择2.8和4.0
 instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluster表示集群版）
 chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
 
+
     /**
-     * get 排序属性：
+    * get 排序属性：
 createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Sort> getSorts() {
         return sorts;
     }
 
     /**
-     * set 排序属性：
+    * set 排序属性：
 createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
-     *
-     * @param sorts
-     */
+    *
+    * @param sorts
+    */
     public void setSorts(List<Sort> sorts) {
         this.sorts = sorts;
     }
 
+
     /**
-     * get 标签的过滤条件
-     *
-     * @return
-     */
+    * get 标签的过滤条件
+    *
+    * @return
+    */
     public List<TagFilter> getTagFilters() {
         return tagFilters;
     }
 
     /**
-     * set 标签的过滤条件
-     *
-     * @param tagFilters
-     */
+    * set 标签的过滤条件
+    *
+    * @param tagFilters
+    */
     public void setTagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
     }
 
+
     /**
-     * get resourceGroupIds
-     *
-     * @return
-     */
+    * get resourceGroupIds
+    *
+    * @return
+    */
     public List<String> getResourceGroupIds() {
         return resourceGroupIds;
     }
 
     /**
-     * set resourceGroupIds
-     *
-     * @param resourceGroupIds
-     */
+    * set resourceGroupIds
+    *
+    * @param resourceGroupIds
+    */
     public void setResourceGroupIds(List<String> resourceGroupIds) {
         this.resourceGroupIds = resourceGroupIds;
     }
+
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -231,6 +238,7 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
     }
 
 
+
     /**
      * set 页码：取值范围[1,∞)，默认为1
      *
@@ -240,6 +248,7 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小：取值范围[10, 100]，默认为10
@@ -251,8 +260,9 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
         return this;
     }
 
+
     /**
-     * set 过滤属性：
+    * set 过滤属性：
 cacheInstanceId - 实例Id，精确匹配，可选择多个
 cacheInstanceName - 实例名称，模糊匹配
 cacheInstanceStatus - 实例状态，精确匹配，可选择多个(running：运行中，error：错误，creating：创建中，changing：变配中，configuring：参数修改中，restoring：备份恢复中，deleting：删除中)
@@ -260,45 +270,49 @@ redisVersion - redis引擎版本，精确匹配，可选择2.8和4.0
 instanceType - 实例类型，精确匹配（redis表示主从版，redis_cluster表示集群版）
 chargeMode - 计费类型，精确匹配（prepaid_by_duration表示包年包月预付费，postpaid_by_duration表示按配置后付费）
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeCacheInstancesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
 
+
     /**
-     * set 排序属性：
+    * set 排序属性：
 createTime - 按创建时间排序(asc表示按时间正序，desc表示按时间倒序)
 
-     *
-     * @param sorts
-     */
+    *
+    * @param sorts
+    */
     public DescribeCacheInstancesRequest sorts(List<Sort> sorts) {
         this.sorts = sorts;
         return this;
     }
 
+
     /**
-     * set 标签的过滤条件
-     *
-     * @param tagFilters
-     */
+    * set 标签的过滤条件
+    *
+    * @param tagFilters
+    */
     public DescribeCacheInstancesRequest tagFilters(List<TagFilter> tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
 
+
     /**
-     * set resourceGroupIds
-     *
-     * @param resourceGroupIds
-     */
+    * set resourceGroupIds
+    *
+    * @param resourceGroupIds
+    */
     public DescribeCacheInstancesRequest resourceGroupIds(List<String> resourceGroupIds) {
         this.resourceGroupIds = resourceGroupIds;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -309,6 +323,7 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -367,5 +382,4 @@ createTime - 按创建时间排序(asc表示按时间正序，desc表示按时�
         }
         this.resourceGroupIds.add(resourceGroupId);
     }
-
 }

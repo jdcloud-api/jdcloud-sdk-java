@@ -55,6 +55,7 @@ public class KeyFilter  implements java.io.Serializable {
     private Integer value;
 
 
+
     /**
      * get 按过期时间过滤(ttl)、按空闲时间过滤(idle)
      *
@@ -73,6 +74,7 @@ public class KeyFilter  implements java.io.Serializable {
         this.filterType = filterType;
     }
 
+
     /**
      * get 操作符(eq、gt、lt)
      *
@@ -90,6 +92,7 @@ public class KeyFilter  implements java.io.Serializable {
     public void setOperator(String operator) {
         this.operator = operator;
     }
+
 
     /**
      * get 操作值
@@ -110,6 +113,7 @@ public class KeyFilter  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 按过期时间过滤(ttl)、按空闲时间过滤(idle)
      *
@@ -120,6 +124,7 @@ public class KeyFilter  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作符(eq、gt、lt)
      *
@@ -129,6 +134,7 @@ public class KeyFilter  implements java.io.Serializable {
         this.operator = operator;
         return this;
     }
+
 
     /**
      * set 操作值

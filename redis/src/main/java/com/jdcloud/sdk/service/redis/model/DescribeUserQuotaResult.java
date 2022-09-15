@@ -40,6 +40,7 @@ public class DescribeUserQuotaResult extends JdcloudResult implements java.io.Se
     private Quota quota;
 
 
+
     /**
      * get quota
      *
@@ -57,6 +58,7 @@ public class DescribeUserQuotaResult extends JdcloudResult implements java.io.Se
     public void setQuota(Quota quota) {
         this.quota = quota;
     }
+
 
 
     /**

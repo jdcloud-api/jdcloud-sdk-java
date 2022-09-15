@@ -41,8 +41,8 @@ public class ModifyIpWhiteListRequest extends JdcloudRequest implements java.io.
      * Required:true
      */
     @Required
+    
     private List<String> ipWhiteList;
-
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
@@ -58,23 +58,25 @@ public class ModifyIpWhiteListRequest extends JdcloudRequest implements java.io.
     private String cacheInstanceId;
 
 
+
     /**
-     * get 修改后的IP白名单列表，IP格式为CIDR表示法（x.x.x.x/x），0.0.0.0/0表示任何IP、网络都可以访问
-     *
-     * @return
-     */
+    * get 修改后的IP白名单列表，IP格式为CIDR表示法（x.x.x.x/x），0.0.0.0/0表示任何IP、网络都可以访问
+    *
+    * @return
+    */
     public List<String> getIpWhiteList() {
         return ipWhiteList;
     }
 
     /**
-     * set 修改后的IP白名单列表，IP格式为CIDR表示法（x.x.x.x/x），0.0.0.0/0表示任何IP、网络都可以访问
-     *
-     * @param ipWhiteList
-     */
+    * set 修改后的IP白名单列表，IP格式为CIDR表示法（x.x.x.x/x），0.0.0.0/0表示任何IP、网络都可以访问
+    *
+    * @param ipWhiteList
+    */
     public void setIpWhiteList(List<String> ipWhiteList) {
         this.ipWhiteList = ipWhiteList;
     }
+
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -93,6 +95,7 @@ public class ModifyIpWhiteListRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -113,15 +116,17 @@ public class ModifyIpWhiteListRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
-     * set 修改后的IP白名单列表，IP格式为CIDR表示法（x.x.x.x/x），0.0.0.0/0表示任何IP、网络都可以访问
-     *
-     * @param ipWhiteList
-     */
+    * set 修改后的IP白名单列表，IP格式为CIDR表示法（x.x.x.x/x），0.0.0.0/0表示任何IP、网络都可以访问
+    *
+    * @param ipWhiteList
+    */
     public ModifyIpWhiteListRequest ipWhiteList(List<String> ipWhiteList) {
         this.ipWhiteList = ipWhiteList;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -133,6 +138,7 @@ public class ModifyIpWhiteListRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识
      *
@@ -142,6 +148,7 @@ public class ModifyIpWhiteListRequest extends JdcloudRequest implements java.io.
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
+
 
 
     /**
@@ -155,5 +162,4 @@ public class ModifyIpWhiteListRequest extends JdcloudRequest implements java.io.
         }
         this.ipWhiteList.add(ipWhiteList);
     }
-
 }

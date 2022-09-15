@@ -53,6 +53,7 @@ public class Accounts  implements java.io.Serializable {
     private String accountDescription;
 
 
+
     /**
      * get 账号名称
      *
@@ -70,6 +71,7 @@ public class Accounts  implements java.io.Serializable {
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
 
     /**
      * get 账号类型。如果为default则为默认账号；如果为normal则为普通账号
@@ -89,6 +91,7 @@ public class Accounts  implements java.io.Serializable {
         this.accountType = accountType;
     }
 
+
     /**
      * get 账号权限
      *
@@ -106,6 +109,7 @@ public class Accounts  implements java.io.Serializable {
     public void setAccountPrivilege(String accountPrivilege) {
         this.accountPrivilege = accountPrivilege;
     }
+
 
     /**
      * get 账号描述
@@ -126,6 +130,7 @@ public class Accounts  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 账号名称
      *
@@ -135,6 +140,7 @@ public class Accounts  implements java.io.Serializable {
         this.accountName = accountName;
         return this;
     }
+
 
     /**
      * set 账号类型。如果为default则为默认账号；如果为normal则为普通账号
@@ -146,6 +152,7 @@ public class Accounts  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账号权限
      *
@@ -155,6 +162,7 @@ public class Accounts  implements java.io.Serializable {
         this.accountPrivilege = accountPrivilege;
         return this;
     }
+
 
     /**
      * set 账号描述

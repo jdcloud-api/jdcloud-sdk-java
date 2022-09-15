@@ -47,8 +47,8 @@ public class AvailableCPUArch  implements java.io.Serializable {
     /**
      * 售卖内存规格列表
      */
+    
     private List<AvailableMemorySpec> availableMemorySpecs;
-
     /**
      * 支持最小分片数
      */
@@ -63,6 +63,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
      * 支持的最大内存规格
      */
     private Integer maxMemoryMB;
+
 
 
     /**
@@ -83,6 +84,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
         this.cpuArchInfo = cpuArchInfo;
     }
 
+
     /**
      * get 是否售罄
      *
@@ -101,23 +103,25 @@ public class AvailableCPUArch  implements java.io.Serializable {
         this.soldOut = soldOut;
     }
 
+
     /**
-     * get 售卖内存规格列表
-     *
-     * @return
-     */
+    * get 售卖内存规格列表
+    *
+    * @return
+    */
     public List<AvailableMemorySpec> getAvailableMemorySpecs() {
         return availableMemorySpecs;
     }
 
     /**
-     * set 售卖内存规格列表
-     *
-     * @param availableMemorySpecs
-     */
+    * set 售卖内存规格列表
+    *
+    * @param availableMemorySpecs
+    */
     public void setAvailableMemorySpecs(List<AvailableMemorySpec> availableMemorySpecs) {
         this.availableMemorySpecs = availableMemorySpecs;
     }
+
 
     /**
      * get 支持最小分片数
@@ -137,6 +141,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
         this.shardNumberMin = shardNumberMin;
     }
 
+
     /**
      * get 支持最大分片数
      *
@@ -154,6 +159,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
     public void setShardNumberMax(Integer shardNumberMax) {
         this.shardNumberMax = shardNumberMax;
     }
+
 
     /**
      * get 支持的最大内存规格
@@ -174,6 +180,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
     }
 
 
+
     /**
      * set CPU架构详情
      *
@@ -183,6 +190,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
         this.cpuArchInfo = cpuArchInfo;
         return this;
     }
+
 
     /**
      * set 是否售罄
@@ -194,15 +202,17 @@ public class AvailableCPUArch  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 售卖内存规格列表
-     *
-     * @param availableMemorySpecs
-     */
+    * set 售卖内存规格列表
+    *
+    * @param availableMemorySpecs
+    */
     public AvailableCPUArch availableMemorySpecs(List<AvailableMemorySpec> availableMemorySpecs) {
         this.availableMemorySpecs = availableMemorySpecs;
         return this;
     }
+
 
     /**
      * set 支持最小分片数
@@ -214,6 +224,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 支持最大分片数
      *
@@ -224,6 +235,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 支持的最大内存规格
      *
@@ -233,6 +245,7 @@ public class AvailableCPUArch  implements java.io.Serializable {
         this.maxMemoryMB = maxMemoryMB;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class AvailableCPUArch  implements java.io.Serializable {
         }
         this.availableMemorySpecs.add(availableMemorySpec);
     }
-
 }

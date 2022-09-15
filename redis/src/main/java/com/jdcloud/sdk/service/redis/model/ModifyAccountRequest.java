@@ -71,6 +71,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
     private String cacheInstanceId;
 
 
+
     /**
      * get 账号名称
      *
@@ -88,6 +89,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
 
     /**
      * get 账号密码
@@ -107,6 +109,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
         this.accountPassword = accountPassword;
     }
 
+
     /**
      * get 账号权限。支持RoleReadOnly（只读权限）、RoleReadWrite（读写权限）
      *
@@ -124,6 +127,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
     public void setAccountPrivilege(String accountPrivilege) {
         this.accountPrivilege = accountPrivilege;
     }
+
 
     /**
      * get 账号备注
@@ -143,6 +147,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
         this.accountDescription = accountDescription;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -160,6 +165,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -180,6 +186,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 账号名称
      *
@@ -189,6 +196,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
         this.accountName = accountName;
         return this;
     }
+
 
     /**
      * set 账号密码
@@ -200,6 +208,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 账号权限。支持RoleReadOnly（只读权限）、RoleReadWrite（读写权限）
      *
@@ -209,6 +218,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
         this.accountPrivilege = accountPrivilege;
         return this;
     }
+
 
     /**
      * set 账号备注
@@ -220,6 +230,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -229,6 +240,7 @@ public class ModifyAccountRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识

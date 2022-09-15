@@ -48,6 +48,7 @@ public class Node  implements java.io.Serializable {
     private Integer port;
 
 
+
     /**
      * get id
      *
@@ -66,6 +67,7 @@ public class Node  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get ip
      *
@@ -83,6 +85,7 @@ public class Node  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get port
@@ -103,6 +106,7 @@ public class Node  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -113,6 +117,7 @@ public class Node  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set ip
      *
@@ -122,6 +127,7 @@ public class Node  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set port

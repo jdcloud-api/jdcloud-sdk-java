@@ -42,6 +42,7 @@ public class TypeInfo  implements java.io.Serializable {
     /**
      * 规格列表
      */
+    
     private List<SpecInfo> specs;
 
 
@@ -63,23 +64,25 @@ public class TypeInfo  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
-     * get 规格列表
-     *
-     * @return
-     */
+    * get 规格列表
+    *
+    * @return
+    */
     public List<SpecInfo> getSpecs() {
         return specs;
     }
 
     /**
-     * set 规格列表
-     *
-     * @param specs
-     */
+    * set 规格列表
+    *
+    * @param specs
+    */
     public void setSpecs(List<SpecInfo> specs) {
         this.specs = specs;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class TypeInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 规格列表
-     *
-     * @param specs
-     */
+    * set 规格列表
+    *
+    * @param specs
+    */
     public TypeInfo specs(List<SpecInfo> specs) {
         this.specs = specs;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class TypeInfo  implements java.io.Serializable {
         }
         this.specs.add(spec);
     }
-
 }

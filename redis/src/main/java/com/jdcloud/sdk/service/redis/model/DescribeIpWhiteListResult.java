@@ -38,37 +38,40 @@ public class DescribeIpWhiteListResult extends JdcloudResult implements java.io.
     /**
      * ipWhiteList
      */
+    
     private List<String> ipWhiteList;
 
 
     /**
-     * get ipWhiteList
-     *
-     * @return
-     */
+    * get ipWhiteList
+    *
+    * @return
+    */
     public List<String> getIpWhiteList() {
         return ipWhiteList;
     }
 
     /**
-     * set ipWhiteList
-     *
-     * @param ipWhiteList
-     */
+    * set ipWhiteList
+    *
+    * @param ipWhiteList
+    */
     public void setIpWhiteList(List<String> ipWhiteList) {
         this.ipWhiteList = ipWhiteList;
     }
 
 
+
     /**
-     * set ipWhiteList
-     *
-     * @param ipWhiteList
-     */
+    * set ipWhiteList
+    *
+    * @param ipWhiteList
+    */
     public DescribeIpWhiteListResult ipWhiteList(List<String> ipWhiteList) {
         this.ipWhiteList = ipWhiteList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class DescribeIpWhiteListResult extends JdcloudResult implements java.io.
         }
         this.ipWhiteList.add(ipWhiteList);
     }
-
 }

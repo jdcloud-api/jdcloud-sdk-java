@@ -39,37 +39,40 @@ public class DescribeClientIpDetailResult extends JdcloudResult implements java.
     /**
      * details
      */
+    
     private List<Details> details;
 
 
     /**
-     * get details
-     *
-     * @return
-     */
+    * get details
+    *
+    * @return
+    */
     public List<Details> getDetails() {
         return details;
     }
 
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public void setDetails(List<Details> details) {
         this.details = details;
     }
 
 
+
     /**
-     * set details
-     *
-     * @param details
-     */
+    * set details
+    *
+    * @param details
+    */
     public DescribeClientIpDetailResult details(List<Details> details) {
         this.details = details;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeClientIpDetailResult extends JdcloudResult implements java.
         }
         this.details.add(detail);
     }
-
 }

@@ -39,31 +39,33 @@ public class DescribeBigKeyList2Result extends JdcloudResult implements java.io.
     /**
      * cacheAnalysisList
      */
+    
     private List<ClusterCacheAnalysis> cacheAnalysisList;
-
     /**
      * 大key分析列表总条数
      */
     private Integer totalCount;
 
 
+
     /**
-     * get cacheAnalysisList
-     *
-     * @return
-     */
+    * get cacheAnalysisList
+    *
+    * @return
+    */
     public List<ClusterCacheAnalysis> getCacheAnalysisList() {
         return cacheAnalysisList;
     }
 
     /**
-     * set cacheAnalysisList
-     *
-     * @param cacheAnalysisList
-     */
+    * set cacheAnalysisList
+    *
+    * @param cacheAnalysisList
+    */
     public void setCacheAnalysisList(List<ClusterCacheAnalysis> cacheAnalysisList) {
         this.cacheAnalysisList = cacheAnalysisList;
     }
+
 
     /**
      * get 大key分析列表总条数
@@ -84,15 +86,17 @@ public class DescribeBigKeyList2Result extends JdcloudResult implements java.io.
     }
 
 
+
     /**
-     * set cacheAnalysisList
-     *
-     * @param cacheAnalysisList
-     */
+    * set cacheAnalysisList
+    *
+    * @param cacheAnalysisList
+    */
     public DescribeBigKeyList2Result cacheAnalysisList(List<ClusterCacheAnalysis> cacheAnalysisList) {
         this.cacheAnalysisList = cacheAnalysisList;
         return this;
     }
+
 
     /**
      * set 大key分析列表总条数
@@ -103,6 +107,7 @@ public class DescribeBigKeyList2Result extends JdcloudResult implements java.io.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeBigKeyList2Result extends JdcloudResult implements java.io.
         }
         this.cacheAnalysisList.add(cacheAnalysisList);
     }
-
 }

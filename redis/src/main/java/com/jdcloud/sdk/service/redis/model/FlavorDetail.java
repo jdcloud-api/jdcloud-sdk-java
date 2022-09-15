@@ -53,6 +53,7 @@ public class FlavorDetail  implements java.io.Serializable {
     private Integer bandwidthMbps;
 
 
+
     /**
      * get 该规格的CPU核数
      *
@@ -70,6 +71,7 @@ public class FlavorDetail  implements java.io.Serializable {
     public void setCpu(Integer cpu) {
         this.cpu = cpu;
     }
+
 
     /**
      * get 该规格的磁盘大小（GB)
@@ -89,6 +91,7 @@ public class FlavorDetail  implements java.io.Serializable {
         this.diskGB = diskGB;
     }
 
+
     /**
      * get 该规格的最大连接数
      *
@@ -106,6 +109,7 @@ public class FlavorDetail  implements java.io.Serializable {
     public void setMaxConnection(Integer maxConnection) {
         this.maxConnection = maxConnection;
     }
+
 
     /**
      * get 该规格的带宽（Mbps)
@@ -126,6 +130,7 @@ public class FlavorDetail  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 该规格的CPU核数
      *
@@ -135,6 +140,7 @@ public class FlavorDetail  implements java.io.Serializable {
         this.cpu = cpu;
         return this;
     }
+
 
     /**
      * set 该规格的磁盘大小（GB)
@@ -146,6 +152,7 @@ public class FlavorDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 该规格的最大连接数
      *
@@ -155,6 +162,7 @@ public class FlavorDetail  implements java.io.Serializable {
         this.maxConnection = maxConnection;
         return this;
     }
+
 
     /**
      * set 该规格的带宽（Mbps)

@@ -42,6 +42,7 @@ public class RedisShard  implements java.io.Serializable {
     /**
      * slave节点列表
      */
+    
     private List<Node> slaves;
 
 
@@ -63,23 +64,25 @@ public class RedisShard  implements java.io.Serializable {
         this.master = master;
     }
 
+
     /**
-     * get slave节点列表
-     *
-     * @return
-     */
+    * get slave节点列表
+    *
+    * @return
+    */
     public List<Node> getSlaves() {
         return slaves;
     }
 
     /**
-     * set slave节点列表
-     *
-     * @param slaves
-     */
+    * set slave节点列表
+    *
+    * @param slaves
+    */
     public void setSlaves(List<Node> slaves) {
         this.slaves = slaves;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class RedisShard  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set slave节点列表
-     *
-     * @param slaves
-     */
+    * set slave节点列表
+    *
+    * @param slaves
+    */
     public RedisShard slaves(List<Node> slaves) {
         this.slaves = slaves;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class RedisShard  implements java.io.Serializable {
         }
         this.slaves.add(slave);
     }
-
 }

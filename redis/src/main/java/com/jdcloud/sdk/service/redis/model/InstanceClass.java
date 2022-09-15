@@ -68,6 +68,7 @@ public class InstanceClass  implements java.io.Serializable {
     private Integer bandwidthMbps;
 
 
+
     /**
      * get 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
@@ -85,6 +86,7 @@ public class InstanceClass  implements java.io.Serializable {
     public void setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
     }
+
 
     /**
      * get 规格类型：master-slave表示主从版，cluster表示集群版
@@ -104,6 +106,7 @@ public class InstanceClass  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get cpu核数
      *
@@ -121,6 +124,7 @@ public class InstanceClass  implements java.io.Serializable {
     public void setCpu(Integer cpu) {
         this.cpu = cpu;
     }
+
 
     /**
      * get 内存总容量（MB）
@@ -140,6 +144,7 @@ public class InstanceClass  implements java.io.Serializable {
         this.memoryMB = memoryMB;
     }
 
+
     /**
      * get 磁盘总容量（GB）
      *
@@ -158,6 +163,7 @@ public class InstanceClass  implements java.io.Serializable {
         this.diskGB = diskGB;
     }
 
+
     /**
      * get 最大连接数
      *
@@ -175,6 +181,7 @@ public class InstanceClass  implements java.io.Serializable {
     public void setMaxConnection(Integer maxConnection) {
         this.maxConnection = maxConnection;
     }
+
 
     /**
      * get 内网带宽（MBps）
@@ -195,6 +202,7 @@ public class InstanceClass  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 规格代码：redis 2.8与redis 4.0的规格码不同，具体参考 https://docs.jdcloud.com/cn/jcs-for-redis/specifications
      *
@@ -204,6 +212,7 @@ public class InstanceClass  implements java.io.Serializable {
         this.instanceClass = instanceClass;
         return this;
     }
+
 
     /**
      * set 规格类型：master-slave表示主从版，cluster表示集群版
@@ -215,6 +224,7 @@ public class InstanceClass  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cpu核数
      *
@@ -224,6 +234,7 @@ public class InstanceClass  implements java.io.Serializable {
         this.cpu = cpu;
         return this;
     }
+
 
     /**
      * set 内存总容量（MB）
@@ -235,6 +246,7 @@ public class InstanceClass  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 磁盘总容量（GB）
      *
@@ -245,6 +257,7 @@ public class InstanceClass  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 最大连接数
      *
@@ -254,6 +267,7 @@ public class InstanceClass  implements java.io.Serializable {
         this.maxConnection = maxConnection;
         return this;
     }
+
 
     /**
      * set 内网带宽（MBps）

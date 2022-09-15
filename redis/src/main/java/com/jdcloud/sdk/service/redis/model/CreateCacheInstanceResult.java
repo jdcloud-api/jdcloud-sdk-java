@@ -50,6 +50,7 @@ public class CreateCacheInstanceResult extends JdcloudResult implements java.io.
     private String buyId;
 
 
+
     /**
      * get 实例ID
      *
@@ -68,6 +69,7 @@ public class CreateCacheInstanceResult extends JdcloudResult implements java.io.
         this.cacheInstanceId = cacheInstanceId;
     }
 
+
     /**
      * get 订单编号
      *
@@ -85,6 +87,7 @@ public class CreateCacheInstanceResult extends JdcloudResult implements java.io.
     public void setOrderNum(String orderNum) {
         this.orderNum = orderNum;
     }
+
 
     /**
      * get 购买ID
@@ -105,6 +108,7 @@ public class CreateCacheInstanceResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 实例ID
      *
@@ -115,6 +119,7 @@ public class CreateCacheInstanceResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 订单编号
      *
@@ -124,6 +129,7 @@ public class CreateCacheInstanceResult extends JdcloudResult implements java.io.
         this.orderNum = orderNum;
         return this;
     }
+
 
     /**
      * set 购买ID

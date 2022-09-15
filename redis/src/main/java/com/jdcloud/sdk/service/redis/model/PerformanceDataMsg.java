@@ -26,77 +26,361 @@ package com.jdcloud.sdk.service.redis.model;
 
 
 /**
- * 客户端性能日志信息
+ * 客户端性能日志数据
  */
 public class PerformanceDataMsg  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 客户端ip
+     * 时间
      */
-    private String ip;
+    private String ts;
 
     /**
-     * 客户端性能日志数据
+     * TP999
      */
-    private TpStat tpStat;
+    private Integer tp999;
+
+    /**
+     * TP99
+     */
+    private Integer tp99;
+
+    /**
+     * TP90
+     */
+    private Integer tp90;
+
+    /**
+     * TP50
+     */
+    private Integer tp50;
+
+    /**
+     * 最大延时
+     */
+    private Integer max;
+
+    /**
+     * 最小延时
+     */
+    private Integer min;
+
+    /**
+     * 成功数
+     */
+    private Integer success;
+
+    /**
+     * 错误数
+     */
+    private Integer error;
+
+    /**
+     * 重定向数
+     */
+    private Integer redirection;
+
 
 
     /**
-     * get 客户端ip
+     * get 时间
      *
      * @return
      */
-    public String getIp() {
-        return ip;
+    public String getTs() {
+        return ts;
     }
 
     /**
-     * set 客户端ip
+     * set 时间
      *
-     * @param ip
+     * @param ts
      */
-    public void setIp(String ip) {
-        this.ip = ip;
+    public void setTs(String ts) {
+        this.ts = ts;
     }
 
+
     /**
-     * get 客户端性能日志数据
+     * get TP999
      *
      * @return
      */
-    public TpStat getTpStat() {
-        return tpStat;
+    public Integer getTp999() {
+        return tp999;
     }
 
     /**
-     * set 客户端性能日志数据
+     * set TP999
      *
-     * @param tpStat
+     * @param tp999
      */
-    public void setTpStat(TpStat tpStat) {
-        this.tpStat = tpStat;
+    public void setTp999(Integer tp999) {
+        this.tp999 = tp999;
     }
 
 
     /**
-     * set 客户端ip
+     * get TP99
      *
-     * @param ip
+     * @return
      */
-    public PerformanceDataMsg ip(String ip) {
-        this.ip = ip;
+    public Integer getTp99() {
+        return tp99;
+    }
+
+    /**
+     * set TP99
+     *
+     * @param tp99
+     */
+    public void setTp99(Integer tp99) {
+        this.tp99 = tp99;
+    }
+
+
+    /**
+     * get TP90
+     *
+     * @return
+     */
+    public Integer getTp90() {
+        return tp90;
+    }
+
+    /**
+     * set TP90
+     *
+     * @param tp90
+     */
+    public void setTp90(Integer tp90) {
+        this.tp90 = tp90;
+    }
+
+
+    /**
+     * get TP50
+     *
+     * @return
+     */
+    public Integer getTp50() {
+        return tp50;
+    }
+
+    /**
+     * set TP50
+     *
+     * @param tp50
+     */
+    public void setTp50(Integer tp50) {
+        this.tp50 = tp50;
+    }
+
+
+    /**
+     * get 最大延时
+     *
+     * @return
+     */
+    public Integer getMax() {
+        return max;
+    }
+
+    /**
+     * set 最大延时
+     *
+     * @param max
+     */
+    public void setMax(Integer max) {
+        this.max = max;
+    }
+
+
+    /**
+     * get 最小延时
+     *
+     * @return
+     */
+    public Integer getMin() {
+        return min;
+    }
+
+    /**
+     * set 最小延时
+     *
+     * @param min
+     */
+    public void setMin(Integer min) {
+        this.min = min;
+    }
+
+
+    /**
+     * get 成功数
+     *
+     * @return
+     */
+    public Integer getSuccess() {
+        return success;
+    }
+
+    /**
+     * set 成功数
+     *
+     * @param success
+     */
+    public void setSuccess(Integer success) {
+        this.success = success;
+    }
+
+
+    /**
+     * get 错误数
+     *
+     * @return
+     */
+    public Integer getError() {
+        return error;
+    }
+
+    /**
+     * set 错误数
+     *
+     * @param error
+     */
+    public void setError(Integer error) {
+        this.error = error;
+    }
+
+
+    /**
+     * get 重定向数
+     *
+     * @return
+     */
+    public Integer getRedirection() {
+        return redirection;
+    }
+
+    /**
+     * set 重定向数
+     *
+     * @param redirection
+     */
+    public void setRedirection(Integer redirection) {
+        this.redirection = redirection;
+    }
+
+
+
+    /**
+     * set 时间
+     *
+     * @param ts
+     */
+    public PerformanceDataMsg ts(String ts) {
+        this.ts = ts;
         return this;
     }
 
+
     /**
-     * set 客户端性能日志数据
+     * set TP999
      *
-     * @param tpStat
+     * @param tp999
      */
-    public PerformanceDataMsg tpStat(TpStat tpStat) {
-        this.tpStat = tpStat;
+    public PerformanceDataMsg tp999(Integer tp999) {
+        this.tp999 = tp999;
+        return this;
+    }
+
+
+    /**
+     * set TP99
+     *
+     * @param tp99
+     */
+    public PerformanceDataMsg tp99(Integer tp99) {
+        this.tp99 = tp99;
+        return this;
+    }
+
+
+    /**
+     * set TP90
+     *
+     * @param tp90
+     */
+    public PerformanceDataMsg tp90(Integer tp90) {
+        this.tp90 = tp90;
+        return this;
+    }
+
+
+    /**
+     * set TP50
+     *
+     * @param tp50
+     */
+    public PerformanceDataMsg tp50(Integer tp50) {
+        this.tp50 = tp50;
+        return this;
+    }
+
+
+    /**
+     * set 最大延时
+     *
+     * @param max
+     */
+    public PerformanceDataMsg max(Integer max) {
+        this.max = max;
+        return this;
+    }
+
+
+    /**
+     * set 最小延时
+     *
+     * @param min
+     */
+    public PerformanceDataMsg min(Integer min) {
+        this.min = min;
+        return this;
+    }
+
+
+    /**
+     * set 成功数
+     *
+     * @param success
+     */
+    public PerformanceDataMsg success(Integer success) {
+        this.success = success;
+        return this;
+    }
+
+
+    /**
+     * set 错误数
+     *
+     * @param error
+     */
+    public PerformanceDataMsg error(Integer error) {
+        this.error = error;
+        return this;
+    }
+
+
+    /**
+     * set 重定向数
+     *
+     * @param redirection
+     */
+    public PerformanceDataMsg redirection(Integer redirection) {
+        this.redirection = redirection;
         return this;
     }
 

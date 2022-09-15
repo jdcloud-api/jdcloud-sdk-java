@@ -47,11 +47,12 @@ public class AvailableMemorySpec  implements java.io.Serializable {
     /**
      * 可用区列表
      */
+    
     private List<AzInfo> availableZones;
-
     /**
      * 规格列表
      */
+    
     private List<AvailableFlavor> availableFlavors;
 
 
@@ -73,6 +74,7 @@ public class AvailableMemorySpec  implements java.io.Serializable {
         this.memoryGB = memoryGB;
     }
 
+
     /**
      * get 是否售罄
      *
@@ -91,41 +93,44 @@ public class AvailableMemorySpec  implements java.io.Serializable {
         this.soldOut = soldOut;
     }
 
+
     /**
-     * get 可用区列表
-     *
-     * @return
-     */
+    * get 可用区列表
+    *
+    * @return
+    */
     public List<AzInfo> getAvailableZones() {
         return availableZones;
     }
 
     /**
-     * set 可用区列表
-     *
-     * @param availableZones
-     */
+    * set 可用区列表
+    *
+    * @param availableZones
+    */
     public void setAvailableZones(List<AzInfo> availableZones) {
         this.availableZones = availableZones;
     }
 
+
     /**
-     * get 规格列表
-     *
-     * @return
-     */
+    * get 规格列表
+    *
+    * @return
+    */
     public List<AvailableFlavor> getAvailableFlavors() {
         return availableFlavors;
     }
 
     /**
-     * set 规格列表
-     *
-     * @param availableFlavors
-     */
+    * set 规格列表
+    *
+    * @param availableFlavors
+    */
     public void setAvailableFlavors(List<AvailableFlavor> availableFlavors) {
         this.availableFlavors = availableFlavors;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class AvailableMemorySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否售罄
      *
@@ -148,25 +154,28 @@ public class AvailableMemorySpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区列表
-     *
-     * @param availableZones
-     */
+    * set 可用区列表
+    *
+    * @param availableZones
+    */
     public AvailableMemorySpec availableZones(List<AzInfo> availableZones) {
         this.availableZones = availableZones;
         return this;
     }
 
+
     /**
-     * set 规格列表
-     *
-     * @param availableFlavors
-     */
+    * set 规格列表
+    *
+    * @param availableFlavors
+    */
     public AvailableMemorySpec availableFlavors(List<AvailableFlavor> availableFlavors) {
         this.availableFlavors = availableFlavors;
         return this;
     }
+
 
 
     /**
@@ -192,5 +201,4 @@ public class AvailableMemorySpec  implements java.io.Serializable {
         }
         this.availableFlavors.add(availableFlavor);
     }
-
 }

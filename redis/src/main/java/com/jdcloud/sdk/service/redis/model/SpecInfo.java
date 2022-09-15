@@ -77,6 +77,7 @@ public class SpecInfo  implements java.io.Serializable {
     /**
      * az列表
      */
+    
     private List<String> azs;
 
 
@@ -98,6 +99,7 @@ public class SpecInfo  implements java.io.Serializable {
         this.memoryGB = memoryGB;
     }
 
+
     /**
      * get 实例规格，标准版不为空，4.0 自定义分片集群版规格为空，具体规格参考单分片规格
      *
@@ -115,6 +117,7 @@ public class SpecInfo  implements java.io.Serializable {
     public void setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
     }
+
 
     /**
      * get 实例CPU核数，0表示自定义分片集群版规格，CPU核数由分片数变化
@@ -134,6 +137,7 @@ public class SpecInfo  implements java.io.Serializable {
         this.cpu = cpu;
     }
 
+
     /**
      * get 实例磁盘大小（GB)，0表示自定义分片集群版规格，磁盘大小由分片数变化
      *
@@ -151,6 +155,7 @@ public class SpecInfo  implements java.io.Serializable {
     public void setDiskGB(Integer diskGB) {
         this.diskGB = diskGB;
     }
+
 
     /**
      * get 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
@@ -170,6 +175,7 @@ public class SpecInfo  implements java.io.Serializable {
         this.maxConnection = maxConnection;
     }
 
+
     /**
      * get 带宽（Mbps)，0表示自定义分片集群版规格，带宽由分片数变化
      *
@@ -187,6 +193,7 @@ public class SpecInfo  implements java.io.Serializable {
     public void setBandwidthMbps(Integer bandwidthMbps) {
         this.bandwidthMbps = bandwidthMbps;
     }
+
 
     /**
      * get 需要的IP数，0表示自定义分片集群版规格，IP数由分片数变化
@@ -206,6 +213,7 @@ public class SpecInfo  implements java.io.Serializable {
         this.ipNumber = ipNumber;
     }
 
+
     /**
      * get 实例的分片列表信息，redis 2.8标准版、集群版以及redis 4.0标准版没有分片列表信息
      *
@@ -224,23 +232,25 @@ public class SpecInfo  implements java.io.Serializable {
         this.shard = shard;
     }
 
+
     /**
-     * get az列表
-     *
-     * @return
-     */
+    * get az列表
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set az列表
-     *
-     * @param azs
-     */
+    * set az列表
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
 
     /**
@@ -253,6 +263,7 @@ public class SpecInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例规格，标准版不为空，4.0 自定义分片集群版规格为空，具体规格参考单分片规格
      *
@@ -262,6 +273,7 @@ public class SpecInfo  implements java.io.Serializable {
         this.instanceClass = instanceClass;
         return this;
     }
+
 
     /**
      * set 实例CPU核数，0表示自定义分片集群版规格，CPU核数由分片数变化
@@ -273,6 +285,7 @@ public class SpecInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例磁盘大小（GB)，0表示自定义分片集群版规格，磁盘大小由分片数变化
      *
@@ -282,6 +295,7 @@ public class SpecInfo  implements java.io.Serializable {
         this.diskGB = diskGB;
         return this;
     }
+
 
     /**
      * set 最大连接数，0表示自定义分片集群版规格，最大连接数由分片数变化
@@ -293,6 +307,7 @@ public class SpecInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 带宽（Mbps)，0表示自定义分片集群版规格，带宽由分片数变化
      *
@@ -302,6 +317,7 @@ public class SpecInfo  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
         return this;
     }
+
 
     /**
      * set 需要的IP数，0表示自定义分片集群版规格，IP数由分片数变化
@@ -313,6 +329,7 @@ public class SpecInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例的分片列表信息，redis 2.8标准版、集群版以及redis 4.0标准版没有分片列表信息
      *
@@ -323,15 +340,17 @@ public class SpecInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set az列表
-     *
-     * @param azs
-     */
+    * set az列表
+    *
+    * @param azs
+    */
     public SpecInfo azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
 
     /**
@@ -345,5 +364,4 @@ public class SpecInfo  implements java.io.Serializable {
         }
         this.azs.add(az);
     }
-
 }

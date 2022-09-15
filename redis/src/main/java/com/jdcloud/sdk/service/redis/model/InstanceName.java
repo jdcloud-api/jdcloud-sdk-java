@@ -60,6 +60,7 @@ public class InstanceName  implements java.io.Serializable {
     private String serviceCode;
 
 
+
     /**
      * get 资源id（即实例id）
      *
@@ -77,6 +78,7 @@ public class InstanceName  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 资源名称（即实例名称）
@@ -96,6 +98,7 @@ public class InstanceName  implements java.io.Serializable {
         this.resourceName = resourceName;
     }
 
+
     /**
      * get 资源状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
      *
@@ -113,6 +116,7 @@ public class InstanceName  implements java.io.Serializable {
     public void setResourceStatus(String resourceStatus) {
         this.resourceStatus = resourceStatus;
     }
+
 
     /**
      * get service code（redis）
@@ -133,6 +137,7 @@ public class InstanceName  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源id（即实例id）
      *
@@ -142,6 +147,7 @@ public class InstanceName  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 资源名称（即实例名称）
@@ -153,6 +159,7 @@ public class InstanceName  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中
      *
@@ -162,6 +169,7 @@ public class InstanceName  implements java.io.Serializable {
         this.resourceStatus = resourceStatus;
         return this;
     }
+
 
     /**
      * set service code（redis）

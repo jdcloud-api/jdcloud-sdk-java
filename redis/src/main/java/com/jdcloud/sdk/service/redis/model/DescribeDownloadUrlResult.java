@@ -39,37 +39,40 @@ public class DescribeDownloadUrlResult extends JdcloudResult implements java.io.
     /**
      * downloadUrls
      */
+    
     private List<DownloadUrl> downloadUrls;
 
 
     /**
-     * get downloadUrls
-     *
-     * @return
-     */
+    * get downloadUrls
+    *
+    * @return
+    */
     public List<DownloadUrl> getDownloadUrls() {
         return downloadUrls;
     }
 
     /**
-     * set downloadUrls
-     *
-     * @param downloadUrls
-     */
+    * set downloadUrls
+    *
+    * @param downloadUrls
+    */
     public void setDownloadUrls(List<DownloadUrl> downloadUrls) {
         this.downloadUrls = downloadUrls;
     }
 
 
+
     /**
-     * set downloadUrls
-     *
-     * @param downloadUrls
-     */
+    * set downloadUrls
+    *
+    * @param downloadUrls
+    */
     public DescribeDownloadUrlResult downloadUrls(List<DownloadUrl> downloadUrls) {
         this.downloadUrls = downloadUrls;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeDownloadUrlResult extends JdcloudResult implements java.io.
         }
         this.downloadUrls.add(downloadUrl);
     }
-
 }

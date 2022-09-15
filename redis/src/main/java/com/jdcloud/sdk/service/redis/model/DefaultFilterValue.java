@@ -53,6 +53,7 @@ public class DefaultFilterValue  implements java.io.Serializable {
     private Integer tp50;
 
 
+
     /**
      * get tp999
      *
@@ -70,6 +71,7 @@ public class DefaultFilterValue  implements java.io.Serializable {
     public void setTp999(Integer tp999) {
         this.tp999 = tp999;
     }
+
 
     /**
      * get tp99
@@ -89,6 +91,7 @@ public class DefaultFilterValue  implements java.io.Serializable {
         this.tp99 = tp99;
     }
 
+
     /**
      * get tp90
      *
@@ -106,6 +109,7 @@ public class DefaultFilterValue  implements java.io.Serializable {
     public void setTp90(Integer tp90) {
         this.tp90 = tp90;
     }
+
 
     /**
      * get tp50
@@ -126,6 +130,7 @@ public class DefaultFilterValue  implements java.io.Serializable {
     }
 
 
+
     /**
      * set tp999
      *
@@ -135,6 +140,7 @@ public class DefaultFilterValue  implements java.io.Serializable {
         this.tp999 = tp999;
         return this;
     }
+
 
     /**
      * set tp99
@@ -146,6 +152,7 @@ public class DefaultFilterValue  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set tp90
      *
@@ -155,6 +162,7 @@ public class DefaultFilterValue  implements java.io.Serializable {
         this.tp90 = tp90;
         return this;
     }
+
 
     /**
      * set tp50

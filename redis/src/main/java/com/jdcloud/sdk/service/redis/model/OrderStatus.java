@@ -57,6 +57,7 @@ public class OrderStatus  implements java.io.Serializable {
     /**
      * 成功的资源Id
      */
+    
     private List<String> resourceIds;
 
 
@@ -78,6 +79,7 @@ public class OrderStatus  implements java.io.Serializable {
         this.total = total;
     }
 
+
     /**
      * get 成功的订单数
      *
@@ -95,6 +97,7 @@ public class OrderStatus  implements java.io.Serializable {
     public void setSuccess(Integer success) {
         this.success = success;
     }
+
 
     /**
      * get 失败的订单数
@@ -114,6 +117,7 @@ public class OrderStatus  implements java.io.Serializable {
         this.fail = fail;
     }
 
+
     /**
      * get 正在处理的订单数
      *
@@ -132,23 +136,25 @@ public class OrderStatus  implements java.io.Serializable {
         this.inProcess = inProcess;
     }
 
+
     /**
-     * get 成功的资源Id
-     *
-     * @return
-     */
+    * get 成功的资源Id
+    *
+    * @return
+    */
     public List<String> getResourceIds() {
         return resourceIds;
     }
 
     /**
-     * set 成功的资源Id
-     *
-     * @param resourceIds
-     */
+    * set 成功的资源Id
+    *
+    * @param resourceIds
+    */
     public void setResourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class OrderStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 成功的订单数
      *
@@ -170,6 +177,7 @@ public class OrderStatus  implements java.io.Serializable {
         this.success = success;
         return this;
     }
+
 
     /**
      * set 失败的订单数
@@ -181,6 +189,7 @@ public class OrderStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 正在处理的订单数
      *
@@ -191,15 +200,17 @@ public class OrderStatus  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 成功的资源Id
-     *
-     * @param resourceIds
-     */
+    * set 成功的资源Id
+    *
+    * @param resourceIds
+    */
     public OrderStatus resourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class OrderStatus  implements java.io.Serializable {
         }
         this.resourceIds.add(resourceId);
     }
-
 }

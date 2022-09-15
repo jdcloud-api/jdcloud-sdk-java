@@ -39,37 +39,40 @@ public class DescribeAvailableRegionResult extends JdcloudResult implements java
     /**
      * availableRegions
      */
+    
     private List<AvailableRegion> availableRegions;
 
 
     /**
-     * get availableRegions
-     *
-     * @return
-     */
+    * get availableRegions
+    *
+    * @return
+    */
     public List<AvailableRegion> getAvailableRegions() {
         return availableRegions;
     }
 
     /**
-     * set availableRegions
-     *
-     * @param availableRegions
-     */
+    * set availableRegions
+    *
+    * @param availableRegions
+    */
     public void setAvailableRegions(List<AvailableRegion> availableRegions) {
         this.availableRegions = availableRegions;
     }
 
 
+
     /**
-     * set availableRegions
-     *
-     * @param availableRegions
-     */
+    * set availableRegions
+    *
+    * @param availableRegions
+    */
     public DescribeAvailableRegionResult availableRegions(List<AvailableRegion> availableRegions) {
         this.availableRegions = availableRegions;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeAvailableRegionResult extends JdcloudResult implements java
         }
         this.availableRegions.add(availableRegion);
     }
-
 }

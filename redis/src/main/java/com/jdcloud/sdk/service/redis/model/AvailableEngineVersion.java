@@ -52,6 +52,7 @@ public class AvailableEngineVersion  implements java.io.Serializable {
     /**
      * 售卖CPU架构列表
      */
+    
     private List<AvailableCPUArch> availableCPUArchs;
 
 
@@ -73,6 +74,7 @@ public class AvailableEngineVersion  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
      * get 是否推荐
      *
@@ -90,6 +92,7 @@ public class AvailableEngineVersion  implements java.io.Serializable {
     public void setRecommended(Boolean recommended) {
         this.recommended = recommended;
     }
+
 
     /**
      * get 是否售罄
@@ -109,23 +112,25 @@ public class AvailableEngineVersion  implements java.io.Serializable {
         this.soldOut = soldOut;
     }
 
+
     /**
-     * get 售卖CPU架构列表
-     *
-     * @return
-     */
+    * get 售卖CPU架构列表
+    *
+    * @return
+    */
     public List<AvailableCPUArch> getAvailableCPUArchs() {
         return availableCPUArchs;
     }
 
     /**
-     * set 售卖CPU架构列表
-     *
-     * @param availableCPUArchs
-     */
+    * set 售卖CPU架构列表
+    *
+    * @param availableCPUArchs
+    */
     public void setAvailableCPUArchs(List<AvailableCPUArch> availableCPUArchs) {
         this.availableCPUArchs = availableCPUArchs;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class AvailableEngineVersion  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否推荐
      *
@@ -147,6 +153,7 @@ public class AvailableEngineVersion  implements java.io.Serializable {
         this.recommended = recommended;
         return this;
     }
+
 
     /**
      * set 是否售罄
@@ -158,15 +165,17 @@ public class AvailableEngineVersion  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 售卖CPU架构列表
-     *
-     * @param availableCPUArchs
-     */
+    * set 售卖CPU架构列表
+    *
+    * @param availableCPUArchs
+    */
     public AvailableEngineVersion availableCPUArchs(List<AvailableCPUArch> availableCPUArchs) {
         this.availableCPUArchs = availableCPUArchs;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class AvailableEngineVersion  implements java.io.Serializable {
         }
         this.availableCPUArchs.add(availableCPUArch);
     }
-
 }

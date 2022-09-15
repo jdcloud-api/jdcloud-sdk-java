@@ -47,6 +47,7 @@ public class DescribeInstanceClassRequest extends JdcloudRequest implements java
     private String regionId;
 
 
+
     /**
      * get 缓存Redis的版本号：目前有2.8和4.0，默认为2.8
      *
@@ -64,6 +65,7 @@ public class DescribeInstanceClassRequest extends JdcloudRequest implements java
     public void setRedisVersion(String redisVersion) {
         this.redisVersion = redisVersion;
     }
+
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -84,6 +86,7 @@ public class DescribeInstanceClassRequest extends JdcloudRequest implements java
     }
 
 
+
     /**
      * set 缓存Redis的版本号：目前有2.8和4.0，默认为2.8
      *
@@ -93,6 +96,7 @@ public class DescribeInstanceClassRequest extends JdcloudRequest implements java
         this.redisVersion = redisVersion;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2

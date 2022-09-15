@@ -39,31 +39,33 @@ public class DescribeInstanceClassResult extends JdcloudResult implements java.i
     /**
      * instanceClasses
      */
+    
     private List<InstanceClass> instanceClasses;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get instanceClasses
-     *
-     * @return
-     */
+    * get instanceClasses
+    *
+    * @return
+    */
     public List<InstanceClass> getInstanceClasses() {
         return instanceClasses;
     }
 
     /**
-     * set instanceClasses
-     *
-     * @param instanceClasses
-     */
+    * set instanceClasses
+    *
+    * @param instanceClasses
+    */
     public void setInstanceClasses(List<InstanceClass> instanceClasses) {
         this.instanceClasses = instanceClasses;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeInstanceClassResult extends JdcloudResult implements java.i
     }
 
 
+
     /**
-     * set instanceClasses
-     *
-     * @param instanceClasses
-     */
+    * set instanceClasses
+    *
+    * @param instanceClasses
+    */
     public DescribeInstanceClassResult instanceClasses(List<InstanceClass> instanceClasses) {
         this.instanceClasses = instanceClasses;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeInstanceClassResult extends JdcloudResult implements java.i
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeInstanceClassResult extends JdcloudResult implements java.i
         }
         this.instanceClasses.add(instanceClasse);
     }
-
 }

@@ -59,6 +59,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
     private Integer zsetSize;
 
 
+
     /**
      * get String类型的阈值
      *
@@ -76,6 +77,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
     public void setStringSize(Integer stringSize) {
         this.stringSize = stringSize;
     }
+
 
     /**
      * get List类型的阈值
@@ -95,6 +97,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
         this.listSize = listSize;
     }
 
+
     /**
      * get Hash类型的阈值
      *
@@ -113,6 +116,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
         this.hashSize = hashSize;
     }
 
+
     /**
      * get Set类型的阈值
      *
@@ -130,6 +134,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
     public void setSetSize(Integer setSize) {
         this.setSize = setSize;
     }
+
 
     /**
      * get Zset类型的阈值
@@ -150,6 +155,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
     }
 
 
+
     /**
      * set String类型的阈值
      *
@@ -159,6 +165,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
         this.stringSize = stringSize;
         return this;
     }
+
 
     /**
      * set List类型的阈值
@@ -170,6 +177,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
         return this;
     }
 
+
     /**
      * set Hash类型的阈值
      *
@@ -180,6 +188,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
         return this;
     }
 
+
     /**
      * set Set类型的阈值
      *
@@ -189,6 +198,7 @@ public class DescribeAnalysisThreshold2Result extends JdcloudResult implements j
         this.setSize = setSize;
         return this;
     }
+
 
     /**
      * set Zset类型的阈值

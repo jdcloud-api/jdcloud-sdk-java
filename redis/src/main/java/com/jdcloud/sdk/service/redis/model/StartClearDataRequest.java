@@ -52,8 +52,8 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
     /**
      * key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
      */
+    
     private List<KeyFilter> keyFilter;
-
     /**
      * 数据遍历的速率
      */
@@ -74,6 +74,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
     private String cacheInstanceId;
 
 
+
     /**
      * get 数据清理任务类型
      *
@@ -91,6 +92,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
     public void setClearType(String clearType) {
         this.clearType = clearType;
     }
+
 
     /**
      * get 匹配模式, 如: test*、*test、ab*cc*, 当节点为AllData、ExpiredData时可以忽略此参数
@@ -110,23 +112,25 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
         this.keyPattern = keyPattern;
     }
 
+
     /**
-     * get key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
-     *
-     * @return
-     */
+    * get key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
+    *
+    * @return
+    */
     public List<KeyFilter> getKeyFilter() {
         return keyFilter;
     }
 
     /**
-     * set key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
-     *
-     * @param keyFilter
-     */
+    * set key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
+    *
+    * @param keyFilter
+    */
     public void setKeyFilter(List<KeyFilter> keyFilter) {
         this.keyFilter = keyFilter;
     }
+
 
     /**
      * get 数据遍历的速率
@@ -146,6 +150,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
         this.qpsLimit = qpsLimit;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -163,6 +168,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -183,6 +189,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 数据清理任务类型
      *
@@ -192,6 +199,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
         this.clearType = clearType;
         return this;
     }
+
 
     /**
      * set 匹配模式, 如: test*、*test、ab*cc*, 当节点为AllData、ExpiredData时可以忽略此参数
@@ -203,15 +211,17 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
-     *
-     * @param keyFilter
-     */
+    * set key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
+    *
+    * @param keyFilter
+    */
     public StartClearDataRequest keyFilter(List<KeyFilter> keyFilter) {
         this.keyFilter = keyFilter;
         return this;
     }
+
 
     /**
      * set 数据遍历的速率
@@ -223,6 +233,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -233,6 +244,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识
      *
@@ -242,6 +254,7 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
+
 
 
     /**
@@ -255,5 +268,4 @@ public class StartClearDataRequest extends JdcloudRequest implements java.io.Ser
         }
         this.keyFilter.add(keyFilter);
     }
-
 }

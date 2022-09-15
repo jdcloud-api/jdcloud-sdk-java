@@ -55,6 +55,7 @@ public class RedisHotKey  implements java.io.Serializable {
     private Integer accessCount;
 
 
+
     /**
      * get key名称
      *
@@ -73,6 +74,7 @@ public class RedisHotKey  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get 统计时间
      *
@@ -90,6 +92,7 @@ public class RedisHotKey  implements java.io.Serializable {
     public void setAccessTime(String accessTime) {
         this.accessTime = accessTime;
     }
+
 
     /**
      * get 访问频率
@@ -110,6 +113,7 @@ public class RedisHotKey  implements java.io.Serializable {
     }
 
 
+
     /**
      * set key名称
      *
@@ -120,6 +124,7 @@ public class RedisHotKey  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 统计时间
      *
@@ -129,6 +134,7 @@ public class RedisHotKey  implements java.io.Serializable {
         this.accessTime = accessTime;
         return this;
     }
+
 
     /**
      * set 访问频率

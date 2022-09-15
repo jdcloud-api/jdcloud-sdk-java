@@ -42,8 +42,8 @@ public class ModifyAccountsRequest extends JdcloudRequest implements java.io.Ser
      * Required:true
      */
     @Required
+    
     private List<ModifyAccount> accounts;
-
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
@@ -59,23 +59,25 @@ public class ModifyAccountsRequest extends JdcloudRequest implements java.io.Ser
     private String cacheInstanceId;
 
 
+
     /**
-     * get 要修改的账号列表
-     *
-     * @return
-     */
+    * get 要修改的账号列表
+    *
+    * @return
+    */
     public List<ModifyAccount> getAccounts() {
         return accounts;
     }
 
     /**
-     * set 要修改的账号列表
-     *
-     * @param accounts
-     */
+    * set 要修改的账号列表
+    *
+    * @param accounts
+    */
     public void setAccounts(List<ModifyAccount> accounts) {
         this.accounts = accounts;
     }
+
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -94,6 +96,7 @@ public class ModifyAccountsRequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -114,15 +117,17 @@ public class ModifyAccountsRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
-     * set 要修改的账号列表
-     *
-     * @param accounts
-     */
+    * set 要修改的账号列表
+    *
+    * @param accounts
+    */
     public ModifyAccountsRequest accounts(List<ModifyAccount> accounts) {
         this.accounts = accounts;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -134,6 +139,7 @@ public class ModifyAccountsRequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识
      *
@@ -143,6 +149,7 @@ public class ModifyAccountsRequest extends JdcloudRequest implements java.io.Ser
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class ModifyAccountsRequest extends JdcloudRequest implements java.io.Ser
         }
         this.accounts.add(account);
     }
-
 }

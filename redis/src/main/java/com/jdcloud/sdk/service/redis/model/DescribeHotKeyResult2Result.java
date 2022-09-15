@@ -39,37 +39,40 @@ public class DescribeHotKeyResult2Result extends JdcloudResult implements java.i
     /**
      * hotKeyAnalysisNodesList
      */
+    
     private List<HotKeyAnalysisNode> hotKeyAnalysisNodesList;
 
 
     /**
-     * get hotKeyAnalysisNodesList
-     *
-     * @return
-     */
+    * get hotKeyAnalysisNodesList
+    *
+    * @return
+    */
     public List<HotKeyAnalysisNode> getHotKeyAnalysisNodesList() {
         return hotKeyAnalysisNodesList;
     }
 
     /**
-     * set hotKeyAnalysisNodesList
-     *
-     * @param hotKeyAnalysisNodesList
-     */
+    * set hotKeyAnalysisNodesList
+    *
+    * @param hotKeyAnalysisNodesList
+    */
     public void setHotKeyAnalysisNodesList(List<HotKeyAnalysisNode> hotKeyAnalysisNodesList) {
         this.hotKeyAnalysisNodesList = hotKeyAnalysisNodesList;
     }
 
 
+
     /**
-     * set hotKeyAnalysisNodesList
-     *
-     * @param hotKeyAnalysisNodesList
-     */
+    * set hotKeyAnalysisNodesList
+    *
+    * @param hotKeyAnalysisNodesList
+    */
     public DescribeHotKeyResult2Result hotKeyAnalysisNodesList(List<HotKeyAnalysisNode> hotKeyAnalysisNodesList) {
         this.hotKeyAnalysisNodesList = hotKeyAnalysisNodesList;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeHotKeyResult2Result extends JdcloudResult implements java.i
         }
         this.hotKeyAnalysisNodesList.add(hotKeyAnalysisNodesList);
     }
-
 }

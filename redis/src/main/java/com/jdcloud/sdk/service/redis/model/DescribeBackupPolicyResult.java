@@ -54,6 +54,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     private String nextBackupTime;
 
 
+
     /**
      * get 是否开启自动备份，true表示开启，false表示关闭
      *
@@ -71,6 +72,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     public void setAutoBackup(Boolean autoBackup) {
         this.autoBackup = autoBackup;
     }
+
 
     /**
      * get 备份周期，包括：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，多个用逗号分隔
@@ -90,6 +92,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.backupPeriod = backupPeriod;
     }
 
+
     /**
      * get 备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
@@ -107,6 +110,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     public void setBackupTime(String backupTime) {
         this.backupTime = backupTime;
     }
+
 
     /**
      * get 下次自动备份时间段，ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ~YYYY-MM-DDTHH:mm:ssZ
@@ -127,6 +131,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 是否开启自动备份，true表示开启，false表示关闭
      *
@@ -136,6 +141,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.autoBackup = autoBackup;
         return this;
     }
+
 
     /**
      * set 备份周期，包括：Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，多个用逗号分隔
@@ -147,6 +153,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 备份时间，格式为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
@@ -156,6 +163,7 @@ public class DescribeBackupPolicyResult extends JdcloudResult implements java.io
         this.backupTime = backupTime;
         return this;
     }
+
 
     /**
      * set 下次自动备份时间段，ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ~YYYY-MM-DDTHH:mm:ssZ

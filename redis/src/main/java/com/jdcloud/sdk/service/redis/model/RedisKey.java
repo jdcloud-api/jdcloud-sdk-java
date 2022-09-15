@@ -67,6 +67,7 @@ public class RedisKey  implements java.io.Serializable {
     private Integer frequency;
 
 
+
     /**
      * get key名称
      *
@@ -84,6 +85,7 @@ public class RedisKey  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get key所在的db号
@@ -103,6 +105,7 @@ public class RedisKey  implements java.io.Serializable {
         this.db = db;
     }
 
+
     /**
      * get string类型的key表示字节数，list类型的key表示列表长度，set或zset类型的key表示集合或有序集合的大小、hash类型的key表示字典的大小等等
      *
@@ -121,6 +124,7 @@ public class RedisKey  implements java.io.Serializable {
         this.size = size;
     }
 
+
     /**
      * get string、list、set、zset、hash五种类型
      *
@@ -138,6 +142,7 @@ public class RedisKey  implements java.io.Serializable {
     public void setKeyType(String keyType) {
         this.keyType = keyType;
     }
+
 
     /**
      * get key访问的频度
@@ -158,6 +163,7 @@ public class RedisKey  implements java.io.Serializable {
     }
 
 
+
     /**
      * set key名称
      *
@@ -167,6 +173,7 @@ public class RedisKey  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set key所在的db号
@@ -178,6 +185,7 @@ public class RedisKey  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set string类型的key表示字节数，list类型的key表示列表长度，set或zset类型的key表示集合或有序集合的大小、hash类型的key表示字典的大小等等
      *
@@ -188,6 +196,7 @@ public class RedisKey  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set string、list、set、zset、hash五种类型
      *
@@ -197,6 +206,7 @@ public class RedisKey  implements java.io.Serializable {
         this.keyType = keyType;
         return this;
     }
+
 
     /**
      * set key访问的频度

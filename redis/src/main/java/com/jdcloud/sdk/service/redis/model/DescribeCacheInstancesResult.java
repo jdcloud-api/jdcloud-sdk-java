@@ -39,31 +39,33 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     /**
      * cacheInstances
      */
+    
     private List<CacheInstance> cacheInstances;
-
     /**
      * 实例总数
      */
     private Integer totalCount;
 
 
+
     /**
-     * get cacheInstances
-     *
-     * @return
-     */
+    * get cacheInstances
+    *
+    * @return
+    */
     public List<CacheInstance> getCacheInstances() {
         return cacheInstances;
     }
 
     /**
-     * set cacheInstances
-     *
-     * @param cacheInstances
-     */
+    * set cacheInstances
+    *
+    * @param cacheInstances
+    */
     public void setCacheInstances(List<CacheInstance> cacheInstances) {
         this.cacheInstances = cacheInstances;
     }
+
 
     /**
      * get 实例总数
@@ -84,15 +86,17 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set cacheInstances
-     *
-     * @param cacheInstances
-     */
+    * set cacheInstances
+    *
+    * @param cacheInstances
+    */
     public DescribeCacheInstancesResult cacheInstances(List<CacheInstance> cacheInstances) {
         this.cacheInstances = cacheInstances;
         return this;
     }
+
 
     /**
      * set 实例总数
@@ -103,6 +107,7 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeCacheInstancesResult extends JdcloudResult implements java.
         }
         this.cacheInstances.add(cacheInstance);
     }
-
 }

@@ -45,6 +45,7 @@ public class ModifyCacheInstanceClassResult extends JdcloudResult implements jav
     private String buyId;
 
 
+
     /**
      * get 订单编号
      *
@@ -62,6 +63,7 @@ public class ModifyCacheInstanceClassResult extends JdcloudResult implements jav
     public void setOrderNum(String orderNum) {
         this.orderNum = orderNum;
     }
+
 
     /**
      * get 购买ID
@@ -82,6 +84,7 @@ public class ModifyCacheInstanceClassResult extends JdcloudResult implements jav
     }
 
 
+
     /**
      * set 订单编号
      *
@@ -91,6 +94,7 @@ public class ModifyCacheInstanceClassResult extends JdcloudResult implements jav
         this.orderNum = orderNum;
         return this;
     }
+
 
     /**
      * set 购买ID

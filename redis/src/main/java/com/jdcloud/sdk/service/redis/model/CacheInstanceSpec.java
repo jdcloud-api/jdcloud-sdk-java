@@ -98,8 +98,8 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     /**
      * 用户普通标签
      */
+    
     private List<Tag> userTags;
-
     /**
      * 缓存Redis实例所属的资源组ID
      */
@@ -151,6 +151,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     private String cpuArchType;
 
 
+
     /**
      * get 缓存Redis实例所属的私有网络ID
      *
@@ -168,6 +169,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 缓存Redis实例在私有网络下所属的子网ID
@@ -187,6 +189,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 缓存Redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
@@ -204,6 +207,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setCacheInstanceName(String cacheInstanceName) {
         this.cacheInstanceName = cacheInstanceName;
     }
+
 
     /**
      * get 缓存Redis实例的规格代码（可调用describeInstanceClass接口获取），或者自定义分片实例的单分片规格代码（可调用describeSpecConfig接口获取）
@@ -223,6 +227,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.cacheInstanceClass = cacheInstanceClass;
     }
 
+
     /**
      * get 缓存Redis实例的连接密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      *
@@ -240,6 +245,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+
 
     /**
      * get 缓存Redis实例所在区域的可用区ID
@@ -259,6 +265,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.azId = azId;
     }
 
+
     /**
      * get 缓存Redis实例的描述，不能超过256个字符
      *
@@ -276,6 +283,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setCacheInstanceDescription(String cacheInstanceDescription) {
         this.cacheInstanceDescription = cacheInstanceDescription;
     }
+
 
     /**
      * get 缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
@@ -295,6 +303,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.redisVersion = redisVersion;
     }
 
+
     /**
      * get 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6，且必须保证VPC支持IPv6
      *
@@ -312,6 +321,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setIpv6On(Integer ipv6On) {
         this.ipv6On = ipv6On;
     }
+
 
     /**
      * get 分片数，自定义分片规格集群版实例必须有，且大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
@@ -331,23 +341,25 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.shardNumber = shardNumber;
     }
 
+
     /**
-     * get 用户普通标签
-     *
-     * @return
-     */
+    * get 用户普通标签
+    *
+    * @return
+    */
     public List<Tag> getUserTags() {
         return userTags;
     }
 
     /**
-     * set 用户普通标签
-     *
-     * @param userTags
-     */
+    * set 用户普通标签
+    *
+    * @param userTags
+    */
     public void setUserTags(List<Tag> userTags) {
         this.userTags = userTags;
     }
+
 
     /**
      * get 缓存Redis实例所属的资源组ID
@@ -367,6 +379,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.resourceGroupId = resourceGroupId;
     }
 
+
     /**
      * get db数量，默认为16，参数范围为16~256
      *
@@ -384,6 +397,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setDbNum(Integer dbNum) {
         this.dbNum = dbNum;
     }
+
 
     /**
      * get slave节点是否开启持久化
@@ -403,6 +417,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.slaveAppendonly = slaveAppendonly;
     }
 
+
     /**
      * get 内存淘汰策略
      *
@@ -420,6 +435,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setMaxmemoryPolicy(String maxmemoryPolicy) {
         this.maxmemoryPolicy = maxmemoryPolicy;
     }
+
 
     /**
      * get 缓存Redis实例类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
@@ -439,6 +455,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.cacheInstanceType = cacheInstanceType;
     }
 
+
     /**
      * get 副本数，含主副本
      *
@@ -456,6 +473,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setReplicaNumber(Integer replicaNumber) {
         this.replicaNumber = replicaNumber;
     }
+
 
     /**
      * get 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
@@ -475,6 +493,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.enableSmartProxy = enableSmartProxy;
     }
 
+
     /**
      * get 缓存Redis实例访问端口
      *
@@ -493,6 +512,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 扩展配置
      *
@@ -510,6 +530,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     public void setExtension(ReqExtension extension) {
         this.extension = extension;
     }
+
 
     /**
      * get cpu架构类型:arm64、amd64
@@ -530,6 +551,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 缓存Redis实例所属的私有网络ID
      *
@@ -539,6 +561,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例在私有网络下所属的子网ID
@@ -550,6 +573,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 缓存Redis实例名称，只支持数字、字母、英文下划线、中文，且不少于2字符不超过32字符
      *
@@ -559,6 +583,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.cacheInstanceName = cacheInstanceName;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例的规格代码（可调用describeInstanceClass接口获取），或者自定义分片实例的单分片规格代码（可调用describeSpecConfig接口获取）
@@ -570,6 +595,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 缓存Redis实例的连接密码，为空即为免密，包含且只支持字母及数字，不少于8字符不超过16字符
      *
@@ -579,6 +605,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.password = password;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所在区域的可用区ID
@@ -590,6 +617,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 缓存Redis实例的描述，不能超过256个字符
      *
@@ -599,6 +627,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.cacheInstanceDescription = cacheInstanceDescription;
         return this;
     }
+
 
     /**
      * set 缓存Redis引擎主次版本号：目前支持2.8和4.0，默认为2.8
@@ -610,6 +639,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否支持IPv6，0或空表示不支持，1表示支持IPv6，注意不是所有区域都支持IPv6，且必须保证VPC支持IPv6
      *
@@ -619,6 +649,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.ipv6On = ipv6On;
         return this;
     }
+
 
     /**
      * set 分片数，自定义分片规格集群版实例必须有，且大于1。每种分片规格支持的分片数可调用describeSpecConfig接口获取
@@ -630,15 +661,17 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 用户普通标签
-     *
-     * @param userTags
-     */
+    * set 用户普通标签
+    *
+    * @param userTags
+    */
     public CacheInstanceSpec userTags(List<Tag> userTags) {
         this.userTags = userTags;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所属的资源组ID
@@ -650,6 +683,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set db数量，默认为16，参数范围为16~256
      *
@@ -659,6 +693,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.dbNum = dbNum;
         return this;
     }
+
 
     /**
      * set slave节点是否开启持久化
@@ -670,6 +705,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存淘汰策略
      *
@@ -679,6 +715,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.maxmemoryPolicy = maxmemoryPolicy;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例类型，目前支持：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
@@ -690,6 +727,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 副本数，含主副本
      *
@@ -699,6 +737,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.replicaNumber = replicaNumber;
         return this;
     }
+
 
     /**
      * set 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
@@ -710,6 +749,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 缓存Redis实例访问端口
      *
@@ -719,6 +759,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.port = port;
         return this;
     }
+
 
     /**
      * set 扩展配置
@@ -730,6 +771,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cpu架构类型:arm64、amd64
      *
@@ -739,6 +781,7 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         this.cpuArchType = cpuArchType;
         return this;
     }
+
 
 
     /**
@@ -752,5 +795,4 @@ public class CacheInstanceSpec  implements java.io.Serializable {
         }
         this.userTags.add(userTag);
     }
-
 }

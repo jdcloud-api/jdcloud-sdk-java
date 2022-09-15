@@ -68,6 +68,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
     private Integer zsetTypeNum;
 
 
+
     /**
      * get 节点id
      *
@@ -85,6 +86,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
     public void setNodeId(String nodeId) {
         this.nodeId = nodeId;
     }
+
 
     /**
      * get 节点角色，master/slave
@@ -104,6 +106,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         this.nodeRole = nodeRole;
     }
 
+
     /**
      * get String类型大key数量
      *
@@ -121,6 +124,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
     public void setStringTypeNum(String stringTypeNum) {
         this.stringTypeNum = stringTypeNum;
     }
+
 
     /**
      * get List类型大key数量
@@ -140,6 +144,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         this.listTypeNum = listTypeNum;
     }
 
+
     /**
      * get Set类型大key数量
      *
@@ -158,6 +163,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         this.setTypeNum = setTypeNum;
     }
 
+
     /**
      * get Hash类型大key数量
      *
@@ -175,6 +181,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
     public void setHashTypeNum(Integer hashTypeNum) {
         this.hashTypeNum = hashTypeNum;
     }
+
 
     /**
      * get Zset类型大key数量
@@ -195,6 +202,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 节点id
      *
@@ -204,6 +212,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         this.nodeId = nodeId;
         return this;
     }
+
 
     /**
      * set 节点角色，master/slave
@@ -215,6 +224,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set String类型大key数量
      *
@@ -224,6 +234,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         this.stringTypeNum = stringTypeNum;
         return this;
     }
+
 
     /**
      * set List类型大key数量
@@ -235,6 +246,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Set类型大key数量
      *
@@ -245,6 +257,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set Hash类型大key数量
      *
@@ -254,6 +267,7 @@ public class BigKeyAnalysisNode  implements java.io.Serializable {
         this.hashTypeNum = hashTypeNum;
         return this;
     }
+
 
     /**
      * set Zset类型大key数量

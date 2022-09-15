@@ -76,6 +76,7 @@ public class Details  implements java.io.Serializable {
     private String lastCmd;
 
 
+
     /**
      * get client名称
      *
@@ -93,6 +94,7 @@ public class Details  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get client的端口
@@ -112,6 +114,7 @@ public class Details  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get client的已连接时长，单位：秒
      *
@@ -129,6 +132,7 @@ public class Details  implements java.io.Serializable {
     public void setAge(String age) {
         this.age = age;
     }
+
 
     /**
      * get client的空闲时长，单位：秒
@@ -148,6 +152,7 @@ public class Details  implements java.io.Serializable {
         this.idle = idle;
     }
 
+
     /**
      * get client连接的db
      *
@@ -165,6 +170,7 @@ public class Details  implements java.io.Serializable {
     public void setDb(String db) {
         this.db = db;
     }
+
 
     /**
      * get 最近执行的命令名称
@@ -185,6 +191,7 @@ public class Details  implements java.io.Serializable {
     }
 
 
+
     /**
      * set client名称
      *
@@ -194,6 +201,7 @@ public class Details  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set client的端口
@@ -205,6 +213,7 @@ public class Details  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set client的已连接时长，单位：秒
      *
@@ -214,6 +223,7 @@ public class Details  implements java.io.Serializable {
         this.age = age;
         return this;
     }
+
 
     /**
      * set client的空闲时长，单位：秒
@@ -225,6 +235,7 @@ public class Details  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set client连接的db
      *
@@ -234,6 +245,7 @@ public class Details  implements java.io.Serializable {
         this.db = db;
         return this;
     }
+
 
     /**
      * set 最近执行的命令名称
