@@ -39,37 +39,40 @@ public class DescribeClientListResult extends JdcloudResult implements java.io.S
     /**
      * ips
      */
+    
     private List<Ips> ips;
 
 
     /**
-     * get ips
-     *
-     * @return
-     */
+    * get ips
+    *
+    * @return
+    */
     public List<Ips> getIps() {
         return ips;
     }
 
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public void setIps(List<Ips> ips) {
         this.ips = ips;
     }
 
 
+
     /**
-     * set ips
-     *
-     * @param ips
-     */
+    * set ips
+    *
+    * @param ips
+    */
     public DescribeClientListResult ips(List<Ips> ips) {
         this.ips = ips;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeClientListResult extends JdcloudResult implements java.io.S
         }
         this.ips.add(ip);
     }
-
 }

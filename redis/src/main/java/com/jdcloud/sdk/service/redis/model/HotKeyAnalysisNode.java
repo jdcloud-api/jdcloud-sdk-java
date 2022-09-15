@@ -55,6 +55,7 @@ public class HotKeyAnalysisNode  implements java.io.Serializable {
     private Integer hotKeyNum;
 
 
+
     /**
      * get 节点id&quot;
      *
@@ -73,6 +74,7 @@ public class HotKeyAnalysisNode  implements java.io.Serializable {
         this.nodeId = nodeId;
     }
 
+
     /**
      * get 节点角色，master/slave
      *
@@ -90,6 +92,7 @@ public class HotKeyAnalysisNode  implements java.io.Serializable {
     public void setNodeRole(String nodeRole) {
         this.nodeRole = nodeRole;
     }
+
 
     /**
      * get 热key数量
@@ -110,6 +113,7 @@ public class HotKeyAnalysisNode  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 节点id&quot;
      *
@@ -120,6 +124,7 @@ public class HotKeyAnalysisNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点角色，master/slave
      *
@@ -129,6 +134,7 @@ public class HotKeyAnalysisNode  implements java.io.Serializable {
         this.nodeRole = nodeRole;
         return this;
     }
+
 
     /**
      * set 热key数量

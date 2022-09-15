@@ -56,6 +56,7 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
     private String taskId;
 
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -74,6 +75,7 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
         this.regionId = regionId;
     }
 
+
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
      *
@@ -91,6 +93,7 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
     public void setCacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
     }
+
 
     /**
      * get 任务ID，即request ID
@@ -111,6 +114,7 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
     }
 
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -121,6 +125,7 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
         return this;
     }
 
+
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识
      *
@@ -130,6 +135,7 @@ public class DescribeCacheAnalysisResultRequest extends JdcloudRequest implement
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
+
 
     /**
      * set 任务ID，即request ID

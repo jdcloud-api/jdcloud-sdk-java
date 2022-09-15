@@ -39,6 +39,7 @@ public class CreateBackupResult extends JdcloudResult implements java.io.Seriali
     private String baseId;
 
 
+
     /**
      * get 本次备份任务ID，可用于查询本次备份任务的结果
      *
@@ -56,6 +57,7 @@ public class CreateBackupResult extends JdcloudResult implements java.io.Seriali
     public void setBaseId(String baseId) {
         this.baseId = baseId;
     }
+
 
 
     /**

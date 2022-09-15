@@ -39,37 +39,40 @@ public class DescribeBigKeyListResult extends JdcloudResult implements java.io.S
     /**
      * analyses
      */
+    
     private List<CacheAnalysis> analyses;
 
 
     /**
-     * get analyses
-     *
-     * @return
-     */
+    * get analyses
+    *
+    * @return
+    */
     public List<CacheAnalysis> getAnalyses() {
         return analyses;
     }
 
     /**
-     * set analyses
-     *
-     * @param analyses
-     */
+    * set analyses
+    *
+    * @param analyses
+    */
     public void setAnalyses(List<CacheAnalysis> analyses) {
         this.analyses = analyses;
     }
 
 
+
     /**
-     * set analyses
-     *
-     * @param analyses
-     */
+    * set analyses
+    *
+    * @param analyses
+    */
     public DescribeBigKeyListResult analyses(List<CacheAnalysis> analyses) {
         this.analyses = analyses;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeBigKeyListResult extends JdcloudResult implements java.io.S
         }
         this.analyses.add(analyse);
     }
-
 }

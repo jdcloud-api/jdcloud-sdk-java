@@ -4,6 +4,8 @@ API版本：2.6.22
 
 | 发布时间   | 版本号 | 更新     | 说明                                                                                                                                                                                                    |
 | ---------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2022-09-05 | 2.6.24 | 新增接口 | 新增接口describeHotKeySummary、describeHotKeyDetail |
+| 2022-08-19 | 2.6.23 | 更新接口 | 修改接口describeClientPerfData、filteredClientPerfData的返回字段 |
 | 2022-08-16 | 2.6.22  | 新增接口 | 新增接口modifyAccounts |
 | 2022-08-15 | 2.6.21  | 新增接口 | 新增接口checkInstances |
 | 2022-08-05 | 2.6.20  | 新增接口 | 新增接口createBigKeyAnalysis2、describeBigKeyList2、describeBigKeyDetail2、modifyBigKeyAnalysisTime2、describeBigKeyAnalysisTime2、modifyAnalysisThreshold2、describeAnalysisThreshold2、describeHotKeyResult2、describeHotKeyDetail2 |

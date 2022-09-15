@@ -42,8 +42,8 @@ public class ModifyInstanceConfigRequest extends JdcloudRequest implements java.
      * Required:true
      */
     @Required
+    
     private List<ConfigItem> instanceConfig;
-
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
@@ -59,23 +59,25 @@ public class ModifyInstanceConfigRequest extends JdcloudRequest implements java.
     private String cacheInstanceId;
 
 
+
     /**
-     * get 配置参数名和参数值
-     *
-     * @return
-     */
+    * get 配置参数名和参数值
+    *
+    * @return
+    */
     public List<ConfigItem> getInstanceConfig() {
         return instanceConfig;
     }
 
     /**
-     * set 配置参数名和参数值
-     *
-     * @param instanceConfig
-     */
+    * set 配置参数名和参数值
+    *
+    * @param instanceConfig
+    */
     public void setInstanceConfig(List<ConfigItem> instanceConfig) {
         this.instanceConfig = instanceConfig;
     }
+
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -94,6 +96,7 @@ public class ModifyInstanceConfigRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -114,15 +117,17 @@ public class ModifyInstanceConfigRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
-     * set 配置参数名和参数值
-     *
-     * @param instanceConfig
-     */
+    * set 配置参数名和参数值
+    *
+    * @param instanceConfig
+    */
     public ModifyInstanceConfigRequest instanceConfig(List<ConfigItem> instanceConfig) {
         this.instanceConfig = instanceConfig;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -134,6 +139,7 @@ public class ModifyInstanceConfigRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识
      *
@@ -143,6 +149,7 @@ public class ModifyInstanceConfigRequest extends JdcloudRequest implements java.
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class ModifyInstanceConfigRequest extends JdcloudRequest implements java.
         }
         this.instanceConfig.add(instanceConfig);
     }
-
 }

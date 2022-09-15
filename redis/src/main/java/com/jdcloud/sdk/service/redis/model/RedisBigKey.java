@@ -55,6 +55,7 @@ public class RedisBigKey  implements java.io.Serializable {
     private Integer size;
 
 
+
     /**
      * get key名称
      *
@@ -73,6 +74,7 @@ public class RedisBigKey  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get key所在的db号
      *
@@ -90,6 +92,7 @@ public class RedisBigKey  implements java.io.Serializable {
     public void setDb(Integer db) {
         this.db = db;
     }
+
 
     /**
      * get key占用的内存，单位：字节
@@ -110,6 +113,7 @@ public class RedisBigKey  implements java.io.Serializable {
     }
 
 
+
     /**
      * set key名称
      *
@@ -120,6 +124,7 @@ public class RedisBigKey  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set key所在的db号
      *
@@ -129,6 +134,7 @@ public class RedisBigKey  implements java.io.Serializable {
         this.db = db;
         return this;
     }
+
 
     /**
      * set key占用的内存，单位：字节

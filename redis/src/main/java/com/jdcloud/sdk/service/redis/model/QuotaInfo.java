@@ -43,6 +43,7 @@ public class QuotaInfo  implements java.io.Serializable {
     private Integer used;
 
 
+
     /**
      * get 配额上限
      *
@@ -60,6 +61,7 @@ public class QuotaInfo  implements java.io.Serializable {
     public void setMax(Integer max) {
         this.max = max;
     }
+
 
     /**
      * get 已使用
@@ -80,6 +82,7 @@ public class QuotaInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 配额上限
      *
@@ -89,6 +92,7 @@ public class QuotaInfo  implements java.io.Serializable {
         this.max = max;
         return this;
     }
+
 
     /**
      * set 已使用

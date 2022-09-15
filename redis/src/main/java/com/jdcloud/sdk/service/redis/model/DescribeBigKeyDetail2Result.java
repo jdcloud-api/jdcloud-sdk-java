@@ -84,6 +84,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
     /**
      * bigKeyAnalysisNodesList
      */
+    
     private List<BigKeyAnalysisNode> bigKeyAnalysisNodesList;
 
 
@@ -105,6 +106,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.taskId = taskId;
     }
 
+
     /**
      * get String类型的阈值
      *
@@ -122,6 +124,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
     public void setStringSize(Integer stringSize) {
         this.stringSize = stringSize;
     }
+
 
     /**
      * get List类型的阈值
@@ -141,6 +144,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.listSize = listSize;
     }
 
+
     /**
      * get Set类型的阈值
      *
@@ -158,6 +162,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
     public void setSetSize(Integer setSize) {
         this.setSize = setSize;
     }
+
 
     /**
      * get Hash类型的阈值
@@ -177,6 +182,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.hashSize = hashSize;
     }
 
+
     /**
      * get Zset类型的阈值
      *
@@ -194,6 +200,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
     public void setZsetSize(Integer zsetSize) {
         this.zsetSize = zsetSize;
     }
+
 
     /**
      * get 大key分析任务状态(running, success, fail, manual_stop)
@@ -213,6 +220,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.status = status;
     }
 
+
     /**
      * get 大key分析开始时间, rfc3339格式
      *
@@ -230,6 +238,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
     public void setAnalysisTime(String analysisTime) {
         this.analysisTime = analysisTime;
     }
+
 
     /**
      * get 大key分析时长
@@ -249,23 +258,25 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.analysisDuration = analysisDuration;
     }
 
+
     /**
-     * get bigKeyAnalysisNodesList
-     *
-     * @return
-     */
+    * get bigKeyAnalysisNodesList
+    *
+    * @return
+    */
     public List<BigKeyAnalysisNode> getBigKeyAnalysisNodesList() {
         return bigKeyAnalysisNodesList;
     }
 
     /**
-     * set bigKeyAnalysisNodesList
-     *
-     * @param bigKeyAnalysisNodesList
-     */
+    * set bigKeyAnalysisNodesList
+    *
+    * @param bigKeyAnalysisNodesList
+    */
     public void setBigKeyAnalysisNodesList(List<BigKeyAnalysisNode> bigKeyAnalysisNodesList) {
         this.bigKeyAnalysisNodesList = bigKeyAnalysisNodesList;
     }
+
 
 
     /**
@@ -278,6 +289,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set String类型的阈值
      *
@@ -287,6 +299,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.stringSize = stringSize;
         return this;
     }
+
 
     /**
      * set List类型的阈值
@@ -298,6 +311,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set Set类型的阈值
      *
@@ -307,6 +321,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.setSize = setSize;
         return this;
     }
+
 
     /**
      * set Hash类型的阈值
@@ -318,6 +333,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set Zset类型的阈值
      *
@@ -327,6 +343,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.zsetSize = zsetSize;
         return this;
     }
+
 
     /**
      * set 大key分析任务状态(running, success, fail, manual_stop)
@@ -338,6 +355,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
      * set 大key分析开始时间, rfc3339格式
      *
@@ -347,6 +365,7 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         this.analysisTime = analysisTime;
         return this;
     }
+
 
     /**
      * set 大key分析时长
@@ -358,15 +377,17 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         return this;
     }
 
+
     /**
-     * set bigKeyAnalysisNodesList
-     *
-     * @param bigKeyAnalysisNodesList
-     */
+    * set bigKeyAnalysisNodesList
+    *
+    * @param bigKeyAnalysisNodesList
+    */
     public DescribeBigKeyDetail2Result bigKeyAnalysisNodesList(List<BigKeyAnalysisNode> bigKeyAnalysisNodesList) {
         this.bigKeyAnalysisNodesList = bigKeyAnalysisNodesList;
         return this;
     }
+
 
 
     /**
@@ -380,5 +401,4 @@ public class DescribeBigKeyDetail2Result extends JdcloudResult implements java.i
         }
         this.bigKeyAnalysisNodesList.add(bigKeyAnalysisNodesList);
     }
-
 }

@@ -38,6 +38,7 @@ public class InstanceDomain  implements java.io.Serializable {
     private String domainName;
 
 
+
     /**
      * get 域名
      *
@@ -55,6 +56,7 @@ public class InstanceDomain  implements java.io.Serializable {
     public void setDomainName(String domainName) {
         this.domainName = domainName;
     }
+
 
 
     /**

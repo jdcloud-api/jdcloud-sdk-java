@@ -64,6 +64,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
     private Integer topSize;
 
 
+
     /**
      * get String类型的阈值
      *
@@ -81,6 +82,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
     public void setStringSize(Integer stringSize) {
         this.stringSize = stringSize;
     }
+
 
     /**
      * get List类型的阈值
@@ -100,6 +102,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
         this.listSize = listSize;
     }
 
+
     /**
      * get Hash类型的阈值
      *
@@ -117,6 +120,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
     public void setHashSize(Integer hashSize) {
         this.hashSize = hashSize;
     }
+
 
     /**
      * get Set类型的阈值
@@ -136,6 +140,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
         this.setSize = setSize;
     }
 
+
     /**
      * get Zset类型的阈值
      *
@@ -153,6 +158,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
     public void setZsetSize(Integer zsetSize) {
         this.zsetSize = zsetSize;
     }
+
 
     /**
      * get top值
@@ -173,6 +179,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
     }
 
 
+
     /**
      * set String类型的阈值
      *
@@ -182,6 +189,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
         this.stringSize = stringSize;
         return this;
     }
+
 
     /**
      * set List类型的阈值
@@ -193,6 +201,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set Hash类型的阈值
      *
@@ -202,6 +211,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
         this.hashSize = hashSize;
         return this;
     }
+
 
     /**
      * set Set类型的阈值
@@ -213,6 +223,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
         return this;
     }
 
+
     /**
      * set Zset类型的阈值
      *
@@ -222,6 +233,7 @@ public class DescribeAnalysisThresholdResult extends JdcloudResult implements ja
         this.zsetSize = zsetSize;
         return this;
     }
+
 
     /**
      * set top值

@@ -47,8 +47,8 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
     /**
      * key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
      */
+    
     private List<KeyFilter> keyFilter;
-
     /**
      * 数据遍历的速率
      */
@@ -80,6 +80,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
     private String lastTransitionTime;
 
 
+
     /**
      * get 数据清理任务类型
      *
@@ -97,6 +98,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
     public void setClearType(String clearType) {
         this.clearType = clearType;
     }
+
 
     /**
      * get 匹配模式, 如: test*、*test、ab*cc*, 当节点为AllData、ExpiredData时可以忽略此参数
@@ -116,23 +118,25 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         this.keyPattern = keyPattern;
     }
 
+
     /**
-     * get key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
-     *
-     * @return
-     */
+    * get key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
+    *
+    * @return
+    */
     public List<KeyFilter> getKeyFilter() {
         return keyFilter;
     }
 
     /**
-     * set key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
-     *
-     * @param keyFilter
-     */
+    * set key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
+    *
+    * @param keyFilter
+    */
     public void setKeyFilter(List<KeyFilter> keyFilter) {
         this.keyFilter = keyFilter;
     }
+
 
     /**
      * get 数据遍历的速率
@@ -152,6 +156,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         this.qpsLimit = qpsLimit;
     }
 
+
     /**
      * get 本次清理任务的完成进度
      *
@@ -169,6 +174,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
     public void setProgress(Integer progress) {
         this.progress = progress;
     }
+
 
     /**
      * get 本次清理任务已成功清理的key数量
@@ -188,6 +194,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         this.effectKeys = effectKeys;
     }
 
+
     /**
      * get 本次清理任务的状态:running、success、failed
      *
@@ -206,6 +213,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 本次清理任务失败的原因
      *
@@ -223,6 +231,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 最近一次status转换的时间
@@ -243,6 +252,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 数据清理任务类型
      *
@@ -252,6 +262,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         this.clearType = clearType;
         return this;
     }
+
 
     /**
      * set 匹配模式, 如: test*、*test、ab*cc*, 当节点为AllData、ExpiredData时可以忽略此参数
@@ -263,15 +274,17 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
-     *
-     * @param keyFilter
-     */
+    * set key的过滤条件, 当节点为AllData、ExpiredData时可以忽略此参数
+    *
+    * @param keyFilter
+    */
     public ClearDataTaskInfo keyFilter(List<KeyFilter> keyFilter) {
         this.keyFilter = keyFilter;
         return this;
     }
+
 
     /**
      * set 数据遍历的速率
@@ -283,6 +296,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 本次清理任务的完成进度
      *
@@ -292,6 +306,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         this.progress = progress;
         return this;
     }
+
 
     /**
      * set 本次清理任务已成功清理的key数量
@@ -303,6 +318,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 本次清理任务的状态:running、success、failed
      *
@@ -312,6 +328,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 本次清理任务失败的原因
@@ -323,6 +340,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 最近一次status转换的时间
      *
@@ -332,6 +350,7 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         this.lastTransitionTime = lastTransitionTime;
         return this;
     }
+
 
 
     /**
@@ -345,5 +364,4 @@ public class ClearDataTaskInfo  implements java.io.Serializable {
         }
         this.keyFilter.add(keyFilter);
     }
-
 }

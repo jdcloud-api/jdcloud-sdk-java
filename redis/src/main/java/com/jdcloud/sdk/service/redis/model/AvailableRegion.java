@@ -57,6 +57,7 @@ public class AvailableRegion  implements java.io.Serializable {
     /**
      * 可用区列表
      */
+    
     private List<AzInfo> availableZones;
 
 
@@ -78,6 +79,7 @@ public class AvailableRegion  implements java.io.Serializable {
         this.regionId = regionId;
     }
 
+
     /**
      * get 地域名
      *
@@ -95,6 +97,7 @@ public class AvailableRegion  implements java.io.Serializable {
     public void setRegionName(String regionName) {
         this.regionName = regionName;
     }
+
 
     /**
      * get 是否售罄
@@ -114,6 +117,7 @@ public class AvailableRegion  implements java.io.Serializable {
         this.soldOut = soldOut;
     }
 
+
     /**
      * get 用户配额
      *
@@ -132,23 +136,25 @@ public class AvailableRegion  implements java.io.Serializable {
         this.quota = quota;
     }
 
+
     /**
-     * get 可用区列表
-     *
-     * @return
-     */
+    * get 可用区列表
+    *
+    * @return
+    */
     public List<AzInfo> getAvailableZones() {
         return availableZones;
     }
 
     /**
-     * set 可用区列表
-     *
-     * @param availableZones
-     */
+    * set 可用区列表
+    *
+    * @param availableZones
+    */
     public void setAvailableZones(List<AzInfo> availableZones) {
         this.availableZones = availableZones;
     }
+
 
 
     /**
@@ -161,6 +167,7 @@ public class AvailableRegion  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域名
      *
@@ -170,6 +177,7 @@ public class AvailableRegion  implements java.io.Serializable {
         this.regionName = regionName;
         return this;
     }
+
 
     /**
      * set 是否售罄
@@ -181,6 +189,7 @@ public class AvailableRegion  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户配额
      *
@@ -191,15 +200,17 @@ public class AvailableRegion  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区列表
-     *
-     * @param availableZones
-     */
+    * set 可用区列表
+    *
+    * @param availableZones
+    */
     public AvailableRegion availableZones(List<AzInfo> availableZones) {
         this.availableZones = availableZones;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class AvailableRegion  implements java.io.Serializable {
         }
         this.availableZones.add(availableZone);
     }
-
 }

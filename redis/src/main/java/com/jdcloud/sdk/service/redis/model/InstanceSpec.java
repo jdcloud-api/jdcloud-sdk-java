@@ -42,6 +42,7 @@ public class InstanceSpec  implements java.io.Serializable {
     /**
      * 版本信息列表
      */
+    
     private List<VersionInfo> instanceVersions;
 
 
@@ -63,23 +64,25 @@ public class InstanceSpec  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
-     * get 版本信息列表
-     *
-     * @return
-     */
+    * get 版本信息列表
+    *
+    * @return
+    */
     public List<VersionInfo> getInstanceVersions() {
         return instanceVersions;
     }
 
     /**
-     * set 版本信息列表
-     *
-     * @param instanceVersions
-     */
+    * set 版本信息列表
+    *
+    * @param instanceVersions
+    */
     public void setInstanceVersions(List<VersionInfo> instanceVersions) {
         this.instanceVersions = instanceVersions;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class InstanceSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 版本信息列表
-     *
-     * @param instanceVersions
-     */
+    * set 版本信息列表
+    *
+    * @param instanceVersions
+    */
     public InstanceSpec instanceVersions(List<VersionInfo> instanceVersions) {
         this.instanceVersions = instanceVersions;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class InstanceSpec  implements java.io.Serializable {
         }
         this.instanceVersions.add(instanceVersion);
     }
-
 }

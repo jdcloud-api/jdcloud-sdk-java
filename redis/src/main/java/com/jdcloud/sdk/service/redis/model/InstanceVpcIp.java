@@ -37,70 +37,75 @@ public class InstanceVpcIp  implements java.io.Serializable {
     /**
      * 代理列表
      */
+    
     private List<Node> proxies;
-
     /**
      * 分片列表
      */
+    
     private List<RedisShard> shards;
 
 
     /**
-     * get 代理列表
-     *
-     * @return
-     */
+    * get 代理列表
+    *
+    * @return
+    */
     public List<Node> getProxies() {
         return proxies;
     }
 
     /**
-     * set 代理列表
-     *
-     * @param proxies
-     */
+    * set 代理列表
+    *
+    * @param proxies
+    */
     public void setProxies(List<Node> proxies) {
         this.proxies = proxies;
     }
 
+
     /**
-     * get 分片列表
-     *
-     * @return
-     */
+    * get 分片列表
+    *
+    * @return
+    */
     public List<RedisShard> getShards() {
         return shards;
     }
 
     /**
-     * set 分片列表
-     *
-     * @param shards
-     */
+    * set 分片列表
+    *
+    * @param shards
+    */
     public void setShards(List<RedisShard> shards) {
         this.shards = shards;
     }
 
 
+
     /**
-     * set 代理列表
-     *
-     * @param proxies
-     */
+    * set 代理列表
+    *
+    * @param proxies
+    */
     public InstanceVpcIp proxies(List<Node> proxies) {
         this.proxies = proxies;
         return this;
     }
 
+
     /**
-     * set 分片列表
-     *
-     * @param shards
-     */
+    * set 分片列表
+    *
+    * @param shards
+    */
     public InstanceVpcIp shards(List<RedisShard> shards) {
         this.shards = shards;
         return this;
     }
+
 
 
     /**
@@ -126,5 +131,4 @@ public class InstanceVpcIp  implements java.io.Serializable {
         }
         this.shards.add(shard);
     }
-
 }

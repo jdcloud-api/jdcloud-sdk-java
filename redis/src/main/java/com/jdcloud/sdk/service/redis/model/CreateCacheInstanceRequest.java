@@ -57,6 +57,7 @@ public class CreateCacheInstanceRequest extends JdcloudRequest implements java.i
     private String regionId;
 
 
+
     /**
      * get 实例的创建参数
      *
@@ -75,6 +76,7 @@ public class CreateCacheInstanceRequest extends JdcloudRequest implements java.i
         this.cacheInstance = cacheInstance;
     }
 
+
     /**
      * get 实例的计费类型
      *
@@ -92,6 +94,7 @@ public class CreateCacheInstanceRequest extends JdcloudRequest implements java.i
     public void setCharge(ChargeSpec charge) {
         this.charge = charge;
     }
+
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -112,6 +115,7 @@ public class CreateCacheInstanceRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 实例的创建参数
      *
@@ -122,6 +126,7 @@ public class CreateCacheInstanceRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 实例的计费类型
      *
@@ -131,6 +136,7 @@ public class CreateCacheInstanceRequest extends JdcloudRequest implements java.i
         this.charge = charge;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2

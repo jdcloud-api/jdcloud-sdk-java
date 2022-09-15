@@ -128,8 +128,8 @@ public class CacheInstance  implements java.io.Serializable {
     /**
      * 标签信息
      */
+    
     private List<Tag> tags;
-
     /**
      * 实例所属资源组ID
      */
@@ -153,8 +153,8 @@ public class CacheInstance  implements java.io.Serializable {
     /**
      * 实例其他访问域名列表
      */
+    
     private List<InstanceDomain> otherDomains;
-
     /**
      * 从节点aof开关
      */
@@ -186,6 +186,7 @@ public class CacheInstance  implements java.io.Serializable {
     private String cpuArchType;
 
 
+
     /**
      * get 实例ID
      *
@@ -203,6 +204,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setCacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
     }
+
 
     /**
      * get 实例名称
@@ -222,6 +224,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.cacheInstanceName = cacheInstanceName;
     }
 
+
     /**
      * get 规格代码，2.8、4.0标准版是实例规格，4.0自定义分片集群版实例表示单分片规格
      *
@@ -239,6 +242,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setCacheInstanceClass(String cacheInstanceClass) {
         this.cacheInstanceClass = cacheInstanceClass;
     }
+
 
     /**
      * get 实例的总内存（MB），表示用户购买的可使用内存
@@ -258,6 +262,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.cacheInstanceMemoryMB = cacheInstanceMemoryMB;
     }
 
+
     /**
      * get 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中，upgrading表示升级中
      *
@@ -275,6 +280,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setCacheInstanceStatus(String cacheInstanceStatus) {
         this.cacheInstanceStatus = cacheInstanceStatus;
     }
+
 
     /**
      * get 实例描述
@@ -294,6 +300,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.cacheInstanceDescription = cacheInstanceDescription;
     }
 
+
     /**
      * get 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
@@ -311,6 +318,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get az信息
@@ -330,6 +338,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.azId = azId;
     }
 
+
     /**
      * get 实例所属VPC ID
      *
@@ -347,6 +356,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 实例所属子网ID
@@ -366,6 +376,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 实例的访问域名
      *
@@ -383,6 +394,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setConnectionDomain(String connectionDomain) {
         this.connectionDomain = connectionDomain;
     }
+
 
     /**
      * get 实例的访问端口
@@ -402,6 +414,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.port = port;
     }
 
+
     /**
      * get 实例的计费信息
      *
@@ -419,6 +432,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setCharge(Charge charge) {
         this.charge = charge;
     }
+
 
     /**
      * get 实例的详细版本号，形如x.x-x.x
@@ -438,6 +452,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.instanceVersion = instanceVersion;
     }
 
+
     /**
      * get 连接实例时，是否需要密码认证，false表示无密码
      *
@@ -455,6 +470,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setAuth(Boolean auth) {
         this.auth = auth;
     }
+
 
     /**
      * get 创建实例时选择的引擎版本：目前支持2.8和4.0
@@ -474,6 +490,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.redisVersion = redisVersion;
     }
 
+
     /**
      * get 实例类型：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      *
@@ -491,6 +508,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setCacheInstanceType(String cacheInstanceType) {
         this.cacheInstanceType = cacheInstanceType;
     }
+
 
     /**
      * get 是否支持IPv6，0表示不支持（只能用IPv4），1表示支持
@@ -510,23 +528,25 @@ public class CacheInstance  implements java.io.Serializable {
         this.ipv6On = ipv6On;
     }
 
+
     /**
-     * get 标签信息
-     *
-     * @return
-     */
+    * get 标签信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set 标签信息
-     *
-     * @param tags
-     */
+    * set 标签信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get 实例所属资源组ID
@@ -546,6 +566,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.resourceGroupId = resourceGroupId;
     }
 
+
     /**
      * get 实例分片数，标准版固定为1，自定义分片集群版实例分片数由用户创建时选择，其他实例为固定分片数
      *
@@ -563,6 +584,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setShardNumber(Integer shardNumber) {
         this.shardNumber = shardNumber;
     }
+
 
     /**
      * get 单分片内存大小（MB）
@@ -582,6 +604,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.memoryMBPerShard = memoryMBPerShard;
     }
 
+
     /**
      * get 扩展配置
      *
@@ -600,23 +623,25 @@ public class CacheInstance  implements java.io.Serializable {
         this.extension = extension;
     }
 
+
     /**
-     * get 实例其他访问域名列表
-     *
-     * @return
-     */
+    * get 实例其他访问域名列表
+    *
+    * @return
+    */
     public List<InstanceDomain> getOtherDomains() {
         return otherDomains;
     }
 
     /**
-     * set 实例其他访问域名列表
-     *
-     * @param otherDomains
-     */
+    * set 实例其他访问域名列表
+    *
+    * @param otherDomains
+    */
     public void setOtherDomains(List<InstanceDomain> otherDomains) {
         this.otherDomains = otherDomains;
     }
+
 
     /**
      * get 从节点aof开关
@@ -636,6 +661,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.slaveAppendonly = slaveAppendonly;
     }
 
+
     /**
      * get db数量
      *
@@ -653,6 +679,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setDatabaseNum(String databaseNum) {
         this.databaseNum = databaseNum;
     }
+
 
     /**
      * get 淘汰策略
@@ -672,6 +699,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.maxmemoryPolicy = maxmemoryPolicy;
     }
 
+
     /**
      * get 副本数，含主副本
      *
@@ -690,6 +718,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.replicaNumber = replicaNumber;
     }
 
+
     /**
      * get 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
      *
@@ -707,6 +736,7 @@ public class CacheInstance  implements java.io.Serializable {
     public void setEnableSmartProxy(Integer enableSmartProxy) {
         this.enableSmartProxy = enableSmartProxy;
     }
+
 
     /**
      * get cpu架构类型:arm64、amd64
@@ -727,6 +757,7 @@ public class CacheInstance  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例ID
      *
@@ -736,6 +767,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
+
 
     /**
      * set 实例名称
@@ -747,6 +779,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规格代码，2.8、4.0标准版是实例规格，4.0自定义分片集群版实例表示单分片规格
      *
@@ -756,6 +789,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.cacheInstanceClass = cacheInstanceClass;
         return this;
     }
+
 
     /**
      * set 实例的总内存（MB），表示用户购买的可使用内存
@@ -767,6 +801,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例状态：creating表示创建中，running表示运行中，error表示错误，changing表示变更规格中，deleting表示删除中，configuring表示修改参数中，restoring表示备份恢复中，upgrading表示升级中
      *
@@ -776,6 +811,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.cacheInstanceStatus = cacheInstanceStatus;
         return this;
     }
+
 
     /**
      * set 实例描述
@@ -787,6 +823,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
      *
@@ -796,6 +833,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set az信息
@@ -807,6 +845,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例所属VPC ID
      *
@@ -816,6 +855,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 实例所属子网ID
@@ -827,6 +867,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例的访问域名
      *
@@ -836,6 +877,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.connectionDomain = connectionDomain;
         return this;
     }
+
 
     /**
      * set 实例的访问端口
@@ -847,6 +889,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例的计费信息
      *
@@ -856,6 +899,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.charge = charge;
         return this;
     }
+
 
     /**
      * set 实例的详细版本号，形如x.x-x.x
@@ -867,6 +911,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 连接实例时，是否需要密码认证，false表示无密码
      *
@@ -876,6 +921,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.auth = auth;
         return this;
     }
+
 
     /**
      * set 创建实例时选择的引擎版本：目前支持2.8和4.0
@@ -887,6 +933,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例类型：master-slave（标准版）、cluster（代理集群版）、native-cluster（cluster集群版）
      *
@@ -896,6 +943,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.cacheInstanceType = cacheInstanceType;
         return this;
     }
+
 
     /**
      * set 是否支持IPv6，0表示不支持（只能用IPv4），1表示支持
@@ -907,15 +955,17 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 标签信息
-     *
-     * @param tags
-     */
+    * set 标签信息
+    *
+    * @param tags
+    */
     public CacheInstance tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set 实例所属资源组ID
@@ -927,6 +977,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例分片数，标准版固定为1，自定义分片集群版实例分片数由用户创建时选择，其他实例为固定分片数
      *
@@ -936,6 +987,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.shardNumber = shardNumber;
         return this;
     }
+
 
     /**
      * set 单分片内存大小（MB）
@@ -947,6 +999,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 扩展配置
      *
@@ -957,15 +1010,17 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例其他访问域名列表
-     *
-     * @param otherDomains
-     */
+    * set 实例其他访问域名列表
+    *
+    * @param otherDomains
+    */
     public CacheInstance otherDomains(List<InstanceDomain> otherDomains) {
         this.otherDomains = otherDomains;
         return this;
     }
+
 
     /**
      * set 从节点aof开关
@@ -977,6 +1032,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set db数量
      *
@@ -986,6 +1042,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.databaseNum = databaseNum;
         return this;
     }
+
 
     /**
      * set 淘汰策略
@@ -997,6 +1054,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 副本数，含主副本
      *
@@ -1006,6 +1064,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.replicaNumber = replicaNumber;
         return this;
     }
+
 
     /**
      * set 实例是否开启SmartProxy，当架构类型为native-cluster时才有效，1表示开启，0表示不开启
@@ -1017,6 +1076,7 @@ public class CacheInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set cpu架构类型:arm64、amd64
      *
@@ -1026,6 +1086,7 @@ public class CacheInstance  implements java.io.Serializable {
         this.cpuArchType = cpuArchType;
         return this;
     }
+
 
 
     /**
@@ -1051,5 +1112,4 @@ public class CacheInstance  implements java.io.Serializable {
         }
         this.otherDomains.add(otherDomain);
     }
-
 }

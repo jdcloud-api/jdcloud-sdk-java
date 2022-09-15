@@ -63,6 +63,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     private String cacheInstanceId;
 
 
+
     /**
      * get 备份文件名称，只支持英文数字和下划线的组合，长度不超过32个字符
      *
@@ -80,6 +81,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
+
 
     /**
      * get 备份类型：手动备份为1，只能为手动备份
@@ -99,6 +101,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
         this.backupType = backupType;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -116,6 +119,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -136,6 +140,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 备份文件名称，只支持英文数字和下划线的组合，长度不超过32个字符
      *
@@ -145,6 +150,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
         this.fileName = fileName;
         return this;
     }
+
 
     /**
      * set 备份类型：手动备份为1，只能为手动备份
@@ -156,6 +162,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -165,6 +172,7 @@ public class CreateBackupRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识

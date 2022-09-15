@@ -44,6 +44,7 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
     /**
      * accountLists
      */
+    
     private List<Accounts> accountLists;
 
 
@@ -65,23 +66,25 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
         this.isSupport = isSupport;
     }
 
+
     /**
-     * get accountLists
-     *
-     * @return
-     */
+    * get accountLists
+    *
+    * @return
+    */
     public List<Accounts> getAccountLists() {
         return accountLists;
     }
 
     /**
-     * set accountLists
-     *
-     * @param accountLists
-     */
+    * set accountLists
+    *
+    * @param accountLists
+    */
     public void setAccountLists(List<Accounts> accountLists) {
         this.accountLists = accountLists;
     }
+
 
 
     /**
@@ -94,15 +97,17 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
-     * set accountLists
-     *
-     * @param accountLists
-     */
+    * set accountLists
+    *
+    * @param accountLists
+    */
     public DescribeAccountsResult accountLists(List<Accounts> accountLists) {
         this.accountLists = accountLists;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeAccountsResult extends JdcloudResult implements java.io.Ser
         }
         this.accountLists.add(accountList);
     }
-
 }

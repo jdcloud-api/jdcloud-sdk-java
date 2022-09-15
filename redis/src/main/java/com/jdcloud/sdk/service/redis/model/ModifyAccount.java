@@ -56,6 +56,7 @@ public class ModifyAccount  implements java.io.Serializable {
     private String accountDescription;
 
 
+
     /**
      * get 账号名称
      *
@@ -73,6 +74,7 @@ public class ModifyAccount  implements java.io.Serializable {
     public void setAccountName(String accountName) {
         this.accountName = accountName;
     }
+
 
     /**
      * get 账号密码
@@ -92,6 +94,7 @@ public class ModifyAccount  implements java.io.Serializable {
         this.accountPassword = accountPassword;
     }
 
+
     /**
      * get 账号权限。支持RoleReadOnly（只读权限）、RoleReadWrite（读写权限）
      *
@@ -109,6 +112,7 @@ public class ModifyAccount  implements java.io.Serializable {
     public void setAccountPrivilege(String accountPrivilege) {
         this.accountPrivilege = accountPrivilege;
     }
+
 
     /**
      * get 账号描述
@@ -129,6 +133,7 @@ public class ModifyAccount  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 账号名称
      *
@@ -138,6 +143,7 @@ public class ModifyAccount  implements java.io.Serializable {
         this.accountName = accountName;
         return this;
     }
+
 
     /**
      * set 账号密码
@@ -149,6 +155,7 @@ public class ModifyAccount  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账号权限。支持RoleReadOnly（只读权限）、RoleReadWrite（读写权限）
      *
@@ -158,6 +165,7 @@ public class ModifyAccount  implements java.io.Serializable {
         this.accountPrivilege = accountPrivilege;
         return this;
     }
+
 
     /**
      * set 账号描述

@@ -62,6 +62,7 @@ public class RedisType  implements java.io.Serializable {
     private Float ratio;
 
 
+
     /**
      * get type名称
      *
@@ -79,6 +80,7 @@ public class RedisType  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 当前type的key个数
@@ -98,6 +100,7 @@ public class RedisType  implements java.io.Serializable {
         this.keyNumber = keyNumber;
     }
 
+
     /**
      * get 当前type的key的内存大小，单位：字节，redis2.8无此项
      *
@@ -115,6 +118,7 @@ public class RedisType  implements java.io.Serializable {
     public void setKeySize(Long keySize) {
         this.keySize = keySize;
     }
+
 
     /**
      * get type占比
@@ -135,6 +139,7 @@ public class RedisType  implements java.io.Serializable {
     }
 
 
+
     /**
      * set type名称
      *
@@ -144,6 +149,7 @@ public class RedisType  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 当前type的key个数
@@ -155,6 +161,7 @@ public class RedisType  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 当前type的key的内存大小，单位：字节，redis2.8无此项
      *
@@ -164,6 +171,7 @@ public class RedisType  implements java.io.Serializable {
         this.keySize = keySize;
         return this;
     }
+
 
     /**
      * set type占比

@@ -42,6 +42,7 @@ public class VersionInfo  implements java.io.Serializable {
     /**
      * 类型信息列表
      */
+    
     private List<TypeInfo> instanceTypes;
 
 
@@ -63,23 +64,25 @@ public class VersionInfo  implements java.io.Serializable {
         this.redisVersion = redisVersion;
     }
 
+
     /**
-     * get 类型信息列表
-     *
-     * @return
-     */
+    * get 类型信息列表
+    *
+    * @return
+    */
     public List<TypeInfo> getInstanceTypes() {
         return instanceTypes;
     }
 
     /**
-     * set 类型信息列表
-     *
-     * @param instanceTypes
-     */
+    * set 类型信息列表
+    *
+    * @param instanceTypes
+    */
     public void setInstanceTypes(List<TypeInfo> instanceTypes) {
         this.instanceTypes = instanceTypes;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class VersionInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 类型信息列表
-     *
-     * @param instanceTypes
-     */
+    * set 类型信息列表
+    *
+    * @param instanceTypes
+    */
     public VersionInfo instanceTypes(List<TypeInfo> instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class VersionInfo  implements java.io.Serializable {
         }
         this.instanceTypes.add(instanceType);
     }
-
 }

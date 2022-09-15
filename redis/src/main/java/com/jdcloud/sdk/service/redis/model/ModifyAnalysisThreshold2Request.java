@@ -74,6 +74,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
     private String cacheInstanceId;
 
 
+
     /**
      * get String类型阈值，最小10240
      *
@@ -91,6 +92,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
     public void setStringSize(Integer stringSize) {
         this.stringSize = stringSize;
     }
+
 
     /**
      * get List类型阈值，最小1000
@@ -110,6 +112,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         this.listSize = listSize;
     }
 
+
     /**
      * get Hash类型阈值，最小1000
      *
@@ -127,6 +130,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
     public void setHashSize(Integer hashSize) {
         this.hashSize = hashSize;
     }
+
 
     /**
      * get Set类型阈值，最小1000
@@ -146,6 +150,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         this.setSize = setSize;
     }
 
+
     /**
      * get Zset类型阈值，最小1000
      *
@@ -164,6 +169,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         this.zsetSize = zsetSize;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -181,6 +187,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -201,6 +208,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set String类型阈值，最小10240
      *
@@ -210,6 +218,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         this.stringSize = stringSize;
         return this;
     }
+
 
     /**
      * set List类型阈值，最小1000
@@ -221,6 +230,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set Hash类型阈值，最小1000
      *
@@ -230,6 +240,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         this.hashSize = hashSize;
         return this;
     }
+
 
     /**
      * set Set类型阈值，最小1000
@@ -241,6 +252,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set Zset类型阈值，最小1000
      *
@@ -251,6 +263,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -260,6 +273,7 @@ public class ModifyAnalysisThreshold2Request extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识

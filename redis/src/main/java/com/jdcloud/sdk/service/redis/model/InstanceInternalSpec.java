@@ -47,6 +47,7 @@ public class InstanceInternalSpec  implements java.io.Serializable {
     /**
      * 内部节点角色列表
      */
+    
     private List<NodeRole> nodeRoles;
 
 
@@ -68,6 +69,7 @@ public class InstanceInternalSpec  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 实例总内存（GB）
      *
@@ -86,23 +88,25 @@ public class InstanceInternalSpec  implements java.io.Serializable {
         this.instanceMemoryGB = instanceMemoryGB;
     }
 
+
     /**
-     * get 内部节点角色列表
-     *
-     * @return
-     */
+    * get 内部节点角色列表
+    *
+    * @return
+    */
     public List<NodeRole> getNodeRoles() {
         return nodeRoles;
     }
 
     /**
-     * set 内部节点角色列表
-     *
-     * @param nodeRoles
-     */
+    * set 内部节点角色列表
+    *
+    * @param nodeRoles
+    */
     public void setNodeRoles(List<NodeRole> nodeRoles) {
         this.nodeRoles = nodeRoles;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class InstanceInternalSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例总内存（GB）
      *
@@ -125,15 +130,17 @@ public class InstanceInternalSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 内部节点角色列表
-     *
-     * @param nodeRoles
-     */
+    * set 内部节点角色列表
+    *
+    * @param nodeRoles
+    */
     public InstanceInternalSpec nodeRoles(List<NodeRole> nodeRoles) {
         this.nodeRoles = nodeRoles;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class InstanceInternalSpec  implements java.io.Serializable {
         }
         this.nodeRoles.add(nodeRole);
     }
-
 }

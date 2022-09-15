@@ -40,6 +40,7 @@ public class DescribeClusterInfoResult extends JdcloudResult implements java.io.
     private ClusterInfo info;
 
 
+
     /**
      * get 集群内部信息
      *
@@ -57,6 +58,7 @@ public class DescribeClusterInfoResult extends JdcloudResult implements java.io.
     public void setInfo(ClusterInfo info) {
         this.info = info;
     }
+
 
 
     /**

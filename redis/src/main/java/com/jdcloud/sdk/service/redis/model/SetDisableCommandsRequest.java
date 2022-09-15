@@ -42,8 +42,8 @@ public class SetDisableCommandsRequest extends JdcloudRequest implements java.io
      * Required:true
      */
     @Required
+    
     private List<DisableCommands> disableCommands;
-
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
@@ -59,23 +59,25 @@ public class SetDisableCommandsRequest extends JdcloudRequest implements java.io
     private String cacheInstanceId;
 
 
+
     /**
-     * get 禁用命令列表
-     *
-     * @return
-     */
+    * get 禁用命令列表
+    *
+    * @return
+    */
     public List<DisableCommands> getDisableCommands() {
         return disableCommands;
     }
 
     /**
-     * set 禁用命令列表
-     *
-     * @param disableCommands
-     */
+    * set 禁用命令列表
+    *
+    * @param disableCommands
+    */
     public void setDisableCommands(List<DisableCommands> disableCommands) {
         this.disableCommands = disableCommands;
     }
+
 
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -94,6 +96,7 @@ public class SetDisableCommandsRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -114,15 +117,17 @@ public class SetDisableCommandsRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
-     * set 禁用命令列表
-     *
-     * @param disableCommands
-     */
+    * set 禁用命令列表
+    *
+    * @param disableCommands
+    */
     public SetDisableCommandsRequest disableCommands(List<DisableCommands> disableCommands) {
         this.disableCommands = disableCommands;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -134,6 +139,7 @@ public class SetDisableCommandsRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识
      *
@@ -143,6 +149,7 @@ public class SetDisableCommandsRequest extends JdcloudRequest implements java.io
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
+
 
 
     /**
@@ -156,5 +163,4 @@ public class SetDisableCommandsRequest extends JdcloudRequest implements java.io
         }
         this.disableCommands.add(disableCommand);
     }
-
 }

@@ -54,26 +54,27 @@ public class DescribeBigKeyDetailResult extends JdcloudResult implements java.io
     /**
      * stringBigKeys
      */
+    
     private List<RedisBigKey> stringBigKeys;
-
     /**
      * hashBigKeys
      */
+    
     private List<RedisBigKey> hashBigKeys;
-
     /**
      * listBigKeys
      */
+    
     private List<RedisBigKey> listBigKeys;
-
     /**
      * zsetBigKeys
      */
+    
     private List<RedisBigKey> zsetBigKeys;
-
     /**
      * setBigKeys
      */
+    
     private List<RedisBigKey> setBigKeys;
 
 
@@ -95,6 +96,7 @@ public class DescribeBigKeyDetailResult extends JdcloudResult implements java.io
         this.startTime = startTime;
     }
 
+
     /**
      * get 任务结束时间, rfc3339格式
      *
@@ -112,6 +114,7 @@ public class DescribeBigKeyDetailResult extends JdcloudResult implements java.io
     public void setFinishTime(String finishTime) {
         this.finishTime = finishTime;
     }
+
 
     /**
      * get 任务类型，0:自动分析，1:手动分析
@@ -131,95 +134,101 @@ public class DescribeBigKeyDetailResult extends JdcloudResult implements java.io
         this.analysisType = analysisType;
     }
 
+
     /**
-     * get stringBigKeys
-     *
-     * @return
-     */
+    * get stringBigKeys
+    *
+    * @return
+    */
     public List<RedisBigKey> getStringBigKeys() {
         return stringBigKeys;
     }
 
     /**
-     * set stringBigKeys
-     *
-     * @param stringBigKeys
-     */
+    * set stringBigKeys
+    *
+    * @param stringBigKeys
+    */
     public void setStringBigKeys(List<RedisBigKey> stringBigKeys) {
         this.stringBigKeys = stringBigKeys;
     }
 
+
     /**
-     * get hashBigKeys
-     *
-     * @return
-     */
+    * get hashBigKeys
+    *
+    * @return
+    */
     public List<RedisBigKey> getHashBigKeys() {
         return hashBigKeys;
     }
 
     /**
-     * set hashBigKeys
-     *
-     * @param hashBigKeys
-     */
+    * set hashBigKeys
+    *
+    * @param hashBigKeys
+    */
     public void setHashBigKeys(List<RedisBigKey> hashBigKeys) {
         this.hashBigKeys = hashBigKeys;
     }
 
+
     /**
-     * get listBigKeys
-     *
-     * @return
-     */
+    * get listBigKeys
+    *
+    * @return
+    */
     public List<RedisBigKey> getListBigKeys() {
         return listBigKeys;
     }
 
     /**
-     * set listBigKeys
-     *
-     * @param listBigKeys
-     */
+    * set listBigKeys
+    *
+    * @param listBigKeys
+    */
     public void setListBigKeys(List<RedisBigKey> listBigKeys) {
         this.listBigKeys = listBigKeys;
     }
 
+
     /**
-     * get zsetBigKeys
-     *
-     * @return
-     */
+    * get zsetBigKeys
+    *
+    * @return
+    */
     public List<RedisBigKey> getZsetBigKeys() {
         return zsetBigKeys;
     }
 
     /**
-     * set zsetBigKeys
-     *
-     * @param zsetBigKeys
-     */
+    * set zsetBigKeys
+    *
+    * @param zsetBigKeys
+    */
     public void setZsetBigKeys(List<RedisBigKey> zsetBigKeys) {
         this.zsetBigKeys = zsetBigKeys;
     }
 
+
     /**
-     * get setBigKeys
-     *
-     * @return
-     */
+    * get setBigKeys
+    *
+    * @return
+    */
     public List<RedisBigKey> getSetBigKeys() {
         return setBigKeys;
     }
 
     /**
-     * set setBigKeys
-     *
-     * @param setBigKeys
-     */
+    * set setBigKeys
+    *
+    * @param setBigKeys
+    */
     public void setSetBigKeys(List<RedisBigKey> setBigKeys) {
         this.setBigKeys = setBigKeys;
     }
+
 
 
     /**
@@ -232,6 +241,7 @@ public class DescribeBigKeyDetailResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
      * set 任务结束时间, rfc3339格式
      *
@@ -241,6 +251,7 @@ public class DescribeBigKeyDetailResult extends JdcloudResult implements java.io
         this.finishTime = finishTime;
         return this;
     }
+
 
     /**
      * set 任务类型，0:自动分析，1:手动分析
@@ -252,55 +263,61 @@ public class DescribeBigKeyDetailResult extends JdcloudResult implements java.io
         return this;
     }
 
+
     /**
-     * set stringBigKeys
-     *
-     * @param stringBigKeys
-     */
+    * set stringBigKeys
+    *
+    * @param stringBigKeys
+    */
     public DescribeBigKeyDetailResult stringBigKeys(List<RedisBigKey> stringBigKeys) {
         this.stringBigKeys = stringBigKeys;
         return this;
     }
 
+
     /**
-     * set hashBigKeys
-     *
-     * @param hashBigKeys
-     */
+    * set hashBigKeys
+    *
+    * @param hashBigKeys
+    */
     public DescribeBigKeyDetailResult hashBigKeys(List<RedisBigKey> hashBigKeys) {
         this.hashBigKeys = hashBigKeys;
         return this;
     }
 
+
     /**
-     * set listBigKeys
-     *
-     * @param listBigKeys
-     */
+    * set listBigKeys
+    *
+    * @param listBigKeys
+    */
     public DescribeBigKeyDetailResult listBigKeys(List<RedisBigKey> listBigKeys) {
         this.listBigKeys = listBigKeys;
         return this;
     }
 
+
     /**
-     * set zsetBigKeys
-     *
-     * @param zsetBigKeys
-     */
+    * set zsetBigKeys
+    *
+    * @param zsetBigKeys
+    */
     public DescribeBigKeyDetailResult zsetBigKeys(List<RedisBigKey> zsetBigKeys) {
         this.zsetBigKeys = zsetBigKeys;
         return this;
     }
 
+
     /**
-     * set setBigKeys
-     *
-     * @param setBigKeys
-     */
+    * set setBigKeys
+    *
+    * @param setBigKeys
+    */
     public DescribeBigKeyDetailResult setBigKeys(List<RedisBigKey> setBigKeys) {
         this.setBigKeys = setBigKeys;
         return this;
     }
+
 
 
     /**
@@ -362,5 +379,4 @@ public class DescribeBigKeyDetailResult extends JdcloudResult implements java.io
         }
         this.setBigKeys.add(setBigKey);
     }
-
 }

@@ -83,6 +83,7 @@ public class RedisNode  implements java.io.Serializable {
     private Integer maxMemory;
 
 
+
     /**
      * get 节点名称，唯一标识一个节点
      *
@@ -100,6 +101,7 @@ public class RedisNode  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 节点分片ID，从0开始
@@ -119,6 +121,7 @@ public class RedisNode  implements java.io.Serializable {
         this.shardId = shardId;
     }
 
+
     /**
      * get 节点角色，master表示主节点，slave表示从节点
      *
@@ -136,6 +139,7 @@ public class RedisNode  implements java.io.Serializable {
     public void setRole(String role) {
         this.role = role;
     }
+
 
     /**
      * get 节点访问地址
@@ -155,6 +159,7 @@ public class RedisNode  implements java.io.Serializable {
         this.address = address;
     }
 
+
     /**
      * get 节点所属AZ
      *
@@ -172,6 +177,7 @@ public class RedisNode  implements java.io.Serializable {
     public void setAz(String az) {
         this.az = az;
     }
+
 
     /**
      * get 节点状态，running表示节点正常，error表示节点异常
@@ -191,6 +197,7 @@ public class RedisNode  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 节点负责的Slot个数
      *
@@ -209,6 +216,7 @@ public class RedisNode  implements java.io.Serializable {
         this.slots = slots;
     }
 
+
     /**
      * get 节点已使用内存，单位Byte
      *
@@ -226,6 +234,7 @@ public class RedisNode  implements java.io.Serializable {
     public void setUsedMemory(Integer usedMemory) {
         this.usedMemory = usedMemory;
     }
+
 
     /**
      * get 节点总内存，单位Byte
@@ -246,6 +255,7 @@ public class RedisNode  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 节点名称，唯一标识一个节点
      *
@@ -255,6 +265,7 @@ public class RedisNode  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 节点分片ID，从0开始
@@ -266,6 +277,7 @@ public class RedisNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点角色，master表示主节点，slave表示从节点
      *
@@ -275,6 +287,7 @@ public class RedisNode  implements java.io.Serializable {
         this.role = role;
         return this;
     }
+
 
     /**
      * set 节点访问地址
@@ -286,6 +299,7 @@ public class RedisNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点所属AZ
      *
@@ -295,6 +309,7 @@ public class RedisNode  implements java.io.Serializable {
         this.az = az;
         return this;
     }
+
 
     /**
      * set 节点状态，running表示节点正常，error表示节点异常
@@ -306,6 +321,7 @@ public class RedisNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点负责的Slot个数
      *
@@ -316,6 +332,7 @@ public class RedisNode  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点已使用内存，单位Byte
      *
@@ -325,6 +342,7 @@ public class RedisNode  implements java.io.Serializable {
         this.usedMemory = usedMemory;
         return this;
     }
+
 
     /**
      * set 节点总内存，单位Byte

@@ -43,6 +43,7 @@ public class DisableCommandsInfo  implements java.io.Serializable {
     private String disableTime;
 
 
+
     /**
      * get 命令名称
      *
@@ -60,6 +61,7 @@ public class DisableCommandsInfo  implements java.io.Serializable {
     public void setCommandName(String commandName) {
         this.commandName = commandName;
     }
+
 
     /**
      * get 命令禁用时间
@@ -80,6 +82,7 @@ public class DisableCommandsInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 命令名称
      *
@@ -89,6 +92,7 @@ public class DisableCommandsInfo  implements java.io.Serializable {
         this.commandName = commandName;
         return this;
     }
+
 
     /**
      * set 命令禁用时间

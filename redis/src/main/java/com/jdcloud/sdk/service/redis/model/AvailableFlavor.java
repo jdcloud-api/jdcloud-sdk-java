@@ -52,12 +52,13 @@ public class AvailableFlavor  implements java.io.Serializable {
     /**
      * 规格代码，标准版为实例的规格代码；集群版为单分片规格代码
      */
+    
     private List<String> instanceClasses;
-
     /**
      * 规格详情
      */
     private FlavorDetail detail;
+
 
 
     /**
@@ -78,6 +79,7 @@ public class AvailableFlavor  implements java.io.Serializable {
         this.shardNumber = shardNumber;
     }
 
+
     /**
      * get IP数
      *
@@ -95,6 +97,7 @@ public class AvailableFlavor  implements java.io.Serializable {
     public void setIpNumber(Integer ipNumber) {
         this.ipNumber = ipNumber;
     }
+
 
     /**
      * get 是否推荐
@@ -114,23 +117,25 @@ public class AvailableFlavor  implements java.io.Serializable {
         this.recommended = recommended;
     }
 
+
     /**
-     * get 规格代码，标准版为实例的规格代码；集群版为单分片规格代码
-     *
-     * @return
-     */
+    * get 规格代码，标准版为实例的规格代码；集群版为单分片规格代码
+    *
+    * @return
+    */
     public List<String> getInstanceClasses() {
         return instanceClasses;
     }
 
     /**
-     * set 规格代码，标准版为实例的规格代码；集群版为单分片规格代码
-     *
-     * @param instanceClasses
-     */
+    * set 规格代码，标准版为实例的规格代码；集群版为单分片规格代码
+    *
+    * @param instanceClasses
+    */
     public void setInstanceClasses(List<String> instanceClasses) {
         this.instanceClasses = instanceClasses;
     }
+
 
     /**
      * get 规格详情
@@ -151,6 +156,7 @@ public class AvailableFlavor  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 分片数
      *
@@ -160,6 +166,7 @@ public class AvailableFlavor  implements java.io.Serializable {
         this.shardNumber = shardNumber;
         return this;
     }
+
 
     /**
      * set IP数
@@ -171,6 +178,7 @@ public class AvailableFlavor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否推荐
      *
@@ -181,15 +189,17 @@ public class AvailableFlavor  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 规格代码，标准版为实例的规格代码；集群版为单分片规格代码
-     *
-     * @param instanceClasses
-     */
+    * set 规格代码，标准版为实例的规格代码；集群版为单分片规格代码
+    *
+    * @param instanceClasses
+    */
     public AvailableFlavor instanceClasses(List<String> instanceClasses) {
         this.instanceClasses = instanceClasses;
         return this;
     }
+
 
     /**
      * set 规格详情
@@ -200,6 +210,7 @@ public class AvailableFlavor  implements java.io.Serializable {
         this.detail = detail;
         return this;
     }
+
 
 
     /**
@@ -213,5 +224,4 @@ public class AvailableFlavor  implements java.io.Serializable {
         }
         this.instanceClasses.add(instanceClasse);
     }
-
 }

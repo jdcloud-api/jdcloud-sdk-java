@@ -48,6 +48,7 @@ public class AzInfo  implements java.io.Serializable {
     private Boolean soldOut;
 
 
+
     /**
      * get 逻辑可用区id
      *
@@ -66,6 +67,7 @@ public class AzInfo  implements java.io.Serializable {
         this.azId = azId;
     }
 
+
     /**
      * get 逻辑可用区名
      *
@@ -83,6 +85,7 @@ public class AzInfo  implements java.io.Serializable {
     public void setAzName(String azName) {
         this.azName = azName;
     }
+
 
     /**
      * get 是否售罄
@@ -103,6 +106,7 @@ public class AzInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 逻辑可用区id
      *
@@ -113,6 +117,7 @@ public class AzInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 逻辑可用区名
      *
@@ -122,6 +127,7 @@ public class AzInfo  implements java.io.Serializable {
         this.azName = azName;
         return this;
     }
+
 
     /**
      * set 是否售罄

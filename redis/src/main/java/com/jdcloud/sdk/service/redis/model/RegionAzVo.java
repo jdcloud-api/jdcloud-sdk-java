@@ -52,6 +52,7 @@ public class RegionAzVo  implements java.io.Serializable {
     /**
      * az售卖状态列表
      */
+    
     private List<AzSaleStatusVo> azStatusList;
 
 
@@ -73,6 +74,7 @@ public class RegionAzVo  implements java.io.Serializable {
         this.alias = alias;
     }
 
+
     /**
      * get 地域ID
      *
@@ -90,6 +92,7 @@ public class RegionAzVo  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 是否可见(1可见，0不可见)
@@ -109,23 +112,25 @@ public class RegionAzVo  implements java.io.Serializable {
         this.visible = visible;
     }
 
+
     /**
-     * get az售卖状态列表
-     *
-     * @return
-     */
+    * get az售卖状态列表
+    *
+    * @return
+    */
     public List<AzSaleStatusVo> getAzStatusList() {
         return azStatusList;
     }
 
     /**
-     * set az售卖状态列表
-     *
-     * @param azStatusList
-     */
+    * set az售卖状态列表
+    *
+    * @param azStatusList
+    */
     public void setAzStatusList(List<AzSaleStatusVo> azStatusList) {
         this.azStatusList = azStatusList;
     }
+
 
 
     /**
@@ -138,6 +143,7 @@ public class RegionAzVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域ID
      *
@@ -147,6 +153,7 @@ public class RegionAzVo  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 是否可见(1可见，0不可见)
@@ -158,15 +165,17 @@ public class RegionAzVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set az售卖状态列表
-     *
-     * @param azStatusList
-     */
+    * set az售卖状态列表
+    *
+    * @param azStatusList
+    */
     public RegionAzVo azStatusList(List<AzSaleStatusVo> azStatusList) {
         this.azStatusList = azStatusList;
         return this;
     }
+
 
 
     /**
@@ -180,5 +189,4 @@ public class RegionAzVo  implements java.io.Serializable {
         }
         this.azStatusList.add(azStatusList);
     }
-
 }

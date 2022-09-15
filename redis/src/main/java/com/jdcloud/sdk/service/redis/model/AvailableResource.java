@@ -67,8 +67,8 @@ public class AvailableResource  implements java.io.Serializable {
     /**
      * 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
      */
+    
     private List<String> supportedAzSpecifyType;
-
     /**
      * 按集群指定AZ时，需要指定的最小AZ个数
      */
@@ -77,8 +77,8 @@ public class AvailableResource  implements java.io.Serializable {
     /**
      * 支持的外部访问方式：NodePort、LoadBalancer
      */
+    
     private List<String> supportedExposeType;
-
     /**
      * 是否支持SmartProxy
      */
@@ -87,6 +87,7 @@ public class AvailableResource  implements java.io.Serializable {
     /**
      * 引擎版本列表
      */
+    
     private List<AvailableEngineVersion> availableEngineVersions;
 
 
@@ -108,6 +109,7 @@ public class AvailableResource  implements java.io.Serializable {
         this.architectureType = architectureType;
     }
 
+
     /**
      * get 架构类型名
      *
@@ -125,6 +127,7 @@ public class AvailableResource  implements java.io.Serializable {
     public void setArchitectureName(String architectureName) {
         this.architectureName = architectureName;
     }
+
 
     /**
      * get 是否推荐
@@ -144,6 +147,7 @@ public class AvailableResource  implements java.io.Serializable {
         this.recommended = recommended;
     }
 
+
     /**
      * get 是否售罄
      *
@@ -161,6 +165,7 @@ public class AvailableResource  implements java.io.Serializable {
     public void setSoldOut(Boolean soldOut) {
         this.soldOut = soldOut;
     }
+
 
     /**
      * get 支持的最大副本数
@@ -180,6 +185,7 @@ public class AvailableResource  implements java.io.Serializable {
         this.supportedMaxReplicas = supportedMaxReplicas;
     }
 
+
     /**
      * get 支持的最小副本数
      *
@@ -198,23 +204,25 @@ public class AvailableResource  implements java.io.Serializable {
         this.supportedMinReplicas = supportedMinReplicas;
     }
 
+
     /**
-     * get 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
-     *
-     * @return
-     */
+    * get 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+    *
+    * @return
+    */
     public List<String> getSupportedAzSpecifyType() {
         return supportedAzSpecifyType;
     }
 
     /**
-     * set 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
-     *
-     * @param supportedAzSpecifyType
-     */
+    * set 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+    *
+    * @param supportedAzSpecifyType
+    */
     public void setSupportedAzSpecifyType(List<String> supportedAzSpecifyType) {
         this.supportedAzSpecifyType = supportedAzSpecifyType;
     }
+
 
     /**
      * get 按集群指定AZ时，需要指定的最小AZ个数
@@ -234,23 +242,25 @@ public class AvailableResource  implements java.io.Serializable {
         this.minAzLimitForCluster = minAzLimitForCluster;
     }
 
+
     /**
-     * get 支持的外部访问方式：NodePort、LoadBalancer
-     *
-     * @return
-     */
+    * get 支持的外部访问方式：NodePort、LoadBalancer
+    *
+    * @return
+    */
     public List<String> getSupportedExposeType() {
         return supportedExposeType;
     }
 
     /**
-     * set 支持的外部访问方式：NodePort、LoadBalancer
-     *
-     * @param supportedExposeType
-     */
+    * set 支持的外部访问方式：NodePort、LoadBalancer
+    *
+    * @param supportedExposeType
+    */
     public void setSupportedExposeType(List<String> supportedExposeType) {
         this.supportedExposeType = supportedExposeType;
     }
+
 
     /**
      * get 是否支持SmartProxy
@@ -270,23 +280,25 @@ public class AvailableResource  implements java.io.Serializable {
         this.supportSmartProxy = supportSmartProxy;
     }
 
+
     /**
-     * get 引擎版本列表
-     *
-     * @return
-     */
+    * get 引擎版本列表
+    *
+    * @return
+    */
     public List<AvailableEngineVersion> getAvailableEngineVersions() {
         return availableEngineVersions;
     }
 
     /**
-     * set 引擎版本列表
-     *
-     * @param availableEngineVersions
-     */
+    * set 引擎版本列表
+    *
+    * @param availableEngineVersions
+    */
     public void setAvailableEngineVersions(List<AvailableEngineVersion> availableEngineVersions) {
         this.availableEngineVersions = availableEngineVersions;
     }
+
 
 
     /**
@@ -299,6 +311,7 @@ public class AvailableResource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 架构类型名
      *
@@ -308,6 +321,7 @@ public class AvailableResource  implements java.io.Serializable {
         this.architectureName = architectureName;
         return this;
     }
+
 
     /**
      * set 是否推荐
@@ -319,6 +333,7 @@ public class AvailableResource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否售罄
      *
@@ -328,6 +343,7 @@ public class AvailableResource  implements java.io.Serializable {
         this.soldOut = soldOut;
         return this;
     }
+
 
     /**
      * set 支持的最大副本数
@@ -339,6 +355,7 @@ public class AvailableResource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 支持的最小副本数
      *
@@ -349,15 +366,17 @@ public class AvailableResource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
-     *
-     * @param supportedAzSpecifyType
-     */
+    * set 支持的AZ指定方式：SpecifyByReplicaGroup表示按副本组指定，SpecifyByCluster表示按整个集群指定
+    *
+    * @param supportedAzSpecifyType
+    */
     public AvailableResource supportedAzSpecifyType(List<String> supportedAzSpecifyType) {
         this.supportedAzSpecifyType = supportedAzSpecifyType;
         return this;
     }
+
 
     /**
      * set 按集群指定AZ时，需要指定的最小AZ个数
@@ -369,15 +388,17 @@ public class AvailableResource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 支持的外部访问方式：NodePort、LoadBalancer
-     *
-     * @param supportedExposeType
-     */
+    * set 支持的外部访问方式：NodePort、LoadBalancer
+    *
+    * @param supportedExposeType
+    */
     public AvailableResource supportedExposeType(List<String> supportedExposeType) {
         this.supportedExposeType = supportedExposeType;
         return this;
     }
+
 
     /**
      * set 是否支持SmartProxy
@@ -389,15 +410,17 @@ public class AvailableResource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 引擎版本列表
-     *
-     * @param availableEngineVersions
-     */
+    * set 引擎版本列表
+    *
+    * @param availableEngineVersions
+    */
     public AvailableResource availableEngineVersions(List<AvailableEngineVersion> availableEngineVersions) {
         this.availableEngineVersions = availableEngineVersions;
         return this;
     }
+
 
 
     /**
@@ -435,5 +458,4 @@ public class AvailableResource  implements java.io.Serializable {
         }
         this.availableEngineVersions.add(availableEngineVersion);
     }
-
 }

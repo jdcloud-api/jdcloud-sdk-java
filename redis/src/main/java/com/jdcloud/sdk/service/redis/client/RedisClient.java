@@ -64,6 +64,9 @@ import com.jdcloud.sdk.service.redis.client.DescribeDownloadUrlExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeCacheInstancesResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeCacheInstancesExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeHotKeySummaryRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeHotKeySummaryResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeHotKeySummaryExecutor;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeRequest;
 import com.jdcloud.sdk.service.redis.model.ModifyCacheInstanceAttributeResponse;
 import com.jdcloud.sdk.service.redis.client.ModifyCacheInstanceAttributeExecutor;
@@ -124,6 +127,9 @@ import com.jdcloud.sdk.service.redis.client.DescribeClientListExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeClusterInfoRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeClusterInfoResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeClusterInfoExecutor;
+import com.jdcloud.sdk.service.redis.model.DescribeHotKeyDetailRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeHotKeyDetailResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeHotKeyDetailExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeBigKeyList2Request;
 import com.jdcloud.sdk.service.redis.model.DescribeBigKeyList2Response;
 import com.jdcloud.sdk.service.redis.client.DescribeBigKeyList2Executor;
@@ -383,6 +389,17 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
+     * 查询热key分析结果汇总
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeHotKeySummaryResponse describeHotKeySummary(DescribeHotKeySummaryRequest request) throws JdcloudSdkException {
+        return new DescribeHotKeySummaryExecutor().client(this).execute(request);
+    }
+
+    /**
      * 修改缓存Redis实例的资源名称或描述，二者至少选一
      *
      * @param request
@@ -601,6 +618,17 @@ public class RedisClient extends JdcloudClient {
      */
     public DescribeClusterInfoResponse describeClusterInfo(DescribeClusterInfoRequest request) throws JdcloudSdkException {
         return new DescribeClusterInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询热key分析详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeHotKeyDetailResponse describeHotKeyDetail(DescribeHotKeyDetailRequest request) throws JdcloudSdkException {
+        return new DescribeHotKeyDetailExecutor().client(this).execute(request);
     }
 
     /**

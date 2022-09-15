@@ -48,6 +48,7 @@ public class RedisCmd  implements java.io.Serializable {
     private Long data;
 
 
+
     /**
      * get 命令名称
      *
@@ -65,6 +66,7 @@ public class RedisCmd  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 命令调用次数或命令使用cpu的毫秒数
@@ -85,6 +87,7 @@ public class RedisCmd  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 命令名称
      *
@@ -94,6 +97,7 @@ public class RedisCmd  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 命令调用次数或命令使用cpu的毫秒数

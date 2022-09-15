@@ -56,6 +56,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
     private String cacheInstanceId;
 
 
+
     /**
      * get 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
      *
@@ -74,6 +75,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
         this.date = date;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -91,6 +93,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -111,6 +114,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set 格式:yyyy-MM-dd,表示查询某一天的大key分析列表
      *
@@ -121,6 +125,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -130,6 +135,7 @@ public class DescribeBigKeyListRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识

@@ -98,12 +98,13 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
     /**
      * 参数值的可选值，在configValueType为string或byteArray时有效
      */
+    
     private List<String> configValueOptional;
-
     /**
      * configValueType为outputBuffer时的参数值规则
      */
     private String configValueOutputBuffer;
+
 
 
     /**
@@ -150,6 +151,7 @@ notify-keyspace-events（只有redis 4.0支持）：事件通知
         this.configName = configName;
     }
 
+
     /**
      * get 参数的配置值，默认值、参考值如下：
 maxmemory-policy（redis 2.8和redis 4.0的默认值都为volatile-lru）：redis 4.0 的参考值有[volatile-lru, allkeys-lru, volatile-lfu, allkeys-lfu, volatile-random, allkeys-random, volatile-ttl, noeviction]，redis 2.8的参考值有[volatile-lru , allkeys-lru , volatile-random , allkeys-random , volatile-ttl , noeviction]
@@ -194,6 +196,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         this.configValue = configValue;
     }
 
+
     /**
      * get 参数默认值
      *
@@ -211,6 +214,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
     public void setConfigDefaultValue(String configDefaultValue) {
         this.configDefaultValue = configDefaultValue;
     }
+
 
     /**
      * get 参数值类型，目前有int、string、outputBuffer、byteArray这四种
@@ -230,6 +234,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         this.configValueType = configValueType;
     }
 
+
     /**
      * get 参数值的最小值，在configValueType为int时有效
      *
@@ -247,6 +252,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
     public void setConfigValueMin(Integer configValueMin) {
         this.configValueMin = configValueMin;
     }
+
 
     /**
      * get 参数值的最大值，在configValueType为int时有效
@@ -266,23 +272,25 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         this.configValueMax = configValueMax;
     }
 
+
     /**
-     * get 参数值的可选值，在configValueType为string或byteArray时有效
-     *
-     * @return
-     */
+    * get 参数值的可选值，在configValueType为string或byteArray时有效
+    *
+    * @return
+    */
     public List<String> getConfigValueOptional() {
         return configValueOptional;
     }
 
     /**
-     * set 参数值的可选值，在configValueType为string或byteArray时有效
-     *
-     * @param configValueOptional
-     */
+    * set 参数值的可选值，在configValueType为string或byteArray时有效
+    *
+    * @param configValueOptional
+    */
     public void setConfigValueOptional(List<String> configValueOptional) {
         this.configValueOptional = configValueOptional;
     }
+
 
     /**
      * get configValueType为outputBuffer时的参数值规则
@@ -301,6 +309,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
     public void setConfigValueOutputBuffer(String configValueOutputBuffer) {
         this.configValueOutputBuffer = configValueOutputBuffer;
     }
+
 
 
     /**
@@ -326,6 +335,7 @@ notify-keyspace-events（只有redis 4.0支持）：事件通知
         return this;
     }
 
+
     /**
      * set 参数的配置值，默认值、参考值如下：
 maxmemory-policy（redis 2.8和redis 4.0的默认值都为volatile-lru）：redis 4.0 的参考值有[volatile-lru, allkeys-lru, volatile-lfu, allkeys-lfu, volatile-random, allkeys-random, volatile-ttl, noeviction]，redis 2.8的参考值有[volatile-lru , allkeys-lru , volatile-random , allkeys-random , volatile-ttl , noeviction]
@@ -349,6 +359,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         return this;
     }
 
+
     /**
      * set 参数默认值
      *
@@ -358,6 +369,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         this.configDefaultValue = configDefaultValue;
         return this;
     }
+
 
     /**
      * set 参数值类型，目前有int、string、outputBuffer、byteArray这四种
@@ -369,6 +381,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         return this;
     }
 
+
     /**
      * set 参数值的最小值，在configValueType为int时有效
      *
@@ -378,6 +391,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         this.configValueMin = configValueMin;
         return this;
     }
+
 
     /**
      * set 参数值的最大值，在configValueType为int时有效
@@ -389,15 +403,17 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         return this;
     }
 
+
     /**
-     * set 参数值的可选值，在configValueType为string或byteArray时有效
-     *
-     * @param configValueOptional
-     */
+    * set 参数值的可选值，在configValueType为string或byteArray时有效
+    *
+    * @param configValueOptional
+    */
     public ConfigItem configValueOptional(List<String> configValueOptional) {
         this.configValueOptional = configValueOptional;
         return this;
     }
+
 
     /**
      * set configValueType为outputBuffer时的参数值规则
@@ -408,6 +424,7 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         this.configValueOutputBuffer = configValueOutputBuffer;
         return this;
     }
+
 
 
     /**
@@ -421,5 +438,4 @@ notify-keyspace-events（redis 4.0的默认值为空，redis 2.8不支持）：[
         }
         this.configValueOptional.add(configValueOptional);
     }
-
 }

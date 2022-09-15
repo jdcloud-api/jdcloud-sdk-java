@@ -43,6 +43,7 @@ public class Tag  implements java.io.Serializable {
     private String value;
 
 
+
     /**
      * get 标签的键
      *
@@ -60,6 +61,7 @@ public class Tag  implements java.io.Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
 
     /**
      * get 标签的值
@@ -80,6 +82,7 @@ public class Tag  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 标签的键
      *
@@ -89,6 +92,7 @@ public class Tag  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set 标签的值

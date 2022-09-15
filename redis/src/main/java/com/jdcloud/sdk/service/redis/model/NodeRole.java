@@ -48,6 +48,7 @@ public class NodeRole  implements java.io.Serializable {
     private NodeSpec nodeSpec;
 
 
+
     /**
      * get 节点角色，包括：1）master 主分片节点；2）slave 从分片节点；3）proxy 代理节点；4）admin 管理节点
      *
@@ -66,6 +67,7 @@ public class NodeRole  implements java.io.Serializable {
         this.kind = kind;
     }
 
+
     /**
      * get 节点个数
      *
@@ -83,6 +85,7 @@ public class NodeRole  implements java.io.Serializable {
     public void setNum(Integer num) {
         this.num = num;
     }
+
 
     /**
      * get 节点规格
@@ -103,6 +106,7 @@ public class NodeRole  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 节点角色，包括：1）master 主分片节点；2）slave 从分片节点；3）proxy 代理节点；4）admin 管理节点
      *
@@ -113,6 +117,7 @@ public class NodeRole  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点个数
      *
@@ -122,6 +127,7 @@ public class NodeRole  implements java.io.Serializable {
         this.num = num;
         return this;
     }
+
 
     /**
      * set 节点规格

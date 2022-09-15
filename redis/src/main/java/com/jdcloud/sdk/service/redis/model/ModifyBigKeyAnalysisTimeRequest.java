@@ -56,6 +56,7 @@ public class ModifyBigKeyAnalysisTimeRequest extends JdcloudRequest implements j
     private String cacheInstanceId;
 
 
+
     /**
      * get -表示关闭，否则为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
@@ -74,6 +75,7 @@ public class ModifyBigKeyAnalysisTimeRequest extends JdcloudRequest implements j
         this.analysisTime = analysisTime;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -91,6 +93,7 @@ public class ModifyBigKeyAnalysisTimeRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -111,6 +114,7 @@ public class ModifyBigKeyAnalysisTimeRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set -表示关闭，否则为：HH:mm-HH:mm 时区，例如&quot;01:00-02:00 +0800&quot;，表示东八区的1点到2点
      *
@@ -121,6 +125,7 @@ public class ModifyBigKeyAnalysisTimeRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -130,6 +135,7 @@ public class ModifyBigKeyAnalysisTimeRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识

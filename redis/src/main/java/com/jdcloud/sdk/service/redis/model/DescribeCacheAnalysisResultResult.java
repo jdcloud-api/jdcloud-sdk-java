@@ -55,28 +55,28 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
     /**
      * stringBigKeys
      */
+    
     private List<RedisKey> stringBigKeys;
-
     /**
      * otherBigKeys
      */
+    
     private List<RedisKey> otherBigKeys;
-
     /**
      * hotKeys
      */
+    
     private List<RedisKey> hotKeys;
-
     /**
      * cmdCallTimesTop
      */
+    
     private List<RedisCmd> cmdCallTimesTop;
-
     /**
      * cmdUseCpuTop
      */
+    
     private List<RedisCmd> cmdUseCpuTop;
-
     /**
      * key的类型分布
      */
@@ -86,6 +86,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
      * key的大小分布
      */
     private Object keySizeDistribution;
+
 
 
     /**
@@ -106,6 +107,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
         this.startTime = startTime;
     }
 
+
     /**
      * get 任务结束时间, rfc3339格式
      *
@@ -123,6 +125,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
     public void setFinishTime(String finishTime) {
         this.finishTime = finishTime;
     }
+
 
     /**
      * get 任务类型，0:手动分析，1自动分析
@@ -142,95 +145,101 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
         this.analysisType = analysisType;
     }
 
+
     /**
-     * get stringBigKeys
-     *
-     * @return
-     */
+    * get stringBigKeys
+    *
+    * @return
+    */
     public List<RedisKey> getStringBigKeys() {
         return stringBigKeys;
     }
 
     /**
-     * set stringBigKeys
-     *
-     * @param stringBigKeys
-     */
+    * set stringBigKeys
+    *
+    * @param stringBigKeys
+    */
     public void setStringBigKeys(List<RedisKey> stringBigKeys) {
         this.stringBigKeys = stringBigKeys;
     }
 
+
     /**
-     * get otherBigKeys
-     *
-     * @return
-     */
+    * get otherBigKeys
+    *
+    * @return
+    */
     public List<RedisKey> getOtherBigKeys() {
         return otherBigKeys;
     }
 
     /**
-     * set otherBigKeys
-     *
-     * @param otherBigKeys
-     */
+    * set otherBigKeys
+    *
+    * @param otherBigKeys
+    */
     public void setOtherBigKeys(List<RedisKey> otherBigKeys) {
         this.otherBigKeys = otherBigKeys;
     }
 
+
     /**
-     * get hotKeys
-     *
-     * @return
-     */
+    * get hotKeys
+    *
+    * @return
+    */
     public List<RedisKey> getHotKeys() {
         return hotKeys;
     }
 
     /**
-     * set hotKeys
-     *
-     * @param hotKeys
-     */
+    * set hotKeys
+    *
+    * @param hotKeys
+    */
     public void setHotKeys(List<RedisKey> hotKeys) {
         this.hotKeys = hotKeys;
     }
 
+
     /**
-     * get cmdCallTimesTop
-     *
-     * @return
-     */
+    * get cmdCallTimesTop
+    *
+    * @return
+    */
     public List<RedisCmd> getCmdCallTimesTop() {
         return cmdCallTimesTop;
     }
 
     /**
-     * set cmdCallTimesTop
-     *
-     * @param cmdCallTimesTop
-     */
+    * set cmdCallTimesTop
+    *
+    * @param cmdCallTimesTop
+    */
     public void setCmdCallTimesTop(List<RedisCmd> cmdCallTimesTop) {
         this.cmdCallTimesTop = cmdCallTimesTop;
     }
 
+
     /**
-     * get cmdUseCpuTop
-     *
-     * @return
-     */
+    * get cmdUseCpuTop
+    *
+    * @return
+    */
     public List<RedisCmd> getCmdUseCpuTop() {
         return cmdUseCpuTop;
     }
 
     /**
-     * set cmdUseCpuTop
-     *
-     * @param cmdUseCpuTop
-     */
+    * set cmdUseCpuTop
+    *
+    * @param cmdUseCpuTop
+    */
     public void setCmdUseCpuTop(List<RedisCmd> cmdUseCpuTop) {
         this.cmdUseCpuTop = cmdUseCpuTop;
     }
+
 
     /**
      * get key的类型分布
@@ -249,6 +258,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
     public void setKeyTypeDistribution(Object keyTypeDistribution) {
         this.keyTypeDistribution = keyTypeDistribution;
     }
+
 
     /**
      * get key的大小分布
@@ -269,6 +279,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
     }
 
 
+
     /**
      * set 任务开始时间, rfc3339格式
      *
@@ -278,6 +289,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 任务结束时间, rfc3339格式
@@ -289,6 +301,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
         return this;
     }
 
+
     /**
      * set 任务类型，0:手动分析，1自动分析
      *
@@ -299,55 +312,61 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
         return this;
     }
 
+
     /**
-     * set stringBigKeys
-     *
-     * @param stringBigKeys
-     */
+    * set stringBigKeys
+    *
+    * @param stringBigKeys
+    */
     public DescribeCacheAnalysisResultResult stringBigKeys(List<RedisKey> stringBigKeys) {
         this.stringBigKeys = stringBigKeys;
         return this;
     }
 
+
     /**
-     * set otherBigKeys
-     *
-     * @param otherBigKeys
-     */
+    * set otherBigKeys
+    *
+    * @param otherBigKeys
+    */
     public DescribeCacheAnalysisResultResult otherBigKeys(List<RedisKey> otherBigKeys) {
         this.otherBigKeys = otherBigKeys;
         return this;
     }
 
+
     /**
-     * set hotKeys
-     *
-     * @param hotKeys
-     */
+    * set hotKeys
+    *
+    * @param hotKeys
+    */
     public DescribeCacheAnalysisResultResult hotKeys(List<RedisKey> hotKeys) {
         this.hotKeys = hotKeys;
         return this;
     }
 
+
     /**
-     * set cmdCallTimesTop
-     *
-     * @param cmdCallTimesTop
-     */
+    * set cmdCallTimesTop
+    *
+    * @param cmdCallTimesTop
+    */
     public DescribeCacheAnalysisResultResult cmdCallTimesTop(List<RedisCmd> cmdCallTimesTop) {
         this.cmdCallTimesTop = cmdCallTimesTop;
         return this;
     }
 
+
     /**
-     * set cmdUseCpuTop
-     *
-     * @param cmdUseCpuTop
-     */
+    * set cmdUseCpuTop
+    *
+    * @param cmdUseCpuTop
+    */
     public DescribeCacheAnalysisResultResult cmdUseCpuTop(List<RedisCmd> cmdUseCpuTop) {
         this.cmdUseCpuTop = cmdUseCpuTop;
         return this;
     }
+
 
     /**
      * set key的类型分布
@@ -359,6 +378,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
         return this;
     }
 
+
     /**
      * set key的大小分布
      *
@@ -368,6 +388,7 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
         this.keySizeDistribution = keySizeDistribution;
         return this;
     }
+
 
 
     /**
@@ -429,5 +450,4 @@ public class DescribeCacheAnalysisResultResult extends JdcloudResult implements 
         }
         this.cmdUseCpuTop.add(cmdUseCpuTop);
     }
-
 }

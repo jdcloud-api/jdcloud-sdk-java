@@ -62,6 +62,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     private String cacheInstanceId;
 
 
+
     /**
      * get 新规格
      *
@@ -79,6 +80,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     public void setCacheInstanceClass(String cacheInstanceClass) {
         this.cacheInstanceClass = cacheInstanceClass;
     }
+
 
     /**
      * get 自定义分片数，只对自定义分片规格实例有效
@@ -98,6 +100,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
         this.shardNumber = shardNumber;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -115,6 +118,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -135,6 +139,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     }
 
 
+
     /**
      * set 新规格
      *
@@ -144,6 +149,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
         this.cacheInstanceClass = cacheInstanceClass;
         return this;
     }
+
 
     /**
      * set 自定义分片数，只对自定义分片规格实例有效
@@ -155,6 +161,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -164,6 +171,7 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识

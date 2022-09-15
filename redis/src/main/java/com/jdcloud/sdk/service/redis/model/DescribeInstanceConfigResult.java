@@ -39,70 +39,75 @@ public class DescribeInstanceConfigResult extends JdcloudResult implements java.
     /**
      * unSupportConfigs
      */
+    
     private List<String> unSupportConfigs;
-
     /**
      * instanceConfig
      */
+    
     private List<ConfigItem> instanceConfig;
 
 
     /**
-     * get unSupportConfigs
-     *
-     * @return
-     */
+    * get unSupportConfigs
+    *
+    * @return
+    */
     public List<String> getUnSupportConfigs() {
         return unSupportConfigs;
     }
 
     /**
-     * set unSupportConfigs
-     *
-     * @param unSupportConfigs
-     */
+    * set unSupportConfigs
+    *
+    * @param unSupportConfigs
+    */
     public void setUnSupportConfigs(List<String> unSupportConfigs) {
         this.unSupportConfigs = unSupportConfigs;
     }
 
+
     /**
-     * get instanceConfig
-     *
-     * @return
-     */
+    * get instanceConfig
+    *
+    * @return
+    */
     public List<ConfigItem> getInstanceConfig() {
         return instanceConfig;
     }
 
     /**
-     * set instanceConfig
-     *
-     * @param instanceConfig
-     */
+    * set instanceConfig
+    *
+    * @param instanceConfig
+    */
     public void setInstanceConfig(List<ConfigItem> instanceConfig) {
         this.instanceConfig = instanceConfig;
     }
 
 
+
     /**
-     * set unSupportConfigs
-     *
-     * @param unSupportConfigs
-     */
+    * set unSupportConfigs
+    *
+    * @param unSupportConfigs
+    */
     public DescribeInstanceConfigResult unSupportConfigs(List<String> unSupportConfigs) {
         this.unSupportConfigs = unSupportConfigs;
         return this;
     }
 
+
     /**
-     * set instanceConfig
-     *
-     * @param instanceConfig
-     */
+    * set instanceConfig
+    *
+    * @param instanceConfig
+    */
     public DescribeInstanceConfigResult instanceConfig(List<ConfigItem> instanceConfig) {
         this.instanceConfig = instanceConfig;
         return this;
     }
+
 
 
     /**
@@ -128,5 +133,4 @@ public class DescribeInstanceConfigResult extends JdcloudResult implements java.
         }
         this.instanceConfig.add(instanceConfig);
     }
-
 }

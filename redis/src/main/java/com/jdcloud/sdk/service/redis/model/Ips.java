@@ -48,6 +48,7 @@ public class Ips  implements java.io.Serializable {
     private Integer clientCount;
 
 
+
     /**
      * get client的ip地址
      *
@@ -65,6 +66,7 @@ public class Ips  implements java.io.Serializable {
     public void setIp(String ip) {
         this.ip = ip;
     }
+
 
     /**
      * get clientIp地址下对应的client个数
@@ -85,6 +87,7 @@ public class Ips  implements java.io.Serializable {
     }
 
 
+
     /**
      * set client的ip地址
      *
@@ -94,6 +97,7 @@ public class Ips  implements java.io.Serializable {
         this.ip = ip;
         return this;
     }
+
 
     /**
      * set clientIp地址下对应的client个数

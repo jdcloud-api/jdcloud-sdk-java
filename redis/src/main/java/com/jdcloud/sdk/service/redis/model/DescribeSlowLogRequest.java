@@ -79,6 +79,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
     private String cacheInstanceId;
 
 
+
     /**
      * get 页码；默认为1
      *
@@ -96,6 +97,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小；默认为10；取值范围[10, 100]
@@ -115,6 +117,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 开始时间
      *
@@ -132,6 +135,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 结束时间
@@ -151,6 +155,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         this.endTime = endTime;
     }
 
+
     /**
      * get 分片id
      *
@@ -168,6 +173,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
     public void setShardId(String shardId) {
         this.shardId = shardId;
     }
+
 
     /**
      * get 分片地址
@@ -187,6 +193,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         this.shardAddr = shardAddr;
     }
 
+
     /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -204,6 +211,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 缓存Redis实例ID，是访问实例的唯一标识
@@ -224,6 +232,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 页码；默认为1
      *
@@ -233,6 +242,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为10；取值范围[10, 100]
@@ -244,6 +254,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -253,6 +264,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -264,6 +276,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 分片id
      *
@@ -273,6 +286,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         this.shardId = shardId;
         return this;
     }
+
 
     /**
      * set 分片地址
@@ -284,6 +298,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
@@ -293,6 +308,7 @@ public class DescribeSlowLogRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 缓存Redis实例ID，是访问实例的唯一标识

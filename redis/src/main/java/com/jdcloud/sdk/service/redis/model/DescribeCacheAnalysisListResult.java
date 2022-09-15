@@ -39,37 +39,40 @@ public class DescribeCacheAnalysisListResult extends JdcloudResult implements ja
     /**
      * analyses
      */
+    
     private List<CacheAnalysis> analyses;
 
 
     /**
-     * get analyses
-     *
-     * @return
-     */
+    * get analyses
+    *
+    * @return
+    */
     public List<CacheAnalysis> getAnalyses() {
         return analyses;
     }
 
     /**
-     * set analyses
-     *
-     * @param analyses
-     */
+    * set analyses
+    *
+    * @param analyses
+    */
     public void setAnalyses(List<CacheAnalysis> analyses) {
         this.analyses = analyses;
     }
 
 
+
     /**
-     * set analyses
-     *
-     * @param analyses
-     */
+    * set analyses
+    *
+    * @param analyses
+    */
     public DescribeCacheAnalysisListResult analyses(List<CacheAnalysis> analyses) {
         this.analyses = analyses;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeCacheAnalysisListResult extends JdcloudResult implements ja
         }
         this.analyses.add(analyse);
     }
-
 }

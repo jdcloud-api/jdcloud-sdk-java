@@ -58,6 +58,7 @@ public class NodeSpec  implements java.io.Serializable {
     private Integer cloudDiskGBs;
 
 
+
     /**
      * get CPU核数
      *
@@ -75,6 +76,7 @@ public class NodeSpec  implements java.io.Serializable {
     public void setCpuCores(Integer cpuCores) {
         this.cpuCores = cpuCores;
     }
+
 
     /**
      * get 内存大小（GB）
@@ -94,6 +96,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.memoryGBs = memoryGBs;
     }
 
+
     /**
      * get 总磁盘大小（GB）
      *
@@ -112,6 +115,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.totalDiskGBs = totalDiskGBs;
     }
 
+
     /**
      * get 本地磁盘大小（GB）
      *
@@ -129,6 +133,7 @@ public class NodeSpec  implements java.io.Serializable {
     public void setLocalDiskGBs(Integer localDiskGBs) {
         this.localDiskGBs = localDiskGBs;
     }
+
 
     /**
      * get 云盘大小（GB）
@@ -149,6 +154,7 @@ public class NodeSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set CPU核数
      *
@@ -158,6 +164,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.cpuCores = cpuCores;
         return this;
     }
+
 
     /**
      * set 内存大小（GB）
@@ -169,6 +176,7 @@ public class NodeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总磁盘大小（GB）
      *
@@ -179,6 +187,7 @@ public class NodeSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 本地磁盘大小（GB）
      *
@@ -188,6 +197,7 @@ public class NodeSpec  implements java.io.Serializable {
         this.localDiskGBs = localDiskGBs;
         return this;
     }
+
 
     /**
      * set 云盘大小（GB）

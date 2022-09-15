@@ -60,6 +60,7 @@ public class SlowLog  implements java.io.Serializable {
     private String shardId;
 
 
+
     /**
      * get 命令
      *
@@ -77,6 +78,7 @@ public class SlowLog  implements java.io.Serializable {
     public void setCommand(String command) {
         this.command = command;
     }
+
 
     /**
      * get 命令开始执行时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
@@ -96,6 +98,7 @@ public class SlowLog  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 命令执行时长（带单位）
      *
@@ -113,6 +116,7 @@ public class SlowLog  implements java.io.Serializable {
     public void setExecutionTime(String executionTime) {
         this.executionTime = executionTime;
     }
+
 
     /**
      * get 执行命令的分片id
@@ -133,6 +137,7 @@ public class SlowLog  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 命令
      *
@@ -142,6 +147,7 @@ public class SlowLog  implements java.io.Serializable {
         this.command = command;
         return this;
     }
+
 
     /**
      * set 命令开始执行时间（ISO 8601标准的UTC时间，格式为：YYYY-MM-DDTHH:mm:ssZ）
@@ -153,6 +159,7 @@ public class SlowLog  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 命令执行时长（带单位）
      *
@@ -162,6 +169,7 @@ public class SlowLog  implements java.io.Serializable {
         this.executionTime = executionTime;
         return this;
     }
+
 
     /**
      * set 执行命令的分片id

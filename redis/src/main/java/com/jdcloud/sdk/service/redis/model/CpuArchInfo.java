@@ -43,6 +43,7 @@ public class CpuArchInfo  implements java.io.Serializable {
     private String cpuName;
 
 
+
     /**
      * get CPU架构类型
      *
@@ -60,6 +61,7 @@ public class CpuArchInfo  implements java.io.Serializable {
     public void setCpuType(String cpuType) {
         this.cpuType = cpuType;
     }
+
 
     /**
      * get CPU架构显示名称
@@ -80,6 +82,7 @@ public class CpuArchInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set CPU架构类型
      *
@@ -89,6 +92,7 @@ public class CpuArchInfo  implements java.io.Serializable {
         this.cpuType = cpuType;
         return this;
     }
+
 
     /**
      * set CPU架构显示名称

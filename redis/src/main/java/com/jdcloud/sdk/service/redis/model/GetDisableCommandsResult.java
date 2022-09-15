@@ -39,37 +39,40 @@ public class GetDisableCommandsResult extends JdcloudResult implements java.io.S
     /**
      * disableCommandLists
      */
+    
     private List<DisableCommandsInfo> disableCommandLists;
 
 
     /**
-     * get disableCommandLists
-     *
-     * @return
-     */
+    * get disableCommandLists
+    *
+    * @return
+    */
     public List<DisableCommandsInfo> getDisableCommandLists() {
         return disableCommandLists;
     }
 
     /**
-     * set disableCommandLists
-     *
-     * @param disableCommandLists
-     */
+    * set disableCommandLists
+    *
+    * @param disableCommandLists
+    */
     public void setDisableCommandLists(List<DisableCommandsInfo> disableCommandLists) {
         this.disableCommandLists = disableCommandLists;
     }
 
 
+
     /**
-     * set disableCommandLists
-     *
-     * @param disableCommandLists
-     */
+    * set disableCommandLists
+    *
+    * @param disableCommandLists
+    */
     public GetDisableCommandsResult disableCommandLists(List<DisableCommandsInfo> disableCommandLists) {
         this.disableCommandLists = disableCommandLists;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class GetDisableCommandsResult extends JdcloudResult implements java.io.S
         }
         this.disableCommandLists.add(disableCommandList);
     }
-
 }

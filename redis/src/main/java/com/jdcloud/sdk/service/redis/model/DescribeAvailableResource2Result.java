@@ -39,37 +39,40 @@ public class DescribeAvailableResource2Result extends JdcloudResult implements j
     /**
      * availableResources
      */
+    
     private List<AvailableResource> availableResources;
 
 
     /**
-     * get availableResources
-     *
-     * @return
-     */
+    * get availableResources
+    *
+    * @return
+    */
     public List<AvailableResource> getAvailableResources() {
         return availableResources;
     }
 
     /**
-     * set availableResources
-     *
-     * @param availableResources
-     */
+    * set availableResources
+    *
+    * @param availableResources
+    */
     public void setAvailableResources(List<AvailableResource> availableResources) {
         this.availableResources = availableResources;
     }
 
 
+
     /**
-     * set availableResources
-     *
-     * @param availableResources
-     */
+    * set availableResources
+    *
+    * @param availableResources
+    */
     public DescribeAvailableResource2Result availableResources(List<AvailableResource> availableResources) {
         this.availableResources = availableResources;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeAvailableResource2Result extends JdcloudResult implements j
         }
         this.availableResources.add(availableResource);
     }
-
 }

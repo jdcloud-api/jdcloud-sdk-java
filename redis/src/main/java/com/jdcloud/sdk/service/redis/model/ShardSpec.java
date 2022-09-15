@@ -67,6 +67,7 @@ public class ShardSpec  implements java.io.Serializable {
     /**
      * 支持的分片数列表
      */
+    
     private List<Integer> shardNumberList;
 
 
@@ -88,6 +89,7 @@ public class ShardSpec  implements java.io.Serializable {
         this.shardClass = shardClass;
     }
 
+
     /**
      * get 单分片CPU核数
      *
@@ -105,6 +107,7 @@ public class ShardSpec  implements java.io.Serializable {
     public void setCpu(Integer cpu) {
         this.cpu = cpu;
     }
+
 
     /**
      * get 单分片内存大小（GB）
@@ -124,6 +127,7 @@ public class ShardSpec  implements java.io.Serializable {
         this.memoryGB = memoryGB;
     }
 
+
     /**
      * get 单分片磁盘大小（GB）
      *
@@ -141,6 +145,7 @@ public class ShardSpec  implements java.io.Serializable {
     public void setDiskGB(Integer diskGB) {
         this.diskGB = diskGB;
     }
+
 
     /**
      * get 单分片最大连接数
@@ -160,6 +165,7 @@ public class ShardSpec  implements java.io.Serializable {
         this.maxConnection = maxConnection;
     }
 
+
     /**
      * get 单分片带宽（Mbps）
      *
@@ -178,23 +184,25 @@ public class ShardSpec  implements java.io.Serializable {
         this.bandwidthMbps = bandwidthMbps;
     }
 
+
     /**
-     * get 支持的分片数列表
-     *
-     * @return
-     */
+    * get 支持的分片数列表
+    *
+    * @return
+    */
     public List<Integer> getShardNumberList() {
         return shardNumberList;
     }
 
     /**
-     * set 支持的分片数列表
-     *
-     * @param shardNumberList
-     */
+    * set 支持的分片数列表
+    *
+    * @param shardNumberList
+    */
     public void setShardNumberList(List<Integer> shardNumberList) {
         this.shardNumberList = shardNumberList;
     }
+
 
 
     /**
@@ -207,6 +215,7 @@ public class ShardSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 单分片CPU核数
      *
@@ -216,6 +225,7 @@ public class ShardSpec  implements java.io.Serializable {
         this.cpu = cpu;
         return this;
     }
+
 
     /**
      * set 单分片内存大小（GB）
@@ -227,6 +237,7 @@ public class ShardSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 单分片磁盘大小（GB）
      *
@@ -236,6 +247,7 @@ public class ShardSpec  implements java.io.Serializable {
         this.diskGB = diskGB;
         return this;
     }
+
 
     /**
      * set 单分片最大连接数
@@ -247,6 +259,7 @@ public class ShardSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 单分片带宽（Mbps）
      *
@@ -257,15 +270,17 @@ public class ShardSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 支持的分片数列表
-     *
-     * @param shardNumberList
-     */
+    * set 支持的分片数列表
+    *
+    * @param shardNumberList
+    */
     public ShardSpec shardNumberList(List<Integer> shardNumberList) {
         this.shardNumberList = shardNumberList;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class ShardSpec  implements java.io.Serializable {
         }
         this.shardNumberList.add(shardNumberList);
     }
-
 }
