@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jdcloud.sdk</groupId>
     <artifactId>core</artifactId>
-    <version>1.2.9</version>
+    <version>1.2.10</version>
     <packaging>jar</packaging>
     <name>core</name>
     <url>http://www.jdcloud.com</url>
@@ -35,12 +35,12 @@
         <dependency>
             <groupId>com.google.http-client</groupId>
             <artifactId>google-http-client</artifactId>
-            <version>1.24.1</version>
+            <version>1.42.3</version>
         </dependency>
         <dependency>
             <groupId>com.google.http-client</groupId>
             <artifactId>google-http-client-gson</artifactId>
-            <version>1.24.1</version>
+            <version>1.42.3</version>
         </dependency>
         <dependency>
             <groupId>joda-time</groupId>
