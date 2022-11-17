@@ -49,6 +49,7 @@ public class CloseIotFlowResult extends JdcloudResult implements java.io.Seriali
     /**
      * result
      */
+    
     private List<OperationIotlinkResp> result;
 
 
@@ -70,6 +71,7 @@ public class CloseIotFlowResult extends JdcloudResult implements java.io.Seriali
         this.status = status;
     }
 
+
     /**
      * get 消息描述
      *
@@ -88,23 +90,25 @@ public class CloseIotFlowResult extends JdcloudResult implements java.io.Seriali
         this.message = message;
     }
 
+
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<OperationIotlinkResp> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<OperationIotlinkResp> result) {
         this.result = result;
     }
+
 
 
     /**
@@ -117,6 +121,7 @@ public class CloseIotFlowResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
      * set 消息描述
      *
@@ -127,15 +132,17 @@ public class CloseIotFlowResult extends JdcloudResult implements java.io.Seriali
         return this;
     }
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public CloseIotFlowResult result(List<OperationIotlinkResp> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -149,5 +156,4 @@ public class CloseIotFlowResult extends JdcloudResult implements java.io.Seriali
         }
         this.result.add(result);
     }
-
 }

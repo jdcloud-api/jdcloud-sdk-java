@@ -26,31 +26,31 @@ package com.jdcloud.sdk.service.iotlink.model;
 
 
 /**
- * operationIotlinkResp
+ * queryValidPeriodForNBResp
  */
-public class OperationIotlinkResp  implements java.io.Serializable {
+public class QueryValidPeriodForNBResp  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 物联网卡iccid
+     * NB卡iccid
      */
     private String iccid;
 
     /**
-     * 操作状态(0:操作成功;1:操作失败)
+     * NB卡套餐名称
      */
-    private String status;
+    private String packageName;
 
     /**
-     * 卡操作反馈信息
+     * NB卡有效期
      */
-    private String message;
+    private String validPeriod;
 
 
 
     /**
-     * get 物联网卡iccid
+     * get NB卡iccid
      *
      * @return
      */
@@ -59,7 +59,7 @@ public class OperationIotlinkResp  implements java.io.Serializable {
     }
 
     /**
-     * set 物联网卡iccid
+     * set NB卡iccid
      *
      * @param iccid
      */
@@ -69,73 +69,73 @@ public class OperationIotlinkResp  implements java.io.Serializable {
 
 
     /**
-     * get 操作状态(0:操作成功;1:操作失败)
+     * get NB卡套餐名称
      *
      * @return
      */
-    public String getStatus() {
-        return status;
+    public String getPackageName() {
+        return packageName;
     }
 
     /**
-     * set 操作状态(0:操作成功;1:操作失败)
+     * set NB卡套餐名称
      *
-     * @param status
+     * @param packageName
      */
-    public void setStatus(String status) {
-        this.status = status;
+    public void setPackageName(String packageName) {
+        this.packageName = packageName;
     }
 
 
     /**
-     * get 卡操作反馈信息
+     * get NB卡有效期
      *
      * @return
      */
-    public String getMessage() {
-        return message;
+    public String getValidPeriod() {
+        return validPeriod;
     }
 
     /**
-     * set 卡操作反馈信息
+     * set NB卡有效期
      *
-     * @param message
+     * @param validPeriod
      */
-    public void setMessage(String message) {
-        this.message = message;
+    public void setValidPeriod(String validPeriod) {
+        this.validPeriod = validPeriod;
     }
 
 
 
     /**
-     * set 物联网卡iccid
+     * set NB卡iccid
      *
      * @param iccid
      */
-    public OperationIotlinkResp iccid(String iccid) {
+    public QueryValidPeriodForNBResp iccid(String iccid) {
         this.iccid = iccid;
         return this;
     }
 
 
     /**
-     * set 操作状态(0:操作成功;1:操作失败)
+     * set NB卡套餐名称
      *
-     * @param status
+     * @param packageName
      */
-    public OperationIotlinkResp status(String status) {
-        this.status = status;
+    public QueryValidPeriodForNBResp packageName(String packageName) {
+        this.packageName = packageName;
         return this;
     }
 
 
     /**
-     * set 卡操作反馈信息
+     * set NB卡有效期
      *
-     * @param message
+     * @param validPeriod
      */
-    public OperationIotlinkResp message(String message) {
-        this.message = message;
+    public QueryValidPeriodForNBResp validPeriod(String validPeriod) {
+        this.validPeriod = validPeriod;
         return this;
     }
 

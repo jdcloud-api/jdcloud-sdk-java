@@ -50,6 +50,7 @@ public class OnOffStatusByIMSIResult extends JdcloudResult implements java.io.Se
     private OnOffStatusResp result;
 
 
+
     /**
      * get 请求状态(0:成功;1:失败)
      *
@@ -68,6 +69,7 @@ public class OnOffStatusByIMSIResult extends JdcloudResult implements java.io.Se
         this.status = status;
     }
 
+
     /**
      * get 消息描述
      *
@@ -85,6 +87,7 @@ public class OnOffStatusByIMSIResult extends JdcloudResult implements java.io.Se
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 指定物联网卡的开关机状态信息
@@ -105,6 +108,7 @@ public class OnOffStatusByIMSIResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
      * set 请求状态(0:成功;1:失败)
      *
@@ -115,6 +119,7 @@ public class OnOffStatusByIMSIResult extends JdcloudResult implements java.io.Se
         return this;
     }
 
+
     /**
      * set 消息描述
      *
@@ -124,6 +129,7 @@ public class OnOffStatusByIMSIResult extends JdcloudResult implements java.io.Se
         this.message = message;
         return this;
     }
+
 
     /**
      * set 指定物联网卡的开关机状态信息

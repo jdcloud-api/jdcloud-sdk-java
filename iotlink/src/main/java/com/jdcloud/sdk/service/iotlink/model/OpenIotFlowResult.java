@@ -49,6 +49,7 @@ public class OpenIotFlowResult extends JdcloudResult implements java.io.Serializ
     /**
      * result
      */
+    
     private List<OperationIotlinkResp> result;
 
 
@@ -70,6 +71,7 @@ public class OpenIotFlowResult extends JdcloudResult implements java.io.Serializ
         this.status = status;
     }
 
+
     /**
      * get 消息描述
      *
@@ -88,23 +90,25 @@ public class OpenIotFlowResult extends JdcloudResult implements java.io.Serializ
         this.message = message;
     }
 
+
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<OperationIotlinkResp> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<OperationIotlinkResp> result) {
         this.result = result;
     }
+
 
 
     /**
@@ -117,6 +121,7 @@ public class OpenIotFlowResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
      * set 消息描述
      *
@@ -127,15 +132,17 @@ public class OpenIotFlowResult extends JdcloudResult implements java.io.Serializ
         return this;
     }
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public OpenIotFlowResult result(List<OperationIotlinkResp> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -149,5 +156,4 @@ public class OpenIotFlowResult extends JdcloudResult implements java.io.Serializ
         }
         this.result.add(result);
     }
-
 }

@@ -55,6 +55,9 @@ import com.jdcloud.sdk.service.iotlink.client.GprsStatusExecutor;
 import com.jdcloud.sdk.service.iotlink.model.GprsStatusByIMSIRequest;
 import com.jdcloud.sdk.service.iotlink.model.GprsStatusByIMSIResponse;
 import com.jdcloud.sdk.service.iotlink.client.GprsStatusByIMSIExecutor;
+import com.jdcloud.sdk.service.iotlink.model.QueryValidPeriodForNBRequest;
+import com.jdcloud.sdk.service.iotlink.model.QueryValidPeriodForNBResponse;
+import com.jdcloud.sdk.service.iotlink.client.QueryValidPeriodForNBExecutor;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotFlowRequest;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotFlowResponse;
 import com.jdcloud.sdk.service.iotlink.client.OpenIotFlowExecutor;
@@ -64,6 +67,12 @@ import com.jdcloud.sdk.service.iotlink.client.OnOffStatusByIMSIExecutor;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoRequest;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoResponse;
 import com.jdcloud.sdk.service.iotlink.client.GprsRealtimeInfoExecutor;
+import com.jdcloud.sdk.service.iotlink.model.QueryDayHistoryTrafficRequest;
+import com.jdcloud.sdk.service.iotlink.model.QueryDayHistoryTrafficResponse;
+import com.jdcloud.sdk.service.iotlink.client.QueryDayHistoryTrafficExecutor;
+import com.jdcloud.sdk.service.iotlink.model.SpeedLimitActionRequest;
+import com.jdcloud.sdk.service.iotlink.model.SpeedLimitActionResponse;
+import com.jdcloud.sdk.service.iotlink.client.SpeedLimitActionExecutor;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotCardRequest;
 import com.jdcloud.sdk.service.iotlink.model.OpenIotCardResponse;
 import com.jdcloud.sdk.service.iotlink.client.OpenIotCardExecutor;
@@ -73,9 +82,15 @@ import com.jdcloud.sdk.service.iotlink.client.SearchExecutor;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoByIMSIRequest;
 import com.jdcloud.sdk.service.iotlink.model.GprsRealtimeInfoByIMSIResponse;
 import com.jdcloud.sdk.service.iotlink.client.GprsRealtimeInfoByIMSIExecutor;
+import com.jdcloud.sdk.service.iotlink.model.SimRealNameRegRequest;
+import com.jdcloud.sdk.service.iotlink.model.SimRealNameRegResponse;
+import com.jdcloud.sdk.service.iotlink.client.SimRealNameRegExecutor;
 import com.jdcloud.sdk.service.iotlink.model.RealNameQueryIotRequest;
 import com.jdcloud.sdk.service.iotlink.model.RealNameQueryIotResponse;
 import com.jdcloud.sdk.service.iotlink.client.RealNameQueryIotExecutor;
+import com.jdcloud.sdk.service.iotlink.model.QueryTrafficByDateRequest;
+import com.jdcloud.sdk.service.iotlink.model.QueryTrafficByDateResponse;
+import com.jdcloud.sdk.service.iotlink.client.QueryTrafficByDateExecutor;
 import com.jdcloud.sdk.service.iotlink.model.CardInfoRequest;
 import com.jdcloud.sdk.service.iotlink.model.CardInfoResponse;
 import com.jdcloud.sdk.service.iotlink.client.CardInfoExecutor;
@@ -218,6 +233,17 @@ public class IotlinkClient extends JdcloudClient {
     }
 
     /**
+     * NB卡有效期查询
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryValidPeriodForNBResponse queryValidPeriodForNB(QueryValidPeriodForNBRequest request) throws JdcloudSdkException {
+        return new QueryValidPeriodForNBExecutor().client(this).execute(request);
+    }
+
+    /**
      * 物联网卡开启流量操作
      *
      * @param request
@@ -248,6 +274,28 @@ public class IotlinkClient extends JdcloudClient {
      */
     public GprsRealtimeInfoResponse gprsRealtimeInfo(GprsRealtimeInfoRequest request) throws JdcloudSdkException {
         return new GprsRealtimeInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡日历史流量查询接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDayHistoryTrafficResponse queryDayHistoryTraffic(QueryDayHistoryTrafficRequest request) throws JdcloudSdkException {
+        return new QueryDayHistoryTrafficExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡自主限速接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SpeedLimitActionResponse speedLimitAction(SpeedLimitActionRequest request) throws JdcloudSdkException {
+        return new SpeedLimitActionExecutor().client(this).execute(request);
     }
 
     /**
@@ -284,6 +332,17 @@ public class IotlinkClient extends JdcloudClient {
     }
 
     /**
+     * 物联网卡移动实名登记接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SimRealNameRegResponse simRealNameReg(SimRealNameRegRequest request) throws JdcloudSdkException {
+        return new SimRealNameRegExecutor().client(this).execute(request);
+    }
+
+    /**
      * 根据物联网卡iccid查询该卡的实名认证信息
      *
      * @param request
@@ -292,6 +351,17 @@ public class IotlinkClient extends JdcloudClient {
      */
     public RealNameQueryIotResponse realNameQueryIot(RealNameQueryIotRequest request) throws JdcloudSdkException {
         return new RealNameQueryIotExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 物联网卡流量查询（时间段）查询接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryTrafficByDateResponse queryTrafficByDate(QueryTrafficByDateRequest request) throws JdcloudSdkException {
+        return new QueryTrafficByDateExecutor().client(this).execute(request);
     }
 
     /**

@@ -49,6 +49,7 @@ public class CardInfoRequest extends JdcloudRequest implements java.io.Serializa
     private String regionId;
 
 
+
     /**
      * get 物联网卡iccid
      *
@@ -66,6 +67,7 @@ public class CardInfoRequest extends JdcloudRequest implements java.io.Serializa
     public void setIccid(String iccid) {
         this.iccid = iccid;
     }
+
 
     /**
      * get Region ID
@@ -86,6 +88,7 @@ public class CardInfoRequest extends JdcloudRequest implements java.io.Serializa
     }
 
 
+
     /**
      * set 物联网卡iccid
      *
@@ -95,6 +98,7 @@ public class CardInfoRequest extends JdcloudRequest implements java.io.Serializa
         this.iccid = iccid;
         return this;
     }
+
 
     /**
      * set Region ID

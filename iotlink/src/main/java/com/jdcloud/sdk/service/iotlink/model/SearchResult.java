@@ -49,6 +49,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     private String result;
 
 
+
     /**
      * get 请求状态(0:成功;1:失败)
      *
@@ -67,6 +68,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
         this.status = status;
     }
 
+
     /**
      * get 消息描述
      *
@@ -84,6 +86,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 物联网卡查询返回结果集
@@ -104,6 +107,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
     }
 
 
+
     /**
      * set 请求状态(0:成功;1:失败)
      *
@@ -114,6 +118,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
         return this;
     }
 
+
     /**
      * set 消息描述
      *
@@ -123,6 +128,7 @@ public class SearchResult extends JdcloudResult implements java.io.Serializable 
         this.message = message;
         return this;
     }
+
 
     /**
      * set 物联网卡查询返回结果集

@@ -53,6 +53,7 @@ public class OnOffStatusResp  implements java.io.Serializable {
     private String status;
 
 
+
     /**
      * get 物联网卡iccid
      *
@@ -70,6 +71,7 @@ public class OnOffStatusResp  implements java.io.Serializable {
     public void setIccid(String iccid) {
         this.iccid = iccid;
     }
+
 
     /**
      * get 物联网卡msisdn
@@ -89,6 +91,7 @@ public class OnOffStatusResp  implements java.io.Serializable {
         this.msisdn = msisdn;
     }
 
+
     /**
      * get 物联网卡imsi
      *
@@ -106,6 +109,7 @@ public class OnOffStatusResp  implements java.io.Serializable {
     public void setImsi(String imsi) {
         this.imsi = imsi;
     }
+
 
     /**
      * get 终端的开关机状态(00:关机;01:开机;02:该运营商不支持查询;03:未知)
@@ -126,6 +130,7 @@ public class OnOffStatusResp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 物联网卡iccid
      *
@@ -135,6 +140,7 @@ public class OnOffStatusResp  implements java.io.Serializable {
         this.iccid = iccid;
         return this;
     }
+
 
     /**
      * set 物联网卡msisdn
@@ -146,6 +152,7 @@ public class OnOffStatusResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 物联网卡imsi
      *
@@ -155,6 +162,7 @@ public class OnOffStatusResp  implements java.io.Serializable {
         this.imsi = imsi;
         return this;
     }
+
 
     /**
      * set 终端的开关机状态(00:关机;01:开机;02:该运营商不支持查询;03:未知)

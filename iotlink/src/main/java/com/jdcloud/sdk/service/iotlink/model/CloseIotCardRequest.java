@@ -41,8 +41,8 @@ public class CloseIotCardRequest extends JdcloudRequest implements java.io.Seria
      * Required:true
      */
     @Required
+    
     private List<String> iccids;
-
     /**
      * Region ID
      * Required:true
@@ -51,23 +51,25 @@ public class CloseIotCardRequest extends JdcloudRequest implements java.io.Seria
     private String regionId;
 
 
+
     /**
-     * get 物联网卡号码列表(单次提交最多不超过200个号码)
-     *
-     * @return
-     */
+    * get 物联网卡号码列表(单次提交最多不超过200个号码)
+    *
+    * @return
+    */
     public List<String> getIccids() {
         return iccids;
     }
 
     /**
-     * set 物联网卡号码列表(单次提交最多不超过200个号码)
-     *
-     * @param iccids
-     */
+    * set 物联网卡号码列表(单次提交最多不超过200个号码)
+    *
+    * @param iccids
+    */
     public void setIccids(List<String> iccids) {
         this.iccids = iccids;
     }
+
 
     /**
      * get Region ID
@@ -88,15 +90,17 @@ public class CloseIotCardRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
-     * set 物联网卡号码列表(单次提交最多不超过200个号码)
-     *
-     * @param iccids
-     */
+    * set 物联网卡号码列表(单次提交最多不超过200个号码)
+    *
+    * @param iccids
+    */
     public CloseIotCardRequest iccids(List<String> iccids) {
         this.iccids = iccids;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -107,6 +111,7 @@ public class CloseIotCardRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -120,5 +125,4 @@ public class CloseIotCardRequest extends JdcloudRequest implements java.io.Seria
         }
         this.iccids.add(iccid);
     }
-
 }

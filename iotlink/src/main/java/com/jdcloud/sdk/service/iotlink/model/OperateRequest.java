@@ -56,6 +56,7 @@ public class OperateRequest extends JdcloudRequest implements java.io.Serializab
     private String regionId;
 
 
+
     /**
      * get 物联网卡操作请求类型
      *
@@ -74,6 +75,7 @@ public class OperateRequest extends JdcloudRequest implements java.io.Serializab
         this.requestType = requestType;
     }
 
+
     /**
      * get 物联网卡操作请求参数json串
      *
@@ -91,6 +93,7 @@ public class OperateRequest extends JdcloudRequest implements java.io.Serializab
     public void setRequestParam(String requestParam) {
         this.requestParam = requestParam;
     }
+
 
     /**
      * get Region ID
@@ -111,6 +114,7 @@ public class OperateRequest extends JdcloudRequest implements java.io.Serializab
     }
 
 
+
     /**
      * set 物联网卡操作请求类型
      *
@@ -121,6 +125,7 @@ public class OperateRequest extends JdcloudRequest implements java.io.Serializab
         return this;
     }
 
+
     /**
      * set 物联网卡操作请求参数json串
      *
@@ -130,6 +135,7 @@ public class OperateRequest extends JdcloudRequest implements java.io.Serializab
         this.requestParam = requestParam;
         return this;
     }
+
 
     /**
      * set Region ID

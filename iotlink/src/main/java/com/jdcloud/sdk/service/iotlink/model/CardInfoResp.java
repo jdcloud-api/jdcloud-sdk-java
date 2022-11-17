@@ -53,6 +53,7 @@ public class CardInfoResp  implements java.io.Serializable {
     private String packageExpiredTm;
 
 
+
     /**
      * get 物联网卡iccid
      *
@@ -70,6 +71,7 @@ public class CardInfoResp  implements java.io.Serializable {
     public void setIccid(String iccid) {
         this.iccid = iccid;
     }
+
 
     /**
      * get 物联网卡套餐名称
@@ -89,6 +91,7 @@ public class CardInfoResp  implements java.io.Serializable {
         this.packageName = packageName;
     }
 
+
     /**
      * get 物联网卡激活时间
      *
@@ -106,6 +109,7 @@ public class CardInfoResp  implements java.io.Serializable {
     public void setActiveTm(String activeTm) {
         this.activeTm = activeTm;
     }
+
 
     /**
      * get 套餐到期时间
@@ -126,6 +130,7 @@ public class CardInfoResp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 物联网卡iccid
      *
@@ -135,6 +140,7 @@ public class CardInfoResp  implements java.io.Serializable {
         this.iccid = iccid;
         return this;
     }
+
 
     /**
      * set 物联网卡套餐名称
@@ -146,6 +152,7 @@ public class CardInfoResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 物联网卡激活时间
      *
@@ -155,6 +162,7 @@ public class CardInfoResp  implements java.io.Serializable {
         this.activeTm = activeTm;
         return this;
     }
+
 
     /**
      * set 套餐到期时间

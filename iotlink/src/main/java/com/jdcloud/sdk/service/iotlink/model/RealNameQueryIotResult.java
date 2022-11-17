@@ -50,6 +50,7 @@ public class RealNameQueryIotResult extends JdcloudResult implements java.io.Ser
     private RealNameQueryIotResp result;
 
 
+
     /**
      * get 请求状态(0:成功;1:失败)
      *
@@ -68,6 +69,7 @@ public class RealNameQueryIotResult extends JdcloudResult implements java.io.Ser
         this.status = status;
     }
 
+
     /**
      * get 消息描述
      *
@@ -85,6 +87,7 @@ public class RealNameQueryIotResult extends JdcloudResult implements java.io.Ser
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 指定物联网卡的实名认证状态信息
@@ -105,6 +108,7 @@ public class RealNameQueryIotResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
      * set 请求状态(0:成功;1:失败)
      *
@@ -115,6 +119,7 @@ public class RealNameQueryIotResult extends JdcloudResult implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 消息描述
      *
@@ -124,6 +129,7 @@ public class RealNameQueryIotResult extends JdcloudResult implements java.io.Ser
         this.message = message;
         return this;
     }
+
 
     /**
      * set 指定物联网卡的实名认证状态信息

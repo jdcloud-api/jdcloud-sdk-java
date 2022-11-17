@@ -50,6 +50,7 @@ public class GprsRealtimeInfoByIMSIResult extends JdcloudResult implements java.
     private GprsRealtimeInfoResp result;
 
 
+
     /**
      * get 请求状态(0:成功;1:失败)
      *
@@ -68,6 +69,7 @@ public class GprsRealtimeInfoByIMSIResult extends JdcloudResult implements java.
         this.status = status;
     }
 
+
     /**
      * get 消息描述
      *
@@ -85,6 +87,7 @@ public class GprsRealtimeInfoByIMSIResult extends JdcloudResult implements java.
     public void setMessage(String message) {
         this.message = message;
     }
+
 
     /**
      * get 指定物联网卡的当月套餐内的GPRS实时使用量
@@ -105,6 +108,7 @@ public class GprsRealtimeInfoByIMSIResult extends JdcloudResult implements java.
     }
 
 
+
     /**
      * set 请求状态(0:成功;1:失败)
      *
@@ -115,6 +119,7 @@ public class GprsRealtimeInfoByIMSIResult extends JdcloudResult implements java.
         return this;
     }
 
+
     /**
      * set 消息描述
      *
@@ -124,6 +129,7 @@ public class GprsRealtimeInfoByIMSIResult extends JdcloudResult implements java.
         this.message = message;
         return this;
     }
+
 
     /**
      * set 指定物联网卡的当月套餐内的GPRS实时使用量

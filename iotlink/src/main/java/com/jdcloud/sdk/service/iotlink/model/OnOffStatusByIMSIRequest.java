@@ -49,6 +49,7 @@ public class OnOffStatusByIMSIRequest extends JdcloudRequest implements java.io.
     private String regionId;
 
 
+
     /**
      * get 物联网卡imsi
      *
@@ -66,6 +67,7 @@ public class OnOffStatusByIMSIRequest extends JdcloudRequest implements java.io.
     public void setImsi(String imsi) {
         this.imsi = imsi;
     }
+
 
     /**
      * get Region ID
@@ -86,6 +88,7 @@ public class OnOffStatusByIMSIRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 物联网卡imsi
      *
@@ -95,6 +98,7 @@ public class OnOffStatusByIMSIRequest extends JdcloudRequest implements java.io.
         this.imsi = imsi;
         return this;
     }
+
 
     /**
      * set Region ID

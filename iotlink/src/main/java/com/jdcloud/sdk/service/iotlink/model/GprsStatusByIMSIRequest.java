@@ -49,6 +49,7 @@ public class GprsStatusByIMSIRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
      * get 物联网卡IMSI
      *
@@ -66,6 +67,7 @@ public class GprsStatusByIMSIRequest extends JdcloudRequest implements java.io.S
     public void setImsi(String imsi) {
         this.imsi = imsi;
     }
+
 
     /**
      * get Region ID
@@ -86,6 +88,7 @@ public class GprsStatusByIMSIRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 物联网卡IMSI
      *
@@ -95,6 +98,7 @@ public class GprsStatusByIMSIRequest extends JdcloudRequest implements java.io.S
         this.imsi = imsi;
         return this;
     }
+
 
     /**
      * set Region ID
