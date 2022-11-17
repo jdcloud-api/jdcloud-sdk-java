@@ -63,6 +63,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
     private String authRespMsg;
 
 
+
     /**
      * get 激活时间
      *
@@ -80,6 +81,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
     public void setActiveTime(String activeTime) {
         this.activeTime = activeTime;
     }
+
 
     /**
      * get 产品状态
@@ -99,6 +101,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
         this.prodStatusName = prodStatusName;
     }
 
+
     /**
      * get 使用人身份证号码
      *
@@ -116,6 +119,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
     public void setCertNumber(String certNumber) {
         this.certNumber = certNumber;
     }
+
 
     /**
      * get 查询号码
@@ -135,6 +139,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
         this.number = number;
     }
 
+
     /**
      * get 返回状态标识码（0 表示成功，1 表示失败，-1 表示异常,-2 表示该卡尚未进行实名认证）
      *
@@ -152,6 +157,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
     public void setAuthRespCode(String authRespCode) {
         this.authRespCode = authRespCode;
     }
+
 
     /**
      * get 返回标识说明
@@ -172,6 +178,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 激活时间
      *
@@ -181,6 +188,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
         this.activeTime = activeTime;
         return this;
     }
+
 
     /**
      * set 产品状态
@@ -192,6 +200,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 使用人身份证号码
      *
@@ -201,6 +210,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
         this.certNumber = certNumber;
         return this;
     }
+
 
     /**
      * set 查询号码
@@ -212,6 +222,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 返回状态标识码（0 表示成功，1 表示失败，-1 表示异常,-2 表示该卡尚未进行实名认证）
      *
@@ -221,6 +232,7 @@ public class RealNameQueryIotResp  implements java.io.Serializable {
         this.authRespCode = authRespCode;
         return this;
     }
+
 
     /**
      * set 返回标识说明

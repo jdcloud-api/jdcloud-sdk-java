@@ -26,81 +26,81 @@ package com.jdcloud.sdk.service.iotlink.model;
 
 
 /**
- * gprsRealtimeInfoResp
+ * simRealNameRegResp
  */
-public class GprsRealtimeInfoResp  implements java.io.Serializable {
+public class SimRealNameRegResp  implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 套餐流量总量(单位MB)
+     * 活体实名登记业务流水号
      */
-    private String total;
+    private String busiSeq;
 
     /**
-     * 累计使用量(单位KB)
+     * 实名认证网页地址
      */
-    private String used;
+    private String url;
 
 
 
     /**
-     * get 套餐流量总量(单位MB)
+     * get 活体实名登记业务流水号
      *
      * @return
      */
-    public String getTotal() {
-        return total;
+    public String getBusiSeq() {
+        return busiSeq;
     }
 
     /**
-     * set 套餐流量总量(单位MB)
+     * set 活体实名登记业务流水号
      *
-     * @param total
+     * @param busiSeq
      */
-    public void setTotal(String total) {
-        this.total = total;
+    public void setBusiSeq(String busiSeq) {
+        this.busiSeq = busiSeq;
     }
 
 
     /**
-     * get 累计使用量(单位KB)
+     * get 实名认证网页地址
      *
      * @return
      */
-    public String getUsed() {
-        return used;
+    public String getUrl() {
+        return url;
     }
 
     /**
-     * set 累计使用量(单位KB)
+     * set 实名认证网页地址
      *
-     * @param used
+     * @param url
      */
-    public void setUsed(String used) {
-        this.used = used;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 
 
     /**
-     * set 套餐流量总量(单位MB)
+     * set 活体实名登记业务流水号
      *
-     * @param total
+     * @param busiSeq
      */
-    public GprsRealtimeInfoResp total(String total) {
-        this.total = total;
+    public SimRealNameRegResp busiSeq(String busiSeq) {
+        this.busiSeq = busiSeq;
         return this;
     }
 
 
     /**
-     * set 累计使用量(单位KB)
+     * set 实名认证网页地址
      *
-     * @param used
+     * @param url
      */
-    public GprsRealtimeInfoResp used(String used) {
-        this.used = used;
+    public SimRealNameRegResp url(String url) {
+        this.url = url;
         return this;
     }
 

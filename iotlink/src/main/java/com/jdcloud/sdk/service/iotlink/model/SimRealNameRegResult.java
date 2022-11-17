@@ -24,18 +24,18 @@
 
 package com.jdcloud.sdk.service.iotlink.model;
 
-import com.jdcloud.sdk.service.iotlink.model.CardInfoResp;
+import com.jdcloud.sdk.service.iotlink.model.SimRealNameRegResp;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 根据物联网卡iccid查询该卡的基本信息
+ * 物联网卡移动实名登记接口
  */
-public class CardInfoResult extends JdcloudResult implements java.io.Serializable {
+public class SimRealNameRegResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 请求状态(0:成功;1:失败)
+     * 请求状态(0:成功;其他:失败)
      */
     private String status;
 
@@ -45,14 +45,14 @@ public class CardInfoResult extends JdcloudResult implements java.io.Serializabl
     private String message;
 
     /**
-     * 指定物联网卡的卡基本信息
+     * 物联网卡移动实名登记信息
      */
-    private CardInfoResp result;
+    private SimRealNameRegResp result;
 
 
 
     /**
-     * get 请求状态(0:成功;1:失败)
+     * get 请求状态(0:成功;其他:失败)
      *
      * @return
      */
@@ -61,7 +61,7 @@ public class CardInfoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 请求状态(0:成功;1:失败)
+     * set 请求状态(0:成功;其他:失败)
      *
      * @param status
      */
@@ -90,31 +90,31 @@ public class CardInfoResult extends JdcloudResult implements java.io.Serializabl
 
 
     /**
-     * get 指定物联网卡的卡基本信息
+     * get 物联网卡移动实名登记信息
      *
      * @return
      */
-    public CardInfoResp getResult() {
+    public SimRealNameRegResp getResult() {
         return result;
     }
 
     /**
-     * set 指定物联网卡的卡基本信息
+     * set 物联网卡移动实名登记信息
      *
      * @param result
      */
-    public void setResult(CardInfoResp result) {
+    public void setResult(SimRealNameRegResp result) {
         this.result = result;
     }
 
 
 
     /**
-     * set 请求状态(0:成功;1:失败)
+     * set 请求状态(0:成功;其他:失败)
      *
      * @param status
      */
-    public CardInfoResult status(String status) {
+    public SimRealNameRegResult status(String status) {
         this.status = status;
         return this;
     }
@@ -125,18 +125,18 @@ public class CardInfoResult extends JdcloudResult implements java.io.Serializabl
      *
      * @param message
      */
-    public CardInfoResult message(String message) {
+    public SimRealNameRegResult message(String message) {
         this.message = message;
         return this;
     }
 
 
     /**
-     * set 指定物联网卡的卡基本信息
+     * set 物联网卡移动实名登记信息
      *
      * @param result
      */
-    public CardInfoResult result(CardInfoResp result) {
+    public SimRealNameRegResult result(SimRealNameRegResp result) {
         this.result = result;
         return this;
     }

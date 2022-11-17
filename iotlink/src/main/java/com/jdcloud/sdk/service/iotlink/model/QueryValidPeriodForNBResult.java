@@ -24,18 +24,20 @@
 
 package com.jdcloud.sdk.service.iotlink.model;
 
-import com.jdcloud.sdk.service.iotlink.model.CardInfoResp;
+import java.util.List;
+import java.util.ArrayList;
+import com.jdcloud.sdk.service.iotlink.model.QueryValidPeriodForNBResp;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 根据物联网卡iccid查询该卡的基本信息
+ * NB卡有效期查询
  */
-public class CardInfoResult extends JdcloudResult implements java.io.Serializable {
+public class QueryValidPeriodForNBResult extends JdcloudResult implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 请求状态(0:成功;1:失败)
+     * 请求状态(0:成功;其他:失败)
      */
     private String status;
 
@@ -45,14 +47,14 @@ public class CardInfoResult extends JdcloudResult implements java.io.Serializabl
     private String message;
 
     /**
-     * 指定物联网卡的卡基本信息
+     * result
      */
-    private CardInfoResp result;
-
+    
+    private List<QueryValidPeriodForNBResp> result;
 
 
     /**
-     * get 请求状态(0:成功;1:失败)
+     * get 请求状态(0:成功;其他:失败)
      *
      * @return
      */
@@ -61,7 +63,7 @@ public class CardInfoResult extends JdcloudResult implements java.io.Serializabl
     }
 
     /**
-     * set 请求状态(0:成功;1:失败)
+     * set 请求状态(0:成功;其他:失败)
      *
      * @param status
      */
@@ -90,31 +92,31 @@ public class CardInfoResult extends JdcloudResult implements java.io.Serializabl
 
 
     /**
-     * get 指定物联网卡的卡基本信息
-     *
-     * @return
-     */
-    public CardInfoResp getResult() {
+    * get result
+    *
+    * @return
+    */
+    public List<QueryValidPeriodForNBResp> getResult() {
         return result;
     }
 
     /**
-     * set 指定物联网卡的卡基本信息
-     *
-     * @param result
-     */
-    public void setResult(CardInfoResp result) {
+    * set result
+    *
+    * @param result
+    */
+    public void setResult(List<QueryValidPeriodForNBResp> result) {
         this.result = result;
     }
 
 
 
     /**
-     * set 请求状态(0:成功;1:失败)
+     * set 请求状态(0:成功;其他:失败)
      *
      * @param status
      */
-    public CardInfoResult status(String status) {
+    public QueryValidPeriodForNBResult status(String status) {
         this.status = status;
         return this;
     }
@@ -125,21 +127,33 @@ public class CardInfoResult extends JdcloudResult implements java.io.Serializabl
      *
      * @param message
      */
-    public CardInfoResult message(String message) {
+    public QueryValidPeriodForNBResult message(String message) {
         this.message = message;
         return this;
     }
 
 
     /**
-     * set 指定物联网卡的卡基本信息
-     *
-     * @param result
-     */
-    public CardInfoResult result(CardInfoResp result) {
+    * set result
+    *
+    * @param result
+    */
+    public QueryValidPeriodForNBResult result(List<QueryValidPeriodForNBResp> result) {
         this.result = result;
         return this;
     }
 
 
+
+    /**
+     * add item to result
+     *
+     * @param result
+     */
+    public void addResult(QueryValidPeriodForNBResp result) {
+        if (this.result == null) {
+            this.result = new ArrayList<>();
+        }
+        this.result.add(result);
+    }
 }

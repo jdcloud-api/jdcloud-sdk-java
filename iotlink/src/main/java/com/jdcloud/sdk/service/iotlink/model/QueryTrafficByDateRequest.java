@@ -28,18 +28,18 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据物联网卡imsi查询该卡的生命周期信息
+ * 物联网卡流量查询（时间段）查询接口
  */
-public class LifeStatusByIMSIRequest extends JdcloudRequest implements java.io.Serializable {
+public class QueryTrafficByDateRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 物联网卡imsi
+     * 物联网卡流量查询（时间段）查询请求参数
      * Required:true
      */
     @Required
-    private String imsi;
+    private String requestParam;
 
     /**
      * Region ID
@@ -51,21 +51,21 @@ public class LifeStatusByIMSIRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * get 物联网卡imsi
+     * get 物联网卡流量查询（时间段）查询请求参数
      *
      * @return
      */
-    public String getImsi() {
-        return imsi;
+    public String getRequestParam() {
+        return requestParam;
     }
 
     /**
-     * set 物联网卡imsi
+     * set 物联网卡流量查询（时间段）查询请求参数
      *
-     * @param imsi
+     * @param requestParam
      */
-    public void setImsi(String imsi) {
-        this.imsi = imsi;
+    public void setRequestParam(String requestParam) {
+        this.requestParam = requestParam;
     }
 
 
@@ -90,12 +90,12 @@ public class LifeStatusByIMSIRequest extends JdcloudRequest implements java.io.S
 
 
     /**
-     * set 物联网卡imsi
+     * set 物联网卡流量查询（时间段）查询请求参数
      *
-     * @param imsi
+     * @param requestParam
      */
-    public LifeStatusByIMSIRequest imsi(String imsi) {
-        this.imsi = imsi;
+    public QueryTrafficByDateRequest requestParam(String requestParam) {
+        this.requestParam = requestParam;
         return this;
     }
 
@@ -105,7 +105,7 @@ public class LifeStatusByIMSIRequest extends JdcloudRequest implements java.io.S
      *
      * @param regionId
      */
-    public LifeStatusByIMSIRequest regionId(String regionId) {
+    public QueryTrafficByDateRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
