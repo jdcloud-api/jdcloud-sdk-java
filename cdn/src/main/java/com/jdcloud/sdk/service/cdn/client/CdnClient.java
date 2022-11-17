@@ -409,6 +409,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryCdnUserQuotaExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainAppsRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryLiveDomainAppsResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryLiveDomainAppsExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainCnameTagRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainCnameTagResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryDomainCnameTagExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryHttp2Request;
 import com.jdcloud.sdk.service.cdn.model.QueryHttp2Response;
 import com.jdcloud.sdk.service.cdn.client.QueryHttp2Executor;
@@ -2050,6 +2053,17 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryLiveDomainAppsResponse queryLiveDomainApps(QueryLiveDomainAppsRequest request) throws JdcloudSdkException {
         return new QueryLiveDomainAppsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询域名cname标签
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDomainCnameTagResponse queryDomainCnameTag(QueryDomainCnameTagRequest request) throws JdcloudSdkException {
+        return new QueryDomainCnameTagExecutor().client(this).execute(request);
     }
 
     /**

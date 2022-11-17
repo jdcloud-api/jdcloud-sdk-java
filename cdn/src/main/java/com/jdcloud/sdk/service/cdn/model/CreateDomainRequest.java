@@ -117,6 +117,11 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
     private Long tempInstId;
 
     /**
+     * cname标签,使用时通过queryDomainCnameTag接口获取
+     */
+    private String domainCnameTag;
+
+    /**
      * 用户域名
      * Required:true
      */
@@ -430,6 +435,25 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
 
 
     /**
+     * get cname标签,使用时通过queryDomainCnameTag接口获取
+     *
+     * @return
+     */
+    public String getDomainCnameTag() {
+        return domainCnameTag;
+    }
+
+    /**
+     * set cname标签,使用时通过queryDomainCnameTag接口获取
+     *
+     * @param domainCnameTag
+     */
+    public void setDomainCnameTag(String domainCnameTag) {
+        this.domainCnameTag = domainCnameTag;
+    }
+
+
+    /**
      * get 用户域名
      *
      * @return
@@ -621,6 +645,17 @@ public class CreateDomainRequest extends JdcloudRequest implements java.io.Seria
      */
     public CreateDomainRequest tempInstId(Long tempInstId) {
         this.tempInstId = tempInstId;
+        return this;
+    }
+
+
+    /**
+     * set cname标签,使用时通过queryDomainCnameTag接口获取
+     *
+     * @param domainCnameTag
+     */
+    public CreateDomainRequest domainCnameTag(String domainCnameTag) {
+        this.domainCnameTag = domainCnameTag;
         return this;
     }
 
