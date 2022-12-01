@@ -126,21 +126,29 @@ public abstract class JdcloudExecutor {
             //do path encode for the final request
             String requestPath =  SdkHttpUtils.urlEncode(path.toString(), true);
             HttpRequest httpRequest = jdcloudClient.buildRequest(method(), new GenericUrl(host.toString() + requestPath + params.toString()), bodyContent);
+
+            String requestURL =  httpRequest.getUrl().build();
+            logger.debug("RequestURL+1:{}",requestURL);
             // 设置Headers
             httpRequest.getHeaders().setUserAgent(jdcloudClient.getUserAgent());
             httpRequest.getHeaders().setContentType(JdcloudClient.JSON);
-            this.setCustomHeader(httpRequest.getHeaders());
+            this.setCustomHeader(httpRequest.getHeaders(),request);
 
             // 签名
             SignRequest signRequest = new SignRequest(signingHost.toString(), path.toString(), request.getRegionId(), jdcloudClient.getServiceName(), httpRequest, jdcloudClient.getCredentialsProvider().getCredentials());
+
             SignatureComposer signer = new SignatureComposer();
             signer.sign(signRequest);
+            requestURL =  httpRequest.getUrl().build();
+            logger.debug("RequestURL+2:{}",requestURL);
             logger.debug("Authorization: {}", httpRequest.getHeaders().getAuthorization());
 
             int times = 1;
             this.setCookie(request.getCookies(),httpRequest.getHeaders());
             while (times < RETRY_MAX_TIMES && jdcloudClient.isRetryQuest()) {
                 try {
+                    requestURL =  httpRequest.getUrl().build();
+                    logger.debug("RequestURL+3:{}",requestURL);
                     httpResponse = httpRequest.execute();
                     return (R1)handlerHttpResponse(httpResponse);
                 } catch (NoHttpResponseException e) {
@@ -195,12 +203,19 @@ public abstract class JdcloudExecutor {
         while (matcher.find()) {
             String fieldName = matcher.group(1);
             //matcher.appendReplacement(url, getRequestValue(fieldName, request));
+            // NOTICE: this is use for support the path param contain `$` and other regex key words
             String replaceValue = Matcher.quoteReplacement(getRequestValue(fieldName, request));
+//            try {
+//                replaceValue = URLEncoder.encode(replaceValue,"utf-8");
+//            } catch (UnsupportedEncodingException e) {
+//                e.printStackTrace();
+//            }
             matcher.appendReplacement(url, replaceValue);
         }
         matcher.appendTail(url);
         return url.toString();
     }
+
 
     /**
      * 方法描述：校验必选参数是否为空
@@ -445,16 +460,19 @@ public abstract class JdcloudExecutor {
             for (Cookie cookie:cookies){
                 cookieStore.addCookie(cookie);
             }
+
             DefaultCookieSpec spec = new DefaultCookieSpec();
             List<Header> cookieHeaders = spec.formatCookies(cookieStore.getCookies());
             for (Header header: cookieHeaders) {
-                headers.set(header.getName(),header.getValue());
+                headers.setCookie(header.getValue());
+                //headers.set(header.getName(),header.getValue());
             }
         }
     }
 
-    private void setCustomHeader(HttpHeaders headers) {
+    private void setCustomHeader(HttpHeaders headers,JdcloudRequest request) {
         Map<String, String> customHeaders = this.jdcloudClient.getCustomHeader();
+        customHeaders.putAll(request.getCustomHeader());
         for (Map.Entry<String,String> entry  : customHeaders.entrySet()) {
             String key = entry.getKey();
             if(null == key){continue;}
