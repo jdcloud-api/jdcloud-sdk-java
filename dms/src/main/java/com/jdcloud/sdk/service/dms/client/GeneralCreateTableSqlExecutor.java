@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateTableSqlResponse;
 
 /**
- * 生成建表语句sql，支持Mysql，Stardb
+ * 生成建表语句sql，支持Mysql，Stardb，OpenGauss
  */
 class GeneralCreateTableSqlExecutor extends JdcloudExecutor {
 

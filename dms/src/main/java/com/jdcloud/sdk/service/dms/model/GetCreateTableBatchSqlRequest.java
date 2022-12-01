@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取批量建表sql，仅供前端使用，支持Stardb
+ * 获取批量建表sql，仅供前端使用，支持Stardb，OpenGauss
  */
 public class GetCreateTableBatchSqlRequest extends JdcloudRequest implements java.io.Serializable {
 

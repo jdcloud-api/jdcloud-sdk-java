@@ -32,7 +32,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 生成建表语句sql，支持Mysql，Stardb
+ * 生成建表语句sql，支持Mysql，Stardb，OpenGauss
  */
 public class GeneralCreateTableSqlRequest extends JdcloudRequest implements java.io.Serializable {
 

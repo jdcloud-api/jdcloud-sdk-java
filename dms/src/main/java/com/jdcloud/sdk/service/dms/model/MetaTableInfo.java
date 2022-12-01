@@ -43,7 +43,7 @@ public class MetaTableInfo  implements java.io.Serializable {
     private String tableComment;
 
     /**
-     * 表字符编码。
+     * 表字符编码（非必须，opengauss不传）。
      */
     private String tableCharset;
 
@@ -88,7 +88,7 @@ public class MetaTableInfo  implements java.io.Serializable {
 
 
     /**
-     * get 表字符编码。
+     * get 表字符编码（非必须，opengauss不传）。
      *
      * @return
      */
@@ -97,7 +97,7 @@ public class MetaTableInfo  implements java.io.Serializable {
     }
 
     /**
-     * set 表字符编码。
+     * set 表字符编码（非必须，opengauss不传）。
      *
      * @param tableCharset
      */
@@ -130,7 +130,7 @@ public class MetaTableInfo  implements java.io.Serializable {
 
 
     /**
-     * set 表字符编码。
+     * set 表字符编码（非必须，opengauss不传）。
      *
      * @param tableCharset
      */

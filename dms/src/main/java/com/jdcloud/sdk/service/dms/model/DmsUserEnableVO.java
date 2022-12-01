@@ -40,7 +40,7 @@ public class DmsUserEnableVO  implements java.io.Serializable {
     /**
      * 用户的启用/禁用状态。
      */
-    private String activeStatus;
+    private Boolean activeStatus;
 
 
 
@@ -68,7 +68,7 @@ public class DmsUserEnableVO  implements java.io.Serializable {
      *
      * @return
      */
-    public String getActiveStatus() {
+    public Boolean getActiveStatus() {
         return activeStatus;
     }
 
@@ -77,7 +77,7 @@ public class DmsUserEnableVO  implements java.io.Serializable {
      *
      * @param activeStatus
      */
-    public void setActiveStatus(String activeStatus) {
+    public void setActiveStatus(Boolean activeStatus) {
         this.activeStatus = activeStatus;
     }
 
@@ -99,7 +99,7 @@ public class DmsUserEnableVO  implements java.io.Serializable {
      *
      * @param activeStatus
      */
-    public DmsUserEnableVO activeStatus(String activeStatus) {
+    public DmsUserEnableVO activeStatus(Boolean activeStatus) {
         this.activeStatus = activeStatus;
         return this;
     }

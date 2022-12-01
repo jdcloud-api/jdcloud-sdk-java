@@ -33,19 +33,24 @@ public class ExtraTableInfo  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表。
+     * ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表,ORIGIN_OG:og原始表, OG_SPLIT:og切分表, OG_ISOLATE:og孤立表, OG_BROADCAST:og广播表。
      */
     private String tableTypeEnum;
 
     /**
-     * tableTypeEnum为切分表时的切分信息内容。
+     * tableTypeEnum为stardb切分表时的切分信息内容。
      */
     private StardbSplitInfo stardbSplitInfo;
+
+    /**
+     * sharding opengause切分规则。
+     */
+    private DmsOgTableRule dmsOgTableRule;
 
 
 
     /**
-     * get ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表。
+     * get ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表,ORIGIN_OG:og原始表, OG_SPLIT:og切分表, OG_ISOLATE:og孤立表, OG_BROADCAST:og广播表。
      *
      * @return
      */
@@ -54,7 +59,7 @@ public class ExtraTableInfo  implements java.io.Serializable {
     }
 
     /**
-     * set ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表。
+     * set ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表,ORIGIN_OG:og原始表, OG_SPLIT:og切分表, OG_ISOLATE:og孤立表, OG_BROADCAST:og广播表。
      *
      * @param tableTypeEnum
      */
@@ -64,7 +69,7 @@ public class ExtraTableInfo  implements java.io.Serializable {
 
 
     /**
-     * get tableTypeEnum为切分表时的切分信息内容。
+     * get tableTypeEnum为stardb切分表时的切分信息内容。
      *
      * @return
      */
@@ -73,7 +78,7 @@ public class ExtraTableInfo  implements java.io.Serializable {
     }
 
     /**
-     * set tableTypeEnum为切分表时的切分信息内容。
+     * set tableTypeEnum为stardb切分表时的切分信息内容。
      *
      * @param stardbSplitInfo
      */
@@ -82,9 +87,28 @@ public class ExtraTableInfo  implements java.io.Serializable {
     }
 
 
+    /**
+     * get sharding opengause切分规则。
+     *
+     * @return
+     */
+    public DmsOgTableRule getDmsOgTableRule() {
+        return dmsOgTableRule;
+    }
 
     /**
-     * set ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表。
+     * set sharding opengause切分规则。
+     *
+     * @param dmsOgTableRule
+     */
+    public void setDmsOgTableRule(DmsOgTableRule dmsOgTableRule) {
+        this.dmsOgTableRule = dmsOgTableRule;
+    }
+
+
+
+    /**
+     * set ORIGIN:原始表, STARDB_SPLIT:stardb切分表, STARDB_ISOLATE:stardb孤立表, STARDB_BROADCAST:stardb广播表,ORIGIN_OG:og原始表, OG_SPLIT:og切分表, OG_ISOLATE:og孤立表, OG_BROADCAST:og广播表。
      *
      * @param tableTypeEnum
      */
@@ -95,12 +119,23 @@ public class ExtraTableInfo  implements java.io.Serializable {
 
 
     /**
-     * set tableTypeEnum为切分表时的切分信息内容。
+     * set tableTypeEnum为stardb切分表时的切分信息内容。
      *
      * @param stardbSplitInfo
      */
     public ExtraTableInfo stardbSplitInfo(StardbSplitInfo stardbSplitInfo) {
         this.stardbSplitInfo = stardbSplitInfo;
+        return this;
+    }
+
+
+    /**
+     * set sharding opengause切分规则。
+     *
+     * @param dmsOgTableRule
+     */
+    public ExtraTableInfo dmsOgTableRule(DmsOgTableRule dmsOgTableRule) {
+        this.dmsOgTableRule = dmsOgTableRule;
         return this;
     }
 
