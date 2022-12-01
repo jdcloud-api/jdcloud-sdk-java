@@ -87,8 +87,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * 工作节点组所在的 az
      */
+    
     private List<String> azs;
-
     /**
      * 工作节点组的 ag 对应的实例模板
      */
@@ -102,8 +102,8 @@ public class NodeGroup  implements java.io.Serializable {
     /**
      * tags
      */
+    
     private List<Tag> tags;
-
     /**
      * 更新时间
      */
@@ -113,11 +113,6 @@ public class NodeGroup  implements java.io.Serializable {
      * 状态变更原因
      */
     private String stateMessage;
-
-    /**
-     * 是否开启自动修复
-     */
-    private Boolean autoRepair;
 
     /**
      * 控制节点操作进度
@@ -133,6 +128,7 @@ public class NodeGroup  implements java.io.Serializable {
      * 创建时间
      */
     private String createdTime;
+
 
 
     /**
@@ -153,6 +149,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.clusterId = clusterId;
     }
 
+
     /**
      * get 工作节点组 id
      *
@@ -170,6 +167,7 @@ public class NodeGroup  implements java.io.Serializable {
     public void setNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
     }
+
 
     /**
      * get 工作节点组名称
@@ -189,6 +187,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 工作节点组描述
      *
@@ -206,6 +205,7 @@ public class NodeGroup  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 工作节点组配置信息
@@ -225,6 +225,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.nodeConfig = nodeConfig;
     }
 
+
     /**
      * get 工作节点版本
      *
@@ -242,6 +243,7 @@ public class NodeGroup  implements java.io.Serializable {
     public void setVersion(String version) {
         this.version = version;
     }
+
 
     /**
      * get 工作节点所属的网络信息
@@ -261,6 +263,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.nodeNetwork = nodeNetwork;
     }
 
+
     /**
      * get 当前工作节点数量
      *
@@ -278,6 +281,7 @@ public class NodeGroup  implements java.io.Serializable {
     public void setCurrentCount(Integer currentCount) {
         this.currentCount = currentCount;
     }
+
 
     /**
      * get 期望的工作节点数量
@@ -297,6 +301,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.expectCount = expectCount;
     }
 
+
     /**
      * get 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
      *
@@ -315,23 +320,25 @@ public class NodeGroup  implements java.io.Serializable {
         this.agId = agId;
     }
 
+
     /**
-     * get 工作节点组所在的 az
-     *
-     * @return
-     */
+    * get 工作节点组所在的 az
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 工作节点组所在的 az
-     *
-     * @param azs
-     */
+    * set 工作节点组所在的 az
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 工作节点组的 ag 对应的实例模板
@@ -351,6 +358,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.instanceTemplateId = instanceTemplateId;
     }
 
+
     /**
      * get 状态  [pending,running,resizing,reconciling,deleting,deleted,error,running_with_error(部分节点有问题)]
      *
@@ -369,23 +377,25 @@ public class NodeGroup  implements java.io.Serializable {
         this.state = state;
     }
 
+
     /**
-     * get tags
-     *
-     * @return
-     */
+    * get tags
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set tags
-     *
-     * @param tags
-     */
+    * set tags
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get 更新时间
@@ -405,6 +415,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 状态变更原因
      *
@@ -423,23 +434,6 @@ public class NodeGroup  implements java.io.Serializable {
         this.stateMessage = stateMessage;
     }
 
-    /**
-     * get 是否开启自动修复
-     *
-     * @return
-     */
-    public Boolean getAutoRepair() {
-        return autoRepair;
-    }
-
-    /**
-     * set 是否开启自动修复
-     *
-     * @param autoRepair
-     */
-    public void setAutoRepair(Boolean autoRepair) {
-        this.autoRepair = autoRepair;
-    }
 
     /**
      * get 控制节点操作进度
@@ -459,6 +453,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.progress = progress;
     }
 
+
     /**
      * get 自动伸缩配置
      *
@@ -476,6 +471,7 @@ public class NodeGroup  implements java.io.Serializable {
     public void setCaConfig(CAConfig caConfig) {
         this.caConfig = caConfig;
     }
+
 
     /**
      * get 创建时间
@@ -496,6 +492,7 @@ public class NodeGroup  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 集群 id
      *
@@ -505,6 +502,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.clusterId = clusterId;
         return this;
     }
+
 
     /**
      * set 工作节点组 id
@@ -516,6 +514,7 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 工作节点组名称
      *
@@ -525,6 +524,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 工作节点组描述
@@ -536,6 +536,7 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 工作节点组配置信息
      *
@@ -545,6 +546,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.nodeConfig = nodeConfig;
         return this;
     }
+
 
     /**
      * set 工作节点版本
@@ -556,6 +558,7 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 工作节点所属的网络信息
      *
@@ -565,6 +568,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.nodeNetwork = nodeNetwork;
         return this;
     }
+
 
     /**
      * set 当前工作节点数量
@@ -576,6 +580,7 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 期望的工作节点数量
      *
@@ -585,6 +590,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.expectCount = expectCount;
         return this;
     }
+
 
     /**
      * set 工作节点组的ag id ，通过agid可以查询该工作节点组下的实例
@@ -596,15 +602,17 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 工作节点组所在的 az
-     *
-     * @param azs
-     */
+    * set 工作节点组所在的 az
+    *
+    * @param azs
+    */
     public NodeGroup azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 工作节点组的 ag 对应的实例模板
@@ -616,6 +624,7 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态  [pending,running,resizing,reconciling,deleting,deleted,error,running_with_error(部分节点有问题)]
      *
@@ -626,15 +635,17 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set tags
-     *
-     * @param tags
-     */
+    * set tags
+    *
+    * @param tags
+    */
     public NodeGroup tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set 更新时间
@@ -646,6 +657,7 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态变更原因
      *
@@ -656,15 +668,6 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
-    /**
-     * set 是否开启自动修复
-     *
-     * @param autoRepair
-     */
-    public NodeGroup autoRepair(Boolean autoRepair) {
-        this.autoRepair = autoRepair;
-        return this;
-    }
 
     /**
      * set 控制节点操作进度
@@ -676,6 +679,7 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自动伸缩配置
      *
@@ -686,6 +690,7 @@ public class NodeGroup  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -695,6 +700,7 @@ public class NodeGroup  implements java.io.Serializable {
         this.createdTime = createdTime;
         return this;
     }
+
 
 
     /**
@@ -720,5 +726,4 @@ public class NodeGroup  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

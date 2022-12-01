@@ -52,14 +52,15 @@ public class DescribeClustersRequest extends JdcloudRequest implements java.io.S
 id - id，支持多个   
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域 ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -80,6 +81,7 @@ id - id，支持多个
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认为20；取值范围[10, 100]
      *
@@ -98,27 +100,29 @@ id - id，支持多个
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get name - 集群名称，模糊匹配，仅支持单个   
+    * get name - 集群名称，模糊匹配，仅支持单个   
 id - id，支持多个   
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set name - 集群名称，模糊匹配，仅支持单个   
+    * set name - 集群名称，模糊匹配，仅支持单个   
 id - id，支持多个   
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域 ID
@@ -139,6 +143,7 @@ id - id，支持多个
     }
 
 
+
     /**
      * set 页码；默认为1
      *
@@ -148,6 +153,7 @@ id - id，支持多个
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
@@ -159,17 +165,19 @@ id - id，支持多个
         return this;
     }
 
+
     /**
-     * set name - 集群名称，模糊匹配，仅支持单个   
+    * set name - 集群名称，模糊匹配，仅支持单个   
 id - id，支持多个   
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeClustersRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域 ID
@@ -180,6 +188,7 @@ id - id，支持多个
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -195,5 +204,4 @@ id - id，支持多个
         }
         this.filters.add(filter);
     }
-
 }

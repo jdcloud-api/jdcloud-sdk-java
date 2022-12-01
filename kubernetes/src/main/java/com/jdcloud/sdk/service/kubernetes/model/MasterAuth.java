@@ -58,6 +58,7 @@ public class MasterAuth  implements java.io.Serializable {
     private String password;
 
 
+
     /**
      * get base64编码，集群的根的public certificate
      *
@@ -75,6 +76,7 @@ public class MasterAuth  implements java.io.Serializable {
     public void setClusterCaCertificate(String clusterCaCertificate) {
         this.clusterCaCertificate = clusterCaCertificate;
     }
+
 
     /**
      * get base64编码，客户端连接集群的public certificate
@@ -94,6 +96,7 @@ public class MasterAuth  implements java.io.Serializable {
         this.clientCertificate = clientCertificate;
     }
 
+
     /**
      * get base64编码, client的私钥
      *
@@ -112,6 +115,7 @@ public class MasterAuth  implements java.io.Serializable {
         this.clientKey = clientKey;
     }
 
+
     /**
      * get basic auth的user
      *
@@ -129,6 +133,7 @@ public class MasterAuth  implements java.io.Serializable {
     public void setUser(String user) {
         this.user = user;
     }
+
 
     /**
      * get basic auth的password
@@ -149,6 +154,7 @@ public class MasterAuth  implements java.io.Serializable {
     }
 
 
+
     /**
      * set base64编码，集群的根的public certificate
      *
@@ -158,6 +164,7 @@ public class MasterAuth  implements java.io.Serializable {
         this.clusterCaCertificate = clusterCaCertificate;
         return this;
     }
+
 
     /**
      * set base64编码，客户端连接集群的public certificate
@@ -169,6 +176,7 @@ public class MasterAuth  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set base64编码, client的私钥
      *
@@ -179,6 +187,7 @@ public class MasterAuth  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set basic auth的user
      *
@@ -188,6 +197,7 @@ public class MasterAuth  implements java.io.Serializable {
         this.user = user;
         return this;
     }
+
 
     /**
      * set basic auth的password

@@ -43,8 +43,8 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
      * Required:true
      */
     @Required
+    
     private List<String> instanceIds;
-
     /**
      * 地域 ID
      * Required:true
@@ -60,27 +60,29 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
     private String nodeGroupId;
 
 
+
     /**
-     * get 需要从工作节点组中删除的实例
+    * get 需要从工作节点组中删除的实例
 - 不可将一个集群中的实例全部删除
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getInstanceIds() {
         return instanceIds;
     }
 
     /**
-     * set 需要从工作节点组中删除的实例
+    * set 需要从工作节点组中删除的实例
 - 不可将一个集群中的实例全部删除
 
-     *
-     * @param instanceIds
-     */
+    *
+    * @param instanceIds
+    */
     public void setInstanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
     }
+
 
     /**
      * get 地域 ID
@@ -99,6 +101,7 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 工作节点组 ID
@@ -119,17 +122,19 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
-     * set 需要从工作节点组中删除的实例
+    * set 需要从工作节点组中删除的实例
 - 不可将一个集群中的实例全部删除
 
-     *
-     * @param instanceIds
-     */
+    *
+    * @param instanceIds
+    */
     public DeleteNodeInstancesRequest instanceIds(List<String> instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
+
 
     /**
      * set 地域 ID
@@ -141,6 +146,7 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 工作节点组 ID
      *
@@ -150,6 +156,7 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
         this.nodeGroupId = nodeGroupId;
         return this;
     }
+
 
 
     /**
@@ -165,5 +172,4 @@ public class DeleteNodeInstancesRequest extends JdcloudRequest implements java.i
         }
         this.instanceIds.add(instanceId);
     }
-
 }

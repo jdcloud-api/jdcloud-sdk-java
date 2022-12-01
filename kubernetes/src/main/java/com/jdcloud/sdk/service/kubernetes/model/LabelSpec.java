@@ -49,6 +49,7 @@ name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标�
     private String value;
 
 
+
     /**
      * get key包含两个部分：prefix与name，name是必须的，prefix是可选的。prefix与name分隔用&quot;/&quot;。 
 name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253 
@@ -73,6 +74,7 @@ name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标�
         this.key = key;
     }
 
+
     /**
      * get 字母，数字,[-_.],长度不超过63
      *
@@ -92,6 +94,7 @@ name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标�
     }
 
 
+
     /**
      * set key包含两个部分：prefix与name，name是必须的，prefix是可选的。prefix与name分隔用&quot;/&quot;。 
 name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标准（例如：kubernetes.io/），长度不超过253 
@@ -104,6 +107,7 @@ name 可以是字母，数字，[-_.]。长度小于63。prefix：遵循DNS标�
         this.key = key;
         return this;
     }
+
 
     /**
      * set 字母，数字,[-_.],长度不超过63

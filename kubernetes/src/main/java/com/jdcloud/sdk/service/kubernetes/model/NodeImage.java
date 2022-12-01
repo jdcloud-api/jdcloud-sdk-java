@@ -63,6 +63,7 @@ public class NodeImage  implements java.io.Serializable {
     private Integer visibility;
 
 
+
     /**
      * get 镜像编码
      *
@@ -80,6 +81,7 @@ public class NodeImage  implements java.io.Serializable {
     public void setCode(String code) {
         this.code = code;
     }
+
 
     /**
      * get 虚机镜像id
@@ -99,6 +101,7 @@ public class NodeImage  implements java.io.Serializable {
         this.imageId = imageId;
     }
 
+
     /**
      * get 镜像操作系统
      *
@@ -116,6 +119,7 @@ public class NodeImage  implements java.io.Serializable {
     public void setImageOs(String imageOs) {
         this.imageOs = imageOs;
     }
+
 
     /**
      * get 主版本号
@@ -135,6 +139,7 @@ public class NodeImage  implements java.io.Serializable {
         this.mainVersion = mainVersion;
     }
 
+
     /**
      * get 内部版本号
      *
@@ -152,6 +157,7 @@ public class NodeImage  implements java.io.Serializable {
     public void setInnerVersion(String innerVersion) {
         this.innerVersion = innerVersion;
     }
+
 
     /**
      * get 可见度
@@ -172,6 +178,7 @@ public class NodeImage  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 镜像编码
      *
@@ -181,6 +188,7 @@ public class NodeImage  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 虚机镜像id
@@ -192,6 +200,7 @@ public class NodeImage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像操作系统
      *
@@ -201,6 +210,7 @@ public class NodeImage  implements java.io.Serializable {
         this.imageOs = imageOs;
         return this;
     }
+
 
     /**
      * set 主版本号
@@ -212,6 +222,7 @@ public class NodeImage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内部版本号
      *
@@ -221,6 +232,7 @@ public class NodeImage  implements java.io.Serializable {
         this.innerVersion = innerVersion;
         return this;
     }
+
 
     /**
      * set 可见度

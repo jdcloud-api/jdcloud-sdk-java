@@ -35,7 +35,7 @@ public class DescribeVersionsRequest extends JdcloudRequest implements java.io.S
     private static final long serialVersionUID = 1L;
 
     /**
-     * 集群的大版本，如 1.12.4-jcs.1
+     * 集群的大版本，如 1.16.4-jcs.3
      */
     private String masterVersion;
 
@@ -47,8 +47,9 @@ public class DescribeVersionsRequest extends JdcloudRequest implements java.io.S
     private String regionId;
 
 
+
     /**
-     * get 集群的大版本，如 1.12.4-jcs.1
+     * get 集群的大版本，如 1.16.4-jcs.3
      *
      * @return
      */
@@ -57,13 +58,14 @@ public class DescribeVersionsRequest extends JdcloudRequest implements java.io.S
     }
 
     /**
-     * set 集群的大版本，如 1.12.4-jcs.1
+     * set 集群的大版本，如 1.16.4-jcs.3
      *
      * @param masterVersion
      */
     public void setMasterVersion(String masterVersion) {
         this.masterVersion = masterVersion;
     }
+
 
     /**
      * get Region ID
@@ -84,8 +86,9 @@ public class DescribeVersionsRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
-     * set 集群的大版本，如 1.12.4-jcs.1
+     * set 集群的大版本，如 1.16.4-jcs.3
      *
      * @param masterVersion
      */
@@ -93,6 +96,7 @@ public class DescribeVersionsRequest extends JdcloudRequest implements java.io.S
         this.masterVersion = masterVersion;
         return this;
     }
+
 
     /**
      * set Region ID

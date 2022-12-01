@@ -56,6 +56,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     private String nodeGroupId;
 
 
+
     /**
      * get 预期目标节点数量
      *
@@ -74,6 +75,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
         this.expectCount = expectCount;
     }
 
+
     /**
      * get 地域 ID
      *
@@ -91,6 +93,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 工作节点组 ID
@@ -111,6 +114,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
     }
 
 
+
     /**
      * set 预期目标节点数量
      *
@@ -121,6 +125,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
         return this;
     }
 
+
     /**
      * set 地域 ID
      *
@@ -130,6 +135,7 @@ public class SetNodeGroupSizeRequest extends JdcloudRequest implements java.io.S
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 工作节点组 ID

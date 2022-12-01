@@ -47,8 +47,8 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * 云主机SSH密钥对名称
      */
+    
     private List<String> keyNames;
-
     /**
      * 云主机磁盘类型
      */
@@ -72,7 +72,28 @@ public class NodeConfig  implements java.io.Serializable {
     /**
      * 工作节点组标签
      */
+    
     private List<LabelSpec> labels;
+    /**
+     * 云主机脚本，目前支持启动脚本，key为launch-script。
+     */
+    
+    private List<UserScriptSpec> userScripts;
+    /**
+     * 数据盘配置信息
+     */
+    
+    private List<DataDiskSpec> dataDiskSpec;
+    /**
+     * 数据盘配置信息
+     */
+    private DiskSpec systemDiskSpec;
+
+    /**
+     * 工作节点组的安全组配置，为空则使用默认安全组
+     */
+    private String securityGroup;
+
 
 
     /**
@@ -93,6 +114,7 @@ public class NodeConfig  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 镜像信息
      *
@@ -111,23 +133,25 @@ public class NodeConfig  implements java.io.Serializable {
         this.imageId = imageId;
     }
 
+
     /**
-     * get 云主机SSH密钥对名称
-     *
-     * @return
-     */
+    * get 云主机SSH密钥对名称
+    *
+    * @return
+    */
     public List<String> getKeyNames() {
         return keyNames;
     }
 
     /**
-     * set 云主机SSH密钥对名称
-     *
-     * @param keyNames
-     */
+    * set 云主机SSH密钥对名称
+    *
+    * @param keyNames
+    */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
     }
+
 
     /**
      * get 云主机磁盘类型
@@ -147,6 +171,7 @@ public class NodeConfig  implements java.io.Serializable {
         this.systemDiskCategory = systemDiskCategory;
     }
 
+
     /**
      * get 云主机云盘系统盘大小  单位(GB)
      *
@@ -164,6 +189,7 @@ public class NodeConfig  implements java.io.Serializable {
     public void setSystemDiskSize(Integer systemDiskSize) {
         this.systemDiskSize = systemDiskSize;
     }
+
 
     /**
      * get 云主机云盘系统盘类型
@@ -183,6 +209,7 @@ public class NodeConfig  implements java.io.Serializable {
         this.systemDiskType = systemDiskType;
     }
 
+
     /**
      * get 云主机云盘 iops，仅限 ssd 类型云盘有效
      *
@@ -201,23 +228,101 @@ public class NodeConfig  implements java.io.Serializable {
         this.systemDiskIops = systemDiskIops;
     }
 
+
     /**
-     * get 工作节点组标签
-     *
-     * @return
-     */
+    * get 工作节点组标签
+    *
+    * @return
+    */
     public List<LabelSpec> getLabels() {
         return labels;
     }
 
     /**
-     * set 工作节点组标签
-     *
-     * @param labels
-     */
+    * set 工作节点组标签
+    *
+    * @param labels
+    */
     public void setLabels(List<LabelSpec> labels) {
         this.labels = labels;
     }
+
+
+    /**
+    * get 云主机脚本，目前支持启动脚本，key为launch-script。
+    *
+    * @return
+    */
+    public List<UserScriptSpec> getUserScripts() {
+        return userScripts;
+    }
+
+    /**
+    * set 云主机脚本，目前支持启动脚本，key为launch-script。
+    *
+    * @param userScripts
+    */
+    public void setUserScripts(List<UserScriptSpec> userScripts) {
+        this.userScripts = userScripts;
+    }
+
+
+    /**
+    * get 数据盘配置信息
+    *
+    * @return
+    */
+    public List<DataDiskSpec> getDataDiskSpec() {
+        return dataDiskSpec;
+    }
+
+    /**
+    * set 数据盘配置信息
+    *
+    * @param dataDiskSpec
+    */
+    public void setDataDiskSpec(List<DataDiskSpec> dataDiskSpec) {
+        this.dataDiskSpec = dataDiskSpec;
+    }
+
+
+    /**
+     * get 数据盘配置信息
+     *
+     * @return
+     */
+    public DiskSpec getSystemDiskSpec() {
+        return systemDiskSpec;
+    }
+
+    /**
+     * set 数据盘配置信息
+     *
+     * @param systemDiskSpec
+     */
+    public void setSystemDiskSpec(DiskSpec systemDiskSpec) {
+        this.systemDiskSpec = systemDiskSpec;
+    }
+
+
+    /**
+     * get 工作节点组的安全组配置，为空则使用默认安全组
+     *
+     * @return
+     */
+    public String getSecurityGroup() {
+        return securityGroup;
+    }
+
+    /**
+     * set 工作节点组的安全组配置，为空则使用默认安全组
+     *
+     * @param securityGroup
+     */
+    public void setSecurityGroup(String securityGroup) {
+        this.securityGroup = securityGroup;
+    }
+
 
 
     /**
@@ -230,6 +335,7 @@ public class NodeConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像信息
      *
@@ -240,15 +346,17 @@ public class NodeConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 云主机SSH密钥对名称
-     *
-     * @param keyNames
-     */
+    * set 云主机SSH密钥对名称
+    *
+    * @param keyNames
+    */
     public NodeConfig keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
+
 
     /**
      * set 云主机磁盘类型
@@ -260,6 +368,7 @@ public class NodeConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机云盘系统盘大小  单位(GB)
      *
@@ -269,6 +378,7 @@ public class NodeConfig  implements java.io.Serializable {
         this.systemDiskSize = systemDiskSize;
         return this;
     }
+
 
     /**
      * set 云主机云盘系统盘类型
@@ -280,6 +390,7 @@ public class NodeConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机云盘 iops，仅限 ssd 类型云盘有效
      *
@@ -290,15 +401,61 @@ public class NodeConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 工作节点组标签
-     *
-     * @param labels
-     */
+    * set 工作节点组标签
+    *
+    * @param labels
+    */
     public NodeConfig labels(List<LabelSpec> labels) {
         this.labels = labels;
         return this;
     }
+
+
+    /**
+    * set 云主机脚本，目前支持启动脚本，key为launch-script。
+    *
+    * @param userScripts
+    */
+    public NodeConfig userScripts(List<UserScriptSpec> userScripts) {
+        this.userScripts = userScripts;
+        return this;
+    }
+
+
+    /**
+    * set 数据盘配置信息
+    *
+    * @param dataDiskSpec
+    */
+    public NodeConfig dataDiskSpec(List<DataDiskSpec> dataDiskSpec) {
+        this.dataDiskSpec = dataDiskSpec;
+        return this;
+    }
+
+
+    /**
+     * set 数据盘配置信息
+     *
+     * @param systemDiskSpec
+     */
+    public NodeConfig systemDiskSpec(DiskSpec systemDiskSpec) {
+        this.systemDiskSpec = systemDiskSpec;
+        return this;
+    }
+
+
+    /**
+     * set 工作节点组的安全组配置，为空则使用默认安全组
+     *
+     * @param securityGroup
+     */
+    public NodeConfig securityGroup(String securityGroup) {
+        this.securityGroup = securityGroup;
+        return this;
+    }
+
 
 
     /**
@@ -325,4 +482,27 @@ public class NodeConfig  implements java.io.Serializable {
         this.labels.add(label);
     }
 
+    /**
+     * add item to 云主机脚本，目前支持启动脚本，key为launch-script。
+     *
+     * @param userScript
+     */
+    public void addUserScript(UserScriptSpec userScript) {
+        if (this.userScripts == null) {
+            this.userScripts = new ArrayList<>();
+        }
+        this.userScripts.add(userScript);
+    }
+
+    /**
+     * add item to 数据盘配置信息
+     *
+     * @param dataDiskSpec
+     */
+    public void addDataDiskSpec(DataDiskSpec dataDiskSpec) {
+        if (this.dataDiskSpec == null) {
+            this.dataDiskSpec = new ArrayList<>();
+        }
+        this.dataDiskSpec.add(dataDiskSpec);
+    }
 }

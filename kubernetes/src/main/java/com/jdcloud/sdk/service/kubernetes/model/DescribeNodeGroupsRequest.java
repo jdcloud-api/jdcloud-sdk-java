@@ -51,8 +51,8 @@ public class DescribeNodeGroupsRequest extends JdcloudRequest implements java.io
     /**
      * Tag筛选条件
      */
+    
     private List<TagFilter> tags;
-
     /**
      * name - 节点组名称，模糊匹配，支持单个
 id - 节点组 id，支持多个
@@ -60,14 +60,15 @@ clusterId - 根据 clusterId 查询
 clusterName - 根据 cluster 名称查询
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 地域 ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -88,6 +89,7 @@ clusterName - 根据 cluster 名称查询
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小；默认为20；取值范围[10, 100]
      *
@@ -106,49 +108,52 @@ clusterName - 根据 cluster 名称查询
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get Tag筛选条件
-     *
-     * @return
-     */
+    * get Tag筛选条件
+    *
+    * @return
+    */
     public List<TagFilter> getTags() {
         return tags;
     }
 
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public void setTags(List<TagFilter> tags) {
         this.tags = tags;
     }
 
+
     /**
-     * get name - 节点组名称，模糊匹配，支持单个
+    * get name - 节点组名称，模糊匹配，支持单个
 id - 节点组 id，支持多个
 clusterId - 根据 clusterId 查询
 clusterName - 根据 cluster 名称查询
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set name - 节点组名称，模糊匹配，支持单个
+    * set name - 节点组名称，模糊匹配，支持单个
 id - 节点组 id，支持多个
 clusterId - 根据 clusterId 查询
 clusterName - 根据 cluster 名称查询
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 地域 ID
@@ -169,6 +174,7 @@ clusterName - 根据 cluster 名称查询
     }
 
 
+
     /**
      * set 页码；默认为1
      *
@@ -178,6 +184,7 @@ clusterName - 根据 cluster 名称查询
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小；默认为20；取值范围[10, 100]
@@ -189,29 +196,32 @@ clusterName - 根据 cluster 名称查询
         return this;
     }
 
+
     /**
-     * set Tag筛选条件
-     *
-     * @param tags
-     */
+    * set Tag筛选条件
+    *
+    * @param tags
+    */
     public DescribeNodeGroupsRequest tags(List<TagFilter> tags) {
         this.tags = tags;
         return this;
     }
 
+
     /**
-     * set name - 节点组名称，模糊匹配，支持单个
+    * set name - 节点组名称，模糊匹配，支持单个
 id - 节点组 id，支持多个
 clusterId - 根据 clusterId 查询
 clusterName - 根据 cluster 名称查询
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeNodeGroupsRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 地域 ID
@@ -222,6 +232,7 @@ clusterName - 根据 cluster 名称查询
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -251,5 +262,4 @@ clusterName - 根据 cluster 名称查询
         }
         this.filters.add(filter);
     }
-
 }

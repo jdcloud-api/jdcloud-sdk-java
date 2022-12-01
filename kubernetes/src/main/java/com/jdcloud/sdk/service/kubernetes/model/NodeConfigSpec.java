@@ -43,11 +43,6 @@ public class NodeConfigSpec  implements java.io.Serializable {
     private String instanceType;
 
     /**
-     * 工作节点版本，不指定则使用默认版本
-     */
-    private String version;
-
-    /**
      * 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
      */
     private String password;
@@ -55,8 +50,8 @@ public class NodeConfigSpec  implements java.io.Serializable {
     /**
      * 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
      */
+    
     private List<String> keyNames;
-
     /**
      * 云主机系统盘配置信息
      */
@@ -65,7 +60,23 @@ public class NodeConfigSpec  implements java.io.Serializable {
     /**
      * 工作节点组标签，最多支持 10 个
      */
+    
     private List<LabelSpec> labels;
+    /**
+     * 云主机脚本，暂定最多支持5个脚本，目前支持脚本类型为启动脚本，key为launch-script。
+     */
+    
+    private List<UserScriptSpec> userScripts;
+    /**
+     * 云主机数据盘配置信息
+     */
+    
+    private List<DataDiskSpec> dataDiskSpec;
+    /**
+     * 工作节点组的安全组配置，为空则使用默认安全组
+     */
+    private String securityGroup;
+
 
 
     /**
@@ -86,23 +97,6 @@ public class NodeConfigSpec  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
-    /**
-     * get 工作节点版本，不指定则使用默认版本
-     *
-     * @return
-     */
-    public String getVersion() {
-        return version;
-    }
-
-    /**
-     * set 工作节点版本，不指定则使用默认版本
-     *
-     * @param version
-     */
-    public void setVersion(String version) {
-        this.version = version;
-    }
 
     /**
      * get 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
@@ -122,23 +116,25 @@ public class NodeConfigSpec  implements java.io.Serializable {
         this.password = password;
     }
 
+
     /**
-     * get 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
-     *
-     * @return
-     */
+    * get 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @return
+    */
     public List<String> getKeyNames() {
         return keyNames;
     }
 
     /**
-     * set 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
-     *
-     * @param keyNames
-     */
+    * set 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @param keyNames
+    */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
     }
+
 
     /**
      * get 云主机系统盘配置信息
@@ -158,23 +154,82 @@ public class NodeConfigSpec  implements java.io.Serializable {
         this.systemDisk = systemDisk;
     }
 
+
     /**
-     * get 工作节点组标签，最多支持 10 个
-     *
-     * @return
-     */
+    * get 工作节点组标签，最多支持 10 个
+    *
+    * @return
+    */
     public List<LabelSpec> getLabels() {
         return labels;
     }
 
     /**
-     * set 工作节点组标签，最多支持 10 个
-     *
-     * @param labels
-     */
+    * set 工作节点组标签，最多支持 10 个
+    *
+    * @param labels
+    */
     public void setLabels(List<LabelSpec> labels) {
         this.labels = labels;
     }
+
+
+    /**
+    * get 云主机脚本，暂定最多支持5个脚本，目前支持脚本类型为启动脚本，key为launch-script。
+    *
+    * @return
+    */
+    public List<UserScriptSpec> getUserScripts() {
+        return userScripts;
+    }
+
+    /**
+    * set 云主机脚本，暂定最多支持5个脚本，目前支持脚本类型为启动脚本，key为launch-script。
+    *
+    * @param userScripts
+    */
+    public void setUserScripts(List<UserScriptSpec> userScripts) {
+        this.userScripts = userScripts;
+    }
+
+
+    /**
+    * get 云主机数据盘配置信息
+    *
+    * @return
+    */
+    public List<DataDiskSpec> getDataDiskSpec() {
+        return dataDiskSpec;
+    }
+
+    /**
+    * set 云主机数据盘配置信息
+    *
+    * @param dataDiskSpec
+    */
+    public void setDataDiskSpec(List<DataDiskSpec> dataDiskSpec) {
+        this.dataDiskSpec = dataDiskSpec;
+    }
+
+
+    /**
+     * get 工作节点组的安全组配置，为空则使用默认安全组
+     *
+     * @return
+     */
+    public String getSecurityGroup() {
+        return securityGroup;
+    }
+
+    /**
+     * set 工作节点组的安全组配置，为空则使用默认安全组
+     *
+     * @param securityGroup
+     */
+    public void setSecurityGroup(String securityGroup) {
+        this.securityGroup = securityGroup;
+    }
+
 
 
     /**
@@ -187,15 +242,6 @@ public class NodeConfigSpec  implements java.io.Serializable {
         return this;
     }
 
-    /**
-     * set 工作节点版本，不指定则使用默认版本
-     *
-     * @param version
-     */
-    public NodeConfigSpec version(String version) {
-        this.version = version;
-        return this;
-    }
 
     /**
      * set 云主机密码，默认为集群密码，密码规范参考：[公共参数规范](https://docs.jdcloud.com/cn/virtual-machines/api/general_parameters)
@@ -207,15 +253,17 @@ public class NodeConfigSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
-     *
-     * @param keyNames
-     */
+    * set 云主机SSH密钥对名称，当前仅支持一个。使用中的SSH密钥请勿删除。
+    *
+    * @param keyNames
+    */
     public NodeConfigSpec keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
+
 
     /**
      * set 云主机系统盘配置信息
@@ -227,15 +275,50 @@ public class NodeConfigSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 工作节点组标签，最多支持 10 个
-     *
-     * @param labels
-     */
+    * set 工作节点组标签，最多支持 10 个
+    *
+    * @param labels
+    */
     public NodeConfigSpec labels(List<LabelSpec> labels) {
         this.labels = labels;
         return this;
     }
+
+
+    /**
+    * set 云主机脚本，暂定最多支持5个脚本，目前支持脚本类型为启动脚本，key为launch-script。
+    *
+    * @param userScripts
+    */
+    public NodeConfigSpec userScripts(List<UserScriptSpec> userScripts) {
+        this.userScripts = userScripts;
+        return this;
+    }
+
+
+    /**
+    * set 云主机数据盘配置信息
+    *
+    * @param dataDiskSpec
+    */
+    public NodeConfigSpec dataDiskSpec(List<DataDiskSpec> dataDiskSpec) {
+        this.dataDiskSpec = dataDiskSpec;
+        return this;
+    }
+
+
+    /**
+     * set 工作节点组的安全组配置，为空则使用默认安全组
+     *
+     * @param securityGroup
+     */
+    public NodeConfigSpec securityGroup(String securityGroup) {
+        this.securityGroup = securityGroup;
+        return this;
+    }
+
 
 
     /**
@@ -262,4 +345,27 @@ public class NodeConfigSpec  implements java.io.Serializable {
         this.labels.add(label);
     }
 
+    /**
+     * add item to 云主机脚本，暂定最多支持5个脚本，目前支持脚本类型为启动脚本，key为launch-script。
+     *
+     * @param userScript
+     */
+    public void addUserScript(UserScriptSpec userScript) {
+        if (this.userScripts == null) {
+            this.userScripts = new ArrayList<>();
+        }
+        this.userScripts.add(userScript);
+    }
+
+    /**
+     * add item to 云主机数据盘配置信息
+     *
+     * @param dataDiskSpec
+     */
+    public void addDataDiskSpec(DataDiskSpec dataDiskSpec) {
+        if (this.dataDiskSpec == null) {
+            this.dataDiskSpec = new ArrayList<>();
+        }
+        this.dataDiskSpec.add(dataDiskSpec);
+    }
 }

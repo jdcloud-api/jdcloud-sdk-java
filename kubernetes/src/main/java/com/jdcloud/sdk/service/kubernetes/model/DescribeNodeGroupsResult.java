@@ -39,31 +39,33 @@ public class DescribeNodeGroupsResult extends JdcloudResult implements java.io.S
     /**
      * nodeGroups
      */
+    
     private List<NodeGroup> nodeGroups;
-
     /**
      * totalCount
      */
     private Number totalCount;
 
 
+
     /**
-     * get nodeGroups
-     *
-     * @return
-     */
+    * get nodeGroups
+    *
+    * @return
+    */
     public List<NodeGroup> getNodeGroups() {
         return nodeGroups;
     }
 
     /**
-     * set nodeGroups
-     *
-     * @param nodeGroups
-     */
+    * set nodeGroups
+    *
+    * @param nodeGroups
+    */
     public void setNodeGroups(List<NodeGroup> nodeGroups) {
         this.nodeGroups = nodeGroups;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeNodeGroupsResult extends JdcloudResult implements java.io.S
     }
 
 
+
     /**
-     * set nodeGroups
-     *
-     * @param nodeGroups
-     */
+    * set nodeGroups
+    *
+    * @param nodeGroups
+    */
     public DescribeNodeGroupsResult nodeGroups(List<NodeGroup> nodeGroups) {
         this.nodeGroups = nodeGroups;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeNodeGroupsResult extends JdcloudResult implements java.io.S
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeNodeGroupsResult extends JdcloudResult implements java.io.S
         }
         this.nodeGroups.add(nodeGroup);
     }
-
 }

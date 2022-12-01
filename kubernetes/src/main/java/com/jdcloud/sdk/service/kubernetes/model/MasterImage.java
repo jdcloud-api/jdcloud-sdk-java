@@ -72,6 +72,7 @@ public class MasterImage  implements java.io.Serializable {
     /**
      * 工作节点镜像
      */
+    
     private List<NodeImage> nodeImages;
 
 
@@ -93,6 +94,7 @@ public class MasterImage  implements java.io.Serializable {
         this.code = code;
     }
 
+
     /**
      * get 虚机镜像id
      *
@@ -110,6 +112,7 @@ public class MasterImage  implements java.io.Serializable {
     public void setImageId(String imageId) {
         this.imageId = imageId;
     }
+
 
     /**
      * get 主版本号
@@ -129,6 +132,7 @@ public class MasterImage  implements java.io.Serializable {
         this.mainVersion = mainVersion;
     }
 
+
     /**
      * get 内部版本号
      *
@@ -146,6 +150,7 @@ public class MasterImage  implements java.io.Serializable {
     public void setInnerVersion(String innerVersion) {
         this.innerVersion = innerVersion;
     }
+
 
     /**
      * get 是否默认镜像
@@ -165,6 +170,7 @@ public class MasterImage  implements java.io.Serializable {
         this.isDefault = isDefault;
     }
 
+
     /**
      * get 可见度:0：所有人可见；1：授权用户可见；2：只有白名单用户可见
      *
@@ -182,6 +188,7 @@ public class MasterImage  implements java.io.Serializable {
     public void setVisibility(Integer visibility) {
         this.visibility = visibility;
     }
+
 
     /**
      * get 默认节点镜像编码
@@ -201,23 +208,25 @@ public class MasterImage  implements java.io.Serializable {
         this.defaultNodeImageCode = defaultNodeImageCode;
     }
 
+
     /**
-     * get 工作节点镜像
-     *
-     * @return
-     */
+    * get 工作节点镜像
+    *
+    * @return
+    */
     public List<NodeImage> getNodeImages() {
         return nodeImages;
     }
 
     /**
-     * set 工作节点镜像
-     *
-     * @param nodeImages
-     */
+    * set 工作节点镜像
+    *
+    * @param nodeImages
+    */
     public void setNodeImages(List<NodeImage> nodeImages) {
         this.nodeImages = nodeImages;
     }
+
 
 
     /**
@@ -230,6 +239,7 @@ public class MasterImage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 虚机镜像id
      *
@@ -239,6 +249,7 @@ public class MasterImage  implements java.io.Serializable {
         this.imageId = imageId;
         return this;
     }
+
 
     /**
      * set 主版本号
@@ -250,6 +261,7 @@ public class MasterImage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内部版本号
      *
@@ -259,6 +271,7 @@ public class MasterImage  implements java.io.Serializable {
         this.innerVersion = innerVersion;
         return this;
     }
+
 
     /**
      * set 是否默认镜像
@@ -270,6 +283,7 @@ public class MasterImage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 可见度:0：所有人可见；1：授权用户可见；2：只有白名单用户可见
      *
@@ -279,6 +293,7 @@ public class MasterImage  implements java.io.Serializable {
         this.visibility = visibility;
         return this;
     }
+
 
     /**
      * set 默认节点镜像编码
@@ -290,15 +305,17 @@ public class MasterImage  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 工作节点镜像
-     *
-     * @param nodeImages
-     */
+    * set 工作节点镜像
+    *
+    * @param nodeImages
+    */
     public MasterImage nodeImages(List<NodeImage> nodeImages) {
         this.nodeImages = nodeImages;
         return this;
     }
+
 
 
     /**
@@ -312,5 +329,4 @@ public class MasterImage  implements java.io.Serializable {
         }
         this.nodeImages.add(nodeImage);
     }
-
 }

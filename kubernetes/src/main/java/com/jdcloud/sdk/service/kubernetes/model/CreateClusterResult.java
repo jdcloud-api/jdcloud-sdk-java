@@ -55,6 +55,7 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
     private String clusterId;
 
 
+
     /**
      * get clusterId
      *
@@ -72,6 +73,7 @@ public class CreateClusterResult extends JdcloudResult implements java.io.Serial
     public void setClusterId(String clusterId) {
         this.clusterId = clusterId;
     }
+
 
 
     /**

@@ -33,53 +33,11 @@ public class NodeNetwork  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * pod子网的id
-     */
-    private String podSubnetId;
-
-    /**
      * node子网的id
      */
     private String nodeSubnetId;
 
-    /**
-     * service子网的id
-     */
-    private String serviceSubnetId;
 
-    /**
-     * service关联LB的具有公网访问能力的子网id
-     */
-    private String servicePublicSubnetId;
-
-    /**
-     * node的cidr
-     */
-    private String nodeNetworkCidr;
-
-    /**
-     * vpc id
-     */
-    private String vpcId;
-
-
-    /**
-     * get pod子网的id
-     *
-     * @return
-     */
-    public String getPodSubnetId() {
-        return podSubnetId;
-    }
-
-    /**
-     * set pod子网的id
-     *
-     * @param podSubnetId
-     */
-    public void setPodSubnetId(String podSubnetId) {
-        this.podSubnetId = podSubnetId;
-    }
 
     /**
      * get node子网的id
@@ -99,88 +57,7 @@ public class NodeNetwork  implements java.io.Serializable {
         this.nodeSubnetId = nodeSubnetId;
     }
 
-    /**
-     * get service子网的id
-     *
-     * @return
-     */
-    public String getServiceSubnetId() {
-        return serviceSubnetId;
-    }
 
-    /**
-     * set service子网的id
-     *
-     * @param serviceSubnetId
-     */
-    public void setServiceSubnetId(String serviceSubnetId) {
-        this.serviceSubnetId = serviceSubnetId;
-    }
-
-    /**
-     * get service关联LB的具有公网访问能力的子网id
-     *
-     * @return
-     */
-    public String getServicePublicSubnetId() {
-        return servicePublicSubnetId;
-    }
-
-    /**
-     * set service关联LB的具有公网访问能力的子网id
-     *
-     * @param servicePublicSubnetId
-     */
-    public void setServicePublicSubnetId(String servicePublicSubnetId) {
-        this.servicePublicSubnetId = servicePublicSubnetId;
-    }
-
-    /**
-     * get node的cidr
-     *
-     * @return
-     */
-    public String getNodeNetworkCidr() {
-        return nodeNetworkCidr;
-    }
-
-    /**
-     * set node的cidr
-     *
-     * @param nodeNetworkCidr
-     */
-    public void setNodeNetworkCidr(String nodeNetworkCidr) {
-        this.nodeNetworkCidr = nodeNetworkCidr;
-    }
-
-    /**
-     * get vpc id
-     *
-     * @return
-     */
-    public String getVpcId() {
-        return vpcId;
-    }
-
-    /**
-     * set vpc id
-     *
-     * @param vpcId
-     */
-    public void setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-    }
-
-
-    /**
-     * set pod子网的id
-     *
-     * @param podSubnetId
-     */
-    public NodeNetwork podSubnetId(String podSubnetId) {
-        this.podSubnetId = podSubnetId;
-        return this;
-    }
 
     /**
      * set node子网的id
@@ -189,46 +66,6 @@ public class NodeNetwork  implements java.io.Serializable {
      */
     public NodeNetwork nodeSubnetId(String nodeSubnetId) {
         this.nodeSubnetId = nodeSubnetId;
-        return this;
-    }
-
-    /**
-     * set service子网的id
-     *
-     * @param serviceSubnetId
-     */
-    public NodeNetwork serviceSubnetId(String serviceSubnetId) {
-        this.serviceSubnetId = serviceSubnetId;
-        return this;
-    }
-
-    /**
-     * set service关联LB的具有公网访问能力的子网id
-     *
-     * @param servicePublicSubnetId
-     */
-    public NodeNetwork servicePublicSubnetId(String servicePublicSubnetId) {
-        this.servicePublicSubnetId = servicePublicSubnetId;
-        return this;
-    }
-
-    /**
-     * set node的cidr
-     *
-     * @param nodeNetworkCidr
-     */
-    public NodeNetwork nodeNetworkCidr(String nodeNetworkCidr) {
-        this.nodeNetworkCidr = nodeNetworkCidr;
-        return this;
-    }
-
-    /**
-     * set vpc id
-     *
-     * @param vpcId
-     */
-    public NodeNetwork vpcId(String vpcId) {
-        this.vpcId = vpcId;
         return this;
     }
 

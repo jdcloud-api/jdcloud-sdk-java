@@ -57,8 +57,8 @@ public class NodeGroupSpec  implements java.io.Serializable {
     /**
      * 工作节点组的 az，必须为集群az的子集，默认为集群az
      */
+    
     private List<String> azs;
-
     /**
      * 工作节点组初始化大小，至少为1个
      * Required:true
@@ -67,26 +67,10 @@ public class NodeGroupSpec  implements java.io.Serializable {
     private Integer initialNodeCount;
 
     /**
-     * 工作节点组运行的vpc
-     * Required:true
-     */
-    @Required
-    private String vpcId;
-
-    /**
-     * 工作节点组的cidr
-     */
-    private String nodeCidr;
-
-    /**
-     * 是否开启自动修复，默认不开启。
-     */
-    private Boolean autoRepair;
-
-    /**
      * 自动伸缩配置
      */
     private CAConfigSpec caConfig;
+
 
 
     /**
@@ -107,6 +91,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get description
      *
@@ -124,6 +109,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 工作节点组的信息
@@ -143,23 +129,25 @@ public class NodeGroupSpec  implements java.io.Serializable {
         this.nodeConfig = nodeConfig;
     }
 
+
     /**
-     * get 工作节点组的 az，必须为集群az的子集，默认为集群az
-     *
-     * @return
-     */
+    * get 工作节点组的 az，必须为集群az的子集，默认为集群az
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 工作节点组的 az，必须为集群az的子集，默认为集群az
-     *
-     * @param azs
-     */
+    * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 工作节点组初始化大小，至少为1个
@@ -179,59 +167,6 @@ public class NodeGroupSpec  implements java.io.Serializable {
         this.initialNodeCount = initialNodeCount;
     }
 
-    /**
-     * get 工作节点组运行的vpc
-     *
-     * @return
-     */
-    public String getVpcId() {
-        return vpcId;
-    }
-
-    /**
-     * set 工作节点组运行的vpc
-     *
-     * @param vpcId
-     */
-    public void setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-    }
-
-    /**
-     * get 工作节点组的cidr
-     *
-     * @return
-     */
-    public String getNodeCidr() {
-        return nodeCidr;
-    }
-
-    /**
-     * set 工作节点组的cidr
-     *
-     * @param nodeCidr
-     */
-    public void setNodeCidr(String nodeCidr) {
-        this.nodeCidr = nodeCidr;
-    }
-
-    /**
-     * get 是否开启自动修复，默认不开启。
-     *
-     * @return
-     */
-    public Boolean getAutoRepair() {
-        return autoRepair;
-    }
-
-    /**
-     * set 是否开启自动修复，默认不开启。
-     *
-     * @param autoRepair
-     */
-    public void setAutoRepair(Boolean autoRepair) {
-        this.autoRepair = autoRepair;
-    }
 
     /**
      * get 自动伸缩配置
@@ -252,6 +187,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称
      *
@@ -261,6 +197,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set description
@@ -272,6 +209,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 工作节点组的信息
      *
@@ -282,15 +220,17 @@ public class NodeGroupSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 工作节点组的 az，必须为集群az的子集，默认为集群az
-     *
-     * @param azs
-     */
+    * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+    *
+    * @param azs
+    */
     public NodeGroupSpec azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 工作节点组初始化大小，至少为1个
@@ -302,35 +242,6 @@ public class NodeGroupSpec  implements java.io.Serializable {
         return this;
     }
 
-    /**
-     * set 工作节点组运行的vpc
-     *
-     * @param vpcId
-     */
-    public NodeGroupSpec vpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-
-    /**
-     * set 工作节点组的cidr
-     *
-     * @param nodeCidr
-     */
-    public NodeGroupSpec nodeCidr(String nodeCidr) {
-        this.nodeCidr = nodeCidr;
-        return this;
-    }
-
-    /**
-     * set 是否开启自动修复，默认不开启。
-     *
-     * @param autoRepair
-     */
-    public NodeGroupSpec autoRepair(Boolean autoRepair) {
-        this.autoRepair = autoRepair;
-        return this;
-    }
 
     /**
      * set 自动伸缩配置
@@ -341,6 +252,7 @@ public class NodeGroupSpec  implements java.io.Serializable {
         this.caConfig = caConfig;
         return this;
     }
+
 
 
     /**
@@ -354,5 +266,4 @@ public class NodeGroupSpec  implements java.io.Serializable {
         }
         this.azs.add(az);
     }
-
 }

@@ -43,6 +43,7 @@ public class NatGateway  implements java.io.Serializable {
     private String natId;
 
 
+
     /**
      * get nat的类型，nat_vm/nat_gw/nat_none
      *
@@ -60,6 +61,7 @@ public class NatGateway  implements java.io.Serializable {
     public void setNatType(String natType) {
         this.natType = natType;
     }
+
 
     /**
      * get nat虚机id，或者nat网关的实例id
@@ -80,6 +82,7 @@ public class NatGateway  implements java.io.Serializable {
     }
 
 
+
     /**
      * set nat的类型，nat_vm/nat_gw/nat_none
      *
@@ -89,6 +92,7 @@ public class NatGateway  implements java.io.Serializable {
         this.natType = natType;
         return this;
     }
+
 
     /**
      * set nat虚机id，或者nat网关的实例id

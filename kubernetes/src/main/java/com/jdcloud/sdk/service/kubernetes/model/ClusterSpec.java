@@ -67,8 +67,8 @@ public class ClusterSpec  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> azs;
-
     /**
      * 实例组
      */
@@ -96,6 +96,7 @@ public class ClusterSpec  implements java.io.Serializable {
     private String secretKey;
 
 
+
     /**
      * get 名称（同一用户的 cluster 允许重名）
      *
@@ -113,6 +114,7 @@ public class ClusterSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 描述
@@ -132,6 +134,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 默认开启 basicAuth与clientCertificate最少选择一个
      *
@@ -149,6 +152,7 @@ public class ClusterSpec  implements java.io.Serializable {
     public void setBasicAuth(Boolean basicAuth) {
         this.basicAuth = basicAuth;
     }
+
 
     /**
      * get 默认开启 basicAuth与clientCertificate最少选择一个
@@ -168,6 +172,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.clientCertificate = clientCertificate;
     }
 
+
     /**
      * get kubernetes的版本,默认1.8
      *
@@ -186,23 +191,25 @@ public class ClusterSpec  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
-     * get 集群所在的az
-     *
-     * @return
-     */
+    * get 集群所在的az
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 集群所在的az
-     *
-     * @param azs
-     */
+    * set 集群所在的az
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 实例组
@@ -222,6 +229,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.nodeGroup = nodeGroup;
     }
 
+
     /**
      * get k8s的master的cidr
      *
@@ -240,6 +248,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.masterCIDR = masterCIDR;
     }
 
+
     /**
      * get 用户的AccessKey，插件调用open-api时的认证凭证
      *
@@ -257,6 +266,7 @@ public class ClusterSpec  implements java.io.Serializable {
     public void setAccessKey(String accessKey) {
         this.accessKey = accessKey;
     }
+
 
     /**
      * get 用户的SecretKey，插件调用open-api时的认证凭证
@@ -277,6 +287,7 @@ public class ClusterSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 名称（同一用户的 cluster 允许重名）
      *
@@ -286,6 +297,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述
@@ -297,6 +309,7 @@ public class ClusterSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 默认开启 basicAuth与clientCertificate最少选择一个
      *
@@ -306,6 +319,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.basicAuth = basicAuth;
         return this;
     }
+
 
     /**
      * set 默认开启 basicAuth与clientCertificate最少选择一个
@@ -317,6 +331,7 @@ public class ClusterSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set kubernetes的版本,默认1.8
      *
@@ -327,15 +342,17 @@ public class ClusterSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 集群所在的az
-     *
-     * @param azs
-     */
+    * set 集群所在的az
+    *
+    * @param azs
+    */
     public ClusterSpec azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 实例组
@@ -347,6 +364,7 @@ public class ClusterSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set k8s的master的cidr
      *
@@ -356,6 +374,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.masterCIDR = masterCIDR;
         return this;
     }
+
 
     /**
      * set 用户的AccessKey，插件调用open-api时的认证凭证
@@ -367,6 +386,7 @@ public class ClusterSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户的SecretKey，插件调用open-api时的认证凭证
      *
@@ -376,6 +396,7 @@ public class ClusterSpec  implements java.io.Serializable {
         this.secretKey = secretKey;
         return this;
     }
+
 
 
     /**
@@ -389,5 +410,4 @@ public class ClusterSpec  implements java.io.Serializable {
         }
         this.azs.add(az);
     }
-
 }

@@ -39,37 +39,40 @@ public class DescribeVersionsResult extends JdcloudResult implements java.io.Ser
     /**
      * masterVersions
      */
+    
     private List<MasterVersion> masterVersions;
 
 
     /**
-     * get masterVersions
-     *
-     * @return
-     */
+    * get masterVersions
+    *
+    * @return
+    */
     public List<MasterVersion> getMasterVersions() {
         return masterVersions;
     }
 
     /**
-     * set masterVersions
-     *
-     * @param masterVersions
-     */
+    * set masterVersions
+    *
+    * @param masterVersions
+    */
     public void setMasterVersions(List<MasterVersion> masterVersions) {
         this.masterVersions = masterVersions;
     }
 
 
+
     /**
-     * set masterVersions
-     *
-     * @param masterVersions
-     */
+    * set masterVersions
+    *
+    * @param masterVersions
+    */
     public DescribeVersionsResult masterVersions(List<MasterVersion> masterVersions) {
         this.masterVersions = masterVersions;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeVersionsResult extends JdcloudResult implements java.io.Ser
         }
         this.masterVersions.add(masterVersion);
     }
-
 }

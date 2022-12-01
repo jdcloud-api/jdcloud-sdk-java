@@ -37,8 +37,8 @@ public class ServerConfig  implements java.io.Serializable {
     /**
      * kubernetes master 的支持版本
      */
+    
     private List<String> validMasterVersions;
-
     /**
      * kubernetes master 的默认版本
      */
@@ -47,26 +47,28 @@ public class ServerConfig  implements java.io.Serializable {
     /**
      * node 节点的配置
      */
+    
     private List<ValidNodeConfig> validNodeConfig;
 
 
     /**
-     * get kubernetes master 的支持版本
-     *
-     * @return
-     */
+    * get kubernetes master 的支持版本
+    *
+    * @return
+    */
     public List<String> getValidMasterVersions() {
         return validMasterVersions;
     }
 
     /**
-     * set kubernetes master 的支持版本
-     *
-     * @param validMasterVersions
-     */
+    * set kubernetes master 的支持版本
+    *
+    * @param validMasterVersions
+    */
     public void setValidMasterVersions(List<String> validMasterVersions) {
         this.validMasterVersions = validMasterVersions;
     }
+
 
     /**
      * get kubernetes master 的默认版本
@@ -86,34 +88,37 @@ public class ServerConfig  implements java.io.Serializable {
         this.defaultMasterVersion = defaultMasterVersion;
     }
 
+
     /**
-     * get node 节点的配置
-     *
-     * @return
-     */
+    * get node 节点的配置
+    *
+    * @return
+    */
     public List<ValidNodeConfig> getValidNodeConfig() {
         return validNodeConfig;
     }
 
     /**
-     * set node 节点的配置
-     *
-     * @param validNodeConfig
-     */
+    * set node 节点的配置
+    *
+    * @param validNodeConfig
+    */
     public void setValidNodeConfig(List<ValidNodeConfig> validNodeConfig) {
         this.validNodeConfig = validNodeConfig;
     }
 
 
+
     /**
-     * set kubernetes master 的支持版本
-     *
-     * @param validMasterVersions
-     */
+    * set kubernetes master 的支持版本
+    *
+    * @param validMasterVersions
+    */
     public ServerConfig validMasterVersions(List<String> validMasterVersions) {
         this.validMasterVersions = validMasterVersions;
         return this;
     }
+
 
     /**
      * set kubernetes master 的默认版本
@@ -125,15 +130,17 @@ public class ServerConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set node 节点的配置
-     *
-     * @param validNodeConfig
-     */
+    * set node 节点的配置
+    *
+    * @param validNodeConfig
+    */
     public ServerConfig validNodeConfig(List<ValidNodeConfig> validNodeConfig) {
         this.validNodeConfig = validNodeConfig;
         return this;
     }
+
 
 
     /**
@@ -159,5 +166,4 @@ public class ServerConfig  implements java.io.Serializable {
         }
         this.validNodeConfig.add(validNodeConfig);
     }
-
 }

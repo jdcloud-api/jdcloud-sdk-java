@@ -55,14 +55,15 @@ public class MasterVersion  implements java.io.Serializable {
     private String versionStatus;
 
     /**
-     * node 节点的配置
-     */
-    private List<NodeVersion> nodeVersions;
-
-    /**
      * node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
      */
     private String nodeOsTypes;
+
+    /**
+     * 该版本可安装的addons
+     */
+    
+    private List<ClusterAddon> clusterAddons;
 
 
     /**
@@ -83,6 +84,7 @@ public class MasterVersion  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
      * get 是否默认版本
      *
@@ -100,6 +102,7 @@ public class MasterVersion  implements java.io.Serializable {
     public void setIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
     }
+
 
     /**
      * get 默认工作节点版本号
@@ -119,6 +122,7 @@ public class MasterVersion  implements java.io.Serializable {
         this.defaultNodeVersion = defaultNodeVersion;
     }
 
+
     /**
      * get 版本状态
      *
@@ -137,23 +141,6 @@ public class MasterVersion  implements java.io.Serializable {
         this.versionStatus = versionStatus;
     }
 
-    /**
-     * get node 节点的配置
-     *
-     * @return
-     */
-    public List<NodeVersion> getNodeVersions() {
-        return nodeVersions;
-    }
-
-    /**
-     * set node 节点的配置
-     *
-     * @param nodeVersions
-     */
-    public void setNodeVersions(List<NodeVersion> nodeVersions) {
-        this.nodeVersions = nodeVersions;
-    }
 
     /**
      * get node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
@@ -175,6 +162,26 @@ public class MasterVersion  implements java.io.Serializable {
 
 
     /**
+    * get 该版本可安装的addons
+    *
+    * @return
+    */
+    public List<ClusterAddon> getClusterAddons() {
+        return clusterAddons;
+    }
+
+    /**
+    * set 该版本可安装的addons
+    *
+    * @param clusterAddons
+    */
+    public void setClusterAddons(List<ClusterAddon> clusterAddons) {
+        this.clusterAddons = clusterAddons;
+    }
+
+
+
+    /**
      * set 集群版本号
      *
      * @param version
@@ -183,6 +190,7 @@ public class MasterVersion  implements java.io.Serializable {
         this.version = version;
         return this;
     }
+
 
     /**
      * set 是否默认版本
@@ -194,6 +202,7 @@ public class MasterVersion  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 默认工作节点版本号
      *
@@ -203,6 +212,7 @@ public class MasterVersion  implements java.io.Serializable {
         this.defaultNodeVersion = defaultNodeVersion;
         return this;
     }
+
 
     /**
      * set 版本状态
@@ -214,15 +224,6 @@ public class MasterVersion  implements java.io.Serializable {
         return this;
     }
 
-    /**
-     * set node 节点的配置
-     *
-     * @param nodeVersions
-     */
-    public MasterVersion nodeVersions(List<NodeVersion> nodeVersions) {
-        this.nodeVersions = nodeVersions;
-        return this;
-    }
 
     /**
      * set node节点操作系统类型列表，以 &quot;,&quot; 分割，目前支持 CentOS|Windows
@@ -236,15 +237,26 @@ public class MasterVersion  implements java.io.Serializable {
 
 
     /**
-     * add item to node 节点的配置
-     *
-     * @param nodeVersion
-     */
-    public void addNodeVersion(NodeVersion nodeVersion) {
-        if (this.nodeVersions == null) {
-            this.nodeVersions = new ArrayList<>();
-        }
-        this.nodeVersions.add(nodeVersion);
+    * set 该版本可安装的addons
+    *
+    * @param clusterAddons
+    */
+    public MasterVersion clusterAddons(List<ClusterAddon> clusterAddons) {
+        this.clusterAddons = clusterAddons;
+        return this;
     }
 
+
+
+    /**
+     * add item to 该版本可安装的addons
+     *
+     * @param clusterAddon
+     */
+    public void addClusterAddon(ClusterAddon clusterAddon) {
+        if (this.clusterAddons == null) {
+            this.clusterAddons = new ArrayList<>();
+        }
+        this.clusterAddons.add(clusterAddon);
+    }
 }

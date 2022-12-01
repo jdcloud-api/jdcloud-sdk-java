@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.kubernetes.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 设置工作节点组自动扩容
+ * 设置工作节点组自动扩容缩容
  */
 public class SetNodeGroupCAResponse extends JdcloudResponse<SetNodeGroupCAResult> implements java.io.Serializable {
 
