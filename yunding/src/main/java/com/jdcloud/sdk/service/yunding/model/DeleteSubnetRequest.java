@@ -49,6 +49,7 @@ public class DeleteSubnetRequest extends JdcloudRequest implements java.io.Seria
     private String subnetId;
 
 
+
     /**
      * get Region ID
      *
@@ -66,6 +67,7 @@ public class DeleteSubnetRequest extends JdcloudRequest implements java.io.Seria
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get Subnet ID
@@ -86,6 +88,7 @@ public class DeleteSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set Region ID
      *
@@ -95,6 +98,7 @@ public class DeleteSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set Subnet ID

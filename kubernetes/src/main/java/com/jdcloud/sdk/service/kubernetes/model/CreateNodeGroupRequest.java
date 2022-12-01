@@ -70,31 +70,14 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     /**
      * 工作节点组的 az，必须为集群az的子集，默认为集群az
      */
+    
     private List<String> azs;
-
     /**
      * 工作节点组初始化大小
      * Required:true
      */
     @Required
     private Integer initialNodeCount;
-
-    /**
-     * 工作节点组初始化大小运行的VPC
-     * Required:true
-     */
-    @Required
-    private String vpcId;
-
-    /**
-     * 工作节点组的cidr
-     */
-    private String nodeCidr;
-
-    /**
-     * 是否开启工作节点组的自动修复，默认关闭
-     */
-    private Boolean autoRepair;
 
     /**
      * 自动伸缩配置
@@ -112,6 +95,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -132,6 +116,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.name = name;
     }
 
+
     /**
      * get 描述
      *
@@ -149,6 +134,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 工作节点所属的集群
@@ -168,6 +154,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.clusterId = clusterId;
     }
 
+
     /**
      * get 工作节点配置信息
      *
@@ -186,23 +173,25 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.nodeConfig = nodeConfig;
     }
 
+
     /**
-     * get 工作节点组的 az，必须为集群az的子集，默认为集群az
-     *
-     * @return
-     */
+    * get 工作节点组的 az，必须为集群az的子集，默认为集群az
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 工作节点组的 az，必须为集群az的子集，默认为集群az
-     *
-     * @param azs
-     */
+    * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 工作节点组初始化大小
@@ -222,59 +211,6 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.initialNodeCount = initialNodeCount;
     }
 
-    /**
-     * get 工作节点组初始化大小运行的VPC
-     *
-     * @return
-     */
-    public String getVpcId() {
-        return vpcId;
-    }
-
-    /**
-     * set 工作节点组初始化大小运行的VPC
-     *
-     * @param vpcId
-     */
-    public void setVpcId(String vpcId) {
-        this.vpcId = vpcId;
-    }
-
-    /**
-     * get 工作节点组的cidr
-     *
-     * @return
-     */
-    public String getNodeCidr() {
-        return nodeCidr;
-    }
-
-    /**
-     * set 工作节点组的cidr
-     *
-     * @param nodeCidr
-     */
-    public void setNodeCidr(String nodeCidr) {
-        this.nodeCidr = nodeCidr;
-    }
-
-    /**
-     * get 是否开启工作节点组的自动修复，默认关闭
-     *
-     * @return
-     */
-    public Boolean getAutoRepair() {
-        return autoRepair;
-    }
-
-    /**
-     * set 是否开启工作节点组的自动修复，默认关闭
-     *
-     * @param autoRepair
-     */
-    public void setAutoRepair(Boolean autoRepair) {
-        this.autoRepair = autoRepair;
-    }
 
     /**
      * get 自动伸缩配置
@@ -294,6 +230,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.caConfig = caConfig;
     }
 
+
     /**
      * get 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
      *
@@ -311,6 +248,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     public void setNodeGroupNetwork(NodeGroupNetworkSpec nodeGroupNetwork) {
         this.nodeGroupNetwork = nodeGroupNetwork;
     }
+
 
     /**
      * get 地域 ID
@@ -331,6 +269,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 名称（同一用户的 cluster 内部唯一）
      *
@@ -340,6 +279,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述
@@ -351,6 +291,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 工作节点所属的集群
      *
@@ -360,6 +301,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.clusterId = clusterId;
         return this;
     }
+
 
     /**
      * set 工作节点配置信息
@@ -371,15 +313,17 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 工作节点组的 az，必须为集群az的子集，默认为集群az
-     *
-     * @param azs
-     */
+    * set 工作节点组的 az，必须为集群az的子集，默认为集群az
+    *
+    * @param azs
+    */
     public CreateNodeGroupRequest azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 工作节点组初始化大小
@@ -391,35 +335,6 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
-    /**
-     * set 工作节点组初始化大小运行的VPC
-     *
-     * @param vpcId
-     */
-    public CreateNodeGroupRequest vpcId(String vpcId) {
-        this.vpcId = vpcId;
-        return this;
-    }
-
-    /**
-     * set 工作节点组的cidr
-     *
-     * @param nodeCidr
-     */
-    public CreateNodeGroupRequest nodeCidr(String nodeCidr) {
-        this.nodeCidr = nodeCidr;
-        return this;
-    }
-
-    /**
-     * set 是否开启工作节点组的自动修复，默认关闭
-     *
-     * @param autoRepair
-     */
-    public CreateNodeGroupRequest autoRepair(Boolean autoRepair) {
-        this.autoRepair = autoRepair;
-        return this;
-    }
 
     /**
      * set 自动伸缩配置
@@ -431,6 +346,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 节点组的网络配置，如果集群的类型customized类型，则必须指定该参数，如果是auto，则不是必须
      *
@@ -441,6 +357,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 地域 ID
      *
@@ -450,6 +367,7 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -463,5 +381,4 @@ public class CreateNodeGroupRequest extends JdcloudRequest implements java.io.Se
         }
         this.azs.add(az);
     }
-
 }

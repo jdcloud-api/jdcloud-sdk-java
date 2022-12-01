@@ -48,6 +48,7 @@ public class UrlApp  implements java.io.Serializable {
     private String jdcloudPin;
 
 
+
     /**
      * get url
      *
@@ -66,6 +67,7 @@ public class UrlApp  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 应用名称
      *
@@ -83,6 +85,7 @@ public class UrlApp  implements java.io.Serializable {
     public void setAppName(String appName) {
         this.appName = appName;
     }
+
 
     /**
      * get pin
@@ -103,6 +106,7 @@ public class UrlApp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set url
      *
@@ -113,6 +117,7 @@ public class UrlApp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用名称
      *
@@ -122,6 +127,7 @@ public class UrlApp  implements java.io.Serializable {
         this.appName = appName;
         return this;
     }
+
 
     /**
      * set pin

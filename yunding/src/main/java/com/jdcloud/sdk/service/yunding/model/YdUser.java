@@ -42,6 +42,17 @@ public class YdUser  implements java.io.Serializable {
      */
     private String jdcloudPin;
 
+    /**
+     * 云鼎pin-子账号pin
+     */
+    private String ydSubPin;
+
+    /**
+     * 京东云pin-子账号pin
+     */
+    private String jdcloudSubPin;
+
+
 
     /**
      * get 云鼎pin
@@ -60,6 +71,7 @@ public class YdUser  implements java.io.Serializable {
     public void setYdPin(String ydPin) {
         this.ydPin = ydPin;
     }
+
 
     /**
      * get 京东云pin
@@ -81,6 +93,45 @@ public class YdUser  implements java.io.Serializable {
 
 
     /**
+     * get 云鼎pin-子账号pin
+     *
+     * @return
+     */
+    public String getYdSubPin() {
+        return ydSubPin;
+    }
+
+    /**
+     * set 云鼎pin-子账号pin
+     *
+     * @param ydSubPin
+     */
+    public void setYdSubPin(String ydSubPin) {
+        this.ydSubPin = ydSubPin;
+    }
+
+
+    /**
+     * get 京东云pin-子账号pin
+     *
+     * @return
+     */
+    public String getJdcloudSubPin() {
+        return jdcloudSubPin;
+    }
+
+    /**
+     * set 京东云pin-子账号pin
+     *
+     * @param jdcloudSubPin
+     */
+    public void setJdcloudSubPin(String jdcloudSubPin) {
+        this.jdcloudSubPin = jdcloudSubPin;
+    }
+
+
+
+    /**
      * set 云鼎pin
      *
      * @param ydPin
@@ -90,6 +141,7 @@ public class YdUser  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 京东云pin
      *
@@ -97,6 +149,28 @@ public class YdUser  implements java.io.Serializable {
      */
     public YdUser jdcloudPin(String jdcloudPin) {
         this.jdcloudPin = jdcloudPin;
+        return this;
+    }
+
+
+    /**
+     * set 云鼎pin-子账号pin
+     *
+     * @param ydSubPin
+     */
+    public YdUser ydSubPin(String ydSubPin) {
+        this.ydSubPin = ydSubPin;
+        return this;
+    }
+
+
+    /**
+     * set 京东云pin-子账号pin
+     *
+     * @param jdcloudSubPin
+     */
+    public YdUser jdcloudSubPin(String jdcloudSubPin) {
+        this.jdcloudSubPin = jdcloudSubPin;
         return this;
     }
 

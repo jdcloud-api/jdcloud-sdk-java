@@ -83,19 +83,19 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
     private String authStatus;
 
     /**
-     * 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * 授权时间
      */
     private String authDate;
 
     /**
-     * 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * 过期时间
      */
     private String expireDate;
 
     /**
      * 权限是否已经释放。
      */
-    private String releaseStatus;
+    private Boolean releaseStatus;
 
     /**
      * 实例类型。
@@ -300,7 +300,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
 
 
     /**
-     * get 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * get 授权时间
      *
      * @return
      */
@@ -309,7 +309,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
     }
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 授权时间
      *
      * @param authDate
      */
@@ -319,7 +319,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
 
 
     /**
-     * get 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * get 过期时间
      *
      * @return
      */
@@ -328,7 +328,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
     }
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 过期时间
      *
      * @param expireDate
      */
@@ -342,7 +342,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
      *
      * @return
      */
-    public String getReleaseStatus() {
+    public Boolean getReleaseStatus() {
         return releaseStatus;
     }
 
@@ -351,7 +351,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
      *
      * @param releaseStatus
      */
-    public void setReleaseStatus(String releaseStatus) {
+    public void setReleaseStatus(Boolean releaseStatus) {
         this.releaseStatus = releaseStatus;
     }
 
@@ -506,7 +506,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
 
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 授权时间
      *
      * @param authDate
      */
@@ -517,7 +517,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
 
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 过期时间
      *
      * @param expireDate
      */
@@ -532,7 +532,7 @@ public class DmsPrivilegeVO  implements java.io.Serializable {
      *
      * @param releaseStatus
      */
-    public DmsPrivilegeVO releaseStatus(String releaseStatus) {
+    public DmsPrivilegeVO releaseStatus(Boolean releaseStatus) {
         this.releaseStatus = releaseStatus;
         return this;
     }

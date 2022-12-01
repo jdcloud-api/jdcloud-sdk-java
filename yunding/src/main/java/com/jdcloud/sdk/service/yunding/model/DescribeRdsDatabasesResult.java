@@ -39,31 +39,33 @@ public class DescribeRdsDatabasesResult extends JdcloudResult implements java.io
     /**
      * databases
      */
+    
     private List<Database> databases;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get databases
-     *
-     * @return
-     */
+    * get databases
+    *
+    * @return
+    */
     public List<Database> getDatabases() {
         return databases;
     }
 
     /**
-     * set databases
-     *
-     * @param databases
-     */
+    * set databases
+    *
+    * @param databases
+    */
     public void setDatabases(List<Database> databases) {
         this.databases = databases;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeRdsDatabasesResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
-     * set databases
-     *
-     * @param databases
-     */
+    * set databases
+    *
+    * @param databases
+    */
     public DescribeRdsDatabasesResult databases(List<Database> databases) {
         this.databases = databases;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeRdsDatabasesResult extends JdcloudResult implements java.io
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeRdsDatabasesResult extends JdcloudResult implements java.io
         }
         this.databases.add(database);
     }
-
 }

@@ -48,6 +48,11 @@ public class ClusterSubnet  implements java.io.Serializable {
     private Boolean enabled;
 
     /**
+     * 子网是否自动删除，用户自定义子网不会自动删除
+     */
+    private Boolean autoDelete;
+
+    /**
      * 子网CIDR
      */
     private String cidr;
@@ -61,6 +66,7 @@ public class ClusterSubnet  implements java.io.Serializable {
      * 子网名称
      */
     private String subnetName;
+
 
 
     /**
@@ -81,6 +87,7 @@ public class ClusterSubnet  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
      *
@@ -98,6 +105,7 @@ public class ClusterSubnet  implements java.io.Serializable {
     public void setSubnetType(String subnetType) {
         this.subnetType = subnetType;
     }
+
 
     /**
      * get 子网是否启用，仅pod子网可用。
@@ -117,6 +125,26 @@ public class ClusterSubnet  implements java.io.Serializable {
         this.enabled = enabled;
     }
 
+
+    /**
+     * get 子网是否自动删除，用户自定义子网不会自动删除
+     *
+     * @return
+     */
+    public Boolean getAutoDelete() {
+        return autoDelete;
+    }
+
+    /**
+     * set 子网是否自动删除，用户自定义子网不会自动删除
+     *
+     * @param autoDelete
+     */
+    public void setAutoDelete(Boolean autoDelete) {
+        this.autoDelete = autoDelete;
+    }
+
+
     /**
      * get 子网CIDR
      *
@@ -135,6 +163,7 @@ public class ClusterSubnet  implements java.io.Serializable {
         this.cidr = cidr;
     }
 
+
     /**
      * get 子网中可用的IP数量
      *
@@ -152,6 +181,7 @@ public class ClusterSubnet  implements java.io.Serializable {
     public void setAvailableIpNum(Integer availableIpNum) {
         this.availableIpNum = availableIpNum;
     }
+
 
     /**
      * get 子网名称
@@ -172,6 +202,7 @@ public class ClusterSubnet  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 子网 ID
      *
@@ -181,6 +212,7 @@ public class ClusterSubnet  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 子网类型，可取值为：pod_subnet/lb_subnet/node_subnet
@@ -192,6 +224,7 @@ public class ClusterSubnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网是否启用，仅pod子网可用。
      *
@@ -201,6 +234,18 @@ public class ClusterSubnet  implements java.io.Serializable {
         this.enabled = enabled;
         return this;
     }
+
+
+    /**
+     * set 子网是否自动删除，用户自定义子网不会自动删除
+     *
+     * @param autoDelete
+     */
+    public ClusterSubnet autoDelete(Boolean autoDelete) {
+        this.autoDelete = autoDelete;
+        return this;
+    }
+
 
     /**
      * set 子网CIDR
@@ -212,6 +257,7 @@ public class ClusterSubnet  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网中可用的IP数量
      *
@@ -221,6 +267,7 @@ public class ClusterSubnet  implements java.io.Serializable {
         this.availableIpNum = availableIpNum;
         return this;
     }
+
 
     /**
      * set 子网名称

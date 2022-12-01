@@ -41,8 +41,8 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
      * Required:true
      */
     @Required
+    
     private List<String> dbNames;
-
     /**
      * 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      * Required:true
@@ -65,23 +65,25 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
     private String accountName;
 
 
+
     /**
-     * get 需要取消授权的数据库的名称。权限取消后，该账号将不能访问此数据库
-     *
-     * @return
-     */
+    * get 需要取消授权的数据库的名称。权限取消后，该账号将不能访问此数据库
+    *
+    * @return
+    */
     public List<String> getDbNames() {
         return dbNames;
     }
 
     /**
-     * set 需要取消授权的数据库的名称。权限取消后，该账号将不能访问此数据库
-     *
-     * @param dbNames
-     */
+    * set 需要取消授权的数据库的名称。权限取消后，该账号将不能访问此数据库
+    *
+    * @param dbNames
+    */
     public void setDbNames(List<String> dbNames) {
         this.dbNames = dbNames;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -101,6 +103,7 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -118,6 +121,7 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 账号名，在同一个实例中账号名不能重复
@@ -138,15 +142,17 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
-     * set 需要取消授权的数据库的名称。权限取消后，该账号将不能访问此数据库
-     *
-     * @param dbNames
-     */
+    * set 需要取消授权的数据库的名称。权限取消后，该账号将不能访问此数据库
+    *
+    * @param dbNames
+    */
     public RevokePrivilegeRequest dbNames(List<String> dbNames) {
         this.dbNames = dbNames;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -158,6 +164,7 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -168,6 +175,7 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 账号名，在同一个实例中账号名不能重复
      *
@@ -177,6 +185,7 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
         this.accountName = accountName;
         return this;
     }
+
 
 
     /**
@@ -190,5 +199,4 @@ public class RevokePrivilegeRequest extends JdcloudRequest implements java.io.Se
         }
         this.dbNames.add(dbName);
     }
-
 }

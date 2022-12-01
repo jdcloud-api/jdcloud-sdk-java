@@ -35,7 +35,7 @@ public class QueryTypeInstanceRequest extends JdcloudRequest implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 数据源类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);
+     * 数据源类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17), OPEN_GAUSS_INS(&quot;OPEN_GAUSS_INS&quot;,18), SS_OPEN_GAUSS_INS(&quot;SS_OPEN_GAUSS_INS&quot;,19);
      */
     private Integer dbType;
 
@@ -49,7 +49,7 @@ public class QueryTypeInstanceRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 数据源类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);
+     * get 数据源类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17), OPEN_GAUSS_INS(&quot;OPEN_GAUSS_INS&quot;,18), SS_OPEN_GAUSS_INS(&quot;SS_OPEN_GAUSS_INS&quot;,19);
      *
      * @return
      */
@@ -58,7 +58,7 @@ public class QueryTypeInstanceRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 数据源类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);
+     * set 数据源类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17), OPEN_GAUSS_INS(&quot;OPEN_GAUSS_INS&quot;,18), SS_OPEN_GAUSS_INS(&quot;SS_OPEN_GAUSS_INS&quot;,19);
      *
      * @param dbType
      */
@@ -88,7 +88,7 @@ public class QueryTypeInstanceRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 数据源类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17);
+     * set 数据源类型，CDS(&quot;CDS&quot;, 1), MYSQL(&quot;MYSQL&quot;, 2), ORACLE(&quot;ORACLE&quot;, 3), SQLSERVER(&quot;SQLSERVER&quot;, 4), CDSMYSQL(&quot;CDSMYSQL&quot;, 5), CDSORACLE(&quot;CDSORACLE&quot;, 6), CDSSQLSERVER(&quot;CDSSQLSERVER&quot;, 7), DATACENTER(&quot;DATACENTER&quot;, 8), HBASE(&quot;Hbase&quot;,9),MONGODB(&quot;MongoDb&quot;,10),ES(&quot;ES&quot;,11), MYSQL_INS(&quot;MYSQL_INS&quot;,12), DRDS_INS(&quot;DRDS_INS&quot;,13), STARDB_INS(&quot;STARDB_INS&quot;,14), STARDB_PROXY_INS(&quot;STARDB_PROXY_INS&quot;,15), CLICK_HOUSE_INS(&quot;CLICK_HOUSE_INS&quot;,16), TIDB_INS(&quot;TIDB_INS&quot;,17), OPEN_GAUSS_INS(&quot;OPEN_GAUSS_INS&quot;,18), SS_OPEN_GAUSS_INS(&quot;SS_OPEN_GAUSS_INS&quot;,19);
      *
      * @param dbType
      */

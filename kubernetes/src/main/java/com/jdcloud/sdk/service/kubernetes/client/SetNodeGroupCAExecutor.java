@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupCAResponse;
 
 /**
- * 设置工作节点组自动扩容
+ * 设置工作节点组自动扩容缩容
  */
 class SetNodeGroupCAExecutor extends JdcloudExecutor {
 

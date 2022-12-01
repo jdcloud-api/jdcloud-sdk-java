@@ -40,6 +40,7 @@ public class DescribeNodeGroupResult extends JdcloudResult implements java.io.Se
     private NodeGroup nodeGroup;
 
 
+
     /**
      * get nodeGroup
      *
@@ -57,6 +58,7 @@ public class DescribeNodeGroupResult extends JdcloudResult implements java.io.Se
     public void setNodeGroup(NodeGroup nodeGroup) {
         this.nodeGroup = nodeGroup;
     }
+
 
 
     /**

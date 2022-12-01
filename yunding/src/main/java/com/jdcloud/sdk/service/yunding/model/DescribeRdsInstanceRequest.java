@@ -49,6 +49,7 @@ public class DescribeRdsInstanceRequest extends JdcloudRequest implements java.i
     private String instanceId;
 
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -66,6 +67,7 @@ public class DescribeRdsInstanceRequest extends JdcloudRequest implements java.i
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -86,6 +88,7 @@ public class DescribeRdsInstanceRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -95,6 +98,7 @@ public class DescribeRdsInstanceRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

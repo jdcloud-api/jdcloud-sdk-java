@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jdcloud.sdk</groupId>
   <artifactId>dms</artifactId>
-  <version>1.3.0</version>
+  <version>1.4.0</version>
   <packaging>jar</packaging>
   <name>dms</name>
   <url>http://www.jdcloud.com</url>

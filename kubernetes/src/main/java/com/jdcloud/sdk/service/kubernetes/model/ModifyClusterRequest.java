@@ -59,6 +59,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     private String clusterId;
 
 
+
     /**
      * get 集群名称
      *
@@ -76,6 +77,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 集群描述
@@ -95,6 +97,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
         this.description = description;
     }
 
+
     /**
      * get 地域 ID
      *
@@ -112,6 +115,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 集群 ID
@@ -132,6 +136,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 集群名称
      *
@@ -141,6 +146,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
         this.name = name;
         return this;
     }
+
 
     /**
      * set 集群描述
@@ -152,6 +158,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 地域 ID
      *
@@ -161,6 +168,7 @@ public class ModifyClusterRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 集群 ID

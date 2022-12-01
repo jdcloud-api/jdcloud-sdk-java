@@ -33,7 +33,7 @@ public class Quota  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 资源类型[kubernetes]
+     * 资源类型[kubernetes、serverless-kubernetes]
      */
     private String resourceType;
 
@@ -48,8 +48,9 @@ public class Quota  implements java.io.Serializable {
     private Integer used;
 
 
+
     /**
-     * get 资源类型[kubernetes]
+     * get 资源类型[kubernetes、serverless-kubernetes]
      *
      * @return
      */
@@ -58,13 +59,14 @@ public class Quota  implements java.io.Serializable {
     }
 
     /**
-     * set 资源类型[kubernetes]
+     * set 资源类型[kubernetes、serverless-kubernetes]
      *
      * @param resourceType
      */
     public void setResourceType(String resourceType) {
         this.resourceType = resourceType;
     }
+
 
     /**
      * get 可用资源上限
@@ -83,6 +85,7 @@ public class Quota  implements java.io.Serializable {
     public void setLimit(Integer limit) {
         this.limit = limit;
     }
+
 
     /**
      * get 已用资源数量
@@ -103,8 +106,9 @@ public class Quota  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 资源类型[kubernetes]
+     * set 资源类型[kubernetes、serverless-kubernetes]
      *
      * @param resourceType
      */
@@ -112,6 +116,7 @@ public class Quota  implements java.io.Serializable {
         this.resourceType = resourceType;
         return this;
     }
+
 
     /**
      * set 可用资源上限
@@ -122,6 +127,7 @@ public class Quota  implements java.io.Serializable {
         this.limit = limit;
         return this;
     }
+
 
     /**
      * set 已用资源数量

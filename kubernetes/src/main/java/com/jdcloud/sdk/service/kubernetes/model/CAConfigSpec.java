@@ -50,6 +50,7 @@ public class CAConfigSpec  implements java.io.Serializable {
     private Integer minNode;
 
 
+
     /**
      * get 是否启用自动伸缩，默认为 false
 
@@ -70,6 +71,7 @@ public class CAConfigSpec  implements java.io.Serializable {
         this.enable = enable;
     }
 
+
     /**
      * get 自动扩容最大工作节点数, 取值范围[1, min(2000, 子网剩余ip)]
      *
@@ -87,6 +89,7 @@ public class CAConfigSpec  implements java.io.Serializable {
     public void setMaxNode(Integer maxNode) {
         this.maxNode = maxNode;
     }
+
 
     /**
      * get 自动扩容最小工作节点数, 取值范围[0, min(2000, maxNode)]
@@ -107,6 +110,7 @@ public class CAConfigSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 是否启用自动伸缩，默认为 false
 
@@ -118,6 +122,7 @@ public class CAConfigSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自动扩容最大工作节点数, 取值范围[1, min(2000, 子网剩余ip)]
      *
@@ -127,6 +132,7 @@ public class CAConfigSpec  implements java.io.Serializable {
         this.maxNode = maxNode;
         return this;
     }
+
 
     /**
      * set 自动扩容最小工作节点数, 取值范围[0, min(2000, maxNode)]

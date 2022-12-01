@@ -35,6 +35,11 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
     private static final long serialVersionUID = 1L;
 
     /**
+     * 替换路由表id
+     */
+    private String routeTableId;
+
+    /**
      * 地域 ID
      * Required:true
      */
@@ -47,6 +52,26 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
      */
     @Required
     private String clusterId;
+
+
+
+    /**
+     * get 替换路由表id
+     *
+     * @return
+     */
+    public String getRouteTableId() {
+        return routeTableId;
+    }
+
+    /**
+     * set 替换路由表id
+     *
+     * @param routeTableId
+     */
+    public void setRouteTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+    }
 
 
     /**
@@ -67,6 +92,7 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
     }
 
+
     /**
      * get 集群 ID
      *
@@ -86,6 +112,18 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
+    /**
+     * set 替换路由表id
+     *
+     * @param routeTableId
+     */
+    public DeleteClusterRequest routeTableId(String routeTableId) {
+        this.routeTableId = routeTableId;
+        return this;
+    }
+
+
     /**
      * set 地域 ID
      *
@@ -95,6 +133,7 @@ public class DeleteClusterRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 集群 ID

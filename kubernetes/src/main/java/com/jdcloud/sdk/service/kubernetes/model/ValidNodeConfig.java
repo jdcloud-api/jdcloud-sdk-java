@@ -42,6 +42,7 @@ public class ValidNodeConfig  implements java.io.Serializable {
     /**
      * 镜像id
      */
+    
     private List<String> imageId;
 
 
@@ -63,23 +64,25 @@ public class ValidNodeConfig  implements java.io.Serializable {
         this.nodeVersion = nodeVersion;
     }
 
+
     /**
-     * get 镜像id
-     *
-     * @return
-     */
+    * get 镜像id
+    *
+    * @return
+    */
     public List<String> getImageId() {
         return imageId;
     }
 
     /**
-     * set 镜像id
-     *
-     * @param imageId
-     */
+    * set 镜像id
+    *
+    * @param imageId
+    */
     public void setImageId(List<String> imageId) {
         this.imageId = imageId;
     }
+
 
 
     /**
@@ -92,15 +95,17 @@ public class ValidNodeConfig  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 镜像id
-     *
-     * @param imageId
-     */
+    * set 镜像id
+    *
+    * @param imageId
+    */
     public ValidNodeConfig imageId(List<String> imageId) {
         this.imageId = imageId;
         return this;
     }
+
 
 
     /**
@@ -114,5 +119,4 @@ public class ValidNodeConfig  implements java.io.Serializable {
         }
         this.imageId.add(imageId);
     }
-
 }

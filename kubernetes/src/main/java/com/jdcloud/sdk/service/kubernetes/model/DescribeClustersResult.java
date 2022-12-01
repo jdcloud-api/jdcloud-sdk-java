@@ -39,31 +39,33 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     /**
      * clusters
      */
+    
     private List<Cluster> clusters;
-
     /**
      * totalCount
      */
     private Number totalCount;
 
 
+
     /**
-     * get clusters
-     *
-     * @return
-     */
+    * get clusters
+    *
+    * @return
+    */
     public List<Cluster> getClusters() {
         return clusters;
     }
 
     /**
-     * set clusters
-     *
-     * @param clusters
-     */
+    * set clusters
+    *
+    * @param clusters
+    */
     public void setClusters(List<Cluster> clusters) {
         this.clusters = clusters;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
     }
 
 
+
     /**
-     * set clusters
-     *
-     * @param clusters
-     */
+    * set clusters
+    *
+    * @param clusters
+    */
     public DescribeClustersResult clusters(List<Cluster> clusters) {
         this.clusters = clusters;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeClustersResult extends JdcloudResult implements java.io.Ser
         }
         this.clusters.add(cluster);
     }
-
 }

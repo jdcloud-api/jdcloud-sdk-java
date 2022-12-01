@@ -43,6 +43,7 @@ public class MasterProgress  implements java.io.Serializable {
     private String progress;
 
 
+
     /**
      * get 操作类型 upgrade,rollback,downgrade 等
      *
@@ -60,6 +61,7 @@ public class MasterProgress  implements java.io.Serializable {
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 升级范围, 目前只有三个值：0, 50, 100
@@ -80,6 +82,7 @@ public class MasterProgress  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 操作类型 upgrade,rollback,downgrade 等
      *
@@ -89,6 +92,7 @@ public class MasterProgress  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
     /**
      * set 升级范围, 目前只有三个值：0, 50, 100

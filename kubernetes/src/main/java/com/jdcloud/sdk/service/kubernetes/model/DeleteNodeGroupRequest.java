@@ -49,6 +49,7 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     private String nodeGroupId;
 
 
+
     /**
      * get 地域 ID
      *
@@ -66,6 +67,7 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 工作节点组 ID
@@ -86,6 +88,7 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 地域 ID
      *
@@ -95,6 +98,7 @@ public class DeleteNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 工作节点组 ID

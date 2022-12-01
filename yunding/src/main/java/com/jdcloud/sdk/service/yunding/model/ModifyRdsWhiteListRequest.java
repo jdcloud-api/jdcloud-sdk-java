@@ -56,6 +56,7 @@ public class ModifyRdsWhiteListRequest extends JdcloudRequest implements java.io
     private String instanceId;
 
 
+
     /**
      * get IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
      *
@@ -74,6 +75,7 @@ public class ModifyRdsWhiteListRequest extends JdcloudRequest implements java.io
         this.ips = ips;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -91,6 +93,7 @@ public class ModifyRdsWhiteListRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -111,6 +114,7 @@ public class ModifyRdsWhiteListRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
      * set IP或IP段，不同的IP/IP段之间用英文逗号分隔，例如0.0.0.0/0,192.168.0.10
      *
@@ -121,6 +125,7 @@ public class ModifyRdsWhiteListRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -130,6 +135,7 @@ public class ModifyRdsWhiteListRequest extends JdcloudRequest implements java.io
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

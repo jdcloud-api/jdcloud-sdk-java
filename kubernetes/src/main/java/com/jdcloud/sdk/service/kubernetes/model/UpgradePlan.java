@@ -68,6 +68,7 @@ public class UpgradePlan  implements java.io.Serializable {
     private Integer duration;
 
 
+
     /**
      * get 升级方式 auto, manual
      *
@@ -85,6 +86,7 @@ public class UpgradePlan  implements java.io.Serializable {
     public void setMode(String mode) {
         this.mode = mode;
     }
+
 
     /**
      * get 升级范围 cluster, master, nodegroup
@@ -104,6 +106,7 @@ public class UpgradePlan  implements java.io.Serializable {
         this.scope = scope;
     }
 
+
     /**
      * get 升级计划状态 waiting, upgrading
      *
@@ -121,6 +124,7 @@ public class UpgradePlan  implements java.io.Serializable {
     public void setState(String state) {
         this.state = state;
     }
+
 
     /**
      * get master 期望版本
@@ -140,6 +144,7 @@ public class UpgradePlan  implements java.io.Serializable {
         this.masterExpectedVersion = masterExpectedVersion;
     }
 
+
     /**
      * get node 期望版本
      *
@@ -158,6 +163,7 @@ public class UpgradePlan  implements java.io.Serializable {
         this.nodeExpectedVersion = nodeExpectedVersion;
     }
 
+
     /**
      * get 升级启动时间
      *
@@ -175,6 +181,7 @@ public class UpgradePlan  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 持续时长
@@ -195,6 +202,7 @@ public class UpgradePlan  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 升级方式 auto, manual
      *
@@ -204,6 +212,7 @@ public class UpgradePlan  implements java.io.Serializable {
         this.mode = mode;
         return this;
     }
+
 
     /**
      * set 升级范围 cluster, master, nodegroup
@@ -215,6 +224,7 @@ public class UpgradePlan  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 升级计划状态 waiting, upgrading
      *
@@ -224,6 +234,7 @@ public class UpgradePlan  implements java.io.Serializable {
         this.state = state;
         return this;
     }
+
 
     /**
      * set master 期望版本
@@ -235,6 +246,7 @@ public class UpgradePlan  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set node 期望版本
      *
@@ -245,6 +257,7 @@ public class UpgradePlan  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 升级启动时间
      *
@@ -254,6 +267,7 @@ public class UpgradePlan  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 持续时长

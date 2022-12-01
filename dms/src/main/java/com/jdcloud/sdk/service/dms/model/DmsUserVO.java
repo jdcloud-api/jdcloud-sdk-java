@@ -52,7 +52,7 @@ public class DmsUserVO  implements java.io.Serializable {
     /**
      * 用户是否是主账号。
      */
-    private String isMaster;
+    private Boolean isMaster;
 
     /**
      * 用户账号Id。
@@ -80,22 +80,22 @@ public class DmsUserVO  implements java.io.Serializable {
     private String deleteStatus;
 
     /**
-     * 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * 用户的添加时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      */
     private String addDate;
 
     /**
-     * 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * 用户的登录时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      */
     private String loginDate;
 
     /**
-     * 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * 用户的创建时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      */
     private String createDate;
 
     /**
-     * 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * 用户的修改时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      */
     private String modifiedDate;
 
@@ -168,7 +168,7 @@ public class DmsUserVO  implements java.io.Serializable {
      *
      * @return
      */
-    public String getIsMaster() {
+    public Boolean getIsMaster() {
         return isMaster;
     }
 
@@ -177,7 +177,7 @@ public class DmsUserVO  implements java.io.Serializable {
      *
      * @param isMaster
      */
-    public void setIsMaster(String isMaster) {
+    public void setIsMaster(Boolean isMaster) {
         this.isMaster = isMaster;
     }
 
@@ -278,7 +278,7 @@ public class DmsUserVO  implements java.io.Serializable {
 
 
     /**
-     * get 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * get 用户的添加时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @return
      */
@@ -287,7 +287,7 @@ public class DmsUserVO  implements java.io.Serializable {
     }
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 用户的添加时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @param addDate
      */
@@ -297,7 +297,7 @@ public class DmsUserVO  implements java.io.Serializable {
 
 
     /**
-     * get 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * get 用户的登录时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @return
      */
@@ -306,7 +306,7 @@ public class DmsUserVO  implements java.io.Serializable {
     }
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 用户的登录时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @param loginDate
      */
@@ -316,7 +316,7 @@ public class DmsUserVO  implements java.io.Serializable {
 
 
     /**
-     * get 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * get 用户的创建时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @return
      */
@@ -325,7 +325,7 @@ public class DmsUserVO  implements java.io.Serializable {
     }
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 用户的创建时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @param createDate
      */
@@ -335,7 +335,7 @@ public class DmsUserVO  implements java.io.Serializable {
 
 
     /**
-     * get 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * get 用户的修改时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @return
      */
@@ -344,7 +344,7 @@ public class DmsUserVO  implements java.io.Serializable {
     }
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 用户的修改时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @param modifiedDate
      */
@@ -411,7 +411,7 @@ public class DmsUserVO  implements java.io.Serializable {
      *
      * @param isMaster
      */
-    public DmsUserVO isMaster(String isMaster) {
+    public DmsUserVO isMaster(Boolean isMaster) {
         this.isMaster = isMaster;
         return this;
     }
@@ -473,7 +473,7 @@ public class DmsUserVO  implements java.io.Serializable {
 
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 用户的添加时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @param addDate
      */
@@ -484,7 +484,7 @@ public class DmsUserVO  implements java.io.Serializable {
 
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 用户的登录时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @param loginDate
      */
@@ -495,7 +495,7 @@ public class DmsUserVO  implements java.io.Serializable {
 
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 用户的创建时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @param createDate
      */
@@ -506,7 +506,7 @@ public class DmsUserVO  implements java.io.Serializable {
 
 
     /**
-     * set 用户的添加时间，格式为：YYYY-MM-DD HH:mm:ss。
+     * set 用户的修改时间，格式为：yyyy-MM-dd&#39;T&#39;HH:mm:ss
      *
      * @param modifiedDate
      */

@@ -37,19 +37,29 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
     private static final long serialVersionUID = 1L;
 
     /**
-     * secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      */
     private Boolean force;
 
     /**
      * 指定分配的secondaryIp地址
      */
+    
     private List<String> secondaryIps;
-
     /**
      * 指定自动分配的secondaryIp个数
      */
     private Number secondaryIpCount;
+
+    /**
+     * 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     */
+    private Integer secondaryIpMaskLen;
+
+    /**
+     * 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     */
+    private String secondaryIpAddress;
 
     /**
      * Region ID
@@ -66,8 +76,9 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
     private String networkInterfaceId;
 
 
+
     /**
-     * get secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * get secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @return
      */
@@ -76,7 +87,7 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
     }
 
     /**
-     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @param force
      */
@@ -84,23 +95,25 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
         this.force = force;
     }
 
+
     /**
-     * get 指定分配的secondaryIp地址
-     *
-     * @return
-     */
+    * get 指定分配的secondaryIp地址
+    *
+    * @return
+    */
     public List<String> getSecondaryIps() {
         return secondaryIps;
     }
 
     /**
-     * set 指定分配的secondaryIp地址
-     *
-     * @param secondaryIps
-     */
+    * set 指定分配的secondaryIp地址
+    *
+    * @param secondaryIps
+    */
     public void setSecondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
     }
+
 
     /**
      * get 指定自动分配的secondaryIp个数
@@ -120,6 +133,45 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
         this.secondaryIpCount = secondaryIpCount;
     }
 
+
+    /**
+     * get 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @return
+     */
+    public Integer getSecondaryIpMaskLen() {
+        return secondaryIpMaskLen;
+    }
+
+    /**
+     * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @param secondaryIpMaskLen
+     */
+    public void setSecondaryIpMaskLen(Integer secondaryIpMaskLen) {
+        this.secondaryIpMaskLen = secondaryIpMaskLen;
+    }
+
+
+    /**
+     * get 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @return
+     */
+    public String getSecondaryIpAddress() {
+        return secondaryIpAddress;
+    }
+
+    /**
+     * set 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @param secondaryIpAddress
+     */
+    public void setSecondaryIpAddress(String secondaryIpAddress) {
+        this.secondaryIpAddress = secondaryIpAddress;
+    }
+
+
     /**
      * get Region ID
      *
@@ -137,6 +189,7 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get networkInterface ID
@@ -157,8 +210,9 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
     }
 
 
+
     /**
-     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配，默认抢占重分配。默认值：true
+     * set secondary ip被其他接口占用时，是否抢占。false：非抢占重分配，true：抢占重分配；按网段分配时，默认非抢占重分配，指定IP或者个数时，默认抢占重分配。
      *
      * @param force
      */
@@ -167,15 +221,17 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
-     * set 指定分配的secondaryIp地址
-     *
-     * @param secondaryIps
-     */
+    * set 指定分配的secondaryIp地址
+    *
+    * @param secondaryIps
+    */
     public AssignSecondaryIpsRequest secondaryIps(List<String> secondaryIps) {
         this.secondaryIps = secondaryIps;
         return this;
     }
+
 
     /**
      * set 指定自动分配的secondaryIp个数
@@ -187,6 +243,29 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
+    /**
+     * set 指定分配的网段掩码长度, 支持24-28位掩码长度，不能与secondaryIpCount或secondaryIps同时指定，不支持抢占重分配
+     *
+     * @param secondaryIpMaskLen
+     */
+    public AssignSecondaryIpsRequest secondaryIpMaskLen(Integer secondaryIpMaskLen) {
+        this.secondaryIpMaskLen = secondaryIpMaskLen;
+        return this;
+    }
+
+
+    /**
+     * set 指定分配的网段中第一个secondaryIp地址，不能与secondaryIpCount或secondaryIps同时指定，secondaryIpAddress与secondaryIpMaskLen需要保持一致，否则无法创建
+     *
+     * @param secondaryIpAddress
+     */
+    public AssignSecondaryIpsRequest secondaryIpAddress(String secondaryIpAddress) {
+        this.secondaryIpAddress = secondaryIpAddress;
+        return this;
+    }
+
+
     /**
      * set Region ID
      *
@@ -197,6 +276,7 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
         return this;
     }
 
+
     /**
      * set networkInterface ID
      *
@@ -206,6 +286,7 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
+
 
 
     /**
@@ -219,5 +300,4 @@ public class AssignSecondaryIpsRequest extends JdcloudRequest implements java.io
         }
         this.secondaryIps.add(secondaryIp);
     }
-
 }

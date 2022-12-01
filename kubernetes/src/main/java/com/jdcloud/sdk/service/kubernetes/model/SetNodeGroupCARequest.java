@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.kubernetes.model.CAConfigSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 设置工作节点组自动扩容
+ * 设置工作节点组自动扩容缩容
  */
 public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -57,6 +57,7 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
     private String nodeGroupId;
 
 
+
     /**
      * get 自动伸缩配置，其中 enable 必须指定
      *
@@ -75,6 +76,7 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
         this.caConfig = caConfig;
     }
 
+
     /**
      * get 地域 ID
      *
@@ -92,6 +94,7 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 工作节点组 ID
@@ -112,6 +115,7 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set 自动伸缩配置，其中 enable 必须指定
      *
@@ -122,6 +126,7 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
         return this;
     }
 
+
     /**
      * set 地域 ID
      *
@@ -131,6 +136,7 @@ public class SetNodeGroupCARequest extends JdcloudRequest implements java.io.Ser
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 工作节点组 ID

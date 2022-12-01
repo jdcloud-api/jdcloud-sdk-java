@@ -59,6 +59,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     private String nodeGroupId;
 
 
+
     /**
      * get 工作节点组名称
      *
@@ -76,6 +77,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 工作节点组描述
@@ -95,6 +97,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.description = description;
     }
 
+
     /**
      * get 地域 ID
      *
@@ -112,6 +115,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 工作节点组 ID
@@ -132,6 +136,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 工作节点组名称
      *
@@ -141,6 +146,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.name = name;
         return this;
     }
+
 
     /**
      * set 工作节点组描述
@@ -152,6 +158,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 地域 ID
      *
@@ -161,6 +168,7 @@ public class ModifyNodeGroupRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 工作节点组 ID

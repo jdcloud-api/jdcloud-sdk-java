@@ -37,15 +37,18 @@ import com.jdcloud.sdk.service.kubernetes.client.DeleteNodeGroupExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.DeleteNodeInstancesRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DeleteNodeInstancesResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DeleteNodeInstancesExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeServerlessVersionsRequest;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeServerlessVersionsResponse;
+import com.jdcloud.sdk.service.kubernetes.client.DescribeServerlessVersionsExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeGroupsRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeGroupsResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DescribeNodeGroupsExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeUpgradableNodeVersionsRequest;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeUpgradableNodeVersionsResponse;
-import com.jdcloud.sdk.service.kubernetes.client.DescribeUpgradableNodeVersionsExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.SetAddonsRequest;
-import com.jdcloud.sdk.service.kubernetes.model.SetAddonsResponse;
-import com.jdcloud.sdk.service.kubernetes.client.SetAddonsExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeServerlessClustersRequest;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeServerlessClustersResponse;
+import com.jdcloud.sdk.service.kubernetes.client.DescribeServerlessClustersExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.ModifyServerlessClusterRequest;
+import com.jdcloud.sdk.service.kubernetes.model.ModifyServerlessClusterResponse;
+import com.jdcloud.sdk.service.kubernetes.client.ModifyServerlessClusterExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.CreateNodeGroupRequest;
 import com.jdcloud.sdk.service.kubernetes.model.CreateNodeGroupResponse;
 import com.jdcloud.sdk.service.kubernetes.client.CreateNodeGroupExecutor;
@@ -55,63 +58,42 @@ import com.jdcloud.sdk.service.kubernetes.client.DeleteClusterExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.ModifyNodeGroupRequest;
 import com.jdcloud.sdk.service.kubernetes.model.ModifyNodeGroupResponse;
 import com.jdcloud.sdk.service.kubernetes.client.ModifyNodeGroupExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.SetUserMetricsRequest;
-import com.jdcloud.sdk.service.kubernetes.model.SetUserMetricsResponse;
-import com.jdcloud.sdk.service.kubernetes.client.SetUserMetricsExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupSizeRequest;
-import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupSizeResponse;
-import com.jdcloud.sdk.service.kubernetes.client.SetNodeGroupSizeExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeServerConfigRequest;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeServerConfigResponse;
-import com.jdcloud.sdk.service.kubernetes.client.DescribeServerConfigExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.UpgradeClusterRequest;
-import com.jdcloud.sdk.service.kubernetes.model.UpgradeClusterResponse;
-import com.jdcloud.sdk.service.kubernetes.client.UpgradeClusterExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeVersionsRequest;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeVersionsResponse;
-import com.jdcloud.sdk.service.kubernetes.client.DescribeVersionsExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.SetAutoRepairRequest;
-import com.jdcloud.sdk.service.kubernetes.model.SetAutoRepairResponse;
-import com.jdcloud.sdk.service.kubernetes.client.SetAutoRepairExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupCARequest;
-import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupCAResponse;
-import com.jdcloud.sdk.service.kubernetes.client.SetNodeGroupCAExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeQuotasRequest;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeQuotasResponse;
-import com.jdcloud.sdk.service.kubernetes.client.DescribeQuotasExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeGroupRequest;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeGroupResponse;
-import com.jdcloud.sdk.service.kubernetes.client.DescribeNodeGroupExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeProgressRequest;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeProgressResponse;
-import com.jdcloud.sdk.service.kubernetes.client.DescribeProgressExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeVersionRequest;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeVersionResponse;
-import com.jdcloud.sdk.service.kubernetes.client.DescribeNodeVersionExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.RollbackNodeGroupUpgradeRequest;
-import com.jdcloud.sdk.service.kubernetes.model.RollbackNodeGroupUpgradeResponse;
-import com.jdcloud.sdk.service.kubernetes.client.RollbackNodeGroupUpgradeExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.AbortUpgradeRequest;
-import com.jdcloud.sdk.service.kubernetes.model.AbortUpgradeResponse;
-import com.jdcloud.sdk.service.kubernetes.client.AbortUpgradeExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeUpgradableMasterVersionsRequest;
-import com.jdcloud.sdk.service.kubernetes.model.DescribeUpgradableMasterVersionsResponse;
-import com.jdcloud.sdk.service.kubernetes.client.DescribeUpgradableMasterVersionsExecutor;
-import com.jdcloud.sdk.service.kubernetes.model.SetAutoUpgradeRequest;
-import com.jdcloud.sdk.service.kubernetes.model.SetAutoUpgradeResponse;
-import com.jdcloud.sdk.service.kubernetes.client.SetAutoUpgradeExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.DeleteServerlessClusterRequest;
+import com.jdcloud.sdk.service.kubernetes.model.DeleteServerlessClusterResponse;
+import com.jdcloud.sdk.service.kubernetes.client.DeleteServerlessClusterExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.CreateClusterRequest;
 import com.jdcloud.sdk.service.kubernetes.model.CreateClusterResponse;
 import com.jdcloud.sdk.service.kubernetes.client.CreateClusterExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupSizeRequest;
+import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupSizeResponse;
+import com.jdcloud.sdk.service.kubernetes.client.SetNodeGroupSizeExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeClusterRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeClusterResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DescribeClusterExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.ModifyClusterRequest;
 import com.jdcloud.sdk.service.kubernetes.model.ModifyClusterResponse;
 import com.jdcloud.sdk.service.kubernetes.client.ModifyClusterExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeVersionsRequest;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeVersionsResponse;
+import com.jdcloud.sdk.service.kubernetes.client.DescribeVersionsExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupCARequest;
+import com.jdcloud.sdk.service.kubernetes.model.SetNodeGroupCAResponse;
+import com.jdcloud.sdk.service.kubernetes.client.SetNodeGroupCAExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeQuotasRequest;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeQuotasResponse;
+import com.jdcloud.sdk.service.kubernetes.client.DescribeQuotasExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeServerlessClusterRequest;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeServerlessClusterResponse;
+import com.jdcloud.sdk.service.kubernetes.client.DescribeServerlessClusterExecutor;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeClustersRequest;
 import com.jdcloud.sdk.service.kubernetes.model.DescribeClustersResponse;
 import com.jdcloud.sdk.service.kubernetes.client.DescribeClustersExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.CreateServerlessClusterRequest;
+import com.jdcloud.sdk.service.kubernetes.model.CreateServerlessClusterResponse;
+import com.jdcloud.sdk.service.kubernetes.client.CreateServerlessClusterExecutor;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeGroupRequest;
+import com.jdcloud.sdk.service.kubernetes.model.DescribeNodeGroupResponse;
+import com.jdcloud.sdk.service.kubernetes.client.DescribeNodeGroupExecutor;
 
 /**
  * kubernetesClient
@@ -120,7 +102,7 @@ public class KubernetesClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.1";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "kubernetes.jdcloud-api.com";
     public final static String ServiceName = "kubernetes";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -185,6 +167,17 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
+     * 查询Serverless集群版本列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeServerlessVersionsResponse describeServerlessVersions(DescribeServerlessVersionsRequest request) throws JdcloudSdkException {
+        return new DescribeServerlessVersionsExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询工作节点组列表
      *
      * @param request
@@ -196,25 +189,25 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * 查询可升级的节点版本
+     * 查询Serverless集群列表
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public DescribeUpgradableNodeVersionsResponse describeUpgradableNodeVersions(DescribeUpgradableNodeVersionsRequest request) throws JdcloudSdkException {
-        return new DescribeUpgradableNodeVersionsExecutor().client(this).execute(request);
+    public DescribeServerlessClustersResponse describeServerlessClusters(DescribeServerlessClustersRequest request) throws JdcloudSdkException {
+        return new DescribeServerlessClustersExecutor().client(this).execute(request);
     }
 
     /**
-     * 设置集群组件
+     * 修改Serverless集群的 名称 和 描述。&lt;br&gt;集群 name 和 description 必须要指定一个
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetAddonsResponse setAddons(SetAddonsRequest request) throws JdcloudSdkException {
-        return new SetAddonsExecutor().client(this).execute(request);
+    public ModifyServerlessClusterResponse modifyServerlessCluster(ModifyServerlessClusterRequest request) throws JdcloudSdkException {
+        return new ModifyServerlessClusterExecutor().client(this).execute(request);
     }
 
     /**
@@ -253,168 +246,14 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
-     * Deprecated 建议使用 setAddons 接口 &lt;br&gt;设置用户自定义监控状态
+     * 删除Serverless集群，以及集群的所有网络，云盘等所有资源。
      *
      * @param request
      * @return
      * @throws JdcloudSdkException
      */
-    public SetUserMetricsResponse setUserMetrics(SetUserMetricsRequest request) throws JdcloudSdkException {
-        return new SetUserMetricsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 调整工作节点组实例数量
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetNodeGroupSizeResponse setNodeGroupSize(SetNodeGroupSizeRequest request) throws JdcloudSdkException {
-        return new SetNodeGroupSizeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询 kubernetes 集群服务配置信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeServerConfigResponse describeServerConfig(DescribeServerConfigRequest request) throws JdcloudSdkException {
-        return new DescribeServerConfigExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 触发升级
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public UpgradeClusterResponse upgradeCluster(UpgradeClusterRequest request) throws JdcloudSdkException {
-        return new UpgradeClusterExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询版本信息
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeVersionsResponse describeVersions(DescribeVersionsRequest request) throws JdcloudSdkException {
-        return new DescribeVersionsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置工作节点组的自动修复
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetAutoRepairResponse setAutoRepair(SetAutoRepairRequest request) throws JdcloudSdkException {
-        return new SetAutoRepairExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置工作节点组自动扩容
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetNodeGroupCAResponse setNodeGroupCA(SetNodeGroupCARequest request) throws JdcloudSdkException {
-        return new SetNodeGroupCAExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询 kubernetes 集群配额
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
-        return new DescribeQuotasExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询单个工作节点组详情
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeNodeGroupResponse describeNodeGroup(DescribeNodeGroupRequest request) throws JdcloudSdkException {
-        return new DescribeNodeGroupExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询集群操作进度
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeProgressResponse describeProgress(DescribeProgressRequest request) throws JdcloudSdkException {
-        return new DescribeProgressExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询节点版本
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeNodeVersionResponse describeNodeVersion(DescribeNodeVersionRequest request) throws JdcloudSdkException {
-        return new DescribeNodeVersionExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 回滚未升级完的工作节点组
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public RollbackNodeGroupUpgradeResponse rollbackNodeGroupUpgrade(RollbackNodeGroupUpgradeRequest request) throws JdcloudSdkException {
-        return new RollbackNodeGroupUpgradeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 终止升级
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public AbortUpgradeResponse abortUpgrade(AbortUpgradeRequest request) throws JdcloudSdkException {
-        return new AbortUpgradeExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 查询可升级的控制节点版本
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public DescribeUpgradableMasterVersionsResponse describeUpgradableMasterVersions(DescribeUpgradableMasterVersionsRequest request) throws JdcloudSdkException {
-        return new DescribeUpgradableMasterVersionsExecutor().client(this).execute(request);
-    }
-
-    /**
-     * 设置自动升级
-     *
-     * @param request
-     * @return
-     * @throws JdcloudSdkException
-     */
-    public SetAutoUpgradeResponse setAutoUpgrade(SetAutoUpgradeRequest request) throws JdcloudSdkException {
-        return new SetAutoUpgradeExecutor().client(this).execute(request);
+    public DeleteServerlessClusterResponse deleteServerlessCluster(DeleteServerlessClusterRequest request) throws JdcloudSdkException {
+        return new DeleteServerlessClusterExecutor().client(this).execute(request);
     }
 
     /**
@@ -445,6 +284,17 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
+     * 调整工作节点组实例数量
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetNodeGroupSizeResponse setNodeGroupSize(SetNodeGroupSizeRequest request) throws JdcloudSdkException {
+        return new SetNodeGroupSizeExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询单个集群详情。
      *
      * @param request
@@ -467,6 +317,50 @@ public class KubernetesClient extends JdcloudClient {
     }
 
     /**
+     * 查询版本信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVersionsResponse describeVersions(DescribeVersionsRequest request) throws JdcloudSdkException {
+        return new DescribeVersionsExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置工作节点组自动扩容缩容
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SetNodeGroupCAResponse setNodeGroupCA(SetNodeGroupCARequest request) throws JdcloudSdkException {
+        return new SetNodeGroupCAExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询 kubernetes 集群配额
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeQuotasResponse describeQuotas(DescribeQuotasRequest request) throws JdcloudSdkException {
+        return new DescribeQuotasExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单个集群详情。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeServerlessClusterResponse describeServerlessCluster(DescribeServerlessClusterRequest request) throws JdcloudSdkException {
+        return new DescribeServerlessClusterExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询集群列表
      *
      * @param request
@@ -475,6 +369,36 @@ public class KubernetesClient extends JdcloudClient {
      */
     public DescribeClustersResponse describeClusters(DescribeClustersRequest request) throws JdcloudSdkException {
         return new DescribeClustersExecutor().client(this).execute(request);
+    }
+
+    /**
+     * - 创建Serverless集群
+- 证书
+  - 关于kubernetes的证书，默认生成，不需要用户传入。
+- 状态限制
+  - pending,reconciling,deleting状态不可以操作更新接口
+  - running状态可以操作cluster所有接口
+  - error状态只可以查询，删除
+  - delete状态的cluster在十五分钟内可以查询，十五分钟后无法查询到
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateServerlessClusterResponse createServerlessCluster(CreateServerlessClusterRequest request) throws JdcloudSdkException {
+        return new CreateServerlessClusterExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询单个工作节点组详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeNodeGroupResponse describeNodeGroup(DescribeNodeGroupRequest request) throws JdcloudSdkException {
+        return new DescribeNodeGroupExecutor().client(this).execute(request);
     }
 
 

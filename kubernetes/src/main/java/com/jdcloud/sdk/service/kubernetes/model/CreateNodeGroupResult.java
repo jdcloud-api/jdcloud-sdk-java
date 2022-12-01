@@ -41,6 +41,7 @@ public class CreateNodeGroupResult extends JdcloudResult implements java.io.Seri
     private String nodeGroupId;
 
 
+
     /**
      * get nodeGroupId
      *
@@ -58,6 +59,7 @@ public class CreateNodeGroupResult extends JdcloudResult implements java.io.Seri
     public void setNodeGroupId(String nodeGroupId) {
         this.nodeGroupId = nodeGroupId;
     }
+
 
 
     /**

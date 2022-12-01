@@ -46,9 +46,15 @@ import com.jdcloud.sdk.service.dms.client.ViewInfoExecutor;
 import com.jdcloud.sdk.service.dms.model.ExeProgramRequest;
 import com.jdcloud.sdk.service.dms.model.ExeProgramResponse;
 import com.jdcloud.sdk.service.dms.client.ExeProgramExecutor;
+import com.jdcloud.sdk.service.dms.model.RestartOnlineSqlTaskRequest;
+import com.jdcloud.sdk.service.dms.model.RestartOnlineSqlTaskResponse;
+import com.jdcloud.sdk.service.dms.client.RestartOnlineSqlTaskExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralDropTriggerRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralDropTriggerResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralDropTriggerExecutor;
+import com.jdcloud.sdk.service.dms.model.GetDmsDomainsRequest;
+import com.jdcloud.sdk.service.dms.model.GetDmsDomainsResponse;
+import com.jdcloud.sdk.service.dms.client.GetDmsDomainsExecutor;
 import com.jdcloud.sdk.service.dms.model.TableInfoRequest;
 import com.jdcloud.sdk.service.dms.model.TableInfoResponse;
 import com.jdcloud.sdk.service.dms.client.TableInfoExecutor;
@@ -61,15 +67,33 @@ import com.jdcloud.sdk.service.dms.client.CreateExportFlowExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterTriggerRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterTriggerResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralAlterTriggerExecutor;
+import com.jdcloud.sdk.service.dms.model.DmsConsoleCheckRequest;
+import com.jdcloud.sdk.service.dms.model.DmsConsoleCheckResponse;
+import com.jdcloud.sdk.service.dms.client.DmsConsoleCheckExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateFunctionRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateFunctionResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralCreateFunctionExecutor;
+import com.jdcloud.sdk.service.dms.model.SyncSubUserRequest;
+import com.jdcloud.sdk.service.dms.model.SyncSubUserResponse;
+import com.jdcloud.sdk.service.dms.client.SyncSubUserExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterFunctionRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterFunctionResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralAlterFunctionExecutor;
+import com.jdcloud.sdk.service.dms.model.StartOnlineSqlTaskRequest;
+import com.jdcloud.sdk.service.dms.model.StartOnlineSqlTaskResponse;
+import com.jdcloud.sdk.service.dms.client.StartOnlineSqlTaskExecutor;
+import com.jdcloud.sdk.service.dms.model.QueryPrivilegeSelfListRequest;
+import com.jdcloud.sdk.service.dms.model.QueryPrivilegeSelfListResponse;
+import com.jdcloud.sdk.service.dms.client.QueryPrivilegeSelfListExecutor;
+import com.jdcloud.sdk.service.dms.model.OnlineSqlTaskQueryRequest;
+import com.jdcloud.sdk.service.dms.model.OnlineSqlTaskQueryResponse;
+import com.jdcloud.sdk.service.dms.client.OnlineSqlTaskQueryExecutor;
 import com.jdcloud.sdk.service.dms.model.TableListRequest;
 import com.jdcloud.sdk.service.dms.model.TableListResponse;
 import com.jdcloud.sdk.service.dms.client.TableListExecutor;
+import com.jdcloud.sdk.service.dms.model.AuthPrivilegeRequest;
+import com.jdcloud.sdk.service.dms.model.AuthPrivilegeResponse;
+import com.jdcloud.sdk.service.dms.client.AuthPrivilegeExecutor;
 import com.jdcloud.sdk.service.dms.model.EventInfoRequest;
 import com.jdcloud.sdk.service.dms.model.EventInfoResponse;
 import com.jdcloud.sdk.service.dms.client.EventInfoExecutor;
@@ -82,12 +106,21 @@ import com.jdcloud.sdk.service.dms.client.GeneralDropViewExecutor;
 import com.jdcloud.sdk.service.dms.model.ConsoleExplainRequest;
 import com.jdcloud.sdk.service.dms.model.ConsoleExplainResponse;
 import com.jdcloud.sdk.service.dms.client.ConsoleExplainExecutor;
+import com.jdcloud.sdk.service.dms.model.QueryOperationLogRequest;
+import com.jdcloud.sdk.service.dms.model.QueryOperationLogResponse;
+import com.jdcloud.sdk.service.dms.client.QueryOperationLogExecutor;
+import com.jdcloud.sdk.service.dms.model.OnlineSubSqlTaskQueryRequest;
+import com.jdcloud.sdk.service.dms.model.OnlineSubSqlTaskQueryResponse;
+import com.jdcloud.sdk.service.dms.client.OnlineSubSqlTaskQueryExecutor;
 import com.jdcloud.sdk.service.dms.model.CreateDataFlowRequest;
 import com.jdcloud.sdk.service.dms.model.CreateDataFlowResponse;
 import com.jdcloud.sdk.service.dms.client.CreateDataFlowExecutor;
 import com.jdcloud.sdk.service.dms.model.DeletePersonalSqlRequest;
 import com.jdcloud.sdk.service.dms.model.DeletePersonalSqlResponse;
 import com.jdcloud.sdk.service.dms.client.DeletePersonalSqlExecutor;
+import com.jdcloud.sdk.service.dms.model.QueryUserNotSyncRequest;
+import com.jdcloud.sdk.service.dms.model.QueryUserNotSyncResponse;
+import com.jdcloud.sdk.service.dms.client.QueryUserNotSyncExecutor;
 import com.jdcloud.sdk.service.dms.model.DatabaseListRequest;
 import com.jdcloud.sdk.service.dms.model.DatabaseListResponse;
 import com.jdcloud.sdk.service.dms.client.DatabaseListExecutor;
@@ -100,24 +133,42 @@ import com.jdcloud.sdk.service.dms.client.GeneralAlterProcedureExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateTriggerRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateTriggerResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralCreateTriggerExecutor;
+import com.jdcloud.sdk.service.dms.model.QueryUserListRequest;
+import com.jdcloud.sdk.service.dms.model.QueryUserListResponse;
+import com.jdcloud.sdk.service.dms.client.QueryUserListExecutor;
 import com.jdcloud.sdk.service.dms.model.UploadImportFileTaskRequest;
 import com.jdcloud.sdk.service.dms.model.UploadImportFileTaskResponse;
 import com.jdcloud.sdk.service.dms.client.UploadImportFileTaskExecutor;
+import com.jdcloud.sdk.service.dms.model.ModifyPrivilegeExpireDateRequest;
+import com.jdcloud.sdk.service.dms.model.ModifyPrivilegeExpireDateResponse;
+import com.jdcloud.sdk.service.dms.client.ModifyPrivilegeExpireDateExecutor;
+import com.jdcloud.sdk.service.dms.model.OperationDetailRequest;
+import com.jdcloud.sdk.service.dms.model.OperationDetailResponse;
+import com.jdcloud.sdk.service.dms.client.OperationDetailExecutor;
 import com.jdcloud.sdk.service.dms.model.UpdatePersonalSqlRequest;
 import com.jdcloud.sdk.service.dms.model.UpdatePersonalSqlResponse;
 import com.jdcloud.sdk.service.dms.client.UpdatePersonalSqlExecutor;
 import com.jdcloud.sdk.service.dms.model.QueryTypeInstanceRequest;
 import com.jdcloud.sdk.service.dms.model.QueryTypeInstanceResponse;
 import com.jdcloud.sdk.service.dms.client.QueryTypeInstanceExecutor;
+import com.jdcloud.sdk.service.dms.model.QueryPrivilegeListRequest;
+import com.jdcloud.sdk.service.dms.model.QueryPrivilegeListResponse;
+import com.jdcloud.sdk.service.dms.client.QueryPrivilegeListExecutor;
 import com.jdcloud.sdk.service.dms.model.GetCreateTableBatchSqlRequest;
 import com.jdcloud.sdk.service.dms.model.GetCreateTableBatchSqlResponse;
 import com.jdcloud.sdk.service.dms.client.GetCreateTableBatchSqlExecutor;
+import com.jdcloud.sdk.service.dms.model.CheckInstanceRequest;
+import com.jdcloud.sdk.service.dms.model.CheckInstanceResponse;
+import com.jdcloud.sdk.service.dms.client.CheckInstanceExecutor;
 import com.jdcloud.sdk.service.dms.model.CreateStructureFlowRequest;
 import com.jdcloud.sdk.service.dms.model.CreateStructureFlowResponse;
 import com.jdcloud.sdk.service.dms.client.CreateStructureFlowExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateTableSqlRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateTableSqlResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralCreateTableSqlExecutor;
+import com.jdcloud.sdk.service.dms.model.ReleasePrivilegeRequest;
+import com.jdcloud.sdk.service.dms.model.ReleasePrivilegeResponse;
+import com.jdcloud.sdk.service.dms.client.ReleasePrivilegeExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateProcedureRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralCreateProcedureResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralCreateProcedureExecutor;
@@ -148,6 +199,12 @@ import com.jdcloud.sdk.service.dms.client.CreateTableBatchExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralDropProcedureRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralDropProcedureResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralDropProcedureExecutor;
+import com.jdcloud.sdk.service.dms.model.QueryOperationTypeRequest;
+import com.jdcloud.sdk.service.dms.model.QueryOperationTypeResponse;
+import com.jdcloud.sdk.service.dms.client.QueryOperationTypeExecutor;
+import com.jdcloud.sdk.service.dms.model.UpdateUserInfoRequest;
+import com.jdcloud.sdk.service.dms.model.UpdateUserInfoResponse;
+import com.jdcloud.sdk.service.dms.client.UpdateUserInfoExecutor;
 import com.jdcloud.sdk.service.dms.model.FunctionInvokeRequest;
 import com.jdcloud.sdk.service.dms.model.FunctionInvokeResponse;
 import com.jdcloud.sdk.service.dms.client.FunctionInvokeExecutor;
@@ -163,6 +220,9 @@ import com.jdcloud.sdk.service.dms.client.SqlTableInfoExecutor;
 import com.jdcloud.sdk.service.dms.model.ProcedureListRequest;
 import com.jdcloud.sdk.service.dms.model.ProcedureListResponse;
 import com.jdcloud.sdk.service.dms.client.ProcedureListExecutor;
+import com.jdcloud.sdk.service.dms.model.OnlineProxySubTaskQueryRequest;
+import com.jdcloud.sdk.service.dms.model.OnlineProxySubTaskQueryResponse;
+import com.jdcloud.sdk.service.dms.client.OnlineProxySubTaskQueryExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterEventRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterEventResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralAlterEventExecutor;
@@ -175,6 +235,12 @@ import com.jdcloud.sdk.service.dms.client.TriggerInfoExecutor;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterTableSqlRequest;
 import com.jdcloud.sdk.service.dms.model.GeneralAlterTableSqlResponse;
 import com.jdcloud.sdk.service.dms.client.GeneralAlterTableSqlExecutor;
+import com.jdcloud.sdk.service.dms.model.SuspendOnlineSqlTaskRequest;
+import com.jdcloud.sdk.service.dms.model.SuspendOnlineSqlTaskResponse;
+import com.jdcloud.sdk.service.dms.client.SuspendOnlineSqlTaskExecutor;
+import com.jdcloud.sdk.service.dms.model.GetUserInfoRequest;
+import com.jdcloud.sdk.service.dms.model.GetUserInfoResponse;
+import com.jdcloud.sdk.service.dms.client.GetUserInfoExecutor;
 import com.jdcloud.sdk.service.dms.model.HistoryImportDataRequest;
 import com.jdcloud.sdk.service.dms.model.HistoryImportDataResponse;
 import com.jdcloud.sdk.service.dms.client.HistoryImportDataExecutor;
@@ -187,12 +253,21 @@ import com.jdcloud.sdk.service.dms.client.ProcedureInfoExecutor;
 import com.jdcloud.sdk.service.dms.model.ConsoleGeneralDataRequest;
 import com.jdcloud.sdk.service.dms.model.ConsoleGeneralDataResponse;
 import com.jdcloud.sdk.service.dms.client.ConsoleGeneralDataExecutor;
+import com.jdcloud.sdk.service.dms.model.EnableUserRequest;
+import com.jdcloud.sdk.service.dms.model.EnableUserResponse;
+import com.jdcloud.sdk.service.dms.client.EnableUserExecutor;
 import com.jdcloud.sdk.service.dms.model.QueryPersonalSqlsRequest;
 import com.jdcloud.sdk.service.dms.model.QueryPersonalSqlsResponse;
 import com.jdcloud.sdk.service.dms.client.QueryPersonalSqlsExecutor;
 import com.jdcloud.sdk.service.dms.model.ProgramListRequest;
 import com.jdcloud.sdk.service.dms.model.ProgramListResponse;
 import com.jdcloud.sdk.service.dms.client.ProgramListExecutor;
+import com.jdcloud.sdk.service.dms.model.DeleteUserRequest;
+import com.jdcloud.sdk.service.dms.model.DeleteUserResponse;
+import com.jdcloud.sdk.service.dms.client.DeleteUserExecutor;
+import com.jdcloud.sdk.service.dms.model.CreateOnlineSqlTaskRequest;
+import com.jdcloud.sdk.service.dms.model.CreateOnlineSqlTaskResponse;
+import com.jdcloud.sdk.service.dms.client.CreateOnlineSqlTaskExecutor;
 import com.jdcloud.sdk.service.dms.model.GetDmsDomainRequest;
 import com.jdcloud.sdk.service.dms.model.GetDmsDomainResponse;
 import com.jdcloud.sdk.service.dms.client.GetDmsDomainExecutor;
@@ -308,6 +383,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 重启Sql任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestartOnlineSqlTaskResponse restartOnlineSqlTask(RestartOnlineSqlTaskRequest request) throws JdcloudSdkException {
+        return new RestartOnlineSqlTaskExecutor().client(this).execute(request);
+    }
+
+    /**
      * 生成删除触发器sql语句，支持Mysql
      *
      * @param request
@@ -316,6 +402,17 @@ public class DmsClient extends JdcloudClient {
      */
     public GeneralDropTriggerResponse generalDropTrigger(GeneralDropTriggerRequest request) throws JdcloudSdkException {
         return new GeneralDropTriggerExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取Dms域名，仅供前端使用
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetDmsDomainsResponse getDmsDomains(GetDmsDomainsRequest request) throws JdcloudSdkException {
+        return new GetDmsDomainsExecutor().client(this).execute(request);
     }
 
     /**
@@ -363,6 +460,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 校验当前的用户是否允许访问DMS控制台
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DmsConsoleCheckResponse dmsConsoleCheck(DmsConsoleCheckRequest request) throws JdcloudSdkException {
+        return new DmsConsoleCheckExecutor().client(this).execute(request);
+    }
+
+    /**
      * 生产创建函数过程SQL语句，支持Mysql
      *
      * @param request
@@ -371,6 +479,17 @@ public class DmsClient extends JdcloudClient {
      */
     public GeneralCreateFunctionResponse generalCreateFunction(GeneralCreateFunctionRequest request) throws JdcloudSdkException {
         return new GeneralCreateFunctionExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 同步子账号
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SyncSubUserResponse syncSubUser(SyncSubUserRequest request) throws JdcloudSdkException {
+        return new SyncSubUserExecutor().client(this).execute(request);
     }
 
     /**
@@ -385,6 +504,39 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 启动Sql任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public StartOnlineSqlTaskResponse startOnlineSqlTask(StartOnlineSqlTaskRequest request) throws JdcloudSdkException {
+        return new StartOnlineSqlTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查看当前用户授权信息列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryPrivilegeSelfListResponse queryPrivilegeSelfList(QueryPrivilegeSelfListRequest request) throws JdcloudSdkException {
+        return new QueryPrivilegeSelfListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询任务状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OnlineSqlTaskQueryResponse onlineSqlTaskQuery(OnlineSqlTaskQueryRequest request) throws JdcloudSdkException {
+        return new OnlineSqlTaskQueryExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取数据库中的表列表，支持Mysql，Stardb，Tidb，ClickHouse
      *
      * @param request
@@ -393,6 +545,17 @@ public class DmsClient extends JdcloudClient {
      */
     public TableListResponse tableList(TableListRequest request) throws JdcloudSdkException {
         return new TableListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 实例授权
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AuthPrivilegeResponse authPrivilege(AuthPrivilegeRequest request) throws JdcloudSdkException {
+        return new AuthPrivilegeExecutor().client(this).execute(request);
     }
 
     /**
@@ -440,6 +603,28 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 获取操作日志列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryOperationLogResponse queryOperationLog(QueryOperationLogRequest request) throws JdcloudSdkException {
+        return new QueryOperationLogExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询sql子任务状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OnlineSubSqlTaskQueryResponse onlineSubSqlTaskQuery(OnlineSubSqlTaskQueryRequest request) throws JdcloudSdkException {
+        return new OnlineSubSqlTaskQueryExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建数据变更工单，支持Stardb
      *
      * @param request
@@ -459,6 +644,17 @@ public class DmsClient extends JdcloudClient {
      */
     public DeletePersonalSqlResponse deletePersonalSql(DeletePersonalSqlRequest request) throws JdcloudSdkException {
         return new DeletePersonalSqlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取主账号下未同步的子账号数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryUserNotSyncResponse queryUserNotSync(QueryUserNotSyncRequest request) throws JdcloudSdkException {
+        return new QueryUserNotSyncExecutor().client(this).execute(request);
     }
 
     /**
@@ -506,6 +702,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 用户管理列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryUserListResponse queryUserList(QueryUserListRequest request) throws JdcloudSdkException {
+        return new QueryUserListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 上传文件，支持Stardb，只支持前端页面使用
      *
      * @param request
@@ -514,6 +721,28 @@ public class DmsClient extends JdcloudClient {
      */
     public UploadImportFileTaskResponse uploadImportFileTask(UploadImportFileTaskRequest request) throws JdcloudSdkException {
         return new UploadImportFileTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 修改权限到期时间
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ModifyPrivilegeExpireDateResponse modifyPrivilegeExpireDate(ModifyPrivilegeExpireDateRequest request) throws JdcloudSdkException {
+        return new ModifyPrivilegeExpireDateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取操作详情
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OperationDetailResponse operationDetail(OperationDetailRequest request) throws JdcloudSdkException {
+        return new OperationDetailExecutor().client(this).execute(request);
     }
 
     /**
@@ -539,7 +768,18 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
-     * 获取批量建表sql，仅供前端使用，支持Stardb
+     * 用户授权信息列表
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryPrivilegeListResponse queryPrivilegeList(QueryPrivilegeListRequest request) throws JdcloudSdkException {
+        return new QueryPrivilegeListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取批量建表sql，仅供前端使用，支持Stardb，OpenGauss
      *
      * @param request
      * @return
@@ -547,6 +787,17 @@ public class DmsClient extends JdcloudClient {
      */
     public GetCreateTableBatchSqlResponse getCreateTableBatchSql(GetCreateTableBatchSqlRequest request) throws JdcloudSdkException {
         return new GetCreateTableBatchSqlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 校验用户是否有实例权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CheckInstanceResponse checkInstance(CheckInstanceRequest request) throws JdcloudSdkException {
+        return new CheckInstanceExecutor().client(this).execute(request);
     }
 
     /**
@@ -561,7 +812,7 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
-     * 生成建表语句sql，支持Mysql，Stardb
+     * 生成建表语句sql，支持Mysql，Stardb，OpenGauss
      *
      * @param request
      * @return
@@ -569,6 +820,17 @@ public class DmsClient extends JdcloudClient {
      */
     public GeneralCreateTableSqlResponse generalCreateTableSql(GeneralCreateTableSqlRequest request) throws JdcloudSdkException {
         return new GeneralCreateTableSqlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 释放权限
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ReleasePrivilegeResponse releasePrivilege(ReleasePrivilegeRequest request) throws JdcloudSdkException {
+        return new ReleasePrivilegeExecutor().client(this).execute(request);
     }
 
     /**
@@ -682,6 +944,28 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 获取操作对应控制台功能
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryOperationTypeResponse queryOperationType(QueryOperationTypeRequest request) throws JdcloudSdkException {
+        return new QueryOperationTypeExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 更新用户信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public UpdateUserInfoResponse updateUserInfo(UpdateUserInfoRequest request) throws JdcloudSdkException {
+        return new UpdateUserInfoExecutor().client(this).execute(request);
+    }
+
+    /**
      * 调用函数，支持Mysql
      *
      * @param request
@@ -737,6 +1021,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 查询sql子任务状态
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public OnlineProxySubTaskQueryResponse onlineProxySubTaskQuery(OnlineProxySubTaskQueryRequest request) throws JdcloudSdkException {
+        return new OnlineProxySubTaskQueryExecutor().client(this).execute(request);
+    }
+
+    /**
      * 生成修改事件sql语句，支持Mysql
      *
      * @param request
@@ -778,6 +1073,28 @@ public class DmsClient extends JdcloudClient {
      */
     public GeneralAlterTableSqlResponse generalAlterTableSql(GeneralAlterTableSqlRequest request) throws JdcloudSdkException {
         return new GeneralAlterTableSqlExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 暂停Sql任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SuspendOnlineSqlTaskResponse suspendOnlineSqlTask(SuspendOnlineSqlTaskRequest request) throws JdcloudSdkException {
+        return new SuspendOnlineSqlTaskExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 获取用户信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetUserInfoResponse getUserInfo(GetUserInfoRequest request) throws JdcloudSdkException {
+        return new GetUserInfoExecutor().client(this).execute(request);
     }
 
     /**
@@ -825,6 +1142,17 @@ public class DmsClient extends JdcloudClient {
     }
 
     /**
+     * 启用/禁用用户
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public EnableUserResponse enableUser(EnableUserRequest request) throws JdcloudSdkException {
+        return new EnableUserExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取当前实例用户收藏sql
      *
      * @param request
@@ -844,6 +1172,28 @@ public class DmsClient extends JdcloudClient {
      */
     public ProgramListResponse programList(ProgramListRequest request) throws JdcloudSdkException {
         return new ProgramListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除用户
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteUserResponse deleteUser(DeleteUserRequest request) throws JdcloudSdkException {
+        return new DeleteUserExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 创建Sql任务
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateOnlineSqlTaskResponse createOnlineSqlTask(CreateOnlineSqlTaskRequest request) throws JdcloudSdkException {
+        return new CreateOnlineSqlTaskExecutor().client(this).execute(request);
     }
 
     /**

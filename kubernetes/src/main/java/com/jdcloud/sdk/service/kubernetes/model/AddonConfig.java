@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.kubernetes.model;
 
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  * 集群组件配置
@@ -38,9 +40,35 @@ public class AddonConfig  implements java.io.Serializable {
     private String name;
 
     /**
+     * 组件版本，非必须，未安装时填充为默认版本号
+     */
+    private String version;
+
+    /**
      * 组件是否开启
      */
     private Boolean enabled;
+
+    /**
+     * 组件安装状态 not_installed,installed,installing,uninstalling,error_installed
+     */
+    private String state;
+
+    /**
+     * 组件的额外参数(deprecated)
+     */
+    private Object params;
+
+    /**
+     * 组件的额外参数（新）
+     */
+    
+    private List<StringKeyValuePair> parameters;
+    /**
+     * 可安装的addons
+     */
+    private ClusterAddon addonDetail;
+
 
 
     /**
@@ -60,6 +88,26 @@ public class AddonConfig  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+
+    /**
+     * get 组件版本，非必须，未安装时填充为默认版本号
+     *
+     * @return
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
+     * set 组件版本，非必须，未安装时填充为默认版本号
+     *
+     * @param version
+     */
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
 
     /**
      * get 组件是否开启
@@ -81,6 +129,83 @@ public class AddonConfig  implements java.io.Serializable {
 
 
     /**
+     * get 组件安装状态 not_installed,installed,installing,uninstalling,error_installed
+     *
+     * @return
+     */
+    public String getState() {
+        return state;
+    }
+
+    /**
+     * set 组件安装状态 not_installed,installed,installing,uninstalling,error_installed
+     *
+     * @param state
+     */
+    public void setState(String state) {
+        this.state = state;
+    }
+
+
+    /**
+     * get 组件的额外参数(deprecated)
+     *
+     * @return
+     */
+    public Object getParams() {
+        return params;
+    }
+
+    /**
+     * set 组件的额外参数(deprecated)
+     *
+     * @param params
+     */
+    public void setParams(Object params) {
+        this.params = params;
+    }
+
+
+    /**
+    * get 组件的额外参数（新）
+    *
+    * @return
+    */
+    public List<StringKeyValuePair> getParameters() {
+        return parameters;
+    }
+
+    /**
+    * set 组件的额外参数（新）
+    *
+    * @param parameters
+    */
+    public void setParameters(List<StringKeyValuePair> parameters) {
+        this.parameters = parameters;
+    }
+
+
+    /**
+     * get 可安装的addons
+     *
+     * @return
+     */
+    public ClusterAddon getAddonDetail() {
+        return addonDetail;
+    }
+
+    /**
+     * set 可安装的addons
+     *
+     * @param addonDetail
+     */
+    public void setAddonDetail(ClusterAddon addonDetail) {
+        this.addonDetail = addonDetail;
+    }
+
+
+
+    /**
      * set 组件名称
      *
      * @param name
@@ -89,6 +214,18 @@ public class AddonConfig  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
+
+    /**
+     * set 组件版本，非必须，未安装时填充为默认版本号
+     *
+     * @param version
+     */
+    public AddonConfig version(String version) {
+        this.version = version;
+        return this;
+    }
+
 
     /**
      * set 组件是否开启
@@ -101,4 +238,60 @@ public class AddonConfig  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 组件安装状态 not_installed,installed,installing,uninstalling,error_installed
+     *
+     * @param state
+     */
+    public AddonConfig state(String state) {
+        this.state = state;
+        return this;
+    }
+
+
+    /**
+     * set 组件的额外参数(deprecated)
+     *
+     * @param params
+     */
+    public AddonConfig params(Object params) {
+        this.params = params;
+        return this;
+    }
+
+
+    /**
+    * set 组件的额外参数（新）
+    *
+    * @param parameters
+    */
+    public AddonConfig parameters(List<StringKeyValuePair> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+
+
+    /**
+     * set 可安装的addons
+     *
+     * @param addonDetail
+     */
+    public AddonConfig addonDetail(ClusterAddon addonDetail) {
+        this.addonDetail = addonDetail;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 组件的额外参数（新）
+     *
+     * @param parameter
+     */
+    public void addParameter(StringKeyValuePair parameter) {
+        if (this.parameters == null) {
+            this.parameters = new ArrayList<>();
+        }
+        this.parameters.add(parameter);
+    }
 }

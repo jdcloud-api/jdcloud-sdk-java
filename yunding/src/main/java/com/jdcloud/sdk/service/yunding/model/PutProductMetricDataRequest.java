@@ -70,14 +70,15 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
      * Required:true
      */
     @Required
+    
     private List<DataPointX> dataPoints;
-
     /**
      * 地域ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -98,6 +99,7 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         this.appCode = appCode;
     }
 
+
     /**
      * get 资源的类型，取值vm,ip,database,storage,disk,cdn,redis,balance,nat_gw,db_ro,vpn,ddos等,新接入的产品要求与opentapi命名的产品线名称一致
      *
@@ -115,6 +117,7 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 地域信息，如 cn-north-1 等
@@ -134,6 +137,7 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         this.region = region;
     }
 
+
     /**
      * get 资源的唯一表示，一般为uuid
      *
@@ -152,23 +156,25 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         this.resourceId = resourceId;
     }
 
+
     /**
-     * get 监控数据点
-     *
-     * @return
-     */
+    * get 监控数据点
+    *
+    * @return
+    */
     public List<DataPointX> getDataPoints() {
         return dataPoints;
     }
 
     /**
-     * set 监控数据点
-     *
-     * @param dataPoints
-     */
+    * set 监控数据点
+    *
+    * @param dataPoints
+    */
     public void setDataPoints(List<DataPointX> dataPoints) {
         this.dataPoints = dataPoints;
     }
+
 
     /**
      * get 地域ID
@@ -189,6 +195,7 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 目前统一用jcloud
      *
@@ -198,6 +205,7 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 资源的类型，取值vm,ip,database,storage,disk,cdn,redis,balance,nat_gw,db_ro,vpn,ddos等,新接入的产品要求与opentapi命名的产品线名称一致
@@ -209,6 +217,7 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域信息，如 cn-north-1 等
      *
@@ -218,6 +227,7 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         this.region = region;
         return this;
     }
+
 
     /**
      * set 资源的唯一表示，一般为uuid
@@ -229,15 +239,17 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
-     * set 监控数据点
-     *
-     * @param dataPoints
-     */
+    * set 监控数据点
+    *
+    * @param dataPoints
+    */
     public PutProductMetricDataRequest dataPoints(List<DataPointX> dataPoints) {
         this.dataPoints = dataPoints;
         return this;
     }
+
 
     /**
      * set 地域ID
@@ -248,6 +260,7 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -261,5 +274,4 @@ public class PutProductMetricDataRequest extends JdcloudRequest implements java.
         }
         this.dataPoints.add(dataPoint);
     }
-
 }

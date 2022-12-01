@@ -40,6 +40,7 @@ public class DescribeSubnetResult extends JdcloudResult implements java.io.Seria
     private Subnet subnet;
 
 
+
     /**
      * get 子网资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeSubnetResult extends JdcloudResult implements java.io.Seria
     public void setSubnet(Subnet subnet) {
         this.subnet = subnet;
     }
+
 
 
     /**

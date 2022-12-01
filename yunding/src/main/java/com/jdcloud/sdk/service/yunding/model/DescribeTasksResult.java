@@ -39,37 +39,40 @@ public class DescribeTasksResult extends JdcloudResult implements java.io.Serial
     /**
      * tasks
      */
+    
     private List<TasksInfo> tasks;
 
 
     /**
-     * get tasks
-     *
-     * @return
-     */
+    * get tasks
+    *
+    * @return
+    */
     public List<TasksInfo> getTasks() {
         return tasks;
     }
 
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public void setTasks(List<TasksInfo> tasks) {
         this.tasks = tasks;
     }
 
 
+
     /**
-     * set tasks
-     *
-     * @param tasks
-     */
+    * set tasks
+    *
+    * @param tasks
+    */
     public DescribeTasksResult tasks(List<TasksInfo> tasks) {
         this.tasks = tasks;
         return this;
     }
+
 
 
     /**
@@ -83,5 +86,4 @@ public class DescribeTasksResult extends JdcloudResult implements java.io.Serial
         }
         this.tasks.add(task);
     }
-
 }

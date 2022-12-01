@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.kubernetes.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 
 /**
@@ -41,9 +43,25 @@ public class AddonConfigSpec  implements java.io.Serializable {
     private String name;
 
     /**
+     * 组件版本，非必须
+     */
+    private String version;
+
+    /**
      * 是否开启该组件，默认为false。
      */
     private Boolean enabled;
+
+    /**
+     * 组件参数(deprecated)
+     */
+    private Object params;
+
+    /**
+     * 组件的额外参数（新）
+     */
+    
+    private List<StringKeyValuePair> parameters;
 
 
     /**
@@ -63,6 +81,26 @@ public class AddonConfigSpec  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+
+    /**
+     * get 组件版本，非必须
+     *
+     * @return
+     */
+    public String getVersion() {
+        return version;
+    }
+
+    /**
+     * set 组件版本，非必须
+     *
+     * @param version
+     */
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
 
     /**
      * get 是否开启该组件，默认为false。
@@ -84,6 +122,45 @@ public class AddonConfigSpec  implements java.io.Serializable {
 
 
     /**
+     * get 组件参数(deprecated)
+     *
+     * @return
+     */
+    public Object getParams() {
+        return params;
+    }
+
+    /**
+     * set 组件参数(deprecated)
+     *
+     * @param params
+     */
+    public void setParams(Object params) {
+        this.params = params;
+    }
+
+
+    /**
+    * get 组件的额外参数（新）
+    *
+    * @return
+    */
+    public List<StringKeyValuePair> getParameters() {
+        return parameters;
+    }
+
+    /**
+    * set 组件的额外参数（新）
+    *
+    * @param parameters
+    */
+    public void setParameters(List<StringKeyValuePair> parameters) {
+        this.parameters = parameters;
+    }
+
+
+
+    /**
      * set 组件名称，目前支持customMetrics、logging
      *
      * @param name
@@ -92,6 +169,18 @@ public class AddonConfigSpec  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
+
+    /**
+     * set 组件版本，非必须
+     *
+     * @param version
+     */
+    public AddonConfigSpec version(String version) {
+        this.version = version;
+        return this;
+    }
+
 
     /**
      * set 是否开启该组件，默认为false。
@@ -104,4 +193,38 @@ public class AddonConfigSpec  implements java.io.Serializable {
     }
 
 
+    /**
+     * set 组件参数(deprecated)
+     *
+     * @param params
+     */
+    public AddonConfigSpec params(Object params) {
+        this.params = params;
+        return this;
+    }
+
+
+    /**
+    * set 组件的额外参数（新）
+    *
+    * @param parameters
+    */
+    public AddonConfigSpec parameters(List<StringKeyValuePair> parameters) {
+        this.parameters = parameters;
+        return this;
+    }
+
+
+
+    /**
+     * add item to 组件的额外参数（新）
+     *
+     * @param parameter
+     */
+    public void addParameter(StringKeyValuePair parameter) {
+        if (this.parameters == null) {
+            this.parameters = new ArrayList<>();
+        }
+        this.parameters.add(parameter);
+    }
 }

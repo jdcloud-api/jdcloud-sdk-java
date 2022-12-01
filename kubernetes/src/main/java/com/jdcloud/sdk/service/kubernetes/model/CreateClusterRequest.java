@@ -29,6 +29,9 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.kubernetes.model.NodeGroupSpec;
 import com.jdcloud.sdk.service.kubernetes.model.AddonConfigSpec;
+import com.jdcloud.sdk.service.kubernetes.model.AutoClusterNetworkSpec;
+import com.jdcloud.sdk.service.kubernetes.model.CustomizedClusterNetworkSpec;
+import com.jdcloud.sdk.service.kubernetes.model.StringKeyValuePair;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
@@ -67,40 +70,28 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     private String description;
 
     /**
-     * 默认开启 basicAuth与clientCertificate最少选择一个
-     */
-    private Boolean basicAuth;
-
-    /**
-     * 默认开启 clientCertificate
-     */
-    private Boolean clientCertificate;
-
-    /**
      * kubernetes的版本
      */
     private String version;
+
+    /**
+     * 是否是边缘计算集群
+     */
+    private Boolean isEdge;
 
     /**
      * 集群所在的az
      * Required:true
      */
     @Required
+    
     private List<String> azs;
-
     /**
      * 集群节点组
      * Required:true
      */
     @Required
     private NodeGroupSpec nodeGroup;
-
-    /**
-     * k8s的master的cidr
-     * Required:true
-     */
-    @Required
-    private String masterCidr;
 
     /**
      * 用户的AccessKey，插件调用open-api时的认证凭证
@@ -117,21 +108,37 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     private String secretKey;
 
     /**
-     * deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
-     */
-    private Boolean userMetrics;
-
-    /**
      * 集群组件配置
      */
+    
     private List<AddonConfigSpec> addonsConfig;
+    /**
+     * 集群网络配置类型，取值：auto，customized，创建集群接口合并，原CreateCusomizedCluster接口废弃
+     */
+    private String clusterNetworkType;
 
+    /**
+     * clusterNetworkType为【auto】时，此配置必须要配置
+     */
+    private AutoClusterNetworkSpec autoClusterNetworkSpec;
+
+    /**
+     * clusterNetworkType为【customized】时，此配置必须要配置
+     */
+    private CustomizedClusterNetworkSpec customizedClusterNetworkSpec;
+
+    /**
+     * 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+     */
+    
+    private List<StringKeyValuePair> clusterEnvironments;
     /**
      * 地域 ID
      * Required:true
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -152,6 +159,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.name = name;
     }
 
+
     /**
      * get 描述
      *
@@ -170,41 +178,6 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.description = description;
     }
 
-    /**
-     * get 默认开启 basicAuth与clientCertificate最少选择一个
-     *
-     * @return
-     */
-    public Boolean getBasicAuth() {
-        return basicAuth;
-    }
-
-    /**
-     * set 默认开启 basicAuth与clientCertificate最少选择一个
-     *
-     * @param basicAuth
-     */
-    public void setBasicAuth(Boolean basicAuth) {
-        this.basicAuth = basicAuth;
-    }
-
-    /**
-     * get 默认开启 clientCertificate
-     *
-     * @return
-     */
-    public Boolean getClientCertificate() {
-        return clientCertificate;
-    }
-
-    /**
-     * set 默认开启 clientCertificate
-     *
-     * @param clientCertificate
-     */
-    public void setClientCertificate(Boolean clientCertificate) {
-        this.clientCertificate = clientCertificate;
-    }
 
     /**
      * get kubernetes的版本
@@ -224,23 +197,44 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.version = version;
     }
 
+
     /**
-     * get 集群所在的az
+     * get 是否是边缘计算集群
      *
      * @return
      */
+    public Boolean getIsEdge() {
+        return isEdge;
+    }
+
+    /**
+     * set 是否是边缘计算集群
+     *
+     * @param isEdge
+     */
+    public void setIsEdge(Boolean isEdge) {
+        this.isEdge = isEdge;
+    }
+
+
+    /**
+    * get 集群所在的az
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 集群所在的az
-     *
-     * @param azs
-     */
+    * set 集群所在的az
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
+
 
     /**
      * get 集群节点组
@@ -260,23 +254,6 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.nodeGroup = nodeGroup;
     }
 
-    /**
-     * get k8s的master的cidr
-     *
-     * @return
-     */
-    public String getMasterCidr() {
-        return masterCidr;
-    }
-
-    /**
-     * set k8s的master的cidr
-     *
-     * @param masterCidr
-     */
-    public void setMasterCidr(String masterCidr) {
-        this.masterCidr = masterCidr;
-    }
 
     /**
      * get 用户的AccessKey，插件调用open-api时的认证凭证
@@ -296,6 +273,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.accessKey = accessKey;
     }
 
+
     /**
      * get 用户的SecretKey，插件调用open-api时的认证凭证
      *
@@ -314,41 +292,101 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.secretKey = secretKey;
     }
 
-    /**
-     * get deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
-     *
-     * @return
-     */
-    public Boolean getUserMetrics() {
-        return userMetrics;
-    }
 
     /**
-     * set deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
-     *
-     * @param userMetrics
-     */
-    public void setUserMetrics(Boolean userMetrics) {
-        this.userMetrics = userMetrics;
-    }
-
-    /**
-     * get 集群组件配置
-     *
-     * @return
-     */
+    * get 集群组件配置
+    *
+    * @return
+    */
     public List<AddonConfigSpec> getAddonsConfig() {
         return addonsConfig;
     }
 
     /**
-     * set 集群组件配置
-     *
-     * @param addonsConfig
-     */
+    * set 集群组件配置
+    *
+    * @param addonsConfig
+    */
     public void setAddonsConfig(List<AddonConfigSpec> addonsConfig) {
         this.addonsConfig = addonsConfig;
     }
+
+
+    /**
+     * get 集群网络配置类型，取值：auto，customized，创建集群接口合并，原CreateCusomizedCluster接口废弃
+     *
+     * @return
+     */
+    public String getClusterNetworkType() {
+        return clusterNetworkType;
+    }
+
+    /**
+     * set 集群网络配置类型，取值：auto，customized，创建集群接口合并，原CreateCusomizedCluster接口废弃
+     *
+     * @param clusterNetworkType
+     */
+    public void setClusterNetworkType(String clusterNetworkType) {
+        this.clusterNetworkType = clusterNetworkType;
+    }
+
+
+    /**
+     * get clusterNetworkType为【auto】时，此配置必须要配置
+     *
+     * @return
+     */
+    public AutoClusterNetworkSpec getAutoClusterNetworkSpec() {
+        return autoClusterNetworkSpec;
+    }
+
+    /**
+     * set clusterNetworkType为【auto】时，此配置必须要配置
+     *
+     * @param autoClusterNetworkSpec
+     */
+    public void setAutoClusterNetworkSpec(AutoClusterNetworkSpec autoClusterNetworkSpec) {
+        this.autoClusterNetworkSpec = autoClusterNetworkSpec;
+    }
+
+
+    /**
+     * get clusterNetworkType为【customized】时，此配置必须要配置
+     *
+     * @return
+     */
+    public CustomizedClusterNetworkSpec getCustomizedClusterNetworkSpec() {
+        return customizedClusterNetworkSpec;
+    }
+
+    /**
+     * set clusterNetworkType为【customized】时，此配置必须要配置
+     *
+     * @param customizedClusterNetworkSpec
+     */
+    public void setCustomizedClusterNetworkSpec(CustomizedClusterNetworkSpec customizedClusterNetworkSpec) {
+        this.customizedClusterNetworkSpec = customizedClusterNetworkSpec;
+    }
+
+
+    /**
+    * get 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    *
+    * @return
+    */
+    public List<StringKeyValuePair> getClusterEnvironments() {
+        return clusterEnvironments;
+    }
+
+    /**
+    * set 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    *
+    * @param clusterEnvironments
+    */
+    public void setClusterEnvironments(List<StringKeyValuePair> clusterEnvironments) {
+        this.clusterEnvironments = clusterEnvironments;
+    }
+
 
     /**
      * get 地域 ID
@@ -369,6 +407,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 名称（同一用户的 cluster 允许重名）
      *
@@ -378,6 +417,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.name = name;
         return this;
     }
+
 
     /**
      * set 描述
@@ -389,25 +429,6 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
-    /**
-     * set 默认开启 basicAuth与clientCertificate最少选择一个
-     *
-     * @param basicAuth
-     */
-    public CreateClusterRequest basicAuth(Boolean basicAuth) {
-        this.basicAuth = basicAuth;
-        return this;
-    }
-
-    /**
-     * set 默认开启 clientCertificate
-     *
-     * @param clientCertificate
-     */
-    public CreateClusterRequest clientCertificate(Boolean clientCertificate) {
-        this.clientCertificate = clientCertificate;
-        return this;
-    }
 
     /**
      * set kubernetes的版本
@@ -419,15 +440,28 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set 集群所在的az
+     * set 是否是边缘计算集群
      *
-     * @param azs
+     * @param isEdge
      */
+    public CreateClusterRequest isEdge(Boolean isEdge) {
+        this.isEdge = isEdge;
+        return this;
+    }
+
+
+    /**
+    * set 集群所在的az
+    *
+    * @param azs
+    */
     public CreateClusterRequest azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
+
 
     /**
      * set 集群节点组
@@ -439,15 +473,6 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
-    /**
-     * set k8s的master的cidr
-     *
-     * @param masterCidr
-     */
-    public CreateClusterRequest masterCidr(String masterCidr) {
-        this.masterCidr = masterCidr;
-        return this;
-    }
 
     /**
      * set 用户的AccessKey，插件调用open-api时的认证凭证
@@ -459,6 +484,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 用户的SecretKey，插件调用open-api时的认证凭证
      *
@@ -469,25 +495,61 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
-    /**
-     * set deprecated 在addonsConfig中同时指定，将被addonsConfig的设置覆盖 &lt;br&gt;是否启用用户自定义监控
-     *
-     * @param userMetrics
-     */
-    public CreateClusterRequest userMetrics(Boolean userMetrics) {
-        this.userMetrics = userMetrics;
-        return this;
-    }
 
     /**
-     * set 集群组件配置
-     *
-     * @param addonsConfig
-     */
+    * set 集群组件配置
+    *
+    * @param addonsConfig
+    */
     public CreateClusterRequest addonsConfig(List<AddonConfigSpec> addonsConfig) {
         this.addonsConfig = addonsConfig;
         return this;
     }
+
+
+    /**
+     * set 集群网络配置类型，取值：auto，customized，创建集群接口合并，原CreateCusomizedCluster接口废弃
+     *
+     * @param clusterNetworkType
+     */
+    public CreateClusterRequest clusterNetworkType(String clusterNetworkType) {
+        this.clusterNetworkType = clusterNetworkType;
+        return this;
+    }
+
+
+    /**
+     * set clusterNetworkType为【auto】时，此配置必须要配置
+     *
+     * @param autoClusterNetworkSpec
+     */
+    public CreateClusterRequest autoClusterNetworkSpec(AutoClusterNetworkSpec autoClusterNetworkSpec) {
+        this.autoClusterNetworkSpec = autoClusterNetworkSpec;
+        return this;
+    }
+
+
+    /**
+     * set clusterNetworkType为【customized】时，此配置必须要配置
+     *
+     * @param customizedClusterNetworkSpec
+     */
+    public CreateClusterRequest customizedClusterNetworkSpec(CustomizedClusterNetworkSpec customizedClusterNetworkSpec) {
+        this.customizedClusterNetworkSpec = customizedClusterNetworkSpec;
+        return this;
+    }
+
+
+    /**
+    * set 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    *
+    * @param clusterEnvironments
+    */
+    public CreateClusterRequest clusterEnvironments(List<StringKeyValuePair> clusterEnvironments) {
+        this.clusterEnvironments = clusterEnvironments;
+        return this;
+    }
+
 
     /**
      * set 地域 ID
@@ -498,6 +560,7 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -524,4 +587,15 @@ public class CreateClusterRequest extends JdcloudRequest implements java.io.Seri
         this.addonsConfig.add(addonsConfig);
     }
 
+    /**
+     * add item to 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+     *
+     * @param clusterEnvironment
+     */
+    public void addClusterEnvironment(StringKeyValuePair clusterEnvironment) {
+        if (this.clusterEnvironments == null) {
+            this.clusterEnvironments = new ArrayList<>();
+        }
+        this.clusterEnvironments.add(clusterEnvironment);
+    }
 }

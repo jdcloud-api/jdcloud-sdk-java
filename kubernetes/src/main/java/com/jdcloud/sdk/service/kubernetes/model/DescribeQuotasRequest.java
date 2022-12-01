@@ -38,11 +38,11 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     private static final long serialVersionUID = 1L;
 
     /**
-     * resourceTypes - 资源类型，暂时只支持[kubernetes]
+     * resourceTypes - 资源类型，暂时只支持[kubernetes、serverless-kubernetes]
 
      */
+    
     private List<Filter> filters;
-
     /**
      * Region ID
      * Required:true
@@ -51,25 +51,27 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     private String regionId;
 
 
-    /**
-     * get resourceTypes - 资源类型，暂时只支持[kubernetes]
 
-     *
-     * @return
-     */
+    /**
+    * get resourceTypes - 资源类型，暂时只支持[kubernetes、serverless-kubernetes]
+
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set resourceTypes - 资源类型，暂时只支持[kubernetes]
+    * set resourceTypes - 资源类型，暂时只支持[kubernetes、serverless-kubernetes]
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get Region ID
@@ -90,16 +92,18 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
-    /**
-     * set resourceTypes - 资源类型，暂时只支持[kubernetes]
 
-     *
-     * @param filters
-     */
+    /**
+    * set resourceTypes - 资源类型，暂时只支持[kubernetes、serverless-kubernetes]
+
+    *
+    * @param filters
+    */
     public DescribeQuotasRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set Region ID
@@ -112,8 +116,9 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
-     * add item to resourceTypes - 资源类型，暂时只支持[kubernetes]
+     * add item to resourceTypes - 资源类型，暂时只支持[kubernetes、serverless-kubernetes]
 
      *
      * @param filter
@@ -124,5 +129,4 @@ public class DescribeQuotasRequest extends JdcloudRequest implements java.io.Ser
         }
         this.filters.add(filter);
     }
-
 }

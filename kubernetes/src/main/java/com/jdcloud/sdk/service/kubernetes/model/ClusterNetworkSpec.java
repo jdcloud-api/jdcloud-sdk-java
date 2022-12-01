@@ -90,6 +90,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     private NatGatewaySpec natGateway;
 
 
+
     /**
      * get kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
      *
@@ -107,6 +108,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     public void setPublicApiServer(Boolean publicApiServer) {
         this.publicApiServer = publicApiServer;
     }
+
 
     /**
      * get master网络的cidr
@@ -126,6 +128,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         this.masterCidr = masterCidr;
     }
 
+
     /**
      * get service网络的cidr
      *
@@ -143,6 +146,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     public void setServiceCidr(String serviceCidr) {
         this.serviceCidr = serviceCidr;
     }
+
 
     /**
      * get 用户侧承载node和pod的vpc id
@@ -162,6 +166,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 初始pod的子网id
      *
@@ -179,6 +184,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     public void setPodSubnetId(String podSubnetId) {
         this.podSubnetId = podSubnetId;
     }
+
 
     /**
      * get 初始loadbalancer类型的service所创建的lb所在的subnet
@@ -198,6 +204,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         this.lbSubnetId = lbSubnetId;
     }
 
+
     /**
      * get 初始的node子网ID
      *
@@ -215,6 +222,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     public void setNodeSubnetId(String nodeSubnetId) {
         this.nodeSubnetId = nodeSubnetId;
     }
+
 
     /**
      * get nat网关配置
@@ -235,6 +243,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set kube-apiserver是否可公网访问，false则kube-apiserver不绑定公网地址，true绑定公网地址
      *
@@ -244,6 +253,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         this.publicApiServer = publicApiServer;
         return this;
     }
+
 
     /**
      * set master网络的cidr
@@ -255,6 +265,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set service网络的cidr
      *
@@ -264,6 +275,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         this.serviceCidr = serviceCidr;
         return this;
     }
+
 
     /**
      * set 用户侧承载node和pod的vpc id
@@ -275,6 +287,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 初始pod的子网id
      *
@@ -284,6 +297,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         this.podSubnetId = podSubnetId;
         return this;
     }
+
 
     /**
      * set 初始loadbalancer类型的service所创建的lb所在的subnet
@@ -295,6 +309,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 初始的node子网ID
      *
@@ -304,6 +319,7 @@ public class ClusterNetworkSpec  implements java.io.Serializable {
         this.nodeSubnetId = nodeSubnetId;
         return this;
     }
+
 
     /**
      * set nat网关配置

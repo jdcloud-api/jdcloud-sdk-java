@@ -57,13 +57,13 @@ public class Cluster  implements java.io.Serializable {
     /**
      * 集群所在的az
      */
+    
     private List<String> azs;
-
     /**
      * 节点组列表
      */
+    
     private List<NodeGroup> nodeGroups;
-
     /**
      * k8s的cluster的cidr
      */
@@ -110,9 +110,19 @@ public class Cluster  implements java.io.Serializable {
     private Boolean clientCertificate;
 
     /**
+     * 用户访问的内网ip
+     */
+    private String privateEndpoint;
+
+    /**
      * 用户访问的ip
      */
     private String endpoint;
+
+    /**
+     * IPv6地址
+     */
+    private String endpointIPV6;
 
     /**
      * endpoint的port
@@ -132,8 +142,8 @@ public class Cluster  implements java.io.Serializable {
     /**
      * 集群组件配置信息
      */
+    
     private List<AddonConfig> addonsConfig;
-
     /**
      * 是否开启集群自动升级，true 表示开启，false 表示未开启
      */
@@ -164,6 +174,17 @@ public class Cluster  implements java.io.Serializable {
      */
     private String networkMode;
 
+    /**
+     * 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+     */
+    
+    private List<StringKeyValuePair> clusterEnvironments;
+    /**
+     * 是否是边缘计算集群
+     */
+    private Boolean isEdge;
+
+
 
     /**
      * get 集群id
@@ -183,6 +204,7 @@ public class Cluster  implements java.io.Serializable {
         this.clusterId = clusterId;
     }
 
+
     /**
      * get 名称
      *
@@ -200,6 +222,7 @@ public class Cluster  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 描述
@@ -219,6 +242,7 @@ public class Cluster  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get kubernetes的版本
      *
@@ -237,41 +261,44 @@ public class Cluster  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
-     * get 集群所在的az
-     *
-     * @return
-     */
+    * get 集群所在的az
+    *
+    * @return
+    */
     public List<String> getAzs() {
         return azs;
     }
 
     /**
-     * set 集群所在的az
-     *
-     * @param azs
-     */
+    * set 集群所在的az
+    *
+    * @param azs
+    */
     public void setAzs(List<String> azs) {
         this.azs = azs;
     }
 
+
     /**
-     * get 节点组列表
-     *
-     * @return
-     */
+    * get 节点组列表
+    *
+    * @return
+    */
     public List<NodeGroup> getNodeGroups() {
         return nodeGroups;
     }
 
     /**
-     * set 节点组列表
-     *
-     * @param nodeGroups
-     */
+    * set 节点组列表
+    *
+    * @param nodeGroups
+    */
     public void setNodeGroups(List<NodeGroup> nodeGroups) {
         this.nodeGroups = nodeGroups;
     }
+
 
     /**
      * get k8s的cluster的cidr
@@ -291,6 +318,7 @@ public class Cluster  implements java.io.Serializable {
         this.clusterCidr = clusterCidr;
     }
 
+
     /**
      * get 认证信息
      *
@@ -308,6 +336,7 @@ public class Cluster  implements java.io.Serializable {
     public void setMasterAuth(MasterAuth masterAuth) {
         this.masterAuth = masterAuth;
     }
+
 
     /**
      * get 状态  [pending,running,reconciling（升级时的状态）, deleting, deleted, error]
@@ -327,6 +356,7 @@ public class Cluster  implements java.io.Serializable {
         this.clusterState = clusterState;
     }
 
+
     /**
      * get 状态变更原因
      *
@@ -344,6 +374,7 @@ public class Cluster  implements java.io.Serializable {
     public void setStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
     }
+
 
     /**
      * get 更新时间
@@ -363,6 +394,7 @@ public class Cluster  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 创建时间
      *
@@ -380,6 +412,7 @@ public class Cluster  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 用户的AccessKey，插件调用open-api时的认证凭证
@@ -399,6 +432,7 @@ public class Cluster  implements java.io.Serializable {
         this.accessKey = accessKey;
     }
 
+
     /**
      * get 基本验证方式
      *
@@ -416,6 +450,7 @@ public class Cluster  implements java.io.Serializable {
     public void setBasicAuth(Boolean basicAuth) {
         this.basicAuth = basicAuth;
     }
+
 
     /**
      * get 证书验证方式
@@ -435,6 +470,26 @@ public class Cluster  implements java.io.Serializable {
         this.clientCertificate = clientCertificate;
     }
 
+
+    /**
+     * get 用户访问的内网ip
+     *
+     * @return
+     */
+    public String getPrivateEndpoint() {
+        return privateEndpoint;
+    }
+
+    /**
+     * set 用户访问的内网ip
+     *
+     * @param privateEndpoint
+     */
+    public void setPrivateEndpoint(String privateEndpoint) {
+        this.privateEndpoint = privateEndpoint;
+    }
+
+
     /**
      * get 用户访问的ip
      *
@@ -452,6 +507,26 @@ public class Cluster  implements java.io.Serializable {
     public void setEndpoint(String endpoint) {
         this.endpoint = endpoint;
     }
+
+
+    /**
+     * get IPv6地址
+     *
+     * @return
+     */
+    public String getEndpointIPV6() {
+        return endpointIPV6;
+    }
+
+    /**
+     * set IPv6地址
+     *
+     * @param endpointIPV6
+     */
+    public void setEndpointIPV6(String endpointIPV6) {
+        this.endpointIPV6 = endpointIPV6;
+    }
+
 
     /**
      * get endpoint的port
@@ -471,6 +546,7 @@ public class Cluster  implements java.io.Serializable {
         this.endpointPort = endpointPort;
     }
 
+
     /**
      * get endpoint的dashboard port
      *
@@ -488,6 +564,7 @@ public class Cluster  implements java.io.Serializable {
     public void setDashboardPort(String dashboardPort) {
         this.dashboardPort = dashboardPort;
     }
+
 
     /**
      * get deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
@@ -507,23 +584,25 @@ public class Cluster  implements java.io.Serializable {
         this.userMetrics = userMetrics;
     }
 
+
     /**
-     * get 集群组件配置信息
-     *
-     * @return
-     */
+    * get 集群组件配置信息
+    *
+    * @return
+    */
     public List<AddonConfig> getAddonsConfig() {
         return addonsConfig;
     }
 
     /**
-     * set 集群组件配置信息
-     *
-     * @param addonsConfig
-     */
+    * set 集群组件配置信息
+    *
+    * @param addonsConfig
+    */
     public void setAddonsConfig(List<AddonConfig> addonsConfig) {
         this.addonsConfig = addonsConfig;
     }
+
 
     /**
      * get 是否开启集群自动升级，true 表示开启，false 表示未开启
@@ -543,6 +622,7 @@ public class Cluster  implements java.io.Serializable {
         this.autoUpgrade = autoUpgrade;
     }
 
+
     /**
      * get 配置集群维护策略
      *
@@ -560,6 +640,7 @@ public class Cluster  implements java.io.Serializable {
     public void setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
         this.maintenanceWindow = maintenanceWindow;
     }
+
 
     /**
      * get 集群升级计划信息, 仅展示最新一条升级计划信息
@@ -579,6 +660,7 @@ public class Cluster  implements java.io.Serializable {
         this.upgradePlan = upgradePlan;
     }
 
+
     /**
      * get 控制节点操作进度
      *
@@ -597,6 +679,7 @@ public class Cluster  implements java.io.Serializable {
         this.masterProgress = masterProgress;
     }
 
+
     /**
      * get 网络配置信息
      *
@@ -614,6 +697,7 @@ public class Cluster  implements java.io.Serializable {
     public void setClusterNetwork(ClusterNetwork clusterNetwork) {
         this.clusterNetwork = clusterNetwork;
     }
+
 
     /**
      * get 集群网络类型,可取值为auto和customized
@@ -635,6 +719,45 @@ public class Cluster  implements java.io.Serializable {
 
 
     /**
+    * get 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    *
+    * @return
+    */
+    public List<StringKeyValuePair> getClusterEnvironments() {
+        return clusterEnvironments;
+    }
+
+    /**
+    * set 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    *
+    * @param clusterEnvironments
+    */
+    public void setClusterEnvironments(List<StringKeyValuePair> clusterEnvironments) {
+        this.clusterEnvironments = clusterEnvironments;
+    }
+
+
+    /**
+     * get 是否是边缘计算集群
+     *
+     * @return
+     */
+    public Boolean getIsEdge() {
+        return isEdge;
+    }
+
+    /**
+     * set 是否是边缘计算集群
+     *
+     * @param isEdge
+     */
+    public void setIsEdge(Boolean isEdge) {
+        this.isEdge = isEdge;
+    }
+
+
+
+    /**
      * set 集群id
      *
      * @param clusterId
@@ -643,6 +766,7 @@ public class Cluster  implements java.io.Serializable {
         this.clusterId = clusterId;
         return this;
     }
+
 
     /**
      * set 名称
@@ -654,6 +778,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 描述
      *
@@ -663,6 +788,7 @@ public class Cluster  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set kubernetes的版本
@@ -674,25 +800,28 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 集群所在的az
-     *
-     * @param azs
-     */
+    * set 集群所在的az
+    *
+    * @param azs
+    */
     public Cluster azs(List<String> azs) {
         this.azs = azs;
         return this;
     }
 
+
     /**
-     * set 节点组列表
-     *
-     * @param nodeGroups
-     */
+    * set 节点组列表
+    *
+    * @param nodeGroups
+    */
     public Cluster nodeGroups(List<NodeGroup> nodeGroups) {
         this.nodeGroups = nodeGroups;
         return this;
     }
+
 
     /**
      * set k8s的cluster的cidr
@@ -704,6 +833,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 认证信息
      *
@@ -713,6 +843,7 @@ public class Cluster  implements java.io.Serializable {
         this.masterAuth = masterAuth;
         return this;
     }
+
 
     /**
      * set 状态  [pending,running,reconciling（升级时的状态）, deleting, deleted, error]
@@ -724,6 +855,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态变更原因
      *
@@ -733,6 +865,7 @@ public class Cluster  implements java.io.Serializable {
         this.stateMessage = stateMessage;
         return this;
     }
+
 
     /**
      * set 更新时间
@@ -744,6 +877,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -753,6 +887,7 @@ public class Cluster  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 用户的AccessKey，插件调用open-api时的认证凭证
@@ -764,6 +899,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 基本验证方式
      *
@@ -773,6 +909,7 @@ public class Cluster  implements java.io.Serializable {
         this.basicAuth = basicAuth;
         return this;
     }
+
 
     /**
      * set 证书验证方式
@@ -784,6 +921,18 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
+    /**
+     * set 用户访问的内网ip
+     *
+     * @param privateEndpoint
+     */
+    public Cluster privateEndpoint(String privateEndpoint) {
+        this.privateEndpoint = privateEndpoint;
+        return this;
+    }
+
+
     /**
      * set 用户访问的ip
      *
@@ -793,6 +942,18 @@ public class Cluster  implements java.io.Serializable {
         this.endpoint = endpoint;
         return this;
     }
+
+
+    /**
+     * set IPv6地址
+     *
+     * @param endpointIPV6
+     */
+    public Cluster endpointIPV6(String endpointIPV6) {
+        this.endpointIPV6 = endpointIPV6;
+        return this;
+    }
+
 
     /**
      * set endpoint的port
@@ -804,6 +965,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set endpoint的dashboard port
      *
@@ -813,6 +975,7 @@ public class Cluster  implements java.io.Serializable {
         this.dashboardPort = dashboardPort;
         return this;
     }
+
 
     /**
      * set deprecated 优先以addonsConfig中的配置为准 &lt;br&gt;用户是否启用集群自定义监控，true 表示开启用，false 表示未开启用
@@ -824,15 +987,17 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 集群组件配置信息
-     *
-     * @param addonsConfig
-     */
+    * set 集群组件配置信息
+    *
+    * @param addonsConfig
+    */
     public Cluster addonsConfig(List<AddonConfig> addonsConfig) {
         this.addonsConfig = addonsConfig;
         return this;
     }
+
 
     /**
      * set 是否开启集群自动升级，true 表示开启，false 表示未开启
@@ -844,6 +1009,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 配置集群维护策略
      *
@@ -853,6 +1019,7 @@ public class Cluster  implements java.io.Serializable {
         this.maintenanceWindow = maintenanceWindow;
         return this;
     }
+
 
     /**
      * set 集群升级计划信息, 仅展示最新一条升级计划信息
@@ -864,6 +1031,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 控制节点操作进度
      *
@@ -873,6 +1041,7 @@ public class Cluster  implements java.io.Serializable {
         this.masterProgress = masterProgress;
         return this;
     }
+
 
     /**
      * set 网络配置信息
@@ -884,6 +1053,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 集群网络类型,可取值为auto和customized
      *
@@ -893,6 +1063,29 @@ public class Cluster  implements java.io.Serializable {
         this.networkMode = networkMode;
         return this;
     }
+
+
+    /**
+    * set 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+    *
+    * @param clusterEnvironments
+    */
+    public Cluster clusterEnvironments(List<StringKeyValuePair> clusterEnvironments) {
+        this.clusterEnvironments = clusterEnvironments;
+        return this;
+    }
+
+
+    /**
+     * set 是否是边缘计算集群
+     *
+     * @param isEdge
+     */
+    public Cluster isEdge(Boolean isEdge) {
+        this.isEdge = isEdge;
+        return this;
+    }
+
 
 
     /**
@@ -931,4 +1124,15 @@ public class Cluster  implements java.io.Serializable {
         this.addonsConfig.add(addonsConfig);
     }
 
+    /**
+     * add item to 用户自定义的集群的环境信息，会影响到创建集群时的组件模版的渲染
+     *
+     * @param clusterEnvironment
+     */
+    public void addClusterEnvironment(StringKeyValuePair clusterEnvironment) {
+        if (this.clusterEnvironments == null) {
+            this.clusterEnvironments = new ArrayList<>();
+        }
+        this.clusterEnvironments.add(clusterEnvironment);
+    }
 }

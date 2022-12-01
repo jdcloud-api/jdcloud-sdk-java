@@ -63,6 +63,7 @@ public class CreateRdsDatabaseRequest extends JdcloudRequest implements java.io.
     private String instanceId;
 
 
+
     /**
      * get 数据库名，数据库名称的限制请参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -80,6 +81,7 @@ public class CreateRdsDatabaseRequest extends JdcloudRequest implements java.io.
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 数据库的字符集名，当前支持的字符集请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -99,6 +101,7 @@ public class CreateRdsDatabaseRequest extends JdcloudRequest implements java.io.
         this.characterSetName = characterSetName;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -116,6 +119,7 @@ public class CreateRdsDatabaseRequest extends JdcloudRequest implements java.io.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -136,6 +140,7 @@ public class CreateRdsDatabaseRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 数据库名，数据库名称的限制请参考[帮助中心文档](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -145,6 +150,7 @@ public class CreateRdsDatabaseRequest extends JdcloudRequest implements java.io.
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 数据库的字符集名，当前支持的字符集请查看[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -156,6 +162,7 @@ public class CreateRdsDatabaseRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -165,6 +172,7 @@ public class CreateRdsDatabaseRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

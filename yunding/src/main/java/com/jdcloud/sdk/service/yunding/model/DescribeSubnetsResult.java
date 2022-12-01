@@ -39,31 +39,33 @@ public class DescribeSubnetsResult extends JdcloudResult implements java.io.Seri
     /**
      * subnets
      */
+    
     private List<Subnet> subnets;
-
     /**
      * 总数量
      */
     private Number totalCount;
 
 
+
     /**
-     * get subnets
-     *
-     * @return
-     */
+    * get subnets
+    *
+    * @return
+    */
     public List<Subnet> getSubnets() {
         return subnets;
     }
 
     /**
-     * set subnets
-     *
-     * @param subnets
-     */
+    * set subnets
+    *
+    * @param subnets
+    */
     public void setSubnets(List<Subnet> subnets) {
         this.subnets = subnets;
     }
+
 
     /**
      * get 总数量
@@ -84,15 +86,17 @@ public class DescribeSubnetsResult extends JdcloudResult implements java.io.Seri
     }
 
 
+
     /**
-     * set subnets
-     *
-     * @param subnets
-     */
+    * set subnets
+    *
+    * @param subnets
+    */
     public DescribeSubnetsResult subnets(List<Subnet> subnets) {
         this.subnets = subnets;
         return this;
     }
+
 
     /**
      * set 总数量
@@ -103,6 +107,7 @@ public class DescribeSubnetsResult extends JdcloudResult implements java.io.Seri
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeSubnetsResult extends JdcloudResult implements java.io.Seri
         }
         this.subnets.add(subnet);
     }
-
 }
