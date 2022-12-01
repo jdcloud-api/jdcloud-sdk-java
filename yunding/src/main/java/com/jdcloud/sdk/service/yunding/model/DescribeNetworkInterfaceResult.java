@@ -40,6 +40,7 @@ public class DescribeNetworkInterfaceResult extends JdcloudResult implements jav
     private NetworkInterface networkInterface;
 
 
+
     /**
      * get networkInterface资源信息
      *
@@ -57,6 +58,7 @@ public class DescribeNetworkInterfaceResult extends JdcloudResult implements jav
     public void setNetworkInterface(NetworkInterface networkInterface) {
         this.networkInterface = networkInterface;
     }
+
 
 
     /**

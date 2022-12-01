@@ -39,31 +39,33 @@ public class DescribeRdsAccountsResult extends JdcloudResult implements java.io.
     /**
      * accounts
      */
+    
     private List<Account> accounts;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get accounts
-     *
-     * @return
-     */
+    * get accounts
+    *
+    * @return
+    */
     public List<Account> getAccounts() {
         return accounts;
     }
 
     /**
-     * set accounts
-     *
-     * @param accounts
-     */
+    * set accounts
+    *
+    * @param accounts
+    */
     public void setAccounts(List<Account> accounts) {
         this.accounts = accounts;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeRdsAccountsResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
-     * set accounts
-     *
-     * @param accounts
-     */
+    * set accounts
+    *
+    * @param accounts
+    */
     public DescribeRdsAccountsResult accounts(List<Account> accounts) {
         this.accounts = accounts;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeRdsAccountsResult extends JdcloudResult implements java.io.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeRdsAccountsResult extends JdcloudResult implements java.io.
         }
         this.accounts.add(account);
     }
-
 }

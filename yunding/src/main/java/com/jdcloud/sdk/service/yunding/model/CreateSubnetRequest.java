@@ -66,14 +66,9 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     private String description;
 
     /**
-     * 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     * 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      */
-    private String subnetType;
-
-    /**
-     * 子网可用区，边缘子网必须指定可用区
-     */
-    private String az;
+    private Integer ipMaskLen;
 
     /**
      * Region ID
@@ -81,6 +76,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -101,6 +97,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
      *
@@ -118,6 +115,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     public void setSubnetName(String subnetName) {
         this.subnetName = subnetName;
     }
+
 
     /**
      * get 子网网段，vpc内子网网段不能重叠，cidr的取值范围：10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间，如果vpc含有cidr，则必须为vpc所在cidr的子网
@@ -137,6 +135,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.addressPrefix = addressPrefix;
     }
 
+
     /**
      * get 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
      *
@@ -154,6 +153,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     public void setRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
     }
+
 
     /**
      * get 子网描述信息,允许输入UTF-8编码下的全部字符，不超过256字符。
@@ -173,41 +173,25 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.description = description;
     }
 
+
     /**
-     * get 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     * get 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      *
      * @return
      */
-    public String getSubnetType() {
-        return subnetType;
+    public Integer getIpMaskLen() {
+        return ipMaskLen;
     }
 
     /**
-     * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      *
-     * @param subnetType
+     * @param ipMaskLen
      */
-    public void setSubnetType(String subnetType) {
-        this.subnetType = subnetType;
+    public void setIpMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
     }
 
-    /**
-     * get 子网可用区，边缘子网必须指定可用区
-     *
-     * @return
-     */
-    public String getAz() {
-        return az;
-    }
-
-    /**
-     * set 子网可用区，边缘子网必须指定可用区
-     *
-     * @param az
-     */
-    public void setAz(String az) {
-        this.az = az;
-    }
 
     /**
      * get Region ID
@@ -228,6 +212,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
     }
 
 
+
     /**
      * set 子网所属vpc的Id
      *
@@ -237,6 +222,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 子网名称,只允许输入中文、数字、大小写字母、英文下划线“_”及中划线“-”，不允许为空且不超过32字符。
@@ -248,6 +234,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 子网网段，vpc内子网网段不能重叠，cidr的取值范围：10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间，如果vpc含有cidr，则必须为vpc所在cidr的子网
      *
@@ -257,6 +244,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         this.addressPrefix = addressPrefix;
         return this;
     }
+
 
     /**
      * set 子网关联的路由表Id, 默认为vpc的默认路由表,子网关联路由表需检查路由表中已绑定的子网与本子网类型是否一致（一致标准为：或者都为标准子网，或者都为相同边缘可用区的边缘子网）
@@ -268,6 +256,7 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
      * set 子网描述信息,允许输入UTF-8编码下的全部字符，不超过256字符。
      *
@@ -278,25 +267,17 @@ public class CreateSubnetRequest extends JdcloudRequest implements java.io.Seria
         return this;
     }
 
+
     /**
-     * set 子网类型，取值：standard(标准子网)，edge(边缘子网)
+     * set 子网内预留网段掩码长度，此网段IP地址按照单个申请，子网内其余部分IP地址以网段形式分配。此参数非必选，缺省值为0，代表子网内所有IP地址都按照单个申请
      *
-     * @param subnetType
+     * @param ipMaskLen
      */
-    public CreateSubnetRequest subnetType(String subnetType) {
-        this.subnetType = subnetType;
+    public CreateSubnetRequest ipMaskLen(Integer ipMaskLen) {
+        this.ipMaskLen = ipMaskLen;
         return this;
     }
 
-    /**
-     * set 子网可用区，边缘子网必须指定可用区
-     *
-     * @param az
-     */
-    public CreateSubnetRequest az(String az) {
-        this.az = az;
-        return this;
-    }
 
     /**
      * set Region ID

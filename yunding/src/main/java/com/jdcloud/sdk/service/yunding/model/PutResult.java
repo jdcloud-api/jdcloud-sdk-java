@@ -44,6 +44,7 @@ public class PutResult extends JdcloudResult implements java.io.Serializable {
     private Integer success;
 
 
+
     /**
      * get 失败数量
      *
@@ -61,6 +62,7 @@ public class PutResult extends JdcloudResult implements java.io.Serializable {
     public void setFailed(Integer failed) {
         this.failed = failed;
     }
+
 
     /**
      * get 成功数量
@@ -81,6 +83,7 @@ public class PutResult extends JdcloudResult implements java.io.Serializable {
     }
 
 
+
     /**
      * set 失败数量
      *
@@ -90,6 +93,7 @@ public class PutResult extends JdcloudResult implements java.io.Serializable {
         this.failed = failed;
         return this;
     }
+
 
     /**
      * set 成功数量

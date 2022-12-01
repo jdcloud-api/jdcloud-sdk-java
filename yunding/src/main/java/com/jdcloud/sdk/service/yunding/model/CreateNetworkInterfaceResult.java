@@ -39,6 +39,7 @@ public class CreateNetworkInterfaceResult extends JdcloudResult implements java.
     private String networkInterfaceId;
 
 
+
     /**
      * get 弹性网卡Id
      *
@@ -56,6 +57,7 @@ public class CreateNetworkInterfaceResult extends JdcloudResult implements java.
     public void setNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
+
 
 
     /**

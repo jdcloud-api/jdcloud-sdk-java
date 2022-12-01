@@ -44,6 +44,7 @@ public class DescribeInstanceInfoResult extends JdcloudResult implements java.io
     private String internalDns;
 
 
+
     /**
      * get 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -61,6 +62,7 @@ public class DescribeInstanceInfoResult extends JdcloudResult implements java.io
     public void setInstanceStatus(String instanceStatus) {
         this.instanceStatus = instanceStatus;
     }
+
 
     /**
      * get 内部floatIP的DNS，目前主要给云鼎使用，支持MySQL，SQL Server
@@ -81,6 +83,7 @@ public class DescribeInstanceInfoResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
      * set 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -90,6 +93,7 @@ public class DescribeInstanceInfoResult extends JdcloudResult implements java.io
         this.instanceStatus = instanceStatus;
         return this;
     }
+
 
     /**
      * set 内部floatIP的DNS，目前主要给云鼎使用，支持MySQL，SQL Server

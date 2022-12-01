@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.vm.model.InstanceDiskAttachment;
 import com.jdcloud.sdk.service.vm.model.InstanceNetworkInterfaceAttachment;
 import com.jdcloud.sdk.service.charge.model.Charge;
 import com.jdcloud.sdk.service.vm.model.Ag;
-import com.jdcloud.sdk.service.disk.model.Tag;
+import com.jdcloud.sdk.service.vm.model.Tag;
 
 /**
  * instance
@@ -102,8 +102,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * 数据盘配置
      */
+    
     private List<InstanceDiskAttachment> dataDisks;
-
     /**
      * 主网卡配置
      */
@@ -112,8 +112,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * 辅助网卡配置
      */
+    
     private List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces;
-
     /**
      * 创建时间
      */
@@ -127,8 +127,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * 密钥对名称
      */
+    
     private List<String> keyNames;
-
     /**
      * 计费信息
      */
@@ -147,8 +147,8 @@ public class Instance  implements java.io.Serializable {
     /**
      * Tag信息
      */
+    
     private List<Tag> tags;
-
     /**
      * vpc名称
      */
@@ -163,6 +163,7 @@ public class Instance  implements java.io.Serializable {
      * 创建主机所用镜像概览
      */
     private VmImageOverview imageOverview;
+
 
 
     /**
@@ -183,6 +184,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 云主机名称
      *
@@ -200,6 +202,7 @@ public class Instance  implements java.io.Serializable {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 实例规格
@@ -219,6 +222,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 主网卡所属VPC的ID
      *
@@ -236,6 +240,7 @@ public class Instance  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 主网卡所属子网的ID
@@ -255,6 +260,7 @@ public class Instance  implements java.io.Serializable {
         this.subnetId = subnetId;
     }
 
+
     /**
      * get 主网卡主IP地址
      *
@@ -272,6 +278,7 @@ public class Instance  implements java.io.Serializable {
     public void setPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
     }
+
 
     /**
      * get 主网卡主IP绑定弹性IP的ID
@@ -291,6 +298,7 @@ public class Instance  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
     }
 
+
     /**
      * get 主网卡主IP绑定弹性IP的地址
      *
@@ -308,6 +316,7 @@ public class Instance  implements java.io.Serializable {
     public void setElasticIpAddress(String elasticIpAddress) {
         this.elasticIpAddress = elasticIpAddress;
     }
+
 
     /**
      * get 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
@@ -327,6 +336,7 @@ public class Instance  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 云主机描述
      *
@@ -344,6 +354,7 @@ public class Instance  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 镜像ID
@@ -363,6 +374,7 @@ public class Instance  implements java.io.Serializable {
         this.imageId = imageId;
     }
 
+
     /**
      * get 系统盘配置
      *
@@ -381,23 +393,25 @@ public class Instance  implements java.io.Serializable {
         this.systemDisk = systemDisk;
     }
 
+
     /**
-     * get 数据盘配置
-     *
-     * @return
-     */
+    * get 数据盘配置
+    *
+    * @return
+    */
     public List<InstanceDiskAttachment> getDataDisks() {
         return dataDisks;
     }
 
     /**
-     * set 数据盘配置
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置
+    *
+    * @param dataDisks
+    */
     public void setDataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
     }
+
 
     /**
      * get 主网卡配置
@@ -417,23 +431,25 @@ public class Instance  implements java.io.Serializable {
         this.primaryNetworkInterface = primaryNetworkInterface;
     }
 
+
     /**
-     * get 辅助网卡配置
-     *
-     * @return
-     */
+    * get 辅助网卡配置
+    *
+    * @return
+    */
     public List<InstanceNetworkInterfaceAttachment> getSecondaryNetworkInterfaces() {
         return secondaryNetworkInterfaces;
     }
 
     /**
-     * set 辅助网卡配置
-     *
-     * @param secondaryNetworkInterfaces
-     */
+    * set 辅助网卡配置
+    *
+    * @param secondaryNetworkInterfaces
+    */
     public void setSecondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
     }
+
 
     /**
      * get 创建时间
@@ -453,6 +469,7 @@ public class Instance  implements java.io.Serializable {
         this.launchTime = launchTime;
     }
 
+
     /**
      * get 云主机所在可用区
      *
@@ -471,23 +488,25 @@ public class Instance  implements java.io.Serializable {
         this.az = az;
     }
 
+
     /**
-     * get 密钥对名称
-     *
-     * @return
-     */
+    * get 密钥对名称
+    *
+    * @return
+    */
     public List<String> getKeyNames() {
         return keyNames;
     }
 
     /**
-     * set 密钥对名称
-     *
-     * @param keyNames
-     */
+    * set 密钥对名称
+    *
+    * @param keyNames
+    */
     public void setKeyNames(List<String> keyNames) {
         this.keyNames = keyNames;
     }
+
 
     /**
      * get 计费信息
@@ -507,6 +526,7 @@ public class Instance  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
      * get 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
      *
@@ -524,6 +544,7 @@ public class Instance  implements java.io.Serializable {
     public void setAg(Ag ag) {
         this.ag = ag;
     }
+
 
     /**
      * get 高可用组中的错误域
@@ -543,23 +564,25 @@ public class Instance  implements java.io.Serializable {
         this.faultDomain = faultDomain;
     }
 
+
     /**
-     * get Tag信息
-     *
-     * @return
-     */
+    * get Tag信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get vpc名称
@@ -579,6 +602,7 @@ public class Instance  implements java.io.Serializable {
         this.vpcName = vpcName;
     }
 
+
     /**
      * get 子网名称
      *
@@ -596,6 +620,7 @@ public class Instance  implements java.io.Serializable {
     public void setSubnetName(String subnetName) {
         this.subnetName = subnetName;
     }
+
 
     /**
      * get 创建主机所用镜像概览
@@ -616,6 +641,7 @@ public class Instance  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 云主机ID
      *
@@ -625,6 +651,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 云主机名称
@@ -636,6 +663,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例规格
      *
@@ -645,6 +673,7 @@ public class Instance  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 主网卡所属VPC的ID
@@ -656,6 +685,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡所属子网的ID
      *
@@ -665,6 +695,7 @@ public class Instance  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 主网卡主IP地址
@@ -676,6 +707,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 主网卡主IP绑定弹性IP的ID
      *
@@ -685,6 +717,7 @@ public class Instance  implements java.io.Serializable {
         this.elasticIpId = elasticIpId;
         return this;
     }
+
 
     /**
      * set 主网卡主IP绑定弹性IP的地址
@@ -696,6 +729,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机状态，&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/vm_status&quot;&gt;参考云主机状态&lt;/a&gt;
      *
@@ -705,6 +739,7 @@ public class Instance  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 云主机描述
@@ -716,6 +751,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 镜像ID
      *
@@ -725,6 +761,7 @@ public class Instance  implements java.io.Serializable {
         this.imageId = imageId;
         return this;
     }
+
 
     /**
      * set 系统盘配置
@@ -736,15 +773,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 数据盘配置
-     *
-     * @param dataDisks
-     */
+    * set 数据盘配置
+    *
+    * @param dataDisks
+    */
     public Instance dataDisks(List<InstanceDiskAttachment> dataDisks) {
         this.dataDisks = dataDisks;
         return this;
     }
+
 
     /**
      * set 主网卡配置
@@ -756,15 +795,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 辅助网卡配置
-     *
-     * @param secondaryNetworkInterfaces
-     */
+    * set 辅助网卡配置
+    *
+    * @param secondaryNetworkInterfaces
+    */
     public Instance secondaryNetworkInterfaces(List<InstanceNetworkInterfaceAttachment> secondaryNetworkInterfaces) {
         this.secondaryNetworkInterfaces = secondaryNetworkInterfaces;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -776,6 +817,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云主机所在可用区
      *
@@ -786,15 +828,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 密钥对名称
-     *
-     * @param keyNames
-     */
+    * set 密钥对名称
+    *
+    * @param keyNames
+    */
     public Instance keyNames(List<String> keyNames) {
         this.keyNames = keyNames;
         return this;
     }
+
 
     /**
      * set 计费信息
@@ -806,6 +850,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 高可用组，如果创建云主机使用了高可用组，此处可展示高可用组名称
      *
@@ -815,6 +860,7 @@ public class Instance  implements java.io.Serializable {
         this.ag = ag;
         return this;
     }
+
 
     /**
      * set 高可用组中的错误域
@@ -826,15 +872,17 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set Tag信息
-     *
-     * @param tags
-     */
+    * set Tag信息
+    *
+    * @param tags
+    */
     public Instance tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set vpc名称
@@ -846,6 +894,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网名称
      *
@@ -856,6 +905,7 @@ public class Instance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建主机所用镜像概览
      *
@@ -865,6 +915,7 @@ public class Instance  implements java.io.Serializable {
         this.imageOverview = imageOverview;
         return this;
     }
+
 
 
     /**
@@ -914,5 +965,4 @@ public class Instance  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

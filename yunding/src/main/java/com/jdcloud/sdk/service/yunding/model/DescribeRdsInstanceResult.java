@@ -40,6 +40,7 @@ public class DescribeRdsInstanceResult extends JdcloudResult implements java.io.
     private DBInstanceAttribute dbInstanceAttributes;
 
 
+
     /**
      * get dbInstanceAttributes
      *
@@ -57,6 +58,7 @@ public class DescribeRdsInstanceResult extends JdcloudResult implements java.io.
     public void setDbInstanceAttributes(DBInstanceAttribute dbInstanceAttributes) {
         this.dbInstanceAttributes = dbInstanceAttributes;
     }
+
 
 
     /**

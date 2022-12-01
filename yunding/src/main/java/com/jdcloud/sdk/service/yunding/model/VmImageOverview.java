@@ -43,6 +43,7 @@ public class VmImageOverview  implements java.io.Serializable {
     private String platform;
 
 
+
     /**
      * get 镜像名称
      *
@@ -60,6 +61,7 @@ public class VmImageOverview  implements java.io.Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
 
     /**
      * get 平台信息
@@ -80,6 +82,7 @@ public class VmImageOverview  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 镜像名称
      *
@@ -89,6 +92,7 @@ public class VmImageOverview  implements java.io.Serializable {
         this.name = name;
         return this;
     }
+
 
     /**
      * set 平台信息

@@ -64,6 +64,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
     private String instanceId;
 
 
+
     /**
      * get 数据库名。如果不指定数据库名，则返回所有数据库列表&lt;br&gt;- **MySQL：不支持该字段**&lt;br&gt;- **SQL Server：支持该字段**
      *
@@ -81,6 +82,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
     public void setDbName(String dbName) {
         this.dbName = dbName;
     }
+
 
     /**
      * get 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
@@ -100,6 +102,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
      *
@@ -118,6 +121,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -135,6 +139,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
@@ -155,6 +160,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 数据库名。如果不指定数据库名，则返回所有数据库列表&lt;br&gt;- **MySQL：不支持该字段**&lt;br&gt;- **SQL Server：支持该字段**
      *
@@ -164,6 +170,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
         this.dbName = dbName;
         return this;
     }
+
 
     /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
@@ -175,6 +182,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
      *
@@ -185,6 +193,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -194,6 +203,7 @@ public class DescribeRdsDatabasesRequest extends JdcloudRequest implements java.
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set RDS 实例ID，唯一标识一个RDS实例

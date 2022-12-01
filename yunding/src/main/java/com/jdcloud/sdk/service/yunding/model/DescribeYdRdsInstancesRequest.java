@@ -50,6 +50,7 @@ public class DescribeYdRdsInstancesRequest extends JdcloudRequest implements jav
     private String regionId;
 
 
+
     /**
      * get 应用appKey;
      *
@@ -67,6 +68,7 @@ public class DescribeYdRdsInstancesRequest extends JdcloudRequest implements jav
     public void setAppKey(String appKey) {
         this.appKey = appKey;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -87,6 +89,7 @@ public class DescribeYdRdsInstancesRequest extends JdcloudRequest implements jav
     }
 
 
+
     /**
      * set 应用appKey;
      *
@@ -96,6 +99,7 @@ public class DescribeYdRdsInstancesRequest extends JdcloudRequest implements jav
         this.appKey = appKey;
         return this;
     }
+
 
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)

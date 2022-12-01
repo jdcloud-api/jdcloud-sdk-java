@@ -68,6 +68,7 @@ public class Cluster  implements java.io.Serializable {
     private String dbVersion;
 
 
+
     /**
      * get id
      *
@@ -85,6 +86,7 @@ public class Cluster  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get 实例名称
@@ -104,6 +106,7 @@ public class Cluster  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 数据中心
      *
@@ -121,6 +124,7 @@ public class Cluster  implements java.io.Serializable {
     public void setDataCenter(String dataCenter) {
         this.dataCenter = dataCenter;
     }
+
 
     /**
      * get 域名
@@ -140,6 +144,7 @@ public class Cluster  implements java.io.Serializable {
         this.domain = domain;
     }
 
+
     /**
      * get 端口号
      *
@@ -158,6 +163,7 @@ public class Cluster  implements java.io.Serializable {
         this.connectionPort = connectionPort;
     }
 
+
     /**
      * get 数据库引擎
      *
@@ -175,6 +181,7 @@ public class Cluster  implements java.io.Serializable {
     public void setDbEngine(String dbEngine) {
         this.dbEngine = dbEngine;
     }
+
 
     /**
      * get 数据库版本
@@ -195,6 +202,7 @@ public class Cluster  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -204,6 +212,7 @@ public class Cluster  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 实例名称
@@ -215,6 +224,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据中心
      *
@@ -224,6 +234,7 @@ public class Cluster  implements java.io.Serializable {
         this.dataCenter = dataCenter;
         return this;
     }
+
 
     /**
      * set 域名
@@ -235,6 +246,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 端口号
      *
@@ -245,6 +257,7 @@ public class Cluster  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 数据库引擎
      *
@@ -254,6 +267,7 @@ public class Cluster  implements java.io.Serializable {
         this.dbEngine = dbEngine;
         return this;
     }
+
 
     /**
      * set 数据库版本

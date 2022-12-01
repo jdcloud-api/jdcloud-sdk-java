@@ -67,6 +67,9 @@ import com.jdcloud.sdk.service.yunding.client.DescribeRdsDatabasesExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeNetworkInterfaceExecutor;
+import com.jdcloud.sdk.service.yunding.model.AttachNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.yunding.model.AttachNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.yunding.client.AttachNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.yunding.model.PutRequest;
 import com.jdcloud.sdk.service.yunding.model.PutResponse;
 import com.jdcloud.sdk.service.yunding.client.PutExecutor;
@@ -88,12 +91,18 @@ import com.jdcloud.sdk.service.yunding.client.CreateRdsDatabaseExecutor;
 import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeRequest;
 import com.jdcloud.sdk.service.yunding.model.GrantRdsPrivilegeResponse;
 import com.jdcloud.sdk.service.yunding.client.GrantRdsPrivilegeExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeVmInstancesRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeVmInstancesResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeVmInstancesExecutor;
 import com.jdcloud.sdk.service.yunding.model.CreateNetworkInterfaceRequest;
 import com.jdcloud.sdk.service.yunding.model.CreateNetworkInterfaceResponse;
 import com.jdcloud.sdk.service.yunding.client.CreateNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeSubnetRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeSubnetResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeSubnetExecutor;
+import com.jdcloud.sdk.service.yunding.model.DetachNetworkInterfaceRequest;
+import com.jdcloud.sdk.service.yunding.model.DetachNetworkInterfaceResponse;
+import com.jdcloud.sdk.service.yunding.client.DetachNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeRdsInstancesResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeRdsInstancesExecutor;
@@ -103,6 +112,9 @@ import com.jdcloud.sdk.service.yunding.client.DeleteNetworkInterfaceExecutor;
 import com.jdcloud.sdk.service.yunding.model.DescribeInstanceInfoRequest;
 import com.jdcloud.sdk.service.yunding.model.DescribeInstanceInfoResponse;
 import com.jdcloud.sdk.service.yunding.client.DescribeInstanceInfoExecutor;
+import com.jdcloud.sdk.service.yunding.model.DescribeVmInstanceRequest;
+import com.jdcloud.sdk.service.yunding.model.DescribeVmInstanceResponse;
+import com.jdcloud.sdk.service.yunding.client.DescribeVmInstanceExecutor;
 import com.jdcloud.sdk.service.yunding.model.CreateRdsAccountRequest;
 import com.jdcloud.sdk.service.yunding.model.CreateRdsAccountResponse;
 import com.jdcloud.sdk.service.yunding.client.CreateRdsAccountExecutor;
@@ -120,7 +132,7 @@ public class YundingClient extends JdcloudClient {
 
     public final static String ApiVersion = "v2";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "yunding.jdcloud-api.com";
     public final static String ServiceName = "yunding";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -296,6 +308,22 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
+     * 云主机绑定一块弹性网卡。&lt;br&gt;
+云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
+弹性网卡上如果绑定了弹性公网IP，那么其所在az需要与云主机的az保持一致，或者为全可用区型弹性公网IP，才可挂载该网卡。&lt;br&gt;
+云主机挂载弹性网卡的数量，不能超过实例规格的限制。可查询&lt;a href&#x3D;&quot;http://docs.jdcloud.com/virtual-machines/api/describeinstancetypes&quot;&gt;DescribeInstanceTypes&lt;/a&gt;接口获得指定规格可挂载弹性网卡的数量上限。&lt;br&gt;
+弹性网卡与云主机必须在相同vpc下。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public AttachNetworkInterfaceResponse attachNetworkInterface(AttachNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new AttachNetworkInterfaceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 监控数据上报。
      *
      * @param request
@@ -373,6 +401,17 @@ public class YundingClient extends JdcloudClient {
     }
 
     /**
+     * 批量查询云主机列表信息&lt;br&gt;此接口支持分页查询，默认每页20条。
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVmInstancesResponse describeVmInstances(DescribeVmInstancesRequest request) throws JdcloudSdkException {
+        return new DescribeVmInstancesExecutor().client(this).execute(request);
+    }
+
+    /**
      * 创建网卡接口，只能创建辅助网卡
      *
      * @param request
@@ -392,6 +431,20 @@ public class YundingClient extends JdcloudClient {
      */
     public DescribeSubnetResponse describeSubnet(DescribeSubnetRequest request) throws JdcloudSdkException {
         return new DescribeSubnetExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 云主机缷载一块弹性网卡。&lt;br&gt;
+云主机状态必须为&lt;b&gt;running&lt;/b&gt;或&lt;b&gt;stopped&lt;/b&gt;状态，并且没有正在进行中的任务才可操作。&lt;br&gt;
+不能缷载主网卡。
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DetachNetworkInterfaceResponse detachNetworkInterface(DetachNetworkInterfaceRequest request) throws JdcloudSdkException {
+        return new DetachNetworkInterfaceExecutor().client(this).execute(request);
     }
 
     /**
@@ -425,6 +478,17 @@ public class YundingClient extends JdcloudClient {
      */
     public DescribeInstanceInfoResponse describeInstanceInfo(DescribeInstanceInfoRequest request) throws JdcloudSdkException {
         return new DescribeInstanceInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询一台云主机的详细信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeVmInstanceResponse describeVmInstance(DescribeVmInstanceRequest request) throws JdcloudSdkException {
+        return new DescribeVmInstanceExecutor().client(this).execute(request);
     }
 
     /**

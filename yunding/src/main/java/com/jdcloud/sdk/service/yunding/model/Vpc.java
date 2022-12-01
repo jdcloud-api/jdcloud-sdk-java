@@ -58,18 +58,18 @@ public class Vpc  implements java.io.Serializable {
     /**
      * 同一vpc下的acl id 列表
      */
+    
     private List<String> aclIds;
-
     /**
      * routeTableIds
      */
+    
     private List<String> routeTableIds;
-
     /**
      * 私有网络包含的子网列表
      */
+    
     private List<Subnet> subnets;
-
     /**
      * vpc创建时间
      */
@@ -116,6 +116,7 @@ public class Vpc  implements java.io.Serializable {
     private String appKey;
 
 
+
     /**
      * get Vpc的Id
      *
@@ -133,6 +134,7 @@ public class Vpc  implements java.io.Serializable {
     public void setVpcId(String vpcId) {
         this.vpcId = vpcId;
     }
+
 
     /**
      * get 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
@@ -152,6 +154,7 @@ public class Vpc  implements java.io.Serializable {
         this.addressPrefix = addressPrefix;
     }
 
+
     /**
      * get VPC 描述，取值范围：1~120个字符
      *
@@ -169,6 +172,7 @@ public class Vpc  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
@@ -188,59 +192,63 @@ public class Vpc  implements java.io.Serializable {
         this.vpcName = vpcName;
     }
 
+
     /**
-     * get 同一vpc下的acl id 列表
-     *
-     * @return
-     */
+    * get 同一vpc下的acl id 列表
+    *
+    * @return
+    */
     public List<String> getAclIds() {
         return aclIds;
     }
 
     /**
-     * set 同一vpc下的acl id 列表
-     *
-     * @param aclIds
-     */
+    * set 同一vpc下的acl id 列表
+    *
+    * @param aclIds
+    */
     public void setAclIds(List<String> aclIds) {
         this.aclIds = aclIds;
     }
 
+
     /**
-     * get routeTableIds
-     *
-     * @return
-     */
+    * get routeTableIds
+    *
+    * @return
+    */
     public List<String> getRouteTableIds() {
         return routeTableIds;
     }
 
     /**
-     * set routeTableIds
-     *
-     * @param routeTableIds
-     */
+    * set routeTableIds
+    *
+    * @param routeTableIds
+    */
     public void setRouteTableIds(List<String> routeTableIds) {
         this.routeTableIds = routeTableIds;
     }
 
+
     /**
-     * get 私有网络包含的子网列表
-     *
-     * @return
-     */
+    * get 私有网络包含的子网列表
+    *
+    * @return
+    */
     public List<Subnet> getSubnets() {
         return subnets;
     }
 
     /**
-     * set 私有网络包含的子网列表
-     *
-     * @param subnets
-     */
+    * set 私有网络包含的子网列表
+    *
+    * @param subnets
+    */
     public void setSubnets(List<Subnet> subnets) {
         this.subnets = subnets;
     }
+
 
     /**
      * get vpc创建时间
@@ -260,6 +268,7 @@ public class Vpc  implements java.io.Serializable {
         this.createdTime = createdTime;
     }
 
+
     /**
      * get 云鼎资源ID
      *
@@ -277,6 +286,7 @@ public class Vpc  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 版本
@@ -296,6 +306,7 @@ public class Vpc  implements java.io.Serializable {
         this.version = version;
     }
 
+
     /**
      * get 所属区域
      *
@@ -313,6 +324,7 @@ public class Vpc  implements java.io.Serializable {
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 业务类型：1-无界开放
@@ -332,6 +344,7 @@ public class Vpc  implements java.io.Serializable {
         this.typeId = typeId;
     }
 
+
     /**
      * get 业务类型名称
      *
@@ -349,6 +362,7 @@ public class Vpc  implements java.io.Serializable {
     public void setTypeName(Integer typeName) {
         this.typeName = typeName;
     }
+
 
     /**
      * get 应用类型
@@ -368,6 +382,7 @@ public class Vpc  implements java.io.Serializable {
         this.appType = appType;
     }
 
+
     /**
      * get 应用名称
      *
@@ -385,6 +400,7 @@ public class Vpc  implements java.io.Serializable {
     public void setAppName(String appName) {
         this.appName = appName;
     }
+
 
     /**
      * get appKey
@@ -405,6 +421,7 @@ public class Vpc  implements java.io.Serializable {
     }
 
 
+
     /**
      * set Vpc的Id
      *
@@ -414,6 +431,7 @@ public class Vpc  implements java.io.Serializable {
         this.vpcId = vpcId;
         return this;
     }
+
 
     /**
      * set 如果为空，则不限制网段，如果不为空，10.0.0.0/8、172.16.0.0/12和192.168.0.0/16及它们包含的子网，且子网掩码长度为16-28之间
@@ -425,6 +443,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set VPC 描述，取值范围：1~120个字符
      *
@@ -434,6 +453,7 @@ public class Vpc  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set 私有网络名称，取值范围：1-60个中文、英文大小写的字母、数字和下划线分隔符
@@ -445,35 +465,39 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 同一vpc下的acl id 列表
-     *
-     * @param aclIds
-     */
+    * set 同一vpc下的acl id 列表
+    *
+    * @param aclIds
+    */
     public Vpc aclIds(List<String> aclIds) {
         this.aclIds = aclIds;
         return this;
     }
 
+
     /**
-     * set routeTableIds
-     *
-     * @param routeTableIds
-     */
+    * set routeTableIds
+    *
+    * @param routeTableIds
+    */
     public Vpc routeTableIds(List<String> routeTableIds) {
         this.routeTableIds = routeTableIds;
         return this;
     }
 
+
     /**
-     * set 私有网络包含的子网列表
-     *
-     * @param subnets
-     */
+    * set 私有网络包含的子网列表
+    *
+    * @param subnets
+    */
     public Vpc subnets(List<Subnet> subnets) {
         this.subnets = subnets;
         return this;
     }
+
 
     /**
      * set vpc创建时间
@@ -485,6 +509,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 云鼎资源ID
      *
@@ -494,6 +519,7 @@ public class Vpc  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 版本
@@ -505,6 +531,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 所属区域
      *
@@ -514,6 +541,7 @@ public class Vpc  implements java.io.Serializable {
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 业务类型：1-无界开放
@@ -525,6 +553,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务类型名称
      *
@@ -534,6 +563,7 @@ public class Vpc  implements java.io.Serializable {
         this.typeName = typeName;
         return this;
     }
+
 
     /**
      * set 应用类型
@@ -545,6 +575,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用名称
      *
@@ -555,6 +586,7 @@ public class Vpc  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set appKey
      *
@@ -564,6 +596,7 @@ public class Vpc  implements java.io.Serializable {
         this.appKey = appKey;
         return this;
     }
+
 
 
     /**
@@ -601,5 +634,4 @@ public class Vpc  implements java.io.Serializable {
         }
         this.subnets.add(subnet);
     }
-
 }

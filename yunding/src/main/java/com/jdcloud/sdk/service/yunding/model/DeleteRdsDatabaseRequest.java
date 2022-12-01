@@ -56,6 +56,7 @@ public class DeleteRdsDatabaseRequest extends JdcloudRequest implements java.io.
     private String dbName;
 
 
+
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -74,6 +75,7 @@ public class DeleteRdsDatabaseRequest extends JdcloudRequest implements java.io.
         this.regionId = regionId;
     }
 
+
     /**
      * get RDS 实例ID，唯一标识一个RDS实例
      *
@@ -91,6 +93,7 @@ public class DeleteRdsDatabaseRequest extends JdcloudRequest implements java.io.
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
     /**
      * get 库名称
@@ -111,6 +114,7 @@ public class DeleteRdsDatabaseRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -121,6 +125,7 @@ public class DeleteRdsDatabaseRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set RDS 实例ID，唯一标识一个RDS实例
      *
@@ -130,6 +135,7 @@ public class DeleteRdsDatabaseRequest extends JdcloudRequest implements java.io.
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 库名称

@@ -42,6 +42,7 @@ public class DescribeTasksRequest extends JdcloudRequest implements java.io.Seri
     private String instanceId;
 
 
+
     /**
      * get 实例 Id
      *
@@ -59,6 +60,7 @@ public class DescribeTasksRequest extends JdcloudRequest implements java.io.Seri
     public void setInstanceId(String instanceId) {
         this.instanceId = instanceId;
     }
+
 
 
     /**

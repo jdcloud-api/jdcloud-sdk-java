@@ -90,8 +90,8 @@ public class DBInstance  implements java.io.Serializable {
     /**
      * 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      */
+    
     private List<String> azId;
-
     /**
      * VPC的ID
      */
@@ -115,8 +115,8 @@ public class DBInstance  implements java.io.Serializable {
     /**
      * 实例跨地域备份服务开启相关信息
      */
+    
     private List<BackupSynchronicityAbstract> backupSynchronicity;
-
     /**
      * 计费配置
      */
@@ -125,8 +125,8 @@ public class DBInstance  implements java.io.Serializable {
     /**
      * 标签信息
      */
+    
     private List<Tag> tags;
-
     /**
      * MySQL只读实例对应的主实例ID
      */
@@ -141,6 +141,7 @@ public class DBInstance  implements java.io.Serializable {
      * DMS登陆数据库链接
      */
     private String dbUrl;
+
 
 
     /**
@@ -161,6 +162,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceId = instanceId;
     }
 
+
     /**
      * get 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
      *
@@ -178,6 +180,7 @@ public class DBInstance  implements java.io.Serializable {
     public void setInstanceName(String instanceName) {
         this.instanceName = instanceName;
     }
+
 
     /**
      * get 实例类别，例如主实例，只读实例等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -197,6 +200,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceType = instanceType;
     }
 
+
     /**
      * get 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -214,6 +218,7 @@ public class DBInstance  implements java.io.Serializable {
     public void setEngine(String engine) {
         this.engine = engine;
     }
+
 
     /**
      * get 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -233,6 +238,7 @@ public class DBInstance  implements java.io.Serializable {
         this.engineVersion = engineVersion;
     }
 
+
     /**
      * get 实例规格代码
      *
@@ -250,6 +256,7 @@ public class DBInstance  implements java.io.Serializable {
     public void setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
     }
+
 
     /**
      * get 磁盘，单位GB
@@ -269,6 +276,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceStorageGB = instanceStorageGB;
     }
 
+
     /**
      * get CPU核数
      *
@@ -286,6 +294,7 @@ public class DBInstance  implements java.io.Serializable {
     public void setInstanceCPU(Integer instanceCPU) {
         this.instanceCPU = instanceCPU;
     }
+
 
     /**
      * get 内存，单位MB
@@ -305,6 +314,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceMemoryMB = instanceMemoryMB;
     }
 
+
     /**
      * get 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
      *
@@ -323,23 +333,25 @@ public class DBInstance  implements java.io.Serializable {
         this.regionId = regionId;
     }
 
+
     /**
-     * get 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @return
-     */
+    * get 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @return
+    */
     public List<String> getAzId() {
         return azId;
     }
 
     /**
-     * set 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @param azId
-     */
+    * set 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @param azId
+    */
     public void setAzId(List<String> azId) {
         this.azId = azId;
     }
+
 
     /**
      * get VPC的ID
@@ -359,6 +371,7 @@ public class DBInstance  implements java.io.Serializable {
         this.vpcId = vpcId;
     }
 
+
     /**
      * get 子网的ID
      *
@@ -376,6 +389,7 @@ public class DBInstance  implements java.io.Serializable {
     public void setSubnetId(String subnetId) {
         this.subnetId = subnetId;
     }
+
 
     /**
      * get 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -395,6 +409,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceStatus = instanceStatus;
     }
 
+
     /**
      * get 实例创建时间
      *
@@ -413,23 +428,25 @@ public class DBInstance  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
-     * get 实例跨地域备份服务开启相关信息
-     *
-     * @return
-     */
+    * get 实例跨地域备份服务开启相关信息
+    *
+    * @return
+    */
     public List<BackupSynchronicityAbstract> getBackupSynchronicity() {
         return backupSynchronicity;
     }
 
     /**
-     * set 实例跨地域备份服务开启相关信息
-     *
-     * @param backupSynchronicity
-     */
+    * set 实例跨地域备份服务开启相关信息
+    *
+    * @param backupSynchronicity
+    */
     public void setBackupSynchronicity(List<BackupSynchronicityAbstract> backupSynchronicity) {
         this.backupSynchronicity = backupSynchronicity;
     }
+
 
     /**
      * get 计费配置
@@ -449,23 +466,25 @@ public class DBInstance  implements java.io.Serializable {
         this.charge = charge;
     }
 
+
     /**
-     * get 标签信息
-     *
-     * @return
-     */
+    * get 标签信息
+    *
+    * @return
+    */
     public List<Tag> getTags() {
         return tags;
     }
 
     /**
-     * set 标签信息
-     *
-     * @param tags
-     */
+    * set 标签信息
+    *
+    * @param tags
+    */
     public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get MySQL只读实例对应的主实例ID
@@ -485,6 +504,7 @@ public class DBInstance  implements java.io.Serializable {
         this.sourceInstanceId = sourceInstanceId;
     }
 
+
     /**
      * get vpc名称
      *
@@ -502,6 +522,7 @@ public class DBInstance  implements java.io.Serializable {
     public void setVpcName(String vpcName) {
         this.vpcName = vpcName;
     }
+
 
     /**
      * get DMS登陆数据库链接
@@ -522,6 +543,7 @@ public class DBInstance  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 实例ID
      *
@@ -531,6 +553,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceId = instanceId;
         return this;
     }
+
 
     /**
      * set 实例名称，具体规则可参见帮助中心文档:[名称及密码限制](../../../documentation/Database-and-Cache-Service/RDS/Introduction/Restrictions/SQLServer-Restrictions.md)
@@ -542,6 +565,7 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例类别，例如主实例，只读实例等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -551,6 +575,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceType = instanceType;
         return this;
     }
+
 
     /**
      * set 实例引擎类型，如MySQL或SQL Server等，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -562,6 +587,7 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例引擎版本，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
      *
@@ -571,6 +597,7 @@ public class DBInstance  implements java.io.Serializable {
         this.engineVersion = engineVersion;
         return this;
     }
+
 
     /**
      * set 实例规格代码
@@ -582,6 +609,7 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 磁盘，单位GB
      *
@@ -591,6 +619,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceStorageGB = instanceStorageGB;
         return this;
     }
+
 
     /**
      * set CPU核数
@@ -602,6 +631,7 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 内存，单位MB
      *
@@ -611,6 +641,7 @@ public class DBInstance  implements java.io.Serializable {
         this.instanceMemoryMB = instanceMemoryMB;
         return this;
     }
+
 
     /**
      * set 地域ID，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
@@ -622,15 +653,17 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
-     *
-     * @param azId
-     */
+    * set 可用区ID，第一个为主实例在的可用区，参见[地域及可用区对照表](../Enum-Definitions/Regions-AZ.md)
+    *
+    * @param azId
+    */
     public DBInstance azId(List<String> azId) {
         this.azId = azId;
         return this;
     }
+
 
     /**
      * set VPC的ID
@@ -642,6 +675,7 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子网的ID
      *
@@ -651,6 +685,7 @@ public class DBInstance  implements java.io.Serializable {
         this.subnetId = subnetId;
         return this;
     }
+
 
     /**
      * set 实例状态，参见[枚举参数定义](../Enum-Definitions/Enum-Definitions.md)
@@ -662,6 +697,7 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 实例创建时间
      *
@@ -672,15 +708,17 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 实例跨地域备份服务开启相关信息
-     *
-     * @param backupSynchronicity
-     */
+    * set 实例跨地域备份服务开启相关信息
+    *
+    * @param backupSynchronicity
+    */
     public DBInstance backupSynchronicity(List<BackupSynchronicityAbstract> backupSynchronicity) {
         this.backupSynchronicity = backupSynchronicity;
         return this;
     }
+
 
     /**
      * set 计费配置
@@ -692,15 +730,17 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 标签信息
-     *
-     * @param tags
-     */
+    * set 标签信息
+    *
+    * @param tags
+    */
     public DBInstance tags(List<Tag> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set MySQL只读实例对应的主实例ID
@@ -712,6 +752,7 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set vpc名称
      *
@@ -722,6 +763,7 @@ public class DBInstance  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set DMS登陆数据库链接
      *
@@ -731,6 +773,7 @@ public class DBInstance  implements java.io.Serializable {
         this.dbUrl = dbUrl;
         return this;
     }
+
 
 
     /**
@@ -768,5 +811,4 @@ public class DBInstance  implements java.io.Serializable {
         }
         this.tags.add(tag);
     }
-
 }

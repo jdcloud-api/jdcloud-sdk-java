@@ -39,31 +39,33 @@ public class DescribeRdsInstancesResult extends JdcloudResult implements java.io
     /**
      * dbInstances
      */
+    
     private List<DBInstance> dbInstances;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get dbInstances
-     *
-     * @return
-     */
+    * get dbInstances
+    *
+    * @return
+    */
     public List<DBInstance> getDbInstances() {
         return dbInstances;
     }
 
     /**
-     * set dbInstances
-     *
-     * @param dbInstances
-     */
+    * set dbInstances
+    *
+    * @param dbInstances
+    */
     public void setDbInstances(List<DBInstance> dbInstances) {
         this.dbInstances = dbInstances;
     }
+
 
     /**
      * get totalCount
@@ -84,15 +86,17 @@ public class DescribeRdsInstancesResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
-     * set dbInstances
-     *
-     * @param dbInstances
-     */
+    * set dbInstances
+    *
+    * @param dbInstances
+    */
     public DescribeRdsInstancesResult dbInstances(List<DBInstance> dbInstances) {
         this.dbInstances = dbInstances;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -103,6 +107,7 @@ public class DescribeRdsInstancesResult extends JdcloudResult implements java.io
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeRdsInstancesResult extends JdcloudResult implements java.io
         }
         this.dbInstances.add(dbInstance);
     }
-
 }

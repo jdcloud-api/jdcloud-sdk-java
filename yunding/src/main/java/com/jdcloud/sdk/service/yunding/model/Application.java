@@ -68,6 +68,7 @@ public class Application  implements java.io.Serializable {
     private String jdcloudPin;
 
 
+
     /**
      * get 应用Id
      *
@@ -85,6 +86,7 @@ public class Application  implements java.io.Serializable {
     public void setId(String id) {
         this.id = id;
     }
+
 
     /**
      * get appTypeId
@@ -104,6 +106,7 @@ public class Application  implements java.io.Serializable {
         this.typeId = typeId;
     }
 
+
     /**
      * get 所属区域
      *
@@ -121,6 +124,7 @@ public class Application  implements java.io.Serializable {
     public void setRegionId(String regionId) {
         this.regionId = regionId;
     }
+
 
     /**
      * get 应用名称
@@ -140,6 +144,7 @@ public class Application  implements java.io.Serializable {
         this.name = name;
     }
 
+
     /**
      * get 应用描述
      *
@@ -158,6 +163,7 @@ public class Application  implements java.io.Serializable {
         this.description = description;
     }
 
+
     /**
      * get 创建时间
      *
@@ -175,6 +181,7 @@ public class Application  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get jdcloudPin
@@ -195,6 +202,7 @@ public class Application  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 应用Id
      *
@@ -204,6 +212,7 @@ public class Application  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set appTypeId
@@ -215,6 +224,7 @@ public class Application  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 所属区域
      *
@@ -224,6 +234,7 @@ public class Application  implements java.io.Serializable {
         this.regionId = regionId;
         return this;
     }
+
 
     /**
      * set 应用名称
@@ -235,6 +246,7 @@ public class Application  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用描述
      *
@@ -245,6 +257,7 @@ public class Application  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -254,6 +267,7 @@ public class Application  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set jdcloudPin

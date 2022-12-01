@@ -59,8 +59,8 @@ chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
 
      */
+    
     private List<Filter> filters;
-
     /**
      * 资源类型，MySQL：1，SqlServer：2
      */
@@ -72,6 +72,7 @@ vpcId, 支持operator选项：eq
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -92,6 +93,7 @@ vpcId, 支持operator选项：eq
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
      *
@@ -110,8 +112,9 @@ vpcId, 支持operator选项：eq
         this.pageSize = pageSize;
     }
 
+
     /**
-     * get 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * get 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
 instanceName, 支持operator选项：eq
@@ -121,15 +124,15 @@ instanceStatus, 支持operator选项：eq
 chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Filter> getFilters() {
         return filters;
     }
 
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
 instanceName, 支持operator选项：eq
@@ -139,12 +142,13 @@ instanceStatus, 支持operator选项：eq
 chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public void setFilters(List<Filter> filters) {
         this.filters = filters;
     }
+
 
     /**
      * get 资源类型，MySQL：1，SqlServer：2
@@ -163,6 +167,7 @@ vpcId, 支持operator选项：eq
     public void setType(Integer type) {
         this.type = type;
     }
+
 
     /**
      * get 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
@@ -183,6 +188,7 @@ vpcId, 支持operator选项：eq
     }
 
 
+
     /**
      * set 显示数据的页码，默认为1，取值范围：[-1,∞)。pageNumber为-1时，返回所有数据页码；超过总页数时，显示最后一页;
      *
@@ -192,6 +198,7 @@ vpcId, 支持operator选项：eq
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 每页显示的数据条数，默认为100，取值范围：[10,100]，用于查询列表的接口
@@ -203,8 +210,9 @@ vpcId, 支持operator选项：eq
         return this;
     }
 
+
     /**
-     * set 过滤参数，多个过滤参数之间的关系为“与”(and)
+    * set 过滤参数，多个过滤参数之间的关系为“与”(and)
 支持以下属性的过滤：
 instanceId, 支持operator选项：eq
 instanceName, 支持operator选项：eq
@@ -214,13 +222,14 @@ instanceStatus, 支持operator选项：eq
 chargeMode, 支持operator选项：eq
 vpcId, 支持operator选项：eq
 
-     *
-     * @param filters
-     */
+    *
+    * @param filters
+    */
     public DescribeRdsInstancesRequest filters(List<Filter> filters) {
         this.filters = filters;
         return this;
     }
+
 
     /**
      * set 资源类型，MySQL：1，SqlServer：2
@@ -232,6 +241,7 @@ vpcId, 支持operator选项：eq
         return this;
     }
 
+
     /**
      * set 地域代码，取值范围参见[《各地域及可用区对照表》](../Enum-Definitions/Regions-AZ.md)
      *
@@ -241,6 +251,7 @@ vpcId, 支持operator选项：eq
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -263,5 +274,4 @@ vpcId, 支持operator选项：eq
         }
         this.filters.add(filter);
     }
-
 }

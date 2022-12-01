@@ -40,31 +40,33 @@ public class DescribeYdRdsInstancesResult extends JdcloudResult implements java.
     /**
      * clusters
      */
+    
     private List<RdsInstance> clusters;
-
     /**
      * totalCount
      */
     private Integer totalCount;
 
 
+
     /**
-     * get clusters
-     *
-     * @return
-     */
+    * get clusters
+    *
+    * @return
+    */
     public List<RdsInstance> getClusters() {
         return clusters;
     }
 
     /**
-     * set clusters
-     *
-     * @param clusters
-     */
+    * set clusters
+    *
+    * @param clusters
+    */
     public void setClusters(List<RdsInstance> clusters) {
         this.clusters = clusters;
     }
+
 
     /**
      * get totalCount
@@ -85,15 +87,17 @@ public class DescribeYdRdsInstancesResult extends JdcloudResult implements java.
     }
 
 
+
     /**
-     * set clusters
-     *
-     * @param clusters
-     */
+    * set clusters
+    *
+    * @param clusters
+    */
     public DescribeYdRdsInstancesResult clusters(List<RdsInstance> clusters) {
         this.clusters = clusters;
         return this;
     }
+
 
     /**
      * set totalCount
@@ -104,6 +108,7 @@ public class DescribeYdRdsInstancesResult extends JdcloudResult implements java.
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class DescribeYdRdsInstancesResult extends JdcloudResult implements java.
         }
         this.clusters.add(cluster);
     }
-
 }
