@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.tidb.model.Backup;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看该实例下所有备份的详细信息
+ * 查看该实例下所有备份的详细信息。
  */
 public class DescribeBackupsResult extends JdcloudResult implements java.io.Serializable {
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.CreateAccountResponse;
 
 /**
- * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录数据库实例。
+ * 创建数据库的高权限管理账号，用户可以使用客户端、应用程序等通过该账号和密码登录 TiDB 实例，然后通过SQL创建数据库和其他用户。一个数据库实例只能创建一个高权限账号。
  */
 class CreateAccountExecutor extends JdcloudExecutor {
 

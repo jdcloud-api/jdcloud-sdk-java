@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看某个实例下的账号信息
+ * 查看当前实例下的账号信息。
  */
 public class DescribeAccountsResult extends JdcloudResult implements java.io.Serializable {
 

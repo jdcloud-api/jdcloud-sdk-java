@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DeleteInstanceResponse;
 
 /**
- * 删除一个TiDB实例
+ * 删除指定的 TiDB 实例。实例删除后，数据不可恢复，请谨慎使用。
  */
 class DeleteInstanceExecutor extends JdcloudExecutor {
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 启动复制任务
+ * 继续处于“暂停”状态的复制任务。
  */
 public class ResumeReplicationResponse extends JdcloudResponse<ResumeReplicationResult> implements java.io.Serializable {
 

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.tidb.model.TidbInstanceAttribute;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询 TiDB 实例的详细信息
+ * 查询 TiDB 实例的详细信息，例如TiDB的具体版本号，各个节点的规格、存储空间以及连接信息等等。
  */
 public class DescribeInstanceAttributesResult extends JdcloudResult implements java.io.Serializable {
 

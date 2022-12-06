@@ -28,7 +28,7 @@ import com.jdcloud.sdk.service.tidb.model.NodeFlavor;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 规格获取接口
+ * 获取各种 TiDB 节点支持的具体规格。
  */
 public class DescribeInstanceClassesResult extends JdcloudResult implements java.io.Serializable {
 

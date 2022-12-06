@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改TiDB实例的配置参数。部分参数修改后，需要重启才能生效，具体可以参考PingCAP的相关文档
+ * 修改TiDB实例的配置参数。部分参数修改后，需要重启才能生效，具体可以参考PingCAP的相关文档。
  */
 public class ModifyParametersResult extends JdcloudResult implements java.io.Serializable {
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档
+ * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档。
  */
 public class ModifyInstanceNameResult extends JdcloudResult implements java.io.Serializable {
 

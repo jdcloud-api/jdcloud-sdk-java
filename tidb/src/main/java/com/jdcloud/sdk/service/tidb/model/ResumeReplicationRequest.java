@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 启动复制任务
+ * 继续处于“暂停”状态的复制任务。
  */
 public class ResumeReplicationRequest extends JdcloudRequest implements java.io.Serializable {
 

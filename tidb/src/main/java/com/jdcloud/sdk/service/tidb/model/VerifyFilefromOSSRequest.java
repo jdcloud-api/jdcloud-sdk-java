@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 校验需要导入的备份文件在OSS上是否存在，需要的读取权限是否具备
+ * 校验需要导入的备份文件在OSS上是否存在，需要的读取权限是否具备。
  */
 public class VerifyFilefromOSSRequest extends JdcloudRequest implements java.io.Serializable {
 

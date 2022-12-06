@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.VerifyFilefromOSSResponse;
 
 /**
- * 校验需要导入的备份文件在OSS上是否存在，需要的读取权限是否具备
+ * 校验需要导入的备份文件在OSS上是否存在，需要的读取权限是否具备。
  */
 class VerifyFilefromOSSExecutor extends JdcloudExecutor {
 

@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取TiDB产品提供的所有版本
+ * 查询指定地域下 TiDB 服务支持的数据库版本。
  */
 public class DescribeVersionsResult extends JdcloudResult implements java.io.Serializable {
 

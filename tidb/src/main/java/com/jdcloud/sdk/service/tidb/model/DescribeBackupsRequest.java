@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看该实例下所有备份的详细信息
+ * 查看该实例下所有备份的详细信息。
  */
 public class DescribeBackupsRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询TiDB数据库的升级计划
+ * 查询当前 TiDB 实例的升级计划。
  */
 public class DescribeUpgradePlanRequest extends JdcloudRequest implements java.io.Serializable {
 

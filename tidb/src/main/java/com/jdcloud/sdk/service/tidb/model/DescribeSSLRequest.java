@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询TiDB实例的ssl状态
+ * 查询 TiDB 实例的 SSL 的开启状态。
  */
 public class DescribeSSLRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改TiDB实例备份策略。
+ * 修改 TiDB 实例备份策略，例如全量备份的日期，时间等。
  */
 public class ModifyBackupPolicyRequest extends JdcloudRequest implements java.io.Serializable {
 

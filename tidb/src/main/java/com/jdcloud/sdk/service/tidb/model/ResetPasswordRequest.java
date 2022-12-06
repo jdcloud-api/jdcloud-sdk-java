@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。
+ * 重置 TiDB 实例的高权限账号的密码。
  */
 public class ResetPasswordRequest extends JdcloudRequest implements java.io.Serializable {
 
@@ -56,7 +56,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     private String instanceId;
 
     /**
-     * 账号名，在同一个实例中账号名不能重复
+     * 账号名
      * Required:true
      */
     @Required
@@ -122,7 +122,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 账号名，在同一个实例中账号名不能重复
+     * get 账号名
      *
      * @return
      */
@@ -131,7 +131,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 账号名，在同一个实例中账号名不能重复
+     * set 账号名
      *
      * @param accountName
      */
@@ -175,7 +175,7 @@ public class ResetPasswordRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 账号名，在同一个实例中账号名不能重复
+     * set 账号名
      *
      * @param accountName
      */

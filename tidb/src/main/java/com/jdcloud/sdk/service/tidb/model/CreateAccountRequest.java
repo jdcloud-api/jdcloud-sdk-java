@@ -28,14 +28,14 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录数据库实例。
+ * 创建数据库的高权限管理账号，用户可以使用客户端、应用程序等通过该账号和密码登录 TiDB 实例，然后通过SQL创建数据库和其他用户。一个数据库实例只能创建一个高权限账号。
  */
 public class CreateAccountRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 账号名，在同一个实例中，账号名不能重复
+     * 账号名
      * Required:true
      */
     @Required
@@ -65,7 +65,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * get 账号名，在同一个实例中，账号名不能重复
+     * get 账号名
      *
      * @return
      */
@@ -74,7 +74,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
     }
 
     /**
-     * set 账号名，在同一个实例中，账号名不能重复
+     * set 账号名
      *
      * @param accountName
      */
@@ -142,7 +142,7 @@ public class CreateAccountRequest extends JdcloudRequest implements java.io.Seri
 
 
     /**
-     * set 账号名，在同一个实例中，账号名不能重复
+     * set 账号名
      *
      * @param accountName
      */

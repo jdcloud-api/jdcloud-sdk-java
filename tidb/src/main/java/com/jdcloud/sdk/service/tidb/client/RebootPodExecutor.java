@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.RebootPodResponse;
 
 /**
- * 重启实例的pod
+ * 重启实例的某类节点。重启采用滚动重启的方式，如果该类节点有多个，通常不会中断实例的服务。
  */
 class RebootPodExecutor extends JdcloudExecutor {
 

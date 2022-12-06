@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 开启TiDB和MySQL客户端之间的SSL功能
+ * 开启 TiDB 和 MySQL 客户端之间的 SSL 连接功能。
  */
 public class EnableSSLRequest extends JdcloudRequest implements java.io.Serializable {
 

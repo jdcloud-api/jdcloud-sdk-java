@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除一个TiDB实例
+ * 删除指定的 TiDB 实例。实例删除后，数据不可恢复，请谨慎使用。
  */
 public class DeleteInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeSSLResponse;
 
 /**
- * 查询TiDB实例的ssl状态
+ * 查询 TiDB 实例的 SSL 的开启状态。
  */
 class DescribeSSLExecutor extends JdcloudExecutor {
 

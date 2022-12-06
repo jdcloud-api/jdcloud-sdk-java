@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 修改复制任务
+ * 修改复制任务，修改前需要先暂停复制任务。为保证复制任务的可靠性，目前仅允许修改部分配置。
  */
 public class ModifyReplicationResponse extends JdcloudResponse<ModifyReplicationResult> implements java.io.Serializable {
 

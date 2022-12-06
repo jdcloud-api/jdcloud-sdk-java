@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.tidb.model.Instance;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询实例列表
+ * 查询当前账号下所有的 TiDB 实例。
  */
 public class DescribeInstancesResult extends JdcloudResult implements java.io.Serializable {
 

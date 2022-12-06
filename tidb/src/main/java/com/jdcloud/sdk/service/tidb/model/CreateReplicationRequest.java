@@ -29,14 +29,14 @@ import com.jdcloud.sdk.service.tidb.model.ReplicationSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建一个TiCDC
+ * 创建一个数据复制任务，可以将 TiDB 的增量数据同步到下游的 MySQL， TiDB 或者 Kafka 中。
  */
 public class CreateReplicationRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 新建TiCDC复制任务
+     * 数据复制任务的详细信息
      * Required:true
      */
     @Required
@@ -59,7 +59,7 @@ public class CreateReplicationRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * get 新建TiCDC复制任务
+     * get 数据复制任务的详细信息
      *
      * @return
      */
@@ -68,7 +68,7 @@ public class CreateReplicationRequest extends JdcloudRequest implements java.io.
     }
 
     /**
-     * set 新建TiCDC复制任务
+     * set 数据复制任务的详细信息
      *
      * @param replication
      */
@@ -117,7 +117,7 @@ public class CreateReplicationRequest extends JdcloudRequest implements java.io.
 
 
     /**
-     * set 新建TiCDC复制任务
+     * set 数据复制任务的详细信息
      *
      * @param replication
      */

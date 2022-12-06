@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 校验需要导入的备份文件在OSS上是否存在，需要的读取权限是否具备
+ * 校验需要导入的备份文件在OSS上是否存在，需要的读取权限是否具备。
  */
 public class VerifyFilefromOSSResponse extends JdcloudResponse<VerifyFilefromOSSResult> implements java.io.Serializable {
 

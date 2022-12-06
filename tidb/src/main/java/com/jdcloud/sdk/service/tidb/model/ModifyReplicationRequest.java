@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 修改复制任务
+ * 修改复制任务，修改前需要先暂停复制任务。为保证复制任务的可靠性，目前仅允许修改部分配置。
  */
 public class ModifyReplicationRequest extends JdcloudRequest implements java.io.Serializable {
 

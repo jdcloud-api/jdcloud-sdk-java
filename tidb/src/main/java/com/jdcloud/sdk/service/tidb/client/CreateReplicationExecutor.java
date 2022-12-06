@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.CreateReplicationResponse;
 
 /**
- * 创建一个TiCDC
+ * 创建一个数据复制任务，可以将 TiDB 的增量数据同步到下游的 MySQL， TiDB 或者 Kafka 中。
  */
 class CreateReplicationExecutor extends JdcloudExecutor {
 

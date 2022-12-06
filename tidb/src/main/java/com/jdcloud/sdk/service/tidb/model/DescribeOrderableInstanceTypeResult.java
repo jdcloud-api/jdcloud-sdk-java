@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.tidb.model.Az;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 获取当前用户售罄信息
+ * 获取当前用户售罄信息。
  */
 public class DescribeOrderableInstanceTypeResult extends JdcloudResult implements java.io.Serializable {
 

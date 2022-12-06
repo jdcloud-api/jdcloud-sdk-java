@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.tidb.model.TidbInstanceSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 根据源实例全量备份创建一个新实例
+ * 创建一个新的 TiDB 实例，并将指定的备份恢复到该实例上。
  */
 public class CreateInstanceFromBackupRequest extends JdcloudRequest implements java.io.Serializable {
 

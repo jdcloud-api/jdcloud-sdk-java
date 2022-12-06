@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DeleteWhiteListGroupResponse;
 
 /**
- * 删除白名单分组。
+ * 删除指定的白名单分组。
  */
 class DeleteWhiteListGroupExecutor extends JdcloudExecutor {
 

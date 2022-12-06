@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看实例当前的备份备份策略。
+ * 查看实例当前的备份策略。
  */
 public class DescribeBackupPolicyResponse extends JdcloudResponse<DescribeBackupPolicyResult> implements java.io.Serializable {
 

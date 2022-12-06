@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除白名单分组。
+ * 删除指定的白名单分组。
  */
 public class DeleteWhiteListGroupResult extends JdcloudResult implements java.io.Serializable {
 

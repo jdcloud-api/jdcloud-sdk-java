@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 开启TiDB服务的公网访问域名
+ * 开启 TiDB 实例的 Internet 公网服务。开启后，并配置 IP 白名单后，可以在 VPC 外通过公网域名访问 TiDB 实例。
  */
 public class EnableInternetAccessRequest extends JdcloudRequest implements java.io.Serializable {
 

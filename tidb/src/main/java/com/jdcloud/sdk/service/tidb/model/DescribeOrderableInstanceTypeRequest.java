@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取当前用户售罄信息
+ * 获取当前用户售罄信息。
  */
 public class DescribeOrderableInstanceTypeRequest extends JdcloudRequest implements java.io.Serializable {
 

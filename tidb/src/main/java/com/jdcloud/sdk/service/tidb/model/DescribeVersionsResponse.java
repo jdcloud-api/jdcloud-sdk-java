@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取TiDB产品提供的所有版本
+ * 查询指定地域下 TiDB 服务支持的数据库版本。
  */
 public class DescribeVersionsResponse extends JdcloudResponse<DescribeVersionsResult> implements java.io.Serializable {
 

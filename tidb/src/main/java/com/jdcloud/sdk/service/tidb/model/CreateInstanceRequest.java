@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.tidb.model.TidbInstanceSpec;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建一个TiDB实例
+ * 创建一个 TiDB 实例。创建时需要指定 TiDB 各类节点的数目，规格，存储空间等。 TiFlash和TiCDC节点在创建时不是必须的，可以在需要时，通过扩容的功能创建TiFlash和TiCDC节点。
  */
 public class CreateInstanceRequest extends JdcloudRequest implements java.io.Serializable {
 

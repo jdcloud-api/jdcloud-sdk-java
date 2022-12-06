@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取TiDB产品提供的所有版本
+ * 查询指定地域下 TiDB 服务支持的数据库版本。
  */
 public class DescribeVersionsRequest extends JdcloudRequest implements java.io.Serializable {
 

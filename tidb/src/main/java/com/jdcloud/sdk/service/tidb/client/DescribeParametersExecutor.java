@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeParametersResponse;
 
 /**
- * 查看TiDB实例的配置参数
+ * 查看TiDB实例的主要配置参数。
  */
 class DescribeParametersExecutor extends JdcloudExecutor {
 
