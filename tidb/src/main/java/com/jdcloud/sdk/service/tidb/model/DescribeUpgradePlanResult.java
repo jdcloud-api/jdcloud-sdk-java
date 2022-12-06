@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询TiDB数据库的升级计划
+ * 查询当前 TiDB 实例的升级计划。
  */
 public class DescribeUpgradePlanResult extends JdcloudResult implements java.io.Serializable {
 

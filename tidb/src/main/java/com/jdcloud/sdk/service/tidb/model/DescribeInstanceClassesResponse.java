@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 规格获取接口
+ * 获取各种 TiDB 节点支持的具体规格。
  */
 public class DescribeInstanceClassesResponse extends JdcloudResponse<DescribeInstanceClassesResult> implements java.io.Serializable {
 

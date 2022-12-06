@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeOrderableInstanceTypeResponse;
 
 /**
- * 获取当前用户售罄信息
+ * 获取当前用户售罄信息。
  */
 class DescribeOrderableInstanceTypeExecutor extends JdcloudExecutor {
 

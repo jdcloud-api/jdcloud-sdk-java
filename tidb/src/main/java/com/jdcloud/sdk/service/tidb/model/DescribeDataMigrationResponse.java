@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询 TiDB 数据迁移任务的信息
+ * 查询 TiDB 数据迁移任务的详细信息，例如任务的开始、完成时间，任务状态等等。
  */
 public class DescribeDataMigrationResponse extends JdcloudResponse<DescribeDataMigrationResult> implements java.io.Serializable {
 

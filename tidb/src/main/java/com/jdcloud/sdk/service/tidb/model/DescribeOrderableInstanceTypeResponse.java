@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 获取当前用户售罄信息
+ * 获取当前用户售罄信息。
  */
 public class DescribeOrderableInstanceTypeResponse extends JdcloudResponse<DescribeOrderableInstanceTypeResult> implements java.io.Serializable {
 

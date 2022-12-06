@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.CreateBackupResponse;
 
 /**
- * 创建一个实例全量备份，可以对整个实例所有的数据库进行全量备份。同一时间点，只能有一个正在运行的备份任务
+ * 进行 TiDB 实例的全量备份，对实例中所有的数据库进行备份。同一时间，只能有一个正在运行的备份任务。
  */
 class CreateBackupExecutor extends JdcloudExecutor {
 

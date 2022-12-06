@@ -29,14 +29,14 @@ import com.jdcloud.sdk.service.tidb.model.FullImportTask;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询 TiDB 数据迁移任务的信息
+ * 创建一个数据迁移任务，可以将对象存储 OSS 中的数据导入到 TiDB 实例中，具体可以参考帮助文档。
  */
 public class CreateDataMigrationRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 迁移任务类型，支持以下类型（大小写不敏感）：-FULL_IMPORT:全量数据导入
+     * 迁移任务类型，支持以下类型（大小写不敏感）：&lt;br&gt;-FULL_IMPORT:全量数据导入
      * Required:true
      */
     @Required
@@ -66,7 +66,7 @@ public class CreateDataMigrationRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 迁移任务类型，支持以下类型（大小写不敏感）：-FULL_IMPORT:全量数据导入
+     * get 迁移任务类型，支持以下类型（大小写不敏感）：&lt;br&gt;-FULL_IMPORT:全量数据导入
      *
      * @return
      */
@@ -75,7 +75,7 @@ public class CreateDataMigrationRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 迁移任务类型，支持以下类型（大小写不敏感）：-FULL_IMPORT:全量数据导入
+     * set 迁移任务类型，支持以下类型（大小写不敏感）：&lt;br&gt;-FULL_IMPORT:全量数据导入
      *
      * @param migrationType
      */
@@ -143,7 +143,7 @@ public class CreateDataMigrationRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 迁移任务类型，支持以下类型（大小写不敏感）：-FULL_IMPORT:全量数据导入
+     * set 迁移任务类型，支持以下类型（大小写不敏感）：&lt;br&gt;-FULL_IMPORT:全量数据导入
      *
      * @param migrationType
      */

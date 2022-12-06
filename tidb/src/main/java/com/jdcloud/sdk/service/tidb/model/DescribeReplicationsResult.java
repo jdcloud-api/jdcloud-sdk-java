@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.tidb.model.ReplicationTask;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看TiCDC复制任务列表
+ * 查询当前实例下所有的复制任务。
  */
 public class DescribeReplicationsResult extends JdcloudResult implements java.io.Serializable {
 

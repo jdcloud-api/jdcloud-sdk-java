@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 修改TiDB实例备份策略。
+ * 修改 TiDB 实例备份策略，例如全量备份的日期，时间等。
  */
 public class ModifyBackupPolicyResult extends JdcloudResult implements java.io.Serializable {
 

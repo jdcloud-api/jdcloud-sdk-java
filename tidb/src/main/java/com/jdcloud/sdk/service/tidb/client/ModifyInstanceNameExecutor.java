@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.ModifyInstanceNameResponse;
 
 /**
- * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档
+ * 修改实例名称，可支持中文，实例名的具体规则可参见帮助中心文档。
  */
 class ModifyInstanceNameExecutor extends JdcloudExecutor {
 

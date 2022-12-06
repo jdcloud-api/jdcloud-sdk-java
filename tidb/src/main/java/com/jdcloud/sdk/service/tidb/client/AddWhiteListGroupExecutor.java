@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.AddWhiteListGroupResponse;
 
 /**
- * 增加白名单分组。
+ * 增加白名单分组，用于用户管理不同类型或者来源的 IP 白名单。
  */
 class AddWhiteListGroupExecutor extends JdcloudExecutor {
 

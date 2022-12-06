@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询 TiDB 数据迁移任务的信息
+ * 创建一个数据迁移任务，可以将对象存储 OSS 中的数据导入到 TiDB 实例中，具体可以参考帮助文档。
  */
 public class CreateDataMigrationResult extends JdcloudResult implements java.io.Serializable {
 

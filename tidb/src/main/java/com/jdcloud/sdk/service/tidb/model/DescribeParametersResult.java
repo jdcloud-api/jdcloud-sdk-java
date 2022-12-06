@@ -30,7 +30,7 @@ import com.jdcloud.sdk.service.tidb.model.DescribeParam;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查看TiDB实例的配置参数
+ * 查看TiDB实例的主要配置参数。
  */
 public class DescribeParametersResult extends JdcloudResult implements java.io.Serializable {
 

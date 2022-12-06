@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 删除复制任务
+ * 删除指定的复制任务。
  */
 public class DeleteReplicationResponse extends JdcloudResponse<DeleteReplicationResult> implements java.io.Serializable {
 

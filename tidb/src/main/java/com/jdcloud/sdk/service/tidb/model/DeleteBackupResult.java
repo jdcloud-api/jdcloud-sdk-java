@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除TiDB的备份，仅允许删除用户生成的备份，系统自动备份不允许删除。
+ * 删除TiDB的备份，仅允许删除用户创建的备份，系统的自动备份不允许删除。
  */
 public class DeleteBackupResult extends JdcloudResult implements java.io.Serializable {
 

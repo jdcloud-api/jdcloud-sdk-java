@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看TiDB实例的配置参数
+ * 查看TiDB实例的主要配置参数。
  */
 public class DescribeParametersResponse extends JdcloudResponse<DescribeParametersResult> implements java.io.Serializable {
 

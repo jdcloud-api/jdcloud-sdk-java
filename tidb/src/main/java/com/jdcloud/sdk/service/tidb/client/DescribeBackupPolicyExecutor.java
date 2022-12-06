@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeBackupPolicyResponse;
 
 /**
- * 查看实例当前的备份备份策略。
+ * 查看实例当前的备份策略。
  */
 class DescribeBackupPolicyExecutor extends JdcloudExecutor {
 

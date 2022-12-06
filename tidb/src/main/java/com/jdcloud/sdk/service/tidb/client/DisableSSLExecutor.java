@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DisableSSLResponse;
 
 /**
- * 关闭TiDB和MySQL客户端之间的SSL功能
+ * 关闭 TiDB 和 MySQL 客户端之间的 SSL 连接功能。
  */
 class DisableSSLExecutor extends JdcloudExecutor {
 

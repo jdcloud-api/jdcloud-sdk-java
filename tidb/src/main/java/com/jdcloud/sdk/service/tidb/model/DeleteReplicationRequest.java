@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除复制任务
+ * 删除指定的复制任务。
  */
 public class DeleteReplicationRequest extends JdcloudRequest implements java.io.Serializable {
 

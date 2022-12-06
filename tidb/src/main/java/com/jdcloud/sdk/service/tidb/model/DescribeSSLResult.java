@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 查询TiDB实例的ssl状态
+ * 查询 TiDB 实例的 SSL 的开启状态。
  */
 public class DescribeSSLResult extends JdcloudResult implements java.io.Serializable {
 

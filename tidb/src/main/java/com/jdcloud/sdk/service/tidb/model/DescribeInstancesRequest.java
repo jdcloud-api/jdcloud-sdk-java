@@ -32,7 +32,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查询实例列表
+ * 查询当前账号下所有的 TiDB 实例。
  */
 public class DescribeInstancesRequest extends JdcloudRequest implements java.io.Serializable {
 

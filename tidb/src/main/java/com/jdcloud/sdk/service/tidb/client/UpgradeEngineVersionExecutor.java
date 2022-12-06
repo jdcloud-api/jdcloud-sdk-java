@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.UpgradeEngineVersionResponse;
 
 /**
- * 升级TiDB引擎版本，例如从4.0.6 升级到4.0.8. 目前支持小版本的升级，可升级到平台支持的最新的小版本
+ * 升级TiDB引擎版本，例如从4.0.8 升级到 5.4.0等。
  */
 class UpgradeEngineVersionExecutor extends JdcloudExecutor {
 

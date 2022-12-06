@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看TiCDC复制任务列表
+ * 查询当前实例下所有的复制任务。
  */
 public class DescribeReplicationsResponse extends JdcloudResponse<DescribeReplicationsResult> implements java.io.Serializable {
 

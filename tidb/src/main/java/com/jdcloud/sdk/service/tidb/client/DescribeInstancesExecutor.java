@@ -29,13 +29,13 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeInstancesResponse;
 
 /**
- * 查询实例列表
+ * 查询当前账号下所有的 TiDB 实例。
  */
 class DescribeInstancesExecutor extends JdcloudExecutor {
 
     @Override
     public String method() {
-        return "GET";
+        return "POST";
     }
 
     @Override

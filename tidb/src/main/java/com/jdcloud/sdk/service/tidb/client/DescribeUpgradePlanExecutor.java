@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeUpgradePlanResponse;
 
 /**
- * 查询TiDB数据库的升级计划
+ * 查询当前 TiDB 实例的升级计划。
  */
 class DescribeUpgradePlanExecutor extends JdcloudExecutor {
 

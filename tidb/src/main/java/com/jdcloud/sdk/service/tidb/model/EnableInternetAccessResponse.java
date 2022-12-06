@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 开启TiDB服务的公网访问域名
+ * 开启 TiDB 实例的 Internet 公网服务。开启后，并配置 IP 白名单后，可以在 VPC 外通过公网域名访问 TiDB 实例。
  */
 public class EnableInternetAccessResponse extends JdcloudResponse<EnableInternetAccessResult> implements java.io.Serializable {
 

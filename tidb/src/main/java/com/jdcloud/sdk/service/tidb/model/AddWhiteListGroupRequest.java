@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 增加白名单分组。
+ * 增加白名单分组，用于用户管理不同类型或者来源的 IP 白名单。
  */
 public class AddWhiteListGroupRequest extends JdcloudRequest implements java.io.Serializable {
 

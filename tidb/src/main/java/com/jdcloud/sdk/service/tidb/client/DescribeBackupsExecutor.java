@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeBackupsResponse;
 
 /**
- * 查看该实例下所有备份的详细信息
+ * 查看该实例下所有备份的详细信息。
  */
 class DescribeBackupsExecutor extends JdcloudExecutor {
 

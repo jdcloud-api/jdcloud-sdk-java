@@ -32,7 +32,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 获取某个实例下的节点信息
+ * 获取某个实例下的所有节点的主要性能信息，如CPU，内存，存储空间等。 该性能信息从云监控获取，为上一个监控周期的数据。
  */
 public class DescribeNodesRequest extends JdcloudRequest implements java.io.Serializable {
 

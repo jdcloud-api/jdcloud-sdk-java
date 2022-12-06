@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 增加白名单分组。
+ * 增加白名单分组，用于用户管理不同类型或者来源的 IP 白名单。
  */
 public class AddWhiteListGroupResponse extends JdcloudResponse<AddWhiteListGroupResult> implements java.io.Serializable {
 

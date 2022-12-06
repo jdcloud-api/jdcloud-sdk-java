@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看TiCDC复制任务列表
+ * 查询当前实例下所有的复制任务。
  */
 public class DescribeReplicationsRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -30,7 +30,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 重启实例的pod
+ * 重启实例的某类节点。重启采用滚动重启的方式，如果该类节点有多个，通常不会中断实例的服务。
  */
 public class RebootPodRequest extends JdcloudRequest implements java.io.Serializable {
 

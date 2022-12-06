@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 规格获取接口
+ * 获取各种 TiDB 节点支持的具体规格。
  */
 public class DescribeInstanceClassesRequest extends JdcloudRequest implements java.io.Serializable {
 

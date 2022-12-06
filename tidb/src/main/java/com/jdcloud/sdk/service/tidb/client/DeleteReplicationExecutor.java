@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DeleteReplicationResponse;
 
 /**
- * 删除复制任务
+ * 删除指定的复制任务。
  */
 class DeleteReplicationExecutor extends JdcloudExecutor {
 

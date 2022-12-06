@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查看该实例下所有备份的详细信息
+ * 查看该实例下所有备份的详细信息。
  */
 public class DescribeBackupsResponse extends JdcloudResponse<DescribeBackupsResult> implements java.io.Serializable {
 

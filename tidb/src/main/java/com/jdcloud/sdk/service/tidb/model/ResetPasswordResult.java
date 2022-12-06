@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 创建数据库账号，用户可以使用客户端，应用程序等通过该账号和密码登录RDS数据库实例。
+ * 重置 TiDB 实例的高权限账号的密码。
  */
 public class ResetPasswordResult extends JdcloudResult implements java.io.Serializable {
 

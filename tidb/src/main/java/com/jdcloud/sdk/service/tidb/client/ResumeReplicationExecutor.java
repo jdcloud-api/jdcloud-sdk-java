@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.ResumeReplicationResponse;
 
 /**
- * 启动复制任务
+ * 继续处于“暂停”状态的复制任务。
  */
 class ResumeReplicationExecutor extends JdcloudExecutor {
 

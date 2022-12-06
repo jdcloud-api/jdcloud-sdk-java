@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResult;
 
 /**
- * 删除一个TiDB实例
+ * 删除指定的 TiDB 实例。实例删除后，数据不可恢复，请谨慎使用。
  */
 public class DeleteInstanceResult extends JdcloudResult implements java.io.Serializable {
 

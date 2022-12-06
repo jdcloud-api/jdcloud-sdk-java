@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看某个实例下的账号信息
+ * 查看当前实例下的账号信息。
  */
 public class DescribeAccountsRequest extends JdcloudRequest implements java.io.Serializable {
 

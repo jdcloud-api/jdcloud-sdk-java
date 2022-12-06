@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看实例当前的备份备份策略。
+ * 查看实例当前的备份策略。
  */
 public class DescribeBackupPolicyRequest extends JdcloudRequest implements java.io.Serializable {
 

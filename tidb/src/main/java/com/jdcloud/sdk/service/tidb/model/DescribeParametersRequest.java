@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 查看TiDB实例的配置参数
+ * 查看TiDB实例的主要配置参数。
  */
 public class DescribeParametersRequest extends JdcloudRequest implements java.io.Serializable {
 

@@ -27,7 +27,7 @@ package com.jdcloud.sdk.service.tidb.model;
 import com.jdcloud.sdk.service.JdcloudResponse;
 
 /**
- * 查询实例列表
+ * 查询当前账号下所有的 TiDB 实例。
  */
 public class DescribeInstancesResponse extends JdcloudResponse<DescribeInstancesResult> implements java.io.Serializable {
 

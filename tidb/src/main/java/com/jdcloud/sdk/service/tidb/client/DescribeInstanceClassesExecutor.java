@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeInstanceClassesResponse;
 
 /**
- * 规格获取接口
+ * 获取各种 TiDB 节点支持的具体规格。
  */
 class DescribeInstanceClassesExecutor extends JdcloudExecutor {
 

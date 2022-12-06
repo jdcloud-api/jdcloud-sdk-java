@@ -34,7 +34,7 @@ public class BackupSpec  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 备份名称最长支持64个英文字符或等长的中文字符
+     * 备份名称，最长支持64个英文字符或等长的中文字符
      * Required:true
      */
     @Required
@@ -43,7 +43,7 @@ public class BackupSpec  implements java.io.Serializable {
 
 
     /**
-     * get 备份名称最长支持64个英文字符或等长的中文字符
+     * get 备份名称，最长支持64个英文字符或等长的中文字符
      *
      * @return
      */
@@ -52,7 +52,7 @@ public class BackupSpec  implements java.io.Serializable {
     }
 
     /**
-     * set 备份名称最长支持64个英文字符或等长的中文字符
+     * set 备份名称，最长支持64个英文字符或等长的中文字符
      *
      * @param backupName
      */
@@ -63,7 +63,7 @@ public class BackupSpec  implements java.io.Serializable {
 
 
     /**
-     * set 备份名称最长支持64个英文字符或等长的中文字符
+     * set 备份名称，最长支持64个英文字符或等长的中文字符
      *
      * @param backupName
      */

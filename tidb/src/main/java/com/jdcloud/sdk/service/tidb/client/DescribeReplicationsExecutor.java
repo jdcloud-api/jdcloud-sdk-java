@@ -29,7 +29,7 @@ import com.jdcloud.sdk.service.JdcloudResponse;
 import com.jdcloud.sdk.service.tidb.model.DescribeReplicationsResponse;
 
 /**
- * 查看TiCDC复制任务列表
+ * 查询当前实例下所有的复制任务。
  */
 class DescribeReplicationsExecutor extends JdcloudExecutor {
 

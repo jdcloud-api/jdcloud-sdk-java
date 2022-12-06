@@ -28,7 +28,7 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 删除白名单分组。
+ * 删除指定的白名单分组。
  */
 public class DeleteWhiteListGroupRequest extends JdcloudRequest implements java.io.Serializable {
 
