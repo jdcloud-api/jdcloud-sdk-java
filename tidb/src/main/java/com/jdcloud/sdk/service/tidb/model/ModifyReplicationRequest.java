@@ -24,6 +24,8 @@
 
 package com.jdcloud.sdk.service.tidb.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
@@ -66,6 +68,11 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
      */
     private String kafkaVersion;
 
+    /**
+     * 过滤规则列表
+     */
+    
+    private List<String> replicationObjects;
     /**
      * 地域代码
      * Required:true
@@ -197,6 +204,25 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
 
 
     /**
+    * get 过滤规则列表
+    *
+    * @return
+    */
+    public List<String> getReplicationObjects() {
+        return replicationObjects;
+    }
+
+    /**
+    * set 过滤规则列表
+    *
+    * @param replicationObjects
+    */
+    public void setReplicationObjects(List<String> replicationObjects) {
+        this.replicationObjects = replicationObjects;
+    }
+
+
+    /**
      * get 地域代码
      *
      * @return
@@ -302,6 +328,17 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
 
 
     /**
+    * set 过滤规则列表
+    *
+    * @param replicationObjects
+    */
+    public ModifyReplicationRequest replicationObjects(List<String> replicationObjects) {
+        this.replicationObjects = replicationObjects;
+        return this;
+    }
+
+
+    /**
      * set 地域代码
      *
      * @param regionId
@@ -323,4 +360,16 @@ public class ModifyReplicationRequest extends JdcloudRequest implements java.io.
     }
 
 
+
+    /**
+     * add item to 过滤规则列表
+     *
+     * @param replicationObject
+     */
+    public void addReplicationObject(String replicationObject) {
+        if (this.replicationObjects == null) {
+            this.replicationObjects = new ArrayList<>();
+        }
+        this.replicationObjects.add(replicationObject);
+    }
 }
