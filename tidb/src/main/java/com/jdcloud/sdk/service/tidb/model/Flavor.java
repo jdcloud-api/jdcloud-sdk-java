@@ -50,6 +50,11 @@ public class Flavor  implements java.io.Serializable {
     private Integer memoryGB;
 
     /**
+     * 默认存储规格，单位GB
+     */
+    private Integer defaultStorageGB;
+
+    /**
      * 该规格支持的存储空间，单位GB
      */
     
@@ -114,6 +119,25 @@ public class Flavor  implements java.io.Serializable {
 
 
     /**
+     * get 默认存储规格，单位GB
+     *
+     * @return
+     */
+    public Integer getDefaultStorageGB() {
+        return defaultStorageGB;
+    }
+
+    /**
+     * set 默认存储规格，单位GB
+     *
+     * @param defaultStorageGB
+     */
+    public void setDefaultStorageGB(Integer defaultStorageGB) {
+        this.defaultStorageGB = defaultStorageGB;
+    }
+
+
+    /**
     * get 该规格支持的存储空间，单位GB
     *
     * @return
@@ -162,6 +186,17 @@ public class Flavor  implements java.io.Serializable {
      */
     public Flavor memoryGB(Integer memoryGB) {
         this.memoryGB = memoryGB;
+        return this;
+    }
+
+
+    /**
+     * set 默认存储规格，单位GB
+     *
+     * @param defaultStorageGB
+     */
+    public Flavor defaultStorageGB(Integer defaultStorageGB) {
+        this.defaultStorageGB = defaultStorageGB;
         return this;
     }
 
