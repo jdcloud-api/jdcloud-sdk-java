@@ -94,6 +94,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryMonitorExecutor;
 import com.jdcloud.sdk.service.cdn.model.DisableWafWhiteRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.DisableWafWhiteRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.DisableWafWhiteRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenInfoCommonRequest;
+import com.jdcloud.sdk.service.cdn.model.DeleteForbiddenInfoCommonResponse;
+import com.jdcloud.sdk.service.cdn.client.DeleteForbiddenInfoCommonExecutor;
 import com.jdcloud.sdk.service.cdn.model.CreateWafBlackRuleRequest;
 import com.jdcloud.sdk.service.cdn.model.CreateWafBlackRuleResponse;
 import com.jdcloud.sdk.service.cdn.client.CreateWafBlackRuleExecutor;
@@ -295,6 +298,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryFollowSourceProtocolExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstListRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstListResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainTempInstListExecutor;
+import com.jdcloud.sdk.service.cdn.model.CreateForbiddenInfoCommonRequest;
+import com.jdcloud.sdk.service.cdn.model.CreateForbiddenInfoCommonResponse;
+import com.jdcloud.sdk.service.cdn.client.CreateForbiddenInfoCommonExecutor;
 import com.jdcloud.sdk.service.cdn.model.UpdateDomainGroupRequest;
 import com.jdcloud.sdk.service.cdn.model.UpdateDomainGroupResponse;
 import com.jdcloud.sdk.service.cdn.client.UpdateDomainGroupExecutor;
@@ -523,6 +529,9 @@ import com.jdcloud.sdk.service.cdn.client.SetUserAgentConfigExecutor;
 import com.jdcloud.sdk.service.cdn.model.SetNetProtectionRulesRequest;
 import com.jdcloud.sdk.service.cdn.model.SetNetProtectionRulesResponse;
 import com.jdcloud.sdk.service.cdn.client.SetNetProtectionRulesExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryForbiddenInfoListCommonRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryForbiddenInfoListCommonResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryForbiddenInfoListCommonExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDomainTempInstResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDomainTempInstExecutor;
@@ -898,6 +907,17 @@ public class CdnClient extends JdcloudClient {
      */
     public DisableWafWhiteRulesResponse disableWafWhiteRules(DisableWafWhiteRulesRequest request) throws JdcloudSdkException {
         return new DisableWafWhiteRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 删除封禁信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DeleteForbiddenInfoCommonResponse deleteForbiddenInfoCommon(DeleteForbiddenInfoCommonRequest request) throws JdcloudSdkException {
+        return new DeleteForbiddenInfoCommonExecutor().client(this).execute(request);
     }
 
     /**
@@ -1635,6 +1655,17 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryDomainTempInstListResponse queryDomainTempInstList(QueryDomainTempInstListRequest request) throws JdcloudSdkException {
         return new QueryDomainTempInstListExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 设置封禁
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public CreateForbiddenInfoCommonResponse createForbiddenInfoCommon(CreateForbiddenInfoCommonRequest request) throws JdcloudSdkException {
+        return new CreateForbiddenInfoCommonExecutor().client(this).execute(request);
     }
 
     /**
@@ -2471,6 +2502,17 @@ public class CdnClient extends JdcloudClient {
      */
     public SetNetProtectionRulesResponse setNetProtectionRules(SetNetProtectionRulesRequest request) throws JdcloudSdkException {
         return new SetNetProtectionRulesExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询封禁解封信息
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryForbiddenInfoListCommonResponse queryForbiddenInfoListCommon(QueryForbiddenInfoListCommonRequest request) throws JdcloudSdkException {
+        return new QueryForbiddenInfoListCommonExecutor().client(this).execute(request);
     }
 
     /**
