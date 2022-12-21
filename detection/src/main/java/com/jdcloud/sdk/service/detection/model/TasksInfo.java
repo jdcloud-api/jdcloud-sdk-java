@@ -58,6 +58,7 @@ public class TasksInfo  implements java.io.Serializable {
     private Object meta;
 
 
+
     /**
      * get task类型
      *
@@ -75,6 +76,7 @@ public class TasksInfo  implements java.io.Serializable {
     public void setConfType(String confType) {
         this.confType = confType;
     }
+
 
     /**
      * get UID
@@ -94,6 +96,7 @@ public class TasksInfo  implements java.io.Serializable {
         this.confUID = confUID;
     }
 
+
     /**
      * get 任务内容
      *
@@ -112,6 +115,7 @@ public class TasksInfo  implements java.io.Serializable {
         this.content = content;
     }
 
+
     /**
      * get 采集间隔
      *
@@ -129,6 +133,7 @@ public class TasksInfo  implements java.io.Serializable {
     public void setInterval(Long interval) {
         this.interval = interval;
     }
+
 
     /**
      * get meta信息，类型为map[string]string
@@ -149,6 +154,7 @@ public class TasksInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set task类型
      *
@@ -158,6 +164,7 @@ public class TasksInfo  implements java.io.Serializable {
         this.confType = confType;
         return this;
     }
+
 
     /**
      * set UID
@@ -169,6 +176,7 @@ public class TasksInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 任务内容
      *
@@ -179,6 +187,7 @@ public class TasksInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 采集间隔
      *
@@ -188,6 +197,7 @@ public class TasksInfo  implements java.io.Serializable {
         this.interval = interval;
         return this;
     }
+
 
     /**
      * set meta信息，类型为map[string]string
