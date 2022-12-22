@@ -28,16 +28,33 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建缓存分析任务，一天最多创建12次分析任务
+ * 关闭4.0实例客户端连接
  */
-public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.io.Serializable {
+public class ClientKillRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * 关闭属性, 支持addr/type/db三种属性
+addr - 根据客户端地址关闭连接
+type - 根据链接类型关闭连接
+db - 根据db关闭连接
+
+     * Required:true
      */
-    private String sizeMode;
+    @Required
+    private String option;
+
+    /**
+     * 筛选条件
+属性是addr时 - ip:port, port空表示此ip所有port
+属性是type时 - 支持normal/pubsub/all三种条件
+属性是db时 - db列表, 0,1,2..
+
+     * Required:true
+     */
+    @Required
+    private String value;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -56,21 +73,56 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * get 关闭属性, 支持addr/type/db三种属性
+addr - 根据客户端地址关闭连接
+type - 根据链接类型关闭连接
+db - 根据db关闭连接
+
      *
      * @return
      */
-    public String getSizeMode() {
-        return sizeMode;
+    public String getOption() {
+        return option;
     }
 
     /**
-     * set 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * set 关闭属性, 支持addr/type/db三种属性
+addr - 根据客户端地址关闭连接
+type - 根据链接类型关闭连接
+db - 根据db关闭连接
+
      *
-     * @param sizeMode
+     * @param option
      */
-    public void setSizeMode(String sizeMode) {
-        this.sizeMode = sizeMode;
+    public void setOption(String option) {
+        this.option = option;
+    }
+
+
+    /**
+     * get 筛选条件
+属性是addr时 - ip:port, port空表示此ip所有port
+属性是type时 - 支持normal/pubsub/all三种条件
+属性是db时 - db列表, 0,1,2..
+
+     *
+     * @return
+     */
+    public String getValue() {
+        return value;
+    }
+
+    /**
+     * set 筛选条件
+属性是addr时 - ip:port, port空表示此ip所有port
+属性是type时 - 支持normal/pubsub/all三种条件
+属性是db时 - db列表, 0,1,2..
+
+     *
+     * @param value
+     */
+    public void setValue(String value) {
+        this.value = value;
     }
 
 
@@ -114,12 +166,31 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * set 关闭属性, 支持addr/type/db三种属性
+addr - 根据客户端地址关闭连接
+type - 根据链接类型关闭连接
+db - 根据db关闭连接
+
      *
-     * @param sizeMode
+     * @param option
      */
-    public CreateCacheAnalysisRequest sizeMode(String sizeMode) {
-        this.sizeMode = sizeMode;
+    public ClientKillRequest option(String option) {
+        this.option = option;
+        return this;
+    }
+
+
+    /**
+     * set 筛选条件
+属性是addr时 - ip:port, port空表示此ip所有port
+属性是type时 - 支持normal/pubsub/all三种条件
+属性是db时 - db列表, 0,1,2..
+
+     *
+     * @param value
+     */
+    public ClientKillRequest value(String value) {
+        this.value = value;
         return this;
     }
 
@@ -129,7 +200,7 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
      *
      * @param regionId
      */
-    public CreateCacheAnalysisRequest regionId(String regionId) {
+    public ClientKillRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -140,7 +211,7 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
      *
      * @param cacheInstanceId
      */
-    public CreateCacheAnalysisRequest cacheInstanceId(String cacheInstanceId) {
+    public ClientKillRequest cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }

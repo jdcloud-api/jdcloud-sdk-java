@@ -75,12 +75,12 @@ public class RedisNode  implements java.io.Serializable {
     /**
      * 节点已使用内存，单位Byte
      */
-    private Integer usedMemory;
+    private Long usedMemory;
 
     /**
      * 节点总内存，单位Byte
      */
-    private Integer maxMemory;
+    private Long maxMemory;
 
 
 
@@ -222,7 +222,7 @@ public class RedisNode  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getUsedMemory() {
+    public Long getUsedMemory() {
         return usedMemory;
     }
 
@@ -231,7 +231,7 @@ public class RedisNode  implements java.io.Serializable {
      *
      * @param usedMemory
      */
-    public void setUsedMemory(Integer usedMemory) {
+    public void setUsedMemory(Long usedMemory) {
         this.usedMemory = usedMemory;
     }
 
@@ -241,7 +241,7 @@ public class RedisNode  implements java.io.Serializable {
      *
      * @return
      */
-    public Integer getMaxMemory() {
+    public Long getMaxMemory() {
         return maxMemory;
     }
 
@@ -250,7 +250,7 @@ public class RedisNode  implements java.io.Serializable {
      *
      * @param maxMemory
      */
-    public void setMaxMemory(Integer maxMemory) {
+    public void setMaxMemory(Long maxMemory) {
         this.maxMemory = maxMemory;
     }
 
@@ -338,7 +338,7 @@ public class RedisNode  implements java.io.Serializable {
      *
      * @param usedMemory
      */
-    public RedisNode usedMemory(Integer usedMemory) {
+    public RedisNode usedMemory(Long usedMemory) {
         this.usedMemory = usedMemory;
         return this;
     }
@@ -349,7 +349,7 @@ public class RedisNode  implements java.io.Serializable {
      *
      * @param maxMemory
      */
-    public RedisNode maxMemory(Integer maxMemory) {
+    public RedisNode maxMemory(Long maxMemory) {
         this.maxMemory = maxMemory;
         return this;
     }

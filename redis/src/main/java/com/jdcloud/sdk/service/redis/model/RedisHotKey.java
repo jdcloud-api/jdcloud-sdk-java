@@ -54,6 +54,11 @@ public class RedisHotKey  implements java.io.Serializable {
     @Required
     private Integer accessCount;
 
+    /**
+     * key所在的db号
+     */
+    private Integer db;
+
 
 
     /**
@@ -113,6 +118,25 @@ public class RedisHotKey  implements java.io.Serializable {
     }
 
 
+    /**
+     * get key所在的db号
+     *
+     * @return
+     */
+    public Integer getDb() {
+        return db;
+    }
+
+    /**
+     * set key所在的db号
+     *
+     * @param db
+     */
+    public void setDb(Integer db) {
+        this.db = db;
+    }
+
+
 
     /**
      * set key名称
@@ -143,6 +167,17 @@ public class RedisHotKey  implements java.io.Serializable {
      */
     public RedisHotKey accessCount(Integer accessCount) {
         this.accessCount = accessCount;
+        return this;
+    }
+
+
+    /**
+     * set key所在的db号
+     *
+     * @param db
+     */
+    public RedisHotKey db(Integer db) {
+        this.db = db;
         return this;
     }
 

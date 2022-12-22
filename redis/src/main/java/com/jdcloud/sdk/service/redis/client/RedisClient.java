@@ -166,6 +166,12 @@ import com.jdcloud.sdk.service.redis.client.DescribeAvailableRegionExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeBigKeyDetail2Request;
 import com.jdcloud.sdk.service.redis.model.DescribeBigKeyDetail2Response;
 import com.jdcloud.sdk.service.redis.client.DescribeBigKeyDetail2Executor;
+import com.jdcloud.sdk.service.redis.model.DescribeResizeModeIpTimeInfoRequest;
+import com.jdcloud.sdk.service.redis.model.DescribeResizeModeIpTimeInfoResponse;
+import com.jdcloud.sdk.service.redis.client.DescribeResizeModeIpTimeInfoExecutor;
+import com.jdcloud.sdk.service.redis.model.ClientKillRequest;
+import com.jdcloud.sdk.service.redis.model.ClientKillResponse;
+import com.jdcloud.sdk.service.redis.client.ClientKillExecutor;
 import com.jdcloud.sdk.service.redis.model.DescribeAnalysisTimeRequest;
 import com.jdcloud.sdk.service.redis.model.DescribeAnalysisTimeResponse;
 import com.jdcloud.sdk.service.redis.client.DescribeAnalysisTimeExecutor;
@@ -193,6 +199,9 @@ import com.jdcloud.sdk.service.redis.client.ModifyAccountExecutor;
 import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceRequest;
 import com.jdcloud.sdk.service.redis.model.DeleteCacheInstanceResponse;
 import com.jdcloud.sdk.service.redis.client.DeleteCacheInstanceExecutor;
+import com.jdcloud.sdk.service.redis.model.RestartProxyRequest;
+import com.jdcloud.sdk.service.redis.model.RestartProxyResponse;
+import com.jdcloud.sdk.service.redis.client.RestartProxyExecutor;
 import com.jdcloud.sdk.service.redis.model.GetDisableCommandsRequest;
 import com.jdcloud.sdk.service.redis.model.GetDisableCommandsResponse;
 import com.jdcloud.sdk.service.redis.client.GetDisableCommandsExecutor;
@@ -764,6 +773,29 @@ public class RedisClient extends JdcloudClient {
     }
 
     /**
+     * 查询缓存Red4.0实例是否支持新变配功能，是否支持并行变配, 变配需要的IP数量及变配预估时间
+
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeResizeModeIpTimeInfoResponse describeResizeModeIpTimeInfo(DescribeResizeModeIpTimeInfoRequest request) throws JdcloudSdkException {
+        return new DescribeResizeModeIpTimeInfoExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 关闭4.0实例客户端连接
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public ClientKillResponse clientKill(ClientKillRequest request) throws JdcloudSdkException {
+        return new ClientKillExecutor().client(this).execute(request);
+    }
+
+    /**
      * 获取自动缓存分析时间
      *
      * @param request
@@ -864,6 +896,17 @@ public class RedisClient extends JdcloudClient {
      */
     public DeleteCacheInstanceResponse deleteCacheInstance(DeleteCacheInstanceRequest request) throws JdcloudSdkException {
         return new DeleteCacheInstanceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 重启4.0实例代理
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public RestartProxyResponse restartProxy(RestartProxyRequest request) throws JdcloudSdkException {
+        return new RestartProxyExecutor().client(this).execute(request);
     }
 
     /**

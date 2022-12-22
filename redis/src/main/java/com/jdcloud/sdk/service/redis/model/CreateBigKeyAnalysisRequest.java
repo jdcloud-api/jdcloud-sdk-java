@@ -65,6 +65,11 @@ public class CreateBigKeyAnalysisRequest extends JdcloudRequest implements java.
     private Integer top;
 
     /**
+     * 计算大key的方式。若为“elementCounts”，则使用元素个数计算大key；若为“memorySize”，则使用内存大小计算大key。默认为“elementCounts”。
+     */
+    private String sizeMode;
+
+    /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
@@ -195,6 +200,25 @@ public class CreateBigKeyAnalysisRequest extends JdcloudRequest implements java.
 
 
     /**
+     * get 计算大key的方式。若为“elementCounts”，则使用元素个数计算大key；若为“memorySize”，则使用内存大小计算大key。默认为“elementCounts”。
+     *
+     * @return
+     */
+    public String getSizeMode() {
+        return sizeMode;
+    }
+
+    /**
+     * set 计算大key的方式。若为“elementCounts”，则使用元素个数计算大key；若为“memorySize”，则使用内存大小计算大key。默认为“elementCounts”。
+     *
+     * @param sizeMode
+     */
+    public void setSizeMode(String sizeMode) {
+        this.sizeMode = sizeMode;
+    }
+
+
+    /**
      * get 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      *
      * @return
@@ -295,6 +319,17 @@ public class CreateBigKeyAnalysisRequest extends JdcloudRequest implements java.
      */
     public CreateBigKeyAnalysisRequest top(Integer top) {
         this.top = top;
+        return this;
+    }
+
+
+    /**
+     * set 计算大key的方式。若为“elementCounts”，则使用元素个数计算大key；若为“memorySize”，则使用内存大小计算大key。默认为“elementCounts”。
+     *
+     * @param sizeMode
+     */
+    public CreateBigKeyAnalysisRequest sizeMode(String sizeMode) {
+        this.sizeMode = sizeMode;
         return this;
     }
 

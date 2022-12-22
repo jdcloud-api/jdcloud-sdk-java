@@ -1,9 +1,17 @@
 # 更新历史
 
-API版本：2.6.22
+API版本：2.6.32
 
 | 发布时间   | 版本号 | 更新     | 说明                                                                                                                                                                                                    |
 | ---------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2022-12-19 | 2.6.32 | 新增接口 | 新增接口restartProxy、restartProxy |
+| 2022-12-16 | 2.6.31 | 更新接口 | 修改接口createBigKeyAnalysis、createCacheAnalysis的请求参数 |
+| 2022-12-01 | 2.6.30 | 新增接口 | 新增接口describeResizeModeIpTimeInfo, modifyCacheInstanceClass接口增加入参 |
+| 2022-11-15 | 2.6.29 | 新增接口 | 内部接口调整 |
+| 2022-11-07 | 2.6.28 | 更新接口 | 修改接口describeHotKeyDetail2的返回字段 |
+| 2022-10-11 | 2.6.27 | 更新接口 | 修改接口describeNodeList的返回字段 |
+| 2022-09-26 | 2.6.26 | 更新接口 | 修改接口describeCacheInstances、describeCacheInstance的返回字段 |
+| 2022-09-20 | 2.6.25 | 新增接口 | 内部接口调整 |
 | 2022-09-05 | 2.6.24 | 新增接口 | 新增接口describeHotKeySummary、describeHotKeyDetail |
 | 2022-08-19 | 2.6.23 | 更新接口 | 修改接口describeClientPerfData、filteredClientPerfData的返回字段 |
 | 2022-08-16 | 2.6.22  | 新增接口 | 新增接口modifyAccounts |
