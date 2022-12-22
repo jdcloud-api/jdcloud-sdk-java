@@ -111,6 +111,11 @@ public class CacheInstance  implements java.io.Serializable {
     private Boolean auth;
 
     /**
+     * 实例是否允许修改为免密
+     */
+    private Boolean isAllowNoAuth;
+
+    /**
      * 创建实例时选择的引擎版本：目前支持2.8和4.0
      */
     private String redisVersion;
@@ -469,6 +474,25 @@ public class CacheInstance  implements java.io.Serializable {
      */
     public void setAuth(Boolean auth) {
         this.auth = auth;
+    }
+
+
+    /**
+     * get 实例是否允许修改为免密
+     *
+     * @return
+     */
+    public Boolean getIsAllowNoAuth() {
+        return isAllowNoAuth;
+    }
+
+    /**
+     * set 实例是否允许修改为免密
+     *
+     * @param isAllowNoAuth
+     */
+    public void setIsAllowNoAuth(Boolean isAllowNoAuth) {
+        this.isAllowNoAuth = isAllowNoAuth;
     }
 
 
@@ -919,6 +943,17 @@ public class CacheInstance  implements java.io.Serializable {
      */
     public CacheInstance auth(Boolean auth) {
         this.auth = auth;
+        return this;
+    }
+
+
+    /**
+     * set 实例是否允许修改为免密
+     *
+     * @param isAllowNoAuth
+     */
+    public CacheInstance isAllowNoAuth(Boolean isAllowNoAuth) {
+        this.isAllowNoAuth = isAllowNoAuth;
         return this;
     }
 

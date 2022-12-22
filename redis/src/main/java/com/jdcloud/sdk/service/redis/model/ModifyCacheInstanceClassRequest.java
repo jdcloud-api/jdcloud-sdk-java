@@ -48,6 +48,11 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
     private Integer shardNumber;
 
     /**
+     * 是否开启4.0集群并行变配
+     */
+    private Boolean parallel;
+
+    /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
      */
@@ -98,6 +103,25 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
      */
     public void setShardNumber(Integer shardNumber) {
         this.shardNumber = shardNumber;
+    }
+
+
+    /**
+     * get 是否开启4.0集群并行变配
+     *
+     * @return
+     */
+    public Boolean getParallel() {
+        return parallel;
+    }
+
+    /**
+     * set 是否开启4.0集群并行变配
+     *
+     * @param parallel
+     */
+    public void setParallel(Boolean parallel) {
+        this.parallel = parallel;
     }
 
 
@@ -158,6 +182,17 @@ public class ModifyCacheInstanceClassRequest extends JdcloudRequest implements j
      */
     public ModifyCacheInstanceClassRequest shardNumber(Integer shardNumber) {
         this.shardNumber = shardNumber;
+        return this;
+    }
+
+
+    /**
+     * set 是否开启4.0集群并行变配
+     *
+     * @param parallel
+     */
+    public ModifyCacheInstanceClassRequest parallel(Boolean parallel) {
+        this.parallel = parallel;
         return this;
     }
 

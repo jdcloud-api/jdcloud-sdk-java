@@ -24,21 +24,25 @@
 
 package com.jdcloud.sdk.service.redis.model;
 
+import java.util.List;
+import java.util.ArrayList;
 import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建缓存分析任务，一天最多创建12次分析任务
+ * 重启4.0实例代理
  */
-public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.io.Serializable {
+public class RestartProxyRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * proxy节点id列表
+     * Required:true
      */
-    private String sizeMode;
-
+    @Required
+    
+    private List<Integer> proxyIds;
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
      * Required:true
@@ -56,21 +60,21 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
-     *
-     * @return
-     */
-    public String getSizeMode() {
-        return sizeMode;
+    * get proxy节点id列表
+    *
+    * @return
+    */
+    public List<Integer> getProxyIds() {
+        return proxyIds;
     }
 
     /**
-     * set 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
-     *
-     * @param sizeMode
-     */
-    public void setSizeMode(String sizeMode) {
-        this.sizeMode = sizeMode;
+    * set proxy节点id列表
+    *
+    * @param proxyIds
+    */
+    public void setProxyIds(List<Integer> proxyIds) {
+        this.proxyIds = proxyIds;
     }
 
 
@@ -114,12 +118,12 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
-     *
-     * @param sizeMode
-     */
-    public CreateCacheAnalysisRequest sizeMode(String sizeMode) {
-        this.sizeMode = sizeMode;
+    * set proxy节点id列表
+    *
+    * @param proxyIds
+    */
+    public RestartProxyRequest proxyIds(List<Integer> proxyIds) {
+        this.proxyIds = proxyIds;
         return this;
     }
 
@@ -129,7 +133,7 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
      *
      * @param regionId
      */
-    public CreateCacheAnalysisRequest regionId(String regionId) {
+    public RestartProxyRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -140,10 +144,22 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
      *
      * @param cacheInstanceId
      */
-    public CreateCacheAnalysisRequest cacheInstanceId(String cacheInstanceId) {
+    public RestartProxyRequest cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
 
 
+
+    /**
+     * add item to proxy节点id列表
+     *
+     * @param proxyId
+     */
+    public void addProxyId(Integer proxyId) {
+        if (this.proxyIds == null) {
+            this.proxyIds = new ArrayList<>();
+        }
+        this.proxyIds.add(proxyId);
+    }
 }

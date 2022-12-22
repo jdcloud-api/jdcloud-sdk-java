@@ -28,16 +28,22 @@ import com.jdcloud.sdk.annotation.Required;
 import com.jdcloud.sdk.service.JdcloudRequest;
 
 /**
- * 创建缓存分析任务，一天最多创建12次分析任务
+ * 查询缓存Red4.0实例是否支持新变配功能，是否支持并行变配, 变配需要的IP数量及变配预估时间
+
  */
-public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.io.Serializable {
+public class DescribeResizeModeIpTimeInfoRequest extends JdcloudRequest implements java.io.Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
-     * 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * 新规格。不传参只返回是否支持新变配功能。
      */
-    private String sizeMode;
+    private String cacheInstanceClass;
+
+    /**
+     * 自定义分片数。不传参只返回是否支持新变配功能。
+     */
+    private Integer shardNumber;
 
     /**
      * 缓存Redis实例所在区域的Region ID。目前有华北-北京、华南-广州、华东-上海三个区域，Region ID分别为cn-north-1、cn-south-1、cn-east-2
@@ -56,21 +62,40 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * get 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * get 新规格。不传参只返回是否支持新变配功能。
      *
      * @return
      */
-    public String getSizeMode() {
-        return sizeMode;
+    public String getCacheInstanceClass() {
+        return cacheInstanceClass;
     }
 
     /**
-     * set 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * set 新规格。不传参只返回是否支持新变配功能。
      *
-     * @param sizeMode
+     * @param cacheInstanceClass
      */
-    public void setSizeMode(String sizeMode) {
-        this.sizeMode = sizeMode;
+    public void setCacheInstanceClass(String cacheInstanceClass) {
+        this.cacheInstanceClass = cacheInstanceClass;
+    }
+
+
+    /**
+     * get 自定义分片数。不传参只返回是否支持新变配功能。
+     *
+     * @return
+     */
+    public Integer getShardNumber() {
+        return shardNumber;
+    }
+
+    /**
+     * set 自定义分片数。不传参只返回是否支持新变配功能。
+     *
+     * @param shardNumber
+     */
+    public void setShardNumber(Integer shardNumber) {
+        this.shardNumber = shardNumber;
     }
 
 
@@ -114,12 +139,23 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
 
 
     /**
-     * set 计算大key的方式。若为elementCounts，则使用元素个数计算大key；若为memorySize，则使用内存大小计算大key。默认为memorySize。
+     * set 新规格。不传参只返回是否支持新变配功能。
      *
-     * @param sizeMode
+     * @param cacheInstanceClass
      */
-    public CreateCacheAnalysisRequest sizeMode(String sizeMode) {
-        this.sizeMode = sizeMode;
+    public DescribeResizeModeIpTimeInfoRequest cacheInstanceClass(String cacheInstanceClass) {
+        this.cacheInstanceClass = cacheInstanceClass;
+        return this;
+    }
+
+
+    /**
+     * set 自定义分片数。不传参只返回是否支持新变配功能。
+     *
+     * @param shardNumber
+     */
+    public DescribeResizeModeIpTimeInfoRequest shardNumber(Integer shardNumber) {
+        this.shardNumber = shardNumber;
         return this;
     }
 
@@ -129,7 +165,7 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
      *
      * @param regionId
      */
-    public CreateCacheAnalysisRequest regionId(String regionId) {
+    public DescribeResizeModeIpTimeInfoRequest regionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -140,7 +176,7 @@ public class CreateCacheAnalysisRequest extends JdcloudRequest implements java.i
      *
      * @param cacheInstanceId
      */
-    public CreateCacheAnalysisRequest cacheInstanceId(String cacheInstanceId) {
+    public DescribeResizeModeIpTimeInfoRequest cacheInstanceId(String cacheInstanceId) {
         this.cacheInstanceId = cacheInstanceId;
         return this;
     }
