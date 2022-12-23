@@ -40,6 +40,9 @@ import com.jdcloud.sdk.service.cdn.client.QueryServiceNoticeExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDeviceStatusForPCdnRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDeviceStatusForPCdnResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDeviceStatusForPCdnExecutor;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainsLogForJdRequest;
+import com.jdcloud.sdk.service.cdn.model.QueryDomainsLogForJdResponse;
+import com.jdcloud.sdk.service.cdn.client.QueryDomainsLogForJdExecutor;
 import com.jdcloud.sdk.service.cdn.model.QueryDirStatsDataRequest;
 import com.jdcloud.sdk.service.cdn.model.QueryDirStatsDataResponse;
 import com.jdcloud.sdk.service.cdn.client.QueryDirStatsDataExecutor;
@@ -709,6 +712,17 @@ public class CdnClient extends JdcloudClient {
      */
     public QueryDeviceStatusForPCdnResponse queryDeviceStatusForPCdn(QueryDeviceStatusForPCdnRequest request) throws JdcloudSdkException {
         return new QueryDeviceStatusForPCdnExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 批量域名查询日志-pin维度
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public QueryDomainsLogForJdResponse queryDomainsLogForJd(QueryDomainsLogForJdRequest request) throws JdcloudSdkException {
+        return new QueryDomainsLogForJdExecutor().client(this).execute(request);
     }
 
     /**
