@@ -40,6 +40,7 @@ public class VerifyContractResult extends JdcloudResult implements java.io.Seria
     private VerifyInfo verifyInfo;
 
 
+
     /**
      * get verifyInfo
      *
@@ -57,6 +58,7 @@ public class VerifyContractResult extends JdcloudResult implements java.io.Seria
     public void setVerifyInfo(VerifyInfo verifyInfo) {
         this.verifyInfo = verifyInfo;
     }
+
 
 
     /**

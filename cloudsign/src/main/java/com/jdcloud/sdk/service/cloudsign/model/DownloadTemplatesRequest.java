@@ -44,6 +44,7 @@ public class DownloadTemplatesRequest extends JdcloudRequest implements java.io.
     private String templateId;
 
 
+
     /**
      * get 合同模板ID
      *
@@ -61,6 +62,7 @@ public class DownloadTemplatesRequest extends JdcloudRequest implements java.io.
     public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
+
 
 
     /**

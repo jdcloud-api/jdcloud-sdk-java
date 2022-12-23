@@ -39,31 +39,33 @@ public class DescribeStampListResult extends JdcloudResult implements java.io.Se
     /**
      * stampList
      */
+    
     private List<StampInfo> stampList;
-
     /**
      * 印章的数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get stampList
-     *
-     * @return
-     */
+    * get stampList
+    *
+    * @return
+    */
     public List<StampInfo> getStampList() {
         return stampList;
     }
 
     /**
-     * set stampList
-     *
-     * @param stampList
-     */
+    * set stampList
+    *
+    * @param stampList
+    */
     public void setStampList(List<StampInfo> stampList) {
         this.stampList = stampList;
     }
+
 
     /**
      * get 印章的数量
@@ -84,15 +86,17 @@ public class DescribeStampListResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set stampList
-     *
-     * @param stampList
-     */
+    * set stampList
+    *
+    * @param stampList
+    */
     public DescribeStampListResult stampList(List<StampInfo> stampList) {
         this.stampList = stampList;
         return this;
     }
+
 
     /**
      * set 印章的数量
@@ -103,6 +107,7 @@ public class DescribeStampListResult extends JdcloudResult implements java.io.Se
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeStampListResult extends JdcloudResult implements java.io.Se
         }
         this.stampList.add(stampList);
     }
-
 }

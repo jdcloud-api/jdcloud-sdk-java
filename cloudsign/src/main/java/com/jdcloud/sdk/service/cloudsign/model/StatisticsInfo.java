@@ -67,6 +67,7 @@ public class StatisticsInfo  implements java.io.Serializable {
     /**
      * 签章次数统计[24小时，7天，30天]
      */
+    
     private List<SignItem> signStatistic;
 
 
@@ -88,6 +89,7 @@ public class StatisticsInfo  implements java.io.Serializable {
         this.contractNumber = contractNumber;
     }
 
+
     /**
      * get 印章数量
      *
@@ -105,6 +107,7 @@ public class StatisticsInfo  implements java.io.Serializable {
     public void setStampNumber(Integer stampNumber) {
         this.stampNumber = stampNumber;
     }
+
 
     /**
      * get 合同模板数量
@@ -124,6 +127,7 @@ public class StatisticsInfo  implements java.io.Serializable {
         this.templateNumber = templateNumber;
     }
 
+
     /**
      * get 是否启用存管
      *
@@ -141,6 +145,7 @@ public class StatisticsInfo  implements java.io.Serializable {
     public void setContractSave(Boolean contractSave) {
         this.contractSave = contractSave;
     }
+
 
     /**
      * get 已用存储空间容量(单位:MB)
@@ -160,6 +165,7 @@ public class StatisticsInfo  implements java.io.Serializable {
         this.usedSpace = usedSpace;
     }
 
+
     /**
      * get 签章系统加密密钥ID
      *
@@ -178,23 +184,25 @@ public class StatisticsInfo  implements java.io.Serializable {
         this.kmsKeyId = kmsKeyId;
     }
 
+
     /**
-     * get 签章次数统计[24小时，7天，30天]
-     *
-     * @return
-     */
+    * get 签章次数统计[24小时，7天，30天]
+    *
+    * @return
+    */
     public List<SignItem> getSignStatistic() {
         return signStatistic;
     }
 
     /**
-     * set 签章次数统计[24小时，7天，30天]
-     *
-     * @param signStatistic
-     */
+    * set 签章次数统计[24小时，7天，30天]
+    *
+    * @param signStatistic
+    */
     public void setSignStatistic(List<SignItem> signStatistic) {
         this.signStatistic = signStatistic;
     }
+
 
 
     /**
@@ -207,6 +215,7 @@ public class StatisticsInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 印章数量
      *
@@ -216,6 +225,7 @@ public class StatisticsInfo  implements java.io.Serializable {
         this.stampNumber = stampNumber;
         return this;
     }
+
 
     /**
      * set 合同模板数量
@@ -227,6 +237,7 @@ public class StatisticsInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否启用存管
      *
@@ -236,6 +247,7 @@ public class StatisticsInfo  implements java.io.Serializable {
         this.contractSave = contractSave;
         return this;
     }
+
 
     /**
      * set 已用存储空间容量(单位:MB)
@@ -247,6 +259,7 @@ public class StatisticsInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 签章系统加密密钥ID
      *
@@ -257,15 +270,17 @@ public class StatisticsInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 签章次数统计[24小时，7天，30天]
-     *
-     * @param signStatistic
-     */
+    * set 签章次数统计[24小时，7天，30天]
+    *
+    * @param signStatistic
+    */
     public StatisticsInfo signStatistic(List<SignItem> signStatistic) {
         this.signStatistic = signStatistic;
         return this;
     }
+
 
 
     /**
@@ -279,5 +294,4 @@ public class StatisticsInfo  implements java.io.Serializable {
         }
         this.signStatistic.add(signStatistic);
     }
-
 }

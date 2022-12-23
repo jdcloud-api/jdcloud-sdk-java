@@ -39,31 +39,33 @@ public class DescribeTemplateListResult extends JdcloudResult implements java.io
     /**
      * templateList
      */
+    
     private List<TemplateInfo> templateList;
-
     /**
      * 合同模板数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get templateList
-     *
-     * @return
-     */
+    * get templateList
+    *
+    * @return
+    */
     public List<TemplateInfo> getTemplateList() {
         return templateList;
     }
 
     /**
-     * set templateList
-     *
-     * @param templateList
-     */
+    * set templateList
+    *
+    * @param templateList
+    */
     public void setTemplateList(List<TemplateInfo> templateList) {
         this.templateList = templateList;
     }
+
 
     /**
      * get 合同模板数量
@@ -84,15 +86,17 @@ public class DescribeTemplateListResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
-     * set templateList
-     *
-     * @param templateList
-     */
+    * set templateList
+    *
+    * @param templateList
+    */
     public DescribeTemplateListResult templateList(List<TemplateInfo> templateList) {
         this.templateList = templateList;
         return this;
     }
+
 
     /**
      * set 合同模板数量
@@ -103,6 +107,7 @@ public class DescribeTemplateListResult extends JdcloudResult implements java.io
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeTemplateListResult extends JdcloudResult implements java.io
         }
         this.templateList.add(templateList);
     }
-
 }

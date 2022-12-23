@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * 京东云电子签章-OpenAPI接口
- * 京东云电子签章-OpenAPI接口
+ * 京东云电子签章存取证-OpenAPI接口
+ * 京东云电子签章存取证-OpenAPI接口
  *
  * OpenAPI spec version: v1
  * Contact: 
@@ -31,6 +31,9 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.cloudsign.model.GetMultiEvidenceRequest;
+import com.jdcloud.sdk.service.cloudsign.model.GetMultiEvidenceResponse;
+import com.jdcloud.sdk.service.cloudsign.client.GetMultiEvidenceExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DescribeApplyStatusRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DescribeApplyStatusResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DescribeApplyStatusExecutor;
@@ -52,9 +55,15 @@ import com.jdcloud.sdk.service.cloudsign.client.DownloadStampsExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.PaddingTemplateRequest;
 import com.jdcloud.sdk.service.cloudsign.model.PaddingTemplateResponse;
 import com.jdcloud.sdk.service.cloudsign.client.PaddingTemplateExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.SaveMultiEvidenceRequest;
+import com.jdcloud.sdk.service.cloudsign.model.SaveMultiEvidenceResponse;
+import com.jdcloud.sdk.service.cloudsign.client.SaveMultiEvidenceExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.SignContractRequest;
 import com.jdcloud.sdk.service.cloudsign.model.SignContractResponse;
 import com.jdcloud.sdk.service.cloudsign.client.SignContractExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.GetEvidenceRequest;
+import com.jdcloud.sdk.service.cloudsign.model.GetEvidenceResponse;
+import com.jdcloud.sdk.service.cloudsign.client.GetEvidenceExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DownloadContractsRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DownloadContractsResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DownloadContractsExecutor;
@@ -70,6 +79,9 @@ import com.jdcloud.sdk.service.cloudsign.client.UploadTemplateExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DeleteTemplateRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DeleteTemplateResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DeleteTemplateExecutor;
+import com.jdcloud.sdk.service.cloudsign.model.SaveEvidenceRequest;
+import com.jdcloud.sdk.service.cloudsign.model.SaveEvidenceResponse;
+import com.jdcloud.sdk.service.cloudsign.client.SaveEvidenceExecutor;
 import com.jdcloud.sdk.service.cloudsign.model.DeleteContractRequest;
 import com.jdcloud.sdk.service.cloudsign.model.DeleteContractResponse;
 import com.jdcloud.sdk.service.cloudsign.client.DeleteContractExecutor;
@@ -93,7 +105,7 @@ public class CloudsignClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.4";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "cloudsign.jdcloud-api.com";
     public final static String ServiceName = "cloudsign";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -134,6 +146,17 @@ public class CloudsignClient extends JdcloudClient {
         return new DefaultBuilder();
     }
 
+
+    /**
+     * 带主体标记的取证接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetMultiEvidenceResponse getMultiEvidence(GetMultiEvidenceRequest request) throws JdcloudSdkException {
+        return new GetMultiEvidenceExecutor().client(this).execute(request);
+    }
 
     /**
      * 查询服务开通状态
@@ -215,6 +238,17 @@ public class CloudsignClient extends JdcloudClient {
     }
 
     /**
+     * 多证据链存证接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SaveMultiEvidenceResponse saveMultiEvidence(SaveMultiEvidenceRequest request) throws JdcloudSdkException {
+        return new SaveMultiEvidenceExecutor().client(this).execute(request);
+    }
+
+    /**
      * 合同签章四种方式：
 1. 合同文件 + 印章文件：contractContent + stampContent
 2. 合同文件 + 印章ID：contractContent + stampId
@@ -228,6 +262,17 @@ public class CloudsignClient extends JdcloudClient {
      */
     public SignContractResponse signContract(SignContractRequest request) throws JdcloudSdkException {
         return new SignContractExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 单证据链取证接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public GetEvidenceResponse getEvidence(GetEvidenceRequest request) throws JdcloudSdkException {
+        return new GetEvidenceExecutor().client(this).execute(request);
     }
 
     /**
@@ -287,6 +332,17 @@ public class CloudsignClient extends JdcloudClient {
      */
     public DeleteTemplateResponse deleteTemplate(DeleteTemplateRequest request) throws JdcloudSdkException {
         return new DeleteTemplateExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 单证据链存证接口
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public SaveEvidenceResponse saveEvidence(SaveEvidenceRequest request) throws JdcloudSdkException {
+        return new SaveEvidenceExecutor().client(this).execute(request);
     }
 
     /**

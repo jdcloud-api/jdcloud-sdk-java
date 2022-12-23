@@ -72,12 +72,13 @@ public class TemplateInfo  implements java.io.Serializable {
     /**
      * 填充信息
      */
+    
     private List<PaddingInfo> paddingInfo;
-
     /**
      * 创建时间
      */
     private String createTime;
+
 
 
     /**
@@ -98,6 +99,7 @@ public class TemplateInfo  implements java.io.Serializable {
         this.templateId = templateId;
     }
 
+
     /**
      * get 合同模板名称
      *
@@ -115,6 +117,7 @@ public class TemplateInfo  implements java.io.Serializable {
     public void setTemplateName(String templateName) {
         this.templateName = templateName;
     }
+
 
     /**
      * get 合同模板标题
@@ -134,6 +137,7 @@ public class TemplateInfo  implements java.io.Serializable {
         this.templateTitle = templateTitle;
     }
 
+
     /**
      * get 合同模板文件名称
      *
@@ -151,6 +155,7 @@ public class TemplateInfo  implements java.io.Serializable {
     public void setTemplateFileName(String templateFileName) {
         this.templateFileName = templateFileName;
     }
+
 
     /**
      * get 合同模板文件（base64）
@@ -170,6 +175,7 @@ public class TemplateInfo  implements java.io.Serializable {
         this.templateContent = templateContent;
     }
 
+
     /**
      * get 合同模板文件摘要
      *
@@ -187,6 +193,7 @@ public class TemplateInfo  implements java.io.Serializable {
     public void setTemplateDigest(String templateDigest) {
         this.templateDigest = templateDigest;
     }
+
 
     /**
      * get 合同模板文件类型 pdf,word,pdf-auto
@@ -206,23 +213,25 @@ public class TemplateInfo  implements java.io.Serializable {
         this.templateType = templateType;
     }
 
+
     /**
-     * get 填充信息
-     *
-     * @return
-     */
+    * get 填充信息
+    *
+    * @return
+    */
     public List<PaddingInfo> getPaddingInfo() {
         return paddingInfo;
     }
 
     /**
-     * set 填充信息
-     *
-     * @param paddingInfo
-     */
+    * set 填充信息
+    *
+    * @param paddingInfo
+    */
     public void setPaddingInfo(List<PaddingInfo> paddingInfo) {
         this.paddingInfo = paddingInfo;
     }
+
 
     /**
      * get 创建时间
@@ -243,6 +252,7 @@ public class TemplateInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 合同模板ID
      *
@@ -252,6 +262,7 @@ public class TemplateInfo  implements java.io.Serializable {
         this.templateId = templateId;
         return this;
     }
+
 
     /**
      * set 合同模板名称
@@ -263,6 +274,7 @@ public class TemplateInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同模板标题
      *
@@ -272,6 +284,7 @@ public class TemplateInfo  implements java.io.Serializable {
         this.templateTitle = templateTitle;
         return this;
     }
+
 
     /**
      * set 合同模板文件名称
@@ -283,6 +296,7 @@ public class TemplateInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同模板文件（base64）
      *
@@ -292,6 +306,7 @@ public class TemplateInfo  implements java.io.Serializable {
         this.templateContent = templateContent;
         return this;
     }
+
 
     /**
      * set 合同模板文件摘要
@@ -303,6 +318,7 @@ public class TemplateInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同模板文件类型 pdf,word,pdf-auto
      *
@@ -313,15 +329,17 @@ public class TemplateInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 填充信息
-     *
-     * @param paddingInfo
-     */
+    * set 填充信息
+    *
+    * @param paddingInfo
+    */
     public TemplateInfo paddingInfo(List<PaddingInfo> paddingInfo) {
         this.paddingInfo = paddingInfo;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -332,6 +350,7 @@ public class TemplateInfo  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
 
     /**
@@ -345,5 +364,4 @@ public class TemplateInfo  implements java.io.Serializable {
         }
         this.paddingInfo.add(paddingInfo);
     }
-
 }

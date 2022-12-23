@@ -43,6 +43,7 @@ public class SignItem  implements java.io.Serializable {
     private Integer value;
 
 
+
     /**
      * get 13位时间戳
      *
@@ -60,6 +61,7 @@ public class SignItem  implements java.io.Serializable {
     public void setTime(String time) {
         this.time = time;
     }
+
 
     /**
      * get 签章次数
@@ -80,6 +82,7 @@ public class SignItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 13位时间戳
      *
@@ -89,6 +92,7 @@ public class SignItem  implements java.io.Serializable {
         this.time = time;
         return this;
     }
+
 
     /**
      * set 签章次数

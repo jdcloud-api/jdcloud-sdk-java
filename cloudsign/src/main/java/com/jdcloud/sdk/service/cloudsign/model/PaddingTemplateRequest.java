@@ -50,6 +50,7 @@ public class PaddingTemplateRequest extends JdcloudRequest implements java.io.Se
     private String templateId;
 
 
+
     /**
      * get paddingSpec
      *
@@ -67,6 +68,7 @@ public class PaddingTemplateRequest extends JdcloudRequest implements java.io.Se
     public void setPaddingSpec(PaddingSpec paddingSpec) {
         this.paddingSpec = paddingSpec;
     }
+
 
     /**
      * get 合同模板ID
@@ -87,6 +89,7 @@ public class PaddingTemplateRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set paddingSpec
      *
@@ -96,6 +99,7 @@ public class PaddingTemplateRequest extends JdcloudRequest implements java.io.Se
         this.paddingSpec = paddingSpec;
         return this;
     }
+
 
     /**
      * set 合同模板ID

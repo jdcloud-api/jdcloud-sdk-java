@@ -64,6 +64,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
     private String subType;
 
 
+
     /**
      * get 验证结果
      *
@@ -81,6 +82,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
     public void setVerified(Boolean verified) {
         this.verified = verified;
     }
+
 
     /**
      * get 时间戳
@@ -100,6 +102,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
         this.timestamp = timestamp;
     }
 
+
     /**
      * get 签名算法信息
      *
@@ -117,6 +120,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
     public void setAlgorithm(String algorithm) {
         this.algorithm = algorithm;
     }
+
 
     /**
      * get 证书信息
@@ -136,6 +140,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
         this.certInfo = certInfo;
     }
 
+
     /**
      * get 是否验证根证书
      *
@@ -153,6 +158,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
     public void setChainRootVerified(Boolean chainRootVerified) {
         this.chainRootVerified = chainRootVerified;
     }
+
 
     /**
      * get 子类型
@@ -173,6 +179,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
     }
 
 
+
     /**
      * set 验证结果
      *
@@ -182,6 +189,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
         this.verified = verified;
         return this;
     }
+
 
     /**
      * set 时间戳
@@ -193,6 +201,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 签名算法信息
      *
@@ -202,6 +211,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
         this.algorithm = algorithm;
         return this;
     }
+
 
     /**
      * set 证书信息
@@ -213,6 +223,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否验证根证书
      *
@@ -222,6 +233,7 @@ public class StampResult extends JdcloudResult implements java.io.Serializable {
         this.chainRootVerified = chainRootVerified;
         return this;
     }
+
 
     /**
      * set 子类型

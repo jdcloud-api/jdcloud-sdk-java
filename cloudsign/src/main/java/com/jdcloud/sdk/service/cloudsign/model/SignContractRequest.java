@@ -48,6 +48,7 @@ public class SignContractRequest extends JdcloudRequest implements java.io.Seria
     private ContractSpec contractSpec;
 
 
+
     /**
      * get contractSpec
      *
@@ -65,6 +66,7 @@ public class SignContractRequest extends JdcloudRequest implements java.io.Seria
     public void setContractSpec(ContractSpec contractSpec) {
         this.contractSpec = contractSpec;
     }
+
 
 
     /**

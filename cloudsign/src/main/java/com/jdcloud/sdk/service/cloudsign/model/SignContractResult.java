@@ -49,6 +49,7 @@ public class SignContractResult extends JdcloudResult implements java.io.Seriali
     private String contractContent;
 
 
+
     /**
      * get 新签的合同ID
      *
@@ -66,6 +67,7 @@ public class SignContractResult extends JdcloudResult implements java.io.Seriali
     public void setContractId(String contractId) {
         this.contractId = contractId;
     }
+
 
     /**
      * get 新签的合同文件（base64）
@@ -86,6 +88,7 @@ public class SignContractResult extends JdcloudResult implements java.io.Seriali
     }
 
 
+
     /**
      * set 新签的合同ID
      *
@@ -95,6 +98,7 @@ public class SignContractResult extends JdcloudResult implements java.io.Seriali
         this.contractId = contractId;
         return this;
     }
+
 
     /**
      * set 新签的合同文件（base64）

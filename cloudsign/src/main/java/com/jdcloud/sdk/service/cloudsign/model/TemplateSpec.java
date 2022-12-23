@@ -59,6 +59,7 @@ public class TemplateSpec  implements java.io.Serializable {
 在word文档中为双大括号里的内容, 比如{{单位名称}}
 
      */
+    
     private List<String> holdingKeys;
 
 
@@ -80,6 +81,7 @@ public class TemplateSpec  implements java.io.Serializable {
         this.templateContent = templateContent;
     }
 
+
     /**
      * get 合同模板名称
      *
@@ -97,6 +99,7 @@ public class TemplateSpec  implements java.io.Serializable {
     public void setTemplateName(String templateName) {
         this.templateName = templateName;
     }
+
 
     /**
      * get 合同模板标题
@@ -116,6 +119,7 @@ public class TemplateSpec  implements java.io.Serializable {
         this.templateTitle = templateTitle;
     }
 
+
     /**
      * get 模板类型 pdf,word (word为可编辑模板)
      *
@@ -134,27 +138,29 @@ public class TemplateSpec  implements java.io.Serializable {
         this.templateType = templateType;
     }
 
+
     /**
-     * get 占位符关键字,templateType为word时必传
+    * get 占位符关键字,templateType为word时必传
 在word文档中为双大括号里的内容, 比如{{单位名称}}
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<String> getHoldingKeys() {
         return holdingKeys;
     }
 
     /**
-     * set 占位符关键字,templateType为word时必传
+    * set 占位符关键字,templateType为word时必传
 在word文档中为双大括号里的内容, 比如{{单位名称}}
 
-     *
-     * @param holdingKeys
-     */
+    *
+    * @param holdingKeys
+    */
     public void setHoldingKeys(List<String> holdingKeys) {
         this.holdingKeys = holdingKeys;
     }
+
 
 
     /**
@@ -167,6 +173,7 @@ public class TemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同模板名称
      *
@@ -176,6 +183,7 @@ public class TemplateSpec  implements java.io.Serializable {
         this.templateName = templateName;
         return this;
     }
+
 
     /**
      * set 合同模板标题
@@ -187,6 +195,7 @@ public class TemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 模板类型 pdf,word (word为可编辑模板)
      *
@@ -197,17 +206,19 @@ public class TemplateSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 占位符关键字,templateType为word时必传
+    * set 占位符关键字,templateType为word时必传
 在word文档中为双大括号里的内容, 比如{{单位名称}}
 
-     *
-     * @param holdingKeys
-     */
+    *
+    * @param holdingKeys
+    */
     public TemplateSpec holdingKeys(List<String> holdingKeys) {
         this.holdingKeys = holdingKeys;
         return this;
     }
+
 
 
     /**
@@ -223,5 +234,4 @@ public class TemplateSpec  implements java.io.Serializable {
         }
         this.holdingKeys.add(holdingKey);
     }
-
 }

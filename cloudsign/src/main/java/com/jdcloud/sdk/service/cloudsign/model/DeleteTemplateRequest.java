@@ -42,6 +42,7 @@ public class DeleteTemplateRequest extends JdcloudRequest implements java.io.Ser
     private String templateId;
 
 
+
     /**
      * get 合同模板ID
      *
@@ -59,6 +60,7 @@ public class DeleteTemplateRequest extends JdcloudRequest implements java.io.Ser
     public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
+
 
 
     /**
