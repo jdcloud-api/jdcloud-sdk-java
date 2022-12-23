@@ -44,6 +44,7 @@ public class DownloadStampsRequest extends JdcloudRequest implements java.io.Ser
     private String stampId;
 
 
+
     /**
      * get 印章ID
      *
@@ -61,6 +62,7 @@ public class DownloadStampsRequest extends JdcloudRequest implements java.io.Ser
     public void setStampId(String stampId) {
         this.stampId = stampId;
     }
+
 
 
     /**

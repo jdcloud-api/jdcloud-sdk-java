@@ -64,6 +64,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     private String applyTime;
 
 
+
     /**
      * get 用户pin
      *
@@ -81,6 +82,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 已用存储容量
@@ -100,6 +102,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
         this.usedCapacity = usedCapacity;
     }
 
+
     /**
      * get 当前服务状态(0 未开通 1 开通中 2 正常 3 停服)
      *
@@ -117,6 +120,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 是否开启合同托管
@@ -136,6 +140,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
         this.contractSaving = contractSaving;
     }
 
+
     /**
      * get 签章系统所用的托管密钥
      *
@@ -153,6 +158,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     public void setKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
+
 
     /**
      * get 申请开通服务时间
@@ -173,6 +179,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -182,6 +189,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 已用存储容量
@@ -193,6 +201,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 当前服务状态(0 未开通 1 开通中 2 正常 3 停服)
      *
@@ -202,6 +211,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
         this.status = status;
         return this;
     }
+
 
     /**
      * set 是否开启合同托管
@@ -213,6 +223,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 签章系统所用的托管密钥
      *
@@ -222,6 +233,7 @@ public class DescribeApplyStatusResult extends JdcloudResult implements java.io.
         this.kmsKeyId = kmsKeyId;
         return this;
     }
+
 
     /**
      * set 申请开通服务时间

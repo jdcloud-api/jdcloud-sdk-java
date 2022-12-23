@@ -39,6 +39,7 @@ public class UploadStampResult extends JdcloudResult implements java.io.Serializ
     private String stampId;
 
 
+
     /**
      * get 印章ID
      *
@@ -56,6 +57,7 @@ public class UploadStampResult extends JdcloudResult implements java.io.Serializ
     public void setStampId(String stampId) {
         this.stampId = stampId;
     }
+
 
 
     /**

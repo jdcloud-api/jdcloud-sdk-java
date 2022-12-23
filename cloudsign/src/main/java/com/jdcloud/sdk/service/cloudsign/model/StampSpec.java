@@ -43,6 +43,7 @@ public class StampSpec  implements java.io.Serializable {
     private String stampName;
 
 
+
     /**
      * get 印章图片（base64）
      *
@@ -60,6 +61,7 @@ public class StampSpec  implements java.io.Serializable {
     public void setStampContent(String stampContent) {
         this.stampContent = stampContent;
     }
+
 
     /**
      * get 印章名称
@@ -80,6 +82,7 @@ public class StampSpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 印章图片（base64）
      *
@@ -89,6 +92,7 @@ public class StampSpec  implements java.io.Serializable {
         this.stampContent = stampContent;
         return this;
     }
+
 
     /**
      * set 印章名称

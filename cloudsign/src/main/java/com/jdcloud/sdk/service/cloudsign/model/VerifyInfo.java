@@ -47,6 +47,7 @@ public class VerifyInfo  implements java.io.Serializable {
     /**
      * 签章验证列表
      */
+    
     private List<StampResult> results;
 
 
@@ -68,6 +69,7 @@ public class VerifyInfo  implements java.io.Serializable {
         this.success = success;
     }
 
+
     /**
      * get 验证消息
      *
@@ -86,23 +88,25 @@ public class VerifyInfo  implements java.io.Serializable {
         this.message = message;
     }
 
+
     /**
-     * get 签章验证列表
-     *
-     * @return
-     */
+    * get 签章验证列表
+    *
+    * @return
+    */
     public List<StampResult> getResults() {
         return results;
     }
 
     /**
-     * set 签章验证列表
-     *
-     * @param results
-     */
+    * set 签章验证列表
+    *
+    * @param results
+    */
     public void setResults(List<StampResult> results) {
         this.results = results;
     }
+
 
 
     /**
@@ -115,6 +119,7 @@ public class VerifyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 验证消息
      *
@@ -125,15 +130,17 @@ public class VerifyInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 签章验证列表
-     *
-     * @param results
-     */
+    * set 签章验证列表
+    *
+    * @param results
+    */
     public VerifyInfo results(List<StampResult> results) {
         this.results = results;
         return this;
     }
+
 
 
     /**
@@ -147,5 +154,4 @@ public class VerifyInfo  implements java.io.Serializable {
         }
         this.results.add(result);
     }
-
 }

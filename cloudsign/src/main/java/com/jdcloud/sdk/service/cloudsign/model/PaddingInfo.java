@@ -48,6 +48,7 @@ public class PaddingInfo  implements java.io.Serializable {
     private Integer page;
 
 
+
     /**
      * get 填充关键字
      *
@@ -66,6 +67,7 @@ public class PaddingInfo  implements java.io.Serializable {
         this.key = key;
     }
 
+
     /**
      * get 填充数据
      *
@@ -83,6 +85,7 @@ public class PaddingInfo  implements java.io.Serializable {
     public void setValue(String value) {
         this.value = value;
     }
+
 
     /**
      * get 页码
@@ -103,6 +106,7 @@ public class PaddingInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 填充关键字
      *
@@ -113,6 +117,7 @@ public class PaddingInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 填充数据
      *
@@ -122,6 +127,7 @@ public class PaddingInfo  implements java.io.Serializable {
         this.value = value;
         return this;
     }
+
 
     /**
      * set 页码

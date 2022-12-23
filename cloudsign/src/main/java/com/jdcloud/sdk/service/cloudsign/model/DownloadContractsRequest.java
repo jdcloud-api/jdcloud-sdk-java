@@ -44,6 +44,7 @@ public class DownloadContractsRequest extends JdcloudRequest implements java.io.
     private String contractId;
 
 
+
     /**
      * get 合同ID
      *
@@ -61,6 +62,7 @@ public class DownloadContractsRequest extends JdcloudRequest implements java.io.
     public void setContractId(String contractId) {
         this.contractId = contractId;
     }
+
 
 
     /**

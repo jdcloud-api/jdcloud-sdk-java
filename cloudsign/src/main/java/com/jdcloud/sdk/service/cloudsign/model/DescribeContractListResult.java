@@ -39,31 +39,33 @@ public class DescribeContractListResult extends JdcloudResult implements java.io
     /**
      * contractList
      */
+    
     private List<ContractInfo> contractList;
-
     /**
      * 合同数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get contractList
-     *
-     * @return
-     */
+    * get contractList
+    *
+    * @return
+    */
     public List<ContractInfo> getContractList() {
         return contractList;
     }
 
     /**
-     * set contractList
-     *
-     * @param contractList
-     */
+    * set contractList
+    *
+    * @param contractList
+    */
     public void setContractList(List<ContractInfo> contractList) {
         this.contractList = contractList;
     }
+
 
     /**
      * get 合同数量
@@ -84,15 +86,17 @@ public class DescribeContractListResult extends JdcloudResult implements java.io
     }
 
 
+
     /**
-     * set contractList
-     *
-     * @param contractList
-     */
+    * set contractList
+    *
+    * @param contractList
+    */
     public DescribeContractListResult contractList(List<ContractInfo> contractList) {
         this.contractList = contractList;
         return this;
     }
+
 
     /**
      * set 合同数量
@@ -103,6 +107,7 @@ public class DescribeContractListResult extends JdcloudResult implements java.io
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -116,5 +121,4 @@ public class DescribeContractListResult extends JdcloudResult implements java.io
         }
         this.contractList.add(contractList);
     }
-
 }

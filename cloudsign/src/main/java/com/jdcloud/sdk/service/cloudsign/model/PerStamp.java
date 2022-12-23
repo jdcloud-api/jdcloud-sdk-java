@@ -138,6 +138,7 @@ public class PerStamp  implements java.io.Serializable {
     private String identifyValue;
 
 
+
     /**
      * get 最多盖章数目（默认10）
      *
@@ -155,6 +156,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setStampMax(Integer stampMax) {
         this.stampMax = stampMax;
     }
+
 
     /**
      * get 盖章类型（0 坐标 1 关键字，默认为 1）
@@ -174,6 +176,7 @@ public class PerStamp  implements java.io.Serializable {
         this.signPositionType = signPositionType;
     }
 
+
     /**
      * get 盖章关键字（与坐标二选一）
      *
@@ -191,6 +194,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setKeyword(String keyword) {
         this.keyword = keyword;
     }
+
 
     /**
      * get 盖章X坐标（与关键字二选一）
@@ -210,6 +214,7 @@ public class PerStamp  implements java.io.Serializable {
         this.positionX = positionX;
     }
 
+
     /**
      * get 盖章Y坐标（与关键字二选一）
      *
@@ -227,6 +232,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setPositionY(Integer positionY) {
         this.positionY = positionY;
     }
+
 
     /**
      * get 盖章X坐标偏移量（配合positionX）
@@ -246,6 +252,7 @@ public class PerStamp  implements java.io.Serializable {
         this.offsetX = offsetX;
     }
 
+
     /**
      * get 盖章Y坐标偏移量（配合positionY）
      *
@@ -263,6 +270,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setOffsetY(Integer offsetY) {
         this.offsetY = offsetY;
     }
+
 
     /**
      * get 盖章页码（选择坐标盖章时需要传入本参数）
@@ -282,6 +290,7 @@ public class PerStamp  implements java.io.Serializable {
         this.page = page;
     }
 
+
     /**
      * get 印章名称
      *
@@ -299,6 +308,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setSealName(String sealName) {
         this.sealName = sealName;
     }
+
 
     /**
      * get 印章图像base64(建议png格式,不传使用默认方形章)
@@ -318,6 +328,7 @@ public class PerStamp  implements java.io.Serializable {
         this.imageB64 = imageB64;
     }
 
+
     /**
      * get 印章ID
      *
@@ -335,6 +346,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setStampId(String stampId) {
         this.stampId = stampId;
     }
+
 
     /**
      * get 印章描述
@@ -354,6 +366,7 @@ public class PerStamp  implements java.io.Serializable {
         this.desc = desc;
     }
 
+
     /**
      * get 是否作为以后签章默认章
      *
@@ -371,6 +384,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
     }
+
 
     /**
      * get 图片类型
@@ -390,6 +404,7 @@ public class PerStamp  implements java.io.Serializable {
         this.imageType = imageType;
     }
 
+
     /**
      * get 图片大小，高度*宽度
      *
@@ -407,6 +422,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setImageSize(Integer imageSize) {
         this.imageSize = imageSize;
     }
+
 
     /**
      * get 图片高度
@@ -426,6 +442,7 @@ public class PerStamp  implements java.io.Serializable {
         this.imageHeight = imageHeight;
     }
 
+
     /**
      * get 图片宽度
      *
@@ -443,6 +460,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setImageWidth(Integer imageWidth) {
         this.imageWidth = imageWidth;
     }
+
 
     /**
      * get 姓名
@@ -462,6 +480,7 @@ public class PerStamp  implements java.io.Serializable {
         this.personalName = personalName;
     }
 
+
     /**
      * get 手机号
      *
@@ -480,6 +499,7 @@ public class PerStamp  implements java.io.Serializable {
         this.mobile = mobile;
     }
 
+
     /**
      * get 标记字段 - idCardNum（身份证） passportNum（护照） mtpNum（港澳通行证）
      *
@@ -497,6 +517,7 @@ public class PerStamp  implements java.io.Serializable {
     public void setIdentifyType(String identifyType) {
         this.identifyType = identifyType;
     }
+
 
     /**
      * get 标记值
@@ -517,6 +538,7 @@ public class PerStamp  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 最多盖章数目（默认10）
      *
@@ -526,6 +548,7 @@ public class PerStamp  implements java.io.Serializable {
         this.stampMax = stampMax;
         return this;
     }
+
 
     /**
      * set 盖章类型（0 坐标 1 关键字，默认为 1）
@@ -537,6 +560,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 盖章关键字（与坐标二选一）
      *
@@ -546,6 +570,7 @@ public class PerStamp  implements java.io.Serializable {
         this.keyword = keyword;
         return this;
     }
+
 
     /**
      * set 盖章X坐标（与关键字二选一）
@@ -557,6 +582,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 盖章Y坐标（与关键字二选一）
      *
@@ -566,6 +592,7 @@ public class PerStamp  implements java.io.Serializable {
         this.positionY = positionY;
         return this;
     }
+
 
     /**
      * set 盖章X坐标偏移量（配合positionX）
@@ -577,6 +604,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 盖章Y坐标偏移量（配合positionY）
      *
@@ -586,6 +614,7 @@ public class PerStamp  implements java.io.Serializable {
         this.offsetY = offsetY;
         return this;
     }
+
 
     /**
      * set 盖章页码（选择坐标盖章时需要传入本参数）
@@ -597,6 +626,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 印章名称
      *
@@ -606,6 +636,7 @@ public class PerStamp  implements java.io.Serializable {
         this.sealName = sealName;
         return this;
     }
+
 
     /**
      * set 印章图像base64(建议png格式,不传使用默认方形章)
@@ -617,6 +648,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 印章ID
      *
@@ -626,6 +658,7 @@ public class PerStamp  implements java.io.Serializable {
         this.stampId = stampId;
         return this;
     }
+
 
     /**
      * set 印章描述
@@ -637,6 +670,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否作为以后签章默认章
      *
@@ -646,6 +680,7 @@ public class PerStamp  implements java.io.Serializable {
         this.isDefault = isDefault;
         return this;
     }
+
 
     /**
      * set 图片类型
@@ -657,6 +692,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 图片大小，高度*宽度
      *
@@ -666,6 +702,7 @@ public class PerStamp  implements java.io.Serializable {
         this.imageSize = imageSize;
         return this;
     }
+
 
     /**
      * set 图片高度
@@ -677,6 +714,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 图片宽度
      *
@@ -686,6 +724,7 @@ public class PerStamp  implements java.io.Serializable {
         this.imageWidth = imageWidth;
         return this;
     }
+
 
     /**
      * set 姓名
@@ -697,6 +736,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 手机号
      *
@@ -707,6 +747,7 @@ public class PerStamp  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 标记字段 - idCardNum（身份证） passportNum（护照） mtpNum（港澳通行证）
      *
@@ -716,6 +757,7 @@ public class PerStamp  implements java.io.Serializable {
         this.identifyType = identifyType;
         return this;
     }
+
 
     /**
      * set 标记值

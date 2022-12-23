@@ -47,8 +47,8 @@ public class ContractInfo  implements java.io.Serializable {
     /**
      * 印章名称(可能有多个印章)
      */
+    
     private List<String> stampNames;
-
     /**
      * 合同文件（base64）
      */
@@ -63,6 +63,7 @@ public class ContractInfo  implements java.io.Serializable {
      * 合同签章时间
      */
     private String createTime;
+
 
 
     /**
@@ -83,6 +84,7 @@ public class ContractInfo  implements java.io.Serializable {
         this.contractId = contractId;
     }
 
+
     /**
      * get 合同标题
      *
@@ -101,23 +103,25 @@ public class ContractInfo  implements java.io.Serializable {
         this.contractTitle = contractTitle;
     }
 
+
     /**
-     * get 印章名称(可能有多个印章)
-     *
-     * @return
-     */
+    * get 印章名称(可能有多个印章)
+    *
+    * @return
+    */
     public List<String> getStampNames() {
         return stampNames;
     }
 
     /**
-     * set 印章名称(可能有多个印章)
-     *
-     * @param stampNames
-     */
+    * set 印章名称(可能有多个印章)
+    *
+    * @param stampNames
+    */
     public void setStampNames(List<String> stampNames) {
         this.stampNames = stampNames;
     }
+
 
     /**
      * get 合同文件（base64）
@@ -137,6 +141,7 @@ public class ContractInfo  implements java.io.Serializable {
         this.contractContent = contractContent;
     }
 
+
     /**
      * get 合同文件摘要
      *
@@ -154,6 +159,7 @@ public class ContractInfo  implements java.io.Serializable {
     public void setContractDigest(String contractDigest) {
         this.contractDigest = contractDigest;
     }
+
 
     /**
      * get 合同签章时间
@@ -174,6 +180,7 @@ public class ContractInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 合同ID
      *
@@ -183,6 +190,7 @@ public class ContractInfo  implements java.io.Serializable {
         this.contractId = contractId;
         return this;
     }
+
 
     /**
      * set 合同标题
@@ -194,15 +202,17 @@ public class ContractInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 印章名称(可能有多个印章)
-     *
-     * @param stampNames
-     */
+    * set 印章名称(可能有多个印章)
+    *
+    * @param stampNames
+    */
     public ContractInfo stampNames(List<String> stampNames) {
         this.stampNames = stampNames;
         return this;
     }
+
 
     /**
      * set 合同文件（base64）
@@ -214,6 +224,7 @@ public class ContractInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同文件摘要
      *
@@ -224,6 +235,7 @@ public class ContractInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同签章时间
      *
@@ -233,6 +245,7 @@ public class ContractInfo  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class ContractInfo  implements java.io.Serializable {
         }
         this.stampNames.add(stampName);
     }
-
 }

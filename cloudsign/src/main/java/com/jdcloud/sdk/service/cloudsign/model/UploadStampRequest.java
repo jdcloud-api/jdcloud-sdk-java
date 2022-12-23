@@ -43,6 +43,7 @@ public class UploadStampRequest extends JdcloudRequest implements java.io.Serial
     private StampSpec stampSpec;
 
 
+
     /**
      * get stampSpec
      *
@@ -60,6 +61,7 @@ public class UploadStampRequest extends JdcloudRequest implements java.io.Serial
     public void setStampSpec(StampSpec stampSpec) {
         this.stampSpec = stampSpec;
     }
+
 
 
     /**

@@ -41,31 +41,33 @@ public class DownloadContractsResult extends JdcloudResult implements java.io.Se
     /**
      * contractList
      */
+    
     private List<ContractInfo> contractList;
-
     /**
      * 合同数量
      */
     private Integer totalCount;
 
 
+
     /**
-     * get contractList
-     *
-     * @return
-     */
+    * get contractList
+    *
+    * @return
+    */
     public List<ContractInfo> getContractList() {
         return contractList;
     }
 
     /**
-     * set contractList
-     *
-     * @param contractList
-     */
+    * set contractList
+    *
+    * @param contractList
+    */
     public void setContractList(List<ContractInfo> contractList) {
         this.contractList = contractList;
     }
+
 
     /**
      * get 合同数量
@@ -86,15 +88,17 @@ public class DownloadContractsResult extends JdcloudResult implements java.io.Se
     }
 
 
+
     /**
-     * set contractList
-     *
-     * @param contractList
-     */
+    * set contractList
+    *
+    * @param contractList
+    */
     public DownloadContractsResult contractList(List<ContractInfo> contractList) {
         this.contractList = contractList;
         return this;
     }
+
 
     /**
      * set 合同数量
@@ -105,6 +109,7 @@ public class DownloadContractsResult extends JdcloudResult implements java.io.Se
         this.totalCount = totalCount;
         return this;
     }
+
 
 
     /**
@@ -118,5 +123,4 @@ public class DownloadContractsResult extends JdcloudResult implements java.io.Se
         }
         this.contractList.add(contractList);
     }
-
 }

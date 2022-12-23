@@ -40,13 +40,13 @@ public class ContractSpec  implements java.io.Serializable {
     /**
      * 个人用户盖章信息
      */
+    
     private List<PerStamp> personStamps;
-
     /**
      * 企业用户盖章信息
      */
+    
     private List<ComStamp> companyStamps;
-
     /**
      * 合同文件（base64）
      */
@@ -73,41 +73,44 @@ public class ContractSpec  implements java.io.Serializable {
     private String caType;
 
 
+
     /**
-     * get 个人用户盖章信息
-     *
-     * @return
-     */
+    * get 个人用户盖章信息
+    *
+    * @return
+    */
     public List<PerStamp> getPersonStamps() {
         return personStamps;
     }
 
     /**
-     * set 个人用户盖章信息
-     *
-     * @param personStamps
-     */
+    * set 个人用户盖章信息
+    *
+    * @param personStamps
+    */
     public void setPersonStamps(List<PerStamp> personStamps) {
         this.personStamps = personStamps;
     }
 
+
     /**
-     * get 企业用户盖章信息
-     *
-     * @return
-     */
+    * get 企业用户盖章信息
+    *
+    * @return
+    */
     public List<ComStamp> getCompanyStamps() {
         return companyStamps;
     }
 
     /**
-     * set 企业用户盖章信息
-     *
-     * @param companyStamps
-     */
+    * set 企业用户盖章信息
+    *
+    * @param companyStamps
+    */
     public void setCompanyStamps(List<ComStamp> companyStamps) {
         this.companyStamps = companyStamps;
     }
+
 
     /**
      * get 合同文件（base64）
@@ -127,6 +130,7 @@ public class ContractSpec  implements java.io.Serializable {
         this.contractContent = contractContent;
     }
 
+
     /**
      * get 合同模板文件（base64）
      *
@@ -144,6 +148,7 @@ public class ContractSpec  implements java.io.Serializable {
     public void setTemplateContent(String templateContent) {
         this.templateContent = templateContent;
     }
+
 
     /**
      * get 合同模板文件ID
@@ -163,6 +168,7 @@ public class ContractSpec  implements java.io.Serializable {
         this.templateId = templateId;
     }
 
+
     /**
      * get 合同标题或名称
      *
@@ -180,6 +186,7 @@ public class ContractSpec  implements java.io.Serializable {
     public void setContractTitle(String contractTitle) {
         this.contractTitle = contractTitle;
     }
+
 
     /**
      * get 证书类型
@@ -200,25 +207,28 @@ public class ContractSpec  implements java.io.Serializable {
     }
 
 
+
     /**
-     * set 个人用户盖章信息
-     *
-     * @param personStamps
-     */
+    * set 个人用户盖章信息
+    *
+    * @param personStamps
+    */
     public ContractSpec personStamps(List<PerStamp> personStamps) {
         this.personStamps = personStamps;
         return this;
     }
 
+
     /**
-     * set 企业用户盖章信息
-     *
-     * @param companyStamps
-     */
+    * set 企业用户盖章信息
+    *
+    * @param companyStamps
+    */
     public ContractSpec companyStamps(List<ComStamp> companyStamps) {
         this.companyStamps = companyStamps;
         return this;
     }
+
 
     /**
      * set 合同文件（base64）
@@ -230,6 +240,7 @@ public class ContractSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同模板文件（base64）
      *
@@ -239,6 +250,7 @@ public class ContractSpec  implements java.io.Serializable {
         this.templateContent = templateContent;
         return this;
     }
+
 
     /**
      * set 合同模板文件ID
@@ -250,6 +262,7 @@ public class ContractSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 合同标题或名称
      *
@@ -260,6 +273,7 @@ public class ContractSpec  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 证书类型
      *
@@ -269,6 +283,7 @@ public class ContractSpec  implements java.io.Serializable {
         this.caType = caType;
         return this;
     }
+
 
 
     /**
@@ -294,5 +309,4 @@ public class ContractSpec  implements java.io.Serializable {
         }
         this.companyStamps.add(companyStamp);
     }
-
 }

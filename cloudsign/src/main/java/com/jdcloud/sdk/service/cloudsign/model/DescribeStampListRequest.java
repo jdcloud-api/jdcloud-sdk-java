@@ -49,6 +49,7 @@ public class DescribeStampListRequest extends JdcloudRequest implements java.io.
     private String stampName;
 
 
+
     /**
      * get 页码, 默认为1
      *
@@ -67,6 +68,7 @@ public class DescribeStampListRequest extends JdcloudRequest implements java.io.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小, 默认为10, 取值范围[10, 100]
      *
@@ -84,6 +86,7 @@ public class DescribeStampListRequest extends JdcloudRequest implements java.io.
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 印章名称
@@ -104,6 +107,7 @@ public class DescribeStampListRequest extends JdcloudRequest implements java.io.
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -114,6 +118,7 @@ public class DescribeStampListRequest extends JdcloudRequest implements java.io.
         return this;
     }
 
+
     /**
      * set 分页大小, 默认为10, 取值范围[10, 100]
      *
@@ -123,6 +128,7 @@ public class DescribeStampListRequest extends JdcloudRequest implements java.io.
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 印章名称

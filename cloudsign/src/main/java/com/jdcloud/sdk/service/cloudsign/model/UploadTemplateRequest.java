@@ -43,6 +43,7 @@ public class UploadTemplateRequest extends JdcloudRequest implements java.io.Ser
     private TemplateSpec templateSpec;
 
 
+
     /**
      * get templateSpec
      *
@@ -60,6 +61,7 @@ public class UploadTemplateRequest extends JdcloudRequest implements java.io.Ser
     public void setTemplateSpec(TemplateSpec templateSpec) {
         this.templateSpec = templateSpec;
     }
+
 
 
     /**

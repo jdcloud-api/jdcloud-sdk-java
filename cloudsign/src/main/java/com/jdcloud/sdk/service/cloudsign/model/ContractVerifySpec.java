@@ -43,6 +43,7 @@ public class ContractVerifySpec  implements java.io.Serializable {
     private Boolean checkCertChain;
 
 
+
     /**
      * get 合同文件（base64）
      *
@@ -60,6 +61,7 @@ public class ContractVerifySpec  implements java.io.Serializable {
     public void setContractContent(String contractContent) {
         this.contractContent = contractContent;
     }
+
 
     /**
      * get 是否验证证书链
@@ -80,6 +82,7 @@ public class ContractVerifySpec  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 合同文件（base64）
      *
@@ -89,6 +92,7 @@ public class ContractVerifySpec  implements java.io.Serializable {
         this.contractContent = contractContent;
         return this;
     }
+
 
     /**
      * set 是否验证证书链

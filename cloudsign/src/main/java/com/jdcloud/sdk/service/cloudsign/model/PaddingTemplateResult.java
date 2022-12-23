@@ -39,6 +39,7 @@ public class PaddingTemplateResult extends JdcloudResult implements java.io.Seri
     private String templateId;
 
 
+
     /**
      * get 填充完成的合同模板ID
      *
@@ -56,6 +57,7 @@ public class PaddingTemplateResult extends JdcloudResult implements java.io.Seri
     public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
+
 
 
     /**

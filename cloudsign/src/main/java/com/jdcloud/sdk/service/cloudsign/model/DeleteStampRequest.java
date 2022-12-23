@@ -42,6 +42,7 @@ public class DeleteStampRequest extends JdcloudRequest implements java.io.Serial
     private String stampId;
 
 
+
     /**
      * get 印章ID
      *
@@ -59,6 +60,7 @@ public class DeleteStampRequest extends JdcloudRequest implements java.io.Serial
     public void setStampId(String stampId) {
         this.stampId = stampId;
     }
+
 
 
     /**

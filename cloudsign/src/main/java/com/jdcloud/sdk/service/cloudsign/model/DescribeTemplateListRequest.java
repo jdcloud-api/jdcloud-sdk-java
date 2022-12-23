@@ -54,6 +54,7 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
     private String templateType;
 
 
+
     /**
      * get 页码, 默认为1
      *
@@ -71,6 +72,7 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
     public void setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
     }
+
 
     /**
      * get 分页大小, 默认为10, 取值范围[10, 100]
@@ -90,6 +92,7 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
         this.pageSize = pageSize;
     }
 
+
     /**
      * get 合同模板名称或者标题
      *
@@ -107,6 +110,7 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
     public void setTemplateNameOrTitle(String templateNameOrTitle) {
         this.templateNameOrTitle = templateNameOrTitle;
     }
+
 
     /**
      * get 模板类型 pdf,word,pdf-auto(不传查所有类型)
@@ -127,6 +131,7 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -136,6 +141,7 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
         this.pageNumber = pageNumber;
         return this;
     }
+
 
     /**
      * set 分页大小, 默认为10, 取值范围[10, 100]
@@ -147,6 +153,7 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 合同模板名称或者标题
      *
@@ -156,6 +163,7 @@ public class DescribeTemplateListRequest extends JdcloudRequest implements java.
         this.templateNameOrTitle = templateNameOrTitle;
         return this;
     }
+
 
     /**
      * set 模板类型 pdf,word,pdf-auto(不传查所有类型)

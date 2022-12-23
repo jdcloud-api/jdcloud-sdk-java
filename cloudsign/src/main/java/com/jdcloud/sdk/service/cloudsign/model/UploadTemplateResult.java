@@ -39,6 +39,7 @@ public class UploadTemplateResult extends JdcloudResult implements java.io.Seria
     private String templateId;
 
 
+
     /**
      * get 合同模板ID
      *
@@ -56,6 +57,7 @@ public class UploadTemplateResult extends JdcloudResult implements java.io.Seria
     public void setTemplateId(String templateId) {
         this.templateId = templateId;
     }
+
 
 
     /**

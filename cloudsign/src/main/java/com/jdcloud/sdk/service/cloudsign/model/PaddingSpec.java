@@ -40,46 +40,49 @@ public class PaddingSpec  implements java.io.Serializable {
 2. 填充信息必须全部填写(与word模板上传时holdingKeys数量以及名称保持一致)
 
      */
+    
     private List<PaddingInfo> paddingInfo;
 
 
     /**
-     * get 填充信息
+    * get 填充信息
 1. 成对出现(占位符，替换值)
 2. 填充信息必须全部填写(与word模板上传时holdingKeys数量以及名称保持一致)
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<PaddingInfo> getPaddingInfo() {
         return paddingInfo;
     }
 
     /**
-     * set 填充信息
+    * set 填充信息
 1. 成对出现(占位符，替换值)
 2. 填充信息必须全部填写(与word模板上传时holdingKeys数量以及名称保持一致)
 
-     *
-     * @param paddingInfo
-     */
+    *
+    * @param paddingInfo
+    */
     public void setPaddingInfo(List<PaddingInfo> paddingInfo) {
         this.paddingInfo = paddingInfo;
     }
 
 
+
     /**
-     * set 填充信息
+    * set 填充信息
 1. 成对出现(占位符，替换值)
 2. 填充信息必须全部填写(与word模板上传时holdingKeys数量以及名称保持一致)
 
-     *
-     * @param paddingInfo
-     */
+    *
+    * @param paddingInfo
+    */
     public PaddingSpec paddingInfo(List<PaddingInfo> paddingInfo) {
         this.paddingInfo = paddingInfo;
         return this;
     }
+
 
 
     /**
@@ -96,5 +99,4 @@ public class PaddingSpec  implements java.io.Serializable {
         }
         this.paddingInfo.add(paddingInfo);
     }
-
 }

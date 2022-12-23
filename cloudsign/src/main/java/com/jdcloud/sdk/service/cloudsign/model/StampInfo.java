@@ -58,6 +58,7 @@ public class StampInfo  implements java.io.Serializable {
     private String createTime;
 
 
+
     /**
      * get 印章ID
      *
@@ -75,6 +76,7 @@ public class StampInfo  implements java.io.Serializable {
     public void setStampId(String stampId) {
         this.stampId = stampId;
     }
+
 
     /**
      * get 印章名称
@@ -94,6 +96,7 @@ public class StampInfo  implements java.io.Serializable {
         this.stampName = stampName;
     }
 
+
     /**
      * get 印章图片（base64）
      *
@@ -112,6 +115,7 @@ public class StampInfo  implements java.io.Serializable {
         this.stampContent = stampContent;
     }
 
+
     /**
      * get 印章摘要
      *
@@ -129,6 +133,7 @@ public class StampInfo  implements java.io.Serializable {
     public void setStampDigest(String stampDigest) {
         this.stampDigest = stampDigest;
     }
+
 
     /**
      * get 印章上传时间
@@ -149,6 +154,7 @@ public class StampInfo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 印章ID
      *
@@ -158,6 +164,7 @@ public class StampInfo  implements java.io.Serializable {
         this.stampId = stampId;
         return this;
     }
+
 
     /**
      * set 印章名称
@@ -169,6 +176,7 @@ public class StampInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 印章图片（base64）
      *
@@ -179,6 +187,7 @@ public class StampInfo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 印章摘要
      *
@@ -188,6 +197,7 @@ public class StampInfo  implements java.io.Serializable {
         this.stampDigest = stampDigest;
         return this;
     }
+
 
     /**
      * set 印章上传时间

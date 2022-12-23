@@ -49,6 +49,7 @@ public class DescribeContractListRequest extends JdcloudRequest implements java.
     private String contractTitle;
 
 
+
     /**
      * get 页码, 默认为1
      *
@@ -67,6 +68,7 @@ public class DescribeContractListRequest extends JdcloudRequest implements java.
         this.pageNumber = pageNumber;
     }
 
+
     /**
      * get 分页大小, 默认为10, 取值范围[10, 100]
      *
@@ -84,6 +86,7 @@ public class DescribeContractListRequest extends JdcloudRequest implements java.
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 合同标题
@@ -104,6 +107,7 @@ public class DescribeContractListRequest extends JdcloudRequest implements java.
     }
 
 
+
     /**
      * set 页码, 默认为1
      *
@@ -114,6 +118,7 @@ public class DescribeContractListRequest extends JdcloudRequest implements java.
         return this;
     }
 
+
     /**
      * set 分页大小, 默认为10, 取值范围[10, 100]
      *
@@ -123,6 +128,7 @@ public class DescribeContractListRequest extends JdcloudRequest implements java.
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 合同标题

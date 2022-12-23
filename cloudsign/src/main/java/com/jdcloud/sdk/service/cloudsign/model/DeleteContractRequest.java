@@ -42,6 +42,7 @@ public class DeleteContractRequest extends JdcloudRequest implements java.io.Ser
     private String contractId;
 
 
+
     /**
      * get 合同ID
      *
@@ -59,6 +60,7 @@ public class DeleteContractRequest extends JdcloudRequest implements java.io.Ser
     public void setContractId(String contractId) {
         this.contractId = contractId;
     }
+
 
 
     /**

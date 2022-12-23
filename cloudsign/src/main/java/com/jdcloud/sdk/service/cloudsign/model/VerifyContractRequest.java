@@ -50,6 +50,7 @@ public class VerifyContractRequest extends JdcloudRequest implements java.io.Ser
     private String contractId;
 
 
+
     /**
      * get contractVerifySpec
      *
@@ -67,6 +68,7 @@ public class VerifyContractRequest extends JdcloudRequest implements java.io.Ser
     public void setContractVerifySpec(ContractVerifySpec contractVerifySpec) {
         this.contractVerifySpec = contractVerifySpec;
     }
+
 
     /**
      * get 合同ID
@@ -87,6 +89,7 @@ public class VerifyContractRequest extends JdcloudRequest implements java.io.Ser
     }
 
 
+
     /**
      * set contractVerifySpec
      *
@@ -96,6 +99,7 @@ public class VerifyContractRequest extends JdcloudRequest implements java.io.Ser
         this.contractVerifySpec = contractVerifySpec;
         return this;
     }
+
 
     /**
      * set 合同ID
