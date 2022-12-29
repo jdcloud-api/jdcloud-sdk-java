@@ -43,6 +43,7 @@ public class ResourceTagVo  implements java.io.Serializable {
     private String tagValue;
 
 
+
     /**
      * get 标签键
      *
@@ -60,6 +61,7 @@ public class ResourceTagVo  implements java.io.Serializable {
     public void setTagKey(String tagKey) {
         this.tagKey = tagKey;
     }
+
 
     /**
      * get 标签值
@@ -80,6 +82,7 @@ public class ResourceTagVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 标签键
      *
@@ -89,6 +92,7 @@ public class ResourceTagVo  implements java.io.Serializable {
         this.tagKey = tagKey;
         return this;
     }
+
 
     /**
      * set 标签值

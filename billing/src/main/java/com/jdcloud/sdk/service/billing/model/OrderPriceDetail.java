@@ -35,24 +35,34 @@ public class OrderPriceDetail  implements java.io.Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 折扣前总价
+     * 原价(6位，原价为每个计费项原价之和)
      */
     private Number price;
 
     /**
-     * 四位小数价格
+     * 原价(6位，与price一致，兼容之前4位原价保留字段)
      */
     private Number priceScale4;
 
     /**
-     * 折扣金额
+     * 折扣金额（6位，折扣金额为每个计费项折扣金额之和）
      */
     private Number discount;
 
     /**
-     * 折扣后订单金额
+     * 应付金额（2位，应付金额&#x3D;折扣后金额舍位保留2位小数)
      */
     private Number discountedPrice;
+
+    /**
+     * 折扣后金额（6位，折扣后金额为每个计费项折扣后金额之和)
+     */
+    private Double afterFavorablePrice;
+
+    /**
+     * 抹零金额（6位，抹零金额&#x3D;折扣后金额-应付金额)
+     */
+    private Double erasePrice;
 
     /**
      * 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
@@ -107,8 +117,8 @@ public class OrderPriceDetail  implements java.io.Serializable {
     /**
      * 配置信息
      */
+    
     private List<Formula> formula;
-
     /**
      * FavorableInfo转成json后的字符串
      */
@@ -140,7 +150,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     private String endTime;
 
     /**
-     * 变配明细（1-升配补差价，2-降配延时，3-临时升配）
+     * 变配明细（1-升配补差价，2-降配延时，3-临时升配，9-降配退款）
      */
     private Integer processType;
 
@@ -149,9 +159,40 @@ public class OrderPriceDetail  implements java.io.Serializable {
      */
     private String sourceId;
 
+    /**
+     * 资源退款金额
+     */
+    private Double refundPrice;
 
     /**
-     * get 折扣前总价
+     * 资源现金退款金额
+     */
+    private Double cashRefundPrice;
+
+    /**
+     * 资源余额退款金额
+     */
+    private Double balanceRefundPrice;
+
+    /**
+     * 资源代金券退款金额
+     */
+    private Double couponRefundPrice;
+
+    /**
+     * 退款订单列表
+     */
+    
+    private List<RefundOrder> refundOrderList;
+    /**
+     * 计费项价格列表
+     */
+    
+    private List<BillingItemPrice> billingItemPriceList;
+
+
+    /**
+     * get 原价(6位，原价为每个计费项原价之和)
      *
      * @return
      */
@@ -160,7 +201,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 折扣前总价
+     * set 原价(6位，原价为每个计费项原价之和)
      *
      * @param price
      */
@@ -168,8 +209,9 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.price = price;
     }
 
+
     /**
-     * get 四位小数价格
+     * get 原价(6位，与price一致，兼容之前4位原价保留字段)
      *
      * @return
      */
@@ -178,7 +220,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 四位小数价格
+     * set 原价(6位，与price一致，兼容之前4位原价保留字段)
      *
      * @param priceScale4
      */
@@ -186,8 +228,9 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.priceScale4 = priceScale4;
     }
 
+
     /**
-     * get 折扣金额
+     * get 折扣金额（6位，折扣金额为每个计费项折扣金额之和）
      *
      * @return
      */
@@ -196,7 +239,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 折扣金额
+     * set 折扣金额（6位，折扣金额为每个计费项折扣金额之和）
      *
      * @param discount
      */
@@ -204,8 +247,9 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.discount = discount;
     }
 
+
     /**
-     * get 折扣后订单金额
+     * get 应付金额（2位，应付金额&#x3D;折扣后金额舍位保留2位小数)
      *
      * @return
      */
@@ -214,13 +258,52 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 折扣后订单金额
+     * set 应付金额（2位，应付金额&#x3D;折扣后金额舍位保留2位小数)
      *
      * @param discountedPrice
      */
     public void setDiscountedPrice(Number discountedPrice) {
         this.discountedPrice = discountedPrice;
     }
+
+
+    /**
+     * get 折扣后金额（6位，折扣后金额为每个计费项折扣后金额之和)
+     *
+     * @return
+     */
+    public Double getAfterFavorablePrice() {
+        return afterFavorablePrice;
+    }
+
+    /**
+     * set 折扣后金额（6位，折扣后金额为每个计费项折扣后金额之和)
+     *
+     * @param afterFavorablePrice
+     */
+    public void setAfterFavorablePrice(Double afterFavorablePrice) {
+        this.afterFavorablePrice = afterFavorablePrice;
+    }
+
+
+    /**
+     * get 抹零金额（6位，抹零金额&#x3D;折扣后金额-应付金额)
+     *
+     * @return
+     */
+    public Double getErasePrice() {
+        return erasePrice;
+    }
+
+    /**
+     * set 抹零金额（6位，抹零金额&#x3D;折扣后金额-应付金额)
+     *
+     * @param erasePrice
+     */
+    public void setErasePrice(Double erasePrice) {
+        this.erasePrice = erasePrice;
+    }
+
 
     /**
      * get 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
@@ -240,6 +323,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.originalPrice = originalPrice;
     }
 
+
     /**
      * get 资源id
      *
@@ -257,6 +341,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 业务线
@@ -276,6 +361,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 产品线
      *
@@ -293,6 +379,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 站点  0:主站  其他:专有云
@@ -312,6 +399,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 地域
      *
@@ -329,6 +417,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 计费类型1:按配置2:按用量3:包年包月
@@ -348,6 +437,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.billingType = billingType;
     }
 
+
     /**
      * get 时长
      *
@@ -365,6 +455,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     public void setTimeSpan(Integer timeSpan) {
         this.timeSpan = timeSpan;
     }
+
 
     /**
      * get 时长类型 1:小时2:天3:月4:年
@@ -384,6 +475,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.timeUnit = timeUnit;
     }
 
+
     /**
      * get 网络类型 0:non1:非BGP2:BGP
      *
@@ -402,23 +494,25 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.networkOperator = networkOperator;
     }
 
+
     /**
-     * get 配置信息
-     *
-     * @return
-     */
+    * get 配置信息
+    *
+    * @return
+    */
     public List<Formula> getFormula() {
         return formula;
     }
 
     /**
-     * set 配置信息
-     *
-     * @param formula
-     */
+    * set 配置信息
+    *
+    * @param formula
+    */
     public void setFormula(List<Formula> formula) {
         this.formula = formula;
     }
+
 
     /**
      * get FavorableInfo转成json后的字符串
@@ -438,6 +532,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.favorableInfo = favorableInfo;
     }
 
+
     /**
      * get 价格快照
      *
@@ -455,6 +550,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     public void setPriceSnapShot(String priceSnapShot) {
         this.priceSnapShot = priceSnapShot;
     }
+
 
     /**
      * get 用户pin
@@ -474,6 +570,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 自然单列表
      *
@@ -491,6 +588,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 开始时间
@@ -510,6 +608,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 结束时间
      *
@@ -528,8 +627,9 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
-     * get 变配明细（1-升配补差价，2-降配延时，3-临时升配）
+     * get 变配明细（1-升配补差价，2-降配延时，3-临时升配，9-降配退款）
      *
      * @return
      */
@@ -538,13 +638,14 @@ public class OrderPriceDetail  implements java.io.Serializable {
     }
 
     /**
-     * set 变配明细（1-升配补差价，2-降配延时，3-临时升配）
+     * set 变配明细（1-升配补差价，2-降配延时，3-临时升配，9-降配退款）
      *
      * @param processType
      */
     public void setProcessType(Integer processType) {
         this.processType = processType;
     }
+
 
     /**
      * get 交易单模块sourceId
@@ -566,7 +667,122 @@ public class OrderPriceDetail  implements java.io.Serializable {
 
 
     /**
-     * set 折扣前总价
+     * get 资源退款金额
+     *
+     * @return
+     */
+    public Double getRefundPrice() {
+        return refundPrice;
+    }
+
+    /**
+     * set 资源退款金额
+     *
+     * @param refundPrice
+     */
+    public void setRefundPrice(Double refundPrice) {
+        this.refundPrice = refundPrice;
+    }
+
+
+    /**
+     * get 资源现金退款金额
+     *
+     * @return
+     */
+    public Double getCashRefundPrice() {
+        return cashRefundPrice;
+    }
+
+    /**
+     * set 资源现金退款金额
+     *
+     * @param cashRefundPrice
+     */
+    public void setCashRefundPrice(Double cashRefundPrice) {
+        this.cashRefundPrice = cashRefundPrice;
+    }
+
+
+    /**
+     * get 资源余额退款金额
+     *
+     * @return
+     */
+    public Double getBalanceRefundPrice() {
+        return balanceRefundPrice;
+    }
+
+    /**
+     * set 资源余额退款金额
+     *
+     * @param balanceRefundPrice
+     */
+    public void setBalanceRefundPrice(Double balanceRefundPrice) {
+        this.balanceRefundPrice = balanceRefundPrice;
+    }
+
+
+    /**
+     * get 资源代金券退款金额
+     *
+     * @return
+     */
+    public Double getCouponRefundPrice() {
+        return couponRefundPrice;
+    }
+
+    /**
+     * set 资源代金券退款金额
+     *
+     * @param couponRefundPrice
+     */
+    public void setCouponRefundPrice(Double couponRefundPrice) {
+        this.couponRefundPrice = couponRefundPrice;
+    }
+
+
+    /**
+    * get 退款订单列表
+    *
+    * @return
+    */
+    public List<RefundOrder> getRefundOrderList() {
+        return refundOrderList;
+    }
+
+    /**
+    * set 退款订单列表
+    *
+    * @param refundOrderList
+    */
+    public void setRefundOrderList(List<RefundOrder> refundOrderList) {
+        this.refundOrderList = refundOrderList;
+    }
+
+
+    /**
+    * get 计费项价格列表
+    *
+    * @return
+    */
+    public List<BillingItemPrice> getBillingItemPriceList() {
+        return billingItemPriceList;
+    }
+
+    /**
+    * set 计费项价格列表
+    *
+    * @param billingItemPriceList
+    */
+    public void setBillingItemPriceList(List<BillingItemPrice> billingItemPriceList) {
+        this.billingItemPriceList = billingItemPriceList;
+    }
+
+
+
+    /**
+     * set 原价(6位，原价为每个计费项原价之和)
      *
      * @param price
      */
@@ -575,8 +791,9 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 四位小数价格
+     * set 原价(6位，与price一致，兼容之前4位原价保留字段)
      *
      * @param priceScale4
      */
@@ -585,8 +802,9 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 折扣金额
+     * set 折扣金额（6位，折扣金额为每个计费项折扣金额之和）
      *
      * @param discount
      */
@@ -595,8 +813,9 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 折扣后订单金额
+     * set 应付金额（2位，应付金额&#x3D;折扣后金额舍位保留2位小数)
      *
      * @param discountedPrice
      */
@@ -604,6 +823,29 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.discountedPrice = discountedPrice;
         return this;
     }
+
+
+    /**
+     * set 折扣后金额（6位，折扣后金额为每个计费项折扣后金额之和)
+     *
+     * @param afterFavorablePrice
+     */
+    public OrderPriceDetail afterFavorablePrice(Double afterFavorablePrice) {
+        this.afterFavorablePrice = afterFavorablePrice;
+        return this;
+    }
+
+
+    /**
+     * set 抹零金额（6位，抹零金额&#x3D;折扣后金额-应付金额)
+     *
+     * @param erasePrice
+     */
+    public OrderPriceDetail erasePrice(Double erasePrice) {
+        this.erasePrice = erasePrice;
+        return this;
+    }
+
 
     /**
      * set 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
@@ -615,6 +857,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源id
      *
@@ -624,6 +867,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 业务线
@@ -635,6 +879,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线
      *
@@ -644,6 +889,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 站点  0:主站  其他:专有云
@@ -655,6 +901,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域
      *
@@ -664,6 +911,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 计费类型1:按配置2:按用量3:包年包月
@@ -675,6 +923,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时长
      *
@@ -684,6 +933,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.timeSpan = timeSpan;
         return this;
     }
+
 
     /**
      * set 时长类型 1:小时2:天3:月4:年
@@ -695,6 +945,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网络类型 0:non1:非BGP2:BGP
      *
@@ -705,15 +956,17 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 配置信息
-     *
-     * @param formula
-     */
+    * set 配置信息
+    *
+    * @param formula
+    */
     public OrderPriceDetail formula(List<Formula> formula) {
         this.formula = formula;
         return this;
     }
+
 
     /**
      * set FavorableInfo转成json后的字符串
@@ -725,6 +978,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 价格快照
      *
@@ -734,6 +988,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.priceSnapShot = priceSnapShot;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -745,6 +1000,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自然单列表
      *
@@ -754,6 +1010,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.taskId = taskId;
         return this;
     }
+
 
     /**
      * set 开始时间
@@ -765,6 +1022,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结束时间
      *
@@ -775,8 +1033,9 @@ public class OrderPriceDetail  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 变配明细（1-升配补差价，2-降配延时，3-临时升配）
+     * set 变配明细（1-升配补差价，2-降配延时，3-临时升配，9-降配退款）
      *
      * @param processType
      */
@@ -784,6 +1043,7 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.processType = processType;
         return this;
     }
+
 
     /**
      * set 交易单模块sourceId
@@ -794,6 +1054,73 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.sourceId = sourceId;
         return this;
     }
+
+
+    /**
+     * set 资源退款金额
+     *
+     * @param refundPrice
+     */
+    public OrderPriceDetail refundPrice(Double refundPrice) {
+        this.refundPrice = refundPrice;
+        return this;
+    }
+
+
+    /**
+     * set 资源现金退款金额
+     *
+     * @param cashRefundPrice
+     */
+    public OrderPriceDetail cashRefundPrice(Double cashRefundPrice) {
+        this.cashRefundPrice = cashRefundPrice;
+        return this;
+    }
+
+
+    /**
+     * set 资源余额退款金额
+     *
+     * @param balanceRefundPrice
+     */
+    public OrderPriceDetail balanceRefundPrice(Double balanceRefundPrice) {
+        this.balanceRefundPrice = balanceRefundPrice;
+        return this;
+    }
+
+
+    /**
+     * set 资源代金券退款金额
+     *
+     * @param couponRefundPrice
+     */
+    public OrderPriceDetail couponRefundPrice(Double couponRefundPrice) {
+        this.couponRefundPrice = couponRefundPrice;
+        return this;
+    }
+
+
+    /**
+    * set 退款订单列表
+    *
+    * @param refundOrderList
+    */
+    public OrderPriceDetail refundOrderList(List<RefundOrder> refundOrderList) {
+        this.refundOrderList = refundOrderList;
+        return this;
+    }
+
+
+    /**
+    * set 计费项价格列表
+    *
+    * @param billingItemPriceList
+    */
+    public OrderPriceDetail billingItemPriceList(List<BillingItemPrice> billingItemPriceList) {
+        this.billingItemPriceList = billingItemPriceList;
+        return this;
+    }
+
 
 
     /**
@@ -808,4 +1135,27 @@ public class OrderPriceDetail  implements java.io.Serializable {
         this.formula.add(formula);
     }
 
+    /**
+     * add item to 退款订单列表
+     *
+     * @param refundOrderList
+     */
+    public void addRefundOrderList(RefundOrder refundOrderList) {
+        if (this.refundOrderList == null) {
+            this.refundOrderList = new ArrayList<>();
+        }
+        this.refundOrderList.add(refundOrderList);
+    }
+
+    /**
+     * add item to 计费项价格列表
+     *
+     * @param billingItemPriceList
+     */
+    public void addBillingItemPriceList(BillingItemPrice billingItemPriceList) {
+        if (this.billingItemPriceList == null) {
+            this.billingItemPriceList = new ArrayList<>();
+        }
+        this.billingItemPriceList.add(billingItemPriceList);
+    }
 }

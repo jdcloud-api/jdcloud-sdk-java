@@ -92,8 +92,8 @@ public class ConsumptionProduct  implements java.io.Serializable {
     /**
      * productDetails
      */
+    
     private List<Consumption> productDetails;
-
     /**
      * productDetailList
      */
@@ -103,6 +103,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
      * 分组显示值
      */
     private String groupTagValue;
+
 
 
     /**
@@ -123,6 +124,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get appCodeName
      *
@@ -140,6 +142,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
     public void setAppCodeName(String appCodeName) {
         this.appCodeName = appCodeName;
     }
+
 
     /**
      * get serviceCode
@@ -159,6 +162,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get serviceCodeName
      *
@@ -176,6 +180,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
     public void setServiceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
     }
+
 
     /**
      * get 优惠后金额
@@ -195,6 +200,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.actualFee = actualFee;
     }
 
+
     /**
      * get 现金支付
      *
@@ -212,6 +218,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
     public void setCashPayFee(Number cashPayFee) {
         this.cashPayFee = cashPayFee;
     }
+
 
     /**
      * get 余额支付
@@ -231,6 +238,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
     }
 
+
     /**
      * get 代金券支付金额
      *
@@ -248,6 +256,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
     public void setCashCouponPayFee(Number cashCouponPayFee) {
         this.cashCouponPayFee = cashCouponPayFee;
     }
+
 
     /**
      * get 欠费金额
@@ -267,6 +276,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.arrearFee = arrearFee;
     }
 
+
     /**
      * get 原价
      *
@@ -284,6 +294,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
     public void setBillFee2(Number billFee2) {
         this.billFee2 = billFee2;
     }
+
 
     /**
      * get 优惠金额
@@ -303,23 +314,25 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.discountFee = discountFee;
     }
 
+
     /**
-     * get productDetails
-     *
-     * @return
-     */
+    * get productDetails
+    *
+    * @return
+    */
     public List<Consumption> getProductDetails() {
         return productDetails;
     }
 
     /**
-     * set productDetails
-     *
-     * @param productDetails
-     */
+    * set productDetails
+    *
+    * @param productDetails
+    */
     public void setProductDetails(List<Consumption> productDetails) {
         this.productDetails = productDetails;
     }
+
 
     /**
      * get productDetailList
@@ -338,6 +351,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
     public void setProductDetailList(Object productDetailList) {
         this.productDetailList = productDetailList;
     }
+
 
     /**
      * get 分组显示值
@@ -358,6 +372,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
     }
 
 
+
     /**
      * set appCode
      *
@@ -367,6 +382,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set appCodeName
@@ -378,6 +394,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set serviceCode
      *
@@ -387,6 +404,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set serviceCodeName
@@ -398,6 +416,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠后金额
      *
@@ -407,6 +426,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.actualFee = actualFee;
         return this;
     }
+
 
     /**
      * set 现金支付
@@ -418,6 +438,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额支付
      *
@@ -427,6 +448,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
         return this;
     }
+
 
     /**
      * set 代金券支付金额
@@ -438,6 +460,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 欠费金额
      *
@@ -447,6 +470,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.arrearFee = arrearFee;
         return this;
     }
+
 
     /**
      * set 原价
@@ -458,6 +482,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠金额
      *
@@ -468,15 +493,17 @@ public class ConsumptionProduct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set productDetails
-     *
-     * @param productDetails
-     */
+    * set productDetails
+    *
+    * @param productDetails
+    */
     public ConsumptionProduct productDetails(List<Consumption> productDetails) {
         this.productDetails = productDetails;
         return this;
     }
+
 
     /**
      * set productDetailList
@@ -488,6 +515,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 分组显示值
      *
@@ -497,6 +525,7 @@ public class ConsumptionProduct  implements java.io.Serializable {
         this.groupTagValue = groupTagValue;
         return this;
     }
+
 
 
     /**
@@ -510,5 +539,4 @@ public class ConsumptionProduct  implements java.io.Serializable {
         }
         this.productDetails.add(productDetail);
     }
-
 }

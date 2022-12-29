@@ -153,6 +153,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     private String formulaName;
 
 
+
     /**
      * get 消费记录数据库唯一id
      *
@@ -170,6 +171,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 消费记录id
@@ -189,6 +191,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.billingRecordId = billingRecordId;
     }
 
+
     /**
      * get appCode
      *
@@ -206,6 +209,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get serviceCode
@@ -225,6 +229,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 区域
      *
@@ -242,6 +247,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 资源id
@@ -261,6 +267,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 用户pin
      *
@@ -278,6 +285,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 规格
@@ -297,6 +305,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.formula = formula;
     }
 
+
     /**
      * get 计费类型
      *
@@ -314,6 +323,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 价格快照
@@ -333,6 +343,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.priceSnapShot = priceSnapShot;
     }
 
+
     /**
      * get 开始时间
      *
@@ -350,6 +361,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 结束时间
@@ -369,6 +381,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 创建日期
      *
@@ -386,6 +399,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 账单金额
@@ -405,6 +419,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.billFee = billFee;
     }
 
+
     /**
      * get 账单金额保留小数点后2位
      *
@@ -422,6 +437,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setBillFee2(Number billFee2) {
         this.billFee2 = billFee2;
     }
+
 
     /**
      * get 折扣金额
@@ -441,6 +457,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.discountFee = discountFee;
     }
 
+
     /**
      * get 优惠券id
      *
@@ -458,6 +475,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setCouponId(String couponId) {
         this.couponId = couponId;
     }
+
 
     /**
      * get 优惠金额
@@ -477,6 +495,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.couponFee = couponFee;
     }
 
+
     /**
      * get 交易单号
      *
@@ -494,6 +513,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setTransactionNo(String transactionNo) {
         this.transactionNo = transactionNo;
     }
+
 
     /**
      * get null
@@ -513,6 +533,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.isBillGenerated = isBillGenerated;
     }
 
+
     /**
      * get 子账单id
      *
@@ -530,6 +551,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setSubBillId(Number subBillId) {
         this.subBillId = subBillId;
     }
+
 
     /**
      * get 退款单号
@@ -549,6 +571,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.refundNo = refundNo;
     }
 
+
     /**
      * get 优惠后金额
      *
@@ -566,6 +589,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     public void setActualFee(Number actualFee) {
         this.actualFee = actualFee;
     }
+
 
     /**
      * get 规格名称
@@ -586,6 +610,7 @@ public class ConsumeRecord  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 消费记录数据库唯一id
      *
@@ -595,6 +620,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 消费记录id
@@ -606,6 +632,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set appCode
      *
@@ -615,6 +642,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set serviceCode
@@ -626,6 +654,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 区域
      *
@@ -635,6 +664,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 资源id
@@ -646,6 +676,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -655,6 +686,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 规格
@@ -666,6 +698,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型
      *
@@ -675,6 +708,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.billingType = billingType;
         return this;
     }
+
 
     /**
      * set 价格快照
@@ -686,6 +720,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -695,6 +730,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -706,6 +742,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建日期
      *
@@ -715,6 +752,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 账单金额
@@ -726,6 +764,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账单金额保留小数点后2位
      *
@@ -735,6 +774,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.billFee2 = billFee2;
         return this;
     }
+
 
     /**
      * set 折扣金额
@@ -746,6 +786,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠券id
      *
@@ -755,6 +796,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.couponId = couponId;
         return this;
     }
+
 
     /**
      * set 优惠金额
@@ -766,6 +808,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 交易单号
      *
@@ -775,6 +818,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.transactionNo = transactionNo;
         return this;
     }
+
 
     /**
      * set null
@@ -786,6 +830,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 子账单id
      *
@@ -795,6 +840,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.subBillId = subBillId;
         return this;
     }
+
 
     /**
      * set 退款单号
@@ -806,6 +852,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠后金额
      *
@@ -815,6 +862,7 @@ public class ConsumeRecord  implements java.io.Serializable {
         this.actualFee = actualFee;
         return this;
     }
+
 
     /**
      * set 规格名称

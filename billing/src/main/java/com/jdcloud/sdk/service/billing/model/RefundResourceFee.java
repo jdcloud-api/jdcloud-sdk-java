@@ -62,6 +62,7 @@ public class RefundResourceFee  implements java.io.Serializable {
     /**
      * 退款订单列表
      */
+    
     private List<RefundOrderFee> orderFees;
 
 
@@ -83,6 +84,7 @@ public class RefundResourceFee  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 资源退款金额
      *
@@ -100,6 +102,7 @@ public class RefundResourceFee  implements java.io.Serializable {
     public void setFee(Double fee) {
         this.fee = fee;
     }
+
 
     /**
      * get 现金退款金额
@@ -119,6 +122,7 @@ public class RefundResourceFee  implements java.io.Serializable {
         this.cashFee = cashFee;
     }
 
+
     /**
      * get 余额退款金额
      *
@@ -136,6 +140,7 @@ public class RefundResourceFee  implements java.io.Serializable {
     public void setBalanceFee(Double balanceFee) {
         this.balanceFee = balanceFee;
     }
+
 
     /**
      * get 代金券退款金额
@@ -155,23 +160,25 @@ public class RefundResourceFee  implements java.io.Serializable {
         this.couponFee = couponFee;
     }
 
+
     /**
-     * get 退款订单列表
-     *
-     * @return
-     */
+    * get 退款订单列表
+    *
+    * @return
+    */
     public List<RefundOrderFee> getOrderFees() {
         return orderFees;
     }
 
     /**
-     * set 退款订单列表
-     *
-     * @param orderFees
-     */
+    * set 退款订单列表
+    *
+    * @param orderFees
+    */
     public void setOrderFees(List<RefundOrderFee> orderFees) {
         this.orderFees = orderFees;
     }
+
 
 
     /**
@@ -184,6 +191,7 @@ public class RefundResourceFee  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源退款金额
      *
@@ -193,6 +201,7 @@ public class RefundResourceFee  implements java.io.Serializable {
         this.fee = fee;
         return this;
     }
+
 
     /**
      * set 现金退款金额
@@ -204,6 +213,7 @@ public class RefundResourceFee  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额退款金额
      *
@@ -213,6 +223,7 @@ public class RefundResourceFee  implements java.io.Serializable {
         this.balanceFee = balanceFee;
         return this;
     }
+
 
     /**
      * set 代金券退款金额
@@ -224,15 +235,17 @@ public class RefundResourceFee  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 退款订单列表
-     *
-     * @param orderFees
-     */
+    * set 退款订单列表
+    *
+    * @param orderFees
+    */
     public RefundResourceFee orderFees(List<RefundOrderFee> orderFees) {
         this.orderFees = orderFees;
         return this;
     }
+
 
 
     /**
@@ -246,5 +259,4 @@ public class RefundResourceFee  implements java.io.Serializable {
         }
         this.orderFees.add(orderFee);
     }
-
 }

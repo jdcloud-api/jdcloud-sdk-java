@@ -53,6 +53,7 @@ public class Formula  implements java.io.Serializable {
     private Double number;
 
 
+
     /**
      * get 计费项别名
      *
@@ -70,6 +71,7 @@ public class Formula  implements java.io.Serializable {
     public void setKey(String key) {
         this.key = key;
     }
+
 
     /**
      * get 用量
@@ -89,6 +91,7 @@ public class Formula  implements java.io.Serializable {
         this.value = value;
     }
 
+
     /**
      * get 单位
      *
@@ -106,6 +109,7 @@ public class Formula  implements java.io.Serializable {
     public void setUnit(String unit) {
         this.unit = unit;
     }
+
 
     /**
      * get 计费项数量
@@ -126,6 +130,7 @@ public class Formula  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 计费项别名
      *
@@ -135,6 +140,7 @@ public class Formula  implements java.io.Serializable {
         this.key = key;
         return this;
     }
+
 
     /**
      * set 用量
@@ -146,6 +152,7 @@ public class Formula  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 单位
      *
@@ -155,6 +162,7 @@ public class Formula  implements java.io.Serializable {
         this.unit = unit;
         return this;
     }
+
 
     /**
      * set 计费项数量

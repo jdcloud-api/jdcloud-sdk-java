@@ -92,6 +92,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
     private Integer dosingCycle;
 
 
+
     /**
      * get 站点
      *
@@ -109,6 +110,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
     public void setSite(Integer site) {
         this.site = site;
     }
+
 
     /**
      * get 业务线
@@ -128,6 +130,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         this.appCode = appCode;
     }
 
+
     /**
      * get 产品编码
      *
@@ -145,6 +148,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 计费时长类型 - 0:按使用时长；1:按周期时长
@@ -164,6 +168,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         this.strategy = strategy;
     }
 
+
     /**
      * get 计费周期类型 - 0:按小时；1:按天
      *
@@ -181,6 +186,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
     public void setCycleType(Integer cycleType) {
         this.cycleType = cycleType;
     }
+
 
     /**
      * get 计费模式 - 1:删除不计费；2:关机不计费
@@ -200,6 +206,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         this.billingMode = billingMode;
     }
 
+
     /**
      * get 最小计费时长 - 必须为大于等于0的整数
      *
@@ -218,6 +225,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         this.timeSpan = timeSpan;
     }
 
+
     /**
      * get 区分大客户 - 1:是；0:否
      *
@@ -235,6 +243,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
     public void setDosingMode(Integer dosingMode) {
         this.dosingMode = dosingMode;
     }
+
 
     /**
      * get 大客户统计周期 - 0:按小时计费；1:按天计费
@@ -255,6 +264,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
     }
 
 
+
     /**
      * set 站点
      *
@@ -264,6 +274,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         this.site = site;
         return this;
     }
+
 
     /**
      * set 业务线
@@ -275,6 +286,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 产品编码
      *
@@ -284,6 +296,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 计费时长类型 - 0:按使用时长；1:按周期时长
@@ -295,6 +308,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 计费周期类型 - 0:按小时；1:按天
      *
@@ -304,6 +318,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         this.cycleType = cycleType;
         return this;
     }
+
 
     /**
      * set 计费模式 - 1:删除不计费；2:关机不计费
@@ -315,6 +330,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 最小计费时长 - 必须为大于等于0的整数
      *
@@ -325,6 +341,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         return this;
     }
 
+
     /**
      * set 区分大客户 - 1:是；0:否
      *
@@ -334,6 +351,7 @@ public class BillingRuleRequest extends JdcloudRequest implements java.io.Serial
         this.dosingMode = dosingMode;
         return this;
     }
+
 
     /**
      * set 大客户统计周期 - 0:按小时计费；1:按天计费

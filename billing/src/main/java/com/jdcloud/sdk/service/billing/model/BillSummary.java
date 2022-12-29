@@ -85,6 +85,11 @@ public class BillSummary  implements java.io.Serializable {
     private String region;
 
     /**
+     * 可用区
+     */
+    private String az;
+
+    /**
      * 费用类型,仅用于查询帐单明细接口。取值:[新购、续费、配置变更、退订、按量费用]
      */
     private String actionTypeName;
@@ -147,6 +152,7 @@ public class BillSummary  implements java.io.Serializable {
     /**
      * 标签明细
      */
+    
     private List<ResourceTagVo> tagDetails;
 
 
@@ -168,6 +174,7 @@ public class BillSummary  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 产品线代码
      *
@@ -185,6 +192,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 产品线代码名称
@@ -204,6 +212,7 @@ public class BillSummary  implements java.io.Serializable {
         this.appCodeName = appCodeName;
     }
 
+
     /**
      * get 产品代码
      *
@@ -221,6 +230,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 产品代码名称
@@ -240,6 +250,7 @@ public class BillSummary  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
     }
 
+
     /**
      * get 计费类型
      *
@@ -257,6 +268,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 计费类型描述
@@ -276,6 +288,7 @@ public class BillSummary  implements java.io.Serializable {
         this.billingTypeName = billingTypeName;
     }
 
+
     /**
      * get 资源id
      *
@@ -293,6 +306,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 资源名称
@@ -312,6 +326,7 @@ public class BillSummary  implements java.io.Serializable {
         this.resourceName = resourceName;
     }
 
+
     /**
      * get 区域
      *
@@ -329,6 +344,26 @@ public class BillSummary  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
+
+    /**
+     * get 可用区
+     *
+     * @return
+     */
+    public String getAz() {
+        return az;
+    }
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public void setAz(String az) {
+        this.az = az;
+    }
+
 
     /**
      * get 费用类型,仅用于查询帐单明细接口。取值:[新购、续费、配置变更、退订、按量费用]
@@ -348,6 +383,7 @@ public class BillSummary  implements java.io.Serializable {
         this.actionTypeName = actionTypeName;
     }
 
+
     /**
      * get 规格
      *
@@ -365,6 +401,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setFormula(String formula) {
         this.formula = formula;
     }
+
 
     /**
      * get 计费开始时间
@@ -384,6 +421,7 @@ public class BillSummary  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 计费结束时间
      *
@@ -401,6 +439,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 账单生成时间,仅用于查询帐单明细接口
@@ -420,6 +459,7 @@ public class BillSummary  implements java.io.Serializable {
         this.billTime = billTime;
     }
 
+
     /**
      * get 账单总额
      *
@@ -437,6 +477,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setTotalFee(Number totalFee) {
         this.totalFee = totalFee;
     }
+
 
     /**
      * get 优惠金额
@@ -456,6 +497,7 @@ public class BillSummary  implements java.io.Serializable {
         this.discountFee = discountFee;
     }
 
+
     /**
      * get 优惠后总价金额
      *
@@ -473,6 +515,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setRealTotalFee(Number realTotalFee) {
         this.realTotalFee = realTotalFee;
     }
+
 
     /**
      * get 代金券支付金额
@@ -492,6 +535,7 @@ public class BillSummary  implements java.io.Serializable {
         this.cashCouponPayFee = cashCouponPayFee;
     }
 
+
     /**
      * get 余额支付金额
      *
@@ -509,6 +553,7 @@ public class BillSummary  implements java.io.Serializable {
     public void setBalancePayFee(Number balancePayFee) {
         this.balancePayFee = balancePayFee;
     }
+
 
     /**
      * get 现金支付金额
@@ -528,6 +573,7 @@ public class BillSummary  implements java.io.Serializable {
         this.cashPayFee = cashPayFee;
     }
 
+
     /**
      * get 欠费金额
      *
@@ -546,23 +592,25 @@ public class BillSummary  implements java.io.Serializable {
         this.arrearFee = arrearFee;
     }
 
+
     /**
-     * get 标签明细
-     *
-     * @return
-     */
+    * get 标签明细
+    *
+    * @return
+    */
     public List<ResourceTagVo> getTagDetails() {
         return tagDetails;
     }
 
     /**
-     * set 标签明细
-     *
-     * @param tagDetails
-     */
+    * set 标签明细
+    *
+    * @param tagDetails
+    */
     public void setTagDetails(List<ResourceTagVo> tagDetails) {
         this.tagDetails = tagDetails;
     }
+
 
 
     /**
@@ -575,6 +623,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线代码
      *
@@ -584,6 +633,7 @@ public class BillSummary  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 产品线代码名称
@@ -595,6 +645,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品代码
      *
@@ -604,6 +655,7 @@ public class BillSummary  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 产品代码名称
@@ -615,6 +667,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型
      *
@@ -624,6 +677,7 @@ public class BillSummary  implements java.io.Serializable {
         this.billingType = billingType;
         return this;
     }
+
 
     /**
      * set 计费类型描述
@@ -635,6 +689,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源id
      *
@@ -644,6 +699,7 @@ public class BillSummary  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 资源名称
@@ -655,6 +711,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 区域
      *
@@ -664,6 +721,18 @@ public class BillSummary  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
+
+    /**
+     * set 可用区
+     *
+     * @param az
+     */
+    public BillSummary az(String az) {
+        this.az = az;
+        return this;
+    }
+
 
     /**
      * set 费用类型,仅用于查询帐单明细接口。取值:[新购、续费、配置变更、退订、按量费用]
@@ -675,6 +744,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规格
      *
@@ -684,6 +754,7 @@ public class BillSummary  implements java.io.Serializable {
         this.formula = formula;
         return this;
     }
+
 
     /**
      * set 计费开始时间
@@ -695,6 +766,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费结束时间
      *
@@ -704,6 +776,7 @@ public class BillSummary  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 账单生成时间,仅用于查询帐单明细接口
@@ -715,6 +788,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账单总额
      *
@@ -724,6 +798,7 @@ public class BillSummary  implements java.io.Serializable {
         this.totalFee = totalFee;
         return this;
     }
+
 
     /**
      * set 优惠金额
@@ -735,6 +810,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠后总价金额
      *
@@ -744,6 +820,7 @@ public class BillSummary  implements java.io.Serializable {
         this.realTotalFee = realTotalFee;
         return this;
     }
+
 
     /**
      * set 代金券支付金额
@@ -755,6 +832,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额支付金额
      *
@@ -764,6 +842,7 @@ public class BillSummary  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
         return this;
     }
+
 
     /**
      * set 现金支付金额
@@ -775,6 +854,7 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 欠费金额
      *
@@ -785,15 +865,17 @@ public class BillSummary  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 标签明细
-     *
-     * @param tagDetails
-     */
+    * set 标签明细
+    *
+    * @param tagDetails
+    */
     public BillSummary tagDetails(List<ResourceTagVo> tagDetails) {
         this.tagDetails = tagDetails;
         return this;
     }
+
 
 
     /**
@@ -807,5 +889,4 @@ public class BillSummary  implements java.io.Serializable {
         }
         this.tagDetails.add(tagDetail);
     }
-
 }

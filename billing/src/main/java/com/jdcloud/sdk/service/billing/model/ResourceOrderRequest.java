@@ -108,8 +108,8 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     /**
      * 配置信息
      */
+    
     private List<Formula> formula;
-
     /**
      * 否为试用资源 0:非试用 1:试用
      */
@@ -251,6 +251,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     private String operateTime;
 
 
+
     /**
      * get 主键id
      *
@@ -268,6 +269,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 交易单唯一标识
@@ -287,6 +289,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.transactionNo = transactionNo;
     }
 
+
     /**
      * get 资源id
      *
@@ -304,6 +307,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性
@@ -323,6 +327,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.billingType = billingType;
     }
 
+
     /**
      * get 时长类型 1:小时 2:天 3:月 4:年
      *
@@ -340,6 +345,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setTimeUnit(Integer timeUnit) {
         this.timeUnit = timeUnit;
     }
+
 
     /**
      * get 时长字段，与timeUnit字段构成具体时长
@@ -359,6 +365,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.timeSpan = timeSpan;
     }
 
+
     /**
      * get 资源状态 1:正常 2:停服 3:删除
      *
@@ -376,6 +383,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 计费状态 0:停止计费 1:计费中
@@ -395,6 +403,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.billingStatus = billingStatus;
     }
 
+
     /**
      * get 网络类型0:无 1: non-BGP, 2: BGP
      *
@@ -412,6 +421,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setNetworkOperator(Integer networkOperator) {
         this.networkOperator = networkOperator;
     }
+
 
     /**
      * get 用户pin
@@ -431,6 +441,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.pin = pin;
     }
 
+
     /**
      * get 应用码
      *
@@ -448,6 +459,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 服务码
@@ -467,6 +479,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 站点标识0:中国 1:国际
      *
@@ -484,6 +497,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setSite(Integer site) {
         this.site = site;
     }
+
 
     /**
      * get 资源区域
@@ -503,23 +517,25 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.region = region;
     }
 
+
     /**
-     * get 配置信息
-     *
-     * @return
-     */
+    * get 配置信息
+    *
+    * @return
+    */
     public List<Formula> getFormula() {
         return formula;
     }
 
     /**
-     * set 配置信息
-     *
-     * @param formula
-     */
+    * set 配置信息
+    *
+    * @param formula
+    */
     public void setFormula(List<Formula> formula) {
         this.formula = formula;
     }
+
 
     /**
      * get 否为试用资源 0:非试用 1:试用
@@ -539,6 +555,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.isOnTrial = isOnTrial;
     }
 
+
     /**
      * get 开始时间
      *
@@ -556,6 +573,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 结束时间
@@ -575,6 +593,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.endTime = endTime;
     }
 
+
     /**
      * get 创建时间
      *
@@ -592,6 +611,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 支付时间
@@ -611,6 +631,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.payTime = payTime;
     }
 
+
     /**
      * get formula转换成字符串
      *
@@ -628,6 +649,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setFormulaStr(String formulaStr) {
         this.formulaStr = formulaStr;
     }
+
 
     /**
      * get billingType兼容交易系统字段
@@ -647,6 +669,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.chargeMode = chargeMode;
     }
 
+
     /**
      * get timeSpan兼容交易系统字段
      *
@@ -664,6 +687,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setChargeDuration(Integer chargeDuration) {
         this.chargeDuration = chargeDuration;
     }
+
 
     /**
      * get timeUnit兼容交易系统字段
@@ -683,6 +707,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.chargeUnit = chargeUnit;
     }
 
+
     /**
      * get 欠费过期状态
      *
@@ -700,6 +725,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setAeStatus(Integer aeStatus) {
         this.aeStatus = aeStatus;
     }
+
 
     /**
      * get 欠费、过期资源释放时间
@@ -719,6 +745,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.releasingTime = releasingTime;
     }
 
+
     /**
      * get 交易单模块sourceId 计费不关心
      *
@@ -736,6 +763,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setSourceId(String sourceId) {
         this.sourceId = sourceId;
     }
+
 
     /**
      * get 计费开始时间 续费时本次续费周期开始时间
@@ -755,6 +783,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.billingStartTime = billingStartTime;
     }
 
+
     /**
      * get 最新价格map
      *
@@ -772,6 +801,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setPriceMap(Object priceMap) {
         this.priceMap = priceMap;
     }
+
 
     /**
      * get 价格快照
@@ -791,6 +821,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.priceSnapshot = priceSnapshot;
     }
 
+
     /**
      * get 订单折扣前总价
      *
@@ -808,6 +839,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setPrice(Number price) {
         this.price = price;
     }
+
 
     /**
      * get 折扣后订单价格
@@ -827,6 +859,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.discountedPrice = discountedPrice;
     }
 
+
     /**
      * get 即将到期天数
      *
@@ -844,6 +877,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setExpiringDays(Integer expiringDays) {
         this.expiringDays = expiringDays;
     }
+
 
     /**
      * get 计费类型描述 例如:按配置、包年包月
@@ -863,6 +897,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.billingCategoryDescription = billingCategoryDescription;
     }
 
+
     /**
      * get 计费详情描述 例如:按配置、包年包月（一年）
      *
@@ -880,6 +915,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get refundNo
@@ -899,6 +935,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.refundNo = refundNo;
     }
 
+
     /**
      * get 计费类型单号
      *
@@ -916,6 +953,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setBillingTypeName(String billingTypeName) {
         this.billingTypeName = billingTypeName;
     }
+
 
     /**
      * get 促销明细
@@ -935,6 +973,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.favorableInfo = favorableInfo;
     }
 
+
     /**
      * get 资源名
      *
@@ -952,6 +991,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setResourceName(String resourceName) {
         this.resourceName = resourceName;
     }
+
 
     /**
      * get 变配明细（1-升配，2-降配，3-调整配置,4-续费,5-续费升配,6-续费降配,7-配置转包年包月）
@@ -971,6 +1011,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.processType = processType;
     }
 
+
     /**
      * get 资源申请人
      *
@@ -989,6 +1030,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.applicant = applicant;
     }
 
+
     /**
      * get 计费模式  1.停服停止计费  2.关机停止计费
      *
@@ -1006,6 +1048,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     public void setBillingMode(Integer billingMode) {
         this.billingMode = billingMode;
     }
+
 
     /**
      * get 启服、停服、停止计费时间
@@ -1026,6 +1069,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
     }
 
 
+
     /**
      * set 主键id
      *
@@ -1035,6 +1079,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.id = id;
         return this;
     }
+
 
     /**
      * set 交易单唯一标识
@@ -1046,6 +1091,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 资源id
      *
@@ -1055,6 +1101,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性
@@ -1066,6 +1113,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 时长类型 1:小时 2:天 3:月 4:年
      *
@@ -1075,6 +1123,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.timeUnit = timeUnit;
         return this;
     }
+
 
     /**
      * set 时长字段，与timeUnit字段构成具体时长
@@ -1086,6 +1135,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 资源状态 1:正常 2:停服 3:删除
      *
@@ -1095,6 +1145,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.status = status;
         return this;
     }
+
 
     /**
      * set 计费状态 0:停止计费 1:计费中
@@ -1106,6 +1157,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 网络类型0:无 1: non-BGP, 2: BGP
      *
@@ -1115,6 +1167,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.networkOperator = networkOperator;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -1126,6 +1179,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 应用码
      *
@@ -1135,6 +1189,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 服务码
@@ -1146,6 +1201,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 站点标识0:中国 1:国际
      *
@@ -1155,6 +1211,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.site = site;
         return this;
     }
+
 
     /**
      * set 资源区域
@@ -1166,15 +1223,17 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set 配置信息
-     *
-     * @param formula
-     */
+    * set 配置信息
+    *
+    * @param formula
+    */
     public ResourceOrderRequest formula(List<Formula> formula) {
         this.formula = formula;
         return this;
     }
+
 
     /**
      * set 否为试用资源 0:非试用 1:试用
@@ -1186,6 +1245,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -1195,6 +1255,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -1206,6 +1267,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -1215,6 +1277,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 支付时间
@@ -1226,6 +1289,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set formula转换成字符串
      *
@@ -1235,6 +1299,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.formulaStr = formulaStr;
         return this;
     }
+
 
     /**
      * set billingType兼容交易系统字段
@@ -1246,6 +1311,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set timeSpan兼容交易系统字段
      *
@@ -1255,6 +1321,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.chargeDuration = chargeDuration;
         return this;
     }
+
 
     /**
      * set timeUnit兼容交易系统字段
@@ -1266,6 +1333,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 欠费过期状态
      *
@@ -1275,6 +1343,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.aeStatus = aeStatus;
         return this;
     }
+
 
     /**
      * set 欠费、过期资源释放时间
@@ -1286,6 +1355,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 交易单模块sourceId 计费不关心
      *
@@ -1295,6 +1365,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.sourceId = sourceId;
         return this;
     }
+
 
     /**
      * set 计费开始时间 续费时本次续费周期开始时间
@@ -1306,6 +1377,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 最新价格map
      *
@@ -1315,6 +1387,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.priceMap = priceMap;
         return this;
     }
+
 
     /**
      * set 价格快照
@@ -1326,6 +1399,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 订单折扣前总价
      *
@@ -1335,6 +1409,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.price = price;
         return this;
     }
+
 
     /**
      * set 折扣后订单价格
@@ -1346,6 +1421,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 即将到期天数
      *
@@ -1355,6 +1431,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.expiringDays = expiringDays;
         return this;
     }
+
 
     /**
      * set 计费类型描述 例如:按配置、包年包月
@@ -1366,6 +1443,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 计费详情描述 例如:按配置、包年包月（一年）
      *
@@ -1375,6 +1453,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.description = description;
         return this;
     }
+
 
     /**
      * set refundNo
@@ -1386,6 +1465,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 计费类型单号
      *
@@ -1395,6 +1475,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.billingTypeName = billingTypeName;
         return this;
     }
+
 
     /**
      * set 促销明细
@@ -1406,6 +1487,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 资源名
      *
@@ -1415,6 +1497,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.resourceName = resourceName;
         return this;
     }
+
 
     /**
      * set 变配明细（1-升配，2-降配，3-调整配置,4-续费,5-续费升配,6-续费降配,7-配置转包年包月）
@@ -1426,6 +1509,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 资源申请人
      *
@@ -1435,6 +1519,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.applicant = applicant;
         return this;
     }
+
 
     /**
      * set 计费模式  1.停服停止计费  2.关机停止计费
@@ -1446,6 +1531,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         return this;
     }
 
+
     /**
      * set 启服、停服、停止计费时间
      *
@@ -1455,6 +1541,7 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         this.operateTime = operateTime;
         return this;
     }
+
 
 
     /**
@@ -1468,5 +1555,4 @@ public class ResourceOrderRequest extends JdcloudRequest implements java.io.Seri
         }
         this.formula.add(formula);
     }
-
 }

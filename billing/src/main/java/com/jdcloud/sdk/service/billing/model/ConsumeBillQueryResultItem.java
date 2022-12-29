@@ -167,6 +167,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     /**
      * 标签明细
      */
+    
     private List<ResourceTagVo> tagDetails;
 
 
@@ -188,6 +189,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.billId = billId;
     }
 
+
     /**
      * get 用户pin
      *
@@ -205,6 +207,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get appCode
@@ -224,6 +227,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get appCodeName
      *
@@ -241,6 +245,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setAppCodeName(String appCodeName) {
         this.appCodeName = appCodeName;
     }
+
 
     /**
      * get serviceCode
@@ -260,6 +265,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get serviceCodeName
      *
@@ -277,6 +283,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setServiceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
     }
+
 
     /**
      * get 资源id
@@ -296,6 +303,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 计费类型
      *
@@ -313,6 +321,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 计费类型描述
@@ -332,6 +341,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.billingTypeName = billingTypeName;
     }
 
+
     /**
      * get 账单开始时间
      *
@@ -349,6 +359,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setBillStart(String billStart) {
         this.billStart = billStart;
     }
+
 
     /**
      * get 账单结束时间
@@ -368,6 +379,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.billEnd = billEnd;
     }
 
+
     /**
      * get 结算时间
      *
@@ -385,6 +397,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setSettleTime(String settleTime) {
         this.settleTime = settleTime;
     }
+
 
     /**
      * get 账单日期
@@ -404,6 +417,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.billTime = billTime;
     }
 
+
     /**
      * get 账单金额/原价
      *
@@ -421,6 +435,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setBillFee(Number billFee) {
         this.billFee = billFee;
     }
+
 
     /**
      * get 账单总额
@@ -440,6 +455,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.totalFee = totalFee;
     }
 
+
     /**
      * get 现金支付金额
      *
@@ -457,6 +473,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setCashPayFee(Number cashPayFee) {
         this.cashPayFee = cashPayFee;
     }
+
 
     /**
      * get 代金券支付金额
@@ -476,6 +493,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.cashCouponPayFee = cashCouponPayFee;
     }
 
+
     /**
      * get 余额支付金额
      *
@@ -493,6 +511,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setBalancePayFee(Number balancePayFee) {
         this.balancePayFee = balancePayFee;
     }
+
 
     /**
      * get 折扣金额
@@ -512,6 +531,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.discountFee = discountFee;
     }
 
+
     /**
      * get 欠费金额
      *
@@ -529,6 +549,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setArrearFee(Number arrearFee) {
         this.arrearFee = arrearFee;
     }
+
 
     /**
      * get 支付状态
@@ -548,6 +569,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.payState = payState;
     }
 
+
     /**
      * get 创建时间
      *
@@ -565,6 +587,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 新老计费标识（1:老计费   2：新计费）
@@ -584,6 +607,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.systemType = systemType;
     }
 
+
     /**
      * get 区域
      *
@@ -601,6 +625,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 规格
@@ -620,6 +645,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.formula = formula;
     }
 
+
     /**
      * get 规格
      *
@@ -638,23 +664,25 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.formulaStr = formulaStr;
     }
 
+
     /**
-     * get 标签明细
-     *
-     * @return
-     */
+    * get 标签明细
+    *
+    * @return
+    */
     public List<ResourceTagVo> getTagDetails() {
         return tagDetails;
     }
 
     /**
-     * set 标签明细
-     *
-     * @param tagDetails
-     */
+    * set 标签明细
+    *
+    * @param tagDetails
+    */
     public void setTagDetails(List<ResourceTagVo> tagDetails) {
         this.tagDetails = tagDetails;
     }
+
 
 
     /**
@@ -667,6 +695,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -676,6 +705,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set appCode
@@ -687,6 +717,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set appCodeName
      *
@@ -696,6 +727,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.appCodeName = appCodeName;
         return this;
     }
+
 
     /**
      * set serviceCode
@@ -707,6 +739,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set serviceCodeName
      *
@@ -716,6 +749,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
         return this;
     }
+
 
     /**
      * set 资源id
@@ -727,6 +761,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型
      *
@@ -736,6 +771,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.billingType = billingType;
         return this;
     }
+
 
     /**
      * set 计费类型描述
@@ -747,6 +783,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账单开始时间
      *
@@ -756,6 +793,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.billStart = billStart;
         return this;
     }
+
 
     /**
      * set 账单结束时间
@@ -767,6 +805,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结算时间
      *
@@ -776,6 +815,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.settleTime = settleTime;
         return this;
     }
+
 
     /**
      * set 账单日期
@@ -787,6 +827,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账单金额/原价
      *
@@ -796,6 +837,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.billFee = billFee;
         return this;
     }
+
 
     /**
      * set 账单总额
@@ -807,6 +849,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 现金支付金额
      *
@@ -816,6 +859,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.cashPayFee = cashPayFee;
         return this;
     }
+
 
     /**
      * set 代金券支付金额
@@ -827,6 +871,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额支付金额
      *
@@ -836,6 +881,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
         return this;
     }
+
 
     /**
      * set 折扣金额
@@ -847,6 +893,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 欠费金额
      *
@@ -856,6 +903,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.arrearFee = arrearFee;
         return this;
     }
+
 
     /**
      * set 支付状态
@@ -867,6 +915,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -876,6 +925,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 新老计费标识（1:老计费   2：新计费）
@@ -887,6 +937,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 区域
      *
@@ -896,6 +947,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 规格
@@ -907,6 +959,7 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规格
      *
@@ -917,15 +970,17 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 标签明细
-     *
-     * @param tagDetails
-     */
+    * set 标签明细
+    *
+    * @param tagDetails
+    */
     public ConsumeBillQueryResultItem tagDetails(List<ResourceTagVo> tagDetails) {
         this.tagDetails = tagDetails;
         return this;
     }
+
 
 
     /**
@@ -939,5 +994,4 @@ public class ConsumeBillQueryResultItem  implements java.io.Serializable {
         }
         this.tagDetails.add(tagDetail);
     }
-
 }

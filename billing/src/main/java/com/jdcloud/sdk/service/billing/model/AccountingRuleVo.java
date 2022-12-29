@@ -98,6 +98,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
     private String outAccountTypeName;
 
 
+
     /**
      * get id
      *
@@ -115,6 +116,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 站点
@@ -134,6 +136,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 产品线
      *
@@ -151,6 +154,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 出账对象类型    1：通用   2：用户
@@ -170,6 +174,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.targetType = targetType;
     }
 
+
     /**
      * get 产品
      *
@@ -187,6 +192,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get pin
@@ -206,6 +212,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 出账类型  1：实时出账    2：定期出账
      *
@@ -223,6 +230,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
     public void setOutAccountType(Integer outAccountType) {
         this.outAccountType = outAccountType;
     }
+
 
     /**
      * get 出账周期：限制范围 1-28
@@ -242,6 +250,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.outAccountDay = outAccountDay;
     }
 
+
     /**
      * get 定期出账  时间表达式
      *
@@ -259,6 +268,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
     public void setTimeCron(String timeCron) {
         this.timeCron = timeCron;
     }
+
 
     /**
      * get 出账对象类型名称
@@ -278,6 +288,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.targetTypeName = targetTypeName;
     }
 
+
     /**
      * get 产品线名称
      *
@@ -296,6 +307,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.appCodeName = appCodeName;
     }
 
+
     /**
      * get 产品名称
      *
@@ -313,6 +325,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
     public void setServiceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
     }
+
 
     /**
      * get 出账类型名称
@@ -333,6 +346,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -342,6 +356,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 站点
@@ -353,6 +368,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线
      *
@@ -362,6 +378,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 出账对象类型    1：通用   2：用户
@@ -373,6 +390,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品
      *
@@ -382,6 +400,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set pin
@@ -393,6 +412,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 出账类型  1：实时出账    2：定期出账
      *
@@ -402,6 +422,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.outAccountType = outAccountType;
         return this;
     }
+
 
     /**
      * set 出账周期：限制范围 1-28
@@ -413,6 +434,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 定期出账  时间表达式
      *
@@ -422,6 +444,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.timeCron = timeCron;
         return this;
     }
+
 
     /**
      * set 出账对象类型名称
@@ -433,6 +456,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线名称
      *
@@ -443,6 +467,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品名称
      *
@@ -452,6 +477,7 @@ public class AccountingRuleVo  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
         return this;
     }
+
 
     /**
      * set 出账类型名称

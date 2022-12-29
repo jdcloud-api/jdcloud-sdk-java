@@ -75,8 +75,8 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<Formula> formula;
-
     /**
      * 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
      * Required:true
@@ -102,6 +102,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
     private Integer release;
 
 
+
     /**
      * get 站点
      *
@@ -119,6 +120,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
     public void setSite(Integer site) {
         this.site = site;
     }
+
 
     /**
      * get 产品线
@@ -138,6 +140,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 产品编码
      *
@@ -155,6 +158,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 资源ID
@@ -174,6 +178,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 操作行为 (1:启动 2：关闭 3：变配 4：删除)
      *
@@ -192,23 +197,25 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.opType = opType;
     }
 
+
     /**
-     * get 资源配置信息
-     *
-     * @return
-     */
+    * get 资源配置信息
+    *
+    * @return
+    */
     public List<Formula> getFormula() {
         return formula;
     }
 
     /**
-     * set 资源配置信息
-     *
-     * @param formula
-     */
+    * set 资源配置信息
+    *
+    * @param formula
+    */
     public void setFormula(List<Formula> formula) {
         this.formula = formula;
     }
+
 
     /**
      * get 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
@@ -228,6 +235,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.opTime = opTime;
     }
 
+
     /**
      * get 地域
      *
@@ -246,6 +254,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 用户
      *
@@ -263,6 +272,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 释放标识，不传默认释放（1：释放 0：不释放）
@@ -283,6 +293,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 站点
      *
@@ -292,6 +303,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.site = site;
         return this;
     }
+
 
     /**
      * set 产品线
@@ -303,6 +315,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品编码
      *
@@ -312,6 +325,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 资源ID
@@ -323,6 +337,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作行为 (1:启动 2：关闭 3：变配 4：删除)
      *
@@ -333,15 +348,17 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 资源配置信息
-     *
-     * @param formula
-     */
+    * set 资源配置信息
+    *
+    * @param formula
+    */
     public ResourceOperateRecordReq formula(List<Formula> formula) {
         this.formula = formula;
         return this;
     }
+
 
     /**
      * set 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
@@ -353,6 +370,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域
      *
@@ -362,6 +380,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 用户
@@ -373,6 +392,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 释放标识，不传默认释放（1：释放 0：不释放）
      *
@@ -382,6 +402,7 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         this.release = release;
         return this;
     }
+
 
 
     /**
@@ -395,5 +416,4 @@ public class ResourceOperateRecordReq  implements java.io.Serializable {
         }
         this.formula.add(formula);
     }
-
 }

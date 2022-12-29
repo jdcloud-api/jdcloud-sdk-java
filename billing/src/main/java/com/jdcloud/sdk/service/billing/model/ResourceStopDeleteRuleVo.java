@@ -158,6 +158,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     private Integer clientType;
 
 
+
     /**
      * get 主键
      *
@@ -175,6 +176,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setId(Number id) {
         this.id = id;
     }
+
 
     /**
      * get 站点
@@ -194,6 +196,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 产品线编码
      *
@@ -211,6 +214,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 产品线名称
@@ -230,6 +234,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.appCodeName = appCodeName;
     }
 
+
     /**
      * get 产品编码
      *
@@ -247,6 +252,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 产品名称
@@ -266,6 +272,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
     }
 
+
     /**
      * get 规则类型 1：试用规则 2、用户产品规则 3：用户规则 4：产品规则 5：通用规则 6：用户等级产品规则
      *
@@ -283,6 +290,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setRuleType(Integer ruleType) {
         this.ruleType = ruleType;
     }
+
 
     /**
      * get pin
@@ -302,6 +310,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 按配置欠费是否停服  1：欠费需要停服 0：欠费不需要停服
      *
@@ -319,6 +328,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setArrearStop(Integer arrearStop) {
         this.arrearStop = arrearStop;
     }
+
 
     /**
      * get 按配置欠费停服延后时长
@@ -338,6 +348,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.arrearStopDelayHours = arrearStopDelayHours;
     }
 
+
     /**
      * get 按配置欠费停服是否释放资源  1：需要释放资源 0：不需要释放资源
      *
@@ -355,6 +366,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setArrearDelete(Integer arrearDelete) {
         this.arrearDelete = arrearDelete;
     }
+
 
     /**
      * get 按配置欠费停服释放资源延后时长
@@ -374,6 +386,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.arrearDeleteDelayHours = arrearDeleteDelayHours;
     }
 
+
     /**
      * get 到期是否停服  1：到期需要停服 0：到期不需要停服
      *
@@ -391,6 +404,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setExpireStop(Integer expireStop) {
         this.expireStop = expireStop;
     }
+
 
     /**
      * get 到期停服延后时长
@@ -410,6 +424,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.expireStopDelayHours = expireStopDelayHours;
     }
 
+
     /**
      * get 到期停服是否释放资源  1：需要释放资源 0：不需要释放资源
      *
@@ -427,6 +442,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setExpireDelete(Integer expireDelete) {
         this.expireDelete = expireDelete;
     }
+
 
     /**
      * get 到期停服释放资源延后时长
@@ -446,6 +462,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.expireDeleteDelayHours = expireDeleteDelayHours;
     }
 
+
     /**
      * get 创建时间
      *
@@ -463,6 +480,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 按配置欠费释放类型 1：释放资源  2：释放数据
@@ -482,6 +500,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.arrearDeleteType = arrearDeleteType;
     }
 
+
     /**
      * get 到期释放类型 1：释放资源  2：释放数据
      *
@@ -499,6 +518,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setExpireDeleteType(Integer expireDeleteType) {
         this.expireDeleteType = expireDeleteType;
     }
+
 
     /**
      * get 按用量欠费是否停服  1：欠费需要停服 0：欠费不需要停服
@@ -518,6 +538,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.flowArrearStop = flowArrearStop;
     }
 
+
     /**
      * get 按用量欠费停服延后时长
      *
@@ -535,6 +556,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setFlowArrearStopDelayHours(Integer flowArrearStopDelayHours) {
         this.flowArrearStopDelayHours = flowArrearStopDelayHours;
     }
+
 
     /**
      * get 按用量欠费停服是否释放资源  1：需要释放资源 0：不需要释放资源
@@ -554,6 +576,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.flowArrearDelete = flowArrearDelete;
     }
 
+
     /**
      * get 按用量欠费停服释放资源延后时长
      *
@@ -572,6 +595,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.flowArrearDeleteDelayHours = flowArrearDeleteDelayHours;
     }
 
+
     /**
      * get 按用量欠费释放类型 1：释放资源  2：释放数据
      *
@@ -589,6 +613,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     public void setFlowArrearDeleteType(Integer flowArrearDeleteType) {
         this.flowArrearDeleteType = flowArrearDeleteType;
     }
+
 
     /**
      * get 客户级别 1-普通客户 2-VIP客户
@@ -609,6 +634,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 主键
      *
@@ -618,6 +644,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 站点
@@ -629,6 +656,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线编码
      *
@@ -638,6 +666,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 产品线名称
@@ -649,6 +678,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品编码
      *
@@ -658,6 +688,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 产品名称
@@ -669,6 +700,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规则类型 1：试用规则 2、用户产品规则 3：用户规则 4：产品规则 5：通用规则 6：用户等级产品规则
      *
@@ -678,6 +710,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.ruleType = ruleType;
         return this;
     }
+
 
     /**
      * set pin
@@ -689,6 +722,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 按配置欠费是否停服  1：欠费需要停服 0：欠费不需要停服
      *
@@ -698,6 +732,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.arrearStop = arrearStop;
         return this;
     }
+
 
     /**
      * set 按配置欠费停服延后时长
@@ -709,6 +744,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 按配置欠费停服是否释放资源  1：需要释放资源 0：不需要释放资源
      *
@@ -718,6 +754,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.arrearDelete = arrearDelete;
         return this;
     }
+
 
     /**
      * set 按配置欠费停服释放资源延后时长
@@ -729,6 +766,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 到期是否停服  1：到期需要停服 0：到期不需要停服
      *
@@ -738,6 +776,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.expireStop = expireStop;
         return this;
     }
+
 
     /**
      * set 到期停服延后时长
@@ -749,6 +788,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 到期停服是否释放资源  1：需要释放资源 0：不需要释放资源
      *
@@ -758,6 +798,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.expireDelete = expireDelete;
         return this;
     }
+
 
     /**
      * set 到期停服释放资源延后时长
@@ -769,6 +810,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -778,6 +820,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 按配置欠费释放类型 1：释放资源  2：释放数据
@@ -789,6 +832,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 到期释放类型 1：释放资源  2：释放数据
      *
@@ -798,6 +842,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.expireDeleteType = expireDeleteType;
         return this;
     }
+
 
     /**
      * set 按用量欠费是否停服  1：欠费需要停服 0：欠费不需要停服
@@ -809,6 +854,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 按用量欠费停服延后时长
      *
@@ -818,6 +864,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.flowArrearStopDelayHours = flowArrearStopDelayHours;
         return this;
     }
+
 
     /**
      * set 按用量欠费停服是否释放资源  1：需要释放资源 0：不需要释放资源
@@ -829,6 +876,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 按用量欠费停服释放资源延后时长
      *
@@ -839,6 +887,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 按用量欠费释放类型 1：释放资源  2：释放数据
      *
@@ -848,6 +897,7 @@ public class ResourceStopDeleteRuleVo  implements java.io.Serializable {
         this.flowArrearDeleteType = flowArrearDeleteType;
         return this;
     }
+
 
     /**
      * set 客户级别 1-普通客户 2-VIP客户

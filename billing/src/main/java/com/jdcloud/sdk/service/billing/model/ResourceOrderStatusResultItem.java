@@ -63,6 +63,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get 资源id
      *
@@ -80,6 +81,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性
@@ -99,6 +101,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
         this.billingType = billingType;
     }
 
+
     /**
      * get 资源状态 1:正常 2:停服 3:删除
      *
@@ -116,6 +119,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 用户pin
@@ -135,6 +139,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 资源区域
      *
@@ -152,6 +157,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 操作时间
@@ -172,6 +178,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源id
      *
@@ -181,6 +188,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性
@@ -192,6 +200,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源状态 1:正常 2:停服 3:删除
      *
@@ -201,6 +210,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -212,6 +222,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源区域
      *
@@ -221,6 +232,7 @@ public class ResourceOrderStatusResultItem  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 操作时间

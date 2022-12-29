@@ -78,6 +78,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
     private Integer billingType;
 
 
+
     /**
      * get 用户pin
      *
@@ -95,6 +96,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 应用码
@@ -114,6 +116,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 服务码
      *
@@ -131,6 +134,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 资源id
@@ -150,6 +154,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 资源区域
      *
@@ -167,6 +172,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 开始时间
@@ -186,6 +192,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 结束时间
      *
@@ -204,6 +211,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 计算总价
      *
@@ -221,6 +229,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
     public void setTotalFee(Number totalFee) {
         this.totalFee = totalFee;
     }
+
 
     /**
      * get 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性
@@ -241,6 +250,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -250,6 +260,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 应用码
@@ -261,6 +272,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务码
      *
@@ -270,6 +282,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 资源id
@@ -281,6 +294,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源区域
      *
@@ -290,6 +304,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 开始时间
@@ -301,6 +316,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结束时间
      *
@@ -311,6 +327,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计算总价
      *
@@ -320,6 +337,7 @@ public class OrderCompensateFeeVo  implements java.io.Serializable {
         this.totalFee = totalFee;
         return this;
     }
+
 
     /**
      * set 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性

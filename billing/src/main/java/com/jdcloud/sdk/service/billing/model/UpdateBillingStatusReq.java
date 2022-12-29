@@ -60,6 +60,7 @@ public class UpdateBillingStatusReq  implements java.io.Serializable {
     private String comment;
 
 
+
     /**
      * get 产品编码
      *
@@ -77,6 +78,7 @@ public class UpdateBillingStatusReq  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 资源ID
@@ -96,6 +98,7 @@ public class UpdateBillingStatusReq  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 操作(STOP 停止计费 ; RESTART 恢复计费)
      *
@@ -113,6 +116,7 @@ public class UpdateBillingStatusReq  implements java.io.Serializable {
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 操作说明
@@ -133,6 +137,7 @@ public class UpdateBillingStatusReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 产品编码
      *
@@ -142,6 +147,7 @@ public class UpdateBillingStatusReq  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 资源ID
@@ -153,6 +159,7 @@ public class UpdateBillingStatusReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作(STOP 停止计费 ; RESTART 恢复计费)
      *
@@ -162,6 +169,7 @@ public class UpdateBillingStatusReq  implements java.io.Serializable {
         this.action = action;
         return this;
     }
+
 
     /**
      * set 操作说明

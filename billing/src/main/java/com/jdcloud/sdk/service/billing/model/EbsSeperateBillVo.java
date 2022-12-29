@@ -98,7 +98,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     private String deptNo;
 
     /**
-     * 部门
+     * sourceId
      */
     private String sourceId;
 
@@ -111,6 +111,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
      * 返回消息
      */
     private String message;
+
 
 
     /**
@@ -131,6 +132,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 数据源ID
      *
@@ -148,6 +150,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     public void setDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
     }
+
 
     /**
      * get 业务线
@@ -167,6 +170,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 费用时间
      *
@@ -184,6 +188,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     public void setChargeTime(String chargeTime) {
         this.chargeTime = chargeTime;
     }
+
 
     /**
      * get 总金额
@@ -203,6 +208,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.totalFee = totalFee;
     }
 
+
     /**
      * get 分摊金额
      *
@@ -220,6 +226,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     public void setSeperateFee(Number seperateFee) {
         this.seperateFee = seperateFee;
     }
+
 
     /**
      * get 核算组织
@@ -239,6 +246,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.org = org;
     }
 
+
     /**
      * get 用户分组
      *
@@ -256,6 +264,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     public void setUserGroup(Integer userGroup) {
         this.userGroup = userGroup;
     }
+
 
     /**
      * get 交易方名称
@@ -275,6 +284,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.traderName = traderName;
     }
 
+
     /**
      * get 订单类型
      *
@@ -292,6 +302,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     public void setOrderType(String orderType) {
         this.orderType = orderType;
     }
+
 
     /**
      * get 成本金额
@@ -311,6 +322,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.costFee = costFee;
     }
 
+
     /**
      * get 税率
      *
@@ -328,6 +340,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     public void setTaxRate(Number taxRate) {
         this.taxRate = taxRate;
     }
+
 
     /**
      * get 部门
@@ -347,8 +360,9 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.deptNo = deptNo;
     }
 
+
     /**
-     * get 部门
+     * get sourceId
      *
      * @return
      */
@@ -357,13 +371,14 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     }
 
     /**
-     * set 部门
+     * set sourceId
      *
      * @param sourceId
      */
     public void setSourceId(String sourceId) {
         this.sourceId = sourceId;
     }
+
 
     /**
      * get 返回编码0成功
@@ -382,6 +397,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     public void setCode(Integer code) {
         this.code = code;
     }
+
 
     /**
      * get 返回消息
@@ -402,6 +418,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -411,6 +428,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 数据源ID
@@ -422,6 +440,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务线
      *
@@ -431,6 +450,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 费用时间
@@ -442,6 +462,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总金额
      *
@@ -451,6 +472,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.totalFee = totalFee;
         return this;
     }
+
 
     /**
      * set 分摊金额
@@ -462,6 +484,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 核算组织
      *
@@ -471,6 +494,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.org = org;
         return this;
     }
+
 
     /**
      * set 用户分组
@@ -482,6 +506,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 交易方名称
      *
@@ -491,6 +516,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.traderName = traderName;
         return this;
     }
+
 
     /**
      * set 订单类型
@@ -502,6 +528,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 成本金额
      *
@@ -511,6 +538,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.costFee = costFee;
         return this;
     }
+
 
     /**
      * set 税率
@@ -522,6 +550,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 部门
      *
@@ -532,8 +561,9 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 部门
+     * set sourceId
      *
      * @param sourceId
      */
@@ -541,6 +571,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.sourceId = sourceId;
         return this;
     }
+
 
     /**
      * set 返回编码0成功
@@ -551,6 +582,7 @@ public class EbsSeperateBillVo  implements java.io.Serializable {
         this.code = code;
         return this;
     }
+
 
     /**
      * set 返回消息

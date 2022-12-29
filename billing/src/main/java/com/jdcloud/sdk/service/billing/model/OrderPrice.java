@@ -57,8 +57,8 @@ public class OrderPrice  implements java.io.Serializable {
     /**
      * 计算完价格后的详细订单列表
      */
+    
     private List<OrderPriceDetail> list;
-
     /**
      * 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
      */
@@ -73,6 +73,7 @@ public class OrderPrice  implements java.io.Serializable {
      * 备注
      */
     private Integer remark;
+
 
 
     /**
@@ -93,6 +94,7 @@ public class OrderPrice  implements java.io.Serializable {
         this.totalPrice = totalPrice;
     }
 
+
     /**
      * get 折扣前总价4位
      *
@@ -110,6 +112,7 @@ public class OrderPrice  implements java.io.Serializable {
     public void setTotalPriceScale4(Number totalPriceScale4) {
         this.totalPriceScale4 = totalPriceScale4;
     }
+
 
     /**
      * get 折扣后订单价格
@@ -129,6 +132,7 @@ public class OrderPrice  implements java.io.Serializable {
         this.discountedTotalPrice = discountedTotalPrice;
     }
 
+
     /**
      * get 总折扣金额
      *
@@ -147,23 +151,25 @@ public class OrderPrice  implements java.io.Serializable {
         this.totalDiscount = totalDiscount;
     }
 
+
     /**
-     * get 计算完价格后的详细订单列表
-     *
-     * @return
-     */
+    * get 计算完价格后的详细订单列表
+    *
+    * @return
+    */
     public List<OrderPriceDetail> getList() {
         return list;
     }
 
     /**
-     * set 计算完价格后的详细订单列表
-     *
-     * @param list
-     */
+    * set 计算完价格后的详细订单列表
+    *
+    * @param list
+    */
     public void setList(List<OrderPriceDetail> list) {
         this.list = list;
     }
+
 
     /**
      * get 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
@@ -183,6 +189,7 @@ public class OrderPrice  implements java.io.Serializable {
         this.totalOriginalPrice = totalOriginalPrice;
     }
 
+
     /**
      * get 参与优惠的明细
      *
@@ -200,6 +207,7 @@ public class OrderPrice  implements java.io.Serializable {
     public void setFavorableInfos(Integer favorableInfos) {
         this.favorableInfos = favorableInfos;
     }
+
 
     /**
      * get 备注
@@ -220,6 +228,7 @@ public class OrderPrice  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 折扣前总价
      *
@@ -229,6 +238,7 @@ public class OrderPrice  implements java.io.Serializable {
         this.totalPrice = totalPrice;
         return this;
     }
+
 
     /**
      * set 折扣前总价4位
@@ -240,6 +250,7 @@ public class OrderPrice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 折扣后订单价格
      *
@@ -249,6 +260,7 @@ public class OrderPrice  implements java.io.Serializable {
         this.discountedTotalPrice = discountedTotalPrice;
         return this;
     }
+
 
     /**
      * set 总折扣金额
@@ -260,15 +272,17 @@ public class OrderPrice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 计算完价格后的详细订单列表
-     *
-     * @param list
-     */
+    * set 计算完价格后的详细订单列表
+    *
+    * @param list
+    */
     public OrderPrice list(List<OrderPriceDetail> list) {
         this.list = list;
         return this;
     }
+
 
     /**
      * set 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
@@ -280,6 +294,7 @@ public class OrderPrice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 参与优惠的明细
      *
@@ -290,6 +305,7 @@ public class OrderPrice  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 备注
      *
@@ -299,6 +315,7 @@ public class OrderPrice  implements java.io.Serializable {
         this.remark = remark;
         return this;
     }
+
 
 
     /**
@@ -312,5 +329,4 @@ public class OrderPrice  implements java.io.Serializable {
         }
         this.list.add(list);
     }
-
 }

@@ -58,6 +58,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
     private String timeCron;
 
 
+
     /**
      * get 站点
      *
@@ -75,6 +76,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
     public void setSite(Integer site) {
         this.site = site;
     }
+
 
     /**
      * get pin
@@ -94,6 +96,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 出账类型  1：实时出账    2：定期出账
      *
@@ -112,6 +115,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
         this.outAccountType = outAccountType;
     }
 
+
     /**
      * get 出账周期：限制范围 1-28
      *
@@ -129,6 +133,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
     public void setOutAccountDay(Integer outAccountDay) {
         this.outAccountDay = outAccountDay;
     }
+
 
     /**
      * get 定期出账  时间表达式
@@ -149,6 +154,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 站点
      *
@@ -158,6 +164,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
         this.site = site;
         return this;
     }
+
 
     /**
      * set pin
@@ -169,6 +176,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 出账类型  1：实时出账    2：定期出账
      *
@@ -179,6 +187,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 出账周期：限制范围 1-28
      *
@@ -188,6 +197,7 @@ public class AccountingRuleUpdate  implements java.io.Serializable {
         this.outAccountDay = outAccountDay;
         return this;
     }
+
 
     /**
      * set 定期出账  时间表达式

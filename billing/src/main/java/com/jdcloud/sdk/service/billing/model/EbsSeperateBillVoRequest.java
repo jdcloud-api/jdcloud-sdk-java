@@ -38,37 +38,40 @@ public class EbsSeperateBillVoRequest extends JdcloudRequest implements java.io.
     /**
      * 核算分摊账单列表
      */
+    
     private List<EbsSeperateBillVo> ebsSeperateBillVoList;
 
 
     /**
-     * get 核算分摊账单列表
-     *
-     * @return
-     */
+    * get 核算分摊账单列表
+    *
+    * @return
+    */
     public List<EbsSeperateBillVo> getEbsSeperateBillVoList() {
         return ebsSeperateBillVoList;
     }
 
     /**
-     * set 核算分摊账单列表
-     *
-     * @param ebsSeperateBillVoList
-     */
+    * set 核算分摊账单列表
+    *
+    * @param ebsSeperateBillVoList
+    */
     public void setEbsSeperateBillVoList(List<EbsSeperateBillVo> ebsSeperateBillVoList) {
         this.ebsSeperateBillVoList = ebsSeperateBillVoList;
     }
 
 
+
     /**
-     * set 核算分摊账单列表
-     *
-     * @param ebsSeperateBillVoList
-     */
+    * set 核算分摊账单列表
+    *
+    * @param ebsSeperateBillVoList
+    */
     public EbsSeperateBillVoRequest ebsSeperateBillVoList(List<EbsSeperateBillVo> ebsSeperateBillVoList) {
         this.ebsSeperateBillVoList = ebsSeperateBillVoList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class EbsSeperateBillVoRequest extends JdcloudRequest implements java.io.
         }
         this.ebsSeperateBillVoList.add(ebsSeperateBillVoList);
     }
-
 }

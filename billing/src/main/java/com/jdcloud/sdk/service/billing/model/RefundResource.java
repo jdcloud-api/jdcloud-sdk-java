@@ -47,6 +47,7 @@ public class RefundResource  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> orderNumbers;
 
 
@@ -68,23 +69,25 @@ public class RefundResource  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
-     * get 订单编号列表
-     *
-     * @return
-     */
+    * get 订单编号列表
+    *
+    * @return
+    */
     public List<String> getOrderNumbers() {
         return orderNumbers;
     }
 
     /**
-     * set 订单编号列表
-     *
-     * @param orderNumbers
-     */
+    * set 订单编号列表
+    *
+    * @param orderNumbers
+    */
     public void setOrderNumbers(List<String> orderNumbers) {
         this.orderNumbers = orderNumbers;
     }
+
 
 
     /**
@@ -97,15 +100,17 @@ public class RefundResource  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 订单编号列表
-     *
-     * @param orderNumbers
-     */
+    * set 订单编号列表
+    *
+    * @param orderNumbers
+    */
     public RefundResource orderNumbers(List<String> orderNumbers) {
         this.orderNumbers = orderNumbers;
         return this;
     }
+
 
 
     /**
@@ -119,5 +124,4 @@ public class RefundResource  implements java.io.Serializable {
         }
         this.orderNumbers.add(orderNumber);
     }
-
 }

@@ -58,6 +58,7 @@ public class Pagination  implements java.io.Serializable {
     private Integer startIndex;
 
 
+
     /**
      * get 当前页(默认:1)
      *
@@ -75,6 +76,7 @@ public class Pagination  implements java.io.Serializable {
     public void setCurrPageNo(Integer currPageNo) {
         this.currPageNo = currPageNo;
     }
+
 
     /**
      * get 总页数
@@ -94,6 +96,7 @@ public class Pagination  implements java.io.Serializable {
         this.numberPages = numberPages;
     }
 
+
     /**
      * get 总记录数
      *
@@ -112,6 +115,7 @@ public class Pagination  implements java.io.Serializable {
         this.numberRecords = numberRecords;
     }
 
+
     /**
      * get 每页记录数(默认每页:10)
      *
@@ -129,6 +133,7 @@ public class Pagination  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get 起始页
@@ -149,6 +154,7 @@ public class Pagination  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 当前页(默认:1)
      *
@@ -158,6 +164,7 @@ public class Pagination  implements java.io.Serializable {
         this.currPageNo = currPageNo;
         return this;
     }
+
 
     /**
      * set 总页数
@@ -169,6 +176,7 @@ public class Pagination  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 总记录数
      *
@@ -179,6 +187,7 @@ public class Pagination  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页记录数(默认每页:10)
      *
@@ -188,6 +197,7 @@ public class Pagination  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
     /**
      * set 起始页

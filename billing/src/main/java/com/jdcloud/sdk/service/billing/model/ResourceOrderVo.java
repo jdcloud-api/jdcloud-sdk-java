@@ -107,8 +107,8 @@ public class ResourceOrderVo  implements java.io.Serializable {
     /**
      * 配置信息
      */
+    
     private List<Formula> formula;
-
     /**
      * 否为试用资源 0:非试用 1:试用
      */
@@ -254,6 +254,12 @@ public class ResourceOrderVo  implements java.io.Serializable {
      */
     private Integer arrearsType;
 
+    /**
+     * 欠费、过期资源释放时间-仅面向资源回收站使用
+     */
+    private String recycleBinReleasingTime;
+
+
 
     /**
      * get 主键id
@@ -273,6 +279,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.id = id;
     }
 
+
     /**
      * get 交易单唯一标识
      *
@@ -290,6 +297,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setTransactionNo(String transactionNo) {
         this.transactionNo = transactionNo;
     }
+
 
     /**
      * get 资源id
@@ -309,6 +317,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性
      *
@@ -326,6 +335,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 时长类型 1:小时 2:天 3:月 4:年
@@ -345,6 +355,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.timeUnit = timeUnit;
     }
 
+
     /**
      * get 时长字段，与timeUnit字段构成具体时长
      *
@@ -362,6 +373,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setTimeSpan(Integer timeSpan) {
         this.timeSpan = timeSpan;
     }
+
 
     /**
      * get 资源状态 1:正常 2:停服 3:删除
@@ -381,6 +393,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 计费状态 0:停止计费 1:计费中
      *
@@ -398,6 +411,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setBillingStatus(Integer billingStatus) {
         this.billingStatus = billingStatus;
     }
+
 
     /**
      * get 网络类型0:无 1: non-BGP, 2: BGP
@@ -417,6 +431,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.networkOperator = networkOperator;
     }
 
+
     /**
      * get 用户pin
      *
@@ -434,6 +449,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 应用码
@@ -453,6 +469,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 服务码
      *
@@ -470,6 +487,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 站点标识0:中国 1:国际
@@ -489,6 +507,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 资源区域
      *
@@ -507,23 +526,25 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
-     * get 配置信息
-     *
-     * @return
-     */
+    * get 配置信息
+    *
+    * @return
+    */
     public List<Formula> getFormula() {
         return formula;
     }
 
     /**
-     * set 配置信息
-     *
-     * @param formula
-     */
+    * set 配置信息
+    *
+    * @param formula
+    */
     public void setFormula(List<Formula> formula) {
         this.formula = formula;
     }
+
 
     /**
      * get 否为试用资源 0:非试用 1:试用
@@ -543,6 +564,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.isOnTrial = isOnTrial;
     }
 
+
     /**
      * get 开始时间
      *
@@ -560,6 +582,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 结束时间
@@ -579,6 +602,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 创建时间
      *
@@ -596,6 +620,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 支付时间
@@ -615,6 +640,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.payTime = payTime;
     }
 
+
     /**
      * get formula转换成字符串
      *
@@ -632,6 +658,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setFormulaStr(String formulaStr) {
         this.formulaStr = formulaStr;
     }
+
 
     /**
      * get billingType兼容交易系统字段
@@ -651,6 +678,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.chargeMode = chargeMode;
     }
 
+
     /**
      * get timeSpan兼容交易系统字段
      *
@@ -668,6 +696,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setChargeDuration(Integer chargeDuration) {
         this.chargeDuration = chargeDuration;
     }
+
 
     /**
      * get timeUnit兼容交易系统字段
@@ -687,6 +716,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.chargeUnit = chargeUnit;
     }
 
+
     /**
      * get 欠费过期状态，1:包年包月正常 2：包年包月到期  3:按配置、按用量正常  4：按配置、按用量欠费
      *
@@ -704,6 +734,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setAeStatus(Integer aeStatus) {
         this.aeStatus = aeStatus;
     }
+
 
     /**
      * get 欠费、过期资源释放时间
@@ -723,6 +754,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.releasingTime = releasingTime;
     }
 
+
     /**
      * get 交易单模块sourceId 计费不关心
      *
@@ -740,6 +772,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setSourceId(String sourceId) {
         this.sourceId = sourceId;
     }
+
 
     /**
      * get 计费开始时间 续费时本次续费周期开始时间
@@ -759,6 +792,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.billingStartTime = billingStartTime;
     }
 
+
     /**
      * get 最新价格map
      *
@@ -776,6 +810,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setPriceMap(Object priceMap) {
         this.priceMap = priceMap;
     }
+
 
     /**
      * get 价格快照
@@ -795,6 +830,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.priceSnapshot = priceSnapshot;
     }
 
+
     /**
      * get 订单折扣前总价
      *
@@ -812,6 +848,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setPrice(Number price) {
         this.price = price;
     }
+
 
     /**
      * get 折扣后订单价格
@@ -831,6 +868,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.discountedPrice = discountedPrice;
     }
 
+
     /**
      * get 即将到期天数
      *
@@ -848,6 +886,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setExpiringDays(Integer expiringDays) {
         this.expiringDays = expiringDays;
     }
+
 
     /**
      * get 计费类型描述 例如:按配置、包年包月
@@ -867,6 +906,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.billingCategoryDescription = billingCategoryDescription;
     }
 
+
     /**
      * get 计费详情描述 例如:按配置、包年包月（一年）
      *
@@ -884,6 +924,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     /**
      * get refundNo
@@ -903,6 +944,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.refundNo = refundNo;
     }
 
+
     /**
      * get 计费类型单号
      *
@@ -920,6 +962,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setBillingTypeName(String billingTypeName) {
         this.billingTypeName = billingTypeName;
     }
+
 
     /**
      * get 促销明细
@@ -939,6 +982,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.favorableInfo = favorableInfo;
     }
 
+
     /**
      * get 资源名
      *
@@ -956,6 +1000,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setResourceName(String resourceName) {
         this.resourceName = resourceName;
     }
+
 
     /**
      * get 变配明细（1-升配，2-降配，3-调整配置,4-续费,5-续费升配,6-续费降配,7-配置转包年包月）
@@ -975,6 +1020,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.processType = processType;
     }
 
+
     /**
      * get 资源申请人
      *
@@ -992,6 +1038,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setApplicant(String applicant) {
         this.applicant = applicant;
     }
+
 
     /**
      * get 计费模式  1.停服停止计费  2.关机停止计费
@@ -1011,6 +1058,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.billingMode = billingMode;
     }
 
+
     /**
      * get 启服、停服、停止计费时间
      *
@@ -1028,6 +1076,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
     public void setOperateTime(String operateTime) {
         this.operateTime = operateTime;
     }
+
 
     /**
      * get 欠费类型 1、无欠费，2、按配置欠费，3、按用量欠费，4、按配置和按用量都欠费
@@ -1049,6 +1098,26 @@ public class ResourceOrderVo  implements java.io.Serializable {
 
 
     /**
+     * get 欠费、过期资源释放时间-仅面向资源回收站使用
+     *
+     * @return
+     */
+    public String getRecycleBinReleasingTime() {
+        return recycleBinReleasingTime;
+    }
+
+    /**
+     * set 欠费、过期资源释放时间-仅面向资源回收站使用
+     *
+     * @param recycleBinReleasingTime
+     */
+    public void setRecycleBinReleasingTime(String recycleBinReleasingTime) {
+        this.recycleBinReleasingTime = recycleBinReleasingTime;
+    }
+
+
+
+    /**
      * set 主键id
      *
      * @param id
@@ -1057,6 +1126,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 交易单唯一标识
@@ -1068,6 +1138,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源id
      *
@@ -1077,6 +1148,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 计费类型 1:按配置 2:按用量 3:包年包月 4:一次性
@@ -1088,6 +1160,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时长类型 1:小时 2:天 3:月 4:年
      *
@@ -1097,6 +1170,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.timeUnit = timeUnit;
         return this;
     }
+
 
     /**
      * set 时长字段，与timeUnit字段构成具体时长
@@ -1108,6 +1182,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源状态 1:正常 2:停服 3:删除
      *
@@ -1117,6 +1192,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 计费状态 0:停止计费 1:计费中
@@ -1128,6 +1204,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网络类型0:无 1: non-BGP, 2: BGP
      *
@@ -1137,6 +1214,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.networkOperator = networkOperator;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -1148,6 +1226,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用码
      *
@@ -1157,6 +1236,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 服务码
@@ -1168,6 +1248,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 站点标识0:中国 1:国际
      *
@@ -1177,6 +1258,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.site = site;
         return this;
     }
+
 
     /**
      * set 资源区域
@@ -1188,15 +1270,17 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 配置信息
-     *
-     * @param formula
-     */
+    * set 配置信息
+    *
+    * @param formula
+    */
     public ResourceOrderVo formula(List<Formula> formula) {
         this.formula = formula;
         return this;
     }
+
 
     /**
      * set 否为试用资源 0:非试用 1:试用
@@ -1208,6 +1292,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -1217,6 +1302,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -1228,6 +1314,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -1237,6 +1324,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 支付时间
@@ -1248,6 +1336,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set formula转换成字符串
      *
@@ -1257,6 +1346,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.formulaStr = formulaStr;
         return this;
     }
+
 
     /**
      * set billingType兼容交易系统字段
@@ -1268,6 +1358,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set timeSpan兼容交易系统字段
      *
@@ -1277,6 +1368,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.chargeDuration = chargeDuration;
         return this;
     }
+
 
     /**
      * set timeUnit兼容交易系统字段
@@ -1288,6 +1380,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 欠费过期状态，1:包年包月正常 2：包年包月到期  3:按配置、按用量正常  4：按配置、按用量欠费
      *
@@ -1297,6 +1390,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.aeStatus = aeStatus;
         return this;
     }
+
 
     /**
      * set 欠费、过期资源释放时间
@@ -1308,6 +1402,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 交易单模块sourceId 计费不关心
      *
@@ -1317,6 +1412,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.sourceId = sourceId;
         return this;
     }
+
 
     /**
      * set 计费开始时间 续费时本次续费周期开始时间
@@ -1328,6 +1424,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 最新价格map
      *
@@ -1337,6 +1434,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.priceMap = priceMap;
         return this;
     }
+
 
     /**
      * set 价格快照
@@ -1348,6 +1446,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单折扣前总价
      *
@@ -1357,6 +1456,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.price = price;
         return this;
     }
+
 
     /**
      * set 折扣后订单价格
@@ -1368,6 +1468,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 即将到期天数
      *
@@ -1377,6 +1478,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.expiringDays = expiringDays;
         return this;
     }
+
 
     /**
      * set 计费类型描述 例如:按配置、包年包月
@@ -1388,6 +1490,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费详情描述 例如:按配置、包年包月（一年）
      *
@@ -1397,6 +1500,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.description = description;
         return this;
     }
+
 
     /**
      * set refundNo
@@ -1408,6 +1512,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型单号
      *
@@ -1417,6 +1522,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.billingTypeName = billingTypeName;
         return this;
     }
+
 
     /**
      * set 促销明细
@@ -1428,6 +1534,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源名
      *
@@ -1437,6 +1544,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.resourceName = resourceName;
         return this;
     }
+
 
     /**
      * set 变配明细（1-升配，2-降配，3-调整配置,4-续费,5-续费升配,6-续费降配,7-配置转包年包月）
@@ -1448,6 +1556,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源申请人
      *
@@ -1457,6 +1566,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.applicant = applicant;
         return this;
     }
+
 
     /**
      * set 计费模式  1.停服停止计费  2.关机停止计费
@@ -1468,6 +1578,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 启服、停服、停止计费时间
      *
@@ -1477,6 +1588,7 @@ public class ResourceOrderVo  implements java.io.Serializable {
         this.operateTime = operateTime;
         return this;
     }
+
 
     /**
      * set 欠费类型 1、无欠费，2、按配置欠费，3、按用量欠费，4、按配置和按用量都欠费
@@ -1490,6 +1602,18 @@ public class ResourceOrderVo  implements java.io.Serializable {
 
 
     /**
+     * set 欠费、过期资源释放时间-仅面向资源回收站使用
+     *
+     * @param recycleBinReleasingTime
+     */
+    public ResourceOrderVo recycleBinReleasingTime(String recycleBinReleasingTime) {
+        this.recycleBinReleasingTime = recycleBinReleasingTime;
+        return this;
+    }
+
+
+
+    /**
      * add item to 配置信息
      *
      * @param formula
@@ -1500,5 +1624,4 @@ public class ResourceOrderVo  implements java.io.Serializable {
         }
         this.formula.add(formula);
     }
-
 }

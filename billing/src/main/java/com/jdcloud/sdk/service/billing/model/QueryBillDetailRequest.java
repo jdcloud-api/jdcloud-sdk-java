@@ -68,8 +68,8 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     /**
      * 资源单id列表,最多支持传入500个
      */
+    
     private List<String> resourceIds;
-
     /**
      * 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
 示例:
@@ -77,8 +77,8 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
 则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
 
      */
+    
     private List<Object> tags;
-
     /**
      * pageIndex 分页,默认从1开始
      */
@@ -95,6 +95,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
      */
     @Required
     private String regionId;
+
 
 
     /**
@@ -115,6 +116,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         this.startTime = startTime;
     }
 
+
     /**
      * get 账期结束时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      *
@@ -132,6 +134,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 产品线代码
@@ -151,6 +154,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         this.appCode = appCode;
     }
 
+
     /**
      * get 产品代码
      *
@@ -168,6 +172,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 计费类型 1、按配置 2、按用量 3、包年包月 4、按次
@@ -187,49 +192,52 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         this.billingType = billingType;
     }
 
+
     /**
-     * get 资源单id列表,最多支持传入500个
-     *
-     * @return
-     */
+    * get 资源单id列表,最多支持传入500个
+    *
+    * @return
+    */
     public List<String> getResourceIds() {
         return resourceIds;
     }
 
     /**
-     * set 资源单id列表,最多支持传入500个
-     *
-     * @param resourceIds
-     */
+    * set 资源单id列表,最多支持传入500个
+    *
+    * @param resourceIds
+    */
     public void setResourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
     }
 
+
     /**
-     * get 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+    * get 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
 示例:
 选择的标签为, 部门:广告部、部门:物流部、项目
 则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
 
-     *
-     * @return
-     */
+    *
+    * @return
+    */
     public List<Object> getTags() {
         return tags;
     }
 
     /**
-     * set 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+    * set 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
 示例:
 选择的标签为, 部门:广告部、部门:物流部、项目
 则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
 
-     *
-     * @param tags
-     */
+    *
+    * @param tags
+    */
     public void setTags(List<Object> tags) {
         this.tags = tags;
     }
+
 
     /**
      * get pageIndex 分页,默认从1开始
@@ -249,6 +257,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get pageSize 每页查询数据条数,最多支持1000条
      *
@@ -266,6 +275,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get Region ID
@@ -286,6 +296,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
     }
 
 
+
     /**
      * set 账期开始时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
      *
@@ -295,6 +306,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 账期结束时间,不支持跨月查询。格式:yyyy-MM-dd HH:mm:ss
@@ -306,6 +318,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 产品线代码
      *
@@ -315,6 +328,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 产品代码
@@ -326,6 +340,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set 计费类型 1、按配置 2、按用量 3、包年包月 4、按次
      *
@@ -336,29 +351,32 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
-     * set 资源单id列表,最多支持传入500个
-     *
-     * @param resourceIds
-     */
+    * set 资源单id列表,最多支持传入500个
+    *
+    * @param resourceIds
+    */
     public QueryBillDetailRequest resourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
 
+
     /**
-     * set 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
+    * set 标签,JSON格式:[{&quot;k1&quot;:&quot;v1&quot;},{&quot;k1&quot;:&quot;v2&quot;},{&quot;k2&quot;:&quot;&quot;}]
 示例:
 选择的标签为, 部门:广告部、部门:物流部、项目
 则传值为:[{&quot;部门&quot;:&quot;广告部&quot;},{&quot;部门&quot;:&quot;物流部&quot;},{&quot;项目&quot;:&quot;&quot;}]
 
-     *
-     * @param tags
-     */
+    *
+    * @param tags
+    */
     public QueryBillDetailRequest tags(List<Object> tags) {
         this.tags = tags;
         return this;
     }
+
 
     /**
      * set pageIndex 分页,默认从1开始
@@ -370,6 +388,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set pageSize 每页查询数据条数,最多支持1000条
      *
@@ -380,6 +399,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         return this;
     }
 
+
     /**
      * set Region ID
      *
@@ -389,6 +409,7 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -418,5 +439,4 @@ public class QueryBillDetailRequest extends JdcloudRequest implements java.io.Se
         }
         this.tags.add(tag);
     }
-
 }

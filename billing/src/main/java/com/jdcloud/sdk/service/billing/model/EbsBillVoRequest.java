@@ -38,37 +38,40 @@ public class EbsBillVoRequest extends JdcloudRequest implements java.io.Serializ
     /**
      * 核算账单列表
      */
+    
     private List<EbsBillVo> ebsBillVoList;
 
 
     /**
-     * get 核算账单列表
-     *
-     * @return
-     */
+    * get 核算账单列表
+    *
+    * @return
+    */
     public List<EbsBillVo> getEbsBillVoList() {
         return ebsBillVoList;
     }
 
     /**
-     * set 核算账单列表
-     *
-     * @param ebsBillVoList
-     */
+    * set 核算账单列表
+    *
+    * @param ebsBillVoList
+    */
     public void setEbsBillVoList(List<EbsBillVo> ebsBillVoList) {
         this.ebsBillVoList = ebsBillVoList;
     }
 
 
+
     /**
-     * set 核算账单列表
-     *
-     * @param ebsBillVoList
-     */
+    * set 核算账单列表
+    *
+    * @param ebsBillVoList
+    */
     public EbsBillVoRequest ebsBillVoList(List<EbsBillVo> ebsBillVoList) {
         this.ebsBillVoList = ebsBillVoList;
         return this;
     }
+
 
 
     /**
@@ -82,5 +85,4 @@ public class EbsBillVoRequest extends JdcloudRequest implements java.io.Serializ
         }
         this.ebsBillVoList.add(ebsBillVoList);
     }
-
 }

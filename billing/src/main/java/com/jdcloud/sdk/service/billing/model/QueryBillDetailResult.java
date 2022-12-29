@@ -45,6 +45,7 @@ public class QueryBillDetailResult extends JdcloudResult implements java.io.Seri
     /**
      * result
      */
+    
     private List<BillSummary> result;
 
 
@@ -66,23 +67,25 @@ public class QueryBillDetailResult extends JdcloudResult implements java.io.Seri
         this.pagination = pagination;
     }
 
+
     /**
-     * get result
-     *
-     * @return
-     */
+    * get result
+    *
+    * @return
+    */
     public List<BillSummary> getResult() {
         return result;
     }
 
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public void setResult(List<BillSummary> result) {
         this.result = result;
     }
+
 
 
     /**
@@ -95,15 +98,17 @@ public class QueryBillDetailResult extends JdcloudResult implements java.io.Seri
         return this;
     }
 
+
     /**
-     * set result
-     *
-     * @param result
-     */
+    * set result
+    *
+    * @param result
+    */
     public QueryBillDetailResult result(List<BillSummary> result) {
         this.result = result;
         return this;
     }
+
 
 
     /**
@@ -117,5 +122,4 @@ public class QueryBillDetailResult extends JdcloudResult implements java.io.Seri
         }
         this.result.add(result);
     }
-
 }

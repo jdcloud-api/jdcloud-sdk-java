@@ -38,7 +38,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     private static final long serialVersionUID = 1L;
 
     /**
-     * 操作类型 1:创建 2:续费 3:升配 4:删除
+     * 操作类型 1:新购 2:续费 3:变配
      * Required:true
      */
     @Required
@@ -47,8 +47,8 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     /**
      * 计算价格的订单
      */
+    
     private List<OrderPriceProtocol> orderList;
-
     /**
      * 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
      */
@@ -99,8 +99,9 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     private String regionId;
 
 
+
     /**
-     * get 操作类型 1:创建 2:续费 3:升配 4:删除
+     * get 操作类型 1:新购 2:续费 3:变配
      *
      * @return
      */
@@ -109,7 +110,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     }
 
     /**
-     * set 操作类型 1:创建 2:续费 3:升配 4:删除
+     * set 操作类型 1:新购 2:续费 3:变配
      *
      * @param cmd
      */
@@ -117,23 +118,25 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.cmd = cmd;
     }
 
+
     /**
-     * get 计算价格的订单
-     *
-     * @return
-     */
+    * get 计算价格的订单
+    *
+    * @return
+    */
     public List<OrderPriceProtocol> getOrderList() {
         return orderList;
     }
 
     /**
-     * set 计算价格的订单
-     *
-     * @param orderList
-     */
+    * set 计算价格的订单
+    *
+    * @param orderList
+    */
     public void setOrderList(List<OrderPriceProtocol> orderList) {
         this.orderList = orderList;
     }
+
 
     /**
      * get 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
@@ -153,6 +156,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.operateTime = operateTime;
     }
 
+
     /**
      * get 1:折扣（不需要传） 2:免费活动3:付费活动 4:推荐码 5:会员价 [{&quot;promotionType&quot;:1,&quot;activityCode&quot;:123},{&quot;promotionType&quot;:2,&quot;activityCode&quot;:}]
      *
@@ -170,6 +174,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     public void setPromotionInfo(String promotionInfo) {
         this.promotionInfo = promotionInfo;
     }
+
 
     /**
      * get 客户端：1.PC端；2.移动端；
@@ -189,6 +194,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.clientType = clientType;
     }
 
+
     /**
      * get 批量购买时数量
      *
@@ -206,6 +212,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     public void setPackageCount(Integer packageCount) {
         this.packageCount = packageCount;
     }
+
 
     /**
      * get 临时升配时必传，3-临时升配
@@ -225,6 +232,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.processType = processType;
     }
 
+
     /**
      * get 续费方式 0：正常续费  1：续费至统一到期日，续费时必传
      *
@@ -242,6 +250,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     public void setRenewMode(Integer renewMode) {
         this.renewMode = renewMode;
     }
+
 
     /**
      * get 续费统一到期日(1-28)，续费时必传
@@ -261,6 +270,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.unifyExpireDay = unifyExpireDay;
     }
 
+
     /**
      * get 计算总价规则 1：计算预付费资源总价（计费类型为包年包月、按次） ；不传计算所有资源总价
      *
@@ -278,6 +288,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     public void setTotalPriceRule(Integer totalPriceRule) {
         this.totalPriceRule = totalPriceRule;
     }
+
 
     /**
      * get regionId
@@ -298,8 +309,9 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
     }
 
 
+
     /**
-     * set 操作类型 1:创建 2:续费 3:升配 4:删除
+     * set 操作类型 1:新购 2:续费 3:变配
      *
      * @param cmd
      */
@@ -308,15 +320,17 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
-     * set 计算价格的订单
-     *
-     * @param orderList
-     */
+    * set 计算价格的订单
+    *
+    * @param orderList
+    */
     public CalculateTotalPriceRequest orderList(List<OrderPriceProtocol> orderList) {
         this.orderList = orderList;
         return this;
     }
+
 
     /**
      * set 操作时间(格式为：yyyy-MM-dd HH:mm:ss)
@@ -328,6 +342,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 1:折扣（不需要传） 2:免费活动3:付费活动 4:推荐码 5:会员价 [{&quot;promotionType&quot;:1,&quot;activityCode&quot;:123},{&quot;promotionType&quot;:2,&quot;activityCode&quot;:}]
      *
@@ -337,6 +352,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.promotionInfo = promotionInfo;
         return this;
     }
+
 
     /**
      * set 客户端：1.PC端；2.移动端；
@@ -348,6 +364,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 批量购买时数量
      *
@@ -357,6 +374,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.packageCount = packageCount;
         return this;
     }
+
 
     /**
      * set 临时升配时必传，3-临时升配
@@ -368,6 +386,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 续费方式 0：正常续费  1：续费至统一到期日，续费时必传
      *
@@ -377,6 +396,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.renewMode = renewMode;
         return this;
     }
+
 
     /**
      * set 续费统一到期日(1-28)，续费时必传
@@ -388,6 +408,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set 计算总价规则 1：计算预付费资源总价（计费类型为包年包月、按次） ；不传计算所有资源总价
      *
@@ -398,6 +419,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         return this;
     }
 
+
     /**
      * set regionId
      *
@@ -407,6 +429,7 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         this.regionId = regionId;
         return this;
     }
+
 
 
     /**
@@ -420,5 +443,4 @@ public class CalculateTotalPriceRequest extends JdcloudRequest implements java.i
         }
         this.orderList.add(orderList);
     }
-
 }

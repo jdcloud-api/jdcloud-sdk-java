@@ -93,7 +93,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     private String stateTime;
 
     /**
-     * 变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作
+     * 变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作,9:加入/移出回收站
      */
     private Integer op;
 
@@ -123,6 +123,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     private Integer capState;
 
 
+
     /**
      * get 自增主键
      *
@@ -140,6 +141,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 站点标识1:中国 2:国际
@@ -159,6 +161,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 应用编码
      *
@@ -176,6 +179,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 地域
@@ -195,6 +199,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 服务编码
      *
@@ -212,6 +217,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 配置项
@@ -231,6 +237,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.formula = formula;
     }
 
+
     /**
      * get 用户pin
      *
@@ -248,6 +255,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 资源ID
@@ -267,6 +275,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 计费类型
      *
@@ -284,6 +293,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 账单ID
@@ -303,6 +313,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.subBillId = subBillId;
     }
 
+
     /**
      * get 状态 0:无 1:正常 2:欠费, 3:因欠费而停机, 4:欠费删除资源, 6:已删除但已不欠费, 7:欠费延期，8:删除并且欠费，9:欠费删除数据，12:已过期, 13:因过期而停机, 14:过期删除资源, 17:过期延期 19:过期删除数据23:管理员停服，24:管理员删除,34:用户删除,35:退款删除
      *
@@ -320,6 +331,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     public void setState(Integer state) {
         this.state = state;
     }
+
 
     /**
      * get 首次欠费时间（各欠费状态）或过期时间（各过期状态）
@@ -339,8 +351,9 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.stateTime = stateTime;
     }
 
+
     /**
-     * get 变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作
+     * get 变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作,9:加入/移出回收站
      *
      * @return
      */
@@ -349,13 +362,14 @@ public class ResourceAeVo  implements java.io.Serializable {
     }
 
     /**
-     * set 变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作
+     * set 变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作,9:加入/移出回收站
      *
      * @param op
      */
     public void setOp(Integer op) {
         this.op = op;
     }
+
 
     /**
      * get 是否为最后状态记录
@@ -375,6 +389,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.isLastRecord = isLastRecord;
     }
 
+
     /**
      * get 本条记录生成时刻、进入当前state的时刻
      *
@@ -392,6 +407,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 修改时间
@@ -411,6 +427,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.updateTime = updateTime;
     }
 
+
     /**
      * get 资源预计释放时间
      *
@@ -428,6 +445,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     public void setToDeleteTime(String toDeleteTime) {
         this.toDeleteTime = toDeleteTime;
     }
+
 
     /**
      * get capState
@@ -448,6 +466,7 @@ public class ResourceAeVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 自增主键
      *
@@ -457,6 +476,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 站点标识1:中国 2:国际
@@ -468,6 +488,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用编码
      *
@@ -477,6 +498,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 地域
@@ -488,6 +510,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务编码
      *
@@ -497,6 +520,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 配置项
@@ -508,6 +532,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -517,6 +542,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 资源ID
@@ -528,6 +554,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型
      *
@@ -537,6 +564,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.billingType = billingType;
         return this;
     }
+
 
     /**
      * set 账单ID
@@ -548,6 +576,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 状态 0:无 1:正常 2:欠费, 3:因欠费而停机, 4:欠费删除资源, 6:已删除但已不欠费, 7:欠费延期，8:删除并且欠费，9:欠费删除数据，12:已过期, 13:因过期而停机, 14:过期删除资源, 17:过期延期 19:过期删除数据23:管理员停服，24:管理员删除,34:用户删除,35:退款删除
      *
@@ -557,6 +586,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.state = state;
         return this;
     }
+
 
     /**
      * set 首次欠费时间（各欠费状态）或过期时间（各过期状态）
@@ -568,8 +598,9 @@ public class ResourceAeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作
+     * set 变成此状态的原因.0:无 1:账单欠费, 2:资源过期 ,3:加入、移出白名单 ,4:补扣款成功, 5:规则修改,6:续费 7:管理员操作,8:用户操作,9:加入/移出回收站
      *
      * @param op
      */
@@ -577,6 +608,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.op = op;
         return this;
     }
+
 
     /**
      * set 是否为最后状态记录
@@ -588,6 +620,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 本条记录生成时刻、进入当前state的时刻
      *
@@ -597,6 +630,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 修改时间
@@ -608,6 +642,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源预计释放时间
      *
@@ -617,6 +652,7 @@ public class ResourceAeVo  implements java.io.Serializable {
         this.toDeleteTime = toDeleteTime;
         return this;
     }
+
 
     /**
      * set capState
