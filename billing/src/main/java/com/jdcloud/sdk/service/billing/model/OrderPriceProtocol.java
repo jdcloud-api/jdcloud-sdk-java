@@ -82,8 +82,8 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     /**
      * 计算公式（配置细项）(新购、升降配必传)
      */
+    
     private List<Formula> formula;
-
     /**
      * 配置细项
      */
@@ -120,6 +120,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     private String sourceId;
 
 
+
     /**
      * get 资源id(新购时不传，升降配、续费必须传)
      *
@@ -137,6 +138,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 业务线
@@ -156,6 +158,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 产品线(必传)
      *
@@ -173,6 +176,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 站点信息 0：主站  其他：专有云
@@ -192,6 +196,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 地域(新购、升降配必传)
      *
@@ -209,6 +214,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     public void setRegion(String region) {
         this.region = region;
     }
+
 
     /**
      * get 计费类型 1:按配置 2:按用量 3:包年包月(必传) 4:按次计费
@@ -228,6 +234,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.billingType = billingType;
     }
 
+
     /**
      * get 时长(包年包月新购、续费必传)
      *
@@ -245,6 +252,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     public void setTimeSpan(Integer timeSpan) {
         this.timeSpan = timeSpan;
     }
+
 
     /**
      * get 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
@@ -264,6 +272,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.timeUnit = timeUnit;
     }
 
+
     /**
      * get 网络类型 0:non 1:非BGP  2:BGP
      *
@@ -282,23 +291,25 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.networkOperator = networkOperator;
     }
 
+
     /**
-     * get 计算公式（配置细项）(新购、升降配必传)
-     *
-     * @return
-     */
+    * get 计算公式（配置细项）(新购、升降配必传)
+    *
+    * @return
+    */
     public List<Formula> getFormula() {
         return formula;
     }
 
     /**
-     * set 计算公式（配置细项）(新购、升降配必传)
-     *
-     * @param formula
-     */
+    * set 计算公式（配置细项）(新购、升降配必传)
+    *
+    * @param formula
+    */
     public void setFormula(List<Formula> formula) {
         this.formula = formula;
     }
+
 
     /**
      * get 配置细项
@@ -318,6 +329,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.formulaStr = formulaStr;
     }
 
+
     /**
      * get 用户pin
      *
@@ -335,6 +347,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 具体商品数量，默认为1
@@ -354,6 +367,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.count = count;
     }
 
+
     /**
      * get 订单开始时间
      *
@@ -371,6 +385,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 临时升配结束时间,临时升配时必传
@@ -390,6 +405,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 自然单列表
      *
@@ -407,6 +423,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     public void setTaskId(String taskId) {
         this.taskId = taskId;
     }
+
 
     /**
      * get 交易单模块sourceId
@@ -427,6 +444,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源id(新购时不传，升降配、续费必须传)
      *
@@ -436,6 +454,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 业务线
@@ -447,6 +466,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品线(必传)
      *
@@ -456,6 +476,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 站点信息 0：主站  其他：专有云
@@ -467,6 +488,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 地域(新购、升降配必传)
      *
@@ -476,6 +498,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.region = region;
         return this;
     }
+
 
     /**
      * set 计费类型 1:按配置 2:按用量 3:包年包月(必传) 4:按次计费
@@ -487,6 +510,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 时长(包年包月新购、续费必传)
      *
@@ -496,6 +520,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.timeSpan = timeSpan;
         return this;
     }
+
 
     /**
      * set 时长类型 0:无(非包年包月) 1:小时 2:天 3:月 4:年(包年包月新购、续费必传)
@@ -507,6 +532,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网络类型 0:non 1:非BGP  2:BGP
      *
@@ -517,15 +543,17 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 计算公式（配置细项）(新购、升降配必传)
-     *
-     * @param formula
-     */
+    * set 计算公式（配置细项）(新购、升降配必传)
+    *
+    * @param formula
+    */
     public OrderPriceProtocol formula(List<Formula> formula) {
         this.formula = formula;
         return this;
     }
+
 
     /**
      * set 配置细项
@@ -537,6 +565,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -546,6 +575,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 具体商品数量，默认为1
@@ -557,6 +587,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 订单开始时间
      *
@@ -566,6 +597,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 临时升配结束时间,临时升配时必传
@@ -577,6 +609,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 自然单列表
      *
@@ -587,6 +620,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 交易单模块sourceId
      *
@@ -596,6 +630,7 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         this.sourceId = sourceId;
         return this;
     }
+
 
 
     /**
@@ -609,5 +644,4 @@ public class OrderPriceProtocol  implements java.io.Serializable {
         }
         this.formula.add(formula);
     }
-
 }

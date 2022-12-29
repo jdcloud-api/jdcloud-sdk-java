@@ -93,6 +93,7 @@ public class ResourceBo  implements java.io.Serializable {
     private String endTime;
 
 
+
     /**
      * get pin
      *
@@ -110,6 +111,7 @@ public class ResourceBo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 应用码code
@@ -129,6 +131,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 应用码名称
      *
@@ -146,6 +149,7 @@ public class ResourceBo  implements java.io.Serializable {
     public void setAppCodeName(String appCodeName) {
         this.appCodeName = appCodeName;
     }
+
 
     /**
      * get 服务码code
@@ -165,6 +169,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 服务码名称
      *
@@ -182,6 +187,7 @@ public class ResourceBo  implements java.io.Serializable {
     public void setServiceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
     }
+
 
     /**
      * get 资源所属地域
@@ -201,6 +207,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 资源id
      *
@@ -218,6 +225,7 @@ public class ResourceBo  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 资源配置
@@ -237,6 +245,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.formula = formula;
     }
 
+
     /**
      * get 计费类型 1、按配置，2、按用量，3、包年包月，4、按次
      *
@@ -254,6 +263,7 @@ public class ResourceBo  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 资源状态：1、正常，2、停服
@@ -273,6 +283,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
      * get 计费开始时间
      *
@@ -290,6 +301,7 @@ public class ResourceBo  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 计费结束时间
@@ -310,6 +322,7 @@ public class ResourceBo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set pin
      *
@@ -319,6 +332,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 应用码code
@@ -330,6 +344,7 @@ public class ResourceBo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用码名称
      *
@@ -339,6 +354,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.appCodeName = appCodeName;
         return this;
     }
+
 
     /**
      * set 服务码code
@@ -350,6 +366,7 @@ public class ResourceBo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务码名称
      *
@@ -359,6 +376,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
         return this;
     }
+
 
     /**
      * set 资源所属地域
@@ -370,6 +388,7 @@ public class ResourceBo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源id
      *
@@ -379,6 +398,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 资源配置
@@ -390,6 +410,7 @@ public class ResourceBo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型 1、按配置，2、按用量，3、包年包月，4、按次
      *
@@ -399,6 +420,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.billingType = billingType;
         return this;
     }
+
 
     /**
      * set 资源状态：1、正常，2、停服
@@ -410,6 +432,7 @@ public class ResourceBo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费开始时间
      *
@@ -419,6 +442,7 @@ public class ResourceBo  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 计费结束时间

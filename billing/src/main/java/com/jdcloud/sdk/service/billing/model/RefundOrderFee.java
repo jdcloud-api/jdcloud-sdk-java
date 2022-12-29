@@ -58,6 +58,7 @@ public class RefundOrderFee  implements java.io.Serializable {
     private Double couponFee;
 
 
+
     /**
      * get 订单编号
      *
@@ -75,6 +76,7 @@ public class RefundOrderFee  implements java.io.Serializable {
     public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
     }
+
 
     /**
      * get 订单退款金额
@@ -94,6 +96,7 @@ public class RefundOrderFee  implements java.io.Serializable {
         this.fee = fee;
     }
 
+
     /**
      * get 现金退款金额
      *
@@ -112,6 +115,7 @@ public class RefundOrderFee  implements java.io.Serializable {
         this.cashFee = cashFee;
     }
 
+
     /**
      * get 余额退款金额
      *
@@ -129,6 +133,7 @@ public class RefundOrderFee  implements java.io.Serializable {
     public void setBalanceFee(Double balanceFee) {
         this.balanceFee = balanceFee;
     }
+
 
     /**
      * get 代金券退款金额
@@ -149,6 +154,7 @@ public class RefundOrderFee  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 订单编号
      *
@@ -158,6 +164,7 @@ public class RefundOrderFee  implements java.io.Serializable {
         this.orderNumber = orderNumber;
         return this;
     }
+
 
     /**
      * set 订单退款金额
@@ -169,6 +176,7 @@ public class RefundOrderFee  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 现金退款金额
      *
@@ -179,6 +187,7 @@ public class RefundOrderFee  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额退款金额
      *
@@ -188,6 +197,7 @@ public class RefundOrderFee  implements java.io.Serializable {
         this.balanceFee = balanceFee;
         return this;
     }
+
 
     /**
      * set 代金券退款金额

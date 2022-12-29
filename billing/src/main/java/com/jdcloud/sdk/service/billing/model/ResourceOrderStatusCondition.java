@@ -57,8 +57,8 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> resourceIdList;
-
     /**
      * 当前页序号
      */
@@ -68,6 +68,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
      * 每页结果数量
      */
     private Integer pageSize;
+
 
 
     /**
@@ -88,6 +89,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 服务编码
      *
@@ -105,6 +107,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 资源状态 1:正常 2:停服 3:删除
@@ -124,23 +127,25 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
         this.status = status;
     }
 
+
     /**
-     * get 资源id列表(最多支持传入500个)
-     *
-     * @return
-     */
+    * get 资源id列表(最多支持传入500个)
+    *
+    * @return
+    */
     public List<String> getResourceIdList() {
         return resourceIdList;
     }
 
     /**
-     * set 资源id列表(最多支持传入500个)
-     *
-     * @param resourceIdList
-     */
+    * set 资源id列表(最多支持传入500个)
+    *
+    * @param resourceIdList
+    */
     public void setResourceIdList(List<String> resourceIdList) {
         this.resourceIdList = resourceIdList;
     }
+
 
     /**
      * get 当前页序号
@@ -159,6 +164,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     public void setPageIndex(Integer pageIndex) {
         this.pageIndex = pageIndex;
     }
+
 
     /**
      * get 每页结果数量
@@ -179,6 +185,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 站点信息 0:中国 1:国际 10:专有云
      *
@@ -188,6 +195,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
         this.site = site;
         return this;
     }
+
 
     /**
      * set 服务编码
@@ -199,6 +207,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源状态 1:正常 2:停服 3:删除
      *
@@ -209,15 +218,17 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 资源id列表(最多支持传入500个)
-     *
-     * @param resourceIdList
-     */
+    * set 资源id列表(最多支持传入500个)
+    *
+    * @param resourceIdList
+    */
     public ResourceOrderStatusCondition resourceIdList(List<String> resourceIdList) {
         this.resourceIdList = resourceIdList;
         return this;
     }
+
 
     /**
      * set 当前页序号
@@ -229,6 +240,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 每页结果数量
      *
@@ -238,6 +250,7 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
         this.pageSize = pageSize;
         return this;
     }
+
 
 
     /**
@@ -251,5 +264,4 @@ public class ResourceOrderStatusCondition  implements java.io.Serializable {
         }
         this.resourceIdList.add(resourceIdList);
     }
-
 }

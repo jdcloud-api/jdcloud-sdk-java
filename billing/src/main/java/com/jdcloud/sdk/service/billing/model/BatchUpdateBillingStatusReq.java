@@ -52,8 +52,8 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<String> resourceIds;
-
     /**
      * 操作(STOP 停止计费 ; RESTART 恢复计费)
      * Required:true
@@ -65,6 +65,7 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
      * 操作说明
      */
     private String comment;
+
 
 
     /**
@@ -85,6 +86,7 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 主资源ID
      *
@@ -103,23 +105,25 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
         this.mainResourceId = mainResourceId;
     }
 
+
     /**
-     * get 资源ID列表
-     *
-     * @return
-     */
+    * get 资源ID列表
+    *
+    * @return
+    */
     public List<String> getResourceIds() {
         return resourceIds;
     }
 
     /**
-     * set 资源ID列表
-     *
-     * @param resourceIds
-     */
+    * set 资源ID列表
+    *
+    * @param resourceIds
+    */
     public void setResourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
     }
+
 
     /**
      * get 操作(STOP 停止计费 ; RESTART 恢复计费)
@@ -138,6 +142,7 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
     public void setAction(String action) {
         this.action = action;
     }
+
 
     /**
      * get 操作说明
@@ -158,6 +163,7 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 产品编码
      *
@@ -167,6 +173,7 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 主资源ID
@@ -178,15 +185,17 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 资源ID列表
-     *
-     * @param resourceIds
-     */
+    * set 资源ID列表
+    *
+    * @param resourceIds
+    */
     public BatchUpdateBillingStatusReq resourceIds(List<String> resourceIds) {
         this.resourceIds = resourceIds;
         return this;
     }
+
 
     /**
      * set 操作(STOP 停止计费 ; RESTART 恢复计费)
@@ -198,6 +207,7 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作说明
      *
@@ -207,6 +217,7 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
         this.comment = comment;
         return this;
     }
+
 
 
     /**
@@ -220,5 +231,4 @@ public class BatchUpdateBillingStatusReq  implements java.io.Serializable {
         }
         this.resourceIds.add(resourceId);
     }
-
 }

@@ -178,6 +178,7 @@ public class CompatibleBill  implements java.io.Serializable {
     private String resourceName;
 
 
+
     /**
      * get 账单ID
      *
@@ -195,6 +196,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setBillId(Number billId) {
         this.billId = billId;
     }
+
 
     /**
      * get 用户pin
@@ -214,6 +216,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 站点
      *
@@ -231,6 +234,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setSite(Integer site) {
         this.site = site;
     }
+
 
     /**
      * get 区域
@@ -250,6 +254,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get appCode
      *
@@ -267,6 +272,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get appCodeName
@@ -286,6 +292,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.appCodeName = appCodeName;
     }
 
+
     /**
      * get serviceCode
      *
@@ -303,6 +310,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get serviceCodeName
@@ -322,6 +330,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
     }
 
+
     /**
      * get 资源id
      *
@@ -339,6 +348,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 计费类型
@@ -358,6 +368,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.billingType = billingType;
     }
 
+
     /**
      * get 计费类型描述
      *
@@ -375,6 +386,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setBillingTypeName(String billingTypeName) {
         this.billingTypeName = billingTypeName;
     }
+
 
     /**
      * get 规格
@@ -394,6 +406,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.formula = formula;
     }
 
+
     /**
      * get 规格
      *
@@ -411,6 +424,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setFormulaStr(String formulaStr) {
         this.formulaStr = formulaStr;
     }
+
 
     /**
      * get 开始时间
@@ -430,6 +444,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 结束时间
      *
@@ -447,6 +462,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 创建时间
@@ -466,6 +482,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.createTime = createTime;
     }
 
+
     /**
      * get 账单金额
      *
@@ -483,6 +500,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setBillFee(Number billFee) {
         this.billFee = billFee;
     }
+
 
     /**
      * get 账单金额（保留小数点后2位）
@@ -502,6 +520,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.billFee2 = billFee2;
     }
 
+
     /**
      * get 折扣金额
      *
@@ -519,6 +538,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setDiscountFee(Number discountFee) {
         this.discountFee = discountFee;
     }
+
 
     /**
      * get 代金券id
@@ -538,6 +558,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.couponId = couponId;
     }
 
+
     /**
      * get 优惠券金额
      *
@@ -555,6 +576,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setCouponFee(Number couponFee) {
         this.couponFee = couponFee;
     }
+
 
     /**
      * get 优惠后金额
@@ -574,6 +596,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.actualFee = actualFee;
     }
 
+
     /**
      * get 代金券金额
      *
@@ -591,6 +614,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setCashCouponFee(Number cashCouponFee) {
         this.cashCouponFee = cashCouponFee;
     }
+
 
     /**
      * get 余额支付金额
@@ -610,6 +634,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
     }
 
+
     /**
      * get 现金支付金额
      *
@@ -627,6 +652,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setCashPayFee(Number cashPayFee) {
         this.cashPayFee = cashPayFee;
     }
+
 
     /**
      * get 欠费金额
@@ -646,6 +672,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.arrearFee = arrearFee;
     }
 
+
     /**
      * get 支付状态
      *
@@ -664,6 +691,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.paySate = paySate;
     }
 
+
     /**
      * get 1:老计费   2：新计费
      *
@@ -681,6 +709,7 @@ public class CompatibleBill  implements java.io.Serializable {
     public void setSystemType(Integer systemType) {
         this.systemType = systemType;
     }
+
 
     /**
      * get 资源名称
@@ -701,6 +730,7 @@ public class CompatibleBill  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 账单ID
      *
@@ -710,6 +740,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.billId = billId;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -721,6 +752,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 站点
      *
@@ -730,6 +762,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.site = site;
         return this;
     }
+
 
     /**
      * set 区域
@@ -741,6 +774,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set appCode
      *
@@ -750,6 +784,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set appCodeName
@@ -761,6 +796,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set serviceCode
      *
@@ -770,6 +806,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set serviceCodeName
@@ -781,6 +818,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源id
      *
@@ -790,6 +828,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 计费类型
@@ -801,6 +840,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型描述
      *
@@ -810,6 +850,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.billingTypeName = billingTypeName;
         return this;
     }
+
 
     /**
      * set 规格
@@ -821,6 +862,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 规格
      *
@@ -830,6 +872,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.formulaStr = formulaStr;
         return this;
     }
+
 
     /**
      * set 开始时间
@@ -841,6 +884,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结束时间
      *
@@ -850,6 +894,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 创建时间
@@ -861,6 +906,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账单金额
      *
@@ -870,6 +916,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.billFee = billFee;
         return this;
     }
+
 
     /**
      * set 账单金额（保留小数点后2位）
@@ -881,6 +928,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 折扣金额
      *
@@ -890,6 +938,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.discountFee = discountFee;
         return this;
     }
+
 
     /**
      * set 代金券id
@@ -901,6 +950,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠券金额
      *
@@ -910,6 +960,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.couponFee = couponFee;
         return this;
     }
+
 
     /**
      * set 优惠后金额
@@ -921,6 +972,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 代金券金额
      *
@@ -930,6 +982,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.cashCouponFee = cashCouponFee;
         return this;
     }
+
 
     /**
      * set 余额支付金额
@@ -941,6 +994,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 现金支付金额
      *
@@ -950,6 +1004,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.cashPayFee = cashPayFee;
         return this;
     }
+
 
     /**
      * set 欠费金额
@@ -961,6 +1016,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 支付状态
      *
@@ -971,6 +1027,7 @@ public class CompatibleBill  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1:老计费   2：新计费
      *
@@ -980,6 +1037,7 @@ public class CompatibleBill  implements java.io.Serializable {
         this.systemType = systemType;
         return this;
     }
+
 
     /**
      * set 资源名称

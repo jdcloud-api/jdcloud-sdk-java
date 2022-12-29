@@ -53,6 +53,7 @@ public class ArrearInfoVo  implements java.io.Serializable {
     private Integer arrearDays;
 
 
+
     /**
      * get 用户pin
      *
@@ -70,6 +71,7 @@ public class ArrearInfoVo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 欠费金额
@@ -89,6 +91,7 @@ public class ArrearInfoVo  implements java.io.Serializable {
         this.arrearFee = arrearFee;
     }
 
+
     /**
      * get 首次欠费时间
      *
@@ -106,6 +109,7 @@ public class ArrearInfoVo  implements java.io.Serializable {
     public void setFirstArrearDate(String firstArrearDate) {
         this.firstArrearDate = firstArrearDate;
     }
+
 
     /**
      * get 欠费天数
@@ -126,6 +130,7 @@ public class ArrearInfoVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 用户pin
      *
@@ -135,6 +140,7 @@ public class ArrearInfoVo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 欠费金额
@@ -146,6 +152,7 @@ public class ArrearInfoVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 首次欠费时间
      *
@@ -155,6 +162,7 @@ public class ArrearInfoVo  implements java.io.Serializable {
         this.firstArrearDate = firstArrearDate;
         return this;
     }
+
 
     /**
      * set 欠费天数

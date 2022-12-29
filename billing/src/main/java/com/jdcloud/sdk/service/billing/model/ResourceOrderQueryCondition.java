@@ -57,8 +57,8 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     /**
      * 产品码列表
      */
+    
     private List<String> serviceCodeList;
-
     /**
      * 地域
      */
@@ -77,8 +77,8 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     /**
      * resourceIdList(pin、resourceId、resourceIdList 必传一个)
      */
+    
     private List<String> resourceIdList;
-
     /**
      * &gt;0: 订单还有几天到期; &#x3D;&#x3D;0: 订单已经到期; &lt;0: 不管是否到期
      */
@@ -112,18 +112,18 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     /**
      * billingTypeList
      */
+    
     private List<Number> billingTypeList;
-
     /**
      * 交易单号列表
      */
+    
     private List<String> transactionNos;
-
     /**
      * opTypes
      */
+    
     private List<Number> opTypes;
-
     /**
      * 开始时间
      */
@@ -142,13 +142,13 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     /**
      * statusList
      */
+    
     private List<Number> statusList;
-
     /**
      * excludeResources
      */
+    
     private List<String> excludeResources;
-
     /**
      * orderByClaus
      */
@@ -167,8 +167,8 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     /**
      * pinList
      */
+    
     private List<String> pinList;
-
     /**
      * 是否是专有云 1:是  其他不是
      */
@@ -200,6 +200,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     private Integer offset;
 
 
+
     /**
      * get 主键id
      *
@@ -217,6 +218,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 用户pin(pin、resourceId、resourceIdList 必传一个)
@@ -236,6 +238,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 资源id(pin、resourceId、resourceIdList 必传一个)
      *
@@ -253,6 +256,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get appCode
@@ -272,23 +276,25 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
-     * get 产品码列表
-     *
-     * @return
-     */
+    * get 产品码列表
+    *
+    * @return
+    */
     public List<String> getServiceCodeList() {
         return serviceCodeList;
     }
 
     /**
-     * set 产品码列表
-     *
-     * @param serviceCodeList
-     */
+    * set 产品码列表
+    *
+    * @param serviceCodeList
+    */
     public void setServiceCodeList(List<String> serviceCodeList) {
         this.serviceCodeList = serviceCodeList;
     }
+
 
     /**
      * get 地域
@@ -308,6 +314,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.region = region;
     }
 
+
     /**
      * get 网络类型 0: non-BGP, 1: BGP
      *
@@ -325,6 +332,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setNetworkOperator(Integer networkOperator) {
         this.networkOperator = networkOperator;
     }
+
 
     /**
      * get 计费类型 1:按配置 2:按用量 3:包年包月
@@ -344,23 +352,25 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.billingType = billingType;
     }
 
+
     /**
-     * get resourceIdList(pin、resourceId、resourceIdList 必传一个)
-     *
-     * @return
-     */
+    * get resourceIdList(pin、resourceId、resourceIdList 必传一个)
+    *
+    * @return
+    */
     public List<String> getResourceIdList() {
         return resourceIdList;
     }
 
     /**
-     * set resourceIdList(pin、resourceId、resourceIdList 必传一个)
-     *
-     * @param resourceIdList
-     */
+    * set resourceIdList(pin、resourceId、resourceIdList 必传一个)
+    *
+    * @param resourceIdList
+    */
     public void setResourceIdList(List<String> resourceIdList) {
         this.resourceIdList = resourceIdList;
     }
+
 
     /**
      * get &gt;0: 订单还有几天到期; &#x3D;&#x3D;0: 订单已经到期; &lt;0: 不管是否到期
@@ -380,6 +390,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.expireInDays = expireInDays;
     }
 
+
     /**
      * get isOnTrial
      *
@@ -397,6 +408,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setIsOnTrial(Integer isOnTrial) {
         this.isOnTrial = isOnTrial;
     }
+
 
     /**
      * get 站点信息 0:中国 1:国际
@@ -416,6 +428,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 资源状态 1:正常 2:停服 3:删除
      *
@@ -433,6 +446,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 计费状态 0:停止计费 1:计费中
@@ -452,6 +466,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.billingStatus = billingStatus;
     }
 
+
     /**
      * get 1、内部计算，使用getExpiringOrderCount时使用，不用传值 默认为-1mybatis筛选时不会关注 2、selectResourceOrderForTask定时任务查询列表时使用，停服天数，必须大于0
      *
@@ -470,59 +485,63 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.expiringInDays = expiringInDays;
     }
 
+
     /**
-     * get billingTypeList
-     *
-     * @return
-     */
+    * get billingTypeList
+    *
+    * @return
+    */
     public List<Number> getBillingTypeList() {
         return billingTypeList;
     }
 
     /**
-     * set billingTypeList
-     *
-     * @param billingTypeList
-     */
+    * set billingTypeList
+    *
+    * @param billingTypeList
+    */
     public void setBillingTypeList(List<Number> billingTypeList) {
         this.billingTypeList = billingTypeList;
     }
 
+
     /**
-     * get 交易单号列表
-     *
-     * @return
-     */
+    * get 交易单号列表
+    *
+    * @return
+    */
     public List<String> getTransactionNos() {
         return transactionNos;
     }
 
     /**
-     * set 交易单号列表
-     *
-     * @param transactionNos
-     */
+    * set 交易单号列表
+    *
+    * @param transactionNos
+    */
     public void setTransactionNos(List<String> transactionNos) {
         this.transactionNos = transactionNos;
     }
 
+
     /**
-     * get opTypes
-     *
-     * @return
-     */
+    * get opTypes
+    *
+    * @return
+    */
     public List<Number> getOpTypes() {
         return opTypes;
     }
 
     /**
-     * set opTypes
-     *
-     * @param opTypes
-     */
+    * set opTypes
+    *
+    * @param opTypes
+    */
     public void setOpTypes(List<Number> opTypes) {
         this.opTypes = opTypes;
     }
+
 
     /**
      * get 开始时间
@@ -542,6 +561,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.startTime = startTime;
     }
 
+
     /**
      * get 结束时间
      *
@@ -559,6 +579,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
+
 
     /**
      * get 服务编码
@@ -578,41 +599,44 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
-     * get statusList
-     *
-     * @return
-     */
+    * get statusList
+    *
+    * @return
+    */
     public List<Number> getStatusList() {
         return statusList;
     }
 
     /**
-     * set statusList
-     *
-     * @param statusList
-     */
+    * set statusList
+    *
+    * @param statusList
+    */
     public void setStatusList(List<Number> statusList) {
         this.statusList = statusList;
     }
 
+
     /**
-     * get excludeResources
-     *
-     * @return
-     */
+    * get excludeResources
+    *
+    * @return
+    */
     public List<String> getExcludeResources() {
         return excludeResources;
     }
 
     /**
-     * set excludeResources
-     *
-     * @param excludeResources
-     */
+    * set excludeResources
+    *
+    * @param excludeResources
+    */
     public void setExcludeResources(List<String> excludeResources) {
         this.excludeResources = excludeResources;
     }
+
 
     /**
      * get orderByClaus
@@ -632,6 +656,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.orderByClaus = orderByClaus;
     }
 
+
     /**
      * get 专有云节点的code（节点云查询使用）
      *
@@ -649,6 +674,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setNode(String node) {
         this.node = node;
     }
+
 
     /**
      * get 部门（节点云查询使用）
@@ -668,23 +694,25 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.departmentId = departmentId;
     }
 
+
     /**
-     * get pinList
-     *
-     * @return
-     */
+    * get pinList
+    *
+    * @return
+    */
     public List<String> getPinList() {
         return pinList;
     }
 
     /**
-     * set pinList
-     *
-     * @param pinList
-     */
+    * set pinList
+    *
+    * @param pinList
+    */
     public void setPinList(List<String> pinList) {
         this.pinList = pinList;
     }
+
 
     /**
      * get 是否是专有云 1:是  其他不是
@@ -704,6 +732,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.isSpecial = isSpecial;
     }
 
+
     /**
      * get 节点信息
      *
@@ -721,6 +750,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setNodeCode(String nodeCode) {
         this.nodeCode = nodeCode;
     }
+
 
     /**
      * get 超时时间，暂时不用
@@ -740,6 +770,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.timeout = timeout;
     }
 
+
     /**
      * get 当前页序号
      *
@@ -758,6 +789,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.pageIndex = pageIndex;
     }
 
+
     /**
      * get 每页结果数量
      *
@@ -775,6 +807,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
+
 
     /**
      * get offset
@@ -795,6 +828,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 主键id
      *
@@ -804,6 +838,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 用户pin(pin、resourceId、resourceIdList 必传一个)
@@ -815,6 +850,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源id(pin、resourceId、resourceIdList 必传一个)
      *
@@ -824,6 +860,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set appCode
@@ -835,15 +872,17 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 产品码列表
-     *
-     * @param serviceCodeList
-     */
+    * set 产品码列表
+    *
+    * @param serviceCodeList
+    */
     public ResourceOrderQueryCondition serviceCodeList(List<String> serviceCodeList) {
         this.serviceCodeList = serviceCodeList;
         return this;
     }
+
 
     /**
      * set 地域
@@ -855,6 +894,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 网络类型 0: non-BGP, 1: BGP
      *
@@ -864,6 +904,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.networkOperator = networkOperator;
         return this;
     }
+
 
     /**
      * set 计费类型 1:按配置 2:按用量 3:包年包月
@@ -875,15 +916,17 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set resourceIdList(pin、resourceId、resourceIdList 必传一个)
-     *
-     * @param resourceIdList
-     */
+    * set resourceIdList(pin、resourceId、resourceIdList 必传一个)
+    *
+    * @param resourceIdList
+    */
     public ResourceOrderQueryCondition resourceIdList(List<String> resourceIdList) {
         this.resourceIdList = resourceIdList;
         return this;
     }
+
 
     /**
      * set &gt;0: 订单还有几天到期; &#x3D;&#x3D;0: 订单已经到期; &lt;0: 不管是否到期
@@ -895,6 +938,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set isOnTrial
      *
@@ -904,6 +948,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.isOnTrial = isOnTrial;
         return this;
     }
+
 
     /**
      * set 站点信息 0:中国 1:国际
@@ -915,6 +960,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源状态 1:正常 2:停服 3:删除
      *
@@ -924,6 +970,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 计费状态 0:停止计费 1:计费中
@@ -935,6 +982,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 1、内部计算，使用getExpiringOrderCount时使用，不用传值 默认为-1mybatis筛选时不会关注 2、selectResourceOrderForTask定时任务查询列表时使用，停服天数，必须大于0
      *
@@ -945,35 +993,39 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set billingTypeList
-     *
-     * @param billingTypeList
-     */
+    * set billingTypeList
+    *
+    * @param billingTypeList
+    */
     public ResourceOrderQueryCondition billingTypeList(List<Number> billingTypeList) {
         this.billingTypeList = billingTypeList;
         return this;
     }
 
+
     /**
-     * set 交易单号列表
-     *
-     * @param transactionNos
-     */
+    * set 交易单号列表
+    *
+    * @param transactionNos
+    */
     public ResourceOrderQueryCondition transactionNos(List<String> transactionNos) {
         this.transactionNos = transactionNos;
         return this;
     }
 
+
     /**
-     * set opTypes
-     *
-     * @param opTypes
-     */
+    * set opTypes
+    *
+    * @param opTypes
+    */
     public ResourceOrderQueryCondition opTypes(List<Number> opTypes) {
         this.opTypes = opTypes;
         return this;
     }
+
 
     /**
      * set 开始时间
@@ -985,6 +1037,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 结束时间
      *
@@ -994,6 +1047,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.endTime = endTime;
         return this;
     }
+
 
     /**
      * set 服务编码
@@ -1005,25 +1059,28 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set statusList
-     *
-     * @param statusList
-     */
+    * set statusList
+    *
+    * @param statusList
+    */
     public ResourceOrderQueryCondition statusList(List<Number> statusList) {
         this.statusList = statusList;
         return this;
     }
 
+
     /**
-     * set excludeResources
-     *
-     * @param excludeResources
-     */
+    * set excludeResources
+    *
+    * @param excludeResources
+    */
     public ResourceOrderQueryCondition excludeResources(List<String> excludeResources) {
         this.excludeResources = excludeResources;
         return this;
     }
+
 
     /**
      * set orderByClaus
@@ -1035,6 +1092,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 专有云节点的code（节点云查询使用）
      *
@@ -1044,6 +1102,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.node = node;
         return this;
     }
+
 
     /**
      * set 部门（节点云查询使用）
@@ -1055,15 +1114,17 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set pinList
-     *
-     * @param pinList
-     */
+    * set pinList
+    *
+    * @param pinList
+    */
     public ResourceOrderQueryCondition pinList(List<String> pinList) {
         this.pinList = pinList;
         return this;
     }
+
 
     /**
      * set 是否是专有云 1:是  其他不是
@@ -1075,6 +1136,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 节点信息
      *
@@ -1084,6 +1146,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.nodeCode = nodeCode;
         return this;
     }
+
 
     /**
      * set 超时时间，暂时不用
@@ -1095,6 +1158,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 当前页序号
      *
@@ -1104,6 +1168,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.pageIndex = pageIndex;
         return this;
     }
+
 
     /**
      * set 每页结果数量
@@ -1115,6 +1180,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set offset
      *
@@ -1124,6 +1190,7 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         this.offset = offset;
         return this;
     }
+
 
 
     /**
@@ -1221,5 +1288,4 @@ public class ResourceOrderQueryCondition  implements java.io.Serializable {
         }
         this.pinList.add(pinList);
     }
-
 }

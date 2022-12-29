@@ -31,15 +31,24 @@ import com.jdcloud.sdk.client.Jdcloud;
 import com.jdcloud.sdk.client.JdcloudClient;
 import com.jdcloud.sdk.client.JdcloudValidateException;
 import com.jdcloud.sdk.http.HttpRequestConfig;
+import com.jdcloud.sdk.service.billing.model.DescribeFormulaSummaryListRequest;
+import com.jdcloud.sdk.service.billing.model.DescribeFormulaSummaryListResponse;
+import com.jdcloud.sdk.service.billing.client.DescribeFormulaSummaryListExecutor;
 import com.jdcloud.sdk.service.billing.model.CalculateTotalPriceRequest;
 import com.jdcloud.sdk.service.billing.model.CalculateTotalPriceResponse;
 import com.jdcloud.sdk.service.billing.client.CalculateTotalPriceExecutor;
+import com.jdcloud.sdk.service.billing.model.DescribeBillDetailsRequest;
+import com.jdcloud.sdk.service.billing.model.DescribeBillDetailsResponse;
+import com.jdcloud.sdk.service.billing.client.DescribeBillDetailsExecutor;
 import com.jdcloud.sdk.service.billing.model.QueryBillSummaryRequest;
 import com.jdcloud.sdk.service.billing.model.QueryBillSummaryResponse;
 import com.jdcloud.sdk.service.billing.client.QueryBillSummaryExecutor;
 import com.jdcloud.sdk.service.billing.model.QueryBillDetailRequest;
 import com.jdcloud.sdk.service.billing.model.QueryBillDetailResponse;
 import com.jdcloud.sdk.service.billing.client.QueryBillDetailExecutor;
+import com.jdcloud.sdk.service.billing.model.DescribeBillSummarysRequest;
+import com.jdcloud.sdk.service.billing.model.DescribeBillSummarysResponse;
+import com.jdcloud.sdk.service.billing.client.DescribeBillSummarysExecutor;
 
 /**
  * billingClient
@@ -48,7 +57,7 @@ public class BillingClient extends JdcloudClient {
 
     public final static String ApiVersion = "v1";
     private final static String UserAgentPrefix = "JdcloudSdkJava";
-    public final static String ClientVersion = "1.2.3";
+    public final static String ClientVersion = "1.2.9";
     public final static String DefaultEndpoint = "billing.jdcloud-api.com";
     public final static String ServiceName = "billing";
     public final static String UserAgent = UserAgentPrefix + "/" + ClientVersion + " " + ServiceName + "/" + ApiVersion;
@@ -91,6 +100,17 @@ public class BillingClient extends JdcloudClient {
 
 
     /**
+     * 查询计费项账单月汇总数据
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeFormulaSummaryListResponse describeFormulaSummaryList(DescribeFormulaSummaryListRequest request) throws JdcloudSdkException {
+        return new DescribeFormulaSummaryListExecutor().client(this).execute(request);
+    }
+
+    /**
      * 查询计费价格信息
      *
      * @param request
@@ -99,6 +119,17 @@ public class BillingClient extends JdcloudClient {
      */
     public CalculateTotalPriceResponse calculateTotalPrice(CalculateTotalPriceRequest request) throws JdcloudSdkException {
         return new CalculateTotalPriceExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询账单明细数据V2版本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBillDetailsResponse describeBillDetails(DescribeBillDetailsRequest request) throws JdcloudSdkException {
+        return new DescribeBillDetailsExecutor().client(this).execute(request);
     }
 
     /**
@@ -121,6 +152,17 @@ public class BillingClient extends JdcloudClient {
      */
     public QueryBillDetailResponse queryBillDetail(QueryBillDetailRequest request) throws JdcloudSdkException {
         return new QueryBillDetailExecutor().client(this).execute(request);
+    }
+
+    /**
+     * 查询账单资源汇总数据V2版本
+     *
+     * @param request
+     * @return
+     * @throws JdcloudSdkException
+     */
+    public DescribeBillSummarysResponse describeBillSummarys(DescribeBillSummarysRequest request) throws JdcloudSdkException {
+        return new DescribeBillSummarysExecutor().client(this).execute(request);
     }
 
 

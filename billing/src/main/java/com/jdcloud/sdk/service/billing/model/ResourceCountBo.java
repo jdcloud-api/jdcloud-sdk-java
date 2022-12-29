@@ -63,6 +63,7 @@ public class ResourceCountBo  implements java.io.Serializable {
     private Integer count;
 
 
+
     /**
      * get pin
      *
@@ -80,6 +81,7 @@ public class ResourceCountBo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 应用码code
@@ -99,6 +101,7 @@ public class ResourceCountBo  implements java.io.Serializable {
         this.appCode = appCode;
     }
 
+
     /**
      * get 应用码名称
      *
@@ -116,6 +119,7 @@ public class ResourceCountBo  implements java.io.Serializable {
     public void setAppCodeName(String appCodeName) {
         this.appCodeName = appCodeName;
     }
+
 
     /**
      * get 服务码code
@@ -135,6 +139,7 @@ public class ResourceCountBo  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 服务码名称
      *
@@ -152,6 +157,7 @@ public class ResourceCountBo  implements java.io.Serializable {
     public void setServiceCodeName(String serviceCodeName) {
         this.serviceCodeName = serviceCodeName;
     }
+
 
     /**
      * get 资源数量
@@ -172,6 +178,7 @@ public class ResourceCountBo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set pin
      *
@@ -181,6 +188,7 @@ public class ResourceCountBo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 应用码code
@@ -192,6 +200,7 @@ public class ResourceCountBo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 应用码名称
      *
@@ -201,6 +210,7 @@ public class ResourceCountBo  implements java.io.Serializable {
         this.appCodeName = appCodeName;
         return this;
     }
+
 
     /**
      * set 服务码code
@@ -212,6 +222,7 @@ public class ResourceCountBo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 服务码名称
      *
@@ -221,6 +232,7 @@ public class ResourceCountBo  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
         return this;
     }
+
 
     /**
      * set 资源数量

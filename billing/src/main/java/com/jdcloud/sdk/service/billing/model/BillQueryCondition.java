@@ -139,6 +139,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     private String region;
 
 
+
     /**
      * get 查询类别   1：资源账单   2：消费记录
      *
@@ -156,6 +157,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     public void setQueryType(Integer queryType) {
         this.queryType = queryType;
     }
+
 
     /**
      * get 用户pin
@@ -175,6 +177,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get appCode
      *
@@ -192,6 +195,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get serviceCode
@@ -211,6 +215,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.serviceCode = serviceCode;
     }
 
+
     /**
      * get 计费类型
      *
@@ -228,6 +233,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 支付类型
@@ -247,6 +253,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.payType = payType;
     }
 
+
     /**
      * get 支付状态
      *
@@ -264,6 +271,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     public void setPayState(Integer payState) {
         this.payState = payState;
     }
+
 
     /**
      * get 1按账期、2按消费时间
@@ -283,6 +291,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.timeType = timeType;
     }
 
+
     /**
      * get 开始时间
      *
@@ -300,6 +309,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
+
 
     /**
      * get 结束时间
@@ -319,6 +329,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get 是否忽略0元账单
      *
@@ -336,6 +347,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     public void setIgnoreZero(Integer ignoreZero) {
         this.ignoreZero = ignoreZero;
     }
+
 
     /**
      * get 资源id
@@ -355,6 +367,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.resourceId = resourceId;
     }
 
+
     /**
      * get 站点
      *
@@ -373,6 +386,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 角色
      *
@@ -390,6 +404,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     public void setRole(Integer role) {
         this.role = role;
     }
+
 
     /**
      * get 区域
@@ -410,6 +425,7 @@ public class BillQueryCondition  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 查询类别   1：资源账单   2：消费记录
      *
@@ -419,6 +435,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.queryType = queryType;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -430,6 +447,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set appCode
      *
@@ -439,6 +457,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set serviceCode
@@ -450,6 +469,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型
      *
@@ -459,6 +479,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.billingType = billingType;
         return this;
     }
+
 
     /**
      * set 支付类型
@@ -470,6 +491,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 支付状态
      *
@@ -479,6 +501,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.payState = payState;
         return this;
     }
+
 
     /**
      * set 1按账期、2按消费时间
@@ -490,6 +513,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 开始时间
      *
@@ -499,6 +523,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.startTime = startTime;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -510,6 +535,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 是否忽略0元账单
      *
@@ -519,6 +545,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.ignoreZero = ignoreZero;
         return this;
     }
+
 
     /**
      * set 资源id
@@ -530,6 +557,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 站点
      *
@@ -540,6 +568,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 角色
      *
@@ -549,6 +578,7 @@ public class BillQueryCondition  implements java.io.Serializable {
         this.role = role;
         return this;
     }
+
 
     /**
      * set 区域

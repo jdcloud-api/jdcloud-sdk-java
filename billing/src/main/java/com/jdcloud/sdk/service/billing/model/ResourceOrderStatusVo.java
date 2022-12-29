@@ -93,6 +93,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
     private String operateTime;
 
 
+
     /**
      * get 资源id
      *
@@ -110,6 +111,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
     public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
     }
+
 
     /**
      * get 用户pin
@@ -129,6 +131,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.pin = pin;
     }
 
+
     /**
      * get 资源状态 1:正常 2:停服 3:删除
      *
@@ -146,6 +149,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
     public void setStatus(Integer status) {
         this.status = status;
     }
+
 
     /**
      * get 计费状态 0:停止计费 1:计费中
@@ -165,6 +169,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.billingStatus = billingStatus;
     }
 
+
     /**
      * get 计费类型 1:按配置 2:按用量 3:包年包月
      *
@@ -182,6 +187,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 结束时间
@@ -201,6 +207,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.endTime = endTime;
     }
 
+
     /**
      * get billingType兼容交易系统字段
      *
@@ -218,6 +225,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
     public void setChargeMode(Integer chargeMode) {
         this.chargeMode = chargeMode;
     }
+
 
     /**
      * get timeSpan兼容交易系统字段
@@ -237,6 +245,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.chargeDuration = chargeDuration;
     }
 
+
     /**
      * get timeUnit兼容交易系统字段
      *
@@ -255,6 +264,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.chargeUnit = chargeUnit;
     }
 
+
     /**
      * get 站点信息 0:中国 1:国际  10:专有云
      *
@@ -272,6 +282,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
     public void setSite(Integer site) {
         this.site = site;
     }
+
 
     /**
      * get 操作时间
@@ -292,6 +303,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 资源id
      *
@@ -301,6 +313,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.resourceId = resourceId;
         return this;
     }
+
 
     /**
      * set 用户pin
@@ -312,6 +325,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 资源状态 1:正常 2:停服 3:删除
      *
@@ -321,6 +335,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.status = status;
         return this;
     }
+
 
     /**
      * set 计费状态 0:停止计费 1:计费中
@@ -332,6 +347,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费类型 1:按配置 2:按用量 3:包年包月
      *
@@ -341,6 +357,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.billingType = billingType;
         return this;
     }
+
 
     /**
      * set 结束时间
@@ -352,6 +369,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set billingType兼容交易系统字段
      *
@@ -361,6 +379,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.chargeMode = chargeMode;
         return this;
     }
+
 
     /**
      * set timeSpan兼容交易系统字段
@@ -372,6 +391,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set timeUnit兼容交易系统字段
      *
@@ -382,6 +402,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 站点信息 0:中国 1:国际  10:专有云
      *
@@ -391,6 +412,7 @@ public class ResourceOrderStatusVo  implements java.io.Serializable {
         this.site = site;
         return this;
     }
+
 
     /**
      * set 操作时间

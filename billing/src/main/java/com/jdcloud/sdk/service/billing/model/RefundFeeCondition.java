@@ -52,6 +52,7 @@ public class RefundFeeCondition  implements java.io.Serializable {
      * Required:true
      */
     @Required
+    
     private List<RefundResource> refundResources;
 
 
@@ -73,6 +74,7 @@ public class RefundFeeCondition  implements java.io.Serializable {
         this.refundType = refundType;
     }
 
+
     /**
      * get 退款时间(格式：yyyy-MM-dd HH:mm:ss)
      *
@@ -91,23 +93,25 @@ public class RefundFeeCondition  implements java.io.Serializable {
         this.refundTime = refundTime;
     }
 
+
     /**
-     * get 退款资源列表
-     *
-     * @return
-     */
+    * get 退款资源列表
+    *
+    * @return
+    */
     public List<RefundResource> getRefundResources() {
         return refundResources;
     }
 
     /**
-     * set 退款资源列表
-     *
-     * @param refundResources
-     */
+    * set 退款资源列表
+    *
+    * @param refundResources
+    */
     public void setRefundResources(List<RefundResource> refundResources) {
         this.refundResources = refundResources;
     }
+
 
 
     /**
@@ -120,6 +124,7 @@ public class RefundFeeCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 退款时间(格式：yyyy-MM-dd HH:mm:ss)
      *
@@ -130,15 +135,17 @@ public class RefundFeeCondition  implements java.io.Serializable {
         return this;
     }
 
+
     /**
-     * set 退款资源列表
-     *
-     * @param refundResources
-     */
+    * set 退款资源列表
+    *
+    * @param refundResources
+    */
     public RefundFeeCondition refundResources(List<RefundResource> refundResources) {
         this.refundResources = refundResources;
         return this;
     }
+
 
 
     /**
@@ -152,5 +159,4 @@ public class RefundFeeCondition  implements java.io.Serializable {
         }
         this.refundResources.add(refundResource);
     }
-
 }

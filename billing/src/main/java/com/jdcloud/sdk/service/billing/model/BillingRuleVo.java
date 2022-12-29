@@ -128,6 +128,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     private String updateTime;
 
 
+
     /**
      * get id
      *
@@ -145,6 +146,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
+
 
     /**
      * get 站点
@@ -164,6 +166,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.site = site;
     }
 
+
     /**
      * get 业务线编码
      *
@@ -181,6 +184,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setAppCode(String appCode) {
         this.appCode = appCode;
     }
+
 
     /**
      * get 业务线名称
@@ -200,6 +204,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.appCodeName = appCodeName;
     }
 
+
     /**
      * get 产品编码
      *
@@ -217,6 +222,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
     }
+
 
     /**
      * get 产品编码名称
@@ -236,6 +242,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.serviceCodeName = serviceCodeName;
     }
 
+
     /**
      * get 用户pin
      *
@@ -253,6 +260,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setPin(String pin) {
         this.pin = pin;
     }
+
 
     /**
      * get 计费时长类型 - 0:按使用时长；1:按周期时长
@@ -272,6 +280,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.strategy = strategy;
     }
 
+
     /**
      * get 计费时长类型名称
      *
@@ -289,6 +298,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setStrategyName(String strategyName) {
         this.strategyName = strategyName;
     }
+
 
     /**
      * get 计费周期类型 - 0:按小时；1:按天
@@ -308,6 +318,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.cycleType = cycleType;
     }
 
+
     /**
      * get 计费周期类型名称
      *
@@ -325,6 +336,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setCycleTypeName(String cycleTypeName) {
         this.cycleTypeName = cycleTypeName;
     }
+
 
     /**
      * get 区分大客户 - 1:是；0:否
@@ -344,6 +356,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.dosingMode = dosingMode;
     }
 
+
     /**
      * get 大客户统计周期 - 0:按小时计费；1:按天计费
      *
@@ -361,6 +374,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setDosingCycle(Integer dosingCycle) {
         this.dosingCycle = dosingCycle;
     }
+
 
     /**
      * get 计费模式 - 1:删除不计费；2:关机不计费
@@ -380,6 +394,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.billingMode = billingMode;
     }
 
+
     /**
      * get 最小计费时长 - 必须为大于等于0的整数
      *
@@ -397,6 +412,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setTimeSpan(Integer timeSpan) {
         this.timeSpan = timeSpan;
     }
+
 
     /**
      * get 删除状态 - 0:未删除；1:已删除
@@ -416,6 +432,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.isDeleted = isDeleted;
     }
 
+
     /**
      * get 操作人
      *
@@ -434,6 +451,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.operator = operator;
     }
 
+
     /**
      * get 创建时间
      *
@@ -451,6 +469,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
+
 
     /**
      * get 修改时间
@@ -471,6 +490,7 @@ public class BillingRuleVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set id
      *
@@ -480,6 +500,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.id = id;
         return this;
     }
+
 
     /**
      * set 站点
@@ -491,6 +512,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 业务线编码
      *
@@ -500,6 +522,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.appCode = appCode;
         return this;
     }
+
 
     /**
      * set 业务线名称
@@ -511,6 +534,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 产品编码
      *
@@ -520,6 +544,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.serviceCode = serviceCode;
         return this;
     }
+
 
     /**
      * set 产品编码名称
@@ -531,6 +556,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 用户pin
      *
@@ -540,6 +566,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.pin = pin;
         return this;
     }
+
 
     /**
      * set 计费时长类型 - 0:按使用时长；1:按周期时长
@@ -551,6 +578,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费时长类型名称
      *
@@ -560,6 +588,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.strategyName = strategyName;
         return this;
     }
+
 
     /**
      * set 计费周期类型 - 0:按小时；1:按天
@@ -571,6 +600,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 计费周期类型名称
      *
@@ -580,6 +610,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.cycleTypeName = cycleTypeName;
         return this;
     }
+
 
     /**
      * set 区分大客户 - 1:是；0:否
@@ -591,6 +622,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 大客户统计周期 - 0:按小时计费；1:按天计费
      *
@@ -600,6 +632,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.dosingCycle = dosingCycle;
         return this;
     }
+
 
     /**
      * set 计费模式 - 1:删除不计费；2:关机不计费
@@ -611,6 +644,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 最小计费时长 - 必须为大于等于0的整数
      *
@@ -620,6 +654,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.timeSpan = timeSpan;
         return this;
     }
+
 
     /**
      * set 删除状态 - 0:未删除；1:已删除
@@ -631,6 +666,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 操作人
      *
@@ -641,6 +677,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 创建时间
      *
@@ -650,6 +687,7 @@ public class BillingRuleVo  implements java.io.Serializable {
         this.createTime = createTime;
         return this;
     }
+
 
     /**
      * set 修改时间

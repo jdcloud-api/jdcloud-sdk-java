@@ -68,6 +68,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
     private Number discountFee;
 
 
+
     /**
      * get 总金额
      *
@@ -85,6 +86,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
     public void setTotalFee(Number totalFee) {
         this.totalFee = totalFee;
     }
+
 
     /**
      * get 现金支付金额
@@ -104,6 +106,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         this.cashPayFee = cashPayFee;
     }
 
+
     /**
      * get 优惠券支付金额
      *
@@ -121,6 +124,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
     public void setCashCouponPayFee(Number cashCouponPayFee) {
         this.cashCouponPayFee = cashCouponPayFee;
     }
+
 
     /**
      * get 余额支付金额
@@ -140,6 +144,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
     }
 
+
     /**
      * get 欠费金额
      *
@@ -158,6 +163,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         this.arrearFee = arrearFee;
     }
 
+
     /**
      * get 账单金额
      *
@@ -175,6 +181,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
     public void setBillFee(Number billFee) {
         this.billFee = billFee;
     }
+
 
     /**
      * get 折扣金额
@@ -195,6 +202,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 总金额
      *
@@ -204,6 +212,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         this.totalFee = totalFee;
         return this;
     }
+
 
     /**
      * set 现金支付金额
@@ -215,6 +224,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠券支付金额
      *
@@ -224,6 +234,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         this.cashCouponPayFee = cashCouponPayFee;
         return this;
     }
+
 
     /**
      * set 余额支付金额
@@ -235,6 +246,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 欠费金额
      *
@@ -245,6 +257,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 账单金额
      *
@@ -254,6 +267,7 @@ public class BillStatisticsInfoVo  implements java.io.Serializable {
         this.billFee = billFee;
         return this;
     }
+
 
     /**
      * set 折扣金额

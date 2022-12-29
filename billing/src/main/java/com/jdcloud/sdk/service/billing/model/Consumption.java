@@ -83,6 +83,7 @@ public class Consumption  implements java.io.Serializable {
     private String groupTagValue;
 
 
+
     /**
      * get 计费类型
      *
@@ -100,6 +101,7 @@ public class Consumption  implements java.io.Serializable {
     public void setBillingType(Integer billingType) {
         this.billingType = billingType;
     }
+
 
     /**
      * get 支付类型
@@ -119,6 +121,7 @@ public class Consumption  implements java.io.Serializable {
         this.payType = payType;
     }
 
+
     /**
      * get 优惠后金额
      *
@@ -136,6 +139,7 @@ public class Consumption  implements java.io.Serializable {
     public void setActualFee(Number actualFee) {
         this.actualFee = actualFee;
     }
+
 
     /**
      * get 现金支付
@@ -155,6 +159,7 @@ public class Consumption  implements java.io.Serializable {
         this.cashPayFee = cashPayFee;
     }
 
+
     /**
      * get 余额支付
      *
@@ -172,6 +177,7 @@ public class Consumption  implements java.io.Serializable {
     public void setBalancePayFee(Number balancePayFee) {
         this.balancePayFee = balancePayFee;
     }
+
 
     /**
      * get 优惠券支付金额
@@ -191,6 +197,7 @@ public class Consumption  implements java.io.Serializable {
         this.cashCouponPayFee = cashCouponPayFee;
     }
 
+
     /**
      * get 欠费金额
      *
@@ -208,6 +215,7 @@ public class Consumption  implements java.io.Serializable {
     public void setArrearFee(Number arrearFee) {
         this.arrearFee = arrearFee;
     }
+
 
     /**
      * get 原价
@@ -227,6 +235,7 @@ public class Consumption  implements java.io.Serializable {
         this.billFee2 = billFee2;
     }
 
+
     /**
      * get 优惠金额
      *
@@ -244,6 +253,7 @@ public class Consumption  implements java.io.Serializable {
     public void setDiscountFee(Number discountFee) {
         this.discountFee = discountFee;
     }
+
 
     /**
      * get 分组显示值
@@ -264,6 +274,7 @@ public class Consumption  implements java.io.Serializable {
     }
 
 
+
     /**
      * set 计费类型
      *
@@ -273,6 +284,7 @@ public class Consumption  implements java.io.Serializable {
         this.billingType = billingType;
         return this;
     }
+
 
     /**
      * set 支付类型
@@ -284,6 +296,7 @@ public class Consumption  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠后金额
      *
@@ -293,6 +306,7 @@ public class Consumption  implements java.io.Serializable {
         this.actualFee = actualFee;
         return this;
     }
+
 
     /**
      * set 现金支付
@@ -304,6 +318,7 @@ public class Consumption  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 余额支付
      *
@@ -313,6 +328,7 @@ public class Consumption  implements java.io.Serializable {
         this.balancePayFee = balancePayFee;
         return this;
     }
+
 
     /**
      * set 优惠券支付金额
@@ -324,6 +340,7 @@ public class Consumption  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 欠费金额
      *
@@ -333,6 +350,7 @@ public class Consumption  implements java.io.Serializable {
         this.arrearFee = arrearFee;
         return this;
     }
+
 
     /**
      * set 原价
@@ -344,6 +362,7 @@ public class Consumption  implements java.io.Serializable {
         return this;
     }
 
+
     /**
      * set 优惠金额
      *
@@ -353,6 +372,7 @@ public class Consumption  implements java.io.Serializable {
         this.discountFee = discountFee;
         return this;
     }
+
 
     /**
      * set 分组显示值

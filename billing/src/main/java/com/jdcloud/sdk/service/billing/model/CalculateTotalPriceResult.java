@@ -37,32 +37,42 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     private static final long serialVersionUID = 1L;
 
     /**
-     * 订单折扣前总价
+     * 原价（6位）
      */
     private Number totalPrice;
 
     /**
-     * 订单折扣前总价4位
+     * 原价(6位，兼容之前4位保留字段)
      */
     private Number totalPriceScale4;
 
     /**
-     * 折扣后订单价格
+     * 应付金额（2位）
      */
     private Number discountedTotalPrice;
 
     /**
-     * 总折扣金额
+     * 折扣金额（6位）
      */
     private Number totalDiscount;
 
     /**
-     * list
+     * 折扣后金额(6位)
      */
-    private List<OrderPriceDetail> list;
+    private Double afterFavorableTotalPrice;
 
     /**
-     * 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
+     * 抹零金额（6位）
+     */
+    private Double eraseTotalPrice;
+
+    /**
+     * list
+     */
+    
+    private List<OrderPriceDetail> list;
+    /**
+     * 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格（6位）
      */
     private Number totalOriginalPrice;
 
@@ -77,13 +87,34 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     private String remark;
 
     /**
-     * 各订单单价总和
+     * 各订单单价总和（6位）
      */
     private Number totalUnitPrice;
 
+    /**
+     * 退款总金额
+     */
+    private Double refundTotalPrice;
 
     /**
-     * get 订单折扣前总价
+     * 现金退款总金额
+     */
+    private Double cashRefundTotalPrice;
+
+    /**
+     * 余额退款总金额
+     */
+    private Double balanceRefundTotalPrice;
+
+    /**
+     * 代金券退款总金额
+     */
+    private Double couponRefundTotalPrice;
+
+
+
+    /**
+     * get 原价（6位）
      *
      * @return
      */
@@ -92,7 +123,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 订单折扣前总价
+     * set 原价（6位）
      *
      * @param totalPrice
      */
@@ -100,8 +131,9 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         this.totalPrice = totalPrice;
     }
 
+
     /**
-     * get 订单折扣前总价4位
+     * get 原价(6位，兼容之前4位保留字段)
      *
      * @return
      */
@@ -110,7 +142,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 订单折扣前总价4位
+     * set 原价(6位，兼容之前4位保留字段)
      *
      * @param totalPriceScale4
      */
@@ -118,8 +150,9 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         this.totalPriceScale4 = totalPriceScale4;
     }
 
+
     /**
-     * get 折扣后订单价格
+     * get 应付金额（2位）
      *
      * @return
      */
@@ -128,7 +161,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 折扣后订单价格
+     * set 应付金额（2位）
      *
      * @param discountedTotalPrice
      */
@@ -136,8 +169,9 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         this.discountedTotalPrice = discountedTotalPrice;
     }
 
+
     /**
-     * get 总折扣金额
+     * get 折扣金额（6位）
      *
      * @return
      */
@@ -146,7 +180,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 总折扣金额
+     * set 折扣金额（6位）
      *
      * @param totalDiscount
      */
@@ -154,26 +188,66 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         this.totalDiscount = totalDiscount;
     }
 
+
     /**
-     * get list
+     * get 折扣后金额(6位)
      *
      * @return
      */
+    public Double getAfterFavorableTotalPrice() {
+        return afterFavorableTotalPrice;
+    }
+
+    /**
+     * set 折扣后金额(6位)
+     *
+     * @param afterFavorableTotalPrice
+     */
+    public void setAfterFavorableTotalPrice(Double afterFavorableTotalPrice) {
+        this.afterFavorableTotalPrice = afterFavorableTotalPrice;
+    }
+
+
+    /**
+     * get 抹零金额（6位）
+     *
+     * @return
+     */
+    public Double getEraseTotalPrice() {
+        return eraseTotalPrice;
+    }
+
+    /**
+     * set 抹零金额（6位）
+     *
+     * @param eraseTotalPrice
+     */
+    public void setEraseTotalPrice(Double eraseTotalPrice) {
+        this.eraseTotalPrice = eraseTotalPrice;
+    }
+
+
+    /**
+    * get list
+    *
+    * @return
+    */
     public List<OrderPriceDetail> getList() {
         return list;
     }
 
     /**
-     * set list
-     *
-     * @param list
-     */
+    * set list
+    *
+    * @param list
+    */
     public void setList(List<OrderPriceDetail> list) {
         this.list = list;
     }
 
+
     /**
-     * get 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
+     * get 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格（6位）
      *
      * @return
      */
@@ -182,13 +256,14 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
+     * set 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格（6位）
      *
      * @param totalOriginalPrice
      */
     public void setTotalOriginalPrice(Number totalOriginalPrice) {
         this.totalOriginalPrice = totalOriginalPrice;
     }
+
 
     /**
      * get 参与优惠的明细
@@ -208,6 +283,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         this.favorableInfos = favorableInfos;
     }
 
+
     /**
      * get 备注
      *
@@ -226,8 +302,9 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         this.remark = remark;
     }
 
+
     /**
-     * get 各订单单价总和
+     * get 各订单单价总和（6位）
      *
      * @return
      */
@@ -236,7 +313,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
     }
 
     /**
-     * set 各订单单价总和
+     * set 各订单单价总和（6位）
      *
      * @param totalUnitPrice
      */
@@ -246,7 +323,84 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
 
 
     /**
-     * set 订单折扣前总价
+     * get 退款总金额
+     *
+     * @return
+     */
+    public Double getRefundTotalPrice() {
+        return refundTotalPrice;
+    }
+
+    /**
+     * set 退款总金额
+     *
+     * @param refundTotalPrice
+     */
+    public void setRefundTotalPrice(Double refundTotalPrice) {
+        this.refundTotalPrice = refundTotalPrice;
+    }
+
+
+    /**
+     * get 现金退款总金额
+     *
+     * @return
+     */
+    public Double getCashRefundTotalPrice() {
+        return cashRefundTotalPrice;
+    }
+
+    /**
+     * set 现金退款总金额
+     *
+     * @param cashRefundTotalPrice
+     */
+    public void setCashRefundTotalPrice(Double cashRefundTotalPrice) {
+        this.cashRefundTotalPrice = cashRefundTotalPrice;
+    }
+
+
+    /**
+     * get 余额退款总金额
+     *
+     * @return
+     */
+    public Double getBalanceRefundTotalPrice() {
+        return balanceRefundTotalPrice;
+    }
+
+    /**
+     * set 余额退款总金额
+     *
+     * @param balanceRefundTotalPrice
+     */
+    public void setBalanceRefundTotalPrice(Double balanceRefundTotalPrice) {
+        this.balanceRefundTotalPrice = balanceRefundTotalPrice;
+    }
+
+
+    /**
+     * get 代金券退款总金额
+     *
+     * @return
+     */
+    public Double getCouponRefundTotalPrice() {
+        return couponRefundTotalPrice;
+    }
+
+    /**
+     * set 代金券退款总金额
+     *
+     * @param couponRefundTotalPrice
+     */
+    public void setCouponRefundTotalPrice(Double couponRefundTotalPrice) {
+        this.couponRefundTotalPrice = couponRefundTotalPrice;
+    }
+
+
+
+    /**
+     * set 原价（6位）
      *
      * @param totalPrice
      */
@@ -255,8 +409,9 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set 订单折扣前总价4位
+     * set 原价(6位，兼容之前4位保留字段)
      *
      * @param totalPriceScale4
      */
@@ -265,8 +420,9 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set 折扣后订单价格
+     * set 应付金额（2位）
      *
      * @param discountedTotalPrice
      */
@@ -275,8 +431,9 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set 总折扣金额
+     * set 折扣金额（6位）
      *
      * @param totalDiscount
      */
@@ -285,18 +442,42 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set list
+     * set 折扣后金额(6位)
      *
-     * @param list
+     * @param afterFavorableTotalPrice
      */
+    public CalculateTotalPriceResult afterFavorableTotalPrice(Double afterFavorableTotalPrice) {
+        this.afterFavorableTotalPrice = afterFavorableTotalPrice;
+        return this;
+    }
+
+
+    /**
+     * set 抹零金额（6位）
+     *
+     * @param eraseTotalPrice
+     */
+    public CalculateTotalPriceResult eraseTotalPrice(Double eraseTotalPrice) {
+        this.eraseTotalPrice = eraseTotalPrice;
+        return this;
+    }
+
+
+    /**
+    * set list
+    *
+    * @param list
+    */
     public CalculateTotalPriceResult list(List<OrderPriceDetail> list) {
         this.list = list;
         return this;
     }
 
+
     /**
-     * set 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格
+     * set 订单原价 包年时 一年原价为12个月价格，totalPrice为10个月价格（6位）
      *
      * @param totalOriginalPrice
      */
@@ -304,6 +485,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         this.totalOriginalPrice = totalOriginalPrice;
         return this;
     }
+
 
     /**
      * set 参与优惠的明细
@@ -315,6 +497,7 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
      * set 备注
      *
@@ -325,8 +508,9 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         return this;
     }
 
+
     /**
-     * set 各订单单价总和
+     * set 各订单单价总和（6位）
      *
      * @param totalUnitPrice
      */
@@ -334,6 +518,51 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         this.totalUnitPrice = totalUnitPrice;
         return this;
     }
+
+
+    /**
+     * set 退款总金额
+     *
+     * @param refundTotalPrice
+     */
+    public CalculateTotalPriceResult refundTotalPrice(Double refundTotalPrice) {
+        this.refundTotalPrice = refundTotalPrice;
+        return this;
+    }
+
+
+    /**
+     * set 现金退款总金额
+     *
+     * @param cashRefundTotalPrice
+     */
+    public CalculateTotalPriceResult cashRefundTotalPrice(Double cashRefundTotalPrice) {
+        this.cashRefundTotalPrice = cashRefundTotalPrice;
+        return this;
+    }
+
+
+    /**
+     * set 余额退款总金额
+     *
+     * @param balanceRefundTotalPrice
+     */
+    public CalculateTotalPriceResult balanceRefundTotalPrice(Double balanceRefundTotalPrice) {
+        this.balanceRefundTotalPrice = balanceRefundTotalPrice;
+        return this;
+    }
+
+
+    /**
+     * set 代金券退款总金额
+     *
+     * @param couponRefundTotalPrice
+     */
+    public CalculateTotalPriceResult couponRefundTotalPrice(Double couponRefundTotalPrice) {
+        this.couponRefundTotalPrice = couponRefundTotalPrice;
+        return this;
+    }
+
 
 
     /**
@@ -347,5 +576,4 @@ public class CalculateTotalPriceResult extends JdcloudResult implements java.io.
         }
         this.list.add(list);
     }
-
 }
